@@ -1,0 +1,45 @@
+---
+title: "Gerenciador de depend&#234;ncias de entidade | Microsoft Docs"
+ms.custom: ""
+ms.date: "04/06/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "master-data-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+keywords: 
+  - "master data services"
+ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
+caps.latest.revision: 5
+author: "sabotta"
+ms.author: "carlasab"
+manager: "jhubbard"
+caps.handback.revision: 5
+---
+# Gerenciador de depend&#234;ncias de entidade
+  
+[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 adiciona uma nova página de gerenciador, Dependências da Entidade, que fornece uma maneira alternativa para visualizar relações entre membros de entidade em um modelo, conforme especificado por seus valores DBA (atributo baseado em domínio), mas sem a necessidade de definir uma Hierarquia Derivada primeiro.   
+  
+Ele ajuda a responder a pergunta "que está consumindo minha entidade e como?". A exibição é semelhante à página do gerenciador Hierarquia Derivada, mas é mais inclusiva. Ela mostra todas as relações de DBA, não apenas aquelas definidas como parte de uma hierarquia específica. Uma definição de hierarquia não é necessária porque a estrutura hierárquica exibida é simplesmente inferida de DBAs existentes.  
+  
+No menu de página do Gerenciador, o item de menu Dependências da Entidade lista todas as entidades no modelo que são dependentes pelo menos de uma entidade (ou seja, pelo menos uma entidade tem um DBA que faz referência à entidade listada). O número de dependências (diretas e indiretas) é exibido próximo ao nome da entidade e a lista é classificada por esse número com as entidades mais intensamente referenciadas na parte superior. A captura de tela abaixo, obtida do modelo do cliente dos [dados de exemplo](https://msdn.microsoft.com/library/master-data-services-sample.aspx), mostra que a entidade BigArea é referenciada (direta ou indiretamente) por 7 entidades:  
+  
+![MDS_EntityDependencies_Menu.jpg](../master-data-services/media/mds-entitydependencies-menu-jpg.jpg)  
+    
+Clicar neste item de menu abre a nova página do gerenciador de Dependências da Entidade para a entidade BigArea, que mostra como os membros da entidade são consumidos. Ele mostra uma exibição hierárquica com membros BigArea na parte superior da árvore, com os membros de suas 7 entidades de consumo aninhadas abaixo:  
+  
+![MDS_EntityDependencies_Tree.jpg](../master-data-services/media/mds-entitydependencies-tree-jpg.jpg)  
+    
+Uma entidade pode ser diretamente consumida por mais de uma entidade. No exemplo acima, as entidades SubRegion e RegionClimate consomem (têm referências de DBA também) a entidade da Região. Os membros de cada entidade de consumo são agrupados em um nó pai que tem o nome de entidade:   
+  
+![MDS_EntityDependencies_Entity_Node.jpg](../master-data-services/media/mds-entitydependencies-entity-node-jpg.jpg)  
+  
+Esses nós de árvore de contêiner têm um ícone de grade à esquerda do nome da entidade e o texto é colorido por profundidade do nível de hierarquia. O exemplo acima mostra que a sub-região "CDSR {Canadá}" tem uma referência de DBA para a região "CDR {Canadá}", que faz referência a área "CDA {Canadá}", que referencia a BigArea “NAm {N. America}”.  
+  
+A exibição é totalmente editável, assim como na página Gerenciador de Hierarquias. Relações pai-filho podem ser modificadas na árvore por membros filho de recortar e colar ou arrastar-soltar, de um pai para outro. Outros valores de atributo de membro podem ser modificados no painel de detalhes à direita da árvore.   
+  
+  
+  
+  

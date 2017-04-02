@@ -1,0 +1,66 @@
+---
+title: "Tela inicial do Cliente Data Quality | Microsoft Docs"
+ms.custom: ""
+ms.date: "02/29/2012"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "data-quality-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.dqs.clienthome.f1"
+ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
+caps.latest.revision: 14
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 14
+---
+# Tela inicial do Cliente Data Quality
+  Use esta tela para obter acesso às interfaces do usuário de cada um dos três grupos de tarefas do DQS ([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]): gerenciamento da base de dados de conhecimento, projetos de qualidade de dados e administração.  
+  
+## Opções  
+  
+### Gerenciamento da base de dados de conhecimento  
+ Uma base de conhecimento do DQS é um repositório de metadados usado pelo DQS para melhorar a qualidade dos dados. Estes metadados são criados pela plataforma do DQS em um processo de descoberta da base de dados de conhecimento assistido por computador e pelo administrador de dados em um processo de gerenciamento de domínio interativo.  
+  
+ **Nova base de conhecimento**  
+ Inicie o processo de criação de uma base de conhecimento a partir do zero ou baseado nos metadados de uma base de conhecimento existente. Este comando abre uma página na qual você pode identificar a base de dados de conhecimento, baseá-la em uma base de dados de conhecimento existente, selecionar a atividade de base de dados de conhecimento desejada e, em seguida, criar a base de dados de conhecimento.  
+  
+ **Abrir Base de Dados de Conhecimento**  
+ Abrir uma base de dados de conhecimento para que você possa gerenciar seus domínios, executar a descoberta da base de dados de conhecimento ou criar uma política de correspondência. Clicar no botão **Abrir Base de Dados de Conhecimento** exibe a página **Abrir Base de Dados de Conhecimento** , que mostra uma lista de bases de dados de conhecimento existentes com suas propriedades, estado atual, base de dados de conhecimento e detalhes de seus domínios. Selecione uma base de dados de conhecimento e abra-a em **Abrir Base de Dados de Conhecimento**.  
+  
+ **Base de dados de conhecimento recente**  
+ Da lista na tela, abra uma base de dados de conhecimento que já foi criada. Se não estiver bloqueada, clique na seta para a direita e selecione a atividade na qual você deseja iniciar a base de dados de conhecimento (Gerenciamento de Domínio, Descoberta da Base de Dados de Conhecimento ou Política de Correspondência).  
+  
+ Você pode abrir uma base de dados de conhecimento bloqueada e editá-la somente se você a bloqueou. Nesse caso, a base de dados de conhecimento será aberta no estado em que estava quando foi fechada, indicado em parênteses. Se uma base de conhecimento estiver bloqueada, e você não a tiver bloqueado, você só poderá abri-la como somente leitura.  
+  
+### Projetos de qualidade de dados  
+ Um projeto de qualidade de dados é o processo no qual o DQS executa a limpeza de dados ou correspondência de dados, por meio de correção de dados assistida por computador e limpeza de dados interativa.  
+  
+ **Novo projeto de qualidade de dados**  
+ Inicie o projeto de criar um novo projeto. Este comando abre uma página na qual você pode identificar o projeto, associá-lo com uma base de dados de conhecimento, exibir detalhes da base de conhecimento, selecionar a atividade de projeto desejada e, em seguida, criar o projeto.  
+  
+ **Abrir projeto de qualidade de dados**  
+ Abra um projeto para que você possa executar limpeza de dados ou correspondência de dados. Clicar no botão **Abrir projeto de qualidade de dados** exibe a página **Abrir projeto de qualidade de dados** , que mostra uma lista de projetos existentes com suas propriedades, estado atual, base de dados de conhecimento e detalhes de seus domínios e regras de política de correspondência. Selecione um projeto e abra-o em **Abrir projeto de qualidade de dados**.  
+  
+ **Projeto de qualidade de dados recente**  
+ Da lista na tela, selecione um projeto que já foi criado. Você poderá abrir um projeto bloqueado somente se o tiver bloqueado. Nesse caso, o projeto será aberto no estado em que estava quando foi fechado, indicado em parênteses. Se o projeto tiver sido concluído, ele será aberto na etapa de Exportação da atividade.  
+  
+### Administração  
+ A administração do DQS permite monitorar, configurar e manter o DQS.  
+  
+ **Monitoramento de Atividades**  
+ Exibe o status de todas as atividades (atuais e históricas) que estão relacionadas ao servidor do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] conectado. Os tipos de atividades monitoradas incluem Gerenciamento de Conhecimento, um Projeto de Qualidade de Dados e uma correção de dados baseada no SSIS.  
+  
+ **Configuração**  
+ Exiba as propriedades de configuração para contas de serviço de dados de referência (pelo Windows Azure Marketplace e diretamente para serviços de dados de referência), configurações gerais (limpeza interativa, correspondência e criação de perfil) e configurações de severidade de log.  
+  
+## Consulte também  
+ [Bases de Dados de Conhecimento DQS e domínios](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
+ [Projetos de qualidade de dados e 40; DQS e 41;](../data-quality-services/data-quality-projects-dqs.md)   
+ [Administração do DQS](../data-quality-services/dqs-administration.md)  
+  
+  

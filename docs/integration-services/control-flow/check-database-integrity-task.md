@@ -1,0 +1,44 @@
+---
+title: "Tarefa Verificar Integridade do Banco de Dados | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/04/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.dts.designer.checkdatabaseintegritytask.f1"
+helpviewer_keywords: 
+  - "integridade de dados [Integration Services]"
+  - "tarefa Verificar Integridade do Banco de Dados [Integration Services]"
+  - "verificando consistência de banco de dados"
+  - "verificações de consistência de banco de dados [Integration Services]"
+  - "verificações de consistência de banco de dados"
+  - "verificação de integridade [Integration Services]"
+ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
+caps.latest.revision: 38
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 38
+---
+# Tarefa Verificar Integridade do Banco de Dados
+  A tarefa Verificar Integridade do Banco de Dados verifica a alocação e integridade estrutural de todos os objetos no banco de dados especificado. A tarefa pode verificar um único ou vários bancos de dados, e você também pode optar por verificar os índices de banco de dados.  
+  
+ A tarefa Verificar Integridade do Banco de Dados encapsula a instrução DBCC CHECKDB. Para obter mais informações, veja [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).  
+  
+## Configuração da tarefa Verificar Integridade do Banco de Dados  
+ Você pode definir propriedades por meio do [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. Esta tarefa está na seção **Tarefas do Plano de Manutenção** da **Caixa de Ferramentas** , no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+  
+ Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
+  
+-   [Tarefa Verificar Integridade do Banco de Dados &#40;Plano de Manutenção&#41;](../../relational-databases/maintenance-plans/check-database-integrity-task-maintenance-plan.md)  
+  
+ Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
+  
+-   [Definir as propriedades de uma tarefa ou contêiner](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+  
+  

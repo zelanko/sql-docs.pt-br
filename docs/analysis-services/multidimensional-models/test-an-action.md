@@ -1,0 +1,34 @@
+---
+title: "Testar uma a&#231;&#227;o | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "analysis-services"
+  - "analysis-services/multidimensional-tabular"
+  - "analysis-services/data-mining"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 0ec7feb3-a6b2-4be1-8036-c72b9fbc3562
+caps.latest.revision: 7
+author: "Minewiskan"
+ms.author: "owend"
+manager: "erikre"
+caps.handback.revision: 7
+---
+# Testar uma a&#231;&#227;o
+  Você testa uma ação usando a exibição de Navegador no Designer de Cubo. O Designer de Cubo pode ser acessado pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Depois de criar a ação, você deve processar o cubo antes de a ação ser testada. Para obter mais informações, consulte [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+  
+### Para testar uma ação  
+  
+1.  Abra o cubo que contém a ação que você deseja testar e, em **Exibir**, clique em **Navegador**.  
+  
+2.  Arraste o objeto de destino para **Solte Campos de Coluna Aqui** ou **Solte os Campos Linha Aqui**.  
+  
+3.  No painel de exibição, clique com o botão direito no qual a ação é anexada (por exemplo, uma célula). O nome de ação aparecerá no menu de contexto.  
+  
+4.  Clique no nome de ação para testar a ação.  
+  
+  

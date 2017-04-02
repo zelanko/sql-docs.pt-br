@@ -1,0 +1,55 @@
+---
+title: "Usar a janela Propriedades no Management Studio | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "exibindo propriedades"
+  - "janela Propriedades [SQL Server Management Studio]"
+  - "propriedades complexas [SQL Server Management Studio]"
+ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
+caps.latest.revision: 24
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 24
+---
+# Usar a janela Propriedades no Management Studio
+  A janela Propriedades descreve o estado de um item no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], como uma conexão ou um operador de plano de execução, e informações sobre objetos de banco de dados, como tabelas, exibições e designers.  
+  
+ Você pode usar a janela Propriedades para exibir as propriedades da conexão atual. Muitas propriedades são somente leitura na janela Propriedades, mas podem ser alteradas em outros lugares no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Por exemplo, a propriedade Database de uma consulta é somente leitura na janela Propriedades, mas pode ser alterada na barra de ferramentas.  
+  
+### Para exibir propriedades usando a janela Propriedades  
+  
+1.  Se a janela Propriedades não estiver visível, clique em **Janela de Propriedades** no menu **Exibir** ou pressione F4.  
+  
+2.  Defina o foco no objeto que você deseja exibir.  
+  
+3.  Procure uma propriedade específica na janela Propriedades.  
+  
+### Para exibir propriedades de conexão de uma janela de consulta  
+  
+1.  Se a janela Propriedades não estiver visível, clique em **Janela de Propriedades** no menu **Exibir** ou pressione F4.  
+  
+2.  Na janela Propriedades, você pode ver todas as propriedades de conexão.  
+  
+### Para exibir as propriedades de um operador de plano de execução  
+  
+1.  No menu **Consulta** , clique em **Incluir Plano de Execução Real**.  
+  
+2.  No Editor de Consultas SQL, digite e execute uma consulta.  
+  
+3.  Se a janela Propriedades não estiver visível, clique em **Janela de Propriedades** no menu **Exibir** ou pressione F4.  
+  
+4.  Na guia **Plano de execução** do Editor de Consultas SQL, clique nos ícones dos operadores para exibir informações sobre os operadores na janela Propriedades.  
+  
+## Consulte também  
+ [Janela Propriedades &#40;Management Studio&#41;](../../ssms/properties-window-management-studio.md)  
+  
+  

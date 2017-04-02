@@ -1,0 +1,1 @@
+<Token>**ESTE TÓPICO APLICA-SE A:**![sim](../includes/media/yes.png)SQL Server (começando com o vNext)![não](../includes/media/no.png)Banco de Dados SQL do Azure![não](../includes/media/no.png)Azure SQL Data Warehouse ![não](../includes/media/no.png)Parallel Data Warehouse </Token>

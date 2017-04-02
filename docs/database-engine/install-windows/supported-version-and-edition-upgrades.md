@@ -1,0 +1,175 @@
+---
+title: "Atualiza&#231;&#245;es de vers&#227;o e edi&#231;&#227;o com suporte | Microsoft Docs"
+ms.custom: ""
+ms.date: "08/24/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "setup-install"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "componentes [SQL Server], adicionando a instalações existentes"
+  - "versões [SQL Server], atualizando"
+  - "atualizando o SQL Server, atualizações com suporte"
+  - "suporte entre idiomas"
+ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
+caps.latest.revision: 148
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "jhubbard"
+caps.handback.revision: 147
+---
+# Atualiza&#231;&#245;es de vers&#227;o e edi&#231;&#227;o com suporte
+  Você pode atualizar do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]e [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Este tópico lista os caminhos de atualização com suporte dessas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as atualizações de edição com suporte para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+## Lista de verificação anterior à atualização  
+  
+-   Antes de atualizar de uma edição do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para outra, verifique se há suporte à funcionalidade usada no momento na edição que você utilizará.  
+  
+-   Antes de atualizar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], habilite a Autenticação do Windows para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e verifique a configuração padrão: se a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é membro do grupo sysadmin do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  
+-   Para atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você deverá estar executando um sistema operacional com suporte. Para obter mais informações, veja [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md).  
+  
+-   A atualização será bloqueada se houver uma reinicialização pendente.  
+  
+-   A atualização será bloqueada, se o serviço do Windows Installer não estiver sendo executado.  
+  
+## Cenários com suporte  
+  
+-   Não há suporte a instâncias de várias versões do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Os números de versão dos componentes do [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devem ser os mesmos em uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+-   O SQL Server 2016 está disponível apenas para plataformas de 64 bits. A atualização de plataforma cruzada não é suportada. Não é possível atualizar uma instância de 32 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma nativa de 64 bits usando a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No entanto, será possível fazer backup de bancos de dados ou desanexá-los de uma instância de 32 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, em seguida, restaurá-los ou anexá-los a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de 64 bits), se os bancos de dados não forem publicados na replicação. Você deverá recriar logons e outros objetos de usuário nos bancos de dados do sistema master, msdb e model.  
+  
+-   Não é possível adicionar novos recursos durante a atualização da instância existente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois de atualizar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você poderá adicionar recursos usando a Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, veja [Adicionar recursos a uma instância do SQL Server 2016 &#40;Instalação&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+ 
+-   Não há suporte para clusters de failover no modo WOW.  
+  
+-   Não há suporte para a atualização de uma edição de Avaliação de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  
+## Atualizações de versões anteriores para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ 
+O SQL Server 2016 dá suporte à atualização das seguintes versões do SQL Server:
+ 
+- SQL Server 2008 SP3 ou posterior
+- SQL Server 2008 R2 SP2 ou posterior
+- SQL Server 2012 SP2 ou posterior
+- SQL Server 2014 ou posterior 
+ 
+
+  
+> [!NOTE]  
+>  Para atualizar os bancos de dados no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], veja [Suporte para 2005](#SupportFor2005).  
+  
+ A tabela a seguir lista os cenários de atualização com suporte de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+|Atualização de|Caminho de atualização suportado|  
+|------------------|----------------------------|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Enterprise|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/> |  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Developer|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Standard|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Small Business|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Web|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Workgroup|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Express|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Datacenter|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/> |  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Enterprise|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/> |  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Developer|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Small Business|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Standard|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Web|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Workgroup|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Express |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Express|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 Enterprise|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/> |  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 Developer|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Desenvolvedor <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/> |  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 Standard|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Web|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 Express |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Express <br/> <br/> |  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 Business Intelligence|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/> |  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 Evaluation|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Evaluation <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/> |  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Desenvolvedor|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/> |  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Express <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/> |  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Evaluation|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Evaluation <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Desenvolvedor|  
+|[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] versão release candidate* |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise |  
+|[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] Desenvolvedor |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise | 
+
+ \* O suporte da Microsoft para atualização do software versão Release Candidate destina-se especificamente aos clientes que participaram do TAP (Technology Adoption Program). 
+
+   
+###  <a name="SupportFor2005"></a> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Suporte para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+ Esta seção aborda o suporte do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você poderá fazer o seguinte:  
+  
+-   Anexar um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (arquivos mdf/ldf) à instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do mecanismo de banco de dados.  
+  
+-   Restaurar um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para a instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do mecanismo de banco de dados de um backup.  
+  
+-   Fazer backup de um cubo do [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] e restaurar no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+ Quando um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] é atualizado para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o nível de compatibilidade do banco de dados é alterado de 90 para 100. (No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os valores válidos do nível de compatibilidade do banco de dados são 100, 110, 120 e 130.) [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md) aborda como a alteração do nível de compatibilidade pode afetar os aplicativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+ Os cenários não especificados na lista anterior não são suportados, incluindo, mas sem estar limitado, os seguintes:  
+  
+-   Instalando o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no mesmo computador (lado a lado).  
+  
+-   Usando uma instância do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] como um membro da topologia de replicação que envolve uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+-   Configurando o espelhamento de banco de dados entre as instâncias do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+  
+-   Fazendo backup do registro de transações com envio de logs entre as instâncias do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+  
+-   Configurando servidores vinculados entre as instâncias do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+  
+-   Gerenciando uma instância do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Management Studio.  
+  
+-   Anexando um cubo do [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Management Studio.  
+  
+-   Conectando-se ao [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] a partir do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Management Studio.  
+  
+-   Gerenciando um serviço do [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Management Studio.  
+  
+-   Suporte para componentes personalizados do Integration Services de terceiros do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , como executar e atualizar.  
+  
+## [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Edition  
+ A tabela a seguir lista os cenários de atualização de edição com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+ Para obter instruções passo a passo sobre como executar uma atualização de edição, veja [Atualizar para outra edição do SQL Server 2016 &#40;Instalação&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-2016-setup.md).  
+  
+|Atualização de|Atualização para|  
+|------------------|----------------|  
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (Licença Server+CAL e Baseada em Núcleo)**|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise |  
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Evaluation Enterprise**|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (Licença Server+CAL ou Baseada em Núcleo) <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web <br/> <br/> A atualização da Evaluation (uma edição gratuita) para qualquer uma das edições pagas tem suporte em instalações autônomas, mas não tem suporte em instalações clusterizadas.|  
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard**|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (Licença Server+CAL ou Baseada em Núcleo)|  
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer**|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (Licença Server+CAL ou Baseada em Núcleo) <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard|  
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (Licença Server+CAL ou Baseada em Núcleo) <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard|  
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Express*|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (Licença Server+CAL ou Baseada em Núcleo) <br/><br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Desenvolvedor <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard <br/> <br/> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web|  
+  
+ Além disso, você também pode executar uma atualização de edição entre o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (Licença Server+CAL) e [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (Licença Baseada em Núcleo):  
+  
+|Atualização de edição do|Atualização de edição para|  
+|--------------------------|------------------------|  
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (Licença Server+CAL)**|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (Licença Baseada em Núcleo)|  
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (Licença Baseada em Núcleo)|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (Licença Server+CAL)|  
+  
+ \* Também se aplica ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Express with Tools e ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Express with Advanced Services.  
+  
+ ** A alteração da edição de um cluster de failover do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é limitada. Os cenários a seguir não têm suporte para clusters de failover do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
+  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer, Standard ou Evaluation.  
+  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard ou Evaluation.  
+  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Evaluation.  
+  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Evaluation para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard.  
+  
+## Consulte também  
+ [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
+ [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)   
+ [Atualizar para o SQL Server 2016](../../database-engine/install-windows/upgrade-to-sql-server-2016.md)  
+  
+  

@@ -1,0 +1,70 @@
+---
+title: "Caracteres inv&#225;lidos e regras de escape | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-xml"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Cláusula FOR XML, caracteres inválidos"
+  - "Cláusula FOR XML, regras de escape"
+ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
+caps.latest.revision: 17
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 17
+---
+# Caracteres inv&#225;lidos e regras de escape
+  Este tópico descreve como caracteres XML inválidos são tratados pela cláusula FOR XML e lista as regras de escape para caracteres inválidos em nomes XML.  
+  
+## Para XML e caracteres inválidos  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem a entidade definida como caracteres XML inválidos quando eles são retornados dentro de consultas FOR XML que não usam a diretiva TYPE.  
+  
+ Embora analisadores compatíveis com o XML 1.0 gerem erros de análise independentemente da entidade desses caracteres estarem definidas ou não, o formulário com entidade definida se alinha melhor com XML 1.1. O formulário com entidade definida também potencialmente se alinha melhor com versões futuras do padrão XML. Além disso, ele simplifica a depuração, porque o ponto de código do caractere inválido se torna visível.  
+  
+ Para usuários de ferramentas XML, nenhuma solução alternativa é necessária, porque o analisador XML falha de qualquer maneira no ponto onde os caracteres inválidos ocorrem no fluxo de dados. Se você usar ferramentas não XML, essa alteração pode exigir que você atualize sua lógica de programação para pesquisar esses caracteres como valores com entidade definida.  
+  
+ A definição da entidade dos seguintes caracteres de espaço em branco é feita de maneira diferente em consultas FOR XML para preservar sua presença por meio de viagem de ida e volta:  
+  
+-   Em atributos e conteúdo de elemento: **hex(0D)** (retorno de carro)  
+  
+-   Em conteúdo de atributo: **hex(09)** (guia), **hex(0A)** (alimentação de linha)  
+  
+ Esses caracteres são preservados na saída e um analisador não os normalizará.  
+  
+## Regras de escape  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nomes que contêm caracteres que são inválidos em nomes XML, como espaços, são convertidos em nomes XML de uma maneira na qual os caracteres inválidos são convertidos em codificação de entidade numérica de escape.  
+  
+ Há apenas dois caracteres não alfabéticos que podem ocorrer dentro de um nome XML: dois pontos (:) e sublinhado (_). Como o dois pontos já é reservado para namespaces, o sublinhado é escolhido como o caractere de escape. As regras de escape que são usadas para codificação são as seguintes:  
+  
+-   Qualquer caractere UCS-2 que não seja um caractere de nome XML válido, de acordo com a especificação do XML 1.0, tem o escape feito como _xHHHH\_. O HHHH representa o código UCS-2 hexadecimal de quatro dígitos do caractere na ordem do primeiro bit mais significativo. Por exemplo, o nome da tabela **Order Details** é codificado como Order_x0020_Details.  
+  
+-   Caracteres que não se ajustam no realm do UCS-2 (as adições de UCS-4 do intervalo de U+00010000 a U+0010FFFF) são codificadas como _xHHHHHHHH\_. O HHHHHHHH representa a codificação UCS-4 hexadecimal de oito dígitos do caractere, se em modo de compatibilidade com versões anteriores do SQL Server 2000. Caso contrário, os caracteres são codificados como _xHHHHHH\_, para se alinharem com o padrão ISO.  
+  
+-   O caractere de sublinhado não precisa ter escape definido a menos que ele seja seguido pelo caractere x. Por exemplo, o nome da tabela **Order_Details** não é codificado.  
+  
+-   O dois pontos em identificadores não tem escape definido como um resultado, o elemento namespace e os nomes dos atributos podem ser gerados pela consulta FOR XML. Por exemplo, a consulta a seguir gera um atributo de namespace que tem um dois pontos no nome:  
+  
+    ```  
+    SELECT 'namespace-urn' as 'xmlns:namespace',   
+     1 as 'namespace:a'   
+    FOR XML RAW  
+    ```  
+  
+     A consulta produz este resultado:  
+  
+    ```  
+    <row xmlns:namespace="namespace-urn" namespace:a="1"/>  
+    ```  
+  
+     Observe que WITH XMLNAMESPACES é a maneira recomendada para adicionar namespaces XML.  
+  
+## Consulte também  
+ [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
+  
+  

@@ -1,0 +1,1128 @@
+---
+title: "Criar uma assinatura pull | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/17/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "replication"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "assinaturas pull [replicação do SQL Server], criando"
+  - "assinatura de replicação de mesclagem [replicação do SQL Server], assinaturas pull"
+  - "assinaturas [replicação do SQL Server], pull"
+  - "replicação de instantâneo [SQL Server], assinatura"
+  - "replicação transacional, assinatura"
+ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
+caps.latest.revision: 46
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 44
+---
+# Criar uma assinatura pull
+  Este tópico descreve como criar uma inscrição de recepção em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], ou objetos de gerenciamento de replicação (RMO).  
+  
+ A configuração de uma assinatura pull para a replicação de P2P é possível por script, mas não está disponível por meio do assistente.  
+ 
+  ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+ Crie uma assinatura pull no Publicador ou Assinante, usando o Assistente para Novas Assinaturas. Siga as páginas no assistente para:  
+  
+-   Especificar o Publicador e a publicação.  
+  
+-   Selecione onde os agentes de replicação executarão. Para uma assinatura pull, selecione **executar cada agente em seu assinante (assinaturas pull)** sobre o **local do Distribution Agent** página ou **local do Merge Agent** página, dependendo do tipo de publicação.  
+  
+-   Especifique Assinantes e bancos de dados de assinatura.  
+  
+-   Especifique os logons e senhas usadas para conexões feitas por agentes de replicação:  
+  
+    -   Para assinaturas para instantâneos e publicações transacionais, especifique as credenciais na página **Segurança do Distribution Agent** .  
+  
+    -   Para assinaturas para publicações de mesclagem, especifique as credenciais na página **Segurança do Merge Agent** .  
+  
+     Para obter informações sobre as permissões necessárias para cada agente, consulte [modelo de segurança do agente de replicação](../../relational-databases/replication/security/replication-agent-security-model.md).  
+  
+-   Especifique uma agenda de sincronização e quando o Assinante deve ser inicializado.  
+  
+-   Especifique opções adicionais para as publicações de mesclagem: tipo da assinatura; valores para filtragem com parâmetros e as informações para sincronização através de HTTPS se a publicação estiver habilitada para sincronização da Web.  
+  
+-   Especifique opções adicionais para publicações transacionais que permitem assinaturas de atualização: se os Assinantes devem confirmar alterações no Publicador imediatamente ou gravá-las em uma fila; credenciais usadas do Assinante para o Publicador.  
+  
+-   Opcionalmente, faça o script da assinatura.  
+  
+#### Para criar uma assinatura pull do Publicador  
+  
+1.  Conecte-se ao Publicador no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e, depois, expanda o nó do servidor.  
+  
+2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
+  
+3.  Clique com botão direito a publicação para o qual você deseja criar uma ou mais assinaturas e, em seguida, clique em **novas assinaturas**.  
+  
+4.  Complete as páginas no Assistente para Novas Assinaturas.  
+  
+#### Para criar uma assinatura pull do Assinante  
+  
+1.  Conecte-se ao Assinante no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó do servidor.  
+  
+2.  Expanda a pasta **Replicação** .  
+  
+3.  Clique com botão direito do **assinaturas locais** pasta e clique **novas assinaturas**.  
+  
+4.  No **publicação** página do Assistente para nova assinatura, selecione **\< encontrar Editor SQL Server>** ou **\< encontrar editor Oracle>** do **publicador** lista suspensa.  
+  
+5.  Conecte-se ao Publicador na caixa de diálogo **Conectar ao Servidor** .  
+  
+6.  Selecione uma publicação na página **Publicação** .  
+  
+7.  Complete as páginas no Assistente para Novas Assinaturas.  
+  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+ As assinaturas pull podem ser criadas de forma programada, usando os procedimentos de replicação armazenados. Os procedimentos armazenados usados dependem do tipo de publicação ao qual a assinatura pertence.  
+  
+#### Para criar uma assinatura pull em um instantâneo ou em uma publicação transacional  
+  
+1.  No Editor, verifique se a publicação oferece suporte a assinaturas pull executando [sp_helppublication &#40;O Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md).  
+  
+    -   Se o valor de **allow_pull** no conjunto de resultados for **1**, em seguida, a publicação oferece suporte a assinaturas pull.  
+  
+    -   Se o valor de **allow_pull** é **0**, execute [sp_changepublication &#40;O Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), especificando **allow_pull** para **@property** e **true** para **@value**.  
+  
+2.  No assinante, execute [sp_addpullsubscription &#40;O Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Especifique **@publisher** e **@publication**. Para obter informações sobre assinaturas de atualização, consulte [criar uma assinatura atualizável em uma publicação transacional](https://msdn.microsoft.com/library/ms152769.aspx).  
+  
+3.  No assinante, execute [sp_addpullsubscription_agent &#40;O Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique o seguinte:  
+  
+    -   O **@publisher**, **@publisher_db**, e **@publication** parâmetros.  
+  
+    -   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] credenciais do Windows sob a qual o Distribution Agent no assinante executa **@job_login** e **@job_password**.  
+  
+        > [!NOTE]  
+        >  Conexões feitas usando a autenticação integrada do Windows sempre usam as credenciais do Windows especificadas por **@job_login** e **@job_password**. O Distribution Agent sempre faz a conexão local ao Assinante usando a Autenticação Integrada do Windows. Por padrão, o agente conecta-se ao Distribuidor usando a Autenticação Integrada do Windows.  
+  
+    -   (Opcional) Um valor de **0** para **@distributor_security_mode** e as informações de logon do SQL Server para **@distributor_login** e **@distributor_password**, se você precisar usar a autenticação do SQL Server ao conectar-se ao distribuidor.  
+  
+    -   Agenda para o trabalho do Distribution Agent para essa assinatura. Para obter mais informações, consulte [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
+  
+4.  No publicador, execute [sp_addsubscription &#40;O Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) para registrar a assinatura pull. Especifique **@publication**, **@subscriber**, e **@destination_db**. Especifique um valor de **recepção** para **@subscription_type**.  
+  
+#### Para criar uma assinatura pull para a publicação de mesclagem  
+  
+1.  No Editor, verifique se a publicação oferece suporte a assinaturas pull executando [sp_helpmergepublication &#40;O Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md).  
+  
+    -   Se o valor de **allow_pull** no conjunto de resultados for **1**, em seguida, a publicação oferece suporte a assinaturas pull.  
+  
+    -   Se o valor de **allow_pull** é **0**, execute [sp_changemergepublication &#40;O Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), especificando **allow_pull** para **@property** e **true** para **@value**.  
+  
+2.  No assinante, execute [sp_addmergepullsubscription &#40;O Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Especifique **@publisher**, **@publisher_db**, **@publication**, e os seguintes parâmetros:  
+  
+    -   **@subscriber_type** – Especifique **local** para uma assinatura de cliente e **global** para uma assinatura de servidor.  
+  
+    -   **@subscription_priority** – Especifique uma prioridade para a assinatura (**0,00** para **99,99**). Isso só é necessário para uma assinatura de servidor.  
+  
+         Para obter mais informações, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+  
+3.  No assinante, execute [sp_addmergepullsubscription_agent &#40;O Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Especifique os seguintes parâmetros:  
+  
+    -   **@publisher**, **@publisher_db**, e **@publication**.  
+  
+    -   As credenciais do Windows sob a qual o Merge Agent no assinante executa **@job_login** e **@job_password**.  
+  
+        > [!NOTE]  
+        >  Conexões feitas usando a autenticação integrada do Windows sempre usam as credenciais do Windows especificadas por **@job_login** e **@job_password**. O Merge Agent sempre faz a conexão local ao Assinante usando a Autenticação Integrada do Windows. Por padrão, o agente se conecta ao Distribuidor e ao Publicador usando a Autenticação Integrada do Windows.  
+  
+    -   (Opcional) Um valor de **0** para **@distributor_security_mode** e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informações de logon para **@distributor_login** e **@distributor_password**, se você precisar usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação ao conectar-se ao distribuidor.  
+  
+    -   (Opcional) Um valor de **0** para **@publisher_security_mode** e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informações de logon para **@publisher_login** e **@publisher_password**, se você precisar usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação ao conectar-se ao publicador.  
+  
+    -   Agenda para o trabalho do Merge Agent para essa assinatura. Para obter mais informações, consulte [criar uma assinatura atualizável em uma publicação transacional](https://msdn.microsoft.com/library/ms152769.aspx).  
+  
+4.  No publicador, execute [sp_addmergesubscription &#40;O Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Especifique **@publication**, **@subscriber**, **@subscriber_db**, e um valor de **recepção** para **@subscription_type**. Isso registra a assinatura pull.  
+  
+###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
+ O exemplo a seguir cria uma nova assinatura pull para uma publicação transacional. O primeiro lote é executado no Assinante, e o segundo lote é executado no Publicador. Os valores para o logon e senha são fornecidos no tempo de execução usando as variáveis sqlcmd scripting.  
+  
+```  
+-- This script uses sqlcmd scripting variables. They are in the form  
+-- $(MyVariable). For information about how to use scripting variables    
+-- on the command line and in SQL Server Management Studio, see the   
+-- "Executing Replication Scripts" section in the topic  
+-- "Programming Replication Using System Stored Procedures".  
+  
+-- Execute this batch at the Subscriber.  
+DECLARE @publication AS sysname;  
+DECLARE @publisher AS sysname;  
+DECLARE @publicationDB AS sysname;  
+SET @publication = N'AdvWorksProductTran';  
+SET @publisher = $(PubServer);  
+SET @publicationDB = N'AdventureWorks';  
+  
+-- At the subscription database, create a pull subscription   
+-- to a transactional publication.  
+USE [AdventureWorksReplica]  
+EXEC sp_addpullsubscription   
+  @publisher = @publisher,   
+  @publication = @publication,   
+  @publisher_db = @publicationDB;  
+  
+-- Add an agent job to synchronize the pull subscription.  
+EXEC sp_addpullsubscription_agent   
+  @publisher = @publisher,   
+  @publisher_db = @publicationDB,   
+  @publication = @publication,   
+  @distributor = @publisher,   
+  @job_login = $(Login),   
+  @job_password = $(Password);  
+GO  
+```  
+  
+```  
+-- This script uses sqlcmd scripting variables. They are in the form  
+-- $(MyVariable). For information about how to use scripting variables    
+-- on the command line and in SQL Server Management Studio, see the   
+-- "Executing Replication Scripts" section in the topic  
+-- "Programming Replication Using System Stored Procedures".  
+  
+-- Execute this batch at the Publisher.  
+DECLARE @publication AS sysname;  
+DECLARE @subscriber AS sysname;  
+DECLARE @subscriptionDB AS sysname;  
+SET @publication = N'AdvWorksProductTran';  
+SET @subscriber = $(SubServer);  
+SET @subscriptionDB = N'AdventureWorksReplica';  
+  
+-- At the Publisher, register the subscription, using the defaults.  
+EXEC sp_addsubscription   
+  @publication = @publication,   
+  @subscriber = @subscriber,   
+  @destination_db = @subscriptionDB,   
+  @subscription_type = N'pull',  
+  @status = N'subscribed';  
+GO  
+  
+```  
+  
+ O exemplo a seguir cria uma nova assinatura pull para uma publicação de mesclagem. O primeiro lote é executado no Assinante, e o segundo lote é executado no Publicador. Os valores de logon e senha são fornecidos em tempo de execução através das variáveis de script **sqlcmd** .  
+  
+```  
+-- This script uses sqlcmd scripting variables. They are in the form  
+-- $(MyVariable). For information about how to use scripting variables    
+-- on the command line and in SQL Server Management Studio, see the   
+-- "Executing Replication Scripts" section in the topic  
+-- "Programming Replication Using System Stored Procedures".  
+  
+-- Execute this batch at the Subscriber.  
+DECLARE @publication AS sysname;  
+DECLARE @publisher AS sysname;  
+DECLARE @publicationDB AS sysname;  
+DECLARE @hostname AS sysname;  
+SET @publication = N'AdvWorksSalesOrdersMerge';  
+SET @publisher = $(PubServer);  
+SET @publicationDB = N'AdventureWorks';  
+SET @hostname = N'adventure-works\david8';  
+  
+-- At the subscription database, create a pull subscription   
+-- to a merge publication.  
+USE [AdventureWorksReplica]  
+EXEC sp_addmergepullsubscription   
+  @publisher = @publisher,   
+  @publication = @publication,   
+  @publisher_db = @publicationDB;  
+  
+-- Add an agent job to synchronize the pull subscription.   
+EXEC sp_addmergepullsubscription_agent   
+  @publisher = @publisher,   
+  @publisher_db = @publicationDB,   
+  @publication = @publication,   
+  @distributor = @publisher,   
+  @job_login = $(Login),   
+  @job_password = $(Password),  
+  @hostname = @hostname;  
+GO  
+```  
+  
+```  
+-- Execute this batch at the Publisher.  
+DECLARE @myMergePub  AS sysname;  
+DECLARE @mySub       AS sysname;  
+DECLARE @mySubDB     AS sysname;  
+  
+SET @myMergePub = N'AdvWorksSalesOrdersMerge';  
+SET @mySub = N'MYSUBSERVER';  
+SET @mySubDB = N'AdventureWorksReplica';  
+  
+-- At the Publisher, register the subscription, using the defaults.  
+USE [AdventureWorks]  
+EXEC sp_addmergesubscription @publication = @myMergePub,   
+@subscriber = @mySub, @subscriber_db = @mySubDB,   
+@subscription_type = N'pull';  
+GO  
+```  
+  
+##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
+ As classes RMO usadas para criar uma assinatura pull dependem do tipo de publicação ao qual a assinatura pertence.  
+  
+#### Para criar uma assinatura pull em um instantâneo ou em uma publicação transacional  
+  
+1.  Criar conexões com o assinante e o publicador usando o <xref:Microsoft.SqlServer.Management.Common.ServerConnection> classe.  
+  
+2.  Criar uma instância do <xref:Microsoft.SqlServer.Replication.TransPublication> classe usando a conexão do publicador da etapa 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> e <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+  
+3.  Chamar o <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> método. Se esse método retornar **false**, as propriedades especificadas na etapa 2 estarão incorretas ou a publicação não existe no servidor.  
+  
+4.  Executar um e lógico bit a bit (**&** no Visual c# e **e** no Visual Basic) entre a <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> propriedade e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Se o resultado for <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, defina <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> ao resultado de um OR lógico bit a bit (**|** no Visual c# e **ou** no Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Em seguida, chame <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar assinaturas pull.  
+  
+5.  Se o banco de dados de assinatura não existir, crie-o usando o <xref:Microsoft.SqlServer.Management.Smo.Database> classe. Para obter mais informações, consulte [criação, alteração e remoção de bancos de dados](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
+  
+6.  Criar uma instância do <xref:Microsoft.SqlServer.Replication.TransPullSubscription> classe.  
+  
+7.  Defina as seguintes propriedades de assinatura:  
+  
+    -   O <xref:Microsoft.SqlServer.Management.Common.ServerConnection> para o assinante criado na etapa 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+  
+    -   Nome do banco de dados de assinatura para <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
+  
+    -   Nome do publicador para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>.  
+  
+    -   Nome do banco de dados de publicação para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>.  
+  
+    -   Nome da publicação para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>.  
+  
+    -   O <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> ou <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> campos de <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> para fornecer as credenciais para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] conta do Windows sob a qual o Distribution Agent é executado no assinante. Essa conta é usada para fazer conexões locais com o Assinante e para fazer conexões remotas que usam a Autenticação do Windows.  
+  
+        > [!NOTE]  
+        >  Definindo <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> não é necessário quando a assinatura é criada por um membro do **sysadmin** função de servidor fixa, no entanto, é recomendável. Nesse caso, o agente representará a conta do SQL Server Agent. Para obter mais informações, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+  
+    -   (Opcional) Um valor de **true** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> para criar um trabalho de agente que é usado para sincronizar a assinatura. Se você especificar **false** (o padrão), a assinatura só pode ser sincronizada por meio de programação, e você deve especificar propriedades adicionais de <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> quando você acessa esse objeto do <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> propriedade. Para obter mais informações, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+  
+        > [!NOTE]  
+        >  O SQL Server Agent não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). Quando você especifica um valor de **true** para Assinantes do Express, o trabalho de agente não é criado. Porém, importantes metadados relacionados a assinatura são armazenados no Assinante.  
+  
+    -   (Opcional) Definir o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> campos de <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> ao usar a autenticação do SQL Server para conectar-se ao distribuidor.  
+  
+8.  Chamar o <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> método.  
+  
+9. Usando a instância do <xref:Microsoft.SqlServer.Replication.TransPublication> classe da etapa 2, chamada de <xref:Microsoft.SqlServer.Replication.TransPublication.MakePullSubscriptionWellKnown%2A> método para registrar a assinatura pull com o publicador. Se esse registro já existir, haverá uma exceção.  
+  
+#### Para criar uma assinatura pull para a publicação de mesclagem  
+  
+1.  Criar conexões com o assinante e o publicador usando o <xref:Microsoft.SqlServer.Management.Common.ServerConnection> classe.  
+  
+2.  Criar uma instância do <xref:Microsoft.SqlServer.Replication.MergePublication> classe usando a conexão do publicador da etapa 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>, e <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+  
+3.  Chamar o <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> método. Se esse método retornar **false**, as propriedades especificadas na etapa 2 estarão incorretas ou a publicação não existe no servidor.  
+  
+4.  Executar um e lógico bit a bit (**&** no Visual c# e **e** no Visual Basic) entre a <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> propriedade e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Se o resultado for <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, defina <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> ao resultado de um OR lógico bit a bit (**|** no Visual c# e **ou** no Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Em seguida, chame <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar assinaturas pull.  
+  
+5.  Se o banco de dados de assinatura não existir, crie-o usando o <xref:Microsoft.SqlServer.Management.Smo.Database> classe. Para obter mais informações, consulte [criação, alteração e remoção de bancos de dados](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
+  
+6.  Criar uma instância do <xref:Microsoft.SqlServer.Replication.MergePullSubscription> classe.  
+  
+7.  Defina as seguintes propriedades de assinatura:  
+  
+    -   O <xref:Microsoft.SqlServer.Management.Common.ServerConnection> para o assinante criado na etapa 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+  
+    -   Nome do banco de dados de assinatura para <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
+  
+    -   Nome do publicador para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>.  
+  
+    -   Nome do banco de dados de publicação para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>.  
+  
+    -   Nome da publicação para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>.  
+  
+    -   O <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> ou <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> campos de <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> para fornecer as credenciais para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] conta do Windows na qual o Merge Agent é executado no assinante. Essa conta é usada para fazer conexões locais com o Assinante e para fazer conexões remotas que usam a Autenticação do Windows.  
+  
+        > [!NOTE]  
+        >  Definindo <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> não é necessário quando a assinatura é criada por um membro do **sysadmin** função de servidor fixa, no entanto, é recomendável. Nesse caso, o agente representará a conta do SQL Server Agent. Para obter mais informações, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+  
+    -   (Opcional) Um valor de **true** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> para criar um trabalho de agente que é usado para sincronizar a assinatura. Se você especificar **false** (o padrão), a assinatura só pode ser sincronizada por meio de programação, e você deve especificar propriedades adicionais de <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> quando você acessa esse objeto do <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> propriedade. Para obter mais informações, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+  
+    -   (Opcional) Definir o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> campos de <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> ao usar a autenticação do SQL Server para conectar-se ao distribuidor.  
+  
+    -   (Opcional) Definir o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> campos de <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> ao usar a autenticação do SQL Server para se conectar ao Editor.  
+  
+8.  Chamar o <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> método.  
+  
+9. Usando a instância do <xref:Microsoft.SqlServer.Replication.MergePublication> classe da etapa 2, chamada de <xref:Microsoft.SqlServer.Replication.MergePublication.MakePullSubscriptionWellKnown%2A> método para registrar a assinatura pull com o publicador. Se esse registro já existir, haverá uma exceção.  
+  
+###  <a name="PShellExample"></a> Exemplo (RMO)  
+ Esse exemplo cria uma assinatura pull para uma publicação transacional. As credenciais da conta do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] usadas para criar o trabalho do Distribution Agent são passadas em tempo de execução.  
+  
+```csharp  
+// Define the Publisher, publication, and databases.  
+string publicationName = "AdvWorksProductTran";  
+string publisherName = publisherInstance;  
+string subscriberName = subscriberInstance;  
+string subscriptionDbName = "AdventureWorksReplica";  
+string publicationDbName = "AdventureWorks";  
+  
+//Create connections to the Publisher and Subscriber.  
+ServerConnection subscriberConn = new ServerConnection(subscriberName);  
+ServerConnection publisherConn = new ServerConnection(publisherName);  
+  
+// Create the objects that we need.  
+TransPublication publication;  
+TransPullSubscription subscription;  
+  
+try  
+{  
+    // Connect to the Publisher and Subscriber.  
+    subscriberConn.Connect();  
+    publisherConn.Connect();  
+  
+    // Ensure that the publication exists and that   
+    // it supports pull subscriptions.  
+    publication = new TransPublication();  
+    publication.Name = publicationName;  
+    publication.DatabaseName = publicationDbName;  
+    publication.ConnectionContext = publisherConn;  
+  
+    if (publication.IsExistingObject)  
+    {  
+        if ((publication.Attributes & PublicationAttributes.AllowPull) == 0)  
+        {  
+            publication.Attributes |= PublicationAttributes.AllowPull;  
+        }  
+  
+        // Define the pull subscription.  
+        subscription = new TransPullSubscription();  
+        subscription.ConnectionContext = subscriberConn;  
+        subscription.PublisherName = publisherName;  
+        subscription.PublicationName = publicationName;  
+        subscription.PublicationDBName = publicationDbName;  
+        subscription.DatabaseName = subscriptionDbName;  
+  
+        // Specify the Windows login credentials for the Distribution Agent job.  
+        subscription.SynchronizationAgentProcessSecurity.Login = winLogin;  
+        subscription.SynchronizationAgentProcessSecurity.Password = winPassword;  
+  
+        // Make sure that the agent job for the subscription is created.  
+        subscription.CreateSyncAgentByDefault = true;  
+  
+        // By default, subscriptions to transactional publications are synchronized   
+        // continuously, but in this case we only want to synchronize on demand.  
+        subscription.AgentSchedule.FrequencyType = ScheduleFrequencyType.OnDemand;  
+  
+        // Create the pull subscription at the Subscriber.  
+        subscription.Create();  
+  
+        Boolean registered = false;  
+  
+        // Verify that the subscription is not already registered.  
+        foreach (TransSubscription existing  
+            in publication.EnumSubscriptions())  
+        {  
+            if (existing.SubscriberName == subscriberName  
+                && existing.SubscriptionDBName == subscriptionDbName)  
+            {  
+                registered = true;  
+            }  
+        }  
+        if (!registered)  
+        {  
+            // Register the subscription with the Publisher.  
+            publication.MakePullSubscriptionWellKnown(  
+                subscriberName, subscriptionDbName,  
+                SubscriptionSyncType.Automatic,  
+                TransSubscriberType.ReadOnly);  
+        }  
+    }  
+    else  
+    {  
+        // Do something here if the publication does not exist.  
+        throw new ApplicationException(String.Format(  
+            "The publication '{0}' does not exist on {1}.",  
+            publicationName, publisherName));  
+    }  
+}  
+catch (Exception ex)  
+{  
+    // Implement the appropriate error handling here.  
+    throw new ApplicationException(String.Format(  
+        "The subscription to {0} could not be created.", publicationName), ex);  
+}  
+finally  
+{  
+    subscriberConn.Disconnect();  
+    publisherConn.Disconnect();  
+}  
+  
+```  
+  
+```vb  
+' Define the Publisher, publication, and databases.  
+Dim publicationName As String = "AdvWorksProductTran"  
+Dim publisherName As String = publisherInstance  
+Dim subscriberName As String = subscriberInstance  
+Dim subscriptionDbName As String = "AdventureWorksReplica"  
+Dim publicationDbName As String = "AdventureWorks"  
+  
+'Create connections to the Publisher and Subscriber.  
+Dim subscriberConn As ServerConnection = New ServerConnection(subscriberName)  
+Dim publisherConn As ServerConnection = New ServerConnection(publisherName)  
+  
+' Create the objects that we need.  
+Dim publication As TransPublication  
+Dim subscription As TransPullSubscription  
+  
+Try  
+    ' Connect to the Publisher and Subscriber.  
+    subscriberConn.Connect()  
+    publisherConn.Connect()  
+  
+    ' Ensure that the publication exists and that   
+    ' it supports pull subscriptions.  
+    publication = New TransPublication()  
+    publication.Name = publicationName  
+    publication.DatabaseName = publicationDbName  
+    publication.ConnectionContext = publisherConn  
+  
+    If publication.IsExistingObject Then  
+        If (publication.Attributes And PublicationAttributes.AllowPull) = 0 Then  
+            publication.Attributes = publication.Attributes _  
+            Or PublicationAttributes.AllowPull  
+        End If  
+  
+        ' Define the pull subscription.  
+        subscription = New TransPullSubscription()  
+        subscription.ConnectionContext = subscriberConn  
+        subscription.PublisherName = publisherName  
+        subscription.PublicationName = publicationName  
+        subscription.PublicationDBName = publicationDbName  
+        subscription.DatabaseName = subscriptionDbName  
+        subscription.Description = "Pull subscription to " + publicationDbName _  
+        + " on " + subscriberName + "."  
+  
+        ' Specify the Windows login credentials for the Distribution Agent job.  
+        subscription.SynchronizationAgentProcessSecurity.Login = winLogin  
+        subscription.SynchronizationAgentProcessSecurity.Password = winPassword  
+  
+        ' Make sure that the agent job for the subscription is created.  
+        subscription.CreateSyncAgentByDefault = True  
+  
+        ' By default, subscriptions to transactional publications are synchronized   
+        ' continuously, but in this case we only want to synchronize on demand.  
+        subscription.AgentSchedule.FrequencyType = ScheduleFrequencyType.OnDemand  
+  
+        ' Create the pull subscription at the Subscriber.  
+        subscription.Create()  
+  
+        Dim registered As Boolean = False  
+  
+        ' Verify that the subscription is not already registered.  
+        For Each existing As TransSubscription In publication.EnumSubscriptions()  
+            If existing.SubscriberName = subscriberName And _  
+                existing.SubscriptionDBName = subscriptionDbName Then  
+                registered = True  
+            End If  
+        Next existing  
+        If Not registered Then  
+            ' Register the subscription with the Publisher.  
+            publication.MakePullSubscriptionWellKnown( _  
+             subscriberName, subscriptionDbName, _  
+             SubscriptionSyncType.Automatic, _  
+             TransSubscriberType.ReadOnly)  
+        End If  
+    Else  
+        ' Do something here if the publication does not exist.  
+        Throw New ApplicationException(String.Format( _  
+         "The publication '{0}' does not exist on {1}.", _  
+         publicationName, publisherName))  
+    End If  
+Catch ex As Exception  
+    ' Implement the appropriate error handling here.  
+    Throw New ApplicationException(String.Format( _  
+        "The subscription to {0} could not be created.", publicationName), ex)  
+Finally  
+    subscriberConn.Disconnect()  
+    publisherConn.Disconnect()  
+End Try  
+  
+```  
+  
+ Esse exemplo cria uma assinatura pull para uma publicação de mesclagem. As credenciais da conta do Windows usadas para criar o trabalho do Agente de Mesclagem são passadas em tempo de execução.  
+  
+```cpp#  
+// Define the Publisher, publication, and databases.  
+string publicationName = "AdvWorksSalesOrdersMerge";  
+string publisherName = publisherInstance;  
+string subscriberName = subscriberInstance;  
+string subscriptionDbName = "AdventureWorksReplica";  
+string publicationDbName = "AdventureWorks";  
+string hostname = @"adventure-works\garrett1";  
+  
+//Create connections to the Publisher and Subscriber.  
+ServerConnection subscriberConn = new ServerConnection(subscriberName);  
+ServerConnection publisherConn = new ServerConnection(publisherName);  
+  
+// Create the objects that we need.  
+MergePublication publication;  
+MergePullSubscription subscription;  
+  
+try  
+{  
+    // Connect to the Subscriber.  
+    subscriberConn.Connect();  
+  
+    // Ensure that the publication exists and that   
+    // it supports pull subscriptions.  
+    publication = new MergePublication();  
+    publication.Name = publicationName;  
+    publication.DatabaseName = publicationDbName;  
+    publication.ConnectionContext = publisherConn;  
+  
+    if (publication.LoadProperties())  
+    {  
+        if ((publication.Attributes & PublicationAttributes.AllowPull) == 0)  
+        {  
+            publication.Attributes |= PublicationAttributes.AllowPull;  
+        }  
+  
+        // Define the pull subscription.  
+        subscription = new MergePullSubscription();  
+        subscription.ConnectionContext = subscriberConn;  
+        subscription.PublisherName = publisherName;  
+        subscription.PublicationName = publicationName;  
+        subscription.PublicationDBName = publicationDbName;  
+        subscription.DatabaseName = subscriptionDbName;  
+        subscription.HostName = hostname;  
+  
+        // Specify the Windows login credentials for the Merge Agent job.  
+        subscription.SynchronizationAgentProcessSecurity.Login = winLogin;  
+        subscription.SynchronizationAgentProcessSecurity.Password = winPassword;  
+  
+        // Make sure that the agent job for the subscription is created.  
+        subscription.CreateSyncAgentByDefault = true;  
+  
+        // Create the pull subscription at the Subscriber.  
+        subscription.Create();  
+  
+        Boolean registered = false;  
+  
+        // Verify that the subscription is not already registered.  
+        foreach (MergeSubscription existing  
+            in publication.EnumSubscriptions())  
+        {  
+            if (existing.SubscriberName == subscriberName  
+                && existing.SubscriptionDBName == subscriptionDbName  
+                && existing.SubscriptionType == SubscriptionOption.Pull)  
+            {  
+                registered = true;  
+            }  
+        }  
+        if (!registered)  
+        {  
+            // Register the local subscription with the Publisher.  
+            publication.MakePullSubscriptionWellKnown(  
+                subscriberName, subscriptionDbName,  
+                SubscriptionSyncType.Automatic,  
+                MergeSubscriberType.Local, 0);  
+        }  
+    }  
+    else  
+    {  
+        // Do something here if the publication does not exist.  
+        throw new ApplicationException(String.Format(  
+            "The publication '{0}' does not exist on {1}.",  
+            publicationName, publisherName));  
+    }  
+}  
+catch (Exception ex)  
+{  
+    // Implement the appropriate error handling here.  
+    throw new ApplicationException(String.Format(  
+        "The subscription to {0} could not be created.", publicationName), ex);  
+}  
+finally  
+{  
+    subscriberConn.Disconnect();  
+    publisherConn.Disconnect();  
+}  
+  
+```  
+  
+```vb  
+' Define the Publisher, publication, and databases.  
+Dim publicationName As String = "AdvWorksSalesOrdersMerge"  
+Dim publisherName As String = publisherInstance  
+Dim subscriberName As String = subscriberInstance  
+Dim subscriptionDbName As String = "AdventureWorksReplica"  
+Dim publicationDbName As String = "AdventureWorks"  
+Dim hostname As String = "adventure-works\garrett1"  
+  
+'Create connections to the Publisher and Subscriber.  
+Dim subscriberConn As ServerConnection = New ServerConnection(subscriberName)  
+Dim publisherConn As ServerConnection = New ServerConnection(publisherName)  
+  
+' Create the objects that we need.  
+Dim publication As MergePublication  
+Dim subscription As MergePullSubscription  
+  
+Try  
+    ' Connect to the Subscriber.  
+    subscriberConn.Connect()  
+  
+    ' Ensure that the publication exists and that   
+    ' it supports pull subscriptions.  
+    publication = New MergePublication()  
+    publication.Name = publicationName  
+    publication.DatabaseName = publicationDbName  
+    publication.ConnectionContext = publisherConn  
+  
+    If publication.LoadProperties() Then  
+        If (publication.Attributes And PublicationAttributes.AllowPull) = 0 Then  
+            publication.Attributes = publication.Attributes _  
+            Or PublicationAttributes.AllowPull  
+        End If  
+  
+        ' Define the pull subscription.  
+        subscription = New MergePullSubscription()  
+        subscription.ConnectionContext = subscriberConn  
+        subscription.PublisherName = publisherName  
+        subscription.PublicationName = publicationName  
+        subscription.PublicationDBName = publicationDbName  
+        subscription.DatabaseName = subscriptionDbName  
+        subscription.HostName = hostname  
+  
+        ' Specify the Windows login credentials for the Merge Agent job.  
+        subscription.SynchronizationAgentProcessSecurity.Login = winLogin  
+        subscription.SynchronizationAgentProcessSecurity.Password = winPassword  
+  
+        ' Make sure that the agent job for the subscription is created.  
+        subscription.CreateSyncAgentByDefault = True  
+  
+        ' Create the pull subscription at the Subscriber.  
+        subscription.Create()  
+  
+        Dim registered As Boolean = False  
+  
+        ' Verify that the subscription is not already registered.  
+        For Each existing As MergeSubscription In _  
+        publication.EnumSubscriptions()  
+            If existing.SubscriberName = subscriberName Then  
+                registered = True  
+            End If  
+        Next  
+        If Not registered Then  
+            ' Register the local subscription with the Publisher.  
+            publication.MakePullSubscriptionWellKnown( _  
+             subscriberName, subscriptionDbName, _  
+             SubscriptionSyncType.Automatic, _  
+             MergeSubscriberType.Local, 0)  
+        End If  
+    Else  
+        ' Do something here if the publication does not exist.  
+        Throw New ApplicationException(String.Format( _  
+         "The publication '{0}' does not exist on {1}.", _  
+         publicationName, publisherName))  
+    End If  
+Catch ex As Exception  
+    ' Implement the appropriate error handling here.  
+    Throw New ApplicationException(String.Format( _  
+        "The subscription to {0} could not be created.", publicationName), ex)  
+Finally  
+    subscriberConn.Disconnect()  
+    publisherConn.Disconnect()  
+End Try  
+```  
+  
+ Este exemplo cria uma assinatura pull para uma publicação de mesclagem sem criar um agente associado trabalho e metadados de assinatura em [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md). As credenciais da conta do Windows usadas para criar o trabalho do Agente de Mesclagem são passadas em tempo de execução.  
+  
+```csharp  
+// Define the Publisher, publication, and databases.  
+string publicationName = "AdvWorksSalesOrdersMerge";  
+string publisherName = publisherInstance;  
+string subscriberName = subscriberInstance;  
+string subscriptionDbName = "AdventureWorksReplica";  
+string publicationDbName = "AdventureWorks";  
+  
+//Create connections to the Publisher and Subscriber.  
+ServerConnection subscriberConn = new ServerConnection(subscriberName);  
+ServerConnection publisherConn = new ServerConnection(publisherName);  
+  
+// Create the objects that we need.  
+MergePublication publication;  
+MergePullSubscription subscription;  
+  
+try  
+{  
+    // Connect to the Subscriber.  
+    subscriberConn.Connect();  
+  
+    // Ensure that the publication exists and that   
+    // it supports pull subscriptions.  
+    publication = new MergePublication();  
+    publication.Name = publicationName;  
+    publication.DatabaseName = publicationDbName;  
+    publication.ConnectionContext = publisherConn;  
+  
+    if (publication.LoadProperties())  
+    {  
+        if ((publication.Attributes & PublicationAttributes.AllowPull) == 0)  
+        {  
+            publication.Attributes |= PublicationAttributes.AllowPull;  
+        }  
+  
+        // Define the pull subscription.  
+        subscription = new MergePullSubscription();  
+        subscription.ConnectionContext = subscriberConn;  
+        subscription.PublisherName = publisherName;  
+        subscription.PublicationName = publicationName;  
+        subscription.PublicationDBName = publicationDbName;  
+        subscription.DatabaseName = subscriptionDbName;  
+  
+        // Specify that an agent job not be created for this subscription. The  
+        // subscription can only be synchronized by running the Merge Agent directly.  
+        // Subscripition metadata stored in MSsubscription_properties will not  
+        // be available and must be specified at run time.  
+        subscription.CreateSyncAgentByDefault = false;  
+  
+        // Create the pull subscription at the Subscriber.  
+        subscription.Create();  
+  
+        Boolean registered = false;  
+  
+        // Verify that the subscription is not already registered.  
+        foreach (MergeSubscription existing  
+            in publication.EnumSubscriptions())  
+        {  
+            if (existing.SubscriberName == subscriberName  
+                && existing.SubscriptionDBName == subscriptionDbName  
+                && existing.SubscriptionType == SubscriptionOption.Pull)  
+            {  
+                registered = true;  
+            }  
+        }  
+        if (!registered)  
+        {  
+            // Register the local subscription with the Publisher.  
+            publication.MakePullSubscriptionWellKnown(  
+                subscriberName, subscriptionDbName,  
+                SubscriptionSyncType.Automatic,  
+                MergeSubscriberType.Local, 0);  
+        }  
+    }  
+    else  
+    {  
+        // Do something here if the publication does not exist.  
+        throw new ApplicationException(String.Format(  
+            "The publication '{0}' does not exist on {1}.",  
+            publicationName, publisherName));  
+    }  
+}  
+catch (Exception ex)  
+{  
+    // Implement the appropriate error handling here.  
+    throw new ApplicationException(String.Format(  
+        "The subscription to {0} could not be created.", publicationName), ex);  
+}  
+finally  
+{  
+    subscriberConn.Disconnect();  
+    publisherConn.Disconnect();  
+}  
+```  
+  
+```vb  
+' Define the Publisher, publication, and databases.  
+Dim publicationName As String = "AdvWorksSalesOrdersMerge"  
+Dim publisherName As String = publisherInstance  
+Dim subscriberName As String = subscriberInstance  
+Dim subscriptionDbName As String = "AdventureWorksReplica"  
+Dim publicationDbName As String = "AdventureWorks"  
+  
+'Create connections to the Publisher and Subscriber.  
+Dim subscriberConn As ServerConnection = New ServerConnection(subscriberName)  
+Dim publisherConn As ServerConnection = New ServerConnection(publisherName)  
+  
+' Create the objects that we need.  
+Dim publication As MergePublication  
+Dim subscription As MergePullSubscription  
+  
+Try  
+    ' Connect to the Subscriber.  
+    subscriberConn.Connect()  
+  
+    ' Ensure that the publication exists and that   
+    ' it supports pull subscriptions.  
+    publication = New MergePublication()  
+    publication.Name = publicationName  
+    publication.DatabaseName = publicationDbName  
+    publication.ConnectionContext = publisherConn  
+  
+    If publication.LoadProperties() Then  
+        If (publication.Attributes And PublicationAttributes.AllowPull) = 0 Then  
+            publication.Attributes = publication.Attributes _  
+            Or PublicationAttributes.AllowPull  
+        End If  
+  
+        ' Define the pull subscription.  
+        subscription = New MergePullSubscription()  
+        subscription.ConnectionContext = subscriberConn  
+        subscription.PublisherName = publisherName  
+        subscription.PublicationName = publicationName  
+        subscription.PublicationDBName = publicationDbName  
+        subscription.DatabaseName = subscriptionDbName  
+  
+        ' Specify that an agent job not be created for this subscription. The  
+        ' subscription can only be synchronized by running the Merge Agent directly.  
+        ' Subscripition metadata stored in MSsubscription_properties will not  
+        ' be available and must be specified at run time.  
+        subscription.CreateSyncAgentByDefault = False  
+  
+        ' Create the pull subscription at the Subscriber.  
+        subscription.Create()  
+  
+        Dim registered As Boolean = False  
+  
+        ' Verify that the subscription is not already registered.  
+        For Each existing As MergeSubscription In _  
+        publication.EnumSubscriptions()  
+            If existing.SubscriberName = subscriberName Then  
+                registered = True  
+            End If  
+        Next  
+        If Not registered Then  
+            ' Register the local subscription with the Publisher.  
+            publication.MakePullSubscriptionWellKnown( _  
+             subscriberName, subscriptionDbName, _  
+             SubscriptionSyncType.Automatic, _  
+             MergeSubscriberType.Local, 0)  
+        End If  
+    Else  
+        ' Do something here if the publication does not exist.  
+        Throw New ApplicationException(String.Format( _  
+         "The publication '{0}' does not exist on {1}.", _  
+         publicationName, publisherName))  
+    End If  
+Catch ex As Exception  
+    ' Implement the appropriate error handling here.  
+    Throw New ApplicationException(String.Format( _  
+     "The subscription to {0} could not be created.", publicationName), ex)  
+Finally  
+    subscriberConn.Disconnect()  
+    publisherConn.Disconnect()  
+End Try  
+```  
+  
+ Esse exemplo cria uma assinatura pull para uma publicação de mesclagem que pode ser sincronizada pela Internet usando-se sincronização da Web. As credenciais da conta do Windows usadas para criar o trabalho do Agente de Mesclagem são passadas em tempo de execução. Para obter mais informações, consulte [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
+  
+```csharp  
+// Define the Publisher, publication, and databases.  
+string publicationName = "AdvWorksSalesOrdersMerge";  
+string publisherName = publisherInstance;  
+string subscriberName = subscriberInstance;  
+string subscriptionDbName = "AdventureWorksReplica";  
+string publicationDbName = "AdventureWorks";  
+string hostname = @"adventure-works\garrett1";  
+string webSyncUrl = "https://" + publisherInstance + "/WebSync/replisapi.dll";  
+  
+//Create connections to the Publisher and Subscriber.  
+ServerConnection subscriberConn = new ServerConnection(subscriberName);  
+ServerConnection publisherConn = new ServerConnection(publisherName);  
+  
+// Create the objects that we need.  
+MergePublication publication;  
+MergePullSubscription subscription;  
+  
+try  
+{  
+    // Connect to the Subscriber.  
+    subscriberConn.Connect();  
+  
+    // Ensure that the publication exists and that   
+    // it supports pull subscriptions and Web synchronization.  
+    publication = new MergePublication();  
+    publication.Name = publicationName;  
+    publication.DatabaseName = publicationDbName;  
+    publication.ConnectionContext = publisherConn;  
+  
+    if (publication.LoadProperties())  
+    {  
+        if ((publication.Attributes & PublicationAttributes.AllowPull) == 0)  
+        {  
+            publication.Attributes |= PublicationAttributes.AllowPull;  
+        }  
+        if ((publication.Attributes & PublicationAttributes.AllowWebSynchronization) == 0)  
+        {  
+            publication.Attributes |= PublicationAttributes.AllowWebSynchronization;  
+        }  
+  
+        // Define the pull subscription.  
+        subscription = new MergePullSubscription();  
+        subscription.ConnectionContext = subscriberConn;  
+        subscription.PublisherName = publisherName;  
+        subscription.PublicationName = publicationName;  
+        subscription.PublicationDBName = publicationDbName;  
+        subscription.DatabaseName = subscriptionDbName;  
+        subscription.HostName = hostname;  
+  
+        // Specify the Windows login credentials for the Merge Agent job.  
+        subscription.SynchronizationAgentProcessSecurity.Login = winLogin;  
+        subscription.SynchronizationAgentProcessSecurity.Password = winPassword;  
+  
+        // Enable Web synchronization.  
+        subscription.UseWebSynchronization = true;  
+        subscription.InternetUrl = webSyncUrl;  
+  
+        // Specify the same Windows credentials to use when connecting to the  
+        // Web server using HTTPS Basic Authentication.  
+        subscription.InternetSecurityMode = AuthenticationMethod.BasicAuthentication;  
+        subscription.InternetLogin = winLogin;  
+        subscription.InternetPassword = winPassword;  
+  
+        // Ensure that we create a job for this subscription.  
+        subscription.CreateSyncAgentByDefault = true;  
+  
+        // Create the pull subscription at the Subscriber.  
+        subscription.Create();  
+  
+        Boolean registered = false;  
+  
+        // Verify that the subscription is not already registered.  
+        foreach (MergeSubscription existing  
+            in publication.EnumSubscriptions())  
+        {  
+            if (existing.SubscriberName == subscriberName  
+                && existing.SubscriptionDBName == subscriptionDbName  
+                && existing.SubscriptionType == SubscriptionOption.Pull)  
+            {  
+                registered = true;  
+            }  
+        }  
+        if (!registered)  
+        {  
+            // Register the local subscription with the Publisher.  
+            publication.MakePullSubscriptionWellKnown(  
+                subscriberName, subscriptionDbName,  
+                SubscriptionSyncType.Automatic,  
+                MergeSubscriberType.Local, 0);  
+        }  
+    }  
+    else  
+    {  
+        // Do something here if the publication does not exist.  
+        throw new ApplicationException(String.Format(  
+            "The publication '{0}' does not exist on {1}.",  
+            publicationName, publisherName));  
+    }  
+}  
+catch (Exception ex)  
+{  
+    // Implement the appropriate error handling here.  
+    throw new ApplicationException(String.Format(  
+        "The subscription to {0} could not be created.", publicationName), ex);  
+}  
+finally  
+{  
+    subscriberConn.Disconnect();  
+    publisherConn.Disconnect();  
+}  
+```  
+  
+```vb  
+' Define the Publisher, publication, and databases.  
+Dim publicationName As String = "AdvWorksSalesOrdersMerge"  
+Dim publisherName As String = publisherInstance  
+Dim subscriberName As String = subscriberInstance  
+Dim subscriptionDbName As String = "AdventureWorksReplica"  
+Dim publicationDbName As String = "AdventureWorks"  
+Dim hostname As String = "adventure-works\garrett1"  
+Dim webSyncUrl As String = "https://" + publisherInstance + "/WebSync/replisapi.dll"  
+  
+'Create connections to the Publisher and Subscriber.  
+Dim subscriberConn As ServerConnection = New ServerConnection(subscriberName)  
+Dim publisherConn As ServerConnection = New ServerConnection(publisherName)  
+  
+' Create the objects that we need.  
+Dim publication As MergePublication  
+Dim subscription As MergePullSubscription  
+  
+Try  
+    ' Connect to the Subscriber.  
+    subscriberConn.Connect()  
+  
+    ' Ensure that the publication exists and that   
+    ' it supports pull subscriptions and Web synchronization.  
+    publication = New MergePublication()  
+    publication.Name = publicationName  
+    publication.DatabaseName = publicationDbName  
+    publication.ConnectionContext = publisherConn  
+  
+    If publication.LoadProperties() Then  
+        If (publication.Attributes And PublicationAttributes.AllowPull) = 0 Then  
+            publication.Attributes = publication.Attributes _  
+            Or PublicationAttributes.AllowPull  
+        End If  
+        If (publication.Attributes And PublicationAttributes.AllowWebSynchronization) = 0 Then  
+            publication.Attributes = publication.Attributes _  
+            Or PublicationAttributes.AllowWebSynchronization  
+        End If  
+  
+        ' Define the pull subscription.  
+        subscription = New MergePullSubscription()  
+        subscription.ConnectionContext = subscriberConn  
+        subscription.PublisherName = publisherName  
+        subscription.PublicationName = publicationName  
+        subscription.PublicationDBName = publicationDbName  
+        subscription.DatabaseName = subscriptionDbName  
+        subscription.HostName = hostname  
+        subscription.CreateSyncAgentByDefault = True  
+  
+        ' Specify the Windows login credentials for the Merge Agent job.  
+        subscription.SynchronizationAgentProcessSecurity.Login = winLogin  
+        subscription.SynchronizationAgentProcessSecurity.Password = winPassword  
+  
+        ' Enable Web synchronization.  
+        subscription.UseWebSynchronization = True  
+        subscription.InternetUrl = webSyncUrl  
+  
+        ' Specify the same Windows credentials to use when connecting to the  
+        ' Web server using HTTPS Basic Authentication.  
+        subscription.InternetSecurityMode = AuthenticationMethod.BasicAuthentication  
+        subscription.InternetLogin = winLogin  
+        subscription.InternetPassword = winPassword  
+  
+        ' Create the pull subscription at the Subscriber.  
+        subscription.Create()  
+  
+        Dim registered As Boolean = False  
+  
+        ' Verify that the subscription is not already registered.  
+        For Each existing As MergeSubscription In _  
+        publication.EnumSubscriptions()  
+            If existing.SubscriberName = subscriberName Then  
+                registered = True  
+            End If  
+        Next  
+        If Not registered Then  
+            ' Register the local subscription with the Publisher.  
+            publication.MakePullSubscriptionWellKnown( _  
+             subscriberName, subscriptionDbName, _  
+             SubscriptionSyncType.Automatic, _  
+             MergeSubscriberType.Local, 0)  
+        End If  
+    Else  
+        ' Do something here if the publication does not exist.  
+        Throw New ApplicationException(String.Format( _  
+         "The publication '{0}' does not exist on {1}.", _  
+         publicationName, publisherName))  
+    End If  
+Catch ex As Exception  
+    ' Implement the appropriate error handling here.  
+    Throw New ApplicationException(String.Format( _  
+     "The subscription to {0} could not be created.", publicationName), ex)  
+Finally  
+    subscriberConn.Disconnect()  
+    publisherConn.Disconnect()  
+End Try  
+```  
+  
+## Consulte também  
+ [Conceitos de Replication Management Objects](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+ [Exibir e modificar propriedades de assinatura pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
+ [Configure a sincronização da Web](../../relational-databases/replication/configure-web-synchronization.md)   
+ [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Práticas recomendadas em relação à segurança de replicação](../../relational-databases/replication/security/replication-security-best-practices.md)  
+  
+  

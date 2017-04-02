@@ -1,0 +1,101 @@
+---
+title: "Tarefa Verificar Integridade do Banco de Dados (Plano de Manuten&#231;&#227;o) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.swb.maint.maintplanproperties.integrity.f1"
+  - "sql13.swb.maint.integrity.f1"
+helpviewer_keywords: 
+  - "caixa de diálogo Tarefa Verificar Integridade do Banco de Dados "
+ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
+caps.latest.revision: 24
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 24
+---
+# Tarefa Verificar Integridade do Banco de Dados (Plano de Manuten&#231;&#227;o)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  Use a caixa de diálogo **Tarefa Verificar Integridade do Banco de Dados** para verificar a alocação e integridade estrutural de tabelas do usuário e do sistema, além de índices no banco de dados, executando a instância `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] . A execução de `DBCC` garante que quaisquer problemas de integridade com o banco de dados sejam reportados, permitindo assim serem endereçados posteriormente por um administrador do sistema ou proprietário de banco de dados.  
+  
+## Opções  
+ **Conexão**  
+ Selecione a conexão de servidor a ser usada na execução desta tarefa.  
+  
+ **Nova**  
+ Crie uma nova conexão com o servidor para usar ao executar esta tarefa. A caixa de diálogo **Nova Conexão** é descrita abaixo.  
+  
+ **Bancos de dados**  
+ Especifique os bancos de dados afetados por essa tarefa.  
+  
+-   **Todos os bancos de dados**  
+  
+     Gere um plano de manutenção que executa tarefas de manutenção em todos os bancos de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exceto no **tempdb**.  
+  
+-   **Todos os bancos de dados do sistema**  
+  
+     Gere um plano de manutenção que executa tarefas de manutenção em cada banco de dados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exceto o **tempdb**. Nenhuma tarefa de manutenção é executada nos bancos de dados criados pelo usuário.  
+  
+-   **Todos os bancos de dados de usuários**  
+  
+     Gere um plano de manutenção que execute tarefas de manutenção em todos os bancos de dados criados por usuários. Nenhuma tarefa de manutenção é executada com os bancos de dados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+-   **Estes bancos de dados específicos**  
+  
+     Gere um plano de manutenção que execute tarefas de manutenção somente nos bancos de dados selecionados. Pelo menos um banco de dados da lista deverá ser selecionado se esta opção for escolhida.  
+  
+    > [!NOTE]  
+    >  Os planos de manutenção são executados somente em bancos de dados definidos com nível de compatibilidade 80 ou superior. Os bancos de dados definidos para o nível de compatibilidade 70 ou inferior não são exibidos.  
+  
+ **Incluir índices**  
+ Verifique a integridade de todas as páginas de índice, assim como das páginas de dados de tabela.  
+  
+ **Somente físico**  
+ Limita a verificação à integridade da estrutura física da página, cabeçalhos de registros e a consistência da alocação do banco de dados. O uso dessa opção pode reduzir o tempo de execução de DBCC CHECKDB em bancos de dados grandes e é recomendado para uso frequente em sistemas de produção.  
+  
+ **Tablock**  
+ Faz com que DBCC CHECKDB obtenha bloqueios em vez de usar um instantâneo do banco de dados interno. Isso inclui um bloqueio exclusivo (X) de curto prazo no banco de dados. O uso dessa opção pode ajudar o DBCC CHECKDB a ser executado com mais rapidez em um banco de dados sob carga pesada, mas reduz a simultaneidade disponível no banco de dados durante a execução do DBCC CHECKDB.  
+  
+ **Exibir T-SQL**  
+ Exiba as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas no servidor para esta tarefa, com base nas opções selecionadas.  
+  
+> [!NOTE]  
+>  Quando o número de objetos afetados é grande, essa exibição pode ser demorada.  
+  
+## Caixa de diálogo Nova Conexão  
+ **Nome da conexão**  
+ Digite um nome para a nova conexão.  
+  
+ **Selecione ou digite um nome de servidor**  
+ Selecione um servidor com o qual se conectar ao executar esta tarefa.  
+  
+ **Atualizar**  
+ Atualize a lista de servidores disponíveis.  
+  
+ **Digite as informações para fazer logon no servidor**  
+ Especifica como autenticar no servidor.  
+  
+ **Use a segurança integrada do Windows**  
+ Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] com a Autenticação do Windows.  
+  
+ **Usar nome de usuário e senha específicos**  
+ Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa opção não está disponível.  
+  
+ **Nome de usuário**  
+ Forneça um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usado na autenticação. Essa opção não está disponível.  
+  
+ **Senha**  
+ Forneça uma senha a ser usada na autenticação. Essa opção não está disponível.  
+  
+## Consulte também  
+ [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
+  
+  

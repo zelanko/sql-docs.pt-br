@@ -1,0 +1,78 @@
+---
+title: "Configurar regras de neg&#243;cio para enviar notifica&#231;&#245;es (Master Data Services) | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "master-data-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "regras de negócio [Master Data Services], configuração de notificações"
+  - "email [Master Data Services], configuração das regras de negócio"
+  - "notificações [Master Data Services], configuração das regras de negócio"
+ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
+caps.latest.revision: 10
+author: "sabotta"
+ms.author: "carlasab"
+manager: "jhubbard"
+caps.handback.revision: 10
+---
+# Configurar regras de neg&#243;cio para enviar notifica&#231;&#245;es (Master Data Services)
+  No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], configure regras de negócios para enviar notificações quando você desejar notificar os usuários sobre alterações de valor de atributo.  
+  
+## Pré-requisitos  
+ Para executar esse procedimento:  
+  
+-   Você deve ter permissão para acessar as áreas funcionais **Administração do Sistema** e **Permissões de Usuário e de Grupo** . Se você não tiver permissão para a área funcional **Permissões de Usuário e de Grupo** , não poderá exibir a lista de usuários e grupos para a qual enviar notificações.  
+  
+-   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+  
+-   Uma regra de negócios que usa uma ação de validação já deve existir. Para obter mais informações, consulte [Criar e publicar uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md).  
+  
+-   O usuário ou grupo que recebe a notificação deve ter, no mínimo, a permissão **Somente leitura** no atributo que falhar na validação. Os usuários ou grupos que tiverem a permissão para o atributo negada de forma explícita ou implícita receberão o email, mas não poderão acessar o atributo no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
+  
+-   Se o email for enviado a um grupo, somente os membros do grupo que tiverem acessado o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] receberão o email.  
+  
+### Para configurar regras de negócios para enviar notificações  
+  
+1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
+  
+2.  Na barra de menus, aponte para **Gerenciar** e clique em **Regras de Negócios**.  
+  
+3.  Na página **Regras de Negócio** , na lista **Modelo** , selecione um modelo.  
+  
+4.  Na lista suspensa **Entidade**, escolha uma entidade.  
+  
+5.  Na lista suspensa **Tipos de Membro**, escolha um tipo de membro.  
+  
+6.  Na grade, selecione a linha da regra de negócio que deseja editar e clique em **Editar**.  
+  
+7.  Marque a caixa de seleção **Enviar Notificações** e, na lista suspensa, selecione um usuário ou grupo ao qual a notificação por email será enviada.  
+  
+8.  Clique em **Salvar**.  
+  
+9. Clique em **Publicar Tudo**.  
+  
+10. Na caixa de diálogo de confirmação, clique em **OK**. O valor na coluna **Estado da Regra de Negócios** mudou para **Ativo** e a coluna **Notificação** mostra o usuário ou grupo selecionado ao qual enviar a notificação.  
+  
+## Próximas etapas  
+  
+-   Aplique regras de negócio a dados seguindo um destes procedimentos:  
+  
+    -   [Validar membros específicos em relação a regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+  
+    -   [Validar uma versão em relação a regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+  
+-   Configure o protocolo de email da seguinte maneira:  
+  
+    -   [Configurar notificações por email &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
+  
+## Consulte também  
+ [Notificações &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)   
+ [Configurar notificações por email &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
+  
+  

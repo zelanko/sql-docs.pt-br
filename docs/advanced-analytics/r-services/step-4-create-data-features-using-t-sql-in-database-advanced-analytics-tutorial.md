@@ -1,0 +1,129 @@
+---
+title: "Etapa 4: Criar recursos de dados usando o T-SQL (Tutorial de an&#225;lise avan&#231;ada no banco de dados) | Microsoft Docs"
+ms.custom: ""
+ms.date: "04/19/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "r-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+applies_to: 
+  - "SQL Server 2016"
+dev_langs: 
+  - "R"
+  - "TSQL"
+ms.assetid: 5b2f4c44-6192-40df-abf1-fc983844f1d0
+caps.latest.revision: 10
+author: "jeannt"
+ms.author: "jeannt"
+manager: "jhubbard"
+caps.handback.revision: 10
+---
+# Etapa 4: Criar recursos de dados usando o T-SQL (Tutorial de an&#225;lise avan&#231;ada no banco de dados)
+Após várias rodadas de exploração de dados, você reuniu algumas ideias sobre os dados e está pronto para passar para a *engenharia de recursos*. Esse processo de criação de recursos dos dados brutos é uma etapa crítica na modelagem de análise avançada.  
+  
+Nesta etapa, você aprenderá a criar recursos de dados brutos usando uma função [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você chamará essa função por meio de um procedimento armazenado para criar uma tabela que contém os valores do recurso.  
+  
+## Definir a função  
+Os valores de distância relatados nos dados originais baseiam-se na distância do medidor relatado e não representam necessariamente a distância geográfica nem a distância percorrida. Portanto, você precisará calcular a distância direta entre os pontos de embarque e desembarque de passageiros, usando as coordenadas disponíveis no conjunto de dados NYC Taxi de origem. Você pode fazer isso usando a [fórmula de Haversine](https://en.wikipedia.org/wiki/Haversine_formula) em uma função personalizada [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  
+Você usará uma função personalizada do T-SQL, _fnCalculateDistance_, para calcular a distância usando a fórmula de Haversine e usará uma segunda função personalizada do T-SQL, _fnEngineerFeatures_, para criar uma tabela que contém todos os recursos.  
+  
+#### Para calcular a distância da corrida usando fnCalculateDistance  
+  
+1.  A função _fnCalculateDistance_ deve ter sido baixada e registrada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte da preparação para esse passo a passo. Reserve um minuto para examinar o código  
+  
+    No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expanda **Programação**, **Funções** e **Funções de valor escalar**.   
+    Clique com o botão direito do mouse em _fnCalculateDistance_ e selecione **Modificar** para abrir o script [!INCLUDE[tsql](../../includes/tsql-md.md)] em uma nova janela de consulta.  
+  
+    ```  
+    CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
+    -- User-defined function that calculates the direct distance between two geographical coordinates.  
+    RETURNS float  
+    AS  
+    BEGIN  
+      DECLARE @distance decimal(28, 10)  
+      -- Convert to radians  
+      SET @Lat1 = @Lat1 / 57.2958  
+      SET @Long1 = @Long1 / 57.2958  
+      SET @Lat2 = @Lat2 / 57.2958  
+      SET @Long2 = @Long2 / 57.2958  
+      -- Calculate distance  
+      SET @distance = (SIN(@Lat1) * SIN(@Lat2)) + (COS(@Lat1) * COS(@Lat2) * COS(@Long2 - @Long1))  
+      --Convert to miles  
+      IF @distance <> 0  
+      BEGIN  
+        SET @distance = 3958.75 * ATAN(SQRT(1 - POWER(@distance, 2)) / @distance);  
+      END  
+      RETURN @distance  
+    END  
+    GO  
+  
+    ```  
+  
+    -   A função é uma função de valor escalar, retornando um único valor de dados de um tipo predefinido.  
+  
+    -   Ela usa os valores de latitude e longitude como entradas, obtidos dos locais de embarque e desembarque de passageiros. A fórmula de Haversine converte locais em radianos e usa esses valores para calcular a distância direta em milhas entre os dois locais.  
+  
+Para adicionar o valor calculado a uma tabela que pode ser usada para treinar o modelo, você usará outra função, _fnEngineerFeatures_.  
+  
+#### Para salvar os recursos usando _fnEngineerFeatures_  
+  
+1.  Reserve um minuto para examinar a função personalizada do T-SQL no o código, _fnEngineerFeatures_, que deve ter sido criada como parte da preparação para esse passo a passo.  
+  
+    Essa função é uma função com valor de tabela que usa várias colunas como entradas e gerar uma tabela com várias colunas de recurso.  A finalidade dessa função é criar um conjunto de recursos para uso na criação de um modelo. A função _fnEngineerFeatures_ chama a função T-SQL criada anteriormente, _fnCalculateDistance_, para obter a distância direta entre os locais de embarque e desembarque de passageiros.  
+  
+    ```  
+    CREATE FUNCTION [dbo].[fnEngineerFeatures] (  
+    @passenger_count int = 0,  
+    @trip_distance float = 0,  
+    @trip_time_in_secs int = 0,  
+    @pickup_latitude float = 0,  
+    @pickup_longitude float = 0,  
+    @dropoff_latitude float = 0,  
+    @dropoff_longitude float = 0)  
+    RETURNS TABLE  
+    AS  
+      RETURN  
+      (  
+      -- Add the SELECT statement with parameter references here  
+      SELECT  
+        @passenger_count AS passenger_count,  
+        @trip_distance AS trip_distance,  
+        @trip_time_in_secs AS trip_time_in_secs,  
+        [dbo].[fnCalculateDistance](@pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude) AS direct_distance  
+  
+      )  
+    GO  
+  
+    ```  
+  
+2.  Para verificar se essa função funciona, você pode usá-la para calcular a distância geográfica dessas corridas em que a distância limitada era 0, mas os locais de embarque e desembarque de passageiros eram diferentes.  
+  
+    ```  
+        SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,  
+        trip_distance, pickup_datetime, dropoff_datetime,   
+        dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) AS direct_distance  
+        FROM nyctaxi_sample  
+        WHERE pickup_longitude != dropoff_longitude and pickup_latitude != dropoff_latitude and trip_distance = 0  
+        ORDER BY trip_time_in_secs DESC  
+    ```  
+  
+    Como você pode ver, a distância relatada pelo medidor nem sempre corresponde à distância geográfica. Por isso a engenharia de recursos é tão importante.  
+  
+Na próxima etapa, você aprenderá a usar esses recursos de dados para treinar um modelo de aprendizado de máquina usando o R.  
+  
+## Próxima etapa  
+[Etapa 5: Treinar e salvar um modelo usando o T-SQL](../../advanced-analytics/r-services/step-5-train-and-save-a-model-using-t-sql.md)  
+  
+## Etapa anterior  
+[Etapa 3: Explorar e visualizar os dados](../../advanced-analytics/r-services/step-3-explore-and-visualize-the-data-in-database-advanced-analytics-tutorial.md)  
+  
+## Consulte também  
+[Análise avançada no banco de dados para desenvolvedores do SQL &#40;Tutorial&#41;](../../advanced-analytics/r-services/in-database-advanced-analytics-for-sql-developers-tutorial.md)  
+[Tutoriais do SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services-tutorials.md)  
+  
+  
+  

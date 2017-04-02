@@ -1,0 +1,100 @@
+---
+title: "Restaura&#231;&#227;o por etapas de bancos de dados com tabelas com otimiza&#231;&#227;o de mem&#243;ria | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/06/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine-imoltp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
+caps.latest.revision: 16
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 16
+---
+# Restaura&#231;&#227;o por etapas de bancos de dados com tabelas com otimiza&#231;&#227;o de mem&#243;ria
+  A restauração por etapas tem suporte em bancos de dados com tabelas com otimização de memória, exceto para uma restrição descrita abaixo. Para obter mais informações sobre backup e restauração por etapas, veja [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) e [Restaurações por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
+  
+ Um grupo de arquivos com otimização de memória deve ser submetido a backup e restaurado junto com um grupo de arquivos primário:  
+  
+-   Se você submeter a backup (ou restaurar) o grupo de arquivos primário, especifique o grupo de arquivos com otimização de memória.  
+  
+-   Se você submeter a backup (ou restaurar) o grupo de arquivos com otimização de memória, especifique o grupo de arquivos primário.  
+  
+ Os principais cenários para backup e restauração por etapas são:  
+  
+-   O backup por etapas permite reduzir o tamanho do backup. Alguns exemplos:  
+  
+    -   Configurar o backup de banco de dados para ocorrer em horas ou dias diferentes para minimizar o impacto sobre a carga de trabalho. Um exemplo é um banco de dados muito grande (maior que 1 TB) em que um backup completo de banco de dados não pode ser concluído no tempo alocado para a manutenção do banco de dados. Nessa situação, você pode usar o backup por etapas para fazer backup do banco de dados inteiro em vários backup por etapas.  
+  
+    -   Se um grupo de arquivos for marcado como somente leitura, ele não exigirá um backup de log de transações após ser marcado como somente leitura. Você pode optar por fazer backup do grupo de arquivos apenas uma vez depois de marcá-lo como somente leitura.  
+  
+-   Restauração por etapas.  
+  
+    -   A meta de uma restauração por etapas é colocar as partes importantes do banco de dados online, sem esperar por todos os dados. Por exemplo, se um banco de dados tiver dados particionados, as partições mais antigas serão usadas apenas raramente. É possível restaurá-los somente conforme necessário. O mesmo ocorre com grupos de arquivos que contêm, por exemplo, dados históricos.  
+  
+    -   Usando o reparo de página, você pode corrigir danos de página, especificamente restaurando a página. Para obter mais informações, veja [Restaurar páginas &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md).  
+  
+## Exemplos  
+ Os exemplos usam o seguinte esquema:  
+  
+```  
+CREATE DATABASE imoltp  
+ON PRIMARY (name = imoltp_primary1, filename = 'c:\data\imoltp_data1.mdf')  
+LOG ON (name = imoltp_log, filename = 'c:\data\imoltp_log.ldf')  
+GO  
+  
+ALTER DATABASE imoltp ADD FILE (name = imoltp_primary2, filename = 'c:\data\imoltp_data2.ndf')  
+GO  
+  
+ALTER DATABASE imoltp ADD FILEGROUP imoltp_secondary  
+ALTER DATABASE imoltp ADD FILE (name = imoltp_secondary, filename = 'c:\data\imoltp_secondary.ndf') TO FILEGROUP imoltp_secondary  
+GO  
+  
+ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA   
+ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod   
+ALTER DATABASE imoltp ADD FILE (name='imoltp_mod2', filename='c:\data\imoltp_mod2') TO FILEGROUP imoltp_mod   
+GO  
+```  
+  
+### Backup  
+ Este exemplo mostra como fazer backup do grupo de arquivos primário e do grupo de arquivos com otimização de memória. Você deve especificar o grupo de arquivos primário e com otimização de memória.  
+  
+```  
+backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\data\imoltp.dmp' with init  
+```  
+  
+ O exemplo a seguir mostra que o backup de grupos de arquivos, que não sejam o grupo de arquivos primário e com otimização de memória, funciona de maneira semelhante para os bancos de dados sem tabelas com otimização de memória. O comando a seguir faz backup do grupo de arquivos secundário  
+  
+```  
+backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
+```  
+  
+### Restaurar  
+ O exemplo a seguir mostra como restaurar o grupo de arquivos primário e o grupo de arquivos com otimização de memória juntos.  
+  
+```  
+restore database imoltp filegroup = 'primary', filegroup = 'imoltp_mod'   
+from disk='c:\data\imoltp.dmp' with partial, norecovery  
+  
+--restore the transaction log  
+ RESTORE LOG [imoltp] FROM DISK = N'c:\data\imoltp_log.dmp' WITH  FILE = 1,  NOUNLOAD,  STATS = 10  
+GO  
+```  
+  
+ O próximo exemplo mostra que a restauração de grupos de arquivos, que não sejam o grupo de arquivos primário e com otimização de memória, funciona de maneira semelhante para os bancos de dados sem tabelas com otimização de memória.  
+  
+```  
+RESTORE DATABASE [imoltp] FILE = N'imoltp_secondary'   
+FROM  DISK = N'c:\data\imoltp_secondary.dmp' WITH  FILE = 1,  RECOVERY,  NOUNLOAD,  STATS = 10  
+GO  
+```  
+  
+## Consulte também  
+ [Backup, restauração e recuperação de tabelas com otimização de memória](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+  
+  

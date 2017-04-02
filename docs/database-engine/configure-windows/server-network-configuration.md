@@ -1,0 +1,68 @@
+---
+title: "Configura&#231;&#227;o de rede do servidor | Microsoft Docs"
+ms.custom: ""
+ms.date: "07/27/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Pipes nomeados [SQL Server], configurando"
+  - "conexões [SQL Server], configuração de rede do servidor"
+  - "Mecanismo de banco de dados [SQL Server], configurações de rede"
+  - "configuração de rede do servidor [SQL Server]"
+  - "protocolos [SQL Server], escolhendo"
+  - "portas [SQL Server], alterando"
+  - "configuração do servidor [SQL Server]"
+ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
+caps.latest.revision: 50
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 50
+---
+# Configura&#231;&#227;o de rede do servidor
+  Tarefas de configuração de rede do servidor incluem habilitação de protocolos, modificação de porta ou pipe usado por um protocolo, criptografia de configuração, configuração do serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exposição ou ocultação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na rede e registro do Nome do Principal do Servidor. Na maioria das vezes, não é necessário alterar a configuração de rede do servidor. Só reconfigure os protocolos de rede do servidor se houver requisitos de rede especiais.  
+  
+ A configuração da rede do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é realizada usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use o Utilitário de Rede do Servidor fornecido com esses produtos.  
+  
+## Protocolos  
+ Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager para habilitar ou desabilitar os protocolos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e configurar as opções disponíveis para os protocolos. É possível habilitar mais de um protocolo. É necessário habilitar todos os protocolos que você deseja que os clientes usem. Todos os protocolos têm acesso idêntico ao servidor. Para obter informações sobre quais protocolos devem ser usados, consulte [Habilitar ou desabilitar um protocolo de rede de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) e [Configuração de protocolo de rede padrão do SQL Server](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md).  
+  
+### Alterando uma porta  
+ É possível configurar o protocolo TCP/IP e VIA para escutar em uma porta designada. Por padrão, a instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)] escuta na porta TCP 1433. As instâncias nomeadas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e do [!INCLUDE[ssEW](../../includes/ssew-md.md)] são configuradas para portas dinâmicas. Isso significa que elas selecionam uma porta disponível quando o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado. O serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuda os clientes a identificar a porta no momento da conexão.  
+  
+ Quando configurado para portas dinâmicas, a porta usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá ser alterada sempre que o programa for iniciado. Ao conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por um firewall, é necessário abrir a porta usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Configure o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usar uma porta específica, assim você pode configurar o firewall para permitir a comunicação com o servidor. Para obter mais informações, veja [Configurar um servidor para escuta em uma porta TCP específica &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure a server to listen on a specific tcp port.md).  
+  
+### Alterando um pipe nomeado  
+ É possível configurar o protocolo de pipe nomeado para escutar em um pipe nomeado designado. Por padrão, a instância padrão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escuta no pipe \\\\.\pipe\sql\query para a instância padrão e \\\\.\pipe\MSSQL$*\<instancename>*\sql\query para uma instância nomeada. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode escutar somente em um pipe nomeado, mas, se desejar, é possível alterar o pipe para outro nome. O serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuda os clientes a identificar o pipe no momento da conexão. Para obter mais informações, veja [Como configurar um servidor para escuta em um pipe alternativo &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  
+  
+## Forçar criptografia  
+ O [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode ser configurado para exigir criptografia ao comunicar-se com aplicativos cliente. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable encrypted connections to the database engine.md).  
+  
+## Proteção Estendida para Autenticação  
+ O suporte à Proteção Estendida para Autenticação usando associação de canal e associação de serviço está disponível para sistemas operacionais que dão suporte à Proteção Estendida. Para obter mais informações, veja [Conectar-se ao mecanismo de banco de dados usando proteção estendida](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
+  
+## Autenticando usando o Kerberos  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à autenticação Kerberos. Para obter mais informações, veja [Registrar um nome da entidade de serviço para conexões de Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) e [Microsoft Kerberos Configuration Manager para SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+  
+### Registrando um SPN (Nome da Entidade de Serviço)  
+ O serviço de autenticação Kerberos usa um SPN para autenticar um serviço. Para obter mais informações, veja [Registrar um nome de entidade de serviço para conexões de Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+  
+ Também podem ser usados SPNs para fazer autenticação de cliente mais segura ao conectar-se com NTLM. Para obter mais informações, veja [Conectar-se ao mecanismo de banco de dados usando proteção estendida](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
+  
+## Serviço Navegador do SQL Server  
+ O serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado no servidor e ajuda computadores cliente a encontrar instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não é necessário configurar o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas é necessário estar em execução em alguns cenários de conexão. Para obter mais informações sobre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, veja [Serviço SQL Server Browser &#40;Mecanismo de Banco de Dados e SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)  
+  
+## Ocultando o SQL Server  
+ Em execução, o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] responde a consultas, com nome, versão e informações de conexão para cada instância instalada. Para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o sinalizador do **HideInstance** indica que o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não deve responder com informações sobre essa instância do servidor. Aplicativos cliente ainda podem conectar, mas devem saber as informações de conexão exigidas. Para obter mais informações, veja [Ocultar uma instância do Mecanismo de Banco de Dados do SQL Server](../../database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md).  
+  
+## Conteúdo relacionado  
+ [Configuração de rede de cliente](../../database-engine/configure-windows/client-network-configuration.md)  
+  
+ [Gerenciar os serviços do Mecanismo de Banco de Dados](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
+  
+  

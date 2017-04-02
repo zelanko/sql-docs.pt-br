@@ -1,0 +1,5 @@
+# [Instalando as Versões do Integration Services Lado a Lado](installing-integration-services-versions-side-by-side.md)
+# [Instalar o Integration Services](install-integration-services.md)
+# [Atualizar pacotes do Integration Services usando o Assistente de Atualização de Pacote SSIS](upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)
+# [Atualizar pacotes do Integration Services](upgrade-integration-services-packages.md)
+# [Atualização do Integration Services](upgrade-integration-services.md)

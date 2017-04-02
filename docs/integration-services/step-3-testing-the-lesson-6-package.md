@@ -1,0 +1,46 @@
+---
+title: "Etapa 3: Testando o pacote da Li&#231;&#227;o 6 | Microsoft Docs"
+ms.custom: ""
+ms.date: "02/27/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "get-started-article"
+applies_to: 
+  - "SQL Server 2016"
+ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
+caps.latest.revision: 4
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+---
+# Etapa 3: Testando o pacote da Li&#231;&#227;o 6
+Em tempo de execução, seu pacote irá obter o valor para a propriedade Diretório a partir do parâmetro VarFolderName.  
+  
+Para verificar se, em tempo de execução, o pacote atualizou corretamente o Diretório com o novo valor, simplesmente execute o pacote. Devido a serem copiados apenas três arquivos de dados de exemplo para o novo diretório, o fluxo de dados irá executar apenas três vezes ao invés de interagir com 14 arquivos da pasta original.  
+  
+## Verificando o layout do pacote  
+Antes de testar o pacote deve-se verificar se os fluxos de controle e de dados do pacote da Lição 6 contêm os objetos mostrados nos diagramas a seguir. O fluxo de controle deve ser idêntico ao fluxo de controle da lição 5. O fluxo de dados deve ser idêntico ao fluxo de dados na lição 5.  
+  
+**Fluxo de Controle**  
+  
+![Fluxo de Controle](../integration-services/media/task3lesson6control.jpg "Fluxo de Controle")  
+  
+**Fluxo de Dados**  
+  
+![Fluxo de Dados](../integration-services/media/task3lesson6data.jpg "Fluxo de Dados")  
+  
+### Para testar o pacote de tutorial da Lição 6  
+  
+1.  No menu Depurar, clique em Iniciar Depuração.  
+  
+2.  Terminada a execução do pacote, no menu Depurar, clique em Parar Depuração.  
+  
+## Próxima tarefa da lição  
+[Etapa 4: Implantando o pacote da Lição 6](../integration-services/step-4-deploying-the-lesson-6-package.md)  
+  
+  
+  
