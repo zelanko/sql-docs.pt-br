@@ -52,7 +52,7 @@ manager: "jhubbard"
 ## Exemplo  
  O exemplo a seguir habilita o trabalho `Xactset` e define um intervalo de três minutos entre as execuções.  
   
- [!code-sql[HowTo#sp_enable_xactsetjob](../../../relational-databases/replication/codesnippet/tsql/configure the transactio_1.sql)]  
+ [!code-sql[HowTo#sp_enable_xactsetjob](../../../relational-databases/replication/codesnippet/tsql/configure-the-transactio_1.sql)]  
   
 ## Consulte também  
  [Ajuste de desempenho para Editores Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)   

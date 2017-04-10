@@ -302,7 +302,7 @@ Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há
     -   Ele se baseia nos procedimentos auxiliares dbo.usp_GenerateCKCheck auxiliares, dbo.usp_GenerateFKCheck e dbo.GenerateUQCheck para gerar o T-SQL necessário para executar as verificações de integridade.  
   
 ##  <a name="a-nameperformancemeasurementsusingthedemoworkloada-performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Medidas de desempenho usando a carga de trabalho de demonstração  
- Ostress é uma ferramenta de linha de comando que foi desenvolvida pela equipe de suporte do [!INCLUDE[msCoName](../Token/msCoName_md.md)] CSS [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] . Essa ferramenta pode ser usada para executar consultas ou executar procedimentos armazenados em paralelo. Você pode configurar o número de threads para executar em paralelo determinada instrução T-SQL, e pode especificar quantas vezes a instrução deve ser executada neste thread; ostress girará os threads e executará a instrução em todos os threads em paralelo. Ao término da execução de todos os threads, ostress relatará quanto tempo levou para concluir a execução de todos os threads.  
+ Ostress é uma ferramenta de linha de comando que foi desenvolvida pela equipe de suporte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa ferramenta pode ser usada para executar consultas ou executar procedimentos armazenados em paralelo. Você pode configurar o número de threads para executar em paralelo determinada instrução T-SQL, e pode especificar quantas vezes a instrução deve ser executada neste thread; ostress girará os threads e executará a instrução em todos os threads em paralelo. Ao término da execução de todos os threads, ostress relatará quanto tempo levou para concluir a execução de todos os threads.  
   
 ### <a name="installing-ostress"></a>Instalando ostress  
  Ostress é instalada como parte dos utilitários de RML; não há instalação autônoma para ostress.  
@@ -324,9 +324,9 @@ Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há
   
  As opções de linha de comando para ostress podem ser vista simplesmente ao executar ostress.exe sem opções de linha de comando. As opções principais a serem consideradas para executar ostress com este exemplo são:  
   
--   -S nome da instância do [!INCLUDE[msCoName](../Token/msCoName_md.md)][!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] à qual se conectar  
+-   -S nome da instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à qual se conectar  
   
--   -E use a autenticação do Windows para conexão (padrão); se você usar a autenticação do [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] , use as opções –U e –P para especificar o nome de usuário e a senha, respectivamente  
+-   -E use a autenticação do Windows para conexão (padrão); se você usar a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , use as opções –U e –P para especificar o nome de usuário e a senha, respectivamente  
   
 -   -d nome do banco de dados; para este exemplo, AdventureWorks2014  
   
@@ -410,7 +410,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
   
  Em um servidor de teste com um número total de 8 núcleos físicos (16 lógicos), isso levou 41 minutos e 25 segundos. Em um segundo servidor de teste com 24 núcleos físicos (48 lógicos), isso levou 52 minutos e 16 segundos.  
   
- O fator principal na diferença de desempenho entre tabelas com otimização de memória e tabelas baseadas em disco nesse teste é o fato de que, ao usar tabelas baseadas em disco, o [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] não pode fazer uso total da CPU. A razão é a contenção de trava: as transações simultâneas estão tentando gravar na mesma página de dados; as travas são usadas para garantir que somente uma transação de cada vez possa gravar em uma página. O mecanismo [!INCLUDE[hek_2](../Token/hek_2_md.md)] é livre de travas, e as linhas de dados não são organizadas em páginas. Portanto, as transações simultâneas não bloqueiam as inserções umas das outras, permitindo que o [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] use toda a CPU.  
+ O fator principal na diferença de desempenho entre tabelas com otimização de memória e tabelas baseadas em disco nesse teste é o fato de que, ao usar tabelas baseadas em disco, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode fazer uso total da CPU. A razão é a contenção de trava: as transações simultâneas estão tentando gravar na mesma página de dados; as travas são usadas para garantir que somente uma transação de cada vez possa gravar em uma página. O mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] é livre de travas, e as linhas de dados não são organizadas em páginas. Portanto, as transações simultâneas não bloqueiam as inserções umas das outras, permitindo que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use toda a CPU.  
   
  Você pode observar a utilização da CPU enquanto a carga de trabalho está em execução. Use, por exemplo, o gerenciador de tarefas. Note que, em tabelas baseadas em disco, a utilização da CPU é bem inferior a 100%. Em uma configuração de teste com 16 processadores lógicos, a utilização fica em torno de 24%.  
   
@@ -430,13 +430,13 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="a-nametroubleshootingslow-runningtestsa-troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> Solução de problemas em testes de execução lenta  
  Os resultados de testes variam de acordo com o hardware, e também com o nível de simultaneidade usado na execução do teste. Alguns itens a serem pesquisados se os resultados não forem os esperados:  
   
--   Número de transações simultâneas: ao executar a carga de trabalho em um único thread, o ganho de desempenho com [!INCLUDE[hek_2](../Token/hek_2_md.md)] provavelmente será menor que 2X. A contenção de trava se torna um grande problema apenas se há um nível alto de simultaneidade.  
+-   Número de transações simultâneas: ao executar a carga de trabalho em um único thread, o ganho de desempenho com [!INCLUDE[hek_2](../../includes/hek-2-md.md)] provavelmente será menor que 2X. A contenção de trava se torna um grande problema apenas se há um nível alto de simultaneidade.  
   
--   Número baixo de núcleos disponíveis para o [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]: isso significa que haverá um nível baixo de simultaneidade no sistema, pois a quantidade de transações executadas simultaneamente equivale ao número de núcleos disponíveis para o SQL.  
+-   Número baixo de núcleos disponíveis para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: isso significa que haverá um nível baixo de simultaneidade no sistema, pois a quantidade de transações executadas simultaneamente equivale ao número de núcleos disponíveis para o SQL.  
   
     -   Sintoma: se há alta utilização da CPU ao executar a carga de trabalho em tabelas baseadas em disco, isso significa não há muita contenção, apontando para uma falta de simultaneidade.  
   
--   Velocidade da unidade de log: se a unidade de log não consegue acompanhar o nível de transferência de transações no sistema, a carga de trabalho se torna um afunilamento na E/S de log. Embora o log seja mais eficiente com [!INCLUDE[hek_2](../Token/hek_2_md.md)], se a E/S de log é um afunilamento, o ganho de desempenho potencial é limitado.  
+-   Velocidade da unidade de log: se a unidade de log não consegue acompanhar o nível de transferência de transações no sistema, a carga de trabalho se torna um afunilamento na E/S de log. Embora o log seja mais eficiente com [!INCLUDE[hek_2](../../includes/hek-2-md.md)], se a E/S de log é um afunilamento, o ganho de desempenho potencial é limitado.  
   
     -   Sintoma: caso quase 100% da CPU seja utilizada ou apresentar um pico de uso ao executar a carga de trabalho em tabelas com otimização de memória, talvez exista um afunilamento de E/S de log. Isso pode ser confirmado abrindo o Monitor de Recursos e examinando o comprimento da fila para a unidade de log.  
   
@@ -446,7 +446,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="a-namememoryutilizationforthememory-optimizedtablesa-memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> Utilização de memória para as tabelas com otimização de memória  
   
 #### <a name="overall-utilization-of-the-database"></a>Utilização geral do banco de dados  
- A consulta a seguir pode ser usada para obter a utilização total de memória de [!INCLUDE[hek_2](../Token/hek_2_md.md)] no sistema.  
+ A consulta a seguir pode ser usada para obter a utilização total de memória de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] no sistema.  
   
 ```  
 SELECT type  
@@ -514,7 +514,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|Padrão|0|  
 |MEMORYCLERK_XTP|Padrão|0|  
   
- Como você pode notar, o [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] está usando um pouco menos de 8GB para as tabelas e os índices com otimização de memória no banco de dados de exemplo.  
+ Como você pode notar, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está usando um pouco menos de 8GB para as tabelas e os índices com otimização de memória no banco de dados de exemplo.  
   
  Verificando o uso detalhado de memória pela tabela após a execução de um exemplo:  
   
@@ -543,7 +543,7 @@ WHERE t.type='U'
 #### <a name="after-demo-reset"></a>Após a redefinição de demonstração  
  O procedimento armazenado Demo.usp_DemoReset pode ser usado para redefinir a demonstração. Ele exclui os dados nas tabelas SalesOrderHeader_inmem e SalesOrderDetail_inmem, e repropaga os dados das tabelas originais SalesOrderHeader e SalesOrderDetail.  
   
- Agora, apesar de as linhas das tabelas terem sido excluídas, isso não significa que a memória é recuperada imediatamente. O [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] recupera a memória das linhas excluídas em tabelas com otimização de memória no plano de fundo, conforme necessário. Note que, imediatamente após a redefinição da demonstração, sem a carga de trabalho transacional no sistema, a memória das linhas excluídas ainda não foi recuperada:  
+ Agora, apesar de as linhas das tabelas terem sido excluídas, isso não significa que a memória é recuperada imediatamente. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recupera a memória das linhas excluídas em tabelas com otimização de memória no plano de fundo, conforme necessário. Note que, imediatamente após a redefinição da demonstração, sem a carga de trabalho transacional no sistema, a memória das linhas excluídas ainda não foi recuperada:  
   
 ```  
 SELECT type  
@@ -636,7 +636,7 @@ ORDER BY state, file_type
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
   
- Como você pode ver, a maior parte do espaço é usado por dados e arquivos delta criados anteriormente. O [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] criou previamente um par de arquivos (dados, delta) por processador lógico. Além disso, os arquivos de dados são dimensionados previamente em 128MB, e os arquivos delta em 8MB, para tornar a inserção de dados nesses arquivos mais eficiente.  
+ Como você pode ver, a maior parte do espaço é usado por dados e arquivos delta criados anteriormente. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] criou previamente um par de arquivos (dados, delta) por processador lógico. Além disso, os arquivos de dados são dimensionados previamente em 128MB, e os arquivos delta em 8MB, para tornar a inserção de dados nesses arquivos mais eficiente.  
   
  Os dados reais nas tabelas com otimização de memória estão no único arquivo de dados.  
   

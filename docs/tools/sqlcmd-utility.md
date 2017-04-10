@@ -204,13 +204,13 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
  Se a opção **-P** for seguida de mais de um argumento, uma mensagem de erro será gerada e o programa será fechado.  
   
  **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
- Especifica uma instância do [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] à qual se conectar. Define a variável de script SQLCMDSERVER do **sqlcmd** .  
+ Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à qual se conectar. Define a variável de script SQLCMDSERVER do **sqlcmd** .  
   
- Especifique *server_name* para se conectar à instância padrão do [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] nesse computador servidor. Especifique *server_name* [ **\\***instance_name* ] para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] nesse computador servidor. Se nenhum servidor for especificado, o **sqlcmd** se conectará à instância padrão do [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] no computador local. Essa opção é necessária quando você executa o **sqlcmd** em um computador remoto na rede.  
+ Especifique *server_name* para se conectar à instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesse computador servidor. Especifique *server_name* [ **\\***instance_name* ] para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesse computador servidor. Se nenhum servidor for especificado, o **sqlcmd** se conectará à instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no computador local. Essa opção é necessária quando você executa o **sqlcmd** em um computador remoto na rede.  
   
  O *protocolo* pode ser **tcp** (TCP/IP), **lpc** (memória compartilhada) ou **np** (pipes nomeados).  
   
- Se você não especificar um *server_name* [ **\\***instance_name* ] ao iniciar o **sqlcmd**, [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] verificará e usará a variável de ambiente SQLCMDSERVER.  
+ Se você não especificar um *server_name* [ **\\***instance_name* ] ao iniciar o **sqlcmd**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verificará e usará a variável de ambiente SQLCMDSERVER.  
   
 > [!NOTE]  
 >  A variável de ambiente OSQLSERVER foi mantida para compatibilidade com versões anteriores. A variável de ambiente SQLCMDSERVER tem precedência em relação à variável de ambiente OSQLSERVER; o que significa que o **sqlcmd** e **osql** podem ser usados próximos um do outro sem interferência e que scripts antigos continuarão funcionado.  
@@ -221,7 +221,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
 > [!NOTE]  
 >  A variável de ambiente OSQLUSER está disponível para compatibilidade com versões anteriores. A variável de ambiente SQLCMDUSER tem precedência em relação à variável de ambiente OSQLUSER. Isso significa que o **sqlcmd** e **osql** podem ser usados próximos um do outro sem interferência. Significa também que scripts **osql** existentes continuarão funcionando.  
   
- Se as opções **-U** ou **-P** não forem especificadas, o **sqlcmd** tentará se conectar usando o modo de Autenticação do [!INCLUDE[msCoName](../Token/msCoName_md.md)] Windows. A autenticação se baseia na conta do Windows do usuário que está executando o **sqlcmd**.  
+ Se as opções **-U** ou **-P** não forem especificadas, o **sqlcmd** tentará se conectar usando o modo de Autenticação do [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. A autenticação se baseia na conta do Windows do usuário que está executando o **sqlcmd**.  
   
  Se a opção **-U** for usada com a opção **-E** (descrita adiante neste tópico), uma mensagem de erro será gerada. Será gerada uma mensagem de erro e o programa será encerrado se a opção **–U** for seguida por mais de um argumento.  
   
@@ -284,7 +284,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
  Redireciona a saída da mensagem de erro para a tela (**stderr**). Se você não especificar um parâmetro ou se especificar **0**, serão redirecionadas somente mensagens de erro com nível de severidade 11 ou acima disso. Se você especificar **1**, serão redirecionadas todas as saídas de mensagens de erro inclusive PRINT. Não tem nenhum efeito se você usar -o. Por padrão, mensagens são envidadas para **stdout**.  
   
  **-R**  
- Faz com que o **sqlcmd** localize colunas numéricas, de moeda, data e hora recuperadas do [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] com base na localidade do cliente. Por padrão, essas colunas são exibidas usando as configurações regionais do servidor.  
+ Faz com que o **sqlcmd** localize colunas numéricas, de moeda, data e hora recuperadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com base na localidade do cliente. Por padrão, essas colunas são exibidas usando as configurações regionais do servidor.  
   
  **-u**  
  Especifica se *output_file* é armazenado no formato Unicode, independentemente do formato de *input_file*.  
@@ -401,7 +401,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
   
  **Opções de relatório de erros**  
   **-b**  
- Especifica que o **sqlcmd** é fechado e retorna um valor DOS ERRORLEVEL em caso de erro. O valor que é retornado à variável DOS ERRORLEVEL é **1** quando a mensagem de erro [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] tiver um nível de severidade maior do que 10; caso contrário, o valor retornado é **0**. Se a opção **-V** tiver sido definida além de **-b**, o **sqlcmd** não relatará um erro se o nível de severidade for inferior aos valores definidos com **-V**. Arquivos em lote do prompt de comando podem testar o valor de ERRORLEVEL e tratar o erro adequadamente. O **sqlcmd** não relata erros para o nível de severidade 10 (mensagens informativas).  
+ Especifica que o **sqlcmd** é fechado e retorna um valor DOS ERRORLEVEL em caso de erro. O valor que é retornado à variável DOS ERRORLEVEL é **1** quando a mensagem de erro [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiver um nível de severidade maior do que 10; caso contrário, o valor retornado é **0**. Se a opção **-V** tiver sido definida além de **-b**, o **sqlcmd** não relatará um erro se o nível de severidade for inferior aos valores definidos com **-V**. Arquivos em lote do prompt de comando podem testar o valor de ERRORLEVEL e tratar o erro adequadamente. O **sqlcmd** não relata erros para o nível de severidade 10 (mensagens informativas).  
   
  Se o script **sqlcmd** tiver um comentário incorreto, erro de sintaxe, ou se estiver faltando uma variável de script, ERRORLEVEL retorna 1.  
   
@@ -418,7 +418,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
  Exige um pacote de tamanho diferente. Essa opção define a variável de script SQLCMDPACKETSIZE do **sqlcmd** . *packet_size* deve ser um valor entre 512 e 32767. O padrão é igual a 4096. Um tamanho de pacote maior pode melhorar o desempenho da execução de scripts que tenham muitas instruções SQL entre comandos GO. Pode-se solicitar um tamanho de pacote maior. Porém, se a solicitação for negada, o **sqlcmd** usará o padrão de servidor para tamanho de pacote.  
   
  **-c** *batch_terminator*  
- Especifica o terminador de lote. Por padrão, comandos são finalizados e enviados para o [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] digitando-se apenas a palavra "GO" em uma linha. Ao redefinir o terminador de lote, não use palavras-chave reservadas do [!INCLUDE[tsql](../Token/tsql_md.md)] ou caracteres que tenham um significado especial para o sistema operacional, mesmo que sejam precedidas por uma barra invertida.  
+ Especifica o terminador de lote. Por padrão, comandos são finalizados e enviados para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] digitando-se apenas a palavra "GO" em uma linha. Ao redefinir o terminador de lote, não use palavras-chave reservadas do [!INCLUDE[tsql](../includes/tsql-md.md)] ou caracteres que tenham um significado especial para o sistema operacional, mesmo que sejam precedidas por uma barra invertida.  
   
  **-L**[**c**]  
  Lista os computadores servidor localmente configurados e os nomes dos computadores servidor que estão transmitindo na rede. Esse parâmetro não pode ser usado em combinação com outros parâmetros. O número máximo de computadores servidores que pode ser listado é 3000. Se a lista de servidores ficar truncada devido ao tamanho do buffer, será exibida uma mensagem de aviso.  
@@ -439,7 +439,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
   
  Onde:  
   
- `x` = Número de transações processadas pelo [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)].  
+ `x` = Número de transações processadas pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  `t1` = Tempo total para todas as transações.  
   
@@ -521,7 +521,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
  R/W indica que o valor pode ser modificado com o comando **setvar** e que os próximos comandos serão influenciados pelo novo valor.  
   
 ## <a name="sqlcmd-commands"></a>Comandos sqlcmd  
- Além das instruções [!INCLUDE[tsql](../Token/tsql_md.md)] no **sqlcmd**, os comandos a seguir também estão disponíveis:  
+ Além das instruções [!INCLUDE[tsql](../includes/tsql-md.md)] no **sqlcmd**, os comandos a seguir também estão disponíveis:  
   
 |||  
 |-|-|  
@@ -546,15 +546,15 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
   
 -   Todos os comandos **sqlcmd** não diferenciam maiúsculas de minúsculas.  
   
--   Cada comando deve estar em uma linha separada. Um comando não pode ser seguido por uma instrução do [!INCLUDE[tsql](../Token/tsql_md.md)] ou por outro comando.  
+-   Cada comando deve estar em uma linha separada. Um comando não pode ser seguido por uma instrução do [!INCLUDE[tsql](../includes/tsql-md.md)] ou por outro comando.  
   
--   Comandos são executados imediatamente. Eles não são colocados no buffer de execução como as instruções [!INCLUDE[tsql](../Token/tsql_md.md)] .  
+-   Comandos são executados imediatamente. Eles não são colocados no buffer de execução como as instruções [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
  **Comandos de Edição**  
   [**:**] **ED**  
- Inicie o editor de textos. Esse editor pode ser usado para editar o lote atual do [!INCLUDE[tsql](../Token/tsql_md.md)] ou o último lote executado. Para editar o último lote executado, o comando **ED** deve ser digitado imediatamente depois da execução do último lote.  
+ Inicie o editor de textos. Esse editor pode ser usado para editar o lote atual do [!INCLUDE[tsql](../includes/tsql-md.md)] ou o último lote executado. Para editar o último lote executado, o comando **ED** deve ser digitado imediatamente depois da execução do último lote.  
   
- O editor de textos é definido pela variável de ambiente SQLCMDEDITOR. O editor padrão é 'Editar.' Para alterar o editor, defina a variável de ambiente SQLCMDEDITOR. Por exemplo, para definir o editor como [!INCLUDE[msCoName](../Token/msCoName_md.md)] Notepad, no prompt de comando, digite:  
+ O editor de textos é definido pela variável de ambiente SQLCMDEDITOR. O editor padrão é 'Editar.' Para alterar o editor, defina a variável de ambiente SQLCMDEDITOR. Por exemplo, para definir o editor como [!INCLUDE[msCoName](../includes/msconame-md.md)] Notepad, no prompt de comando, digite:  
   
  `SET SQLCMDEDITOR=notepad`  
   
@@ -663,7 +663,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
   
  Esse erro fará com que o script do **sqlcmd** seja encerrado e retorne a ID de mensagem 50001 ao cliente.  
   
- Os valores de retorno -1 a -99 são reservados pelo [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]; o **sqlcmd** define os seguintes valores de retorno adicionais:  
+ Os valores de retorno -1 a -99 são reservados pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]; o **sqlcmd** define os seguintes valores de retorno adicionais:  
   
 |Valores de retorno|Description|  
 |-------------------|-----------------|  
@@ -672,13 +672,13 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
 |-102|Erro de conversão ao selecionar valor de retorno.|  
   
  **GO** [*count*]  
- GO sinaliza o final de um lote e a execução de todas as instruções [!INCLUDE[tsql](../Token/tsql_md.md)] armazenadas em cache. O lote é executado várias vezes como lotes separados; não é possível declarar uma variável mais de uma vez em um único lote.
+ GO sinaliza o final de um lote e a execução de todas as instruções [!INCLUDE[tsql](../includes/tsql-md.md)] armazenadas em cache. O lote é executado várias vezes como lotes separados; não é possível declarar uma variável mais de uma vez em um único lote.
   
  **Comandos diversos**  
   **:r \<** *filename* **>**  
- Analisa instruções [!INCLUDE[tsql](../Token/tsql_md.md)] adicionais e comandos do **sqlcmd** do arquivo especificado por **\<***filename***>** no cache de instruções.  
+ Analisa instruções [!INCLUDE[tsql](../includes/tsql-md.md)] adicionais e comandos do **sqlcmd** do arquivo especificado por **\<***filename***>** no cache de instruções.  
   
- Se o arquivo contiver instruções [!INCLUDE[tsql](../Token/tsql_md.md)] que não são seguidas por **GO**, digite **GO** na linha que segue **:r**.  
+ Se o arquivo contiver instruções [!INCLUDE[tsql](../includes/tsql-md.md)] que não são seguidas por **GO**, digite **GO** na linha que segue **:r**.  
   
 > [!NOTE]  
 >  **\<** *filename* **>** é lido em relação ao diretório de inicialização no qual o **sqlcmd** foi executado.  
@@ -692,7 +692,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
  Lista os servidores configurados localmente e os nomes dos servidores que estão transmitindo na rede.  
   
  **:Connect**  *server_name*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
- Conecta-se a uma instância do [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]. Além disso fecha a conexão atual.  
+ Conecta-se a uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Além disso fecha a conexão atual.  
   
  Opções de tempo limite:  
   
@@ -705,7 +705,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
   
  Se não for especificado *timeout* , o valor da variável SQLCMDLOGINTIMEOUT será o padrão.  
   
- Se apenas *user_name* for especificado (como uma opção ou variável de ambiente), será solicitado que o usuário insira uma senha. Isso não ocorre se as variáveis de ambiente SQLCMDUSER ou SQLCMDPASSWORD tiverem sido definidas. Se as opções e as variáveis de ambiente não forem fornecidas, o modo de Autenticação do Windows será usado para fazer logon. Por exemplo, para conectar-se a uma instância, `instance1`, do [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)], `myserver`, usando segurança integrada você usaria o seguinte:  
+ Se apenas *user_name* for especificado (como uma opção ou variável de ambiente), será solicitado que o usuário insira uma senha. Isso não ocorre se as variáveis de ambiente SQLCMDUSER ou SQLCMDPASSWORD tiverem sido definidas. Se as opções e as variáveis de ambiente não forem fornecidas, o modo de Autenticação do Windows será usado para fazer logon. Por exemplo, para conectar-se a uma instância, `instance1`, do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], `myserver`, usando segurança integrada você usaria o seguinte:  
   
  `:connect myserver\instance1`  
   
@@ -743,7 +743,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
 -   Cada nova sessão do **sqlcmd** substituirá arquivos existentes que tenham os mesmos nomes.  
   
 ### <a name="informational-messages"></a>Mensagens informativas  
- O**sqlcmd** imprime qualquer mensagem informativa enviada pelo servidor. No exemplo a seguir, depois que as instruções do [!INCLUDE[tsql](../Token/tsql_md.md)] são executadas, é impressa uma mensagem informativa.  
+ O**sqlcmd** imprime qualquer mensagem informativa enviada pelo servidor. No exemplo a seguir, depois que as instruções do [!INCLUDE[tsql](../includes/tsql-md.md)] são executadas, é impressa uma mensagem informativa.  
   
  No prompt de comando, digite o seguinte:  
   
@@ -798,7 +798,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
   
  O comando GO não deve ser exibido antes que o comando XML OFF seja emitido, pois o comando XML OFF muda o **sqlcmd** de volta para a saída orientada por linhas.  
   
- Dados XML (em fluxo) e dados de conjunto de linhas não podem ser misturados. Se o comando XML ON não tiver sido emitido antes da execução de uma instrução do [!INCLUDE[tsql](../Token/tsql_md.md)] que gera protocolos XML, a saída será adulterada. Se o comando XML ON tiver sido emitido, não será possível executar instruções do [!INCLUDE[tsql](../Token/tsql_md.md)] que gerem conjuntos de linhas normais.  
+ Dados XML (em fluxo) e dados de conjunto de linhas não podem ser misturados. Se o comando XML ON não tiver sido emitido antes da execução de uma instrução do [!INCLUDE[tsql](../includes/tsql-md.md)] que gera protocolos XML, a saída será adulterada. Se o comando XML ON tiver sido emitido, não será possível executar instruções do [!INCLUDE[tsql](../includes/tsql-md.md)] que gerem conjuntos de linhas normais.  
   
 > [!NOTE]  
 >  O comando **:XML** não oferece suporte para a instrução SET STATISTICS XML.  
