@@ -1,0 +1,151 @@
+---
+title: "Exibir ou alterar o modelo de recupera&#231;&#227;o de um banco de dados (SQL Server) | Microsoft Docs"
+ms.custom: ""
+ms.date: "08/05/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-backup-restore"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "backups de banco de dados [SQL Server], modelos de recuperação"
+  - "recuperação [SQL Server], modelo de recuperação"
+  - "fazendo backup de bancos de dados [SQL Server], modelos de recuperação"
+  - "modelos de recuperação [SQL Server], alternando"
+  - "modelos de recuperação [SQL Server], visualizando"
+  - "restaurações de banco de dados [SQL Server], modelos de recuperação"
+  - "modificando modelos de recuperação de bancos de dados"
+ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
+caps.latest.revision: 40
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 40
+---
+# Exibir ou alterar o modelo de recupera&#231;&#227;o de um banco de dados (SQL Server)
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+  Este tópico descreve como exibir ou alterar o banco de dados usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+  
+  Um *modelo de recuperação* é uma propriedade de banco de dados que controla como as transações são registradas, se o log de transações exige (e permite) backup e que tipos de operações de restauração estão disponíveis. Existem três modelos de recuperação: simples, completo e bulk-logged. Geralmente, um banco de dados usa o modelo de recuperação completa ou o modelo de recuperação simples. É possível alternar para outro modelo de recuperação do banco de dados a qualquer momento. Os banco de dados **modelo** define o modelo de recuperação padrão de novos bancos de dados.  
+  
+  Para obter mais uma explicação mais detalhada sobre os [modelos de recuperação](https://msdn.microsoft.com/library/ms189275.aspx), veja [Modelos de recuperação do SQL Server](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) fornecido pelo pessoal da [MSSQLTips!](https://www.mssqltips.com/)
+  
+  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
+  
+
+-   [Faça o backup do log de transação](https://msdn.microsoft.com/library/ms179478.aspx) **antes de** mudar do [modelo de recuperação completa ou de recuperação bulk-logged](https://msdn.microsoft.com/library/ms189275.aspx).  
+  
+-   A recuperação pontual não é possível com modelo bulk-logged. A execução de transações sob o modelo de recuperação bulk-logged que exigem uma restauração do log de transações, pode sujeitá-las à perda de dados. Para maximizar a recuperabilidade de dados em um cenário de recuperação de desastres, mude para o modelo de recuperação bulk-logged somente nas seguintes condições:  
+  
+    -   Atualmente, não são permitidos usuários no banco de dados.  
+  
+    -   Todas as modificações feitas durante o processamento em massa são recuperáveis sem depender de fazer um backup de log; por exemplo, executar novamente os processos em massa.  
+  
+     Se você atender a estas duas condições, não será exposto a perda de dados enquanto estiver restaurando um log de transação que teve o backup feito no modelo de recuperação bulk-logged.  
+  
+**Observação:** Se você mudar para o modelo de recuperação completa durante uma operação em massa, o log das operações em massa mudará de registro em log mínimo para registro em log completo, e vice-versa.  
+  
+###  <a name="Security"></a> Permissões necessárias  
+   Requer a permissão ALTER no banco de dados.  
+  
+##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+  
+#### Para exibir ou alterar o modelo de recuperação  
+  
+1.  Depois de conectar-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objeto, clique no nome do servidor para expandir a árvore do servidor.  
+  
+2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
+  
+3.  Clique com o botão direito do mouse no banco de dados e clique em **Propriedades**, o que abrirá a caixa de diálogo **Propriedades do Banco de Dados**.  
+  
+4.  No painel **Selecionar uma página** , clique em **Opções**.  
+  
+5.  O modelo de recuperação atual é exibido na caixa de listagem **Modelo de Recuperação** .  
+  
+6.  Opcionalmente, para alterar o modelo de recuperação, selecione uma lista de modelos diferente. As escolhas são **Completo**, **Bulk-logged** ou **Simples**.  
+  
+7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+  
+#### Para exibir o modelo de recuperação  
+  
+1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  Na barra Padrão, clique em **Nova Consulta**.  
+  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como consultar a exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) para aprender o modelo de recuperação do banco de dados **modelo** .  
+  
+```tsql  
+SELECT name, recovery_model_desc  
+   FROM sys.databases  
+      WHERE name = 'model' ;  
+GO  
+  
+```  
+  
+#### Para alterar o modelo de recuperação  
+  
+1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  Na barra Padrão, clique em **Nova Consulta**.  
+  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como alterar o modelo de recuperação no banco de dados `model` para `FULL` usando a opção `SET RECOVERY` da instrução [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) .  
+  
+```tsql  
+USE master ;  
+ALTER DATABASE model SET RECOVERY FULL ;  
+```  
+  
+##  <a name="FollowUp"></a> Recomendações: após a alteração do modelo de recuperação  
+  
+-   **Depois de alternar entre os modelos de recuperação completa e bulk-logged**  
+  
+    -   Depois de concluir as operações em massa, retorne imediatamente para o modo de recuperação completa.  
+  
+    -   Depois de alternar do modelo de recuperação bulk-logged novamente para o modelo de recuperação completa, faça backup do log.  
+  
+        >**OBSERVAÇÃO:** sua estratégia de backup permanecerá a mesma: continue executando backups periódicos do banco de dados, do log e backups diferenciais.  
+  
+-   **Depois de alternar do modelo de recuperação simples**  
+  
+    -   Imediatamente depois de alternar para a troca para o modelo de recuperação completa ou modelo de recuperação bulk-logged, faça um backup completo ou diferencial de banco de dados para iniciar a cadeia de logs.  
+  
+        >**OBSERVAÇÃO:** a alternância para o modelo de recuperação completa ou com log de operações em massa só entrará em vigor depois do primeiro backup de dados.  
+  
+    -   Agende backups de log regulares e atualize seu plano de restauração adequadamente.  
+  
+        > **IMPORTANTE!!!!** Faça backup dos logs!! Se você não fizer backup do log com a frequência necessária, o log de transações poderá expandir até exceder o espaço em disco!  
+  
+-   **Depois de alternar para o modelo de recuperação simples**  
+  
+    -   Descontinue os trabalhos agendados para fazer backup do log de transação.  
+  
+    -   Verifique se os backups periódicos de banco de dados estão agendados. Fazer backup de seu banco de dados é essencial para proteger seus dados e truncar a porção inativa do log de transações.  
+  
+##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+  
+-   [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
+  
+-   [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+  
+-   [Criar um trabalho](../../ssms/agent/create-a-job.md)  
+  
+-   [Desabilitar ou habilitar um trabalho](../../ssms/agent/disable-or-enable-a-job.md)  
+  
+##  <a name="RelatedContent"></a> Conteúdo relacionado  
+  
+-   [Planos de manutenção de banco de dados](http://msdn.microsoft.com/library/ms187658.aspx) (nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])  
+  
+## Consulte também  
+ [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
+ [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
+  
+  

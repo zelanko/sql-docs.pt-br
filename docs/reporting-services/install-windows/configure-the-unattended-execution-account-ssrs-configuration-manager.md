@@ -1,0 +1,108 @@
+---
+title: "Configurar a conta de execu&#231;&#227;o aut&#244;noma (Gerenciador de configura&#231;&#245;es do SSRS) | Microsoft Docs"
+ms.custom: ""
+ms.date: "05/31/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "reporting-services-native"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "nenhuma opção de credenciais [Reporting Services]"
+  - "segurança [Reporting Services], processamento autônomo do relatório"
+  - "processamento de relatório autônomo [Reporting Services]"
+  - "credenciais [Reporting Services]"
+  - "fontes de dados externas [Reporting Services]"
+  - "contas [Reporting Services]"
+  - "relatórios [Reporting Services], processamento"
+ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
+caps.latest.revision: 10
+author: "guyinacube"
+ms.author: "asaxton"
+manager: "erikre"
+caps.handback.revision: 10
+---
+# Configurar a conta de execu&#231;&#227;o aut&#244;noma (Gerenciador de configura&#231;&#245;es do SSRS)
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma conta especial que é usada para o processamento autônomo de relatórios e para enviar solicitações de conexão pela rede. A conta é usada das seguintes maneiras:  
+  
+-   Enviar solicitações de conexão pela rede para relatórios que usam autenticação do banco de dados ou conexão a fontes de dados de relatórios externos que não requeiram ou utilizem autenticação. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para Fontes de Dados de Relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) nos Manuais Online do SQL Server.  
+  
+-   Recuperar arquivos de imagem externos usados no relatório. Se desejar usar um arquivo de imagem e ele não puder ser acessado com acesso Anônimo, você poderá configurar a conta de processamento autônomo de relatórios e conceder à conta a permissão para acessar o arquivo.  
+  
+ O termo processamento autônomo de relatórios se refere a qualquer processo de execução de relatório que seja disparado por um evento (um evento controlado por agenda ou um evento de atualização de dados) e não a uma solicitação de usuário. O servidor de relatório usa a conta de processamento autônomo de relatórios para fazer logon no computador que hospeda a fonte de dados externa. Essa conta é necessária porque as credenciais da conta de serviço do Servidor de Relatório nunca são usadas para conectar a outros computadores.  
+  
+> [!IMPORTANT]  
+>  A configuração da conta é opcional. Entretanto, se não for configurada, suas opções de conexão a algumas fontes de dados ficarão limitadas e talvez você não possa recuperar arquivos de imagem a partir de computadores remotos. Se você configurar a conta, deverá mantê-la atualizada. Especificamente, se você permitir que uma senha expire ou se as informações da conta forem alteradas no Active Directory, será exibido o seguinte erro na próxima vez que um relatório for processado: "Falha de logon (rsLogonFailed) Falha de logon: nome de usuário desconhecido ou senha incorreta". A manutenção apropriada da conta de processamento autônomo de relatórios é essencial, mesmo se você nunca recuperar imagens externas ou enviar solicitações de conexão para computadores externos. Se você configurar a conta, mas depois descobrir que não a está usando, poderá excluí-la para evitar tarefas rotineiras de manutenção de conta.  
+  
+## Como configurar a conta  
+ Você deve usar uma conta de usuário de domínio. Para que sirva à sua finalidade pretendida, essa conta deve ser diferente daquela usada para executar o serviço Servidor de Relatório. Certifique-se de usar uma conta que tenha permissões mínimas (acesso somente leitura com permissões de conexão de rede é suficiente) e acesso limitado apenas aos computadores que forneçam fontes de dados e recursos ao servidor de relatório.  
+  
+ Para especificar a conta, você pode usar a ferramenta de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou o utilitário **rsconfig**. A maneira mais fácil de configurar a conta de execução autônoma é executar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e especificar credenciais na página Conta de Execução.  
+  
+1.  Inicie a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e conecte-se à instância do servidor de relatório que você deseja configurar. Para obter instruções, veja [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+  
+2.  Na página Conta de Execução, selecione **Especificar uma conta de execução**.  
+  
+3.  Digite a conta e a senha, digite novamente a senha e clique em **Aplicar**.  
+  
+### Usando o utilitário RSCONFIG  
+ Outra maneira de definir a conta é usar o utilitário **rsconfig**. Para especificar a conta, use o argumento **-e** do **rsconfig**. A especificação do argumento **-e** para **rsconfig** orienta o utilitário a gravar as informações da conta no arquivo de configuração. Não é necessário especificar um caminho para RSreportserver.config. Siga estas etapas para configurar a conta.  
+  
+1.  Crie ou selecione uma conta de domínio que tenha acesso a computadores e servidores que forneçam dados ou serviços a um servidor de relatório. Você deve usar uma conta que tenha permissões reduzidas (por exemplo, permissões somente leitura).  
+  
+2.  Abra um prompt de comando: No menu **Iniciar**, clique em **Executar**, digite **cmd** e clique em **OK**.  
+  
+3.  Digite o seguinte comando para configurar a conta em uma instância local do servidor de relatório:  
+  
+     **rsconfig -e -u\<domínio/nomedeusuário> -p\<senha>**  
+  
+ **rsconfig -e** dá suporte a argumentos adicionais. Para obter mais informações sobre a sintaxe e exibir exemplos de comandos, consulte [Utilitário rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) nos Manuais Online do SQL Server.  
+  
+### Como as informações de conta são armazenadas  
+ Quando você define a conta, as seguintes configurações são especificadas como valores criptografados no arquivo RSreportserver.config na instância local ou remota do servidor de relatório.  
+  
+```  
+<UnattendedExecutionAccount>  
+     <UserName></UserName>  
+     <Password></Password>  
+     <Domain></Domain>  
+</UnattendedExecutionAccount>  
+```  
+  
+ Depois de definir os valores, você não pode descriptografá-los para exibir os valores em texto sem-formatação. Se você digitar incorretamente os valores ou esquecer os valores que foram especificados, use a ferramenta de Configuração do Reporting Services ou execute **rsconfig -e** para iniciar novamente.  
+  
+## Como usar a conta de processamento autônomo de relatórios.  
+ Para recuperar arquivos de imagem, o servidor de relatório usa automaticamente a conta e nenhuma ação específica é necessária de sua parte. Para usar a conta a fim de conectar-se a fontes de dados externas que forneçam dados para relatórios, você deve especificar uma opção **Tipo de Credencial** na página de propriedades da fonte de dados do relatório ou compartilhada:  
+  
+-   No [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] ou em um site do SharePoint, selecione a opção **Credenciais não são necessárias**.  
+  
+ A conta de processamento autônomo de relatórios é usada principalmente para conectar-se a servidores externos, não como um logon para servidores de banco de dados. Para usar as credenciais de conta para fazer logon em um banco de dados, especifique as credenciais na cadeia de caracteres de conexão. Você poderá especificar **Integrated Security=SSPI** se o servidor de banco de dados der suporte à segurança integrada do Windows e se a conta usada para o processamento autônomo de relatórios tiver permissão para ler o banco de dados. Caso contrário, digite o nome do usuário e a senha na cadeia de conexão, onde ela aparecerá em texto não criptografado para qualquer usuário com permissão para editar propriedades da conexão da fonte de dados.  
+  
+ Embora você possa usar a conta de processamento autônomo de relatórios para recuperar dados depois que a conexão é estabelecida, isso não é recomendável. A conta deve ser usada em funções muito específicas. Se você usá-la para recuperar dados, estará distorcendo o fim a que ela se destina.  
+  
+## Como manter a conta de processamento autônomo de relatórios  
+ Depois de definir a conta, você deve assegurar-se de que a conta e a senha sejam mantidas atualizadas. Você pode usar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para atualizar os parâmetros de configuração que armazenam informações sobre essa conta.  
+  
+1.  Inicie a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e conecte-se à instância do servidor de relatório que você deseja configurar.  
+  
+2.  Na página Conta de Execução, verifique se **Especificar uma conta de execução** está selecionado.  
+  
+3.  Digite a nova conta ou senha, digite novamente a senha e clique em **Aplicar**.  
+  
+## Como excluir a conta de processamento autônomo de relatórios  
+ Se você não estiver usando a conta, poderá excluí-la para evitar tarefas rotineiras de manutenção de conta.  
+  
+1.  Inicie a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e conecte-se à instância do servidor de relatório que você deseja configurar.  
+  
+2.  Na página Conta de Execução, desmarque **Especificar uma conta de execução**.  
+  
+3.  Clique em **Aplicar**.  
+  
+ As informações da conta serão removidas do arquivo RSReportServer.config.  
+  
+## Consulte também  
+ [Gerenciador de Configurações do Reporting Services (modo nativo do SSRS).](http://msdn.microsoft.com/pt-br/379eab68-7f13-4997-8d64-38810240756e)  
+  
+  

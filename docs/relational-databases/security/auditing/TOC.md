@@ -1,0 +1,7 @@
+# [Exibir um log auditoria do SQL Server](view-a-sql-server-audit-log.md)
+# [Ações e grupos de ações de auditoria do SQL Server](sql-server-audit-action-groups-and-actions.md)
+# [Registros de auditoria do SQL Server](sql-server-audit-records.md)
+# [Gravar eventos de auditoria do SQL Server no log de segurança](write-sql-server-audit-events-to-the-security-log.md)
+# [Criar uma auditoria de servidor e uma especificação de auditoria de servidor](create-a-server-audit-and-server-audit-specification.md)
+# [Criar uma especificação de auditoria de banco de dados e de servidor](create-a-server-audit-and-database-audit-specification.md)
+# [Auditoria do SQL Server (Mecanismo de Banco de Dados)](sql-server-audit-database-engine.md)

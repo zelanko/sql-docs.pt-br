@@ -1,0 +1,91 @@
+---
+title: "Li&#231;&#227;o 1: publicando dados que usam replica&#231;&#227;o transacional | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "replication"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+applies_to: 
+  - "SQL Server 2016"
+helpviewer_keywords: 
+  - "replicação [SQL Server], tutoriais"
+ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
+caps.latest.revision: 14
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 14
+---
+# Li&#231;&#227;o 1: publicando dados que usam replica&#231;&#227;o transacional
+Nesta lição, você aprenderá a criar uma publicação transacional usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar um subconjunto filtrado da tabela **Produto** no banco de dados de exemplo do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Você também adicionará o logon do SQL Server usado pelo Distribution Agent à PAL (lista de acesso à publicação). Antes de iniciar este tutorial, você deverá ter completado o tutorial anterior, [Preparando o servidor para replicação](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
+  
+### Para criar uma publicação e definir artigos  
+  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó de servidor.  
+  
+2.  Expanda a pasta **Replicação**, clique com o botão direito do mouse na pasta **Publicações Locais** e clique em **Nova Publicação**.  
+  
+    O Assistente de Configuração de Publicação é inicializado.  
+  
+3.  Na página Banco de Dados de Publicação, selecione [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e clique em **Avançar**.  
+  
+4.  Na página Tipo de Publicação, selecione **Publicação transacional** e clique em **Avançar**.  
+  
+5.  Na página Artigos, expanda o nó **Tabelas**, selecione a caixa de seleção **Produto**, expanda **Produto** e desmarque as caixas de seleção **ListPrice** e **StandardCost**. Clique em **Avançar**.  
+  
+6.  Na página Filtrar Linhas da Tabela, clique em **Adicionar**.  
+  
+7.  Na caixa de diálogo **Adicionar Filtro**, clique na coluna **SafetyStockLevel**, clique na seta para a direita para adicionar a coluna à cláusula WHERE da instrução de Filtro da consulta de filtro e modifique a cláusula WHERE da seguinte maneira:  
+  
+    ```  
+    WHERE [SafetyStockLevel] < 500  
+    ```  
+  
+8.  Clique em **OK** e em **Avançar**.  
+  
+9. Marque a caixa de seleção **Criar um instantâneo imediatamente e mantê-lo disponível para inicializar assinaturas** e clique em **Avançar**.  
+  
+10. Na página Segurança do Agente, desmarque a caixa de seleção **Usar as configurações de segurança do Agente de Instantâneo**.  
+  
+11. Clique em **Configurações de Segurança** do Agente de Instantâneo, insira \<*Machine_Name>***\repl_snapshot** na caixa **Conta de processo**, forneça a senha dessa conta e clique em **OK**.  
+  
+12. Repita a etapa anterior para configurar repl_logreader como a conta de processo do Agente de Leitor de Log e clique em **Concluir**.  
+  
+13. Na página Concluir o Assistente, digite **AdvWorksProductTrans** na caixa **Nome da publicação** e clique em **Concluir**.  
+  
+14. Depois que a publicação for criada, clique em **Fechar** para concluir o assistente.  
+  
+### Para exibir o status de geração do instantâneo  
+  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó do servidor e depois expanda a pasta **Replicação** .  
+  
+2.  Na pasta **Publicações Locais**, clique com o botão direito do mouse em **AdvWorksProductTrans** e clique em **Exibir Status do Agente de Instantâneo**.  
+  
+3.  O status atual do trabalho do Snapshot Agent para a publicação é exibido. Verifique se o trabalho de instantâneo teve êxito antes de continuar à próxima lição.  
+  
+### Para adicionar o logon Distribution Agent à PAL  
+  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó do servidor e depois expanda a pasta **Replicação** .  
+  
+2.  Na pasta **Publicações Locais**, clique com o botão direito do mouse em **AdvWorksProductTrans** e clique em **Propriedades**.  
+  
+    A caixa de diálogo **Propriedades da Publicação** é exibida.  
+  
+3.  Selecione a página **Lista de Acesso à Publicação** e clique em **Adicionar**.  
+  
+4.  Na caixa de diálogo **Adicionar Acesso à Publicação**, selecione *<Machine_Name>***\repl_distribution** e clique em **OK**. Clique em **OK**.  
+  
+## Próximas etapas  
+Você criou a publicação transacional com êxito. A seguir, você assinará essa publicação. Consulte [Lição 2: Criando uma assinatura na publicação transacional](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
+  
+## Consulte também  
+[Filtrar dados publicados](../../relational-databases/replication/publish/filter-published-data.md)  
+[Defina um Artigo](../../relational-databases/replication/publish/define-an-article.md)  
+[Criar e aplicar o instantâneo](../../relational-databases/replication/create-and-apply-the-snapshot.md)  
+  
+  
+  

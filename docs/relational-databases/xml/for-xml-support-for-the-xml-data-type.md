@@ -1,0 +1,208 @@
+---
+title: "Suporte a FOR XML para o tipo de dados xml | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-xml"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "funções definidas pelo usuário [SQL Server], XML"
+  - "tipo de dados xml [SQL Server], cláusula FOR XML"
+ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
+caps.latest.revision: 24
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 24
+---
+# Suporte a FOR XML para o tipo de dados xml
+  Se uma consulta FOR XML especificar uma coluna de tipo **xml** na cláusula SELECT, os valores da coluna serão mapeados como elementos no XML retornado, independentemente da diretiva ELEMENTS estar especificada. Qualquer declaração XML na coluna de tipo **xml** não é serializada.  
+  
+ Por exemplo, a consulta a seguir recupera informações de contato do cliente, tais como as colunas `BusinessEntityID`, `FirstName` e `LastName`, e os números de telefone da coluna `AdditionalContactInfo` de tipo **xml**.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
+declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+ //act:telephoneNumber/act:number  
+') AS PhoneNumber  
+FROM Person.Person  
+WHERE AdditionalContactInfo.query('  
+declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+ //act:telephoneNumber/act:number  
+')IS NOT NULL  
+FOR XML AUTO, TYPE;  
+```  
+  
+ Como a consulta não especifica a diretiva ELEMENTS, os valores da coluna são retornados como atributos, exceto para os valores de informações adicionais de contato recuperados da coluna de tipo **xml**. Esses são retornados como elementos.  
+  
+ Este é o resultado parcial:  
+  
+ `<Person.Person BusinessEntityID="291" FirstName="Gustavo" LastName="Achong">`  
+  
+ `<PhoneNumber>`  
+  
+ `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
+  
+ `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
+  
+ `</PhoneNumber>`  
+  
+ `</Person.Person>`  
+  
+ `<Person.Person BusinessEntityID="293" FirstName="Catherine" LastName="Abel">`  
+  
+ `<PhoneNumber>`  
+  
+ `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
+  
+ `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
+  
+ `</PhoneNumber>`  
+  
+```  
+</Person.Person>  
+...  
+```  
+  
+ Se você especificar um alias para a coluna XML gerada pela XQuery, esse alias será usado para adicionar um elemento wrapper em torno do XML gerado pela XQuery. Por exemplo, a seguinte consulta especifica `MorePhoneNumbers` como um alias de coluna:  
+  
+```  
+SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
+declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+ //act:telephoneNumber/act:number  
+') AS PhoneNumber  
+FROM Person.Person  
+WHERE AdditionalContactInfo.query('  
+declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+ //act:telephoneNumber/act:number  
+')IS NOT NULL  
+FOR XML AUTO, TYPE;  
+```  
+  
+ O XML retornado pela XQuery é envolvido no elemento <`MorePhoneNumbers`>, conforme mostrado no seguinte resultado parcial:  
+  
+ `<Person.Person BusinessEntityID="291" FirstName="Gustavo" LastName="Achong">`  
+  
+ `<MorePhoneNumbers>`  
+  
+ `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
+  
+ `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
+  
+ `</MorePhoneNumbers>`  
+  
+ `</Person.Person>`  
+  
+ `<Person.Person BusinessEntityID="293" FirstName="Catherine" LastName="Abel">`  
+  
+ `<MorePhoneNumbers>`  
+  
+ `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
+  
+ `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
+  
+ `</MorePhoneNumbers>`  
+  
+```  
+</Person.Person>  
+...  
+```  
+  
+ Se você especificar a diretiva ELEMENTS na consulta, BusinessEntityID, LastName e FirstName serão retornados como elementos no XML resultante.  
+  
+ O exemplo a seguir mostra que a lógica de processamento de FOR XML não serializa nenhuma declaração XML nos dados XML de uma coluna de tipo **xml**:  
+  
+```  
+create table t(i int, x xml)  
+go  
+insert into t values(1, '<?xml version="1.0" encoding="UTF-8" ?>  
+                             <Root SomeID="10" />')  
+select i, x  
+from   t  
+for xml auto;  
+```  
+  
+ Este é o resultado. No resultado, a declaração XML <`?xml version="1.0" encoding="UTF-8" ?`> não é serializada.  
+  
+```  
+<root>  
+  <t i="1">  
+    <x>  
+      <Root SomeID="10" />  
+    </x>  
+  </t>  
+</root>  
+```  
+  
+## Retornando XML de uma função definida pelo usuário  
+ Consultas FOR XML podem ser usadas para retornar XML de uma função definida pelo usuário que retorna qualquer um dos seguintes itens:  
+  
+-   Uma tabela com uma única coluna de tipo **xml**  
+  
+-   Uma instância do tipo **xml**  
+  
+ Por exemplo, a seguinte função definida pelo usuário retorna uma tabela com uma única coluna de tipo **xml**:  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+CREATE FUNCTION dbo.MyUDF (@ProudctModelID int)  
+RETURNS @T TABLE  
+  (  
+     ProductDescription xml  
+  )  
+AS  
+BEGIN  
+  INSERT @T  
+     SELECT CatalogDescription.query('  
+declare namespace PD="http://www.adventure-works.com/schemas/products/description";  
+                    //PD:ProductDescription  ')  
+     FROM Production.ProductModel  
+     WHERE ProductModelID = @ProudctModelID  
+  RETURN  
+END;  
+```  
+  
+ Você pode executar a função definida pelo usuário e consultar a tabela retornada por ela. Neste exemplo, o XML retornado pela consulta da tabela é atribuído a uma variável de tipo **xml**.  
+  
+```  
+declare @x xml;  
+set @x = (SELECT * FROM MyUDF(19));  
+select @x;  
+```  
+  
+ Esse é outro exemplo de uma função definida pelo usuário. Essa função definida pelo usuário retorna uma instância do tipo **xml**. Neste exemplo, a função definida pelo usuário retorna uma instância XML com tipo, porque o namespace do esquema está especificado.  
+  
+```  
+DROP FUNCTION dbo.MyUDF;  
+GO  
+CREATE FUNCTION MyUDF (@ProductModelID int)   
+RETURNS xml ([Production].[ProductDescriptionSchemaCollection])  
+AS  
+BEGIN  
+  declare @x xml  
+  set @x =   ( SELECT CatalogDescription  
+          FROM Production.ProductModel  
+          WHERE ProductModelID = @ProductModelID )  
+  return @x  
+END;  
+```  
+  
+ O XML retornado pela função definida pelo usuário pode ser atribuído a uma variável de tipo **xml** da seguinte maneira:  
+  
+```  
+declare @x xml;  
+SELECT @x= dbo.MyUDF4 (19) ;  
+select @x;  
+```  
+  
+## Consulte também  
+ [Suporte a FOR XML para vários tipos de dados SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
+  
+  

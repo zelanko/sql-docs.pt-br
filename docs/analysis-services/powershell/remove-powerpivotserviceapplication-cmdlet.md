@@ -1,0 +1,116 @@
+---
+title: "Cmdlet Remove-PowerPivotServiceApplication | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "analysis-services"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+ms.assetid: 2742b2a3-927c-4e7c-bd7d-43c072fa01ab
+caps.latest.revision: 11
+author: "Minewiskan"
+ms.author: "owend"
+manager: "erikre"
+caps.handback.revision: 11
+---
+# Cmdlet Remove-PowerPivotServiceApplication
+  Exclui um aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+  
+ **Aplica-se a:** SharePoint 2010 e SharePoint 2013.  
+  
+## Sintaxe  
+  
+```  
+Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBind>] [-DeleteAll <switch>] [-RemoveData <switch>] [-Confirm <switch>] [<CommonParameters>]  
+```  
+  
+## Description  
+ O cmdlet Remove-PowerPivotServiceApplication exclui um aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] do farm. Use DeleteAll para excluir todos os aplicativos de serviço de uma vez ou use o parâmetro Identity para remover uma única instância. Para obter informações de instância, execute Get-PowerPivotServiceApplication para retornar todas as instâncias no farm.  
+  
+ Use o parâmetro RemoveData para remover bancos de dados de aplicativo de serviço e arquivos armazenados em cache, se desejar. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] permanecem nas bibliotecas de conteúdo, mas não estão mais funcionais após a remoção do aplicativo de serviço.  
+  
+## Parâmetros  
+  
+### -Identity \<SPGeminiServiceApplicationPipeBind>  
+ Especifica o GUID de um único aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no farm. Você deverá especificar o GUID se quiser remover apenas um aplicativo, deixando outros aplicativos de serviço inalterados.  
+  
+|||  
+|-|-|  
+|Obrigatório?|false|  
+|Posição?|0|  
+|Valor padrão||  
+|Aceitar entrada de pipeline?|true|  
+|Aceitar caracteres curinga?|false|  
+  
+### -Confirm \<switch>  
+ Solicita sua confirmação antes de executar o comando. Este valor é habilitado por padrão. Para ignorar a resposta de confirmação em um comando, especifique Confirm:$false no comando.  
+  
+|||  
+|-|-|  
+|Obrigatório?|false|  
+|Posição?|nomeado|  
+|Valor padrão||  
+|Aceitar entrada de pipeline?|false|  
+|Aceitar caracteres curinga?|false|  
+  
+### -DeleteAll \<switch>  
+ Exclui todos os aplicativos de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mas não exclui o banco de dados de aplicativo de serviço, nem os objetos de instância de serviço no farm. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e Serviço de Mecanismo do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] permanecem instanciados, mas inutilizáveis, após a remoção dos aplicativos de serviço.  
+  
+|||  
+|-|-|  
+|Obrigatório?|false|  
+|Posição?|nomeado|  
+|Valor padrão||  
+|Aceitar entrada de pipeline?|false|  
+|Aceitar caracteres curinga?|false|  
+  
+### -RemoveData \<switch>  
+ Remove o banco de dados de aplicativo de serviço que contém agendamentos de atualizações de dados, dados de uso de pasta de trabalho, mapas de instância usados para rastrear quais bancos de dados estão carregados e outros dados internos.  
+  
+|||  
+|-|-|  
+|Obrigatório?|false|  
+|Posição?|nomeado|  
+|Valor padrão||  
+|Aceitar entrada de pipeline?|false|  
+|Aceitar caracteres curinga?|false|  
+  
+### \<CommonParameters>  
+ Este cmdlet oferece suporte aos parâmetros comuns: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer e OutVariable. Para obter mais informações, consulte [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
+  
+## Entradas e saídas  
+ O tipo de entrada é o tipo dos objetos que você pode transportar para o cmdlet. O tipo de retorno é o tipo dos objetos que o cmdlet retorna.  
+  
+|||  
+|-|-|  
+|Entradas|Nenhum.|  
+|Saídas|Nenhum.|  
+  
+## Exemplo 1  
+  
+```  
+C:\PS>Remove-PowerPivotServiceApplication -identity 12345678-90ab-cdef-ghijklmnop  
+```  
+  
+ Este exemplo exclui um único aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mas não remove seu banco de dados ou cache. Se você não especificar uma identidade, receberá uma solicitação para fornecer uma.  
+  
+## Exemplo 2  
+  
+```  
+C:\PS>Remove-PowerPivotServiceApplication -DeleteAll  
+```  
+  
+ Este exemplo exclui todos os aplicativos de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no farm. Os bancos de dados e o cache não são excluídos.  
+  
+## Exemplo 3  
+  
+```  
+CC:\PS>Remove-PowerPivotServiceApplication -identity 12345678-90ab-cdef-ghijklmnop -RemoveData  
+```  
+  
+ Este exemplo exclui um único aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e seu banco de dados e arquivos de cache.  
+  
+  

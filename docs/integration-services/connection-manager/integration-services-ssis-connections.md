@@ -1,0 +1,125 @@
+---
+title: "Conex&#245;es do SSIS (Integration Services) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.asvs.connectionmanager.f1"
+  - "sql13.dts.designer.adddtsconnection.f1"
+helpviewer_keywords: 
+  - "pacotes do Integration Services, conexões"
+  - "pacotes do SSIS, conexões"
+  - "fontes [Integration Services], conexões"
+  - "pacotes [Integration Services], conexões"
+  - "destinos [Integration Services], conexões"
+  - "tarefas [Integration Services], conexões"
+  - "conexões [Integration Services], sobre conexões"
+  - "conexões [Integration Services]"
+  - "pacotes do SQL Server Integration Services"
+ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
+caps.latest.revision: 92
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 91
+---
+# Conex&#245;es do SSIS (Integration Services)
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usam conexões para executar diferentes tarefas e implementar recursos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  
+-   Conectar com armazenamentos de dados de origem e de destino, como texto, XML, pastas de trabalho do Excel e bancos de dados relacionais para extrair e carregar dados.  
+  
+-   Conectar com bancos de dados relacionais que contêm dados de referência para executar pesquisas exatas ou difusas.  
+  
+-   Conectar com bancos de dados relacionais para executar instruções SQL, como os comandos SELECT, DELETE e INSERT e também procedimentos armazenados.  
+  
+-   Conectar com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar tarefas de manutenção e transferência, como backup de bancos de dados e transferência de logons.  
+  
+-   Gravar entradas de log em arquivos de texto e XML e tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e configurações de pacote em tabelas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  
+-   Conectar com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para criar tabelas de trabalho temporárias, exigidas por algumas transformações para fazer o seu trabalho.  
+  
+-   Conectar com projetos e bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para acessar modelos de mineração de dados, cubos e dimensões de processo e para executar códigos DDL.  
+  
+-   Especificar arquivos e pastas existentes ou criar novos para usar com enumeradores e tarefas Loop Foreach.  
+  
+-   Conectar com filas de mensagens e com a WMI (Instrumentação de Gerenciamento do Windows), o SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects), a Web e servidores de email.  
+  
+ Para estabelecer essas conexões, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa gerenciadores de conexões, conforme descrito na próxima seção.  
+  
+## Gerenciadores de conexões  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa o gerenciador de conexões como uma representação lógica de uma conexão. Em tempo de design, você define as propriedades de um gerenciador de conexões para descrever a conexão física que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria quando o pacote é executado. Por exemplo, um gerenciador de conexões inclui a propriedade **ConnectionString** que você define em tempo de design; em tempo de execução, uma conexão física é criada usando o valor na propriedade da cadeia de conexão.  
+  
+ Um pacote pode usar várias instâncias de um tipo de gerenciador de conexões e você pode definir as propriedades em cada instância. Em tempo de execução, cada instância de um tipo de gerenciador de conexões cria uma conexão que tem atributos diferentes.  
+  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece diferentes tipos de gerenciadores de conexões que permitem a conexão de pacotes com várias fontes de dados e servidores.  
+  
+-   Há gerenciadores de conexões internos que a Instalação instala durante a instalação do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  
+-   Há gerenciadores de conexões disponíveis para download no site da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+  
+-   Você poderá criar seu próprio gerenciador de conexões personalizado se os gerenciadores de conexões existentes não atenderem às suas necessidades.  
+  
+### Gerenciadores de conexões internos  
+ A tabela a seguir lista os tipos de gerenciadores de conexões fornecidos pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  
+|Tipo|Description|Tópico|  
+|----------|-----------------|-----------|  
+|ADO|Conecta-se a objetos ActiveX Data Objects (ADO).|[Gerenciador de conexões ADO](../../integration-services/connection-manager/ado-connection-manager.md)|  
+|ADO.NET|Conecta-se a uma fonte de dados usando um provedor .NET.|[Gerenciador de conexões ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
+|CACHE|Lê dados do fluxo de dados ou de um arquivo de cache (.caw) e pode salvar esses dados em um arquivo de cache.|[Gerenciador de conexões de cache](../../integration-services/data-flow/transformations/cache-connection-manager.md)|  
+|DQS|Conecta-se a um servidor a um banco de dados do Data Quality Services no servidor.|[Gerenciador de Conexões de Limpeza DQS](../../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md)|  
+|EXCEL|Conecta-se a um arquivo da pasta de trabalho do Excel.|[Gerenciador de conexões do Excel](../../integration-services/connection-manager/excel-connection-manager.md)|  
+|FILE|Conecta-se a um arquivo ou uma pasta.|[Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md)|  
+|FLATFILE|Conecta-se a dados em um único arquivo simples.|[Gerenciador de conexões de arquivos simples](../../integration-services/connection-manager/flat-file-connection-manager.md)|  
+|FTP|Conecta-se a um servidor FTP.|[Gerenciador de conexões FTP](../../integration-services/connection-manager/ftp-connection-manager.md)|  
+|HTTP|Conecta-se a um servidor Web.|[Gerenciador de conexões HTTP](../../integration-services/connection-manager/http-connection-manager.md)|  
+|MSMQ|Conecta-se a uma fila de mensagens.|[Gerenciador de conexões MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|  
+|MSOLAP100|Conecta-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou a um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|[Gerenciador de conexões do Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|  
+|MULTIFILE|Conecta-se a vários arquivos e pastas.|[Gerenciador de Conexões de vários arquivos](../../integration-services/connection-manager/multiple-files-connection-manager.md)|  
+|MULTIFLATFILE|Conecta-se a vários arquivos e pastas de dados.|[Gerenciador de conexões de vários arquivos simples](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|  
+|OLEDB|Conecta-se a uma fonte de dados usando um provedor OLE DB.|[Gerenciador de conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
+|ODBC|Conecta-se a uma fonte de dados usando ODBC.|[Gerenciador de conexões ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|  
+|SMOServer|Conecta-se a um servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).|[Gerenciador de conexões SMO](../../integration-services/connection-manager/smo-connection-manager.md)|  
+|SMTP|Conecta-se a um servidor de email SMTP.|[Gerenciador de conexões SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)|  
+|SQLMOBILE|Conecta-se a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.|[Gerenciador de Conexões do SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|  
+|WMI|Conecta-se a um servidor e especifica o escopo de gerenciamento de Instrumentação de Gerenciamento do Windows (WMI) no servidor.|[Gerenciador de conexões WMI](../../integration-services/connection-manager/wmi-connection-manager.md)|  
+  
+### Gerenciadores de conexão disponíveis para download  
+ A tabela a seguir lista tipos adicionais de gerenciadores de conexões que podem ser baixados no site da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+  
+> [!IMPORTANT]  
+>  Os gerenciadores de conexões listados na tabela a seguir funcionam apenas com o [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] e o [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)].  
+  
+|Tipo|Description|Tópico|  
+|----------|-----------------|-----------|  
+|ORACLE|Conecta a um servidor Oracle \<informações de versão>.|O gerenciador de conexões Oracle é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui uma origem e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](http://go.microsoft.com/fwlink/?LinkId=251526).|  
+|SAPBI|Conecta a um sistema SAP NetWeaver BI versão 7.|O gerenciador de conexões SAP BI é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI também inclui uma origem e um destino. Para obter mais informações, consulte a página de download [Microsoft SQL Server 2008 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=262016).|  
+|TERADATA|Conecta a um servidor Teradata \<informações de versão>.|O gerenciador de conexões Teradata é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata da Attunity também inclui uma origem e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](http://go.microsoft.com/fwlink/?LinkId=251526).|  
+  
+### Gerenciadores de conexões personalizados  
+ Também é possível escrever gerenciadores de conexões personalizados. Para obter mais informações, consulte [Developing a Custom Connection Manager](../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  
+  
+## Tarefas relacionadas  
+ Para obter detalhes sobre como adicionar ou excluir um gerenciador de conexões em um pacote, consulte [Adicionar, excluir ou compartilhar um Gerenciador de Conexões em um pacote](../Topic/Add,%20Delete,%20or%20Share%20a%20Connection%20Manager%20in%20a%20Package.md).  
+  
+ Para obter detalhes sobre como definir as propriedades de um gerenciador de conexões em um pacote, consulte [Definir as propriedades de um Gerenciador de Conexões](../Topic/Set%20the%20Properties%20of%20a%20Connection%20Manager.md).  
+  
+## Conteúdo relacionado  
+  
+-   Vídeo, [Aproveite o Microsoft Connector para Oracle da Attunity para melhorar o desempenho do pacote](http://technet.microsoft.com/sqlserver/gg598963.aspx), em technet.microsoft.com  
+  
+-   Artigos do Wiki, [Conectividade de SSIS](http://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity), em social.technet.microsoft.com  
+  
+-   Entrada de blog, [Conectando ao MySQL a partir do SSIS](http://go.microsoft.com/fwlink/?LinkId=217669), em blogs.msdn.com.  
+  
+-   Artigo técnico, [Extraindo e carregando dados do SharePoint nos SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=247826), em msdn.microsoft.com.  
+  
+-   Artigo técnico, [Você obtém a mensagem de erro "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" ao usar o gerenciador de conexões Oracle no SSIS](http://go.microsoft.com/fwlink/?LinkId=233696), em support.microsoft.com.  
+  
+  

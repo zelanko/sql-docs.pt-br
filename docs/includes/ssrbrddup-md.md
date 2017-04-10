@@ -1,0 +1,2 @@
+  Você pode criar e modificar arquivos de definição de relatório paginado (.rdl) no Construtor de Relatórios e no Designer de Relatórios no SQL Server Data Tools. Cada ambiente de criação fornece modos diferentes para criar, abrir e salvar relatórios e itens relacionados.
+   

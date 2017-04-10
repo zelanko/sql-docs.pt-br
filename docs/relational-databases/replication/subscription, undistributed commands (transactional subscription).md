@@ -1,0 +1,35 @@
+---
+title: "Assinatura, Comandos n&#227;o Distribu&#237;dos (assinatura transacional, SQL Server 2005 e vers&#245;es posteriores) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/04/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "replication"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.rep.monitor.subscription.performance.f1"
+ms.assetid: 5451561e-0ce3-4bb5-844a-88cd15b0b371
+caps.latest.revision: 24
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+---
+# Assinatura, Comandos n&#227;o Distribu&#237;dos (assinatura transacional, SQL Server 2005 e vers&#245;es posteriores)
+  A guia **Comandos não Distribuídos** exibe informações sobre o número de comandos no banco de dados de distribuição que não foram entregues ao Assinante selecionado, e, o tempo estimado para entrega desses comandos. Para obter informações sobre como exibir os comandos no banco de dados de distribuição, consulte [sp_replshowcmds & #40. O Transact-SQL e 41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md).  
+  
+## Opções  
+ **Número de comandos no banco de dados de distribuição aguardando para serem aplicados a este Assinante**  
+ O número de comandos no banco de dados de distribuição que não foram entregues ao Assinante selecionado. Um comando consiste em uma instrução DML (linguagem de manipulação de dados) ou uma instrução DDL (linguagem de definição de dados) Transact-SQL.  
+  
+ **Tempo estimado para aplicar esses comandos com base em desempenhos passados**  
+ A quantidade de tempo estimada para entrega de comandos ao Assinante. Se esse valor for maior do que a quantidade de tempo requerida para gerar e aplicar um instantâneo ao Assinante, considere reiniciar o Assinante. Para obter mais informações, consulte [reinicializar assinaturas](../../relational-databases/replication/reinitialize-subscriptions.md).  
+  
+## Consulte também  
+ [Iniciar o Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
+ [Monitorar o desempenho com o Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)   
+ [Replicação de monitoramento](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+  
+  

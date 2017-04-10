@@ -1,0 +1,52 @@
+---
+title: "Suporte a tradu&#231;&#227;o no Analysis Services | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "analysis-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Business Intelligence Development Studio, conversões [Analysis Services]"
+  - "traduções [Analysis Services], sobre traduções"
+  - "traduções de objeto [Analysis Services]"
+  - "identificadores de idioma [Analysis Services]"
+  - "conversões de atributo [Analysis Services]"
+  - "conversões [Analysis Services]"
+ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
+caps.latest.revision: 34
+author: "Minewiskan"
+ms.author: "owend"
+manager: "erikre"
+caps.handback.revision: 34
+---
+# Suporte a tradu&#231;&#227;o no Analysis Services
+  Em um modelo de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você pode inserir várias traduções de uma legenda ou uma descrição para fornecer cadeias de caracteres específicas da cultura baseadas no LCID. Para modelos multidimensionais, as traduções podem ser adicionadas para o nome do banco de dados, objetos de cubo e objetos de dimensão do banco de dados. Para modelos de tabela, você pode traduzir descrições e legendas de tabela e coluna.  
+  
+ A definição de uma tradução cria os metadados e legenda traduzida dentro do modelo, mas para renderizar cadeias de caracteres localizadas em um aplicativo cliente, você deverá definir a propriedade **Language** no objeto ou passar um parâmetro **Culture** ou **Locale Identifier** na cadeia de conexão (por exemplo, definindo `LocaleIdentifier=1036` para retornar cadeias de caracteres em francês).  
+  
+ Planeje o uso de **Locale Identifier** se desejar dar suporte a várias traduções simultâneas do mesmo objeto em idiomas diferentes. Definir a propriedade **Language** funciona, mas isso também afeta o processamento e as consultas, o que pode ter consequências indesejadas. Definir **Locale Identifier** é a melhor opção porque ele é usado somente para retornar cadeias de caracteres traduzidas.  
+  
+ Uma tradução consiste em um identificador de localidade (LCID), uma legenda traduzida para o objeto (por exemplo, a dimensão ou o nome do atributo) e, opcionalmente, uma associação a uma coluna que fornece valores de dados no idioma de destino. Você pode ter várias traduções, mas só pode usar uma para determinada conexão. Não há limite teórico no número de traduções que você pode inserir no modelo, mas cada tradução adiciona complexidade ao teste e todas as traduções devem compartilhar o mesmo agrupamento, então, quando criar a solução, tenha essas restrições naturais em mente.  
+  
+> [!TIP]  
+>  Você pode usar os aplicativos cliente, como o Excel, o Management Studio e o SQL Server Profiler para retornar cadeias de caracteres traduzidas. Consulte [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) para obter detalhes.  
+  
+## Como adicionar metadados traduzidos para o modelo no Analysis Services  
+ Visite esses links para obter instruções passo a passo:  
+  
+-   [Traduções em modelos de tabela &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)  
+  
+-   [Traduções em modelos multidimensionais &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)  
+  
+## Consulte também  
+ [Cenários de globalização para o Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
+ [Idiomas e agrupamentos &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)   
+ [Definir ou alterar o agrupamento de coluna](../relational-databases/collations/set-or-change-the-column-collation.md)   
+ [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
+  
+  

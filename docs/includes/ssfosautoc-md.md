@@ -1,0 +1,1 @@
+ conjunto de failover automático 

@@ -1,0 +1,1 @@
+ OLTP na memória do SQL Server 

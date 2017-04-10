@@ -1,0 +1,56 @@
+---
+title: "Adicionar um ret&#226;ngulo ou um cont&#234;iner (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "reporting-services-sharepoint"
+  - "reporting-services-native"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "10061"
+  - "sql13.rtp.rptdesigner.rectangleproperties.general.f1"
+ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
+caps.latest.revision: 9
+author: "maggiesMSFT"
+ms.author: "maggies"
+manager: "erikre"
+caps.handback.revision: 9
+---
+# Adicionar um ret&#226;ngulo ou um cont&#234;iner (Construtor de Relat&#243;rios e SSRS)
+  Adicione um retângulo a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] quando quiser que um elemento gráfico separe áreas do relatório, enfatize áreas de um relatório ou forneça uma tela de fundo para um ou mais itens de relatório. Os retângulos também são usados como contêineres para ajudar a controlar a maneira como as regiões de dados são renderizadas em um relatório. Você pode personalizar a aparência de um retângulo editando suas propriedades, como plano de fundo e cores da borda. Para obter mais informações sobre como usar um retângulo como um contêiner, consulte [Retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md) e [Exibir os mesmos dados em uma matriz e um gráfico &#40;Construtor de Relatórios&#41;](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).    
+   
+## Para adicionar um retângulo    
+    
+1.  Na guia **Inserir** , no grupo **Itens de Relatório** , clique em **Retângulo**.    
+    
+2.  Na superfície de design, clique no local onde deseja exibir o canto superior esquerdo do retângulo e arraste até onde deseja colocar o canto inferior direito.    
+    
+     À medida que você move o cursor, “linhas de ajuste” aparecem como as linhas do cursor junto com outros objetos na superfície de design. Isso será útil se você desejar alinhar os objetos.    
+    
+## Para criar um contêiner    
+    
+1.  Adicione um item de relatório retângulo ao relatório.    
+    
+2.  Arraste outros itens de relatório para o retângulo.    
+    
+    > [!NOTE]    
+    >  Um retângulo é um contêiner apenas para itens que você cria no retângulo ou arrasta para dentro dele. Se você desenhar um retângulo ao redor de um item que já existe na superfície de design, o retângulo não funcionará como seu contêiner.    
+    
+## Para alterar propriedades de retângulo, como cor, estilo ou peso    
+    
+1.  Selecione o retângulo e clique nas opções de cor, estilo ou peso de linha na seção **Borda** da guia Página Inicial.    
+    
+2.  Clique na seta próxima ao botão **Borda** para determinar quais lados do retângulo devem ser alterados.    
+    
+    > [!NOTE]    
+    >  Se você definir o estilo da linha como **Duplo** e a largura for 1,5 pt ou mais estreita, a linha talvez não pareça dupla quando o relatório for executado no Construtor de Relatórios, no Designer de Relatórios ou no portal da Web do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Ela aparecerá dupla quando você exportar o relatório para outros formatos, como Microsoft Word e Acrobat PDF.    
+    
+## Consulte também    
+ [Retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)     
+ [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)    
+    
+  
