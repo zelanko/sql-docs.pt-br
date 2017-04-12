@@ -1,1 +1,1 @@
-\<Token xmlns:xlink="http://www.w3.org/1999/xlink">Publicador de Relatórios Móveis</Token>
+Publicador de Relatórios Móveis 

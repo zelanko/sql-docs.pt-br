@@ -1,1 +1,2 @@
-**ESTE TÓPICO APLICA-SE A:**![sim](../includes/media/yes.png)SQL Server (começando com o 2016)![não](../includes/media/no.png)Banco de Dados SQL do Azure![não](../includes/media/no.png)Azure SQL Data Warehouse ![não](../includes/media/no.png)Parallel Data Warehouse
+**ESTE TÓPICO APLICA-SE A:**![sim](media/yes.png)SQL Server (começando com o 2016)![não](media/no.png)Banco de Dados SQL do Azure![não](media/no.png)Azure SQL Data Warehouse ![não](media/no.png)Parallel Data Warehouse
+

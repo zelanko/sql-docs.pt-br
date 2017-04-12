@@ -1,0 +1,1 @@
+ Replicação geográfica ativa 
