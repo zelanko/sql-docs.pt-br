@@ -1,35 +1,39 @@
 ---
-title: "Pesquisar um documento ativo de forma incremental | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pesquisas [SQL Server Management Studio], incrementais"
-  - "Editor de Consultas [SQL Server Management Studio], pesquisa incremental"
-  - "pesquisas incrementais [SQL Server Management Studio]"
+title: Pesquisar um documento ativo de forma incremental | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- searches [SQL Server Management Studio], incremental
+- Query Editor [SQL Server Management Studio], incremental search
+- incremental searches [SQL Server Management Studio]
 ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b3d3c79129936f6764261ec3f0ac1e0d54daf03d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pesquisar um documento ativo de forma incremental
+# <a name="search-an-active-document-incrementally"></a>Pesquisar um documento ativo de forma incremental
   É possível pesquisar um único documento ou janela de forma incremental digitando texto. A operação de pesquisa realça o primeiro conjunto de caracteres que corresponde aos caracteres digitados durante a pesquisa incremental no documento ou na janela. A pesquisa incremental pesquisa automaticamente todo o texto dentro de um documento ou de uma janela, com exceção de texto oculto.  
   
- Na opção **Diferenciar Maiúsculas de Minúsculas**, a pesquisa incremental usa os critérios de sua pesquisa anterior. Por exemplo, se você pesquisou vários arquivos usando a caixa de diálogo **Localizar nos Arquivos** e selecionou **Distinguir Maiúsculas de Minúsculas**, se uma nova pesquisa for incremental, a pesquisa considerará maiúsculas e minúsculas.  
+ Na opção **Diferenciar Maiúsculas de Minúsculas** , a pesquisa incremental usa os critérios de sua pesquisa anterior. Por exemplo, se você pesquisou vários arquivos usando a caixa de diálogo **Localizar nos Arquivos** e selecionou **Distinguir Maiúsculas de Minúsculas**, se uma nova pesquisa for incremental, a pesquisa considerará maiúsculas e minúsculas.  
   
-### Para pesquisar incrementalmente  
+### <a name="to-search-incrementally"></a>Para pesquisar incrementalmente  
   
 1.  Abra o arquivo ou a janela que você deseja pesquisar.  
   
-2.  No menu **Editar**, aponte para **Avançado** e clique em **Pesquisa Incremental**.  
+2.  No menu **Editar** , aponte para **Avançado**e clique em **Pesquisa Incremental**.  
   
      O ícone de cursor muda para um binóculo com uma seta, indicando a direção de pesquisa e a barra de status exibe "Pesquisa Incremental".  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  Para obter uma lista completa de teclas de atalho do teclado, consulte [Atalhos de teclado do SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Pesquisar e substituir](../../relational-databases/scripting/search-and-replace.md)   
  [Pesquisar documentos interativamente](../../relational-databases/scripting/search-documents-interactively.md)   
  [Pesquisar documentos usando listas de resultados](../../relational-databases/scripting/search-documents-using-results-lists.md)   

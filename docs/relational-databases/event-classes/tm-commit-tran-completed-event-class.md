@@ -1,27 +1,31 @@
 ---
-title: "Classe de evento TM: Commit Tran Completed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento TM: Commit Tran Completed"
+title: 'Classe de evento TM: Commit Tran Completed | Microsoft Docs'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- 'TM: Commit Tran Completed event class'
 ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4fa4c1f343187f21169035d0209d2f42259c8812
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento TM: Commit Tran Completed
+# <a name="tm-commit-tran-completed-event-class"></a>classe de evento TM: Commit Tran Completed
   A classe de evento TM: Commit Tran Completed indica que uma solicitação COMMIT TRANSACTION foi concluída. A solicitação foi enviada do cliente pela interface de gerenciamento de transações. A coluna EventSubClass indicará se uma transação nova será iniciada depois que a transação atual estiver confirmada.  
   
-## Colunas de dados da classe de evento TM: Commit Tran Completed  
+## <a name="tm-commit-tran-completed-event-class-data-columns"></a>Colunas de dados da classe de evento TM: Commit Tran Completed  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Sim|  
 |----------------------|---------------|-----------------|---------------|---------|  
@@ -50,7 +54,7 @@ caps.handback.revision: 24
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |XactSequence|**bigint**|Token que descreve a transação atual.|50|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  

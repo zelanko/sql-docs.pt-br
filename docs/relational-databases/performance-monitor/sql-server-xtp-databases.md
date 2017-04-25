@@ -1,24 +1,28 @@
 ---
-title: "Bancos de dados XTP do SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Bancos de dados XTP do SQL Server 2016"
+title: Bancos de dados XTP do SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server 2016 XTP Databases
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 caps.latest.revision: 3
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2839d276956db1b82bf6b1f236ceae74b973477
+ms.lasthandoff: 04/11/2017
+
 ---
-# Bancos de dados XTP do SQL Server
+# <a name="sql-server-xtp-databases"></a>Bancos de dados XTP do SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 O objeto de desempenho **Bancos de dados XTP do SQL Server** fornece contadores específicos do banco de dados OLTP in-memory.
@@ -26,7 +30,7 @@ O objeto de desempenho **Bancos de dados XTP do SQL Server** fornece contadores 
 > [!NOTE]
 >  No momento, os contadores Bancos de dados XTP do SQL Server não são visíveis em sys.dm_os_performance_counters.  Os contadores podem ser exibidos no [Monitor do Sistema](../../relational-databases/performance/start-system-monitor-windows.md).
 
-Esta tabela descreve os contadores **Bancos de dados XTP do SQL Server**.
+Esta tabela descreve os contadores **Bancos de dados XTP do SQL Server** .
 
 |Contador|Description| 
 |-------------|-----------------|  
@@ -64,5 +68,5 @@ Esta tabela descreve os contadores **Bancos de dados XTP do SQL Server**.
 |**Pico de Contagem de Páginas da Parte Final do Cache**|Maior número de páginas alocadas na Parte Final do Cache. Este é um contador de nível muito baixo, não planejado para uso do cliente.|
 
 
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 [Contadores de desempenho XTP &#40;OLTP in-memory&#41; do SQL Server](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

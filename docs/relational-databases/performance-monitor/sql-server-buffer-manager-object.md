@@ -1,30 +1,34 @@
 ---
-title: "SQL Server, objeto Buffer Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "objeto Buffer Manager"
-  - "SQLServer:Buffer Manager"
+title: "SQL Server, objeto Nó de Buffer | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Buffer Manager object
+- SQLServer:Buffer Manager
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29b1764e30fe28153f6f86731f5b6fc520dc9027
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, objeto Buffer Manager
+# <a name="sql-server-buffer-manager-object"></a>SQL Server, objeto Buffer Manager
   O objeto **Gerenciador de Buffer** fornece contadores para monitorar como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa:  
   
 -   Memória para armazenar páginas de dados.  
   
--   Contadores para monitorar a E/S física, como leituras e gravações das páginas do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Contadores para monitorar a E/S física, como leituras e gravações das páginas do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Extensão do pool de buffers para estender o cache do buffer usando o armazenamento rápido não volátil, como SSD (unidade de estado sólido).  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 36
   
 -   A frequência com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisa ler dados a partir do disco. Comparada com outras operações, como acesso de memória, a E/S física demora muito mais. Minimizar a E/S física pode melhorar o desempenho de consulta.  
   
-## Objetos de desempenho do Gerenciador de Buffer  
+## <a name="buffer-manager-performance-objects"></a>Objetos de desempenho do Gerenciador de Buffer  
  Esta tabela descreve os objetos de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Gerenciador de Buffer** .  
   
 |SQL Server, contadores do Gerenciador de Buffer|Description|  
@@ -66,7 +70,7 @@ caps.handback.revision: 36
 |**Páginas de destino**|Número ideal de páginas no pool de buffers.|
 
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [SQL Server:Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)   
  [Opções Server Memory de configuração do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server, objeto Cache de planos](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   

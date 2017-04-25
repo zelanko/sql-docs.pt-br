@@ -1,29 +1,33 @@
 ---
-title: "Dados hier&#225;rquicos (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "hierarquias [SQL Server], tabelas para dar suporte"
-  - "hierarchyid [Mecanismo de Banco de Dados], conceitos"
-  - "tabelas hierárquicas [Mecanismo de Banco de Dados]"
-  - "SqlHierarchyId"
-  - "hierarchyid [Mecanismo de Banco de Dados]"
-  - "consultas hierárquicas [SQL Server], usando o tipo de dados hierarchyid"
+title: "Dados hierárquicos (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- hierarchies [SQL Server], tables to support
+- hierarchyid [Database Engine], concepts
+- hierarchical tables [Database Engine]
+- SqlHierarchyId
+- hierarchyid [Database Engine]
+- hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 502bbf9e763ffc8132e741a33ebe0ec4d0cad499
+ms.lasthandoff: 04/11/2017
+
 ---
-# Dados hier&#225;rquicos (SQL Server)
+# <a name="hierarchical-data-sql-server"></a>Dados hierárquicos (SQL Server)
   O tipo de dados interno **hierarchyid** facilita o armazenamento e a consulta de dados hierárquicos. **hierarchyid** foi otimizado para representar árvores, que são o tipo mais comum de dados hierárquicos.  
   
  Os dados hierárquicos são definidos como um conjunto de itens de dados mutuamente relacionados por relações hierárquicas. As relações hierárquicas existem onde um item de dados é o pai de outro item. Exemplos dos dados hierárquicos que geralmente são armazenados em bancos de dados incluem o seguinte:  
@@ -38,7 +42,7 @@ caps.handback.revision: 39
   
 -   Um gráfico de links entre páginas da Web  
   
- Use [hierarchyid](../Topic/hierarchyid%20\(Transact-SQL\).md) como o tipo de dados para criar tabelas com uma estrutura hierárquica ou para descrever a estrutura hierárquica dos dados armazenados em outro local. Use as [funções hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) no [!INCLUDE[tsql](../includes/tsql-md.md)] para consultar e gerenciar dados hierárquicos.  
+ Use [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) como o tipo de dados para criar tabelas com uma estrutura hierárquica ou para descrever a estrutura hierárquica dos dados armazenados em outro local. Use as [funções hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) no [!INCLUDE[tsql](../includes/tsql-md.md)] para consultar e gerenciar dados hierárquicos.  
   
 ##  <a name="keyprops"></a> Propriedades chave de hierarchyid  
  Um valor do tipo de dados **hierarchyid** representa uma posição em uma hierarquia de árvore. Os valores para **hierarchyid** têm as seguintes propriedades:  
@@ -53,20 +57,18 @@ caps.handback.revision: 39
   
 -   Suporte a inserções e exclusões arbitrárias  
   
-     Usando o método [GetDescendant](../t-sql/data-types/getdescendant-database-engine.md), é sempre possível gerar um irmão à direita de qualquer nó determinado, à esquerda de qualquer nó determinado ou entre dois irmãos. A propriedade de comparação é mantida quando um número arbitrário de nós é inserido ou excluído da hierarquia. A maioria das inserções e exclusões preserva a propriedade de densidade. Porém, inserções entre dois nós produzirão valores hierarchyid com uma representação ligeiramente menos compacta.  
+     Usando o método [GetDescendant](../t-sql/data-types/getdescendant-database-engine.md) , é sempre possível gerar um irmão à direita de qualquer nó determinado, à esquerda de qualquer nó determinado ou entre dois irmãos. A propriedade de comparação é mantida quando um número arbitrário de nós é inserido ou excluído da hierarquia. A maioria das inserções e exclusões preserva a propriedade de densidade. Porém, inserções entre dois nós produzirão valores hierarchyid com uma representação ligeiramente menos compacta.  
   
- [Neste tópico](#top)  
   
 ##  <a name="limits"></a> Limitações de hierarchyid  
  O tipo de dados **hierarchyid** tem as seguintes limitações:  
   
 -   Uma coluna de tipo **hierarchyid** não representa automaticamente uma árvore. Depende do aplicativo gerar e atribuir valores **hierarchyid** de maneira que a relação desejada entre as linhas seja refletida nos valores. Alguns aplicativos podem ter uma coluna do tipo **hierarchyid** que indica o local em uma hierarquia definida em outra tabela.  
   
--   Depende de o aplicativo gerenciar a simultaneidade na geração e atribuição de valores **hierarchyid**. Não há nenhuma garantia de que os valores **hierarchyid** em uma coluna sejam exclusivos a menos que o aplicativo use uma restrição de chave exclusiva ou force sua exclusividade em sua própria lógica.  
+-   Depende de o aplicativo gerenciar a simultaneidade na geração e atribuição de valores **hierarchyid** . Não há nenhuma garantia de que os valores **hierarchyid** em uma coluna sejam exclusivos a menos que o aplicativo use uma restrição de chave exclusiva ou force sua exclusividade em sua própria lógica.  
   
 -   Relações hierárquicas representadas por valores **hierarchyid** não são impostas como uma relação de chave estrangeira. É possível e, às vezes, apropriado ter uma relação hierárquica onde A tem um filho B e, depois, A é excluído deixando B com uma relação para um registro inexistente. Se esse comportamento for inaceitável, o aplicativo deverá fazer a consulta por descendentes antes de excluir os pais.  
   
- [Neste tópico](#top)  
   
 ##  <a name="alternatives"></a> Quando usar alternativas para hierarchyid  
  As duas alternativas para **hierarchyid** para representar dados hierárquicos são:  
@@ -75,9 +77,9 @@ caps.handback.revision: 39
   
 -   XML  
   
- A **hierarchyid** é geralmente superior a essas alternativas. Porém, a seguir há situações específicas detalhadas em que as alternativas são provavelmente superiores.  
+ A**hierarchyid** é geralmente superior a essas alternativas. Porém, a seguir há situações específicas detalhadas em que as alternativas são provavelmente superiores.  
   
-### Pai/filho  
+### <a name="parentchild"></a>Pai/filho  
  Ao usar a abordagem Pai/Filho, cada linha contém uma referência ao pai. A tabela a seguir define uma tabela típica usada para conter as linhas pai e filho em uma relação Pai/Filho:  
   
 ```  
@@ -121,9 +123,8 @@ GO
     GO  
     ```  
   
- [Neste tópico](#top)  
   
-### XML  
+### <a name="xml"></a>XML  
  Um documento XML é uma árvore e, portanto, uma instância de tipo de dados XML única pode representar uma hierarquia completa. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] quando um índice XML é criado, valores **hierarchyid** são usados internamente para representar a posição na hierarquia.  
   
  Usar um tipo de dados XML pode ser vantajoso quando todos os seguintes itens forem verdadeiros:  
@@ -145,7 +146,6 @@ CREATE TABLE XMLOrg
 GO  
 ```  
   
- [Neste tópico](#top)  
   
 ##  <a name="indexing"></a> Estratégias de indexação para dados hierárquicos  
  Há duas estratégias para indexar dados hierárquicos:  
@@ -164,9 +164,8 @@ GO
   
  Ter opções por profundidade, por amplitude, ou ambas, e qual delas tornar a chave de clustering (se houver), depende da importância relativa dos tipos de consultas anteriores e da importância relativa de operações SELECT versus DML. Para obter um exemplo detalhado de estratégias de indexação, consulte [Tutorial: Usando o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
- [Neste tópico](#top)  
   
-### Criando índices  
+### <a name="creating-indexes"></a>Criando índices  
  O método GetLevel() pode ser usado para criar uma ordem por amplitude. No exemplo seguinte, são criados índices por amplitude e por profundidade:  
   
 ```wmimof  
@@ -190,11 +189,10 @@ ON Organization(BusinessEntityID) ;
 GO  
 ```  
   
- [Neste tópico](#top)  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
   
-### Exemplo simples  
+### <a name="simple-example"></a>Exemplo simples  
  O exemplo a seguir é intencionalmente simplificado para ajudá-lo a começar. Primeiro crie uma tabela para manter alguns dados geográficos.  
   
 ```  
@@ -223,7 +221,7 @@ VALUES
 ('/3/1/', 'McMurdo Station', 'City');  
 ```  
   
- Selecione os dados, adicionando uma coluna que converta os dados de nível em um valor de texto de fácil compreensão. Essa consulta também ordena o resultado pelo tipo de dados **hierarchyid**.  
+ Selecione os dados, adicionando uma coluna que converta os dados de nível em um valor de texto de fácil compreensão. Essa consulta também ordena o resultado pelo tipo de dados **hierarchyid** .  
   
 ```  
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], *   
@@ -258,7 +256,7 @@ VALUES ('/1/3/1/', 'Kyoto', 'City'), ('/1/3/1/', 'London', 'City');
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], * FROM SimpleDemo ORDER BY Level;  
 ```  
   
- Isso demonstra mais problemas em potencial. Kyoto pode ser inserido como o nível `/1/3/1/`, embora não exista um nível pai `/1/3/`. Londres e Kyoto têm o mesmo valor para **hierarchyid**. Além disso, os usuários devem decidir se este tipo de hierarquia é apropriado para seu uso, e os valores do bloco que são inválidos para seu uso.  
+ Isso demonstra mais problemas em potencial. Kyoto pode ser inserido como o nível `/1/3/1/` , embora não exista um nível pai `/1/3/`. Londres e Kyoto têm o mesmo valor para **hierarchyid**. Além disso, os usuários devem decidir se este tipo de hierarquia é apropriado para seu uso, e os valores do bloco que são inválidos para seu uso.  
   
  Além disso, essa tabela não usou a parte superior da hierarquia `'/'`. Ela foi omitida pois não há um pai comum de todos os continentes. Para adicionar um, adicione o planeta inteiro.  
   
@@ -272,7 +270,6 @@ VALUES ('/', 'Earth', 'Planet');
 ###  <a name="migrating"></a> Migrando de Pai/Filho para hierarchyid  
  A maioria das árvores é representada usando Pai/Filho. O modo mais fácil de migrar de uma estrutura Pai/Filho para uma tabela usando **hierarchyid** é usar uma coluna ou uma tabela temporária para manter o controle do número de nós em cada nível da hierarquia. Para obter um exemplo de migração de uma tabela Pai/Filho, consulte a lição 1 do [Tutorial: Usando o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
- [Neste tópico](#top)  
   
 ###  <a name="BKMK_ManagingTrees"></a> Gerenciando uma árvore com hierarchyid  
  Embora uma coluna **hierarchyid** não represente necessariamente uma árvore, um aplicativo pode garantir facilmente que essa representação ocorra.  
@@ -289,9 +286,8 @@ VALUES ('/', 'Earth', 'Planet');
   
     -   Determine a exclusividade de cada novo nó filho e insira-o como parte de uma transação serializável.  
   
- [Neste tópico](#top)  
   
-#### Exemplo utilizando detecção de erro  
+#### <a name="example-using-error-detection"></a>Exemplo utilizando detecção de erro  
  No exemplo a seguir, o código de exemplo computa o novo valor filho de **EmployeeId** detectando depois quaisquer violações de chave para retorná-las ao marcador **INS_EMP** para computar novamente o valor de **EmployeeId** na nova linha:  
   
 ```  
@@ -324,10 +320,9 @@ END ;
 GO  
 ```  
   
- [Neste tópico](#top)  
   
-#### Exemplo utilizando uma transação serializável  
- O índice **Org_BreadthFirst** assegura que a determinação de **@last_child** use uma busca de intervalo. Além de outros casos de erro que um aplicativo tente verificar, uma violação da chave duplicada depois da inserção indica uma tentativa de adicionar vários funcionários com a mesma ID e, portanto, **@last_child** deve ser novamente computado. O código a seguir usa uma transação serializável e um índice de primeira amplitude para computar o valor do novo nó:  
+#### <a name="example-using-a-serializable-transaction"></a>Exemplo utilizando uma transação serializável  
+ O tipo de dados **Org_BreadthFirst** assegura que a determinação de **@last_child** use uma busca de intervalo. Além de outros casos de erro que um aplicativo tente verificar, uma violação da chave duplicada depois da inserção indica uma tentativa de adicionar vários funcionários com a mesma ID e, portanto, **@last_child** deve ser novamente computado. O código a seguir usa uma transação serializável e um índice de primeira amplitude para computar o valor do novo nó:  
   
 ```  
 CREATE TABLE Org_T2  
@@ -377,7 +372,6 @@ EmployeeId LastChild EmployeeName
 0x5AC0    NULL       Mary  
 ```  
   
- [Neste tópico](#top)  
   
 ###  <a name="BKMK_EnforcingTrees"></a> Aplicando uma árvore  
  Os exemplos anteriores ilustram como um aplicativo pode assegurar a manutenção de uma árvore. Para impor uma árvore usando restrições, uma coluna computada que define o pai de cada nó pode ser criada com uma restrição de chave estrangeira na ID de chave primária.  
@@ -396,7 +390,6 @@ GO
   
  O método de impor uma relação é preferido quando o código que não é confiável para manter a árvore hierárquica tiver acesso DML direto à tabela. No entanto, esse método pode reduzir o desempenho porque a restrição deve ser verificada em todas as operações DML.  
   
- [Neste tópico](#top)  
   
 ###  <a name="findclr"></a> Localizando ancestrais usando o CLR  
  Uma operação comum que envolve dois nós em uma hierarquia é encontrar o mais baixo ancestral comum. Isso pode ser escrito em [!INCLUDE[tsql](../includes/tsql-md.md)] ou CLR, porque o tipo **hierarchyid** está disponível em ambos. CLR é recomendado porque o desempenho será mais rápido.  
@@ -444,7 +437,6 @@ FROM '<path to DLL>\ListAncestors.dll'
 GO  
 ```  
   
- [Neste tópico](#top)  
   
 ###  <a name="ancestors"></a> Listando os ancestrais  
  A criação de uma lista de ancestrais de um nó é uma operação comum; por exemplo, para mostrar a posição em uma organização. Uma das formas de fazer isso é usar uma função com valor de tabela usando a classe **HierarchyId_Operations** definida acima:  
@@ -474,7 +466,6 @@ JOIN ListAncestors(@h) AS A
 GO  
 ```  
   
- [Neste tópico](#top)  
   
 ###  <a name="lowestcommon"></a> Localizando o mais baixo ancestral comum  
  Usando a classe **HierarchyId_Operations** definida acima, crie a seguinte função [!INCLUDE[tsql](../includes/tsql-md.md)] para localizar o mais baixo ancestral comum que envolva dois nós em uma hierarquia:  
@@ -507,10 +498,9 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
  O nó resultante é /1/1/  
   
- [Neste tópico](#top)  
   
 ###  <a name="BKMK_MovingSubtrees"></a> Movendo subárvores  
- Outra operação comum é mover subárvores. O procedimento abaixo toma uma subárvore de **@oldMgr** e a transforma em (**@oldMgr** inclusive) uma subárvore de **@newMgr**.  
+ Outra operação comum é mover subárvores. O procedimento abaixo toma uma subárvore de **@oldMgr** e a transforma em ( **@oldMgr**inclusive) uma subárvore de **@newMgr**.  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  
@@ -535,11 +525,10 @@ END ;
 GO  
 ```  
   
- [Neste tópico](#top)  
   
-## Consulte também  
- [Referência de método de tipo de dados hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md)   
- [Tutorial: Usando o tipo de dados hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
- [hierarchyid &#40;Transact-SQL&#41;](../Topic/hierarchyid%20\(Transact-SQL\).md)  
+## <a name="see-also"></a>Consulte também  
+ [Referência de método de tipo de dados hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
+ [Tutorial: Usando o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

@@ -1,32 +1,36 @@
 ---
-title: "Administrar servidores com Gerenciamento Baseado em Pol&#237;ticas | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "faceta - Consulte facetas"
-  - "Estrutura declarativa de gerenciamento - Consulte Gerenciamento Baseado em Políticas"
-  - "configuração da área da superfície [SQL Server], Gerenciamento Baseado em Políticas"
-  - "Gerenciamento Baseado em Políticas"
-  - "facetas [Gerenciamento Baseado em Políticas]"
-  - "Gerenciamento Baseado em Políticas, administrando"
-  - "condições [Gerenciamento Baseado em Políticas]"
-  - "facetas [Gerenciamento Baseado em Políticas], sobre as facetas"
-  - "função PolicyAdministratorRole"
+title: "Administrar servidores com Gerenciamento Baseado em Políticas | Microsoft Docs"
+ms.custom: 
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- facet See facets
+- Declarative Management Framework See Policy-Based Management
+- surface area configuration [SQL Server], Policy-Based Management
+- Policy-Based Management
+- facets [Policy-Based Management]
+- Policy-Based Management, administering
+- conditions [Policy-Based Management]
+- facets [Policy-Based Management], about facets
+- PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: 76
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 76
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.lasthandoff: 04/11/2017
+
 ---
-# Administrar servidores com Gerenciamento Baseado em Pol&#237;ticas
+# <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores com Gerenciamento Baseado em Políticas
    O Gerenciamento Baseado em Políticas é um sistema baseado em política para gerenciar uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usado para criar condições que contêm expressões de condição. Em seguida, crie políticas que se aplicam as condições a objetos de destino de banco de dados.  
 
 Por exemplo, como o administrador de banco de dados, é recomendável garantir que alguns servidores não tenham o Database Mail habilitado, para que você possa criar uma condição e uma política que define essa opção do servidor. 
@@ -47,7 +51,7 @@ Por exemplo, como o administrador de banco de dados, é recomendável garantir q
   
 > **OBSERVAÇÃO:** quando o sistema calcula o objeto definido para uma política, por padrão, os objetos do sistema são excluídos.  Por exemplo, se o conjunto de objetos da política referenciar todas as tabelas, a política não se aplicará a tabelas do sistema. Se os usuários desejarem avaliar uma política em relação a objetos do sistema, eles poderão explicitamente adicionar objetos do sistema ao conjunto de objetos. Entretanto, embora todas as políticas tenham suporte para o modo de avaliação **verificação de agenda** , por questões de desempenho, nem todas as políticas com conjuntos de objetos arbitrários têm suporte para o modo de avaliação **verificação de alterações** . Para obter mais informações, confira [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
-## Três componentes do Gerenciamento Baseado em Políticas  
+## <a name="three-policy-based-management-components"></a>Três componentes do Gerenciamento Baseado em Políticas  
  O Gerenciamento Baseado em Políticas tem três componentes:  
   
 -   Gerenciamento de política. Os administradores de políticas criam políticas.  
@@ -68,7 +72,7 @@ Por exemplo, como o administrador de banco de dados, é recomendável garantir q
   
      Quando as políticas automatizadas não estão habilitadas, o Gerenciamento Baseado em Políticas não afetará o desempenho do sistema.  
   
-## Termos  
+## <a name="terms"></a>Termos  
  **Destino gerenciado pelo Gerenciamento Baseado em Políticas** 
  As entidades gerenciadas pelo Gerenciamento Baseado em Políticas, como uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], um banco de dados, uma tabela ou um índice. Todos os destinos em uma instância de servidor formam uma hierarquia de destino. Um conjunto de destino é aquele resultante da aplicação de um conjunto de filtros de destino à hierarquia de destino. Por exemplo, todas as tabelas do banco de dados de propriedade do esquema HumanResources.  
   
@@ -101,7 +105,7 @@ Por exemplo, como o administrador de banco de dados, é recomendável garantir q
   
 -   O destino ou um dos destinos ancestrais assina o grupo de políticas que contém essa política.  
   
-## Links para tarefas específicas 
+## <a name="links-to-specific-tasks"></a>Links para tarefas específicas 
 
  - [Armazenar as políticas de Gerenciamento Baseado em Políticas.](https://msdn.microsoft.com/library/hh213476.aspx)|  
  - [Configurar alertas para notificar os administradores de políticas sobre falhas](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -115,10 +119,11 @@ Por exemplo, como o administrador de banco de dados, é recomendável garantir q
  - [Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 
   
- ## Exemplos
+ ## <a name="examples"></a>Exemplos
  - [Criar a política desativada por padrão](https://msdn.microsoft.com/library/bb500172.aspx)
   - [Configurar um servidor para executar a política desativada por padrão](https://msdn.microsoft.com/library/bb522470.aspx)
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Exibições de Gerenciamento Baseado em Políticas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   
+

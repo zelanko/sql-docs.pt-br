@@ -1,35 +1,39 @@
 ---
-title: "Classe de evento OLEDB DataRead | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento OLEDB DataRead"
+title: Classe de evento OLEDB DataRead | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLEDB DataRead event class
 ms.assetid: fb6869ba-3199-4e32-a650-60a5dda2571e
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c36eeb6ff13c3bcaa5364375e3a19f90921e8ab3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento OLEDB DataRead
+# <a name="oledb-dataread-event-class"></a>classe de evento OLEDB DataRead
   A classe de evento OLEDB DataRead ocorre quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chama um provedor OLE DB para consultas distribuídas e procedimentos armazenados remotos. Inclua essa classe de evento em rastreamentos que monitoram quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] faz uma chamada de solicitação de dados ao provedor OLE DB.  
   
  Quando a classe OLEDB DataRead é incluída em um rastreamento, a quantidade de sobrecarga gerada será alta. É recomendável limitar o uso dessa classe de evento a rastreamentos que monitorem problemas específicos em breves períodos de tempo.  
   
-## Colunas de dados da classe de evento OLEDB DataRead  
+## <a name="oledb-dataread-event-class-data-columns"></a>Colunas de dados da classe de evento OLEDB DataRead  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
-|DatabaseID|**int**|A ID do banco de dados especificada pela instrução USE *database* ou a ID do banco de dados padrão se nenhuma instrução USE *database* tiver sido emitida para determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
+|DatabaseID|**int**|A ID do banco de dados especificada pela instrução USE *database* ou a ID do banco de dados padrão se nenhuma instrução USE *database*tiver sido emitida para determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |Duration|**bigint**|Período de tempo para concluir o evento Chamada OLE DB.|13|Não|  
 |EndTime|**datetime**|Hora em que o evento terminou.|15|Sim|  
@@ -54,7 +58,7 @@ caps.handback.revision: 37
 |TextData|**nvarchar**|Parâmetros enviados e recebidos na chamada OLE DB.|1|Não|  
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Objetos de automação OLE em Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  

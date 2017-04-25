@@ -1,24 +1,28 @@
 ---
-title: "Desabilitar a compacta&#231;&#227;o em uma tabela ou &#237;ndice | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "compactação de dados [SQL Server], desabilitando"
+title: "Desabilitar a compactação em uma tabela ou índice | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data compression [SQL Server], disabling
 ms.assetid: bda1e452-397b-4757-82a4-181217361589
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 342baf08233852778ca7caaf5a528d0362490de6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Desabilitar a compacta&#231;&#227;o em uma tabela ou &#237;ndice
+# <a name="disable-compression-on-a-table-or-index"></a>Desabilitar a compactação em uma tabela ou índice
   Este tópico descreve como desabilitar a compactação em uma tabela ou índice no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -41,7 +45,7 @@ caps.handback.revision: 8
   
 -   Se a tabela for um heap, a operação de reconstrução para o modo ONLINE será um thread único. Use o modo OFFLINE para uma operação de reconstrução de um heap multi-threaded. Para obter mais informações sobre compactação de dados, veja [Compactação de dados](../../relational-databases/data-compression/data-compression.md).  
   
--   Para avaliar como a alteração do estado de compactação afetará uma tabela, um índice ou uma partição, use o procedimento armazenado [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
+-   Para avaliar como a alteração do estado de compactação afetará uma tabela, um índice ou uma partição, use o procedimento armazenado [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) .  
   
 -   Não será possível alterar a configuração de compactação de uma única partição se a tabela tiver índices não alinhados.  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 8
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para desabilitar a compactação em uma tabela  
+#### <a name="to-disable-compression-on-a-table"></a>Para desabilitar a compactação em uma tabela  
   
 1.  No Pesquisador de Objetos, expanda o banco de dados que contém a tabela na qual você deseja desabilitar a compactação e expanda a pasta **Tabelas** .  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 8
   
      As seguintes opções estão disponíveis na página **Selecionar Tipo de Compactação** :  
   
-     Caixa de seleção **Usar o mesmo tipo de compactação para todas as partições**  
+     Caixa de seleção**Usar o mesmo tipo de compactação para todas as partições**   
      Selecione para configurar a mesma configuração de compactação para todas as partições. Isso habilita a caixa de seleção e desabilita a coluna **Tipo de Compactação** na grade. Quando selecionadas, as opções na lista adjacente são **Nenhum**, **Linha**e **Página**.  
   
      **Número da partição**  
@@ -85,10 +89,10 @@ caps.handback.revision: 8
      Exibe o espaço atual ocupado por esta partição em megabytes (MB). Essa coluna é somente leitura.  
   
      **Espaço Compactado Solicitado**  
-     Depois de clicar em **Calcular**, essa coluna exibe o tamanho estimado de cada partição após a compactação usando a configuração especificada na coluna **Tipo de Compactação**. Essa coluna é somente leitura.  
+     Depois de clicar em **Calcular**, essa coluna exibe o tamanho estimado de cada partição após a compactação usando a configuração especificada na coluna **Tipo de Compactação** . Essa coluna é somente leitura.  
   
      **Calcular**  
-     Clique para estimar o tamanho de cada partição após a compactação usando a configuração especificada na coluna **Tipo de Compactação**.  
+     Clique para estimar o tamanho de cada partição após a compactação usando a configuração especificada na coluna **Tipo de Compactação** .  
   
 6.  Na página **Selecione uma Opção de Saída** , especifique como você deseja executar essa tarefa. Selecione **Criar Script** para criar um script SQL baseado nas páginas anteriores no assistente. Selecione **Executar imediatamente** para criar a nova tabela particionada depois de concluir todas as páginas restantes no assistente. Selecione **Agenda** para criar uma nova tabela particionada em um momento predeterminado no futuro.  
   
@@ -131,7 +135,7 @@ caps.handback.revision: 8
   
                 -   Se você selecionar **Dia**, digite o dia do mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no 15º dia do mês a cada dois meses, selecione **Dia** e digite "15" na primeira caixa e "2" na segunda caixa. Observe que o maior número permitido na segunda caixa é "99".  
   
-                -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeiro**, **segundo**, **terceiro** ou **quarto**, bem como dias específicos da semana (por exemplo: domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
+                -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeiro**, **segundo**, **terceiro**ou **quarto**, bem como dias específicos da semana (por exemplo: domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
   
         2.  Em **Frequência diária**, especifique a frequência com que a agenda de trabalho se repete no dia da execução da agenda de trabalho:  
   
@@ -143,7 +147,7 @@ caps.handback.revision: 8
   
         3.  Em **Duração**, em **Data de início**, digite a data que você deseja que a agenda de trabalho inicie a execução. Selecione **Data de término** ou **Nenhuma data de término** para indicar quando a execução da agenda de trabalho deve parar. Se você selecionar **Data de término**, digite a data em que você deseja que a execução da agenda de trabalho pare.  
   
-    5.  Se você selecionar **Uma Vez**, em **Ocorrência única**, na caixa **Data**, insira a data em que o agendamento de trabalho será executado. Na caixa **Hora** , digite a hora em que a agenda de trabalho será executada. Digite a hora, os minutos e os segundos do dia, bem como AM ou PM.  
+    5.  Se você selecionar **Uma Vez**, em **Ocorrência única**, na caixa **Data** , insira a data em que o agendamento de trabalho será executado. Na caixa **Hora** , digite a hora em que a agenda de trabalho será executada. Digite a hora, os minutos e os segundos do dia, bem como AM ou PM.  
   
     6.  Em **Resumo**, em **Descrição**, verifique se todas as configurações da agenda de trabalho estão corretas.  
   
@@ -173,10 +177,10 @@ caps.handback.revision: 8
      Cria um relatório contendo os resultados do Assistente para Criar Partição. As opções são **Exibir Relatório**, **Salvar Relatório no Arquivo**, **Copiar Relatório na Área de Transferência**e **Enviar Relatório como Email**.  
   
      **Exibir Relatório**  
-     Abre a caixa de diálogo **Exibir Relatório**, que contém um relatório de texto do progresso do Assistente para Criar Partições.  
+     Abre a caixa de diálogo **Exibir Relatório** , que contém um relatório de texto do progresso do Assistente para Criar Partições.  
   
      **Salvar Relatório no Arquivo**  
-     Abre a caixa de diálogo **Salvar Relatório Como**.  
+     Abre a caixa de diálogo **Salvar Relatório Como** .  
   
      **Copiar Relatório na Área de Transferência**  
      Copia os resultados do relatório de progresso do assistente na área de transferência.  
@@ -188,7 +192,7 @@ caps.handback.revision: 8
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para desabilitar a compactação em uma tabela  
+#### <a name="to-disable-compression-on-a-table"></a>Para desabilitar a compactação em uma tabela  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -204,7 +208,7 @@ caps.handback.revision: 8
     GO  
     ```  
   
-#### Para desabilitar a compactação em um índice  
+#### <a name="to-disable-compression-on-an-index"></a>Para desabilitar a compactação em um índice  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

@@ -1,26 +1,30 @@
 ---
-title: "Modificar um &#237;ndice | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "índices [SQL Server], modificando"
-  - "modificando índices"
-  - "alterações de índice [SQL Server]"
+title: "Modificar um índice | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [SQL Server], modifying
+- modifying indexes
+- index changes [SQL Server]
 ms.assetid: 97e3110d-fde7-4f5d-9309-dc1697960aeb
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: baab89e891a068e358727fd2a8c739ef1b37b400
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modificar um &#237;ndice
+# <a name="modify-an-index"></a>Modificar um índice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Este tópico descreve como modificar um índice no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -38,7 +42,7 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para modificar um índice  
+#### <a name="to-modify-an-index"></a>Para modificar um índice  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
   
@@ -50,19 +54,19 @@ caps.handback.revision: 19
   
 5.  Na caixa de diálogo **Propriedades de Índice** , faça as alterações desejadas. Por exemplo, você pode adicionar ou remover uma coluna da chave de índice, ou alterar a configuração de uma opção de índice.  
   
-#### Para modificar as colunas de um índice  
+#### <a name="to-modify-index-columns"></a>Para modificar as colunas de um índice  
   
 1.  Para adicionar, remover ou alterar a posição de uma coluna de um índice, selecione a página **Geral** na caixa de diálogo **Propriedades do Índice** .  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para modificar um índice  
+#### <a name="to-modify-an-index"></a>Para modificar um índice  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo descarta e recria um índice existente na coluna `ProductID` da tabela `Production.WorkOrder` usando a opção `DROP_EXISTING`. As opções `FILLFACTOR` e `PAD_INDEX` também são definidas.  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo descarta e recria um índice existente na coluna `ProductID` da tabela `Production.WorkOrder` usando a opção `DROP_EXISTING` . As opções `FILLFACTOR` e `PAD_INDEX` também são definidas.  
   
      [!code-sql[IndexDDL#CreateIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_1.sql)]  
   
@@ -70,11 +74,11 @@ caps.handback.revision: 19
   
      [!code-sql[IndexDDL#AlterIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_2.sql)]  
   
-#### Para modificar as colunas de um índice  
+#### <a name="to-modify-index-columns"></a>Para modificar as colunas de um índice  
   
 1.  Para adicionar, remover ou alterar a posição de uma coluna de índice, você deve remover e recriar o índice.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
@@ -84,3 +88,4 @@ caps.handback.revision: 19
  [Renomear índices](../../relational-databases/indexes/rename-indexes.md)  
   
   
+

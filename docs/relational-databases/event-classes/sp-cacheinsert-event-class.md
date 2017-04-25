@@ -1,27 +1,31 @@
 ---
-title: "Classe de evento SP:CacheInsert | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento SP:CacheInsert"
+title: Classe de evento SP:CacheInsert | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SP:CacheInsert event class
 ms.assetid: 37fb9bec-b462-4563-8e50-ec84d5407e20
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8ea59a1fc03d3e6ecb9a6a4a4c2bb5246d36124f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento SP:CacheInsert
+# <a name="spcacheinsert-event-class"></a>classe de evento SP:CacheInsert
   A classe de evento SP:CacheInsert indica que o procedimento armazenado foi inserido no cache de procedimento.  
   
-## Colunas de dados da classe de evento SP:CacheInsert  
+## <a name="spcacheinsert-event-class-data-columns"></a>Colunas de dados da classe de evento SP:CacheInsert  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -49,7 +53,7 @@ caps.handback.revision: 36
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |XactSequence|**bigint**|Token que descreve a transação atual.|50|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Classe de evento SP:CacheMiss](../../relational-databases/event-classes/sp-cachemiss-event-class.md)  
   

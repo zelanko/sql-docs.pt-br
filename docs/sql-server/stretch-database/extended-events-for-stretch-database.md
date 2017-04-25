@@ -1,29 +1,33 @@
 ---
-title: "Eventos Estendidos para o Stretch Database | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Eventos estendidos para o Stretch Database | Microsoft Docs
+ms.custom: 
+ms.date: 06/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
 caps.latest.revision: 4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dad6f8bb729bb16121648f01ec046bffc33443ad
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eventos Estendidos para o Stretch Database
+# <a name="extended-events-for-stretch-database"></a>Eventos Estendidos para o Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 O Stretch Database fornece um conjunto de eventos estendidos para solução de problemas.  
   
-Para obter mais informações, veja [Eventos Estendidos](../../relational-databases/extended-events/extended-events.md). Para obter informações sobre como iniciar uma sessão de eventos estendidos para solução de problemas, veja [Criar uma sessão de Eventos Estendidos](Create%20an%20Extended%20Events%20Session.md)  
+Para obter mais informações, veja [Eventos Estendidos](../../relational-databases/extended-events/extended-events.md). Para obter informações sobre como iniciar uma sessão de eventos estendidos para solução de problemas, veja [Criar uma sessão de Eventos Estendidos](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)  
   
-## Lista de eventos estendidos para o Stretch Database  
+## <a name="list-of-extended-events-for-stretch-database"></a>Lista de eventos estendidos para o Stretch Database  
   
 Nome do evento|Descrição do evento   
 ---------|---------  
@@ -80,5 +84,7 @@ stretch_table_unprovision_completed|Relata a conclusão da remoção dos recurso
 stretch_table_validation_error|Relata a conclusão da validação para uma tabela quando o usuário habilita a ampliação  
 stretch_unprovision_table_start|Relata o início do cancelamento do provisionamento da tabela de ampliação  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 [Gerenciar e solucionar problemas no Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+
+

@@ -1,27 +1,31 @@
 ---
-title: "Anexar um banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.attachdatabase.f1"
-helpviewer_keywords: 
-  - "anexando banco de dados [SQL Server]"
-  - "anexando bancos de dados [SQL Server]"
+title: Anexar um banco de dados | Microsoft Docs
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.attachdatabase.f1
+helpviewer_keywords:
+- database attaching [SQL Server]
+- attaching databases [SQL Server]
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50e55a131e303a5303059a51797730f8bfab2581
+ms.lasthandoff: 04/11/2017
+
 ---
-# Anexar um banco de dados
+# <a name="attach-a-database"></a>Anexar um banco de dados
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como anexar um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você pode usar este recurso para copiar, mover ou atualizar um banco de dados do SQL Server.  
@@ -51,9 +55,9 @@ Não recomendamos o uso de ações de desanexar e anexar para Backup e Recupera�
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para anexar um banco de dados  
+#### <a name="to-attach-a-database"></a>Para anexar um banco de dados  
   
-1.  No Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e clique para expandir a exibição dessa instância no SSMS.  
+1.  No Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e clique para expandir a exibição dessa instância no SSMS.  
   
 2.  Clique com o botão direito do mouse em **Bancos de dados** e clique em **Anexar**.  
   
@@ -73,7 +77,7 @@ Não recomendamos o uso de ações de desanexar e anexar para Backup e Recupera�
      **Local do Arquivo MDF**  
      Exibe o caminho e o nome de arquivo do arquivo MDF selecionado.  
   
-     **Nome do banco de dados**  
+     **Database Name**  
      Exibe o nome do banco de dados.  
   
      **Anexar como**  
@@ -123,7 +127,7 @@ Não recomendamos o uso de ações de desanexar e anexar para Backup e Recupera�
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para anexar um banco de dados  
+#### <a name="to-attach-a-database"></a>Para anexar um banco de dados  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -147,7 +151,7 @@ Não recomendamos o uso de ações de desanexar e anexar para Backup e Recupera�
 ##  <a name="FollowUp"></a> Acompanhamento: depois de atualizar um banco de dados do SQL Server  
  Após a atualização de um banco de dados usando o método anexar, o banco de dados se torna logo disponível e é atualizado automaticamente. Se o banco de dados tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices dependendo da configuração da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas, e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida como **Importar**, se não houver um catálogo de texto completo disponível, os índices de texto completo associados serão recompilados.  
   
- Se o nível de compatibilidade de um banco de dados de usuário for 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização. Se o nível de compatibilidade for 90 ou inferior antes da atualização, no banco de dados atualizado, o nível de compatibilidade será definido como 100, que é o nível de compatibilidade mais baixo com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ Se o nível de compatibilidade de um banco de dados de usuário for 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização. Se o nível de compatibilidade for 90 ou inferior antes da atualização, no banco de dados atualizado, o nível de compatibilidade será definido como 100, que é o nível de compatibilidade mais baixo com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
   > [!NOTE]
   > Se você estiver conectando um banco de dados de uma instância que está executando o SQL Server 2014 ou anterior com o CDC (Change Data Capture) habilitado, você também precisará executar o comando abaixo para atualizar os metadados do CDC.
@@ -156,8 +160,9 @@ Não recomendamos o uso de ações de desanexar e anexar para Backup e Recupera�
   EXEC sys.sp_cdc_vupgrade  
   ``` 
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Desanexar um banco de dados](../../relational-databases/databases/detach-a-database.md)  
   
   
+

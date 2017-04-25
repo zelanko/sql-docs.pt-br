@@ -1,22 +1,26 @@
 ---
-title: "Configurar chaves do Always Encrypted usando o PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurar as chaves Always Encrypted usando o PowerShell | Microsoft Docs
+ms.custom: 
+ms.date: 09/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-security
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
 caps.latest.revision: 27
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a66c8c05c1c56c11e1992b70f84a8a1878bc95d5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar chaves do Always Encrypted usando o PowerShell
+# <a name="configure-always-encrypted-keys-using-powershell"></a>Configurar chaves do Always Encrypted usando o PowerShell
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
     
@@ -36,7 +40,7 @@ Antes de executar as etapas que envolvem o acesso a chaves de texto não criptog
 Tarefa  |Artigo  |Acessa chaves de texto não criptografado/repositório de chaves  |Acessar banco de dados   
 ---------|---------|---------|---------
 Etapa 1. Crie uma chave mestra de coluna em um repositório de chaves.<br><br>**Observação:** o módulo do SqlServer PowerShell não dá suporte a essa etapa. Para realizar essa tarefa da linha de comando, use ferramentas especificas para o repositório de chaves selecionado. |[Criar e armazenar chaves mestras de coluna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | Sim | Não     
-Etapa 2.  Inicie um ambiente do PowerShell e importe o módulo do SqlServer PowerShell.  |   [Configurar o Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    Não    | Não         
+Etapa 2.  Inicie um ambiente do PowerShell e importe o módulo do SqlServer PowerShell.  |   [Configurar Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    Não    | Não         
 Etapa 3.  Conecte-se ao servidor e banco de dados.     |     [Conectar a um banco de dados](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase)    |    Não     | Sim         
 Etapa 4.  Crie um objeto *SqlColumnMasterKeySettings* contendo informações sobre o local da sua chave mestra de coluna. SqlColumnMasterKeySettings é um objeto que existe na memória (no PowerShell). Use o cmdlet específico para o repositório de chaves.   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759795.aspx)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759816.aspx)<br><br>[New-SqlCngColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759818.aspx)<br><br>[New-SqlCspColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759784.aspx)        |   Não      | Não         
 Etapa 5.  Crie os metadados da chave mestra de coluna no banco de dados.      |    [New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)<br><br>**Observação:** nos bastidores, o cmdlet emite a instrução [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) para criar metadados de chave.|    Não     |    Sim
@@ -44,7 +48,7 @@ Etapa 6.  Autentique no Azure se a chave mestra de coluna estiver armazenada no 
 Etapa 7.  Gere uma nova chave de criptografia de coluna, criptografe-a com a chave mestra de coluna e crie metadados de chave de criptografia de coluna no banco de dados.     |    [New-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759808.aspx)<br><br>**Observação:** use uma variação do cmdlet que gera e criptografa internamente uma chave de criptografia de coluna.<br><br>**Observação:** nos bastidores, o cmdlet emite a instrução [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) para criar metadados de chave.  | Sim | Sim
   
 
-## Repositório de Certificados do Windows sem separação de funções (exemplo)
+## <a name="windows-certificate-store-without-role-separation-example"></a>Repositório de Certificados do Windows sem separação de funções (exemplo)
 
 Esse script é um exemplo de ponta a ponta para gerar uma chave mestra de coluna que é um certificado no Repositório de Certificados do Windows, gerando e criptografando uma chave de criptografia de coluna e criando metadados de chave em um banco de dados do SQL Server.
 
@@ -79,7 +83,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterKey $cmkName
 ```
 
-## Cofre de Chaves do Azure sem separação de funções (exemplo)
+## <a name="azure-key-vault-without-role-separation-example"></a>Cofre de Chaves do Azure sem separação de funções (exemplo)
 
 Esse script é um exemplo de ponta a ponta para provisionar e configurar um Cofre de Chaves do Azure, gerar uma chave mestra de coluna no cofre, gerar e criptografar uma chave de criptografia de coluna e criar metadados de chave em um Banco de Dados SQL do Azure.
 
@@ -126,7 +130,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
 ```
 
-## CNG/KSP sem separação de funções (exemplo)
+## <a name="cngksp-without-role-separation-example"></a>CNG/KSP sem separação de funções (exemplo)
 
 Esse script é um exemplo de ponta a ponta para gerar uma chave mestra de coluna em um repositório de chaves que implementa a API CNG (Cryptography Next Generation), gerando e criptografando uma chave de criptografia de coluna e criando metadados de chave em um banco de dados do SQL Server.
 
@@ -178,7 +182,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 Esta seção fornece as etapas para configurar a criptografia na qual os administradores de segurança não têm acesso ao banco de dados e os administradores de banco de dados não têm acesso às chaves de texto não criptografado ou ao repositório de chaves.
 
 
-### Administrador de Segurança
+### <a name="security-administrator"></a>Administrador de Segurança
 
 Antes de executar as etapas que envolvem o acesso a chaves de texto não criptografado ou ao repositório de chaves (identificado na coluna **Acessa chaves de texto não criptografado/repositório de chaves** na tabela abaixo), verifique se:
 1.  O ambiente do PowerShell é executado em um computador seguro diferente daquele que hospeda o banco de dados.
@@ -196,22 +200,22 @@ Etapa 4.  Autentique no Azure, se a chave mestra de coluna estiver armazenada no
 Etapa 5.  Gere uma nova chave de criptografia de coluna, criptografe-a com a chave mestra para produzir um valor criptografado da chave de criptografia de coluna.     |   [New-SqlColumnEncryptionKeyEncryptedValue](https://msdn.microsoft.com/library/mt759794.aspx)     |    Sim    | Não        
 Etapa 6.  Compartilhe o local da nova chave mestra de coluna (o nome do provedor e o caminho principal da chave mestra de coluna) e do valor criptografado da chave de criptografia de coluna para o DBA.  | Veja os exemplos abaixo.        |   Não      | Não         
 
-### DBA 
+### <a name="dba"></a>DBA 
 
 Os DBAs usam as informações recebidas do Administrador de Segurança (etapa 6 acima) para criar e gerenciar os metadados de chave Always Encrypted no banco de dados.
 
 Tarefa  |Artigo  |Acessa chaves de texto não criptografado  |Acessar banco de dados   
 ---------|---------|---------|---------
 Etapa 1.  Forneça o local da chave mestra de coluna e um valor criptografado da chave de criptografia de coluna para o Administrador de Segurança. |Veja os exemplos abaixo. | Não | Não
-Etapa 2.  Inicie um ambiente do PowerShell e importe o módulo do SqlServer.  | [Configurar o Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)  | Não | Não
+Etapa 2.  Inicie um ambiente do PowerShell e importe o módulo do SqlServer.  | [Configurar Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)  | Não | Não
 Etapa 3.  Conecte-se ao seu servidor e um banco de dados. | [Conectar a um banco de dados](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Não | Sim
 Etapa 4.  Crie um objeto SqlColumnMasterKeySettings contendo informações sobre o local da sua chave mestra de coluna. SqlColumnMasterKeySettings é um objeto que existe na memória. | New-SqlColumnMasterKeySettings | Não | Não
 Etapa 5. Crie os metadados da chave mestra de coluna no banco de dados | [New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)<br>**Observação:** nos bastidores, o cmdlet emite a instrução [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) para criar metadados da chave mestra da coluna. | Não | Sim
 Etapa 6. Crie os metadados de chave de criptografia de coluna no banco de dados. | New-SqlColumnEncryptionKey<br>**Observação:** DBAs usam uma variação do cmdlet que cria apenas os metadados de chave de criptografia de coluna.<br>Nos bastidores, o cmdlet emite a instrução [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) para criar metadados da chave de criptografia de coluna. | Não | Sim
   
-## Repositório de Certificados do Windows com separação de funções (exemplo)
+## <a name="windows-certificate-store-with-role-separation-example"></a>Repositório de Certificados do Windows com separação de funções (exemplo)
 
-### Administrador de Segurança
+### <a name="security-administrator"></a>Administrador de Segurança
 
 
 ```
@@ -241,7 +245,7 @@ $keyData.KeyPath
 $keyData.EncryptedValue 
 ```
 
-### DBA
+### <a name="dba"></a>DBA
 
 ```
 # Obtain the location of the column master key and the encrypted value of the column encryption key from your Security Administrator, via a CSV file on a share drive.
@@ -273,15 +277,17 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName -EncryptedValue $keyData.EncryptedValue
 ```  
  
-## Próximas etapas    
+## <a name="next-steps"></a>Próximas etapas    
 
 - [Configurar a criptografia de coluna usando o PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)    
 - [Girar chaves Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
     
-## Recursos adicionais    
+## <a name="additional-resources"></a>Recursos adicionais    
     
 - [Visão geral do gerenciamento de chaves do Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Configurar o Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
+- [Configurar Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Sempre criptografados (mecanismo de banco de dados)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Sempre Criptografado (desenvolvimento de cliente)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Blog do Always Encrypted](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
+
+

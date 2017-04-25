@@ -1,27 +1,31 @@
 ---
-title: "Classe de evento Background Job Error | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento Background Job Error"
+title: Classe de evento Background Job Error | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Background Job Error event class
 ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bae056c3dd2b646bf7e4ec88e7c5d2e8d11bc7f8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento Background Job Error
+# <a name="background-job-error-event-class"></a>classe de evento Background Job Error
   A classe de evento **Background Job Error** ocorre quando um trabalho em segundo plano é encerrado de maneira anormal. Essa condição pode exigir a atenção de um administrador do sistema.  
   
-## Colunas de dados da classe de evento Background Job Error  
+## <a name="background-job-error-event-class-data-columns"></a>Colunas de dados da classe de evento Background Job Error  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -42,7 +46,7 @@ caps.handback.revision: 29
 |**TextData**|**ntext**|Texto descritivo do valor de subclasse do evento.|1|Sim|  
 |**Tipo**|**int**|Tipo de trabalho.|57|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Classe de evento Auto Stats](../../relational-databases/event-classes/auto-stats-event-class.md)  

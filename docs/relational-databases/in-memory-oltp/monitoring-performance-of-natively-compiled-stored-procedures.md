@@ -1,36 +1,40 @@
 ---
-title: "Monitorando o desempenho de procedimentos armazenados compilados nativamente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Monitorando o desempenho de procedimentos armazenados compilados nativamente | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01302febd187f0b39221a1443284334b8f961ca8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Monitorando o desempenho de procedimentos armazenados compilados nativamente
+# <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Monitorando o desempenho de procedimentos armazenados compilados nativamente
   Este tópico discute como você pode monitorar o desempenho de procedimentos armazenados compilados de modo nativo  
   
-## Usando eventos estendidos  
+## <a name="using-extended-events"></a>Usando eventos estendidos  
  Use o evento estendido **sp_statement_completed** para rastrear a execução de uma consulta. Crie uma sessão de evento estendido com esse evento, opcionalmente com um filtro no object_id para um procedimento armazenado específico compilado nativamente. O evento estendido é ativado depois da execução de cada consulta. O tempo de CPU e a duração relatados pelo evento estendido indicam a quantidade de CPU usada pela consulta e o tempo de execução. Um procedimento armazenado compilado de modo nativo que usa muito tempo da CPU pode ter problemas de desempenho.  
   
- **line_number** junto com **object_id** no evento estendido pode ser usado para investigar a consulta. A consulta a seguir pode ser usada para recuperar a definição de procedimento. O número da linha pode ser usado para identificar a consulta na definição:  
+ **line_number**junto com **object_id** no evento estendido pode ser usado para investigar a consulta. A consulta a seguir pode ser usada para recuperar a definição de procedimento. O número da linha pode ser usado para identificar a consulta na definição:  
   
 ```tsql  
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- Para obter mais informações sobre o evento estendido **sp_statement_completed**, consulte [Como recuperar a instrução que gerou um evento](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
+ Para obter mais informações sobre o evento estendido **sp_statement_completed** , consulte [Como recuperar a instrução que gerou um evento](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
   
-## Usando exibições de gerenciamento de dados  
+## <a name="using-data-management-views"></a>Usando exibições de gerenciamento de dados  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte à coleta de estatísticas de execução para procedimentos armazenados compilados de modo nativo, nos níveis de procedimento e de consulta. Coletar estatísticas de execução não está habilitado por padrão devido ao impacto sobre o desempenho.  
   
  Você pode habilitar e desabilitar a coleta de estatísticas nos procedimentos armazenados compilados de modo nativo usando [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
@@ -112,7 +116,7 @@ GO
   
  O plano de execução estimado para procedimentos armazenados compilados de modo nativo mostra os operadores e as expressões para as consultas no procedimento. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] não dá suporte a todos os atributos SHOWPLAN_XML para procedimentos armazenados compilados de modo nativo. Por exemplo, os atributos relacionados ao cálculo de custos do otimizador de consulta não fazem parte do SHOWPLAN_XML para o procedimento.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
