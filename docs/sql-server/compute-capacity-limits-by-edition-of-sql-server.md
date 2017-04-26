@@ -1,26 +1,30 @@
 ---
-title: "Computar limites de capacidade por edi&#231;&#227;o do SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "processadores [SQL Server], com suporte"
-  - "número de processadores suportados"
-  - "número máximo de processadores suportados"
+title: "Computar limites de capacidade por edição do SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- processors [SQL Server], supported
+- number of processors supported
+- maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2f32d9ca838e004676a3cccffbe62bbbc0e46a3f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Computar limites de capacidade por edi&#231;&#227;o do SQL Server
+# <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Computar limites de capacidade por edição do SQL Server
   Esse tópico discute os limites de capacidade de computação para edições diferentes do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e como elas podem diferir em ambientes físicos e virtualizados com processadores hyper-threaded.  
   
  ![Mapeamentos para calcular limites de capacidade](../sql-server/media/compute-capacity-limits.gif "Mapeamentos para calcular limites de capacidade")  
@@ -85,16 +89,18 @@ caps.handback.revision: 60
 |Desenvolvedor|Máximo do sistema operacional|Máximo do sistema operacional|  
 |Standard|Limitado a menos de 4 soquetes ou 24 núcleos|Limitado a menos de 4 soquetes ou 24 núcleos|  
 |Express|Limitado a menos de 1 soquete ou 4 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|  
- *O Enterprise Edition com Servidor + licenciamento baseado em CAL (Licença de Acesso para Cliente) (não disponível para novos contratos) é limitado ao máximo de 20 núcleos por instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Não há limites no modelo de Licenciamento de Servidor Baseado em Núcleo.  
+ *O Enterprise Edition com Servidor + licenciamento baseado em CAL (Licença de Acesso para Cliente) (não disponível para novos contratos) é limitado ao máximo de 20 núcleos por instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Não há limites no modelo de Licenciamento de Servidor Baseado em Núcleo.  
   
  Em um ambiente virtualizado, o limite da capacidade de computação é baseado no número de processadores lógicos, não núcleos, porque a arquitetura de processador não é visível aos aplicativos convidados.  Por exemplo, um servidor com quatro soquetes populados com processadores com núcleo quad e a capacidade para habilitar dois hyperthreads por núcleo contém 32 processadores lógicos com hyperthreading habilitado, mas só 16 processadores lógicos com hyperthreading desabilitado. Estes processadores lógicos podem ser mapeados para máquinas virtuais no servidor com a carga de computação das máquinas virtuais nesse processador lógico mapeado em um thread de execução no processador físico no servidor de host.  
   
  Você poderá querer desabilitar hyperthreading quando o desempenho por processador virtual for importante. A pessoa pode habilitar ou desabilitar hyperthreading usando uma configuração de BIOS para o processador durante a instalação da BIOS, mas é geralmente uma operação no escopo do servidor, que afetará todas as cargas de trabalho que estão sendo executadas no servidor. Isto pode sugerir separar cargas de trabalho que serão executadas em ambientes virtualizados dos que se beneficiariam do aumento de desempenho de hyperthreading em um ambiente de sistema operacional físico.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Edições e componentes do SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)   
- [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
+ [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Especificações de capacidade máxima do SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [Instalação de Início Rápido do SQL Server 2016](../Topic/Quick-Start%20Installation%20of%20SQL%20Server%202016.md)  
+ [Instalação de Início Rápido do SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
   
   
+
+

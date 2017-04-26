@@ -1,27 +1,31 @@
 ---
-title: "Recuperar-se de uma falha na inst&#226;ncia do cluster de failover | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clusters [SQL Server], recuperação de falha"
-  - "clustering de failover [SQL Server], recuperação de falha"
-  - "falhas de hardware [SQL Server]"
-  - "recuperando-se de falhas do cluster de failover [SQL Server]"
+title: "Recuperar-se de uma falha na instância do cluster de failover | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clusters [SQL Server], recovery from failure
+- failover clustering [SQL Server], recovery from failure
+- hardware failures [SQL Server]
+- recovering failover cluster failures [SQL Server]
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b0e95b00a334c4c0391d800f7846e2f431107892
+ms.lasthandoff: 04/11/2017
+
 ---
-# Recuperar-se de uma falha na inst&#226;ncia do cluster de failover
+# <a name="recover-from-failover-cluster-instance-failure"></a>Recuperar-se de uma falha na instância do cluster de failover
   Este tópico descreve como se recuperar de falhas de cluster usando o snap-in Gerenciador de Cluster de Failover após a ocorrência de um failover no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. O snap-in Gerenciador de Cluster de Failover é o aplicativo de gerenciamento de cluster do serviço WSFC (Windows Server Failover Clustering).  
   
 -   [Recuperar de uma falha irreparável](#Scenario1)  
@@ -33,7 +37,7 @@ caps.handback.revision: 31
   
 1.  Após a falha no Nó 1, a FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] executa failover no Nó 2.  
   
-2.  Remova o Nó 1 da FCI. Para fazer isso, do Nó 2, abra o snap-in Gerenciador de Cluster de Failover, clique com o botão direito do mouse no Nó 1, clique em **Mover Ações** e em **Remover Nó**.  
+2.  Remova o Nó 1 da FCI. Para fazer isso, do Nó 2, abra o snap-in Gerenciador de Cluster de Failover, clique com o botão direito do mouse no Nó 1, clique em **Mover Ações**e em **Remover Nó**.  
   
 3.  Verifique se o Nó 1 foi removido da definição de cluster.  
   

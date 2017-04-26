@@ -1,1 +1,1 @@
-C:\\Arquivos de Programa\\Microsoft SQL Server\\120\\Exemplos\\Integration Services\\
+C:\\Arquivos de Programas\\Microsoft SQL Server\\120\\Samples\\Integration Services\\

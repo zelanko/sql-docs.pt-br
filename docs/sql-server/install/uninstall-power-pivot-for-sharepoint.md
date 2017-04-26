@@ -1,26 +1,30 @@
 ---
-title: "Desinstalar o Power Pivot para SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Desinstalar o PowerPivot para SharePoint | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 caps.latest.revision: 27
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 27
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 861d60a66b9dc6d86b31aded956561fcdf1be6ff
+ms.lasthandoff: 04/11/2017
+
 ---
-# Desinstalar o Power Pivot para SharePoint
+# <a name="uninstall-power-pivot-for-sharepoint"></a>Desinstalar o Power Pivot para SharePoint
   Desinstalar uma instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] é uma operação de várias etapas que inclui a preparação para desinstalação, a remoção de recursos e soluções do farm e a remoção de arquivos de programas e configurações de registro.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 | SharePoint 2010  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   
  **Neste tópico:**  
   
@@ -55,11 +59,11 @@ caps.handback.revision: 27
   
     -   [Excluir uma Biblioteca de Feeds de Dados Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)  
   
-2.  Exclua pastas de trabalho do Excel ou relatórios do Reporting Services de outras bibliotecas que contenham ou façam referência a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+2.  Exclua pastas de trabalho do Excel ou relatórios do Reporting Services de outras bibliotecas que contenham ou façam referência a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-3.  Remova qualquer web part de um painel PerformancePoint que faça referência a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+3.  Remova qualquer web part de um painel PerformancePoint que faça referência a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-4.  Revise as permissões do SharePoint nos sites e bibliotecas existentes para determinar se é necessário alterá-las. Alguns cenários de acesso a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], particularmente o acesso a dados secundários por meio de uma cadeia de conexão de URL a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em outra pasta de trabalho, exigem permissões de leitura, que é superior às permissões de exibição normalmente atribuídas aos usuários do SharePoint que apenas visitam um site. Se você não precisar mais de permissões de leitura, poderá reduzir as permissões de acordo.  
+4.  Revise as permissões do SharePoint nos sites e bibliotecas existentes para determinar se é necessário alterá-las. Alguns cenários de acesso a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , particularmente o acesso a dados secundários por meio de uma cadeia de conexão de URL a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em outra pasta de trabalho, exigem permissões de leitura, que é superior às permissões de exibição normalmente atribuídas aos usuários do SharePoint que apenas visitam um site. Se você não precisar mais de permissões de leitura, poderá reduzir as permissões de acordo.  
   
 5.  Opcionalmente, interrompa os serviços e aguarde alguns dias antes de desinstalar o software. Essa etapa não é necessária na desinstalação, mas ela oferece a opção de retomar temporariamente o serviço, enquanto você tenta resolver problemas de migração de dados ou substituição de tecnologia que possam ter passado despercebidos.  
   
@@ -84,7 +88,7 @@ caps.handback.revision: 27
   
 4.  Revise cada ação da lista de tarefas para entender o que faz cada uma delas.  
   
-     Em **Remover Aplicativos de Serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, você tem a opção de excluir dados associados ao aplicativo de serviço. Os dados do aplicativo são um banco de dados do SQL Server que foi criado com o aplicativo de serviço com a finalidade de armazenar agendas de atualização de dados, informações de instância de banco de dados, dados de uso e outros dados usados pelo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Ele não armazena arquivos de usuário, como pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. A menos que você tenha uma razão específica para manter os dados do aplicativo (por exemplo, se você tiver políticas de retenção de dados relacionadas à atualização de dados ou ao acesso aos dados), você poderá excluir o banco de dados do aplicativo sem remover nenhum arquivo criado ou salvo por usuários do SharePoint.  
+     Em **Remover Aplicativos de Serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, você tem a opção de excluir dados associados ao aplicativo de serviço. Os dados do aplicativo são um banco de dados do SQL Server que foi criado com o aplicativo de serviço com a finalidade de armazenar agendas de atualização de dados, informações de instância de banco de dados, dados de uso e outros dados usados pelo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Ele não armazena arquivos de usuário, como pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . A menos que você tenha uma razão específica para manter os dados do aplicativo (por exemplo, se você tiver políticas de retenção de dados relacionadas à atualização de dados ou ao acesso aos dados), você poderá excluir o banco de dados do aplicativo sem remover nenhum arquivo criado ou salvo por usuários do SharePoint.  
   
      Para excluir o banco de dados, selecione **Remover Aplicativos de Serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** e selecione **Exclua dados de aplicativo associados a este aplicativo de serviço**.  
   
@@ -112,7 +116,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  Para localizar e remover um trabalho de implantação ou retração que já esteja na fila, proceda da seguinte maneira:  
   
-1.  Para todos os outros erros, verifique os logs ULS. Para obter informações, veja [Configurar e exibir arquivos de log do SharePoint e log de diagnósticos &#40;Power Pivot para SharePoint&#41;](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md).  
+1.  Para todos os outros erros, verifique os logs ULS. Para obter informações, veja [Configurar e exibir arquivos de log do SharePoint e log de diagnósticos &#40;Power Pivot para SharePoint&#41;](~/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 2.  Inicie o Shell de Gerenciamento do SharePoint como administrador e execute o comando a seguir para exibir os trabalhos na fila:  
   
@@ -122,7 +126,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  Reveja as implantações existentes para obter as seguintes informações: **Tipo** é Retração ou Implantação, **Arquivo** é powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
   
-4.  Para implantações ou retrações relacionadas a soluções [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], copie o valor do GUID de **JobId** e cole-o no seguinte comando (use os comandos Marcar, Copiar e Colar no menu Editar do Shell para copiar o GUID):  
+4.  Para implantações ou retrações relacionadas a soluções [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , copie o valor do GUID de **JobId** e cole-o no seguinte comando (use os comandos Marcar, Copiar e Colar no menu Editar do Shell para copiar o GUID):  
   
     ```  
     Stsadm –o canceldeployment –id “<GUID>”  
@@ -146,7 +150,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
      Na Instalação, você pode selecionar a instância do **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** e as opções **Analysis Services** e **Integração com o SharePoint do Analysis Services** para remover apenas esse recurso, deixando os demais itens inalterados.  
   
 ##  <a name="bkmk_addin"></a> Etapa 4: desinstalar o suplemento do Power Pivot para SharePoint  
- Se sua implantação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] tem dois ou mais servidores e você instalou o Suplemento do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], desinstale o suplemento do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] de cada servidor em que ele foi instalado para desinstalar completamente todos os arquivos do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Para obter mais informações, veja [Instalar ou desinstalar o suplemento do Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+ Se sua implantação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] tem dois ou mais servidores e você instalou o Suplemento do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , desinstale o suplemento do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] de cada servidor em que ele foi instalado para desinstalar completamente todos os arquivos do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Para obter informações, veja [Instalar ou desinstalar o suplemento do Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 ##  <a name="verify"></a> Etapa 5: verificar a desinstalação  
   
@@ -169,7 +173,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
 ##  <a name="bkmk_post"></a> Etapa 6: lista de verificação pós-desinstalação  
  Use a lista a seguir para remover o software e os arquivos que não foram excluídos durante a desinstalação.  
   
-1.  Exclua todos os arquivos de dados e as subpastas de `C:\Program Files\Microsoft SQL Server\MSAS13.PowerPivot` e depois exclua a pasta. Essa etapa também exclui arquivos armazenados em cache anteriormente no diretório DATA.  
+1.  Exclua todos os arquivos de dados e as subpastas de `C:\Program Files\Microsoft SQL Server\MSAS13.PowerPivot`e depois exclua a pasta. Essa etapa também exclui arquivos armazenados em cache anteriormente no diretório DATA.  
   
 2.  Exclua todas as pastas de trabalho, documentos e bibliotecas do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] caso ainda não o tenha feito.  
   
@@ -177,7 +181,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
     -   [Excluir uma Biblioteca de Feeds de Dados Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)  
   
-3.  No Serviço de Repositório Seguro, exclua os aplicativos de destino que contêm credenciais armazenadas usadas pelo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Algumas entradas, mas não todas, no Serviço de Repositório Seguro são excluídas quando você desinstala o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Os aplicativos de destino criados para a conta de atualização de dados autônoma do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], além dos aplicativos de destino criados para atualização de dados, ainda existem e devem ser excluídos manualmente.  
+3.  No Serviço de Repositório Seguro, exclua os aplicativos de destino que contêm credenciais armazenadas usadas pelo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Algumas entradas, mas não todas, no Serviço de Repositório Seguro são excluídas quando você desinstala o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Os aplicativos de destino criados para a conta de atualização de dados autônoma do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , além dos aplicativos de destino criados para atualização de dados, ainda existem e devem ser excluídos manualmente.  
   
      Por outro lado, os aplicativos de destino individuais que foram gerados automaticamente pelo Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] serão excluídos automaticamente quando o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for desinstalado.  
   
@@ -187,8 +191,9 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      Não instale o provedor OLE DB do Analysis Services. O SharePoint instala o provedor OLE DB como pré-requisito para as pastas de trabalho do Excel que se conectam a bancos de dados do Analysis Services. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instala uma versão mais recente, mas essa versão é compatível com versões anteriores para você deixar o sistema encarregado de evitar problemas com conexão de dados mais tarde.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Instalar ou desinstalar o suplemento do Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Ferramentas de Configuração do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
   
+

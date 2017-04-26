@@ -1,0 +1,1 @@
+![Baixar](../ssdt/media/download.png)[Instalar o driver Python pyodbc](../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md) ![Baixar](../ssdt/media/download.png)[Instalar o driver Python pymssql](../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md) 

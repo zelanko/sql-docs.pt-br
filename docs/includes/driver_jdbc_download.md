@@ -1,0 +1,1 @@
+![Baixar](../ssdt/media/download.png)[Baixar o driver JDBC](http://go.microsoft.com/fwlink/?LinkId=245496)
