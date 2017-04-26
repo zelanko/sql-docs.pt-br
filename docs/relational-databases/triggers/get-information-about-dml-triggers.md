@@ -1,29 +1,33 @@
 ---
-title: "Obter informa&#231;&#245;es sobre gatilhos DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "metadados [SQL Server], gatilho"
-  - "exibindo gatilhos DML"
-  - "gatilhos DML, metadados"
-  - "exibindo gatilhos DML"
-  - "informações de status [SQL Server], gatilhos"
-  - "gatilhos DML, exibindo"
+title: "Obter informações sobre gatilhos DML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [SQL Server], triggers
+- viewing DML triggers
+- DML triggers, metadata
+- displaying DML triggers
+- status information [SQL Server], triggers
+- DML triggers, viewing
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8583bd2597f5107398a65df65dbe7f7eef53f4d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Obter informa&#231;&#245;es sobre gatilhos DML
+# <a name="get-information-about-dml-triggers"></a>Obter informações sobre gatilhos DML
   Este tópico descreve como obter informações sobre os gatilhos DML no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Essas informações podem incluir os tipos de gatilhos em uma tabela, o nome de um gatilho, seu proprietário e a data em que foi criado ou modificado. Se o gatilho não tiver sido criptografado quando foi criado, você obterá a definição do gatilho. A definição ajudará a entender como um gatilho afeta a tabela na qual está definido. Além disso, você pode descobrir os objetos que um gatilho específico usa. Com essas informações, você pode identificar os objetos que afetam o gatilho se eles são alterados ou excluídos do banco de dados.  
   
  **Neste tópico**  
@@ -47,14 +51,14 @@ caps.handback.revision: 31
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- Requer associação à função **pública** . A definição de objetos de usuário é visível ao proprietário do objeto e aos que possuírem qualquer uma das seguintes permissões: ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Estas permissões são mantidas implicitamente por membros das funções fixas de banco de dados **db_owner**, **db_ddladmin** e **db_securityadmin**.  
+ Requer associação à função **pública** . A definição de objetos de usuário é visível ao proprietário do objeto e aos que possuírem qualquer uma das seguintes permissões: ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Estas permissões são mantidas implicitamente por membros das funções fixas de banco de dados **db_owner**, **db_ddladmin**e **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
- Requer permissão VIEW DEFINITION no banco de dados e permissão SELECT em **sys.sql_expression_dependencies** para o banco de dados. Por padrão, a permissão SELECT é concedida somente a membros da função de banco de dados fixa **db_owner**. Quando são concedidas permissões SELECT e VIEW DEFINITION a outro usuário, o usuário autorizado pode exibir todas as dependências no banco de dados.  
+ Requer permissão VIEW DEFINITION no banco de dados e permissão SELECT em **sys.sql_expression_dependencies** para o banco de dados. Por padrão, a permissão SELECT é concedida somente a membros da função de banco de dados fixa **db_owner** . Quando são concedidas permissões SELECT e VIEW DEFINITION a outro usuário, o usuário autorizado pode exibir todas as dependências no banco de dados.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para exibir a definição de um gatilho DML  
+#### <a name="to-view-the-definition-of-a-dml-trigger"></a>Para exibir a definição de um gatilho DML  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 31
   
 3.  Expanda **Gatilhos**, clique com o botão direito do mouse no gatilho desejado e clique em **Modificar**. A definição do gatilho DML aparece na janela de consulta.  
   
-#### Para exibir as dependências de um gatilho DML  
+#### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>Para exibir as dependências de um gatilho DML  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para exibir a definição de um gatilho DML  
+#### <a name="to-view-the-definition-of-a-dml-trigger"></a>Para exibir a definição de um gatilho DML  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -113,7 +117,7 @@ GO
   
 ```  
   
-#### Para exibir as dependências de um gatilho DML  
+#### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>Para exibir as dependências de um gatilho DML  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -139,7 +143,7 @@ GO
   
 ```  
   
-#### Para exibir informações sobre os gatilhos DML no banco de dados  
+#### <a name="to-view-information-about-dml-triggers-in-the-database"></a>Para exibir informações sobre os gatilhos DML no banco de dados  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -175,13 +179,13 @@ GO
   
 ```  
   
-#### Para exibir informações sobre os eventos que acionam um gatilho DML  
+#### <a name="to-view-information-about-events-that-fire-a-dml-trigger"></a>Para exibir informações sobre os eventos que acionam um gatilho DML  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole um dos exemplos a seguir na janela de consulta e clique em **Executar**. Cada exemplo mostra como você pode exibir os eventos que disparam o gatilho `iuPerson`.  
+3.  Copie e cole um dos exemplos a seguir na janela de consulta e clique em **Executar**. Cada exemplo mostra como você pode exibir os eventos que disparam o gatilho `iuPerson` .  
   
 ```tsql  
 USE AdventureWorks2012;   
@@ -201,7 +205,7 @@ WHERE object_id = OBJECT_ID('Person.iuPerson');
 GO  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

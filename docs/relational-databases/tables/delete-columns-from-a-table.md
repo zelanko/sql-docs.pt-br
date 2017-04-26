@@ -1,27 +1,31 @@
 ---
-title: "Excluir colunas de uma tabela | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colunas [SQL Server], excluindo"
-  - "removendo colunas"
-  - "excluindo colunas"
-  - "descartando colunas"
+title: Excluir colunas de uma tabela | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [SQL Server], deleting
+- removing columns
+- deleting columns
+- dropping columns
 ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20aa31c62de21e9718f504538ae4199395a5dab0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Excluir colunas de uma tabela
+# <a name="delete-columns-from-a-table"></a>Excluir colunas de uma tabela
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Este tópico descreve como excluir colunas de tabelas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -57,7 +61,7 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para excluir colunas usando o Pesquisador de Objetos  
+#### <a name="to-delete-columns-by-using-object-explorer"></a>Para excluir colunas usando o Pesquisador de Objetos  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 16
   
  Se a coluna contiver restrições ou outras dependências, uma mensagem de erro será exibida na caixa de diálogo **Excluir Objeto** . Resolva o erro excluindo as restrições referenciadas.  
   
-#### Para excluir colunas usando o Designer de Tabela  
+#### <a name="to-delete-columns-by-using-table-designer"></a>Para excluir colunas usando o Designer de Tabela  
   
 1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela da qual você deseja excluir colunas e selecione **Design**.  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 16
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para excluir colunas  
+#### <a name="to-delete-columns"></a>Para excluir colunas  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

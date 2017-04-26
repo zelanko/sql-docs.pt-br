@@ -1,31 +1,35 @@
 ---
-title: "Restaura&#231;&#245;es de arquivo (modelo de recupera&#231;&#227;o completa) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restaurações de arquivos [SQL Server]"
-  - "modelo de recuperação completa [SQL Server], realizando restaurações"
-  - "restaurando arquivos [SQL Server], sequência de restauração Transact-SQL"
-  - "restaurando arquivos [SQL Server]"
-  - "restaurações de arquivo [SQL Server], modelo de recuperação completa"
-  - "restaurando arquivos [SQL Server], modelo de recuperação completa"
-  - "sequência de restauração Transact-SQL"
-  - "restaurações de arquivos [SQL Server], sequência de restauração Transact-SQL"
+title: "Restaurações de arquivos (modelo de recuperação completa) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file restores [SQL Server]
+- full recovery model [SQL Server], performing restores
+- restoring files [SQL Server], Transact-SQL restore sequence
+- restoring files [SQL Server]
+- file restores [SQL Server], full recovery model
+- restoring files [SQL Server], full recovery model
+- Transact-SQL restore sequence
+- file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 686d6473f247f5b71764c1b4529bdf30c2f2efc1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaura&#231;&#245;es de arquivo (modelo de recupera&#231;&#227;o completa)
+# <a name="file-restores-full-recovery-model"></a>Restaurações de arquivo (modelo de recuperação completa)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tópico é relevante apenas para bancos de dados que contêm vários arquivos ou grupos de arquivos sob o modelo de recuperação completa ou de carregamento em massa.  
@@ -48,16 +52,11 @@ caps.handback.revision: 41
   
      Em uma *restauração de arquivo online*, se o banco de dados estiver online no momento da restauração, ele permanecerá online durante a restauração do arquivo. Porém, cada grupo de arquivos no qual um arquivo está sendo restaurado fica offline durante a operação de restauração. Depois que todos os arquivos de um grupo de arquivos offline são recuperados, o grupo de arquivos é automaticamente colocado online.  
   
-     Para obter informações sobre o suporte para restauração de arquivo e de página online, veja [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). Para obter mais informações sobre restaurações online, veja [Restauração online &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
+     Para obter informações sobre o suporte para restauração de arquivo e de página online, consulte [Recursos com suporte e edições do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Para obter informações sobre restaurações online, consulte [Restauração online (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md).
   
     > [!TIP]  
-    >  Se quiser que o banco de dados fique offline para uma restauração de arquivo, coloque o banco de dados offline antes de iniciar a sequência de restauração, executando a seguinte instrução [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md): ALTER DATABASE *database_name* SET OFFLINE.  
+    >  Se quiser que o banco de dados fique offline para uma restauração de arquivo, coloque o banco de dados offline antes de iniciar a sequência de restauração, executando a seguinte instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) : ALTER DATABASE *database_name* SET OFFLINE.  
   
- **Neste tópico:**  
-  
--   [Restaurando arquivos danificados de backups de arquivo](#Overview)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
   
 ##  <a name="Overview"></a> Restaurando arquivos danificados de backups de arquivo  
   
@@ -83,10 +82,10 @@ caps.handback.revision: 41
 > [!NOTE]  
 >  Podem ser usados backups de arquivo para restaurar o banco de dados a um ponto anterior no tempo. Para fazê-lo, você deve restaurar um conjunto completo de backups de arquivo e então restaurar backups de log de transações em sequência para alcançar um ponto de destino que busca o término do backup de arquivo restaurado mais recente. Para obter mais informações sobre a recuperação pontual, veja [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
-## Sequência de restauração Transact-SQL para uma restauração de arquivo offline (modelo de recuperação completo)  
+## <a name="transact-sql-restore-sequence-for-an-offline-file-restore-full-recovery-model"></a>Sequência de restauração Transact-SQL para uma restauração de arquivo offline (modelo de recuperação completo)  
  Um cenário de restauração de arquivo consiste em uma única sequência de restauração que copia, rola para frente e recupera os dados apropriados.  
   
- Esta seção mostra as opções básicas de [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) para uma sequência de restauração de arquivo. Sintaxe e detalhes que não sejam relevantes para esse propósito são omitidos.  
+ Esta seção mostra as opções básicas de [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) para uma sequência de restauração de arquivo. Sintaxe e detalhes que não sejam relevantes para esse propósito são omitidos.  
   
  A sequência de restauração de exemplo a seguir mostra uma restauração offline de dois arquivos secundários, `A` e `B`, usando WITH NORECOVERY. Em seguida, dois backups de log são aplicados com NORECOVERY, seguido pelo backup do final do log que é restaurado com WITH RECOVERY.  
   
@@ -117,7 +116,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
    WITH RECOVERY;  
 ```  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
   
 -   [Exemplo: restauração online de um arquivo de leitura/gravação #40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
@@ -134,15 +133,14 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO)  
   
- [&#91;Início&#93;](#Top)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Backup e restauração: interoperabilidade e coexistência &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Backups diferenciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Backups completos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Visão geral de restauração e recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurações completas de banco de dados &#40;Modelo de recuperação simples#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [Restaurações por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   

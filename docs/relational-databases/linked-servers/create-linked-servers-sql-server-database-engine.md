@@ -1,30 +1,34 @@
 ---
-title: "Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/20/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.linkedserver.properties.general.f1"
-  - "sql13.swb.linkedserver.properties.security.f1"
-  - "sql13.swb.linkedserver.properties.provider.f1"
-  - "sql13.swb.linkedserver.properties.options.f1"
-helpviewer_keywords: 
-  - "servidores vinculados [SQL Server], criando"
+title: Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/20/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.linkedserver.properties.general.f1
+- sql13.swb.linkedserver.properties.security.f1
+- sql13.swb.linkedserver.properties.provider.f1
+- sql13.swb.linkedserver.properties.options.f1
+helpviewer_keywords:
+- linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 219a32bb6296fac9ec50f78899a31fe52475095c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)
+# <a name="create-linked-servers-sql-server-database-engine"></a>Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)
   Este tópico mostra como criar um servidor vinculado e acessar dados de outro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Criar um servidor vinculado permite trabalhar com dados de várias origens. O servidor vinculado não precisa ser outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas esse é um cenário comum.  
   
 ##  <a name="Background"></a> Plano de fundo  
@@ -34,8 +38,8 @@ caps.handback.revision: 18
   
 ##  <a name="Security"></a> Segurança  
   
-### Permissões  
- Ao usar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], exija a permissão **ALTER ANY LINKED SERVER** no servidor ou associação na função de servidor fixa **setupadmin**. Ao usar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], requer a permissão **CONTROL SERVER** ou associação na função de servidor fixa **sysadmin**.  
+### <a name="permissions"></a>Permissões  
+ Ao usar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , exija a permissão **ALTER ANY LINKED SERVER** no servidor ou associação na função de servidor fixa **setupadmin** . Ao usar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , requer a permissão **CONTROL SERVER** ou associação na função de servidor fixa **sysadmin** .  
   
 ##  <a name="Procedures"></a> Como criar um servidor vinculado  
  Você pode usar qualquer um dos itens a seguir:  
@@ -46,9 +50,9 @@ caps.handback.revision: 18
   
 ###  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-##### Para criar um servidor vinculado para outra instância do SQL Server usando o SQL Server Management Studio  
+##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>Para criar um servidor vinculado para outra instância do SQL Server usando o SQL Server Management Studio  
   
-1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra o Pesquisador de Objetos, expanda **Objetos de Servidor**, clique com o botão direito do mouse em **Servidores Vinculados** e clique em **Novo Servidor Vinculado**.  
+1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra o Pesquisador de Objetos, expanda **Objetos de Servidor**, clique com o botão direito do mouse em **Servidores Vinculados**e clique em **Novo Servidor Vinculado**.  
   
 2.  Na página **Geral** , na caixa **Servidor vinculado** , digite o nome da instância do **SQL Server** à qual você está se vinculando.  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 18
      Especifique o logon local que pode se conectar ao servidor vinculado. O logon local pode ser um logon que usa a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um logon de Autenticação do Windows. Use essa lista para restringir a conexão a logons específicos ou permitir alguns logons para serem conectados como um logon diferente.  
   
      **Impersonate**  
-     Passe o nome de usuário e senha do logon local para o servidor vinculado. Para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um logon com exatamente o mesmo nome e senha deve existir no servidor remoto. Para logons de Windows, o logon deve ser um logon válido no servidor vinculado.  
+     Passe o nome de usuário e senha do logon local para o servidor vinculado. Para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um logon com exatamente o mesmo nome e senha deve existir no servidor remoto. Para logons de Windows, o logon deve ser um logon válido no servidor vinculado.  
   
      Para usar representação, a configuração deve satisfazer o requisito para delegação.  
   
@@ -136,33 +140,33 @@ caps.handback.revision: 18
      **Usar Agrupamento Remoto**  
      Determina se o agrupamento de uma coluna remota ou de um servidor local será usado.  
   
-     Se verdadeiro, o agrupamento de colunas remotas será usado para as fontes dos dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o agrupamento especificado no nome será usado para fontes de dados não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Se verdadeiro, o agrupamento de colunas remotas será usado para as fontes dos dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o agrupamento especificado no nome será usado para fontes de dados não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Se falso, as consultas distribuídas usarão sempre o agrupamento padrão do servidor local, enquanto que o nome do agrupamento e o agrupamento de colunas remotas serão ignorados. O padrão é falso.  
   
      **Nome do Agrupamento**  
-     Especifica o nome do agrupamento usado pela fonte de dados remotos se o uso do agrupamento remoto for verdadeiro e a fonte de dados não for uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O nome deve ser um dos agrupamentos que têm suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Especifica o nome do agrupamento usado pela fonte de dados remotos se o uso do agrupamento remoto for verdadeiro e a fonte de dados não for uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O nome deve ser um dos agrupamentos que têm suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Use essa opção ao acessar uma origem de dados OLE DB diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas cujo agrupamento coincide com um dos agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     O servidor vinculado deve fornecer suporte a um único agrupamento a ser usado para todas as colunas naquele servidor. Não defina essa opção se o servidor vinculado fornecer suporte a vários agrupamentos dentro de uma única fonte de dados ou se o agrupamento do servidor vinculado não puder ser determinado para corresponder a um dos agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     O servidor vinculado deve fornecer suporte a um único agrupamento a ser usado para todas as colunas naquele servidor. Não defina essa opção se o servidor vinculado fornecer suporte a vários agrupamentos dentro de uma única fonte de dados ou se o agrupamento do servidor vinculado não puder ser determinado para corresponder a um dos agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      **Tempo-limite da conexão**  
      O valor do tempo limite em segundos para conexão a um servidor vinculado.  
   
-     Se 0, use o valor **sp_configure** padrão da opção [remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md).  
+     Se 0, use o valor **sp_configure** padrão da opção [remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) .  
   
      **Tempo-limite da consulta**  
      O valor do tempo limite em segundos para as consultas em um servidor vinculado.  
   
-     Se 0, use o valor **sp_configure** padrão da opção [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md).  
+     Se 0, use o valor **sp_configure** padrão da opção [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) .  
   
      **Habilitar Promoção de Transações Distribuídas**  
-     Use esta opção para proteger as ações de um procedimento servidor a servidor por meio de uma transação do MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)]). Quando esta opção for TRUE, chamar um procedimento remoto armazenado irá iniciar uma transação distribuída e inscrever a transação com o MS DTC. Para obter mais informações, consulte [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).  
+     Use esta opção para proteger as ações de um procedimento servidor a servidor por meio de uma transação do MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Quando esta opção for TRUE, chamar um procedimento remoto armazenado irá iniciar uma transação distribuída e inscrever a transação com o MS DTC. Para obter mais informações, consulte [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).  
   
 6.  Clique em **OK**.  
   
-##### Para exibir as opções de provedor  
+##### <a name="to-view-the-provider-options"></a>Para exibir as opções de provedor  
   
 -   Para exibir as opções que o provedor torna disponível, clique na página **Opções de Provedores** .  
   
@@ -178,7 +182,7 @@ caps.handback.revision: 18
      Somente as interfaces OLE DB de nível 0 são invocadas em relação ao provedor.  
   
      **Permitir inprocess**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que seja criada uma instância do servidor como um servidor em processo. Quando essa opção não é definida, o comportamento padrão é criar uma instância no provedor fora do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Criando uma instância no provedor fora do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protege o processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de erros no provedor. Quando a instância é criada do provedor fora do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], não são permitidas atualizações ou inserções de colunas longas de referência (**text**, **ntext** ou **image**).  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que seja criada uma instância do servidor como um servidor em processo. Quando essa opção não é definida, o comportamento padrão é criar uma instância no provedor fora do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Criando uma instância no provedor fora do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protege o processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de erros no provedor. Quando a instância é criada do provedor fora do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , não são permitidas atualizações ou inserções de colunas longas de referência (**text**, **ntext**ou **image**).  
   
      **Atualizações não transacionadas**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite atualizações, até mesmo se a **ITransactionLocal** não estiver disponível. Se essa opção estiver habilitada, atualizações em relação ao provedor não serão recuperáveis porque o provedor não possui suporte para transações.  
@@ -195,7 +199,7 @@ caps.handback.revision: 18
 ###  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  Para criar um servidor vinculado usando [!INCLUDE[tsql](../../includes/tsql-md.md)], use as instruções [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)[CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md) e [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md).  
   
-##### Para criar um servidor vinculado para outra instância do SQL Server usando Transact-SQL  
+##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>Para criar um servidor vinculado para outra instância do SQL Server usando Transact-SQL  
   
 1.  No Editor de Consultas, digite o comando [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir para vincular a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada `SRVR002\ACCTG`:  
   
@@ -222,7 +226,7 @@ caps.handback.revision: 18
   
 ##  <a name="FollowUp"></a> Acompanhamento: tarefas a serem executadas após a criação de um servidor vinculado  
   
-#### Para testar o servidor vinculado  
+#### <a name="to-test-the-linked-server"></a>Para testar o servidor vinculado  
   
 -   Execute o código a seguir para testar a conexão com o servidor vinculado. Este exemplo retorna os nomes dos bancos de dados no servidor vinculado.  
   
@@ -232,7 +236,7 @@ caps.handback.revision: 18
   
     ```  
   
-#### Gravando uma consulta que une tabelas de um servidor vinculado  
+#### <a name="writing-a-query-that-joins-tables-from-a-linked-server"></a>Gravando uma consulta que une tabelas de um servidor vinculado  
   
 -   Use nomes de quatro partes para referir-se a um objeto em um servidor vinculado. Execute o código a seguir para retornar uma lista de todos os logons no servidor local e seus logons correspondentes no servidor vinculado.  
   
@@ -246,9 +250,10 @@ caps.handback.revision: 18
   
      Quando NULL é retornado para o logon do servidor vinculado, ele indica que o logon não existe no servidor vinculado. Esses logons não poderão usar o servidor vinculado, a menos que o servidor vinculado seja configurado para passar um contexto de segurança diferente ou o servidor vinculado aceite conexões anônimas.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  
   
   
+

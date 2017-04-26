@@ -1,25 +1,29 @@
 ---
-title: "Mecanismo de eventos estendidos do SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "eventos estendidos [SQL Server], mecanismo"
+title: Mecanismo de eventos estendidos do SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], engine
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e11bf82e65be3b127ca7ee6c4f43ab2b60531b71
+ms.lasthandoff: 04/11/2017
+
 ---
-# Mecanismo de eventos estendidos do SQL Server
+# <a name="sql-server-extended-events-engine"></a>Mecanismo de eventos estendidos do SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   O mecanismo de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é uma coleção de serviços e objetos que:  
@@ -36,13 +40,13 @@ caps.handback.revision: 14
   
  A ilustração seguinte mostra uma exibição simplificada de uma sessão de eventos estendidos. Para obter mais informações, consulte [Sessões de eventos estendidos do SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md).  
   
- ![Arquitetura de eventos estendidos detalhada](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "Arquitetura de eventos estendidos detalhada")  
+ ![Arquitetura detalhada de eventos estendidos](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "Arquitetura detalhada de eventos estendidos")  
   
  Observe o seguinte:  
   
 -   Cada processo do Windows pode ter um ou mais módulos (**processo Win32**, **módulo Win32**). Estes também são conhecidos como *binários* ou *módulos de executáveis*.  
   
--   Cada um dos módulos de processo do Windows pode conter um ou mais pacotes de eventos estendidos (**Pacote**) que contêm um ou mais objetos de eventos estendidos (**Tipo**, **Destino**, **Ação**, **Mapa**, **Predicado** e **Evento**).  
+-   Cada um dos módulos de processo do Windows pode conter um ou mais pacotes de eventos estendidos (**Pacote**) que contêm um ou mais objetos de eventos estendidos (**Tipo**, **Destino**, **Ação**, **Mapa**, **Predicado**e **Evento**).  
   
 -   Dentro de um processo de host pode haver só uma instância do mecanismo de eventos estendidos (**Mecanismo de evento estendido**) que:  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 14
   
     -   Quando os buffers estão cheios, aqueles buffers são despachados para os destinos.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)  
   
   

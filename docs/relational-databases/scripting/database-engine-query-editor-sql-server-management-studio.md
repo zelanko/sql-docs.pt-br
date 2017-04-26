@@ -1,37 +1,41 @@
 ---
-title: "Editor de Consultas do Mecanismo de Banco de Dados (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.tsqlquery.f1"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Editor de Consultas [Mecanismo de Banco de Dados]"
-  - "Editor Transact-SQL - Consulte Editor de Consultas [Mecanismo de Banco de Dados]"
-  - "Editor de Consultas do Mecanismo de Banco de Dados - Consulte Editor de Consultas [Mecanismo de Banco de Dados]"
-  - "Editor de Consultas [Mecanismo de Banco de Dados], barra de ferramentas"
-  - "editores [SQL Server Management Studio], Editor de Consultas do Mecanismo de Banco de Dados"
-  - "Editor de Consultas [Mecanismo de Banco de Dados], recursos"
-  - "SQL Server Management Studio [SQL Server], Editor de Consultas do Mecanismo de Banco de Dados"
+title: Editor de Consultas do Mecanismo de Banco de Dados (SQL Server Management Studio) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.tsqlquery.f1
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Query Editor [Database Engine]
+- Transact-SQL Editor See Query Editor [Database Engine]
+- Database Engine Query Editor See Query Editor [Database Engine]
+- Query Editor [Database Engine], Toolbar
+- editors [SQL Server Management Studio], Database Engine Query Editor
+- Query Editor [Database Engine], Features
+- SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40ac7dd736d0366fe5cb564719a375e2e6a6a43d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Editor de Consultas do Mecanismo de Banco de Dados (SQL Server Management Studio)
+# <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor de Consultas do Mecanismo de Banco de Dados (SQL Server Management Studio)
   Use o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para criar e executar scripts que contenham instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] . O editor também dá suporte à execução de scripts que contêm comandos do **sqlcmd** .  
   
-## Ajuda F1 do Transact-SQL  
+## <a name="transact-sql-f1-help"></a>Ajuda F1 do Transact-SQL  
  O Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] oferece suporte à vinculação ao tópico de referência de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica quando você seleciona F1. Para fazer isso, realce o nome de uma instrução Transact-SQL e selecione F1. O utilitário de pesquisa de ajuda procurará um tópico que tenha um atributo de ajuda F1 correspondente à cadeia de caracteres realçada.  
   
  Se o utilitário de pesquisa de ajuda não localizar um tópico com uma palavra-chave de ajuda F1 que corresponda exatamente à cadeia de caracteres realçada, esse tópico será exibido. Nesse caso, existem duas abordagens para localizar a ajuda que você está procurando:  
@@ -42,24 +46,24 @@ caps.handback.revision: 47
   
     -   O nome de uma instrução Transact-SQL, como SELECT, CREATE DATABASE ou BEGIN TRANSACTION.  
   
-    -   O nome de uma função interna, como SERVERPROPERTY, ou @@VERSION.  
+    -   O nome de uma função interna, como SERVERPROPERTY ou @@VERSION.  
   
     -   O nome de uma tabela de procedimento armazenado do sistema, ou exibição, como sys.data_spaces ou sp_tableoption.  
   
-## Trabalhando com o Editor de Consultas do Mecanismo de Banco de Dados  
+## <a name="working-with-the-database-engine-query-editor"></a>Trabalhando com o Editor de Consultas do Mecanismo de Banco de Dados  
  O Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] é um dos quatro editores implementados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter uma descrição da funcionalidade implementada no Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e as tarefas principais que você pode executar usando o editor, consulte [Editores de Consultas e de Texto &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
   
-## Barra de ferramentas do Editor SQL  
+## <a name="sql-editor-toolbar"></a>Barra de ferramentas do Editor SQL  
  Quando o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] está aberto, a barra de ferramentas do Editor SQL é exibida com os botões a seguir.  
   
  **Connect**  
- Abra a caixa de diálogo **Conectar ao Servidor**. Use esta caixa de diálogo para estabelecer uma conexão a um servidor.  
+ Abra a caixa de diálogo **Conectar ao Servidor** . Use esta caixa de diálogo para estabelecer uma conexão a um servidor.  
   
  **Desconectar**  
  Desconecta o Editor de Consultas do servidor.  
   
  **Alterar Conexão**  
- Abra a caixa de diálogo **Conectar ao Servidor**. Use esta caixa de diálogo para estabelecer uma conexão a um servidor diferente.  
+ Abra a caixa de diálogo **Conectar ao Servidor** . Use esta caixa de diálogo para estabelecer uma conexão a um servidor diferente.  
   
  **Nova Consulta com Conexão Atual**  
  Abre uma nova janela do Editor de Consultas e usa as informações de conexão da janela atual do Editor de Consultas.  
@@ -71,7 +75,7 @@ caps.handback.revision: 47
  Executa o código selecionado ou, se nenhum código estiver selecionado, executa todo o código no Editor de Consultas.  
   
  **Depurador**  
- Habilita o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)]. Este depurador dá suporte a ações de depuração, como definir pontos de interrupção, detectar variáveis e depurar através de código.  
+ Habilita o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] . Este depurador dá suporte a ações de depuração, como definir pontos de interrupção, detectar variáveis e depurar através de código.  
   
  **Cancelar Consulta de Execução**  
  Envia uma solicitação de cancelamento ao servidor. Algumas consultas não podem ser canceladas imediatamente, mas precisam esperar por uma condição de cancelamento satisfatória. Quando transações são canceladas, podem ocorrer atrasos enquanto as transações são revertidas.  
@@ -80,13 +84,13 @@ caps.handback.revision: 47
  Verifica a sintaxe do código selecionado. Se nenhum código estiver selecionado, esta opção verificará a sintaxe de todo o código na janela Editor de Consultas.  
   
  **Exibir Plano de Execução Estimado**  
- Solicita um plano de execução de consulta do processador de consultas sem executar realmente a consulta e exibe o plano na janela **Plano de execução**. Esse plano usa estatísticas de índice como uma estimativa do número de linhas que se espera que retornem durante cada parte da execução da consulta. O plano de consulta real que é usado pode ser diferente do plano de execução estimado. Isso pode ocorrer se o número de linhas retornadas for consideravelmente diferente da estimativa e o processador de consultas alterar o plano para torná-lo mais eficiente.  
+ Solicita um plano de execução de consulta do processador de consultas sem executar realmente a consulta e exibe o plano na janela **Plano de execução** . Esse plano usa estatísticas de índice como uma estimativa do número de linhas que se espera que retornem durante cada parte da execução da consulta. O plano de consulta real que é usado pode ser diferente do plano de execução estimado. Isso pode ocorrer se o número de linhas retornadas for consideravelmente diferente da estimativa e o processador de consultas alterar o plano para torná-lo mais eficiente.  
   
  **Opções de consulta**  
- Abre a caixa de diálogo **Opções de Consulta**. Use esta caixa de diálogo para configurar as opções padrão para execução da consulta e para resultados da consulta.  
+ Abre a caixa de diálogo **Opções de Consulta** . Use esta caixa de diálogo para configurar as opções padrão para execução da consulta e para resultados da consulta.  
   
  **IntelliSense habilitado**  
- Especifica se a funcionalidade IntelliSense está disponível no Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Especifica se a funcionalidade IntelliSense está disponível no Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
  **Incluir Plano de Execução Atual**  
  Executa a consulta e retorna os resultados da consulta e o plano de execução usado para a consulta. Estes aparecem como um plano de consulta gráfica na janela **Plano de Execução** .  
@@ -95,10 +99,10 @@ caps.handback.revision: 47
  Inclui a janela **Estatísticas do Cliente** com estatísticas sobre a consulta e sobre os pacotes de rede, além do tempo decorrido da consulta.  
   
  **Resultados em Texto**  
- Retorna os resultados da consulta como texto na janela **Resultados**.  
+ Retorna os resultados da consulta como texto na janela **Resultados** .  
   
  **Resultados em Grade**  
- Retorna os resultados da consulta como uma ou mais grades na janela **Resultados**.  
+ Retorna os resultados da consulta como uma ou mais grades na janela **Resultados** .  
   
  **Resultados em Arquivo**  
  Quando a consulta é executada, a caixa de diálogo **Salvar Resultados** é exibida. Em **Salvar em**, selecione a pasta na qual você deseja salvar o arquivo. Em **Nome do arquivo**, digite o nome do arquivo e clique em **Salvar** para salvar os resultados da consulta como um arquivo de **Relatório** com a extensão .rpt. Para opções avançadas, clique na seta para baixo no botão **Salvar** e clique em **Salvar com Codificação**.  
@@ -120,7 +124,7 @@ caps.handback.revision: 47
   
  Você também pode adicionar a barra de ferramentas Editor de Consultas selecionando o menu **Exibir** , **Barras de Ferramentas**e, em seguida, **Editor SQL**. Se você adicionar a barra de ferramentas do SQL Editor quando nenhuma janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] estiver aberta, todos os botões ficarão indisponíveis.  
   
-## Barra de ferramentas do Editor SQL  
+## <a name="sql-editor-toolbar"></a>Barra de ferramentas do Editor SQL  
  Quando uma janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] está aberta, você também pode adicionar a barra de ferramentas Depurar selecionando o menu **Exibir** , **Barras de Ferramentas**e, em seguida, **Depurar**. Se você adicionar a barra de ferramentas Depurar quando nenhuma janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] estiver aberta, todos os botões ficarão indisponíveis.  
   
  **Continue**  
@@ -145,9 +149,9 @@ caps.handback.revision: 47
  Retorna para o próximo nível de chamada mais alto (função, procedimento armazenado ou gatilho). A execução pausa na instrução que segue a chamada do procedimento armazenado, da função ou do gatilho.  
   
  **Windows**  
- Abre a janela **Ponto de Interrupção** ou a janela **Imediato**.  
+ Abre a janela **Ponto de Interrupção** ou a janela **Imediato** .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Atalhos de teclado do SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

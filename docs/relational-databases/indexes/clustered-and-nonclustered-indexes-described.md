@@ -1,25 +1,29 @@
 ---
-title: "&#205;ndices clusterizados e n&#227;o clusterizados descritos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "otimizador de consultas [SQL Server], uso de índice"
-  - "conceitos de índice [SQL Server]"
+title: "Índices clusterizados e não clusterizados descritos | Microsoft Docs"
+ms.custom: 
+ms.date: 11/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- query optimizer [SQL Server], index usage
+- index concepts [SQL Server]
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01dfceee2f0d4fb1e0c475333be49e6dacec1c3f
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#205;ndices clusterizados e n&#227;o clusterizados descritos
+# <a name="clustered-and-nonclustered-indexes-described"></a>Índices clusterizados e não clusterizados descritos
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Um índice é uma estrutura em disco associada a uma tabela ou exibição, que agiliza a recuperação das linhas de uma tabela ou exibição. Um índice contém chaves criadas de uma ou mais colunas da tabela ou exibição. Essas chaves são armazenadas em uma estrutura (árvore B) que habilita o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a localizar a linha ou as linhas associadas aos valores de chave de forma rápida e eficaz.  
@@ -46,11 +50,11 @@ caps.handback.revision: 36
   
  Veja [Índices](../../relational-databases/indexes/indexes.md) para obter mais tipos de índices de uso geral.  
   
-## Índices e restrições  
+## <a name="indexes-and-constraints"></a>Índices e restrições  
  Os índices são criados automaticamente quando as restrições PRIMARY KEY e UNIQUE são definidas em colunas de tabelas. Por exemplo, ao criar uma tabela e identificar determinada coluna como a chave primária, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria automaticamente uma restrição PRIMARY KEY e o índice nessa coluna. Para obter mais informações, veja [Criar chaves primárias](../../relational-databases/tables/create-primary-keys.md) e [Criar restrições exclusivas](../../relational-databases/tables/create-unique-constraints.md).  
   
-## Como os índices são usados pelo otimizador de consulta  
- Índices bem projetados podem reduzir as operações de E/S de disco e consumir menos recursos de sistema, aprimorando o desempenho das consultas. Os índices podem ser úteis para uma série de consultas que contêm instruções SELECT, UPDATE, DELETE ou MERGE. Considere a consulta `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Quando essa consulta é executada, o otimizador de consulta avalia cada método disponível para recuperar os dados e seleciona o mais eficaz. O método pode ser uma verificação de tabela ou verificação de um ou mais índices, se houver.  
+## <a name="how-indexes-are-used-by-the-query-optimizer"></a>Como os índices são usados pelo otimizador de consulta  
+ Índices bem projetados podem reduzir as operações de E/S de disco e consumir menos recursos de sistema, aprimorando o desempenho das consultas. Os índices podem ser úteis para uma série de consultas que contêm instruções SELECT, UPDATE, DELETE ou MERGE. Considere a consulta `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Quando essa consulta é executada, o otimizador de consulta avalia cada método disponível para recuperar os dados e seleciona o mais eficaz. O método pode ser uma verificação de tabela ou verificação de um ou mais índices, se houver.  
   
  Ao executar uma verificação de tabela, o otimizador de consulta lê todas as linhas da tabela e extrai as linhas que atendem os critérios da consulta. Uma verificação de tabela gera várias operações de E/S de disco e pode utilizar muitos recursos. No entanto, a verificação de tabela poderá ser o método mais eficaz se, por exemplo, o conjunto de resultados da consulta contiver um alto percentual de linhas da tabela.  
   
@@ -58,9 +62,10 @@ caps.handback.revision: 36
   
  Normalmente, o otimizador de consulta seleciona o método mais eficaz ao executar consultas. No entanto, se não houver índices disponíveis, o otimizador de consulta precisará usar uma verificação de tabela. Sua tarefa é criar índices mais adequados ao seu ambiente, para que o otimizador de consulta tenha uma seleção de índices eficientes da qual selecionar. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece o [Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md) para ajudar com a análise de seu ambiente de banco de dados e na seleção de índices apropriados.  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  [Criar índices clusterizados](../../relational-databases/indexes/create-clustered-indexes.md)  
   
  [Criar índices não clusterizados](../../relational-databases/indexes/create-nonclustered-indexes.md)  
   
   
+

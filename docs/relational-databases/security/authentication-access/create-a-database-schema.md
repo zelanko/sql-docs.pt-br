@@ -1,29 +1,33 @@
 ---
-title: "Criar um esquema de banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.schemas.general.f1"
-helpviewer_keywords: 
-  - "criando esquemas com o Management Studio"
-  - "CREATE SCHEMA [Management Studio]"
-  - "esquemas de banco de dados"
-  - "esquemas [SQL Server], criação"
+title: Criar um esquema de banco de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.schemas.general.f1
+helpviewer_keywords:
+- creating schemas with Management Studio
+- CREATE SCHEMA [Management Studio]
+- database schemas
+- schemas [SQL Server], creating
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fe54e464e4aabc53eb8645c1fbf20f509f427978
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar um esquema de banco de dados
+# <a name="create-a-database-schema"></a>Criar um esquema de banco de dados
   Este tópico descreve como criar um esquema no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -58,21 +62,21 @@ caps.handback.revision: 11
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-##### Para criar um esquema  
+##### <a name="to-create-a-schema"></a>Para criar um esquema  
   
 1.  No Pesquisador de Objetos, expanda a pasta **Bancos de Dados** .  
   
 2.  Expanda o banco de dados no qual o novo esquema de banco de dados será criado.  
   
-3.  Clique com o botão direito do mouse na pasta **Segurança**, aponte para **Novo** e selecione **Esquema**.  
+3.  Clique com o botão direito do mouse na pasta **Segurança** , aponte para **Novo**e selecione **Esquema**.  
   
-4.  Na caixa de diálogo **Esquema – Novo**, na página **Geral**, insira um nome do novo esquema na caixa **Nome do esquema**.  
+4.  Na caixa de diálogo **Esquema – Novo** , na página **Geral** , insira um nome do novo esquema na caixa **Nome do esquema** .  
   
 5.  Na caixa **Proprietário do esquema** , digite o nome de um usuário de banco de dados ou função para ser o proprietário da propriedade do esquema. Como alternativa, clique em **Pesquisar** para abrir a caixa de diálogo **Pesquisar Funções e Usuários** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### Opções adicionais  
+### <a name="additional-options"></a>Opções adicionais  
  A caixa de diálogo **Esquema – Novo** também oferece opções em duas páginas adicionais: **Protegíveis** e **Propriedades Estendidas**.  
   
 -   A página **Permissões** lista todos os protegíveis e as permissões possíveis nesses protegíveis que podem ser concedidos ao logon.  
@@ -81,7 +85,7 @@ caps.handback.revision: 11
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para criar um esquema  
+#### <a name="to-create-a-schema"></a>Para criar um esquema  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

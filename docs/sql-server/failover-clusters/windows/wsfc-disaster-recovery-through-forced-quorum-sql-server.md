@@ -1,31 +1,35 @@
 ---
-title: "Recupera&#231;&#227;o de desastres WSFC por meio de quorum for&#231;ado (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidade [SQL Server], clusters de WSFC"
-  - "quorum [SQL Server], AlwaysOn e quorum WSFC"
-  - "cluster de failover [SQL Server], Grupos de disponibilidade AlwaysOn"
+title: "Recuperação de desastre do WSFC por meio de quorum forçado (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
+- failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f79077825cabd60fa12cd906ff375d149b29a7d3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Recupera&#231;&#227;o de desastres WSFC por meio de quorum for&#231;ado (SQL Server)
+# <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Recuperação de desastres WSFC por meio de quorum forçado (SQL Server)
   A falha de quorum normalmente é causada por um desastre sistêmico ou uma falha de comunicações persistente que envolve vários nós no cluster WSFC.  A intervenção manual é necessária para a recuperação de uma falha de quorum.  
   
--   **Antes de iniciar:**  [Pré-requisitos](#Prerequisites), [Segurança](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
--   **Recuperação de desastres WSFC por meio do procedimento de quorum forçado** [Recuperação de desastres WSFC por meio do procedimento de quorum forçado](#Main)  
+-   **WSFC Disaster Recovery through the Forced Quorum Procedure** [WSFC Disaster Recovery through the Forced Quorum Procedure](#Main)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
@@ -37,15 +41,15 @@ caps.handback.revision: 20
  O Procedimento de Quorum Forçado supõe que um quorum íntegro existia antes da falha de quorum.  
   
 > [!WARNING]  
->  O usuário deve estar bem-informado sobre os conceitos e as interações do Windows Server Failover Clustering, Modelos de Quorum do WSFC, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e a configuração de implantação específica do ambiente.  
+>  O usuário deve estar bem-informado sobre os conceitos e as interações do Windows Server Failover Clustering, Modelos de Quorum do WSFC, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e a configuração de implantação específica do ambiente.  
 >   
->  Para obter mais informações, veja: [WSFC (Clustering de Failover do Windows Server) com SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Configuração de modos de quorum WSFC e votação (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
+>  Para obter mais informações, veja:  [WSFC (Clustering de Failover do Windows Server) com SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Configuração de modos de quorum WSFC e votação (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> Segurança  
  O usuário deve ser uma conta de domínio que seja membro do grupo Administradores local em cada nó do cluster WSFC.  
   
 ##  <a name="Main"></a> Recuperação de desastres WSFC por meio do procedimento de quorum forçado  
- Lembre-se de que a falha de quorum deixa offline todos os serviços clusterizados, instâncias do SQL Server e [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no cluster WSFC, pois o cluster, conforme configurado, não pode garantir tolerância a falhas no nível de nó.  Uma falha de quorum significa que os nós de votação íntegros no cluster WSFC não atendem mais ao modelo de quorum. Alguns nós podem ter falhado totalmente e outros podem ter apenas desligado o serviço WSFC e, nesse caso, são íntegros, exceto pela perda da capacidade de comunicação com um quorum.  
+ Lembre-se de que a falha de quorum deixa offline todos os serviços clusterizados, instâncias do SQL Server e [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]no cluster WSFC, pois o cluster, conforme configurado, não pode garantir tolerância a falhas no nível de nó.  Uma falha de quorum significa que os nós de votação íntegros no cluster WSFC não atendem mais ao modelo de quorum. Alguns nós podem ter falhado totalmente e outros podem ter apenas desligado o serviço WSFC e, nesse caso, são íntegros, exceto pela perda da capacidade de comunicação com um quorum.  
   
  Para colocar o cluster WSFC novamente online, corrija a causa raiz da falha de quorum na configuração existente, recupere os bancos de dados afetados quando necessário e, se desejar, reconfigure os nós restantes no cluster WSFC para refletir a topologia de cluster sobrevivente.  
   
@@ -53,12 +57,12 @@ caps.handback.revision: 20
   
  Esse tipo de processo de recuperação de desastres deve incluir as seguintes etapas:  
   
-#### Para recuperar de falha de quorum:  
+#### <a name="to-recover-from-quorum-failure"></a>Para recuperar de falha de quorum:  
   
 1.  **Determine o escopo da falha.** Identifique quais grupos de disponibilidade ou instâncias do SQL Server estão sem resposta, quais nós de cluster estão online e disponíveis para uso pós-desastre, e examine os logs de eventos do Windows e os logs do sistema SQL Server.  Quando for prático, você deve preservar dados forenses e os logs do sistema para análise futura.  
   
     > [!TIP]  
-    >  Em uma instância responsiva do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], você pode obter informações sobre a integridade de grupos de disponibilidade que possuam uma réplica de disponibilidade na instância de servidor local consultando a DMV (exibição de gerenciamento dinâmico) [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md).  
+    >  Em uma instância responsiva do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], você pode obter informações sobre a integridade de grupos de disponibilidade que possuam uma réplica de disponibilidade na instância de servidor local consultando a DMV (exibição de gerenciamento dinâmico) [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) .  
   
 2.  **Inicie o cluster WSFC usando o quorum forçado em um único nó.** Identifique um nó com um número mínimo de falhas de componente, que não seja o desligamento do serviço de cluster WSFC.  Verifique se este nó pode se comunicar com a maioria dos demais nós.  
   
@@ -104,7 +108,7 @@ caps.handback.revision: 20
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
--   [Forçar um cluster WSFC para iniciar sem um quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
+-   [Forçar um Cluster WSFC a Iniciar Sem um Quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
 -   [Executar um failover manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
@@ -112,7 +116,7 @@ caps.handback.revision: 20
   
 -   [Definir configurações de NodeWeight de quorum de cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
--   [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](../Topic/Use%20the%20AlwaysOn%20Dashboard%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
@@ -120,7 +124,7 @@ caps.handback.revision: 20
   
 -   [Cluster de failover Get-ClusterLog do cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [WSFC &#40;Windows Server Failover Clustering&#41; com o SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

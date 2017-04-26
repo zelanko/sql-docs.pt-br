@@ -1,25 +1,29 @@
 ---
-title: "Backup e restaura&#231;&#227;o do SQL Server com o Servi&#231;o de Armazenamento de Blobs do Microsoft Azure | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure | Microsoft Docs"
+ms.custom: 
+ms.date: 07/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2ca66cdb80dd12a242b2c9e8130cf3236e47371c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup e restaura&#231;&#227;o do SQL Server com o Servi&#231;o de Armazenamento de Blobs do Microsoft Azure
+# <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  ![Backup to Azure blob graphic](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Backup to Azure blob graphic")  
+  ![Fazer backup para o gráfico de blobs do Azure](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Fazer backup para o gráfico de blobs do Azure")  
   
  Este tópico descreve como fazer backups e restaurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [serviço de armazenamento de Blobs do Microsoft Azure](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Ele também fornece um resumo dos benefícios do uso do Serviço Blob do Microsoft Azure para armazenar backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -34,7 +38,7 @@ caps.handback.revision: 39
   
 -   **Deixe o SQL Server gerenciar os backups para o Microsoft Azure:** configure o SQL Server para gerenciar a estratégia de backup e agendar backups para um único banco de dados ou vários bancos de dados, ou defina valores padrão no nível da instância. Esse recurso é conhecido como **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**. Para obter mais informações, veja [Backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md). Esse recurso está disponível no SQL Server 2014 ou posterior.  
   
-## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversiontokenssnoversionmdmd-backups"></a>Benefícios do uso do serviço Blob do Microsoft Azure para backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>Benefícios do uso do serviço Blob do Microsoft Azure para backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Armazenamento externo flexível, confiável e ilimitado: armazenar os backups no serviço Blob do Microsoft Azure pode ser uma opção conveniente, flexível e de fácil acesso externo. Criar o armazenamento externo para backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser tão fácil quanto modificar scripts/trabalhos existentes. O armazenamento externo deve estar, normalmente, distante o suficiente do local do banco de dados de produção para evitar um único desastre que possa afetar os locais dos bancos de dados externo e de produção. Ao optar por replicar geograficamente o armazenamento de Blob, você terá uma camada adicional de proteção caso ocorra algum desastre que possa afetar a região inteira. Além disso, os backups estão disponíveis em qualquer lugar e a qualquer momento, e podem ser facilmente acessados para restaurações.  
   
@@ -51,19 +55,24 @@ caps.handback.revision: 39
   
 -   Benefícios do custo: pague apenas pelo serviço utilizado. Pode ser tão econômico quanto uma opção de arquivamento externo e de backup. Consulte a seção [Considerações sobre cobrança do Microsoft Azure](#Billing) para obter mais informações e links.  
   
-##  <a name="a-namebillinga-microsoft-azure-billing-considerations"></a><a name="Billing"></a> Considerações sobre cobrança do Microsoft Azure:  
+##  <a name="Billing"></a> Microsoft Azure Billing Considerations:  
  Compreender os custos de armazenamento do Microsoft Azure habilita você a fazer uma previsão do custo da criação e do armazenamento de backups no Microsoft Azure.  
   
  A [calculadora de preços do Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=277060) pode ajudar a estimar os custos.  
   
- **Armazenamento:** os encargos baseiam-se no espaço usado, e são calculados em uma escala graduada e no nível de redundância. Para obter mais detalhes e informações atualizadas, confira a seção **Gerenciamento de dados** do artigo [Detalhes de preço](http://go.microsoft.com/fwlink/?LinkId=277059).  
+ **Armazenamento:** os encargos baseiam-se no espaço usado, e são calculados em uma escala graduada e no nível de redundância. Para obter mais detalhes e informações atualizadas, confira a seção **Gerenciamento de dados** do artigo [Detalhes de preço](http://go.microsoft.com/fwlink/?LinkId=277059) .  
   
  **Transferências de dados:** as transferências de dados de entrada para o Microsoft Azure são gratuitas. As transferências de saída são cobradas de acordo com o uso da largura de banda e calculadas com base em uma escala graduada específica de região. Para obter mais detalhes, consulte a seção [Transferências de dados](http://go.microsoft.com/fwlink/?LinkId=277061) do artigo Detalhes do preço.  
   
 ## <a name="see-also"></a>Consulte também  
- [Práticas recomendadas e solução de problemas de backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
- [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
- [Tutorial: Como usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases.md)  
- [Backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
+
+[Práticas recomendadas e solução de problemas de backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+
+[Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
+
+[Tutorial: Como usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+
+[Backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   
+

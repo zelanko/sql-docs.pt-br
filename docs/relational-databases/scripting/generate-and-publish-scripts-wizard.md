@@ -1,61 +1,65 @@
 ---
-title: "Assistente para Gerar e Publicar Scripts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql9.swb.generatescriptswizard.chooseviews.f1"
-  - "sql13.swb.generatescriptswizard.manageproviders.f1"
-  - "sql9.swb.generatescriptswizard.scriptwizarddescription.f1"
-  - "sql9.swb.generatescriptswizard.choosedefaults.f1"
-  - "sql13.swb.generatescriptswizard.summarypage.f1"
-  - "sql13.swb.generatescriptswizard.providerconfiguration.f1"
-  - "sql9.swb.generatescriptswizard.chooseuddt.f1"
-  - "sql9.swb.generatescriptswizard.chooserules.f1"
-  - "sql13.swb.generatescriptswizard.introduction.f1"
-  - "sql13.swb.generatescriptswizard.setscriptingoptions.f1"
-  - "sql13.swb.generatescriptswizard.saveorpublishscripts.f1"
-  - "sql9.swb.generatescriptswizard.progress.f1"
-  - "sql9.swb.generatescriptswizard.chooseobjects.f1"
-  - "sql9.swb.generatescriptswizard.welcome.f1"
-  - "sql9.swb.generatescriptswizard.scriptfileoption.f1"
-  - "sql13.swb.generatescriptswizard.chooseobjects.f1"
-  - "sql13.swb.generatescriptswizard.advancedpublishingoptions.f1"
-  - "sql9.swb.generatescriptswizard.selectdatabase.f1"
-  - "sql9.swb.generatescriptswizard.choosetables.f1"
-  - "sql9.swb.generatescriptswizard.choosestoredprocedures.f1"
-  - "sql9.swb.generatescriptswizard.chooseobjecttypes.f1"
-  - "sql13.swb.generatescriptswizard.advancedscriptingoptions.f1"
-  - "sql9.swb.generatescriptswizard.choosescriptoptions.f1"
-  - "sql9.swb.generatescriptswizard.chooseudf.f1"
-helpviewer_keywords: 
-  - "bancos de dados [SQL Server], publicando"
-  - "publicando bancos de dados"
-  - "scripts [SQL Server], gerando"
-  - "scripts [SQL Server], publicando"
-  - "bancos de dados [SQL Server], gerando scritps"
-  - "Assistente de Publicação de Banco de Dados"
+title: Assistente para Gerar e Publicar Scripts | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql9.swb.generatescriptswizard.chooseviews.f1
+- sql13.swb.generatescriptswizard.manageproviders.f1
+- sql9.swb.generatescriptswizard.scriptwizarddescription.f1
+- sql9.swb.generatescriptswizard.choosedefaults.f1
+- sql13.swb.generatescriptswizard.summarypage.f1
+- sql13.swb.generatescriptswizard.providerconfiguration.f1
+- sql9.swb.generatescriptswizard.chooseuddt.f1
+- sql9.swb.generatescriptswizard.chooserules.f1
+- sql13.swb.generatescriptswizard.introduction.f1
+- sql13.swb.generatescriptswizard.setscriptingoptions.f1
+- sql13.swb.generatescriptswizard.saveorpublishscripts.f1
+- sql9.swb.generatescriptswizard.progress.f1
+- sql9.swb.generatescriptswizard.chooseobjects.f1
+- sql9.swb.generatescriptswizard.welcome.f1
+- sql9.swb.generatescriptswizard.scriptfileoption.f1
+- sql13.swb.generatescriptswizard.chooseobjects.f1
+- sql13.swb.generatescriptswizard.advancedpublishingoptions.f1
+- sql9.swb.generatescriptswizard.selectdatabase.f1
+- sql9.swb.generatescriptswizard.choosetables.f1
+- sql9.swb.generatescriptswizard.choosestoredprocedures.f1
+- sql9.swb.generatescriptswizard.chooseobjecttypes.f1
+- sql13.swb.generatescriptswizard.advancedscriptingoptions.f1
+- sql9.swb.generatescriptswizard.choosescriptoptions.f1
+- sql9.swb.generatescriptswizard.chooseudf.f1
+helpviewer_keywords:
+- databases [SQL Server], publishing
+- publishing databases
+- scripts [SQL Server], generating
+- scripts [SQL Server], publishing
+- databases [SQL Server], generating scripts
+- Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4632b3a980608ca8feb63436d4120759e7a1e756
+ms.lasthandoff: 04/11/2017
+
 ---
-# Assistente para Gerar e Publicar Scripts
+# <a name="generate-and-publish-scripts-wizard"></a>Assistente para Gerar e Publicar Scripts
   Você pode usar **Assistente para Gerar e Publicar Scripts** para criar scripts para transferir um banco de dados entre instâncias do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou do [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. É possível gerar scripts para um banco de dados em uma instância do Mecanismo de Banco de Dados em sua rede local ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Os scripts gerados podem ser executados em outra instância do Mecanismo de Banco de Dados ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. É possível usar o assistente para publicar o conteúdo de um banco de dados diretamente em um serviço Web criado usando os Serviços de Publicação de Banco de dados. É possível criar scripts para um banco de dados inteiro ou limitá-lo a objetos específicos.  
   
-1.  **Antes de iniciar:**  [Publicando em um serviço hospedado](#PubHostSvc), [Permissões](#Permissions)  
+1.  **Before you begin:**  [Publishing to a Hosted Service](#PubHostSvc), [Permissions](#Permissions)  
   
-2.  **Para gerar ou publicar um script, usando:**  [Assistente para Gerar e Publicar Scripts](#GenPubScriptWiz)  
+2.  **To generate or publish a script, using:**  [The Generate and Publish Scripts Wizard](#GenPubScriptWiz)  
   
-## Antes de começar  
+## <a name="before-you-begin"></a>Antes de começar  
  Os bancos de dados de origem e destino podem estar no [!INCLUDE[ssSDS](../../includes/sssds-md.md)], ou em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que esteja executando o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior.  
   
 ###  <a name="PubHostSvc"></a> Publicando em um serviço hospedado  
@@ -134,7 +138,7 @@ caps.handback.revision: 45
   
  **Publicar em Serviço Web** – Publique os objetos selecionados em um serviço de host remoto Web para o qual você configurou um provedor.  
   
--   **Gerenciar Provedores** – Exiba a caixa de diálogo **Gerenciar Provedores**. Use a caixa de diálogo **Gerenciar Provedores** para adicionar, editar e excluir provedores de hospedagem. Cada provedor especifica informações de conexão com um serviço Web de hospedagem e os bancos de dados de destino naquele serviço.  
+-   **Gerenciar Provedores** – Exiba a caixa de diálogo **Gerenciar Provedores** . Use a caixa de diálogo **Gerenciar Provedores** para adicionar, editar e excluir provedores de hospedagem. Cada provedor especifica informações de conexão com um serviço Web de hospedagem e os bancos de dados de destino naquele serviço.  
   
 -   **Avançado** – Exiba a caixa de diálogo **Opções de Publicação Avançadas** em que você pode selecionar opções avançadas para publicar scripts.  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 45
   
 -   **Preenchimento ANSI** – Inclui **ANSI PADDING ON** no script. O padrão é **True**.  
   
--   **Acrescentar ao arquivo** – Se for **True**, este script será adicionado à parte inferior de um script existente, especificado na página **Definir Opções de Script**. Se for **False**, o novo script substituirá um script anterior. O padrão é **False**.  
+-   **Acrescentar ao arquivo** – Se for **True**, este script será adicionado à parte inferior de um script existente, especificado na página **Definir Opções de Script** . Se for **False**, o novo script substituirá um script anterior. O padrão é **False**.  
   
 -   **Continuar o script se houver erro** – Quando for **True**, o script será interrompido quando ocorrer um erro. Se for **False**, o script continuará. O padrão é **False**.  
   
@@ -226,9 +230,9 @@ caps.handback.revision: 45
   
  **Testar** – Testa a conexão com um serviço de hospedagem usando as informações do provedor selecionado.  
   
- **OK** – Salva todas as alterações feitas na caixa de diálogo **Provedor de Hospedagem**.  
+ **OK** – Salva todas as alterações feitas na caixa de diálogo **Provedor de Hospedagem** .  
   
- **Cancelar** – Desfaz todas as alterações feitas na caixa de diálogo **Provedor de Hospedagem**.  
+ **Cancelar** – Desfaz todas as alterações feitas na caixa de diálogo **Provedor de Hospedagem** .  
   
 ###  <a name="AdvPubOpts"></a> Página Opções de Publicação Avançadas  
  Use essa página para especificar como você deseja que esse assistente publique um banco de dados. Muitas opções diferentes estão disponíveis. As opções ficarão acinzentadas se não tiverem suporte da versão do SQL Server ou do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] especificado no **Tipo de mecanismo de banco de dados**.  
@@ -334,35 +338,35 @@ caps.handback.revision: 45
   
  **Concluir** – Clique para fechar o assistente após a conclusão do processamento, ou se ocorrer um erro.  
  
-## Gerando scripts no SQL Data Warehouse do Azure  
+## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Gerando scripts no SQL Data Warehouse do Azure  
 
 Se a sintaxe é gerada quando usar “Gerar Script Como...” não parece uma sintaxe [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] ou se você receber uma mensagem de erro, talvez seja necessário definir as opções de script no SQL Server Management Studio para o [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
 
-### Como definir opções de script padrão para o SQL Data Warehouse  
+### <a name="how-to-set-default-scripting-options-to-sql-data-warehouse"></a>Como definir opções de script padrão para o SQL Data Warehouse  
 
-Para gerar script para objetos com a sintaxe [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], defina a opção de script padrão como [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] da seguinte maneira:  
+Para gerar script para objetos com a sintaxe [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] , defina a opção de script padrão como [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] da seguinte maneira:  
 
 1. Clique em **Ferramentas** e em **Opções**.  
-2. Em **Opções Gerais de Script**, defina:  
+2. Em **Opções Gerais de Script** , defina:  
     1. Script para o tipo de mecanismo de banco de dados: **Banco de Dados SQL do Microsoft Azure**.  
     2. Script para a edição do mecanismo de banco de dados: **Edição do SQL Data Warehouse do Microsoft Azure**.  
 3. Clique em **OK**.
 
-### Como gerar scripts para o SQL Data Warehouse quando esta não for a opção de script padrão  
+### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>Como gerar scripts para o SQL Data Warehouse quando esta não for a opção de script padrão  
 
 Se você definir [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] como a opção de script padrão, como mostrado acima, essas instruções poderão ser ignoradas. No entanto, se você optar por usar opções de script padrão diferentes, poderá receber um erro. Para evitar erros, siga estas etapas para Gerar e Publicar Scripts para [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]:  
 
 1. Clique com o botão direito do mouse no banco de dados SQL Data Warehouse.  
 2. Selecione **Gerar Scripts...**.  
 3. Escolha os Objetos dos quais deseja gerar script.  
-4. Em **Opções de Script**, clique em **Avançado**. Em **Geral**, defina:  
+4. Em **Opções de Script**, clique em **Avançado**. Em **Geral** , defina:  
     1. Script para o tipo de mecanismo de banco de dados: **Banco de Dados SQL do Microsoft Azure**.  
     2. Script para a edição do mecanismo de banco de dados: **Edição do SQL Data Warehouse do Microsoft Azure**.  
 5. Clique em **Salvar ou Publicar Scripts** e em **Concluir**.  
 
 As opções definidas na Etapa 4 não serão lembradas. Se você preferir que essas opções sejam lembradas, siga as instruções em **Como definir opções de script padrão para o SQL Data Warehouse**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Instalando o SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)   
  [Copiar bancos de dados em outros servidores](../../relational-databases/databases/copy-databases-to-other-servers.md)  
   

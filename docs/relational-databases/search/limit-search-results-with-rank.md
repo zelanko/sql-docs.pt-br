@@ -1,30 +1,34 @@
 ---
-title: "Limite resultados de pesquisa com RANK | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classificação de linha [pesquisa de texto completo]"
-  - "valores de classificação de relevância [pesquisa de texto completo]"
-  - "pesquisa de texto completo [SQL Server], classificações"
-  - "classificações de índices [pesquisa de texto completo]"
-  - "resultados classificados [pesquisa de texto completo]"
-  - "classificações [pesquisa de texto completo]"
-  - "valores de classificação por linha [pesquisa de texto completo]"
+title: Limitar os resultados da pesquisa com RANK | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- row ranking [full-text search]
+- relevance ranking values [full-text search]
+- full-text search [SQL Server], rankings
+- index rankings [full-text search]
+- ranked results [full-text search]
+- rankings [full-text search]
+- per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3a33b63a182fe1c7f72e2251c3a835867ae8dcf4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Limite resultados de pesquisa com RANK
+# <a name="limit-search-results-with-rank"></a>Limite resultados de pesquisa com RANK
   As funções [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) retornam uma coluna denominada RANK que contém valores ordinais de 0 a 1000 (valores de classificação). Esses valores são usados para classificar as linhas retornadas de acordo com o grau de correspondência com os critérios de seleção. Os valores de classificação indicam apenas uma ordem relativa de relevância das linhas no conjunto de resultados, sendo que um valor inferior indica menor relevância. Os valores reais não são importantes e geralmente são diferentes em cada execução da consulta.  
   
 > [!NOTE]  
@@ -36,7 +40,7 @@ caps.handback.revision: 19
   
 ##  <a name="examples"></a> Exemplos do uso de RANK para limitar os resultados da pesquisa  
   
-### Exemplo A: Pesquisando apenas as três primeiras correspondências  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Exemplo A: Pesquisando apenas as três primeiras correspondências  
  O exemplo a seguir usa CONTAINSTABLE para retornar apenas as três primeiras correspondências.  
   
 ```  
@@ -66,9 +70,8 @@ RANK        Address                          City
 (3 row(s) affected)  
 ```  
   
- [Neste tópico](#top)  
   
-### Exemplo B: Pesquisando apenas as dez primeiras correspondências  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Exemplo B: Pesquisando apenas as dez primeiras correspondências  
  O exemplo a seguir usa CONTAINSTABLE para retornar a descrição dos 5 produtos principais onde a coluna `Description` contém a palavra "aluminum" próxima à palavra "light" ou "lightweight".  
   
 ```  
@@ -89,12 +92,11 @@ FROM Production.ProductDescription AS FT_TBL INNER JOIN
 GO  
 ```  
   
- [Neste tópico](#top)  
   
 ##  <a name="how"></a> Como os resultados de consultas de pesquisa são classificados  
  A pesquisa de texto completo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode gerar uma pontuação (ou valor de classificação) opcional que indica a relevância dos dados retornados por uma consulta de texto completo. Este valor de classificação é calculado para cada linha e pode ser usado como critério de ordenação para classificar o conjunto de resultados de uma determinada consulta por relevância. Os valores de classificação indicam apenas uma ordem relativa de relevância das linhas do conjunto de resultados. Os valores reais não são importantes e geralmente são diferentes em cada execução da consulta. O valor de classificação não guarda nenhuma importância entre as consultas.  
   
-### Estatísticas para a classificação  
+### <a name="statistics-for-ranking"></a>Estatísticas para a classificação  
  Quando um índice é criado, as estatísticas são coletadas para serem usadas na classificação. O processo de construir um catálogo de texto completo não resulta diretamente em uma única estrutura de índice. Em vez disso, o Mecanismo de Texto Completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria índices intermediários conforme os dados são indexados. O Mecanismo de Texto Completo então mescla esses índices em um índice maior, conforme necessário. Este processo pode ser repetido muitas vezes. Em seguida, o Mecanismo de Texto Completo conduz uma "mesclagem mestra" que combina todos os índices intermediários em um grande índice mestre.  
   
  As estatísticas são coletadas a cada nível de índice intermediário. As estatísticas são mescladas quando os índices são mesclados. Alguns valores estatísticos só podem ser gerados durante o processo de mesclagem mestra.  
@@ -115,7 +117,7 @@ GO
  Um único índice invertido de um ou mais documentos. Isto pode estar por inteiro na memória ou no disco. Muitas estatísticas de consulta são relativas ao índice individual onde a correspondência ocorreu.  
   
  Catálogo de texto completo  
- Uma coleção de índices intermediários tratada como uma entidade para consultas. Catálogos são a unidade de organização visível para o administrador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Uma coleção de índices intermediários tratada como uma entidade para consultas. Catálogos são a unidade de organização visível para o administrador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Palavra, token ou item  
  A unidade de correspondência no mecanismo de texto completo. Fluxos de texto de documentos são convertidos em palavras ou tokens por separadores de palavras de um determinado idioma.  
@@ -138,9 +140,8 @@ GO
  MaxQueryRank  
  A classificação máxima, 1000, retornada pelo Mecanismo de Texto Completo.  
   
- [Neste tópico](#top)  
   
-### Problemas na computação da classificação  
+### <a name="rank-computation-issues"></a>Problemas na computação da classificação  
  O processo de computação da classificação depende de vários fatores.  Separadores de palavra de idiomas diferentes convertem o texto em token de forma diferente. Por exemplo, a cadeia de caracteres “casa de cachorro” pode ser quebrada em “casa” “cachorro” por um separador de palavra e em “casa de cachorro” por outro separador de palavra. Isto significa que a correspondência e a classificação podem variar com base em um idioma específico, porque não só as palavras são diferentes como também o tamanho do documento. A diferença de tamanho do documento pode afetar a classificação para todas as consultas.  
   
  Estatísticas como **IndexRowCount** podem variar muito. Por exemplo, se um catálogo tem 2 bilhões de linhas no índice mestre, um novo documento será indexado no índice intermediário da memória, e a classificação daquele documento será com base no número de documentos no índice da memória que poderão ser inclinados quando comparados às classificações dos documentos do índice mestre. Por esta razão, recomenda-se que, após qualquer população que resulte em um grande número de linhas, os índices indexados ou reindexados sejam mesclados em um índice mestre usando a função ALTER FULLTEXT CATALOG... Instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] REORGANIZE. O Mecanismo de Texto Completo também mesclará automaticamente os índices com base em parâmetros como o número e o tamanho dos índices intermediários.  
@@ -154,9 +155,8 @@ GO
   
 ```  
   
- [Neste tópico](#top)  
   
-### Classificação do CONTAINSTABLE  
+### <a name="ranking-of-containstable"></a>Classificação do CONTAINSTABLE  
  A classificação[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) usa o seguinte algoritmo:  
   
 ```  
@@ -185,9 +185,8 @@ Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )
   
 ```  
   
- [Neste tópico](#top)  
   
-### Classificação de FREETEXTTABLE  
+### <a name="ranking-of-freetexttable"></a>Classificação de FREETEXTTABLE  
  A classificação de[FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) tem como base a fórmula de classificação OKAPI BM25. Consultas FREETEXTTABLE adicionarão palavras à consulta via geração por flexão (formas flexionadas das palavras originais da consulta); essas palavras são tratadas como palavras separadas, sem nenhuma relação especial com as palavras das quais foram geradas. Sinônimos gerados do recurso Thesaurus serão tratados como palavras separadas, em condições de igual equilíbrio. Cada palavra na consulta contribui para a classificação.  
   
 ```  
@@ -206,9 +205,8 @@ tf is the frequency of the word in the queried property in a specific row.
 qtf is the frequency of the term in the query.   
 ```  
   
- [Neste tópico](#top)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Consulta com pesquisa de texto completo](../../relational-databases/search/query-with-full-text-search.md)  
   
   

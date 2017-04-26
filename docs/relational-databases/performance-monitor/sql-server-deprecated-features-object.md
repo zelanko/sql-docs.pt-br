@@ -1,30 +1,34 @@
 ---
-title: "SQL Server, objeto Recursos Preteridos | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Recursos Preteridos"
-  - "contadores de desempenho [SQL Server], recursos preteridos"
-  - "preterimento [SQL Server], contadores de desempenho"
-  - "Objeto Recursos Preteridos"
+title: SQL Server, objeto Recursos Preteridos | Microsoft Docs
+ms.custom: 
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Deprecated Features
+- performance counters [SQL Server], deprecated features
+- deprecation [SQL Server], performance counters
+- Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, objeto Recursos Preteridos
+# <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  O objeto SQLServer:Recursos Preteridos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um contador para monitorar recursos designados como preteridos. Em cada caso, o contador fornece uma contagem de uso que lista o número de vezes em que o recurso preterido foi encontrado desde a última inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  O objeto SQLServer:Recursos Preteridos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um contador para monitorar recursos designados como preteridos. Em cada caso, o contador fornece uma contagem de uso que lista o número de vezes em que o recurso preterido foi encontrado desde a última inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  O valor desses contadores também está disponível com a execução da seguinte instrução:  
   
@@ -41,11 +45,11 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
   
  A tabela a seguir descreve as instâncias de contadores dos Recursos Preteridos do SQL Server.  
   
-|Instâncias do contador de Recursos Preteridos do SQL Server|Descrição|  
+|Instâncias do contador de Recursos Preteridos do SQL Server|Description|  
 |------------------------------------------------------|-----------------|  
 |'#' e '##' como o nome de tabelas temporárias e procedimentos armazenados|Um identificador que não contém nenhum caractere diferente de # foi encontrado. Use pelo menos um caractere adicional. Ocorre uma vez por compilação.|  
-|sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substitua por `SELECT column_list FROM` *\< function_name>*`()`. Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)` por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  
-|'@' e nomes que começam com '@@' como identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]|Um identificador que começa com @ ou @ @ foi encontrado. Não use @, @@ ou nomes que comecem com @@ como identificadores. Ocorre uma vez por compilação.|  
+|sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substitua por `SELECT column_list FROM` *< function_name>*`()`. Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)` por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  
+|'@' e nomes que começam com '@@' como identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]|Um identificador que começa com @ ou @@ foi encontrado. Não use @, @@ ou nomes que comecem com @@ como identificadores. Ocorre uma vez por compilação.|  
 |ADDING TAPE DEVICE|O recurso preterido sp_addumpdevice'**tape**' foi encontrado. Em seu lugar, use sp_addumpdevice'**disk**'. Ocorre uma vez por uso.|  
 |Permissão ALL|Número total de vezes que a sintaxe GRANT ALL, DENY ALL ou REVOKE ALL foi encontrada. Modifique a sintaxe para negar permissões específicas. Ocorre uma vez por consulta.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Número total de horas que a opção TORN_PAGE_DETECTION do recurso preterido de ALTER DATABASE foi usada desde a inicialização da instância de servidor. Em seu lugar, use a sintaxe PAGE_VERIFY. Ocorre uma vez por uso em uma instrução DDL.|  
@@ -60,7 +64,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |CREATE TRIGGER WITH APPEND|A instrução CREATE TRIGGER com a cláusula WITH APPEND foi encontrada. Recrie o gatilho inteiro. Ocorre uma vez por uso em uma instrução DDL.|  
 |CREATE_DROP_DEFAULT|As sintaxes CREATE DEFAULT ou DROP DEFAULT foram encontradas. Reescreva o comando usando a opção DEFAULT de CREATE TABLE ou ALTER TABLE. Ocorre uma vez por compilação.|  
 |CREATE_DROP_RULE|A sintaxe CREATE RULE foi encontrada. Reescreva o comando usando restrições. Ocorre uma vez por compilação.|  
-|Tipos de dados: texto ntext ou imagem|Um tipos de dados **text**, **ntext** ou **image** foi encontrado. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext** e **image**. Ocorre uma vez por consulta.|  
+|Tipos de dados: texto ntext ou imagem|Um tipos de dados **text**, **ntext**ou **image** foi encontrado. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext**e **image** . Ocorre uma vez por consulta.|  
 ||O número total de vezes que um banco de dados foi alterado para o nível de compatibilidade 80. Planeje atualizar o banco de dados e o aplicativo antes da próxima versão. Também ocorre quando se inicia um banco de dados em nível de compatibilidade 80.|  
 |Nível de compatibilidade do banco de dados 100, 110. 120|O número total de vezes que o nível de compatibilidade de um banco de dados foi alterado. Planeje atualizar o banco de dados e o aplicativo para uma versão futura. Também ocorre quando um banco de dados em um nível de compatibilidade preterido é iniciado.|  
 |DATABASE_MIRRORING|Referencia a recurso de espelhamento de banco de dados foi encontrado. Planeje atualizar para os Grupos de Disponibilidade AlwaysOn ou, se estiver executando uma edição do SQL Server que não dê suporte aos Grupos de Disponibilidade AlwaysOn, planeje migrar o para envio de logs.|  
@@ -123,7 +127,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |Nome de coluna com mais de duas partes|Uma consulta usou um nome de 3 partes ou de 4 partes na lista de colunas. Altere a consulta para usar os nomes de 2 partes em conformidade com o padrão. Ocorre uma vez por compilação.|  
 |Várias dicas de tabela sem vírgula|Um espaço foi usado como o separador entre dicas de tabela. Use uma vírgula. Ocorre uma vez por compilação.|  
 |NOLOCK ou READUNCOMMITTED em UPDATE ou DELETE|NOLOCK ou READUNCOMMITTED foram encontradas na cláusula FROM de uma instrução UPDATE ou DELETE. Remova as dicas de tabela NOLOCK ou READUNCOMMITTED da cláusula FROM.|  
-|Operadores de junção externa não ANSI *= ou =\*|Uma instrução que usa a sintaxe de junção * = ou = \* foi encontrada. Reescreva a instrução para usar a sintaxe de junção ANSI. Ocorre uma vez por compilação.|  
+|Operadores de junção externa não ANSI *= ou =\*|Uma instrução que usa a sintaxe de junção * = ou =\* foi encontrada. Reescreva a instrução para usar a sintaxe de junção ANSI. Ocorre uma vez por compilação.|  
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Referencias a sys.numbered_procedure_parameters preterido foram encontradas. Não use. Ocorre uma vez por compilação.|  
 |numbered_procedures|Referencias a sys.numbered_procedures preterido foram encontradas. Não use. Ocorre uma vez por compilação.|  
@@ -131,7 +135,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |OLEDB para conexões ad hoc|SQLOLEDB não é um provedor com suporte. Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para conexões ad hoc.|  
 |PERMISSIONS|Foram encontradas referencias à função intrínseca PERMISSIONS. Consulte sys.fn_my_permissions. Ocorre uma vez por consulta.|  
 |ProcNums|A sintaxe ProcNums preterida foi encontrada. Reescreva as instruções para remover as referências. Ocorre uma vez por compilação.|  
-|READTEXT|A sintaxe READTEXT foi encontrada. Reescreva os aplicativos para usar o tipo de dados **varchar(max)** e remover as sintaxes do tipo de dados **text**. Ocorre uma vez por consulta.|  
+|READTEXT|A sintaxe READTEXT foi encontrada. Reescreva os aplicativos para usar o tipo de dados **varchar(max)** e remover as sintaxes do tipo de dados **text** . Ocorre uma vez por consulta.|  
 |RESTORE DATABASE ou LOG WITH DBO_ONLY|A sintaxe RESTORE ... WITH DBO_ONLY foi encontrada. Em vez disso, use RESTORE … RESTRICTED_USER.|  
 |RESTORE DATABASE ou LOG WITH MEDIAPASSWORD|A sintaxe RESTORE ... WITH MEDIAPASSWORD foi encontrada. WITH MEDIAPASSWORD fornece pouca segurança e deve ser removida.|  
 |RESTORE DATABASE ou LOG WITH PASSWORD|A sintaxe RESTORE ... WITH PASSWORD foi encontrada. WITH PASSWORD fornece pouca segurança e deve ser removida.|  
@@ -185,7 +189,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |sp_defaultlanguage|O procedimento sp_defaultlanguage foi encontrado. Em vez disso, use ALTER LOGIN. Ocorre uma vez por compilação.|  
 |sp_denylogin|O procedimento sp_denylogin foi encontrado. Em vez disso, use ALTER LOGIN DISABLE. Ocorre uma vez por consulta.|  
 |sp_depends|O procedimento sp_depends foi encontrado. Use sys.dm_sql_referencing_entities e sys.dm_sql_referenced_entities em vez disso. Ocorre uma vez por consulta.|  
-|sp_detach_db @keepfulltextindexfile|O argumento @ keepfulltextindexfile foi encontrado em uma instrução sp_detach_db. Não use este argumento.|  
+|sp_detach_db @keepfulltextindexfile|O argumento @keepfulltextindexfile foi encontrado em uma instrução sp_detach_db. Não use este argumento.|  
 |sp_dropalias|O procedimento sp_dropalias foi encontrado. Substitua aliases por uma combinação de contas de usuário e funções de banco de dados. Use sp_dropalias para remover aliases em bancos de dados atualizados. Ocorre uma vez por compilação.|  
 |sp_dropapprole|O procedimento sp_dropapprole foi encontrado. Em vez disso, use DROP APPLICATION ROLE. Ocorre uma vez por consulta.|  
 |sp_dropextendedproc|O procedimento sp_dropextendedproc foi encontrado. Em vez disso, use CLR. Ocorre uma vez por compilação.|  
@@ -198,8 +202,8 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |sp_fulltext_catalog|O procedimento sp_fulltext_catalog foi encontrado. Em vez disso, use CREATE/ALTER/DROP FULLTEXT CATALOG. Ocorre uma vez por compilação.|  
 |sp_fulltext_column|O procedimento sp_fulltext_column foi encontrado. Em vez disso, use ALTER FULLTEXT INDEX. Ocorre uma vez por compilação.|  
 |sp_fulltext_database|O procedimento sp_fulltext_database foi encontrado. Em vez disso, use ALTER DATABASE. Ocorre uma vez por compilação.|  
-|sp_fulltext_service @ action=clean_up|A opção clean_up do procedimento sp_fulltext_service foi encontrada. Ocorre uma vez por consulta.|  
-|sp_fulltext_service @ action=connect_timeout|A opção connect_timeout do procedimento sp_fulltext_service foi encontrada. Ocorre uma vez por consulta.|  
+|sp_fulltext_service @action=clean_up|A opção clean_up do procedimento sp_fulltext_service foi encontrada. Ocorre uma vez por consulta.|  
+|sp_fulltext_service @action=connect_timeout|A opção connect_timeout do procedimento sp_fulltext_service foi encontrada. Ocorre uma vez por consulta.|  
 |sp_fulltext_service @action=data_timeout|A opção data_timeout do procedimento sp_fulltext_service foi encontrada. Ocorre uma vez por consulta.|  
 |sp_fulltext_service @action=resource_usage|A opção resource_usage do procedimento sp_fulltext_service foi encontrada. Essa opção não tem nenhuma função. Ocorre uma vez por consulta.|  
 |sp_fulltext_table|O procedimento sp_fulltext_table foi encontrado. Em vez disso, use CREATE/ALTER/DROP FULLTEXT INDEX. Ocorre uma vez por compilação.|  
@@ -264,10 +268,10 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |sysusers|Referências a sysusers foram encontradas. Use sys.database_principals em vez disso. Ocorre uma vez por compilação.|  
 |Dica de tabela sem WITH|Uma instrução que usou dicas de tabela sem usar a palavra-chave WITH foi encontrada. Modifique as instruções para incluir a palavra WITH. Ocorre uma vez por compilação.|  
 |Opção de tabela 'text in row'|Referências à opção de tabela 'text in row' foram encontradas. Use 'large value types out of row' de sp_tableoption em seu lugar. Ocorre uma vez por consulta.|  
-|TEXTPTR|Referências à função TEXTPTR foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext** e **image**. Ocorre uma vez por consulta.|  
-|TEXTVALID|Referências à função TEXTVALID foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext** e **image**. Ocorre uma vez por consulta.|  
-|TIMESTAMP|Número total de vezes que o tipo preterido de dados **timestamp** foi encontrado em uma instrução DDL. Em seu lugar, use o tipo de dados **rowversion**.|  
-|UPDATETEXT ou WRITETEXT|As instruções UPDATETEXT ou WRITETEXT foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext** e **image**. Ocorre uma vez por consulta.|  
+|TEXTPTR|Referências à função TEXTPTR foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext**e **image** . Ocorre uma vez por consulta.|  
+|TEXTVALID|Referências à função TEXTVALID foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext**e **image** . Ocorre uma vez por consulta.|  
+|TIMESTAMP|Número total de vezes que o tipo preterido de dados **timestamp** foi encontrado em uma instrução DDL. Em seu lugar, use o tipo de dados **rowversion** .|  
+|UPDATETEXT ou WRITETEXT|As instruções UPDATETEXT ou WRITETEXT foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext**e **image** . Ocorre uma vez por consulta.|  
 |USER_ID|Referências à função USER_ID foram encontradas. Use a função DATABASE_PRINCIPAL_ID em seu lugar. Ocorre uma vez por compilação.|  
 |Usando OLEDB para servidores vinculados||  
 |Formato de armazenamento vardecimal|O uso do formato de armazenamento **vardecimal** foi encontrado. Em vez disso, use a compactação de dados.|  
@@ -277,13 +281,14 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |xp_loginconfig|O procedimento xp_loginconfig foi encontrado. Em vez disso, use o argumento IsIntegratedSecurityOnly de SERVERPROPERTY. Ocorre uma vez por consulta.|  
 |xp_revokelogin|O procedimento xp_revokelogin foi encontrado. Em vez disso, use ALTER LOGIN DISABLE ou DROP LOGIN. Ocorre uma vez por compilação.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Recursos de pesquisa de texto completo preteridos no SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Classe de evento Deprecation Announcement](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Classe de evento Deprecation Final Support](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
  [Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Recursos de pesquisa de texto completo descontinuados no SQL Server 2016](../Topic/Discontinued%20Full-Text%20Search%20Features%20in%20SQL%20Server%202016.md)   
+ [Recursos de pesquisa de texto completo descontinuados no SQL Server 2016](http://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
  [Usar objetos do SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
+

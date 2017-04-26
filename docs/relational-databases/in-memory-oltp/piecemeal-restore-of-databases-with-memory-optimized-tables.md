@@ -1,23 +1,27 @@
 ---
-title: "Restaura&#231;&#227;o por etapas de bancos de dados com tabelas com otimiza&#231;&#227;o de mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Restauração por etapas de bancos de dados com tabelas com otimização de memória | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b540d4b491980a57ec88d7a7717821a4e38b76a9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaura&#231;&#227;o por etapas de bancos de dados com tabelas com otimiza&#231;&#227;o de mem&#243;ria
-  A restauração por etapas tem suporte em bancos de dados com tabelas com otimização de memória, exceto para uma restrição descrita abaixo. Para obter mais informações sobre backup e restauração por etapas, veja [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) e [Restaurações por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
+# <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Restauração por etapas de bancos de dados com tabelas com otimização de memória
+  A restauração por etapas tem suporte em bancos de dados com tabelas com otimização de memória, exceto para uma restrição descrita abaixo. Para obter mais informações sobre backup e restauração por etapas, veja [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) e [Restaurações por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
  Um grupo de arquivos com otimização de memória deve ser submetido a backup e restaurado junto com um grupo de arquivos primário:  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 16
   
     -   Usando o reparo de página, você pode corrigir danos de página, especificamente restaurando a página. Para obter mais informações, veja [Restaurar páginas &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md).  
   
-## Exemplos  
+## <a name="samples"></a>Exemplos  
  Os exemplos usam o seguinte esquema:  
   
 ```  
@@ -61,7 +65,7 @@ ALTER DATABASE imoltp ADD FILE (name='imoltp_mod2', filename='c:\data\imoltp_mod
 GO  
 ```  
   
-### Backup  
+### <a name="backup"></a>Backup  
  Este exemplo mostra como fazer backup do grupo de arquivos primário e do grupo de arquivos com otimização de memória. Você deve especificar o grupo de arquivos primário e com otimização de memória.  
   
 ```  
@@ -74,7 +78,7 @@ backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\d
 backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
 ```  
   
-### Restaurar  
+### <a name="restore"></a>Restaurar  
  O exemplo a seguir mostra como restaurar o grupo de arquivos primário e o grupo de arquivos com otimização de memória juntos.  
   
 ```  
@@ -94,7 +98,7 @@ FROM  DISK = N'c:\data\imoltp_secondary.dmp' WITH  FILE = 1,  RECOVERY,  NOUNLOA
 GO  
 ```  
   
-## Consulte também  
- [Backup, restauração e recuperação de tabelas com otimização de memória](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>Consulte também  
+ [Backup, restauração e recuperação de tabelas com otimização de memória](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

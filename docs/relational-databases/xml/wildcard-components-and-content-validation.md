@@ -1,32 +1,36 @@
 ---
-title: "Componentes curinga e valida&#231;&#227;o de conte&#250;do | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "componentes curinga [XML]"
-  - "validação de conteúdo [XML]"
+title: "Componentes curinga e validação de conteúdo | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- wildcard components [XML]
+- content validation [XML]
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3eac26ac7add89b64c19672ae9fd34e224c6e7e1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Componentes curinga e valida&#231;&#227;o de conte&#250;do
+# <a name="wildcard-components-and-content-validation"></a>Componentes curinga e validação de conteúdo
   Componentes curinga são usados para aumentar a flexibilidade do que é permitido aparecer em um modelo de conteúdo. Esses componentes têm suporte na linguagem XSD das seguintes maneiras:  
   
--   Componentes curinga de elemento. Esses são representados pelo elemento **\<xsd:any>**.  
+-   Componentes curinga de elemento. Eles são representados pelo elemento **\<xsd:any>**.  
   
--   Componentes curinga de atributo. Esses são representados pelo elemento **\<xsd:anyAttribute>**.  
+-   Componentes curinga de atributo. Eles são representados pelo elemento **\<xsd:anyAttribute>**.  
   
- Os elementos de caractere curinga, **\<xsd:any>** e **\<xsd:anyAttribute>**, dão suporte ao uso de um atributo **processContents**. Isso permite especificar um valor que indica como aplicativos XML tratam a validação do conteúdo do documento associado a esses elementos de caracteres curinga. Estes são os diferentes valores e seus efeitos:  
+ Ambos os elementos de caractere curinga, **\<xsd:any>** e **\<xsd:anyAttribute>**, dão suporte ao uso de um atributo **processContents**. Isso permite especificar um valor que indica como aplicativos XML tratam a validação do conteúdo do documento associado a esses elementos de caracteres curinga. Estes são os diferentes valores e seus efeitos:  
   
 -   O valor **strict** especifica que o conteúdo é completamente validado.  
   
@@ -34,10 +38,10 @@ caps.handback.revision: 13
   
 -   O valor **lax** especifica que apenas elementos e atributos para os quais definições de esquema estão disponíveis são validados.  
   
-## Validação incerta e elementos xs:anyType  
- A especificação do Esquema XML usa validação **lax** para elementos do tipo **anyType**. Como o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] não dá suporte à validação incerta, a validação estrita foi aplicada para elementos do **anyType**. A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], há suporte para a validação incerta. Conteúdo de elementos do tipo **anyType** serão validados usando a validação incerta.  
+## <a name="lax-validation-and-xsanytype-elements"></a>Validação incerta e elementos xs:anyType  
+ A especificação do Esquema XML usa validação **lax** para elementos do tipo **anyType** . Como o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] não dá suporte à validação incerta, a validação estrita foi aplicada para elementos do **anyType**. A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], há suporte para a validação incerta. Conteúdo de elementos do tipo **anyType** serão validados usando a validação incerta.  
   
- O exemplo a seguir ilustra a validação incerta. O elemento do esquema `e` é do tipo **anyType**. O exemplo cria variáveis **xml** com tipo e ilustra a validação incerta do elemento do tipo **anyType**.  
+ O exemplo a seguir ilustra a validação incerta. O elemento do esquema `e` é do tipo **anyType** . O exemplo cria variáveis **xml** com tipo e ilustra a validação incerta do elemento do tipo **anyType** .  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
@@ -75,7 +79,7 @@ SELECT @var
 GO  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Requisitos e limitações de uso de coleções de esquema XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

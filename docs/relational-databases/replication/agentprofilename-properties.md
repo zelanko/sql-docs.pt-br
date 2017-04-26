@@ -1,29 +1,33 @@
 ---
-title: "Propriedades do &lt;Nome_de_Perfil_do_Agente&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.profiles.perfprofileprops.f1"
-helpviewer_keywords: 
-  - "caixa de diálogo Propriedades do Perfil de Agente"
+title: Propriedades de &lt;AgentProfileName&gt; | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.profiles.perfprofileprops.f1
+helpviewer_keywords:
+- Agent Profile Properties dialog box
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6932152bce33b84877287560d2ec769005c0c20f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propriedades do &lt;Nome_de_Perfil_do_Agente&gt;
-  Use o **Propriedades de perfis de agente** caixa de diálogo para exibir os valores especificados para cada parâmetro do agente em um perfil e modificar os valores de perfis definidos pelo usuário.  
+# <a name="ltagentprofilenamegt-properties"></a>Propriedades de &lt;AgentProfileName&gt;
+  Use a caixa de diálogo **Propriedades de Perfis do Agente** para exibir os valores especificados para cada parâmetro de agente em um perfil e modificar os valores de perfis definidos pelo usuário.  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Nome**  
  O nome do perfil.  
   
@@ -33,15 +37,15 @@ caps.handback.revision: 17
  **Parâmetro**  
  Os parâmetros de agente incluídos no perfil. Perfis não especificam necessariamente um valor para cada parâmetro. Para consultar todos os parâmetros válidos de um determinado agente, desmarque a caixa de seleção **Mostrar apenas os parâmetros usados neste perfil** . Para obter descrições de cada parâmetro, consulte.  
   
--   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Agente de Instantâneo de Replicação](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
--   [Replication Agente de Leitor de Log](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
+-   [Agente do Leitor de Log de Replicação](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [Agente de Distribuição de Replicação](../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
--   [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)  
+-   [Agente de Mesclagem de Replicação](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
--   [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+-   [Agente de Leitor de Fila de Replicação](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
  **Valor padrão**  
  O valor padrão para cada parâmetro de agente.  
@@ -52,9 +56,9 @@ caps.handback.revision: 17
  **Mostrar apenas os parâmetros usados neste perfil**  
  Desmarque para mostrar todos os parâmetros válidos para um determinado agente.  
   
-## Consulte também  
- [Trabalhar com perfis do agente de replicação](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
- [Visão geral dos agentes de replicação.](../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Perfis do Agente de Replicação](../../relational-databases/replication/agents/replication-agent-profiles.md)  
+## <a name="see-also"></a>Consulte também  
+ [Trabalhar com perfis do Agente de Replicação](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
+ [Visão geral dos agentes de replicação](../../relational-databases/replication/agents/replication-agents-overview.md)   
+ [Perfis do agente de replicação](../../relational-databases/replication/agents/replication-agent-profiles.md)  
   
   

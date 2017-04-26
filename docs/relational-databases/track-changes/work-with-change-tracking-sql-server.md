@@ -1,33 +1,37 @@
 ---
-title: "Trabalhar com o controle de altera&#231;&#245;es (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controle de alterações [SQL Server], fazendo alterações"
-  - "controle de alterações [SQL Server], solução de problemas"
-  - "atualizando dados [SQL Server]"
-  - "solução de problemas [SQL Server], controle de alterações"
-  - "alterações de dados [SQL Server]"
-  - "controlando alterações de dados [SQL Server]"
-  - "dados [SQL Server], alterando"
-  - "controle de alterações [SQL Server], restauração de dados"
-  - "controle de alterações [SQL Server], garantindo resultados consistentes"
-  - "controle de alterações [SQL Server], controlando alterações"
+title: "Trabalhar com o controle de alterações (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change tracking [SQL Server], making changes
+- change tracking [SQL Server], troubleshooting
+- updating data [SQL Server]
+- troubleshooting [SQL Server], change tracking
+- data changes [SQL Server]
+- tracking data changes [SQL Server]
+- data [SQL Server], changing
+- change tracking [SQL Server], data restore
+- change tracking [SQL Server], ensuring consistent results
+- change tracking [SQL Server], handling changes
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7440e5f259c45a782066ac311a2f9f42c134c25
+ms.lasthandoff: 04/11/2017
+
 ---
-# Trabalhar com o controle de altera&#231;&#245;es (SQL Server)
+# <a name="work-with-change-tracking-sql-server"></a>Trabalhar com o controle de alterações (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Os aplicativos que usam o controle de alterações devem ser capazes de obter as alterações controladas, aplicá-las a outro repositório de dados e atualizar o banco de dados de origem. Este tópico descreve como executar essas tarefas e também a função que o controle de alterações desempenha quando ocorre um failover e um banco de dados precisa ser restaurado de um backup.  
@@ -35,13 +39,13 @@ caps.handback.revision: 26
 ##  <a name="Obtain"></a> Obter alterações usando as funções de controle de alterações  
  Descreve como usar as funções de controle de alterações para obter as alterações feitas em um banco de dados e as respectivas informações.  
   
-### Sobre as funções de controle de alterações  
+### <a name="about-the-change-tracking-functions"></a>Sobre as funções de controle de alterações  
  Os aplicativos podem usar as funções a seguir para obter as alterações feitas em um banco de dados e as informações sobre as alterações:  
   
  Função CHANGETABLE(CHANGES…)  
  Esta função de conjunto de linhas é usada para consultar informações de alteração. A função consulta os dados armazenados nas tabelas internas de controle de alterações e retorna um conjunto de resultados que contém as chaves primárias de linhas, que foram alteradas, junto com outras informações de alterações como a operação, as colunas atualizadas e a versão da linha.  
   
- A função CHANGETABLE(CHANGES…) usa uma última versão de sincronização como um argumento. A última versão de sincronização é obtida por meio da variável `@last_synchronization_version`. A semântica da última versão de sincronização é a seguinte:  
+ A função CHANGETABLE(CHANGES…) usa uma última versão de sincronização como um argumento. A última versão de sincronização é obtida por meio da variável `@last_synchronization_version` . A semântica da última versão de sincronização é a seguinte:  
   
 -   O cliente de chamada obteve e tem conhecimento de todas as alterações até, e inclusive, a última versão de sincronização.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 26
   
      A ilustração a seguir mostra como a função CHANGETABLE(CHANGES…) é usada para obter alterações.  
   
-     ![Exemplo da saída de consulta de controle de alterações](../../relational-databases/track-changes/media/queryoutput.gif "Exemplo da saída de consulta de controle de alterações")  
+     ![Exemplo de saída da consulta de controle de alterações](../../relational-databases/track-changes/media/queryoutput.gif "Exemplo de saída da consulta de controle de alterações")  
   
  Função CHANGE_TRACKING_CURRENT_VERSION()  
  É usada para obter a versão atual que será usada na próxima vez ao consultar alterações. Essa versão representa a versão da última transação confirmada.  
@@ -57,7 +61,7 @@ caps.handback.revision: 26
  Função CHANGE_TRACKING_MIN_VALID_VERSION()  
  Esta função é usada para obter a versão mínima válida que o cliente pode ter e também obter os resultados válidos de CHANGETABLE(). O cliente deverá comparar a última versão de sincronização com o valor retornado por essa função. Se a última versão de sincronização for menor que a versão retornada por essa função, o cliente não poderá obter os resultados válidos de CHANGETABLE() e deverá reinicializar os dados.  
   
-### Obtendo dados iniciais  
+### <a name="obtaining-initial-data"></a>Obtendo dados iniciais  
  Antes que um aplicativo possa obter as alterações pela primeira vez, ele deverá enviar uma consulta para obter os dados iniciais e a versão de sincronização. O aplicativo deve obter os dados adequados diretamente da tabela e usar a função CHANGE_TRACKING_CURRENT_VERSION() para obter a versão inicial. Essa versão passará para CHANGETABLE(CHANGES…) na primeira vez em que as alterações forem obtidas.  
   
  O exemplo a seguir mostra como obter a versão de sincronização inicial, bem como o conjunto de dados inicial.  
@@ -73,8 +77,8 @@ caps.handback.revision: 26
         SalesLT.Product AS P  
 ```  
   
-### Usando as funções de controle de alterações para obter alterações  
- Para obter as linhas alteradas de uma tabela e as informações sobre as alterações, use a função CHANGETABLE(CHANGES…). Por exemplo, a consulta a seguir obtém as alterações da tabela `SalesLT.Product`.  
+### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>Usando as funções de controle de alterações para obter alterações  
+ Para obter as linhas alteradas de uma tabela e as informações sobre as alterações, use a função CHANGETABLE(CHANGES…). Por exemplo, a consulta a seguir obtém as alterações da tabela `SalesLT.Product` .  
   
 ```tsql  
 SELECT  
@@ -85,7 +89,7 @@ FROM
   
 ```  
   
- Geralmente, um cliente optará por obter os últimos dados de uma linha em vez de apenas as chaves primárias da linha. Além disso, um aplicativo juntaria os resultados de CHANGETABLE(CHANGES…) com os dados na tabela do usuário. Por exemplo, a consulta a seguir une as linhas da tabela `SalesLT.Product` para obter os valores das colunas `Name` e `ListPrice`. Observe o uso da função `OUTER JOIN`. Ela é obrigatória para garantir que as informações de alteração sejam retornadas para essas linhas que foram excluídas da tabela do usuário.  
+ Geralmente, um cliente optará por obter os últimos dados de uma linha em vez de apenas as chaves primárias da linha. Além disso, um aplicativo juntaria os resultados de CHANGETABLE(CHANGES…) com os dados na tabela do usuário. Por exemplo, a consulta a seguir une as linhas da tabela `SalesLT.Product` para obter os valores das colunas `Name` e `ListPrice` . Observe o uso da função `OUTER JOIN`. Ela é obrigatória para garantir que as informações de alteração sejam retornadas para essas linhas que foram excluídas da tabela do usuário.  
   
 ```tsql  
 SELECT  
@@ -125,10 +129,10 @@ ON
     P.ProductID = CT.ProductID  
 ```  
   
-### Números de versão  
+### <a name="version-numbers"></a>Números de versão  
  Um banco de dados com o controle de alterações habilitado tem um contador de versões que aumenta à medida que são realizadas mudanças nas tabelas controladas. Cada linha alterada tem um número de versão associado. Quando uma solicitação é enviada a um aplicativo para consultar as alterações, uma função é chamada para fornecer um número de versão. A função retorna informações sobre todas as alterações que foram feitas desde aquela versão. De certas formas, a versão de controle de alterações é semelhante no conceito ao tipo de dados **rowversion** .  
   
-### Validando a última versão sincronizada  
+### <a name="validating-the-last-synchronized-version"></a>Validando a última versão sincronizada  
  As informações sobre as alterações são mantidas por um período limitado. A duração desse tempo e controlada pelo parâmetro CHANGE_RETENTION que pode ser especificado como parte de ALTER DATABASE.  
   
  Tenha em mente que o tempo especificado em CHANGE_RETENTION determina a frequência com que todos os aplicativos solicitarão alterações do banco de dados. Se o valor de *last_synchronization_version* em um aplicativo for anterior ao valor da versão de sincronização mínima válida para uma tabela, esse aplicativo não poderá executar a enumeração de alteração válida. Isso ocorre porque algumas informações de alteração podem ser apagadas. Antes que um aplicativo possa obter as alterações usando a função CHANGETABLE(CHANGES…), ele deve validar o valor de *last_synchronization_version* para passá-lo para CHANGETABLE(CHANGES…). Se o valor de *last_synchronization_version* não for válido, esse aplicativo deverá reinicializar todos os dados.  
@@ -158,7 +162,7 @@ BEGIN
 END  
 ```  
   
-### Usando o rastreamento de coluna  
+### <a name="using-column-tracking"></a>Usando o rastreamento de coluna  
  O rastreamento de coluna permite que os aplicativos obtenham dados apenas das colunas que foram alteradas em vez de toda a linha. Por exemplo, considere o cenário no qual uma tabela tem uma ou mais colunas extensas, mas que raramente têm alterações, e outras colunas com alterações frequentes. Com o rastreamento de coluna, um aplicativo pode determinar se apenas uma linha foi alterada e se seria preciso sincronizar todos os dados da coluna maior. Entretanto, por meio do rastreamento de coluna, um aplicativo poderá determinar se os dados da coluna grande foram alterados e sincronizar apenas os dados, caso tenham sido alterados.  
   
  As informações de rastreamento de coluna são exibidas na coluna SYS_CHANGE_COLUMNS que é retornada pela função CHANGETABLE(CHANGES…).  
@@ -193,7 +197,7 @@ ON
      CT.SYS_CHANGE_OPERATION = 'U'  
 ```  
   
-### Obtendo resultados consistentes e corretos  
+### <a name="obtaining-consistent-and-correct-results"></a>Obtendo resultados consistentes e corretos  
  Para obter os dados alterados de uma tabela é preciso seguir várias etapas. Lembre-se de que podem ocorrer resultados inconsistentes ou incorretos, se determinados problemas não forem considerados e tratados.  
   
  Por exemplo, para obter as alterações realizadas em uma tabela Sales e uma tabela SalesOrders, um aplicativo executaria as seguintes etapas:  
@@ -220,7 +224,7 @@ ON
   
  Para superar os desafios previamente listados, é recomendável usar o isolamento de instantâneo. Isso ajudará a garantir a consistência das informações de alterações e evitará situações de competição relacionadas à tarefa de limpeza em segundo plano. Se você optar por não usar as transações de instantâneo, o desenvolvendo um aplicativo que usa controle de alterações poderá exigeer mais esforço.  
   
-#### Usando o isolamento de instantâneo  
+#### <a name="using-snapshot-isolation"></a>Usando o isolamento de instantâneo  
  O controle de alterações foi projetado para funcionar bem com o isolamento de instantâneo. O isolamento de instantâneo deve estar habilitado para o banco de dados. Todas as etapas são obrigatórias para obter as alterações que devem estar incluídas em uma transação de instantâneo. Isso garantirá que todas as alterações realizadas nos dados durante a obtenção de alterações não estarão visíveis às consultas dentro da transação de instantâneo.  
   
  Para obter dados dentro de uma transação de instantâneo, execute as seguintes etapas:  
@@ -264,7 +268,7 @@ COMMIT TRAN
   
  Para obter mais informações sobre transações de instantâneos, veja [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
-#### Alternativas para usar o isolamento de instantâneo  
+#### <a name="alternatives-to-using-snapshot-isolation"></a>Alternativas para usar o isolamento de instantâneo  
  Existem alternativas para o uso do isolamento de instantâneo, mas elas exigem mais trabalho para certificar-se de que todos os requisitos do aplicativos sejam atendidos. Para verificar se *last_synchronization_version* é válido e se os dados não foram removidos pelo processo de limpeza antes de as alterações serem obtidas, siga estas etapas:  
   
 1.  Verificar *last_synchronization_version* depois das chamadas para CHANGETABLE().  
@@ -287,7 +291,7 @@ COMMIT TRAN
 >  Ao optar pela abordagem que funcionará com o aplicativo quando você estiver usando o controle de alterações (ou qualquer mecanismo de controle personalizado), será preciso considerar uma análise significativa. Portanto, é muito mais simples usar o isolamento de instantâneo.  
   
 ##  <a name="Handles"></a> Como o controle de alterações controla as alterações em um banco de dados  
- Alguns aplicativos que usam controle de alterações executam sincronização de duas vias com outro repositório de dados. Isto é, as alterações que são feitas no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são atualizadas no outro armazenamento de dados, e as alterações feitas no outro repositório são atualizadas no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Alguns aplicativos que usam controle de alterações executam sincronização de duas vias com outro repositório de dados. Isto é, as alterações que são feitas no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são atualizadas no outro armazenamento de dados, e as alterações feitas no outro repositório são atualizadas no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Quando um aplicativo atualiza o banco de dados local com alteração de outro armazenamento de dados, o aplicativo deve executar as seguintes operações:  
   
@@ -309,7 +313,7 @@ COMMIT TRAN
   
      Um aplicativo pode usar esta cláusula para armazenar dados de contexto.  
   
-### Verificando conflitos  
+### <a name="checking-for-conflicts"></a>Verificando conflitos  
  Em um cenário de sincronização de duas vias, o aplicativo cliente deve determinar se uma linha não foi atualizada desde que o aplicativo obteve as últimas alterações.  
   
  O exemplo a seguir mostra como usar a função CHANGETABLE(VERSION …) para verificar conflitos do modo mais eficiente, sem uma consulta separada. No exemplo, `CHANGETABLE(VERSION …)` determina o `SYS_CHANGE_VERSION` para a linha especificada por `@product id`. `CHANGETABLE(CHANGES …)` pode obter as mesmas informações, mas isso seria menos eficiente. Se o valor de `SYS_CHANGE_VERSION` para a linha for maior que o valor de `@last_sync_version`, haverá um conflito. Se houver um conflito, a linha não será atualizada. A verificação `ISNULL()` é necessária porque não poderia haver nenhuma informações de alteração disponível para a linha. Nenhuma informação de alteração existiria se a linha não tivesse sido atualizada, visto que o controle de alteração estava habilitado ou a informação de alteração foi limpa.  
@@ -355,7 +359,7 @@ BEGIN
 END  
 ```  
   
-### Configurando informações de contexto  
+### <a name="setting-context-information"></a>Configurando informações de contexto  
  Usando a cláusula WITH CHANGE_TRACKING_CONTEXT, um aplicativo pode armazenar informações de contexto junto com as informações de alteração. Essas informações podem ser obtidas na coluna SYS_CHANGE_CONTEXT que é retornada por CHANGETABLE(CHANGES …).  
   
  Informações de contexto são normalmente usadas para identificar a origem das alterações. Se a origem da alteração puder ser identificada, aquela informação poderá ser usada por um repositório de dados para evitar a obtenção de alterações quando ele for novamente sincronizado.  
@@ -377,8 +381,8 @@ END
          0)  
 ```  
   
-### Assegurando resultados consistentes e corretos  
- Um aplicativo deve considerar o processo de limpeza quando validar o valor de @ last_sync_version. Isso é porque dados podem ter sido removidos depois que CHANGE_TRACKING_MIN_VALID_VERSION () foi chamado, mas antes que a atualização fosse feita.  
+### <a name="ensuring-consistent-and-correct-results"></a>Assegurando resultados consistentes e corretos  
+ Um aplicativo deve considerar o processo de limpeza ao validar o valor de @last_sync_version. Isso é porque dados podem ter sido removidos depois que CHANGE_TRACKING_MIN_VALID_VERSION () foi chamado, mas antes que a atualização fosse feita.  
   
 > [!IMPORTANT]  
 >  Recomendamos que você use isolamento de instantâneo e faça as alterações dentro de uma transação de instantâneo.  
@@ -432,7 +436,7 @@ COMMIT TRAN
   
 -   Quando um cliente consultar alterações, registre o último número de versão de sincronização para cada cliente no servidor. Se houver um problema com os dados, os últimos números de versão sincronizados não serão compatíveis. Isso indica que é necessária uma reinicialização.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Controle de alterações de dados &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Sobre o controle de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Gerenciar o controle de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)   
@@ -443,3 +447,4 @@ COMMIT TRAN
  [WITH CHANGE_TRACKING_CONTEXT &#40;Transact-SQL&#41;](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)  
   
   
+

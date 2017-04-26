@@ -1,50 +1,51 @@
 ---
-title: "Permiss&#245;es (Mecanismo de Banco de Dados) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseuser.permissions.database.f1--May use common.permissions"
-  - "sql13.swb.databaseuser.permissions.object.f1--May use common.permissions"
-helpviewer_keywords: 
-  - "permissão REFERENCES"
-  - "permissões [SQL Server]"
-  - "segurança [SQL Server], permissões"
-  - "convenções de nomenclatura [SQL Server]"
+title: "Permissões (Mecanismo de Banco de Dados) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseuser.permissions.database.f1--May use common.permissions
+- sql13.swb.databaseuser.permissions.object.f1--May use common.permissions
+helpviewer_keywords:
+- REFERENCES permission
+- permissions [SQL Server]
+- security [SQL Server], permissions
+- naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 caps.latest.revision: 76
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e1c8c3f3c82e39da5e5f3b1cd018af8b3b2d26d7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Permiss&#245;es (Mecanismo de Banco de Dados)
+# <a name="permissions-database-engine"></a>Permissões (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Todo protegível do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem permissões associadas que podem ser concedidas a uma entidade de segurança. As permissões no [!INCLUDE[ssDE](../../includes/ssde-md.md)] são gerenciadas no nível do servidor atribuídas a funções de logon e de servidor, e no nível do banco de dados atribuídas a funções de usuários do banco de dados e funções de banco de dados. O modelo para o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] tem o mesmo sistema para as permissões de banco de dados, mas as permissões no nível do servidor não estão disponíveis. Este tópico contém a lista completa de permissões. Para obter uma implementação típica das permissões, veja [Introdução às permissões do Mecanismo de Banco de Dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-O número total de permissões para [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] é 236. A maioria das permissões se aplica a todas as plataformas, mas algumas delas, não. Por exemplo, permissões de nível de servidor não podem ser concedidas no banco de dados SQL, e algumas permissões só fazem sentido no [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] expôs 230 permissões. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] expôs 219 permissões. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] expôs 214 permissões. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] expôs 195 permissões. O tópico [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) especifica os tópicos que são novos em versões recentes. O gráfico a seguir mostra as permissões e as relações entre elas. Algumas das permissões de nível superior (como `CONTROL SERVER`) são listadas várias vezes.
+O número total de permissões para o [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e o [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] é 237. A maioria das permissões se aplica a todas as plataformas, mas algumas delas, não. Por exemplo, permissões de nível de servidor não podem ser concedidas no banco de dados SQL, e algumas permissões só fazem sentido no [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] expôs 230 permissões. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] expôs 219 permissões. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] expôs 214 permissões. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] expôs 195 permissões. O tópico [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) especifica os tópicos que são novos em versões recentes. O gráfico a seguir mostra as permissões e as relações entre elas. Algumas das permissões de nível superior (como `CONTROL SERVER`) são listadas várias vezes. Clique na imagem para baixar o **Cartaz de permissões do Mecanismo de Banco de Dados** no formato pdf.  
   
-![Permissões do Mecanismo de Banco de Dados](../../relational-databases/security/media/database-engine-permissions.PNG) 
+[![Permissões do Mecanismo de Banco de Dados](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
->[!NOTE]
-> Como parte deste tópico, o cartaz é pequeno demais para ser lido. Baixe o Database Engine Permissions Poster (Cartaz de Permissões de Mecanismo de Banco de Dados) em [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
-
-Depois de compreender as permissões, aplique permissões em nível de servidor a logons e a usuários de permissões no nível de banco de dados com as instruções [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md) e [DENY](../../t-sql/statements/deny-transact-sql.md). Por exemplo:   
+Depois de compreender as permissões, aplique permissões em nível de servidor a logons e a usuários de permissões no nível de banco de dados com as instruções [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)e [DENY](../../t-sql/statements/deny-transact-sql.md) . Por exemplo:   
 ```tsql
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
 REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
 Para obter dicas sobre como planejar um sistema de permissões, confira [Introdução a permissões de mecanismo de banco de dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
   
-##  <a name="a-nameconventionsa-permissions-naming-conventions"></a><a name="_conventions"></a> Convenções de Nomenclatura de Permissões  
+##  <a name="_conventions"></a> Permissions Naming Conventions  
  A seguir, encontram-se as convenções gerais a serem adotadas ao se nomear permissões:  
   
 -   CONTROL  
@@ -55,11 +56,11 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
   
      Confere a capacidade de alterar as propriedades, menos a propriedade de um protegível específico. Quando concedido em um escopo, ALTER também concede a capacidade de alterar, criar ou descartar qualquer protegível contido naquele escopo. Por exemplo, a permissão ALTER em um esquema inclui a capacidade de criar, alterar e descartar objetos do esquema.  
   
--   ALTER ANY \<*Protegível do Servidor*>, em que *Protegível do Servidor* pode ser qualquer protegível do servidor.  
+-   ALTER ANY \<*Server Securable*>, em que *Server Securable* pode ser qualquer protegível do servidor.  
   
      Confere a capacidade de criar, alterar ou remover instâncias individuais do *Protegível de Servidor*. Por exemplo, ALTER ANY LOGIN confere a capacidade de criar, alterar ou descartar qualquer logon na instância.  
   
--   ALTER ANY \<*Protegível do Banco de Dados*>, em que *Protegível por Banco de Dados* pode ser qualquer protegível no nível do banco de dados.  
+-   ALTER ANY \<*Database Securable*>, em que *Database Securable* pode ser qualquer protegível no nível de banco de dados.  
   
      Confere a capacidade de criar, alterar ou remover instâncias individuais do *Protegível do Banco de Dados*. Por exemplo, ALTER ANY SCHEMA confere a capacidade de criar, alterar ou descartar qualquer esquema no banco de dados.  
   
@@ -75,15 +76,15 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
   
      Permite que o usuário autorizado represente o usuário.  
   
--   CREATE \<*Protegível de Servidor*>  
+-   CREATE \<*Server Securable*>  
   
      Confere ao usuário autorizado a habilidade para criar o *Protegível de Servidor*.  
   
--   CREATE \<*Protegível de Banco de Dados*>  
+-   CREATE \<*Database Securable*>  
   
      Confere ao usuário autorizado a habilidade de criar o *Protegível de Banco de Dados*.  
   
--   CREATE \<*Protegível Contido em Esquema*>  
+-   CREATE \<*Schema-contained Securable*>  
   
      Confere a capacidade para criar o protegível contido em esquema. Porém, a permissão ALTER no esquema é necessária para criar o protegível em um esquema específico.  
   
@@ -100,7 +101,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 ## <a name="chart-of-sql-server-permissions"></a>Gráfico de permissões do SQL Server  
  Para obter um cartaz gráfico dimensionado de todas as permissões do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em formato pdf, veja [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
-##  <a name="a-namesecurablesa-permissions-applicable-to-specific-securables"></a><a name="_securables"></a> Permissões Aplicáveis a Protegíveis Específicos  
+##  <a name="_securables"></a> Permissions Applicable to Specific Securables  
  A tabela a seguir lista classes principais de permissões e os tipos de protegíveis aos quais elas podem ser aplicadas.  
   
 |Permissão|Aplica-se a|  
@@ -111,7 +112,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 |EXECUTE|Tipos de CLR, scripts externos, procedimentos ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR), funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e sinônimos|  
 |IMPERSONATE|Logons e usuários|  
 |INSERT|Sinônimos, tabelas e colunas, exibições e colunas. A permissão pode ser concedida em nível de banco de dados, de esquema ou de objeto.|  
-|RECEIVE|Filas do [!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
+|RECEIVE|Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
 |REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />VIEW e<br />XML SCHEMA COLLECTION|  
 |SELECT|Sinônimos, tabelas e colunas, exibições e colunas. A permissão pode ser concedida em nível de banco de dados, de esquema ou de objeto.|  
 |TAKE OWNERSHIP|Todas as classes de objetos, exceto DATABASE SCOPED CONFIGURATION, LOGIN, SERVER e USER.|  
@@ -122,8 +123,8 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 > [!CAUTION]  
 >  As permissões padrão concedidas aos objetos de sistema no momento da instalação são avaliadas cuidadosamente contra possíveis ameaças e não precisam ser alteradas como parte do sistema de proteção de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Qualquer alteração nas permissões nos objetos de sistema poderia limitar ou interromper a funcionalidade e potencialmente pode deixar a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um estado sem suporte.  
   
-##  <a name="a-namepermissionsa-sql-server-permissions"></a><a name="_permissions"></a> Permissões do SQL Server  
- A tabela a seguir fornece uma lista completa de permissões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . As permissões [!INCLUDE[ssSDS](../../includes/sssds-md.md)] estão disponíveis apenas para protegíveis base com suporte. Não é possível dar permissões no nível do servidor no [!INCLUDE[ssSDS](../../includes/sssds-md.md)], no entanto, permissões de banco de dados são disponibilizadas em alguns casos.  
+##  <a name="_permissions"></a> SQL Server Permissions  
+ A tabela a seguir fornece uma lista completa de permissões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . As permissões[!INCLUDE[ssSDS](../../includes/sssds-md.md)] estão disponíveis apenas para protegíveis base com suporte. Não é possível dar permissões no nível do servidor no [!INCLUDE[ssSDS](../../includes/sssds-md.md)], no entanto, permissões de banco de dados são disponibilizadas em alguns casos.  
   
 |Protegível base|Permissões granulares no protegível base|Código de tipo de permissão|Protegível que contém o protegível base|Permissão no protegível de contêiner que implica permissão granular no protegível base|  
 |--------------------|--------------------------------------------|--------------------------|--------------------------------------------|------------------------------------------------------------------------------------------|  
@@ -364,7 +365,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="a-namealgorithma-summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Resumo do algoritmo de verificação de permissão  
+##  <a name="_algorithm"></a> Summary of the Permission Check Algorithm  
  A verificação de permissões pode ser uma tarefa complexa. O algoritmo de verificação de permissão inclui a sobreposição de associações de grupo e o encadeamento de propriedades, as permissões explícita e implícita, e pode ser afetado pelas permissões em classes de protegíveis que contêm a entidade protegível. O processo geral do algoritmo é coletar todas as permissões pertinentes. Se nenhum bloqueio DENY for localizado, o algoritmo irá procurar uma permissão GRANT que fornece acesso suficiente. O algoritmo contém três elementos essenciais, o **contexto de segurança**, o **espaço de permissão**e a **permissão necessária**.  
   
 > [!NOTE]  
@@ -426,7 +427,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 DENY na tabela é substituído por GRANT em uma coluna. No entanto, um DENY posterior na tabela removerá a coluna GRANT. 
   
-##  <a name="a-nameexamplesa-examples"></a><a name="_examples"></a> Exemplos  
+##  <a name="_examples"></a> Examples  
  Os exemplos nesta seção mostram como recuperar informações sobre permissões.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Retornando a lista completa de permissões que podem ser concedidas  
@@ -467,3 +468,4 @@ GO
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   
+

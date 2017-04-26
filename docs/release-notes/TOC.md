@@ -1,0 +1,7 @@
+# [Notas de Versão do SQL Server](sql-server-release-notes.md)
+# [Notas de Versão do SQL Server 2008 R2 SP2](sql-server-2008-r2-sp2-release-notes.md)
+# [Notas de Versão do SQL Server 2014](sql-server-2014-release-notes.md)
+# [Notas de Versão do SQL Server 2012](sql-server-2012-release-notes.md)
+# [Notas de Versão do SQL Server 2012 SP1](sql-server-2012-sp1-release-notes.md)
+# [Notas de Versão do SQL Server 2012 SP2](sql-server-2012-sp2-release-notes.md)
+# [Microsoft SQL Server](microsoft-sql-server.md)

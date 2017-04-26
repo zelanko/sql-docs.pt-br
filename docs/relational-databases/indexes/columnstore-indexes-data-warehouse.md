@@ -1,28 +1,32 @@
 ---
-title: "&#205;ndices columnstore para Data Warehouse | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Índices columnstore – data warehouse | Microsoft Docs"
+ms.custom: 
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 caps.latest.revision: 15
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ba866cdea9d6158affc31e74572bb9610ab94489
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#205;ndices columnstore para Data Warehouse
+# <a name="columnstore-indexes---data-warehouse"></a>Índices columnstore – data warehouse
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Os índices columnstore, junto com o particionamento, são essenciais para criar um data warehouse do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="whats-new"></a>Novidades  
- O [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] introduz estes recursos para melhorias de desempenho de columnstore:  
+ O[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] introduz estes recursos para melhorias de desempenho de columnstore:  
   
 -   O AlwaysOn dá suporte à consulta de um índice columnstore em uma réplica secundária legível.  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 14
 -   Isolamento de instantâneo do nível de compatibilidade do banco de dados 130  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>Melhora o desempenho combinando índices não clusterizado e columnstore  
- Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] em diante, é possível definir índices não clusterizados em um índice columnstore clusterizado.  
+ Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]em diante, é possível definir índices não clusterizados em um índice columnstore clusterizado.  
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Exemplo: melhorar a eficiência de buscas de tabelas com um índice não clusterizado  
  Para melhorar a eficiência das buscas de tabelas em um data warehouse, você pode criar um índice não clusterizado projetado para executar consultas que executam melhor com as buscas de tabelas. Por exemplo, consultas que procuram valores correspondentes ou retornam um pequeno intervalo de valores terão um desempenho melhor em um índice de árvore b em vez de um índice columnstore. Elas não exigem uma verificação completa da tabela por meio do índice columnstore, e retornarão o resultado correto com mais rapidez, fazendo uma pesquisa binária por um índice de árvore b.  
@@ -137,11 +141,12 @@ END TRAN
  Use o SI (isolamento de instantâneo) para garantir a consistência transacional, e os RCSI (isolamentos de instantâneo de leitura confirmada) para garantir a consistência no nível da instrução para consultas em índices columnstore. Isso permite que as consultas sejam executadas sem bloquear os gravadores de dados. Esse comportamento de não bloqueio também reduz consideravelmente a probabilidade de deadlocks para transações complexas. Para saber mais, confira [Isolamento de instantâneo no SQL Server](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) no MSDN.  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Índices columnstore](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Carregamento de dados dos Índices columnstore](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [Resumo de recursos com versão dos índices columnstore](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
+ Guia de índices Columnstore   
+ Carregamento de dados dos índices columnstore   
+ Resumo de recursos com versão dos índices columnstore   
  [Desempenho de consultas de Índices columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [Desfragmentação de índices columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

@@ -1,45 +1,49 @@
 ---
-title: "Pesquisar e substituir | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "diferenciar maiúsculas de minúsculas [SQL Server]"
-  - "operações de desfazer"
-  - "pesquisas [SQL Server Management Studio]"
-  - "substituindo texto "
-  - "localização e substituição rápidas [SQL Server Management Studio]"
-  - "Editor de Consultas [SQL Server Management Studio], desfazer"
-  - "Editor de Consultas [SQL Server Management Studio], pesquisando"
-  - "expressões regulares [SQL Server Management Studio]"
-  - "localizando texto [SQL Server Management Studio]"
-  - "texto [SQL Server], operações de pesquisa e substituição"
-  - "localizando [SQL Server Management Studio]"
-  - "localizando texto"
-  - "Editor de Consultas [SQL Server Management Studio], substituindo texto"
-  - "Caixa de diálogo Localizar e Substituir"
-  - "opções de curinga [SQL Server Management Studio]"
-  - "coincidir palavra inteira [SQL Server]"
-  - "pesquisas [SQL Server Management Studio], substituindo"
+title: Pesquisar e substituir | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- match case [SQL Server]
+- undo operations
+- searches [SQL Server Management Studio]
+- replacing text
+- quick search and replaces [SQL Server Management Studio]
+- Query Editor [SQL Server Management Studio], undo
+- Query Editor [SQL Server Management Studio], searching
+- regular expressions [SQL Server Management Studio]
+- finding text [SQL Server Management Studio]
+- text [SQL Server], search and replace operations
+- finding [SQL Server Management Studio]
+- locating text
+- Query Editor [SQL Server Management Studio], replacing text
+- Find and Replace dialog box
+- wildcard options [SQL Server Management Studio]
+- match whole word [SQL Server]
+- searches [SQL Server Management Studio], replacing
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d590c437733827916e41e9299ed7a6d3df48574
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pesquisar e substituir
-  Há vários modos diferentes de localizar e substituir texto. No menu **Editar**, **Localizar e Substituir** oferece quatro opções: **Localização Rápida**, **Substituição Rápida**, **Localizar nos Arquivos** ou **Substituir nos Arquivos**. Cada uma dessas opções abre versões da caixa de diálogo **Localizar e Substituir**. Você também pode pesquisar sem uma caixa de diálogo usando teclas de atalho de teclado de pesquisa incremental. Essas técnicas permitem que você controle o escopo de localização e substituição, e escolha o método de revisão de correspondências e substituições.  
+# <a name="search-and-replace"></a>Pesquisar e substituir
+  Há vários modos diferentes de localizar e substituir texto. No menu **Editar** , **Localizar e Substituir** oferece quatro opções: **Localização Rápida**, **Substituição Rápida**, **Localizar nos Arquivos**ou **Substituir nos Arquivos**. Cada uma dessas opções abre versões da caixa de diálogo **Localizar e Substituir** . Você também pode pesquisar sem uma caixa de diálogo usando teclas de atalho de teclado de pesquisa incremental. Essas técnicas permitem que você controle o escopo de localização e substituição, e escolha o método de revisão de correspondências e substituições.  
   
  Você deve considerar os itens a seguir ao localizar e substituir texto:  
   
--   As opções definidas na caixa de diálogo **Localizar e Substituir** afetam todas as pesquisas. Essas opções incluem **Corresponder Maiúsculas e Minúsculas**, **Coincidir palavra inteira**, **Pesquisar para cima**, **Pesquisar texto oculto**, **Curingas**, **Expressões Regulares**, **Procurar em Todos os Documentos Abertos **e **Procurar no Projeto Atual**. Nem todas as opções estão disponíveis em todas as versões da caixa de diálogo **Localizar e Substituir**.  
+-   As opções definidas na caixa de diálogo **Localizar e Substituir** afetam todas as pesquisas. Essas opções incluem **Corresponder Maiúsculas e Minúsculas**, **Coincidir palavra inteira**, **Pesquisar para cima**, **Pesquisar texto oculto**, **Curingas**, **Expressões Regulares**, **Procurar em Todos os Documentos Abertos**e **Procurar no Projeto Atual**. Nem todas as opções estão disponíveis em todas as versões da caixa de diálogo **Localizar e Substituir** .  
   
 -   **Desfazer** só está disponível para documentos deixados abertos após uma operação de substituição.  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 21
   
  Em geral, não é possível pesquisar itens com exibições gráficas.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Pesquisar um documento ativo de forma incremental](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
  [Pesquisar documentos interativamente](../../relational-databases/scripting/search-documents-interactively.md)   
  [Pesquisar documentos usando listas de resultados](../../relational-databases/scripting/search-documents-using-results-lists.md)   

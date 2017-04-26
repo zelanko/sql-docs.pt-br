@@ -1,31 +1,35 @@
 ---
-title: "Propriedades da coluna (p&#225;gina Geral) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.columnproperties.general.f1"
+title: "Propriedades da coluna (página geral) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.columnproperties.general.f1
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 478dc0e10767f9e4e10c5c3ede74aec5ddaddef4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propriedades da coluna (p&#225;gina Geral)
+# <a name="column-properties-general-page"></a>Propriedades da coluna (página Geral)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Use esta página para exibir as propriedades da coluna selecionada.  
   
- As informações nesta página são somente leitura. Para modificar a coluna, feche a caixa de diálogo **Propriedades da Coluna**, expanda a tabela e as colunas no Pesquisador de Objetos, clique com o botão direito do mouse na coluna e, depois clique em **Design**.  
+ As informações nesta página são somente leitura. Para modificar a coluna, feche a caixa de diálogo **Propriedades da Coluna** , expanda a tabela e as colunas no Pesquisador de Objetos, clique com o botão direito do mouse na coluna e, depois clique em **Design**.  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Nome**  
  O nome da coluna.  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 27
  O tipo de dados que a coluna pode conter. Se o tipo de dados for um tipo de dados de sistema, então o tipo de dados de sistema será exibido. Se o tipo de dados for um tipo definido pelo usuário, o tipo de dados de sistema que corresponde ao tipo de dados definido pelo usuário será exibido.  
   
  **Chave Primária**  
- Indica se a coluna é uma chave primária. Os valores possíveis são **True** e **False**.  
+ Indica se a coluna é uma chave primária. Os valores possíveis são **True**e **False**.  
   
  **Permitir Nulos**  
  Indica se a coluna aceita valores nulos. Os valores possíveis são **True** e **False**.  

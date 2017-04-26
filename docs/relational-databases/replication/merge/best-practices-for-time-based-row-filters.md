@@ -1,35 +1,39 @@
 ---
-title: "Pr&#225;ticas recomendadas para filtros de linha baseados em tempo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "práticas recomendadas"
+title: "Práticas recomendadas para filtros de linha com base em hora | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20d358387ae5eb342519c3f6e388fe77279bbe26
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pr&#225;ticas recomendadas para filtros de linha baseados em tempo
-  Usuários de aplicativos requerem frequentemente um subconjunto de dados baseados no tempo de uma tabela. Por exemplo, um vendedor pode requisitar dados de pedidos da semana passada ou um organizador de eventos pode requisitar dados para os eventos da semana seguinte. Em muitos casos, os aplicativos usam consultas que contêm o **getDate ()** função para fazer isso. Considere a seguinte instrução de filtro de linha:  
+# <a name="best-practices-for-time-based-row-filters"></a>Práticas recomendadas para filtros de linha baseados em tempo
+  Usuários de aplicativos requerem frequentemente um subconjunto de dados baseados no tempo de uma tabela. Por exemplo, um vendedor pode requisitar dados de pedidos da semana passada ou um organizador de eventos pode requisitar dados para os eventos da semana seguinte. Em muitos casos, os aplicativos usam consultas que contêm a função **GETDATE()** para realizar isso. Considere a seguinte instrução de filtro de linha:  
   
 ```  
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- Com um filtro desse tipo, é normalmente presumido que duas coisas sempre ocorram quando o Merge Agent é executado: as linhas que satisfazem esse filtro são replicadas aos Assinantes; e linhas que não mais satisfazem esse filtro, são limpas nos Assinantes. (Para obter mais informações sobre a filtragem com **HOST_NAME ()**, consulte [filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-row-filters.md).) Entretanto, a replicação de mesclagem apenas replica e limpa os dados que foram alterados desde a última sincronização, independentemente de como você defina o filtro de linha para aqueles dados.  
+ Com um filtro desse tipo, é normalmente presumido que duas coisas sempre ocorram quando o Merge Agent é executado: as linhas que satisfazem esse filtro são replicadas aos Assinantes; e linhas que não mais satisfazem esse filtro, são limpas nos Assinantes. (Para obter mais informações sobre filtragem com **HOST_NAME()**, consulte [Filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).) Entretanto, a replicação de mesclagem apenas replica e limpa os dados que foram alterados desde a última sincronização, independentemente de como você defina o filtro de linha para aqueles dados.  
   
- Para a replicação de mesclagem processar uma linha, os dados na linha devem satisfazer o filtro de linha e devem ter sido alterados desde a última sincronização. No caso do **SalesOrderHeader** tabela **OrderDate** é inserido quando uma linha é inserida. As linhas são replicadas ao Assinante como esperado porque a inserção é uma alteração de dados. Entretanto, se houver linhas no Assinante que não mais satisfazem o filtro (são para pedidos anteriores a sete dias), elas não serão removidas do Assinante a menos que tenham sido atualizadas por algum outro motivo.  
+ Para a replicação de mesclagem processar uma linha, os dados na linha devem satisfazer o filtro de linha e devem ter sido alterados desde a última sincronização. No caso da tabela **SalesOrderHeader** , é inserido **OrderDate** quando uma linha é inserida. As linhas são replicadas ao Assinante como esperado porque a inserção é uma alteração de dados. Entretanto, se houver linhas no Assinante que não mais satisfazem o filtro (são para pedidos anteriores a sete dias), elas não serão removidas do Assinante a menos que tenham sido atualizadas por algum outro motivo.  
   
- O caso do organizador de eventos destaca mais o assunto com este tipo de filtragem. Considere o seguinte filtro para um **eventos** tabela:  
+ O caso do organizador de eventos destaca mais o assunto com este tipo de filtragem. Considere o seguinte filtro para uma tabela **Eventos** :  
   
 ```  
 WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)  
@@ -43,18 +47,18 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 -   Se a publicação não usar partições pré-computadas, os filtros serão avaliados quando o Merge Agent for executado.  
   
- Para obter mais informações sobre partições pré-calculadas, consulte [otimizar desempenho de filtro parametrizado com partições pré-calculadas](../../../relational-databases/replication/merge/optimize-parameterized-filter-performance-with-precomputed-partitions.md). A hora em que o filtro é avaliado afeta quais dados satisfazem o filtro. Por exemplo, se uma publicação usa partições pré-computadas, e você sincronizar os dados a cada dois dias, o subconjunto de dados para o vendedor poderia incluir linhas dois dias antes do esperado.   
+ Para obter mais informações sobre partições pré-computadas, consulte [Otimizar o desempenho de filtro com parâmetros com partições pré-computadas](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md). A hora em que o filtro é avaliado afeta quais dados satisfazem o filtro. Por exemplo, se uma publicação usa partições pré-computadas, e você sincronizar os dados a cada dois dias, o subconjunto de dados para o vendedor poderia incluir linhas dois dias antes do esperado.  
   
-## Recomendações para usar filtros de linha baseados em tempo  
+## <a name="recommendations-for-using-time-based-row-filters"></a>Recomendações para usar filtros de linha baseados em tempo  
  O método seguinte fornece uma abordagem robusta e direta para filtragem baseada em tempo:  
   
--   Adicionar uma coluna à tabela do tipo de dados **bit**. Esta coluna é usada para indicar se uma linha deveria ser replicada.  
+-   Adicione uma coluna à tabela de tipo de dados de **bit**. Esta coluna é usada para indicar se uma linha deveria ser replicada.  
   
 -   Use um filtro de linha que faz referência à nova coluna em lugar de uma coluna baseada no tempo.  
   
--   Crie um trabalho do SQL Server Agent (ou um trabalho agendada por algum outro mecanismo) que atualiza a coluna antes do agendamento para a execução do Merge Agent.   
+-   Crie um trabalho do SQL Server Agent (ou um trabalho agendada por algum outro mecanismo) que atualiza a coluna antes do agendamento para a execução do Merge Agent.  
   
- Essa abordagem trata das falhas usando **getDate ()** ou outro método baseado em tempo e evita o problema da necessidade de determinar quando os filtros são avaliados por partições. Considere o seguinte exemplo de uma **eventos** tabela:  
+ Essa abordagem trata das falhas ao usar **GETDATE()** ou outro método baseado em tempo e evita o problema em determinar quando os filtros são avaliados por partições. Considere o seguinte exemplo para uma tabela **Eventos** :  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replicar**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
@@ -78,7 +82,7 @@ UPDATE Events SET Replicate = 1 WHERE EventDate <= GETDATE()+6
 GO  
 ```  
   
- A primeira linha redefine o **replicar** coluna **0**, e a segunda linha define a coluna como **1** para eventos que ocorrem nos próximos sete dias. Se esta instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] for executada em 10/07/2006, a tabela será atualizada para:  
+ A primeira linha redefine a coluna **Replicar** para **0**, e a segunda linha define a coluna para **1** para eventos que ocorram nos próximos sete dias. Se esta instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] for executada em 10/07/2006, a tabela será atualizada para:  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replicar**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
@@ -89,9 +93,9 @@ GO
   
  Os eventos para a próxima semana estão sinalizados agora como estando prontos para serem replicados. A próxima vez que o Merge Agent for executado para a assinatura que o coordenador de eventos 112 usa, as linhas 2,3 e 4 serão baixadas para o Assinante e a linha 1 será removida do Assinante.  
   
-## Consulte também  
- [GETDATE & #40. O Transact-SQL e 41;](../../../t-sql/functions/getdate-transact-sql.md)   
- [Implementar trabalhos](../../../ssms/agent/implement-jobs.md)   
- [Filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-row-filters.md)  
+## <a name="see-also"></a>Consulte também  
+ [GETDATE &#40;Transact-SQL&#41;](../../../t-sql/functions/getdate-transact-sql.md)   
+ [Implementar trabalhos](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+ [Filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

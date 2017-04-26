@@ -1,27 +1,31 @@
 ---
-title: "Criptografia do SQL Server | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "criptografia [SQL Server], sobre a criptografia"
-  - "segurança [SQL Server], criptografia"
-  - "criptografia [SQL Server], sobre a criptografia"
+title: Criptografia do SQL Server | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], about encryption
+- security [SQL Server], encryption
+- cryptography [SQL Server], about cryptography
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 441968f81086a875ee526d31dcaf753c1e103868
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criptografia do SQL Server
+# <a name="sql-server-encryption"></a>Criptografia do SQL Server
   Criptografia é o processo de confundir dados pelo uso de uma chave ou senha. Isso pode tornar os dados inúteis sem a chave de descriptrografia correspondente ou senha. A criptografia não resolve problemas de controle de acesso. Porém, aumenta a segurança, limitando perda de dados mesmo se os controles de acesso forem ignorados. Por exemplo, se o computador host do banco de dados for malconfigurado e um hacker obtiver dados confidenciais, as informações roubadas poderão ser inúteis se estiverem criptografadas.  
   
  Você pode usar criptografia no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para conexões, dados e procedimentos armazenados. A tabela seguinte contém mais informações sobre criptografia no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -32,7 +36,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  As informações mais recentes sobre o protocolo TSL1.2 estão disponíveis em [Suporte a TLS 1.2 para o Microsoft SQL Server](https://support.microsoft.com/kb/3135244).  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
  [Hierarquia de criptografia](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
  Informações sobre a hierarquia de criptografia no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 21
  [Certificados e chaves assimétricas do SQL Server](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)  
  Informações sobre o uso de Criptografia por Chave Pública.  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
  [Protegendo o SQL Server](../../../relational-databases/security/securing-sql-server.md)  
  Visão geral de como ajudar a proteger a plataforma do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e como trabalhar com usuários e objetos protegíveis.  
   
@@ -73,13 +77,14 @@ caps.handback.revision: 21
  [ENCRYPTBYCERT &#40;Transact-SQL&#41;](../../../t-sql/functions/encryptbycert-transact-sql.md)  
  Informações sobre como usar um certificado para criptografar dados.  
   
-## Recursos externos  
+## <a name="external-resources"></a>Recursos externos  
  [Microsoft TechNet: TechCenter do SQL Server: Segurança e proteção do SQL Server 2005](https://msdn.microsoft.com/sqlserver/bb895847.aspx)  
- Informações atuais sobre segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Informações atuais sobre segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sys.key_encryptions &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
  [Chaves de criptografia do SQL Server e banco de dados &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
- [Fazer backup e restaurar as chave de criptografia do Reporting Services](../../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)  
+ [Fazer backup e restaurar as chave de criptografia do Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   
+

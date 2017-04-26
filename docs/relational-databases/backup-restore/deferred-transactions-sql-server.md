@@ -1,27 +1,31 @@
 ---
-title: "Transa&#231;&#245;es adiadas (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "E/S [SQL Server], recuperação de banco de dados"
-  - "restaurando páginas [SQL Server]"
-  - "transações adiadas"
-  - "modificando estado adiado de transação"
+title: "Transações adiadas (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- I/O [SQL Server], database recovery
+- restoring pages [SQL Server]
+- deferred transactions
+- modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ee31af10105103d0bccb8c1ff7b48a73086f44d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transa&#231;&#245;es adiadas (SQL Server)
+# <a name="deferred-transactions-sql-server"></a>Transações adiadas (SQL Server)
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, uma transação corrompida poderá ser adiada se os dados necessários na reversão (desfazer) estiverem offline durante a inicialização do banco de dados. Uma *transação adiada* é uma transação que não está confirmada no término da fase de roll forward e que encontrou um erro que impede a reversão. Como a transação não pode ser revertida, é adiada.  
   
 > [!NOTE]  
@@ -37,15 +41,15 @@ caps.handback.revision: 45
   
 |Ação|Resolução (se ocorrerem problemas de E/S ou se os dados exigidos estiverem offline)|  
 |------------|-----------------------------------------------------------------------|  
-|Inicialização do servidor|Transações adiadas|  
-|Restaurar|Transações adiadas|  
+|Inicialização do servidor|transação adiada|  
+|Restaurar|transação adiada|  
 |Anexar|Falha ao anexar|  
-|Reinicialização automática|Transações adiadas|  
+|Reinicialização automática|transação adiada|  
 |Criar banco de dados ou instantâneo do banco de dados|Falha ao criar|  
-|Refazer espelhamento de banco de dados|Transações adiadas|  
-|O grupo de arquivos está offline|Transações adiadas|  
+|Refazer espelhamento de banco de dados|transação adiada|  
+|O grupo de arquivos está offline|transação adiada|  
   
-## Removendo uma transação do estado DEFERRED  
+## <a name="moving-a-transaction-out-of-the-deferred-state"></a>Removendo uma transação do estado DEFERRED  
   
 > [!IMPORTANT]  
 >  As transações adiadas mantêm o log de transações ativo. Um arquivo de log virtual que contém qualquer transação adiada não pode ser truncado até que essas transações sejam removidas do estado adiado. Para obter mais informações sobre o truncamento de log, veja [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
@@ -83,11 +87,11 @@ caps.handback.revision: 45
   
          Para obter informações sobre o modo de emergência, consulte [Database States](../../relational-databases/databases/database-states.md).  
   
-    -   Em seguida, repare o banco de dados usando a opção DBCC REPAIR_ALLOW_DATA_LOSS em uma das seguintes instruções DBCC: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) ou [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
+    -   Em seguida, repare o banco de dados usando a opção DBCC REPAIR_ALLOW_DATA_LOSS em uma das seguintes instruções DBCC: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)ou [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
   
          Quando a DBCC encontra a página corrompida, anula sua alocação e repara qualquer erro relacionado. Essa abordagem permite que o banco de dados seja colocado novamente online, em um estado fisicamente consistente. Porém, dados adicionais também podem ser perdidos; portanto essa abordagem deve ser usada como último recurso.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral de restauração e recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Remover grupos de arquivos expirados &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)   
  [Restaurações de arquivo &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
@@ -95,6 +99,6 @@ caps.handback.revision: 45
  [Restaurar páginas &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [Restaurações por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

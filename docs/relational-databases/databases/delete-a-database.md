@@ -1,29 +1,33 @@
 ---
-title: "Excluir um banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "remoção de banco de dados [SQL Server], SQL Server Management Studio"
-  - "removendo bancos de dados"
-  - "excluindo bancos de dados"
-  - "descartando bancos de dados"
-  - "bancos de dados [SQL Server], removendo"
-  - "remoção de banco de dados [SQL Server]"
+title: Excluir um banco de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database removal [SQL Server], SQL Server Management Studio
+- removing databases
+- deleting databases
+- dropping databases
+- databases [SQL Server], dropping
+- database removal [SQL Server]
 ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17de8249b2c8117114f3bc63d9709f3b94ff048b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Excluir um banco de dados
+# <a name="delete-a-database"></a>Excluir um banco de dados
   Este tópico descreve como excluir um banco de dados definido pelo usuário no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -44,7 +48,7 @@ caps.handback.revision: 31
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [depois de excluir um banco de dados](#FollowUp)  
+-   **Follow Up:**  [After deleting a database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 31
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para excluir um banco de dados  
+#### <a name="to-delete-a-database"></a>Para excluir um banco de dados  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e expanda-a.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para excluir um banco de dados  
+#### <a name="to-delete-a-database"></a>Para excluir um banco de dados  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -99,7 +103,7 @@ GO
 ##  <a name="FollowUp"></a> Acompanhamento: depois de excluir um banco de dados  
  Faça backup do banco de dados **mestre** . Se o **mestre** precisar ser restaurado, todos os bancos de dados que tiverem sido excluídos desde o último backup do **mestre** ainda terão referências nas exibições do catálogo do sistema e poderão gerar mensagens de erro.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   

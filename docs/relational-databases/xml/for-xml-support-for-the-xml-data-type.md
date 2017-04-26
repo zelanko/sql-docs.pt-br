@@ -1,28 +1,32 @@
 ---
-title: "Suporte a FOR XML para o tipo de dados xml | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "funções definidas pelo usuário [SQL Server], XML"
-  - "tipo de dados xml [SQL Server], cláusula FOR XML"
+title: Suporte a FOR XML para o tipo de dados xml | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined functions [SQL Server], XML
+- xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9fcd42a40be7da666ed66dc7eb05600b081457ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# Suporte a FOR XML para o tipo de dados xml
+# <a name="for-xml-support-for-the-xml-data-type"></a>Suporte a FOR XML para o tipo de dados xml
   Se uma consulta FOR XML especificar uma coluna de tipo **xml** na cláusula SELECT, os valores da coluna serão mapeados como elementos no XML retornado, independentemente da diretiva ELEMENTS estar especificada. Qualquer declaração XML na coluna de tipo **xml** não é serializada.  
   
- Por exemplo, a consulta a seguir recupera informações de contato do cliente, tais como as colunas `BusinessEntityID`, `FirstName` e `LastName`, e os números de telefone da coluna `AdditionalContactInfo` de tipo **xml**.  
+ Por exemplo, a consulta a seguir recupera informações de contato do cliente, tais como as colunas `BusinessEntityID`, `FirstName`e `LastName` , e os números de telefone da coluna `AdditionalContactInfo` de tipo **xml** .  
   
 ```  
 USE AdventureWorks2012;  
@@ -39,7 +43,7 @@ declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-
 FOR XML AUTO, TYPE;  
 ```  
   
- Como a consulta não especifica a diretiva ELEMENTS, os valores da coluna são retornados como atributos, exceto para os valores de informações adicionais de contato recuperados da coluna de tipo **xml**. Esses são retornados como elementos.  
+ Como a consulta não especifica a diretiva ELEMENTS, os valores da coluna são retornados como atributos, exceto para os valores de informações adicionais de contato recuperados da coluna de tipo **xml** . Esses são retornados como elementos.  
   
  Este é o resultado parcial:  
   
@@ -116,7 +120,7 @@ FOR XML AUTO, TYPE;
   
  Se você especificar a diretiva ELEMENTS na consulta, BusinessEntityID, LastName e FirstName serão retornados como elementos no XML resultante.  
   
- O exemplo a seguir mostra que a lógica de processamento de FOR XML não serializa nenhuma declaração XML nos dados XML de uma coluna de tipo **xml**:  
+ O exemplo a seguir mostra que a lógica de processamento de FOR XML não serializa nenhuma declaração XML nos dados XML de uma coluna de tipo **xml** :  
   
 ```  
 create table t(i int, x xml)  
@@ -140,7 +144,7 @@ for xml auto;
 </root>  
 ```  
   
-## Retornando XML de uma função definida pelo usuário  
+## <a name="returning-xml-from-a-user-defined-function"></a>Retornando XML de uma função definida pelo usuário  
  Consultas FOR XML podem ser usadas para retornar XML de uma função definida pelo usuário que retorna qualquer um dos seguintes itens:  
   
 -   Uma tabela com uma única coluna de tipo **xml**  
@@ -169,7 +173,7 @@ declare namespace PD="http://www.adventure-works.com/schemas/products/descriptio
 END;  
 ```  
   
- Você pode executar a função definida pelo usuário e consultar a tabela retornada por ela. Neste exemplo, o XML retornado pela consulta da tabela é atribuído a uma variável de tipo **xml**.  
+ Você pode executar a função definida pelo usuário e consultar a tabela retornada por ela. Neste exemplo, o XML retornado pela consulta da tabela é atribuído a uma variável de tipo **xml** .  
   
 ```  
 declare @x xml;  
@@ -177,7 +181,7 @@ set @x = (SELECT * FROM MyUDF(19));
 select @x;  
 ```  
   
- Esse é outro exemplo de uma função definida pelo usuário. Essa função definida pelo usuário retorna uma instância do tipo **xml**. Neste exemplo, a função definida pelo usuário retorna uma instância XML com tipo, porque o namespace do esquema está especificado.  
+ Esse é outro exemplo de uma função definida pelo usuário. Essa função definida pelo usuário retorna uma instância do tipo **xml** . Neste exemplo, a função definida pelo usuário retorna uma instância XML com tipo, porque o namespace do esquema está especificado.  
   
 ```  
 DROP FUNCTION dbo.MyUDF;  
@@ -202,7 +206,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Suporte a FOR XML para vários tipos de dados SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

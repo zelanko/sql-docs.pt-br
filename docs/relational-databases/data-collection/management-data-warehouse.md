@@ -1,26 +1,30 @@
 ---
-title: "Data warehouse de gerenciamento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "coletor de dados [SQL Server], data warehouse de gerenciamento"
-  - "data warehouse"
-  - "data warehouse de gerenciamento"
+title: Data warehouse de gerenciamento | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data collector [SQL Server], management data warehouse
+- data warehouse
+- management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0430b88308cb3ebc07b1addfb2e34575150fa41e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Data warehouse de gerenciamento
+# <a name="management-data-warehouse"></a>data warehouse de gerenciamento
   O data warehouse de gerenciamento é um banco de dados relacional que contém os dados coletados de um servidor representa o destino da coleta de dados. Esses dados são usados para gerar os relatórios dos conjuntos de coleta de Dados do Sistema e também podem ser usados para criar relatórios personalizados.  
   
  A infraestrutura do coletor de dados define os trabalhos e os planos de manutenção necessários para implementar as políticas de retenção definidas pelo administrador do banco de dados.  
@@ -28,12 +32,12 @@ caps.handback.revision: 43
 > [!IMPORTANT]  
 >  Para esta versão do coletor de dados, o data warehouse de gerenciamento é criado com o modelo de recuperação simples para minimizar o registro. Você deve implementar o modelo de recuperação adequado para sua organização.  
   
-## Implantando e usando o data warehouse  
+## <a name="deploying-and-using-the-data-warehouse"></a>Implantando e usando o data warehouse  
  Você pode instalar o data warehouse de gerenciamento na mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que executa o coletor de dados. No entanto, se o desempenho ou os recursos do servidor forem um problema no servidor que está sendo monitorado, você poderá instalar o data warehouse de gerenciamento em outro computador.  
   
  Os esquemas necessários e seus objetos para os conjuntos de coleta do sistema predefinidos são criados quando você gera o data warehouse de gerenciamento. Os esquemas que são criados são principal e instantâneos. Um terceiro esquema, custom_snapshots, é criado quando os conjuntos de coleta definidos pelo usuário são criados, o que inclui itens de coleta que usam o tipo de coletor de Consultas T-SQL Genérico.  
   
-###### Esquema principal  
+###### <a name="core-schema"></a>Esquema principal  
  O esquema principal descreve as tabelas, os procedimentos armazenados e as exibições usados para organizar e identificar os dados coletados. Essas tabelas são compartilhadas entre todas as tabelas de dados criadas para tipos de coletores individuais. Esse esquema está bloqueado e só pode ser modificado pelo proprietário do banco de dados do data warehouse de gerenciamento. Os nomes das tabelas nesse esquema são prefixados por "core".  
   
  A tabela a seguir descreve as tabelas de banco de dados no esquema principal. Essas tabelas de banco de dados permitem que o coletor de dados rastreie o local de origem dos dados, quem os inseriu e quando foram carregados no data warehouse.  
@@ -59,7 +63,7 @@ caps.handback.revision: 43
   
 -   snapshots.trace_data  
   
-###### Esquema de instantâneos  
+###### <a name="snapshots-schema"></a>Esquema de instantâneos  
  O esquema de instantâneos descreve os objetos que precisam armazenar e atualizar dados coletados pelos tipos de coletores fornecidos. As tabelas neste esquema são fixas e não precisam ser alteradas durante o tempo de vida do tipo de coletor. Se houver necessidade de alterações, o esquema só poderá ser alterado por membros com função mdw_admin. Essas tabelas são criadas para armazenar os dados coletados pelos conjuntos de coleta de dados do sistema.  
   
  As tabelas a seguir ilustram uma parte do esquema do data warehouse de gerenciamento necessária para os conjuntos de coleta de atividades do servidor e estatísticas de consulta.  
@@ -108,7 +112,7 @@ caps.handback.revision: 43
   
  Você pode obter informações detalhadas sobre o tipo de dados e o conteúdo de colunas de tabelas do banco de dados lendo a documentação do procedimento armazenado do coletor de dados adequado para cada uma das tabelas.  
   
-### Práticas recomendadas  
+### <a name="best-practices"></a>Práticas recomendadas  
  Ao trabalhar com o data warehouse de gerenciamento, recomendamos que você siga estas práticas recomendadas:  
   
 -   Não modifique o metadados de tabelas de data warehouse de gerenciamento a menos que você esteja adicionando um tipo de coletor novo.  
@@ -117,14 +121,14 @@ caps.handback.revision: 43
   
 -   Em vez de usar as tabelas diretamente, use os procedimentos armazenados documentados e as funções fornecidas pelo coletor de dados para acessar instância e dados de aplicativo. Os nomes e as definições de tabelas podem ser alterados. Elas são alteradas quando você atualiza o aplicativo e talvez sejam alteradas em futuras versões.  
   
-## Histórico de alterações  
+## <a name="change-history"></a>Histórico de alterações  
   
 |Conteúdo atualizado|  
 |---------------------|  
 |Adicionada a tabela core.performance_counter_report_group_items à seção "Esquema principal".|  
 |Atualizada a lista de tabelas na seção "Esquema de instantâneos". Adicionados snapshots.os_memory_clerks,snapshots.sql_process_and_system_memory e snapshots.io_virtual_file_stats. snapshots.os_process_memory e snapshots.distinct_query_stats foram removidos.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do data warehouse de gerenciamento &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   

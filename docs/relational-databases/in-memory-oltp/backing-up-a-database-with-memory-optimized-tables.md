@@ -1,22 +1,26 @@
 ---
-title: "Fazendo backup de um banco de dados com tabelas com otimiza&#231;&#227;o de mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Fazendo backup de um banco de dados com tabelas com otimização de memória | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 43fa6642db8924195fa1291d74291c21d0b064d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Fazendo backup de um banco de dados com tabelas com otimiza&#231;&#227;o de mem&#243;ria
+# <a name="backing-up-a-database-with-memory-optimized-tables"></a>Fazendo backup de um banco de dados com tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   As tabelas com otimização de memória são incluídas no backup como parte de backups regulares de banco de dados. Quanto às tabelas baseadas em disco, o CHECKSUM de dados e os pares de arquivos delta são validados como parte do backup de banco de dados para detectar corrupção do armazenamento.  
@@ -28,7 +32,7 @@ caps.handback.revision: 18
   
  Um backup completo de um banco de dados com uma ou mais tabelas com otimização de memória consiste no armazenamento alocado para tabelas baseadas em disco (se houver), no log de transações ativas e nos pares de arquivos de dados e delta (também conhecidos como pares de arquivos de ponto de verificação) para tabelas otimizadas para memória. No entanto, como descrito em [Durabilidade de tabelas com otimização de memória](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md), o armazenamento usado por tabelas com otimização de memória pode ser muito maior do que seu tamanho em memória, e afeta o tamanho do backup do banco de dados.  
   
-## Backup de banco de dados Completo  
+## <a name="full-database-backup"></a>Backup de banco de dados Completo  
  Esta discussão se concentra em backups de banco de dados para bancos de dados que têm apenas tabelas com otimização de memória, uma vez que o backup de tabelas baseadas em disco é igual. Os pares do arquivos de ponto de verificação no grupo de arquivos com otimização de memória poderia estar em diversos estados. A tabela a seguir descreve qual parte dos arquivos é inserida no backup.  
   
 |Estado do par de arquivos de ponto de verificação|Backup|  
@@ -43,7 +47,7 @@ caps.handback.revision: 18
   
  O tamanho dos backups de banco de dados com uma ou mais tabelas com otimização de memória normalmente é maior do que o tamanho em memória mas menor do que o do armazenamento em disco. O tamanho extra depende do número de linhas excluídas, entre outros fatores.  
   
-### Estimando o tamanho do backup de banco de dados completo  
+### <a name="estimating-size-of-full-database-backup"></a>Estimando o tamanho do backup de banco de dados completo  
   
 > [!IMPORTANT]  
 >  É recomendável que você não use o valor de BackupSizeInBytes para estimar o tamanho do backup para O OLTP na Memória.  
@@ -52,7 +56,7 @@ caps.handback.revision: 18
   
  É o segundo cenário de carga de trabalho para operações de atualização, exclusão e inserção frequentes. Na pior das hipóteses, cada um dos pares de arquivos de ponto de verificação será 50% carregado, após a contagem das linhas excluídas. O tamanho do backup de banco de dados terá pelo menos 2 vezes o tamanho dos dados na memória.  
   
-## Backups diferenciais de bancos de dados com tabelas com otimização de memória  
+## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Backups diferenciais de bancos de dados com tabelas com otimização de memória  
  O armazenamento de tabelas com otimização de memória consiste em dados e arquivos delta, conforme descrito em [Durabilidade de tabelas com otimização de memória](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md). O backup diferencial de um banco de dados com tabelas com otimização de memória contém os seguintes dados:  
   
 -   O backup diferencial para grupos de arquivos que armazenam tabelas baseadas em disco não é afetado pela presença de tabelas com otimização de memória.  
@@ -67,7 +71,7 @@ caps.handback.revision: 18
   
  Se as tabelas com otimização de memória forem uma parte significativa do tamanho do banco de dados, o backup diferencial poderá reduzir significativamente o tamanho do backup do banco de dados. Para cargas de trabalho típicas de OLTP, os backups diferenciais serão significativamente menores do que os backups completos de banco de dados.  
   
-## Consulte também  
- [Backup, restauração e recuperação de tabelas com otimização de memória](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>Consulte também  
+ [Backup, restauração e recuperação de tabelas com otimização de memória](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

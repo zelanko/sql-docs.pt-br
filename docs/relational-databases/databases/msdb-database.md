@@ -1,32 +1,36 @@
 ---
-title: "Banco de dados msdb | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Agent, banco de dados msdb"
-  - "alertas [SQL Server], banco de dados msdb"
-  - "trabalhos [SQL Server], banco de dados msdb"
-  - "banco de dados msdb [SQL Server]"
+title: Banco de dados msdb | Microsoft Docs
+ms.custom: 
+ms.date: 11/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Agent, msdb database
+- alerts [SQL Server], msdb database
+- jobs [SQL Server], msdb database
+- msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3ea8b1e63f5cc458130e3dd7deeed99be7f53e9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Banco de dados msdb
+# <a name="msdb-database"></a>Banco de dados msdb
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   O banco de dados **msdb** é usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para agendar alertas e trabalhos e por outros recursos, como o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[ssSB](../../includes/sssb-md.md)] e o Database Mail.  
   
- Por exemplo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém automaticamente um histórico de backup e restauração online completo nas tabelas no **msdb**. Estas informações incluem o nome da parte que executou o backup, a hora do backup, e os dispositivos ou arquivos onde o backup é armazenado. O [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa essas informações para propor um plano de restauração de um banco de dados e aplicar qualquer backup de log de transações. Os eventos de backup de todos os bancos de dados são registrados, mesmo que tenham sido criados com aplicativos personalizados ou ferramentas de terceiros. Por exemplo, se você usar um aplicativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] que chama objetos SMO (SQL Server Management Objects) para executar operações de backup, o evento será registrado nas tabelas do sistema **msdb** , no log de aplicativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para ajudar a proteger as informações armazenadas no **msdb**, recomendamos que você considere a colocação do log de transações **msdb** no repositório tolerante a falhas.  
+ Por exemplo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém automaticamente um histórico de backup e restauração online completo nas tabelas no **msdb**. Estas informações incluem o nome da parte que executou o backup, a hora do backup, e os dispositivos ou arquivos onde o backup é armazenado. O[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa essas informações para propor um plano de restauração de um banco de dados e aplicar qualquer backup de log de transações. Os eventos de backup de todos os bancos de dados são registrados, mesmo que tenham sido criados com aplicativos personalizados ou ferramentas de terceiros. Por exemplo, se você usar um aplicativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] que chama objetos SMO (SQL Server Management Objects) para executar operações de backup, o evento será registrado nas tabelas do sistema **msdb** , no log de aplicativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para ajudar a proteger as informações armazenadas no **msdb**, recomendamos que você considere a colocação do log de transações **msdb** no repositório tolerante a falhas.  
   
  Por padrão, **msdb** usa o modelo de recuperação simples. Se você usar as tabelas de [histórico de backup e restauração](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md), será recomendável utilizar o modelo de recuperação completa para **msdb**. Para obter mais informações, veja [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md). Observe que, quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado ou atualizado e sempre que Setup.exe é usado para recriar bancos de dados do sistema, o modelo de recuperação do **msdb** será definido automaticamente como simples.  
   
@@ -115,3 +119,4 @@ caps.handback.revision: 46
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
+

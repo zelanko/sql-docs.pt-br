@@ -1,32 +1,36 @@
 ---
-title: "Grupos de eventos DDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "grupos de eventos"
-  - "grupos de eventos DDL"
-  - "Gatilhos DDL, grupos de eventos"
+title: Grupos de eventos DDL | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event groups
+- DDL event groups
+- DDL triggers, event groups
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccd63253ce183861e0aef4caafe00179bf00051a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Grupos de eventos DDL
+# <a name="ddl-event-groups"></a>grupos de eventos DDL
   As tabelas a seguir listam os grupos de eventos DDL que podem ser usados para executar uma notificação de evento ou um gatilho DDL, bem como as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] abordadas por eles. Observe a natureza inclusiva dos grupos de eventos. Por exemplo, um gatilho ou notificação de evento DDL que especifique FOR DDL_TABLE_EVENTS (10018) cobre as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE e DROP TABLE. Um gatilho ou notificação de evento DDL que especifique FOR DDL_TABLE_VIEW_EVENTS (10017) cobre todas as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] nos tipos DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS e DDL_STATISTICS_EVENTS.  
   
 > [!NOTE]  
 >  Certos procedimentos armazenados do sistema que executam operações similares a DDL também podem acionar gatilhos ou notificações de eventos DDL. Teste seus gatilhos e notificações de eventos DDL para determinar suas respostas aos procedimentos armazenados do sistema que são executados. Por exemplo, a instrução CREATE TYPE e o procedimento armazenado **sp_addtype** acionarão um gatilho DDL ou uma notificação de eventos que tenham sido criados em um evento CREATE_TYPE.  
   
-## Eventos  
+## <a name="events"></a>Eventos  
  Os eventos listados em DDL_DATABASE_LEVEL_EVENTS são executados no nível do servidor (instância) ou do banco de dados. Os eventos listados em DDL_SERVER_LEVEL_EVENTS são executados apenas no nível do servidor.  
   
 ||||  
@@ -314,7 +318,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Notificações de eventos](../../relational-databases/service-broker/event-notifications.md)   
  [Gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [Eventos DDL](../../relational-databases/triggers/ddl-events.md)  

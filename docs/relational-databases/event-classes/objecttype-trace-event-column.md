@@ -1,30 +1,34 @@
 ---
-title: "Coluna de evento de rastreamento ObjectType | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Classes de evento do SQL Server, valores de coluna Object Type"
-  - "eventos [SQL Server], valores de coluna Object Type"
-  - "classes de evento [SQL Server], valores de coluna Object Type"
-  - "valores da coluna Object Type [SQL Server]"
+title: Coluna de evento de rastreamento ObjectType | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Object Type column values
+- events [SQL Server], Object Type column values
+- event classes [SQL Server], Object Type column values
+- Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f4870fdd355f03c7f1e5c4fee15cf410f5794411
+ms.lasthandoff: 04/11/2017
+
 ---
-# Coluna de evento de rastreamento ObjectType
+# <a name="objecttype-trace-event-column"></a>Coluna de evento de rastreamento ObjectType
   A coluna Object Type é usada em diversos eventos de rastreamento. Este tópico descreve os possíveis valores dessa coluna e as definições a ela associadas.  
   
-## Valores da coluna Object Type  
+## <a name="object-type-column-values"></a>Valores da coluna Object Type  
   
 |Valor|Definição|  
 |-----------|----------------|  
@@ -100,7 +104,7 @@ caps.handback.revision: 17
 |22611|Esquema XML|  
 |22868|Tipo|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

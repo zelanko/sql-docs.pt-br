@@ -1,25 +1,29 @@
 ---
-title: "Guia da Arquitetura de Processamento de Consultas | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/26/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "guia, arquitetura de processamento de consultas"
-  - "guia da arquitetura de processamento de consultas"
+title: Guia de arquitetura de processamento de consultas | Microsoft Docs
+ms.custom: 
+ms.date: 10/26/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- guide, query processing architecture
+- query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 caps.latest.revision: 5
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0f2edc5c0bbf2fba20b26826413ee4f659b379b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Guia da Arquitetura de Processamento de Consultas
+# <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 O Mecanismo de banco de dados processa consultas em diversas arquiteturas de armazenamento de dados, como tabelas locais, particionadas e distribuídas entre vários servidores. Os tópicos a seguir descrevem como o SQL Server processa consultas e otimiza a reutilização de consultas através do cache de planos de execução.
@@ -30,25 +34,25 @@ O processamento de uma única instrução SQL é o modo mais básico para o SQL 
 
 #### <a name="optimizing-select-statements"></a>Otimizando instruções SELECT
 
-Uma instrução `SELECT` não é de procedimento; ela não determina as etapas exatas que o servidor de banco de dados deve usar para recuperar os dados solicitados. Isso significa que o servidor de banco de dados deve analisar a instrução para determinar o modo mais eficiente para extrair os dados solicitados. Isso é conhecido como otimização da instrução `SELECT`. O componente que faz isso é chamado de otimizador de consulta. A entrada do otimizador consiste em consulta, esquema de banco de dados (definições de tabela e índice) e estatísticas de banco de dados. A saída do otimizador é um plano de execução de consulta, às vezes chamado de plano de consulta ou apenas plano. O conteúdo de um plano de consulta é descrito posteriormente com mais detalhe neste tópico.
+Uma instrução `SELECT` não é de procedimento; ela não determina as etapas exatas que o servidor de banco de dados deve usar para recuperar os dados solicitados. Isso significa que o servidor de banco de dados deve analisar a instrução para determinar o modo mais eficiente para extrair os dados solicitados. Isso é conhecido como otimização da instrução `SELECT` . O componente que faz isso é chamado de otimizador de consulta. A entrada do otimizador consiste em consulta, esquema de banco de dados (definições de tabela e índice) e estatísticas de banco de dados. A saída do otimizador é um plano de execução de consulta, às vezes chamado de plano de consulta ou apenas plano. O conteúdo de um plano de consulta é descrito posteriormente com mais detalhe neste tópico.
 
 As entradas e as saídas do otimizador de consulta durante a otimização de uma única instrução `SELECT` são ilustradas no seguinte diagrama:  
 ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 Uma instrução `SELECT` define apenas o seguinte:  
 * O formato do conjunto de resultados. Isso é especificado principalmente na lista de seleção. Porém, outras cláusulas como `ORDER BY` e `GROUP BY` também afetam a forma final do conjunto de resultados.
-* As tabelas que contêm os dados de origem. Isso é especificado na cláusula `FROM`.
-* A forma pela qual as tabelas estão logicamente relacionadas à finalidade da instrução `SELECT`. Isso é definido nas especificações de junção, que podem ser exibidas na cláusula `WHERE` ou em uma cláusula `ON` seguida de `FROM`.
-* As condições que as linhas das tabelas de origem devem satisfazer para serem qualificadas para a instrução `SELECT`. Essas são especificadas nas cláusulas `WHERE` e `HAVING`.
+* As tabelas que contêm os dados de origem. Isso é especificado na cláusula `FROM` .
+* A forma pela qual as tabelas estão logicamente relacionadas à finalidade da instrução `SELECT` . Isso é definido nas especificações de junção, que podem ser exibidas na cláusula `WHERE` ou em uma cláusula `ON` seguida de `FROM`.
+* As condições que as linhas das tabelas de origem devem satisfazer para serem qualificadas para a instrução `SELECT` . Essas são especificadas nas cláusulas `WHERE` e `HAVING` .
 
 
 Um plano de execução de consulta é uma definição do seguinte: 
 
 * A sequência em que as tabelas de origem são acessadas.  
-  Normalmente, há muitas sequências pelas quais o servidor de banco de dados pode acessar as tabelas base para criar o conjunto de resultados. Por exemplo, se a instrução `SELECT` fizesse referência a três tabelas, o servidor de banco de dados poderia acessar `TableA` primeiro, usar os dados de `TableA` para extrair as linhas correspondentes de `TableB` e usar os dados de `TableB` para extrair dados de `TableC`. As outras sequências em que o servidor de banco de dados poderia acessar as tabelas são:  
-  `TableC`, `TableB`, `TableA` ou  
-  `TableB`, `TableA`, `TableC` ou  
-  `TableB`, `TableC`, `TableA` ou  
+  Normalmente, há muitas sequências pelas quais o servidor de banco de dados pode acessar as tabelas base para criar o conjunto de resultados. Por exemplo, se a instrução `SELECT` fizesse referência a três tabelas, o servidor de banco de dados poderia acessar `TableA`primeiro, usar os dados de `TableA` para extrair as linhas correspondentes de `TableB`e usar os dados de `TableB` para extrair dados de `TableC`. As outras sequências em que o servidor de banco de dados poderia acessar as tabelas são:  
+  `TableC`, `TableB`, `TableA`ou  
+  `TableB`, `TableA`, `TableC`ou  
+  `TableB`, `TableC`, `TableA`ou  
   `TableC`, `TableA`, `TableB`  
 
 * Os métodos usados para extrair dados de cada tabela.  
@@ -77,13 +81,13 @@ As etapas básicas usadas pelo SQL Server para processar uma única instrução 
 
 #### <a name="processing-other-statements"></a>Processando outras instruções
 
-As etapas básicas descritas para o processamento de uma instrução `SELECT` se aplicam a outras instruções SQL, como `INSERT`, `UPDATE` e `DELETE`. As instruções `UPDATE` e `DELETE` devem ser direcionadas ao conjunto de linhas a ser modificado ou excluído. O processo de identificação dessas linhas é o mesmo processo usado para identificar as linhas de origem que contribuem para o conjunto de resultados de uma instrução `SELECT`. Ambas as instruções `UPDATE` e `INSERT` podem conter instruções SELECT inseridas que fornecem os valores de dados a serem atualizados ou inseridos.
+As etapas básicas descritas para o processamento de uma instrução `SELECT` se aplicam a outras instruções SQL, como `INSERT`, `UPDATE`e `DELETE`. As instruções`UPDATE` e `DELETE` devem ser direcionadas ao conjunto de linhas a ser modificado ou excluído. O processo de identificação dessas linhas é o mesmo processo usado para identificar as linhas de origem que contribuem para o conjunto de resultados de uma instrução `SELECT` . Ambas as instruções `UPDATE` e `INSERT` podem conter instruções SELECT inseridas que fornecem os valores de dados a serem atualizados ou inseridos.
 
 Até as instruções DDL (Linguagem de Definição de Dados), como `CREATE PROCEDURE` ou `ALTER TABL`, são resolvidas no final para uma série de operações relacionais nas tabelas de catálogo de sistema e, algumas vezes, (como `ALTER TABLE ADD COLUMN`) nas tabelas de dados.
 
 ### <a name="worktables"></a>Tabelas de trabalho
 
-Talvez o mecanismo relacional precise criar uma tabela de trabalho para executar uma operação lógica especificada em uma instrução SQL. As tabelas de trabalho são tabelas internas usadas para manter resultados intermediários. As tabelas de trabalho são geradas para determinadas consultas `GROUP BY`, `ORDER BY` ou `UNION`. Por exemplo, se uma cláusula `ORDER BY` fizer referência a colunas que não são abordadas por nenhum índice, o mecanismo relacional pode precisar gerar uma tabela de trabalho para classificar o conjunto de resultados na ordem solicitada. Algumas vezes as tabelas de trabalho também são usadas como spools que mantêm temporariamente o resultado da execução de uma parte de um plano de consulta. As tabelas de trabalho são criadas em `tempdb` e são eliminadas automaticamente quando não são mais necessárias.
+Talvez o mecanismo relacional precise criar uma tabela de trabalho para executar uma operação lógica especificada em uma instrução SQL. As tabelas de trabalho são tabelas internas usadas para manter resultados intermediários. As tabelas de trabalho são geradas para determinadas consultas `GROUP BY`, `ORDER BY`ou `UNION` . Por exemplo, se uma cláusula `ORDER BY` fizer referência a colunas que não são abordadas por nenhum índice, o mecanismo relacional pode precisar gerar uma tabela de trabalho para classificar o conjunto de resultados na ordem solicitada. Algumas vezes as tabelas de trabalho também são usadas como spools que mantêm temporariamente o resultado da execução de uma parte de um plano de consulta. As tabelas de trabalho são criadas em `tempdb` e são eliminadas automaticamente quando não são mais necessárias.
 
 ### <a name="view-resolution"></a>Resolução de exibição
 
@@ -129,7 +133,7 @@ ON e.BusinessEntityID =p.BusinessEntityID
 WHERE OrderDate > '20020531';
 ```
 
-O recurso Plano de Execução do SQL Server Management Studio mostra que o mecanismo relacional cria o mesmo plano de execução para as duas instruções `SELECT`.
+O recurso Plano de Execução do SQL Server Management Studio mostra que o mecanismo relacional cria o mesmo plano de execução para as duas instruções `SELECT` .
 
 #### <a name="using-hints-with-views"></a>Usando dicas com exibições
 
@@ -153,11 +157,11 @@ FROM Person.AddrState WITH (SERIALIZABLE)
 WHERE StateProvinceCode = 'WA';
 ```
 
-Há uma falha na consulta, porque a dica `SERIALIZABLE` aplicada na exibição `Person.AddrState` na consulta é propagada nas tabelas `Person.Address` e `Person.StateProvince` na exibição ao ser expandida. No entanto, a expansão da exibição também revela a dica `NOLOCK` em `Person.Address`. Como há conflito das dicas `SERIALIZABLE` e `NOLOCK`, a consulta resultante está incorreta. 
+Há uma falha na consulta, porque a dica `SERIALIZABLE` aplicada na exibição `Person.AddrState` na consulta é propagada nas tabelas `Person.Address` e `Person.StateProvince` na exibição ao ser expandida. No entanto, a expansão da exibição também revela a dica `NOLOCK` em `Person.Address`. Como há conflito das dicas `SERIALIZABLE` e `NOLOCK` , a consulta resultante está incorreta. 
 
-As dicas de tabela `PAGLOCK`, `NOLOCK`, `ROWLOCK`, `TABLOCK` ou `TABLOCKX` entram em conflito umas com as outras, assim como as dicas de tabela `HOLDLOCK`, `NOLOCK`, `READCOMMITTED`, `REPEATABLEREAD`, `SERIALIZABLE`.
+As dicas de tabela `PAGLOCK`, `NOLOCK`, `ROWLOCK`, `TABLOCK`ou `TABLOCKX` entram em conflito umas com as outras, assim como as dicas de tabela `HOLDLOCK`, `NOLOCK`, `READCOMMITTED`, `REPEATABLEREAD`, `SERIALIZABLE` .
 
-As dicas podem ser propagadas pelos níveis de exibições aninhadas. Por exemplo, suponha que uma consulta se aplique à dica `HOLDLOCK` em uma `v1`. Quando `v1` é expandida, observamos que a exibição `v2` faz parte da sua definição. A definição de `v2` inclui uma dica `NOLOCK` em uma de suas tabelas base. Mas essa tabela também herda a dica `HOLDLOCK` da consulta na exibição `v1`. Como há conflito nas dicas `NOLOCK` e `HOLDLOCK`, há falha na consulta.
+As dicas podem ser propagadas pelos níveis de exibições aninhadas. Por exemplo, suponha que uma consulta se aplique à dica `HOLDLOCK` em uma `v1`. Quando `v1` é expandida, observamos que a exibição `v2` faz parte da sua definição. A definição de`v2`inclui uma dica `NOLOCK` em uma de suas tabelas base. Mas essa tabela também herda a dica `HOLDLOCK` da consulta na exibição `v1`. Como há conflito nas dicas `NOLOCK` e `HOLDLOCK` , há falha na consulta.
 
 Quando a dica `FORCE ORDER` é usada em uma consulta que contém uma exibição, a ordem de junção das tabelas na exibição é determinada pela posição da exibição na construção ordenada. Por exemplo, a seguinte consulta faz a seleção a partir de três tabelas e uma exibição:
 
@@ -177,7 +181,7 @@ SELECT Colx, Coly FROM TableA, TableB
 WHERE TableA.ColZ = TableB.Colz;
 ```
 
-A ordem de junção no plano de consulta é `Table1`,`Table2`, `TableA`, `TableB`, `Table3`.
+A ordem de junção no plano de consulta é `Table1`, `Table2`, `TableA`, `TableB`, `Table3`.
 
 ### <a name="resolving-indexes-on-views"></a>Resolvendo índices em exibições
 
@@ -199,13 +203,13 @@ O otimizador de consulta do SQL Server usa uma exibição indexada quando as seg
   * Predicados de critérios de pesquisa na cláusula WHERE
   * Operações de união
   * Funções de agregação
-  * Cláusulas `GROUP BY`
+  * Cláusulas`GROUP BY` 
   * Referências de tabela
 * O custo estimado do uso do índice é o custo mais baixo de qualquer mecanismo de acesso considerado pelo otimizador de consulta. 
 * Toda tabela referenciada na consulta (diretamente ou ao expandir uma exibição para acessar suas tabelas subjacentes) que corresponde a uma referência de tabela na exibição indexada deve ter o mesmo conjunto de dicas aplicado na consulta.
 
 > [!NOTE] 
-para obter informações sobre a ferramenta de configuração e recursos adicionais. As dicas `READCOMMITTED` e `READCOMMITTEDLOCK` sempre são dicas diferentes consideradas nesse contexto, independentemente do nível de isolamento da transação atual.
+. As dicas `READCOMMITTED` e `READCOMMITTEDLOCK` sempre são dicas diferentes consideradas nesse contexto, independentemente do nível de isolamento da transação atual.
  
 Diferentemente dos requisitos das opções `SET` e dicas de tabela, essas são as mesmas regras que o otimizador de consulta usa para determinar se um índice de tabela abrange uma consulta. Não é necessário especificar mais nada na consulta para uma exibição indexada a ser utilizada.
 
@@ -215,15 +219,15 @@ O otimizador de consulta trata uma exibição indexada referenciada na cláusula
 
 #### <a name="using-hints-with-indexed-views"></a>Usando dicas com exibições indexadas
 
-Você pode evitar que os índices de exibições sejam usados para uma consulta usando a dica de consulta `EXPAND VIEWS`. Ou, então, pode usar a dica de tabela `NOEXPAND` para forçar o uso de um índice para uma exibição indexada especificada na cláusula `FROM` de uma consulta. Porém, deve deixar o otimizador de consulta determinar dinamicamente os melhores métodos de acesso a serem usados para cada consulta. Limite seu uso de `EXPAND` e `NOEXPAND` a casos específicos em que os testes têm mostrado que melhoram o desempenho consideravelmente.
+Você pode evitar que os índices de exibições sejam usados para uma consulta usando a dica de consulta `EXPAND VIEWS` . Ou, então, pode usar a dica de tabela `NOEXPAND` para forçar o uso de um índice para uma exibição indexada especificada na cláusula `FROM` de uma consulta. Porém, deve deixar o otimizador de consulta determinar dinamicamente os melhores métodos de acesso a serem usados para cada consulta. Limite seu uso de `EXPAND` e `NOEXPAND` a casos específicos em que os testes têm mostrado que melhoram o desempenho consideravelmente.
 
 A opção `EXPAND VIEWS` especifica que o otimizador de consulta não usa nenhum índice de exibição para a consulta inteira. 
 
-Quando `NOEXPAND` é especificado para uma exibição, o otimizador de consulta considera o uso de qualquer índice definido na exibição. O `NOEXPAND` especificado com a cláusula `INDEX()` opcional força o otimizador de consulta a usar os índices especificados. O `NOEXPAND` pode ser especificado apenas para uma exibição indexada e não pode ser especificado para uma exibição não indexada.
+Quando `NOEXPAND` é especificado para uma exibição, o otimizador de consulta considera o uso de qualquer índice definido na exibição. O`NOEXPAND` especificado com a cláusula `INDEX()` opcional força o otimizador de consulta a usar os índices especificados. O`NOEXPAND` pode ser especificado apenas para uma exibição indexada e não pode ser especificado para uma exibição não indexada.
 
-Quando `NOEXPAND` ou `EXPAND VIEWS` não é especificado em uma consulta que contém uma exibição, a exibição é expandida para acessar as tabelas subjacentes. Se a consulta que compõe a exibição tiver quaisquer dicas de tabela, as dicas serão propagadas às tabelas subjacentes. (Esse processo é explicado com mais detalhes em Resolução de exibição.) Contanto que o conjunto de dicas existente nas tabelas subjacentes da exibição sejam idênticos, a consulta será elegível para ser correspondida a uma exibição indexada. Na maioria das vezes, essas dicas corresponderão umas às outras porque estão sendo diretamente herdadas da exibição. No entanto, se a consulta referenciar tabelas em vez de exibições e as dicas aplicadas diretamente nessas tabelas não forem idênticas, a consulta não será elegível para correspondência com uma exibição indexada. Se as dicas `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK` ou `XLOCK` forem aplicadas às tabelas referenciadas na consulta depois da expansão da exibição, a consulta não será elegível para a correspondência da exibição indexada.
+Quando `NOEXPAND` ou `EXPAND VIEWS` não é especificado em uma consulta que contém uma exibição, a exibição é expandida para acessar as tabelas subjacentes. Se a consulta que compõe a exibição tiver quaisquer dicas de tabela, as dicas serão propagadas às tabelas subjacentes. (Esse processo é explicado com mais detalhes em Resolução de exibição.) Contanto que o conjunto de dicas existente nas tabelas subjacentes da exibição sejam idênticos, a consulta será elegível para ser correspondida a uma exibição indexada. Na maioria das vezes, essas dicas corresponderão umas às outras porque estão sendo diretamente herdadas da exibição. No entanto, se a consulta referenciar tabelas em vez de exibições e as dicas aplicadas diretamente nessas tabelas não forem idênticas, a consulta não será elegível para correspondência com uma exibição indexada. Se as dicas `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK`ou `XLOCK` forem aplicadas às tabelas referenciadas na consulta depois da expansão da exibição, a consulta não será elegível para a correspondência da exibição indexada.
 
-Se uma dica de tabela na forma de `INDEX (index_val[ ,...n] )` fizer referência a uma exibição em uma consulta, e você não especificar a dica `NOEXPAND`, a dica de índice será ignorada. Para especificar o uso de um determinado índice, use NOEXPAND. 
+Se uma dica de tabela na forma de `INDEX (index_val[ ,...n] )` fizer referência a uma exibição em uma consulta, e você não especificar a dica `NOEXPAND` , a dica de índice será ignorada. Para especificar o uso de um determinado índice, use NOEXPAND. 
 
 Geralmente, quando o otimizador de consulta corresponde uma exibição indexada a uma consulta, as dicas especificadas nas tabelas ou exibições da consulta são aplicadas diretamente à exibição indexada. Se o otimizador de consulta optar por não usar uma exibição indexada, qualquer dica será propagada diretamente às tabelas referenciadas na exibição. Para saber mais, veja Resolução de exibição. Essa propagação se aplica a dicas de união. Elas são aplicadas somente em sua posição original na consulta. As dicas de união não são consideradas pelo otimizador de consulta quando há correspondência entre as consultas e as exibições indexadas. Se um plano de consulta usar uma exibição indexada que corresponde a parte de uma consulta que contém uma dica de junção, esta não será usada no plano.
 
@@ -334,12 +338,12 @@ Certas alterações em um banco de dados podem fazer com que a execução de um 
 * Alterações feitas em uma tabela ou exibição referenciadas pela consulta (`ALTER TABLE` e `ALTER VIEW`).
 * As alterações feitas em um único procedimento, o que descartaria todos os planos para esse procedimento do cache (`ALTER PROCEDURE`).
 * Alterações em quaisquer índices usadas pelo plano de execução.
-* Atualizações em estatísticas usadas pelo plano de execução, geradas explicitamente de uma instrução, como `UPDATE STATISTICS` ou geradas automaticamente.
+* Atualizações em estatísticas usadas pelo plano de execução, geradas explicitamente de uma instrução, como `UPDATE STATISTICS`ou geradas automaticamente.
 * Cancelando um índice usado pelo plano de execução.
 * Uma chamada explícita para `sp_recompile`.
 * Números grandes de alterações para chaves (gerados por instruções `INSERT` ou `DELETE` de outros usuários que modificam a tabela referenciada pela consulta).
 * Para tabelas com disparadores, se o número de linhas nas tabelas inseridas ou excluídas aumentar consideravelmente.
-* Executar um procedimento armazenado usando a opção `WITH RECOMPILE`.
+* Executar um procedimento armazenado usando a opção `WITH RECOMPILE` .
 
 A maioria das recompilações é necessária para exatidão da instrução ou para obter planos de execução de consulta potencialmente mais rápidos.
 
@@ -355,20 +359,20 @@ A coluna `EventSubClass` de `SP:Recompile` e `SQL:StmtRecompile` contém um cód
 
 |Valor EventSubClass    |Description    |
 |----|----|
-|1  |Esquema alterado.    |
-|2  |Estatísticas alteradas.    |
-|3  |Compilação adiada.  |
-|4  |Opção SET alterada.    |
-|5  |Tabela temporária alterada.   |
-|6  |Conjunto de linhas remoto alterado. |
-|7  |Permissão de `FOR BROWSE` alterada.   |
-|8  |Ambiente de notificação de consulta alterado.    |
-|9  |Exibição particionada alterada.  |
-|10 |Opções de cursor alteradas.    |
-|11 |`OPTION (RECOMPILE)` solicitado |
+|1    |Esquema alterado.    |
+|2    |Estatísticas alteradas.    |
+|3    |Compilação adiada.    |
+|4    |Opção SET alterada.    |
+|5    |Tabela temporária alterada.    |
+|6    |Conjunto de linhas remoto alterado.    |
+|7    |Permissão de`FOR BROWSE` alterada.    |
+|8    |Ambiente de notificação de consulta alterado.    |
+|9    |Exibição particionada alterada.    |
+|10    |Opções de cursor alteradas.    |
+|11    |`OPTION (RECOMPILE)` solicitado    |
 
 > [!NOTE]
-> Quando a opção do banco de dados `AUTO_UPDATE_STATISTICS` estiver `SET` como `ON`, as consultas serão recompiladas quando destinadas a tabelas ou exibições indexadas cujas estatísticas foram atualizadas ou cujas cardinalidades foram alteradas significativamente desde a última execução. Esse comportamento se aplica a tabelas padrão definidas pelo usuário, tabelas temporárias e tabelas inseridas e excluídas criadas por disparadores de DML. Se o desempenho de consulta for afetado por recompilações excessivas, considere a alteração dessa configuração para `OFF`. Quando a opção do banco de dados `AUTO_UPDATE_STATISTICS` for `SET` como `OFF`, não ocorrerá nenhuma recompilação com base em estatísticas ou alterações de cardinalidade, com exceção das tabelas inseridas e excluídas criadas por disparadores de DML `INSTEAD OF`. Como essas tabelas são criadas em tempdb, a recompilação de consultas que as acessam depende da configuração de `AUTO_UPDATE_STATISTICS` em tempdb. Observe que no SQL Server 2000, as consultas continuam a recompilação com base nas alterações de cardinalidade para as tabelas inseridas e excluídas do disparador de DML, mesmo quando essa configuração estiver definida como `OFF`.
+> Quando a opção do banco de dados `AUTO_UPDATE_STATISTICS` estiver `SET` como `ON`, as consultas serão recompiladas quando destinadas a tabelas ou exibições indexadas cujas estatísticas foram atualizadas ou cujas cardinalidades foram alteradas significativamente desde a última execução. Esse comportamento se aplica a tabelas padrão definidas pelo usuário, tabelas temporárias e tabelas inseridas e excluídas criadas por disparadores de DML. Se o desempenho de consulta for afetado por recompilações excessivas, considere a alteração dessa configuração para `OFF`. Quando a opção do banco de dados `AUTO_UPDATE_STATISTICS` for `SET` como `OFF`, não ocorrerá nenhuma recompilação com base em estatísticas ou alterações de cardinalidade, com exceção das tabelas inseridas e excluídas criadas por disparadores de DML `INSTEAD OF` . Como essas tabelas são criadas em tempdb, a recompilação de consultas que as acessam depende da configuração de `AUTO_UPDATE_STATISTICS` em tempdb. Observe que no SQL Server 2000, as consultas continuam a recompilação com base nas alterações de cardinalidade para as tabelas inseridas e excluídas do disparador de DML, mesmo quando essa configuração estiver definida como `OFF`.
  
 
 ### <a name="parameters-and-execution-plan-reuse"></a>Reutilização de parâmetros e plano de execução
@@ -376,9 +380,9 @@ A coluna `EventSubClass` de `SP:Recompile` e `SQL:StmtRecompile` contém um cód
 O uso de parâmetros, inclusive de marcadores de parâmetro em aplicativos ADO, OLE DB e ODBC, pode aumentar a reutilização de planos de execução.
 
 > [!WARNING] 
-> O uso de parâmetros ou marcadores de parâmetro para manter valores digitados pelo usuário final é mais seguro que a concatenação dos valores em uma cadeia de caracteres executada posteriormente usando um método API de acesso a dados, a instrução `EXECUTE` ou o procedimento armazenado `sp_executesql`.
+> O uso de parâmetros ou marcadores de parâmetro para manter valores digitados pelo usuário final é mais seguro que a concatenação dos valores em uma cadeia de caracteres executada posteriormente usando um método API de acesso a dados, a instrução `EXECUTE` ou o procedimento armazenado `sp_executesql` .
  
-A única diferença entre as duas instruções `SELECT` a seguir são os valores comparados na cláusula `WHERE`:
+A única diferença entre as duas instruções `SELECT` a seguir são os valores comparados na cláusula `WHERE` :
 
 ```
 SELECT * 
@@ -391,7 +395,7 @@ FROM AdventureWorks2014.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
-A única diferença entre os planos de execução dessas consultas é o valor armazenado para a comparação com a coluna `ProductSubcategoryID`. Quando a meta for para o SQL Server sempre reconhecer que as instruções geram essencialmente o mesmo plano e reutilizam os planos, às vezes, o SQL Server não detecta isso em instruções SQL complexas.
+A única diferença entre os planos de execução dessas consultas é o valor armazenado para a comparação com a coluna `ProductSubcategoryID` . Quando a meta for para o SQL Server sempre reconhecer que as instruções geram essencialmente o mesmo plano e reutilizam os planos, às vezes, o SQL Server não detecta isso em instruções SQL complexas.
 
 A separação de constantes da instrução SQL usando parâmetros ajuda o mecanismo relacional a reconhecer planos duplicados. Você pode usar parâmetros dos seguintes modos: 
 
@@ -445,7 +449,7 @@ Porém, ela pode ser parametrizada de acordo com as regras de parametrização s
 No SQL Server, o uso de parâmetros ou marcadores de parâmetro nas instruções Transact-SQL aumenta a capacidade do mecanismo relacional para corresponder as instruções SQL novas com planos existentes de execução compilados anteriormente.
 
 > [!WARNING] 
-> O uso de parâmetros ou marcadores de parâmetro para manter valores digitados pelo usuário final é mais seguro que a concatenação dos valores em uma cadeia de caracteres executada posteriormente usando um método API de acesso a dados, a instrução `EXECUTE` ou o procedimento armazenado `sp_executesql`.
+> O uso de parâmetros ou marcadores de parâmetro para manter valores digitados pelo usuário final é mais seguro que a concatenação dos valores em uma cadeia de caracteres executada posteriormente usando um método API de acesso a dados, a instrução `EXECUTE` ou o procedimento armazenado `sp_executesql` .
 
 Se uma instrução SQL for executada sem parâmetros, o SQL Server parametrizará a instrução internamente para aumentar a possibilidade de correspondência com um plano de execução existente. Esse processo é chamado de parametrização simples. No SQL Server 2000, o processo era conhecido como parametrização automática.
 
@@ -479,40 +483,40 @@ Alternativamente, você pode especificar que, uma consulta única e quaisquer ou
 
 ### <a name="forced-parameterization"></a>Parametrização forçada
 
-É possível substituir o comportamento padrão da parametrização simples do SQL Server especificando que todas as instruções `SELECT`, `INSERT`, `UPDATE` e `DELETE` em um banco de dados tenham parâmetros e sejam sujeitas a determinadas limitações. A parametrização forçada é habilitada pela configuração da opção `PARAMETERIZATION` como `FORCED` na instrução `ALTER DATABASE`. A parametrização forçada pode melhorar o desempenho de alguns bancos de dados reduzindo a frequência de compilações e recompilações de consulta. Os bancos de dados que podem se beneficiar da parametrização forçada geralmente são aqueles em que há suporte a grandes volumes de consultas simultâneas de origens tais como aplicativos de ponto-de-venda.
+É possível substituir o comportamento padrão da parametrização simples do SQL Server especificando que todas as instruções `SELECT`, `INSERT`, `UPDATE`e `DELETE` em um banco de dados tenham parâmetros e sejam sujeitas a determinadas limitações. A parametrização forçada é habilitada pela configuração da opção `PARAMETERIZATION` como `FORCED` na instrução `ALTER DATABASE` . A parametrização forçada pode melhorar o desempenho de alguns bancos de dados reduzindo a frequência de compilações e recompilações de consulta. Os bancos de dados que podem se beneficiar da parametrização forçada geralmente são aqueles em que há suporte a grandes volumes de consultas simultâneas de origens tais como aplicativos de ponto-de-venda.
 
-Quando a opção `PARAMETERIZATION` é definida como `FORCED`, qualquer valor literal exibido em uma instrução `SELECT`, `INSERT`, `UPDATE` ou `DELETE`, enviado de qualquer forma, é convertido em um parâmetro durante a compilação de consulta. As exceções são literais exibidos nas seguintes construções de consulta: 
+Quando a opção `PARAMETERIZATION` é definida como `FORCED`, qualquer valor literal exibido em uma instrução `SELECT`, `INSERT`, `UPDATE`ou `DELETE` , enviado de qualquer forma, é convertido em um parâmetro durante a compilação de consulta. As exceções são literais exibidos nas seguintes construções de consulta: 
 
-* Instruções `INSERT...EXECUTE`.
+* Instruções`INSERT...EXECUTE` .
 * Instruções nos corpos de procedimentos armazenados, gatilhos ou funções definidas pelo usuário. O SQL Server já reutiliza os planos de consulta para essas rotinas.
 * Instruções preparadas que já foram parametrizadas no aplicativo cliente.
-* Instruções que contêm chamadas do método XQuery, onde o método é exibido em um contexto em que seus argumentos normalmente seriam parametrizados, como uma cláusula `WHERE`. Se o método for exibido em um contexto em que seus argumentos não serão parametrizados, o restante da instrução será parametrizado.
-* Instruções dentro de um cursor do Transact-SQL. (As instruções `SELECT` são parametrizadas em cursores de API.)
+* Instruções que contêm chamadas do método XQuery, onde o método é exibido em um contexto em que seus argumentos normalmente seriam parametrizados, como uma cláusula `WHERE` . Se o método for exibido em um contexto em que seus argumentos não serão parametrizados, o restante da instrução será parametrizado.
+* Instruções dentro de um cursor do Transact-SQL. (As instruções`SELECT` são parametrizadas em cursores de API.)
 * Construções da consulta preterida.
 * Qualquer instrução executada no contexto de `ANSI_PADDING` ou `ANSI_NULLS` definida como `OFF`.
 * Instruções que contêm mais de 2.097 literais elegíveis para parametrização.
 * Instruções que fazem referência a variáveis, como `WHERE T.col2 >= @bb`.
-* Instruções que contêm a dica de consulta `RECOMPILE`.
-* Instruções que contêm uma cláusula `COMPUTE`.
-* Instruções que contêm uma cláusula `WHERE CURRENT OF`.
+* Instruções que contêm a dica de consulta `RECOMPILE` .
+* Instruções que contêm uma cláusula `COMPUTE` .
+* Instruções que contêm uma cláusula `WHERE CURRENT OF` .
 
 Além disso, as cláusulas de consulta a seguir não são parametrizadas. Observe que nesses casos, somente as cláusulas não são parametrizadas. Outras cláusulas dentro da mesma consulta podem ser elegíveis para parametrização forçada.
 
 * A <select_list> de qualquer instrução `SELECT`. Isso inclui as listas `SELECT` de subconsultas e listas `SELECT` dentro de instruções `INSERT`.
-* Instruções `SELECT` de subconsulta exibidas dentro de uma instrução `IF`.
-* As cláusulas L `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO` ou `FOR XM` de uma consulta.
-* Argumentos, diretos ou como subexpressões, para `OPENROWSET`, `OPENQUERY`, `OPENDATASOURCE`, `OPENXML` ou qualquer operador `FULLTEXT`.
-* Os argumentos pattern e escape_character de uma cláusula `LIKE`.
-* O argumento style de uma cláusula `CONVERT`.
-* As constantes de número inteiro dentro de uma cláusula `IDENTITY`.
+* Instruções `SELECT` de subconsulta exibidas dentro de uma instrução `IF` .
+* As cláusulas L `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO`ou `FOR XM`de uma consulta.
+* Argumentos, diretos ou como subexpressões, para `OPENROWSET`, `OPENQUERY`, `OPENDATASOURCE`, `OPENXML`ou qualquer operador `FULLTEXT` .
+* Os argumentos pattern e escape_character de uma cláusula `LIKE` .
+* O argumento style de uma cláusula `CONVERT` .
+* As constantes de número inteiro dentro de uma cláusula `IDENTITY` .
 * Constantes especificadas usando a sintaxe da extensão ODBC.
 * Expressões de constantes desdobráveis que são argumentos dos operadores +, -, *, / e %. Ao considerar a elegibilidade da parametrização forçada, o SQL Server considera que uma expressão é de constante dobrável quando qualquer uma das seguintes condições é verdadeira:  
   * Nenhuma coluna, variável ou subconsulta é exibida na expressão.  
-  * A expressão contém uma cláusula `CASE`.  
-* Argumentos para cláusulas de dica de consulta. Incluem o argumento `number_of_rows` da dica de consulta `FAST`, o argumento `number_of_processors` da dica de consulta `MAXDOP` e o argumento number da dica de consulta `MAXRECURSION`.
+  * A expressão contém uma cláusula `CASE` .  
+* Argumentos para cláusulas de dica de consulta. Incluem o argumento `number_of_rows` da dica de consulta `FAST` , o argumento `number_of_processors` da dica de consulta `MAXDOP` e o argumento number da dica de consulta `MAXRECURSION` .
 
 
-A parametrização ocorre no nível das instruções Transact-SQL individuais. Em outras palavras, são parametrizadas instruções individuais em lote. Após a compilação, uma consulta parametrizada é executada no contexto do lote em que foi enviado originalmente. Se um plano de execução de uma consulta for armazenado em cache, você poderá determinar se a consulta foi parametrizada referenciando a coluna sql da exibição de gerenciamento dinâmico sys.syscacheobjects. Se uma consulta for parametrizada, os nomes e tipos de dados de parâmetros serão exibidos antes do texto do lote enviado nessa coluna, como (@1 tinyint).
+A parametrização ocorre no nível das instruções Transact-SQL individuais. Em outras palavras, são parametrizadas instruções individuais em lote. Após a compilação, uma consulta parametrizada é executada no contexto do lote em que foi enviado originalmente. Se um plano de execução de uma consulta for armazenado em cache, você poderá determinar se a consulta foi parametrizada referenciando a coluna sql da exibição de gerenciamento dinâmico sys.syscacheobjects. Se uma consulta for parametrizada, os nomes e tipos de dados de parâmetros serão exibidos antes do texto do lote enviado nessa coluna (como @1 tinyint).
 
 > [!NOTE]
 > Os nomes de parâmetro são arbitrários. Os usuários ou os aplicativos não devem confiar em uma ordem de nomenclatura específica. Além disso, os seguintes itens podem ser alterados entre as versões do SQL Server e as atualizações do service pack: nomes de parâmetro, opção de literais com parâmetros e espaçamento no texto com parâmetros.
@@ -521,7 +525,7 @@ A parametrização ocorre no nível das instruções Transact-SQL individuais. E
 
 Quando o SQL Server parametriza literais, os parâmetros são convertidos nos seguintes tipos de dados:
 
-* Literais inteiros cujo tamanho pode ser ajustado no tipo de dados int com parâmetros em int. Os literais inteiros grandes que fazem parte de predicados que envolvem qualquer operador de comparação (incluindo <, \<=, =, !=, >, >=, , !\<, !>, <>, `ALL`, `ANY`, `SOME`, `BETWEEN` e `IN`) são parametrizados em numeric(38,0). Os literais grandes que não fazem parte de predicados que envolvem operadores de comparação parametrizados em numeric, cuja precisão é grande o suficiente para oferecer suporte ao seu tamanho e cuja escala é 0.
+* Literais inteiros cujo tamanho pode ser ajustado no tipo de dados int com parâmetros em int. Os literais inteiros grandes que fazem parte de predicados que envolvem um operador de comparação (incluindo <, \<=, =, !=, >, >=, , !\<, !>, <>, `ALL`, `ANY`, `SOME`, `BETWEEN` e `IN`) são parametrizados em numeric (38,0). Os literais grandes que não fazem parte de predicados que envolvem operadores de comparação parametrizados em numeric, cuja precisão é grande o suficiente para oferecer suporte ao seu tamanho e cuja escala é 0.
 * Literais numéricos de ponto fixo que não fazem parte de predicados que envolvem operadores de comparação parametrizados em numeric, cuja precisão é 38 e cuja escala é grande o suficiente para oferecer suporte ao seu tamanho. Literais numéricos de ponto fixo que não fazem parte de predicados que envolvem operadores de comparação parametrizados em numeric, cuja precisão e escala são grandes o suficiente para oferecer suporte ao seu tamanho.
 * Literais numéricos de ponto de flutuação parametrizados em float(53).
 * Literais de cadeia de caracteres não Unicode parametrizados em varchar(8000), caso o literal caiba em 8000 caracteres, e em varchar(max), se ele for maior do que 8000 caracteres.
@@ -558,7 +562,7 @@ As instruções preparadas não podem ser usadas para criar objetos temporários
 
 O uso excessivo do modelo de preparação/execução pode diminuir o desempenho. Se uma instrução for executada apenas uma vez, uma execução direta exigirá apenas uma viagem de ida e volta da rede para o servidor. A preparação e a execução de uma instrução SQL executadas apenas uma vez exigem uma viagem de ida e volta adicional da rede; uma viagem para preparar a instrução e uma viagem para executá-la.
 
-A preparação de uma instrução é mais eficaz se forem utilizados marcadores de parâmetro. Por exemplo, supondo que a um aplicativo seja pedido ocasionalmente a recuperação de informações de produto do banco de dados de exemplo `AdventureWorks`. Há dois modos para o aplicativo fazer isso. 
+A preparação de uma instrução é mais eficaz se forem utilizados marcadores de parâmetro. Por exemplo, supondo que a um aplicativo seja pedido ocasionalmente a recuperação de informações de produto do banco de dados de exemplo `AdventureWorks` . Há dois modos para o aplicativo fazer isso. 
 
 Usando o primeiro modo, o aplicativo pode executar uma consulta separada para cada produto solicitado:
 
@@ -592,9 +596,9 @@ No SQL Server, o modelo de preparação/execução não tem uma vantagem de dese
 
 O SQL Server fornece consultas paralelas para otimizar a execução de consultas e operações de índice para computadores que têm mais de um microprocessador (CPU). Como o SQL Server pode executar uma consulta ou uma operação de índice em paralelo usando vários threads do sistema operacional, a operação pode ser executada de forma rápida e eficiente.
 
-Durante a otimização da consulta, o SQL Server procura consultas ou operações de índice que poderiam se beneficiar da execução paralela. Para essas consultas, o SQL Server insere operadores de troca no plano de execução de consulta para preparar a consulta para a execução paralela. Um operador de troca é um operador em um plano de execução de consulta que fornece gerenciamento de processo, redistribuição de dados e controle de fluxo. O operador de troca inclui como subtipos os operadores lógicos `Distribute Streams`, `Repartition Streams` e `Gather Streams` dos quais um ou mais podem aparecer na saída do Plano de Execução de um plano de consulta para uma consulta paralela. 
+Durante a otimização da consulta, o SQL Server procura consultas ou operações de índice que poderiam se beneficiar da execução paralela. Para essas consultas, o SQL Server insere operadores de troca no plano de execução de consulta para preparar a consulta para a execução paralela. Um operador de troca é um operador em um plano de execução de consulta que fornece gerenciamento de processo, redistribuição de dados e controle de fluxo. O operador de troca inclui como subtipos os operadores lógicos `Distribute Streams`, `Repartition Streams`e `Gather Streams` dos quais um ou mais podem aparecer na saída do Plano de Execução de um plano de consulta para uma consulta paralela. 
 
-Depois que os operadores de troca são inseridos, o resultado é um plano de execução da consulta paralela. Um plano de execução de consulta paralela pode usar mais de um thread. Um plano de execução em série, usado por uma consulta não paralela, usa só um thread para sua execução. O número real de threads usado por uma consulta paralela é determinado na inicialização da execução do plano de consulta e é determinado pela complexidade do plano e pelo grau de paralelismo. O grau de paralelismo determina o número máximo de CPUs que estão sendo usadas; não significa o número de threads que estão sendo usados. O valor do grau de paralelismo é definido no nível de servidor e pode ser modificado usando-se o procedimento armazenado no sistema sp_configure. Esse valor pode ser substituído por consulta individual ou instruções de índice especificando-se a dica de consulta `MAXDOP` ou a opção de índice `MAXDOP`. 
+Depois que os operadores de troca são inseridos, o resultado é um plano de execução da consulta paralela. Um plano de execução de consulta paralela pode usar mais de um thread. Um plano de execução em série, usado por uma consulta não paralela, usa só um thread para sua execução. O número real de threads usado por uma consulta paralela é determinado na inicialização da execução do plano de consulta e é determinado pela complexidade do plano e pelo grau de paralelismo. O grau de paralelismo determina o número máximo de CPUs que estão sendo usadas; não significa o número de threads que estão sendo usados. O valor do grau de paralelismo é definido no nível de servidor e pode ser modificado usando-se o procedimento armazenado no sistema sp_configure. Esse valor pode ser substituído por consulta individual ou instruções de índice especificando-se a dica de consulta `MAXDOP` ou a opção de índice `MAXDOP` . 
 
 O otimizador de consultas do SQL Server não usa um plano de execução paralela para uma consulta se alguma das condições a seguir for verdadeira:
 
@@ -614,7 +618,7 @@ O SQL Server detecta automaticamente o melhor grau de paralelismo para cada inst
   Cada operação de consulta ou índice exige um determinado número de threads para execução. A execução de um plano paralelo exige mais threads que um plano consecutivo, e o número de threads exigidos aumenta com o grau de paralelismo. Quando o requisito de thread do plano paralelo de um grau específico de paralelismo não puder ser atendido, o Mecanismo de banco de dados diminuirá automaticamente o grau de paralelismo ou abandonará completamente o plano paralelo no contexto de carga de trabalho especificado. Depois, ele executará o plano consecutivo (um thread). 
 
 3. O tipo de operação de consulta ou de índice executada.  
-  As operações de índice que criam ou reconstroem um índice, ou descartam um índice cluster e as consultas que usam ciclos de CPU frequentemente são as melhores opções para um plano paralelo. Por exemplo, junções de tabelas grandes, agregações grandes e classificação de conjuntos de resultados grandes são boas alternativas. As consultas simples, frequentemente encontradas em aplicativos de processamento de transações, localizam a coordenação adicional exigida para executar uma consulta em paralelo que supera o aumento de desempenho potencial. Para distinguir as consultas que se beneficiam de paralelismo das que não se beneficiam, o Mecanismo de banco de dados compara o custo estimado da execução da operação de consulta ou índice com o valor [limite de custo para paralelismo](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). Embora não recomendado, os usuários podem alterar o valor padrão, 5 usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). 
+  As operações de índice que criam ou reconstroem um índice, ou descartam um índice cluster e as consultas que usam ciclos de CPU frequentemente são as melhores opções para um plano paralelo. Por exemplo, junções de tabelas grandes, agregações grandes e classificação de conjuntos de resultados grandes são boas alternativas. As consultas simples, frequentemente encontradas em aplicativos de processamento de transações, localizam a coordenação adicional exigida para executar uma consulta em paralelo que supera o aumento de desempenho potencial. Para distinguir as consultas que se beneficiam de paralelismo das que não se beneficiam, o Mecanismo de banco de dados compara o custo estimado da execução da operação de consulta ou índice com o valor [limite de custo para paralelismo](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) . Embora não recomendado, os usuários podem alterar o valor padrão, 5 usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). 
 
 4. Se houver um número suficiente de linhas para processar.  
   Se o otimizador de consulta determinar que o número de linhas é muito baixo, não apresentará os operadores de troca para distribuir as linhas. Por conseguinte, os operadores serão executados em série. A execução dos operadores em um plano consecutivo evita cenários quando os custos de inicialização, distribuição e coordenação excedem os ganhos alcançados pela execução de operador paralela.
@@ -634,7 +638,7 @@ Cursores estáticos e controlados por conjunto de chaves podem ser populados por
 
 #### <a name="overriding-degrees-of-parallelism"></a>Substituindo graus de paralelismo
 
-Você pode usar a opção de configuração de servidor [grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) ([ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) no [!INCLUDE[ssSDS_md](../includes/sssds-md.md)]) para limitar o número de processadores a serem usados na execução do plano paralelo. O grau máximo da opção paralelismo pode ser substituído por instruções de operação de índice e de consulta individual, especificando a dica de consulta MAXDOP ou a opção de índice MAXDOP. MAXDOP fornece mais controle sobre operações de índice e consultas individuais. Por exemplo, você pode usar a opção MAXDOP para controlar, estendendo ou reduzindo, o número de processadores dedicado a uma operação de índice online. Desse modo, você pode equilibrar os recursos usados por uma operação de índice com aquele dos usuários simultâneos. A definição do grau máximo da opção de paralelismo como 0 permite que o SQL Server use todos os processadores disponíveis até um máximo de 64 processadores em uma execução de plano paralelo. A definição de MAXDOP como 0 para consultas e índices permite ao SQL Server usar todos os processadores disponíveis até um máximo de 64 processadores para as consultas ou índices específicos em uma execução de plano paralelo.
+Você pode usar a opção de configuração de servidor [grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) ([ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) no [!INCLUDE[ssSDS_md](../includes/sssds-md.md)] ) para limitar o número de processadores a serem usados na execução do plano paralelo. O grau máximo da opção paralelismo pode ser substituído por instruções de operação de índice e de consulta individual, especificando a dica de consulta MAXDOP ou a opção de índice MAXDOP. MAXDOP fornece mais controle sobre operações de índice e consultas individuais. Por exemplo, você pode usar a opção MAXDOP para controlar, estendendo ou reduzindo, o número de processadores dedicado a uma operação de índice online. Desse modo, você pode equilibrar os recursos usados por uma operação de índice com aquele dos usuários simultâneos. A definição do grau máximo da opção de paralelismo como 0 permite que o SQL Server use todos os processadores disponíveis até um máximo de 64 processadores em uma execução de plano paralelo. A definição de MAXDOP como 0 para consultas e índices permite ao SQL Server usar todos os processadores disponíveis até um máximo de 64 processadores para as consultas ou índices específicos em uma execução de plano paralelo.
 
 
 ### <a name="parallel-query-example"></a>Exemplo de consulta paralela
@@ -712,13 +716,13 @@ Aqui há um possível plano paralelo gerado para a consulta mostrada anteriormen
 
 A ilustração mostra um plano de otimizador de consulta executado com um grau de paralelismo igual a 4 e envolvendo uma junção de duas tabelas.
 
-O plano paralelo contém três operadores `Parallelism`. O operador `Index Seek` do índice `o_datkey_ptr` e o operador `Index Scan` do índice `l_order_dates_idx` são executados em paralelo. Isso produz vários fluxos exclusivos. Isso pode ser determinado com base nos operadores Parallelism mais próximos acima dos operadores `Index Scan` e `Index Seek`, respectivamente. Ambos estão reparticionando o tipo de troca. Ou seja, eles estão apenas embaralhando novamente os dados entre os fluxos e produzindo na saída o mesmo número de fluxos existente na entrada. Esse número de fluxos é igual ao grau de paralelismo.
+O plano paralelo contém três operadores `Parallelism` . O operador `Index Seek` do índice `o_datkey_ptr` e o operador `Index Scan` do índice `l_order_dates_idx` são executados em paralelo. Isso produz vários fluxos exclusivos. Isso pode ser determinado com base nos operadores Parallelism mais próximos acima dos operadores `Index Scan` e `Index Seek` , respectivamente. Ambos estão reparticionando o tipo de troca. Ou seja, eles estão apenas embaralhando novamente os dados entre os fluxos e produzindo na saída o mesmo número de fluxos existente na entrada. Esse número de fluxos é igual ao grau de paralelismo.
 
-O operador `Parallelism ` acima do operador `l_order_dates_idx``Index Scan` está reparticionando seus fluxos de entrada usando o valor de `L_ORDERKEY` como chave. Desse modo, os mesmos valores de `L_ORDERKEY` terminam no mesmo fluxo de saída. Ao mesmo tempo, os fluxos de saída mantêm a ordem na coluna `L_ORDERKEY` para atender ao requisito de entrada do operador `Merge Join`.
+O operador `Parallelism ` acima do operador `l_order_dates_idx``Index Scan` está reparticionando seus fluxos de entrada usando o valor de `L_ORDERKEY` como chave. Desse modo, os mesmos valores de `L_ORDERKEY` terminam no mesmo fluxo de saída. Ao mesmo tempo, os fluxos de saída mantêm a ordem na coluna `L_ORDERKEY` para atender ao requisito de entrada do operador `Merge Join` .
 
-O operador `Parallelism` acima do operador `Index Seek` está reparticionando seus fluxos de entrada usando o valor de `O_ORDERKEY`. Como sua entrada não é classificada nos valores da coluna `O_ORDERKEY`, e esta é a coluna de junção no operador `Merge Join`, o operador Sort entre os operadores `Parallelism` e `Merge Join` verificam se a entrada é classificada para o operador `Merge Join` nas colunas de junção. O operador `Sort`, assim como o operador `Merge Join`, é executado em paralelo.
+O operador `Parallelism` acima do operador `Index Seek` está reparticionando seus fluxos de entrada usando o valor de `O_ORDERKEY`. Como sua entrada não é classificada nos valores da coluna `O_ORDERKEY` , e esta é a coluna de junção no operador `Merge Join` , o operador Sort entre os operadores `Parallelism` e `Merge Join` verificam se a entrada é classificada para o operador `Merge Join` nas colunas de junção. O operador `Sort` , assim como o operador `Merge Join` , é executado em paralelo.
 
-O operador `Parallelism` superior reúne resultados de vários fluxos em um único fluxo. As agregações parciais executadas pelo operador `Stream Aggregate` abaixo do operador `Parallelism` são acumuladas em um único valor `SUM` de cada valor diferente de `O_ORDERPRIORITY` no operador `Stream Aggregate` acima do operador `Parallelism`. Como esse plano tem dois segmentos de troca, com grau de paralelismo igual a 4, ele usa oito threads.
+O operador `Parallelism` superior reúne resultados de vários fluxos em um único fluxo. As agregações parciais executadas pelo operador `Stream Aggregate` abaixo do operador `Parallelism` são acumuladas em um único valor `SUM` de cada valor diferente de `O_ORDERPRIORITY` no operador `Stream Aggregate` acima do operador `Parallelism` . Como esse plano tem dois segmentos de troca, com grau de paralelismo igual a 4, ele usa oito threads.
 
 
 ### <a name="parallel-index-operations"></a>Operações de índice paralelo
@@ -728,7 +732,7 @@ Os planos de consulta criados para as operações de índice que criam ou recria
 > [!NOTE]
 > As operações de índice paralelas somente estão disponíveis no SQL Server 2008 Enterprise.
  
-O SQL Server usa os mesmos algoritmos para determinar o grau de paralelismo (o número total de threads separados a serem executados) para operações de índice, como faz em outras consultas. O grau máximo de paralelismo para uma operação de índice está sujeito à opção de configuração de servidor [grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). É possível substituir o valor do grau máximo de paralelismo para operações de índice individuais definindo a opção de índice MAXDOP nas instruções CREATE INDEX, ALTER INDEX, DROP INDEX e ALTER TABLE.
+O SQL Server usa os mesmos algoritmos para determinar o grau de paralelismo (o número total de threads separados a serem executados) para operações de índice, como faz em outras consultas. O grau máximo de paralelismo para uma operação de índice está sujeito à opção de configuração de servidor [grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) . É possível substituir o valor do grau máximo de paralelismo para operações de índice individuais definindo a opção de índice MAXDOP nas instruções CREATE INDEX, ALTER INDEX, DROP INDEX e ALTER TABLE.
 
 Quando o Mecanismo de Banco de Dados cria um plano de execução de índice, o número de operações paralelas é definido como o menor valor entre: 
 
@@ -824,7 +828,7 @@ Os planos de execução de consultas em tabelas e índices particionados podem s
 
 Usando essas ferramentas, você pode averiguar as seguintes informações:
 
-* As operações como `scans`, `seeks`, `inserts`, `updates`, `merges` e `deletes` que acessam tabelas ou índices particionados.
+* As operações como `scans`, `seeks`, `inserts`, `updates`, `merges`e `deletes` que acessam tabelas ou índices particionados.
 * As partições acessadas pela consulta. Por exemplo, a contagem total de partições acessadas e os intervalos de partições contíguas que são acessadas estão disponíveis nos planos de execução de tempo de execução.
 * Quando a operação de busca seletiva é usada em uma operação de busca ou de exame para recuperar dados de uma ou mais partições.
 
@@ -832,7 +836,7 @@ Usando essas ferramentas, você pode averiguar as seguintes informações:
 
 O SQL Server fornece informações aperfeiçoadas de particionamento para planos de execução de tempo de compilação e tempo de execução. Agora, os planos de execução fornecem as seguintes informações:
 
-* Um atributo opcional `Partitioned` que indica que um operador, como `seek`, `scan`, `insert`, `update`, `merge` ou `delete`, é executado em uma tabela particionada.  
+* Um atributo opcional `Partitioned` que indica que um operador, como `seek`, `scan`, `insert`, `update`, `merge`ou `delete`, é executado em uma tabela particionada.  
 * Um novo elemento `SeekPredicateNew` com um subelemento `SeekKeys` que inclui `PartitionID` como a coluna de chave de índice à esquerda e as condições de filtro que especificam buscas de intervalo em `PartitionID`. A presença de dois subelementos `SeekKeys` indica que uma operação de busca seletiva no `PartitionID` é usada.   
 * Informações resumidas que fornecem uma contagem total das partições acessadas. Essas informações só estão disponíveis em planos de tempo de execução. 
 
@@ -864,17 +868,17 @@ Conforme mostrado na ilustração anterior, esse atributo é exibido nas proprie
 
 #### <a name="new-seek-predicate"></a>Novo predicado de busca
 
-Na saída Plano de Execução XML, o elemento `SeekPredicateNew` aparece no operador no qual está definido. Ele pode conter até duas ocorrências de subelemento `SeekKeys`. O primeiro item `SeekKeys` especifica a operação de busca de primeiro nível no nível da ID da partição do índice lógico. Ou seja, essa busca determina as partições que devem ser acessadas para atender as condições da consulta. O segundo item `SeekKeys` especifica a parte de busca de segundo nível da operação de busca seletiva que ocorre em cada partição identificada na busca de primeiro nível. 
+Na saída Plano de Execução XML, o elemento `SeekPredicateNew` aparece no operador no qual está definido. Ele pode conter até duas ocorrências de subelemento `SeekKeys` . O primeiro item `SeekKeys` especifica a operação de busca de primeiro nível no nível da ID da partição do índice lógico. Ou seja, essa busca determina as partições que devem ser acessadas para atender as condições da consulta. O segundo item `SeekKeys` especifica a parte de busca de segundo nível da operação de busca seletiva que ocorre em cada partição identificada na busca de primeiro nível. 
 
 #### <a name="partition-summary-information"></a>Informações resumidas sobre partições
 
 Nos planos de execução de tempo de execução, as informações resumidas sobre partições fornecem uma contagem das partições acessadas e da identidade das partições reais acessadas. É possível usar essas informações para verificar se as partições corretas são acessadas na consulta e se todas as outras partições são eliminadas do exame.
 
-As informações a seguir são fornecidas: `Actual Partition Count` e `Partitions Accessed`. 
+As informações a seguir são fornecidas: `Actual Partition Count`e `Partitions Accessed`. 
 
 `Actual Partition Count` é o número total de partições acessadas pela consulta.
 
-`Partitions Accessed`, na saída Plano de Execução XML, são as informações de resumo da partição que são exibidas no novo elemento `RuntimePartitionSummary` no nó `RelOp` do operador no qual ele é definido. O exemplo a seguir demonstra o conteúdo do elemento `RuntimePartitionSummary`, indicando que é acessado o total de duas partições (partições 2 e 3).
+`Partitions Accessed`, na saída Plano de Execução XML, são as informações de resumo da partição que são exibidas no novo elemento `RuntimePartitionSummary` no nó `RelOp` do operador no qual ele é definido. O exemplo a seguir demonstra o conteúdo do elemento `RuntimePartitionSummary` , indicando que é acessado o total de duas partições (partições 2 e 3).
 ```
 <RunTimePartitionSummary>
 
@@ -889,11 +893,11 @@ As informações a seguir são fornecidas: `Actual Partition Count` e `Partition
 
 #### <a name="displaying-partition-information-by-using-other-showplan-methods"></a>Exibindo informações sobre partições usando outros métodos de Plano de Execução
 
-Os métodos de Plano de Execução `SHOWPLAN_ALL`, `SHOWPLAN_TEXT` e `STATISTICS PROFILE` não reportam as informações sobre partições descritas neste tópico, com a seguinte exceção. Como parte do predicado `SEEK`, as partições a serem acessadas são identificadas por um predicado de intervalo na coluna computada representando a ID da partição. A exemplo a seguir mostra o predicado `SEEK` para um operador `Clustered Index Seek`. As partições 2 e 3 são acessadas e o operador de busca filtra as linhas que atendem à condição `date_id BETWEEN 20080802 AND 20080902`.
+Os métodos de Plano de Execução `SHOWPLAN_ALL`, `SHOWPLAN_TEXT`e `STATISTICS PROFILE` não reportam as informações sobre partições descritas neste tópico, com a seguinte exceção. Como parte do predicado `SEEK` , as partições a serem acessadas são identificadas por um predicado de intervalo na coluna computada representando a ID da partição. A exemplo a seguir mostra o predicado `SEEK` para um operador `Clustered Index Seek` . As partições 2 e 3 são acessadas e o operador de busca filtra as linhas que atendem à condição `date_id BETWEEN 20080802 AND 20080902`.
 ```
 |--Clustered Index Seek(OBJECT:([db_sales_test].[dbo].[fact_sales].[ci]), 
 
-        SEEK:([PtnId1000] >= (2) AND [PtnId1000] <= (3) 
+        SEEK:([PtnId1000] >= (2) AND [PtnId1000] \<= (3) 
 
                 AND [db_sales_test].[dbo].[fact_sales].[date_id] >= (20080802) 
 
@@ -915,7 +919,7 @@ Uma colocação de junção pode ocorrer quando duas tabelas são particionadas 
 
 Em um plano colocado, a junção `Nested Loops` lê uma ou mais partições de índice e tabela unidas a partir da parte interna. Os números dos operadores `Constant Scan` representam os números de partições. 
 
-Quando planos paralelos para junções colocadas são gerados para tabelas ou índices particionados, um operador Parallelism é exibido entre os operadores de junção `Constant Scan` e `Nested Loops`. Nesse caso, cada um dos vários threads da parte externa da junção lê e trabalha em uma partição diferente. 
+Quando planos paralelos para junções colocadas são gerados para tabelas ou índices particionados, um operador Parallelism é exibido entre os operadores de junção `Constant Scan` e `Nested Loops` . Nesse caso, cada um dos vários threads da parte externa da junção lê e trabalha em uma partição diferente. 
 
 A ilustração a seguir demonstra um plano de consulta paralelo para uma junção colocada.   
 ![colocated_join](../relational-databases/media/colocated-join.gif)
@@ -933,12 +937,12 @@ Embora o exemplo anterior sugira um modo objetivo para alocar threads, a estrat�
 
 Vejamos outro exemplo, vamos supor que a tabela possui quatro partições na coluna A com pontos de limite (10, 20, 30), um índice na coluna B e a consulta tem uma cláusula de predicado `WHERE B IN (50, 100, 150)`. Como as partições da tabela têm base nos valores de A, os valores de B podem ocorrer em qualquer uma das partições da tabela. Dessa forma, o processador de consulta buscará cada um dos três valores de B (50, 100, 150) em cada uma das quatro partições de tabela. O processador de consulta atribuirá threads proporcionalmente para que possa executar cada um desses 12 exames de consulta em paralelo.
 
-|As partições de tabela baseadas na coluna A |Buscas para coluna B em cada partição de tabela |
+|As partições de tabela baseadas na coluna A    |Buscas para coluna B em cada partição de tabela |
 |----|----|
-|Partição de tabela 1: A \< 10   |B=50, B=100, B=150 |
-|Partição de tabela 2: A >= 10 AND A \< 20   |B=50, B=100, B=150 |
-|Partição de tabela 3: A >= 20 AND A \< 30   |B=50, B=100, B=150 |
-|Partição de tabela 4: A >= 30  |B=50, B=100, B=150 |
+|Partição de tabela 1: A < 10     |B=50, B=100, B=150 |
+|Partição de tabela 2: A >= 10 AND A < 20     |B=50, B=100, B=150 |
+|Partição de tabela 3: A >= 20 AND A < 30     |B=50, B=100, B=150 |
+|Partição de tabela 4: A >= 30     |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>Práticas recomendadas
 
@@ -950,7 +954,7 @@ Para melhorar o desempenho das consultas que acessam uma grande quantidade de da
 * Usar um servidor com processadores rápidos e o máximo possível de núcleos de processador, para se beneficiar da capacidade de processamento de consultas paralelas.
 * Verificar se o servidor tem largura de banda suficiente do controlador de E/S. 
 * Criar um índice clusterizado em todas as tabelas particionadas grandes para beneficiar-se de otimizações de exames da árvore B.
-* Seguir as práticas recomendadas no documento [Loading Bulk Data into a Partitioned Table](http://go.microsoft.com/fwlink/?LinkId=154561) (Carregar dados em massa em uma tabela particionada) quando estiver carregando dados em massa em tabelas particionadas.
+* Seguir as práticas recomendadas no documento [Loading Bulk Data into a Partitioned Table](http://go.microsoft.com/fwlink/?LinkId=154561)(Carregar dados em massa em uma tabela particionada) quando estiver carregando dados em massa em tabelas particionadas.
 
 ### <a name="example"></a>Exemplo
 
@@ -1021,3 +1025,4 @@ GO
 SET STATISTICS XML OFF;
 GO
 ```
+

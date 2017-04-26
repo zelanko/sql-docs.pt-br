@@ -1,39 +1,43 @@
 ---
-title: "Validar um pacote de DAC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "aplicativo da camada de dados [SQL Server], validar"
-  - "aplicativo da camada de dados [SQL Server], comparar"
-  - "validar DAC"
-  - "comparar DACs"
-  - "aplicativo da camada de dados [SQL Server], exibir"
-  - "exibir DAC"
+title: Validar um pacote de DAC | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data-tier application [SQL Server], validate
+- data-tier application [SQL Server], compare
+- validate DAC
+- compare DACs
+- data-tier application [SQL Server], view
+- view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 036df2b92a90337202eb84adb6284169a8f54f76
+ms.lasthandoff: 04/11/2017
+
 ---
-# Validar um pacote de DAC
+# <a name="validate-a-dac-package"></a>Validar um pacote de DAC
   Esta é uma prática recomendada para revisar o conteúdo de um pacote de DAC antes de implantá-lo em produção e também para validar as ações de atualização antes de atualizar um DAC existente. Isso é especialmente válido durante a implantação de pacotes que não foram desenvolvidos em sua organização.  
   
-1.  **Antes de começar:**  [Pré-requisitos](#Prerequisites)  
+1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **Para atualizar um DAC, usando:**  [Exibir o Conteúdo de um DAC](#ViewDACContents), [Exibir Alterações no Banco de Dados](#ViewDBChanges), [Exibir Ações de Atualização](#ViewUpgradeActions), [Comparar DACs](#CompareDACs)  
+2.  **To upgrade a DAC, using:**  [View the Contents of a DAC](#ViewDACContents), [View Database Changes](#ViewDBChanges), [View Upgrade Actions](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> Pré-requisitos  
  Recomendamos não implantar um pacote de DAC de origens desconhecidas ou não confiáveis. Como os DACs podem conter código mal-intencionado que pode executar código [!INCLUDE[tsql](../../includes/tsql-md.md)] sem finalidade ou provocar erros modificando o esquema. Antes de usar um DAC de uma origem desconhecida ou não confiável, implante-o em uma instância de teste isolada do [!INCLUDE[ssDE](../../includes/ssde-md.md)], execute [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no banco de dados. Além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  
   
-##  <a name="ViewDACContents"></a> Exibir o conteúdo de um DAC  
+##  <a name="ViewDACContents"></a> Exibir o Conteúdo de um DAC  
  Existem dois mecanismos para exibição do conteúdo de um pacote de DAC (aplicativo da camada de dados). Você pode importar o pacote de DAC para um projeto de DAC no SQL Server Developer Tools. É possível desempacotar o conteúdo do pacote em uma pasta.  
   
  **Exiba um DAC no SQL Server Developer Tools**  
@@ -44,7 +48,7 @@ caps.handback.revision: 17
   
 3.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó e selecione **Propriedades…**.  
   
-4.  Na guia **Configurações de Projeto**, na seção **Tipos de Saída**, marque a caixa de seleção **Aplicativo da Camada de Dados (arquivo .dacpac)** e feche a caixa de diálogo de propriedades.  
+4.  Na guia **Configurações de Projeto** , na seção **Tipos de Saída** , marque a caixa de seleção **Aplicativo da Camada de Dados (arquivo .dacpac)** e feche a caixa de diálogo de propriedades.  
   
 5.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Importar Aplicativo da Camada de Dados…**.  
   
@@ -60,12 +64,12 @@ caps.handback.revision: 17
   
 -   Exiba o conteúdo dos arquivos de texto em ferramentas como o bloco de notas.  
   
-##  <a name="ViewDBChanges"></a> Exibir alterações do banco de dados  
+##  <a name="ViewDBChanges"></a> Exibir Alterações no Banco de Dados  
  Depois que a versão atual de um DAC for implantada para produção, alterações poderão ter sido feitas diretamente no banco de dados associado que podem estar em conflito com o esquema definido em uma nova versão do DAC. Antes de atualizar para uma nova versão do DAC, verifique se foram feitas alterações no banco de dados.  
   
  **Exibir alterações do banco de dados usando um assistente**  
   
-1.  Execute o assistente para **Atualizar Aplicativo da Camada de Dados**, especificando o DAC implantado no momento e o pacote de DAC que contém a nova versão do DAC.  
+1.  Execute o assistente para **Atualizar Aplicativo da Camada de Dados** , especificando o DAC implantado no momento e o pacote de DAC que contém a nova versão do DAC.  
   
 2.  Na página **Detectar Alteração** , examine o relatório das alterações que foram feitas no banco de dados.  
   
@@ -83,7 +87,7 @@ caps.handback.revision: 17
   
 4.  Use o método **GetDatabaseChanges()** para recuperar um objeto **ChangeResults** e redirecione o objeto para um arquivo de texto para gerar um relatório simples de objetos novos, excluídos e alterados.  
   
-### Exibir exemplo de alterações do banco de dados (PowerShell)  
+### <a name="view-database-changes-example-powershell"></a>Exibir exemplo de alterações do banco de dados (PowerShell)  
  **Exibir exemplo de alterações do banco de dados (PowerShell)**  
   
  O exemplo a seguir relata alterações de banco de dados realizadas em um DAC implantado denominado MyApplicaiton.  
@@ -105,12 +109,12 @@ $dacName  = "MyApplication"
 $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DACScripts\MyApplicationChanges.txt  
 ```  
   
-##  <a name="ViewUpgradeActions"></a> Exibir ações de atualização  
+##  <a name="ViewUpgradeActions"></a> Exibir Ações de Atualização  
  Antes de usar uma nova versão de um pacote de DAC para atualizar um DAC que foi implantado de um pacote de DAC anterior, você pode gerar um relatório que contém as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] a serem executadas durante a atualização e, depois, examinar as instruções.  
   
  **Relate ações de atualização usando um assistente**  
   
-1.  Execute o assistente para **Atualizar Aplicativo da Camada de Dados**, especificando o DAC implantado no momento e o pacote de DAC que contém a nova versão do DAC.  
+1.  Execute o assistente para **Atualizar Aplicativo da Camada de Dados** , especificando o DAC implantado no momento e o pacote de DAC que contém a nova versão do DAC.  
   
 2.  Na página **Resumo** , examine o relatório das ações de atualização.  
   
@@ -132,7 +136,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 6.  Feche o fluxo de arquivos usado para ler o arquivo de pacote de DAC.  
   
-### Exibir o exemplo de ações de atualização (PowerShell)  
+### <a name="view-upgrade-actions-example-powershell"></a>Exibir o exemplo de ações de atualização (PowerShell)  
  **Exibir o exemplo de ações de atualização (PowerShell)**  
   
  O exemplo a seguir relata as instruções Transact-SQL que seriam executadas para atualizar um DAC denominado MyApplicaiton para o esquema definido em um arquivo MyApplicationVNext.dacpac.  
@@ -162,14 +166,14 @@ $dacstore.GetIncrementalUpgradeScript($dacName, $dacType) | Out-File -Filepath C
 $fileStream.Close()  
 ```  
   
-##  <a name="CompareDACs"></a> Comparar DACs  
+##  <a name="CompareDACs"></a> Compare DACs  
  Antes de atualizar um DAC, é recomendável revisar as diferenças nos objetos em nível de banco de dados e instância entre o DAC atual e o novo. Se você não tiver uma cópia do pacote para o DAC atual, poderá extrair um pacote do banco de dados atual.  
   
  Se você importar os pacotes de DAC para projetos de DAC no SQL Server Developer Tools, poderá usar a ferramenta de comparação de esquemas para analisar as diferenças entre o dois DACs.  
   
  Outra alternativa é desempacotar os DACs em pastas separadas. Você pode usar uma ferramenta de diferenças, como o utilitário WinDiff, para analisar as diferenças.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Implantar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [Atualizar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  

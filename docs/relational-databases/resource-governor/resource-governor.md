@@ -1,28 +1,32 @@
 ---
-title: "Administrador de Recursos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Administrador de recursos, visão geral"
-  - "Administrador de Recursos"
+title: Resource Governor | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, overview
+- Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7bbd2ba4ed132f3e1a795f72667c34f764c0d30
+ms.lasthandoff: 04/11/2017
+
 ---
-# Administrador de Recursos
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Administrador de Recursos é um recurso que você pode usar para gerenciar a carga de trabalho e o consumo de recursos do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O Administrador de Recursos permite que você especifique os limites de quantidade de CPU, E/S física e memória que as solicitações recebidas de aplicativos podem usar.  
+# <a name="resource-governor"></a>Administrador de Recursos
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor é um recurso que você pode usar para gerenciar a carga de trabalho e o consumo de recursos do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O Administrador de Recursos permite que você especifique os limites de quantidade de CPU, E/S física e memória que as solicitações recebidas de aplicativos podem usar.  
   
-## Benefícios do Administrador de Recursos  
+## <a name="benefits-of-resource-governor"></a>Benefícios do Administrador de Recursos  
  O Administrador de Recursos permite gerenciar cargas de trabalho e recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificando limites de consumo de recursos por solicitações de entrada. No contexto do Administrador de Recursos, carga de trabalho é um conjunto de consultas ou solicitações de tamanho similar que podem e devem, ser tratadas como uma única entidade. Não se trata de um requisito, mas quanto mais uniforme for o padrão de uso dos recursos de uma carga de trabalho, maior a probabilidade de obter benefícios derivados do Administrador de Recursos. Limites de recurso podem ser reconfigurados em tempo real, com impacto mínimo sobre as cargas de trabalho que se encontram em execução.  
   
  Em um ambiente com várias cargas de trabalho distintas presentes no mesmo servidor, o Administrador de Recursos permite diferenciá-las e alocar recursos compartilhados conforme forem solicitados, segundo os limites especificados. Esses recursos são CPU, E/S física e memória.  
@@ -37,10 +41,10 @@ caps.handback.revision: 41
   
 -   Adicione o controle refinado de recursos para estornos de uso de recurso e forneça a cobrança previsível para consumidores dos recursos do servidor.  
   
-## Restrições do Administrador de Recursos  
+## <a name="resource-governor-constraints"></a>Restrições do Administrador de Recursos  
  Essa versão do Administrador de Recursos possui as seguintes restrições:  
   
--   O gerenciamento de recursos se limita ao [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. O Administrador de Recursos não pode ser usado para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   O gerenciamento de recursos se limita ao [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. O Administrador de Recursos não pode ser usado para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 -   Não há monitoramento ou gerenciamento de carga de trabalho entre instâncias do SQL Server.  
   
@@ -50,10 +54,10 @@ caps.handback.revision: 41
   
 -   Você não pode definir limites de E/S no pool de recursos interno.  
   
-## Conceitos de recurso  
+## <a name="resource-concepts"></a>Conceitos de recurso  
  Os três conceitos a seguir são fundamentais para compreensão e uso do Administrador de Recursos:  
   
--   **Pools de recursos.** O pool de recursos representa os recursos físicos do servidor. É possível pensar no pool como uma instância virtual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dois pools de recursos (interno e padrão) são criados quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado. O Administrador de Recursos também oferece suporte a pools de recursos definidos pelo usuário. Para obter mais informações, consulte [Pool de recursos do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md).  
+-   **Pools de recursos.** O pool de recursos representa os recursos físicos do servidor. É possível pensar no pool como uma instância virtual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dois pools de recursos (interno e padrão) são criados quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado. O Administrador de Recursos também oferece suporte a pools de recursos definidos pelo usuário. Para obter mais informações, consulte [Pool de recursos do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md).  
   
 -   **Grupos de carga de trabalho.** Um grupo de carga de trabalho funciona como um contêiner para as solicitações de sessão que têm critérios de classificação similares. Uma carga de trabalho permite o monitoramento de agregação de sessões e define políticas para as sessões. Cada grupo de cargas de trabalho está em um pool de recursos. Dois grupos de carga de trabalho (interno e padrão) são criados e mapeados para os pools de recursos correspondentes quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado. O Administrador de Recursos também oferece suporte a grupos de carga de trabalho definidos pelo usuário. Para obter mais informações, consulte [Grupos de carga de trabalho do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-workload-group.md).  
   
@@ -74,21 +78,21 @@ caps.handback.revision: 41
   
 -   O pool de recursos fornece e limita os recursos requeridos pelo aplicativo, por exemplo, Aplicativo 3.  
   
- ![Componentes funcionais do Administrador de Recursos](../../relational-databases/resource-governor/media/rg-basic-funct-components.gif "Componentes funcionais do Administrador de Recursos")  
+ ![Componentes funcionais do Resource Governor](../../relational-databases/resource-governor/media/rg-basic-funct-components.gif "Componentes funcionais do Resource Governor")  
   
-## Tarefas do Administrador de Recursos  
+## <a name="resource-governor-tasks"></a>Tarefas do Administrador de Recursos  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Descreve como habilitar o Administrador de Recursos.|[Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md)|  
 |Descreve como desabilitar o Administrador de Recursos.|[Desabilitar Administrador de Recursos](../../relational-databases/resource-governor/disable-resource-governor.md)|  
-|Descreve como criar, alterar e descartar um pool de recursos.|[Pool de recursos do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)|  
-|Descreve como criar, alterar, mover e descarregar um grupo de cargas de trabalho.|[Grupos de carga de trabalho do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-workload-group.md)|  
-|Descreve como criar e testar uma função de classificação definida pelo usuário.|[Função de classificação do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-classifier-function.md)|  
+|Descreve como criar, alterar e descartar um pool de recursos.|[Pool de recursos do Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)|  
+|Descreve como criar, alterar, mover e descarregar um grupo de cargas de trabalho.|[Grupos de carga de trabalho do Resource Governor](../../relational-databases/resource-governor/resource-governor-workload-group.md)|  
+|Descreve como criar e testar uma função de classificação definida pelo usuário.|[Função do classificador do Resource Governor](../../relational-databases/resource-governor/resource-governor-classifier-function.md)|  
 |Descreve como configurar o Administrador de Recursos usando um modelo.|[Configurar o administrador de recursos usando um modelo](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)|  
-|Descreve como exibir as propriedades do Administrador de Recursos.|[Exibir Propriedades do Administrador de Recursos](../../relational-databases/resource-governor/view-resource-governor-properties.md)|  
+|Descreve como exibir as propriedades do Administrador de Recursos.|[Exibir Propriedades do Resource Governor](../../relational-databases/resource-governor/view-resource-governor-properties.md)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Instâncias do mecanismo de banco de dados &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   

@@ -1,32 +1,36 @@
 ---
-title: "Criar um trabalho do SQL Server Agent para arquivar mensagens do Database Mail e logs de eventos | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "arquivando mensagens de email e anexos [SQL Server]"
-  - "removendo mensagens de email e anexos"
-  - "Database Mail [SQL Server], arquivando"
-  - "salvando mensagens de email e anexos"
+title: Criar um trabalho do SQL Server Agent para arquivar mensagens do Database Mail e logs de eventos | Microsoft Docs
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- archiving mail messages and attachments [SQL Server]
+- removing mail messages and attachements
+- Database Mail [SQL Server], archiving
+- saving mail messages and attachments
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfba800ce9266e7a27c6e27e8e3ea9dfc2f2b08e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar um trabalho do SQL Server Agent para arquivar mensagens do Database Mail e logs de eventos
+# <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Criar um trabalho do SQL Server Agent para arquivar mensagens do Database Mail e logs de eventos
   Cópias de mensagens do Database Mail e seus anexos são retidos em tabelas **msdb** junto com o log de eventos do Database Mail. Periodicamente, convém reduzir o tamanho das tabelas e arquivar mensagens e eventos que não sejam mais necessários. Os procedimentos a seguir criam um trabalho do SQL Server Agent para automatizar o processo.  
   
 -   **Antes de começar:**  , [Pré-requisitos](#Prerequisites), [Recomendações](#Recommendations), [Permissões](#Permissions)  
   
--   **Para arquivar mensagens e logs do Database Mail usando :**  [SQL Server Agent](#Process_Overview)  
+-   **To Archive Database Mail messages and logs using :**  [SQL Server Agent](#Process_Overview)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -58,9 +62,9 @@ caps.handback.revision: 19
 -   Agende o trabalho a ser executado periodicamente.  
   
   
-## Para criar um trabalho do SQL Server Agent  
+## <a name="to-create-a-sql-server-agent-job"></a>Para criar um trabalho do SQL Server Agent  
   
-1.  No Pesquisador de Objetos, expanda o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, clique com o botão direito do mouse em **Trabalhos** e clique em **Novo Trabalho**.  
+1.  No Pesquisador de Objetos, expanda o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, clique com o botão direito do mouse em **Trabalhos**e clique em **Novo Trabalho**.  
   
 2.  Na caixa de diálogo **Novo Trabalho** , na caixa **Nome** , digite **Archive Database Mail**.  
   
@@ -72,13 +76,13 @@ caps.handback.revision: 19
   
  [Visão geral](#Process_Overview)  
   
-## Para criar uma etapa para arquivar as mensagens do Database Mail  
+## <a name="to-create-a-step-to-archive-the-database-mail-messages"></a>Para criar uma etapa para arquivar as mensagens do Database Mail  
   
 1.  Na página **Etapas** , clique em **Nova**.  
   
 2.  Na caixa **Nome da etapa** , digite **Copy Database Mail Items**.  
   
-3.  Na caixa **Tipo**, selecione **Transact-SQL script (T-SQL)**.  
+3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)**.  
   
 4.  Na caixa **Banco de dados** , selecione **msdb**.  
   
@@ -98,13 +102,13 @@ caps.handback.revision: 19
   
  [Visão geral](#Process_Overview)  
   
-## Para criar uma etapa para arquivar os anexos do Database Mail  
+## <a name="to-create-a-step-to-archive-the-database-mail-attachments"></a>Para criar uma etapa para arquivar os anexos do Database Mail  
   
 1.  Na página **Etapas** , clique em **Nova**.  
   
 2.  Na caixa **Nome da etapa** , digite **Copy Database Mail Attachments**.  
   
-3.  Na caixa **Tipo**, selecione **Transact-SQL script (T-SQL)**.  
+3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)**.  
   
 4.  Na caixa **Banco de dados** , selecione **msdb**.  
   
@@ -125,13 +129,13 @@ caps.handback.revision: 19
   
  [Visão geral](#Process_Overview)  
   
-## Para criar uma etapa para arquivar o log do Database Mail  
+## <a name="to-create-a-step-to-archive-the-database-mail-log"></a>Para criar uma etapa para arquivar o log do Database Mail  
   
 1.  Na página **Etapas** , clique em **Nova**.  
   
 2.  Na caixa **Nome da etapa** , digite **Copy Database Mail Log**.  
   
-3.  Na caixa **Tipo**, selecione **Transact-SQL script (T-SQL)**.  
+3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)**.  
   
 4.  Na caixa **Banco de dados** , selecione **msdb**.  
   
@@ -152,13 +156,13 @@ caps.handback.revision: 19
   
  [Visão geral](#Process_Overview)  
   
-## Para criar uma etapa para remover as linhas arquivadas do Database Mail  
+## <a name="to-create-a-step-to-remove-the-archived-rows-from-database-mail"></a>Para criar uma etapa para remover as linhas arquivadas do Database Mail  
   
 1.  Na página **Etapas** , clique em **Nova**.  
   
 2.  Na caixa **Nome da etapa** , digite **Remove rows from Database Mail**.  
   
-3.  Na caixa **Tipo**, selecione **Transact-SQL script (T-SQL)**.  
+3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)**.  
   
 4.  Na caixa **Banco de dados** , selecione **msdb**.  
   
@@ -174,13 +178,13 @@ caps.handback.revision: 19
   
  [Visão geral](#Process_Overview)  
   
-## Para criar uma etapa para remover os itens arquivados do log de eventos do Database Mail  
+## <a name="to-create-a-step-to-remove-the-archived-items-from-database-mail-event-log"></a>Para criar uma etapa para remover os itens arquivados do log de eventos do Database Mail  
   
 1.  Na página **Etapas** , clique em **Nova**.  
   
 2.  Na caixa **Nome da etapa** , digite **Remove rows from Database Mail event log**.  
   
-3.  Na caixa **Tipo**, selecione **Transact-SQL script (T-SQL)**.  
+3.  Na caixa **Tipo** , selecione **Transact-SQL script (T-SQL)**.  
   
 4.  Na caixa **Comando** , digite a seguinte instrução para remover as linhas anteriores ao mês atual do log de eventos do Database Mail:  
   
@@ -194,7 +198,7 @@ caps.handback.revision: 19
   
  [Visão geral](#Process_Overview)  
   
-## Para agendar o trabalho a ser executado periodicamente  
+## <a name="to-schedule-the-job-to-run-periodically"></a>Para agendar o trabalho a ser executado periodicamente  
   
 1.  Na caixa de diálogo **Novo Trabalho** , clique em **Agendas**.  
   
@@ -206,7 +210,7 @@ caps.handback.revision: 19
   
 5.  Na área **Frequência** , selecione as opções para executar o trabalho periodicamente; por exemplo, uma vez por mês.  
   
-6.  Na área **Frequência diária**, selecione **Ocorre uma vez às \<hora>**.  
+6.  Na área **Frequência diária**, selecione **Ocorre uma vez em \<hora>**.  
   
 7.  Verifique se as outras opções estão configuradas a seu gosto e clique em **OK** para salvar a agenda.  
   
@@ -215,3 +219,4 @@ caps.handback.revision: 19
  [Visão geral](#Process_Overview)  
   
   
+

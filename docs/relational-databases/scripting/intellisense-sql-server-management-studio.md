@@ -1,28 +1,32 @@
 ---
-title: "IntelliSense (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: IntelliSense (SQL Server Management Studio) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 145fd074c9c84ce704ba43c9ad3591a324fea507
+ms.lasthandoff: 04/11/2017
+
 ---
-# IntelliSense (SQL Server Management Studio)
+# <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
   Os editores no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oferecem suporte a opções do [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense que reduzem a digitação, fornecem acesso rápido a informações de sintaxe ou facilitam a exibição dos delimitadores de expressões complexas.  
   
-## Benefícios do IntelliSense  
+## <a name="benefits-of-intellisense"></a>Benefícios do IntelliSense  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense fornece uma série de opções que tornam as referências à linguagem facilmente acessíveis. Ao codificar, você não precisa sair do editor para efetuar pesquisas nos elementos de linguagem. Você pode manter seu contexto, encontrar as informações que precisa, inserir elementos de linguagem diretamente em seu código, e até fazer o IntelliSense concluir a digitação para você.  
   
-## Tarefas do IntelliSense  
+## <a name="intellisense-tasks"></a>Tarefas do IntelliSense  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
@@ -33,7 +37,7 @@ caps.handback.revision: 7
 |Descreve como o IntelliSense pode identificar as duas extremidades de um par de delimitadores, e como você pode saltar entre as duas extremidades do par.|[Correspondência automática de pares de sintaxe](../../relational-databases/scripting/automatic-matching-of-syntax-pairs.md)|  
 |Descreve as condições sob as quais o IntelliSense pode não funcionar.|Solucionando problemas do IntelliSense (SQL Server Management Studio)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Editores de consultas e de texto &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

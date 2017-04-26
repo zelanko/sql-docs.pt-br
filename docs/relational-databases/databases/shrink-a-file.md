@@ -1,31 +1,35 @@
 ---
-title: "Reduzir um arquivo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.shrinkfile.f1"
-helpviewer_keywords: 
-  - "reduzindo arquivos"
-  - "diminuindo o tamanho do arquivo"
-  - "bancos de dados [SQL Server], reduzindo"
-  - "reduzindo o tamanho do arquivo"
-  - "tamanho [SQL Server], arquivos"
-  - "tamanho do arquivo [SQL Server]"
+title: Reduzir um arquivo | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.shrinkfile.f1
+helpviewer_keywords:
+- shrinking files
+- decreasing file size
+- databases [SQL Server], shrinking
+- reducing file size
+- size [SQL Server], files
+- file size [SQL Server]
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa485184202b4edb301d3c2429f09625e854771
+ms.lasthandoff: 04/11/2017
+
 ---
-# Reduzir um arquivo
+# <a name="shrink-a-file"></a>Reduzir um arquivo
   Este tópico descreve como reduzir um arquivo de dados ou de log no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  A redução de arquivos de dados recupera espaço com a movimentação de páginas de dados do final do arquivo para o espaço desocupado mais próximo à frente do arquivo. Quando espaço livre suficiente é criado no final do arquivo, as páginas de dados no final do arquivo podem ser desalocadas e retornadas para o sistema de arquivos.  
@@ -59,11 +63,11 @@ caps.handback.revision: 25
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Exige associação à função de servidor fixa **sysadmin** ou à função de banco de dados fixa **db_owner**.  
+ Exige associação à função de servidor fixa **sysadmin** ou à função de banco de dados fixa **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para reduzir um arquivo de dados ou de log  
+#### <a name="to-shrink-a-data-or-log-file"></a>Para reduzir um arquivo de dados ou de log  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
   
@@ -124,7 +128,7 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para reduzir um arquivo de dados ou de log  
+#### <a name="to-shrink-a-data-or-log-file"></a>Para reduzir um arquivo de dados ou de log  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -134,7 +138,7 @@ caps.handback.revision: 25
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)   
  [Reduzir um banco de dados](../../relational-databases/databases/shrink-a-database.md)   
  [Excluir arquivos de dados ou de log de um banco de dados](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   

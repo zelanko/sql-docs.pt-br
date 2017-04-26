@@ -1,26 +1,30 @@
 ---
-title: "Criar um banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bancos de dados [SQL Server], criando"
-  - "criação de banco de dados [SQL Server], SQL Server Management Studio"
-  - "criando bancos de dados"
+title: Criar um banco de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases [SQL Server], creating
+- database creation [SQL Server], SQL Server Management Studio
+- creating databases
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06b00c9eceac816935b2c0fa69306a6681383d80
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar um banco de dados
+# <a name="create-a-database"></a>Criar um banco de dados
   Este tópico descreve como criar um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -66,11 +70,11 @@ caps.handback.revision: 38
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para criar um banco de dados  
+#### <a name="to-create-a-database"></a>Para criar um banco de dados  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
   
-2.  Clique com o botão direito do mouse em **Bancos de Dados** e clique em **Novo Banco de Dados**.  
+2.  Clique com o botão direito do mouse em **Bancos de Dados**e clique em **Novo Banco de Dados**.  
   
 3.  Em **Novo Banco de Dados**, digite um nome de banco de dados.  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
 8.  Para alterar o modelo de recuperação, selecione a página **Opções** e marque um modelo de recuperação na lista.  
   
-9. Para alterar opções de banco de dados, selecione a página **Opções** e depois modifique as opções de banco de dados. Para obter uma descrição de cada opção, consulte [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+9. Para alterar opções de banco de dados, selecione a página **Opções** e depois modifique as opções de banco de dados. Para obter uma descrição de cada opção, consulte [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 10. Para adicionar um novo grupo de arquivos, clique na página **Grupos de Arquivos** . Clique em **Adicionar** e, em seguida, digite os valores para o grupo de arquivos.  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 38
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para criar um banco de dados  
+#### <a name="to-create-a-database"></a>Para criar um banco de dados  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -130,10 +134,10 @@ GO
   
  Para obter mais exemplos, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Arquivos e grupos de arquivos do banco de dados](../../relational-databases/databases/database-files-and-filegroups.md)   
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Adicionar arquivos de dados ou de log a um banco de dados](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+ [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   
   

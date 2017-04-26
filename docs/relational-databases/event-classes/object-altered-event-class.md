@@ -1,37 +1,41 @@
 ---
-title: "Classe de evento Object:Altered  | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento Object:Altered "
+title: Classe de evento Object:Altered | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Object:Altered event class
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e2fbbd9cb3f63bd1b4c360a9081440990cc43ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento Object:Altered 
+# <a name="objectaltered-event-class"></a>classe de evento Object:Altered
   A classe de evento Object:Altered indica que um objeto foi alterado; por exemplo, pelas instruções ALTER INDEX e ALTER TABLE ou ALTER DATABASE. Essa classe de evento pode ser usada para determinar se objetos estão sendo alterados, por exemplo, por aplicativos ODBC, que geralmente criam procedimentos armazenados temporários.  
   
  A classe de evento Object:Altered sempre ocorre como dois eventos. O primeiro evento indica a fase Iniciar. O segundo evento indica a fase de Reversão ou de Confirmação.  
   
  Ao monitorar as colunas de dados LoginName e NTUserName, é possível determinar o nome do usuário que está criando, excluindo ou alterando objetos.  
   
-## Colunas de dados da classe de evento Object:Altered  
+## <a name="objectaltered-event-class-data-columns"></a>Colunas de dados da classe de evento Object:Altered  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
-|DatabaseID|**Int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
+|DatabaseID|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |EventClass|**int**|Tipo de evento = 164.|27|Não|  
 |EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
@@ -57,7 +61,7 @@ caps.handback.revision: 23
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |XactSequence|**bigint**|Token que descreve a transação atual.|50|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

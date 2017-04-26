@@ -1,27 +1,31 @@
 ---
-title: "Classe de evento Bitmap Warning | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento Bitmap Warning"
+title: Classe de evento Bitmap Warning | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Bitmap Warning event class
 ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ac451108447cd57642deed94ea2f18bfbeaa293b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento Bitmap Warning
+# <a name="bitmap-warning-event-class"></a>classe de evento Bitmap Warning
   A classe de evento **Bitmap Warning** pode ser usada para monitorar o uso de filtro de bitmap em consultas. A subclasse de evento pode ser usada para informar quando filtros de bitmap forem desabilitados em uma consulta.  
   
-## Colunas de dados de classe de evento Bitmap Warning  
+## <a name="bitmap-warning-event-class-data-columns"></a>Colunas de dados de classe de evento Bitmap Warning  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -35,7 +39,7 @@ caps.handback.revision: 15
 |**HostName**|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
 |**LoginName**|**nvarchar**|Nome de logon do usuário (logon de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou as credenciais de logon do Windows no formato de *DOMAIN\username*).|11|Sim|  
-|**LoginSid**|**image**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals**. Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
+|**LoginSid**|**image**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |**ObjectID**|**int**|ID do nó da raiz da equipe hash envolvida na repartição. Corresponde ao ID do nó no plano de execução.|22|Sim|  

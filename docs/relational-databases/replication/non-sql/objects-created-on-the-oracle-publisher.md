@@ -1,30 +1,34 @@
 ---
-title: "Objetos criados no Editor Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Publicação do Oracle [replicação do SQL Server], objetos criados"
+title: Objetos criados no Publicador Oracle | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97a45c8f524f81d01dceda7a616932b18e799d82
+ms.lasthandoff: 04/11/2017
+
 ---
-# Objetos criados no Editor Oracle
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replicação instala objetos de banco de dados no editor Oracle para habilitar o controle de alterações e encaminhamento ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não instala nenhum arquivo binário no editor Oracle). A tabela seguinte lista os objetos que são criados no Editor Oracle quando este é identificado como um Publicador no Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. As descrições de objeto são fornecidas apenas para fins informativos. Esses objetos não devem ser modificados.  
+# <a name="objects-created-on-the-oracle-publisher"></a>Objetos criados no Editor Oracle
+  A replicação do[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala objetos de banco de dados no Editor Oracle para habilitar controle e encaminhamento de alterações (o[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não instala nenhum arquivo binário no Editor Oracle). A tabela seguinte lista os objetos que são criados no Editor Oracle quando este é identificado como um Publicador no Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . As descrições de objeto são fornecidas apenas para fins informativos. Esses objetos não devem ser modificados.  
   
 |Nome do Objeto|Tipo de objeto|Descrição|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|Table|Tabela de controle de alterações usada para armazenar informações à medida que são feitas alterações à tabela publicada. É criada uma tabela de controle de alterações para cada tabela publicada.|  
-|HREPL_Changes|Table|Tabela usada internamente pelo trabalho Xactset para determinar o número de alterações que aguardam ser atribuídas a um conjunto de transações. Para obter mais informações sobre esse trabalho, consulte o [ajuste de desempenho para editores Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  
+|HREPL_Changes|Table|Tabela usada internamente pelo trabalho Xactset para determinar o número de alterações que aguardam ser atribuídas a um conjunto de transações. Para obter mais informações sobre esse trabalho, consulte [Ajuste de desempenho para Publicadores Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  
 |HREPL_Distributor|Table|Tabela de status de Distribuidor usada para manter informações sobre o Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] associado ao Editor Oracle.|  
 |HREPL_Event|Table|Tabela de eventos usada para sincronizar instantâneos e solicitações de número de linhas.|  
 |HREPL_Mutex|Table|Tabela usada para assegurar que o procedimento PopulatePollTable de pacote Oracle não seja executado ao mesmo tempo pelo Log Reader Agent e pelo trabalho do banco de dados.|  
@@ -47,9 +51,9 @@ caps.handback.revision: 33
 |HREPL_Article_I_J|Exibição|Exibição criada para cada tabela publicada, usada para consultar a tabela publicada.|  
 |HREPL_Log_I_J_K|Exibição|Exibição criada para cada tabela publicada, usada para consultar a tabela de controle de alterações.|  
   
-## Consulte também  
- [Configurar um publicador Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
+## <a name="see-also"></a>Consulte também  
+ [Configurar um Publicador Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Glossário de termos para publicações Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
- [Visão geral da Publicação Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

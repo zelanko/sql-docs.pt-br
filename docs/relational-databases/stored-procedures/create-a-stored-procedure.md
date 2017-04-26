@@ -1,32 +1,36 @@
 ---
-title: "Criar um procedimento armazenado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "novos procedimentos armazenados"
-  - "procedimentos armazenados [SQL Server], criando"
-  - "criando procedimentos armazenados"
+title: Criar um procedimento armazenado | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- new stored procedures
+- stored procedures [SQL Server], creating
+- creating stored procedures
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c0095707730da9b840ebf444bdf7500cb634ad3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar um procedimento armazenado
+# <a name="create-a-stored-procedure"></a>Criar um procedimento armazenado
   Este tópico descreve como criar um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e a declaração [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE.  
   
 ##  <a name="Top"></a>   
--   **Antes de começar:**  [Permissões](#Permissions)  
+-   **Before you begin:**  [Permissions](#Permissions)  
   
--   **Para criar um procedimento usando:** [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To create a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="Permissions"></a> Permissões  
  Requer a permissão CREATE PROCEDURE no banco de dados e a permissão ALTER no esquema no qual o procedimento está sendo criado.  
@@ -45,7 +49,7 @@ caps.handback.revision: 37
   
 2.  Expanda **Bancos de Dados**, expanda o banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e, em seguida, expanda **Programação**.  
   
-3.  Clique com o botão direito do mouse em **Procedimentos Armazenados** e clique em **Novo Procedimento Armazenado**.  
+3.  Clique com o botão direito do mouse em **Procedimentos Armazenados**e clique em **Novo Procedimento Armazenado**.  
   
 4.  No menu **Consulta** , clique em **Especificar Valores para Parâmetros de Modelo**.  
   
@@ -83,7 +87,7 @@ caps.handback.revision: 37
   
 11. Para executar o procedimento, no Pesquisador de Objetos, clique com o botão direito do mouse no nome do procedimento armazenado **HumanResources.uspGetEmployeesTest** e selecione **Executar Procedimento Armazenado**.  
   
-12. Na janela **Executar Procedimento**, insira Rodrigues como o valor do parâmetro @LastName e insira o valor Alice como o valor do parâmetro @FirstName.  
+12. Na janela **Executar Procedimento**, insira Margheim como o valor para o parâmetro @LastName e insira o valor Diane como o valor para o parâmetro @FirstName.  
   
 > [!WARNING]  
 >  Valide todas as entradas de usuário. Não concatene a entrada de usuário antes de validá-la. Nunca execute um comando construído por uma entrada de usuário inválida.  
@@ -128,7 +132,7 @@ caps.handback.revision: 37
     ```  
   
 ##  <a name="PowerShellProcedure"></a>   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   

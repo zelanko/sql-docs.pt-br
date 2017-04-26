@@ -1,27 +1,31 @@
 ---
-title: "Restaurar um backup de um dispositivo (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restaurando bancos de dados [SQL Server], restaurações de dispositivo"
-  - "dispositivos de backup [SQL Server], restaurando de"
-  - "restaurações de banco de dados [SQL Server], restaurações de dispositivo"
-  - "dispositivos [SQL Server]"
+title: Restaurar um backup de um dispositivo (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring databases [SQL Server], device restores
+- backup devices [SQL Server], restoring from
+- database restores [SQL Server], device restores
+- devices [SQL Server]
 ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1330611f9a861079182566365b7425e7dacbbea3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar um backup de um dispositivo (SQL Server)
+# <a name="restore-a-backup-from-a-device-sql-server"></a>Restaurar um backup de um dispositivo (SQL Server)
   Este tópico descreve como restaurar um backup de um dispositivo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
@@ -50,15 +54,15 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para restaurar um backup de um dispositivo  
+#### <a name="to-restore-a-backup-from-a-device"></a>Para restaurar um backup de um dispositivo  
   
 1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
 2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
   
-3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas** e clique em **Restaurar**.  
+3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**e clique em **Restaurar**.  
   
-4.  Clique no tipo da operação de restauração desejada (**Banco de Dados**, **Arquivos e Grupos de Arquivos** ou **Log de Transações**). Essa ação abre a caixa de diálogo de restauração correspondente.  
+4.  Clique no tipo da operação de restauração desejada (**Banco de Dados**, **Arquivos e Grupos de Arquivos**ou **Log de Transações**). Essa ação abre a caixa de diálogo de restauração correspondente.  
   
 5.  Na página **Geral** , na seção **Restaurar Origem** , clique em **Dispositivo de Origem**.  
   
@@ -70,13 +74,13 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para restaurar um backup de um dispositivo  
+#### <a name="to-restore-a-backup-from-a-device"></a>Para restaurar um backup de um dispositivo  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Na instrução [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) , especifique um dispositivo de backup lógico ou físico a ser usado na operação de backup. Este exemplo restaura de um arquivo em disco que tem o nome físico `Z:\SQLServerBackups\AdventureWorks2012.bak`.  
+3.  Na instrução [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , especifique um dispositivo de backup lógico ou físico a ser usado na operação de backup. Este exemplo restaura de um arquivo em disco que tem o nome físico `Z:\SQLServerBackups\AdventureWorks2012.bak`.  
   
 ```tsql  
 RESTORE DATABASE AdventureWorks2012  
@@ -84,11 +88,11 @@ RESTORE DATABASE AdventureWorks2012
   
 ```  
   
-## Consulte também  
- [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)   
- [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)   
- [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)   
- [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Consulte também  
+ [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
+ [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
+ [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [Restaurar um backup de banco de dados no modelo de recuperação simples &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)   
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [Restaurar um backup de banco de dados diferencial &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)   
@@ -98,3 +102,4 @@ RESTORE DATABASE AdventureWorks2012
  [Criar um backup diferencial de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
   
+

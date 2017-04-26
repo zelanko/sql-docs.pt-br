@@ -1,24 +1,28 @@
 ---
-title: "Colunas que cont&#234;m um valor nulo por padr&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colunas [XML no SQL Server], valor padrão de null"
+title: "Colunas que contêm um valor nulo por padrão | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [XML in SQL Server], null default value
 ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56635559704632c74f499a92ef711fa07e8bc152
+ms.lasthandoff: 04/11/2017
+
 ---
-# Colunas que cont&#234;m um valor nulo por padr&#227;o
+# <a name="columns-that-contain-a-null-value-by-default"></a>Colunas que contêm um valor nulo por padrão
   Por padrão, um valor nulo em uma coluna é mapeado para a ausência do atributo, nó ou elemento. Esse comportamento padrão pode ser substituído solicitando XML centrado em elemento usando a diretiva ELEMENTS e especificando XSINIL para solicitar a adição de elementos para valores NULL, conforme mostrado na consulta a seguir:  
   
 ```  
@@ -44,7 +48,7 @@ FOR XML PATH, ELEMENTS XSINIL
 </row>  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usar o modo PATH com FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

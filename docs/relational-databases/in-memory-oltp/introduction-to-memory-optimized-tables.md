@@ -1,22 +1,26 @@
 ---
-title: "Introdu&#231;&#227;o &#224;s tabelas com otimiza&#231;&#227;o de mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Introdução às tabelas com otimização de memória | Microsoft Docs"
+ms.custom: 
+ms.date: 12/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 caps.latest.revision: 22
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 74eceb20d68e928663d35de10d92866c77e6aa25
+ms.lasthandoff: 04/11/2017
+
 ---
-# Introdu&#231;&#227;o &#224;s tabelas com otimiza&#231;&#227;o de mem&#243;ria
+# <a name="introduction-to-memory-optimized-tables"></a>Introdução às tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Tabelas com otimização de memória são aquelas criadas com [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
@@ -37,7 +41,7 @@ Começando com o SQL Server 2016 e no banco de dados SQL do Azure, não há nenh
   
  A figura a seguir ilustra o controle de várias versões. A figura mostra uma tabela com três linhas, e cada linha tem versões diferentes.  
   
-![Vários controles de versão.](../../relational-databases/in-memory-oltp/media/hekaton-tables-1.png "Vários controles de versão.")  
+![Controle de várias versões.](../../relational-databases/in-memory-oltp/media/hekaton-tables-1.gif "Controle de várias versões.")  
   
  A tabela tem três linhas: r1, r2 e r3. r1 tem três versões, r2 tem duas versões e r3 tem quatro versões. Observe que as versões diferentes da mesma linha não ocupam necessariamente locais de memória consecutivos. As versões de linha diferentes podem ser dispersas em toda a estrutura de dados da tabela.  
   
@@ -89,7 +93,7 @@ A tabela a seguir lista os problemas de desempenho e escalabilidade que geralmen
 |Desempenho<br /><br /> Alto uso de recursos (CPU, E/S, rede ou memória).|CPU<br /> Os procedimentos armazenados compilados nativamente podem reduzir significativamente o uso da CPU, pois exigem muito menos instruções para executar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] comparada com os procedimentos armazenados interpretados.<br /><br /> O OLTP na memória pode ajudar a reduzir o investimento de hardware em cargas de trabalho expandidas, pois um servidor pode potencialmente fornecer a taxa de transferência de cinco a dez servidores.<br /><br /> E/S<br /> Se você encontrar um afunilamento de E/S, do processamento às páginas de dados ou índice, o OLTP na memória poderá reduzir esse afunilamento. Além disso, o ponto de verificação de objetos OLTP na memória é contínuo e não resulta em aumentos repentinos nas operações de E/S. No entanto, se o conjunto de trabalho das tabelas críticas de desempenho não se ajustar na memória, o OLTP na memória não melhorará o desempenho, pois ele exige que os dados sejam residentes na memória. Se você encontrar um afunilamento de E/S no log, o OLTP na memória poderá reduzi-lo, pois ele gera menos registros. Se uma ou mais tabelas com otimização de memória forem configuradas como tabelas não duráveis, você poderá eliminar o registro de dados.<br /><br /> Memória<br /> O OLTP na memória não oferece nenhum benefício de desempenho. Além disso, o OLTP na memória pode fazer mais pressão na memória, pois os objetos precisam ser residentes na memória.<br /><br /> Rede<br /> O OLTP na memória não oferece nenhum benefício de desempenho. Os dados precisam ser comunicados da camada de dados à camada de aplicativos.|  
 |Escalabilidade<br /><br /> A maioria dos problemas de colocação em escala nos aplicativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é causada por problemas de simultaneidade, como contenção em bloqueios, travas e spinlocks.|Contenção de trava<br /> Um cenário típico é a contenção na última página de um índice na inserção de linhas simultaneamente na ordem de chave. Como o OLTP na memória não usa travas ao acessar dados, os problemas de escalabilidade relacionados a contenções de trava são totalmente removidos.<br /><br /> Contenção de spinlock<br /> Como o OLTP na memória não usa travas ao acessar dados, os problemas de escalabilidade relacionados a contenções de spinlock são totalmente removidos.<br /><br /> Contenção relacionada ao bloqueio<br /> Se seu aplicativo de banco de dados detectar problemas de bloqueio entre operações de leitura e gravação, o OLTP na memória removerá esses problemas, pois ele usa um novo formulário de controle de simultaneidade otimista para implementar todos os níveis de isolamento de transação. O OLTP na memória não usa TempDB para armazenar versões de linha.<br /><br /> Se o problema de colocação em escala for causado por um conflito entre duas operações de gravação, como duas transações simultâneas tentando atualizar a mesma linha, o OLTP na memória permitirá que uma transação tenha êxito e que a outra falhe. A transação com falha deve ser reenviada explícita ou implicitamente, repetindo a transação. Em ambos os casos, você precisa fazer alterações no aplicativo.<br /><br /> Se seu aplicativo apresentar conflitos frequentes entre duas operações de gravação, o valor do bloqueio otimista será diminuído. O aplicativo não é apropriado para o OLTP na memória. A maioria dos aplicativos OLTP não apresentam conflitos de gravação, a menos que o conflito seja induzido pelo escalonamento de bloqueios.|  
   
-##  <a name="a-namerlsa-row-level-security-in-memory-optimized-tables"></a><a name="rls"></a> Segurança em nível de linha em tabelas com otimização de memória  
+##  <a name="rls"></a> Row-Level Security in Memory-Optimized Tables  
 
 Há suporte para a[segurança em nível de linha](../../relational-databases/security/row-level-security.md) em tabelas com otimização de memória. Aplicar políticas de segurança de nível de linha a tabelas com otimização de memória é essencialmente o mesmo que fazê-lo a tabelas baseadas em disco, exceto que as funções embutidas com valor de tabela usadas como predicados de segurança devem ser compiladas nativamente (criadas usando a opção WITH NATIVE_COMPILATION). Para obter detalhes, confira a seção [Compatibilidade entre recursos](../../relational-databases/security/row-level-security.md#Limitations) do tópico [Segurança em nível de linha](../../relational-databases/security/row-level-security.md) .  
   
@@ -104,6 +108,7 @@ Para ver uma breve discussão de cenários típicos em que o [!INCLUDE[hek_1](..
   
 ## <a name="see-also"></a>Consulte também
 
-[OLTP na memória &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+[OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

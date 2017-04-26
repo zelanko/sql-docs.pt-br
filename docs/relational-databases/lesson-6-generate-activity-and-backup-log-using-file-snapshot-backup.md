@@ -1,25 +1,29 @@
 ---
-title: "Li&#231;&#227;o 6: Gerar log de atividade e de backup usando o backup de instant&#226;neo de arquivo | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lição 6: Gerar log de atividade e de backup usando o backup de instantâneo de arquivo | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8f3ea59fb612ea692b52ab46bb342d8c4031fb71
+ms.lasthandoff: 04/11/2017
+
 ---
-# Li&#231;&#227;o 6: Gerar log de atividade e de backup usando o backup de instant&#226;neo de arquivo
+# <a name="lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup"></a>Lição 6: Gerar log de atividade e de backup usando o backup de instantâneo de arquivo
 Nesta lição, você aprenderá a gerar atividade no banco de dados AdventureWorks2014 e criar periodicamente backups de log de transações usando backups de instantâneo de arquivo. Para obter mais informações sobre como usar backups de instantâneo de arquivo, veja [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 Para gerar atividade no banco de dados AdventureWorks2014 e criar periodicamente backups de log de transações usando backups de instantâneo de arquivo, siga estas etapas:  
@@ -77,21 +81,21 @@ Para gerar atividade no banco de dados AdventureWorks2014 e criar periodicamente
   
 5.  Examine a saída do primeiro script e observe que a contagem de linhas final agora é de 29.939.  
   
-    ![Row count of 29,939 is displayed](../relational-databases/media/5e2f4229-1970-49c9-89b3-e96b6f7fde83.JPG "Row count of 29,939 is displayed")  
+    ![A contagem de linhas 29.939 é exibida](../relational-databases/media/5e2f4229-1970-49c9-89b3-e96b6f7fde83.JPG "A contagem de linhas 29.939 é exibida")  
   
 6.  Examine a saída do segundo script e observe que sempre que a instrução BACKUP LOG é executada, são criados dois novos instantâneos de arquivo: um instantâneo de arquivo do arquivo de log e um instantâneo de arquivo do arquivo de dados – em um total de dois instantâneos de arquivo para cada arquivo de banco de dados. Após a conclusão do segundo script, observe que agora há um total de 16 instantâneos de arquivo, 8 para cada arquivo de banco de dados – um da instrução BACKUP DATABASE e um para cada execução da instrução BACKUP LOG.  
   
-    ![results pane showing file snapshots of both data and log file when log backup is taken](../relational-databases/media/acd213b8-895e-425c-bd72-2bf10e65a5ba.JPG "results pane showing file snapshots of both data and log file when log backup is taken")  
+    ![painel Resultados mostrando instantâneos de arquivo do arquivo de log e de dados quando é feito um backup de log](../relational-databases/media/acd213b8-895e-425c-bd72-2bf10e65a5ba.JPG "painel Resultados mostrando instantâneos de arquivo do arquivo de log e de dados quando é feito um backup de log")  
   
-    ![four file snapshots are displayed](../relational-databases/media/e7eff77d-85b9-4e52-abd8-e49952c8118a.JPG "four file snapshots are displayed")  
+    ![quatro instantâneos de arquivo são exibidos](../relational-databases/media/e7eff77d-85b9-4e52-abd8-e49952c8118a.JPG "quatro instantâneos de arquivo são exibidos")  
   
-    ![results pane showing a total of 16 file snapshots](../relational-databases/media/c3ddff17-a83c-4bf0-a670-a38834f9c922.JPG "results pane showing a total of 16 file snapshots")  
+    ![painel Resultados mostrando um total de 16 instantâneos de arquivo](../relational-databases/media/c3ddff17-a83c-4bf0-a670-a38834f9c922.JPG "painel Resultados mostrando um total de 16 instantâneos de arquivo")  
   
 7.  No Pesquisador de Objetos, conecte-se ao armazenamento do Azure.  
   
 8.  Expanda Contêineres, expanda o contêiner criado na Lição 1 e verifique se sete novos arquivos de backup são exibidos, juntamente com os blobs das lições anteriores (atualize o nó, conforme necessário).  
   
-    ![Azure container showing 7 log backup blobs](../relational-databases/media/cfa5a326-87a2-4202-9a04-38bf577d2d0b.JPG "Azure container showing 7 log backup blobs")  
+    ![Contêiner do Azure mostrando 7 blobs de backup de log](../relational-databases/media/cfa5a326-87a2-4202-9a04-38bf577d2d0b.JPG "Contêiner do Azure mostrando 7 blobs de backup de log")  
   
 **Próxima lição:**  
   
@@ -99,3 +103,4 @@ Para gerar atividade no banco de dados AdventureWorks2014 e criar periodicamente
   
   
   
+

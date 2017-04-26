@@ -1,28 +1,32 @@
 ---
-title: "Caracteres inv&#225;lidos e regras de escape | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Cláusula FOR XML, caracteres inválidos"
-  - "Cláusula FOR XML, regras de escape"
+title: "Caracteres inválidos e regras de escape | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, invalid characters
+- FOR XML clause, escape rules
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de1546c1f7adc1671cef873a594b9bc5444bc230
+ms.lasthandoff: 04/11/2017
+
 ---
-# Caracteres inv&#225;lidos e regras de escape
+# <a name="invalid-characters-and-escape-rules"></a>Caracteres inválidos e regras de escape
   Este tópico descreve como caracteres XML inválidos são tratados pela cláusula FOR XML e lista as regras de escape para caracteres inválidos em nomes XML.  
   
-## Para XML e caracteres inválidos  
+## <a name="for-xml-and-invalid-characters"></a>Para XML e caracteres inválidos  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem a entidade definida como caracteres XML inválidos quando eles são retornados dentro de consultas FOR XML que não usam a diretiva TYPE.  
   
  Embora analisadores compatíveis com o XML 1.0 gerem erros de análise independentemente da entidade desses caracteres estarem definidas ou não, o formulário com entidade definida se alinha melhor com XML 1.1. O formulário com entidade definida também potencialmente se alinha melhor com versões futuras do padrão XML. Além disso, ele simplifica a depuração, porque o ponto de código do caractere inválido se torna visível.  
@@ -37,7 +41,7 @@ caps.handback.revision: 17
   
  Esses caracteres são preservados na saída e um analisador não os normalizará.  
   
-## Regras de escape  
+## <a name="escape-rules"></a>Regras de escape  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nomes que contêm caracteres que são inválidos em nomes XML, como espaços, são convertidos em nomes XML de uma maneira na qual os caracteres inválidos são convertidos em codificação de entidade numérica de escape.  
   
  Há apenas dois caracteres não alfabéticos que podem ocorrer dentro de um nome XML: dois pontos (:) e sublinhado (_). Como o dois pontos já é reservado para namespaces, o sublinhado é escolhido como o caractere de escape. As regras de escape que são usadas para codificação são as seguintes:  
@@ -64,7 +68,7 @@ caps.handback.revision: 17
   
      Observe que WITH XMLNAMESPACES é a maneira recomendada para adicionar namespaces XML.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

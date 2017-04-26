@@ -1,33 +1,37 @@
 ---
-title: "Identificar afunilamentos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "afunilamentos de recursos [SQL Server]"
-  - "monitoramento de banco de dados [SQL Server], afunilamentos"
-  - "desempenho [SQL Server], afunilamentos"
-  - "ajustando bancos de dados [SQL Server], afunilamentos"
-  - "monitorando o desempenho do servidor [SQL Server], afunilamentos"
-  - "monitorando o desempenho [SQL Server], afunilamentos"
-  - "desempenho do banco de dados [SQL Server], afunilamentos"
-  - "desempenho do servidor [SQL Server], afunilamentos"
-  - "afunilamentos [SQL Server]"
-  - "identificando afunilamentos [SQL Server]"
+title: Identificar afunilamentos | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resource bottlenecks [SQL Server]
+- database monitoring [SQL Server], bottlenecks
+- performance [SQL Server], bottlenecks
+- tuning databases [SQL Server], bottlenecks
+- monitoring server performance [SQL Server], bottlenecks
+- monitoring performance [SQL Server], bottlenecks
+- database performance [SQL Server], bottlenecks
+- server performance [SQL Server], bottlenecks
+- bottlenecks [SQL Server]
+- identifying bottlenecks [SQL Server]
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20ff22698486f5537fc974a91905b9837792aa5d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Identificar afunilamentos
+# <a name="identify-bottlenecks"></a>Identificar afunilamentos
   O acesso simultâneo a recursos compartilhados provoca afunilamentos. Em geral, os afunilamentos estão presentes em todo sistema de software e são inevitáveis. Porém, demandas excessivas em recursos compartilhados causam um tempo de resposta ruim e devem ser identificadas e ajustadas.  
   
  São causas de afunilamentos:  
@@ -40,7 +44,7 @@ caps.handback.revision: 18
   
 -   Recursos incorretamente configurados.  
   
-## Analisando afunilamentos  
+## <a name="analyzing-bottlenecks"></a>Analisando afunilamentos  
  Durações excessivas de diversos eventos são indicadores de afunilamentos que podem ser ajustados.  
   
  Por exemplo:  
@@ -59,7 +63,7 @@ caps.handback.revision: 18
 |Conexões de usuário|Muitos usuários podem estar acessando o servidor simultaneamente, provocando degradação do desempenho.|  
 |Bloqueios|Aplicativos incorretamente projetados podem causar bloqueios e obstruir a simultaneidade, causando tempos de resposta mais longos e taxas de transferência de transações mais baixas.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Monitorar o uso da CPU](../../relational-databases/performance-monitor/monitor-cpu-usage.md)   
  [Monitorar o uso do disco](../../relational-databases/performance-monitor/monitor-disk-usage.md)   
  [Monitorar o uso da memória](../../relational-databases/performance-monitor/monitor-memory-usage.md)   

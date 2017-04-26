@@ -1,28 +1,32 @@
 ---
-title: "Excluir restri&#231;&#245;es de verifica&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "removendo restrições"
-  - "Restrições CHECK, excluindo"
-  - "restrições [SQL Server], excluindo"
-  - "restrições [SQL Server], verificar"
-  - "excluindo restrições"
+title: "Excluir restrições de verificação | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing constraints
+- CHECK constraints, deleting
+- constraints [SQL Server], deleting
+- constraints [SQL Server], check
+- deleting constraints
 ms.assetid: 5f86c1a6-f5fa-4e77-a892-f6ae96fc0ab3
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2447173bd6b35b977fe69aa8f811d3d0198123f9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Excluir restri&#231;&#245;es de verifica&#231;&#227;o
+# <a name="delete-check-constraints"></a>Excluir restrições de verificação
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Você pode excluir uma restrição de verificação no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Excluir restrições de verificação remove as limitações sobre os valores de dados aceitos na coluna ou nas colunas incluídas na expressão de restrição.  
@@ -48,7 +52,7 @@ caps.handback.revision: 14
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para excluir uma restrição de verificação  
+#### <a name="to-delete-a-check-constraint"></a>Para excluir uma restrição de verificação  
   
 1.  No **Pesquisador de Objetos**, expanda a tabela com a restrição de verificação.  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 14
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para excluir uma restrição de verificação  
+#### <a name="to-delete-a-check-constraint"></a>Para excluir uma restrição de verificação  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

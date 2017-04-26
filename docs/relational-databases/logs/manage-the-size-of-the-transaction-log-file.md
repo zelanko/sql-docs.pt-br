@@ -1,24 +1,28 @@
 ---
-title: "Gerenciar o tamanho do arquivo de log de transa&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-transaction-log"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "logs de transações [SQL Server], gerenciamento do tamanho"
+title: "Gerenciar o tamanho do arquivo de log de transações | Microsoft Docs"
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-transaction-log
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transaction logs [SQL Server], size management
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5736ae436f7b07bbc7eda9eda301c41969a69cc9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gerenciar o tamanho do arquivo de log de transa&#231;&#245;es
+# <a name="manage-the-size-of-the-transaction-log-file"></a>Gerenciar o tamanho do arquivo de log de transações
 Este tópico contém informações sobre como monitorar o tamanho de um log de transações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , reduzir o log de transações, adicionar ou aumentar um arquivo de log de transações, otimizar a taxa de crescimento do log de transações **tempdb** e controlar o crescimento de um arquivo de log de transações.  
 
   ##  <a name="MonitorSpaceUse"></a> Monitorar o uso do espaço de log  
@@ -30,7 +34,8 @@ Monitore o uso do espaço de log usando DBCC SQLPERF (LOGSPACE). Esse comando re
 ##  <a name="ShrinkSize"></a> Reduzir o tamanho do arquivo de log  
  Para reduzir o tamanho físico de um arquivo de log físico, você deve reduzir o arquivo de log. Isso é útil quando você sabe que um arquivo de log de transações contém espaço não utilizado que não será necessário. É possível reduzir um log de arquivo apenas enquanto o banco de dados está online e pelo menos um arquivo de log virtual está livre. Em alguns casos, talvez não seja possível reduzir o log antes do próximo truncamento de log.  
   
-> [!NOTE]  Fatores como uma transação demorada que mantêm arquivos de log virtuais ativos por um período extenso podem restringir a redução de log ou até mesmo impedir que o log seja reduzido. Para ver informações sobre os fatores que podem adiar o truncamento de log, consulte [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+> [!NOTE]
+>  Fatores como uma transação demorada que mantêm arquivos de log virtuais ativos por um período extenso podem restringir a redução de log ou até mesmo impedir que o log seja reduzido. Para ver informações sobre os fatores que podem adiar o truncamento de log, consulte [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  A redução de um arquivo de log remove um mais arquivos de log virtuais que não retêm nenhuma parte do log lógico (ou seja, *arquivos de log virtuais inativos*). Quando um arquivo de log de transações é reduzido, um número suficiente de arquivos de log virtuais inativos é removido do final do arquivo de log para reduzir o log aproximadamente ao tamanho do destino.  
   
@@ -50,7 +55,8 @@ Monitore o uso do espaço de log usando DBCC SQLPERF (LOGSPACE). Esse comando re
   
 -   [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) (Consulte as colunas **size**, **max_size** e **growth** do arquivo ou arquivos de log.)  
   
-> [!NOTE]  A redução de arquivos de log e do banco de dados pode ser configurada para ocorrer automaticamente. Contudo, não é recomendável a redução automática, e a propriedade de banco de dados **autoshrink** é definida como FALSE por padrão. Se **autoshrink** for configurada como TRUE, a redução automática reduzirá o tamanho de um arquivo apenas quando mais de 25 por cento de seu espaço estiver inutilizado. O arquivo é reduzido de forma que 25% de seu tamanho seja de espaço não utilizado ou ele tenha o tamanho original, o que for maior. Para obter informações sobre como alterar a configuração da propriedade **autoshrink**, consulte [Exibir ou alterar as propriedades de um banco de dados](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)— use a propriedade **Redução Automática** na página **Opções** — ou [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)– use a opção AUTO_SHRINK.  
+> [!NOTE]
+>  A redução de arquivos de log e do banco de dados pode ser configurada para ocorrer automaticamente. Contudo, não é recomendável a redução automática, e a propriedade de banco de dados **autoshrink** é definida como FALSE por padrão. Se **autoshrink** for configurada como TRUE, a redução automática reduzirá o tamanho de um arquivo apenas quando mais de 25 por cento de seu espaço estiver inutilizado. O arquivo é reduzido de forma que 25% de seu tamanho seja de espaço não utilizado ou ele tenha o tamanho original, o que for maior. Para obter informações sobre como alterar a configuração da propriedade **autoshrink**, consulte [Exibir ou alterar as propriedades de um banco de dados](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)— use a propriedade **Redução Automática** na página **Opções** — ou [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)– use a opção AUTO_SHRINK.  
   
 
 ##  <a name="AddOrEnlarge"></a> Adicionar ou aumentar um arquivo de log  
@@ -76,8 +82,9 @@ Para obter informações sobre como alterar a propriedade de crescimento de arqu
 -   Para controlar ao máximo o tamanho de um arquivo de log em unidades KB, MB, GB e TB, ou para definir o crescimento como UNLIMITED, use a opção MAXSIZE.  
   
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Solução de problemas de um log de transação completa &#40;Erro do SQL Server 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
   
+

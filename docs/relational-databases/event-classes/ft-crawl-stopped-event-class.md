@@ -1,27 +1,31 @@
 ---
-title: "Classe de evento FT:Crawl Stopped | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento FT:Crawl Stopped"
+title: Classe de evento FT:Crawl Stopped | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Crawl Stopped event class
 ms.assetid: dbc91bf7-687c-4083-9694-02f3e102c175
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 46a5cacd714274edb441a64a92b441e964bb9303
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento FT:Crawl Stopped
+# <a name="ftcrawl-stopped-event-class"></a>Classe de evento FT:Crawl Stopped
   A classe de evento **:Crawl Stopped** indica que um rastreamento de texto completo (população) parou. A interrupção pode se dever à conclusão bem sucedida do rastreamento ou a um erro fatal.  
   
-## Colunas de dados da classe de evento FT:Crawl Stopped  
+## <a name="ftcrawl-stopped-event-class-data-columns"></a>Colunas de dados da classe de evento FT:Crawl Stopped  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -35,7 +39,7 @@ caps.handback.revision: 29
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

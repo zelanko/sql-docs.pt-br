@@ -1,28 +1,32 @@
 ---
-title: "Criar uma fun&#231;&#227;o de servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SWB.SERVERROLE.GENERAL.F1"
-  - "sql13.swb.serverrole.memberships.f1"
-  - "sql13.swb.serverrole.members.f1"
-helpviewer_keywords: 
-  - "SERVER ROLE, criando"
+title: "Criar uma função de servidor | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SWB.SERVERROLE.GENERAL.F1
+- sql13.swb.serverrole.memberships.f1
+- sql13.swb.serverrole.members.f1
+helpviewer_keywords:
+- SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be798eb132d37378b94659eda0efc1b586e7110a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar uma fun&#231;&#227;o de servidor
+# <a name="create-a-server-role"></a>Criar uma função de servidor
   Este tópico descreve como criar uma nova função de servidor no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -50,7 +54,7 @@ caps.handback.revision: 13
   
 -   Exige a permissão CREATE SERVER ROLE ou associação na função de servidor fixa sysadmin.  
   
--   Também exige IMPERSONATE no *server_principal* para logons, permissão ALTER para funções de servidor usadas como o *server_principal* ou associação em um grupo do Windows que é usado como o server_principal.  
+-   Também exige IMPERSONATE no *server_principal* para logons, permissão ALTER para funções de servidor usadas como o *server_principal*ou associação em um grupo do Windows que é usado como o server_principal.  
   
 -   Ao usar a opção AUTHORIZATION para atribuir a propriedade de um função de servidor, as seguintes permissões também são necessárias:  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 13
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para criar uma nova função de servidor  
+#### <a name="to-create-a-new-server-role"></a>Para criar uma nova função de servidor  
   
 1.  No Pesquisador de Objetos, expanda o servidor onde você deseja criar a nova função de servidor.  
   
@@ -68,9 +72,9 @@ caps.handback.revision: 13
   
 3.  Clique com o botão direito do mouse na pasta **Funções de Servidor** e selecione **Nova Função de Servidor...**.  
   
-4.  Na caixa de diálogo **Nova Função de Servidor –***server_role_name*, na página **Geral**, insira um nome para a nova função de servidor na caixa **Nome da função de servidor**.  
+4.  Na caixa de diálogo **Nova Função de Servidor –***server_role_name* , na página **Geral** , insira um nome para a nova função de servidor na caixa **Nome da função de servidor** .  
   
-5.  Na caixa **Proprietário** , digite o nome da entidade de segurança de servidor que será proprietária da nova função. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Logon ou Função de Servidor**.  
+5.  Na caixa **Proprietário** , digite o nome da entidade de segurança de servidor que será proprietária da nova função. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Logon ou Função de Servidor** .  
   
 6.  Em **Protegíveis**, selecione um ou mais protegíveis do nível do servidor. Quando um protegível é selecionado, essa função de servidor pode receber ou ter as permissões negadas naquele protegível.  
   
@@ -78,13 +82,13 @@ caps.handback.revision: 13
   
 8.  Na página **Membros** , use o botão **Adicionar** para adicionar logons que representam indivíduos ou grupos à nova função de servidor.  
   
-9. Uma função de servidor definida pelo usuário pode ser membro de outra função de servidor. Na página **Associações**, marque uma caixa de seleção para tornar a função de servidor definida pelo usuário atual um membro de uma função de servidor selecionada.  
+9. Uma função de servidor definida pelo usuário pode ser membro de outra função de servidor. Na página **Associações** , marque uma caixa de seleção para tornar a função de servidor definida pelo usuário atual um membro de uma função de servidor selecionada.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para criar uma nova função de servidor  
+#### <a name="to-create-a-new-server-role"></a>Para criar uma nova função de servidor  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

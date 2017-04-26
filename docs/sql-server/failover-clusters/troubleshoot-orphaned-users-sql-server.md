@@ -1,30 +1,34 @@
 ---
-title: "Solu&#231;&#227;o de problemas de usu&#225;rios &#243;rf&#227;os (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "usuários órfãos [SQL Server]"
-  - "logons [SQL Server], usuários órfãos"
-  - "solução de problemas [SQL Server], contas de usuário"
-  - "contas de usuário [SQL Server], usuários órfãos"
-  - "failover [SQL Server], gerenciando metadados"
-  - "espelhamento de banco de dados [SQL Server], metadados"
-  - "usuários [SQL Server], órfãos"
+title: "Solução de problemas de usuários órfãos (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- orphaned users [SQL Server]
+- logins [SQL Server], orphaned users
+- troubleshooting [SQL Server], user accounts
+- user accounts [SQL Server], orphaned users
+- failover [SQL Server], managing metadata
+- database mirroring [SQL Server], metadata
+- users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5f76cf5789d67f93443149074b0c4e8708f90000
+ms.lasthandoff: 04/11/2017
+
 ---
-# Solu&#231;&#227;o de problemas de usu&#225;rios &#243;rf&#227;os (SQL Server)
+# <a name="troubleshoot-orphaned-users-sql-server"></a>Solução de problemas de usuários órfãos (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Os usuários órfãos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ocorrem quando um usuário de banco de dados tem base em um logon no banco de dados **mestre** , mas o logon não existe mais no **mestre**. Isso pode ocorrer quando o logon é excluído, ou quando o banco de dados é movido para outro servidor onde o logon não existe. Este tópico descreve como localizar usuários órfãos e remapeá-los para logons.  
@@ -32,8 +36,8 @@ caps.handback.revision: 41
 > [!NOTE]  
 >  Reduza a possibilidade de usuários órfãos usando usuários de banco de dados independente para os bancos de dados que podem ser movidos. Para obter mais informações, consulte [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-## Plano de fundo  
- Para se conectar a um banco de dados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando uma entidade de segurança (identidade do usuário do banco de dados) com base em um logon, a entidade deve ter um logon válido no banco de dados **mestre**. Esse logon é usado no processo de autenticação que verifica a identidade da entidade e determina se ela tem permissão para conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do servidor são visíveis na exibição do catálogo **sys.server_principals** e na exibição de compatibilidade **sys.sql_logins**.  
+## <a name="background"></a>Plano de fundo  
+ Para se conectar a um banco de dados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando uma entidade de segurança (identidade do usuário do banco de dados) com base em um logon, a entidade deve ter um logon válido no banco de dados **mestre** . Esse logon é usado no processo de autenticação que verifica a identidade da entidade e determina se ela tem permissão para conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do servidor são visíveis na exibição do catálogo **sys.server_principals** e na exibição de compatibilidade **sys.sql_logins** .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acessam bancos de dados individuais como um "usuário do banco de dados" mapeado para o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Há três exceções a essa regra:  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 41
   
  Um usuário de banco de dados (com base em um logon) para o qual o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondente não esteja definido, ou que esteja definido incorretamente em uma instância do servidor, não pode fazer logon na instância. Esse usuário é um *usuário órfão* do banco de dados nessa instância do servidor. A condição de órfão pode ocorrer se o usuário do banco de dados for mapeado para um SID de logon que não esteja presente na instância do `master` . Um usuário de banco de dados pode se tornar órfão após um banco de dados ser restaurado ou anexado a uma instância diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , na qual o logon nunca foi criado. Um usuário do banco de dados também se tornará órfão se o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondente for descartado. Mesmo se o logon for recriado, ele terá um SID diferente, então o usuário do banco de dados ainda será órfão.  
   
-## Para detectar usuários órfãos  
+## <a name="to-detect-orphaned-users"></a>Para detectar usuários órfãos  
 
 **Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e PDW**
 
@@ -68,7 +72,7 @@ WHERE sp.SID IS NULL
     AND authentication_type_desc = 'INSTANCE';  
 ```  
   
- A saída lista os usuários de autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as SIDs (IDs de segurança) correspondentes no banco de dados atual que não estão vinculados a um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ A saída lista os usuários de autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as SIDs (IDs de segurança) correspondentes no banco de dados atual que não estão vinculados a um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
 **Para Banco de Dados SQL e SQL Data Warehouse**
 
@@ -93,7 +97,7 @@ A tabela `sys.server_principals` não está disponível no Banco de Dados SQL ou
 
 3. Compare as duas listas para determinar se há SIDs de usuário na tabela `sys.database_principals` do banco de dados do usuário que não correspondem às SIDs de logon na tabela `sql_logins` do banco de dados mestre. 
   
-## Para resolver um usuário órfão  
+## <a name="to-resolve-an-orphaned-user"></a>Para resolver um usuário órfão  
 No banco de dados mestre, use a instrução [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) com a opção de SID para recriar um logon ausente, fornecendo a `SID` do usuário do banco de dados obtida na seção anterior:  
   
 ```  
@@ -119,7 +123,7 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
   
  O procedimento preterido [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) também funciona com usuários órfãos. `sp_change_users_login` não pode ser usado com [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
@@ -134,3 +138,4 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
  [sys.syslogins &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
   
   
+

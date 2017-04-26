@@ -1,30 +1,34 @@
 ---
-title: "Script de informa&#231;&#245;es do Distribuidor e Publicador | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Publicadores [replicação do SQL Server], scripts de informações"
-  - "Distribuidores [replicação do SQL Server], scripts de informações"
+title: "Script de informações do Distribuidor e do Publicador | Microsoft Docs"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Publishers [SQL Server replication], information scripts
+- Distributors [SQL Server replication], information scripts
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dec278a7a34d1e6f3c056dcd6ea8ec65d0acdfc5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Script de informa&#231;&#245;es do Distribuidor e Publicador
+# <a name="distributor-and-publisher-information-script"></a>Script de informações do Distribuidor e Publicador
   Esse script usa tabelas de sistema e replicação de procedimentos armazenados para responder as perguntas frequentes sobre objetos no Distribuidor e no Publicador. O script pode ser usado assim como é, e pode fornecer também a base para scripts personalizados. O script poderá exigir duas modificações para ser executado em seu ambiente:  
   
 -   Altere a linha `use AdventureWorks2012` para usar o nome de seu banco de dados de publicação.  
   
--   Remova os comentários (`--`) na linha de `exec sp_helparticle @publication='<PublicationName>'` e substitua \< Nome_da_publicação> com o nome de uma publicação.  
+-   Remova os comentários (`--`) da linha `exec sp_helparticle @publication='<PublicationName>'` e substitua \<PublicationName> pelo nome de uma publicação.  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  
@@ -94,23 +98,23 @@ SELECT object_name(object_id) AS tran_published_table, name AS published_column 
 SELECT object_name(object_id) AS merge_published_table, name AS published_column FROM sys.columns WHERE is_merge_published = 1;  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Perguntas frequentes para os administradores de replicação](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
- [sp_get_distributor & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md)   
- [sp_helparticle & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helpdistributiondb & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [sp_helpdistpublisher & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
- [sp_helpdistributor & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpmergearticle & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
- [sp_helpmergepublication & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
- [sp_helppublication & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
- [sp_helpreplicationdboption & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-helpreplicationdboption-transact-sql.md)   
- [sp_helpsubscriberinfo & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
- [sys. Columns & #40. O Transact-SQL e 41;](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys. Databases e 40; O Transact-SQL e 41;](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [Procedures & #40. O Transact-SQL e 41;](../../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
- [Servers & #40. O Transact-SQL e 41;](../../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)   
- [sys. Tables & #40. O Transact-SQL e 41;](../../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
- [sys. Views & #40. O Transact-SQL e 41;](../../../relational-databases/system-catalog-views/sys-views-transact-sql.md)  
+ [sp_get_distributor &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_helpmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [sp_helppublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [sp_helpreplicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpreplicationdboption-transact-sql.md)   
+ [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
+ [sys.columns &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.procedures &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
+ [sys.servers &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)   
+ [sys.tables &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
+ [sys.views &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-views-transact-sql.md)  
   
   

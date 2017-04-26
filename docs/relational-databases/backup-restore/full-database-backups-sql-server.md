@@ -1,38 +1,42 @@
 ---
-title: "Backups de bancos de dados completos (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "backups completos [SQL Server]"
-  - "backups [SQL Server], banco de dados"
-  - "fazendo backup de bancos de dados [SQL Server], backups completos"
-  - "estimando tamanho do backup de banco de dados"
-  - "fazendo backup [SQL Server], tamanho do backup"
-  - "backups de bancos de dados [SQL Server], backups completos"
-  - "tamanho [SQL Server], backups"
-  - "backups de banco de dados [SQL Server] sobre como fazer backup de bancos de dados"
+title: Backups de bancos de dados completos (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full backups [SQL Server]
+- backups [SQL Server], database
+- backing up databases [SQL Server], full backups
+- estimating database backup size
+- backing up [SQL Server], size of backup
+- database backups [SQL Server], full backups
+- size [SQL Server], backups
+- database backups [SQL Server], about backing up databases
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f5d2d58da7040d54d49ae9f6b3daae5c31024f65
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backups de bancos de dados completos (SQL Server)
+# <a name="full-database-backups-sql-server"></a>Backups de bancos de dados completos (SQL Server)
   Um backup completo de banco de dados faz o backup de todo o banco de dados. Isso inclui parte do log de transações de modo que o banco de dados completo possa ser recuperado depois que um backup completo de banco de dados for restaurado. Backups completos de banco de dados representam o banco de dados no momento em que o backup foi concluído.  
   
 > [!TIP]  
 >  À medida que um banco de dados aumenta, os backups completos de banco de dados levam mais tempo para serem concluídos e exigem mais espaço de armazenamento. Portanto, para um banco de dados grande, convém complementar um backup de banco de dados completo com uma série de *backups de bancos de dados diferenciais*. Para obter mais informações, veja [Backups diferenciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
 > [!IMPORTANT]  
->  TRUSTWORTHY é definido como OFF em um backup de banco de dados. Para obter informações sobre como definir TRUSTWORTHY como ON, veja [Opções do ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+>  TRUSTWORTHY é definido como OFF em um backup de banco de dados. Para obter informações sobre como definir TRUSTWORTHY como ON, veja [Opções do ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  **Neste tópico:**  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 64
   
  ![Mostra a exposição da perda de trabalho entre backups de banco de dados](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Mostra a exposição da perda de trabalho entre backups de banco de dados")  
   
-### Exemplo ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example-includetsqlincludestsql-mdmd"></a>Exemplo ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  O exemplo a seguir mostra como criar um backup de banco de dados completo usando WITH FORMAT para substituir qualquer backup existente e criar um novo conjunto de mídias.  
   
 ```  
@@ -67,7 +71,7 @@ GO
   
  Para obter informações sobre como criar backups de logs, veja [Backups do log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
-### Exemplo ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example-includetsqlincludestsql-mdmd"></a>Exemplo ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  O exemplo a seguir mostra como criar um backup de banco de dados completo usando WITH FORMAT para substituir qualquer backup existente e criar um novo conjunto de mídias. Assim, o exemplo faz o backup do log de transações. Em uma situação da vida real, você teria de executar uma série de backups regulares de log. Para esse exemplo, o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] deve ser definido para usar o modelo de recuperação completa.  
   
 ```  
@@ -100,7 +104,7 @@ GO
   
  [Usar o Assistente de Plano de Manutenção](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Backup e restauração de bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  

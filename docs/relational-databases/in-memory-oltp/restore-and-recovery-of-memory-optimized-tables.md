@@ -1,22 +1,26 @@
 ---
-title: "Restaura&#231;&#227;o e recupera&#231;&#227;o de tabelas com otimiza&#231;&#227;o de mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Restauração e recuperação de tabelas com otimização de memória | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56e6ac814b90fdd38f21be32f506846e542be977
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaura&#231;&#227;o e recupera&#231;&#227;o de tabelas com otimiza&#231;&#227;o de mem&#243;ria
+# <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauração e recuperação de tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   O mecanismo básico para recuperar ou restaurar um banco de dados com tabelas com otimização de memória é semelhante a bancos de dados com apenas tabelas baseadas em disco. Mas, de modo diferente das tabelas baseadas em disco, as tabelas com otimização de memória devem ser carregadas na memória antes que o banco de dados seja disponibilizado para o acesso de usuários. Isso adiciona uma nova etapa na recuperação do banco de dados.  
@@ -51,7 +55,7 @@ caps.handback.revision: 10
   
 -   Transmitindo os arquivos de dados.  Após a criação do filtro de mapa de delta, os arquivos de dados são lidos usando o número de threads que corresponde às CPUs lógicas existentes. Cada thread que lê o arquivo de dados lê as linhas de dados, verifica o mapa delta associado, e só insere a linha na tabela se essa linha não foi marcada como excluída. Esta parte da recuperação pode estar associada à CPU em alguns casos, conforme observado a seguir.  
   
- ![Tabelas com otimização de memória.](../../relational-databases/in-memory-oltp/media/memory-optimized-tables.gif "Tabelas com otimização de memória.")  
+ ![Tabelas com otimização de memória. ](../../relational-databases/in-memory-oltp/media/memory-optimized-tables.gif "Tabelas com otimização de memória.")  
   
  As tabelas com otimização de memória normalmente podem ser carregadas na memória na velocidade de E/S, mas, em alguns casos, o carregamento de linhas de dados será mais lento. Os casos específicos são:  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 10
   
 -   Tabelas grandes com otimização de memória, com um ou mais índices não clusterizados, são diferentes de um índice de hash cujo número de buckets é dimensionado no momento de criação. Os índices não clusterizados crescem dinamicamente, resultando na alta utilização da CPU.  
   
-## Consulte também  
- [Backup, restauração e recuperação de tabelas com otimização de memória](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>Consulte também  
+ [Backup, restauração e recuperação de tabelas com otimização de memória](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

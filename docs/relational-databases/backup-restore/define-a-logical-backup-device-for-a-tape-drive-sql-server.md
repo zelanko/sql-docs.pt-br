@@ -1,28 +1,32 @@
 ---
-title: "Definir um dispositivo de backup l&#243;gico para uma unidade de fita (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dispositivos de backup [SQL Server], definindo"
-  - "dispositivos de backup [SQL Server], fitas"
-  - "fazendo backup de bancos de dados [SQL Server], fitas"
-  - "backups de bancos de dados [SQL Server], fitas"
-  - "dispositivos de backup de fita, criando"
+title: "Definir um dispositivo de backup lógico para uma unidade de fita (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup devices [SQL Server], defining
+- backup devices [SQL Server], tapes
+- backing up databases [SQL Server], tapes
+- database backups [SQL Server], tapes
+- tape backup devices, creating
 ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c0584680550617726042122f2d18dc7e967d88dc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Definir um dispositivo de backup l&#243;gico para uma unidade de fita (SQL Server)
+# <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>Definir um dispositivo de backup lógico para uma unidade de fita (SQL Server)
   Este tópico descreve como definir um dispositivo de backup lógico para uma unidade de fita no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um dispositivo lógico é um nome definido pelo usuário que aponta para um dispositivo de backup físico específico (um arquivo de disco ou uma unidade de fita).  A inicialização do dispositivo físico acontece depois, quando um backup é gravado no dispositivo de backups.  
   
 > [!NOTE]  
@@ -59,11 +63,11 @@ caps.handback.revision: 38
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para definir um dispositivo de backup lógico para uma unidade de fita  
+#### <a name="to-define-a-logical-backup-device-for-a-tape-drive"></a>Para definir um dispositivo de backup lógico para uma unidade de fita  
   
 1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
-2.  Expanda **Objetos de Servidor** e clique com o botão direito do mouse em **Dispositivos de Backup**.  
+2.  Expanda **Objetos de Servidor**e clique com o botão direito do mouse em **Dispositivos de Backup**.  
   
 3.  Clique em **Novo Dispositivo de Backup**, que abre a caixa de diálogo **Dispositivo de Backup** .  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 38
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para definir um dispositivo de backup lógico para uma unidade de fita  
+#### <a name="to-define-a-logical-backup-device-for-a-tape-drive"></a>Para definir um dispositivo de backup lógico para uma unidade de fita  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -92,7 +96,7 @@ EXEC sp_addumpdevice 'tape', 'tapedump1', '\\.\tape0' ;
 GO  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

@@ -1,32 +1,36 @@
 ---
-title: "Usar os m&#233;todos value() e nodes() com OPENXML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "método OpenXML [XML no SQL Server]"
-  - "método de valor [XML no SQL Server]"
-  - "método de nós [XML no SQL Server]"
+title: "Usar os métodos value() e nodes() com OPENXML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OpenXML method [XML in SQL Server]
+- value method [XML in SQL Server]
+- nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 35a983b1ca79bab7563744285349b84a2517db76
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar os m&#233;todos value() e nodes() com OPENXML
+# <a name="use-the-value-and-nodes-methods-with-openxml"></a>Usar os métodos value() e nodes() com OPENXML
   É possível usar vários métodos **value()** em tipo de dados **xml** em uma cláusula **SELECT** para gerar um conjunto de linhas de valores extraídos. O método **nodes()** produz uma referência interna para cada nó selecionado que pode ser usado para consulta adicional. A combinação dos métodos **nodes()** e **value()** pode ser mais eficiente para gerar o conjunto de linhas quando ele tem várias colunas e, talvez, quando as expressões de caminho usadas em sua geração são complexas.  
   
  O método **nodes()** produz instâncias de um tipo de dados **xml** especial, cada uma das quais tem seu contexto definido como um nó selecionado diferente. Esse tipo de instância XML dá suporte aos métodos **query()**, **value()**, **nodes()** e **exist()** e pode ser usado em agregações **count(\*)**. Todos os outros usos provocam um erro.  
   
-## Exemplo: Usando nodes()  
- Assuma que você deseja extrair os nomes e sobrenomes de autores e o nome não é "David". Além disso, você deseja extrair essas informações como um conjunto de linhas que contém duas colunas, FirstName e LastName. Usando os métodos **nodes()** e **value()**, isso pode ser feito da seguinte forma:  
+## <a name="example-using-nodes"></a>Exemplo: Usando nodes()  
+ Assuma que você deseja extrair os nomes e sobrenomes de autores e o nome não é "David". Além disso, você deseja extrair essas informações como um conjunto de linhas que contém duas colunas, FirstName e LastName. Usando os métodos **nodes()** e **value()** , isso pode ser feito da seguinte forma:  
   
 ```  
 SELECT nref.value('(first-name/text())[1]', 'nvarchar(50)') FirstName,  
@@ -39,7 +43,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  O SQL Server 2000 fornece a capacidade de gerar um conjunto de linhas de uma instância XML usando **OpenXml()**. É possível especificar o esquema relacional do conjunto de linhas e como valores dentro da instância XML mapeiam para colunas no conjunto de linhas.  
   
-## Exemplo: Usando OpenXml() no tipo de dados xml  
+## <a name="example-using-openxml-on-the-xml-data-type"></a>Exemplo: Usando OpenXml() no tipo de dados xml  
  A consulta do exemplo anterior pode ser reescrita usando **OpenXml()** conforme mostrado a seguir. Isso é feito criando um cursor que lê cada instância XML em uma variável XML e, em seguida, aplica OpenXML a ela:  
   
 ```  
@@ -72,7 +76,7 @@ DEALLOCATE name_cursor
   
  A combinação das funções **nodes()** e **value()** usa índices XML de maneira efetiva. Como resultado, essa combinação pode exibir mais escalabilidade que o **OpenXml**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)  
   
   

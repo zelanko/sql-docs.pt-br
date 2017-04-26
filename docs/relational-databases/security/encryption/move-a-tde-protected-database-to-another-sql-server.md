@@ -1,25 +1,29 @@
 ---
-title: "Mover um banco de dados protegido por TDE para outro SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transparent Data Encryption, movendo"
-  - "TDE, movendo um banco de dados"
+title: Mover um banco de dados protegido por TDE para outro SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transparent Data Encryption, moving
+- TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61dab0bbd770679206c7eebee438f2fa22807ac2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Mover um banco de dados protegido por TDE para outro SQL Server
+# <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover um banco de dados protegido por TDE para outro SQL Server
   Este tópico descreve como proteger um banco de dados usando TDE (criptografia de dados transparente) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de dados e de log. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados **mestre** do servidor ou uma chave assimétrica protegida por um módulo EKM.  
   
  **Neste tópico**  
@@ -74,11 +78,11 @@ caps.handback.revision: 18
   
 4.  Na caixa de diálogo **Novo Banco de Dados** , na caixa **Nome do banco de dados** , digite o nome do novo banco de dados.  
   
-5.  Na caixa de diálogo **Proprietário** , digite o nome do proprietário do novo banco de dados. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Proprietário do Banco de Dados**. Para obter mais informações sobre a criação de um novo banco de dados, consulte [Create a Database](../../../relational-databases/databases/create-a-database.md).  
+5.  Na caixa de diálogo **Proprietário** , digite o nome do proprietário do novo banco de dados. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Proprietário do Banco de Dados** . Para obter mais informações sobre a criação de um novo banco de dados, consulte [Create a Database](../../../relational-databases/databases/create-a-database.md).  
   
 6.  No Pesquisador de Objetos, clique no sinal de mais para expandir a pasta **Bancos de Dados** .  
   
-7.  Clique com o botão direito do mouse no banco de dados que você criou, aponte para **Tarefas** e selecione **Gerenciar Criptografia de Banco de Dados**.  
+7.  Clique com o botão direito do mouse no banco de dados que você criou, aponte para **Tarefas**e selecione **Gerenciar Criptografia de Banco de Dados**.  
   
      As opções a seguir estão disponíveis na caixa de diálogo **Gerenciar Criptografia de Banco de Dados** .  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 18
   
 8.  Quando terminar, clique em **OK**.  
   
-###  <a name="TsqlCreate"></a> Usando Transact-SQL  
+###  <a name="TsqlCreate"></a> Usando o Transact-SQL  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -167,7 +171,7 @@ caps.handback.revision: 18
      **Bancos de dados a serem desanexados**  
      Lista os bancos de dados a serem desanexados  
   
-     **Nome do Banco de Dados**  
+     **Database Name**  
      Exibe o nome do banco de dados a ser desanexado.  
   
      **Cancelar Conexões**  
@@ -180,7 +184,7 @@ caps.handback.revision: 18
      Por padrão, a operação desanexar retém qualquer estatística de otimização desatualizada ao desanexar o banco de dados; para atualizar as estatísticas de otimização existentes, clique nesta caixa de seleção.  
   
      **Manter Catálogos de Texto Completo**  
-     Por padrão, a operação desanexar mantém qualquer catálogo de texto completo que esteja associado ao banco de dados. Para removê-los, desmarque a caixa de seleção **Manter Catálogos de Texto Completo**. Essa opção é exibida apenas quando você está atualizando um banco de dados do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+     Por padrão, a operação desanexar mantém qualquer catálogo de texto completo que esteja associado ao banco de dados. Para removê-los, desmarque a caixa de seleção **Manter Catálogos de Texto Completo** . Essa opção é exibida apenas quando você está atualizando um banco de dados do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
      **Status**  
      Exibe um dos seguintes estados: **Pronto** ou **Não pronto**.  
@@ -208,7 +212,7 @@ caps.handback.revision: 18
   
 8.  Na caixa de diálogo **Anexar Bancos de Dados** , em **Bancos de dados a serem anexados**, clique em **Adicionar**.  
   
-9. Na caixa de diálogo **Localizar Arquivos de Banco de Dados –***server_name*, selecione o arquivo de banco de dados a ser anexado ao novo servidor e clique em **OK**.  
+9. Na caixa de diálogo **Localizar Arquivos de Banco de Dados –***server_name* , selecione o arquivo de banco de dados a ser anexado ao novo servidor e clique em **OK**.  
   
      As opções a seguir estão disponíveis na caixa de diálogo **Anexar Bancos de Dados** .  
   
@@ -216,12 +220,12 @@ caps.handback.revision: 18
      Exibe informações sobre os bancos de dados selecionados.  
   
      \<no column header>  
-     Exibe um ícone que indica o status da operação de anexação. Os possíveis ícones são descritos em **Status**, abaixo).  
+     Exibe um ícone que indica o status da operação de anexação. Os possíveis ícones são descritos em **Status** , abaixo).  
   
      **Local do Arquivo MDF**  
      Exibe o caminho e o nome de arquivo do arquivo MDF selecionado.  
   
-     **Nome do Banco de Dados**  
+     **Database Name**  
      Exibe o nome do banco de dados.  
   
      **Anexar como**  
@@ -249,9 +253,9 @@ caps.handback.revision: 18
      Encontrar os arquivos de banco de dados principais necessários. Quando o usuário selecionar um arquivo .mdf , os respectivos campos são automaticamente preenchidos com informações aplicáveis da grade **Bancos de dados a serem anexados** .  
   
      **Remover**  
-     Remove o arquivo selecionado da grade **Bancos de dados a serem anexados**.  
+     Remove o arquivo selecionado da grade **Bancos de dados a serem anexados** .  
   
-     Detalhes do banco de dados **"** *<database_name>* **"**  
+     **"** *<database_name>* **" detalhes do banco de dados**  
      Exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **Procurar** (**…**).  
   
     > [!NOTE]  
@@ -269,7 +273,7 @@ caps.handback.revision: 18
      **Mensagem**  
      Exibe uma mensagem em branco ou um hiperlink “**Arquivo não encontrado**”.  
   
-###  <a name="TsqlMove"></a> Usando Transact-SQL  
+###  <a name="TsqlMove"></a> Usando o Transact-SQL  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -320,7 +324,7 @@ caps.handback.revision: 18
   
 -   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [Transparent Data Encryption com o Banco de Dados SQL do Azure](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
   

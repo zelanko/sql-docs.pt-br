@@ -1,32 +1,36 @@
 ---
-title: "Descartar &#237;ndices XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "removendo índices"
-  - "descartando índices"
-  - "índices XML [SQL Server], removendo"
+title: "Remover índices XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing indexes
+- dropping indexes
+- XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1508a40b460939fc1aa4ddfa8271d28a10958bb9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Descartar &#237;ndices XML
+# <a name="drop-xml-indexes"></a>Descartar índices XML
   A instrução [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] pode ser usada para remover índices primários ou secundários XML e não XML existentes. No entanto nenhuma opção de DROP INDEX se aplica a índices XML. Se você descartar o índice XML primário, qualquer índice secundário que estiver presente também será excluído.  
   
  A sintaxe de DROP com *TableName.IndexName* está sendo desativada e não tem suporte para índices XML.  
   
-## Exemplo: Criando e descartando um índice XML primário  
- No exemplo a seguir, um índice XML é criado em um tipo de coluna **xml**.  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Exemplo: Criando e descartando um índice XML primário  
+ No exemplo a seguir, um índice XML é criado em um tipo de coluna **xml** .  
   
 ```  
 DROP TABLE T  
@@ -50,7 +54,7 @@ DROP INDEX PIdx_T_XmlCol ON T
   
  Quando uma tabela é descartada, todos os índices XML que ela contém também são descartados automaticamente. No entanto uma coluna XML não poderá ser descartada de uma tabela se existir um índice XML na coluna.  
   
- No exemplo a seguir, um índice XML é criado em um tipo de coluna **xml**. Para obter mais informações, consulte [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+ No exemplo a seguir, um índice XML é criado em um tipo de coluna **xml** . Para obter mais informações, consulte [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
 ```  
 CREATE TABLE TestTable(  
@@ -67,8 +71,8 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## Exemplo: Criando um índice XML usando a opção de índice DROP_EXISTING  
- No exemplo a seguir, um índice XML é criado em uma coluna (`XmlColx`). Em seguida, outro índice XML com o mesmo nome é criado em uma coluna diferente (`XmlColy`). Como a opção `DROP_EXISTING` está especificada, o índice XML existente em (`XmlColx)`) é descartado e um novo índice XML em (`XmlColy`) é criado.  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Exemplo: Criando um índice XML usando a opção de índice DROP_EXISTING  
+ No exemplo a seguir, um índice XML é criado em uma coluna (`XmlColx`). Em seguida, outro índice XML com o mesmo nome é criado em uma coluna diferente (`XmlColy`). Como a opção `DROP_EXISTING` está especificada, o índice XML existente em (`XmlColx)` ) é descartado e um novo índice XML em (`XmlColy`) é criado.  
   
 ```  
 DROP TABLE T  
@@ -95,7 +99,7 @@ AND    si.object_id=object_id('T')
   
  Essa consulta retorna o nome da coluna na qual o índice XML especificado é criado.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   

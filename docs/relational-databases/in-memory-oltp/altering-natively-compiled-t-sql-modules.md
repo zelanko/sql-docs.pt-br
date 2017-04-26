@@ -1,23 +1,27 @@
 ---
-title: "Altering Natively Compiled T-SQL Modules | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Alterando módulos T-SQL compilados nativamente | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4696039c56ebf5f1fd6ea440cd27da84721f35b9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Altering Natively Compiled T-SQL Modules
+# <a name="altering-natively-compiled-t-sql-modules"></a>Altering Natively Compiled T-SQL Modules
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (e posterior) e no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] você pode executar operações ALTER em procedimentos armazenados compilados nativamente e outros módulos do T-SQL compilados nativamente, como UDFs escalares e gatilhos usando a instrução ALTER.  
@@ -45,7 +49,7 @@ caps.handback.revision: 7
   
  Você pode executar sp_recompile em módulos T-SQL compilados nativamente, o que faz com que o módulo recompile na próxima execução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir cria uma tabela com otimização de memória (T1) e um procedimento armazenado compilado nativamente (SP1) que seleciona todas as colunas de T1. Em seguida, o SP1 é alterado para remover a cláusula EXECUTE AS, alterar LANGUAGE e selecionar apenas uma coluna (C1) de T1.  
   
 ```  

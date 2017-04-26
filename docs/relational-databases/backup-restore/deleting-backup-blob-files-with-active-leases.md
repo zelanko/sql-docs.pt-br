@@ -1,22 +1,26 @@
 ---
-title: "Excluindo arquivos de blob de backup com arrendamentos ativos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Excluindo arquivos de blob de backup com concessões ativas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8590c7e7adbf796d44347b66a790f98c13667bc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Excluindo arquivos de blob de backup com arrendamentos ativos
+# <a name="deleting-backup-blob-files-with-active-leases"></a>Excluindo arquivos de blob de backup com arrendamentos ativos
   Ao fazer backup ou restauração no armazenamento do Windows Azure, o SQL Server adquirirá uma concessão infinita para bloquear o acesso exclusivo ao blob. Quando o processo de backup ou restauração for concluído com êxito, a concessão será liberada. Se um backup ou uma restauração falhar, o processo de backup tentará limpar qualquer blob inválido. Entretanto, se o backup falhar devido a uma falha de conectividade de rede prolongada ou contínua, o processo de backup pode não ser capaz de obter acesso ao blob e o blob pode permanecer órfão. Isso significa que o blob só poderá ser gravado ou excluído quando a concessão for liberada. Este tópico descreve como liberar a concessão e excluir o blob.  
   
  Para obter mais informações sobre os tipos de arrendamentos, leia este [artigo](http://go.microsoft.com/fwlink/?LinkId=275664).  
@@ -25,7 +29,7 @@ caps.handback.revision: 16
   
  Se houver uma falha na restauração, as restaurações subsequentes não serão bloqueadas e, portanto, a concessão ativa possivelmente não será um problema. A interrupção da concessão só é necessária quando você precisa substituir ou excluir o blob.  
   
-## Gerenciando blobs órfãos  
+## <a name="managing-orphaned-blobs"></a>Gerenciando blobs órfãos  
  As etapas a seguir descrevem como efetuar a limpeza após uma atividade de restauração ou backup com falha. Todas as etapas podem ser executadas por meio dos scripts do PowerShell. Um exemplo de código é fornecido na seção a seguir:  
   
 1.  **Identificando os blobs que têm arrendamentos:** Se você tiver um script ou processo que executa os processos de backup, talvez possa capturar a falha no script ou processo e usá-la para limpar os blobs.   Você também pode usar as propriedades LeaseStats e LeastState para identificar os blobs que têm arrendamentos neles. Após identificar os blobs, recomendamos que você examine a lista e verifique a validade do arquivo de backup antes de excluir o blob.  
@@ -83,7 +87,7 @@ caps.handback.revision: 16
   
      **A concessão na \<URL do Blob> é uma concessão de restauração: você verá esta mensagem apenas se tiver um blob com uma concessão de restauração que ainda está ativa.**  
   
-     **A concessão na \<URL do Blob> não é uma concessão de restauração que interrompe a concessão na \<URL do Blob>.**  
+     **A concessão na \<URL do Blob> não é uma concessão de restauração Interrompendo concessão na \<URL do Bob>.**  
   
 ```  
 param(  
@@ -154,7 +158,7 @@ if($lockedBlobs.Count -gt 0)
   
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Práticas recomendadas e solução de problemas de backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

@@ -1,26 +1,30 @@
 ---
-title: "Otimizar o desempenho da replica&#231;&#227;o de mesclagem com o controle de exclus&#227;o condicional | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controle de exclusão condicional [replicação do SQL Server]"
-  - "replicação de mesclagem [replicação do SQL Server], controle de exclusão condicional"
-  - "artigos [replicação do SQL Server], controle de exclusão condicional"
+title: "Otimizar o desempenho da replicação de mesclagem com o controle de exclusão condicional | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- conditional delete tracking [SQL Server replication]
+- merge replication [SQL Server replication], conditional delete tracking
+- articles [SQL Server replication], conditional delete tracking
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61f3c832be62fb53a82713182dc026d7a6fc3fb5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Otimizar o desempenho da replica&#231;&#227;o de mesclagem com o controle de exclus&#227;o condicional
+# <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Otimizar o desempenho da replicação de mesclagem com o controle de exclusão condicional
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -45,10 +49,10 @@ caps.handback.revision: 23
   
  **Para especificar que as exclusões não devem ser controladas**  
   
--   Replicação [!INCLUDE[tsql](../../../includes/tsql-md.md)] programação: [especificar que exclui deve não ser rastreadas para mesclar artigos e 40; Programação Transact-SQL de replicação e 41;](../../../relational-databases/replication/publish/specify that deletes should not be tracked for merge articles.md)  
+-   Programação [!INCLUDE[tsql](../../../includes/tsql-md.md)] de replicação: [Especificar que as exclusões não devem ser controladas para artigos de mesclagem &#40;programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
   
-## Consulte também  
- [Opções de artigo para replicação de mesclagem](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
- [Otimizar o desempenho de replicação de mesclagem com artigos de somente download](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)  
+## <a name="see-also"></a>Consulte também  
+ [Opções de artigos para a replicação de mesclagem](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
+ [Otimizar o desempenho da replicação de mesclagem com artigos de somente download](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)  
   
   

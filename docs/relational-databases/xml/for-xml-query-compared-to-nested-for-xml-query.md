@@ -1,29 +1,33 @@
 ---
-title: "Consulta FOR XML comparada com consulta FOR XML aninhada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "consulta FOR XML"
-  - "consultas [XML no SQL Server], comparando tipos de consulta"
+title: Consulta XML FOR comparada com consulta XML FOR aninhada | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML query
+- queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e83d836d3cf5e736847c5ebbb1934e8cde5374a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Consulta FOR XML comparada com consulta FOR XML aninhada
+# <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Consulta FOR XML comparada com consulta FOR XML aninhada
   Este tópico compara uma consulta FOR XML de nível único com uma consulta FOR XML aninhada. Um dos benefícios do uso de consultas FOR XML aninhadas é que é possível especificar uma combinação de XML centrado em atributo e em elemento para resultados da consulta. O exemplo demonstra isso.  
   
-## Exemplo  
- A consulta `SELECT` a seguir recupera informações de categoria e subcategoria de produtos no banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Não há FOR XML aninhado na consulta.  
+## <a name="example"></a>Exemplo  
+ A consulta `SELECT` a seguir recupera informações de categoria e subcategoria de produtos no banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Não há FOR XML aninhado na consulta.  
   
 ```  
 USE AdventureWorks2012;  
@@ -117,9 +121,9 @@ FOR XML AUTO, TYPE
   
 -   A consulta `FOR XML` interna recupera informações de subcategoria de produtos. A diretiva `ELEMENTS` é adicionada ao `FOR XML` interno para gerar XML centrado em elemento que é adicionado ao XML gerado pela consulta externa. Por padrão, a consulta externa gera XML centrado em atributo.  
   
--   Na consulta interna, a diretiva `TYPE` é especificada de forma que o resultado seja do tipo **xml**. Se `TYPE` não for especificado, o resultado será retornado como tipo **nvarchar(max)** e os dados XML serão retornados como entidades.  
+-   Na consulta interna, a diretiva `TYPE` é especificada de forma que o resultado seja do tipo **xml** . Se `TYPE` não for especificado, o resultado será retornado como tipo **nvarchar(max)** e os dados XML serão retornados como entidades.  
   
--   A consulta externa também especifica a diretiva `TYPE`. Portanto o resultado dessa consulta é retornado ao cliente como tipo **xml**.  
+-   A consulta externa também especifica a diretiva `TYPE` . Portanto o resultado dessa consulta é retornado ao cliente como tipo **xml** .  
   
  Este é o resultado parcial:  
   
@@ -135,7 +139,7 @@ FOR XML AUTO, TYPE
 </ProductCategory>  
 ```  
   
- A consulta a seguir é apenas uma extensão da consulta anterior. Ela mostra a hierarquia completa de produtos no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Isso inclui o seguinte:  
+ A consulta a seguir é apenas uma extensão da consulta anterior. Ela mostra a hierarquia completa de produtos no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Isso inclui o seguinte:  
   
 -   Categorias de produtos  
   
@@ -145,7 +149,7 @@ FOR XML AUTO, TYPE
   
 -   Produtos em cada modelo  
   
- A consulta a seguir pode ser útil para entender o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
+ A consulta a seguir pode ser útil para entender o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
   
 ```  
 SELECT ProductCategoryID, Name as CategoryName,  
@@ -199,7 +203,7 @@ FOR XML AUTO, TYPE
   
  Se você remover a diretiva `ELEMENTS` da consulta `FOR XML` aninhada que gera subcategorias de produtos, todo o resultado será centrado em atributo. Em seguida, você pode escrever esta consulta sem aninhamento. A adição de resultados de `ELEMENTS` em um XML que é parcialmente centrado em atributo e em elemento. Esse resultado não pode ser gerado por uma consulta FOR XML de nível único.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usar consultas FOR XML aninhadas](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

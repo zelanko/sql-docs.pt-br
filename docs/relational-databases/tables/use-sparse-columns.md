@@ -1,29 +1,33 @@
 ---
-title: "Usar colunas esparsas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colunas esparsas, descritas"
-  - "colunas nulas"
-  - "colunas esparsas"
+title: Usar colunas esparsas | Microsoft Docs
+ms.custom: 
+ms.date: 03/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sparse columns, described
+- null columns
+- sparse columns
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73aa2beab814a8cc36400ddd384bb7f5de3b9d5d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar colunas esparsas
+# <a name="use-sparse-columns"></a>Usar colunas esparsas
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Colunas esparsas são colunas comuns que têm um armazenamento otimizado para valores nulos. Elas reduzem os requisitos de espaço para valores nulos às custas de maior sobrecarga para recuperar valores não nulos. Considere o uso de colunas esparsas quando o espaço salvo for pelo menos de 20 a 40 por cento. As colunas esparsas e os conjuntos de colunas são definidos usando as instruções [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+  Colunas esparsas são colunas comuns que têm um armazenamento otimizado para valores nulos. Elas reduzem os requisitos de espaço para valores nulos às custas de maior sobrecarga para recuperar valores não nulos. Considere o uso de colunas esparsas quando o espaço salvo for pelo menos de 20 a 40 por cento. As colunas esparsas e os conjuntos de colunas são definidos usando as instruções [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) .  
   
  As colunas esparsas podem ser usadas com conjuntos de colunas e índices filtrados:  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 47
   
  As colunas esparsas e os índices filtrados habilitam aplicativos, como o [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], para armazenar e acessar com eficiência um grande número de propriedades definidas pelo usuário usando o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## Propriedades das colunas esparsas  
+## <a name="properties-of-sparse-columns"></a>Propriedades das colunas esparsas  
  As colunas esparsas têm as seguintes características:  
   
 -   O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usa a palavra-chave SPARSE em uma definição de coluna otimizar o armazenamento de valores naquela coluna. Portanto, quando o valor da coluna for NULL para qualquer linha na tabela, os valores não exigirão armazenamento.  
@@ -65,12 +69,12 @@ caps.handback.revision: 47
 |**image**|**tipos de dados definidos pelo usuário**|  
 |**ntext**||  
   
-## Aumento de espaço estimado por tipo de dados  
+## <a name="estimated-space-savings-by-data-type"></a>Aumento de espaço estimado por tipo de dados  
  As colunas esparsas exigem mais espaço de armazenamento para valores não nulos do que o espaço exigido para dados idênticos não marcados como SPARSE. As tabelas a seguir mostram o uso de espaço para cada tipo de dados. A coluna **Percentual de NULL** indica o percentual de dados que deve ser NULL para um aumento de espaço de 40 por cento.  
   
  **Tipos de dados de comprimento fixo**  
   
-|Tipo de dados|Bytes não esparsos|Bytes esparsos|Porcentagem de NULL|  
+|Tipo de dados|Bytes não esparsos|Bytes esparsos|Percentual de NULL|  
 |---------------|---------------------|------------------|---------------------|  
 |**bit**|0.125|5|98%|  
 |**tinyint**|1|5|86%|  
@@ -88,7 +92,7 @@ caps.handback.revision: 47
   
  **Tipos de dados de comprimento dependente de precisão**  
   
-|Tipo de dados|Bytes não esparsos|Bytes esparsos|Porcentagem de NULL|  
+|Tipo de dados|Bytes não esparsos|Bytes esparsos|Percentual de NULL|  
 |---------------|---------------------|------------------|---------------------|  
 |**datetime2(0)**|6|10|57%|  
 |**datetime2(7)**|8|12|52%|  
@@ -102,7 +106,7 @@ caps.handback.revision: 47
   
  **Tipos de dados de comprimento dependente de dados**  
   
-|Tipo de dados|Bytes não esparsos|Bytes esparsos|Porcentagem de NULL|  
+|Tipo de dados|Bytes não esparsos|Bytes esparsos|Percentual de NULL|  
 |---------------|---------------------|------------------|---------------------|  
 |**sql_variant**|Varia de acordo com o tipo de dados subjacente|||  
 |**varchar** ou **char**|2*|4*|60%|  
@@ -113,15 +117,15 @@ caps.handback.revision: 47
   
  * O comprimento é igual à média dos dados que estão contidos no tipo, mais 2 ou 4 bytes.  
   
-## Sobrecarga na memória necessária para atualizações em colunas esparsas  
+## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>Sobrecarga na memória necessária para atualizações em colunas esparsas  
  Quando for criar tabelas com colunas esparsas, tenha em mente que uma sobrecarga adicional de 2 bytes é necessária para cada coluna esparsa não nula na tabela quando uma linha está sendo atualizada. Em resultado dessa necessidade de memória adicional, as atualizações podem falhar inesperadamente com o erro 576 quando o tamanho total da linha, incluindo essa sobrecarga de memória, excede 8019, e nenhuma coluna pode ser retirada da linha.  
   
- Considere o exemplo de uma tabela que tem 600 colunas esparsas do tipo bigint. Se houver 571 colunas não nulas, o tamanho total em disco será 571 * 12 = 6852 bytes. Depois de incluir a sobrecarga de linha adicional e o cabeçalho da coluna esparsa, isso aumenta para cerca de 6895 bytes. A página ainda tem cerca de 1124 bytes disponíveis em disco. Isso pode dar a impressão de que as colunas adicionais podem ser atualizadas com sucesso. No entanto, durante a atualização, há uma sobrecarga adicional na memória que é 2\* (o número de colunas esparsas não nulas). Neste exemplo, incluir a sobrecarga adicional – 2 \* 571 = 1142 bytes – aumenta o tamanho da linha no disco em torno de 8.037 bytes. Esse tamanho excede o tamanho máximo permitido de 8019 bytes. Como todas as colunas têm tipos de dados de comprimento fixo, elas não podem ser retiradas da linha. Portanto, a atualização falha com o erro 576.  
+ Considere o exemplo de uma tabela que tem 600 colunas esparsas do tipo bigint. Se houver 571 colunas não nulas, o tamanho total em disco será 571 * 12 = 6852 bytes. Depois de incluir a sobrecarga de linha adicional e o cabeçalho da coluna esparsa, isso aumenta para cerca de 6895 bytes. A página ainda tem cerca de 1124 bytes disponíveis em disco. Isso pode dar a impressão de que as colunas adicionais podem ser atualizadas com sucesso. No entanto, durante a atualização, há uma sobrecarga adicional na memória que é 2\*(o número de colunas esparsas não nulas). Neste exemplo, incluir a sobrecarga adicional – 2 \* 571 = 1142 bytes – aumenta o tamanho da linha no disco em torno de 8.037 bytes. Esse tamanho excede o tamanho máximo permitido de 8019 bytes. Como todas as colunas têm tipos de dados de comprimento fixo, elas não podem ser retiradas da linha. Portanto, a atualização falha com o erro 576.  
   
-## Restrições para o uso de colunas esparsas  
+## <a name="restrictions-for-using-sparse-columns"></a>Restrições para o uso de colunas esparsas  
  As colunas esparsas podem ser de qualquer tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e podem se comportar como qualquer outra coluna com as seguintes restrições:  
   
--   Uma coluna esparsa deve permitir valor nulo e não deve ter as propriedades ROWGUIDCOL ou IDENTITY. Uma coluna esparsa não pode ser nenhum dos seguintes tipos de dados: **text**, **ntext**, **image**, **timestamp**, tipo de dados definido pelo usuário, **geometry** ou **geography** nem ter o atributo FILESTREAM.  
+-   Uma coluna esparsa deve permitir valor nulo e não deve ter as propriedades ROWGUIDCOL ou IDENTITY. Uma coluna esparsa não pode ser nenhum dos seguintes tipos de dados: **text**, **ntext**, **image**, **timestamp**, tipo de dados definido pelo usuário, **geometry**ou **geography**nem ter o atributo FILESTREAM.  
   
 -   Uma coluna esparsa não pode ter um valor padrão.  
   
@@ -154,8 +158,8 @@ caps.handback.revision: 47
   
 -   Quando você alterar uma coluna não esparsa para uma coluna esparsa, a coluna esparsa consumirá mais espaço para valores não nulos. Quando uma linha está próxima do limite de tamanho máximo de linha, pode haver falha na operação.  
   
-## Tecnologias do SQL Server que oferecem suporte a colunas esparsas  
- Esta seção descreve como as colunas esparsas têm suporte nas seguintes tecnologias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+## <a name="sql-server-technologies-that-support-sparse-columns"></a>Tecnologias do SQL Server que oferecem suporte a colunas esparsas  
+ Esta seção descreve como as colunas esparsas têm suporte nas seguintes tecnologias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   Replicação transacional  
   
@@ -179,7 +183,7 @@ caps.handback.revision: 47
   
 -   A propriedade esparsa de uma coluna não é preservada quando a tabela é copiada.  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  Neste exemplo, uma tabela de documento contém um conjunto comum que tem as colunas `DocID` e `Title`. O grupo de Produção quer uma coluna `ProductionSpecification` e `ProductionLocation` para todos os documentos da produção. O grupo Marketing quer uma coluna `MarketingSurveyGroup` para os documentos de marketing. O código neste exemplo cria uma tabela que usa colunas esparsas, insere duas linhas na tabela e, depois, seleciona dados da tabela.  
   
 > [!NOTE]  
@@ -234,10 +238,11 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usar conjuntos de colunas](../../relational-databases/tables/use-column-sets.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   
+

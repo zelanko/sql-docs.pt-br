@@ -1,22 +1,26 @@
 ---
-title: "Pr&#225;ticas recomendadas para chamar procedimentos armazenados compilados nativamente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Práticas recomendadas para chamar procedimentos armazenados compilados nativamente | Microsoft Docs"
+ms.custom: 
+ms.date: 03/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694bb
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2ecd5bafd4a2092ea51556b898284456d8abf2d7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pr&#225;ticas recomendadas para chamar procedimentos armazenados compilados nativamente
+# <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Práticas recomendadas para chamar procedimentos armazenados compilados nativamente
   Estes são os procedimentos armazenados compilados nativamente:  
   
 -   Geralmente usados em partes essenciais do desempenho de um aplicativo.  
@@ -45,13 +49,11 @@ caps.handback.revision: 8
   
 -   Use parâmetros ordinais (sem nome) ao chamar procedimentos armazenados compilados nativamente. Para uma execução mais eficiente, não use parâmetros nomeados.  
   
- O uso de parâmetros nomeados (ineficientes) com procedimentos armazenados compilados de modo nativo poderá ser detectado com o XEvent **hekaton_slow_parameter_passing**, com **reason=named_parameters**.  
+ Ineficiências em parâmetros com procedimentos armazenados compilados nativamente podem ser detectadas com o XEvent **natively_compiled_proc_slow_parameter_passing**:
+ - Tipos incompatíveis: **reason=parameter_conversion**
+ - Parâmetros nomeados: **reason=named_parameters**
+ - Valores PADRÃO: **reason=default** 
   
- Da mesma forma, é possível detectar o uso de tipos incompatíveis por meio do mesmo XEvent **hekaton_slow_parameter_passing**, com **reason=parameter_conversion**.  
-  
- Como você precisará implementar uma lógica de repetição ao usar tabelas com otimização de memória (em vários cenários) e precisará respeitar determinadas limitações de recurso, talvez queira criar um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado por wrapper. Para obter um exemplo, veja [Transações com tabelas com otimização de memória](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md).  
-  
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
-  
+

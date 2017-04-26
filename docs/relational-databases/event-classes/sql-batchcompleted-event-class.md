@@ -1,34 +1,38 @@
 ---
-title: "Classe de evento SQL:BatchCompleted | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento SQL:BatchCompleted"
+title: Classe de evento SQL:BatchCompleted | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL:BatchCompleted event class
 ms.assetid: 1be023e8-7a98-4400-b9e7-b24f6a3fc5ca
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fb81aebd6d95f3b79aa5ebce4187014d29a99434
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento SQL:BatchCompleted
+# <a name="sqlbatchcompleted-event-class"></a>classe de evento SQL:BatchCompleted
   A classe de evento SQL:BatchCompleted indica que o lote [!INCLUDE[tsql](../../includes/tsql-md.md)] foi concluído.  
   
-## Colunas de dados da classe de evento SQL:BatchCompleted  
+## <a name="sqlbatchcompleted-event-class-data-columns"></a>Colunas de dados da classe de evento SQL:BatchCompleted  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
 |CPU|**int**|Período de tempo da CPU (em milissegundos) usado pelo lote.|18|Sim|  
-|DatabaseID|**Int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
+|DatabaseID|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |Duration|**bigint**|Período de tempo (em microssegundos) utilizado pelo evento.|13|Sim|  
 |EndTime|**datetime**|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting.|15|Sim|  
@@ -54,7 +58,7 @@ caps.handback.revision: 31
 |Writes|**bigint**|Número de E/Ss de gravação de página causado pelo lote.|17|Sim|  
 |XactSequence|**bigint**|Token que descreve a transação atual.|50|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

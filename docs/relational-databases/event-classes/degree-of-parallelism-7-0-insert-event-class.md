@@ -1,29 +1,33 @@
 ---
-title: "Classe de evento Degree of Parallelism (7.0 Insert)  | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento Degree of Parallelism"
+title: Classe de evento Degree of Parallelism (7.0 Insert) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Degree of Parallelism event class
 ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58892a606e417bc95b2744fcd3abc1e58ee1ff84
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento Degree of Parallelism (7.0 Insert) 
+# <a name="degree-of-parallelism-70-insert-event-class"></a>Classe de evento Degree of Parallelism (7.0 Insert)
   A classe de evento **Degree of Parallelism (7.0 Insert)** ocorre sempre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SELECT, INSERT, UPDATE ou DELETE.  
   
  Quando a classe de evento for incluída em um rastreamento, a quantidade de sobrecarga pode impedir o desempenho se esses eventos ocorrem com frequência. Para minimizar a sobrecarga, limite o uso desta classe de evento em rastreamentos que monitoram brevemente problemas específicos.  
   
-## Colunas de dados de classe de evento Degree of Parallelism (7.0 Insert)  
+## <a name="degree-of-parallelism-70-insert-event-class-data-columns"></a>Colunas de dados de classe de evento Degree of Parallelism (7.0 Insert)  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -50,7 +54,7 @@ caps.handback.revision: 35
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)  
   

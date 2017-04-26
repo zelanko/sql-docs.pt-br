@@ -1,25 +1,29 @@
 ---
-title: "Usar conjuntos de colunas | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/30/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Colunas esparsas e conjuntos de colunas"
-  - "conjuntos de colunas"
+title: Usar conjuntos de colunas | Microsoft Docs
+ms.custom: 
+ms.date: 07/30/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sparse columns, column sets
+- column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ae01121fcb9c3cfaf67297fee281979a7ee8627
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar conjuntos de colunas
+# <a name="use-column-sets"></a>Usar conjuntos de colunas
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   As tabelas que usam colunas esparsas podem designar um conjunto de colunas para retornar todas as colunas esparsas na tabela. Um conjunto de colunas é uma representação em XML sem-tipo que combina todas as colunas esparsas de uma tabela em uma saída estruturada. Um conjunto de colunas é como uma coluna calculada em que o conjunto de colunas não é fisicamente armazenado na tabela. Um conjunto de colunas difere de uma coluna calculada em que o conjunto de colunas é diretamente atualizável.  
@@ -28,7 +32,7 @@ caps.handback.revision: 28
   
  Para definir um conjunto de colunas, use as palavras-chave *<column_set_name>* FOR ALL_SPARSE_COLUMNS nas instruções [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
-## Diretrizes para usar conjuntos de colunas  
+## <a name="guidelines-for-using-column-sets"></a>Diretrizes para usar conjuntos de colunas  
  Ao usar conjuntos de colunas, considere as seguintes diretrizes:  
   
 -   Colunas esparsas e um conjunto de colunas podem ser adicionados como parte da mesma instrução.  
@@ -69,7 +73,7 @@ caps.handback.revision: 28
   
 -   Para obter informações sobre os dados retornados pela função COLUMNS_UPDATED, veja [Usar colunas esparsas](../../relational-databases/tables/use-sparse-columns.md).  
   
-## Diretrizes para selecionar dados de um conjunto de colunas  
+## <a name="guidelines-for-selecting-data-from-a-column-set"></a>Diretrizes para selecionar dados de um conjunto de colunas  
  Considere as seguintes diretrizes para selecionar dados de um conjunto de colunas:  
   
 -   Conceitualmente, um conjunto de colunas é um tipo coluna XML computada, atualizável, que agrega um conjunto de colunas relacionais subjacentes em uma representação XML única. O conjunto de colunas só oferece suporte à propriedade ALL_SPARSE_COLUMNS. Essa propriedade é usada para agregar todos os valores não nulos de todas as colunas esparsas para uma linha específica.  
@@ -91,10 +95,10 @@ caps.handback.revision: 28
 > [!WARNING]  
 >  A adição de um conjunto de colunas altera o comportamento de consultas SELECT *. A consulta retornará o conjunto de colunas como uma coluna XML e não retornará as colunas esparsas individuais. Designers de esquema e desenvolvedores de software devem ter cuidado para não violar aplicativos existentes.  
   
-## Inserindo ou modificando dados em um conjunto de colunas  
+## <a name="inserting-or-modifying-data-in-a-column-set"></a>Inserindo ou modificando dados em um conjunto de colunas  
  A manipulação de dados de uma coluna esparsa pode ser executada usando o nome de colunas individuais ou referenciando o nome do conjunto de colunas e especificando seus valores usando o formato XML do conjunto de colunas. As colunas esparsas podem ser exibidas em qualquer ordem na coluna XML.  
   
- Quando os valores de colunas esparsas são inseridos ou atualizados usando o conjunto de colunas XML, os valores inseridos nas colunas esparsas subjacentes são implicitamente convertidos do tipo de dados **xml**. No caso de colunas numéricas, um valor em branco no XML para a coluna numérica é convertido em uma cadeia de caracteres vazia. Isso faz com que um zero seja inserido na coluna numérica, como mostrado no exemplo a seguir.  
+ Quando os valores de colunas esparsas são inseridos ou atualizados usando o conjunto de colunas XML, os valores inseridos nas colunas esparsas subjacentes são implicitamente convertidos do tipo de dados **xml** . No caso de colunas numéricas, um valor em branco no XML para a coluna numérica é convertido em uma cadeia de caracteres vazia. Isso faz com que um zero seja inserido na coluna numérica, como mostrado no exemplo a seguir.  
   
 ```  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
@@ -107,8 +111,8 @@ GO
   
  Nesse exemplo, nenhum valor foi especificado para a coluna `i`, mas o valor `0` foi inserido.  
   
-## Usando o tipo de dados sql_variant  
- O tipo de dados **sql_variant** pode armazenar vários tipos de dados diferentes, como **int**, **char** e **data**. Os conjuntos de colunas geram informações de tipo de dados como escala, precisão e informações de localidade que são associadas a um valor **sql_variant** como atributo na coluna XML gerada. Se você tentar fornecer esses atributos em uma instrução XML personalizada como uma entrada para uma operação de inserção ou atualização em um conjunto de colunas, alguns desses atributos serão exigidos e a outros será atribuído um valor padrão. A tabela a seguir lista os tipos de dados e os valores padrão que o servidor gera quando o valor não é fornecido.  
+## <a name="using-the-sqlvariant-data-type"></a>Usando o tipo de dados sql_variant  
+ O tipo de dados **sql_variant** pode armazenar vários tipos de dados diferentes, como **int**, **char**e **data**. Os conjuntos de colunas geram informações de tipo de dados como escala, precisão e informações de localidade que são associadas a um valor **sql_variant** como atributo na coluna XML gerada. Se você tentar fornecer esses atributos em uma instrução XML personalizada como uma entrada para uma operação de inserção ou atualização em um conjunto de colunas, alguns desses atributos serão exigidos e a outros será atribuído um valor padrão. A tabela a seguir lista os tipos de dados e os valores padrão que o servidor gera quando o valor não é fornecido.  
   
 |Tipo de dados|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Comprimento máximo|Precisão|Escala|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
@@ -126,7 +130,7 @@ GO
   
  ** Não aplicável = nenhum valor é produzido para esses atributos durante uma operação de seleção no conjunto de colunas. Gera um erro quando um valor é especificado para esse atributo pelo chamador na representação XML fornecida por um conjunto de colunas, em uma operação de inserção ou atualização.  
   
-## Segurança  
+## <a name="security"></a>Segurança  
  O modelo de segurança para um conjunto de colunas funciona de modo semelhante ao modelo de segurança que existe entre tabela e colunas. Os conjuntos de colunas podem ser visualizados como uma minitabela e uma operação de seleção é como uma operação SELECT * nessa minitabela. Mas a relação entre o conjunto de colunas e as colunas esparsas é uma relação de agrupamento, em vez de estritamente um contêiner. O modelo de segurança verifica a segurança na coluna do conjunto de colunas e respeita as operações DENY nas colunas esparsas subjacentes. Características adicionais do modelo de segurança:  
   
 -   Permissões de segurança podem ser concedidas e revogadas da coluna do conjunto de colunas, semelhante a qualquer outra coluna na tabela.  
@@ -137,10 +141,10 @@ GO
   
 -   A execução de uma instrução REVOKE em uma coluna esparsa ou conjunto de colunas faz com que a segurança assuma como padrão seu objeto pai.  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  Nos exemplos a seguir, uma tabela de documento contém o conjunto comum de colunas `DocID` e `Title`. O grupo de Produção quer uma coluna `ProductionSpecification` e `ProductionLocation` para todos os documentos da produção. O grupo Marketing quer uma coluna `MarketingSurveyGroup` para os documentos de marketing.  
   
-### A. Criando uma tabela que possui um conjunto de colunas  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>A. Criando uma tabela que possui um conjunto de colunas  
  O exemplo a seguir cria a tabela que usa colunas esparsas e inclui o conjunto de colunas `SpecialPurposeColumns`. O exemplo insere duas linhas na tabela e, depois, seleciona dados da tabela.  
   
 > [!NOTE]  
@@ -161,7 +165,7 @@ CREATE TABLE DocumentStoreWithColumnSet
 GO  
 ```  
   
-### B. Inserindo dados em uma tabela usando os nomes das colunas esparsas  
+### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. Inserindo dados em uma tabela usando os nomes das colunas esparsas  
  Os exemplos a seguir inserem duas linhas na tabela criada no exemplo A. Os exemplos usam os nomes das colunas esparsas e não referenciam o conjunto de colunas.  
   
 ```  
@@ -174,7 +178,7 @@ VALUES (2, 'Survey 2142', 'Men 25 - 35');
 GO  
 ```  
   
-### C. Inserindo dados em uma tabela usando o nome do conjunto de colunas  
+### <a name="c-inserting-data-to-a-table-by-using-the-name-of-the-column-set"></a>C. Inserindo dados em uma tabela usando o nome do conjunto de colunas  
  O exemplo a seguir insere uma terceira linha na tabela criada no exemplo A. Dessa vez, os nomes das colunas esparsas não são usados. Em vez disso, o nome do conjunto de colunas é usado e a inserção fornece os valores para duas das colunas esparsas no formato XML.  
   
 ```  
@@ -183,7 +187,7 @@ VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecific
 GO  
 ```  
   
-### D. Observando os resultados de um conjunto de colunas quando SELECT * é usado  
+### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D. Observando os resultados de um conjunto de colunas quando SELECT * é usado  
  O exemplo a seguir seleciona todas as colunas da tabela que contém um conjunto de colunas. Retorna uma coluna XML com os valores combinados das colunas esparsas. Não retorna as colunas esparsas individualmente.  
   
 ```  
@@ -200,7 +204,7 @@ SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;
   
  `3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
   
-### E. Observando os resultados da seleção do conjunto de colunas por nome  
+### <a name="e-observing-the-results-of-selecting-the-column-set-by-name"></a>E. Observando os resultados da seleção do conjunto de colunas por nome  
  Como o departamento de Produção não está interessado nos dados de marketing, este exemplo adiciona uma cláusula `WHERE` para restringir a saída. O exemplo usa o nome do conjunto de colunas.  
   
 ```  
@@ -217,7 +221,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `3     Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
   
-### F. Observando os resultados da seleção de colunas esparsas por nome  
+### <a name="f-observing-the-results-of-selecting-sparse-columns-by-name"></a>F. Observando os resultados da seleção de colunas esparsas por nome  
  Quando uma tabela contém um conjunto de colunas, você ainda pode consultar a tabela usando nomes de colunas individuais, como mostrado no exemplo a seguir.  
   
 ```  
@@ -234,7 +238,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `3     Tire Spec 2  AXW9R411                38`  
   
-### G. Atualizando uma tabela usando um conjunto de colunas  
+### <a name="g-updating-a-table-by-using-a-column-set"></a>G. Atualizando uma tabela usando um conjunto de colunas  
  O exemplo a seguir atualiza o terceiro registro com os novos valores para as colunas esparsas usadas por aquela linha.  
   
 ```  
@@ -256,7 +260,8 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usar colunas esparsas](../../relational-databases/tables/use-sparse-columns.md)  
   
   
+

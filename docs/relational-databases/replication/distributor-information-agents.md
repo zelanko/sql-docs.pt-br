@@ -1,34 +1,38 @@
 ---
-title: "Distributor Information, Agentes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.Distributor.commonjobs..f1"
+title: "Informações sobre o distribuidor, Agentes | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.Distributor.commonjobs..f1
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5b1db16b9faf24e2255857203ac4a685d5326ca3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Distributor Information, Agentes
+# <a name="distributor-information-agents"></a>Distributor Information, Agentes
   A guia **Agentes** exibe informações sobre os agentes e trabalhos de manutenção associados com o Publicador e o Assinante.  
   
  Os agentes disponíveis na guia **Agentes** de uma exibição Distribuidor no Distribuidor incluem todos os agentes disponíveis na guia **Agentes** de um Publicador. No entanto, a guia **Agentes** de uma exibição Distribuidor no Distribuidor também inclui um Agente Distribuidor e um Merge Agent.  
   
  Para obter mais informações sobre os agentes Snapshot, Log Reader e Queue Reader, e os trabalhos de manutenção, consulte [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md). Observe que, quando você exibe informações de agente na guia **Agentes** de um Distribuidor, as informações do Publicador estão presentes para os agentes Snapshot e Log Reader. No entanto, na guia **Agentes** de uma exibição Distribuidor no Distribuidor, ainda é possível selecionar **Agente Distribuidor** e **Merge Agent**.  
   
-## Opções  
+## <a name="options"></a>Opções  
  As seções a seguir descrevem os dados exibidos nesta guia do Agente Distribuidor e do Merge Agent.  
   
-### Agente Distribuidor  
+### <a name="distributor-agent"></a>Agente Distribuidor  
  **Status**  
  O status do agente. A seguinte lista mostra os possíveis valores de status:  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 13
  O nome da publicação com a qual o agente está associado.  
   
  **Assinatura**  
- O nome da assinatura, no formato: [*SubscriberName*]. [*Banco de dados*].  
+ O nome da assinatura, no formato: [*SubscriberName*].[*Database*].  
   
  **Tipo**  
  Tipo de replicação: push, pull ou Anônima.  
@@ -72,13 +76,13 @@ caps.handback.revision: 13
  **#Trans**  
  O número de transações confirmado no banco de dados de distribuição durante a execução mais recente do agente.  
   
- **#Comandos**  
+ **#Cmds**  
  O número de comandos confirmado no banco de dados de distribuição durante a execução mais recente do agente. Um comando é igual a uma alteração de dados, como uma atualização.  
   
- **Média #Comandos**  
+ **Avg. #Cmds**  
  O número médio de comandos por transação durante a execução mais recente do agente.  
   
-### Agente de Mesclagem  
+### <a name="merge-agent"></a>Merge Agent  
  **Status**  
  O status do agente. A seguinte lista mostra os possíveis valores de status:  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 13
  O nome da publicação com a qual o agente está associado.  
   
  **Assinatura**  
- O nome da assinatura, no formato: [*SubscriberName*]. [*Banco de dados*].  
+ O nome da assinatura, no formato: [*SubscriberName*].[*Database*].  
   
  **Tipo**  
  Tipo de replicação: push, pull ou Anônima.  
@@ -140,10 +144,10 @@ caps.handback.revision: 13
  **Conflitos do Assinante**  
  O número de conflitos por segundo que ocorrem no Assinante durante o processo de mesclagem.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Iniciar o Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Exibir informações e executar tarefas para um publicador & #40. Monitor de replicação e 41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [Exibir informações e executar tarefas para os agentes associados com uma publicação e 40; Monitor de replicação e 41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
- [Replicação de monitoramento](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Exibir informações e executar tarefas para um Publicador &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Exibir informações e executar tarefas para os agentes associados a uma publicação &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
+ [Monitorando a Replicação](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

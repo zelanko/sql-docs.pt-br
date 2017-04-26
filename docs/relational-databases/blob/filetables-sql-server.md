@@ -1,27 +1,31 @@
 ---
-title: "FileTables (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], visão geral"
-  - "FileTables [SQL Server]"
-  - "FileTable [SQL Server], consulte FileTables [SQL Server]"
-  - "FileTable [SQL Server]"
+title: FileTables (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], overview
+- FileTables [SQL Server]
+- FileTable [SQL Server], see FileTables [SQL Server]
+- FileTable [SQL Server]
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 605875c9ed6e60861f899ec88e465c636a5976d6
+ms.lasthandoff: 04/11/2017
+
 ---
-# FileTables (SQL Server)
+# <a name="filetables-sql-server"></a>FileTables (SQL Server)
   O recurso FileTable oferece suporte para namespace de arquivo do Windows e compatibilidade de aplicativos do Windows com dados de arquivo armazenados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O FileTable permite que um aplicativo integre seus componentes de armazenamento e gerenciamento de dados e forneça serviços integrados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , inclusive pesquisa de texto completo e pesquisa semântica, em dados não estruturados e metadados.  
   
  Em outras palavras, você pode armazenar arquivos e documentos em tabelas especiais no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , denominadas FileTables, mas acessá-los a partir de aplicativos do Windows como se eles estivessem armazenados no sistema de arquivos, sem fazer alterações nos seus aplicativos cliente.  
@@ -79,7 +83,7 @@ caps.handback.revision: 20
   
 -   As operações de APIs do Windows são não transacionais por natureza, e não estão associadas a transações de usuário. Entretanto, o acesso transacional a dados FILESTREAM armazenados em uma FileTable tem suporte total, como é o caso para qualquer coluna FILESTREAM em uma tabela normal.  
   
--   FileTables também podem ser consultadas e atualizadas através do acesso [!INCLUDE[tsql](../../includes/tsql-md.md)] normal. Elas também são integradas a ferramentas de gerenciamento e recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como o backup.  
+-   FileTables também podem ser consultadas e atualizadas através do acesso [!INCLUDE[tsql](../../includes/tsql-md.md)] normal. Elas também são integradas a ferramentas de gerenciamento e recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como o backup.  
   
 ##  <a name="additional"></a> Considerações adicionais para usar FileTables  
   
@@ -132,3 +136,4 @@ caps.handback.revision: 20
  Lista as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e os objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que foram adicionados ou alterados para oferecer suporte ao recurso FileTable.  
   
   
+

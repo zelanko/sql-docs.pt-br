@@ -1,31 +1,35 @@
 ---
-title: "Pool de recursos do Administrador de Recursos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Administrador de Recursos, pool de recursos"
-  - "pool de recursos [SQL Server], visão geral"
-  - "pool de recursos [SQL Server]"
+title: Pool de recursos do Resource Governor | Microsoft Docs
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool
+- resource pool [SQL Server], overview
+- resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10b74a185e59a6b2973ea17fb4c68b61e781953f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pool de recursos do Administrador de Recursos
+# <a name="resource-governor-resource-pool"></a>Pool de recursos do Administrador de Recursos
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   No Administrador de Recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um pool de recursos representa um subconjunto dos recursos físicos de uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. O Administrador de Recursos permite que você especifique os limites de quantidade de CPU, E/S física e memória que as solicitações recebidas de aplicativos podem usar dentro do pool de recursos. Cada pool de recursos pode conter um ou mais grupos de cargas de trabalho. Quando uma sessão é iniciada, o classificador do Administrador de Recursos atribui a sessão a um grupo de cargas de trabalho específico e a sessão deve ser executada, usando os recursos atribuídos ao grupo de cargas de trabalho.  
   
-## Conceitos do pool de recursos  
+## <a name="resource-pool-concepts"></a>Conceitos do pool de recursos  
  O pool de recursos ou pool representa os recursos físicos do servidor. É possível pensar no pool como uma instância virtual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um pool tem duas partes. Uma parte não sobrepõe outros pools, o que permite reserva mínima de recursos. A outra parte é compartilhada com outros pools, fornecendo suporte ao consumo máximo possível de recursos. Os recursos do pool são definidos especificando-se uma ou mais das seguintes configurações para cada recurso (CPU, memória e E/S física):  
   
 -   **MIN_CPU_PERCENT e MAX_CPU_PERCENT**  
@@ -113,7 +117,7 @@ caps.handback.revision: 17
   
  Os pools de recursos definidos pelo usuário são aqueles que você cria para cargas de trabalho específicas em seu ambiente. O Administrador de Recursos fornece instruções DDL para criar, alterar e descartar pools de recursos.  
   
-## Tarefas do pool de recursos  
+## <a name="resource-pool-tasks"></a>Tarefas do pool de recursos  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
@@ -121,7 +125,7 @@ caps.handback.revision: 17
 |Descreve como alterar as configurações do pool de recursos.|[Alterar configurações do pool de recursos](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  
 |Descreve como excluir um pool de recursos.|[Excluir um pool de recursos](../../relational-databases/resource-governor/delete-a-resource-pool.md)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Grupos de carga de trabalho do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [Função de classificação do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
@@ -129,3 +133,4 @@ caps.handback.revision: 17
  [Exibir Propriedades do Administrador de Recursos](../../relational-databases/resource-governor/view-resource-governor-properties.md)  
   
   
+

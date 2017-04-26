@@ -1,41 +1,45 @@
 ---
-title: "Usar XML em colunas computadas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colunas computadas, XML"
-  - "XML [SQL Server], colunas computadas"
+title: Usar XML em colunas computadas | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- computed columns, XML
+- XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f156afc96d002d1db972fb3060676c7043563a25
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar XML em colunas computadas
+# <a name="use-xml-in-computed-columns"></a>Usar XML em colunas computadas
   Instâncias XML ser exibidas como uma origem de uma coluna computada ou como um tipo de coluna computada. Os exemplos neste tópico mostram como usar XML com colunas computadas.  
   
-## Criando colunas computadas de colunas XML  
+## <a name="creating-computed-columns-from-xml-columns"></a>Criando colunas computadas de colunas XML  
  Na instrução `CREATE TABLE` a seguir, uma coluna de tipo `xml` (`col2`) é computada a partir de `col1`:  
   
 ```  
 CREATE TABLE T(col1 varchar(max), col2 AS CAST(col1 AS xml) )    
 ```  
   
- O tipo de dados `xml` também pode ser exibido como uma origem ao criar uma coluna computada, conforme mostrado na seguinte instrução `CREATE TABLE`:  
+ O tipo de dados `xml` também pode ser exibido como uma origem ao criar uma coluna computada, conforme mostrado na seguinte instrução `CREATE TABLE` :  
   
 ```  
 CREATE TABLE T (col1 xml, col2 as cast(col1 as varchar(1000) ))   
 ```  
   
- É possível criar uma coluna computada extraindo um valor de uma coluna de tipo `xml`, conforme mostrado no exemplo a seguir. Como os métodos do tipo de dados **xml** não podem ser usados diretamente ao criar colunas computadas, o exemplo primeiro define uma função (`my_udf`) que retorna um valor de uma instância XML. A função encapsula o método `value()` do tipo `xml`. Em seguida, o nome da função é especificado na instrução `CREATE TABLE` da coluna computada.  
+ É possível criar uma coluna computada extraindo um valor de uma coluna de tipo `xml` , conforme mostrado no exemplo a seguir. Como os métodos do tipo de dados **xml** não podem ser usados diretamente ao criar colunas computadas, o exemplo primeiro define uma função (`my_udf`) que retorna um valor de uma instância XML. A função encapsula o método `value()` do tipo `xml` . Em seguida, o nome da função é especificado na instrução `CREATE TABLE` da coluna computada.  
   
 ```  
 CREATE FUNCTION my_udf(@var xml) returns int  
@@ -55,7 +59,7 @@ FROM T
   
 ```  
   
- Como no exemplo anterior, o exemplo a seguir define uma função para retornar uma instância de tipo **xml** para uma coluna computada. Dentro da função, o método `query()` do tipo de dados `xml` recupera um valor de um parâmetro de tipo `xml`.  
+ Como no exemplo anterior, o exemplo a seguir define uma função para retornar uma instância de tipo **xml** para uma coluna computada. Dentro da função, o método `query()` do tipo de dados `xml` recupera um valor de um parâmetro de tipo `xml` .  
   
 ```  
 CREATE FUNCTION my_udf(@var xml)   
@@ -65,7 +69,7 @@ BEGIN
 END  
 ```  
   
- Na instrução `CREATE TABLE` a seguir, `Col2` é uma coluna computada que usa os dados XML (elemento `<Features>`) que são retornados pela função:  
+ Na instrução `CREATE TABLE` a seguir, `Col2` é uma coluna computada que usa os dados XML (elemento`<Features>` ) que são retornados pela função:  
   
 ```  
 CREATE TABLE T (Col1 xml, Col2 as dbo.my_udf(Col1) )  
@@ -82,7 +86,7 @@ SELECT *
 FROM T  
 ```  
   
-### Nesta seção  
+### <a name="in-this-section"></a>Nesta seção  
   
 |Tópico|Descrição|  
 |-----------|-----------------|  

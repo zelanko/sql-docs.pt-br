@@ -1,27 +1,31 @@
 ---
-title: "Excluir exibi&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "descartando exibições"
-  - "excluindo exibições"
-  - "exibições [SQL Server], excluindo"
-  - "removendo exibições"
+title: "Excluir exibições | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dropping views
+- deleting views
+- views [SQL Server], deleting
+- removing views
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1c869b1e4ba7cc992687baa3236c96d25b0e63e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Excluir exibi&#231;&#245;es
+# <a name="delete-views"></a>Excluir exibições
   Você pode excluir (remover) exibições no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **Neste tópico**  
@@ -53,7 +57,7 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para excluir uma exibição de um banco de dados  
+#### <a name="to-delete-a-view-from-a-database"></a>Para excluir uma exibição de um banco de dados  
   
 1.  No **Pesquisador de Objetos**, expanda o banco de dados que contém a exibição que deseja excluir e expanda a pasta **Exibições** .  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 15
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para excluir uma exibição de um banco de dados  
+#### <a name="to-delete-a-view-from-a-database"></a>Para excluir uma exibição de um banco de dados  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

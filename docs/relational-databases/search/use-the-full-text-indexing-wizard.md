@@ -1,40 +1,44 @@
 ---
-title: "Usar o Assistente para Indexa&#231;&#227;o de Texto Completo | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.fulltextindexingwizard.welcome.f1"
-  - "sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1"
-  - "sql13.swb.fulltextindexingwizard.progress.f1"
-  - "sql13.swb.fulltextindexingwizard.selectchangetracking.f1"
-  - "sql13.swb.fulltextindexingwizard.selectacatalog.f1"
-  - "sql13.swb.fulltextindexingwizard.selectatableorview.f1"
-  - "sql13.swb.fulltextindexingwizard.selectanindex.f1"
-  - "sql13.swb.fulltextindexingwizard.summary.f1"
-  - "sql13.swb.fulltextindexingwizard.selecttablecolumns.f1"
-helpviewer_keywords: 
-  - "Assistente para Indexação de Texto Completo"
-  - "pesquisa de texto completo [SQL Server], Assistente para Indexação de Texto Completo"
+title: "Usar o Assistente para Indexação de Texto Completo | Microsoft Docs"
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.fulltextindexingwizard.welcome.f1
+- sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1
+- sql13.swb.fulltextindexingwizard.progress.f1
+- sql13.swb.fulltextindexingwizard.selectchangetracking.f1
+- sql13.swb.fulltextindexingwizard.selectacatalog.f1
+- sql13.swb.fulltextindexingwizard.selectatableorview.f1
+- sql13.swb.fulltextindexingwizard.selectanindex.f1
+- sql13.swb.fulltextindexingwizard.summary.f1
+- sql13.swb.fulltextindexingwizard.selecttablecolumns.f1
+helpviewer_keywords:
+- Full-Text Indexing Wizard
+- full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: dd4ac1d2f93c1fa776473cdc7b1b99a07b5f8164
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar o Assistente para Indexa&#231;&#227;o de Texto Completo
+# <a name="use-the-full-text-indexing-wizard"></a>Usar o Assistente para Indexação de Texto Completo
   O Assistente para Indexação de Texto Completo do SSMS descreve uma série de etapas criadas para ajudá-lo a criar um índice de texto completo.  
   
-## Criar um índice de Texto Completo 
+## <a name="create-a--full-text-index"></a>Criar um índice de Texto Completo 
 
-1. No Pesquisador de Objetos, clique com o botão direito do mouse na tabela em que você deseja criar um **Índice de Texto Completo** e clique em **Índice de Texto Completo**. Essa ação inicia o Assistente em uma janela separada.
+1. No Pesquisador de Objetos, clique com o botão direito do mouse na tabela em que você deseja criar um **Índice de Texto Completo**e clique em **Índice de Texto Completo**. Essa ação inicia o Assistente em uma janela separada.
    Clique em Avançar 
   
 2. **Índice Exclusivo.**  Selecione um índice na lista suspensa. O índice deve ser um índice não nulo, exclusivo e de coluna de chave única. Selecione o menor índice de chave exclusiva para a chave exclusiva de texto completo. Para obter um melhor desempenho, é recomendável um índice clusterizado.  
@@ -44,7 +48,7 @@ caps.handback.revision: 24
 4. **Idioma do Separador de Palavras.** Selecione um idioma da lista suspensa. Essa seleção será usada para indicar os separadores de palavras corretos para o índice. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa separadores de palavras para identificar limites das palavras nos dados de indexação de texto completo.  
   
 5.  **Coluna de Tipo.** Selecione o nome da coluna que possui o tipo de documento de coluna que está sendo indexado com texto completo.  
-> **OBSERVAÇÃO:** a **Coluna de Tipo** só será habilitada quando a coluna nomeada na coluna **Colunas Disponíveis** for do tipo **varbinary(max)** ou **image**.  
+> **OBSERVAÇÃO:** a  **Coluna de Tipo** só será habilitada quando a coluna nomeada na coluna **Colunas Disponíveis** for do tipo **varbinary(max)** ou **image**.  
   
 6. **Semântica Estatística.** Especifique se habilitará a indexação semântica da coluna selecionada. Para obter mais informações, veja [Pesquisa semântica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -71,13 +75,13 @@ caps.handback.revision: 24
      
      Clique em Avançar
   
-## Catálogo, grupo de arquivos de índice e lista de palavras irrelevantes   
+## <a name="catalog-index-filegroup-and-stoplist"></a>Catálogo, grupo de arquivos de índice e lista de palavras irrelevantes   
   
 9.  **Selecione o catálogo de texto completo**  
 
      **Selecionar um catálogo:** selecione um catálogo de texto completo na lista. O catálogo padrão para o banco de dados será o item selecionado por padrão na lista. Se não houver catálogos disponíveis, a lista permanecerá desabilitada e a caixa de seleção **Criar um novo catálogo** estará marcada e desabilitada.  
   
-  OU
+  ou
   
  10. **Criar um novo catálogo**
  - Selecione o catálogo de texto completo.  
@@ -88,7 +92,7 @@ caps.handback.revision: 24
      b. **Definir como catálogo padrão**  
      Marque para tornar este o catálogo padrão do banco de dados.  
   
-     c. **Distinção de acentos **  
+     c. **Distinção de acentos**  
      Especifique se o novo catálogo diferenciará caracteres com e sem acentos. Se o banco de dados diferenciar acentos, a opção **Sensível** estará selecionada por padrão.  
   
      d. **Selecionar grupo de arquivos de índice**  
@@ -97,7 +101,7 @@ caps.handback.revision: 24
      e. Selecione um valor:  
     |Value|Descrição|  
     |-----------|-----------------|
-      |**\<default>**| Se a tabela ou exibição não for particionada, selecione para usar o mesmo grupo de arquivos da tabela ou exibição subjacente. Se a tabela ou exibição for particionada, o grupo de arquivos primário será utilizado|
+      |**<default>**| Se a tabela ou exibição não for particionada, selecione para usar o mesmo grupo de arquivos da tabela ou exibição subjacente. Se a tabela ou exibição for particionada, o grupo de arquivos primário será utilizado|
       |**PRIMARY**|Selecione para usar o grupo de arquivos primário para o novo índice de texto completo.|
              *grupo de arquivos padrão especificado pelo usuário*|Se existir uma lista de palavras irrelevantes padrão definida pelo usuário, selecione seu nome na lista para usar esse grupo de arquivos para o novo índice de texto completo.|  
   
@@ -109,10 +113,10 @@ caps.handback.revision: 24
   
      Selecione um destes valores:  
   
-   |Valor|Descrição|  
+   |Value|Descrição|  
     |-----------|-----------------|  
-    |**\<system>**|Selecione para usar a lista de palavras irrelevantes do sistema no novo índice de texto completo. Esse é o padrão.|  
-    |**\<off>**|Selecione para desabilitar as listas de palavras irrelevantes para o novo índice de texto completo.|  
+    |**<system>**|Selecione para usar a lista de palavras irrelevantes do sistema no novo índice de texto completo. Esse é o padrão.|  
+    |**<off>**|Selecione para desabilitar as listas de palavras irrelevantes para o novo índice de texto completo.|  
     |*user-defined-stoplist-name*|A lista exibe o nome de cada lista de palavras irrelevantes definida pelo usuário, se houver alguma, que foi criada no banco de dados. Selecione qualquer lista de palavras irrelevantes definida pelo usuário para usar no novo índice de texto completo.|  
   
   Clique em Avançar
@@ -140,3 +144,4 @@ caps.handback.revision: 24
      Quando todas as operações terminarem de executar, clique nesse botão para acessar um relatório sobre as operações executadas. Você pode exibir o relatório, imprimi-lo em um arquivo, copiá-lo na área de transferência ou enviá-lo por email.  
   
   
+

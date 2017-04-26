@@ -1,26 +1,30 @@
 ---
-title: "Notifica&#231;&#245;es de eventos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "notificações de eventos, sobre"
-  - "eventos [SQL Server], notificações"
+title: "Notificações de evento | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications, about
+- events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01d42e113fabb39353971749462c144374e470fe
+ms.lasthandoff: 04/11/2017
+
 ---
-# Notifica&#231;&#245;es de eventos
-  As notificações de evento enviam informações sobre eventos a um serviço do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. As notificações de evento são executadas em resposta a uma variedade de instruções DDL (linguagem de definição de dados) do [!INCLUDE[tsql](../../includes/tsql-md.md)] e eventos de Rastreamento do SQL por meio do envio de informações sobre esses eventos a um serviço do [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
+# <a name="event-notifications"></a>Notificações de eventos
+  As notificações de evento enviam informações sobre eventos a um serviço do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . As notificações de evento são executadas em resposta a uma variedade de instruções DDL (linguagem de definição de dados) do [!INCLUDE[tsql](../../includes/tsql-md.md)] e eventos de Rastreamento do SQL por meio do envio de informações sobre esses eventos a um serviço do [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
  Notificações de eventos podem ser usadas para fazer o seguinte:  
   
@@ -30,12 +34,12 @@ caps.handback.revision: 18
   
  As notificações de evento podem oferecer uma alternativa de programação a gatilhos DDL e ao Rastreamento do SQL.  
   
-## Benefícios das notificações de evento  
+## <a name="event-notifications-benefits"></a>Benefícios das notificações de evento  
  Notificações de evento são executadas de forma assíncrona, fora do escopo de uma transação. Portanto, ao contrário dos gatilhos DDL, as notificações de evento podem ser usadas dentro de um aplicativo de banco de dados para responder a eventos sem usar nenhum recurso definido pela transação imediata.  
   
  Ao contrário do Rastreamento do SQL, as notificações de evento podem ser usadas para executar uma ação dentro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em resposta a um evento do Rastreamento do SQL.  
   
- Os dados de evento podem ser usados por aplicativos que se encontram em execução junto com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para rastrear o andamento e tomar decisões. Por exemplo, a notificação de evento a seguir envia um aviso a determinado serviço todas as vezes que uma instrução `ALTER TABLE` é emitida no banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ Os dados de evento podem ser usados por aplicativos que se encontram em execução junto com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para rastrear o andamento e tomar decisões. Por exemplo, a notificação de evento a seguir envia um aviso a determinado serviço todas as vezes que uma instrução `ALTER TABLE` é emitida no banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 USE AdventureWorks2012;  
@@ -47,12 +51,12 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
     '8140a771-3c4b-4479-8ac0-81008ab17984';  
 ```  
   
-## Conceitos das notificações de evento  
+## <a name="event-notifications-concepts"></a>Conceitos das notificações de evento  
  Quando uma notificação de evento é criada, uma ou mais conversas de [!INCLUDE[ssSB](../../includes/sssb-md.md)] são abertas entre uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o serviço de destino especificado. Normalmente, as conversações permanecem abertas enquanto a notificação de eventos existir como objeto na instância do servidor. Em alguns casos de erro, as conversações podem ser fechadas antes de a notificação de eventos ser descartada. Essas conversações nunca são compartilhadas entre notificações de eventos. Cada notificação de eventos tem suas próprias conversações exclusivas. Terminar explicitamente uma conversa impede que o serviço de destino receba mais mensagens, e a conversa não será reaberta na próxima vez que a notificação de evento for acionada.  
   
  As informações de evento são entregues ao serviço do [!INCLUDE[ssSB](../../includes/sssb-md.md)] como uma variável do tipo **xml** que fornece informações especificando quando um evento ocorreu, informações sobre o objeto de banco de dados afetado, a instrução do lote [!INCLUDE[tsql](../../includes/tsql-md.md)] envolvida e outros dados. Para obter mais informações sobre o esquema XML produzido por notificações de evento, consulte [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md).  
   
-### Notificações de evento x Gatilhos  
+### <a name="event-notifications-vs-triggers"></a>Notificações de evento x Gatilhos  
  A tabela a seguir compara e contrasta gatilhos e notificações de evento.  
   
 |Gatilhos|Notificações de eventos|  
@@ -66,10 +70,10 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Os nomes dos gatilhos DML seguem o escopo do esquema. Os nomes dos gatilhos DDL seguem o escopo do banco de dados ou do servidor.|Os nomes das notificações de eventos seguem o escopo do servidor ou do banco de dados. Notificações de eventos em um evento QUEUE_ACTIVATION seguem o escopo de uma fila específica.|  
 |Gatilhos DML são de propriedade do mesmo proprietário das tabelas a que se aplicam.|O proprietário de uma notificação de eventos em uma fila pode ser diferente do proprietário do objeto a que se aplica.|  
 |Gatilhos têm suporte à cláusula EXECUTE AS.|Notificações de eventos não têm suporte à cláusula EXECUTE AS.|  
-|Informações de eventos de gatilhos DDL podem ser capturadas por meio da função EVENTDATA, que retorna um tipo de dados **xml**.|Notificações de eventos enviam informações **xml** sobre o evento para um serviço de Service Broker. As informações são formatadas no mesmo esquema da função EVENTDATA.|  
-|Metadados sobre gatilhos localizam-se nas exibições de catálogo **sys.triggers** e **sys.server_triggers**.|Os metadados sobre notificações de evento localizam-se nas exibições de catálogo **sys.event_notifications** e **sys.server_event_notifications**.|  
+|Informações de eventos de gatilhos DDL podem ser capturadas por meio da função EVENTDATA, que retorna um tipo de dados **xml** .|Notificações de eventos enviam informações **xml** sobre o evento para um serviço de Service Broker. As informações são formatadas no mesmo esquema da função EVENTDATA.|  
+|Metadados sobre gatilhos localizam-se nas exibições de catálogo **sys.triggers** e **sys.server_triggers** .|Os metadados sobre notificações de evento localizam-se nas exibições de catálogo **sys.event_notifications** e **sys.server_event_notifications**.|  
   
-### Notificações de evento x Rastreamento do SQL  
+### <a name="event-notifications-vs-sql-trace"></a>Notificações de evento x Rastreamento do SQL  
  A tabela a seguir compara e contrasta o uso de notificações de evento e do Rastreamento do SQL para monitorar eventos de servidor.  
   
 |Rastreamento do SQL|Notificações de eventos|  
@@ -83,10 +87,10 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Depois de iniciado, o acionamento de rastreamentos não pode ser controlado. Podem ser usados horários de parada e de filtro para especificar quando devem ser iniciados. Os rastreamentos são acessados pela sondagem do arquivo de rastreamento correspondente.|As notificações de eventos podem ser controladas pelo uso da instrução WAITFOR em relação à fila que recebe a mensagem gerada pela notificação. Elas podem ser acessadas pela sondagem da fila.|  
 |ALTER TRACE é a permissão mínima exigida para a criação de um rastreamento. Também é necessária permissão para criar um arquivo de rastreamento no computador correspondente.|A permissão mínima depende do tipo de notificação de evento que está sendo criada. Também é necessária permissão RECEIVE na fila correspondente.|  
 |Os rastreamentos podem ser recebidos remotamente.|As notificações de eventos podem ser recebidas remotamente.|  
-|Os eventos de rastreamento são implementados pelo uso de procedimentos armazenados do sistema.|As notificações de eventos são implementadas pelo uso de uma combinação de instruções de [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssSB](../../includes/sssb-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|Os eventos de rastreamento são implementados pelo uso de procedimentos armazenados do sistema.|As notificações de eventos são implementadas pelo uso de uma combinação de instruções de [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssSB](../../includes/sssb-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |Os dados de eventos do rastreamento podem ser acessados via programação, por consultas à tabela de rastreamento correspondente, análise do o arquivo de rastreamento ou uso da classe TraceReader do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).|Os dados de evento são acessados via programação emitindo XQuery em relação aos dados de evento formatados por XML ou por meio das classes de evento do SMO.|  
   
-## Tarefas da notificação de evento  
+## <a name="event-notification-tasks"></a>Tarefas da notificação de evento  
   
 |Tarefa|Tópico|  
 |----------|-----------|  
@@ -94,7 +98,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Descreve como configurar a caixa de diálogo do [!INCLUDE[ssSB](../../includes/sssb-md.md)] para notificações de evento que enviam mensagens a um agente de serviços em um servidor remoto.|[Configurar segurança de caixa de diálogo para notificações de evento](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)|  
 |Descreve como retornar informações sobre notificações de evento.|[Obter informações sobre notificações de eventos](../../relational-databases/service-broker/get-information-about-event-notifications.md)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [Gatilhos DML](../../relational-databases/triggers/dml-triggers.md)   
  [Rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md)  

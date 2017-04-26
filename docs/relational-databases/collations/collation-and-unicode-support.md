@@ -1,46 +1,50 @@
 ---
-title: "Suporte a agrupamentos e a Unicode | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "agrupamentos primários [SQL Server]"
-  - "agrupamentos em nível de expressão [SQL Server]"
-  - "agrupamentos do Windows [SQL Server]"
-  - "globalização [SQL Server] sobre globalização"
-  - "suporte a caracteres suplementares"
-  - "páginas de código [SQL Server], sobre páginas de código"
-  - "agrupamentos [SQL Server], sobre agrupamentos"
-  - "Unicode [SQL Server], agrupamentos"
-  - "agrupamentos em nível de banco de dados [SQL Server]"
-  - "sentido de leitura"
-  - "agrupamentos em nível de coluna"
-  - "localidades [SQL Server], sobre localidades"
-  - "localidades [SQL Server]"
-  - "páginas de código [SQL Server]"
-  - "agrupamentos SQL Server"
-  - "agrupamentos em nível de servidor [SQL Server]"
+title: Suporte a agrupamentos e a Unicode | Microsoft Docs
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- binary collations [SQL Server]
+- expression-level collations [SQL Server]
+- Windows collations [SQL Server]
+- globalization [SQL Server], about globalization
+- supplementary character support
+- code pages [SQL Server], about code pages
+- collations [SQL Server], about collations
+- Unicode [SQL Server], collations
+- database-level collations [SQL Server]
+- reading order
+- column-level collations
+- locales [SQL Server], about locales
+- locales [SQL Server]
+- code pages [SQL Server]
+- SQL Server collations
+- server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 782e5a9458daf8c820b71d39e27b424c6995dba9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Suporte a agrupamentos e a Unicode
+# <a name="collation-and-unicode-support"></a>Suporte a agrupamentos e a Unicode
   Os agrupamentos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornecem propriedades de regras de classificação, de diferenciação de maiúsculas e minúsculas e de diferenciação de acentos para seus dados. Os agrupamentos utilizados com tipos de dados de caractere, como **char** e **varchar** , determinam a página de código e os caracteres correspondentes que podem ser representados para esse tipo de dados. Independentemente de você estar instalando uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restaurando um backup de banco de dados ou conectando o servidor a bancos de dados cliente, é importante estar ciente dos requisitos de localidade, ordem de classificação e distinção de maiúsculas e minúsculas e de acentos dos dados com os quais trabalhará. Para listar os agrupamentos disponíveis na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
     
  Ao selecionar um agrupamento para o servidor, banco de dados, coluna ou expressão, você atribui determinadas características a seus dados que afetam os resultados de muitas operações no banco de dados. Por exemplo, ao construir uma consulta usando ORDER BY, a ordem de classificação de seu conjunto de resultados pode depender do agrupamento aplicado ao banco de dados ou ditado em uma cláusula COLLATE no nível de expressão da consulta.    
     
  Para usar o suporte a agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]da melhor maneira possível, você deve estar ciente dos termos definidos neste tópico e de como eles estão relacionados às características de seus dados.    
     
-##  <a name="a-nametermsa-collation-terms"></a><a name="Terms"></a> Condições do agrupamento    
+##  <a name="Terms"></a> Collation Terms    
     
 -   [Agrupamento](#Collation_Defn)    
     
@@ -50,10 +54,10 @@ caps.handback.revision: 46
     
 -   [Ordem de classificação](#Sort_Order_Defn)    
     
-###  <a name="a-namecollationdefna-collation"></a><a name="Collation_Defn"></a> Agrupamento    
+###  <a name="Collation_Defn"></a> Agrupamento    
  Um agrupamento especifica os padrões de bit que representam cada caractere em um conjunto de dados. Os agrupamentos também determinam as regras que classificam e comparam dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao armazenamento de objetos com agrupamentos diferentes em um banco de dados individual. Para colunas não Unicode, a configuração de agrupamento especifica a página de códigos dos dados e quais caracteres podem ser representados. Os dados movidos entre colunas não Unicode devem ser convertidos da página de código de origem para a página de código de destino.    
     
- Os resultados da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] podem variar quando a instrução for executada no contexto de diferentes bancos de dados que tenham configurações de agrupamento diferentes. Se possível, use um agrupamento padronizado para sua organização. Deste modo, não será preciso especificar o agrupamento explicitamente em todo caractere ou expressão Unicode. Se você deve trabalhar com objetos que tenham configurações de agrupamento e página de códigos diferentes, codifique suas consultas para considerar as regras da precedência de agrupamento. Para obter mais informações, veja [Precedência de agrupamento (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
+ Os resultados da instrução[!INCLUDE[tsql](../../includes/tsql-md.md)] podem variar quando a instrução for executada no contexto de diferentes bancos de dados que tenham configurações de agrupamento diferentes. Se possível, use um agrupamento padronizado para sua organização. Deste modo, não será preciso especificar o agrupamento explicitamente em todo caractere ou expressão Unicode. Se você deve trabalhar com objetos que tenham configurações de agrupamento e página de códigos diferentes, codifique suas consultas para considerar as regras da precedência de agrupamento. Para obter mais informações, veja [Precedência de agrupamento (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
  As opções associadas a um agrupamento fazem distinção de maiúsculas e minúsculas, de acentos, de caracteres Kana, de largura e de seletor de variação. Estas opções são especificadas através de sua anexação ao nome de agrupamento. Por exemplo, este agrupamento `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` tem diferenciação de maiúsculas e minúsculas, de acentos, de caracteres Kana e de largura. Como outro exemplo, esse agrupamento `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` não diferencia maiúsculas de minúsculas, não diferencia acentos, mas faz distinção de caracteres Kana, de largura e de seletor de variação.  A tabela a seguir descreve o comportamento associado com estas diversas opções.    
     
@@ -63,9 +67,9 @@ caps.handback.revision: 46
 |Accent-sensitive (_AS)|Faz distinção entre caracteres acentuados e não acentuados. Por exemplo, 'a' não é igual a 'ã'. Se esta opção não for selecionada, o agrupamento não diferenciará acentos. Ou seja, o SQL Server considera as versões com e sem acentos como idênticas para fins de classificação. Você pode selecionar a não diferenciação de acentos especificando _AI.|    
 |Kana-sensitive (_KS)|Distingue entre os dois tipos de caracteres kana japoneses: hiragana e katakana. Se esta opção não for selecionada, o agrupamento não fará diferenciação de Kana. Ou seja, o SQL Server considera que caracteres hiragana e katakana são iguais para fins de classificação. A omissão desta opção é o único método de especificar a não diferenciação de Kana.|    
 |Width-sensitive (_WS)|Faz distinção entre caracteres de largura inteira e de meia largura. Se esta opção não for selecionada, o SQL Server considerará as representações de largura inteira e de meia largura do mesmo caractere como iguais para fins de classificação. A omissão desta opção é o único método de especificar a não diferenciação de largura.|    
-|Distinção de seletor de variação (_VSS) | Distingue entre vários seletores de variação ideográficos em agrupamentos em japonês Japanese_Bushu_Kakusu_140 e Japanese_XJIS_140 introduzido primeiro em [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Uma sequência de variação consiste em um caractere base e um seletor de variação adicional. Se essa opção _VSS não for selecionada, o agrupamento não fará distinção de seletor de variação e o seletor de variação não será considerado na comparação. Ou seja, o SQL Server considera caracteres criados sobre o mesmo caractere base com diferenciação de seletores de variação para serem idênticos com a finalidade de classificação. Consulte também [Unicode Ideographic Variation Database](http://www.unicode.org/reports/tr37/) (Banco de dados de variação ideográfica Unicode). <br/><br/> Não há suporte para agrupamentos de Diferenciação do seletor de variação (_VSS) em índices de pesquisa de Texto Completo. Índices de pesquisa de texto completo dão suporte apenas às opções Diferenciação de Acentos (_AS), Diferenciação de caracteres Kana (_KS) e Diferenciação de largura (_WS). Os mecanismos de XML e CLR do SQL Server não dão suporte a Seletores de variação (_VSS).
+|Distinção de seletor de variação (_VSS) | Distingue entre vários seletores de variação ideográficos em agrupamentos em japonês Japanese_Bushu_Kakusu_140 e Japanese_XJIS_140 introduzido primeiro em [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Uma sequência de variação consiste em um caractere base e um seletor de variação adicional. Se essa opção _VSS não for selecionada, o agrupamento não fará distinção de seletor de variação e o seletor de variação não será considerado na comparação. Ou seja, o SQL Server considera caracteres criados sobre o mesmo caractere base com diferenciação de seletores de variação para serem idênticos com a finalidade de classificação. Consulte também  [Unicode Ideographic Variation Database](http://www.unicode.org/reports/tr37/)(Banco de dados de variação ideográfica Unicode). <br/><br/> Não há suporte para agrupamentos de Diferenciação do seletor de variação (_VSS) em índices de pesquisa de Texto Completo. Índices de pesquisa de texto completo dão suporte apenas às opções Diferenciação de Acentos (_AS), Diferenciação de caracteres Kana (_KS) e Diferenciação de largura (_WS). Os mecanismos de XML e CLR do SQL Server não dão suporte a Seletores de variação (_VSS).
     
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte aos seguintes conjuntos de agrupamento:    
+ O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte aos seguintes conjuntos de agrupamento:    
     
  agrupamentos do Windows    
  Os agrupamentos do Windows definem regras para o armazenamento de dados de caractere baseadas em uma localidade de sistema do Windows associada. No caso de um agrupamento do Windows, a comparação de dados não Unicode é implementada usando o mesmo algoritmo que os dados Unicode. As regras de base de agrupamentos do Windows especificam qual alfabeto ou idioma será usado quando a classificação de dicionário for aplicada, bem como a página de código usada para armazenar dados de caracteres não Unicode. As classificações Unicode e não Unicode são compatíveis com comparações de cadeias de caracteres em uma versão específica do Windows. Isso proporciona consistência entre os tipos de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e também permite que os desenvolvedores classifiquem as cadeias de caracteres nos aplicativos usando as mesmas regras utilizadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Nome de agrupamento do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md).    
@@ -76,7 +80,7 @@ caps.handback.revision: 46
  Existem dois tipos de agrupamentos binários no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: os agrupamentos **BIN** mais antigos e os agrupamentos **BIN2** mais novos. Em um agrupamento do **BIN2** , todos os caracteres são classificados de acordo com seus pontos de código. Em um agrupamento do **BIN** , apenas o primeiro caractere é classificado de acordo com o ponto de código e os caracteres restantes são classificados de acordo com seus valores de byte. (Como a plataforma Intel é um arquitetura little endian, os caracteres de código Unicode são sempre trocados por bytes armazenados.)    
     
  agrupamentos SQL Server    
-Os agrupamentos (SQL_*) do  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferecem compatibilidade de ordem de classificação com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As regras de classificação de dicionário para dados não Unicode são incompatíveis com rotinas de classificação fornecidas pelos sistemas operacionais Windows. No entanto, a classificação de dados Unicode é compatível com uma versão específica das regras de classificação do Windows. Como os agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam regras de comparação diferentes para dados não Unicode e Unicode, você verá resultados diferentes para comparações dos mesmos dados, dependendo do tipo de dados subjacente. Para obter mais informações, veja [Nome de agrupamento do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).    
+Os agrupamentos (SQL_*) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferecem compatibilidade de ordem de classificação com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As regras de classificação de dicionário para dados não Unicode são incompatíveis com rotinas de classificação fornecidas pelos sistemas operacionais Windows. No entanto, a classificação de dados Unicode é compatível com uma versão específica das regras de classificação do Windows. Como os agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam regras de comparação diferentes para dados não Unicode e Unicode, você verá resultados diferentes para comparações dos mesmos dados, dependendo do tipo de dados subjacente. Para obter mais informações, veja [Nome de agrupamento do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).    
     
 > [!NOTE]    
 >  Quando você atualiza uma instância em português do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os agrupamentos (SQL_*) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser especificados para compatibilidade com instâncias existentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como o agrupamento padrão de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é definido durante a instalação, é importante especificar as configurações de agrupamento com cuidado quando as seguintes afirmações forem verdadeiras:    
@@ -96,7 +100,7 @@ Os agrupamentos (SQL_*) do  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
     
  Você não pode alterar o agrupamento de bancos de dados do sistema, exceto alterando o agrupamento para o servidor.    
     
- O agrupamento de banco de dados é usado para todos os metadados no banco de dados e é o padrão para todas as colunas de cadeia de caracteres, objetos temporários, nomes de variável e quaisquer outras cadeias de caracteres usadas no banco de dados. Quando você altera o agrupamento de um banco de dados de usuário, pode haver conflitos de agrupamento quando consultas no banco de dados acessam tabelas temporárias. Sempre são armazenadas tabelas temporárias no banco de dados do sistema **tempdb** que usará o agrupamento para a instância. Consultas que comparam dados de caractere entre o banco de dados de usuário e **tempdb** poderão falhar se os agrupamentos causarem um conflito ao avaliar os dados de caractere. Você pode resolver isso especificando a cláusula COLLATE na consulta. Para obter mais informações, veja [COLLATE &#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md).    
+ O agrupamento de banco de dados é usado para todos os metadados no banco de dados e é o padrão para todas as colunas de cadeia de caracteres, objetos temporários, nomes de variável e quaisquer outras cadeias de caracteres usadas no banco de dados. Quando você altera o agrupamento de um banco de dados de usuário, pode haver conflitos de agrupamento quando consultas no banco de dados acessam tabelas temporárias. Sempre são armazenadas tabelas temporárias no banco de dados do sistema **tempdb** que usará o agrupamento para a instância. Consultas que comparam dados de caractere entre o banco de dados de usuário e **tempdb** poderão falhar se os agrupamentos causarem um conflito ao avaliar os dados de caractere. Você pode resolver isso especificando a cláusula COLLATE na consulta. Para obter mais informações, veja [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).    
     
  Agrupamentos em nível de coluna    
  Quando você cria ou altera uma tabela, pode especificar agrupamentos para cada coluna de cadeia de caracteres usando a cláusula COLLATE. Se nenhum agrupamento for especificado, o agrupamento padrão do banco de dados será atribuído à coluna.    
@@ -108,15 +112,15 @@ Os agrupamentos (SQL_*) do  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;    
 ```    
     
-###  <a name="a-namelocaledefna-locale"></a><a name="Locale_Defn"></a> Localidade    
+###  <a name="Locale_Defn"></a> Localidade    
  Uma localidade é um conjunto de informações associadas a um local ou a uma cultura. Essas informações podem incluir o nome e o identificador do idioma falado, o script usado para escrever o idioma e as convenções culturais. Os agrupamentos podem ser associados a uma ou mais localidades. Para obter mais informações, consulte o artigo sobre [IDs de localidade atribuídas pela Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx).    
     
-###  <a name="a-namecodepagedefna-code-page"></a><a name="Code_Page_Defn"></a> Página de código    
+###  <a name="Code_Page_Defn"></a> Code Page    
  Uma página de código é um conjunto de caracteres ordenado de um determinado script no qual um índice numérico ou valor de ponto de código é associado a cada caractere. Uma página de códigos do Windows geralmente é referenciada como um *conjunto de caracteres* ou um *charset*. As páginas de código são usadas para oferecer suporte aos conjuntos de caracteres e layouts de teclado usados por diferentes localidades de sistema do Windows.     
-###  <a name="a-namesortorderdefna-sort-order"></a><a name="Sort_Order_Defn"></a> Ordem de classificação    
+###  <a name="Sort_Order_Defn"></a> Sort Order    
  A ordem de classificação especifica como os valores de dados são classificados. Isso afeta os resultados da comparação de dados. Os dados são classificados com o uso de agrupamentos e podem ser otimizados com o uso de índices.    
     
-##  <a name="a-nameunicodedefna-unicode-support"></a><a name="Unicode_Defn"></a> Suporte de Unicode    
+##  <a name="Unicode_Defn"></a> Unicode Support    
  O Unicode é um padrão para mapear pontos de código para caracteres. Como é projetado para abranger todos os caracteres de todos os idiomas do mundo, não necessita de páginas de código diferentes para lidar com os diferentes conjuntos de caracteres. Se você armazenar dados de caractere que refletem vários idiomas, sempre use tipos de dados Unicode (**nchar**, **nvarchar**e **ntext**) em vez dos tipos de dados não Unicode (**char**, **varchar**e **text**).    
     
  Limitações consideráveis estão associadas a tipos de dados não Unicode. Isso ocorre porque um computador não Unicode fica limitado a usar uma única página de código. Você pode experimentar ganho de desempenho com o uso de Unicode, porque menos conversões de página de código são necessárias. Os agrupamentos Unicode devem ser selecionados individualmente no nível de banco de dados, coluna ou expressão porque não têm suporte no nível de servidor.    
@@ -131,7 +135,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  Para avaliar os problemas relacionados ao uso de tipos de dados Unicode ou não Unicode, teste seu cenário para medir as diferenças de desempenho em seu ambiente. Uma boa prática é padronizar o agrupamento usado nos sistemas de sua organização e implantar servidores e clientes Unicode sempre que possível.    
     
- Na maioria das situações, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] irá interagir com outros servidores ou clientes, e sua organização poderá usar vários padrões de acesso a dados entre aplicativos e instâncias de servidor. Clientes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são de um destes dois tipos principais:    
+ Na maioria das situações, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] irá interagir com outros servidores ou clientes, e sua organização poderá usar vários padrões de acesso a dados entre aplicativos e instâncias de servidor. Clientes[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são de um destes dois tipos principais:    
     
 -   **Clientes Unicode** que usam OLE DB e ODBC (Open Database Connectivity) versão 3.7 ou uma versão posterior.    
     
@@ -146,7 +150,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |Não Unicode|Unicode|Esta não é uma configuração ideal para usar dados multilíngues. Não é possível gravar dados Unicode no servidor não Unicode. É provável que ocorram problemas quando os dados forem enviados para servidores que estejam fora da página de código do servidor.|    
 |Não Unicode|Não Unicode|Este é um cenário muito limitado para dados multilíngues. Você pode usar uma única página de código.|    
     
-##  <a name="a-namesupplementarycharactersa-supplementary-characters"></a><a name="Supplementary_Characters"></a> Caracteres complementares    
+##  <a name="Supplementary_Characters"></a> Supplementary Characters    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece tipos de dados como **nchar** e **nvarchar** para armazenar dados Unicode. Esses tipos de dados codificam texto em um formato chamado *UTF-16*. O Consórcio Unicode aloca para cada caractere um ponto de código exclusivo, que é um valor no intervalo de 0x0000 a 0x10FFFF. Os caracteres mais frequentemente usados têm valores de ponto de código que se ajustarão em uma palavra de 16 bits na memória e no disco, mas os caracteres com ponto de código maiores que 0xFFFF exigem duas palavras de 16 bits consecutivas. Esses caracteres são chamados de *caracteres suplementares*e as duas palavras de 16 bits consecutivas são chamadas de *pares substitutos*.    
     
  Se você usar caracteres suplementares:    
@@ -183,11 +187,11 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |[UNICODE](../../t-sql/functions/unicode-transact-sql.md)|Retorna um ponto de código UTF-16 no intervalo de 0 a 0x10FFFF.|Retorna um ponto de código UCS-2 no intervalo de 0 a 0xFFFF.|    
 |[Corresponder a um caractere curinga](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [Curinga – caracter(es) para não corresponder](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|Há suporte para caracteres suplementares para todas as operações de curingas.|Não há suporte para caracteres suplementares para estas operações de curingas. Há suporte para outros operadores curinga.|    
     
-##  <a name="a-namegb18030a-gb18030-support"></a><a name="GB18030"></a> Suporte a GB18030    
- GB18030 é um padrão separado usado na República Popular da China para codificar caracteres chineses. Em GB18030, caracteres podem ter 1, 2 ou 4 bytes em comprimento. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a caracteres GB18030 codificados, reconhecendo-os quando eles entram no servidor, provenientes de um aplicativo cliente, convertendo-os e armazenando-os nativamente como caracteres Unicode. Após serem armazenados no servidor, são tratados como caracteres Unicode em todas as operações subsequentes. Você pode usar qualquer agrupamento chinês, preferivelmente a mais recente versão 100. Todos os agrupamentos de nível _100 dão suporte à classificação linguística com caracteres GB18030. Se os dados incluírem caracteres suplementares (pares alternativos), você poderá usar os agrupamentos de SC disponíveis no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para aprimorar a pesquisa e a classificação.    
+##  <a name="GB18030"></a> GB18030 Support    
+ GB18030 é um padrão separado usado na República Popular da China para codificar caracteres chineses. Em GB18030, caracteres podem ter 1, 2 ou 4 bytes em comprimento. O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a caracteres GB18030 codificados, reconhecendo-os quando eles entram no servidor, provenientes de um aplicativo cliente, convertendo-os e armazenando-os nativamente como caracteres Unicode. Após serem armazenados no servidor, são tratados como caracteres Unicode em todas as operações subsequentes. Você pode usar qualquer agrupamento chinês, preferivelmente a mais recente versão 100. Todos os agrupamentos de nível _100 dão suporte à classificação linguística com caracteres GB18030. Se os dados incluírem caracteres suplementares (pares alternativos), você poderá usar os agrupamentos de SC disponíveis no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para aprimorar a pesquisa e a classificação.    
     
-##  <a name="a-namecomplexscripta-complex-script-support"></a><a name="Complex_script"></a> Suporte a script complexo    
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte à inserção, armazenamento, alteração e exibição de scripts complexos. Scripts complexos incluem o seguinte:    
+##  <a name="Complex_script"></a> Complex Script Support    
+ O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte à inserção, armazenamento, alteração e exibição de scripts complexos. Scripts complexos incluem o seguinte:    
     
 -   Scripts que incluem uma combinação de texto da direita para a esquerda e da esquerda para a direita, como uma combinação de texto em árabe e inglês.    
     
@@ -197,9 +201,9 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  Aplicativos de banco de dados que interagem com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem usar controles que oferecem suporte a scripts complexos. Controles de formulário padrão do Windows que são criados em código gerenciado são habilitados para script complexo.    
 
-##  <a name="a-namejapanesecollationsa-japanese-collations-added-in--includesssqlv14mdtokensqlv14sssqlv14mdmd"></a><a name="Japanese_Collations"></a> Agrupamentos em japonês adicionados no [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+##  <a name="Japanese_Collations"></a> Japanese Collations added in  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
-Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] em diante, há suporte para duas novas famílias de agrupamento em japonês, com as permutações de várias opções (_CS, _AS, _KS, _WS, _VSS, etc.). 
+Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]em diante, há suporte para duas novas famílias de agrupamento em japonês, com as permutações de várias opções (_CS, _AS, _KS, _WS, _VSS, etc.). 
 
 Para listar esses agrupamentos, você poderá consultar o Mecanismo de Banco de Dados do SQL Server:
 ``` 
@@ -209,7 +213,7 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 
 Esses agrupamentos têm suporte em índices de Mecanismo de Banco de Dados, tabelas com otimização de memória, índices columnstore e módulos compilados nativamente.
     
-##  <a name="a-namerelatedtasksa-related-tasks"></a><a name="Related_Tasks"></a> Tarefas Relacionadas    
+##  <a name="Related_Tasks"></a> Related Tasks    
     
 |Tarefa|Tópico|    
 |----------|-----------|    
@@ -220,7 +224,7 @@ Esses agrupamentos têm suporte em índices de Mecanismo de Banco de Dados, tabe
 |Descreve como escrever instruções Transact-SQL que tenham mais portabilidade de um idioma para outro ou que ofereçam com suporte a vários idiomas mais facilmente.|[Gravar instruções Transact-SQL internacionais](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
 |Descreve como alterar o idioma de mensagens de erro e preferências de como data, hora e dados de moeda são usados e exibidos.|[Definir um idioma de sessão](../../relational-databases/collations/set-a-session-language.md)|    
     
-##  <a name="a-namerelatedcontenta-related-content"></a><a name="Related_Content"></a> Conteúdo relacionado    
+##  <a name="Related_Content"></a> Related Content    
  [Práticas recomendadas para alteração em agrupamentos do SQL Server](http://go.microsoft.com/fwlink/?LinkId=113891)    
     
  ["Práticas recomendadas para migração para Unicode no SQL Server"](http://go.microsoft.com/fwlink/?LinkId=113890)    
@@ -233,3 +237,5 @@ Esses agrupamentos têm suporte em índices de Mecanismo de Banco de Dados, tabe
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
     
   
+
+

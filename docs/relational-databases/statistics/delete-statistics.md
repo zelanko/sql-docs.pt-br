@@ -1,25 +1,29 @@
 ---
-title: "Excluir estat&#237;sticas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "estatísticas [SQL Server], excluindo"
-  - "excluindo estatísticas"
+title: "Excluir estatísticas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- statistics [SQL Server], deleting
+- deleting statistics
 ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51349f58a29f7a0702e719f83e5f60632fb8d7c5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Excluir estat&#237;sticas
+# <a name="delete-statistics"></a>Excluir estatísticas
   Você pode excluir (remover) estatísticas de tabelas e exibições no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **Neste tópico**  
@@ -51,7 +55,7 @@ caps.handback.revision: 8
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para remover estatísticas de uma tabela ou exibição  
+#### <a name="to-drop-statistics-from-a-table-or-view"></a>Para remover estatísticas de uma tabela ou exibição  
   
 1.  No **Pesquisador de Objetos**, clique no sinal de adição para expandir o banco de dados no qual você deseja excluir uma estatística.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 8
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para remover estatísticas de uma tabela ou exibição  
+#### <a name="to-drop-statistics-from-a-table-or-view"></a>Para remover estatísticas de uma tabela ou exibição  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

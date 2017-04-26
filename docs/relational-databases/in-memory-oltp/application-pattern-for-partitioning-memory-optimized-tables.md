@@ -1,22 +1,26 @@
 ---
-title: "Padr&#227;o de aplicativo para particionamento de tabelas com otimiza&#231;&#227;o de mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Padrão de aplicativo para particionamento de tabelas com otimização de memória | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 30bcdf16b27cf4f85fca86c8daeeeec210798c07
+ms.lasthandoff: 04/11/2017
+
 ---
-# Padr&#227;o de aplicativo para particionamento de tabelas com otimiza&#231;&#227;o de mem&#243;ria
+# <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Padrão de aplicativo para particionamento de tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] dá suporte a um padrão em que um valor limitado de dados ativos é mantido em uma tabela com otimização de memória, enquanto os dados acessados com menos frequência são processados no disco. Geralmente, esse seria um cenário onde os dados são armazenados com base em uma chave **datetime** .  
@@ -35,14 +39,14 @@ caps.handback.revision: 20
   
 -   Adicione a partição ativa.  
   
- ![Alternância de partição.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Alternância de partição.")  
+ ![Opção de partição.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partition switch.")  
 Manutenção de dados ativos  
   
  As ações que começam com Excluir Ordens Ativas precisam ser executadas durante uma janela de manutenção para evitar consultas com dados ausentes durante o tempo entre a exclusão de dados e a alternância na tabela de preparo.  
   
  Para ver um exemplo relacionado, veja [Particionamento no nível de aplicativo](../../relational-databases/in-memory-oltp/application-level-partitioning.md).  
   
-## Exemplo de código  
+## <a name="code-sample"></a>Exemplo de código  
  O exemplo a seguir mostra como usar uma tabela com otimização de memória com uma tabela baseada em disco particionada. Os dados mais usados são armazenados na memória. Para salvar os dados em disco, criar uma nova partição e copie os dados para a tabela particionada.  
   
  A primeira parte deste exemplo cria o banco de dados e os objetos necessários. A segunda parte do exemplo mostra como mover dados de uma tabela com otimização de memória em uma tabela particionada.  
@@ -210,7 +214,7 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
   WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold') AND index_id = 1;  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

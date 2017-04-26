@@ -1,29 +1,33 @@
 ---
-title: "Criar exibi&#231;&#245;es indexadas | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exibições indexadas [SQL Server], criando"
-  - "exibições indexadas, exibições"
-  - "instrução CREATE INDEX"
-  - "opção large_value_types_out_of_row"
-  - "exibições indexadas [SQL Server]"
-  - "exibições [SQL Server], exibições indexadas"
+title: "Criar exibições indexadas | Microsoft Docs"
+ms.custom: 
+ms.date: 05/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexed views [SQL Server], creating
+- clustered indexes, views
+- CREATE INDEX statement
+- large_value_types_out_of_row option
+- indexed views [SQL Server]
+- views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 79
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 79
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 24b4e22249ec7a175dc3ae239dea329c4d18208f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar exibi&#231;&#245;es indexadas
+# <a name="create-indexed-views"></a>Criar exibições indexadas
   Este tópico descreve como criar uma exibição indexada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O primeiro índice criado em uma exibição deve ser um índice clusterizado exclusivo. Depois que o índice clusterizado exclusivo for criado, você poderá criar mais índices não clusterizados. Criar um índice clusterizado exclusivo em uma exibição melhora o desempenho da consulta porque a exibição é armazenada no banco de dados da mesma forma que uma tabela com um índice clusterizado é armazenada. O otimizador de consulta pode usar exibições indexadas para acelerar a execução da consulta. A exibição não precisa estar referenciada na consulta para o otimizador considerá-la para uma substituição.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
@@ -52,7 +56,7 @@ caps.handback.revision: 79
   
 -   A exibição indexada for usada pelo otimizador de consulta para produzir o plano de consulta.  
   
-    |opções SET|Valor necessário|Valor do servidor padrão|Padrão<br /><br /> Valor OLE DB e ODBC|Padrão<br /><br /> Valor da DB-Library|  
+    |opções SET|Valor Obrigatório|Valor do servidor padrão|Padrão<br /><br /> Valor OLE DB e ODBC|Padrão<br /><br /> Valor da DB-Library|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -69,7 +73,7 @@ caps.handback.revision: 79
 > [!IMPORTANT]  
 >  É altamente recomendável que você defina a opção de usuário ARITHABORT para ON no nível do servidor assim que a primeira exibição indexada ou o índice em uma coluna computada for criado em qualquer banco de dados no servidor.  
   
-### Exibições determinísticas  
+### <a name="deterministic-views"></a>Exibições determinísticas  
  A definição de uma exibição indexada deve ser determinística. Uma exibição será determinística se todas as expressões na lista selecionada, bem como as cláusulas WHERE e GROUP BY, forem determinísticas. As expressões determinísticas sempre retornam o mesmo resultado sempre que são avaliadas com um conjunto específico de valores de entrada. Somente as funções determinísticas podem participar de expressões determinísticas. Por exemplo, a função DATEADD é determinística porque sempre retorna o mesmo resultado para qualquer conjunto específico de valores de argumento para seus três parâmetros. GETDATE não é determinística porque sempre é invocada com o mesmo argumento, mas o valor que ela retorna é alterado a cada execução.  
   
  Para determinar se uma coluna de exibição é determinística, use a propriedade **IsDeterministic** da função [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) . Para determinar se uma coluna determinística em uma exibição com associação de esquema é precisa, use a propriedade **IsPrecise** da função COLUMNPROPERTY. COLUMNPROPERTY retornará 1 se for TRUE, 0 se for FALSE e NULL para entrada inválida. Isso significa que a coluna não é determinística ou não é precisa.  
@@ -77,9 +81,9 @@ caps.handback.revision: 79
  Mesmo que uma expressão seja determinística, se ela contiver expressões flutuantes, o resultado exato poderá depender da arquitetura do processador ou da versão de microcódigo. Para assegurar a integridade dos dados, tais expressões podem participar somente como colunas não chave de exibições indexadas. As expressões determinísticas que não contêm expressões flutuantes são chamadas de precisas. Somente as expressões determinísticas precisas podem participar de colunas de chave e de cláusulas WHERE ou GROUP BY de exibições indexadas.  
   
 > [!NOTE]  
->  Não há suporte para exibições indexadas em consultas temporais (consultas que usam a cláusula **FOR SYSTEM_TIME**)  
+>  Não há suporte para exibições indexadas em consultas temporais (consultas que usam a cláusula **FOR SYSTEM_TIME** )  
   
-### Requisitos adicionais  
+### <a name="additional-requirements"></a>Requisitos adicionais  
  Além das opções SET e dos requisitos de função determinística, os seguintes requisitos devem ser atendidos:  
   
 -   O usuário que executa CREATE INDEX deve ser o proprietário da exibição.  
@@ -116,7 +120,7 @@ caps.handback.revision: 79
     |COUNT|Funções ROWSET (OPENDATASOURCE, OPENQUERY, OPENROWSET, AND OPENXML)|junções OUTER (LEFT, RIGHT ou FULL)|  
     |Tabela derivada (definida especificando uma instrução SELECT na cláusula FROM)|Autojunções|Especificando colunas usando SELECT \* ou SELECT *table_name*.*|  
     |DISTINCT|STDEV, STDEVP, VAR, VARP ou AVG|CTE (expressão de tabela comum)|  
-    |colunas **float**\*, **text**, **ntext**, **image**, **XML** ou **filestream**|Subconsulta|Cláusula OVER, que inclui funções de classificação ou de janela de agregação|  
+    |**float**\*, **text**, **ntext**, **image**, **XML**ou **filestream** |Subconsulta|Cláusula OVER, que inclui funções de classificação ou de janela de agregação|  
     |Predicados de texto completo (CONTAIN, FREETEXT).|Função SUM que referencia uma expressão que permite valor nulo|ORDER BY|  
     |Função de agregação CLR definida pelo usuário|INÍCIO|Operadores CUBE, ROLLUP ou GROUPING SETS|  
     |MIN, MAX|Operadores UNION, EXZip CodeT ou INTERSECT|TABLESAMPLE|  
@@ -124,7 +128,7 @@ caps.handback.revision: 79
     |Conjuntos de colunas esparsas|Funções embutidas ou com valor de tabela de várias instruções|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*A exibição indexada pode conter colunas **float**; porém, essas colunas não podem ser incluídas na chave de índice clusterizado.  
+     \*A exibição indexada pode conter colunas **float** ; porém, essas colunas não podem ser incluídas na chave de índice clusterizado.  
   
 -   Se GROUP BY estiver presente, a definição VIEW deverá conter COUNT_BIG(*) e não deverá conter HAVING. Essas restrições GROUP BY são aplicáveis apenas à definição de exibição indexada. Uma consulta pode usar uma exibição indexada em seu plano de execução mesmo que não satisfaça essas restrições GROUP BY.  
   
@@ -153,7 +157,7 @@ caps.handback.revision: 79
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para criar uma exibição indexada  
+#### <a name="to-create-an-indexed-view"></a>Para criar uma exibição indexada  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -210,7 +214,7 @@ caps.handback.revision: 79
   
  Para obter mais informações, veja [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
@@ -221,3 +225,4 @@ caps.handback.revision: 79
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
   
+

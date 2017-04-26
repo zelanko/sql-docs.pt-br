@@ -1,26 +1,30 @@
 ---
-title: "Publicando execu&#231;&#227;o de procedimento armazenado em replica&#231;&#227;o transacional | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "publicação [replicação do SQL Server], execução de procedimento armazenado"
-  - "artigos [replicação do SQL Server], procedimentos armazenados e"
-  - "replicação transacional, publicando execução de procedimento armazenado"
+title: "Publicando a execução de procedimento armazenado na replicação transacional | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publishing [SQL Server replication], stored procedure execution
+- articles [SQL Server replication], stored procedures and
+- transactional replication, publishing stored procedure execution
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3417818eb5ff6f9f5afce213457828844d2912a8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Publicando execu&#231;&#227;o de procedimento armazenado em replica&#231;&#227;o transacional
+# <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publicando execução de procedimento armazenado em replicação transacional
   Caso haja um ou mais procedimentos armazenados executados no Publicador e que afetem as tabelas publicadas, considere excluir esses procedimentos armazenados na publicação como artigos de execução de procedimentos armazenados. A definição do procedimento (instrução CREATE PROCEDURE) será replicada para o Assinante quando a inscrição for inicializada. Quando o procedimento armazenado for executado no Publicador, a replicação executará o procedimento correspondente no Assinante. Isso pode fornecer um desempenho significativamente melhor nos casos em que são executadas grandes operações em lote, pois apenas a execução do procedimento é replicada, ignorando-se a necessidade de replicar as alterações individuais de cada linha. Por exemplo, supondo que o procedimento armazenado a seguir seja criado no banco de dados de publicação:  
   
 ```  
@@ -49,17 +53,17 @@ EXEC give_raise
   
  **Para publicar a execução de um procedimento armazenado**  
   
--   SQL Server Management Studio: [publicar a execução de um procedimento armazenado em uma publicação transacional e 40; SQL Server Management Studio e 41;](../../../relational-databases/replication/publish/publish execution of stored procedure in transactional publication.md)  
+-   SQL Server Management Studio: [Publicar a execução de um procedimento armazenado em uma publicação transacional &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Programação Transact-SQL de replicação: executar [sp_addarticle & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e especifique um valor de 'serializable proc exec' (recomendado) ou 'proc exec' para o parâmetro **@type**. Para obter mais informações sobre como definir artigos, consulte [definir um artigo](../../../relational-databases/replication/publish/define-an-article.md).  
+-   Programação Transact-SQL de replicação: execute [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e especifique o valor “serializable proc exec” (recomendado) ou “proc exec” para o parâmetro **@type**. Para obter mais informações sobre como definir artigos, consulte [Definir um artigo](../../../relational-databases/replication/publish/define-an-article.md).  
   
-## Modificando o procedimento no Assinante  
- Por padrão, a definição de procedimento armazenado no Publicador é propagada para todos os Assinantes. Porém, é igualmente possível modificar o procedimento armazenado no Assinante. Isso será útil para executar lógicas diferentes no Publicador e no Assinante. Por exemplo, considere **sp_big_delete**, um procedimento no editor que tem duas funções armazenado: exclui 1.000.000 linhas da tabela replicada **big_table1** e atualiza a tabela não replicada **big_table2**. Para reduzir a demanda nos recursos de rede, propague a exclusão de 1 milhão de linhas como um procedimento armazenado publicando **sp_big_delete**. No assinante, você pode modificar **sp_big_delete** para excluir apenas o 1 milhão de linhas e não executar a atualização subsequente em **big_table2**.  
+## <a name="modifying-the-procedure-at-the-subscriber"></a>Modificando o procedimento no Assinante  
+ Por padrão, a definição de procedimento armazenado no Publicador é propagada para todos os Assinantes. Porém, é igualmente possível modificar o procedimento armazenado no Assinante. Isso será útil para executar lógicas diferentes no Publicador e no Assinante. Por exemplo, considere **sp_big_delete**, um procedimento armazenado do Publicador que tem duas funções: exclui 1.000.000 linhas da tabela replicada **big_table1** e atualiza a tabela não replicada **big_table2**. Para reduzir a demanda por recursos de rede, propague a exclusão de 1 milhão de linhas como procedimento armazenado publicando **sp_big_delete**. No Assinante, modifique **sp_big_delete** para excluir apenas o 1 milhão de linhas e não realizar a atualização subsequente em **big_table2**.  
   
 > [!NOTE]  
->  Por padrão, todas as alterações feitas com ALTER PROCEDURE, no Publicador, são propagadas para o Assinante. Para impedir isso, desative a propagação de alterações de esquema antes de executar ALTER PROCEDURE. Para obter informações sobre alterações de esquema, consulte [fazer alterações de esquema em bancos de dados de publicação](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+>  Por padrão, todas as alterações feitas com ALTER PROCEDURE, no Publicador, são propagadas para o Assinante. Para impedir isso, desative a propagação de alterações de esquema antes de executar ALTER PROCEDURE. Para obter informações sobre alterações de esquema, consulte [Fazer alterações de esquema em bancos de dados de publicação](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
-## Tipos de artigos de execução de procedimento armazenado  
+## <a name="types-of-stored-procedure-execution-articles"></a>Tipos de artigos de execução de procedimento armazenado  
  Há duas formas diferentes pelas quais a execução de um procedimento armazenado pode ser publicada: artigo de execução de procedimento serializável e artigo de execução de procedimento.  
   
 -   A opção serializável é recomendada uma vez que ela replica a execução do procedimento apenas se o procedimento for executado no contexto de uma transação serializável. Se o procedimento armazenado for executado fora de uma transação serializável, as alterações dos dados nas tabelas publicadas serão replicadas como uma série de instruções DML. Esse comportamento contribui para tornar os dados do Assinante consistentes com os dados do Publicador. Isso é especialmente útil para operações em lote, como grandes operações de limpeza.  
@@ -87,12 +91,12 @@ COMMIT TRANSACTION T2
   
  Os bloqueios serão mantidos por mais tempo quando esse procedimento for executado em uma transação serializável e poderá resultar em redução de simultaneidade.  
   
-## A configuração XACT_ABORT  
- Ao replicar a execução de procedimento armazenado, a configuração da sessão que executa o procedimento armazenado deve especificar XACT_ABORT ON. Se XACT_ABORT estiver definida como OFF e ocorrer um erro na execução do procedimento, no Publicador, o mesmo erro ocorrerá no Assinante, causando falha do Agente de Distribuição. Especificar XACT_ABORT ON assegura que nenhum erro encontrado durante a execução, no Publicador, cause a reversão total da execução, evitando falha do Agente de Distribuição. Para obter mais informações sobre a configuração de XACT_ABORT, consulte [SET XACT_ABORT & #40. O Transact-SQL e 41;](../../../t-sql/statements/set-xact-abort-transact-sql.md).  
+## <a name="the-xactabort-setting"></a>A configuração XACT_ABORT  
+ Ao replicar a execução de procedimento armazenado, a configuração da sessão que executa o procedimento armazenado deve especificar XACT_ABORT ON. Se XACT_ABORT estiver definida como OFF e ocorrer um erro na execução do procedimento, no Publicador, o mesmo erro ocorrerá no Assinante, causando falha do Agente de Distribuição. Especificar XACT_ABORT ON assegura que nenhum erro encontrado durante a execução, no Publicador, cause a reversão total da execução, evitando falha do Agente de Distribuição. Para obter mais informações sobre como configurar XACT_ABORT, consulte [SET XACT_ABORT &#40;Transact-SQL&#41;](../../../t-sql/statements/set-xact-abort-transact-sql.md).  
   
- Se você precisar de uma configuração de XACT_ABORT OFF, especifique o **- SkipErrors** parâmetro para o Distribution Agent. Isto permitirá que o agente continue a aplicar alterações no Assinante, ainda que um erro seja encontrado.  
+ Se a configuração de XACT_ABORT OFF for necessária, especifique o parâmetro **-SkipErrors** do Agente de Distribuição. Isto permitirá que o agente continue a aplicar alterações no Assinante, ainda que um erro seja encontrado.  
   
-## Consulte também  
- [Opções de artigo para replicação transacional](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
+## <a name="see-also"></a>Consulte também  
+ [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

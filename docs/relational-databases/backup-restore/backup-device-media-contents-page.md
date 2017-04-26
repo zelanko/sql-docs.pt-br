@@ -1,24 +1,28 @@
 ---
-title: "Dispositivo de backup (p&#225;gina Conte&#250;do da M&#237;dia) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdevice.contents.f1"
+title: "Dispositivo de backup (página Conteúdo de Mídia) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdevice.contents.f1
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4bfa385cab6527c16e62e2e631b9ffa1b96e0d10
+ms.lasthandoff: 04/11/2017
+
 ---
-# Dispositivo de backup (p&#225;gina Conte&#250;do da M&#237;dia)
+# <a name="backup-device-media-contents-page"></a>Dispositivo de backup (página Conteúdo da Mídia)
   Use a caixa de diálogo **Dispositivo de Backup** para exibir as informações de backup. As informações descrevem o dispositivo, a mídia, o conjunto de mídias e o conjunto ou conjuntos de backups.  
   
  **Para usar o SQL Server Management Studio para exibir o conteúdo de um dispositivo de backup**  
@@ -27,7 +31,7 @@ caps.handback.revision: 38
   
 -   [Exibir as propriedades e o conteúdo de um dispositivo de backup lógico &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## Opções  
+## <a name="options"></a>Opções  
  Exiba as informações das mídias individuais, conjunto de mídias e os conjuntos de backup.  
   
  **Mídia**  
@@ -57,7 +61,7 @@ caps.handback.revision: 38
 |Cabeçalho|Valores|  
 |------------|------------|  
 |**Nome**|O nome do conjunto de backup.|  
-|**Tipo**|O objeto armazenado em backup: Banco de Dados, Arquivo ou *\<em branco>* (para logs de transação).|  
+|**Tipo**|O objeto armazenado em backup: banco de dados, arquivo ou *\<em branco>* (para logs de transação).|  
 |**Componente**|O tipo de backup efetuado: Completo, Diferencial ou Log de Transações.|  
 |**Servidor**|O nome da instância de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizou a operação de backup.|  
 |**Banco de dados**|O nome do banco de dados cujo backup foi efetuado.|  
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
 -   [Restaurar um backup de um dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

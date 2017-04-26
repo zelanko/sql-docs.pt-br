@@ -1,35 +1,39 @@
 ---
-title: "Habilitar e desabilitar o controle de altera&#231;&#245;es (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controle de alterações [SQL Server], desabilitando"
-  - "alterações de dados [SQL Server]"
-  - "controle de alterações [SQL Server], habilitando"
-  - "controlando alterações de dados [SQL Server]"
-  - "controle de alterações [SQL Server], configurando"
-  - "dados [SQL Server], alterando"
+title: "Habilitar e desabilitar o controle de alterações (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change tracking [SQL Server], disabling
+- data changes [SQL Server]
+- change tracking [SQL Server], enabling
+- tracking data changes [SQL Server]
+- change tracking [SQL Server], configuring
+- data [SQL Server], changing
 ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 156e5514169d9b4ca9f8cca9e5f06a46187211aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Habilitar e desabilitar o controle de altera&#231;&#245;es (SQL Server)
+# <a name="enable-and-disable-change-tracking-sql-server"></a>Habilitar e desabilitar o controle de alterações (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Este tópico descreve como habilitar e desabilitar o controle de alterações para um banco de dados e uma tabela.  
   
-## Habilitar o controle de alterações para um banco de dados  
- Antes de usar o controle de alterações, você deve habilitar o controle de alterações no nível de banco de dados. O exemplo a seguir mostra como habilitar o controle de alterações usando [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+## <a name="enable-change-tracking-for-a-database"></a>Habilitar o controle de alterações para um banco de dados  
+ Antes de usar o controle de alterações, você deve habilitar o controle de alterações no nível de banco de dados. O exemplo a seguir mostra como habilitar o controle de alterações usando [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012  
@@ -37,7 +41,7 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
- Você também pode habilitar o controle de alterações no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando a caixa de diálogo [Propriedades do Banco de Dados &#40;Página Controle de Alterações&#41;](../../relational-databases/databases/database-properties-changetracking-page.md).  
+ Você também pode habilitar o controle de alterações no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando a caixa de diálogo [Propriedades do Banco de Dados &#40;Página Controle de Alterações&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) .  
   
  Você pode especificar as opções CHANGE_RETENTION e AUTO_CLEANUP quando habilitar o controle de alterações e alterar os valores a qualquer momento depois que o controle de alterações estiver habilitado.  
   
@@ -51,7 +55,7 @@ SET CHANGE_TRACKING = ON
   
 -   Usar o isolamento do instantâneo é o modo mais fácil de garantir que todas as informações do controle de alterações sejam consistentes. Por esse motivo, é estritamente recomendável que o isolamento do instantâneo seja definido como ON para o banco de dados. Para obter mais informações, veja [Trabalhar com o controle de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md).  
   
-## Habilitar o controle de alterações para uma tabela  
+## <a name="enable-change-tracking-for-a-table"></a>Habilitar o controle de alterações para uma tabela  
  O controle de alterações deve ser habilitado para cada tabela que você deseja controlar. Quando o controle de alterações está habilitado, são mantidas informações sobre todas as linhas da tabela afetadas por uma operação DML.  
   
  O exemplo a seguir mostra como habilitar o controle de alterações para uma tabela usando [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
@@ -62,14 +66,14 @@ ENABLE CHANGE_TRACKING
 WITH (TRACK_COLUMNS_UPDATED = ON)  
 ```  
   
- Você também pode habilitar o controle de alterações para uma tabela no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando a caixa de diálogo [Propriedades do Banco de Dados &#40;Página Controle de Alterações&#41;](../../relational-databases/databases/database-properties-changetracking-page.md).  
+ Você também pode habilitar o controle de alterações para uma tabela no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando a caixa de diálogo [Propriedades do Banco de Dados &#40;Página Controle de Alterações&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) .  
   
  Quando a opção TRACK_COLUMNS_UPDATED é definida como ON, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] armazena informações extras sobre quais colunas foram atualizadas na tabela interna de controle de alterações. O controle de coluna pode permitir a um aplicativo sincronizar apenas as colunas que foram atualizadas. Isso pode melhorar a eficiência e o desempenho. Entretanto, como a manutenção de informações do controle de alterações aumenta a sobrecarga de armazenamento, essa opção é definida como OFF por padrão.  
   
-## Desabilitar o controle de alterações para um banco de dados ou uma tabela  
- É necessário desabilitar o controle de alterações em todas as tabelas com alterações controladas, antes que o controle de alterações seja definido como OFF no banco de dados. Para determinar as tabelas que tenham o controle de alterações habilitadas em um banco de dados, use a exibição do catálogo [sys.change_tracking_tables](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md).  
+## <a name="disable-change-tracking-for-a-database-or-table"></a>Desabilitar o controle de alterações para um banco de dados ou uma tabela  
+ É necessário desabilitar o controle de alterações em todas as tabelas com alterações controladas, antes que o controle de alterações seja definido como OFF no banco de dados. Para determinar as tabelas que tenham o controle de alterações habilitadas em um banco de dados, use a exibição do catálogo [sys.change_tracking_tables](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md) .  
   
- Quando nenhuma tabela de um banco de dados controlar as alterações, você pode desabilitar o controle de alterações no banco de dados. O exemplo a seguir mostra como desabilitar o controle de alterações para um banco de dados usando [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+ Quando nenhuma tabela de um banco de dados controlar as alterações, você pode desabilitar o controle de alterações no banco de dados. O exemplo a seguir mostra como desabilitar o controle de alterações para um banco de dados usando [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012  
@@ -83,14 +87,15 @@ ALTER TABLE Person.Contact
 DISABLE CHANGE_TRACKING;  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Propriedades do Banco de Dados &#40;Página Controle de Alterações&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
- [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
- [sys.change_tracking_databases &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)   
- [sys.change_tracking_tables &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)   
+ [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
+ [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   
  [Controle de alterações de dados &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Sobre o controle de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Trabalhar com dados de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
  [Gerenciar o controle de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)  
   
   
+

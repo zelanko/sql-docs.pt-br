@@ -1,25 +1,29 @@
 ---
-title: "Fun&#231;&#245;es definidas pelo usu&#225;rio | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "funções definidas pelo usuário [SQL Server], componentes"
-  - "user-defined functions [SQL Server], about user-defined functions"
+title: "Funções definidas pelo usuário | Microsoft Docs"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined functions [SQL Server], components
+- user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f4c8c44b4c07b26676fd424acb36ea7ccce19df3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Fun&#231;&#245;es definidas pelo usu&#225;rio
+# <a name="user-defined-functions"></a>Funções definidas pelo usuário
   Assim como as funções em linguagens de programação, as funções do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas pelo usuário são rotinas que aceitam parâmetros, executam uma ação, como um cálculo complexo, e retornam o resultado dessa ação como um valor. O valor de retorno pode ser um único valor escalar ou um conjunto de resultados.  
    
 ##  <a name="Benefits"></a> Funções definidas pelo usuário  
@@ -33,7 +37,7 @@ Por que usá-las?
   
      Semelhantemente aos procedimentos armazenados, [!INCLUDE[tsql](../../includes/tsql-md.md)] as funções definidas pelo usuário reduzem o custo de compilação do código [!INCLUDE[tsql](../../includes/tsql-md.md)] colocando os planos em cache e reusando-os para execuções repetidas. Isso significa que a função definida pelo usuário não precisa ser reanalisada e reotimizada em cada utilização resultando em tempos de execução mais rápidos.  
   
-     As funções CLR oferecem uma vantagem de desempenho significativa sobre funções [!INCLUDE[tsql](../../includes/tsql-md.md)] para tarefas de computação, manipulação de cadeias de caracteres e lógica de negócios. [!INCLUDE[tsql](../../includes/tsql-md.md)] as funções são mais adequadas à lógica intensiva de acesso a dados.  
+     As funções CLR oferecem uma vantagem de desempenho significativa sobre funções [!INCLUDE[tsql](../../includes/tsql-md.md)] para tarefas de computação, manipulação de cadeias de caracteres e lógica de negócios. As funções [!INCLUDE[tsql](../../includes/tsql-md.md)] são mais adequadas à lógica intensiva de acesso a dados.  
   
 -   Eles podem reduzir o tráfego de rede.  
   
@@ -49,11 +53,11 @@ Por que usá-las?
 **Funções com valor de tabela**  
  As funções com valor de tabela definidas pelo usuário retornam um tipo de dados **table**. Para uma função com valor de tabela embutida, não há um corpo de função; a tabela é o conjunto de resultados de uma única instrução SELECT. **[Exemplos.](https://msdn.microsoft.com/library/bb386954(v=vs.110).aspx)**
   
-**Funções de sistema**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece muitas funções de sistema que você pode usar para executar uma variedade de operações. Elas não podem ser modificadas. Para obter mais informações, consulte [Funções internas &#40;Transact-SQL&#41;](../Topic/Built-in%20Functions%20\(Transact-SQL\).md), [Funções armazenadas do sistema &#40;Transact-SQL&#41;](../Topic/System%20Stored%20Functions%20\(Transact-SQL\).md) e [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md).  
+**Funções do Sistema**  
+O  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece muitas funções de sistema que você pode usar para executar uma variedade de operações. Elas não podem ser modificadas. Para obter mais informações, consulte [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [Funções armazenadas do sistema &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md) e [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ##  <a name="Guidelines"></a> Diretrizes  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] Erros que levam ao cancelamento de uma instrução e que continue com a instrução seguinte no módulo (como gatilhos ou procedimentos armazenados) são tratados de modo diferente em uma função. Nas funções, esses erros fazem com que a execução da função seja interrompida. Em troca, isso faz com que a instrução que chamou a função seja cancelada.  
+ Erros de [!INCLUDE[tsql](../../includes/tsql-md.md)] que levam ao cancelamento de uma instrução e continuam com a instrução seguinte no módulo (como gatilhos ou procedimentos armazenados) tratados de modo diferente em uma função. Nas funções, esses erros fazem com que a execução da função seja interrompida. Em troca, isso faz com que a instrução que chamou a função seja cancelada.  
   
  As instruções em um bloco BEGIN... END não podem ter nenhum efeito colateral. Os efeitos colaterais da função são as alterações permanentes realizada no estado de um recurso que tem um escopo fora da função como uma modificação em uma tabela do banco de dados. As únicas alterações que podem ser feitas pelas instruções na função são alterações em objetos locais à função, como cursores ou variáveis locais. As modificações em tabelas de banco de dados, operações em cursores que não são locais à função, envio de e-mail, tentativa de modificação em catálogo e geração de um conjunto de resultados retornados ao usuário são exemplos de ações que não devem ser realizadas em uma função.  
   
@@ -78,7 +82,7 @@ Por que usá-las?
   
 -   Instruções EXECUTE que chamam um procedimento armazenado estendido.  
   
-### Funções do sistema internas  
+### <a name="built-in-system-functions"></a>Funções do sistema internas  
  As funções não determinísticas internas a seguir podem ser usadas nas funções definidas por usuário Transact-SQL.  
   
 |||  
@@ -118,7 +122,7 @@ Por que usá-las?
 ##  <a name="Parameters"></a> Especificando parâmetros  
  Uma função definida pelo usuário usa parâmetros de entrada zero ou mais e retorna um valor escalar ou uma tabela. A função pode ter um máximo de 1024 parâmetros de entrada. Quando um parâmetro da função tiver um valor padrão, a palavra-chave DEFAULT deve ser especificada quando a função for chamada para obter o valor padrão. Esse comportamento é diferente dos parâmetros com valores padrão nos procedimentos armazenados definidos pelo usuário nos quais a omissão de parâmetro também implica o valor padrão. Funções definidas pelo usuário não dão suporte aos parâmetros de saída.  
   
-##  <a name="Tasks"></a> Mais exemplos:  
+##  <a name="Tasks"></a> Mais exemplos!  
   
 |||  
 |-|-|  
@@ -133,3 +137,7 @@ Por que usá-las?
 |Descreve como exibir a definição de uma função definida pelo usuário.|[Exibir funções definidas pelo usuário](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
+
+
+
+

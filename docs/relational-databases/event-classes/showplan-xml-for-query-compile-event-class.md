@@ -1,38 +1,42 @@
 ---
-title: "Classe de evento Showplan XML for Query Compile  | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de eventos Showplan XML For Query Compile "
+title: Classe de evento Showplan XML for Query Compile | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan XML For Query Compile event class
 ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2eb668713091ff9f9d53173111bae4ee54ec73f2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento Showplan XML for Query Compile 
+# <a name="showplan-xml-for-query-compile-event-class"></a>classe de eventos Showplan XML For Query Compile
   A classe de evento Showplan XML For Query Compile ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila uma instrução SQL. Inclua essa classe de evento para identificar os operadores Showplan no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  A classe de evento Showplan XML For Query Compile exibe dados de tempo de compilação completos e, portanto, os rastreamentos que contêm esta classe de evento podem causar sobrecarga de desempenho significativa. Para minimizar isso, limite o uso dessa classe de evento a rastreamentos que monitorem problemas específicos em períodos breves de tempo.  
   
- Os documentos Showplan XML têm um esquema associado a eles. Esse esquema pode ser encontrado no [Site da Microsoft](http://go.microsoft.com/fwlink/?LinkId=41740) ou como parte da instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Os documentos Showplan XML têm um esquema associado a eles. Esse esquema pode ser encontrado no [Site da Microsoft](http://go.microsoft.com/fwlink/?LinkId=41740)ou como parte da instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Colunas de dados da classe de evento Showplan XML for Query Compile  
+## <a name="showplan-xml-for-query-compile-event-class-data-columns"></a>Colunas de dados da classe de evento Showplan XML for Query Compile  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BinaryData|**image**|Custo estimado da consulta.|2|Não|  
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
-|DatabaseID|**int**|A ID do banco de dados especificada pela instrução USE *database* ou a ID do banco de dados padrão se nenhuma instrução USE *database* tiver sido emitida para determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
+|DatabaseID|**int**|A ID do banco de dados especificada pela instrução USE *database* ou a ID do banco de dados padrão se nenhuma instrução USE *database*tiver sido emitida para determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |Event Class|**int**|Tipo de evento = 168.|27|Não|  
 |EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
@@ -58,7 +62,7 @@ caps.handback.revision: 38
 |XactSequence|**bigint**|Token usado para descrever a transação atual.|50|Sim|  
 |GroupID|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Referência de operadores físicos e lógicos de plano de execução](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   

@@ -1,30 +1,34 @@
 ---
-title: "Exibir configura&#231;&#245;es de NodeWeight de quorum de cluster | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidade [SQL Server], clusters de WSFC"
-  - "quorum [SQL Server], AlwaysOn e quorum WSFC"
+title: "Exibir configurações de NodeWeight de quorum de cluster | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1bd8e579c3d75e804a552622039053b6700a352a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exibir configura&#231;&#245;es de NodeWeight de quorum de cluster
-  Este tópico descreve como exibir configurações de NodeWeight para cada nó de membro em um cluster WSFC (Windows Server Failover Clustering). As configurações de NodeWeight são usadas durante a votação de quorum para dar suporte à recuperação de desastre e a cenários com várias sub-redes para instâncias de cluster de failover do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+# <a name="view-cluster-quorum-nodeweight-settings"></a>Exibir configurações de NodeWeight de quorum de cluster
+  Este tópico descreve como exibir configurações de NodeWeight para cada nó de membro em um cluster WSFC (Windows Server Failover Clustering). As configurações de NodeWeight são usadas durante a votação de quorum para dar suporte à recuperação de desastre e a cenários com várias sub-redes para instâncias de cluster de failover do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Antes de começar:**  [Pré-requisitos](#Prerequisites), [Segurança](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
--   **Para exibir configurações de NodeWeight de quorum usando:** [Usando Transact-SQL](#TsqlProcedure), [Usando o Powershell](#PowerShellProcedure), [Usando Cluster.exe](#CommandPromptProcedure)  
+-   **To view quorum NodeWeight settings using:** [Using Transact-SQL](#TsqlProcedure), [Using Powershell](#PowerShellProcedure), [Using Cluster.exe](#CommandPromptProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de iniciar  
   
@@ -44,13 +48,13 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-##### Para exibir configurações de NodeWeight  
+##### <a name="to-view-nodeweight-settings"></a>Para exibir configurações de NodeWeight  
   
 1.  Conecte-se a qualquer instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no cluster.  
   
 2.  Consulte a exibição [sys].[dm_hadr_cluster_members].  
   
-### Exemplo (Transact-SQL)  
+### <a name="example-transact-sql"></a>Exemplo (Transact-SQL)  
  O exemplo a seguir consulta uma exibição de sistema para retornar valores para todos os nós no cluster dessa instância.  
   
 ```tsql  
@@ -60,7 +64,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
   
 ##  <a name="PowerShellProcedure"></a> Usando o Powershell  
   
-##### Para exibir configurações de NodeWeight  
+##### <a name="to-view-nodeweight-settings"></a>Para exibir configurações de NodeWeight  
   
 1.  Inicie um Windows PowerShell elevado via **Executar como Administrador**.  
   
@@ -70,7 +74,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
   
 4.  Gere as propriedades de nó de cluster em um formato legível.  
   
-### Exemplo (Powershell)  
+### <a name="example-powershell"></a>Exemplo (Powershell)  
  O exemplo a seguir gera algumas das propriedades de nó para o cluster chamado “Cluster001”.  
   
 ```powershell  
@@ -87,20 +91,20 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 > [!NOTE]  
 >  O utilitário cluster.exe foi preterido na versão [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] .  Use o PowerShell com Clustering de Failover para desenvolvimento futuro.  O utilitário cluster.exe será removido na próxima versão do Windows Server. Para obter mais informações, consulte [Mapeando comandos cluster.exe para cmdlets Windows PowerShell para clusters de failover](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
   
-##### Para exibir configurações de NodeWeight  
+##### <a name="to-view-nodeweight-settings"></a>Para exibir configurações de NodeWeight  
   
 1.  Inicie um Prompt de Comando elevado via **Executar como Administrador**.  
   
 2.  Usar **cluster.exe** para retornar o status do nó e valores de NodeWeight  
   
-### Exemplo (Cluster.exe)  
+### <a name="example-clusterexe"></a>Exemplo (Cluster.exe)  
  O exemplo a seguir gera algumas das propriedades de nó para o cluster chamado “Cluster001”.  
   
 ```ms-dos  
 cluster.exe Cluster001 node /status /properties  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Configuração de modos de quorum WSFC e votação &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Definir configurações de NodeWeight de quorum de cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)   

@@ -1,24 +1,28 @@
 ---
-title: "Permitir que n&#227;o administradores usem o Replication Monitor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Replication Monitor, acesso de não administradores"
+title: "Permitir que não administradores usem o Replication Monitor, | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Replication Monitor, non-administrators access
 ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 95a0b865d33d96b740a48971bfccbc1334b37807
+ms.lasthandoff: 04/11/2017
+
 ---
-# Permitir que n&#227;o administradores usem o Replication Monitor
+# <a name="allow-non-administrators-to-use-replication-monitor"></a>Permitir que não administradores usem o Replication Monitor
   Este tópico descreve como permitir que não administradores usem o Replication Monitor no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. O Replication Monitor pode ser usado por usuários que são membros das seguintes funções:  
   
 -   A função de servidor fixa **sysadmin** .  
@@ -46,17 +50,17 @@ caps.handback.revision: 36
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Para permitir que usuários não administradores usem o Replication Monitor, um membro do **sysadmin** função de servidor fixa deve adicionar o usuário no banco de dados de distribuição e atribuir a esse usuário o **replmonitor** função.  
+ Para permitir que não administradores usem o Replication Monitor, um membro da função de servidor fixa **sysadmin** deve adicionar o usuário ao banco de dados de distribuição e atribuir-lhe a função **replmonitor** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para permitir que não administradores usem o Replication Monitor  
+#### <a name="to-allow-non-administrators-to-use-replication-monitor"></a>Para permitir que não administradores usem o Replication Monitor  
   
 1.  No [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], conecte-se ao Distribuidor e, em seguida, expanda o nó do servidor.  
   
-2.  Expanda **bancos de dados**, expanda **bancos de dados do sistema**, e, em seguida, expanda o banco de dados de distribuição (chamado **distribuição** por padrão).  
+2.  Expanda **Bancos de Dados**, expanda **Bancos de Dados do Sistema**e, em seguida, expanda o banco de dados de distribuição (nomeado **distribuição** por padrão).  
   
-3.  Expanda **segurança**, clique com botão direito **usuários**, e, em seguida, clique em **novo usuário**.  
+3.  Expanda **Segurança**, clique com o botão direito do mouse em **Usuários**e, em seguida, clique em **Novo Usuário**.  
   
 4.  Digite um nome de usuário e logon para o usuário.  
   
@@ -68,18 +72,18 @@ caps.handback.revision: 36
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para adicionar um usuário à função de banco de dados fixo replmonitor  
+#### <a name="to-add-a-user-to-the-replmonitor-fixed-database-role"></a>Para adicionar um usuário à função de banco de dados fixo replmonitor  
   
-1.  No distribuidor no banco de dados de distribuição, execute [sp_helpuser & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md). Se o usuário não estiver listado em **UserName** no conjunto de resultados, o usuário deve ter acesso ao banco de dados de distribuição usando o [Criar usuário & #40. O Transact-SQL e 41;](../../../t-sql/statements/create-user-transact-sql.md) instrução.  
+1.  No Distribuidor no banco de dados de distribuição, execute [sp_helpuser &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md). Se o usuário não estiver listado em **UserName** no conjunto de resultados, esse usuário deverá receber acesso ao banco de dados de distribuição usando a instrução [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md).  
   
-2.  No distribuidor no banco de dados de distribuição, execute [sp_helprolemember & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md), especificando um valor de **replmonitor** para o **@rolename** parâmetro. Se o usuário estiver listado em **MemberName** no conjunto de resultados, o usuário já pertence a essa função.  
+2.  No Distribuidor no banco de dados de distribuição, execute [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md), especificando um valor de **replmonitor** para o parâmetro **@rolename**. Se o usuário estiver listado em **MemberName** no conjunto de resultados, o usuário já pertence a essa função.  
   
-3.  Se o usuário não pertence ao **replmonitor** função, execute [sp_addrolemember & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) no distribuidor no banco de dados de distribuição. Especifique um valor de **replmonitor** para **@rolename** e o nome do banco de dados do usuário ou o logon do Windows [!INCLUDE[msCoName](../../../includes/msconame-md.md)] que está sendo adicionado para **@membername**.  
+3.  Se o usuário não pertencer à função **replmonitor**, execute [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) no distribuidor no banco de dados de distribuição. Especifique um valor de **replmonitor** para **@rolename** e o nome do banco de dados do usuário ou o logon do Windows [!INCLUDE[msCoName](../../../includes/msconame-md.md)] sendo adicionado para o **@membername**.  
   
-#### Para remover um usuário da função de banco de dados fixo replmonitor  
+#### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>Para remover um usuário da função de banco de dados fixo replmonitor  
   
-1.  Para verificar se o usuário pertence a **replmonitor** função, execute [sp_helprolemember & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) no distribuidor no banco de dados de distribuição e especifique um valor de **replmonitor** para **@rolename**. Se o usuário não estiver listado em **MemberName** no conjunto de resultados, ele não pertence atualmente a essa função.  
+1.  Para verificar se o usuário pertence à função **replmonitor**, execute [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) no Distribuidor no banco de dados de distribuição e especifique um valor de **replmonitor** para **@rolename**. Se o usuário não estiver listado em **MemberName** no conjunto de resultados, o usuário não pertence atualmente à essa função.  
   
-2.  Se o usuário pertencer ao **replmonitor** função, execute [sp_droprolemember & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) no distribuidor no banco de dados de distribuição. Especifique um valor de **replmonitor** para **@rolename** e o nome do banco de dados do usuário ou o logon do Windows que está sendo removido para **@membername**.  
+2.  Se o usuário pertencer à função **replmonitor**, execute [sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) no Distribuidor no banco de dados de distribuição. Especifique um valor de **replmonitor** para **@rolename** e o nome do banco de dados do usuário ou o logon do Windows sendo removido para o **@membername**.  
   
   

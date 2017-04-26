@@ -1,28 +1,32 @@
 ---
-title: "Excluir um &#237;ndice | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "removendo índices"
-  - "excluindo índices"
-  - "descartando índices"
-  - "índices [SQL Server], remoção"
-  - "exclusões de índice [SQL Server]"
+title: "Excluir um índice | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing indexes
+- deleting indexes
+- dropping indexes
+- indexes [SQL Server], dropping
+- index deletions [SQL Server]
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77d88bfd9ae9cb742bc9dc18f8baffdd32e5ac3e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Excluir um &#237;ndice
+# <a name="delete-an-index"></a>Excluir um índice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Este tópico descreve como excluir (descartar) um índice no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -49,11 +53,11 @@ caps.handback.revision: 29
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Requer a permissão ALTER na tabela ou exibição. Essa permissão é concedida por padrão à função de servidor fixa **sysadmin** e às funções de banco de dados fixas **db_ddladmin** e **db_owner**.  
+ Requer a permissão ALTER na tabela ou exibição. Essa permissão é concedida por padrão à função de servidor fixa **sysadmin** e às funções de banco de dados fixas **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para excluir um índice usando o Pesquisador de Objetos  
+#### <a name="to-delete-an-index-by-using-object-explorer"></a>Para excluir um índice usando o Pesquisador de Objetos  
   
 1.  No Pesquisador de Objetos, expanda o banco de dados que contém a tabela da qual você deseja excluir um índice.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 29
   
 6.  Na caixa de diálogo **Excluir Objeto** , verifique se o índice correto está na grade **Objeto a ser excluído** e clique em **OK**.  
   
-#### Para excluir um índice usando o Designer de Tabela  
+#### <a name="to-delete-an-index-using-table-designer"></a>Para excluir um índice usando o Designer de Tabela  
   
 1.  No Pesquisador de Objetos, expanda o banco de dados que contém a tabela da qual você deseja excluir um índice.  
   
@@ -75,19 +79,19 @@ caps.handback.revision: 29
   
 3.  Clique com o botão direito do mouse na tabela que contém o índice a ser excluído e clique em Design.  
   
-4.  No menu **Designer de Tabela**, clique em **Índices/Chaves**.  
+4.  No menu **Designer de Tabela** , clique em **Índices/Chaves**.  
   
-5.  Na caixa de diálogo **Índices/Chaves**, selecione o índice que você deseja excluir.  
+5.  Na caixa de diálogo **Índices/Chaves** , selecione o índice que você deseja excluir.  
   
 6.  Clique em **Excluir**.  
   
 7.  Clique em **Fechar**.  
   
-8.  No menu **Arquivo**, selecione **Salvar***table_name*.  
+8.  No menu **Arquivo** , selecione **Salvar***table_name*.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para excluir um índice  
+#### <a name="to-delete-an-index"></a>Para excluir um índice  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -108,3 +112,4 @@ caps.handback.revision: 29
  Para obter mais informações, veja [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md).  
   
   
+

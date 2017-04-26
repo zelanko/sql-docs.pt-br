@@ -1,34 +1,38 @@
 ---
-title: "Selecionar linhas para migrar usando uma fun&#231;&#227;o de filtro (Stretch Database) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Stretch Database, predicados"
-  - "predicados do Stretch Database"
-  - "Stretch Database, funções com valor de tabela embutida"
-  - "funções com valor de tabela embutida para Stretch Database"
+title: "Selecionar linhas para migrar usando uma função de filtro (Stretch Database) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stretch Database, predicates
+- predicates for Stretch Database
+- Stretch Database, inline table-valued functions
+- inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 097d613e8732823d91d660f6e8a0c1f6d749fb39
+ms.lasthandoff: 04/11/2017
+
 ---
-# Selecionar linhas para migrar usando uma fun&#231;&#227;o de filtro (Stretch Database)
+# <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Selecionar linhas para migrar usando uma função de filtro (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Se você armazenar dados inertes em uma tabela separada, será possível configurar o Stretch Database para migrar a tabela inteira. Por outro lado, se sua tabela contiver dados dinâmicos e inertes, você poderá especificar um predicado de filtro para selecionar as linhas a serem migradas. O predicado de filtro é uma função com valor de tabela embutida. Este tópico descreve como escrever uma função com valor de tabela embutida para selecionar linhas a serem migradas.  
   
-> [!IMPORTANT] Se você fornecer uma função de filtro precária, a migração de dados também será precária. O Stretch Database aplica a função de filtro à tabela usando o operador CROSS APPLY.  
+> [!IMPORTANT]
+> Se você fornecer uma função de filtro precária, a migração de dados também será precária. O Stretch Database aplica a função de filtro à tabela usando o operador CROSS APPLY.  
   
  Se você não especificar uma função de filtro, a tabela inteira será migrada.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 42
   
  A sintaxe ALTER TABLE para adicionar uma função é descrita posteriormente neste tópico.  
   
-## Requisitos básicos para a função de filtro  
+## <a name="basic-requirements-for-the-filter-function"></a>Requisitos básicos para a função de filtro  
  A função com valor de tabela embutida, necessária para um predicado de filtro Stretch Database é parecida com o exemplo a seguir.  
   
 ```tsql  
@@ -56,10 +60,10 @@ RETURN  SELECT 1 AS is_eligible
   
  A associação do esquema é necessária para impedir que as colunas usadas pela função de filtro sejam descartadas ou alteradas.  
   
-### Valor de retorno  
+### <a name="return-value"></a>Valor de retorno  
  Se a função retornar um resultado não vazio, a linha será qualificada para ser migrada. Caso contrário, isto é, se a função não retornar um resultado, a linha não será qualificada para ser migrada.  
   
-### Condições  
+### <a name="conditions"></a>Condições  
  O &lt;*predicado*&gt; pode consistir em uma condição ou em várias condições associadas ao operador lógico AND.  
   
 ```  
@@ -72,7 +76,7 @@ RETURN  SELECT 1 AS is_eligible
 <condition> ::= <primitive_condition> [ OR <primitive_condition> ] [ ...n ]  
 ```  
   
-### Condições primitivas  
+### <a name="primitive-conditions"></a>Condições primitivas  
  Uma condição primitiva pode fazer uma das comparações a seguir.  
   
 ```  
@@ -109,7 +113,7 @@ RETURN  SELECT 1 AS is_eligible
   
 -   Use o operador IN para comparar um parâmetro de função com uma lista de valores constantes.  
   
-     Veja um exemplo que verifica se o valor de uma coluna *shipment_status* é `IN (N'Completed', N'Returned', N'Cancelled')`.  
+     Veja um exemplo que verifica se o valor de uma coluna *shipment_status*  é `IN (N'Completed', N'Returned', N'Cancelled')`.  
   
     ```tsql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 nvarchar(15))  
@@ -127,7 +131,7 @@ RETURN  SELECT 1 AS is_eligible
   
     ```  
   
-### Operadores de comparação  
+### <a name="comparison-operators"></a>Operadores de comparação  
  Os operadores de comparação a seguir são compatíveis.  
   
  `<, <=, >, >=, =, <>, !=, !<, !>`  
@@ -136,7 +140,7 @@ RETURN  SELECT 1 AS is_eligible
 <comparison_operator> ::= { < | <= | > | >= | = | <> | != | !< | !> }  
 ```  
   
-### Expressões de constante  
+### <a name="constant-expressions"></a>Expressões de constante  
  As constantes que você usa em uma função de filtro podem ser qualquer expressão determinística que pode ser avaliada ao definir a função. As expressões de constante podem conter os itens a seguir.  
   
 -   Literais Por exemplo, `N’abc’, 123`.  
@@ -147,13 +151,13 @@ RETURN  SELECT 1 AS is_eligible
   
 -   Conversões determinísticas que usam CAST ou CONVERT. Por exemplo, `CONVERT(datetime, '1/1/2016', 101)`.  
   
-### Outras expressões  
+### <a name="other-expressions"></a>Outras expressões  
  Você pode usar os operadores BETWEEN e NOT BETWEEN se a função resultante estiver em conformidade com as regras descritas aqui depois de substituir os operadores BETWEEN e NOT BETWEEN pelas expressões equivalentes AND e OR.  
   
  Você não pode usar subconsultas nem funções não determinísticas como RAND() ou GETDATE().  
   
-## Adicionar uma função de filtro a uma tabela  
- Adicione uma função de filtro a uma tabela executando a instrução **ALTER TABLE** e especificando uma função com valor de tabela embutida existente como o valor do parâmetro **FILTER_PREDICATE**. Por exemplo:  
+## <a name="add-a-filter-function-to-a-table"></a>Adicionar uma função de filtro a uma tabela  
+ Adicione uma função de filtro a uma tabela executando a instrução **ALTER TABLE** e especificando uma função com valor de tabela embutida existente como o valor do parâmetro **FILTER_PREDICATE** . Por exemplo:  
   
 ```tsql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -171,9 +175,10 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
  Não é possível descartar a função com valor de tabela embutida, pois uma tabela está usando a função como seu predicado de filtro. 
 
-> [!TIP] Para melhorar o desempenho da função de filtro, crie um índice em colunas usadas pela função.
+> [!TIP]
+> Para melhorar o desempenho da função de filtro, crie um índice em colunas usadas pela função.
 
- ### Passando nomes de coluna para a função de filtro
+ ### <a name="passing-column-names-to-the-filter-function"></a>Passando nomes de coluna para a função de filtro
  
  Ao atribuir uma função de filtro a uma tabela, especifique os nomes de coluna passados para a função de filtro com um nome de parte única. Se você especificar um nome de três partes ao passar os nomes de coluna, as consultas subsequentes com base em tabelas habilitada para Stretch falharão.
 
@@ -199,7 +204,7 @@ ALTER TABLE SensorTelemetry
   
 ## <a name="addafterwiz"></a>Adicionar uma função de filtro após a execução do Assistente  
   
-Se você quiser usar uma função que não pode criar o Assistente **Habilitar o banco de dados para Stretch**, você pode executar a instrução **ALTER TABLE** para especificar uma função depois que sair do assistente. Antes de aplicar uma função, no entanto, você precisa interromper a migração de dados que já está em andamento e trazer os dados migrados de volta. (Para obter mais informações sobre por que isso é necessário, consulte [Substituir uma função de filtro existente](#replacePredicate).)
+Se você quiser usar uma função que não pode criar o Assistente **Habilitar o banco de dados para Stretch** , você pode executar a instrução **ALTER TABLE** para especificar uma função depois que sair do assistente. Antes de aplicar uma função, no entanto, você precisa interromper a migração de dados que já está em andamento e trazer os dados migrados de volta. (Para obter mais informações sobre por que isso é necessário, consulte [Substituir uma função de filtro existente](#replacePredicate).)
   
 1. Reverta a direção da migração e restaure os dados já migrados. Não é possível cancelar esta operação após ela ser iniciada. Você também incorre em custos no Azure para transferências de dados de saída (saída). Para obter mais informações, consulte [Como os preços do Azure funciona](https://azure.microsoft.com/pricing/details/data-transfers/).  
   
@@ -208,7 +213,7 @@ Se você quiser usar uma função que não pode criar o Assistente **Habilitar o
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
   
-2. Aguarde a migração ser concluída. Você pode verificar o status no **Monitor de Stretch Database** do SQL Server Management Studio ou você pode consultar a exibição **sys.dm_db_rda_migration_status**. Para obter mais informações, veja [Monitorar e solucionar problemas de migração de dados](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) ou [sys.dm_db_rda_migration_status](sys.dm_db_rda_migration_status%20\(Transact-SQL\).md).  
+2. Aguarde a migração ser concluída. Você pode verificar o status no **Monitor de Stretch Database** do SQL Server Management Studio ou você pode consultar a exibição **sys.dm_db_rda_migration_status** . Para obter mais informações, veja [Monitorar e solucionar problemas de migração de dados](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) ou [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
 3. Crie a função de filtro que você deseja aplicar à tabela.  
   
@@ -224,7 +229,7 @@ Se você quiser usar uma função que não pode criar o Assistente **Habilitar o
             );   
     ```  
   
-## Filtrar linhas por data  
+## <a name="filter-rows-by-date"></a>Filtrar linhas por data  
  O exemplo a seguir migra linhas onde a coluna **data** contém um valor anterior a 1º de janeiro de 2016.  
   
 ```tsql  
@@ -239,7 +244,7 @@ GO
   
 ```  
   
-## Filtrar linhas pelo valor em uma coluna de status  
+## <a name="filter-rows-by-the-value-in-a-status-column"></a>Filtrar linhas pelo valor em uma coluna de status  
  O exemplo a seguir migra linhas onde a coluna **status** contém um dos valores especificados.  
   
 ```tsql  
@@ -254,7 +259,7 @@ GO
   
 ```  
   
-## Filtrar linhas usando uma janela deslizante  
+## <a name="filter-rows-by-using-a-sliding-window"></a>Filtrar linhas usando uma janela deslizante  
  Para filtrar linhas usando uma janela deslizante, lembre-se dos requisitos a seguir para a função de filtro.  
   
 -   A função deve ser determinística. Portanto, você não pode criar uma função que recalcule automaticamente a janela deslizante com o passar do tempo.  
@@ -322,7 +327,7 @@ COMMIT ;
   
 ```  
   
-## Mais exemplos de funções de filtro válidas  
+## <a name="more-examples-of-valid-filter-functions"></a>Mais exemplos de funções de filtro válidas  
   
 -   O exemplo a seguir combina duas condições primitivas usando o operador lógico AND.  
   
@@ -395,7 +400,7 @@ COMMIT ;
   
     ```  
   
-## Exemplos de função de filtro que não são válidas  
+## <a name="examples-of-filter-functions-that-arent-valid"></a>Exemplos de função de filtro que não são válidas  
   
 -   A função a seguir não é válida porque contém uma conversão não determinística.  
   
@@ -483,7 +488,7 @@ COMMIT ;
   
     ```  
   
-## Como o Stretch Database aplica a função de filtro  
+## <a name="how-stretch-database-applies-the-filter-function"></a>Como o Stretch Database aplica a função de filtro  
  O Stretch Database aplica a função de filtro à tabela e determina linhas qualificadas usando o operador CROSS APPLY. Por exemplo:  
   
 ```tsql  
@@ -493,7 +498,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  Se a função retornar um resultado não vazio para a linha, a linha será qualificada para ser migrada.  
   
 ## <a name="replacePredicate"></a>Substituir uma função de filtro existente  
- Você pode substituir uma função de filtro especificado anteriormente executando a instrução **ALTER TABLE** novamente e especificando um novo valor para o parâmetro **FILTER_PREDICATE**. Por exemplo:  
+ Você pode substituir uma função de filtro especificado anteriormente executando a instrução **ALTER TABLE** novamente e especificando um novo valor para o parâmetro **FILTER_PREDICATE** . Por exemplo:  
   
 ```tsql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -512,9 +517,9 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
 -   A ordem dos argumentos do operador não pode mudar.  
   
--   Somente valores constantes que fazem parte de uma comparação `<, <=, >, >=` podem ser alterados de uma maneira que torne a função menos restritiva.  
+-   Somente valores constantes que fazem parte de uma comparação `<, <=, >, >=`  podem ser alterados de uma maneira que torne a função menos restritiva.  
   
-### Exemplo de uma substituição válida  
+### <a name="example-of-a-valid-replacement"></a>Exemplo de uma substituição válida  
  Suponha que a função a seguir seja a função de filtro atual.  
   
 ```tsql  
@@ -543,7 +548,7 @@ GO
   
 ```  
   
-### Exemplos de substituições que não são válidas  
+### <a name="examples-of-replacements-that-arent-valid"></a>Exemplos de substituições que não são válidas  
  A função a seguir não é uma substituição válida porque a nova constante de data (que especifica uma data de fechamento anterior) não torna a função menos restritiva.  
   
 ```tsql  
@@ -587,8 +592,8 @@ GO
   
 ```  
   
-## Remover uma função de filtro de uma tabela  
- Para migrar a tabela inteira em vez de linhas selecionadas, remova a função existente definindo **FILTER_PREDICATE** como nulo. Por exemplo:  
+## <a name="remove-a-filter-function-from-a-table"></a>Remover uma função de filtro de uma tabela  
+ Para migrar a tabela inteira em vez de linhas selecionadas, remova a função existente definindo **FILTER_PREDICATE**  como nulo. Por exemplo:  
   
 ```tsql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -600,17 +605,18 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
  Depois de remover a função de filtro, todas as linhas na tabela serão qualificadas para migração. Como resultado, não será possível especificar uma função de filtro para a mesma tabela posteriormente, a menos que você traga de volta todos os dados remotos para a tabela do primeiro Azure. Essa restrição existe para evitar a situação em que as linhas não são qualificadas para migração quando você fornece uma nova função de filtro que já foi migrada para o Azure.  
   
-## Verificar a função de filtro aplicada a uma tabela  
- Para verificar a função de filtro aplicada a uma tabela, abra a exibição de catálogo **sys.remote_data_archive_tables** e verifique o valor da coluna **filter_predicate**. Se o valor for nulo, a tabela inteira será qualificada para arquivamento. Para obter mais informações, veja [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../Topic/sys.remote_data_archive_tables%20\(Transact-SQL\).md).  
+## <a name="check-the-filter-function-applied-to-a-table"></a>Verificar a função de filtro aplicada a uma tabela  
+ Para verificar a função de filtro aplicada a uma tabela, abra a exibição de catálogo **sys.remote_data_archive_tables** e verifique o valor da coluna **filter_predicate** . Se o valor for nulo, a tabela inteira será qualificada para arquivamento. Para obter mais informações, veja [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md).  
   
-## Observações de segurança para funções de filtro  
+## <a name="security-notes-for-filter-functions"></a>Observações de segurança para funções de filtro  
 Uma conta com privilégios de db_owner comprometida pode fazer o seguinte.  
   
 -   Criar e aplicar uma função com valor de tabela que consome uma grande quantidade de recursos do servidor ou espera por um longo período, resultando em uma negação de serviço.  
   
 -   Criar e aplicar uma função com valor de tabela que torna possível inferir o conteúdo de uma tabela para a qual o usuário negou explicitamente o acesso de leitura.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
+

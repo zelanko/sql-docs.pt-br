@@ -1,31 +1,35 @@
 ---
-title: "LineString | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "subtipo de geometria LineString [SQL Server]"
-  - "subtipos de geometria [SQL Server]"
+title: LineString | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- LineString geometry subtype [SQL Server]
+- geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9132c20fb46f36511a781c934026ebf01503375d
+ms.lasthandoff: 04/11/2017
+
 ---
-# LineString
+# <a name="linestring"></a>LineString
   Um **LineString** é um objeto unidimensional que representa uma sequência de pontos e os segmentos de linha que os conectam.  
   
-## Instâncias LineString  
- A ilustração abaixo mostra exemplos de instâncias **LineString**.  
+## <a name="linestring-instances"></a>Instâncias LineString  
+ A ilustração abaixo mostra exemplos de instâncias **LineString** .  
   
- ![Exemplos das instâncias geométricas LineString](../../relational-databases/spatial/media/linestring.png "Exemplos das instâncias geométricas LineString")  
+ ![Exemplos de instâncias geométricas LineString](../../relational-databases/spatial/media/linestring.gif "Exemplos de instâncias geométricas LineString")  
   
  Conforme mostrado na ilustração:  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 24
   
 -   A Figura 4 é uma instância **LineString** fechada, não simples e, portanto, não é um anel.  
   
-### Instâncias aceitas  
+### <a name="accepted-instances"></a>Instâncias aceitas  
  As instâncias **LineString** aceitas podem ser inseridas em uma variável geometry, mas talvez não sejam instâncias **LineString** válidas. Os critérios a seguir devem ser atendidos para que uma instância **LineString** seja aceita. A instância deve ser formada por pelo menos dois pontos ou deve estar vazia. As instâncias LineString a seguir são aceitas.  
   
 ```  
@@ -54,7 +58,7 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
-### Instâncias válidas  
+### <a name="valid-instances"></a>Instâncias válidas  
  Para que uma instância **LineString** seja válida, ela deve atender aos critérios a seguir.  
   
 1.  A instância **LineString** deve ser aceita.  
@@ -85,7 +89,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
 > [!WARNING]  
 >  A detecção de sobreposições de **LineString** baseia-se em cálculos de pontos flutuantes, os quais não são exatos.  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra como criar uma instância `geometry``LineString` com três pontos e uma SRID de 0:  
   
 ```  
@@ -125,7 +129,7 @@ LINESTRING(1 3, 1 3) is not a valid LineString
 POINT(1 3) is a valid Point.  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [STLength &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STStartPoint &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   
  [STEndpoint &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stendpoint-geometry-data-type.md)   

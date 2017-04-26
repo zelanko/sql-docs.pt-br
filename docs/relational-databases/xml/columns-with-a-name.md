@@ -1,24 +1,28 @@
 ---
-title: "Colunas com um nome | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "nomes [SQL Server], colunas com"
+title: Colunas com um nome | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3cda571a6e30387ccf1764e94fe6e6a3f1625262
+ms.lasthandoff: 04/11/2017
+
 ---
-# Colunas com um nome
+# <a name="columns-with-a-name"></a>Colunas com um nome
   As seguintes são as condições específicas nas quais colunas de conjunto de linhas com um nome são mapeadas, diferenciando maiúsculas e minúsculas, para o XML resultante:  
   
 -   O nome da coluna começa com uma arroba (@).  
@@ -31,8 +35,8 @@ caps.handback.revision: 8
   
 -   Uma coluna tem um nome diferente.  
   
-## O nome da coluna começa com uma arroba (@)  
- Se o nome da coluna começar com uma arroba (@) e não contiver uma barra (/), um atributo do elemento <`row`> que tenha o valor da coluna correspondente será criado. Por exemplo, a consulta a seguir retorna um conjunto de linhas de duas colunas (@PmId, Name). No XML resultante, um atributo **PmId** é adicionado ao elemento <`row`> correspondente e um valor de ProductModelID é atribuído a ele.  
+## <a name="column-name-starts-with-an-at-sign-"></a>O nome da coluna começa com uma arroba (@)  
+ Se o nome da coluna começar com uma arroba (@) e não contiver uma barra (/), um atributo do elemento <`row`> que tenha o valor da coluna correspondente será criado. Por exemplo, a seguinte consulta retorna um conjunto de linhas (@PmId, Nome) de duas colunas. No XML resultante, um atributo **PmId** é adicionado ao elemento <`row`> correspondente e um valor de ProductModelID é atribuído a ele.  
   
 ```  
   
@@ -64,7 +68,7 @@ FOR XML PATH
 go  
 ```  
   
-## O nome da coluna não começa com uma arroba (@)  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>O nome da coluna não começa com uma arroba (@)  
  Se o nome da coluna não começar com uma arroba (@), não for um dos testes do nó XPath e não contiver uma barra (/), um elemento XML que é um subelemento do elemento linha, <`row`>, será criado, por padrão.  
   
  A consulta a seguir especifica o nome da coluna, o resultado. Portanto um filho do elemento <`result`> é adicionado ao elemento <`row`>.  
@@ -111,8 +115,8 @@ go
 </row>  
 ```  
   
-## O nome da coluna não começa com uma arroba @ e contém uma barra (/)  
- Se o nome da coluna não começar com uma arroba (@), mas contiver uma barra (/), o nome da coluna indicará uma hierarquia XML. Por exemplo, se o nome da coluna for “Name1/Name2/Name3.../Name***n***”, cada Name***i*** representará um nome do elemento que está aninhado no elemento da linha atual (para i=1) ou que está sob o elemento que tem o nome Name***i-1***. Se Name***n*** começar com '@', ele será mapeado para um atributo de elemento Name***n-1***.  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>O nome da coluna não começa com uma arroba @ e contém uma barra (/)  
+ Se o nome da coluna não começar com uma arroba (@), mas contiver uma barra (/), o nome da coluna indicará uma hierarquia XML. Por exemplo, se o nome da coluna for “Name1/Name2/Name3.../Name***n*** ”, cada Name***i*** representará um nome do elemento que está aninhado no elemento da linha atual (para i=1) ou que está sob o elemento que tem o nome Name***i-1***. Se Name***n*** começar com '@', ele será mapeado para um atributo de elemento Name***n-1*** .  
   
  Por exemplo, a consulta a seguir retorna a ID e o nome de um funcionário que são representados como um elemento complexo EmpName que contém um Nome, Segundo nome e Sobrenome.  
   
@@ -198,10 +202,10 @@ FOR XML PATH
 </row>  
 ```  
   
-## Várias colunas compartilham o mesmo prefixo  
+## <a name="several-columns-share-the-same-path-prefix"></a>Várias colunas compartilham o mesmo prefixo  
  Se várias colunas subsequentes compartilharem o mesmo prefixo de caminho, elas serão agrupadas sob o mesmo nome. Se diferentes prefixos de namespace estiverem sendo usados, mesmo que estejam associados ao mesmo namespace, um caminho será considerado diferente. Na consulta anterior, as colunas FirstName, MiddleName e LastName compartilham o memo prefixo EmpName. Portanto elas são adicionadas como filhas do elemento <`EmpName`>. Esse também é o caso quando o elemento <`Address`> foi criado no exemplo anterior.  
   
-## Uma coluna tem um nome diferente  
+## <a name="one-column-has-a-different-name"></a>Uma coluna tem um nome diferente  
  Se uma coluna com um nome diferente aparecer no meio, ela quebrará o agrupamento, conforme mostrado na seguinte consulta modificada. A consulta quebra o agrupamento de FirstName, MiddleName e LastName, conforme especificado na consulta anterior, adicionando colunas de endereço no meio das colunas FirstName e MiddleName.  
   
 ```  
@@ -238,7 +242,7 @@ FOR XML PATH
 </row>  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usar o modo PATH com FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

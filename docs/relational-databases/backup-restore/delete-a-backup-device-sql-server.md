@@ -1,28 +1,32 @@
 ---
-title: "Excluir um dispositivo de backup (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "backups de banco de dados [SQL Server], excluindo dispositivos"
-  - "dispositivos de backup [SQL Server], excluindo"
-  - "excluindo dispositivos de backup"
-  - "removendo dispositivos de backup"
-  - "fazendo backup de bancos de dados [SQL Server], dispositivos de backup"
+title: Excluir um dispositivo de backup (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database backups [SQL Server], deleting devices
+- backup devices [SQL Server], deleting
+- deleting backup devices
+- removing backup devices
+- backing up databases [SQL Server], backup devices
 ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3d68cd7bdf48e838c060705166f3714eaa7db581
+ms.lasthandoff: 04/11/2017
+
 ---
-# Excluir um dispositivo de backup (SQL Server)
+# <a name="delete-a-backup-device-sql-server"></a>Excluir um dispositivo de backup (SQL Server)
   Este tópico descreve como excluir um dispositivo de backup no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -46,7 +50,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para excluir um dispositivo de backup  
+#### <a name="to-delete-a-backup-device"></a>Para excluir um dispositivo de backup  
   
 1.  Depois de conectar-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
@@ -60,13 +64,13 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para excluir um dispositivo de backup  
+#### <a name="to-delete-a-backup-device"></a>Para excluir um dispositivo de backup  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o seguinte exemplo na consulta. Este exemplo mostra como usar [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) para excluir um dispositivo de backup. Execute o primeiro exemplo para criar o dispositivo de backup `mybackupdisk` e o nome físico `c:\backup\backup1.bak`. Execute **sp_dropdevice** para excluir o dispositivo de backup `mybackupdisk`. O parâmetro `delfile` exclui o nome físico.  
+3.  Copie e cole o seguinte exemplo na consulta. Este exemplo mostra como usar [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) para excluir um dispositivo de backup. Execute o primeiro exemplo para criar o dispositivo de backup `mybackupdisk` e o nome físico `c:\backup\backup1.bak`. Execute **sp_dropdevice** para excluir o dispositivo de backup `mybackupdisk` . O parâmetro `delfile` exclui o nome físico.  
   
 ```tsql  
 --Define a backup device and physical name.   
@@ -82,7 +86,7 @@ GO
   
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Exibir as propriedades e o conteúdo de um dispositivo de backup lógico &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
  [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

@@ -1,24 +1,28 @@
 ---
-title: "Criar um instant&#226;neo do banco de dados (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "instantâneo do banco de dados [SQL Server], criando"
+title: "Criar um instantâneo de banco de dados (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database snapshots [SQL Server], creating
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b3f980ff1cdf0dd08b0970887988eafa245e9622
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar um instant&#226;neo do banco de dados (Transact-SQL)
+# <a name="create-a-database-snapshot-transact-sql"></a>Criar um instantâneo do banco de dados (Transact-SQL)
   A única maneira de criar um instantâneo do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] não dá suporte à criação de instantâneos de banco de dados.  
   
   
@@ -27,11 +31,11 @@ caps.handback.revision: 56
 ###  <a name="Prerequisites"></a> Pré-requisitos  
  O banco de dados de origem, que pode usar qualquer modelo de recuperação, deve atender aos seguintes pré-requisitos:  
   
--   A instância de servidor deve estar sendo executada em uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que oferece suporte a instantâneos de banco de dados. Para obter mais informações sobre o suporte para instantâneos de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   A instância de servidor deve estar sendo executada em uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que oferece suporte a instantâneos de banco de dados. Para obter mais informações sobre o suporte para instantâneos de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   O banco de dados de origem precisa estar online, a menos que se trate de um banco de dados espelho dentro de uma sessão de espelhamento de banco de dados.  
   
--   Para criar um instantâneo do banco de dados em um banco de dados espelho, o banco de dados precisa estar no [estado de espelhamento](../../database-engine/database-mirroring/mirroring-states-sql-server.md) sincronizado.  
+-   Para criar um instantâneo do banco de dados em um banco de dados espelho, o banco de dados precisa estar no [estado de espelhamento](../../database-engine/database-mirroring/mirroring-states-sql-server.md)sincronizado.  
   
 -   O banco de dados de origem não pode ser configurado como banco de dados compartilhado escalonável.  
 
@@ -58,7 +62,7 @@ caps.handback.revision: 56
   
 -   A data de criação e o horário do instantâneo, um número de sequência ou alguma outra informação, como hora do dia, para distinguir instantâneos sequenciais em um determinado banco de dados.  
   
- Por exemplo, considere uma série de instantâneos para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Três instantâneos diários são criados em intervalos de 6 horas entre 6h e 18h, com base em um relógio de 24 horas. Cada instantâneo diário é mantido durante 24 horas antes de ser descartado e substituído por um instantâneo novo de mesmo nome. Note que cada nome de instantâneo indica a hora, mas não o dia:  
+ Por exemplo, considere uma série de instantâneos para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Três instantâneos diários são criados em intervalos de 6 horas entre 6h e 18h, com base em um relógio de 24 horas. Cada instantâneo diário é mantido durante 24 horas antes de ser descartado e substituído por um instantâneo novo de mesmo nome. Note que cada nome de instantâneo indica a hora, mas não o dia:  
   
 ```  
 AdventureWorks_snapshot_0600  
@@ -113,7 +117,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     Em que *source_**database_name* é o banco de dados de origem,  *logical_file_name* é o nome lógico usado no SQL Server ao referenciar o arquivo, *os_file_name* é o caminho e o nome do arquivo usado pelo sistema operacional quando você cria o arquivo e *database_snapshot_name* é o nome do instantâneo para o qual você deseja reverter o banco de dados. Para obter uma descrição completa dessa sintaxe, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+     Em que *source_**database_name* é o banco de dados de origem, *logical_file_name*é o nome lógico usado no SQL Server ao referenciar o arquivo, *os_file_name* é o caminho e o nome do arquivo usado pelo sistema operacional quando você cria o arquivo e *database_snapshot_name* é o nome do instantâneo para o qual você deseja reverter o banco de dados. Para obter uma descrição completa dessa sintaxe, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
     > [!NOTE]  
     >  Quando você cria um instantâneo do banco de dados, arquivos de log, arquivos offline, arquivos de restauração e arquivos excluídos não são permitidos na instrução CREATE DATABASE.  
@@ -130,7 +134,7 @@ AdventureWorks_snapshot_evening
 -   B. [Criando um instantâneo no banco de dados Vendas](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> A. Criando um instantâneo no banco de dados AdventureWorks  
- Este exemplo cria um instantâneo de banco de dados no banco de dados `AdventureWorks`. O nome do instantâneo, `AdventureWorks_dbss_1800` e o nome do arquivo de seu respectivo arquivo esparso, `AdventureWorks_data_1800.ss`, indicam a hora da criação, 18h00.  
+ Este exemplo cria um instantâneo de banco de dados no banco de dados `AdventureWorks` . O nome do instantâneo, `AdventureWorks_dbss_1800`e o nome do arquivo de seu respectivo arquivo esparso, `AdventureWorks_data_1800.ss`, indicam a hora da criação, 18h00.  
   
 ```  
 CREATE DATABASE AdventureWorks_dbss1800 ON  
@@ -141,7 +145,7 @@ GO
 ```  
   
 ####  <a name="Creating_on_Sales"></a> B. Criando um instantâneo no banco de dados Vendas  
- Este exemplo cria um instantâneo do banco de dados, `sales_snapshot1200`, no banco de dados `Sales`. Este banco de dados foi criado no exemplo “Criando um banco de dados que tem grupos de arquivos” em [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Este exemplo cria um instantâneo do banco de dados, `sales_snapshot1200`, no banco de dados `Sales` . Este banco de dados foi criado no exemplo “Criando um banco de dados que tem grupos de arquivos” em [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  
@@ -171,8 +175,10 @@ GO
   
 -   [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Instantâneos de banco de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   
+
+

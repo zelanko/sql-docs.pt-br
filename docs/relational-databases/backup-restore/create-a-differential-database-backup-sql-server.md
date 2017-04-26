@@ -1,27 +1,31 @@
 ---
-title: "Criar um backup diferencial de banco de dados (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "backups diferenciais completos [SQL Server]"
-  - "backups de banco de dados [SQL Server], backups diferenciais completos"
-  - "fazendo backups de banco de dados [SQL Server], backups diferenciais completos"
-  - "backups [SQL Server], criando"
+title: Criar um backup diferencial do banco de dados (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full differential backups [SQL Server]
+- database backups [SQL Server], full differential backups
+- backing up databases [SQL Server], full differential backups
+- backups [SQL Server], creating
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72e15006bdae1d2ae6d33a9780b62f17fd88a69b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar um backup diferencial de banco de dados (SQL Server)
+# <a name="create-a-differential-database-backup-sql-server"></a>Criar um backup diferencial de banco de dados (SQL Server)
   Crie um backup de banco de dados diferencial no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Seções neste tópico**  
@@ -44,7 +48,7 @@ caps.handback.revision: 34
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitations and restrictions  
   
 -   A instrução BACKUP não é permitida em uma transação explícita ou implícita.  
   
@@ -59,19 +63,19 @@ caps.handback.revision: 34
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Verifique suas permissões primeiro!  
- As permissões BACKUP DATABASE e BACKUP LOG usam como padrão os membros da função de servidor fixa **sysadmin** e as funções de banco de dados fixas **db_owner** e **db_backupoperator**.  
+ As permissões BACKUP DATABASE e BACKUP LOG usam como padrão os membros da função de servidor fixa **sysadmin** e as funções de banco de dados fixas **db_owner** e **db_backupoperator** .  
   
  Os problemas de propriedade e permissão no arquivo físico do dispositivo de backup vão interferir em uma operação de backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisa ser capaz de ler e gravar no dispositivo; a conta sob a qual o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa deve ter permissões de gravação. No entanto, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que adiciona uma entrada para um dispositivo de backup nas tabelas do sistema, **não** verifica permissões de acesso a arquivos. Os problemas de permissões no arquivo físico do dispositivo de backup não serão óbvios até o recurso físico ser acessado quando você tentar fazer backup ou restaurar.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
   
-#### Criar um backup diferencial de banco de dados  
+#### <a name="create-a-differential-database-backup"></a>Criar um backup diferencial de banco de dados  
   
 1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
 2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco do sistema.  
   
-3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas** e clique em **Backup**. Será exibida a caixa de diálogo **Backup de Banco de Dados** .  
+3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**e clique em **Backup**. Será exibida a caixa de diálogo **Backup de Banco de Dados** .  
   
 4.  Na caixa de listagem **Banco de Dados** , verifique o nome do banco de dados. Você pode, como opção, selecionar um banco de dados diferente da lista.  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 34
 5.  Na caixa de listagem **Tipo de backup** , selecione **Diferencial**.  
   
     > [!IMPORTANT]  
-    >  Quando você selecionar **Diferencial**, verifique se a caixa de seleção **Copiar Somente Backup** está desmarcada.  
+    >  Quando você selecionar**Diferencial** , verifique se a caixa de seleção **Copiar Somente Backup** está desmarcada.  
   
 6.  Para **Componente de backup**, clique em **Banco de Dados**.  
   
@@ -92,7 +96,7 @@ caps.handback.revision: 34
   
     -   Para que o conjunto de backup expire depois de um número específico de dias, clique em **Depois** (a opção padrão) e digite quantos dias depois da criação do conjunto ele deve expirar. Esse valor pode ser de 0 a 99999 dias; 0 dias significa que o conjunto de backup nunca vai expirar.  
   
-         O valor padrão é definido na opção **Retenção de mídia de backup padrão (em dias)** da caixa de diálogo **Propriedades do Servidor** (página **Configurações do Banco de Dados**). Para acessar, clique com o botão direito do mouse no nome do servidor em Pesquisador de Objetos e selecione propriedades. Depois, selecione a página **Configurações de Banco de Dados**.  
+         O valor padrão é definido na opção **Retenção de mídia de backup padrão (em dias)** da caixa de diálogo **Propriedades do Servidor** (página**Configurações do Banco de Dados** ). Para acessar, clique com o botão direito do mouse no nome do servidor em Pesquisador de Objetos e selecione propriedades. Depois, selecione a página **Configurações de Banco de Dados** .  
   
     -   Para que o conjunto de backup expire em uma data específica, clique no campo **Em**e digite a data de expiração do conjunto.  
   
@@ -118,14 +122,14 @@ caps.handback.revision: 34
   
     -   **Verificar backup quando concluído**  
   
-    -   **Executar soma de verificação antes de gravar na mídia**e, como opção, **Continuar com erro da soma de verificação**. Para obter informações sobre somas de verificação, veja [Erros de mídia possíveis durante backup e restauração &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
+    -   **Executar soma de verificação antes de gravar na mídia**e, como opção, **Continuar com erro da soma de verificação**. Para obter informações sobre somas de verificação, consulte [Possible Media Errors During Backup and Restore &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md) [Possíveis erros de mídia durante backup e restauração (SQL Server)].  
   
 14. Se o backup estiver sendo feito em uma unidade de fita (conforme especificado na seção **Destino** da página **Geral**), a opção **Descarregar a fita após o backup** estará ativa. Clicar nessa opção ativa a opção **Rebobinar a fita antes de descarregar** .  
   
     > [!NOTE]  
-    >  As opções na seção **Log de transações** estarão inativos exceto se o backup estiver sendo feito em um log de transações (como especificado na seção **Tipo de backup** da página **Geral**).  
+    >  As opções na seção **Log de transações** estarão inativos exceto se o backup estiver sendo feito em um log de transações (como especificado na seção **Tipo de backup** da página **Geral** ).  
   
-15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e posteriores dão suporte para [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup**. Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup** e evitar a compactação marcando **Não compactar o backup**.  
+15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e posteriores dão suporte para [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup** . Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup**e evitar a compactação marcando **Não compactar o backup**.  
   
      **Para exibir o padrão de compactação de backup atual**  
   
@@ -136,7 +140,7 @@ caps.handback.revision: 34
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL  
   
-#### Criar um backup diferencial de banco de dados  
+#### <a name="create-a-differential-database-backup"></a>Criar um backup diferencial de banco de dados  
   
 1.  Execute a instrução BACKUP DATABASE para criar o backup de banco de dados diferencial, especificando:  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 34
      BACKUP DATABASE *database_name* TO <backup_device> WITH DIFFERENTIAL  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
- Este exemplo cria um backup completo e diferencial de banco de dados para o banco de dados `MyAdvWorks`.  
+ Este exemplo cria um backup completo e diferencial de banco de dados para o banco de dados `MyAdvWorks` .  
   
 ```tsql  
 -- Create a full database backup first.  
@@ -168,7 +172,7 @@ BACKUP DATABASE MyAdvWorks
 GO  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Backups diferenciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
  [Fazer backup de arquivos e de grupos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

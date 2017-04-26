@@ -1,28 +1,32 @@
 ---
-title: "Alterando tabelas com otimiza&#231;&#227;o de mem&#243;ria | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Alterando tabelas com otimização de memória | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e4a8b3f4dabec4d46813c570e1a04fd469075a66
+ms.lasthandoff: 04/11/2017
+
 ---
-# Alterando tabelas com otimiza&#231;&#227;o de mem&#243;ria
+# <a name="altering-memory-optimized-tables"></a>Alterando tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Alterações de esquema e de índice em tabelas com otimização de memória podem ser executadas usando a instrução ALTER TABLE. O aplicativo de banco de dados pode continuar em execução e qualquer operação que acessa a tabela será bloqueada até que o processo de alteração seja concluído.  
   
-## ALTER TABLE  
+## <a name="alter-table"></a>ALTER TABLE  
  
 A sintaxe ALTER TABLE é usada para fazer alterações no esquema de tabela, bem como para adicionar, excluir e recompilar índices. Índices são considerados parte da definição de tabela:  
   
@@ -75,12 +79,12 @@ A sintaxe ALTER TABLE é usada para fazer alterações no esquema de tabela, bem
   
  Para obter mais informações sobre a funcionalidade ALTER TABLE e a sintaxe completa, veja [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
-## Dependência associada a esquema  
+## <a name="schema-bound-dependency"></a>Dependência associada a esquema  
  Procedimentos armazenados compilados de modo nativo devem ser associados a esquema, o que significa que eles têm uma dependência associada a esquema nas tabelas com otimização de memória que eles acessam e nas colunas às quais eles fazem referência. A dependência associada a esquema é uma relação entre duas entidades que impede que a entidade referenciada seja cancelada ou modificada de modo incompatível enquanto existir a entidade mencionada.  
   
  Por exemplo, se um procedimento armazenado compilado de modo nativo associado a esquema fizer referência a uma coluna *c1* da tabela *mytable*, a coluna *c1* não poderá ser removida. Da mesma forma, se houver um procedimento desse tipo com uma instrução INSERT sem uma lista de colunas (por exemplo, `INSERT INTO dbo.mytable VALUES (...)`), nenhuma coluna da tabela poderá ser removida.  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  O exemplo a seguir altera o número de buckets de um índice de hash existente. Isso recompila o índice de hash com o novo número de buckets, enquanto outras propriedades do índice de hash permanecem as mesmas.  
   
 ```tsql
@@ -145,7 +149,7 @@ GO
 
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
 
-## Log de ALTER TABLE em tabelas com otimização de memória
+## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>Log de ALTER TABLE em tabelas com otimização de memória
 
 
 Em uma tabela com otimização de memória, a maioria dos cenários de ALTER TABLE agora é executada em paralelo e resulta em uma otimização das gravações no log de transações. A otimização é que apenas as alterações de metadados são gravadas no log de transações. No entanto, as operações de ALTER TABLE a seguir são executadas em thread único e não têm otimização de log.
@@ -167,7 +171,9 @@ As operações de thread único requerem que todo o conteúdo da tabela alterada
     - *Exceção:* o aumento de uma coluna já fora de linha é registrado de forma otimizada.
 
 
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 
 [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
+
+

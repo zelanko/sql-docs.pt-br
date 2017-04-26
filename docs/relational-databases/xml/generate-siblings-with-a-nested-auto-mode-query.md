@@ -1,33 +1,37 @@
 ---
-title: "Gerar irm&#227;os com uma consulta aninhada em modo AUTO | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "consultas [XML no SQL Server], aninhadas em modo AUTO"
-  - "consulta aninhada em modo AUTO"
+title: "Gerar irmãos com uma consulta aninhada em modo AUTO | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [XML in SQL Server], nested AUTO mode
+- nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d85a1b59656222cf07338d2eb98925e30a5c658
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gerar irm&#227;os com uma consulta aninhada em modo AUTO
+# <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Gerar irmãos com uma consulta aninhada em modo AUTO
   O exemplo a seguir mostra como gerar irmãos usando uma consulta aninhada em modo AUTO. A única outra maneira de gerar esse tipo de XML é usar o modo EXPLICIT. No entanto isso pode ser trabalhoso.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  Esta consulta constrói XML que fornece informações de pedidos de vendas. Isso inclui o seguinte:  
   
--   Informações de cabeçalho de ordem de venda, `SalesOrderID`, `SalesPersonID` e `OrderDate`. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] armazena essas informações na tabela `SalesOrderHeader`.  
+-   Informações de cabeçalho de ordem de venda, `SalesOrderID`, `SalesPersonID`e `OrderDate`. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] armazena essas informações na tabela `SalesOrderHeader` .  
   
--   Informações sobre detalhes de pedidos de vendas. Isso inclui um ou mais produtos pedidos, o preço unitário e a quantidade pedida. Essas informações são armazenadas na tabela `SalesOrderDetail`.  
+-   Informações sobre detalhes de pedidos de vendas. Isso inclui um ou mais produtos pedidos, o preço unitário e a quantidade pedida. Essas informações são armazenadas na tabela `SalesOrderDetail` .  
   
 -   Informações sobre o vendedor. Esse é o vendedor que obteve o pedido. A tabela `SalesPerson` fornece o `SalesPersonID`. Para essa consulta, você precisa unir essa tabela com a tabela `Employee` para localizar o nome do vendedor.  
   
@@ -65,13 +69,13 @@ FOR XML AUTO, TYPE
   
 -   Consulta o conjunto de linhas, `SalesOrder`, especificado na cláusula `FROM`. O resultado é um XML com um ou mais elementos <`SalesOrder`>.  
   
--   Especifica o modo `AUTO` e a diretiva `TYPE`. `AUTO` O modo transforma o resultado da consulta em XML e a diretiva `TYPE` retorna o resultado como tipo **xml**.  
+-   Especifica o modo `AUTO` e a diretiva `TYPE` . `AUTO` O modo transforma o resultado da consulta em XML e a diretiva `TYPE` retorna o resultado como tipo **xml** .  
   
 -   Inclui duas instruções `SELECT` aninhadas separadas por uma vírgula. O primeiro `SELECT` aninhado recupera informações sobre pedidos de vendas, cabeçalho e detalhes, e o segundo `SELECT` aninhado recupera informações sobre o vendedor.  
   
-    -   A própria instrução `SELECT` que recupera `SalesOrderID`, `SalesPersonID` e `CustomerID` inclui outra instrução `SELECT ... FOR XML` aninhada (com modo `AUTO` e diretiva `TYPE`) que retorna informações sobre detalhes do pedido de vendas.  
+    -   A própria instrução `SELECT` que recupera `SalesOrderID`, `SalesPersonID`e `CustomerID` inclui outra instrução `SELECT ... FOR XML` aninhada (com modo `AUTO` e diretiva `TYPE` ) que retorna informações sobre detalhes do pedido de vendas.  
   
- A instrução `SELECT` que recupera as informações do vendedor consulta um conjunto de linhas, `SalesPerson`, criado na cláusula `FROM`. Para que as consultas `FOR XML` funcionem, você deve fornecer um nome para o conjunto de linhas anônimo gerado na cláusula `FROM`. Nesse caso, o nome fornecido é `SalesPerson`.  
+ A instrução `SELECT` que recupera as informações do vendedor consulta um conjunto de linhas, `SalesPerson`, criado na cláusula `FROM` . Para que as consultas `FOR XML` funcionem, você deve fornecer um nome para o conjunto de linhas anônimo gerado na cláusula `FROM` . Nesse caso, o nome fornecido é `SalesPerson`.  
   
  Este é o resultado parcial:  
   
@@ -139,11 +143,11 @@ FOR XML AUTO, TYPE
 </Sales.SalesOrderHeader>  
 ```  
   
- Como a diretiva `TYPE` retorna um resultado de consulta como o tipo **xml**, é possível consultar o XML resultante usando vários métodos do tipo de dados **xml**. Para obter mais informações, veja [Métodos do tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md). Na consulta a seguir, observe o seguinte:  
+ Como a diretiva `TYPE` retorna um resultado de consulta como o tipo **xml** , é possível consultar o XML resultante usando vários métodos do tipo de dados **xml** . Para obter mais informações, veja [Métodos do tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md). Na consulta a seguir, observe o seguinte:  
   
--   A consulta anterior é adicionada na cláusula `FROM`. O resultado da consulta é retornado como uma tabela. Observe o alias de `XmlCol` que é adicionado.  
+-   A consulta anterior é adicionada na cláusula `FROM` . O resultado da consulta é retornado como uma tabela. Observe o alias de `XmlCol` que é adicionado.  
   
--   A cláusula `SELECT` especifica um XQuery em relação à `XmlCol` retornada na cláusula `FROM`. O método **query()** do tipo de dados **xml** é usado para especificar o XQuery. Para obter mais informações, veja [Método query&#40;&#41; &#40;tipo de dados xml&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
+-   A cláusula `SELECT` especifica um XQuery em relação à `XmlCol` retornada na cláusula `FROM` . O método **query()** do tipo de dados **xml** é usado para especificar o XQuery. Para obter mais informações, veja [Método query&#40;&#41; &#40;tipo de dados xml&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  
@@ -164,7 +168,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usar consultas FOR XML aninhadas](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

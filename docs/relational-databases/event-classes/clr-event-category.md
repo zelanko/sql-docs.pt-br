@@ -1,34 +1,38 @@
 ---
-title: "Categoria de evento CLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classes de evento [SQL Server], categoria de evento CLR"
-  - "classes de evento do SQL Server, categoria de evento CLR"
-  - "categoria de evento CLR [SQL Server]"
+title: Categoria de eventos de CLR | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event classes [SQL Server], CLR event category
+- SQL Server event classes, CLR event category
+- CLR event category [SQL Server]
 ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31222b30465a65341e3a00c0567790ae93bf24ff
+ms.lasthandoff: 04/11/2017
+
 ---
-# Categoria de evento CLR
+# <a name="clr-event-category"></a>Categoria de evento CLR
   A categoria de evento **CLR** inclui classes de evento que são geradas pela execução de objetos CLR (Common Language Runtime) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] dentro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
- ## Classe de evento Assembly Load 
+ ## <a name="assembly-load-event-class"></a>Classe de evento Assembly Load 
   A classe de evento **Assembly Load** ocorre quando uma solicitação para carregar um assembly é executada.  
   
  Inclua a classe de evento **Assembly Load** em rastreamentos onde você quiser monitorar cargas de assembly. Isso pode ser útil ao solucionar problemas de uma consulta que usa CLR (Common Language Runtime), ao solucionar problemas de um servidor que está executando consultas CLR lentamente ou ao monitorar um servidor de forma a coletar informações de usuários, bancos de dados ou de êxito, entre outras, sobre cargas de assembly.  
   
-## Colunas de dados da classe de evento Assembly Load  
+## <a name="assembly-load-event-class-data-columns"></a>Colunas de dados da classe de evento Assembly Load  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -40,7 +44,7 @@ caps.handback.revision: 17
 |**GroupID**|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |**HostName**|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**LoginName**|**nvarchar**|Nome de logon do usuário (logon de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou as credenciais de logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows no formato DOMÍNIO/nomedousuário).|11|Sim|  
-|**LoginSID**|**image**|SID (identificador de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals**. Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
+|**LoginSID**|**image**|SID (identificador de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |**ObjectID**|**int**|ID do assembly.|22|Sim|  
@@ -53,13 +57,13 @@ caps.handback.revision: 17
 |**Êxito**|**int**|Indica se a carga de assembly foi bem-sucedida (1) ou falhou (0).|23|Sim|  
 |**TextData**|**ntext**|"Carga de assembly concluída com êxito" se a carga for bem-sucedida; caso contrário, "Falha no carregamento do assembly".|1|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)   
  [Assemblies &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)  
   
    
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)  
   
   

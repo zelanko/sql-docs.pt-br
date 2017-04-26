@@ -1,30 +1,34 @@
 ---
-title: "Excluir um grupo de carga de trabalho | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "grupos de carga de trabalho [SQL Server], excluir"
-  - "Administrador de Recursos, excluir grupo de carga de trabalho"
+title: Excluir um grupo de carga de trabalho | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- workload groups [SQL Server], delete
+- Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 498058e4186851b78bf67795828f1a7562794a72
+ms.lasthandoff: 04/11/2017
+
 ---
-# Excluir um grupo de carga de trabalho
+# <a name="delete-a-workload-group"></a>Excluir um grupo de carga de trabalho
   É possível excluir um grupo de carga de trabalho ou um pool de recursos usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou Transact-SQL.  
   
--   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Para excluir um grupo de carga de trabalho, usando:** [Pesquisador de Objetos](#DelWGObjEx), [Propriedades do Administrador de Recursos](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
+-   **To delete a workload group, using:**  [Object Explorer](#DelWGObjEx), [Resource Governor Properties](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  Não é possível excluir um grupo de carga de trabalho se ele contiver sessões ativas.  
@@ -34,7 +38,7 @@ caps.handback.revision: 19
   
 -   Aguardar até que todas as sessões do grupo afetado sejam desconectadas e depois executar novamente a instrução ALTER RESOURCE GOVERNOR RECONFIGURE.  
   
--   Interromper explicitamente as sessões do grupo afetado usando o comando KILL e depois executar novamente a instrução ALTER RESOURCE GOVERNOR RECONFIGURE. Se você decidir que não deseja interromper explicitamente as sessões depois de usar **Excluir**, mas antes de interromper as sessões ativas, recrie o grupo usando o nome original e mova o grupo para o pool de recursos original.  
+-   Interromper explicitamente as sessões do grupo afetado usando o comando KILL e depois executar novamente a instrução ALTER RESOURCE GOVERNOR RECONFIGURE. Se você decidir que não deseja interromper explicitamente as sessões depois de usar **Excluir** , mas antes de interromper as sessões ativas, recrie o grupo usando o nome original e mova o grupo para o pool de recursos original.  
   
 -   Reinicie o servidor. Depois que o processo de reinicialização estiver concluído, o grupo excluído não será criado e um grupo movido usará a atribuição do novo pool de recursos.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 19
   
 2.  Clique com o botão direito do mouse no pool de recursos que contém o grupo de cargas de trabalho a ser excluído e clique em **Propriedades**. Isso abre a página **Propriedades do Administrador de Recursos** .  
   
-3.  Na janela **Grupos de cargas de trabalho para o pool de recursos**, clique na linha do grupo de cargas de trabalho a ser excluído, clique com o botão direito do mouse na seta para a direita no lado esquerdo da linha e clique em **Excluir**.  
+3.  Na janela **Grupos de cargas de trabalho para o pool de recursos** , clique na linha do grupo de cargas de trabalho a ser excluído, clique com o botão direito do mouse na seta para a direita no lado esquerdo da linha e clique em **Excluir**.  
   
 4.  Para excluir o grupo de cargas de trabalho, clique em **OK**.  
   
@@ -76,11 +80,11 @@ caps.handback.revision: 19
   
     -   Reinicie o servidor. O grupo de cargas de trabalho não será recriado.  
   
-    -   Em um cenário no qual você emitiu a instrução **DROP WORKLOAD GROUP**, mas decide que não deseja interromper sessões explicitamente para aplicar a mudança, é possível recriar o grupo usando o mesmo nome que ele tinha antes de você emitir a instrução DROP e depois mover o grupo para o pool de recursos original.  
+    -   Em um cenário no qual você emitiu a instrução **DROP WORKLOAD GROUP** , mas decide que não deseja interromper sessões explicitamente para aplicar a mudança, é possível recriar o grupo usando o mesmo nome que ele tinha antes de você emitir a instrução DROP e depois mover o grupo para o pool de recursos original.  
   
 3.  Execute a instrução **ALTER RESOURCE GOVERNOR RECONFIGURE** .  
   
-### Exemplo (Transact-SQL)  
+### <a name="example-transact-sql"></a>Exemplo (Transact-SQL)  
  O seguinte exemplo descarta um grupo de carga de trabalho denominado `groupAdhoc`.  
   
 ```  
@@ -90,7 +94,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Criar um pool de recursos](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Criar um grupo de carga de trabalho](../../relational-databases/resource-governor/create-a-workload-group.md)   

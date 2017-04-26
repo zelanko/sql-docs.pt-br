@@ -1,24 +1,28 @@
 ---
-title: "Excluir um guia de plano | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "guias de plano [SQL Server], excluindo"
+title: Excluir um guia de plano | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- plan guides [SQL Server], deleting
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08b43f5dd7f042bc559cede3b6043d737fb71a11
+ms.lasthandoff: 04/11/2017
+
 ---
-# Excluir um guia de plano
+# <a name="delete-a-plan-guide"></a>Excluir um guia de plano
   Você pode excluir (cancelar) um guia de plano no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Usando o [!INCLUDE[tsql](../../includes/tsql-md.md)], você também pode excluir todas as guias de plano de um banco de dados.  
   
  **Neste tópico**  
@@ -42,7 +46,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para excluir um guia de plano  
+#### <a name="to-delete-a-plan-guide"></a>Para excluir um guia de plano  
   
 1.  Clique no sinal de adição para expandir o banco de dados no qual você deseja excluir um guia de plano e clique no sinal de adição para expandir a pasta **Programação** .  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 7
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para excluir um único guia de plano  
+#### <a name="to-delete-a-single-plan-guide"></a>Para excluir um único guia de plano  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 7
     GO  
     ```  
   
-#### Para excluir todas as guias de plano de um banco de dados.  
+#### <a name="to-delete-all-plan-guides-in-a-database"></a>Para excluir todas as guias de plano de um banco de dados.  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

@@ -1,28 +1,32 @@
 ---
-title: "Introdu&#231;&#227;o ao Columnstore para an&#225;lise operacional em tempo real | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "Introdução ao Columnstore para análise operacional em tempo real | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 caps.latest.revision: 40
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e032da9604178eb356de35448eb5d53a9d663214
+ms.lasthandoff: 04/11/2017
+
 ---
-# Introdu&#231;&#227;o ao Columnstore para an&#225;lise operacional em tempo real
+# <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introdução ao Columnstore para análise operacional em tempo real
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   O SQL Server 2016 apresenta análise operacional em tempo real, a capacidade de executar cargas de trabalho OLTP e analíticas nas mesmas tabelas de banco de dados ao mesmo tempo. Além de executar análise em tempo real, você também pode eliminar a necessidade de ETL e de um data warehouse.  
   
-## Análise operacional em tempo real explicado  
+## <a name="real-time-operational-analytics-explained"></a>Análise operacional em tempo real explicado  
  Tradicionalmente, as empresas tinham sistemas separados para cargas de trabalho operacionais (isto é, OLTP) e analíticas. Para tais sistemas, os trabalhos ETL (Extrair, Transformar e Carregar) movem os dados regularmente do repositório operacional para um repositório analítico. Os dados analíticos geralmente são armazenados em um data warehouse ou data mart dedicado para execução de consultas analíticas. Embora essa solução tenha sido o padrão, ela apresenta estes três desafios principais:  
   
 -   **Complexidade.** Implementar o ETL pode exigir codificação considerável especialmente para carregar apenas as linhas modificadas. Pode haver complexidade na identificação de quais linhas foram modificadas.  
@@ -31,7 +35,7 @@ caps.handback.revision: 39
   
 -   **Latência de dados.** Implementar o ETL adiciona um atraso para execução da análise. Por exemplo, se o trabalho ETL for executado no final de cada dia útil, as consultas analíticas serão executadas nos dados com pelo menos um dia. Para muitas empresas, esse atraso é inaceitável porque a empresa depende da análise de dados em tempo real. Por exemplo, a detecção de fraudes requer análise em tempo real em dados operacionais.  
   
- ![real-time operational analytics overview](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "real-time operational analytics overview")  
+ ![visão geral da análise operacional em tempo real](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "visão geral da análise operacional em tempo real")  
   
  A análise operacional em tempo real oferece uma solução para esses desafios.   
         Não há atraso algum quando as cargas de trabalho OLTP e analíticas são executadas na mesma tabela subjacente.   Em cenários que podem usar análise em tempo real, os custos e a complexidade são enormemente reduzidos com a eliminação da necessidade de ETL e da necessidade de compra e manutenção de um data warehouse separado.  
@@ -41,7 +45,7 @@ caps.handback.revision: 39
   
  A análise em tempo real usa um índice columnstore atualizável em uma tabela rowstore.  O índice columnstore mantém uma cópia dos dados para que as cargas de trabalho OLTP e analítica sejam executadas em cópias separadas dos dados. Isso minimiza o impacto no desempenho de ambas as cargas de trabalho em execução ao mesmo tempo.  O SQL Server mantém automaticamente as mudanças no índice para que as alterações no OLTP estejam sempre atualizadas para análise. Com esse design, é possível e prático executar análise em tempo real em dados atualizados. Isso funciona para tabelas com otimização de memória e baseadas em disco.  
   
-## Exemplo de introdução  
+## <a name="get-started-example"></a>Exemplo de introdução  
  Para começar com a análise em tempo real:  
   
 1.  Identifique as tabelas em seu esquema operacional que contenham dados obrigatórios para análise.  
@@ -85,7 +89,7 @@ caps.handback.revision: 39
   
  Agora você está pronto para executar análise operacional em tempo real sem fazer alterações no seu aplicativo.  As consultas analíticas serão executadas no índice columnstore e as operações OLTP continuarão sendo executadas nos índices btree OLTP. As cargas de trabalho OLTP continuarão sendo executadas, mas incorrerão em alguma sobrecarga adicional para manter o índice columnstore. Veja as otimizações de desempenho na próxima seção.  
   
-## Postagens de blog  
+## <a name="blog-posts"></a>Postagens de blog  
  Leia as postagens no blog de Sunil Agarwal para saber mais sobre análise operacional em tempo real.  Talvez seja mais fácil entender as seções de dicas de desempenho se você ler essas postagens primeiro.  
   
 -   [Business case for real-time operational analytics (Caso de negócios para análise operacional em tempo real)](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)  
@@ -108,7 +112,7 @@ caps.handback.revision: 39
   
 -   [Columnstore index and the merge policy for rowgroups (Índice columnstore e a política de mesclagem para rowgroups)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
-## Dica de desempenho nº 1: use índices filtrados para melhorar o desempenho da consulta  
+## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>Dica de desempenho nº 1: use índices filtrados para melhorar o desempenho da consulta  
  Executar a análise operacional em tempo real pode afetar o desempenho da carga de trabalho OLTP.  Esse impacto deve ser mínimo. O exemplo abaixo mostra como usar índices filtrados para minimizar o impacto do índice columnstore não clusterizado na carga de trabalho transacional enquanto ainda estiver entregando análise em tempo real.  
   
  Para minimizar a sobrecarga de manter um índice columnstore não clusterizado em uma carga de trabalho operacional, você pode usar uma condição filtrada para criar um índice columnstore não clusterizado apenas de dados *passivos* ou que mudam de modo constante e lento. Por exemplo, em um aplicativo de gerenciamento de pedidos, você pode criar um índice columnstore não clusterizado dos pedidos que já foram despachados. Depois que o pedido tiver sido enviado, ele raramente muda e, portanto, pode ser considerado como dados passivos. Com o índice filtrado, os dados no índice columnstore não clusterizado exigem menos atualizações, reduzindo, assim, o impacto na carga de trabalho transacional.  
@@ -118,10 +122,10 @@ caps.handback.revision: 39
 > [!NOTE]  
 >  Um índice columnstore não clusterizado filtrado é permitido apenas em tabelas baseadas em disco. Ele não é permitido em tabelas com otimização de memória  
   
-### Exemplo A: acessar dados ativos do índice btree, dados passivos do índice columnstore  
+### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>Exemplo A: acessar dados ativos do índice btree, dados passivos do índice columnstore  
  Este exemplo usa uma condição filtrada (accountkey > 0) para estabelecer quais linhas estarão no índice columnstore. O objetivo é criar a condição filtrada e as consultas subsequentes para acessar dados "ativos" que mudam frequentemente no índice btree e acessar os dados "passivos" mais estáveis no índice columnstore.  
   
- ![Combined indexes for warm and hot data](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Combined indexes for warm and hot data")  
+ ![Índices combinados para dados ativos e passivos](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Índices combinados para dados ativos e passivos")  
   
 > [!NOTE]  
 >  O otimizador de consulta vai considerar, mas nem sempre escolherá, o índice columnstore para o plano de consulta. Quando o otimizador de consulta escolher o índice columnstore filtrado, ele combinará de modo transparente as linhas do índice columnstore, bem como as linhas que não atendem à condição filtrada para permitir análise em tempo real. Isso é diferente de um índice filtrado não clusterizado regular, que pode ser usado apenas em consultas que restringem a si mesmas a linhas presentes no índice.  
@@ -164,14 +168,14 @@ Group By customername
   
  A consulta analítica será executada com o plano de consulta a seguir. Você pode ver que as linhas que não atendem à condição filtrada são acessadas por meio do índice btree clusterizado.  
   
- ![Query plan](../../relational-databases/indexes/media/query-plan-columnstore.png "Query plan")  
+ ![Plano de consulta](../../relational-databases/indexes/media/query-plan-columnstore.png "Plano de consulta")  
   
  Veja o blog para obter detalhes sobre o [índice columnstore não clusterizado filtrado.](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)  
   
-## Dica de desempenho nº 2: transferir a análise para o secundário legível Always On  
+## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>Dica de desempenho nº 2: transferir a análise para o secundário legível Always On  
  Mesmo que você possa minimizar a manutenção do índice columnstore usando um índice columnstore filtrado, as consultas analíticas ainda podem exigir recursos consideráveis de computação (CPU, E/S, memória), que afetam o desempenho da carga de trabalho operacional. Para a maioria das cargas de trabalho de missão crítica, nossa recomendação é usar a configuração Always On. Nessa configuração, você pode eliminar o impacto de executar a análise transferindo-a para um secundário legível.  
   
-## Dica de desempenho nº 3: reduzir a fragmentação de índice mantendo dados ativos em rowgroups delta  
+## <a name="performance-tip-3-reducing-index-fragmentation-by-keeping-hot-data-in-delta-rowgroups"></a>Dica de desempenho nº 3: reduzir a fragmentação de índice mantendo dados ativos em rowgroups delta  
  Tabelas com índice columnstore poderão ser significativamente fragmentadas (isto é, linhas excluídas) se a carga de trabalho atualizar/excluir linhas que foram compactadas. Um índice columnstore fragmentado leva à utilização ineficaz de memória/armazenamento. Além do uso ineficaz de recursos, ele também afeta negativamente o desempenho da consulta de análise devido à E/S extra e à necessidade de filtrar as linhas excluídas no conjunto de resultados.  
   
  As linhas excluídas não são fisicamente removidas até que você execute a desfragmentação do índice com o comando REORGANIZE ou recrie o índice columnstore na tabela inteira ou nas partições afetadas. REORGANIZE e INDEX REBUILD são operações caras que eliminam recursos que, de outra forma, poderiam ser usados para a carga de trabalho. Além disso, no caso de linhas compactadas com muita antecedência, talvez elas precisem ser recompactadas várias vezes devido às atualizações, gerando sobrecarga desnecessária de compactação.  
@@ -198,7 +202,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
   
  Veja as práticas recomendadas  
   
--   **Inserir/consultar a carga de trabalho:** se a carga de trabalho for basicamente inserir dados e consultá-los, o padrão COMPRESSION_DELAY de 0 será a opção recomendada. As linhas recentemente inseridas serão compactadas uma vez que 1 milhão de linhas foram inseridas em um único rowgroup delta.  
+-   **Inserir/consultar a carga de trabalho:**se a carga de trabalho for basicamente inserir dados e consultá-los, o padrão COMPRESSION_DELAY de 0 será a opção recomendada. As linhas recentemente inseridas serão compactadas uma vez que 1 milhão de linhas foram inseridas em um único rowgroup delta.  
     Alguns exemplos de tal carga de trabalho são (a) carga de trabalho DW tradicional (b) análise de fluxo de clique quando você precisa analisar o padrão de clique em um aplicativo Web.  
   
 -   **Carga de trabalho OLTP:** se a carga de trabalho for DML pesada (isto é, combinação pesada de Atualizar, Excluir e Inserir), você poderá ver a fragmentação do índice columnstore examinando o sys DMV. dm_db_column_store_row_group_physical_stats. Caso veja que mais de 10% das linhas são marcadas como excluídas em rowgroups recentemente compactados, você poderá usar a opção COMPRESSION_DELAY para adicionar atraso quando as linhas se tornarem qualificadas para compactação. Por exemplo, se para sua carga de trabalho, os dados recentemente inseridos permanecerem "ativos" (isto é, forem atualizados várias vezes) digamos que por 60 minutos, você deverá escolher COMPRESSION_DELAY para ser 60.  
@@ -218,12 +222,12 @@ ORDER BY created_time DESC
   
  Se o número de linhas excluídas em rowgroups compactados for superior a 20%, lidando com rowgroups antigos com variação inferior a 5% (referido como rowgroups frios) defina COMPRESSION_DELAY = (youngest_rowgroup_created_time –  current_time). Observe que essa abordagem funciona melhor com uma carga de trabalho relativamente homogênea e estável.  
   
-## Consulte também  
- [Guia de Índices Columnstore](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Carregamento de dados dos índices columnstore](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [Resumo de recursos com versão dos índices columnstore](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
+## <a name="see-also"></a>Consulte também  
+ [Guia de Índices Columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)   
+ [Carregamento de dados dos índices columnstore](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Desempenho de consultas de índices ColumnStore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
- [Índices columnstore para Data Warehouse](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
+ [Índices columnstore para Data Warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [Desfragmentação de índices columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

@@ -1,27 +1,31 @@
 ---
-title: "Classe de evento Deadlock Graph | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Classe de evento Deadlock Graph"
+title: Classe de evento Deadlock Graph | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Deadlock Graph event class
 ms.assetid: 20f92233-c912-4382-8993-8e2e23d03fbe
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8dc88c1c1f2afb7f5cb79b7d18931c3cd2238722
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento Deadlock Graph
+# <a name="deadlock-graph-event-class"></a>Classe de evento Deadlock Graph
   A classe de evento **Deadlock Graph** fornece uma descrição XML de um deadlock. Essa classe ocorre simultaneamente com a classe de evento **Lock:Deadlock** .  
   
-## Colunas de dados de classe de evento Deadlock Graph  
+## <a name="deadlock-graph-event-class-data-columns"></a>Colunas de dados de classe de evento Deadlock Graph  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -37,7 +41,7 @@ caps.handback.revision: 31
 |**TextData**|**ntext**|Descrição XML do deadlock.|1|Sim|  
 |**TransactionID**|**bigint**|Não usado.|4|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Classe de evento Lock:Deadlock](../../relational-databases/event-classes/lock-deadlock-event-class.md)  
   

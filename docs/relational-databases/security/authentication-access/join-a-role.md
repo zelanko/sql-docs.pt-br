@@ -1,27 +1,31 @@
 ---
-title: "Unir uma fun&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1"
-helpviewer_keywords: 
-  - "adicionando um membro a uma função"
-  - "unir uma função"
+title: "Unir uma função | Microsoft Docs"
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
+helpviewer_keywords:
+- adding a member to a role
+- join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 750dc366fde98b7d1c6514a2beeae4d7fd831c6f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Unir uma fun&#231;&#227;o
+# <a name="join-a-role"></a>unir uma função
   Este tópico descreve como atribuir funções a logons e usuários de banco de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Use funções em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para gerenciar permissões de maneira eficiente. Atribua permissões a funções e adicione e remova usuários e logons de funções. Com o uso de funções, as permissões não precisam ser mantidas individualmente para cada usuário.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a quatro tipos de função.  
@@ -65,7 +69,7 @@ caps.handback.revision: 13
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para adicionar um membro a uma função de servidor fixa  
+#### <a name="to-add-a-member-to-a-fixed-server-role"></a>Para adicionar um membro a uma função de servidor fixa  
   
 1.  No Pesquisador de Objetos, expanda o servidor no qual você quer editar uma função de servidor fixa.  
   
@@ -75,13 +79,13 @@ caps.handback.revision: 13
   
 4.  Clique com o botão direito do mouse na função que você deseja editar e selecione **Propriedades**.  
   
-5.  Na caixa de diálogo **Propriedades de Função de Servidor –***server_role_name*, na página **Membros**, clique em **Adicionar**.  
+5.  Na caixa de diálogo **Propriedades de Função de Servidor –***server_role_name* , na página **Membros** , clique em **Adicionar**.  
   
-6.  Na caixa de diálogo **Selecionar Logon ou Função de Servidor**, em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de servidor para adicionar a esta função de servidor. Como alternativa, clique em **Procurar...** e selecione qualquer um ou todos os objetos disponíveis na caixa de diálogo **Procurar por objetos** . Clique em **OK** para retornar à caixa de diálogo **Propriedades de Função de Servidor –***server_role_name*.  
+6.  Na caixa de diálogo **Selecionar Logon ou Função de Servidor** , em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de servidor para adicionar a esta função de servidor. Como alternativa, clique em **Procurar...** e selecione qualquer um ou todos os objetos disponíveis na caixa de diálogo **Procurar por objetos** . Clique em **OK** para retornar à caixa de diálogo **Propriedades de Função de Servidor –***server_role_name* .  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-#### Para adicionar um membro a uma função de banco de dados definida pelo usuário  
+#### <a name="to-add-a-member-to-a-user-defined-database-role"></a>Para adicionar um membro a uma função de banco de dados definida pelo usuário  
   
 1.  No Pesquisador de Objetos, expanda o servidor no qual você quer editar uma função de banco de dados definida pelo usuário.  
   
@@ -97,15 +101,15 @@ caps.handback.revision: 13
   
 7.  Clique com o botão direito do mouse na função que você deseja editar e selecione **Propriedades**.  
   
-8.  Na caixa de diálogo **Propriedades de Função de Banco de Dados –***database_role_name*, na página **Geral**, clique em **Adicionar**.  
+8.  Na caixa de diálogo **Propriedades de Função de Banco de Dados –***database_role_name* , na página **Geral** , clique em **Adicionar**.  
   
-9. Na caixa de diálogo **Selecionar Usuário ou Função do Banco de Dados**, em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de banco de dados para adicionar a esta função de banco de dados. Como alternativa, clique em **Procurar...** e selecione qualquer um ou todos os objetos disponíveis na caixa de diálogo **Procurar por objetos** . Clique em **OK** para retornar à caixa de diálogo **Propriedades de Função de Banco de Dados –***database_role_name*.  
+9. Na caixa de diálogo **Selecionar Usuário ou Função do Banco de Dados** , em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de banco de dados para adicionar a esta função de banco de dados. Como alternativa, clique em **Procurar...** e selecione qualquer um ou todos os objetos disponíveis na caixa de diálogo **Procurar por objetos** . Clique em **OK** para retornar à caixa de diálogo **Propriedades de Função de Banco de Dados –***database_role_name* .  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para adicionar um membro a uma função de servidor fixa  
+#### <a name="to-add-a-member-to-a-fixed-server-role"></a>Para adicionar um membro a uma função de servidor fixa  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -120,7 +124,7 @@ caps.handback.revision: 13
   
  Para obter mais informações, veja [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
   
-#### Para adicionar um membro a uma função de banco de dados definida pelo usuário  
+#### <a name="to-add-a-member-to-a-user-defined-database-role"></a>Para adicionar um membro a uma função de banco de dados definida pelo usuário  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -135,9 +139,10 @@ caps.handback.revision: 13
   
  Para obter mais informações, consulte [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Funções de nível de servidor](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Funções de nível de banco de dados](../../../relational-databases/security/authentication-access/database-level-roles.md)   
  [Funções de aplicativo](../../../relational-databases/security/authentication-access/application-roles.md)  
   
   
+

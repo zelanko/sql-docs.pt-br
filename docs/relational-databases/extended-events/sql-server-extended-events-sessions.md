@@ -1,27 +1,31 @@
 ---
-title: "Sess&#245;es de eventos estendidos do SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xe"
-  - "sessões"
-  - "eventos estendidos [SQL Server]"
+title: "Sessões de eventos estendidos do SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xe
+- sessions
+- extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff9ce12cc98171946715d16f18d15885d7098c4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sess&#245;es de eventos estendidos do SQL Server
+# <a name="sql-server-extended-events-sessions"></a>Sessões de eventos estendidos do SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Uma sessão de eventos estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é criada no processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está hospedando o mecanismo de eventos estendidos. Os seguintes aspectos de uma sessão de eventos estendidos fornecem um contexto para entender a infraestrutura de eventos estendidos e o processamento geral que ocorre:  
@@ -30,7 +34,7 @@ caps.handback.revision: 20
   
 -   Conteúdo de sessão e características. O conteúdo de uma sessão do Extended Events, como destinos e eventos, e o modo como esses objetos estão relacionados em uma sessão ou entre sessões.  
   
-## Estados da sessão  
+## <a name="session-states"></a>Estados da sessão  
  A ilustração a seguir mostra os vários estados de uma sessão de eventos estendidos.  
   
  ![Estado de sessão de eventos estendidos](../../relational-databases/extended-events/media/xesessionstate.gif "Estado de sessão de eventos estendidos")  
@@ -47,12 +51,12 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  ALTER EVENT SESSION e DROP EVENT SESSION podem ser aplicados aos metadados, ou a uma sessão ativa e aos metadados.  
   
-## Conteúdo da sessão e características  
+## <a name="session-content-and-characteristics"></a>Conteúdo da sessão e características  
  Sessões de evento estendidos têm limites implícitos sendo que a configuração de uma sessão não altera a configuração de outra sessão. Contudo, esses limites não impedem que um evento ou destino seja usado em mais de uma sessão.  
   
  A ilustração a seguir mostra o conteúdo da sessão e a relação entre pacotes e sessões.  
   
- ![Coexistência e compartilhamento de objetos em sessões.](../../relational-databases/extended-events/media/xesessions.gif "Coexistência e compartilhamento de objetos em sessões.")  
+ ![Coexistência do objeto e compartilhamento em sessões.](../../relational-databases/extended-events/media/xesessions.gif "Coexistência do objeto e compartilhamento em sessões.")  
   
  Em relação à ilustração anterior, observe que:  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 20
   
  A arquitetura de eventos estendidos oferece um sistema flexível que permite a utilização de diversos objetos para serem usados em conjunto na solução de problemas específicos.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)  
   
   

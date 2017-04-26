@@ -1,24 +1,28 @@
 ---
-title: "Acessar FileTables com APIs de entrada e sa&#237;da de arquivo | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], acessando arquivos com APIs de arquivo"
+title: "Acessar FileTables com APIs de entrada e saída de arquivo | Microsoft Docs"
+ms.custom: 
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
+ms.lasthandoff: 04/11/2017
+
 ---
-# Acessar FileTables com APIs de entrada e sa&#237;da de arquivo
+# <a name="access-filetables-with-file-input-output-apis"></a>Acessar FileTables com APIs de entrada e saída de arquivo
   Descreve como a E/S do sistema de arquivos funciona em uma FileTable.  
   
 ##  <a name="accessing"></a> Começar a usar APIs de E/S de arquivos com FileTables  
@@ -35,7 +39,7 @@ caps.handback.revision: 16
   
 -   A criação de um novo arquivo ou diretório corresponde à criação de uma nova linha na FileTable subjacente.  
   
--   Para arquivos, os dados de fluxo são armazenados na coluna **file_stream**; para diretórios, essa coluna é nula.  
+-   Para arquivos, os dados de fluxo são armazenados na coluna **file_stream** ; para diretórios, essa coluna é nula.  
   
 -   Para arquivos, a coluna **is_directory** contém **false**. Para diretórios, essa coluna contém **true**.  
   
@@ -124,10 +128,11 @@ caps.handback.revision: 16
 |**Segurança**|Não|A segurança em nível de compartilhamento do Windows e a segurança em nível de tabela e coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são impostas.|  
 |**Diário USN**|Não|As alterações de metadados em arquivos e diretórios de uma FileTable são operações DML em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Portanto, elas são registradas em log no arquivo de log de banco de dados correspondente. Entretanto, não são registradas no diário NTFS USN (com exceção de alterações de tamanho).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser usados para capturar informações semelhantes.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Carregar arquivos em FileTables](../../relational-databases/blob/load-files-into-filetables.md)   
- [Trabalhar com diretórios e caminhos em FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Acessar FileTables com Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [DDL, funções, procedimentos armazenados e exibições de FileTable](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
+

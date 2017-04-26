@@ -1,24 +1,28 @@
 ---
-title: "Gerenciar a seguran&#231;a dos gatilhos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gatilhos [SQL Server], segurança"
+title: "Gerenciar a segurança dos gatilhos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- triggers [SQL Server], security
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d86813b142cbd85527fb1e4e1c11d87884258ecf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gerenciar a seguran&#231;a dos gatilhos
+# <a name="manage-trigger-security"></a>Gerenciar a segurança dos gatilhos
   Por padrão, os gatilhos DML e DDL executam sob o contexto do usuário que aciona o gatilho. O chamador do gatilho é o usuário que executa a instrução que faz com que o gatilho execute. Por exemplo, se o usuário **Marina** executar uma instrução DELETE que faz com que o gatilho DML **DML_trigMarina** seja executado, o código dentro do **DML_trigMarina** executará no contexto dos privilégios do usuário para **Marina**. Esse comportamento padrão pode ser explorado pelos usuários que desejam apresentar um código mal-intencionado no banco de dados ou na instância do servidor. Por exemplo, o gatilho DDL a seguir é criado pelo usuário `JohnDoe`:  
   
  `CREATE TRIGGER DDL_trigJohnDoe`  
@@ -33,12 +37,12 @@ caps.handback.revision: 19
   
  `GO`  
   
- O que esse gatilho significa é que assim que um usuário tiver a permissão para executar uma instrução `GRANT CONTROL SERVER`, como um membro da função de servidor fixa **sysadmin**, ele executa uma instrução `ALTER TABLE`, `JohnDoe` recebe permissão `CONTROL SERVER`. Em outras palavras, embora `JohnDoe` não possa conceder permissão `CONTROL SERVER` para ele mesmo, ele habilita o código do gatilho que lhe concede essa permissão para executar sob privilégios escalados. Os gatilhos DML e DDL estão abertos para este tipo de ameaça à segurança.  
+ O que esse gatilho significa é que assim que um usuário tiver a permissão para executar uma instrução `GRANT CONTROL SERVER` , como um membro da função de servidor fixa **sysadmin** , ele executa uma instrução `ALTER TABLE` , `JohnDoe` recebe permissão `CONTROL SERVER` . Em outras palavras, embora `JohnDoe` não possa conceder permissão `CONTROL SERVER` para ele mesmo, ele habilita o código do gatilho que lhe concede essa permissão para executar sob privilégios escalados. Os gatilhos DML e DDL estão abertos para este tipo de ameaça à segurança.  
   
-## Práticas recomendadas para a segurança dos gatilhos  
+## <a name="trigger-security-best-practices"></a>Práticas recomendadas para a segurança dos gatilhos  
  Você pode tomar as medidas a seguir para impedir que o código do gatilho execute sob privilégios escalados:  
   
--   Lembre-se dos gatilhos DML e DDL que existem no banco de dados e na instância do servidor consultando as exibições de catálogo [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) e [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md). A consulta a seguir retorna todos os gatilhos DML e DDL no nível de banco de dados no banco de dados atual e todos os gatilhos DDL no nível de servidor na instância do servidor:  
+-   Lembre-se dos gatilhos DML e DDL que existem no banco de dados e na instância do servidor consultando as exibições de catálogo [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) e [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) . A consulta a seguir retorna todos os gatilhos DML e DDL no nível de banco de dados no banco de dados atual e todos os gatilhos DDL no nível de servidor na instância do servidor:  
   
     ```  
     SELECT type, name, parent_class_desc FROM sys.triggers  
@@ -91,7 +95,7 @@ caps.handback.revision: 19
     DEALLOCATE trig_cur;  
     ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Gatilhos DML](../../relational-databases/triggers/dml-triggers.md)   
  [Gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md)  

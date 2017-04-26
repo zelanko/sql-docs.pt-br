@@ -1,30 +1,34 @@
 ---
-title: "Como o Reposit&#243;rio de Consultas coleta dados | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/13/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Repositório de Consultas, coleção de dados"
+title: "Como o Repositório de Consultas coleta dados | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/13/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58db786512aa1ed167df55831c6a7cc3c53224bd
+ms.lasthandoff: 04/11/2017
+
 ---
-# Como o Reposit&#243;rio de Consultas coleta dados
+# <a name="how-query-store-collects-data"></a>Como o Repositório de Consultas coleta dados
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   O Repositório de Consultas funciona como um **gravador de dados de voo** constantemente coletando informações de compilação e tempo de execução relacionadas a consultas e planos. As consultas relacionadas a dados são mantidas em tabelas internas e apresentadas aos usuários por meio de um conjunto de exibições.  
   
-## Exibições  
+## <a name="views"></a>Exibições  
  O diagrama a seguir mostra os modos de exibição do Repositório de Consultas e suas relações lógicas, com informações de tempo de compilação, apresentadas como entidades azuis:  
   
  ![query-store-process-1views](../../relational-databases/performance/media/query-store-process-1views.png "query-store-process-1views")  
@@ -37,12 +41,12 @@ caps.handback.revision: 10
 |**sys.query_context_settings**|Apresenta as combinações exclusivas do plano que afetam as configurações em que as consultas são executadas. O mesmo texto de consulta executado com um plano diferente, afetando as configurações produz a entrada de consulta separada no Repositório de Consultas porque `context_settings_id` faz parte da chave de consulta.|  
 |**sys.query_store_query**|Entradas de consulta que são controladas e forçadas separadamente no Repositório de Consultas. Um único texto de consulta pode gerar várias entradas de consulta se elas forem executadas em configurações de contextos diferentes ou se forem executadas fora versus dentro de diferentes módulos do [!INCLUDE[tsql](../../includes/tsql-md.md)] (procedimentos armazenados, gatilhos, etc.).|  
 |**sys.query_store_plan**|Apresenta estimativa de plano para a consulta com as estatísticas de tempo de compilação. O plano armazenado é equivalente a um que você obteria usando o `SET SHOWPLAN_XML ON`.|  
-|**sys.query_store_runtime_stats_interval**|O Repositório de Consultas divide o tempo em janelas de tempo geradas automaticamente (intervalos) e armazena estatísticas agregadas no intervalo para cada plano executado. O tamanho do intervalo é controlado pela opção de configuração Intervalo de Coleta de Estatísticas (em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) ou `INTERVAL_LENGTH_MINUTES` usando [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).|  
+|**sys.query_store_runtime_stats_interval**|O Repositório de Consultas divide o tempo em janelas de tempo geradas automaticamente (intervalos) e armazena estatísticas agregadas no intervalo para cada plano executado. O tamanho do intervalo é controlado pela opção de configuração Intervalo de Coleta de Estatísticas (em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) ou `INTERVAL_LENGTH_MINUTES` usando [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**sys.query_store_runtime_stats**|Estatísticas agregadas de tempo de execução para planos executados. Todas as métricas capturadas são expressas na forma de quatro funções de estatística: média, mínima, máxima e desvio padrão.|  
   
  Para obter detalhes adicionais sobre modos de exibição do Repositório de Consultas, veja a seção **Exibições, funções e procedimentos relacionados** de [Monitorando o desempenho com o repositório de consultas](https://msdn.microsoft.com/library/dn817826.aspx).  
   
-## Query Processing  
+## <a name="query-processing"></a>Query Processing  
  O Repositório de Consultas interage com o pipeline de processamento de consulta nos pontos-chave a seguir:  
   
 1.  Quando a consulta é compilada pela primeira vez, o texto de consulta e o plano inicial são enviados ao Repositório de Consultas  
@@ -57,7 +61,7 @@ caps.handback.revision: 10
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
   
- Para minimizar a sobrecarga de E/S, novos dados são capturados na memória. As operações de gravação são enfileiradas e liberadas para o disco posteriormente. Consultas e informações do plano (Repositório de planos no diagrama abaixo) são liberados com latência mínima. As estatísticas de tempo de execução (Estatísticas de tempo de execução) são mantidas na memória por um período definido com a opção `DATA_FLUSH_INTERVAL_SECONDS` da instrução `SET QUERY_STORE`. A caixa de diálogo Repositório de Consultas do SSMS permite inserir um **Intervalo de liberação de dados (minutos)**, que é convertido para segundos.  
+ Para minimizar a sobrecarga de E/S, novos dados são capturados na memória. As operações de gravação são enfileiradas e liberadas para o disco posteriormente. Consultas e informações do plano (Repositório de planos no diagrama abaixo) são liberados com latência mínima. As estatísticas de tempo de execução (Estatísticas de tempo de execução) são mantidas na memória por um período definido com a opção `DATA_FLUSH_INTERVAL_SECONDS` da instrução `SET QUERY_STORE` . A caixa de diálogo Repositório de Consultas do SSMS permite inserir um **Intervalo de liberação de dados (minutos)**, que é convertido para segundos.  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
@@ -68,9 +72,10 @@ Durante a leitura do Repositório de Consultas, os dados na memória e no disco 
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Melhor prática com o Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Exibições de catálogo do repositório de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

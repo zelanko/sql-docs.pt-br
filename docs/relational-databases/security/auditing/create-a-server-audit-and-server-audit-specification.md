@@ -1,30 +1,34 @@
 ---
-title: "Criar uma auditoria de servidor e uma especifica&#231;&#227;o de auditoria de servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.SWB.SQLAUDIT.FILTER.F1"
-  - "sql13.swb.sqlaudit.general.f1"
-  - "sql13.swb.sqlaudit.srvaudit.general.f1"
-helpviewer_keywords: 
-  - "auditoria de servidor [SQL Server]"
-  - "auditorias [SQL Server], especificação"
+title: "Criar uma auditoria de servidor e uma especificação de auditoria de servidor | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.SWB.SQLAUDIT.FILTER.F1
+- sql13.swb.sqlaudit.general.f1
+- sql13.swb.sqlaudit.srvaudit.general.f1
+helpviewer_keywords:
+- server audit [SQL Server]
+- audits [SQL Server], specification
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e33a4ff076039b03c399a0f7868bf697ca1cd8d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar uma auditoria de servidor e uma especifica&#231;&#227;o de auditoria de servidor
-  Este tópico descreve como criar uma especificação de auditoria de servidor no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. *Auditar* uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envolve eventos de rastreamento e de log que ocorrem no sistema. O objeto *SQL Server Audit* coleta uma instância única de ações no nível do servidor e/ou do banco de dados e grupos de ações a serem monitoradas. A auditoria está no nível de instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Você pode ter várias auditorias por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O objeto *Especificação da Auditoria do Servidor* pertence a uma auditoria. É possível criar uma especificação de auditoria de servidor por auditoria, já que ambas são criadas no escopo da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+# <a name="create-a-server-audit-and-server-audit-specification"></a>Criar uma auditoria de servidor e uma especificação de auditoria de servidor
+  Este tópico descreve como criar uma especificação de auditoria de servidor no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. *Auditar* uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envolve eventos de rastreamento e de log que ocorrem no sistema. O objeto *SQL Server Audit* coleta uma instância única de ações no nível do servidor e/ou do banco de dados e grupos de ações a serem monitoradas. A auditoria está no nível de instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Você pode ter várias auditorias por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O objeto *Especificação da Auditoria do Servidor* pertence a uma auditoria. É possível criar uma especificação de auditoria de servidor por auditoria, já que ambas são criadas no escopo da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  **Neste tópico**  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 21
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para criar uma auditoria de servidor  
+#### <a name="to-create-a-server-audit"></a>Para criar uma auditoria de servidor  
   
 1.  No Pesquisador de Objetos, expanda a pasta **Segurança** .  
   
@@ -87,14 +91,14 @@ caps.handback.revision: 21
     > [!IMPORTANT]  
     >  Quando a auditoria estiver em um estado com falha, a Conexão de administrador dedicada poderá continuar executando eventos auditados.  
   
-     Lista **Destino da auditoria**  
+     Lista**Destino da auditoria**   
      Especifica o destino para dados de auditoria. As opções disponíveis são um arquivo binário, o log de aplicativos do Windows ou o log de segurança do Windows. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não poderá gravar no log de segurança do Windows se não forem definidas configurações adicionais no Windows. Para obter mais informações, veja [Gravar eventos de auditoria do SQL Server no log de segurança](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
   
      **Caminho do arquivo**  
      Especifica a localização da pasta em que os dados de auditoria serão gravados quando o **Destino da auditoria** for um arquivo.  
   
      **Reticências (...)**  
-     Abre a caixa de diálogo **Localizar Pasta ***server_name* para especificar um caminho do arquivo ou criar uma pasta na qual o arquivo de auditoria é gravado.  
+     Abre a caixa de diálogo **Localizar Pasta***server_name* para especificar um caminho do arquivo ou criar uma pasta na qual o arquivo de auditoria é gravado.  
   
      **Audite o limite máximo de arquivo:**  
      **Máximo de arquivos de substituição**  
@@ -103,23 +107,23 @@ caps.handback.revision: 21
      **Máximo de arquivos**  
      Especifica que, quando o número máximo de arquivos de auditoria for atingido, haverá falha com um erro em qualquer ação que provoque a geração de eventos de auditoria adicionais.  
   
-     Caixa de seleção **Ilimitado**  
+     Caixa de seleção**Ilimitado**   
      Quando a caixa de seleção **Ilimitado** sob **Máximo de arquivos de substituição** for marcada, não haverá nenhum limite imposto para o número de arquivos de auditoria a serem criados. A caixa de seleção **Ilimitado** é marcada por padrão e se aplica às seleções **Máximo de arquivos de substituição** e **Máximo de arquivos** .  
   
-     Caixa **Número de arquivos**  
+     Caixa**Número de arquivos**   
      Especifica o número de arquivos de auditoria a serem criados, até 2.147.483.647. Essa opção estará disponível somente se **Ilimitado** estiver desmarcado.  
   
      **Tamanho máximo de arquivo**  
      Especifica o tamanho máximo para um arquivo de auditoria em megabytes (MB), gigabytes (GB) ou terabytes (TB). Você pode especificar entre 1024 MB e 2.147.483.647 TB. Marcar a caixa de seleção **Ilimitado** não estabelece um limite para o tamanho do arquivo. A especificação de um valor abaixo de 1024 MB falhará, gerando um erro. A caixa de seleção **Ilimitada** fica marcada por padrão.  
   
-     Caixa de seleção **Reservar espaço em disco**  
+     Caixa de seleção**Reservar espaço em disco**   
      Especifica o espaço pré-alocado no disco que é igual ao tamanho de arquivo máximo especificado. Essa configuração pode ser usada se a caixa de seleção **Ilimitada** sob **Tamanho máximo do arquivo** não for marcada. Essa caixa de seleção não é marcada por padrão.  
   
 3.  Opcionalmente, na página **Filtro** , insira um predicado ou a cláusula `WHERE` , para a auditoria de servidor para especificar opções adicionais não disponíveis da página **Geral** . Inclua o predicado em parênteses; por exemplo: `(object_name = 'EmployeesTable')`.  
   
 4.  Quando terminar de selecionar as opções, clique em **OK**.  
   
-#### Para criar uma especificação de auditoria de servidor  
+#### <a name="to-create-a-server-audit-specification"></a>Para criar uma especificação de auditoria de servidor  
   
 1.  No Pesquisador de Objetos, clique no sinal de mais para expandir a pasta **Segurança** .  
   
@@ -137,9 +141,9 @@ caps.handback.revision: 21
      Especifica os grupos de ação de auditoria no nível de servidor e as ações de auditoria a capturar. Para a lista de grupos de ação de auditoria no nível de servidor, ações de auditoria e uma descrição dos eventos que eles contêm, veja [Ações e grupos de ações de auditoria do SQL Server](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
      **Esquema de Objeto**  
-     Exibe o esquema para **Object Name** especificado.  
+     Exibe o esquema para **Object Name**especificado.  
   
-     **Nome do Objeto**  
+     **Object Name**  
      Nome do objeto a ser auditado. Isso só está disponível para ações de auditoria e não se aplica a grupos de auditoria.  
   
      **Reticências (...)**  
@@ -155,7 +159,7 @@ caps.handback.revision: 21
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para criar uma auditoria de servidor  
+#### <a name="to-create-a-server-audit"></a>Para criar uma auditoria de servidor  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 21
         TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
     ```  
   
-#### Para criar uma especificação de auditoria de servidor  
+#### <a name="to-create-a-server-audit-specification"></a>Para criar uma especificação de auditoria de servidor  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

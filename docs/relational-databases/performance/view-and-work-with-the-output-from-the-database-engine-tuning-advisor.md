@@ -1,53 +1,57 @@
 ---
-title: "Exibir e trabalhar com a sa&#237;da do Orientador de Otimiza&#231;&#227;o do Mecanismo de Banco de Dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dta.sessionmonitor.f1"
-  - "sql13.dta.reports.f1"
-  - "sql13.dta.recommendations.f1"
-  - "sql13.dta.applyrecommendations.f1"
-helpviewer_keywords: 
-  - "exibindo logs"
-  - "recomendações [Orientador de Otimização do Mecanismo de Banco de Dados]"
-  - "informações de ajuste de resumo [SQL Server]"
-  - "Orientador de Otimização do Mecanismo de Banco de Dados [SQL Server], recomendações"
-  - "Orientador de Otimização do Mecanismo de Banco de Dados [SQL Server], logs"
-  - "Orientador de Otimização do Mecanismo de Banco de Dados [SQL Server], exibindo a saída"
-  - "Orientador de Otimização do Mecanismo de Banco de Dados [SQL Server], relatórios"
-  - "logs [SQL Server], ajustando"
-  - "relatórios [SQL Server], ajustando"
-  - "exibindo saída de ajuste"
+title: "Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dta.sessionmonitor.f1
+- sql13.dta.reports.f1
+- sql13.dta.recommendations.f1
+- sql13.dta.applyrecommendations.f1
+helpviewer_keywords:
+- viewing logs
+- recommendations [Database Engine Tuning Advisor]
+- summary tuning information [SQL Server]
+- Database Engine Tuning Advisor [SQL Server], recommendations
+- Database Engine Tuning Advisor [SQL Server], logs
+- Database Engine Tuning Advisor [SQL Server], viewing output
+- Database Engine Tuning Advisor [SQL Server], reports
+- logs [SQL Server], tuning
+- reports [SQL Server], tuning
+- viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce827e3df11e103bced1b62afb2329db9c81e0f4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exibir e trabalhar com a sa&#237;da do Orientador de Otimiza&#231;&#227;o do Mecanismo de Banco de Dados
+# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Quando o Orientador de Otimização do Mecanismo de Banco de Dados ajusta os bancos de dados, cria resumos, recomendações, relatórios e logs de ajuste. Você pode usar a saída do log de ajuste para solucionar problemas das sessões de ajuste do Orientador de Otimização do Mecanismo de Banco de Dados. Você pode usar os resumos, as recomendações e os relatórios para determinar se deseja implementar recomendações de ajuste ou continuar ajustando até atingir o desempenho de consulta necessário para instalar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter informações sobre como usar o Database Tuning Advisor para criar cargas de trabalho ou ajustar um banco de dados, consulte [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+  Quando o Orientador de Otimização do Mecanismo de Banco de Dados ajusta os bancos de dados, cria resumos, recomendações, relatórios e logs de ajuste. Você pode usar a saída do log de ajuste para solucionar problemas das sessões de ajuste do Orientador de Otimização do Mecanismo de Banco de Dados. Você pode usar os resumos, as recomendações e os relatórios para determinar se deseja implementar recomendações de ajuste ou continuar ajustando até atingir o desempenho de consulta necessário para instalar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter informações sobre como usar o Database Tuning Advisor para criar cargas de trabalho ou ajustar um banco de dados, consulte [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="View"></a> Exibir saída de ajuste  
  Os procedimentos a seguir descrevem como exibir recomendações de ajuste, resumos, relatórios e logs de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados. Para obter mais informações sobre as opções da interface do usuário, consulte [Descrições da interface do usuário](#UI) posteriormente neste tópico.  
   
- Você também pode usar a GUI para exibir a saída de ajuste gerada pelo utilitário de linha de comando **dta**.  
+ Você também pode usar a GUI para exibir a saída de ajuste gerada pelo utilitário de linha de comando **dta** .  
   
 > [!NOTE]  
->  Se você usar o utilitário de linha de comando **dta** e especificar que a saída deve ser gravada em um arquivo XML usando o argumento **-ox**, poderá abrir e exibir o arquivo de saída XML clicando em **Abrir Arquivo** no menu **Arquivo** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Use SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md). Para obter informações sobre o utilitário de linha de comando **dta**, consulte [Utilitário dta](../../tools/dta/dta-utility.md).  
+>  Se você usar o utilitário de linha de comando **dta** e especificar que a saída deve ser gravada em um arquivo XML usando o argumento **-ox** , poderá abrir e exibir o arquivo de saída XML clicando em **Abrir Arquivo** no menu **Arquivo** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Para obter informações sobre o utilitário de linha de comando **dta** , consulte [Utilitário dta](../../tools/dta/dta-utility.md).  
   
-#### Para exibir as recomendações de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados  
+#### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Para exibir as recomendações de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados  
   
-1.  Ajuste um banco de dados usando a GUI do Orientador de Otimização do Mecanismo de Banco de Dados ou o utilitário de linha de comando **dta**. Para obter mais informações, consulte [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Para usar uma sessão de ajuste existente, ignore esta etapa e passe à Etapa 2.  
+1.  Ajuste um banco de dados usando a GUI do Orientador de Otimização do Mecanismo de Banco de Dados ou o utilitário de linha de comando **dta** . Para obter mais informações, consulte [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Para usar uma sessão de ajuste existente, ignore esta etapa e passe à Etapa 2.  
   
 2.  Inicie a GUI do Orientador de Otimização do Mecanismo de Banco de Dados. Para obter mais informações, consulte [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Se você quiser exibir as recomendações de ajuste de uma sessão de ajuste existente, abra-a clicando duas vezes no nome de sessão na janela **Monitor de Sessão**.  
   
@@ -61,9 +65,9 @@ caps.handback.revision: 34
   
 6.  Para salvar todos os scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] que criam ou descartam todos os objetos de banco de dados nesta recomendação em um arquivo de script, clique em **Salvar Recomendações** , no menu **Ações** .  
   
-#### Para exibir o resumo e os relatórios de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados  
+#### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>Para exibir o resumo e os relatórios de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados  
   
-1.  Ajuste um banco de dados usando a GUI do Orientador de Otimização do Mecanismo de Banco de Dados ou o utilitário de linha de comando **dta**. Para obter mais informações, consulte [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Para usar uma sessão de ajuste existente, ignore esta etapa e passe à Etapa 2.  
+1.  Ajuste um banco de dados usando a GUI do Orientador de Otimização do Mecanismo de Banco de Dados ou o utilitário de linha de comando **dta** . Para obter mais informações, consulte [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Para usar uma sessão de ajuste existente, ignore esta etapa e passe à Etapa 2.  
   
 2.  Inicie a GUI do Orientador de Otimização do Mecanismo de Banco de Dados. Para obter mais informações, consulte [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Se você desejar exibir resumos e relatórios de ajuste de uma sessão de ajuste existente, abra-os clicando duas vezes no nome da sessão no **Monitor de Sessão**.  
   
@@ -73,20 +77,20 @@ caps.handback.revision: 34
   
 5.  No painel **Relatórios de Ajuste** , clique em **Selecionar relatório** para escolher um relatório de ajuste a ser exibido.  
   
-#### Para exibir os logs de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados  
+#### <a name="to-view-tuning-logs-with-the-database-engine-tuning-advisor-gui"></a>Para exibir os logs de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados  
   
-1.  Ajuste um banco de dados usando a GUI do Orientador de Otimização do Mecanismo de Banco de Dados ou o utilitário de linha de comando **dta**. Ao ajustar a carga de trabalho, verifique se você marcou **Salvar log de ajuste** , na guia **Geral** . Para usar uma sessão de ajuste existente, ignore esta etapa e passe à Etapa 2.  
+1.  Ajuste um banco de dados usando a GUI do Orientador de Otimização do Mecanismo de Banco de Dados ou o utilitário de linha de comando **dta** . Ao ajustar a carga de trabalho, verifique se você marcou **Salvar log de ajuste** , na guia **Geral** . Para usar uma sessão de ajuste existente, ignore esta etapa e passe à Etapa 2.  
   
-2.  Inicie a GUI do Orientador de Otimização do Mecanismo de Banco de Dados. Para obter mais informações, consulte [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Se você desejar exibir resumos e relatórios de ajuste de uma sessão de ajuste existente, abra-os clicando duas vezes no nome da sessão na janela **Monitor de Sessão**.  
+2.  Inicie a GUI do Orientador de Otimização do Mecanismo de Banco de Dados. Para obter mais informações, consulte [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Se você desejar exibir resumos e relatórios de ajuste de uma sessão de ajuste existente, abra-os clicando duas vezes no nome da sessão na janela **Monitor de Sessão** .  
   
 3.  Depois de encerrada a nova sessão de ajuste ou depois de a ferramenta ter carregado a sessão existente, clique na guia **Progresso** . O painel **Log de Ajuste** exibe o conteúdo do log. O log contém informações sobre eventos de carga de trabalho que o Orientador de Otimização do Mecanismo de Banco de Dados não pôde analisar.  
   
      Quando todos os eventos da sessão de ajuste tiverem sido analisados pelo Orientador de Otimização do Mecanismo de Banco de Dados, será exibida uma mensagem indicando que o log de ajuste está vazio para a sessão. Se **Salvar log de ajuste** não estiver marcado na guia **Geral** quando a sessão de ajuste foi executada originalmente, será exibida uma mensagem indicativa.  
   
 ##  <a name="Implement"></a> implementar recomendações de ajuste  
- Você pode implementar as recomendações do Orientador de Otimização do Mecanismo de Banco de Dados manualmente ou automaticamente como parte da sessão de ajuste. Se quiser examinar os resultados do ajuste antes de implementá-los, use a GUI do Orientador de Otimização do Mecanismo de Banco de Dados. Você pode usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para executar manualmente os scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , que o Orientador de Otimização do Mecanismo de Banco de Dados gera como resultado da análise de uma carga de trabalho para implementar as recomendações. Se você não precisar examinar os resultados antes de implementá-los, poderá usar a opção **-a** com o utilitário de prompt de comando **dta**. Isso faz com que o utilitário implemente as recomendações de ajuste automaticamente depois de analisar sua carga de trabalho. Os procedimentos a seguir explicam como usar ambas as interfaces do Orientador de Otimização do Mecanismo de Banco de Dados para implementar as recomendações de ajuste.  
+ Você pode implementar as recomendações do Orientador de Otimização do Mecanismo de Banco de Dados manualmente ou automaticamente como parte da sessão de ajuste. Se quiser examinar os resultados do ajuste antes de implementá-los, use a GUI do Orientador de Otimização do Mecanismo de Banco de Dados. Você pode usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para executar manualmente os scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , que o Orientador de Otimização do Mecanismo de Banco de Dados gera como resultado da análise de uma carga de trabalho para implementar as recomendações. Se você não precisar examinar os resultados antes de implementá-los, poderá usar a opção **-a** com o utilitário de prompt de comando **dta** . Isso faz com que o utilitário implemente as recomendações de ajuste automaticamente depois de analisar sua carga de trabalho. Os procedimentos a seguir explicam como usar ambas as interfaces do Orientador de Otimização do Mecanismo de Banco de Dados para implementar as recomendações de ajuste.  
   
-#### Para implementar manualmente as recomendações de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados  
+#### <a name="to-manually-implement-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Para implementar manualmente as recomendações de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados  
   
 1.  Ajuste um banco de dados usando a GUI do Orientador de Otimização do Mecanismo de Banco de Dados ou o utilitário de prompt de comando **dta** . Para obter mais informações, consulte [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Para usar uma sessão de ajuste existente, ignore esta etapa e passe à Etapa 2.  
   
@@ -98,7 +102,7 @@ caps.handback.revision: 34
   
 5.  Clique em **OK** para aplicar as recomendações.  
   
-#### Para implementar automaticamente as recomendações de ajuste usando o utilitário de prompt de comando dta  
+#### <a name="to-automatically-implement-tuning-recommendations-using-the-dta-command-prompt-utility"></a>Para implementar automaticamente as recomendações de ajuste usando o utilitário de prompt de comando dta  
   
 1.  Determine os recursos de banco de dados (índices, exibições indexadas, particionamento) que o Orientador de Otimização do Mecanismo de Banco de Dados deve considerar para adição, remoção ou retenção durante a análise.  
   
@@ -125,10 +129,10 @@ caps.handback.revision: 34
   
  Os procedimentos a seguir explicam como usar o recurso de configuração especificado pelo usuário com ambas as interfaces de ferramenta.  
   
-### Usando a interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados para avaliar recomendações de ajuste  
+### <a name="using-database-engine-tuning-advisor-gui-to-evaluate-tuning-recommendations"></a>Usando a interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados para avaliar recomendações de ajuste  
  O procedimento abaixo descreve como avaliar uma recomendação gerada pelo Orientador de Otimização do Mecanismo de Banco de Dados, mas a interface gráfica do usuário não permite que você especifique novas estruturas de design físicas para avaliação.  
   
-##### Para avaliar as recomendações de ajuste com a interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados  
+##### <a name="to-evaluate-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Para avaliar as recomendações de ajuste com a interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados  
   
 1.  Use a interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados para ajustar um banco de dados. Para obter mais informações, consulte [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Se você desejar avaliar uma sessão de ajuste existente, clique duas vezes nela em **Monitor de Sessão**.  
   
@@ -140,10 +144,10 @@ caps.handback.revision: 34
   
 5.  Clique no botão **Iniciar Análise** na barra de ferramentas. Quando o Orientador de Otimização do Mecanismo de Banco de Dados for encerrado, você pode exibir os resultados na guia **Recomendações** .  
   
-### Usando a interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados para exportar os resultados da sessão de ajuste para análise de ajuste hipotética  
- O procedimento abaixo descreve como exportar os resultados da sessão de ajuste do Orientador de Otimização do Mecanismo de Banco de Dados para um arquivo XML, que você pode editar e, em seguida, ajustar com o utilitário de linha de comando **dta**. Isso permite executar uma análise de ajuste em novas estruturas de design físicas hipotéticas sem a sobrecarga de implementá-las em seu banco de dados antes de descobrir se geram as melhorias de desempenho necessárias. Usar a GUI do Orientador de Otimização do Mecanismo de Banco de Dados para ajustar inicialmente seu banco de dados e exportar os resultados do ajuste para um arquivo **.xml** são um bom modo para os usuários que estão começando com o XML usarem a flexibilidade do esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados para executar o teste de hipóteses.  
+### <a name="using-database-engine-tuning-advisor-gui-to-export-tuning-session-results-for-what-if-tuning-analysis"></a>Usando a interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados para exportar os resultados da sessão de ajuste para análise de ajuste hipotética  
+ O procedimento abaixo descreve como exportar os resultados da sessão de ajuste do Orientador de Otimização do Mecanismo de Banco de Dados para um arquivo XML, que você pode editar e, em seguida, ajustar com o utilitário de linha de comando **dta** . Isso permite executar uma análise de ajuste em novas estruturas de design físicas hipotéticas sem a sobrecarga de implementá-las em seu banco de dados antes de descobrir se geram as melhorias de desempenho necessárias. Usar a GUI do Orientador de Otimização do Mecanismo de Banco de Dados para ajustar inicialmente seu banco de dados e exportar os resultados do ajuste para um arquivo **.xml** são um bom modo para os usuários que estão começando com o XML usarem a flexibilidade do esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados para executar o teste de hipóteses.  
   
-##### Para exportar resultados da sessão de ajuste da interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados para a análise hipotética com o utilitário de linha de comando dta  
+##### <a name="to-export-tuning-session-results-from-the-database-engine-tuning-advisor-gui-for-what-if-analysis-with-the-dta-command-line-utility"></a>Para exportar resultados da sessão de ajuste da interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados para a análise hipotética com o utilitário de linha de comando dta  
   
 1.  Use a interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados para ajustar um banco de dados. Para obter mais informações, consulte [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Se você desejar avaliar uma sessão de ajuste existente, clique duas vezes em **Monitor de Sessão**.  
   
@@ -155,10 +159,10 @@ caps.handback.revision: 34
   
 5.  Use o arquivo XML criado na etapa 4 como entrada para o utilitário de linha de comando **dta** . Para obter informações sobre como usar arquivos de entrada XML com esta ferramenta, consulte a seção "Ajustar um banco de dados usando o utilitário dta" em [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-### Usando o recurso de configuração especificada pelo usuário com o utilitário de linha de comando dta  
+### <a name="using-the-user-specified-configuration-feature-with-the-dta-command-line-utility"></a>Usando o recurso de configuração especificada pelo usuário com o utilitário de linha de comando dta  
  Se você for um desenvolvedor de XML experiente, poderá criar um arquivo de entrada XML do Orientador de Otimização do Mecanismo de Banco de Dados no qual é possível especificar uma carga de trabalho e uma configuração hipotética de estruturas de design do banco de dados físico, como índices, exibições indexadas ou particionamento. Em seguida, você pode usar o utilitário de linha de comando **dta** para analisar os efeitos que essa configuração hipotética causa no desempenho de consulta do banco de dados. O procedimento abaixo explica esse processo passo a passo:  
   
-##### Para usar o recurso de configuração especificado pelo usuário com o utilitário de linha de comando dta  
+##### <a name="to-use-the-user-specified-configuration-feature-with-the-dta-command-line-utility"></a>Para usar o recurso de configuração especificado pelo usuário com o utilitário de linha de comando dta  
   
 1.  Crie uma carga de trabalho de ajuste. Para obter mais informações sobre como executar essa tarefa, consulte [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -176,7 +180,7 @@ caps.handback.revision: 34
   
      O esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados também está disponível online em [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta).  
   
-6.  Depois de criar uma carga de trabalho e um arquivo de entrada XML, você estará pronto para enviar o arquivo de entrada ao utilitário de linha de comando **dta** para análise. Verifique se foi especificado um nome do arquivo de saída XML para o argumento do utilitário **- ox**. Isso cria um arquivo de saída XML com uma configuração recomendada especificada no elemento de **Configuration** . Se quiser executar o Orientador de Otimização do Mecanismo de Banco de Dados novamente para verificar outra configuração hipotética baseada na saída, você poderá copiar e colar o conteúdo dos elementos **Configuration** do arquivo de saída em um arquivo de entrada XML novo ou no original. Para obter informações sobre como usar um arquivo de entrada XML com o utilitário **dta** , consulte a seção “Ajustar um banco de dados usando o utilitário dta" em [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+6.  Depois de criar uma carga de trabalho e um arquivo de entrada XML, você estará pronto para enviar o arquivo de entrada ao utilitário de linha de comando **dta** para análise. Verifique se foi especificado um nome do arquivo de saída XML para o argumento do utilitário **- ox** . Isso cria um arquivo de saída XML com uma configuração recomendada especificada no elemento de **Configuration** . Se quiser executar o Orientador de Otimização do Mecanismo de Banco de Dados novamente para verificar outra configuração hipotética baseada na saída, você poderá copiar e colar o conteúdo dos elementos **Configuration** do arquivo de saída em um arquivo de entrada XML novo ou no original. Para obter informações sobre como usar um arquivo de entrada XML com o utilitário **dta** , consulte a seção “Ajustar um banco de dados usando o utilitário dta" em [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
      Depois que o ajuste terminar, use a interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados para exibir os relatórios de ajuste ou abra o arquivo de saída XML para exibir o **TuningSummary** e os elementos de **Configuration** para exibir as recomendações do Orientador. Para obter informações sobre como exibir os resultados de sua sessão de ajuste, consulte [Exibir saída de ajuste](#View) anteriormente neste tópico. Note também que o arquivo de saída XML pode conter relatórios de análise do Orientador de Otimização do Mecanismo de Banco de Dados.  
   
@@ -187,10 +191,10 @@ caps.handback.revision: 34
   
  Antes de poder revisar qualquer sessão de ajuste para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], crie sessões de ajuste na instância do servidor, ajustando cargas de trabalho com o Orientador de Otimização do Mecanismo de Banco de Dados. Para obter mais informações, consulte [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-### Revisar sessões de ajuste existentes  
+### <a name="review-existing-tuning-sessions"></a>Revisar sessões de ajuste existentes  
  Siga as etapas a seguir para navegar pelas sessões de ajuste existentes em uma determinada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##### Para revisar sessões de ajuste existentes  
+##### <a name="to-review-existing-tuning-sessions"></a>Para revisar sessões de ajuste existentes  
   
 1.  Inicie a GUI do Orientador de Otimização do Mecanismo de Banco de Dados. Para obter mais informações, consulte [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -200,10 +204,10 @@ caps.handback.revision: 34
   
 4.  Clique duas vezes em um nome de sessão de ajuste e suas informações serão carregadas no Orientador de Otimização do Mecanismo de Banco de Dados. Depois que as informações de sessão são carregadas, você pode escolher quaisquer das guias para exibir as informações sobre essa sessão de ajuste.  
   
-### Avaliar sessões de ajuste existentes como configurações hipotéticas  
- Use as etapas a seguir para avaliar uma sessão de ajuste existente. A avaliação de uma sessão de ajuste existente envolve exibir e editar suas recomendações e depois fazer um reajuste. Por exemplo, você decide só deseja criar índices na **tabela1**, portanto exclui a criação de exibições indexadas e particionamento de uma recomendação de ajuste existente. O Orientador de Otimização do Mecanismo de Banco de Dados cria uma nova sessão de ajuste e ajusta a carga de trabalho com relação a seus bancos de dados usando as recomendações editadas como uma configuração hipotética. Isso significa que o Orientador de Otimização do Mecanismo de Banco de Dados ajusta a carga de trabalho com relação aos bancos de dados como se as recomendações editadas tivessem sido implementadas, permitindo a execução de uma análise hipotética limitada. É uma análise hipotética limitada porque você pode só escolher um subconjunto de uma recomendação existente ao usar a interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados. Para executar um teste de hipóteses completo, especificando uma configuração hipotética completamente nova que não é subconjunto de nenhuma sessão de ajuste prévia, use o arquivo de entrada XML do Orientador de Otimização do Mecanismo de Banco de Dados com o utilitário de linha de comando **dta**.  
+### <a name="evaluate-existing-tuning-sessions-as-hypothetical-configurations"></a>Avaliar sessões de ajuste existentes como configurações hipotéticas  
+ Use as etapas a seguir para avaliar uma sessão de ajuste existente. A avaliação de uma sessão de ajuste existente envolve exibir e editar suas recomendações e depois fazer um reajuste. Por exemplo, você decide só deseja criar índices na **tabela1**, portanto exclui a criação de exibições indexadas e particionamento de uma recomendação de ajuste existente. O Orientador de Otimização do Mecanismo de Banco de Dados cria uma nova sessão de ajuste e ajusta a carga de trabalho com relação a seus bancos de dados usando as recomendações editadas como uma configuração hipotética. Isso significa que o Orientador de Otimização do Mecanismo de Banco de Dados ajusta a carga de trabalho com relação aos bancos de dados como se as recomendações editadas tivessem sido implementadas, permitindo a execução de uma análise hipotética limitada. É uma análise hipotética limitada porque você pode só escolher um subconjunto de uma recomendação existente ao usar a interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados. Para executar um teste de hipóteses completo, especificando uma configuração hipotética completamente nova que não é subconjunto de nenhuma sessão de ajuste prévia, use o arquivo de entrada XML do Orientador de Otimização do Mecanismo de Banco de Dados com o utilitário de linha de comando **dta** .  
   
-##### Para avaliar uma sessão de ajuste existente  
+##### <a name="to-evaluate-an-existing-tuning-session"></a>Para avaliar uma sessão de ajuste existente  
   
 1.  Depois de iniciar o Orientador de Otimização do Mecanismo de Banco de Dados, clique duas vezes em uma sessão de ajuste na metade superior do **Monitor de Sessão**, que carrega as informações da sessão no Orientador de Otimização do Mecanismo de Banco de Dados.  
   
@@ -223,10 +227,10 @@ caps.handback.revision: 34
   
 9. Clique no botão **Iniciar Análise** na barra de ferramentas. O Orientador de Otimização do Mecanismo de Banco de Dados é iniciado, ajustando os bancos de dados que usam a configuração hipotética. Quando o Orientador de Otimização do Mecanismo de Banco de Dados terminar, você pode exibir os resultados dessa sessão como faria normalmente com qualquer outra.  
   
-### Clonar sessões de ajuste existentes  
+### <a name="clone-existing-tuning-sessions"></a>Clonar sessões de ajuste existentes  
  Você pode criar novas sessões de ajuste com base em sessões existentes, selecionando a opção de clonagem no Orientador de Otimização do Mecanismo de Banco de Dados. Ao usar a opção de clonagem, você baseia uma nova sessão de ajuste a partir de uma sessão existente. Depois você pode alterar as opções de ajuste da nova sessão conforme necessário. Quando você avalia uma sessão existente, como descrito no procedimento anterior, o Orientador de Otimização do Mecanismo de Banco de Dados também cria uma nova sessão de ajuste, mas você não pode alterar as opções de ajuste.  
   
-##### Para criar novas sessões de ajuste pela clonagem de sessões existentes  
+##### <a name="to-create-new-tuning-sessions-by-cloning-existing-sessions"></a>Para criar novas sessões de ajuste pela clonagem de sessões existentes  
   
 1.  Depois de iniciar o Orientador de Otimização do Mecanismo de Banco de Dados, clique duas vezes em uma sessão de ajuste na metade superior do **Monitor de Sessão**, que carrega as informações da sessão no Orientador de Otimização do Mecanismo de Banco de Dados.  
   
@@ -242,15 +246,15 @@ caps.handback.revision: 34
   
 ##  <a name="UI"></a> Descrições da interface do usuário  
   
-### Monitoramento de sessões  
+### <a name="sessions-monitor"></a>Monitoramento de sessões  
  O**Monitor de Sessão** exibe informações sobre as sessões abertas no Orientador de Otimização do Mecanismo de Banco de Dados. Selecione um nome de sessão no **Monitor de Sessão**para exibir informações sobre a sessão na janela Propriedades.  
   
-### Guia Recomendações  
+### <a name="recommendations-tab"></a>Guia Recomendações  
  A guia **Recomendações** aparece depois que o Orientador de Otimização do Mecanismo de Banco de Dados conclui a análise da carga de trabalho. Essa grade contém as recomendações para todos os objetos considerados. Quando houver recomendações de partição, elas serão apresentadas na grade superior, e as recomendações de índice, na grade inferior. As grades não aparecem quando não há recomendações.  
   
  A coluna **Definição** contém a definição da partição recomendada ou índice na forma de um hiperlink. Essa coluna, em geral, é muito estreita para exibir a definição inteira. Clique no hiperlink para exibir uma caixa de diálogo que contém a definição completa e o botão **Copiar na área de transferência** .  
   
-#### Recomendações de partição  
+#### <a name="partition-recommendations"></a>Recomendações de Partição  
  **Nome do Banco de Dados**  
  Banco de dados que contém os objetos recomendados a serem modificados.  
   
@@ -263,13 +267,13 @@ caps.handback.revision: 34
  **Detalhes**  
  Uma descrição do **Destino da Recomendação**. Os valores possíveis incluem um intervalo de funções de partição ou em branco para esquemas de partição.  
   
- **Nenhum. de partições**  
+ **N.º de partições**  
  Número de partições definido pelas funções particionamento recomendadas. Quando essa função é usada com um esquema e depois aplicada a uma tabela, os dados da tabela dividem-se entre essas várias partições.  
   
  **Definição**  
  A definição do **Destino da Recomendação**. Clique na coluna para abrir a caixa de diálogo Visualização de script SQL com um script para a ação recomendada.  
   
-##### Recomendações de índice  
+##### <a name="index-recommendations"></a>Recomendações de Índice  
  **Nome do Banco de Dados**  
  Banco de dados que contém os objetos recomendados a serem modificados.  
   
@@ -294,19 +298,19 @@ caps.handback.revision: 34
  **Definição**  
  A definição do **Destino da Recomendação**. Clique na coluna para abrir a caixa de diálogo Visualização de script SQL com um script para a ação recomendada.  
   
- **Mostrar os objetos existentes**  
+ **Mostrar objetos existentes**  
  Selecione para mostrar todos os objetos existentes na grade, mesmo se nenhuma recomendação relativa aos objetos for feita pelo Orientador de Otimização do Mecanismo de Banco de Dados.  
   
  **Consulte os relatórios para obter tamanhos de objetos existentes**  
  Selecione para exibir relatórios que fornecem o tamanho de objetos existentes na grade de recomendações.  
   
-### Opções do menu Ações/Aplicar Recomendações  
+### <a name="actions-menuapply-recommendations-options"></a>Opções do menu Ações/Aplicar Recomendações  
  Depois que uma carga de trabalho foi analisada e as recomendações foram apresentadas, no menu **Ações** , clique em **Aplicar Recomendações** para abrir a caixa de diálogo **Aplicar Recomendações** .  
   
  **Aplicar agora**  
  Gera um script para as recomendações e executa-o a fim de implementar as recomendações.  
   
- **Programar para mais tarde**  
+ **Agendar para mais tarde**  
  Gera um script para as recomendações e salva as ações como um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
  **Data**  
@@ -315,10 +319,10 @@ caps.handback.revision: 34
  **Hora**  
  Especifica a hora em que você quer executar o trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a fim de aplicar as recomendações.  
   
-### Opções da guia Relatórios  
+### <a name="reports-tab-options"></a>Opções da guia Relatórios  
  A guia **Relatórios** aparece depois que o Orientador de Otimização do Mecanismo de Banco de Dados conclui a análise da carga de trabalho.  
   
- **Resumo de Ajuste**  
+ **Resumo do Ajuste**  
  Exibe um resumo das recomendações do Orientador de Otimização do Mecanismo de Banco de Dados.  
   
  **Data**  
@@ -337,7 +341,7 @@ caps.handback.revision: 34
  Aparece quando a carga de trabalho é um arquivo.  
   
  **Tabela da carga de trabalho**  
- Aparece quando a carga de trabalho é uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Aparece quando a carga de trabalho é uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Carga de trabalho**  
  Aparece quando a carga de trabalho foi importada do Editor de Consultas em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -348,7 +352,7 @@ caps.handback.revision: 34
  **Tempo gasto para ajustar**  
  Tempo gasto verdadeiramente pelo Orientador de Otimização do Mecanismo de Banco de Dados para analisar a carga de trabalho.  
   
- **Porcentagem de aperfeiçoamento esperada**  
+ **Aperfeiçoamento de percentual esperado**  
  Porcentagem de aperfeiçoamento esperada com a carga de trabalho de destino se todas as recomendações do Orientador de Otimização do Mecanismo de Banco de Dados forem implementadas.  
   
  **Espaço máximo para a recomendação (MB)**  
@@ -384,11 +388,11 @@ caps.handback.revision: 34
  **Número de estatísticas recomendadas para serem criadas**  
  Número recomendado de estatísticas a serem criadas no banco de dados ajustado. Aparece somente se as estatísticas forem recomendadas.  
   
- **Selecionar relatório**  
+ **Select Report**  
  Consulte os detalhes do relatório selecionado. As colunas da grade variam em todos os relatórios.  
   
-## Consulte também  
- [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
+## <a name="see-also"></a>Consulte também  
+ [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [Utilitário dta](../../tools/dta/dta-utility.md)  
   
   

@@ -1,25 +1,29 @@
 ---
-title: "Li&#231;&#227;o 7: Restaurar um banco de dados em um ponto espec&#237;fico | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lição 7: Restaurar um banco de dados em um ponto no tempo | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 caps.latest.revision: 13
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a25788a3b7eda518aeff01329eb5e207d9092bd6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Li&#231;&#227;o 7: Restaurar um banco de dados em um ponto espec&#237;fico
+# <a name="lesson-7-restore-a-database-to-a-point-in-time"></a>Lição 7: Restaurar um banco de dados em um ponto específico
 Nesta lição, você aprenderá a restaurar o banco de dados AdventureWorks2014 em um ponto específico entre dois backups de log de transações.  
   
 Com backups tradicionais, para realizar a restauração pontual, você precisará usar o backup do banco de dados completo, talvez um backup diferencial, e todos os arquivos de log de transações incluindo e logo após o ponto específico para o qual você quer restaurar. Com os backups de instantâneo de arquivo, você só precisa de dois arquivos de log de backup adjacentes que fornecem as postagens de meta enquadrando o tempo para o qual você quer restaurar. Você só precisa dois conjuntos de backup de instantâneo de arquivo de log, pois cada backup de log cria um instantâneo de arquivo de cada arquivo de banco de dados (cada arquivo de dados e o arquivo de log).  
@@ -39,7 +43,7 @@ Para restaurar um banco de dados para um ponto específico por meio de conjuntos
   
     ```  
   
-    ![Row count of 29,939 is displayed](../relational-databases/media/5e2f4229-1970-49c9-89b3-e96b6f7fde83.JPG "Row count of 29,939 is displayed")  
+    ![A contagem de linhas 29.939 é exibida](../relational-databases/media/5e2f4229-1970-49c9-89b3-e96b6f7fde83.JPG "A contagem de linhas 29.939 é exibida")  
   
 4.  Copie e cole o script Transact-SQL a seguir na janela de consulta. Selecione dois arquivos de backup de log adjacentes e converta o nome de arquivo na data e hora de que você precisará para esse script. Modifique a URL de forma adequada para o nome de sua conta de armazenamento e o contêiner especificado na Lição 1, forneça os nomes do primeiro e segundo arquivos de backup, forneça a hora STOPAT no formato “26 de junho de 2015 01h48” e execute este script. Esse script levará alguns minutos para ser concluído  
   
@@ -61,11 +65,12 @@ Para restaurar um banco de dados para um ponto específico por meio de conjuntos
   
 5.  Examine a saída. Observe que, após a restauração, a contagem de linhas é 18.389, que é um número de contagem de linhas entre o backup de log 5 e 6 (a contagem de linhas poderá variar).  
   
-    ![Results pane showing the row count after the point in time restore](../relational-databases/media/4a0c6d8b-e2ed-4e93-bd7a-ade22a4aecc6.JPG "Results pane showing the row count after the point in time restore")  
+    ![Painel Resultados mostrando a contagem de linhas após a recuperação pontual](../relational-databases/media/4a0c6d8b-e2ed-4e93-bd7a-ade22a4aecc6.JPG "Painel Resultados mostrando a contagem de linhas após a recuperação pontual")  
   
 **Próxima lição:**  
   
-[Lição 8: Restaurar como um novo banco de dados por meio do backup de log](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
+[Lição 8. Restaurar como um novo banco de dados por meio do backup de log](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
   
   
   
+

@@ -1,31 +1,35 @@
 ---
-title: "Tarefa limpeza de hist&#243;rico (Plano de manuten&#231;&#227;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.historycleanup.f1"
-helpviewer_keywords: 
-  - "caixa de diálogo Tarefa Limpeza de Histórico"
+title: "Tarefa de limpeza de histórico (plano de manutenção) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.historycleanup.f1
+helpviewer_keywords:
+- History Cleanup Task dialog box
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fbf4cfd2254dbe3e5f482e603ca7535682102d80
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tarefa limpeza de hist&#243;rico (Plano de manuten&#231;&#227;o)
+# <a name="history-cleanup-task-maintenance-plan"></a>Tarefa limpeza de histórico (Plano de manutenção)
   Use a caixa de diálogo **Tarefa Limpeza de Histórico** para descartar informações antigas de histórico de tabelas no banco de dados msdb. Essa tarefa oferece suporte a exclusão de backup e restauração de histórico, histórico de trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e histórico do plano de manutenção.  
   
- Essa instrução usa as instruções **sp_purge_jobhistory** e **sp_delete_backuphistory**.  
+ Essa instrução usa as instruções **sp_purge_jobhistory** e **sp_delete_backuphistory** .  
   
-## Lista de elementos de interface do usuário  
+## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
  **Conexão**  
  Selecione a conexão de servidor a ser usada na execução desta tarefa.  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  Quando o número de objetos afetados é grande, essa exibição pode ser demorada.  
   
-## Caixa de diálogo Nova Conexão  
+## <a name="new-connection-dialog-box"></a>Caixa de diálogo Nova Conexão  
  **Nome da conexão**  
  Digite um nome para a nova conexão.  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 21
  **Senha**  
  Forneça uma senha a ser usada na autenticação. Essa opção não está disponível.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  
   

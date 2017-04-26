@@ -1,24 +1,28 @@
 ---
-title: "DDL, fun&#231;&#245;es, procedimentos armazenados e exibi&#231;&#245;es de FileTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], objetos de banco de dados"
+title: "DDL, funções, procedimentos armazenados e exibições de FileTable | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], database objects
 ms.assetid: 7e2e0f7f-94a8-4178-8bc7-d2e14ac8528c
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0ecd91dd0c4a5b08381c68c42207ee906afb0606
+ms.lasthandoff: 04/11/2017
+
 ---
-# DDL, fun&#231;&#245;es, procedimentos armazenados e exibi&#231;&#245;es de FileTable
+# <a name="filetable-ddl-functions-stored-procedures-and-views"></a>DDL, funções, procedimentos armazenados e exibições de FileTable
   Lista as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e os objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que foram adicionados ou alterados para oferecer suporte ao recurso FileTable no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  A coluna de Status nas tabelas a seguir indica se o item é novo no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], ou se estava presente em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mas foi alterado no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para dar suporte à pesquisa semântica.  
@@ -29,11 +33,11 @@ caps.handback.revision: 13
   
 |Objeto|Status|Mais informações|  
 |------------|------------|----------------------|  
-|[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)<br /><br /> [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)|Alterado|[Habilitar os pré-requisitos para FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)<br /><br /> [Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md)|  
+|[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)<br /><br /> [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)|Alterado|[Habilitar os pré-requisitos para FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)<br /><br /> [Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md)|  
 |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Alterado|[Criar, alterar e remover FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)<br /><br /> [Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md)|  
 |[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)|Alterado|[Habilitar os pré-requisitos para FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)|  
 |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Alterado|[Criar, alterar e remover FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)|  
-|[RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)<br /><br /> [Argumentos de RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)|Alterado||  
+|[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)<br /><br /> [Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|Alterado||  
   
 ##  <a name="func"></a> Funções  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 13
   
 |Objeto|Status|Mais informações|  
 |------------|------------|----------------------|  
-|[sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../Topic/sp_kill_filestream_non_transacted_handles%20\(Transact-SQL\).md)|**Adicionado**|[Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md)|  
+|[sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)|**Adicionado**|[Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md)|  
   
 ##  <a name="cv"></a> Exibições do catálogo  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 13
 |------------|------------|----------------------|  
 |[sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)|**Adicionado**|[Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

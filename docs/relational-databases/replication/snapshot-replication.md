@@ -1,25 +1,29 @@
 ---
-title: "Replica&#231;&#227;o de instant&#226;neo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "snapshot replication [SQL Server], about snapshot replication"
-  - "replicação de instantâneo [SQL Server]"
+title: "Replicação de instantâneo | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshot replication [SQL Server], about snapshot replication
+- snapshot replication [SQL Server]
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6c99d91ab0209eb08c04488ce27043b2ad714781
+ms.lasthandoff: 04/11/2017
+
 ---
-# Replica&#231;&#227;o de instant&#226;neo
+# <a name="snapshot-replication"></a>Replicação de instantâneo
   A replicação de instantâneo distribui os dados exatamente como eles aparecem em um momento específico e não monitora as atualizações dos dados. Quando a sincronização ocorre, todo o instantâneo é gerado e enviado aos Assinantes.  
   
 > [!NOTE]  
@@ -56,10 +60,10 @@ caps.handback.revision: 34
   
  A ilustração a seguir mostra os principais componentes de replicação de instantâneo.  
   
- ![Componentes e fluxo de dados de replicação de instantâneo](../../relational-databases/replication/media/snapshot.gif "Componentes e fluxo de dados de replicação de instantâneo")  
+ ![Componentes e fluxo de dados da replicação de instantâneo](../../relational-databases/replication/media/snapshot.gif "Componentes e fluxo de dados da replicação de instantâneo")  
   
 ##  <a name="SnapshotAgent"></a> Snapshot Agent  
- Para replicação de mesclagem, é gerado um instantâneo toda vez que o Agente de Instantâneo é executado. Para replicação transacional, geração de instantâneo depende da configuração da propriedade de publicação **immediate_sync**. Se a propriedade estiver definida como TRUE (padrão ao usar o Assistente para Nova Publicação), um instantâneo é gerado toda vez que o Agente de Instantâneo for executado e pode ser aplicado ao Assinante a qualquer momento. Se a propriedade é definida como FALSE (padrão ao usar **sp_addpublication**), o instantâneo é gerado apenas se uma nova assinatura foram adicionada desde o último Snapshot Agent é executado; Assinantes devem esperar o agente de instantâneo concluir antes de poder sincronizar.  
+ Para replicação de mesclagem, é gerado um instantâneo toda vez que o Agente de Instantâneo é executado. Para replicação transacional, a geração de instantâneo depende da configuração da propriedade de publicação de **immediate_sync**. Se a propriedade estiver definida como TRUE (padrão ao usar o Assistente para Nova Publicação), um instantâneo é gerado toda vez que o Agente de Instantâneo for executado e pode ser aplicado ao Assinante a qualquer momento. Se a propriedade estiver definida como FALSE (padrão ao usar **sp_addpublication**), o instantâneo só é gerado se uma assinatura nova for adicionada desde a última execução do Agente de Instantâneo; Assinantes devem esperar que o Agente de Instantâneo termine antes de poder sincronizar-se.  
   
  O Snapshot Agent executa as seguintes etapas:  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 34
   
 3.  Copia os dados da tabela publicada no Publicador e grava os dados na pasta de instantâneo. O instantâneo é gerado como um conjunto de arquivos de programa de cópia em massa (BCP).  
   
-4.  Para instantâneo e publicações transacionais, o Snapshot Agent acrescenta linhas para o **MSrepl_commands** e **MSrepl_transactions** tabelas no banco de dados de distribuição. As entradas de **MSrepl_commands** tabela são comandos indicando o local dos arquivos Sch e. BCP, todos os outros arquivos de instantâneo e referências a quaisquer scripts pré ou pós-instantâneo. As entradas de **MSrepl_transactions** tabela são comandos importantes para sincronizar o assinante.  
+4.  Para as publicações transacionais e de instantâneo, o Snapshot Agent acrescenta linhas nas tabelas **MSrepl_commands** e **MSrepl_transactions** no banco de dados de distribuição. As entradas na tabela **MSrepl_commands** são comandos indicando o local dos arquivos .sch e .bcp, qualquer outro arquivo de instantâneo e as referências a qualquer script pré ou pós-instantâneo. As entradas na tabela **MSrepl_transactions** são comandos importantes para sincronizar o Assinante.  
   
      Para publicações de mesclagem, o Agente de Instantâneo executa etapas adicionais.  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 34
   
 1.  Estabelece uma conexão com o Distribuidor.  
   
-2.  Examina o **MSrepl_commands** e **MSrepl_transactions** tabelas no banco de dados de distribuição no distribuidor. O agente lê o local dos arquivos de instantâneo da primeira tabela e os comandos de sincronização do Assinante de ambas as tabelas.  
+2.  Examina as tabelas **do MSrepl_commands** e **MSrepl_transactions** no banco de dados de distribuição do Distribuidor. O agente lê o local dos arquivos de instantâneo da primeira tabela e os comandos de sincronização do Assinante de ambas as tabelas.  
   
 3.  Aplica o esquema e os comandos ao banco de dados de assinatura.  
   

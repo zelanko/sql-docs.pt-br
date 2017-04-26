@@ -1,28 +1,32 @@
 ---
-title: "Criar &#237;ndices filtrados | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "índices filtrados [SQL Server], sobre índices filtrados"
-  - "criando índices [SQL Server], filtrados"
-  - "índices filtrados [SQL Server]"
-  - "índices não clusterizados [SQL Server], filtrados"
-  - "índices [SQL Server], filtrados"
+title: "Criar índices filtrados | Microsoft Docs"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filtered indexes [SQL Server], about filtered indexes
+- designing indexes [SQL Server], filtered
+- filtered indexes [SQL Server]
+- nonclustered indexes [SQL Server], filtered
+- indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 caps.latest.revision: 73
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 73
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de8d5ce869856d289b70b028ede2bc1009220a38
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar &#237;ndices filtrados
+# <a name="create-filtered-indexes"></a>Criar índices filtrados
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Este tópico descreve como criar um índice filtrado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um índice filtrado é um índice não clusterizado otimizado, criado especialmente para consultas que fazem seleções a partir de um subconjunto bem definido de dados. Ele usa um predicado de filtro para indexar uma parte das linhas da tabela. Um índice filtrado bem projetado pode melhorar o desempenho da consulta, bem como reduzir os custos de manutenção e de armazenamento do índice em comparação com os índices de tabela completa.  
@@ -96,11 +100,11 @@ caps.handback.revision: 73
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner**. Para modificar a expressão de índice filtrado, use CREATE INDEX WITH DROP_EXISTING.  
+ Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner** . Para modificar a expressão de índice filtrado, use CREATE INDEX WITH DROP_EXISTING.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para criar um índice filtrado  
+#### <a name="to-create-a-filtered-index"></a>Para criar um índice filtrado  
   
 1.  No Pesquisador de Objetos, clique no sinal de adição para expandir o banco de dados que contém a tabela na qual você deseja criar um índice filtrado.  
   
@@ -108,13 +112,13 @@ caps.handback.revision: 73
   
 3.  Clique no sinal de adição ao lado da tabela na qual você deseja criar um índice filtrado.  
   
-4.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Não Clusterizado…**.  
+4.  Clique com o botão direito do mouse na pasta **Índices** , aponte para **Novo Índice**e selecione **Índice Não Clusterizado…**.  
   
 5.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
 6.  Na guia **Colunas de chave de índice**, clique em **Adicionar…**.  
   
-7.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
+7.  Na caixa de diálogo **Selecionar Colunas de***table_name* , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
   
 8.  Clique em **OK**.  
   
@@ -124,7 +128,7 @@ caps.handback.revision: 73
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para criar um índice filtrado  
+#### <a name="to-create-a-filtered-index"></a>Para criar um índice filtrado  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -166,7 +170,7 @@ caps.handback.revision: 73
     GO  
     ```  
   
-#### Para garantir que um índice filtrado seja usado em uma consulta SQL  
+#### <a name="to-ensure-that-a-filtered-index-is-used-in-a-sql-query"></a>Para garantir que um índice filtrado seja usado em uma consulta SQL  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -186,3 +190,4 @@ caps.handback.revision: 73
  Para obter mais informações, veja [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

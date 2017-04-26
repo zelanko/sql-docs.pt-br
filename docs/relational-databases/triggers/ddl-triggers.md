@@ -1,24 +1,28 @@
 ---
-title: "Gatilhos DDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gatilhos DDL, sobre gatilhos DDL"
+title: Gatilhos DDL | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DDL triggers, about DDL triggers
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f3a47050dc9ba3b157ac37f3fc0646492d231d47
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gatilhos DDL
+# <a name="ddl-triggers"></a>Gatilhos DDL
   Os gatilhos DDL são disparados em resposta a diversos eventos DDL (linguagem de definição de dados). Esses eventos correspondem principalmente a instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que começam com as palavras-chave CREATE, ALTER, DROP, GRANT, DENY, REVOKE ou UPDATE STATISTICS. Determinados procedimentos armazenados do sistema que executam operações do tipo DDL também podem disparar gatilhos DDL.  
   
  Use gatilhos DDL quando quiser fazer o seguinte:  
@@ -32,12 +36,12 @@ caps.handback.revision: 35
 > [!IMPORTANT]  
 >  Teste seus gatilhos DDL para determinar suas respostas aos procedimentos armazenados do sistema que são executados. Por exemplo, a instrução CREATE TYPE e o procedimento armazenado **sp_addtype** dispararão um gatilho DDL criado em um evento CREATE_TYPE.  
   
-## Tipos de gatilhos DDL  
+## <a name="types-of-ddl-triggers"></a>Tipos de gatilhos DDL  
  Gatilho DDL Transact-SQL  
  Um tipo especial de procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] que executa uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em resposta a um evento com escopo de servidor ou de banco de dados. Por exemplo, um Gatilho DDL poderá ser disparado se uma instrução como ALTER SERVER CONFIGURATION for executada ou se uma tabela for excluída usando DROP TABLE.  
   
  Gatilho DDL CLR  
- Em vez de executar um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)], um gatilho CLR executa um ou mais métodos gravados em código gerenciado que são membros de um assembly criado no .NET Framework e carregado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Em vez de executar um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] , um gatilho CLR executa um ou mais métodos gravados em código gerenciado que são membros de um assembly criado no .NET Framework e carregado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Os gatilhos DDL são disparados somente após a execução das instruções DDL que os dispararam. Os gatilhos DDL não podem ser usados como gatilhos INSTEAD OF. Os gatilhos DDL não são disparados em resposta a eventos que afetem tabelas temporárias locais ou globais e procedimentos armazenados.  
   
@@ -49,12 +53,12 @@ caps.handback.revision: 35
   
  Diferentemente dos gatilhos DML, os gatilhos DDL não têm seu escopo definido para esquemas. Portanto, funções como OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY e OBJECTPROPERTYEX não podem ser usadas para consultar metadados sobre gatilhos DDL. Use as exibições do catálogo em vez disso.  
   
- Os gatilhos DDL com escopo de servidor aparecem no Pesquisador de Objetos do SQL Server Management Studio na pasta **Triggers**. Essa pasta está localizada na pasta **Server Objects** . Os gatilhos DDL com escopo de banco de dados aparecem na pasta **Database Triggers**. Essa pasta fica localizada na pasta **Programmability** do banco de dados correspondente.  
+ Os gatilhos DDL com escopo de servidor aparecem no Pesquisador de Objetos do SQL Server Management Studio na pasta **Triggers** . Essa pasta está localizada na pasta **Server Objects** . Os gatilhos DDL com escopo de banco de dados aparecem na pasta **Database Triggers** . Essa pasta fica localizada na pasta **Programmability** do banco de dados correspondente.  
   
 > [!IMPORTANT]  
 >  Um código mal-intencionado dentro de gatilhos pode ser executado sob privilégios escalonados. Para obter mais informações sobre como ajudar a reduzir essa ameaça, consulte [Gerenciar a segurança dos gatilhos](../../relational-databases/triggers/manage-trigger-security.md).  
   
-## Escopo do gatilho DDL  
+## <a name="ddl-trigger-scope"></a>Escopo do gatilho DDL  
  Os gatilhos DDL podem ser disparados em resposta a um evento [!INCLUDE[tsql](../../includes/tsql-md.md)] processado no banco de dados ou no servidor atual. O escopo do gatilho depende do evento. Por exemplo, um gatilho DDL criado para ser acionado em resposta a um evento CREATE_TABLE poderá sê-lo sempre que um evento CREATE_TABLE ocorrer no banco de dados ou na instância do servidor. Um gatilho DDL criado para ser disparado em resposta a um evento CREATE_LOGIN só poderá sê-lo quando um evento CREATE_LOGIN ocorrer na instância do servidor.  
   
  No exemplo a seguir, o gatilho DDL `safety` será disparado sempre que um evento `DROP_TABLE` ou `ALTER_TABLE` ocorrer no banco de dados.  
@@ -93,21 +97,21 @@ GO
   
  Os gatilhos DDL com escopo de banco de dados são armazenados como objetos no banco de dados em que são criados. Os gatilhos DDL podem ser criados no banco de dados **mestre** e se comportam de forma idêntica àqueles criados em bancos de dados criados pelo usuário. Você pode obter informações sobre gatilhos DDL consultando a exibição de catálogo **sys.triggers** . Você pode consultar **sys.triggers** dentro do contexto do banco de dados em que foram criados os gatilhos ou especificar o nome do banco de dados como identificador, por exemplo, **master.sys.triggers**.  
   
- Os gatilhos DDL com escopo de servidor são armazenados como objetos no banco de dados **mestre**. É possível, contudo, obter informações sobre gatilhos DDL com escopo de servidor consultando a exibição de catálogo **sys.server_triggers** em qualquer contexto de banco de dados.  
+ Os gatilhos DDL com escopo de servidor são armazenados como objetos no banco de dados **mestre** . É possível, contudo, obter informações sobre gatilhos DDL com escopo de servidor consultando a exibição de catálogo **sys.server_triggers** em qualquer contexto de banco de dados.  
   
-## Especificando uma instrução ou grupo de instruções Transact-SQL  
+## <a name="specifying-a-transact-sql-statement-or-group-of-statements"></a>Especificando uma instrução ou grupo de instruções Transact-SQL  
   
-### Selecionando uma instrução DDL em particular para disparar um gatilho DDL  
- É possível designar os gatilhos DDL para que sejam disparados após a execução de uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] . No exemplo anterior, o gatilho `safety` é acionado mediante qualquer evento `DROP_TABLE` ou `ALTER_TABLE`. Para obter listas das instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que podem ser especificadas para acionar um gatilho DDL e o escopo no qual o gatilho pode ser acionado, consulte [Eventos DDL](../../relational-databases/triggers/ddl-events.md).  
+### <a name="selecting-a-particular-ddl-statement-to-fire-a-ddl-trigger"></a>Selecionando uma instrução DDL em particular para disparar um gatilho DDL  
+ É possível designar os gatilhos DDL para que sejam disparados após a execução de uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] . No exemplo anterior, o gatilho `safety` é acionado mediante qualquer evento `DROP_TABLE` ou `ALTER_TABLE` . Para obter listas das instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que podem ser especificadas para acionar um gatilho DDL e o escopo no qual o gatilho pode ser acionado, consulte [Eventos DDL](../../relational-databases/triggers/ddl-events.md).  
   
-### Selecionando um grupo predefinido de instruções DDL para acionar um gatilho DDL  
- Um gatilho DDL pode ser acionado mediante a execução de qualquer evento [!INCLUDE[tsql](../../includes/tsql-md.md)] pertencente a um grupo predefinido de eventos similares. Por exemplo, se desejar que um gatilho DDL seja acionado mediante a execução de uma instrução CREATE TABLE, ALTER TABLE ou DROP TABLE, você pode especificar FOR DDL_TABLE_EVENTS na instrução CREATE TRIGGER. Após a execução de CREATE TRIGGER, os eventos compreendidos pelo grupo de eventos serão adicionados à exibição de catálogo **sys.trigger_events**.  
+### <a name="selecting-a-predefined-group-of-ddl-statements-to-fire-a-ddl-trigger"></a>Selecionando um grupo predefinido de instruções DDL para acionar um gatilho DDL  
+ Um gatilho DDL pode ser acionado mediante a execução de qualquer evento [!INCLUDE[tsql](../../includes/tsql-md.md)] pertencente a um grupo predefinido de eventos similares. Por exemplo, se desejar que um gatilho DDL seja acionado mediante a execução de uma instrução CREATE TABLE, ALTER TABLE ou DROP TABLE, você pode especificar FOR DDL_TABLE_EVENTS na instrução CREATE TRIGGER. Após a execução de CREATE TRIGGER, os eventos compreendidos pelo grupo de eventos serão adicionados à exibição de catálogo **sys.trigger_events** .  
   
  No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], se um gatilho for criado em um grupo de eventos, **sys.trigger_events** não conterá informações sobre o grupo de eventos, o **sys.trigger_events** inclui informações somente sobre os eventos individuais compreendidos pelo grupo. No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões posteriores, o **sys.trigger_events** mantém metadados sobre o grupo de eventos no qual os gatilhos são criados e também sobre os eventos individuais que o grupo de eventos abrange. Portanto, as alterações nos eventos compreendidos pelos grupos de eventos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões posteriores não se aplicam aos gatilhos DDL criados nesses grupos de eventos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  Para obter uma lista de grupos predefinidos de instruções DDL disponíveis para gatilhos DDL, as instruções abarcadas pelos grupos de eventos e os escopos nos quais esses grupos de eventos podem ser programados, consulte [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md).  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Tarefa|Tópico|  
 |----------|-----------|  
@@ -117,7 +121,7 @@ GO
 |Descreve como retornar informações sobre um evento que dispara um gatilho DDL por meio da função EVENTDATA.|[Usar a função EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md)|  
 |Descreve como gerenciar a segurança do gatilho.|[Gerenciar a segurança dos gatilhos](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Gatilhos DML](../../relational-databases/triggers/dml-triggers.md)   
  [Gatilhos de logon](../../relational-databases/triggers/logon-triggers.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  

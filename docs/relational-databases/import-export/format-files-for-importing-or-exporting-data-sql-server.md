@@ -1,39 +1,34 @@
 ---
-title: "Arquivos de formato para importa&#231;&#227;o ou exporta&#231;&#227;o de dados (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exportação em massa [SQL Server], arquivos de formato"
-  - "importação em massa [SQL Server], arquivos de formato"
-  - "arquivos de formato [SQL Server]"
+title: "Arquivos de formato para importação ou exportação de dados (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bulk exporting [SQL Server], format files
+- bulk importing [SQL Server], format files
+- format files [SQL Server]
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: c7cb16d7e4aebb8844c175d98b73daaf8b34ede4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Arquivos de formato para importa&#231;&#227;o ou exporta&#231;&#227;o de dados (SQL Server)
+# <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Arquivos de formato para importação ou exportação de dados (SQL Server)
   Na importação de dados em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou na exportação em massa de dados de uma tabela, você pode usar um *arquivo de formato* para armazenar todas as informações necessárias para exportar ou importar dados em massa. Isso inclui informações de formato para cada campo em um arquivo de dados relativo para essa tabela.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte a dois tipos de arquivos de formato: arquivos de formato XML e não XML. Os arquivos de formato XML e não XML contêm descrições de cada campo de um arquivo de dados, e arquivos de formato XML também contêm descrições das colunas das tabelas correspondentes. Geralmente, arquivos de formato XML e não XML são intercambiáveis. Entretanto, recomendamos que você use a sintaxe XML para novos arquivos de formato porque eles oferecem diversas vantagens em relação aos arquivos de formato não XML. Para obter mais informações, veja [Arquivos de formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
- **Neste tópico:**  
-  
--   [Benefícios de arquivos de formato](#Benefits)  
-  
--   [Exemplos de arquivos de formato](#ExamplesOfFFs)  
-  
--   [Quando um arquivo de formato é necessário?](#WhenFFrequired)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
   
 ##  <a name="Benefits"></a> Benefícios de arquivos de formato  
   
@@ -42,13 +37,13 @@ caps.handback.revision: 39
 -   Habilita-o a importar dados em massa sem precisar adicionar ou excluir dados desnecessários, nem reordenar dados existentes no arquivo de dados. Os arquivos de formato são particularmente úteis quando existe uma incompatibilidade entre campos no arquivo de dados e as colunas na tabela.  
   
 ##  <a name="ExamplesOfFFs"></a> Exemplos de arquivos de formato  
- Os exemplos abaixo mostram o layout de um arquivo de formato não XML e de um arquivo de formato XML. Esses arquivos de formato correspondem à tabela `HumanResources.myTeam` no banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Essa tabela contém quatro colunas: `EmployeeID`, `Name`, `Title` e `ModifiedDate`.  
+ Os exemplos abaixo mostram o layout de um arquivo de formato não XML e de um arquivo de formato XML. Esses arquivos de formato correspondem à tabela `HumanResources.myTeam` no banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Essa tabela contém quatro colunas: `EmployeeID`, `Name`, `Title` e `ModifiedDate`.  
   
 > [!NOTE]  
 >  Para obter informações sobre essa tabela e como criá-la, veja [Tabela de exemplo HumanResources.myTeam &#40;SQL Server&#41;](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md).  
   
-### A. Usando um arquivo de formato não XML  
- O arquivo de formato não XML seguinte usa o formato de dados nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a tabela `HumanResources.myTeam`. Esse arquivo de formato foi criado usando o comando `bcp` a seguir.  
+### <a name="a-using-a-non-xml-format-file"></a>A. Usando um arquivo de formato não XML  
+ O arquivo de formato não XML seguinte usa o formato de dados nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a tabela `HumanResources.myTeam` . Esse arquivo de formato foi criado usando o comando `bcp` a seguir.  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Fmt -n -T   
@@ -62,10 +57,9 @@ The contents of this format file are as follows: 9.0
   
  Para obter mais informações, veja [Arquivos de formato não XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
- [&#91;Início&#93;](#Top)  
   
-### B. Usando um arquivo de formato XML  
- O seguinte arquivo de formato XML usa o formato de dados nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a tabela `HumanResources.myTeam`. Esse arquivo de formato foi criado usando o comando `bcp` a seguir.  
+### <a name="b-using-an-xml-format-file"></a>B. Usando um arquivo de formato XML  
+ O seguinte arquivo de formato XML usa o formato de dados nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a tabela `HumanResources.myTeam` . Esse arquivo de formato foi criado usando o comando `bcp` a seguir.  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T   
@@ -93,7 +87,6 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
  Para obter mais informações, veja [Arquivos de formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
- [&#91;Início&#93;](#Top)  
   
 ##  <a name="WhenFFrequired"></a> Quando um arquivo de formato é necessário?  
  Uma instrução INSERT... A instrução SELECT * FROM OPENROWSET (BULK...) sempre requer um arquivo de formato.  
@@ -117,9 +110,8 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 -   Os caracteres de terminação ou o comprimento dos prefixos diferem entre as colunas do arquivo de dados.  
   
 > [!NOTE]  
->  Na ausência de um arquivo de formato, se um comando **bcp** especificar uma opção de formato de dados (**-n**, **-c**, **-w** ou **-N**), ou uma operação BULK INSERT especificar a opção DATAFILETYPE, o formato de dados especificado será usado como o método padrão de interpretação dos campos do arquivo de dados.  
+>  Na ausência de um arquivo de formato, se um comando **bcp** especificar uma opção de formato de dados (**-n**, **-c**, **-w**ou **-N**), ou uma operação BULK INSERT especificar a opção DATAFILETYPE, o formato de dados especificado será usado como o método padrão de interpretação dos campos do arquivo de dados.  
   
- [&#91;Início&#93;](#Top)  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
@@ -133,9 +125,8 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 -   [Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
- [&#91;Início&#93;](#Top)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Arquivos de formato não XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [Arquivos de formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)   
  [Formatos de dados para importação ou exportação em massa &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)  

@@ -1,28 +1,32 @@
 ---
-title: "Consultando dados em uma tabela temporal com controle da vers&#227;o do sistema | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Consultando dados em uma tabela temporal com controle de versão do sistema | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 caps.latest.revision: 7
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9cc4156eccf9dd642e53ec2aeea967d9dcf016af
+ms.lasthandoff: 04/11/2017
+
 ---
-# Consultando dados em uma tabela temporal com controle da vers&#227;o do sistema
+# <a name="querying-data-in-a-system-versioned-temporal-table"></a>Consultando dados em uma tabela temporal com controle da versão do sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Quando quiser obter o estado mais recente (real) dos dados em uma tabela temporal, você pode fazer uma consulta exatamente da mesma maneira que consulta uma tabela não temporal. Se as colunas PERIOD não estiverem ocultas, seus valores aparecerão em uma consulta SELECT \*. Se você especificou as colunas **PERIOD** como ocultas, seus valores não aparecerão na consulta SELECT \*. Quando as colunas **PERIOD** estiverem ocultas, faça referência às colunas **PERIOD** especificamente na cláusula SELECT para retornar os valores para essas colunas.  
+  Quando quiser obter o estado mais recente (real) dos dados em uma tabela temporal, você pode fazer uma consulta exatamente da mesma maneira que consulta uma tabela não temporal. Se as colunas PERIOD não estiverem ocultas, seus valores aparecerão em uma consulta SELECT \* . Se você especificou as colunas **PERIOD** como ocultas, seus valores não aparecerão na consulta SELECT \* . Quando as colunas **PERIOD** estiverem ocultas, faça referência às colunas **PERIOD** especificamente na cláusula SELECT para retornar os valores para essas colunas.  
   
- Para executar qualquer tipo de análise baseada em tempo, use a nova cláusula **FOR SYSTEM_TIME** com quatro subcláusulas específicas temporais para consultar dados entre as tabelas atuais e de histórico. Para obter mais informações sobre essas cláusulas, consulte [Tabelas temporais](../../relational-databases/tables/temporal-tables.md) e [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
+ Para executar qualquer tipo de análise baseada em tempo, use a nova cláusula  **FOR SYSTEM_TIME** com quatro subcláusulas específicas temporais para consultar dados entre as tabelas atuais e de histórico. Para obter mais informações sobre essas cláusulas, consulte [Tabelas temporais](../../relational-databases/tables/temporal-tables.md) e [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
 -   AS OF <data_hora>  
   
@@ -36,9 +40,9 @@ caps.handback.revision: 7
   
  **FOR SYSTEM_TIME** pode ser especificada independentemente para cada tabela em uma consulta. Ela pode ser usada dentro de expressões de tabela comuns, funções com valor de tabela e procedimentos armazenados.  
   
-## Consultar um horário específico usando a subcláusula AS OF  
- Use a subcláusula **AS OF** quando você precisar reconstruir o estado dos dados como eram em qualquer momento específico no passado.  Você pode reconstruir os dados com a precisão do tipo datetime2 que foi especificado nas definições da coluna **PERIOD** .    
-A cláusula da subcláusula **AS OF** pode ser usada com literais constantes ou com variáveis, que permitem especificar dinamicamente a condição de tempo. Os valores fornecidos são interpretados como hora UTC.  
+## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>Consultar um horário específico usando a subcláusula AS OF  
+ Use a subcláusula**AS OF** quando você precisar reconstruir o estado dos dados como eram em qualquer momento específico no passado.  Você pode reconstruir os dados com a precisão do tipo datetime2 que foi especificado nas definições da coluna **PERIOD** .    
+A cláusula da subcláusula**AS OF** pode ser usada com literais constantes ou com variáveis, que permitem especificar dinamicamente a condição de tempo. Os valores fornecidos são interpretados como hora UTC.  
   
  Este primeiro exemplo retorna o estado da tabela dbo.Department A PARTIR de uma data específica no passado.  
   
@@ -65,7 +69,7 @@ JOIN [Department] AS D ON  D_1_Ago.[DeptID] = [D].[DeptID]
 AND D_1_Ago.[DeptID] BETWEEN 1 and 5 ;  
 ```  
   
-### Usando exibições com a subcláusula AS OF em consultas temporais  
+### <a name="using-views-with-as-of-sub-clause-in-temporal-queries"></a>Usando exibições com a subcláusula AS OF em consultas temporais  
  Usar exibições é muito útil em cenários quando há necessidade de análise pontual complexa.   
 Um exemplo comum é gerar um relatório de negócios hoje com os valores do mês anterior.   
 Geralmente, os clientes têm um modelo de banco de dados normalizado que envolve muitas tabelas com relações de chave estrangeira. Responder à pergunta de como eram os dados desse modelo normalizado em um ponto no passado pode ser bastante desafiador, uma vez que todas as tabelas são alteradas de modo independente, em seu próprio ritmo.   
@@ -93,12 +97,12 @@ FOR SYSTEM_TIME AS OF '2015-09-01 T10:00:00.7230011' ;
   
 ```  
   
-## Consultar alterações em linhas específicas ao longo do tempo  
+## <a name="query-for-changes-to-specific-rows-over-time"></a>Consultar alterações em linhas específicas ao longo do tempo  
  As subcláusulas temporais **FROM...TO**, **BETWEEN...AND** e **CONTAINED IN** são úteis quando você quer realizar uma auditoria de dados, ou seja, quando você precisar obter todas as alterações de histórico de uma linha específica na tabela atual.   
 As duas primeiras subcláusulas retornam versões de linha que sobrepõem um período específico (isto é, aquelas que começaram antes de determinado período e foram encerradas depois dele), enquanto CONTAINED IN retorna apenas aquelas que existiram dentro de limites de período específicos.  
   
 > [!IMPORTANT]  
->  Se você pesquisar somente versões de linha não atuais, é recomendável usar **CONTAINED IN**, pois ela funciona somente com a tabela de histórico e vai gerar o melhor desempenho de consulta. Use **ALL** quando precisar consultar dados do histórico e atuais sem nenhuma restrição.  
+>  Se você pesquisar somente versões de linha não atuais, é recomendável usar **CONTAINED IN** , pois ela funciona somente com a tabela de histórico e vai gerar o melhor desempenho de consulta. Use **ALL** quando precisar consultar dados do histórico e atuais sem nenhuma restrição.  
   
 ```  
 /* Query using BETWEEN...AND sub-clause*/  
@@ -132,10 +136,10 @@ ORDER BY [DeptID], [SysStartTime] Desc
   
 ```  
   
-## Este artigo foi útil para você? Estamos atentos  
+## <a name="did-this-article-help-you-were-listening"></a>Este artigo foi útil para você? Estamos atentos  
  Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Queryinging%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tabelas temporais](../../relational-databases/tables/temporal-tables.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Como criar uma tabela temporal com controle da versão do sistema](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)   
@@ -144,3 +148,4 @@ ORDER BY [DeptID], [SysStartTime] Desc
  [Parando o controle de versão do sistema de uma tabela temporal com versão do sistema](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

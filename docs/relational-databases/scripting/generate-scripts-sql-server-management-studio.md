@@ -1,35 +1,39 @@
 ---
-title: "Gerar scripts (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Gerar scripts (SQL Server Management Studio) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1bf73031c7e2e302d6174e6f21a005c3106f4cb2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gerar scripts (SQL Server Management Studio)
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece dois mecanismos para gerar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você pode criar scripts para vários objetos usando o **Assistente para Gerar e Publicar Scripts**. É possível gerar um script para objetos individuais ou para vários objetos usando o menu **Gerar script como** no **Pesquisador de Objetos**.  
+# <a name="generate-scripts-sql-server-management-studio"></a>Gerar scripts (SQL Server Management Studio)
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece dois mecanismos para gerar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Você pode criar scripts para vários objetos usando o **Assistente para Gerar e Publicar Scripts**. É possível gerar um script para objetos individuais ou para vários objetos usando o menu **Gerar script como** no **Pesquisador de Objetos**.  
   
-1.  **Escolha um método: ** [Assistente para Gerar e Publicar Scripts](#GenPubScriptWiz), [Menu Script Como do Pesquisador de Objetos](#OEScriptAsMenu)  
+1.  **Choose a method:**  [Generate and Publish Scripts Wizard](#GenPubScriptWiz), [Object Explorer Script As Menu](#OEScriptAsMenu)  
   
-2.  **Para usar o menu Script Como: ** [Gerar script de um único objeto](#ScriptSingleObject), [Gerar script de dois objetos usando o Pesquisador de Objetos](#ScriptTwoObjectsOE), [Gerar script de dois objetos usando detalhes do Pesquisador de Objetos](#ScriptTwoObjectsOED)  
+2.  **To use the Script As menu:**  [Script a Single Object](#ScriptSingleObject), [Script Two Objects Using Object Explorer](#ScriptTwoObjectsOE), [Script Two Objects Using Object Explorer Details](#ScriptTwoObjectsOED)  
   
-## Antes de começar  
+## <a name="before-you-begin"></a>Antes de começar  
  Escolha o mecanismo que melhor satisfaz seus requisitos.  
   
 ###  <a name="GenPubScriptWiz"></a> Assistente para Gerar e Publicar Scripts  
  Use o **Assistente para Gerar e Publicar Scripts** para criar um script [!INCLUDE[tsql](../../includes/tsql-md.md)] para vários objetos. O assistente gera um script de todos os objetos de um banco de dados ou de um subconjunto dos objetos selecionado. O assistente tem muitas opções para seus scripts, por exemplo, se permissões, agrupamentos, restrições etc. devem ser incluídos. Para obter instruções sobre como usar o assistente, veja [Assistente para Gerar e Publicar Scripts](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md).  
   
-###  <a name="OEScriptAsMenu"></a> Menu Gerar Script como do Pesquisador de Objetos  
+###  <a name="OEScriptAsMenu"></a> Menu Script Como do Pesquisador de Objetos  
  Você pode usar o menu **Gerar Script como do Pesquisador de Objetos** para gerar script de um único objeto, de vários objetos ou de várias instruções para um único objeto. É possível escolher um de vários tipos de scripts. Por exemplo, para criar, alterar ou descartar o objeto. É possível salvar o script em uma janela do Editor de Consultas em um arquivo ou na Área de Transferência. O script é criado em formato Unicode.  
   
 ##  <a name="ScriptSingleObject"></a> Para gerar um script de um único objeto  
@@ -37,9 +41,9 @@ caps.handback.revision: 6
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
   
-2.  Expanda **Bancos de Dados** e o banco de dados que contém o objeto do qual será gerado um script.  
+2.  Expanda **Bancos de Dados**e o banco de dados que contém o objeto do qual será gerado um script.  
   
-3.  Expanda a categoria do objeto. Por exemplo, expanda o nó **Tabelas** ou **Exibições**.  
+3.  Expanda a categoria do objeto. Por exemplo, expanda o nó **Tabelas** ou **Exibições** .  
   
 4.  Clique com o botão direito do mouse no objeto, aponte para **Script \<object type> como**, por exemplo, aponte para **Tabela de Script como**.  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 6
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
   
-2.  Expanda **Bancos de Dados** e o banco de dados que contém os objetos dos quais será gerado um script.  
+2.  Expanda **Bancos de Dados**e o banco de dados que contém os objetos dos quais será gerado um script.  
   
 3.  Clique com o botão direito do mouse no primeiro objeto do qual será gerado o script, aponte para **Script \<object type> como** e, nas seleções **Salvar como**, escolha **Nova janela do Editor de Consultas** como o destino de saída.  
   
@@ -71,16 +75,16 @@ caps.handback.revision: 6
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
   
-2.  Expanda **Bancos de Dados** e o banco de dados que contém os objetos dos quais será gerado um script.  
+2.  Expanda **Bancos de Dados**e o banco de dados que contém os objetos dos quais será gerado um script.  
   
-3.  Expanda o nó de categoria dos tipos de objeto dos quais você deseja gerar o script, como o nó **Tabelas**.  
+3.  Expanda o nó de categoria dos tipos de objeto dos quais você deseja gerar o script, como o nó **Tabelas** .  
   
-4.  Abra o painel **Detalhes do Pesquisador de Objetos** selecionando **F7** ou abrindo o menu **Exibição** e selecionando **Detalhes do Pesquisador de Objetos**.  
+4.  Abra o painel **Detalhes do Pesquisador de Objetos** selecionando **F7**ou abrindo o menu **Exibição** e selecionando **Detalhes do Pesquisador de Objetos**.  
   
 5.  Clique com o botão esquerdo do mouse em um dos objetos dos quais você deseja gerar um script.  
   
 6.  Clique em Ctrl + botão esquerdo do mouse no segundo objeto do qual você deseja gerar um script.  
   
-7.  Clique com o botão direito do mouse em um dos objetos selecionados, e selecione **Script \<object type> como**.  
+7.  Clique com o botão direito do mouse em um dos objetos selecionados e selecione **Script \<object type> como**.  
   
   

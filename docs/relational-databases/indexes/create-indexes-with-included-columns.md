@@ -1,35 +1,39 @@
 ---
-title: "Criar &#237;ndices com colunas inclu&#237;das | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tamanho do índice [SQL Server]"
-  - "chaves de índice [SQL Server]"
-  - "colunas de índice [SQL Server]"
-  - "tamanho [SQL Server], índices"
-  - "colunas de chave [SQL Server]"
-  - "colunas incluídas"
-  - "índices não clusterizados [SQL Server], colunas incluídas"
-  - "criando índices [SQL Server], colunas incluídas"
-  - "colunas não chave"
+title: "Criar índices com colunas incluídas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index size [SQL Server]
+- index keys [SQL Server]
+- index columns [SQL Server]
+- size [SQL Server], indexes
+- key columns [SQL Server]
+- included columns
+- nonclustered indexes [SQL Server], included columns
+- designing indexes [SQL Server], included columns
+- nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 815756ed3e14540705a1c2cdbab16d5648a6d2ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar &#237;ndices com colunas inclu&#237;das
+# <a name="create-indexes-with-included-columns"></a>Criar índices com colunas incluídas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Este tópico descreve como adicionar colunas incluído (ou não chave) para estender a funcionalidade de índices não clusterizados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ao incluir colunas não chave, você pode criar você índices não clusterizados que abrangem mais consultas. Isto porque as colunas não chave têm os seguintes benefícios:  
+  Este tópico descreve como adicionar colunas incluído (ou não chave) para estender a funcionalidade de índices não clusterizados no [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ao incluir colunas não chave, você pode criar você índices não clusterizados que abrangem mais consultas. Isto porque as colunas não chave têm os seguintes benefícios:  
   
 -   Elas podem ser tipos de dados não permitidos como colunas de chave de índice.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 28
   
 -   Redesenhe índices não clusterizados com um comprimento de chave de índice, de tal forma que apenas as colunas usadas para buscas e pesquisas sejam colunas de chave. Transforme todas as outras colunas que abrangem a consulta em colunas não chave. Deste modo, você terá todas as colunas necessárias para abranger a consulta, mas a chave de índice em si é pequena e eficiente.  
   
--   Inclua colunas não chave em um índice não clusterizado para evitar exceder as limitações do tamanho atual do índice, de um máximo de 16 colunas de chave, e um tamanho máximo de chave de índice de 900 bytes. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] não considera as colunas não chave ao calcular o número de colunas de chave de índice, ou o tamanho da chave do índice.  
+-   Inclua colunas não chave em um índice não clusterizado para evitar exceder as limitações do tamanho atual do índice de um máximo de 32 colunas de chave e um tamanho máximo de chave de índice de 1.700 bytes (16 colunas de chave e 900 bytes antes de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]). O [!INCLUDE[ssDE](../../includes/ssde-md.md)] não considera as colunas não chave ao calcular o número de colunas de chave de índice, ou o tamanho da chave do índice.  
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
@@ -85,11 +89,11 @@ caps.handback.revision: 28
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner**.  
+ Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para criar um índice com colunas não chave  
+#### <a name="to-create-an-index-with-nonkey-columns"></a>Para criar um índice com colunas não chave  
   
 1.  No Pesquisador de Objetos, clique no sinal de adição para expandir o banco de dados que contém a tabela na qual você deseja criar um índice com colunas não chave.  
   
@@ -97,19 +101,19 @@ caps.handback.revision: 28
   
 3.  Clique no sinal de adição para expandir a tabela na qual você deseja criar um índice com colunas não chave.  
   
-4.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Não Clusterizado…**.  
+4.  Clique com o botão direito do mouse na pasta **Índices** , aponte para **Novo Índice**e selecione **Índice Não Clusterizado…**.  
   
 5.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
 6.  Na guia **Colunas de chave de índice** , clique em **Adicionar…**.  
   
-7.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice.  
+7.  Na caixa de diálogo **Selecionar Colunas de***table_name* , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice.  
   
 8.  Clique em **OK**.  
   
 9. Na guia **Colunas incluídas** , clique em **Adicionar…**.  
   
-10. Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela ou a serem adicionadas ao índice como colunas não chave.  
+10. Na caixa de diálogo **Selecionar Colunas de***table_name* , marque as caixas de seleção das colunas da tabela ou a serem adicionadas ao índice como colunas não chave.  
   
 11. Clique em **OK**.  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para criar um índice com colunas não chave  
+#### <a name="to-create-an-index-with-nonkey-columns"></a>Para criar um índice com colunas não chave  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -140,3 +144,4 @@ caps.handback.revision: 28
  Para obter mais informações, consulte [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

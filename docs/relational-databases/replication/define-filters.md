@@ -1,31 +1,35 @@
 ---
-title: "Definir Filtros | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.replconflictviewer.definefilters.f1"
-helpviewer_keywords: 
-  - "caixa de diálogo Definir Filtros"
+title: Definir filtros | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.replconflictviewer.definefilters.f1
+helpviewer_keywords:
+- Define Filters dialog box
 ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1db30c8f31236cf3a106abd230f29454361ce43
+ms.lasthandoff: 04/11/2017
+
 ---
-# Definir Filtros
-  A caixa de diálogo **Definir Filtros** permite que você defina filtros que são aplicados em conflitos de dados para consultar um subconjunto dos conflitos na grade. Para definir um filtro, escolha um operador do **operador** lista suspensa caixa e, em seguida, insira um valor. Por exemplo, para mostrar somente conflitos nos quais o perdedor de conflito é servidor **ReplTest1**, selecione **igual a** do **operador** lista suspensa caixa e digite **ReplTest1** na primeira **valor** coluna.  
+# <a name="define-filters"></a>Definir Filtros
+  A caixa de diálogo **Definir Filtros** permite que você defina filtros que são aplicados em conflitos de dados para consultar um subconjunto dos conflitos na grade. Para definir um filtro, escolha um operador na caixa de listagem suspensa **Operador** e então insira em um valor. Por exemplo, para mostrar somente conflitos onde o perdedor do conflito é o servidor **ReplTest1**, selecione **Igual a** na caixa de lista suspensa **Operador** e insira **ReplTest1** na primeira coluna **Valor** .  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Operador**  
- Selecione um operador para o filtro, como **menor ou igual a**.  
+ Selecione um operador para o filtro, como **Menor que ou Igual a**.  
   
  **Valor**  
  Insira um valor para o filtro. A maioria dos operadores só exige um valor na primeira coluna **Valor** , mas os operadores **Entre** e **Não Entre** requerem um valor em ambas as coluna **Valor** .  
@@ -33,8 +37,8 @@ caps.handback.revision: 18
  **Liberada**  
  Clique nesse botão para limpar todos os filtros anteriormente definidos.  
   
-## Consulte também  
- [Visualizador de conflitos de replicação da Microsoft & #40. Replicação de mesclagem e 41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)   
- [Visualizador de conflitos de replicação da Microsoft & #40. Replicação transacional e 41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-transactional-replication.md)  
+## <a name="see-also"></a>Consulte também  
+ [Visualizador de Conflitos de Replicação da Microsoft &#40;replicação de mesclagem&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)   
+ [Visualizador de Conflitos de Replicação da Microsoft &#40;replicação transacional&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-transactional-replication.md)  
   
   

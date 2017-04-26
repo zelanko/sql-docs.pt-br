@@ -1,33 +1,37 @@
 ---
-title: "Usar o modo EXPLICIT com FOR XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modo EXPLICIT FOR XML"
-  - "cláusula FOR XML, modo EXPLICIT"
-  - "modo de FOR XML EXPLICIT"
+title: Usar o modo EXPLICIT com FOR XML | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EXPLICIT FOR XML mode
+- FOR XML clause, EXPLICIT mode
+- FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4195550f1810bd344c85f2be7110b039ab3f09b2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar o modo EXPLICIT com FOR XML
+# <a name="use-explicit-mode-with-for-xml"></a>Usar o modo EXPLICIT com FOR XML
   Conforme descrito no tópico [Construindo XML usando FOR XML](../../relational-databases/xml/for-xml-sql-server.md), os modos RAW e AUTO não fornecem muito controle sobre a forma do XML gerado de um resultado da consulta. No entanto o modo EXPLICIT fornece máxima flexibilidade para gerar o XML desejado de um resultado de consulta.  
   
  A consulta em modo EXPLICIT deve ser escrita de uma maneira específica para que as informações adicionais sobre o XML necessário, como aninhamento esperado no XML, sejam especificadas explicitamente como parte da consulta. Dependendo do XML solicitado, pode ser trabalhoso escrever consultas em modo EXPLICIT. Você pode descobrir que [Usando o modo PATH](../../relational-databases/xml/use-path-mode-with-for-xml.md) com aninhamento é uma alternativa mais simples para escrever consultas em modo EXPLICIT.  
   
  Como você descreve o XML desejado como parte da consulta no modo EXPLICIT, você deve garantir que o XML gerado seja bem formado e válido.  
   
-## Processamento de conjunto de linhas modo EXPLICIT  
+## <a name="rowset-processing-in-explicit-mode"></a>Processamento de conjunto de linhas modo EXPLICIT  
  O modo EXPLICIT transforma o conjunto de linhas resultante da execução de uma consulta em um documento XML. Para que o modo EXPLICIT produza o documento XML, o conjunto de linhas deve ter um formato específico. Isso exige que você escreva a consulta SELECT para produzir o conjunto de linhas, a **tabela universal**, com um formato específico para que a lógica de processamento possa produzir o XML desejado.  
   
  Primeiro, a consulta deve produzir as duas colunas de metadados a seguir:  
@@ -40,7 +44,7 @@ caps.handback.revision: 33
   
  Para entender como a tabela universal gerada por uma consulta é processada na geração do resultado XML, assuma que você escreveu uma consulta que produz essa tabela universal:  
   
- ![Tabela universal de exemplo](../../relational-databases/xml/media/xmlutable.gif "Tabela universal de exemplo")  
+ ![Tabela universal de amostra](../../relational-databases/xml/media/xmlutable.gif "tabela universal de amostra")  
   
  Observe o seguinte sobre essa tabela universal:  
   
@@ -94,10 +98,10 @@ caps.handback.revision: 33
   
  Para resumir, os valores nas colunas de meta **Tag** e **Parent**, as informações fornecidas na coluna names e a ordenação correta das linhas produzem o XML desejado quando o modo EXPLICIT é usado.  
   
-### Ordenação de linhas da tabela universal  
+### <a name="universal-table-row-ordering"></a>Ordenação de linhas da tabela universal  
  Para construir o XML, as linhas na tabela universal são processadas na ordem. Portanto para recuperar as instâncias filho corretas associadas ao pai, as linhas no conjunto de linhas devem ser ordenadas de forma que cada nó pai seja imediatamente seguido por seus filhos.  
   
-## Especificando nomes de colunas em uma tabela universal  
+## <a name="specifying-column-names-in-a-universal-table"></a>Especificando nomes de colunas em uma tabela universal  
  Ao escrever consultas em modo EXPLICIT , os nomes das colunas no conjunto de linhas resultante devem ser especificados usando esse formato. Eles fornecem informações de transformação incluindo nomes de elementos e atributos e outras informações adicionais, especificadas usando diretivas.  
   
  Esse é o formato geral:  
@@ -116,24 +120,24 @@ ElementName!TagNumber!AttributeName!Directive
  É um valor de marca exclusivo atribuído a um elemento. Esse valor, com a ajuda das duas colunas de metadados, **Tag** e **Parent**, determina o aninhamento dos elementos no XML resultante.  
   
  *AttributeName*  
- Fornece o nome do atributo a ser construído no *ElementName* especificado. Esse será o comportamento se *Directive* não for especificada.  
+ Fornece o nome do atributo a ser construído no *ElementName*especificado. Esse será o comportamento se *Directive* não for especificada.  
   
- Se *Directive* for especificada e for **xml**, **cdata** ou **element**, esse valor será usado para construir um filho de *ElementName* e o valor da coluna será adicionado a ele.  
+ Se *Directive* for especificada e for **xml**, **cdata**ou **element**, esse valor será usado para construir um filho de *ElementName*e o valor da coluna será adicionado a ele.  
   
  Se você especificar a *Directive*, o *AttributeName* poderá estar vazio. Por exemplo, ElementName!TagNumber!!Directive. Nesse caso, o valor da coluna será contido diretamente pelo *ElementName*.  
   
  *Directive*  
  *Directive* é opcional e você pode usá-la para fornecer informações adicionais para construção do XML. *Directive* tem dois propósitos.  
   
- Um dos propósitos é codificar valores como ID, IDREF e IDREFS. É possível especificar as palavras-chave **ID**, **IDREF** e **IDREFS** como *Directives*. Essas diretivas substituem os tipos de atributo. Isso permite criar vínculos intradocumento.  
+ Um dos propósitos é codificar valores como ID, IDREF e IDREFS. É possível especificar as palavras-chave **ID**, **IDREF**e **IDREFS** como *Directives*. Essas diretivas substituem os tipos de atributo. Isso permite criar vínculos intradocumento.  
   
- Também é possível usar *Directive* para indicar como mapear os dados de cadeia de caracteres para XML. É possível usar as palavras-chave **hide**, **element, elementxsinil**, **xml**, **xmltext** e **cdata** como a *Directive*. A diretiva **hide** oculta o nó. Isso é útil para recuperar valores apenas para fins de classificação, mas não para tê-los no XML resultante.  
+ Também é possível usar *Directive* para indicar como mapear os dados de cadeia de caracteres para XML. É possível usar as palavras-chave **hide**, **element, elementxsinil**, **xml**, **xmltext**e **cdata** como a *Directive*. A diretiva **hide** oculta o nó. Isso é útil para recuperar valores apenas para fins de classificação, mas não para tê-los no XML resultante.  
   
- A diretiva **element** gera um elemento contido em vez de um atributo. Os dados contidos são codificados como uma entidade. Por exemplo, o caractere **<** se torna &lt;. Nenhum elemento é gerado para valores NULL da coluna. Se você quiser um elemento gerado para obter valores de coluna nulos, poderá especificar a diretiva **elementxsinil**. Isso gerará um elemento que tem o atributo xsi:nil=TRUE.  
+ A diretiva **element** gera um elemento contido em vez de um atributo. Os dados contidos são codificados como uma entidade. Por exemplo, o caractere **<** se torna &lt;. Nenhum elemento é gerado para valores NULL da coluna. Se você quiser um elemento gerado para obter valores de coluna nulos, poderá especificar a diretiva **elementxsinil** . Isso gerará um elemento que tem o atributo xsi:nil=TRUE.  
   
- A diretiva **xml** é igual a uma diretiva **element**, exceto que não ocorre nenhuma codificação de entidade. Observe que a diretiva **element** pode ser combinada com **ID**, **IDREF** ou **IDREFS**, enquanto que a diretiva **xml** não é permitida com nenhuma outra diretiva, exceto **hide**.  
+ A diretiva **xml** é igual a uma diretiva **element** , exceto que não ocorre nenhuma codificação de entidade. Observe que a diretiva **element** pode ser combinada com **ID**, **IDREF**ou **IDREFS**, enquanto que a diretiva **xml** não é permitida com nenhuma outra diretiva, exceto **hide**.  
   
- A diretiva **cdata** contém os dados encapsulando-os com uma seção CDATA. O conteúdo não é codificado pela entidade. O tipo de dados original deve ser um tipo de texto como **varchar**, **nvarchar**, **text** ou **ntext**. Essa diretiva pode ser usada apenas com **hide**. Quando essa diretiva é usada, *AttributeName* não deve ser especificado.  
+ A diretiva **cdata** contém os dados encapsulando-os com uma seção CDATA. O conteúdo não é codificado pela entidade. O tipo de dados original deve ser um tipo de texto como **varchar**, **nvarchar**, **text**ou **ntext**. Essa diretiva pode ser usada apenas com **hide**. Quando essa diretiva é usada, *AttributeName* não deve ser especificado.  
   
  A combinação de diretivas entre esses dois grupos é permitida na maioria dos casos, mas a combinação entre elas mesmas não é permitida.  
   
@@ -141,9 +145,9 @@ ElementName!TagNumber!AttributeName!Directive
   
  Se a diretiva **xmltext** for especificada, o conteúdo da coluna será encapsulado em uma marca única que é integrada com o restante do documento. Essa diretiva é útil para buscar dados XML armazenados, excedentes e não consumidos em uma coluna por OPENXML. Para obter mais informações, veja [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md).  
   
- Se o *AttributeName* for especificado, o nome da marca será substituído pelo nome especificado. Caso contrário, o atributo será anexado à lista de atributos atual dos elementos circunscritos colocando o conteúdo no início do confinamento sem codificação de entidade. A coluna com essa diretiva deve ser de um tipo de texto, como **varchar**, **nvarchar**, **char**, **nchar**, **text** ou **ntext**. Essa diretiva pode ser usada apenas com **hide**. Essa diretiva é útil para buscar dados excedentes armazenados em uma coluna. Se o conteúdo não for um XML bem formado, o comportamento será indefinido.  
+ Se o *AttributeName* for especificado, o nome da marca será substituído pelo nome especificado. Caso contrário, o atributo será anexado à lista de atributos atual dos elementos circunscritos colocando o conteúdo no início do confinamento sem codificação de entidade. A coluna com essa diretiva deve ser de um tipo de texto, como **varchar**, **nvarchar**, **char**, **nchar**, **text**ou **ntext**. Essa diretiva pode ser usada apenas com **hide**. Essa diretiva é útil para buscar dados excedentes armazenados em uma coluna. Se o conteúdo não for um XML bem formado, o comportamento será indefinido.  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
  Os exemplos a seguir ilustram o uso do modo EXPLICIT.  
   
 -   [Exemplo: Recuperando informações de funcionários](../../relational-databases/xml/example-retrieving-employee-information.md)  
@@ -166,7 +170,7 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Exemplo: Especificando a diretiva XMLTEXT](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usar modo RAW com FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [Usar o modo AUTO com FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [Usar o modo PATH com FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)   

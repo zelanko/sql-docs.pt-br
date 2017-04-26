@@ -1,33 +1,37 @@
 ---
-title: "Requisitos de espa&#231;o em disco para opera&#231;&#245;es de &#237;ndice DDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espaço em disco [SQL Server], índices"
-  - "espaço em disco de índice [SQL Server]"
-  - "espaço [SQL Server], índices"
-  - "índices [SQL Server], requisitos de espaço em disco"
-  - "espaço em disco temporário [SQL Server]"
+title: "Requisitos de espaço em disco para operações de índice DDL | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- disk space [SQL Server], indexes
+- index disk space [SQL Server]
+- space [SQL Server], indexes
+- indexes [SQL Server], disk space requirements
+- temporary disk space [SQL Server]
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e719a7f09c1661573826bb59ccd86e2034bd3f0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Requisitos de espa&#231;o em disco para opera&#231;&#245;es de &#237;ndice DDL
+# <a name="disk-space-requirements-for-index-ddl-operations"></a>Requisitos de espaço em disco para operações de índice DDL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   O espaço em disco é uma consideração importante ao criar, recriar ou cancelar índices. Um espaço em disco inadequado pode degradar o desempenho ou até mesmo provocar falha na operação de índice. Este tópico fornece informações gerais que poderão lhe ajudar a determinar a quantidade de espaço em disco necessária para operações DDL (Linguagem de Definição de Dados) de índice.  
   
-## Operações de índice que não requerem espaço adicional em disco  
+## <a name="index-operations-that-require-no-additional-disk-space"></a>Operações de índice que não requerem espaço adicional em disco  
  As operações de índice que não requerem nenhum espaço adicional em disco são:  
   
 -   ALTER INDEX REORGANIZE; porém, espaço de log é necessário.  
@@ -38,7 +42,7 @@ caps.handback.revision: 39
   
 -   CREATE TABLE (restrições PRIMARY KEY ou UNIQUE)  
   
-## Operações de índice que requerem espaço adicional em disco  
+## <a name="index-operations-that-require-additional-disk-space"></a>Operações de índice que requerem espaço adicional em disco  
  Todas as outras operações de índice DDL exigem espaço adicional temporário em disco para serem utilizadas na operação, e espaço permanente em disco para armazenar a nova estrutura ou estruturas de índice.  
   
  Quando uma nova estrutura de índice é criada, o espaço em disco de ambas as estruturas, a antiga (origem) e a nova (destino), é necessário para os arquivos e grupos de arquivos apropriados. A estrutura antiga não é desalocada até que a transação de criação do índice seja confirmada.  
@@ -57,7 +61,7 @@ caps.handback.revision: 39
   
 -   DROP INDEX MOVE TO (Aplica-se somente a índices clusterizados.)  
   
-## Espaço em disco temporário para classificação  
+## <a name="temporary-disk-space-for-sorting"></a>Espaço em disco temporário para classificação  
  Além do espaço em disco exigido para as estruturas de origem e destino, o espaço em disco temporário é necessário para classificar, a menos que o otimizador de consulta localize um plano de execução que não exija classificação.  
   
  Quando a classificação for necessária, a classificação será de um índice novo por vez. Por exemplo, quando você recria um índice clusterizado e índices não clusterizados associados dentro de uma única instrução, os índices são classificados um após o outro. Portanto, o espaço em disco temporário adicional, exigido apenas para classificar, terá que ser tão grande quanto o maior índice da operação. Esse, quase sempre, é o índice clusterizado.  
@@ -68,7 +72,7 @@ caps.handback.revision: 39
   
  Para obter um exemplo de cálculo de espaço em disco, consulte [Index Disk Space Example](../../relational-databases/indexes/index-disk-space-example.md).  
   
-## Espaço temporário em disco para operações de índice online  
+## <a name="temporary-disk-space-for-online-index-operations"></a>Espaço temporário em disco para operações de índice online  
  Quando se executam operações de índice online é necessário espaço temporário adicional em disco.  
   
  Se um índice clusterizado for criado, recriado, ou cancelado online, um índice não clusterizado temporário será criado para mapear indicadores antigos para os indicadores novos. Se a opção SORT_IN_TEMPDB for definida como ON, esse índice temporário será criado em **tempdb**. Se SORT_IN_TEMPDB for definida como OFF, o mesmo grupo de arquivos ou esquema de partição do índice de destino serão usados. O índice temporário de mapeamento contém um registro para cada linha da tabela, e seus conteúdos são a união das colunas de indicadores antigas e novas, incluindo indicadores de exclusividade, mais identificadores de registro e incluindo apenas uma cópia única de todas as colunas usadas em ambos os indicadores. Para obter mais informações sobre operações de índice online, consulte [Executar operações de índice online](../../relational-databases/indexes/perform-index-operations-online.md).  
@@ -76,10 +80,10 @@ caps.handback.revision: 39
 > [!NOTE]  
 >  A opção SORT_IN_TEMPDB não pode ser definida para instruções DROP INDEX. O índice temporário de mapeamento é sempre criado no mesmo grupo de arquivos ou esquema de partição que o índice de destino.  
   
- As operações de índice online utilizam o controle de versão de linha para isolar a operação de índice dos efeitos das modificações feitas por outras transações. Isso evita a necessidade de solicitar bloqueios de compartilhamento de linhas já lidas. As operações simultâneas de atualização e exclusão de usuários durante operações de índice online precisam de espaço para os registros de versão no **tempdb**. Para obter mais informações, consulte [Executar operações de índice online](../../relational-databases/indexes/perform-index-operations-online.md).  
+ As operações de índice online utilizam o controle de versão de linha para isolar a operação de índice dos efeitos das modificações feitas por outras transações. Isso evita a necessidade de solicitar bloqueios de compartilhamento de linhas já lidas. As operações simultâneas de atualização e exclusão de usuários durante operações de índice online precisam de espaço para os registros de versão no **tempdb**. Para obter mais informações, consulte [Executar operações de índice online](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
-## Tarefas relacionadas  
- [Exemplo de espaço em disco de índice](../../relational-databases/indexes/index-disk-space-example.md)  
+## <a name="related-tasks"></a>Tarefas relacionadas  
+ [Index Disk Space Example](../../relational-databases/indexes/index-disk-space-example.md)  
   
  [Espaço em disco de log de transações para operações de índice](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   
@@ -91,7 +95,7 @@ caps.handback.revision: 39
   
  [Estimando o tamanho de um heap](../../relational-databases/databases/estimate-the-size-of-a-heap.md)  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
@@ -103,3 +107,4 @@ caps.handback.revision: 39
  [Reorganizar e recriar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
   
   
+

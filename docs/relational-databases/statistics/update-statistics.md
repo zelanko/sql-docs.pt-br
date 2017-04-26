@@ -1,25 +1,29 @@
 ---
-title: "Atualiza&#231;&#227;o de Estat&#237;sticas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "atualizando estatísticas"
-  - "estatísticas [SQL Server], atualizando"
+title: "Atualizar estatísticas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- updating statistics
+- statistics [SQL Server], updating
 ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fca31288577f6905b99ac2c76e018ed134f10171
+ms.lasthandoff: 04/11/2017
+
 ---
-# Atualiza&#231;&#227;o de Estat&#237;sticas
+# <a name="update-statistics"></a>Atualização de Estatísticas
   Você pode atualizar estatísticas de otimização de consulta em uma tabela ou exibição indexada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por padrão, o otimizador de consulta já atualiza estatísticas conforme necessário para melhorar o plano de consulta; em alguns casos, é possível melhorar o desempenho de consulta usando UPDATE STATISTICS ou o procedimento armazenado `sp_updatestats` para atualizar estatísticas com mais frequência do que as atualizações padrão.  
   
  A atualização de estatísticas assegura que as consultas sejam compiladas com estatísticas atualizadas. Porém, a atualização de estatísticas faz com que as consultas sejam recompiladas. É recomendável não atualizar estatísticas com muita frequência porque existe uma compensação de desempenho entre o aprimoramento dos planos de consulta e o tempo necessário para recompilar consultas. As compensações específicas dependem do seu aplicativo. UPDATE STATISTICS pode usar tempdb para classificar o exemplo de linhas para compilação de estatísticas.  
@@ -45,7 +49,7 @@ caps.handback.revision: 9
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para atualizar um objeto de estatísticas  
+#### <a name="to-update-a-statistics-object"></a>Para atualizar um objeto de estatísticas  
   
 1.  No **Pesquisador de Objetos**, clique no sinal de adição para expandir o banco de dados no qual você deseja atualizar a estatística.  
   
@@ -57,11 +61,11 @@ caps.handback.revision: 9
   
 5.  Clique com o botão direito do mouse no objeto de estatísticas que você deseja atualizar e selecione **Propriedades**.  
   
-6.  Na caixa de diálogo **Propriedades de Estatísticas –***statistics_name*, marque a caixa de seleção **Atualizar estatísticas destas colunas** e clique em **OK**.  
+6.  Na caixa de diálogo **Propriedades de Estatísticas –***statistics_name* , marque a caixa de seleção **Atualizar estatísticas destas colunas** e clique em **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para atualizar um objeto de estatísticas específico  
+#### <a name="to-update-a-specific-statistics-object"></a>Para atualizar um objeto de estatísticas específico  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 9
     GO  
     ```  
   
-#### Para atualizar todas as estatísticas em uma tabela  
+#### <a name="to-update-all-statistics-in-a-table"></a>Para atualizar todas as estatísticas em uma tabela  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 9
   
  Para obter mais informações, veja [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md).  
   
-#### Para atualizar todas as estatísticas em um banco de dados  
+#### <a name="to-update-all-statistics-in-a-database"></a>Para atualizar todas as estatísticas em um banco de dados  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

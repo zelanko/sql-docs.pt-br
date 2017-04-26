@@ -1,22 +1,26 @@
 ---
-title: "Excluir fun&#231;&#245;es definidas pelo usu&#225;rio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Excluir funções definidas pelo usuário | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7731c5fd8d7bc5c62cd7ced03f3ebd638e68e58e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Excluir fun&#231;&#245;es definidas pelo usu&#225;rio
+# <a name="delete-user-defined-functions"></a>Excluir funções definidas pelo usuário
   Você pode excluir (remover) funções definidas pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **Neste tópico**  
@@ -48,7 +52,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para excluir uma função definida pelo usuário  
+#### <a name="to-delete-a-user-defined-function"></a>Para excluir uma função definida pelo usuário  
   
 1.  Clique no sinal de mais ao lado do banco de dados que contém a função que você deseja modificar.  
   
@@ -67,11 +71,11 @@ caps.handback.revision: 7
 5.  Na caixa de diálogo **Excluir Objeto** , clique em **OK**.  
   
     > [!IMPORTANT]  
-    >  Clique em **Mostrar Dependências** na caixa de diálogo **Excluir Objeto** para abrir a caixa de diálogo *function_name***Dependências**. Isso mostrará todos os objetos que dependem da função e todos os objetos dos quais a função depende.  
+    >  Clique em **Mostrar Dependências** na caixa de diálogo **Excluir Objeto** para abrir a caixa de diálogo *function_name***Dependências** . Isso mostrará todos os objetos que dependem da função e todos os objetos dos quais a função depende.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para excluir uma função definida pelo usuário  
+#### <a name="to-delete-a-user-defined-function"></a>Para excluir uma função definida pelo usuário  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

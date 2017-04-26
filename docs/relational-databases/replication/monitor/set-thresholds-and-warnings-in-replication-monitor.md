@@ -1,36 +1,40 @@
 ---
-title: "Set Thresholds and Warnings in Replication Monitor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "alerts [SQL Server replication]"
-  - "Merge Agent, thresholds and warnings"
-  - "Distribution Agent, thresholds and warnings"
-  - "thresholds [SQL Server replication]"
-  - "Replication Monitor, thresholds and warnings"
-  - "monitorando o desempenho [replicação do SQL Server], limites e avisos"
+title: Definir limites e avisos no Replication Monitor | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- alerts [SQL Server replication]
+- Merge Agent, thresholds and warnings
+- Distribution Agent, thresholds and warnings
+- thresholds [SQL Server replication]
+- Replication Monitor, thresholds and warnings
+- monitoring performance [SQL Server replication], thresholds and warnings
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b47d0b4565cc187ae0746fa7a6c9b5b1f864c3e7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Set Thresholds and Warnings in Replication Monitor
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor exibe informações de status para publicações e assinaturas. Por padrão, o Replication Monitor só exibe avisos para assinaturas não inicializadas, mas você pode habilitar os avisos para outras condições. Recomendamos habilitar os avisos para a sua topologia, para que esteja informado sobre o status e o desempenho de maneira oportuna.  
+# <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Definir os limites e avisos no Replication Monitor
+  O[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor exibe informações de status para publicações e assinaturas. Por padrão, o Replication Monitor só exibe avisos para assinaturas não inicializadas, mas você pode habilitar os avisos para outras condições. Recomendamos habilitar os avisos para a sua topologia, para que esteja informado sobre o status e o desempenho de maneira oportuna.  
   
  Ao habilitar um aviso, você especifica um limite. Quando o limite é atingido ou excedido, um aviso é exibido (a menos que um problema com prioridade superior deva ser exibido). Além de exibir de um aviso no Replication Monitor, atingir um limite também pode disparar um alerta. Você pode habilitar avisos para as seguintes condições:  
   
 -   Expiração iminente de assinatura  
   
-     Isso se aplica a todos os tipos de replicação. Se o limite especificado for atingido ou excedido, o status da assinatura será exibido como **expirando em breve/expirado**.  
+     Isso se aplica a todos os tipos de replicação. Se o limite especificado for atingido ou excedido, o status da assinatura será exibido como **Expirando em breve/Expirado**.  
   
 -   Exceder a latência especificada (o período decorrido entre a confirmação de uma transação no Publicador e a confirmação da transação correspondente no Assinante).  
   
@@ -38,13 +42,13 @@ caps.handback.revision: 33
   
 -   Excedendo o tempo de sincronização especificado.  
   
-     Isso se aplica à replicação de mesclagem. Se o limite especificado for atingido ou excedido, o status é exibido como **mesclagem de execução longa**. Você pode especificar limites diferentes para conexões discadas e Rede local (LAN).  
+     Isso se aplica à replicação de mesclagem. Se o limite especificado for atingido ou excedido, o status será exibido como **Mesclagem de execução longa**. Você pode especificar limites diferentes para conexões discadas e Rede local (LAN).  
   
 -   Falha no processamento do número especificado de linhas em um determinado período.  
   
      Isso se aplica à replicação de mesclagem. Se o limite especificado for atingido ou excedido, o status será exibido como **Desempenho crítico**. Você pode especificar limites diferentes para conexões discadas e LAN.  
   
- Para obter mais informações sobre os avisos **desempenho crítico** e **mesclagem de execução longa**, consulte [monitorar o desempenho com o Replication Monitor](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md).  
+ Para obter mais informações sobre os avisos **Desempenho crítico** e **Mesclagem de execução longa**, consulte [Monitorar o desempenho com o Replication Monitor](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md).  
   
  **Neste tópico**  
   
@@ -66,19 +70,19 @@ caps.handback.revision: 33
   
 5.  Clique em **Salvar Alterações**.  
   
-#### Para configurar um alerta para um limite  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>Para configurar um alerta para um limite  
   
 1.  Clique em **Configurar Alertas**.  
   
 2.  Na caixa de diálogo **Configurar Alertas de Replicação** , selecione um alerta e então clique em **Configurar**.  
   
-     Essa caixa de diálogo exibe os alertas para todos os tipos de publicação, inclusive alertas que não estão relacionados com o monitoramento de limites. Para obter mais informações, consulte [usar alertas para eventos do agente de replicação](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
+     Essa caixa de diálogo exibe os alertas para todos os tipos de publicação, inclusive alertas que não estão relacionados com o monitoramento de limites. Para obter mais informações, consulte [Usar alertas para eventos do agente de replicação](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Definir opções no **\< AlertName> Propriedades de alerta** caixa de diálogo:  
+3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>**:  
   
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.  
   
-    -   Sobre o **resposta** especifique se deve ser enviado um email e/ou um trabalho deve ser executado.  
+    -   Na página **Resposta** , especifique se deve ser enviado um e-mail e/ou se deverá ser executado um trabalho.  
   
     -   Na página **Opções** , personalize o texto da resposta.  
   
@@ -108,7 +112,7 @@ caps.handback.revision: 33
   
 5.  Clique em **Salvar Alterações**.  
   
-#### Para configurar um alerta para um limite  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>Para configurar um alerta para um limite  
   
 1.  Clique em **Configurar Alertas**.  
   
@@ -116,11 +120,11 @@ caps.handback.revision: 33
   
      Essa caixa de diálogo exibe os alertas para todos os tipos de publicação, inclusive alertas que não estão relacionados com o monitoramento de limites.  
   
-3.  Definir opções no **\< AlertName> Propriedades de alerta** caixa de diálogo:  
+3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>**:  
   
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.  
   
-    -   Sobre o **resposta** especifique se deve ser enviado um email e/ou um trabalho deve ser executado.  
+    -   Na página **Resposta** , especifique se deve ser enviado um e-mail e/ou se deverá ser executado um trabalho.  
   
     -   Na página **Opções** , personalize o texto da resposta.  
   
@@ -140,19 +144,19 @@ caps.handback.revision: 33
   
 5.  Clique em **Salvar Alterações**.  
   
-#### Para configurar um alerta para um limite  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>Para configurar um alerta para um limite  
   
 1.  Clique em **Configurar Alertas**.  
   
 2.  Na caixa de diálogo **Configurar Alertas de Replicação** , selecione um alerta e então clique em **Configurar**.  
   
-     Essa caixa de diálogo exibe os alertas para todos os tipos de publicação, inclusive alertas que não estão relacionados com o monitoramento de limites. Para obter mais informações, consulte [usar alertas para eventos do agente de replicação](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
+     Essa caixa de diálogo exibe os alertas para todos os tipos de publicação, inclusive alertas que não estão relacionados com o monitoramento de limites. Para obter mais informações, consulte [Usar alertas para eventos do agente de replicação](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Definir opções no **\< AlertName> Propriedades de alerta** caixa de diálogo:  
+3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>**:  
   
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.  
   
-    -   Sobre o **resposta** especifique se deve ser enviado um email e/ou um trabalho deve ser executado.  
+    -   Na página **Resposta** , especifique se deve ser enviado um e-mail e/ou se deverá ser executado um trabalho.  
   
     -   Na página **Opções** , personalize o texto da resposta.  
   
@@ -160,7 +164,7 @@ caps.handback.revision: 33
   
 5.  Clique em **Fechar**.  
   
-## Consulte também  
- [Replicação de monitoramento](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+## <a name="see-also"></a>Consulte também  
+ [Monitorando a Replicação](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

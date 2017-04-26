@@ -1,28 +1,32 @@
 ---
-title: "Excluir restri&#231;&#245;es exclusivas | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "removendo restrições"
-  - "restrições UNIQUE [SQL Server], excluindo"
-  - "restrições [SQL Server], excluindo"
-  - "excluindo restrições"
-  - "restrições [SQL Server], unique"
+title: "Excluir restrições exclusivas | Microsoft Docs"
+ms.custom: 
+ms.date: 10/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing constraints
+- UNIQUE constraints [SQL Server], deleting
+- constraints [SQL Server], deleting
+- deleting constraints
+- constraints [SQL Server], unique
 ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49169c8ac7e47e6b9d9efff891810c68372aa6c5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Excluir restri&#231;&#245;es exclusivas
+# <a name="delete-unique-constraints"></a>Excluir restrições exclusivas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Você pode excluir uma restrição exclusiva no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Excluir uma restrição exclusiva remove o requisito de exclusividade dos valores inseridos na coluna ou da combinação de colunas incluídas na expressão de restrição e exclui o índice exclusivo correspondente.  
@@ -48,7 +52,7 @@ caps.handback.revision: 14
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para excluir uma restrição exclusiva usando o Pesquisador de Objetos  
+#### <a name="to-delete-a-unique-constraint-using-object-explorer"></a>Para excluir uma restrição exclusiva usando o Pesquisador de Objetos  
   
 1.  No Pesquisador de Objetos, expanda a tabela que contém a restrição exclusiva e expanda **Restrições**.  
   
@@ -56,13 +60,13 @@ caps.handback.revision: 14
   
 3.  Na caixa de diálogo **Excluir Objeto** , verifique se a chave correta foi especificada e clique em **OK**.  
   
-#### Para excluir uma restrição exclusiva usando o Designer de Tabela  
+#### <a name="to-delete-a-unique-constraint-using-table-designer"></a>Para excluir uma restrição exclusiva usando o Designer de Tabela  
   
 1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela com a restrição exclusiva e clique em **Design**.  
   
-2.  No menu **Designer de Tabela**, clique em **Índices/Chaves**.  
+2.  No menu **Designer de Tabela** , clique em **Índices/Chaves**.  
   
-3.  Na caixa de diálogo **Índices/Chaves**, selecione a chave exclusiva na lista **Índice e Chave Primária / Exclusiva Selecionada**.  
+3.  Na caixa de diálogo **Índices/Chaves** , selecione a chave exclusiva na lista **Índice e Chave Primária / Exclusiva Selecionada** .  
   
 4.  Clique em **Excluir**.  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 14
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para excluir uma restrição exclusiva  
+#### <a name="to-delete-a-unique-constraint"></a>Para excluir uma restrição exclusiva  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -93,3 +97,4 @@ caps.handback.revision: 14
  Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) e [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>  
+

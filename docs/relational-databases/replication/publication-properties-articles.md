@@ -1,28 +1,32 @@
 ---
-title: "Propriedades de Publica&#231;&#227;o, Artigos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.newpubwizard.pubproperties.articles.f1"
+title: "Propriedades da publicação, artigos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.newpubwizard.pubproperties.articles.f1
 ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f3d08559887a470d82cfe98848373191f26f467b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propriedades de Publica&#231;&#227;o, Artigos
-  O **artigos** página de **Propriedades de publicação** caixa de diálogo: contém informações sobre os artigos contidos em uma publicação; permite adicionar e descartar artigos de publicações existentes; e permite que você altere as propriedades do artigo e filtragem de coluna.  
+# <a name="publication-properties-articles"></a>Propriedades de Publicação, Artigos
+  A caixa **Artigos** da caixa de diálogo **Propriedades de Publicação** contém informações sobre os artigos de uma publicação; permite adicionar e descartar artigos de publicações existentes; e permite alterar propriedades do artigo e filtragem de colunas.  
   
 > [!NOTE]  
->  Depois que uma publicação é criada, algumas alterações de propriedade requerem um novo instantâneo. Se uma publicação tiver assinaturas, algumas alterações também exigirão que todas as assinaturas sejam reiniciadas. Para obter mais informações, consulte [alterar propriedades da publicação e artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md) e [Adicionar e descartar artigos de publicações existentes](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+>  Depois que uma publicação é criada, algumas alterações de propriedade requerem um novo instantâneo. Se uma publicação tiver assinaturas, algumas alterações também exigirão que todas as assinaturas sejam reiniciadas. Para obter mais informações, consulte [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md) e [Add Articles to and Drop Articles from Existing Publications](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
  Se você estiver publicando um objeto de banco de dados que depende de outros objetos de banco de dados, terá de publicar todos os objetos referenciados. Por exemplo, se você publicar uma exibição que depende de uma tabela, terá de publicar a tabela também.  
   
@@ -34,28 +38,28 @@ caps.handback.revision: 29
   
 -   Tabelas sem chaves primárias não podem ser publicadas em publicações transacionais.  
   
--   Tabelas não podem ser publicadas em uma publicação de mesclagem e em uma publicação transacional habilitadas para assinaturas de atualização enfileirada. Para obter mais informações sobre como publicar um artigo em mais de uma publicação, consulte a seção "Publicando tabelas em mais de uma publicação" [publica dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
+-   Tabelas não podem ser publicadas em uma publicação de mesclagem e em uma publicação transacional habilitadas para assinaturas de atualização enfileirada. Para obter mais informações sobre como publicar um artigo em mais de uma publicação, consulte a seção "Publishing Tables in More Than One Publication” (Publicando tabelas em mais de uma publicação) em [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md) (Publicar dados e objetos de banco de dados).  
   
-## Publicadores Oracle  
+## <a name="oracle-publishers"></a>Publicadores Oracle  
  Há considerações adicionais para Publicadores Oracle:  
   
 -   Para uma lista de objetos que podem ser publicados no Oracle, consulte [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md). Não são exibidos objetos que não podem ser publicados.  
   
 -   Para uma lista de tipos de dados que podem ser publicados, consulte [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md). Colunas com tipos de dados que não podem ser publicados não são exibidas.  
   
-## Filtros de coluna  
- Filtrar colunas nessa página expandindo uma tabela no **objetos para publicação** painel e, em seguida, selecionando apenas as colunas necessárias (linhas podem ser filtradas no **Filtrar linhas da tabela** página desse assistente). A filtragem de colunas é útil por várias razões, incluindo segurança (impedindo que dados sensíveis sejam replicados) e desempenho (evitando replicação de colunas BLOB (objeto binário grande), por exemplo). Para obter mais informações sobre filtragem de coluna, incluindo uma lista dos tipos de coluna que não podem ser filtradas, consulte [Filtrar dados publicados](../../relational-databases/replication/publish/filter-published-data.md).  
+## <a name="column-filters"></a>Filtros de coluna  
+ Filtre colunas nessa página expandindo a tabela no painel **Objetos para publicação** e selecionando somente as colunas requeridas (linhas podem ser filtradas na página **Filtrar Linhas da Tabela** desse assistente). A filtragem de colunas é útil por várias razões, incluindo segurança (impedindo que dados sensíveis sejam replicados) e desempenho (evitando replicação de colunas BLOB (objeto binário grande), por exemplo). Para obter mais informações sobre filtragem de coluna, incluindo uma lista dos tipos de coluna que não podem ser filtrados, consulte [Filter Published Data](../../relational-databases/replication/publish/filter-published-data.md) (Filtrar dados publicados).  
   
-## Opções  
+## <a name="options"></a>Opções  
  O painel **Objetos para publicação** permite:  
   
 -   Exibir todos os objetos disponíveis para replicação.  
   
 -   Incluir um objeto em uma publicação marcando a caixa de seleção próxima àquele objeto.  
   
--   Descartar um artigo de uma publicação desmarcando a caixa de seleção próximo àquele objeto. Para obter informações sobre quando os artigos podem ser descartados, consulte [Adicionar e descartar artigos de publicações existentes](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+-   Descartar um artigo de uma publicação desmarcando a caixa de seleção próximo àquele objeto. Para obter informações sobre quando os artigos podem ser descartados, consulte [Add Articles to and Drop Articles from Existing Publications](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
--   Incluir todos os objetos de um tipo específico (como uma tabela) a publicação, marcando a caixa de seleção próxima ao tipo de objeto (como **tabelas**).  
+-   Incluir todos os objetos de um tipo específico (como uma tabela) na publicação, marcando a caixa de seleção próxima do tipo de objeto (como **Tabelas**).  
   
 -   Expandir nós de tabela para ver as colunas na tabela.  
   
@@ -64,24 +68,24 @@ caps.handback.revision: 29
 -   Clique com o botão direito do mouse em um objeto no painel para consultar um menu de comandos para aquele objeto.  
   
  **Propriedades do Artigo**  
- Clique em **Propriedades do artigo** , e, em seguida, clique em um dos seguintes:  
+ Clique em **Propriedades do Artigo** e depois clique em uma das opções seguintes:  
   
--   Clique em **definir propriedades de realçado \< ObjectType> artigo** para iniciar o **Propriedades do artigo - \< ObjectName>** caixa de diálogo; propriedade as alterações feitas nessa caixa de diálogo são aplicadas somente ao objeto que está realçado no painel do objeto no **artigos** página.  
+-   Clique em **Definir as Propriedades do Artigo \<ObjectType> Realçado** para iniciar a caixa de diálogo **Propriedades do Artigo – \<ObjectName >**. As alterações de propriedade feitas nessa caixa de diálogo são aplicadas somente ao objeto que está realçado no painel de objetos na página **Artigos**.  
   
--   Clique em **definir propriedades de todos os \< ObjectType> artigos**, para iniciar o **Propriedades para todos os \< ObjectType> artigos** caixa de diálogo; propriedade as alterações feitas nessa caixa de diálogo são aplicadas a todos os objetos desse tipo no painel objeto o **artigos** página, incluindo os ainda não foram selecionados para publicação.  
+-   Clique em **Definir as Propriedades de Todos os Artigos \<ObjectType>**, para iniciar a caixa de diálogo **Propriedades de Todos os Artigos \<ObjectType>**; as alterações à propriedade feitas nessa caixa de diálogo são aplicadas a todos os objetos desse tipo, no painel de objetos da página **Artigos**, incluindo os ainda não selecionados para publicação.  
   
     > [!NOTE]  
-    >  Alterações de propriedade feitas a **Propriedades para todos os \< ObjectType> artigos** caixa de diálogo Substituir qualquer feitas anteriormente no **Propriedades do artigo - \< ObjectName>** caixa de diálogo. Se, por exemplo, você quiser definir um número de padrões para todos os artigos de um tipo de objeto, mas também quer definir algumas propriedades para objetos individuais, defina primeiro os padrões para todos os artigos. Em seguida, defina as propriedades para os objetos individuais.  
+    >  Alterações de propriedade feitas na caixa de diálogo **Propriedades para Todos os Artigos \<ObjectType>** substituem todas as alterações feitas anteriormente na caixa de diálogo **Propriedades do Artigo – \<ObjectName>**. Se, por exemplo, você quiser definir um número de padrões para todos os artigos de um tipo de objeto, mas também quer definir algumas propriedades para objetos individuais, defina primeiro os padrões para todos os artigos. Em seguida, defina as propriedades para os objetos individuais.  
   
  **A tabela realçada é somente para download**  
- Somente replicação de mesclagem. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Selecione para especificar que as alterações serão desabilitadas no Assinante se uma assinatura de cliente for usada. Como artigos somente para download não podem ser atualizados no Assinante, metadados de controle não são enviados aos Assinantes. Isso pode resultar em armazenamento reduzido nos Assinantes e em um benefício no desempenho, principalmente se a conexão de rede for lenta. Essa opção corresponde a um valor de **Download somente para assinante, Proibir alterações do assinante** para a opção **direção de sincronização** no **Propriedades do artigo** caixa de diálogo. Para obter mais informações, consulte [otimizar o desempenho de replicação de mesclagem com artigos Download-Only](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+ Somente replicação de mesclagem. Somente o[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões mais recentes. Selecione para especificar que as alterações serão desabilitadas no Assinante se uma assinatura de cliente for usada. Como artigos somente para download não podem ser atualizados no Assinante, metadados de controle não são enviados aos Assinantes. Isso pode resultar em armazenamento reduzido nos Assinantes e em um benefício no desempenho, principalmente se a conexão de rede for lenta. Essa opção corresponde ao valor **Download somente para Assinante, proibir alterações do Assinante** para a opção **Direção de sincronização** na caixa de diálogo **Propriedades do Artigo** . Para obter mais informações, consulte [Optimize Merge Replication Performance with Download-Only Articles](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md) (Otimizar o desempenho da replicação de mesclagem com artigos somente para download).  
   
  **Mostrar somente os artigos marcados na lista**  
  Marque essa caixa de seleção para mostrar somente os artigos selecionados no painel de objeto.  
   
-## Consulte também  
- [Crie uma publicação](../../relational-databases/replication/publish/create-a-publication.md)   
- [Visualizar e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+## <a name="see-also"></a>Consulte também  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Criar e aplicar o instantâneo inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Reinicializar uma assinatura](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

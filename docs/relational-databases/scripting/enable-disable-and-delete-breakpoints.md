@@ -1,31 +1,35 @@
 ---
-title: "Habilitar, desabilitar e excluir pontos de interrup&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Habilitar, desabilitar e excluir pontos de interrupção | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
 caps.latest.revision: 5
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0133a419971cfdeeaadbc3a68b79452c20d0dafc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Habilitar, desabilitar e excluir pontos de interrup&#231;&#227;o
+# <a name="enable-disable-and-delete-breakpoints"></a>Habilitar, desabilitar e excluir pontos de interrupção
   Para exibir e gerenciar todos os pontos de interrupção abertos, você pode usar a janela **Pontos de Interrupção** . Use a janela para exibir informações de ponto de interrupção e executar ações como excluir, desabilitar ou habilitar pontos de interrupção.  
   
-## Janela Pontos de Interrupção  
- A janela **Pontos de Interrupção** lista informações como a linha de código em que o ponto de interrupção é localizado. Na janela **Pontos de Interrupção** , você também pode excluir, desabilitar e habilitar pontos de interrupção. Para obter mais informações sobre a janela **Pontos de Interrupção** , consulte [Pontos de Interrupção Window](../../relational-databases/scripting/breakpoints-window.md).  
+## <a name="the-breakpoints-window"></a>Janela Pontos de Interrupção  
+ A janela **Pontos de Interrupção** lista informações como a linha de código em que o ponto de interrupção é localizado. Na janela **Pontos de Interrupção** , você também pode excluir, desabilitar e habilitar pontos de interrupção. Para obter mais informações sobre a janela **Pontos de Interrupção** , consulte [Pontos de Interrupção Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md).  
   
  A desabilitação de um ponto de interrupção impede a pausa da execução, mas deixa a definição no local caso você deseje habilitar o ponto de interrupção mais tarde. A exclusão de um ponto de interrupção remove isso permanentemente. Você deve alternar um novo ponto de interrupção para pausar execução na instrução.  
   
-## Para abrir a janela Pontos de Interrupção  
- **Para abrir a janela Pontos de Interrupção**  
+## <a name="to-open-the-breakpoints-window"></a>Para abrir a janela Pontos de Interrupção  
+ **To open the Breakpoints window**  
   
  Você pode abrir a janela **Pontos de Interrupção** de uma das seguintes maneiras:  
   
@@ -35,8 +39,8 @@ caps.handback.revision: 5
   
 -   Pressione CTRL+ALT+B.  
   
-## Para desabilitar um único ponto de interrupção  
- **Para desabilitar um único ponto de interrupção**  
+## <a name="to-disable-a-single-breakpoint"></a>Para desabilitar um único ponto de interrupção  
+ **To disable a single breakpoint**  
   
  Você pode desabilitar um único ponto de interrupção de uma das seguintes maneiras:  
   
@@ -44,8 +48,8 @@ caps.handback.revision: 5
   
 -   Na janela Pontos de Interrupção, desmarque a caixa de seleção à esquerda do ponto de interrupção.  
   
-## Para desabilitar todos os pontos de interrupção  
- **Para desabilitar todos os pontos de interrupção**  
+## <a name="to-disable-all-breakpoints"></a>Para desabilitar todos os pontos de interrupção  
+ **To disable all breakpoints**  
   
  Você pode desabilitar todos os pontos de interrupção de uma das seguintes maneiras:  
   
@@ -53,8 +57,8 @@ caps.handback.revision: 5
   
 -   Na barra de ferramentas da janela **Pontos de Interrupção** , clique no botão **Desabilitar Todos os Pontos de Interrupção** .  
   
-## Para habilitar um único ponto de interrupção  
- **Para habilitar um único ponto de interrupção**  
+## <a name="to-enable-a-single-breakpoint"></a>Para habilitar um único ponto de interrupção  
+ **To enable a single breakpoint**  
   
  Você pode habilitar um único ponto de interrupção de uma das seguintes maneiras:  
   
@@ -62,8 +66,8 @@ caps.handback.revision: 5
   
 -   Na janela Pontos de Interrupção, clique na caixa à esquerda do ponto de interrupção.  
   
-## Para habilitar todos os pontos de interrupção  
- **Para habilitar todos os pontos de interrupção**  
+## <a name="to-enable-all-breakpoints"></a>Para habilitar todos os pontos de interrupção  
+ **To enable all breakpoints**  
   
  Você pode habilitar todos os pontos de interrupção de uma das seguintes maneiras:  
   
@@ -71,8 +75,8 @@ caps.handback.revision: 5
   
 -   Na barra de ferramentas da janela **Pontos de Interrupção** , clique no botão **Habilitar Todos os Pontos de Interrupção** .  
   
-## Para excluir um único ponto de interrupção  
- **Para excluir um único ponto de interrupção**  
+## <a name="to-delete-a-single-breakpoint"></a>Para excluir um único ponto de interrupção  
+ **To delete a single breakpoint**  
   
  Você pode excluir um único ponto de interrupção de uma das seguintes maneiras:  
   
@@ -82,8 +86,8 @@ caps.handback.revision: 5
   
 -   Na janela Pontos de Interrupção, selecione o ponto de interrupção e pressione DELETE.  
   
-## Para excluir todos os pontos de interrupção  
- **Para excluir todos os pontos de interrupção**  
+## <a name="to-delete-all-breakpoints"></a>Para excluir todos os pontos de interrupção  
+ **To delete all breakpoints**  
   
  Você pode excluir todos os pontos de interrupção de uma das seguintes maneiras:  
   
@@ -91,7 +95,7 @@ caps.handback.revision: 5
   
 -   Na barra de ferramentas da janela **Pontos de Interrupção** , clique no botão **Excluir Todos os Pontos de Interrupção** .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Alternar um ponto de interrupção](../../relational-databases/scripting/toggle-a-breakpoint.md)  
   
   

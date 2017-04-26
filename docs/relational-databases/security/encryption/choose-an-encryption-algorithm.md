@@ -1,28 +1,32 @@
 ---
-title: "Escolher um algoritmo de criptografia | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "criptografia [SQL Server], algoritmos"
-  - "criptografia [SQL Server], algoritmos"
-  - "segurança [SQL Server], criptografia"
-  - "algoritmos [criptografia do SQL Server]"
+title: Escolha um algoritmo de criptografia | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cryptography [SQL Server], algorithms
+- encryption [SQL Server], algorithms
+- security [SQL Server], encryption
+- algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3cb1a59db35025eda9cf6ea68f0897aaecc9caf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Escolher um algoritmo de criptografia
+# <a name="choose-an-encryption-algorithm"></a>Escolher um algoritmo de criptografia
   A criptografia é um dos muitos recursos de proteção que estão disponíveis para o administrador que deseja oferecer segurança a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Algoritmos de criptografia definem transformações de dados que não podem ser invertidas facilmente por usuários não autorizados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite que administradores e desenvolvedores escolham entre diversos algoritmos, incluindo DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, RC4 de 128 bits, DESX, AES de 128 bits, AES de 192 bits e AES de 256 bits.  
@@ -30,7 +34,7 @@ caps.handback.revision: 36
 > [!NOTE]  
 >  A partir do [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], todos os algoritmos, exceto AES_128, AES_192 e AES_256, foram preteridos. Para usar algoritmos mais antigos (não recomendado) você deve definir o nível de compatibilidade do banco de dados para 120 ou inferior.  
   
- Nenhum algoritmo é ideal para todas as situações e informações sobre o benefício de cada um está além do escopo dos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].   Porém, os seguintes princípios gerais se aplicam:  
+ Nenhum algoritmo é ideal para todas as situações e informações sobre o benefício de cada um está além do escopo dos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Porém, os seguintes princípios gerais se aplicam:  
   
 -   A criptografia segura geralmente consome mais recursos da CPU que criptografia menos segura.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 36
   
 -   As chaves simétricas criadas com ALGORITHM = TRIPLE_DES usam TRIPLE DES com uma chave de 128 bits.  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |||  
 |-|-|  
@@ -71,8 +75,9 @@ caps.handback.revision: 36
 |Criptografando arquivos de banco de dados com o uso de criptografia transparente de dados.|[TDE &#40;Transparent Data Encryption&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)|  
 |Como criptografar uma coluna de uma tabela.|[Criptografar uma coluna de dados](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criptografia do SQL Server](../../../relational-databases/security/encryption/sql-server-encryption.md)   
  [Hierarquia de criptografia](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
+

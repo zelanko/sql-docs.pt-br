@@ -1,29 +1,33 @@
 ---
-title: "Gatilhos DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gatilhos [SQL Server], sobre os gatilhos"
-  - "Gatilhos DML, sobre gatilhos DML"
-  - "gatilhos [SQL Server]"
+title: Gatilhos DML | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- triggers [SQL Server], about triggers
+- DML triggers, about DML triggers
+- triggers [SQL Server]
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49e88050bea0405d8801a5b53faafcb644a6b62d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gatilhos DML
+# <a name="dml-triggers"></a>Gatilhos DML
   Os gatilhos DML são um tipo especial de procedimento armazenado que entra em vigor automaticamente quando um evento DML (linguagem de manipulação de dados) ocorre e afeta a tabela ou exibição definida no gatilho. Os eventos DML são instruções INSERT, UPDATE ou DELETE. Os gatilhos DML podem ser usados para impor regras de negócios e integridade de dados, consultar outras tabelas e incluir instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] complexas. O gatilho e a instrução que o dispara são tratados como uma transação simples, que pode ser revertida dentro do gatilho. Se um erro grave for detectado (espaço em disco insuficiente, por exemplo), toda a transação será revertida automaticamente.  
   
-## Benefícios do gatilho DML  
+## <a name="dml-trigger-benefits"></a>Benefícios do gatilho DML  
  Os gatilhos DML são semelhantes a restrições, pois podem impor integridade de entidade ou integridade de domínio. Em geral, a integridade da entidade sempre deve ser imposta no menor nível por índices que fazem parte das restrições PRIMARY KEY e UNIQUE ou que são criados independentemente de restrições. A integridade de domínio deve ser imposta por restrições CHECK e a RIN (integridade referencial) deve ser imposta por restrições FOREIGN KEY. Os gatilhos DML são muito úteis quando os recursos suportados por restrições não atendem às necessidades funcionais do aplicativo.  
   
  A lista a seguir compara gatilhos DML com restrições e identifica quando os gatilhos DML mais benefícios que ela.  
@@ -44,7 +48,7 @@ caps.handback.revision: 27
   
 -   Se houver restrições na tabela de gatilhos, elas serão verificadas após a execução do gatilho INSTEAD OF, mas antes da execução do gatilho AFTER. Se as restrições forem violadas, as ações do gatilho INSTEAD OF serão revertidas e o gatilho AFTER não será executado.  
   
-## Tipos de gatilhos DML  
+## <a name="types-of-dml-triggers"></a>Tipos de gatilhos DML  
  Gatilho AFTER  
  Os gatilhos AFTER são executados depois que a ação das instruções INSERT, UPDATE, MERGE ou DELETE é executada. Os gatilhos AFTER jamais são executados em caso de uma violação de restrição; por isso, estes gatilhos não podem ser usados em processamentos que possam evitar as violações de restrição. Para cada ação INSERT, UPDATE ou DELETE especificada em uma instrução MERGE, o gatilho correspondente é disparado para cada operação DML.  
   
@@ -58,15 +62,15 @@ caps.handback.revision: 27
 |Aplicabilidade|Tabelas|Tabelas e exibições|  
 |Quantidade por tabela ou exibição|Múltiplas ações por ação de gatilho (UPDATE, DELETE e INSERT)|Uma ação por ação de gatilho (UPDATE, DELETE e INSERT)|  
 |Referências em cascata|Nenhuma restrição se aplica|Os gatilhos INSTEAD OF UPDATE e DELETE não são permitidos em tabelas que são destinos de restrições de integridade referencial em cascata.|  
-|Execução|Após:<br /><br /> Processamento da restrição<br /><br /> Ações referenciais declarativas<br /><br /> Criação de tabelas **inserted** e **deleted**<br /><br /> A ação de gatilho|Antes: processamento da restrição<br /><br /> Em vez de: a ação de gatilho<br /><br /> Depois: criação de tabelas **inserted** e **deleted**|  
+|Execução|Após:<br /><br /> Processamento da restrição<br /><br /> Ações referenciais declarativas<br /><br /> Criação de tabelas**inserted** e **deleted** <br /><br /> A ação de gatilho|Antes: processamento da restrição<br /><br /> Em vez de: a ação de gatilho<br /><br /> Depois: criação de tabelas  **inserted** e **deleted**|  
 |Ordem de execução|A primeira e a última execução podem ser especificadas|Não aplicável|  
-|Referências de coluna **varchar(max)**, **nvarchar(max)** e **varbinary(max)** nas tabelas **inserted** e **deleted**|Allowed (permitido)|Allowed (permitido)|  
-|Referências de coluna **text**, **ntext** e **image** nas tabelas **inserted** e **deleted**|Não permitido|Allowed (permitido)|  
+|Referências de coluna**varchar(max)**, **nvarchar(max)**e **varbinary(max)** nas tabelas **inserted** e **deleted** |Allowed (permitido)|Allowed (permitido)|  
+|Referências de coluna**text**, **ntext**e **image** nas tabelas **inserted** e **deleted** |Não permitido|Allowed (permitido)|  
   
  Gatilhos CLR  
- Um gatilho CLR pode ser um gatilho AFTER ou INSTEAD OF. Um gatilho CLR também pode ser um gatilho DDL. Em vez de executar um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)], um gatilho CLR executa um ou mais métodos gravados em código gerenciado que são membros de um assembly criado no .NET Framework e carregado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Um gatilho CLR pode ser um gatilho AFTER ou INSTEAD OF. Um gatilho CLR também pode ser um gatilho DDL. Em vez de executar um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] , um gatilho CLR executa um ou mais métodos gravados em código gerenciado que são membros de um assembly criado no .NET Framework e carregado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Tarefa|Tópico|  
 |----------|-----------|  
@@ -81,7 +85,7 @@ caps.handback.revision: 27
 |Descreve como excluir ou desabilitar gatilhos DML.|[Excluir ou desabilitar gatilhos DML](../../relational-databases/triggers/delete-or-disable-dml-triggers.md)|  
 |Descreve como gerenciar a segurança do gatilho.|[Gerenciar a segurança dos gatilhos](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

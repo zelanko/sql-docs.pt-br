@@ -1,29 +1,33 @@
 ---
-title: "Aplicar backups de log de transa&#231;&#245;es (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/13/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restaurando [SQL Server], backups de log"
-  - "backups de log de transações [SQL Server], aplicando backups"
-  - "restaurações online [SQL Server], backups de log"
-  - "backups de log de transações [SQL Server], quantidade necessária para a sequência de restauração"
-  - "backups [SQL Server], backups de log"
+title: "Aplicar backups do log de transações (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/13/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring [SQL Server], log backups
+- transaction log backups [SQL Server], applying backups
+- online restores [SQL Server], log backups
+- transaction log backups [SQL Server], quantity needed for restore sequence
+- backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 60f9ef5bcf12be3b4a16f6ed56a21da2a2b54501
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aplicar backups de log de transa&#231;&#245;es (SQL Server)
-   O tópico só é relevante para o modelo de recuperação completa ou modelo de recuperação bulk-logged.  
+# <a name="apply-transaction-log-backups-sql-server"></a>Aplicar backups de log de transações (SQL Server)
+  O tópico só é relevante para o modelo de recuperação completa ou modelo de recuperação bulk-logged.  
   
  Este tópico descreve a aplicação de backups de log de transações como parte da restauração de um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
  
@@ -31,7 +35,7 @@ caps.handback.revision: 38
 ##  <a name="Requirements"></a> Requisitos para restaurar backups de log de transação  
  Para aplicar um backup de log de transações, devem ser atendidos os seguintes requisitos:  
   
--   **Backups de log suficientes para uma sequência de restauração:** você deverá ter backups de registros de log suficientes para concluir uma sequência de restauração. Os backups de log necessários, incluindo o [backup da parte final do log](../../relational-databases/backup-restore/tail-log-backups-sql-server.md), quando necessário, devem estar disponíveis antes do início da sequência de restauração.  
+-   **Backups de log suficientes para uma sequência de restauração:** você deverá ter backups de registros de log suficientes para concluir uma sequência de restauração. Os backups de log necessários, incluindo o [backup da parte final do log](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) , quando necessário, devem estar disponíveis antes do início da sequência de restauração.  
   
 -   **Ordem de restauração correta:**  o backup de banco de dados completo imediatamente anterior ou backup de banco de dados diferencial deve ser restaurado primeiro. Em seguida, todos os logs de transações criados após o backup de banco de dados completo ou diferencial devem ser restaurados em ordem cronológica. Se um backup de log de transações nessa cadeia de logs for perdido ou danificado, você poderá restaurar apenas os logs de transações anteriores ao log ausente.  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
  **Para restaurar até seu ponto de recuperação**  
   
--   [Restaurar um banco de dados até o ponto de falha no modelo de recuperação completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [Restaurar um banco de dados até o ponto de falha no modelo de recuperação completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
@@ -101,7 +105,8 @@ caps.handback.revision: 38
   
 -   [Recuperar um banco de dados sem restaurar dados &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   
+

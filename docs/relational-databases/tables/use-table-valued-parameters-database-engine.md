@@ -1,34 +1,38 @@
 ---
-title: "Usar par&#226;metros com valor de tabela (Mecanismo de Banco de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parâmetros com valor de tabela"
-  - "parâmetros com valor de tabela, sobre parâmetros com valor de tabela"
-  - "parâmetros [SQL Server], valor de tabela"
-  - "TVP - Consulte Parâmetros com valor de tabela"
+title: "Usar parâmetros com valor de tabela (Mecanismo de Banco de Dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table-valued parameters
+- table-valued parameters, about table-valued parameters
+- parameters [SQL Server], table-valued
+- TVP See table-valued parameters
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 021177aa350c47474e48453f7d9a5735e1083b04
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar par&#226;metros com valor de tabela (Mecanismo de Banco de Dados)
+# <a name="use-table-valued-parameters-database-engine"></a>Usar parâmetros com valor de tabela (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Os parâmetros com valor de tabela são declarados usando tipos de tabela definidos pelo usuário. Você pode usar parâmetros com valor de tabela para enviar várias linhas de dados para uma rotina ou instrução [!INCLUDE[tsql](../../includes/tsql-md.md)], como um procedimento armazenado ou função, sem criar uma tabela temporária ou muitos parâmetros.  
+  Os parâmetros com valor de tabela são declarados usando tipos de tabela definidos pelo usuário. Você pode usar parâmetros com valor de tabela para enviar várias linhas de dados para uma rotina ou instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] , como um procedimento armazenado ou função, sem criar uma tabela temporária ou muitos parâmetros.  
   
  Os parâmetros com valor de tabela são como matrizes de parâmetro em OLE DB e ODBC, mas oferecem mais flexibilidade e integração mais próxima ao [!INCLUDE[tsql](../../includes/tsql-md.md)]. Eles também têm o benefício de poder participar de operações com base em conjunto.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] passa parâmetros com valor de tabela para rotinas por referência, para evitar a criação de uma cópia dos dados de entrada. Você pode criar e executar rotinas [!INCLUDE[tsql](../../includes/tsql-md.md)] com parâmetros com valor de tabela e chamá-las do código [!INCLUDE[tsql](../../includes/tsql-md.md)], de clientes nativos e gerenciados em qualquer linguagem gerenciada.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] passa parâmetros com valor de tabela para rotinas por referência, para evitar a criação de uma cópia dos dados de entrada. Você pode criar e executar rotinas [!INCLUDE[tsql](../../includes/tsql-md.md)] com parâmetros com valor de tabela e chamá-las do código [!INCLUDE[tsql](../../includes/tsql-md.md)] , de clientes nativos e gerenciados em qualquer linguagem gerenciada.  
   
  **Neste tópico:**  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 31
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não mantém estatísticas em colunas de parâmetros com valor de tabela.  
   
--   Os parâmetros com valor de tabela devem ser passados como parâmetros de entrada READONLY para rotinas [!INCLUDE[tsql](../../includes/tsql-md.md)]. Não é possível executar operações DML como UPDATE, DELETE ou INSERT em um parâmetro com valor de tabela no corpo de uma rotina.  
+-   Os parâmetros com valor de tabela devem ser passados como parâmetros de entrada READONLY para rotinas [!INCLUDE[tsql](../../includes/tsql-md.md)] . Não é possível executar operações DML como UPDATE, DELETE ou INSERT em um parâmetro com valor de tabela no corpo de uma rotina.  
   
 -   Você não pode usar um parâmetro com valor de tabela como destino de uma instrução SELECT INTO ou INSERT EXEC. Um parâmetro com valor de tabela pode estar na cláusula FROM de SELECT INTO ou na cadeia de caracteres ou procedimento armazenado INSERT EXEC.  
   
@@ -117,7 +121,7 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 GO  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   

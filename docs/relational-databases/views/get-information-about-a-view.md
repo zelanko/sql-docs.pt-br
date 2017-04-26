@@ -1,33 +1,37 @@
 ---
-title: "Obter informa&#231;&#245;es sobre uma exibi&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.viewproperties.general.f1"
-helpviewer_keywords: 
-  - "exibições [SQL Server], informações de status"
-  - "metadados [SQL Server], exibições"
-  - "dependências [SQL Server], exibições"
-  - "exibindo informações de exibição"
-  - "exibições [SQL Server], metadados"
-  - "exibindo informações de exibição"
-  - "informações de status [SQL Server], exibições"
-  - "exibir dependências"
+title: "Obter informações sobre uma exibição | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.viewproperties.general.f1
+helpviewer_keywords:
+- views [SQL Server], status information
+- metadata [SQL Server], views
+- dependencies [SQL Server], views
+- displaying view information
+- views [SQL Server], metadata
+- viewing view information
+- status information [SQL Server], views
+- view dependencies
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2a981d28720713387dd5b593f037662b9b6b654
+ms.lasthandoff: 04/11/2017
+
 ---
-# Obter informa&#231;&#245;es sobre uma exibi&#231;&#227;o
+# <a name="get-information-about-a-view"></a>Obter informações sobre uma exibição
   Você pode obter informações sobre a definição ou as propriedades de uma exibição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Talvez seja necessário observar a definição da exibição para entender como seus dados são derivados das tabelas de origem, ou consultar os dados definidos pela exibição.  
   
 > [!IMPORTANT]  
@@ -54,7 +58,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Obter as propriedades da exibição usando o Pesquisador de Objetos  
+#### <a name="get-view-properties-by-using-object-explorer"></a>Obter as propriedades da exibição usando o Pesquisador de Objetos  
   
 1.  No **Pesquisador de Objetos**, clique no sinal de adição ao lado do banco de dados que contém a exibição na qual você deseja ver as propriedades e clique no sinal de adição para expandir a pasta **Exibições** .  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 30
      **Ligado a esquema**  
      Indica se a exibição é ligada ao esquema. Os valores são True e False. Para obter informações sobre exibições ligadas ao esquema, consulte a parte SCHEMABINDING de [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
-#### Obtendo as propriedades da exibição usando a ferramenta Designer de Exibição  
+#### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>Obtendo as propriedades da exibição usando a ferramenta Designer de Exibição  
   
 1.  No **Pesquisador de Objetos**, expanda o banco de dados que contém a exibição da qual você ver as propriedades e expanda a pasta **Exibições** .  
   
@@ -139,22 +143,22 @@ caps.handback.revision: 30
      Mostra uma descrição das instruções SQL. Para ver a descrição inteira ou editá-la, clique na descrição e então clique nas reticências **(...)** à direita da propriedade. Os comentários podem incluir informações como quem usa a exibição e quando ela é usada.  
   
      **Especificação de Top**  
-     Expande para mostrar as propriedades **Top**, **Expression**, **Percent**e **With Ties**.  
+     Expande para mostrar as propriedades **Top**, **Expression**, **Percent**e **With Ties** .  
   
      **(Top)**  
      Especifica se a exibição incluirá uma cláusula TOP, que retorna apenas as primeiras linhas n ou primeiro percentual n de linhas no conjunto de resultados. O padrão é que a exibição retorne as primeiras 10 linhas no conjunto de resultados. Use para alterar o número de linhas para retornar ou especificar uma porcentagem diferente.  
   
-     **Expressão**  
+     **Expression**  
      Mostra que porcentagem (se **Percent** for definida como **Sim**) ou registros (se **Percent** for definida como **Não**) a exibição retornará.  
   
-     **Por cento**  
-     Especifica se a consulta incluirá uma cláusula **TOP**, que retorna apenas o primeiro n percentual de linhas no conjunto de resultados  
+     **Percent**  
+     Especifica se a consulta incluirá uma cláusula **TOP** , que retorna apenas o primeiro n percentual de linhas no conjunto de resultados  
   
      **With Ties**  
-     Especifica se a exibição incluirá uma cláusula **WITH TIES**. **WITH TIES** é útil se uma exibição incluir uma cláusula **ORDER BY** e uma cláusula **TOP** com base na porcentagem. Se essa opção for determinada, e se a porcentagem de corte se encontrar no meio de um conjunto de linhas com valores idênticos na cláusula **ORDER BY** , a exibição será estendida para incluir todas essas linhas.  
+     Especifica se a exibição incluirá uma cláusula **WITH TIES** . **WITH TIES** é útil se uma exibição incluir uma cláusula **ORDER BY** e uma cláusula **TOP** com base na porcentagem. Se essa opção for determinada, e se a porcentagem de corte se encontrar no meio de um conjunto de linhas com valores idênticos na cláusula **ORDER BY** , a exibição será estendida para incluir todas essas linhas.  
   
      **Especificação de atualização**  
-     Expande para mostrar as propriedades de **Atualizar Usando Regras de Exibição** e **Verificar Opção**.  
+     Expande para mostrar as propriedades de **Atualizar Usando Regras de Exibição** e **Verificar Opção** .  
   
      **(Atualizar Usando Regras de Exibição)**  
      Indica que todas as atualizações e inserções da exibição serão convertidas pelo MDAC (Microsoft Data Access Components) em instruções SQL que fazem referência à exibição, e não em instruções SQL que fazem referência diretamente às tabelas base da exibição.  
@@ -162,9 +166,9 @@ caps.handback.revision: 30
      Em alguns casos, o MDAC manifesta as operações de atualização de exibição e inserção de exibição como atualizações e inserções de acordo com as tabelas base subjacentes da exibição. Selecionando **Atualizar Usando Regras de Exibição**, você pode assegurar que o MDAC gere operações de atualização e inserção na própria exibição.  
   
      **Verificar Opção**  
-     Indica que quando você abrir essa exibição e modificar o painel **Resultados**, a fonte de dados verificará se os dados adicionados ou modificados estão de acordo com a cláusula **WHERE** da definição de exibição. Se sua modificação não estiver de acordo com a cláusula **WHERE** , você verá um erro com mais informações.  
+     Indica que quando você abrir essa exibição e modificar o painel **Resultados** , a fonte de dados verificará se os dados adicionados ou modificados estão de acordo com a cláusula **WHERE** da definição de exibição. Se sua modificação não estiver de acordo com a cláusula **WHERE** , você verá um erro com mais informações.  
   
-#### Para obter as dependências da exibição  
+#### <a name="to-get-dependencies-on-the-view"></a>Para obter as dependências da exibição  
   
 1.  No **Pesquisador de Objetos**, expanda o banco de dados que contém a exibição da qual você ver as propriedades e expanda a pasta **Exibições** .  
   
@@ -176,7 +180,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para obter a definição e as propriedades de uma exibição  
+#### <a name="to-get-the-definition-and-properties-of-a-view"></a>Para obter a definição e as propriedades de uma exibição  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -206,7 +210,7 @@ caps.handback.revision: 30
   
  Para obter mais informações, veja [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md), [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md) e [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md).  
   
-#### Para obter as dependências de uma exibição  
+#### <a name="to-get-the-dependencies-of-a-view"></a>Para obter as dependências de uma exibição  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

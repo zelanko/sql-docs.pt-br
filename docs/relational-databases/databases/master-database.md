@@ -1,38 +1,42 @@
 ---
-title: "Banco de dados mestre | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "banco de dados mestre [SQL Server], sobre"
-  - "banco de dados mestre [SQL Server]"
+title: Banco de dados mestre | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- master database [SQL Server], about
+- master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 778915dbe6c89b17520ca44b6d437862a882b078
+ms.lasthandoff: 04/11/2017
+
 ---
-# Banco de dados mestre
-  O banco de dados **master** registra todas as informações no nível de sistema para um sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isto inclui metadados de ampla instância como contas de logon, pontos de extremidade, servidores vinculados e parâmetros de configuração de sistema. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os objetos de sistema não são mais armazenados no banco de dados **mestre** ; em vez disso, eles são armazenados no [Banco de dados de recurso](../../relational-databases/databases/resource-database.md). Além disso, **mestre** é o banco de dados que registra a existência de todos os outros bancos de dados e o local desses arquivos de bancos de dados, e registra as informações de inicialização para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá iniciar se o banco de dados **mestre** não estiver disponível.  
+# <a name="master-database"></a>Banco de dados mestre
+  O banco de dados **master** registra todas as informações no nível de sistema para um sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isto inclui metadados de ampla instância como contas de logon, pontos de extremidade, servidores vinculados e parâmetros de configuração de sistema. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os objetos de sistema não são mais armazenados no banco de dados **mestre** ; em vez disso, eles são armazenados no [Banco de dados de recurso](../../relational-databases/databases/resource-database.md). Além disso, **mestre** é o banco de dados que registra a existência de todos os outros bancos de dados e o local desses arquivos de bancos de dados, e registra as informações de inicialização para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá iniciar se o banco de dados **mestre** não estiver disponível.  
   
-## Propriedades físicas de mestre  
+## <a name="physical-properties-of-master"></a>Propriedades físicas de mestre  
  A tabela a seguir lista os valores iniciais de configuração dos dados **mestre** e dos arquivos de log. Os tamanhos desses arquivos podem variar um pouco em diferentes edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Arquivo|Nome lógico|Nome físico|Aumento do arquivo|  
 |----------|------------------|-------------------|-----------------|  
-|Dados primários|mestre|master.mdf|Aumento automático de 10 por cento até que o disco fique cheio.|  
+|Dados primários|master|master.mdf|Aumento automático de 10 por cento até que o disco fique cheio.|  
 |Log|mastlog|mastlog.ldf|Aumento automático de 10 por cento para um máximo de 2 terabytes.|  
   
  Para obter informações sobre como mover os dados **master** e os arquivos de log, veja [Mover bancos de dados do sistema](../../relational-databases/databases/move-system-databases.md).  
   
-### Opções de banco de dados  
+### <a name="database-options"></a>Opções de banco de dados  
  A tabela a seguir lista o valor padrão de cada opção de banco de dados no banco de dados **mestre** e se a opção pode ser modificada. Para exibir as configurações atuais dessas opções, use a exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 |Opção de banco de dados|Valor padrão|Pode ser modificado|  
@@ -69,7 +73,7 @@ caps.handback.revision: 50
   
  Para obter uma descrição dessas opções de banco de dados, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## Restrições  
+## <a name="restrictions"></a>Restrições  
  As seguintes operações não podem ser executadas no banco de dados **mestre** :  
   
 -   Adicionando arquivos ou grupos de arquivos.  
@@ -98,7 +102,7 @@ caps.handback.revision: 50
   
 -   Definindo o banco de dados ou grupo de arquivos primário como READ_ONLY.  
   
-## Recomendações  
+## <a name="recommendations"></a>Recomendações  
  Ao trabalhar com o banco de dados **mestre** , considere as seguintes recomendações:  
   
 -   Sempre tenha um backup atual do banco de dados **mestre** disponível.  
@@ -115,7 +119,7 @@ caps.handback.revision: 50
   
 -   Não defina a opção TRUSTWORTHY como ON para o banco de dados **mestre** .  
   
-## O que fazer se o mestre ficar inutilizável  
+## <a name="what-to-do-if-master-becomes-unusable"></a>O que fazer se o mestre ficar inutilizável  
  Se o **mestre** se tornar inutilizável, você poderá retornar o banco de dados a um estado utilizável das seguintes maneiras:  
   
 -   Restaure o **mestre** a partir de um backup de banco de dados atual.  
@@ -129,7 +133,7 @@ caps.handback.revision: 50
     > [!IMPORTANT]  
     >  A recriação de **master** recria todos os bancos de dados do sistema.  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
  [Recriar bancos de dados do sistema](../../relational-databases/databases/rebuild-system-databases.md)  
   
  [Bancos de dados do sistema](../../relational-databases/databases/system-databases.md)  
@@ -141,3 +145,4 @@ caps.handback.revision: 50
  [Mover arquivos de banco de dados](../../relational-databases/databases/move-database-files.md)  
   
   
+

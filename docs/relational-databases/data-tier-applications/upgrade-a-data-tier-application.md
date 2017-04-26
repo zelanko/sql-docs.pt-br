@@ -1,46 +1,50 @@
 ---
-title: "Atualizar um aplicativo da camada de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.upgradedacwizard.summary.f1"
-  - "sql13.swb.upgradedacwizard.reviewplan.f1"
-  - "sql13.swb.upgradedacwizard.upgradedac.f1"
-  - "sql13.swb.upgradedacwizard.selectpackage.f1"
-  - "sql13.swb.upgradedacwizard.reviewpolicy.f1"
-  - "sql13.swb.upgradedacwizard.selectoptions.f1"
-  - "sql13.swb.upgradedacwizard.checkdrift.f1"
-  - "sql13.swb.upgradedacwizard.introduction.f1"
-helpviewer_keywords: 
-  - "atualizar DAC"
-  - "aplicativo da camada de dados [SQL Server], atualização"
-  - "assistente [DAC], atualização"
-  - "Como [DAC], atualização"
+title: Atualizar um aplicativo da camada de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.upgradedacwizard.summary.f1
+- sql13.swb.upgradedacwizard.reviewplan.f1
+- sql13.swb.upgradedacwizard.upgradedac.f1
+- sql13.swb.upgradedacwizard.selectpackage.f1
+- sql13.swb.upgradedacwizard.reviewpolicy.f1
+- sql13.swb.upgradedacwizard.selectoptions.f1
+- sql13.swb.upgradedacwizard.checkdrift.f1
+- sql13.swb.upgradedacwizard.introduction.f1
+helpviewer_keywords:
+- upgrade DAC
+- data-tier application [SQL Server], upgrade
+- wizard [DAC], upgrade
+- How to [DAC], upgrade
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7989f6c7fa8ff85ceb5cb5ed06d989343edb46a2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Atualizar um aplicativo da camada de dados
+# <a name="upgrade-a-data-tier-application"></a>Atualizar um aplicativo da camada de dados
   Use o Assistente para Atualizar Aplicativo da Camada de Dados ou um script do Windows PowerShell para alterar o esquema e as propriedades de um DAC (aplicativo da camada de dados) implantado no momento para coincidir com o esquema e as propriedades definidos em uma nova versão do DAC.  
   
--   **Antes de começar:**  [Escolhendo Opções de Atualização de DAC](#ChoseDACUpgOptions), [Limitações e Restrições](#LimitationsRestrictions), [Pré-requisitos](#Prerequisites), [Segurança](#Security), [Permissões](#Permissions)  
+-   **Before you begin:**  [Choosing DAC Upgrade Options](#ChoseDACUpgOptions), [Limitations and Restrictions](#LimitationsRestrictions), [Prerequisites](#Prerequisites), [Security](#Security), [Permissions](#Permissions)  
   
--   **Para atualizar um DAC, usando:** [O Assistente para Atualizar o Aplicativo da Camada de Dados](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **To upgrade a DAC, using:**  [The Upgrade Data-tier Application Wizard](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  Uma atualização de DAC é um processo no local que altera o esquema do banco de dados existente para corresponder ao esquema definido em uma nova versão do DAC. A nova versão do DAC é fornecida em um arquivo de pacote DAC. Para obter mais informações sobre como criar um pacote de DAC, veja [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md).  
   
-###  <a name="ChoseDACUpgOptions"></a> Escolhendo opções de atualização de DAC  
+###  <a name="ChoseDACUpgOptions"></a> Escolhendo Opções de Atualização de DAC  
  Há quatro opções de atualização para uma atualização no local:  
   
 -   **Ignorar Perda de Dados** – Se **True**, a atualização continuará mesmo que algumas das operações resultem na perda de dados. Se **False**, estas operações finalizarão a atualização. Por exemplo, se uma tabela no banco de dados atual não estiver presente no esquema do novo DAC, a tabela será removida se **True** for especificado. A configuração padrão é **True**.  
@@ -51,7 +55,7 @@ caps.handback.revision: 35
   
 -   **Ignorar a Validação da Política** - Se **True**, a política de seleção de servidor de DAC não será avaliada. Se **False**, a política será avaliada e a atualização finalizará se houver um erro de validação. A configuração padrão é **False**.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
  Só podem ser executados uprades de DAC em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior.  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
@@ -80,7 +84,7 @@ caps.handback.revision: 35
   
 1.  No **Pesquisador de Objetos**, expanda o nó da instância que contém o DAC a ser atualizado.  
   
-2.  Expanda os nós **Gerenciamento** e **Aplicativos da Camada de Dados**.  
+2.  Expanda os nós **Gerenciamento** e **Aplicativos da Camada de Dados** .  
   
 3.  Clique com o botão direito do mouse no nó do DAC a ser atualizado e selecione **Atualizar Aplicativo da Camada de Dados…**  
   
@@ -112,7 +116,7 @@ caps.handback.revision: 35
 ##  <a name="Select_dac_package"></a> Página Selecionar Pacote  
  Use esta página para especificar o pacote de DAC que contém a nova versão do aplicativo da camada de dados. A página faz a transição por dois estados.  
   
-### Selecionar o pacote de DAC  
+### <a name="select-the-dac-package"></a>Selecionar o pacote de DAC  
  Use o estado inicial da página para escolher o pacote de DAC a ser implantado. O pacote de DAC deve ser um arquivo de pacote de DAC válido e deve ter uma extensão .dacpac. O nome do aplicativo de DAC no pacote de DAC deve ser igual ao nome do aplicativo do DAC atual.  
   
  **Pacote de DAC** – Especifique o caminho e o nome de arquivo do pacote de DAC que contém a nova versão do aplicativo da camada de dados. Você pode selecionar o botão **Procurar** no lado direito da caixa para procurar o local do pacote de DAC.  
@@ -123,18 +127,18 @@ caps.handback.revision: 35
   
  **Descrição** – Uma caixa somente leitura que exibe a descrição escrita quando o DAC foi criado ou extraído de um banco de dados.  
   
- **\< Anterior** – Retorna à página **Introdução**.  
+ **< Anterior** – Retorna à página **Introdução**.  
   
  **Avançar >** – Exibe uma barra de progresso enquanto o assistente confirma se o arquivo selecionado é um pacote de DAC válido.  
   
  **Cancelar** – Encerra o assistente sem atualizar o DAC.  
   
-### Validando o pacote de DAC  
+### <a name="validating-the-dac-package"></a>Validando o pacote de DAC  
  Exibe uma barra de progresso enquanto o assistente confirma se o arquivo selecionado é um pacote de DAC válido. Se o pacote de DAC for validado, o assistente seguirá para a página **Examinar Política** . Se o arquivo não for um pacote de DAC válido, o assistente permanecerá na página **Selecionar Pacote de DAC** . Selecione outro pacote de DAC válido ou cancele o assistente e gere um novo pacote de DAC.  
   
  **Validando o conteúdo do DAC** – A barra de progresso que relata o status atual do processo de validação.  
   
- **\< Anterior** – Retorna ao estado inicial da página **Selecionar Pacote**.  
+ **< Anterior** – Retorna ao estado inicial da página **Selecionar Pacote**.  
   
  **Avançar >** – Segue para a versão final da página **Selecionar Pacote**.  
   
@@ -147,7 +151,7 @@ caps.handback.revision: 35
   
  **Ignorar violações de política** – Use esta caixa de seleção para continuar com a atualização se uma ou mais condições de política falharem. Somente selecione essa opção se você tiver certeza de que todas as condições que falharam não impedirão o funcionamento bem-sucedido do DAC.  
   
- **\< Anterior** – Retorna à página **Selecionar Pacote**.  
+ **< Anterior** – Retorna à página **Selecionar Pacote**.  
   
  **Avançar >** – Segue para a página **Detectar Alteração**.  
   
@@ -168,20 +172,20 @@ caps.handback.revision: 35
   
  **Salvar Relatório** – Clique no botão para salvar um relatório das alterações que o assistente detectou entre os objetos no banco de dados e suas contrapartes na definição do DAC. Em seguida, você pode examinar o relatório para determinar se precisa executar ações após a conclusão da atualização para incorporar alguns ou todos os objetos listados no relatório para o novo banco de dados.  
   
- **\< Anterior** – Retorna à página **Selecionar Pacote de DAC**.  
+ **< Anterior** – Retorna à página **Selecionar Pacote de DAC**.  
   
  **Avançar >** – Segue para a página **Opções**.  
   
  **Cancelar** – Encerra o assistente sem implantar o DAC.  
   
-## Página Opções  
+## <a name="options-page"></a>Página Opções  
  Use esta página para selecionar a reversão em opção de falha para a atualização.  
   
  **Reversão em falha** – Selecione esta opção para incluir a atualização em uma transação que o assistente pode tentar reverter em caso de erros. Para obter mais informações sobre a opção, consulte [Escolhendo Opções de Atualização de DAC](#ChoseDACUpgOptions).  
   
  **Restaurar Padrões** – Retorna a opção à configuração padrão de false.  
   
- **\< Anterior** – Retorna à página **Detectar Alteração**.  
+ **< Anterior** – Retorna à página **Detectar Alteração**.  
   
  **Avançar >** – Segue para a página **Examinar o Plano de Atualização**.  
   
@@ -202,7 +206,7 @@ caps.handback.revision: 35
   
  **Restaurar Padrões** – Retorna a opção à configuração padrão de false.  
   
- **\< Anterior** – Retorna à página **Detectar Alteração**.  
+ **< Anterior** – Retorna à página **Detectar Alteração**.  
   
  **Avançar >**: continua para a página **Resumo**.  
   
@@ -213,7 +217,7 @@ caps.handback.revision: 35
   
  **As configurações a seguir serão usadas para atualizar o DAC.** - Examine as informações exibidas para assegurar que as ações executadas estarão corretas. A janela exibe o DAC selecionado para atualização e o pacote de DAC que contém a nova versão do DAC. A janela também exibe se a versão atual do banco de dados é igual à definição de DAC atual, ou se o banco de dados foi alterado.  
   
- **\< Anterior** – Retorna à página **Examinar o Plano de Atualização**.  
+ **< Anterior** – Retorna à página **Examinar o Plano de Atualização**.  
   
  **Avançar >** – Implanta o DAC e exibe os resultados na página **Atualizar DAC**.  
   
@@ -245,7 +249,7 @@ caps.handback.revision: 35
   
 7.  Feche o fluxo de arquivos usado para ler o arquivo de pacote de DAC.  
   
-### Exemplo (PowerShell)  
+### <a name="example-powershell"></a>Exemplo (PowerShell)  
  O exemplo a seguir atualiza um DAC nomeado MyApplication em uma instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)], usando uma nova versão de DAC em um pacote de MyApplicationVNext.dacpac.  
   
 ```  
@@ -283,8 +287,9 @@ $dacstore.IncrementalUpgrade($dacName, $dacType, $upgradeProperties)
 $fileStream.Close()  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   
+

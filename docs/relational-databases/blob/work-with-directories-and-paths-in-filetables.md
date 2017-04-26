@@ -1,24 +1,28 @@
 ---
-title: "Trabalhar com diret&#243;rios e caminhos em FileTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], diretórios"
+title: "Trabalhar com diretórios e caminhos em FileTables | Microsoft Docs"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d41410b3da1f823a29da0c5b7bd706dff4ce4584
+ms.lasthandoff: 04/11/2017
+
 ---
-# Trabalhar com diret&#243;rios e caminhos em FileTables
+# <a name="work-with-directories-and-paths-in-filetables"></a>Trabalhar com diretórios e caminhos em FileTables
   Descreve a estrutura de diretórios na qual os arquivos são armazenados em FileTables.  
   
 ##  <a name="HowToDirectories"></a> Como trabalhar com diretórios e caminhos em FileTables  
@@ -31,7 +35,7 @@ caps.handback.revision: 25
 |Obtém a ID do localizador do caminho do arquivo ou diretório especificado em uma FileTable, fornecendo o caminho.|[GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
 ##  <a name="BestPracticeRelativePaths"></a> Como usar caminhos relativos para código portátil  
- Para manter código e aplicativos independentes do computador e do banco de dados atuais, evite escrever código baseado em caminhos de arquivo absolutos. Em vez disso, obtenha o caminho completo para um arquivo em tempo de execução usando as funções [FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) e [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) juntas, conforme mostrado no exemplo a seguir. Por padrão, a função **GetFileNamespacePath** retorna o caminho relativo do arquivo sob o caminho raiz do banco de dados.  
+ Para manter código e aplicativos independentes do computador e do banco de dados atuais, evite escrever código baseado em caminhos de arquivo absolutos. Em vez disso, obtenha o caminho completo para um arquivo em tempo de execução usando as funções [FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) e [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)juntas, conforme mostrado no exemplo a seguir. Por padrão, a função **GetFileNamespacePath** retorna o caminho relativo do arquivo sob o caminho raiz do banco de dados.  
   
 ```tsql  
 USE database_name;  
@@ -60,7 +64,7 @@ GO
 ##  <a name="fullpath"></a> O caminho completo para um item armazenado em uma FileTable  
  O caminho completo para um arquivo ou diretório armazenado em uma FileTable começa com os seguintes elementos:  
   
-1.  O compartilhamento habilitado para acesso de E/S de arquivos FILESTREAM no nível da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  O compartilhamento habilitado para acesso de E/S de arquivos FILESTREAM no nível da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  O **DIRECTORY_NAME** especificado no nível do banco de dados.  
   
@@ -94,9 +98,9 @@ GO
 |-|-|-|  
 |*is_directory* **value**|*file_stream* **value**|**Comportamento**|  
 |FALSE|NULL|Esta é uma combinação inválida que será capturada por uma restrição definida por sistema.|  
-|FALSE|\<value>|O item representa um arquivo.|  
+|FALSE|\<valor>|O item representa um arquivo.|  
 |TRUE|NULL|O item representa um diretório.|  
-|TRUE|\<value>|Esta é uma combinação inválida que será capturada por uma restrição definida por sistema.|  
+|TRUE|\<valor>|Esta é uma combinação inválida que será capturada por uma restrição definida por sistema.|  
   
 ##  <a name="alwayson"></a> Usando VNNs (nomes de rede virtual) com grupos de disponibilidade AlwaysOn  
  Quando o banco de dados que contém dados FILESTREAM ou FileTable pertence a um grupo de disponibilidade AlwaysOn:  
@@ -105,10 +109,11 @@ GO
   
 -   Todo o acesso aos dados FILESTREAM ou FileTable pelas APIs do sistema de arquivos deve usar VNNs em vez de nomes de computadores. Para obter mais informações, consulte [FILESTREAM e FileTable com Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Habilitar os pré-requisitos para FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)   
  [Criar, alterar e remover FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [Acessar FileTables com Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [Acessar FileTables com APIs de entrada e saída de arquivo](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   
   
+

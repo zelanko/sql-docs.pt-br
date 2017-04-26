@@ -1,30 +1,34 @@
 ---
-title: "GeometryCollection | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "subtipo de geometria GeomCollection [SQL Server]"
-  - "subtipos de geometria [SQL Server]"
+title: GeometryCollection | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GeomCollection geometry subtype [SQL Server]
+- geometry subtypes [SQL Server]
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad3b942675c879183f8be2fe8bc8b82effee8bf2
+ms.lasthandoff: 04/11/2017
+
 ---
-# GeometryCollection
+# <a name="geometrycollection"></a>GeometryCollection
   Uma **GeometryCollection** é uma coleção de zero ou mais instâncias de **geometry** ou de **geography** . Uma **GeometryCollection** pode estar vazia.  
   
-## Instâncias de GeometryCollection  
+## <a name="geometrycollection-instances"></a>Instâncias de GeometryCollection  
   
-### Instâncias aceitas  
+### <a name="accepted-instances"></a>Instâncias aceitas  
  Para que uma instância de **GeometryCollection** seja aceita, ela deve ser uma instância de **GeometryCollection** vazia ou todas as instâncias que englobam a instância de **GeometryCollection** devem ser instâncias aceitas. O exemplo a seguir mostra as instâncias aceitas.  
   
 ```  
@@ -39,7 +43,7 @@ DECLARE @g3 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, 
 DECLARE @g geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1), POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
-### Instâncias válidas  
+### <a name="valid-instances"></a>Instâncias válidas  
  Uma instância de **GeometryCollection** é válida quando todas as instâncias que englobam a instância de **GeometryCollection** são válidas. O exemplo a seguir mostra três instâncias de **GeometryCollection** válidas e uma instância que não é válida.  
   
 ```  
@@ -54,7 +58,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
  Para obter mais informações sobre instâncias aceitas e válidas, consulte [Point](../../relational-databases/spatial/point.md), [MultiPoint](../../relational-databases/spatial/multipoint.md), [LineString](../../relational-databases/spatial/linestring.md), [MultiLineString](../../relational-databases/spatial/multilinestring.md), [Polygon](../../relational-databases/spatial/polygon.md)e [MultiPolygon](../../relational-databases/spatial/multipolygon.md).  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância de `geometry``GeometryCollection` com valores Z no SRID 1 contendo uma instância de `Point` e uma instância de `Polygon` .  
   
 ```  
@@ -62,7 +66,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION(POINT(3 3 1), POLYGON((0 0 2, 1 10 3, 1 0 4, 0 0 2)))', 1);  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Dados espaciais &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

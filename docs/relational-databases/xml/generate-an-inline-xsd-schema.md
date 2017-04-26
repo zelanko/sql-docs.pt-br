@@ -1,30 +1,34 @@
 ---
-title: "Gerar um esquema XSD embutido | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "esquemas XSD [SQL Server]"
-  - "opção XMLSCHEMA"
-  - "esquemas [SQL Server], XML"
-  - "esquemas XDR"
-  - "Cláusula FOR XML, geração de esquema XSD embutido"
-  - "geração de esquema XSD embutido [SQL Server]"
-  - "opção XMLDATA"
+title: Gerar um esquema XSD embutido | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XSD schemas [SQL Server]
+- XMLSCHEMA option
+- schemas [SQL Server], XML
+- XDR schemas
+- FOR XML clause, inline XSD schema generation
+- inline XSD schema generation [SQL Server]
+- XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8290d7fe8b7900291d4afe3c944564d8f2aef608
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gerar um esquema XSD embutido
+# <a name="generate-an-inline-xsd-schema"></a>Gerar um esquema XSD embutido
   Em uma cláusula FOR XML, é possível solicitar que a consulta retorne um esquema embutido junto com os resultados da consulta. Para obter um esquema XDR, use a palavra-chave XMLDATA na cláusula FOR XML. Para obter um esquema XSD, use a palavra-chave XMLSCHEMA.  
   
  Este tópico descreve a palavra-chave XMLSCHEMA e explica a estrutura do esquema XSD embutido resultante. As limitações a seguir estão presentes quando você está solicitando esquemas embutidos:  
@@ -81,10 +85,10 @@ WHERE ProductModelID=1
 FOR XML AUTO, XMLSCHEMA ('MyURI')  
 ```  
   
-## Elementos de entidade  
+## <a name="entity-elements"></a>Elementos de entidade  
  Para discutir os detalhes da estrutura do esquema XSD gerada para o resultado da consulta, é necessário primeiro descrever o elemento  
   
- Um elemento de entidade nos dados XML retornados pela consulta FOR XML é um elemento gerado a partir de uma tabela e não de uma coluna. Por exemplo, a consulta FOR XML a seguir retorna informações de contato da tabela `Person` no banco de dados `AdventureWorks2012`.  
+ Um elemento de entidade nos dados XML retornados pela consulta FOR XML é um elemento gerado a partir de uma tabela e não de uma coluna. Por exemplo, a consulta FOR XML a seguir retorna informações de contato da tabela `Person` no banco de dados `AdventureWorks2012` .  
   
 ```  
 SELECT BusinessEntityID, FirstName  
@@ -159,8 +163,8 @@ FOR XML AUTO, ELEMENTS, XMLSCHEMA
   
 -   O <`SalesOrderID`>, <`ProductID`>e <`OrderQty`> não são elementos de entidade porque são mapeados para colunas. Os dados de coluna são retornados como elementos no XML por causa da diretiva ELEMENTS. Estes são mapeados para elementos locais do tipo complexo do elemento de entidade. Observe que, se a diretiva ELEMENTS não for especificada, os valores de `SalesOrderID`, `ProductID` e `OrderQty` serão mapeados para atributos locais do tipo complexo do elemento de entidade correspondente.  
   
-## Conflitos de nomes de atributos  
- A discussão a seguir baseia-se nas tabelas `CustOrder` e `CustOrderDetail`. Para testar os exemplos a seguir, crie essas tabelas e adicione seus próprios dados de exemplo:  
+## <a name="attribute-name-clashes"></a>Conflitos de nomes de atributos  
+ A discussão a seguir baseia-se nas tabelas `CustOrder` e `CustOrderDetail` . Para testar os exemplos a seguir, crie essas tabelas e adicione seus próprios dados de exemplo:  
   
 ```  
 CREATE TABLE CustOrder (OrderID int primary key, CustomerID int)  
@@ -191,7 +195,7 @@ where  CustOrder.OrderID = CustOrderDetail.OrderID
 FOR XML RAW, XMLSCHEMA, ELEMENTS  
 ```  
   
- Este é o resultado. Observe que no esquema XSD embutido, o elemento OrderID está definido duas vezes. Uma das declarações tem minOccurs definido como 0, que corresponde ao OrderID da tabela CustOrderDetail, e a segunda é mapeada para a coluna de chave primária OrderID da tabela `CustOrder`, na qual, por padrão, minOccurs é 1.  
+ Este é o resultado. Observe que no esquema XSD embutido, o elemento OrderID está definido duas vezes. Uma das declarações tem minOccurs definido como 0, que corresponde ao OrderID da tabela CustOrderDetail, e a segunda é mapeada para a coluna de chave primária OrderID da tabela `CustOrder` , na qual, por padrão, minOccurs é 1.  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -217,10 +221,10 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
   
  `</xsd:schema>`  
   
-## Conflitos de nomes de elementos  
+## <a name="element-name-clashes"></a>Conflitos de nomes de elementos  
  Em FOR XML, o mesmo nome pode ser usado para indicar dois subelementos. Por exemplo, a consulta a seguir recupera valores de ListPrice e DealerPrice de produtos, mas a consulta especifica o mesmo alias, Price, para essas duas colunas. Portanto o conjunto de linhas resultante terá duas colunas com o mesmo nome.  
   
-### Caso 1: Os dois subelementos são colunas não chave do mesmo tipo e podem ser NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Caso 1: Os dois subelementos são colunas não chave do mesmo tipo e podem ser NULL  
  Na consulta seguinte, os dois subelementos são colunas não chave do mesmo tipo e podem ser NULL.  
   
 ```  
@@ -312,7 +316,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### Caso 2: Uma coluna de chave e uma de não chave do mesmo tipo  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Caso 2: Uma coluna de chave e uma de não chave do mesmo tipo  
  A consulta a seguir ilustra uma coluna de chave e uma de não chave do mesmo tipo.  
   
 ```  
@@ -390,7 +394,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Observe que, no esquema XSD embutido, o elemento <`Col`> correspondente a Col2 tem minOccurs definido como 0.  
   
-### Caso 3: Os dois elementos de tipos diferentes e colunas correspondentes podem ser NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Caso 3: Os dois elementos de tipos diferentes e colunas correspondentes podem ser NULL  
  A consulta seguinte é especificada para a tabela de exemplo mostrada no caso 2:  
   
 ```  

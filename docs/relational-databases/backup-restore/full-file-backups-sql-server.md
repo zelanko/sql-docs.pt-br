@@ -1,31 +1,35 @@
 ---
-title: "Backups completos de arquivos (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "backups completos [SQL Server]"
-  - "fazendo backup [SQL Server], arquivos ou grupos de arquivos"
-  - "backups [SQL Server], arquivos ou grupos de arquivos"
-  - "modelo de recuperação completa [SQL Server], backups completos de arquivos"
-  - "backups de arquivo (SQL Server), completos"
-  - "arquivos [SQL Server], fazendo backup"
-  - "grupo de arquivos [SQL Server], fazendo backup"
-  - "backups de arquivos [SQL Server]"
+title: Backups completos de arquivos (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full backups [SQL Server]
+- backing up [SQL Server], files or filegroups
+- backups [SQL Server], files or filegroups
+- full recovery model [SQL Server], full file backups
+- file backups [SQL Server], full
+- files [SQL Server], backing up
+- filegroups [SQL Server], backing up
+- file backups [SQL Server]
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 62
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10cdcff6b30fc1c71943cca5c0675473ea81d0ae
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backups completos de arquivos (SQL Server)
+# <a name="full-file-backups-sql-server"></a>Backups completos de arquivos (SQL Server)
   Este tópico é relevante para bancos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contêm vários arquivos ou grupos de arquivos.  
   
  Pode ser feito backup dos arquivos em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e restaurá-los individualmente. Além disso, você pode especificar um grupo de arquivos inteiro em vez de especificar cada arquivo constituinte separadamente. Note que, se qualquer arquivo de um grupo de arquivos estiver offline (por exemplo, porque o arquivo está sendo restaurado), o grupo de arquivos inteiro ficará offline e não poderá ter backup.  
@@ -72,10 +76,10 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  Arquivos individuais de um backup de banco de dados podem ser restaurados; porém, localizar e restaurar um arquivo leva mais tempo a partir de um backup de banco de dados do que a partir de um backup de arquivo.  
   
-### Backups de arquivos e o modelo de recuperação simples  
+### <a name="file-backups-and-the-simple-recovery-model"></a>Backups de arquivos e o modelo de recuperação simples  
  No modelo de recuperação simples, o backup deve ser feito em todos os arquivos de leitura/gravação juntos. Isso assegura que o banco de dados possa ser restaurado até um point-in-time consistente. Em vez de especificar cada arquivo ou grupo de arquivos de leitura/gravação individualmente, use a opção de READ_WRITE_FILEGROUPS. Esta opção efetua backup de todos os grupos de arquivos de leitura/gravação no banco de dados. Um backup que é criado especificando READ_WRITE_FILEGROUPS é conhecido como um backup parcial. Para obter mais informações, veja [Backups parciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
-### Backups de arquivos e o modelo de recuperação completa  
+### <a name="file-backups-and-the-full-recovery-model"></a>Backups de arquivos e o modelo de recuperação completa  
  No modelo de recuperação completa, você deve fazer backup de log de transações, independente do restante de sua estratégia de backup. Um conjunto inteiro de backups completos de arquivos junto com backups de log suficientes para abranger todos os backups de arquivos desde o início do primeiro backup de arquivos, é equivalente a um backup de banco de dados completo.  
   
  A restauração de um banco de dados com o uso de apenas um arquivo e backups de log pode ser complexa. Por isso, se for possível, é uma prática recomendada executar um backup de banco de dados completo e iniciar os backups de log antes do primeiro backup de arquivo. A ilustração a seguir mostra uma estratégia na qual um backup de banco de dados completo é feito (em t1) logo após o banco de dados ser criado (em t0). Este primeiro backup de banco de dados permite backups de log de transações no início. Os backups de log de transações são programados para ocorrer em intervalos definidos. Os backups de arquivos ocorrem no intervalo que melhor corresponder às necessidades empresariais do banco de dados. Esta ilustração exibe cada um dos quatro grupos de arquivos com backup feito um de cada vez. A ordem na qual é feito backup (A, C, B, A) reflete as necessidades empresariais do banco de dados.  
@@ -95,7 +99,7 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  Backups de arquivo não são suportados pelo Assistente de plano de manutenção.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Backup e restauração: interoperabilidade e coexistência &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   

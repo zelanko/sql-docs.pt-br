@@ -1,29 +1,33 @@
 ---
-title: "Instant&#226;neos compactados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "instantâneos [replicação do SQL Server], compactados"
-  - "replicação de instantâneo [SQL Server], instantâneos compactados"
-  - "instantâneos compactados [replicação do SQL Server]"
+title: "Instantâneos compactados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshots [SQL Server replication], compressed
+- snapshot replication [SQL Server], compressed snapshots
+- compressed snapshots [SQL Server replication]
 ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fceb41e32cbc4a2dbf779cb95827fef639341bea
+ms.lasthandoff: 04/11/2017
+
 ---
-# Instant&#226;neos compactados
-  A compactação de arquivos de instantâneo é apropriada quando se está transferindo instantâneos por uma rede lenta ou salvando-os em mídia removível e um instantâneo não compactado é grande demais para a mídia.  A compactação de arquivos de instantâneo é útil nessas situações, mas a compactação aumenta o tempo para gerar e aplicar o instantâneo.  
+# <a name="compressed-snapshots"></a>Instantâneos compactados
+  A compactação de arquivos de instantâneo é apropriada quando se está transferindo instantâneos por uma rede lenta ou salvando-os em mídia removível e um instantâneo não compactado é grande demais para a mídia. A compactação de arquivos de instantâneo é útil nessas situações, mas a compactação aumenta o tempo para gerar e aplicar o instantâneo.  
   
- Arquivos de instantâneo compactados são gravados no formato de arquivo CAB [!INCLUDE[msCoName](../../includes/msconame-md.md)], capaz de compactar arquivos de 2 GB ou menos (se os arquivos de instantâneo forem maiores do que 2GB, eles não podem ser compactados). Para compactar arquivos, eles precisam ser gravados em uma pasta de instantâneo alternativa (arquivos gravados na pasta de instantâneo padrão não podem ser compactados). Para obter mais informações sobre pastas de instantâneo alternativas, consulte [locais de pasta de instantâneo alternativo](../../relational-databases/replication/alternate-snapshot-folder-locations.md).  
+ Arquivos de instantâneo compactados são gravados no formato de arquivo CAB [!INCLUDE[msCoName](../../includes/msconame-md.md)] , capaz de compactar arquivos de 2 GB ou menos (se os arquivos de instantâneo forem maiores do que 2GB, eles não podem ser compactados). Para compactar arquivos, eles precisam ser gravados em uma pasta de instantâneo alternativa (arquivos gravados na pasta de instantâneo padrão não podem ser compactados). Para obter mais informações sobre pastas de instantâneo alternativos, consulte [Locais da pasta de instantâneos alternativos](../../relational-databases/replication/alternate-snapshot-folder-locations.md).  
   
  Arquivos são descompactados no local onde o Distribuition Agent ou Agente de Mesclagem são executados; assinaturas pull são geralmente usadas com instantâneos compactados para que os arquivos sejam descompactados no Assinante. Quando o Assinante recebe um arquivo compactado, o arquivo é inicialmente gravado em um local temporário. Depois que o arquivo compactado é copiado para o Assinante, os arquivos de instantâneo no arquivo compactado são descompactados, em ordem, um arquivo de cada vez pelo utilitário CAB. O espaço exigido no Assinante é o tamanho do arquivo compactado mais o arquivo não comprimido maior.  
   
@@ -32,12 +36,12 @@ caps.handback.revision: 34
   
  **Para compactar e entregar arquivos de instantâneo**  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Compactar arquivos de instantâneo e 40; SQL Server Management Studio e 41;](../../relational-databases/replication/publish/compress-snapshot-files-sql-server-management-studio.md)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Compactar arquivos de instantâneo &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/publish/compress-snapshot-files-sql-server-management-studio.md)  
   
--   Replicação [!INCLUDE[tsql](../../includes/tsql-md.md)] programação: [40; & Configurar propriedades de instantâneo Programação Transact-SQL de replicação e 41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
+-   Programação [!INCLUDE[tsql](../../includes/tsql-md.md)] de replicação: [Configurar propriedades de instantâneo &#40;Programação Transact-SQL de replicação&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Inicializar uma assinatura com um instantâneo](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Opções de instantâneo](../../relational-databases/replication/snapshot-options.md)  
+ [Snapshot Options](../../relational-databases/replication/snapshot-options.md)  
   
   

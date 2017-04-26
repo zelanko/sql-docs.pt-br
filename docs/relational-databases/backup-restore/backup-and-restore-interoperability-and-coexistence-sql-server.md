@@ -1,28 +1,32 @@
 ---
-title: "Backup e restaura&#231;&#227;o: interoperabilidade e coexist&#234;ncia (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restaurações de arquivos [SQL Server], recursos relacionados"
-  - "restaurando [SQL Server], arquivos"
-  - "restaurando arquivos [SQL Server], recursos relacionados"
-  - "backups [SQL Server], arquivos ou grupos de arquivos"
-  - "backups de arquivo [SQL Server], recursos relacionados"
+title: "Backup e restauração: interoperabilidade e coexistência (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file restores [SQL Server], related features
+- restoring [SQL Server], files
+- restoring files [SQL Server], related features
+- backups [SQL Server], files or filegroups
+- file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aadb21aaaf4d71cd4a22c3642d2e9a02db7008b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup e restaura&#231;&#227;o: interoperabilidade e coexist&#234;ncia (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e restauração: interoperabilidade e coexistência (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve considerações de backup e restauração para vários recursos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Estes recursos incluem: restauração de arquivo e inicialização de banco de dados; restauração online e índices desabilitados; espelhamento de banco de dados; restauração por etapas e índices de texto completo.  
@@ -71,12 +75,12 @@ caps.handback.revision: 45
 > [!NOTE]  
 >  Para distribuir cópias de um subconjunto dos grupos de arquivos em um banco de dados, use a replicação: replique somente os objetos nos grupos de arquivos que você quer copiar em outros servidores. Para obter mais informações sobre a replicação transacional, veja [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).  
   
-### Criando o banco de dados espelho  
+### <a name="creating-the-mirror-database"></a>Criando o banco de dados espelho  
  O banco de dados espelho é criado pela restauração, WITH NORECOVERY, de backups do banco de dados principal no servidor espelho. A restauração deve manter o mesmo nome do banco de dados. Para obter mais informações, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
  Você pode criar o banco de dados espelho usando uma sequência de restauração por etapas, onde houver suporte. Porém, você não pode iniciar o espelhamento enquanto não restaurar todos os grupos de arquivos e, normalmente, os backups de log restaurados para trazer o banco de dados espelho o mais próximo possível do banco de dados principal. Para obter mais informações, veja [Restaurações por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
-### Restrições de backup e restauração durante o espelhamento  
+### <a name="restrictions-on-backup-and-restore-during-mirroring"></a>Restrições de backup e restauração durante o espelhamento  
  Quando a sessão de espelhamento de banco de dados está ativa, as seguintes restrições são aplicadas:  
   
 -   Não é permitido restaurar ou fazer backup do banco de dados espelho.  
@@ -93,7 +97,7 @@ caps.handback.revision: 45
 > [!NOTE]  
 >  Para exibir a ID do grupo de arquivos que contém um índice de texto completo, selecione a coluna data_space_id de [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
-### Índices de texto completo e tabelas em grupos de arquivos separados  
+### <a name="full-text-indexes-and-tables-in-separate-filegroups"></a>Índices de texto completo e tabelas em grupos de arquivos separados  
  Se um índice de texto completo residir em um grupo de arquivos separado de todos os dados da tabela associada, o comportamento da restauração por etapas dependerá de qual dos grupos de arquivos é restaurado e colocado online primeiro:  
   
 -   Se o grupo de arquivos que contém o índice de texto completo for restaurado e colocado online antes dos grupos de arquivos que contêm os dados da tabela associada, a pesquisa de texto completo funcionará normalmente assim que o índice de texto completo estiver online.  
@@ -130,9 +134,10 @@ caps.handback.revision: 45
   
 -   [Fazer backup e restaurar índices e catálogos de texto completo](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Fazer backup e restaurar bancos de dados replicados](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
 [Secundárias ativas: Backup em réplicas secundárias \(Grupos de Disponibilidade AlwaysOn\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   
+

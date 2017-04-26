@@ -1,25 +1,29 @@
 ---
-title: "Li&#231;&#227;o 1: Criar uma pol&#237;tica de acesso armazenado e uma assinatura de acesso compartilhado em um cont&#234;iner do Azure | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lição 1: Criar uma política de acesso armazenado e uma assinatura de acesso compartilhado | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f2c8af4701b9a01ee21613fe7e093a89f1d8f990
+ms.lasthandoff: 04/11/2017
+
 ---
-# Li&#231;&#227;o 1: Criar uma pol&#237;tica de acesso armazenado e uma assinatura de acesso compartilhado em um cont&#234;iner do Azure
+# <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>Lição 1: Criar uma política de acesso armazenado e uma assinatura de acesso compartilhado
 Nesta lição, você aprenderá a usar um script do [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) para criar uma assinatura de acesso compartilhado em um contêiner de blobs do Azure usando uma política de acesso armazenado.  
   
 > [!NOTE]  
@@ -57,7 +61,7 @@ Para criar uma política no contêiner e gerar uma chave SAS (Assinatura de Aces
 2.  Edite e execute o script a seguir.  
   
     ```  
-    <#   
+    \<#   
     This script uses the Azure Resource model and creates a new ARM storage account.  
     Modify this script to use an existing ARM or classic storage account   
     using the instructions in comments within this script  
@@ -70,7 +74,7 @@ Para criar uma política no contêiner e gerar uma chave SAS (Assinatura de Aces
     $containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  
     $policyName = $prefixName + 'policy' # the name of the SAS policy  
   
-    <#   
+    \<#   
     Using Azure Resource Manager deployment model  
     Comment out this entire section and use the classic storage account name to use an existing classic storage account  
     #>  
@@ -96,7 +100,7 @@ Para criar uma política no contêiner e gerar uma chave SAS (Assinatura de Aces
     # Create a new storage account context using an ARM storage account  
     $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value 
   
-    <#  
+    \<#  
     Using the Classic deployment model  
     Use the following four lines to use an existing classic storage account  
     #>  
@@ -149,3 +153,5 @@ Para criar uma política no contêiner e gerar uma chave SAS (Assinatura de Aces
   
   
   
+
+

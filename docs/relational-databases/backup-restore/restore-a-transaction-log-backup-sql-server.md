@@ -1,31 +1,35 @@
 ---
-title: "Restaurar um backup de log de transa&#231;&#245;es (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restoretlog.general.f1"
-  - "sql13.swb.restoretlog.options.f1"
-helpviewer_keywords: 
-  - "log de restauração"
-  - "fazendo backup de logs de transações [SQL Server], restaurando"
-  - "backups de logs de transação [SQL Server], restaurando"
-  - "restaurando logs de transações [SQL Server], restaurando backups"
-  - "restaurações do log de transações [SQL Server], SQL Server Management Studio"
+title: "Restaurar um backup de log de transações (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restoretlog.general.f1
+- sql13.swb.restoretlog.options.f1
+helpviewer_keywords:
+- restore log
+- backing up transaction logs [SQL Server], restoring
+- transaction log backups [SQL Server], restoring
+- restoring transaction logs [SQL Server], restoring backups
+- transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58f0b1ab65e812e778d630a2a95db8539e1b47eb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar um backup de log de transa&#231;&#245;es (SQL Server)
+# <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar um backup de log de transações (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como restaurar um backup de log de transação no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -68,13 +72,13 @@ caps.handback.revision: 36
 > [!WARNING]  
 >  O processo normal de uma restauração é selecionar os backups de log na caixa de diálogo **Restaurar Banco de Dados** junto com os dados e backups diferenciais.  
   
-#### Para restaurar um backup de log de transações  
+#### <a name="to-restore-a-transaction-log-backup"></a>Para restaurar um backup de log de transações  
   
 1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
 2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
   
-3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**, **Restaurar** e clique em **Log de Transações**, o que abre a caixa de diálogo **Restaurar Log de Transações**.  
+3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**, **Restaurar**e clique em **Log de Transações**, o que abre a caixa de diálogo **Restaurar Log de Transações** .  
   
     > [!NOTE]  
     >  Se a opção **Log de Transações** estiver acinzentada, talvez seja necessário restaurar um backup completo ou diferencial primeiro. Use a caixa de diálogo **Backup de banco de dados** .  
@@ -89,7 +93,7 @@ caps.handback.revision: 36
   
     -   **Do arquivo ou fita**  
   
-         Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup**. Na caixa **Tipo de mídia de backup** , selecione um dos tipos de dispositivo listados. Para selecionar um ou mais dispositivos da caixa **Mídia de backup** , clique em **Adicionar**.  
+         Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Na caixa **Tipo de mídia de backup** , selecione um dos tipos de dispositivo listados. Para selecionar um ou mais dispositivos da caixa **Mídia de backup** , clique em **Adicionar**.  
   
          Após adicionar os dispositivos desejados à caixa de listagem **Mídia de backup** , clique em **OK** para voltar à página **Geral** .  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 36
     |------------|-----------|  
     |**Restaurar**|Caixas de seleção selecionadas indicam os conjuntos de backup a serem restaurados.|  
     |**Nome**|Nome do conjunto de backup.|  
-    |**Componente**|Componente com backup: **Banco de Dados**, **Arquivo** ou \<blank> (para logs de transações).|  
+    |**Componente**|Componente com backup: **Banco de Dados**, **Arquivo** ou \<em branco> (para logs de transações).|  
     |**Banco de Dados**|Nome do banco de dados envolvido na operação de backup.|  
     |**Data de Início**|A data e hora do início da operação de backup, apresentadas na configuração regional do cliente.|  
     |**Data de Conclusão**|Data e hora de término da operação de backup, apresentadas na configuração regional do cliente.|  
@@ -119,7 +123,7 @@ caps.handback.revision: 36
   
     -   **Point-in-time**  
   
-         Retenha o padrão (**Mais recente possível**) ou selecione uma data e hora específicas clicando no botão Procurar, que abre a caixa de diálogo **Recuperação Pontual**.  
+         Retenha o padrão (**Mais recente possível**) ou selecione uma data e hora específicas clicando no botão Procurar, que abre a caixa de diálogo **Recuperação Pontual** .  
   
     -   **Transação marcada**  
   
@@ -129,11 +133,11 @@ caps.handback.revision: 36
   
          A tabela a seguir lista os cabeçalhos de coluna da grade e descreve seus valores.  
   
-        |Cabeçalho|Valor|  
+        |Cabeçalho|Value|  
         |------------|-----------|  
-        |\<blank>|Exibe uma caixa de seleção para selecionar a marca.|  
+        |\<em branco>|Exibe uma caixa de seleção para selecionar a marca.|  
         |**Transaction Mark**|Nome da transação marcada especificado pelo usuário quando a transação foi confirmada.|  
-        |**Data**|Data e hora de confirmação da transação. A data e hora da transação são exibidas como registradas na tabela **msdbgmarkhistory**, não a data e hora do computador cliente.|  
+        |**Data**|Data e hora de confirmação da transação. A data e hora da transação são exibidas como registradas na tabela **msdbgmarkhistory** , não a data e hora do computador cliente.|  
         |**Descrição**|Descrição da transação marcada especificada pelo usuário quando a transação foi confirmada (se houver).|  
         |**LSN**|Número de sequência de log da transação marcada.|  
         |**Banco de dados**|Nome do banco de dados em que a transação marcada foi confirmada.|  
@@ -147,9 +151,9 @@ caps.handback.revision: 36
   
          Preserva as configurações de replicação ao restaurar um banco de dados publicado em um servidor diferente daquele onde o banco de dados foi criado.  
   
-         Essa opção só está disponível com a opção **Deixar o banco de dados pronto para uso revertendo transações não confirmadas...** (descrita adiante), que é equivalente a restaurar um backup com a opção **RECOVERY**.  
+         Essa opção só está disponível com a opção **Deixar o banco de dados pronto para uso revertendo transações não confirmadas...** (descrita adiante), que é equivalente a restaurar um backup com a opção **RECOVERY** .  
   
-         Marcar essa opção equivale a usar a opção **KEEP_REPLICATION** em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE**.  
+         Marcar essa opção equivale a usar a opção **KEEP_REPLICATION** em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** .  
   
     -   **Perguntar antes de restaurar cada backup**  
   
@@ -161,9 +165,9 @@ caps.handback.revision: 36
   
     -   **Acesso restrito ao banco de dados restaurado (WITH RESTRICTED_USER)**  
   
-         Disponibiliza o banco de dados restaurado apenas para os membros do **db_owner**, **dbcreator** ou **sysadmin**.  
+         Disponibiliza o banco de dados restaurado apenas para os membros do **db_owner**, **dbcreator**ou **sysadmin**.  
   
-         Marcar essa opção é sinônimo de usar a opção **RESTRICTED_USER** em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE**.  
+         Marcar essa opção é sinônimo de usar a opção **RESTRICTED_USER** em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** .  
   
 10. Para as opções **Estado de recuperação** , especifique o estado do banco de dados após a operação de restauração.  
   
@@ -173,7 +177,7 @@ caps.handback.revision: 36
   
          Só escolha essa opção se você não tiver nenhum arquivo de log que queira restaurar.  
   
-    -   **Deixe o banco de dados não operacional e não reverter as transações não confirmadas. Os logs de transações adicionais podem ser restaurados. (RESTORE WITH NORECOVERY)**  
+    -   **Deixe o banco de dados não operacional e não reverta as transações não confirmadas. Os logs de transações adicionais podem ser restaurados. (RESTORE WITH NORECOVERY)**  
   
          Deixa o banco de dados não recuperado, no estado **RESTORING** . Essa opção equivale a usar a opção **NORECOVERY** em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** .  
   
@@ -195,7 +199,7 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  Nós recomendamos que você sempre especifique explicite WITH NORECOVERY ou WITH RECOVERY em toda instrução RESTORE para eliminar a ambiguidade. Isso é particularmente importante ao escrever scripts.  
   
-#### Para restaurar um backup de log de transações  
+#### <a name="to-restore-a-transaction-log-backup"></a>Para restaurar um backup de log de transações  
   
 1.  Execute a instrução RESTORE para aplicar o backup de log de transações, especificando o seguinte:  
   
@@ -242,7 +246,7 @@ caps.handback.revision: 36
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
-#### A. Aplicando um único backup de log de transações  
+#### <a name="a-applying-a-single-transaction-log-backup"></a>A. Aplicando um único backup de log de transações  
  O exemplo seguinte inicia restaurando o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] usando um backup de banco de dados completo que reside em um dispositivo de backup chamado `AdventureWorks2012_1`. O exemplo aplica então o primeiro backup de log de transações que reside em um dispositivo de backup chamado `AdventureWorks2012_log`. Por fim, o exemplo recupera o banco de dados.  
   
 ```tsql  
@@ -260,7 +264,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### B. Aplicando múltiplos backups de log de transações  
+#### <a name="b-applying-multiple-transaction-log-backups"></a>B. Aplicando múltiplos backups de log de transações  
  O exemplo seguinte inicia restaurando o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] usando um backup de banco de dados completo que reside em um dispositivo de backup chamado `AdventureWorks2012_1`. O exemplo aplica então, um por um, os três primeiros backups de log de transações que residem em um dispositivo de backup chamado `AdventureWorks2012_log`. Por fim, o exemplo recupera o banco de dados.  
   
 ```tsql  
@@ -294,14 +298,14 @@ GO
   
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
--   [Restaurar um banco de dados até o ponto de falha no modelo de recuperação completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [Restaurar um banco de dados até o ponto de falha no modelo de recuperação completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   [Restaurar um banco de dados para uma transação marcada &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## Consulte também  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Consulte também  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   
   

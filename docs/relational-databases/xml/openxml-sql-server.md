@@ -1,56 +1,60 @@
 ---
-title: "OPENXML (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ColPattern [XML no SQL Server]"
-  - "Instrução OPENXML, sobre a instrução OPENXML"
-  - "gravando XML, instrução OPENXML"
-  - "instrução OPENXML, consultando XML"
-  - "mapeamento centrado em atributo"
-  - "instrução SELECT [SQL Server], palavra-chave OPENXML"
-  - "padrões de coluna [XML no SQL Server]"
-  - "padrões de linha [XML no SQL Server]"
-  - "rowpattern [XML no SQL Server]"
-  - "consultas [XML no SQL Server], instrução OPENXML"
-  - "XML [SQL Server], instrução OPENXML"
-  - "mapeamento centrado em elemento [SQL Server]"
+title: OPENXML (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ColPattern [XML in SQL Server]
+- OPENXML statement, about OPENXML statement
+- writing XML, OPENXML statement
+- OPENXML statement, querying XML
+- attribute-centric mapping
+- SELECT statement [SQL Server], OPENXML keyword
+- column patterns [XML in SQL Server]
+- row patterns [XML in SQL Server]
+- rowpattern [XML in SQL Server]
+- queries [XML in SQL Server], OPENXML statement
+- XML [SQL Server], OPENXML statement
+- element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47cd6e281772125ee7d424425fb6185623c0afc8
+ms.lasthandoff: 04/11/2017
+
 ---
-# OPENXML (SQL Server)
-  OPENXML, uma palavra-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)], fornece um conjunto de linhas em documentos XML na memória que é semelhante a uma tabela ou exibição. OPENXML permite acesso a dados XML ainda que ele seja um conjunto de linhas relacional. Ele faz isso fornecendo uma exibição do conjunto de linhas da representação interna de um documento XML. Os registros no conjunto de linhas podem ser armazenados em tabelas do banco de dados.  
+# <a name="openxml-sql-server"></a>OPENXML (SQL Server)
+  OPENXML, uma palavra-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] , fornece um conjunto de linhas em documentos XML na memória que é semelhante a uma tabela ou exibição. OPENXML permite acesso a dados XML ainda que ele seja um conjunto de linhas relacional. Ele faz isso fornecendo uma exibição do conjunto de linhas da representação interna de um documento XML. Os registros no conjunto de linhas podem ser armazenados em tabelas do banco de dados.  
   
  OPENXML pode ser usado em instruções SELECT e SELECT INTO sempre que provedores de conjunto de linhas, uma exibição ou OPENROWSET podem ser exibidos como a origem. Para obter informações sobre a sintaxe do OPENXML, veja [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   
  Para gravar consultas em relação a um documento XML usando OPENXML, você deve primeiro chamar **sp_xml_preparedocument**. Isso analisa o documento XML e retorna um identificador ao documento analisado pronto para consumo. O documento analisado é uma representação da árvore DOM (Document Object Model) de vários nós no documento XML. O identificador do documento é passado para OPENXML. Em seguida, o OPENXML fornece uma exibição do conjunto de linhas do documento, baseado nos parâmetros passados para ele.  
   
 > [!NOTE]  
-> O  **sp_xml_preparedocument** usa uma versão atualizada pelo SQL do analisador MSXML, Msxmlsql.dll. Essa versão do analisador MSXML foi criada para oferecer suporte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e permanecer para compatível com o MSXML versão 2.6.  
+> O **sp_xml_preparedocument** usa uma versão atualizada pelo SQL do analisador MSXML, Msxmlsql.dll. Essa versão do analisador MSXML foi criada para oferecer suporte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e permanecer para compatível com o MSXML versão 2.6.  
   
  A representação interna de um documento XML deve ser removida da memória chamando o procedimento armazenado do sistema **sp_xml_removedocument** para liberar a memória.  
   
  A ilustração a seguir mostra o processo.  
   
- ![Parsing XML with OPENXML](../../relational-databases/xml/media/xmlsp.gif "Parsing XML with OPENXML")  
+ ![Analisando XML com OPENXML](../../relational-databases/xml/media/xmlsp.gif "Analisando XML com OPENXML")  
   
  Observe que para entender o OPENXML, é necessário estar familiarizado com consultas XPath e ter um entendimento de XML. Para obter mais informações sobre suporte ao XPath no SQL Server, consulte [Usando consultas XPath no SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md).  
   
 > [!NOTE]  
 >  O OpenXML permite que os padrões de linha e coluna do XPath sejam parametrizados como variáveis. Essa parametrização pode resultar em injeções de expressões XPath, se o programador expuser a parametrização a usuários externos (por exemplo, se os parâmetros forem fornecidos por meio de um procedimento armazenado chamado externamente). Para evitar esses problemas potenciais de segurança, é recomendável que os parâmetros de XPath nunca sejam expostos a chamadores externos.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra o uso do `OPENXML` em uma instrução `INSERT` e em uma instrução `SELECT` . O documento XML de exemplo contém elementos `<Customers>` e `<Orders>` .  
   
  Primeiro, o procedimento armazenado `sp_xml_preparedocument` analisa o documento XML. O documento analisado é uma representação em árvore dos nós (elementos, atributos, texto e comentários) no documento XML. `OPENXML` se refere, em seguida, a esse documento XML analisado e fornece uma exibição de conjunto de linhas de todo ou partes desse documento XML. Uma instrução `INSERT` que usa `OPENXML` pode inserir dados desse tipo de conjunto de linhas em uma tabela de banco de dados. Várias chamadas do `OPENXML` podem ser usadas para fornecer uma exibição do conjunto de linhas de várias partes do documento XML e processá-las, por exemplo, inserindo-as em diferentes tabelas. Esse processo também é referido como XML de fragmentação em tabelas.  
@@ -97,7 +101,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  ![Árvore XML analisada](../../relational-databases/xml/media/xmlparsedtree.gif "Árvore XML analisada")  
   
-## Parâmetros de OPENXML  
+## <a name="openxml-parameters"></a>Parâmetros de OPENXML  
  Os parâmetros para OPENXML incluem:  
   
 -   Um identificador de documento XML (*idoc*)  
@@ -108,18 +112,18 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   Mapeamento entre as colunas do conjunto de linhas e os nós XML  
   
-### Identificador do documento XML (idoc)  
- O identificador do documento é retornado pelo procedimento armazenado **sp_xml_preparedocument**.  
+### <a name="xml-document-handle-idoc"></a>Identificador do documento XML (idoc)  
+ O identificador do documento é retornado pelo procedimento armazenado **sp_xml_preparedocument** .  
   
-### Expressão XPath para identificar os nós a serem processados (rowpattern)  
+### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>Expressão XPath para identificar os nós a serem processados (rowpattern)  
  A expressão XPath especificada como *rowpattern* identifica um conjunto de nós no documento XML. Cada nó identificado por *rowpattern* corresponde a uma única linha no conjunto de linhas gerado por OPENXML.  
   
  Os nós identificados pela expressão XPath podem ser qualquer nó XML no documento XML. Se *rowpattern* identificar um conjunto de elementos no documento XML, haverá uma linha no conjunto de linhas para cada nó de elemento identificado. Por exemplo, se *rowpattern* terminar em um atributo, será criada uma linha para cada nó de atributo selecionado por *rowpattern*.  
   
-### Descrição do conjunto de linhas a ser gerado  
+### <a name="description-of-the-rowset-to-be-generated"></a>Descrição do conjunto de linhas a ser gerado  
  Um esquema de conjunto de linhas usado por OPENXML para gerar o conjunto de linhas resultante. É possível usar as seguintes opções ao especificar um esquema de conjunto de linhas.  
   
-#### Usando o formato de tabela de borda  
+#### <a name="using-the-edge-table-format"></a>Usando o formato de tabela de borda  
  Você deve usar o formato de tabela de borda para especificar um esquema de conjunto de linhas. Não use a cláusula WITH.  
   
  Quando isso é feito, o OPENXML retorna um conjunto de linhas no formato de tabela de borda. Isso é referido como uma tabela de borda, porque cada borda na árvore do documento XML analisado é mapeada para uma linha no conjunto de linhas.  
@@ -148,17 +152,17 @@ EXEC sp_xml_removedocument @docHandle;
 |**prev**|**bigint**|É a ID de XML do elemento irmão anterior. Será NULL se não houver nenhum irmão anterior direto.|  
 |**text**|**ntext**|Contém o valor do atributo ou o conteúdo do elemento em formulário de texto. Ou será NULL, se a entrada da tabela de borda não precisar de um valor.|  
   
-#### Usando a cláusula WITH para especificar uma tabela existente  
+#### <a name="using-the-with-clause-to-specify-an-existing-table"></a>Usando a cláusula WITH para especificar uma tabela existente  
  Você pode usar a cláusula WITH para especificar o nome de uma tabela existente. Para isso, basta especificar o nome de uma tabela existente cujo esquema possa ser usado por OPENXML para gerar o conjunto de linhas.  
   
-#### Usando a cláusula WITH para especificar um esquema  
+#### <a name="using-the-with-clause-to-specify-a-schema"></a>Usando a cláusula WITH para especificar um esquema  
  É possível usar a cláusula WITH para especificar um esquema completo. Para especificar o esquema do conjunto de linhas, você especifica os nomes das colunas, seus tipos de dados e seus mapeamentos para o documento XML.  
   
  Você pode especificar o padrão da coluna usando o parâmetro ColPattern na SchemaDeclaration. O padrão da coluna especificado é usado para mapear uma coluna do conjunto de linhas para o nó XML que é identificado pelo padrão da linha e também é usado para determinar o tipo de mapeamento.  
   
  Se ColPattern não for especificado para uma coluna, a coluna do conjunto de linhas será mapeada para o nó XML com o mesmo nome, com base no mapeamento especificado pelo parâmetro *flags* . No entanto se ColPattern for especificado como parte da especificação do esquema na cláusula WITH, ele sobrescreverá o mapeamento especificado no parâmetro *flags* .  
   
-### Mapeamento entre as colunas do conjunto de linhas e os nós XML  
+### <a name="mapping-between-the-rowset-columns-and-the-xml-nodes"></a>Mapeamento entre as colunas do conjunto de linhas e os nós XML  
  Na instrução OPENXML, você pode opcionalmente especificar o tipo de mapeamento, como centrado em atributo ou centrado em elemento, entre as colunas do conjunto de linhas e os nós XML identificados pelo *rowpattern*. Essas informações são usadas na transformação entre os nós XML nós e as colunas do conjunto de linhas.  
   
  É possível especificar o mapeamento de qualquer um dos modos e também especificar os dois:  
@@ -179,23 +183,23 @@ EXEC sp_xml_removedocument @docHandle;
   
     -   Você quer mapear um atributo de metapropriedade para a coluna. Nesse caso, *ColPattern* é usado para identificar a metapropriedade para a qual a coluna do conjunto de linhas é mapeada. Para mais informações sobre como usar as metapropriedades, consulte [Especificar metapropriedades em OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
- Os parâmetros *flags* e *ColPattern* são opcionais. Se nenhum mapeamento for especificado, será pressuposto o mapeamento centrado em atributo. O mapeamento centrado em atributo é o valor padrão do parâmetro *flags*.  
+ Os parâmetros *flags* e *ColPattern* são opcionais. Se nenhum mapeamento for especificado, será pressuposto o mapeamento centrado em atributo. O mapeamento centrado em atributo é o valor padrão do parâmetro *flags* .  
   
-#### Mapeamento centrado em atributo  
- A definição do parâmetro *flags* no OPENXML como 1 (XML_ATTRIBUTES) especifica mapeamento **centrado em atributo**. Se *flags* contiver XML_ ATTRIBUTES, o conjunto de linhas exposto fornecerá ou consumirá linhas nas quais cada elemento XML é representado como uma linha. Os atributos XML são mapeados para os atributos definidos na SchemaDeclaration ou que são fornecidos pelo Tablename da cláusula WITH com base na correspondência de nomes. A correspondência de nomes significa que os atributos XML de um nome específico são armazenados em uma coluna no conjunto de linhas com o mesmo nome.  
+#### <a name="attribute-centric-mapping"></a>mapeamento centrado em atributo  
+ A definição do parâmetro *flags* no OPENXML como 1 (XML_ATTRIBUTES) especifica mapeamento **centrado em atributo** . Se *flags* contiver XML_ ATTRIBUTES, o conjunto de linhas exposto fornecerá ou consumirá linhas nas quais cada elemento XML é representado como uma linha. Os atributos XML são mapeados para os atributos definidos na SchemaDeclaration ou que são fornecidos pelo Tablename da cláusula WITH com base na correspondência de nomes. A correspondência de nomes significa que os atributos XML de um nome específico são armazenados em uma coluna no conjunto de linhas com o mesmo nome.  
   
  Se o nome da coluna for diferente do nome de atributo para o qual ele é mapeado, *ColPattern* deverá ser especificado.  
   
  Se o atributo XML tiver um qualificador de namespace, o nome da coluna no conjunto de linhas também precisará ter o qualificador.  
   
-#### Mapeamento centrado em elemento  
- A definição do parâmetro *flags* no OPENXML como 2 (XML_ELEMENTS) especifica mapeamento **centrado em elemento**. É semelhante ao mapeamento **centrado em atributo**, com exceção das seguintes diferenças:  
+#### <a name="element-centric-mapping"></a>Mapeamento centrado em elemento  
+ A definição do parâmetro *flags* no OPENXML como 2 (XML_ELEMENTS) especifica mapeamento **centrado em elemento** . É semelhante ao mapeamento **centrado em atributo** , com exceção das seguintes diferenças:  
   
 -   A correspondência de nomes do exemplo de mapeamento, uma mapeamento de coluna para um elemento XML com o mesmo nome seleciona os subelementos não complexos, a menos que o padrão em nível de coluna seja especificado. No processo de recuperação, se o subelemento for complexo porque contém subelementos adicionais, a coluna será definida como NULL. Valores de atributos dos subelementos são ignorados então.  
   
 -   Para vários subelementos com o mesmo nome, o primeiro nó é retornado.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   
