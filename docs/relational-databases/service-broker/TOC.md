@@ -1,4 +1,4 @@
-# [Obter informações sobre notificações de eventos](get-information-about-event-notifications.md)
-# [Notificações de eventos](event-notifications.md)
-# [Implementar notificações de evento](implement-event-notifications.md)
-# [Configurar segurança de caixa de diálogo para notificações de evento](configure-dialog-security-for-event-notifications.md)
+# [Visão geral](event-notifications.md)  
+# [Implementar](implement-event-notifications.md)  
+# [Configurar a segurança da caixa diálogo](configure-dialog-security-for-event-notifications.md)  
+# [Obter informações](get-information-about-event-notifications.md)  

@@ -1,28 +1,32 @@
 ---
-title: "Atualizar uma inst&#226;ncia de cluster de failover do SQL Server (instala&#231;&#227;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "atualizando clusters"
-  - "clusters [SQL Server], atualizando"
-  - "clustering de failover [SQL Server], criando clusters"
-  - "clusters [SQL Server], criando"
-  - "clustering de failover [SQL Server], atualizando"
+title: "Atualizar uma instância do cluster de failover do SQL Server (configuração) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- upgrading clusters
+- clusters [SQL Server], upgrading
+- failover clustering [SQL Server], creating clusters
+- clusters [SQL Server], creating
+- failover clustering [SQL Server], upgrading
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 caps.latest.revision: 63
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 50db49a567f4247b1014fba9114aa168b90709f5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Atualizar uma inst&#226;ncia de cluster de failover do SQL Server (instala&#231;&#227;o)
+# <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Atualizar uma instância de cluster de failover do SQL Server (instalação)
   Você pode atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para um cluster de failover do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando a interface de usuário de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou com um prompt de comando.  
   
  Em instalações locais, você deve executar a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura no compartilhamento remoto.  
@@ -31,7 +35,7 @@ caps.handback.revision: 63
   
 ##  <a name="UpgradeSteps"></a> Para atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
-#### Para atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+#### <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>Para atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 1.  Por meio da mídia de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da edição que corresponde à edição que você está atualizando, clique duas vezes em setup.exe na pasta raiz. Talvez você receba uma solicitação para instalar os pré-requisitos, caso eles não tenham sido instalados anteriormente.  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 63
   
 7.  Na página Selecionar Instância, especifique a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a ser atualizada para o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. **Clique em Avançar para continuar**.  
   
-8.  Na página Seleção de Recursos, os recursos a serem atualizados estão pré-selecionados. Uma descrição de cada grupo de componentes é exibida no painel à direita depois que você seleciona o nome do recurso. Lembre-se de que você não pode alterar os recursos a serem atualizados, nem adicionar recursos durante a operação de atualização. Para adicionar recursos a uma instância atualizada do [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] após a conclusão da operação de atualização, veja [Adicionar recursos a uma instância do SQL Server 2016 &#40;Instalação&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+8.  Na página Seleção de Recursos, os recursos a serem atualizados estão pré-selecionados. Uma descrição de cada grupo de componentes é exibida no painel à direita depois que você seleciona o nome do recurso. Lembre-se de que você não pode alterar os recursos a serem atualizados, nem adicionar recursos durante a operação de atualização. Para adicionar recursos a uma instância atualizada do [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] após a conclusão da operação de atualização, veja [Adicionar recursos a uma instância do SQL Server 2016 &#40;instalação&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
   
      Os pré-requisitos dos recursos selecionados são exibidos no painel à direita. A Instalação do SQL Server instalará os pré-requisitos que ainda não estiverem instalados durante a etapa descrita posteriormente neste procedimento. Para economizar tempo, você deve instalar previamente esses pré-requisitos em cada nó.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 63
   
 10. A página Requisitos de Espaço em Disco calcula o espaço em disco necessário para os recursos especificados e compara os requisitos com o espaço em disco disponível no computador onde a Instalação está sendo executada.  
   
-11. Na página Atualização da Pesquisa de Texto Completo, especifique as opções de atualização para os bancos de dados que estão sendo atualizados. Para obter mais informações, veja [Opções de atualização da Pesquisa de Texto Completo](../Topic/Full-Text%20Search%20Upgrade%20Options.md).  
+11. Na página Atualização da Pesquisa de Texto Completo, especifique as opções de atualização para os bancos de dados que estão sendo atualizados. Para obter mais informações, veja [Opções de atualização da Pesquisa de Texto Completo](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
   
 12. Na página **Relatório de Erros** , especifique as informações que deseja enviar à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] que ajudarão a aperfeiçoar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por padrão, as opções de relatório de erros estão habilitadas.  
   
@@ -79,15 +83,15 @@ caps.handback.revision: 63
   
 20. Para concluir o processo de atualização, repita essas etapas em todos os outros nós no cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## Para atualizar um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>Para atualizar um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
-#### Para atualizar para um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (o cluster existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não é um cluster de várias sub-redes).  
+#### <a name="to-upgrade-to-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster-existing-includessnoversionincludesssnoversion-mdmd-cluster-is-a-non-multi-subnet-cluster"></a>Para atualizar para um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (o cluster existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não é um cluster de várias sub-redes).  
   
 1.  Execute as etapas acima para atualizar seu cluster para o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 2.  Adicione um nó a uma sub-rede diferente usando a ação de Instalação AddNode e confirme a dependência do recurso de endereço IP para OR na página **Configuração de rede de cluster** . Para obter mais informações, consulte [Adicionar ou remover nós em um cluster de failover do SQL Server &#40;Instalação&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-#### Para atualizar um cluster de várias sub-redes que use atualmente V-Lan expansível.  
+#### <a name="to-upgrade-a-multi-subnet-cluster-currently-using-stretch-v-lan"></a>Para atualizar um cluster de várias sub-redes que use atualmente V-Lan expansível.  
   
 1.  Execute as etapas acima para atualizar seu cluster para o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
@@ -95,18 +99,19 @@ caps.handback.revision: 63
   
 3.  Com a ferramenta de gerenciamento de Cluster de Failover do Windows, adicione um novo endereço IP à nova sub-rede e defina a dependência do recurso de endereço IP como OR.  
   
-## Próximas etapas  
+## <a name="next-steps"></a>Próximas etapas  
  Depois de atualizar para o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], conclua as seguintes tarefas:  
   
 -   [Concluir a atualização do mecanismo de banco de dados](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   
 -   [Alterar o modo de compatibilidade do banco de dados e usar o repositório de consultas](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)  
   
--   [Aproveitar os Novos Recursos do SQL Server 2016](../Topic/Take%20Advantage%20of%20New%20SQL%20Server%202016%20Features.md)  
+-   [Aproveitar os Novos Recursos do SQL Server 2016](http://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Atualizar uma instância de cluster de failover do SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)   
  [Exibir e ler arquivos de log da Instalação do SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Adicionar recursos a uma instância do SQL Server 2016 &#40;instalação&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  
   
   
+

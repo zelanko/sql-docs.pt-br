@@ -1,27 +1,30 @@
 ---
-title: "Habilitar o Stretch Database para um banco de dados | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Stretch Database, habilitando o banco de dados"
-  - "habilitando o banco de dados para Stretch Database"
+title: Habilitar o Stretch Database para um banco de dados | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stretch Database, enabling database
+- enabling database for Stretch Database
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 69
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 15d9caa3c474d5cbe2e16e158e6f2fcfe7959ed6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Habilitar o Stretch Database para um banco de dados
+# <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Para configurar um banco de dados para o Stretch Database, selecione **Tarefas | Stretch | Habilitar** para um banco de dados no SQL Server Management Studio a fim de abrir o assistente **Habilitar Banco de Dados para Stretch**. Você também pode usar o Transact-SQL de modo a habilitar o Stretch Database para um banco de dados.  
@@ -30,11 +33,12 @@ caps.handback.revision: 69
   
  Habilitar o Stretch Database em um banco de dados ou uma tabela exige permissões db_owner. Habilitar o Stretch Database em um banco de dados também exige permissões CONTROL DATABASE.  
 
- >   [!NOTE] Mais tarde, se você desabilitar o Stretch Database, lembre-se de que desabilitar uma tabela ou um banco de dados do Stretch Database não excluirá o objeto remoto. Se você quiser excluir a tabela remota ou o banco de dados remoto, descarte-o(a) usando o Portal de Gerenciamento do Azure. Os objetos remotos continuam incorrendo em custos do Azure até que você os exclua manualmente. 
+ >   [!NOTE]
+ > Mais tarde, se você desabilitar o Stretch Database, lembre-se de que desabilitar uma tabela ou um banco de dados do Stretch Database não excluirá o objeto remoto. Se você quiser excluir a tabela remota ou o banco de dados remoto, descarte-o(a) usando o Portal de Gerenciamento do Azure. Os objetos remotos continuam incorrendo em custos do Azure até que você os exclua manualmente. 
  
-## Antes de começar  
+## <a name="before-you-get-started"></a>Antes de começar  
   
--   Antes de configurar um banco de dados para o Stretch, é recomendável executar o Supervisor do Stretch Database para identificar bancos de dados e tabelas qualificados para o Stretch. O Supervisor do Stretch Database também identifica problemas de bloqueio. Para obter mais informações, veja [Identificar bancos de dados e tabelas para o Stretch Database executando o supervisor do Stretch Database](../../sql-server/stretch-database/stretch database databases and tables - stretch database advisor.md).  
+-   Antes de configurar um banco de dados para o Stretch, é recomendável executar o Supervisor do Stretch Database para identificar bancos de dados e tabelas qualificados para o Stretch. O Supervisor do Stretch Database também identifica problemas de bloqueio. Para obter mais informações, veja [Identificar bancos de dados e tabelas para o Stretch Database executando o supervisor do Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
   
 -   Leia [Limitações do Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 69
   
 -   Se você não tiver as permissões necessárias, um administrador deverá habilitar a opção manualmente executando **sp_configure** antes de executar o assistente ou um administrador terá que executar o assistente.  
   
- Para habilitar o Stretch Database no servidor manualmente, execute **sp_configure** e ative a opção **remover arquivo de dados**. O exemplo a seguir habilita a opção **remote data archive** definindo seu valor para 1.  
+ Para habilitar o Stretch Database no servidor manualmente, execute **sp_configure** e ative a opção **remover arquivo de dados** . O exemplo a seguir habilita a opção **remote data archive** definindo seu valor para 1.  
   
 ```  
 EXEC sp_configure 'remote data archive' , '1';  
@@ -132,7 +136,7 @@ GO
     GO
     ```  
   
-## Próximas etapas  
+## <a name="next-steps"></a>Próximas etapas  
 -   [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) para habilitar outras tabelas.  
   
 -   [Monitorar e solucionar problemas de migração de dados &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) para ver o status da migração de dados.  
@@ -145,8 +149,9 @@ GO
   
 -   [Restaurar bancos de dados habilitados para Stretch](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
-## Consulte também  
- [Identificar bancos de dados e tabelas para o Stretch Database executando o supervisor do Stretch Database](../../sql-server/stretch-database/stretch database databases and tables - stretch database advisor.md)   
- [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+## <a name="see-also"></a>Consulte também  
+ [Identificar bancos de dados e tabelas para o Stretch Database executando o supervisor do Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
+ [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
   
+

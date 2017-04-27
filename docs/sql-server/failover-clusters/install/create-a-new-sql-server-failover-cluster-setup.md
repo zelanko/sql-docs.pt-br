@@ -1,44 +1,48 @@
 ---
-title: "Criar um novo cluster de failover do SQL Server (instala&#231;&#227;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "adicionando nós"
-  - "clustering de failover [SQL Server], criando clusters"
-  - "nós [Clustering de Failover], removendo"
-  - "nós [Clustering de Failover], adicionando"
-  - "clusters [SQL Server], criando"
-  - "removendo nós"
+title: "Criar um novo cluster de failover do SQL Server (instalação) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding nodes
+- failover clustering [SQL Server], creating clusters
+- nodes [Faillover Clustering], removing
+- nodes [Faillover Clustering], adding
+- clusters [SQL Server], creating
+- removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 caps.latest.revision: 77
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 76
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: c8b4817b3630562c514ac3593abd80f83d7b0284
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar um novo cluster de failover do SQL Server (instala&#231;&#227;o)
+# <a name="create-a-new-sql-server-failover-cluster-setup"></a>Criar um novo cluster de failover do SQL Server (instalação)
   Para instalar ou atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , você deve executar o programa de instalação em cada nó do cluster de failover. Para adicionar um nó a um cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , é necessário executar a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no nó a ser adicionado à instância do cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Não execute a Instalação no nó ativo para gerenciar os outros nós.  
   
  Dependendo de como os nós estão agrupados, o cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será configurado das seguintes maneiras:  
   
 -   Nós na mesma sub-rede ou no mesmo conjunto de sub-redes - A dependência do recurso de endereço IP é definida como AND para esses tipos de configurações.  
   
--   Nós em sub-redes diferentes - A dependência do recurso de endereço IP é definida como OR e essa configuração é chamada uma configuração de cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Clustering de várias sub-redes do SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
+-   Nós em sub-redes diferentes - A dependência do recurso de endereço IP é definida como OR e essa configuração é chamada uma configuração de cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Clustering de várias sub-redes do SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
- As opções a seguir estão disponíveis para a instalação de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ As opções a seguir estão disponíveis para a instalação de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  **Opção 1: Instalação integrada com Adicionar Nó**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consiste nas seguintes etapas:  
   
--   Criar e configurar uma instância de cluster de failover de um único nó do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ao concluir a configuração bem-sucedida de um nó, você tem uma instância de cluster de failover totalmente funcional. Neste ponto, ele não tem alta disponibilidade, porque há apenas um nó no cluster de failover.  
+-   Criar e configurar uma instância de cluster de failover de um único nó do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ao concluir a configuração bem-sucedida de um nó, você tem uma instância de cluster de failover totalmente funcional. Neste ponto, ele não tem alta disponibilidade, porque há apenas um nó no cluster de failover.  
   
 -   Em cada nó a ser adicionado ao cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , execute a Instalação com a funcionalidade Adicionar Nó para adicionar o nó.  
   
@@ -48,11 +52,11 @@ caps.handback.revision: 76
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] A instalação Avançada/Corporativa do cluster de failover consiste nas seguintes etapas:  
   
--   Em cada nó que seja um possível proprietário do novo cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , siga as etapas de instalação de Preparar cluster de failover listadas na seção [Preparar](#prepare). Depois de executar a Preparação de Cluster de Failover em um nó, a Instalação criará o arquivo Configuration.ini que lista todas as configurações especificadas. Nos nós adicionais a serem preparados, em vez de seguir essas etapas, você pode fornecer o arquivo Configuration.ini gerado automaticamente do primeiro nó como uma entrada para a linha de comando de Instalação. Para obter mais informações, veja [Instalar o SQL Server 2016 usando um arquivo de configuração](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md). Essa etapa prepara os nós prontos para serem clusterizados, mas não há nenhuma instância operacional do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no final dessa etapa.  
+-   Em cada nó que seja um possível proprietário do novo cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , siga as etapas de instalação de Preparar cluster de failover listadas na seção [Preparar](#prepare). Depois de executar a Preparação de Cluster de Failover em um nó, a Instalação criará o arquivo Configuration.ini que lista todas as configurações especificadas. Nos nós adicionais a serem preparados, em vez de seguir essas etapas, você pode fornecer o arquivo Configuration.ini gerado automaticamente do primeiro nó como uma entrada para a linha de comando de Instalação. Para obter mais informações, veja [Instalar o SQL Server 2016 usando um arquivo de configuração](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md). Essa etapa prepara os nós prontos para serem clusterizados, mas não há nenhuma instância operacional do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no final dessa etapa.  
   
--   Depois que os nós estiverem preparados para clustering, execute a Instalação em um dos nós preparados. Essa etapa configura e conclui a instância de cluster de failover. No final desta etapa, você terá uma instância de cluster de failover operacional do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e todos os nós que foram preparados anteriormente para essa instância serão os possíveis proprietários do cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recém-criado.  
+-   Depois que os nós estiverem preparados para clustering, execute a Instalação em um dos nós preparados. Essa etapa configura e conclui a instância de cluster de failover. No final desta etapa, você terá uma instância de cluster de failover operacional do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e todos os nós que foram preparados anteriormente para essa instância serão os possíveis proprietários do cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recém-criado.  
   
-     Se você estiver criando nós de clustering em várias sub-redes, a Instalação detectará a união de todas as sub-redes em todos os nós que têm a instância de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] preparada. Você poderá especificar vários endereços IP para as sub-redes. Cada nó preparado deve ser o possível proprietário de pelo menos um endereço IP.  
+     Se você estiver criando nós de clustering em várias sub-redes, a Instalação detectará a união de todas as sub-redes em todos os nós que têm a instância de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] preparada. Você poderá especificar vários endereços IP para as sub-redes. Cada nó preparado deve ser o possível proprietário de pelo menos um endereço IP.  
   
      Se cada um dos endereços IP especificados para as sub-redes tiverem suporte em todos os nós preparados, a dependência será definida como AND.  
   
@@ -67,8 +71,8 @@ caps.handback.revision: 76
   
  Para obter mais informações sobre como instalar o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] em um cluster de failover do Windows, consulte [Como criar clusters do SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
-## Pré-requisitos  
- Antes de começar, examine os seguintes tópicos dos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+## <a name="prerequisites"></a>Pré-requisitos  
+ Antes de começar, examine os seguintes tópicos dos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   [Planejando uma instalação do SQL Server](../../../sql-server/install/planning-a-sql-server-installation.md)  
   
@@ -79,9 +83,9 @@ caps.handback.revision: 76
 -   [Clustering de várias sub-redes do SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
   
 > [!NOTE]  
->  Anote o local da unidade compartilhada no Administrador de Cluster antes de executar a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Você deve ter essas informações para criar um novo cluster de failover.  
+>  Anote o local da unidade compartilhada no Administrador de Cluster antes de executar a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Você deve ter essas informações para criar um novo cluster de failover.  
   
-### Para instalar um novo cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] por meio da Instalação Integrada com Adicionar Nó.  
+### <a name="to-install-a-new-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-integrated-install-with-add-node"></a>Para instalar um novo cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] por meio da Instalação Integrada com Adicionar Nó.  
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, na pasta raiz, clique duas vezes em Setup.exe. Para instalar a partir de um compartilhamento de rede, vá para a pasta raiz do compartilhamento e clique duas vezes em Setup.exe. Para obter mais informações sobre como instalar os pré-requisitos, consulte [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
@@ -95,11 +99,11 @@ caps.handback.revision: 76
   
 6.  O Verificador de Configuração do Sistema verifica o estado do sistema do computador antes da continuação da instalação. Depois de concluir a verificação, clique em **Avançar** para continuar. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes**ou como um relatório HTML clicando em **Exibir relatório detalhado**.  
   
-7.  Na página Chave do Produto, indique se você está instalando uma edição gratuita do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou se tem uma chave de PID para uma versão de produção do produto. Para obter mais informações, consulte [Edições e componentes do SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
+7.  Na página Chave do Produto, indique se você está instalando uma edição gratuita do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ou se tem uma chave de PID para uma versão de produção do produto. Para obter mais informações, consulte [Edições e componentes do SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 8.  Na página Termos de Licença, leia o contrato de licença e marque a caixa de seleção para aceitar os termos e as condições da licença. Para ajudar a aperfeiçoar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você também pode habilitar a opção de uso de recursos e enviar relatórios à [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Clique em **Avançar** para continuar. Para finalizar a Instalação, clique em **Cancelar**.  
   
-9. Na página Seleção de Recursos, selecione os componentes para a instalação. Uma descrição de cada grupo de componentes é exibida no painel à direita depois que você seleciona o nome do recurso. Você pode selecionar qualquer combinação de caixas de seleção, mas apenas o [!INCLUDE[ssDE](../../../includes/ssde-md.md)], o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo de tabela e o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo multidimensional oferecem suporte ao clustering de failover. Outros componentes selecionados serão executados como um recurso autônomo, sem recurso de failover no nó atual em que você está executando a Instalação. Para obter mais informações sobre modos do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], consulte [Determina o Modo de Servidor de uma instância do Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+9. Na página Seleção de Recursos, selecione os componentes para a instalação. Uma descrição de cada grupo de componentes é exibida no painel à direita depois que você seleciona o nome do recurso. Você pode selecionar qualquer combinação de caixas de seleção, mas apenas o [!INCLUDE[ssDE](../../../includes/ssde-md.md)], o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo de tabela e o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo multidimensional oferecem suporte ao clustering de failover. Outros componentes selecionados serão executados como um recurso autônomo, sem recurso de failover no nó atual em que você está executando a Instalação. Para obter mais informações sobre modos do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , consulte [Determina o Modo de Servidor de uma instância do Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
      Os pré-requisitos dos recursos selecionados são exibidos no painel à direita. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] A Instalação instalará os pré-requisitos ainda não instalados na etapa de instalação descrita posteriormente neste procedimento.  
   
@@ -116,27 +120,27 @@ caps.handback.revision: 76
      O caminho especificado para cada uma das opções anteriores deve ser diferente.  
   
     > [!NOTE]  
-    >  Quando você seleciona o recurso Serviços de [!INCLUDE[ssDE](../../../includes/ssde-md.md)], a replicação e a pesquisa de texto completo são selecionadas automaticamente. Data Quality Services (DQS) também é selecionado quando você seleciona o recurso de serviços do [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Se esses sub-recursos forem desmarcados, o recurso Serviços de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] também será desmarcado.  
+    >  Quando você seleciona o recurso Serviços de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , a replicação e a pesquisa de texto completo são selecionadas automaticamente. Data Quality Services (DQS) também é selecionado quando você seleciona o recurso de serviços do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] . Se esses sub-recursos forem desmarcados, o recurso Serviços de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] também será desmarcado.  
   
 10. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] executa mais um conjunto de regras baseadas nos recursos selecionados para validar a configuração.  
   
-11. Na página Configuração da Instância, especifique se deseja instalar uma instância padrão ou uma instância nomeada. Para obter mais informações, consulte [Instance Configuration](../Topic/Instance%20Configuration.md).  
+11. Na página Configuração da Instância, especifique se deseja instalar uma instância padrão ou uma instância nomeada. Para obter mais informações, consulte [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).  
   
      **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Nome da Rede** — Especifique um nome de rede para o novo cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Esse é nome usado para identificar a instância de cluster de failover na rede.  
   
     > [!NOTE]  
-    >  Esse nome é conhecido como o nome virtual do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em versões anteriores de clusters de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+    >  Esse nome é conhecido como o nome virtual do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em versões anteriores de clusters de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
      **ID da Instância** — Por padrão, o nome da instância é usado como a ID da Instância. Isso é usado para identificar os diretórios de instalação e as chaves do Registro da sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esse é o caso para instâncias padrão e instâncias nomeadas. Para uma instância padrão, o nome de instância e o ID da instância seriam MSSQLSERVER. Para usar uma ID de instância não padrão, marque a caixa **ID da Instância** e forneça um valor.  
   
     > [!NOTE]  
-    >  Instâncias autônomas típicas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], com instâncias padrão ou nomeadas, não usam um valor não padrão para a caixa **ID da Instância**.  
+    >  Instâncias autônomas típicas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], com instâncias padrão ou nomeadas, não usam um valor não padrão para a caixa **ID da Instância** .  
   
-     **Diretório raiz da instância**: por padrão, o diretório raiz da instância é C:\Arquivos de Programas\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. Para especificar um diretório raiz não padrão, use o campo fornecido ou clique no botão de reticências para localizar uma pasta de instalação.  
+     **Diretório raiz da instância** : por padrão, o diretório raiz da instância é C:\Arquivos de Programas\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. Para especificar um diretório raiz não padrão, use o campo fornecido ou clique no botão de reticências para localizar uma pasta de instalação.  
   
      **Instâncias e recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] detectados neste computador**: a grade mostra instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que estão no computador em que a Instalação está sendo executada. Se já existir uma instância padrão instalada no computador, instale uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Clique em **Avançar** para continuar.  
   
-12. Use a página Grupo de Recursos de Cluster para especificar o nome do grupo de recursos de cluster onde os recursos do servidor virtual do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] serão localizados. Para especificar o nome do grupo de recursos de cluster do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], há duas opções:  
+12. Use a página Grupo de Recursos de Cluster para especificar o nome do grupo de recursos de cluster onde os recursos do servidor virtual do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] serão localizados. Para especificar o nome do grupo de recursos de cluster do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , há duas opções:  
   
     -   Use a caixa suspensa para especificar um grupo existente a ser usado.  
   
@@ -145,7 +149,7 @@ caps.handback.revision: 76
 13. Na página Seleção de Disco de Cluster, selecione o recurso de disco de cluster compartilhado para seu cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O disco de cluster é o local onde os dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] serão colocados. É possível especificar mais de um disco. A grade Discos compartilhados disponíveis exibe uma lista de discos disponíveis, se cada um deles estiver qualificado como um disco compartilhado, e uma descrição de cada recurso de disco. Clique em **Avançar** para continuar.  
   
     > [!NOTE]  
-    >  A primeira unidade é usada como a unidade padrão para todos os bancos de dados, mas é possível alterá-la nas páginas de configuração do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ou do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+    >  A primeira unidade é usada como a unidade padrão para todos os bancos de dados, mas é possível alterá-la nas páginas de configuração do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ou do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
     >   
     >  Na página da Seleção de Disco de Cluster, você terá a opção de ignorar a seleção de qualquer disco compartilhado se desejar usar fileshare de SMB como uma pasta de dados.  
   
@@ -159,15 +163,15 @@ caps.handback.revision: 76
   
     -   [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] e versões posteriores: SIDs de serviço (IDs de segurança de servidor) são a configuração padrão e recomendada. Não há nenhuma opção para alterar isso para grupos de segurança. Para obter informações sobre a funcionalidade de SIDs no [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], consulte [Configurar contas de serviço e permissões do Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). Isso foi testado na instalação autônoma e em cluster no [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)].  
   
-    -   No [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)], especifique os grupos de domínios para serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Todas as permissões de recurso são controladas por grupos no nível do domínio que incluem contas de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como membros de grupo.  
+    -   No [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)], especifique os grupos de domínios para serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Todas as permissões de recurso são controladas por grupos no nível do domínio que incluem contas de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como membros de grupo.  
   
      Clique em **Avançar** para continuar.  
   
-16. O fluxo de trabalho do restante deste tópico depende dos recursos especificados para a instalação. Talvez você não veja todas as páginas, dependendo de suas seleções ([!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]).  
+16. O fluxo de trabalho do restante deste tópico depende dos recursos especificados para a instalação. Talvez você não veja todas as páginas, dependendo de suas seleções ([!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]e [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]).  
   
-17. Na página Configuração do Servidor — Contas de Serviço, especifique as contas de logon para os serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Os serviços reais configurados nessa página dependem dos recursos selecionados para instalação.  
+17. Na página Configuração do Servidor — Contas de Serviço, especifique as contas de logon para os serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Os serviços reais configurados nessa página dependem dos recursos selecionados para instalação.  
   
-     Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. O tipo de inicialização é definido como manual para todos os serviços com suporte a cluster, inclusive a pesquisa de texto completo e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, e não pode ser alterado durante a instalação. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomenda que você configure contas de serviço individualmente para fornecer privilégios mínimos para cada serviço, em que os serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recebem as permissões mínimas para concluir suas tarefas. Para obter mais informações, consulte [Configuração do servidor — Contas de serviço](../Topic/Server%20Configuration%20-%20Service%20Accounts.md) e [Configurar contas de serviço e permissões do Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. O tipo de inicialização é definido como manual para todos os serviços com suporte a cluster, inclusive a pesquisa de texto completo e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, e não pode ser alterado durante a instalação. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomenda que você configure contas de serviço individualmente para fornecer privilégios mínimos para cada serviço, em que os serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recebem as permissões mínimas para concluir suas tarefas. Para obter mais informações, consulte [Configuração do servidor — Contas de serviço](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) e [Configurar contas de serviço e permissões do Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Para especificar a mesma conta de logon para todas as contas de serviço nessa instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], forneça credenciais nos campos na parte inferior da página.  
   
@@ -175,15 +179,15 @@ caps.handback.revision: 76
   
      Depois de concluir a especificação de informações de logon para serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , clique em **Avançar**.  
   
-18. Use a guia **Configuração do Servidor — Agrupamento** para especificar agrupamentos não padrão para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para obter mais informações, consulte [Configuração do SQL Server – Agrupamento](../Topic/Server%20Configuration%20-%20Collation.md).  
+18. Use a guia **Configuração do Servidor — Agrupamento** para especificar agrupamentos não padrão para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 19. Use a página Configuração do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] — Provisionamento de Conta para especificar o seguinte:  
   
-    -   Modo de Segurança - selecione Autenticação do Windows ou Autenticação de Modo Misto para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se você selecionar Autenticação de Modo Misto, deverá fornecer uma senha forte para a conta interna do administrador de sistema do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+    -   Modo de Segurança - selecione Autenticação do Windows ou Autenticação de Modo Misto para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se você selecionar Autenticação de Modo Misto, deverá fornecer uma senha forte para a conta interna do administrador de sistema do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-         Depois que um dispositivo estabelecer uma conexão com êxito com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o mecanismo de segurança será o mesmo para Autenticação do Windows e Modo Misto. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Configuração do Servidor](../Topic/Database%20Engine%20Configuration%20-%20Server%20Configuration.md).  
+         Depois que um dispositivo estabelecer uma conexão com êxito com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o mecanismo de segurança será o mesmo para Autenticação do Windows e Modo Misto.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administradores: você deve especificar pelo menos um administrador de sistema para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover**e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Configuração do Servidor](../Topic/Database%20Engine%20Configuration%20-%20Server%20Configuration.md).  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administradores: você deve especificar pelo menos um administrador de sistema para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover**e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
      Ao concluir a edição da lista, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Verifique a lista de administradores na caixa de diálogo de configuração. Quando a lista estiver concluída, clique em **Avançar**.  
   
@@ -194,12 +198,10 @@ caps.handback.revision: 76
   
     > [!NOTE]  
     >  Para especificar um servidor de arquivo de protocolo SMB como o Diretório de Dados, defina o **diretório raiz de dados padrão** como o fileshare do formato \\\Servername\ShareName\\...  
+   
+21. Use a página Configuração do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] - FILESTREAM para habilitar FILESTREAM para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Clique em **Avançar** para continuar.  
   
-     Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Diretórios de dados](../Topic/Database%20Engine%20Configuration%20-%20Data%20Directories.md).  
-  
-21. Use a página Configuração do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] - FILESTREAM para habilitar FILESTREAM para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações sobre FILESTREAM, veja [Configuração do Mecanismo de Banco de Dados – Fluxo de arquivos](../Topic/Database%20Engine%20Configuration%20-%20Filestream.md). Clique em **Avançar** para continuar.  
-  
-22. Use a página Configuração do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] — Provisionamento de Conta para especificar usuários ou contas que terão permissões de administrador do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Especifique pelo menos um administrador de sistema para o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover**e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para obter mais informações, consulte [Configuração do Analysis Services - Provisionamento de conta](../Topic/Analysis%20Services%20Configuration%20-%20Account%20Provisioning.md).  
+22. Use a página Configuração do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] — Provisionamento de Conta para especificar usuários ou contas que terão permissões de administrador do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Especifique pelo menos um administrador de sistema para o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover**e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].
   
      Ao concluir a edição da lista, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Verifique a lista de administradores na caixa de diálogo de configuração. Quando a lista estiver concluída, clique em **Avançar**.  
   
@@ -207,13 +209,10 @@ caps.handback.revision: 76
   
     > [!IMPORTANT]  
     >  Se você especificar diretórios de instalação não padrão, verifique se as pastas de instalação são exclusivas para essa instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Nenhum dos diretórios nesta caixa de diálogo deve ser compartilhado com diretórios de outras instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Os diretórios de dados devem estar localizados no disco de cluster compartilhado do cluster de failover.  
-  
-     Para obter mais informações, veja [Configuração do Analysis Services – Diretórios de dados](../Topic/Analysis%20Services%20Configuration%20-%20Data%20Directories.md).  
-  
+   
 24. Use a página Configuração do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para especificar o tipo de instalação do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] a ser criada. Para a instalação de cluster de failover, a opção é definida como instalação Não configurada do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Você deve configurar os serviços do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] depois de concluir a instalação.  
   
-     Para obter mais informações sobre os modos de configuração do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], consulte [Opções de configuração do Reporting Services &#40;SSRS&#41;](../Topic/Reporting%20Services%20Configuration%20Options%20\(SSRS\).md).  
-  
+ 
 25. O Verificador de Configuração do Sistema executa mais um conjunto de regras para validar a configuração do computador com os recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] especificados.  
   
 26. A página Pronto para Instalar mostra uma exibição de árvore das opções de instalação que foram especificadas durante a Instalação. Para continuar, clique em **Instalar**. A Instalação instalará primeiro os pré-requisitos exigidos para os recursos selecionados, seguidos da instalação dos recursos.  
@@ -229,11 +228,11 @@ caps.handback.revision: 76
     > [!NOTE]  
     >  Se você estiver adicionando mais de um nó, poderá usar o arquivo de configuração para implantar as instalações. Para obter mais informações, veja [Instalar o SQL Server 2016 usando um arquivo de configuração](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
     >   
-    >  A edição do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que você está instalando deve corresponder em todos os nós de um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando você adiciona um novo nó a um cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , especifique que a edição corresponde à edição do cluster de failover existente.  
+    >  A edição do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que você está instalando deve corresponder em todos os nós de um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Quando você adiciona um novo nó a um cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , especifique que a edição corresponde à edição do cluster de failover existente.  
   
 ##  <a name="prepare"></a> Preparar  
   
-#### Etapa 1 da instalação avançada/corporativa do cluster de failover: Preparar  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Etapa 1 da instalação avançada/corporativa do cluster de failover: Preparar  
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, na pasta raiz, clique duas vezes em Setup.exe. Para instalar a partir de um compartilhamento de rede, vá para a pasta raiz do compartilhamento e clique duas vezes em Setup.exe. Para obter mais informações sobre como instalar os pré-requisitos, consulte [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md). Talvez você receba uma solicitação para instalar os pré-requisitos, caso eles não tenham sido instalados anteriormente.  
   
@@ -247,39 +246,39 @@ caps.handback.revision: 76
   
 6.  O Verificador de Configuração do Sistema verifica o estado do sistema do computador antes da continuação da instalação. Depois de concluir a verificação, clique em **Avançar** para continuar. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes**ou como um relatório HTML clicando em **Exibir relatório detalhado**.  
   
-7.  Na página de Seleção de Idioma, você pode especificar o idioma da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se estiver instalando em um sistema operacional localizado, e se a mídia de instalação incluir pacotes do idioma inglês e do idioma correspondente ao sistema operacional. Para obter mais informações sobre suporte em qualquer idioma e considerações sobre instalação, veja [Versões de Idiomas Locais no SQL Server](../../../sql-server/install/local-language-versions-in-sql-server.md).  
+7.  Na página de Seleção de Idioma, você pode especificar o idioma da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , se estiver instalando em um sistema operacional localizado, e se a mídia de instalação incluir pacotes do idioma inglês e do idioma correspondente ao sistema operacional. Para obter mais informações sobre suporte em qualquer idioma e considerações sobre instalação, veja [Versões de Idiomas Locais no SQL Server](../../../sql-server/install/local-language-versions-in-sql-server.md).  
   
      Para continuar, clique em **Avançar**.  
   
-8.  Na página Chave do Produto, clique para indicar se você está instalando uma edição gratuita do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou se tem uma chave de PID para uma versão de produção do produto. Para obter mais informações, consulte [Edições e componentes do SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
+8.  Na página Chave do Produto, clique para indicar se você está instalando uma edição gratuita do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ou se tem uma chave de PID para uma versão de produção do produto. Para obter mais informações, consulte [Edições e componentes do SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
     > [!NOTE]  
     >  Você deverá especificar a mesma chave do produto em todos os nós que estiver preparando para o mesmo cluster de failover.  
   
 9. Na página Termos de Licença, leia o contrato de licença e marque a caixa de seleção para aceitar os termos e as condições da licença. Para ajudar a aperfeiçoar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você também pode habilitar a opção de uso de recursos e enviar relatórios à [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Clique em **Avançar** para continuar. Para finalizar a Instalação, clique em **Cancelar**.  
   
-10. Na página Seleção de Recursos, selecione os componentes para a instalação. Uma descrição de cada grupo de componentes é exibida no painel à direita depois que você seleciona o nome do recurso. Você pode selecionar qualquer combinação de caixas de seleção, mas apenas o [!INCLUDE[ssDE](../../../includes/ssde-md.md)], o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo de tabela e o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo multidimensional oferecem suporte ao clustering de failover. Outros componentes selecionados serão executados como um recurso autônomo, sem recurso de failover no nó atual em que você está executando a Instalação. Para obter mais informações sobre modos do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], consulte [Determina o Modo de Servidor de uma instância do Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+10. Na página Seleção de Recursos, selecione os componentes para a instalação. Uma descrição de cada grupo de componentes é exibida no painel à direita depois que você seleciona o nome do recurso. Você pode selecionar qualquer combinação de caixas de seleção, mas apenas o [!INCLUDE[ssDE](../../../includes/ssde-md.md)], o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo de tabela e o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo multidimensional oferecem suporte ao clustering de failover. Outros componentes selecionados serão executados como um recurso autônomo, sem recurso de failover no nó atual em que você está executando a Instalação. Para obter mais informações sobre modos do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , consulte [Determina o Modo de Servidor de uma instância do Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
      Os pré-requisitos dos recursos selecionados são exibidos no painel à direita. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] A Instalação instalará os pré-requisitos ainda não instalados na etapa de instalação descrita posteriormente neste procedimento.  
   
      Você também pode especificar um diretório personalizado para componentes compartilhados por meio do campo na parte inferior desta página. Para alterar o caminho de instalação de componentes compartilhados, atualize o caminho no campo fornecido na parte inferior da caixa de diálogo ou clique no botão de reticências para navegar até um diretório de instalação. O caminho de instalação padrão é C:\Arquivos de Programas\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\.  
   
     > [!NOTE]  
-    >  Quando você seleciona o recurso Serviços de [!INCLUDE[ssDE](../../../includes/ssde-md.md)], a replicação e a pesquisa de texto completo são selecionadas automaticamente. Se esses sub-recursos forem desmarcados, o recurso Serviços de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] também será desmarcado.  
+    >  Quando você seleciona o recurso Serviços de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , a replicação e a pesquisa de texto completo são selecionadas automaticamente. Se esses sub-recursos forem desmarcados, o recurso Serviços de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] também será desmarcado.  
   
-11. Na página Configuração da Instância, especifique se deseja instalar uma instância padrão ou uma instância nomeada. Para obter mais informações, consulte [Instance Configuration](../Topic/Instance%20Configuration.md).  
+11. Na página Configuração da Instância, especifique se deseja instalar uma instância padrão ou uma instância nomeada.
   
      **ID da Instância** — Por padrão, o nome da instância é usado como a ID da Instância. Isso é usado para identificar os diretórios de instalação e as chaves do Registro da sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esse é o caso para instâncias padrão e instâncias nomeadas. Para uma instância padrão, o nome de instância e o ID da instância seriam MSSQLSERVER. Para usar uma ID de instância não padrão, marque a caixa de texto **ID da Instância** e forneça um valor.  
   
     > [!NOTE]  
-    >  As instâncias autônomas típicas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], sejam elas padrão ou nomeadas, não usam um valor não padrão para a caixa de texto **ID da Instância**.  
+    >  As instâncias autônomas típicas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], sejam elas padrão ou nomeadas, não usam um valor não padrão para a caixa de texto **ID da Instância** .  
   
     > [!IMPORTANT]  
     >  Use o mesmo InstanceID para todos os nós que estejam preparados para o cluster de failover  
   
-     **Diretório raiz da instância**: por padrão, o diretório raiz da instância é C:\Arquivos de Programas\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. Para especificar um diretório raiz não padrão, use o campo fornecido ou clique no botão de reticências para localizar uma pasta de instalação.  
+     **Diretório raiz da instância** : por padrão, o diretório raiz da instância é C:\Arquivos de Programas\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. Para especificar um diretório raiz não padrão, use o campo fornecido ou clique no botão de reticências para localizar uma pasta de instalação.  
   
-     **Instâncias instaladas**: a grade mostra as instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que estão no computador em que a Instalação está sendo executada. Se já existir uma instância padrão instalada no computador, instale uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Clique em **Avançar** para continuar.  
+     **Instâncias instaladas** : a grade mostra as instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que estão no computador em que a Instalação está sendo executada. Se já existir uma instância padrão instalada no computador, instale uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Clique em **Avançar** para continuar.  
   
 12. A página Requisitos de Espaço em Disco calcula o espaço em disco necessário para os recursos especificados e compara os requisitos com o espaço em disco disponível no computador onde a Instalação está sendo executada.  
   
@@ -287,7 +286,7 @@ caps.handback.revision: 76
   
     -   [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] e versões posteriores: SIDs de serviço (IDs de segurança de servidor) são a configuração padrão e recomendada. Não há nenhuma opção para alterar isso para grupos de segurança. Para obter informações sobre a funcionalidade de SIDs no [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], consulte [Configurar contas de serviço e permissões do Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). Isso foi testado na instalação autônoma e em cluster no [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)].  
   
-    -   No [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)], especifique os grupos de domínios para serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Todas as permissões de recurso são controladas por grupos no nível do domínio que incluem contas de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como membros de grupo.  
+    -   No [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)], especifique os grupos de domínios para serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Todas as permissões de recurso são controladas por grupos no nível do domínio que incluem contas de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como membros de grupo.  
   
      Clique em **Avançar** para continuar.  
   
@@ -295,7 +294,7 @@ caps.handback.revision: 76
   
 15. Na página Configuração do Servidor — Contas de Serviço, especifique as contas de logon para os serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Os serviços reais configurados nessa página dependem dos recursos selecionados para instalação.  
   
-     Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. O tipo de inicialização é definido como manual para todos os serviços com suporte a cluster, inclusive a pesquisa de texto completo e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, e não pode ser alterado durante a instalação. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomenda que você configure contas de serviço individualmente para fornecer privilégios mínimos para cada serviço, em que os serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recebem as permissões mínimas para concluir suas tarefas. Para obter mais informações, consulte [Configuração do servidor — Contas de serviço](../Topic/Server%20Configuration%20-%20Service%20Accounts.md) e [Configurar contas de serviço e permissões do Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. O tipo de inicialização é definido como manual para todos os serviços com suporte a cluster, inclusive a pesquisa de texto completo e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, e não pode ser alterado durante a instalação. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomenda que você configure contas de serviço individualmente para fornecer privilégios mínimos para cada serviço, em que os serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recebem as permissões mínimas para concluir suas tarefas. Para obter mais informações, consulte [Configurar contas de serviço e permissões do Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Para especificar a mesma conta de logon para todas as contas de serviço nessa instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], forneça credenciais nos campos na parte inferior da página.  
   
@@ -303,14 +302,12 @@ caps.handback.revision: 76
   
      Depois de concluir a especificação de informações de logon para serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , clique em **Avançar**.  
   
-16. Use a guia **Configuração do Servidor — Agrupamento** para especificar agrupamentos não padrão para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para obter mais informações, consulte [Configuração do SQL Server – Agrupamento](../Topic/Server%20Configuration%20-%20Collation.md).  
+16. Use a guia **Configuração do Servidor — Agrupamento** para especificar agrupamentos não padrão para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-17. Use **Configuração de Servidor - Filestream** para habilitar o FILESTREAM para a sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Fluxo de arquivos](../Topic/Database%20Engine%20Configuration%20-%20Filestream.md). Clique em **Avançar** para continuar.  
+17. Use **Configuração de Servidor - Filestream** para habilitar o FILESTREAM para a sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Clique em **Avançar** para continuar.  
   
 18. Use a página Configuração do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para especificar o tipo de instalação do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] a ser criada. Para a instalação de cluster de failover, a opção é definida como instalação Não configurada do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Você deve configurar os serviços do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] depois de concluir a instalação.  
-  
-     Para obter mais informações sobre os modos de configuração do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], consulte [Opções de configuração do Reporting Services &#40;SSRS&#41;](../Topic/Reporting%20Services%20Configuration%20Options%20\(SSRS\).md).  
-  
+   
 19. Na página Relatório de Erros, especifique as informações que você deseja enviar à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] que ajudarão a aperfeiçoar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por padrão, as opções de relatório de erros estão habilitadas.  
   
 20. O Verificador de Configuração do Sistema executa mais um conjunto de regras para validar a configuração do computador com os recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] especificados.  
@@ -325,9 +322,9 @@ caps.handback.revision: 76
   
 24. Repita as etapas anteriores para preparar os outros nós do cluster de failover. Você também pode usar o arquivo de configuração gerado automaticamente para executar a preparação nos outros nós. Para obter mais informações, veja [Instalar o SQL Server 2016 usando um arquivo de configuração](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
   
-## Concluída  
+## <a name="complete"></a>Concluído  
   
-#### Etapa 2 da instalação avançada/corporativa do cluster de failover: Concluir  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Etapa 2 da instalação avançada/corporativa do cluster de failover: Concluir  
   
 1.  Após a preparação de todos os nós, conforme descrito na [etapa de preparação](#prepare), execute a Instalação em um dos nós preparados, de preferência no nó que tem o disco compartilhado. Na página **Avançado** da Central de Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , clique em **Conclusão de cluster avançado**.  
   
@@ -337,14 +334,14 @@ caps.handback.revision: 76
   
 4.  O Verificador de Configuração do Sistema verifica o estado do sistema do computador antes da continuação da instalação. Depois de concluir a verificação, clique em **Avançar** para continuar. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes**ou como um relatório HTML clicando em **Exibir relatório detalhado**.  
   
-5.  Na página de Seleção de Idioma, você pode especificar o idioma da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se estiver instalando em um sistema operacional localizado, e se a mídia de instalação incluir pacotes do idioma inglês e do idioma correspondente ao sistema operacional. Para obter mais informações sobre suporte em qualquer idioma e considerações sobre instalação, veja [Versões de Idiomas Locais no SQL Server](../../../sql-server/install/local-language-versions-in-sql-server.md).  
+5.  Na página de Seleção de Idioma, você pode especificar o idioma da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , se estiver instalando em um sistema operacional localizado, e se a mídia de instalação incluir pacotes do idioma inglês e do idioma correspondente ao sistema operacional. Para obter mais informações sobre suporte em qualquer idioma e considerações sobre instalação, veja [Versões de Idiomas Locais no SQL Server](../../../sql-server/install/local-language-versions-in-sql-server.md).  
   
      Para continuar, clique em **Avançar**.  
   
 6.  Use a página Configuração do nó do cluster para selecionar o nome da instância preparada para clustering e especifique o nome da rede para o novo cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Esse é nome usado para identificar a instância de cluster de failover na rede.  
   
     > [!NOTE]  
-    >  Esse nome é conhecido como o nome virtual do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em versões anteriores de clusters de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+    >  Esse nome é conhecido como o nome virtual do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em versões anteriores de clusters de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 7.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] executa mais um conjunto de regras baseadas nos recursos selecionados para validar a configuração.  
   
@@ -357,7 +354,7 @@ caps.handback.revision: 76
 9. Na página Seleção de Disco de Cluster, selecione o recurso de disco de cluster compartilhado para seu cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O disco de cluster é o local onde os dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] serão colocados. É possível especificar mais de um disco. A grade Discos compartilhados disponíveis exibe uma lista de discos disponíveis, se cada um deles estiver qualificado como um disco compartilhado, e uma descrição de cada recurso de disco. Clique em **Avançar** para continuar.  
   
     > [!NOTE]  
-    >  A primeira unidade é usada como a unidade padrão para todos os bancos de dados, mas é possível alterá-la nas páginas de configuração do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ou do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+    >  A primeira unidade é usada como a unidade padrão para todos os bancos de dados, mas é possível alterá-la nas páginas de configuração do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ou do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 10. Na página Configuração de Rede de Cluster, especifique os recursos de rede para a instância de cluster de failover.  
   
@@ -369,11 +366,11 @@ caps.handback.revision: 76
   
 12. Use a página Configuração do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] — Provisionamento de Conta para especificar o seguinte:  
   
-    -   Modo de Segurança - selecione Autenticação do Windows ou Autenticação de Modo Misto para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se você selecionar Autenticação de Modo Misto, deverá fornecer uma senha forte para a conta interna do administrador de sistema do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+    -   Modo de Segurança - selecione Autenticação do Windows ou Autenticação de Modo Misto para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se você selecionar Autenticação de Modo Misto, deverá fornecer uma senha forte para a conta interna do administrador de sistema do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-         Depois que um dispositivo estabelecer uma conexão com êxito com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o mecanismo de segurança será o mesmo para Autenticação do Windows e Modo Misto. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Configuração do Servidor](../Topic/Database%20Engine%20Configuration%20-%20Server%20Configuration.md).  
+         Depois que um dispositivo estabelecer uma conexão com êxito com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o mecanismo de segurança será o mesmo para Autenticação do Windows e Modo Misto.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administradores: você deve especificar pelo menos um administrador de sistema para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover**e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Configuração do Servidor](../Topic/Database%20Engine%20Configuration%20-%20Server%20Configuration.md).  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administradores: você deve especificar pelo menos um administrador de sistema para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover**e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
      Ao concluir a edição da lista, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Verifique a lista de administradores na caixa de diálogo de configuração. Quando a lista estiver concluída, clique em **Avançar**.  
   
@@ -382,9 +379,8 @@ caps.handback.revision: 76
     > [!IMPORTANT]  
     >  Se você especificar diretórios de instalação não padrão, verifique se as pastas de instalação são exclusivas para essa instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Nenhum dos diretórios nesta caixa de diálogo deve ser compartilhado com diretórios de outras instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Os diretórios de dados devem estar localizados no disco de cluster compartilhado do cluster de failover.  
   
-     Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Diretórios de dados](../Topic/Database%20Engine%20Configuration%20-%20Data%20Directories.md).  
   
-14. Use a página Configuração do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] — Provisionamento de Conta para especificar usuários ou contas que terão permissões de administrador do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Especifique pelo menos um administrador de sistema para o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover**e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para obter mais informações, consulte [Configuração do Analysis Services - Provisionamento de conta](../Topic/Analysis%20Services%20Configuration%20-%20Account%20Provisioning.md).  
+14. Use a página Configuração do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] — Provisionamento de Conta para especificar usuários ou contas que terão permissões de administrador do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Especifique pelo menos um administrador de sistema para o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover**e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
      Ao concluir a edição da lista, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Verifique a lista de administradores na caixa de diálogo de configuração. Quando a lista estiver concluída, clique em **Avançar**.  
   
@@ -393,7 +389,6 @@ caps.handback.revision: 76
     > [!IMPORTANT]  
     >  Se você especificar diretórios de instalação não padrão, verifique se as pastas de instalação são exclusivas para essa instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Nenhum dos diretórios nesta caixa de diálogo deve ser compartilhado com diretórios de outras instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Os diretórios de dados devem estar localizados no disco de cluster compartilhado do cluster de failover.  
   
-     Para obter mais informações, veja [Configuração do Analysis Services – Diretórios de dados](../Topic/Analysis%20Services%20Configuration%20-%20Data%20Directories.md).  
   
 16. O Verificador de Configuração do Sistema executa mais um conjunto de regras para validar a configuração do computador com os recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] especificados.  
   
@@ -401,14 +396,14 @@ caps.handback.revision: 76
   
 18. Durante a instalação, a página Progresso da Instalação fornece o status para que você possa monitorar o progresso da Instalação.  
   
-19. Após a instalação, a página **Concluído** fornece um link para o arquivo de log de resumo da instalação e outras observações importantes. Para concluir o processo de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , clique em **Fechar**. Com essa etapa, todos os nós preparados para o mesmo cluster de failover agora fazem parte do cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] concluído.  
+19. Após a instalação, a página **Concluído** fornece um link para o arquivo de log de resumo da instalação e outras observações importantes. Para concluir o processo de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , clique em **Fechar**. Com essa etapa, todos os nós preparados para o mesmo cluster de failover agora fazem parte do cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] concluído.  
   
-## Próximas etapas  
+## <a name="next-steps"></a>Próximas etapas  
  **Configure a nova instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** – Para reduzir a área da superfície sujeita a ataque de um sistema, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala e habilita seletivamente serviços e recursos chave. Para obter mais informações, consulte [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
   
  Para obter mais informações sobre os locais de arquivo de log, consulte [Exibir e ler arquivos de log da Instalação do SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Instalar o SQL Server 2016 do prompt de comando](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   

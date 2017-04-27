@@ -1,25 +1,29 @@
 ---
-title: "Vers&#245;es de idiomas locais no SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Versões de idiomas locais no SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 067307bd3c91b8ac52c7e30f37aa816ca5ca06d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Vers&#245;es de idiomas locais no SQL Server
+# <a name="local-language-versions-in-sql-server"></a>Versões de idiomas locais no SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a todos os idiomas que têm suporte nos sistemas operacionais Windows.  
   
-## Suporte entre idiomas  
+## <a name="cross-language-support"></a>Suporte entre idiomas  
   
 -   Há suporte à versão no idioma inglês do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em todas as versões localizadas de sistemas operacionais.  
   
@@ -29,7 +33,7 @@ caps.handback.revision: 12
   
 -   As versões localizadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também podem ser instaladas lado a lado com instâncias em inglês do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="BK_ConfigureOS"></a> Configurar o sistema operacional para oferecer suporte a versões localizadas  
+##  <a name="BK_ConfigureOS"></a> Configure Operating System to Support Localized Versions  
  As versões localizadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm suporte em versões no idioma inglês de sistemas operacionais com suporte; isso ocorre com o uso de configurações MUI Pack (Multilingual User Interface Pack) do Windows.  
   
  Entretanto, você deve verificar determinadas configurações do sistema operacional antes de instalar uma versão localizada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um servidor que esteja executando um sistema operacional no idioma inglês com uma configuração de MUI não inglês. Você precisa verificar se as seguintes configurações do sistema operacional correspondem ao idioma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] localizado a ser instalado:  
@@ -45,7 +49,7 @@ caps.handback.revision: 12
 > [!CAUTION]  
 >  Não há suporte para instalações de versões de idioma diferentes de instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mesmo computador.  
   
-#### Para alterar a configuração da interface do usuário do sistema operacional  
+#### <a name="to-change-the-operating-system-user-interface-setting"></a>Para alterar a configuração da interface do usuário do sistema operacional  
   
 1.  Se ainda não estiver instalado, instale o MUI do sistema operacional que corresponde à sua versão localizada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 12
   
 4.  Clique em **Aplicar** para confirmar a alteração e em **OK** para fechar a janela.  
   
-#### Para alterar a configuração da localidade do usuário do sistema operacional  
+#### <a name="to-change-the-operating-system-user-locale-setting"></a>Para alterar a configuração da localidade do usuário do sistema operacional  
   
 1.  Se ainda não estiver instalado, instale o MUI do sistema operacional que corresponde à sua versão localizada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -69,20 +73,20 @@ caps.handback.revision: 12
   
 4.  Clique em **Aplicar** para confirmar a alteração e em **OK** para fechar a janela.  
   
-#### Par alterar a configuração de localidade do sistema  
+#### <a name="to-change-the-system-locale-setting"></a>Par alterar a configuração de localidade do sistema  
   
 1.  Se ainda não estiver instalado, instale o MUI do sistema operacional que corresponde à sua versão localizada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 2.  No Painel de Controle, abra **Opções Regionais e de Idioma**.  
   
-3.  Na guia **Avançado**, para **Select a language to match the language version of the non-Unicode programs you want to use (Selecione um idioma correspondente à versão de idioma dos programas não Unicode que você deseja usar)**, selecione um valor da lista.  
+3.  Na guia **Avançado** , para **Select a language to match the language version of the non-Unicode programs you want to use (Selecione um idioma correspondente à versão de idioma dos programas não Unicode que você deseja usar)**, selecione um valor da lista.  
   
-     Essa configuração permitirá que a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolha o melhor agrupamento padrão para sua instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Essa configuração permitirá que a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolha o melhor agrupamento padrão para sua instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 4.  Clique em **Aplicar** para confirmar a alteração e em **OK** para fechar a janela.  
   
-## Consulte também  
- [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)   
- [Instalar o SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016.md)  
+## <a name="see-also"></a>Consulte também  
+ [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
+ [Instalar o SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
   
   

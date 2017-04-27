@@ -1,28 +1,32 @@
 ---
-title: "WSFC (Windows Server Failover Clustering) com o SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidade [SQL Server], clusters de WSFC"
-  - "WSFC (Windows Server Failover Clustering) com o SQL Server"
-  - "WSFC com o SQL Server"
-  - "quorum [SQL Server]"
-  - "cluster de failover [SQL Server], Grupos de disponibilidade AlwaysOn"
+title: WSFC (Clustering de Failover do Windows Server) com o SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- Windows Server Failover Clustering (WSFC), with SQL Server
+- WSFC, with SQL Server
+- quorum [SQL Server]
+- failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: faf617519fde35e957969a98d2564821ee01e8a2
+ms.lasthandoff: 04/11/2017
+
 ---
-# WSFC (Windows Server Failover Clustering) com o SQL Server
+# <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>WSFC (Windows Server Failover Clustering) com o SQL Server
   Um *cluster WSFC (Windows Server Failover Clustering)* é um grupo de servidores independentes que funcionam em conjunto para aumentar a disponibilidade de aplicativos e serviços. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tira proveito dos serviços e recursos do WSFC para oferecer suporte às instâncias de cluster de failover do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
    
@@ -77,24 +81,24 @@ caps.handback.revision: 34
  Para obter mais informações, consulte: [Visão geral do Clustering de Failover – Windows Server](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)  
   
 ##  <a name="AlwaysOnWsfcTech"></a> Tecnologias do SQL Server AlwaysOn e WSFC  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] O *AlwaysOn* é uma solução de alta disponibilidade e de recuperação de desastre que utiliza o WSFC. O AlwaysOn fornece uma solução integrada e flexível, que aumenta a disponibilidade do aplicativo, fornece melhor retorno sobre os investimentos de hardware e simplifica a implantação e o gerenciamento de alta disponibilidade.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *Always On* is a high availability and disaster recovery solution that takes advantage of WSFC. O AlwaysOn fornece uma solução integrada e flexível, que aumenta a disponibilidade do aplicativo, fornece melhor retorno sobre os investimentos de hardware e simplifica a implantação e o gerenciamento de alta disponibilidade.  
   
  As Instâncias de Cluster de Failover [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e AlwaysOn usam o WSFC como uma tecnologia de plataforma, registrando componentes como recursos de cluster WSFC.  Os recursos relacionados são combinados em um *grupo de recursos*, que podem ser tornados dependentes de outros recursos de cluster do WSFC. O serviço de cluster do WSFC pode detectar e sinalizar a necessidade de reiniciar a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou fazer failover automaticamente em um nó de servidor diferente no cluster do WSFC.  
   
 > **IMPORTANTE:** Para aproveitar ao máximo as tecnologias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn, você deve aplicar vários pré-requisitos relacionados ao WSFC.  
 >   
->  Para obter mais informações, consulte: [Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)  
+>  Para obter mais informações, consulte: [Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
-### Alta disponibilidade em nível de instância com Instâncias de Cluster de Failover AlwaysOn  
- Uma FCI *Instância de Cluster de Failover* AlwaysOn é uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instalada em nós em um cluster WSFC. Esse tipo de instância tem dependências de recursos no armazenamento de disco compartilhado (via Fibre Channel ou SAN iSCSI) e em um nome de rede virtual. O nome de rede virtual tem uma dependência de recurso em um ou mais endereços IP virtuais, cada um em uma sub-rede diferente. O serviço do SQL Server e o serviço SQL Server Agent são registrados como recursos; ambos se tornam dependentes do recurso de nome de rede virtual.  
+### <a name="instance-level-high-availability-with-always-on-failover-cluster-instances"></a>Alta disponibilidade em nível de instância com Instâncias de Cluster de Failover AlwaysOn  
+ Uma FCI *Instância de Cluster de Failover* AlwaysOn é uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instalada em nós em um cluster WSFC. Esse tipo de instância depende dos recursos de armazenamento e do nome da rede virtual. O armazenamento pode usar Fibre Channel, iSCSI, FCoE ou SAS para armazenamento em disco compartilhado ou usar armazenamento anexado localmente com [S2D (Espaços de Armazenamento Diretos)](http://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview). O recurso de nome de rede virtual depende de um ou mais endereços IP virtuais, cada um em uma sub-rede diferente. O serviço SQL Server e o serviço SQL Server Agent também são recursos e ambos dependem dos recursos de nome de rede virtual e armazenamento.  
   
  No caso de um failover, o serviço WSFC transfere a propriedade dos recursos da instância para um nó de failover designado. A instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é então reiniciada no nó de failover e os bancos de dados são recuperados da maneira usual. Em qualquer momento determinado, apenas um único nó do cluster pode hospedar a FCI e os recursos subjacentes.  
   
-> **OBSERVAÇÃO:** uma Instância de Cluster de Failover AlwaysOn exige armazenamento em disco compartilhado simétrico, como uma SAN (rede de área de armazenamento) ou um compartilhamento de arquivos SMB.  Os volumes de armazenamento de disco compartilhados devem estar disponíveis a todos os nós de failover potenciais no cluster do WSFC.  
+> **OBSERVAÇÃO:**  uma Instância de Cluster de Failover AlwaysOn exige armazenamento em disco compartilhado simétrico, como uma SAN (rede de área de armazenamento) ou um compartilhamento de arquivos SMB.  Os volumes de armazenamento de disco compartilhados devem estar disponíveis a todos os nós de failover potenciais no cluster do WSFC.  
   
  Para obter mais informações, consulte [Instâncias de Cluster de Failover AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
-### Alta disponibilidade no nível do banco de dados com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  
+### <a name="database-level-high-availability-with-includesshadrincludessshadr-mdmd"></a>Alta disponibilidade no nível do banco de dados com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  
  Um *grupo de disponibilidade* é um conjunto de bancos de dados de usuário que fazem failover juntos. Um grupo de disponibilidade consiste em uma *réplica de disponibilidade* primária e em uma a quatro réplicas secundárias que são mantidas pelo movimento de dados baseado em log do SQL Server para proteção de dados, dispensando o armazenamento compartilhado. Cada réplica é hospedada por uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um nó diferente do cluster do WSFC. O grupo de disponibilidade e um nome de rede virtual correspondente são registrados como recursos no cluster do WSFC.  
   
  Um *ouvinte de grupo de disponibilidade* no nó de réplica primária responde às solicitações de cliente de entrada para conectar-se ao nome de rede virtual e, com base nos atributos da cadeia de conexão, redireciona cada solicitação à instância apropriada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -103,7 +107,7 @@ caps.handback.revision: 34
   
  A qualquer determinado momento, apenas uma única instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode hospedar a réplica primária dos bancos de dados de um grupo de disponibilidade. Cada réplica secundária associada deve residir em uma instância separada, e cada instância deve residir em nós físicos separados.  
   
-> **OBSERVAÇÃO:** o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] não exige a implantação de uma Instância de Cluster de Failover nem o uso de armazenamento compartilhado simétrico (SAN ou SMB).  
+> **NOTE:** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] do not require deployment of a Failover Cluster Instance or use of symmetric shared storage (SAN or SMB).  
 >   
 >  Uma FCI (Instância de Cluster de Failover) pode ser usada junto com um grupo de disponibilidade para aprimorar a disponibilidade de uma réplica de disponibilidade. Entretanto, para impedir situações de competição potenciais no cluster do WSFC, o failover automático do grupo de disponibilidade não tem suporte de e para uma réplica de disponibilidade que está hospedada em uma FCI ou vice-versa.  
   
@@ -112,19 +116,19 @@ caps.handback.revision: 34
 ##  <a name="AlwaysOnWsfcHealth"></a> Monitoração de integridade e failover do WSFC  
  A alta disponibilidade de uma solução AlwaysOn é realizada por meio do monitoramento proativo da integridade dos recursos físicos e lógicos do cluster WSFC, junto com failover automático e reconfiguração de hardware redundante.  Um administrador do sistema também pode iniciar um *failover manual* de um grupo de disponibilidade ou instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de um nó para outro.  
   
-### Políticas de failover para nós, instâncias de cluster de failover e grupos de disponibilidade  
+### <a name="failover-policies-for-nodes-failover-cluster-instances-and-availability-groups"></a>Políticas de failover para nós, instâncias de cluster de failover e grupos de disponibilidade  
  Uma *política de failover* é configurada no nó de cluster WSFC, na FCI (Instância de Cluster de failover) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e nos níveis de grupos de disponibilidade.  Essas políticas, baseadas na severidade, duração e frequência do status do recurso do cluster não íntegro e na capacidade de resposta do nó, podem disparar uma reinicialização do serviço ou um *failover automático* de recursos do cluster de um nó para outro ou disparar a movimentação de uma réplica primária de grupo de disponibilidade de uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para outra.  
   
  O failover de uma réplica de grupo de disponibilidade não afeta a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] subjacente.  O failover de uma FCI move as réplicas do grupo de disponibilidade hospedado com a instância.  
   
  Para obter mais informações, veja [Política de failover para instâncias de cluster de failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
-### Detecção de integridade de recursos do WSFC  
+### <a name="wsfc-resource-health-detection"></a>Detecção de integridade de recursos do WSFC  
  Cada recurso em um nó de cluster do WSFC pode relatar seu status e integridade, periodicamente ou sob demanda. Várias circunstâncias podem indicar falha no recurso; por exemplo, deficiência de energia, erros de disco ou de memória, erros de comunicação de rede ou serviços sem resposta.  
   
  Recursos de cluster WSFC como redes, armazenamento ou serviços podem se tornar dependentes uns dos outros. A integridade cumulativa de um recurso é determinada pela acúmulo bem-sucedido de sua integridade com a integridade de cada uma de suas dependências de recurso.  
   
-### Detecção de integridade entre nós do WSFC e votação de quorum  
+### <a name="wsfc-inter-node-health-detection-and-quorum-voting"></a>Detecção de integridade entre nós do WSFC e votação de quorum  
  Cada nó em um cluster do WSFC participa da comunicação de pulsação periódica para compartilhar o status de integridade do nó com os outros nós. Nós sem resposta são considerados como em estado com falha.  
   
  Um conjunto de nós de *quorum* é uma maioria dos nós de votação e testemunhas no cluster WSFC. A integridade geral e o status de um cluster WSFC são determinados por um *voto de quorum*periódico. A presença de um quorum significa que o cluster está íntegro e é capaz de fornecer tolerância a falhas no nível de nó.  
@@ -135,7 +139,7 @@ caps.handback.revision: 34
 >   
 >  Para obter mais informações, consulte: [Configuração de modos de quorum WSFC e votação (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
   
-### Recuperação de desastres por meio de quorum forçado  
+### <a name="disaster-recovery-through-forced-quorum"></a>Recuperação de desastres por meio de quorum forçado  
  Dependendo das práticas operacionais e da configuração do cluster WSFC, você poderá incorrer em failovers automáticos e manuais e ainda manter uma solução [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn robusta e tolerante a falhas. No entanto, se um quorum dos nós de votação elegíveis no cluster do WSFC não puder se comunicar um com o outro, ou se houver falha na validação de integridade do cluster do WSFC, o cluster do WSFC poderá ser colocado offline.  
   
  Se o cluster do WSFC for colocado offline por causa de um desastre não planejado ou devido a um hardware persistente ou falha de comunicação, será necessária intervenção administrativa manual para *forçar um quorum* e colocar os nós de cluster sobreviventes online em uma configuração não tolerante a falhas.  
@@ -147,8 +151,8 @@ caps.handback.revision: 34
 ##  <a name="AlwaysOnWsfcRelationship"></a> Relação dos componentes do SQL Server AlwaysOn com o WSFC  
  Existem várias camadas de relações entre o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn e os recursos e componentes do WSFC.  
   
- Os grupos de disponibilidade AlwaysOn são hospedados nas instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
- Uma solicitação de cliente que especifica um nome de rede do ouvinte de grupo de disponibilidade lógico para se conectar a um banco de dados primário ou secundário é redirecionada para o nome de rede de instância apropriado da instância subjacente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou da Instância de Cluster de Failover (FCI) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Os grupos de disponibilidade AlwaysOn são hospedados nas instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Uma solicitação de cliente que especifica um nome de rede do ouvinte de grupo de disponibilidade lógico para se conectar a um banco de dados primário ou secundário é redirecionada para o nome de rede de instância apropriado da instância subjacente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou da Instância de Cluster de Failover (FCI) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  As instâncias do SQL Server estão hospedadas ativamente em um único nó.  
  Quando presente, uma instância autônoma do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sempre reside em um único nó com um nome de rede de instância estático.  Quando presente, uma FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estará ativa em um entre dois ou mais nós de failover possíveis com um único nome de rede de instância virtual.  
@@ -162,7 +166,7 @@ caps.handback.revision: 34
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] são subchaves do cluster WSFC.  
  Se você excluir e recriar um cluster WSFC, precisará desabilitar e reabilitar o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em cada instância de servidor habilitada para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no cluster WSFC original. Para obter mais informações, consulte [Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
- ![Diagrama de contexto de componente do SQL Server AlwaysOn](../../../sql-server/failover-clusters/windows/media/alwaysoncomponentcontextdiagram.gif "Diagrama de contexto de componente do SQL Server AlwaysOn")  
+ ![Diagrama de contexto do componente SQL Server AlwaysOn](../../../sql-server/failover-clusters/windows/media/alwaysoncomponentcontextdiagram.gif "Diagrama de contexto do componente SQL Server AlwaysOn")  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
@@ -175,18 +179,21 @@ caps.handback.revision: 34
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   [Tecnologias do Windows Server: clusters de failover](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
-  
+
+-   [Visão geral de S2D \((Espaços de Armazenamento Diretos)\)](http://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
+
 -   [Clusters de failover no Windows Server 2008 R2](http://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
 -   [Exibir eventos e logs de um cluster de failover](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
 -   [Cluster de failover Get-ClusterLog do cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Instâncias do cluster de failover do AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
- [Visão geral de Grupos de Disponibilidade AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Visão geral dos Grupos de Disponibilidade AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Configuração de modos de quorum WSFC e votação (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Política de failover para instâncias de cluster de failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [Recuperação de desastres WSFC por meio de quorum forçado (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+ [Recuperação de desastre do WSFC por meio de quorum forçado (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+ [O SQL Server 2016 dá suporte a Espaços de Armazenamento Diretos do Windows Server 2016](http://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/)
   
-  
+

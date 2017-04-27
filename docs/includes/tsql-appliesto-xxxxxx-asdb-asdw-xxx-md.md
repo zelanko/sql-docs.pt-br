@@ -1,1 +1,2 @@
-<Token>**ESTE TÓPICO APLICA-SE A:** ![não](../includes/media/no.png)SQL Server ![sim](../includes/media/yes.png)Banco de Dados SQL do Azure![sim](../includes/media/yes.png)Azure SQL Data Warehouse ![não](../includes/media/no.png)Parallel Data Warehouse </Token>
+<Token>**ESTE TÓPICO APLICA-SE A:** ![não](media/no.png)SQL Server ![sim](media/yes.png)Azure SQL Database![sim](media/yes.png)Azure SQL Data Warehouse ![não](media/no.png)Parallel Data Warehouse </Token>
+
