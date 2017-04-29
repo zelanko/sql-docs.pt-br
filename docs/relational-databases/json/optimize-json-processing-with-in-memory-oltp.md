@@ -2,7 +2,7 @@
 title: Otimizar o processamento JSON com o OLTP in-memory | Microsoft Docs
 ms.custom: 
 ms.date: 02/03/2017
-ms.prod: sql-vnext
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
