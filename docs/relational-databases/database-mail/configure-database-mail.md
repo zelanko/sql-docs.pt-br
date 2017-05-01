@@ -1,65 +1,69 @@
 ---
-title: "Configurar o Database Mail | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.sqlimail.profileandaccountmanagement.f1"
-  - "sql13.swb.sqlimail.newaccount.f1"
-  - "sql13.swb.dbmail. manageprofilesecurity.profileview.f1"
-  - "sql13.swb.sqlimail.manageexistingprofile.f1"
-  - "sql13.swb.sqlimail.addaccounttoprofile.f1"
-  - "sql13.swb.dbmail.manageexistingaccount.f1"
-  - "sql13.swb.sqlimail.manageprofilesecurity.profileview.f1"
-  - "sql13.swb.sqlimail.welcome.f1"
-  - "sql13.swb.sqlimail.manageprofilesecurity.principalview.f1"
-  - "sql13.swb.sqlimail.newsqlimailaccount.f1"
-  - "sql13.swb.sqlimail.selectconfiguration.f1"
-  - "sql13.swb.dbmail.completewizard.f1"
-  - "sql13.swb.dbmail.sendtestemail.test.f1"
-  - "sql13.swb.sqlimail.newprofile.f1"
-  - "sql13.swb.dbmail.addaccounttoprofile.f1"
-  - "sql13.swb.dbmail.newprofile.f1"
-  - "sql13.swb.sqlimail.manageexistingaccount.f1"
-  - "sql13.swb.dbmail.welcome.f1"
-  - "sql13.swb.dbmail.newaccount.f1"
-  - "sql13.swb.dbmail.profileandaccountmanagement.f1"
-  - "sql13.swb.dbmail.selectconfiguration.f1"
-  - "sql13.swb.dbmail.sendtestemail.f1"
-  - "sql13.swb.sqlimail.completewizard.f1"
-  - "sql13.swb.dbmail.configuresystem.f1"
-  - "sql13.swb.sqlimail.configuresystem.f1"
-  - "sql13.swb.dbmail.newsqlimailaccount.f1"
-  - "sql13.swb.dbmail.manageexistingprofile.f1"
-  - "sql13.swb.dbmail.manageprofilesecurity.principalview.f1"
+title: Configurar o Database Mail | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.sqlimail.profileandaccountmanagement.f1
+- sql13.swb.sqlimail.newaccount.f1
+- sql13.swb.dbmail. manageprofilesecurity.profileview.f1
+- sql13.swb.sqlimail.manageexistingprofile.f1
+- sql13.swb.sqlimail.addaccounttoprofile.f1
+- sql13.swb.dbmail.manageexistingaccount.f1
+- sql13.swb.sqlimail.manageprofilesecurity.profileview.f1
+- sql13.swb.sqlimail.welcome.f1
+- sql13.swb.sqlimail.manageprofilesecurity.principalview.f1
+- sql13.swb.sqlimail.newsqlimailaccount.f1
+- sql13.swb.sqlimail.selectconfiguration.f1
+- sql13.swb.dbmail.completewizard.f1
+- sql13.swb.dbmail.sendtestemail.test.f1
+- sql13.swb.sqlimail.newprofile.f1
+- sql13.swb.dbmail.addaccounttoprofile.f1
+- sql13.swb.dbmail.newprofile.f1
+- sql13.swb.sqlimail.manageexistingaccount.f1
+- sql13.swb.dbmail.welcome.f1
+- sql13.swb.dbmail.newaccount.f1
+- sql13.swb.dbmail.profileandaccountmanagement.f1
+- sql13.swb.dbmail.selectconfiguration.f1
+- sql13.swb.dbmail.sendtestemail.f1
+- sql13.swb.sqlimail.completewizard.f1
+- sql13.swb.dbmail.configuresystem.f1
+- sql13.swb.sqlimail.configuresystem.f1
+- sql13.swb.dbmail.newsqlimailaccount.f1
+- sql13.swb.dbmail.manageexistingprofile.f1
+- sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 74432814fa4cc99c8ef8ec8c3c63f37ec8b8b25a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar o Database Mail
+# <a name="configure-database-mail"></a>Configurar o Database Mail
   Este tópico descreve como habilitar e configurar o Database Mail usando o Assistente para Configuração do Database Mail e cria um script de Configuração do Database Mail usando modelos.  
   
--   **Antes de começar:**  [Limitações e restrições](#Restrictions), [Segurança  
+-   **Antes de começar:**  [Limitações e restrições](#Restrictions), [Segurança](#Security)  
   
--   **Para configurar o Database Mail usando:** [Assistente de Configuração do Database](#DBWizard), [Usando modelos](#Template)  
+-   **To configure Database Mail, using:**  [Database Mail Configuration Wizard](#DBWizard), [Using Templates](#Template)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
- Use a opção **DatabaseMail XPs** para habilitar o Database Mail neste servidor. Para obter mais informações, confira o tópico de referência [Opção Database Mail XPs de configuração de servidor](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md).  
+ Use a opção **DatabaseMail XPs** para habilitar o Database Mail neste servidor. Para obter mais informações, confira o tópico de referência [Opção Database Mail XPs de configuração de servidor](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
  A habilitação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker em qualquer banco de dados exige um bloqueio de banco de dados. Se o Service Broker tiver sido desabilitado no **msdb**, para habilitar o Database Mail primeiro interrompa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para que o Service Broker possa obter o bloqueio necessário.  
   
 ###  <a name="Security"></a> Segurança  
- Para configurar o Database Mail, é necessário ser membro da função de servidor fixa **sysadmin**. Para enviar Database Mail, é necessário ser membro da função de banco de dados **DatabaseMailUserRole** no banco de dados **msdb**.  
+ Para configurar o Database Mail, é necessário ser membro da função de servidor fixa **sysadmin** . Para enviar Database Mail, é necessário ser membro da função de banco de dados **DatabaseMailUserRole** no banco de dados **msdb** .  
   
 ##  <a name="DBWizard"></a> Usando o assistente para configuração do Database Mail  
  **Para configurar o Database Mail usando um assistente**  
@@ -68,7 +72,7 @@ caps.handback.revision: 13
   
 2.  Expanda o nó **Gerenciamento** .  
   
-3.  Clique com o botão direito do mouse em **Database Mail** e clique em **Configurar o Database Mail**.  
+3.  Clique com o botão direito do mouse em **Database Mail**e clique em **Configurar o Database Mail**.  
   
 4.  Conclua os diálogos do Assistente:  
   
@@ -103,17 +107,17 @@ caps.handback.revision: 13
   
  **Não mostrar esta página novamente** – Marque essa opção para não exibir a página de boas-vindas no futuro novamente.  
   
- **Avançar** – Segue para a página **Selecionar uma tarefa de configuração**.  
+ **Avançar** – Segue para a página **Selecionar uma tarefa de configuração** .  
   
  **Cancelar** – Encerra o assistente sem configurar o Database Mail  
   
- [Assistente para Configuração do Database Mail](#DBWizard)  
+ [Assistente de Configuração do Database](#DBWizard)  
   
 ###  <a name="ConfigTask"></a> Selecionar Tarefa de Configuração  
  Use a página **Selecionar Tarefa de Configuração** para indicar qual tarefa você concluirá sempre que usar o assistente. Se você mudar de ideia antes de concluir o assistente, use o botão **Voltar** para voltar para essa página e selecionar outra tarefa.  
   
 > [!NOTE]  
->  Se o Database Mail não foi habilitado, você receberá a mensagem: **O recurso Database Mail não está disponível.  Deseja habilitar este recurso?** Responder **Sim** equivale a habilitar o Database Mail usando a [opção Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) do procedimento armazenado do sistema **sp_configure**.  
+>  Se o Database Mail não foi habilitado, você receberá a mensagem: **O recurso Database Mail não está disponível.  Deseja habilitar este recurso?** Responder **Sim**equivale a habilitar o Database Mail usando a [opção Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) do procedimento armazenado do sistema **sp_configure** .  
   
  **Instalar Database Mail executando as seguintes tarefas**  
  Execute todas as tarefas exigidas para instalar o Database Mail pela primeira vez. Essa opção inclui todas as outras três opções.  
@@ -127,14 +131,14 @@ caps.handback.revision: 13
  **Exibir ou alterar parâmetros do sistema**  
  Configure parâmetros de sistema do Database Mail, como o tamanho máximo de arquivo para anexos.  
   
- [Assistente para Configuração do Database Mail](#DBWizard)  
+ [Assistente de Configuração do Database](#DBWizard)  
   
 ###  <a name="NewAccount"></a> Página Nova Conta  
  Use esta página para criar uma nova conta do Database Mail. Uma conta do Database Mail contém informações para enviar email a um servidor SMTP.  
   
  Uma conta do Database Mail contém as informações que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa para enviar mensagens de email a um servidor SMTP. Cada conta contém informações de um servidor de email.  
   
- Uma conta do Database Mail só é usada no Database Mail. Uma conta do Database Mail não corresponde a uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou uma conta do Microsoft Windows. O Database Mail pode ser enviado usando as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usando outras credenciais que você forneça ou anonimamente. Quando a autenticação básica é usada, o nome do usuário e a senha em uma conta do Database Mail só são usados para autenticação no servidor de email. Uma conta não precisa corresponder a um usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou a um usuário no computador que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Uma conta do Database Mail só é usada no Database Mail. Uma conta do Database Mail não corresponde a uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou uma conta do Microsoft Windows. O Database Mail pode ser enviado usando as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]usando outras credenciais que você forneça ou anonimamente. Quando a autenticação básica é usada, o nome do usuário e a senha em uma conta do Database Mail só são usados para autenticação no servidor de email. Uma conta não precisa corresponder a um usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou a um usuário no computador que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Nome da conta**  
  Digite o nome da nova conta.  
@@ -143,13 +147,13 @@ caps.handback.revision: 13
  Digite uma descrição da conta. A descrição é opcional.  
   
  **Endereço de email**  
- Digite o nome do endereço de email da conta. Este é o endereço de email da conta que o enviou. Por exemplo, uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode enviar email do endereço SqlAgent@Adventure-Works.com.  
+ Digite o nome do endereço de email da conta. Este é o endereço de email da conta que o enviou. Por exemplo, uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode enviar emails do endereço SqlAgent@Adventure-Works.com.  
   
  **Nome para exibição**  
  Digite o nome que será exibido nas mensagens de email enviadas por essa conta. O nome para exibição é opcional. Este é o nome exibido em mensagens enviadas desta conta. Por exemplo, uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode exibir o nome “SQL Server Agent Automated Mailer” em mensagens de email.  
   
  **Email de resposta**  
- Digite o endereço de email que será usado em respostas a mensagens de email enviadas por esta conta. O email de resposta é opcional. Por exemplo, respostas para uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent podem ir para o administrador de banco de dados, danw@Adventure-Works.com.  
+ Digite o endereço de email que será usado em respostas a mensagens de email enviadas por esta conta. O email de resposta é opcional. Por exemplo, respostas a uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent podem ir para o administrador de banco de dados, danw@Adventure-Works.com.  
   
  **Nome do servidor**  
  Digite o nome ou o endereço IP do servidor SMTP que a conta usa para enviar email. Geralmente, está em um formato semelhante a **smtp.***<your_company>***.com**. Para obter mais ajuda sobre isso, consulte o administrador de mail.  
@@ -161,7 +165,7 @@ caps.handback.revision: 13
  Criptografa a comunicação usando o Protocolo SSL.  
   
  **Autenticação do Windows usando as credenciais do serviço Mecanismo de Banco de Dados**  
- A conexão é feita com o servidor SMTP usando as credenciais configuradas para o serviço do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ A conexão é feita com o servidor SMTP usando as credenciais configuradas para o serviço do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
  **Autenticação Básica**  
  Especifique o nome do usuário e a senha exibidos pelo servidor SMTP.  
@@ -178,7 +182,7 @@ caps.handback.revision: 13
  **Autenticação anônima**  
  O email é enviado ao servidor SMTP sem credenciais de logon. Use essa opção quando o servidor SMTP não exigir autenticação.  
   
- [Assistente para Configuração do Database Mail](#DBWizard)  
+ [Assistente de Configuração do Database](#DBWizard)  
   
 ###  <a name="ExistingAccount"></a> Página Gerenciar Conta Existente  
  Use esta página para gerenciar uma conta de Database Mail existente.  
@@ -211,7 +215,7 @@ caps.handback.revision: 13
  Criptografa a comunicação usando o Protocolo SSL.  
   
  **Autenticação do Windows usando as credenciais do serviço Mecanismo de Banco de Dados**  
- A conexão é feita com o servidor SMTP usando as credenciais configuradas para o serviço do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ A conexão é feita com o servidor SMTP usando as credenciais configuradas para o serviço do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
  **Autenticação Básica**  
  Especifique o nome do usuário e a senha exibidos pelo servidor SMTP.  
@@ -228,7 +232,7 @@ caps.handback.revision: 13
  **Autenticação anônima**  
  O email é enviado ao servidor SMTP sem credenciais de logon. Use essa opção quando o servidor SMTP não exigir autenticação.  
   
- [Assistente para Configuração do Database Mail](#DBWizard)  
+ [Assistente de Configuração do Database](#DBWizard)  
   
 ###  <a name="NewProfile"></a> Página Novo Perfil  
  Use essa página para criar um perfil do Database Mail. Um perfil do Database Mail é uma coleção de contas do Database Mail. Os perfis melhoram a confiabilidade nos casos em que um servidor de email não pode ser acessado, oferecendo contas alternativas do Database Mail. É necessário pelo menos uma conta do Database Mail. Para obter mais informações sobre como definir a prioridade das contas do Database Mail no perfil, veja [Criar um perfil do Database Mail](../../relational-databases/database-mail/create-a-database-mail-profile.md).  
@@ -256,7 +260,7 @@ caps.handback.revision: 13
  **Mover para Baixo**  
  Diminua a prioridade da conta selecionada.  
   
- [Assistente para Configuração do Database Mail](#DBWizard)  
+ [Assistente de Configuração do Database](#DBWizard)  
   
 ###  <a name="ExistingProfile"></a> Página Gerenciar Perfil Existente  
  Use esta página para gerenciar um perfil existente no Database Mail. Um perfil do Database Mail é uma coleção de contas do Database Mail. Os perfis melhoram a confiabilidade nos casos em que um servidor de email não pode ser acessado, oferecendo contas alternativas do Database Mail. É necessário pelo menos uma conta do Database Mail. Para obter mais informações sobre como definir a prioridade das contas do Database Mail no perfil, veja [Criar um perfil do Database Mail](../../relational-databases/database-mail/create-a-database-mail-profile.md).  
@@ -293,27 +297,27 @@ caps.handback.revision: 13
  **Nome da conta**  
  Exibe o nome da conta.  
   
- **Endereço de Email**  
+ **E-mail Address**  
  Exibe o endereço de email da conta.  
   
- [Assistente para Configuração do Database Mail](#DBWizard)  
+ [Assistente de Configuração do Database](#DBWizard)  
   
-###  <a name="AddAccount"></a> Página Adicionar Conta ao Perfil  
+###  <a name="AddAccount"></a> Add Account to Profile Page  
  Use esta página para escolher a conta a ser adicionada ao perfil. Escolha uma conta existente na caixa **Nome da conta** ou clique em **Nova Conta**.  
   
  **Nome da conta**  
  Selecione o nome da conta a ser adicionada ao perfil.  
   
  **Endereço de email**  
- Visualize o endereço de email da conta selecionada. Você não pode alterar o endereço de email nesta página. Para alterar o endereço de email dessa conta, volte para a página principal do assistente e selecione a opção **Gerenciar contas e perfis do Database Mail**.  
+ Visualize o endereço de email da conta selecionada. Você não pode alterar o endereço de email nesta página. Para alterar o endereço de email dessa conta, volte para a página principal do assistente e selecione a opção **Gerenciar contas e perfis do Database Mail** .  
   
  **Nome do servidor**  
- Visualize o nome do servidor de email da conta selecionada. Você não pode alterar o nome do servidor nesta página. Para alterar o nome do servidor dessa conta, volte para a página principal do assistente e selecione a opção **Gerenciar contas e perfis do Database Mail**.  
+ Visualize o nome do servidor de email da conta selecionada. Você não pode alterar o nome do servidor nesta página. Para alterar o nome do servidor dessa conta, volte para a página principal do assistente e selecione a opção **Gerenciar contas e perfis do Database Mail** .  
   
  **Nova Conta**  
  Crie uma conta nova.  
   
- [Assistente para Configuração do Database Mail](#DBWizard)  
+ [Assistente de Configuração do Database](#DBWizard)  
   
 ###  <a name="AccountsProfiles"></a> Página Gerenciar Contas e Perfis  
  Use esta página para escolher uma tarefa para gerenciar um perfil ou conta.  
@@ -327,22 +331,22 @@ caps.handback.revision: 13
  **Criar um novo perfil**  
  Crie um novo perfil.  
   
- **Exibir, alterar ou excluir um perfil existente. Você também pode gerenciar contas associadas ao perfil.**  
+ **Exibir, alterar ou excluir um perfil existente. Também é possível gerenciar contas associadas ao perfil.**  
  Atualize ou exclua um perfil existente. Essa opção também permite gerenciar contas associadas ao perfil.  
   
- [Assistente para Configuração do Database Mail](#DBWizard)  
+ [Assistente de Configuração do Database](#DBWizard)  
   
 ###  <a name="ProfileSecurityPublic"></a> Gerenciar Segurança do Perfil, guia Público  
  Use essa página para configurar um perfil público.  
   
  Perfis são públicos ou privados. Um perfil privado é acessível somente para usuários ou funções específicas. Um perfil público permite a qualquer usuário ou função com acesso ao banco de dados do host de email (**msdb**) enviar um email usando esse perfil.  
   
- Um perfil pode ser um perfil padrão. Nesse caso, usuários ou funções podem enviar e-mails por meio do perfil sem especificá-lo explicitamente. Se o usuário ou função que envia a mensagem de e-mail tiver um perfil privado padrão, o Database Mail irá utilizá-lo. Se o usuário ou função não tiver nenhum perfil privado padrão, **sp_send_dbmail** usará o perfil público padrão para o banco de dados **msdb**. Se não houver nenhum perfil privado padrão para o usuário ou função e nenhum perfil público padrão para o banco de dados, **sp_send_dbmail** retornará um erro. Somente um perfil pode ser marcado como o perfil padrão.  
+ Um perfil pode ser um perfil padrão. Nesse caso, usuários ou funções podem enviar e-mails por meio do perfil sem especificá-lo explicitamente. Se o usuário ou função que envia a mensagem de e-mail tiver um perfil privado padrão, o Database Mail irá utilizá-lo. Se o usuário ou função não tiver nenhum perfil privado padrão, **sp_send_dbmail** usará o perfil público padrão para o banco de dados **msdb** . Se não houver nenhum perfil privado padrão para o usuário ou função e nenhum perfil público padrão para o banco de dados, **sp_send_dbmail** retornará um erro. Somente um perfil pode ser marcado como o perfil padrão.  
   
  **Público**  
  Selecione essa opção para tornar público o perfil especificado.  
   
- **Nome do Perfil**  
+ **Profile Name**  
  Exibe o nome do perfil.  
   
  **Perfil Padrão**  
@@ -351,17 +355,17 @@ caps.handback.revision: 13
  **Mostrar somente os perfis públicos existentes**  
  Selecione essa opção para mostrar somente perfis públicos no banco de dados especificado.  
   
- [Assistente para Configuração do Database Mail](#DBWizard)  
+ [Assistente de Configuração do Database](#DBWizard)  
   
 ###  <a name="ProfileSecurityPrivate"></a> Gerenciar Segurança do Perfil, guia Particular  
  Use essa página para configurar um perfil privado.  
   
  Perfis são públicos ou privados. Um perfil privado é acessível somente para usuários ou funções específicas. Um perfil público permite a qualquer usuário ou função com acesso ao banco de dados do host de email (**msdb**) enviar um email usando esse perfil.  
   
- Um perfil pode ser um perfil padrão. Nesse caso, usuários ou funções podem enviar e-mails por meio do perfil sem especificá-lo explicitamente. Se o usuário ou função que envia a mensagem de e-mail tiver um perfil privado padrão, o Database Mail irá utilizá-lo. Se o usuário ou função não tiver nenhum perfil privado padrão, **sp_send_dbmail** usará o perfil público padrão para o banco de dados **msdb**. Se não houver nenhum perfil privado padrão para o usuário ou função e nenhum perfil público padrão para o banco de dados, **sp_send_dbmail** retornará um erro.  
+ Um perfil pode ser um perfil padrão. Nesse caso, usuários ou funções podem enviar e-mails por meio do perfil sem especificá-lo explicitamente. Se o usuário ou função que envia a mensagem de e-mail tiver um perfil privado padrão, o Database Mail irá utilizá-lo. Se o usuário ou função não tiver nenhum perfil privado padrão, **sp_send_dbmail** usará o perfil público padrão para o banco de dados **msdb** . Se não houver nenhum perfil privado padrão para o usuário ou função e nenhum perfil público padrão para o banco de dados, **sp_send_dbmail** retornará um erro.  
   
  **Nome de usuário**  
- Selecione o nome de um usuário ou função no banco de dados **msdb**.  
+ Selecione o nome de um usuário ou função no banco de dados **msdb** .  
   
  **Acesso**  
  Selecione se o usuário ou função tem acesso ao perfil especificado.  
@@ -375,9 +379,9 @@ caps.handback.revision: 13
  **Mostrar somente os perfis particulares existentes deste usuário**  
  Selecione essa opção para exibir apenas perfis aos quais o usuário ou função especificados já tenham acesso.  
   
- [Assistente para Configuração do Database Mail](#DBWizard)  
+ [Assistente de Configuração do Database](#DBWizard)  
   
-###  <a name="SystemParameters"></a> Configurar Parâmetros de Sistema  
+###  <a name="SystemParameters"></a> Configurar Parâmetros do Sistema  
  Use esta página para especificar parâmetros de sistema do Database Mail. Exibe os parâmetros de sistema e o valor atual de cada parâmetro. Selecione um parâmetro para exibir uma breve descrição no painel de informações.  
   
  **Tentativas de Repetição de Conta**  
@@ -409,14 +413,14 @@ caps.handback.revision: 13
  **Redefinir Tudo**  
  Selecione esta opção para restaurar os valores da página aos valores padrão originais.  
   
- [Assistente para Configuração do Database Mail](#DBWizard)  
+ [Assistente de Configuração do Database](#DBWizard)  
   
 ###  <a name="CompleteWizard"></a> Página Concluir o Assistente  
  Use essa página para ver as ações que o **Assistente para Configuração do Database Mail** executará. Nenhuma alteração é feita até que você conclua o assistente.  
   
- [Assistente para Configuração do Database Mail](#DBWizard)  
+ [Assistente de Configuração do Database](#DBWizard)  
   
-###  <a name="TestEmail"></a> Página Enviar Email de Teste  
+###  <a name="TestEmail"></a> Send Test E-Mail Page  
  Use a página **Enviar Email de Teste de***<instance_name>* para enviar uma mensagem de email usando o perfil especificado do Database Mail. Só os membros da função de servidor fixa **sysadmin** podem enviar email de teste usando essa página.  
   
  **Perfil do Database Mail**  
@@ -439,20 +443,20 @@ caps.handback.revision: 13
  **Solucionar problemas**  
  Clique para abrir os Manuais Online no tópico [Solucionando problemas do Database Mail](http://msdn.microsoft.com/library/ms188663.aspx).  
   
- [Assistente para Configuração do Database Mail](#DBWizard)  
+ [Assistente de Configuração do Database](#DBWizard)  
   
 ##  <a name="Template"></a> Usando modelos  
  **Para criar um script de configuração do Database Mail**  
   
-1.  No menu **Exibir**, selecione **Explorador de Modelos**.  
+1.  No menu **Exibir** , selecione **Explorador de Modelos**.  
   
-2.  Na janela **Explorador de Modelos**, expanda a pasta **Database Mail**.  
+2.  Na janela **Explorador de Modelos** , expanda a pasta **Database Mail** .  
   
 3.  Clique duas vezes em **Configuração Simples do Database Mail**. O modelo é aberto em uma nova janela de consulta.  
   
-4.  No menu **Consulta**, selecione **Especificar Valores para Parâmetros de Modelo**. A janela **Substituir Parâmetros de Modelo** é exibida.  
+4.  No menu **Consulta** , selecione **Especificar Valores para Parâmetros de Modelo**. A janela **Substituir Parâmetros de Modelo** é exibida.  
   
-5.  Digite os valores para **profile_name**, **account_name**, **SMTP_servername**, **email_address** e **display_name**. O SQL Server Management Studio preenche o modelo com os valores fornecidos por você.  
+5.  Digite os valores para **profile_name**, **account_name**, **SMTP_servername**, **email_address**e **display_name**. O SQL Server Management Studio preenche o modelo com os valores fornecidos por você.  
   
 6.  Execute o script para criar a configuração.  
   
