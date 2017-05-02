@@ -1,27 +1,31 @@
 ---
-title: "Classe de evento Auto Stats | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Classe de evento Auto Stats"
+title: Classe de evento Auto Stats | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Auto Stats event class
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c9cce1c5b1d74e1a952402fd83082fa051292d78
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento Auto Stats
+# <a name="auto-stats-event-class"></a>Classe de evento Auto Stats
   A classe de evento **Auto Stats** indica que ocorreu uma atualização automática de estatísticas de índice e coluna.  
   
-## Colunas de dados da classe de evento Auto Stats  
+## <a name="auto-stats-event-class-data-columns"></a>Colunas de dados da classe de evento Auto Stats  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -37,12 +41,12 @@ caps.handback.revision: 34
 |**EventSubClass**|**int**|Tipo de subclasse de eventos:<br /><br /> 1: estatísticas criadas/atualizadas de forma síncrona; a coluna **TextData** indica as estatísticas e se foram criadas ou atualizadas<br /><br /> 2: atualização de estatísticas assíncronas; trabalho enfileirado.<br /><br /> 3: atualização de estatísticas assíncronas; trabalho iniciando.<br /><br /> 4: atualização de estatísticas assíncronas; trabalho concluído.|21|Sim|  
 |**GroupID**|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |**HostName**|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
-|**IndexID**|**int**|ID da entrada de índice/estatísticas do objeto afetado pelo evento. Para determinar a ID de índice de um objeto, utilize a coluna **index_id** da exibição do catálogo **sys.indexes**.|24|Sim|  
+|**IndexID**|**int**|ID da entrada de índice/estatísticas do objeto afetado pelo evento. Para determinar a ID de índice de um objeto, utilize a coluna **index_id** da exibição do catálogo **sys.indexes** .|24|Sim|  
 |**IntegerData**|**int**|Número de coleções de estatísticas que foram atualizadas com êxito.|25|Sim|  
 |**IntegerData2**|**int**|Número de sequência do trabalho.|55|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
 |**LoginName**|**nvarchar**|Nome de logon do usuário (logon de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou as credenciais de logon do Windows na forma de DOMAIN\nome_do_usuário).|11|Sim|  
-|**LoginSid**|**image**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals**. Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
+|**LoginSid**|**image**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |**ObjectID**|**int**|ID de objeto atribuída pelo sistema.|22|Sim|  
@@ -56,7 +60,7 @@ caps.handback.revision: 34
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |**Tipo**|**int**|Tipo de trabalho.|57|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

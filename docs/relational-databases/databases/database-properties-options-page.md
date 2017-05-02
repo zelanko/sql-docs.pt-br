@@ -1,38 +1,42 @@
 ---
-title: "Propriedades do banco de dados (p&#225;gina Op&#231;&#245;es) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "04/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.options.f1"
+title: "Propriedades do banco de dados (página Opções) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 04/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 caps.latest.revision: 67
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49b5572874fd642d738b8ffee362cc84540709ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propriedades do banco de dados (p&#225;gina Op&#231;&#245;es)
+# <a name="database-properties-options-page"></a>Propriedades do banco de dados (página Opções)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Use esta página para exibir ou modificar opções para o banco de dados selecionado. Para obter mais informações sobre as opções disponíveis nessa página, veja [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) e [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
+  Use esta página para exibir ou modificar opções para o banco de dados selecionado. Para obter mais informações sobre as opções disponíveis nessa página, veja [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) e [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
-## Cabeçalho de página  
+## <a name="page-header"></a>Cabeçalho de página  
  **Agrupamento**  
  Especifique o agrupamento do banco de dados selecionando na lista. Para saber mais, veja [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Modelo de recuperação**  
- Especifique um dos seguintes modelos para recuperar o banco de dados: **Full**, **Bulk-Logged** ou **simples**. Para obter mais informações sobre modelos de recuperação, veja [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ Especifique um dos seguintes modelos para recuperar o banco de dados: **Full**, **Bulk-Logged**ou **simples**. Para obter mais informações sobre modelos de recuperação, veja [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Nível de compatibilidade**  
- Especifique a última versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceita pelo banco de dados. Os valores possíveis são **SQL Server 2014 (120)**, **SQL Server 2012 (110)** e **SQL Server 2008 (100)**. Quando um banco de dados do SQL Server 2005 é atualizado para o SQL Server 2014, o nível de compatibilidade do banco de dados é alterado de 90 para 100.  O nível de compatibilidade 90 não tem suporte no SQL Server 2014. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ Especifique a última versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceita pelo banco de dados. Os valores possíveis são  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)**e **SQL Server 2008 (100)**. Quando um banco de dados do SQL Server 2005 é atualizado para o SQL Server 2014, o nível de compatibilidade do banco de dados é alterado de 90 para 100.  O nível de compatibilidade 90 não tem suporte no SQL Server 2014. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  **Tipo de contenção**  
  Não especifique nada ou parcial para designar se este é um banco de dados independente. Para obter mais informações sobre bancos de dados independentes, consulte [Contained Databases](../../relational-databases/databases/contained-databases.md). A propriedade de servidor **Habilitar Bancos de Dados Independentes** deve ser definida como **TRUE** antes que um banco de dados possa ser configurado como independente.  
@@ -40,7 +44,7 @@ caps.handback.revision: 67
 > [!IMPORTANT]  
 >  Habilitar delegados de bancos de dados parcialmente independentes controla o acesso à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para os proprietários do banco de dados. Para saber mais, veja [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
-## Automatic  
+## <a name="automatic"></a>Automatic  
  **Fechamento Automático**  
  Especifique se o banco de dados é fechado corretamente e libera recursos depois da saída do último usuário. Os valores possíveis são **True** e **False**. Quando **True**, o banco de dados é desligado corretamente e seus recursos são liberados depois do logoff do último usuário.  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 67
   
  A configuração dessa opção como **True** não tem nenhum efeito, salvo se **Atualização Automática de Estatísticas** também estiver definida como **True**.  
   
-## Contenção  
+## <a name="containment"></a>Contenção  
  Nos bancos de dados independentes, algumas configurações geralmente definidas no nível de servidor podem ser configuradas no nível de banco de dados.  
   
  **LCID do Idioma de Texto Completo Padrão**  
@@ -83,14 +87,14 @@ caps.handback.revision: 67
   
  Por exemplo, a configuração padrão de 2049 indica que a data digitada como ‘14/3/49’ será interpretada como 14 de março de 2049 e a data digitada como ‘14/3/50’ será interpretada como 14 de março de 1950. Para saber mais, veja [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
-## Cursor  
+## <a name="cursor"></a>Cursor  
  **Fechar Cursor Quando a Confirmação for Habilitada**  
  Especifique se os cursores são fechados após a confirmação da transação que abre o cursor. Os valores possíveis são **True** e **False**. Quando **True**, todos os cursores abertos quando uma transação for confirmada ou revertida serão fechados. Quando **False**, esses cursores permanecerão abertos quando uma transação for confirmada. Quando **False**, a reversão de uma transação fecha todos os cursores, exceto os definidos como INSENSITIVE ou STATIC. Para obter mais informações, veja [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).  
   
  **Cursor Padrão**  
  Especifique o comportamento padrão do cursor. Quando **True**, as declarações de cursor são padronizadas como LOCAL. Quando **False**, os cursores [!INCLUDE[tsql](../../includes/tsql-md.md)] são padronizados como GLOBAL.  
   
-## Configurações no Escopo do Banco de Dados  
+## <a name="database-scoped-configurations"></a>Configurações no Escopo do Banco de Dados  
  No SQL Server 2016 e no Banco de Dados SQL do Azure, há várias propriedades de configuração que podem ser definidas para o nível de banco de dados. Para obter mais informações sobre todas essas configurações, veja [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
  **Estimativa de cardinalidade herdada**  
@@ -117,14 +121,14 @@ caps.handback.revision: 67
  **Correções do otimizador de consulta para secundário**  
  Habilita ou desabilita os hotfixes de otimização da consulta em secundários, independentemente do nível de compatibilidade do banco de dados. Isso é equivalente ao [Sinalizador de Rastreamento 4199](https://support.microsoft.com/en-us/kb/974006).  
   
-## FILESTREAM  
+## <a name="filestream"></a>FILESTREAM  
  **Nome do Diretório FILESTREAM**  
  Especifique o nome de diretório para obter os dados FILESTREAM associados ao banco de dados selecionado.  
   
  **Acesso Não Transacionado a FILESTREAM**  
- Especifique uma das seguintes opções para acesso não transacional através do sistema de arquivos aos dados FILESTREAM armazenados em FileTables: **OFF**, **READ_ONLY** ou **FULL**. Se FILESTREAM não estiver habilitado no servidor, esse valor será definido como OFF e será desabilitado. Para obter mais informações, veja [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ Especifique uma das seguintes opções para acesso não transacional através do sistema de arquivos aos dados FILESTREAM armazenados em FileTables: **OFF**, **READ_ONLY**ou **FULL**. Se FILESTREAM não estiver habilitado no servidor, esse valor será definido como OFF e será desabilitado. Para obter mais informações, veja [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
-## Diversos  
+## <a name="miscellaneous"></a>Diversos  
  **Padrão ANSI NULL**  
  Permita valores nulos para todos os tipos de dados ou colunas definidos pelo usuário que não estejam explicitamente definidos como **NOT NULL** durante uma instrução **CREATE TABLE** ou **ALTER TABLE** (o estado padrão). Para obter mais informações, veja [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) e [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md).  
   
@@ -147,7 +151,7 @@ caps.handback.revision: 67
  Esse valor somente leitura indica se o encadeamento de propriedades de bancos de dados foi habilitado. Quando definido como **True**, o banco de dados pode ser a origem ou o destino de uma cadeia de propriedade de bancos de dados. Use a instrução ALTER DATABASE para definir essa propriedade.  
   
  **Otimização de Correlação de Data Habilitada**  
- Quando definido como **True**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém as estatísticas de correlação entre as duas tabelas do banco de dados que estiverem vinculadas por uma restrição FOREIGN KEY e possuírem colunas **datetime**.  
+ Quando definido como **True**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém as estatísticas de correlação entre as duas tabelas do banco de dados que estiverem vinculadas por uma restrição FOREIGN KEY e possuírem colunas **datetime** .  
   
  Quando **False**, as estatísticas de correlação não são mantidas.  
   
@@ -181,14 +185,14 @@ caps.handback.revision: 67
  **Formato de Armazenamento VarDecimal Habilitado**  
  Essa opção é somente leitura a partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Quando **True**, este banco de dados está habilitado para o formato de armazenamento vardecimal. O formato de armazenamento vardecimal não pode ser desabilitado enquanto qualquer tabela do banco de dados o estiver usando. No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores, todos os bancos de dados são habilitados para o formato de armazenamento. Essa opção usa [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).  
   
-## Recuperação  
+## <a name="recovery"></a>Recuperação  
  **Verificação de Página**  
  Especifique a opção usada para descobrir e relatar transações de E/S incompletas provocadas por erros de E/S em disco. Os valores possíveis são **Nenhum**, **TornPageDetection**e **Soma de Verificação**. Para obter mais informações, veja [Gerenciar a tabela suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
   
  **Tempo de Recuperação de Destino (Segundos)**  
  Especifica o salto máximo no tempo, expresso em segundos, para recuperar o banco de dados especificado no caso de uma falha. Para obter mais informações, consulte [Pontos de verificação de banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
-## Estado  
+## <a name="state"></a>Estado  
  **Banco de Dados Somente Leitura**  
  Especifique se o banco de dados é somente leitura. Os valores possíveis são **True** e **False**. Quando **True**, os usuários podem apenas ler dados no banco de dados. Os usuários não podem modificar os dados ou objetos de banco de dados. No entanto, o próprio banco de dados pode ser excluído usando a instrução DROP DATABASE. O banco de dados não pode estar em uso quando um novo valor para a opção **Banco de Dados Somente Leitura** estiver especificado. O banco de dados mestre é a exceção e só o administrador do sistema pode usar o mestre enquanto a opção estiver sendo definida.  
   
@@ -213,8 +217,9 @@ caps.handback.revision: 67
  **Criptografia Habilitada**  
  Quando definido como **True**, esse banco de dados está habilitado para criptografia de banco de dados. Uma Chave de Criptografia do Banco de Dados é necessária para criptografia. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   
+

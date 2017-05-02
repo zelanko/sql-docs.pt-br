@@ -1,65 +1,69 @@
 ---
-title: "Crie um logon | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.login.status.f1"
-  - "sql13.swb.login.effectivepermissions.f1"
-  - "sql13.swb.login.general.f1"
-  - "sql13.swb.login.databaseaccess.f1"
-  - "sql13.swb.login.serverroles.f1"
-helpviewer_keywords: 
-  - "autenticação [SQL Server], logons"
-  - "logons [SQL Server], criando"
-  - "criando logons com o Management Studio"
-  - "Criar logon [SQL Server]"
-  - "logons do SQL Server"
+title: Criar um logon | Microsoft Docs
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.login.status.f1
+- sql13.swb.login.effectivepermissions.f1
+- sql13.swb.login.general.f1
+- sql13.swb.login.databaseaccess.f1
+- sql13.swb.login.serverroles.f1
+helpviewer_keywords:
+- authentication [SQL Server], logins
+- logins [SQL Server], creating
+- creating logins with Management Studio
+- Create login [SQL Server]
+- SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 297b1f20843f16a1885676e4428331f75ced8cd6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crie um logon
+# <a name="create-a-login"></a>Crie um logon
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Este tópico descreve como criar um logon no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ou no [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Um logon é a identidade da pessoa ou do processo que está se conectando a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ##  <a name="Background"></a> Plano de fundo  
- Um logon é uma entidade de segurança ou uma entidade que pode ser autenticada por um sistema seguro. Usuários precisam de um logon para se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Você pode criar um logon com base em uma entidade de segurança do Windows (como um usuário de domínio ou um grupo de domínio do Windows) ou pode criar um logon que não esteja baseado em uma entidade de segurança do Windows (como um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+ Um logon é uma entidade de segurança ou uma entidade que pode ser autenticada por um sistema seguro. Usuários precisam de um logon para se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Você pode criar um logon com base em uma entidade de segurança do Windows (como um usuário de domínio ou um grupo de domínio do Windows) ou pode criar um logon que não esteja baseado em uma entidade de segurança do Windows (como um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
-> **OBSERVAÇÃO:** para usar a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] deve usar a autenticação de modo misto. Para obter mais informações, veja [Escolher um modo de autenticação](../../../relational-databases/security/choose-an-authentication-mode.md).  
+> **OBSERVAÇÃO:** para usar a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] deve usar a autenticação de modo misto. Para obter mais informações, veja [Escolher um modo de autenticação](../../../relational-databases/security/choose-an-authentication-mode.md).  
   
- Como uma entidade de segurança, as permissões podem ser concedidas a logons. O escopo de um logon é o [!INCLUDE[ssDE](../../../includes/ssde-md.md)]inteiro. Para se conectar a um banco de dados específico na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um logon deve ser mapeado para um usuário de banco de dados. Permissões, e não o logon, são concedidas dentro do banco de dados e são negadas ao usuário de banco de dados. Permissões que têm o escopo da instância inteira do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (por exemplo, a permissão **CREATE ENDPOINT**) podem ser concedidas a um logon.  
+ Como uma entidade de segurança, as permissões podem ser concedidas a logons. O escopo de um logon é o [!INCLUDE[ssDE](../../../includes/ssde-md.md)]inteiro. Para se conectar a um banco de dados específico na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um logon deve ser mapeado para um usuário de banco de dados. Permissões, e não o logon, são concedidas dentro do banco de dados e são negadas ao usuário de banco de dados. Permissões que têm o escopo da instância inteira do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (por exemplo, a permissão **CREATE ENDPOINT** ) podem ser concedidas a um logon.  
   
-> **OBSERVAÇÃO:** quando um logon se conecta ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a identidade é validada no banco de dados mestre. Use usuários de banco de dados independentes para autenticar conexões [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]r e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] no nível do banco de dados. Quando você usa usuários de banco de dados independente, não é necessário um logon. Um banco de dados independente é um banco de dados isolado de outros bancos de dados e da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (e o banco de dados mestre) que hospeda o banco de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a usuários de bancos de dados independentes para autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Windows. Ao usar [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], combine usuários do banco de dados com regras de firewall de nível de banco de dados. Para obter mais informações, consulte [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+> **OBSERVAÇÃO:** quando um logon se conecta ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a identidade é validada no banco de dados mestre. Use usuários de banco de dados independentes para autenticar conexões [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]r e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] no nível do banco de dados. Quando você usa usuários de banco de dados independente, não é necessário um logon. Um banco de dados independente é um banco de dados isolado de outros bancos de dados e da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (e o banco de dados mestre) que hospeda o banco de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a usuários de bancos de dados independentes para autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Windows. Ao usar [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], combine usuários do banco de dados com regras de firewall de nível de banco de dados. Para obter mais informações, consulte [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ##  <a name="Security"></a> Segurança  
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige a permissão **ALTER ANY LOGIN** ou **ALTER LOGIN** no servidor.  
   
- [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] exige a associação à função **loginmanager**.  
+ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] exige a associação à função **loginmanager** .  
   
 ##  <a name="SSMSProcedure"></a> Criar um logon usando o SSMS  
   
   
 1.  No Pesquisador de Objetos, expanda a pasta da instância de servidor no qual deseja criar o novo logon.  
   
-2.  Clique com o botão direito do mouse na pasta **Segurança**, aponte para **Novo** e selecione **Logon...**.  
+2.  Clique com o botão direito do mouse na pasta **Segurança** , aponte para **Novo**e selecione **Logon...**.  
   
 3.  Na caixa de diálogo **Logon – Novo** , na página **Geral** , insira o nome de um usuário na caixa **Nome de logon** . Como alternativa, clique em **Pesquisar…** para abrir a caixa de diálogo **Selecionar Usuário ou Grupo** .  
   
      Se você clicar em **Pesquisar...**:  
   
-    1.  Sob **Selecione este tipo de objeto**, clique em **Tipos de Objeto...** para abrir a caixa de diálogo **Tipos de Objeto** e selecionar qualquer opção a seguir ou todas: **Entidades de segurança internas**, **Grupos** e **Usuários**. **Entidades de segurança internas** e **Usuários** estão selecionados por padrão. Quando terminar, clique em **OK**.  
+    1.  Sob **Selecione este tipo de objeto**, clique em **Tipos de Objeto...** para abrir a caixa de diálogo **Tipos de Objeto** e selecionar qualquer opção a seguir ou todas: **Entidades de segurança internas**, **Grupos**e **Usuários**. **Entidades de segurança internas** e **Usuários** estão selecionados por padrão. Quando terminar, clique em **OK**.  
   
     2.  Sob **Deste local**, clique em **Locais...** para abrir a caixa de diálogo **Locais** e selecionar um dos locais de servidor disponíveis. Quando terminar, clique em **OK**.  
   
@@ -95,44 +99,44 @@ caps.handback.revision: 29
   
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### Opções adicionais  
+### <a name="additional-options"></a>Opções adicionais  
  A caixa de diálogo **Logon – Novo** também oferece opções de quadro páginas adicionais: **Funções de Servidor**, **Mapeamento de Usuário**, **Protegíveis**e **Status**.  
   
-### Funções de Servidor  
+### <a name="server-roles"></a>Funções de Servidor  
  A página **Funções de Servidor** lista todas as funções possíveis que podem ser atribuídas ao novo logon. As seguintes opções estão disponíveis:  
   
- Caixa de seleção **bulkadmin**  
+ Caixa de seleção**bulkadmin**   
  Os membros da função de servidor fixa **bulkadmin** podem executar a instrução BULK INSERT.  
   
- Caixa de seleção **dbcreator**  
+ Caixa de seleção**dbcreator**   
  Os membros da função de servidor fixa **dbcreator** podem criar, alterar, remover e restaurar qualquer banco de dados.  
   
- Caixa de seleção **diskadmin**  
+ Caixa de seleção**diskadmin**   
  Os membros da função de servidor fixa **diskadmin** podem gerenciar arquivos em disco.  
   
- Caixa de seleção **processadmin**  
+ Caixa de seleção**processadmin**   
  Os membros da função de servidor fixa **processadmin** podem encerrar processos em execução em uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
- Caixa de seleção **public**  
- Todos os usuários, grupos e funções do SQL Server pertencem à função de servidor fixa **public**.  
+ Caixa de seleção**public**   
+ Todos os usuários, grupos e funções do SQL Server pertencem à função de servidor fixa **public** .  
   
- Caixa de seleção **securityadmin**  
- Os membros da função de servidor fixa **securityadmin** gerenciam logons e suas propriedades. Eles podem CONCEDER, NEGAR e REVOGAR permissões de nível de servidor. Eles também podem CONCEDER, NEGAR e REVOGAR permissões de nível de banco de dados. Além disso, eles podem redefinir senhas para logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Caixa de seleção**securityadmin**   
+ Os membros da função de servidor fixa **securityadmin** gerenciam logons e suas propriedades. Eles podem CONCEDER, NEGAR e REVOGAR permissões de nível de servidor. Eles também podem CONCEDER, NEGAR e REVOGAR permissões de nível de banco de dados. Além disso, eles podem redefinir senhas para logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Caixa de seleção **serveradmin**  
+ Caixa de seleção**serveradmin**   
  Os membros da função de servidor fixa **serveradmin** podem alterar as opções de configuração de todo o servidor e fechar o servidor.  
   
- Caixa de seleção **setupadmin**  
+ Caixa de seleção**setupadmin**   
  Os membros da função de servidor fixa **setupadmin** podem adicionar e remover servidores vinculados e podem executar alguns procedimentos armazenados no sistema.  
   
- Caixa de seleção **sysadmin**  
+ Caixa de seleção**sysadmin**   
  Os membros da função de servidor fixa **sysadmin** podem executar qualquer atividade no [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-### Mapeamento de Usuário  
+### <a name="user-mapping"></a>Mapeamento de Usuário  
  A página **Mapeamento de Usuário** lista todos os possíveis bancos de dados e associações de função de banco de dados nesses bancos de dados que podem ser se aplicados ao logon. Os bancos de dados selecionados determinam as associações de função que estão disponíveis para o logon. As opções a seguir estão disponíveis nesta página:  
   
  **Usuários mapeados para este logon**  
- Selecione os bancos de dados que este logon pode acessar. Quando você seleciona um banco de dados, suas funções de banco de dados válidas são exibidas no painel **Associação à função de banco de dados para:** *database_name*.  
+ Selecione os bancos de dados que este logon pode acessar. Quando você seleciona um banco de dados, suas funções de banco de dados válidas são exibidas no painel **Associação à função de banco de dados para:** *database_name* .  
   
  **Mapeamento**  
  Permita que o logon acesse os bancos de dados listados abaixo.  
@@ -146,13 +150,13 @@ caps.handback.revision: 29
  **Esquema Padrão**  
  Especifica o esquema padrão do usuário. Quando um usuário é criado pela primeira vez, seu esquema padrão é **dbo**. É possível especificar um esquema padrão que ainda não existe. Você não pode especificar um esquema padrão para um usuário mapeado para um grupo do Windows, um certificado ou uma chave assimétrica.  
   
- **Conta Convidado habilitada para:** *database_name*  
+ **Guest account enabled for:**  *database_name*  
  Atributo somente leitura que indica se a conta de Convidado está habilitada no banco de dados selecionado. Use a página **Status** da caixa de diálogo **Propriedades de Logon** da conta Convidado para habilitar ou desabilitar a conta Convidado.  
   
- **Associação à função de banco de dados para:** *database_name*  
+ **Database role membership for:**  *database_name*  
  Selecione as funções para o usuário no banco de dados especificado. Todos os usuários são membros da função **pública** em todo banco de dados e não podem ser removidos. Para obter mais informações sobre as funções de banco de dados, veja [Funções no nível de banco de dados](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
-### Protegíveis  
+### <a name="securables"></a>Protegíveis  
  A página **Protegíveis** lista todos os protegíveis e as permissões possíveis nesses protegíveis que podem ser concedidos ao logon. As opções a seguir estão disponíveis nesta página:  
   
  **Grade superior**  
@@ -162,7 +166,7 @@ caps.handback.revision: 29
   
 1.  Clique em **Pesquisar**.  
   
-2.  Na caixa de diálogo **Adicionar Objetos**, selecione um destas opções: **Objetos específicos...**, **Todos objetos dos tipos...** ou **O servidor***server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Na caixa de diálogo **Adicionar Objetos** , selecione um destas opções: **Objetos específicos...**, **Todos objetos dos tipos...**ou **O servidor***server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > **OBSERVAÇÃO:** a seleção de **The server***server_name* preenche automaticamente a grade superior com todos os objetos protegíveis desses servidores.  
   
@@ -204,7 +208,7 @@ caps.handback.revision: 29
  **Deny**  
  Selecione para negar essa permissão ao logon. Desmarque para revogar essa permissão.  
   
-### Status  
+### <a name="status"></a>Status  
  A página **Status** lista algumas das opções de autenticação e de autorização que podem ser configuradas no logo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] selecionado.  
   
  As opções a seguir estão disponíveis nesta página:  
@@ -221,7 +225,7 @@ caps.handback.revision: 29
   
  Selecione esta opção para habilitar ou desabilitar o logon. Esta opção usa a instrução ALTER LOGON com a opção ENABLE ou DISABLE.  
   
- **Autenticação do SQL Server**  
+ **SQL Server Authentication**  
  A caixa de seleção **O logon está bloqueado** só estará disponível se o logon selecionado se conectar usando a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e se estiver bloqueado. Esta configuração é somente leitura. Para desbloquear um logon bloqueado, execute ALTER LOGIN com a opção UNLOCK.  
   
 ##  <a name="TsqlProcedure"></a> Criar um logon usando a Autenticação do Windows e o T-SQL  
@@ -241,7 +245,7 @@ caps.handback.revision: 29
   
     ```  
   
-## Criar um logon usando a Autenticação do SQL Server com o SSMS  
+## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>Criar um logon usando a Autenticação do SQL Server com o SSMS  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -270,7 +274,8 @@ caps.handback.revision: 29
   
 -   Para conceder uma permissão a um logon, veja [Conceder uma permissão a uma entidade](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
+

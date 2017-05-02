@@ -1,25 +1,29 @@
 ---
-title: "SQL Server, objeto Broker Statistics | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Broker Statistics"
-  - "objeto Broker Statistics"
+title: "SQL Server, objeto Estatísticas de Agente | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Broker Statistics
+- Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6f2372e2cc641919957f14145a1e7ff0c96bb74a
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, objeto Broker Statistics
+# <a name="sql-server-broker-statistics-object"></a>SQL Server, objeto Broker Statistics
   O objeto de desempenho SQLServer:Broker Statistics inclui contadores de desempenho que relatam informações gerais sobre o [!INCLUDE[ssSB](../../includes/sssb-md.md)] para uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A seguinte tabela lista os contadores incluídos nesse objeto:  
   
 |Contadores do SQL Server Broker Statistics|Descrição|  
@@ -62,7 +66,7 @@ caps.handback.revision: 32
 |**SEND Total do SQL**|O número total de instruções SEND [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas.|  
 |**SENDs do SQL/s**|O número de instruções SEND [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas por segundo.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

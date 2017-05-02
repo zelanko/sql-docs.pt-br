@@ -1,26 +1,30 @@
 ---
-title: "Exemplo: Restaura&#231;&#227;o por etapas de apenas alguns grupos de arquivos (modelo de recupera&#231;&#227;o completa) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modelo de recuperação completa [SQL Server], exemplo de RESTORE"
-  - "restaurações por etapas [SQL Server], modelo de recuperação completa"
-  - "sequências de restauração [SQL Server], por etapas"
+title: "Exemplo: restauração por etapas de apenas alguns grupos de arquivos (modelo de recuperação completa) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full recovery model [SQL Server], RESTORE example
+- piecemeal restores [SQL Server], full recovery model
+- restore sequences [SQL Server], piecemeal
 ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78208b2b401a3acaf194dc1a13e0df8a56457557
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemplo: Restaura&#231;&#227;o por etapas de apenas alguns grupos de arquivos (modelo de recupera&#231;&#227;o completa)
+# <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>Exemplo: Restauração por etapas de apenas alguns grupos de arquivos (modelo de recuperação completa)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tópico é relevante para bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sob o modelo de recuperação completa que contém vários arquivos ou grupos de arquivos.  
@@ -33,7 +37,7 @@ caps.handback.revision: 31
   
  Os grupos de arquivos intactos `A` e `C` contêm dados críticos. Portanto, eles serão recuperados a seguir para colocá-los online o mais rápido possível. Finalmente, o grupo de arquivos secundário danificado, `B`, é restaurado e recuperado.  
   
-## Sequências de restauração:  
+## <a name="restore-sequences"></a>Sequências de restauração:  
   
 > [!NOTE]  
 >  A sintaxe para uma sequência de restauração online é igual à de uma sequência de restauração offline.  
@@ -55,7 +59,7 @@ caps.handback.revision: 31
     RESTORE LOG adb FROM tailLogBackup WITH RECOVERY  
     ```  
   
-     Neste momento o primário está online. Os arquivos nos grupos de arquivos `A`, `B` e `C` estão com sua recuperação pendente e os grupos de arquivos estão offline.  
+     Neste momento o primário está online. Os arquivos nos grupos de arquivos `A`, `B`e `C` estão com sua recuperação pendente e os grupos de arquivos estão offline.  
   
 3.  Restauração online dos grupos de arquivos `A` e `C`.  
   
@@ -82,7 +86,7 @@ caps.handback.revision: 31
   
      Todos os grupos de arquivos agora estão online.  
   
-## Exemplos adicionais  
+## <a name="additional-examples"></a>Exemplos adicionais  
   
 -   [Exemplo: restauração por etapas de banco de dados &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
@@ -96,11 +100,11 @@ caps.handback.revision: 31
   
 -   [Exemplo: restauração online de um arquivo somente leitura &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Restauração online &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurações por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   
   

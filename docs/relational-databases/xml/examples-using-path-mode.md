@@ -1,27 +1,31 @@
 ---
-title: "Exemplos: Usando modo PATH | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modo PATH FOR XML, exemplos"
+title: 'Exemplos: usando o modo PATH | Microsoft Docs'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01caa2a86cde9fc2d8e857f1fd04486008d5886c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemplos: Usando modo PATH
+# <a name="examples-using-path-mode"></a>Exemplos: Usando modo PATH
   Os exemplos a seguir ilustram o uso do modo PATH para gerar XML a partir de uma consulta SELECT. Muitas dessas consultas são especificadas em relação a documentos XML de instruções da fabricação de bicicletas que são armazenados na coluna Instructions da tabela ProductModel.  
   
-## Especificando uma consulta em modo PATH  
+## <a name="specifying-a-simple-path-mode-query"></a>Especificando uma consulta em modo PATH  
  Esta consulta especifica um FOR XML em modo PATH.  
   
 ```  
@@ -120,7 +124,7 @@ GO
   
  `<Name>Bike Wash</Name>`  
   
-## Especificando nomes de colunas como XPath  
+## <a name="specifying-xpath-like-column-names"></a>Especificando nomes de colunas como XPath  
  Na consulta a seguir, o nome da coluna `ProductModelID` especificado começa com '@' e não contém uma barra ('/'). Portanto, um atributo do elemento <`row`> que tem o valor de coluna correspondente é criado no XML resultante.  
   
 ```  
@@ -185,7 +189,7 @@ GO
   
  `</Root>`  
   
- Além da ID do modelo e do nome do produto, a consulta a seguir recupera os locais de instruções de fabricação do modelo do produto. Como a coluna Instructions é de tipo **xml**, o método **query()** de tipo de dados **xml** é especificado para recuperar o local.  
+ Além da ID do modelo e do nome do produto, a consulta a seguir recupera os locais de instruções de fabricação do modelo do produto. Como a coluna Instructions é de tipo **xml** , o método **query()** de tipo de dados **xml** é especificado para recuperar o local.  
   
 ```  
 SELECT ProductModelID AS "@id",  
@@ -273,7 +277,7 @@ GO
   
  `</ns1:root>`  
   
-## Gerando uma lista de valores com o modo PATH  
+## <a name="generating-a-value-list-using-path-mode"></a>Gerando uma lista de valores com o modo PATH  
  Para cada modelo de produto, essa consulta constrói uma lista de valores de IDs de produtos. Para cada ID de produto, a consulta também constrói elementos aninhados <`ProductName`>, conforme mostrado neste fragmento de XML:  
   
  `<ProductModelData ProductModelID="7" ProductModelName="..."`  
@@ -380,7 +384,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData');  
 ```  
   
-## Adicionando namespaces no XML resultante  
+## <a name="adding-namespaces-in-the-resulting-xml"></a>Adicionando namespaces no XML resultante  
  Conforme descrito em [Adicionando namespaces usando WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md), é possível usar WITH XMLNAMESPACES para incluir namespaces em consultas em modo PATH. Por exemplo, nomes especificados na cláusula SELECT incluem prefixos de namespace. A consulta do modo `PATH` a seguir constrói XML com namespaces.  
   
 ```  
@@ -463,7 +467,7 @@ FOR XML PATH('ProductModelData'), root('root');
   
  `</root>`  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usar o modo PATH com FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

@@ -1,25 +1,29 @@
 ---
-title: "SQL Server, Objeto Wait Statistics | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "objeto Wait Statistics"
-  - "SQLServer:Wait Statistics"
+title: "SQL Server, objeto Estatística de espera | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Wait Statistics object
+- SQLServer:Wait Statistics
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e81641439bc17a678f7713e6b8088495b09db618
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, Objeto Wait Statistics
+# <a name="sql-server-wait-statistics-object"></a>SQL Server, Objeto Wait Statistics
   O objeto de desempenho **SQLServer:Wait Statistics** contém contadores de desempenho que relatam informações sobre o status de espera.  
   
  A tabela a seguir lista os contadores contidos no objeto Wait Statistics (Estatísticas de Espera).  
@@ -48,7 +52,7 @@ caps.handback.revision: 15
 |**Esperas em andamento**|Número de processos que esperam atualmente pelo tipo seguinte.|  
 |**Esperas iniciadas por segundo**|Número de esperas iniciadas, por segundo, do tipo de espera selecionado.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

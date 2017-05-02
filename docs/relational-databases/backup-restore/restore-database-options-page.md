@@ -1,65 +1,69 @@
 ---
-title: "Restaurar o banco de dados (p&#225;gina Op&#231;&#245;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restoredb.options.f1"
+title: "Restaurar banco de dados (página Opções) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 caps.latest.revision: 68
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 68
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 698c8658d2a3d6779a8800c23e5c508351a05d12
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar o banco de dados (p&#225;gina Op&#231;&#245;es)
+# <a name="restore-database-options-page"></a>Restaurar o banco de dados (página Opções)
   Use a página **Opções** da caixa de diálogo **Restaurar Banco de Dados** para modificar o comportamento e o resultado da operação de restauração.  
   
  **Para usar o SQL Server Management Studio para restaurar o backup de um banco de dados**  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 -   [Definir um dispositivo de backup lógico para uma unidade de fita &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 > [!NOTE]  
->  Ao especificar uma tarefa de restauração por meio do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], você pode gerar o script [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondente que contenha as instruções RESTORE para essa operação de restauração. Para gerar o script, clique em **Script** e, em seguida, selecione um destino para o script. Para obter informações sobre a sintaxe RESTORE, veja [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+>  Ao especificar uma tarefa de restauração por meio do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], você pode gerar o script [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondente que contenha as instruções RESTORE para essa operação de restauração. Para gerar o script, clique em **Script** e, em seguida, selecione um destino para o script. Para obter informações sobre a sintaxe RESTORE, veja [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
   
-### Opções de restauração  
+### <a name="restore-options"></a>Opções de restauração  
  Para modificar os aspectos do comportamento da operação de restauração, use as opções do painel **Opções de restauração** .  
   
  **Substituir o banco de dados existente [WITH REPLACE]**  
- A operação de restauração substituirá os arquivos de qualquer banco de dados que estiver atualmente usando o nome do banco de dados que você está especificando no campo **Restaurar em**, na página [Geral](../../relational-databases/backup-restore/restore-database-general-page.md), da caixa de diálogo **Restaurar Banco de Dados**. Os arquivos do banco de dados existente serão substituídos mesmo se você estiver restaurando os backups de um banco de dados diferente daquele com o nome existente. Selecionar esta opção equivale ao uso da opção REPLACE em uma declaração [RESTORE](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ A operação de restauração substituirá os arquivos de qualquer banco de dados que estiver atualmente usando o nome do banco de dados que você está especificando no campo **Restaurar em**, na página [Geral](../../relational-databases/backup-restore/restore-database-general-page.md) , da caixa de diálogo **Restaurar Banco de Dados** . Os arquivos do banco de dados existente serão substituídos mesmo se você estiver restaurando os backups de um banco de dados diferente daquele com o nome existente. Selecionar esta opção equivale ao uso da opção REPLACE em uma declaração [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!CAUTION]  
->  Use esta opção somente cuidadosa consideração. Para obter mais informações, veja [Argumentos de RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+>  Use esta opção somente cuidadosa consideração. Para obter mais informações, veja [Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
  **Preservar as configurações de replicação [WITH KEEP_REPLICATION]**  
  Preserva as configurações de replicação ao restaurar um banco de dados publicado em um servidor diferente daquele onde o banco de dados foi criado. Esta opção será relevante somente se o banco de dados foi replicado quando o backup foi criado.  
   
  Esta opção está disponível somente com a opção **Deixar o banco de dados pronto para uso revertendo as transações não confirmadas** (descrita posteriormente nesta tabela), que é equivalente à restauração de um backup com a opção RECOVERY.  
   
- Selecionar essa opção equivale a usar a opção KEEP_REPLICATION em uma instrução [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md).  
+ Selecionar essa opção equivale a usar a opção KEEP_REPLICATION em uma instrução [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) .  
   
  Para obter mais informações, veja [Fazer backup e restaurar bancos de dados replicados](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
  **Acesso restrito ao banco de dados restaurado [WITH RESTRICTED_USER]**  
- Disponibiliza o banco de dados restaurado apenas para os membros do **db_owner**, **dbcreator** ou **sysadmin**.  
+ Disponibiliza o banco de dados restaurado apenas para os membros do **db_owner**, **dbcreator**ou **sysadmin**.  
   
  A seleção dessa é sinônimo do uso da opção RESTRICTED_USER na instrução RESTORE.  
   
-### Estado de recuperação  
+### <a name="recovery-state"></a>Estado de recuperação  
  Para determinar o estado do banco de dados após a operação de armazenamento, você deve selecionar uma das opções do painel **Estado de recuperação** .  
   
  **RESTORE WITH RECOVERY**  
- Recupera o banco de dados após a restauração do backup final marcado na grade **Conjuntos de backup a serem restaurados** na [página Geral](../../relational-databases/backup-restore/restore-database-general-page.md). Essa é a opção padrão e equivale à especificação de WITH RECOVERY em uma instrução [RESTORE](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ Recupera o banco de dados após a restauração do backup final marcado na grade **Conjuntos de backup a serem restaurados**na [página Geral](../../relational-databases/backup-restore/restore-database-general-page.md). Essa é a opção padrão e equivale à especificação de WITH RECOVERY em uma instrução [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!NOTE]  
 >  No modelo de recuperação completa ou modelo de recuperação bulk-logged, selecione esta opção somente se estiver restaurando todos os arquivos de logs agora.  
@@ -79,7 +83,7 @@ caps.handback.revision: 68
  **Arquivo em espera**  
  Especifica um arquivo em espera. Você pode procurar pelo arquivo em espera ou digitar o nome do caminho diretamente na caixa de texto.  
   
-### Backup do final do log  
+### <a name="tail-log-backup"></a>Backup do final do log  
  Permite designar que um backup do final do log seja executado junto com a restauração do banco de dados.  
   
  **Fazer backup da parte final do log antes da restauração**  
@@ -91,13 +95,13 @@ caps.handback.revision: 68
  **Arquivo de backup**  
  Especifica um arquivo de backup para o final do log. Você pode procurar pelo arquivo de backup ou inserir seu nome diretamente na caixa de texto.  
   
-### Conexões do servidor  
+### <a name="server-connections"></a>Conexões do servidor  
  Permite fechar conexões de bancos de dados existentes.  
   
  **Encerre as conexões existentes**  
  As operações de restauração poderão falhar se houver conexões ativas com o banco de dados. Marque a opção **Fechar conexões existentes** para assegurar que todas as conexões ativas entre o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e o banco de dados sejam fechadas. Essa caixa de seleção define o banco de dados no modo de usuário único antes de executar as operações de restauração e define o banco de dados no modo de vários usuários ao concluir.  
   
-### Aviso  
+### <a name="prompt"></a>Aviso  
  **Perguntar antes de restaurar cada backup**  
  Especifica que, após a restauração de cada backup, a caixa de diálogo **Continuar Restauração** será exibida para perguntar se você deseja continuar a sequência de restauração. Esta caixa de diálogo exibe o nome do conjunto de mídia seguinte (se conhecido) e o nome e a descrição do conjunto de backup seguinte.  
   
@@ -111,8 +115,8 @@ caps.handback.revision: 68
   
 -   Se o backup seguinte for um backup de log, use a tarefa **Restaurar Log de Transações** . Para obter informações sobre como retomar uma sequência de restauração restaurando um log de transações, veja [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
-## Consulte também  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Consulte também  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurar um backup de um dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)   
  [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
  [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   

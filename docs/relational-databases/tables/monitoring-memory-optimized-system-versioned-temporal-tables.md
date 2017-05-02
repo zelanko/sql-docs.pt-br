@@ -1,23 +1,27 @@
 ---
-title: "Monitorando tabelas temporais com controle da vers&#227;o do sistema com otimiza&#231;&#227;o de mem&#243;ria | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Monitorando tabelas temporais com controle de versão do sistema e otimização de memória | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7a06785d-dbcb-44de-b95c-26b131471bee
 caps.latest.revision: 11
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a998ba89645d568585d475b50037adaab72657c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Monitorando tabelas temporais com controle da vers&#227;o do sistema com otimiza&#231;&#227;o de mem&#243;ria
+# <a name="monitoring-memory-optimized-system-versioned-temporal-tables"></a>Monitorando tabelas temporais com controle da versão do sistema com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Você pode usar modos de exibição existentes para controlar o consumo de memória resumido e detalhado para cada tabela com controle da versão do sistema com otimização de memória.  
@@ -99,10 +103,10 @@ GROUP BY TemporalTableSchema, TemporalTableName ;
   
 ```  
   
-## Este artigo foi útil para você? Estamos atentos  
- Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Monitoring%20Memory-Optimized%20System-Versioned%20Temporal%20Tables%20page).  
+## <a name="did-this-article-help-you-were-listening"></a>Este artigo foi útil para você? Estamos atentos  
+ Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Monitoring%20Memory-Optimized%20System-Versioned%20Temporal%20Tables%20page)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [Criação de uma tabela temporal com controle da versão do sistema com otimização de memória](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)   
  [Trabalho com tabelas temporais com controle da versão do sistema com otimização de memória](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)   
@@ -113,3 +117,4 @@ GROUP BY TemporalTableSchema, TemporalTableName ;
  [Funções e exibições de metadados de tabela temporal](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

@@ -1,25 +1,29 @@
 ---
-title: "Propriedades de publica&#231;&#227;o - &lt;Publica&#231;&#227;o&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Caixa de diálogo Propriedades de Publicação"
+title: "Propriedades da publicação – &lt;Publicação&gt; | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Publication Properties dialog box
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31f80253fe7e0fa562e67c9bbf8d685fa72ec37d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propriedades de publica&#231;&#227;o - &lt;Publica&#231;&#227;o&gt;
-  Esta seção fornece informações sobre todas as páginas do **Propriedades de publicação** caixa de diálogo:  
+# <a name="publication-properties----ltpublicationgt"></a>Propriedades da publicação – &lt;Publicação&gt;
+  Esta seção fornece informações sobre todas as páginas da caixa de diálogo **Propriedades de Publicação** :  
   
 -   [Propriedades de Publicação, Geral](../../relational-databases/replication/publication-properties-general.md)  
   
@@ -39,10 +43,10 @@ caps.handback.revision: 19
   
 -   [Propriedades de Publicação, Partições de Dados](../../relational-databases/replication/publication-properties-data-partitions.md)  
   
-## Consulte também  
- [Crie uma publicação](../../relational-databases/replication/publish/create-a-publication.md)   
- [Visualizar e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+## <a name="see-also"></a>Consulte também  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Referência de propriedades de & #40. Replicação e 41;](../../relational-databases/replication/properties-reference-replication.md)  
+ [Referência de propriedades &#40;Replicação&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

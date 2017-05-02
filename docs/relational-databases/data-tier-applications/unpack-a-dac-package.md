@@ -1,32 +1,36 @@
 ---
-title: "Desempacotar um pacote de DAC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "assistente [DAC], desempacotar"
-  - "aplicativo da camada de dados [SQL Server], desempacotar"
-  - "Como [DAC], desempacotar"
-  - "desempacotar DAC"
+title: Desempacotar um pacote de DAC | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- wizard [DAC], unpack
+- data-tier application [SQL Server], unpack
+- How to [DAC], unpack
+- unpack DAC
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 417a725dfab59a77714f44bee0be19c544a6e284
+ms.lasthandoff: 04/11/2017
+
 ---
-# Desempacotar um pacote de DAC
+# <a name="unpack-a-dac-package"></a>Desempacotar um pacote de DAC
   Use a caixa de diálogo Desempacotar Aplicativo da Camada de Dados para descompactar os scripts e arquivos de um pacote de DAC (aplicativo da camada de dados). Os scripts e arquivos são colocados em uma pasta onde podem ser examinados antes do pacote ser usado para implantar o DAC em um sistema de produção. O conteúdo de um DAC também pode ser comparado com o conteúdo de outro pacote desempacotado em outra pasta.  
   
-1.  **Antes de começar:**  [Segurança](#Security)  
+1.  **Before you begin:**  [Security](#Security)  
   
-2.  **Para desempacotar um DAC, usando:** [Caixa de diálogo Desempacotar Aplicativo da Camada de Dados](#UnpackDACDial), [Examinar o Conteúdo de um Pacote de DAC](#ExamDACPack)  
+2.  **To unpack a DAC, using:**  [Unpack Data-tier Application Dialog](#UnpackDACDial), [Examine the Contents of a DAC Package](#ExamDACPack)  
   
 ##  <a name="Security"></a> Segurança  
  Recomendamos não implantar um pacote de DAC de origens desconhecidas ou não confiáveis. Como os DACs podem conter código mal-intencionado que pode executar código [!INCLUDE[tsql](../../includes/tsql-md.md)] sem finalidade ou provocar erros modificando o esquema. Antes de usar um DAC de uma origem desconhecida ou não confiável, implante-o em uma instância de teste isolada do [!INCLUDE[ssDE](../../includes/ssde-md.md)], desempacote o DAC e examine o código, como procedimentos armazenados ou outro código definido pelo usuário.  
@@ -53,7 +57,7 @@ caps.handback.revision: 11
   
  **Os arquivos serão desempacotados nesta pasta:** – Especifique o caminho completo da pasta para os arquivos desempacotados. Se a pasta existir e você conhecer o caminho completo, digite o caminho na caixa. Caso contrário, clique no botão **Procurar** para navegar para uma pasta ou criar uma nova pasta.  
   
- **Procurar** – Abre a página **Procurar Pasta**, em que é possível escolher uma pasta navegando pela hierarquia de arquivos ou criar uma nova pasta.  
+ **Procurar** – Abre a página **Procurar Pasta** , em que é possível escolher uma pasta navegando pela hierarquia de arquivos ou criar uma nova pasta.  
   
  **Desempacotar** – Inicia a operação de desempacotamento.  
   
@@ -70,8 +74,8 @@ caps.handback.revision: 11
   
  **Cancelar** – Encerra a caixa de diálogo sem selecionar uma pasta.  
   
-##  <a name="ExamDACPack"></a> Examinar o conteúdo de um pacote de DAC  
- Depois de desempacotar o pacote, você poderá examinar os arquivos gerados pela caixa de diálogo **Desempacotar Aplicativo da Camada de Dados**. A caixa de diálogo cria os arquivos a seguir na pasta de destino selecionada:  
+##  <a name="ExamDACPack"></a> Examinar o Conteúdo de um Pacote de DAC  
+ Depois de desempacotar o pacote, você poderá examinar os arquivos gerados pela caixa de diálogo **Desempacotar Aplicativo da Camada de Dados** . A caixa de diálogo cria os arquivos a seguir na pasta de destino selecionada:  
   
 1.  Um script do Transact-SQL que contém as instruções para criar os objetos definidos no DAC. O nome do arquivo é *DACName*.sql, em que *DACName* é o nome do DAC.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 11
   
  Para obter mais informações, consulte [Validate a DAC Package](../../relational-databases/data-tier-applications/validate-a-dac-package.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Implantar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [Atualizar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  

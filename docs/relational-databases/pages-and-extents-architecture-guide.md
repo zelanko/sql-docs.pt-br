@@ -1,36 +1,40 @@
 ---
-title: "Guia de arquitetura de p&#225;gina e extens&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "guia de arquitetura de página e extensão"
-  - "guia, arquitetura de página e extensão"
+title: "Guia de arquitetura de páginas e extensões | Microsoft Docs"
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- page and extent architecture guide
+- guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 caps.latest.revision: 2
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 970981a0f8db1baa802a68ea1186211f031488e6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Guia de arquitetura de p&#225;gina e extens&#245;es
+# <a name="pages-and-extents-architecture-guide"></a>Guia de arquitetura de página e extensões
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 A página é a unidade fundamental de armazenamento de dados no SQL Server. Uma extensão consiste em uma coleção de oito páginas fisicamente contíguas. As extensões ajudam a gerenciar páginas de maneira eficaz. Este guia descreve as estruturas de dados que são usadas para gerenciar páginas e extensões em todas as versões do SQL Server. Entender a arquitetura de páginas e extensões é importante para projetar e desenvolver bancos de dados que tenham um desempenho eficiente.
 
-## Páginas e Extensões
+## <a name="pages-and-extents"></a>Páginas e Extensões
 
 A unidade fundamental de armazenamento de dados no SQL Server é a página. O espaço em disco alocado a um arquivo de dados (.mdf ou .ndf) em um banco de dados é logicamente dividido em páginas numeradas de forma contígua de 0 a n. As operações de E/S de disco são executadas no nível de página. Ou seja, o SQL Server lê ou grava páginas de dados inteiras.
 
 As extensões são uma coleção de oito páginas fisicamente contíguas e são usadas para gerenciar as páginas de forma eficaz. Todas as páginas são armazenadas em extensões.
 
-### Páginas
+### <a name="pages"></a>Páginas
 
 No SQL Server, o tamanho de página é 8 KB. Isso significa que os bancos de dados do SQL Server têm 128 páginas por megabyte. Cada página começa com um cabeçalho de 96 bytes usado para armazenar informações de sistema sobre a página. Essas informações incluem o número de página, o tipo de página, a quantidade de espaço livre na página e a ID de unidade de alocação do objeto que possui a página.
 
@@ -59,7 +63,7 @@ As linhas de dados são colocadas em série na página, iniciando imediatamente 
 As linhas não podem passar de uma página para outra, no entanto, partes da linha podem ser afastadas da página da linha para que a linha possa ser realmente muito grande. A quantidade máxima de dados e sobrecarga contida em uma única linha de uma página é 8.060 bytes (8 KB). Porém, isso não inclui os dados armazenados no tipo de página de Texto/Imagem. Essa restrição é suavizada para tabelas que contêm colunas varchar, nvarchar, varbinary ou sql_variant. Quando o tamanho total da linha de todas as colunas fixas e variáveis em uma tabela exceder a limitação de 8.060 bytes, o SQL Server moverá uma ou mais colunas de comprimento variável dinamicamente para as páginas na unidade de alocação ROW_OVERFLOW_DATA, iniciando com a coluna com a maior largura. Isso é feito sempre que uma operação de inserção ou atualização aumenta o tamanho total da linha além do limite de 8.060 bytes. Quando uma coluna é movida para uma página na unidade de alocação ROW_OVERFLOW_DATA, é mantido um ponteiro de 24 bytes na página original da unidade de alocação IN_ROW_DATA. Se uma operação subsequente reduzir o tamanho da linha, o SQL Server moverá as colunas dinamicamente para a página de dados original. 
 
 
-### Extensões 
+### <a name="extents"></a>Extensões 
 
 As extensões são a unidade básica em que o espaço é gerenciado. Uma extensão tem oito páginas fisicamente contíguas ou 64 KB. Isso significa que os bancos de dados do SQL Server têm 16 extensões por megabyte.
 
@@ -71,9 +75,9 @@ Para tornar a alocação de espaço eficiente, o SQL Server não aloca extensõe
 
 Uma nova tabela ou um índice geralmente são páginas alocadas de extensões mistas. Quando a tabela ou o índice cresce até adquirir oito páginas, é alternado para usar extensões uniformes para alocações subsequentes. Se um índice for criado em uma tabela existente que tiver linhas suficientes para gerar oito páginas no índice, todas as alocações para o índice estarão em extensões uniformes.
 
-![extensões](../relational-databases/media/extents.gif)
+![Extensões](../relational-databases/media/extents.gif)
 
-## Gerenciando alocações de extensão e espaço livre 
+## <a name="managing-extent-allocations-and-free-space"></a>Gerenciando alocações de extensão e espaço livre 
 
 As estruturas de dados do SQL Server que gerenciam alocações de extensão e controlam espaço livre têm uma estrutura relativamente simples. Seus benefícios são: 
 
@@ -83,7 +87,7 @@ As estruturas de dados do SQL Server que gerenciam alocações de extensão e co
 * A maioria das informações de alocação não é encadeada. Isso simplifica a manutenção das informações de alocação.    
   Cada alocação ou desalocação de página pode ser executada rapidamente. O que diminui a contenção entre tarefas simultâneas que precisam alocar ou desalocar páginas. 
 
-### Gerenciando alocações de extensão
+### <a name="managing-extent-allocations"></a>Gerenciando alocações de extensão
 
 O SQL Server usa dois tipos de mapas de alocação para registrar a alocação de extensões: 
 
@@ -103,7 +107,7 @@ Cada extensão tem os padrões de bit a seguir configurados no GAM e no SGAM, co
  
 Isso gera algoritmos de gerenciamento de extensão simples. Para alocar uma extensão uniforme, o Mecanismo de Banco de Dados pesquisa o GAM de um 1 bit e o define como 0. Para encontrar uma extensão mista com páginas livres, o Mecanismo de Banco de Dados pesquisa o SGAM de um 1 bit. Para alocar uma extensão mista, o Mecanismo de Banco de Dados pesquisa o GAM de um 1 bit, o define como 0 e define o bit correspondente no SGAM como 1. Para desalocar uma extensão, o Mecanismo de Banco de Dados verifica se o bit do GAM está definido como 1 e o bit do SGAM como 0. Os algoritmos usados internamente pelo Mecanismo de Banco de Dados são mais complexos que os descritos neste tópico, porque o Mecanismo de Banco de Dados distribui dados uniformemente em um banco de dados. No entanto, até os algoritmos reais são simplificados por não precisarem gerenciar cadeias de informações de alocação de extensão.
 
-### Controlando espaço livre
+### <a name="tracking-free-space"></a>Controlando espaço livre
 
 As páginas PFS (Page Free Space) registram o status de alocação de cada página, se uma página individual foi alocada, e a quantidade de espaço livre em cada página. O PFS tem um byte para cada página, que registra se a página está alocada e, em caso afirmativo, se ela está vazia, de 1 a 50% completa, de 51 a 80% completa, de 81 a 95% completa ou de 96 a 100% completa.
 
@@ -113,7 +117,7 @@ Uma página PFS é a primeira página após a página de cabeçalho do arquivo e
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
-## Gerenciando espaço usado por objetos 
+## <a name="managing-space-used-by-objects"></a>Gerenciando espaço usado por objetos 
 
 Uma página IAM (Index Allocation Map) mapeia as extensões em uma parte de 4 gigabytes (GB) de um arquivo de banco de dados usada por uma unidade de alocação. Uma unidade de alocação deve ser de um dos três tipos:
 
@@ -146,7 +150,7 @@ Quando o Mecanismo de Banco de Dados do SQL Server precisar inserir uma linha no
 O Mecanismo de Banco de Dados só alocará uma extensão nova a uma unidade de alocação quando não conseguir encontrar uma página rapidamente em uma extensão existente com espaço suficiente para manter a linha que estiver sendo inserida. O Mecanismo de Banco de Dados aloca extensões disponíveis no grupo de arquivos usando um algoritmo de alocação proporcional. Se um grupo de arquivos tiver dois arquivos e um deles tiver duas vezes mais espaço livre do que o outro, serão alocadas duas páginas do arquivo com o espaço disponível para cada página alocada do outro arquivo. Isso significa que todo arquivo em um grupo de arquivos deve ter uma porcentagem semelhante de espaço usado. 
 
  
-## Controlando extensões modificadas 
+## <a name="tracking-modified-extents"></a>Controlando extensões modificadas 
 
 O Mecanismo de Banco de Dados usa duas estruturas de dados internas para controlar extensões modificadas por operações de cópia em massa e extensões modificadas desde o último backup completo. Essas estruturas de dados aceleram consideravelmente os backups diferenciais. Elas também aceleram o registro de operações de cópia em massa quando um banco de dados está usando o modelo de recuperação bulk logged. Como as páginas GAM (Global Alocação Map) e SGAM (Shared Global Allocation Map), essas estruturas são bitmaps em que cada bit representa uma única extensão. 
 
@@ -160,3 +164,4 @@ O intervalo entre as páginas DCM e BCM é o mesmo que o intervalo entre as pág
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
  
+

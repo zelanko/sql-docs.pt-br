@@ -1,25 +1,29 @@
 ---
-title: "SQL Server, objeto de estat&#237;sticas do pool de recursos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Objeto de estatísticas do pool de recursos"
-  - "SQL Server: objeto de estatísticas do pool de recursos"
+title: "SQL Server, objeto de Estatísticas do pool de recursos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reosurce Pool Stats object
+- 'SQLServer: Resource Pool Stats object'
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ccd649e92cd416ff086758005f3b5df728dfe1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, objeto de estat&#237;sticas do pool de recursos
+# <a name="sql-server-resource-pool-stats-object"></a>SQL Server, objeto de estatísticas do pool de recursos
   O objeto SQLServer:Estatísticas de Pool de Recursos contém contadores de desempenho que fornecem informações sobre as estatísticas de pool de recursos do Administrador de Recursos.  
   
  Cada pool de recursos ativo cria uma instância do objeto de desempenho SQLServer:Estatísticas de Pool de Recursos que tem o mesmo nome de instância do pool de recursos do Administrador de Recursos. A tabela a seguir descreve os contadores suportados nesta instância.  
@@ -58,7 +62,7 @@ caps.handback.revision: 14
 |**Memória usada (KB)**|A quantidade de memória usada, em kilobytes (KB), para o pool de recursos.|  
 
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, objeto de estatísticas de grupo de cargas de trabalho](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)   
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)  

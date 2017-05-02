@@ -1,25 +1,29 @@
 ---
-title: "Par&#226;metros | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "procedimentos armazenados [SQL Server], parâmetros"
-  - "funções definidas pelo usuário [SQL Server], parâmetros"
+title: "Parâmetros | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], parameters
+- user-defined functions [SQL Server], parameters
 ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
 caps.latest.revision: 2
-author: "pmasl"
-ms.author: "pelopes"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: pmasl
+ms.author: pelopes
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 64617ddd4922e7217ac905e92e5d9dfd6ffff7e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Par&#226;metros
+# <a name="parameters"></a>Parâmetros
 São usados parâmetros para troca de dados entre procedimentos armazenados e funções e entre o aplicativo ou a ferramenta que chamam o procedimento armazenado ou a função: 
 
 *  Os parâmetros de entrada permitem que o chamador transfira valores de dados para procedimentos armazenados ou funções.

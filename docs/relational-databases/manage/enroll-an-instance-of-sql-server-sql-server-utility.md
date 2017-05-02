@@ -1,32 +1,36 @@
 ---
-title: "Inscrever uma inst&#226;ncia do SQL Server (Utilit&#225;rio do SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.SWB.makemanaged.agentaccount.F1"
-  - "sql13.SWB.makemanaged.welcome.F1"
-  - "sql13.SWB.makemanaged.enrolling.F1"
-  - "sql13.SWB.makemanaged.instancename.F1"
-  - "sql13.SWB.makemanaged.Summary.F1"
-  - "sql13.SWB.makemanaged.progress.F1"
-  - "sql13.SWB.makemanaged.validation.F1"
-helpviewer_keywords: 
-  - "Inscrever instância"
+title: "Inscrever uma instância do SQL Server (Utilitário do SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.SWB.makemanaged.agentaccount.F1
+- sql13.SWB.makemanaged.welcome.F1
+- sql13.SWB.makemanaged.enrolling.F1
+- sql13.SWB.makemanaged.instancename.F1
+- sql13.SWB.makemanaged.Summary.F1
+- sql13.SWB.makemanaged.progress.F1
+- sql13.SWB.makemanaged.validation.F1
+helpviewer_keywords:
+- Enroll instance
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: c5bb6279f7fd96f30aa3f19628e2edc5edb5cc53
+ms.lasthandoff: 04/11/2017
+
 ---
-# Inscrever uma inst&#226;ncia do SQL Server (Utilit&#225;rio do SQL Server)
+# <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrever uma instância do SQL Server (Utilitário do SQL Server)
   Inscreva uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente para monitorar o desempenho e a configuração como uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O UCP (ponto de controle de utilitário) coleta informações de configuração e de desempenho de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cada 15 minutos. Estas informações são armazenadas no UMDW (data warehouse de gerenciamento do utilitário) no UCP; o nome de arquivo UMDW é sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são comparados a políticas para ajudar a identificar afunilamentos no uso de recursos e oportunidades de consolidação.  
   
  Nesta versão, o UCP e todas as instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem atender aos seguintes requisitos:  
@@ -43,7 +47,7 @@ caps.handback.revision: 13
   
  Nesta versão, o UCP deve atender aos seguintes requisitos:  
   
--   A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser uma edição com suporte. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser uma edição com suporte. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   É recomendável que o UCP seja hospedado por uma instância do SQL Server que diferencie maiúsculas de minúsculas.  
   
@@ -57,19 +61,19 @@ caps.handback.revision: 13
   
  Nesta versão, todas as instâncias gerenciadas do SQL Server devem atender aos seguintes requisitos:  
   
--   É recomendável que, se o UCP for hospedado por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem diferenciação de maiúsculas e minúsculas, as instâncias gerenciadas do SQL Server também não diferenciarão maiúsculas de minúsculas.  
+-   É recomendável que, se o UCP for hospedado por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sem diferenciação de maiúsculas e minúsculas, as instâncias gerenciadas do SQL Server também não diferenciarão maiúsculas de minúsculas.  
   
--   Não há suporte para dados FILESTREAM para monitoramento do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Não há suporte para dados FILESTREAM para monitoramento do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Para obter mais informações, veja [Especificações de capacidade máxima para o SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) e [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Para obter mais informações, veja [Especificações de capacidade máxima para o SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) e [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- Para obter mais informações sobre os conceitos do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Recursos e tarefas do Utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+ Para obter mais informações sobre os conceitos do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , veja [Recursos e tarefas do Utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 > [!IMPORTANT]  
->  O conjunto de coleta do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility tem suporte lado a lado com conjuntos de coleta não Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ou seja, uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser monitorada por outros conjuntos de coleta enquanto ainda é membro de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Observe, no entanto, que todos os conjuntos de coleta na instância gerenciada carregam seus dados no data warehouse de gerenciamento do utilitário. Para obter mais informações, veja [Considerações sobre a execução de Conjuntos de Coleta do Utilitário e não Utilitário na mesma instância do SQL Server](../../relational-databases/manage/run utility and non-utility collection sets on same sql instance.md) e [Configurar o data warehouse do ponto de controle do utilitário &#40;Utilitário do SQL Server&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md).  
+>  O conjunto de coleta do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility tem suporte lado a lado com conjuntos de coleta não Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ou seja, uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser monitorada por outros conjuntos de coleta enquanto ainda é membro de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Observe, no entanto, que todos os conjuntos de coleta na instância gerenciada carregam seus dados no data warehouse de gerenciamento do utilitário. Para obter mais informações, veja [Considerações sobre a execução de Conjuntos de Coleta do Utilitário e não Utilitário na mesma instância do SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md) e [Configurar o data warehouse do ponto de controle do utilitário &#40;Utilitário do SQL Server&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md).  
   
-## Etapas do Assistente  
- As seções a seguir fornecem informações detalhadas sobre cada página no fluxo de trabalho do Assistente. Clique no link para buscar os detalhes em uma página do Assistente. Para obter mais informações sobre um script do PowerShell desta operação, veja o [exemplo](#PowerShell_enroll) do PowerShell.  
+## <a name="wizard-steps"></a>Etapas do Assistente  
+ As seções a seguir fornecem informações detalhadas sobre cada página no fluxo de trabalho do Assistente. Clique no link para buscar os detalhes em uma página do Assistente. Para obter mais informações sobre um script do PowerShell desta operação, veja o [exemplo](#PowerShell_enroll)do PowerShell.  
   
 -   [Introdução ao Assistente para Inscrever Instância](#Welcome)  
   
@@ -86,17 +90,17 @@ caps.handback.revision: 13
 -   [Inscrevendo a instância do SQL Server](#Enrolling)  
   
 ##  <a name="Welcome"></a> Introdução ao Assistente para Inscrever Instância  
- Para iniciar o Assistente, expanda a árvore do Gerenciador do Utilitário em um ponto de controle do utilitário, clique com o botão direito do mouse em **Instâncias Gerenciadas** e selecione **Adicionar Instância Gerenciada...**.  
+ Para iniciar o Assistente, expanda a árvore do Gerenciador do Utilitário em um ponto de controle do utilitário, clique com o botão direito do mouse em **Instâncias Gerenciadas**e selecione **Adicionar Instância Gerenciada...**.  
   
  Para continuar, clique em **Avançar**.  
   
 ##  <a name="Instance_name"></a> Especificar a instância do SQL Server  
- Para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar…**. Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName. Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
+ Para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar…**. Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName. Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
  Para continuar, clique em **Avançar**.  
   
 ##  <a name="Connection_dialog"></a> Caixa de diálogo de conexão  
- Na caixa de diálogo Conectar ao Servidor, verifique as informações de tipo de servidor, nome do computador e nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
+ Na caixa de diálogo Conectar ao Servidor, verifique as informações de tipo de servidor, nome do computador e nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
 > [!NOTE]  
 >  Se a conexão for criptografada, ela será usada. Se a conexão não for criptografada, o Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conectará novamente usando uma conexão criptografada.  
@@ -113,20 +117,20 @@ caps.handback.revision: 13
  Para continuar, clique em **Avançar**.  
   
 ##  <a name="Validation_rules"></a> Validação de instância do SQL Server  
- Nesta versão, as seguintes condições devem ser verdadeiras na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para serem inscritas no Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Nesta versão, as seguintes condições devem ser verdadeiras na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para serem inscritas no Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 |Condição|Ação corretiva|  
 |---------------|-----------------------|  
 |É necessário ter privilégios de administrador na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no UCP.|Faça logon com uma conta que tenha privilégios de administrador na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no UCP.|  
-|A edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve oferecer suporte à inscrição de instância.|Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).|  
-|A instância especificada do UCP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve estar com o TCP/IP habilitado.|Habilite o TCP/IP no UCP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode já estar inscrita com nenhum outro UCP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você especifica já for gerenciada como parte de um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente, você não poderá inscrevê-la com um UCP diferente.|  
+|A edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve oferecer suporte à inscrição de instância.|Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
+|A instância especificada do UCP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve estar com o TCP/IP habilitado.|Habilite o TCP/IP no UCP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode já estar inscrita com nenhum outro UCP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você especifica já for gerenciada como parte de um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente, você não poderá inscrevê-la com um UCP diferente.|  
 |A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode já ser um UCP.|Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada já for um UCP diferente do UCP ao qual você está conectado, você não poderá inscrevê-la neste UCP.|  
 |A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ter conjuntos de coleta do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalados.|Reinstale a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|É necessário parar os conjuntos de coleta na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Pare os conjuntos de coleta pré-existentes na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o coletor de dados estiver desabilitado, habilite-o, pare os conjuntos de coleta em execução e execute novamente as regras de validação para a operação Criar UCP.<br /><br /> Para habilitar o coletor de dados:<br /><br /> No Pesquisador de Objetos, expanda o nó **Gerenciamento** .<br /><br /> Clique com o botão direito do mouse em **Coleta de Dados** e clique em **Habilitar Coleta de Dados**.<br /><br /> Para parar um conjunto de coleta:<br /><br /> No Pesquisador de Objetos, expanda o nó Gerenciamento, expanda **Coleta de Dados**e, em seguida, expanda **Conjuntos de Coleta de Dados do Sistema**.<br /><br /> Clique com o botão direito do mouse no conjunto de coleta a ser interrompido e clique em **Parar Conjunto de Coleta de Dados**.<br /><br /> Uma caixa de mensagem exibirá o resultado dessa ação, e um círculo vermelho no ícone do conjunto de coleta indicará que este foi interrompido.|  
-|O serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve ser iniciado na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Inicie o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se a instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configure o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar manualmente. Caso contrário, configure o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar automaticamente.|  
-|O serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve ser iniciado no UCP.|Inicie o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no UCP. Se a instância especificada do UCP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], configure o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar manualmente. Caso contrário, configure o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar automaticamente.|  
-|O WMI deve ser configurado corretamente.|Para solucionar problemas de configuração do WMI, veja [Solucionar problemas do Utilitário do SQL Server](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md).|  
+|É necessário parar os conjuntos de coleta na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Pare os conjuntos de coleta pré-existentes na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o coletor de dados estiver desabilitado, habilite-o, pare os conjuntos de coleta em execução e execute novamente as regras de validação para a operação Criar UCP.<br /><br /> Para habilitar o coletor de dados:<br /><br /> No Pesquisador de Objetos, expanda o nó **Gerenciamento** .<br /><br /> Clique com o botão direito do mouse em **Coleta de Dados**e clique em **Habilitar Coleta de Dados**.<br /><br /> Para parar um conjunto de coleta:<br /><br /> No Pesquisador de Objetos, expanda o nó Gerenciamento, expanda **Coleta de Dados**e, em seguida, expanda **Conjuntos de Coleta de Dados do Sistema**.<br /><br /> Clique com o botão direito do mouse no conjunto de coleta a ser interrompido e clique em **Parar Conjunto de Coleta de Dados**.<br /><br /> Uma caixa de mensagem exibirá o resultado dessa ação, e um círculo vermelho no ícone do conjunto de coleta indicará que este foi interrompido.|  
+|O serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve ser iniciado na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Inicie o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se a instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configure o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar manualmente. Caso contrário, configure o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar automaticamente.|  
+|O serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve ser iniciado no UCP.|Inicie o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no UCP. Se a instância especificada do UCP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configure o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar manualmente. Caso contrário, configure o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar automaticamente.|  
+|O WMI deve ser configurado corretamente.|Para solucionar problemas de configuração do WMI, veja [Solucionar problemas do Utilitário do SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
 |A conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deverá ser uma conta de domínio do Windows válida no UCP.|Especifique uma conta de domínio do Windows válida. Para assegurar que a conta seja válida, faça logon na instância especificada do UCP usando a conta de domínio do Windows.|  
 |Se você selecionar a opção de conta proxy, a conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deverá ser uma conta de domínio do Windows válida na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Especifique uma conta de domínio do Windows válida. Para assegurar que a conta seja válida, faça logon na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a conta de domínio do Windows.|  
 |A conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não pode ser uma conta interna, como Serviço de Rede.|Reatribua a conta a uma conta de domínio do Windows. Para assegurar que a conta seja válida, faça logon na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a conta de domínio do Windows.|  
@@ -140,7 +144,7 @@ caps.handback.revision: 13
  Para continuar, clique em **Avançar**.  
   
 ##  <a name="Summary"></a> Resumo da inscrição da instância  
- A página de resumo lista as informações sobre a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a serem adicionadas ao Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ A página de resumo lista as informações sobre a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a serem adicionadas ao Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Configurações de instâncias gerenciadas:  
   
@@ -168,18 +172,18 @@ caps.handback.revision: 13
 >   
 >  Ocorreu uma exceção ao executar uma instrução ou um lote Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Informações adicionais: Não foi possível obter informações sobre o grupo/usuário '\<DomainName\AccountName>' do Windows NT, código de erro 0x5. (Microsoft SQL Server, Erro: 15404)  
+>  Informações adicionais: não foi possível obter informações sobre o grupo/usuário '\<DomainName\AccountName>' do Windows NT, código de erro 0x5. (Microsoft SQL Server, Erro: 15404)  
 >   
->  Para obter mais informações sobre como solucionar essa falha, veja [Solucionar problemas do Utilitário do SQL Server](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md).  
+>  Para obter mais informações sobre como solucionar essa falha, veja [Solucionar problemas do Utilitário do SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   
 > [!IMPORTANT]  
->  Não altere nenhuma propriedade do conjunto de coleta “Informações sobre o Utilitário” em uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não ative/desative a coleta de dados manualmente, pois ela é controlada por um trabalho de agente do utilitário.  
+>  Não altere nenhuma propriedade do conjunto de coleta “Informações sobre o Utilitário” em uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e não ative/desative a coleta de dados manualmente, pois ela é controlada por um trabalho de agente do utilitário.  
   
- Depois de concluir as etapas do Assistente para Inscrever Instância, clique no nó **Instâncias Gerenciadas** no painel **Navegação do Gerenciador do Utilitário** do SSMS. As instâncias inscritas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são exibidas na exibição de lista no painel **conteúdo do Gerenciador do Utilitário**.  
+ Depois de concluir as etapas do Assistente para Inscrever Instância, clique no nó **Instâncias Gerenciadas** no painel **Navegação do Gerenciador do Utilitário** do SSMS. As instâncias inscritas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são exibidas na exibição de lista no painel **conteúdo do Gerenciador do Utilitário** .  
   
- O processo de coleta de dados é iniciado imediatamente, mas pode demorar até 30 minutos para os dados aparecerem pela primeira vez no painel e nos pontos de vista do painel de conteúdo do Gerenciador do Utilitário. A coleta de dados continua uma vez a cada 15 minutos. Para atualizar os dados, clique com o botão direito do mouse no nó **Instâncias Gerenciadas**, no painel de navegação do **Gerenciador do Utilitário**, e selecione **Atualizar**, ou clique com o botão direito do mouse no nome de instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na exibição de lista e selecione **Atualizar**.  
+ O processo de coleta de dados é iniciado imediatamente, mas pode demorar até 30 minutos para os dados aparecerem pela primeira vez no painel e nos pontos de vista do painel de conteúdo do Gerenciador do Utilitário. A coleta de dados continua uma vez a cada 15 minutos. Para atualizar os dados, clique com o botão direito do mouse no nó **Instâncias Gerenciadas** , no painel de navegação do **Gerenciador do Utilitário** , e selecione **Atualizar**, ou clique com o botão direito do mouse no nome de instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na exibição de lista e selecione **Atualizar**.  
   
- Para remover instâncias gerenciadas do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selecione **Instâncias Gerenciadas** no painel de **Navegação do Gerenciador do Utilitário** para popular a exibição de lista de instâncias gerenciadas, clique com o botão direito do mouse no nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na exibição de lista do **Conteúdo do Gerenciador do Utilitário** e selecione **Tornar Instância Não Gerenciada**.  
+ Para remover instâncias gerenciadas do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selecione **Instâncias Gerenciadas** no painel de **Navegação do Gerenciador do Utilitário** para popular a exibição de lista de instâncias gerenciadas, clique com o botão direito do mouse no nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na exibição de lista do **Conteúdo do Gerenciador do Utilitário** e selecione **Tornar Instância Não Gerenciada**.  
   
 ##  <a name="PowerShell_enroll"></a> Inscrever uma instância do SQL Server usando o PowerShell  
  Use o seguinte exemplo para inscrever uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente:  
@@ -193,9 +197,10 @@ caps.handback.revision: 13
 > $ManagedInstance = $Utility.EnrollInstance($InstanceConnection, "ProxyAccount", "ProxyPassword");  
 ```  
   
-## Consulte também  
- [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+## <a name="see-also"></a>Consulte também  
+ [Recursos e tarefas do Utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Monitorar instâncias do SQL Server no Utilitário do SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Solucionar problemas do Utilitário do SQL Server](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md)  
+ [Solucionar problemas do Utilitário do SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
+

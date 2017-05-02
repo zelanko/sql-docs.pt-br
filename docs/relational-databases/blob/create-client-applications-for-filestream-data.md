@@ -1,24 +1,28 @@
 ---
-title: "Criar aplicativos clientes para dados FILESTREAM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], Win32"
+title: Criar aplicativos clientes para dados FILESTREAM | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c8ae3ba00110ba3441ac5bfa6dc2e06979f59ee0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar aplicativos clientes para dados FILESTREAM
+# <a name="create-client-applications-for-filestream-data"></a>Criar aplicativos clientes para dados FILESTREAM
   Você pode usar Win32 para ler e gravar dados em um FILESTREAM BLOB. As seguintes etapas são exigidas:  
   
 -   Leia o caminho do arquivo de FILESTREAM.  
@@ -46,19 +50,19 @@ caps.handback.revision: 18
 ##  <a name="steps"></a> Etapas para acessar dados FILESTREAM  
   
 ###  <a name="path"></a> Lendo o caminho do arquivo de FILESTREAM  
- Cada célula em uma tabela de FILESTREAM tem um caminho de arquivo associado. Para ler o caminho, use a propriedade **PathName** de uma coluna **varbinary(max)** em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. Os exemplos a seguir mostram como ler o caminho de arquivo de uma coluna **varbinary(max)**.  
+ Cada célula em uma tabela de FILESTREAM tem um caminho de arquivo associado. Para ler o caminho, use a propriedade **PathName** de uma coluna **varbinary(max)** em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] . Os exemplos a seguir mostram como ler o caminho de arquivo de uma coluna **varbinary(max)** .  
   
  [!code-sql[FILESTREAM#FS_PathName](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_1.sql)]  
   
 ###  <a name="trx"></a> Lendo o contexto da transação  
- Para obter o contexto da transação atual, use a função [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md). O exemplo seguinte mostra como começar uma transação e ler o contexto de transação atual.  
+ Para obter o contexto da transação atual, use a função [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) . O exemplo seguinte mostra como começar uma transação e ler o contexto de transação atual.  
   
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_2.sql)]  
   
 ###  <a name="handle"></a> Obtendo um identificador de arquivo Win32  
  Para obter um identificador de arquivo do Win32, chame a API OpenSqlFilestream. Esta API é exportada do arquivo sqlncli.dll. O identificador retornado pode ser transmitido para qualquer uma das seguintes APIs do Win32: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426), ou [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Os exemplos a seguir mostram como obter um identificador de arquivo Win32 e usá-lo para ler e gravar dados no FILESTREAM BLOB.  
   
- [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
+ [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
   
  [!code-vb[FILESTREAM#FS_VB_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/visualbasic/create-client-applicatio_4.vb)]  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 18
   
 -   Use NULL em vez de 0x representar uma coluna de FILESTREAM não inicializada. O valor 0x faz com que um arquivo seja criado; NULL não faz.  
   
--   Evite operações de inserção e de exclusão em tabelas que contêm colunas de FILESTREAM não nulas.  As operações de inserção e de exclusão podem modificar as tabelas de FILESTREAM que são usadas para coleta de lixo. Isso pode fazer com que o desempenho de um aplicativo seja reduzido ao longo do tempo.  
+-   Evite operações de inserção e de exclusão em tabelas que contêm colunas de FILESTREAM não nulas. As operações de inserção e de exclusão podem modificar as tabelas de FILESTREAM que são usadas para coleta de lixo. Isso pode fazer com que o desempenho de um aplicativo seja reduzido ao longo do tempo.  
   
 -   Em aplicativos que usam replicação, use NEWSEQUENTIALID() em vez de NEWID(). NEWSEQUENTIALID() executa melhor que NEWID() para geração de GUID nesses aplicativos.  
   
@@ -84,7 +88,7 @@ caps.handback.revision: 18
   
 -   Se um aplicativo usar o protocolo SMB1, os dados BLOB de FILESTREAM deverão ser lidos em múltiplos de 60 KB para otimizar o desempenho.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Evitar conflitos com operações de banco de dados em aplicativos de FILESTREAM](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)   
  [Acessar dados do FILESTREAM com OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [Objeto binário grande &#40;Blob&#41; Dados &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   

@@ -1,24 +1,28 @@
 ---
-title: "Classe de evento OLEDB Provider Information | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento OLEDB Provider Information"
+title: Classe de evento OLEDB Provider Information | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLEDB Provider Information event class
 ms.assetid: a0316c4e-4b8c-4754-8a35-222f3c0907d1
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 60ff0c896be635089acd38d9ade6ec731d526250
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento OLEDB Provider Information
+# <a name="oledb-provider-information-event-class"></a>classe de evento OLEDB Provider Information
   A classe de evento **OLEDB Provider Information** ocorre quando uma consulta distribuída é realizada e coleta as informações correspondentes à conexão do provedor.  
   
  Essa classe de evento contém todas as propriedades coletadas a partir do provedor remoto ao usar vários conjuntos de propriedade, inclusive as seguintes:  
@@ -27,9 +31,9 @@ caps.handback.revision: 22
   
 -   SQLPROPSET_OPTHINTS  
   
--   DBPROPSET_SQLSERVERDATASOURCEINFO (apenas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   DBPROPSET_SQLSERVERDATASOURCEINFO (apenas[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )  
   
--   DBPROPSET_SQLSERVERDBINIT (apenas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   DBPROPSET_SQLSERVERDBINIT (apenas[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )  
   
 -   DBPROPSET_ROWSET  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 22
   
  Essas propriedades, junto com os metadados disponíveis, são usadas pelo otimizador de consultas para escolher o plano de execução ideal para a consulta. Essa informação é útil para localizar execução e analisar chamadas OLE DB e eventos em rastreamentos de profiler de consulta distribuídos.  
   
-## Colunas de dados da classe de evento OLEDB Provider Information  
+## <a name="oledb-provider-information-event-class-data-columns"></a>Colunas de dados da classe de evento OLEDB Provider Information  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -52,7 +56,7 @@ caps.handback.revision: 22
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
 |**LinkedServerName**|**nvarchar**|Nome do servidor vinculado.|45|Sim|  
 |**LoginName**|**nvarchar**|Nome de logon do usuário (logon de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou as credenciais de logon do Windows na forma de DOMAIN\nome_do_usuário).|11|Sim|  
-|**LoginSid**|**image**|SID (identificador de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals**. Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
+|**LoginSid**|**image**|SID (identificador de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |**ProviderName**|**nvarchar**|Nome do provedor OLE DB.|46|Sim|  
@@ -63,7 +67,7 @@ caps.handback.revision: 22
 |**TextData**|**ntext**|Valor do texto dependente da classe de evento capturada no rastreamento.|1|Sim|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Objetos de automação OLE em Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  

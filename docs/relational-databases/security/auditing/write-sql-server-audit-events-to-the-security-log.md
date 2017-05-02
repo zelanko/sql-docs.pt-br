@@ -1,32 +1,36 @@
 ---
-title: "Gravar eventos de auditoria do SQL Server no log de seguran&#231;a | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "logs [SQL Server], log de segurança"
-  - "auditoria de servidor [SQL Server]"
-  - "auditorias [SQL Server], gravando no log de segurança"
-  - "logs de segurança [SQL Server]"
+title: "Escrever eventos de auditoria do SQL Server no log de segurança | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], Security Log
+- server audit [SQL Server]
+- audits [SQL Server], writing to Security Log
+- security logs [SQL Server]
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 268f1fbd8ea57db8626c84999a3454e4c4459511
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gravar eventos de auditoria do SQL Server no log de seguran&#231;a
+# <a name="write-sql-server-audit-events-to-the-security-log"></a>Gravar eventos de auditoria do SQL Server no log de segurança
   em um ambiente de alta segurança, o log de Segurança do Windows é o local apropriado para gravar eventos que registram o acesso a objetos. Outros locais de auditoria têm suporte, mas estão mais sujeitos a falsificações.  
   
  Há dois requisitos principais para gravar auditorias do servidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no log de Segurança do Windows:  
   
--   É necessário configurar o acesso ao objeto de auditoria para capturar os eventos. A ferramenta de política de auditoria (`auditpol.exe`) expõe uma variedade de configurações de subpolíticas na categoria **acesso ao objeto de auditoria**. Para permitir que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audite o acesso a objetos, defina a configuração de **aplicativo gerado** .  
+-   É necessário configurar o acesso ao objeto de auditoria para capturar os eventos. A ferramenta de política de auditoria (`auditpol.exe`) expõe uma variedade de configurações de subpolíticas na categoria **acesso ao objeto de auditoria** . Para permitir que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audite o acesso a objetos, defina a configuração de **aplicativo gerado** .  
   
 -   A conta que o serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está executando deve ter a permissão **gerar auditorias de segurança** para gravar no log de Segurança do Windows. Por padrão, as contas LOCAL SERVICE e NETWORK SERVICE têm essa permissão. Esta etapa não será necessária se o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estiver sendo executado em uma dessas contas.  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 19
   
 1.  Abra um prompt de comando com permissões administrativas.  
   
-    1.  No menu **Iniciar**, aponte para **Todos os Programas**, para **Acessórios**, clique com o botão direito do mouse no **Prompt de Comando** e clique em **Executar como administrador**.  
+    1.  No menu **Iniciar** , aponte para **Todos os Programas**, para **Acessórios**, clique com o botão direito do mouse no **Prompt de Comando**e clique em **Executar como administrador**.  
   
     2.  Se a caixa de diálogo **Controle de Conta de Usuário** for aberta, clique em **Continuar**.  
   
@@ -92,7 +96,7 @@ caps.handback.revision: 19
   
 5.  Na guia **Configuração de Segurança Local** , clique em **Adicionar Usuário ou Grupo**.  
   
-6.  Na caixa de diálogo **Selecionar Usuários, Computadores ou Grupos**, digite o nome da conta de usuário, como **domain1\user1** e clique em **OK** ou em **Avançado** e procure a conta.  
+6.  Na caixa de diálogo **Selecionar Usuários, Computadores ou Grupos** , digite o nome da conta de usuário, como **domain1\user1** e clique em **OK**ou em **Avançado** e procure a conta.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -116,7 +120,7 @@ caps.handback.revision: 19
   
 7.  Feche a ferramenta Política de Segurança.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

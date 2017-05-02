@@ -1,46 +1,50 @@
 ---
-title: "Exemplos: usando OPENXML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ColPattern [XML no SQL Server]"
-  - "XML [SQL Server], mapeando dados"
-  - "instrução OPENXML, sobre a instrução OPENXML"
-  - "estouro em documento XML [SQL Server]"
-  - "mapeando dados XML [SQL Server]"
-  - "combinando mapeamento centrado em elemento e centrado em atributo"
-  - "dados não consumidos"
-  - "mapeamento centrado em atributo"
-  - "padrões de coluna [XML no SQL Server]"
-  - "XML [SQL Server], tratamento de estouros"
-  - "padrões de linha [XML no SQL Server]"
-  - "rowpattern [XML no SQL Server]"
-  - "parâmetro de sinalizadores"
-  - "mapeamento centrado em elemento [SQL Server]"
-  - "tabelas de borda"
+title: 'Exemplos: usando OPENXML | Microsoft Docs'
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ColPattern [XML in SQL Server]
+- XML [SQL Server], mapping data
+- OPENXML statement, about OPENXML statement
+- overflow in XML document [SQL Server]
+- mapping XML data [SQL Server]
+- combining attribute-centric and element centric mapping
+- unconsumed data
+- attribute-centric mapping
+- column patterns [XML in SQL Server]
+- XML [SQL Server], overflow handling
+- row patterns [XML in SQL Server]
+- rowpattern [XML in SQL Server]
+- flags parameter
+- element-centric mapping [SQL Server]
+- edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a559fe0e900d3c4e0ffd70b454f995292169880
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemplos: usando OPENXML
+# <a name="examples-using-openxml"></a>Exemplos: usando OPENXML
   Os exemplos neste tópico mostram como o OPENXML é usado para criar uma exibição de conjunto de linhas de um documento XML. Para obter informações sobre a sintaxe do OPENXML, veja [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Os exemplos mostram todos os aspectos do OPENXML, mas não especificam metapropriedades no OPENXML. Para obter mais informações sobre como especificar metapropriedades no OPENXML, veja [Especificar metapropriedades no OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  Ao recuperar dados, *rowpattern* é usado para identificar os nós no documento XML que determinam as linhas. Além disso, *rowpattern* é expressado na linguagem padrão XPath que é usada na implementação do MSXML XPath. Por exemplo, se o padrão terminar em um elemento ou atributo, uma linha será criada para cada elemento ou atributo selecionado por *rowpattern*.  
   
  O valor de *flags* fornece o mapeamento padrão. Se nenhum *ColPattern* for especificado no *SchemaDeclaration*, o mapeamento especificado em *flags* será assumido. O valor de *flags* será ignorado se *ColPattern* estiver especificado em *SchemaDeclaration*. O *ColPattern* especificado determina o mapeamento centrado em atributo ou centrado em elemento e também o comportamento para manipulação de dados não consumidos ou de estouro.  
   
-### A. Executando uma instrução SELECT simples com OPENXML  
+### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. Executando uma instrução SELECT simples com OPENXML  
  O documento XML neste exemplo é composto dos elementos <`Customer`>, <`Order`>e <`OrderDetail`>. A instrução OPENXML recupera informações do cliente em um conjunto de linhas de duas colunas, **CustomerID** e **ContactName**, do documento XML.  
   
  Primeiro, o procedimento armazenado **sp_xml_preparedocument** é chamado para obter um identificador de documento. Esse identificador de documento é passado para o OPENXML.  
@@ -94,7 +98,7 @@ LILAS      Carlos Gonzlez
   
  Como os elementos <`Customer`> não têm nenhum subelemento, se a mesma instrução SELECT for executada com *flags* definido como **2** para indicar mapeamento centrado em elemento, os valores de **CustomerID** e **ContactName** dos dois clientes serão retornados como NULL.  
   
- O @xmlDocument também podem ser do tipo **xml** ou do tipo **(n)varchar(max)**.  
+ O @xmlDocument também pode ser do tipo **xml** ou do tipo **(n)varchar(max)**.  
   
  Se <`CustomerID`> e <`ContactName`> no documento XML forem subelementos, o mapeamento centrado em elemento recuperará os valores.  
   
@@ -139,7 +143,7 @@ LILAS      Carlos Gonzlez
   
  Observe que o identificador de documento retornado por **sp_xml_preparedocument** é válido durante o lote e não durante a sessão.  
   
-### B. Especificando ColPattern para mapeamento entre colunas do conjunto de linhas e os elementos e atributos XML  
+### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. Especificando ColPattern para mapeamento entre colunas do conjunto de linhas e os elementos e atributos XML  
  Este exemplo mostra como o padrão Xpath é especificado no parâmetro *ColPattern* opcional para fornecer mapeamento entre colunas do conjunto de linhas e os elementos e atributos XML.  
   
  O documento XML neste exemplo é composto dos elementos <`Customer`>, <`Order`>e <`OrderDetail`>. A instrução OPENXML recupera informações do cliente e do pedido como um conjunto de linhas (**CustomerID**, **OrderDate**, **ProdID** e **Qty**) do documento XML.  
@@ -237,7 +241,7 @@ WITH (CustomerID  varchar(10)   '../CustomerID',
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
-### C. Combinando o mapeamento centrado em elemento e centrado em atributo  
+### <a name="c-combining-attribute-centric-and-element-centric-mapping"></a>C. Combinando o mapeamento centrado em elemento e centrado em atributo  
  Neste exemplo, o parâmetro *flags* está definido como **3** e indica que o mapeamento centrado em atributo e o mapeamento centrado em elemento serão aplicados. Nesse caso, o mapeamento centrado em atributo é aplicado primeiro e, em seguida, o mapeamento centrado em elemento é aplicado a todas as colunas que ainda não foram tratadas.  
   
 ```  
@@ -282,7 +286,7 @@ LILAS      Carlos Gonzlez
   
  O mapeamento centrado em atributo é aplicado para **CustomerID**. Não há nenhum atributo **ContactName** no elemento <`Customer`>. Portanto o mapeamento centrado em elemento é aplicado.  
   
-### D. Especificando a função text() XPath como ColPattern  
+### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>D. Especificando a função text() XPath como ColPattern  
  O documento XML neste exemplo é composto dos elementos <`Customer`> e <`Order`>. A instrução OPENXML recupera um conjunto de linhas composto do atributo **oid** do elemento <`Order`>, a ID do pai do nó identificado por *rowpattern* e a cadeia de caracteres do valor de folha do conteúdo do elemento.  
   
  Primeiro, o procedimento armazenado **sp_xml_preparedocument** é chamado para obter um identificador de documento. Esse identificador de documento é passado para o OPENXML.  
@@ -339,7 +343,7 @@ O3    100.0         Happy Customer.
 O4    10000.0       NULL  
 ```  
   
-### E. Especificando TableName na cláusula WITH  
+### <a name="e-specifying-tablename-in-the-with-clause"></a>E. Especificando TableName na cláusula WITH  
  Este exemplo especifica *TableName* na cláusula WITH em vez de *SchemaDeclaration*. Isso será útil se você tiver uma tabela que tem a estrutura desejada e nenhum padrão de coluna, parâmetro *ColPattern* , é necessário.  
   
  O documento XML neste exemplo é composto dos elementos <`Customer`> e <`Order`>. A instrução OPENXML recupera informações de pedido em um conjunto de linhas de três colunas (**oid**, **date** e **amount**) do documento XML.  
@@ -399,7 +403,7 @@ O3    1999-07-14 00:00:00.000     100.0
 O4    1996-01-20 00:00:00.000     10000.0  
 ```  
   
-### F. Obtendo o resultado em um formato de tabela de borda  
+### <a name="f-obtaining-the-result-in-an-edge-table-format"></a>F. Obtendo o resultado em um formato de tabela de borda  
  Neste exemplo, a cláusula WITH não é especificada na instrução OPENXML. Como resultado, o conjunto de linhas gerado por OPENXML tem um formato de tabela de borda. A instrução SELECT retorna todas as colunas da tabela de borda.  
   
  O documento XML de exemplo é composto dos elementos <`Customer`>, <`Order`> e <`OrderDetail`>.  
@@ -460,7 +464,7 @@ EXEC sp_xml_removedocument @docHandle
     ORDER BY localname  
     ```  
   
-### G. Especificando rowpattern terminando com um atributo  
+### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>G. Especificando rowpattern terminando com um atributo  
  O documento XML neste exemplo é composto dos elementos <`Customer`>, <`Order`>e <`OrderDetail`>. A instrução OPENXML recupera informações sobre os detalhes do pedido em um conjunto de linhas de três colunas (**ProductID**, **Quantity** e **OrderID**) do documento XML.  
   
  Primeiro, o **sp_xml_preparedocument** é chamado para obter um identificador de documento. Esse identificador de documento é passado para o OPENXML.  
@@ -521,7 +525,7 @@ ProdID      Qty         OID
 72          3           10283  
 ```  
   
-### H. Especificando um documento XML que tem vários nós de texto  
+### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. Especificando um documento XML que tem vários nós de texto  
  Se você tiver vários nós de texto em um documento XML, uma instrução SELECT com um *ColPattern*, **text()**, retornará apenas o primeiro nó de texto, em vez de todos eles. Por exemplo:  
   
 ```  
@@ -541,7 +545,7 @@ EXEC sp_xml_removedocument @h
   
  A instrução SELECT retorna **T** como o resultado, e não **TaU**.  
   
-### I. Especificando o tipo de dados xml na cláusula WITH  
+### <a name="i-specifying-the-xml-data-type-in-the-with-clause"></a>I. Especificando o tipo de dados xml na cláusula WITH  
  Na cláusula WITH, um padrão de coluna que é mapeado para a coluna de tipo de dados **xml** , com tipo ou sem-tipo, deve retornar uma sequência vazia ou uma sequência de elementos, instruções de processamento, nós de texto e comentários. Os dados são convertidos em um tipo de dados **xml** .  
   
  No exemplo a seguir, a declaração de esquema de tabela na cláusula WITH inclui colunas de tipo **xml** .  
@@ -602,18 +606,18 @@ id  lname   xmlname                   OverFlow
   
 -   Caso a coluna da cláusula WITH seja uma coluna XML com tipo e a instância XML não seja confirmada para o esquema, será retornado um erro.  
   
-### J. Recuperando valores individuais de atributos com vários valores  
+### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>J. Recuperando valores individuais de atributos com vários valores  
  Um documento XML pode ter atributos com vários valores. Por exemplo, o atributo **IDREFS** pode ter vários valores. Em um documento XML, valores de atributos com vários valores são especificados como uma cadeia de caracteres, com os valores separados por um espaço. No documento XML a seguir, o atributo **attends** do elemento \<Student> e o atributo **attendedBy** de \<Class> têm vários valores. A recuperação de valores individuais de um atributo XML de vários valores e o armazenamento de cada valor em uma linha separada no banco de dados requer trabalho adicional. Este exemplo mostra o processo.  
   
  Este documento XML de exemplo é composto dos seguintes elementos:  
   
 -   \<Student>  
   
-     Os atributos **id** (ID do estudante), **name**e **attends**. O atributo **attends** é um atributo com vários valores.  
+     Os atributos **id** (ID do estudante), **name**e **attends** . O atributo **attends** é um atributo com vários valores.  
   
 -   \<Class>  
   
-     Os atributos **id** (ID da aula), **name** e **attendedBy**. O atributo **attendedBy** é um atributo com vários valores.  
+     Os atributos **id** (ID da aula), **name**e **attendedBy** . O atributo **attendedBy** é um atributo com vários valores.  
   
  O atributo **attends** em \<Student> e o atributo **attendedBy** em \<Class> representam uma relação **m:n** entre as tabelas Student e Class. Um estudante pode assistir muitas aulas e uma aula pode ter muitos estudantes.  
   
@@ -631,7 +635,7 @@ id  lname   xmlname                   OverFlow
   
     -   **Extract_idrefs_values**  
   
-         Extrai os IDs de estudantes individuais de cada elemento \<Course>. Uma tabela de borda é usada para recuperar esses valores.  
+         Extrai as IDs de estudantes individuais de cada elemento \<Course>. Uma tabela de borda é usada para recuperar esses valores.  
   
  Estas são as etapas:  
   
@@ -756,7 +760,7 @@ SELECT * FROM CourseAttendance
 EXECUTE sp_xml_removedocument @h  
 ```  
   
-### K. Recuperando binários de dados codificados na base64 no XML  
+### <a name="k-retrieving-binary-from-base64-encoded-data-in-xml"></a>K. Recuperando binários de dados codificados na base64 no XML  
  Dados Binários são frequentemente incluídos no XML usando codificação na base64. Quando você fragmenta esse XML usando OPENXML, você recebe os dados codificados na base64. Este exemplo mostra como é possível converter o dados codificados na base64 novamente em binários.  
   
 -   Crie uma tabela com dados binários de exemplo.  
@@ -799,7 +803,7 @@ Col1        BinaryCol
 1           0x1234567890  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   

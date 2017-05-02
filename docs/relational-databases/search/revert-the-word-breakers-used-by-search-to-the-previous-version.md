@@ -1,29 +1,33 @@
 ---
-title: "Reverter os separadores de palavras usados por pesquisa &#224; vers&#227;o anterior | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Reverter os separadores de palavras usados por pesquisa à versão anterior | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2549481c3e09e4b052e0eea40c993ccf191f38ba
+ms.lasthandoff: 04/11/2017
+
 ---
-# Reverter os separadores de palavras usados por pesquisa &#224; vers&#227;o anterior
+# <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Reverter os separadores de palavras usados por pesquisa à versão anterior
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala e habilita uma versão dos separadores de palavras e lematizadores para todos os idiomas com suporte de Pesquisa de Texto Completo com a exceção de coreano. Este tópico descreve como alternar deste nova versão desses componentes para a versão anterior, ou alternar da versão anterior para a nova versão.  
   
  Este tópico não discute os seguintes idiomas:  
   
 -   **Inglês**. A fim de reverter ou restaurar os componentes em inglês, consulte [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
--   **Dinamarquês, polonês e turco**. Separadores de palavras de terceiros para dinamarquês, polonês e turco que foram incluídos com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foram substituídos por componentes do [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+-   **Dinamarquês, polonês e turco**. Separadores de palavras de terceiros para dinamarquês, polonês e turco que foram incluídos com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foram substituídos por componentes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 -   **Tcheco e grego**. Há novos separadores de palavras para tcheco e grego. As versões anteriores de Pesquisa de Texto Completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não incluíam suporte para estes dois idiomas.  
   
@@ -100,7 +104,7 @@ caps.handback.revision: 13
   
 2.  Faça backup da versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do arquivo NaturalLanguage6.dll para outro local.  
   
-3.  Copie a versão anterior de NaturalLanguage6.dll da pasta Binn de uma instância do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para a pasta Binn da instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+3.  Copie a versão anterior de NaturalLanguage6.dll da pasta Binn de uma instância do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para a pasta Binn da instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
     > [!WARNING]  
     >  Esta alteração afeta todos os idiomas que usam NaturalLanguage6.dll na versão anterior atual e na anterior.  
@@ -111,7 +115,7 @@ caps.handback.revision: 13
   
 1.  Navegue até o local onde você fez backup da versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do arquivo NaturalLanguage6.dll.  
   
-2.  Copie a versão atual de NaturalLanguage6.dll do local de backup para a pasta Binn da instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+2.  Copie a versão atual de NaturalLanguage6.dll do local de backup para a pasta Binn da instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
     > [!WARNING]  
     >  Esta alteração afeta todos os idiomas que usam NaturalLanguage6.dll na versão anterior atual e na anterior.  
@@ -146,12 +150,12 @@ caps.handback.revision: 13
   
 3.  Faça backup da versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do arquivo NaturalLanguage6.dll para outro local.  
   
-4.  Copie a versão anterior de NaturalLanguage6.dll da pasta Binn de uma instância do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para a pasta Binn da instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+4.  Copie a versão anterior de NaturalLanguage6.dll da pasta Binn de uma instância do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para a pasta Binn da instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
     > [!WARNING]  
     >  Esta alteração afeta todos os idiomas que usam NaturalLanguage6.dll na versão anterior atual e na anterior.  
   
-5.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+5.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 6.  Use as etapas a seguir para adicionar novas chaves para as ClassIDs COM para o separador de palavras e as interfaces de lematizador anteriores para os idiomas selecionados:  
   
@@ -163,7 +167,7 @@ caps.handback.revision: 13
   
     4.  Se o idioma selecionado usar um lematizador, atualize os dados (Padrão) desse valor de chave para o nome de arquivo do lematizador anterior da tabela.  
   
-7.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
+7.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>**. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
   
 8.  Atualize o valor de chave **WBreakerClass** para o valor da tabela para o separador de palavras atual.  
   
@@ -175,12 +179,12 @@ caps.handback.revision: 13
   
 1.  Navegue até o local onde você fez backup da versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do arquivo NaturalLanguage6.dll.  
   
-2.  Copie a versão atual de NaturalLanguage6.dll do local de backup para a pasta Binn da instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+2.  Copie a versão atual de NaturalLanguage6.dll do local de backup para a pasta Binn da instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
     > [!WARNING]  
     >  Esta alteração afeta todos os idiomas que usam NaturalLanguage6.dll na versão anterior atual e na anterior.  
   
-3.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+3.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 4.  Se as chaves a seguir não existirem, use as etapas a seguir para adicionar novas chaves para as ClassIDs COM para o separador de palavras atual e interfaces de lematizador para o idioma selecionado:  
   
@@ -192,7 +196,7 @@ caps.handback.revision: 13
   
     4.  Se o idioma selecionado usar um lematizador, atualize os dados (Padrão) desse valor de chave para o nome de arquivo do lematizador atual da tabela.  
   
-5.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
+5.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>**. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
   
 6.  Atualize o valor de chave **WBreakerClass** para o valor da tabela para o separador de palavras anterior.  
   
@@ -221,7 +225,7 @@ caps.handback.revision: 13
 |CLSID anterior|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |Nome de arquivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID atual|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|Nome do arquivo atual|MsWb7.dll|MsWb7.dll|  
+|Nome do arquivo atual|MSWB7.dll|MSWB7.dll|  
   
  **Japonês (jpn), LCID 1041**  
   
@@ -239,7 +243,7 @@ caps.handback.revision: 13
 |CLSID anterior|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |Nome de arquivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID atual|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|Nome do arquivo atual|MsWb7.dll|MsWb7.dll|  
+|Nome do arquivo atual|MSWB7.dll|MSWB7.dll|  
   
  **Russo (rus), LCID 1049**  
   
@@ -248,7 +252,7 @@ caps.handback.revision: 13
 |CLSID anterior|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |Nome de arquivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID atual|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|Nome do arquivo atual|MsWb7.dll|MsWb7.dll|  
+|Nome do arquivo atual|MSWB7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> Idiomas para os quais nem o nome de arquivo atual ou anterior é NaturalLanguage6.dll  
  Para os idiomas na tabela a seguir, os nomes de arquivo dos separadores de palavras e lematizadores anteriores são diferentes dos nomes de arquivo das novas versões. Nem o nome de arquivo atual nem o anterior é NaturalLanguage6.dll. Você não tem que substituir os arquivos, porque a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] copia a versão atual e a anterior dos componentes para a pasta Binn. No entanto, você também tem que alterar um conjunto de entradas do Registro para especificar a versão anterior ou a atual dos componentes.  
@@ -272,7 +276,7 @@ caps.handback.revision: 13
   
 1.  Não remova os arquivos para a versão atual dos componentes da pasta Binn.  
   
-2.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+2.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 3.  Use as etapas a seguir para adicionar novas chaves para as ClassIDs COM para o separador de palavras e as interfaces de lematizador anteriores para os idiomas selecionados:  
   
@@ -284,7 +288,7 @@ caps.handback.revision: 13
   
     4.  Se o idioma selecionado usar um lematizador, atualize os dados (Padrão) desse valor de chave para o nome de arquivo do lematizador anterior da tabela.  
   
-4.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
+4.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>**. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
   
 5.  Atualize o valor de chave **WBreakerClass** para o valor da tabela para o separador de palavras atual.  
   
@@ -296,7 +300,7 @@ caps.handback.revision: 13
   
 1.  Não remova os arquivos para a versão anterior dos componentes da pasta Binn.  
   
-2.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+2.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 3.  Se as chaves a seguir não existirem, use as etapas a seguir para adicionar novas chaves para as ClassIDs COM para o separador de palavras atual e interfaces de lematizador para o idioma selecionado:  
   
@@ -308,7 +312,7 @@ caps.handback.revision: 13
   
     4.  Se o idioma selecionado usar um lematizador, atualize os dados (Padrão) desse valor de chave para o nome de arquivo do lematizador atual da tabela.  
   
-4.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
+4.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>**. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
   
 5.  Atualize o valor de chave **WBreakerClass** para o valor da tabela para o separador de palavras anterior.  
   
@@ -375,8 +379,8 @@ caps.handback.revision: 13
 |CLSID atual|E0831C90-BAB0-4ca5-B9BD-EA254B538DAC|  
 |Nome do arquivo atual|MsWb70804.dll|  
   
-## Consulte também  
- [Alterar o separador de palavras usado para inglês dos EUA e inglês do Reino Unido](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [Alterações de comportamento em pesquisa de texto completo](../Topic/Behavior%20Changes%20to%20Full-Text%20Search.md)  
+## <a name="see-also"></a>Consulte também  
+ [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [Alterações de comportamento em pesquisa de texto completo](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   

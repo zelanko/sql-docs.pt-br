@@ -1,32 +1,36 @@
 ---
-title: "Gerenciar a autentica&#231;&#227;o no Mecanismo de Banco de Dados com o PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gerenciar a autenticação no PowerShell do Mecanismo de Banco de Dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 135580dd67315ad9eb07361dcff7b1334398a0aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gerenciar a autentica&#231;&#227;o no Mecanismo de Banco de Dados com o PowerShell
+# <a name="manage-authentication-in-database-engine-powershell"></a>Gerenciar a autenticação no Mecanismo de Banco de Dados com o PowerShell
   Por padrão, os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell usam a Autenticação do Windows ao conectar a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Você pode usar a Autenticação do SQL Server definindo uma unidade virtual do PowerShell ou especificando os parâmetros **–Username** e **–Password** para **Invoke-Sqlcmd**.  
   
-1.  **Antes de começar:**  [Permissões](#Permissions)  
+1.  **Before you begin:**  [Permissions](#Permissions)  
   
-2.  **Para definir a autenticação, usando:** [uma Unidade Virtual](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
+2.  **To set authentication, using:**  [A Virtual Drive](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
   
 ##  <a name="Permissions"></a> Permissões  
  Todas as ações que você pode executar em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] são controladas pelas permissões concedidas às credenciais de autenticação usadas na conexão à instância. Por padrão, o provedor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e cmdlets usam a conta do Windows na qual ele está sendo executado para estabelecer uma conexão de Autenticação do Windows com o [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- Para fazer uma conexão de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], forneça uma ID de logon e uma senha de Autenticação do SQL Server. Ao usar o provedor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], associe as credenciais de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a uma unidade virtual e use o comando de alterar diretório (**cd**) para se conectar a essa unidade. No Windows PowerShell, credenciais de segurança só podem ser associadas a unidades virtuais.  
+ Para fazer uma conexão de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , forneça uma ID de logon e uma senha de Autenticação do SQL Server. Ao usar o provedor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , associe as credenciais de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a uma unidade virtual e use o comando de alterar diretório (**cd**) para se conectar a essa unidade. No Windows PowerShell, credenciais de segurança só podem ser associadas a unidades virtuais.  
   
 ##  <a name="SQLAuthVirtDrv"></a> Autenticação do SQL Server usando uma unidade virtual  
  **Para criar uma unidade virtual associada com um logon de Autenticação do SQL Server**  
@@ -43,7 +47,7 @@ caps.handback.revision: 9
   
 2.  Chame a função para criar uma unidade virtual com as credenciais fornecidas.  
   
-### Exemplo (Unidade Virtual)  
+### <a name="example-virtual-drive"></a>Exemplo (Unidade Virtual)  
  Este exemplo cria uma função denominada **sqldrive** que você pode usar para criar uma unidade virtual que é associada ao logon de Autenticação e à instância especificados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  A função **sqldrive** solicita que você insira a senha para seu logon, mascarando a senha à medida que a digita. Então, sempre que você usar o comando de diretório de alteração (**cd**) para se conectar a um caminho usando o nome de unidade virtual, todas as operações serão executadas usando as credenciais de logon de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você forneceu ao criar a unidade.  
@@ -71,7 +75,7 @@ cd SQLAuth
   
 1.  Use o parâmetro **–Username** para especificar uma ID de logon e o parâmetro **–Password** para especificar a senha associada.  
   
-### Exemplo (Invoke-Sqlcmd)  
+### <a name="example-invoke-sqlcmd"></a>Exemplo (Invoke-Sqlcmd)  
  Este exemplo usa o cmdlet do host de leitura para solicitar ao usuário uma senha e, depois, conecta usando a Autenticação do SQL Server.  
   
 ```  
@@ -81,7 +85,7 @@ $pwd = read-host -AsSecureString -Prompt "Password"
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" –Username “MyLogin” –Password $pwd  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [Provedor do SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [cmdlet Invoke-Sqlcmd](../../powershell/invoke-sqlcmd-cmdlet.md)  

@@ -1,32 +1,36 @@
 ---
-title: "Tarefa Recriar &#205;ndice (Plano de Manuten&#231;&#227;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "reindex"
-  - "sql13.swb.maint.reindex.f1"
-helpviewer_keywords: 
-  - "Caixa de diálogo Tarefa Recriar Índice"
+title: "Tarefa Recompilar Índice (plano de manutenção) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- reindex
+- sql13.swb.maint.reindex.f1
+helpviewer_keywords:
+- Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3d8dd428e1aded14e6e75c338b12c8b04cf722a8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tarefa Recriar &#205;ndice (Plano de Manuten&#231;&#227;o)
+# <a name="rebuild-index-task-maintenance-plan"></a>Tarefa Recriar Índice (Plano de Manutenção)
   Use a caixa de diálogo **Tarefa Recompilar Índice** para recriar os índices nas tabelas do banco de dados com um novo fator de preenchimento. O fator de preenchimento determina a quantidade de espaço vazio em cada página no índice, para acomodar futuras expansões. À medida que os dados são adicionados à tabela, o espaço livre é todo preenchido porque o fator de preenchimento não é mantido. Reorganizando dados e páginas de índice, é possível restabelecer o espaço livre.  
   
  A **Tarefa Recompilar Índice** usa a instrução ALTER INDEX. Para obter mais informações sobre as opções descritas nesta página, consulte [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Conexão**  
  Selecione a conexão de servidor a ser usada na execução desta tarefa.  
   
@@ -38,15 +42,15 @@ caps.handback.revision: 42
   
 -   **Todos os bancos de dados**  
   
-     Gere um plano de manutenção que executa tarefas de manutenção em todos os bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exceto o tempdb.  
+     Gere um plano de manutenção que executa tarefas de manutenção em todos os bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exceto o tempdb.  
   
 -   **Todos os bancos de dados do sistema**  
   
-     Gera um plano de manutenção que execute tarefas de manutenção em cada banco de dados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exceto o tempdb. Nenhuma tarefa de manutenção é executada nos bancos de dados criados pelo usuário.  
+     Gera um plano de manutenção que execute tarefas de manutenção em cada banco de dados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exceto o tempdb. Nenhuma tarefa de manutenção é executada nos bancos de dados criados pelo usuário.  
   
 -   **Todos os bancos de dados de usuários**  
   
-     Gere um plano de manutenção que execute tarefas de manutenção em todos os bancos de dados criados por usuários. Nenhuma tarefa de manutenção é executada com os bancos de dados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Gere um plano de manutenção que execute tarefas de manutenção em todos os bancos de dados criados por usuários. Nenhuma tarefa de manutenção é executada com os bancos de dados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Estes bancos de dados específicos**  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 42
  **Objeto**  
  Limita a grade **Seleção** para exibir tabelas, exibições ou ambas.  
   
- **Selection**  
+ **Seleção**  
  Especifique as tabelas ou índices afetados por esta tarefa. Não disponível quando **Tabelas e Exibições** estiver selecionado na caixa Objeto.  
   
  **Espaço livre padrão por página**  
@@ -68,16 +72,16 @@ caps.handback.revision: 42
  Descarta os índices nas tabelas no banco de dados e recria-os com um fator de preenchimento novo, calculado automaticamente, reservando a quantidade especificada de espaço livre nas páginas de índice. Quanto maior a porcentagem, mais espaço livre será reservado nas páginas de índice e maior ficará o índice. Os valores válidos são de 0 a 100.  
   
  **Classificar resultados no tempdb**  
- Use a opção `SORT_IN_TEMPDB`, que determina onde os resultados intermediários da classificação, gerados durante a criação do índice, são armazenados temporariamente. Se uma operação de classificação não for necessária ou se a classificação puder ser executada na memória, a opção `SORT_IN_TEMPDB`será ignorada.  
+ Use a opção `SORT_IN_TEMPDB` , que determina onde os resultados intermediários da classificação, gerados durante a criação do índice, são armazenados temporariamente. Se uma operação de classificação não for necessária ou se a classificação puder ser executada na memória, a opção `SORT_IN_TEMPDB`será ignorada.  
   
  **Preenchimento de índice**  
  Especificar o preenchimento do índice  
   
  **Manter o índice online**  
- Use a opção `ONLINE`, que permite o acesso de usuários aos dados da tabela subjacente ou de índice clusterizado e qualquer índice não clusterizado associado durante as operações de índice.  
+ Use a opção `ONLINE` , que permite o acesso de usuários aos dados da tabela subjacente ou de índice clusterizado e qualquer índice não clusterizado associado durante as operações de índice.  
   
 > [!NOTE]  
->  As operações de índice online não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+>  As operações de índice online não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  **Não recompilar índices | Recompilar índices offline**  
  Especifique o que fazer com os tipos de índice que não podem ser recompilados enquanto estão online.  
@@ -100,7 +104,7 @@ caps.handback.revision: 42
 > [!NOTE]  
 >  Quando o número de objetos afetados é grande, essa exibição pode ser demorada.  
   
-## Caixa de diálogo Nova Conexão  
+## <a name="new-connection-dialog-box"></a>Caixa de diálogo Nova Conexão  
  **Nome da conexão**  
  Digite um nome para a nova conexão.  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 42
  Conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] com a Autenticação do Windows.  
   
  **Usar nome de usuário e senha específicos**  
- Conecte-se com uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa opção não está disponível.  
+ Conecte-se com uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção não está disponível.  
   
  **Nome de usuário**  
  Forneça um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usado na autenticação. Essa opção não está disponível.  
@@ -125,7 +129,7 @@ caps.handback.revision: 42
  **Senha**  
  Forneça uma senha a ser usada na autenticação. Essa opção não está disponível.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [DBCC DBREINDEX &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
@@ -135,3 +139,4 @@ caps.handback.revision: 42
  [Executar operações de índice online](../../relational-databases/indexes/perform-index-operations-online.md)  
   
   
+

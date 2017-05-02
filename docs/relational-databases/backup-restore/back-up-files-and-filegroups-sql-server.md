@@ -1,28 +1,32 @@
 ---
-title: "Fazer backup de arquivos e de grupos de arquivos (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "fazendo backup de grupos de arquivos [SQL Server]"
-  - "backups de arquivo [SQL Server], tópicos de instruções"
-  - "fazendo backup de arquivos [SQL Server]"
-  - "backups [SQL Server], criando"
-  - "grupo de arquivos [SQL Server], fazendo backup"
+title: Fazer backup de arquivos e grupos de arquivos (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backing up filegroups [SQL Server]
+- file backups [SQL Server], how-to topics
+- backing up files [SQL Server]
+- backups [SQL Server], creating
+- filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 34d2c923e509422ee4a45abe2132b06362efa1ee
+ms.lasthandoff: 04/11/2017
+
 ---
-# Fazer backup de arquivos e de grupos de arquivos (SQL Server)
+# <a name="back-up-files-and-filegroups-sql-server"></a>Fazer backup de arquivos e de grupos de arquivos (SQL Server)
   Este tópico descreve como fazer backup de arquivos e grupos de arquivos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell. Quando o tamanho de banco de dados e exigências de desempenho tornarem um backup de banco de dados completo impraticável, então você poderá criar um backup de arquivo. Um *backup de arquivo* contém todos os dados em um ou mais arquivos (ou grupos de arquivos). Para obter mais informações sobre backups de arquivos, veja [Backups completos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) e [Backups diferenciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
 
   
@@ -34,26 +38,26 @@ caps.handback.revision: 41
   
 -   No modelo de recuperação simples, o backup deve ser feito em todos os arquivos de leitura/gravação juntos. Isso ajuda a assegurar que o banco de dados possa ser restaurado até um momento determinado consistente. Em vez de especificar cada arquivo ou grupo de arquivos de leitura/gravação individualmente, use a opção de READ_WRITE_FILEGROUPS. Esta opção efetua backup de todos os grupos de arquivos de leitura/gravação no banco de dados. Um backup que é criado especificando READ_WRITE_FILEGROUPS é conhecido como um *backup parcial*. Para obter mais informações, veja [Backups parciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
--   Para obter mais informações sobre limitações e restrições, veja [Visão geral de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
+-   Para obter mais informações sobre limitações e restrições, veja [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Por padrão, toda operação de backup bem-sucedida acrescenta uma entrada ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao log de eventos do sistema. Se você fizer backup do log com muita frequência, essas mensagens de êxito serão acumuladas muito rapidamente, resultando em logs de erros imensos que podem dificultar a localização de outras mensagens. Em tais situações, você pode suprimir essas entradas de log usando o sinalizador de rastreamento 3226, caso nenhum dos seus scripts dependa dessas entradas. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md).  
+-   Por padrão, toda operação de backup bem-sucedida acrescenta uma entrada ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao log de eventos do sistema. Se você fizer backup do log com muita frequência, essas mensagens de êxito serão acumuladas muito rapidamente, resultando em logs de erros imensos que podem dificultar a localização de outras mensagens. Em tais situações, você pode suprimir essas entradas de log usando o sinalizador de rastreamento 3226, caso nenhum dos seus scripts dependa dessas entradas. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
  
 ##  <a name="Permissions"></a> Permissões  
- As permissões BACKUP DATABASE e BACKUP LOG usam como padrão os membros da função de servidor fixa **sysadmin** e as funções de banco de dados fixas **db_owner** e **db_backupoperator**.  
+ As permissões BACKUP DATABASE e BACKUP LOG usam como padrão os membros da função de servidor fixa **sysadmin** e as funções de banco de dados fixas **db_owner** e **db_backupoperator** .  
   
  Os problemas de propriedade e permissão no arquivo físico do dispositivo de backup podem interferir em uma operação de backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser capaz de ler e gravar no dispositivo; a conta sob a qual o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa deve ter permissões de gravação. No entanto, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que adiciona uma entrada para um dispositivo de backup nas tabelas do sistema, não verifica permissões de acesso a arquivos. Esses problemas no arquivo físico do dispositivo de backup podem não aparecer até que o recurso físico seja acessado quando o backup ou restauração é tentado.  
   
   
-## Fazer backup de arquivos e grupos de arquivos usando o SSMS   
+## <a name="back-up-files-and-filegroups-using-ssms"></a>Fazer backup de arquivos e grupos de arquivos usando o SSMS   
   
 1.  Depois de conectar-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objeto, clique no nome do servidor para expandir a árvore do servidor.  
   
 2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
   
-3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas** e clique em **Backup**. Será exibida a caixa de diálogo **Backup de Banco de Dados** .  
+3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**e clique em **Backup**. Será exibida a caixa de diálogo **Backup de Banco de Dados** .  
   
 4.  Na lista **Banco de Dados** , verifique o nome do banco de dados. Você pode, como opção, selecionar um banco de dados diferente da lista.  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 41
   
     -   Para que o conjunto de backup expire após um número específico de dias, clique em **Após** (a opção padrão). Em seguida, insira o número de dias (a partir da criação do conjunto) após o qual o conjunto irá expirar. Esse valor pode ser de 0 a 99999 dias; 0 dia significa que o conjunto de backup nunca vai expirar.  
   
-         O valor padrão é definido na opção **Retenção de mídia de backup padrão (em dias)** da caixa de diálogo **Propriedades do Servidor** (página **Configurações do Banco de Dados**). Para acessar essa opção, clique com o botão direito do mouse no nome do servidor no Pesquisador de Objetos, selecione propriedades e a página **Configurações do Banco de Dados**.  
+         O valor padrão é definido na opção **Retenção de mídia de backup padrão (em dias)** da caixa de diálogo **Propriedades do Servidor** (página**Configurações do Banco de Dados** ). Para acessar essa opção, clique com o botão direito do mouse no nome do servidor no Pesquisador de Objetos, selecione propriedades e a página **Configurações do Banco de Dados** .  
   
     -   Para que o conjunto de backup expire em uma data específica, clique no campo **Em**e digite a data de expiração do conjunto.  
   
@@ -105,16 +109,16 @@ caps.handback.revision: 41
   
 15. Se o backup estiver sendo feito em uma unidade de fita (conforme especificado na seção **Destino** da página **Geral**), a opção **Descarregar a fita após o backup** estará ativa. O clique nessa opção habilita a opção **Rebobinar a fita antes de descarregar** .  
   
-    > **OBSERVAÇÃO:** as opções na seção **Log de transações** estarão inativas exceto se o backup estiver sendo feito em um log de transações (como especificado na seção **Tipo de backup** da página **Geral**).  
+    > **OBSERVAÇÃO:** as opções na seção **Log de transações** estarão inativas exceto se o backup estiver sendo feito em um log de transações (como especificado na seção **Tipo de backup** da página **Geral** ).  
   
-16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versões posteriores dão suporte à [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup**. Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup** e evitar a compactação marcando **Não compactar o backup**.  
+16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versões posteriores dão suporte à [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup** . Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup**e evitar a compactação marcando **Não compactar o backup**.  
   
      **Para exibir o padrão de compactação de backup atual**  
   
     -   [Exibir ou configurar a opção de configuração de servidor backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
   
-## Fazer backup de arquivos e grupos de arquivos usando o T-SQL
+## <a name="back-up-files-and-filegroups-using-t-sql"></a>Fazer backup de arquivos e grupos de arquivos usando o T-SQL
   
 1.  Para criar um backup de arquivo ou grupo de arquivos, use a instrução [BACKUP DATABASE <file_or_filegroup>](../../t-sql/statements/backup-transact-sql.md). Minimamente, essa instrução deve especificar o seguinte:  
   
@@ -136,7 +140,7 @@ caps.handback.revision: 41
   
     |Opção|Descrição|  
     |------------|-----------------|  
-    |*Banco de Dados*|É o banco de dados do qual é feito o backup do log de transações, do banco de dados parcial ou do banco de dados completo.|  
+    |*database*|É o banco de dados do qual é feito o backup do log de transações, do banco de dados parcial ou do banco de dados completo.|  
     |FILE **=***logical_file_name*|Especifica o nome lógico de um arquivo a ser incluído no backup de arquivos.|  
     |FILEGROUP **=***logical_filegroup_name*|Especifica o nome lógico de um grupo de arquivos que será incluído no backup de arquivos. No modelo de recuperação simples, um backup de grupo de arquivos é permitido apenas para grupos de arquivos somente leitura.|  
     |[ **,**...*f* ]|É um espaço reservado que indica que vários arquivos e grupos de arquivos podem ser especificados. O número de arquivos ou grupos de arquivos é ilimitado.|  
@@ -146,13 +150,13 @@ caps.handback.revision: 41
 2.  No modelo de recuperação completa, você deverá também efetuar backup do log de transações. Para usar um conjunto inteiro de backups de arquivo completos para restaurar um banco de dados, você deverá também ter suficientes backups de log para abranger todos os backups de arquivo, desde o início do primeiro backup de arquivo. Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
- Os exemplos seguintes fazem backup de um ou mais arquivos dos grupos de arquivos secundários do banco de dados `Sales`. Esse banco de dados usa o modelo de recuperação completa e contém os seguintes grupos de arquivos secundários:  
+ Os exemplos seguintes fazem backup de um ou mais arquivos dos grupos de arquivos secundários do banco de dados `Sales` . Esse banco de dados usa o modelo de recuperação completa e contém os seguintes grupos de arquivos secundários:  
   
 -   Um grupo de arquivo nomeado `SalesGroup1` que tem os arquivos `SGrp1Fi1` e `SGrp1Fi2`.  
   
 -   Um grupo de arquivo nomeado `SalesGroup2` que tem os arquivos `SGrp2Fi1` e `SGrp2Fi2`.  
   
-#### A. Criar um backup de arquivo de dois arquivos  
+#### <a name="a-create-a-file-backup-of-two-files"></a>A. Criar um backup de arquivo de dois arquivos  
  O exemplo a seguir cria um backup diferencial de arquivo só do arquivo `SGrp1Fi2` do `SalesGroup1` e o arquivo `SGrp2Fi2` do grupo de arquivos `SalesGroup2` .  
   
 ```tsql  
@@ -164,7 +168,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-#### B. Criar um backup completo de arquivos dos grupos de arquivos secundários  
+#### <a name="b-create-a-full-file-backup-of-the-secondary-filegroups"></a>B. Criar um backup completo de arquivos dos grupos de arquivos secundários  
  O exemplo a seguir cria um backup de arquivo completo de todos os arquivos dos dois grupos de arquivos secundários.  
   
 ```tsql  
@@ -176,7 +180,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-#### C. Criar um backup diferencial de arquivos dos grupos de arquivos secundários  
+#### <a name="c-create-a-differential-file-backup-of-the-secondary-filegroups"></a>C. Criar um backup diferencial de arquivos dos grupos de arquivos secundários  
  O exemplo a seguir cria um backup diferencial de cada arquivo nos dois grupos de arquivos secundários.  
   
 ```tsql  
@@ -192,13 +196,13 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
   
-1.  Use o cmdlet **Backup-SqlDatabase** e especifique **Files** como valor do parâmetro **-BackupAction**. Além disso, especifique um dos seguintes parâmetros:  
+1.  Use o cmdlet **Backup-SqlDatabase** e especifique **Files** como valor do parâmetro **-BackupAction** . Além disso, especifique um dos seguintes parâmetros:  
   
-    -   Para fazer backup de um arquivo específico, especifique o parâmetro **-DatabaseFile***String*, em que *String* contém um ou mais arquivos de banco de dados para fazer backup.  
+    -   Para fazer backup de um arquivo específico, especifique o parâmetro **-DatabaseFile***String* , em que *String* contém um ou mais arquivos de banco de dados para fazer backup.  
   
-    -   Para fazer backup de todos os arquivos de determinado grupo de arquivos, especifique o parâmetro **-DatabaseFileGroup***String*, em que *String* contém um ou mais grupos de arquivos de banco de dados para fazer backup.  
+    -   Para fazer backup de todos os arquivos de determinado grupo de arquivos, especifique o parâmetro **-DatabaseFileGroup***String* , em que *String* contém um ou mais grupos de arquivos de banco de dados para fazer backup.  
   
-     O exemplo a seguir cria um backup de arquivo completo de todos os arquivos dos grupos de arquivos secundários 'FileGroup1' e 'FileGroup2' no banco de dados `MyDB`. Os backups são criados no local de backup padrão da instância do servidor `Computer\Instance`.  
+     O exemplo a seguir cria um backup de arquivo completo de todos os arquivos dos grupos de arquivos secundários 'FileGroup1' e 'FileGroup2' no banco de dados `MyDB` . Os backups são criados no local de backup padrão da instância do servidor `Computer\Instance`.  
   
     ```  
     --Enter this command at the PowerShell command prompt, C:\PS>  
@@ -209,10 +213,10 @@ GO
   
 -   [Provedor do SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Informações de histórico e cabeçalho de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)   
  [Fazer backup do banco de dados &#40;página Geral&#41;](../../relational-databases/backup-restore/back-up-database-general-page.md)   
  [Fazer backup do banco de dados &#40;página Opções de Backup&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)   
@@ -222,3 +226,4 @@ GO
  [Restaurações de arquivos &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)  
   
   
+

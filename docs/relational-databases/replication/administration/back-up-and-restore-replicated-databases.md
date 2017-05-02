@@ -1,37 +1,41 @@
 ---
-title: "Fazer backup e restaurar bancos de dados replicados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "backups [replicação do SQL Server]"
-  - "administrando a replicação, restaurando"
-  - "fazendo backup de bancos de dados replicados"
-  - "backups [replicação do SQL Server], sobre backups"
-  - "restaurando bancos de dados replicados [replicação do SQL Server]"
-  - "recuperação [replicação do SQL Server], sobre a recuperação"
-  - "restaurando bancos de dados [SQL Server], bancos de dados replicados"
-  - "fazendo backup de bancos de dados [SQL Server], bancos de dados replicados"
-  - "restaurando [replicação do SQL Server], sobre a restauração"
-  - "recuperação [replicação do SQL Server]"
-  - "replicação [SQL Server], administrando"
-  - "bancos de dados de distribuição [replicação do SQL Server], fazendo backup"
-  - "restaurando [replicação do SQL Server]"
-  - "administrando a replicação, fazendo backup"
+title: Fazer backup e restaurar bancos de dados replicados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backups [SQL Server replication]
+- administering replication, restoring
+- backing up replicated databases
+- backups [SQL Server replication], about backups
+- restoring replicated databases [SQL Server replication]
+- recovery [SQL Server replication], about recovery
+- restoring databases [SQL Server], replicated databases
+- backing up databases [SQL Server], replicated databases
+- restoring [SQL Server replication], about restoring
+- recovery [SQL Server replication]
+- replication [SQL Server], administering
+- distribution databases [SQL Server replication], backing up
+- restoring [SQL Server replication]
+- administering replication, backing up
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 71772228e0d4f3e20982ed08e1d60b24fae76eb7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Fazer backup e restaurar bancos de dados replicados
+# <a name="back-up-and-restore-replicated-databases"></a>Fazer backup e restaurar bancos de dados replicados
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Bancos de dados replicados requerem atenção especial em relação a backup e restauração de dados. Este tópico fornece informações iniciais e links para obter mais informações sobre estratégias de backup e restauração para cada tipo de replicação.  
@@ -39,7 +43,7 @@ caps.handback.revision: 40
  A replicação oferece suporte à restauração de bancos de dados replicados para o mesmo servidor e banco de dados dos quais o backup foi criado. Se você restaurar um backup de um banco de dados replicado para outro servidor ou banco de dados, as configurações de replicação não poderão ser preservadas. Neste caso, você deve recriar todas as publicações e assinaturas depois que os backups forem restaurados.  
   
 > [!NOTE]  
->  Será possível restaurar um banco de dados replicado para um servidor auxiliar se estiver sendo usada a remessa de log. Para obter mais informações, consulte [replicação e envio de logs e 40; SQL Server & 41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
+>  Será possível restaurar um banco de dados replicado para um servidor auxiliar se estiver sendo usada a remessa de log. Para obter mais informações, veja [Replicação e envio de logs &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
  Deve ser feito backup regularmente para bancos de dados replicados e bancos de dados do sistema associados. Faça backup dos seguintes bancos de dados:  
   
@@ -49,21 +53,21 @@ caps.handback.revision: 40
   
 -   O banco de dados de assinatura em cada Assinante.  
   
--   O **mestre** e **msdb** bancos de dados do sistema no publicador, distribuidor e todos os assinantes. Esses bancos de dados devem ter, cada um, seus backups realizados em simultâneo com o banco de dados de replicação relevante. Por exemplo, faça backup do **mestre** e **msdb** bancos de dados no publicador ao mesmo tempo você faça backup do banco de dados de publicação. Se o banco de dados de publicação for restaurado, certifique-se de que o **mestre** e **msdb** banco de dados são consistentes com o banco de dados em termos de configuração de replicação e as configurações de publicação.  
+-   Os bancos de dados de sistema **mestre** e **msdb** no Publicador, Distribuidor e todos os Assinantes. Esses bancos de dados devem ter, cada um, seus backups realizados em simultâneo com o banco de dados de replicação relevante. Por exemplo, faça o backup dos bancos de dados **mestre** e **msdb** no Publicador ao mesmo tempo em que executa o backup do banco de dados de publicação. Se o banco de dados de publicação for restaurado, assegure-se de que os bancos de dados **mestre** e **msdb** são consistentes com o banco de dados de publicação, em termos de configuração de replicação e ajustes.  
   
- Se você executar backups de log regulares, qualquer alteração relacionada à replicação deverá ser capturada nos backups de log. Se não executar backups de log, um backup deve ser executado sempre que uma configuração pertinente à replicação for alterada. Para obter mais informações, consulte [ações comuns que requerem um Backup atualizado](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md).  
+ Se você executar backups de log regulares, qualquer alteração relacionada à replicação deverá ser capturada nos backups de log. Se não executar backups de log, um backup deve ser executado sempre que uma configuração pertinente à replicação for alterada. Para obter mais informações, consulte [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md).  
   
-## Estratégias de backup e restauração  
+## <a name="backup-and-restore-strategies"></a>Estratégias de backup e restauração  
  As estratégias de backup e restauração de cada nó em uma topologia de replicação diferem de acordo com tipo de replicação usado. Para obter informações sobre estratégias de backup e restauração para cada tipo de replicação, consulte os tópicos abaixo:  
   
 -   [Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)  
   
 -   [Estratégias para fazer backup e restaurar a replicação de mesclagem](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-merge-replication.md)  
   
- Como parte de qualquer estratégia de recuperação, mantenha sempre um script atual de suas configurações de replicação em um local seguro. No caso de uma falha do servidor ou da necessidade de configurar um ambiente de teste, você poderá modificar o script alterando as referências no nome do servidor e isso poderá ser usado para ajudar a recriar suas configurações de replicação. Além de executar o script em suas configurações de replicação atuais, você deve executar o script de habilitação e desabilitação da replicação. Para obter informações sobre scripts de objetos de replicação, consulte [scripts de replicação](../../../relational-databases/replication/scripting-replication.md).  
+ Como parte de qualquer estratégia de recuperação, mantenha sempre um script atual de suas configurações de replicação em um local seguro. No caso de uma falha do servidor ou da necessidade de configurar um ambiente de teste, você poderá modificar o script alterando as referências no nome do servidor e isso poderá ser usado para ajudar a recriar suas configurações de replicação. Além de executar o script em suas configurações de replicação atuais, você deve executar o script de habilitação e desabilitação da replicação. Para obter informações sobre a execução do script de objetos de replicação, consulte [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
-## Consulte também  
- [Fazer backup e restaurar bancos de dados do SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Práticas recomendadas para administração de replicação](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
+## <a name="see-also"></a>Consulte também  
+ [Backup e Restauração de bancos de dados do SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   

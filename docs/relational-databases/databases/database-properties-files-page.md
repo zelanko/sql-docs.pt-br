@@ -1,27 +1,31 @@
 ---
-title: "Propriedades do Banco de Dados (p&#225;gina Arquivos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.files.f1"
+title: "Propriedades do banco de dados (página Arquivos) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 96e789d47140459475bdd3b6f36500d0d24492ce
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propriedades do Banco de Dados (p&#225;gina Arquivos)
+# <a name="database-properties-files-page"></a>Propriedades do Banco de Dados (página Arquivos)
   Use esta página para criar um novo banco de dados ou para exibir ou modificar as propriedades do banco de dados selecionado. Este tópico se aplica às **Propriedades do Banco de Dados (página Arquivos)** de bancos de dados existentes e ao **Novo Banco de Dados (página Geral)**.  
   
-## Lista de elementos de interface do usuário  
+## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
  **Nome do banco de dados**  
  Adicione ou exiba o nome do banco de dados.  
   
@@ -42,10 +46,10 @@ caps.handback.revision: 42
   
  Selecione **Dados do Fluxo de Arquivos** se estiver adicionando arquivos (contêineres) a um grupo de arquivos com otimização de memória.  
   
- Para adicionar arquivos (contêineres) a um grupo de arquivos de dados de Filestream, o FILESTREAM deve estar habilitado. Você pode habilitar o FILESTREAM usando a caixa de diálogo [Propriedades do Servidor (página Avançado)](../../database-engine/configure-windows/server-properties-advanced-page.md).  
+ Para adicionar arquivos (contêineres) a um grupo de arquivos de dados de Filestream, o FILESTREAM deve estar habilitado. Você pode habilitar o FILESTREAM usando a caixa de diálogo [Propriedades do Servidor (página Avançado)](../../database-engine/configure-windows/server-properties-advanced-page.md) .  
   
  **Grupo de arquivos**  
- Selecione o grupo de arquivos do arquivo na lista. Por padrão, o grupo de arquivos é PRIMARY. Você pode criar um novo grupo de arquivos selecionando **\<novo grupo de arquivos>** e inserindo informações sobre ele na caixa de diálogo **Novo Grupo de Arquivos**. Um novo grupo de arquivos também pode ser criado na página **Grupo de Arquivos** . Você não pode modificar o grupo de arquivos de um arquivo existente.  
+ Selecione o grupo de arquivos do arquivo na lista. Por padrão, o grupo de arquivos é PRIMARY. É possível criar um novo grupo de arquivos selecionando **\<novo grupo de arquivos>** e inserindo informações sobre ele na caixa de diálogo **Novo grupo de arquivos**. Um novo grupo de arquivos também pode ser criado na página **Grupo de Arquivos** . Você não pode modificar o grupo de arquivos de um arquivo existente.  
   
  Ao adicionar arquivos (contêineres) a um grupo de arquivos com otimização de memória, o campo de **Grupo de Arquivos** será preenchido com o nome do grupo de arquivos com otimização de memória do banco de dados.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 42
   
  Para obter informações sobre arquivos, consulte [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

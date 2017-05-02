@@ -1,26 +1,30 @@
 ---
-title: "Carregar arquivos em FileTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], migrando arquivos"
-  - "FileTables [SQL Server], carregamento em massa"
-  - "FileTables [SQL Server], carregando arquivos"
+title: Carregar arquivos em FileTables | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], migrating files
+- FileTables [SQL Server], bulk loading
+- FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aea5bf6d2bbdb455735c589d46ac76f0e587cda3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Carregar arquivos em FileTables
+# <a name="load-files-into-filetables"></a>Carregar arquivos em FileTables
   Descreve como carregar ou migrar arquivos para FileTables.  
   
 ##  <a name="BasicsLoadNew"></a> Carregando ou migrando arquivos para um FileTable  
@@ -101,28 +105,28 @@ UPDATE PhotoMetadata
   
 -   **bcp**  
   
-    -   Chame com a cláusula **CHECK_CONSTRAINTS**.  
+    -   Chame com a cláusula **CHECK_CONSTRAINTS** .  
   
-    -   Desabilite o namespace da FileTable e chame sem a cláusula **CHECK_CONSTRAINTS**. Em seguida, reabilite o namespace da FileTable.  
+    -   Desabilite o namespace da FileTable e chame sem a cláusula **CHECK_CONSTRAINTS** . Em seguida, reabilite o namespace da FileTable.  
   
 -   **BULK INSERT**  
   
-    -   Chame com a cláusula **CHECK_CONSTRAINTS**.  
+    -   Chame com a cláusula **CHECK_CONSTRAINTS** .  
   
-    -   Desabilite o namespace da FileTable e chame sem a cláusula **CHECK_CONSTRAINTS**. Em seguida, reabilite o namespace da FileTable.  
+    -   Desabilite o namespace da FileTable e chame sem a cláusula **CHECK_CONSTRAINTS** . Em seguida, reabilite o namespace da FileTable.  
   
 -   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
   
-    -   Chame com a cláusula **IGNORE_CONSTRAINTS**.  
+    -   Chame com a cláusula **IGNORE_CONSTRAINTS** .  
   
-    -   Desabilite o namespace da FileTable e chame sem a cláusula **IGNORE_CONSTRAINTS**. Em seguida, reabilite o namespace da FileTable.  
+    -   Desabilite o namespace da FileTable e chame sem a cláusula **IGNORE_CONSTRAINTS** . Em seguida, reabilite o namespace da FileTable.  
   
  Para obter informações sobre como desabilitar as restrições de FileTable, consulte [Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md).  
   
 ###  <a name="disabling"></a> Como desabilitar restrições de FileTable para carregamento em massa  
  Para carregar os arquivos em massa em uma FileTable sem a sobrecarga de impor as restrições definidas pelo sistema, você pode desabilitar temporariamente as restrições. Para obter mais informações, consulte [Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Acessar FileTables com Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [Acessar FileTables com APIs de entrada e saída de arquivo](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   

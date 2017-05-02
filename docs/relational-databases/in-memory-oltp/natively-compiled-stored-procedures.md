@@ -1,24 +1,28 @@
 ---
-title: "Procedimentos armazenados compilados nativamente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "procedimentos armazenados compilados nativamente"
+title: Procedimentos armazenados compilados nativamente | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- natively compiled stored procedures
 ms.assetid: d5ed432c-10c5-4e4f-883c-ef4d1fa32366
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b718bafa35ae753eba0064db2af168054fd211ca
+ms.lasthandoff: 04/11/2017
+
 ---
-# Procedimentos armazenados compilados nativamente
+# <a name="natively-compiled-stored-procedures"></a>procedimentos armazenados compilados nativamente
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Os procedimentos armazenados compilados nativamente são procedimentos armazenados [!INCLUDE[tsql](../../includes/tsql-md.md)] compilados no código nativo que acessam tabelas com otimização de memória. Os procedimentos armazenados compilados nativamente proporcionam a execução eficiente das consultas e da lógica de negócios no procedimento armazenado. Para obter mais detalhes sobre o processo de compilação nativo, consulte [Native Compilation of Tables and Stored Procedures](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md). Para mais informações sobre a migração de procedimentos armazenados baseados em disco para procedimentos armazenados compilados de modo nativo, veja [Problemas de migração para procedimentos armazenados compilados de modo nativo](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md).  
@@ -30,7 +34,7 @@ caps.handback.revision: 54
   
 -   [Criando procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md)  
   
--   [Blocos atômicos](../../relational-databases/in-memory-oltp/blocos-atômicos-nos-procedimentos-nativos.md)  
+-   [Blocos atômicos](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)  
   
 -   [Recursos com suporte para módulos T-SQL compilados nativamente](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 54
   
 -   [Chamando procedimentos armazenados compilados nativamente em aplicativos de acesso a dados](../../relational-databases/in-memory-oltp/calling-natively-compiled-stored-procedures-from-data-access-applications.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

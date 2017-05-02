@@ -1,100 +1,96 @@
 ---
-title: "Entidades (Mecanismo de Banco de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.roleproperties.selectroll.f1"
-  - "sql13.swb.databaseuser.permissions.user.f1--May use common.permissions"
-helpviewer_keywords: 
-  - "certificados [SQL Server], entidades"
-  - "funções [SQL Server], entidades"
-  - "permissões [SQL Server], entidades"
-  - "##MS_SQLAuthenticatorCertificate ##"
-  - "entidades [SQL Server]"
-  - "##MS_SQLResourceSigningCertificate ##"
-  - "grupos [SQL Server], entidades"
-  - "##MS_AgentSigningCertificate ##"
-  - "autenticação [SQL Server], entidades"
-  - "esquemas [SQL Server], entidades"
-  - "entidades [SQL Server], sobre entidades"
-  - "segurança [SQL Server], entidades"
-  - "usuários [SQL Server], entidades"
-  - "##MS_SQLReplicationSigningCertificate ##"
+title: "Entidades de segurança (mecanismo de banco de dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.roleproperties.selectroll.f1
+- sql13.swb.databaseuser.permissions.user.f1--May use common.permissions
+helpviewer_keywords:
+- certificates [SQL Server], principals
+- roles [SQL Server], principals
+- permissions [SQL Server], principals
+- '##MS_SQLAuthenticatorCertificate##'
+- principals [SQL Server]
+- '##MS_SQLResourceSigningCertificate##'
+- groups [SQL Server], principals
+- '##MS_AgentSigningCertificate##'
+- authentication [SQL Server], principals
+- schemas [SQL Server], principals
+- principals [SQL Server], about principals
+- security [SQL Server], principals
+- users [SQL Server], principals
+- '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 caps.latest.revision: 57
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9ac118739640b288307e09c8fd36ba842d0c7ef1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Entidades (Mecanismo de Banco de Dados)
+# <a name="principals-database-engine"></a>Entidades (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  *Entidades* são entidades que podem solicitar recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Como outros componentes do modelo de autorização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], as entidades podem ser organizadas em uma hierarquia. O escopo de influência de uma entidade depende do escopo de sua definição: Windows, servidor, banco de dados e, se a entidade é indivisível ou uma coleção. Um logon do Windows é um exemplo de um principal indivisível, enquanto um Grupo do Windows é um exemplo de um principal que é uma coleção. Todas as entidades têm um SID (identificador de segurança).  
+  *Entidades* são entidades que podem solicitar recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Como outros componentes do modelo de autorização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , as entidades podem ser organizadas em uma hierarquia. O escopo de influência de uma entidade depende do escopo de sua definição: Windows, servidor, banco de dados e, se a entidade é indivisível ou uma coleção. Um logon do Windows é um exemplo de um principal indivisível, enquanto um Grupo do Windows é um exemplo de um principal que é uma coleção. Todas as entidades têm um SID (identificador de segurança). Este tópico aplica-se a todas as versões do SQL Server, mas há algumas restrições para entidade de segurança no nível do servidor no banco de dados SQL ou no SQL Data Warehouse. 
   
- **Entidades no nível do Windows**  
+## <a name="sql-server-level-principals"></a>Entidades de segurança no nível do SQL Server  
   
--   Logon de domínio do Windows  
+-  Logon de autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]   
+-  Logon de autenticação do Windows para um usuário do Windows  
+-  Logon de autenticação do Windows para um grupo do Windows   
+-  Logon de autenticação do Azure Active Directory para um usuário do AD
+-  Logon de autenticação do Azure Active Directory para um grupo do AD
+-  Função do servidor  
   
--   Logon local do Windows  
+ ## <a name="database-level-principals"></a>Entidades no nível do banco de dados  
   
- **Entidades de****nível** do **SQL Server**  
-  
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Logon  
-  
--   Função do servidor  
-  
- **Entidades no nível do banco de dados**  
-  
--   Usuário de banco de dados  
-  
+-   Usuário de banco de dados (existem 11 tipos de usuários. Para obter mais informações, consulte [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md).) 
 -   Função de banco de dados  
-  
 -   Função de aplicativo  
   
-## Logon sa do SQL Server  
- O logon sa do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é uma entidade de segurança no nível do servidor. Por padrão, ele é criado quando uma instância é instalada. A partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o banco de dados padrão de sa é o mestre. Essa é uma alteração de comportamento de versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+## <a name="sa-login"></a>Logon sa  
+ O logon `sa` do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é uma entidade de segurança no nível do servidor. Por padrão, ele é criado quando uma instância é instalada. A partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o banco de dados padrão de sa é o mestre. Essa é uma alteração de comportamento de versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O logon `sa` é membro da função de banco de dados fixa `sysadmin`. O logon `sa` tem todas as permissões no servidor e não pode ser limitado. O logon `sa` não pode ser descartado, mas pode ser desabilitado para que ninguém possa usá-lo.
+
+## <a name="dbo-user-and-dbo-schema"></a>Usuário dbo e esquema dbo
+
+O uso de `dbo` é uma entidade de segurança do usuário especial em cada banco de dados. Todos os administradores do SQL Server, os membros da função de servidor fixa `sysadmin`, o logon `sa` e os proprietários do banco de dados, entram nos bancos de dados como o usuário `dbo`. O usuário `dbo` tem todas as permissões no banco de dados e não pode ser limitado ou descartado. `dbo` representa o proprietário do banco de dados, mas a conta de usuário `dbo` não é igual à função de banco de dados fixa `db_owner` e a função de banco de dados fixa `db_owner` não é o mesmo que a conta de usuário registrada como o proprietário do banco de dados.     
+O usuário `dbo` tem o esquema `dbo`. O esquema `dbo` é o esquema padrão para todos os usuários, a menos que algum outro esquema seja especificado.  O esquema `dbo` não pode ser descartado.
   
-## Função de banco de dados pública  
- Cada usuário do banco de dados pertence à função do banco de dados público. Quando permissões específicas não são concedidas ou são negadas a um usuário em um objeto seguro, o usuário herda as permissões concedidas como públicas naquele objeto seguro.  
+## <a name="public-server-role-and-database-role"></a>Função de servidor e a função de banco de dados pública  
+Cada logon pertence à função de servidor fixa `public` e cada usuário de banco de dados pertence à função de banco de dados `public`. Quando um usuário ou logon não foi concedido ou teve permissões específicas negadas em um protegível, o logon ou o usuário herda as permissões concedidas como públicas naquele protegível. A função fixa de servidor `public` e a função fixa de banco de dados `public` não podem ser descartadas. No entanto, você pode revogar as permissões das funções `public`. Há várias permissões que são atribuídas às funções `public` por padrão. A maioria dessas permissões é necessária para operações de rotina no banco de dados, ou seja, o tipo de coisas que todos devem ser capazes de fazer. Tenha cuidado ao revogar permissões de logon ou usuário público, pois isso afetará todos os logons e usuários. Geralmente você não deve negar permissões para o público, porque a instrução deny substitui todas as instruções grant que possam ser feitas para indivíduos. 
   
-## INFORMATION_SCHEMA e sys  
- Todo o banco de dados inclui duas entidades exibidas como usuários em exibições do catálogo: INFORMATION_SCHEMA e sys. Essas entidades são exigidas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Elas não são entidades, tampouco podem ser modificadas ou descartadas.  
+## <a name="informationschema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA e usuários e esquemas sys 
+ Todo banco de dados inclui duas entidades que são exibidas como usuários em exibições do catálogo: `INFORMATION_SCHEMA` e `sys`. Essas entidades são necessárias para uso interno do mecanismo de banco de dados. Elas não podem ser modificadas ou descartadas.  
   
-## Logons do SQL Server com base em certificado  
+## <a name="certificate-based-sql-server-logins"></a>Logons do SQL Server com base em certificado  
  Entidades de servidor com nomes entre duas marcas hash (##) são somente para uso interno do sistema. As entidades a seguir são criadas com base em certificados quando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é instalado e não devem ser excluídas.  
   
--   \##MS_SQLResourceSigningCertificate##  
+-   \##MS_SQLResourceSigningCertificate##    
+-   \##MS_SQLReplicationSigningCertificate##    
+-   \##MS_SQLAuthenticatorCertificate##    
+-   \##MS_AgentSigningCertificate##   
+-   \##MS_PolicyEventProcessingLogin##   
+-   \##MS_PolicySigningCertificate##   
+-   \##MS_PolicyTsqlExecutionLogin##   
   
--   \##MS_SQLReplicationSigningCertificate##  
+## <a name="the-guest-user"></a>O Usuário convidado  
+ Cada banco de dados inclui um `guest`. As permissões concedidas ao usuário `guest` são herdadas pelos usuários que têm acesso ao banco de dados, mas que não têm uma conta de usuário no banco de dados. O usuário `guest` não pode ser descartado, mas pode ser desabilitado revogando sua permissão CONNECT. A permissão CONNECT pode ser revogada executando `REVOKE CONNECT FROM GUEST;` em qualquer banco de dados diferente de `master` ou `tempdb`.  
   
--   \##MS_SQLAuthenticatorCertificate##  
   
--   \##MS_AgentSigningCertificate##  
-  
--   \##MS_PolicyEventProcessingLogin##  
-  
--   \##MS_PolicySigningCertificate##  
-  
--   \##MS_PolicyTsqlExecutionLogin##  
-  
-## O Usuário convidado  
- Cada banco de dados inclui um **convidado**. As permissões concedidas ao usuário **convidado** são herdadas pelos usuários que têm acesso ao banco de dados, mas que não têm uma conta de usuário no banco de dados. O usuário **convidado** não pode ser descartado, mas pode ser desabilitado revogando sua permissão **CONNECT**. A permissão **CONNECT** pode ser revogada executando `REVOKE CONNECT FROM GUEST` em qualquer banco de dados que não seja mestre ou tempdb.  
-  
-## Servidor de banco de dados e cliente  
- Por definição, um cliente e um servidor de banco de dados são entidades de segurança e podem ser protegidos. Essas entidades podem ser autenticadas mutuamente antes que uma conexão de rede segura seja estabelecida. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte ao protocolo de autenticação [Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758), que define como os clientes interagem com um serviço de autenticação de rede.  
-  
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  Para obter informações sobre como criar um sistema de permissões, veja [Introdução às permissões do mecanismo de banco de dados](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
- Os tópicos a seguir são incluídos nesta seção dos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ Os tópicos a seguir são incluídos nesta seção dos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   [Tópicos de instruções sobre gerenciamento de logons, usuários e esquemas](../../../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md)  
   
@@ -104,7 +100,7 @@ caps.handback.revision: 55
   
 -   [Funções de aplicativo](../../../relational-databases/security/authentication-access/application-roles.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Protegendo o SQL Server](../../../relational-databases/security/securing-sql-server.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
@@ -114,3 +110,4 @@ caps.handback.revision: 55
  [Funções de nível de banco de dados](../../../relational-databases/security/authentication-access/database-level-roles.md)  
   
   
+

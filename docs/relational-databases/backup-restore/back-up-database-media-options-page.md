@@ -1,26 +1,30 @@
 ---
-title: "Backup de Banco de Dados (p&#225;gina Op&#231;&#245;es de M&#237;dia) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "swb.backupdatabase.mediaoptions.f1"
-  - "sql13.swb.backupdatabase.mediaoptions.f1"
+title: "Fazer backup de banco de dados (página Opções de Mídia) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- swb.backupdatabase.mediaoptions.f1
+- sql13.swb.backupdatabase.mediaoptions.f1
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e1fd480768d75f33793f7260eb2652a25c1cc77
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup de Banco de Dados (p&#225;gina Op&#231;&#245;es de M&#237;dia)
-  Use a página **Opções de Mídia** da caixa de diálogo **Fazer Backup de Banco de Dados** para exibir ou modificar opções de mídia de banco de dados.  
+# <a name="back-up-database-media-options-page"></a>Backup de Banco de Dados (página Opções de Mídia)
+  Use a página  **Opções de Mídia** da caixa de diálogo **Fazer Backup de Banco de Dados** para exibir ou modificar opções de mídia de banco de dados.  
   
  **Para criar um backup usando o SQL Server Management Studio**  
   
@@ -34,9 +38,9 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  Ao especificar uma tarefa de backup usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é possível gerar o script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) correspondente clicando no botão **Script** e selecionando um destino para o script.  
   
-## Opções  
+## <a name="options"></a>Opções  
   
-### Substituir mídia  
+### <a name="overwrite-media"></a>Substituir mídia  
  As opções do painel **Substituir mídia** controlam como o backup é gravado na mídia. Se você tiver selecionado a URL (Armazenamento do Windows Azure) como destino de backup na página Geral da caixa de diálogo Backup de Banco de Dados, as opções na seção Substituir mídia serão desabilitadas. É possível substituir um backup usando a instrução Transact-SQL **BACKUP TO URL. WITH FORMAT**. Para saber mais, confira [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
  Há suporte somente para a opção **Fazer backup em um novo conjunto de mídias e apagar todos os conjuntos de backup existentes** nas opções de criptografia. Se você selecionar as opções na seção **Fazer backup na mídia existente**, as opções de criptografias na página **Opções de Backup** serão desabilitadas.  
@@ -72,7 +76,7 @@ caps.handback.revision: 7
  **Descrição do novo conjunto de mídias**  
  Opcionalmente, digite uma descrição significativa do novo conjunto de mídias. Essa descrição deve ser específica o suficiente para comunicar o conteúdo com precisão.  
   
-### Confiabilidade  
+### <a name="reliability"></a>Confiabilidade  
  As opções do painel **Log de transações** controlam o gerenciamento de erro pela operação de backup.  
   
  **Verificar backup quando concluído**  
@@ -84,7 +88,7 @@ caps.handback.revision: 7
  **Continuar se houver erro**  
  A operação de backup deve continuar mesmo tendo-se encontrado um ou mais erros.  
   
-### Log de transações  
+### <a name="transaction-log"></a>Log de transações  
  As opções do painel **Log de transações** controlam o comportamento de um backup de log de transações. Essas opções são relevantes apenas no modelo de recuperação completa ou modelo de recuperação bulk-logged. Elas são habilitadas apenas se o **Log de transações** tiver sido selecionado no campo **Tipo de backup** na página [Geral](../../relational-databases/backup-restore/back-up-database-general-page.md) da caixa de diálogo **Fazer Backup de Banco de Dados**.  
   
 > [!NOTE]  
@@ -98,7 +102,7 @@ caps.handback.revision: 7
   
  A seleção dessa opção equivale à especificação de WITH NO_TRUNCATE, NORECOVERY em uma instrução [BACKUP](../../t-sql/statements/backup-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Para obter mais informações, veja [Backups da parte final do log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
-### Unidade de fita  
+### <a name="tape-drive"></a>Unidade de fita  
  As opções do painel **Unidade de fita** controlam o gerenciamento de fita durante a operação de backup. Essas opções serão habilitadas apenas se **Fita** tiver sido selecionada no painel **Destino** da página [Geral](../../relational-databases/backup-restore/back-up-database-general-page.md) da caixa de diálogo **Fazer Backup de Banco de Dados**.  
   
 > [!NOTE]  
@@ -110,7 +114,7 @@ caps.handback.revision: 7
  **Rebobinar a fita antes de descarregar**  
  Antes de descarregar, libere e rebobine a fita. Isso só será habilitado se **Descarregar a fita após o backup** for selecionado.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Fazer backup de arquivos e de grupos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

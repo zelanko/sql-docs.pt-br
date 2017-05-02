@@ -1,40 +1,44 @@
 ---
-title: "Especificar comportamento de parametriza&#231;&#227;o de consulta usando guias de plano | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "guia de plano TEMPLATE"
-  - "opção PARAMETERIZATION FORCED"
-  - "opção PARAMETERIZATION"
-  - "opção PARAMETERIZATION SIMPLE"
-  - "parametrização [SQL Server]"
-  - "substituindo o comportamento de parametrização"
-  - "guias de plano [SQL Server], parametrização"
-  - "consultas parametrizadas [SQL Server]"
+title: "Especificar o comportamento de parametrização de consulta usando guias de plano | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TEMPLATE plan guide
+- PARAMETERIZATION FORCED option
+- PARAMETERIZATION option
+- PARAMETERIZATION SIMPLE option
+- parameterization [SQL Server]
+- overriding parameterization behavior
+- plan guides [SQL Server], parameterization
+- parameterized queries [SQL Server]
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 416a4e54d2b5ff881102b42e136a088e00e2d324
+ms.lasthandoff: 04/11/2017
+
 ---
-# Especificar comportamento de parametriza&#231;&#227;o de consulta usando guias de plano
+# <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Especificar comportamento de parametrização de consulta usando guias de plano
   Quando a opção de banco de dados PARAMETERIZATION está definida como SIMPLE, o otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode optar por parametrizar as consultas. Isso significa que qualquer valor literal contido em uma consulta é substituído por parâmetros. Esse processo é denominado parametrização simples. Quando a parametrização SIMPLE está em vigor, você não pode controlar quais consultas são parametrizadas e quais não são. No entanto, você pode especificar que todas as consultas em um banco de dados sejam parametrizadas definindo a opção de banco de dados PARAMETERIZATION como FORCED. Esse processo é denominado parametrização forçada.  
   
  Você pode substituir o comportamento de parametrização de um banco de dados usando guias de plano das seguintes formas:  
   
--   Quando a opção de banco de dados PARAMETERIZATION está definida como SIMPLE, você pode especificar que haja a tentativa de parametrização forçada em uma determinada classe de consultas. Você faz isso criando uma guia de plano TEMPLATE no formulário parametrizado da consulta e especificando a dica de consulta PARAMETERIZATION FORCED no procedimento armazenado [sp_create_plan_guide](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md). Você pode considerar esse tipo de guia de plano como uma forma de habilitar a parametrização forçada só em certa classe de consultas, em vez de em todas as consultas.  
+-   Quando a opção de banco de dados PARAMETERIZATION está definida como SIMPLE, você pode especificar que haja a tentativa de parametrização forçada em uma determinada classe de consultas. Você faz isso criando uma guia de plano TEMPLATE no formulário parametrizado da consulta e especificando a dica de consulta PARAMETERIZATION FORCED no procedimento armazenado [sp_create_plan_guide](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) . Você pode considerar esse tipo de guia de plano como uma forma de habilitar a parametrização forçada só em certa classe de consultas, em vez de em todas as consultas.  
   
 -   Quando a opção de banco de dados PARAMETERIZATION está definida como FORCED, você pode especificar que, para uma determinada classe de consultas, haja somente a tentativa de parametrização simples, não a parametrização forçada. Você faz isso criando uma guia de plano TEMPLATE no formulário parametrizado de forçamento da consulta e especificando a dica de consulta PARAMETERIZATION SIMPLE em **sp_create_plan_guide**.  
   
- Considere a consulta a seguir no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
+ Considere a consulta a seguir no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
   
 ```  
 SELECT pi.ProductID, SUM(pi.Quantity) AS Total  
@@ -47,7 +51,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
   
  Como um administrador de banco de dados, você determinou que não quer habilitar a parametrização forçada em todas as consultas no banco de dados. Porém, você quer evitar despesas de compilação em todas as consultas que são sintaticamente equivalentes à consulta anterior, mas só diferem em valores literais constantes. Em outras palavras, você quer parametrizar a consulta para que um plano de consulta para esse tipo de consulta seja reutilizado. Nesse caso, complete as seguintes etapas:  
   
-1.  Recupere o formulário parametrizado da consulta. O único modo seguro de obter esse valor para uso em **sp_create_plan_guide** é usando o procedimento armazenado do sistema [sp_get_query_template](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md).  
+1.  Recupere o formulário parametrizado da consulta. O único modo seguro de obter esse valor para uso em **sp_create_plan_guide** é usando o procedimento armazenado do sistema [sp_get_query_template](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md) .  
   
 2.  Crie a guia de plano no formulário parametrizado da consulta, especificando a dica de consulta PARAMETERIZATION FORCED.  
   

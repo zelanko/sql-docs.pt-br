@@ -1,28 +1,32 @@
 ---
-title: "Configurar o Always Encrypted usando o SQL Server Management Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SWB.COLUMNMASTERKEY.PAGE.F1"
-  - "SQL13.SWB.COLUMNENCRYPTIONKEY.PAGE.F1"
-  - "SQL13.SWB.COLUMNMASTERKEY.ROTATION.F1"
-helpviewer_keywords: 
-  - "Always Encrypted, configurar com o SSMS"
+title: Configurar o Always Encrypted usando o SQL Server Management Studio | Microsoft Docs
+ms.custom: 
+ms.date: 11/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SWB.COLUMNMASTERKEY.PAGE.F1
+- SQL13.SWB.COLUMNENCRYPTIONKEY.PAGE.F1
+- SQL13.SWB.COLUMNMASTERKEY.ROTATION.F1
+helpviewer_keywords:
+- Always Encrypted, configure with SSMS
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 caps.latest.revision: 15
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 80c832db0ffdb9a3666b60a19fdf11a01750b2e1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar o Always Encrypted usando o SQL Server Management Studio
+# <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configurar o Always Encrypted usando o SQL Server Management Studio
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Este artigo descreve as tarefas para configurar o Always Encrypted e gerenciar bancos de dados que usam o Always Encrypted como [SSMS (SQL Server Management Studio)](https://msdn.microsoft.com/library/mt238290.aspx).
@@ -44,63 +48,63 @@ Para obter detalhes sobre como usar o assistente, consulte  [Assistente do Alway
 Esta seção descreve como:   
 -   Recuperar valores de texto cifrado armazenados em colunas criptografadas.   
 -   Recuperar valores de texto sem formatação armazenados em colunas criptografadas.   
--   Envie valores de texto sem formatação para colunas criptografadas (por exemplo, em instruções `INSERT` ou `UPDATE` e como um parâmetro de pesquisa de cláusulas `WHERE` em instruções `SELECT`).   
+-   Envie valores de texto sem formatação para colunas criptografadas (por exemplo, em instruções `INSERT` ou `UPDATE` e como um parâmetro de pesquisa de cláusulas `WHERE` em instruções `SELECT` ).   
 
 ### <a name="retrieving-ciphertext-values-stored-in-encrypted-columns"></a>Recuperando valores de texto cifrado armazenados em colunas criptografadas    
 
 Para recuperar valores de uma coluna criptografada como texto cifrado (sem descriptografar os valores):
-1.  Certifique-se de que Always Encrypted esteja desabilitado para a conexão de banco de dados da janela do Editor de Consultas na qual você está executando sua consulta `SELECT`. Veja [Habilitando e desabilitando Always Encrypted para uma conexão de banco de dados](#en-dis) abaixo.      
-2.  Execute uma consulta `SELECT`. Os dados recuperados de colunas criptografadas serão retornados como valores binários (criptografados).   
+1.    Certifique-se de que Always Encrypted esteja desabilitado para a conexão de banco de dados da janela do Editor de Consultas na qual você está executando sua consulta `SELECT` . Veja [Habilitando e desabilitando Always Encrypted para uma conexão de banco de dados](#en-dis) abaixo.      
+2.    Execute uma consulta `SELECT` . Os dados recuperados de colunas criptografadas serão retornados como valores binários (criptografados).   
 
 *Exemplo*   
-Supondo que `SSN` seja uma coluna criptografada na tabela`Patients`, a consulta mostrada abaixo recuperará valores binários de texto codificado, se Always Encrypted estiver desabilitado para a conexão de banco de dados.   
+Supondo que `SSN` seja uma coluna criptografada na tabela `Patients` , a consulta mostrada abaixo recuperará valores binários de texto codificado, se Always Encrypted estiver desabilitado para a conexão de banco de dados.   
 
 ![always-encrypted-ciphertext](../../../relational-databases/security/encryption/media/always-encrypted-ciphertext.png)
  
 ### <a name="retrieving-plaintext-values-stored-in-encrypted-columns"></a>Recuperar valores de texto sem formatação armazenados em colunas criptografadas    
 
 Para recuperar valores de uma coluna criptografada como texto sem formatação (para descriptografar os valores):   
-1.  Certifique-se de que o Always Encrypted esteja habilitado para a conexão de banco de dados da janela do Editor de Consultas, na qual você está executando sua consulta `SELECT`. Isso instruirá o .NET Framework Data Provider para SQL Server (usado pelo SSMS) a descriptografar os dados recuperados de colunas criptografadas. Veja [Habilitando e desabilitando Always Encrypted para uma conexão de banco de dados](#en-dis) abaixo.
-2.  Verifique se você pode acessar todas as chaves mestras de coluna configuradas para colunas criptografadas. Por exemplo, se a chave mestra de coluna for um certificado, você precisará se certificar de que o certificado seja implantado no computador em que o SSMS está sendo executado. Ou, se a chave mestra de coluna for uma chave armazenada no Cofre de Chaves do Azure, você precisará se certificar de que tem permissões para acessar a chave (além disso, talvez você tenha de entrar no Azure).
-3.  Execute uma consulta `SELECT`. Os dados recuperados de colunas criptografadas serão retornados como texto sem formatação, como valores dos tipos de dados original.   
+1.    Certifique-se de que o Always Encrypted esteja habilitado para a conexão de banco de dados da janela do Editor de Consultas, na qual você está executando sua consulta `SELECT` . Isso instruirá o .NET Framework Data Provider para SQL Server (usado pelo SSMS) a descriptografar os dados recuperados de colunas criptografadas. Veja [Habilitando e desabilitando Always Encrypted para uma conexão de banco de dados](#en-dis) abaixo.
+2.    Verifique se você pode acessar todas as chaves mestras de coluna configuradas para colunas criptografadas. Por exemplo, se a chave mestra de coluna for um certificado, você precisará se certificar de que o certificado seja implantado no computador em que o SSMS está sendo executado. Ou, se a chave mestra de coluna for uma chave armazenada no Cofre de Chaves do Azure, você precisará se certificar de que tem permissões para acessar a chave (além disso, talvez você tenha de entrar no Azure).
+3.    Execute uma consulta `SELECT` . Os dados recuperados de colunas criptografadas serão retornados como texto sem formatação, como valores dos tipos de dados original.   
 
 *Exemplo*   
-Supondo que SSN seja uma coluna `char(11)` criptografada na tabela `Patients`, a consulta, mostrada abaixo, retornará valores de texto sem formatação, se o Always Encrypted estiver habilitado para a conexão de banco de dados e se você tiver acesso à chave mestra de coluna configurada para a coluna `SSN`.   
+Supondo que SSN seja uma coluna `char(11)` criptografada na tabela `Patients` , a consulta, mostrada abaixo, retornará valores de texto sem formatação, se o Always Encrypted estiver habilitado para a conexão de banco de dados e se você tiver acesso à chave mestra de coluna configurada para a coluna `SSN` .   
 
 ![always-encrypted-plaintext](../../../relational-databases/security/encryption/media/always-encrypted-plaintext.png)
  
 ### <a name="sending-plaintext-values-targeting-encrypted-columns"></a>Enviar valores de texto sem formatação destinados a colunas criptografadas       
 
 Para executar uma consulta que envia um valor destinado a uma coluna criptografada, por exemplo, uma consulta que insere, atualiza ou filtra por um valor armazenado em uma coluna criptografada:   
-1.  Certifique-se de que o Always Encrypted esteja habilitado para a conexão de banco de dados da janela do Editor de Consultas, na qual você está executando sua consulta `SELECT`. Isso instruirá o .NET Framework Data Provider para SQL Server (usado pelo SSMS) a criptografar as variáveis Transact-SQL com parâmetros (veja abaixo) destinadas a colunas criptografadas. Veja [Habilitando e desabilitando Always Encrypted para uma conexão de banco de dados](#en-dis) abaixo.   
-2.  Verifique se você pode acessar todas as chaves mestras de coluna configuradas para colunas criptografadas. Por exemplo, se a chave mestra de coluna for um certificado, você precisará se certificar de que o certificado seja implantado no computador em que o SSMS está sendo executado. Ou, se a chave mestra de coluna for uma chave armazenada no Cofre de Chaves do Azure, você precisará se certificar de que tem permissões para acessar a chave (além disso, talvez você tenha de entrar no Azure).   
-3.  Certifique-se de que a Parametrização de Always Encrypted esteja habilitada para a janela do Editor de Consultas. (Requer pelo menos o SSMS versão 17.0) Declare uma variável Transact-SQL e inicie-a com um valor que você deseja enviar (inserir, atualizar ou filtrar por) para o banco de dados. Confira [Parametrização de Always Encrypted](#param) abaixo para obter detalhes.   
+1.    Certifique-se de que o Always Encrypted esteja habilitado para a conexão de banco de dados da janela do Editor de Consultas, na qual você está executando sua consulta `SELECT` . Isso instruirá o .NET Framework Data Provider para SQL Server (usado pelo SSMS) a criptografar as variáveis Transact-SQL com parâmetros (veja abaixo) destinadas a colunas criptografadas. Veja [Habilitando e desabilitando Always Encrypted para uma conexão de banco de dados](#en-dis) abaixo.   
+2.    Verifique se você pode acessar todas as chaves mestras de coluna configuradas para colunas criptografadas. Por exemplo, se a chave mestra de coluna for um certificado, você precisará se certificar de que o certificado seja implantado no computador em que o SSMS está sendo executado. Ou, se a chave mestra de coluna for uma chave armazenada no Cofre de Chaves do Azure, você precisará se certificar de que tem permissões para acessar a chave (além disso, talvez você tenha de entrar no Azure).   
+3.    Certifique-se de que a Parametrização de Always Encrypted esteja habilitada para a janela do Editor de Consultas. (Requer pelo menos o SSMS versão 17.0) Declare uma variável Transact-SQL e inicie-a com um valor que você deseja enviar (inserir, atualizar ou filtrar por) para o banco de dados. Confira [Parametrização de Always Encrypted](#param) abaixo para obter detalhes.   
     >   [!NOTE]
     >   Como o Always Encrypted oferece suporte a um subconjunto limitado de conversões de tipo, em muitos casos, é necessário que o tipo de dados de uma variável Transact-SQL seja o mesmo que o tipo da coluna de banco de dados de destino, ao qual ele se destina.   
-4.  Execute a consulta enviando o valor da variável Transact-SQL para o banco de dados. O SSMS converterá a variável em um parâmetro de consulta e ele criptografará seu valor antes de enviá-la para o banco de dados.   
+4.    Execute a consulta enviando o valor da variável Transact-SQL para o banco de dados. O SSMS converterá a variável em um parâmetro de consulta e ele criptografará seu valor antes de enviá-la para o banco de dados.   
 
 *Exemplo*   
-Supondo que `SSN` seja uma coluna `char(11)` criptografada na tabela `Patients`, o script abaixo tentará localizar uma linha que contenha `'795-73-9838'` na coluna SSN e retornará o valor da coluna `LastName`, desde que o Always Encrypted esteja habilitado para a conexão de banco de dados, a Parametrização de Always Encrypted esteja habilitada para a janela do Editor de Consultas e você tenha acesso à chave mestra de coluna configurada para a coluna `SSN`.   
+Supondo que `SSN` seja uma coluna `char(11)` criptografada na tabela `Patients` , o script abaixo tentará localizar uma linha que contenha `'795-73-9838'` na coluna SSN e retornará o valor da coluna `LastName` , desde que o Always Encrypted esteja habilitado para a conexão de banco de dados, a Parametrização de Always Encrypted esteja habilitada para a janela do Editor de Consultas e você tenha acesso à chave mestra de coluna configurada para a coluna `SSN` .   
 
 ![always-encrypted-patients](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
  
-### <a name="a-nameen-disa-enabling-and-disabling-always-encrypted-for-a-database-connection"></a><a name="en-dis"></a> Habilitando e desabilitando Always Encrypted para uma conexão de banco de dados   
+### <a name="en-dis"></a> Enabling and disabling Always Encrypted for a database connection   
 
 Habilitar o Always Encrypted para uma conexão de banco de dados instrui o .NET Framework Data Provider para SQL Server, usado pelo SQL Server Management Studio, a tentar de forma transparente:   
--   Descriptografar todos os valores que são recuperados de colunas criptografadas e retornados nos resultados da consulta.   
--   Criptografar os valores das variáveis Transact-SQL com parâmetros que se destinam a colunas de banco de dados criptografadas.   
-Para habilitar o Always Encrypted para uma conexão de banco de dados, especifique `Column Encryption Setting=Enabled` na guia **Propriedades Adicionais** da caixa de diálogo **Conectar ao Servidor**.    
+-    Descriptografar todos os valores que são recuperados de colunas criptografadas e retornados nos resultados da consulta.   
+-    Criptografar os valores das variáveis Transact-SQL com parâmetros que se destinam a colunas de banco de dados criptografadas.   
+Para habilitar o Always Encrypted para uma conexão de banco de dados, especifique `Column Encryption Setting=Enabled` na guia **Propriedades Adicionais** da caixa de diálogo **Conectar ao Servidor** .    
 Para desabilitar o Always Encrypted para uma conexão de banco de dados, especifique `Column Encryption Setting=Disabled` ou simplesmente remova a definição de **Configuração de Criptografia de Coluna** da guia **Propriedades Adicionais** da caixa de diálogo **Conectar ao Servidor** (seu valor padrão é **Desabilitado**).   
 
 >  [!TIP] 
 >  Para habilitar ou desabilitar Always Encrypted em uma janela do Editor de Consultas existente:   
->  1.   Clique com o botão direito do mouse em qualquer lugar na janela do Editor de Consultas.
->  2.   Selecione **Conexão** > **Alterar Conexão...**, 
->  3.   Clique em **Opções** >>,
->  4.   Selecione a guia **Propriedades Adicionais** e digite `Column Encryption Setting=Enabled` (para habilitar o comportamento de Always Encrypted) ou remover a configuração (para desabilitar o comportamento de Always Encrypted).   
->  5.   Clique em **Conectar**.   
+>  1.    Clique com o botão direito do mouse em qualquer lugar na janela do Editor de Consultas.
+>  2.    Selecione **Conexão** > **Alterar Conexão...**, 
+>  3.    Clique em **Opções** >>,
+>  4.    Selecione a guia **Propriedades Adicionais** e digite `Column Encryption Setting=Enabled` (para habilitar o comportamento de Always Encrypted) ou remover a configuração (para desabilitar o comportamento de Always Encrypted).   
+>  5.    Clique em **Conectar**.   
    
-### <a name="a-nameparamaparameterization-for-always-encrypted"></a><a name="param"></a>Parametrização de Always Encrypted   
+### <a name="param"></a>Parameterization for Always Encrypted   
  
 A Parametrização de Always Encrypted é um recurso do SQL Server Management Studio que converte automaticamente as variáveis Transact-SQL em parâmetros de consulta (instâncias da [Classe SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)). (Requer pelo menos o SSMS versão 17.0) Isso permite que o .NET Framework Data Provider para SQL Server subjacente detecte dados destinados a colunas criptografadas e criptografe esses dados antes de enviá-los para o banco de dados. 
   
@@ -118,18 +122,18 @@ WHERE [SSN] = @SSN
 A Parametrização de Always Encrypted é desabilitada por padrão.    
 
 Para habilitar/desabilitar a Parametrização de Always Encrypted na janela atual do Editor de Consultas:   
-1.  Selecione **Consulta** no menu principal.   
-2.  Selecione **Opções de Consulta…**.   
-3.  Navegue para **Execução** > **Avançado**.   
-4.  Selecione ou desmarque **Habilitar Parametrização de Always Encrypted**.   
-5.  Clique em **OK**.   
+1.    Selecione **Consulta** no menu principal.   
+2.    Selecione **Opções de Consulta…**.   
+3.    Navegue para **Execução** > **Avançado**.   
+4.    Selecione ou desmarque **Habilitar Parametrização de Always Encrypted**.   
+5.    Clique em **OK**.   
 
 Para habilitar/desabilitar a Parametrização de Always Encrypted nas janelas futuras do Editor de Consultas:   
-1.  Selecione **Ferramentas** no menu principal.   
-2.  Selecione **Opções...**.   
-3.  Navegue para **Execução da Consulta** > **SQL Server** > **Avançado**.   
-4.  Selecione ou desmarque **Habilitar Parametrização de Always Encrypted**.   
-5.  Clique em **OK**.   
+1.    Selecione **Ferramentas** no menu principal.   
+2.    Selecione **Opções...**.   
+3.    Navegue para **Execução da Consulta** > **SQL Server** > **Avançado**.   
+4.    Selecione ou desmarque **Habilitar Parametrização de Always Encrypted**.   
+5.    Clique em **OK**.   
 
 Se você executar uma consulta em uma janela do Editor de Consultas que usa uma conexão de banco de dados com o Always Encrypted habilitado, mas a parametrização não estiver habilitada para a janela do Editor de Consultas, você deverá habilitá-la.   
 >   [!NOTE]   
@@ -171,9 +175,9 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 O SQL Server Management Studio usa o Intellisense para informar quais variáveis podem ser parametrizadas com êxito e quais tentativas de parametrização falham (e por quê).   
 
-Uma declaração de uma variável que pode ser parametrizada com êxito é marcada com um sublinhado de aviso no Editor de Consultas. Caso passe o mouse sobre uma instrução de declaração que foi marcada com um sublinhado de aviso, você verá os resultados do processo de parametrização, incluindo os valores das propriedades de chave do objeto [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) resultante (a variável é mapeada para): [SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx), [Tamanho](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx), [Precisão](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx), [Escala](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx), [SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx). Você também pode ver a lista completa de todas as variáveis que foram parametrizadas com êxito na guia **Aviso** do modo de exibição **Lista de Erros**. Para abrir o modo de exibição **Lista de Erros**, selecione **Exibição** no menu principal e escolha **Lista de Erros**.    
+Uma declaração de uma variável que pode ser parametrizada com êxito é marcada com um sublinhado de aviso no Editor de Consultas. Caso passe o mouse sobre uma instrução de declaração que foi marcada com um sublinhado de aviso, você verá os resultados do processo de parametrização, incluindo os valores das propriedades de chave do objeto [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) resultante (a variável é mapeada para): [SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx), [Tamanho](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx), [Precisão](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx), [Escala](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx), [SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx). Você também pode ver a lista completa de todas as variáveis que foram parametrizadas com êxito na guia **Aviso** do modo de exibição **Lista de Erros** . Para abrir o modo de exibição **Lista de Erros** , selecione **Exibição** no menu principal e escolha **Lista de Erros**.    
 
-Se o SQL Server Management Studio tentou parametrizar uma variável, mas a parametrização falhou, a declaração da variável será marcada com um sublinhado de erro. Caso passe o mouse sobre a instrução de declaração que foi marcada com um sublinhado de erro, você obterá resultados sobre o erro. Você também pode ver a lista completa de erros de parametrização de todas as variáveis na guia **Erro** do modo de exibição **Lista de Erros**. Para abrir o modo de exibição **Lista de Erros**, selecione **Exibição** no menu principal e escolha **Lista de Erros**.   
+Se o SQL Server Management Studio tentou parametrizar uma variável, mas a parametrização falhou, a declaração da variável será marcada com um sublinhado de erro. Caso passe o mouse sobre a instrução de declaração que foi marcada com um sublinhado de erro, você obterá resultados sobre o erro. Você também pode ver a lista completa de erros de parametrização de todas as variáveis na guia **Erro** do modo de exibição **Lista de Erros** . Para abrir o modo de exibição **Lista de Erros** , selecione **Exibição** no menu principal e escolha **Lista de Erros**.   
 
 A captura de tela abaixo mostra um exemplo de seis declarações de variável. O SQL Server Management Studio parametrizou com êxito as primeiras três variáveis. As últimas três variáveis não atenderam às condições de pré-requisito de parametrização e, portanto, o SQL Server Management Studio não tentou parametrizá-las (suas declarações não são marcadas de forma alguma).   
 
@@ -184,7 +188,7 @@ Outro exemplo abaixo mostra duas variáveis que atendem às condições de pré-
 ![always-encrypted-error](../../../relational-databases/security/encryption/media/always-encrypted-error.png)
  
 >   [!NOTE]
->   Como o Always Encrypted oferece suporte a um subconjunto limitado de conversões de tipo, em muitos casos, é necessário que o tipo de dados de uma variável Transact-SQL seja o mesmo que o tipo da coluna de banco de dados de destino, ao qual ele se destina. Por exemplo, supondo que o tipo da coluna `SSN` na tabela `Patients` seja `char(11)`, a consulta abaixo falhará, já que o tipo da variável `@SSN`, que é `nchar(11)`, não coincide com o tipo da coluna.   
+>   Como o Always Encrypted oferece suporte a um subconjunto limitado de conversões de tipo, em muitos casos, é necessário que o tipo de dados de uma variável Transact-SQL seja o mesmo que o tipo da coluna de banco de dados de destino, ao qual ele se destina. Por exemplo, supondo que o tipo da coluna `SSN` na tabela `Patients` seja `char(11)`, a consulta abaixo falhará, já que o tipo da variável `@SSN` , que é `nchar(11)`, não coincide com o tipo da coluna.   
 
 ```tsql
 DECLARE @SSN nchar(11) = '795-73-9838'
@@ -208,7 +212,7 @@ WHERE [SSN] = @SSN;
 Para executar as consultas em colunas criptografadas, incluindo consultas que recuperam dados em texto cifrado, são necessárias as permissões `VIEW ANY COLUMN MASTER KEY DEFINITION` e `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` no banco de dados.   
 Além das permissões acima, para descriptografar qualquer resultado de consulta ou criptografar os parâmetros de consulta (produzidos por parametrização de variáveis Transact-SQL), você também precisa acessar a chave mestra de coluna protegendo as colunas de destino:   
 - **Repositório de Certificados – computador local** Você deve ter acesso `Read` ao certificado que é usado como chave mestra da coluna, ou ser o administrador do computador.   
-- **Cofre de Chaves do Azure** Você precisa de `get`, `unwrapKey` e verificar as permissões no cofre que contém a chave mestra da coluna.   
+- **Cofre de Chaves do Azure** Você precisa de `get`, `unwrapKey`e verificar as permissões no cofre que contém a chave mestra da coluna.   
 - **Provedor do Repositório de Chaves (CNG)** A permissão e as credenciais necessárias que podem ser solicitadas ao usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do KSP.   
 - **Provedor de Serviços de Criptografia (CAPI)** A permissão e as credenciais necessárias que podem ser solicitadas ao usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do CSP.   
 
@@ -220,23 +224,23 @@ Para obter mais informações, consulte [Create and Store Column Master Keys (Al
 
 A caixa de diálogo **Nova Chave Mestra da Coluna** permite que você gere uma chave mestra da coluna ou escolha uma chave existente em um repositório de chaves e crie metadados de chave mestra da coluna para a chave criada ou selecionada no banco de dados.
 
-1.  Usando o **Pesquisador de Objetos**, navegue até a pasta **Segurança > Chaves Always Encrypted** em seu banco de dados.
-2.  Clique com o botão direito do mouse na pasta **Chaves Mestras de Coluna** e selecione **Nova Chave Mestra de Coluna...**. 
-3.  Na caixa de diálogo **Nova Chave Mestra de Coluna** , digite o nome do objeto de metadados de chave mestra de coluna.
-4.  Selecione um repositório de chaves:
+1.    Usando o **Pesquisador de Objetos**, navegue até a pasta **Segurança > Chaves Always Encrypted** em seu banco de dados.
+2.    Clique com o botão direito do mouse na pasta **Chaves Mestras de Coluna** e selecione **Nova Chave Mestra de Coluna...**. 
+3.    Na caixa de diálogo **Nova Chave Mestra de Coluna** , digite o nome do objeto de metadados de chave mestra de coluna.
+4.    Selecione um repositório de chaves:
     - **Repositório de Certificados – Usuário atual** : indica o local do repositório do certificado do usuário atual no Repositório de Certificados do Windows, que é seu repositório pessoal. 
     - **Repositório de Certificados – Computador local** : indica o local do repositório de certificados do computador local no Repositório de Certificados do Windows. 
     - **Cofre de Chaves do Azure** : você precisará entrar no Azure (clique em **Entrar**). Após entrar, você poderá escolher uma das suas assinaturas do Azure e um cofre de chaves.
     - **Provedor do Repositório de Chaves (CNG)** : indica um repositório de chaves que é acessível por meio do KSP (provedor do repositório de chaves) que implementa a API CNG (Cryptography Next Generation). Normalmente, esse tipo de repositório é um HSM (módulo de segurança de hardware). Depois de selecionar essa opção, você precisará escolher um KSP. **Provedor de Armazenamento de Chaves do Software Microsoft** é selecionado por padrão. Se você desejar usar uma chave mestra de coluna armazenada em um HSM, selecione um KSP para seu dispositivo (deve ser instalado e configurado no computador antes de abrir a caixa de diálogo).
-    -   **Provedor de Serviços de Criptografia (CAPI)** : um repositório de chaves que é acessível por meio de um CSP (provedor de serviços de criptografia) que implementa a CAPI (Cryptography API). Normalmente, esse tipo de repositório é um HSM (módulo de segurança de hardware). Depois de selecionar essa opção, você precisará escolher um CSP.  Se você desejar usar uma chave mestra de coluna armazenada em um HSM, selecione um CSP para seu dispositivo (deve ser instalado e configurado no computador antes de abrir a caixa de diálogo).
+    -    **Provedor de Serviços de Criptografia (CAPI)** : um repositório de chaves que é acessível por meio de um CSP (provedor de serviços de criptografia) que implementa a CAPI (Cryptography API). Normalmente, esse tipo de repositório é um HSM (módulo de segurança de hardware). Depois de selecionar essa opção, você precisará escolher um CSP.  Se você desejar usar uma chave mestra de coluna armazenada em um HSM, selecione um CSP para seu dispositivo (deve ser instalado e configurado no computador antes de abrir a caixa de diálogo).
     
     >   [!NOTE]
     >   Como a CAPI é uma API preterida, a opção Provedor de Serviços de Criptografia (CAPI) é desabilitada por padrão. Você pode habilitar criando o valor CAPI Provider Enabled DWORD na chave **[HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\sql13\Tools\Client\Always Encrypted]** no Registro do Windows e definindo-o como 1. Você deve usar o CNG em vez de CAPI, a menos que seu repositório de chaves não dê suporte ao CNG.
    
     Para obter mais informações sobre os repositórios de chaves acima, consulte [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)Criar e armazenar chaves mestras de coluna (Always Encrypted).
 
-5.  Selecione uma chave existente no seu repositório de chaves ou clique no botão **Gerar Chave** ou **Gerar Certificado** para criar uma chave no repositório de chaves. 
-6.  Clique em **OK** e a nova chave aparecerá na lista. 
+5.    Selecione uma chave existente no seu repositório de chaves ou clique no botão **Gerar Chave** ou **Gerar Certificado** para criar uma chave no repositório de chaves. 
+6.    Clique em **OK** e a nova chave aparecerá na lista. 
 
 O SQL Server Management Studio criará metadados para a chave mestra da coluna no banco de dados. A caixa de diálogo consegue isso gerando e emitindo uma instrução [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) .
 
@@ -246,11 +250,11 @@ O SQL Server Management Studio criará metadados para a chave mestra da coluna n
 
 A caixa de diálogo **Nova Chave de Criptografia de Coluna** permite gerar uma nova chave de criptografia de coluna, criptografá-la com uma chave mestra da coluna e criar metadados de chave de criptografia de coluna no banco de dados.
 
-1.  Usando o **Pesquisador de Objetos**, navegue até a pasta **Segurança/Chaves Always Encrypted** em seu banco de dados.
-2.  Clique com o botão direito do mouse na pasta **Chaves de Criptografia de Coluna** e selecione **Nova Chave de Criptografia da Coluna...**. 
-3.  Na caixa de diálogo **Nova Chave de Criptografia da Coluna** , digite o nome do objeto de metadados de chave de criptografia da coluna.
-4.  Selecione um objeto de metadados que representa a chave mestra da coluna no banco de dados.
-5.  Clique em **OK**. 
+1.    Usando o **Pesquisador de Objetos**, navegue até a pasta **Segurança/Chaves Always Encrypted** em seu banco de dados.
+2.    Clique com o botão direito do mouse na pasta **Chaves de Criptografia de Coluna** e selecione **Nova Chave de Criptografia da Coluna...**. 
+3.    Na caixa de diálogo **Nova Chave de Criptografia da Coluna** , digite o nome do objeto de metadados de chave de criptografia da coluna.
+4.    Selecione um objeto de metadados que representa a chave mestra da coluna no banco de dados.
+5.    Clique em **OK**. 
 
 
 O SQL Server Management Studio gerará uma nova chave de criptografia da coluna e, em seguida, recuperará os metadados para a chave mestra da coluna selecionada do banco de dados. O SQL Server Management Studio, em seguida, usará os metadados de chave mestra da coluna para entrar em contato com o repositório de chaves que contém a chave mestra da coluna e criptografará a chave de criptografia da coluna. Por fim, os metadados da nova chave de criptografia da coluna serão criados no banco de dados. A caixa de diálogo consegue isso gerando e emitindo uma instrução [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) .
@@ -280,11 +284,11 @@ Provisione uma nova chave mestra de coluna seguindo as etapas na seção Provisi
 Normalmente, uma chave mestra de coluna protege uma ou mais chaves de criptografia de coluna. Cada chave de criptografia de coluna tem um valor criptografado armazenado no banco de dados, que é o produto da criptografia da chave de criptografia de coluna com a chave mestra de coluna.
 Nesta etapa, criptografe cada uma das chaves de criptografia de coluna que são protegidas com a chave mestra de coluna que você está girando, com a nova chave mestra de coluna, e armazene o novo valor criptografado no banco de dados. Como resultado, cada chave de criptografia de coluna afetada pela rotação terá dois valores criptografados: um valor criptografado com a chave mestra de coluna existente e um novo valor criptografado com a nova chave mestra de coluna.
 
-1.  Usando o **Pesquisador de Objetos**, navegue até a pasta ** Segurança > Chaves Always Encrypted > Chaves Mestras de Coluna** e localize a chave mestra de coluna que você está girando.
-2.  Clique com o botão direito do mouse na chave mestra de coluna e selecione **Girar**.
-3.  Na caixa de diálogo **Rotação de Chave Mestra de Coluna** , selecione o nome de sua nova chave mestra de coluna, criada na Etapa 1, no campo **Destino** .
-4.  Examine a lista de chaves de criptografia de coluna, protegidas pelas chaves mestras de coluna existente. Essas chaves serão afetadas pela rotação.
-5.  Clique em **OK**.
+1.    Usando o **Pesquisador de Objetos**, navegue até a pasta  **Segurança > Chaves Always Encrypted > Chaves Mestras de Coluna** e localize a chave mestra de coluna que você está girando.
+2.    Clique com o botão direito do mouse na chave mestra de coluna e selecione **Girar**.
+3.    Na caixa de diálogo **Rotação de Chave Mestra de Coluna** , selecione o nome de sua nova chave mestra de coluna, criada na Etapa 1, no campo **Destino** .
+4.    Examine a lista de chaves de criptografia de coluna, protegidas pelas chaves mestras de coluna existente. Essas chaves serão afetadas pela rotação.
+5.    Clique em **OK**.
 
 O SQL Server Management Studio obterá os metadados das chaves de criptografia de coluna que são protegidos pela chave mestra de coluna antiga e os metadados das chaves mestras de coluna antiga e nova. Em seguida, o SSMS usará os metadados de chave mestra de coluna para acessar o repositório de chaves que contém a chave mestra de coluna antiga e descriptografará as chaves de criptografia de coluna. Subsequentemente, o SSMS acessará o repositório de chaves que mantém a nova chave mestra de coluna para gerar um novo conjunto de valores criptografados das chaves de criptografia de coluna e, em seguida, adicionará os novos valores aos metadados (gerando e emitindo instruções [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) ).
 
@@ -313,19 +317,19 @@ Outro motivo para limpar o valor antigo, antes de arquivar ou remover a chave me
 > [!WARNING]
 > Se você remover um valor de uma chave de criptografia de coluna antes de sua chave mestra de coluna correspondente ter sido disponibilizada para um aplicativo, o aplicativo não poderá mais descriptografar a coluna do banco de dados.
 
-1.  Usando o **Pesquisador de Objetos**, navegue até a pasta **Segurança > Chaves Always Encrypted** e localize a chave mestra de coluna existente que deseja substituir.
-2.  Clique com o botão direito do mouse em sua chave mestra de coluna existente e selecione **Limpar**.
-3.  Examine a lista de valores de chave de criptografia da coluna a serem removidos.
-4.  Clique em **OK**.
+1.    Usando o **Pesquisador de Objetos**, navegue até a pasta **Segurança > Chaves Always Encrypted** e localize a chave mestra de coluna existente que deseja substituir.
+2.    Clique com o botão direito do mouse em sua chave mestra de coluna existente e selecione **Limpar**.
+3.    Examine a lista de valores de chave de criptografia da coluna a serem removidos.
+4.    Clique em **OK**.
 
 O SQL Server Management Studio emitirá instruções [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) para remover os valores criptografados das chaves de criptografia de coluna que estão criptografados com a chave mestra de coluna antiga.
 
 **Etapa 5: Excluir metadados para a chave mestra de coluna antigo**
 
 Se você optar por remover a definição da chave mestra de coluna antiga do banco de dados, use as etapas abaixo. 
-1.  Usando o **Pesquisador de Objetos**, navegue até a pasta ** Segurança > Chaves Always Encrypted > Chaves Mestras de Coluna** e localize a chave mestra de coluna antiga a ser removida do banco de dados.
-2.  Clique com o botão direito do mouse na chave mestra de coluna antiga e selecione **Excluir**. (Isso gerará e emitirá uma instrução [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) para remover os metadados da chave mestra de coluna.)
-3.  Clique em **OK**.
+1.    Usando o **Pesquisador de Objetos**, navegue até a pasta  **Segurança > Chaves Always Encrypted > Chaves Mestras de Coluna** e localize a chave mestra de coluna antiga a ser removida do banco de dados.
+2.    Clique com o botão direito do mouse na chave mestra de coluna antiga e selecione **Excluir**. (Isso gerará e emitirá uma instrução [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) para remover os metadados da chave mestra de coluna.)
+3.    Clique em **OK**.
 
 > [!NOTE]
 > É altamente recomendável não excluir a chave mestra de coluna antiga permanentemente após a rotação. Em vez disso, você deve manter a chave mestra de coluna antiga em seu repositório de chaves atual ou arquivá-la em outro local seguro. Se você restaurar seu banco de dados de um arquivo de backup para um ponto anterior à configuração da nova chave mestra de coluna, precisará da chave antiga para acessar os dados.
@@ -356,14 +360,14 @@ Girar uma chave de criptografia da coluna envolve descriptografar os dados em to
 > Girar uma chave de criptografia de coluna pode demorar muito tempo se as tabelas que contêm as colunas criptografadas com a chave que está sendo girada forem grandes. Enquanto os dados estão sendo criptografados novamente, os aplicativos não podem realizar gravações nas tabelas afetadas. Portanto, sua organização precisa planejar uma rotação de chave de criptografia de coluna com muito cuidado.
 Para girar uma chave de criptografia de coluna, use o Assistente do Always Encrypted.
 
-1.  Abra o assistente para o banco de dados: clique com o botão direito do mouse, aponte para **Tarefas**e clique em **Criptografar Colunas**.
-2.  Examine a página **Introdução** e, em seguida, clique em **Avançar**.
-3.  Na página **Seleção de Coluna** , expanda as tabelas e localize todas as colunas que deseja substituir que atualmente estão criptografadas com a chave de criptografia de coluna.
-4.  Para cada coluna criptografada com a chave de criptografia de coluna antiga, defina a **Chave de Criptografia** para uma nova chave gerada automaticamente. **Observação:** como alternativa, você pode criar uma nova chave de criptografia de coluna antes de executar o assistente. Consulte a seção *Provisionamento de chaves de criptografia da coluna* acima.
-5.  Na página **Configuração da Chave Mestra** , selecione um local para armazenar a nova chave e uma fonte de chave mestra e clique em **Avançar**. **Observação:** se você estiver usando uma chave de criptografia de coluna existente (não uma gerada automaticamente), não há nenhuma ação a ser executada nesta página.
-6.  Na **página Validação**, escolha se deseja executar o script imediatamente ou criar um script do PowerShell e, em seguida, clique em **Avançar**.
-7.  Na página **Resumo** , examine as opções que você selecionou, clique em **Concluir** e feche o assistente após a conclusão.
-8.  Usando o **Pesquisador de Objetos**, navegue até a pasta **Segurança/Chaves Always Encrypted/Chaves de Criptografia de Coluna** e localize a chave de criptografia de coluna antiga a ser removida do banco de dados. Clique com o botão direito do mouse na chave e selecione **Excluir**.
+1.    Abra o assistente para o banco de dados: clique com o botão direito do mouse, aponte para **Tarefas**e clique em **Criptografar Colunas**.
+2.    Examine a página **Introdução** e, em seguida, clique em **Avançar**.
+3.    Na página **Seleção de Coluna** , expanda as tabelas e localize todas as colunas que deseja substituir que atualmente estão criptografadas com a chave de criptografia de coluna.
+4.    Para cada coluna criptografada com a chave de criptografia de coluna antiga, defina a **Chave de Criptografia** para uma nova chave gerada automaticamente. **Observação:** como alternativa, você pode criar uma nova chave de criptografia de coluna antes de executar o assistente. Consulte a seção *Provisionamento de chaves de criptografia da coluna* acima.
+5.    Na página **Configuração da Chave Mestra** , selecione um local para armazenar a nova chave e uma fonte de chave mestra e clique em **Avançar**. **Observação:** se você estiver usando uma chave de criptografia de coluna existente (não uma gerada automaticamente), não há nenhuma ação a ser executada nesta página.
+6.    Na **página Validação**, escolha se deseja executar o script imediatamente ou criar um script do PowerShell e, em seguida, clique em **Avançar**.
+7.    Na página **Resumo** , examine as opções que você selecionou, clique em **Concluir** e feche o assistente após a conclusão.
+8.    Usando o **Pesquisador de Objetos**, navegue até a pasta **Segurança/Chaves Always Encrypted/Chaves de Criptografia de Coluna** e localize a chave de criptografia de coluna antiga a ser removida do banco de dados. Clique com o botão direito do mouse na chave e selecione **Excluir**.
 
 ### <a name="permissions"></a>Permissões
 
@@ -427,7 +431,7 @@ Você precisa de *ALTER ANY COLUMN MASTER KEY* e *ALTER ANY COLUMN ENCRYPTION KE
 
 ## <a name="migrating-databases-with-encrypted-columns-using-sql-server-import-and-export-wizard"></a>Migrando bancos de dados com colunas criptografadas usando o Assistente de Importação e Exportação do SQL Server
 
-Em comparação com o uso de arquivos BACPAC, o [Assistente de Importação e Exportação do SQL Server](Import%20and%20Export%20Data%20Sources%20Supported%20for%20SQL%20Server.md) proporciona mais controle sobre como os dados armazenados nas colunas criptografadas são manipulados durante a migração de dados.
+Em comparação com o uso de arquivos BACPAC, o [Assistente de Importação e Exportação do SQL Server](~/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) proporciona mais controle sobre como os dados armazenados nas colunas criptografadas são manipulados durante a migração de dados.
 
 - Se sua fonte de dados for um banco de dados usando o Always Encrypted, você poderá configurar a conexão da fonte de dados para que os dados armazenados nas colunas criptografadas sejam descriptografadas durante a operação de exportação ou permaneçam criptografadas.
 - Se o destino de dados for um banco de dados usando o Always Encrypted, você poderá configurar sua conexão de destino de dados para que os dados visando colunas criptografadas sejam criptografados.
@@ -436,7 +440,7 @@ Para habilitar a descriptografia (para a fonte de dados) ou criptografia (para o
 
 A tabela a seguir lista os cenários de migração possíveis e como eles se relacionam com o Always Encrypted juntamente com a configuração da fonte de dados e do destino de dados para cada conexão.
 
-| Cenário|Configuração da conexão da fonte| Configuração da conexão do destino
+| Cenário|Configuração da conexão da fonte|    Configuração da conexão do destino
 |:---|:---|:---
 |Criptografar dados na migração (os dados são armazenados em texto não criptografado na fonte de dados e são migrados para colunas criptografadas no destino de dados).| Provedor de dados/driver: *qualquer um*<br><br>Column Encryption Setting = Disabled<br><br>(se o Provedor de dados .NET Framework para SqlServer e o .NET Framework 4.6 ou posterior forem usados.) | Provedor de dados/driver: *Provedor de dados .NET Framework para SqlServer* (.NET Framework 4.6 ou posterior obrigatório)<br><br>Column Encryption Setting = Enabled
 | Descriptografar os dados na migração (os dados são armazenados em colunas criptografadas na fonte de dados e são migrados em texto não criptografado para o destino de dados. Se o destino de dados for um banco de dados, as colunas de destino não serão criptografadas).<br><br>**Observação:** as tabelas de destino com colunas criptografadas devem existir antes da migração.|Provedor de dados/driver: *Provedor de dados .NET Framework para SqlServer* (.NET Framework 4.6 ou posterior obrigatório)<br><br>Column Encryption Setting=Enabled|Provedor de dados/driver: *qualquer um*<br><br>Column Encryption Setting = Disabled<br><br>(se o Provedor de dados .NET Framework para SqlServer e o .NET Framework 4.6 ou posterior forem usados.)
@@ -469,6 +473,9 @@ Para obter mais informações, consulte [Create and Store Column Master Keys (Al
 - [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
 - [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)
 - [Configurar Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
+
+
+
 
 
 

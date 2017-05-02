@@ -1,32 +1,36 @@
 ---
-title: "Tutorial: Replicando dados com clientes m&#243;veis | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "replicação [SQL Server], tutoriais"
+title: "Tutorial: replicando dados com clientes móveis | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 89f4810fae7ce3ee89b7b13f93f7f0298b93bace
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tutorial: Replicando dados com clientes m&#243;veis
+# <a name="tutorial-replicating-data-with-mobile-clients"></a>Tutorial: Replicando dados com clientes móveis
 A replicação é uma boa solução para o problema de mover dados entre um servidor central e clientes móveis que são conectados apenas ocasionalmente. Usando os assistentes de replicação, você pode configurar e administrar uma topologia de replicação facilmente. Este tutorial mostra como você deve configurar uma topologia de replicação para clientes móveis.  
   
-## O que você aprenderá  
+## <a name="what-you-will-learn"></a>O que você aprenderá  
 Neste tutorial você usará a replicação de mesclagem para publicar dados de um banco de dados central para um ou mais usuários móveis de forma que cada usuário obtenha um subconjunto dos dados filtrado exclusivamente. A primeira lição mostra como usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para criar uma publicação. Lições posteriores mostram como criar e sincronizar uma assinatura.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
 Este tutorial é destinado a usuários que estão familiarizados com operações fundamentais de bancos de dados, mas que possuem pouca experiência com replicação. Antes de iniciar este tutorial, é necessário concluir o [Tutorial: Preparando o servidor para replicação](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Para que você possa usar esse tutorial, os seguintes componentes devem estar instalados no sistema:  
@@ -49,7 +53,7 @@ Para que você possa usar esse tutorial, os seguintes componentes devem estar in
   
 **Tempo estimado para concluir este tutorial: 30 minutos.**  
   
-## Lições neste tutorial  
+## <a name="lessons-in-this-tutorial"></a>Lições neste tutorial  
   
 -   [Lição 1: Publicando dados usando replicação de mesclagem](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md)  
   
@@ -57,8 +61,9 @@ Para que você possa usar esse tutorial, os seguintes componentes devem estar in
   
 [Inicie o tutorial](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 [Conceitos de programação de replicação](../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   
   
   
+

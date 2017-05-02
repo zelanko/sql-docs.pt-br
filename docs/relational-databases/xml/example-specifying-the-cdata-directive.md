@@ -1,24 +1,28 @@
 ---
-title: "Exemplo: Especificando a diretiva CDATA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "diretiva CDATA"
+title: 'Exemplo: especificando a diretiva CDATA | Microsoft Docs'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CDATA directive
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 212c754807d0ef2c6da1effca60d47f0896c239d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemplo: Especificando a diretiva CDATA
+# <a name="example-specifying-the-cdata-directive"></a>Exemplo: Especificando a diretiva CDATA
   Se a diretiva for definida como **CDATA**, os dados contidos não serão codificados como entidade, mas colocados na seção CDATA. Os atributos **CDATA** não devem ter nomes.  
   
  A seguinte consulta encapsula a descrição resumida do modelo do produto em uma seção CDATA.  
@@ -45,7 +49,7 @@ FOR XML EXPLICIT
 </ProductModel>  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usar o modo EXPLICIT com FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

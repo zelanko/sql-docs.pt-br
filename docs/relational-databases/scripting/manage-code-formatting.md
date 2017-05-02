@@ -1,44 +1,48 @@
 ---
-title: "Gerenciar formata&#231;&#227;o de c&#243;digo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "recuando código [SQL Server]"
-  - "exibindo URLs"
-  - "formatação de código [SQL Server Management Studio]"
-  - "recolhendo texto "
-  - "formatos [SQL Server], formatação de código no SQL Server Management Studio"
-  - "ocultando texto"
-  - "formatos [SQL Server]"
-  - "texto [SQL Server], formatos de código"
-  - "recuo automático"
-  - "convertendo texto para minúscula"
-  - "Editor de Consulta [SQL Server Management Studio], gerenciando formatos de código"
-  - "URL exibida em código [SQL Server Management Studio]"
-  - "convertendo texto para maiúscula"
-  - "texto [SQL Server]"
-  - "expandindo código"
+title: "Gerenciar a formatação de código | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indenting code [SQL Server]
+- displaying URLs
+- code formatting [SQL Server Management Studio]
+- collapsing text
+- formats [SQL Server], code formatting in SQL Server Management Studio
+- hiding text
+- formats [SQL Server]
+- text [SQL Server], code formats
+- automatic indentation
+- converting text to lower case
+- Query Editor [SQL Server Management Studio], managing code formats
+- URL displayed in code [SQL Server Management Studio]
+- converting text to upper case
+- text [SQL Server]
+- unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57fcddb2d5f87d0b03ab1ed504e07072dc41d367
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gerenciar formata&#231;&#227;o de c&#243;digo
+# <a name="manage-code-formatting"></a>Gerenciar formatação de código
   Com o Editor, você pode formatar seu código com recuo, texto oculto, URLs etc. Você também pode formatar o código automaticamente usando o Recuo Inteligente.  
   
-## Recuo  
+## <a name="indenting"></a>Recuo  
  Você pode escolher três estilos diferentes de recuo de texto. Você também pode especificar quantos espaços compõem um único recuo ou tabulação e se o editor usa tabulações ou caracteres de espaço quando estabelece o recuo.  
   
-#### Para escolher um estilo de recuo  
+#### <a name="to-choose-an-indenting-style"></a>Para escolher um estilo de recuo  
   
 1.  No menu **Ferramentas** , clique em **Opções**.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 23
     > [!NOTE]  
     >  Alguns idiomas não oferecem as três opções de recuo.  
   
-#### Para alterar configurações tabulação de recuo  
+#### <a name="to-change-indent-tab-settings"></a>Para alterar configurações tabulação de recuo  
   
 1.  No menu **Ferramentas** , clique em **Opções**.  
   
@@ -73,19 +77,19 @@ caps.handback.revision: 23
   
      Se você selecionar **Inserir espaços**, digite o número de caracteres de espaço que cada tabulação ou recuo representa em **Tamanho da Tabulação** ou **Tamanho do Recuo**, respectivamente.  
   
-#### Para recuar código  
+#### <a name="to-indent-code"></a>Para recuar código  
   
 1.  Selecione o texto que você deseja recuar.  
   
 2.  Pressione TAB ou clique no botão **Recuar** na barra de ferramentas Padrão.  
   
-#### Para remover o recuo de código  
+#### <a name="to-unindent-code"></a>Para remover o recuo de código  
   
 1.  Selecione o texto em que você deseja remover o recuo.  
   
 2.  Pressione SHIFT+TAB ou clique no botão **Desfazer recuo** na barra de ferramentas Padrão.  
   
-#### Para recuar todo o código automaticamente  
+#### <a name="to-automatically-indent-all-of-your-code"></a>Para recuar todo o código automaticamente  
   
 1.  No menu **Ferramentas** , clique em **Opções**.  
   
@@ -100,35 +104,35 @@ caps.handback.revision: 23
 > [!NOTE]  
 >  A opção **Inteligente** não está disponível para alguns idiomas.  
   
-#### Para converter espaços vazios em tabulações  
+#### <a name="to-convert-white-space-to-tabs"></a>Para converter espaços vazios em tabulações  
   
 1.  Selecione o texto cujo espaço em branco que você deseja converter em tabulações.  
   
-2.  No menu **Editar**, aponte para **Avançado** e clique em **Tabular Seleção**.  
+2.  No menu **Editar** , aponte para **Avançado**e clique em **Tabular Seleção**.  
   
-#### Para converter tabulações em espaços  
+#### <a name="to-convert-tabs-to-spaces"></a>Para converter tabulações em espaços  
   
 1.  Selecione o texto cujas tabulações você deseja converter em espaços.  
   
-2.  No menu **Editar**, aponte para **Avançado** e clique em **Destabular Seleção**.  
+2.  No menu **Editar** , aponte para **Avançado**e clique em **Destabular Seleção**.  
   
- O comportamento desses comandos depende das configurações de tabulação da caixa de diálogo **Opções**. Por exemplo, se a configuração de tabulação for 4, **Tabular Seleção** criará uma tabulação a cada 4 espaços contíguos e **Destabular Seleção** criará 4 espaços a cada tabulação.  
+ O comportamento desses comandos depende das configurações de tabulação da caixa de diálogo **Opções** . Por exemplo, se a configuração de tabulação for 4, **Tabular Seleção** criará uma tabulação a cada 4 espaços contíguos e **Destabular Seleção** criará 4 espaços a cada tabulação.  
   
-## Convertendo texto em maiúsculas ou minúsculas  
+## <a name="converting-text-to-upper-and-lower-case"></a>Convertendo texto em maiúsculas ou minúsculas  
  Você pode usar comandos para converter texto em maiúsculas ou minúsculas.  
   
-#### Para alternar texto entre maiúsculas ou minúsculas  
+#### <a name="to-switch-text-to-upper-or-lower-case"></a>Para alternar texto entre maiúsculas ou minúsculas  
   
 1.  Selecione o texto que você deseja converter.  
   
-2.  Para converter texto para maiúsculas, pressione CTRL+SHIFT+U ou clique em **Colocar em Maiúsculas** no submenu **Avançado** no menu **Editar**.  
+2.  Para converter texto para maiúsculas, pressione CTRL+SHIFT+U ou clique em **Colocar em Maiúsculas** no submenu **Avançado** no menu **Editar** .  
   
-3.  Para converter texto para maiúsculas, pressione CTRL+SHIFT+L ou clique em **Colocar em Minúsculas** no submenu **Avançado** no menu **Editar**.  
+3.  Para converter texto para maiúsculas, pressione CTRL+SHIFT+L ou clique em **Colocar em Minúsculas** no submenu **Avançado** no menu **Editar** .  
   
 > [!NOTE]  
 >  Para obter uma lista completa de teclas de atalho do teclado, consulte [Atalhos de teclado do SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
   
-## Exibindo e vinculando a URLs  
+## <a name="displaying-and-linking-to-urls"></a>Exibindo e vinculando a URLs  
  Você pode criar e exibir URLs clicáveis em seu código. Por padrão, as URLs:  
   
 -   São sublinhadas.  
@@ -137,7 +141,7 @@ caps.handback.revision: 23
   
 -   Abrem a URL quando clicada, se a URL é válida.  
   
-#### Para exibir uma URL clicável  
+#### <a name="to-display-a-clickable-url"></a>Para exibir uma URL clicável  
   
 1.  No menu **Ferramentas** , clique em **Opções**.  
   

@@ -1,33 +1,37 @@
 ---
-title: "Recuperar para um n&#250;mero de sequ&#234;ncia de log (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "números de sequência de log [SQL Server]"
-  - "opção STOPBEFOREMARK [instrução RESTORE]"
-  - "opção STOPATMARK [instrução RESTORE]"
-  - "recuperação pontual [SQL Server]"
-  - "restaurando banco de dados [SQL Server], pontual"
-  - "recuperação [SQL Server], bancos de dados"
-  - "restaurando [SQL Server], pontual"
-  - "LSNs"
-  - "recuperação do banco de dados [SQL Server]"
-  - "restaurações de banco de dados [SQL Server], pontuais"
+title: "Recuperar para um número de sequência de log (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log sequence numbers [SQL Server]
+- STOPBEFOREMARK option [RESTORE statement]
+- STOPATMARK option [RESTORE statement]
+- point in time recovery [SQL Server]
+- restoring databases [SQL Server], point in time
+- recovery [SQL Server], databases
+- restoring [SQL Server], point in time
+- LSNs
+- database recovery [SQL Server]
+- database restores [SQL Server], point in time
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ef9f98df730801b692eace924e094caa6b078ac6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Recuperar para um n&#250;mero de sequ&#234;ncia de log (SQL Server)
+# <a name="recover-to-a-log-sequence-number-sql-server"></a>Recuperar para um número de sequência de log (SQL Server)
   Este tópico é relevante apenas para bancos de dados que estejam usando modelos de recuperação completa ou bulk-logged.  
   
  Você pode usar um LSN (número de sequência de log) para definir o ponto de recuperação para uma operação de restauração. No entanto, esse é um recurso especializado destinado a fornecedores de ferramentas e provavelmente não é de uso geral.  
@@ -42,9 +46,8 @@ caps.handback.revision: 37
 > [!NOTE]  
 >  Os LSNs são valores do tipo de dados **numérico**(25,0). Operações aritméticas (por exemplo, adição ou subtração) não são significativas e não devem ser usadas com LSNs.  
   
- [&#91;Início&#93;](#Top)  
   
-## Exibindo LSNs usados por Backup e Restauração  
+## <a name="viewing-lsns-used-by-backup-and-restore"></a>Exibindo LSNs usados por Backup e Restauração  
  O LSN de um registro de log no qual um determinado evento de backup e restauração ocorrido pode ser exibido usando um ou mais do seguinte:  
   
 -   [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)  
@@ -53,15 +56,15 @@ caps.handback.revision: 37
   
 -   [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md); [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
--   [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
--   [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+-   [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
 > [!NOTE]  
 >  Os LSNs também aparecem em alguns textos de mensagem.  
   
-## Sintaxe de Transact-SQL para restaurar para um LSN  
- Usando uma instrução [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) é possível parar no LSN ou imediatamente antes, da seguinte maneira:  
+## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Sintaxe de Transact-SQL para restaurar para um LSN  
+ Usando uma instrução [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) é possível parar no LSN ou imediatamente antes, da seguinte maneira:  
   
 -   Use a cláusula WITH STOPATMARK **='**lsn:*<lsn_number>***'**, em que lsn:*\<lsnNumber>* é uma cadeia de caracteres que especifica que o registro de log que contém o LSN especificado é o ponto de recuperação.  
   
@@ -73,7 +76,7 @@ caps.handback.revision: 37
   
  Normalmente, uma transação específica é selecionada para ser incluída ou excluída. Embora não seja exigido, na prática, o registro de log especificado é um registro da confirmação de transação.  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  O exemplo a seguir assume que o banco de dados `AdventureWorks` foi alterado para usar o modelo de recuperação completa.  
   
 ```  
@@ -90,15 +93,15 @@ GO
   
 -   [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
--   [Restaurar um banco de dados até o ponto de falha no modelo de recuperação completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [Restaurar um banco de dados até o ponto de falha no modelo de recuperação completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [Restaurar um banco de dados para uma transação marcada &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
 -   [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

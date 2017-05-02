@@ -1,22 +1,26 @@
 ---
-title: "Chamando procedimentos armazenados compilados nativamente em aplicativos de acesso a dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Chamando procedimentos armazenados compilados nativamente em aplicativos de acesso a dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fce8ff8377ee7da4ff7c9d9e57ec01872702abc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Chamando procedimentos armazenados compilados nativamente em aplicativos de acesso a dados
+# <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Chamando procedimentos armazenados compilados nativamente em aplicativos de acesso a dados
   Este tópico oferece diretrizes sobre como chamar procedimentos armazenados compilados nativamente nos aplicativos de acesso a dados.  
   
  Os cursores não podem iterar por um procedimento armazenado compilado nativamente.  
@@ -35,7 +39,7 @@ caps.handback.revision: 10
   
  As seguintes recomendações se aplicam a chamadas de procedimento armazenado compilado nativamente usando o driver ODBC no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- O modo mais eficiente de chamar um procedimento armazenado uma vez é emitindo uma chamada RPC direta usando **SQLExecDirect** e cláusulas ODBC CALL. Não use a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE**. Se um procedimento armazenado for chamado mais de uma vez, a execução preparada será mais eficiente.  
+ O modo mais eficiente de chamar um procedimento armazenado uma vez é emitindo uma chamada RPC direta usando **SQLExecDirect** e cláusulas ODBC CALL. Não use a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE** . Se um procedimento armazenado for chamado mais de uma vez, a execução preparada será mais eficiente.  
   
  O modo mais eficiente de chamar um procedimento armazenado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais de uma vez é através de chamadas de procedimento RPC preparadas. As chamadas RPC preparadas são executadas da seguinte maneira através do driver ODBC no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client:  
   
@@ -79,7 +83,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
 }  
 ```  
   
-## Usando o ODBC para executar um procedimento armazenado compilado de modo nativo  
+## <a name="using-odbc-to-execute-a-natively-compiled-stored-procedure"></a>Usando o ODBC para executar um procedimento armazenado compilado de modo nativo  
  Este exemplo mostra como associar parâmetros e executar procedimentos armazenados usando o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  O exemplo é compilado em um aplicativo de console que insere uma única ordem usando a execução direta e insere os detalhes da ordem usando a execução preparada.  
   
  Para executar este exemplo:  
@@ -391,7 +395,7 @@ int _tmain() {
 }  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

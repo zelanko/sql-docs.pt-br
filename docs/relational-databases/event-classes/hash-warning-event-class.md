@@ -1,24 +1,28 @@
 ---
-title: "Classe de evento Hash Warning | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Classe de evento Hash Warning"
+title: Classe de evento Hash Warning | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Hash Warning event class
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 322018e04193b8cabd7354719b85f230b11b2d26
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento Hash Warning
+# <a name="hash-warning-event-class"></a>Classe de evento Hash Warning
   A classe de evento Hash Warning pode ser usada para monitorar quando uma recursão de hash ou cessação de hashing (esgotamento de hash) ocorreu durante a operação de hashing.  
   
  A recursão de hash ocorre quando a entrada de criação não cabe na memória disponível, ocasionando a divisão da entrada em várias partições que são processadas separadamente. Se qualquer uma dessas partições ainda não couber na memória disponível, será dividida em subpartições, que serão processadas separadamente. Esse processo de divisão continuará até que cada partição caiba na memória disponível ou até que o nível máximo de recursão seja atingido (exibido na coluna de dados IntegerData).  
@@ -43,13 +47,13 @@ caps.handback.revision: 39
 > [!IMPORTANT]  
 >  Para determinar onde o evento Hash Warning está ocorrendo quando o otimizador de consultas gera um plano de execução, é também necessário coletar a classe de evento Showplan no rastreamento. É possível escolher qualquer uma das classes de evento Showplan, exceto as classes de evento Showplan Text e Showplan Text (Unencoded), que não retornam a ID do nó. As ID do nó nos Showplans identificam cada operação que o otimizador de consultas executa ao gerar um plano de execução de consulta. Essas operações são chamadas de *operadores*, e cada operador no Showplan tem uma ID do Nó. A coluna ObjectID dos eventos Hash Warning corresponde à ID do nó no Showplans. Assim, é possível determinar o operador ou a operação que gerou o erro.  
   
-## Colunas de dados da classe de evento Hash Warning  
+## <a name="hash-warning-event-class-data-columns"></a>Colunas de dados da classe de evento Hash Warning  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores transmitidos pelo aplicativo em vez do nome exibido do programa.|10|Sim|  
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
-|DatabaseID|**Int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
+|DatabaseID|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |EventClass|**int**|Tipo de evento = 55.|27|Não|  
 |EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
@@ -71,7 +75,7 @@ caps.handback.revision: 39
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |XactSequence|**bigint**|Token que descreve a transação atual.|50|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

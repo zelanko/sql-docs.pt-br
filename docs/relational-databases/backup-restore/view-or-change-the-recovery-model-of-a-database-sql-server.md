@@ -1,30 +1,34 @@
 ---
-title: "Exibir ou alterar o modelo de recupera&#231;&#227;o de um banco de dados (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "backups de banco de dados [SQL Server], modelos de recuperação"
-  - "recuperação [SQL Server], modelo de recuperação"
-  - "fazendo backup de bancos de dados [SQL Server], modelos de recuperação"
-  - "modelos de recuperação [SQL Server], alternando"
-  - "modelos de recuperação [SQL Server], visualizando"
-  - "restaurações de banco de dados [SQL Server], modelos de recuperação"
-  - "modificando modelos de recuperação de bancos de dados"
+title: "Exibir ou alterar o modelo de recuperação de um banco de dados (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database backups [SQL Server], recovery models
+- recovery [SQL Server], recovery model
+- backing up databases [SQL Server], recovery models
+- recovery models [SQL Server], switching
+- recovery models [SQL Server], viewing
+- database restores [SQL Server], recovery models
+- modifying database recovery models
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d848c756eee54184aa10b5553779d0ebf1807366
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exibir ou alterar o modelo de recupera&#231;&#227;o de um banco de dados (SQL Server)
+# <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Exibir ou alterar o modelo de recuperação de um banco de dados (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como exibir ou alterar o banco de dados usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
@@ -37,7 +41,7 @@ caps.handback.revision: 40
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 
--   [Faça o backup do log de transação](https://msdn.microsoft.com/library/ms179478.aspx) **antes de** mudar do [modelo de recuperação completa ou de recuperação bulk-logged](https://msdn.microsoft.com/library/ms189275.aspx).  
+-   [Back up the transaction log](https://msdn.microsoft.com/library/ms179478.aspx) **before** switching from the [full recovery or bulk-logged recovery model](https://msdn.microsoft.com/library/ms189275.aspx).  
   
 -   A recuperação pontual não é possível com modelo bulk-logged. A execução de transações sob o modelo de recuperação bulk-logged que exigem uma restauração do log de transações, pode sujeitá-las à perda de dados. Para maximizar a recuperabilidade de dados em um cenário de recuperação de desastres, mude para o modelo de recuperação bulk-logged somente nas seguintes condições:  
   
@@ -54,25 +58,25 @@ caps.handback.revision: 40
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para exibir ou alterar o modelo de recuperação  
+#### <a name="to-view-or-change-the-recovery-model"></a>Para exibir ou alterar o modelo de recuperação  
   
 1.  Depois de conectar-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objeto, clique no nome do servidor para expandir a árvore do servidor.  
   
 2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
   
-3.  Clique com o botão direito do mouse no banco de dados e clique em **Propriedades**, o que abrirá a caixa de diálogo **Propriedades do Banco de Dados**.  
+3.  Clique com o botão direito do mouse no banco de dados e clique em **Propriedades**, o que abrirá a caixa de diálogo **Propriedades do Banco de Dados** .  
   
 4.  No painel **Selecionar uma página** , clique em **Opções**.  
   
 5.  O modelo de recuperação atual é exibido na caixa de listagem **Modelo de Recuperação** .  
   
-6.  Opcionalmente, para alterar o modelo de recuperação, selecione uma lista de modelos diferente. As escolhas são **Completo**, **Bulk-logged** ou **Simples**.  
+6.  Opcionalmente, para alterar o modelo de recuperação, selecione uma lista de modelos diferente. As escolhas são **Completo**, **Bulk-logged**ou **Simples**.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para exibir o modelo de recuperação  
+#### <a name="to-view-the-recovery-model"></a>Para exibir o modelo de recuperação  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -88,13 +92,13 @@ GO
   
 ```  
   
-#### Para alterar o modelo de recuperação  
+#### <a name="to-change-the-recovery-model"></a>Para alterar o modelo de recuperação  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como alterar o modelo de recuperação no banco de dados `model` para `FULL` usando a opção `SET RECOVERY` da instrução [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) .  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como alterar o modelo de recuperação no banco de dados `model` para `FULL` usando a opção `SET RECOVERY` da instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) .  
   
 ```tsql  
 USE master ;  
@@ -133,15 +137,15 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   [Criar um trabalho](../../ssms/agent/create-a-job.md)  
+-   [Criar um trabalho](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
   
--   [Desabilitar ou habilitar um trabalho](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Desabilitar ou habilitar um trabalho](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)  
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [Planos de manutenção de banco de dados](http://msdn.microsoft.com/library/ms187658.aspx) (nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])  
+-   [Planos de manutenção de banco de dados](http://msdn.microsoft.com/library/ms187658.aspx) (nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
@@ -149,3 +153,4 @@ ALTER DATABASE model SET RECOVERY FULL ;
  [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

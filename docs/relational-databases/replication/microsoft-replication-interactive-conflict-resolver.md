@@ -1,30 +1,34 @@
 ---
-title: "Resolvedor Interativo de Conflitos de Replica&#231;&#227;o da Microsoft | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.replconflictviewer.interactiveresolver.f1"
+title: "Resolvedor Interativo de Conflitos de Replicação da Microsoft | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.replconflictviewer.interactiveresolver.f1
 ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6622e91544ac1b66357a317644558df4820d33a4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Resolvedor Interativo de Conflitos de Replica&#231;&#227;o da Microsoft
+# <a name="microsoft-replication-interactive-conflict-resolver"></a>Resolvedor Interativo de Conflitos de Replicação da Microsoft
   O Resolvedor Interativo de Conflitos de Replicação pode ser usado para assinaturas de mesclagem sincronizadas usando o Gerenciador de Sincronização do Windows. Ele permite exibir, comparar, editar e selecionar o resultado dos conflitos de dados. A replicação também inclui o Visualizador de Conflitos, que permite exibir e modificar resultados de conflitos depois de terem sido confirmados. O Resolvedor Interativo de Conflitos permite selecionar o resultado durante a sincronização.  
   
 > [!NOTE]  
->  Os conflitos que envolvem registros lógicos não são exibidos no Resolvedor Interativo. Para exibir informações sobre esses conflitos, use procedimentos armazenados de replicação. Para obter mais informações, consulte [Exibir informações de conflito para publicações de mesclagem e 40; Programação Transact-SQL de replicação e 41;](../../relational-databases/replication/view conflict information for merge publications.md).  
+>  Os conflitos que envolvem registros lógicos não são exibidos no Resolvedor Interativo. Para exibir informações sobre esses conflitos, use procedimentos armazenados de replicação. Para obter mais informações, consulte [Exibir informações sobre conflitos em publicações de mesclagem &#40;Programação Transact-SQL de replicação&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Nome da coluna**  
  O nome de todas as colunas na tabela. Uma ou mais colunas podem ter dados conflitantes. Independentemente de quais colunas estejam em conflito, toda a linha vencedora substituirá toda a linha perdedora.  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 23
  **Assinante**  
  O valor dos dados no Assinante.  
   
- **Aceitar sugestão**, **Aceitar publicador**, e **Aceitar assinante**  
+ **Aceitar Sugestão**, **Aceitar Publicador**e **Aceitar Assinante**  
  Clique para aceitar a linha que será aplicada no Publicador ou no Assinante, dependendo de quem perderá o conflito. Se o Publicador perder o conflito, todos os outros Assinantes receberão a linha vencedora da próxima vez em que sincronizarem com o Publicador.  
   
  **Resolver conflitos restantes automaticamente**  
@@ -46,10 +50,10 @@ caps.handback.revision: 23
  **Registrar em log os detalhes do conflito para referência futura**  
  Registra os detalhes do conflito em tabelas do sistema.  
   
-## Consulte também  
- [Resolução de conflito interativo](../../relational-databases/replication/merge/interactive-conflict-resolution.md)   
- [Exibir e resolver conflitos de dados para publicações de mesclagem e 40; SQL Server Management Studio e 41;](../../relational-databases/replication/view and resolve data conflicts for merge publications.md)   
- [Sincronizar uma assinatura usando o Gerenciador de sincronização do Windows & #40. O Gerenciador de sincronização do Windows & 41;](../../relational-databases/replication/synchronize a subscription using windows synchronization manager.md)   
- [Detecção e resolução de conflito de replicação de mesclagem avançada ](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
+## <a name="see-also"></a>Consulte também  
+ [Resolução interativa de conflitos](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
+ [Exibir e resolver conflitos de dados em publicações de mesclagem &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
+ [Sincronizar uma assinatura usando o Gerenciador de Sincronização do Windows &#40;Gerenciador de Sincronização do Windows&#41;](../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

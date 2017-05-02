@@ -1,26 +1,30 @@
 ---
-title: "Criar, construir e consultar inst&#226;ncias de geografia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tipo de dados de geografia [SQL Server]"
-  - "tipo de dados geodésico [SQL Server]"
-  - "tipo de dados de geografia [SQL Server], sobre o tipo de dados de geografia"
+title: "Criar, construir e consultar instâncias de geografia | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geography data type [SQL Server]
+- geodetic data type [SQL Server]
+- geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13e7519e11e23d73ff22a3f7d420d0fafc132abf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar, construir e consultar inst&#226;ncias de geografia
+# <a name="create-construct-and-query-geography-instances"></a>Criar, construir e consultar instâncias de geografia
   O tipo de dados espacial de geografia, **geography**, representa dados em um sistema de coordenadas de terra redonda. Este tipo é implementado como um tipo de dados CLR (Common Language Runtime) .NET no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O tipo de dados de geografia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** armazena dados elipsoidais (terra redonda), como coordenadas de latitude e longitude de GPS.  
   
  O tipo **geography** é predefinido e está disponível em cada banco de dados. É possível criar colunas de tabelas do tipo **geography** e operar em dados de **geography** da mesma maneira como outros tipos fornecidos pelo sistema são usados.  
@@ -102,7 +106,7 @@ caps.handback.revision: 14
  [STGeomCollFromWKB &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type.md)STGeomCollFromWKB (tipo de dados geography)  
   
 ###  <a name="gml"></a> Construindo uma instância de geografia de entrada de texto GML  
- O tipo de dados **geography** oferece um método que gera uma instância **geography** de GML, uma representação XML de uma instância **geography**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a um subconjunto de GML.  
+ O tipo de dados **geography** oferece um método que gera uma instância **geography** de GML, uma representação XML de uma instância **geography** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a um subconjunto de GML.  
   
  Para obter mais informações sobre Geography Markup Language, veja a Especificação do OGC: [OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
@@ -110,7 +114,7 @@ caps.handback.revision: 14
  [GeomFromGML &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  
   
 ##  <a name="returning"></a> Retornando Well-Known Text e Well-Known Binary de uma instância de geografia  
- É possível usar os seguintes métodos para retornar o formato WKT ou WKB de uma instância **geography**:  
+ É possível usar os seguintes métodos para retornar o formato WKT ou WKB de uma instância **geography** :  
   
  **Para retornar a representação WKT de uma instância de geografia**  
  [STAsText &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stastext-geography-data-type.md)  
@@ -127,10 +131,10 @@ caps.handback.revision: 14
  [AsGml &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/asgml-geography-data-type.md)  
   
 ##  <a name="query"></a> Consultando as propriedades e comportamentos de instâncias de geografia  
- Todas as instâncias de **geography** têm várias propriedades que podem ser recuperadas por meio de métodos fornecidos pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os tópicos a seguir definem as propriedades e comportamentos de tipos de geografia e os métodos de consulta de cada um.  
+ Todas as instâncias de **geography** têm várias propriedades que podem ser recuperadas por meio de métodos fornecidos pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os tópicos a seguir definem as propriedades e comportamentos de tipos de geografia e os métodos de consulta de cada um.  
   
 ###  <a name="valid"></a> Informações de validade, tipo de instância e GeometryCollection  
- Quando uma instância **geography** é construída, é possível usar os seguintes métodos para retornar o tipo da instância ou, caso ela seja uma instância **GeometryCollection**, retornar uma instância **geography** específica.  
+ Quando uma instância **geography** é construída, é possível usar os seguintes métodos para retornar o tipo da instância ou, caso ela seja uma instância **GeometryCollection** , retornar uma instância **geography** específica.  
   
  **Para retornar o tipo de instância de uma geografia**  
  [STGeometryType &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)  
@@ -160,7 +164,7 @@ caps.handback.revision: 14
  [STEndpoint &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
 ###  <a name="dimension"></a> Dimensão  
- Uma instância **geography** não vazia pode ser zero, uni ou bidimensional. Instâncias **geography** com dimensional zero, como **Point** e **MultiPoint**, não têm comprimento nem área. Objetos unidimensionais, como **LineString, CircularString**, **CompoundCurve** e **MultiLineString**, têm comprimento. Instâncias bidimensionais, como **Polygon, CurvePolygon** e **MultiPolygon**, têm área e comprimento. Instâncias vazias relatam uma dimensão de -1 e uma **GeometryCollection** relata a dimensão máxima de seu conteúdo.  
+ Uma instância **geography** não vazia pode ser zero, uni ou bidimensional. Instâncias **geography** com dimensional zero, como **Point** e **MultiPoint**, não têm comprimento nem área. Objetos unidimensionais, como **LineString, CircularString**, **CompoundCurve**e **MultiLineString**, têm comprimento. Instâncias bidimensionais, como **Polygon, CurvePolygon**e **MultiPolygon**, têm área e comprimento. Instâncias vazias relatam uma dimensão de -1 e uma **GeometryCollection** relata a dimensão máxima de seu conteúdo.  
   
  **Para retornar a dimensão de uma instância**  
  [STDimension &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
@@ -172,7 +176,7 @@ caps.handback.revision: 14
  [STArea &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a> Empty (vazio)  
- Uma instância *empty***geography** não tem pontos. O tamanho de instâncias **LineString, CircularString**, **CompoundCurve** e **MultiLineString** é 0. A área das instâncias **Polygon, CurvePolygon** e **MultiPolygon** vazias é 0.  
+ Uma instância *empty***geography** não tem pontos. O tamanho de instâncias **LineString, CircularString**, **CompoundCurve**e **MultiLineString** é 0. A área das instâncias **Polygon, CurvePolygon** e **MultiPolygon** vazias é 0.  
   
  **Para determinar se uma instância está vazia**  
  [STIsEmpty &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
@@ -200,7 +204,7 @@ caps.handback.revision: 14
  Essa propriedade pode ser modificada.  
   
 ##  <a name="rel"></a> Determinando relações entre instâncias de geografia  
- O tipo de dados **geography** fornece vários métodos internos que podem ser usados para determinar relações entre duas instâncias de **geography**.  
+ O tipo de dados **geography** fornece vários métodos internos que podem ser usados para determinar relações entre duas instâncias de **geography** .  
   
  **Para determinar se duas instâncias abrangem o mesmo conjunto de pontos**  
  [STEquals &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stequals-geometry-data-type.md)  
@@ -224,14 +228,14 @@ caps.handback.revision: 14
  [STSymDifference &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stsymdifference-geography-data-type.md)  
   
 ##  <a name="supportedsrid"></a> Instâncias de geografia devem usar SRID com suporte  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a SRIDs baseadas nos padrões do EPSG. Um SRID com suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para instâncias **geography** deve ser usado ao executar cálculos ou usar métodos com dados espaciais de geografia. A SRID deve corresponder a uma das SRIDs exibidos na exibição de catálogo **sys.spatial_reference_systems**. Conforme mencionado anteriormente, ao executar cálculos nos dados espaciais usando o tipo de dados **geography**, os resultados dependerão de qual elipsoide foi usado na criação dos dados, pois cada elipsoide recebe um SRID (identificador de referência espacial) específico.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a SRIDs baseadas nos padrões do EPSG. Um SRID com suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para instâncias **geography** deve ser usado ao executar cálculos ou usar métodos com dados espaciais de geografia. A SRID deve corresponder a uma das SRIDs exibidos na exibição de catálogo **sys.spatial_reference_systems** . Conforme mencionado anteriormente, ao executar cálculos nos dados espaciais usando o tipo de dados **geography** , os resultados dependerão de qual elipsoide foi usado na criação dos dados, pois cada elipsoide recebe um SRID (identificador de referência espacial) específico.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a SRID padrão de 4326, que é mapeada para o sistema de referência espacial WGS 84 ao usar métodos nas instâncias **geography**. Se você usar dados de um sistema de referência espacial diferente de WGS 84 (ou SRID 4326), será necessário determinar o SRID específico de seus dados espaciais de geografia.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a SRID padrão de 4326, que é mapeada para o sistema de referência espacial WGS 84 ao usar métodos nas instâncias **geography** . Se você usar dados de um sistema de referência espacial diferente de WGS 84 (ou SRID 4326), será necessário determinar o SRID específico de seus dados espaciais de geografia.  
   
 ##  <a name="examples"></a> Exemplos  
  Os exemplos a seguir mostram como adicionar e consultar dados de geografia.  
   
--   O primeiro exemplo cria uma tabela com uma coluna de identidade e uma coluna de `geography` `GeogCol1`. Uma terceira coluna renderiza a coluna de `geography` em sua representação WKT (Well-Known Text) do Open Geospatial Consortium (OGC) e usa o método `STAsText()`. Em seguida, duas linhas são inseridas: uma linha que contém uma instância `LineString` de `geography` e uma linha que contém uma instância de `Polygon`.  
+-   O primeiro exemplo cria uma tabela com uma coluna de identidade e uma coluna de `geography` `GeogCol1`. Uma terceira coluna renderiza a coluna de `geography` em sua representação WKT (Well-Known Text) do Open Geospatial Consortium (OGC) e usa o método `STAsText()` . Em seguida, duas linhas são inseridas: uma linha que contém uma instância `LineString` de `geography`e uma linha que contém uma instância de `Polygon` .  
   
     ```  
     IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -265,7 +269,7 @@ caps.handback.revision: 14
     SELECT @result.STAsText();  
     ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Dados espaciais &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

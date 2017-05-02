@@ -1,24 +1,28 @@
 ---
-title: "Adicionar l&#243;gica de neg&#243;cios a dados XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "lógica de negócios [XML]"
+title: "Adicionar lógica de negócios a dados XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fcb398dc1cd451f55446efee763d7d33891b7ca4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Adicionar l&#243;gica de neg&#243;cios a dados XML
+# <a name="add-business-logic-to-xml-data"></a>Adicionar lógica de negócios a dados XML
   Sua lógica comercial pode ser adicionada a dados XML de vários modos:  
   
 -   Você pode gravar restrições de linha ou de coluna para impor restrições específicas ao domínio durante inserção e modificação de dados XML.  
@@ -29,7 +33,7 @@ caps.handback.revision: 18
   
 -   É possível gravar funções e procedimentos armazenados Transact-SQL que começam o processamento na coluna XML para suas necessidades comerciais.  
   
-## Exemplo: Aplicando XSL Transformation  
+## <a name="example-applying-xsl-transformation"></a>Exemplo: Aplicando XSL Transformation  
  Considere uma função CLR **TransformXml()** que aceita uma instância de tipo de dados **xml** e uma transformação XSL armazenada em um arquivo, aplica a transformação nos dados XML e retorna o XML transformado no resultado. O seguinte é um função em esqueleto escrita em C#:  
   
 ```  

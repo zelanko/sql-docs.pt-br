@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG014005 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "erro MSSQL_ENG014005"
+title: MSSQL_ENG014005 | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG014005 error
 ms.assetid: f168f0d6-cb11-45d4-9781-c374d7f388ee
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 185ea6a67ab4ce799aa3c2ff11c3651127b08292
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG014005
+# <a name="mssqleng014005"></a>MSSQL_ENG014005
     
-## Detalhes da mensagem  
+## <a name="message-details"></a>Detalhes da mensagem  
   
 |||  
 |-|-|  
@@ -31,15 +35,15 @@ caps.handback.revision: 13
 |Nome simbólico||  
 |Texto da mensagem|Não foi possível descartar a publicação. Existe uma assinatura para ela.|  
   
-## Explicação  
+## <a name="explanation"></a>Explicação  
  Você tentou descartar uma publicação que tem uma ou mais assinatura associadas. Uma publicação pode ser descartada somente se não houver nenhuma assinatura associada.  
   
-## Ação do usuário  
- Descarte as assinaturas antes de descartar a publicação. Se você usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para descartar a publicação, haverá a opção de descartar automaticamente todas as assinaturas associadas antes de descartar a publicação. Se você usar procedimentos armazenados, primeiro será necessário descartar explicitamente as assinaturas. Para obter mais informações, consulte [Excluir uma assinatura Push](../../relational-databases/replication/delete-a-push-subscription.md) e [Excluir uma assinatura Pull](../../relational-databases/replication/delete-a-pull-subscription.md).  
+## <a name="user-action"></a>Ação do usuário  
+ Descarte as assinaturas antes de descartar a publicação. Se você usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para descartar a publicação, haverá a opção de descartar automaticamente todas as assinaturas associadas antes de descartar a publicação. Se você usar procedimentos armazenados, primeiro será necessário descartar explicitamente as assinaturas. Para obter mais informações, consulte [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md) e [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
- Se não existirem assinaturas para a publicação ou se o erro for exibido ao criar uma publicação, talvez exista uma assinatura anterior que não foi limpa completamente quando você tentou removê-la. Executar [sp_removedbreplication & #40. O Transact-SQL e 41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no banco de dados para remover todos os objetos e configurações relacionadas à replicação.  
+ Se não existirem assinaturas para a publicação ou se o erro for exibido ao criar uma publicação, talvez exista uma assinatura anterior que não foi limpa completamente quando você tentou removê-la. Execute [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no banco de dados para remover todas as configurações e todos os objetos relacionados à replicação.  
   
-## Consulte também  
- [Erros e eventos referência & #40. Replicação e 41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
+## <a name="see-also"></a>Consulte também  
+ [Referência de erros e eventos &#40;Replicação&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

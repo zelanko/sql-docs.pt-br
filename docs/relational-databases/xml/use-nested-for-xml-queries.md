@@ -1,29 +1,33 @@
 ---
-title: "Usar consultas FOR XML aninhadas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cláusula FOR XML, consultas FOR XML aninhadas"
-  - "consultas [XML no SQL Server], FOR XML aninhadas"
-  - "consultas FOR XML aninhadas"
+title: Usar consultas FOR XML aninhadas | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, nested FOR XML queries
+- queries [XML in SQL Server], nested FOR XML
+- nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: af44fc3250f620dcaad219e67b0e414cd76974a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar consultas FOR XML aninhadas
+# <a name="use-nested-for-xml-queries"></a>Usar consultas FOR XML aninhadas
   O tipo de dados **xml** e a diretiva [TYPE em consultas FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md) permitem que o XML retornado por consultas FOR XML seja processado no servidor e no cliente.  
   
-## Processando com variáveis de tipo xml  
+## <a name="processing-with-xml-type-variables"></a>Processando com variáveis de tipo xml  
  É possível atribuir o resultado da consulta FOR XML a uma variável de tipo **xml** ou usar o XQuery para consultar o resultado e atribuir esse resultado a uma variável de tipo **xml** para processamento adicional.  
   
 ```  
@@ -38,7 +42,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- Além disso, é possível processar o XML retornado na variável, `@x`, usando um dos métodos de tipo de dados **xml**. Por exemplo, é possível recuperar o valor do atributo `ProductModelID` usando o [método value()](../../t-sql/xml/value-method-xml-data-type.md).  
+ Além disso, é possível processar o XML retornado na variável, `@x`, usando um dos métodos de tipo de dados **xml** . Por exemplo, é possível recuperar o valor do atributo `ProductModelID` usando o [método value()](../../t-sql/xml/value-method-xml-data-type.md).  
   
 ```  
 DECLARE @i int;  
@@ -46,7 +50,7 @@ SET @i = (SELECT @x.value('/row[1]/@ProductModelID[1]', 'int'));
 SELECT @i;  
 ```  
   
- No exemplo a seguir, o resultado da consulta `FOR XML` é retornado como um tipo **xml**, porque a diretiva `TYPE` é especificada na cláusula `FOR XML`.  
+ No exemplo a seguir, o resultado da consulta `FOR XML` é retornado como um tipo **xml** , porque a diretiva `TYPE` é especificada na cláusula `FOR XML` .  
   
 ```  
 SELECT ProductModelID, Name  
@@ -81,7 +85,7 @@ SELECT  (SELECT ProductModelID, Name
 <row ProductModelID="122" Name="All-Purpose Bike Stand" />  
 ```  
   
-## Retornando resultados de consulta FOR XML interna para consultas externas como instâncias de tipo xml  
+## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>Retornando resultados de consulta FOR XML interna para consultas externas como instâncias de tipo xml  
  É possível escrever consultas `FOR XML` aninhadas em que o resultado da consulta interna é retornado como um tipo **xml** para a consulta externa. Por exemplo:  
   
 ```  
@@ -99,11 +103,11 @@ FOR XML AUTO, TYPE;
   
  Observe o seguinte na consulta anterior:  
   
--   O XML gerado pela consulta `FOR XML` interna é adicionado ao XML gerado pela `FOR XML` externa.  
+-   O XML gerado pela consulta `FOR XML` interna é adicionado ao XML gerado pela `FOR XML`externa.  
   
--   A consulta interna especifica a diretiva `TYPE`. Portanto, os dados XML retornados pela consulta interna são do tipo **xml**. Se a diretiva TYPE não for especificada, o resultado da consulta `FOR XML` interna será retornado como **nvarchar(max)** e os dados XML terão a entidade definida.  
+-   A consulta interna especifica a diretiva `TYPE` . Portanto, os dados XML retornados pela consulta interna são do tipo **xml** . Se a diretiva TYPE não for especificada, o resultado da consulta `FOR XML` interna será retornado como **nvarchar(max)** e os dados XML terão a entidade definida.  
   
-## Controlando a forma dos dados XML resultantes  
+## <a name="controlling-the-shape-of-resulting-xml-data"></a>Controlando a forma dos dados XML resultantes  
  Consultas FOR XML aninhadas fornecem mais controle para definir a forma dos dados XML resultantes. É possível usar consultas aninhadas FOR XML para construir XML parcialmente centrado em atributo e parcialmente centrado em elemento.  
   
  Para obter mais informações sobre como especificar um XML centrado em atributo e em elemento com consultas FOR XML aninhadas, veja [Consulta FOR XML comparada com consulta FOR XML aninhada](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md) e [Formar XML com consultas FOR XML aninhadas](../../relational-databases/xml/shape-xml-with-nested-for-xml-queries.md).  
@@ -112,7 +116,7 @@ FOR XML AUTO, TYPE;
   
  Independentemente do modo usado, consultas FOR XML aninhadas fornecem mais controle para descrever a forma do XML resultante. Elas podem ser usadas no lugar de consultas em modo EXPLICIT.  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  Os tópicos a seguir fornecem exemplos de consultas FOR XML aninhadas.  
   
  [Consulta FOR XML comparada com consulta FOR XML aninhada](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md)  

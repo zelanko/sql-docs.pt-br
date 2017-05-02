@@ -1,27 +1,31 @@
 ---
-title: "Backups somente c&#243;pia (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "backups somente cópia [SQL Server]"
-  - "opção COPY_ONLY [instrução BACKUP]"
-  - "backups [SQL Server], backups somente cópia"
+title: "Backups somente cópia (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- copy-only backups [SQL Server]
+- COPY_ONLY option [BACKUP statement]
+- backups [SQL Server], copy-only backups
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9a63e882e79ec725cca126e80369a70bbc4bc774
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backups somente c&#243;pia (SQL Server)
-  Um *backup somente cópia* é um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não depende da sequência de backups convencionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Geralmente, um backup altera o banco de dados e afeta a forma de restauração dos backups posteriores. Contudo, ocasionalmente, é útil fazer um backup para uma finalidade especial sem afetar o backup global e os procedimentos de restauração do banco de dados. Backups de cópia servem para essa finalidade.  
+# <a name="copy-only-backups-sql-server"></a>Backups somente cópia (SQL Server)
+  Um *backup somente cópia* é um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não depende da sequência de backups convencionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Geralmente, um backup altera o banco de dados e afeta a forma de restauração dos backups posteriores. Contudo, ocasionalmente, é útil fazer um backup para uma finalidade especial sem afetar o backup global e os procedimentos de restauração do banco de dados. Backups de cópia servem para essa finalidade.  
   
  Os tipos de backups somente cópia são:  
   
@@ -37,20 +41,20 @@ caps.handback.revision: 47
   
      O log de transações nunca é truncado após um backup somente cópia.  
   
- Backups somente cópia são registrados na coluna **is_copy_only** da tabela [backupset](../../relational-databases/system-tables/backupset-transact-sql.md).  
+ Backups somente cópia são registrados na coluna **is_copy_only** da tabela [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) .  
   
-## Para criar um backup somente cópia  
- Você pode criar um backup somente cópia usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou PowerShell.  
+## <a name="to-create-a-copy-only-backup"></a>Para criar um backup somente cópia  
+ Você pode criar um backup somente cópia usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell.  
 
-### Exemplos  
+### <a name="examples"></a>Exemplos  
 ###  <a name="SSMSProcedure"></a> A.  Usando o SQL Server Management Studio  
 Neste exemplo, será feito backup somente cópia do banco de dados `Sales` em disco no local de backup padrão.
 
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
 
-2.  Expanda **Banco de Dados**, clique com o botão direito do mouse em `Sales`, aponte para **Tarefas** e clique em **Fazer Backup...**.
+2.  Expanda **Banco de Dados**, clique com o botão direito do mouse em `Sales`, aponte para **Tarefas**e clique em **Fazer Backup...**.
 
-3.  Na página **Geral**, na seção **Origem**, marque a caixa de seleção **Backup somente cópia**.
+3.  Na página **Geral** , na seção **Origem** , marque a caixa de seleção **Backup somente cópia** .
 
 4.  Clique em **OK**.
 
@@ -93,9 +97,8 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
 -   [Provedor do SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
- [&#91;Início&#93;](#Top)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [Copiar bancos de dados com backup e restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
@@ -104,3 +107,4 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
 [Backup-SqlDatabase](https://technet.microsoft.com/library/mt683378.aspx)
 
   
+

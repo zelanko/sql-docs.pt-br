@@ -1,27 +1,31 @@
 ---
-title: "SQL Server, R&#233;plica de banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidade (SQL Server), monitorando"
-  - "SQLServer:Database Replica"
-  - "contadores de desempenho [SQL Server], Grupos de Disponibilidade AlwaysOn"
-  - "Grupos de Disponibilidade [SQL Server], contadores de desempenho"
+title: "SQL Server, Réplica de banco de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 08/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
+- SQLServer:Database Replica
+- performance counters [SQL Server], AlwaysOn Availability Groups
+- Availability Groups [SQL Server], performance counters
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fc96130b21ccef9c95dbe8172ef5ef4fc5185616
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, R&#233;plica de banco de dados
+# <a name="sql-server-database-replica"></a>SQL Server, Réplica de banco de dados
   O objeto de desempenho **SQLServer:Database Replica** contém contadores de desempenho que relatam informações sobre os bancos de dados secundários na réplica secundária de um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Esse objeto só é válido em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda uma réplica secundária.  
   
 |Nome do contador|Descrição|Exibir em...|  
@@ -40,10 +44,11 @@ caps.handback.revision: 27
 |**Total de Log a ser desfeito**|Total de quilobytes de log que deve ser desfeito.|Réplica secundária|  
 |**Atraso na Transação**|Atraso na espera por reconhecimento de confirmação não terminado, em milissegundos.|Réplica primária|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Réplica de Disponibilidade](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
  [SQL Server, objeto Databases](../../relational-databases/performance-monitor/sql-server-databases-object.md)   
  [Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   
+

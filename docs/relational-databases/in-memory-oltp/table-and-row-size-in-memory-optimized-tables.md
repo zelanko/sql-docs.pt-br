@@ -1,25 +1,29 @@
 ---
-title: "Tamanho da tabela e da linha em tabelas com otimiza&#231;&#227;o de mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Tamanho da tabela e da linha em tabelas com otimização de memória | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 caps.latest.revision: 28
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57d2a22fc535f3613ce680156a0a6bb55ec62fa1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tamanho da tabela e da linha em tabelas com otimiza&#231;&#227;o de mem&#243;ria
+# <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamanho da tabela e da linha em tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Uma tabela com otimização de memória consiste em uma coleção de linhas e índices que contêm ponteiros para linhas. Em uma tabela com otimização de memória, as linhas não podem ter mais de 8.060 bytes. No entanto, a partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], é possível criar uma tabela com várias colunas grandes [por exemplo, várias colunas varbinary (8000)] e colunas LOB [ou seja, varbinary(max), varchar(max) e nvarchar(max)]. Colunas que excedem o tamanho máximo de dados em linha são colocadas fora de linha, em tabelas internas especiais. Para obter detalhes sobre essas tabelas internas, veja [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
+  Uma tabela com otimização de memória consiste em uma coleção de linhas e índices que contêm ponteiros para linhas. Em uma tabela com otimização de memória, as linhas não podem ter mais de 8.060 bytes. No entanto, a partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , é possível criar uma tabela com várias colunas grandes [por exemplo, várias colunas varbinary (8000)] e colunas LOB [ou seja, varbinary(max), varchar(max) e nvarchar(max)]. Colunas que excedem o tamanho máximo de dados em linha são colocadas fora de linha, em tabelas internas especiais. Para obter detalhes sobre essas tabelas internas, veja [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
   
  Há duas razões para calcular o tamanho da tabela e da linha:  
   
@@ -37,7 +41,7 @@ Colunas que não se ajustam ao limite de tamanho de linha de 8.060 bytes são co
   
  A figura a seguir ilustra uma tabela com índices e linhas que, por sua vez, têm cabeçalhos e corpos de linha:  
   
- ![Tabela com otimização de memória.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Tabela com otimização de memória.")  
+ ![Tabela com otimização de memória.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
 Tabela com otimização de memória composta por índices e linhas.  
   
  O tamanho de uma tabela na memória, em bytes, é calculado da seguinte forma:  
@@ -96,13 +100,13 @@ Tabela com otimização de memória composta por índices e linhas.
   
  A figura a seguir ilustra a estrutura de linha de uma tabela que tem dois índices:  
   
- ![Estrutura de linha para uma tabela que tem dois índices.](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "Estrutura de linha para uma tabela que tem dois índices.")  
+ ![Estrutura de linha para uma tabela que tem dois índices. ](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "Estrutura de linha para uma tabela que tem dois índices da linha.")  
   
  Os carimbos de data/hora de início e de término indicam o período em que uma determinada versão de linha é válida. As transações que começam nesse intervalo podem ver essa versão de linha. Para obter mais detalhes, veja [Transações com tabelas com otimização de memória](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md).  
   
  Os ponteiros de índice apontam para a próxima linha da cadeia de caracteres que pertence ao bucket de hash. A figura a seguir ilustra a estrutura de uma tabela com duas colunas (nome, cidade), e com dois índices, um na coluna nome e outro na coluna cidade.  
   
- ![Estrutura de uma tabela com duas colunas e índices.](../../relational-databases/in-memory-oltp/media/hekaton-tables-5.gif "Estrutura de uma tabela com duas colunas e índices.")  
+ ![Estrutura de uma tabela com duas colunas e índices. ](../../relational-databases/in-memory-oltp/media/hekaton-tables-5.gif "Estrutura de uma tabela com duas colunas e índices.")  
   
  Nesta figura, os nomes John e Jane são transformados em hash no primeiro bucket. Susan é transformado em hash no segundo bucket. As cidades Beijing e Bogotá são transformadas em hash no primeiro bucket. Paris e Praga são transformadas em hash no segundo bucket.  
   
@@ -227,7 +231,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

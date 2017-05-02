@@ -1,24 +1,28 @@
 ---
-title: "Especificar colunas computadas em uma tabela | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colunas computadas, definir"
+title: Especificar colunas computadas em uma tabela | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a540a749f8682e47215f18ca022fbfc446f93e1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Especificar colunas computadas em uma tabela
+# <a name="specify-computed-columns-in-a-table"></a>Especificar colunas computadas em uma tabela
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Uma coluna computada é uma coluna virtual que não está fisicamente armazenada na tabela, a menos que a coluna esteja marcada como PERSISTED. Uma expressão de coluna computada pode usar dados de outras colunas para calcular um valor para a coluna à qual pertence. Você pode especificar uma expressão para uma coluna computada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -60,7 +64,7 @@ caps.handback.revision: 19
   
 3.  Na guia **Propriedades da Coluna** , expanda a propriedade **Especificação de Coluna Computada** .  
   
-4.  Na propriedade filho **(Fórmula)**, insira a expressão para essa coluna na célula de grade à direita. Por exemplo, em uma coluna `SalesTotal`, a fórmula que você insere pode ser `SubTotal+TaxAmt+Freight`, que associa o valor nessas colunas a cada linha na tabela.  
+4.  Na propriedade filho **(Fórmula)** , insira a expressão para essa coluna na célula de grade à direita. Por exemplo, em uma coluna `SalesTotal` , a fórmula que você insere pode ser `SubTotal+TaxAmt+Freight`, que associa o valor nessas colunas a cada linha na tabela.  
   
     > [!IMPORTANT]  
     >  Quando uma fórmula combina duas expressões de tipos de dados diferentes, as regras de precedência do tipo de dados especificam que o tipo de dados com menor precedência é convertido no tipo de dados de maior precedência. Se a conversão não for uma conversão implícita com suporte, o erro "`Error validating the formula for column column_name.`" será retornado. Use a função CAST ou CONVERT para resolver o conflito de tipo de dados. Por exemplo, se uma coluna de tipo **nvarchar** é combinada com uma coluna de tipo **int**, o tipo inteiro deve ser convertido em **nvarchar** , conforme mostrado nesta fórmula `('Prod'+CONVERT(nvarchar(23),ProductID))`. Para obter mais informações, veja [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
@@ -69,9 +73,9 @@ caps.handback.revision: 19
   
 6.  No menu **Arquivo** , clique em **Salvar***table name*.  
   
-#### Para adicionar uma definição de coluna computada em uma coluna existente  
+#### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>Para adicionar uma definição de coluna computada em uma coluna existente  
   
-1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela com a coluna que você deseja alterar e expanda a pasta **Colunas**.  
+1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela com a coluna que você deseja alterar e expanda a pasta **Colunas** .  
   
 2.  Clique com o botão direito do mouse na coluna para a qual você deseja especificar uma fórmula de coluna computada e clique em **Excluir**. Clique em **OK**.  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para adicionar uma coluna computada ao criar uma tabela  
+#### <a name="to-add-a-computed-column-when-creating-a-table"></a>Para adicionar uma coluna computada ao criar uma tabela  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 19
   
     ```  
   
-#### Para adicionar uma nova coluna computada em uma tabela existente  
+#### <a name="to-add-a-new-computed-column-to-an-existing-table"></a>Para adicionar uma nova coluna computada em uma tabela existente  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -119,7 +123,7 @@ caps.handback.revision: 19
   
     ```  
   
-#### Para transformar uma coluna existente em coluna computada  
+#### <a name="to-change-an-existing-column-to-a-computed-column"></a>Para transformar uma coluna existente em coluna computada  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

@@ -1,36 +1,40 @@
 ---
-title: "Proteg&#237;veis | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.roleproperties.selectobject.f1"
-helpviewer_keywords: 
-  - "protegíveis [SQL Server]"
-  - "esquemas [SQL Server], protegíveis"
-  - "protegíveis de banco de dados [SQL Server]"
-  - "hierarquias [SQL Server], protegíveis"
-  - "protegíveis de servidor [SQL Server]"
+title: "Protegíveis | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.roleproperties.selectobject.f1
+helpviewer_keywords:
+- securables [SQL Server]
+- schemas [SQL Server], securables
+- database securables [SQL Server]
+- hierarchies [SQL Server], securables
+- server securables [SQL Server]
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51db5d7a36569601e7d21d5fc50d16230b85ea5d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Proteg&#237;veis
+# <a name="securables"></a>Protegíveis
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Protegíveis são os recursos cujo acesso é regulado pelo sistema de autorização do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Por exemplo, uma tabela é um protegível. Alguns protegíveis podem ser contidos dentro de outros, criando hierarquias aninhadas chamadas "escopos" que podem ser protegidos. Os escopos protegíveis são **servidor**, **banco de dados**e **esquema**.  
   
-## Escopo protegível: servidor  
+## <a name="securable-scope-server"></a>Escopo protegível: servidor  
  O escopo protegível **servidor** contém os seguintes protegíveis:  
   
 -   Grupo de disponibilidade  
@@ -43,7 +47,7 @@ caps.handback.revision: 41
   
 -   banco de dados  
   
-## Escopo protegível: banco de dados  
+## <a name="securable-scope-database"></a>Escopo protegível: banco de dados  
  O escopo protegível **banco de dados** contém os seguintes protegíveis:  
   
 -   Função de aplicativo  
@@ -78,7 +82,7 @@ caps.handback.revision: 41
   
 -   Usuário  
   
-## Escopo protegível: esquema  
+## <a name="securable-scope-schema"></a>Escopo protegível: esquema  
  O escopo protegível **esquema** contém os seguintes protegíveis:  
   
 -   Tipo  
@@ -103,13 +107,13 @@ caps.handback.revision: 41
     
     -   Tabela externa 
   
-## Controlando o acesso a um protegível  
+## <a name="controlling-access-to-a-securable"></a>Controlando o acesso a um protegível  
  A entidade que recebe permissão para um protegível é chamada de entidade de segurança. As entidades de segurança mais comuns são logons e usuários de banco de dados. O acesso a protegíveis é controlado pela concessão ou negação de permissões, ou pela adição de logons e usuários a funções que têm acesso. Para obter informações sobre como controlar permissões, veja [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md), [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md), [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md), [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) e [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md).  
   
 > [!CAUTION]  
 >  As permissões padrão concedidas aos objetos de sistema no momento da instalação são avaliadas cuidadosamente contra possíveis ameaças e não precisam ser alteradas como parte do sistema de proteção de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Qualquer alteração nas permissões nos objetos de sistema poderia limitar ou interromper a funcionalidade e potencialmente pode deixar a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um estado sem suporte.  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
  [Guia de Introdução às permissões do mecanismo de banco de dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
   
  [Protegendo o SQL Server](../../relational-databases/security/securing-sql-server.md)  
@@ -125,3 +129,4 @@ caps.handback.revision: 41
  [sys.sql_logins &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)  
   
   
+

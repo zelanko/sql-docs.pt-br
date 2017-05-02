@@ -1,46 +1,50 @@
 ---
-title: "Guias de plano | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "guia de plano TEMPLATE"
-  - "Guias de plano SQL"
-  - "dica de consulta OPTIMIZE FOR"
-  - "dica de consulta RECOMPILE"
-  - "Guia de plano OBJECT"
-  - "guias de plano [SQL Server], sobre guias de plano"
-  - "cláusula OPTION"
-  - "guias de plano [SQL Server]"
-  - "dica de consulta USE PLAN"
+title: Guias de plano | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TEMPLATE plan guide
+- SQL plan guides
+- OPTIMIZE FOR query hint
+- RECOMPILE query hint
+- OBJECT plan guide
+- plan guides [SQL Server], about plan guides
+- OPTION clause
+- plan guides [SQL Server]
+- USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e3c1733219769d0a2d08996db9a25e3dd08a1e86
+ms.lasthandoff: 04/11/2017
+
 ---
-# Guias de plano
+# <a name="plan-guides"></a>Guias de plano
   Guias de plano permitem otimizar o desempenho das consultas quando você não pode ou não quer alterar diretamente o texto da consulta real no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. As guias de plano influenciam a otimização das consultas, anexando dicas de consulta ou um plano de consulta fixo. Guias de plano podem ser úteis quando um subconjunto pequeno de consultas em um aplicativo de banco de dados fornecido por um terceiro não estiver executando como esperado. No guia de plano, especifique a instrução Transact-SQL que deve ser otimizada, e uma cláusula OPTION que contenha as dicas de consulta a serem usadas ou um plano de consulta específico a ser usado para otimizar a consulta. Quando a consulta é feita, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corresponde a instrução Transact-SQL com a guia de plano e anexa a cláusula OPTION à consulta em tempo de execução ou usa o plano de consulta especificado.  
   
  O número total de guias de plano que é possível criar só está limitado através de recursos do sistema disponíveis. De outro modo, guias de plano devem ser limitados para consultas de missão-crítica que são direcionados para aprimorar ou estabilizar o desempenho. Guias de plano não podem ser usados para influenciar a maioria da carga de consulta de um aplicativo implantado.  
   
 > [!NOTE]  
->  Os guias de plano não podem ser usados em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). As guias de plano são visíveis em qualquer edição. Também é possível anexar um banco de dados contendo guias de plano a qualquer edição. Os guias de plano permanecem intactos quando o banco de dados é restaurado ou anexado a uma versão atualizada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Os guias de plano não podem ser usados em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). As guias de plano são visíveis em qualquer edição. Também é possível anexar um banco de dados contendo guias de plano a qualquer edição. Os guias de plano permanecem intactos quando o banco de dados é restaurado ou anexado a uma versão atualizada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Tipos de guias de plano  
+## <a name="types-of-plan-guides"></a>Tipos de guias de plano  
  Podem ser criados os tipos de guias de plano a seguir.  
   
  Guia de plano OBJECT  
- O guia de plano OBJECT corresponde as consultas executadas no contexto dos procedimentos armazenados do [!INCLUDE[tsql](../../includes/tsql-md.md)], funções escalares definidas pelo usuário, funções com valor de tabela de várias instruções definidas pelo usuário e gatilhos DML.  
+ O guia de plano OBJECT corresponde as consultas executadas no contexto dos procedimentos armazenados do [!INCLUDE[tsql](../../includes/tsql-md.md)] , funções escalares definidas pelo usuário, funções com valor de tabela de várias instruções definidas pelo usuário e gatilhos DML.  
   
- Suponha que o procedimento armazenado a seguir, que usa o parâmetro `@Country`_`region`, esteja em um aplicativo de banco de dados implantado no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
+ Suponha que o procedimento armazenado a seguir, que usa o parâmetro `@Country`_`region` , esteja em um aplicativo de banco de dados implantado no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
   
 ```  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
@@ -55,9 +59,9 @@ BEGIN
 END;  
 ```  
   
- Suponha que esse procedimento armazenado foi compilado e otimizado para `@Country`_`region = N'AU'` (Austrália). Entretanto, já que há relativamente poucas vendas oriundas da Austrália, o desempenho cai quando a consulta é executada com os valores de parâmetro de países com mais pedidos de vendas. Como a maioria dos pedidos de vendas tem origem nos Estados Unidos, um plano de consulta gerado para `@Country`\_`region = N'US'` provavelmente teria execução melhor para todos os valores possíveis do parâmetro `@Country`\_`region`.  
+ Suponha que esse procedimento armazenado foi compilado e otimizado para `@Country`_`region = N'AU'` (Austrália). Entretanto, já que há relativamente poucas vendas oriundas da Austrália, o desempenho cai quando a consulta é executada com os valores de parâmetro de países com mais pedidos de vendas. Como a maioria dos pedidos de vendas tem origem nos Estados Unidos, um plano de consulta gerado para `@Country`\_`region = N'US'` provavelmente teria execução melhor para todos os valores possíveis do parâmetro `@Country`\_`region` .  
   
- É possível corrigir esse problema ao modificar o procedimento armazenado para adicionar a dica de consulta `OPTIMIZE FOR` à consulta. Porém, já que o procedimento armazenado está em um aplicativo implantado, não é possível modificar diretamente o código do aplicativo. Ao contrário, é possível criar o guia de plano a seguir no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ É possível corrigir esse problema ao modificar o procedimento armazenado para adicionar a dica de consulta `OPTIMIZE FOR` à consulta. Porém, já que o procedimento armazenado está em um aplicativo implantado, não é possível modificar diretamente o código do aplicativo. Ao contrário, é possível criar o guia de plano a seguir no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 sp_create_plan_guide   
@@ -74,16 +78,16 @@ sp_create_plan_guide
 @hints = N'OPTION (OPTIMIZE FOR (@Country_region = N''US''))';  
 ```  
   
- Quando a consulta especificada na instrução `sp_create_plan_guide` é executada, a consulta é modificada antes da otimização para incluir a cláusula `OPTIMIZE FOR (@Country = N''US'')`.  
+ Quando a consulta especificada na instrução `sp_create_plan_guide` é executada, a consulta é modificada antes da otimização para incluir a cláusula `OPTIMIZE FOR (@Country = N''US'')` .  
   
  Guia de plano SQL  
- O guia de plano SQL correlaciona consultas que são executadas no contexto de instruções e lotes do [!INCLUDE[tsql](../../includes/tsql-md.md)] autônomo que não fazem parte de um objeto do banco de dados. Os guias de plano com base em SQL também podem ser usados para corresponder consultas com parâmetros uma forma especificada. Os guias de plano SQL se aplicam a instruções e lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] autônomos. Frequentemente, essas instruções são submetidas por um aplicativo por meio do procedimento armazenado do sistema [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md). Por exemplo, considere o seguinte lote autônomo:  
+ O guia de plano SQL correlaciona consultas que são executadas no contexto de instruções e lotes do [!INCLUDE[tsql](../../includes/tsql-md.md)] autônomo que não fazem parte de um objeto do banco de dados. Os guias de plano com base em SQL também podem ser usados para corresponder consultas com parâmetros uma forma especificada. Os guias de plano SQL se aplicam a instruções e lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] autônomos. Frequentemente, essas instruções são submetidas por um aplicativo por meio do procedimento armazenado do sistema [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) . Por exemplo, considere o seguinte lote autônomo:  
   
 ```  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
- Para impedir que um plano de execução paralelo seja gerado nessa consulta, crie o guia de plano a seguir e defina a dica de consulta `MAXDOP` como `1` no parâmetro `@hints`.  
+ Para impedir que um plano de execução paralelo seja gerado nessa consulta, crie o guia de plano a seguir e defina a dica de consulta `MAXDOP` como `1` no parâmetro `@hints` .  
   
 ```  
 sp_create_plan_guide   
@@ -109,7 +113,7 @@ sp_create_plan_guide
   
 -   A opção de banco de dados PARAMETERIZATION é SET to SIMPLE (configuração padrão), mas é preciso que a parametrização forçada seja testada em uma classe de consultas.  
   
-## Guia de plano correspondente a requisitos  
+## <a name="plan-guide-matching-requirements"></a>Guia de plano correspondente a requisitos  
  Guias de plano são aplicados ao banco de dados no qual eles são criados. Portanto, somente os guias de plano presentes no banco de dados se tornam atuais quando uma consulta pode ser combinada com outra. Por exemplo, se [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] for o banco de dados atual e a consulta seguinte executa:  
   
  `SELECT FirstName, LastName FROM Person.Person;`  
@@ -122,19 +126,19 @@ sp_create_plan_guide
   
  Somente os guias de plano no `DB1` são elegíveis para combinar com a consulta porque ela é executada no contexto de `DB1`.  
   
- Para guias de plano com base em TEMPLATE ou SQL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondem os valores para os argumentos @module_or_batch e @params para uma consulta, comparando os dois valores, dígito por dígito. Isso significa você deve fornecer o texto exatamente como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recebe no lote atual.  
+ Para guias de plano baseados em SQL ou em MODELO, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] faz a correspondência dos valores dos argumentos @module_or_batch and @params com uma consulta, comparando os dois valores, caractere por caractere. Isso significa você deve fornecer o texto exatamente como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recebe no lote atual.  
   
- Quando @type = 'SQL' e @module_or_batch são configurados como NULL, o valor de @module_or_batch é definido como o valor de @stmt. Isso significa que o valor de *statement_text* deve ser fornecido exatamente no mesmo formato, caractere a caractere, como enviado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nenhuma conversão interna é executada para facilitar essa correspondência.  
+ Quando @type = 'SQL' e @module_or_batch forem definidos como NULL, o valor @module_or_batch será definido com o valor @stmt. Isso significa que o valor de *statement_text* deve ser fornecido exatamente no mesmo formato, caractere a caractere, como enviado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nenhuma conversão interna é executada para facilitar essa correspondência.  
   
  Quando um guia de plano normal (SQL ou OBJECT) e um guia de plano de MODELO puderem ser aplicados a uma instrução, somente o guia de plano normal será usado.  
   
 > [!NOTE]  
->  O lote que contém a instrução na qual se quer criar o guia de plano não pode conter uma instrução de USE *database*.  
+>  O lote que contém a instrução na qual se quer criar o guia de plano não pode conter uma instrução de USE *database* .  
   
-## Efeito do guia de plano no cache do esquema  
+## <a name="plan-guide-effect-on-the-plan-cache"></a>Efeito do guia de plano no cache do esquema  
  Criar um guia de plano em um módulo remove o plano de consulta desse módulo do cache do esquema. Criar um guia de plano do tipo OBJECT ou SQL em um lote remove o plano de consulta de um lote que tem o mesmo valor de hash. Criar um guia de plano do tipo TEMPLATE remove todos os lotes da instrução única do cache do esquema dentro desse banco de dados.  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Tarefa|Tópico|  
 |----------|-----------|  
@@ -147,7 +151,7 @@ sp_create_plan_guide
 |Descreve como usar o SQL Server Profiler para criar e testar guias de plano.|[Usar o SQL Server Profiler para criar e testar guias de plano](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
 |Descreve como validar guias de plano.|[Validar guias de plano depois da atualização](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
@@ -155,3 +159,4 @@ sp_create_plan_guide
  [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)  
   
   
+

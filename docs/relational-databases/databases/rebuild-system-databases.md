@@ -1,28 +1,32 @@
 ---
-title: "Recriar bancos de dados do sistema | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "banco de dados mestre [SQL Server], recriando"
-  - "parâmetro REBUILDDATABASE"
-  - "recompilando bancos de dados, mestre"
-  - "banco de dados do sistema [SQL Server], recompilando"
+title: Recompilar bancos de dados do sistema | Microsoft Docs
+ms.custom: 
+ms.date: 06/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- master database [SQL Server], rebuilding
+- REBUILDDATABASE parameter
+- rebuilding databases, master
+- system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 116b8352b27400cf9d57d01e4d1c0a0f8a3a89d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Recriar bancos de dados do sistema
-  Os bancos de dados do sistema devem ser recriados para corrigir problemas de corrupção nos bancos de dados do sistema [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md) ou [resource](../../relational-databases/databases/resource-database.md), ou para modificar o agrupamento em nível de servidor padrão. Este tópico fornece instruções passo a passo para recriar bancos de dados do sistema no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+# <a name="rebuild-system-databases"></a>Recriar bancos de dados do sistema
+  Os bancos de dados do sistema devem ser recriados para corrigir problemas de corrupção nos bancos de dados do sistema [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md)ou [resource](../../relational-databases/databases/resource-database.md) , ou para modificar o agrupamento em nível de servidor padrão. Este tópico fornece instruções passo a passo para recriar bancos de dados do sistema no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **Neste tópico**  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 39
   
  Esse procedimento não recria o banco de dados de recursos. Consulte a seção, "Procedimento de recriação do banco de dados de recursos" mais adiante neste tópico.  
   
-#### Para recriar os bancos de dados do sistema para uma instância do SQL Server:  
+#### <a name="to-rebuild-system-databases-for-an-instance-of-sql-server"></a>Para recriar os bancos de dados do sistema para uma instância do SQL Server:  
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] na unidade de disco ou, em um prompt de comando, altere o diretório para o local do arquivo setup.exe no servidor local. O local padrão no servidor é C:\Arquivos de Programas\Microsoft SQL Server\130\Setup Bootstrap\SQLServer2016.  
   
@@ -104,13 +108,13 @@ caps.handback.revision: 39
     |/ACTION=REBUILDDATABASE|Especifica que Instalação recria os bancos de dados do sistema.|  
     |/INSTANCENAME=*InstanceName*|É o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para a instância padrão, digite MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS =*contas*|Especifica os grupos ou contas individuais do Windows a serem adicionados à função de servidor fixa **sysadmin** . Ao especificar mais de uma conta, separe as contas com um espaço em branco. Por exemplo, digite **BUILTIN\Administrators MyDomain\MyUser**. Quando você estiver especificando uma conta que contém um espaço em branco dentro do nome de conta, coloque a conta entre aspas duplas. Por exemplo, digite **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*StrongPassword* ]|Especifica a senha da conta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **do** . Esse parâmetro será exigido se a instância usar o modo de Autenticação Mista (Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows).<br /><br /> **\*\* Observação de Segurança \*\***A conta **sa** é uma conta conhecida do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, geralmente, é visada por usuários mal-intencionados. É muito importante que você use uma senha forte para o logon **sa** .<br /><br /> Não especifique esse parâmetro para o modo de Autenticação do Windows.|  
+    |[ /SAPWD=*StrongPassword* ]|Especifica a senha da conta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **do** . Esse parâmetro será exigido se a instância usar o modo de Autenticação Mista (Autenticação do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows).<br /><br /> **\*\* Observação de Segurança \*\***A conta **sa** é uma conta conhecida do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, geralmente, é visada por usuários mal-intencionados. É muito importante que você use uma senha forte para o logon **sa** .<br /><br /> Não especifique esse parâmetro para o modo de Autenticação do Windows.|  
     |[ /SQLCOLLATION=*CollationName* ]|Especifica um novo agrupamento no nível do servidor. Esse parâmetro é opcional. Quando não está especificado, o agrupamento atual do servidor é usado.<br /><br /> **\*\* Importante \*\***A alteração do agrupamento no nível do servidor não altera o agrupamento de bancos de dados de usuário existentes. Por padrão, todos os bancos de dados do usuário criados recentemente usarão o novo agrupamento.<br /><br /> Para obter mais informações, veja [Definir ou alterar o agrupamento do servidor](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NúmeroDeArquivos ]|Especifica o número de arquivos de dados tempdb. Esse valor pode ser aumentado para até 8 ou o número de núcleos, o que for maior.<br /><br /> Valor padrão: 8 ou o número de núcleos, o que for menor.|  
     |[ /SQLTEMPDBFILESIZE=TamanhoDoArquivoEmMB ]|Especifica o tamanho inicial de cada arquivo de dados tempdb em MB. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 8|  
-    |[ /SQLTEMPDBFILEGROWTH=TamanhoDoArquivoEmMB ]|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 64|  
+    |[ /SQLTEMPDBFILEGROWTH=TamanhoDoArquivoEmMB ]|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 1024 MB.<br /><br /> Valor padrão: 64|  
     |[ /SQLTEMPDBLOGFILESIZE=TamanhoDoArquivoEmMB ]|Especifica o tamanho inicial do arquivo de log tempdb em MB. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 8.<br /><br /> Intervalo permitido: Mín. = 8, Máx. = 1024.|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=TamanhoDoArquivoEmMB ]|Especifica o tamanho do incremento de aumento do arquivo de log tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: Mín. = 8, Máx. = 1024.|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=TamanhoDoArquivoEmMB ]|Especifica o tamanho do incremento de aumento do arquivo de log tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 1024 MB.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: Mín. = 8, Máx. = 1024.|  
     |[ /SQLTEMPDBDIR=Diretórios ]|Especifica os diretórios para arquivos de dados tempdb. Ao especificar mais de um diretório, separe os diretórios com um espaço em branco. Se vários diretórios forem especificados, os arquivos de dados tempdb serão espalhados pelos diretórios de modo round robin.<br /><br /> Valor padrão: diretório de dados do sistema|  
     |[/SQLTEMPDBLOGDIR = Diretório]|Especifica o diretório para o arquivo de log tempdb.<br /><br /> Valor padrão: diretório de dados do sistema|  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 39
   
 4.  O cenário de RebuildDatabase exclui os bancos de dados do sistema e instala-os novamente em estado limpo. Como a configuração de contagem de arquivos tempdb não persiste, o valor do número de arquivos tempdb não é conhecido durante a instalação. Portanto, o cenário RebuildDatabase não sabe a contagem de arquivos tempdb a adicionar novamente. Você pode fornecer o valor do número de arquivos tempdb novamente com o parâmetro SQLTEMPDBFILECOUNT. Se o parâmetro não for fornecido, RebuildDatabase adicionará um número padrão de arquivos tempdb, que é tantos arquivos tempdb quanto a contagem de CPU ou 8, o que for menor.  
   
-## Tarefas pós-recriação  
+## <a name="post-rebuild-tasks"></a>Tarefas pós-recriação  
  Depois de recriar o banco de dados, talvez seja necessário executar as tarefas adicionais a seguir:  
   
 -   Restaure os backups completos mais recentes dos bancos de dados mestre, modelo e msdb. Para obter mais informações, consulte [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
@@ -126,7 +130,7 @@ caps.handback.revision: 39
     > [!IMPORTANT]  
     >  Se você alterou o agrupamento do servidor, não restaure os bancos de dados do sistema. Fazer isso substituirá o novo agrupamento pela configuração do agrupamento anterior.  
   
-     Se um backup não estiver disponível ou se o backup restaurado não for atual, recrie todas as entradas ausentes. Por exemplo, recrie todas as entradas ausentes de seus bancos de dados de usuários, dispositivos de backup, logons, pontos de extremidade, etc. do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A melhor maneira de recriar entradas é executar os scripts originais que as criaram.  
+     Se um backup não estiver disponível ou se o backup restaurado não for atual, recrie todas as entradas ausentes. Por exemplo, recrie todas as entradas ausentes de seus bancos de dados de usuários, dispositivos de backup, logons, pontos de extremidade, etc. do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A melhor maneira de recriar entradas é executar os scripts originais que as criaram.  
   
 > [!IMPORTANT]  
 >  É recomendável proteger os scripts para evitar que eles sejam alterados por indivíduos não autorizados.  
@@ -140,7 +144,7 @@ caps.handback.revision: 39
 ##  <a name="Resource"></a> Recriar o banco de dados de recursos  
  O procedimento a seguir recria o banco de dados de recursos do sistema. Quando você recria o banco de dados de recursos, todos os service packs e hot fixes são perdidos, e portanto, devem ser reaplicados.  
   
-#### Para recriar o banco de dados do sistema de recursos:  
+#### <a name="to-rebuild-the-resource-system-database"></a>Para recriar o banco de dados do sistema de recursos:  
   
 1.  Inicie o programa de Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (setup.exe) da mídia de distribuição.  
   
@@ -158,17 +162,17 @@ caps.handback.revision: 39
  Se o banco de dados **msdb** estiver danificado e você não tiver um backup do banco de dados **msdb** , poderá criar um novo **msdb** usando o script **instmsdb** .  
   
 > [!WARNING]  
->  A recriação do banco de dados **msdb** com o script **instmsdb** eliminará todas as informações armazenadas em **msdb**, tais como trabalhos, alerta, operadores, planos de manutenção, histórico de backup, configurações de Gerenciamento Baseado em Políticas, Database Mail, Data Warehouse de desempenho, etc.  
+>  A recriação do banco de dados **msdb** com o script **instmsdb** eliminará todas as informações armazenadas em **msdb** , tais como trabalhos, alerta, operadores, planos de manutenção, histórico de backup, configurações de Gerenciamento Baseado em Políticas, Database Mail, Data Warehouse de desempenho, etc.  
   
 1.  Pare todos os serviços que estejam se conectando ao [!INCLUDE[ssDE](../../includes/ssde-md.md)], inclusive o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)], e todos os aplicativos que estejam usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um repositório de dados.  
   
 2.  Inicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir da linha de comando usando o comando: `NET START MSSQLSERVER /T3608`  
   
-     Para obter mais informações, consulte [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md).  
+     Para obter mais informações, consulte [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  Em outra janela da linha de comando, desanexe o banco de dados **msdb**, executando o comando a seguir, substituindo *\<servername>* pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  Em outra janela da linha de comando, desanexe o banco de dados **msdb** executando o seguinte comando, substituindo *\<servername>* pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
-4.  Usando o Windows Explorer, renomeie os arquivos de banco de dados **msdb** . Por padrão, eles estão na subpasta DATA da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+4.  Usando o Windows Explorer, renomeie os arquivos de banco de dados **msdb** . Por padrão, eles estão na subpasta DATA da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 5.  Usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, pare e reinicie o serviço [!INCLUDE[ssDE](../../includes/ssde-md.md)] normalmente.  
   
@@ -195,9 +199,10 @@ caps.handback.revision: 39
   
 -   Presença de vírgulas (,) ou outros caracteres que não são especificados na sintaxe.  
   
- Depois que a operação de recriação é concluída, examine se há erros nos logs do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O local do log padrão é C:\Arquivos de Programas\Microsoft SQL Server\130\Setup Bootstrap\Logs. Para localizar o arquivo de log que contém os resultados do processo de recriação, altere os diretórios para a pasta Logs em um prompt de comando e execute `findstr /s RebuildDatabase summary*.*`. Essa pesquisa apontará para qualquer arquivo de log que contenha os resultados da recriação dos bancos de dados do sistema. Abra os arquivos de log e examine-os para verificar se há mensagens de erro relevantes.  
+ Depois que a operação de recriação é concluída, examine se há erros nos logs do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O local do log padrão é C:\Arquivos de Programas\Microsoft SQL Server\130\Setup Bootstrap\Logs. Para localizar o arquivo de log que contém os resultados do processo de recriação, altere os diretórios para a pasta Logs em um prompt de comando e execute `findstr /s RebuildDatabase summary*.*`. Essa pesquisa apontará para qualquer arquivo de log que contenha os resultados da recriação dos bancos de dados do sistema. Abra os arquivos de log e examine-os para verificar se há mensagens de erro relevantes.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Bancos de dados do sistema](../../relational-databases/databases/system-databases.md)  
   
   
+

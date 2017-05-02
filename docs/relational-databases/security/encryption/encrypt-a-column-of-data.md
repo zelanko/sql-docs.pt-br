@@ -1,27 +1,31 @@
 ---
-title: "Criptografar uma coluna de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "criptografia [SQL Server], colunas"
-  - "criptografia [SQL Server], colunas"
-  - "criptografia de nível de coluna"
-  - "criptografia de nível da célula"
+title: Criptografar uma coluna de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], columns
+- cryptography [SQL Server], columns
+- column level encryption
+- cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1451071485e8994dd90ea447e28d9b32e511dd1a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criptografar uma coluna de dados
+# <a name="encrypt-a-column-of-data"></a>Criptografar uma coluna de dados
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Este tópico descreve como criptografar uma coluna de dados usando a criptografia simétrica no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Às vezes, isso é conhecido como criptografia no nível de coluna, ou criptografia no nível da célula.  
@@ -51,7 +55,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para criptografar uma coluna de dados usando uma criptografia simétrica simples  
+#### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Para criptografar uma coluna de dados usando uma criptografia simétrica simples  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### Para criptografar uma coluna de dados usando a criptografia simétrica que inclui um autenticador  
+#### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>Para criptografar uma coluna de dados usando a criptografia simétrica que inclui um autenticador  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -188,3 +192,4 @@ caps.handback.revision: 27
 -   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-symmetric-key-transact-sql.md)  
   
   
+

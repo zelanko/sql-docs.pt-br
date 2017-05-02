@@ -1,27 +1,31 @@
 ---
-title: "Especificar op&#231;&#245;es de esquema | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "esquemas [replicação do SQL Server], opções"
-  - "artigos [replicação do SQL Server], opções de replicação transacional"
-  - "artigos [replicação do SQL Server], opções de replicação de mesclagem"
-  - "artigos [replicação do SQL Server], opções de esquema"
+title: "Especificar opções de esquema | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schemas [SQL Server replication], options
+- articles [SQL Server replication], transactional replication options
+- articles [SQL Server replication], merge replication options
+- articles [SQL Server replication], schema options
 ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ef7d237d005c8be5892125841de73084110f1e5e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Especificar op&#231;&#245;es de esquema
+# <a name="specify-schema-options"></a>Especificar opções de esquema
   Este tópico descreve como especificar opções de esquema no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Ao publicar uma tabela ou exibição, você pode controlar as opções de criação de objeto que são replicadas para o objeto publicado. Você pode definir esta opção quando o artigo é criado, e você também pode alterá-los mais tarde. Se você não especificar essas opções explicitamente para um artigo, um conjunto padrão de opções será definido.  
   
 > [!NOTE]  
@@ -49,78 +53,78 @@ caps.handback.revision: 39
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Para obter a lista completa de opções de esquema, consulte o **@schema_option** parâmetro [sp_addarticle & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e [sp_addmergearticle & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
+-   Para obter a lista completa de opções de esquema, consulte o parâmetro **@schema_option** de [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Especificar opções de esquema, como copiar restrições e gatilhos para assinantes, no **propriedades** guia de **Propriedades do artigo - \< artigo>** caixa de diálogo. Essa guia está disponível no Assistente de nova publicação e o **Propriedades de publicação - \< publicação>** caixa de diálogo. Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md) e [Exibir e modificar propriedades de publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Especifique opções de esquema, como copiar ou não restrições e gatilhos para Assinantes, na guia **Propriedades** da caixa de diálogo **Propriedades do Artigo – \<Artigo>**. Essa guia está disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades da Publicação – \<Publicação>**. Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md) e [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-#### Para especificar opções de esquema  
+#### <a name="to-specify-schema-options"></a>Para especificar opções de esquema  
   
-1.  Sobre o **artigos** página do Assistente de nova publicação ou **Propriedades de publicação - \< publicação>** caixa de diálogo, selecione um artigo e, em seguida, clique em **Propriedades do artigo**.  
+1.  Na página **Artigos** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades da Publicação – \<Publicação>**, selecione um artigo e clique em **Propriedades do Artigo**.  
   
 2.  Selecione quais alterações de opção de esquema de artigos devem ser aplicar a:  
   
-    -   Clique em **definir propriedades de realçado \< ObjectType> artigo** para iniciar o **Propriedades do artigo - \< ObjectName>** caixa de diálogo; propriedade as alterações feitas nessa caixa de diálogo são aplicadas somente ao objeto que está realçado no painel do objeto no **artigos** página.  
+    -   Clique em **Definir as Propriedades do Artigo \<ObjectType> Realçado** para iniciar a caixa de diálogo **Propriedades do Artigo – \<ObjectName >**. As alterações de propriedade feitas nessa caixa de diálogo são aplicadas somente ao objeto que está realçado no painel de objetos na página **Artigos**.  
   
-    -   Clique em **definir propriedades de todos os \< ObjectType> artigos** para iniciar o **Propriedades para todos os \< ObjectType> artigos** caixa de diálogo; propriedade as alterações feitas nessa caixa de diálogo são aplicadas a todos os objetos desse tipo no painel objeto o **artigos** página, incluindo os ainda não foram selecionados para publicação.  
+    -   Clique em **Definir as Propriedades de Todos os Artigos \<ObjectType>**, para abrir a caixa de diálogo **Propriedades de Todos os Artigos \<ObjectType>**; as alterações na propriedade feitas nessa caixa de diálogo são aplicadas a todos os objetos desse tipo, no painel de objetos da página **Artigos**, incluindo aqueles ainda não selecionados para publicação.  
   
         > [!NOTE]  
-        >  Alterações de propriedade feitas a **Propriedades para todos os \< ObjectType> artigos** caixa de diálogo Substituir qualquer feitas anteriormente no **Propriedades do artigo - \< ObjectName>** caixa de diálogo. Se, por exemplo, você quiser definir um número de padrões para todos os artigos de um tipo de objeto, mas também quer definir algumas propriedades para objetos individuais, defina primeiro os padrões para todos os artigos. Em seguida, defina as propriedades para os objetos individuais.  
+        >  Alterações de propriedade feitas na caixa de diálogo **Propriedades para Todos os Artigos \<ObjectType>** substituem todas as alterações feitas anteriormente na caixa de diálogo **Propriedades do Artigo – \<ObjectName>**. Se, por exemplo, você quiser definir um número de padrões para todos os artigos de um tipo de objeto, mas também quer definir algumas propriedades para objetos individuais, defina primeiro os padrões para todos os artigos. Em seguida, defina as propriedades para os objetos individuais.  
   
-3.  No **copiar objetos e configurações no assinante** e **objeto de destino** seções o **propriedades** Guia do **Propriedades do artigo - \< artigo>** caixa de diálogo, especifique valores para as opções.  
+3.  Nas seções **Copiar Objetos e Configurações no Assinante** e **Objeto de Destino** da guia **Propriedades** da caixa de diálogo **Propriedades do Artigo – \<Artigo>**, especifique valores para as opções.  
   
 4.  Modifique propriedades, se necessário, depois clique em **OK**.  
   
-5.  Se você estiver no **Propriedades de publicação - \< publicação>** caixa de diálogo, clique em **OK** para salvar e fechar a caixa de diálogo.  
+5.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publicação>**, clique em **OK** para salvar e fechar a caixa de diálogo.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
- Opções de esquema são especificadas como um valor hexadecimal de [| (OR bit a bit)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) resultado de uma ou mais opções. Para obter mais informações, consulte [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
+ As opções de esquema são especificadas como um valor hexadecimal que é o resultado [| (OR bit a bit)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) de uma ou mais opções. Para obter mais informações, consulte [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
   
 > [!NOTE]  
->  Você deve converter valores de opção de esquema de **binary** para **int** antes de executar uma operação bit a bit. Para obter mais informações, consulte [CAST e CONVERT & #40. O Transact-SQL e 41;](../../../t-sql/functions/cast-and-convert-transact-sql.md).  
+>  Você deve converter valores de opção de esquema de **binary** para **int** antes de executar uma operação bit a bit. Para obter mais informações, veja [CAST e CONVERT &#40;Transact-SQL&#41;](../../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-#### Para especificar opções de esquema ao definir um artigo para uma publicação de instantâneo ou transacional  
+#### <a name="to-specify-schema-options-when-defining-an-article-for-a-snapshot-or-transactional-publication"></a>Para especificar opções de esquema ao definir um artigo para uma publicação de instantâneo ou transacional  
   
-1.  No publicador do banco de dados de publicação, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence para **@publication**, um nome para o artigo para **@article**, o objeto de banco de dados que está sendo publicado para **@source_object**, o tipo de objeto de banco de dados para **@type**, e o [| (OR bit a bit)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) resultado de uma ou mais opções de esquema para **@schema_option**. Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  No Publicador do banco de dados de publicação, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence para **@publication**, um nome para o artigo para **@article**, o objeto de banco de dados a ser publicado para **@source_object**, o tipo de objeto de banco de dados para **@type**e o resultado [| (OR bit a bit)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) de uma ou mais opções de esquema para **@schema_option**. Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-#### Para especificar opções de esquema ao definir um artigo para uma publicação de mesclagem  
+#### <a name="to-specify-schema-options-when-defining-an-article-for-a-merge-publication"></a>Para especificar opções de esquema ao definir um artigo para uma publicação de mesclagem  
   
-1.  No publicador do banco de dados de publicação, execute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence para **@publication**, um nome para o artigo para **@article**, o objeto de banco de dados que está sendo publicado para **@source_object**, e o [| (OR bit a bit)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) resultado de uma ou mais opções de esquema para **@schema_option**. Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  No Publicador do banco de dados de publicação, execute o [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence para **@publication**, um nome para o artigo para **@article**, o objeto de banco de dados a ser publicado para **@source_object**e o resultado [| (OR bit a bit)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) de uma ou mais opções de esquema para **@schema_option**. Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-#### Para alterar opções de esquema para um artigo existente em uma publicação de instantâneo ou transacional  
+#### <a name="to-change-schema-options-for-an-existing-article-in-a-snapshot-or-transactional-publication"></a>Para alterar opções de esquema para um artigo existente em uma publicação de instantâneo ou transacional  
   
-1.  No publicador do banco de dados de publicação, execute [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence para **@publication** e o nome do artigo para **@article**. Observe o valor da **schema_option** coluna no conjunto de resultados.  
+1.  No Publicador do banco de dados de publicação, execute [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence para **@publication** e o nome do artigo para **@article**. Observe o valor da coluna **schema_option** no conjunto de resultados.  
   
-2.  Executar um [& (e bit a bit)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) valor para determinar se a opção está definida de opção de operação usando o valor da etapa 1 e o esquema desejado.  
-  
-    -   Se o resultado for **0**, a opção não está definida.  
-  
-    -   Se o resultado for o valor da opção, a opção já está definida.  
-  
-3.  Se a opção não for definida, execute um [| (OR bit a bit)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) operação usando o valor da etapa 1 e o valor de opção de esquema desejado.  
-  
-4.  No publicador do banco de dados de publicação, execute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence para **@publication**, o nome do artigo para **@article**, um valor de **schema_option** para **@property**, e o resultado hexadecimal da etapa 3 para **@value**.  
-  
-5.  Execute o Agente de Instantâneo para gerar um novo instantâneo. Para obter mais informações, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
-  
-#### Para alterar opções de esquema para um artigo existente em uma publicação de mesclagem  
-  
-1.  No publicador do banco de dados de publicação, execute [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence para **@publication** e o nome do artigo para **@article**. Observe o valor da **schema_option** coluna no conjunto de resultados.  
-  
-2.  Executar um [& (e bit a bit)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) valor para determinar se a opção está definida de opção de operação usando o valor da etapa 1 e o esquema desejado.  
+2.  Execute uma operação [& (AND bit a bit)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) usando o valor da etapa 1 e o valor da opção de esquema desejado para determinar se a opção está definida.  
   
     -   Se o resultado for **0**, a opção não está definida.  
   
     -   Se o resultado for o valor da opção, a opção já está definida.  
   
-3.  Se a opção não for definida, execute um [| (OR bit a bit)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) operação usando o valor da etapa 1 e o valor de opção de esquema desejado.  
+3.  Se a opção não estiver definida, execute uma operação [| (OR de bit a bit)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) usando o valor da etapa 1 e o valor de opção de esquema desejado.  
   
-4.  No publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence para **@publication**, o nome do artigo para **@article**, um valor de **schema_option** para **@property**, e o resultado hexadecimal da etapa 3 para **@value**.  
+4.  No Publicador do banco de dados de publicação, execute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence para **@publication**, o nome do artigo para **@article**, um valor de **schema_option** para **@property**e o resultado hexadecimal da etapa 3 para **@value**.  
   
 5.  Execute o Agente de Instantâneo para gerar um novo instantâneo. Para obter mais informações, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-## Consulte também  
+#### <a name="to-change-schema-options-for-an-existing-article-in-a-merge-publication"></a>Para alterar opções de esquema para um artigo existente em uma publicação de mesclagem  
+  
+1.  No Publicador do banco de dados de publicação, execute [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence para **@publication** e o nome do artigo para **@article**. Observe o valor da coluna **schema_option** no conjunto de resultados.  
+  
+2.  Execute uma operação [& (AND bit a bit)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) usando o valor da etapa 1 e o valor da opção de esquema desejado para determinar se a opção está definida.  
+  
+    -   Se o resultado for **0**, a opção não está definida.  
+  
+    -   Se o resultado for o valor da opção, a opção já está definida.  
+  
+3.  Se a opção não estiver definida, execute uma operação [| (OR de bit a bit)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) usando o valor da etapa 1 e o valor de opção de esquema desejado.  
+  
+4.  No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence para **@publication**, o nome do artigo para **@article**, um valor de **schema_option** para **@property**e o resultado hexadecimal da etapa 3 para **@value**.  
+  
+5.  Execute o Agente de Instantâneo para gerar um novo instantâneo. Para obter mais informações, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+  
+## <a name="see-also"></a>Consulte também  
  [Publicar dados e objetos de banco de dados](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Opções de artigo para replicação transacional](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
+ [Opções de artigo para a replicação transacional](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

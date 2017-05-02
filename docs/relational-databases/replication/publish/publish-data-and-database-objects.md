@@ -1,53 +1,57 @@
 ---
-title: "Publicar dados e objetos de banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tipos definidos pelo usuário [replicação do SQL Server]"
-  - "artigos [replicação do SQL Server], descartando"
-  - "objetos [replicação do SQL Server]"
-  - "publicações [replicação do SQL Server], criando"
-  - "replicação de mesclagem [replicação do SQL Server], publicações"
-  - "artigos somente de esquema [replicação do SQL Server]"
-  - "publicação [replicação do SQL Server], objetos de banco de dados"
-  - "artigos [replicação do SQL Server], definindo"
-  - "publicação [replicação do SQL Server], funções"
-  - "replicação [SQL Server], publicações"
-  - "publicação [replicação do SQL Server], exibições"
-  - "tabelas [replica&#231;&#227;o do SQL Server]"
-  - "esquemas [replica&amp;#231;&amp;#227;o do SQL Server]"
-  - "publicação [replicação do SQL Server], dados"
-  - "esquemas [replicação do SQL Server], publicação"
-  - "artigos [replicação do SQL Server], procedimentos armazenados e"
-  - "publicação [replicação do SQL Server], tabelas"
-  - "tipos de dados de alias [replicação do SQL Server]"
-  - "publicações [replicação do SQL Server], excluindo"
-  - "replicação de instantâneo [SQL Server], publicações"
-  - "artigos [replicação SQL Server], modificando"
-  - "replicação transacional, publicações"
-  - "publicação [replicação do SQL Server], procedimentos armazenados"
-  - "publicando [replica&#231;&#227;o do SQL Server]"
-  - "exibições [replicação do SQL Server]"
-  - "procedimentos armazenados [replicação do SQL Server], publicação"
-  - "publicações [replicação do SQL Server], opções de esquema"
-  - "artigos [replicação do SQL Server], adicionando"
-  - "publicações [replicação do SQL Server], modificando"
-  - "fun&#231;&#245;es definidas pelo usu&#225;rio [replica&#231;&#227;o do SQL Server]"
+title: Publicar dados e objetos de banco de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined types [SQL Server replication]
+- articles [SQL Server replication], dropping
+- objects [SQL Server replication]
+- publications [SQL Server replication], creating
+- merge replication [SQL Server replication], publications
+- schema-only articles [SQL Server replication]
+- publishing [SQL Server replication], database objects
+- articles [SQL Server replication], defining
+- publishing [SQL Server replication], functions
+- replication [SQL Server], publications
+- publishing [SQL Server replication], views
+- tables [SQL Server replication]
+- schemas [SQL Server replication]
+- publishing [SQL Server replication], data
+- schemas [SQL Server replication], publishing
+- articles [SQL Server replication], stored procedures and
+- publishing [SQL Server replication], tables
+- alias data types [SQL Server replication]
+- publications [SQL Server replication], deleting
+- snapshot replication [SQL Server], publications
+- articles [SQL Server replication], modifying
+- transactional replication, publications
+- publishing [SQL Server replication], stored procedures
+- publishing [SQL Server replication]
+- views [SQL Server replication]
+- stored procedures [SQL Server replication], publishing
+- publications [SQL Server replication], schema options
+- articles [SQL Server replication], adding
+- publications [SQL Server replication], modifying
+- user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 caps.latest.revision: 83
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 83
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: d909e573f9e04728b8d31973108ed7499e61172d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Publicar dados e objetos de banco de dados
+# <a name="publish-data-and-database-objects"></a>Publicar dados e objetos de banco de dados
   Ao criar uma publicação, você escolhe as tabelas e outros objetos de banco de dados que deseja publicar. Você pode publicar os objetos de banco de dados a seguir usando replicação.  
   
 |Objeto de banco de dados|Replicação de instantâneo e replicação transacional|Replicação de mesclagem|  
@@ -65,7 +69,7 @@ caps.handback.revision: 83
 |Índices de texto completo|X|X|  
 |Objetos de esquema (restrições, índices, gatilhos DML de usuário, propriedades estendidas e agrupamento)|X|X|  
   
-## Criando publicações  
+## <a name="creating-publications"></a>Criando publicações  
  Para criar uma publicação, forneça as seguintes informações:  
   
 -   O Distribuidor.  
@@ -88,13 +92,13 @@ caps.handback.revision: 83
   
  Para obter informações sobre como trabalhar com publicações, consulte os tópicos a seguir:  
   
--   [Crie uma publicação](../../../relational-databases/replication/publish/create-a-publication.md)  
+-   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   
--   [Defina um Artigo](../../../relational-databases/replication/publish/define-an-article.md)  
+-   [Definir um Artigo](../../../relational-databases/replication/publish/define-an-article.md)  
   
--   [Visualizar e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
+-   [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
   
--   [Visualizar e modificar propriedades de artigos](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
+-   [Exibir e modificar as propriedades do artigo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
   
 -   [Excluir uma publicação](../../../relational-databases/replication/publish/delete-a-publication.md)  
   
@@ -103,47 +107,47 @@ caps.handback.revision: 83
 > [!NOTE]  
 >  Excluir um artigo ou publicação não remove objetos do Assinante.  
   
-## Publicando tabelas  
+## <a name="publishing-tables"></a>Publicando tabelas  
  O objeto publicado com maior frequência é uma tabela. Os vínculos a seguir fornecem informações adicionais sobre áreas relacionadas a publicação de tabelas:  
   
--   [Filtrar dados publicados](../../../relational-databases/replication/publish/filter-published-data.md)  
+-   [Filtrar os dados publicados](../../../relational-databases/replication/publish/filter-published-data.md)  
   
--   [Opções de artigo para replicação transacional](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
+-   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
--   [Opções de artigo para replicação de mesclagem](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
+-   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
   
 -   [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  Ao publicar uma tabela para replicação, você pode especificar quais objetos de esquema devem ser copiados para o Assinante, como integridade referencial declarada (restrições de chave primária, restrições de referência, restrições exclusivas), índices, gatilhos DML de usuário (os disparadores DDL não podem ser replicados), propriedades estendidas e agrupamento. As propriedades estendidas são replicadas apenas na sincronização inicial entre o Editor e o Assinante. Se você adicionar ou modificar uma propriedade estendida depois da sincronização inicial, a alteração não será replicada.  
   
- Para especificar opções de esquema, consulte [especificar opções de esquema](../../../relational-databases/replication/publish/specify-schema-options.md) ou <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
+ Para especificar opções de esquema, consulte [Especificar opções de esquema](../../../relational-databases/replication/publish/specify-schema-options.md) ou <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
-### Tabelas e índices particionados  
- A replicação dá suporte à publicação de tabelas e índices particionados. O nível de suporte depende do tipo de replicação usado e das opções especificadas para a publicação e os artigos associados às tabelas particionadas. Para obter mais informações, consulte [replicar tabelas e índices particionados](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
+### <a name="partitioned-tables-and-indexes"></a>Tabelas e índices particionados  
+ A replicação dá suporte à publicação de tabelas e índices particionados. O nível de suporte depende do tipo de replicação usado e das opções especificadas para a publicação e os artigos associados às tabelas particionadas. Para obter mais informações, consulte [Replicar tabelas e índices particionados](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
   
-## Publicando procedimentos armazenados  
+## <a name="publishing-stored-procedures"></a>Publicando procedimentos armazenados  
  Todos os tipos de replicação permitem que você reproduza definições de procedimentos armazenados: o CREATE PROCEDURE é copiado para cada Assinante. No caso de procedimentos armazenados CLR (Common Language Runtime), o assembly associado também é copiado. As alterações a procedimentos são replicadas aos Assinantes; as alterações aos assemblies associados não são.  
   
  Além de replicar a definição de um procedimento armazenado, a replicação transacional permite que você replique a execução dos procedimentos armazenados. Isso é útil ao replicar os resultados de procedimentos armazenados orientados a manutenção que afetam grandes quantidades de dados. Para obter mais informações, consulte [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
-## Publicando exibições  
+## <a name="publishing-views"></a>Publicando exibições  
  Todos os tipos de replicação permitem que você reproduza exibições. A exibição (e o índice correspondente, se for uma exibição indexada) pode ser copiada para o Assinante, mas a tabela base também deve ser replicada.  
   
- Para exibições indexadas, a replicação transacional também permite que você replique a exibição indexada como uma tabela em vez de uma exibição, eliminando a necessidade de replicar também a tabela base. Para fazer isso, especifique uma das opções "indexed view logbased" para o *@type* parâmetro [sp_addarticle & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Para obter mais informações sobre como usar o **sp_addarticle**, consulte [definir um artigo](../../../relational-databases/replication/publish/define-an-article.md).  
+ Para exibições indexadas, a replicação transacional também permite que você replique a exibição indexada como uma tabela em vez de uma exibição, eliminando a necessidade de replicar também a tabela base. Para fazer isso, especifique uma das opções “indexed view logbased” do parâmetro *@type* de [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Para obter mais informações sobre como usar **sp_addarticle**, consulte [Definir um artigo](../../../relational-databases/replication/publish/define-an-article.md).  
   
-## Publicando funções definidas pelo usuário  
+## <a name="publishing-user-defined-functions"></a>Publicando funções definidas pelo usuário  
  As instruções CREATE FUNCTION para as funções CLR e [!INCLUDE[tsql](../../../includes/tsql-md.md)] são copiadas para cada Assinante. No caso das funções CLR, o assembly associado também é copiado. As alterações a funções são replicadas aos Assinantes; as alterações aos assemblies associados não são.  
   
-## Publicando tipos definidos pelo usuário e tipos de dados de alias  
- As colunas que usam tipos definidos pelo usuário ou tipos de dados de alias são reproduzidas para Assinantes como outras colunas. O TYPEstatement criar para cada tipo replicado é executada no assinante antes da tabela é criada. No caso de tipos definidos pelo usuário, o assembly associado é copiado também para cada Assinante. As alterações nos tipos definidos pelo usuário e tipos de dados de alias não são replicadas para os Assinantes.  
+## <a name="publishing-user-defined-types-and-alias-data-types"></a>Publicando tipos definidos pelo usuário e tipos de dados de alias  
+ As colunas que usam tipos definidos pelo usuário ou tipos de dados de alias são reproduzidas para Assinantes como outras colunas. A instrução CREATE TYPE para cada tipo replicado é executada no Assinante antes da criação da tabela. No caso de tipos definidos pelo usuário, o assembly associado é copiado também para cada Assinante. As alterações nos tipos definidos pelo usuário e tipos de dados de alias não são replicadas para os Assinantes.  
   
  Se um tipo é definido em um banco de dados, mas não é referenciado em nenhuma coluna quando uma publicação é criada, o tipo não é copiado para os Assinantes. Se depois você criar uma coluna desse tipo no banco de dados e quiser replicá-la, será preciso primeiro copiar manualmente o tipo (e o assembly associado para um tipo definido pelo usuário) para cada Assinante.  
   
-## Publicando índices de texto completo  
+## <a name="publishing-full-text-indexes"></a>Publicando índices de texto completo  
  A instrução CREATE FULLTEXT INDEX é copiada para cada Assinante e o índice de texto completo é criado para o Assinante. As alterações feitas em índices de texto completo usando ALTER FULLTEXT INDEX não são replicadas.  
   
-## Fazendo alterações de esquema em objetos publicados  
- A replicação oferece suporte para um amplo intervalo de alterações de esquema para objetos publicados. Ao se fazer qualquer uma das seguintes alterações de esquema no objeto publicado adequado em um Publicador do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], essa alteração será propagada por padrão para todos os Assinantes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+## <a name="making-schema-changes-to-published-objects"></a>Fazendo alterações de esquema em objetos publicados  
+ A replicação oferece suporte para um amplo intervalo de alterações de esquema para objetos publicados. Ao se fazer qualquer uma das seguintes alterações de esquema no objeto publicado adequado em um Publicador do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , essa alteração será propagada por padrão para todos os Assinantes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   ALTER TABLE  
   
@@ -155,9 +159,9 @@ caps.handback.revision: 83
   
 -   ALTER TRIGGER  
   
- Para obter mais informações, consulte [fazer alterações de esquema em bancos de dados de publicação](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
   
-## Considerações ao publicar  
+## <a name="considerations-for-publishing"></a>Considerações ao publicar  
  Tenha em mente as seguintes questões ao publicar objetos de bancos de dados:  
   
 -   O banco de dados está acessível aos usuários durante a criação da publicação e o instantâneo inicial, mas é aconselhável criar publicações em momentos de menor atividade no Publicador.  
@@ -167,25 +171,25 @@ caps.handback.revision: 83
 -   Se você estiver publicando um objeto de banco de dados que depende de outros objetos de banco de dados, terá de publicar todos os objetos referenciados. Por exemplo, se você publicar uma exibição que depende de uma tabela, terá de publicar a tabela também.  
   
     > [!NOTE]  
-    >  Se você adicionar um artigo a uma publicação de mesclagem e depende de um artigo existente o novo artigo, você deve especificar uma ordem de processamento para os dois artigos usando o **@processing_order** parâmetro do [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Considere o seguinte cenário: uma tabela é publicada, mas não é publicada a função que é referenciada pela tabela. Se a função não for publicada, a tabela não poderá ser criada no Assinante. Quando você adiciona a função à publicação: Especifique um valor de **1** para o **@processing_order** parâmetro do **sp_addmergearticle**; e especifique um valor de **2** para o **@processing_order** parâmetro **sp_changemergearticle**, especificando o nome da tabela para o parâmetro **@article**. Essa ordem de processamento garante a criação da função no Assinante antes da tabela que depende disso. Você pode usar números diferentes para cada artigo desde que o número para a função seja menor do que o número para a tabela.  
+    >  Se você adicionar um artigo a uma publicação de mesclagem e o artigo existente depender do artigo novo, será preciso especificar uma ordem de processamento para ambos os artigos usando o parâmetro **@processing_order** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Considere o seguinte cenário: uma tabela é publicada, mas não é publicada a função que é referenciada pela tabela. Se a função não for publicada, a tabela não poderá ser criada no Assinante. Ao adicionar a função à publicação: especifique o valor **1** para o parâmetro **@processing_order** de **sp_addmergearticle**e especifique o valor **2** para o parâmetro **@processing_order** de **sp_changemergearticle**, especificando o nome da tabela para o parâmetro **@article**. Essa ordem de processamento garante a criação da função no Assinante antes da tabela que depende disso. Você pode usar números diferentes para cada artigo desde que o número para a função seja menor do que o número para a tabela.  
   
--   Os nomes de publicação não podem incluir nenhum dos seguintes caracteres: % * [ ] | : " ? \ / \< >.  
+-   Os nomes de publicação não podem incluir nenhum dos seguintes caracteres: % * [ ] | : " ? \ / < >.  
   
-### Limitações na publicação de objetos  
+### <a name="limitations-on-publishing-objects"></a>Limitações na publicação de objetos  
   
--   O número máximo de artigos e colunas que podem ser publicados difere nos tipos de publicações. Para obter mais informações, consulte a seção "Objetos de replicação" [especificações de capacidade máxima para o SQL Server](../../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
+-   O número máximo de artigos e colunas que podem ser publicados difere nos tipos de publicações. Para obter mais informações, consulte a seção “Objetos de replicação” de [Especificações de capacidade máxima do SQL Server](../../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
   
--   Procedimentos armazenados, exibições, gatilhos e funções definidas pelo usuário que tenham sido definidos como WITH ENCRYPTION não podem ser publicados como parte da replicação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Procedimentos armazenados, exibições, gatilhos e funções definidas pelo usuário que tenham sido definidos como WITH ENCRYPTION não podem ser publicados como parte da replicação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   As coleções de esquema XML podem ser replicadas, mas as alterações não são replicadas depois do instantâneo inicial.  
   
 -   As tabelas publicadas para replicação transacional devem ter uma chave primária. Se uma tabela estiver em uma publicação de replicação transacional, não será possível desabilitar nenhum índice associado a colunas de chave primária. Esses índices são necessários para a replicação. Para desabilitar um índice, você deve primeiramente descartar a tabela da publicação.  
   
--   Padrões associados criados com [sp_bindefault & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md) não são replicados (padrões associados são preteridos em favor de padrões criados com a palavra-chave DEFAULT de ALTER TABLE ou CREATE TABLE).  
+-   Padrões associados criados com [sp_bindefault &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md) não são replicados (padrões associados são preteridos a favor de padrões criados com a palavra-chave DEFAULT de ALTER TABLE ou CREATE TABLE).  
   
--   Funções contendo a **NOEXPAND** dica em exibições indexadas não pode ser publicada na mesma publicação como as tabelas referenciadas e exibições indexadas, devido a ordem na qual o agente de distribuição as entrega. Para contornar esse problema, coloque a tabela e a criação do modo de exibição indexado em uma primeira publicação e adicione funções contendo a **NOEXPAND** Dica nas exibições indexadas para uma segunda publicação que você publica após a primeira publicação for concluído. Ou crie scripts para essas funções e fornecer o script usando o *@post_snapshot_script* parâmetro do **sp_addpublication**.  
+-   Funções contendo a dica **NOEXPAND** em exibições indexadas não podem ser publicadas na mesma publicação que as tabelas referenciadas e as exibições indexadas, devido à ordem na qual os agentes e distribuição as entrega. Para solucionar esse problema, coloque a tabela e a criação de exibição indexada em uma primeira publicação e adicione funções contendo a dica **NOEXPAND** nas exibições indexadas para uma segunda publicação, que você publica após a primeira publicação ser concluída. Ou crie scripts para essas funções e entregue o script usando o parâmetro *@post_snapshot_script* de **sp_addpublication**.  
   
-### Propriedade de esquemas e objetos  
+### <a name="schemas-and-object-ownership"></a>Propriedade de esquemas e objetos  
  A replicação tem o seguinte comportamento padrão no Assistente para Nova Publicação em relação à propriedade de esquemas e objetos:  
   
 -   Para artigos em publicações de mesclagem com um nível de compatibilidade 90 ou superior, publicações de instantâneos e publicações transacionais: por padrão, o proprietário do objeto no Assinante é igual ao proprietário do objeto correspondente no Publicador. Caso não existam esquemas proprietários de objetos no Assinante, eles serão criados automaticamente.  
@@ -194,22 +198,22 @@ caps.handback.revision: 83
   
 -   Para artigos em publicações Oracle: por padrão, o proprietário é especificado como **dbo**.  
   
--   Para artigos em publicações que usam instantâneos de modo de caracteres (que são usados para Assinantes não [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Assinantes [!INCLUDE[ssEW](../../../includes/ssew-md.md)]): por padrão o proprietário é deixado em branco. O proprietário assume o padrão do proprietário associado à conta usada pelo Agente de Distribuição ou Agente de Mesclagem para se conectar ao Assinante.  
+-   Para artigos em publicações que usam instantâneos de modo de caracteres (que são usados para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Assinantes [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): por padrão o proprietário é deixado em branco. O proprietário assume o padrão do proprietário associado à conta usada pelo Agente de Distribuição ou Agente de Mesclagem para se conectar ao Assinante.  
   
- O proprietário do objeto pode ser alterado por meio de **Propriedades de artigo - \<***artigo***>** caixa de diálogo e por meio dos seguintes procedimentos armazenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, e **sp_changemergearticle**. Para obter mais informações, consulte [Exibir e modificar propriedades de publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [definir um artigo](../../../relational-databases/replication/publish/define-an-article.md), e [Exibir e modificar propriedades de artigo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ O proprietário do objeto pode ser alterado por meio da caixa de diálogo **Propriedades do Artigo – \<***Artigo***>** e dos seguintes procedimentos armazenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** e **sp_changemergearticle**. Para obter mais informações, consulte [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definir um artigo](../../../relational-databases/replication/publish/define-an-article.md) e [Exibir e modificar as propriedades do artigo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
-### Publicando dados para Assinantes que executam versões anteriores do SQL Server  
+### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Publicando dados para Assinantes que executam versões anteriores do SQL Server  
   
 -   Se estiver publicando para um Assinante que executa uma versão anterior do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você estará limitado à funcionalidade dessa versão, tanto em termos da funcionalidade específica à replicação quanto da funcionalidade do produto como um todo.  
   
 -   As publicações de mesclagem usam um nível de compatibilidade que determina quais recursos podem ser usados em uma publicação e permitem que você forneça suporte a Assinantes que executam versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-### Publicando tabelas em mais de uma publicação  
+### <a name="publishing-tables-in-more-than-one-publication"></a>Publicando tabelas em mais de uma publicação  
  A replicação fornece suporte para publicação de artigos em várias publicações (inclusive a republicação de dados) com as seguintes restrições:  
   
--   Se um artigo for publicado em uma publicação transacional e uma publicação de mesclagem, certifique-se de que o *@published_in_tran_pub* propriedade é definida como TRUE para o artigo de mesclagem. Para obter mais informações sobre como configurar propriedades, consulte [Exibir e modificar propriedades de publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md) e [Exibir e modificar propriedades de artigo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+-   Se um artigo for publicado em uma publicação transacional e em uma publicação de mesclagem, certifique-se de que a propriedade *@published_in_tran_pub* esteja definida como TRUE para o artigo de mesclagem. Para obter mais informações sobre como definir propriedades, consulte [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md) e [Exibir e modificar as propriedades do artigo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
-     Você também deve definir o *@published_in_tran_pub* propriedade se um artigo for parte de uma assinatura transacional e está incluído em uma publicação de mesclagem. Se esse for o caso, esteja ciente de que, por padrão, a replicação transacional espera que as tabelas no Assinante sejam tratadas como somente leitura; se a replicação de mesclagem alterar dados em uma tabela em uma assinatura transacional, pode haver não convergência de dados. Para evitar essa possibilidade, recomendamos que qualquer tabela desse tipo seja especificada como somente download na publicação de mesclagem. Isso impede que um Assinante de mesclagem carregue alterações de dados na tabela. Para obter mais informações, consulte [otimizar o desempenho de replicação de mesclagem com artigos Download-Only](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+     Você também deve definir a propriedade *@published_in_tran_pub* se um artigo for parte de uma assinatura transacional e for incluído em uma publicação de mesclagem. Se esse for o caso, esteja ciente de que, por padrão, a replicação transacional espera que as tabelas no Assinante sejam tratadas como somente leitura; se a replicação de mesclagem alterar dados em uma tabela em uma assinatura transacional, pode haver não convergência de dados. Para evitar essa possibilidade, recomendamos que qualquer tabela desse tipo seja especificada como somente download na publicação de mesclagem. Isso impede que um Assinante de mesclagem carregue alterações de dados na tabela. Para obter mais informações, consulte [Optimize Merge Replication Performance with Download-Only Articles](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md) (Otimizar o desempenho da replicação de mesclagem com artigos somente para download).  
   
 -   Um artigo não pode ser publicado tanto em uma publicação de mesclagem quanto em uma publicação transacional com assinaturas de atualização enfileirada.  
   
@@ -224,7 +228,7 @@ caps.handback.revision: 83
     |Intervalo de identidade|**@identity_range**|  
     |Limite de intervalo de identidade|**@threshold**|  
   
-     Para obter mais informações sobre esses parâmetros, consulte [sp_addarticle & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+     Para obter mais informações sobre esses parâmetros, consulte [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
 -   Se um artigo for publicado em mais de uma publicação de mesclagem, as seguintes propriedades devem ter o mesmo valor para o artigo em todas as publicações:  
   
@@ -244,16 +248,17 @@ caps.handback.revision: 83
     |Fluxo de coluna de blob|**@stream_blob_columns**|  
     |Tipo de filtro|**@filter_type** (parâmetro em **sp_addmergefilter**)|  
   
-     Para obter mais informações sobre esses parâmetros, consulte [sp_addmergearticle & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_addmergefilter & #40. O Transact-SQL e 41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md).  
+     Para obter mais informações sobre esses parâmetros, consulte [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md).  
   
--   A replicação transacional e a replicação de mesclagem não filtrada fornecem suporte à publicação de uma tabela em várias publicações e depois à assinatura dentro de uma única tabela no banco de dados de assinatura (frequentemente chamado de cenário de acúmulo). O acúmulo é usado muitas vezes para agregar subconjuntos de dados de localizações múltiplas em uma única tabela em um Assinante central. As publicações de mesclagem filtradas não fornecem suporte ao cenário de Assinante central. Para replicação de mesclagem, o acúmulo geralmente é implementado por meio de uma única publicação com filtros de linha com parâmetros. Para obter mais informações, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md).  
+-   A replicação transacional e a replicação de mesclagem não filtrada fornecem suporte à publicação de uma tabela em várias publicações e depois à assinatura dentro de uma única tabela no banco de dados de assinatura (frequentemente chamado de cenário de acúmulo). O acúmulo é usado muitas vezes para agregar subconjuntos de dados de localizações múltiplas em uma única tabela em um Assinante central. As publicações de mesclagem filtradas não fornecem suporte ao cenário de Assinante central. Para replicação de mesclagem, o acúmulo geralmente é implementado por meio de uma única publicação com filtros de linha com parâmetros. Para obter mais informações, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Adicionar e remover artigos de publicações existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Configurar a distribuição](../../../relational-databases/replication/configure-distribution.md)   
+ [Configurar Distribuição](../../../relational-databases/replication/configure-distribution.md)   
  [Inicializar uma assinatura](../../../relational-databases/replication/initialize-a-subscription.md)   
  [Replicação de script](../../../relational-databases/replication/scripting-replication.md)   
  [Proteger o Publicador](../../../relational-databases/replication/security/secure-the-publisher.md)   
- [Assinar publicações](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [Assinar Publicações](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
+

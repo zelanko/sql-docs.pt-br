@@ -1,29 +1,33 @@
 ---
-title: "Restaura&#231;&#245;es completas de banco de dados (modelo de recupera&#231;&#227;o completa) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restaurações completas de banco de dados"
-  - "restaurações de banco de dados [SQL Server], banco de dados completo"
-  - "restaurando banco de dados [SQL Server], banco de dados completo"
-  - "restaurando [SQL Server], banco de dados"
-  - "modelo de recuperação completa [SQL Server], realizando restaurações"
-  - "backups de log [SQL Server]"
+title: "Restaurações completas de banco de dados (modelo de recuperação completa) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- complete database restores
+- database restores [SQL Server], complete database
+- restoring databases [SQL Server], complete database
+- restoring [SQL Server], database
+- full recovery model [SQL Server], performing restores
+- log backups [SQL Server[
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 caps.latest.revision: 77
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 77
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b2fe04099e9ec76ea157b1428fa0a4896ad8e78
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaura&#231;&#245;es completas de banco de dados (modelo de recupera&#231;&#227;o completa)
+# <a name="complete-database-restores-full-recovery-model"></a>Restaurações completas de banco de dados (modelo de recuperação completa)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Em uma restauração completa de banco de dados, a meta é restaurar todo o banco de dados. O banco de dados inteiro fica offline durante a restauração. Antes que qualquer parte do banco de dados possa ficar online, todos os dados são recuperados a um ponto consistente, no qual todas as partes do banco de dados estejam no mesmo momento determinado e não exista nenhuma transação não confirmada.  
@@ -44,7 +48,7 @@ caps.handback.revision: 77
 -   [Tarefas relacionadas](#RelatedTasks)  
   
 > [!NOTE]  
->  Para obter informações sobre suporte para backups de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja a seção “Suporte de compatibilidade” de [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+>  Para obter informações sobre suporte para backups de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja a seção “Suporte de compatibilidade” de [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 ##  <a name="PointOfFailure"></a> Restaurando um banco de dados até o ponto de falha  
  Normalmente, a recuperação de um banco de dados até o ponto da falha envolve as seguintes etapas básicas:  
@@ -68,13 +72,13 @@ caps.handback.revision: 77
   
  A ilustração a seguir mostra esta sequência de restauração. Depois de uma falha (1), um backup do final do log de final é criado (2). Em seguida, o banco de dados é restaurado ao ponto da falha. Isso envolve a restauração de um backup de banco de dados, de um backup diferencial subsequente e de todos os backups de log feitos depois do backup diferencial, inclusive o do backup do final do log.  
   
- ![Restauração de banco de dados completa para o momento da falha](../../relational-databases/backup-restore/media/bnrr-rmfull1-db-failure-pt.gif "Restauração de banco de dados completa para o momento da falha")  
+ ![Restauração completa de banco de dados para o momento da falha](../../relational-databases/backup-restore/media/bnrr-rmfull1-db-failure-pt.gif "Restauração completa de banco de dados para o momento da falha")  
   
 > [!NOTE]  
 >  Ao restaurar um backup de banco de dados em uma instância de servidor diferente, veja [Copiar bancos de dados com Backup e Restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 ###  <a name="TsqlSyntax"></a> Sintaxe básica de RESTORE do Transact-SQL  
- A sintaxe básica de [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] para a sequência de restauração na ilustração anterior é a seguinte:  
+ A sintaxe básica de [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] para a sequência de restauração na ilustração anterior é a seguinte:  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
   
@@ -125,7 +129,7 @@ GO
 ##  <a name="PointWithinBackup"></a> Restaurando um banco de dados em um ponto em um backup de log  
  No modelo de recuperação completa, uma restauração de banco de dados completa pode ser recuperada normalmente até um ponto de hora, uma transação marcada ou um LSN dentro de um backup de log. Porém, no modelo de recuperação bulk-logged, se o backup de log contiver alterações registradas em massa, a recuperação pontual não será possível.  
   
-### Exemplos de cenários de restauração point-in-time  
+### <a name="sample-point-in-time-restore-scenarios"></a>Exemplos de cenários de restauração point-in-time  
  O exemplo a seguir pressupõe um sistema de banco de dados crucial para o qual um backup de banco de dados completo é criado diariamente à meia-noite, um backup de banco de dados diferencial é criado a cada hora, de segunda-feira a sábado, e os backups de log de transações são criados a cada 10 minutos ao longo do dia. Para restaurar o banco de dados ao estado em que estava às 5h19 da quarta-feira, siga um destes procedimentos:  
   
 1.  Restaure o backup de banco de dados completo criado na terça-feira à meia-noite.  
@@ -176,8 +180,8 @@ GO
   
 -   [Recuperar para um número de sequência de log &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)  
   
-## Consulte também  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Consulte também  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

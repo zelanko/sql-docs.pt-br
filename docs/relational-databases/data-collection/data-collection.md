@@ -1,43 +1,47 @@
 ---
-title: "Coleta de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "Coleta de dados"
-helpviewer_keywords: 
-  - "coleta de dados [SQL Server]"
+title: Coleta de dados | Microsoft Docs
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- Coleta de dados
+helpviewer_keywords:
+- data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2fd833eaeb6d1473f508967f740ad4ba331ae5e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Coleta de dados
+# <a name="data-collection"></a>Coleta de dados
   O Coletor de Dados é um componente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que coleta diferentes conjuntos de dados. A coleta de dados é executada constantemente ou em uma agenda definida pelo usuário. O coletor de dados armazena os dados coletados em um banco de dados relacional conhecido como data warehouse de gerenciamento.  
   
-## O que é o Coletor de Dados? 
+## <a name="what-is-data-collector"></a>O que é o Coletor de Dados? 
  O coletor de dados é um componente importante da plataforma de coleta de dados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e para as ferramentas fornecidas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O coletor de dados fornece um ponto central para coleta de dados em seus servidores de banco de dados e aplicativos. Esse ponto de coleta pode obter dados de várias fontes e não se limita apenas aos dados de desempenho, ao contrário do Rastreamento do SQL.  
   
  O coletor de dados permite ajustar o escopo da coleta de dados para se adéquem a seus ambientes de teste e de produção. O coletor de dados também usa o data warehouse, um banco de dados relacional que permite gerenciar os dados coletados configurando diferentes períodos de retenção dos dados.  
   
- O coletor de dados oferece suporte ao ajuste dinâmico para coleta de dados e é extensível via API. Para obter mais informações, consulte [Data Collector Programming](../Topic/Data%20Collector%20Programming.md).  
+ O coletor de dados oferece suporte ao ajuste dinâmico para coleta de dados e é extensível via API. Para obter mais informações, consulte [Data Collector Programming](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101).  
   
  A ilustração a seguir mostra como o coletor de dados se adapta à estratégia geral de coleta e gerenciamento de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ![A função do Coletor de Dados no gerenciamento de dados](../../relational-databases/data-collection/media/datacollectorroleindatastrategy.gif "A função do Coletor de Dados no gerenciamento de dados")  
   
-## Conceitos  
+## <a name="concepts"></a>Conceitos  
  O coletor de dados é integrado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e ao [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], e os utiliza extensivamente. Antes de trabalhar com o coletor de dados, você precisa entender determinados conceitos relacionados a cada um desses componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é usado para programar e executar trabalhos de coleção. Você precisa entender os seguintes conceitos:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agente é usado para programar e executar trabalhos de coleta. Você precisa entender os seguintes conceitos:  
   
 -   Trabalho  
   
@@ -49,24 +53,24 @@ caps.handback.revision: 46
   
 -   Contas Proxy  
   
- Para obter mais informações, consulte [Tarefas de administração automatizadas &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md).  
+ Para obter mais informações, consulte [Tarefas de administração automatizadas &#40;SQL Server Agent&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0).  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) é usado para executar pacotes que coletam dados de provedores de dados individuais. Você precisa estar familiarizado com as seguintes ferramentas e conceitos do [!INCLUDE[ssIS](../../includes/ssis-md.md)]:  
+ O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) é usado para executar pacotes que coletam dados de provedores de dados individuais. Você precisa estar familiarizado com as seguintes ferramentas e conceitos do [!INCLUDE[ssIS](../../includes/ssis-md.md)] :  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacote  
+-   Pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] configuração do pacote  
+-   Configuração do pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
  Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Pacotes](../../integration-services/integration-services-ssis-packages.md).  
   
-## Terminologia  
- **target**  
- Uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que oferece suporte à Coleta de dados. Para obter mais informações sobre edições com suporte, consulte a seção de "Gerenciamento" de [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+## <a name="terminology"></a>Terminologia  
+ **Destino**  
+ Uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que oferece suporte à Coleta de dados. Para obter mais informações sobre edições com suporte, consulte a seção de "Gerenciamento" de [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- Uma *raiz de destino* define uma subárvore na hierarquia de destino. Um *conjunto de destinos* é o grupo de destinos resultante da aplicação de um filtro a uma subárvore definida por uma raiz de destino. Uma raiz de destino pode ser um banco de dados, uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou uma instância do computador.  
+ Uma *raiz de destino* define uma subárvore na hierarquia de destino. Um *conjunto de destinos* é o grupo de destinos resultante da aplicação de um filtro a uma subárvore definida por uma raiz de destino. Uma raiz de destino pode ser um banco de dados, uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou uma instância do computador.  
   
 **tipo de destino**  
- Tipo de destino que tem um determinado comportamento e características. Por exemplo, um destino de instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem características diferentes das de um destino de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Tipo de destino que tem um determinado comportamento e características. Por exemplo, um destino de instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem características diferentes das de um destino de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **provedor de dados**  
  Uma fonte de dados conhecida, específica para um tipo de destino que fornece dados para um tipo de coletor.  
@@ -74,7 +78,7 @@ caps.handback.revision: 46
 **tipo de coletor**  
  Um delimitador lógico que envolve os pacotes do [!INCLUDE[ssIS](../../includes/ssis-md.md)] e fornece o mecanismo real para coletar dados e carregá-los no data warehouse de gerenciamento.  
   
- **item de coleta**  
+ **item da coleção**  
  Uma instância de um tipo de coletor. Um item de coleta é criado com um conjunto específico de propriedades de entrada e uma frequência de coleta.  
   
  **conjunto de coleta**  
@@ -108,13 +112,15 @@ caps.handback.revision: 46
   
  Depois que um conjunto de coleta é habilitado, a coleta de dados pode ser iniciada, de acordo com uma agenda ou sob demanda. Quando a coleta de dados iniciar, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent gera um processo para o coletor de dados, que em troca carrega os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no conjunto de coleta. Os itens de coleta que representam tipos de coleta reúnem dados dos provedores de dados apropriados nos destinos especificados. Quando o ciclo de coleta termina, os dados são carregados no data warehouse de gerenciamento.  
   
-## O que você pode fazer  
+## <a name="things-you-can-do"></a>O que você pode fazer  
   
 |Descrição|Tópico|  
 |----------------------|-----------|  
 |Gerencie diferentes aspectos da coleta de dados; por exemplo, habilitar ou desabilitar a coleta de dados, alterar a configuração de um conjunto de coleta ou exibir dados no data warehouse de gerenciamento.|[Gerenciar coleta de dados](../../relational-databases/data-collection/manage-data-collection.md)|  
-|Use esses relatórios para obter informações para monitorar a capacidade de sistema e solucionar problemas de desempenho do sistema.|[Relatórios do conjuntos de coleta de dados do sistema](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
+|Use esses relatórios para obter informações para monitorar a capacidade de sistema e solucionar problemas de desempenho do sistema.|[Relatórios do conjunto de coleta de dados do sistema](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
 |Use o Data Warehouse de Gerenciamento para coletar dados de um servidor que seja o destino da coleta de dados.|[Data warehouse de gerenciamento](../../relational-databases/data-collection/management-data-warehouse.md)| 
-|Explore os recursos de rastreamento do lado do servidor do SQL Server Profiler para exportar uma definição de rastreamento que pode ser usada para criar um conjunto de coleta que usa o tipo de coletor de Rastreamento do SQL Genérico| [Usar o SQL Server Profiler para criar um conjunto de coleta de Rastreamento do SQL (SQL Server Management Studio)](https://msdn.microsoft.com/library/cc645955(v=sql.130).aspx)
+|Explore os recursos de rastreamento do lado do servidor do SQL Server Profiler para exportar uma definição de rastreamento que pode ser usada para criar um conjunto de coleta que usa o tipo de coletor de Rastreamento do SQL Genérico| [Usar o SQL Server Profiler para criar um Conjunto de Coleta do Rastreamento do SQL (SQL Server Management Studio)](https://msdn.microsoft.com/library/cc645955(v=sql.130).aspx)
   
   
+
+

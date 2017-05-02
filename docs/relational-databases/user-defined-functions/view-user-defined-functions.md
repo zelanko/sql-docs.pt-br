@@ -1,30 +1,34 @@
 ---
-title: "Exibir fun&#231;&#245;es definidas pelo usu&#225;rio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.udfproperties.general.f1"
-  - "sql13.swb.functionproperties.general.f1"
-helpviewer_keywords: 
-  - "exibindo funções definidas pelo usuário"
-  - "exibindo funções definidas pelo usuário"
-  - "funções definidas pelo usuário [SQL Server], exibindo"
-  - "informações de status [SQL Server], funções definidas pelo usuário"
+title: "Exibir funções definidas pelo usuário | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.udfproperties.general.f1
+- sql13.swb.functionproperties.general.f1
+helpviewer_keywords:
+- displaying user-defined functions
+- viewing user-defined functions
+- user-defined functions [SQL Server], viewing
+- status information [SQL Server], user-defined functions
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16f1c2ed871db93259f87bc2e26dba634a0602d6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exibir fun&#231;&#245;es definidas pelo usu&#225;rio
+# <a name="view-user-defined-functions"></a>Exibir funções definidas pelo usuário
   Você pode obter informações sobre a definição ou as propriedades de uma função definida pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Talvez seja necessário observar a definição da função para entender como seus dados são derivados das tabelas de origem, ou consultar os dados definidos pela função.  
   
 > [!IMPORTANT]  
@@ -51,7 +55,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para mostrar as propriedades de uma função definida pelo usuário  
+#### <a name="to-show-a-user-defined-functions-properties"></a>Para mostrar as propriedades de uma função definida pelo usuário  
   
 1.  No **Pesquisador de Objetos**, clique no sinal de adição ao lado do banco de dados que contém a função na qual você deseja ver as propriedades e clique no sinal de adição para expandir a pasta **Programabilidade** .  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 30
   
 4.  Clique com o botão direito do mouse na função da qual você deseja ver as propriedades e selecione **Propriedades**.  
   
-     As propriedades a seguir aparecem na caixa de diálogo **Propriedades de Função –** *function_name*.  
+     As propriedades a seguir aparecem na caixa de diálogo **Propriedades de Função –** *function_name* .  
   
      **Banco de Dados**  
      Nome do banco de dados que contém essa função.  
@@ -110,7 +114,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para obter a definição e as propriedades de uma função  
+#### <a name="to-get-the-definition-and-properties-of-a-function"></a>Para obter a definição e as propriedades de uma função  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 30
   
  Para obter mais informações, veja [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) e [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md).  
   
-#### Para obter as dependências de uma função  
+#### <a name="to-get-the-dependencies-of-a-function"></a>Para obter as dependências de uma função  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

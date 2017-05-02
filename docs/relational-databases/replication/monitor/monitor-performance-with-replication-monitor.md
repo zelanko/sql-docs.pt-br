@@ -1,32 +1,36 @@
 ---
-title: "Monitorar o desempenho com o Replication Monitor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "monitorando o desempenho [replicação do SQL Server], Replication Monitor"
-  - "Agente de Leitor de Log, monitorando"
-  - "Replication Monitor, desempenho"
-  - "Agente de Mesclagem, monitorando"
-  - "Queue Reader Agent, monitorando"
-  - "Agente de Instantâneo, monitorando"
-  - "Agente de Distribuição, monitorando"
-  - "monitorando o desempenho [replicação do SQL Server]"
+title: Monitorar o desempenho com o Replication Monitor | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring performance [SQL Server replication], Replication Monitor
+- Log Reader Agent, monitoring
+- Replication Monitor, performance
+- Merge Agent, monitoring
+- Queue Reader Agent, monitoring
+- Snapshot Agent, monitoring
+- Distribution Agent, monitoring
+- monitoring performance [SQL Server replication]
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae1be084b689f760b6d10db4d7d975b0489048f7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Monitorar o desempenho com o Replication Monitor
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] O Replication Monitor permite monitorar o desempenho da replicação transacional e da replicação de mesclagem das seguintes maneiras:  
+# <a name="monitor-performance-with-replication-monitor"></a>Monitorar o desempenho com o Replication Monitor
+  O[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor permite monitorar o desempenho da replicação transacional e replicação de mesclagem das seguintes formas:  
   
 -   Definindo as advertências e os limites  
   
@@ -38,8 +42,8 @@ caps.handback.revision: 36
   
 -   Exibindo as transações e a hora de entrega (replicação transacional)  
   
-## Definir avisos e limites  
- O Replication Monitor permite ativar avisos para várias condições de desempenho. Ao habilitar um aviso, você especifica um limite. Quando esse limite é atingido ou excedido, um aviso é exibido no **Status** coluna para a assinatura e a publicação com a qual ele é sincronizado (a menos que um problema com uma prioridade mais alta precise ser exibido). Além de exibir de um aviso no Replication Monitor, atingir um limite também pode disparar um alerta. Você pode habilitar avisos para as seguintes condições de desempenho:  
+## <a name="set-warnings-and-thresholds"></a>Definir avisos e limites  
+ O Replication Monitor permite ativar avisos para várias condições de desempenho. Ao habilitar um aviso, você especifica um limite. Se o limite especificado for alcançado ou ultrapassado, será exibido um aviso na coluna **Status** para a assinatura e a publicação com a qual ela sincroniza (exceto se um problema com prioridade mais alta for exibido). Além de exibir de um aviso no Replication Monitor, atingir um limite também pode disparar um alerta. Você pode habilitar avisos para as seguintes condições de desempenho:  
   
 -   Exceder a latência especificada (o período decorrido entre a confirmação de uma transação no Publicador e a confirmação da transação correspondente no Assinante).  
   
@@ -47,16 +51,16 @@ caps.handback.revision: 36
   
 -   Excedendo o tempo de sincronização especificado.  
   
-     Isso se aplica à replicação de mesclagem. Se o limite especificado for atingido ou excedido, o status é exibido como **mesclagem de execução longa**. Você pode especificar limites diferentes para conexões discadas e Rede local (LAN).  
+     Isso se aplica à replicação de mesclagem. Se o limite especificado for atingido ou excedido, o status será exibido como **Mesclagem de execução longa**. Você pode especificar limites diferentes para conexões discadas e Rede local (LAN).  
   
 -   Falha no processamento do número especificado de linhas em um determinado período.  
   
      Isso se aplica à replicação de mesclagem. Se o limite especificado for atingido ou excedido, o status será exibido como **Desempenho crítico**. Você pode especificar limites diferentes para conexões discadas e LAN.  
   
- Para obter mais informações, consulte [definir limites e avisos no Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
+ Para obter mais informações, consulte [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
-## Exibir as medições de desempenho  
- O Replication Monitor exibe valores de qualidade de desempenho para replicação transacional de replicação e de mesclagem no **desempenho médio atual** e **pior desempenho atual** colunas para publicações e **desempenho** coluna para assinaturas. Os valores são:  
+## <a name="view-performance-measurements"></a>Exibir as medições de desempenho  
+ O Replication Monitor exibe os valores de qualidade de desempenho para a replicação transacional e a replicação de mesclagem nas colunas **Desempenho Médio Atual** e **Pior Desempenho Atual** para publicações e na coluna **Desempenho** para assinaturas. Os valores são:  
   
 -   Excelente  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 36
     |---------------|----------|----------|----------|--------------|  
     |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
   
--   Para replicação de mesclagem, qualidade de desempenho é independente de qualquer limite (o limite de processamento de linha determina se o valor de **desempenho crítico** é exibido no **Status** coluna). A qualidade de desempenho é determinada comparando-se o desempenho de uma assinatura individual, do desempenho histórico médio de assinaturas, com a publicação que tem o mesmo tipo de conexão (discada ou LAN). O Replication Monitor exibe um valor após a ocorrência de cinco sincronizações com 50 ou mais alterações cada, no mesmo tipo de conexão. Se houver menos de cinco sincronizações com 50 ou mais alterações ou se a sincronização mais recente tiver menos de 50 alterações, o Replication Monitor não exibirá um valor.  
+-   Para replicação de mesclagem, a qualidade do desempenho é independente (o limite de processamento da linha determina se o valor de **Performance crítica** é mostrado na coluna de **Status** ). A qualidade de desempenho é determinada comparando-se o desempenho de uma assinatura individual, do desempenho histórico médio de assinaturas, com a publicação que tem o mesmo tipo de conexão (discada ou LAN). O Replication Monitor exibe um valor após a ocorrência de cinco sincronizações com 50 ou mais alterações cada, no mesmo tipo de conexão. Se houver menos de cinco sincronizações com 50 ou mais alterações ou se a sincronização mais recente tiver menos de 50 alterações, o Replication Monitor não exibirá um valor.  
   
      A tabela seguinte mostra a correlação entre o desempenho médio e o valor de qualidade de desempenho. Por exemplo, se dez Assinantes tiverem sincronizado em uma conexão LAN com uma taxa média de 100 linhas por segundo, e uma das assinaturas sincronizar a uma taxa de 125 linhas por segundo, o desempenho da sincronização do Assinante será 125% da média, resultando em um valor Bom.  
   
@@ -84,19 +88,19 @@ caps.handback.revision: 36
     |---------------|----------|----------|----------|  
     |151+%|76 – 150%|26 – 75%|0 – 25%|  
   
- Para obter mais informações sobre como exibir informações de assinatura, consulte [Exibir informações e executar tarefas para uma assinatura e 40; Monitor de replicação e 41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
+ Para obter mais informações sobre como exibir informações de assinatura, consulte [Exibir informações e executar tarefas para uma assinatura &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
   
-## Determinar a latência com os tokens de rastreamento  
- A replicação transacional permite medir a latência em um sistema inserindo um token (uma pequena quantidade de dados) no log de transações do banco de dados de publicação e registrando o tempo necessário para chegar até o Distribuidor e os Assinantes. O token permitirá também a identificação de dados que não chegam até o Distribuidor ou Assinante. Para obter mais informações, consulte [medidas latência e validar conexões para replicação transacional](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
+## <a name="determine-latency-with-tracer-tokens"></a>Determinar a latência com os tokens de rastreamento  
+ A replicação transacional permite medir a latência em um sistema inserindo um token (uma pequena quantidade de dados) no log de transações do banco de dados de publicação e registrando o tempo necessário para chegar até o Distribuidor e os Assinantes. O token permitirá também a identificação de dados que não chegam até o Distribuidor ou Assinante. Para obter mais informações, consulte [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
-## Exibir o desempenho de sincronização detalhado para replicação de mesclagem  
- Para a replicação de mesclagem, o Replication Monitor exibe as estatísticas detalhadas para cada artigo processado durante a sincronização, incluindo o tempo gasto em cada fase do processamento (carregar alterações, baixar alterações e assim por diante). Ajuda a definir tabelas específicas que estão causando lentidão e é o melhor local para a solução de problemas de desempenho com assinaturas de mesclagem. Para obter mais informações sobre como exibir estatísticas detalhadas, consulte [Exibir informações e executar tarefas para os agentes associados a uma assinatura & #40. Monitor de replicação e 41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md).  
+## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>Exibir o desempenho de sincronização detalhado para replicação de mesclagem  
+ Para a replicação de mesclagem, o Replication Monitor exibe as estatísticas detalhadas para cada artigo processado durante a sincronização, incluindo o tempo gasto em cada fase do processamento (carregar alterações, baixar alterações e assim por diante). Ajuda a definir tabelas específicas que estão causando lentidão e é o melhor local para a solução de problemas de desempenho com assinaturas de mesclagem. Para mais informações sobre como exibir estatísticas detalhadas, consulte [Exibir informações e executar tarefas para os agentes associados a uma assinatura &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
-## Exibir as transações e a hora de entrega para replicação transacional  
- Para replicação transacional, o Replication Monitor exibe informações sobre o número de transações no banco de dados de distribuição que ainda não foi distribuído ao Assinante e o tempo estimado para distribuir essas transações. Para obter mais informações, consulte [Exibir informações e executar tarefas para os agentes associados a uma assinatura & #40. Monitor de replicação e 41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md).  
+## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>Exibir as transações e a hora de entrega para replicação transacional  
+ Para replicação transacional, o Replication Monitor exibe informações sobre o número de transações no banco de dados de distribuição que ainda não foi distribuído ao Assinante e o tempo estimado para distribuir essas transações. Para obter mais informações, consulte [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md) [Exibir informações e executar tarefas para os agentes associados a uma assinatura (Replication Monitor)].  
   
-## Consulte também  
- [Replicação de monitoramento](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+## <a name="see-also"></a>Consulte também  
+ [Monitorando a Replicação](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
  [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

@@ -1,28 +1,32 @@
 ---
-title: "Restaurar um backup diferencial de banco de dados (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "backups diferenciais completos [SQL Server]"
-  - "restaurando banco de dados [SQL Server], backups diferenciais completos"
-  - "backups de banco de dados [SQL Server], backups diferenciais completos"
-  - "restaurações de banco de dados [SQL Server], backups diferenciais completos"
-  - "fazendo backups de banco de dados [SQL Server], backups diferenciais completos"
+title: Restaurar um backup diferencial do banco de dados (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full differential backups [SQL Server]
+- restoring databases [SQL Server], full differential backups
+- database backups [SQL Server], full differential backups
+- database restores [SQL Server], full differential backups
+- backing up databases [SQL Server], full differential backups
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c0a58f510ec12f0fbf8f635f9700275ce94b24b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar um backup diferencial de banco de dados (SQL Server)
+# <a name="restore-a-differential-database-backup-sql-server"></a>Restaurar um backup diferencial de banco de dados (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como restaurar um backup de banco de dados diferencial no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -68,13 +72,13 @@ caps.handback.revision: 46
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para restaurar um backup de banco de dados diferencial  
+#### <a name="to-restore-a-differential-database-backup"></a>Para restaurar um backup de banco de dados diferencial  
   
 1.  Depois de se conectar à instância adequada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore de servidores.  
   
 2.  Expanda os **Bancos de dados**. Dependendo do banco de dados, selecione um banco de dados de usuário ou expanda os **Bancos de dados do sistema**e selecione um banco de dados do sistema.  
   
-3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**, aponte para **Restaurar** e clique em **Banco de Dados**.  
+3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**, aponte para **Restaurar**e clique em **Banco de Dados**.  
   
 4.  Na página **Geral** , use a seção **Origem** para especificar a origem e o local dos conjuntos de backup a serem restaurados. Selecione uma das opções a seguir:  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 46
   
     -   **Dispositivo**  
   
-         Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup**. Na caixa **Tipo de mídia de backup** , selecione um dos tipos de dispositivo listados. Para selecionar um ou mais dispositivos da caixa **Mídia de backup** , clique em **Adicionar**.  
+         Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Na caixa **Tipo de mídia de backup** , selecione um dos tipos de dispositivo listados. Para selecionar um ou mais dispositivos da caixa **Mídia de backup** , clique em **Adicionar**.  
   
          Após adicionar os dispositivos desejados à caixa de listagem **Mídia de backup** , clique em **OK** para voltar à página **Geral** .  
   
@@ -136,7 +140,7 @@ caps.handback.revision: 46
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para restaurar um backup de banco de dados diferencial  
+#### <a name="to-restore-a-differential-database-backup"></a>Para restaurar um backup de banco de dados diferencial  
   
 1.  Execute uma instrução RESTORE DATABASE, especificando a cláusula NORECOVERY, para restaurar o backup de banco de dados completo que vem antes do backup de banco de dados diferencial. Para obter mais informações, consulte [Como restaurar um backup completo](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
   
@@ -152,7 +156,7 @@ caps.handback.revision: 46
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
   
-#### A. Restaurando um backup de banco de dados diferencial  
+#### <a name="a-restoring-a-differential-database-backup"></a>A. Restaurando um backup de banco de dados diferencial  
  Este exemplo restaura um banco de dados e um backup de banco de dados diferencial do banco de dados `MyAdvWorks` .  
   
 ```tsql  
@@ -172,7 +176,7 @@ RESTORE DATABASE MyAdvWorks
 GO  
 ```  
   
-#### B. Restaurando um backup de banco de dados, de banco de dados diferencial e de log de transações  
+#### <a name="b-restoring-a-database-differential-database-and-transaction-log-backup"></a>B. Restaurando um backup de banco de dados, de banco de dados diferencial e de log de transações  
  Este exemplo restaura um banco de dados, um backup de banco de dados diferencial e um backup de log de transações do banco de dados `MyAdvWorks` .  
   
 ```tsql  
@@ -208,8 +212,8 @@ GO
   
 -   [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Backups diferenciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

@@ -1,39 +1,43 @@
 ---
-title: "Considera&#231;&#245;es administrativas sobre Oracle Publishers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "publicação Oracle [replicação do SQL Server], considerações administrativas"
-  - "administrando a replicação, publicação Oracle"
+title: "Considerações administrativas sobre Publicadores Oracle | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], administrative considerations
+- administering replication, Oracle publishing
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 058c10375ed15b5375f814199a57d032c5291018
+ms.lasthandoff: 04/11/2017
+
 ---
-# Considera&#231;&#245;es administrativas sobre Oracle Publishers
+# <a name="administrative-considerations-for-oracle-publishers"></a>Considerações administrativas sobre Oracle Publishers
   Após configurar um Editor Oracle e ativar os mecanismos de rastreamento de alterações de replicação, os administradores do sistema de banco de dados Oracle ainda podem usar os utilitários de banco de dados padrão Oracle e realizar tarefas típicas de administração de sistemas. Porém, você deve estar ciente quanto aos efeitos que a execução de certas tarefas administrativas pode ter nos dados publicados.  
   
  Com exceção de descartar ou modificar uma coluna publicada para replicação e descartar ou modificar qualquer objeto de replicação, essas considerações não se aplicam à publicação de instantâneos.  
   
-## Importando e carregando dados  
+## <a name="importing-and-loading-data"></a>Importando e carregando dados  
  Gatilhos são usados para rastrear alterações em publicações transacionais no Oracle. As alterações em tabelas publicadas podem ser replicadas para os Assinantes apenas se os gatilhos de replicação forem acionados quando ocorrer uma atualização, uma inserção ou uma exclusão. Os utilitários Oracle Import e SQL*Loader, da Oracle, têm opções que afetam o acionamento dos gatilhos quando linhas são inseridas em tabelas replicadas com esses utilitários.  
   
-### Oracle Import  
- Com o Oracle Import, você pode definir a opção **Ignorar** para 'y' ou ' n' (o padrão é ' n '). Se **Ignorar** é definido como ' n ', a tabela será descartada e recriada durante a importação. Isso remove os gatilhos de replicação e desabilita a replicação. Se **Ignorar** é definido como 's'importação tentará carregar as linhas na tabela existente, que aciona os gatilhos de replicação. Portanto, certifique-se de **Ignorar** é definido como 'y' ao importar para uma tabela replicada com a ferramenta de importação.  
+### <a name="oracle-import"></a>Oracle Import  
+ Com o Oracle Import, é possível definir a opção **ignorar** para 's' ou 'n' (o padrão é 'n'). Se **ignorar** for definido como 'n', a tabela será descartada e recriada durante a importação. Isso remove os gatilhos de replicação e desabilita a replicação. Se **ignorar** for definido como 's', a importação tentará carregar as linhas na tabela existente, o que aciona os gatilhos de replicação. Portanto, certifique-se de que **ignorar** esteja definido como 's' ao importar para uma tabela replicada com a ferramenta de importação.  
   
-### SQL*Loader  
- Com o SQL\*Loader, você pode definir a opção **direto** como 'true' ou 'false' (o padrão é 'false'). Se **direto** é definido como 'false', serão inseridas linhas usando instruções convencionais INSERT que acionam gatilhos de replicação. Se **direto** é definido como 'true', a carga será otimizada e não os gatilhos são acionados. Portanto, certifique-se de **direto** é definido como 'false' durante o carregamento em uma tabela replicada com o SQL * ferramenta carregador.  
+### <a name="sqlloader"></a>SQL*Loader  
+ Com o SQL\*Loader, você pode definir a opção **direto** como 'true' ou 'false' (o padrão é 'false'). Se **direcionar** estiver definido como 'falso', serão inseridas linhas usando instruções convencionais INSERT que acionam gatilhos de replicação. Se **direcionar** estiver definido como 'verdadeiro', a carga será otimizada e os gatilhos não serão acionados. Portanto, certifique-se de que **direcionar** esteja definido como 'falso' ao importar para uma tabela replicada com a ferramenta SQL*Loader.  
   
-## Fazendo alterações em objetos publicados  
+## <a name="making-changes-to-published-objects"></a>Fazendo alterações em objetos publicados  
  As seguintes ações não requerem nenhuma consideração especial:  
   
 -   Reconstruir índices em tabelas publicadas.  
@@ -56,14 +60,14 @@ caps.handback.revision: 29
   
 -   Executar operações não registradas.  
   
-## Descartar ou modificar objetos de replicação  
- Você deve descartar e reconfigurar o Publicador se descartar ou modificar qualquer tabela de rastreamento de nível, sequência ou procedimento armazenado do Editor. Para obter uma lista parcial destes objetos, consulte [objetos criados no editor Oracle](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md).  
+## <a name="dropping-or-modifying-replication-objects"></a>Descartar ou modificar objetos de replicação  
+ Você deve descartar e reconfigurar o Publicador se descartar ou modificar qualquer tabela de rastreamento de nível, sequência ou procedimento armazenado do Editor. Para obter uma lista parcial desses objetos, consulte [Objetos criados no Publicador Oracle](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md).  
   
- Para obter informações sobre como descartar e reconfigurar o publicador, consulte a seção "São feitas alterações que exigem reconfiguração do publicador" no tópico [problemas de editores Oracle](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).  
+ Para obter mais informações sobre como descartar e reconfigurar o Publicador, consulte a seção "Alterações que exigem reconfiguração do Publicador" no tópico [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).  
   
-## Consulte também  
- [Configurar um publicador Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
+## <a name="see-also"></a>Consulte também  
+ [Configurar um Publicador Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Considerações de design e limitações para Publicadores Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
- [Visão geral da Publicação Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

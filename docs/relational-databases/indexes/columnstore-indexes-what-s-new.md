@@ -1,26 +1,30 @@
 ---
-title: "Resumo de recursos com vers&#227;o dos &#237;ndices columnstore | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Índices columnstore – novidades | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
 caps.latest.revision: 28
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8dc55e28462cd04a90274ada860fd418bcc54775
+ms.lasthandoff: 04/11/2017
+
 ---
-# Resumo de recursos com vers&#227;o dos &#237;ndices columnstore
+# <a name="columnstore-indexes---what39s-new"></a>Índices columnstore – novidades
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Resumo dos recursos de columnstore disponíveis para cada versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as versões mais recentes do Azure SQL Database Premium Edition, Azure SQL Data Warehouse e Parallel Data Warehouse.  
+  Resumo dos recursos de columnstore disponíveis para cada versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e as versões mais recentes do Azure SQL Database Premium Edition, Azure SQL Data Warehouse e Parallel Data Warehouse.  
 
  >[!NOTE]
  > Para o Banco de Dados SQL do Azure, índices columnstore só estão disponíveis na Edição Premium.
@@ -51,7 +55,7 @@ caps.handback.revision: 27
  * Para criar um índice columnstore não clusterizado legível, armazene o índice em um grupo de arquivos somente leitura.  
   
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- O [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] adiciona aprimoramentos importantes para melhorar o desempenho e a flexibilidade dos índices columnstore. Isso aprimora os cenários de data warehouse e habilita a análise operacional em tempo real.  
+ O[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] adiciona aprimoramentos importantes para melhorar o desempenho e a flexibilidade dos índices columnstore. Isso aprimora os cenários de data warehouse e habilita a análise operacional em tempo real.  
   
 ### <a name="functional"></a>Funcional  
   
@@ -161,11 +165,12 @@ caps.handback.revision: 27
 -   O processamento de lote fornece um desempenho de consulta 2 vezes melhor ou mais, mas está disponível apenas para execução de consulta paralela.  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Índices columnstore](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Carregamento de dados dos Índices columnstore](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
+ Guia de índices Columnstore   
+ Carregamento de dados dos Índices columnstore   
  [Desempenho de consultas de Índices columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Índices columnstore para Data Warehousing](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
+ Índices columnstore para Data Warehouse   
  [Desfragmentação de índices columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

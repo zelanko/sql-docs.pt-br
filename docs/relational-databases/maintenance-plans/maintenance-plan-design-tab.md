@@ -1,52 +1,56 @@
 ---
-title: "Plano de manuten&#231;&#227;o (Guia Design) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.maintplanproperties.optimizations.f1"
-  - "sql13.swb.maint.planeditor.f1"
-  - "sql13.swb.maint.subplaneditor.f1"
+title: "Plano de manutenção (Guia Design) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.maintplanproperties.optimizations.f1
+- sql13.swb.maint.planeditor.f1
+- sql13.swb.maint.subplaneditor.f1
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 18b12faae420e8294dc79c15e1e0f168faaa5395
+ms.lasthandoff: 04/11/2017
+
 ---
-# Plano de manuten&#231;&#227;o (Guia Design)
+# <a name="maintenance-plan-design-tab"></a>Plano de manutenção (Guia Design)
   Use o **Plano de Manutenção (Guia Design)** para especificar as propriedades de um plano de manutenção e seus subplanos. Arraste tarefas da caixa de ferramentas para o designer de plano. Clique com o botão direito do mouse em grupos de tarefas para criar caminhos de execução de ramificação. Os planos de manutenção são salvos como pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e são executados pelos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Adicionar Subplano**  
  Adicione um subplano que você possa configurar.  
   
  **Propriedades do Subplano**  
- Exiba a caixa de diálogo **Propriedades do Subplano**. Selecione um subplano na grade e clique nesse ícone para inserir um nome, uma descrição e uma agenda para o subplano. Você também pode clicar duas vezes no subplano na grade para exibir a caixa de diálogo **Propriedades do Subplano**. Os nomes dos subplanos são limitados a 128 caracteres e suas descrições são limitadas a 512 caracteres.  
+ Exiba a caixa de diálogo **Propriedades do Subplano** . Selecione um subplano na grade e clique nesse ícone para inserir um nome, uma descrição e uma agenda para o subplano. Você também pode clicar duas vezes no subplano na grade para exibir a caixa de diálogo **Propriedades do Subplano** . Os nomes dos subplanos são limitados a 128 caracteres e suas descrições são limitadas a 512 caracteres.  
   
  **Exclua o Subplano Selecionado**  
  Exclua o subplano selecionado.  
   
  **Agenda do Subplano**  
- Exiba a caixa de diálogo **Propriedades do Agendamento do Trabalho**. Selecione um subplano na grade e clique nesse ícone para configurar uma agenda para o subplano.  
+ Exiba a caixa de diálogo **Propriedades do Agendamento do Trabalho** . Selecione um subplano na grade e clique nesse ícone para configurar uma agenda para o subplano.  
   
  **Remover Agenda**  
  Remova uma agenda do subplano selecionado.  
   
  **Gerenciar Conexões**  
- Exiba a caixa de diálogo **Gerenciar Conexões**. Usado para adicionar conexões de instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adicionais ao plano de manutenção. Cada tarefa de manutenção no editor de subplano pode usar quaisquer dessas conexões. Quando executando, o plano de manutenção faz uma conexão do servidor do plano de manutenção para os servidores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados usando credenciais de conexão.  
+ Exiba a caixa de diálogo **Gerenciar Conexões** . Usado para adicionar conexões de instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adicionais ao plano de manutenção. Cada tarefa de manutenção no editor de subplano pode usar quaisquer dessas conexões. Quando executando, o plano de manutenção faz uma conexão do servidor do plano de manutenção para os servidores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados usando credenciais de conexão.  
   
  **Relatório e Registro em Log**  
- Exiba a caixa de diálogo **Relatório e Registro em Log**, usada para gerenciar os relatórios relacionados com a atividade do plano de manutenção e para configurar o log ao servidor local ou remoto.  
+ Exiba a caixa de diálogo **Relatório e Registro em Log** , usada para gerenciar os relatórios relacionados com a atividade do plano de manutenção e para configurar o log ao servidor local ou remoto.  
   
  **Servidores**  
- Exiba a caixa de diálogo **Servidores**, que é usada para selecionar os servidores em que serão executadas as tarefas do subplano. Essa opção só está habilitada em servidores mestre em ambientes multisservidor. Para obter mais informações, veja [Criar um ambiente multisservidor](../../ssms/agent/create-a-multiserver-environment.md).  
+ Exiba a caixa de diálogo **Servidores** , que é usada para selecionar os servidores em que serão executadas as tarefas do subplano. Essa opção só está habilitada em servidores mestre em ambientes multisservidor. Para obter mais informações, veja [Criar um ambiente multisservidor](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6).  
   
  **Nome**  
  Exibe o nome do plano de manutenção. Para planos de manutenção novos, o nome é especificado em uma caixa de diálogo antes que o designer de plano de manutenção seja aberto. Para renomear um plano de manutenção, clique com o botão direito do mouse no plano no Pesquisador de Objetos e clique em **Renomear**.  
@@ -73,13 +77,13 @@ caps.handback.revision: 27
   
  Para especificar links de precedência entre duas tarefas, primeiro arraste as tarefas para a superfície de design e então clique na tarefa que ocorre primeiro (a tarefa precedente), e arraste a seta até a tarefa dependente. Quando foi estabelecido um link de precedência, o designer exibe uma seta vinculando as duas tarefas, com a tarefa precedente apontando para a tarefa dependente. Por padrão, quando um link é estabelecido pela primeira vez, a restrição do link é definida de modo que a tarefa dependente só execute se o resultado da tarefa precedente for **Êxito**.  
   
- Para alterar as propriedades de um link de precedência, clique duas vezes no link para iniciar o **Editor de Restrição de Precedência**. Isso fornece muitas opções para especificar as condições lógicas que determinam se a tarefa dependente será executada. Por exemplo, o **Resultado da execução** pode ser definido como **Falha**, caso a tarefa dependente somente execute se a tarefa precedente falhar. A alteração da propriedade do resultado da execução de um link para **Êxito**, **Falha** ou **Conclusão** também pode ser feita clicando com o botão direito do mouse no link e selecionando do menu de contexto.  
+ Para alterar as propriedades de um link de precedência, clique duas vezes no link para iniciar o **Editor de Restrição de Precedência**. Isso fornece muitas opções para especificar as condições lógicas que determinam se a tarefa dependente será executada. Por exemplo, o **Resultado da execução** pode ser definido como **Falha**, caso a tarefa dependente somente execute se a tarefa precedente falhar. A alteração da propriedade do resultado da execução de um link para **Êxito**, **Falha**ou **Conclusão**também pode ser feita clicando com o botão direito do mouse no link e selecionando do menu de contexto.  
   
- Para especificar ramificação de tarefa, primeiro crie links de precedência entre duas tarefas. Então, coloque outra tarefa dependente na superfície de design que executa quando ocorre um resultado diferente da primeira tarefa dependente. Clique na tarefa de precedência e arraste a segunda seta da tarefa de precedência para a tarefa dependente. Para alterar o resultado de execução (**Êxito**, **Falha**, **Conclusão**) que faz com que uma tarefa dependente execute, clique duas vezes na seta do link e altere o campo **Resultado de execução**. Alternativamente, clique com o botão direito do mouse no link e selecione o valor de resultado de execução desejado no menu de atalho.  
+ Para especificar ramificação de tarefa, primeiro crie links de precedência entre duas tarefas. Então, coloque outra tarefa dependente na superfície de design que executa quando ocorre um resultado diferente da primeira tarefa dependente. Clique na tarefa de precedência e arraste a segunda seta da tarefa de precedência para a tarefa dependente. Para alterar o resultado de execução (**Êxito**, **Falha**, **Conclusão**) que faz com que uma tarefa dependente execute, clique duas vezes na seta do link e altere o campo **Resultado de execução** . Alternativamente, clique com o botão direito do mouse no link e selecione o valor de resultado de execução desejado no menu de atalho.  
   
  Para especificar paralelismo de tarefa, vincule duas ou mais tarefas dependentes a uma única tarefa precedente. Altere as propriedades dos links de precedência de modo que os links que apontam para tarefas dependentes que executam em paralelo tenham o mesmo valor em seus campos de resultado de execução.  
   
-## Recursos adicionais disponíveis no menu de atalho  
+## <a name="additional-features-available-from-the-shortcut-menu"></a>Recursos adicionais disponíveis no menu de atalho  
  Para ver opções adicionais, selecione uma ou mais tarefas na superfície de design e, então, clique com o botão direito do mouse para abrir o menu de atalho. Além das opções comuns **Cortar**, **Copiar**, **Colar**, **Excluir**e **Selecionar Tudo**, para algumas tarefas estão disponíveis as seguintes opções especiais.  
   
  **Adicionar Anotação**  
@@ -112,7 +116,7 @@ caps.handback.revision: 27
  **Zoom**  
  Altera o tamanho das tarefas na superfície de design  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Planos de manutenção](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Criar um plano de manutenção](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   

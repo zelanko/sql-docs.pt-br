@@ -1,29 +1,33 @@
 ---
-title: "Caixas de di&#225;logo Criar Nova Pol&#237;tica ou Abrir pol&#237;tica, P&#225;gina geral | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.policy.f1"
-  - "sql13.swb.dmf.policy.filter.f1"
-  - "sql13.swb.dmf.newgroup.f1"
+title: "Caixas de diálogo Criar Nova Política ou Abrir política, Página geral | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.policy.f1
+- sql13.swb.dmf.policy.filter.f1
+- sql13.swb.dmf.newgroup.f1
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17c975de731604cb3bec9586735b344f532a50ab
+ms.lasthandoff: 04/11/2017
+
 ---
-# Caixas de di&#225;logo Criar Nova Pol&#237;tica ou Abrir pol&#237;tica, P&#225;gina geral
+# <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Caixas de diálogo Criar Nova Política ou Abrir política, Página geral
   Use esta caixa de diálogo para criar uma nova política ou modificar uma política existente do Gerenciamento Baseado em Políticas. Use as áreas **Em relação aos destinos** e **Restrição de servidor** como um filtro para limitar as políticas a um subconjunto de todos os destinos possíveis. Com relação às condições a serem usadas como filtros de destino, elas devem ser definidas em uma faceta física e não devem conter funções e nem operador LIKE. Quando o sistema computar o objeto definido para uma política, por padrão os objetos do sistema serão excluídos.  Por exemplo, se o conjunto de objetos da política referenciar todas as tabelas, a política não se aplicará a tabelas do sistema. Se os usuários desejarem avaliar uma política em relação a objetos do sistema, eles poderão explicitamente adicionar objetos do sistema ao conjunto de objetos. Entretanto, embora todas as políticas tenham suporte para o modo de avaliação **verificação de agenda** , por questões de desempenho, nem todas as políticas com conjuntos de objetos arbitrários têm suporte para o modo de avaliação **verificação de alterações** . Para obter mais informações, confira [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Nome**  
  No caso de uma nova política, digite o nome da nova política. No caso de uma política existente, o nome será exibido.  
   
@@ -50,8 +54,8 @@ caps.handback.revision: 42
  **Modo de avaliação**  
  Selecione o modo de avaliação para a política. Algumas políticas podem ser marcadas, mas não impostas. Os modos de avaliação são os seguintes:  
   
- **Sob demanda**  
- A política só será executada quando você executá-la na caixa de diálogo **Avaliar**.  
+ **Sob Demanda**  
+ A política só será executada quando você executá-la na caixa de diálogo **Avaliar** .  
   
  **Ao agendar**  
  Avalia periodicamente a política, registra uma entrada de log para políticas sem-conformidade e cria um relatório. Habilita a caixa **Agenda** .  
@@ -68,7 +72,7 @@ caps.handback.revision: 42
  **Restrição de servidor**  
  Selecione os tipos de servidores que são apropriados para esta política. As opções são **Nenhum** ou selecione uma condição que filtra os possíveis servidores.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

@@ -1,26 +1,30 @@
 ---
-title: "Tutorial: Assinando procedimentos armazenados com um certificado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "tutorial de assinatura de procedimentos armazenados [SQL Server]"
+title: 'Tutorial: assinando procedimentos armazenados com um certificado | Microsoft Docs'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- signing stored procedures tutorial [SQL Server]
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0ccfcccf5fbed9a2b0e4f09fdd80e7f3e5dcda9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tutorial: Assinando procedimentos armazenados com um certificado
+# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Tutorial: Assinando procedimentos armazenados com um certificado
 Este tutorial ilustra como assinar procedimentos armazenados usando um certificado gerado pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
@@ -28,7 +32,7 @@ Este tutorial ilustra como assinar procedimentos armazenados usando um certifica
   
 A assinatura de procedimentos armazenados usando um certificado é útil quando você quer solicitar permissões sobre procedimentos armazenados, mas não quer conceder esses direitos explicitamente a um usuário. Embora essas tarefas possam ser realizadas de outras formas como, por exemplo, usando a instrução EXECUTE AS, o uso de um certificado permite que você utilize um rastreamento para localizar o chamador original do procedimento armazenado. Isso fornece um alto nível de auditoria, principalmente durante operações de segurança ou DDL (Linguagem de Definição de Dados).  
   
-Você pode criar um certificado no banco de dados mestre para conceder permissões em nível de servidor ou criar um certificado em banco de dados de usuário para conceder permissões em nível de banco de dados. Nesse cenário, um usuário sem direitos a tabelas base deve acessar um procedimento armazenado no banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)], e você deseja auditar a trilha de acesso ao objeto. Em vez de usar outros métodos de cadeia de propriedade, você criará uma conta de usuário de servidor e de banco de dados sem direitos aos objetos base e uma conta de usuário de banco de dados com direitos a uma tabela e a procedimentos armazenados. O procedimento armazenado e a segunda conta de usuário de banco de dados serão protegidos com um certificado. A segunda conta de banco de dados terá acesso a todos os objetos e concederá acesso aos procedimentos armazenados à primeira conta de usuário do banco de dados.  
+Você pode criar um certificado no banco de dados mestre para conceder permissões em nível de servidor ou criar um certificado em banco de dados de usuário para conceder permissões em nível de banco de dados. Nesse cenário, um usuário sem direitos a tabelas base deve acessar um procedimento armazenado no banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , e você deseja auditar a trilha de acesso ao objeto. Em vez de usar outros métodos de cadeia de propriedade, você criará uma conta de usuário de servidor e de banco de dados sem direitos aos objetos base e uma conta de usuário de banco de dados com direitos a uma tabela e a procedimentos armazenados. O procedimento armazenado e a segunda conta de usuário de banco de dados serão protegidos com um certificado. A segunda conta de banco de dados terá acesso a todos os objetos e concederá acesso aos procedimentos armazenados à primeira conta de usuário do banco de dados.  
   
 Nesse cenário, primeiramente você criará um certificado de banco de dados, um procedimento armazenado e um usuário e, depois, testará o processo seguindo estas etapas:  
   
@@ -48,7 +52,7 @@ Nesse cenário, primeiramente você criará um certificado de banco de dados, um
   
 Cada bloco de código neste exemplo é explicado em linha. Para copiar o exemplo completo, consulte [Exemplo completo](#CompleteExample) no fim deste tutorial.  
   
-## 1. Configure o ambiente  
+## <a name="1-configure-the-environment"></a>1. Configure o ambiente  
 Para configurar o contexto inicial do exemplo, no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] abra uma nova consulta e execute o código a seguir para abrir o banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Esse código altera o contexto do banco de dados para `AdventureWorks2012` e cria um novo logon de servidor e conta de usuário de banco de dados (`TestCreditRatingUser`), usando uma senha.  
   
 ```  
@@ -65,7 +69,7 @@ GO
   
 Para obter mais informações sobre a instrução CREATE USER, consulte [CREATE USER &#40;Transact-SQL&#41;](../t-sql/statements/create-user-transact-sql.md). Para obter mais informações sobre a instrução CREATE LOGIN, consulte [CREATE LOGIN &#40;Transact-SQL&#41;](../t-sql/statements/create-login-transact-sql.md).  
   
-## 2. Criar um certificado  
+## <a name="2-create-a-certificate"></a>2. Criar um certificado  
 Você pode criar certificados no servidor usando o banco de dados mestre como contexto, usando um banco de dados de usuário ou ambos. Há várias opções para proteger o certificado. Para obter mais informações sobre certificados, consulte [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../t-sql/statements/create-certificate-transact-sql.md).  
   
 Execute este código para criar um certificado de banco de dados e protegê-lo usando uma senha.  
@@ -78,7 +82,7 @@ CREATE CERTIFICATE TestCreditRatingCer
 GO  
 ```  
   
-## 3. Criar e assinar um procedimento armazenado usando o certificado  
+## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3. Criar e assinar um procedimento armazenado usando o certificado  
 Use o código a seguir para criar um procedimento armazenado que seleciona dados da tabela `Vendor` no esquema do banco de dados `Purchasing`, restringindo o acesso apenas a empresas que tenham 1 como classificação de crédito. Observe que a primeira seção do procedimento armazenado exibe o contexto da conta do usuário que executa o procedimento armazenado apenas para demonstração dos conceitos. Não é exigido atender os requisitos.  
   
 ```  
@@ -114,7 +118,7 @@ Para obter mais informações sobre procedimentos armazenados, consulte [Procedi
   
 Para obter mais informações sobre como assinar procedimentos armazenados, consulte [ADD SIGNATURE &#40;Transact-SQL&#41;](../t-sql/statements/add-signature-transact-sql.md).  
   
-## 4. Criar uma conta de certificado usando o certificado  
+## <a name="4-create-a-certificate-account-using-the-certificate"></a>4. Criar uma conta de certificado usando o certificado  
 Execute este código para criar um usuário de banco de dados (`TestCreditRatingcertificateAccount`) do certificado. Essa conta não tem logon de servidor e, em última instância, controlará o acesso às tabelas subjacentes.  
   
 ```  
@@ -125,7 +129,7 @@ CREATE USER TestCreditRatingcertificateAccount
 GO  
 ```  
   
-## 5. Conceder direitos de banco de dados à conta do certificado  
+## <a name="5-grant-the-certificate-account-database-rights"></a>5. Conceder direitos de banco de dados à conta do certificado  
 Execute este código para conceder direitos `TestCreditRatingcertificateAccount` à tabela base e ao procedimento armazenado.  
   
 ```  
@@ -142,7 +146,7 @@ GO
   
 Para obter mais informações sobre como conceder permissões a objetos, consulte [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md).  
   
-## 6. Exibir o contexto de acesso  
+## <a name="6-display-the-access-context"></a>6. Exibir o contexto de acesso  
 Para exibir os direitos associados ao acesso de procedimento armazenado, execute o código a seguir para conceder os direitos de execução do procedimento armazenado ao usuário `TestCreditRatingUser`.  
   
 ```  
@@ -173,7 +177,7 @@ Como você assinou o procedimento, a auditoria disponível será exibida.
 > [!NOTE]  
 > Use EXECUTE as para alternar contextos dentro de um banco de dados.  
   
-## 7. Redefina o ambiente  
+## <a name="7-reset-the-environment"></a>7. Redefina o ambiente  
 O código a seguir usa a instrução `REVERT` para retornar o contexto da conta atual para dbo e redefine o ambiente.  
   
 ```  
@@ -289,8 +293,9 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   
+

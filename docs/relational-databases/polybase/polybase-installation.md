@@ -1,30 +1,34 @@
 ---
-title: "Instala&#231;&#227;o do PolyBase | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PolyBase, instalação"
+title: "Instalação do PolyBase | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PolyBase, installation
 ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
 caps.latest.revision: 25
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f5b029907f25811131e08d2f7ade1f050e3a18d5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Instala&#231;&#227;o do PolyBase
+# <a name="polybase-installation"></a>Instalação do PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Para instalar uma versão de avaliação do SQL Server, vá para [avaliações do SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
   
 -   Edição de avaliação do SQL Server de 64 bits  
   
@@ -42,7 +46,15 @@ caps.handback.revision: 23
   
  O PolyBase pode ser instalado apenas em uma instância SQL Server por computador.  
   
-## Instalar usando o assistente de instalação  
+## <a name="single-node-or-polybase-scaleout-group"></a>Nó único ou grupo ScaleOut do PolyBase
+Antes de iniciar a instalação do PolyBase nas Instâncias do SQL Server, é bom planejar se você deseja uma instalação de nó único ou um grupo de escala horizontal do PolyBase. Para um grupo de escala horizontal do PolyBase, você precisará garantir que: 
+- Todos os computadores estão no mesmo domínio.
+- A mesma conta de serviço e senha sejam usadas durante a instalação.
+- As Instâncias do SQL Server podem se comunicar entre si pela rede.
+
+Depois de instalar o PolyBase como um grupo autônomo ou de escala horizontal, não é possível alterar essa configuração. Você precisará desinstalar e reinstalar o recurso para alterar essa configuração.
+
+## <a name="install-using-the-installation-wizard"></a>Instalar usando o assistente de instalação  
   
 1.  Execute a **Central de Instalação do SQL Server**. Insira a mídia de instalação do SQL Server e clique duas vezes em **Setup.exe**.  
   
@@ -73,12 +85,12 @@ caps.handback.revision: 23
 |Componente do SQL Server|Parâmetro e valores|Descrição|  
 |--------------------------|--------------------------|-----------------|  
 |Controle de instalação do SQL Server|**Required**<br /><br /> /FEATURES=PolyBase|Seleciona o recurso PolyBase.|  
-|Mecanismo PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica a conta do serviço de mecanismo. O padrão é **NT Authority\NETWORK SERVICE**.|  
-|Mecanismo PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCPASSWORD|Especifica a senha da conta de serviço de mecanismo.|  
-|Mecanismo PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica o modo de inicialização do serviço de mecanismo PolyBase: Automático (padrão), Desabilitado e Manual|  
-|Serviço de movimentação de dados PolyBase do SQL Server|**Opcional**<br /><br /> /PBDMSSVCACCOUNT|Especifica a conta do serviço de movimentação de dados. O padrão é **NT Authority\NETWORK SERVICE**.|  
-|Serviço de movimentação de dados de PolyBase do SQL Server|**Opcional**<br /><br /> /PBDMSSVCPASSWORD|Especifica a senha para a conta de movimentação de dados.|  
-|Serviço de movimentação de dados PolyBase do SQL Server|**Opcional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Especifica o modo de inicialização para o serviço de movimentação de dados: Automático (padrão), Desabilitado e Manual|  
+|Mecanismo de PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica a conta do serviço de mecanismo. O padrão é **NT Authority\NETWORK SERVICE**.|  
+|Mecanismo de PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCPASSWORD|Especifica a senha da conta de serviço de mecanismo.|  
+|Mecanismo de PolyBase do SQL Server|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica o modo de inicialização do serviço de mecanismo PolyBase: Automático (padrão), Desabilitado e Manual|  
+|Serviço de Movimentação de Dados de PolyBase do SQL Server|**Opcional**<br /><br /> /PBDMSSVCACCOUNT|Especifica a conta do serviço de movimentação de dados. O padrão é **NT Authority\NETWORK SERVICE**.|  
+|Serviço de Movimentação de Dados de PolyBase do SQL Server|**Opcional**<br /><br /> /PBDMSSVCPASSWORD|Especifica a senha para a conta de movimentação de dados.|  
+|Serviço de Movimentação de Dados de PolyBase do SQL Server|**Opcional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Especifica o modo de inicialização para o serviço de movimentação de dados: Automático (padrão), Desabilitado e Manual|  
 |PolyBase|**Opcional**<br /><br /> /PBSCALEOUT|Especifica se a instância do SQL Server será usada como parte do grupo computacional de escala horizontal do PolyBase. <br />Valores com suporte: **True**, **False**|  
 |PolyBase|**Opcional**<br /><br /> /PBPORTRANGE|Especifica um intervalo de portas com pelo menos 6 portas para serviços do PolyBase. Exemplo:<br /><br /> `/PBPORTRANGE=16450-16460`|  
   
@@ -89,7 +101,7 @@ caps.handback.revision: 23
 ```  
   
 Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,Polybase   
-/INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<fabric-domain>\Administrator"   
+/INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="\<fabric-domain>\Administrator"   
 /INSTANCEDIR="C:\Program Files\Microsoft SQL Server" /PBSCALEOUT=TRUE   
 /PBPORTRANGE=16450-16460 /SECURITYMODE=SQL /SAPWD="<StrongPassword>"   
 /PBENGSVCACCOUNT="<DomainName>\<UserName>" /PBENGSVCPASSWORD="<StrongPassword>"   
@@ -97,20 +109,20 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
   
 ```  
   
-## Notas de pós-instalação  
+## <a name="post-installation-notes"></a>Notas de pós-instalação  
  O PolyBase instala três bancos de dados de usuário: DWConfiguration, DWDiagnostics e DWQueue.   Eles são para uso do PolyBase e devem não ser alterados ou excluídos.  
   
-### Como confirmar a instalação  
+### <a name="how-to-confirm-installation"></a>Como confirmar a instalação  
  Execute o comando a seguir. Se o PolyBase estiver instalado, retornará 1; caso contrário, 0.  
   
 ```tsql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
-### Regras de firewall  
+### <a name="firewall-rules"></a>Regras de firewall  
  A instalação do PolyBase do SQL Server cria as seguintes regras de firewall no computador.  
   
--   PolyBase do SQL Server – Mecanismo de Banco de Dados - \<SQLServerInstanceName> (TCP-In)  
+-   PolyBase do SQL Server – Mecanismo de Banco de Dados – \<SQLServerInstanceName> (TCP-In)  
   
 -   PolyBase do SQL Server – Serviços do PolyBase – \<SQLServerInstanceName> (TCP-In)  
   
@@ -118,20 +130,21 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
  Durante a instalação, se você optar por usar a instância do SQL Server como parte de um grupo de escala horizontal do PolyBase, essas regras serão habilitadas e o firewall será aberto para permitir conexões de entrada com o mecanismo de banco de dados do SQL Server, o mecanismo PolyBase do SQL Server, o serviço de movimentação de dados do SQL Server PolyBase e o navegador do SQL. No entanto, se o serviço de firewall no computador não estiver em execução durante a instalação, a instalação do SQL Server falhará ao habilitar essas regras. Nesse caso, você deve iniciar o serviço de Firewall no computador e habilitar pós-instalação essas regras.  
   
-#### Para habilitar as regras de firewall  
+#### <a name="to-enable-the-firewall-rules"></a>Para habilitar as regras de firewall  
   
 -   Abra o **Painel de Controle**.  
   
--   Clique em **Sistema e Segurança** e depois em **Firewall do Windows**.  
+-   Clique em **Sistema e Segurança**e depois em **Firewall do Windows**.  
   
--   Clique em **Configurações Avançadas** e em **Regras de entrada**.  
+-   Clique em **Configurações Avançadas**e em **Regras de entrada**.  
   
 -   Clique com o botão direito do mouse na regra desabilitada e depois clique em **Habilitar regra**.  
   
-### Contas de serviço do PolyBase
+### <a name="polybase-service-accounts"></a>Contas de serviço do PolyBase
 Para alterar as contas de serviço para o Mecanismo de PolyBase e os Serviços de Movimentação de Dados do PolyBase, desinstale e reinstale o recurso PolyBase.
    
-## Próximas etapas  
+## <a name="next-steps"></a>Próximas etapas  
  Veja [Configuração do PolyBase](../../relational-databases/polybase/polybase-configuration.md).  
   
   
+

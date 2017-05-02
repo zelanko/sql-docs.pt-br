@@ -1,24 +1,28 @@
 ---
-title: "Conceder uma permiss&#227;o a uma entidade de seguran&#231;a | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Conceder permissão a uma entidade de segurança"
+title: "Conceder uma permissão a uma entidade de segurança | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Grant permission to a principal
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 969f70df2cdb72c1fa47e645580ae723fb519864
+ms.lasthandoff: 04/11/2017
+
 ---
-# Conceder uma permiss&#227;o a uma entidade de seguran&#231;a
+# <a name="grant-a-permission-to-a-principal"></a>Conceder uma permissão a uma entidade de segurança
   Este tópico descreve como conceder permissão a uma entidade de segurança no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -51,7 +55,7 @@ caps.handback.revision: 12
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para conceder permissão a uma entidade de segurança  
+#### <a name="to-grant-permission-to-a-principal"></a>Para conceder permissão a uma entidade de segurança  
   
 1.  No Pesquisador de Objetos, expanda o banco de dados que contém o objeto para o qual você deseja conceder permissões.  
   
@@ -64,13 +68,13 @@ caps.handback.revision: 12
   
 4.  Clique com o botão direito do mouse em um procedimento armazenado e selecione **Propriedades**.  
   
-5.  Na caixa de diálogo **Propriedades do Procedimento Armazenado –***stored_procedure_name*, em selecionar uma página, selecione **Permissões**. Use essa página para adicionar usuários ou funções ao procedimento armazenado e especificar as permissões que esses usuários ou funções têm.  
+5.  Na caixa de diálogo **Propriedades do Procedimento Armazenado –***stored_procedure_name* , em selecionar uma página, selecione **Permissões**. Use essa página para adicionar usuários ou funções ao procedimento armazenado e especificar as permissões que esses usuários ou funções têm.  
   
 6.  Quando terminar, clique em **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para conceder permissão a uma entidade de segurança  
+#### <a name="to-grant-permission-to-a-principal"></a>Para conceder permissão a uma entidade de segurança  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 12
   
  Para obter mais informações, veja [GRANT &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-transact-sql.md) e [Permissões de objeto GRANT &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-object-permissions-transact-sql.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

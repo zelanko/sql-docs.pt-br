@@ -1,28 +1,32 @@
 ---
-title: "Criar vari&#225;veis e colunas de tipo de dados XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tipo de dados xml [SQL Server], variáveis"
-  - "tipo de dados xml [SQL Server], colunas"
+title: "Criar variáveis e colunas de tipo de dados XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xml data type [SQL Server], variables
+- xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 751fccc2a458239715c187a1925046cdf74de98a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar vari&#225;veis e colunas de tipo de dados XML
+# <a name="create-xml-data-type-variables-and-columns"></a>Criar variáveis e colunas de tipo de dados XML
   O tipo de dados **xml** é interno no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e tem algumas semelhanças com outros tipos internos, como **int** e **varchar**. Assim como ocorre com outros tipos internos, é possível usar o tipo de dados **xml** como um tipo de coluna quando você cria uma tabela como um tipo variável, um tipo de parâmetro, um tipo de retorno de função, ou em [CAST e CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-## Criando colunas e variáveis  
+## <a name="creating-columns-and-variables"></a>Criando colunas e variáveis  
  Para criar uma coluna de tipo `xml` como parte de uma tabela, use uma instrução `CREATE TABLE` , conforme mostrado no exemplo a seguir:  
   
 ```  
@@ -49,7 +53,7 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
   
  É possível usar XQuery para consultar instâncias XML armazenadas em colunas, parâmetros ou variáveis. Também é possível usar o XML DML (linguagem de manipulação de dados) para aplicar alterações nas instâncias XML. Como o padrão XQuery não definiu XQuery DML durante o desenvolvimento, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] introduz extensões da [Linguagem de modificação de dados XML](../../t-sql/xml/xml-data-modification-language-xml-dml.md) ao XQuery. Essas extensões permitem executar operações de inserção, atualização e exclusão.  
   
-## Atribuindo padrões  
+## <a name="assigning-defaults"></a>Atribuindo padrões  
  Em uma tabela, é possível atribuir uma instância XML padrão a uma coluna de tipo **xml** . É possível fornecer o XML padrão de uma de duas maneiras: usando uma constante XML ou usando uma conversão explícita para o tipo **xml** .  
   
  Para fornecer o XML padrão como uma constante XML, use sintaxe conforme mostrado no exemplo a seguir. Observe que a cadeia de caracteres é implicitamente CAST para tipo **xml** .  
@@ -65,14 +69,14 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também dá suporte a restrições NULL e NOT NULL em colunas de tipo **xml**. Por exemplo:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também dá suporte a restrições NULL e NOT NULL em colunas de tipo **xml** . Por exemplo:  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
 ```  
   
-## Especificando restrições  
- Ao criar colunas de tipo **xml**, é possível definir restrições em nível de coluna ou de tabela. Use restrições nas situações seguintes:  
+## <a name="specifying-constraints"></a>Especificando restrições  
+ Ao criar colunas de tipo **xml** , é possível definir restrições em nível de coluna ou de tabela. Use restrições nas situações seguintes:  
   
 -   Suas regras de negócio não podem ser expressas em esquemas XML. Por exemplo, o endereço de entrega de uma floricultura deve estar dentro de 50 milhas do local da empresa. Isto pode ser escrito como uma restrição na coluna XML. A restrição pode envolver métodos de tipo de dados **xml** .  
   
@@ -92,7 +96,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
  Uma alternativa ao uso de restrições é criar um wrapper, uma função definida pelo usuário para encapsular o método de tipo de dados **xml** e especificar uma função definida pelo usuário na restrição de verificação, como mostrado no exemplo a seguir.  
   
- No exemplo a seguir, a restrição na `Col2` especifica que cada instância XML armazenada nessa coluna deve ter um elemento `<ProductDescription>` que contém um atributo `ProductID`. Essa restrição é imposta pela função definida pelo usuário:  
+ No exemplo a seguir, a restrição na `Col2` especifica que cada instância XML armazenada nessa coluna deve ter um elemento `<ProductDescription>` que contém um atributo `ProductID` . Essa restrição é imposta pela função definida pelo usuário:  
   
 ```  
 CREATE FUNCTION my_udf(@var xml) returns bit  
@@ -102,7 +106,7 @@ END
 GO  
 ```  
   
- Observe que o método `exist()` do tipo de dados `xml` retornará `1` se o elemento `<ProductDescription>` na instância contiver o atributo `ProductID`. Caso contrário, ele retornará `0`.  
+ Observe que o método `exist()` do tipo de dados `xml` retornará `1` se o elemento `<ProductDescription>` na instância contiver o atributo `ProductID` . Caso contrário, ele retornará `0`.  
   
  Agora, você pode criar uma tabela com uma restrição em nível de coluna da seguinte maneira:  
   
@@ -125,7 +129,7 @@ INSERT INTO T values(1,'<ProductDescription ProductID="1" />')
 INSERT INTO T values(1,'<Product />')  
 ```  
   
-## Mesma tabela ou tabela diferente  
+## <a name="same-or-different-table"></a>Mesma tabela ou tabela diferente  
  Uma coluna de tipo de dados **xml** pode ser criada em uma tabela que contém outras colunas relacionais ou em uma tabela separada com uma relação de chave estrangeira com uma tabela principal.  
   
  Crie uma coluna de tipo de dados **xml** na mesma tabela quando um das seguintes condições for verdadeira:  
@@ -136,7 +140,7 @@ INSERT INTO T values(1,'<Product />')
   
  Crie uma coluna de tipo de dados **xml** na mesma tabela quando um das seguintes condições for verdadeira:  
   
--   Você deseja criar um índice XML na coluna de tipo de dados **xml**, mas a chave primária da tabela principal é diferente de sua chave de clustering, a tabela principal não tem uma chave primária ou a tabela principal é um heap (sem chave de clustering). Isto poderá ser verdade se a tabela principal já existir.  
+-   Você deseja criar um índice XML na coluna de tipo de dados **xml** , mas a chave primária da tabela principal é diferente de sua chave de clustering, a tabela principal não tem uma chave primária ou a tabela principal é um heap (sem chave de clustering). Isto poderá ser verdade se a tabela principal já existir.  
   
 -   Você não deseja que as verificações de tabela se tornem mais lentas por causa da presença da coluna XML na tabela. Isso usará espaço se for armazenado dentro da linha ou fora da linha.  
   

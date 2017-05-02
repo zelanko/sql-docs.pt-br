@@ -1,36 +1,40 @@
 ---
-title: "Preparar para importar dados em massa (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "importação em massa [SQL Server], sobre a importação em massa"
-  - "Instrução BULK INSERT, diretrizes"
-  - "Instrução BULK INSERT, restrições"
-  - "utilitário bcp [SQL Server], diretrizes"
-  - "utilitário bcp [SQL Server], restrições"
-  - "caracteres ocultos"
-  - "Função OPENROWSET, diretrizes de BCP"
+title: Preparar para importar dados em massa (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bulk importing [SQL Server], about bulk importing
+- BULK INSERT statement, guidelines
+- BULK INSERT statement, restrictions
+- bcp utility [SQL Server], guidelines
+- bcp utility [SQL Server], restrictions
+- hidden characters
+- OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e797c303dff0eef613024752c2788a6480f047ac
+ms.lasthandoff: 04/11/2017
+
 ---
-# Preparar para importar dados em massa (SQL Server)
+# <a name="prepare-to-bulk-import-data-sql-server"></a>Preparar para importar dados em massa (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Você pode usar o comando **bcp**, a instrução BULK INSERT ou a função OPENROWSET(BULK) para a importação de dados em massa somente de um arquivo de dados.  
+  Você pode usar o comando **bcp** , a instrução BULK INSERT ou a função OPENROWSET(BULK) para a importação de dados em massa somente de um arquivo de dados.  
   
 > [!NOTE]  
->  É possível gravar um aplicativo personalizado que importa dados em massa de objetos que não sejam arquivos de texto. Para a importação de dados em massa de buffers de memória, use as extensões bcp para a API do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (ODBC) ou a interface OLE DB **IRowsetFastLoad**.  Para importar dados em massa de uma tabela de dados C#, use a API de cópia em massa do ADO.NET, **SqlBulkCopy**.  
+>  É possível gravar um aplicativo personalizado que importa dados em massa de objetos que não sejam arquivos de texto. Para a importação de dados em massa de buffers de memória, use as extensões bcp para a API do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (ODBC) ou a interface OLE DB **IRowsetFastLoad** .  Para importar dados em massa de uma tabela de dados C#, use a API de cópia em massa do ADO.NET, **SqlBulkCopy**.  
   
 > [!NOTE]  
 >  A importação de dados em massa em uma tabela remota não é suportada.  
@@ -67,7 +71,7 @@ caps.handback.revision: 34
   
      Muitos utilitários e editores de textos exibem caracteres ocultos que normalmente estão no final do arquivo de dados. Durante uma operação de importação em massa, os caracteres ocultos em um arquivo de dados ASCII podem causar problemas que provocam erro de "unexpected null found" Encontrar e remover todos os caracteres ocultos deve ajudar a evitar este problema.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Importar e exportar dados em massa usando o utilitário bcp &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [Importar dados em massa usando BULK INSERT ou OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [Utilitário bcp](../../tools/bcp-utility.md)   

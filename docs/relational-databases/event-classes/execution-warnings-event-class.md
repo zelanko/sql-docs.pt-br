@@ -1,33 +1,37 @@
 ---
-title: "Classe de evento Execution Warnings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento Execution Warnings"
+title: Classe de evento Execution Warnings | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Execution Warnings event class
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29117ed6015875dd09b515e78ac6cb23e5a4f22f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento Execution Warnings
-  A classe de evento Execution Warnings indica que ocorreram avisos de concessão de memória durante a execução de uma instrução ou um procedimento armazenado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa classe de evento pode ser monitorada para determinar se as consultas tiveram que esperar por memória por um segundo ou mais antes de continuar ou se a tentativa inicial de obter memória falhou. As informações sobre períodos de espera de consulta podem ajudar a revelar problemas de contenção no sistema que podem afetar o desempenho.  
+# <a name="execution-warnings-event-class"></a>classe de evento Execution Warnings
+  A classe de evento Execution Warnings indica que ocorreram avisos de concessão de memória durante a execução de uma instrução ou um procedimento armazenado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa classe de evento pode ser monitorada para determinar se as consultas tiveram que esperar por memória por um segundo ou mais antes de continuar ou se a tentativa inicial de obter memória falhou. As informações sobre períodos de espera de consulta podem ajudar a revelar problemas de contenção no sistema que podem afetar o desempenho.  
   
-## Colunas de dados da classe de evento Execution Warnings  
+## <a name="execution-warnings-event-class-data-columns"></a>Colunas de dados da classe de evento Execution Warnings  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
-|DatabaseID|**Int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
+|DatabaseID|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |Duration|**bigint**|Tempo (em milissegundos) que a consulta teve que esperar para obter a memória necessária. Válido somente quando EventSubClass = 1 (espera da consulta).|13|Sim|  
 |Erro|**int**|Não usado.|31|Sim|  
@@ -49,7 +53,7 @@ caps.handback.revision: 35
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |XactSequence|**bigint**|Token que descreve a transação atual.|50|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

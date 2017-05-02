@@ -1,32 +1,36 @@
 ---
-title: "Banco de dados de exemplo para OLTP na mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Banco de dados de exemplo para OLTP in-memory | Microsoft Docs
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9f9957d4c83ce351e49224fcd2bc499a5aa777dd
+ms.lasthandoff: 04/11/2017
+
 ---
-# Banco de dados de exemplo para OLTP na mem&#243;ria
+# <a name="sample-database-for-in-memory-oltp"></a>Banco de dados de exemplo para OLTP na memória
     
 ## <a name="overview"></a>Visão geral  
- Este exemplo demonstra o recurso [!INCLUDE[hek_2](../../includes/hek-2-md.md)] . Ele mostra as tabelas com otimização de memória e os procedimentos armazenados compilados nativamente, e pode ser usado para demonstrar os benefícios de desempenho do [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
+ Este exemplo demonstra o recurso OLTP in-memory. Ele mostra as tabelas com otimização de memória e os procedimentos armazenados compilados nativamente e pode ser usado para demonstrar os benefícios de desempenho do OLTP in-memory.  
   
 > [!NOTE]  
 >  Para exibir este tópico para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], consulte [Extensões do AdventureWorks para demonstrar o OLTP in-memory](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx).  
   
- O exemplo a seguir migra 5 tabelas do banco de dados do AdventureWorks para a otimização de memória, e inclui uma carga de trabalho de demonstração para o processamento de pedidos de vendas. Você pode usar essa carga de trabalho de demonstração para consultar o benefício de desempenho em usar [!INCLUDE[hek_2](../../includes/hek-2-md.md)] no servidor.  
+ O exemplo a seguir migra 5 tabelas do banco de dados do AdventureWorks para a otimização de memória, e inclui uma carga de trabalho de demonstração para o processamento de pedidos de vendas. Você pode usar essa carga de trabalho de demonstração para consultar o benefício de desempenho em usar o OLTP in-memory no servidor.  
   
- Na descrição do exemplo, abordamos as compensações que foram feitas na migração das tabelas para o [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , para levar em consideração os recursos que (ainda) não têm suporte para tabelas com otimização de memória.  
+ Na descrição do exemplo, abordamos as compensações que foram feitas na migração das tabelas para o OLTP in-memory, para levar em consideração os recursos que (ainda) não têm suporte para tabelas com otimização de memória.  
   
  A documentação do exemplo foi estruturada como segue:  
   
@@ -34,19 +38,19 @@ caps.handback.revision: 15
   
 -   Instruções para [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
   
--   [Descrição das tabelas e procedimentos de exemplo](#Descriptionofthesampletablesandprocedures) – isso inclui descrições das tabelas e dos procedimentos adicionados ao AdventureWorks pelo exemplo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , bem como considerações para migrar algumas das tabelas originais do AdventureWorks para otimização de memória  
+-   [Descrição das tabelas e procedimentos de exemplo](#Descriptionofthesampletablesandprocedures) – isso inclui descrições das tabelas e dos procedimentos adicionados ao AdventureWorks pelo exemplo de OLTP in-memory, bem como considerações para migrar algumas das tabelas originais do AdventureWorks para otimização de memória  
   
 -   Instruções para executar [Medidas de desempenho usando a carga de trabalho de demonstração](#PerformanceMeasurementsusingtheDemoWorkload) – isso inclui instruções para instalar e executar ostress, uma ferramenta usada para direcionar a carga de trabalho, bem como executar a própria carga de trabalho de demonstração  
   
 -   [Utilização de memória e espaço em disco na amostra](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="a-nameprerequisitesa-prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
+##  <a name="Prerequisites"></a> Prerequisites  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   Para testes de desempenho, um servidor com as especificações semelhantes ao ambiente de produção. Para este exemplo específico, você deve ter pelo menos 16 GB de memória disponível para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter diretrizes gerais sobre hardware para o [!INCLUDE[hek_2](../../includes/hek-2-md.md)], consulte a seguinte postagem de blog:[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   Para testes de desempenho, um servidor com as especificações semelhantes ao ambiente de produção. Para este exemplo específico, você deve ter pelo menos 16 GB de memória disponível para o SQL Server. Para obter diretrizes gerais sobre hardware para o OLTP in-memory, consulte a seguinte postagem de blog:[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
-##  <a name="a-nameinstallingthein-memoryoltpsamplebasedonadventureworksa-installing-the-includehek2tokenhek2mdmd-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Instalando a amostra do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] baseada no AdventureWorks  
+##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the In-Memory OLTP sample based on AdventureWorks  
  Siga estas etapas para instalar o exemplo:  
   
 1.  Baixe AdventureWorks2016CTP3.bak e SQLServer2016CTP3Samples.zip em: [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) para uma pasta local, por exemplo, 'c:\temp'.  
@@ -77,7 +81,7 @@ caps.handback.revision: 15
   
 3.  Para exibir os scripts de exemplo e a carga de trabalho, descompacte o arquivo SQLServer2016CTP3Samples.zip para uma pasta local. Consulte o arquivo In-Memory OLTP\readme.txt para obter instruções sobre como executar a carga de trabalho.  
   
-##  <a name="a-namedescriptionofthesampletablesandproceduresa-description-of-the-sample-tables-and-procedures"></a><a name="Descriptionofthesampletablesandprocedures"></a> Descrição das tabelas e procedimentos de exemplo  
+##  <a name="Descriptionofthesampletablesandprocedures"></a> Description of the sample tables and procedures  
  O exemplo cria novas tabelas para produtos e pedidos de vendas, com base em tabelas existentes no AdventureWorks. O esquema das novas tabelas é semelhante às tabelas existentes, com algumas diferenças, conforme explicado a seguir.  
   
  As novas tabelas com otimização de memória têm o sufixo '_inmem'. O exemplo também inclui as tabelas correspondentes que têm o sufixo '_ondisk' – essas tabelas podem ser usadas para fazer uma comparação um-para-um entre o desempenho de tabelas com otimização de memória e tabelas baseadas em disco em seu sistema.  
@@ -90,7 +94,7 @@ caps.handback.revision: 15
   
  O novo esquema 'Demonstração' contém tabelas e procedimentos armazenados auxiliares para executar uma carga de trabalho de demonstração.  
   
- Concretamente, o exemplo de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] adiciona os seguintes objetos ao AdventureWorks:  
+ Concretamente, o exemplo de OLTP in-memory adiciona os seguintes objetos ao AdventureWorks:  
   
 ### <a name="tables-added-by-the-sample"></a>Tabelas adicionadas pelo exemplo  
   
@@ -136,15 +140,15 @@ caps.handback.revision: 15
   
  Sales.SalesOrderHeader_inmem  
   
--   *Restrições padrão* têm suporte para tabelas com otimização de memória, e migramos a maioria das restrições padrão como tal. No entanto, a tabela Sales.SalesOrderHeader original contém duas restrições padrão que recuperam a data atual, pata as colunas OrderDate e ModifiedDate. Em uma carga de trabalho de processamento de pedidos com alta taxa de transferência e muita simultaneidade, qualquer recurso global pode se tornar um ponto de contenção. O tempo do sistema é um recurso bem global, e observamos que ele pode se tornar um afunilamento quando você executa uma carga de trabalho de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] que insere pedidos de vendas, em particular se o tempo do sistema precisa ser recuperado para várias colunas no cabeçalho do pedido de vendas, bem como os detalhes do pedido de vendas. O problema é tratado neste exemplo através da recuperação do tempo do sistema apenas uma vez para cada pedido de vendas que é inserido, e o uso desse valor para as colunas de data e hora em SalesOrderHeader_inmem e em SalesOrderDetail_inmem, no procedimento armazenado Sales.usp_InsertSalesOrder_inmem.  
+-   *Restrições padrão* têm suporte para tabelas com otimização de memória, e migramos a maioria das restrições padrão como tal. No entanto, a tabela Sales.SalesOrderHeader original contém duas restrições padrão que recuperam a data atual, pata as colunas OrderDate e ModifiedDate. Em uma carga de trabalho de processamento de pedidos com alta taxa de transferência e muita simultaneidade, qualquer recurso global pode se tornar um ponto de contenção. O tempo do sistema é um recurso bem global e observamos que ele pode se tornar um afunilamento quando você executa uma carga de trabalho do OLTP in-memory que insere pedidos de vendas, em particular se o tempo do sistema precisa ser recuperado para várias colunas no cabeçalho do pedido de vendas, bem como os detalhes do pedido de vendas. O problema é tratado neste exemplo através da recuperação do tempo do sistema apenas uma vez para cada pedido de vendas que é inserido, e o uso desse valor para as colunas de data e hora em SalesOrderHeader_inmem e em SalesOrderDetail_inmem, no procedimento armazenado Sales.usp_InsertSalesOrder_inmem.  
   
--   *UDTs de alias* - a tabela original usa dois alias de tipos de dados definidos pelo usuário (UDTs), dbo.OrderNumber e dbo.AccountNumber, para as colunas PurchaseOrderNumber e AccountNumber, respectivamente. O [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] não dá suporte ao UDT de alias para tabelas com otimização de memória; portanto, as novas tabelas usam os tipos de dados do sistema nvarchar(25) e nvarchar(15), respectivamente.  
+-   *UDTs de alias* - a tabela original usa dois alias de tipos de dados definidos pelo usuário (UDTs), dbo.OrderNumber e dbo.AccountNumber, para as colunas PurchaseOrderNumber e AccountNumber, respectivamente. O[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] não dá suporte ao UDT de alias para tabelas com otimização de memória; portanto, as novas tabelas usam os tipos de dados do sistema nvarchar(25) e nvarchar(15), respectivamente.  
   
 -   *Colunas que permitem valor nulo em chaves de índice* - na tabela original, a coluna SalesPersonID é anulável, enquanto em novas tabelas a coluna não é anulável e tem uma restrição padrão com valor (-1). Isso ocorre porque os índices nas tabelas com otimização de memória não podem ter colunas anuláveis na chave do índice; -1 é um substituto de NULL nesse caso.  
   
 -   *Colunas computadas* - as colunas computadas SalesOrderNumber e TotalDue são omitidas, pois o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] não oferece suporte a colunas computadas em tabelas com otimização de memória. A nova exibição Sales.vSalesOrderHeader_extended_inmem reflete as colunas SalesOrderNumber e TotalDue. Por disso, você pode usar essa exibição se essas colunas são necessárias.  
 
-    - **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há suporte para colunas computadas em índices e tabelas com otimização de memória.
 
   
@@ -301,8 +305,8 @@ Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há
   
     -   Ele se baseia nos procedimentos auxiliares dbo.usp_GenerateCKCheck auxiliares, dbo.usp_GenerateFKCheck e dbo.GenerateUQCheck para gerar o T-SQL necessário para executar as verificações de integridade.  
   
-##  <a name="a-nameperformancemeasurementsusingthedemoworkloada-performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Medidas de desempenho usando a carga de trabalho de demonstração  
- Ostress é uma ferramenta de linha de comando que foi desenvolvida pela equipe de suporte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa ferramenta pode ser usada para executar consultas ou executar procedimentos armazenados em paralelo. Você pode configurar o número de threads para executar em paralelo determinada instrução T-SQL, e pode especificar quantas vezes a instrução deve ser executada neste thread; ostress girará os threads e executará a instrução em todos os threads em paralelo. Ao término da execução de todos os threads, ostress relatará quanto tempo levou para concluir a execução de todos os threads.  
+##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Performance Measurements using the Demo Workload  
+ Ostress é uma ferramenta de linha de comando que foi desenvolvida pela equipe de suporte do Microsoft CSS SQL Server. Essa ferramenta pode ser usada para executar consultas ou executar procedimentos armazenados em paralelo. Você pode configurar o número de threads para executar em paralelo determinada instrução T-SQL, e pode especificar quantas vezes a instrução deve ser executada neste thread; ostress girará os threads e executará a instrução em todos os threads em paralelo. Ao término da execução de todos os threads, ostress relatará quanto tempo levou para concluir a execução de todos os threads.  
   
 ### <a name="installing-ostress"></a>Instalando ostress  
  Ostress é instalada como parte dos utilitários de RML; não há instalação autônoma para ostress.  
@@ -324,9 +328,9 @@ Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há
   
  As opções de linha de comando para ostress podem ser vista simplesmente ao executar ostress.exe sem opções de linha de comando. As opções principais a serem consideradas para executar ostress com este exemplo são:  
   
--   -S nome da instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à qual se conectar  
+-   -S nome da instância do Microsoft SQL Server de conexão  
   
--   -E use a autenticação do Windows para conexão (padrão); se você usar a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , use as opções –U e –P para especificar o nome de usuário e a senha, respectivamente  
+-   -E use a autenticação do Windows para conexão (padrão); se você usar a autenticação do SQL Server, use as opções –U e –P para especificar o nome de usuário e a senha, respectivamente  
   
 -   -d nome do banco de dados; para este exemplo, AdventureWorks2014  
   
@@ -410,7 +414,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
   
  Em um servidor de teste com um número total de 8 núcleos físicos (16 lógicos), isso levou 41 minutos e 25 segundos. Em um segundo servidor de teste com 24 núcleos físicos (48 lógicos), isso levou 52 minutos e 16 segundos.  
   
- O fator principal na diferença de desempenho entre tabelas com otimização de memória e tabelas baseadas em disco nesse teste é o fato de que, ao usar tabelas baseadas em disco, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode fazer uso total da CPU. A razão é a contenção de trava: as transações simultâneas estão tentando gravar na mesma página de dados; as travas são usadas para garantir que somente uma transação de cada vez possa gravar em uma página. O mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] é livre de travas, e as linhas de dados não são organizadas em páginas. Portanto, as transações simultâneas não bloqueiam as inserções umas das outras, permitindo que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use toda a CPU.  
+ O fator principal na diferença de desempenho entre tabelas com otimização de memória e tabelas baseadas em disco nesse teste é o fato de que, ao usar tabelas baseadas em disco, o SQL Server não pode fazer uso total da CPU. A razão é a contenção de trava: as transações simultâneas estão tentando gravar na mesma página de dados; as travas são usadas para garantir que somente uma transação de cada vez possa gravar em uma página. O mecanismo OLTP in-memory é livre de travas e as linhas de dados não são organizadas em páginas. Portanto, as transações simultâneas não bloqueiam as inserções umas das outras, permitindo que o SQL Server use toda a CPU.  
   
  Você pode observar a utilização da CPU enquanto a carga de trabalho está em execução. Use, por exemplo, o gerenciador de tarefas. Note que, em tabelas baseadas em disco, a utilização da CPU é bem inferior a 100%. Em uma configuração de teste com 16 processadores lógicos, a utilização fica em torno de 24%.  
   
@@ -427,26 +431,26 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
  Recomendamos uma redefinição após cada demonstração executada. Como essa carga de trabalho é somente de inserção, cada execução consumirá mais memória e, portanto, uma redefinição é necessária para evitar ficar sem memória. A quantidade de memória consumida após uma execução é discutida na seção [Utilização de memória após executar a carga de trabalho](#Memoryutilizationafterrunningtheworkload).  
   
-###  <a name="a-nametroubleshootingslow-runningtestsa-troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> Solução de problemas em testes de execução lenta  
+###  <a name="Troubleshootingslow-runningtests"></a> Troubleshooting slow-running tests  
  Os resultados de testes variam de acordo com o hardware, e também com o nível de simultaneidade usado na execução do teste. Alguns itens a serem pesquisados se os resultados não forem os esperados:  
   
--   Número de transações simultâneas: ao executar a carga de trabalho em um único thread, o ganho de desempenho com [!INCLUDE[hek_2](../../includes/hek-2-md.md)] provavelmente será menor que 2X. A contenção de trava se torna um grande problema apenas se há um nível alto de simultaneidade.  
+-   Número de transações simultâneas: ao executar a carga de trabalho em um único thread, o ganho de desempenho com OLTP in-memory provavelmente será menor que duas vezes. A contenção de trava se torna um grande problema apenas se há um nível alto de simultaneidade.  
   
--   Número baixo de núcleos disponíveis para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: isso significa que haverá um nível baixo de simultaneidade no sistema, pois a quantidade de transações executadas simultaneamente equivale ao número de núcleos disponíveis para o SQL.  
+-   Número baixo de núcleos disponíveis para o SQL Server: isso significa que haverá um nível baixo de simultaneidade no sistema, pois a quantidade de transações executadas simultaneamente equivale ao número de núcleos disponíveis para o SQL.  
   
     -   Sintoma: se há alta utilização da CPU ao executar a carga de trabalho em tabelas baseadas em disco, isso significa não há muita contenção, apontando para uma falta de simultaneidade.  
   
--   Velocidade da unidade de log: se a unidade de log não consegue acompanhar o nível de transferência de transações no sistema, a carga de trabalho se torna um afunilamento na E/S de log. Embora o log seja mais eficiente com [!INCLUDE[hek_2](../../includes/hek-2-md.md)], se a E/S de log é um afunilamento, o ganho de desempenho potencial é limitado.  
+-   Velocidade da unidade de log: se a unidade de log não consegue acompanhar o nível de transferência de transações no sistema, a carga de trabalho se torna um afunilamento na E/S de log. Embora o log seja mais eficiente com OLTP in-memory, se a E/S de log é um afunilamento, o ganho de desempenho potencial é limitado.  
   
     -   Sintoma: caso quase 100% da CPU seja utilizada ou apresentar um pico de uso ao executar a carga de trabalho em tabelas com otimização de memória, talvez exista um afunilamento de E/S de log. Isso pode ser confirmado abrindo o Monitor de Recursos e examinando o comprimento da fila para a unidade de log.  
   
-##  <a name="a-namememoryanddiskspaceutilizationinthesamplea-memory-and-disk-space-utilization-in-the-sample"></a><a name="MemoryandDiskSpaceUtilizationintheSample"></a> Utilização de memória e espaço em disco na amostra  
+##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> Utilização de memória e espaço em disco na amostra  
  A seguir, descrevemos o que esperar em termos de utilização da memória e do espaço em disco para o banco de dados de exemplo. Também mostramos os resultados observados em um servidor de teste com 16 núcleos lógicos.  
   
-###  <a name="a-namememoryutilizationforthememory-optimizedtablesa-memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> Utilização de memória para as tabelas com otimização de memória  
+###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Memory utilization for the memory-optimized tables  
   
 #### <a name="overall-utilization-of-the-database"></a>Utilização geral do banco de dados  
- A consulta a seguir pode ser usada para obter a utilização total de memória de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] no sistema.  
+ A consulta a seguir pode ser usada para obter a utilização total de memória para OLTP in-memory no sistema.  
   
 ```  
 SELECT type  
@@ -496,7 +500,7 @@ WHERE t.type='U'
   
  O que chama a atenção aqui é o tamanho da memória alocada para índices, comparado ao tamanho dos dados da tabela. Isso ocorre porque os índices de hash no exemplo são dimensionados previamente para um tamanho maior de dados. Observe que os índices de hash têm um tamanho fixo e, assim, seu tamanho não aumentará conforme o tamanho dos dados na tabela.  
   
-####  <a name="a-namememoryutilizationafterrunningtheworkloada-memory-utilization-after-running-the-workload"></a><a name="Memoryutilizationafterrunningtheworkload"></a> Utilização de memória após a execução da carga de trabalho  
+####  <a name="Memoryutilizationafterrunningtheworkload"></a> Memory utilization after running the workload  
  Após a inserção de 10 milhões de pedidos de vendas, qualquer utilização de memória superior terá a seguinte aparência:  
   
 ```  
@@ -514,7 +518,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|Padrão|0|  
 |MEMORYCLERK_XTP|Padrão|0|  
   
- Como você pode notar, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está usando um pouco menos de 8GB para as tabelas e os índices com otimização de memória no banco de dados de exemplo.  
+ Como você pode notar, o SQL Server está usando um pouco menos de 8 GB para as tabelas e os índices com otimização de memória no banco de dados de exemplo.  
   
  Verificando o uso detalhado de memória pela tabela após a execução de um exemplo:  
   
@@ -543,7 +547,7 @@ WHERE t.type='U'
 #### <a name="after-demo-reset"></a>Após a redefinição de demonstração  
  O procedimento armazenado Demo.usp_DemoReset pode ser usado para redefinir a demonstração. Ele exclui os dados nas tabelas SalesOrderHeader_inmem e SalesOrderDetail_inmem, e repropaga os dados das tabelas originais SalesOrderHeader e SalesOrderDetail.  
   
- Agora, apesar de as linhas das tabelas terem sido excluídas, isso não significa que a memória é recuperada imediatamente. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recupera a memória das linhas excluídas em tabelas com otimização de memória no plano de fundo, conforme necessário. Note que, imediatamente após a redefinição da demonstração, sem a carga de trabalho transacional no sistema, a memória das linhas excluídas ainda não foi recuperada:  
+ Agora, apesar de as linhas das tabelas terem sido excluídas, isso não significa que a memória é recuperada imediatamente. O SQL Server recupera a memória das linhas excluídas em tabelas com otimização de memória em segundo plano, conforme necessário. Note que, imediatamente após a redefinição da demonstração, sem a carga de trabalho transacional no sistema, a memória das linhas excluídas ainda não foi recuperada:  
   
 ```  
 SELECT type  
@@ -636,7 +640,7 @@ ORDER BY state, file_type
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
   
- Como você pode ver, a maior parte do espaço é usado por dados e arquivos delta criados anteriormente. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] criou previamente um par de arquivos (dados, delta) por processador lógico. Além disso, os arquivos de dados são dimensionados previamente em 128MB, e os arquivos delta em 8MB, para tornar a inserção de dados nesses arquivos mais eficiente.  
+ Como você pode ver, a maior parte do espaço é usado por dados e arquivos delta criados anteriormente. O SQL Server criou previamente um par de arquivos (dados, delta) por processador lógico. Além disso, os arquivos de dados são dimensionados previamente em 128MB, e os arquivos delta em 8MB, para tornar a inserção de dados nesses arquivos mais eficiente.  
   
  Os dados reais nas tabelas com otimização de memória estão no único arquivo de dados.  
   
@@ -766,6 +770,8 @@ ORDER BY state, file_type
  Nesse caso, há dois pares de arquivos de ponto de verificação no estado 'em construção', o que significa que vários pares de arquivos foram movidos para o estado 'em construção', provavelmente devido ao nível alto de simultaneidade na carga de trabalho. Vários threads simultâneos exigiam um novo par de arquivos ao mesmo tempo e, portanto, moviam um par de 'criados previamente' para 'em construção'.  
   
 ## <a name="see-also"></a>Consulte também  
- [OLTP na memória &#40;Otimização na memória&#41;](../Topic/In-Memory%20OLTP%20\(In-Memory%20Optimization\).md)  
+ [OLTP na memória &#40;Otimização na memória&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+
+

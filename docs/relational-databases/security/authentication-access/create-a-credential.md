@@ -1,26 +1,30 @@
 ---
-title: "Criar uma credencial | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "credenciais [SQL Server], criando"
-  - "autenticação [SQL Server], credenciais"
-  - "logons [SQL Server], credenciais"
+title: Criar uma credencial | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- credentials [SQL Server], creating
+- authentication [SQL Server], credentials
+- logins [SQL Server], credentials
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80dba3f156735179c0fb016e39f3065acd6f5ac1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar uma credencial
+# <a name="create-a-credential"></a>Criar uma credencial
   Este tópico descreve como criar uma credencial no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  As credenciais oferecem um modo para permitir que os usuários de Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tenham uma identidade fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Isso é usado principalmente para executar código em Assemblies com conjunto de permissões EXTERNAL_ACCESS. As credenciais podem também ser usadas quando um usuário de Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precisa acessar recursos de um domínio, como o local de um arquivo para armazenar um backup.  
@@ -56,7 +60,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para criar uma credencial  
+#### <a name="to-create-a-credential"></a>Para criar uma credencial  
   
 1.  No Pesquisador de Objetos, expanda a pasta **Segurança** .  
   
@@ -64,9 +68,9 @@ caps.handback.revision: 17
   
 3.  Na caixa de diálogo **Nova Credencial** , na caixa **Nome da Credencial** , digite um nome para a credencial.  
   
-4.  Na caixa **Identidade**, digite o nome da conta usada para conexões de saída (ao deixar o contexto do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Normalmente, esta será uma conta de usuário do Windows, mas a identidade pode ser uma conta de outro tipo.  
+4.  Na caixa **Identidade** , digite o nome da conta usada para conexões de saída (ao deixar o contexto do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Normalmente, esta será uma conta de usuário do Windows, mas a identidade pode ser uma conta de outro tipo.  
   
-     Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Usuário ou Grupo**.  
+     Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Usuário ou Grupo** .  
   
 5.  Nas caixas **Senha** e **Confirmar senha** , digite a senha da conta especificada na caixa **Identidade** . Se **Identidade** for uma conta de usuário do Windows, esta será a senha Windows. A **Senha** poderá ficar em branco se nenhuma senha for requerida.  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para criar uma credencial  
+#### <a name="to-create-a-credential"></a>Para criar uma credencial  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

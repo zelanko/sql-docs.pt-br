@@ -1,25 +1,29 @@
 ---
-title: "Reverter um banco de dados a um instant&#226;neo do banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "instantâneo do banco de dados [SQL Server], revertendo para"
-  - "revertendo bancos de dados"
+title: "Reverter um banco de dados para um instantâneo do banco de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database snapshots [SQL Server], reverting to
+- reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7af090ce5354c1cf7a255a80d8f2f6ca1da48405
+ms.lasthandoff: 04/11/2017
+
 ---
-# Reverter um banco de dados a um instant&#226;neo do banco de dados
+# <a name="revert-a-database-to-a-database-snapshot"></a>Reverter um banco de dados a um instantâneo do banco de dados
   Se os dados em um banco de dados online forem danificados, em alguns casos, reverter o banco de dados para um instantâneo do banco de dados que preceda o dano pode ser uma alternativa apropriada para restaurar o banco de dados de um backup. Por exemplo, reverter um banco de dados pode ser útil para reverter um erro sério recente de usuário, como uma tabela descartada. Porém, todas as mudanças feitas depois que o instantâneo foi criado serão perdidas.  
   
 -   **Antes de começar:**  
@@ -30,7 +34,7 @@ caps.handback.revision: 58
   
      [Segurança](#Security)  
   
--   **Para reverter um banco de dados para um instantâneo do banco de dados, usando:** [Transact-SQL](#TsqlProcedure)  
+-   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -73,9 +77,9 @@ caps.handback.revision: 58
     > [!NOTE]  
     >  Se o banco de dados tiver sido corrompido, você precisará restaurá-lo de backups. Para obter mais informações, veja [Restaurações completas de banco de dados &#40;Modelo de recuperação simples#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md) ou [Restaurações completas de banco de dados &#40;Modelo de recuperação completa#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).  
   
--   Identifique um instantâneo recente que foi criado antes do erro. Para obter mais informações, veja [Exibir um instantâneo de banco de dados &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md).  
+-   Identifique um instantâneo recente que foi criado antes do erro. Para obter mais informações, consulte [Exibir um instantâneo de banco de dados &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md).  
   
--   Descarte todos os outros instantâneos que existem no banco de dados. Para obter mais informações, veja [Remover um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
+-   Descarte todos os outros instantâneos que existem no banco de dados. Para obter mais informações, consulte [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -88,11 +92,11 @@ caps.handback.revision: 58
 > [!NOTE]  
 >  Para obter um exemplo deste procedimento, consulte [Exemplos (Transact-SQL)](#TsqlExample), posteriormente nesta seção.  
   
-1.  Identifique o instantâneo do banco de dados para o qual você quer reverter o banco de dados. É possível exibir os instantâneos em um banco de dados do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (veja [Exibir um instantâneo de banco de dados &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)). Além disso, você pode identificar o banco de dados de origem em uma exibição da coluna **source_database_id** da exibição dr catálogo [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+1.  Identifique o instantâneo do banco de dados para o qual você quer reverter o banco de dados. É possível exibir os instantâneos em um banco de dados do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (veja [Exibir um instantâneo de banco de dados &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)). Além disso, você pode identificar o banco de dados de origem em uma exibição da coluna **source_database_id** da exibição dr catálogo [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 2.  Cancele qualquer outro instantâneo do banco de dados.  
   
-     Para obter informações sobre como remover instantâneos, veja [Remover um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md). Se o banco de dados usar o modelo de recuperação completa, antes de fazer a reversão, você deve fazer o backup do log. Para obter mais informações, veja [Fazer backup do log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md) ou [Fazer backup do log de transações quando o banco de dados está danificado &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md).  
+     Para obter informações sobre como remover instantâneos, veja [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md). Se o banco de dados usar o modelo de recuperação completa, antes de fazer a reversão, você deve fazer o backup do log. Para obter mais informações, veja [Fazer backup do log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md) ou [Fazer backup do log de transações quando o banco de dados está danificado &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md).  
   
 3.  Execute a operação de reversão.  
   
@@ -102,7 +106,7 @@ caps.handback.revision: 58
   
      Em que *database_name* é o banco de dados de origem e *database_snapshot_name* é o nome do instantâneo para o qual você deseja reverter o banco de dados. Observe que nessa instrução, você deve especificar um nome de instantâneo em vez de um dispositivo de backup.  
   
-     Para obter mais informações, veja [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+     Para obter mais informações, consulte [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
     > [!NOTE]  
     >  Durante a operação de reversão, o instantâneo e o banco de dados de origem estão indisponíveis. O instantâneo e o banco de dados de origem ficam ambos marcados como “Em restauração”. Se ocorrer um erro durante a operação de reversão, ela tentará terminar a reversão quando o banco de dados for novamente inicializado.  
@@ -124,7 +128,7 @@ caps.handback.revision: 58
 -   B. [Revertendo um instantâneo no banco de dados Sales](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> A. Revertendo um instantâneo no banco de dados AdventureWorks  
- Este exemplo presume que existe apenas um instantâneo atualmente no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Por obter o exemplo que cria o instantâneo para o qual o banco de dados é revertido, veja [Criar um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
+ Este exemplo presume que existe apenas um instantâneo atualmente no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Por obter o exemplo que cria o instantâneo para o qual o banco de dados é revertido, veja [Criar um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
 USE master;  
@@ -135,13 +139,13 @@ GO
 ```  
   
 ####  <a name="Reverting_Sales"></a> B. Revertendo um instantâneo no banco de dados Sales  
- Este exemplo presume que existem dois instantâneos atualmente no banco de dados **Sales**: **sales_snapshot0600** e **sales_snapshot1200**. O exemplo exclui o mais antigo dos instantâneos e reverte o banco de dados para o instantâneo mais recente.  
+ Este exemplo presume que existem dois instantâneos atualmente no banco de dados **Sales** : **sales_snapshot0600** e **sales_snapshot1200**. O exemplo exclui o mais antigo dos instantâneos e reverte o banco de dados para o instantâneo mais recente.  
   
  Para obter o código para criar o banco de dados de exemplo e instantâneos dos quais esse exemplo depende, consulte:  
   
 -   Para obter o banco de dados **Sales** e o instantâneo **sales_snapshot0600**, veja “Criando um banco de dados com grupos de arquivo” e “Criando um instantâneo de banco de dados” em [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
--   Para obter o instantâneo **sales_snapshot1200**, veja “Criando um instantâneo do banco de dados Sales” em [Criar um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
+-   Para obter o banco de dados **sales_snapshot1200** , veja “Criando um instantâneo do banco de dados Sales” em [Criar um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
 --Test to see if sales_snapshot0600 exists and if it   
@@ -164,9 +168,9 @@ GO
   
 -   [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Instantâneos de banco de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Espelhamento de banco de dados e instantâneos de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   

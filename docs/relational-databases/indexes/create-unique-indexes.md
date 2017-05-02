@@ -1,29 +1,33 @@
 ---
-title: "Criar &#237;ndices exclusivos | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "índices exclusivos"
-  - "criando índices [SQL Server], exclusivos"
-  - "índices clusterizados, exclusivos"
-  - "índices [SQL Server], exclusivos"
-  - "índices não clusterizados [SQL Server], exclusivos"
-  - "índices exclusivos, diretrizes de design"
+title: "Criar índices exclusivos | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unique indexes
+- designing indexes [SQL Server], unique
+- clustered indexes, unique
+- indexes [SQL Server], unique
+- nonclustered indexes [SQL Server], unique
+- unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad915ae7f113e7080f3fe5b7dbd9bb1c233f8bb4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar &#237;ndices exclusivos
+# <a name="create-unique-indexes"></a>Criar índices exclusivos
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Este tópico descreve como criar um índice exclusivo em uma tabela no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um índice exclusivo garante que a chave de índice não contém nenhum valor duplicado e, portanto, cada linha na tabela é exclusiva de algum modo. Não existe nenhuma diferença significativa entre criar uma restrição UNIQUE e criar um índice exclusivo que seja independente de uma restrição. A validação de dados ocorre da mesma maneira, e o otimizador de consultas não diferencia entre um índice exclusivo criado por uma restrição ou manualmente criado. No entanto, criar uma restrição UNIQUE na coluna torna claro o objetivo do índice. Para obter mais informações sobre restrições UNIQUE, consulte [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
@@ -93,11 +97,11 @@ caps.handback.revision: 29
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner**.  
+ Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para criar um índice exclusivo usando o Designer de Tabela  
+#### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>Para criar um índice exclusivo usando o Designer de Tabela  
   
 1.  No Pesquisador de Objetos, expanda o banco de dados que contém a tabela na qual você deseja criar um índice exclusivo.  
   
@@ -105,15 +109,15 @@ caps.handback.revision: 29
   
 3.  Clique com o botão direito do mouse na tabela na qual você deseja criar um índice exclusivo e selecione **Design**.  
   
-4.  No menu **Designer de Tabela**, selecione **Índices/Chaves**.  
+4.  No menu **Designer de Tabela** , selecione **Índices/Chaves**.  
   
-5.  Na caixa de diálogo **Índices/Chaves**, clique em **Adicionar**.  
+5.  Na caixa de diálogo **Índices/Chaves** , clique em **Adicionar**.  
   
-6.  Selecione o novo índice na caixa de texto **Índice ou Chave Exclusiva/Primária Selecionada**.  
+6.  Selecione o novo índice na caixa de texto **Índice ou Chave Exclusiva/Primária Selecionada** .  
   
 7.  Na grade principal, em **(Geral)**, selecione **Tipo** e escolha **Índice** na lista.  
   
-8.  Selecione **Colunas** e clique no botão reticências **(…)**.  
+8.  Selecione **Colunas**e clique no botão reticências **(…)**.  
   
 9. Na caixa de diálogo **Colunas de Índice** , em **Nome da Coluna**, selecione as colunas que você deseja indexar. Você pode selecionar até 16 colunas. Para um desempenho ideal, selecione somente uma ou duas colunas por índice. Para cada coluna selecionada, indique se o índice organiza os valores dessa coluna em ordem crescente ou decrescente.  
   
@@ -125,9 +129,9 @@ caps.handback.revision: 29
   
 13. Clique em **Fechar**.  
   
-14. No menu **Arquivo**, clique em **Salvar***table_name*.  
+14. No menu **Arquivo** , clique em **Salvar***table_name*.  
   
-#### Crie um índice exclusivo usando o Pesquisador de Objetos  
+#### <a name="create-a-unique-index-by-using-object-explorer"></a>Crie um índice exclusivo usando o Pesquisador de Objetos  
   
 1.  No Pesquisador de Objetos, expanda o banco de dados que contém a tabela na qual você deseja criar um índice exclusivo.  
   
@@ -135,7 +139,7 @@ caps.handback.revision: 29
   
 3.  Expanda a tabela na qual você deseja criar um índice exclusivo.  
   
-4.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Não Clusterizado…**.  
+4.  Clique com o botão direito do mouse na pasta **Índices** , aponte para **Novo Índice**e selecione **Índice Não Clusterizado…**.  
   
 5.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
@@ -143,7 +147,7 @@ caps.handback.revision: 29
   
 7.  Na guia **Colunas de chave de índice**, clique em **Adicionar…**.  
   
-8.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
+8.  Na caixa de diálogo **Selecionar Colunas de***table_name* , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
   
 9. Clique em **OK**.  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para criar um índice exclusivo em uma tabela  
+#### <a name="to-create-a-unique-index-on-a-table"></a>Para criar um índice exclusivo em uma tabela  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -177,3 +181,4 @@ caps.handback.revision: 29
  Para obter mais informações, consulte [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

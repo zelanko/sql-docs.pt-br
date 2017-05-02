@@ -1,27 +1,31 @@
 ---
-title: "Exibir propriedades de guia de plano | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.planguideprop.general.f1"
-helpviewer_keywords: 
-  - "guias de plano [SQL Server], exibir propriedades de guia de plano"
-  - "exibindo propriedades de guia de plano"
+title: Exibir propriedades de guia de plano | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.planguideprop.general.f1
+helpviewer_keywords:
+- plan guides [SQL Server], view plan guide properties
+- viewing plan guide properties
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a68f0e1e0c15000f40de408f41ce4c40f281900e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exibir propriedades de guia de plano
+# <a name="view-plan-guide-properties"></a>Exibir propriedades de guia de plano
   Você pode exibir as propriedades dos guias de plano no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **Neste tópico**  
@@ -45,7 +49,7 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para visualizar as propriedades de um guia de plano  
+#### <a name="to-view-the-properties-of-a-plan-guide"></a>Para visualizar as propriedades de um guia de plano  
   
 1.  Clique no sinal de adição para expandir o banco de dados no qual você deseja exibir as propriedades de um guia de plano e clique no sinal de adição para expandir a pasta **Programação** .  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 19
      As propriedades a seguir aparecem na caixa de diálogo **Propriedades do Guia de Plano** .  
   
      **Dicas**  
-     Exibe as dicas de consulta ou plano de consulta a ser aplicado à instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. Quando um plano de consulta é especificado como uma dica, a saída Plano de Execução XML para o plano é exibida.  
+     Exibe as dicas de consulta ou plano de consulta a ser aplicado à instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] . Quando um plano de consulta é especificado como uma dica, a saída Plano de Execução XML para o plano é exibida.  
   
      **Está desabilitado**  
      Exibe o status da guia de plano. Os valores possíveis são **True** e **False**.  
@@ -65,13 +69,13 @@ caps.handback.revision: 19
      Exibe o nome do guia de plano.  
   
      **Parâmetros**  
-     Quando o tipo de escopo é SQL ou TEMPLATE, são exibidos o nome e os tipos de dados de todos os parâmetros inseridos na instrução [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+     Quando o tipo de escopo é SQL ou TEMPLATE, são exibidos o nome e os tipos de dados de todos os parâmetros inseridos na instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      **Lote de escopo**  
      Exibe o texto de lote no qual a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] é exibida.  
   
      **Nome do objeto de escopo**  
-     Quando o tipo de escopo é OBJECT, exibi-se o nome do procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)], da função escalar definida pelo usuário, da função de valor de tabela de várias instruções ou do gatilho DML no qual a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] é exibida.  
+     Quando o tipo de escopo é OBJECT, exibi-se o nome do procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] , da função escalar definida pelo usuário, da função de valor de tabela de várias instruções ou do gatilho DML no qual a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] é exibida.  
   
      **Nome do esquema de escopo**  
      Quando o tipo de escopo é OBJECT, exibe-se o nome do esquema no qual o objeto está contido.  
@@ -86,7 +90,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para visualizar as propriedades de um guia de plano  
+#### <a name="to-view-the-properties-of-a-plan-guide"></a>Para visualizar as propriedades de um guia de plano  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

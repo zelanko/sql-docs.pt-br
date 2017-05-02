@@ -1,24 +1,28 @@
 ---
-title: "Informa&#231;&#245;es do Publicador, Agentes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.publisherinfo.commonjobs.f1"
+title: "Informações sobre o Publicador, agentes | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78e8493ca92ce2877d5fb6cb29fa46c6287dd56a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Informa&#231;&#245;es do Publicador, Agentes
+# <a name="publisher-information-agents"></a>Informações do Publicador, Agentes
   A guia **Agentes** exibe informações sobre os agentes e trabalhos de manutenção associados ao Publicador:  
   
 -   Snapshot Agent que é exibido para todas as publicações.  
@@ -43,8 +47,8 @@ caps.handback.revision: 26
   
  Para obter mais informações sobre esses trabalhos, consulte [Administração do agente de replicação](../../relational-databases/replication/agents/replication-agent-administration.md).  
   
-## Opções  
- Para exibir informações sobre um agente ou trabalho, selecione a **agente e tipos de trabalho** menu suspenso. Para obter informações mais detalhadas e tarefas relacionadas a um agente ou trabalho, clique com o botão direito na linha do agente ou trabalho e clique em uma opção no menu de atalho. Para alterar a forma como a grade exibe os dados, clique com o botão direito do mouse na grade e clique em uma destas opções:  
+## <a name="options"></a>Opções  
+ Para exibir informações sobre um agente ou trabalho, selecione no menu suspenso **Tipos de Agente e Trabalho** . Para obter informações mais detalhadas e tarefas relacionadas a um agente ou trabalho, clique com o botão direito na linha do agente ou trabalho e clique em uma opção no menu de atalho. Para alterar a forma como a grade exibe os dados, clique com o botão direito do mouse na grade e clique em uma destas opções:  
   
 -   **Classificar**: classifique uma ou mais colunas na caixa de diálogo **Classificar Colunas** .  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 26
   
  As seções a seguir descrevem os dados exibidos nesta guia para cada agente ou trabalho.  
   
-### Snapshot Agent  
+### <a name="snapshot-agent"></a>Snapshot Agent  
  **Status**  
  O status do agente. A seguinte lista mostra os possíveis valores de status:  
   
@@ -88,10 +92,10 @@ caps.handback.revision: 26
  **#Trans**  
  O número de transações confirmado no banco de dados de distribuição durante a execução mais recente do agente.  
   
- **#Comandos**  
+ **#Cmds**  
  O número de comandos confirmado no banco de dados de distribuição durante a execução mais recente do agente. Um comando é equivalente a uma alteração de dados, como uma atualização.  
   
-### Agente de Leitor de Log  
+### <a name="log-reader-agent"></a>Agente de Leitor de Log  
  **Status**  
  O status do agente. A seguinte lista mostra os possíveis valores de status:  
   
@@ -124,13 +128,13 @@ caps.handback.revision: 26
  **#Trans**  
  O número de transações confirmado no banco de dados de distribuição durante a execução mais recente do agente.  
   
- **#Comandos**  
+ **#Cmds**  
  O número de comandos confirmado no banco de dados de distribuição durante a execução mais recente do agente. Um comando é equivalente a uma alteração de dados, como uma atualização.  
   
- **Média #Comandos**  
+ **Avg. #Cmds**  
  O número médio de comandos por transação durante a execução mais recente do agente.  
   
-### Queue Reader Agent  
+### <a name="queue-reader-agent"></a>Queue Reader Agent  
  **Status**  
  O status do agente. A seguinte lista mostra os possíveis valores de status:  
   
@@ -163,13 +167,13 @@ caps.handback.revision: 26
  **#Trans**  
  O número de transações confirmado no banco de dados de publicação durante a execução mais recente do agente.  
   
- **#Comandos**  
+ **#Cmds**  
  O número de comandos confirmados no banco de dados de publicação durante a execução mais recente do agente. Um comando é equivalente a uma alteração de dados, como uma atualização.  
   
- **Média #Comandos**  
+ **Avg. #Cmds**  
  O número médio de comandos por transação durante a execução mais recente do agente.  
   
-### Trabalhos de manutenção  
+### <a name="maintenance-jobs"></a>Trabalhos de manutenção  
  **Status**  
  O status de cada trabalho. A seguinte lista mostra os possíveis valores de status:  
   
@@ -193,10 +197,10 @@ caps.handback.revision: 26
  **Última Ação**  
  A última ação executada durante a execução mais recente do trabalho.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Iniciar o Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Exibir informações e executar tarefas para um publicador & #40. Monitor de replicação e 41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [Exibir informações e executar tarefas para os agentes associados com uma publicação e 40; Monitor de replicação e 41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
- [Replicação de monitoramento](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Exibir informações e executar tarefas para um Publicador &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Exibir informações e executar tarefas para os agentes associados a uma publicação &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
+ [Monitorando a Replicação](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

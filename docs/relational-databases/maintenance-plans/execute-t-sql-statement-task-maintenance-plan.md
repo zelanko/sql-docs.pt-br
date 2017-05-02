@@ -1,29 +1,33 @@
 ---
-title: "Tarefa Executar Instru&#231;&#227;o T-SQL (Plano de Manuten&#231;&#227;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.tsql.f1"
-helpviewer_keywords: 
-  - "caixa de diálogo Tarefa Executar Instrução T-SQL"
+title: "Tarefa Executar Instrução T-SQL (Plano de Manutenção) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.tsql.f1
+helpviewer_keywords:
+- Execute T-SQL Statement Task dialog box
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc4fe80e02dfde259794807f700cee0e73dcd43f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tarefa Executar Instru&#231;&#227;o T-SQL (Plano de Manuten&#231;&#227;o)
+# <a name="execute-t-sql-statement-task-maintenance-plan"></a>Tarefa Executar Instrução T-SQL (Plano de Manutenção)
   Use a caixa de diálogo **Tarefa Executar Instrução T-SQL** para personalizar seu plano de manutenção adicionando instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] de sua escolha a esse plano de manutenção.  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Conexão**  
  Selecione a conexão de servidor a ser usada na execução desta tarefa.  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 18
 > [!NOTE]  
 >  Quando o número de objetos afetados é grande, essa exibição pode ser demorada.  
   
-## Caixa de diálogo Nova Conexão  
+## <a name="new-connection-dialog-box"></a>Caixa de diálogo Nova Conexão  
  **Nome da conexão**  
  Digite um nome para a nova conexão.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 18
  Conecte-se a uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] com a Autenticação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Usar nome de usuário e senha específicos**  
- Conecte-se com uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa opção não está disponível.  
+ Conecte-se com uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção não está disponível.  
   
  **Nome de usuário**  
  Forneça um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usado na autenticação. Essa opção não está disponível.  

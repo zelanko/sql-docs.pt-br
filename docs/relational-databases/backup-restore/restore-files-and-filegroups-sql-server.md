@@ -1,29 +1,33 @@
 ---
-title: "Restaurar arquivos e grupos de arquivos (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restorefilesandfilegrps.general.f1"
-  - "sql13.swb.bselectfilegrpsfiles.f1"
-  - "sql13.swb.restorefilesandfilegrps.options.f1"
-helpviewer_keywords: 
-  - "SQL Server Management Studio [SQL Server], restaurando arquivos e grupos de arquivos"
-  - "restaurando [SQL Server], arquivos"
+title: Restaurar arquivos e grupos de arquivos (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restorefilesandfilegrps.general.f1
+- sql13.swb.bselectfilegrpsfiles.f1
+- sql13.swb.restorefilesandfilegrps.options.f1
+helpviewer_keywords:
+- SQL Server Management Studio [SQL Server], restoring files and filegroups
+- restoring [SQL Server], files
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0bc8f28aa966b39b9b5c78d681458d6bf25f84f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar arquivos e grupos de arquivos (SQL Server)
+# <a name="restore-files-and-filegroups-sql-server"></a>Restaurar arquivos e grupos de arquivos (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como restaurar arquivos e grupos de arquivos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -65,13 +69,13 @@ caps.handback.revision: 25
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para restaurar arquivos e grupos de arquivos  
+#### <a name="to-restore-files-and-filegroups"></a>Para restaurar arquivos e grupos de arquivos  
   
 1.  Depois de se conectar à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore de servidores.  
   
 2.  Expanda os **Bancos de dados**. Dependendo do banco de dados, selecione um banco de dados de usuário ou expanda os **Bancos de dados do sistema**e selecione um banco de dados do sistema.  
   
-3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas** e clique em **Restaurar**.  
+3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**e clique em **Restaurar**.  
   
 4.  Clique em **Arquivos e Grupos de Arquivos**, que abre a caixa de diálogo **Restaurar Arquivos e Grupos de Arquivos** .  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 25
     |-----------------|------------|  
     |**Restaurar**|As caixas de seleção selecionadas indicam os conjuntos de backup a serem restaurados.|  
     |**Nome**|O nome do conjunto de backup.|  
-    |**Tipo de arquivo**|Especifica o tipo de dados no backup: **Dados**, **Log**ou **Filestream Data**. Dados que são contidos em tabelas estão nos arquivos **Dados** . Dados de log de transações estão nos arquivos **Log** . Dados de BLOB (objeto binário grande) armazenados no sistema de arquivos estão localizados em arquivos de **Dados do Fluxo de Arquivos**.|  
+    |**Tipo de arquivo**|Especifica o tipo de dados no backup: **Dados**, **Log**ou **Filestream Data**. Dados que são contidos em tabelas estão nos arquivos **Dados** . Dados de log de transações estão nos arquivos **Log** . Dados de BLOB (objeto binário grande) armazenados no sistema de arquivos estão localizados em arquivos de **Dados do Fluxo de Arquivos** .|  
     |**Tipo**|Tipo de backup realizado: **Completo**, **Diferencial**ou **Log de Transações**.|  
     |**Servidor**|Nome da instância do Mecanismo de Banco de Dados que executou a operação de backup.|  
     |**Nome Lógico do Arquivo**|O nome lógico do arquivo.|  
@@ -115,7 +119,7 @@ caps.handback.revision: 25
      **Substituir o banco de dados existente**  
      Especifica que a operação de restauração deve substituir quaisquer bancos de dados existentes e seus arquivos relacionados, mesmo se já existirem outros bancos de dados ou arquivos com o mesmo nome.  
   
-     Selecionar esta opção equivale ao uso da opção REPLACE em uma declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)].   
+     Selecionar esta opção equivale ao uso da opção REPLACE em uma declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      **Perguntar antes de restaurar cada backup**  
      Solicita sua confirmação antes de restaurar cada conjunto de backup.  
@@ -123,39 +127,39 @@ caps.handback.revision: 25
      Esta opção é particularmente útil quando você precisar trocar as fitas de conjuntos de mídia diferentes, tal como quando o servidor tiver um dispositivo de fita.  
   
      **Acesso restrito ao banco de dados restaurado**  
-     Disponibiliza o banco de dados restaurado apenas para os membros do **db_owner**, **dbcreator** ou **sysadmin**.  
+     Disponibiliza o banco de dados restaurado apenas para os membros do **db_owner**, **dbcreator**ou **sysadmin**.  
   
-     Selecionar esta opção é como usar a opção RESTRICTED_USER na declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+     Selecionar esta opção é como usar a opção RESTRICTED_USER na declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 10. Opcionalmente, você pode restaurar o banco de dados para um novo local, especificando um novo destino de restauração para cada arquivo na grade **Restaurar os arquivos de banco de dados como** .  
   
     |Título da coluna|Valores|  
     |-----------------|------------|  
     |**Nome do arquivo original**|O caminho completo do arquivo de backup de origem.|  
-    |**Tipo de arquivo**|Especifica o tipo de dados no backup: **Dados**, **Log**ou **Filestream Data**. Dados que são contidos em tabelas estão nos arquivos **Dados** . Dados de log de transações estão nos arquivos **Log** . Dados de BLOB (objeto binário grande) armazenados no sistema de arquivos estão localizados em arquivos de **Dados do Fluxo de Arquivos**.|  
+    |**Tipo de arquivo**|Especifica o tipo de dados no backup: **Dados**, **Log**ou **Filestream Data**. Dados que são contidos em tabelas estão nos arquivos **Dados** . Dados de log de transações estão nos arquivos **Log** . Dados de BLOB (objeto binário grande) armazenados no sistema de arquivos estão localizados em arquivos de **Dados do Fluxo de Arquivos** .|  
     |**Restaurar Como**|O caminho completo do arquivo de banco de dados a ser restaurado. Para especificar um novo arquivo de restauração, clique na caixa de texto e edite o caminho sugerido e o nome do arquivo. Alterar o caminho ou o nome do arquivo na coluna **Restaurar Como** é equivalente ao uso da opção MOVE em uma declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
   
 11. O painel **Estado de recuperação** determina o estado do banco de dados após a operação de restauração.  
   
      **Deixar o banco de dados pronto para uso revertendo as transações não confirmadas. Os logs de transações adicionais não podem ser restaurados. (RESTORE WITH RECOVERY)**  
-     Recupera o banco de dados. Esse é o comportamento padrão. Escolha essa opção somente se estiver restaurando todos os backups necessários agora. Esta opção equivale à especificação WITH RECOVERY em uma declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)].   
+     Recupera o banco de dados. Esse é o comportamento padrão. Escolha essa opção somente se estiver restaurando todos os backups necessários agora. Esta opção equivale à especificação WITH RECOVERY em uma declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-     **Deixar o banco de dados não operacional e não reverter as transações não confirmadas. Os logs de transações adicionais podem ser restaurados. (RESTORE WITH NORECOVERY)**  
-     Deixa o banco de dados no estado de restauração. Para recuperar o banco de dados, será necessário realizar outra restauração usando a opção RESTORE WITH RECOVERY (veja acima). Esta opção equivale à especificação WITH NORECOVERY em uma declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)].   
+     **Deixe o banco de dados não operacional e não reverta as transações não confirmadas. Os logs de transações adicionais podem ser restaurados. (RESTORE WITH NORECOVERY)**  
+     Deixa o banco de dados no estado de restauração. Para recuperar o banco de dados, será necessário realizar outra restauração usando a opção RESTORE WITH RECOVERY (veja acima). Esta opção equivale à especificação WITH NORECOVERY em uma declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      Se selecionar esta opção, a opção **Preservar parâmetros de replicação** não estará disponível.  
   
      **Deixar o banco de dados no modo somente leitura. Reverter as transações não confirmadas, mas salvar a operação de reversão em um arquivo para que os efeitos da recuperação possam ser desfeitos. (RESTORE WITH STANDBY)**  
-     Deixa o banco de dados no estado de espera. Esta opção equivale à especificação WITH STANDBY em uma declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)].   
+     Deixa o banco de dados no estado de espera. Esta opção equivale à especificação WITH STANDBY em uma declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      A escolha desta opção requer que você especifique um arquivo de espera.  
   
      **Reverter de arquivo de desfazer**  
-     Especifique o nome do arquivo de espera na caixa de texto **Reverter arquivo de desfazer**. Esta opção será necessária se o banco de dados estiver no modo somente leitura (RESTORE WITH STANDBY).  
+     Especifique o nome do arquivo de espera na caixa de texto **Reverter arquivo de desfazer** . Esta opção será necessária se o banco de dados estiver no modo somente leitura (RESTORE WITH STANDBY).  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para restaurar arquivos e grupos de arquivos  
+#### <a name="to-restore-files-and-filegroups"></a>Para restaurar arquivos e grupos de arquivos  
   
 1.  Execute a instrução RESTORE DATABASE para restaurar o backup de arquivos e grupo de arquivos, especificando:  
   
@@ -180,7 +184,7 @@ caps.handback.revision: 25
          Os backups de log de transações, se aplicados, devem cobrir o tempo quando foi feito o backup dos arquivos e grupos de arquivos até o final do log (a menos que sejam restaurados TODOS os arquivos de banco de dados).  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
- Este exemplo restaura os arquivos e grupos de arquivos para o banco de dados `MyDatabase`. Para restaurar o banco de dados para a hora atual, dois logs de transações são aplicados.  
+ Este exemplo restaura os arquivos e grupos de arquivos para o banco de dados `MyDatabase` . Para restaurar o banco de dados para a hora atual, dois logs de transações são aplicados.  
   
 ```tsql  
 USE master;  
@@ -206,12 +210,12 @@ RESTORE LOG MyDatabase
 GO  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [Fazer backup de arquivos e de grupos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
  [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

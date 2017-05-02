@@ -1,27 +1,31 @@
 ---
-title: "Exibir a defini&#231;&#227;o da tabela | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exibindo propriedades de tabela"
-  - "exibindo propriedades de tabela"
-  - "tabelas [SQL Server], propriedades"
-  - "exibindo propriedades de tabela"
+title: "Exibir a definição da tabela | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- showing table properties
+- displaying table properties
+- tables [SQL Server], properties
+- viewing table properties
 ms.assetid: 1865fb7c-f480-4100-9007-df5364cd002a
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e716b2ec51b07b2a2e675c7bdd76c6f91913d23b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exibir a defini&#231;&#227;o da tabela
+# <a name="view-the-table-definition"></a>Exibir a definição da tabela
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Você pode exibir as propriedades de uma tabela no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -47,7 +51,7 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para mostrar as propriedades da tabela na janela Propriedades  
+#### <a name="to-show-table-properties-in-the-properties-window"></a>Para mostrar as propriedades da tabela na janela Propriedades  
   
 1.  No Pesquisador de Objetos, selecione a tabela da qual deseja exibir as propriedades.  
   
@@ -55,7 +59,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para exibir as propriedades da tabela  
+#### <a name="to-show-table-properties"></a>Para exibir as propriedades da tabela  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

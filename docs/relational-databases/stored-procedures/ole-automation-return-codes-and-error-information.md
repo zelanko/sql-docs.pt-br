@@ -1,31 +1,35 @@
 ---
-title: "Informa&#231;&#245;es sobre erros e c&#243;digos de retorno de automa&#231;&#227;o OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "códigos de retorno [SQL Server]"
-  - "Automação OLE [SQL Server], códigos de retorno"
-  - "Automação OLE [SQL Server], erros"
+title: "Informações sobre erros e códigos de retorno de automação | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ole
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- return codes [SQL Server]
+- OLE Automation [SQL Server], return codes
+- OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1a64e9ca8e9999411edf97c76c50f577790af27
+ms.lasthandoff: 04/11/2017
+
 ---
-# Informa&#231;&#245;es sobre erros e c&#243;digos de retorno de automa&#231;&#227;o OLE
+# <a name="ole-automation-return-codes-and-error-information"></a>Informações sobre erros e códigos de retorno de automação OLE
   Os procedimentos armazenados do sistema de Automação OLE retornam um código de retorno **int** que é o HRESULT retornado pela operação de Automação OLE adjacente. O HRESULT de 0 indica sucesso. HRESULT diferente de zero é um código de erro OLE de formato hexadecimal 0x800*nnnnn*, mas ao ser retornado com o valor **int** em um código de retorno de procedimento armazenado, o HRESULT assume o formato 214*nnnnnnn*.  
   
  Por exemplo, passar um nome de objeto inválido (SQLDMO.Xyzzy) para sp_OACreate faz o procedimento retornar um HRESULT **int** de 2147221005, que é 0x800401f3 em número hexadecimal.  
   
- Você pode usar `CONVERT(binary(4), @hresult)` para converter um HRESULT **int** para um valor **binary**. Entretanto, o uso de `CONVERT(char(10), CONVERT(binary(4), @hresult))` resulta em uma cadeia ilegível porque cada byte de HRESULT é convertido em um único caractere ASCII. É possível usar o procedimento armazenado de amostra HexToChar para converter um HRESULT **int** em um valor **char** que contém uma cadeia hexadecimal legível.  
+ Você pode usar `CONVERT(binary(4), @hresult)` para converter um HRESULT **int** para um valor **binary** . Entretanto, o uso de `CONVERT(char(10), CONVERT(binary(4), @hresult))` resulta em uma cadeia ilegível porque cada byte de HRESULT é convertido em um único caractere ASCII. É possível usar o procedimento armazenado de amostra HexToChar para converter um HRESULT **int** em um valor **char** que contém uma cadeia hexadecimal legível.  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,7 +115,7 @@ AS
 GO  
 ```  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
  [sp_OAGetErrorInfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql.md)  
   
   

@@ -1,27 +1,31 @@
 ---
-title: "Recusar permiss&#245;es em uma cole&#231;&#227;o de esquemas XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "negando permissões [SQL Server], coleções de servidor XML"
+title: "Recusar permissões em uma coleção de esquemas XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- denying permissions [SQL Server], XML server collections
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 803150cde12790eefbeea8c8f4ef0ad32dc350fe
+ms.lasthandoff: 04/11/2017
+
 ---
-# Recusar permiss&#245;es em uma cole&#231;&#227;o de esquemas XML
+# <a name="deny-permissions-on-an-xml-schema-collection"></a>Recusar permissões em uma coleção de esquemas XML
   Permissões podem ser negadas para criar uma nova coleção de esquema XML ou para usar uma coleção existente.  
   
-## Negando permissão para criar uma coleção de esquema XML  
+## <a name="denying-permission-to-create-an-xml-schema-collection"></a>Negando permissão para criar uma coleção de esquema XML  
  É possível negar permissão para criar uma coleção de esquema XML das seguintes maneiras:  
   
 -   Negar a permissão ALTER no esquema relacional.  
@@ -30,7 +34,7 @@ caps.handback.revision: 34
   
 -   Negar ALTER ANY SCHEMA no banco de dados. Nesse caso, a entidade de segurança não pode criar uma coleção de esquema XML em nenhum outro lugar no banco de dados. Observe também que negar a permissão ALTER ou CONTROL no banco de dados nega todas as permissões em todos os objetos do banco de dados.  
   
-## Negando permissões em um objeto da coleção de esquema XML  
+## <a name="denying-permissions-on-an-xml-schema-collection-object"></a>Negando permissões em um objeto da coleção de esquema XML  
  A lista a seguir apresenta as permissões que podem ser negadas em uma coleção de esquema XML existente e seus resultados:  
   
 -   Negar a permissão ALTER nega a capacidade de uma entidade de segurança de modificar o conteúdo da coleção de esquema XML.  
@@ -43,13 +47,13 @@ caps.handback.revision: 34
   
 -   Negar a permissão EXECUTE nega a capacidade da entidade de segurança de inserir ou atualizar valores em colunas, variáveis e parâmetros que são de tipo ou restritas pela coleção de esquema XML. Também nega a capacidade da entidade de segurança de consultar os valores nestas colunas e variáveis de tipo xml.  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  Os cenários nos exemplos a seguir mostram como as permissões de esquema XML funcionam. Cada exemplo cria o banco de dados, os esquemas relacionais e os logons de teste necessários. Esses logons recebem as permissões necessárias na coleção de esquema XML. Cada exemplo faz a limpeza necessária no final.  
   
-### A. Impedindo que um usuário crie uma coleção de esquema XML  
+### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>A. Impedindo que um usuário crie uma coleção de esquema XML  
  Uma das maneiras de impedir que um usuário crie uma coleção de esquema XML é negar a permissão ALTER em um esquema relacional. Isso é mostrado no exemplo a seguir.  
   
- O exemplo cria um usuário, `TestLogin1`, e um banco de dados. Ele também cria um esquema relacional, além do esquema `dbo`, no banco de dados. Inicialmente, a permissão `CREATE XML SCHEMA` permite que o usuário crie uma coleção de esquema em qualquer lugar no banco de dados. Em seguida, o exemplo nega permissão `ALTER` ao usuário em um dos esquemas relacionais. Isto impede que o usuário crie uma coleção de esquema XML naquele esquema relacional.  
+ O exemplo cria um usuário, `TestLogin1`, e um banco de dados. Ele também cria um esquema relacional, além do esquema `dbo` , no banco de dados. Inicialmente, a permissão `CREATE XML SCHEMA` permite que o usuário crie uma coleção de esquema em qualquer lugar no banco de dados. Em seguida, o exemplo nega permissão `ALTER` ao usuário em um dos esquemas relacionais. Isto impede que o usuário crie uma coleção de esquema XML naquele esquema relacional.  
   
 ```  
 CREATE LOGIN TestLogin1 WITH password='SQLSvrPwd1'  
@@ -108,10 +112,10 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### B. Negando permissões em uma coleção de esquemas XML  
+### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>B. Negando permissões em uma coleção de esquemas XML  
  O exemplo a seguir mostra como uma permissão específica em uma coleção de esquema XML pode ser negada para um logon. Neste exemplo, a permissão REFERENCES é negada a um logon de teste em uma coleção de esquema XML.  
   
- O exemplo cria um usuário, `TestLogin1`, e um banco de dados. Ele também cria um esquema relacional, além do esquema `dbo`, no banco de dados. Inicialmente, a permissão `CREATE XML SCHEMA` permite que o usuário crie uma coleção de esquema em qualquer lugar no banco de dados.  
+ O exemplo cria um usuário, `TestLogin1`, e um banco de dados. Ele também cria um esquema relacional, além do esquema `dbo` , no banco de dados. Inicialmente, a permissão `CREATE XML SCHEMA` permite que o usuário crie uma coleção de esquema em qualquer lugar no banco de dados.  
   
  A permissão `REFERENCES` na coleção de esquema XML permite que o `TestLogin1` use o esquema para criar uma coluna `xml` com tipo em uma tabela. Se a permissão `REFERENCES` na coleção de esquema XML for negada, ela impedirá que o `TestLogin1` use a coleção de esquema XML.  
   
@@ -187,7 +191,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Coleções de esquemas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   
  [Requisitos e limitações de uso de coleções de esquema XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)   

@@ -1,33 +1,37 @@
 ---
-title: "Assistente para Nova Assinatura (refer&#234;ncia de interface do usu&#225;rio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Assistente para Nova Assinatura"
+title: "Assistente para nova assinatura (referência da interface do usuário) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- New Subscription Wizard
 ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1d33bcc230d395b405ce3a2daf72bac286c4bbb1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Assistente para Nova Assinatura (refer&#234;ncia de interface do usu&#225;rio)
+# <a name="new-subscription-wizard-ui-reference"></a>Assistente para Nova Assinatura (referência de interface do usuário)
   Esta seção fornece informações sobre as páginas seguintes do Assistente para Nova Assinatura:  
   
--   [& #60; Nome_do_agente & #62; Local do agente](../../relational-databases/replication/agentname-agent-location.md)  
+-   [&#60;AgentName&#62; Agent Location (Local do agente &#60;AgentName&#62;)](../../relational-databases/replication/agentname-agent-location.md)  
   
 -   [Assinantes](../../relational-databases/replication/subscribers.md)  
   
--   [Adicionar Assinante não SQL Server](../../relational-databases/replication/add-non-sql-server-subscriber.md)  
+-   [Add Non-SQL Server Subscriber (Adicionar assinante não SQL Server)](../../relational-databases/replication/add-non-sql-server-subscriber.md)  
   
--   [& #60; Nome_do_agente & #62; Segurança do agente](../../relational-databases/replication/agentname-agent-security.md)  
+-   [&#60;AgentName&#62; Agent Security (Segurança do agente &#60;AgentName&#62;)](../../relational-databases/replication/agentname-agent-security.md)  
   
 -   [Assinaturas Atualizáveis](../../relational-databases/replication/updatable-subscriptions.md)  
   
@@ -41,10 +45,10 @@ caps.handback.revision: 18
   
 -   [Valores HOST_NAME](../../relational-databases/replication/host-name-values.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)   
- [Referência de propriedades de & #40. Replicação e 41;](../../relational-databases/replication/properties-reference-replication.md)  
+ [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Referência de propriedades &#40;Replicação&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

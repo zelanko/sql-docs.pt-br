@@ -1,70 +1,60 @@
 ---
-title: "Objetos de configura&#231;&#227;o do Database Mail | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.sqlimail.profileandaccountmanagement.f1"
-  - "sql13.swb.sqlimail.newaccount.f1"
-  - "sql13.swb.sqlimail.manageexistingprofile.f1"
-  - "sql13.swb.sqlimail.addaccounttoprofile.f1"
-  - "sql13.swb.sqlmailconfiguration.f1"
-  - "sql13.swb.sqlimail.manageprofilesecurity.profileview.f1"
-  - "sql13.swb.sqlimail.welcome.f1"
-  - "sql13.swb.sqlimail.manageprofilesecurity.principalview.f1"
-  - "sql13.swb.sqlimail.newsqlimailaccount.f1"
-  - "sql13.swb.sqlimail.selectconfiguration.f1"
-  - "sql13.swb.sqlimail.newprofile.f1"
-  - "sql13.swb.sqlimail.manageexistingaccount.f1"
-  - "sql13.swb.sqlimail.completewizard.f1"
-  - "sql13.swb.sqlimail.configuresystem.f1"
-helpviewer_keywords: 
-  - "Database Mail [SQL Server], objetos de configuração"
-  - "Database Mail [SQL Server], contas"
-  - "objetos de configuração [Database Mail]"
-  - "Database Mail [SQL Server], perfis"
-  - "perfis [SQL Server], Database Mail"
-  - "contas [Database Mail]"
+title: "Objetos de configuração do Database Mail | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.sqlimail.profileandaccountmanagement.f1
+- sql13.swb.sqlimail.newaccount.f1
+- sql13.swb.sqlimail.manageexistingprofile.f1
+- sql13.swb.sqlimail.addaccounttoprofile.f1
+- sql13.swb.sqlmailconfiguration.f1
+- sql13.swb.sqlimail.manageprofilesecurity.profileview.f1
+- sql13.swb.sqlimail.welcome.f1
+- sql13.swb.sqlimail.manageprofilesecurity.principalview.f1
+- sql13.swb.sqlimail.newsqlimailaccount.f1
+- sql13.swb.sqlimail.selectconfiguration.f1
+- sql13.swb.sqlimail.newprofile.f1
+- sql13.swb.sqlimail.manageexistingaccount.f1
+- sql13.swb.sqlimail.completewizard.f1
+- sql13.swb.sqlimail.configuresystem.f1
+helpviewer_keywords:
+- Database Mail [SQL Server], configuration objects
+- Database Mail [SQL Server], accounts
+- configuration objects [Database Mail]
+- Database Mail [SQL Server], profiles
+- profiles [SQL Server], Database Mail
+- accounts [Database Mail]
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: d6e1d52d52ca029e7643634442c5d87446e0c410
+ms.lasthandoff: 04/11/2017
+
 ---
-# Objetos de configura&#231;&#227;o do Database Mail
+# <a name="database-mail-configuration-objects"></a>Objetos de configuração do Database Mail
   O Database Mail tem dois objetos de configuração: os objetos de configuração de banco de dados permitem que você defina as configurações que Database Email deve usar ao enviar um email de seu aplicativo de banco de dados ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   Contas do Database Mail  
   
 -   Perfis do Database Mail  
   
- **Neste tópico:**  
-  
--   [Relação do objeto de configuração do Database Mail](#VisualElement)  
-  
--   [Conta do Database Mail](#DBAccount)  
-  
--   [Perfil do Database Mail](#DBProfile)  
-  
--   [Tarefas de configuração do Database Mail](#RelatedTasks)  
-  
--   [Tarefas adicionais de configuração do Database Mail (procedimento armazenado do sistema)](#Add_Tasks)  
-  
--   [Referências adicionais](#RelatedContent)  
   
 ##  <a name="VisualElement"></a> Relação do objeto de configuração do Database Mail  
  A ilustração mostra dois perfis, três contas e três usuários. O Usuário 1 tem acesso ao Perfil 1, que usa a Conta 1 e a Conta 2. O Usuário 3 tem acesso ao Perfil 2, que usa a Conta 2 e a Conta 3. O Usuário 2 tem acesso ao Perfil 1 e ao Perfil 2.  
   
  ![Relação de usuários, perfis e contas](../../relational-databases/database-mail/media/databasemailprofileaccount.gif "Relação de usuários, perfis e contas")  
   
- [&#91;Início&#93;](#Top)  
   
 ##  <a name="DBAccount"></a> Conta do Database Mail  
  Uma conta do Database Mail contém as informações que o Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa para enviar mensagens de email a um servidor SMTP. Cada conta contém informações de um servidor de email.  
@@ -105,7 +95,6 @@ caps.handback.revision: 33
   
  O Assistente para Configuração do Database Mail é um modo conveniente de criar e gerenciar contas. Você também pode usar os procedimentos armazenados de configuração no **msdb** para criar e gerenciar contas.  
   
- [&#91;Início&#93;](#Top)  
   
 ##  <a name="DBProfile"></a> Perfil do Database Mail  
  Um perfil do Database Mail é uma coleção ordenada de contas relacionadas do Database Mail. Os aplicativos que enviam email por meio do Database Mail especificam perfis, em vez de usar contas diretamente. Separar as informações sobre os servidores de email individuais e os objetos utilizados pelo aplicativo melhora a flexibilidade e a confiabilidade: os perfis proporcionam failover automático, de modo que, se um servidor de email não estiver respondendo, o Database Mail poderá enviar email para outro servidor automaticamente. Os administradores de banco de dados podem adicionar, remover ou reconfigurar contas sem a necessidade de alterações no código do aplicativo ou nas etapas de trabalho.  
@@ -118,11 +107,10 @@ caps.handback.revision: 33
   
  Os**perfis particulares** são definidos para entidades de segurança no banco de dados **msdb** . Eles permitem que apenas usuários, funções e membros especificados da função de servidor fixa **sysadmin** do banco de dados enviem email usando o perfil. Por padrão, um perfil é particular e permite acesso apenas a membros da função de servidor fixa **sysadmin** . Para uso de um perfil particular, **sysadmin** deve conceder aos usuários permissão para usarem o perfil. Além disso, a permissão de EXECUTE no procedimento armazenado **sp_send_dbmail** é concedida apenas a membros da função **DatabaseMailUserRole**. Um administrador do sistema deve adicionar o usuário à função de banco de dados **DatabaseMailUserRole** para que ele possa enviar mensagens de email.  
   
- Os perfis melhoram a confiança nos casos em que um servidor de email se torna inacessível ou incapaz de processar mensagens. Cada conta no perfil possui um número de sequência. O número de sequência determina a ordem na qual o Database Mail usa as contas no perfil. Para uma nova mensagem de email, o Database Mail usa a última conta que enviou uma mensagem com êxito ou a conta com o número de sequência mais baixo, caso ainda não tenha sido enviada nenhuma mensagem. Se essa conta falhar, o Database Mail usará a conta com o próximo número de sequência mais alto, e assim por diante, até que o Database Mail envie a mensagem com êxito ou a conta com o número de sequência mais alto falhe. Se a conta com o número de sequência mais alto falhar, o Database Mail pausará as tentativas de enviar o email pelo período de tempo configurado no parâmetro **AccountRetryDelay** de **sysmail_configure_sp** e, em seguida, iniciará o processo de tentar enviar o email novamente, começando pelo número de sequência mais baixo. Use o parâmetro **AccountRetryAttempts** de **sysmail_configure_sp** para configurar o número de vezes que o processo de email externo tenta enviar a mensagem de email usando cada conta no perfil especificado.  
+ Os perfis melhoram a confiança nos casos em que um servidor de email se torna inacessível ou incapaz de processar mensagens. Cada conta no perfil possui um número de sequência. O número de sequência determina a ordem na qual o Database Mail usa as contas no perfil. Para uma nova mensagem de email, o Database Mail usa a última conta que enviou uma mensagem com êxito ou a conta com o número de sequência mais baixo, caso ainda não tenha sido enviada nenhuma mensagem. Se essa conta falhar, o Database Mail usará a conta com o próximo número de sequência mais alto, e assim por diante, até que o Database Mail envie a mensagem com êxito ou a conta com o número de sequência mais alto falhe. Se a conta com o número de sequência mais alto falhar, o Database Mail pausará as tentativas de enviar o email pelo período de tempo configurado no parâmetro **AccountRetryDelay** de **sysmail_configure_sp**e, em seguida, iniciará o processo de tentar enviar o email novamente, começando pelo número de sequência mais baixo. Use o parâmetro **AccountRetryAttempts** de **sysmail_configure_sp**para configurar o número de vezes que o processo de email externo tenta enviar a mensagem de email usando cada conta no perfil especificado.  
   
  Se existir mais de uma conta com o mesmo número de sequência, o Database Mail utilizará apenas uma delas para uma dada mensagem de email. Nesse caso, o Database Mail não pode garantir qual das contas será usada para o número de sequência em questão nem que a mesma conta seja usada em todas as mensagens.  
   
- [&#91;Início&#93;](#Top)  
   
 ##  <a name="RelatedTasks"></a> Tarefas de configuração do Database Mail  
  A tabela a seguir descreve as tarefas de configuração do Database Mail.  
@@ -134,21 +122,20 @@ caps.handback.revision: 33
 |Descreve como configurar o Database Mail|[Configurar o Database Mail](../../relational-databases/database-mail/configure-database-mail.md)|  
 |Descreve como criar um script de configuração do Database Mail usando modelos||  
   
- [&#91;Início&#93;](#Top)  
   
 ##  <a name="Add_Tasks"></a> Tarefas adicionais de configuração de banco de dados (procedimentos armazenados do sistema)  
  Os procedimentos armazenados de configuração do Database Mail estão localizados no banco de dados **msdb** .  
   
  As tabelas a seguir listam os procedimentos armazenados utilizados para configurar e gerenciar o Database Mail.  
   
-### Configurações do Database Mail  
+### <a name="database-mail-settings"></a>Configurações do Database Mail  
   
 |Nome|Descrição|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|Altera definições de configuração do Database Mail.|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|Exibe definições de configuração do Database Mail.|  
   
-### Contas e perfis  
+### <a name="accounts-and-profiles"></a>Contas e perfis  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -163,7 +150,7 @@ caps.handback.revision: 33
 |[sysmail_update_profile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profile-sp-transact-sql.md)|Altera a descrição ou o nome de um perfil do Database Mail.|  
 |[sysmail_update_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)|Atualiza o número de sequência de uma conta dentro de um perfil do Database Mail.|  
   
-### Segurança  
+### <a name="security"></a>Segurança  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -172,7 +159,7 @@ caps.handback.revision: 33
 |[sysmail_help_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md)|Lista informações de perfil do Database Mail referentes a um determinado usuário de banco de dados.|  
 |[sysmail_update_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-principalprofile-sp-transact-sql.md)|Atualiza as informações de permissões de um determinado usuário de banco de dados.|  
   
-### Estado do sistema  
+### <a name="system-state"></a>Estado do sistema  
   
 |Nome|Descrição|  
 |----------|-----------------|  
@@ -184,6 +171,5 @@ caps.handback.revision: 33
   
 -   [Registro em log e auditoria do Database Mail](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   
- [&#91;Início&#93;](#Top)  
   
   

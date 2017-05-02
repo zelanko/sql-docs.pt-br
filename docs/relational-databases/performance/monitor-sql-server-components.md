@@ -1,22 +1,26 @@
 ---
-title: "Monitorar componentes do SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Monitorar os componentes do SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Monitorar componentes do SQL Server
+# <a name="monitor-sql-server-components"></a>Monitorar componentes do SQL Server
   Monitorar é importante porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece serviço em um ambiente dinâmico. Os dados mudam no aplicativo. O tipo de acesso de que os usuários precisam muda. O modo de conexão dos usuários muda. Os tipos de aplicativos que acessam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem até mudar, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerencia automaticamente os recursos em nível de sistema, como a memória e o espaço em disco, a fim de minimizar a necessidade de ajustes manuais abrangentes em nível de sistema. O monitoramento permite aos administradores identificar tendências de desempenho para determinar se são necessárias alterações.  
   
  Para monitorar qualquer componente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com eficiência:  
@@ -35,7 +39,7 @@ caps.handback.revision: 8
   
  Cada uma destas etapas é discutida a seguir.  
   
-## Determine suas metas de monitoramento  
+## <a name="determine-your-monitoring-goals"></a>Determine suas metas de monitoramento  
  Para monitorar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com eficiência, você deve identificar claramente o motivo do monitoramento. Podem ser motivos:  
   
 -   Estabelecer uma linha de base de desempenho.  
@@ -60,7 +64,7 @@ caps.handback.revision: 8
   
 -   Determinar quando modificar sua configuração de hardware.  
   
-## Selecione a ferramenta apropriada  
+## <a name="select-the-appropriate-tool"></a>Selecione a ferramenta apropriada  
  Depois de determinar o motivo do monitoramento, selecione as ferramentas apropriadas para esse tipo de monitoramento. O sistema operacional Windows e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornecem um conjunto completo de ferramentas para monitorar servidores em ambientes com grande volume de transações. Essas ferramentas revelam claramente a condição de uma instância do Mecanismo de Banco de Dados do SQL Server ou de uma instância do SQL Server Analysis Services.  
   
  O Windows fornece as seguintes ferramentas para monitorar aplicativos em execução em um servidor:  
@@ -93,18 +97,18 @@ caps.handback.revision: 8
   
 -   Sinalizadores de rastreamento  
   
- Para obter mais informações sobre os ferramentas de monitoramento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Ferramentas para monitoramento e ajuste de desempenho](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md).  
+ Para obter mais informações sobre os ferramentas de monitoramento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , veja [Ferramentas para monitoramento e ajuste de desempenho](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md).  
   
-## Identifique os componentes a monitorar  
+## <a name="identify-the-components-to-monitor"></a>Identifique os componentes a monitorar  
  A terceira etapa para monitorar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é identificar os componentes a monitorar. Por exemplo, se estiver usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para rastrear um servidor, você poderá definir que o rastreamento colete dados sobre eventos específicos. Também é possível excluir eventos que não se aplicam à situação.  
   
-## Selecione a métrica para os componentes monitorados  
+## <a name="select-metrics-for-monitored-components"></a>Selecione a métrica para os componentes monitorados  
  Tendo identificado os componentes a monitorar, determine a métrica para esses componentes. Por exemplo, após selecionar os eventos a serem considerados por um rastreamento, você pode optar por incluir apenas dados específicos sobre os eventos. Limitar o rastreamento aos dados relevantes minimiza os recursos de sistema necessários para realizá-lo.  
   
-## Monitore o servidor  
+## <a name="monitor-the-server"></a>Monitore o servidor  
  Para monitorar o servidor, execute a ferramenta de monitoramento que você configurou para reunir dados. Por exemplo, após definir um rastreamento, você pode executá-lo para reunir dados sobre os eventos ocorridos no servidor.  
   
-## Analise os dados  
+## <a name="analyze-the-data"></a>Analise os dados  
  Terminado o rastreamento, analise os dados para ver se a meta do monitoramento foi atingida. Em caso negativo, modifique os componentes ou a métrica utilizada para monitorar o servidor.  
   
  Segue, abaixo, uma descrição do processo da captura de dados de eventos e sua disposição para uso.  
@@ -115,7 +119,7 @@ caps.handback.revision: 8
   
 2.  Monitore (capture) os eventos.  
   
-     Assim que é habilitado, o monitoramento ativo captura dados do aplicativo, da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do sistema operacional especificado. Por exemplo, quando a atividade do disco é monitorada por meio do Monitor do Sistema, o monitoramento captura dados de eventos, como leituras e gravações de disco, e os exibe na tela. Para obter mais informações, veja [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
+     Assim que é habilitado, o monitoramento ativo captura dados do aplicativo, da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou do sistema operacional especificado. Por exemplo, quando a atividade do disco é monitorada por meio do Monitor do Sistema, o monitoramento captura dados de eventos, como leituras e gravações de disco, e os exibe na tela. Para obter mais informações, veja [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
   
 3.  Salve os dados de eventos capturados.  
   

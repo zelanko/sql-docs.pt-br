@@ -1,32 +1,36 @@
 ---
-title: "Especificar tipo de armazenamento de arquivo usando bcp (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "utilitário bcp [SQL Server], tipos de armazenamento de arquivos"
-  - "importação de dados, tipos de armazenamento de arquivos"
-  - "formato de dados nativo [SQL Server]"
-  - "tipos de armazenamento de arquivo [SQL Server]"
-  - "formatos de dados [SQL Server], tipos de armazenamento de arquivos"
+title: Especificar tipo de armazenamento do arquivo usando bcp (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bcp utility [SQL Server], file storage types
+- importing data, file storage types
+- native data format [SQL Server]
+- file storage types [SQL Server]
+- data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fc454960a271c4fdfeb5e04337b2fb8ab1790127
+ms.lasthandoff: 04/11/2017
+
 ---
-# Especificar tipo de armazenamento de arquivo usando bcp (SQL Server)
+# <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Especificar tipo de armazenamento de arquivo usando bcp (SQL Server)
   O *tipo de armazenamento de arquivo* descreve como são armazenados os dados no arquivo de dados. Dados podem ser exportados para um arquivo de dados como seu tipo de tabela de banco de dados (formato nativo), em sua representação de caractere (formato de caractere) ou como qualquer tipo de dados em que há suporte para conversão implícita; por exemplo, copiando um **smallint** como um **int**. Os tipos de dados definidos pelo usuário como tipos básicos são exportados.  
   
-## Solicitação de bcp para o tipo de armazenamento de arquivo  
- Se um comando **bcp** interativo contiver a opção **in** ou **out** sem a opção do arquivo de formatos (**-f**) ou uma opção do formato de dados (**-n**, **-c**, **-w** ou **-N**), o comando solicitará o tipo de armazenamento de arquivos de cada campo de dados, da seguinte maneira:  
+## <a name="the-bcp-prompt-for-file-storage-type"></a>Solicitação de bcp para o tipo de armazenamento de arquivo  
+ Se um comando **bcp** interativo contiver a opção **in** ou **out** sem a opção do arquivo de formatos (**-f**) ou uma opção do formato de dados (**-n**, **-c**, **-w**ou **-N**), o comando solicitará o tipo de armazenamento de arquivos de cada campo de dados, da seguinte maneira:  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
@@ -38,14 +42,14 @@ caps.handback.revision: 31
   
 -   Para agrupar dados importados para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um arquivo de dados, especifique o tipo de armazenamento de arquivo como **char** para tipos armazenados no formato de caractere; e para dados armazenados no formato de tipo de dados nativo, especifique um dos tipos de armazenamento de arquivo como apropriado:  
   
-    |Tipo de armazenamento de arquivo|Digite no prompt de comando|  
+    |tipo de armazenamento de arquivo|Digite no prompt de comando|  
     |-----------------------|-----------------------------|  
     |**char***|**c**[**har**]|  
     |**varchar**|**c[har]**|  
     |**nchar**|**w**|  
     |**nvarchar**|**w**|  
     |**text***\*|**T**[**ext**]|  
-    |**ntext2**|**L**|  
+    |**ntext2**|**W**|  
     |**binary**|**x**|  
     |**varbinary**|**x**|  
     |**image***\*|**I**[**mage**]|  
@@ -69,17 +73,17 @@ caps.handback.revision: 31
     |**uniqueidentifier**|**u**|  
     |**sql_variant**|**V[ariant]**|  
     |**timestamp**|**x**|  
-    |UDT **um tipo de dados definido pelo usuário**|**U**|  
+    |um tipo de dados definido pelo usuário**um tipo de dados definido pelo usuário** |**U**|  
     |**XML**|**X**|  
   
-     \*A interação do tamanho do campo, do tamanho do prefixo e dos terminadores determina a quantidade de espaço de armazenamento alocado em um arquivo de dados para dados que não são de caractere que é exportada como o tipo de armazenamento de arquivos **char**.  
+     \*A interação do tamanho do campo, do tamanho do prefixo e dos terminadores determina a quantidade de espaço de armazenamento alocado em um arquivo de dados para dados que não são de caractere que é exportada como o tipo de armazenamento de arquivos **char** .  
   
-     \*\* Os tipos de dados **ntext**, **text** e **image** serão removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No novo projeto de desenvolvimento, evite usar esses tipos de dados e planeje modificar os aplicativos que atualmente os utilizam. Em vez disso, use **nvarchar(max)**, **varchar(max)** e **varbinary(max)**.  
+     \*\* Os tipos de dados **ntext**, **text**e **image** serão removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No novo projeto de desenvolvimento, evite usar esses tipos de dados e planeje modificar os aplicativos que atualmente os utilizam. Em vez disso, use **nvarchar(max)**, **varchar(max)**e **varbinary(max)** .  
   
-## Tipos de armazenamento de arquivos nativos  
+## <a name="native-file-storage-types"></a>Tipos de armazenamento de arquivos nativos  
  Cada tipo de armazenamento de arquivo nativo é registrado no arquivo de formato como um tipo de dados do arquivo host correspondente.  
   
-|Tipo de armazenamento de arquivo|Tipo de dados do arquivo host|  
+|tipo de armazenamento de arquivo|Tipo de dados do arquivo host|  
 |-----------------------|-------------------------|  
 |**char***|SQLCHAR|  
 |**varchar**|SQLCHAR|  
@@ -112,19 +116,19 @@ caps.handback.revision: 31
   
  \*\*Não é possível importar dados em massa para as colunas **text**, **ntext**, e **image** que têm valores PADRÃO.  
   
-## Considerações adicionais para tipos de armazenamento de arquivo  
+## <a name="additional-considerations-for-file-storage-types"></a>Considerações adicionais para tipos de armazenamento de arquivo  
  Quando você agrupa dados exportados de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um arquivo de dados:  
   
 -   Você sempre pode especificar **char** como o tipo de armazenamento de arquivo.  
   
 -   Se você inserir um tipo de armazenamento de arquivo que represente uma conversão implícita inválida, **bcp** falhará; por exemplo, embora você possa especificar **int** para dados **smallint** , se você especificar **smallint** para dados **int** , isso resultará em erros de estouro.  
   
--   Quando tipos de dados que não são de caractere, como **float**, **money**, **datetime** ou **int**, são armazenados como seus tipos de bancos de dados, os dados são gravados para o arquivo de dados no formato nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Quando tipos de dados que não são de caractere, como **float**, **money**, **datetime**ou **int** , são armazenados como seus tipos de bancos de dados, os dados são gravados para o arquivo de dados no formato nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     > [!NOTE]  
     >  Depois que você especificar interativamente todos os campos em um comando **bcp**, o comando solicitará que salve suas respostas para cada campo em um arquivo de formato não XML. Para obter mais informações sobre arquivos de formato não XML, veja [Arquivos de formato não XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Utilitário bcp](../../tools/bcp-utility.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Especificar tamanho do campo usando bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   

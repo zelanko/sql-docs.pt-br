@@ -1,32 +1,36 @@
 ---
-title: "Criar um grupo de carga de trabalho | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Administrador de Recursos, criar grupo de carga de trabalho"
-  - "grupos de cargas de trabalho [SQL Server], criar"
+title: Criar um grupo de carga de trabalho | Microsoft Docs
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, workload group create
+- workload groups [SQL Server], create
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 510473a5e51a911d4a642dcc78bc3a3408f65b87
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar um grupo de carga de trabalho
+# <a name="create-a-workload-group"></a>Criar um grupo de carga de trabalho
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Você pode criar um grupo de cargas de trabalho usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
--   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Para criar um grupo de cargas de trabalho, usando:** [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
+-   **To create a workload group, using:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -64,8 +68,8 @@ caps.handback.revision: 15
   
 2.  Execute a instrução ALTER RESOURCE GOVERNOR RECONFIGURE.  
   
-### Exemplo (Transact-SQL)  
- O exemplo a seguir cria um grupo de cargas de trabalho chamado `groupAdhoc` no pool de recursos chamado `poolAdhoc`.  
+### <a name="example-transact-sql"></a>Exemplo (Transact-SQL)  
+ O exemplo a seguir cria um grupo de cargas de trabalho chamado `groupAdhoc` no pool de recursos chamado `poolAdhoc`.  
   
 ```  
 CREATE WORKLOAD GROUP groupAdhoc  
@@ -75,7 +79,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Criar um pool de recursos](../../relational-databases/resource-governor/create-a-resource-pool.md)   
@@ -86,3 +90,4 @@ GO
  [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)  
   
   
+

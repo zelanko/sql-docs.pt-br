@@ -1,31 +1,35 @@
 ---
-title: "Modificando dados em uma tabela temporal com controle da vers&#227;o do sistema | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Modificando dados em uma tabela temporal com controle de versão do sistema | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 caps.latest.revision: 8
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b3f59affdbe29e3dddf777b22322a5503e69caa1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modificando dados em uma tabela temporal com controle da vers&#227;o do sistema
+# <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Modificando dados em uma tabela temporal com controle da versão do sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Os dados em uma tabela temporal com controle da versão do sistema são modificados usando as instruções DML regulares com uma diferença importante: os dados de coluna do período não podem ser modificados diretamente. Quando os dados são atualizados, eles recebem a versão anterior de cada linha atualizada inserida na tabela de histórico. Quando dados são excluídos, a exclusão é lógica, com a linha movida para a tabela de histórico da tabela atual - ele não será excluído permanentemente.  
   
-## Inserindo dados  
+## <a name="inserting-data"></a>Inserindo dados  
  Quando você insere novos dados, precisa levar em conta as colunas **PERIOD** se não forem **HIDDEN**. Você também pode usar alternância de partição com tabelas temporais com controle da versão do sistema.  
   
-### Inserir novos dados com colunas de período visíveis  
+### <a name="insert-new-data-with-visible-period-columns"></a>Inserir novos dados com colunas de período visíveis  
  Você pode construir sua instrução **INSERT** quando tiver colunas visíveis **PERIOD** da seguinte maneira para considerar as novas colunas **PERIOD** :  
   
 -   Se você especificar a lista de colunas em sua instrução **INSERT** , poderá omitir as colunas **PERIOD** porque o sistema irá gerar valores automaticamente para essas colunas.  
@@ -54,7 +58,7 @@ caps.handback.revision: 8
   
     ```  
   
-### Inserir dados em uma tabela com colunas de período HIDDEN  
+### <a name="insert-data-into-a-table-with-hidden-period-columns"></a>Inserir dados em uma tabela com colunas de período HIDDEN  
  Se as colunas **PERIOD** forem especificadas como HIDDEN, você só precisará especificar os valores para as colunas visíveis quando usar INSERT sem especificar a lista de colunas. Não é necessário levar em conta a nova coluna **PERIOD** em sua instrução **INSERT** . Esse comportamento garante que seus aplicativos herdados continuem a funcionar quando você habilita o controle de versão do sistema em tabelas que se beneficiam disso.  
   
 ```  
@@ -74,7 +78,7 @@ VALUES  ('Headquarters', 'New York');
   
 ```  
   
-### Inserindo dados usando PARTITION SWITCH  
+### <a name="inserting-data-using-partition-switch"></a>Inserindo dados usando PARTITION SWITCH  
  Se a tabela atual estiver particionada, você poderá usar a alternância de partição como um mecanismo eficiente para carregar dados em uma partição vazia ou em várias partições em paralelo.   
 A tabela de preparo é usada na instrução **PARTITION SWITCH IN** com uma tabela temporal com controle da versão do sistema deve ter **SYSTEM_TIME PERIOD** definido, mas não precisa ser uma tabela temporal com controle da versão do sistema.    
 Isso garante que as verificações de consistência temporais são executadas durante a inserção de dados em uma tabela de preparo ou quando o período SYSTEM_TIME é adicionado a uma tabela de preparo preenchida previamente.  
@@ -121,11 +125,11 @@ SWITCH TO [dbo].[Department] PARTITION 2;
   
  Se você tentar realizar o PARTITION SWITCH de uma tabela sem definição de período, obterá uma mensagem de erro: `Msg 13577, Level 16, State 1, Line 25    ALTER TABLE SWITCH statement failed on table 'MyDB.dbo.Staging_Department_2015_09_26' because target table has SYSTEM_TIME PERIOD while source table does not have it.`  
   
-## Atualizando dados  
+## <a name="updating-data"></a>Atualizando dados  
  Atualize os dados na tabela atual com uma instrução **UPDATE** regular. Você pode atualizar dados na tabela atual da tabela de histórico para o cenário de "ops". No entanto, não é possível atualizar as colunas **PERIOD** e não pode atualizar dados diretamente na tabela de histórico enquanto **SYSTEM_VERSIONING = ON**.   
 Defina **SYSTEM_VERSIONING = OFF** e atualize as linhas da tabela atual e de histórico, mas tenha em mente que, dessa maneira, o sistema não guardará o histórico de alterações.  
   
-### Atualizando a tabela atual  
+### <a name="updating-the-current-table"></a>Atualizando a tabela atual  
  Neste exemplo, a coluna ManagerID é atualizada para cada linha onde DeptID = 10. As colunas **PERIOD** não são referenciadas de qualquer maneira.  
   
 ```  
@@ -144,7 +148,7 @@ Cannot update GENERATED ALWAYS columns in table 'TmpDev.dbo.Department'.
   
 ```  
   
-### Atualizando a tabela atual da tabela de histórico  
+### <a name="updating-the-current-table-from-the-history-table"></a>Atualizando a tabela atual da tabela de histórico  
  Você pode usar **UPDATE** na tabela atual para reverter o estado real da linha para um estado válido em um ponto específico no passado (reversão para uma “última versão de linha boa conhecida”). O exemplo a seguir mostra a reversão para os valores na tabela de histórico em 25-04-2015 onde o DeptID = 10.  
   
 ```  
@@ -157,13 +161,13 @@ AND Department.DeptID = 10 ;
   
 ```  
   
-## Excluindo dados  
+## <a name="deleting-data"></a>Excluindo dados  
  Exclua os dados na tabela atual com uma instrução **DELETE** regular. A coluna do período final para linhas excluídas será preenchida com a hora de início da transação subjacente.   
 Não é possível excluir linhas diretamente da tabela de histórico enquanto **SYSTEM_VERSIONING = ON**.   
 Defina **SYSTEM_VERSIONING = OFF** e exclua as linhas da tabela atual e de histórico, mas tenha em mente que, dessa maneira, o sistema não guardará o histórico de alterações.   
-Não há suporte para **TRUNCATE**, **SWITCH PARTITION OUT** da tabela atual nem para **SWITCH PARTITION IN** da tabela de histórico quando **SYSTEM_VERSIONING = ON**.  
+Não há suporte para**TRUNCATE**, **SWITCH PARTITION OUT** da tabela atual nem para **SWITCH PARTITION IN** da tabela de histórico quando **SYSTEM_VERSIONING = ON**.  
   
-## Usando MERGE para modificar dados em tabela temporal  
+## <a name="using-merge-to-modify-data-in-temporal-table"></a>Usando MERGE para modificar dados em tabela temporal  
  A operação**MERGE** não tem suporte com as mesmas limitações que as instruções **INSERT** e **UPDATE** têm em relação a colunas **PERIOD** .  
   
 ```  
@@ -185,10 +189,10 @@ WHEN NOT MATCHED THEN
   
 ```  
   
-## Este artigo foi útil para você? Estamos atentos  
+## <a name="did-this-article-help-you-were-listening"></a>Este artigo foi útil para você? Estamos atentos  
  Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Modifying%20Data%20in%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tabelas temporais](../../relational-databases/tables/temporal-tables.md)   
  [Como criar uma tabela temporal com controle da versão do sistema](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)   
  [Consultando dados em uma tabela temporal com controle da versão do sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)   
@@ -196,3 +200,4 @@ WHEN NOT MATCHED THEN
  [Parando o controle de versão do sistema de uma tabela temporal com versão do sistema](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

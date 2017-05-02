@@ -1,30 +1,34 @@
 ---
-title: "Instant&#226;neos de banco de dados (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exibições de banco de dados estáticas"
-  - "instantâneos [instantâneos de bancos de dados do SQL Server]"
-  - "bancos de dados de origem [SQL Server]"
-  - "instantâneos [instantâneos do banco de dados do SQL Server] sobre instantâneos do banco de dados"
-  - "instantâneos do banco de dados [SQL Server]"
-  - "exibições de banco de dados somente leitura"
-  - "instantâneos do banco de dados [SQL Server], sobre instantâneos do banco de dados"
+title: "Instantâneos do banco de dados (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- static database views
+- snapshots [SQL Server database snapshots]
+- source databases [SQL Server]
+- snapshots [SQL Server database snapshots], about database snapshots
+- database snapshots [SQL Server]
+- read-only database views
+- database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1087898fae9896722e795f2c6c68c5df20d0f3aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Instant&#226;neos de banco de dados (SQL Server)
+# <a name="database-snapshots-sql-server"></a>Instantâneos de banco de dados (SQL Server)
   Um instantâneo de banco de dados é uma exibição estática somente leitura de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o *banco de dados de origem*). O instantâneo de banco de dados é transacionalmente consistente com o banco de dados de origem a partir do momento da criação do instantâneo. Um instantâneo de um banco de dados sempre reside na mesma instância de servidor que o banco de dados de origem. Quando o banco de dados de origem é atualizado, o instantâneo do banco de dados é atualizado. Portanto, quanto mais tempo o instantâneo de banco de dados existir, maior será a probabilidade de ele usar todo o espaço em disco disponível.  
   
  Vários instantâneos podem existir em um banco de dados de origem. Cada instantâneo de banco de dados persiste até que seja explicitamente removido pelo proprietário do banco de dados.  
@@ -49,7 +53,7 @@ caps.handback.revision: 54
   
  Para armazenar as páginas originais copiadas, o instantâneo usa um ou mais *arquivos esparsos*. Inicialmente, um arquivo esparso é, essencialmente, um arquivo vazio que não contém dados de usuário e no qual ainda não foi alocado espaço em disco para os dados do usuário. À medida que mais páginas são atualizadas no banco de dados de origem, o tamanho do arquivo aumenta. A figura a seguir mostra os efeitos de dois padrões de atualização contrastantes no tamanho de um instantâneo. O padrão de atualização A reflete um ambiente em que apenas 30% das páginas originais são atualizadas durante a vida do instantâneo. O padrão de atualização B reflete um ambiente em que 80% das páginas originais são atualizadas durante a vida do instantâneo.  
   
- ![Padrões alternativos de atualização e tamanho do instantâneo](../../relational-databases/databases/media/dbview-04.gif "Padrões alternativos de atualização e tamanho do instantâneo")  
+ ![Padrões de atualização alternativos e tamanho do instantâneo](../../relational-databases/databases/media/dbview-04.gif "Padrões de atualização alternativos e tamanho do instantâneo")  
   
 ##  <a name="Benefits"></a> Benefícios dos instantâneos de banco de dados  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 54
 ###  <a name="Prerequisites"></a> Pré-requisitos  
  O banco de dados de origem, que pode usar qualquer modelo de recuperação, deve atender aos seguintes pré-requisitos:  
   
--   A instância de servidor deve estar sendo executada em uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que oferece suporte a instantâneos de banco de dados. Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   A instância de servidor deve estar sendo executada em uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que oferece suporte a instantâneos de banco de dados. Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   O banco de dados de origem precisa estar online, a menos que se trate de um banco de dados espelho dentro de uma sessão de espelhamento de banco de dados.  
   
@@ -234,7 +238,9 @@ caps.handback.revision: 54
   
 -   [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Espelhamento de banco de dados e instantâneos de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   
+
+

@@ -1,24 +1,28 @@
 ---
-title: "Criar um plano de manuten&#231;&#227;o (Superf&#237;cie de Design do Plano de Manuten&#231;&#227;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Superfície de Design do Plano de Manutenção"
+title: "Criar um plano de manutenção (superfície de design do plano de manutenção) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Maintenance Plan Design Surface
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 616b2d7d823d8a273b3ac260339bb76fba65dd00
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar um plano de manuten&#231;&#227;o (Superf&#237;cie de Design do Plano de Manuten&#231;&#227;o)
+# <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Criar um plano de manutenção (Superfície de Design do Plano de Manutenção)
   Este tópico descreve como criar um plano de manutenção de servidor único ou vários servidores usando a Superfície de Design do Plano de Manutenção no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Embora o **Assistente de Plano de Manutenção** seja melhor para criar planos de manutenção básicos, a criação de planos usando a superfície de design permite utilizar o fluxo de trabalho aprimorado.  
   
  **Neste tópico**  
@@ -37,7 +41,7 @@ caps.handback.revision: 10
   
 -   Para criar um plano de manutenção multisservidor, é necessário configurar um ambiente multisservidor contendo um servidor mestre e um ou mais servidores de destino. Devem ser criados e mantidos planos de manutenção multisservidor no servidor mestre. Os planos podem ser exibidos, mas não mantidos, nos servidores de destino.  
   
--   Os membros das funções **db_ssisadmin** e **dc_admin** podem elevar seus privilégios para **sysadmin**. Essa elevação de privilégios pode ocorrer porque essas funções podem modificar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ; esses pacotes podem ser executados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o contexto de segurança **sysadmin** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para se proteger contra essa elevação de privilégio ao executar planos de manutenção, conjuntos de coletas de dados e outros pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], configure os trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que executam pacotes para usar uma conta proxy com privilégios limitados ou apenas adicione membros **sysadmin** às funções **db_ssisadmin** e **dc_admin**.  
+-   Os membros das funções **db_ssisadmin** e **dc_admin** podem elevar seus privilégios para **sysadmin**. Essa elevação de privilégios pode ocorrer porque essas funções podem modificar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ; esses pacotes podem ser executados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o contexto de segurança **sysadmin** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para se proteger contra essa elevação de privilégio ao executar planos de manutenção, conjuntos de coletas de dados e outros pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure os trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que executam pacotes para usar uma conta proxy com privilégios limitados ou apenas adicione membros **sysadmin** às funções **db_ssisadmin** e **dc_admin** .  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 10
   
 ##  <a name="SSMSProcedure"></a> Usando a Superfície de Design do Plano de Manutenção  
   
-#### Para criar um plano de manutenção  
+#### <a name="to-create-a-maintenance-plan"></a>Para criar um plano de manutenção  
   
 1.  No Pesquisador de Objetos, clique no sinal de adição para expandir o servidor em que você deseja criar um plano de manutenção.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 10
      Adiciona um subplano que você pode configurar.  
   
      **Propriedades do Subplano**  
-     Exibe a caixa de diálogo **Propriedades do Subplano** do subplano selecionado na grade principal. Alternativamente, clique duas vezes no subplano na grade para exibir a caixa de diálogo **Propriedades do Subplano**. Consulte abaixo para obter mais informações sobre essa caixa de diálogo.  
+     Exibe a caixa de diálogo **Propriedades do Subplano** do subplano selecionado na grade principal. Alternativamente, clique duas vezes no subplano na grade para exibir a caixa de diálogo **Propriedades do Subplano** . Consulte abaixo para obter mais informações sobre essa caixa de diálogo.  
   
      **Exclua o Subplano Selecionado**  
      Exclui o subplano selecionado.  
@@ -74,13 +78,13 @@ caps.handback.revision: 10
      Remove uma agenda do subplano selecionado.  
   
      **Gerenciar Conexões**  
-     Exibe a caixa de diálogo **Gerenciar Conexões**. Usado para adicionar conexões de instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adicionais ao plano de manutenção. Consulte abaixo para obter mais informações sobre essa caixa de diálogo.  
+     Exibe a caixa de diálogo **Gerenciar Conexões** . Usado para adicionar conexões de instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adicionais ao plano de manutenção. Consulte abaixo para obter mais informações sobre essa caixa de diálogo.  
   
      **Relatório e Registro em Log**  
-     Exibe a caixa de diálogo **Relatório e Registro em Log**. Consulte abaixo para obter mais informações sobre essa caixa de diálogo.  
+     Exibe a caixa de diálogo **Relatório e Registro em Log** . Consulte abaixo para obter mais informações sobre essa caixa de diálogo.  
   
      **Servidores**  
-     Exiba a caixa de diálogo **Servidores**, que é usada para selecionar os servidores em que serão executadas as tarefas do subplano. Essa opção só está habilitada em servidores mestre em ambientes multisservidor. Para obter mais informações, consulte [Criar um ambiente multisservidor](../../ssms/agent/create-a-multiserver-environment.md) e [Plano de manutenção &#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
+     Exiba a caixa de diálogo **Servidores** , que é usada para selecionar os servidores em que serão executadas as tarefas do subplano. Essa opção só está habilitada em servidores mestre em ambientes multisservidor. Para obter mais informações, consulte [Criar um ambiente multisservidor](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6) e [Plano de manutenção &#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
   
      **Nome**  
      Exibe o nome do plano de manutenção. Para planos de manutenção novos, o nome é especificado em uma caixa de diálogo antes que o designer de plano de manutenção seja aberto. Para renomear um plano de manutenção, clique com o botão direito do mouse no plano no Pesquisador de Objetos e clique em **Renomear**.  
@@ -93,7 +97,7 @@ caps.handback.revision: 10
   
      Um link de precedência entre duas tarefas estabelece uma relação entre elas. A segunda tarefa (a *tarefa dependente*) é executada somente se o resultado da execução da primeira tarefa (a *tarefa precedente*) corresponde aos critérios especificados. Normalmente o resultado da execução especificado é **Êxito**, **Falha**ou **Conclusão**. Para obter mais informações, consulte a etapa **8** abaixo.  
   
-5.  No cabeçalho do espaço de design, clique duas vezes em **Subplano_1** e insira um nome e uma descrição para o subplano na caixa de diálogo **Propriedades do Subplano**.  
+5.  No cabeçalho do espaço de design, clique duas vezes em **Subplano_1** e insira um nome e uma descrição para o subplano na caixa de diálogo **Propriedades do Subplano** .  
   
      As opções a seguir estão disponíveis na caixa de diálogo **Propriedades do Subplano** .  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 10
      **Agenda**  
      Indica em qual agendamento o subplano será executado. Clique em **Agenda do Subplano** para abrir a caixa de diálogo **Nova Agenda de Trabalho** . Clique em **Remover Agenda** para excluir a agenda do subplano.  
   
-     Lista **Executar como**  
+     Lista**Executar como**   
      Selecione a conta a ser usada para executar esta subtarefa.  
   
 6.  Clique no ícone **Agenda do Subplano** para inserir detalhes de agenda na caixa de diálogo **Nova Agenda de Trabalho** .  
@@ -158,17 +162,17 @@ caps.handback.revision: 10
          **Opção de restrição**  
          Define como uma restrição funciona entre duas tarefas.  
   
-         Lista **Operação de avaliação**  
+         Lista**Operação de avaliação**    
          Especifica a operação de avaliação usada pela restrição de precedência. As operações são: **Constraint**, **Expression**, **Expression and Constraint**e **Expression or Constraint**.  
   
-         Lista **Valor**  
-         Especifique o valor de restrição: **Êxito**, **Falha** ou **Conclusão**. **Êxito** é o padrão.  
+         Lista**Valor**   
+         Especifique o valor de restrição: **Êxito**, **Falha**ou **Conclusão**. **Êxito** é o padrão.  
   
         > [!NOTE]  
-        >  A linha de restrição de precedência é verde para **Êxito**, vermelha para **Falha** e azul para **Conclusão**.  
+        >  A linha de restrição de precedência é verde para **Êxito**, vermelha para **Falha**e azul para **Conclusão**.  
   
-         **Expressão**  
-         Se usar as operações **Expression**, **Expression and Constraint** ou **Expression or Constraint**, digite uma expressão. A expressão deve ser avaliada como um booliano.  
+         **Expression**  
+         Se usar as operações **Expression**, **Expression and Constraint**ou **Expression or Constraint**, digite uma expressão. A expressão deve ser avaliada como um booliano.  
   
          **Teste**  
          Valide a expressão.  
@@ -198,7 +202,7 @@ caps.handback.revision: 10
   
     3.  Na caixa de diálogo **Propriedades de Conexão** , na caixa **Nome da conexão** , insira o nome da conexão que você está criando.  
   
-    4.  Em **Especifique o seguinte para conectar-se aos dados do SQL Server**, na caixa **Selecione ou digite um nome de servidor**, digite o nome do SQL Server que deseja usar ou clique nas reticências **(…)** e selecione um servidor na caixa de diálogo **SQL Server**. Se você selecionar um servidor na caixa de diálogo **SQL Server** , clique em **OK**.  
+    4.  Em **Especifique o seguinte para conectar-se aos dados do SQL Server**, na caixa **Selecione ou digite um nome de servidor** , digite o nome do SQL Server que deseja usar ou clique nas reticências **(…)** e selecione um servidor na caixa de diálogo **SQL Server** . Se você selecionar um servidor na caixa de diálogo **SQL Server** , clique em **OK**.  
   
     5.  Em **Insira as informações para fazer logon no servidor**, selecione **Usar Segurança Integrada do Windows NT** ou **Usar nome de usuário e senha específicos**. Se você optar por usar um nome e uma senha de usuário específicos, insira essas informações nas caixas **Nome de usuário** e **Senha** , respectivamente.  
   
@@ -214,7 +218,7 @@ caps.handback.revision: 10
   
         1.  Se você selecionar **Gerar um relatório de arquivo de texto**, selecione **Criar um novo arquivo** ou **Acrescentar ao arquivo**.  
   
-        2.  Dependendo da seleção acima, insira o nome e o caminho completo do novo arquivo ou do arquivo a ser adicionado inserindo as informações nas caixas **Pasta** ou **Nome do arquivo** . Como alternativa, clique nas reticências **(…)** e selecione o caminho para a pasta ou nome de arquivo nas caixas de diálogo **Localizar Pasta –***server_name* ou **Localizar Arquivos de Banco de Dados –***server_name*.  
+        2.  Dependendo da seleção acima, insira o nome e o caminho completo do novo arquivo ou do arquivo a ser adicionado inserindo as informações nas caixas **Pasta** ou **Nome do arquivo** . Como alternativa, clique nas reticências **(…)** e selecione o caminho para a pasta ou nome de arquivo nas caixas de diálogo **Localizar Pasta –***server_name* ou **Localizar Arquivos de Banco de Dados –***server_name* .  
   
         3.  Se você selecionar **Enviar relatório para um destinatário de email**, na lista **Operador do agente** , selecione o destinatário do relatório enviado por e-mail.  
   
@@ -229,7 +233,7 @@ caps.handback.revision: 10
   
 12. Para exibir os resultados no visualizador de arquivo de log, no **Pesquisador de Objetos**, clique com o botão direito do mouse na pasta **Planos de Manutenção** ou no plano de manutenção específico e selecione **Exibir Histórico**.  
   
-     As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do Arquivo de Log –***server_name*.  
+     As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do Arquivo de Log –***server_name* .  
   
      **Carregar Log**  
      Abra uma caixa de diálogo onde seja possível especificar um arquivo de log a ser carregado.  
@@ -241,7 +245,7 @@ caps.handback.revision: 10
      Atualize a exibição dos logs selecionados. O botão **Atualizar** relê os logs selecionados do servidor de destino ao aplicar qualquer configuração de filtro.  
   
      **Filtro**  
-     Abra uma caixa de diálogo que permita especificar configurações usadas para filtrar o arquivo de log, como **Conexão**, **Data** ou outros critérios de filtragem **Gerais**.  
+     Abra uma caixa de diálogo que permita especificar configurações usadas para filtrar o arquivo de log, como **Conexão**, **Data**ou outros critérios de filtragem **Gerais** .  
   
      **Pesquisa**  
      Pesquise o texto específico no arquivo de log. Não há suporte à pesquisa com caracteres curinga.  
@@ -250,7 +254,7 @@ caps.handback.revision: 10
      Interrompe o carregamento das entradas do arquivo de log. Por exemplo, você poderá usar essa opção se um arquivo de log remoto ou offline demorar muito tempo para ser carregado e você desejar exibir apenas as entradas mais recentes.  
   
      **Resumo do arquivo de log**  
-     Esse painel de informações exibe um resumo da filtragem do arquivo de log. Se o arquivo não for filtrado, você verá o seguinte texto, **Nenhum filtro aplicado**. Se um filtro for aplicado ao log, você verá o seguinte texto **Filtrar entradas do log onde:** \<critérios de filtro>.  
+     Esse painel de informações exibe um resumo da filtragem do arquivo de log. Se o arquivo não for filtrado, você verá o seguinte texto, **Nenhum filtro aplicado**. Se um filtro for aplicado ao log, você verá o seguinte texto **Filtrar entradas do log, em que:**  \<filter criteria>.  
   
      **Data**  
      Exibe a data do evento.  

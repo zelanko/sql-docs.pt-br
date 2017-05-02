@@ -1,29 +1,33 @@
 ---
-title: "Salvar eventos de Plano de Execu&#231;&#227;o XML separadamente (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "eventos de Plano de Execução XML"
-  - "salvando eventos de Plano de Execução XML"
-  - "eventos [SQL Server], Plano de execução XML"
+title: "Salvar eventos do plano de execução XML separadamente (SQL Server Profiler) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan XML events
+- saving Showplan XML events
+- events [SQL Server], Showplan XML
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e92884b770e55cbd1b34203d7979041ee3821159
+ms.lasthandoff: 04/11/2017
+
 ---
-# Salvar eventos de Plano de Execu&#231;&#227;o XML separadamente (SQL Server Profiler)
+# <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Salvar eventos de Plano de Execução XML separadamente (SQL Server Profiler)
   Esse tópico descreve como salvar eventos **Showplan XML** capturados nos rastreamentos em arquivos .SQLPlan separados, por meio do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Você pode abrir os arquivos de eventos **Showplan XML** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o que permite visualizar o plano de execução gráfico de cada evento.  
   
-### Para salvar eventos de Plano de Execução XML separadamente  
+### <a name="to-save-showplan-xml-events-separately"></a>Para salvar eventos de Plano de Execução XML separadamente  
   
 1.  No menu **Arquivo** , clique em **Novo Rastreamento**e conecte a uma instância do SQL Server.  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 25
   
 11. Para visualizar o arquivo do evento **Showplan XML** no SQL Server Management Studio, no menu **Arquivo** , aponte para **Abrir**e clique em **Arquivo**. Navegue até o diretório em que você salvou o arquivo (ou arquivos) de evento **Showplan XML** para selecioná-lo e abri-lo. Os arquivos de evento**Showplan XML** têm a extensão .SQLPlan.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Analisar consultas com resultados do Plano de Execução no SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

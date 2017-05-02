@@ -1,38 +1,42 @@
 ---
-title: "Classe de evento Broker:Conversation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Classe de evento Broker:Conversation"
+title: Classe de evento Broker:Conversation | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Conversation event class
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e7161ab04ec24504b6ba0a5f6e7cd304166b7b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento Broker:Conversation
+# <a name="brokerconversation-event-class"></a>Classe de evento Broker:Conversation
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera uma classe de evento **Broker:Conversa** para relatar o progresso de uma conversa do Agente de Serviços.  
   
-## Colunas de dados da classe de evento Broker:Conversation  
+## <a name="brokerconversation-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Conversation  
   
 |Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores transmitidos pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|A ID atribuída pelo computador host ao processo em que está sendo executado o aplicativo cliente. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
-|**DatabaseID**|**int**|A ID do banco de dados que é especificada pela instrução de *banco de dados* USE. A ID do banco de dados padrão, se nenhuma instrução de *banco de dados* USE tiver sido emitida. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor de um banco de dados usando a função **DB_ID**.|3|Sim|  
+|**DatabaseID**|**int**|A ID do banco de dados que é especificada pela instrução de *banco de dados* USE. A ID do banco de dados padrão, se nenhuma instrução de *banco de dados*USE tiver sido emitida. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor de um banco de dados usando a função **DB_ID** .|3|Sim|  
 |**EventClass**|**int**|O tipo de classe de evento capturado. Sempre **124** para **Broker:Conversa**.|27|Não|  
 |**EventSequence**|**int**|Número de sequência para esse evento.|51|Não|  
 |**EventSubClass**|**nvarchar**|O tipo de subclasse de evento. Esse tipo fornece mais informações sobre cada classe de evento.|21|Sim|  
 |**GUID**|**uniqueidentifier**|A identificação de conversa do diálogo. Esse identificador é transmitido como parte da mensagem e é compartilhado por ambos os lados da conversa.|54|Não|  
-|**HostName**|**nvarchar**|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função **HOST_NAME**.|8|Sim|  
+|**HostName**|**nvarchar**|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função **HOST_NAME** .|8|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário.<br /><br /> 0 = usuário<br /><br /> 1 = sistema|60|Não|  
 |**LoginSid**|**image**|Número SID (identificação de segurança) do usuário que fez logon. Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |**MethodName**|**nvarchar**|O grupo de conversa ao qual a conversa pertence.|47|Não|  
@@ -67,13 +71,13 @@ caps.handback.revision: 33
 |6|Received Sequenced Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **Received Sequenced Message** quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recebe uma mensagem que contém um número de sequência de mensagem. Todos os tipos de mensagens definidos pelo usuário são mensagens sequenciadas. [!INCLUDE[ssSB](../../includes/sssb-md.md)] gera uma mensagem não sequenciada em dois casos:<br /><br /> Mensagens de erro geradas pelo [!INCLUDE[ssSB](../../includes/sssb-md.md)] não são sequenciadas.<br /><br /> Confirmações de mensagens podem não ter sequência. Para eficiência, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] inclui a mensagem de qualquer confirmação disponível como parte de uma mensagem sequenciada. Porém, se um aplicativo não enviar uma mensagem sequenciada para o ponto de extremidade remoto em um período específico, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] criará uma mensagem não sequenciada para a confirmação da mensagem.|  
 |7|Received END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento Received END CONVERSATION quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recebe uma mensagem End Dialog do outro lado da conversa.|  
 |8|Received END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **Received END CONVERSATION WITH ERROR** quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recebe um erro definido pelo usuário do outro lado da conversa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não gera esse evento quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recebe um erro definido pelo agente.|  
-|9|Received Broker Error Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **Received Broker Error Message** quando o [!INCLUDE[ssSB](../../includes/sssb-md.md)] recebe uma mensagem de erro definida pelo agente do outro lado da conversa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não gera esse evento quando o [!INCLUDE[ssSB](../../includes/sssb-md.md)] recebe uma mensagem de erro gerada por um aplicativo.<br /><br /> Por exemplo, se o banco de dados atual contiver uma rota padrão para um banco de dados de encaminhamento, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] encaminhará uma mensagem com um nome de serviço desconhecido para o banco de dados de encaminhamento. Se esse banco de dados não puder rotear a mensagem, o agente nesse banco de dados criará uma mensagem de erro e retornará essa mensagem de erro para o banco de dados atual. Quando o banco de dados atual recebe o erro gerado pelo agente do banco de dados de encaminhamento, o banco de dados atual gera um evento **Received Broker Error Message**.|  
+|9|Received Broker Error Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **Received Broker Error Message** quando o [!INCLUDE[ssSB](../../includes/sssb-md.md)] recebe uma mensagem de erro definida pelo agente do outro lado da conversa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não gera esse evento quando o [!INCLUDE[ssSB](../../includes/sssb-md.md)] recebe uma mensagem de erro gerada por um aplicativo.<br /><br /> Por exemplo, se o banco de dados atual contiver uma rota padrão para um banco de dados de encaminhamento, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] encaminhará uma mensagem com um nome de serviço desconhecido para o banco de dados de encaminhamento. Se esse banco de dados não puder rotear a mensagem, o agente nesse banco de dados criará uma mensagem de erro e retornará essa mensagem de erro para o banco de dados atual. Quando o banco de dados atual recebe o erro gerado pelo agente do banco de dados de encaminhamento, o banco de dados atual gera um evento **Received Broker Error Message** .|  
 |10|Received END CONVERSATION Ack|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera uma classe de evento **Received END CONVERSATION Ack** quando o outro lado de uma conversa confirma uma mensagem End Dialog ou Error enviada por este lado da conversa.|  
 |11|BEGIN DIALOG|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **BEGIN DIALOG** quando o Mecanismo de Banco de Dados executa um comando BEGIN DIALOG.|  
 |12|Dialog Created|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **Dialog Created** quando o [!INCLUDE[ssSB](../../includes/sssb-md.md)] cria um ponto de extremidade para um diálogo. [!INCLUDE[ssSB](../../includes/sssb-md.md)] cria um ponto de extremidade sempre que um novo diálogo é estabelecido, independentemente de o banco de dados atual ser o iniciador ou o destino do diálogo.|  
 |13|END CONVERSATION WITH CLEANUP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento END CONVERSATION WITH CLEANUP quando o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa uma instrução END CONVERSATION que inclui a cláusula WITH CLEANUP.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

@@ -1,37 +1,41 @@
 ---
-title: "Localizar em Arquivos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.findreplace.findinfiles"
-  - "vs.findinfiles"
-helpviewer_keywords: 
-  - "Caixa de diálogo Localizar nos Arquivos"
+title: Localizar em arquivos | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.findreplace.findinfiles
+- vs.findinfiles
+helpviewer_keywords:
+- Find in Files dialog box
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c244de67ea8d955987083fb6a06036958d341c93
+ms.lasthandoff: 04/11/2017
+
 ---
-# Localizar em Arquivos
+# <a name="find-in-files"></a>Localizar em Arquivos
   A guia **Localizar nos Arquivos** da janela Localizar e Substituir permite pesquisar uma cadeia de caracteres ou expressão no código de um conjunto de arquivos específico. As correspondências encontradas e as ações tomadas são listadas na janela Localizar Resultados selecionada nas **Opções de Resultados**.  
   
- Também há botões da barra de ferramentas e teclas de atalho disponíveis para abrir a caixa de diálogo **Localizar e Substituir**.  
+ Também há botões da barra de ferramentas e teclas de atalho disponíveis para abrir a caixa de diálogo **Localizar e Substituir** .  
   
- As seções a seguir listam os controles disponíveis na guia **Localizar nos Arquivos**.  
+ As seções a seguir listam os controles disponíveis na guia **Localizar nos Arquivos** .  
   
-## Localizar  
+## <a name="find-what"></a>Localizar  
  Esses controles da guia **Localizar nos Arquivos** permitem especificar a cadeia de caracteres ou expressão que será procurada.  
   
- **Localizar**  
+ **Find what**  
  Digite o texto a procurar. A caixa de diálogo tenta preencher um texto de pesquisa provável, usando o texto selecionado com o cursor antes de a caixa de diálogo ser aberta, um texto próximo a ele ou um texto pesquisado anteriormente. Você pode reutilizar uma das últimas 20 cadeias de caracteres pesquisadas selecionando-a nessa lista suspensa.  
   
  **[cadeia de caracteres com curingas]**  
@@ -41,15 +45,15 @@ caps.handback.revision: 21
  Para fazer com que o mecanismo de pesquisa interprete a sua cadeia de caracteres de pesquisa como uma expressão regular, marque a caixa de seleção **Usar** em **Opções de Busca** e clique em **Expressões regulares**.  
   
  **Construtor de Expressões**  
- Esse botão triangular ao lado da caixa **Localizar** torna-se disponível quando a caixa de seleção **Usar** é selecionada nas **Opções de Busca**. Clique nesse botão para exibir uma lista de curingas ou expressões regulares, dependendo da opção **Usar** selecionada. A escolha de qualquer item nessa lista o adiciona à cadeia de caracteres em **Localizar**.  
+ Esse botão triangular ao lado da caixa **Localizar** torna-se disponível quando a caixa de seleção **Usar** é selecionada nas **Opções de Busca**. Clique nesse botão para exibir uma lista de curingas ou expressões regulares, dependendo da opção **Usar** selecionada. A escolha de qualquer item nessa lista o adiciona à cadeia de caracteres em **Localizar** .  
   
-## Examinar  
+## <a name="look-in"></a>Examinar  
  A opção escolhida na lista suspensa **Examinar** determina se a opção **Localizar nos Arquivos** só pesquisará em arquivos ativos ou em todos os arquivos armazenados em determinadas pastas. Selecione um escopo da pesquisa na lista, digite um caminho da pasta ou clique no botão **Procurar** para exibir a caixa de diálogo **Personalizar Conjunto de Diretórios** e escolha um conjunto de pastas a ser pesquisado.  
   
 > [!NOTE]  
 >  Se a opção **Examinar** selecionada fizer você pesquisar um arquivo do qual foi efetuado check-out do controle do código-fonte, será pesquisada apenas a versão desse arquivo que foi baixada em seu computador local.  
   
- **Examinar**  
+ **Look in**  
  Selecione um escopo da pesquisa predefinido nessa lista ou use a caixa de diálogo **Personalizar Conjunto de Diretórios** para inserir seu próprio conjunto de diretórios.  
   
  **Documento Atual**  
@@ -65,13 +69,13 @@ caps.handback.revision: 21
  Pesquisa todos os arquivos na solução ativa.  
   
  **Incluir subpastas**  
- Especifica que serão pesquisadas as subpastas da pasta especificada em **Examinar**. Isso requer um conjunto de diretórios personalizados.  
+ Especifica que serão pesquisadas as subpastas da pasta especificada em **Examinar** . Isso requer um conjunto de diretórios personalizados.  
   
  **Procurar**  
- Clique nesse botão para exibir a caixa de diálogo **Personalizar Conjunto de Diretórios**, na qual é possível reunir, editar, salvar e selecionar conjuntos nomeados de diretórios a serem inseridos na caixa **Examinar**.  
+ Clique nesse botão para exibir a caixa de diálogo **Personalizar Conjunto de Diretórios** , na qual é possível reunir, editar, salvar e selecionar conjuntos nomeados de diretórios a serem inseridos na caixa **Examinar** .  
   
-## Opções de Busca  
- Você pode expandir ou recolher a seção **Opções de Busca**. As opções seguintes podem ser marcadas ou desmarcadas.  
+## <a name="find-options"></a>Opções de Busca  
+ Você pode expandir ou recolher a seção **Opções de Busca** . As opções seguintes podem ser marcadas ou desmarcadas.  
   
  **Diferenciar maiúsculas de minúsculas**  
  Quando essa caixa é selecionada, as janelas Localizar Resultados só exibem instâncias da cadeia de caracteres especificada em **Localizar** que correspondam tanto no conteúdo como nas letras maiúsculas e minúsculas. Por exemplo, uma pesquisa por **MyObject** com a caixa de seleção **Diferenciar maiúsculas de minúsculas** retornará “MyObject”, mas não “myobject” nem “MYOBJECT”.  
@@ -79,17 +83,17 @@ caps.handback.revision: 21
  **Coincidir palavra inteira**  
  Quando essa caixa é selecionada, as janelas Localizar Resultados só exibem instâncias da cadeia de caracteres especificada em **Localizar** que correspondam a palavras completas. Por exemplo, uma pesquisa por **MyObject** retornará "MyObject" mas não "CMyObject" nem "MyObjectC".  
   
- **Use**  
- Indica como interpretar caracteres especiais digitados nas caixas de texto **Localizar** ou **Substituir por**. As opções incluem **Curingas** e **Expressões Regulares**.  
+ **Usar**  
+ Indica como interpretar caracteres especiais digitados nas caixas de texto **Localizar** ou **Substituir por** . As opções incluem **Curingas** e **Expressões Regulares**.  
   
- **Expressões Regulares**  
+ **Regular Expressions**  
  Notações especiais definem padrões de texto para correspondência. Para obter uma lista, veja [Pesquisar texto com expressões regulares](../../relational-databases/scripting/search-text-with-regular-expressions.md).  
   
  **Curingas**  
  Caracteres especiais, como asteriscos (`*`) e pontos de interrogação (`?`) representam um ou mais caracteres. Para obter uma lista, veja [Pesquisar texto com curingas](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
  **Pesquisar nestes tipos de arquivo**  
- Essa lista indica os tipos de arquivos a serem pesquisados nos diretórios especificados em **Examinar**. Se esse campo ficar em branco, serão pesquisados todos os arquivos nos diretórios especificados em **Examinar**.  
+ Essa lista indica os tipos de arquivos a serem pesquisados nos diretórios especificados em **Examinar**. Se esse campo ficar em branco, serão pesquisados todos os arquivos nos diretórios especificados em **Examinar** .  
   
 ```  
 *.[ext]; *.[ext] (manual)  
@@ -103,8 +107,8 @@ caps.handback.revision: 21
   
  Selecione qualquer item na lista para inserir uma cadeia de caracteres de pesquisa pré-configurada que localizará arquivos de tipos específicos.  
   
-## Opções de Resultados  
- Determina o local dos resultados quando você clica em **Localizar Tudo**. Você pode expandir ou recolher a seção **Opções de Resultados**. As opções seguintes podem ser marcadas ou desmarcadas.  
+## <a name="result-options"></a>Opções de Resultados  
+ Determina o local dos resultados quando você clica em **Localizar Tudo**. Você pode expandir ou recolher a seção **Opções de Resultados** . As opções seguintes podem ser marcadas ou desmarcadas.  
   
  **Janela Localizar Resultados 1**  
  Quando essa caixa de seleção estiver marcada, os resultados da pesquisa atual serão anexados ao conteúdo da janela Localizar Resultados 1. Essa janela será aberta automaticamente para exibir seus resultados de pesquisa. Para abrir essa janela manualmente, clique em **Outras Janelas** no menu **Exibir** e clique em **Localizar Resultados 1**.  
@@ -121,19 +125,19 @@ caps.handback.revision: 21
 > [!CAUTION]  
 >  Você só pode usar o comando **Desfazer** em arquivos que permaneçam abertos para edição. Se essa opção não for selecionada, os arquivos que ainda não estiverem abertos para edição continuarão fechados e nenhuma opção **Desfazer** ficará disponível para eles.  
   
-## Localizar e substituir exibições  
- As guias no topo da janela Localizar e Substituir incluem menus **Exibir**. Esses menus permitem escolher um conjunto de campos para serem exibidos no painel ativo. Você pode deixar a janela Localizar e Substituir encaixada em um local conveniente e depois mudar de guia para guia e de exibição para exibição a fim de fazer qualquer tipo de operação de localizar e substituir.  
+## <a name="find-and-replace-views"></a>Localizar e substituir exibições  
+ As guias no topo da janela Localizar e Substituir incluem menus **Exibir** . Esses menus permitem escolher um conjunto de campos para serem exibidos no painel ativo. Você pode deixar a janela Localizar e Substituir encaixada em um local conveniente e depois mudar de guia para guia e de exibição para exibição a fim de fazer qualquer tipo de operação de localizar e substituir.  
   
  **Alternar para Localização Rápida**  
- Essa barra de ferramentas altera a caixa de diálogo para uma caixa de diálogo **Localização Rápida**.  
+ Essa barra de ferramentas altera a caixa de diálogo para uma caixa de diálogo **Localização Rápida** .  
   
  **Alternar para Localizar em Arquivos**  
- Essa barra de ferramentas altera a caixa de diálogo para uma caixa de diálogo **Localizar nos Arquivos**.  
+ Essa barra de ferramentas altera a caixa de diálogo para uma caixa de diálogo **Localizar nos Arquivos** .  
   
  **Alternar para Localizar Símbolos**  
- Essa barra de ferramentas altera a caixa de diálogo para uma caixa de diálogo **Localizar Símbolos**.  
+ Essa barra de ferramentas altera a caixa de diálogo para uma caixa de diálogo **Localizar Símbolos** .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Atalhos de teclado do SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

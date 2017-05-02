@@ -1,26 +1,30 @@
 ---
-title: "Exemplo: Restaura&#231;&#227;o offline do grupo de arquivos prim&#225;rio e mais um (modelo de recupera&#231;&#227;o completa) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modelo de recuperação completa [SQL Server], exemplo RESTORE"
-  - "restaurações offline [SQL Server]"
-  - "sequências de restauração [SQL Server], offline"
+title: "Exemplo de restauração offline: primário e um grupo de arquivos (modelo de recuperação completa) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full recovery model [SQL Server], RESTORE example
+- offline restores [SQL Server]
+- restore sequences [SQL Server], offline
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a89ca3ffb79c4ca4001356f0963f7fffdefd954f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemplo: Restaura&#231;&#227;o offline do grupo de arquivos prim&#225;rio e mais um (modelo de recupera&#231;&#227;o completa)
+# <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>Exemplo: Restauração offline do grupo de arquivos primário e mais um (modelo de recuperação completa)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tópico é relevante apenas para bancos de dados com modelos de recuperação completa e que contêm vários grupos de arquivos.  
@@ -32,7 +36,7 @@ caps.handback.revision: 32
 > [!NOTE]  
 >  A sequência de restauração offline tem menos etapas do que a restauração online de um arquivo somente leitura. Para obter um exemplo, veja [Exemplo: restauração online de um arquivo somente leitura &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md). Porém, todo o banco de dados está offline na duração da sequência.  
   
-## Backup do final do log  
+## <a name="tail-log-backup"></a>Backup do final do log  
  Antes de restaurar o banco de dados, o administrador do banco de dados deve fazer backup do final do log. Como o banco de dados está danificado, é preciso usar a opção NO_TRUNCATE para criar o backup do final do log:  
   
 ```  
@@ -42,7 +46,7 @@ BACKUP LOG adb TO tailLogBackup
   
  O backup do final do log é o último backup aplicado nas sequências de restauração a seguir.  
   
-## Sequência de restauração  
+## <a name="restore-sequence"></a>Sequência de restauração  
  Para restaurar o grupo de arquivos primário e o grupo de arquivos `B`, o administrador do banco de dados usa uma sequência de restauração sem a opção PARTIAL, do seguinte modo:  
   
 ```  
@@ -58,11 +62,11 @@ RESTORE LOG adb FROM tailLogBackup WITH RECOVERY
   
  Os arquivos que não estão restaurados ficam automaticamente online. Todos os grupos de arquivos agora estão online.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Restauração online &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [Restaurações por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [Restaurações de arquivo &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

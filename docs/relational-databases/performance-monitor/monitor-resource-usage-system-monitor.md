@@ -1,50 +1,54 @@
 ---
-title: "Monitorar o uso de recursos (Monitor do Sistema) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "monitorando o desempenho [SQL Server], uso do recurso"
-  - "Monitor do Sistema [SQL Server], sobre o Monitor do Sistema do Windows"
-  - "monitoramento de uso de recursos [SQL Server]"
-  - "Monitor do Sistema [SQL Server]"
-  - "contadores [SQL Server], questões de uso de recursos"
-  - "contadores de desempenho [SQL Server], questões de uso de recursos"
-  - "Monitor do Sistema do Windows [SQL Server], sobre o Monitor do Sistema do Windows"
-  - "monitorando [SQL Server], uso de recursos do servidor"
-  - "monitorando o uso de recursos [SQL Server]"
-  - "Monitor do Sistema do Windows [SQL Server]"
-  - "monitoramento de banco de dados [SQL Server], uso de recursos"
-  - "desempenho de banco de dados [SQL Server], uso de recursos"
-  - "ajustando bancos de dados [SQL Server], uso de recursos"
-  - "desempenho do servidor [SQL Server], uso de recursos"
+title: Monitorar o uso de recursos (Monitor do Sistema) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring performance [SQL Server], resource usage
+- System Monitor [SQL Server], about Windows System Monitor
+- resource usage monitoring [SQL Server]
+- System Monitor [SQL Server]
+- counters [SQL Server], resource usage subjects
+- performance counters [SQL Server], resource usage subjects
+- Windows System Monitor [SQL Server], about Windows System Monitor
+- monitoring [SQL Server], server resource usage
+- monitoring resource usage [SQL Server]
+- Windows System Monitor [SQL Server]
+- database monitoring [SQL Server], resource usage
+- database performance [SQL Server], resource usage
+- tuning databases [SQL Server], resource usage
+- server performance [SQL Server], resource usage
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b7236d0073d38537724d54534729a2f380b892dd
+ms.lasthandoff: 04/11/2017
+
 ---
-# Monitorar o uso de recursos (Monitor do Sistema)
-  Se estiver executando o sistema operacional Microsoft Windows Server, use a ferramenta gráfica Monitor do Sistema para avaliar o desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. É possível visualizar objetos, contadores de desempenho e o comportamento de outros objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como processadores, memória, cache, threads e processos. Cada um desses objetos possui um conjunto de contadores associado para medir o uso de dispositivos, o comprimento de filas, demoras e outros indicadores da taxa de transferência e do congestionamento interno.  
+# <a name="monitor-resource-usage-system-monitor"></a>Monitorar o uso de recursos (Monitor do Sistema)
+  Se estiver executando o sistema operacional Microsoft Windows Server, use a ferramenta gráfica Monitor do Sistema para avaliar o desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. É possível visualizar objetos, contadores de desempenho e o comportamento de outros objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como processadores, memória, cache, threads e processos. Cada um desses objetos possui um conjunto de contadores associado para medir o uso de dispositivos, o comprimento de filas, demoras e outros indicadores da taxa de transferência e do congestionamento interno.  
   
 > [!NOTE]  
 >  O Monitor do Sistema substituiu o Monitor de Desempenho a partir do Windows NT 4.0.  
   
-## Benefícios do Monitor do Sistema  
+## <a name="benefits-of-system-monitor"></a>Benefícios do Monitor do Sistema  
  O Monitor do Sistema pode ser útil monitorar o sistema operacional Windows e os contadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao mesmo tempo para determinar a correlação entre o desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Windows. Por exemplo, monitorar os contadores de entrada/saída (E/S) em disco do Windows e os contadores do Gerenciador de Buffer do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao mesmo tempo pode revelar o comportamento do sistema inteiro.  
   
- O Monitor do Sistema permite obter estatísticas sobre a atividade e o desempenho atuais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usando o Monitor do Sistema, você pode:  
+ O Monitor do Sistema permite obter estatísticas sobre a atividade e o desempenho atuais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Usando o Monitor do Sistema, você pode:  
   
 -   Exibir dados simultaneamente de qualquer quantidade de computadores.  
   
--   Visualizar e alterar gráficos, de modo a refletir a atividade atual, e exibir valores de contadores que são atualizados a uma frequência definida pelo usuário.   
+-   Visualizar e alterar gráficos, de modo a refletir a atividade atual, e exibir valores de contadores que são atualizados a uma frequência definida pelo usuário.  
   
 -   Exportar dados de gráficos, logs, logs de alertas e relatórios para aplicativos de planilha ou de banco de dados, para manipulação adicional e impressão.  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 29
     > [!NOTE]  
     >  O Monitor do Sistema substituiu o Monitor de Desempenho a partir do Windows NT 4.0. Você pode usar o Monitor do Sistema ou o Monitor de Desempenho para essas tarefas.  
   
-## Desempenho do Monitor do Sistema  
+## <a name="system-monitor-performance"></a>Desempenho do Monitor do Sistema  
  Ao monitorar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o sistema operacional Microsoft Windows para investigar questões relacionadas ao desempenho, concentre seus esforços iniciais em três áreas principais:  
   
 -   Atividade de disco  
@@ -74,7 +78,7 @@ caps.handback.revision: 29
   
  Monitorar um computador em que o Monitor do Sistema é executado pode influir ligeiramente em seu desempenho. Portanto, registre os dados do Monitor do Sistema em outro disco (ou computador), de modo a reduzir o efeito no computador que está sendo monitorado, ou execute o Monitor do Sistema a partir de um computador remoto. Monitore apenas os contadores que lhe interessam. Se você monitorar contadores demais, haverá sobrecarga de uso de recursos no processo de monitoramento, o que afetará o desempenho do computador que está sendo monitorado.  
   
-## Tarefas do Monitor do Sistema  
+## <a name="system-monitor-tasks"></a>Tarefas do Monitor do Sistema  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

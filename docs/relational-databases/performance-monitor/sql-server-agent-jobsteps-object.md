@@ -1,25 +1,29 @@
 ---
-title: "SQL Server Agent, objeto JobSteps | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "objeto JobSteps"
-  - "SQLAgent:JobSteps"
+title: SQL Server Agent, objeto JobSteps | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- JobSteps object
+- SQLAgent:JobSteps
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61884b4353e065c60f9489eca33a8979cf7d782f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Agent, objeto JobSteps
+# <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent, objeto JobSteps
   O objeto de desempenho [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JobSteps **do** Agent contém contadores de desempenho que relatam informações sobre etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. A tabela a seguir lista os contadores contidos nesse objeto.  
   
  A tabela abaixo contém os contadores de **SQLAgent:JobSteps** .  
@@ -48,9 +52,9 @@ caps.handback.revision: 23
 |**Instantâneo**|Informações de etapas de trabalho que usam o subsistema **Snapshot** .|  
 |**TSQL**|Informações de etapas de trabalho que executam [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
-## Consulte também  
- [Gerenciar etapas de trabalho](../../ssms/agent/manage-job-steps.md)   
- [Usar objetos de desempenho](../../ssms/agent/use-performance-objects.md)   
+## <a name="see-also"></a>Consulte também  
+ [Gerenciar etapas de trabalho](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
+ [Usar objetos de desempenho](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -1,40 +1,44 @@
 ---
-title: "Pesquisar texto com express&#245;es regulares | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vsregularexpressionhelp"
-  - "vs.regularexpressionhelp"
-  - "vs.regularexpressionbuilder"
-helpviewer_keywords: 
-  - "expressões regulares [SQL Server Management Studio]"
-  - "Editor de consulta [SQL Server Management Studio], pesquisas de expressões regulares"
-  - "pesquisas [SQL Server Management Studio], expressões regulares"
+title: "Pesquisar texto com expressões regulares | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vsregularexpressionhelp
+- vs.regularexpressionhelp
+- vs.regularexpressionbuilder
+helpviewer_keywords:
+- regular expressions [SQL Server Management Studio]
+- Query Editor [SQL Server Management Studio], regular expression searches
+- searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 530e940d95c3375b58b494e165cf5a193fdec720
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pesquisar texto com express&#245;es regulares
-  As expressões regulares são notação concisa e flexível para pesquisa e substituição de padrões de texto. Um conjunto específico de expressões regulares pode ser usado no campo **Localizar** da caixa de diálogo **Localizar e Substituir** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+# <a name="search-text-with-regular-expressions"></a>Pesquisar texto com expressões regulares
+  As expressões regulares são notação concisa e flexível para pesquisa e substituição de padrões de texto. Um conjunto específico de expressões regulares pode ser usado no campo **Localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
   
-#### Para fazer localização usando expressões regulares  
+#### <a name="to-find-using-regular-expressions"></a>Para fazer localização usando expressões regulares  
   
-1.  Para habilitar o uso de expressões regulares no campo **Localizar** durante operações de **Localização Rápida**, **Localizar nos Arquivos**, **Substituição Rápida** ou **Substituir nos Arquivos**, selecione a opção **Usar** em **Opções de Localização** e escolha **Expressões Regulares**.  
+1.  Para habilitar o uso de expressões regulares no campo **Localizar** durante operações de **Localização Rápida**, **Localizar nos Arquivos**, **Substituição Rápida**ou **Substituir nos Arquivos** , selecione a opção **Usar** em **Opções de Localização**e escolha **Expressões Regulares**.  
   
-2.  O botão triangular **Lista de Referências** próximo ao campo **Localizar** torna-se disponível. Clique no botão para exibir uma lista das expressões regulares usadas frequentemente. Quando você seleciona qualquer item do Construtor de Expressões, o item é inserido na cadeia de caracteres **Localizar**.  
+2.  O botão triangular **Lista de Referências** próximo ao campo **Localizar** torna-se disponível. Clique no botão para exibir uma lista das expressões regulares usadas frequentemente. Quando você seleciona qualquer item do Construtor de Expressões, o item é inserido na cadeia de caracteres **Localizar** .  
   
 > [!NOTE]  
->  Há diferenças de sintaxe entre as expressões regulares que podem ser usadas em cadeias **Localizar** e aquelas que são válidas na programação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Por exemplo, em **Localizar e Substituir** a notação de chaves {} é usada para expressões marcadas. Portanto, a expressão “zo{1}” corresponde a todas as ocorrências de “zo” seguidas pela marca 1, como em “Alonzo1” e “Gonzo1”. Entretanto, dentro do .NET Framework, a notação {} é usada para quantificadores. Portanto, a expressão “zo{1}” corresponde a todas as ocorrências de “z” seguidas exatamente por um “o”, como em “zone” e não “zoo”.  
+>  Há diferenças de sintaxe entre as expressões regulares que podem ser usadas em cadeias **Localizar** e aquelas que são válidas na programação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Por exemplo, em **Localizar e Substituir**a notação de chaves {} é usada para expressões marcadas. Portanto, a expressão “zo{1}” corresponde a todas as ocorrências de “zo” seguidas pela marca 1, como em “Alonzo1” e “Gonzo1”. Entretanto, dentro do .NET Framework, a notação {} é usada para quantificadores. Portanto, a expressão “zo{1}” corresponde a todas as ocorrências de “z” seguidas exatamente por um “o”, como em “zone” e não “zoo”.  
   
  A tabela a seguir descreve as expressões regulares disponíveis na **Lista de Referências**.  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 25
 |Espaço ou tabulação|:b|Faz a correspondência de caracteres de espaço ou de tabulação.|  
 |Integer|:z|Faz a correspondência da expressão ([0-9]+).|  
   
- A lista de todas as expressões regulares válidas em operações **Localizar e Substituir** é mais longa do que pode ser exibido na **Lista de Referências**. Você também pode inserir qualquer uma das seguintes expressões regulares em uma cadeia de caracteres **Localizar**:  
+ A lista de todas as expressões regulares válidas em operações **Localizar e Substituir** é mais longa do que pode ser exibido na **Lista de Referências**. Você também pode inserir qualquer uma das seguintes expressões regulares em uma cadeia de caracteres **Localizar** :  
   
 |Expressão|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
@@ -66,9 +70,9 @@ caps.handback.revision: 25
 |Mínimo - um ou mais|#|Faz a correspondência de uma ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
 |Repetir n vezes|^n|Faz a correspondência de n ocorrências da expressão precedente. Por exemplo, [0-9]^4 correspondem a qualquer sequência de 4 dígitos.|  
 |Agrupamento|()|Agrupa uma subexpressão.|  
-|Enésimo texto marcado|\n|Em uma expressão **Localizar e Substituir**, indica o texto correspondente da enésima expressão marcada, em que n é um número de 1 a 9.<br /><br /> Em uma expressão **Substituir**, \0 insere o texto inteiro correspondente.|  
-|Campo justificado à direita|\\(w,n)|Em uma expressão **Substituir**, justifica a enésima expressão marcada à direita em um campo de, pelo menos, *w* caracteres de largura.|  
-|Campo justificado à esquerda|\\(-w,n)|Em uma expressão **Substituir**, justifica a enésima expressão marcada à esquerda em um campo de, pelo menos, *w* caracteres de largura.|  
+|Enésimo texto marcado|\n|Em uma expressão **Localizar e Substituir** , indica o texto correspondente da enésima expressão marcada, em que n é um número de 1 a 9.<br /><br /> Em uma expressão **Substituir** , \0 insere o texto inteiro correspondente.|  
+|Campo justificado à direita|\\(w,n)|Em uma expressão **Substituir** , justifica a enésima expressão marcada à direita em um campo de, pelo menos, *w* caracteres de largura.|  
+|Campo justificado à esquerda|\\(-w,n)|Em uma expressão **Substituir** , justifica a enésima expressão marcada à esquerda em um campo de, pelo menos, *w* caracteres de largura.|  
 |Evitar correspondência|~(X)|Evita a correspondência quando X é exibido em um certo ponto da expressão. Por exemplo, real~(ity) faz a correspondência de "real" em "realty" e "really", mas não "real" em "reality".|  
 |Caractere alfanumérico|:a|Faz a correspondência da expressão ([a-zA-Z0-9]).|  
 |Caractere alfabético|:c|Faz a correspondência da expressão ([a-zA-Z]).|  
@@ -107,7 +111,7 @@ caps.handback.revision: 25
 |Marca sem-espaçamento|:Mn|Faz a correspondência de marcas sem-espaçamento.|  
 |Marca de combinação|:Mc|Faz a correspondência de marcas de combinação.|  
 |Marca de circunscrição|:Me|Faz a correspondência de marcas de circunscrição.|  
-|Símbolo matemático|:Sm|Faz a correspondência de +, =, ~, &#124;, \< e >.|  
+|Símbolo matemático|:Sm|Corresponde a +, =, ~, &#124;, \< e >.|  
 |Símbolo de moeda|:Sc|Faz a correspondência de $ e outros símbolos de moeda.|  
 |Símbolo de modificador|:Sk|Faz a correspondência de símbolos de modificador como acento circunflexo, acento grave e acento circunflexo invertido.|  
 |Outro símbolo|:So|Faz a correspondência de outros símbolos, como o sinal de protegido por direitos autorais, o sinal de parágrafo e o sinal de grau.|  
@@ -131,7 +135,7 @@ caps.handback.revision: 25
 |Katakana|:Ka|Faz a correspondência de caracteres de katakana.|  
 |Han/Kanji/Ideográfico|:Id|Faz a correspondência de caracteres ideográficos, como Han e Kanji.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Pesquisar e substituir](../../relational-databases/scripting/search-and-replace.md)   
  [Pesquisar texto com curingas](../../relational-databases/scripting/search-text-with-wildcards.md)  
   

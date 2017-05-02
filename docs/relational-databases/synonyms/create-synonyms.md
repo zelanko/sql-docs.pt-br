@@ -1,27 +1,31 @@
 ---
-title: "Criar sin&#244;nimos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "sql13.swb.synonym.general.f1"
-helpviewer_keywords: 
-  - "criando sinônimos"
-  - "sinônimos [SQL Server], criando"
+title: "Criar sinônimos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+f1_keywords:
+- sql13.swb.synonym.general.f1
+helpviewer_keywords:
+- creating synonyms
+- synonyms [SQL Server], creating
 ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a3180e86333a329e2f86a45f2728630ce6cf526
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar sin&#244;nimos
+# <a name="create-synonyms"></a>Criar sinônimos
   Este tópico descreve como criar um sinônimo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -45,7 +49,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para criar um sinônimo  
+#### <a name="to-create-a-synonym"></a>Para criar um sinônimo  
   
 1.  No **Pesquisador de Objetos**, expanda o banco de dados em que você deseja criar a nova exibição.  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 7
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para criar um sinônimo  
+#### <a name="to-create-a-synonym"></a>Para criar um sinônimo  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 7
 3.  Copie e cole os exemplos a seguir na janela de consulta e clique em **Executar**.  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
- O exemplo a seguir cria um sinônimo para uma tabela existente no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. O sinônimo é usado então em exemplos subsequentes.  
+ O exemplo a seguir cria um sinônimo para uma tabela existente no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . O sinônimo é usado então em exemplos subsequentes.  
   
 ```  
 USE tempdb;  

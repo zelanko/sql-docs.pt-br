@@ -1,27 +1,31 @@
 ---
-title: "Classe de evento SP:CacheMiss | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Classe de evento SP:CacheMiss"
+title: Classe de evento SP:CacheMiss | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SP:CacheMiss event class
 ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ab69805ae94f8b902f2f754cf57ff713ac39ce67
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento SP:CacheMiss
-  A classe de evento SP:CacheMiss indica que o procedimento não foi encontrado no cache. Se a classe de evento SP:CacheMiss ocorrer com muita frequência, isso significa que talvez seja necessário aumentar a memória disponível para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, portanto, aumentar o tamanho do cache de procedimento.   
+# <a name="spcachemiss-event-class"></a>Classe de evento SP:CacheMiss
+  A classe de evento SP:CacheMiss indica que o procedimento não foi encontrado no cache. Se a classe de evento SP:CacheMiss ocorrer com muita frequência, isso significa que talvez seja necessário aumentar a memória disponível para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e, portanto, aumentar o tamanho do cache de procedimento.  
   
-## Colunas de dados da classe de evento SP:CacheMiss  
+## <a name="spcachemiss-event-class-data-columns"></a>Colunas de dados da classe de evento SP:CacheMiss  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -49,7 +53,7 @@ caps.handback.revision: 38
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |XactSequence|**bigint**|Token que descreve a transação atual.|50|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Classe de evento SP:CacheInsert](../../relational-databases/event-classes/sp-cacheinsert-event-class.md)  

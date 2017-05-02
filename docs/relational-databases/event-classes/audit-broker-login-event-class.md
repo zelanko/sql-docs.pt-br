@@ -1,27 +1,31 @@
 ---
-title: "Classe de evento Audit Broker Login | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Classe de evento Audit Broker Login"
+title: Classe de evento Audit Broker Login | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Broker Login event class
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b3ba2426634e4cd405d91318cd92de93bfa2c24
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento Audit Broker Login
+# <a name="audit-broker-login-event-class"></a>Classe de evento Audit Broker Login
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um evento **Audit Broker Login** para informar mensagens de auditoria relacionadas à segurança de transporte do Agente de Serviços.  
   
-## Colunas de dados da classe de evento Audit Broker Login  
+## <a name="audit-broker-login-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Broker Login  
   
 |Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -59,7 +63,7 @@ caps.handback.revision: 30
 |5|Authentication Failure|Um evento Authentication Failure informa que o Agente de Serviços não pode executar autenticação para a conexão devido a um erro. Para Autenticação do Windows, esse evento informa que o Service Broker não pode usar a Autenticação do Windows. Para autenticação com base em certificado, esse evento informa que o Service Broker não pode acessar o certificado.|  
 |6|Authorization Failure|Um evento Authorization Failure informa que o Agente de Serviços negou autorização para a conexão. Para Autenticação do Windows, esse evento informa que o identificador de segurança para a conexão não corresponde a um usuário de banco de dados. Para autenticação com base em certificado, esse evento informa que a chave pública fornecida na mensagem não corresponde a um certificado no banco de dados.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  

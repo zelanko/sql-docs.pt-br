@@ -1,27 +1,31 @@
 ---
-title: "Agente: Classe de evento Remote Message Ack | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Agente: Classe de evento Remote Message Ack"
+title: Classe de evento Broker:Remote Message Ack | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Remote Message Ack event class
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 747d421d4a9e6a86295ce843aa6c2b943bf006cf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Agente: Classe de evento Remote Message Ack
+# <a name="brokerremote-message-ack-event-class"></a>Agente: Classe de evento Remote Message Ack
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **Broker:Remote Message Ack** quando o [!INCLUDE[ssSB](../../includes/sssb-md.md)] envia ou recebe uma confirmação de mensagem.  
   
-## Colunas de dados da classe de evento Broker:Remote Message Ack  
+## <a name="brokerremote-message-ack-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Remote Message Ack  
   
 |Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  

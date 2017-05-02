@@ -1,32 +1,36 @@
 ---
-title: "Adicionar um item de coleta a um conjunto de coletas (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "itens de coleta [SQL Server]"
-  - "conjuntos de coleta [SQL Server], adicionando itens"
+title: "Adicionar um item da coleção a um conjunto de coleções (Transact-SQL)   Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collection items [SQL Server]
+- collection sets [SQL Server], adding items
 ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 90261ca03da94b15b003da029f07d8804aaa1805
+ms.lasthandoff: 04/11/2017
+
 ---
-# Adicionar um item de coleta a um conjunto de coletas (Transact-SQL)
+# <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>Adicionar um item de coleta a um conjunto de coletas (Transact-SQL)
   Você pode adicionar um item de coleta a um conjunto de coleta existente usando os procedimentos armazenados fornecidos com o coletor de dados.  
   
  Complete os seguintes passos usando o Editor de Consultas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-### Adicione um item de coleta a um conjunto de coleta  
+### <a name="add-a-collection-item-to-a-collection-set"></a>Adicione um item de coleta a um conjunto de coleta  
   
-1.  Interrompa o conjunto de coleta ao qual você deseja adicionar o item executando o procedimento armazenado **sp_syscollector_stop_collection_set**. Por exemplo, para parar um conjunto de coleta denominado "Conjunto de Coleta de Teste", execute as seguintes instruções:  
+1.  Interrompa o conjunto de coleta ao qual você deseja adicionar o item executando o procedimento armazenado **sp_syscollector_stop_collection_set** . Por exemplo, para parar um conjunto de coleta denominado "Conjunto de Coleta de Teste", execute as seguintes instruções:  
   
     ```tsql  
     USE msdb  
@@ -94,10 +98,10 @@ caps.handback.revision: 21
     GO  
     ```  
   
-     Os conjuntos de coleta e seus itens de coleta são exibidos na guia **Resultados**.  
+     Os conjuntos de coleta e seus itens de coleta são exibidos na guia **Resultados** .  
   
-## Consulte também  
- [Criar um conjunto de coleta personalizado que usa o tipo de coletor de Consultas T-SQL genérico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create custom collection set - generic t-sql query collector type.md)   
+## <a name="see-also"></a>Consulte também  
+ [Criar um conjunto de coleta personalizado que usa o tipo de coletor de Consultas T-SQL genérico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

@@ -1,33 +1,37 @@
 ---
-title: "Exibir uma cole&#231;&#227;o de esquema XML armazenada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "coleções de esquema [SQL Server], exibindo"
-  - "esquemas XML [SQL Server], exibindo"
-  - "instrução CREATE XML SCHEMA COLLECTION"
-  - "função xml_schema_namespace"
-  - "coleções de esquema XML [SQL Server], exibindo"
-  - "exibindo coleções de esquema XML"
-  - "exibindo coleções de esquema XML"
+title: "Exibir uma coleção de esquema XML armazenada | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schema collections [SQL Server], viewing
+- XML schemas [SQL Server], viewing
+- CREATE XML SCHEMA COLLECTION statement
+- xml_schema_namespace function
+- XML schema collections [SQL Server], viewing
+- displaying XML schema collections
+- viewing XML schema collections
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2bacfd298e992c64739442605f986afffefdb443
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exibir uma cole&#231;&#227;o de esquema XML armazenada
-  Depois de você importar uma coleção de esquema XML usando [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md), os componentes do esquema são armazenados nos metadados. É possível usar a função intrínseca [xml_schema_namespace](../Topic/xml_schema_namespace%20\(Transact-SQL\).md) para reconstruir a coleção de esquemas XML. Essa função retorna uma instância de tipo de dados **xml**.  
+# <a name="view-a-stored-xml-schema-collection"></a>Exibir uma coleção de esquema XML armazenada
+  Depois de você importar uma coleção de esquema XML usando [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md), os componentes do esquema são armazenados nos metadados. É possível usar a função intrínseca [xml_schema_namespace](../../t-sql/xml/xml-schema-namespace.md)para reconstruir a coleção de esquemas XML. Essa função retorna uma instância de tipo de dados **xml** .  
   
- Por exemplo, a consulta a seguir recupera uma coleção de esquema XML (`ProductDescriptionSchemaCollection`) do esquema relacional de produção no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ Por exemplo, a consulta a seguir recupera uma coleção de esquema XML (`ProductDescriptionSchemaCollection`) do esquema relacional de produção no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection')  
@@ -43,7 +47,7 @@ SELECT xml_schema_namespace(N'RelationalSchemaName',N'XmlSchemaCollectionName').
 GO  
 ```  
   
- Por exemplo, a consulta a seguir recupera informações do esquema XML sobre garantia e manutenção do produto da coleção de esquema XML `ProductDescriptionSchemaCollection`.  
+ Por exemplo, a consulta a seguir recupera informações do esquema XML sobre garantia e manutenção do produto da coleção de esquema XML `ProductDescriptionSchemaCollection` .  
   
 ```  
 SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection').query('  
@@ -59,13 +63,13 @@ SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection',
 GO  
 ```  
   
- Quando você cria uma coleção de esquema XML usando CREATE XML SCHEMA COLLECTION no banco de dados, a instrução armazena os componentes do esquema nos metadados. Observe que apenas os componentes de esquema que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entende são armazenados. Todos os comentários, anotações ou atributos não XSD não são armazenados. Portanto o esquema reconstruído pelo **xml_schema_namespace** é funcionalmente equivalente ao esquema original, mas não necessariamente terá a mesma aparência. Por exemplo, você não verá os mesmos prefixos que existiam no esquema original. O esquema retornado pelo **xml_schema_namespace** usa **t** como o prefixo do namespace de destino e **ns1**, **ns2** e assim por diante, para outros namespaces.  
+ Quando você cria uma coleção de esquema XML usando CREATE XML SCHEMA COLLECTION no banco de dados, a instrução armazena os componentes do esquema nos metadados. Observe que apenas os componentes de esquema que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entende são armazenados. Todos os comentários, anotações ou atributos não XSD não são armazenados. Portanto o esquema reconstruído pelo **xml_schema_namespace** é funcionalmente equivalente ao esquema original, mas não necessariamente terá a mesma aparência. Por exemplo, você não verá os mesmos prefixos que existiam no esquema original. O esquema retornado pelo **xml_schema_namespace** usa **t** como o prefixo do namespace de destino e **ns1**, **ns2**e assim por diante, para outros namespaces.  
   
- Para manter uma cópia idêntica dos esquemas XML, é necessário salvar o esquema XML em um arquivo ou em uma tabela do banco de dados em uma coluna de tipo **xml**.  
+ Para manter uma cópia idêntica dos esquemas XML, é necessário salvar o esquema XML em um arquivo ou em uma tabela do banco de dados em uma coluna de tipo **xml** .  
   
  A exibição de catálogo [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) também retorna informações sobre coleções de esquemas XML. Essas informações incluem o nome da coleção, a data de criação e o proprietário da coleção.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Coleções de esquemas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

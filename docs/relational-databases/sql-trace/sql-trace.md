@@ -1,36 +1,40 @@
 ---
-title: "Rastreamento do SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Rastreamento do SQL | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 037db169bd49c589ca039546dcf13d322e1f1a41
+ms.lasthandoff: 04/11/2017
+
 ---
-# Rastreamento do SQL
-  No Rastreamento do SQL, são coletados eventos se estes forem instâncias de classes de evento listadas na definição de rastreamento. Esses eventos podem ser filtrados do rastreamento ou colocados na fila para seus destinos. O destino pode ser um arquivo ou o SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects), que pode usar as informações do rastreamento em aplicativos que gerenciam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="sql-trace"></a>Rastreamento do SQL
+  No Rastreamento do SQL, são coletados eventos se estes forem instâncias de classes de evento listadas na definição de rastreamento. Esses eventos podem ser filtrados do rastreamento ou colocados na fila para seus destinos. O destino pode ser um arquivo ou o SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects), que pode usar as informações do rastreamento em aplicativos que gerenciam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use Eventos Estendidos.  
   
-## Benefícios do Rastreamento do SQL  
+## <a name="benefits-of-sql-trace"></a>Benefícios do Rastreamento do SQL  
  O Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece procedimentos armazenados do sistema [!INCLUDE[tsql](../../includes/tsql-md.md)] para criar rastreamentos em uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Esses procedimentos armazenados do sistema podem ser usados nos seus próprios aplicativos para criar rastreamentos manualmente em vez de usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Isso lhe permite escrever aplicativos personalizados específicos às necessidades de sua empresa.  
   
-## Arquitetura do Rastreamento do SQL  
+## <a name="sql-trace-architecture"></a>Arquitetura do Rastreamento do SQL  
  As Origens do Evento podem ser quaisquer origens que produzam o evento de rastreamento, tais como lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] ou então eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como deadlocks. Para obter mais informações sobre eventos, consulte [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md). Quando ocorre um evento, se a classe de evento estiver incluída na definição de um rastreamento, serão coletadas informações sobre o evento. Se houver filtros definidos para a classe de evento na definição do rastreamento, eles serão aplicados e as informações do evento serão transmitidas a uma fila. Da fila, as informações do rastreamento serão gravadas em um arquivo ou poderão ser usadas pelo SMO em aplicativos, tais como o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. O diagrama a seguir mostra como o Rastreamento do SQL coleta eventos durante um rastreamento.  
   
  ![Processo de rastreamento de eventos do Mecanismo de Banco de Dados](../../relational-databases/sql-trace/media/tracarch.gif "Processo de rastreamento de eventos do Mecanismo de Banco de Dados")  
   
-## Terminologia do Rastreamento do SQL  
+## <a name="sql-trace-terminology"></a>Terminologia do Rastreamento do SQL  
  Os termos a seguir descrevem os conceitos fundamentais do Rastreamento do SQL.  
   
  **Evento**  
@@ -39,7 +43,7 @@ caps.handback.revision: 13
  **Coluna de dados**  
  Um atributo de um evento.  
   
- **Classe de eventos**  
+ **Classe de evento**  
  Um tipo de evento que pode ser rastreado. A classe de evento contém todas as colunas de dados que podem ser informadas por um evento.  
   
  **Categoria de evento**  
@@ -54,7 +58,7 @@ caps.handback.revision: 13
  **Tracedefinition**  
  Uma coleção de classes de eventos, colunas de dados e filtros que identificam os tipos de evento a serem coletados durante um rastreamento.  
   
- **Filtro**  
+ **Filter**  
  Critérios que limitam os eventos coletados em um rastreamento.  
   
  **Arquivo de rastreamento**  
@@ -66,22 +70,22 @@ caps.handback.revision: 13
  **Tabela de rastreamento**  
  No [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], uma tabela criada quando um rastreamento é salvo em uma tabela.  
   
-## Use colunas de dados para descrever eventos retornados  
+## <a name="use-data-columns-to-describe-returned-events"></a>Use colunas de dados para descrever eventos retornados  
  O Rastreamento do SQL usa colunas de dados na saída de rastreamento para descrever os eventos retornados por sua execução. A tabela a seguir descreve as colunas de dados do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , que são as mesmas usadas pelo Rastreamento do SQL, e indica as colunas selecionadas por padrão.  
   
-|Coluna de dados|Número da coluna|Descrição|  
+|Coluna de dados|Número da coluna|Description|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName***|10|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores transmitidos pelo aplicativo e não com o nome do programa.|  
-|**BigintData1**|52|Valor (tipo de dados **bigint**) que depende da classe de evento especificada no rastreamento.|  
-|**BigintData2**|53|Valor (tipo de dados **bigint**) que depende da classe de evento especificada no rastreamento.|  
+|**BigintData1**|52|Valor (tipo de dados**bigint** ) que depende da classe de evento especificada no rastreamento.|  
+|**BigintData2**|53|Valor (tipo de dados**bigint** ) que depende da classe de evento especificada no rastreamento.|  
 |**Binary Data**|2|Valor binário dependente da classe de evento capturada no rastreamento.|  
 |**ClientProcessID***|9|A ID atribuída pelo computador host ao processo em que está sendo executado o aplicativo cliente. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|  
 |**ColumnPermissions**|44|Indica se uma permissão de coluna foi definida ou não. Você pode analisar o texto da instrução para determinar quais permissões foram aplicadas a quais colunas.|  
 |**CPU**|18|O tempo de CPU (em milissegundos) usado pelo evento.|  
-|**ID do banco de dados***|3|A ID do banco de dados especificada pela instrução USE *database_name* ou a ID do banco de dados padrão se nenhuma instrução USE *database_name* tiver sido emitida para determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|  
+|**ID do banco de dados***|3|A ID do banco de dados especificada pela instrução USE *database_name* ou a ID do banco de dados padrão se nenhuma instrução USE *database_name*tiver sido emitida para determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|  
 |**DatabaseName**|35|O nome do banco de dados no qual a instrução do usuário está sendo executada.|  
 |**DBUserName***|40|Nome de usuário do cliente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**Duration**|13|A duração do evento (em microssegundos).<br /><br /> O servidor relata a duração de um evento em microssegundos (um milionésimo de segundo ou 10<sup>-6</sup> segundo) e o tempo de CPU usado pelo evento em milissegundos (um milésimo de segundo ou 10<sup>-3</sup> segundo). A interface gráfica do usuário do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibe a coluna **Duration** em milissegundos, por padrão; porém, quando um rastreamento é salvo em um arquivo ou tabela de banco de dados, o valor da coluna **Duration** é gravado em microssegundos.|  
+|**Duration**|13|A duração do evento (em microssegundos).<br /><br /> O servidor relata a duração de um evento em microssegundos (um milionésimo de segundo ou 10<sup>-6</sup>segundo) e o tempo de CPU usado pelo evento em milissegundos (um milésimo de segundo ou 10<sup>-3</sup>segundo). A interface gráfica do usuário do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibe a coluna **Duration** em milissegundos, por padrão; porém, quando um rastreamento é salvo em um arquivo ou tabela de banco de dados, o valor da coluna **Duration** é gravado em microssegundos.|  
 |**EndTime**|15|A hora em que o evento terminou. Essa coluna não é populada para classes de evento que se referem a um evento que está sendo iniciado, como **SQL:BatchStarting** ou **SP:Starting**.|  
 |**Erro**|31|O número do erro de um determinado evento. Muitas vezes, é o número de erro armazenado na tabela **sysmessages**.|  
 |**EventClass***|27|O tipo de classe de evento capturado.|  
@@ -98,7 +102,7 @@ caps.handback.revision: 13
 |**LineNumber**|5|O número da linha que contém o erro. No caso de eventos que envolvem instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , como **SP:StmtStarting**, **LineNumber** contém o número de linha da instrução no procedimento armazenado ou lote.|  
 |**LinkedServerName**|45|Nome do servidor vinculado.|  
 |**LoginName**|11|Nome do logon do usuário (logon de segurança do SQL Server ou credenciais de logon do Windows na forma DOMÍNIO\Nome_de_usuário).|  
-|**LoginSid***|41|SID (identificador de segurança) do usuário que fez logon. Você pode encontrar estas informações na exibição **sys.server_principals** do banco de dados **master**. Cada logon no servidor tem uma ID exclusiva.|  
+|**LoginSid***|41|SID (identificador de segurança) do usuário que fez logon. Você pode encontrar estas informações na exibição **sys.server_principals** do banco de dados **master** . Cada logon no servidor tem uma ID exclusiva.|  
 |**MethodName**|47|Nome do método OLEDB.|  
 |**Modo**|32|O inteiro usado por vários eventos para descrever um estado que o evento está solicitando ou recebeu.|  
 |**NestLevel**|29|O inteiro que representa os dados retornados por @@NESTLEVEL.|  
@@ -126,7 +130,7 @@ caps.handback.revision: 13
 |**SqlHandle**|63|Hash de 64 bits com base no texto de uma consulta ad hoc ou na ID de objeto e banco de dados de um objeto SQL. Esse valor pode ser passado a **sys.dm_exec_sql_text()** para recuperar o texto SQL associado.|  
 |**StartTime***|14|O horário no qual o evento foi iniciado, quando disponível.|  
 |**Estado**|30|Código do estado de erro.|  
-|**Success**|23|Indica se o evento teve êxito ou não. Os valores são:<br /><br /> **1** = Êxito.<br /><br /> **0** = Falha<br /><br /> Por exemplo, **1** significa êxito em uma verificação de permissões e **0** , falha.|  
+|**Êxito**|23|Indica se o evento teve êxito ou não. Os valores são:<br /><br /> **1** = Êxito.<br /><br /> **0** = Falha<br /><br /> Por exemplo, **1** significa êxito em uma verificação de permissões e **0** , falha.|  
 |**TargetLoginName**|42|Em ações que visam um logon, é o nome do logon de destino; por exemplo, para adicionar um novo logon.|  
 |**TargetLoginSid**|43|Em ações que visam um logon, é a SID do logon de destino; por exemplo, para adicionar um novo logon.|  
 |**TargetUserName**|39|Em ações que visam um usuário de banco de dados, é o nome desse usuário; por exemplo, para conceder permissão a um usuário.|  
@@ -140,11 +144,11 @@ caps.handback.revision: 13
   
  \*\*Para obter mais informações sobre a coluna de dados **ObjectType**, veja [Coluna de evento de rastreamento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).  
   
-## Tarefas de Rastreamento do SQL  
+## <a name="sql-trace-tasks"></a>Tarefas de Rastreamento do SQL  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Descreve como criar e executar rastreamentos usando procedimentos armazenados de Transact-SQL.|[Criar e executar rastreamentos usando procedimentos armazenados de Transact-SQL.](../../relational-databases/sql-trace/create-and-run-traces-using-transact-sql-stored-procedures.md)|  
+|Descreve como criar e executar rastreamentos usando procedimentos armazenados de Transact-SQL.|[Criar e executar rastreamentos usando procedimentos armazenados de Transact-SQL](../../relational-databases/sql-trace/create-and-run-traces-using-transact-sql-stored-procedures.md)|  
 |Descreve como criar rastreamentos manuais usando procedimentos armazenados em uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|[Criar rastreamentos manuais usando procedimentos armazenados](../../relational-databases/sql-trace/create-manual-traces-using-stored-procedures.md)|  
 |Descreve como salvar resultados de rastreamento no arquivo onde os resultados de rastreamento foram gravados.|[Salvar resultados de rastreamento em um arquivo](../../relational-databases/sql-trace/save-trace-results-to-a-file.md)|  
 |Descreve como melhorar o acesso a dados de rastreamento usando espaço no diretório **temporário** .|[Aprimorar o acesso aos dados de rastreamento](../../relational-databases/sql-trace/improve-access-to-trace-data.md)|  
@@ -159,7 +163,7 @@ caps.handback.revision: 13
 |Descreve como minimizar a quantidade de dados que o rastreamento coleta.|[Limitar o tamanho de arquivos e tabelas de rastreamento](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|  
 |Descreve os dois modos de agendar rastreamento no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Agendar rastreamentos](../../relational-databases/sql-trace/schedule-traces.md)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Modelos e permissões do SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Guia de Programação do SMO &#40;SQL Server Management Objects&#41;](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   

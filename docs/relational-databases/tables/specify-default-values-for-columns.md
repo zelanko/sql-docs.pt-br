@@ -1,25 +1,29 @@
 ---
-title: "Especificar valores padr&#227;o para colunas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colunas [SQL Server], padrões"
-  - "valores padrão"
+title: "Especificar valores padrão para colunas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [SQL Server], defaults
+- default values
 ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 956e23e61cb97d5d1adecf4a06f40f734da42948
+ms.lasthandoff: 04/11/2017
+
 ---
-# Especificar valores padr&#227;o para colunas
+# <a name="specify-default-values-for-columns"></a>Especificar valores padrão para colunas
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Você pode especificar um valor padrão que será inserido na coluna no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se você não atribuir um valor padrão e o usuário deixar a coluna em branco:  
@@ -61,7 +65,7 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para especificar um valor padrão para uma coluna  
+#### <a name="to-specify-a-default-value-for-a-column"></a>Para especificar um valor padrão para uma coluna  
   
 1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela com as colunas cuja escala você deseja alterar e clique em **Design**.  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para especificar um valor padrão para uma coluna  
+#### <a name="to-specify-a-default-value-for-a-column"></a>Para especificar um valor padrão para uma coluna  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

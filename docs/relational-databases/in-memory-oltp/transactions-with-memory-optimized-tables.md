@@ -1,25 +1,29 @@
 ---
-title: "Transa&#231;&#245;es com tabelas com otimiza&#231;&#227;o de mem&#243;ria | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "08/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Transações com tabelas com otimização de memória | Microsoft Docs"
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 08/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa888f18eae1c5d49eb3bcff13424a4cbfc6ec6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transa&#231;&#245;es com tabelas com otimiza&#231;&#227;o de mem&#243;ria
+# <a name="transactions-with-memory-optimized-tables"></a>Transações com tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
@@ -33,7 +37,7 @@ Para saber mais gerais, veja [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](..
   
   
   
-#### Seções deste artigo:  
+#### <a name="sections-in-this-article"></a>Seções deste artigo:  
   
 - [Pessimista versus otimista](#pessvoptim22ni)  
 - [Modos de iniciação da transação](#txninitmodes24ni)  
@@ -52,7 +56,7 @@ Para saber mais gerais, veja [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](..
   
 <a name="pessvoptim22ni"/>  
   
-## Pessimista versus otimista  
+## <a name="pessimistic-versus-optimistic"></a>Pessimista versus otimista  
   
 As diferenças funcionais são devido a diferenças nas abordagens, pessimista ou otimista, à integridade da transação. As tabelas com otimização de memória usam a abordagem otimista:  
   
@@ -65,7 +69,7 @@ A abordagem otimista tem menos sobrecarga e normalmente é mais eficiente, em pa
   
 <a name="txninitmodes24ni"/>  
   
-## Modos de iniciação da transação  
+## <a name="transaction-initiation-modes"></a>Modos de iniciação da transação  
   
 O SQL Server tem os seguintes modos de iniciação de transação:  
   
@@ -81,7 +85,7 @@ O SQL Server tem os seguintes modos de iniciação de transação:
   
 <a name="codeexamexpmode25ni"/>  
   
-### Exemplo de código com o modo Explicit  
+### <a name="code-example-with-explicit-mode"></a>Exemplo de código com o modo Explicit  
   
 O script Transact-SQL interpretado a seguir usa:  
   
@@ -116,7 +120,7 @@ Observe que pode-se evitar a necessidade da dica `WITH (SNAPSHOT)` com o uso da 
   
 <a name="rowver28ni"/>  
   
-## Controle de versão de linha  
+## <a name="row-versioning"></a>Controle de versão de linha  
   
 As tabelas com otimização de memória usam um sistema de controle de versão de linha sofisticado que torna o nível de isolamento eficiente, até mesmo o nível de isolamento SERIALIZABLE, mais restrito. Para obter detalhes, veja [Introdução às tabelas com otimização de memória](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -124,7 +128,7 @@ As tabelas baseadas em disco indiretamente têm um sistema de controle de versã
   
 <a name="confdegreeiso30ni"/>  
   
-## Níveis de isolamento 
+## <a name="isolation-levels"></a>Níveis de isolamento 
   
 A tabela a seguir lista os possíveis níveis de isolamento da transação, na sequência de isolamento do menor para o maior. Para obter detalhes sobre os conflitos que podem ocorrer e a lógica de repetição para lidar com esses conflitos, veja [Detecção de conflito e lógica de repetição](#confdetretry34ni). 
   
@@ -141,7 +145,7 @@ A tabela a seguir lista os possíveis níveis de isolamento da transação, na s
 
 <a name="txnphaslife32ni"/>  
   
-## Tempo de vida e fases da transação  
+## <a name="transaction-phases-and-lifetime"></a>Tempo de vida e fases da transação  
   
 Quando uma tabela com otimização de memória está envolvida, o tempo de vida de uma transação progride pelas fases, conforme exibido na imagem a seguir.  
   
@@ -149,17 +153,17 @@ Quando uma tabela com otimização de memória está envolvida, o tempo de vida 
   
 Seguem as descrições das fases.  
   
-#### Processamento regular: fase 1 (de 3)  
+#### <a name="regular-processing-phase-1-of-3"></a>Processamento regular: fase 1 (de 3)  
   
 - Essa fase é composta pela execução de todas as consultas e instruções DML na consulta.  
 - Durante essa fase, as instruções consideram a versão das tabelas com otimização de memória a partir da hora de início lógica da transação.  
   
-#### Validação: fase 2 (de 3)  
+#### <a name="validation-phase-2-of-3"></a>Validação: fase 2 (de 3)  
   
 - A fase de validação começa com a atribuição da hora de término, marcando a transação como logicamente completa. Isso torna todas as alterações visíveis da transação visíveis para outras transações, o que usará uma dependência nessa transação, e não poderá ser confirmado até que a transação seja confirmada com êxito. Além disso, as transações que mantêm essas dependências não poderão retornar conjuntos de resultados para o cliente, a fim de garantir que o cliente veja apenas os dados que foram confirmados com êxito no banco de dados.  
 - Essa fase compreende as validações de leitura repetida e serializável. Para a validação de leitura repetida, ela verifica se qualquer uma das linhas lidas pela transação foi atualizada desde então. Para a validação serializável, ela verifica se nenhuma linha foi inserida em nenhum intervalo de dados verificado por essa transação. Observe que, de acordo com a tabela em [Conflitos e níveis de isolamento](#confdegreeiso30ni), as validações de leitura repetida e serializável podem ocorrer ao usar o isolamento de instantâneo, para validar a consistência de restrições de chaves estrangeira e exclusiva.  
   
-#### Processamento de confirmação: fase 3 (de 3)  
+#### <a name="commit-processing-phase-3-of-3"></a>Processamento de confirmação: fase 3 (de 3)  
   
 - Durante essa fase de confirmação, as alterações nas tabelas duráveis são gravadas no log e o log é gravado em disco. Em seguida, o controle é retornado para o cliente.  
 - Após a conclusão do processamento de confirmação, todas as transações dependentes são notificadas de que elas podem ser confirmadas.  
@@ -168,7 +172,7 @@ Como sempre, você deve tentar manter suas unidades de trabalho transacionais m�
   
 <a name="confdetretry34ni"/>  
   
-## Detecção de conflito e lógica de repetição 
+## <a name="conflict-detection-and-retry-logic"></a>Detecção de conflito e lógica de repetição 
 
 Há dois tipos de condições de erro relacionadas à transação que causam a falha e reversão de uma transação. Na maioria dos casos, quando ocorre uma falha desse tipo, a transação precisa ser repetida, de forma semelhante a quando ocorre um deadlock.
 - Conflitos entre transações simultâneas. Esses são os conflitos de atualização e as falhas de validação e podem ocorrer devido a violações no nível de isolamento da transação ou a violações de restrição.
@@ -185,7 +189,7 @@ Veja abaixo as condições de erro que podem causar falhas nas transações que 
 | **41839** | A transação excedido o número máximo de dependências de confirmação. | Há um limite no número de transações do qual determinada transação pode depender (Tx1) – essas são as dependências de saída. Além disso, há um limite no número de transações que podem depender de determinada transação (Tx1) – essas são as dependências de entrada. O limite para ambos é de 8. <br/><br/> O caso mais comum dessa falha é quando há um grande número de transações de leitura que acessam os dados gravados por uma única transação de gravação. A probabilidade de atingir essa condição aumentará se as transações de leitura estiverem todas executando verificações grandes dos mesmos dados e se o processamento de validação ou confirmação da transação de gravação levar muito tempo; por exemplo, a transação de gravação executa verificações grandes no isolamento serializável (aumenta o tamanho da fase de validação) ou o log de transações é colocado em um dispositivo de E/S de log lento (aumenta o tamanho do processamento de confirmação). Se as transações de leitura executam verificações grandes e devem acessar apenas algumas linhas, isso pode ser uma indicação de um índice ausente. Da mesma forma, se a transação de gravação usar o isolamento serializável e estiver realizando verificações grandes, mas se for esperado que ela acesse apenas algumas linhas, isso também será uma indicação de um índice ausente. <br/><br/> O limite do número de dependências de confirmação pode ser aumentado com o uso do Sinalizador de Rastreamento **9926**. Use este sinalizador de rastreamento somente se ainda estiver recebendo essa condição de erro depois de confirmar que não há nenhum índice ausente, pois isso pode mascarar esses problemas nos casos mencionados acima. Outra advertência é que os gráficos de dependência complexos, em que cada transação tem um grande número de dependências de entrada, bem como dependências de saída, e transações individuais têm várias camadas de dependências, o que pode levar a ineficiências no sistema.  |
  
   
-### Lógica de repetição 
+### <a name="retry-logic"></a>Lógica de repetição 
 
 Quando uma transação falha devido a alguma das condições mencionadas acima, a transação deve ser repetida.
   
@@ -193,7 +197,7 @@ A lógica de repetição pode ser implementada no lado do cliente ou servidor. A
   
 <a name="retrytsqlcodeexam35ni"/>  
   
-#### Repita o exemplo de código T-SQL  
+#### <a name="retry-t-sql-code-example"></a>Repita o exemplo de código T-SQL  
   
 A lógica de repetição do lado do servidor com T-SQL deve ser usada somente para transações que não retornam conjuntos de resultados para o cliente, pois as repetições possivelmente poderão fazer com que conjuntos de resultados adicionais sejam retornados para o cliente, que podem não estar previstos.  
   
@@ -254,7 +258,7 @@ O script T-SQL interpretado a seguir ilustra a aparência de uma lógica de repe
   
 <a name="crossconttxn38ni"/>  
   
-## Transação entre contêineres  
+## <a name="cross-container-transaction"></a>Transação entre contêineres  
   
   
 Uma transação é chamada de transação entre contêineres se:  
@@ -278,7 +282,7 @@ No exemplo de código Transact-SQL a seguir:
       -- within one explicit transaction.  
   
     SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    go  
+    GO  
   
     BEGIN TRANSACTION;  
   
@@ -296,13 +300,13 @@ No exemplo de código Transact-SQL a seguir:
   
   
     COMMIT TRANSACTION;  
-    go  
+    GO  
   
   
   
 <a name="limitations40ni"/>  
   
-## Limitações  
+## <a name="limitations"></a>Limitações  
   
   
 - As transações entre bancos de dados não têm suporte para tabelas com otimização de memória. Se uma transação acessar uma tabela com otimização de memória, a transação não poderá acessar nenhum outro banco de dados, exceto para:  
@@ -314,7 +318,7 @@ No exemplo de código Transact-SQL a seguir:
   
 <a name="natcompstorprocs42ni"/>  
   
-## Procedimentos armazenados compilados nativamente  
+## <a name="natively-compiled-stored-procedures"></a>Procedimentos armazenados compilados nativamente  
   
 - Em um processo nativo, o bloco ATOMIC deve declarar o nível de isolamento de transação para o bloco inteiro, por exemplo:  
   - `... BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, ...) ...`  
@@ -325,7 +329,7 @@ No exemplo de código Transact-SQL a seguir:
   
 <a name="othertxnlinks44ni"/>  
   
-## Outros links de transação  
+## <a name="other-transaction-links"></a>Outros links de transação  
   
 - [SET IMPLICIT_TRANSACTIONS](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
   
@@ -336,23 +340,23 @@ No exemplo de código Transact-SQL a seguir:
 - [Controlar a durabilidade da transação](../../relational-databases/logs/control-transaction-durability.md)   
   
 \<!--  
-Link Guids:  
-016fb05e-a702-484b-bd2a-a6eabd0d76fd , ms173763.aspx , "SET TRANSACTION ISOLATION LEVEL (Transact-SQL)"  
+Guids de Link:  
+016fb05e-a702-484b-bd2a-a6eabd0d76fd , ms173763.aspx , “SET TRANSACTION ISOLATION LEVEL (Transact-SQL)”  
   
-ef1cc7de-63be-4fa3-a622-6d93b440e3ac , dn511014(v=sql.130,d=robot).aspx , "Introduction to Memory-Optimized Tables"  
+ef1cc7de-63be-4fa3-a622-6d93b440e3ac , dn511014(v=sql.130,d=robot).aspx , “Introdução a tabelas com otimização de memória”  
   
-a300ac43-e4c0-4329-8b79-a1a05e63370a , ms187807.aspx , "SET IMPLICIT_TRANSACTIONS (Transact-SQL)"  
+a300ac43-e4c0-4329-8b79-a1a05e63370a , ms187807.aspx , “SET IMPLICIT_TRANSACTIONS (Transact-SQL)”  
   
-e1e85908-9f31-47cf-8af6-88c77e6f24c9 , ms189823.aspx , "sp_getapplock (Transact-SQL)"  
+e1e85908-9f31-47cf-8af6-88c77e6f24c9 , ms189823.aspx , “sp_getapplock (Transact-SQL)”  
   
-3ac93b28-cac7-483e-a8ab-ac44e1cc1c76 , dn449490.aspx , "Control Transaction Durability"  
+3ac93b28-cac7-483e-a8ab-ac44e1cc1c76 , dn449490.aspx , “Controlar durabilidade da transação”  
   
-Image: 'hekaton_transactions' , e9c5eb2f-c9a3-4625-8ae4-ac91447db42f  
-See also XMetal articles: dn133169.aspx , "Transaction Lifetime"  
+Imagem: 'hekaton_transactions' , e9c5eb2f-c9a3-4625-8ae4-ac91447db42f  
+Consulte também artigos XMetal: dn133169.aspx, “Tempo de vida de transação”  
   
-Transactions with In-Memory Tables and Procedures  
+Transações com tabelas e procedimentos na memória  
 {ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5} , dn479429.aspx  
-Maybe replaces: 06075248-705e-4563-9371-b64cd609793c , dn479429.aspx , "Understanding Transactions on Memory-Optimized Tables"  
+Talvez substitua: 06075248-705e-4563-9371-b64cd609793c , dn479429.aspx , “Entendendo transações em tabelas com otimização de memória”  
   
 GeneMi , 2016-03-28 11:40am  
 -->  
@@ -360,3 +364,5 @@ GeneMi , 2016-03-28 11:40am
   
   
   
+
+

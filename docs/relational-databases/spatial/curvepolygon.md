@@ -1,26 +1,30 @@
 ---
-title: "CurvePolygon | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: CurvePolygon | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: df25fb5e1dd8ddcd426559e1410f32e68575a32b
+ms.lasthandoff: 04/11/2017
+
 ---
-# CurvePolygon
+# <a name="curvepolygon"></a>CurvePolygon
   **CurvePolygon** é uma superfície topologicamente fechada definida por um anel delimitador exterior e zero ou mais anéis interiores  
   
 > [!IMPORTANT]  
->  Para obter uma descrição detalhada e exemplos dos recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo o subtipo **CurvePolygon**, baixe o white paper sobre [Novos recursos espaciais no SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obter uma descrição detalhada e exemplos dos recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo o subtipo **CurvePolygon** , baixe o white paper sobre [Novos recursos espaciais no SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Os critérios a seguir definem os atributos de uma instância **CurvePolygon** :  
   
@@ -30,10 +34,10 @@ caps.handback.revision: 18
   
  Uma instância **CurvePolygon** é diferente de uma instância **Polygon** porque uma instância **CurvePolygon** pode conter os seguintes segmentos de arco circular: **CircularString** e **CompoundCurve**.  
   
-## Instâncias CompoundCurve  
+## <a name="compoundcurve-instances"></a>Instâncias CompoundCurve  
  A ilustração a seguir mostra figuras de **CurvePolygon** válidas:  
   
-### Instâncias aceitas  
+### <a name="accepted-instances"></a>Instâncias aceitas  
  Para uma instância **CurvePolygon** ser aceita, ela precisa estar vazia ou conter apenas anéis de arco circular que sejam aceitos. Um anel de arco circular aceito atende aos requisitos a seguir.  
   
 1.  É uma instância **LineString**, **CircularString**ou **CompoundCurve** aceita. Para obter mais informações sobre instâncias aceitas, consulte [LineString](../../relational-databases/spatial/linestring.md), [CircularString](../../relational-databases/spatial/circularstring.md)e [CompoundCurve](../../relational-databases/spatial/compoundcurve.md).  
@@ -66,7 +70,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
  `@g1` não é aceito porque os pontos inicial e de extremidade não têm o mesmo valor de Y. `@g2` não é aceito porque o anel não contém pontos suficientes.  
   
-### Instâncias válidas  
+### <a name="valid-instances"></a>Instâncias válidas  
  Para que uma instância **CurvePolygon** seja válida, os anéis exterior e interior devem atender aos seguintes critérios:  
   
 1.  Eles podem tocar apenas em pontos tangentes únicos.  
@@ -79,7 +83,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
  As instâncias**CurvePolygon** também deverão atender a critérios específicos se fouem tipos de dados **geometry** ou **geography** .  
   
-#### Tipo de dados geometry  
+#### <a name="geometry-data-type"></a>Tipo de dados geometry  
  Uma instância **geometryCurvePolygon** válida deve ter os seguintes atributos:  
   
 1.  Todos os anéis interiores devem estar dentro do anel exterior.  
@@ -102,7 +106,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
   
  As instâncias CurvePolygon têm as mesmas regras de validade que as instâncias Polygon, com exceção de que as instâncias CurvePolygon podem aceitar os novos tipos de segmento de arco circular. Para obter mais exemplos de instâncias válidas ou não válidas, consulte [Polygon](../../relational-databases/spatial/polygon.md).  
   
-#### Tipo de dados geography  
+#### <a name="geography-data-type"></a>Tipo de dados geography  
  Uma instância **geographyCurvePolygon** válida deve ter os seguintes atributos:  
   
 1.  O interior do polígono é conectado usando a regra do lado esquerdo.  
@@ -120,9 +124,9 @@ DECLARE @g geography = 'CURVEPOLYGON((-122.3 47, 122.3 47, 125.7 49, 121 38, -12
 SELECT @g.STIsValid();  
 ```  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
   
-### A. Criando uma instância geométrica com um CurvePolygon vazio  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. Criando uma instância geométrica com um CurvePolygon vazio  
  Esse exemplo mostra como criar uma instância **CurvePolygon** vazia:  
   
 ```tsql  
@@ -130,21 +134,21 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
   
-### B. Declarando e criando uma instância geométrica com um CurvePolygon na mesma instrução  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. Declarando e criando uma instância geométrica com um CurvePolygon na mesma instrução  
  Este trecho de código mostra como declarar e iniciar uma instância de geometry com um **CurvePolygon** na mesma instrução:  
   
 ```tsql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
-### C. Criando uma instância geográfica com um CurvePolygon  
+### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. Criando uma instância geográfica com um CurvePolygon  
  Este trecho de código mostra como declarar e iniciar uma instância de **geography** com um **CurvePolygon**:  
   
 ```tsql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
-### D. Armazenando um CurvePolygon com apenas um anel delimitador exterior  
+### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>D. Armazenando um CurvePolygon com apenas um anel delimitador exterior  
  Este exemplo mostra como armazenar um círculo simples em uma instância **CurvePolygon** (apenas um anel delimitador exterior é usado para definir o círculo):  
   
 ```tsql  
@@ -153,7 +157,7 @@ SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'
 SELECT @g.STArea() AS Area;  
 ```  
   
-### E. Armazenando um CurvePolygon que contém anéis interiores  
+### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. Armazenando um CurvePolygon que contém anéis interiores  
  Este exemplo cria uma rosca em uma instância **CurvePolygon** (um anel delimitador exterior e um anel interior são usados para definir a rosca):  
   
 ```tsql  
@@ -179,14 +183,14 @@ IF @g2.STIsValid() = 1
 SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;  
 ```  
   
- Tanto @ g1 como @ g2 usam o mesmo anel delimitador exterior: um círculo com um raio de 5, e ambos usam um quadrado para um anel interior.  Entretanto, a instância @ g1 é válida, mas a instância @ g2 é inválida.  A razão pela qual @ g2 é inválida é que o anel interior divide o espaço interno limitado pelo anel exterior em quatro regiões separadas.  O desenho a seguir mostra o que ocorreu:  
+ Tanto o @g1 quanto o @g2 usam o mesmo anel delimitador exterior: um círculo com um raio de 5 e ambos usam um quadrado para um anel interior.  Entretanto, a instância @g1 é válida, mas a instância @g2 é inválida.  A razão pela qual @g2 é inválida é que o anel interior divide o espaço interno limitado pelo anel exterior em quatro regiões separadas.  O desenho a seguir mostra o que ocorreu:  
   
-## Consulte também  
- [Polígono](../../relational-databases/spatial/polygon.md)   
+## <a name="see-also"></a>Consulte também  
+ [Polygon](../../relational-databases/spatial/polygon.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   
- [Referência de método de tipo de dados geometry](../Topic/geometry%20Data%20Type%20Method%20Reference.md)   
- [Referência de método de tipo de dados geography](../Topic/geography%20Data%20Type%20Method%20Reference.md)   
+ [Referência de método de tipo de dados geometry](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)   
+ [Referência de método de tipo de dados geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
  [Visão geral de tipos de dados espaciais](../../relational-databases/spatial/spatial-data-types-overview.md)  
   
   

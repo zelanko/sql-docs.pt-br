@@ -1,25 +1,29 @@
 ---
-title: "Modificar estat&#237;sticas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "estatísticas [SQL Server], modificando"
-  - "modificando estatísticas"
+title: "Modificar as estatísticas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- statistics [SQL Server], modifying
+- modifying statistics
 ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc2ee0a2699bb9f1d2aad02e5777a208e842bef8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modificar estat&#237;sticas
+# <a name="modify-statistics"></a>Modificar estatísticas
   Você pode modificar as estatísticas existentes no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -43,11 +47,11 @@ caps.handback.revision: 9
   
 -   O usuário tenha a permissão ALTER na tabela ou exibição.  
   
--   O usuário como o proprietário da tabela ou exibição indexada ou um membro de uma das seguintes funções: função de servidor fixa **sysadmin**, função de banco de dados fixa **db_owner** ou a função de banco de dados fixa **db_ddladmin**.  
+-   O usuário como o proprietário da tabela ou exibição indexada ou um membro de uma das seguintes funções: função de servidor fixa **sysadmin** , função de banco de dados fixa **db_owner** ou a função de banco de dados fixa **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para modificar as estatísticas  
+#### <a name="to-modify-statistics"></a>Para modificar as estatísticas  
   
 1.  No **Pesquisador de Objetos**, clique no sinal de adição para expandir o banco de dados no qual você deseja modificar uma estatística.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 9
   
 5.  Clique com o botão direito do mouse no objeto de estatísticas que você deseja modificar e selecione **Propriedades**.  
   
-6.  Na caixa de diálogo **Propriedades de Estatísticas –** *statistics_name*, na página **Geral**, clique em **Adicionar**, **Remover**, **Mover para Cima**, **Mover para Baixo** ou em qualquer combinação para alterar as propriedades das estatísticas. Lembre-se de que o local de uma coluna na grade **Colunas de Estatísticas** pode afetar substancialmente a utilidade das estatísticas.  
+6.  Na caixa de diálogo **Propriedades de Estatísticas –** *statistics_name* , na página **Geral** , clique em **Adicionar**, **Remover**, **Mover para Cima**, **Mover para Baixo**, any combination, to alter the properties of the statistics. Lembre-se de que o local de uma coluna na grade **Colunas de Estatísticas** pode afetar substancialmente a utilidade das estatísticas.  
   
 7.  Clique em **OK**.  
   

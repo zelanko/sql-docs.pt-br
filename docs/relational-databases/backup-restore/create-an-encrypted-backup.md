@@ -1,25 +1,29 @@
 ---
-title: "Criar um backup criptografado | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Criar um backup criptografado | Microsoft Docs
+ms.custom: 
+ms.date: 08/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 42b2038121e0bf9179fefafc89a7b17e3c1585c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar um backup criptografado
+# <a name="create-an-encrypted-backup"></a>Criar um backup criptografado
   Este tópico descreve as etapas necessárias para criar um backup criptografado usando Transact-SQL.  Para obter um exemplo de como usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte [Criar um backup completo de banco de dados (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md). 
   
-## Backup em disco com criptografia  
+## <a name="backup-to-disk-with-encryption"></a>Backup em disco com criptografia  
  **Pré-requisitos:**  
   
 -   Acesso a um disco local ou ao armazenamento com espaço suficiente para criar um backup do banco de dados.  
@@ -70,12 +74,12 @@ caps.handback.revision: 17
   
  Para obter um exemplo de como criptografar um backup protegido por uma EKM, veja [Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
-### Backup no armazenamento do Windows Azure com criptografia  
+### <a name="backup-to-windows-azure-storage-with-encryption"></a>Backup no armazenamento do Windows Azure com criptografia  
  Se você estiver criando um backup no armazenamento do Windows Azure usando a opção de **Backup do SQL Server para URL** , as etapas de criptografia serão as mesmas, mas você deve usar a URL como destino e uma Credencial SQL a ser autenticada no armazenamento do Windows Azure. Se você quiser configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] com opções de criptografia, veja [Habilitar o backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
  **Pré-requisitos:**  
   
--   Uma conta de armazenamento do Windows e um contêiner. Para obter mais informações, consulte: [Lesson 1: Create Windows Azure Storage Objects](../Topic/Lesson%201:%20Create%20Windows%20Azure%20Storage%20Objects.md).  
+-   Uma conta de armazenamento do Windows e um contêiner. Para obter mais informações, consulte: [Lesson 1: Create Windows Azure Storage Objects](http://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
   
 -   Uma Chave Mestra do Banco de Dados para o banco de dados mestre, e um certificado ou uma chave assimétrica na instância do SQL Server. Para requisitos e permissões de criptografia, consulte [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md).  
   
@@ -129,3 +133,4 @@ caps.handback.revision: 17
     ```  
   
   
+

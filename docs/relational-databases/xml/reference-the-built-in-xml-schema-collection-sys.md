@@ -1,29 +1,33 @@
 ---
-title: "Referenciar a cole&#231;&#227;o de esquemas XML interna (sys) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "coleções de esquema XML sys [SQL Server]"
-  - "coleções de esquema [SQL Server], predefinidas"
-  - "coleções de esquema XML predefinidas [SQL Server]"
-  - "coleções de esquema XML [SQL Server], predefinidas"
-  - "coleções de esquemas XML internas [SQL Server]"
+title: "Referenciar a coleção de esquemas XML interna (sys) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sys XML schema collections [SQL Server]
+- schema collections [SQL Server], predefined
+- predefined XML schema collections [SQL Server]
+- XML schema collections [SQL Server], predefined
+- built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa2b103a4c846e52c9af999980bb3c8080a4f6d5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Referenciar a cole&#231;&#227;o de esquemas XML interna (sys)
-  Todo banco de dados que você cria tem uma coleção de esquema XML **sys** predefinido no esquema relacional **sys**. Ele reserva esses esquemas predefinidos que podem ser acessados de qualquer outra coleção de esquema XML criada pelo usuário. Os prefixos usados nesses esquemas predefinidos são significativos em XQuery. Apenas **xml** é um prefixo reservado.  
+# <a name="reference-the-built-in-xml-schema-collection-sys"></a>Referenciar a coleção de esquemas XML interna (sys)
+  Todo banco de dados que você cria tem uma coleção de esquema XML **sys** predefinido no esquema relacional **sys** . Ele reserva esses esquemas predefinidos que podem ser acessados de qualquer outra coleção de esquema XML criada pelo usuário. Os prefixos usados nesses esquemas predefinidos são significativos em XQuery. Apenas **xml** é um prefixo reservado.  
   
 ```  
 xml = http://www.w3.org/XML/1998/namespace  
@@ -40,7 +44,7 @@ xdt = http://www.w3.org/2004/07/xpath-datatypes
   
 -   Tipos XSD  
   
--   Atributos XML **lang**, **base** e **space**  
+-   Atributos XML **lang**, **base**e **space**  
   
 -   Componentes do namespace **sqltypes**  
   
@@ -56,7 +60,7 @@ AND (SC.schema_id = 4))
 GO  
 ```  
   
- O exemplo a seguir mostra como esses componentes são referenciados em um esquema de usuário. `CREATE XML SCHEMA COLLECTION` cria uma coleção de esquemas XML que referencia o tipo `varchar` definido no namespace `sqltypes`. O exemplo também referencia o atributo `lang` que está definido no namespace `xml`.  
+ O exemplo a seguir mostra como esses componentes são referenciados em um esquema de usuário. `CREATE XML SCHEMA COLLECTION` cria uma coleção de esquemas XML que referencia o tipo `varchar` definido no namespace `sqltypes` . O exemplo também referencia o atributo `lang` que está definido no namespace `xml` .  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
@@ -103,7 +107,7 @@ GO
     GO  
     ```  
   
--   Não é possível usar a coleção de esquema XML `sys` para digitar colunas, variáveis ou parâmetros `xml`. Por exemplo, o seguinte código retorna um erro:  
+-   Não é possível usar a coleção de esquema XML `sys` para digitar colunas, variáveis ou parâmetros `xml` . Por exemplo, o seguinte código retorna um erro:  
   
     ```  
     DECLARE @x xml (sys.sys)  
@@ -148,7 +152,7 @@ GO
   
  A expressão `instance of sqltypes:varchar?` retorna TRUE, porque o valor do elemento <`root`> é de um tipo derivado de **varchar** de acordo com o esquema associado à variável `@var`.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Coleções de esquemas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

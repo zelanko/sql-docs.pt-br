@@ -1,24 +1,28 @@
 ---
-title: "Heaps (Tabelas sem &#237;ndices clusterizados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "heaps"
+title: "Heaps (tabelas sem índices clusterizados) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- heaps
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cae45be3e215c24dd437502f81a870f14d453f3d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Heaps (Tabelas sem &#237;ndices clusterizados)
+# <a name="heaps-tables-without-clustered-indexes"></a>Heaps (Tabelas sem índices clusterizados)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Heap é uma tabela sem índice clusterizado. Podem ser criados um ou mais índices não clusterizados em tabelas armazenadas como um heap. Dados são armazenados no heap sem especificar uma ordem. Normalmente, os dados são armazenados inicialmente na ordem em que as linhas são inseridas na tabela, mas o [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode mover os dados no heap para armazenar as linhas de forma eficaz; portanto, a ordem de dados não pode ser prevista. Para garantir a ordem de linhas retornadas de um heap, você deve usar a cláusula **ORDER BY** . Para especificar a ordem de armazenamento das linhas, crie um índice clusterizado na tabela, de forma que a tabela não seja um heap.  
@@ -26,12 +30,12 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  Às vezes, há boas razões para deixar uma tabela como heap em vez de criar um índice clusterizado, mas usar heaps efetivamente é uma habilidade avançada. A maioria das tabelas deve ter um índice clusterizado cuidadosamente escolhido, a menos que haja uma boa razão boa para deixar a tabela como heap.  
   
-## Quando usar um heap  
+## <a name="when-to-use-a-heap"></a>Quando usar um heap  
  Se uma tabela for um heap e não tiver um índice clusterizado, a tabela inteira deverá ser examinada (análise de tabela) para localizar as linhas. Isso pode ser aceitável quando a tabela é pequena, como uma lista dos 12 escritórios regionais de uma empresa.  
   
  Quando uma tabela é armazenada como heap, linhas individuais são identificadas por referência a um RID (identificador de linha) que consiste em número do arquivo, número da página de dados e local na página. A ID de linha é uma estrutura pequena e eficiente. Às vezes, os arquitetos de dados usam heaps quando os dados são sempre acessados por índices não clusterizados e o RID é menor que uma chave de índice clusterizado.  
   
-## Quando não usar um heap  
+## <a name="when-not-to-use-a-heap"></a>Quando não usar um heap  
  Não use um heap quando os dados são retornados frequentemente em uma ordem classificada. Um índice clusterizado na coluna de classificação pode evitar a operação de classificação.  
   
  Não use um heap quando os dados forem agrupados com frequência. Os dados devem ser classificados antes de serem agrupados, e um índice clusterizado na coluna de classificação pode evitar a operação de classificação.  
@@ -40,7 +44,7 @@ caps.handback.revision: 8
   
  Não use um heap quando não houver índice não clusterizado e a tabela for grande. Em um heap, todas as linhas do heap devem ser lidas para localizar qualquer linha.  
   
-## Gerenciando heaps  
+## <a name="managing-heaps"></a>Gerenciando heaps  
  Para criar um heap, crie uma tabela sem um índice clusterizado. Se uma tabela já tiver um índice clusterizado, descarte o índice clusterizado para retornar a tabela a um heap.  
   
  Para remover um heap, crie um índice clusterizado no heap.  
@@ -50,7 +54,7 @@ caps.handback.revision: 8
 > [!WARNING]  
 >  Criar ou descartar índices clusterizados requer a regravação da tabela inteira. Se a tabela tiver índices não clusterizados, todos os índices não clusterizados deverão ser recriados sempre que o índice clusterizado for alterado. Portanto, mudar de um heap para uma estrutura de índice clusterizado ou vice-versa pode demorar muito e exigir espaço em disco para reorganizar os dados em tempdb.  
 
-## Estruturas de heap
+## <a name="heap-structures"></a>Estruturas de heap
 
 
 Heap é uma tabela sem índice clusterizado. Heaps têm uma linha em [sys.partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md), com `index_id = 0` para cada particionamento usado pelo heap. Por padrão, um heap tem um único particionamento. Quando um heap tem particionamentos múltiplos, cada particionamento tem uma estrutura de heap que contém os dados para aquele específico. Por exemplo, se um heap tiver quatro particionamentos, haverá quatro estruturas de heap; uma em cada particionamento.
@@ -69,7 +73,7 @@ A ilustração a seguir mostra como o Mecanismo de Banco de Dados do SQL Server 
 ![iam_heap](../../relational-databases/indexes/media/iam-heap.gif)
 
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
@@ -77,3 +81,4 @@ A ilustração a seguir mostra como o Mecanismo de Banco de Dados do SQL Server 
  [Índices clusterizados e não clusterizados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)  
   
   
+

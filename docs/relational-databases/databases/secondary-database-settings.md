@@ -1,29 +1,33 @@
 ---
-title: "Configura&#231;&#245;es do Banco de Dados Secund&#225;rio. | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.settings.dest.f1"
+title: "Configurações do Banco de Dados Secundário | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ec30a94c58a94d2afad050eab06ecc60432c7b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configura&#231;&#245;es do Banco de Dados Secund&#225;rio.
+# <a name="secondary-database-settings"></a>Configurações do Banco de Dados Secundário.
   Use essa caixa de diálogo para configurar e modificar as propriedades de um banco de dados secundário na configuração de envio de logs.  
   
  Para obter uma explicação dos conceitos de envio de log, veja [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Instância de servidor secundário**  
  Exibe o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atualmente configurada para ser um servidor secundário em uma configuração do envio de logs.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 32
  Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para configurar seu banco de dados secundário, fazendo o backup do banco de dados primário e restaurando-o no servidor secundário. Se você digitou um novo nome de banco de dados na caixa **Banco de dados secundário** , o banco de dados será criado com parte da operação de restauração.  
   
  **Opções de restauração**  
- Clique se desejar restaurar os dados e arquivos de log para o banco de dados secundário em locais não padrão no servidor secundário.   
+ Clique se desejar restaurar os dados e arquivos de log para o banco de dados secundário em locais não padrão no servidor secundário.  
   
  Esse botão abre a caixa de diálogo **Opções de Restauração** . Ali é possível especificar caminhos a pastas não padrão nos quais se deseja localizar o banco de dados secundário e seu log. Ao especificar qualquer pasta, deve-se especificar ambos.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 32
  Se você clicar no botão **Opções de Restauração** e resolver que deseja usar as pastas padrão, recomendamos que cancele a caixa de diálogo **Opções de Restauração** . Se você já especificou locais não padrão e agora deseja usar locais padrão, clique novamente em **Opções de Restauração** desmarque as caixas de texto e clique em OK.  
   
  **Sim, restaure um backup existente do banco de dados primário para o banco de dados secundário**  
- Escolha [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para usar um backup existente de seu banco de dados primário para inicializar o banco de dados secundário.  Digite o local daquele backup na caixa **Arquivo de backup** . Se você digitou um novo nome de banco de dados na caixa Banco de dados secundário, o banco de dados será criado como parte da operação de restauração.   
+ Escolha [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para usar um backup existente de seu banco de dados primário para inicializar o banco de dados secundário. Digite o local daquele backup na caixa **Arquivo de backup** . Se você digitou um novo nome de banco de dados na caixa Banco de dados secundário, o banco de dados será criado como parte da operação de restauração.  
   
  **Arquivo de backup**  
  Digite o caminho e nome de arquivo do backup completo do banco de dados que deseja usar para inicializar o banco de dados secundário. Se escolher **Sim, restaurar um backup existente do banco de dados primário para o banco de dados secundário**.  
@@ -75,7 +79,7 @@ caps.handback.revision: 32
  **Agenda**  
  Exibe a agenda atual para o trabalho de cópia do SQL Server Agent para copiar backups do log de transações do servidor primário para o servidor secundário. É possível alterar essa agenda clicando-se em **Agenda....**  
   
- **Agenda...**  
+ **Agenda....**  
  Modifique os parâmetros do trabalho do SQL Server Agent que copia backups de log de transações do servidor primário para o servidor secundário.  
   
  **Desabilitar este trabalho**  
@@ -108,13 +112,13 @@ caps.handback.revision: 32
  **Agenda**  
  Exibe a agenda atual para o trabalho do SQL Server Agent usado para restaurar os backups do log de transações para o banco de dados secundário. É possível alterar essa opção clicando-se em **Agenda....**  
   
- **Agenda...**  
+ **Agenda....**  
  Modifique os parâmetros relacionados à restauração do trabalho do SQL Server Agent.  
   
  **Desabilitar este trabalho**  
  Suspenda operações de restauração para o banco de dados secundário.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

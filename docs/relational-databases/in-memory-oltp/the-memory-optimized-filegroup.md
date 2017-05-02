@@ -1,23 +1,27 @@
 ---
-title: "O grupo de arquivos com otimiza&#231;&#227;o de mem&#243;ria | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "O grupo de arquivos com otimização de memória | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 07cda4d0c3e3bf0dd604de193ceef602a36c0ca9
+ms.lasthandoff: 04/11/2017
+
 ---
-# O grupo de arquivos com otimiza&#231;&#227;o de mem&#243;ria
+# <a name="the-memory-optimized-filegroup"></a>O grupo de arquivos com otimização de memória
   Para criar tabelas com otimização de memória, você deve primeiro criar um grupo de arquivos com otimização de memória. O grupo de arquivos com otimização de memória retém um ou mais contêineres. Cada contêiner contém arquivos de dados ou arquivos delta, ou então ambos.  
   
  Embora as linhas de dados das tabelas SCHEMA_ONLY não persistam e os metadados para tabelas otimizadas para memória e procedimentos armazenados compilados nativamente estejam armazenados nos catálogos tradicionais, o mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ainda requer um grupo de arquivos com otimização de memória para tabelas otimizadas para memória SCHEMA_ONLY para fornecer uma experiência uniforme para bancos de dados com tabelas otimizadas para memória.  
@@ -36,7 +40,7 @@ caps.handback.revision: 15
     ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod  
     ```  
   
--   Não é necessário habilitar o fluxo de arquivos ([Habilitar e configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)) para criar um grupo de arquivos com otimização de memória. O mapeamento do fluxo de arquivos é realizado pelo mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
+-   Não é necessário habilitar o fluxo de arquivos ([Habilitar e configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)) para criar um grupo de arquivos com otimização de memória. O mapeamento do fluxo de arquivos é realizado pelo mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
 -   Você pode adicionar novos contêineres a um grupo de arquivos com otimização de memória. Você pode precisar de um novo contêiner para expandir o armazenamento necessário para a tabela otimizada para memória e também para distribuir ES entre vários contêineres.  
   
@@ -50,12 +54,12 @@ caps.handback.revision: 15
   
 -   Não é possível especificar o MAXSIZE para o contêiner.  
   
-## Configurando um grupo de arquivos com otimização de memória  
+## <a name="configuring-a-memory-optimized-filegroup"></a>Configurando um grupo de arquivos com otimização de memória  
  Considere criar múltiplos contêineres em um grupo de arquivos com otimização de memória e distribui-los em diferentes unidades para obter mais largura de banda para transferir os dados para a memória.  
   
  Ao configurar o armazenamento, é necessário fornecer espaço livre em disco de quatro vezes o tamanho das tabelas com otimização de memória. Também é necessário garantir que o subsistema de ES suporte o IOPS para a carga de trabalho. Se os pares de dados e arquivo delta forem populados em um IOPS específico, será necessário três vezes o tamanho do IOPS para abranger as operações de armazenamento e mesclagem. Você pode adicionar capacidade de armazenamento e IOPS adicionando um ou mais contêineres ao grupo de arquivos com otimização de memória.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criando e gerenciando armazenamento para objetos com otimização de memória](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

@@ -1,24 +1,28 @@
 ---
-title: "Filtrar Linhas da Tabela | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.newpubwizard.filtertablerows.f1"
+title: Filtrar linhas da tabela | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.newpubwizard.filtertablerows.f1
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 610fb6065c2261ae6f1e2c8627656b193cb5d456
+ms.lasthandoff: 04/11/2017
+
 ---
-# Filtrar Linhas da Tabela
+# <a name="filter-table-rows"></a>Filtrar Linhas da Tabela
   A página **Filtrar Linhas da Tabela** permite:  
   
 -   Aplicar filtros de linhas estáticos a artigos de tabela em publicações de instantâneo, transacional e de mesclagem.  
@@ -27,7 +31,7 @@ caps.handback.revision: 25
   
 -   Usar filtros de junção para estender filtros em artigos de tabela de mesclagem para artigos de tabela relacionados.  
   
- Para obter mais informações sobre opções de filtragem, consulte [Filtrar dados publicados](../../relational-databases/replication/publish/filter-published-data.md). A filtragem pode ser alterada na página **Filtrar Linhas** da caixa de diálogo **Propriedades de Publicação** .  
+ Para obter mais informações sobre opções de filtragem, consulte [Filter Published Data](../../relational-databases/replication/publish/filter-published-data.md) (Filtrar dados publicados). A filtragem pode ser alterada na página **Filtrar Linhas** da caixa de diálogo **Propriedades de Publicação** .  
   
  Para maximizar o desempenho do aplicativo e reduzir a quantidade de uma armazenagem remota requerida ou restringir a disponibilidade de certos dados a Assinantes específicos, somente os dados requeridos devem ser publicados. Sua publicação pode incluir as tabelas filtradas e não filtradas. Por exemplo, você pode incluir a tabela completa (não filtrada) de produtos da empresa e usar filtros de linha para fornecer uma tabela filtrada aos clientes de uma região específica. Filtrando dados publicados, você pode:  
   
@@ -39,16 +43,16 @@ caps.handback.revision: 25
   
 -   Evitar ou reduzir conflitos se o Assinante estiver atualizando dados, porque partições diferentes de dados podem ser enviadas a Assinantes diferentes (dois Assinantes não estarão atualizando os mesmos valores de dados).  
   
--   Evitar transmitir dados confidenciais. Podem ser usados filtros de linha e filtros de coluna para restringir um acesso de Assinante aos dados. Para a replicação de mesclagem, haverá considerações de segurança se você usar um filtro com parâmetros que inclua HOST_NAME(). Para obter mais informações, consulte a seção "Filtragem com HOST_NAME ()" em [filtros de linha com parâmetros](../../relational-databases/replication/merge/parameterized-row-filters.md).  
+-   Evitar transmitir dados confidenciais. Podem ser usados filtros de linha e filtros de coluna para restringir um acesso de Assinante aos dados. Para a replicação de mesclagem, haverá considerações de segurança se você usar um filtro com parâmetros que inclua HOST_NAME(). Para obter mais informações, consulte a seção "Filtrando com HOST_NAME()" em [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  Um filtro não deve incluir o **rowguidcol** usado por replicação para identificar linhas. Por padrão, esta é a coluna adicionada no momento que você define a replicação de mesclagem e é denominada **rowguid**.  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Tabelas Filtradas**  
  Esse painel é populado com filtros à medida que são adicionados a artigos de tabela na publicação. Tabelas com filtros de linha são mostradas como nós de alto nível no painel. Para publicações de mesclagem, tabelas para as quais a filtragem foi estendida através de um filtro de junção são mostradas como nós filhos.  
   
  **Adicionar**  
- Clique em **Add** para iniciar a caixa de diálogo que permite filtrar artigos de tabela. Clicar em **Adicionar** para um instantâneo ou uma publicação transacional inicia imediatamente uma caixa de diálogo. Clicar em **Adicionar** para uma publicação de mesclagem exibe três opções: **Adicionar Filtro**; **Adicionar Junção para Estender o Filtro Selecionado**; **Gerar Filtros Automaticamente**.  
+ Clique em **Adicionar** para iniciar uma caixa de diálogo que permite filtrar artigos de tabela. Clicar em **Adicionar** para um instantâneo ou uma publicação transacional inicia imediatamente uma caixa de diálogo. Clicar em **Adicionar** para uma publicação de mesclagem exibe três opções: **Adicionar Filtro**; **Adicionar Junção para Estender o Filtro Selecionado**; **Gerar Filtros Automaticamente**.  
   
 -   Selecione **Adicionar Filtro** para iniciar a caixa de diálogo **Adicionar filtro** . Essa caixa de diálogo permite aplicar filtros de linha a um artigo de tabela. Na caixa de diálogo **Adicionar Filtro** você pode, por exemplo, especificar que uma tabela com dados de cliente só contenha dados de clientes franceses quando for replicada para Assinantes.  
   
@@ -63,27 +67,27 @@ caps.handback.revision: 25
     >  Quando os filtros são gerados automaticamente por replicação, qualquer filtro existente na publicação é excluído. Para incluir os filtros gerados automaticamente e um especificado manualmente, gere os filtros primeiro. Você só pode especificar um conjunto de filtros gerado automaticamente para cada publicação.  
   
  **Editar**  
- Selecione um filtro de linha ou filtro de junção no painel de filtro e clique em **Editar** para iniciar o **Editar filtro** ou **Editar junção** caixa de diálogo.  
+ Selecione um filtro de linha ou um filtro de junção no painel de filtros e clique em **Editar** para iniciar a caixa de diálogo **Editar Filtro** ou **Editar Junção** .  
   
  **Delete (excluir)**  
- Selecione um filtro de linha ou filtro de junção no painel de filtro e clique em **Excluir** para excluir o filtro.  
+ Selecione um filtro de linha ou um filtro de junção no painel de filtro e clique em **Excluir** para excluir o filtro.  
   
  **Localizar Tabela**  
  Mescle publicações apenas com filtros de junção. Clique em **Localizar Tabela** para localizar uma tabela em uma árvore de filtro complexa. Em um banco de dados com relações complexas, pode haver junção de uma tabela com várias tabelas e, portanto, ela pode aparecer em mais de um lugar na árvore de filtro.  
   
- A tabela real só aparece em um lugar na árvore; em outros lugares a tabela é representada por um atalho. Um atalho para uma tabela é somente uma referência à tabela; ele não mostra os nós filhos da tabela. Um nó de atalho é marcado com uma seta de atalho e expandindo esse nó mostra o texto **clique em encontrar tabela para ver a tabela \< tablename>**.  
+ A tabela real só aparece em um lugar na árvore; em outros lugares a tabela é representada por um atalho. Um atalho para uma tabela é somente uma referência à tabela; ele não mostra os nós filhos da tabela. Um nó de atalho é marcado com uma seta de atalho e expandir esse nó mostra o texto **Clique em localizar tabela para ver a tabela \<tablename>**.  
   
  Selecione um nó de atalho no painel e clique em **Localizar Tabela**. O painel é expandido e a tabela é destacada. Se você clicar em **Localizar Tabela** sem um nó de atalho selecionado, uma caixa de diálogo **Localizar Tabela** será ativada.  
   
- **Filter**  
+ **Filtro**  
  Contém a definição [!INCLUDE[tsql](../../includes/tsql-md.md)] para o filtro selecionado no painel de filtro.  
   
-## Consulte também  
- [Crie uma publicação](../../relational-databases/replication/publish/create-a-publication.md)   
- [Visualizar e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Filtrar dados publicados](../../relational-databases/replication/publish/filter-published-data.md)   
+## <a name="see-also"></a>Consulte também  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+ [Filtrar os dados publicados](../../relational-databases/replication/publish/filter-published-data.md)   
  [Filtros de junção](../../relational-databases/replication/merge/join-filters.md)   
- [Filtros de linha com parâmetros](../../relational-databases/replication/merge/parameterized-row-filters.md)   
+ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

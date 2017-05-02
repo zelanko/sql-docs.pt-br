@@ -1,27 +1,31 @@
 ---
-title: "Monitorar e solucionar problemas de uso da mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Monitorar e solucionar problemas de uso de memória | Microsoft Docs"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5b936bf52653ea81c579c345d09f4f2d0e76339
+ms.lasthandoff: 04/11/2017
+
 ---
-# Monitorar e solucionar problemas de uso da mem&#243;ria
+# <a name="monitor-and-troubleshoot-memory-usage"></a>Monitorar e solucionar problemas de uso da memória
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] consome memória em padrões diferentes comparado a tabelas baseadas em disco. Você pode monitorar a quantidade de memória alocada e usada pelas tabelas e índices com otimização de memória em seu banco de dados, usando as DMVs ou os contadores de desempenho fornecidos para a memória e o subsistema de coleta de lixo.  Isso oferece visibilidade em nível de sistema e banco de dados, e permite que você evite problemas devido ao esgotamento de memória.  
   
  Este tópico abrange o monitoramento do uso de memória de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
-## Seções neste tópico  
+## <a name="sections-in-this-topic"></a>Seções neste tópico  
   
 -   [Criar um banco de dados de exemplo com tabelas com otimização de memória](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_CreateDB)  
   
@@ -127,7 +131,7 @@ caps.handback.revision: 29
 ###  <a name="bkmk_UsingSSMS"></a> Usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] é fornecido com relatórios internos padrão para monitorar a memória consumida por tabelas na memória. Você pode acessar esses relatórios usando o Pesquisador de Objetos, conforme descrito [aqui](http://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). Você também pode usar o Pesquisador de Objetos para monitorar a memória consumida por tabelas individuais com otimização de memória.  
   
-#### Consumo em nível de banco de dados  
+#### <a name="consumption-at-the-database-level"></a>Consumo em nível de banco de dados  
  Você pode monitorar o uso da memória em nível de banco de dados da forma a seguir.  
   
 1.  Inicie o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e conecte-se a um servidor.  
@@ -145,8 +149,8 @@ caps.handback.revision: 29
 ###  <a name="bkmk_UsingDMVs"></a> Usando DMVs  
  Há várias DMVs disponíveis para monitorar a memória consumida por tabelas com otimização de memória, índices, objetos de sistema e estruturas de tempo de execução.  
   
-#### Consumo de memória por tabelas com otimização de memória e índices  
- Você pode localizar o consumo de memória para todas as tabelas de usuário, índices e objetos do sistema consultando `sys.dm_db_xtp_table_memory_stats`, conforme mostrado aqui.  
+#### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>Consumo de memória por tabelas com otimização de memória e índices  
+ Você pode localizar o consumo de memória para todas as tabelas de usuário, índices e objetos do sistema consultando `sys.dm_db_xtp_table_memory_stats` , conforme mostrado aqui.  
   
 ```tsql  
 SELECT object_name(object_id) AS Name  
@@ -171,7 +175,7 @@ NULL       -2          192                           25                      16 
   
  Para obter mais informações, veja [sys.dm_db_xtp_table_memory_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
   
-#### Consumo de memória por estruturas internas do sistema  
+#### <a name="memory-consumption-by-internal-system-structures"></a>Consumo de memória por estruturas internas do sistema  
  A memória também é consumida por objetos do sistema, tais como estruturas transacionais, buffers para arquivos de dados e delta, estruturas de coleta de lixo, entre outros. Você pode localizar a memória usada para esses objetos de sistema consultando `sys.dm_xtp_system_memory_consumers` , conforme mostrado aqui.  
   
 ```tsql  
@@ -210,7 +214,7 @@ PGPOOL:  4K               0                    0                    0
   
  Para obter mais informações, veja [sys.dm_xtp_system_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md).  
   
-#### Consumo de memória em tempo de execução ao acessar tabelas com otimização de memória  
+#### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>Consumo de memória em tempo de execução ao acessar tabelas com otimização de memória  
  Você pode determinar a memória consumida por estruturas em tempo de execução; por exemplo, o cache de procedimento com a seguinte consulta: execute esta consulta para obter a memória usada por estruturas em tempo de execução, como o cache de procedimento. Todas as estruturas em tempo de execução são marcadas com XTP.  
   
 ```tsql  
@@ -243,8 +247,8 @@ memory_object_address pages_ in_bytes bytes_used type
   
  Para obter mais informações, veja [sys.dm_os_memory_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
-#### Memória consumida pelo mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] na instância  
- A memória alocada para o mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] e os objetos com otimização de memória são gerenciados da mesma maneira que qualquer outro consumidor de memória em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os administradores do tipo MEMORYCLERK_XTP respondem por toda a memória alocada para o mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. Use a consulta a seguir para localizar toda a memória usada pelo mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
+#### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>Memória consumida pelo mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] na instância  
+ A memória alocada para o mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] e os objetos com otimização de memória são gerenciados da mesma maneira que qualquer outro consumidor de memória em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os administradores do tipo MEMORYCLERK_XTP respondem por toda a memória alocada para o mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] . Use a consulta a seguir para localizar toda a memória usada pelo mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
 ```tsql  
 -- this DMV accounts for all memory used by the hek_2 engine  
@@ -281,7 +285,7 @@ MEMORYCLERK_XTP      Default    64             0
   
 3.  Execute uma ação para reduzir os problemas potenciais de memória. Para obter mais informações, veja [Resolver problemas de memória insuficiente](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Associar um banco de dados com tabelas com otimização de memória a um pool de recursos](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Alterar MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT em um pool existente](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)  
   

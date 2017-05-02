@@ -1,24 +1,28 @@
 ---
-title: "Gravando p&#225;ginas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "páginas"
+title: "Escrevendo páginas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pages
 ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 caps.latest.revision: 2
-author: "pmasl"
-ms.author: "pelopes"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: pmasl
+ms.author: pelopes
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f8e6bff396499886a23182787d84a84e6ceaf17
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gravando p&#225;ginas
+# <a name="writing-pages"></a>Gravando páginas
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 A E/S de uma instância do [!INCLUDE[ssDE](../includes/ssde-md.md)] inclui gravações lógicas e físicas. Uma gravação lógica acontece quando os dados são modificados em uma página no cache do buffer. Uma gravação física acontece quando a página é gravada do [cache do buffer](../relational-databases/memory-management-architecture-guide.md) no disco.

@@ -1,27 +1,31 @@
 ---
-title: "Valores para declara&#231;&#245;es &lt;xsd:simpleType&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "declarações xsd:simpleType"
+title: "Valores para declarações &lt;xsd:simpleType&gt; | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xsd:simpleType declarations
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b5ba2b2137935919d420f2eab0349a26dc8d9c87
+ms.lasthandoff: 04/11/2017
+
 ---
-# Valores para declara&#231;&#245;es &lt;xsd:simpleType&gt;
+# <a name="values-for-ltxsdsimpletypegt-declarations"></a>Valores para declarações &lt;xsd:simpleType&gt;
   A tabela a seguir descreve as restrições aplicadas com base em todas as enumerações de tipo simples XSD reconhecidas.  
   
- Além disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não dá suporte para o valor NaN nas declarações **\<xsd:simpleType>**. Esquemas que incluem valores NaN são rejeitados pelo servidor.  
+ Além disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não dá suporte para o valor NaN nas declarações **\<<xsd:simpleType>**. Esquemas que incluem valores NaN são rejeitados pelo servidor.  
   
 |Tipo simples|Limitação|  
 |-----------------|----------------|  
@@ -39,7 +43,7 @@ caps.handback.revision: 14
 |**cadeia de caracteres**|Valores desse tipo devem estar de acordo com o formato do tipo **nvarchar(max)** do SQL.|  
 |**anyURI**|Valores deste tipo não podem ter mais que 4000 caracteres Unicode de comprimento.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Requisitos e limitações de uso de coleções de esquema XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

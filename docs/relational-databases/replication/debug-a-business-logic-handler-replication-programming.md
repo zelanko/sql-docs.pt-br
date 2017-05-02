@@ -1,42 +1,46 @@
 ---
-title: "Depurar um manipulador de l&#243;gica de neg&#243;cios (Programa&#231;&#227;o de replica&#231;&#227;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "manipuladores de lógica de negócios de replicação de mesclagem [replicação do SQL Server]"
-  - "manipuladores de lógica de negócios [replicação do SQL Server]"
-  - "classe BusinessLogicModule"
+title: "Depurar um manipulador de lógica de negócios (Programação de replicação) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- merge replication business logic handlers [SQL Server replication]
+- business logic handlers [SQL Server replication]
+- BusinessLogicModule class
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72ca7cf7a7de06c1b0da728fa1c8541bae1f0e8a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Depurar um manipulador de l&#243;gica de neg&#243;cios (Programa&#231;&#227;o de replica&#231;&#227;o)
-  Use um manipulador de lógica de negócios para invocar a lógica de negócios personalizada quando uma assinatura de mesclagem for sincronizada. Para obter mais informações, consulte [executar lógica de negócios durante a sincronização direta](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
+# <a name="debug-a-business-logic-handler-replication-programming"></a>Depurar um manipulador de lógica de negócios (Programação de replicação)
+  Use um manipulador de lógica de negócios para invocar a lógica de negócios personalizada quando uma assinatura de mesclagem for sincronizada. Para obter mais informações, consulte [Executar lógica de negócios durante a sincronizações de mesclagem](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
- O Reconciliador de replicação de mesclagem (replrec.dll) chama o assembly de código gerenciado que contém a lógica comercial. Na maior parte dos casos, o replrec.dll e a lógica comercial personalizada são executados no computador em que o Agente de Mesclagem é executado (no Assinante para a assinatura pull ou no Distribuidor da assinatura push). Com relação à sincronização da Web ou a um Assinante [!INCLUDE[ssEW](../../includes/ssew-md.md)], o reconciliador e a lógica comercial personalizada são executados no servidor Web.  
+ O Reconciliador de replicação de mesclagem (replrec.dll) chama o assembly de código gerenciado que contém a lógica comercial. Na maior parte dos casos, o replrec.dll e a lógica comercial personalizada são executados no computador em que o Agente de Mesclagem é executado (no Assinante para a assinatura pull ou no Distribuidor da assinatura push). Com relação à sincronização da Web ou a um Assinante [!INCLUDE[ssEW](../../includes/ssew-md.md)] , o reconciliador e a lógica comercial personalizada são executados no servidor Web.  
   
-### Para depurar um manipulador de lógica de negócios em um computador local  
+### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>Para depurar um manipulador de lógica de negócios em um computador local  
   
-1.  Configure a publicação e a distribuição, crie uma publicação e crie uma assinatura para a publicação. Para obter mais informações, consulte [Configurar publicação e distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md) e [criar, modificar e excluir publicações e artigos e 40; Replicação e 41;](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md).  
+1.  Configure a publicação e a distribuição, crie uma publicação e crie uma assinatura para a publicação. Para obter mais informações, consulte [Configurar publicação e distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md) e [Criar, modificar e excluir publicações e artigos &#40;Replicação&#41;](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md).  
   
 2.  Crie e registre um manipulador de lógica de negócios. Para obter mais informações, consulte [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
 3.  Crie um projeto RMO (Replication Management Objects) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, que iniciará o Agente de Mesclagem em sincronia, programaticamente. Para obter mais informações, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
-4.  Defina um ponto de interrupção no código do manipulador de lógica de negócios, tanto no método sendo depurado como no construtor da classe. Para obter mais informações sobre os métodos que podem ser implementados em um manipulador de lógica de negócios, consulte o <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> tópico métodos.  
+4.  Defina um ponto de interrupção no código do manipulador de lógica de negócios, tanto no método sendo depurado como no construtor da classe. Para obter mais informações sobre os métodos que podem ser implementados em um manipulador de lógica de negócios, consulte o tópico dos métodos <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>.  
   
 5.  Crie o manipulador de lógica de negócios no modo de depuração e implante o assembly e o arquivo de símbolo de depuração (.pdb) no local registrado na Etapa 1.  
   
@@ -49,13 +53,13 @@ caps.handback.revision: 34
   
 8.  Supondo que nenhum outro ponto de interrupção esteja definido e que os comandos tenham sido replicados, a execução para quando alcança o ponto de interrupção do manipulador de lógica de negócios.  
   
-### Para depurar um manipulador de lógica de negócios em um servidor Web usando a sincronização da Web ou para um assinante do SQL Server Compact  
+### <a name="to-debug-a-business-logic-handler-on-a-web-server-using-web-synchronization-or-for-a-sql-server-compact-subscriber"></a>Para depurar um manipulador de lógica de negócios em um servidor Web usando a sincronização da Web ou para um assinante do SQL Server Compact  
   
-1.  Configure a publicação e a distribuição, crie uma publicação e crie uma assinatura pull para a publicação. A publicação deve oferecer suporte à sincronização da Web ou [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes.  
+1.  Configure a publicação e a distribuição, crie uma publicação e crie uma assinatura pull para a publicação. A publicação deve oferecer suporte para sincronização da Web ou Assinantes [!INCLUDE[ssEW](../../includes/ssew-md.md)] .  
   
 2.  Crie e registre um manipulador de lógica de negócios. Para obter mais informações, consulte [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
-3.  Defina um ponto de interrupção no código do manipulador de lógica de negócios, tanto no método sendo depurado como no construtor da classe. Para obter mais informações sobre os métodos que podem ser implementados em um manipulador de lógica de negócios, consulte o <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> tópico métodos.  
+3.  Defina um ponto de interrupção no código do manipulador de lógica de negócios, tanto no método sendo depurado como no construtor da classe. Para obter mais informações sobre os métodos que podem ser implementados em um manipulador de lógica de negócios, consulte o tópico dos métodos <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>.  
   
 4.  Crie o manipulador de lógica de negócios no modo de depuração e implante o assembly e o arquivo de símbolo de depuração (.pdb) no local registrado na Etapa 1.  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 34
   
     -   inetinfo.exe - Windows 2000 e Windows XP.  
   
-7.  No **saída** janela, verifique a depuração de saída para verificar se os símbolos do assembly registrado carregadas corretamente. Se os símbolos não estiverem carregados, confirme se o arquivo .pdb correto foi copiado na Etapa 4, e repita a Etapa 5.  
+7.  Na janela de **Saída** , verifique a saída da depuração para confirmar se os símbolos do assembly registrado foram carregados corretamente. Se os símbolos não estiverem carregados, confirme se o arquivo .pdb correto foi copiado na Etapa 4, e repita a Etapa 5.  
   
 8.  Execute a inserção, atualize ou exclua comandos de acordo com a assinatura ou banco de dados de publicação. O comando e o local da execução dependem do método que é depurado.  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 34
   
 11. Supondo que nenhum outro ponto de interrupção esteja definido e que os comandos tenham sido replicados, a execução para quando alcança o ponto de interrupção do manipulador de lógica de negócios.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

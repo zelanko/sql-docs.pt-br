@@ -1,46 +1,50 @@
 ---
-title: "Monitorar e ajustar o desempenho | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "instâncias do SQL Server, monitorando o desempenho"
-  - "monitorando o desempenho do servidor [SQL Server]"
-  - "Mecanismo de Banco de Dados [SQL Server], desempenho"
-  - "monitorando o desempenho [SQL Server], sobre o desempenho"
-  - "desempenho do servidor [SQL Server]"
-  - "monitorando o desempenho [SQL Server]"
-  - "desempenho do banco de dados [SQL Server], sobre o desempenho"
-  - "ajustando bancos de dados [SQL Server], sobre o desempenho"
-  - "informações de status [SQL Server], monitoramento de desempenho"
-  - "monitoramento de banco de dados [SQL Server], sobre o desempenho"
-  - "monitorando [SQL Server], desempenho de consultas"
-  - "desempenho do servidor [SQL Server], sobre o desempenho"
-  - "ajustando bancos de dados [SQL Server]"
-  - "desempenho do banco de dados [SQL Server]"
-  - "monitorando [SQL Server], desempenho do servidor"
-  - "monitoramento de banco de dados [SQL Server]"
-  - "monitorando o desempenho do servidor [SQL Server], sobre o monitoramento do desempenho do servidor"
+title: Monitorar e ajustar o desempenho | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- instances of SQL Server, monitoring performance
+- monitoring server performance [SQL Server]
+- Database Engine [SQL Server], performance
+- monitoring performance [SQL Server], about performance
+- server performance [SQL Server]
+- monitoring performance [SQL Server]
+- database performance [SQL Server], about performance
+- tuning databases [SQL Server], about performance
+- status information [SQL Server], performance monitoring
+- database monitoring [SQL Server], about performance
+- monitoring [SQL Server], queries performance
+- server performance [SQL Server], about performance
+- tuning databases [SQL Server]
+- database performance [SQL Server]
+- monitoring [SQL Server], server performance
+- database monitoring [SQL Server]
+- monitoring server performance [SQL Server], about monitoring server performance
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c60b3ef8e0eb43ea64e898d8198c0a9fd725acc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Monitorar e ajustar o desempenho
+# <a name="monitor-and-tune-for-performance"></a>Monitorar e ajustar o desempenho
   A meta do monitoramento de bancos de dados é avaliar o desempenho do servidor. Um monitoramento eficaz envolve a criação de instantâneos periódicos do desempenho atual para isolar processos que estão ocasionando problemas, e a coleta contínua de dados para o controle das tendências de desempenho.  
   
  A avaliação contínua do desempenho de banco de dados ajuda a minimizar tempos de resposta e a maximizar a taxa de transferência, permitindo alcançar desempenho ótimo. Tráfego de rede, E/S de disco e uso de CPU eficientes são fundamentais para um desempenho ótimo. É preciso analisar minuciosamente os requisitos de aplicativos, compreender a estrutura lógica e física dos dados, avaliar o uso de banco de dados e negociar compensações entre usos conflitantes, tais como a do processamento de transações online (OLTP) versus o apoio à decisão.  
   
-## Monitorando e ajustando o desempenho de bancos de dados  
+## <a name="monitoring-and-tuning-databases-for-performance"></a>Monitorando e ajustando o desempenho de bancos de dados  
  O Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o sistema operacional Microsoft Windows fornecem utilitários que lhe permitem exibir a condição atual do banco de dados e acompanhar o desempenho conforme as condições mudam. Há uma variedade de ferramentas e técnicas que podem ser usadas para monitorar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O monitoramento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuda a:  
   
 -   Determinar se o desempenho pode ser melhorado. Por exemplo, ao monitorar os tempos de resposta a consultas utilizadas com frequência, é possível determinar se são necessárias alterações na consulta ou nos índices das tabelas.  
@@ -49,7 +53,7 @@ caps.handback.revision: 35
   
 -   Solucionar problemas ou depurar componentes de aplicativos, como procedimentos armazenados.  
   
-## Monitorando em um ambiente dinâmico  
+## <a name="monitoring-in-a-dynamic-environment"></a>Monitorando em um ambiente dinâmico  
 Mudanças nas condições resultam em alterações no desempenho. Em suas avaliações, você poderá consultar alterações no desempenho à medida que o número de usuários aumenta, o acesso de usuário e os métodos de conexões mudam, o conteúdo do banco de dados cresce, os aplicativos cliente se modificam, os dados nos aplicativos se alteram, as consultas se tornam mais complexas e o tráfego de rede aumenta. Com as ferramentas para monitorar o desempenho, é possível associar algumas alterações no desempenho a mudanças de condições e consultas complexas. **Exemplos:**:  
   
 -   Monitorando os tempos de resposta a consultas utilizadas com frequência, é possível determinar se são necessárias alterações na consulta ou nos índices das tabelas em que as consultas são executadas.  
@@ -62,7 +66,7 @@ Mudanças nas condições resultam em alterações no desempenho. Em suas avalia
   
  À medida que o número de usuário aumenta, aumenta a competição por recursos do servidor, o que, por sua vez, aumenta o tempo de resposta e diminui o processamento global.  
   
-## Tarefas de monitoramento e ajuste de desempenho  
+## <a name="monitoring-and-performance-tuning-tasks"></a>Tarefas de monitoramento e ajuste de desempenho  
   
 |Tópico| Tarefa|  
 |-----------|----------------------|  
@@ -78,10 +82,11 @@ Mudanças nas condições resultam em alterações no desempenho. Em suas avalia
 |[Como usar o Repositório de Consultas com OLTP in-memory](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)|Considerações sobre tabelas com otimização de memória.|  
 |[Melhor prática com o Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)|Recomendações sobre como usar o Repositório de Consultas.|  
   
-## Consulte também  
- [Administração automatizada em toda a empresa](../../ssms/agent/automated-administration-across-an-enterprise.md)   
+## <a name="see-also"></a>Consulte também  
+ [Administração automatizada em toda a empresa](http://msdn.microsoft.com/library/44d8365b-42bd-4955-b5b2-74a8a9f4a75f)   
  [Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
+

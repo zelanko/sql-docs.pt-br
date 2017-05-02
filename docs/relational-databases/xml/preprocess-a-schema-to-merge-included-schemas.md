@@ -1,34 +1,38 @@
 ---
-title: "Pr&#233;-processar um esquema para mesclar esquemas inclu&#237;dos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "estando ferramenta de pré-processador"
-  - "xsd:include"
-  - "coleções de esquema XML [SQL Server], ferramenta de pré-processador"
-  - "incluir elemento"
-  - "esquemas XML [SQL Server], pré-processando"
-  - "coleções de esquema [SQL Server], ferramenta de pré-processador"
-  - "ferramenta de pré-processador [esquemas XML]"
-  - "esquemas XML [SQL Server]"
+title: "Pré-processar um esquema para mesclar esquemas incluídos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing preprocessor tool
+- xsd:include
+- XML schema collections [SQL Server], preprocessor tool
+- include element
+- XML schemas [SQL Server], preprocessing
+- schema collections [SQL Server], preprocessor tool
+- preprocessor tool [XML schemas]
+- XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73bb2043bf3e0cb0d8a076a07b4d9c33366c1cf7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pr&#233;-processar um esquema para mesclar esquemas inclu&#237;dos
+# <a name="preprocess-a-schema-to-merge-included-schemas"></a>Pré-processar um esquema para mesclar esquemas incluídos
   O elemento **include** do W3C XSD dá suporte à modularidade de esquema na qual um esquema XML pode ser particionado em mais de um arquivo físico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Atualmente, não dá suporte a esse elemento. Esquemas XML que incluem esse elemento serão rejeitados pelo servidor.  
   
- Como uma solução, os esquemas XML que incluem a diretiva \<xsd:include> podem ser pré-processados para copiar e mesclar o conteúdo de qualquer esquema incluído em um único esquema para carregamento no servidor. O código C# a seguir pode ser usado para pré-processamento. Os comentários na parte anterior do código fornecem informações sobre como usar isso.  
+ Como uma solução, os esquemas XML que incluem a diretiva \<xsd:include> podem ser pré-processados para copiar e mesclar o conteúdo dos esquemas incluídos em um único esquema para upload no servidor. O código C# a seguir pode ser usado para pré-processamento. Os comentários na parte anterior do código fornecem informações sobre como usar isso.  
   
 ```  
 // XSD Schema Include Normalizer  
@@ -186,10 +190,10 @@ public class XmlSchemaIncludeNormalizer
 }  
 ```  
   
-## Testando a ferramenta de pré-processador  
+## <a name="testing-the-preprocessor-tool"></a>Testando a ferramenta de pré-processador  
  É possível usar os esquemas XSD a seguir para testar a ferramenta de pré-processador:  
   
-### books_common.xsd  
+### <a name="bookscommonxsd"></a>books_common.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -199,7 +203,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-### books.xsd  
+### <a name="booksxsd"></a>books.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -211,7 +215,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Coleções de esquemas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

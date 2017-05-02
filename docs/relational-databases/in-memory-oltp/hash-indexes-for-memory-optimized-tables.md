@@ -1,25 +1,29 @@
 ---
-title: "&#205;ndices de hash para tabelas com otimiza&#231;&#227;o de mem&#243;ria | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "08/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Índices de hash para tabelas com otimização de memória | Microsoft Docs"
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 08/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de23d5625c883792f5c99de75dc90ccd1cabe326
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#205;ndices de hash para tabelas com otimiza&#231;&#227;o de mem&#243;ria
+# <a name="hash-indexes-for-memory-optimized-tables"></a>Índices de hash para tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   
@@ -31,7 +35,7 @@ Este artigo descreve o tipo de índice de *hash* disponível para uma tabela com
 - Descreve como criar e gerenciar índices de hash.  
   
   
-#### Pré-requisito  
+#### <a name="prerequisite"></a>Pré-requisito  
   
 Informações de contexto importantes para entender este artigo estão disponíveis em:  
   
@@ -39,10 +43,10 @@ Informações de contexto importantes para entender este artigo estão disponív
   
   
   
-## A. Sintaxe para índices com otimização de memória  
+## <a name="a-syntax-for-memory-optimized-indexes"></a>A. Sintaxe para índices com otimização de memória  
   
   
-### A.1 Exemplo de código de sintaxe  
+### <a name="a1-code-sample-for-syntax"></a>A.1 Exemplo de código de sintaxe  
   
 Esta subseção contém um bloco de códigos Transact-SQL que demonstra as sintaxes disponíveis para criar um índice hash em uma tabela com otimização de memória:  
   
@@ -75,10 +79,10 @@ Esta subseção contém um bloco de códigos Transact-SQL que demonstra as sinta
 
 Para determinar a `BUCKET_COUNT` certa para seus dados, consulte [Configurando a contagem de buckets do índice de hash](#configuring_bucket_count). 
   
-## B. Índices de hash  
+## <a name="b-hash-indexes"></a>B. Índices de hash  
   
   
-### B.1 Noções básicas de desempenho  
+### <a name="b1-performance-basics"></a>B.1 Noções básicas de desempenho  
   
 O desempenho de um índice de hash é:  
   
@@ -89,7 +93,7 @@ O desempenho de um índice de hash é:
   
 <a name="h3-b2-declaration-limitations"></a>  
   
-### B.2 Limitações de declaração  
+### <a name="b2-declaration-limitations"></a>B.2 Limitações de declaração  
   
 Um índice de hash apenas pode existir em uma tabela com otimização de memória. Ele não pode existir em uma tabela baseada em disco.  
   
@@ -108,9 +112,9 @@ Este é um exemplo da sintaxe para criar um índice de hash fora da instrução 
   
   
   
-### B.3 Buckets e a função de hash  
+### <a name="b3-buckets-and-hash-function"></a>B.3 Buckets e a função de hash  
   
-Um índice de hash ancora seus valores de chave em uma matriz de *bucket*:  
+Um índice de hash ancora seus valores de chave em uma matriz de *bucket* :  
   
 - Cada bucket tem 8 bytes, que são usados para armazenar o endereço de memória de uma lista de links de entradas de chave.  
 - Cada entrada é um valor de uma chave de índice, mais o endereço de sua linha correspondente na tabela com otimização de memória subjacente.  
@@ -138,11 +142,11 @@ O SQL Server tem uma única função de hash usada para todos os índices de has
 A interação entre o índice de hash e os buckets é resumida na imagem a seguir.  
   
   
-![hekaton_tables_23d](../../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Index keys, input into hash function, output is address of a hash bucket, which points to head of chain.")  
+![hekaton_tables_23d](../../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Chaves de índice, inseridos na função de hash, a saída é o endereço de um bucket de hash, que aponta para o início da cadeia.")  
   
   
   
-### B.4 Versões de linha e coleta de lixo  
+### <a name="b4-row-versions-and-garbage-collection"></a>B.4 Versões de linha e coleta de lixo  
   
   
 Em uma tabela com otimização de memória, quando uma linha é afetada por um SQL UPDATE, a tabela cria uma versão atualizada da linha. Durante a transação de atualização, é possível que outras sessões consigam ler a versão mais antiga da linha, evitando a lentidão de desempenho associada a um bloqueio de linha.  
@@ -153,7 +157,7 @@ Posteriormente, quando as versões mais antigas não forem mais necessárias, um
   
 <a name="configuring_bucket_count"></a>
   
-## C. Configurando a contagem de buckets do índice de hash  
+## <a name="c-configuring-the-hash-index-bucket-count"></a>C. Configurando a contagem de buckets do índice de hash  
   
 A contagem de bucket do índice de hash é especificada no momento de criação do índice e pode ser alterada com a sintaxe ALTER TABLE...ALTER INDEX REBUILD.  
   
@@ -174,11 +178,12 @@ Um *número muito grande* de buckets tem as seguintes desvantagens:
   - Buckets vazios usam a memória, embora cada bucket use apenas 8 bytes.  
     
   
-> [AZURE.NOTE] A adição de mais buckets não contribui para reduzir o encadeamento de entradas que compartilham um valor duplicado. A taxa de duplicação de valor é usada para decidir se um hash é o tipo de índice apropriado, não para calcular o número de buckets.  
+> [!NOTE]
+> A adição de mais buckets não contribui para reduzir o encadeamento de entradas que compartilham um valor duplicado. A taxa de duplicação de valor é usada para decidir se um hash é o tipo de índice apropriado, não para calcular o número de buckets.  
   
   
   
-### C.1 Números práticos  
+### <a name="c1-practical-numbers"></a>C.1 Números práticos  
   
 Mesmo que o **BUCKET_COUNT** esteja moderadamente abaixo ou acima do intervalo preferencial, o desempenho do índice de hash provavelmente será tolerável ou aceitável. Nenhuma crise é criada.  
   
@@ -193,11 +198,11 @@ Suponha que um índice de hash tenha dez milhões de valores de chave distintos.
   
 - Um número de buckets igual a dois milhões seria o menor aceitável. O grau de degradação de desempenho seria tolerável.  
   
-### C.2 Há muitos valores duplicados no índice?  
+### <a name="c2-too-many-duplicate-values-in-the-index"></a>C.2 Há muitos valores duplicados no índice?  
   
 Se os valores de hash indexados tiverem uma alta taxa de duplicados, os buckets de hash terão cadeias mais longas.  
   
-Considere a mesma tabela SupportEvent do bloco de código da sintaxe T-SQL anterior. O código T-SQL a seguir demonstra como você pode localizar e exibir a proporção de *todos* os valores para valores *exclusivos*:  
+Considere a mesma tabela SupportEvent do bloco de código da sintaxe T-SQL anterior. O código T-SQL a seguir demonstra como você pode localizar e exibir a proporção de *todos* os valores para valores *exclusivos* :  
   
         -- Calculate ratio of:  Rows / Unique_Values.  
     DECLARE @allValues float(8) = 0.0, @uniqueVals float(8) = 0.0;  
@@ -214,11 +219,11 @@ Considere a mesma tabela SupportEvent do bloco de código da sintaxe T-SQL anter
   
 - Uma proporção de 10,0 ou superior significa que o hash seria um tipo ruim de índice. Em vez disso, considere o uso de um índice não clusterizado.   
   
-## D. Solução de problemas de contagem de buckets do índice de hash  
+## <a name="d-troubleshooting-hash-index-bucket-count"></a>D. Solução de problemas de contagem de buckets do índice de hash  
   
 Esta seção aborda como solucionar problemas de contagem de buckets do índice de hash.  
   
-### D.1 Monitorar estatísticas de cadeias e buckets vazios  
+### <a name="d1-monitor-statistics-for-chains-and-empty-buckets"></a>D.1 Monitorar estatísticas de cadeias e buckets vazios  
   
 Você pode monitorar a integridade estatística dos índices de hash, executando o T-SQL SELECT a seguir. O SELECT usa a DMV (exibição de gerenciamento de dados) denominada **sys.dm_db_xtp_hash_index_stats**.  
   
@@ -260,7 +265,7 @@ Compare os resultados do SELECT com as seguintes recomendações estatísticas:
   
 
   
-### D.2 Demonstração de cadeias e buckets vazios  
+### <a name="d2-demonstration-of-chains-and-empty-buckets"></a>D.2 Demonstração de cadeias e buckets vazios  
   
   
 O seguinte bloco de código T-SQL fornece uma maneira fácil de testar um `SELECT * FROM sys.dm_db_xtp_hash_index_stats;`. O bloco de código é concluído em 1 minuto. Estas estão as fases do seguinte bloco de código:  
@@ -268,8 +273,8 @@ O seguinte bloco de código T-SQL fornece uma maneira fácil de testar um `SELEC
   
 1. Cria uma tabela com otimização de memória com alguns índices de hash.  
 2. Preenche a tabela com milhares de linhas.  
-    a. Um operador de módulo é usado para configurar a taxa de valores duplicados na coluna StatusCode.  
-    b. O loop insere 262.144 linhas em aproximadamente 1 minuto.  
+    A. Um operador de módulo é usado para configurar a taxa de valores duplicados na coluna StatusCode.  
+    B. O loop insere 262.144 linhas em aproximadamente 1 minuto.  
 3. Imprime uma mensagem pedindo para executar o SELECT anterior de **sys.dm_db_xtp_hash_index_stats**.  
   
   
@@ -381,7 +386,7 @@ Vamos interpretar os três índices de hash das tabelas de resultados anteriores
 - O comprimento médio da cadeia é 1, o que também é bom. Nenhuma alteração é necessária.  
   
   
-### D.3 Balanceando a compensação  
+### <a name="d3-balancing-the-trade-off"></a>D.3 Balanceando a compensação  
   
 As cargas de trabalho OLTP concentram-se em linhas individuais. Geralmente, as verificações completas de tabelas não estão no caminho crítico de desempenho para cargas de trabalho OLTP. Portanto, a compensação que você deve balancear é entre:  
   
@@ -405,7 +410,7 @@ As cargas de trabalho OLTP concentram-se em linhas individuais. Geralmente, as v
   
   
   
-## E. Pontos fortes dos índices de hash  
+## <a name="e-strengths-of-hash-indexes"></a>E. Pontos fortes dos índices de hash  
   
   
 Um índice de hash é preferível em vez de um índice não clusterizado quando:  
@@ -419,7 +424,7 @@ Um índice de hash é preferível em vez de um índice não clusterizado quando:
   
   
   
-### E.1 Chaves de índice de hash com várias colunas  
+### <a name="e1-multi-column-hash-index-keys"></a>E.1 Chaves de índice de hash com várias colunas  
   
   
 O índice de duas colunas pode ser um índice não clusterizado ou um índice de hash. Suponha que as colunas de índice sejam col1 e col2. Devido à seguinte instrução SQL SELECT, apenas o índice não clusterizado será útil para o otimizador de consulta:  
@@ -437,9 +442,9 @@ Nenhum tipo de índice é útil se a cláusula WHERE especifica somente a segund
   
   
 \<!--   
-Hash_Indexes_for_Memory-Optimized_Tables.md , which is....  
-CAPS guid: {e922cc3a-3d6e-453b-8d32-f4b176e98488}  
-CAPS guid of parent is: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
+Hash_Indexes_for_Memory-Optimized_Tables.md, que é....  
+Guid de CAPS: {e922cc3a-3d6e-453b-8d32-f4b176e98488}  
+O guid de CAPS do pai é: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
   
   
   
@@ -453,8 +458,10 @@ CAPS guid of parent is: {eecc5821-152b-4ed5-888f-7c0e6beffed9}
   
   
   
-GeneMi  ,  2016-05-05  Thursday  15:01pm  
+GeneMi, quinta-feira, 05/05/2016, 15h01  
 -->  
   
   
   
+
+

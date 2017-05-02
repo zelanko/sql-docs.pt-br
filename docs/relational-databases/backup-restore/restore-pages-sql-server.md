@@ -1,34 +1,38 @@
 ---
-title: "Restaurar p&#225;ginas (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restorepage.general.f1"
-helpviewer_keywords: 
-  - "restaurando páginas [SQL Server]"
-  - "páginas [SQL Server], restaurando"
-  - "bancos de dados [SQL Server], danificados"
-  - "restaurações de páginas [SQL Server]"
-  - "páginas [SQL Server], danificadas"
-  - "restaurando [SQL Server], páginas"
+title: "Restaurar páginas (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restorepage.general.f1
+helpviewer_keywords:
+- restoring pages [SQL Server]
+- pages [SQL Server], restoring
+- databases [SQL Server], damaged
+- page restores [SQL Server]
+- pages [SQL Server], damaged
+- restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1cdf13c937ecdaa54c31831625dc6fc41b35be70
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar p&#225;ginas (SQL Server)
+# <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Este tópico descreve como restaurar páginas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A meta da restauração de uma página é restaurar uma ou mais páginas danificadas sem restaurar todo o banco de dados. Geralmente, as páginas candidatas à restauração foram marcadas como "suspeitas" por causa de um erro encontrado durante seu acesso. Páginas suspeitas são identificadas na tabela [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) do banco de dados **msdb**.  
+  Este tópico descreve como restaurar páginas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A meta da restauração de uma página é restaurar uma ou mais páginas danificadas sem restaurar todo o banco de dados. Geralmente, as páginas candidatas à restauração foram marcadas como "suspeitas" por causa de um erro encontrado durante seu acesso. Páginas suspeitas são identificadas na tabela [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) do banco de dados **msdb** .  
   
  **Neste tópico**  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 67
 ###  <a name="WhenUseful"></a> Quando uma restauração de página é útil?  
  A restauração de página é usada para restaurar páginas danificadas isoladas. A restauração e recuperação de algumas páginas individuais pode ocorrer mais rapidamente do que a restauração de arquivo, reduzindo a quantidade de dados offline durante a operação de restauração. No entanto, se for necessário restaurar mais do que algumas páginas em um arquivo, será geralmente mais eficaz restaurar todo o arquivo. Por exemplo, se várias páginas em um dispositivo indicarem uma falha de dispositivo pendente, é recomendável a restauração do arquivo, possivelmente em outro local, e a reparação do dispositivo.  
   
- Além disso, nem todos os erros de página precisam de restauração. Pode ocorrer um problema nos dados armazenados em cache, como um índice secundário, que pode ser resolvido pelo recálculo dos dados. Por exemplo, se o administrador de banco de dados cancela um índice secundário e o recria, os dados corrompidos, embora fixos, não são indicados como tal na tabela [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md).  
+ Além disso, nem todos os erros de página precisam de restauração. Pode ocorrer um problema nos dados armazenados em cache, como um índice secundário, que pode ser resolvido pelo recálculo dos dados. Por exemplo, se o administrador de banco de dados cancela um índice secundário e o recria, os dados corrompidos, embora fixos, não são indicados como tal na tabela [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) .  
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
@@ -108,13 +112,13 @@ caps.handback.revision: 67
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Começando pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oferece suporte a restaurações de página.  
   
-#### Para restaurar páginas  
+#### <a name="to-restore-pages"></a>Para restaurar páginas  
   
 1.  Conecte-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, e clique no nome do servidor para expandir a árvore de servidores.  
   
 2.  Expanda os **Bancos de dados**. Dependendo do banco de dados, selecione um banco de dados de usuário ou expanda os **Bancos de dados do sistema**e selecione um banco de dados do sistema.  
   
-3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**, **Restaurar** e clique em **Página**, o que abre a caixa de diálogo **Restaurar Página**.  
+3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**, **Restaurar**e clique em **Página**, o que abre a caixa de diálogo **Restaurar Página** .  
   
      **Restaurar**  
      Esta seção executa a mesma função de **Restaurar em** em [Restaurar Banco de Dados (Página Geral)](../../relational-databases/backup-restore/restore-database-general-page.md).  
@@ -123,7 +127,7 @@ caps.handback.revision: 67
      Especifica o banco de dados a ser restaurado. Você pode digitar um novo banco de dados ou selecionar um banco de dados existente na lista suspensa. A lista inclui todos os bancos de dados do servidor, exceto os bancos de dados do sistema **mestre** e **tempdb**.  
   
     > [!WARNING]  
-    >  Para restaurar um backup protegido por senha, você deve usar a instrução [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md).  
+    >  Para restaurar um backup protegido por senha, você deve usar a instrução [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) .  
   
      **Backup do final do log**  
      Digite ou selecione um nome de arquivo em **Dispositivo de backup** em que o backup da parte final do log será armazenado para o banco de dados.  
@@ -137,7 +141,7 @@ caps.handback.revision: 67
     |**Componente**|O componente com backup: **Banco de Dados**, **Arquivo** ou **\<blank>** (para logs de transações).|  
     |**Tipo**|Tipo de backup realizado: **Completo**, **Diferencial**ou **Log de Transações**.|  
     |**Servidor**|O nome da instância [!INCLUDE[ssDE](../../includes/ssde-md.md)] que executou a operação de backup.|  
-    |**Banco de dados**|Nome do banco de dados envolvido na operação de backup.|  
+    |**Banco de Dados**|Nome do banco de dados envolvido na operação de backup.|  
     |**Posição**|A posição do conjunto de backup no volume.|  
     |**Primeiro LSN**|Número de sequência de log (LSN) da primeira transação do conjunto de backup. Em branco para backups de arquivo.|  
     |**Último LSN**|O número de sequência de log (LSN) da última transação do conjunto de backup. Em branco para backups de arquivo.|  
@@ -156,9 +160,9 @@ caps.handback.revision: 67
     > [!WARNING]  
     >  Para restaurar páginas específicas que não estão danificadas, clique em **Adicionar** e digite a **ID do Arquivo** e a **ID da Página** referentes às páginas que serão restauradas.  
   
-5.  A grade de páginas é usada para identificar as páginas a serem restauradas. Inicialmente, essa grade é preenchida por meio da tabela de sistema [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md). Para adicionar ou remover páginas da grade, clique em **Adicionar** ou **Remover**. Para obter mais informações, veja [Gerenciar a tabela suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
+5.  A grade de páginas é usada para identificar as páginas a serem restauradas. Inicialmente, essa grade é preenchida por meio da tabela de sistema [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) . Para adicionar ou remover páginas da grade, clique em **Adicionar** ou **Remover**. Para obter mais informações, veja [Gerenciar a tabela suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
   
-6.  A grade **Conjuntos de backup** lista os conjuntos de backup no plano de restauração padrão. Se desejar, clique em **Verificar** para verificar se os backups são legíveis e se os conjuntos de backup são completos, sem restaurá-los. Para obter mais informações, consulte [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+6.  A grade **Conjuntos de backup** lista os conjuntos de backup no plano de restauração padrão. Se desejar, clique em **Verificar** para verificar se os backups são legíveis e se os conjuntos de backup são completos, sem restaurá-los. Para obter mais informações, consulte [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
      **Páginas**  
   
@@ -175,9 +179,9 @@ caps.handback.revision: 67
   
  `WITH NORECOVERY`  
   
- Para obter mais informações sobre os parâmetros da opção PAGE, consulte [Argumentos RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md). Para obter mais informações sobre a sintaxe RESTORE DATABASE, consulte [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+ Para obter mais informações sobre os parâmetros da opção PAGE, consulte [Argumentos RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md). Para obter mais informações sobre a sintaxe RESTORE DATABASE, consulte [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-#### Para restaurar páginas  
+#### <a name="to-restore-pages"></a>Para restaurar páginas  
   
 1.  Obtenha a ID das páginas a serem restauradas. Uma soma de verificação ou um erro de gravação interrompida retorna a ID da página, fornecendo as informações necessárias para especificar as páginas. Para consultar a ID de uma página danificada, use qualquer uma das origens a seguir.  
   
@@ -185,7 +189,7 @@ caps.handback.revision: 67
     |-----------------------|-----------|  
     |**msdb..suspect_pages**|[Gerenciar a tabela suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)|  
     |Log de erros|[Exibir o log de erros do SQL Server &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)|  
-    |Rastreamento de evento|[Monitorar e responder a eventos](../../ssms/agent/monitor-and-respond-to-events.md)|  
+    |Rastreamento de evento|[Monitorar e responder a eventos](http://msdn.microsoft.com/library/f7fbe155-5b68-4777-bc71-a47637471f32)|  
     |DBCC|[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|  
     |Provedor WMI|[Provedor WMI para conceitos de eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)|  
   
@@ -203,7 +207,7 @@ caps.handback.revision: 67
     >  Essa sequência é análoga à sequência de restauração de um arquivo. Na realidade, restaurações de página e arquivo podem ser executadas como parte da mesma sequência.  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
- O exemplo a seguir restaura quatro páginas danificadas do arquivo `B` com `NORECOVERY`. Em seguida, dois backups de log são aplicados com `NORECOVERY`, seguido pelo backup do final do log que é restaurado com `RECOVERY`. Este exemplo executa uma restauração online. No exemplo, a ID de arquivo de `B` é `1`, e as IDs de página das páginas danificadas são `57`, `202`, `916` e `1016`.  
+ O exemplo a seguir restaura quatro páginas danificadas do arquivo `B` com `NORECOVERY`. Em seguida, dois backups de log são aplicados com `NORECOVERY`, seguido pelo backup do final do log que é restaurado com `RECOVERY`. Este exemplo executa uma restauração online. No exemplo, a ID de arquivo de `B` é `1`, e as IDs de página das páginas danificadas são `57`, `202`, `916`e `1016`.  
   
 ```tsql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
@@ -218,8 +222,8 @@ RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;
 GO  
 ```  
   
-## Consulte também  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Consulte também  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Gerenciar a tabela suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  

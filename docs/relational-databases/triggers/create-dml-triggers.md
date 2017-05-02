@@ -1,36 +1,40 @@
 ---
-title: "Criar gatilhos DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "criptografia [SQL Server], gatilhos de DML"
-  - "resolução de nome adiada, gatilhos DML"
-  - "cláusula WITH ENCRYPTION"
-  - "IF UPDATE"
-  - "Instrução SET, gatilhos DML"
-  - "Gatilhos DML, programando"
-  - "testando alterações de coluna"
-  - "resultados [SQL Server], gatilhos DML"
+title: Criar gatilhos DML | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], DML triggers
+- deferred name resolution, DML triggers
+- WITH ENCRYPTION clause
+- IF UPDATE
+- SET statement, DML triggers
+- DML triggers, programming
+- testing column changes
+- results [SQL Server], DML triggers
 ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 21011d77337e517154b4732071253a934984363d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar gatilhos DML
+# <a name="create-dml-triggers"></a>Criar gatilhos DML
   Este tópico descreve como criar um gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER.  
   
 ##  <a name="Top"></a> Antes de começar  
   
-### Limitações e restrições  
+### <a name="limitations-and-restrictions"></a>Limitações e restrições  
  Para obter uma lista de limitações e restrições relacionadas à criação de gatilhos DML, veja [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ###  <a name="Permissions"></a> Permissões  
@@ -47,11 +51,11 @@ caps.handback.revision: 31
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
-2.  Expanda **Bancos de Dados**, expanda o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], expanda **Tabelas** e expanda a tabela **Purchasing.PurchaseOrderHeader**.  
+2.  Expanda **Bancos de Dados**, expanda o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , expanda **Tabelas** e expanda a tabela **Purchasing.PurchaseOrderHeader**.  
   
-3.  Clique com o botão direito do mouse em **Gatilhos** e selecione **Novo Gatilho**.  
+3.  Clique com o botão direito do mouse em **Gatilhos**e selecione **Novo Gatilho**.  
   
-4.  No menu **Consulta** , clique em **Especificar Valores para Parâmetros de Modelo**. Como alternativa, pressione (Ctrl-Shift-M) para abrir caixa de diálogo **Especificar Valores para Parâmetros de Modelo**.  
+4.  No menu **Consulta** , clique em **Especificar Valores para Parâmetros de Modelo**. Como alternativa, pressione (Ctrl-Shift-M) para abrir caixa de diálogo **Especificar Valores para Parâmetros de Modelo** .  
   
 5.  Na caixa de diálogo **Especificar Valores para Parâmetros de Modelo** , digite os seguintes valores para os parâmetros mostrados.  
   
@@ -91,9 +95,9 @@ caps.handback.revision: 31
     END;  
     ```  
   
-8.  Para verificar se a sintaxe é válida, no menu **Consulta**, clique em **Analisar**. Se uma mensagem de erro for retornada, compare a instrução com as informações acima e corrija conforme necessário. Repita esta etapa.  
+8.  Para verificar se a sintaxe é válida, no menu **Consulta** , clique em **Analisar**. Se uma mensagem de erro for retornada, compare a instrução com as informações acima e corrija conforme necessário. Repita esta etapa.  
   
-9. Para criar o gatilho DML, no menu **Consulta**, clique em **Executar**. O gatilho DML é criado como um objeto no banco de dados.  
+9. Para criar o gatilho DML, no menu **Consulta** , clique em **Executar**. O gatilho DML é criado como um objeto no banco de dados.  
   
 10. Para ver o gatilho DML listado no Pesquisador de Objetos, clique com o botão direito do mouse em **Gatilhos** e selecione **Atualizar**.  
   

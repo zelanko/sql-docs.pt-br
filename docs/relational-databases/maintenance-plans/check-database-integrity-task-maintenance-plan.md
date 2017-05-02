@@ -1,32 +1,36 @@
 ---
-title: "Tarefa Verificar Integridade do Banco de Dados (Plano de Manuten&#231;&#227;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.maintplanproperties.integrity.f1"
-  - "sql13.swb.maint.integrity.f1"
-helpviewer_keywords: 
-  - "caixa de diálogo Tarefa Verificar Integridade do Banco de Dados "
+title: "Tarefa verificar integridade do banco de dados (Plano de Manutenção) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.maintplanproperties.integrity.f1
+- sql13.swb.maint.integrity.f1
+helpviewer_keywords:
+- Check Database Integrity Task dialog box
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad37935a63e55d949aaad8b3792e3180e78be5c3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tarefa Verificar Integridade do Banco de Dados (Plano de Manuten&#231;&#227;o)
+# <a name="check-database-integrity-task-maintenance-plan"></a>Tarefa Verificar Integridade do Banco de Dados (Plano de Manutenção)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Use a caixa de diálogo **Tarefa Verificar Integridade do Banco de Dados** para verificar a alocação e integridade estrutural de tabelas do usuário e do sistema, além de índices no banco de dados, executando a instância `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] . A execução de `DBCC` garante que quaisquer problemas de integridade com o banco de dados sejam reportados, permitindo assim serem endereçados posteriormente por um administrador do sistema ou proprietário de banco de dados.  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Conexão**  
  Selecione a conexão de servidor a ser usada na execução desta tarefa.  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 24
   
 -   **Todos os bancos de dados de usuários**  
   
-     Gere um plano de manutenção que execute tarefas de manutenção em todos os bancos de dados criados por usuários. Nenhuma tarefa de manutenção é executada com os bancos de dados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Gere um plano de manutenção que execute tarefas de manutenção em todos os bancos de dados criados por usuários. Nenhuma tarefa de manutenção é executada com os bancos de dados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Estes bancos de dados específicos**  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  Quando o número de objetos afetados é grande, essa exibição pode ser demorada.  
   
-## Caixa de diálogo Nova Conexão  
+## <a name="new-connection-dialog-box"></a>Caixa de diálogo Nova Conexão  
  **Nome da conexão**  
  Digite um nome para a nova conexão.  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 24
  Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] com a Autenticação do Windows.  
   
  **Usar nome de usuário e senha específicos**  
- Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa opção não está disponível.  
+ Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção não está disponível.  
   
  **Nome de usuário**  
  Forneça um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usado na autenticação. Essa opção não está disponível.  
@@ -95,7 +99,7 @@ caps.handback.revision: 24
  **Senha**  
  Forneça uma senha a ser usada na autenticação. Essa opção não está disponível.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
   

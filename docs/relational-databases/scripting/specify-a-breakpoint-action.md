@@ -1,27 +1,31 @@
 ---
-title: "Especificar uma a&#231;&#227;o de ponto de interrup&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.breakpt.action"
-helpviewer_keywords: 
-  - "Depurador de Transact-SQL, ação do ponto de interrupção"
-  - "Depurador de Transact-SQL, ação do ponto de interrupção quando da ocorrência"
+title: "Especificar uma ação de ponto de interrupção | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.breakpt.action
+helpviewer_keywords:
+- Transact-SQL debugger, breakpoint action
+- Transact-SQL debugger, breakpoint when hit action
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1594f724e5020c1678812ff74c55bb1fefe5bf5e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Especificar uma a&#231;&#227;o de ponto de interrup&#231;&#227;o
+# <a name="specify-a-breakpoint-action"></a>Especificar uma ação de ponto de interrupção
   Uma ação de ponto de interrupção **Quando Atingido** especifica uma tarefa personalizada que o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] executa para um ponto de interrupção. Se a contagem de ocorrências especificada for atingida, e qualquer condição de ponto de interrupção especificada for atendida, o depurador executará a ação especificada para o ponto de interrupção.  
   
 ##  <a name="BKMK_ActionConsiderations"></a> Considerações sobre a ação  
@@ -29,13 +33,13 @@ caps.handback.revision: 10
   
  Uma mensagem de impressão é especificada na opção **Imprimir uma Mensagem** e como uma cadeia de caracteres de texto que inclui expressões que contêm informações do [!INCLUDE[tsql](../../includes/tsql-md.md)] que está sendo depurado. As expressões incluem:  
   
--   Uma expressão [!INCLUDE[tsql](../../includes/tsql-md.md)] entre chaves ({}). As expressões podem incluir variáveis, parâmetros e funções internas do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Os exemplos incluem {@MyVariable}, {@NameParameter}, {@@SPID} ou {SERVERPROPERTY(‘ProcessID’)}.  
+-   Uma expressão [!INCLUDE[tsql](../../includes/tsql-md.md)] entre chaves ({}). As expressões podem incluir variáveis, parâmetros e funções internas do [!INCLUDE[tsql](../../includes/tsql-md.md)] . Os exemplos incluem {@MyVariable}, {@NameParameter}, {@@SPID} ou {SERVERPROPERTY('ProcessID')}.  
   
 -   Uma das seguintes palavras-chave:  
   
-    1.  $ADDRESS retorna o nome do procedimento armazenado ou a função definida pelo usuário onde o ponto de interrupção foi definido. Se o ponto de interrupção for definido na janela do editor, $ADDRESS retornará o nome do arquivo de script que está sendo editado. $ADDRESS e $FUNCTION retornam as mesmas informações no depurador [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+    1.  $ADDRESS retorna o nome do procedimento armazenado ou a função definida pelo usuário onde o ponto de interrupção foi definido. Se o ponto de interrupção for definido na janela do editor, $ADDRESS retornará o nome do arquivo de script que está sendo editado. $ADDRESS e $FUNCTION retornam as mesmas informações no depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-    2.  $CALLER retorna o nome da unidade do código [!INCLUDE[tsql](../../includes/tsql-md.md)] que chamou um procedimento armazenado ou uma função. Se o ponto de interrupção estiver na janela do editor, $CALLER retornará \<No caller available>. Se o ponto de interrupção estiver em um procedimento armazenado ou se a função definida pelo usuário foi chamada do código na janela do editor, $CALLER retornará o nome do arquivo que está sendo editado. Se o ponto de interrupção estiver em um procedimento armazenado ou a função definida pelo usuário tiver sido chamada de outro procedimento armazenado ou função, $CALLER retornará o nome do procedimento ou da função de chamada.  
+    2.  $CALLER retorna o nome da unidade do código [!INCLUDE[tsql](../../includes/tsql-md.md)] que chamou um procedimento armazenado ou uma função. Se o ponto de interrupção estiver na janela do editor, $CALLER retornará \<Nenhum chamador disponível>. Se o ponto de interrupção estiver em um procedimento armazenado ou se a função definida pelo usuário foi chamada do código na janela do editor, $CALLER retornará o nome do arquivo que está sendo editado. Se o ponto de interrupção estiver em um procedimento armazenado ou a função definida pelo usuário tiver sido chamada de outro procedimento armazenado ou função, $CALLER retornará o nome do procedimento ou da função de chamada.  
   
     3.  $CALLSTACK retornará a pilha de chamada de funções na cadeia que chamou o procedimento armazenado ou a função definida pelo usuário atual. Se o ponto de interrupção estiver na janela do editor, $CALLSTACK retornará o nome do arquivo de script que está sendo editado.  
   
@@ -43,29 +47,29 @@ caps.handback.revision: 10
   
     5.  $PID e $PNAME retornam a ID e o nome do processo do sistema operacional que executa a instância do Mecanismo de Banco de Dados onde o [!INCLUDE[tsql](../../includes/tsql-md.md)] está em execução. $PID retorna a mesma ID que SERVERPROPERTY(‘ProcessID’), exceto pelo fato de que $PID é um valor hexadecimal enquanto SERVERPROPERTY(‘ProcessID’) é um valor decimal.  
   
-    6.  $TID e $TNAME retornam a ID e o nome do thread do sistema operacional que está executando o lote do [!INCLUDE[tsql](../../includes/tsql-md.md)]. O thread é associado ao processo que executa a instância do Mecanismo de Banco de Dados. $TID retorna o mesmo valor que SELECT kpid FROM sys.sysprocesses, ONDE spid = @@SPID; porém, $TID é um valor hexadecimal enquanto kpid é um valor decimal.  
+    6.  $TID e $TNAME retornam a ID e o nome do thread do sistema operacional que está executando o lote do [!INCLUDE[tsql](../../includes/tsql-md.md)] . O thread é associado ao processo que executa a instância do Mecanismo de Banco de Dados. $TID retorna o mesmo valor que SELECT kpid FROM sys.sysprocesses, WHERE spid = @@SPID; porém, $TID é um valor hexadecimal, enquanto kpid é um valor decimal.  
   
 -   Você também pode usar o caractere de barra invertida (\\) como um caractere de escape para permitir chaves e barras invertidas na mensagem: \\{, \\} e \\\\.  
   
-#### Para especificar uma ação Quando Atingido  
+#### <a name="to-specify-a-when-hit-action"></a>Para especificar uma ação Quando Atingido  
   
 1.  Na janela do editor, clique com o botão direito do mouse no glifo do ponto de interrupção e clique em **Quando Atingido** no menu de atalho.  
   
      -ou-  
   
-     Na janela **Pontos de Interrupção**, clique com o botão direito do mouse no glifo do ponto de interrupção e clique em **Quando Atingido** no menu de atalho.  
+     Na janela **Pontos de Interrupção** , clique com o botão direito do mouse no glifo do ponto de interrupção e clique em **Quando Atingido** no menu de atalho.  
   
-2.  Na caixa de diálogo **Quando o Ponto de Interrupção for Atingido**, selecione o comportamento desejado:  
+2.  Na caixa de diálogo **Quando o Ponto de Interrupção for Atingido** , selecione o comportamento desejado:  
   
     1.  Selecione **Imprimir uma Mensagem** para imprimir uma mensagem na janela Saída do depurador quando o ponto de interrupção for atingido.  
   
     2.  A opção **Executar uma Macro** não está disponível no depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] e está em cinza.  
   
-    3.  Selecione **Continuar execução** se você não deseja que o ponto de interrupção pause a execução. Essa opção estará ativa apenas se você tiver selecionado a opção **Imprimir uma Mensagem**.  
+    3.  Selecione **Continuar execução** se você não deseja que o ponto de interrupção pause a execução. Essa opção estará ativa apenas se você tiver selecionado a opção **Imprimir uma Mensagem** .  
   
 3.  Clique em **OK** para implementar as alterações ou em **Cancelar** para sair sem aplicar as alterações.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Especificar uma condição de ponto de interrupção](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
  [Especificar uma contagem de ocorrências](../../relational-databases/scripting/specify-a-hit-count.md)  
   

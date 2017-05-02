@@ -1,26 +1,30 @@
 ---
-title: "Exibir propriedades de chave estrangeira | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "chaves estrangeiras [SQL Server], atributos"
-  - "exibindo atributos de chaves estrangeiras"
-  - "exibindo atributos de chaves estrangeiras"
+title: Exibir propriedades de chave estrangeira | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- foreign keys [SQL Server], attributes
+- displaying foreign keys attributes
+- viewing foreign keys attributes
 ms.assetid: b0e57cb7-9b26-4b96-b76a-1f59f5f498c5
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4081168a8ebdec83d68669eec6543886ee525262
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exibir propriedades de chave estrangeira
+# <a name="view-foreign-key-properties"></a>Exibir propriedades de chave estrangeira
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Você pode exibir atributos da chave estrangeira de uma relação no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -46,7 +50,7 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para exibir os atributos de chave estrangeira de uma relação em uma tabela específica  
+#### <a name="to-view-the-foreign-key-attributes-of-a-relationship-in-a-specific-table"></a>Para exibir os atributos de chave estrangeira de uma relação em uma tabela específica  
   
 1.  Abra o Designer de Tabela da tabela que contém a chave estrangeira a ser exibida, clique com o botão direito do mouse no Designer de Tabela e selecione **Relações** no menu de atalho.  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 16
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para exibir os atributos de chave estrangeira de uma relação em uma tabela específica  
+#### <a name="to-view-the-foreign-key-attributes-of-a-relationship-in-a-specific-table"></a>Para exibir os atributos de chave estrangeira de uma relação em uma tabela específica  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

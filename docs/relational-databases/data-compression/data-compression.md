@@ -1,38 +1,42 @@
 ---
-title: "Compacta&#231;&#227;o de dados | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "compactação de página [Mecanismo de Banco de Dados]"
-  - "índices [SQL Server], compactados"
-  - "índices compactados [SQL Server]"
-  - "compactação de armazenamento [Mecanismo de Banco de Dados]"
-  - "tabelas [SQL Server], compactadas"
-  - "armazenamento [SQL Server], compactado"
-  - "compactação [SQL Server]"
-  - "compactação de linha [Mecanismo de Banco de Dados]"
-  - "compactação [SQL Server], sobre tabelas e índices compactados"
-  - "compactação de dados [Mecanismo de Banco de Dados]"
-  - "tabelas compactadas [SQL Server]"
+title: "Compactação de dados | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- page compression [Database Engine]
+- indexes [SQL Server], compressed
+- compressed indexes [SQL Server]
+- storage compression [Database Engine]
+- tables [SQL Server], compressed
+- storage [SQL Server], compressed
+- compression [SQL Server]
+- row compression [Database Engine]
+- compression [SQL Server], about compressed tables and indexes
+- data compression [Database Engine]
+- compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: 60
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 686f793e6579b54278a4d43e11e764efda84972e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compacta&#231;&#227;o de dados
+# <a name="data-compression"></a>Data Compression
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] dão suporte à compactação de linha e página para tabelas e índices rowstore, e dá suporte a columnstore e à compactação de arquivamento columnstore para tabelas e índices columnstore.  
+  O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] dão suporte à compactação de linhas e de páginas para tabelas e índices rowstore, e dão suporte a columnstore e à compactação de arquivamento columnstore para tabelas e índices columnstore.  
   
  Para tabelas e índices rowstore, use o recurso de compactação de dados para ajudar a reduzir o tamanho do banco de dados. Além de economizar espaço, a compactação de dados pode ajudar a aprimorar o desempenho de cargas de trabalho intensivas de E/S, pois os dados são armazenados em menos páginas e as consultas precisam ler menos páginas do disco. No entanto, recursos extras de CPU são necessários no servidor de banco de dados para compactar e descompactar os dados, enquanto os dados são trocados com o aplicativo. Você pode configurar a compactação de linha e página nos seguintes objetos de banco de dados:  
   
@@ -57,14 +61,14 @@ caps.handback.revision: 60
 > [!NOTE]  
 >  Os dados também podem ser compactados usando o formato de algoritmo GZIP. Essa é uma etapa adicional e é mais adequada para compactar partes dos dados ao arquivar dados antigos para armazenamento de longo prazo. Os dados compactados usando a função COMPRESS não podem ser indexados. Para obter mais informações, veja [COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md).  
   
-## Considerações sobre quando usar a compactação de linha e de página  
+## <a name="considerations-for-when-you-use-row-and-page-compression"></a>Considerações sobre quando usar a compactação de linha e de página  
  Ao usar compactação de linha e de página, esteja atento às seguintes considerações:  
   
 -   Os detalhes de compactação de dados estão sujeitos a alteração sem aviso em service packs ou versões subsequentes.
 
 -   A compactação está disponível em [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]  
   
--   A compactação não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   A compactação não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   A compactação não está disponível para tabelas do sistema.  
   
@@ -109,15 +113,15 @@ caps.handback.revision: 60
 -   As tabelas que implementaram o formato de armazenamento vardecimal no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] reterão essas configurações quando forem atualizadas. Você pode aplicar a compactação de linha a uma tabela com formato de armazenamento vardecimal. Entretanto, como a compactação de linha é um superconjunto de formato de armazenamento vardecimal, não há motivo para reter esse formato. Os valores decimais não ganham compactação adicional quando você combina o formato de armazenamento vardecimal com a compactação de linha. Só é possível aplicar a compactação de página a uma tabela com formato de armazenamento vardecimal; entretanto, as colunas de formato de armazenamento vardecimal provavelmente não alcançarão a compactação adicional.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte ao formato de armazenamento vardecimal; porém, como a compactação em nível de linha alcança as mesmas metas, o formato de armazenamento vardecimal é preterido. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    >  O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece suporte ao formato de armazenamento vardecimal; porém, como a compactação em nível de linha alcança as mesmas metas, o formato de armazenamento vardecimal é preterido. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-## Usando a compactação columnstore e de arquivamento columnstore  
+## <a name="using-columnstore-and-columnstore-archive-compression"></a>Usando a compactação columnstore e de arquivamento columnstore  
   
 ||  
 |-|  
 |**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].|  
   
-### Noções básicas  
+### <a name="basics"></a>Noções básicas  
  As tabelas e os índices columnstore são sempre armazenados com a compactação columnstore. Você pode reduzir ainda mais o tamanho dos dados de columnstore configurando um compactação adicional denominada compactação de arquivamento.  Para executar a compactação de arquivamento, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa o algoritmo de compactação XPRESS da Microsoft nos dados. Adicione ou remova a compactação de arquivamento usando os seguintes tipos de compactação de dados:  
   
 -   Use a compactação de dados **COLUMNSTORE_ARCHIVE** para compactar os dados de columnstore com a compactação de arquivamento.  
@@ -140,7 +144,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
 ```  
   
- Para remover a compactação de arquivamento e restaurar os dados à compactação columnstore, use [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) ou [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) com a opção REBUILD e DATA COMPRESSION = COLUMNSTORE.  
+ Para remover a compactação de arquivamento e restaurar os dados à compactação columnstoue, use [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) ou [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) com a opção REBUILD e DATA COMPRESSION = COLUMNSTORE.  
   
  Exemplos:  
   
@@ -166,12 +170,12 @@ REBUILD PARTITION = ALL WITH (
 ) ;  
 ```  
   
-### Desempenho  
+### <a name="performance"></a>Desempenho  
  A compactação dos índices columnstore com a compactação de arquivamento fará com que o índice seja executado de forma mais lenta do que os índices columnstore que não têm a compactação de arquivamento.  Use a compactação de arquivamento apenas quando tiver tempo extra e recursos de CPU para compactar e recuperar os dados.  
   
  O benefício de um desempenho mais lento é o armazenamento reduzido, que é útil para os dados que não são acessados com frequência. Por exemplo, se você tiver uma partição para cada mês de dados, e a maior parte da atividade for para os meses mais recentes, você poderá arquivar os meses anteriores para reduzir os requisitos de armazenamento.  
   
-### Metadados  
+### <a name="metadata"></a>Metadados  
  As seguintes exibições do sistema contêm informações sobre compactação de dados para índices clusterizados:  
   
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) – As colunas **type** e **type_desc** incluem CLUSTERED COLUMNSTORE e NONCLUSTERED COLUMNSTORE.  
@@ -180,7 +184,7 @@ REBUILD PARTITION = ALL WITH (
   
  O procedimento [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) não se aplica a índices columnstore.  
   
-## Como a compactação afeta tabelas e índices particionados  
+## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>Como a compactação afeta tabelas e índices particionados  
  Ao usar a compactação de dados com tabelas e índices particionados, esteja atento às seguintes considerações:  
   
 -   Quando as partições são divididas usando a instrução ALTER PARTITION, ambas as partições herdam o atributo de compactação de dados da partição original.  
@@ -217,7 +221,7 @@ REBUILD PARTITION = ALL WITH (
   
      Descartar um índice clusterizado OFFLINE é uma operação rápida porque apenas os níveis superiores dos índices clusterizados são removidos. Quando um índice clusterizado é descartado ONLINE, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve recriar o heap duas vezes, uma para a etapa 1 e outra para a etapa 2.  
   
-## Como a compactação afeta a replicação 
+## <a name="how-compression-affects-replication"></a>Como a compactação afeta a replicação 
 ||  
 |-|  
 |**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|   
@@ -242,7 +246,7 @@ REBUILD PARTITION = ALL WITH (
 |Para não replicar o esquema da partição e não compactar os dados no Assinante.|Falso|Falso|Não gera scripts para a partição nem para as configurações de compactação.|  
 |Para compactar a tabela no Assinante, se todas as partições forem compactadas no Publicador, mas não replicar o esquema de partição.|Falso|Verdadeiro|Verifica se todas as partições estão habilitadas para compactação.<br /><br /> Gera scripts para a compactação em nível de tabela.|  
   
-## Como a compactação afeta outros componentes do SQL Server 
+## <a name="how-compression-affects-other-sql-server-components"></a>Como a compactação afeta outros componentes do SQL Server 
 ||  
 |-|  
 |**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|
@@ -265,7 +269,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   A habilitação da compactação pode fazer com que os planos de consulta sejam alterados, porque os dados são armazenados usando um número diferente de páginas e um número de linhas por página.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Implementação da compactação de linha](../../relational-databases/data-compression/row-compression-implementation.md)   
  [Implementação da compactação de página](../../relational-databases/data-compression/page-compression-implementation.md)   
  [Implementação da compactação Unicode](../../relational-databases/data-compression/unicode-compression-implementation.md)   
@@ -277,3 +281,5 @@ REBUILD PARTITION = ALL WITH (
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
   
+
+

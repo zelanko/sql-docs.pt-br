@@ -1,29 +1,33 @@
 ---
-title: "Configurar o administrador de recursos usando um modelo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Administrador de recursos, modelos"
+title: Configurar o Resource Governor usando um modelo | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, templates
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 37a30ac49e0b7af05e0c7fb8e2ac1a32824186f6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar o administrador de recursos usando um modelo
+# <a name="configure-resource-governor-using-a-template"></a>Configurar o administrador de recursos usando um modelo
   Você pode configurar o Administrador de recursos usando um modelo que é fornecido em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   **Antes de começar:**  [Permissões](#Permissions)  
+-   **Before you begin:**  [Permissions](#Permissions)  
   
--   **Para criar um grupo de carga de trabalho usando:**  [um modelo](#ConfRGTemplate)  
+-   **To create a workload group, using:**  [a template](#ConfRGTemplate)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  Use as etapas a seguir para abrir e modificar um modelo que cria um pool de recursos e um grupo de cargas de trabalho para o pool. Além disso, esse modelo permite que você crie uma função de classificador definida pelo usuário que roteia novas conexões para o grupo padrão ou o grupo de cargas de trabalho que você criar.  
@@ -36,7 +40,7 @@ caps.handback.revision: 15
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no menu **Exibir** , clique em **Gerenciador de Modelos**.  
   
-2.  Em **Explorador de Modelos**, expanda **Administrador de Recursos** e clique duas vezes em **Configurar Administrador de Recursos**.  
+2.  Em **Explorador de Modelos**, expanda **Administrador de Recursos**e clique duas vezes em **Configurar Administrador de Recursos**.  
   
 3.  Em **Conectar ao Database Engine**, digite as informações exigidas e então clique em **OK**. O modelo Configurar administrador de recursos.sql é fornecido no Editor de consultas. Use este modelo para criar e configurar um pool de recursos, um grupo de carga de trabalho e uma função de classificador.  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 15
   
 6.  Para executar a consulta, clique em **Executar**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de recursos do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

@@ -1,26 +1,30 @@
 ---
-title: "Backup de Banco de Dados (p&#225;gina Op&#231;&#245;es de Backup) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdatabase.options.f1"
-  - "swb.backupdatabase.options.f1"
+title: "Fazer backup de banco de dados (página Opções de Backup) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdatabase.options.f1
+- swb.backupdatabase.options.f1
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 62
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 593d725942bb3c049bb71a0a8f1ad8975863c3fb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup de Banco de Dados (p&#225;gina Op&#231;&#245;es de Backup)
-  Use a página **Opções de Backup** da caixa de diálogo **Backup de Banco de Dados** para exibir ou modificar opções de backup de banco de dados.  
+# <a name="back-up-database-backup-options-page"></a>Backup de Banco de Dados (página Opções de Backup)
+  Use a página  **Opções de Backup** da caixa de diálogo **Backup de Banco de Dados** para exibir ou modificar opções de backup de banco de dados.  
   
  **Para criar um backup usando o SQL Server Management Studio**  
   
@@ -34,9 +38,9 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  Ao especificar uma tarefa de backup usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é possível gerar o script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) correspondente clicando no botão **Script** e selecionando um destino para o script.  
   
-## Opções  
+## <a name="options"></a>Opções  
   
-### Conjunto de backup  
+### <a name="backup-set"></a>Conjunto de backup  
  As opções do painel **Conjunto de backup** permitem especificar informações opcionais sobre o conjunto de backup criado pela operação de backup.  
   
  **Nome**  
@@ -44,7 +48,7 @@ caps.handback.revision: 62
   
  Para obter informações sobre conjuntos de backup, consulte [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
- **Descrição**  
+ **Description**  
  Insira uma descrição do conjunto de backup.  
   
  **O conjunto de backup vai expirar**  
@@ -52,10 +56,10 @@ caps.handback.revision: 62
   
 |||  
 |-|-|  
-|**After (após)**|Especifique o número de dias que devem decorrer antes de o conjunto de backup expirar e poder ser substituído. Esse valor pode ser de 0 a 99999 dias; 0 dia significa que o conjunto de backup nunca vai expirar.<br /><br /> O valor padrão de validade do backup é o valor definido na opção **Retenção de mídia de backup padrão (em dias)**. Para acessá-la, clique com o botão direito do mouse no nome do servidor no Pesquisador de Objetos e selecione **Propriedades**; em seguida, clique na página **Definições de banco de dados** da caixa de diálogo **Propriedades do servidor**.|  
+|**After (após)**|Especifique o número de dias que devem decorrer antes de o conjunto de backup expirar e poder ser substituído. Esse valor pode ser de 0 a 99999 dias; 0 dia significa que o conjunto de backup nunca vai expirar.<br /><br /> O valor padrão de validade do backup é o valor definido na opção **Retenção de mídia de backup padrão (em dias)** . Para acessá-la, clique com o botão direito do mouse no nome do servidor no Pesquisador de Objetos e selecione **Propriedades**; em seguida, clique na página **Definições de banco de dados** da caixa de diálogo **Propriedades do servidor** .|  
 |**Em**|Defina uma data específica em que o conjunto de backup deverá expirar e poderá ser substituído.|  
   
-### Compactação  
+### <a name="compression"></a>Compactação  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou uma versão posterior) dá suporte à [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
  **Defina compactação de backup**  
@@ -63,12 +67,12 @@ caps.handback.revision: 62
   
 |||  
 |-|-|  
-|**Usar a configuração padrão do servidor**|Clique para usar o padrão do nível de servidor.<br /><br /> Esse padrão é definido pela opção de configuração do servidor **padrão de compactação de backup**. Para obter informações sobre como exibir a configuração atual dessa opção, consulte [Exibir ou configurar a opção de configuração de servidor backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
-|**Compactar backup**|Clique em compactar backup, independentemente do padrão do nível do servidor.<br /><br /> **\*\* Importante \*\*** Por padrão, a compactação aumenta consideravelmente o uso da CPU, e o consumo adicional da CPU por parte do processo de compactação poderá afetar negativamente as operações simultâneas. Portanto, é recomendável criar backups compactados de baixa prioridade em uma sessão cujo uso da CPU é limitado pelo [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md). Para obter mais informações, consulte [Usar o Administrador de Recursos para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
+|**Usar a configuração padrão do servidor**|Clique para usar o padrão do nível de servidor.<br /><br /> Esse padrão é definido pela opção de configuração do servidor **padrão de compactação de backup** . Para obter informações sobre como exibir a configuração atual dessa opção, consulte [Exibir ou configurar a opção de configuração de servidor backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
+|**Compactar backup**|Clique em compactar backup, independentemente do padrão do nível do servidor.<br /><br /> **\*\* Importante \*\*** Por padrão, a compactação aumenta consideravelmente o uso da CPU, e o consumo adicional da CPU por parte do processo de compactação poderá afetar negativamente as operações simultâneas. Portanto, é recomendável criar backups compactados de baixa prioridade em uma sessão cujo uso da CPU é limitado pelo [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md). Para obter mais informações, consulte [Usar o Resource Governor para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
 |**Não compactar o backup**|Clique em criar um backup não compactado, independentemente do padrão do nível do servidor.|  
   
-### Criptografia  
- Para criar um backup criptografado, marque a caixa de seleção **Criptografar backup**. Selecione um algoritmo de criptografia a ser usado na etapa de criptografia e forneça um Certificado ou uma Chave assimétrica de uma lista de certificados ou chaves assimétricas existentes. Os algoritmos de criptografia disponíveis são:  
+### <a name="encryption"></a>Criptografia  
+ Para criar um backup criptografado, marque a caixa de seleção **Criptografar backup** . Selecione um algoritmo de criptografia a ser usado na etapa de criptografia e forneça um Certificado ou uma Chave assimétrica de uma lista de certificados ou chaves assimétricas existentes. Os algoritmos de criptografia disponíveis são:  
   
 -   AES 128  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 62
 >   
 >  Há suporte somente para as chaves que residem no EKM (Gerenciamento Extensível Chaves).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Fazer backup de arquivos e de grupos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

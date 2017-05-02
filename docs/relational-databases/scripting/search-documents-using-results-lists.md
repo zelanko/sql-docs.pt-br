@@ -1,30 +1,34 @@
 ---
-title: "Pesquisar documentos usando listas de resultados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pesquisas [SQL Server Management Studio], listas de resultados"
-  - "pesquisas na lista de resultados [SQL Server Management Studio]"
-  - "pesquisas [SQL Server Management Studio], vários arquivos"
-  - "Editor de Consultas [SQL Server Management Studio], pesquisar vários arquivos"
+title: Pesquisar documentos usando listas de resultados | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- searches [SQL Server Management Studio], result lists
+- result list searches [SQL Server Management Studio]
+- searches [SQL Server Management Studio], multiple files
+- Query Editor [SQL Server Management Studio], search multiple files
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a63ced363f4aee6ece4481f7b89b0ab195b82019
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pesquisar documentos usando listas de resultados
+# <a name="search-documents-using-results-lists"></a>Pesquisar documentos usando listas de resultados
   Usando a caixa de diálogo **Localizar e Substituir** , você pode pesquisar e substituir texto em todos os arquivos de um projeto ou solução, ou em uma pasta do sistema de arquivos, mesmo quando eles não estiverem abertos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Correspondências de pesquisas executadas com a caixa de diálogo **Localizar e Substituir** são exibidas nas janelas Localizar Resultados 1 e Localizar Resultados 2, que permitem a exibição do texto exato da linha que contém a correspondência.  
   
-### Para executar pesquisas em vários arquivos  
+### <a name="to-search-in-multiple-files"></a>Para executar pesquisas em vários arquivos  
   
 1.  No menu **Editar** , aponte para **Localizar e Substituir** e depois clique em **Localizar nos Arquivos**.  
   
@@ -32,7 +36,7 @@ caps.handback.revision: 22
   
 3.  Na lista **Examinar** , clique em **Todos os Documentos Abertos**, **Projeto Atual**, **Solução Inteira**ou digite um caminho de diretório.  
   
-4.  Na lista **Tipos de arquivo** , selecione um dos conjuntos relacionados de extensões de arquivo ou digite as extensões dos tipos de arquivo a serem pesquisados, separados por ponto-e-vírgula. Use \*.\* para pesquisar todos os arquivos no diretório relacionados na lista suspensa **Examinar**.  
+4.  Na lista **Tipos de arquivo** , selecione um dos conjuntos relacionados de extensões de arquivo ou digite as extensões dos tipos de arquivo a serem pesquisados, separados por ponto-e-vírgula. Use \*.\* para pesquisar todos os arquivos no diretório relacionados na lista suspensa **Examinar** .  
   
 5.  Selecione uma opção dentre as opções restantes para melhorar a precisão da pesquisa.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 22
   
  As correspondências da pesquisa são exibidas na janela Localizar Resultados 1 por padrão. Você pode navegar pelos resultados da pesquisa clicando duas vezes em cada entrada na janela Localizar Resultados 1. Para exibir os resultados da pesquisa em uma janela nova, selecione **Exibir em Localizar 2.**  
   
-#### Para efetuar uma substituição em vários arquivos ou pastas  
+#### <a name="to-replace-across-multiple-files-or-folders"></a>Para efetuar uma substituição em vários arquivos ou pastas  
   
 1.  No menu **Editar** , aponte para **Localizar e Substituir** e depois clique em **Substituir nos Arquivos**.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 22
   
  As informações de substituição são exibidas na janela Localizar Resultados 1 por padrão. Você pode navegar pelas substituições clicando duas vezes em cada entrada na janela Localizar Resultados 1.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Pesquisar e substituir](../../relational-databases/scripting/search-and-replace.md)   
  [Pesquisar documentos interativamente](../../relational-databases/scripting/search-documents-interactively.md)   
  [Pesquisar texto com curingas](../../relational-databases/scripting/search-text-with-wildcards.md)   

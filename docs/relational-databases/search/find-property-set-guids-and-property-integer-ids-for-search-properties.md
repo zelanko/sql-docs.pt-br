@@ -1,25 +1,29 @@
 ---
-title: "Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pesquisa de texto completo [SQL Server], pesquisar listas de propriedade"
-  - "listas de propriedades de pesquisa [SQL Server], configurando"
+title: Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], search property lists
+- search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d234dc5d1d44c11c50483505898586ab5e845a77
+ms.lasthandoff: 04/11/2017
+
 ---
-# Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa
+# <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa
   Este tópico discute como obter os valores que são necessários antes de adicionar uma propriedade a uma lista de propriedades de pesquisa, tornando-a pesquisável através de pesquisa de texto completo. Estes valores incluem o GUID do conjunto de propriedades e o identificador de inteiro de propriedade de uma propriedade de documento.  
   
  As propriedades de documentos que são extraídas por IFilters de dados binários – ou seja, de dados armazenados em uma coluna de tipo de dados **varbinary**, **varbinary(max)** (incluindo **FILESTREAM**) ou **image** – podem ser disponibilizadas para pesquisa de texto completo. Para tornar uma propriedade extraída pesquisável, adicione manualmente a propriedade a uma lista de propriedades de pesquisa. A lista de propriedades de pesquisa também deve ser associada a um ou mais índices de texto completo. Para obter mais informações, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
@@ -68,7 +72,7 @@ caps.handback.revision: 32
 ##  <a name="propdesc"></a> Localizando valores de propriedades de pesquisa a partir de uma descrição de propriedades do Windows  
  Para uma propriedade de pesquisa Windows conhecida, você pode obter as informações necessárias dos atributos **formatID** e **propID** da descrição de propriedade (**propertyDescription**).  
   
- O exemplo a seguir mostra a parte relevante de uma descrição de propriedade típica do Microsoft, neste caso, da propriedade `System.Author`. O atributo `formatID` especifica o GUID do conjunto de propriedades, `F29F85E0-4FF9-1068-AB91-08002B27B3D9`, e o atributo `propID` especifica a ID de inteiro de propriedade, `4.` Observe que o atributo `name` especifica o nome de propriedade canônico do Windows, `System.Author`. (Este exemplo omite partes da descrição de propriedade que não são pertinentes.)  
+ O exemplo a seguir mostra a parte relevante de uma descrição de propriedade típica do Microsoft, neste caso, da propriedade `System.Author` . O atributo `formatID` especifica o GUID do conjunto de propriedades, `F29F85E0-4FF9-1068-AB91-08002B27B3D9`, e o atributo `propID` especifica a ID de inteiro de propriedade, `4.` Observe que o atributo `name` especifica o nome de propriedade canônico do Windows, `System.Author`. (Este exemplo omite partes da descrição de propriedade que não são pertinentes.)  
   
 ```  
 .  
@@ -100,7 +104,7 @@ GO
   
  Para obter mais informações sobre como criar uma lista de propriedades de pesquisa e associá-la a um índice de texto completo, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [Configurar e gerenciar filtros para pesquisa](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   

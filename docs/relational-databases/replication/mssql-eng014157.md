@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG014157 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "erro MSSQL_ENG014157"
+title: MSSQL_ENG014157 | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG014157 error
 ms.assetid: 1a0890cf-d977-43e0-a2ba-9c5ff1a8f856
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 43d1554f54c46787bfff9dd4bd7c34d5d0410ba1
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG014157
+# <a name="mssqleng014157"></a>MSSQL_ENG014157
     
-## Detalhes da mensagem  
+## <a name="message-details"></a>Detalhes da mensagem  
   
 |||  
 |-|-|  
@@ -31,21 +35,21 @@ caps.handback.revision: 17
 |Nome simbólico||  
 |Texto da mensagem|A assinatura criada pelo Assinante '%s' para a publicação '%s' expirou e foi descartada.|  
   
-## Explicação  
+## <a name="explanation"></a>Explicação  
  Um Assinante deve fazer a sincronização com o Publicador no momento especificado no período de retenção de publicação. Se um Assinante não fizer a sincronização nesse período, a assinatura será expirada. Para obter mais informações, consulte [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
-## Ação do usuário  
+## <a name="user-action"></a>Ação do usuário  
  É necessário recriar e inicializar a assinatura para que o Assinante comece a receber novamente as alterações de dados:  
   
--   Para obter informações sobre a criação de assinaturas, consulte [assinar publicações](../../relational-databases/replication/subscribe-to-publications.md).  
+-   Para obter mais informações sobre como criar assinaturas, consulte [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md).  
   
--   Para obter informações sobre inicialização de assinaturas, consulte [inicializar uma assinatura](../../relational-databases/replication/initialize-a-subscription.md).  
+-   Para obter informações sobre como inicializar assinaturas, consulte [Inicializar uma assinatura](../../relational-databases/replication/initialize-a-subscription.md).  
   
- Se o banco de dados de assinatura contém alterações que não foram sincronizadas com o publicador, você pode usar o [utilitário tablediff](../../tools/tablediff-utility.md) para determinar quais linhas são diferentes dos bancos de dados de publicação e assinatura.  
+ Se o banco de dados de assinatura contiver alterações que não foram sincronizadas com o Publicador, será possível usar o [tablediff Utility](../../tools/tablediff-utility.md) para determinar quais linhas são diferentes nos bancos de dados de publicação e de assinatura.  
   
  É possível aumentar o período de retenção de publicação para que a assinatura não expire. Tome cuidado ao definir um valor alto, já que isso pode resultar no armazenamento de mais dados e metadados, o que afeta o desempenho. Para obter mais informações, consulte [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
-## Consulte também  
- [Erros e eventos referência & #40. Replicação e 41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
+## <a name="see-also"></a>Consulte também  
+ [Referência de erros e eventos &#40;Replicação&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

@@ -1,31 +1,35 @@
 ---
-title: "Tabelas e &#237;ndices particionados | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tabelas particionadas [SQL Server], sobre tabelas particionadas"
-  - "índices particionados [SQL Server], arquitetura"
-  - "tabelas particionadas [SQL Server], arquitetura"
-  - "índices particionados [SQL Server], sobre índices particionados"
+title: "Tabelas e índices particionados | Microsoft Docs"
+ms.custom: 
+ms.date: 01/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitioned tables [SQL Server], about partitioned tables
+- partitioned indexes [SQL Server], architecture
+- partitioned tables [SQL Server], architecture
+- partitioned indexes [SQL Server], about partitioned indexes
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 00d990aa777630847e0993631ee1c7bbce781d54
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tabelas e &#237;ndices particionados
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte ao particionamento de tabelas e índices. Os dados de tabelas e índices particionados são divididos em unidades que podem ser difundidas por mais de um grupo de arquivos em um banco de dados. Os dados são particionados horizontalmente, de forma que os grupos de linhas são mapeados em partições individuais. Todas as partições de um único índice ou de uma única tabela devem residir no mesmo banco de dados. A tabela ou o índice é tratado como uma única entidade lógica quando são executadas consultas ou atualizações nos dados. Antes do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP!, tabelas e índices particionados não estavam disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+# <a name="partitioned-tables-and-indexes"></a>Tabelas e índices particionados
+  O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte ao particionamento de tabelas e índices. Os dados de tabelas e índices particionados são divididos em unidades que podem ser difundidas por mais de um grupo de arquivos em um banco de dados. Os dados são particionados horizontalmente, de forma que os grupos de linhas são mapeados em partições individuais. Todas as partições de um único índice ou de uma única tabela devem residir no mesmo banco de dados. A tabela ou o índice é tratado como uma única entidade lógica quando são executadas consultas ou atualizações nos dados. Antes do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, as tabelas e os índices particionados não estavam disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!IMPORTANT]  
-> O  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece suporte a até 15.000 partições por padrão. Nas versões anteriores do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o número de partições foi limitado a 1.000 por padrão. Nos sistemas baseados em x86, a criação de uma tabela ou de um índice com mais de 1000 partições é possível, mas não tem suporte.  
+> O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece suporte a até 15.000 partições por padrão. Nas versões anteriores do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o número de partições foi limitado a 1.000 por padrão. Nos sistemas baseados em x86, a criação de uma tabela ou de um índice com mais de 1000 partições é possível, mas não tem suporte.  
   
 ## <a name="benefits-of-partitioning"></a>Benefícios do particionamento  
  O particionamento de tabelas ou índices grandes pode ter a capacidade de gerenciamento e os benefícios de desempenho a seguir.  
@@ -36,7 +40,7 @@ caps.handback.revision: 46
   
 -   Você pode aprimorar o desempenho de consultas com base nos tipos de consultas executadas com frequência e em sua configuração de hardware. Por exemplo, o otimizador de consulta pode processar consultas de junção de igualdade entre duas ou mais tabelas particionadas mais rápido quando as colunas de particionamento nas tabelas são iguais, porque as próprias partições podem ser unidas.  
   
-     Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa classificação de dados para operações de E/S, ele classifica os dados primeiro pela partição. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acessa uma unidade de cada vez e isso pode reduzir o desempenho. Para melhorar o desempenho da classificação de dados, distribua os arquivos de dados de suas partições em mais de um disco configurando um RAID. Dessa maneira, embora o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda classifique os dados por partição, ele pode acessar todas as unidades de cada partição ao mesmo tempo.  
+     Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa classificação de dados para operações de E/S, ele classifica os dados primeiro pela partição. O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acessa uma unidade de cada vez e isso pode reduzir o desempenho. Para melhorar o desempenho da classificação de dados, distribua os arquivos de dados de suas partições em mais de um disco configurando um RAID. Dessa maneira, embora o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda classifique os dados por partição, ele pode acessar todas as unidades de cada partição ao mesmo tempo.  
   
      Além disso, você pode melhorar o desempenho habilitando o escalonamento de bloqueios em nível de partição em, e não em uma tabela inteira. Isso pode reduzir a contenção de bloqueio na tabela.  
   
@@ -117,10 +121,11 @@ caps.handback.revision: 46
   
 -   [Carregamento em massa em uma tabela particionada](http://msdn.microsoft.com/library/cc966380.aspx)  
   
--   [Projeto REAL: ciclo de vida de dados -- particionamento](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
+-   [Projeto REAL: ciclo de vida de dados -- particionamento](https://technet.microsoft.com/library/cc966424.aspx)  
   
 -   [Aperfeiçoamentos de processamento de consultas em tabelas e índices particionados](http://msdn.microsoft.com/library/ms345599.aspx)  
   
 -   [10 principais práticas recomendadas para a criação de um Data Warehouse relacional em grande escala](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   
   
+

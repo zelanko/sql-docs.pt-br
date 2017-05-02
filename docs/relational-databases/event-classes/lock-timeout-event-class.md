@@ -1,31 +1,35 @@
 ---
-title: "Classe de evento Lock:Timeout | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento Timeout"
+title: Classe de evento Lock:Timeout | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Timeout event class
 ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cab3380bdd9773435fc7a8c4348a992ef8b2aba7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento Lock:Timeout
-  A classe de evento Lock:Timeout indica que uma solicitação para um bloqueio em um recurso, como uma página, expirou porque outra transação está segurando uma fechadura de bloqueio no recurso exigido. O tempo limite é determinado pela função de sistema @ @ LOCK_TIMEOUT e pode ser definido com a instrução SET LOCK_TIMEOUT.  
+# <a name="locktimeout-event-class"></a>Classe de evento Lock:Timeout
+  A classe de evento Lock:Timeout indica que uma solicitação para um bloqueio em um recurso, como uma página, expirou porque outra transação está segurando uma fechadura de bloqueio no recurso exigido. O tempo limite é determinado pela função de sistema @@LOCK_TIMEOUT e pode ser definido com a instrução SET LOCK_TIMEOUT.  
   
  Use a classe de evento Lock:Timeout para monitorar quando as condições de tempo limite acontecerem. Essas informações são úteis para determinar se os tempos limite estão afetando significativamente o desempenho de seu aplicativo, e quais são os objetos envolvidos. Você pode examinar o código do aplicativo que modifica esses objetos para determinar se podem ser efetuadas alterações para minimizar os intervalos.  
   
  Eventos Lock:Timeout com uma duração de 0 geralmente são o resultado de investigações de bloqueios internos e não são necessariamente a indicação de um problema. O evento Lock:Timeout (intervalo > 0) pode ser usado para ignorar intervalos com uma duração de 0.  
   
-## Colunas de dados da classe de evento Lock:Timeout  
+## <a name="locktimeout-event-class-data-columns"></a>Colunas de dados da classe de evento Lock:Timeout  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -59,7 +63,7 @@ caps.handback.revision: 38
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |Tipo|**int**|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Classe de evento Lock:Timeout &#40;timeout &#62; 0&#41;](../../relational-databases/event-classes/lock-timeout-timeout-0-event-class.md)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  

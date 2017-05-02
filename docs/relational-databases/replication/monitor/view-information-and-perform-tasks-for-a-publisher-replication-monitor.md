@@ -1,26 +1,30 @@
 ---
-title: "Exibir informa&#231;&#245;es e executar tarefas para um Publicador (Replication Monitor) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Publicadores [replicação do SQL Server], tarefas do Replication Monitor"
-  - "exibindo informações do Publicador"
-  - "Publicadores [replicação do SQL Server], exibindo informações"
+title: "Exibir informações e executar tarefas para um Publicador (Replication Monitor) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Publishers [SQL Server replication], Replication Monitor tasks
+- viewing Publisher information
+- Publishers [SQL Server replication], viewing information
 ms.assetid: 1e777e95-377a-4de3-b965-867464aadaaf
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4d592cc39ec10a3f56275e177edd0b3e12b8b5d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exibir informa&#231;&#245;es e executar tarefas para um Publicador (Replication Monitor)
+# <a name="view-information-and-perform-tasks-for-a-publisher-replication-monitor"></a>Exibir informações e executar tarefas para um Publicador (Replication Monitor)
   O Replication Monitor fornece as seguintes guias que exibem informações sobre o Publicador selecionado:  
   
 -   **Publicações**  
@@ -31,42 +35,42 @@ caps.handback.revision: 37
   
      Essa guia destina-se a exibir informações sobre as assinaturas de todas as publicações disponíveis no Publicador selecionado que tenham erros, avisos ou o pior desempenho. Essa guia não é exibida para Distribuidores que executam as versões anteriores do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
--   **Agentes** guia  
+-   Guia**Agentes**   
   
      Essa guia exibe informações detalhadas sobre os agentes e trabalhos usados por todos os tipos de replicação. A guia também permite que você inicie e interrompa cada agente e trabalho.  
   
- Para exibir mais informações sobre as opções em cada guia, clique na guia no painel à direita e, em seguida, clique em **Ajuda** na barra de menus. Para obter informações sobre como iniciar o Monitor de replicação, consulte [Iniciar o Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Para exibir mais informações sobre as opções de cada guia, clique na guia no painel direito e clique em **Ajuda** na barra de menus. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
   
-### Para exibir informações e executar tarefas para um Publicador  
+### <a name="to-view-information-and-perform-tasks-for-a-publisher"></a>Para exibir informações e executar tarefas para um Publicador  
   
 1.  Expanda um Grupo do publicador no painel esquerdo e clique em um Publicador.  
   
-2.  Para exibir informações sobre todas as publicações, clique o **publicações** guia.  
+2.  Para exibir informações sobre todas as publicações, clique na guia **Publicações** .  
   
 3.  Para exibir informações sobre assinaturas, clique na guia **Lista de Observação da Assinatura** . Você também pode acessar informações mais detalhadas e realizar tarefas a partir dessa guia:  
   
-    -   Para exibir informações detalhadas sobre o agente associado a uma assinatura, clique com botão direito a assinatura e, em seguida, clique em **Exibir detalhes**.  
+    -   Para exibir informações detalhadas sobre o agente associado a uma assinatura, clique com o botão direito do mouse na assinatura e então clique em **Exibir Detalhes**.  
   
-    -   Para exibir as propriedades de uma assinatura, clique com botão direito a assinatura e, em seguida, clique em **propriedades**.  
+    -   Para exibir as propriedades de uma assinatura, clique com o botão direito do mouse na assinatura e então clique em **Propriedades**.  
   
-    -   Para sincronizar uma assinatura push, clique com o botão direito e, em seguida, clique em **Iniciar sincronização**.  
+    -   Para sincronizar uma assinatura push, clique com o botão direito do mouse na assinatura, e, depois, clique em **Iniciar Sincronização**.  
   
-    -   Para reinicializar uma assinatura, clique com botão direito a assinatura e, em seguida, clique em **reinicializar assinatura**.  
+    -   Para reinicializar uma assinatura, clique com o botão direito do mouse na assinatura, e, depois, clique em **Reinicializar Assinatura**.  
   
-4.  Para exibir informações sobre agentes, clique o **agentes** guia. Você também pode acessar informações mais detalhadas e realizar tarefas nesta guia:  
+4.  Para exibir informações sobre agentes, clique na guia **Agentes** . Você também pode acessar informações mais detalhadas e realizar tarefas nesta guia:  
   
-    -   Para exibir informações detalhadas sobre um agente (como mensagens informativas e mensagens de erro), clique o agente e, em seguida, clique em **Exibir detalhes**.  
+    -   Para exibir informações detalhadas sobre o agente (como mensagens informativas e qualquer mensagem de erro), clique com o botão direito do mouse no agente e então clique em **Exibir Detalhes**.  
   
-    -   Para exibir informações detalhadas sobre o trabalho que executa o agente (como a agenda, detalhes de etapa de trabalho e assim por diante), o agente de atalho e, em seguida, clique em **propriedades**.  
+    -   Para exibir informações detalhadas sobre o trabalho que executa o agente (como o cronograma, detalhes da etapa de trabalho e outras), clique com o botão direito do mouse no agente e então clique em **Propriedades**.  
   
-    -   Para gerenciar os perfis para o agente, clique o agente e, em seguida, clique em **perfil de agente**. Para obter mais informações, consulte [trabalhar com perfis do Replication Agent](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md).  
+    -   Para gerenciar os perfis do agente, clique com o botão direito do mouse no agente e então clique em **Perfil do Agente**. Para obter mais informações, consulte [Trabalhar com perfis do agente de replicação](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md).  
   
-    -   Para iniciar um agente não está em execução, clique o agente e, em seguida, clique em **Iniciar agente**.  
+    -   Para iniciar um agente que não está sendo executado, clique com o botão direito do mouse no agente e então clique em **Iniciar Agente**.  
   
-    -   Para interromper um agente está em execução, clique o agente e, em seguida, clique em **Parar agente**.  
+    -   Para interromper um agente que está sendo executado, clique com o botão direito do mouse no agente e então clique em **Interromper Agente**.  
   
-## Consulte também  
- [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Replicação de monitoramento](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+## <a name="see-also"></a>Consulte também  
+ [Exibir e modificar propriedades de Publicador e Distribuidor](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Monitorando a Replicação](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

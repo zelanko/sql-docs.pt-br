@@ -1,30 +1,34 @@
 ---
-title: "Conjuntos de m&#237;dias de backup espelhadas (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "recuperação [SQL Server], backups espelhados"
-  - "conjuntos de mídia espelhados [SQL Server]"
-  - "espelhos de backup [SQL Server]"
-  - "cópias de backup duplicadas"
-  - "cópias de backup intercambiáveis [SQL Server]"
-  - "conjuntos de mídia [SQL Server], conjuntos de mídias de backup espelhados"
-  - "mídia de backup [SQL Server], mídia espelhada"
+title: "Conjuntos de mídia de backup espelhado (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server], mirrored backups
+- mirrored media sets [SQL Server]
+- backup mirrors [SQL Server]
+- duplicate backup copies
+- interchangeable backup copies [SQL Server]
+- media sets [SQL Server], mirrored backup media sets
+- backup media [SQL Server], mirrored media
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c6bd8f73f549b7869f30576a03f9d90e874398a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Conjuntos de m&#237;dias de backup espelhadas (SQL Server)
+# <a name="mirrored-backup-media-sets-sql-server"></a>Conjuntos de mídias de backup espelhadas (SQL Server)
     
 > [!NOTE]  
 >  Os conjuntos de mídias de backup espelhados têm suporte somente na edição Enterprise do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -70,9 +74,9 @@ caps.handback.revision: 38
   
 -   [Fazer backup em um conjunto de mídias espelhado &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Erros de mídia possíveis durante backup e restauração &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
- [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

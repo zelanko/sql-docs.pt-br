@@ -1,29 +1,33 @@
 ---
-title: "Classe de evento OLEDB Call | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento OLEDB Call"
+title: Classe de evento OLEDB Call | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLEDB Call event class
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f8b5cb7e58f0005d66f9f1ed73991289de8f213
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento OLEDB Call
+# <a name="oledb-call-event-class"></a>classe de evento OLEDB Call
   A classe de evento **OLEDB Call** ocorre quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chama um provedor OLE DB para consultas distribuídas e procedimentos armazenados remotamente.  
   
- Inclua a classe de evento **OLEDB Call** em rastreamentos para monitorar apenas as chamadas que não requerem dados ou chamadas que não são feitas pelo método **QueryInterface**. Quando a classe de evento **OLEDB Call** é incluída no rastreamento, a quantidade de sobrecarga gerada depende da frequência com que as chamadas do provedor OLE DB ocorrem em relação ao banco de dados durante o rastreamento. Se chamadas ocorrerem com frequência, o rastreamento poderá impedir significativamente o desempenho.  
+ Inclua a classe de evento **OLEDB Call** em rastreamentos para monitorar apenas as chamadas que não requerem dados ou chamadas que não são feitas pelo método **QueryInterface** . Quando a classe de evento **OLEDB Call** é incluída no rastreamento, a quantidade de sobrecarga gerada depende da frequência com que as chamadas do provedor OLE DB ocorrem em relação ao banco de dados durante o rastreamento. Se chamadas ocorrerem com frequência, o rastreamento poderá impedir significativamente o desempenho.  
   
-## Coluna de dados da classe de evento OLEDB Call  
+## <a name="oledb-call-event-class-data-columns"></a>Coluna de dados da classe de evento OLEDB Call  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -54,7 +58,7 @@ caps.handback.revision: 37
 |TextData|**nvarchar**|Parâmetros enviados e recebidos na chamada OLE DB.|1|Não|  
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Objetos de automação OLE em Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  

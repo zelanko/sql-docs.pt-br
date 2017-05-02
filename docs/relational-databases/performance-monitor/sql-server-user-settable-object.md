@@ -1,25 +1,29 @@
 ---
-title: "SQL Server, objeto User Settable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "objeto User Settable"
-  - "SQLServer:User Settable"
+title: "SQL Server, objeto Definível pelo usuário | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- User Settable object
+- SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0852dd58d7b89a9cf222c234a18bcecbad1cd943
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, objeto User Settable
+# <a name="sql-server-user-settable-object"></a>SQL Server, objeto User Settable
   O objeto **User Settable** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite criar instâncias de contador personalizadas. Use instâncias de contador personalizadas para monitorar aspectos do servidor que escapam aos contadores existentes, como componentes exclusivos de seu banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, o número de pedidos de clientes registrados em log ou o estoque de produtos).  
   
  O objeto **User Settable** contém 10 instâncias do contador de consultas: de **Contador do usuário 1** a **Contador do usuário 10**. Esses contadores são mapeados para os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de **sp_user_counter1** a **sp_user_counter10**. À medida que esses procedimentos armazenados são executados por aplicativos do usuário, os valores definidos por eles são exibidos no Monitor do Sistema. Um contador pode monitorar qualquer valor inteiro individual (por exemplo, um procedimento armazenado que conta quantos pedidos de um produto em particular ocorreram em um dia).  
@@ -27,13 +31,13 @@ caps.handback.revision: 22
 > [!NOTE]  
 >  Os procedimentos armazenados de contadores do usuário não são sondados automaticamente pelo Monitor do Sistema. Eles devem ser executados explicitamente por um aplicativo de usuário para obter os valores de contador a serem atualizados. Use um gatilho para atualizar o valor do contador automaticamente. Por exemplo, para criar um contador que monitore o número de linhas em uma tabela, crie um gatilho INSERT e DELETE na tabela que executa a seguinte instrução: `SELECT COUNT(*) FROM table`. Sempre que o gatilho for acionado devido à ocorrência de operação INSERT ou DELETE na tabela, o contador do Monitor do Sistema será atualizado automaticamente.  
   
- Essa tabela descreve o objeto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable**.  
+ Essa tabela descreve o objeto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** .  
   
 |Contadores do SQL Server definíveis pelo usuário|Descrição|  
 |---------------------------------------|-----------------|  
 |**Consulta**|O objeto **User Settable** contém o contador da consulta. Os usuários configuram os **Contadores do usuário** dentro do objeto de consulta.|  
   
- Essa tabela descreve as **instâncias** do contador de **Consultas**.  
+ Essa tabela descreve as **instâncias** do contador de **Consultas** .  
   
 |Instâncias do contador de consultas|Descrição|  
 |-----------------------------|-----------------|  
@@ -49,7 +53,7 @@ caps.handback.revision: 22
 EXECUTE sp_user_counter1 10  
 ```  
   
- Os procedimentos armazenados de contador do usuário podem ser chamados a partir de qualquer lugar onde normalmente podem ser chamados os outros procedimentos armazenados, como os seus próprios procedimentos armazenados. Por exemplo, é possível criar o seguinte procedimento armazenado para contar o número de conexões e tentativas de conexão desde que foi iniciada a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Os procedimentos armazenados de contador do usuário podem ser chamados a partir de qualquer lugar onde normalmente podem ser chamados os outros procedimentos armazenados, como os seus próprios procedimentos armazenados. Por exemplo, é possível criar o seguinte procedimento armazenado para contar o número de conexões e tentativas de conexão desde que foi iniciada a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 ```  
 DROP PROC My_Proc  
@@ -60,15 +64,15 @@ AS
 GO  
 ```  
   
- A função @@CONNECTIONS retorna o número de conexões ou tentativas de conexão desde que tenha sido iniciada uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esse valor é passado ao procedimento armazenado **sp_user_counter1** como parâmetro.  
+ A função @[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna o número de conexões ou tentativas de conexão desde o início de uma instância de @CONNECTIONS. Esse valor é passado ao procedimento armazenado **sp_user_counter1** como parâmetro.  
   
 > [!IMPORTANT]  
 >  Torne as consultas definidas nos procedimentos armazenados de contador do usuário o mais simples possível. Consultas que consomem muita memória e realizam operações substanciais de classificação ou hash ou grandes quantidades de E/S são de execução dispendiosa e podem influir no desempenho.  
   
-## Permissões  
+## <a name="permissions"></a>Permissões  
  **sp_user_counter** está disponível para todos os usuários, mas pode ser restringido para qualquer contador de consultas.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

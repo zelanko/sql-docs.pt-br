@@ -1,24 +1,28 @@
 ---
-title: "Fazer backup da chave mestra de um banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "chave mestra de banco de dados [SQL Server], exportando"
+title: Fazer backup de uma chave mestra de banco de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database master key [SQL Server], exporting
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 52f4f75fe2a48302fb7383ce445f47e23366910d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Fazer backup da chave mestra de um banco de dados
+# <a name="back-up-a-database-master-key"></a>Fazer backup da chave mestra de um banco de dados
   Este tópico descreve como fazer o backup de uma chave mestra de banco de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A chave mestra de banco de dados é usada para criptografar outras chaves e certificados dentro de um banco de dados. Se ela for excluída ou estiver corrompida, é possível que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não consiga descriptografar essas chaves e os dados criptografados com elas poderão ser efetivamente perdidos. Por esta razão, faça backup da chave mestra de banco de dados e armazene o backup em um local externo seguro.  
   
  **Neste tópico**  
@@ -46,7 +50,7 @@ caps.handback.revision: 20
   
 ##  <a name="Procedure"></a> Usando o SQL Server Management Studio com o Transact-SQL  
   
-#### Fazer backup da chave mestra de banco de dados  
+#### <a name="to-back-up-the-database-master-key"></a>Fazer backup da chave mestra de banco de dados  
   
 1.  No [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], conecte à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que contém a chave mestra do banco de dados da qual você deseja fazer backup.  
   

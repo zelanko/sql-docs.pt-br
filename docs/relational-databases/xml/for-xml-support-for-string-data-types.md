@@ -1,24 +1,28 @@
 ---
-title: "Suporte a FOR XML para tipos de dados de cadeia de caracteres | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cadeias [SQL Server], XML"
+title: Suporte FOR XML para tipos de dados de cadeia de caracteres | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- strings [SQL Server], XML
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8bf126b897cf4af722108607ceec7ff57184d025
+ms.lasthandoff: 04/11/2017
+
 ---
-# Suporte a FOR XML para tipos de dados de cadeia de caracteres
+# <a name="for-xml-support-for-string-data-types"></a>Suporte a FOR XML para tipos de dados de cadeia de caracteres
   O XML gerado pelos caracteres de espaço em branco do FOR XML nos dados tem a entidade definida.  
   
  O exemplo a seguir cria a tabela de exemplo **T** e insere dados de exemplo que incluem caracteres de alimentação de linha, retorno de carro e tabulação. A instrução SELECT recupera os dados da tabela.  
@@ -59,7 +63,7 @@ after line feed" />
   
 -   O caractere de alimentação de linha na terceira linha tem a entidade definida como &#xA.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Suporte a FOR XML para vários tipos de dados SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

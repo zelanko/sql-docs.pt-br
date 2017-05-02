@@ -1,28 +1,32 @@
 ---
-title: "Restaura&#231;&#245;es completas de banco de dados (modelo de recupera&#231;&#227;o simples) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restaurações completas de banco de dados"
-  - "restaurações de banco de dados [SQL Server], banco de dados completo"
-  - "restaurando banco de dados [SQL Server], banco de dados completo"
-  - "modelo de recuperação simples [SQL Server]"
-  - "restaurando [SQL Server], banco de dados"
+title: "Restaurações completas de banco de dados (modelo de recuperação simples) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- complete database restores
+- database restores [SQL Server], complete database
+- restoring databases [SQL Server], complete database
+- simple recovery model [SQL Server]
+- restoring [SQL Server], database
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d64038885f4344df3fc09c58038a724d5fd11aab
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaura&#231;&#245;es completas de banco de dados (modelo de recupera&#231;&#227;o simples)
+# <a name="complete-database-restores-simple-recovery-model"></a>Restaurações completas de banco de dados (modelo de recuperação simples)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Em uma restauração completa de banco de dados, a meta é restaurar todo o banco de dados. O banco de dados inteiro fica offline durante a restauração. Antes que qualquer parte do banco de dados possa ficar online, todos os dados são recuperados a um ponto consistente, no qual todas as partes do banco de dados estejam no mesmo momento determinado e não exista nenhuma transação não confirmada.  
@@ -39,29 +43,29 @@ caps.handback.revision: 58
 -   [Tarefas relacionadas](#RelatedTasks)  
   
 > [!NOTE]  
->  Para obter informações sobre suporte para backups de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja a seção “Suporte de compatibilidade” de [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+>  Para obter informações sobre suporte para backups de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja a seção “Suporte de compatibilidade” de [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 ##  <a name="Overview"></a> Visão geral da restauração de banco de dados no modelo de recuperação simples  
- Uma restauração de banco de dados completa no modelo de recuperação simples envolve uma ou duas instruções [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) , dependendo se você deseja restaurar um backup de banco de dados diferencial. Se você estiver usando somente um backup de banco de dados completo, simplesmente restaure o backup mais recente, conforme mostrado na ilustração abaixo.  
+ Uma restauração de banco de dados completa no modelo de recuperação simples envolve uma ou duas instruções [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , dependendo se você deseja restaurar um backup de banco de dados diferencial. Se você estiver usando somente um backup de banco de dados completo, simplesmente restaure o backup mais recente, conforme mostrado na ilustração abaixo.  
   
  ![Restaurando apenas um backup de banco de dados completo](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "Restaurando apenas um backup de banco de dados completo")  
   
  Se você também estiver usando um backup de banco de dados diferencial, restaure o backup de banco de dados completo mais recente sem recuperar o banco de dados, e em seguida restaure o backup de banco de dados diferencial mais recente e recupere o banco de dados. A ilustração a seguir mostra este processo.  
   
- ![Restaurando backups de banco de dados diferenciais e completos](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "Restaurando backups de banco de dados diferenciais e completos")  
+ ![Backups diferenciais e completos de bancos de dados](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "Backups diferenciais e completos de bancos de dados")  
   
 > [!NOTE]  
 >  Se você pretende restaurar um backup de banco de dados em uma instância de servidor diferente, consulte [Copiar bancos de dados com Backup e Restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 ###  <a name="TsqlSyntax"></a> Sintaxe básica de RESTORE do Transact-SQL  
- A sintaxe básica [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) para restaurar um backup de banco de dados completo é:  
+ A sintaxe básica [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) para restaurar um backup de banco de dados completo é:  
   
  RESTORE DATABASE *database_name* FROM *backup_device* [ WITH NORECOVERY ]  
   
 > [!NOTE]  
 >  Use WITH NORECOVERY se você também planeja restaurar um backup de banco de dados diferencial.  
   
- A sintaxe básica [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) para restaurar um backup de banco de dados é:  
+ A sintaxe básica [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) para restaurar um backup de banco de dados é:  
   
  RESTORE DATABASE *database_name* FROM *backup_device* WITH RECOVERY  
   
@@ -116,8 +120,8 @@ GO
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
-## Consulte também  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Consulte também  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [Backups de bancos de dados completos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   

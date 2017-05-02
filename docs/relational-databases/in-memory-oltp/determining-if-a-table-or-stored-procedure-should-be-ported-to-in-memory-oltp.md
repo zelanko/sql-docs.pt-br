@@ -1,29 +1,33 @@
 ---
-title: "Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP na mem&#243;ria | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Analisar, Migrar, Relatório"
-  - "AMR"
+title: Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP in-memory | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analyze, Migrate, Report
+- AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 caps.latest.revision: 39
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.lasthandoff: 04/11/2017
+
 ---
-# Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP na mem&#243;ria
+# <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP na memória
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  O relatório de Análise de Desempenho da Transação no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o ajuda a avaliar se o OLTP in-memory melhorará o desempenho de seu aplicativo de banco de dados. Também indica quanto trabalho você deve fazer para habilitar o OLTP na memória no seu aplicativo. Depois de identificar uma tabela baseada em disco a ser transportada para o OLTP in-memory, você poderá usar o [Orientador de Otimização da Memória](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) para ajudar na migração da tabela. De maneira semelhante, o [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) o ajudará a transportar um procedimento armazenado para um procedimento armazenado compilado nativamente. Para obter informações sobre as metodologias de migração, consulte [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração).  
+  O relatório de Análise de Desempenho da Transação no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o ajuda a avaliar se o OLTP in-memory melhorará o desempenho de seu aplicativo de banco de dados. Também indica quanto trabalho você deve fazer para habilitar o OLTP na memória no seu aplicativo. Depois de identificar uma tabela baseada em disco a ser transportada para o OLTP in-memory, você poderá usar o [Orientador de Otimização da Memória](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)para ajudar na migração da tabela. De maneira semelhante, o [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) o ajudará a transportar um procedimento armazenado para um procedimento armazenado compilado nativamente. Para obter informações sobre as metodologias de migração, consulte [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração).  
   
  O relatório de Análise de desempenho da transação é executado diretamente no banco de dados de produção, ou em um banco de dados de teste com uma carga de trabalho ativa semelhante à carga de trabalho de produção.  
   
@@ -40,8 +44,8 @@ caps.handback.revision: 39
   
  O relatório de Análise de Desempenho da Transação e os consultores de migração são instalados como parte do SSMS (SQL Server Management Studio) quando você seleciona **Ferramentas de Gerenciamento – Básico** ou **Ferramentas de Gerenciamento – Avançado** ao instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ou quando você [baixa o SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).  
   
-## Relatórios de Análise de desempenho da transação  
- Você pode gerar relatórios de análise de desempenho da transação no **Pesquisador de Objetos** clicando com o botão direito no banco de dados, selecionando **Relatórios**, **Relatórios Padrão** e **Visão Geral da Análise de Desempenho da Transação**. O banco de dados deve ter uma carga de trabalho ativa, ou uma execução recente de uma carga de trabalho, para gerar um relatório de análise significativo.  
+## <a name="transaction-performance-analysis-reports"></a>Relatórios de Análise de desempenho da transação  
+ Você pode gerar relatórios de análise de desempenho da transação no **Pesquisador de Objetos** clicando com o botão direito no banco de dados, selecionando **Relatórios**, **Relatórios Padrão**e **Visão Geral da Análise de Desempenho da Transação**. O banco de dados deve ter uma carga de trabalho ativa, ou uma execução recente de uma carga de trabalho, para gerar um relatório de análise significativo.  
   
  Os detalhes relatados para uma tabela consistem em três seções:  
   
@@ -97,16 +101,16 @@ caps.handback.revision: 39
   
  Para ver os detalhes sobre como converter um procedimento armazenado em um procedimento armazenado compilado nativamente, use o Native Compilation Advisor.  
   
-## Geração de listas de verificação de migração de OLTP in-memory  
+## <a name="generating-in-memory-oltp-migration-checklists"></a>Geração de listas de verificação de migração de OLTP in-memory  
  Listas de verificação de migração identificam qualquer tabela ou recursos de procedimento armazenado que não têm suporte com tabelas com otimização de memória ou procedimentos armazenados compilados nativamente. A otimização da memória e os consultores de compilação nativa podem gerar uma lista de verificação para uma única tabela com base em disco ou procedimento armazenado T-SQL interpretado. Também é possível gerar listas de verificação de migração para várias tabelas e procedimentos armazenados em um banco de dados.  
   
  Você pode gerar uma lista de verificação de migração no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando o comando **Gerar Listas de Verificação de Migração do OLTP in-memory** ou usando o PowerShell.  
   
  **Para gerar uma lista de verificação de migração usando o comando de interface de usuário**  
   
-1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse em um banco de dados diferente do banco de dados do sistema, clique em **Tarefas** e clique em **Gerar Listas de Verificação de Migração de OLTP in-memory**.  
+1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse em um banco de dados diferente do banco de dados do sistema, clique em **Tarefas**e clique em **Gerar Listas de Verificação de Migração de OLTP in-memory**.  
   
-2.  Na caixa de diálogo Gerar Lista de Verificação de Migração do OLTP in-memory, clique em Avançar para navegar até a página **Configurar Opções de Geração de Lista de Verificação**. Nessa página, faça o seguinte.  
+2.  Na caixa de diálogo Gerar Lista de Verificação de Migração do OLTP in-memory, clique em Avançar para navegar até a página **Configurar Opções de Geração de Lista de Verificação** . Nessa página, faça o seguinte.  
   
     1.  Insira um caminho para a pasta na caixa **Salvar lista de verificação em** .  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 39
   
     -   Um relatório de lista de verificação de migração para <nome_do_objeto> é o único relatório no local especificado por folder_path2.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Migrando para OLTP na memória](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

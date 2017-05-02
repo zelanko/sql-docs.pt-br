@@ -1,28 +1,32 @@
 ---
-title: "Exemplo: Especificando um elemento raiz para o XML gerado por FOR XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modo RAW, especificando exemplo de elemento raiz"
-  - "modo RAW, com o exemplo FOR XML"
+title: 'Exemplo: especificando um elemento raiz para o XML gerado por FOR XML | Microsoft Docs'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, specifying root element example
+- RAW mode, with FOR XML example
 ms.assetid: bcc54b11-0713-4e43-8dbe-d6f3ad1993b5
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b29b195a3bff00b3c277767df4d18a0d001eb9ed
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemplo: Especificando um elemento raiz para o XML gerado por FOR XML
-  Ao especificar a opção `ROOT` na consulta `FOR XML`, é possível solicitar um único elemento de nível superior para o XML resultante, conforme mostrado nesta consulta. O argumento especificado para a política `ROOT` fornece o nome do elemento raiz.  
+# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Exemplo: Especificando um elemento raiz para o XML gerado por FOR XML
+  Ao especificar a opção `ROOT` na consulta `FOR XML` , é possível solicitar um único elemento de nível superior para o XML resultante, conforme mostrado nesta consulta. O argumento especificado para a política `ROOT` fornece o nome do elemento raiz.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 USE AdventureWorks2012;  
@@ -44,7 +48,7 @@ go
 </MyRoot>  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usar modo RAW com FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

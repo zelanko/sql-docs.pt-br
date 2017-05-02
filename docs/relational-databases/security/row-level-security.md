@@ -1,32 +1,36 @@
 ---
-title: "Seguran&#231;a em n&#237;vel de linha | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "predicados de controle de acesso"
-  - "segurança em nível de linha"
-  - "segurança [SQL Server], controle de acesso baseados em predicados"
-  - "segurança em nível de linha descrita"
-  - "segurança baseada em predicados"
+title: "Segurança em nível de linha | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- access control predicates
+- row level security
+- security [SQL Server], predicate based access control
+- row level security described
+- predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0141c681779c12bf63162751f93dcd6495fb1a94
+ms.lasthandoff: 04/11/2017
+
 ---
-# Seguran&#231;a em n&#237;vel de linha
+# <a name="row-level-security"></a>Segurança em nível de linha
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  ![Row level security graphic](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
+  ![Gráfico de segurança em nível de linha](../../relational-databases/security/media/row-level-security-graphic.png "Gráfico de segurança em nível de linha")  
   
  Segurança em nível de linha permite aos clientes controlar o acesso às linhas em uma tabela de banco de dados com base nas características do usuário executando uma consulta (por exemplo, associação a grupo ou contexto de execução).  
   
@@ -36,30 +40,9 @@ caps.handback.revision: 47
   
  Implemente a RLS usando a instrução [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] e predicados criados como [funções com valor de tabela embutida](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obter](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obter](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
-##  <a name="Top"></a> Neste tópico  
-  
--   [Descrição](#Description)  
-  
--   [Casos de uso](#UseCases)  
-  
--   [Permissões](#Permissions)  
-  
--   [Práticas recomendadas](#Best)  
-  
--   [Observação de segurança: ataques de canal lateral](#SecNote)  
-  
--   [Compatibilidade entre recursos](#Limitations)  
-  
--   [Exemplos de código](#CodeExamples)  
-  
-    -   [A. Cenário para usuários conectados diretamente](#Typical)  
-  
-    -   [B. Cenário de aplicativo de camada intermediária](#MidTier)  
-  
+
 ##  <a name="Description"></a> Descrição  
  A RLS permite dois tipos de predicado de segurança.  
   
@@ -107,7 +90,6 @@ caps.handback.revision: 47
   
 -   Nenhuma mudança foi feita nas APIs em massa, incluindo BULK INSERT. Isso significa que os predicados de bloqueio AFTER INSERT serão aplicados às operações de inserção em massa, assim como seriam em operações de inserção regular.  
   
- [Início](#Top)  
   
 ##  <a name="UseCases"></a> Casos de uso  
  Estes são exemplos de design de como RLS pode ser usado:  
@@ -122,7 +104,6 @@ caps.handback.revision: 47
   
  Em termos mais formais, o RLS introduz o controle de acesso baseado em predicado. Ele apresenta uma avaliação centralizada, flexível e baseada em predicado que pode levar em consideração metadados ou quaisquer outros critérios que o administrador determina conforme apropriado. O predicado é usado como critério para determinar se o usuário tem acesso apropriado aos dados com base em atributos de usuário. Controle de acesso baseado em rótulos pode ser implementado usando o controle de acesso baseado em predicado.  
   
- [Início](#Top)  
   
 ##  <a name="Permissions"></a> Permissões  
  Criando, alterando ou removendo políticas de segurança requer a permissão **ALTER ANY SECURITY POLICY** . Criar ou descartar uma política de segurança requer a permissão **ALTER** no esquema.  
@@ -137,9 +118,8 @@ caps.handback.revision: 47
   
  Diretivas de segurança se aplicam a todos os usuários, incluindo usuários de dbo do banco de dados. Os usuários do dbo podem alterar ou descartar as políticas de segurança, mas suas alterações às políticas de segurança podem ser auditadas. Se os usuários com altos privilégios (como sysadmin ou db_owner) precisarem ver todas as linhas para solucionar problemas ou validar dados, a política de segurança deverá ser escrita para permitir isso.  
   
- Se uma política de segurança for criada com `SCHEMABINDING = OFF`, para consultar a tabela de destino, os usuários deverão ter a permissão **SELECT** ou **EXECUTE** na função de predicado e em todas as tabelas, exibições ou funções usadas adicionais na função de predicado. Se uma política de segurança for criada com `SCHEMABINDING = ON` (o padrão), essas verificações de permissão serão ignoradas quando os usuários consultarem a tabela de destino.  
+ Se uma política de segurança for criada com `SCHEMABINDING = OFF`, para consultar a tabela de destino, os usuários deverão ter a permissão  **SELECT** ou **EXECUTE** na função de predicado e em todas as tabelas, exibições ou funções usadas adicionais na função de predicado. Se uma política de segurança for criada com `SCHEMABINDING = ON` (o padrão), essas verificações de permissão serão ignoradas quando os usuários consultarem a tabela de destino.  
   
- [Início](#Top)  
   
 ##  <a name="Best"></a> Práticas recomendadas  
   
@@ -153,7 +133,7 @@ caps.handback.revision: 47
   
 -   Evite usar junções de tabelas em excesso em funções de predicado, para maximizar o desempenho.  
   
- Evite a lógica de predicado que depende de [opções SET](../../t-sql/statements/set-statements-transact-sql.md) específicas da sessão: embora seja improvável que elas sejam usadas em aplicações práticas, as funções de predicado cuja lógica depende de determinadas opções **SET** específicas da sessão poderão perder informações se os usuários conseguirem executar consultas arbitrárias. Por exemplo, uma função de predicado que implicitamente converte uma cadeia de caracteres em **datetime** poderia filtrar linhas diferentes com base na opção **SET DATEFORMAT** da sessão atual. Em geral, as funções de predicado devem obedecer as regras a seguir:  
+ Evite a lógica de predicado que depende de [opções SET](../../t-sql/statements/set-statements-transact-sql.md)específicas da sessão: embora seja improvável que elas sejam usadas em aplicações práticas, as funções de predicado cuja lógica depende de determinadas opções **SET** específicas da sessão poderão perder informações se os usuários conseguirem executar consultas arbitrárias. Por exemplo, uma função de predicado que implicitamente converte uma cadeia de caracteres em **datetime** poderia filtrar linhas diferentes com base na opção **SET DATEFORMAT** da sessão atual. Em geral, as funções de predicado devem obedecer as regras a seguir:  
   
 -   As funções de predicado não devem converter implicitamente cadeias de caracteres em **date**, **smalldatetime**, **datetime**, **datetime2** ou **datetimeoffset**, ou vice-versa, pois essas conversões são afetadas pleas opções [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) e [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md). Em vez disso, use a função **CONVERT** e especifique explicitamente o parâmetro de estilo.  
   
@@ -162,15 +142,13 @@ caps.handback.revision: 47
 -   As funções de predicado não devem se basear em expressões aritméticas ou de agregação que retornam **NULL** em caso de erro (como um estouro ou divisão por zero), pois esse comportamento é afetado pelas opções [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md), [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md) e [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md).  
   
 -   As funções de predicado não devem comparar cadeias de caracteres concatenadas com **NULL**, pois esse comportamento é afetado pela opção [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
-  
- [Início](#Top)  
+   
   
 ##  <a name="SecNote"></a> Observação de segurança: ataques de canal lateral  
  **Gerenciador de políticas de segurança mal-intencionado:** é importante observar que um gerenciador de políticas de segurança mal-intencionado com permissões suficientes para criar uma política de segurança sobre uma coluna confidencial e que tenha permissão para criar ou alterar funções com valor de tabela embutida poderá pactuar com outro usuário que tenha permissões SELECT em uma tabela para realizar a exfiltração de dados pela criação maliciosa de funções com valor de tabela embutida, concebidas para utilizar ataques de canal lateral com o objetivo de inferir dados. Esses ataques exigiriam a colusão (ou excesso de permissões concedidas a um usuário mal-intencionado) e provavelmente demandariam várias iterações de modificação da política (exigindo permissão para remover o predicado, para que pudessem então quebrar a ligação do esquema), modificando as funções embutidas com valor de tabela e repetidamente executando instruções SELECT na tabela de destino. É altamente recomendável limitar as permissões conforme necessário e monitorar quaisquer atividades suspeitas, como mudança constante de políticas e funções embutidas com valor de tabela relacionadas à segurança de nível de linha.  
   
  **Consultas cuidadosamente concebidas:** é possível causar vazamento de informações pelo uso de consultas concebidas cuidadosamente. Por exemplo, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permitiria que um usuário mal-intencionado soubesse que o salário de John Doe é US$ 100.000. Mesmo que haja um predicado de segurança em vigor para impedir que um usuário mal-intencionado consulte diretamente o salário de outras pessoas, o usuário pode determinar quando a consulta retorna uma exceção de divisão por zero.  
-  
- [Início](#Top)  
+   
   
 ##  <a name="Limitations"></a> Compatibilidade entre recursos  
  De modo geral, a segurança no nível de linha funcionará conforme o esperado entre os recursos. No entanto, há algumas exceções. Esta seção documenta várias observações e limitações para o uso da segurança em nível de linha com determinados recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -181,7 +159,7 @@ caps.handback.revision: 47
   
 -   **Polybase** A RLS não é compatível com o Polybase.  
   
--   **Tabelas com Otimização de Memória**A função com valor de tabela embutida usada como um predicado de segurança em uma tabela com otimização de memória deve ser definida usando a opção `WITH NATIVE_COMPILATION`. Com essa opção, os recursos de linguagem não permitidos pelas tabelas com otimização de memória serão banidos e o erro apropriado será emitido no momento da criação. Para obter mais informações, veja a seção **Segurança em nível de linha em tabelas com otimização de memória** em [Introdução às tabelas com otimização de memória](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
+-   **Tabelas com Otimização de Memória**A função com valor de tabela embutida usada como um predicado de segurança em uma tabela com otimização de memória deve ser definida usando a opção `WITH NATIVE_COMPILATION` . Com essa opção, os recursos de linguagem não permitidos pelas tabelas com otimização de memória serão banidos e o erro apropriado será emitido no momento da criação. Para obter mais informações, veja a seção **Segurança em nível de linha em tabelas com otimização de memória** em [Introdução às tabelas com otimização de memória](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 -   **Exibições indexadas** De modo geral, as políticas de segurança podem ser criadas sobre as exibições, e as exibições podem ser criadas sobre as tabelas que são associadas pelas políticas de segurança. No entanto, as exibições indexadas não podem ser criadas sobre as tabelas que têm uma política de segurança, pois as pesquisas de linha pelo índice contornariam a política.  
   
@@ -195,9 +173,8 @@ caps.handback.revision: 47
   
 -   **Exibições Particionadas** Os predicados de bloqueio não podem ser definidos em exibições particionadas, e as exibições particionadas não podem ser criadas sobre as tabelas que usam predicados de bloqueio. Os predicados de filtro são compatíveis com exibições particionadas.  
   
--   As **tabelas temporais** são compatíveis com a RLS. No entanto, os predicados de segurança na tabela atual não são replicados automaticamente na tabela de histórico. Para aplicar uma política de segurança às tabelas atual e de histórico, você deverá adicionar individualmente um predicado de segurança em cada tabela.  
+-   As**tabelas temporais** são compatíveis com a RLS. No entanto, os predicados de segurança na tabela atual não são replicados automaticamente na tabela de histórico. Para aplicar uma política de segurança às tabelas atual e de histórico, você deverá adicionar individualmente um predicado de segurança em cada tabela.  
   
- [Início](#Top)  
   
 ##  <a name="CodeExamples"></a> Exemplos  
   
@@ -206,7 +183,7 @@ caps.handback.revision: 47
   
  Crie três contas de usuário que demonstrem os diferentes recursos de acesso.  
   
-```  
+```sql  
 CREATE USER Manager WITHOUT LOGIN;  
 CREATE USER Sales1 WITHOUT LOGIN;  
 CREATE USER Sales2 WITHOUT LOGIN;  
@@ -296,7 +273,6 @@ WITH (STATE = OFF);
   
  Agora os usuários Vendas1 e Vendas2 podem ver todas as 6 linhas.  
   
- [Início](#Top)  
   
 ###  <a name="MidTier"></a> B. Cenário para usuários que se conectam ao banco de dados por meio de um aplicativo de camada intermediária  
  Este exemplo mostra como um aplicativo de camada intermediária pode implementar a filtragem de conexão, onde os usuários do aplicativo (ou locatários) compartilham o mesmo usuário de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o aplicativo). O aplicativo define a ID do usuário do aplicativo atual em [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) depois de se conectar ao banco de dados e, em seguida, as políticas de segurança filtram de modo transparente as linhas que não devem ficar visíveis para essa ID, além de impedir o usuário de inserir linhas para a ID de usuário incorreta. Não é necessária nenhuma outra alteração no aplicativo.  
@@ -385,7 +361,7 @@ REVERT;
 GO  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
@@ -397,3 +373,4 @@ GO
  [Criar funções definidas pelo usuário &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   
+

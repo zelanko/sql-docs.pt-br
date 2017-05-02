@@ -1,25 +1,29 @@
 ---
-title: "Renomear um procedimento armazenado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "procedimentos armazenados [SQL Server], renomeando"
-  - "renomeando procedimentos armazenados"
+title: Renomear um procedimento armazenado | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], renaming
+- renaming stored procedures
 ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8082b0cdf5788bd4b96c14ff60dbd9103c27bd74
+ms.lasthandoff: 04/11/2017
+
 ---
-# Renomear um procedimento armazenado
+# <a name="rename-a-stored-procedure"></a>Renomear um procedimento armazenado
   Este tópico descreve como renomear um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -42,7 +46,7 @@ caps.handback.revision: 23
   
 -   Os nomes de procedimento devem estar de acordo com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
--   Renomear uma procedimento armazenado não alterará o nome do objeto correspondente na coluna de definição da exibição de catálogo **sys.sql_modules**. Assim, é recomendável não renomear esse tipo de objeto. Em vez disso, remova-o e recrie o procedimento armazenado com seu nome novo.  
+-   Renomear uma procedimento armazenado não alterará o nome do objeto correspondente na coluna de definição da exibição de catálogo **sys.sql_modules** . Assim, é recomendável não renomear esse tipo de objeto. Em vez disso, remova-o e recrie o procedimento armazenado com seu nome novo.  
   
 -   A alteração do nome ou definição de um procedimento pode causar falha em objetos dependentes que não são atualizados para refletir as alterações que tenham sido feitas no procedimento. Para obter mais informações, veja [Exibir as dependências de um procedimento armazenado](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).  
   
@@ -50,14 +54,14 @@ caps.handback.revision: 23
   
 ####  <a name="Permissions"></a> Permissões  
  CREATE PROCEDURE  
- Exige a permissão CREATE PROCEDURE no banco de dados e a permissão ALTER no esquema em que o procedimento está sendo criado, ou exige a associação na função de banco de dados fixa **db_ddladmin**.  
+ Exige a permissão CREATE PROCEDURE no banco de dados e a permissão ALTER no esquema em que o procedimento está sendo criado, ou exige a associação na função de banco de dados fixa **db_ddladmin** .  
   
  ALTER PROCEDURE  
- Exige a permissão ALTER no procedimento, ou exige a associação na função de banco de dados fixa **db_ddladmin**.  
+ Exige a permissão ALTER no procedimento, ou exige a associação na função de banco de dados fixa **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para renomear um procedimento armazenado  
+#### <a name="to-rename-a-stored-procedure"></a>Para renomear um procedimento armazenado  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda essa instância.  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 23
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para renomear um procedimento armazenado  
+#### <a name="to-rename-a-stored-procedure"></a>Para renomear um procedimento armazenado  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -109,7 +113,7 @@ AS
 GO  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [Criar um procedimento armazenado](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   

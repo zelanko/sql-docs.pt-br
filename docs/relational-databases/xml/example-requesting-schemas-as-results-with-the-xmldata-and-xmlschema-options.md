@@ -1,28 +1,32 @@
 ---
-title: "Exemplo: Solicitando esquemas como resultados com as op&#231;&#245;es XMLDATA e XMLSCHEMA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Modo RAW, solicitando exemplo de esquema"
-  - "Modo RAW, com XMLDATA e XMLSCHEMA"
+title: "Exemplo: solicitando esquemas como resultados com as opções XMLDATA e XMLSCHEMA | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, requesting schema example
+- RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bca71096e7e34aa6a72c84f065fd7df76eb6462f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemplo: Solicitando esquemas como resultados com as op&#231;&#245;es XMLDATA e XMLSCHEMA
+# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Exemplo: Solicitando esquemas como resultados com as opções XMLDATA e XMLSCHEMA
   A consulta a seguir retorna o esquema XML-DATA que descreve a estrutura do documento.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 USE AdventureWorks2012;  
@@ -53,7 +57,7 @@ GO
 > [!NOTE]  
 >  O <`Schema`> é declarado como um namespace. Para evitar colisões de namespace quando vários esquemas XML-Data são solicitados em diferentes consultas FOR XML, o identificador do namespace, `Schema1` neste exemplo, é alterado a cada execução da consulta. O identificador de namespace é composto de **Schema*n*** em que ***n*** é um inteiro.  
   
- Com a especificação da opção `XMLSCHEMA`, é possível solicitar o esquema XSD para o resultado.  
+ Com a especificação da opção `XMLSCHEMA` , é possível solicitar o esquema XSD para o resultado.  
   
 ```  
 USE AdventureWorks2012;  
@@ -122,7 +126,7 @@ GO
 <row xmlns="urn:example.com" ProductModelID="119" Name="Bike Wash" />  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usar modo RAW com FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

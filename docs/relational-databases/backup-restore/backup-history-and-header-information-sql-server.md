@@ -1,45 +1,49 @@
 ---
-title: "Informa&#231;&#245;es de hist&#243;rico e cabe&#231;alho de backup (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cabeçalhos de backup [SQL Server]"
-  - "tabelas de histórico [SQL Server]"
-  - "restaurações de arquivos [SQL Server], informações de status"
-  - "conjuntos de backup [SQL Server], informações de status"
-  - "listando bancos de dados com backup"
-  - "informações de status [SQL Server], backups"
-  - "backup [SQL Server], exibindo conjuntos de backup"
-  - "restaurando [SQL Server], tabelas de histórico"
-  - "restaurando bancos de dados [SQL Server], informações de status"
-  - "backups [SQL Server], informações de status"
-  - "cabeçalhos [SQL Server]"
-  - "cabeçalhos de mídia [SQL Server]"
-  - "tabelas de histórico de backup [SQL Server]"
-  - "exibindo informações de backup"
-  - "restaurando arquivos [SQL Server], exibindo informações de backup"
-  - "restaurando bancos de dados [SQL Server], tabelas de histórico"
-  - "exibindo informações de backup"
-  - "restaurando arquivos [SQL Server], informações de status"
-  - "informações de histórico [SQL Server], backups"
-  - "restaurações de banco de dados [SQL Server], tabelas de histórico"
-  - "tabelas de histórico de restauração [SQL Server]"
-  - "listando arquivos com backup"
+title: "Informações de histórico e cabeçalho de backup (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup headers [SQL Server]
+- history tables [SQL Server]
+- file restores [SQL Server], status information
+- backup sets [SQL Server], status information
+- listing backed up databases
+- status information [SQL Server], backups
+- backing up [SQL Server], viewing backup sets
+- restoring [SQL Server], history tables
+- restoring databases [SQL Server], status information
+- backups [SQL Server], status information
+- headers [SQL Server]
+- media headers [SQL Server]
+- backup history tables [SQL Server]
+- viewing backup information
+- restoring files [SQL Server], viewing backup information
+- restoring databases [SQL Server], history tables
+- displaying backup information
+- restoring files [SQL Server], status information
+- historical information [SQL Server], backups
+- database restores [SQL Server], history tables
+- restore history tables [SQL Server]
+- listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff9f48347c218dba37363dd1a983a66abbdc6372
+ms.lasthandoff: 04/11/2017
+
 ---
-# Informa&#231;&#245;es de hist&#243;rico e cabe&#231;alho de backup (SQL Server)
+# <a name="backup-history-and-header-information-sql-server"></a>Informações de histórico e cabeçalho de backup (SQL Server)
   Um histórico completo de todas as operações de backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do servidor é armazenado no banco de dados **msdb** . Este tópico apresenta as tabelas de histórico de backup e restauração e também as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] usadas para acessar o histórico de backup. O tópico também discute quando a listagem de banco de dados e de arquivos de log de transação é útil e quando usar informações do cabeçalho de mídia comparado a quando usar informações do cabeçalho de backup.  
   
 > [!IMPORTANT]  
@@ -88,9 +92,9 @@ caps.handback.revision: 54
   
 |Instrução de informações|Tabela de histórico de backup|Descrição|  
 |---------------------------|--------------------------|-----------------|  
-|[RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Retorna um conjunto de resultados que tem uma lista dos arquivos de log e de banco de dados contidos no backup especificado.<br /><br /> Para obter mais informações, consulte "Listando arquivos de log de transações e de banco de dados", mais adiante neste tópico.|  
-|[RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Recupera todas as informações do cabeçalho de backup de todos os conjuntos de backup em um dispositivo de backup particular. O resultado de executar RESTORE HEADERONLY é um conjunto de resultados.<br /><br /> Para obter mais informações, consulte "Exibindo informações do cabeçalho de backup" mais adiante neste tópico.|  
-|[RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|Retorna um conjunto de resultados que contém informações sobre a mídia de backup em um dispositivo de backup especificado.<br /><br /> Para obter mais informações, consulte "Exibindo informações do cabeçalho de mídia" mais adiante neste tópico.|  
+|[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Retorna um conjunto de resultados que tem uma lista dos arquivos de log e de banco de dados contidos no backup especificado.<br /><br /> Para obter mais informações, consulte "Listando arquivos de log de transações e de banco de dados", mais adiante neste tópico.|  
+|[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Recupera todas as informações do cabeçalho de backup de todos os conjuntos de backup em um dispositivo de backup particular. O resultado de executar RESTORE HEADERONLY é um conjunto de resultados.<br /><br /> Para obter mais informações, consulte "Exibindo informações do cabeçalho de backup" mais adiante neste tópico.|  
+|[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|Retorna um conjunto de resultados que contém informações sobre a mídia de backup em um dispositivo de backup especificado.<br /><br /> Para obter mais informações, consulte "Exibindo informações do cabeçalho de mídia" mais adiante neste tópico.|  
   
 ##  <a name="ListDbTlogFiles"></a> Arquivos de log de transações e de banco de dados  
  Informações que são exibidas quando os arquivos de log de transações e de banco de dados são listados em um backup incluem o nome lógico, nome físico, tipo de arquivo (banco de dados ou log), associação de grupo de arquivos, tamanho de arquivo (em bytes), tamanho máximo de arquivo permitido e o tamanho de crescimento de arquivo predefinido (em bytes). Essas informações são úteis nas seguintes situações, para determinar os nomes dos arquivos em um backup de banco de dados antes de restaurar o backup de banco de dados:  
@@ -112,17 +116,17 @@ caps.handback.revision: 54
  Para obter mais informações, veja [Comparação de informações do cabeçalho de mídia e do cabeçalho de backup](#CompareMediaHeaderBackupHeader), mais adiante neste tópico.  
   
 ##  <a name="BackupHeader"></a> Informações de cabeçalho de backup  
- A exibição do cabeçalho de backup exibe informações sobre todos os conjuntos de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na mídia. As informações exibidas incluem os tipos de dispositivos de backup usados, os tipos de backup (por exemplo, banco de dados, transação, arquivo ou banco de dados diferencial) e informações de data/hora de início e término do backup. Essas informações são úteis quando é necessário determinar qual conjunto de backup deve ser restaurado na fita, ou os backups contidos na mídia.  
+ A exibição do cabeçalho de backup exibe informações sobre todos os conjuntos de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na mídia. As informações exibidas incluem os tipos de dispositivos de backup usados, os tipos de backup (por exemplo, banco de dados, transação, arquivo ou banco de dados diferencial) e informações de data/hora de início e término do backup. Essas informações são úteis quando é necessário determinar qual conjunto de backup deve ser restaurado na fita, ou os backups contidos na mídia.  
   
 > [!NOTE]  
 >  A exibição de informações do cabeçalho de backup pode demorar muito tempo para fitas de alta capacidade, porque a mídia toda deve ser percorrida para exibir informações sobre cada backup na mídia.  
   
  Para obter mais informações, veja [Comparação de informações do cabeçalho de mídia e do cabeçalho de backup](#CompareMediaHeaderBackupHeader), mais adiante neste tópico.  
   
-### Conjunto de backup a ser restaurado  
+### <a name="which-backup-set-to-restore"></a>Conjunto de backup a ser restaurado  
  Você pode usar informações do cabeçalho de backup para identificar qual conjunto de backup deve ser restaurado. O Mecanismo de Banco de Dados numera cada conjunto de backup na mídia de backup. Isso permite a identificação do conjunto de backup que você deve restaurar usando sua posição na mídia. Por exemplo, a mídia a seguir contêm três conjuntos de backup.  
   
- ![Mídia de backup que contém conjuntos de backup do SQL Server](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "Mídia de backup que contém conjuntos de backup do SQL Server")  
+ ![Mídia de backup contendo conjuntos de backup do SQL Server](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "Mídia de backup contendo conjuntos de backup do SQL Server")  
   
  Para restaurar um conjunto de backup específico, determine o número da posição do conjunto de backup a ser restaurado. Por exemplo, para restaurar o segundo conjunto de backup, especifique 2 como o conjunto de backup a ser restaurado.  
   
@@ -152,13 +156,13 @@ caps.handback.revision: 54
   
  **Para exibir os dados e arquivos de log em um conjunto de backup**  
   
--   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+-   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A> (SMO)  
   
  **Para exibir informações do cabeçalho de mídia**  
   
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
 -   [Exibir as propriedades e o conteúdo de um dispositivo de backup lógico &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -168,7 +172,7 @@ caps.handback.revision: 54
   
  **Para exibir informações do cabeçalho de backup**  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
 -   [Exibir o conteúdo de um arquivo ou fita de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -186,7 +190,7 @@ caps.handback.revision: 54
   
  **Para exibir informações do cabeçalho de mídia**  
   
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
 -   [Exibir as propriedades e o conteúdo de um dispositivo de backup lógico &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -196,7 +200,7 @@ caps.handback.revision: 54
   
  **Para exibir informações do cabeçalho de backup**  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
 -   [Exibir o conteúdo de um arquivo ou fita de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -208,15 +212,15 @@ caps.handback.revision: 54
   
 -   [Exibir os dados e arquivos de log em um conjunto de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
  **Para verificar um backup**  
   
--   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+-   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

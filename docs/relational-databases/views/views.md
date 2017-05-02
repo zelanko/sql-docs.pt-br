@@ -1,31 +1,35 @@
 ---
-title: "Exibi&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exibições [SQL Server], sobre as exibições"
+title: "Exibições | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], about views
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca3c02162484ebf4f12a8b98b1cad2b1aea89c22
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exibi&#231;&#245;es
+# <a name="views"></a>Exibições
   Uma exibição é uma tabela virtual cujos conteúdos são definidos por uma consulta. Como uma tabela, uma exibição consiste em um conjunto de colunas nomeadas e linhas de dados. Exceto se indexada, uma exibição não existe como um conjunto armazenado de valores de dados em um banco de dados. As linhas e colunas dos dados vêm de tabelas referidas em consultas que definem a exibição e são produzidas, dinamicamente, quando a exibição é referenciada.  
   
  Uma exibição atua como um filtro nas tabelas subjacentes na exibição. A consulta que define a exibição pode ser de uma ou mais tabelas ou de outras exibições dos bancos de dados atuais ou outros. As consultas distribuídas podem também ser usadas para definir as exibições que usam os dados de diversas fontes heterogêneas. Isso é útil, por exemplo, se você deseja combinar dados estruturados de forma semelhante de diferentes servidores, cada um dos quais armazena dados para uma região diferente de sua organização.  
   
  As exibições são geralmente usadas para focalizar, simplificar e personalizar a percepção que cada usuário tem do banco de dados. As exibições podem ser usadas como mecanismos de segurança para permitir que usuários acessem dados por meio da exibição, sem conceder-lhes permissões para acessarem diretamente as tabelas base subjacentes da exibição. As exibições podem ser usadas para fornecer uma interface compatível com versões anteriores para emular uma tabela que costumava existir, mas cujo esquema foi alterado. As exibições também podem ser usadas quando você copia dados para e de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para melhorar o desempenho e particionar dados.  
   
-## Tipos de exibições  
+## <a name="types-of-views"></a>Tipos de exibições  
  Além da função padrão de exibições básicas definidas pelo usuário, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece os seguintes tipos de exibições que servem para propósitos especiais em um banco de dados:  
   
  Exibições indexadas  
@@ -35,9 +39,9 @@ caps.handback.revision: 21
  Uma exibição particionada associa dados particionados horizontalmente de um conjunto de tabelas membro em um ou mais servidores. Isso faz com que os dados pareçam ser provenientes de uma tabela. Uma exibição que associa tabelas membro na mesma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é uma exibição particionada local.  
   
  Exibições do sistema  
- Exibições do sistema expõem metadados de catálogo. Você pode usar exibições do sistema para retornar informações sobre a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou os objetos definidos na instância. Por exemplo, você pode consultar a exibição de catálogo de sys.databases para retornar informações sobre os bancos de dados definidos pelo usuário disponível na instância. Para obter mais informações, veja [Exibições do sistema &#40;Transact-SQL&#41;](../Topic/System%20Views%20\(Transact-SQL\).md)  
+ Exibições do sistema expõem metadados de catálogo. Você pode usar exibições do sistema para retornar informações sobre a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou os objetos definidos na instância. Por exemplo, você pode consultar a exibição de catálogo de sys.databases para retornar informações sobre os bancos de dados definidos pelo usuário disponível na instância. Para obter mais informações, veja [Exibições do sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
-## Tarefas de exibição comuns  
+## <a name="common-view-tasks"></a>Tarefas de exibição comuns  
  A tabela a seguir fornece links a tarefas comuns associadas à criação ou modificação de uma exibição.  
   
 |Tarefas de exibição|Tópico|  
@@ -50,7 +54,7 @@ caps.handback.revision: 21
 |Descreve como retornar informações sobre uma exibição como a definição de exibição.|[Obter informações sobre uma exibição](../../relational-databases/views/get-information-about-a-view.md)|  
 |Descreve como renomear uma exibição.|[Renomear exibições](../../relational-databases/views/rename-views.md)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criar exibições sobre colunas XML](../../relational-databases/xml/create-views-over-xml-columns.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)  
   

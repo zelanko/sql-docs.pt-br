@@ -1,25 +1,29 @@
 ---
-title: "Renomear estat&#237;sticas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "renomeando estatísticas"
-  - "estatísticas [SQL Server], renomeando"
+title: "Renomear estatísticas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- renaming statistics
+- statistics [SQL Server], renaming
 ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00d72d7a3fc3d152cd5b05056812ba93041be67d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Renomear estat&#237;sticas
+# <a name="rename-statistics"></a>Renomear estatísticas
   Você pode renomear um objeto de estatísticas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **Neste tópico**  
@@ -48,7 +52,7 @@ caps.handback.revision: 11
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para renomear um objeto de estatísticas  
+#### <a name="to-rename-a-statistics-object"></a>Para renomear um objeto de estatísticas  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

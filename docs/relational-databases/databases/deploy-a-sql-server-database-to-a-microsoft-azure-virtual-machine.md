@@ -1,45 +1,49 @@
 ---
-title: "Implantar um banco de dados do SQL Server em uma m&#225;quina virtual do Microsoft Azure  | Microsoft Docs"
-ms.date: "07/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.deploymentwizard.deploymentsettings.f1"
-  - "sql13.swb.deploymentwizard.sourcesettings.f1"
-  - "sql13.swb.deploymentwizard.summary.f1"
-  - "sql13.swb.agdashboard.agp9virtualnw.issues.f1"
-  - "sql13.swb.deploymentwizard.f1"
-  - "sql13.swb.deploymentwizard.progress.f1"
-  - "sql13.swb.usevmdialog.f1"
-  - "sql13.swb.newvmdialog.f1"
-  - "sql13.swb.sqlvmdialog.f1"
-  - "sql13.swb.deploymentwizard.results.f1"
-  - "sql13.swb.deploymentwizard.azuresignin.f1"
-helpviewer_keywords: 
-  - "Implantar um banco de dados"
-  - "Implantar na VM do Azure"
-  - "Migrar para Azure"
-  - "Máquina virtual do Windows Azure"
-  - "Migrar para VM do Azure"
-  - "Migrar para a nuvem"
-  - "SQL Server Management Studio"
-  - "SSMS"
-  - "Implantar assistente de banco de dados"
-  - "Implantar um banco de dados do SQL Server no Azure"
-  - "VM do Azure"
+title: "Implantar um banco de dados do SQL Server em uma máquina virtual do Microsoft Azure | Microsoft Docs"
+ms.date: 07/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.deploymentwizard.deploymentsettings.f1
+- sql13.swb.deploymentwizard.sourcesettings.f1
+- sql13.swb.deploymentwizard.summary.f1
+- sql13.swb.agdashboard.agp9virtualnw.issues.f1
+- sql13.swb.deploymentwizard.f1
+- sql13.swb.deploymentwizard.progress.f1
+- sql13.swb.usevmdialog.f1
+- sql13.swb.newvmdialog.f1
+- sql13.swb.sqlvmdialog.f1
+- sql13.swb.deploymentwizard.results.f1
+- sql13.swb.deploymentwizard.azuresignin.f1
+helpviewer_keywords:
+- Deploy a database
+- Deploy to Azure VM
+- Migrate to Azure
+- Windows Azure virtual machine
+- Migrate to Azure VM
+- Migrate to the cloud
+- SQL Server Management Studio
+- SSMS
+- Deploy database wizard
+- Deploy a SQL Server database to Azure
+- Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aca87c0050dd501c73bb4da8953a93bf40c0c8e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Implantar um banco de dados do SQL Server em uma m&#225;quina virtual do Microsoft Azure 
+# <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Implantar um banco de dados do SQL Server em uma máquina virtual do Microsoft Azure
   Use o assistente para **Implantar um Banco de Dados em uma VM do Microsoft Azure** para implantar um banco de dados de uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma VM (Máquina Virtual) do Microsoft Azure. O assistente usa uma operação completa de backup do banco de dados para copiar sempre o esquema completo do banco de dados e os dados de um banco de dados de usuário do SQL Server. O assistente também faz toda a configuração da VM do Azure para você, de modo que nenhuma configuração prévia de VM é necessária.  
   
  Você não pode usar o assistente para backups diferenciais. O assistente não substituirá um banco de dados existente com o mesmo nome do banco de dados. Para substituir um banco de dados existente na VM, você deverá primeiro remover o banco de dados existente ou alterar o nome dele. Se houver um conflito de nomeação entre o nome do banco de dados de uma operação de implantação em curso e um banco de dados existente na VM, o assistente sugerirá um nome de banco de dados anexado para que o banco de dados em curso permita que você conclua a operação.  
@@ -73,7 +77,7 @@ caps.handback.revision: 30
     > [!CAUTION]  
     >  No momento, o SQL Server oferece suporte à versão do perfil de publicação 2.0. Para baixar a versão com suporte do perfil de publicação, consulte [Download do perfil de publicação 2.0](http://go.microsoft.com/fwlink/?LinkId=396421).  
   
--   O certificado de gerenciamento carregado na assinatura do Microsoft Azure.  Crie o certificado de gerenciamento com o cmdlet [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633(v=wps.630)) do PowerShell.  Em seguida, carregue o certificado de gerenciamento em sua assinatura do Microsoft Azure.  Para obter mais informações sobre como carregar um certificado de gerenciamento, consulte [Carregar um certificado de gerenciamento da API de Gerenciamento do Azure](https://azure.microsoft.com/en-us/documentation/articles/azure-api-management-certs/).  Sintaxe de exemplo para criar um certificado de gerenciamento em [Visão geral dos certificados nos Serviços de Nuvem do Azure](https://azure.microsoft.com/en-us/documentation/articles/cloud-services-certs-create/): 
+-   O certificado de gerenciamento carregado na assinatura do Microsoft Azure.  Crie o certificado de gerenciamento com o cmdlet [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633(v=wps.630))do PowerShell.  Em seguida, carregue o certificado de gerenciamento em sua assinatura do Microsoft Azure.  Para obter mais informações sobre como carregar um certificado de gerenciamento, consulte [Carregar um certificado de gerenciamento da API de Gerenciamento do Azure](https://azure.microsoft.com/en-us/documentation/articles/azure-api-management-certs/).  Sintaxe de exemplo para criar um certificado de gerenciamento em [Visão geral dos certificados nos Serviços de Nuvem do Azure](https://azure.microsoft.com/en-us/documentation/articles/cloud-services-certs-create/): 
 
     ```powershell  
     $cert = New-SelfSignedCertificate -DnsName yourdomain.cloudapp.net -CertStoreLocation "cert:\LocalMachine\My"
@@ -90,9 +94,9 @@ caps.handback.revision: 30
   
 -   Se você estiver implantando o banco de dados em uma VM existente, a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser configurada para escutar em uma porta TCP/IP.  
   
--   Uma imagem da Galeria ou da VM do Microsoft Azure que você planeja usar para criação da VM deve ter o [Adaptador de Nuvem do SQL Server](Cloud%20Adapter%20for%20SQL%20Server.md) configurado e em execução.  
+-   Uma imagem da Galeria ou da VM do Microsoft Azure que você planeja usar para criação da VM deve ter o [Adaptador de Nuvem do SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) configurado e em execução.  
   
--   É necessário configurar um ponto de extremidade aberto para o [Adaptador de Nuvem do SQL Server](Cloud%20Adapter%20for%20SQL%20Server.md) no gateway do Microsoft Azure com a porta privada 11435.  
+-   É necessário configurar um ponto de extremidade aberto para o [Adaptador de Nuvem do SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) no gateway do Microsoft Azure com a porta privada 11435.  
   
  Além disso, se planeja implantar o banco de dados em uma VM existente do Windows Azure, você também deve ser capaz de fornecer:  
   
@@ -202,7 +206,7 @@ Esse recurso de implantação é para uso somente com uma Conta de Armazenamento
   
 2.  No **Pesquisador de Objetos**, expanda o nome da instância e o nó **Bancos de Dados** .  
   
-3.  Clique com o botão direito do mouse no banco de dados que você deseja implantar, selecione **Tarefas** e **Implantar Banco de Dados em uma VM do Microsoft Azure...**  
+3.  Clique com o botão direito do mouse no banco de dados que você deseja implantar, selecione **Tarefas**e **Implantar Banco de Dados em uma VM do Microsoft Azure...**  
   
 ##  <a name="wizard_pages"></a> Páginas do Assistente  
  As seções a seguir fornecem informações adicionais sobre definições de implantação e detalhes de configuração para essa operação.  
@@ -220,13 +224,13 @@ Esse recurso de implantação é para uso somente com uma Conta de Armazenamento
 -   [Resultados](#Results)  
   
 ##  <a name="Introduction"></a> Introdução 
- Essa página descreve o assistente para **Implantar Banco de Dados em uma VM do Microsoft Azure**.  
+ Essa página descreve o assistente para **Implantar Banco de Dados em uma VM do Microsoft Azure** .  
   
 -   **Não mostrar esta página novamente.**  
   Clique nesta caixa de seleção para não exibir mais a página Introdução no futuro.  
   
 -   **Próximo**  
-Segue para a página **Configurações de Fonte**.  
+Segue para a página **Configurações de Fonte** .  
   
 -   **Cancelar**  
   Cancela a operação e fecha o assistente.  
@@ -247,7 +251,7 @@ Use a lista suspensa para especificar o banco de dados a ser implantado.
 No campo, especifique uma pasta compartilhada que poderá ser acessada pelo serviço VM do Microsoft Azure.  
   
 ##  <a name="Azure_sign-in"></a> Entrar no Microsoft Azure  
- Entre no Microsoft Azure com sua conta da Microsoft ou conta organizacional. Sua conta da Microsoft ou organizacional está no formato do endereço de email, como patc@contoso.com. Para obter mais informações sobre as credenciais do Azure, consulte [Perguntas Frequentes sobre a Conta Institucional Microsoft](http://technet.microsoft.com/jj592903) e [Solucionando problemas](https://technet.microsoft.com/dn197220).  
+ Entre no Microsoft Azure com sua conta da Microsoft ou conta organizacional. Sua conta da Microsoft ou organizacional está no formato de endereço de email, como patc@contoso.com. Para obter mais informações sobre as credenciais do Azure, consulte [Perguntas Frequentes sobre a Conta Institucional Microsoft](http://technet.microsoft.com/jj592903) e [Solucionando problemas](https://technet.microsoft.com/dn197220).  
   
 ##  <a name="Deployment_settings"></a> Configurações de Implantação
  Use esta página para especificar o servidor de destino e fornecer detalhes sobre seu novo banco de dados.  
@@ -274,7 +278,7 @@ Detalhes de conexão do servidor.
 Especifique ou confirme o nome de um novo banco de dados. Se o nome do banco de dados já existir na instância do SQL Server de destino, sugerimos especificar um nome de banco de dados modificado.  
   
 ##  <a name="Summary"></a> Resumo
- Use essa página para analisar as configurações especificadas da operação. Para concluir a operação de implantação usando as configurações especificadas, clique em **Concluir**. Para cancelar a operação de implantação e sair do assistente, clique em **Cancelar**.  Se você clicar em **Concluir**, a página **Progresso da Implantação** será aberta.  Você também pode exibir o progresso no arquivo de log localizado em `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"`.
+ Use essa página para analisar as configurações especificadas da operação. Para concluir a operação de implantação usando as configurações especificadas, clique em **Concluir**. Para cancelar a operação de implantação e sair do assistente, clique em **Cancelar**.  Se você clicar em **Concluir** , a página **Progresso da Implantação** será aberta.  Você também pode exibir o progresso no arquivo de log localizado em `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"`.
   
  Talvez haja a necessidade de etapas manuais para implantar detalhes do banco de dados no banco de dados do SQL Server na VM do Windows Azure. Essas etapas serão descritas em detalhes para você.  
   
@@ -283,8 +287,8 @@ Especifique ou confirme o nome de um novo banco de dados. Se o nome do banco de 
   
  Clique em **Concluir** para fechar o assistente.  
   
-## Consulte também  
- [Adaptador de nuvem para SQL Server](../Topic/Cloud%20Adapter%20for%20SQL%20Server.md)   
+## <a name="see-also"></a>Consulte também  
+ [Adaptador de Nuvem do SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877)   
  [Gerenciamento de ciclo de vida do banco de dados](../../relational-databases/database-lifecycle-management.md)   
  [Exportar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Importar um arquivo BACPAC para criar um novo banco de dados de usuário](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
@@ -293,3 +297,4 @@ Especifique ou confirme o nome de um novo banco de dados. Se o nome do banco de 
  [Preparando-se para migrar para o SQL Server em Máquinas Virtuais do Microsoft Azure](http://msdn.microsoft.com/library/dn133142.aspx)  
   
   
+

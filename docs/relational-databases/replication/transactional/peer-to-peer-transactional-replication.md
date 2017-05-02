@@ -1,31 +1,35 @@
 ---
-title: "Replica&#231;&#227;o transacional ponto a ponto | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "replicação bidirecional"
-  - "replicação transacional, replicação bidirecional"
-  - "replicação transacional bidirecional"
-  - "replicação transacional, replicação ponto a ponto."
-  - "replicação transacional ponto a ponto"
+title: "Replicação transacional ponto a ponto | Microsoft Docs"
+ms.custom: 
+ms.date: 08/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bidirectional replication
+- transactional replication, bidirectional replication
+- bidirectional transactional replication
+- transactional replication, peer-to-peer replication
+- peer-to-peer transactional replication
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 caps.latest.revision: 71
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 71
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73cba38d92983eb7e6650201a76c067e7f6de58f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Replica&#231;&#227;o transacional ponto a ponto
+# <a name="peer-to-peer---transactional-replication"></a>Ponto a ponto – Replicação transacional
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Replicação ponto a ponto fornece uma solução de expansão e alta disponibilidade, mantendo cópias de dados em várias instâncias de servidor, também conhecidas como *nós*. Criada na base da replicação transacional, a replicação ponto a ponto se propaga de forma transacional, de acordo com as alterações em tempo real. Ativa aplicativos que requerem operações expandidas de leitura para distribuir as leituras de clientes em vários nós. Como os dados são mantidos em todos os nós em tempo quase real, a replicação ponto a ponto fornece redundância de dados, o que amplia a disponibilidade de dados.  
+  A replicação ponto a ponto fornece uma a solução, expandida e de alta disponibilidade, para manter cópias de dados em várias instâncias de servidor, também denominadas *nós*. Criada na base da replicação transacional, a replicação ponto a ponto se propaga de forma transacional, de acordo com as alterações em tempo real. Ativa aplicativos que requerem operações expandidas de leitura para distribuir as leituras de clientes em vários nós. Como os dados são mantidos em todos os nós em tempo quase real, a replicação ponto a ponto fornece redundância de dados, o que amplia a disponibilidade de dados.  
   
  Considere um aplicativo da Web. Ele pode se beneficiar da replicação ponto a ponto dos seguintes modos:  
   
@@ -41,15 +45,15 @@ caps.handback.revision: 71
   
 -   Há sempre alguma latência envolvida quando as alterações são replicadas. Com relação aos aplicativos que requerem que a última alteração seja vista de imediato, equilibrar a carga do aplicativo de maneira dinâmica pelos vários nós poderá se transformar em um problema.  
   
- A replicação ponto a ponto inclui a opção de ativar a detecção de conflito por uma topologia ponto a ponto. Essa opção ajuda a evitar os problemas causados por conflitos não detectados, inclusive o comportamento inconsistente do aplicativo e as atualizações perdidas. Ao ativar essa opção, por padrão uma alteração de conflito é tratada como erro crítico que causa a falha do Distribution Agent. No evento de um conflito, a topologia é mantida em um estado inconsistente até que o conflito seja resolvido manualmente e os dados sejam tornados consistentes em toda a topologia. Para obter mais informações, consulte [detecção de conflitos em replicação ponto a ponto](../../../relational-databases/replication/transactional/conflict-detection-in-peer-to-peer-replication.md).  
+ A replicação ponto a ponto inclui a opção de ativar a detecção de conflito por uma topologia ponto a ponto. Essa opção ajuda a evitar os problemas causados por conflitos não detectados, inclusive o comportamento inconsistente do aplicativo e as atualizações perdidas. Ao ativar essa opção, por padrão uma alteração de conflito é tratada como erro crítico que causa a falha do Distribution Agent. No evento de um conflito, a topologia é mantida em um estado inconsistente até que o conflito seja resolvido manualmente e os dados sejam tornados consistentes em toda a topologia. Para obter mais informações, consulte [Conflict Detection in Peer-to-Peer Replication](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
 > [!NOTE]  
->  Para evitar inconsistência potencial de dados, certifique-se de evitar conflitos em uma topologia ponto a ponto, mesmo com a detecção de conflitos ativada. Para assegurar que as operações de gravação de uma linha particular sejam realizadas em um único nó, os aplicativos que acessam e alteram dados devem realizar operações de partição, inserção, atualização e exclusão. Esse particionamento assegurará que as modificações de uma determinada linha originária de um nó sejam sincronizadas com todos os outros nós da topologia antes que a linha seja modificada por um outro nó. Se um aplicativo requerer detecção de conflito e recursos de resolução sofisticados, use a replicação de mesclagem. Para obter mais informações, consulte [replicação de mesclagem](../../../relational-databases/replication/merge/merge-replication.md) e [detectar e resolver conflitos de replicação de mesclagem](../../../relational-databases/replication/merge/detect-and-resolve-merge-replication-conflicts.md).  
+>  Para evitar inconsistência potencial de dados, certifique-se de evitar conflitos em uma topologia ponto a ponto, mesmo com a detecção de conflitos ativada. Para assegurar que as operações de gravação de uma linha particular sejam realizadas em um único nó, os aplicativos que acessam e alteram dados devem realizar operações de partição, inserção, atualização e exclusão. Esse particionamento assegurará que as modificações de uma determinada linha originária de um nó sejam sincronizadas com todos os outros nós da topologia antes que a linha seja modificada por um outro nó. Se um aplicativo requerer detecção de conflito e recursos de resolução sofisticados, use a replicação de mesclagem. Para obter mais informações, consulte [Mesclar a replicação](../../../relational-databases/replication/merge/merge-replication.md) e [Detectar e resolver conflitos na replicação de mesclagem](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
   
-## Topologias ponto a ponto  
+## <a name="peer-to-peer-topologies"></a>Topologias ponto a ponto  
  Os cenários a seguir ilustram usos típicos para replicação ponto a ponto.  
   
-### Topologia com participação de dois bancos de dados  
+### <a name="topology-that-has-two-participating-databases"></a>Topologia com participação de dois bancos de dados  
  ![Replicação ponto a ponto, dois nós](../../../relational-databases/replication/transactional/media/repl-multinode-01.gif "Replicação ponto a ponto, dois nós")  
   
  Ambas as ilustrações precedentes mostram dois bancos de dados participantes, com tráfego de usuário direcionado para os bancos de dados por meio do servidor de aplicativos. Essa configuração pode ser usada para uma série de aplicativos, de sites a aplicativos de grupos de trabalho, e oferece as seguintes vantagens:  
@@ -62,11 +66,11 @@ caps.handback.revision: 71
   
 -   À esquerda, as atualizações são particionadas entre os dois servidores. Se o banco de dados contiver um catálogo de produtos, você poderá, por exemplo, fazer com que um aplicativo personalizado atualize diretamente no nó **A** com relação aos nomes de produto começando de A a M, e que ele atualize diretamente no nó **B** com relação aos nomes de produtos começando de N a Z. As atualizações, em seguida, são replicadas no outro nó.  
   
--   À direita, todas as atualizações são direcionadas ao nó **B**. A partir daí, as atualizações são replicadas para o nó **A**. Se **B** estiver offline (por exemplo, para manutenção), o servidor de aplicativos pode direcionar todas as atividades para **um**. Quando **B** está on-line novamente, as atualizações poderão fluir para ele e o servidor de aplicativos pode mover todas as atualizações de volta para **B** ou continuar a direcioná-los para **um**.  
+-   À direita, todas as atualizações são direcionadas para o nó **B**. A partir daí, as atualizações são replicadas para o nó **A**. Se **B** estiver offline (por exemplo, para manutenção), o servidor de aplicativos poderá direcionar todas as atividades para **A**. Quando **B** ficar online outra vez, as atualizações poderão fluir para ele e o servidor de aplicativos poderá mover todas as atualizações novamente para **B** ou continuar direcionando-as para **A**.  
   
  A replicação ponto a ponto pode oferecer suporte a ambas as abordagens, mas o exemplo de atualização central à direita é também usado com frequência na replicação transacional padrão.  
   
-### Topologias com três ou mais bancos de dados participantes  
+### <a name="topologies-that-have-three-or-more-participating-databases"></a>Topologias com três ou mais bancos de dados participantes  
  ![Replicação ponto a ponto para locais dispersos](../../../relational-databases/replication/transactional/media/repl-multinode-02.gif "Replicação ponto a ponto para locais dispersos")  
   
  A ilustração anterior mostra três bancos de dados participantes que fornecem dados para uma organização de suporte a software mundial, e com escritórios em Los Angeles, Londres e Taipei. Os engenheiros de suporte de cada escritório recebem chamadas telefônicas e atualizam informações sobre cada uma das chamadas de cliente. Os fusos horários dos três escritórios têm oito horas de diferença entre si, de modo a não haver sobreposições no dia de trabalho. O escritório de Taipei fecha, quando o escritório de Londres está apenas começando o expediente. Se uma chamada ainda está em andamento quando um escritório estiver fechando, a chamada será transferida para um representante no primeiro escritório que abrir.  
@@ -87,21 +91,21 @@ caps.handback.revision: 71
   
  Observe que nas topologias de três ou quatro nós, todos os bancos de dados publicam e assinam todos os outros bancos de dados. Isso oferece um máximo de disponibilidade no caso de necessidades de manutenção ou falha de um ou mais nós. À medida que os nós são adicionados, é preciso equilibrar as necessidades de disponibilidade e escalabilidade, segundo o desempenho e a complexidade da implantação e do gerenciamento.  
   
-## Configurando a replicação ponto a ponto  
+## <a name="configuring-peer-to-peer-replication"></a>Configurando a replicação ponto a ponto  
  Configurar uma topologia de replicação ponto a ponto é bem semelhante a configurar uma série de publicações transacionais e assinaturas padrão. As etapas descritas nos tópicos a seguir mostram a configuração de um sistema de três nós, semelhante à configuração mostrada à esquerda da ilustração anterior, que apresenta a topologia ponto a ponto.  
   
-## Considerações sobre o uso da replicação ponto a ponto  
+## <a name="considerations-for-using-peer-to-peer-replication"></a>Considerações sobre o uso da replicação ponto a ponto  
  Esta seção fornece informações e diretrizes para avaliar o momento a usar a replicação ponto a ponto.  
   
-### Considerações gerais  
+### <a name="general-considerations"></a>Considerações gerais  
   
--   A replicação ponto a ponto está disponível somente em versões Enterprise do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   A replicação ponto a ponto estará disponível apenas em versões Enterprise do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Todos os bancos de dados que participam da replicação ponto a ponto devem conter esquema e dados idênticos:  
   
     -   Os nomes de objeto, de esquema de objeto e de publicação devem ser idênticos.  
   
-    -   As publicações precisam permitir a replicação de alterações de esquema. (Essa é uma configuração de **1** para a propriedade de publicação **replicate_ddl**, que é a configuração padrão.) Para obter mais informações, consulte [fazer alterações de esquema em bancos de dados de publicação](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+    -   As publicações precisam permitir a replicação de alterações de esquema. (Essa é uma configuração de **1** da propriedade da publicação **replicate_ddl**, que é a configuração padrão.) Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
   
     -   Não há suporte para filtragens de linha e de coluna.  
   
@@ -111,11 +115,11 @@ caps.handback.revision: 71
   
 -   Uma publicação precisa ser ativada para replicação ponto a ponto antes que qualquer assinatura seja criada.  
   
--   As assinaturas devem ser inicializadas usando-se um backup ou com a opção **'suporte para replicação somente'** . Para obter mais informações, consulte [inicializar um transacional assinatura sem um instantâneo](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+-   As assinaturas devem ser inicializadas usando-se um backup ou com a opção **'suporte para replicação somente'** . Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
--   O uso de colunas de identidade não é recomendado. Ao usar identidades, será preciso gerenciar manualmente os intervalos atribuídos às tabelas em todos os bancos de dados participantes. Para obter mais informações, consulte a seção "Atribuindo intervalos para Manual gerenciamento intervalo de identidade" em [replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
+-   O uso de colunas de identidade não é recomendado. Ao usar identidades, será preciso gerenciar manualmente os intervalos atribuídos às tabelas em todos os bancos de dados participantes. Para obter mais informações, consulte a seção “Atribuindo intervalos para o gerenciamento manual de intervalos de identidade” em [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-### Restrições de recursos  
+### <a name="feature-restrictions"></a>Restrições de recursos  
  A replicação ponto a ponto oferece suporte aos principais recursos da replicação transacional, mas não às seguintes opções:  
   
 -   Inicialização e reinicialização com um instantâneo.  
@@ -124,7 +128,7 @@ caps.handback.revision: 71
   
 -   Colunas de carimbo de data/hora.  
   
--   Publicadores e Assinantes não [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Publicadores e Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Assinaturas de atualização imediata e de atualização em fila.  
   
@@ -136,34 +140,34 @@ caps.handback.revision: 71
   
 -   Distribution Agents compartilhados.  
   
--   O parâmetro do agente de distribuição **- SubscriptionStreams** e o parâmetro Log Reader Agent **- MaxCmdsInTran**.  
+-   O parâmetro Distribution Agent **-SubscriptionStreams** e o parâmetro Log Reader Agent **-MaxCmdsInTran**.  
   
--   As propriedades do artigo **@destination_owner** e **@destination_table**.
+-   As propriedades de artigo **@destination_owner** e **@destination_table**.
 
--   Replicação transacional ponto a ponto não oferece suporte à criação de uma assinatura transacional unidirecional em uma publicação ponto a ponto   
+-   A replicação transacional ponto a ponto não dá suporte à criação de uma assinatura transacional unidirecional em uma publicação ponto a ponto   
   
  As propriedades a seguir têm considerações especiais:  
   
 -   A propriedade de publicação **@allow_initialize_from_backup** requer um valor de **true**.  
   
--   A propriedade de artigo **@replicate_ddl** requer um valor de **true**; **@identityrangemanagementoption** requer um valor de **manual**; e **@status** requer que a opção **24** está definido.  
+-   A propriedade de artigo **@replicate_ddl** requer um valor de **true**; **@identityrangemanagementoption** requer um valor de **manual**; e **@status** requer que a opção **24** esteja definida.  
   
--   O valor de propriedades do artigo **@ins_cmd**, **@del_cmd**, e **@upd_cmd** não pode ser definida como **SQL**.  
+-   O valor para as propriedades de artigo **@ins_cmd**, **@del_cmd**e **@upd_cmd** não podem ser definidas como **SQL**.  
   
--   A propriedade de assinatura **@sync_type** requer um valor de **nenhum** ou **automáticas**.  
+-   A propriedade de assinatura **@sync_type** requer um valor de **none** ou **automatic**.  
   
-### Considerações sobre manutenção  
+### <a name="maintenance-considerations"></a>Considerações sobre manutenção  
  Algumas ações exigem que o sistema esteja inativo. Isso significa parar as atividades em tabelas publicadas em todos os nós e assegurar que todos os nós tenham recebido todas as alterações de todos os outros nós.  
   
 ||Somente pares do SQL Server 2005 ou combinação de pares do SQL Server 2005 com o SQL Server 2008 e superior|Somente pares do SQL Server 2005 ou combinação de pares do SQL Server 2005 com o SQL Server 2008 e superior|Pares do SQL2008 e superior|Pares do SQL2008 e superior|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
 |Adicionando um nó à topologia|2 nós na topologia completa: sem pausas necessárias. Use `sync_type = 'initialize with backup'`.|Mais de 2 nós: pausas necessárias.|`sync_type = 'replication support only'`: pausas necessárias.|`sync_type = 'initialize with backup'` e `'initialize from lsn'`: sem pausas necessárias.|  
   
- As alterações do esquema de topologia (adicionar ou remover um artigo) precisam ser desativadas. Para obter mais informações, consulte [administrar uma topologia ponto a ponto e 40; Programação Transact-SQL de replicação e 41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
+ As alterações do esquema de topologia (adicionar ou remover um artigo) precisam ser desativadas. Para obter mais informações, consulte [Administrar uma topologia ponto a ponto &#40;programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
   
  A remoção de um nó da topologia nunca requer desativação.  
   
- Alterar as propriedades do artigo usando  [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) Nunca exigir a desativação. Alterações permitidas (de P2P) são o `description`, `ins_cmd`, `upd_cmd`, e `del_cmd` Propriedades.  
+ A alteração das propriedades do artigo usando  [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) nunca requer desativação. As alterações permitidas (para P2P) são as propriedades `description`, `ins_cmd`, `upd_cmd`e `del_cmd` .  
   
  As alterações de Esquema de Artigo (adicionar/remover coluna) nunca requerem desativação.  
   
@@ -171,15 +175,16 @@ caps.handback.revision: 71
   
 -   Removendo um artigo: se quisermos um estado consistente em todos os nós, precisamos confirmar a topologia  
   
- Para obter mais informações, consulte [Confirmar uma topologia de replicação e 40; Programação Transact-SQL de replicação e 41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md) e [administrar uma topologia ponto a ponto e 40; Programação Transact-SQL de replicação e 41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
+ Para obter mais informações, consulte [Fechar uma topologia de replicação para novas sessões &#40;programação de Transact-SQL de replicação&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md) e [Administrar uma topologia ponto a ponto &#40;programação de Transact-SQL de replicação&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
   
--   Se você adicionar um novo nó em uma topologia ponto a ponto, você deve restaurar apenas dos backups criados após o novo nó foi adicionado.  
+-   Ao adicionar um novo nó a uma topologia ponto a ponto, você deve restaurar apenas dos backups que foram criados depois que o novo nó foi adicionado.  
   
 -   Você não pode reinicializar assinaturas em uma topologia ponto a ponto. Se for necessário garantir que um nó tenha uma nova cópia dos dados, restaure o backup no nó.  
   
-## Consulte também  
- [Administrar uma topologia ponto a ponto e 40; Programação Transact-SQL de replicação e 41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+## <a name="see-also"></a>Consulte também  
+ [Administrar uma topologia ponto a ponto &#40;programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
- [Tipos de publicação para Replicação Transacional](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)  
+ [Tipos de publicação para a Replicação Transacional](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)  
   
   
+

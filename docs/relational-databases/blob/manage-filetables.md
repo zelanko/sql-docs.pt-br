@@ -1,25 +1,29 @@
 ---
-title: "Gerenciar FileTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], segurança"
-  - "FileTables [SQL Server], gerenciando o acesso"
+title: Gerenciar FileTables | Microsoft Docs
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], security
+- FileTables [SQL Server], managing access
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ec52f5b4ebdb3fdd61fda320316186d220b6b53
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gerenciar FileTables
+# <a name="manage-filetables"></a>Gerenciar FileTables
   Descreve tarefas administrativas comuns para gerenciar FileTables.  
   
 ##  <a name="HowToEnumerate"></a> Como obter uma lista de FileTables e objetos relacionados  
@@ -79,7 +83,7 @@ GO
 -   Nenhum dos diretórios em nível de banco de dados na instância estará visível se FILESTREAM for desabilitado no nível de instância.  
   
 ###  <a name="HowToDisable"></a> Como desabilitar e reabilitar o acesso não transacional no nível de banco de dados  
- Para obter mais informações, veja [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+ Para obter mais informações, veja [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  **Para desabilitar o acesso não transacional**  
  Chame a instrução **ALTER DATABASE** e defina o valor de **NON_TRANSACTED_ACCESS** como **READ_ONLY** ou **OFF**.  
@@ -138,7 +142,7 @@ GO
 -   O diretório de FileTable, e seus arquivos e diretórios, ficam visíveis no sistema de arquivo e ficam disponíveis para o acesso de E/S de arquivo.  
   
 ###  <a name="HowToEnableNS"></a> Como desabilitar e reabilitar o namespace FileTable no nível de tabela  
- Chame a instrução ALTER TABLE com a opção **{ ENABLE | DISABLE } FILETABLE_NAMESPACE**.  
+ Chame a instrução ALTER TABLE com a opção **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** .  
   
  **Para desabilitar o namespace da FileTable**  
  ```tsql  
@@ -169,7 +173,7 @@ GO
 ```  
   
 ###  <a name="HowToKill"></a> Como eliminar identificadores de arquivos abertos associados a um FileTable  
- Chame o procedimento armazenado [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../Topic/sp_kill_filestream_non_transacted_handles%20\(Transact-SQL\).md) com os argumentos apropriados para eliminar todos os identificadores de arquivos abertos no banco de dados ou na FileTable, ou para eliminar um identificador específico.  
+ Chame o procedimento armazenado [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) com os argumentos apropriados para eliminar todos os identificadores de arquivos abertos no banco de dados ou na FileTable, ou para eliminar um identificador específico.  
   
 ```  
 USE database_name;  
@@ -202,7 +206,7 @@ GO
 ```  
   
 ##  <a name="BasicsSecurity"></a> Segurança de FileTable  
- Os arquivos e diretórios armazenados em FileTables só ficam protegidos pela segurança do SQL Server. A segurança com base em tabela e coluna é imposta para acesso de sistema de arquivos, assim como o acesso [!INCLUDE[tsql](../../includes/tsql-md.md)]. Não há suporte para configurações de ACL e APIs de segurança do sistema de arquivos Windows.  
+ Os arquivos e diretórios armazenados em FileTables só ficam protegidos pela segurança do SQL Server. A segurança com base em tabela e coluna é imposta para acesso de sistema de arquivos, assim como o acesso [!INCLUDE[tsql](../../includes/tsql-md.md)] . Não há suporte para configurações de ACL e APIs de segurança do sistema de arquivos Windows.  
   
  As permissões de segurança e acesso aplicáveis a grupos de arquivos e contêineres FILESTREAM também se aplicam a FileTables, desde que os dados de arquivos estejam armazenados como uma coluna FILESTREAM no FileTable.  
   
@@ -230,8 +234,9 @@ GO
 ##  <a name="OtherDBCC"></a> DBCC e FileTables  
  Você pode usar DBCC CHECKCONSTRAINTS para validar as restrições em uma FileTable, inclusive restrições definidas pelo sistema.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Compatibilidade do FileTable com outros recursos do SQL Server](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)   
  [DDL, funções, procedimentos armazenados e exibições de FileTable](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
+

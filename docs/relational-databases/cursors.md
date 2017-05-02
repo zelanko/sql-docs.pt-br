@@ -1,30 +1,34 @@
 ---
-title: "Cursores | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "resultados [SQL Server], cursores"
-  - "cursores Transact-SQL, sobre os cursores"
-  - "cursores [SQL Server]"
-  - "acesso a dados [SQL Server], cursores"
-  - "conjuntos de resultados [SQL Server], cursores"
-  - "solicitando cursores"
-  - "cursores [SQL Server], sobre os cursores"
+title: Cursores | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- results [SQL Server], cursors
+- Transact-SQL cursors, about cursors
+- cursors [SQL Server]
+- data access [SQL Server], cursors
+- result sets [SQL Server], cursors
+- requesting cursors
+- cursors [SQL Server], about cursors
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 305a84696e0677ef3058b89e83ba73e96188607a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cursores
+# <a name="cursors"></a>Cursores
   As operações em um ato de banco de dados relacional em um conjunto completo de linhas. Por exemplo, o conjunto de linhas retornado por uma instrução SELECT consiste de todas as linhas que satisfazem as condições na cláusula WHERE da instrução. Este conjunto completo de linhas retornado pela instrução é conhecido como conjunto de resultados. Aplicativos, especialmente aplicativos online interativos, não podem sempre trabalhar efetivamente com todo o conjunto de resultados como uma unidade. Esses aplicativos precisam de um mecanismo para trabalhar com uma linha ou um bloco pequeno de linhas de cada vez. Os cursores são uma extensão dos conjuntos de resultados que proveem esse mecanismo.  
   
  Os cursores estendem o resultado de processamento por:  
@@ -39,12 +43,12 @@ caps.handback.revision: 29
   
 -   Fornecerem instruções [!INCLUDE[tsql](../includes/tsql-md.md)] em scripts, procedimentos armazenados, e acionarem o acesso de gatilho aos dados em um conjunto de resultados.  
   
-## Conceitos  
+## <a name="concepts"></a>Conceitos  
  Implementações de cursor  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a três implementações de cursor.  
   
  cursores Transact-SQL  
- Baseiam-se na sintaxe DECLARE CURSOR e são usados principalmente nos scripts [!INCLUDE[tsql](../includes/tsql-md.md)], procedimentos armazenados e disparadores. [!INCLUDE[tsql](../includes/tsql-md.md)] os cursores são implementados no servidor e gerenciados pelas instruções [!INCLUDE[tsql](../includes/tsql-md.md)] enviadas do cliente ao servidor. Eles também podem ser contidos em lotes, procedimentos armazenados ou gatilhos.  
+ Baseiam-se na sintaxe DECLARE CURSOR e são usados principalmente nos scripts [!INCLUDE[tsql](../includes/tsql-md.md)] , procedimentos armazenados e disparadores. [!INCLUDE[tsql](../includes/tsql-md.md)] os cursores são implementados no servidor e gerenciados pelas instruções [!INCLUDE[tsql](../includes/tsql-md.md)] enviadas do cliente ao servidor. Eles também podem ser contidos em lotes, procedimentos armazenados ou gatilhos.  
   
  Cursores de servidor de API (interface de programação de aplicativo)  
  Dão suporte a funções de cursor API no OLE DB e ODBC. Cursores de servidor API são implementados no servidor. Sempre que um aplicativo cliente chama uma função de cursor da API, o provedor OLE DB ou do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ou o driver ODBC transmite a solicitação ao servidor para ação contra o cursor de servidor API.  
@@ -67,7 +71,7 @@ caps.handback.revision: 29
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cursores estáticos são sempre somente leitura.  
   
- Como o conjunto de resultados de um cursor estático é armazenado em uma tabela de trabalho no **tempdb**, o tamanho das linhas do conjunto de resultados não pode exceder o tamanho máximo de linhas para uma tabela [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Como o conjunto de resultados de um cursor estático é armazenado em uma tabela de trabalho no **tempdb**, o tamanho das linhas do conjunto de resultados não pode exceder o tamanho máximo de linhas para uma tabela [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] usa o termo insensitive para cursores estáticos. Algum banco de dados APIs os identificam como cursores de instantâneo.  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 29
  Dinâmicos  
  Os cursores dinâmicos são o oposto dos cursores estáticos. Cursores dinâmicos refletem todas as alterações feitas nas linhas de seu conjunto de resultados ao rolar pelo cursor. Os valores de dados, a ordem e a associação das linhas do conjunto de resultados podem ser alterados em cada busca. Todas as instruções UPDATE, INSERT e DELETE feitas por todos os usuários são visíveis pelo cursor. As atualizações são visíveis imediatamente se forem feitas por meio do cursor usando uma função de API como **SQLSetPos** ou a cláusula [!INCLUDE[tsql](../includes/tsql-md.md)] WHERE CURRENT OF. As atualizações feitas fora do cursor não são visíveis até serem confirmadas, a menos que o nível de isolamento da transação do cursor esteja definido para ler não confirmadas. Planos de cursor dinâmicos nunca usam índices espaciais.  
   
-## Solicitando um cursor  
+## <a name="requesting-a-cursor"></a>Solicitando um cursor  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a dois métodos de solicitação de cursor:  
   
 -   [!INCLUDE[tsql](../includes/tsql-md.md)]  
@@ -94,12 +98,12 @@ caps.handback.revision: 29
   
     -   ODBC (Open Database Connectivity)  
   
- Um aplicativo não deve nunca misturar estes dois métodos de solicitar um cursor. Um aplicativo que tenha usado um API para especificar comportamentos de cursor não deveria portanto executar uma instrução [!INCLUDE[tsql](../includes/tsql-md.md)] DECLARE CURSOR para também solicitar um cursor [!INCLUDE[tsql](../includes/tsql-md.md)]. Um aplicativo deve apenas executar DECLARE CURSOR se ele tiver retornado todos os atributos API do cursor de volta ao seu padrão.  
+ Um aplicativo não deve nunca misturar estes dois métodos de solicitar um cursor. Um aplicativo que tenha usado um API para especificar comportamentos de cursor não deveria portanto executar uma instrução [!INCLUDE[tsql](../includes/tsql-md.md)] DECLARE CURSOR para também solicitar um cursor [!INCLUDE[tsql](../includes/tsql-md.md)] . Um aplicativo deve apenas executar DECLARE CURSOR se ele tiver retornado todos os atributos API do cursor de volta ao seu padrão.  
   
- Se não tiver havido uma solicitação de um cursor API, o [!INCLUDE[tsql](../includes/tsql-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] padroniza para retornar um conjunto completo de resultados, conhecido como um conjunto padrão de resultados, para o aplicativo.  
+ Se não tiver havido uma solicitação de um cursor API, o [!INCLUDE[tsql](../includes/tsql-md.md)] , [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] padroniza para retornar um conjunto completo de resultados, conhecido como um conjunto padrão de resultados, para o aplicativo.  
   
-## Processo do cursor  
- [!INCLUDE[tsql](../includes/tsql-md.md)] cursores e cursores da API têm sintaxe diferente, mas o seguinte processo geral é usado com todos os cursores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+## <a name="cursor-process"></a>Processo do cursor  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] cursores e cursores da API têm sintaxe diferente, mas o seguinte processo geral é usado com todos os cursores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
   
 1.  Associe um cursor ao conjunto de resultados de uma instrução [!INCLUDE[tsql](../includes/tsql-md.md)] e defina as características do cursor, tais como se as filas no cursor podem ser atualizadas ou não.  
   
@@ -111,10 +115,10 @@ caps.handback.revision: 29
   
 5.  Feche o cursor.  
   
-## Conteúdo relacionado  
- [Comportamentos de cursor](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [Como os cursores são implementados](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
+## <a name="related-content"></a>Conteúdo relacionado  
+ [Cursor Behaviors](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [How Cursors Are Implemented](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [Cursores &#40;Transact-SQL&#41;](../t-sql/language-elements/cursors-transact-sql.md)   
  [Funções de cursor &#40;Transact-SQL&#41;](../t-sql/functions/cursor-functions-transact-sql.md)   

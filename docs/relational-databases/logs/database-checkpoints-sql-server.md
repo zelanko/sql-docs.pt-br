@@ -1,37 +1,41 @@
 ---
-title: "Pontos de verifica&#231;&#227;o de banco de dados (SQL Server) | Microsoft Docs"
-ms.date: "09/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pontos de verificação automáticos"
-  - "logs de transações [SQL Server], pontos de verificação"
-  - "logs [SQL Server], ativos"
-  - "páginas [SQL Server], sujas"
-  - "MinLSN"
-  - "pontos de verificação [SQL Server]"
-  - "páginas [SQL Server], liberando"
-  - "páginas sujas"
-  - "logs de transações [SQL Server], logs ativos"
-  - "opção recovery interval [SQL Server]"
-  - "cache de buffer [SQL Server]"
-  - "logs [SQL Server], pontos de verificação"
-  - "LSN recuperação mínima"
-  - "liberando páginas"
-  - "logs ativos"
+title: "Pontos de verificação de banco de dados (SQL Server) | Microsoft Docs"
+ms.date: 09/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- automatic checkpoints
+- transaction logs [SQL Server], checkpoints
+- logs [SQL Server], active
+- pages [SQL Server], dirty
+- MinLSN
+- checkpoints [SQL Server]
+- pages [SQL Server], flushing
+- dirty pages
+- transaction logs [SQL Server], active logs
+- recovery interval option [SQL Server]
+- buffer cache [SQL Server]
+- logs [SQL Server], checkpoints
+- Minimum Recovery LSN
+- flushing pages
+- active logs
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 caps.latest.revision: 74
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 71
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9c46ed7578abfaacec840270f45a132cc438a82c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pontos de verifica&#231;&#227;o de banco de dados (SQL Server)
+# <a name="database-checkpoints-sql-server"></a>Pontos de verificação de banco de dados (SQL Server)
  Um *ponto de verificação* cria um bom ponto conhecido a partir do qual o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pode começar a aplicar as alterações contidas no log durante a recuperação após um desligamento ou uma falha inesperada.  
  
   
@@ -43,40 +47,42 @@ Por razões de desempenho, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa
 |Nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interface|Descrição|  
 |----------|----------------------------------|-----------------|  
 |Automatic|EXEC sp_configure **'**recovery interval**','***seconds***'**|Emitido automaticamente em segundo plano para seguir de tempo superior sugerido pela opção de configuração de servidor **recovery interval** . Pontos de verificação automáticos executados até a conclusão.  Os pontos de verificação automáticos são limitados com base no número de gravações pendentes e se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] detectar um aumento na latência de gravação acima de 50 milissegundos.<br /><br /> Para obter mais informações, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Indireto.|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Emitido em segundo plano para cumprir um horário de recuperação de destino especificado pelo usuário para um determinado banco de dados. A partir do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], o valor padrão é de 1 minuto. O padrão é 0 para versões mais antigas, o que indica que o banco de dados usará pontos de verificação automáticos cuja frequência depende da configuração do intervalo de recuperação da instância de servidor.<br /><br /> Para obter mais informações, veja [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
-|Manual|CHECKPOINT [ *checkpoint_duration* ]|Emitido quando você executa um comando [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT. O ponto de verificação manual ocorre no banco de dados atual para sua conexão. Por padrão, pontos de verificação manuais são executados até a conclusão. A aceleração funciona da mesma forma que para pontos de verificação automáticos.  Opcionalmente, o parâmetro *checkpoint_duration* especifica a quantidade de tempo solicitada, em segundos, para a conclusão do ponto de verificação.<br /><br /> Para obter mais informações, veja [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md).|  
+|Indireto.|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Emitido em segundo plano para cumprir um horário de recuperação de destino especificado pelo usuário para um determinado banco de dados. A partir do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], o valor padrão é de 1 minuto. O padrão é 0 para versões mais antigas, o que indica que o banco de dados usará pontos de verificação automáticos cuja frequência depende da configuração do intervalo de recuperação da instância de servidor.<br /><br /> Para obter mais informações, consulte [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
+|Manual|CHECKPOINT [ *checkpoint_duration* ]|Emitido quando você executa um comando [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT. O ponto de verificação manual ocorre no banco de dados atual para sua conexão. Por padrão, pontos de verificação manuais são executados até a conclusão. A aceleração funciona da mesma forma que para pontos de verificação automáticos.  Opcionalmente, o parâmetro *checkpoint_duration* especifica a quantidade de tempo solicitada, em segundos, para a conclusão do ponto de verificação.<br /><br /> Para obter mais informações, consulte [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md).|  
 |Internal|Nenhum.|Emitido por várias operações de servidor, como backup e criação de instantâneo de banco de dados, para garantir que as imagens de disco coincidam com o estado atual do log.|  
   
->**OBSERVAÇÃO:** A opção de configuração avançada **-k**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que um administrador de banco de dados acelere o comportamento de E/S do ponto de verificação com base na taxa de transferência do subsistema de E/S de alguns tipos de pontos de verificação. A opção de configuração **-k** se aplica a pontos de verificação automáticos e a qualquer ponto de verificação manual e interno.  
+>[!NOTE]
+> A opção de configuração avançada **-k** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que um administrador de banco de dados acelere o comportamento de E/S do ponto de verificação com base na taxa de transferência do subsistema de E/S de alguns tipos de pontos de verificação. A opção de configuração **-k** se aplica a pontos de verificação automáticos e a qualquer ponto de verificação manual e interno.  
   
  Para pontos de verificação automáticos, manuais e internos, somente as modificações feitas após o último ponto de verificação devem passar por roll forward durante a recuperação de banco de dados. Isso reduz o tempo necessário para recuperar um banco de dados.  
   
->**IMPORTANTE:** Transações não confirmadas de execução longa aumentam o tempo de recuperação para todos os tipos de pontos de verificação.  
+>[!IMPORTANT]
+> Transações não confirmadas de execução longa aumentam o tempo de recuperação para todos os tipos de pontos de verificação.  
   
   
 ##  <a name="InteractionBwnSettings"></a> Interação de TARGET_RECOVERY_TIME e opções 'recovery interval'  
  A tabela a seguir resume a interação entre a configuração do servidor **sp_configure'**recovery interval**'** de todo o servidor e a configuração ALTER DATABASE... específica do banco de dados. TARGET_RECOVERY_TIME.  
   
-|TARGET_RECOVERY_TIME|'recovery interval'|Tipo de ponto de verificação usado|  
+|target_recovery_time|'recovery interval'|Tipo de ponto de verificação usado|  
 |----------------------------|-------------------------|-----------------------------|  
 |0|0|pontos de verificação automáticos cujo intervalo de recuperação de destino é 1 minuto.|  
 |0|>0|Pontos de verificação automáticos, cujo intervalo de recuperação de destino é especificado pela configuração definida pelo usuário na opção **sp_configurerecovery interval**.|  
 |>0|Não aplicável.|Pontos de verificação indiretos cuja hora de recuperação de destino é determinada pela configuração de TARGET_RECOVERY_TIME, expressa em segundos.|  
   
 ##  <a name="AutomaticChkpt"></a> Pontos de verificação automáticos  
- Um ponto de verificação automático ocorre sempre que o número de registros de log atinge o número que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] estima que pode processar durante o tempo especificado na opção de configuração do servidor **recovery interval**. 
+ Um ponto de verificação automático ocorre sempre que o número de registros de log atinge o número que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] estima que pode processar durante o tempo especificado na opção de configuração do servidor **recovery interval** . 
  
- Em todo banco de dados sem uma hora de recuperação de destino definida pelo usuário, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] gera pontos de verificação automáticos. A frequência depende da opção de configuração de servidor avançada **recovery interval**, que especifica o tempo máximo que determinada instância de servidor deve usar para recuperar um banco de dados durante uma reinicialização do sistema. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] estima o número máximo de registros de log que pode processar no intervalo de recuperação. Quando um banco de dados que usa alcances de pontos de verificação automáticos atinge o número máximo de registros de log, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] emite um ponto de verificação no banco de dados. 
+ Em todo banco de dados sem uma hora de recuperação de destino definida pelo usuário, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] gera pontos de verificação automáticos. A frequência depende da opção de configuração de servidor avançada **recovery interval** , que especifica o tempo máximo que determinada instância de servidor deve usar para recuperar um banco de dados durante uma reinicialização do sistema. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] estima o número máximo de registros de log que pode processar no intervalo de recuperação. Quando um banco de dados que usa alcances de pontos de verificação automáticos atinge o número máximo de registros de log, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] emite um ponto de verificação no banco de dados. 
  
  O intervalo de tempo entre pontos de verificação automáticos pode ser **altamente** variável. Um banco de dados com uma carga de trabalho de transações significativa terá mais pontos de verificação frequentes do que um banco de dados usado principalmente para operações somente leitura. No modelo de recuperação simples, um ponto de verificação automático também será colocado na fila se o log se tornar 70% cheio.  
   
-No modelo de recuperação simples, a menos que algum fator esteja atrasando o truncamento do log, um ponto de verificação automático trunca a seção não usada do log de transações. Em contrapartida, nos modelos de recuperação completo e bulk-logged, após o estabelecimento de uma cadeia de backup de log, os pontos de verificação automáticos não causam truncamento de log. Para obter mais informações, veja [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+No modelo de recuperação simples, a menos que algum fator esteja atrasando o truncamento do log, um ponto de verificação automático trunca a seção não usada do log de transações. Em contrapartida, nos modelos de recuperação completo e bulk-logged, após o estabelecimento de uma cadeia de backup de log, os pontos de verificação automáticos não causam truncamento de log. Para obter mais informações, consulte [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  Depois de uma falha do sistema, o tempo necessário para recuperar determinado banco de dados depende em grande parte da quantidade de E/S aleatória necessária para refazer páginas que estavam sujas no momento da falha. Isso significa que a configuração de **recovery interval** não é confiável. Não é possível determinar uma duração de recuperação precisa. Além disso, quando um ponto de verificação automático está em andamento, a atividade de E/S geral para os dados aumenta significativamente e de forma bastante imprevisível.  
   
  
 ###  <a name="PerformanceImpact"></a> Impacto do intervalo de recuperação no desempenho de recuperação  
- Para um sistema de processamento de transações online que usa transações curtas (OLTP), o **recovery interval** é o fator primário que determina o tempo de recuperação. No entanto, a opção **recovery interval** não afeta o tempo necessário para desfazer uma transação de longa duração. A recuperação de um banco de dados com uma transação de longa duração pode levar mais tempo do que o especificado na opção **recovery interval**. 
+ Para um sistema de processamento de transações online que usa transações curtas (OLTP), o **recovery interval** é o fator primário que determina o tempo de recuperação. No entanto, a opção **recovery interval** não afeta o tempo necessário para desfazer uma transação de longa duração. A recuperação de um banco de dados com uma transação de longa duração pode levar mais tempo do que o especificado na opção **recovery interval** . 
  
  Por exemplo, se uma transação demorada levou duas horas para executar atualizações antes que a instância do servidor fosse desabilitada, a recuperação real levará um tempo consideravelmente mais longo do que o valor de **recovery interval** para recuperar a transação demorada. Para obter mais informações sobre o impacto de uma transação de longa duração em um tempo de recuperação, veja [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
@@ -101,6 +107,9 @@ A opção de configuração do intervalo de recuperação usa o número de trans
 -   Pontos de verificação indiretos reduzem os picos de E/S relacionados ao ponto de verificação gravando continuamente páginas sujas em disco em segundo plano.  
   
  No entanto, uma carga de trabalho transacional online em um banco de dados configurado para pontos de verificação indiretos pode apresentar degradação no desempenho. Isso ocorre porque o gravador em segundo plano usado pelo ponto de verificação indireto às vezes aumenta a carga de gravação total de uma instância de servidor.  
+ 
+ > [!IMPORTANT]
+ > O ponto de verificação indireto é o comportamento padrão para novos bancos de dados criados no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Os bancos de dados atualizados no local ou restaurados com base em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usarão o comportamento de ponto de verificação automático anterior, a menos que tenham sido explicitamente alterados para usar o ponto de verificação indireto.
   
   
 ##  <a name="EventsCausingChkpt"></a> Pontos de verificação internos  
@@ -122,7 +131,7 @@ A opção de configuração do intervalo de recuperação usa o número de trans
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para alterar o intervalo de recuperação em uma instância de servidor**  
   
--   [Configurar a opção recovery interval de configuração de servidor](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)  
+-   [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)  
   
  **Para configurar pontos de verificação indiretos em um banco de dados**  
   
@@ -133,8 +142,9 @@ A opção de configuração do intervalo de recuperação usa o número de trans
 -   [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)  
 
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  - [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) 
  -   [Arquitetura física do log de transações](http://technet.microsoft.com/library/ms179355.aspx) (dos [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Manuais Online, mas ainda aplicável)  
   
   
+

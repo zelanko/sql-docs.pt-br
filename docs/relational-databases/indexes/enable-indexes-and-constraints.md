@@ -1,29 +1,33 @@
 ---
-title: "Habilitar &#237;ndices e restri&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "índices [SQL Server], habilitando"
-  - "índices não clusterizados [SQL Server], habilitando um índice desabilitado"
-  - "habilitação de índice [SQL Server]"
-  - "desabilitado índices [SQL Server], como habilitar"
-  - "restrições [SQL Server], habilitando"
-  - "índices clusterizados, habilitando índices desabilitados"
+title: "Habilitar índices e restrições | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [SQL Server], enabling
+- nonclustered indexes [SQL Server], enabling a disabled index
+- index enabling [SQL Server]
+- disabled indexes [SQL Server], how to enable
+- constraints [SQL Server], enabling
+- clustered indexes, enabling disabled indexes
 ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e0e171e2cf2bdc35a3e9c3c7e5ed1077aabe4dc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Habilitar &#237;ndices e restri&#231;&#245;es
+# <a name="enable-indexes-and-constraints"></a>Habilitar índices e restrições
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Este tópico descreve como habilitar um índice desabilitado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Depois que um índice for desabilitado, ele permanecerá em estado desabilitado até que seja recriado ou descartado  
@@ -72,11 +76,11 @@ caps.handback.revision: 27
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Requer a permissão ALTER na tabela ou exibição. Se estiver usando o DBCC DBREINDEX, o usuário deverá ter a tabela ou ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner**.  
+ Requer a permissão ALTER na tabela ou exibição. Se estiver usando o DBCC DBREINDEX, o usuário deverá ter a tabela ou ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para habilitar um índice desabilitado  
+#### <a name="to-enable-a-disabled-index"></a>Para habilitar um índice desabilitado  
   
 1.  No Pesquisador de Objetos, clique no sinal de adição para expandir o banco de dados que contém a tabela na qual você deseja habilitar um índice.  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 27
   
 6.  Na caixa de diálogo **Recriar Índices** , verifique se o índice correto está na grade **Índices a serem recriados** e clique em **OK**.  
   
-#### Para habilitar todos os índices de uma tabela  
+#### <a name="to-enable-all-indexes-on-a-table"></a>Para habilitar todos os índices de uma tabela  
   
 1.  No Pesquisador de Objetos, clique no sinal de adição para expandir o banco de dados que contém a tabela na qual você deseja habilitar os índices.  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para habilitar um índice desabilitado usando ALTER INDEX  
+#### <a name="to-enable-a-disabled-index-using-alter-index"></a>Para habilitar um índice desabilitado usando ALTER INDEX  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### Para habilitar um índice desabilitado usando CREATE INDEX  
+#### <a name="to-enable-a-disabled-index-using-create-index"></a>Para habilitar um índice desabilitado usando CREATE INDEX  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -146,7 +150,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### Para habilitar um índice desabilitado usando DBCC DBREINDEX  
+#### <a name="to-enable-a-disabled-index-using-dbcc-dbreindex"></a>Para habilitar um índice desabilitado usando DBCC DBREINDEX  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -163,7 +167,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### Para habilitar todos os índices em uma tabela usando ALTER INDEX  
+#### <a name="to-enable-all-indexes-on-a-table-using-alter-index"></a>Para habilitar todos os índices em uma tabela usando ALTER INDEX  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -181,7 +185,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### Para habilitar todos os índices em uma tabela usando DBCC DBREINDEX  
+#### <a name="to-enable-all-indexes-on-a-table-using-dbcc-dbreindex"></a>Para habilitar todos os índices em uma tabela usando DBCC DBREINDEX  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -201,3 +205,4 @@ caps.handback.revision: 27
  Para obter mais informações, veja [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md), [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md) e [DBCC DBREINDEX &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md).  
   
   
+

@@ -1,29 +1,33 @@
 ---
-title: "Categoria de evento dos procedimentos armazenados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Categoria de evento dos procedimentos armazenados [SQL Server]"
-  - "Classes de evento do SQL Server, categoria de evento dos Procedimentos Armazenados"
-  - "Classes de evento [SQL Server], categoria de evento dos Procedimentos Armazenados"
+title: Categoria de evento Procedimentos armazenados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stored Procedures event category [SQL Server]
+- SQL Server event classes, Stored Procedures event category
+- event classes [SQL Server], Stored Procedures event category
 ms.assetid: 71bebaa3-a05a-4695-b349-078cecd0949a
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f1c72514c72b06b9fea644848df952879619d43c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Categoria de evento dos procedimentos armazenados
+# <a name="stored-procedures-event-category"></a>Categoria de evento dos procedimentos armazenados
   A categoria de evento **Procedimentos armazenados** contém eventos de procedimentos gerais armazenados.  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
@@ -42,7 +46,7 @@ caps.handback.revision: 29
 |[Classe de evento SP:StmtCompleted](../../relational-databases/event-classes/sp-stmtcompleted-event-class.md)|Indica que uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] em um procedimento armazenado foi concluída.|  
 |[Classe de evento SP:StmtStarting](../../relational-databases/event-classes/sp-stmtstarting-event-class.md)|Indica que uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] em um procedimento armazenado foi iniciada.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

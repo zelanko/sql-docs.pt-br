@@ -1,29 +1,33 @@
 ---
-title: "Classe de evento Lock:Timeout (timeout &gt; 0) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento Timeout"
+title: Classe de evento Lock:Timeout (tempo limite &gt; 0) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Timeout event class
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fcc65d0dc158c705bc5fcd1314f1d60503faa47a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento Lock:Timeout (timeout &gt; 0)
+# <a name="locktimeout-timeout-gt-0-event-class"></a>Classe de evento Lock:Timeout (timeout &gt; 0)
   A classe de evento **Lock:Timeout (timeout > 0)** indica que uma solicitação para um bloqueio em um recurso, como uma página, expirou porque outra transação está segurando uma fechadura de bloqueio no recurso exigido. Esta classe de evento se comporta semelhante à classe de evento **Lock:Timeout**, exceto por não incluir nenhum evento em que o valor de tempo limite é 0.  
   
  Inclua a classe de evento **Lock:Timeout (timeout > 0)** em rastreamentos em que você esteja usando sondagem de bloqueio ou outros processos que têm valores de tempo limite zero. Isto lhe permite consultar onde o tempo limite atual está ocorrendo sem consulta dos valores de tempo limite zero.  
   
-## Colunas de dados de classe de evento Lock:Timeout (timeout > 0)  
+## <a name="locktimeout-timeout--0-event-class-data-columns"></a>Colunas de dados de classe de evento Lock:Timeout (timeout > 0)  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -57,7 +61,7 @@ caps.handback.revision: 38
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |Tipo|**int**|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe de evento Lock:Timeout](../../relational-databases/event-classes/lock-timeout-event-class.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  

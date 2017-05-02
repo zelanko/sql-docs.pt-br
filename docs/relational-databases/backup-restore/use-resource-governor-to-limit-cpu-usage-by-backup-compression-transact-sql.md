@@ -1,31 +1,35 @@
 ---
-title: "Usar o Administrador de Recursos para limitar o uso de CPU por meio de compacta&#231;&#227;o de backup (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "compactação de backup [SQL Server], Administrador de recursos"
-  - "compactação de backup [SQL Server], uso de CPU"
-  - "compactação (SQL Server), compactação de backup"
-  - "backups [SQL Server], compactação"
-  - "Administrador de recursos, compactação de backup"
+title: "Usar o Administrador de Recursos para limitar o uso de CPU por meio de compactação de backup (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup compression [SQL Server], Resource Governor
+- backup compression [SQL Server], CPU usage
+- compression [SQL Server], backup compression
+- backups [SQL Server], compression
+- Resource Governor, backup compression
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c981e6d71307a314f39a44e8fc180f77426f1477
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar o Administrador de Recursos para limitar o uso de CPU por meio de compacta&#231;&#227;o de backup (Transact-SQL)
+# <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Usar o Administrador de Recursos para limitar o uso de CPU por meio de compactação de backup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Por padrão, a compactação de backup aumenta consideravelmente o uso de CPU, e o consumo adicional da CPU por parte do processo de compactação pode afetar negativamente as operações simultâneas. Portanto, convém criar um backup compactado de baixa prioridade em uma sessão cujo uso de CPU seja limitado pelo [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md) quando houver contenção de CPU. Este tópico apresenta um cenário que classifica as sessões de um usuário específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapeando-as para um grupo de carga de trabalho do Administrador de Recursos que limita o uso de CPU em casos como esse.  
+  Por padrão, a compactação de backup aumenta consideravelmente o uso de CPU, e o consumo adicional da CPU por parte do processo de compactação pode afetar negativamente as operações simultâneas. Portanto, convém criar um backup compactado de baixa prioridade em uma sessão cujo uso de CPU seja limitado pelo[Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md) quando houver contenção de CPU. Este tópico apresenta um cenário que classifica as sessões de um usuário específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapeando-as para um grupo de carga de trabalho do Administrador de Recursos que limita o uso de CPU em casos como esse.  
   
 > [!IMPORTANT]  
 >  Em um determinado cenário do Administrador de Recursos, a classificação de sessão pode ser baseada em um nome de usuário, em um nome de aplicativo ou em qualquer outro item que possa diferenciar uma conexão. Para obter mais informações, consulte [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md) e [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md).  
@@ -43,9 +47,9 @@ caps.handback.revision: 25
 ##  <a name="setup_login_and_user"></a> Configurando um logon e um usuário para operações de baixa prioridade  
  O cenário deste tópico requer um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um usuário de baixa prioridade. O nome do usuário será usado para classificar sessões que executam no logon e roteá-las as para um grupo de carga de trabalho do Administrador de Recursos que limita o uso de CPU.  
   
- O procedimento a seguir descreve as etapas para configuração de um logon e de um usuário para esse fim, seguido por um exemplo de [!INCLUDE[tsql](../../includes/tsql-md.md)], "Exemplo A: Configurando um logon e um usuário (Transact-SQL)".  
+ O procedimento a seguir descreve as etapas para configuração de um logon e de um usuário para esse fim, seguido por um exemplo de [!INCLUDE[tsql](../../includes/tsql-md.md)] , "Exemplo A: Configurando um logon e um usuário (Transact-SQL)".  
   
-### Para configurar um logon e um usuário de banco de dados para classificar sessões  
+### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>Para configurar um logon e um usuário de banco de dados para classificar sessões  
   
 1.  Crie um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para criar backups compactados de baixa prioridade.  
   
@@ -77,13 +81,13 @@ caps.handback.revision: 25
   
      Para obter mais informações, consulte [Permissões de principal do banco de dados GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md).  
   
-### Exemplo A: Configurando um logon e um usuário (Transact-SQL)  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Exemplo A: Configurando um logon e um usuário (Transact-SQL)  
  O exemplo a seguir é relevante apenas se você optar por criar um novo logon e usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para backups de baixa prioridade. Alternativamente, você pode usar um logon e um usuário existentes, se forem apropriados.  
   
 > [!IMPORTANT]  
 >  O exemplo a seguir usa um logon e um nome de usuário de exemplo, *domain_name*`\MAX_CPU`. Substitua-os pelos nomes de logon e de usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que serão usados ao criar backups compactados de baixa prioridade.  
   
- Esse exemplo cria um logon para a conta do Windows *domain_name*`\MAX_CPU` e, em seguida, concede a permissão VIEW SERVER STATE ao logon. Essa permissão permite verificar a classificação do Administrador de Recursos de sessões do logon. Em seguida, o exemplo cria um usuário para *domain_name*`\MAX_CPU` e o adiciona à função de banco de dados fixa db_backupoperator do banco de dados de exemplo do [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Esse nome de usuário será usado pela função de classificação do Administrador de Recursos.  
+ Esse exemplo cria um logon para a conta do Windows *domain_name*`\MAX_CPU` e, em seguida, concede a permissão VIEW SERVER STATE ao logon. Essa permissão permite verificar a classificação do Administrador de Recursos de sessões do logon. Em seguida, o exemplo cria um usuário para *domain_name*`\MAX_CPU` e o adiciona à função de banco de dados fixa db_backupoperator do banco de dados de exemplo do [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Esse nome de usuário será usado pela função de classificação do Administrador de Recursos.  
   
 ```tsql  
 -- Create a SQL Server login for low-priority operations  
@@ -131,7 +135,7 @@ GO
   
 -   [Criar um grupo de carga de trabalho](../../relational-databases/resource-governor/create-a-workload-group.md)  
   
-### Para configurar o Administrador de Recursos para limitar o uso de CPU (Transact-SQL)  
+### <a name="to-configure-resource-governor-for-limiting-cpu-usage-transact-sql"></a>Para configurar o Administrador de Recursos para limitar o uso de CPU (Transact-SQL)  
   
 1.  Emita uma instrução [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md) para criar um pool de recursos. O exemplo deste procedimento usa a seguinte sintaxe:  
   
@@ -184,7 +188,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### Exemplo B: Configurando o Administrador de Recursos (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>Exemplo B: Configurando o Administrador de Recursos (Transact-SQL)  
  O exemplo a seguir executa as seguintes etapas em uma única transação:  
   
 1.  Cria o pool de recursos `pMAX_CPU_PERCENT_20` .  
@@ -262,7 +266,7 @@ GO
 ##  <a name="creating_compressed_backup"></a> Compactando backups usando uma sessão com CPU limitada  
  Para criar um backup compactado em uma sessão com uma CPU máxima limitada, faça logon como o usuário especificado na função de classificação. No comando de backup, especifique WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) ou selecione **Compactar backup** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Para criar um backup de banco de dados compactado, consulte [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
-### Exemplo C: Criando um backup compactado (Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Exemplo C: Criando um backup compactado (Transact-SQL)  
  O exemplo de [BACKUP](../../t-sql/statements/backup-transact-sql.md) a seguir cria um backup completo compactado do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] em um arquivo de backup recém-formatado, `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
 ```tsql  
@@ -278,7 +282,7 @@ GO
   
  [&#91;Início&#93;](#Top)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criar e testar uma função de classificação definida pelo usuário](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)  
   

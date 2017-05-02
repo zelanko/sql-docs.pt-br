@@ -1,25 +1,29 @@
 ---
-title: "Tabelas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tabelas [SQL Server]"
-  - "componentes de tabela [SQL Server]"
+title: Tabelas | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [SQL Server]
+- table components [SQL Server]
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7111c0043ebecaa5ca55480eb530ffd665ef4243
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tabelas
+# <a name="tables"></a>Tabelas
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Tabelas são objetos de banco de dados que contêm todos os dados em um banco de dados. Nas tabelas, os dados são organizados de maneira lógica em um formato de linha-e-coluna semelhante ao de uma planilha. Cada linha representa um registro exclusivo e cada coluna representa um campo no registro. Por exemplo, uma tabela que contém dados de funcionários de uma empresa pode conter uma linha para cada funcionário e colunas representando as informações sobre o funcionário, como número, nome, endereço, cargo e número do telefone residencial do funcionário.  
@@ -30,7 +34,7 @@ caps.handback.revision: 30
   
 -   Os dados da tabela podem ser compactados por linha ou por página. A compactação de dados pode permitir armazenar mais linhas em uma página. Para obter mais informações, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
-## Tipos de tabelas  
+## <a name="types-of-tables"></a>Tipos de tabelas  
  Além da função padrão de tabelas básicas definidas pelo usuário, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece os tipos de tabelas a seguir que servem para propósitos especiais em um banco de dados.  
   
  Tabelas particionadas  
@@ -40,7 +44,7 @@ caps.handback.revision: 30
  As tabelas temporárias são armazenadas em **tempdb**. Há dois tipos de tabelas temporárias: local e global. Elas diferem uma da outra pelo nome, visibilidade e disponibilidade. As tabelas temporárias locais têm um único sinal numérico (#) como primeiro caractere no nome; elas são visíveis somente na conexão atual para o usuário e são excluídas quando o usuário se desconecta da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As tabelas temporárias globais têm dois sinais numéricos (##) como primeiros caracteres no nome; elas são visíveis a qualquer usuário após serem criadas e são excluídas quando todos os usuários que consultam a tabela se desconectam da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Tabelas do sistema  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena os dados que definem a configuração do servidor e todas as suas tabelas em um conjunto especial de tabelas conhecido como tabelas do sistema. Usuários não podem consultar nem atualizar diretamente as tabelas do sistema. A informações das tabelas do sistema são disponibilizadas por meio de exibições do sistema. Para obter mais informações, veja [Exibições do sistema &#40;Transact-SQL&#41;](../Topic/System%20Views%20\(Transact-SQL\).md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena os dados que definem a configuração do servidor e todas as suas tabelas em um conjunto especial de tabelas conhecido como tabelas do sistema. Usuários não podem consultar nem atualizar diretamente as tabelas do sistema. A informações das tabelas do sistema são disponibilizadas por meio de exibições do sistema. Para obter mais informações, veja [Exibições do sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
  Tabelas largas  
  As tabelas largas usam [colunas esparsas](../../relational-databases/tables/use-sparse-columns.md) para aumentar para 30.000 o total de colunas que uma tabela pode ter. Colunas esparsas são colunas comuns que têm um armazenamento otimizado para valores nulos. Elas reduzem os requisitos de espaço para valores nulos às custas de maior sobrecarga para recuperar valores não nulos. Uma tabela ampla definiu um [conjunto de colunas](../../relational-databases/tables/use-column-sets.md), que é uma representação em XML sem-tipo que combina todas as colunas esparsas de uma tabela em uma saída estruturada. O número de índices e estatísticas também é aumentado para 1.000 e 30.000, respectivamente. O tamanho máximo de uma linha de tabela larga é de 8.019 bytes. Portanto, a maior parte dos dados contidos em qualquer linha específica deve ser NULL. O número máximo de colunas não esparsas mais as colunas computadas de uma tabela larga continua sendo 1.024.  
@@ -59,7 +63,7 @@ caps.handback.revision: 30
   
 -   Os cursores de atualização que atualizam colunas específicas de uma tabela larga devem listar as colunas explicitamente na cláusula FOR UPDATE. Isso ajudará a otimizar o desempenho quando você usar cursores.  
   
-## Tarefas comuns de tabela  
+## <a name="common-table-tasks"></a>Tarefas comuns de tabela  
  A tabela a seguir fornece links a tarefas comuns associadas à criação ou modificação de uma tabela.  
   
 |Tarefas de tabela|Tópico|  
@@ -78,13 +82,13 @@ caps.handback.revision: 30
 |Descreve como adicionar colunas a uma tabela existente.|[Adicionar colunas a uma tabela &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)|  
 |Descreve como excluir colunas de uma tabela.|[Excluir colunas de uma tabela](../../relational-databases/tables/delete-columns-from-a-table.md)|  
 |Descreve como alterar o nome de uma coluna.|[Renomear colunas &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/tables/rename-columns-database-engine.md)|  
-|Descreve como copiar colunas de uma tabela para outra, copiando apenas a definição da coluna ou a definição e os dados.|[Copiar colunas de uma tabela em outra &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/tables/copy-columns-from-one-table-to-another-database-engine.md)|  
+|Descreve como copiar colunas de uma tabela para outra, copiando apenas a definição da coluna ou a definição e os dados.|[Copiar colunas de uma tabela para outra &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/tables/copy-columns-from-one-table-to-another-database-engine.md)|  
 |Descreve como modificar uma definição de coluna, alterando o tipo de dados ou outra propriedade.|[Modificar colunas &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/tables/modify-columns-database-engine.md)|  
-|Descreve como alterar a ordem na qual as colunas aparecem.|[Alterar ordem de colunas em uma tabela](../../relational-databases/tables/change-column-order-in-a-table.md)|  
+|Descreve como alterar a ordem na qual as colunas aparecem.|[Alterar ordem das colunas em uma tabela](../../relational-databases/tables/change-column-order-in-a-table.md)|  
 |Descreve como criar uma coluna computada em uma tabela.|[Especificar colunas computadas em uma tabela](../../relational-databases/tables/specify-computed-columns-in-a-table.md)|  
 |Descreve como especificar um valor padrão para uma coluna. Este valor é usado quando outro valor não é fornecido.|[Especificar valores padrão para colunas](../../relational-databases/tables/specify-default-values-for-columns.md)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Restrições de chave primária e chave estrangeira](../../relational-databases/tables/primary-and-foreign-key-constraints.md)   
  [Restrições exclusivas e restrições de verificação](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
   

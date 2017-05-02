@@ -1,33 +1,37 @@
 ---
-title: "Criar um perfil do Database Mail | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Database Mail [SQL Server], perfis públicos"
-  - "perfis [SQL Server], Database Mail"
-  - "perfis públicos [Database Mail]"
+title: Criar um perfil do Database Mail | Microsoft Docs
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], public profiles
+- profiles [SQL Server], Database Mail
+- public profiles [Database Mail]
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3dfeb39ffa1bba82e4f5782ef30621c8e57529de
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar um perfil do Database Mail
+# <a name="create-a-database-mail-profile"></a>Criar um perfil do Database Mail
   Use o **Assistente para Configuração do Database Mail** ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] para criar perfis públicos e privados do Database Mail. Para obter mais informações sobre perfis de email, consulte [Perfil do Database Mail](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2).
   
--   **Antes de começar:** [Pré-requisitos](#Prerequisites), , [Segurança](#Security)  
+-   **Before you Begin:** [Prerequisites](#Prerequisites), , [Security](#Security)  
   
--   **Para criar um perfil privado do Database Mail usando:** [Assistente de Configuração do Database Mail](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
+-   **To Create a Database Mail private profile using:**  [Database Mail Configuration Wizard](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   
--   **Para criar um perfil público do Database Mail usando:** [Assistente de Configuração do Database Mail](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
+-   **To Create a Database Mail public profile using:**  [Database Mail Configuration Wizard](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -81,11 +85,11 @@ caps.handback.revision: 34
   
     -   Na página **Concluir o Assistente** , examine as ações a serem executadas e clique em **Concluir** para concluir a configuração do perfil.  
   
-## Usando Transact-SQL  
+## <a name="using-transact-sql"></a>Usando Transact-SQL  
   
 ###  <a name="PrivateProfile"></a> Para criar um perfil privado do Database Mail  
   
--   Conecte à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Conecte à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Para criar um novo perfil, execute o procedimento armazenado no sistema [sysmail_add_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md) da seguinte forma:  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 34
   
      *@sequence_number* = '*número de sequência da conta dentro do perfil.* '  
   
-     em que *@profile_name* é o nome do perfil, *@account_name* é o nome da conta a ser adicionada ao perfil e *@sequence_number* determina a ordem na qual as contas são usadas no perfil.  
+     em que *@profile_name* é o nome do perfil e *@account_name* é o nome da conta a ser adicionada ao perfil e *@sequence_number* determina a ordem na qual as contas são usadas no perfil.  
   
 -   Para cada função de banco de dados ou usuário que enviará email usando este perfil, conceda acesso ao perfil. Para fazer isso, execute o procedimento armazenado [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md) da seguinte forma:  
   
@@ -117,9 +121,9 @@ caps.handback.revision: 34
   
      *@ principal_name* = “*Nome de usuário de banco de dados ou função*”  
   
-     *@is_default* = '*Status de perfil padrão*'  
+     *@is_default* = '*Status de perfil padrão* '  
   
-     em que *@profile_name* é o nome do perfil, *@principal_name* é o nome do usuário ou função de banco de dados e *@is_default* determina se esse perfil é o padrão para o usuário ou a função de banco de dados.  
+     em que *@profile_name* é o nome do perfil e *@principal_name* é o nome do usuário ou função de banco de dados e *@is_default* determina se esse perfil é o padrão para o usuário ou a função de banco de dados.  
   
  O exemplo a seguir cria uma conta do Database Mail, cria um perfil privado do Database Mail, adiciona a conta ao perfil e concede acesso ao perfil à função de banco de dados **DBMailUsers** no banco de dados **msdb** .  
   
@@ -153,7 +157,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
 ###  <a name="PublicProfile"></a> Para criar um perfil público do Database Mail  
   
--   Conecte à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Conecte à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Para criar um novo perfil, execute o procedimento armazenado no sistema [sysmail_add_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md) da seguinte forma:  
   
@@ -175,7 +179,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@sequence_number* = '*número de sequência da conta dentro do perfil.* '  
   
-     em que *@profile_name* é o nome do perfil, *@account_name* é o nome da conta a ser adicionada ao perfil e *@sequence_number* determina a ordem na qual as contas são usadas no perfil.  
+     em que *@profile_name* é o nome do perfil e *@account_name* é o nome da conta a ser adicionada ao perfil e *@sequence_number* determina a ordem na qual as contas são usadas no perfil.  
   
 -   Para conceder acesso público, execute o procedimento armazenado [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md) da seguinte forma:  
   
@@ -185,9 +189,9 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@ principal_name* = '**público** ou **0**'  
   
-     *@is_default* = '*Status de perfil padrão*'  
+     *@is_default* = '*Status de perfil padrão* '  
   
-     em que *@profile_name* é o nome do perfil, *@principal_name* indica que este é um perfil público e *@is_default* determina se esse perfil é o padrão para o usuário ou a função de banco de dados.  
+     em que *@profile_name* é o nome do perfil e *@principal_name* indica que este é um perfil público e *@is_default* determina se esse perfil é o padrão para o usuário ou a função de banco de dados.  
   
  O exemplo a seguir cria uma conta do Database Mail, cria um perfil privado do Database Mail, adiciona a conta ao perfil e concede acesso público ao perfil.  
   
@@ -224,3 +228,4 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 ```  
   
   
+

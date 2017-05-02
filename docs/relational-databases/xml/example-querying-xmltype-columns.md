@@ -1,27 +1,31 @@
 ---
-title: "Exemplo: Consultando colunas de tipo XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modo RAW, consultando exemplo de XML"
+title: 'Exemplo: consultando colunas de tipo XML | Microsoft Docs'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c4b6c214f3097fce58d3f2ac131642503c62641
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemplo: Consultando colunas de tipo XML
-  A consulta a seguir inclui colunas de tipo **xml**. A consulta recupera a ID, nome e etapas de fabricação do modelo do produto no primeiro local da coluna `Instructions` de tipo **xml**.  
+# <a name="example-querying-xmltype-columns"></a>Exemplo: Consultando colunas de tipo XML
+  A consulta a seguir inclui colunas de tipo **xml** . A consulta recupera a ID, nome e etapas de fabricação do modelo do produto no primeiro local da coluna `Instructions` de tipo **xml** .  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 USE AdventureWorks2012;  
@@ -75,7 +79,7 @@ go
 </ProductModelData>  
 ```  
   
- A consulta a seguir especifica a política `ELEMENTS`. Portanto o resultado retornado é centrado em elemento. A opção `XSINIL` especificada com a política `ELEMENTS` retorna os elementos <`ManuSteps`>, mesmo que a colunas correspondentes no conjunto de linhas sejam NULL.  
+ A consulta a seguir especifica a política `ELEMENTS` . Portanto o resultado retornado é centrado em elemento. A opção `XSINIL` especificada com a política `ELEMENTS` retorna os elementos <`ManuSteps`>, mesmo que a colunas correspondentes no conjunto de linhas sejam NULL.  
   
 ```  
 USE AdventureWorks2012;  
@@ -112,7 +116,7 @@ go
 </MyRoot>  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usar modo RAW com FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

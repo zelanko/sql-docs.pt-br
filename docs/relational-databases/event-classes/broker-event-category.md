@@ -1,29 +1,33 @@
 ---
-title: "Categoria de evento Broker | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classes de evento do SQL Server, categoria de evento Broker"
-  - "categoria de evento Broker [SQL Server]"
-  - "classes de evento [SQL Server], categoria de evento Broker"
+title: Categoria de evento Broker | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Broker event category
+- Broker event category [SQL Server]
+- event classes [SQL Server], Broker event category
 ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1f0c5c0459128bde182665d39f6907bfe057db97
+ms.lasthandoff: 04/11/2017
+
 ---
-# Categoria de evento Broker
+# <a name="broker-event-category"></a>Categoria de evento Broker
   A categoria de evento **Broker** contém eventos gerais do Service Broker.  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
@@ -40,7 +44,7 @@ caps.handback.revision: 17
   
  Também são fornecidos dois eventos de auditoria de segurança para o Service Broker. Para obter mais informações sobre esses eventos, consulte [Classe de evento Audit Broker Login](../../relational-databases/event-classes/audit-broker-login-event-class.md) e [Classe de evento Audit Broker Conversation](../../relational-databases/event-classes/audit-broker-conversation-event-class.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Categoria de evento de auditoria de segurança](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

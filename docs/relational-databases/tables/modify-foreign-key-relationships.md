@@ -1,28 +1,32 @@
 ---
-title: "Modificar rela&#231;&#245;es de chave estrangeira | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vdtsql.chm:65538"
-  - "vdt.ppg.relationships"
-helpviewer_keywords: 
-  - "chaves estrangeiras [SQL Server], modificando"
-  - "modificando chaves estrangeiras"
+title: "Modificar relações de chave estrangeira | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vdtsql.chm:65538
+- vdt.ppg.relationships
+helpviewer_keywords:
+- foreign keys [SQL Server], modifying
+- modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d938937ff7d4009ec874ebc9bbd33b2e87960def
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modificar rela&#231;&#245;es de chave estrangeira
+# <a name="modify-foreign-key-relationships"></a>Modificar relações de chave estrangeira
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Você pode modificar parte da chave estrangeira de uma relação no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modificar a chave estrangeira de uma tabela altera as colunas que estão relacionadas às colunas na tabela de chaves primárias.  
@@ -59,7 +63,7 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para modificar uma chave estrangeira  
+#### <a name="to-modify-a-foreign-key"></a>Para modificar uma chave estrangeira  
   
 1.  No **Pesquisador de Objetos**, expanda a tabela com a chave estrangeira e expanda **Chaves**.  
   
@@ -74,12 +78,12 @@ caps.handback.revision: 20
      Crie uma nova relação. As **Especificações de Tabelas e Colunas** devem ser definidas antes de a relação tornar-se válida.  
   
      **Delete (excluir)**  
-     Exclua a relação selecionada na lista de **Relações Selecionadas**. Para cancelar a adição de uma relação, use esse botão para remover a relação.  
+     Exclua a relação selecionada na lista de **Relações Selecionadas** . Para cancelar a adição de uma relação, use esse botão para remover a relação.  
   
      **Categoria Geral**  
      Expanda para mostrar **Verificar Dados Existentes ao Criar ou Habilitar Novamente** e **Especificações de Tabelas e Colunas**.  
   
-     **Verificar Dados Existentes ao Criar ou Habilitar Novamente**  
+     **Check Existing Data on Creation or Re-Enabling**  
      Verifique todos os dados anteriores existentes na tabela quando a restrição foi criada ou habilitada novamente, em relação à restrição.  
   
      **Categoria de Especificações de Tabelas e Colunas**  
@@ -109,7 +113,7 @@ caps.handback.revision: 20
      **Categoria do Designer de Tabelas**  
      Expanda para mostrar informações por **Verificar Dados Existentes ao Criar ou Habilitar Novamente** e **Impor para Replicação**.  
   
-     **Impor para Replicação**  
+     **Enforce For Replication**  
      Indica se a restrição será imposta quando um agente de replicação realizar uma inserção, atualização ou exclusão na tabela.  
   
      **Impor Restrição de Chave Estrangeira**  
@@ -145,6 +149,6 @@ caps.handback.revision: 20
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  **Para modificar uma chave estrangeira**  
   
- Para modificar uma restrição FOREIGN KEY usando o Transact-SQL, exclua primeiramente a FOREIGN KEY já existente e, em seguida, recrie-a com a nova definição. Para obter mais informações, consulte [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) e [Create Foreign Key Relationships](../../relational-databases/tables/criar-relações-de-chaves-estrangeiras.md).  
+ Para modificar uma restrição FOREIGN KEY usando o Transact-SQL, exclua primeiramente a FOREIGN KEY já existente e, em seguida, recrie-a com a nova definição. Para obter mais informações, consulte [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) e [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md).  
   
 ###  <a name="TsqlExample"></a>  

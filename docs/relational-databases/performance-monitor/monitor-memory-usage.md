@@ -1,35 +1,39 @@
 ---
-title: "Monitorar o uso da mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ajustando bancos de dados [SQL Server], memória"
-  - "monitorando o desempenho do servidor [SQL Server], uso de memória"
-  - "isolando memória [SQL Server]"
-  - "taxa de paginação [SQL Server]"
-  - "memória [SQL Server], monitorando o uso"
-  - "monitorando [SQL Server], uso de memória"
-  - "condições de memória baixa"
-  - "monitoramento do banco de dados [SQL Server], uso de memória"
-  - "memória disponível [SQL Server]"
-  - "falhas de página [SQL Server]"
-  - "monitorando o desempenho [SQL Server], uso de memória"
-  - "desempenho do servidor [SQL Server], memória"
+title: "Monitorar o uso de memória | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tuning databases [SQL Server], memory
+- monitoring server performance [SQL Server], memory usage
+- isolating memory [SQL Server]
+- paging rate [SQL Server]
+- memory [SQL Server], monitoring usage
+- monitoring [SQL Server], memory usage
+- low-memory conditions
+- database monitoring [SQL Server], memory usage
+- available memory [SQL Server]
+- page faults [SQL Server]
+- monitoring performance [SQL Server], memory usage
+- server performance [SQL Server], memory
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b69c5082567467771189cb7f9e781d850680bd34
+ms.lasthandoff: 04/11/2017
+
 ---
-# Monitorar o uso da mem&#243;ria
+# <a name="monitor-memory-usage"></a>Monitorar o uso da memória
   Monitore uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodicamente para confirmar que o uso de memória está dentro de intervalos normais.  
   
  Para monitorar uma condição da memória baixa, use os seguintes contadores de objetos:  
@@ -42,12 +46,12 @@ caps.handback.revision: 26
   
  Baixos valores no contador **Bytes disponíveis** podem indicar a existência de uma escassez global de memória no computador ou que um aplicativo não está liberando a memória. Uma taxa alta no contador **Páginas/s** pode indicar paginação excessiva. Monitore o contador **Memory: Page Faults/sec (Memória: Falhas de Páginas/s)** para ter certeza de que a atividade no disco não é provocada por paginação.  
   
- Uma taxa baixa de paginação (e, logo, de falhas de página) é normal, mesmo que o computador tenha muita memória disponível. O Gerenciador de Memória Virtual (VMM) do Microsoft Windows conta as páginas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de outros processos, organizando os tamanhos de conjunto de trabalho desses processos. Essa atividade do VMM tende a causar falhas de página. Para determinar se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou outro processo é a causa da paginação excessiva, monitore o contador **Process: Page Faults/sec (Processo: Falhas de Página/s)** da instância do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Uma taxa baixa de paginação (e, logo, de falhas de página) é normal, mesmo que o computador tenha muita memória disponível. O Gerenciador de Memória Virtual (VMM) do Microsoft Windows conta as páginas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de outros processos, organizando os tamanhos de conjunto de trabalho desses processos. Essa atividade do VMM tende a causar falhas de página. Para determinar se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou outro processo é a causa da paginação excessiva, monitore o contador **Process: Page Faults/sec (Processo: Falhas de Página/s)** da instância do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Para obter mais informações sobre como solucionar a paginação excessiva, consulte a documentação do sistema operacional Windows.  
   
-## Isolando a memória usada pelo SQL Server  
- Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] altera seus requisitos de memória dinamicamente, com base nos recursos de sistema disponíveis. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisar de mais memória, ele consultará o sistema operacional para determinar se há memória física livre disponível e a usará. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não precisar da memória alocada para ele atualmente, ele a liberará para o sistema operacional. Porém, é possível substituir a opção de usar a memória dinamicamente, por meio das opções de configuração de servidor **minservermemory** e **maxservermemory**. Para obter mais informações, consulte [Opções de memória do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
+## <a name="isolating-memory-used-by-sql-server"></a>Isolando a memória usada pelo SQL Server  
+ Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] altera seus requisitos de memória dinamicamente, com base nos recursos de sistema disponíveis. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisar de mais memória, ele consultará o sistema operacional para determinar se há memória física livre disponível e a usará. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não precisar da memória alocada para ele atualmente, ele a liberará para o sistema operacional. Porém, é possível substituir a opção de usar a memória dinamicamente, por meio das opções de configuração de servidor **minservermemory**e **maxservermemory** . Para obter mais informações, consulte [Opções de memória do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
  Para monitorar a quantidade de memória utilizada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , examine os seguintes contadores de desempenho:  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 26
   
  Se o contador **TotalServerMemory (KB)** estiver consistentemente alto, em comparação com a quantidade de memória física disponível no computador, isso pode indicar a necessidade de mais memória.  
   
-## Determinando a alocação de memória atual  
+## <a name="determining-current-memory-allocation"></a>Determinando a alocação de memória atual  
  A instrução a seguir retorna informações sobre a memória alocada atualmente.  
   
 ```  

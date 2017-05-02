@@ -1,37 +1,41 @@
 ---
-title: "N&#250;meros de sequ&#234;ncia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "objeto de número de sequência, visão geral"
-  - "sequência [Mecanismo de Banco de Dados]"
-  - "numeração automática, sequências"
-  - "números de sequência [SQL Server]"
-  - "objeto de número de sequência"
+title: "Números em sequência | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sequence number object, overview
+- sequence [Database Engine]
+- autonumbers, sequences
+- sequence numbers [SQL Server]
+- sequence number object
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be2100277326fafec2dd32609b977de0f72cb9b4
+ms.lasthandoff: 04/11/2017
+
 ---
-# N&#250;meros de sequ&#234;ncia
+# <a name="sequence-numbers"></a>Números de sequência
   Uma sequência é um objeto associado a um esquema definido pelo usuário que gera uma sequência de valores numéricos de acordo com a especificação com a qual a sequência foi criada. A sequência de valores numéricos é gerada em ordem crescente ou decrescente em um intervalo definido e pode seguir um ciclo (repetir-se) conforme solicitado. As sequências, ao contrário das colunas de identidade, não são associadas a tabelas. Um aplicativo se refere a um objeto de sequência para receber seu próximo valor. A relação entre sequências e tabelas é controlada pelo aplicativo. Os aplicativos de usuário podem referenciar um objeto de sequência e coordenar as chaves de valores em várias linhas e tabelas.  
   
- Uma sequência é criada independentemente das tabelas com o uso da instrução **CREATE SEQUENCE**. Opções permitem que você controle o incremento, os valores máximo e mínimo, o ponto de partida, o recurso de reinício automático e o cache para melhorar desempenho. Para obter informações sobre as opções, veja [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md).  
+ Uma sequência é criada independentemente das tabelas com o uso da instrução **CREATE SEQUENCE** . Opções permitem que você controle o incremento, os valores máximo e mínimo, o ponto de partida, o recurso de reinício automático e o cache para melhorar desempenho. Para obter informações sobre as opções, veja [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md).  
   
- Ao contrário dos valores de coluna de identidade, que são gerados quando as linhas são inseridas, um aplicativo pode obter o próximo número de sequência antes de inserir a linha chamando a função [NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md). O número de sequência é alocado quando NEXT VALUE FOR é chamado, mesmo quando o número nunca é inserido em uma tabela. A função NEXT VALUE FOR pode ser usada como o valor padrão para uma coluna em uma definição de tabela. Use [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) para obter um intervalo de vários números de sequência de uma só vez.  
+ Ao contrário dos valores de coluna de identidade, que são gerados quando as linhas são inseridas, um aplicativo pode obter o próximo número de sequência antes de inserir a linha chamando a função [NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md) . O número de sequência é alocado quando NEXT VALUE FOR é chamado, mesmo quando o número nunca é inserido em uma tabela. A função NEXT VALUE FOR pode ser usada como o valor padrão para uma coluna em uma definição de tabela. Use [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) para obter um intervalo de vários números de sequência de uma só vez.  
   
  Uma sequência pode ser definida como qualquer tipo de dados integer. Se o tipo de dados não for especificado, uma sequência assumirá o padrão **bigint**.  
   
-## Usando sequências  
+## <a name="using-sequences"></a>Usando sequências  
  Use sequências em vez de colunas de identidade nos seguintes cenários:  
   
 -   O aplicativo requer um número antes da inserção na tabela.  
@@ -46,16 +50,16 @@ caps.handback.revision: 31
   
 -   Você precisa alterar a especificação da sequência, como o valor de incremento.  
   
-## Limitações  
+## <a name="limitations"></a>Limitações  
  Ao contrário das colunas de identidade, cujos valores não podem ser alterados, os valores de sequência não são protegidos automaticamente após a inserção na tabela. Para impedir a alteração de valores de sequência, use um gatilho de atualização na tabela reverter alterações.  
   
  A exclusividade não é imposta automaticamente para valores de sequência. A capacidade de reutilizar valores de sequência é determinada pelo design. Se os valores de sequência em uma tabela precisarem ser exclusivos, crie um índice exclusivo na coluna. Se os valores de sequência em uma tabela precisarem ser exclusivos em um grupo de tabelas, crie gatilhos para evitar duplicatas causadas por instruções de atualização ou pelo ciclo de números de sequência.  
   
  O objeto de sequência gera números de acordo com sua definição, mas o objeto de sequência não controla como os números são usados. Os números de sequência inseridos em uma tabela podem ter intervalos quando uma transação é revertida, quando um objeto de sequência é compartilhado por várias tabelas ou quando os números de sequência são alocados e não são usados em tabelas. Quando criado com a opção CACHE, um desligamento inesperado, como uma deficiência de energia, pode perder os números de sequência no cache.  
   
- Se houver várias instâncias da função **NEXT VALUE FOR** especificando o mesmo gerador de sequência em uma única instrução [!INCLUDE[tsql](../../includes/tsql-md.md)], todas as instâncias retornarão o mesmo valor para uma determinada linha processada por essa instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esse comportamento é coerente com o padrão ANSI.  
+ Se houver várias instâncias da função **NEXT VALUE FOR** especificando o mesmo gerador de sequência em uma única instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] , todas as instâncias retornarão o mesmo valor para uma determinada linha processada por essa instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] . Esse comportamento é coerente com o padrão ANSI.  
   
-## Usos comum  
+## <a name="typical-use"></a>Usos comum  
  Para criar um número de sequência de inteiros com incrementos de 1 a partir de -2.147,483.648 até 2.147.483.647, use a instrução a seguir.  
   
 ```  
@@ -74,13 +78,13 @@ CREATE SEQUENCE Schema.SequenceName
   
 ```  
   
-## Gerenciando sequências  
+## <a name="managing-sequences"></a>Gerenciando sequências  
  Para obter informações sobre sequências, consulte [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md).  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  Há outros exemplos nos tópicos [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md), [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md) e [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md).  
   
-### A. Usando um número de sequência em uma única tabela  
+### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. Usando um número de sequência em uma única tabela  
  O exemplo a seguir cria um esquema denominado Test, uma tabela denominada Orders e uma sequência denominada CountBy1 e insere linhas na tabela usando a função NEXT VALUE FOR.  
   
 ```  
@@ -125,8 +129,8 @@ GO
   
  `3        Brake   1`  
   
-### B. Chamando NEXT VALUE FOR antes de inserir uma linha  
- Usando a tabela `Orders` criada no exemplo A, o exemplo a seguir declara uma variável denominada `@nextID` e, em seguida, usa a função NEXT VALUE FOR para definir a variável como o próximo número de sequência disponível. O aplicativo deve fazer algum processamento do pedido, como fornecer ao cliente o número `OrderID` do seu pedido em potencial, e depois validar a ordem. Independentemente de quanto tempo este processamento possa levar, ou de quantas outras ordens sejam adicionadas durante o processo, o número original é preservado para ser usado por esta conexão. Por fim, a instrução `INSERT` adiciona o pedido à tabela `Orders`.  
+### <a name="b-calling-next-value-for-before-inserting-a-row"></a>B. Chamando NEXT VALUE FOR antes de inserir uma linha  
+ Usando a tabela `Orders` criada no exemplo A, o exemplo a seguir declara uma variável denominada `@nextID`e, em seguida, usa a função NEXT VALUE FOR para definir a variável como o próximo número de sequência disponível. O aplicativo deve fazer algum processamento do pedido, como fornecer ao cliente o número `OrderID` do seu pedido em potencial, e depois validar a ordem. Independentemente de quanto tempo este processamento possa levar, ou de quantas outras ordens sejam adicionadas durante o processo, o número original é preservado para ser usado por esta conexão. Por fim, a instrução `INSERT` adiciona o pedido à tabela `Orders` .  
   
 ```  
 DECLARE @NextID int ;  
@@ -138,8 +142,8 @@ GO
   
 ```  
   
-### C. Usando um número de sequência em várias tabelas  
- Este exemplo presume que um processo de monitoramento de linha de produção recebe a notificação dos eventos que ocorrem em toda a fábrica. Cada evento recebe um número `EventID` exclusivo e com aumento monotônico. Todos os eventos usam o mesmo número de sequência `EventID`, de forma que os relatórios que combinam todos os eventos possam identificar cada evento de modo exclusivo. Entretanto, os dados do evento são armazenados em três tabelas diferentes, dependendo do tipo de evento. O exemplo de código cria um esquema chamado `Audit`, uma sequência chamada `EventCounter` e três tabelas que usam cada uma a sequência `EventCounter` como valor padrão. Em seguida, o exemplo adiciona linhas às três tabelas e consulta os resultados.  
+### <a name="c-using-a-sequence-number-in-multiple-tables"></a>C. Usando um número de sequência em várias tabelas  
+ Este exemplo presume que um processo de monitoramento de linha de produção recebe a notificação dos eventos que ocorrem em toda a fábrica. Cada evento recebe um número `EventID` exclusivo e com aumento monotônico. Todos os eventos usam o mesmo número de sequência `EventID` , de forma que os relatórios que combinam todos os eventos possam identificar cada evento de modo exclusivo. Entretanto, os dados do evento são armazenados em três tabelas diferentes, dependendo do tipo de evento. O exemplo de código cria um esquema chamado `Audit`, uma sequência chamada `EventCounter`e três tabelas que usam cada uma a sequência `EventCounter` como valor padrão. Em seguida, o exemplo adiciona linhas às três tabelas e consulta os resultados.  
   
 ```  
 CREATE SCHEMA Audit ;  
@@ -228,7 +232,7 @@ GO
   
  `7        2009-11-02 15:00:51.180  Central feed in bypass mode.`  
   
-### D. Gerando números de sequência repetidos em um conjunto de resultados  
+### <a name="d-generating-repeating-sequence-numbers-in-a-result-set"></a>D. Gerando números de sequência repetidos em um conjunto de resultados  
  O exemplo a seguir demonstra dois recursos de números de sequência: ciclos e o uso de `NEXT VALUE FOR` em uma instrução select.  
   
 ```  
@@ -245,7 +249,7 @@ SELECT NEXT VALUE FOR CountBy5 AS SurveyGroup, Name FROM sys.objects ;
 GO  
 ```  
   
-### E. Gerando números de sequência para um conjunto de resultados usando a cláusula OVER  
+### <a name="e-generating-sequence-numbers-for-a-result-set-by-using-the-over-clause"></a>E. Gerando números de sequência para um conjunto de resultados usando a cláusula OVER  
  O exemplo a seguir usa a cláusula `OVER` para classificar o conjunto de resultados por `Name` antes de adicionar a coluna de números de sequência.  
   
 ```  
@@ -265,7 +269,7 @@ SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, 
 WHERE Name LIKE '%nut%' ;  
 ```  
   
-### F. Redefinindo o número de sequência  
+### <a name="f-resetting-the-sequence-number"></a>F. Redefinindo o número de sequência  
  O exemplo E consumiu os primeiros 79 dos números de sequência `Samples.IDLabel`. (Sua versão do `AdventureWorks2012` poderá retornar um número diferente de resultados.) Execute a instrução a seguir para consumir os próximos 79 números de sequência (de 80 a 158).  
   
 ```  
@@ -287,7 +291,7 @@ SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, 
 WHERE Name LIKE '%nut%' ;  
 ```  
   
-### G. Alterando uma tabela de identidade para sequência  
+### <a name="g-changing-a-table-from-identity-to-sequence"></a>G. Alterando uma tabela de identidade para sequência  
  O exemplo a seguir cria um esquema e tabela contendo três linhas para o exemplo. Em seguida, o exemplo adiciona uma nova coluna e remove a coluna antiga.  
   
 ```  
@@ -386,15 +390,15 @@ GO
   
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] As instruções que usam `SELECT *` receberão a nova coluna como a última coluna, e não a primeira. Se isso não for aceitável, você deverá criar uma tabela totalmente nova, mover os dados para ela e recriar as permissões na nova tabela.  
+ As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que usam `SELECT *` receberão a nova coluna como a última coluna, e não a primeira. Se isso não for aceitável, você deverá criar uma tabela totalmente nova, mover os dados para ela e recriar as permissões na nova tabela.  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  
   
  [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)  
   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)  
   
- [IDENTITY &#40;Propriedade&#41; &#40;Transact-SQL&#41;](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md)  
+ [IDENTITY &#40;Propriedade&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   

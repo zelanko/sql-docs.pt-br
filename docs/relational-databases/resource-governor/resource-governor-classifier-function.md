@@ -1,30 +1,34 @@
 ---
-title: "Fun&#231;&#227;o de classifica&#231;&#227;o do Administrador de Recursos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Administrador de Recursos, função de classificação"
-  - "funções definidas pelo usuário [SQL Server], função de classificação"
-  - "função de classificação [SQL Server]"
-  - "função de classificação [SQL Server], visão geral"
+title: "Função do classificador do Resource Governor | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function
+- user-defined functions [SQL Server], classifier function
+- classifier function [SQL Server]
+- classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 284ee7a05af7ab73e78dd827269db49c7d3f1e00
+ms.lasthandoff: 04/11/2017
+
 ---
-# Fun&#231;&#227;o de classifica&#231;&#227;o do Administrador de Recursos
+# <a name="resource-governor-classifier-function"></a>Função de classificação do Administrador de Recursos
   O processo de classificação do administrador de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui sessões de entrada a um grupo de cargas de trabalho baseado nas características da sessão. Você pode personalizar a lógica de classificação gravando uma função definida pelo usuário, chamado de função de classificador.  
   
-## Classificação  
+## <a name="classification"></a>Classificação  
  O Administrador de Recursos oferece suporte à classificação de sessões de entrada. A classificação baseia-se em um conjunto de critérios gravados pelo usuário contido em uma função. Os resultados da lógica de função permitem que o Administrador de Recursos classifique as sessões em grupos de carga de trabalho existentes.  
   
 > [!NOTE]  
@@ -64,7 +68,7 @@ caps.handback.revision: 7
 > [!IMPORTANT]  
 >  É recomendável habilitar a conexão de administrador dedicada (DAC) no servidor. A DAC não está sujeita à classificação do Administrador de Recursos e pode ser usada para monitorar e solucionar problemas de uma função de classificação. Para obter mais informações, veja [Conexão de diagnóstico para administradores de banco de dados](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). Se uma DAC não estiver disponível para a solução de problemas, a outra opção é reiniciar o sistema no modo de usuário único. Embora o modo de usuário único não esteja sujeito a classificação, ele não oferece a você a capacidade de diagnosticar a classificação do Administrador de Recursos enquanto está em execução.  
   
-### Processo de classificação  
+### <a name="classification-process"></a>Processo de classificação  
  No contexto do Administrador de Recursos, o processo de logon para uma sessão consiste nas seguintes etapas:  
   
 1.  Autenticação de logon  
@@ -78,13 +82,13 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  As informações sobre a execução da função de classificação e dos gatilhos LOGON são expostas em [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) e [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).  
   
-## Tarefas da função de classificação  
+## <a name="classification-function-tasks"></a>Tarefas da função de classificação  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Descreve como criar e testar uma função de classificação definida pelo usuário.|[Criar e testar uma função de classificação definida pelo usuário](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de recursos do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

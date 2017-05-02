@@ -1,25 +1,29 @@
 ---
-title: "Restri&#231;&#245;es exclusivas e restri&#231;&#245;es de verifica&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restrições [SQL Server], Visual Database Tools"
-  - "Visual Database Tools [SQL Server], restrições"
+title: "Restrições exclusivas e restrições de verificação | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- constraints [SQL Server], Visual Database Tools
+- Visual Database Tools [SQL Server], constraints
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b5596207dc1188bd9830c0993402194954737c6a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restri&#231;&#245;es exclusivas e restri&#231;&#245;es de verifica&#231;&#227;o
+# <a name="unique-constraints-and-check-constraints"></a>Restrições exclusivas e restrições de verificação
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Restrições UNIQUE e CHECK são dois tipos de restrições que podem ser usadas para impor a integridade de dados em tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esses são objetos de banco de dados importantes.  
@@ -44,14 +48,14 @@ caps.handback.revision: 20
 ##  <a name="Check"></a> Restrições CHECK  
  Restrições CHECK impõe integridade de domínio limitando os valores aceitos por uma ou mais colunas. Você pode criar uma restrição CHECK com qualquer expressão lógica (Booleana) que retorne TRUE ou FALSE com base em operadores lógicos. Por exemplo, o intervalo de valores para uma coluna **salário** pode ser limitado pela criação de uma restrição CHECK, que apenas permite que os dados variem entre US$ 15.000 e US$ 100.000. Isto evita que salários sejam digitados além do intervalo de salário regular. A expressão lógica seria a seguinte: `salary >= 15000 AND salary <= 100000`.  
   
- Você pode aplicar várias restrições CHECK a uma única coluna. Você também pode aplicar uma única restrição CHECK a várias colunas criando-as ao nível de tabela. Por exemplo, uma restrição CHECK de várias colunas poderia ser usada para confirmar que qualquer linha com o valor de coluna **country_region** de **USA** também tenha um valor de dois caracteres na coluna **state**. Isto permite que várias condições sejam verificadas em um local.  
+ Você pode aplicar várias restrições CHECK a uma única coluna. Você também pode aplicar uma única restrição CHECK a várias colunas criando-as ao nível de tabela. Por exemplo, uma restrição CHECK de várias colunas poderia ser usada para confirmar que qualquer linha com o valor de coluna **country_region** de **USA** também tenha um valor de dois caracteres na coluna **state** . Isto permite que várias condições sejam verificadas em um local.  
   
  Restrições CHECK são semelhantes a restrições FOREIGN KEY pelo fato de controlarem os valores colocados em uma coluna. A diferença está em como elas determinam quais valores são válidos: restrições FOREIGN KEY obtêm uma lista de valores válidos de uma outra tabela, enquanto que restrições CHECK determinam valores válidos de uma expressão lógica.  
   
 > [!CAUTION]  
 >  Restrições que incluem conversão de tipo de dados implícita ou explícita podem causar falhas em certas operações. Por exemplo, tais restrições definidas em tabelas que são fontes de opção de partição podem causar falha na operação ALTER TABLE...SWITCH. Evite a conversão de tipo de dados em definições de restrição.  
   
-### Limitações de restrições CHECK   
+### <a name="limitations-of-check-constraints"></a>Limitações de restrições CHECK  
  As restrições CHECK rejeitam valores avaliados como FALSE. Porque valores nulos avaliam a UNKNOWN, a sua presença em expressões pode anular uma restrição. Por exemplo, suponha que você coloque uma restrição em uma coluna **int** **MyColumn** especificando que **MyColumn** possa conter apenas o valor 10 (**MyColumn=10**). Se você inserir o valor NULL em **MyColumn**, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserirá NULL e não retornará um erro.  
   
  Uma restrição CHECK retorna TRUE quando a condição que está verificando não é FALSE para qualquer linha na tabela. Uma restrição CHECK funciona no nível de linha. Se a tabela acabou de ser criada e não tiver nenhuma linha, qualquer restrição CHECK nesta tabela é considerada válida. Esta situação pode produzir resultados inesperados, como no exemplo seguinte.  

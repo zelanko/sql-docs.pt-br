@@ -1,44 +1,48 @@
 ---
-title: "Gerenciar o controle de altera&#231;&#245;es (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controlando alterações de dados [SQL Server]"
-  - "controle de alterações [SQL Server], sobrecarga"
-  - "controle de alterações [SQL Server]"
-  - "controle de alterações [SQL Server], gerenciando"
+title: "Gerenciar o controle de alterações (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tracking data changes [SQL Server]
+- change tracking [SQL Server], overhead
+- change tracking [SQL Server]
+- change tracking [SQL Server], managing
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e6a29f384995058da7b4beef3edc3dac37e3e616
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gerenciar o controle de altera&#231;&#245;es (SQL Server)
+# <a name="manage-change-tracking-sql-server"></a>Gerenciar o controle de alterações (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Este tópico descreve como gerenciar o controle de alterações. Ele também descreve como configurar a segurança e determinar os efeitos sobre o armazenamento e o desempenho quando você usa o controle de alterações.  
   
-## Gerenciando o controle de alterações  
+## <a name="managing-change-tracking"></a>Gerenciando o controle de alterações  
  As próximas seções listam exibições de catálogo, permissões e configurações relevantes para o gerenciamento do controle de alterações.  
   
-### Exibições do catálogo  
+### <a name="catalog-views"></a>Exibições do catálogo  
  Para determinar quais as tabelas e bancos de dados que possuem o controle de alterações habilitado, você pode usar as seguintes exibições do catálogo:  
   
--   [sys.change_tracking_databases &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)  
+-   [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)  
   
--   [sys.change_tracking_tables &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)  
+-   [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   
  Além disso, a exibição de catálogo [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) lista as tabelas internas criadas quando o controle de alterações está habilitado para um usuário da tabela.  
   
-### Segurança  
+### <a name="security"></a>Segurança  
  Para acessar informações do controle de alterações usando as [funções de controle de alterações](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md), o principal deve ter as seguintes permissões:  
   
 -   Permissão SELECT em pelo menos as colunas de chave primária, em uma tabela com alterações controladas da tabela que está sendo consultada.  
@@ -49,7 +53,7 @@ caps.handback.revision: 9
   
     -   As informações do controle de alterações podem armazenar informações sobre as colunas que foram alteradas por operações de atualização. Um principal poderia ter negada a permissão de acesso a uma coluna que contém informações confidenciais. Porém, como as informações de controle de alterações estão disponíveis, um principal pode determinar que um valor de coluna foi atualizado, mas não pode determinar o valor da coluna.  
   
-## Noções básicas de sobrecarga do controle de alterações  
+## <a name="understanding-change-tracking-overhead"></a>Noções básicas de sobrecarga do controle de alterações  
  Quando o controle de alterações estiver habilitado em uma tabela, algumas operações de administração são afetadas. A tabela a seguir lista as operações e os efeitos que você deve considerar:  
   
 |Operação|Quando o controle de alterações está habilitado|  
@@ -65,7 +69,7 @@ caps.handback.revision: 9
   
  O uso do controle de alterações adiciona uma certa sobrecarga às operações DML devido às informações de controle que são armazenadas como parte do procedimento.  
   
-### Efeitos na DML  
+### <a name="effects-on-dml"></a>Efeitos na DML  
  O controle de alterações foi otimizado para minimizar a sobrecarga de desempenho nas operações DML. A sobrecarga de desempenho incremental associada com o uso do controle de alterações em uma tabela é semelhante à sobrecarga incorrida quando um índice é criado para uma tabela e precisa ser mantido  
   
  Para cada linha alterada por uma operação DML, uma linha é adicionada à tabela interna de controle de alterações. O efeito dessa relação com a operação DML depende de vários fatores, como os seguintes:  
@@ -78,7 +82,7 @@ caps.handback.revision: 9
   
  O isolamento do instantâneo, se utilizado, também afeta o desempenho de todas as operações DML, quer o controle de alterações esteja habilitado ou não.  
   
-### Efeitos no armazenamento  
+### <a name="effects-on-storage"></a>Efeitos no armazenamento  
  Os dados do controle de alterações são armazenados nos seguintes tipos de tabelas internas:  
   
 -   Tabela de alteração interna  
@@ -95,22 +99,23 @@ caps.handback.revision: 9
   
 -   Para cada transação confirmada, uma linha é adicionada a uma tabela de transação interna.  
   
- Assim como ocorre em outras tabelas internas, você pode determinar o espaço usado para as tabelas de controle de alterações usando o procedimento armazenado [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md). Os nomes das tabelas internas podem ser obtidos usando a exibição de catálogo [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md), conforme mostrado no exemplo a seguir.  
+ Assim como ocorre em outras tabelas internas, você pode determinar o espaço usado para as tabelas de controle de alterações usando o procedimento armazenado [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) . Os nomes das tabelas internas podem ser obtidos usando a exibição de catálogo [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) , conforme mostrado no exemplo a seguir.  
   
 ```tsql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Controle de alterações de dados &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [Propriedades do Banco de Dados &#40;Página Controle de Alterações&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
- [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
- [sys.change_tracking_databases &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)   
- [sys.change_tracking_tables &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)   
+ [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
+ [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   
  [Controle de alterações de dados &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Sobre o controle de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Trabalhar com dados de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
   
+

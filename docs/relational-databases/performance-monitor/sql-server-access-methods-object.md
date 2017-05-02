@@ -1,25 +1,29 @@
 ---
-title: "SQL Server, Objeto M&#233;todos de Acesso | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Objeto Métodos de Acesso"
-  - "SQLServer:Métodos de Acesso"
+title: "SQL Server, objeto Métodos de Acesso | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Access Methods object
+- SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19dcb59cbc63c0c956604fb5745f8446da067642
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, Objeto M&#233;todos de Acesso
+# <a name="sql-server-access-methods-object"></a>SQL Server, Objeto Métodos de Acesso
   O objeto **Access Methods** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar como são acessados os dados lógicos dentro do banco de dados. O acesso físico às páginas do banco de dados no disco é monitorado usando os contadores do **Gerenciador de Buffer** . Monitorar os métodos usados para acessar os dados armazenados no banco de dados pode ajudá-lo a determinar se o desempenho da consulta pode ser melhorado, adicionando ou modificando índices, adicionando ou movendo partições, adicionando arquivos ou grupos de arquivo, desfragmentando índices ou regravando consultas. Os contadores dos **Métodos de Acesso** também podem ser usados para monitorar a quantidade de dados, índices e espaço livre dentro do banco de dados, indicando assim o volume e a fragmentação de dados para cada instância do servidor. A fragmentação excessiva do índice pode prejudicar o desempenho.  
   
  Para obter informações mais detalhadas sobre volume, fragmentação e uso de dados, use as seguintes exibições de gerenciamento dinâmico:  
@@ -89,7 +93,7 @@ caps.handback.revision: 36
 |**Tabelas de Trabalho do Cache Base**|Somente para uso interno.|  
 |**Taxas de Tabela de Trabalho do Cache**|Porcentagem de tabelas de trabalho criadas em que as duas páginas iniciais de uma determinada tabela não estavam alocadas, mas estavam imediatamente disponíveis no cache de tabelas de trabalho. (Quando uma tabela de trabalho é descartada, duas páginas podem permanecer alocadas e são retornadas ao cache de tabelas de trabalho. Isto aumenta o desempenho.)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

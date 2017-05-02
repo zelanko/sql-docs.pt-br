@@ -1,27 +1,31 @@
 ---
-title: "Classe de evento SP:Completed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Classe de evento SP:Completed"
+title: Classe de evento SP:Completed | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SP:Completed event class
 ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8ed4a766035c7fffe237cf4cee20e8fea64ed001
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento SP:Completed
+# <a name="spcompleted-event-class"></a>Classe de evento SP:Completed
   A classe de evento SP:Completed indica que o procedimento armazenado completou a execução.  
   
-## Colunas de dados da classe de evento SP:Completed  
+## <a name="spcompleted-event-class-data-columns"></a>Colunas de dados da classe de evento SP:Completed  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -56,7 +60,7 @@ caps.handback.revision: 34
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |XactSequence|**bigint**|Token que descreve a transação atual.|50|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

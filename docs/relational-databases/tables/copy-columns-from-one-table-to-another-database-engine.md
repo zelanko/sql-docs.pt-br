@@ -1,25 +1,29 @@
 ---
-title: "Copiar colunas de uma tabela em outra (Mecanismo de Banco de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "copiando colunas"
-  - "colunas [SQL Server], copiando"
+title: Copiar colunas de uma tabela para outra (mecanismo de banco de dados) | Microsoft Docs
+ms.custom: 
+ms.date: 09/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- copying columns
+- columns [SQL Server], copying
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27f2f6ae3af99a9c76934ab4c875d3c2c9746f40
+ms.lasthandoff: 04/11/2017
+
 ---
-# Copiar colunas de uma tabela em outra (Mecanismo de Banco de Dados)
+# <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copiar colunas de uma tabela em outra (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Este tópico descreve como copiar colunas de uma tabela para outra, copiando apenas a definição da coluna ou a definição e os dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -50,7 +54,7 @@ caps.handback.revision: 23
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para copiar definições de coluna de uma tabela para outra  
+#### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Para copiar definições de coluna de uma tabela para outra  
   
 1.  Abra a tabela que contém as colunas a serem copiadas e a tabela na qual deseja copiar as colunas clicando com o botão direito do mouse nas tabelas e clicando em **Design**.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 23
   
 5.  Selecione a coluna à qual se seguirão as colunas inseridas e, no menu **Editar** , clique em **Colar**.  
   
-#### Para copiar dados de uma tabela para outra  
+#### <a name="to-copy-data-from-one-table-to-another"></a>Para copiar dados de uma tabela para outra  
   
 1.  Siga as orientações para copiar as definições da coluna acima.  
   
@@ -71,13 +75,13 @@ caps.handback.revision: 23
   
 2.  Abre uma nova janela do Editor de Consultas. 
 
-3.  Clique com o botão direito do mouse no Editor de Consultas e clique em **Projetar Consulta no Editor.**. 
+3.  Clique com o botão direito do mouse no Editor de Consultas e clique em **Projetar Consulta no Editor**. 
 
-4.  Na caixa de diálogo **Adicionar Tabela**, selecione a tabela de origem e de destino, clique em **Adicionar** e feche a caixa de diálogo **Adicionar Tabela**. 
+4.  Na caixa de diálogo **Adicionar Tabela** , selecione a tabela de origem e de destino, clique em **Adicionar**e feche a caixa de diálogo **Adicionar Tabela** . 
 
 5.  Clique com o botão direito do mouse em uma área aberta do Editor de Consultas, aponte para **Alterar Tipo**, e clique em **Inserir Resultados**.  
 
-6.  Na caixa de diálogo **Escolher Tabela de Destino para Inserir Resultados**, selecione a tabela de destino. 
+6.  Na caixa de diálogo **Escolher Tabela de Destino para Inserir Resultados** , selecione a tabela de destino. 
 
 7.  Na parte superior do Designer de Consultas, clique na coluna de origem da tabela de origem.
 
@@ -88,11 +92,11 @@ caps.handback.revision: 23
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para copiar definições de coluna de uma tabela para outra  
+#### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Para copiar definições de coluna de uma tabela para outra  
   
-1.  Você não pode copiar colunas individuais de uma tabela para outra tabela existente usando instruções Transact-SQL. No entanto, pode criar uma tabela nova no grupo de arquivos padrão e insere nela as linhas resultantes da consulta usando SELECT INTO. Para obter mais informações, veja [INTO Clause &#40;Transact-SQL&#41;](../Topic/INTO%20Clause%20\(Transact-SQL\).md).  
+1.  Você não pode copiar colunas individuais de uma tabela para outra tabela existente usando instruções Transact-SQL. No entanto, pode criar uma tabela nova no grupo de arquivos padrão e insere nela as linhas resultantes da consulta usando SELECT INTO. Para obter mais informações, veja [INTO Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-into-clause-transact-sql.md).  
   
-#### Para copiar dados de uma tabela para outra  
+#### <a name="to-copy-data-from-one-table-to-another"></a>Para copiar dados de uma tabela para outra  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -115,3 +119,4 @@ caps.handback.revision: 23
     ```  
   
   
+

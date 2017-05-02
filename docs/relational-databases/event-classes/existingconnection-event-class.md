@@ -1,27 +1,31 @@
 ---
-title: "Classe de evento ExistingConnection | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento ExistingConnection"
+title: Classe de evento ExistingConnection | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ExistingConnection event class
 ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d50c35d1e3f67d804cc80e6d7f442a12cb9942e5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento ExistingConnection
+# <a name="existingconnection-event-class"></a>classe de evento ExistingConnection
   A classe de evento ExistingConnection indica as propriedades de conexões de usuário existentes quando o rastreamento foi iniciado. O servidor gera um evento ExistingConnection por conexão de usuário existente.  
   
-## Colunas de dados da classe de evento Existing Connection  
+## <a name="existing-connection-event-class-data-columns"></a>Colunas de dados da classe de evento Existing Connection  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -47,7 +51,7 @@ caps.handback.revision: 31
 |StartTime|**datetime**|Hora em que o usuário abriu essa conexão (hora de logon).|14|Sim|  
 |TextData|**ntext**|Defina opções específicas para a conexão.|1|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Classe de evento Audit Login](../../relational-databases/event-classes/audit-login-event-class.md)  
   

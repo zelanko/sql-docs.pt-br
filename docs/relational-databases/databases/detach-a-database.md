@@ -1,27 +1,31 @@
 ---
-title: "Desanexar um banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.detachdatabase.f1"
-helpviewer_keywords: 
-  - "desanexando bancos de dados [SQL Server]"
-  - "desanexando bancos de dados [SQL Server]"
+title: Desanexar um banco de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.detachdatabase.f1
+helpviewer_keywords:
+- database detaching [SQL Server]
+- detaching databases [SQL Server]
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d22af54732f9e9042a7aea3dd830be712b80fdd8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Desanexar um banco de dados
+# <a name="detach-a-database"></a>Desanexar um banco de dados
   Este tópico descreve como desanexar um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Os arquivos desanexados permanecem e podem ser anexados novamente com o uso de CREATE DATABASE com a opção FOR ATTACH ou FOR ATTACH_REBUILD_LOG. Os arquivos podem ser movidos para outro servidor, onde podem ser anexados.  
   
  **Neste tópico**  
@@ -50,18 +54,18 @@ caps.handback.revision: 36
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para desanexar um banco de dados  
+#### <a name="to-detach-a-database"></a>Para desanexar um banco de dados  
   
 1.  No Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conecte-se à instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
   
 2.  Expanda **Bancos de Dados**e selecione o nome do banco de dados de usuário que você quer desanexar.  
   
-3.  Clique com o botão direito do mouse no nome do banco de dados, aponte para **Tarefas** e clique em **Desanexar**. A caixa de diálogo **Desanexar Banco de Dados** é exibida.  
+3.  Clique com o botão direito do mouse no nome do banco de dados, aponte para **Tarefas**e clique em **Desanexar**. A caixa de diálogo **Desanexar Banco de Dados** é exibida.  
   
      **Bancos de dados a serem desanexados**  
      Lista os bancos de dados a serem desanexados  
   
-     **Nome do Banco de Dados**  
+     **Database Name**  
      Exibe o nome do banco de dados a ser desanexado.  
   
      **Cancelar Conexões**  
@@ -74,7 +78,7 @@ caps.handback.revision: 36
      Por padrão, a operação desanexar retém qualquer estatística de otimização desatualizada ao desanexar o banco de dados; para atualizar as estatísticas de otimização existentes, clique nesta caixa de seleção.  
   
      **Manter Catálogos de Texto Completo**  
-     Por padrão, a operação desanexar mantém qualquer catálogo de texto completo que esteja associado ao banco de dados. Para removê-los, desmarque a caixa de seleção **Manter Catálogos de Texto Completo**. Essa opção é exibida apenas quando você está atualizando um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+     Por padrão, a operação desanexar mantém qualquer catálogo de texto completo que esteja associado ao banco de dados. Para removê-los, desmarque a caixa de seleção **Manter Catálogos de Texto Completo** . Essa opção é exibida apenas quando você está atualizando um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
      **Status**  
      Exibe um dos seguintes estados: **Pronto** ou **Não pronto**.  
@@ -95,7 +99,7 @@ caps.handback.revision: 36
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para desanexar um banco de dados  
+#### <a name="to-detach-a-database"></a>Para desanexar um banco de dados  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 36
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   

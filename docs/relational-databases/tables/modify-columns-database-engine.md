@@ -1,26 +1,30 @@
 ---
-title: "Modificar colunas (Mecanismo de Banco de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modificando tipos de dados"
-  - "tipos de dados de coluna [SQL Server]"
-  - "tipos de dados [SQL Server], colunas"
+title: Modificar colunas (Mecanismo de Banco de Dados) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying data types
+- column data types [SQL Server]
+- data types [SQL Server], columns
 ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 736b83dffa241040cf08e7f7d9410eaab80649af
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modificar colunas (Mecanismo de Banco de Dados)
+# <a name="modify-columns-database-engine"></a>Modificar colunas (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Você pode modificar o tipo de dados de uma coluna no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -49,13 +53,13 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para modificar o tipo de dados de uma coluna  
+#### <a name="to-modify-the-data-type-of-a-column"></a>Para modificar o tipo de dados de uma coluna  
   
 1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela com as colunas cuja escala você deseja alterar e clique em **Design**.  
   
 2.  Selecione a coluna cujo tipo de dados você pretende modificar.  
   
-3.  Na guia **Propriedades da Coluna**, clique na célula de grade da propriedade **Tipo de Dados** e selecione o novo tipo de dados na lista suspensa.  
+3.  Na guia **Propriedades da Coluna** , clique na célula de grade da propriedade **Tipo de Dados** e selecione o novo tipo de dados na lista suspensa.  
   
 4.  No menu **Arquivo** , clique em **Salvar***table name*.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 16
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para modificar o tipo de dados de uma coluna  
+#### <a name="to-modify-the-data-type-of-a-column"></a>Para modificar o tipo de dados de uma coluna  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

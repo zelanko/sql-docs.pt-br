@@ -1,22 +1,26 @@
 ---
-title: "Configura&#231;&#227;o do PolyBase | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Configuração do PolyBase | Microsoft Docs"
+ms.custom: 
+ms.date: 11/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 80ff73c1-2861-438b-a13f-309155f3d6e1
 caps.latest.revision: 17
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8486b55e306c7463551184cdd2334d629f5df135
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configura&#231;&#227;o do PolyBase
+# <a name="polybase-configuration"></a>Configuração do PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Use os procedimentos a seguir para configurar o PolyBase.  
@@ -47,7 +51,7 @@ caps.handback.revision: 12
     -   Mecanismo PolyBase do SQL Server  
   
 ## <a name="pushdown-configuration"></a>Configuração de empilhamento  
- Para melhorar o desempenho da consulta, habilite a computação de aplicação para um cluster Hadoop:  
+ Para melhorar o desempenho da consulta, habilite a computação de aplicação em um cluster Hadoop. Você precisará fornecer alguns parâmetros de configuração do SQL Server específicos ao ambiente do Hadoop:  
   
 1.  Localize o arquivo **yarn-site.xml** no caminho de instalação do SQL Server. Normalmente, o caminho é:  
   
@@ -57,10 +61,122 @@ caps.handback.revision: 12
   
 2.  No computador do Hadoop, localize o arquivo análogo no diretório da configuração do Hadoop. No arquivo, localize e copie o valor da chave de configuração yarn.application.classpath.  
   
-3.  No computador do SQL Server, no **yarn.site.xml file,** localize a propriedade **yarn.application.classpath**. Cole o valor do computador do Hadoop no elemento de valor.  
+3.  No computador do SQL Server, no **yarn.site.xml file,** localize a propriedade **yarn.application.classpath** . Cole o valor do computador do Hadoop no elemento de valor.  
+
+4. Para todas as versões do CDH 5.X, você precisará adicionar os parâmetros de configuração **mapreduce.application.classpath** ao final do **arquivo yarn.site.xml** ou ao **arquivo mapred-site.xml**. O HortonWorks inclui essas configurações nas configurações **yarn.application.classpath**.
+
+## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>Arquivos Yarn-site.xml e mapred-site.xml de exemplo para o cluster CDH 5.X.
+
+
+
+Yarn-site.xml com as configurações yarn.application.classpath e Mapreduce.application.classpath.
+```
+\<?xml version="1.0" encoding="utf-8"?>
+\<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+\<!-- Put site-specific property overrides in this file. -->
+ <configuration>
+  <property>
+     <name>yarn.resourcemanager.connect.max-wait.ms</name>
+     <value>40000</value>
+  </property>
+  <property>
+     <name>yarn.resourcemanager.connect.retry-interval.ms</name>
+     <value>30000</value>
+  </property>
+\<!-- Applications' Configuration-->
+  <property>
+    <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
+     \<!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+     \<!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+     <name>yarn.application.classpath</name>
+     <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/,$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH*</value>
+  </property>
+
+<!-- kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
+  <property>
+     <name>yarn.resourcemanager.principal</name>
+     <value></value>
+  </property>
+-->
+</configuration>
+
+```
+Se você optar por dividir as duas definições de configuração no mapred-site.xml e no yarn-site.xml, os arquivos seriam os seguintes:
+
+**yarn-site.xml**
+```
+\<?xml version="1.0" encoding="utf-8"?>
+\<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+\<!-- Put site-specific property overrides in this file. -->
+ <configuration>
+  <property>
+     <name>yarn.resourcemanager.connect.max-wait.ms</name>
+     <value>40000</value>
+  </property>
+  <property>
+     <name>yarn.resourcemanager.connect.retry-interval.ms</name>
+     <value>30000</value>
+  </property>
+\<!-- Applications' Configuration-->
+  <property>
+    <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
+     \<!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+     \<!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+     <name>yarn.application.classpath</name>
+     <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/*</value>
+  </property>
+
+<!-- kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
+  <property>
+     <name>yarn.resourcemanager.principal</name>
+     <value></value>
+  </property>
+-->
+</configuration>
+```
+
+**mapred-site.xml**
+
+Observe que adicionamos a propriedade mapreduce.application.classpath. No CDH 5.x, você encontrará os valores de configuração com a mesma convenção de nomenclatura no Ambari.
+
+  ```
+  \<?xml version="1.0"?>
+\<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+\<!-- Put site-specific property overrides in this file. -->
+\<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
+  <property>
+    <name>mapred.min.split.size</name>
+      <value>1073741824</value>
+  </property>
+  <property>
+    <name>mapreduce.app-submission.cross-platform</name>
+    <value>true</value>
+  </property>
+<property>
+    <name>mapreduce.application.classpath</name>
+    <value>$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH</value>
+  </property>
+
+
+<!--kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
+  <property>
+    <name>mapreduce.jobhistory.principal</name>
+    <value></value>
+  </property>
+  <property>
+    <name>mapreduce.jobhistory.address</name>
+    <value></value>
+  </property>
+-->
+</configuration>
+  
+  ```
   
 ## <a name="kerberos-configuration"></a>Configuração do Kerberos  
- Para se conectar a um cluster Hadoop protegido por Kerberos [usando MIT KDC]:  
+Observe que quando PolyBase se autentica em um cluster protegido por Kerberos, precisamos que a configuração hadoop.rpc.protection seja definida para autenticação. Isso manterá a comunicação de dados entre os nós do Hadoop não criptografados. 
+
+ Para se conectar a um cluster Hadoop protegido por Kerberos [usando MIT KDC]:
+   
   
 1.  Localize o diretório de configuração do Hadoop no caminho de instalação do SQL Server. Normalmente, o caminho é:  
   
@@ -74,12 +190,12 @@ caps.handback.revision: 12
   
     |**#**|**Arquivo de configuração**|**Chave de configuração**|**Ação**|  
     |------------|----------------|---------------------|----------|   
-    |1|core-site.xml|polybase.kerberos.kdchost|Especifique o realm do Kerberos. Por exemplo: YOUR-REALM.COM|  
-    |2|core-site.xml|polybase.kerberos.realm|Especifique o nome de host do KDC. Por exemplo: kerberos.your-realm.com.|  
+    |1|core-site.xml|polybase.kerberos.kdchost|Especifique o nome de host do KDC. Por exemplo: kerberos.your-realm.com.|  
+    |2|core-site.xml|polybase.kerberos.realm|Especifique o realm do Kerberos. Por exemplo: YOUR-REALM.COM|  
     |3|core-site.xml|hadoop.security.authentication|Localize a configuração do lado do Hadoop e copie a máquina do SQL Server. Por exemplo: KERBEROS<br></br>**Observação de segurança:** KERBEROS deve ser escrito em letras maiúsculas. Se for escrito em letras minúsculas, talvez ele não seja ativado.|   
     |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Localize a configuração do lado do Hadoop e copie a máquina do SQL Server. Por exemplo: hdfs/_HOST@YOUR-REALM.COM|  
-    |5|mapred-site.xml|mapreduce.jobhistory.address|Localize a configuração do lado do Hadoop e copie a máquina do SQL Server. Por exemplo: mapred/_HOST@YOUR-REALM.COM|  
-    |6|mapred-site.xml|mapreduce.jobhistory.principal|Localize a configuração do lado do Hadoop e copie a máquina do SQL Server. Por exemplo: 10.193.26.174:10020|  
+    |5|mapred-site.xml|mapreduce.jobhistory.principal|Localize a configuração do lado do Hadoop e copie a máquina do SQL Server. Por exemplo: mapred/_HOST@YOUR-REALM.COM|  
+    |6|mapred-site.xml|mapreduce.jobhistory.address|Localize a configuração do lado do Hadoop e copie a máquina do SQL Server. Por exemplo: 10.193.26.174:10020|  
     |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Localize a configuração do lado do Hadoop e copie a máquina do SQL Server. Por exemplo: yarn/_HOST@YOUR-REALM.COM|  
   
 4.  Crie um objeto de credencial com escopo de banco de dados para especificar as informações de autenticação de cada usuário do Hadoop. Veja [Objetos T-SQL do PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md).  
@@ -94,3 +210,4 @@ caps.handback.revision: 12
  [Guia do PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   
   
+

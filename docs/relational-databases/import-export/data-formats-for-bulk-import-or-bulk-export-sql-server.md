@@ -1,25 +1,29 @@
 ---
-title: "Formatos de dados para importar ou exportar em massa (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "formatos de dados [SQL Server], escolhendo"
-  - "importação em massa [SQL Server], formatos de dados"
+title: Formatos de dados para importar ou exportar em massa (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data formats [SQL Server], choosing
+- bulk importing [SQL Server], data formats
 ms.assetid: 73fe6741-9437-4b26-b030-28b863e74399
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 248ff4e6c29eb8412898d964cfac1cb85ef338d3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Formatos de dados para importar ou exportar em massa (SQL Server)
+# <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>Formatos de dados para importar ou exportar em massa (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode aceitar dados em formato de dados de caractere ou formato de dados binário nativos. Use o formato de caractere ao mover dados entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e outro aplicativo (como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel) ou outro servidor de banco de dados (como Oracle ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). O formato nativo só pode ser usado para transferir dados entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,7 +40,7 @@ caps.handback.revision: 29
 |Operação|Nativo|Unicode nativo|Caractere|Caractere unicode|  
 |---------------|------------|--------------------|---------------|-----------------------|  
 |Transferências de dados em massa entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados que não contém nenhum caractere estendido ou DBCS (conjunto de caracteres de dois bytes). A menos que um arquivo de formato seja usado, essas tabelas devem ser definidas identicamente.|Sim*|—|—|—|  
-|Para colunas **sql_variant**, recomenda-se usar o formato de dados nativos que, ao contrário dos formatos Unicode e de caractere, preservam os metadados de cada valor **sql_variant**.|Sim|—|—|—|  
+|Para colunas **sql_variant** , recomenda-se usar o formato de dados nativos que, ao contrário dos formatos Unicode e de caractere, preservam os metadados de cada valor **sql_variant** .|Sim|—|—|—|  
 |Transferências de dados em massa entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados que contém caracteres estendidos ou DBCS.|—|Sim|—|—|  
 |Importação de dados em massa de um arquivo de texto gerado por outro programa.|—|—|Sim|—|  
 |Exportação de dados em massa para um arquivo de texto que será usado em outro programa.|—|—|Sim|—|  
@@ -56,7 +60,7 @@ caps.handback.revision: 29
   
 -   [Importar dados de formato de caractere e nativo de versões anteriores do SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Especificar formatos de dados para compatibilidade usando bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)  
   

@@ -1,33 +1,37 @@
 ---
-title: "Propriedades do banco de dados (p&#225;gina Espelhamento) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.mirroring.f1"
+title: "Propriedades do banco de dados (página Espelhamento) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.mirroring.f1
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 caps.latest.revision: 86
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 86
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b0c43ec3f97cdf1ddfc325c3a2f7ca75400a54c1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propriedades do banco de dados (p&#225;gina Espelhamento)
+# <a name="database-properties-mirroring-page"></a>Propriedades do banco de dados (página Espelhamento)
   Acesse esta página do banco de dados principal e use-a para configurar e modificar as propriedades de espelhamento de banco de dados de um banco de dados. Nela é possível também iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados, exibir o status de uma sessão de espelhamento e pausar ou remover a sessão de espelhamento de banco de dados.  
   
 > **IMPORTANTE!** A segurança deve ser configurada para você poder começar o espelhamento. Se o espelhamento não tiver sido iniciado, você deve começar usando o assistente. As caixas de texto da página **Espelhamento** ficam desabilitadas até que o assistente seja encerrado.  
   
  **Configurar o espelhamento de banco de dados usando o SQL Server Management Studio**  
   
--   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Configurar Segurança**  
  Clique neste botão para iniciar o **Assistente para Configurar a Segurança de Espelhamento de Banco de Dados.**  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 86
 |Se o espelhamento já tiver começado.|Se o servidor testemunha tiver sido alterado no assistente, será definido adequadamente.|  
   
  **Endereços de rede do servidor**  
- Existe uma opção equivalente para cada instância de servidor: **Principal**, **Espelho** e **Testemunha**.  
+ Existe uma opção equivalente para cada instância de servidor: **Principal**, **Espelho**e **Testemunha**.  
   
  Os endereços de rede do servidor das instâncias de servidor são especificados automaticamente quando você conclui o Assistente para Configurar Segurança de Espelhamento de Banco de Dados. Após concluir o assistente, você pode modificar os endereços de rede manualmente, se necessário.  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 86
   
 -   *porta* é a porta atribuída ao ponto de extremidade do espelhamento de banco de dados da instância de servidor.  
   
-     Para participar do espelhamento de banco de dados, um servidor exige um ponto de extremidade de espelhamento de banco de dados. Quando você usa o Assistente para Configurar Segurança de Espelhamento de Banco de Dados para estabelecer a sessão de espelhamento para uma instância de servidor, o assistente cria o ponto de extremidade automaticamente e o configura para usar a Autenticação do Windows. Para obter informações sobre como usar o assistente com autenticação baseada em certificado, veja [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md).  
+     Para participar do espelhamento de banco de dados, um servidor exige um ponto de extremidade de espelhamento de banco de dados. Quando você usa o Assistente para Configurar Segurança de Espelhamento de Banco de Dados para estabelecer a sessão de espelhamento para uma instância de servidor, o assistente cria o ponto de extremidade automaticamente e o configura para usar a Autenticação do Windows. Para obter informações sobre como usar o assistente com autenticação baseada em certificado, veja [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
     >**IMPORTANTE:**  Cada instância de servidor requer somente um ponto de extremidade de espelhamento de banco de dados, independentemente do número de sessões de espelhamento que deverão receber suporte.  
   
@@ -85,7 +89,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **Pausar** ou **Retomar**  
  Durante uma sessão de espelhamento de banco de dados, clique em **Pausar** para pausar a sessão. Um prompt pedirá confirmação; se você clicar em **Sim**, a sessão será pausada e o botão será alterado para **Retomar**. Para retomar a sessão, clique em **Retomar**.  
   
- Para obter informações sobre o impacto de pausar uma sessão, veja [Pausar e retomar o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md).  
+ Para obter informações sobre o impacto de pausar uma sessão, veja [Pausando e retomando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md).  
   
 > **IMPORTANTE:** Após um serviço forçado, quando o servidor principal original for reconectado, o espelhamento será suspenso. A retomada do espelhamento nessa situação pode causar perda de dados no servidor principal original. Para obter informações sobre como gerenciar a perda de dados potencial, veja [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
@@ -99,13 +103,13 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 > **OBSERVAÇÃO:** se a sessão de espelhamento estiver sendo executada em modo de alto desempenho, não haverá suporte para o failover manual. Para executar failover manualmente, é necessário alterar o modo de operação para **Alta segurança sem failover automático (síncrono)**. Após a conclusão do failover, você poderá alterar o modo de volta para **Alto desempenho (assíncrono)** na instância do novo servidor principal.  
   
- Um prompt solicita confirmação. Se você clicar em **Sim**, haverá uma tentativa de failover. O servidor principal começa tentando conectar-se ao servidor espelho usando a Autenticação do Windows. Se a Autenticação do Windows não funcionar, o servidor principal exibirá a caixa de diálogo **Conectar-se ao Servidor**. Se o servidor espelho usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selecione **Autenticação do SQL Server** na caixa **Autenticação**. Na caixa de texto **Logon**, especifique a conta de logon com a qual você se conectará no servidor espelho e, na caixa de texto **Senha**, especifique a senha da conta.  
+ Um prompt solicita confirmação. Se você clicar em **Sim**, haverá uma tentativa de failover. O servidor principal começa tentando conectar-se ao servidor espelho usando a Autenticação do Windows. Se a Autenticação do Windows não funcionar, o servidor principal exibirá a caixa de diálogo **Conectar-se ao Servidor** . Se o servidor espelho usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selecione **Autenticação do SQL Server** na caixa **Autenticação** . Na caixa de texto **Logon** , especifique a conta de logon com a qual você se conectará no servidor espelho e, na caixa de texto **Senha** , especifique a senha da conta.  
   
  Se o failover for bem-sucedido, a caixa de diálogo **Propriedades do Banco de Dados** será fechada. As funções de servidor espelho e principal são alternadas: o banco de dados espelho anterior torna-se o banco de dados principal e vice-versa. Observe que a caixa de diálogo **Propriedades do Banco de Dados** torna-se indisponível no banco de dados principal antigo porque este se tornou o banco de dados espelho. Essa caixa de diálogo ficará disponível no novo banco de dados principal após o failover.  
   
  Se o failover falhar, uma mensagem de erro será exibida e a caixa de diálogo permanecerá aberta.  
   
-> **IMPORTANTE:** Se você clicar em **Failover** depois de modificar as propriedades na caixa de diálogo **Propriedades do Banco de Dados**, essas alterações serão perdidas. Para salvar as alterações atuais, responda **Não** ao prompt de confirmação e clique em **OK** para salvá-las. Em seguida, abra novamente a caixa de diálogo de propriedades do banco de dados e clique em **Failover**.  
+> **IMPORTANTE:** Se você clicar em **Failover** depois de modificar as propriedades na caixa de diálogo **Propriedades do Banco de Dados** , essas alterações serão perdidas. Para salvar as alterações atuais, responda **Não** ao prompt de confirmação e clique em **OK** para salvá-las. Em seguida, abra novamente a caixa de diálogo de propriedades do banco de dados e clique em **Failover**.  
   
  **Modo de operação**  
  Opcionalmente, altere o modo de operação. A disponibilidade de alguns modos de operação depende de você ter especificado um endereço TCP para uma testemunha. As opções são as seguintes:  
@@ -121,7 +125,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  Para obter informações sobre os modos de operação, veja [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
  **Status**  
- Após o início do espelhamento, o painel **Status** exibirá o status da sessão de espelhamento de banco de dados a partir do momento em que você selecionou a página **Espelhamento**. Para atualizar o painel **Status**, clique no botão **Atualizar**. Os possíveis estados são os seguintes:  
+ Após o início do espelhamento, o painel **Status** exibirá o status da sessão de espelhamento de banco de dados a partir do momento em que você selecionou a página **Espelhamento** . Para atualizar o painel **Status** , clique no botão **Atualizar** . Os possíveis estados são os seguintes:  
   
 |Estados|Explicação|  
 |------------|-----------------|  
@@ -135,13 +139,13 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  Para obter mais informações, veja [Estados de espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md).  
   
  **Atualizar**  
- Clique para atualizar a caixa **Status**.  
+ Clique para atualizar a caixa **Status** .  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Se você não estiver familiarizado com o espelhamento de banco de dados, veja [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
-### Adicionando um servidor testemunha a uma sessão existente  
- Você pode adicionar um servidor testemunha a uma sessão existente ou substituir uma testemunha existente. Se você souber qual é o endereço de rede do servidor testemunha, poderá inseri-lo manualmente no campo **Testemunha**. Se você não souber o endereço de rede do servidor testemunha, use a opção Assistente para Configurar Segurança de Espelhamento de Banco de Dados para configurar o servidor testemunha. Depois que o endereço estiver no campo, verifique se a opção **Alta segurança com failover automático (síncrono)** está selecionada.  
+### <a name="adding-a-witness-to-an-existing-session"></a>Adicionando um servidor testemunha a uma sessão existente  
+ Você pode adicionar um servidor testemunha a uma sessão existente ou substituir uma testemunha existente. Se você souber qual é o endereço de rede do servidor testemunha, poderá inseri-lo manualmente no campo **Testemunha** . Se você não souber o endereço de rede do servidor testemunha, use a opção Assistente para Configurar Segurança de Espelhamento de Banco de Dados para configurar o servidor testemunha. Depois que o endereço estiver no campo, verifique se a opção **Alta segurança com failover automático (síncrono)** está selecionada.  
   
  Depois de configurar uma nova testemunha, clique em **OK** para adicioná-la à sessão de espelhamento.  
   
@@ -149,12 +153,12 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  [Adicionar ou substituir uma testemunha de espelhamento de banco de dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-### Removendo uma testemunha  
- Para remover uma testemunha, exclua seu endereço de rede de servidor do campo **Testemunha**. Se você mudar do modo de alta segurança com failover automático para o modo de alto desempenho, o campo **Testemunha** será desmarcado automaticamente.  
+### <a name="removing-a-witness"></a>Removendo uma testemunha  
+ Para remover uma testemunha, exclua seu endereço de rede de servidor do campo **Testemunha** . Se você mudar do modo de alta segurança com failover automático para o modo de alto desempenho, o campo **Testemunha** será desmarcado automaticamente.  
   
  Depois de excluir o servidor testemunha, clique em **OK** para removê-lo da sessão de espelhamento.  
   
-### Monitorando o espelhamento de banco de dados  
+### <a name="monitoring-database-mirroring"></a>Monitorando o espelhamento de banco de dados  
  Para monitorar os bancos de dados espelhados em uma instância de servidor, é possível usar o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado do sistema sp_dbmmonitorresults.  
   
  **Para monitorar bancos de dados espelhados**  
@@ -163,18 +167,18 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 -   [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
- Para obter mais informações, veja [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md).  
+ Para obter mais informações, consulte [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
 -   [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## Consulte também  
- [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+## <a name="see-also"></a>Consulte também  
+ [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
@@ -183,3 +187,4 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  [Testemunha de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   
+

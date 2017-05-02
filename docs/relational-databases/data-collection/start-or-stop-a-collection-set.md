@@ -1,25 +1,29 @@
 ---
-title: "Iniciar ou interromper um conjunto de coleta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "conjuntos de coleta [SQL Server], parando"
-  - "conjuntos de coleta [SQL Server], iniciando"
+title: Iniciar ou interromper um conjunto de coleta | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collection sets [SQL Server], stopping
+- collection sets [SQL Server], starting
 ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 91f96d4ac8b7403e0d214625925403950e386dc2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Iniciar ou interromper um conjunto de coleta
+# <a name="start-or-stop-a-collection-set"></a>Iniciar ou interromper um conjunto de coleta
   Este tópico descreve como iniciar ou interromper um conjunto de coleta no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -54,16 +58,16 @@ caps.handback.revision: 20
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Para obter informações sobre conjuntos de coleta, consulte a exibição de catálogo [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md).  
+-   Para obter informações sobre conjuntos de coleta, consulte a exibição de catálogo [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) .  
   
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Exige a associação na função de banco de dados fixa **dc_operator**. Se o conjunto de coleta não tiver uma conta proxy, a associação da função de servidor fixa **sysadmin** será necessária. Exemplos  
+ Exige a associação na função de banco de dados fixa **dc_operator** . Se o conjunto de coleta não tiver uma conta proxy, a associação da função de servidor fixa **sysadmin** será necessária. Exemplos  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para iniciar um conjunto de coleta  
+#### <a name="to-start-a-collection-set"></a>Para iniciar um conjunto de coleta  
   
 1.  No Pesquisador de Objetos, expanda o nó **Gerenciamento** , expanda **Coleta de Dados**e, em seguida, **Conjuntos de Coleta de Dados do Sistema**.  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 20
   
      Uma caixa de mensagem exibe os resultados desta ação e uma seta verde no ícone do conjunto de coleta indica que o conjunto de coleta foi iniciado.  
   
-#### Para parar um conjunto de coleta  
+#### <a name="to-stop-a-collection-set"></a>Para parar um conjunto de coleta  
   
 1.  No Pesquisador de Objetos, expanda o nó **Gerenciamento** , expanda **Coleta de Dados**e, em seguida, **Conjuntos de Coleta de Dados do Sistema**.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 20
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para iniciar um conjunto de coleta  
+#### <a name="to-start-a-collection-set"></a>Para iniciar um conjunto de coleta  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -95,7 +99,7 @@ GO
 EXEC sp_syscollector_start_collection_set @collection_set_id = 1;  
 ```  
   
-#### Para parar um conjunto de coleta  
+#### <a name="to-stop-a-collection-set"></a>Para parar um conjunto de coleta  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -109,8 +113,8 @@ GO
 EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Exibições do Coletor de Dados &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)  
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)  
   
   

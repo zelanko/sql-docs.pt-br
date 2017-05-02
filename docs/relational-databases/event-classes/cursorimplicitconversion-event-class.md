@@ -1,38 +1,42 @@
 ---
-title: "Classe de evento CursorImplicitConversion | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento CursorImplicitConversion"
+title: Classe de evento CursorImplicitConversion | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CursorImplicitConversion event class
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 05ab5487811e411b6c2d301703eea2bfd3bdbb79
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento CursorImplicitConversion
-  A classe de evento **CursorImplicitConversion** descreve eventos de conversão cursor-implícitos que acontecem em interfaces de programação de aplicativo (APIs) ou cursores [!INCLUDE[tsql](../../includes/tsql-md.md)]. Eventos de conversão cursor-implícitos ocorrem quando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] executa uma instrução Transact-SQL que não é suportada por cursores de servidor do tipo solicitado. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] retorna um erro que indica que o tipo de cursor foi alterado.  
+# <a name="cursorimplicitconversion-event-class"></a>classe de evento CursorImplicitConversion
+  A classe de evento **CursorImplicitConversion** descreve eventos de conversão cursor-implícitos que acontecem em interfaces de programação de aplicativo (APIs) ou cursores [!INCLUDE[tsql](../../includes/tsql-md.md)] . Eventos de conversão cursor-implícitos ocorrem quando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] executa uma instrução Transact-SQL que não é suportada por cursores de servidor do tipo solicitado. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] retorna um erro que indica que o tipo de cursor foi alterado.  
   
  Inclua a classe de evento **CursorImplicitConversion** em rastreamentos que estão registrando o desempenho de cursores.  
   
  Quando essa classe de evento é incluída em um rastreamento, a quantidade de sobrecarga criada depende da frequência com que os cursores que exigem conversão implícita são usados em relação ao banco de dados durante o rastreamento. Se os cursores forem usados extensivamente, o rastreamento poderá diminuir significativamente o desempenho.  
   
-## Colunas de dados de classe de evento CursorImplicitConversion  
+## <a name="cursorimplicitconversion-event-class-data-columns"></a>Colunas de dados de classe de evento CursorImplicitConversion  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**BinaryData**|**image**|Tipo de cursor resultante. Os valores são:<br /><br /> 1 = Keyset<br /><br /> 2 = Dinâmico<br /><br /> 4 = Somente avanço<br /><br /> 8 = Estático<br /><br /> 16 = De avanço rápido|2|Sim|  
 |**ClientProcessID**|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
-|**DatabaseID**|**int**|A ID do banco de dados especificada pela instrução USE *database* ou a ID do banco de dados padrão se nenhuma instrução USE *database* tiver sido emitida para determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
+|**DatabaseID**|**int**|A ID do banco de dados especificada pela instrução USE *database* ou a ID do banco de dados padrão se nenhuma instrução USE *database*tiver sido emitida para determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**DatabaseName**|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |**EventClass**|**int**|Tipo de evento registrado = 76.|27|Não|  
 |**EventSequence**|**int**|Sequência da classe de evento **CursorClose** no lote.|51|Não|  
@@ -42,7 +46,7 @@ caps.handback.revision: 34
 |**IntegerData**|**int**|Tipo de cursor solicitado. Os valores são:<br /><br /> 1 = Keyset<br /><br /> 2 = Dinâmico<br /><br /> 4 = Somente avanço<br /><br /> 8 = Estático<br /><br /> 16 = De avanço rápido|25|Não|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
 |**LoginName**|**nvarchar**|Nome de logon do usuário (logon de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou as credenciais de logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows no formato DOMÍNIO/nomedousuário).|11|Sim|  
-|**LoginSid**|**image**|SID (identificador de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals**. Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
+|**LoginSid**|**image**|SID (identificador de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |**RequestID**|**int**|Solicitar identificador da conversão implícita.|49|Sim|  
@@ -53,7 +57,7 @@ caps.handback.revision: 34
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |**XactSequence**|**bigint**|Token que descreve a transação atual.|50|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

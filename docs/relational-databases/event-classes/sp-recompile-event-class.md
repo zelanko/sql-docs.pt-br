@@ -1,29 +1,33 @@
 ---
-title: "Classe de evento SP:Recompile | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento SP:Recompile"
+title: Classe de evento SP:Recompile | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SP:Recompile event class
 ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6cab2f6fc0007ea591ab2fc11ce231519fa71bb9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento SP:Recompile
+# <a name="sprecompile-event-class"></a>classe de evento SP:Recompile
   A classe de evento SP:Recompile indica que um procedimento armazenado, gatilho ou função definida pelo usuário foi recompilado. Recompilações relatadas por essa classe de evento ocorrem ao nível de instrução.  
   
  O modo preferencial para rastrear recompilações em nível de instrução é usar a classe de evento SQL:StmtRecompile. A classe de evento SP:Recompile foi preterida. Para obter mais informações, consulte [SQL:StmtRecompile Event Class](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md).  
   
-## Colunas de dados da classe de evento SP:Recompile   
+## <a name="sprecompile-event-class-data-columns"></a>Colunas de dados da classe de evento SP:Recompile  
   
 |Nome da coluna de dados|**Tipo de dados**|Descrição|ID da coluna|Filtrável|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
@@ -33,7 +37,7 @@ caps.handback.revision: 43
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual o procedimento armazenado está sendo executado.|35|Sim|  
 |EventClass|**int**|Tipo de evento = 37.|27|Não|  
 |EventSequence|**int**|A sequência de determinado evento dentro da solicitação.|51|Não|  
-|EventSubClass|**int**|Tipo de subclasse de evento. Indica a razão para recompilação.<br /><br /> 1 = Esquema alterado<br /><br /> 2 = Estatísticas alteradas<br /><br /> 3 = Recompile DNR<br /><br /> 4 = Opção de conjunto alterada<br /><br /> 5 = Tabela temporária alterada<br /><br /> 6 = Conjunto de linhas remoto alterado<br /><br /> 7 = Para procurar permanente alterado<br /><br /> 8 = Ambiente de notificação de consulta alterado<br /><br /> 9 = Exibição MPI alterada<br /><br /> 10 = Opções de cursor alteradas<br /><br /> 11 = Opção With Recompile |21|Sim|  
+|EventSubClass|**int**|Tipo de subclasse de evento. Indica a razão para recompilação.<br /><br /> 1 = Esquema alterado<br /><br /> 2 = Estatísticas alteradas<br /><br /> 3 = Recompile DNR<br /><br /> 4 = Opção de conjunto alterada<br /><br /> 5 = Tabela temporária alterada<br /><br /> 6 = Conjunto de linhas remoto alterado<br /><br /> 7 = Para procurar permanente alterado<br /><br /> 8 = Ambiente de notificação de consulta alterado<br /><br /> 9 = Exibição MPI alterada<br /><br /> 10 = Opções de cursor alteradas<br /><br /> 11 = Opção With Recompile|21|Sim|  
 |GroupID|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IntegerData2|**int**|Deslocamento final da instrução dentro do procedimento armazenado ou lote que levou à recompilação. O deslocamento final é -1 se a instrução for a última instrução em seu lote.|55|Sim|  
@@ -57,8 +61,8 @@ caps.handback.revision: 43
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |XactSequence|**bigint**|Token usado para descrever a transação atual.|50|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Classe de evento SQL:StmtRecompile](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)  
+ [SQL:StmtRecompile Event Class](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)  
   
   

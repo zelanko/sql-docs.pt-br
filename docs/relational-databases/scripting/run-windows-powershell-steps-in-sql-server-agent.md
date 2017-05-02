@@ -1,32 +1,36 @@
 ---
-title: "Executar etapas do Windows PowerShell no SQL Server Agent | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Executar etapas do Windows PowerShell no SQL Server Agent | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae35fb3deecc8b77940ab76d1b0f016f00f39e27
+ms.lasthandoff: 04/11/2017
+
 ---
-# Executar etapas do Windows PowerShell no SQL Server Agent
+# <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Executar etapas do Windows PowerShell no SQL Server Agent
   Use o SQL Server Agent para executar scripts do SQL Server PowerShell nas horas agendadas.  
   
-1.  **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
-2.  **Para executar o PowerShell no SQL Server Agent, usando:**  [Etapa de Trabalho do PowerShell](#PShellJob), [Etapa de Trabalho de Prompt de Comando](#CmdExecJob)  
+2.  **To run PowerShell from SQL Server Agent, using:**  [PowerShell Job Step](#PShellJob), [Command Prompt Job Step](#CmdExecJob)  
   
-## Antes de começar  
+## <a name="before-you-begin"></a>Antes de começar  
  Existem vários tipos de etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Cada tipo está associado a um subsistema que implementa um ambiente específico, como um agente de replicação ou ambiente de prompt de comando. Você pode codificar os scripts do Windows PowerShell e usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para incluir os scripts em trabalhos que são executados em horários programados ou em resposta a eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Scripts do Windows PowerShell podem ser executados usando uma etapa de trabalho de prompt de comando ou uma etapa de trabalho do PowerShell.  
   
-1.  Use uma etapa de trabalho do PowerShell para fazer com que o subsistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent execute o utilitário **sqlps**, que inicia o PowerShell e importa o módulo **sqlps**.  
+1.  Use uma etapa de trabalho do PowerShell para fazer com que o subsistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent execute o utilitário **sqlps** , que inicia o PowerShell e importa o módulo **sqlps** .  
   
 2.  Use uma etapa de trabalho de prompt de comando para executar o PowerShell.exe e especifique um script que importa o módulo **sqlps** .  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 10
 ##  <a name="PShellJob"></a> Criar uma etapa de trabalho do PowerShell  
  **Para criar uma etapa de trabalho do PowerShell**  
   
-1.  Expanda **SQL Server Agent**, crie um novo trabalho ou clique com o botão direito do mouse em um trabalho existente e clique em **Propriedades**. Para obter mais informações sobre como criar um trabalho, consulte [Criando trabalhos](../../ssms/agent/create-jobs.md).  
+1.  Expanda **SQL Server Agent**, crie um novo trabalho ou clique com o botão direito do mouse em um trabalho existente e clique em **Propriedades**. Para obter mais informações sobre como criar um trabalho, consulte [Criando trabalhos](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b).  
   
 2.  Na caixa de diálogo **Propriedades do Trabalho** , clique na página **Etapas** e, em seguida, em **Nova**.  
   
@@ -53,15 +57,15 @@ caps.handback.revision: 10
 7.  Clique na página **Avançado** para definir as seguintes opções de etapa de trabalho: a ação a tomar em caso de êxito ou falha da etapa, quantas vezes o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve tentar executar a etapa e com que frequência.  
   
 ##  <a name="CmdExecJob"></a> Criar uma etapa de trabalho de prompt de comando  
- **Para criar uma etapa de trabalho CmdExec **  
+ **Para criar uma etapa de trabalho CmdExec**  
   
-1.  Expanda **SQL Server Agent**, crie um novo trabalho ou clique com o botão direito do mouse em um trabalho existente e clique em **Propriedades**. Para obter mais informações sobre como criar um trabalho, consulte [Criando trabalhos](../../ssms/agent/create-jobs.md).  
+1.  Expanda **SQL Server Agent**, crie um novo trabalho ou clique com o botão direito do mouse em um trabalho existente e clique em **Propriedades**. Para obter mais informações sobre como criar um trabalho, consulte [Criando trabalhos](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b).  
   
 2.  Na caixa de diálogo **Propriedades do Trabalho** , clique na página **Etapas** e, em seguida, em **Nova**.  
   
 3.  Na caixa de diálogo **Nova Etapa de Trabalho** , digite o **Nome da etapa**de trabalho.  
   
-4.  Na lista **Tipo**, escolha **Sistema operacional (CmdExec)**.  
+4.  Na lista **Tipo** , escolha **Sistema operacional (CmdExec)**.  
   
 5.  Na lista **Executar como** , selecione a conta proxy com as credenciais que o trabalho usará. Por padrão, etapas de trabalho CmdExec são executadas no contexto da conta do serviço do SQL Server Agent .  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 10
   
 8.  Clique na página **Avançado** para definir opções para a etapa de trabalho, como a ação a tomar em caso de êxito ou falha da etapa, quantas vezes o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve tentar executar a etapa e o arquivo onde o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode gravar a saída da etapa. Somente membros da função de servidor fixa **sysadmin** podem gravar a saída de etapas de trabalho em um arquivo do sistema operacional.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   

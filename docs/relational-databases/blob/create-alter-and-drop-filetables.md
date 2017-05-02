@@ -1,26 +1,30 @@
 ---
-title: "Criar, alterar e remover FileTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], alterando"
-  - "FileTables [SQL Server], removendo"
-  - "FileTables [SQL Server], criando"
+title: Criar, alterar e remover FileTables | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], altering
+- FileTables [SQL Server], dropping
+- FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0445d1e3f300031a0154e253009a516364cd4fc3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar, alterar e remover FileTables
+# <a name="create-alter-and-drop-filetables"></a>Criar, alterar e remover FileTables
   Descreve como criar uma nova FileTable, ou alterar ou remover uma FileTable existente.  
   
 ##  <a name="BasicsCreate"></a> Criando uma FileTable  
@@ -52,7 +56,7 @@ caps.handback.revision: 25
   
     1.  O agrupamento especificado não deve fazer **diferenciação de maiúsculas e minúsculas** para estar em conformidade com a semântica de nomenclatura de arquivo do Windows.  
   
-    2.  Se você não fornecer um valor para **FILETABLE_COLLATE_FILENAME** ou se você especificar **database_default**, a coluna herdará o agrupamento do banco de dados atual. Se o agrupamento do banco de dados atual diferenciar maiúsculas de minúsculas, será gerado um erro e a operação **CREATE TABLE**. falhará.  
+    2.  Se você não fornecer um valor para **FILETABLE_COLLATE_FILENAME**ou se você especificar **database_default**, a coluna herdará o agrupamento do banco de dados atual. Se o agrupamento do banco de dados atual diferenciar maiúsculas de minúsculas, será gerado um erro e a operação **CREATE TABLE** . falhará.  
   
 3.  Você também pode especificar os nomes a serem usados para as 3 restrições de chave primária e exclusivas que são criadas automaticamente. Se você não fornecer nomes, o sistema gerará nomes conforme descrito posteriormente neste tópico.  
   
@@ -119,7 +123,7 @@ GO
 ```  
   
  **Alterar um diretório para uma FileTable usando o SQL Server Management Studio**  
- No Explorador de Objetos, clique com o botão direito do mouse em FileTable e selecione **Propriedades** para abrir a caixa de diálogo **Propriedades de Tabela**. Na página **FileTable** , insira um novo valor para o **Nome de diretório da FileTable**.  
+ No Explorador de Objetos, clique com o botão direito do mouse em FileTable e selecione **Propriedades** para abrir a caixa de diálogo **Propriedades de Tabela** . Na página **FileTable** , insira um novo valor para o **Nome de diretório da FileTable**.  
   
 ###  <a name="ReqAlter"></a> Requisitos e restrições para alterar uma FileTable  
   
@@ -174,13 +178,13 @@ GO
 |Verificar restrições|As restrições de verificação definidas pelo sistema impõem os seguintes requisitos:<br /><br /> Nomes de arquivo válidos.<br /><br /> Atributos de arquivo válidos.<br /><br /> O objeto pai deve ser um diretório.<br /><br /> A hierarquia de namespaces é bloqueada durante a manipulação do arquivo.|  
   
  **Convenção de nomenclatura para as restrições definidas pelo sistema**  
- As restrições definidas pelo sistema descritas acima são nomeadas no formato **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** em que:  
+ As restrições definidas pelo sistema descritas acima são nomeadas no formato **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>**, em que:  
   
 -   *<constraint_type>* é CK (restrição de verificação), DF (restrição padrão), FK (chave estrangeira), PK (chave primária) ou UQ (restrição exclusiva).  
   
 -   *\<uniquifier>* é uma cadeia de caracteres gerada pelo sistema para tornar o nome exclusivo. Essa cadeia de caracteres pode conter o nome e um identificador exclusivo da FileTable.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

@@ -1,34 +1,38 @@
 ---
-title: "Especificar par&#226;metros | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parâmetros [SQL Server], procedimentos armazenados"
-  - "procedimentos armazenados [SQL Server], parâmetros"
-  - "parâmetros de saída [SQL Server]"
-  - "parâmetros de entrada [SQL Server]"
+title: "Especificar parâmetros | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parameters [SQL Server], stored procedures
+- stored procedures [SQL Server], parameters
+- output parameters [SQL Server]
+- input parameters [SQL Server]
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9bd44a94f0025524ede2abf189f0dec6944090dc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Especificar par&#226;metros
+# <a name="specify-parameters"></a>Especificar parâmetros
   Ao especificar parâmetros de procedimento, programas de chamada podem passar valores para o corpo do procedimento. Esses valores podem ser usados com vários propósitos durante a execução do procedimento. Parâmetros de procedimento também retornam valores ao programa de chamada quando o parâmetro é marcado como um parâmetro OUTPUT.  
   
  Um procedimento pode ter no máximo 2100 parâmetros; a cada um é atribuído um nome, um tipo de dados e uma direção. Outra opção é atribuir valores padrão aos parâmetros.  
   
  A seção a seguir fornece informações sobre como passar valores para parâmetros e como cada atributo de parâmetro é usado durante uma chamada de procedimento.  
   
-## Passando valores para parâmetros  
+## <a name="passing-values-into-parameters"></a>Passando valores para parâmetros  
  Os valores de parâmetros fornecidos com uma chamada de procedimento devem ser constantes ou uma variável; um nome de função não pode ser usado como um valor de parâmetro. As variáveis podem ser definidas pelo usuário ou pelas variáveis de sistema como @@spid.  
   
  Os exemplos a seguir demonstram a passagem de valores de parâmetro para o procedimento `uspGetWhereUsedProductID`. Eles ilustram como passar parâmetros como constantes e variáveis e também como usar uma variável para passar o valor de uma função.  
@@ -56,21 +60,21 @@ EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;
 GO  
 ```  
   
-## Especificando nomes de parâmetro  
+## <a name="specifying-parameter-names"></a>Especificando nomes de parâmetro  
  Na criação de um procedimento e declaração de um nome de parâmetro, o nome de parâmetro deve começar com um único caractere @ e deve ser exclusivo no escopo do procedimento.  
   
- A nomeação explícita dos parâmetros e a atribuição dos valores apropriados a cada parâmetro em uma chamada de procedimento permitem o fornecimento dos parâmetros em qualquer ordem. Por exemplo, se o procedimento **my_proc** espera três parâmetros com os nomes **@first**, **@second** e **@third**, os valores passados ao procedimento podem ser atribuídos aos nomes de parâmetros, como: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
+ A nomeação explícita dos parâmetros e a atribuição dos valores apropriados a cada parâmetro em uma chamada de procedimento permitem o fornecimento dos parâmetros em qualquer ordem. Por exemplo, se o procedimento **my_proc** espera três parâmetros com os nomes **@first**, **@second**e **@third**, os valores passados ao procedimento podem ser atribuídos aos nomes de parâmetros, como: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
->  Se um valor de parâmetro for fornecido no formato **@parameter =***value*, forneça todos os parâmetros posteriores dessa maneira. Se os valores de parâmetros não forem passados no formato **@parameter =***value*, os valores deverão ser fornecidos na mesma ordem (da esquerda para a direita) em que os parâmetros serão listados na instrução CREATE PROCEDURE.  
+>  Se um valor de parâmetro for fornecido no formato **@parameter =***value*, forneça todos os parâmetros posteriores dessa maneira. Se os valores de parâmetros não forem passados no formato **@parameter =***value*, os valores deverão ser fornecidos na mesma ordem (da esquerda para a direita) que os parâmetros são listados na instrução CREATE PROCEDURE.  
   
 > [!WARNING]  
->  Qualquer parâmetro passado no formato **@parameter =***value*, com o parâmetro digitado incorretamente, fará com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gere um erro e impedirá a execução do procedimento.  
+>  Qualquer parâmetro passado no formato **@parameter =***valor*, com o parâmetro digitado incorretamente, fará com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gere um erro e impedirá a execução do procedimento.  
   
-## Especificando tipos de dados de parâmetros  
- Parâmetros devem ser definidos com um tipo de dados quando são declarados em uma instrução CREATE PROCEDURE. O tipo de dados de um parâmetro determina o tipo e o intervalo dos valores aceitos pelo parâmetro quando o procedimento é chamado. Por exemplo, se você definir um parâmetro com um tipo de dados **tinyint**, somente valores numéricos no intervalo entre 0 e 255 serão aceitos quando passados para esse parâmetro. Um erro será retornado se um procedimento for executado com um valor incompatível com o tipo de dados.  
+## <a name="specifying-parameter-data-types"></a>Especificando tipos de dados de parâmetros  
+ Parâmetros devem ser definidos com um tipo de dados quando são declarados em uma instrução CREATE PROCEDURE. O tipo de dados de um parâmetro determina o tipo e o intervalo dos valores aceitos pelo parâmetro quando o procedimento é chamado. Por exemplo, se você definir um parâmetro com um tipo de dados **tinyint** , somente valores numéricos no intervalo entre 0 e 255 serão aceitos quando passados para esse parâmetro. Um erro será retornado se um procedimento for executado com um valor incompatível com o tipo de dados.  
   
-## Especificando valores padrão de parâmetro  
+## <a name="specifying-parameter-default-values"></a>Especificando valores padrão de parâmetro  
  Um parâmetro é considerado opcional se o parâmetro tem um valor padrão especificado quando é declarado. Não é necessário fornecer um valor para um parâmetro opcional em uma chamada de procedimento.  
   
  O valor padrão de um parâmetro é usado quando:  
@@ -84,7 +88,7 @@ GO
   
  Se nenhum valor puder ser especificado adequadamente como um padrão para o parâmetro, especifique NULL como o padrão. Convém levar o procedimento a retornar uma mensagem personalizada se ele for executado sem um valor para o parâmetro.  
   
- O exemplo a seguir cria o procedimento armazenado `usp_GetSalesYTD` com um parâmetro de entrada, `@SalesPerson`. NULL será atribuído como valor padrão para o parâmetro e será utilizado em instruções de tratamento de erros para retornar uma mensagem de erro personalizada nos casos de execução do procedimento sem um valor para o parâmetro `@SalesPerson`.  
+ O exemplo a seguir cria o procedimento armazenado `usp_GetSalesYTD` com um parâmetro de entrada, `@SalesPerson`. NULL será atribuído como valor padrão para o parâmetro e será utilizado em instruções de tratamento de erros para retornar uma mensagem de erro personalizada nos casos de execução do procedimento sem um valor para o parâmetro `@SalesPerson` .  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,14 +129,14 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- Embora seja possível omitir os parâmetros para os quais foram fornecidos padrões, a lista de parâmetros só poderá ser truncada. Por exemplo, se um procedimento tiver cinco parâmetros, o quarto e o quinto parâmetros poderão ser omitidos. Entretanto, o quarto parâmetro não poderá ser ignorado, desde que o quinto parâmetro seja incluído, a menos que os parâmetros sejam fornecidos no formato **@parameter =***value*.  
+ Embora seja possível omitir os parâmetros para os quais foram fornecidos padrões, a lista de parâmetros só poderá ser truncada. Por exemplo, se um procedimento tiver cinco parâmetros, o quarto e o quinto parâmetros poderão ser omitidos. Entretanto, o quarto parâmetro não pode ser ignorado, contanto que o quinto parâmetro seja incluído, a menos que os parâmetros sejam fornecidos no formato **@parameter =***valor*.  
   
-## Especificando a direção do parâmetro  
+## <a name="specifying-parameter-direction"></a>Especificando a direção do parâmetro  
  A direção de um parâmetro é de entrada, em que um valor é passado para o corpo do procedimento armazenado, ou de saída, em que o procedimento retorna um valor ao programa de chamada. O padrão é um parâmetro de entrada.  
   
  Para especificar um parâmetro de saída, especifique a palavra-chave OUTPUT na definição do parâmetro na instrução CREATE PROCEDURE. O procedimento retorna o valor atual do parâmetro de saída ao programa de chamada quando o procedimento existe. O programa de chamada também deve usar a palavra-chave OUTPUT ao executar o procedimento a fim de salvar o valor do parâmetro em uma variável que pode ser usada no programa de chamada.  
   
- O exemplo a seguir cria o procedimento `Production.usp`_`GetList`, que retorna uma lista de produtos com preços que não excedem um valor especificado. O exemplo mostra o uso de várias instruções SELECT e vários parâmetros OUTPUT. Os parâmetros OUTPUT permitem que um procedimento externo, um lote ou mais de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] acessem um valor definido durante a execução do procedimento.  
+ O exemplo a seguir cria o procedimento `Production.usp`_`GetList` , que retorna uma lista de produtos com preços que não excedem um valor especificado. O exemplo mostra o uso de várias instruções SELECT e vários parâmetros OUTPUT. Os parâmetros OUTPUT permitem que um procedimento externo, um lote ou mais de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] acessem um valor definido durante a execução do procedimento.  
   
 ```  
 USE AdventureWorks2012;  
@@ -163,10 +167,10 @@ GO
   
 ```  
   
- Execute `usp_GetList` para retornar uma lista de produtos (bicicletas) da [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] que custam menos que $ 700. Os parâmetros OUTPUT **@cost** e **@compareprices** são usados com linguagem de controle de fluxo para retornar uma mensagem na janela **Mensagens**.  
+ Execute `usp_GetList` para retornar uma lista de produtos (bicicletas) da [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] que custam menos que $ 700. Os parâmetros OUTPUT **@cost** e **@compareprices** são usados com linguagem de controle de fluxo para retornar uma mensagem na janela **Mensagens** .  
   
 > [!NOTE]  
->  A variável OUTPUT deve ser definida durante a criação do procedimento e também durante o uso da variável. O nome de parâmetro e o nome de variável não precisam coincidir. Porém, o tipo de dados e o posicionamento do parâmetro devem ser correspondentes (a menos que **@listprice=** *variable* seja usado).  
+>  A variável OUTPUT deve ser definida durante a criação do procedimento e também durante o uso da variável. O nome de parâmetro e o nome de variável não precisam coincidir. Contudo, o tipo de dados e o posicionamento do parâmetro devem corresponder (a menos que **@listprice=** *variável* seja usado).  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  
@@ -201,7 +205,7 @@ Road-750 Black, 52                                 539.99
 These items can be purchased for less than $700.00.  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   

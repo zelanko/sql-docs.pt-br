@@ -1,24 +1,28 @@
 ---
-title: "Revogar permiss&#245;es em uma cole&#231;&#227;o de esquemas XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "revogando permissões [SQL Server]"
+title: "Revogar permissões em uma coleção de esquemas XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3f0db25e7283b594357638bd832c982de0569e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Revogar permiss&#245;es em uma cole&#231;&#227;o de esquemas XML
+# <a name="revoke-permissions-on-an-xml-schema-collection"></a>Revogar permissões em uma coleção de esquemas XML
   A permissão para criar uma coleção de esquema XML pode ser revogada usando uma das seguintes opções:  
   
 -   Revogar a permissão ALTER para o esquema relacional. Em seguida, a entidade de segurança não pode criar uma coleção de esquema XML no esquema relacional. Porém a entidade de segurança ainda pode fazer isso em outros esquemas relacionais no mesmo banco de dados.  
@@ -27,7 +31,7 @@ caps.handback.revision: 25
   
 -   Revogar a permissão CREATE XML SCHEMA COLLECTION ou ALTER XML SCHEMA COLLECTION no banco de dados para a entidade de segurança. Isto impede que a entidade de segurança importe uma coleção de esquema XML dentro do banco de dados. O mesmo efeito é obtido com a revogação da permissão ALTER ou CONTROL no banco de dados.  
   
-## Revogando permissões em um objeto de coleção de esquema XML existente  
+## <a name="revoking-permissions-on-an-existing-xml-schema-collection-object"></a>Revogando permissões em um objeto de coleção de esquema XML existente  
  A lista a seguir apresenta as permissões que podem ser revogadas em uma coleção de esquema XML e seus resultados:  
   
 -   A revogação da permissão ALTER revoga a capacidade de uma entidade de segurança de modificar o conteúdo da coleção de esquema XML.  
@@ -40,10 +44,10 @@ caps.handback.revision: 25
   
 -   A revogação da permissão EXECUTE revoga a capacidade da entidade de segurança de inserir ou atualizar valores em colunas, variáveis e parâmetros que são de tipo ou restringidas pela coleção XML. Ela também revoga a capacidade de consultar essas colunas, variáveis ou parâmetros de tipo **xml** .  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  Os cenários nos exemplos seguintes ilustram como as permissões de esquema XML funcionam. Cada exemplo cria o banco de dados, os esquemas relacionais e os logons de teste necessários. Esses logons recebem as permissões necessárias na coleção de esquema XML. Cada exemplo faz a limpeza necessária no final.  
   
-### A. Revogando permissões para criar uma coleção de esquemas XML  
+### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>A. Revogando permissões para criar uma coleção de esquemas XML  
  Este exemplo cria um logon e um banco de dados de exemplo. Ele também adiciona um esquema relacional no banco de dados. Inicialmente, o logon recebe permissão ALTER nos dois esquemas relacionais e outras permissões necessárias para criar coleções de esquema XML. Em seguida, o exemplo revoga a permissão ALTER em um dos esquemas relacionais do banco de dados. Isso impede que o logon crie uma coleção de esquema XML.  
   
 ```  
@@ -140,7 +144,7 @@ DROP LOGIN TestLogin1
 Go  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Dados XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Coleções de esquemas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

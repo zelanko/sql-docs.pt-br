@@ -1,28 +1,32 @@
 ---
-title: "Bancos de dados independentes | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "banco de dados independente"
-  - "evento database_uncontained_usage"
-  - "banco de dados parcialmente independente"
-  - "bancos de dados independentes, compreendendo"
+title: Bancos de dados independentes | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- contained database
+- database_uncontained_usage event
+- partially contained database
+- contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40dc720b7c0e74efbd1602d29af26da6320f66c1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Bancos de dados independentes
+# <a name="contained-databases"></a>Bancos de dados independentes
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Um *banco de dados independente* é um banco de dados isolado de outros bancos de dados e da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ajuda o usuário a isolar seu banco de dados da instância de 4 maneiras.  
@@ -35,7 +39,7 @@ caps.handback.revision: 37
   
 -   O ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DMVs, XEvents etc.) relata e pode agir sobre as informações de contenção.  
   
- Alguns recursos de bancos de dados parcialmente independentes, como armazenar metadados no banco de dados, aplicam-se a todos os bancos de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Alguns benefícios dos bancos de dados parcialmente independentes, como autenticação no nível de banco de dados e agrupamento de catálogos, devem ser habilitados antes de serem disponibilizados. A contenção parcial é habilitada usando as instruções **CREATE DATABASE** e **ALTER DATABASE** ou usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre como habilitar a contenção parcial de bancos de dados, consulte [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
+ Alguns recursos de bancos de dados parcialmente independentes, como armazenar metadados no banco de dados, aplicam-se a todos os bancos de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Alguns benefícios dos bancos de dados parcialmente independentes, como autenticação no nível de banco de dados e agrupamento de catálogos, devem ser habilitados antes de serem disponibilizados. A contenção parcial é habilitada usando as instruções **CREATE DATABASE** e **ALTER DATABASE** ou usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre como habilitar a contenção parcial de bancos de dados, consulte [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
   
 ##  <a name="Concepts"></a> Conceitos de banco de dados parcialmente independente  
  Um banco de dados totalmente independente inclui todas as configurações e metadados necessários para definir o banco de dados e não tem nenhuma dependência de configuração da instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] onde o banco de dados está instalado. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], separar um banco de dados da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderia ser demorado e exigir conhecimento detalhado da relação entre o banco de dados e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os bancos de dados parcialmente independentes facilitam a separação de um banco de dados de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de outros bancos de dados.  
@@ -80,7 +84,7 @@ caps.handback.revision: 37
   
  Dentro do limite de banco de dados está o *modelo de banco de dados*, onde os bancos de dados são desenvolvidos e gerenciados. Exemplos de entidades localizadas dentro do modelo do banco de dados incluem tabelas do sistema, como **sys.tables**, usuários com senhas de bancos de dados independentes e tabelas de usuário no banco de dados atual referenciadas por um nome de duas partes.  
   
- Fora do limite de banco de dados está o *modelo de gerenciamento* que pertence às funções e ao gerenciamento em nível da instância. Exemplos de entidades localizadas fora do limite de banco de dados incluem tabelas do sistema, como **sys.endpoints**, usuários mapeados para logons e tabelas de usuário em outro banco de dados referenciadas por um nome de três partes.  
+ Fora do limite de banco de dados está o *modelo de gerenciamento*que pertence às funções e ao gerenciamento em nível da instância. Exemplos de entidades localizadas fora do limite de banco de dados incluem tabelas do sistema, como **sys.endpoints**, usuários mapeados para logons e tabelas de usuário em outro banco de dados referenciadas por um nome de três partes.  
   
 ##  <a name="containment"></a> Contenção  
  Entidades de usuário que residem inteiramente dentro do banco de dados são consideradas *contidas*. Qualquer entidade que resida fora do banco de dados ou que dependa da interação com funções fora do banco de dados é considerada como *não contida*.  
@@ -91,7 +95,7 @@ caps.handback.revision: 37
   
 -   Entidades de usuário não contidas (que cruzam o limite de banco de dados), por exemplo, sys.server_principals ou a própria entidade de servidor (logon). Qualquer código que use essas entidades ou qualquer função que faça referência a essas entidades não é contido.  
   
-###  <a name="partial"></a> Banco de dados parcialmente contido  
+###  <a name="partial"></a> Partially Contained Database  
  O recurso de banco de dados independente está disponível atualmente apenas em um estado parcialmente contido. Um banco de dados parcialmente contido é um banco de dados independente que permite o uso de recursos não contidos.  
   
  Use as exibições [sys.dm_db_uncontained_entities](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) e [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) para retornar informações sobre objetos ou recursos não contidos. Por meio da determinação do status da contenção dos elementos de seu banco de dados, é possível descobrir quais objetos ou recursos devem ser substituídos os alterados para promover a contenção.  
@@ -104,7 +108,7 @@ caps.handback.revision: 37
 ##  <a name="benefits"></a> Benefícios do uso de bancos de dados parcialmente independentes  
  Há problemas e complicações associadas aos bancos de dados dependentes que podem ser resolvidos por meio de um banco de dados parcialmente independente.  
   
-### Movimentação do banco de dados  
+### <a name="database-movement"></a>Movimentação do banco de dados  
  Um dos problemas que ocorre ao mover bancos de dados é que algumas informações importantes podem não estar disponíveis quando um banco de dados é movido de uma instância a outra. Por exemplo, as informações de logon são armazenadas na instância e não no banco de dados. Quando você move um banco de dados dependente de uma instância para outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essas informações são deixadas para trás. Você deve identificar as informações ausentes e movê-las com seu banco de dados para a nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse processo pode ser difícil e demorado.  
   
  O banco de dados parcialmente independente pode armazenar informações importantes no banco de dados para que o banco de dados ainda contenha as informações depois de ser movido.  
@@ -112,15 +116,15 @@ caps.handback.revision: 37
 > [!NOTE]  
 >  Um banco de dados parcialmente independente pode fornecer documentação que descreve os recursos que são usados por um banco de dados que não pode ser separado da instância. Isso inclui uma lista de outros bancos de dados relacionados, configurações do sistema exigidas pelo banco de dados, mas que não podem ser contidas, e assim por diante.  
   
-### Benefício de usuários de banco de dados independentes com AlwaysOn  
- Reduzindo as associações à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bancos de dados parcialmente independentes podem ser úteis durante o failover quando o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] é usado.  
+### <a name="benefit-of-contained-database-users-with-always-on"></a>Benefício de usuários de banco de dados independentes com AlwaysOn  
+ Reduzindo as associações à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bancos de dados parcialmente independentes podem ser úteis durante o failover quando o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]é usado.  
   
- Criar os usuários independentes permite que o usuário se conecte diretamente no banco de dados independente. Este é um recurso muito significativo em cenários de alta disponibilidade e recuperação de desastres como em uma solução AlwaysOn. Se os usuários forem independentes, no caso de failover, as pessoas podem ser capazes de se conectar ao secundário sem criar logons na instância que hospeda o secundário. Isto fornece um benefício imediato. Para obter mais informações, consulte [Visão geral dos Grupos de Disponibilidade AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) e [Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+ Criar os usuários independentes permite que o usuário se conecte diretamente no banco de dados independente. Este é um recurso muito significativo em cenários de alta disponibilidade e recuperação de desastres como em uma solução AlwaysOn. Se os usuários forem independentes, no caso de failover, as pessoas podem ser capazes de se conectar ao secundário sem criar logons na instância que hospeda o secundário. Isto fornece um benefício imediato. Para obter mais informações, consulte [Visão geral dos Grupos de Disponibilidade AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) e [Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-### Desenvolvimento inicial de bancos de dados  
+### <a name="initial-database-development"></a>Desenvolvimento inicial de bancos de dados  
  Como um desenvolvedor talvez não saiba onde um novo banco de dados será implantado, a limitação dos impactos no ambiente implantados no banco de dados reduz o trabalho e a preocupação do desenvolvedor. No modelo não contido, o desenvolvedor deve considerar os possíveis impactos no ambiente no novo banco de dados e programa de maneira correspondente. No entanto, ao usar bancos de dados parcialmente independentes, os desenvolvedores podem detectar impactos de nível de instância no banco de dados e preocupações de nível de instância para o desenvolvedor.  
   
-### Administração de banco de dados  
+### <a name="database-administration"></a>Administração de banco de dados  
  Manter as configurações de banco de dados no banco de dados, e não no banco de dados mestre, permite que o proprietário de cada banco de dados tenha mais controle sobre seu banco de dados, sem conceder a eles a permissão **sysadmin** .  
   
 ##  <a name="Limitations"></a> Limitações  
@@ -142,17 +146,18 @@ caps.handback.revision: 37
 ##  <a name="Identifying"></a> Identificando a contenção do banco de dados  
  Há duas ferramentas para facilitar a identificação do status de contenção do banco de dados. O [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) é uma exibição que mostra todas as entidades potencialmente não contidas no banco de dados. O evento database_uncontained_usage ocorre quando qualquer entidade não contida real é identificada em tempo de execução.  
   
-### sys.dm_db_uncontained_entities  
+### <a name="sysdmdbuncontainedentities"></a>sys.dm_db_uncontained_entities  
  Esta exibição mostra as entidades do banco de dados que têm potencial para não serem contidas, como aquelas que cruzam o limite de banco de dados. Isso inclui as entidades de usuário que possam usar objetos fora do modelo de banco de dados. Porém, como a contenção de algumas entidades (por exemplo, as que usam SQL dinâmico) não pode ser determinada até o tempo de execução, a exibição poderá mostrar algumas entidades que não estão contidas realmente. Para obter mais informações, consulte [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
   
-### evento database_uncontained_usage  
+### <a name="databaseuncontainedusage-event"></a>evento database_uncontained_usage  
  Esse XEvent ocorre sempre que uma entidade não contida é identificada no momento de execução. Isso inclui entidades originadas no código de cliente. Esse XEvent ocorrerá somente para entidades reais não contidas. No entanto, o evento ocorre somente no momento de execução. Portanto, qualquer entidade de usuário não contida não executada não será identificada por esse XEvent.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Recursos modificados &#40;Banco de Dados Contidos&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
- [Agrupamentos de banco de dados contidos](../../relational-databases/databases/contained-database-collations.md)   
- [Práticas recomendadas de segurança com bancos de dados independentes](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
- [Migrar para um banco de dados independente parcialmente](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
- [Usuários de bancos de dados independentes - Tornando seu banco de dados portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
+ [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
+ [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
+ [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
+ [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
   
   
+

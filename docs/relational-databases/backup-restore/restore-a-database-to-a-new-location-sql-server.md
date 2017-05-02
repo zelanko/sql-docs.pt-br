@@ -1,31 +1,35 @@
 ---
-title: "Restaurar um banco de dados em um novo local (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restauração do bancos de dados [SQL Server], movimentação"
-  - "restaurações de banco de dados [SQL Server], criação de novos bancos de dados"
-  - "restauração [SQL Server], com movimentação"
-  - "restauração de banco de dados [SQL Server], criação de novos bancos de dados"
-  - "backups de banco de dados [SQL Server], criação de novos bancos de dados de"
-  - "realização de backup de banco de dados [SQL Server], criação de novos bancos de dados de"
-  - "restauração de bancos de dados [SQL Server], renomeação"
-  - "criação de banco de dados [SQL Server], restauração com migração"
+title: Restaurar um banco de dados em um novo local (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring databases [SQL Server], moving
+- database restores [SQL Server], creating new databases
+- restoring [SQL Server], with move
+- restoring databases [SQL Server], creating new databases
+- database backups [SQL Server], creating new database from
+- backing up databases [SQL Server], creating new database from
+- restoring databases [SQL Server], renaming
+- database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 caps.latest.revision: 71
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 71
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 23023f6f4d8fe277bfee15c467be88aaa04a5723
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar um banco de dados em um novo local (SQL Server)
+# <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurar um banco de dados em um novo local (SQL Server)
   Este tópico descreve como restaurar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um novo local e, opcionalmente, renomear o banco de dados, no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SSMS (SQL Server Management Studio) ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você pode mover um banco de dados para um novo caminho ou criar uma cópia de um banco de dados na mesma instância do servidor ou em uma instância de servidor diferente.  
     
 ##  <a name="BeforeYouBegin"></a> Antes de começar.  
@@ -44,23 +48,23 @@ caps.handback.revision: 71
   
 -   Para obter considerações adicionais sobre a movimentação de um banco de dados, consulte [Copiar bancos de dados com backup e restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
--   Se você restaurar um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou superior para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados será atualizado automaticamente. Normalmente, o banco de dados se torna disponível imediatamente. No entanto, se um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices, dependendo da configuração da propriedade de servidor **upgrade_option**. Se a opção de atualização for definida como importar (**upgrade_option** = 2) ou recriar (**upgrade_option** = 0), os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas, e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida para importar, os índices de texto completo associados serão recriados se um catálogo de texto completo não estiver disponível. Para alterar a configuração da propriedade de servidor **upgrade_option**, use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
+-   Se você restaurar um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou superior para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados será atualizado automaticamente. Normalmente, o banco de dados se torna disponível imediatamente. No entanto, se um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices, dependendo da configuração da propriedade de servidor  **upgrade_option** . Se a opção de atualização for definida como importar (**upgrade_option** = 2) ou recriar (**upgrade_option** = 0), os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas, e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida para importar, os índices de texto completo associados serão recriados se um catálogo de texto completo não estiver disponível. Para alterar a configuração da propriedade de servidor **upgrade_option** , use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
 ###  <a name="Security"></a> Segurança  
  Por motivos de segurança, é recomendável não anexar ou restaurar bancos de dados de origens desconhecidas ou não confiáveis. Esses bancos de dados podem conter um código mal-intencionado que pode executar um código [!INCLUDE[tsql](../../includes/tsql-md.md)] inesperado ou provocar erros modificando o esquema ou a estrutura física do banco de dados. Antes de usar um banco de dados de origem desconhecida ou não confiável, execute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no banco de dados, em um servidor que não seja de produção. Além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  
   
 ####  <a name="Permissions"></a> Permissões  
- Se o banco de dados que está sendo restaurado não existir, o usuário deverá ter permissões CREATE DATABASE para poder executar o comando RESTORE. Se o banco de dados existir, as permissões RESTORE assumirão como padrão os membros das funções de servidor fixas **sysadmin** e **dbcreator**, e o proprietário (**dbo**) do banco de dados.  
+ Se o banco de dados que está sendo restaurado não existir, o usuário deverá ter permissões CREATE DATABASE para poder executar o comando RESTORE. Se o banco de dados existir, as permissões RESTORE assumirão como padrão os membros das funções de servidor fixas **sysadmin** e **dbcreator** , e o proprietário (**dbo**) do banco de dados.  
   
  As permissões RESTORE são concedidas a funções nas quais as informações de associação estão sempre disponíveis para o servidor. Como a associação da função de banco de dados fixa pode ser verificada apenas quando o banco de dados está acessível e não danificado, o que nem sempre é o caso quando RESTORE é executado, os membros da função de banco de dados fixa **db_owner** não têm permissões RESTORE.  
   
   
-## Restaurar um banco de dados em um novo local; opcionalmente, renomeie o banco de dados usando o SSMS 
+## <a name="restore-a-database-to-a-new-location-optionally-rename-the-database-using-ssms"></a>Restaurar um banco de dados em um novo local; opcionalmente, renomeie o banco de dados usando o SSMS 
 
   
-1.  Conecte-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e, no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore de servidores.  
+1.  Conecte-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e, no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore de servidores.  
   
-2.  Clique com o botão direito do mouse em **Bancos de Dados** e clique em **Restaurar Banco de Dados**. A caixa de diálogo **Restaurar Banco de Dados** é aberta.  
+2.  Clique com o botão direito do mouse em **Bancos de Dados**e clique em **Restaurar Banco de Dados**. A caixa de diálogo **Restaurar Banco de Dados** é aberta.  
   
 3.  Na página **Geral** , use a seção **Origem** para especificar a origem e o local dos conjuntos de backup a serem restaurados. Selecione uma das opções a seguir:  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 71
   
     1.  **Dispositivo**  
   
-         Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup**. Na caixa **Tipo de mídia de backup** , selecione um dos tipos de dispositivo listados. Para selecionar um ou mais dispositivos da caixa **Mídia de backup** , clique em **Adicionar**.  
+         Clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Na caixa **Tipo de mídia de backup** , selecione um dos tipos de dispositivo listados. Para selecionar um ou mais dispositivos da caixa **Mídia de backup** , clique em **Adicionar**.  
   
          Após adicionar os dispositivos desejados à caixa de listagem **Mídia de backup** , clique em **OK** para voltar à página **Geral** .  
   
@@ -92,18 +96,18 @@ caps.handback.revision: 71
   
 8.  Na página **Opções** , ajuste as opções desejadas. Para obter mais informações sobre essas opções, veja [Restaurar banco de dados &#40;Página Opções&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).  
 
- ## Restaurar um banco de dados em um novo local; opcionalmente, renomeie o banco de dados usando o T-SQL
+ ## <a name="restore-database-to-a-new-location-optionally-rename-the-database-using-t-sql"></a>Restaurar um banco de dados em um novo local; opcionalmente, renomeie o banco de dados usando o T-SQL
  
  
 1.  Opcionalmente, determine os nomes lógicos e físicos dos arquivos no conjunto de backup que contém o backup completo de banco de dados que você deseja restaurar. Essa instrução retorna a uma lista de arquivos de banco de dados e de log contidos no conjunto de backup. A sintaxe básica é a seguinte:  
   
      RESTORE FILELISTONLY FROM *<backup_device>* WITH FILE = *backup_set_file_number* 
   
-     Aqui, *backup_set_file_number* indica a posição do backup no conjunto de mídias. Você pode obter a posição de um conjunto de backup por meio da instrução [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md) . Para obter mais informações, consulte "Especificando um conjunto de backup", em [Argumentos RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+     Aqui, *backup_set_file_number* indica a posição do backup no conjunto de mídias. Você pode obter a posição de um conjunto de backup por meio da instrução [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) . Para obter mais informações, consulte "Especificando um conjunto de backup", em [Argumentos RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-     Essa instrução também dá suporte a uma série de opções WITH. Para obter mais informações, veja [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md).  
+     Essa instrução também dá suporte a uma série de opções WITH. Para obter mais informações, veja [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
-2.  Use a instrução [RESTORE DATABASE](../Topic/RESTORE%20\(Transact-SQL\).md) para restaurar o backup completo do banco de dados. Por padrão, os arquivos de dados e de log são restaurados em seus locais originais. Para realocar um banco de dados, use a opção MOVE para realocar cada um dos arquivos do banco de dados e para evitar colisões com arquivos existentes.  
+2.  Use a instrução [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) para restaurar o backup completo do banco de dados. Por padrão, os arquivos de dados e de log são restaurados em seus locais originais. Para realocar um banco de dados, use a opção MOVE para realocar cada um dos arquivos do banco de dados e para evitar colisões com arquivos existentes.  
   
      A sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] básica para restaurar o banco de dados em um novo local e com um novo nome é:  
   
@@ -125,9 +129,9 @@ caps.handback.revision: 71
   
      ;  
   
-    > **OBSERVAÇÃO:** Ao se preparar para realocar um banco de dados em um disco diferente, você deve verificar se espaço suficiente está disponível e identificar todas as colisões potenciais com arquivos existentes. Isso envolve o uso de uma instrução [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md) que especifica os mesmos parâmetros MOVE que você planeja usar em sua instrução RESTORE DATABASE.  
+    > **OBSERVAÇÃO:** Ao se preparar para realocar um banco de dados em um disco diferente, você deve verificar se espaço suficiente está disponível e identificar todas as colisões potenciais com arquivos existentes. Isso envolve o uso de uma instrução [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) que especifica os mesmos parâmetros MOVE que você planeja usar em sua instrução RESTORE DATABASE.  
   
-     A tabela a seguir descreve os argumentos dessa instrução RESTORE em termos de restauração de um banco de dados em um novo local. Para obter mais informações sobre esses argumentos, consulte [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+     A tabela a seguir descreve os argumentos dessa instrução RESTORE em termos de restauração de um banco de dados em um novo local. Para obter mais informações sobre esses argumentos, consulte [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
      *new_database_name*  
      O novo nome do banco de dados.  
@@ -147,18 +151,18 @@ caps.handback.revision: 71
      Caso contrário, use a opção de RECOVERY que é a padrão.  
   
      FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
-     Identifica o conjunto de backup a ser restaurado. Por exemplo, um *backup_set_file_number* de **1** indica o primeiro conjunto de backup na mídia de backup e um *backup_set_file_number* de **2** indica o segundo conjunto de backup. Você pode obter o *backup_set_file_number* de um backup definido usando a instrução [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md).  
+     Identifica o conjunto de backup a ser restaurado. Por exemplo, um *backup_set_file_number* de **1** indica o primeiro conjunto de backup na mídia de backup e um *backup_set_file_number* de **2** indica o segundo conjunto de backup. Você pode obter o *backup_set_file_number* de um backup definido usando a instrução [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) .  
   
      Quando esta opção não está especificada, o padrão é usar o primeiro conjunto de backup no dispositivo de backup.  
   
-     Para obter mais informações, consulte "Especificando um conjunto de backup", em [Argumentos RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+     Para obter mais informações, consulte "Especificando um conjunto de backup", em [Argumentos RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
      MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ **,**...*n* ]  
      Especifica que o arquivo de log ou de dados especificado pelo *logical_file_name_in_backup* deve ser restaurado no local especificado pelo *operating_system_file_name*. Especifique uma instrução MOVE para cada arquivo lógico que você deseja restaurar do conjunto de backup para um novo local.  
   
     |Opção|Descrição|  
     |------------|-----------------|  
-    |*logical_file_name_in_backup*|Especifica o nome lógico de um arquivo de log ou de dados no conjunto de backup. O nome do arquivo lógico de um arquivo de log ou de dados em um conjunto de backup corresponde ao seu nome lógico no banco de dados quando o conjunto de backup foi criado.<br /><br /> <br /><br /> Observação: para obter uma lista dos arquivos lógicos do conjunto de backup, use [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md).|  
+    |*logical_file_name_in_backup*|Especifica o nome lógico de um arquivo de log ou de dados no conjunto de backup. O nome do arquivo lógico de um arquivo de log ou de dados em um conjunto de backup corresponde ao seu nome lógico no banco de dados quando o conjunto de backup foi criado.<br /><br /> <br /><br /> Observação: para obter uma lista dos arquivos lógicos do conjunto de backup, use [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).|  
     |*operating_system_file_name*|Especifica um novo local para o arquivo especificado por *logical_file_name_in_backup*. O arquivo será restaurado neste local.<br /><br /> Opcionalmente, *operating_system_file_name* especifica um novo nome de arquivo para o arquivo restaurado. Isso será necessário se você estiver criando uma cópia de um banco de dados existente na mesma instância de servidor.|  
     |*n*|É um espaço reservado que indica que você pode especificar instruções MOVE adicionais.|  
   
@@ -184,7 +188,7 @@ GO
   
 ```  
   
- Para obter um exemplo de como criar um backup de banco de dados completo do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], consulte [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+ Para obter um exemplo de como criar um backup de banco de dados completo do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , consulte [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
@@ -196,9 +200,10 @@ GO
   
 -   [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## Consulte também  
- [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Consulte também  
+ [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Copiar bancos de dados com backup e restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)  
   
   
+

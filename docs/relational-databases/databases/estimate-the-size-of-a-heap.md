@@ -1,45 +1,49 @@
 ---
-title: "Estimando o tamanho de um heap | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espaço em disco [SQL Server], índices"
-  - "estimando o tamanho do heap"
-  - "tamanho [SQL Server], heap"
-  - "espaço [SQL Server], índices"
-  - "heaps"
+title: Estimar o tamanho de um heap | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- disk space [SQL Server], indexes
+- estimating heap size
+- size [SQL Server], heap
+- space [SQL Server], indexes
+- heaps
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67e38d5ab97529fbd912361aa16fa96587173f3e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Estimando o tamanho de um heap
+# <a name="estimate-the-size-of-a-heap"></a>Estimando o tamanho de um heap
   Você pode usar as seguintes etapas para estimar a quantidade de espaço exigida para armazenar dados em um heap:  
   
 1.  Especifique o número de linhas que estarão presentes na tabela:  
   
-     ***Num_Rows*** = número de linhas na tabela  
+     ***Num_Rows***  = número de linhas na tabela  
   
 2.  Especifique o número de colunas de comprimento fixo e variável e calcule o espaço necessário para o seu armazenamento:  
   
      Calcule o espaço que cada um desses grupos de colunas ocupa dentro da linha de dados. O tamanho de uma coluna depende do tipo de dados e da especificação de comprimento.  
   
-     ***Num_Cols*** = número total de colunas (comprimento fixo e tamanho variável)  
+     ***Num_Cols***  = número total de colunas (comprimento fixo e tamanho variável)  
   
-     ***Fixed_Data_Size*** = tamanho total em bytes de todas as colunas de tamanho fixo  
+     ***Fixed_Data_Size***  = tamanho total em bytes de todas as colunas de tamanho fixo  
   
-     ***Num_Variable_Cols*** = número de colunas de tamanho variável  
+     ***Num_Variable_Cols***  = número de colunas de tamanho variável  
   
-     ***Max_Var_Size*** = total máximo em bytes de todas as colunas de tamanho variável  
+     ***Max_Var_Size***  = total máximo em bytes de todas as colunas de tamanho variável  
   
 3.  Parte da linha, conhecida como bitmap nulo, é reservada para gerenciar a nulabilidade da coluna. Calcule seu tamanho:  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 28
      Os bytes adicionados a ***Max_Var_Size*** servem para acompanhar cada coluna de tamanho variável. Essa fórmula presume que todas as colunas de comprimento variável estão 100% completas. Se você prevê que um percentual menor do espaço de armazenamento da coluna de tamanho variável será usada, poderá ajustar o valor ***Max_Var_Size*** de acordo com esse percentual para obter uma estimativa mais precisa do tamanho geral da tabela.  
   
     > [!NOTE]  
-    >  É possível combinar colunas **varchar**, **nvarchar**, **varbinary** ou **sql_variant** que fazem com que a largura total da tabela definida exceda 8.060 bytes. O tamanho de cada uma dessas colunas ainda deve ficar dentro do limite de 8.000 bytes para uma coluna **varchar**, **nvarchar,****varbinary** ou **sql_variant**. Entretanto, as larguras combinadas podem exceder o limite de 8.060 bytes em uma tabela.  
+    >  É possível combinar colunas **varchar**, **nvarchar**, **varbinary**ou **sql_variant** que fazem com que a largura total da tabela definida exceda 8.060 bytes. O tamanho de cada uma dessas colunas ainda deve ficar dentro do limite de 8.000 bytes para uma coluna **varchar**, **nvarchar,****varbinary**ou **sql_variant** . Entretanto, as larguras combinadas podem exceder o limite de 8.060 bytes em uma tabela.  
   
      Se não houver colunas de tamanho variável, defina ***Variable_Data_Size*** como 0.  
   
@@ -94,7 +98,7 @@ caps.handback.revision: 28
   
 -   Valores de LOB (Objeto Grande)  
   
-     O algoritmo para determinar exatamente quanto espaço será usado para armazenar os tipos de dados LOB **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text** e **ntextxml** e valores **image** é complexo. É suficiente apenas para adicionar o tamanho médio dos valores de LOB esperados e adicioná-lo ao tamanho do heap.  
+     O algoritmo para determinar exatamente quanto espaço será usado para armazenar os tipos de dados LOB **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**e **ntextxml**e valores **image** é complexo. É suficiente apenas para adicionar o tamanho médio dos valores de LOB esperados e adicioná-lo ao tamanho do heap.  
   
 -   Compactação  
   
@@ -104,7 +108,7 @@ caps.handback.revision: 28
   
      Para obter informações sobre os requisitos de espaço de colunas esparsas, consulte [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Heaps &#40;Tabelas sem índices clusterizados&#41;](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md)   
  [Índices clusterizados e não clusterizados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Criar índices clusterizados](../../relational-databases/indexes/create-clustered-indexes.md)   

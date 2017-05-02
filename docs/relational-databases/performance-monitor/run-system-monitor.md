@@ -1,28 +1,32 @@
 ---
-title: "Executar o Monitor do Sistema | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Monitor do Sistema [SQL Server], executando"
-  - "Monitor do Sistema do Windows [SQL Server], executando"
-  - "chamadas de procedimento remoto [SQL Server]"
-  - "iniciando o Monitor do Sistema do Windows NT"
-  - "RPC"
+title: Executar o Monitor do Sistema | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- System Monitor [SQL Server], running
+- Windows System Monitor [SQL Server], running
+- remote procedure calls [SQL Server]
+- starting Windows NT System Monitor
+- RPC
 ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e16624d722d65aceffa1582bce0d687cd66d1703
+ms.lasthandoff: 04/11/2017
+
 ---
-# Executar o Monitor do Sistema
+# <a name="run-system-monitor"></a>Executar o Monitor do Sistema
   O Monitor do Sistema usa RPCs (chamadas de procedimento remotas) para coletar informações do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Qualquer usuário com permissões do Microsoft Windows para executar o Monitor do Sistema pode utilizá-lo para monitorar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  

@@ -1,25 +1,29 @@
 ---
-title: "Li&#231;&#227;o 4: Restaurar o banco de dados na m&#225;quina virtual por meio da URL | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lição 4: Restaurar o banco de dados na máquina virtual por meio da URL | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 31d30195b648f48b149021a7bf80aba2543a14ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# Li&#231;&#227;o 4: Restaurar o banco de dados na m&#225;quina virtual por meio da URL
+# <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>Lição 4: Restaurar o banco de dados na máquina virtual por meio da URL
 Nesta lição, você aprenderá a restaurar o banco de dados AdventureWorks2014 na instância do SQL Server 2016 na máquina virtual do Azure do banco de dados AdventureWorks2014.  
   
 > [!NOTE]  
@@ -49,19 +53,19 @@ Para restaurar o banco de dados SQL Server 2014 do armazenamento de blobs do Azu
   
 5.  No Pesquisador de Objetos, expanda o nó Bancos de Dados e verifique se o banco de dados AdventureWorks2014 foi restaurado (atualize o nó, conforme necessário).  
   
-    ![Adventure Works 2014 database restored to SQL Server 2016 in virtual machine](../relational-databases/media/311f69a6-8443-4df5-8f30-3103c2472300.JPG "Adventure Works 2014 database restored to SQL Server 2016 in virtual machine")  
+    ![Banco de dados do Adventure Works 2014 restaurado no SQL Server 2016 na máquina virtual](../relational-databases/media/311f69a6-8443-4df5-8f30-3103c2472300.JPG "Banco de dados do Adventure Works 2014 restaurado no SQL Server 2016 na máquina virtual")  
   
 6.  No Pesquisador de Objetos, clique com o botão direito do mouse em AdventureWorks2014 e em Propriedades (clique em Cancelar quando terminar).  
   
 7.  Clique em Arquivos e verifique se o caminho para os dois arquivos de banco de dados são URLs que apontam para os blobs em seu contêiner de blogs do Azure.  
   
-    ![database properties showing file path of logical data files as URL](../relational-databases/media/cfeee576-6319-460e-9fa2-f0922e02ee23.JPG "database properties showing file path of logical data files as URL")  
+    ![propriedades do banco de dados mostrando o caminho dos arquivos de dados lógicos como uma URL](../relational-databases/media/cfeee576-6319-460e-9fa2-f0922e02ee23.JPG "propriedades do banco de dados mostrando o caminho dos arquivos de dados lógicos como uma URL")  
   
 8.  No Pesquisador de Objetos, conecte-se ao armazenamento do Azure.  
   
 9. Expanda Contêineres, expanda o contêiner criado na Lição 1 e verifique se AdventureWorks2014_Data.mdf e AdventureWorks2014_Log.ldf da etapa 3 acima são exibidos nesse contêiner, juntamente com o arquivo de backup da Lição 3 (atualize o nó, conforme necessário).  
   
-    ![Adventure Works 2014 data and log file appear as blobs in Azure container](../relational-databases/media/156c7d73-44be-4754-9653-04cccb6c3066.JPG "Adventure Works 2014 data and log file appear as blobs in Azure container")  
+    ![Os arquivos de log e de dados do Adventure Works 2014 aparecem como blobs no contêiner do Azure](../relational-databases/media/156c7d73-44be-4754-9653-04cccb6c3066.JPG "Os arquivos de log e de dados do Adventure Works 2014 aparecem como blobs no contêiner do Azure")  
   
 **Próxima lição:**  
   
@@ -69,3 +73,4 @@ Para restaurar o banco de dados SQL Server 2014 do armazenamento de blobs do Azu
   
   
   
+

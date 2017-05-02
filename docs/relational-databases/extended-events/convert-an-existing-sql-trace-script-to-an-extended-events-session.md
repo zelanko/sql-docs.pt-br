@@ -1,26 +1,30 @@
 ---
-title: "Converter um script existente de Rastreamento do SQL em uma sess&#227;o de Eventos Estendidos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Rastreamento do SQL, script de conversão para eventos estendidos"
-  - "eventos estendidos [SQL Server], converter o script de Rastreamento do SQL"
+title: "Converter um script de rastreamento do SQL existente em uma sessão de eventos estendidos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Trace, convert script to extended events
+- extended events [SQL Server], convert SQL Trace script
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3817f8c3c5b3aaa50770b3734974e457a4e802e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Converter um script existente de Rastreamento do SQL em uma sess&#227;o de Eventos Estendidos
+# <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Converter um script existente de Rastreamento do SQL em uma sessão de Eventos Estendidos
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Se você tiver um script de Rastreamento do SQL que deseja converter em sessão de Eventos Estendidos, poderá usar os procedimentos deste tópico para criar uma sessão de Eventos Estendidos equivalente. Usando as informações das tabelas de sistema trace_xe_action_map e trace_xe_event_map, você pode coletar as informações que precisa para fazer a conversão.  
@@ -35,7 +39,7 @@ caps.handback.revision: 21
   
 4.  Crie manualmente uma sessão de Eventos Estendidos, usando os eventos, as ações e os predicados (filtros) equivalentes de Eventos Estendidos.  
   
-## Para obter a ID de rastreamento  
+## <a name="to-obtain-the-trace-id"></a>Para obter a ID de rastreamento  
   
 1.  Abra o script de Rastreamento do SQL no Editor de Consultas e execute o script para criar a sessão de rastreamento. Saiba que a sessão de rastreamento não precisa estar em execução para concluir este procedimento.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 21
     > [!NOTE]  
     >  ID de Rastreamento 1 geralmente indica o rastreamento padrão.  
   
-## Para determinar os equivalentes de Eventos Estendidos  
+## <a name="to-determine-the-extended-events-equivalents"></a>Para determinar os equivalentes de Eventos Estendidos  
   
 1.  Para determinar os eventos e as ações equivalentes de Eventos Estendidos, execute a seguinte consulta, em que *trace_id* é definido como o valor da ID de rastreamento que você obteve no procedimento anterior.  
   
@@ -99,10 +103,10 @@ caps.handback.revision: 21
   
          Por exemplo, a classe de evento SP: StmtCompleted é mapeada para o evento sp_statement_completed do Eventos Estendidos. Se você especificar sp_statement_completed como nome de evento da consulta, a coluna "event_field" mostrará os campos que são incluídos por padrão no evento. Observando os campos, você constatará que há um campo "duração". Para criar o filtro na sessão equivalente de Eventos Estendidos, você adicionará um predicado como "WHERE duration > 0". Para obter um exemplo, consulte o procedimento "Para criar a sessão de Eventos Estendidos" neste tópico.  
   
-## Para criar a sessão de Eventos Estendidos  
+## <a name="to-create-the-extended-events-session"></a>Para criar a sessão de Eventos Estendidos  
  Use o Editor de Consultas para criar a sessão de Eventos Estendidos e gravar a saída em um destino de arquivo. As etapas a seguir descrevem uma única consulta, com explicações para mostrar como criar a consulta. Para obter o exemplo de consulta completo, consulte a seção "Exemplo" deste tópico.  
   
-1.  Adicione instruções para criar a sessão de evento, substituindo *session_name* pelo nome que você deseja usar para a sessão de Eventos Estendidos.  
+1.  Adicione instruções para criar a sessão de evento, substituindo*session_name* pelo nome que você deseja usar para a sessão de Eventos Estendidos.  
   
     ```  
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -164,7 +168,7 @@ caps.handback.revision: 21
        SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
   
-## Para exibir os resultados  
+## <a name="to-view-the-results"></a>Para exibir os resultados  
   
 1.  Você pode usar a função sys.fn_xe_file_target_read_file para exibir a saída. Para fazer isso, execute a seguinte consulta, substituindo os caminhos de arquivo pelos caminhos que você especificou:  
   
@@ -213,7 +217,7 @@ caps.handback.revision: 21
        (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -249,7 +253,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
 ```  
   
-## Consulte também  
- [Exibir os Eventos Estendidos equivalentes às classes do Rastreamento do SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
+## <a name="see-also"></a>Consulte também  
+ [Exibir os Eventos Estendidos equivalentes às classes de evento de Rastreamento do SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

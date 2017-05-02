@@ -1,31 +1,35 @@
 ---
-title: "Gerenciar coleta de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "Coleta de dados"
-helpviewer_keywords: 
-  - "coleta de dados [SQL Server]"
-  - "coletor de dados [SQL Server], Transact-SQL"
-  - "coletor de dados [SQL Server], SQL Server Management Studio"
+title: Gerenciar a coleta de dados | Microsoft Docs
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- Coleta de dados
+helpviewer_keywords:
+- data collection [SQL Server]
+- data collector [SQL Server], Transact-SQL
+- data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3501375e366cd5c84dd4544d4af0c11f00f2dbb1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gerenciar coleta de dados
+# <a name="manage-data-collection"></a>Gerenciar coleta de dados
  Use os procedimentos armazenados e as funções do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] para gerenciar diferentes aspectos da coleta de dados, como habilitar ou desabilitar a coleta de dados, alterar a configuração de um conjunto de coleta ou exibir dados no data warehouse de gerenciamento.  
   
-## Gerenciar coleta de dados usando o SSMS  
+## <a name="manage-data-collection-using-ssms"></a>Gerenciar coleta de dados usando o SSMS  
  Execute as seguintes tarefas relacionadas ao coletor de dados usando o Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [Configurar o Data Warehouse de Gerenciamento &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
@@ -36,7 +40,7 @@ caps.handback.revision: 26
   
 -   [Iniciar ou interromper um conjunto de coleta](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
--   [Usar o SQL Server Profiler para criar um conjunto de coleta de Rastreamento do SQL &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/use sql server profiler to create a sql trace collection set.md)  
+-   [Usar o SQL Server Profiler para criar um conjunto de coleta de Rastreamento do SQL &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)  
   
 -   [Exibir logs de conjuntos de coleta &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-collection-set-logs-sql-server-management-studio.md)  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 26
   
 -   [Exibir um relatório de conjuntos de coleta &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)  
   
-## Gerenciar a coleta de dados usando Transact-SQL  
+## <a name="manage-data-collection-using-transact-sql"></a>Gerenciar a coleta de dados usando Transact-SQL  
  O coletor de dados fornece uma extensa coleção de procedimentos armazenados que você pode usar para executar qualquer tarefa relacionada ao coletor de dados. Por exemplo, usando o [!INCLUDE[tsql](../../includes/tsql-md.md)], é possível realizar as seguintes tarefas:  
   
 -   [Configurar parâmetros de coleta de dados &#40;Transact-SQL&#41;](../../relational-databases/data-collection/configure-data-collection-parameters-transact-sql.md)  
@@ -53,7 +57,7 @@ caps.handback.revision: 26
   
 -   [Iniciar ou interromper um conjunto de coleta](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
--   [Criar um conjunto de coleta personalizado que usa o tipo de coletor de Consultas T-SQL genérico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create custom collection set - generic t-sql query collector type.md)  
+-   [Criar um conjunto de coleta personalizado que usa o tipo de coletor de Consultas T-SQL genérico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)  
   
 -   [Adicionar um item de coleta a um conjunto de coletas &#40;Transact-SQL&#41;](../../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md)  
   
@@ -63,9 +67,9 @@ caps.handback.revision: 26
   
 >**IMPORTANTE:** Diferentemente de procedimentos armazenados regulares, os procedimentos armazenados do coletor de dados usam apenas parâmetros digitados e não oferecem suporte a conversão de tipo de dados automática. Se esses parâmetros não forem chamados pelos tipos de dados com parâmetros de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
   
- Use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para criar e executar os exemplos de código fornecidos. Para obter mais informações, veja [Pesquisador de Objetos](../../ssms/object/object-explorer.md). Como alternativa, você pode criar a consulta em qualquer editor e salvá-la em um arquivo de texto com uma extensão de nome de arquivo .sql. Você pode executar a consulta no prompt de comando do Windows usando o utilitário **sqlcmd**. Para obter mais informações, consulte [Usar o Utilitário sqlcmd](../../relational-databases/scripting/use-the-sqlcmd-utility.md).  
+ Use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para criar e executar os exemplos de código fornecidos. Para obter mais informações, veja [Pesquisador de Objetos](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2). Como alternativa, você pode criar a consulta em qualquer editor e salvá-la em um arquivo de texto com uma extensão de nome de arquivo .sql. Você pode executar a consulta no prompt de comando do Windows usando o utilitário **sqlcmd** . Para obter mais informações, consulte [Usar o Utilitário sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
   
-### Stored Procedures and Views  
+### <a name="stored-procedures-and-views"></a>Stored Procedures and Views  
  **Trabalhando com o coletor de dados**  
   
  A tabela a seguir descreve os procedimentos armazenados que podem ser usados para funcionar com o coletor de dados.  
@@ -161,7 +165,7 @@ caps.handback.revision: 26
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|Excluir entradas do conjunto de coleta do log de execução.|  
   
-### Funções  
+### <a name="functions"></a>Funções  
  A tabela a seguir descreve as funções que podem ser usadas para obter informações de execução e rastreamento.  
   
 |Nome da função|Descrição|  
@@ -170,9 +174,10 @@ caps.handback.revision: 26
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|Obter estatísticas de execução para um pacote ou conjunto de coleta. Estas informações incluem erros que estão registrados.|  
 |[snapshots.fn_trace_getdata &#40;Transact-SQL&#41;](../../relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md)|Obter os eventos que são registrados quando o tipo de coletor de Rastreamento do SQL Genérico é usado para coletar dados.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Executar um procedimento armazenado](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [Usar o SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)   
+ [Usar o SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
  [Coleta de dados](../../relational-databases/data-collection/data-collection.md)  
   
   
+

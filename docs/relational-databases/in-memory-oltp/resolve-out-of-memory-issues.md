@@ -1,27 +1,31 @@
 ---
-title: "Resolver problemas de mem&#243;ria insuficiente | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Resolver problemas de memória insuficiente | Microsoft Docs"
+ms.custom: 
+ms.date: 08/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d6eef790f729a3270c0ba046d6a60114ae2da8dc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Resolver problemas de mem&#243;ria insuficiente
+# <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memória insuficiente
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] usa mais memória e de maneiras diferentes que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. É possível que a quantidade de memória que você instalou e atribuiu para o [!INCLUDE[hek_2](../../includes/hek-2-md.md)] torne-se inadequada para suas necessidades de crescimento. Se for o caso, você pode ficar sem memória. Este tópico aborda como se recuperar de uma situação de OOM. Veja [Monitorar e solucionar problemas de uso da memória](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) para obter diretrizes que podem ajudá-lo a evitar várias situações de OOM.  
   
-## Tópicos abordados  
+## <a name="covered-in-this-topic"></a>Tópicos abordados  
   
 |Tópico|Visão geral|  
 |-----------|--------------|  
@@ -44,7 +48,7 @@ Se o servidor tiver memória física suficiente, mas você ainda estiver vendo e
   
     > [!IMPORTANT]  
     >  Se o servidor estiver sendo executado em uma máquina virtual e não for dedicado, defina o valor de MIN_MEMORY_PERCENT para o mesmo valor de MAX_MEMORY_PERCENT.   
-    > Confira o tópico [Práticas recomendadas: Usando OLTP in-memory em um ambiente de máquina virtual](../Topic/Using%20In-Memory%20OLTP%20in%20a%20VM%20Environment.md) para obter mais informações.  
+    > Confira o tópico [Práticas recomendadas: Usando OLTP in-memory em um ambiente de máquina virtual](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) para obter mais informações.  
   
     ```tsql  
   
@@ -67,7 +71,7 @@ Se o servidor tiver memória física suficiente, mas você ainda estiver vendo e
      Para obter informações sobre os valores máximos para MAX_MEMORY_PERCENT, confira a seção do tópico [Percentual de memória disponível para índices e tabelas com otimização de memória](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
   
 -   Aumente **max server memory**.  
-    Para obter informações sobre como configurar **max server memory**, veja o tópico [Otimizando o desempenho do servidor usando opções de configuração de memória](http://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx).  
+    Para obter informações sobre como configurar **max server memory** , veja o tópico [Otimizando o desempenho do servidor usando opções de configuração de memória](http://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx).  
   
 ##  <a name="bkmk_recoverFromOOM"></a> Resolver o impacto de pouca memória ou condições de OOM na carga de trabalho  
  Obviamente, é melhor não ficar com pouca memória ou na situação de OOM (memória insuficiente). Um bom planejamento e monitoramento pode ajudar a evitar situações de OOM. Ainda assim, o melhor planejamento nem sempre prevê o que realmente acontece e você pode acabar com pouca memória ou OOM. Há duas etapas para a recuperação de OOM:  
@@ -84,21 +88,21 @@ Se o servidor tiver memória física suficiente, mas você ainda estiver vendo e
 ###  <a name="bkmk_takeCorrectiveAction"></a> Realizar a ação corretiva  
  Para resolver a sua condição de OOM, você precisa ou liberar memória existente reduzindo o uso ou disponibilizar mais memória para as tabelas de memória.  
   
-#### Liberar memória existente  
+#### <a name="free-up-existing-memory"></a>Liberar memória existente  
   
-##### Excluir linhas não essenciais da tabela com otimização de memória e aguardar a coleta de lixo  
+##### <a name="delete-non-essential-memory-optimized-table-rows-and-wait-for-garbage-collection"></a>Excluir linhas não essenciais da tabela com otimização de memória e aguardar a coleta de lixo  
  Você pode remover as linhas não essenciais de uma tabela com otimização de memória. O coletor de lixo retorna a memória usada por essas linhas para a memória disponível. . O mecanismo de OLTP na memória coleta linhas de lixo de maneira agressiva. No entanto, uma transação demorada poderá evitar a coleta de lixo. Por exemplo, se você tiver uma transação que é executada durante 5 minutos, todas as versões de linha criadas por causa das operações de atualização/exclusão enquanto a transação estava ativa não poderão ser limpas.  
   
-##### Mover uma ou mais linhas a uma tabela baseada em disco  
+##### <a name="move-one-or-more-rows-to-a-disk-based-table"></a>Mover uma ou mais linhas a uma tabela baseada em disco  
  Os seguintes artigos da TechNet fornecem orientação sobre como mover linhas de uma tabela com otimização de memória para uma tabela baseada em disco.  
   
 -   [Particionamento de nível de aplicativo](http://technet.microsoft.com/library/dn296452\(v=sql.120\).aspx)  
   
 -   [Padrão de aplicativo para particionamento de tabelas com otimização de memória](http://technet.microsoft.com/library/dn133171\(v=sql.120\).aspx)  
   
-#### Aumentar a memória disponível  
+#### <a name="increase-available-memory"></a>Aumentar a memória disponível  
   
-##### Aumentar o valor de MAX_MEMORY_PERCENT no pool de recursos  
+##### <a name="increase-value-of-maxmemorypercent-on-the-resource-pool"></a>Aumentar o valor de MAX_MEMORY_PERCENT no pool de recursos  
  Se você não criou um pool de recursos nomeado para as tabelas de memória, deverá fazer isso e associar seus bancos de dados do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] a ele. Confira o tópico [Associar um banco de dados com tabelas com otimização de memória a um pool de recursos](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) para obter diretrizes sobre como criar e associar bancos de dados do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] a um pool de recursos.  
   
  Se seu banco de dados do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] estiver associado a um pool de recursos, você poderá aumentar a porcentagem de memória que o pool pode acessar. Confira o subtópico [Alterar MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT em um pool existente](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) para obter diretrizes sobre como alterar o valor de MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT em um pool de recursos.  
@@ -108,7 +112,7 @@ Este trecho de código altera MAX_MEMORY_PERCENT para o pool de recursos PoolHk 
   
 > [!IMPORTANT]  
 >  Se o servidor estiver sendo executado em uma máquina virtual e não for dedicado, defina o valor de MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT como o mesmo.   
-> Confira o tópico [Práticas recomendadas: Usando OLTP in-memory em um ambiente de máquina virtual](../Topic/Using%20In-Memory%20OLTP%20in%20a%20VM%20Environment.md) para obter mais informações.  
+> Confira o tópico [Práticas recomendadas: Usando OLTP in-memory em um ambiente de máquina virtual](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) para obter mais informações.  
   
 ```tsql  
   
@@ -130,24 +134,25 @@ GO
   
  Para obter informações sobre os valores máximos para MAX_MEMORY_PERCENT, confira a seção do tópico [Percentual de memória disponível para índices e tabelas com otimização de memória](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
   
-##### Instalar a memória adicional  
+##### <a name="install-additional-memory"></a>Instalar a memória adicional  
  Por fim, a melhor solução, se possível, é instalar mais memória física. Se você fizer isso, lembre-se de que provavelmente também poderá aumentar o valor de MAX_MEMORY_PERCENT (confira o subtópico [Alterar MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT em um pool existente](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)), já que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] talvez não precise de mais memória, permitindo assim que você disponibilize a maior parte da memória recém-instalada, se não toda ela, ao pool de recursos.  
   
 > [!IMPORTANT]  
 >  Se o servidor estiver sendo executado em uma máquina virtual e não for dedicado, defina o valor de MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT como o mesmo.   
-> Confira o tópico [Práticas recomendadas: Usando OLTP in-memory em um ambiente de máquina virtual](../Topic/Using%20In-Memory%20OLTP%20in%20a%20VM%20Environment.md) para obter mais informações.  
+> Confira o tópico [Práticas recomendadas: Usando OLTP in-memory em um ambiente de máquina virtual](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) para obter mais informações.  
   
 ##  <a name="bkmk_PageAllocFailure"></a> Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível  
- Se você receber a mensagem de erro “Desautorizando as alocações de página do banco de dados '*\<databaseName>*' devido à memória insuficiente no pool de recursos '*\<resourcePoolName>*'”. Consulte 'http://go.microsoft.com/fwlink/?LinkId=330673' para obter mais informações”. No log de erros quando a memória física disponível for suficiente para alocar a página, talvez isso ocorra devido a um Administrador de Recursos desabilitado. Quando o Administrador de Recursos é desabilitado, MEMORYBROKER_FOR_RESERVE induz artificial à pressão de memória artificial.  
+ Se você receber a mensagem de erro “Desautorizando as alocações de página do banco de dados '*\<databaseName>*' devido à memória insuficiente no pool de recursos '*\<resourcePoolName*'”. Consulte 'http://go.microsoft.com/fwlink/?LinkId=330673' para obter mais informações”. No log de erros quando a memória física disponível for suficiente para alocar a página, talvez isso ocorra devido a um Administrador de Recursos desabilitado. Quando o Administrador de Recursos é desabilitado, MEMORYBROKER_FOR_RESERVE induz artificial à pressão de memória artificial.  
   
  Para resolver isso, é necessário habilitar o Administrador de Recursos.  
   
  Veja [Habilitar Administrador de Recursos](http://technet.microsoft.com/library/bb895149.aspx) para obter informações sobre limites e restrições, bem como diretrizes sobre como habilitar o Administrador de Recursos usando o Pesquisador de Objetos, as propriedades do Administrador de Recursos ou o Transact-SQL.  
   
-## Consulte também  
- [Gerenciando memória para OLTP na memória](../Topic/Managing%20Memory%20for%20In-Memory%20OLTP.md)   
+## <a name="see-also"></a>Consulte também  
+ [Gerenciando memória para OLTP na memória](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [Monitorar e solucionar problemas de uso da memória](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
  [Associar um banco de dados com tabelas com otimização de memória a um pool de recursos](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Práticas recomendadas: usando OLTP na memória em um ambiente de máquina virtual](../Topic/Using%20In-Memory%20OLTP%20in%20a%20VM%20Environment.md)  
+ [Práticas recomendadas: Usando OLTP in-memory em um ambiente de máquina virtual](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)  
   
   
+

@@ -1,28 +1,32 @@
 ---
-title: "Criar um backup completo de banco de dados (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "fazendo backup de bancos de dados [SQL Server], backups completos"
-  - "fazendo backup de bancos de dados [SQL Server], SQL Server Management Studio"
-  - "backups [SQL Server], criando"
-  - "backups de bancos de dados [SQL Server], SQL Server Management Studio"
+title: Criar um backup completo do banco de dados (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 07/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backing up databases [SQL Server], full backups
+- backing up databases [SQL Server], SQL Server Management Studio
+- backups [SQL Server], creating
+- database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 caps.latest.revision: 63
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f18989ee04ccb28ab9b37a5912328de60cbde885
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar um backup completo de banco de dados (SQL Server)
-  Este tópico descreve como criar um backup de banco de dados completo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou PowerShell.  
+# <a name="create-a-full-database-backup-sql-server"></a>Criar um backup completo de banco de dados (SQL Server)
+  Este tópico descreve como criar um backup de banco de dados completo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell.  
   
 >  Para obter informações sobre o backup do SQL Server no serviço de armazenamento de Blobs do Microsoft Azure, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) e [Backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
@@ -34,23 +38,23 @@ caps.handback.revision: 63
   
 -   Os backups criados por uma versão mais recente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não podem ser restaurados em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Para ter uma visão geral e aprofundar-se nos conceitos e tarefas de backup, consulte [Visão geral de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md) antes de prosseguir.  
+-   Para ter uma visão geral e aprofundar-se nos conceitos e tarefas de backup, consulte [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md) antes de prosseguir.  
   
 ###  <a name="Recommendations"></a> Recomendações  
   
 -   À medida que um banco de dados aumenta, os backups completos de banco de dados levam mais tempo para serem concluídos e exigem mais espaço de armazenamento. Para um banco de dados grande, convém complementar um backup de banco de dados completo com uma série de *backups de bancos de dados diferenciais*. Para obter mais informações, veja [Backups diferenciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md) e [Backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
--   Estime o tamanho de um backup de banco de dados completo usando o procedimento armazenado do sistema [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).  
+-   Estime o tamanho de um backup de banco de dados completo usando o procedimento armazenado do sistema [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  
   
--   Por padrão, toda operação de backup bem-sucedida acrescenta uma entrada ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao log de eventos do sistema. Se você fizer backup com frequência, essas mensagens de êxito acumularão rapidamente, resultando em logs de erro grandes. Isso pode dificultar a localização de outras mensagens. Em tais situações, você pode suprimir essas entradas de log de backup usando o sinalizador de rastreamento 3226, caso nenhum dos seus scripts dependa dessas entradas. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md).  
+-   Por padrão, toda operação de backup bem-sucedida acrescenta uma entrada ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao log de eventos do sistema. Se você fizer backup com frequência, essas mensagens de êxito acumularão rapidamente, resultando em logs de erro grandes. Isso pode dificultar a localização de outras mensagens. Em tais situações, você pode suprimir essas entradas de log de backup usando o sinalizador de rastreamento 3226, caso nenhum dos seus scripts dependa dessas entradas. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
 ###  <a name="Security"></a> Segurança  
- TRUSTWORTHY é definido como OFF em um backup de banco de dados. Para obter informações sobre como definir TRUSTWORTHY como ON, veja [Opções do ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+ TRUSTWORTHY é definido como OFF em um backup de banco de dados. Para obter informações sobre como definir TRUSTWORTHY como ON, veja [Opções do ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , as opções **PASSWORD** e **MEDIAPASSWORD** foram descontinuadas para a criação de backups. Você ainda poderá restaurar os backups criados com senhas.  
   
 ####  <a name="Permissions"></a> Permissões  
- As permissões BACKUP DATABASE e BACKUP LOG usam como padrão os membros da função de servidor fixa **sysadmin** e as funções de banco de dados fixas **db_owner** e **db_backupoperator**.  
+ As permissões BACKUP DATABASE e BACKUP LOG usam como padrão os membros da função de servidor fixa **sysadmin** e as funções de banco de dados fixas **db_owner** e **db_backupoperator** .  
   
  Os problemas de propriedade e permissão no arquivo físico do dispositivo de backup podem interferir em uma operação de backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser capaz de ler e gravar no dispositivo; a conta sob a qual o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa **deve** ter permissões de gravação. No entanto, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que adiciona uma entrada para um dispositivo de backup nas tabelas do sistema, não verifica permissões de acesso a arquivos. Esses problemas no arquivo físico do dispositivo de backup podem não aparecer até que o recurso físico seja acessado quando o backup ou restauração é tentado.  
   
@@ -58,33 +62,33 @@ caps.handback.revision: 63
   
 >  Ao especificar uma tarefa de backup usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é possível gerar o script [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) correspondente, clicando no botão **Script** e selecionando um destino para o script.  
   
-### Fazer o backup de um banco de dados  
+### <a name="back-up-a-database"></a>Fazer o backup de um banco de dados  
   
 1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], em **Pesquisador de Objetos**, clique no nome do servidor para expandir a árvore do servidor.  
   
-2.  Expanda **Bancos de Dados** e selecione um banco de dados de usuário ou expanda **Bancos de Dados de Sistema** e selecione um banco de dados de sistema.  
+2.  Expanda **Bancos de Dados**e selecione um banco de dados de usuário ou expanda **Bancos de Dados de Sistema** e selecione um banco de dados de sistema.  
   
-3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas** e clique em **Backup**. Será exibida a caixa de diálogo **Backup de Banco de Dados** .  
+3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**e clique em **Backup**. Será exibida a caixa de diálogo **Backup de Banco de Dados** .  
 
-  #### **Página Geral**
+  #### <a name="general-page"></a>**Página Geral**
   
-4.  Na lista suspensa **Banco de Dados**, verifique o nome do banco de dados. Opcionalmente, você pode selecionar um banco de dados diferente na lista.  
+4.  Na lista suspensa **Banco de Dados** , verifique o nome do banco de dados. Opcionalmente, você pode selecionar um banco de dados diferente na lista.  
   
-5.  A caixa de texto **Modelo de recuperação** serve apenas para referência.  Você pode executar um backup de banco de dados para qualquer modelo de recuperação (**FULL**, **BULK_LOGGED** ou **SIMPLE**).  
+5.  A caixa de texto **Modelo de recuperação** serve apenas para referência.  Você pode executar um backup de banco de dados para qualquer modelo de recuperação (**FULL**, **BULK_LOGGED**ou **SIMPLE**).  
   
-6.  Na lista suspensa **Tipo de backup**, selecione **Completo**.  
+6.  Na lista suspensa **Tipo de backup** , selecione **Completo**.  
   
-     Observe que depois de criar um backup de banco de dados completo, é possível criar um backup de banco de dados diferencial. Para obter mais informações, consulte [Criar um backup de banco de dados diferencial &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).  
+     Observe que depois de criar um backup de banco de dados completo, é possível criar um backup de banco de dados diferencial. Para obter mais informações, consulte [Criar um backup diferencial de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).  
   
 7.  Opcionalmente, você pode marcar a caixa de seleção **Backup somente cópia** para criar um backup somente cópia. Um *backup somente cópia* é um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não depende da sequência de backups convencionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Backups somente cópia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  Um backup somente cópia não está disponível para o tipo de backup **Diferencial**.  
 
-8.  Em **Componente de backup**, selecione o botão de opção **Banco de dados**.  
+8.  Em **Componente de backup**, selecione o botão de opção **Banco de dados** .  
   
-9. Na seção **Destino**, use a lista suspensa **Fazer backup em** para selecionar o destino do backup. Clique em **Adicionar** para adicionar outros objetos e/ou destinos de backup.
+9. Na seção **Destino** , use a lista suspensa **Fazer backup em** para selecionar o destino do backup. Clique em **Adicionar** para adicionar outros objetos e/ou destinos de backup.
   
      Para remover um destino de backup, selecione-o e clique em **Remover**. Para exibir o conteúdo de um destino de backup existente, selecione-o e clique em **Conteúdo**.  
 
-  #### **Página Opções de Mídia**  
+  #### <a name="media-options-page"></a>**Página Opções de Mídia**  
 10. Para exibir ou selecionar as opções de mídia, clique em **Opções de Mídia** no painel **Selecionar uma página** .   
     
 11. Selecione uma opção **Substituir Mídia** , com um clique em uma das opções a seguir: 
@@ -98,7 +102,7 @@ caps.handback.revision: 63
       > [!IMPORTANT]  
       >  Se você planeja usar criptografia, não selecione essa opção. Se você selecionar esta opção, as opções de criptografia na página **Opções de Backup** serão desabilitadas. A criptografia não tem suporte ao anexar ao conjunto de backup existente.  
   
-         Para essa opção, clique em **Anexar ao conjunto de backup existente** ou **Substituir todos os conjuntos de backup existentes**. Para obter mais informações, consulte [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
+         Para essa opção, clique em **Anexar ao conjunto de backup existente** ou **Substituir todos os conjuntos de backup existentes**. Para obter mais informações, veja [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
          Opcionalmente, selecione **Verificar nome do conjunto de mídias e validade do conjunto de backup** para que a operação de backup verifique a data e a hora em que o conjunto de mídias e de backup expiram.  
   
@@ -116,103 +120,103 @@ caps.handback.revision: 63
     
     -   **Continuar se houver erro**. 
 
-15. A seção **Log de transações** estará inativa exceto se o backup estiver sendo feito em um log de transações (como especificado na seção **Tipo de backup** da página **Geral**).  
+15. A seção **Log de transações** estará inativa exceto se o backup estiver sendo feito em um log de transações (como especificado na seção **Tipo de backup** da página **Geral** ).  
       
-16. Na seção **Unidade de fita**, a opção **Descarregar a fita após o backup** estará ativa se você estiver fazendo backup em uma unidade de fita (como especificado na seção **Destino** da página **Geral**). Clicar nessa opção ativa a opção **Rebobinar a fita antes de descarregar** .   
+16. Na seção **Unidade de fita** , a opção **Descarregar a fita após o backup** estará ativa se você estiver fazendo backup em uma unidade de fita (como especificado na seção **Destino** da página **Geral** ). Clicar nessa opção ativa a opção **Rebobinar a fita antes de descarregar** .   
 
-  #### **Página Opções de Backup**  
+  #### <a name="backup-options-page"></a>**Página Opções de Backup**  
 
 17. Para exibir ou selecionar as opções de backup, clique em **Opções de Backup** no painel **Selecionar uma página** .  
   
-18. Na caixa de texto **Nome**, aceite o nome do conjunto de backup padrão ou insira um nome diferente para o conjunto de backup.  
+18. Na caixa de texto **Nome** , aceite o nome do conjunto de backup padrão ou insira um nome diferente para o conjunto de backup.  
   
-19. Opcionalmente, na caixa de texto **Descrição**, você pode inserir uma descrição do conjunto de backup.  
+19. Opcionalmente, na caixa de texto **Descrição** , você pode inserir uma descrição do conjunto de backup.  
   
 20. Especifique quando o conjunto de backup irá expirar e pode ser substituído sem ignorar explicitamente a verificação dos dados de expiração:  
   
     -   Para que o conjunto de backup expire depois de um número específico de dias, clique em **Depois** (a opção padrão) e digite quantos dias depois da criação do conjunto ele deve expirar. Esse valor pode ser de 0 a 99999 dias; 0 dia significa que o conjunto de backup nunca vai expirar.  
   
-         O valor padrão é definido na opção **Retenção de mídia de backup padrão (em dias)** da caixa de diálogo **Propriedades do Servidor** (página Configurações do Banco de Dados). Para acessar, clique com o botão direito do mouse no nome do servidor em Pesquisador de Objetos e selecione propriedades. Depois, selecione a página **Configurações de Banco de Dados**.  
+         O valor padrão é definido na opção **Retenção de mídia de backup padrão (em dias)** da caixa de diálogo **Propriedades do Servidor** (página Configurações do Banco de Dados). Para acessar, clique com o botão direito do mouse no nome do servidor em Pesquisador de Objetos e selecione propriedades. Depois, selecione a página **Configurações de Banco de Dados** .  
   
     -   Para que o conjunto de backup expire em uma data específica, clique no campo **Em**e digite a data de expiração do conjunto.  
   
          Para obter mais informações sobre datas de validade de backup, consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
-21. Na seção **Compactação**, use a lista suspensa **Definir compactação de backup** para selecionar o nível de compactação desejado.  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e posteriores dão suporte para [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup**. Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup** e evitar a compactação marcando **Não compactar o backup**.  
+21. Na seção **Compactação** , use a lista suspensa **Definir compactação de backup** para selecionar o nível de compactação desejado.  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e posteriores dão suporte para [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup** . Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup**e evitar a compactação marcando **Não compactar o backup**.  
   
      Para obter mais informações sobre configurações de compactação de backup, consulte [Exibir ou configurar a Opção de Configuração de Servidor backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
-22. Na seção **criptografia**, use a caixa de seleção **Criptografar backup** para decidir se deverá ser usada criptografia para o backup. Use a lista suspensa **Algoritmo** para selecionar um algoritmo de criptografia.  Use a lista suspensa **Certificado ou Chave Assimétrica** para selecionar um Certificado ou Chave Assimétrica existente. A criptografia tem suporte no SQL Server 2014 ou posterior. Para obter mais detalhes sobre as opções de criptografia, consulte [Fazer backup do banco de dados &#40;página Opções de Backup&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md).  
+22. Na seção **criptografia** , use a caixa de seleção **Criptografar backup** para decidir se deverá ser usada criptografia para o backup. Use a lista suspensa **Algoritmo** para selecionar um algoritmo de criptografia.  Use a lista suspensa **Certificado ou Chave Assimétrica** para selecionar um Certificado ou Chave Assimétrica existente. A criptografia tem suporte no SQL Server 2014 ou posterior. Para obter mais detalhes sobre as opções de criptografia, consulte [Fazer backup do banco de dados &#40;página Opções de Backup&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md).  
   
   
 É possível usar o [Assistente de Plano de Manutenção](https://msdn.microsoft.com/library/ms191002.aspx) para criar backups de bancos de dados. 
 
-### Exemplos  
-#### **A.  Backup completo em disco em local padrão**
-Neste exemplo, será feito backup do banco de dados `Sales` em disco no local de backup padrão.  Nunca foi feito backup do `Sales`.
+### <a name="examples"></a>Exemplos  
+#### <a name="a--full-back-up-to-disk-to-default-location"></a>**A.  Backup completo no disco no local padrão**
+Neste exemplo, será feito backup do banco de dados `Sales` em disco no local de backup padrão.  Nunca foi feito backup do `Sales` .
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
 
-2.  Expanda **Banco de Dados**, clique com o botão direito do mouse em `Sales`, aponte para **Tarefas** e clique em **Fazer Backup...**.
+2.  Expanda **Banco de Dados**, clique com o botão direito do mouse em `Sales`, aponte para **Tarefas**e clique em **Fazer Backup...**.
 
 3.  Clique em **OK**.
 
-#### **B.  Backup completo em disco em local não padrão**
-Neste exemplo, será feito backup do banco de dados `Sales` em disco em `E:\MSSQL\BAK`.  Já foram feitos backups anteriores do `Sales`.
+#### <a name="b--full-back-up-to-disk-to-non-default-location"></a>**B.  Backup completo no disco em local não padrão**
+Neste exemplo, será feito backup do banco de dados `Sales` em disco em `E:\MSSQL\BAK`.  Já foram feitos backups anteriores do `Sales` .
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
 
-2.  Expanda **Banco de Dados**, clique com o botão direito do mouse em `Sales`, aponte para **Tarefas** e clique em **Fazer Backup...**.
+2.  Expanda **Banco de Dados**, clique com o botão direito do mouse em `Sales`, aponte para **Tarefas**e clique em **Fazer Backup...**.
 
-3.  Na página **Geral**, na seção **Destino**, selecione a opção **Disco** na lista suspensa **Fazer backup em:**.
+3.  Na página **Geral** , na seção **Destino** , selecione a opção **Disco** na lista suspensa **Fazer backup em:** .
 
 4.  Clique em **Remover** até que todos os arquivos de backup existentes sejam removidos.
 
 5.  Clique em **Adicionar** e a caixa de diálogo **Selecionar Destino do Backup** será aberta.
 
-6.  Insira `E:\MSSQL\BAK\Sales_20160801.bak` na caixa de texto **Nome de arquivo**.
+6.  Insira `E:\MSSQL\BAK\Sales_20160801.bak` na caixa de texto **Nome de arquivo** .
 
 7.  Clique em **OK**.
 
 8.  Clique em **OK**.
 
-#### **C.  Criar um backup criptografado**
-Neste exemplo, será feito backup do banco de dados `Sales` com criptografia no local de backup padrão.  Uma [**chave mestra do banco de dados**](../../relational-databases/security/encryption/create-a-database-master-key.md) já foi criada.  Um [**certificado**](../../t-sql/statements/create-certificate-transact-sql.md) chamado `MyCertificate` já foi criado. Um exemplo de T-SQL de como criar uma **chave mestra do banco de dados** e um **certificado** pode ser visto em [Criar um backup criptografado](../../relational-databases/backup-restore/create-an-encrypted-backup.md).  
+#### <a name="c--create-an-encrypted-backup"></a>**C.  Criar um backup criptografado**
+Neste exemplo, será feito backup do banco de dados `Sales` com criptografia no local de backup padrão.  Uma  [**chave mestra do banco de dados**](../../relational-databases/security/encryption/create-a-database-master-key.md) já foi criada.  Um  [**certificado**](../../t-sql/statements/create-certificate-transact-sql.md) chamado `MyCertificate`já foi criado. Um exemplo de T-SQL de como criar uma **chave mestra do banco de dados** e um **certificado** pode ser visto em [Criar um backup criptografado](../../relational-databases/backup-restore/create-an-encrypted-backup.md).  
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
 
-2.  Expanda **Banco de Dados**, clique com o botão direito do mouse em `Sales`, aponte para **Tarefas** e clique em **Fazer Backup...**.
+2.  Expanda **Banco de Dados**, clique com o botão direito do mouse em `Sales`, aponte para **Tarefas**e clique em **Fazer Backup...**.
 
-3.  Na página **Opções de Mídia** da seção **Substituir mídia**, selecione **Fazer backup em um novo conjunto de mídias e apagar todos os conjuntos de backup existentes**.
+3.  Na página **Opções de Mídia** da seção **Substituir mídia** , selecione **Fazer backup em um novo conjunto de mídias e apagar todos os conjuntos de backup existentes**.
 
-4.  Na página **Opções de Backup** da seção **Criptografia**, marque a caixa de seleção **Criptografar backup**.
+4.  Na página **Opções de Backup** da seção **Criptografia** , marque a caixa de seleção **Criptografar backup** .
 
-5.  Na lista suspensa **Algoritmo**, selecione **AES 256**.
+5.  Na lista suspensa **Algoritmo** , selecione **AES 256**.
 
-6.  Na lista suspensa **Certificado ou Chave Assimétrica**, selecione `MyCertificate`.
+6.  Na lista suspensa **Certificado ou Chave Assimétrica** , selecione `MyCertificate`.
 
 7.  Clique em **OK**.
 
-#### **D.  Fazer backup do serviço de Armazenamento de Blobs do Microsoft Azure**
-#### **Etapas comuns**  
+#### <a name="d--backing-up-to-the-microsoft-azure-blob-storage-service"></a>**D.  Fazendo backup no serviço de armazenamento de Blobs do Microsoft Azure**
+#### <a name="common-steps"></a>**Etapas comuns**  
 Os três exemplos abaixo executam um backup completo do banco de dados do `Sales` no serviço de Armazenamento de Blobs do Microsoft Azure.  O nome da Conta de armazenamento é `mystorageaccount`.  O contêiner é chamado `myfirstcontainer`.  Para resumir, as quatro primeiras etapas são listadas aqui uma vez e todos os exemplos serão iniciados na **Etapa 5**.
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
 
-2.  Expanda **Banco de Dados**, clique com o botão direito do mouse em `Sales`, aponte para **Tarefas** e clique em **Fazer Backup...**.
+2.  Expanda **Banco de Dados**, clique com o botão direito do mouse em `Sales`, aponte para **Tarefas**e clique em **Fazer Backup...**.
 
-3.  Na página **Geral**, na seção **Destino**, selecione a opção **URL** na lista suspensa **Fazer backup em:**.
+3.  Na página **Geral** , na seção **Destino** , selecione a opção **URL** na lista suspensa **Fazer backup em:** .
 
 4.  Clique em **Adicionar** e a caixa de diálogo **Selecionar Destino do Backup** será aberta.
 
     **D1.  Já existe um backup distribuído para URL e uma credencial do SQL Server**  
 Uma política de acesso armazenado foi criada com direitos de leitura, gravação e listagem.  A credencial do SQL Server, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, foi criada usando uma Assinatura de Acesso Compartilhado associada à política de acesso armazenado.  
 *
-    5.  Selecione `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` do **contêiner de armazenamento do Azure:** caixa de texto
+    5.    Selecione `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` do **contêiner de armazenamento do Azure:** caixa de texto
 
-    6.  Na caixa de texto **Arquivo de Backup:**, digite `Sales_stripe1of2_20160601.bak`.
+    6.  Na caixa de texto **Arquivo de Backup:** , digite `Sales_stripe1of2_20160601.bak`.
 
     7.  Clique em **OK**.
 
     8.  Repita as etapas de **4** e **5**.
 
-    9.  Na caixa de texto **Arquivo de Backup:**, digite `Sales_stripe2of2_20160601.bak`.
+    9.  Na caixa de texto **Arquivo de Backup:** , digite `Sales_stripe2of2_20160601.bak`.
 
     10.  Clique em **OK**.
 
@@ -221,7 +225,7 @@ Uma política de acesso armazenado foi criada com direitos de leitura, gravaçã
     **D2.  Existe uma assinatura de acesso compartilhado e não existe uma credencial do SQL Server**
   5.    Digite `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` na caixa de texto **Contêiner de armazenamento do Azure:**
   
-  6.    Insira a assinatura de acesso compartilhado na caixa de texto **Política de Acesso Compartilhado:**.
+  6.    Insira a assinatura de acesso compartilhado na caixa de texto **Política de Acesso Compartilhado:** .
   
   7.    Clique em **OK**.
   
@@ -230,16 +234,16 @@ Uma política de acesso armazenado foi criada com direitos de leitura, gravaçã
     **D3.  Não há uma assinatura de acesso compartilhado**
   5.    Clique no botão **Novo contêiner** e a caixa de diálogo **Conectar-se a uma Assinatura da Microsoft** será aberta.  
   
-  6.    Conclua a caixa de diálogo **Conectar-se a uma Assinatura da Microsoft** e clique em **OK** para retornar à caixa de diálogo **Selecionar um destino de backup**.  Veja [Conectar-se a uma assinatura do Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) para obter mais informações.
+  6.    Conclua a caixa de diálogo **Conectar-se a uma Assinatura da Microsoft** e clique em **OK** para retornar à caixa de diálogo **Selecionar um destino de backup** .  Veja [Conectar-se a uma assinatura do Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) para obter mais informações.
   
-  7.    Clique em **OK** na caixa de diálogo **Selecionar Destino do Backup**.
+  7.    Clique em **OK** na caixa de diálogo **Selecionar Destino do Backup** .
   
   8.    Clique em **OK**.
 
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-### Para criar um backup de banco de dados completo  
+### <a name="to-create-a-full-database-backup"></a>Para criar um backup de banco de dados completo  
   
 1.  Execute a instrução BACKUP DATABASE para criar o backup do banco de dados completo, especificando:  
   
@@ -257,7 +261,7 @@ Uma política de acesso armazenado foi criada com direitos de leitura, gravaçã
   
     |Opção|Descrição|  
     |------------|-----------------|  
-    |*Banco de Dados*|É o banco de dados do qual fazer backup.|  
+    |*database*|É o banco de dados do qual fazer backup.|  
     |*backup_device* [ **,**...*n* ]|Especifica uma lista de 1 a 64 dispositivos de backup a serem usados para a operação de backup. Você pode especificar um dispositivo de backup físico ou pode especificar um dispositivo de backup lógico correspondente, se já definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
     |WITH *with_options* [ **,**...*o* ]|Opcionalmente, especifica uma ou mais opções adicionais, *o*. Para obter informações sobre os fundamentos de opções, consulte a etapa 2.|  
   
@@ -291,7 +295,7 @@ Uma política de acesso armazenado foi criada com direitos de leitura, gravaçã
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
   
-#### **A. Fazendo backup para um dispositivo de disco.**  
+#### <a name="a-backing-up-to-a-disk-device"></a>**A. Fazendo backup em um dispositivo de disco**  
  O exemplo a seguir faz backup de banco de dados completo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] em um disco, usando `FORMAT` para criar um novo conjunto de mídia.  
   
 ```tsql  
@@ -305,7 +309,7 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-#### **B. Fazendo backup para um dispositivo de fita**  
+#### <a name="b-backing-up-to-a-tape-device"></a>**B. Fazendo backup em um dispositivo de fita**  
  O exemplo a seguir faz backup do banco de dados completo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] em fita, anexando o backup aos backups anteriores.  
   
 ```tsql  
@@ -318,7 +322,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### **C. Fazendo backup em um dispositivo de fita lógico**  
+#### <a name="c-backing-up-to-a-logical-tape-device"></a>**C. Fazendo backup em um dispositivo de fita lógico**  
  O exemplo a seguir cria um dispositivo de backup lógico para uma unidade de fita. O exemplo faz backup completo do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nesse dispositivo.  
   
 ```tsql  
@@ -338,16 +342,16 @@ GO
 ```  
   
 ##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
-Use o cmdlet **Backup-SqlDatabase**. Para indicar explicitamente que este é um backup completo de banco de dados, especifique o parâmetro **-BackupAction** com seu valor padrão **Database**. Esse parâmetro é opcional para backups completos de banco de dados.  
+Use o cmdlet **Backup-SqlDatabase** . Para indicar explicitamente que este é um backup completo de banco de dados, especifique o parâmetro **-BackupAction**  com seu valor padrão **Database**. Esse parâmetro é opcional para backups completos de banco de dados.  
 
-### Exemplos
-#### **A.  Backup completo local**  
+### <a name="examples"></a>Exemplos
+#### <a name="a--full-local-backup"></a>**A.  Backup completo local**  
 O exemplo a seguir cria um backup de banco de dados completo do banco de dados `MyDB` para o local de backup padrão da instância de servidor `Computer\Instance`. Como opção, esse exemplo especifica **-BackupAction Database**.  
 ```powershell 
 Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Database  
 ```
  
-#### **B.  Backup completo para o Microsoft Azure**  
+#### <a name="b--full-backup-to-microsoft-azure"></a>**B.  Backup completo para o Microsoft Azure**  
 O exemplo a seguir cria um backup completo do banco de dados `Sales` na instância `MyServer` para o serviço de Armazenamento de Blobs do Microsoft Azure.  Uma política de acesso armazenado foi criada com direitos de leitura, gravação e listagem.  A credencial do SQL Server, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, foi criada usando uma Assinatura de Acesso Compartilhado associada à política de acesso armazenado.  O comando do PowerShell usa o parâmetro **BackupFile** para especificar o local (URL) e o nome do arquivo de backup.
 
 ```powershell  
@@ -374,13 +378,13 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
   
 -   [Restaurar um backup de banco de dados no modelo de recuperação simples &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
--   [Restaurar um banco de dados até o ponto de falha no modelo de recuperação completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [Restaurar um banco de dados até o ponto de falha no modelo de recuperação completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [Restaurar um banco de dados em um novo local &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
 -   [Usar o Assistente de Plano de Manutenção](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 **[Solução de problemas de operações de backup e restauração do SQL Server](https://support.microsoft.com/en-us/kb/224071)**          
 [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
@@ -393,3 +397,4 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
  [Backups de bancos de dados completos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)  
   
   
+

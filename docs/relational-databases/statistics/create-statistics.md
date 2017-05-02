@@ -1,30 +1,34 @@
 ---
-title: "Criar estat&#237;sticas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.stat.properties.f1"
-  - "sql13.swb.statistics.filter.f1"
-  - "sql13.swb.stat.columns.f1"
-  - "sql13.swb.statistics.propertis.f1"
-helpviewer_keywords: 
-  - "criando estatísticas"
-  - "estatísticas [SQL Server], criando"
+title: "Criar estatísticas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.stat.properties.f1
+- sql13.swb.statistics.filter.f1
+- sql13.swb.stat.columns.f1
+- sql13.swb.statistics.propertis.f1
+helpviewer_keywords:
+- creating statistics
+- statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e08b4318e4faa13aba2e242f0458db3572d7884
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar estat&#237;sticas
+# <a name="create-statistics"></a>Criar estatísticas
   Você pode criar estatísticas de otimização de consulta em uma ou mais colunas de uma tabela ou exibição indexada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para a maioria das consultas, o otimizador de consulta já gera as estatísticas necessárias para um plano de consulta de alta qualidade; em alguns casos, é necessário criar estatísticas adicionais.  
   
  **Neste tópico**  
@@ -54,11 +58,11 @@ caps.handback.revision: 9
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- exige que o usuário seja o proprietário da tabela ou exibição indexada ou um membro de uma das seguintes funções: função de servidor fixa **sysadmin**, função de banco de dados fixa **db_owner** ou função de banco de dados fixa **db_ddladmin**.  
+ exige que o usuário seja o proprietário da tabela ou exibição indexada ou um membro de uma das seguintes funções: função de servidor fixa **sysadmin** , função de banco de dados fixa **db_owner** ou função de banco de dados fixa **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para criar estatísticas  
+#### <a name="to-create-statistics"></a>Para criar estatísticas  
   
 1.  No **Pesquisador de Objetos**, clique no sinal de adição para expandir o banco de dados no qual você deseja criar uma nova estatística.  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 9
   
 4.  Clique com o botão direito do mouse na pasta **Estatísticas** e selecione **Novas Estatísticas...**.  
   
-     As propriedades a seguir são mostradas na página **Geral** na caixa de diálogo **Novas Estatísticas na Tabela***table_name*.  
+     As propriedades a seguir são mostradas na página **Geral** na caixa de diálogo **Novas Estatísticas na Tabela***table_name* .  
   
      **Nome da tabela**  
      Exibe o nome da tabela descrito pelas estatísticas.  
@@ -112,12 +116,12 @@ caps.handback.revision: 9
      **Atualize estatísticas para essas colunas**  
      Verifique para atualizar as estatísticas quando a caixa de diálogo estiver fechada.  
   
-     A propriedade a seguir é mostrada na página **Filtro** na caixa de diálogo **Novas Estatísticas na Tabela***table_name*.  
+     A propriedade a seguir é mostrada na página **Filtro** na caixa de diálogo **Novas Estatísticas na Tabela***table_name* .  
   
      **Expressão de filtro**  
      Define quais linhas de dados devem ser incluídas nas estatísticas filtradas. Por exemplo, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Na caixa de diálogo **Novas Estatísticas na Tabela***table_name*, na página **Geral**, clique em **Adicionar**.  
+5.  Na caixa de diálogo **Novas Estatísticas na Tabela***table_name* , na página **Geral** , clique em **Adicionar**.  
   
      As propriedades a seguir aparecem na caixa de diálogo **Selecionar Colunas** . Essas informações são somente leitura.  
   
@@ -133,16 +137,16 @@ caps.handback.revision: 9
      **Identidade**  
      Indica uma coluna de identidade quando marcado.  
   
-     **Permitir Nulos**  
+     **Allow NULLs**  
      Indica se a coluna aceita valores nulos.  
   
 6.  Na caixa de diálogo **Selecionar Colunas** , marque as caixas de seleção de cada coluna para as quais você deseja criar uma estatística e clique em **OK**.  
   
-7.  Na caixa de diálogo **Novas Estatísticas na Tabela***table_name*, clique em **OK**.  
+7.  Na caixa de diálogo **Novas Estatísticas na Tabela***table_name* , clique em **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para criar estatísticas  
+#### <a name="to-create-statistics"></a>Para criar estatísticas  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

@@ -1,24 +1,28 @@
 ---
-title: "Backup do banco de dados (p&#225;gina Geral) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdatabase.general.f1"
+title: "Fazer backup do banco de dados (página Geral) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 038fa003ad819d89d8739f8cfaac53582f93932a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup do banco de dados (p&#225;gina Geral)
+# <a name="back-up-database-general-page"></a>Backup do banco de dados (página Geral)
   Use a página **Geral** da caixa de diálogo **Backup de Banco de Dados** para exibir ou modificar as configurações de uma operação de backup de banco de dados.  
   
  Para obter mais informações sobre os conceitos básicos de backup, veja [Visão geral de Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
@@ -39,9 +43,9 @@ caps.handback.revision: 64
   
 -   Para obter um backup parcial, use a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) com a opção PARTIAL.  
   
-## Opções  
+## <a name="options"></a>Opções  
   
-### Origem  
+### <a name="source"></a>Origem  
  As opções do painel **Origem** identificam o banco de dados e especificam o tipo de backup e o componente para a operação de backup.  
   
  **Banco de Dados**  
@@ -75,7 +79,7 @@ caps.handback.revision: 64
 |**Banco de Dados**|Especifica que seja feito backup do banco de dados inteiro.|  
 |**Arquivos e grupos de arquivos**|Especifica que seja feito backup dos arquivos e/ou grupos de arquivos especificados.<br /><br /> Selecione essa opção para abrir a caixa de diálogo **Selecionar Arquivos e Grupos de Arquivos** . Após selecionar os grupos de arquivos ou arquivos dos quais deseja fazer backup e clicar em **Ok**, suas seleções serão exibidas na caixa **Arquivos e grupos de arquivos** .|  
   
-### Destino  
+### <a name="destination"></a>Destino  
  As opções do painel **Destino** permitem especificar o tipo de dispositivo de backup para a operação de backup e encontrar um dispositivo de backup lógico ou físico existente.  
   
 > [!NOTE]  
@@ -93,17 +97,17 @@ caps.handback.revision: 64
  O próximo conjunto de opções exibido depende do tipo de destino selecionado. Se você selecionar Disco ou Fita, as opções a seguir são exibidas.  
   
  **Adicionar**  
- Adiciona um arquivo ou dispositivo à lista **Fazer backup em**. Você pode fazer backup em até 64 dispositivos simultaneamente em um disco local ou remoto. Para especificar um arquivo em um disco remoto, use o nome UNC totalmente qualificado. Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+ Adiciona um arquivo ou dispositivo à lista **Fazer backup em** . Você pode fazer backup em até 64 dispositivos simultaneamente em um disco local ou remoto. Para especificar um arquivo em um disco remoto, use o nome UNC totalmente qualificado. Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
  
  
   
  **Remover**  
- Remove um ou mais dispositivos atualmente selecionados na lista **Fazer backup em**.  
+ Remove um ou mais dispositivos atualmente selecionados na lista **Fazer backup em** .  
   
  **Sumário**  
 Exibirá o conteúdo da mídia do dispositivo selecionado, se houver.  O botão não executa uma função quando uma **URL** é especificada. 
    
-Caixa de diálogo **Selecionar Destino do Backup** A caixa de diálogo **Selecionar Destino do Backup** é exibida depois de selecionar **Adicionar**.   O conjunto de opções exibido depende do tipo de destino selecionado. 
+Caixa de diálogo**Selecionar Destino do Backup** A caixa de diálogo **Selecionar Destino do Backup** é exibida depois de selecionar **Adicionar**.   O conjunto de opções exibido depende do tipo de destino selecionado. 
 
 Se você selecionou **Disco** ou **Fita** como destino de backup, a opção a seguir é exibida.  
 
@@ -126,9 +130,9 @@ Se você selecionou **URL** como destino de backup, as seguintes opções são e
 
 *
   **Novo Contêiner:**  
-Usado para registrar um contêiner existente para o qual não existe uma assinatura de acesso compartilhado.  Consulte [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) (Conectar-se a uma assinatura do Microsoft Azure).
+Usado para registrar um contêiner existente para o qual não existe uma assinatura de acesso compartilhado.  Consulte [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)(Conectar-se a uma assinatura do Microsoft Azure).
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Fazer backup de arquivos e de grupos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [Definir um dispositivo de backup lógico para um arquivo de disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
@@ -136,3 +140,4 @@ Usado para registrar um contêiner existente para o qual não existe uma assinat
  [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

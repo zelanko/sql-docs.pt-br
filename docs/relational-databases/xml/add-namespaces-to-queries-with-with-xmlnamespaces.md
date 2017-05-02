@@ -1,40 +1,44 @@
 ---
-title: "Adicionar namespaces a consultas com WITH XMLNAMESPACES | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "diretiva ELEMENTS XSINIL"
-  - "adicionando namespaces"
-  - "diretiva XSINIL"
-  - "namespaces padrão"
-  - "consultas [XML no SQL Server], cláusula WITH XMLNAMESPACES"
-  - "namespaces predefinidos [XML em SQL Server]"
-  - "cláusula FOR XML, cláusula WITH XMLNAMESPACES"
-  - "namespaces [XML no SQL Server]"
-  - "tipo de dados XML [SQL Server], cláusula WITH XMLNAMESPACES"
-  - "cláusula WITH XMLNAMESPACES"
+title: Adicionar namespaces a consultas com WITH XMLNAMESPACES | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ELEMENTS XSINIL directive
+- adding namespaces
+- XSINIL directive
+- default namespaces
+- queries [XML in SQL Server], WITH XMLNAMESPACES clause
+- predefined namespaces [XML in SQL Server]
+- FOR XML clause, WITH XMLNAMESPACES clause
+- namespaces [XML in SQL Server]
+- xml data type [SQL Server], WITH XMLNAMESPACES clause
+- WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63cc371d0a4b1c19971fe7f9e614f10d5c04765f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Adicionar namespaces a consultas com WITH XMLNAMESPACES
-  [WITH XMLNAMESPACES (Transact-SQL)](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md) fornece suporte a URI de namespace da seguinte maneira:  
+# <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Adicionar namespaces a consultas com WITH XMLNAMESPACES
+  [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) fornece suporte a URI de namespace da seguinte maneira:  
   
 -   Ele torna o mapeamento do prefixo do namespace para URI disponível ao [Construir consultas XML usando FOR XML](../../relational-databases/xml/for-xml-sql-server.md) .  
   
 -   Ele torna o mapeamento do namespace para URI disponíveis para o contexto de namespace estático do Faz o namespace a URI que mapeia disponível para o contexto de namespace estático dos [Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md).  
   
-## Usando WITH XMLNAMESPACES em consultas FOR XML  
+## <a name="using-with-xmlnamespaces-in-the-for-xml-queries"></a>Usando WITH XMLNAMESPACES em consultas FOR XML  
  WITH XMLNAMESPACES permite incluir namespaces XML em consultas FOR XML. Por exemplo, considere a seguinte consulta FOR XML:  
   
 ```  
@@ -95,7 +99,7 @@ FOR XML RAW ('ns1:Prod'), ELEMENTS
     INSERT INTO T VALUES('<myNS:root/>')  
     ```  
   
-## Usando a diretiva XSINIL  
+## <a name="using-the-xsinil-directive"></a>Usando a diretiva XSINIL  
  Não será possível definir o prefixo na cláusula WITH XMLNAMESPACES se você estiver usando a diretiva ELEMENTS XSINIL. Em vez disso, ela é adicionada automaticamente quando você usa ELEMENTS XSINIL. A consulta a seguir usa ELEMENTS XSINIL que gera XML centrado em elemento em que valores nulos são mapeados para elementos que têm o atributo **xsi:nil** definido como True.  
   
 ```  
@@ -118,7 +122,7 @@ FOR XML RAW, ELEMENTS XSINIL
 </row>  
 ```  
   
-## Especificando namespaces padrão  
+## <a name="specifying-default-namespaces"></a>Especificando namespaces padrão  
  Em vez de declarar um prefixo de namespace, é possível declarar um namespace padrão usando uma palavra-chave DEFAULT. Na consulta FOR XML, ele associará o namespace padrão a nós XML no XML resultante. No exemplo a seguir, WITH XMLNAMESPACES define dois prefixos de namespace que são definidos junto com um namespace padrão.  
   
 ```  
@@ -161,7 +165,7 @@ WHERE ProductID=316 or ProductID=317
 FOR XML AUTO, ROOT('ns2:root'), ELEMENTS  
 ```  
   
-## Usando namespaces predefinidos  
+## <a name="using-predefined-namespaces"></a>Usando namespaces predefinidos  
  Quando namespaces predefinidos são usados, exceto pelo namespace xml e o namespace xsi quando ELEMENTS XSINIL é usado, você deve especificar explicitamente a associação do namespace usando WITH XMLNAMESPACES. A consulta a seguir define explicitamente o prefixo de namespace para associação de URI para o namespace predefinido (`urn:schemas-microsoft-com:xml-sql`).  
   
 ```  
@@ -189,7 +193,7 @@ FOR XML PATH ('Translation')
 go  
 ```  
   
- Os atributos @xml:lang usam o namespace xml predefinido. Como o XML versão 1.0 não requer a declaração explícita da associação do namespace xml, o resultado não incluirá uma declaração explícita da associação de namespace.  
+ Os atributos @xml:lang usam o namespace de XML predefinido. Como o XML versão 1.0 não requer a declaração explícita da associação do namespace xml, o resultado não incluirá uma declaração explícita da associação de namespace.  
   
  Este é o resultado:  
   
@@ -200,8 +204,8 @@ go
 </Translation>  
 ```  
   
-## Usando WITH XMLNAMESPACES com métodos de tipos de dados xml  
- Os [Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md) especificados em uma consulta SELECT, ou em UPDATE quando o método for **modify()**, todos precisam repetir a declaração de namespace em seu prólogo. Isto pode ser demorado. Por exemplo, a consulta a seguir recupera IDs de modelos de produtos cujas descrições no catálogo não incluem especificação. Isto é, o elemento <`Specifications`> existe.  
+## <a name="using-with-xmlnamespaces-with-the-xml-data-type-methods"></a>Usando WITH XMLNAMESPACES com métodos de tipos de dados xml  
+ Os [Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md) especificados em uma consulta SELECT, ou em UPDATE quando o método for **modify()** , todos precisam repetir a declaração de namespace em seu prólogo. Isto pode ser demorado. Por exemplo, a consulta a seguir recupera IDs de modelos de produtos cujas descrições no catálogo não incluem especificação. Isto é, o elemento <`Specifications`> existe.  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -241,10 +245,10 @@ Go
   
  Observe que uma declaração explícita no prólogo de XQuery substitui o prefixo de namespace e o namespace do elemento padrão definidos na cláusula WITH.  
   
-## Consulte também  
- [Métodos de tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
+## <a name="see-also"></a>Consulte também  
+ [Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Referência de linguagem XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)   
- [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md)   
+ [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

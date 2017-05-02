@@ -1,27 +1,31 @@
 ---
-title: "Classe de evento Broker:Message Classify | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento Broker:Message Classify"
+title: Classe de evento Broker:Message Classify | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Message Classify event class
 ms.assetid: e51f3351-1239-4c41-b87c-1dd86968e027
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2bf30690ffcd48df2aedf00bad6c1124c0a555f0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento Broker:Message Classify
+# <a name="brokermessage-classify-event-class"></a>classe de evento Broker:Message Classify
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **Broker:Message Classify** quando o Broker Service determina o roteamento de uma mensagem.  
   
-## Colunas de dados da classe de evento Broker:Message Classify  
+## <a name="brokermessage-classify-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Message Classify  
   
 |Coluna de dados|Tipo de dados|Descrição|Número da coluna|Filtrável|  
 |-----------------|---------------|-----------------|-------------------|----------------|  
@@ -39,14 +43,14 @@ caps.handback.revision: 25
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|**nvarchar**|O nome do usuário proprietário da conexão que gerou este evento.|6|Sim|  
 |**OwnerName**|**nvarchar**|O identificador do Broker ao qual a mensagem se destina.|37|Não|  
-|**RoleName**|**nvarchar**|Indica se a mensagem foi recebida da rede ou se originou nessa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|38|Não|  
+|**RoleName**|**nvarchar**|Indica se a mensagem foi recebida da rede ou se originou nessa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|38|Não|  
 |**ServerName**|**nvarchar**|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |**SPID**|**int**|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |**Start Time**|**datetime**|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
 |**TargetUserName**|**nvarchar**|O endereço de rede do próximo Broker de salto.|39|Não|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Não|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

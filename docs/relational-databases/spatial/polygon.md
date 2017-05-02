@@ -1,46 +1,50 @@
 ---
-title: "Pol&#237;gono | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "subtipos de geometria [SQL Server]"
-  - "Subtipo de geometria Polígono [SQL Server]"
+title: "Polígono | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geometry subtypes [SQL Server]
+- Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08b68a58ad6d835349031de2dcf5c2dea215d188
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pol&#237;gono
+# <a name="polygon"></a>Polígono
   Um **Polygon** é uma superfície bidimensional armazenada como uma sequência de pontos que define um anel delimitador exterior e zero ou mais anéis interiores.  
   
-## Instâncias de polígono  
+## <a name="polygon-instances"></a>Instâncias de polígono  
  Uma instância **Polygon** pode ser formada de um anel que tem, pelo menos, três pontos distintos. Uma instância **Polygon** também pode estar vazia.  
   
  Os anéis exteriores e todos os anéis interiores de um **Polygon** definem seu limite. O espaço dentro dos anéis define o interior do **Polygon**.  
   
- A ilustração a seguir mostra exemplos de instâncias **Polygon**.  
+ A ilustração a seguir mostra exemplos de instâncias **Polygon** .  
   
- ![Exemplos das instâncias geométricas Polygon](../../relational-databases/spatial/media/polygon.png "Exemplos das instâncias geométricas Polygon")  
+ ![Exemplos de instâncias geométricas Polygon](../../relational-databases/spatial/media/polygon.gif "Exemplos de instâncias geométricas Polygon")  
   
  Conforme mostrado na ilustração:  
   
 1.  A Figura 1 é uma instância **Polygon** cujo limite está definido por um anel exterior.  
   
-2.  A Figura 2 é uma instância **Polygon** cujo limite está definido por um anel exterior e dois anéis interiores. A área interna dos anéis interiores faz parte do exterior da instância **Polygon**.  
+2.  A Figura 2 é uma instância **Polygon** cujo limite está definido por um anel exterior e dois anéis interiores. A área interna dos anéis interiores faz parte do exterior da instância **Polygon** .  
   
 3.  A Figura 3 é uma instância **Polygon** válida porque seus anéis interiores cruzam em um único ponto tangente.  
   
-### Instâncias aceitas  
+### <a name="accepted-instances"></a>Instâncias aceitas  
  Instâncias **Polygon** aceitas são instâncias que podem ser armazenadas em uma variável **geometry** ou **geography** sem gerar uma exceção. As seguintes instâncias **Polygon** são aceitas:  
   
 -   Uma instância **Polygon** vazia  
@@ -65,7 +69,7 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- Conforme mostrado por `@g4` e `@g5`, uma instância **Polygon** aceita pode não ser uma instância **Polygon** válida. `@g5` também mostra que uma instância do Polygon precisa conter apenas um anel com quatro pontos para ser aceita.  
+ Conforme mostrado por `@g4` e `@g5` , uma instância **Polygon** aceita pode não ser uma instância **Polygon** válida. `@g5` também mostra que uma instância do Polygon precisa conter apenas um anel com quatro pontos para ser aceita.  
   
  Os exemplos a seguir lançam uma `System.FormatException` porque as instâncias **Polygon** não são aceitas.  
   
@@ -80,7 +84,7 @@ DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
 ```  
   
-### Instâncias válidas  
+### <a name="valid-instances"></a>Instâncias válidas  
  Os anéis interiores de um **Polygon** podem tocar em si mesmos e um no outro em pontos tangentes únicos, mas se os anéis interiores de um **Polygon** se cruzarem, a instância não será válida.  
   
  O exemplo a seguir mostra instâncias **Polygon** válidas.  
@@ -106,7 +110,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
   
  `@g1` não é válido porque o anel interno toca o anel exterior em dois locais. `@g2` não é válido porque o segundo anel interno está no interior do primeiro anel interno. `@g3` não é válido porque os dois anéis internos tocam-se em vários pontos sucessivos. `@g4` não é válido porque os interiores dos dois anéis internos estão sobrepostos. `@g5` não é válido porque o anel exterior não é o primeiro anel. `@g6` não é válido porque o anel não tem três pontos distintos pelo menos.  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância de `geometry``Polygon` simples com um espaço e SRID 10.  
   
 ```  
@@ -143,9 +147,9 @@ SET @g = @g.MakeValid();
 SELECT @g.ToString()  
 ```  
   
- A instância de geometry retornada acima é um `Point(1 3)`.  Se o `Polygon` fornecido for `POLYGON((1 3, 1 5, 1 3, 1 3))`, `MakeValid()` retornaria `LINESTRING(1 3, 1 5)`.  
+ A instância de geometry retornada acima é um `Point(1 3)`.  Se o `Polygon` fornecido for `POLYGON((1 3, 1 5, 1 3, 1 3))` , `MakeValid()` retornaria `LINESTRING(1 3, 1 5)`.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [STArea &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STExteriorRing &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)   
  [STNumInteriorRing &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)   

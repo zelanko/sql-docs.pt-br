@@ -1,36 +1,40 @@
 ---
-title: "Configurar regras de firewall antes de executar o Depurador TSQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.error.sqlde_register_failed"
-  - "vs.debug.error.sqlde_accessdenied"
-  - "vs.debug.error.sqlde_firewall.remotemachines"
-helpviewer_keywords: 
-  - "depurador Transact-SQL, conexões remotas"
-  - "Firewall do Windows [Mecanismo de Banco de Dados], depurador Transact-SQL"
-  - "depurador Transact-SQL, Firewall do Windows"
-  - "depurador Transact-SQL, configurando"
-  - "portas [SQL Server], depurador Transact-SQL"
-  - "TCP/IP [SQL Server], números de porta"
+title: Configurar regras de firewall antes de executar o Depurador TSQL | Microsoft Docs
+ms.custom: 
+ms.date: 10/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.error.sqlde_register_failed
+- vs.debug.error.sqlde_accessdenied
+- vs.debug.error.sqlde_firewall.remotemachines
+helpviewer_keywords:
+- Transact-SQL debugger, remote connections
+- Windows Firewall [Database Engine], Transact-SQL debugger
+- Transact-SQL debugger, Windows Firewall
+- Transact-SQL debugger, configuring
+- ports [SQL Server], Transact-SQL debugger
+- TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1aec49f13a7e4c37fd9d8212393c5bdc3a5694d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar regras de firewall antes de executar o Depurador TSQL
+# <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurar regras de firewall antes de executar o Depurador TSQL
   As regras do Firewall do Windows devem ser configuradas para habilitar a depuração do [!INCLUDE[tsql](../../includes/tsql-md.md)] quando conectado a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que esteja em execução em outro computador que não o do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
-## Configurando o Depurador Transact-SQL  
+## <a name="configuring-the-transact-sql-debugger"></a>Configurando o Depurador Transact-SQL  
  O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] inclui componentes do lado do servidor e do lado do cliente. Os componentes do depurador do servidor são instalados com cada instância do Mecanismo de Banco de Dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 (Service Pack 2) ou posterior. Os componentes do depurador do lado do cliente são incluídos:  
   
 -   Ao instalar as ferramentas do lado do cliente do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior.  
@@ -46,7 +50,7 @@ caps.handback.revision: 43
 > [!CAUTION]  
 >  A habilitação de regras no Firewall do Windows pode expor o computador a ameaças de segurança contra as quais o firewall foi projetado para bloquear. A habilitação de regras para depuração remota desbloqueia as portas e os programas listados neste tópico.  
   
-## Regras de firewall no servidor  
+## <a name="firewall-rules-on-the-server"></a>Regras de firewall no servidor  
  No computador que executa a instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], use **Firewall do Windows com Segurança Avançada** para especificar as seguintes informações:  
   
 -   Adicione uma regra de entrada de programa a sqlservr.exe. Você deve ter uma regra para cada instância que precisa dar suportar a sessões remotas de depuração.  
@@ -91,7 +95,7 @@ caps.handback.revision: 43
   
 -   Se a política do domínio exigir que as comunicações de rede sejam feitas via IPsec, você também deverá adicionar regras de entrada para abrir as portas UDP 4500 e 500.  
   
-## Regras de firewall no cliente  
+## <a name="firewall-rules-on-the-client"></a>Regras de firewall no cliente  
  No computador que executa o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , a instalação do SQL Server ou a instalação do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pode ter configurado o Firewall do Windows para permitir a depuração remota.  
   
  Se você obtiver erros ao tentar abrir uma sessão de depuração remota, poderá configurar as exceções de programas e portas usando o **Firewall do Windows com Segurança Avançada** para configurar regras de firewall:  
@@ -146,7 +150,7 @@ caps.handback.revision: 43
   
     9. Selecione **TCP** na caixa **Tipo de protocolo:** , selecione **Portas Dinâmicas RPC** na caixa **Porta local:** , clique em **Aplicar**e clique em **OK**.  
   
-## Requisitos para iniciar o depurador  
+## <a name="requirements-for-starting-the-debugger"></a>Requisitos para iniciar o depurador  
  Todas as tentativas de iniciar o depurador do [!INCLUDE[tsql](../../includes/tsql-md.md)] também devem atender aos seguintes requisitos:  
   
 * [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] deve estar sendo executado em uma conta do Windows que seja membro da função de servidor fixa sysadmin.  
@@ -157,7 +161,7 @@ caps.handback.revision: 43
 
 * O servidor precisa se comunicar com o cliente via RPC. A conta sob a qual o serviço do SQL Server está em execução deve ter permissões de autenticação no cliente  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Depurador do Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Executar o depurador Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [Percorrer código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   
@@ -165,3 +169,4 @@ caps.handback.revision: 43
  [Editor de Consultas do Mecanismo de Banco de Dados &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)  
   
   
+

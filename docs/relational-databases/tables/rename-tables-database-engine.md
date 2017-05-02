@@ -1,27 +1,31 @@
 ---
-title: "Renomear tabelas (Mecanismo de Banco de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "renomeando tabela [SQL Server]"
-  - "nomes de tabelas [SQL Server]"
-  - "tabelas [SQL Server], Visual Database Tools"
-  - "renomeando tabelas"
+title: Renomear tabelas (Mecanismo de Banco de Dados) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table renaming [SQL Server]
+- table names [SQL Server]
+- tables [SQL Server], Visual Database Tools
+- renaming tables
 ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d65c475509d57577f691e656157c7754c7d8549f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Renomear tabelas (Mecanismo de Banco de Dados)
+# <a name="rename-tables-database-engine"></a>Renomear tabelas (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Você pode renomear uma tabela no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -55,7 +59,7 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para renomear uma tabela  
+#### <a name="to-rename-a-table"></a>Para renomear uma tabela  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse na tabela que você deseja renomear e escolha **Design** no menu de atalho.  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 16
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para renomear uma tabela  
+#### <a name="to-rename-a-table"></a>Para renomear uma tabela  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

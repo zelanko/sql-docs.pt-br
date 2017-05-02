@@ -1,27 +1,31 @@
 ---
-title: "Bancos de dados do sistema | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bancos de dados do sistema [SQL Server]"
-  - "exibindo dados de banco de dados de sistema"
-  - "modificando dados do sistema"
-  - "exibindo dados de sistema do banco de dados"
+title: Bancos de dados do sistema | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- system databases [SQL Server]
+- displaying system database data
+- modifying system data
+- viewing system database data
 ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9ed6df401b8bdac3926c919d4dda039c2b4a1fa6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Bancos de dados do sistema
+# <a name="system-databases"></a>Bancos de dados do sistema
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui os seguintes bancos de dados do sistema.  
   
 |Banco de dados do sistema|Descrição|  
@@ -32,7 +36,7 @@ caps.handback.revision: 25
 |[Banco de dados de recursos](../../relational-databases/databases/resource-database.md)|É um banco de dados do tipo somente leitura que contém objetos de sistema incluídos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os objetos de sistema são fisicamente persistentes no banco de dados **Recurso** , mas aparecem logicamente no esquema **sys** de todo banco de dados.|  
 |[Banco de dados tempdb](../../relational-databases/databases/tempdb-database.md)|É um espaço de trabalho para reter objetos temporários ou conjuntos de resultados intermediários.|  
   
-## Modificando dados do sistema  
+## <a name="modifying-system-data"></a>modificando dados do sistema  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte aos usuários diretamente na atualização de informações de objetos do sistema como tabelas de sistema, procedimentos armazenados do sistema  e exibições de catálogo. Em lugar disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um conjunto completo de ferramentas administrativas que permitem aos usuários administrar totalmente seus sistemas e gerenciar todos os usuários e objetos de um banco de dados. Entre elas estão as seguintes:  
   
 -   Utilitários de administração, como o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -48,7 +52,7 @@ caps.handback.revision: 25
 > [!NOTE]  
 >  Bancos de dados do sistema não podem residir em diretórios de compartilhamento UNC.  
   
-## Exibindo dados de banco de dados do sistema  
+## <a name="viewing-system-database-data"></a>exibindo dados de sistema do banco de dados  
  Você não deve codificar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que fazem consulta diretamente nas tabelas do sistema, a menos que seja a única maneira de obter as informações exigidas pelo aplicativo. Em lugar disso, os aplicativos devem obter informações de catálogos e do sistema usando o seguinte:  
   
 -   Exibições de catálogo do sistema  
@@ -61,12 +65,12 @@ caps.handback.revision: 25
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos armazenados do sistema e funções internas.  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [Ocultar objetos do sistema no Pesquisador de Objetos](../../ssms/object/hide-system-objects-in-object-explorer.md)  
+ [Ocultar objetos do sistema no Pesquisador de Objetos](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
  [Bancos de dados](../../relational-databases/databases/databases.md)  

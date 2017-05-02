@@ -1,32 +1,36 @@
 ---
-title: "Identificadores de banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "identificadores normais [SQL Server]"
-  - "identificadores [SQL Server]"
-  - "nomes [SQL Server], identificadores"
-  - "identificadores [SQL Server], sobre os identificadores"
-  - "identificadores do SQL Server"
-  - "identificadores Transact-SQL"
-  - "objetos de banco de dados [SQL Server], nomes"
+title: Identificadores de banco de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- regular identifiers [SQL Server]
+- identifiers [SQL Server]
+- names [SQL Server], identifiers
+- identifiers [SQL Server], about identifiers
+- SQL Server identifiers
+- Transact-SQL identifiers
+- database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a6ec8d756aa5aa0c728ba5a3456a30809b4a0484
+ms.lasthandoff: 04/11/2017
+
 ---
-# Identificadores de banco de dados
+# <a name="database-identifiers"></a>Identificadores de banco de dados
   O nome do objeto de banco de dados é conhecido como identificador. Tudo no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ter um identificador. Servidores, bancos de dados e objetos de banco de dados, como tabelas, exibições, colunas, índices, gatilhos, procedimentos, restrições e regras, podem ter identificadores. Os identificadores são necessários para a maioria dos objetos, mas são opcionais para alguns objetos, como restrições.  
   
  O identificador de objeto é criado quando o objeto é definido. O identificador é utilizado para referenciar o objeto. Por exemplo, a seguinte instrução cria uma tabela com o identificador `TableX`e duas colunas com os identificadores `KeyCol` e `Description`:  
@@ -41,13 +45,13 @@ CREATE TABLE TableX
  O agrupamento de um identificador depende do nível em que está definido. Os identificadores de objetos no nível de instância, como logons e nomes de banco de dados, são atribuídos ao agrupamento padrão da instância. Os identificadores de objetos em um banco de dados, como tabelas, exibições e nomes de coluna, são atribuídos ao agrupamento padrão do banco de dados. Por exemplo, duas tabelas com nomes que se diferem apenas em maiúsculas e minúsculas podem ser criadas em um banco de dados que possui agrupamento que diferencia maiúsculas e minúsculas, mas não podem ser criadas em um banco de dados que tem agrupamento que não diferencia maiúsculas e minúsculas.  
   
 > [!NOTE]  
->  Os nomes de variáveis ou os parâmetros de funções e procedimentos armazenados devem obedecer às regras para identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  Os nomes de variáveis ou os parâmetros de funções e procedimentos armazenados devem obedecer às regras para identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-## Classes de identificadores  
+## <a name="classes-of-identifiers"></a>Classes de identificadores  
  Há duas classes de identificadores:  
   
  Identificadores normais  
- Estão em conformidade com as regras de formato de identificadores. Os identificadores normais não são delimitados quando utilizados em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Estão em conformidade com as regras de formato de identificadores. Os identificadores normais não são delimitados quando utilizados em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ```  
 SELECT *  
@@ -74,7 +78,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
  Tanto os identificadores normais quanto os delimitados devem conter de 1 a 128 caracteres. Para tabelas temporárias locais, o identificador pode ter no máximo 116 caracteres.  
   
-## Regras para identificadores normais  
+## <a name="rules-for-regular-identifiers"></a>Regras para identificadores normais  
  Os nomes de variáveis, funções e procedimentos armazenados devem obedecer às regras de identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 1.  O primeiro caractere deve ser um dos seguintes:  
@@ -85,7 +89,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
          Determinados símbolos no começo de um identificador possuem um significado especial no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um identificador normal iniciado com arroba denota sempre uma variável local ou parâmetro e não pode ser utilizado como nome de qualquer outro tipo de objeto. Um identificador iniciado com um sinal de número denota uma tabela temporária ou procedimento. Um identificador iniciado com dois sinais de número (##) denota um objeto temporário global. Embora possa ser utilizado um caractere de sinal de número ou dois sinais de número para começar os nomes de outros tipos de objetos, não recomendamos essa prática.  
   
-         Algumas funções do [!INCLUDE[tsql](../../includes/tsql-md.md)] têm nomes iniciados com dois sinais de arroba (@@). Para evitar confusão com essas funções, você não deverá utilizar nomes que iniciam com @@.  
+         Algumas funções do [!INCLUDE[tsql](../../includes/tsql-md.md)] têm nomes iniciados com dois sinais de arroba (@@). Para evitar confusão com essas funções, você não deverá usar nomes iniciados por @@.  
   
 2.  Os caracteres subsequentes podem incluir:  
   
@@ -95,7 +99,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
     -   Arroba (@), cifrão ($), sinal de número (#) ou sublinhado.  
   
-3.  O identificador não deve ser uma palavra reservada do [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserva as versões maiúscula e minúscula de palavras reservadas. Quando identificadores são usados nas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , os identificadores que não estiverem de acordo com essas regras deverão ser delimitados por aspas duplas ou colchetes. As palavras reservadas dependem do nível de compatibilidade do banco de dados. Esse nível pode ser definido por meio da instrução [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md) .  
+3.  O identificador não deve ser uma palavra reservada do [!INCLUDE[tsql](../../includes/tsql-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserva as versões maiúscula e minúscula de palavras reservadas. Quando identificadores são usados nas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , os identificadores que não estiverem de acordo com essas regras deverão ser delimitados por aspas duplas ou colchetes. As palavras reservadas dependem do nível de compatibilidade do banco de dados. Esse nível pode ser definido por meio da instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) .  
   
 4.  Não são permitidos espaços ou caracteres especiais.  
   
@@ -104,9 +108,9 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
  Quando identificadores são usados nas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , os identificadores que não estiverem de acordo com essas regras deverão ser delimitados por aspas duplas ou colchetes.  
   
 > [!NOTE]  
->  As regras do formato de identificadores normais dependem do nível de compatibilidade do banco de dados. Esse nível pode ser definido por meio de [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+>  As regras do formato de identificadores normais dependem do nível de compatibilidade do banco de dados. Esse nível pode ser definido por meio de [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   

@@ -1,26 +1,32 @@
 ---
-title: "Vis&#227;o geral e cen&#225;rios de uso | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Visão geral e cenários de uso | Microsoft Docs"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 caps.latest.revision: 5
-author: "jodebrui"
-ms.author: "jodebrui"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: jodebrui
+ms.author: jodebrui
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: edf397a4e4922167ae2eafd2c8e78ac97858bd37
+ms.lasthandoff: 04/11/2017
+
 ---
-# Vis&#227;o geral e cen&#225;rios de uso
+# <a name="overview-and-usage-scenarios"></a>Visão geral e cenários de uso
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 O OLTP in-memory é a principal tecnologia disponível no SQL Server e no Banco de Dados SQL do Azure para otimizar o desempenho de processamento de transações, de ingestão de dados, de carregamento de dados e de cenários de dados transitórios. Este tópico inclui uma visão geral da tecnologia e descreve os cenários de uso do OLTP in-memory. Use essas informações para determinar se o OLTP in-memory é adequado para seu aplicativo. O tópico termina com um exemplo que mostra objetos OLTP in-memory, referências a uma demonstração de desempenho e a recursos que você pode usar para as próximas etapas.
 
+Este artigo aborda a tecnologia OLTP in-memory no SQL Server e no Banco de Dados SQL do Azure. A seguinte postagem de blog contém um aprofundamento dos benefícios de desempenho e de utilização de recursos no Banco de Dados SQL do Azure: 
+- [OLTP in-memory no Banco de Dados SQL do Azure](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 
 ## <a name="in-memory-oltp-overview"></a>Visão geral do OLTP in-memory
 
@@ -222,7 +228,9 @@ O script a seguir ilustra os objetos OLTP in-memory que você pode criar no banc
 - [Vídeo de 17 minutos explicando o OLTP in-memory e apresentando a demonstração](https://www.youtube.com/watch?v=l5l5eophmK4) (a demonstração está em 8:25)
 - [Script para habilitar o OLTP in-memory e definir opções recomendadas](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
 - [Documentação principal do OLTP in-memory](https://msdn.microsoft.com/library/dn133186.aspx)
+- [Benefícios de desempenho e de utilização de recursos do OLTP in-memory no Banco de Dados SQL do Azure](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 - [Melhorando o desempenho da tabela temporária e da variável de tabela usando a otimização de memória](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
 [Otimizar o desempenho usando tecnologias in-memory no Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
 - [Tabelas temporárias com controle da versão do sistema com tabelas com otimização de memória](https://msdn.microsoft.com/library/mt590207.aspx)
--  [OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração](http://msdn.microsoft.com/library/dn673538.aspx). 
+- [OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração](http://msdn.microsoft.com/library/dn673538.aspx). 
+

@@ -1,33 +1,37 @@
 ---
-title: "Reduzir a carga de ajuste do servidor de produ&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sobrecarga [Orientador de Otimização do Mecanismo de Banco de Dados]"
-  - "ajustando a sobrecarga [SQL Server]"
-  - "reduzindo a carga de ajuste do servidor de produção"
-  - "Orientador de Otimização do Mecanismo de Banco de Dados [SQL Server], servidores de teste"
-  - "servidores de teste [Orientador de Otimização do Mecanismo de Banco de Dados]"
-  - "servidores de produção [SQL Server]"
-  - "sobrecarga de ajuste de descarga [SQL Server]"
+title: "Reduzir a carga de ajuste do servidor de produção | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- overhead [Database Engine Tuning Advisor]
+- tuning overhead [SQL Server]
+- reducing production server tuning load
+- Database Engine Tuning Advisor [SQL Server], test servers
+- test servers [Database Engine Tuning Advisor]
+- production servers [SQL Server]
+- offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e7cc75ed2f7ab28f5ad1498f9a6dfa8d6ad8b770
+ms.lasthandoff: 04/11/2017
+
 ---
-# Reduzir a carga de ajuste do servidor de produ&#231;&#227;o
+# <a name="reduce-the-production-server-tuning-load"></a>Reduzir a carga de ajuste do servidor de produção
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] O Orientador de Otimização usa o otimizador de consulta para analisar uma carga de trabalho e fazer recomendações de ajuste. Executar essa análise no servidor de produção aumenta a carga do servidor e pode prejudicar o desempenho do servidor durante a sessão de ajuste. É possível diminuir o impacto na carga do servidor durante uma sessão de ajuste usando um servidor de teste além do servidor de produção.  
   
-## Como o Orientador de Otimização de Mecanismo de Banco de Dados usa um servidor de teste  
+## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>Como o Orientador de Otimização de Mecanismo de Banco de Dados usa um servidor de teste  
  O modo tradicional de uso de um servidor de teste é copiar todos os dados de seu servidor de produção no servidor de teste, ajustar o servidor de teste e depois implementar a recomendação no seu servidor de produção. Esse processo elimina o impacto de desempenho em seu servidor de produção, mas, mesmo assim, não é a melhor solução. Por exemplo, copiar grandes volumes de dados da produção no servidor de teste pode consumir tempo e recursos significativos. Além disso, o hardware do servidor de teste raramente é tão eficiente quanto o hardware implantado nos servidores de produção. O processo de ajuste depende do otimizador de consulta, e as recomendações geradas são, em parte, baseadas no hardware subjacente. Se o hardware dos servidores de teste e de produção não for idêntico, a qualidade da recomendação do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] será menor.  
   
  Para evitar problemas desse tipo, o Orientador de Otimização do Mecanismo do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ajusta um banco de dados em um servidor de produção descarregando a maioria da carga de ajuste em um servidor de teste. Ele faz isso usando as informações de configuração de hardware do servidor de produção, sem, de fato, copiar os dados do servidor de produção no servidor de teste. [!INCLUDE[ssDE](../../includes/ssde-md.md)] não copia dados reais do servidor de produção para o servidor de teste. Ele apenas copia os metadados e as estatísticas necessárias.  
@@ -40,7 +44,7 @@ caps.handback.revision: 39
   
 2.  Ajuste a carga de trabalho no servidor de teste.  
   
-     Para ajustar a carga de trabalho em um servidor de teste,é necessário usar um arquivo de entrada XML com o utilitário de linha de comando **dta**. No arquivo de entrada XML, especifique o nome de seu servidor de teste com o subelemento **TestServer** além de especificar os valores para os outros subelementos no elemento pai **TuningOptions**.  
+     Para ajustar a carga de trabalho em um servidor de teste,é necessário usar um arquivo de entrada XML com o utilitário de linha de comando **dta** . No arquivo de entrada XML, especifique o nome de seu servidor de teste com o subelemento **TestServer** além de especificar os valores para os outros subelementos no elemento pai **TuningOptions** .  
   
      Durante o processo de ajuste, o Orientador de Otimização do Mecanismo do Banco de Dados cria um banco de dados shell no servidor de teste. Para criar esse banco de dados shell e ajustá-lo, o Orientador de Otimização do Mecanismo do Banco de Dados faz chamadas ao servidor de produção para o seguinte:  
   
@@ -56,17 +60,17 @@ caps.handback.revision: 39
   
  A ilustração a seguir mostra o servidor de teste e o cenário do servidor de produção:  
   
- ![Uso do servidor de teste Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/media/testsvr.gif "Uso do servidor de teste Orientador de Otimização do Mecanismo de Banco de Dados")  
+ ![Uso do servidor de teste do Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/media/testsvr.gif "Uso do servidor de teste do Orientador de Otimização do Mecanismo de Banco de Dados")  
   
 > [!NOTE]  
->  O recurso de ajuste do servidor de teste não é suportado na interface gráfica de usuário do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  O recurso de ajuste do servidor de teste não é suportado na interface gráfica de usuário do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  Primeiro, verifique se o usuário que deseja executar o ajuste existe nos servidores de produção e no de teste.  
   
- Depois que as informações de usuário são copiadas no servidor de teste, você pode definir a sessão de ajuste do servidor de teste no arquivo de entrada XML do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. O exemplo de arquivo de entrada XML a seguir ilustra como especificar um servidor de teste para ajustar um banco de dados com o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Depois que as informações de usuário são copiadas no servidor de teste, você pode definir a sessão de ajuste do servidor de teste no arquivo de entrada XML do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . O exemplo de arquivo de entrada XML a seguir ilustra como especificar um servidor de teste para ajustar um banco de dados com o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- Neste exemplo, o banco de dados `MyDatabaseName` está sendo ajustado no `MyServerName`. O script [!INCLUDE[tsql](../../includes/tsql-md.md)], `MyWorkloadScript.sql`, é usado como a carga de trabalho. Essa carga de trabalho contém eventos que são executados no `MyDatabaseName`. A maioria das chamadas de otimizador de consulta a esse banco de dados, que acontecem como parte do processo de ajuste, é controlada pelo banco de dados shell que reside no `MyTestServerName`. O banco de dados shell é composto de metadados e estatísticas. Esse processo resulta na sobrecarga do ajuste sendo descarregada no servidor de teste. Quando o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] gera a recomendação de ajuste usando esse arquivo de entrada XML, ele deve considerar somente índices (`<FeatureSet>IDX</FeatureSet>`) , nenhum particionamento e não deve manter nenhuma estrutura de design físico existente em `MyDatabaseName`.  
+ Neste exemplo, o banco de dados `MyDatabaseName` está sendo ajustado no `MyServerName`. O script [!INCLUDE[tsql](../../includes/tsql-md.md)] , `MyWorkloadScript.sql`, é usado como a carga de trabalho. Essa carga de trabalho contém eventos que são executados no `MyDatabaseName`. A maioria das chamadas de otimizador de consulta a esse banco de dados, que acontecem como parte do processo de ajuste, é controlada pelo banco de dados shell que reside no `MyTestServerName`. O banco de dados shell é composto de metadados e estatísticas. Esse processo resulta na sobrecarga do ajuste sendo descarregada no servidor de teste. Quando o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] gera a recomendação de ajuste usando esse arquivo de entrada XML, ele deve considerar somente índices (`<FeatureSet>IDX</FeatureSet>`) , nenhum particionamento e não deve manter nenhuma estrutura de design físico existente em `MyDatabaseName`.  
   
 ```  
 <?xml version="1.0" encoding="utf-16" ?>  
@@ -91,8 +95,8 @@ caps.handback.revision: 39
 </DTAXML>  
 ```  
   
-## Consulte também  
- [Considerações para usar servidores de teste ](../../relational-databases/performance/considerations-for-using-test-servers.md)   
+## <a name="see-also"></a>Consulte também  
+ [Considerações para usar servidores de teste](../../relational-databases/performance/considerations-for-using-test-servers.md)   
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

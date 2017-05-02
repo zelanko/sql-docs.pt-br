@@ -1,27 +1,31 @@
 ---
-title: "Backup do SQL Server para URL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Backup para URL do SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 caps.latest.revision: 44
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7b520a605648e8619f8462ae9125842fdeb37ebc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup do SQL Server para URL
+# <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tópico apresenta os conceitos, os requisitos e os componentes necessários para usar o serviço de Armazenamento de Blobs do Microsoft Azure como um destino de backup. A funcionalidade de backup e restauração tem o mesmo efeito de DISK ou TAPE, com algumas diferenças. Essas diferenças e alguns exemplos de código estão incluídos neste tópico.  
   
-## Requisitos, componentes e conceitos  
+## <a name="requirements-components-and-concepts"></a>Requisitos, componentes e conceitos  
  **Nesta seção:**  
   
 -   [Segurança](#security)  
@@ -50,7 +54,7 @@ caps.handback.revision: 41
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exige o armazenamento de um nome de conta e autenticação de chave de acesso do Windows Azure ou de uma Assinatura de Acesso Compartilhado e token de acesso em uma Credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essas informações são usadas para realizar a autenticação na conta do Windows Azure durante a execução de operações de backup ou restauração.  
   
--   A conta de usuário usada para emitir os comandos BACKUP ou RESTORE deve estar na função de banco de dados **operador db_backup** com as permissões **Alterar qualquer credencial**.  
+-   A conta de usuário usada para emitir os comandos BACKUP ou RESTORE deve estar na função de banco de dados **operador db_backup** com as permissões **Alterar qualquer credencial** .  
   
 ###  <a name="intorkeyconcepts"></a> Introdução aos principais componentes e conceitos  
  As duas seções a seguir apresentam o serviço de Armazenamento de Blobs do Microsoft Azure e os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usados durante o backup ou a restauração do serviço de Armazenamento de Blobs do Microsoft Azure. É importante entender os componentes e a interação entre eles para fazer um backup ou uma restauração no serviço de Armazenamento de Blobs do Microsoft Azure.  
@@ -64,12 +68,12 @@ caps.handback.revision: 41
   
  **Blob:** um arquivo de qualquer tipo e tamanho. Há dois tipos de blobs que podem ser armazenados no serviço de Armazenamento de Blobs do Microsoft Azure: blobs de blocos e de páginas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o backup pode usar qualquer tipo de blob, dependendo da sintaxe Transact-SQL usada. Blobs são endereçáveis por meio do seguinte formato de URL: https://\<conta de armazenamento>.blob.core.windows.net/\<contêiner>/\<blob>. Para saber mais sobre o serviço de Armazenamento de Blobs do Microsoft Azure, confira [Como usar o Armazenamento de Blobs no .NET](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/) Para saber mais sobre blobs de páginas e de blocos, confira [Noções básicas sobre blobs de blocos e blobs de páginas](http://msdn.microsoft.com/library/windowsazure/ee691964.aspx)  
   
- ![Armazenamento de blob do Azure](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Armazenamento de blob do Azure")  
+ ![Armazenamento de Blobs do Azure](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Armazenamento de Blobs do Azure")  
   
  **Instantâneo do Azure:** um instantâneo de um blob do Azure capturado em algum momento. Para saber mais, consulte [Criando um instantâneo de um blob](https://msdn.microsoft.com/library/azure/hh488361.aspx). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a backups de instantâneos do Azure dos arquivos de banco de dados armazenados no serviço de Armazenamento de Blobs do Microsoft Azure. Para obter mais informações, consulte [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Componentes  
- **URL:** uma URL especifica um URI (Uniform Resource Identifier) para um arquivo de backup único. A URL é usada para fornecer o local e o nome do arquivo de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A URL deve apontar para um blob real, e não apenas para um contêiner. Se o blob não existir, ele será criado. Se um blob existente for especificado, o BACKUP falhará, a não ser que a opção "WITH FORMAT" seja especificada a fim de substituir o arquivo de backup existente no blob.  
+ **URL:** uma URL especifica um URI (Uniform Resource Identifier) para um arquivo de backup único. A URL é usada para fornecer o local e o nome do arquivo de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A URL deve apontar para um blob real, e não apenas para um contêiner. Se o blob não existir, ele será criado. Se um blob existente for especificado, o BACKUP falhará, a não ser que a opção "WITH FORMAT" seja especificada a fim de substituir o arquivo de backup existente no blob.  
   
  Este é um valor de URL de exemplo: http[s]://ACCOUNTNAME.blob.core.windows.net/\<CONTAINER>/\<FILENAME.bak>. O HTTPS não é obrigatório, mas é recomendado.  
   
@@ -91,24 +95,23 @@ caps.handback.revision: 41
   
 -   Não há suporte para a criação de um nome de dispositivo lógico. Portanto, não há suporte para a adição de uma URL como dispositivo de backup por meio de sp_dumpdevice ou do SQL Server Management Studio.  
   
--   Não há suporte para a anexação de blobs de backup. Os backups em um blob existente só podem ser substituídos usando a opção **WITH FORMAT** . No entanto, ao usar backups de instantâneo de arquivo (usando o argumento **WITH FILE_SNAPSHOT**), o argumento **WITH FORMAT** não recebe permissão, a fim de evitar deixar órfãos os instantâneos de arquivos que foram criados com o backup de instantâneo de arquivo original.  
+-   Não há suporte para a anexação de blobs de backup. Os backups em um blob existente só podem ser substituídos usando a opção **WITH FORMAT** . No entanto, ao usar backups de instantâneo de arquivo (usando o argumento **WITH FILE_SNAPSHOT** ), o argumento **WITH FORMAT** não recebe permissão, a fim de evitar deixar órfãos os instantâneos de arquivos que foram criados com o backup de instantâneo de arquivo original.  
   
 -   Só há suporte para o backup em vários blobs em uma única operação de backup usando os blobs de bloco e um token de SAS (Assinatura de Acesso Compartilhado) em vez da chave de conta de armazenamento para a Credencial do SQL.  
   
--   Não há suporte para a especificação de um tamanho de bloco com **BACKUP** .  
+-   Não há suporte para especificar **BLOCKSIZE** para blobs de página. 
   
--   Não há suporte para a especificação de **MAXTRANSFERSIZE** .  
+-   Não há suporte para especificar **MAXTRANSFERSIZE** para blobs de página. 
   
--   Não há suporte para a especificação de opções de backupset - **RETAINDAYS** e **EXPIREDATE**.  
+-   Não há suporte para a especificação de opções de backupset - **RETAINDAYS** e **EXPIREDATE** .  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem um limite máximo de 259 caracteres em um nome de dispositivo de backup. O BACKUP TO URL consome 36 caracteres para os elementos necessários usados para especificar a URL – 'https://.blob.core.windows.net//.bak', deixando 223 caracteres para a conta, contêiner e nomes de blob juntos.  
   
 ###  <a name="Support"></a> Suporte a instruções de backup/restauração  
   
-|||||  
-|-|-|-|-|  
-|Instrução de backup/restauração|Tem suporte|Exceções|Comentários|  
-|BACKUP|√|Não há suporte para BLOCKSIZE e MAXTRANSFERSIZE.|Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
+|Instrução de backup/restauração|Tem suporte|Exceções|Comentários|
+|-|-|-|-|
+|BACKUP|√|Há suporte para BLOCKSIZE e MAXTRANSFERSIZE para blobs de bloco. Eles não têm suporte em blobs de página. | BACKUP para um blob de blocos requer uma assinatura de acesso compartilhado salva em uma credencial do SQL Server. BACKUP para um blob de páginas requer que a chave de conta de armazenamento seja salva em uma credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e requer que o argumento WITH CREDENTIAL seja especificado.|  
 |RESTORE|√||Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
 |RESTORE FILELISTONLY|√||Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
 |RESTORE HEADERONLY|√||Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
@@ -118,13 +121,12 @@ caps.handback.revision: 41
   
  Para obter a sintaxe e informações gerais sobre as instruções de backup, consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
- Para obter a sintaxe e informações gerais sobre as instruções de restauração, consulte [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+ Para obter a sintaxe e informações gerais sobre as instruções de restauração, consulte [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-### Suporte para argumentos de backup  
-  
-|||||  
-|-|-|-|-|  
+### <a name="support-for-backup-arguments"></a>Suporte para argumentos de backup  
+
 |Argumento|Tem suporte|Exceção|Comentários|  
+|-|-|-|-|  
 |DATABASE|√|||  
 |LOG|√|||  
 ||  
@@ -142,12 +144,12 @@ caps.handback.revision: 41
 |EXPIREDATE &#124; RETAINDAYS|−|||  
 |NOINIT &#124; INIT|−||Não é possível anexar aos blobs. Para substituir um backup, use o argumento **WITH FORMAT** . No entanto, ao usar backups de instantâneo de arquivo (usando o argumento **WITH FILE_SNAPSHOT**), o argumento **WITH FORMAT** não recebe permissão, a fim de evitar deixar órfãos os instantâneos de arquivos que foram criados com o backup original.|  
 |NOSKIP &#124; SKIP|−|||  
-|NOFORMAT &#124; FORMAT|√||Um backup executado em um blob existente falhará, a menos que **WITH FORMAT** seja especificado. O blob existente será substituído quando **WITH FORMAT** for especificado. No entanto, ao usar backups de instantâneo de arquivo (usando o argumento **WITH FILE_SNAPSHOT**), o argumento FORMAT não recebe permissão, a fim de evitar deixar órfãos os instantâneos de arquivos que foram criados com o backup de instantâneo de arquivo original. No entanto, ao usar backups de instantâneo de arquivo (usando o argumento **WITH FILE_SNAPSHOT**), o argumento **WITH FORMAT** não recebe permissão, a fim de evitar deixar órfãos os instantâneos de arquivos que foram criados com o backup original.|  
+|NOFORMAT &#124; FORMAT|√||Um backup executado em um blob existente falhará, a menos que **WITH FORMAT** seja especificado. O blob existente será substituído quando **WITH FORMAT** for especificado. No entanto, ao usar backups de instantâneo de arquivo (usando o argumento **WITH FILE_SNAPSHOT** ), o argumento FORMAT não recebe permissão, a fim de evitar deixar órfãos os instantâneos de arquivos que foram criados com o backup de instantâneo de arquivo original. No entanto, ao usar backups de instantâneo de arquivo (usando o argumento **WITH FILE_SNAPSHOT** ), o argumento **WITH FORMAT** não recebe permissão, a fim de evitar deixar órfãos os instantâneos de arquivos que foram criados com o backup original.|  
 |MEDIADESCRIPTION|√|||  
 |MEDIANAME|√|||  
-|BLOCKSIZE|−|||  
+|BLOCKSIZE|√|Sem suporte para blobs de páginas. Com suporte para blobs de blocos.| Recomendamos BLOCKSIZE=65536 para otimizar o uso dos 50.000 blocos permitidos em um blob de blocos. |  
 |BUFFERCOUNT|√|||  
-|MAXTRANSFERSIZE|−|||  
+|MAXTRANSFERSIZE|√|Sem suporte para blobs de páginas. Com suporte para blobs de blocos.| O padrão é 1048576. O valor pode variar a até 4 MB em incrementos de 65536 bytes.</br> Recomendamos MAXTRANSFERSIZE=4194304 para otimizar o uso dos 50.000 blocos permitidos em um blob de blocos. |  
 |NO_CHECKSUM &#124; CHECKSUM|√|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
 |STATS|√|||  
@@ -158,15 +160,14 @@ caps.handback.revision: 41
   
  Para obter mais informações sobre os argumentos de backup, consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
-### Suporte para argumentos de restauração  
+### <a name="support-for-restore-arguments"></a>Suporte para argumentos de restauração  
   
-|||||  
-|-|-|-|-|  
 |Argumento|Tem suporte|Exceções|Comentários|  
+|-|-|-|-|  
 |DATABASE|√|||  
 |LOG|√|||  
 |FROM (URL)|√||O argumento FROM URL é usado para especificar o caminho da URL do arquivo de backup.|  
-|**Opções WITH:**||||  
+|**WITH Options:**||||  
 |CREDENTIAL|√||Há suporte para WITH CREDENTIAL somente quando a opção RESTORE FROM URL for usada para realizar a restauração no serviço de Armazenamento de Blobs do Microsoft Azure.|  
 |PARTIAL|√|||  
 |RECOVERY &#124; NORECOVERY &#124; STANDBY|√|||  
@@ -193,7 +194,7 @@ caps.handback.revision: 41
 |ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|√|||  
 |STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|√|||  
   
- Para obter mais informações sobre os argumentos de restauração, consulte [Argumentos de RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+ Para obter mais informações sobre os argumentos de restauração, consulte [Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 ##  <a name="BackupTaskSSMS"></a> Usando a tarefa de backup no SQL Server Management Studio  
 Você pode fazer o backup de um banco de dados para a URL por meio da tarefa de Backup no SQL Server Management Studio usando uma credencial do SQL Server.  
@@ -205,9 +206,9 @@ Você pode fazer o backup de um banco de dados para a URL por meio da tarefa de 
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
 
-2.  Expanda **Bancos de Dados**, clique com o botão direito do mouse no banco de dados desejado, aponte para **Tarefas** e clique em **Fazer backup...**.
+2.  Expanda **Bancos de Dados**, clique com o botão direito do mouse no banco de dados desejado, aponte para **Tarefas**e clique em **Fazer backup...**.
   
-3.  Na página **Geral**, na seção **Destino**, a opção **URL** está disponível na lista suspensa **Fazer backup em:**.  A opção **URL** é usada para criar um backup no armazenamento do Microsoft Azure. Clique em **Adicionar** e a caixa de diálogo **Selecionar Destino do Backup** será aberta:
+3.  Na página **Geral** , na seção **Destino** , a opção **URL** está disponível na lista suspensa **Fazer backup em:** .  A opção **URL** é usada para criar um backup no armazenamento do Microsoft Azure. Clique em **Adicionar** e a caixa de diálogo **Selecionar Destino do Backup** será aberta:
    
     1.  **Contêiner de armazenamento do Azure:** o nome do contêiner de armazenamento do Microsoft Azure em que os arquivos de backup serão armazenados.  Selecione um contêiner existente na lista suspensa ou digite manualmente o contêiner. 
   
@@ -215,7 +216,7 @@ Você pode fazer o backup de um banco de dados para a URL por meio da tarefa de 
   
     3.  **Arquivo de Backup:** nome do arquivo de backup.
     
-    4.  **Novo Contêiner:** usado para registrar um contêiner existente para o qual você não tem uma assinatura de acesso compartilhado.  Consulte [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) (Conectar-se a uma assinatura do Microsoft Azure).
+    4.  **Novo Contêiner:** usado para registrar um contêiner existente para o qual você não tem uma assinatura de acesso compartilhado.  Consulte [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)(Conectar-se a uma assinatura do Microsoft Azure).
   
 > [!NOTE] 
 >  **Adicionar** dá suporte a vários arquivos de backup e os contêineres de armazenamento para um único conjunto de mídias.
@@ -241,19 +242,19 @@ A tarefa Restaurar Banco de Dados inclui **URL** como um dispositivo do qual res
   
 1.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**. 
   
-2.  Na página **Geral**, selecione **Dispositivo** na seção **Fonte**.
+2.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
   
-3.  Clique no botão Procurar (...) para abrir a caixa de diálogo **Selecione dispositivos de backup**. 
+3.  Clique no botão Procurar (...) para abrir a caixa de diálogo **Selecione dispositivos de backup** . 
 
-4.  Selecione **URL** na lista suspensa **Tipo de mídia de backup:**.  Clique em **Adicionar** para abrir a caixa de diálogo **Selecione um Local do Arquivo de Backup**.
+4.  Selecione **URL** na lista suspensa **Tipo de mídia de backup:** .  Clique em **Adicionar** para abrir a caixa de diálogo **Selecione um Local do Arquivo de Backup** .
 
     1.  **Contêiner de armazenamento do Azure:** o nome totalmente qualificado do contêiner de armazenamento do Microsoft Azure que contém os arquivos de backup.  Selecione um contêiner existente na lista suspensa ou digite manualmente o nome totalmente qualificado do contêiner.
       
     2.  **Assinatura de Acesso Compartilhado:**  usada para inserir a assinatura de acesso compartilhado para o contêiner designado.
       
-    3.  **Adicionar:** usado para registrar um contêiner existente para o qual não existe uma assinatura de acesso compartilhado.  Consulte [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) (Conectar-se a uma assinatura do Microsoft Azure).
+    3.  **Adicionar:**  usado para registrar um contêiner existente para o qual não existe uma assinatura de acesso compartilhado.  Consulte [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)(Conectar-se a uma assinatura do Microsoft Azure).
       
-    4.  **OK:** o SQL Server se conecta ao armazenamento do Microsoft Azure usando as informações da Credencial do SQL fornecidas e abre a caixa de diálogo **Localizar Arquivo de Backup no Microsoft Azure**. Os arquivos de backup que residem no contêiner de armazenamento são exibidos nessa página. Selecione o arquivo que deseja usar para restaurar e clique em **OK**. Isso o levará de volta à caixa de diálogo **Selecione Dispositivos de Backup**. Se você clicar em **OK** nessa caixa de diálogo, será levado de volta à caixa de diálogo **Restaurar**, na qual poderá concluir a restauração. 
+    4.  **OK:**    o SQL Server se conecta ao armazenamento do Microsoft Azure usando as informações da Credencial do SQL fornecidas e abre a caixa de diálogo **Localizar Arquivo de Backup no Microsoft Azure** . Os arquivos de backup que residem no contêiner de armazenamento são exibidos nessa página. Selecione o arquivo que deseja usar para restaurar e clique em **OK**. Isso o levará de volta à caixa de diálogo **Selecione Dispositivos de Backup** . Se você clicar em **OK** nessa caixa de diálogo, será levado de volta à caixa de diálogo **Restaurar** , na qual poderá concluir a restauração. 
   
      [Restaurar banco de dados &#40;página Geral&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
@@ -407,9 +408,9 @@ Write-Host $tSql
     GO  
     ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Práticas recomendadas e solução de problemas de backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
- [Tutorial: Como usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](https://msdn.microsoft.com/library/dn466438.aspx)  
+ [Tutorial: usando o serviço de Armazenamento de Blobs do Microsoft Azure com bancos de dados do SQL Server 2016](https://msdn.microsoft.com/library/dn466438.aspx)  
   
   

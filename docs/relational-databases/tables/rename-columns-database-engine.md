@@ -1,26 +1,30 @@
 ---
-title: "Renomear colunas (Mecanismo de Banco de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colunas [SQL Server], nomes"
-  - "renomeando colunas"
-  - "nomes de coluna [SQL Server]"
+title: Renomear colunas (Mecanismo de Banco de Dados) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [SQL Server], names
+- renaming columns
+- column names [SQL Server]
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e02a5d26a0a04d5afa1c4ddfcc9c06c503b6bd2c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Renomear colunas (Mecanismo de Banco de Dados)
+# <a name="rename-columns-database-engine"></a>Renomear colunas (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Você pode renomear uma coluna de tabela no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -51,7 +55,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para renomear uma coluna usando o Pesquisador de Objetos  
+#### <a name="to-rename-a-column-using-object-explorer"></a>Para renomear uma coluna usando o Pesquisador de Objetos  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 17
   
 3.  Digite um novo nome para a coluna.  
   
-#### Para renomear uma coluna usando o Designer de Tabela  
+#### <a name="to-rename-a-column-using-table-designer"></a>Para renomear uma coluna usando o Designer de Tabela  
   
 1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela na qual você deseja renomear colunas e selecione **Design**.  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 17
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  **Para renomear uma coluna**  
   
-#### Para renomear uma coluna  
+#### <a name="to-rename-a-column"></a>Para renomear uma coluna  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

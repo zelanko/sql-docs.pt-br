@@ -1,30 +1,34 @@
 ---
-title: "Propriedades do Artigo - &lt;Artigo&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.newpubwizard.articleproperties.f1"
-helpviewer_keywords: 
-  - "caixa de diálogo Propriedades do Artigo"
+title: "Propriedades do Artigo – &lt;Artigo&gt; | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.newpubwizard.articleproperties.f1
+helpviewer_keywords:
+- Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d485cf7aface5f33fd4bd30f8c4a3d36707b2d2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propriedades do Artigo - &lt;Artigo&gt;
+# <a name="article-properties---ltarticlegt"></a>Propriedades do Artigo – &lt;Artigo&gt;
   A caixa de diálogo **Propriedades do Artigo** está disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades de Publicação** . Ela permite exibir e definir propriedades para todos os tipos de artigos. Algumas propriedades só podem ser definidas quando a publicação é criada, e outras só podem ser definidas se a publicação não tiver assinaturas ativas. Propriedades que não podem ser definidas são exibidas como somente leitura.  
   
 > [!NOTE]  
->  Depois que uma publicação é criada, algumas alterações de propriedade requerem um novo instantâneo. Se uma publicação tiver assinaturas, algumas alterações também exigirão que todas as assinaturas sejam reiniciadas. Para obter mais informações, consulte [alterar propriedades da publicação e artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+>  Depois que uma publicação é criada, algumas alterações de propriedade requerem um novo instantâneo. Se uma publicação tiver assinaturas, algumas alterações também exigirão que todas as assinaturas sejam reiniciadas. Para obter mais informações, consulte [Alterar propriedade da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
  Cada propriedade na caixa de diálogo **Propriedades do Artigo** inclui uma descrição. Clique em uma propriedade e sua descrição é exibida na parte inferior da caixa de diálogo. Este tópico fornece informações adicionais sobre várias propriedades. As propriedades são agrupadas nas categorias seguintes:  
   
@@ -36,15 +40,15 @@ caps.handback.revision: 38
   
 -   Propriedades que se aplicam a publicações transacional e de instantâneo de Publicadores Oracle.  
   
-## Opções para todas as publicações.  
+## <a name="options-for-all-publications"></a>Opções para todas as publicações.  
  **Copiar esquemas de particionamento de tabela** e **Copiar esquemas de particionamento de índice**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] particionamento de tabela apresentada e particionamento de índices que não estão relacionados à replicação particionamento oferece por meio de linha e coluna filtros. As opções **Copiar esquemas de particionamento de tabela** e **Copiar esquemas de particionamento de índice** especificam se os esquemas de participação devem ser copiados no Assinante. Para obter mais informações sobre particionamento, consulte [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+O [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] apresentou os particionamentos de tabela e índice, que não têm relação com as ofertas de replicação de particionamento por meio de filtros de linha e coluna. As opções **Copiar esquemas de particionamento de tabela** e **Copiar esquemas de particionamento de índice** especificam se os esquemas de participação devem ser copiados no Assinante. Para obter mais informações sobre particionamento, consulte [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  **Converter tipos de dados**  
  Determina se tipos de dados definidos pelo usuário devem ou não ser convertidos em tipos de dados base ao criar objetos no Assinante. Os tipos de dados definidos pelo usuário incluem os tipos CLR introduzidos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Especifique um valor **True** se você for replicar esses tipos de dados para versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; isso assegura que eles possam ser tratados apropriadamente no Assinante.  
   
  **Criar esquemas no Assinante**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] apresentou esquemas, que são definidas usando a instrução CREATE SCHEMA. Um esquema é o proprietário de um objeto. ele é usado em um nome de várias partes, como \< banco de dados>. \< esquema>. \< objeto>. Se houver objetos no banco de dados de propriedade de esquemas diferentes de DBO, a replicação pode criar esses esquemas no Assinante para que os objetos publicados sejam criados.  
+O [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] apresentou esquemas, que são definidos usando a instrução CREATE SCHEMA. Um esquema é o proprietário de um objeto; é usado em um nome de várias partes, como \<Database>.\<Schema>.\<Object>. Se houver objetos no banco de dados de propriedade de esquemas diferentes de DBO, a replicação pode criar esses esquemas no Assinante para que os objetos publicados sejam criados.  
   
  Se você replicar dados para versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
   
@@ -65,50 +69,50 @@ caps.handback.revision: 38
   
 -   Para artigos em publicações Oracle: por padrão, o proprietário é especificado como **dbo**.  
   
--   Para artigos em publicações que usam instantâneos de modo de caracteres (que são usados para Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Assinantes [!INCLUDE[ssEW](../../includes/ssew-md.md)]): por padrão o proprietário é deixado em branco. O proprietário assume o padrão do proprietário associado à conta usada pelo Agente de Distribuição ou Agente de Mesclagem para se conectar ao Assinante.  
+-   Para os artigos em publicações que usam instantâneos do modo de caracteres (que são usados para não Assinantes[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Assinantes [!INCLUDE[ssEW](../../includes/ssew-md.md)] ): por padrão, o proprietário é deixado em branco. O proprietário assume o padrão do proprietário associado à conta usada pelo Agente de Distribuição ou Agente de Mesclagem para se conectar ao Assinante.  
   
  Essa opção não pode ser alterada para artigos em publicações habilitadas para replicação transacional ponto a ponto.  
   
  **Gerenciar automaticamente os intervalos de identidades**  
- A replicação, por padrão, gerencia todas as colunas de identidade no Publicador e em cada Assinante. Um intervalo de valores de identidade é atribuído a cada nó de replicação (especificado com o **tamanho do intervalo do publicador** e **tamanho do intervalo do assinante** Opções) para garantir que um determinado valor é usado em apenas um nó. Para obter mais informações, consulte [replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).  
+ A replicação, por padrão, gerencia todas as colunas de identidade no Publicador e em cada Assinante. Cada nó de replicação é atribuído a um intervalo de valores de identidade (especificado com as opções **Tamanho do intervalo do Publicador** e **Tamanho do intervalo do Assinante** ) para garantir que um determinando valor só seja usado em um nó. Para obter mais informações, consulte [Replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-## Opções para publicações transacionais.  
+## <a name="options-for-transactional-publications"></a>Opções para publicações transacionais.  
  **Copiar procedimentos armazenados INSERT, UPDATE e DELETE**  
- Se, no **entrega de instrução** seção da caixa de diálogo, selecione usar procedimentos armazenados para propagar alterações aos assinantes (o padrão), selecione se deseja copiar os procedimentos para cada assinante. Se você selecionar **False**, terá de copiar os procedimentos manualmente ou o Agente de Distribuição falhará ao tentar entregar as alterações.  
+ Se na seção **Entrega de Instrução** dessa caixa de diálogo você selecionar o uso de procedimentos armazenados para propagar alterações aos Assinantes (o padrão), selecione se os procedimentos devem ser copiados ou não no Assinante. Se você selecionar **False**, terá de copiar os procedimentos manualmente ou o Agente de Distribuição falhará ao tentar entregar as alterações.  
   
- **Entrega de instrução**  
- As opções nesta seção se aplicam a todas as tabelas, inclusive exibições indexadas que são replicadas como tabelas. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você use as opções padrão, a menos que seu aplicativo exija funcionalidade diferente. Por padrão, a replicação transacional propaga alterações aos Assinantes por um conjunto de procedimentos armazenados instalados em cada Assinante. Quando ocorre uma inserção, atualização ou exclusão em uma tabela no Publicador, a operação é convertida em uma chamada para um procedimento armazenado no Assinante.  
+ **Statement delivery**  
+ As opções nesta seção se aplicam a todas as tabelas, inclusive exibições indexadas que são replicadas como tabelas. A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você use as opções padrão, a menos que seu aplicativo exija funcionalidade diferente. Por padrão, a replicação transacional propaga alterações aos Assinantes por um conjunto de procedimentos armazenados instalados em cada Assinante. Quando ocorre uma inserção, atualização ou exclusão em uma tabela no Publicador, a operação é convertida em uma chamada para um procedimento armazenado no Assinante.  
   
  As opções de **entrega de instrução** especificam se deve ou não ser usado um procedimento armazenado e, se for usado, qual formato deve ser usado para parâmetros passados ao procedimento. As opções de **procedimento armazenado** permitem que você use os procedimentos que a replicação cria automaticamente ou substitua procedimentos armazenados criados.  
   
- Para obter mais informações, consulte [especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/specify-how-changes-are-propagated-for-transactional-articles.md).  
+ Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
  **Replicar**  
  Essa opção só se aplica a procedimentos armazenados. Determina se a definição do procedimento armazenado (a instrução CREATE PROCEDURE) ou sua execução devem ser replicadas ou não. Se você replicar a execução do procedimento, a definição do procedimento será replicada para o Assinante quando a assinatura for inicializada; quando o procedimento armazenado for executado no Publicador, a replicação executará o procedimento correspondente no Assinante. Isso pode fornecer um desempenho significativamente melhor em casos onde são executadas grandes operações em lote. Para obter mais informações, consulte [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
-## Opções para publicações de mesclagem  
+## <a name="options-for-merge-publications"></a>Opções para publicações de mesclagem  
  A caixa de diálogo **Propriedades do Artigo** para publicações de mesclagem tem duas guias: **Propriedades** e **Resolvedor**.  
   
-### Guia Propriedades  
+### <a name="properties-tab"></a>Guia Propriedades  
  **Direção de sincronização**  
  Determina se as alterações podem ser carregadas de Assinantes que usam tipo de assinatura de cliente:  
   
--   **Bidirecional** (o padrão): as alterações podem ser baixadas no assinante e carregadas no publicador.  
+-   **Bidirecional** (o padrão): as alterações podem ser baixadas no Assinante e carregadas no Publicador.  
   
--   **Somente para download para assinante, Proibir alterações do assinante**: as alterações podem ser baixadas no assinante, mas não podem ser carregadas para o publicador. Os gatilhos impedem que sejam feitas alterações no Assinante.  
+-   **Download somente para Assinante, proibir alterações do Assinante**: as alterações podem ser baixadas no Assinante, mas não podem ser carregadas no Publicador. Os gatilhos impedem que sejam feitas alterações no Assinante.  
   
--   **Somente para download para assinante, permitir alterações do assinante**: as alterações podem ser baixadas no assinante, mas não podem ser carregadas para o publicador.  
+-   **Download somente para Assinante, permitir alterações do Assinante**: as alterações podem ser baixadas no Assinante, mas não podem ser carregadas no Publicador.  
   
- Para obter mais informações, consulte [otimizar o desempenho de replicação de mesclagem com artigos Download-Only](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+ Para obter mais informações, consulte [Optimize Merge Replication Performance with Download-Only Articles](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md) (Otimizar o desempenho da replicação de mesclagem com artigos somente para download).  
   
  **Opções de partição**  
- Especifica o tipo de partição criado por um filtro com parâmetros. Para obter mais informações, consulte a seção "Configurando opções de partição" em [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-row-filters.md).  
+ Especifica o tipo de partição criado por um filtro com parâmetros. Para obter mais informações, consulte a seção "Configurando opções de partição" em [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Nível de rastreamento**  
  Determina se as alterações para a mesma linha ou para a mesma coluna devem ser tratadas como um conflito.  
   
- **Verifique se a permissão INSERT**, **Verificar permissão de UPDATE**, e **Verificar permissão de DELETE**  
- Determina se verificar ou não durante a sincronização se o logon do Assinante tem as permissões INSERT, UPDATE ou DELETE nas tabelas publicadas, no banco de dados de publicação. O padrão é **False** porque a replicação de mesclagem não exigem essas permissões sejam concedidas; o acesso às tabelas publicadas é controlado por meio de lista de acesso de publicação (PAL). Para obter mais informações sobre a PAL, consulte [proteger o publicador](../../relational-databases/replication/security/secure-the-publisher.md).  
+ **Verificar permissão de INSERT**, **Verificar permissão de UPDATE**e **Verificar permissão de DELETE**  
+ Determina se verificar ou não durante a sincronização se o logon do Assinante tem as permissões INSERT, UPDATE ou DELETE nas tabelas publicadas, no banco de dados de publicação. O padrão é **False** porque replicação de mesclagem não requer que essas permissões sejam concedidas; o acesso às tabelas publicadas é controlado pela PAL (Lista de Acesso à Publicação). Para obter mais informações sobre a PAL, consulte [Secure the Publisher](../../relational-databases/replication/security/secure-the-publisher.md) (Proteger o publicador).  
   
  Você pode requerer que as permissões sejam verificadas se quiser permitir que um ou mais Assinantes carreguem algumas alterações de dados publicados, mas não outras. Por exemplo, você pode adicionar um Assinante a PAL, mas não conceder ao Assinante nenhuma permissão nas tabelas do banco de dados de publicação. Depois você pode definir Verificar permissões DELETE como **True**: o Assinante poderá carregar inserções e atualizações, mas não exclusões.  
   
@@ -118,46 +122,46 @@ caps.handback.revision: 38
 > [!IMPORTANT]  
 >  Essa opção é preterida e será removida em uma versão futura.  
   
-### Guia Resolvedor  
+### <a name="resolver-tab"></a>Guia Resolvedor  
  **Usar o resolvedor padrão**  
- Se você selecionar o resolvedor padrão, os conflitos serão resolvidos com base na prioridade atribuída a cada Assinante ou na primeira alteração gravada no Publicador, dependendo do tipo de assinatura usado. Para obter mais informações, consulte [Detect and Resolve Merge Replication Conflicts](../../relational-databases/replication/merge/detect-and-resolve-merge-replication-conflicts.md).  
+ Se você selecionar o resolvedor padrão, os conflitos serão resolvidos com base na prioridade atribuída a cada Assinante ou na primeira alteração gravada no Publicador, dependendo do tipo de assinatura usado. Para obter mais informações, consulte [Detectar e resolver conflitos de replicação de mesclagem](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
   
  **Usar um resolvedor personalizado (registrado no Distribuidor)**  
  Se você escolher usar um resolvedor de artigo (um fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou um que você gravou), deve selecionar um resolvedor na caixa de listagem. Para obter mais informações, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- Se o resolvedor requerer uma entrada, especifique-a na caixa de texto **Insira as informações necessárias para o desenvolvedor** . Para obter mais informações sobre entrada requerida por [!INCLUDE[msCoName](../../includes/msconame-md.md)] resolvedores personalizados, consulte [Microsoft resolvedores COM base em](../../relational-databases/replication/merge/microsoft-com-based-resolvers.md).  
+ Se o resolvedor requerer uma entrada, especifique-a na caixa de texto **Insira as informações necessárias para o desenvolvedor** . Para obter mais informações sobre entrada requerida por resolvedores personalizados [!INCLUDE[msCoName](../../includes/msconame-md.md)] , consulte [Microsoft COM-Based Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
  **Permitir que o Assinante resolva conflitos interativamente durante a sincronização sob demanda**  
- Selecione essa opção se o Assinante for usar sincronização sob demanda (o padrão em replicação de mesclagem) e você quiser resolver os conflitos interativamente. Especifique sincronização sob demanda sobre o **agenda de sincronização** página do Assistente para nova assinatura. Para resolver conflitos interativamente, use a interface do usuário Resolvedor Interativo. Para obter mais informações, confira [Interactive Conflict Resolution](../../relational-databases/replication/merge/interactive-conflict-resolution.md).  
+ Selecione essa opção se o Assinante for usar sincronização sob demanda (o padrão em replicação de mesclagem) e você quiser resolver os conflitos interativamente. Especifique sincronização sob demanda na página **Agenda de Sincronização** do Assistente para Nova Assinatura. Para resolver conflitos interativamente, use a interface do usuário Resolvedor Interativo. Para obter mais informações, consulte [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Requer verificação de uma assinatura digital antes da mesclagem**  
  Todos os resolvedores com base em COM fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] são assinados. Selecione essa opção para verificar se o resolvedor é válido na sincronização.  
   
-## Opções para publicações Oracle  
+## <a name="options-for-oracle-publications"></a>Opções para publicações Oracle  
  A caixa de diálogo **Propriedades do Artigo** para publicações Oracle tem duas guias: **Propriedades** e **Mapeamento de Dados**. Publicações Oracle não oferecem suporte a todas as propriedades que as publicações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferecem. Para obter mais informações, consulte [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
-### Guia Propriedades  
+### <a name="properties-tab"></a>Guia Propriedades  
  **Copiar procedimentos armazenados INSERT, UPDATE e DELETE**  
- Se o artigo está em uma publicação transacional e, no **entrega de instrução** seção da caixa de diálogo, selecione usar procedimentos armazenados para propagar alterações aos assinantes (o padrão), selecione se deseja copiar os procedimentos para cada assinante. Se você selecionar **False**, terá de copiar os procedimentos manualmente ou o Agente de Distribuição falhará ao tentar entregar as alterações.  
+ Se o artigo estiver em uma publicação transacional, na seção **Entrega de Instrução** dessa caixa de diálogo, você seleciona o uso de procedimentos armazenados para propagar alterações nos Assinantes (o padrão) e seleciona se os procedimentos devem ser copiados ou não no Assinante. Se você selecionar **False**, terá de copiar os procedimentos manualmente ou o Agente de Distribuição falhará ao tentar entregar as alterações.  
   
  **Proprietário do objeto de destino**  
  Se você inserir um valor diferente de **dbo**:  
   
--   Para Assinantes que executam o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou versão posterior, você deve assegurar que seja criado um esquema no Assinante com o mesmo nome do valor inserido. Para obter mais informações, consulte [CREATE SCHEMA & #40. O Transact-SQL e 41;](../../t-sql/statements/create-schema-transact-sql.md).  
+-   Para Assinantes que executam o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou versão posterior, você deve assegurar que seja criado um esquema no Assinante com o mesmo nome do valor inserido. Para obter mais informações, veja [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md).  
   
 -   Para Assinantes que executam versões anteriores do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], para cada esquema adicione um usuário ao banco de dados de assinatura, com o mesmo nome do esquema.  
   
  **Nome do espaço de tabela**  
  O espaço de tabela no qual criar as tabelas de controle de alteração de replicação na instância do servidor Oracle. Para obter mais informações, consulte [Gerenciar espaços de tabela Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).  
   
- **Entrega de instrução**  
- As opções nesta seção se aplicam a todas as tabelas em publicações transacionais. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você use as opções padrão, a menos que seu aplicativo exija funcionalidade diferente. Por padrão, a replicação transacional propaga alterações aos Assinantes por um conjunto de procedimentos armazenados instalados em cada Assinante. Quando ocorre uma inserção, atualização ou exclusão em uma tabela no Publicador, a operação é convertida em uma chamada para um procedimento armazenado no Assinante.  
+ **Statement delivery**  
+ As opções nesta seção se aplicam a todas as tabelas em publicações transacionais. A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você use as opções padrão, a menos que seu aplicativo exija funcionalidade diferente. Por padrão, a replicação transacional propaga alterações aos Assinantes por um conjunto de procedimentos armazenados instalados em cada Assinante. Quando ocorre uma inserção, atualização ou exclusão em uma tabela no Publicador, a operação é convertida em uma chamada para um procedimento armazenado no Assinante.  
   
  As opções de **entrega de instrução** especificam se deve ou não ser usado um procedimento armazenado e, se for usado, qual formato deve ser usado para parâmetros passados ao procedimento. As opções de **procedimento armazenado** permitem que você use os procedimentos que a replicação cria automaticamente ou substitua procedimentos armazenados criados.  
   
- Para obter mais informações, consulte [especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/specify-how-changes-are-propagated-for-transactional-articles.md).  
+ Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-### Guia Mapeamento de Dados  
+### <a name="data-mapping-tab"></a>Guia Mapeamento de Dados  
  **Nome da coluna**  
  O nome da coluna no Publicador (somente leitura).  
   
@@ -169,11 +173,11 @@ caps.handback.revision: 38
   
 -   Para alguns tipos de dados, há somente um mapeamento possível; em tal caso, a coluna na grade de propriedades é somente leitura.  
   
--   Para alguns tipos, é possível selecionar mais de uma opção. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você use o mapeamento padrão, a menos que seu aplicativo exija um mapeamento diferente. Para obter mais informações, consulte [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
+-   Para alguns tipos, é possível selecionar mais de uma opção. A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você use o mapeamento padrão, a menos que seu aplicativo exija um mapeamento diferente. Para obter mais informações, consulte [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
   
-## Consulte também  
- [Crie uma publicação](../../relational-databases/replication/publish/create-a-publication.md)   
- [Visualizar e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+## <a name="see-also"></a>Consulte também  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Criar e aplicar o instantâneo inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Reinicializar uma assinatura](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

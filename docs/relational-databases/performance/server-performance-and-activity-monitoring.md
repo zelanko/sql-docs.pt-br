@@ -1,42 +1,46 @@
 ---
-title: "Monitoramento de desempenho e atividade de servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "monitoramento de atividade [SQL Server]"
-  - "rastreamentos [SQL Server], tópicos de instruções"
-  - "monitorando o desempenho do servidor [SQL Server], monitoramento de atividade"
-  - "procedimentos armazenados [SQL Server], rastreamentos"
-  - "desempenho [SQL Server], servidores"
-  - "servidores [SQL Server], desempenho"
-  - "SQL Server Profiler, tópicos de instruções"
-  - "SQL Server Management Studio [SQL Server], sistema de monitoramento"
-  - "Profiler [SQL Server Profiler], tópicos de instruções"
+title: Monitoramento de desempenho e atividade de servidor | Microsoft Docs
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- activity monitoring [SQL Server]
+- traces [SQL Server], how-to topics
+- monitoring server performance [SQL Server], activity monitoring
+- stored procedures [SQL Server], traces
+- performance [SQL Server], servers
+- servers [SQL Server], performance
+- SQL Server Profiler, how-to topics
+- SQL Server Management Studio [SQL Server], monitoring system
+- Profiler [SQL Server Profiler], how-to topics
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a3f71afe41528eca49f37d5f81e30d3defa0d21
+ms.lasthandoff: 04/11/2017
+
 ---
-# Monitoramento de desempenho e atividade de servidor
+# <a name="server-performance-and-activity-monitoring"></a>Monitoramento de desempenho e atividade de servidor
   A meta do monitoramento de bancos de dados é avaliar o desempenho do servidor. Um monitoramento eficaz envolve a criação de instantâneos periódicos do desempenho atual para isolar processos que estão ocasionando problemas, e a coleta contínua de dados para o controle das tendências de desempenho. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o sistema operacional [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows fornecem utilitários que permitem exibir a condição atual do banco de dados e controlar o desempenho à medida que as condições vão mudando.  
   
  A seção a seguir contém tópicos que descrevem como usar as ferramentas de monitoramento de desempenho e atividade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows. Ela contém os seguintes tópicos:  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
  **Para executar tarefas de monitoramento com ferramentas do Windows**  
   
 -   [Iniciar o Monitor do Sistema &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
--   [Exibir o log de aplicativos do Windows &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows.md)  
+-   [Exibir o log de aplicativos do Windows &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
  **Para criar alertas de banco de dados do SQL Server com ferramentas do Windows**  
   
@@ -167,3 +171,4 @@ caps.handback.revision: 18
 -   [Correlacionar um rastreamento com dados do log de desempenho do Windows &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   
+

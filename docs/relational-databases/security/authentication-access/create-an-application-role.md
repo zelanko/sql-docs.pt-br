@@ -1,26 +1,30 @@
 ---
-title: "Criar uma fun&#231;&#227;o de aplicativo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.approle.general.f1"
-helpviewer_keywords: 
-  - "funções de aplicativo [SQL Server], criando"
+title: "Criar uma função de aplicativo | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.approle.general.f1
+helpviewer_keywords:
+- application roles [SQL Server], creating
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0778c9ac00e6d9c06161ccc8429e0eb9ae4d846d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar uma fun&#231;&#227;o de aplicativo
+# <a name="create-an-application-role"></a>Criar uma função de aplicativo
   Este tópico descreve como criar uma função de aplicativo no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. As funções de aplicativo restringem o acesso do usuário a um banco de dados exceto quando feito por aplicativos específicos. As funções de aplicativo não têm nenhum usuário, assim a lista **Membros da Função** não é exibida quando é selecionada a **Função de aplicativo** .  
   
 > [!IMPORTANT]  
@@ -47,7 +51,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-##### Para criar uma função de aplicativo  
+##### <a name="to-create-an-application-role"></a>Para criar uma função de aplicativo  
   
 1.  No Pesquisador de Objetos, expanda o banco de dados onde você deseja criar uma função de aplicativo.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 27
   
 5.  Na caixa de diálogo **Função de Aplicativo – Nova** , na página **Geral**, digite o novo nome da nova função de aplicativo na caixa **Nome da função** .  
   
-6.  Na caixa **Esquema Padrão** , especifique o esquema que possuirá objetos criados por essa função digitando os nomes dos objetos. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Localizar Esquema**.  
+6.  Na caixa **Esquema Padrão** , especifique o esquema que possuirá objetos criados por essa função digitando os nomes dos objetos. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Localizar Esquema** .  
   
 7.  Na caixa **Senha** , digite uma senha para a nova função. Digite essa senha novamente na caixa **Confirmar Senha** .  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 27
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### Opções adicionais  
+### <a name="additional-options"></a>Opções adicionais  
  A caixa de diálogo **Função de Aplicativo – Nova** também oferece opções em duas páginas adicionais: **Protegíveis** e **Propriedades Estendidas**.  
   
 -   A página **Protegíveis** lista todos os protegíveis e as permissões possíveis nesses protegíveis que podem ser concedidos ao logon.  
@@ -76,7 +80,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para criar uma função de aplicativo  
+#### <a name="to-create-an-application-role"></a>Para criar uma função de aplicativo  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

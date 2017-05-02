@@ -1,28 +1,32 @@
 ---
-title: "Criar restri&#231;&#245;es exclusivas | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "UNIQUE_TSQL"
-helpviewer_keywords: 
-  - "restrições UNIQUE [SQL Server], criando"
-  - "restrições [SQL Server], criando"
-  - "restrições [SQL Server], unique"
+title: "Criar restrições exclusivas | Microsoft Docs"
+ms.custom: 
+ms.date: 10/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- UNIQUE_TSQL
+helpviewer_keywords:
+- UNIQUE constraints [SQL Server], creating
+- constraints [SQL Server], creating
+- constraints [SQL Server], unique
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8721056ce88631e4f86c71d8e557e0badcf13c48
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar restri&#231;&#245;es exclusivas
+# <a name="create-unique-constraints"></a>Criar restrições exclusivas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Você pode criar uma restrição exclusiva no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] para assegurar que nenhum valor duplicado seja digitado em colunas específicas que não integram uma chave primária. Criar uma restrição exclusiva cria automaticamente um índice exclusivo correspondente.  
@@ -48,13 +52,13 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para criar restrição exclusiva  
+#### <a name="to-create-a-unique-constraint"></a>Para criar restrição exclusiva  
   
 1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela à qual você deseja adicionar uma restrição exclusiva e clique em **Design**.  
   
-2.  No menu **Designer de Tabela**, clique em **Índices/Chaves**.  
+2.  No menu **Designer de Tabela** , clique em **Índices/Chaves**.  
   
-3.  Na caixa de diálogo **Índices/Chaves**, clique em **Adicionar**.  
+3.  Na caixa de diálogo **Índices/Chaves** , clique em **Adicionar**.  
   
 4.  Na grade, em **Geral**, clique em **Tipo** e selecione **Chave Exclusiva** na caixa de listagem suspensa à direita da propriedade.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para criar restrição exclusiva  
+#### <a name="to-create-a-unique-constraint"></a>Para criar restrição exclusiva  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -82,7 +86,7 @@ caps.handback.revision: 18
   
     ```  
   
-#### Para criar uma restrição exclusiva em uma tabela existente  
+#### <a name="to-create-a-unique-constraint-on-an-existing-table"></a>Para criar uma restrição exclusiva em uma tabela existente  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 18
   
     ```  
   
-#### Para criar uma restrição exclusiva em uma nova tabela  
+#### <a name="to-create-a-unique-constraint-in-an-new-table"></a>Para criar uma restrição exclusiva em uma nova tabela  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -119,6 +123,7 @@ caps.handback.revision: 18
   
     ```  
   
-     Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [table_constraint &#40;Transact-SQL&#41;](../Topic/table_constraint%20\(Transact-SQL\).md).  
+     Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>  
+

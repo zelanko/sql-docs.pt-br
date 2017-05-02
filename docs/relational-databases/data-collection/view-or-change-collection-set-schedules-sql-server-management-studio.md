@@ -1,31 +1,35 @@
 ---
-title: "Exibir ou alterar agendas de conjuntos de coleta (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.collectionsetprop.uploads.f1"
-  - "sql13.swb.dc.collectionsetprop.description.f1"
-  - "sql13.swb.dc.collectionsetprop.general.f1"
-helpviewer_keywords: 
-  - "conjuntos de coleta [SQL Server], alterando agendas"
-  - "agendas [SQL Server], alterando o conjunto de coleta"
-  - "conjuntos de coleta [SQL Server], exibindo agendas"
-  - "agendas [SQL Server], exibindo conjunto de coleta"
+title: Exibir ou alterar agendas de conjuntos de coleta (SQL Server Management Studio) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.collectionsetprop.uploads.f1
+- sql13.swb.dc.collectionsetprop.description.f1
+- sql13.swb.dc.collectionsetprop.general.f1
+helpviewer_keywords:
+- collection sets [SQL Server], changing schedules
+- schedules [SQL Server], changing collection set
+- collection sets [SQL Server], viewing schedules
+- schedules [SQL Server], viewing collection set
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b882c8e5f82beb7d467d1063695fa032ed562ca0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exibir ou alterar agendas de conjuntos de coleta (SQL Server Management Studio)
+# <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Exibir ou alterar agendas de conjuntos de coleta (SQL Server Management Studio)
   É possível exibir ou alterar agendas de conjuntos de coleta usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  O modo de coleta, armazenado em cache ou não, determina como você pode fazer alterações em uma agenda. O modo cache usa agendas separadas para coleção e carregamento. O modo não cache usa a mesma agenda para coleta e carregamento. O tipo de modo de coleta de cada um dos conjuntos de coleta de Dados do Sistema é o seguinte:  
@@ -36,21 +40,21 @@ caps.handback.revision: 26
   
 -   **Atividade do Servidor** usa o modo cache de coleção.  
   
-### Para exibir agendas de conjuntos de coleta  
+### <a name="to-view-collection-set-schedules"></a>Para exibir agendas de conjuntos de coleta  
   
 1.  No Pesquisador de Objetos, expanda o nó **Gerenciamento** , expanda **Coleta de Dados**e, em seguida, **Conjuntos de Coleta de Dados do Sistema**.  
   
-2.  Clique com o botão direito do mouse no nome do conjunto de coleta e clique em **Propriedades** para abrir a caixa de diálogo [Propriedades do Conjunto de Coleta de Dados](#CollectionSet).  
+2.  Clique com o botão direito do mouse no nome do conjunto de coleta e clique em **Propriedades** para abrir a caixa de diálogo [Propriedades do Conjunto de Coleta de Dados](#CollectionSet) .  
   
-### Para alterar as agendas para um conjunto de coleta no modo cache  
+### <a name="to-change-the-schedules-for-a-cached-mode-collection-set"></a>Para alterar as agendas para um conjunto de coleta no modo cache  
   
 1.  No Pesquisador de Objetos, expanda o nó **Gerenciamento** , expanda **Coleta de Dados**e, em seguida, **Conjuntos de Coleta de Dados do Sistema**.  
   
-2.  Clique com o botão direito do mouse em um conjunto de coleta que usa o modo cache, como **Estatísticas de Consulta**, e clique em **Propriedades** para abrir a caixa de diálogo [Propriedades do Conjunto de Coleta de Dados](#CollectionSet).  
+2.  Clique com o botão direito do mouse em um conjunto de coleta que usa o modo cache, como **Estatísticas de Consulta**, e clique em **Propriedades** para abrir a caixa de diálogo [Propriedades do Conjunto de Coleta de Dados](#CollectionSet) .  
   
 3.  Você pode alterar a frequência da coleta na página **Geral** . Para fazer isso, siga estas etapas:  
   
-    1.  No painel de detalhes, clique duas vezes no número exibido para a coluna **Frequência de Coleta (s)** na tabela **Itens da coleta**.  
+    1.  No painel de detalhes, clique duas vezes no número exibido para a coluna **Frequência de Coleta (s)** na tabela **Itens da coleta** .  
   
     2.  Para aumentar ou reduzir a frequência da coleta, digite um número inferior ou superior e pressione ENTER para armazenar o novo valor.  
   
@@ -75,11 +79,11 @@ caps.handback.revision: 26
   
 5.  Clique em **OK** para salvar as alterações na frequência da coleta e na agenda de carregamento e para fechar a caixa de diálogo **Propriedades do Conjunto de Coleta de Dados** .  
   
-### Para alterar a agenda de um conjunto de coleta no modo não cache  
+### <a name="to-change-the-schedule-for-a-non-cached-mode-collection-set"></a>Para alterar a agenda de um conjunto de coleta no modo não cache  
   
 1.  No Pesquisador de Objetos, expanda o nó **Gerenciamento** , expanda **Coleta de Dados**e, em seguida, **Conjuntos de Coleta de Dados do Sistema**.  
   
-2.  Clique com o botão direito do mouse em um conjunto de coleta que usa o modo não cache, como **Uso do Disco**, e clique em **Propriedades** para abrir a caixa de diálogo [Propriedades do Conjunto de Coleta de Dados](#CollectionSet).  
+2.  Clique com o botão direito do mouse em um conjunto de coleta que usa o modo não cache, como **Uso do Disco**, e clique em **Propriedades** para abrir a caixa de diálogo [Propriedades do Conjunto de Coleta de Dados](#CollectionSet) .  
   
      A caixa de diálogo **Propriedades do Conjunto de Coleta de Dados** exibe uma exibição paginada das propriedades do conjunto de coleta.  
   
@@ -111,10 +115,10 @@ caps.handback.revision: 26
   
 |||  
 |-|-|  
-|**Sem-cache. Coleta e carregamento de dados na mesma agenda.**|Quando selecionada, especifique uma destas opções:<br /><br /> **Agenda**. Os dados são coletados e carregados de acordo com a agenda. Clique em **Escolher** para selecionar em uma lista predefinida de agendas ou clique em **Novo** para criar uma nova agenda.<br /><br /> **Sob demanda**. Os dados são coletados e carregados sob demanda.|  
+|**Sem-cache. Coleta e upload de dados na mesma agenda.**|Quando selecionada, especifique uma destas opções:<br /><br /> **Agenda**. Os dados são coletados e carregados de acordo com a agenda. Clique em **Escolher** para selecionar em uma lista predefinida de agendas ou clique em **Novo** para criar uma nova agenda.<br /><br /> **Sob demanda**. Os dados são coletados e carregados sob demanda.|  
 |**Em cache. Coletar e armazenar os dados em cache em um conjunto de frequências de coleta. Carregar os dados armazenados em cache em uma agenda separada.**|Colete e armazene os dados em cache para uma frequência de coleta especificada. Carregue os dados coletados em uma agenda separada.|  
   
- **Itens de coleta**  
+ **Itens da coleta**  
  Exibe os itens de coleção no conjunto de coleta. São fornecidas as informações a seguir para cada item de coleta:  
   
 -   **Nome**  
@@ -160,8 +164,8 @@ caps.handback.revision: 26
   
  Use esta página para exibir uma descrição do conjunto de coleta ao qual essa página de propriedades se refere.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Gerenciar coleta de dados](../../relational-databases/data-collection/manage-data-collection.md)   
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)  
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)  
   
   

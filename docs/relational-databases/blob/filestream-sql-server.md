@@ -1,27 +1,31 @@
 ---
-title: "FILESTREAM (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server]"
-  - "FILESTREAM [SQL Server], sobre"
-  - "FILESTREAM [SQL Server], visão geral"
+title: FILESTREAM (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server]
+- FILESTREAM [SQL Server], about
+- FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fb0bdc4185b028693111c74c94a14d74b8c4c583
+ms.lasthandoff: 04/11/2017
+
 ---
-# FILESTREAM (SQL Server)
-  O FILESTREAM permite que aplicativos baseados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazenem dados não estruturados, como documentos e imagens, no sistema de arquivos. Os aplicativos podem utilizar as APIs de streaming avançado e o desempenho do sistema de arquivos e, ao mesmo tempo, manter consistência transacional entre os dados não estruturados e os dados estruturados correspondentes.  
+# <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
+  O FILESTREAM permite que aplicativos baseados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]armazenem dados não estruturados, como documentos e imagens, no sistema de arquivos. Os aplicativos podem utilizar as APIs de streaming avançado e o desempenho do sistema de arquivos e, ao mesmo tempo, manter consistência transacional entre os dados não estruturados e os dados estruturados correspondentes.  
   
  O FILESTREAM integra o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] com um sistema de arquivos NTFS ou ReFS armazenando dados de BLOB (objeto binário grande) **varbinary(max)** como arquivos no sistema de arquivos. [!INCLUDE[tsql](../../includes/tsql-md.md)] podem inserir, atualizar, consultar, pesquisar e fazer backup de dados FILESTREAM. As interfaces do sistema de arquivos do Win32 fornecem acesso de streaming aos dados.  
   
@@ -30,7 +34,7 @@ caps.handback.revision: 13
  FILESTREAM não é habilitado automaticamente quando você instalar ou atualiza o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você deve habilitar o FILESTREAM usando o SQL Server Configuration Manager e o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para usar o FILESTREAM, você deve criar ou modificar um banco de dados para conter um tipo especial de grupo de arquivos. Em seguida, crie ou modifique uma tabela de modo que ela contenha uma coluna **varbinary(max)** com o atributo FILESTREAM. Depois que você concluir essas tarefas, poderá usar [!INCLUDE[tsql](../../includes/tsql-md.md)] e Win32 para gerenciar os dados de FILESTREAM.  
   
 
-##  Quando usar FILESTREAM  
+##  <a name="when-to-use-filestream"></a>Quando usar FILESTREAM  
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os BLOBs podem ser dados **varbinary(max)** padrão que armazenam os dados em tabelas ou objetos **varbinary(max)** FILESTREAM que armazenam os dados no sistema de arquivos. O tamanho e o uso dos dados determinam se você deve usar armazenamento de banco de dados ou armazenamento de sistema de arquivos. Se as condições a seguir forem verdadeiras, você deve considerar o uso de FILESTREAM:  
   
 -   Os objetos que estão sendo armazenados têm, em média, mais de 1 MB.  
@@ -43,10 +47,10 @@ caps.handback.revision: 13
   
 
   
-##  Armazenamento de FILESTREAM  
- O armazenamento de FILESTREAM é implementado como uma coluna **varbinary(max)**, na qual os dados são armazenados como BLOBs no sistema de arquivos. Os tamanhos dos BLOBs são limitados apenas pelo tamanho do volume do sistema de arquivos. A limitação padrão de **varbinary(max)** de tamanhos de arquivos de 2 GB não se aplica a BLOBs que são armazenados no sistema de arquivos.  
+##  <a name="filestream-storage"></a>Armazenamento de FILESTREAM  
+ O armazenamento de FILESTREAM é implementado como uma coluna **varbinary(max)** , na qual os dados são armazenados como BLOBs no sistema de arquivos. Os tamanhos dos BLOBs são limitados apenas pelo tamanho do volume do sistema de arquivos. A limitação padrão de **varbinary(max)** de tamanhos de arquivos de 2 GB não se aplica a BLOBs que são armazenados no sistema de arquivos.  
   
- Para determinar que uma coluna deve armazenar dados no sistema de arquivos, especifique o atributo FILESTREAM em uma coluna **varbinary(max)**. Isso faz com que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazene todos os dados dessa coluna no sistema de arquivos, mas não no arquivo do banco de dados.  
+ Para determinar que uma coluna deve armazenar dados no sistema de arquivos, especifique o atributo FILESTREAM em uma coluna **varbinary(max)** . Isso faz com que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazene todos os dados dessa coluna no sistema de arquivos, mas não no arquivo do banco de dados.  
   
  Os dados FILESTREAM devem ser armazenados em grupos de arquivos FILESTREAM. Um grupo de arquivos FILESTREAM é um grupo de arquivos especial que contém diretórios do sistema de arquivos em vez dos próprios arquivos. Esses diretórios do sistema de arquivos são chamados de *contêineres de dados*. Os contêineres de dados são a interface entre armazenamento [!INCLUDE[ssDE](../../includes/ssde-md.md)] e armazenamento de sistema de arquivos.  
   
@@ -62,11 +66,11 @@ caps.handback.revision: 13
   
 -   Grupos de arquivos FILESTREAM podem estar em volumes compactados.  
   
-### Gerenciamento integrado  
+### <a name="integrated-management"></a>Gerenciamento integrado  
  Como FILESTREAM é implementado como uma coluna **varbinary(max)** e integrado diretamente ao [!INCLUDE[ssDE](../../includes/ssde-md.md)], a maioria das funções e ferramentas de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funciona sem nenhuma modificação para dados FILESTREAM. Por exemplo, é possível usar todos os modelos de backup e recuperação com dados FILESTREAM e o backup dos dados FILESTREAM pode ser feito com os dados estruturados no banco de dados. Se você não desejar fazer backup de dados FILESTREAM com dados relacionais, poderá usar um backup parcial para excluir grupos de arquivos FILESTREAM.  
   
  
-### Segurança Integrada  
+### <a name="integrated-security"></a>Segurança Integrada  
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os dados FILESTREAM são protegidos exatamente como outros dados, com a concessão de permissões em níveis de tabela ou coluna. Se um usuário tiver permissão para a coluna FILESTREAM em uma tabela, ele poderá abrir os arquivos associados.  
   
 > [!NOTE]  
@@ -80,7 +84,7 @@ caps.handback.revision: 13
 ##  <a name="dual"></a> Acessando dados BLOB com o Transact-SQL e o acesso a streaming do sistema de arquivos  
  Depois de armazenar dados em uma coluna FILESTREAM, você pode acessar os arquivos usando transações [!INCLUDE[tsql](../../includes/tsql-md.md)] ou usando APIs do Win32.  
   
-### Acesso ao Transact-SQL  
+### <a name="transact-sql-access"></a>Acesso ao Transact-SQL  
  Usando [!INCLUDE[tsql](../../includes/tsql-md.md)], é possível inserir, atualizar e excluir dados FILESTREAM:  
   
 -   Você pode usar uma operação de inserção para pré-popular um campo FILESTREAM com um valor nulo, vazio ou com dados embutidos relativamente curtos. No entanto uma quantidade grande de dados é transmitida de maneira mais eficiente em um arquivo que usa interfaces Win32.  
@@ -89,7 +93,7 @@ caps.handback.revision: 13
   
 -   Ao excluir uma linha ou ao excluir ou truncar uma tabela que contém dados FILESTREAM, você também exclui os dados BLOB subjacentes do sistema de arquivos.  
   
-### Acesso a streaming do sistema de arquivos  
+### <a name="file-system-streaming-access"></a>Acesso a streaming do sistema de arquivos  
  O suporte a streaming do Win32 funciona no contexto de uma transação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dentro de uma transação, é possível usar funções FILESTREAM para obter um caminho do sistema de arquivos UNC lógico de um arquivo. Em seguida, use a API OpenSqlFilestream para obter um identificador de arquivo. Esse identificador pode então ser usado por interfaces de streaming de arquivo do Win32, como ReadFile() e WriteFile(), para acessar e atualizar o arquivo por meio do sistema de arquivos.  
   
  Como as operações de arquivo são transacionais, não é possível excluir ou renomear arquivos FILESTREAM por meio do sistema de arquivos.  
@@ -114,7 +118,7 @@ caps.handback.revision: 13
   
  **Semântica de isolamento**  
   
- A semântica de isolamento é governada pelos níveis de isolamento da transação do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. O nível de isolamento confirmado por leitura tem suporte para [!INCLUDE[tsql](../../includes/tsql-md.md)] e acesso ao sistema de arquivos. As operações de leitura repetidas, assim como os isolamentos de instantâneo e serializáveis, têm suporte. Não há suporte para leitura suja.  
+ A semântica de isolamento é governada pelos níveis de isolamento da transação do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . O nível de isolamento confirmado por leitura tem suporte para [!INCLUDE[tsql](../../includes/tsql-md.md)] e acesso ao sistema de arquivos. As operações de leitura repetidas, assim como os isolamentos de instantâneo e serializáveis, têm suporte. Não há suporte para leitura suja.  
   
  As operações de abertura de acesso ao sistema de arquivos não aguardam nenhum bloqueio. Em vez disso, as operações de abertura falham imediatamente caso não possam acessar os dados por causa do isolamento da transação. As chamadas da API de streaming falharão com ERROR_SHARING_VIOLATION se a operação de abertura não puder continuar por causa de violação de isolamento.  
   
@@ -150,7 +154,7 @@ caps.handback.revision: 13
  Não há suporte para a criação de exibições mapeadas de memória (E/S mapeada de memória) usando um identificador de FILESTREAM. Se o mapeamento de memória for usado para dados FILESTREAM, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não poderá garantir consistência e durabilidade dos dados ou integridade do banco de dados.  
  
   
-##  Tarefas relacionadas  
+##  <a name="related-tasks"></a>Tarefas relacionadas  
  [Habilitar e configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
   [Criar um banco de dados habilitado para FILESTREAM](../../relational-databases/blob/create-a-filestream-enabled-database.md)  
   [Criar uma tabela para armazenar dados FILESTREAM](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)  
@@ -164,6 +168,7 @@ caps.handback.revision: 13
   [Configurar um firewall para acesso ao FILESTREAM](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)  
 
   
-##  Conteúdo relacionado  
+##  <a name="related-content"></a>Conteúdo relacionado  
  [Compatibilidade do FILESTREAM com outros recursos do SQL Server](../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)  
   
+

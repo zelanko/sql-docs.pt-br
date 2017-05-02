@@ -1,27 +1,31 @@
 ---
-title: "Classe de evento Broker:Message Drop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento Broker:Message Drop"
+title: Classe de evento Broker:Message Drop | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Message Drop event class
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47fd82b02e3d808d2609e5c9830099d11627795f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento Broker:Message Drop
+# <a name="brokermessage-drop-event-class"></a>classe de evento Broker:Message Drop
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **Broker:Message Drop** quando o Service Broker não pode reter uma mensagem recebida que deveria ter sido entregue a um serviço nessa instância. Para mensagens que deveriam ter sido encaminhadas, veja [Classe de evento Broker:Forwarded Message Dropped](../../relational-databases/event-classes/broker-forwarded-message-dropped-event-class.md).  
   
-## Colunas de dados da classe de evento Broker:Message Drop  
+## <a name="brokermessage-drop-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Message Drop  
   
 |Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -53,7 +57,7 @@ caps.handback.revision: 25
 |**TextData**|**ntext**|O motivo pelo qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] descartou a mensagem.|1|Sim|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Não|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

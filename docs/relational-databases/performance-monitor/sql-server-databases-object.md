@@ -1,30 +1,34 @@
 ---
-title: "SQL Server, objeto Databases | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidade (SQL Server), monitorando"
-  - "objeto Databases"
-  - "SQLServer:Databases"
-  - "Grupos de disponibilidade [SQL Server], contadores de desempenho"
+title: SQL Server, objeto Banco de Dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
+- Databases object
+- SQLServer:Databases
+- Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1b2355b85d82050496d1df27480723a0831e3a60
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, objeto Databases
+# <a name="sql-server-databases-object"></a>SQL Server, objeto Databases
   O objeto **SQLServer:Databases** no SQL Server fornece contadores para monitorar a taxa de transferência de operações de cópia em massa, backup e restauração, e atividades de log de transações. Ele monitora as transações e o log de transações para determinar quanta atividade de usuário está ocorrendo no banco de dados e o quanto o log de transações está ficando completo. A quantidade de atividade de usuário pode determinar o desempenho do banco de dados e pode afetar o tamanho de log, o bloqueio e a replicação. O monitoramento da atividade de log de baixo nível para medir a atividade de usuário e uso de recursos pode ajudá-lo a identificar gargalos no desempenho.  
   
- Diversas instâncias do objeto **Databases**, cada uma representando um único banco de dados, podem ser monitoradas ao mesmo tempo.  
+ Diversas instâncias do objeto **Databases** , cada uma representando um único banco de dados, podem ser monitoradas ao mesmo tempo.  
   
  Esta tabela descreve os contadores **Databases** do SQL Server.  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 40
 |**Backup/Restore Throughput/sec**|Taxa de transferência de leitura/gravação para operações de backup e restauração de um banco de dados por segundo. Por exemplo, você pode medir como o desempenho da operação de backup do banco de dados é alterado quando mais dispositivos de backup são usados em paralelo ou quando dispositivos mais rápidos são usados. A taxa de transferência de uma operação de backup ou restauração de banco de dados permite determinar o progresso e desempenho de suas operações de backup e restaurações.|  
 |**Bulk Copy Rows/sec**|Número de linhas copiadas em massa por segundo.|  
 |**Taxa de Transferência de Cópia em Massa/s**|Quantidade de dados copiados em massa (em quilobytes) por segundo.|  
-|**Confirmar entradas da tabela**|O tamanho da parte na memória da tabela de confirmação do banco de dados. Para obter mais informações, veja [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_commit_table%20\(Transact-SQL\).md).|  
+|**Confirmar entradas da tabela**|O tamanho da parte na memória da tabela de confirmação do banco de dados. Para obter mais informações, veja [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
 |**Tamanho de Arquivo(s) de Dados (KB)**|Tamanho cumulativo (em quilobytes) de todos os arquivos de dados no banco de dados que inclui qualquer crescimento automático. Por exemplo, o monitoramento deste contador é útil para determinar o tamanho correto do **tempdb**.|  
 |**DBCC Logical Scan Bytes/sec**|Número de bytes de verificação de leitura lógica por segundo para DBCC (comandos de console de banco de dados).|  
 |**Hora da Confirmação do Grupo/s**|Tempo de parada do grupo (em microssegundos) por segundo.|
@@ -60,7 +64,7 @@ caps.handback.revision: 40
 |**Push do Pool de Logs vazio para Pool Livre/s**|A taxa de push de bloco de Logs falha devido ao pool livre vazio.|
 |**Memória baixa por push no Pool de Logs/s**|A taxa de push de bloco de Logs falha devido a estar com memória insuficiente.|
 |**Push do Pool de Logs não tem Buffer Livre/s**|Taxa de push de bloco de Logs falha devido à indisponibilidade do buffer livre.|
-|**Registrar Sol. do Pool por Trás do Trunc/seg**|Registrar falhas no cache do pool devido ao bloco solicitado estar por trás da truncagem LSN.|
+|**Registrar Pool de Logs Por trás do Trunc/seg**|Registrar falhas no cache do pool devido ao bloco solicitado estar por trás da truncagem LSN.|
 |**Base de Solicitações do Pool de Logs**|Somente para uso interno.| 
 |**Solicitações de VLF Antigo do pool de Logs/seg**|Solicitações do Pool de Logs que não estavam no último VLF do log.|  
 |**Solicitações do Pool de Logs/s**|O número de solicitações do bloco de log processadas pelo pool de log.|  
@@ -69,8 +73,8 @@ caps.handback.revision: 40
 |**Log Shrinks**|Número total de reduções de log para este banco de dados.|  
 |**Truncamentos de Log**|O número de vezes que o log de transações foi reduzido.|  
 |**Percent Log Used**|Porcentagem de espaço no log que está em uso.|  
-|**Repl. Pending Xacts**|Número de transações no log de transações do banco de dados de publicação marcado para replicação, mas ainda não enviadas ao banco de dados de distribuição.|  
-|**Repl. Trans. Rate**|Número de transações por segundo de leitura do log de transações do banco de dados de publicação enviadas ao banco de dados de distribuição.|  
+|**Repl. Xacts pendentes**|Número de transações no log de transações do banco de dados de publicação marcado para replicação, mas ainda não enviadas ao banco de dados de distribuição.|  
+|**Repl. Trans. Taxa**|Número de transações por segundo de leitura do log de transações do banco de dados de publicação enviadas ao banco de dados de distribuição.|  
 |**Shrink Data Movement Bytes/sec**|Quantidade de dados movidos por segundo por operações de encolhimento automático ou de instruções DBCC SHRINKDATABASE ou DBCC SHRINKFILE.|  
 |**Transações acompanhadas/s**|O número de transações confirmadas registradas na tabela de confirmação do banco de dados.|  
 |**Transações/s**|Número de transações iniciadas para o banco de dados por segundo.<br /><br /> **Transações/s** não conta transações somente XTP (transações iniciadas por um procedimento armazenado compilado de modo nativo).|  
@@ -81,7 +85,7 @@ caps.handback.revision: 40
 |**Log do Controlador de XTP Processado/seg**|A quantidade de bytes de log processados pelo thread do controlador de XTP, por segundo.|
 |**Memória de XTP Usada (KB)**|A quantidade de memória usada pelo XTP no banco de dados.| 
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Réplica de banco de dados](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   

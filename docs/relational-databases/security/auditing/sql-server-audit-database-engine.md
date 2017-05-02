@@ -1,36 +1,40 @@
 ---
-title: "Auditoria do SQL Server (Mecanismo de Banco de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "audit"
-helpviewer_keywords: 
-  - "Auditoria do SQL Server"
-  - "auditorias [SQL Server], Auditoria do SQL Server"
+title: Auditoria do SQL Server (Mecanismo de Banco de Dados) | Microsoft Docs
+ms.custom: 
+ms.date: 11/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- audit
+helpviewer_keywords:
+- SQL Server Audit
+- audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
+ms.openlocfilehash: 7852b00948b193a07e4ac38d1ace6135a63bc599
+ms.lasthandoff: 04/29/2017
+
 ---
-# Auditoria do SQL Server (Mecanismo de Banco de Dados)
+# <a name="sql-server-audit-database-engine"></a>Auditoria do SQL Server (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  A*auditoria* de uma instância do [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] ou de um banco de dados individual envolve o controle e o registro em log dos eventos que ocorrem no [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. A auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite criar auditorias de servidor, que podem conter especificações de auditoria de servidor para eventos no nível de servidor, além de especificações de auditoria de banco de dados para eventos no nível de banco de dados. Os eventos auditados podem ser gravados nos logs de eventos ou nos arquivos de auditoria.  
+  A*auditoria* de uma instância do [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] ou de um banco de dados individual envolve o controle e o registro em log dos eventos que ocorrem no [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. A auditoria do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite criar auditorias de servidor, que podem conter especificações de auditoria de servidor para eventos no nível de servidor, além de especificações de auditoria de banco de dados para eventos no nível de banco de dados. Os eventos auditados podem ser gravados nos logs de eventos ou nos arquivos de auditoria.  
   
- Dependendo dos requisitos ou padrões governamentais de sua instalação, ha vários níveis de auditoria no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece as ferramentas e os processos necessários para habilitar, armazenar e exibir auditorias em vários objetos de servidor e de banco de dados.  
+ Dependendo dos requisitos ou padrões governamentais de sua instalação, ha vários níveis de auditoria no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A auditoria do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece as ferramentas e os processos necessários para habilitar, armazenar e exibir auditorias em vários objetos de servidor e de banco de dados.  
   
  É possível gravar grupos de ação de auditoria de servidor por instância, e grupos de ação de auditoria de banco de dados ou ações de auditoria de banco de dados por banco de dados. O evento de auditoria ocorrerá sempre que a ação auditável for encontrada.  
   
- Todas as edições do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferecem suporte a auditorias no nível do servidor. Todas as edições oferecem suporte a auditorias no nível do banco de dados a partir do [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1. Antes disso, a auditoria no nível de banco de dados se limitava às edições Enterprise, Developer e Evaluation. Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Todas as edições do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferecem suporte a auditorias no nível do servidor. Todas as edições oferecem suporte a auditorias no nível do banco de dados a partir do [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1. Antes disso, a auditoria no nível de banco de dados se limitava às edições Enterprise, Developer e Evaluation. Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!NOTE]  
 >  Este tópico aplica-se ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Para [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], confira [Introdução à auditoria de banco de dados SQL](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/).  
@@ -178,7 +182,7 @@ caps.handback.revision: 58
  Para obter mais informações sobre como conceder direitos e permissões, consulte [GRANT &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-transact-sql.md).  
   
 > [!CAUTION]  
->  Entidades na função sysadmin podem violar qualquer componente de auditoria e aqueles na função db_owner podem violar quaisquer especificações em um banco de dados. A auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valida esse logon que cria ou altera uma especificação de auditoria que tenha pelo menos a permissão ALTER ANY DATABASE AUDIT. No entanto, ela não faz nenhuma validação quando você anexa um banco de dados. Você deve considerar que todas as Especificações de Auditoria de Banco de Dados são seguras somente para as entidades nas funções sysadmin ou db_owner.  
+>  Entidades na função sysadmin podem violar qualquer componente de auditoria e aqueles na função db_owner podem violar quaisquer especificações em um banco de dados. A auditoria do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valida esse logon que cria ou altera uma especificação de auditoria que tenha pelo menos a permissão ALTER ANY DATABASE AUDIT. No entanto, ela não faz nenhuma validação quando você anexa um banco de dados. Você deve considerar que todas as Especificações de Auditoria de Banco de Dados são seguras somente para as entidades nas funções sysadmin ou db_owner.  
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
  [Criar uma auditoria de servidor e uma especificação de auditoria de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
@@ -213,3 +217,5 @@ caps.handback.revision: 58
  [Registros de auditoria do SQL Server](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
   
+
+

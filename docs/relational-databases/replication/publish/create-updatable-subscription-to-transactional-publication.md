@@ -1,31 +1,35 @@
 ---
-title: "Criar uma assinatura atualiz&#225;vel para uma publica&#231;&#227;o transacional, usando Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "atualizações transacionais atualizáveis, T-SQL"
+title: "Criar assinatura atualizável para publicação transacional | Microsoft Docs"
+ms.custom: 
+ms.date: 07/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- updateable transactional subscriptions, T-SQL
 ms.assetid: a6e80857-0a69-4867-b6b7-f3629d00c312
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7e21ddca2057879f3f9cde2bf5decf3c97944269
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar uma assinatura atualiz&#225;vel para uma publica&#231;&#227;o transacional, usando Transact-SQL
+# <a name="create-updatable-subscription-to-transactional-publication"></a>Criar assinatura atualizável para publicação transacional
 
 > [!NOTE]  
 >  Este recurso permanecerá com suporte em versões do [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] de 2012 até 2016.  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
  
 A replicação transacional permite que mudanças sejam realizadas em um Assinante para serem propagadas de volta para o Publicador usando assinaturas de atualizações imediatas ou colocadas em fila. Você pode criar uma assinatura de atualização de forma programada, usando os procedimentos de replicação armazenados. (Além disso, consulte [Como criar uma assinatura atualizável para uma publicação transacional (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md).) 
 
-## Para criar uma assinatura pull de atualização imediata ##
+## <a name="to-create-an-immediate-updating-pull-subscription"></a>Para criar uma assinatura pull de atualização imediata ##
 
 1. No Publicador, verifique se a publicação tem suporte para assinaturas de atualização imediata executando o [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
@@ -37,7 +41,7 @@ A replicação transacional permite que mudanças sejam realizadas em um Assinan
 
     * Se o valor de `allow_pull` no conjunto de resultados for `1`, a publicação tem suporte para assinaturas pull.
 
-    * Se o valor de `allow_pull` for `0`, execute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) especificando `allow_pull` para `@property` e `true` para `@value`. 
+    * Se o valor de `allow_pull` for `0`, execute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)especificando `allow_pull` para `@property` e `true` para `@value`. 
 
 3. No Assinante, execute [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Especifique `@publisher` e `@publication`, e um dos valores a seguir para `@update_mode`:
 
@@ -50,7 +54,7 @@ A replicação transacional permite que mudanças sejam realizadas em um Assinan
  
 4. No Assinante, execute [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique o seguinte:
 
-    * Os parâmetros `@publisher`, `@publisher_db` e `@publication`. 
+    * Os parâmetros `@publisher`, `@publisher_db`e `@publication` . 
 
     * As credenciais do Microsoft Windows sob as quais o Distribution Agent do Assinante é executado para `@job_login` e `@job_password`. 
 
@@ -61,7 +65,7 @@ A replicação transacional permite que mudanças sejam realizadas em um Assinan
 
     * Agenda para o trabalho do Distribution Agent para essa assinatura. 
 
-5. No Assinante, no banco de dados de assinatura, execute [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Especifique `@publisher`, `@publication`, o nome do banco de dados da publicação para `@publisher_db` e um dos seguintes valores para `@security_mode`: 
+5. No Assinante, no banco de dados de assinatura, execute [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Especifique `@publisher`, `@publication`, o nome do banco de dados da publicação para `@publisher_db`e um dos seguintes valores para `@security_mode`: 
 
     * `0` – Use a Autenticação do SQL Server ao fazer atualizações no Publicador. Essa opção requer a especificação de um logon válido no Publicador para `@login` e `@password`.
 
@@ -69,12 +73,12 @@ A replicação transacional permite que mudanças sejam realizadas em um Assinan
 
     * `2` – Use um logon de servidor vinculado, existente, definido pelo usuário criado usando [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).
 
-6. No Publicador, execute [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) especificando `@publication`, `@subscriber`, `@destination_db`, um valor de pull para `@subscription_type` e o mesmo valor especificado na etapa 3 para `@update_mode`.
+6. No Publicador, execute [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) especificando `@publication`, `@subscriber`, `@destination_db`, um valor de pull para `@subscription_type`e o mesmo valor especificado na etapa 3 para `@update_mode`.
 
 Isto registra a assinatura pull no Publicador. 
 
 
-## Para criar uma assinatura push de atualização imediata ##
+## <a name="to-create-an-immediate-updating-push-subscription"></a>Para criar uma assinatura push de atualização imediata ##
 
 1. No Publicador, verifique se a publicação tem suporte para assinaturas de atualização imediata executando o [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
@@ -86,9 +90,9 @@ Isto registra a assinatura pull no Publicador.
 
     * Se o valor de `allow_push` no conjunto de resultados for `1`, a publicação tem suporte para assinaturas push.
 
-    * Se o valor de `allow_push` for `0`, execute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) especificando `allow_push` para `@property` e `true` para `@value`. 
+    * Se o valor de `allow_push` for `0`, execute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)especificando `allow_push` para `@property` e `true` para `@value`. 
 
-3. No Publicador, execute [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Especifique `@publication`, `@subscriber`, `@update_mode` e um dos valores a seguir para `@destination_db`:
+3. No Publicador, execute [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Especifique `@publication`, `@subscriber`, `@destination_db`e um dos valores a seguir para `@update_mode`:
 
     * `sync tran` – habilita o suporte para a atualização imediata.
 
@@ -99,7 +103,7 @@ Isto registra a assinatura pull no Publicador.
  
 4. No Publicador, execute [sp_addpushsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Especifique os seguintes parâmetros:
 
-    * `@subscriber`, `@subscriber_db` e `@publication`. 
+    * `@subscriber`, `@subscriber_db`e `@publication`. 
 
     * As credenciais do Windows sob as quais o Distribution Agent no Distribuidor é executado pata `@job_login` e `@job_password`. 
 
@@ -110,7 +114,7 @@ Isto registra a assinatura pull no Publicador.
 
     * Agenda para o trabalho do Distribution Agent para essa assinatura.
 
-5. No Assinante, no banco de dados de assinatura, execute [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Especifique `@publisher`, `@publication`, o nome do banco de dados da publicação para `@publisher_db` e um dos seguintes valores para `@security_mode`: 
+5. No Assinante, no banco de dados de assinatura, execute [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Especifique `@publisher`, `@publication`, o nome do banco de dados da publicação para `@publisher_db`e um dos seguintes valores para `@security_mode`: 
 
      * `0` – Use a Autenticação do SQL Server ao fazer atualizações no Publicador. Essa opção requer a especificação de um logon válido no Publicador para `@login` e `@password`.
 
@@ -119,7 +123,7 @@ Isto registra a assinatura pull no Publicador.
      * `2` – Use um logon de servidor vinculado, existente, definido pelo usuário criado usando [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).
 
 
-## Para criar uma assinatura pull de atualização em fila ##
+## <a name="to-create-a-queued-updating-pull-subscription"></a>Para criar uma assinatura pull de atualização em fila ##
 
 1. No Publicador, verifique se a publicação tem suporte para assinaturas de atualização em fila executando [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
@@ -131,7 +135,7 @@ Isto registra a assinatura pull no Publicador.
 
     * Se o valor de `allow_pull` no conjunto de resultados for `1`, a publicação tem suporte para assinaturas pull.
 
-    * Se o valor de `allow_pull` for `0`, execute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) especificando `allow_pull` para `@property` e `true` para `@value`. 
+    * Se o valor de `allow_pull` for `0`, execute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)especificando `allow_pull` para `@property` e `true` para `@value`. 
 
 3. No Assinante, execute [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Especifique `@publisher` e `@publication`, e um dos valores a seguir para `@update_mode`:
 
@@ -144,7 +148,7 @@ Isto registra a assinatura pull no Publicador.
  
 4. No Assinante, execute [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique os seguintes parâmetros:
 
-    * @publisher, `@publisher_db` e `@publication`. 
+    * @publisher, `@publisher_db`e `@publication`. 
 
     * As credenciais do Windows sob as quais o Distribution Agent do Assinante é executado para `@job_login` e `@job_password`. 
 
@@ -155,12 +159,12 @@ Isto registra a assinatura pull no Publicador.
 
     * Agenda para o trabalho do Distribution Agent para essa assinatura.
 
-5. No Publicador, execute [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md) para registrar o Assinante no Publicador, especificando `@publication`, `@subscriber`, `@destination_db`, um valor de pull para `@subscription_type` e o mesmo valor especificado na etapa 3 para `@update_mode`.
+5. No Publicador, execute [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md) para registrar o Assinante no Publicador, especificando `@publication`, `@subscriber`, `@destination_db`, um valor de pull para `@subscription_type`e o mesmo valor especificado na etapa 3 para `@update_mode`.
 
 Isto registra a assinatura pull no Publicador. 
 
 
-## Para criar uma assinatura push de atualização em fila ##
+## <a name="to-create-a-queued-updating-push-subscription"></a>Para criar uma assinatura push de atualização em fila ##
 
 1. No Publicador, verifique se a publicação tem suporte para assinaturas de atualização em fila executando [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
@@ -172,9 +176,9 @@ Isto registra a assinatura pull no Publicador.
 
     * Se o valor de `allow_push` no conjunto de resultados for `1`, a publicação tem suporte para assinaturas push.
 
-    * Se o valor de `allow_push` for `0`, execute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) especificando allow_push para `@property` e `true` para `@value`. 
+    * Se o valor de `allow_push` for `0`, execute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)especificando allow_push para `@property` e `true` para `@value`. 
 
-3. No Publicador, execute [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Especifique `@publication`, `@subscriber`, `@update_mode` e um dos valores a seguir para `@destination_db`:
+3. No Publicador, execute [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Especifique `@publication`, `@subscriber`, `@destination_db`e um dos valores a seguir para `@update_mode`:
 
     * `queued tran` – habilita a assinatura de atualização enfileirada.
 
@@ -185,7 +189,7 @@ Isto registra a assinatura pull no Publicador.
 
 4. No Publicador, execute [sp_addpushsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Especifique os seguintes parâmetros:
 
-    * `@subscriber`, `@subscriber_db` e `@publication`. 
+    * `@subscriber`, `@subscriber_db`e `@publication`. 
 
     * As credenciais do Windows sob as quais o Distribution Agent no Distribuidor é executado pata `@job_login` e `@job_password`. 
 
@@ -197,7 +201,7 @@ Isto registra a assinatura pull no Publicador.
     * Agenda para o trabalho do Distribution Agent para essa assinatura.
 
 
-## Exemplo ##
+## <a name="example"></a>Exemplo ##
 
 Este exemplo cria uma assinatura pull de atualização imediata a uma publicação que tem suporte para assinaturas de atualização imediata. Os valores para o logon e senha são fornecidos no tempo de execução usando as variáveis sqlcmd scripting.
 
@@ -268,10 +272,12 @@ EXEC sp_addsubscription
 GO
 ```
 
-## Consulte também ##
+## <a name="see-also"></a>Consulte também ##
 
 [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
 
-[Usar sqlcmd com variáveis de script](../../../relational-databases/scripting/use-sqlcmd-with-scripting-variables.md)
+[Usar sqlcmd com variáveis de script](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)
 
 [Como criar uma assinatura atualizável para uma publicação transacional (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)
+
+

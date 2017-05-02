@@ -1,31 +1,35 @@
 ---
-title: "Criar &#237;ndices clusterizados | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "criação de índice [SQL Server], índices clusterizados"
-  - "índices clusterizados, criando"
-  - "índices clusterizados, restrição PRIMARY KEY"
-  - "índices clusterizados, restrição UNIQUE"
-  - "índices [SQL Server], clusterizados"
+title: "Criar índices clusterizados | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index creation [SQL Server], clustered indexes
+- clustered indexes, creating
+- clustered indexes, PRIMARY KEY constraint
+- clustered indexes, UNIQUE constraint
+- indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 309d0fa2603bfa14dc305b73036867c084eab683
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar &#237;ndices clusterizados
+# <a name="create-clustered-indexes"></a>Criar índices clusterizados
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Você pode criar índices clusterizados em tabelas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Com poucas exceções, toda tabela deveria ter um índice clusterizado. Além de melhorar o desempenho da consulta, o índice clusterizado pode ser recompilado ou reorganizado sob demanda para controlar a fragmentação de tabela. Um índice clusterizado também pode ser criado em uma exibição. (Os índices clusterizados são definidos no tópico [Índices clusterizados e não clusterizados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).)  
+  É possível criar índices clusterizados em tabelas usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Com poucas exceções, toda tabela deveria ter um índice clusterizado. Além de melhorar o desempenho da consulta, o índice clusterizado pode ser recompilado ou reorganizado sob demanda para controlar a fragmentação de tabela. Um índice clusterizado também pode ser criado em uma exibição. (Os índices clusterizados são definidos no tópico [Índices clusterizados e não clusterizados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).)  
   
  **Neste tópico**  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 32
   
 -   Quando uma estrutura de índice clusterizado é criada, o espaço em disco de ambas as estruturas, a antiga (origem) e a nova (destino), é necessário em seus respectivos arquivos e grupos de arquivos. A antiga estrutura não é desalocada até que a transação completa seja confirmada. Pode igualmente ser necessário espaço temporário em disco adicional, para classificação. Para obter mais informações, consulte [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
--   Se um índice clusterizado for criado em uma pilha com vários índices não clusterizados existentes, todos os índices não clusterizados deverão ser recriados de modo que contenham o valor de chave de clusterização em vez do RID (Identificador de Linha).  Da mesma forma, se um índice clusterizado for cancelado em uma tabela com vários índices não clusterizados, os índices não clusterizados serão todos recriados como parte da operação DROP. Isso pode despender um tempo significativo em tabelas grandes.  
+-   Se um índice clusterizado for criado em uma pilha com vários índices não clusterizados existentes, todos os índices não clusterizados deverão ser recriados de modo que contenham o valor de chave de clusterização em vez do RID (Identificador de Linha). Da mesma forma, se um índice clusterizado for cancelado em uma tabela com vários índices não clusterizados, os índices não clusterizados serão todos recriados como parte da operação DROP. Isso pode despender um tempo significativo em tabelas grandes.  
   
      A forma preferencial de criação de índices em tabelas grandes é iniciar com o índice clusterizado e depois criar os índices não clusterizados. Considere a definição da opção ONLINE como ON ao criar índices em tabelas existentes. Quando definidos como ON, os bloqueios de tabela não são mantidos a longo prazo. Isso permite consultas ou atualizações à tabela subjacente para continuar. Para obter mais informações, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
@@ -73,27 +77,27 @@ caps.handback.revision: 32
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner**.  
+ Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para criar um índice clusterizado usando o Pesquisador de Objetos  
+#### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>Para criar um índice clusterizado usando o Pesquisador de Objetos  
   
 1.  No Pesquisador de Objetos, expanda a tabela na qual você deseja criar um índice clusterizado.  
   
-2.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Clusterizado…**.  
+2.  Clique com o botão direito do mouse na pasta **Índices** , aponte para **Novo Índice**e selecione **Índice Clusterizado…**.  
   
 3.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
 4.  Na guia **Colunas de chave de índice**, clique em **Adicionar…**.  
   
-5.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque a caixa de seleção das colunas de tabela a serem adicionadas ao índice clusterizado.  
+5.  Na caixa de diálogo **Selecionar Colunas de***table_name* , marque a caixa de seleção das colunas de tabela a serem adicionadas ao índice clusterizado.  
   
 6.  Clique em **OK**.  
   
 7.  Na caixa de diálogo **Novo Índice** , clique em **OK**.  
   
-#### Para criar um índice clusterizado usando o Designer de Tabela  
+#### <a name="to-create-a-clustered-index-by-using-the-table-designer"></a>Para criar um índice clusterizado usando o Designer de Tabela  
   
 1.  No Pesquisador de Objetos, expanda o banco de dados na qual você deseja criar uma tabela com um índice clusterizado.  
   
@@ -103,21 +107,21 @@ caps.handback.revision: 32
   
 4.  Clique com o botão direito do mouse na tabela criada acima e selecione **Design**.  
   
-5.  No menu **Designer de Tabela**, clique em **Índices/Chaves**.  
+5.  No menu **Designer de Tabela** , clique em **Índices/Chaves**.  
   
-6.  Na caixa de diálogo **Índices/Chaves**, clique em **Adicionar**.  
+6.  Na caixa de diálogo **Índices/Chaves** , clique em **Adicionar**.  
   
-7.  Selecione o novo índice na caixa de texto **Índice ou Chave Exclusiva/Primária Selecionada**.  
+7.  Selecione o novo índice na caixa de texto **Índice ou Chave Exclusiva/Primária Selecionada** .  
   
-8.  Na grade, selecione **Criar como Clusterizado** e selecione **Sim** na lista suspensa, à direita da propriedade.  
+8.  Na grade, selecione **Criar como Clusterizado**e selecione **Sim** na lista suspensa, à direita da propriedade.  
   
 9. Clique em **Fechar**.  
   
-10. No menu **Arquivo**, clique em **Salvar***table_name*.  
+10. No menu **Arquivo** , clique em **Salvar***table_name*.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para criar um índice clusterizado  
+#### <a name="to-create-a-clustered-index"></a>Para criar um índice clusterizado  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -143,8 +147,9 @@ caps.handback.revision: 32
   
  Para obter mais informações, consulte [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criar chaves primárias](../../relational-databases/tables/create-primary-keys.md)   
  [Criar restrições exclusivas](../../relational-databases/tables/create-unique-constraints.md)  
   
   
+

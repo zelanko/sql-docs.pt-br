@@ -1,25 +1,29 @@
 ---
-title: "Propriedades do banco de dados (p&#225;gina Grupos de Arquivos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.filegroups.f1"
+title: "Propriedades do banco de dados (página Grupos de Arquivos) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.filegroups.f1
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 977464bddc01eaa5559962808e9cee4b39651b8f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propriedades do banco de dados (p&#225;gina Grupos de Arquivos)
-  Use esta página para exibir os grupos de arquivos ou para adicionar um grupo de arquivos novo ao banco de dados selecionado. Os tipos de grupos de arquivos estão separados em grupos de arquivos *row*, dados FILESTREAM e grupos de arquivos com otimização de memória.  
+# <a name="database-properties-filegroups-page"></a>Propriedades do banco de dados (página Grupos de Arquivos)
+  Use esta página para exibir os grupos de arquivos ou para adicionar um grupo de arquivos novo ao banco de dados selecionado. Os tipos de grupos de arquivos estão separados em grupos de arquivos *row* , dados FILESTREAM e grupos de arquivos com otimização de memória.  
   
  Os grupos de arquivos tipo linha contêm dados e arquivos de log normais. Os grupos de arquivos de dados FILESTREAM contêm arquivos de dados FILESTREAM. Esses arquivos de dados armazenam informações sobre como os dados de objetos binários grandes (BLOB) são salvos no sistema de arquivos quando usar o armazenamento FILESTREAM. As opções são as mesmas para os dois tipos de grupos de arquivos.  
   
@@ -29,7 +33,7 @@ caps.handback.revision: 31
   
  Os grupos de arquivos com otimização de memória são necessários para um banco de dados conter uma ou mais tabelas com otimização de memória.  
   
-## Opções de grupo de arquivos de dados de linha e FILESTREAM  
+## <a name="row-and-filestream-data-filegroup-options"></a>Opções de grupo de arquivos de dados de linha e FILESTREAM  
  **Nome**  
  Digite o nome do grupo de arquivos.  
   
@@ -43,12 +47,12 @@ caps.handback.revision: 31
  Selecione para tornar este grupo de arquivos o grupo de arquivos padrão. Você pode ter um grupo de arquivos padrão para linha e outro para os dados do FILESTREAM.  
   
  **Adicionar**  
- Adiciona uma nova linha em branco aos grupos de arquivos da listagem de grade do banco de dados.   
+ Adiciona uma nova linha em branco aos grupos de arquivos da listagem de grade do banco de dados.  
   
  **Remover**  
  Remove da grade a linha do grupo de arquivos selecionada.  
   
-## Opções de grupo de arquivos de dados com otimização de memória  
+## <a name="memory-optimized-data-filegroup-options"></a>Opções de grupo de arquivos de dados com otimização de memória  
  **Nome**  
  Digite o nome do grupo de arquivos com otimização de memória.  
   
@@ -56,12 +60,12 @@ caps.handback.revision: 31
  Exibe o número de arquivos (contêineres) no grupo de arquivos de dados com otimização de memória. Você pode adicionar contêineres na página **Arquivos** .  
   
  **Adicionar**  
- Adiciona uma nova linha em branco aos grupos de arquivos da listagem de grade do banco de dados.   
+ Adiciona uma nova linha em branco aos grupos de arquivos da listagem de grade do banco de dados.  
   
  **Remover**  
  Remove da grade a linha do grupo de arquivos selecionada.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

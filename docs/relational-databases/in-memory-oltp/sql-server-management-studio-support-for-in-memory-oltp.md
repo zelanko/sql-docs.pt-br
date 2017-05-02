@@ -1,55 +1,59 @@
 ---
-title: "Suporte ao SQL Server Management Studio para OLTP na mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Suporte ao SQL Server Management Studio para OLTP in-memory | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 24436bccfa9fd9c61edff66e630dd439041dd61f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Suporte ao SQL Server Management Studio para OLTP na mem&#243;ria
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é um ambiente integrado para gerenciar a infraestrutura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece ferramentas para configurar, monitorar e administrar instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [SQL Server Management Studio](../Topic/SQL%20Server%20Management%20Studio.md).  
+# <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Suporte ao SQL Server Management Studio para OLTP na memória
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é um ambiente integrado para gerenciar a infraestrutura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece ferramentas para configurar, monitorar e administrar instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b).  
   
  As tarefas neste tópico descrevem como usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para gerenciar tabelas com otimização de memória, índices em tabelas com otimização de memória, procedimentos armazenados nativamente compilados e tipos de tabela com otimização de memória definidos pelo usuário.  
   
  Para obter informações sobre como criar tabelas com otimização de memória de forma programática, veja [Criando uma tabela com otimização de memória e um procedimento armazenado compilado de modo nativo](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
-### Para criar um banco de dados com um grupo de arquivos de dados com otimização de memória.  
+### <a name="to-create-a-database-with-a-memory-optimized-data-filegroup"></a>Para criar um banco de dados com um grupo de arquivos de dados com otimização de memória.  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e expanda-a.  
   
-2.  Clique com o botão direito do mouse em **Bancos de Dados** e clique em **Novo Banco de Dados**.  
+2.  Clique com o botão direito do mouse em **Bancos de Dados**e clique em **Novo Banco de Dados**.  
   
-3.  Para adicionar um novo grupo de arquivos de dados com otimização de memória, clique na página **Grupos de Arquivos**. Em **MEMORY OPTIMIZED DATA**, clique em **Adicionar grupo de arquivos** e insira o nome do grupo de arquivos de dados com otimização de memória.  A coluna rotulada **Arquivos FILESTREAM** representa o número de contêineres no grupo de arquivos. Os contêineres são adicionados na página **Geral**.  
+3.  Para adicionar um novo grupo de arquivos de dados com otimização de memória, clique na página **Grupos de Arquivos** . Em **MEMORY OPTIMIZED DATA**, clique em **Adicionar grupo de arquivos** e insira o nome do grupo de arquivos de dados com otimização de memória.  A coluna rotulada **Arquivos FILESTREAM** representa o número de contêineres no grupo de arquivos. Os contêineres são adicionados na página **Geral** .  
   
-4.  Para adicionar um arquivo (contêiner) ao grupo de arquivos, clique na página **Geral**. Em **Arquivos de Banco de Dados**, clique em **Adicionar**. Selecione **Tipo de Arquivo** como **Dados de FILESTREAM**, especifique o nome lógico do contêiner, selecione o grupo de arquivos com otimização de memória e verifique se **Expansão Automática/Tamanho Máximo** está definido como **Ilimitado**.  
+4.  Para adicionar um arquivo (contêiner) ao grupo de arquivos, clique na página **Geral** . Em **Arquivos de Banco de Dados**, clique em **Adicionar**. Selecione **Tipo de Arquivo** como **Dados de FILESTREAM**, especifique o nome lógico do contêiner, selecione o grupo de arquivos com otimização de memória e verifique se **Expansão Automática/Tamanho Máximo** está definido como **Ilimitado**.  
   
      Para obter mais informações sobre como criar um novo banco de dados usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], veja [Criar um banco de dados](../../relational-databases/databases/create-a-database.md).  
   
-### Para criar uma tabela com otimização de memória  
+### <a name="to-create-a-memory-optimized-table"></a>Para criar uma tabela com otimização de memória  
   
-1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse no nó **Tabelas** do banco de dados, clique em **Novo** e clique em **Tabela com Otimização de Memória**.  
+1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse no nó **Tabelas** do banco de dados, clique em **Novo**e clique em **Tabela com Otimização de Memória**.  
   
      É exibido um modelo para criar tabelas com otimização de memória.  
   
-2.  Para substituir os parâmetros de modelo, clique em **Especificar Valores para Parâmetros de Modelo** no menu **Consulta**.  
+2.  Para substituir os parâmetros de modelo, clique em **Especificar Valores para Parâmetros de Modelo** no menu **Consulta** .  
   
-     Para obter mais informações sobre como usar modelos, veja [Explorador de Modelos](../../ssms/template/template-explorer.md).  
+     Para obter mais informações sobre como usar modelos, veja [Explorador de Modelos](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8).  
   
 3.  No **Pesquisador de Objetos**, as tabelas serão ordenadas primeiro por tabelas com base em disco seguidas por tabelas com otimização de memória. Use os **Detalhes do Pesquisador de Objetos** para ver todas as tabelas ordenadas por nome.  
   
-### Para criar um procedimento armazenado compilado nativamente  
+### <a name="to-create-a-natively-compiled-stored-procedure"></a>Para criar um procedimento armazenado compilado nativamente  
   
-1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse no nó **Procedimentos Armazenados** do banco de dados, clique em **Novo** e clique em **Procedimento Armazenado Compilado de Modo Nativo**.  
+1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse no nó **Procedimentos Armazenados** do banco de dados, clique em **Novo**e clique em **Procedimento Armazenado Compilado de Modo Nativo**.  
   
      É exibido um modelo para criar procedimentos armazenados compilados nativamente.  
   
@@ -57,9 +61,9 @@ caps.handback.revision: 31
   
      Para obter mais informações sobre como criar e usar um novo procedimento armazenado, veja [Criar um procedimento armazenado](../../relational-databases/stored-procedures/create-a-stored-procedure.md).  
   
-### Para criar um tipo de tabela com otimização de memória definido pelo usuário  
+### <a name="to-create-a-user-defined-memory-optimized-table-type"></a>Para criar um tipo de tabela com otimização de memória definido pelo usuário  
   
-1.  Em **Pesquisador de Objetos**, expanda o nó **Tipos** do seu banco de dados, clique com o botão direito do mouse no nó **Tipos de Tabela Definidos pelo Usuário**, clique em **Novo** e em **Tipo de Tabela com Otimização de Memória Definido pelo Usuário**.  
+1.  Em **Pesquisador de Objetos**, expanda o nó **Tipos** do seu banco de dados, clique com o botão direito do mouse no nó **Tipos de Tabela Definidos pelo Usuário** , clique em **Novo**e em **Tipo de Tabela com Otimização de Memória Definido pelo Usuário**.  
   
      É exibido um modelo para a criação do tipo de tabela com otimização de memória definido pelo usuário.  
   
@@ -67,23 +71,23 @@ caps.handback.revision: 31
   
      Para obter mais informações sobre como criar e usar um novo procedimento armazenado, veja [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
-## Monitoramento da memória  
+## <a name="memory-monitoring"></a>Monitoramento da memória  
   
-#### Exibir uso da memória por relatório de objetos com otimização de memória  
+#### <a name="view-memory-usage-by-memory-optimized-objects-report"></a>Exibir uso da memória por relatório de objetos com otimização de memória  
   
--   No **Pesquisador de Objetos**, clique com o botão direito do mouse no banco de dados, clique em **Relatórios**, clique em **Relatórios Padrão** e clique em **Uso de Memória por Objetos com Otimização de Memória**.  
+-   No **Pesquisador de Objetos**, clique com o botão direito do mouse no banco de dados, clique em **Relatórios**, clique em **Relatórios Padrão**e clique em **Uso de Memória por Objetos com Otimização de Memória**.  
   
      Esse relatório fornece dados detalhados sobre a utilização do espaço da memória pelos objetos com otimização de memória no banco de dados.  
   
-#### Exibir propriedades da memória alocada e usada para uma tabela, um banco de dados  
+#### <a name="view-properties-for-allocated-and-used-memory-for-a-table-database"></a>Exibir propriedades da memória alocada e usada para uma tabela, um banco de dados  
   
 1.  Para obter informações sobre o uso na memória:  
   
-    -   No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela com otimização de memória, clique em **Propriedades** e na página **Armazenamento**. O valor da propriedade **Espaço de Dados** indica a memória usada pelos dados na tabela. O valor da propriedade **Espaço do Índice** indica a memória usada pelos índices na tabela.  
+    -   No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela com otimização de memória, clique em **Propriedades**e na página **Armazenamento** . O valor da propriedade **Espaço de Dados** indica a memória usada pelos dados na tabela. O valor da propriedade **Espaço do Índice** indica a memória usada pelos índices na tabela.  
   
-    -   No **Pesquisador de Objetos**, clique com o botão direito do mouse no banco de dados, clique em **Propriedades** e clique na página **Geral**. O valor da propriedade **Memória Alocada a Objetos com Otimização de Memória** indica a memória alocada a objetos com otimização de memória no banco de dados. O valor da propriedade **Memória Usada por Objetos com Otimização de Memória** indica a memória usada por objetos com otimização de memória no banco de dados.  
+    -   No **Pesquisador de Objetos**, clique com o botão direito do mouse no banco de dados, clique em **Propriedades**e clique na página **Geral** . O valor da propriedade **Memória Alocada a Objetos com Otimização de Memória** indica a memória alocada a objetos com otimização de memória no banco de dados. O valor da propriedade **Memória Usada por Objetos com Otimização de Memória** indica a memória usada por objetos com otimização de memória no banco de dados.  
   
-## Recursos com suporte no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Recursos com suporte no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dá suporte a recursos e operações que têm suporte no mecanismo de banco de dados em bancos de dados com grupo de arquivos de dados com otimização de memória, tabelas com otimização de memória, índices e procedimentos armazenados compilados de modo nativo.  
   
  No banco de dados, na tabela, no procedimento armazenado, no tipo de tabela definido pelo usuário ou nos objetos de índice, os seguintes recursos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] foram atualizados ou estendidos para oferecer suporte à OLTP na memória.  
@@ -149,12 +153,12 @@ caps.handback.revision: 31
   
 -   Explorador de Modelos  
   
-## Recursos sem suporte no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Recursos sem suporte no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Para objetos OLTP na memória, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] não oferece suporte a recursos e operações que também não têm suporte no mecanismo de banco de dados.  
   
- Para obter mais informações sobre os recursos sem suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Recursos do SQL Server sem suporte no OLTP in-memory](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).  
+ Para obter mais informações sobre os recursos sem suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , veja [Recursos do SQL Server sem suporte no OLTP in-memory](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Suporte ao SQL Server para OLTP na memória](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   

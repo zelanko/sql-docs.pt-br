@@ -1,31 +1,35 @@
 ---
-title: "MultiLineString | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "subtipo de geometria MultiLineString [SQL Server]"
-  - "subtipos de geometria [SQL Server]"
+title: MultiLineString | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MultiLineString geometry subtype [SQL Server]
+- geometry subtypes [SQL Server]
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 398a68b50469ffb778434f59b6895435a8da62c6
+ms.lasthandoff: 04/11/2017
+
 ---
-# MultiLineString
-  Uma **MultiLineString** é uma coleção de zero ou mais instâncias **geometry** ou **geographyLineString**.  
+# <a name="multilinestring"></a>MultiLineString
+  Uma **MultiLineString** é uma coleção de zero ou mais instâncias **geometry** ou **geographyLineString** .  
   
-## Instâncias MultiLineString  
+## <a name="multilinestring-instances"></a>Instâncias MultiLineString  
  A ilustração a seguir mostra exemplos de instâncias **MultiLineString** .  
   
- ![Exemplos das instâncias geométricas MultiLineString](../../relational-databases/spatial/media/multilinestring.png "Exemplos das instâncias geométricas MultiLineString")  
+ ![Exemplos de instâncias geométricas MultiLineString](../../relational-databases/spatial/media/multilinestring.gif "Exemplos de instâncias geométricas MultiLineString")  
   
  Conforme mostrado na ilustração:  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 19
   
 -   A Figura 6 é uma instância **MultiLineString** simples e fechada. Ela é fechada porque todos os seus elementos não estão fechados. Ela é simples porque nenhum de seus elementos se cruzam nos interiores.  
   
-### Instâncias aceitas  
+### <a name="accepted-instances"></a>Instâncias aceitas  
  Para uma instância **MultiLineString** ser aceita, ela precisa estar vazia ou conter apenas instâncias **LineString** que sejam aceitos. Para obter mais informações sobre instâncias de **LineString** aceitas, consulte [LineString](../../relational-databases/spatial/linestring.md). Veja a seguir exemplos de instâncias **MultiLineString** aceitas.  
   
 ```  
@@ -57,7 +61,7 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  
 ```  
   
-### Instâncias válidas  
+### <a name="valid-instances"></a>Instâncias válidas  
  Para que uma instância **MultiLineString** seja válida, ela deve atender aos seguintes critérios:  
   
 1.  Todas as instâncias contendo a instância **MultiLineString** devem ser instâncias **LineString** válidas.  
@@ -76,7 +80,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
  `@g4` não é válido porque a segunda instância **LineString** sobrepõe a primeira instância **LineString** em um intervalo. Elas se tocam em um número infinito de pontos.  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância simples do `geometry``MultiLineString` , que contém dois elementos de `LineString` com o SRID 0.  
   
 ```  
@@ -92,7 +96,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');
 SET @g.STSrid = 13;  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [STLength &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STIsClosed &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
  [LineString](../../relational-databases/spatial/linestring.md)   

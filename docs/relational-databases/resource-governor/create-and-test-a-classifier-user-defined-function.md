@@ -1,28 +1,32 @@
 ---
-title: "Criar e testar uma fun&#231;&#227;o de classifica&#231;&#227;o definida pelo usu&#225;rio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Administrador de Recursos, criar função de classificação"
-  - "função de classificação [SQL Server], teste"
-  - "função de classificação [SQL Server], criar"
-  - "Administrador de Recursos, teste da função de classificação"
+title: "Criar e testar uma função de classificador definida pelo usuário | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function create
+- classifier function [SQL Server], test
+- classifier function [SQL Server], create
+- Resource Governor, classifier function test
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 097b7e93a82b8f1cc20767c57788eebe8162729a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar e testar uma fun&#231;&#227;o de classifica&#231;&#227;o definida pelo usu&#225;rio
-  Este tópico mostra como criar e testar uma função de classificador definida pelo usuário (UDF). As etapas envolvem a execução das instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no Editor de Consultas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+# <a name="create-and-test-a-classifier-user-defined-function"></a>Criar e testar uma função de classificação definida pelo usuário
+  Este tópico mostra como criar e testar uma função de classificador definida pelo usuário (UDF). As etapas envolvem a execução das instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no Editor de Consultas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  O exemplo mostrado no procedimento a seguir ilustra as possibilidades para criar uma função de classificador definida pelo usuário bastante complexa.  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 25
   
  A função de classificador estende a hora de logon. Uma função complexa pode fazer com que os logons alcancem o tempo limite ou reduzam a velocidade das conexões rápidas.  
   
-### Para criar a função de classificador definida pelo usuário  
+### <a name="to-create-the-classifier-user-defined-function"></a>Para criar a função de classificador definida pelo usuário  
   
 1.  Crie e configure os novos pools de recurso e os grupos de carga de trabalho. Atribua cada grupo de carga de trabalho ao pool de recurso apropriado.  
   
@@ -150,7 +154,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### Para verificar os pools de recursos, os grupos de carga de trabalho e a função de classificador definida pelo usuário  
+### <a name="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function"></a>Para verificar os pools de recursos, os grupos de carga de trabalho e a função de classificador definida pelo usuário  
   
 1.  Obtenha o pool de recurso e configuração do grupo de carga de trabalho usando a seguinte consulta.  
   
@@ -228,7 +232,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### Práticas recomendadas para usar Tabelas de Pesquisa em uma função de classificação  
+### <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>Práticas recomendadas para usar Tabelas de Pesquisa em uma função de classificação  
   
 1.  Não use uma tabela de pesquisa, a menos que seja absolutamente necessário. Se precisar usar uma tabela de pesquisa, ela poderá ser embutida em código na própria função. No entanto, ela precisará ser equilibrada com as alterações dinâmicas e de complexidade da função de classificação.  
   
@@ -261,7 +265,7 @@ caps.handback.revision: 25
         > [!WARNING]  
         >  É altamente recomendável seguir essas práticas recomendadas. Se houver problemas que o impeçam de seguir as práticas recomendadas, sugerimos que você contate o Suporte da Microsoft para evitar proativamente qualquer problema futuro.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de recursos do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

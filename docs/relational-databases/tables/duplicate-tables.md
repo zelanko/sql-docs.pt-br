@@ -1,27 +1,31 @@
 ---
-title: "Duplicar tabelas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "copiando tabelas"
-  - "tabelas [SQL Server], duplicando"
-  - "duplicando tabelas"
-  - "cópia de tabela [SQL Server]"
+title: Duplicar tabelas | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- copying tables
+- tables [SQL Server], duplicating
+- duplicating tables
+- table copying [SQL Server]
 ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7bbc956b852d4a7af1a8b9e3d26920fa4aeeebe
+ms.lasthandoff: 04/11/2017
+
 ---
-# Duplicar tabelas
+# <a name="duplicate-tables"></a>Duplicar tabelas
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Você pode duplicar uma tabela existente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] criando uma nova tabela e copiando as informações de coluna de uma tabela existente.  
@@ -50,7 +54,7 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para duplicar uma tabela  
+#### <a name="to-duplicate-a-table"></a>Para duplicar uma tabela  
   
 1.  Verifique se você está conectado ao banco de dados em que deseja criar a tabela e se o banco de dados está selecionado no Pesquisador de Objetos.  
   
@@ -70,11 +74,11 @@ caps.handback.revision: 15
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para duplicar uma tabela no Editor de Consultas  
+#### <a name="to-duplicate-a-table-in-query-editor"></a>Para duplicar uma tabela no Editor de Consultas  
   
 1.  Verifique se você está conectado ao banco de dados em que deseja criar a tabela e se o banco de dados está selecionado no Pesquisador de Objetos.  
   
-2.  Clique com o botão direito do mouse na tabela que você deseja duplicar, aponte para **Gerar Script de Tabela como** e para **CREATE to** e selecione **Nova Janela do Editor de Consultas**.  
+2.  Clique com o botão direito do mouse na tabela que você deseja duplicar, aponte para **Gerar Script de Tabela como**e para **CREATE to**e selecione **Nova Janela do Editor de Consultas**.  
   
 3.  Altere o nome da tabela.  
   

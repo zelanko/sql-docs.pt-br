@@ -1,35 +1,39 @@
 ---
-title: "Especificar metapropriedades no OPENXML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "estouro em documento XML [SQL Server]"
-  - "metapropriedades [XML no SQL Server]"
-  - "dados não consumidos"
-  - "extraindo informações de nós XML [SQL Server]"
-  - "instrução OPENXML, metapropriedades"
+title: Especificar metapropriedades no OPENXML | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- overflow in XML document [SQL Server]
+- metaproperties [XML in SQL Server]
+- unconsumed data
+- extracting information of XML nodes [SQL Server]
+- OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bc6d9b3e482869bd82daa13c167d0221639a95f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Especificar metapropriedades no OPENXML
+# <a name="specify-metaproperties-in-openxml"></a>Especificar metapropriedades no OPENXML
   Atributos de metapropriedades em um documento XML são atributos que descrevem as propriedades de um item XML, como elemento, atributo ou qualquer outro nó DOM. Esses atributos não existem fisicamente no documento de texto XML. No entanto o OPENXML fornece essas metapropriedades para todos os itens XML. Essas metapropriedades permitem extrair informações, como posicionamento local e informações de namespace, de nós XML. Essas informações fornecem mais detalhes do que os que estão aparentes na representação textual.  
   
- Você pode mapear essas metapropriedades para as colunas do conjunto de linhas em uma instrução OPENXML usando o parâmetro *ColPattern*. As colunas conterão os valores das metapropriedades para as quais elas são mapeadas. Para obter mais informações sobre a sintaxe do OPENXML, consulte [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
+ Você pode mapear essas metapropriedades para as colunas do conjunto de linhas em uma instrução OPENXML usando o parâmetro *ColPattern* . As colunas conterão os valores das metapropriedades para as quais elas são mapeadas. Para obter mais informações sobre a sintaxe do OPENXML, consulte [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   
- Para acessar os atributos de metapropriedades, é fornecido um namespace que é específico ao SQL Server. Esse namespace **urn:schemas-microsoft-com:xml-metaprop** permite que o usuário acesse os atributos de metapropriedades. Se o resultado de uma consulta OPENXML for retornado em uma formato de tabela de borda, a tabela de borda conterá uma coluna para cada atributo de metapropriedade, exceto a metapropriedade **xmltext**.  
+ Para acessar os atributos de metapropriedades, é fornecido um namespace que é específico ao SQL Server. Esse namespace **urn:schemas-microsoft-com:xml-metaprop** permite que o usuário acesse os atributos de metapropriedades. Se o resultado de uma consulta OPENXML for retornado em uma formato de tabela de borda, a tabela de borda conterá uma coluna para cada atributo de metapropriedade, exceto a metapropriedade **xmltext** .  
   
- Alguns dos atributos de metapropriedade são usados para fins de processamento. Por exemplo, o atributo da metapropriedade **xmltext** é usado para manipulação de estouro. A manipulação de estouro faz referência a dados não consumidos e não processados no documento. Uma das colunas no conjunto de linhas gerado por OPENXML pode ser identificada como a coluna de estouro. Isso é feito mapeando a coluna para a metapropriedade **xmltext** usando o parâmetro *ColPattern*. A coluna então recebe os dados excedentes. O parâmetro *flags* determina se a coluna contém tudo ou apenas dados não consumidos.  
+ Alguns dos atributos de metapropriedade são usados para fins de processamento. Por exemplo, o atributo da metapropriedade **xmltext** é usado para manipulação de estouro. A manipulação de estouro faz referência a dados não consumidos e não processados no documento. Uma das colunas no conjunto de linhas gerado por OPENXML pode ser identificada como a coluna de estouro. Isso é feito mapeando a coluna para a metapropriedade **xmltext** usando o parâmetro *ColPattern* . A coluna então recebe os dados excedentes. O parâmetro *flags* determina se a coluna contém tudo ou apenas dados não consumidos.  
   
  A tabela a seguir lista os atributos de metapropriedade que cada elemento XML analisado possui. Esses atributos de metapropriedade podem ser acessados usando o namespace **urn:schemas-microsoft-com:xml-metaprop**. Qualquer valor definido pelo usuário diretamente no documento XML usando essas metapropriedades é ignorado.  
   
@@ -54,19 +58,19 @@ caps.handback.revision: 23
 |**@mp:parentnamespacerui**|Corresponde a **../@mp:namespaceuri**|  
 |**@mp:parentprefix**|Corresponde a **../@mp:prefix**|  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  Os exemplos seguintes ilustram como o OPENXML é usado para criar exibições de conjunto de linhas diferentes.  
   
-### A. Mapeando colunas do conjunto de linhas OPENXML para as metapropriedades  
- Este exemplo usa OPENXML para criar uma exibição do conjunto de linhas do documento XML de exemplo. Especificamente, ele mostra como os vários atributos de metapropriedade podem ser mapeados para colunas do conjunto de linhas em uma instrução OPENXML usando o parâmetro *ColPattern*.  
+### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>A. Mapeando colunas do conjunto de linhas OPENXML para as metapropriedades  
+ Este exemplo usa OPENXML para criar uma exibição do conjunto de linhas do documento XML de exemplo. Especificamente, ele mostra como os vários atributos de metapropriedade podem ser mapeados para colunas do conjunto de linhas em uma instrução OPENXML usando o parâmetro *ColPattern* .  
   
  A instrução OPENXML ilustra o seguinte:  
   
--   A coluna **id** é mapeada para o atributo de metapropriedade **@mp:id** e indica que a coluna contém a ID de XML exclusiva do elemento gerado pelo sistema.  
+-   O parâmetro **id** é mapeada para o atributo de metapropriedade **@mp:id** e indica que a coluna contém a ID de XML exclusiva do elemento gerado pelo sistema.  
   
--   A coluna **parent** é mapeada para o **@mp:parentid** e indica que a coluna contém a ID de XML do pai do elemento.  
+-   O parâmetro **parent** é mapeada para o **@mp:parentid** e indica que a coluna contém a ID de XML do pai do elemento.  
   
--   A coluna **parentLocalName** é mapeada para **@mp:parentlocalname** e indica que a coluna contém o nome local do pai.  
+-   O parâmetro **parentLocalName** é mapeada para o **@mp:parentlocalname** e indica que a coluna contém o nome local do pai.  
   
  Em seguida, a instrução SELECT retorna o conjunto de linhas fornecido por OPENXML:  
   
@@ -112,7 +116,7 @@ id   oid         date                amount    parentIDNo  parentLocalName
 25   O4    1996-01-20 00:00:00.000     10000.0     15       Customer  
 ```  
   
-### B. Recuperando o documento XML inteiro  
+### <a name="b-retrieving-the-whole-xml-document"></a>B. Recuperando o documento XML inteiro  
  Neste exemplo, OPENXML é usado para criar a exibição do conjunto de linhas de uma coluna do documento XML de exemplo. Esta coluna, **Col1**, é mapeada para a metapropriedade **xmltext** e se torna uma coluna de estouro. Como resultado, a coluna recebe os dados não consumidos. Nesse caso, o documento inteiro.  
   
  Em seguida, a instrução SELECT retorna o conjunto de linhas completo.  
@@ -156,16 +160,16 @@ EXEC sp_xml_removedocument @idoc
   
  A consulta retorna o elemento raiz que tem a raiz do nome e os dados contidos pelo elemento raiz.  
   
-### C. Especificando a metapropriedade xmltext para recuperar os dados não consumidos em uma coluna  
+### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>C. Especificando a metapropriedade xmltext para recuperar os dados não consumidos em uma coluna  
  Este exemplo usa OPENXML para criar uma exibição do conjunto de linhas do documento XML de exemplo. O exemplo mostra como recuperar os dados XML não consumidos mapeamento o atributo de metapropriedade **xmltext** para uma coluna do conjunto de linhas no OPENXML.  
   
- A coluna **comment** é identificada como a coluna de estouro mapeando-a para a metapropriedade **@mp:xmltext**. O parâmetro *flags* é definido como **9** (XML_ATTRIBUTE e XML_NOCOPY). Isso indica mapeamento **centrado em atributo** e indica que apenas os dados não consumidos devem ser copiados para a coluna de estouro.  
+ O parâmetro **comment** é identificada como a coluna de estouro mapeando-a para a metapropriedade **@mp:xmltext** . O parâmetro *flags* é definido como **9** (XML_ATTRIBUTE e XML_NOCOPY). Isso indica mapeamento **centrado em atributo** e indica que apenas os dados não consumidos devem ser copiados para a coluna de estouro.  
   
  Em seguida, a instrução SELECT retorna o conjunto de linhas fornecido por OPENXML:  
   
  Neste exemplo, a metapropriedade **@mp:parentlocalname** é definida para uma coluna, **ParentLocalName**, no conjunto de linhas gerado por OPENXML. Como resultado, essa coluna contém o nome local do elemento pai.  
   
- São especificadas duas colunas adicionais no conjunto de linhas, **parent** e **comment**. A coluna **parent** é mapeada para **@mp:parentid** e indica que a coluna contém a ID de XML do elemento pai do elemento. A coluna comment é identificada como a coluna de estouro mapeando-a para a metapropriedade **@mp:xmltext**.  
+ São especificadas duas colunas adicionais no conjunto de linhas, **parent** e **comment**. O parâmetro **parent** é mapeada para o **@mp:parentid** e indica que a coluna contém a ID de XML do elemento pai do elemento. A coluna comment é identificada como a coluna de estouro mapeando-a para a metapropriedade **@mp:xmltext** .  
   
 ```  
 DECLARE @idoc int  
@@ -210,7 +214,7 @@ O3    1999-07-14 00:00:00.000     <Order amount="100" note="Wrap it blue
 O4    1996-01-20 00:00:00.000     <Order amount="10000"/>  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   
  [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)  
   

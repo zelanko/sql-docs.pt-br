@@ -1,24 +1,28 @@
 ---
-title: "Exemplo: Construindo irm&#227;os com o modo EXPLICIT | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modo EXPLICIT FOR XML"
+title: "Exemplo: construindo irmãos com o modo EXPLICIT | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EXPLICIT FOR XML mode
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9ada54a0e85cc9e03441ef008372d0df59a4030f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemplo: Construindo irm&#227;os com o modo EXPLICIT
+# <a name="example-constructing-siblings-with-explicit-mode"></a>Exemplo: Construindo irmãos com o modo EXPLICIT
   Assuma que você quer construir XML que forneça informações de pedidos de vendas. Observe que os elementos <`SalesPerson`> e <`OrderDetail`> são irmãos. Cada Pedido tem um elemento <`OrderHeader`>, um elemento <`SalesPerson`> e um ou mais elementos <`OrderDetail`>.  
   
 ```  
@@ -108,7 +112,7 @@ FOR XML EXPLICIT;
   
  `</OrderHeader>`  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usar o modo EXPLICIT com FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

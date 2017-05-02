@@ -1,23 +1,27 @@
 ---
-title: "Cen&#225;rios de uso da tabela temporal | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cenários de uso de tabela temporal | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 caps.latest.revision: 11
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bb6a2865838df1d66119f68c6d8cd19809a8f86c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cen&#225;rios de uso da tabela temporal
+# <a name="temporal-table-usage-scenarios"></a>Cenários de uso da tabela temporal
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Tabelas temporais geralmente são úteis em cenários que exigem o acompanhamento do histórico de alterações de dados.    
@@ -33,8 +37,8 @@ Recomendamos que você considere tabelas temporais nos seguintes casos de uso, d
   
 -   [Reparando dados corrompidos em nível de linha](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
   
-## Auditoria de dados  
- Use controle temporal da versão do sistema em tabelas que armazenam informações críticas para as quais você precisa acompanhar o que foi alterado, quando e por quem, e para executar análise forense dados em qualquer ponto no tempo.    
+## <a name="data-audit"></a>Auditoria de dados  
+ Use controle temporal da versão do sistema em tabelas que armazenam informações críticas para as quais você precisa acompanhar o que foi alterado, quando o foi e para executar análise forense dados em qualquer ponto no tempo.    
 Tabelas com controle temporal da versão do sistema permitem que você planeje os cenários de auditoria de dados nos primeiros estágios do ciclo de desenvolvimento ou adicione dados de auditoria aos aplicativos ou soluções existentes, quando necessário.  
   
  O diagrama a seguir mostra um cenário com uma tabela Funcionário com a amostra de dados, incluindo as versões de linha atual (marcada com a cor azul) e de histórico (marcada com cor cinza).   
@@ -42,7 +46,7 @@ A parte direita do diagrama visualiza as versões de linha no eixo de tempo e qu
   
  ![TemporalUsageScenario1](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")  
   
-### Habilitação do controle da versão do sistema em uma nova tabela para auditoria de dados  
+### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>Habilitação do controle da versão do sistema em uma nova tabela para auditoria de dados  
  Se você tiver identificado informações que requerem auditoria de dados, crie tabelas de banco de dados com controle temporal da versão do sistema. O exemplo simples a seguir ilustra um cenário com informações de Funcionário em um banco de dados de RH hipotético:  
   
 ```  
@@ -61,10 +65,10 @@ CREATE TABLE Employee
  WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));  
 ```  
   
- Várias opções para criar a tabela com controle temporal da versão do sistema são descritas em [Creating a System-Versioned Temporal Table](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md) (Criando uma tabela temporal com controle da versão do sistema).  
+ Várias opções para criar a tabela com controle temporal da versão do sistema são descritas em [Creating a System-Versioned Temporal Table](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)(Criando uma tabela temporal com controle da versão do sistema).  
   
-### Habilitação do controle da versão de sistema em uma tabela existente para auditoria de dados  
- Se você precisar realizar auditoria de dados em bancos de dados existentes, use ALTER TABLE para estender as tabelas não temporais, fazendo com que passem a oferecer controle da versão do sistema. Para evitar alterações interruptivas em seu aplicativo, adicione colunas de período como HIDDEN, conforme explicado em [Alter Non-Temporal Table to be System-Versioned Temporal Table](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3) (Alterar a tabela não temporal para ser uma tabela temporal com controle da versão do sistema). O exemplo a seguir ilustra a habilitação do controle da versão do sistema em uma tabela Funcionário existente em um banco de dados de RH hipotético:  
+### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>Habilitação do controle da versão de sistema em uma tabela existente para auditoria de dados  
+ Se você precisar realizar auditoria de dados em bancos de dados existentes, use ALTER TABLE para estender as tabelas não temporais, fazendo com que passem a oferecer controle da versão do sistema. Para evitar alterações interruptivas em seu aplicativo, adicione colunas de período como HIDDEN, conforme explicado em [Alter Non-Temporal Table to be System-Versioned Temporal Table](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3)(Alterar a tabela não temporal para ser uma tabela temporal com controle da versão do sistema). O exemplo a seguir ilustra a habilitação do controle da versão do sistema em uma tabela Funcionário existente em um banco de dados de RH hipotético:  
   
 ```  
 /*   
@@ -87,7 +91,7 @@ ALTER TABLE Employee
  Depois de executar o script acima, todas as alterações de dados serão coletadas transparentemente na tabela de histórico.    
 Em um cenário típico de auditoria de dados, você consultaria todas as alterações de dados que foram aplicadas a uma linha individual durante um período de tempo de interesse. A tabela de histórico padrão é criada com a árvore B de repositório de linha clusterizado para atender com eficiência esse caso de uso.  
   
-### Executando análise de dados  
+### <a name="performing-data-analysis"></a>Executando análise de dados  
  Depois de habilitar o controle de versão de sistema usando uma das abordagens acima, você está a apenas uma consulta da auditoria de dados. A consulta a seguir procura por versões de linha para o registro de funcionário com EmployeeID = 1000 que estavam ativas por pelo menos parte do período entre 1º de janeiro de 2014 e 1º de janeiro de 2015 (incluindo o limite superior):  
   
 ```  
@@ -145,13 +149,13 @@ FROM Employee
   
 > [!TIP]  
 >  As condições de filtragem especificadas nas cláusulas temporais com FOR SYSTEM_TIME são habilitadas para SARG (isto é, o SQL Server pode utilizar o índice clusterizado subjacente para realizar uma busca em vez de uma operação de varredura.   
-> Se você consultar a tabela de histórico diretamente, verifique se a condição de filtragem também está habilitada para SARG especificando filtros na forma \<coluna de período> {\< | > | =, …} date_condition AT TIME ZONE ‘UTC’.  
+> Se você consultar a tabela de histórico diretamente, verifique se a condição de filtragem também está habilitada para SARG especificando filtros na forma \<coluna de período> {< | > | =, …} date_condition AT TIME ZONE ‘UTC’.  
 > Se você aplicar AT TIME ZONE a colunas de período, o SQL Server executará uma verificação de tabela/índice, que pode ser muito caro. Evite esse tipo de condição em suas consultas:  
-> \<coluna de período>  AT TIME ZONE ‘\<seu fuso horário>’  >  {\< | > | =, …} date_condition.  
+> \<period column>  AT TIME ZONE ‘\<your time zone>’  >  {< | > | =, …} date_condition.  
   
- Consulte também: [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md) (Consultando dados em uma tabela temporal com controle da versão do sistema).  
+ Consulte também: [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)(Consultando dados em uma tabela temporal com controle da versão do sistema).  
   
-## Análise pontual (viajar nos tempos)  
+## <a name="point-in-time-analysis-time-travel"></a>Análise pontual (viajar nos tempos)  
  Ao contrário da auditoria de dados, em que o foco normalmente é sobre as alterações que ocorreram em um registros individual, em cenários de viagem nos tempos os usuários querem ver como conjuntos de dados inteiros sofreram alterações ao longo do tempo. Às vezes, viajar nos tempos inclui várias tabelas temporais relacionadas, cada uma sofrendo alterações em um ritmo independente, para as quais você deseja analisar:  
   
 -   Tendências dos indicadores importantes nos dados atuais e históricos  
@@ -162,7 +166,7 @@ FROM Employee
   
  Há muitos cenários do mundo real que exigem a análise de viagem nos tempos. Para ilustrar esse cenário de uso, observemos OLTP com histórico gerado automaticamente.  
   
-### OLTP com histórico de dados gerada automaticamente  
+### <a name="oltp-with-auto-generated-data-history"></a>OLTP com histórico de dados gerada automaticamente  
  Em sistemas de processamento de transações, não é incomum analisar como métricas importantes sofrem alterações ao longo do tempo. Idealmente, analisar o histórico não deve comprometer o desempenho do aplicativo OLTP em que o acesso ao estado mais recente dos dados deve ocorrer com latência mínima e o mínimo de bloqueio de dados.  Tabelas temporais com controle da versão do sistema são projetadas para permitir que os usuários mantenham o histórico completo de alterações para análise posterior, transparentemente e separadamente de dados atuais, com o mínimo de impacto sobre a carga de trabalho de OLTP principal.  
 Para cargas de trabalho elevadas de processamento de transações, recomendamos que você use [Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md), que permitem que você armazene dados atuais in-memory e o histórico completo das alterações em disco, de maneira econômica.  
   
@@ -372,7 +376,7 @@ JOIN vw_ProductInventoryDetails FOR SYSTEM_TIME AS OF @monthAgo AS inventoryMont
     ON inventoryDayAgo.ProductId = inventoryMonthAgo.ProductId AND inventoryDayAgo.LocationId = inventoryMonthAgo.LocationID;  
 ```  
   
-## Detecção de anomalias  
+## <a name="anomaly-detection"></a>Detecção de anomalias  
  Detecção de anomalias (ou detecção de exceções) é a identificação de itens que não estejam em conformidade com um padrão esperado ou com outros itens em um conjunto de dados.   
 Você pode usar tabelas temporais com controle da versão do sistema para detectar anomalias que ocorrem periodicamente ou de modo irregular, você pode utilizar a consulta temporal para localizar padrões específicos rapidamente.  
 O que é uma anomalia depende do tipo de dados que você coleta e da sua lógica de negócios.  
@@ -431,7 +435,7 @@ FROM CTE
 > [!NOTE]  
 >  Este exemplo é intencionalmente simplificado. Nos cenários de produção, você provavelmente usaria métodos estatísticos avançados para identificar exemplos que não seguem o padrão comum.  
   
-## Dimensões com alteração lenta  
+## <a name="slowly-changing-dimensions"></a>Dimensões com alteração lenta  
  Dimensões em data warehouse normalmente contêm dados relativamente estáticos sobre entidades como produtos, clientes ou locais geográficos. No entanto, alguns cenários exigem que você acompanhe as alterações de dados também nas tabelas de dimensões. Considerando que a modificação em dimensões ocorre com muito menos frequência, de maneira imprevisível e fora do agendamento de atualização regular que se aplica a tabelas de fatos, esses tipos de tabelas de dimensões são chamados de SCD (dimensões de alteração lenta).  
   
  Há várias categorias de dimensões de alteração lenta com base em como o histórico de alterações é preservado:  
@@ -511,7 +515,7 @@ GROUP BY DimProduct_History.ProductId, DimLocation_History.LocationId ;
   
 -   Se você espera um número significativo de linhas de histórico nas tabelas SCD, considere usar um índice columnstore clusterizado como a opção de armazenamento principal para a tabela de histórico. Isso reduzirá o volume da tabela de histórico e acelerará suas consultas analíticas.  
   
-## Reparando dados corrompidos em nível de linha  
+## <a name="repairing-row-level-data-corruption"></a>Reparando dados corrompidos em nível de linha  
  Você pode confiar em dados históricos nas tabelas temporais com controle da versão do sistema para reparar rapidamente linhas individuais, retornando-as a qualquer um dos estados capturados anteriormente. Essa propriedade das tabelas temporais é muito útil quando você é capaz de localizar linhas afetadas e/ou quando você sabe a hora da alteração de dados indesejada, de modo que você pode executar o reparo de maneira muito eficiente sem lidar com backups.  
   
  Essa abordagem apresenta várias vantagens:  
@@ -549,7 +553,7 @@ UPDATE Employee
   
 ```  
   
- Esse procedimento armazenado assume @EmployeeID e @versionNumber como parâmetros de entrada. Esse procedimento restaura, por padrão, o estado de linha para a última versão do histórico (@versionNumber = 1).  
+ Este procedimento armazenado usa @EmployeeID e @versionNumber como parâmetros de entrada. Esse procedimento restaura, por padrão, o estado da linha para a última versão do histórico (@versionNumber = 1).  
   
  A figura a seguir mostra o estado da linha antes e depois da invocação de procedimento. O retângulo vermelho marca a versão de linha atual que está incorreta, enquanto o retângulo verde marca a versão correta do histórico.  
   
@@ -580,7 +584,7 @@ UPDATE Employee
   
 ```  
   
- Para a mesma amostra de dados, a imagem a seguir ilustra o cenário de reparo com a condição de tempo. Estão realçados o parâmetro @asOf, a linha selecionada no histórico, que era real no ponto no tempo fornecido e, por fim, a nova versão de linha na tabela atual, após a operação de reparo:  
+ Para a mesma amostra de dados, a imagem a seguir ilustra o cenário de reparo com a condição de tempo. Estão realçados o parâmetro @asOf, a linha selecionada no histórico que era real no ponto no tempo fornecido e, por fim, a nova versão de linha na tabela atual, após a operação de reparo:  
   
  ![TemporalUsageRepair3](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")  
   
@@ -589,7 +593,7 @@ Se um valor atualizado recentemente não estiver correto, em muitos cenários, r
   
  ![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tabelas temporais](../../relational-databases/tables/temporal-tables.md)   
  [Introdução a Tabelas Temporais com Controle da Versão do Sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Verificações de consistência do sistema de tabela temporal](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -600,3 +604,4 @@ Se um valor atualizado recentemente não estiver correto, em muitos cenários, r
  [Funções e exibições de metadados de tabela temporal](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

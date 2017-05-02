@@ -1,33 +1,37 @@
 ---
-title: "Salvar um plano de execu&#231;&#227;o em formato XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "planos de consulta XML [SQL Server]"
-  - "abrindo planos de execução"
-  - "Planos de execução XML [SQL Server]"
-  - "planos de execução [SQL Server], salvando"
-  - "salvando planos de execução"
+title: "Salvar um plano de execução no formato XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XML query plans [SQL Server]
+- opening execution plans
+- XML Showplans [SQL Server]
+- execution plans [SQL Server], saving
+- saving execution plans
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e60ae53c74f8f6df450ac6abc5a421f773ce434
+ms.lasthandoff: 04/11/2017
+
 ---
-# Salvar um plano de execu&#231;&#227;o em formato XML
+# <a name="save-an-execution-plan-in-xml-format"></a>Salvar um plano de execução em formato XML
   Use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para salvar planos de execução como um arquivo XML e abri-los para exibição.  
   
  Para usar o recurso plano de execução em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ou usar as opções SET Showplan XML, os usuários devem ter as permissões apropriadas para executar a consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] para qual um plano de execução está sendo gerado, e deve ser concedida a permissão SHOWPLAN para todos os bancos de dados referenciados pela consulta.  
   
-### Para salvar um plano de consulta usando as opções SET Showplan XML  
+### <a name="to-save-a-query-plan-by-using-the-xml-showplan-set-options"></a>Para salvar um plano de consulta usando as opções SET Showplan XML  
   
 1.  Em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] abra um editor de consulta e conecte a [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -62,13 +66,13 @@ caps.handback.revision: 25
     SET SHOWPLAN_XML OFF;  
     ```  
   
-4.  No painel **Resultados**, clique com o botão direito do mouse em **Plano de execução XML do Microsoft SQL Server** que contém o plano de consulta e clique em **Salvar Resultados Como**.  
+4.  No painel **Resultados** , clique com o botão direito do mouse em **Plano de execução XML do Microsoft SQL Server** que contém o plano de consulta e clique em **Salvar Resultados Como**.  
   
-5.  Na caixa de diálogo **Salvar** \<Grid or Text> **Resultados**, na caixa **Salvar como tipo**, clique em **Todos os arquivos (\*.\*)**.  
+5.  Na caixa de diálogo **Salvar** \<Grade ou Texto> **Resultados**, na caixa **Salvar como tipo**, clique em **Todos os arquivos (\*.\*)**.  
   
 6.  Na caixa **Nome do arquivo**, forneça um nome no formato \<name**>.sqlplan** e clique em **Salvar**.  
   
-### Para salvar um plano de execução usando opções do SQL Server Management Studio  
+### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Para salvar um plano de execução usando opções do SQL Server Management Studio  
   
 1.  Gere um plano de execução estimado ou um plano de execução atual usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para obter mais informações, veja [Exibir o plano de execução estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md) ou [Exibir um plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md).  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 25
   
 4.  Na caixa **Nome do arquivo**, forneça um nome no formato \<name**>.sqlplan** e clique em **Salvar**.  
   
-### Para abrir um plano de consulta XML salvo em SQL Server Management Studio  
+### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>Para abrir um plano de consulta XML salvo em SQL Server Management Studio  
   
 1.  Em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no menu **Arquivo** , escolha **Abrir**e então clique em **Arquivo**.  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 25
   
      Como alternativa, no Windows Explorer, clique duas vezes em um arquivo com a extensão **.sqlplan**. O plano abre em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)   
  [SET STATISTICS XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-xml-transact-sql.md)  
   

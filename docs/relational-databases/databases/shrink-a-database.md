@@ -1,30 +1,34 @@
 ---
-title: "Reduzir um banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.shrinkdatabase.f1"
-helpviewer_keywords: 
-  - "reduzindo bancos de dados"
-  - "bancos de dados [SQL Server], reduzindo"
-  - "diminuindo o tamanho do banco de dados"
-  - "reduzindo o banco de dados [SQL Server]"
-  - "reduzindo o tamanho do banco de dados"
+title: Reduzir um banco de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.shrinkdatabase.f1
+helpviewer_keywords:
+- shrinking databases
+- databases [SQL Server], shrinking
+- decreasing database size
+- database shrinking [SQL Server]
+- reducing database size
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cdc33c918c6817d9c242b6e52617c00845195f7d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Reduzir um banco de dados
+# <a name="shrink-a-database"></a>Reduzir um banco de dados
   Este tópico descreve como reduzir um banco de dados usando o Pesquisador de Objetos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  A redução de arquivos de dados recupera espaço com a movimentação de páginas de dados do final do arquivo para o espaço desocupado mais próximo à frente do arquivo. Quando espaço livre suficiente é criado no final do arquivo, as páginas de dados no final do arquivo podem ser desalocadas e retornadas para o sistema de arquivos.  
@@ -45,7 +49,7 @@ caps.handback.revision: 42
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [depois de reduzir um banco de dados](#FollowUp)  
+-   **Follow Up:**  [You shrink a database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -74,19 +78,19 @@ caps.handback.revision: 42
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Exige associação à função de servidor fixa **sysadmin** ou à função de banco de dados fixa **db_owner**.  
+ Exige associação à função de servidor fixa **sysadmin** ou à função de banco de dados fixa **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para reduzir um banco de dados  
+#### <a name="to-shrink-a-database"></a>Para reduzir um banco de dados  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e expanda-a.  
   
-2.  Expanda **Bancos de Dados** e clique com o botão direito do mouse no banco de dados que deseja reduzir.  
+2.  Expanda **Bancos de Dados**e clique com o botão direito do mouse no banco de dados que deseja reduzir.  
   
 3.  Aponte para **Tarefas**, depois **Reduzir**e clique em **Banco de dados**.  
   
-     **Banco de Dados**  
+     **Banco de dados**  
      Exibe o nome do banco de dados selecionado.  
   
      **Espaço alocado atual**  
@@ -105,7 +109,7 @@ caps.handback.revision: 42
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para reduzir um banco de dados  
+#### <a name="to-shrink-a-database"></a>Para reduzir um banco de dados  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 42
 ##  <a name="FollowUp"></a> Acompanhamento: depois de reduzir um banco de dados  
  Os dados movidos para reduzir um arquivo podem ser espalhados para qualquer local disponível no arquivo. Isso provoca uma fragmentação do índice e pode reduzir a velocidade do desempenho de consultas que pesquisam um intervalo do índice. Para eliminar a fragmentação, considere a recompilação dos índices no arquivo após a redução.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Reduzir um arquivo](../../relational-databases/databases/shrink-a-file.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

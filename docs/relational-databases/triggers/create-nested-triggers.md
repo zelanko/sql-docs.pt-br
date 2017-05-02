@@ -1,33 +1,37 @@
 ---
-title: "Criar gatilhos aninhados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gatilhos DML recursivos [SQL Server]"
-  - "gatilhos DML, aninhados"
-  - "gatilhos [SQL Server], aninhados"
-  - "recursão direta [SQL Server]"
-  - "gatilhos [SQL Server], recursivos"
-  - "gatilhos DML, recursivos"
-  - "opção RECURSIVE_TRIGGERS"
-  - "recursão indireta [SQL Server]"
-  - "gatilhos DML aninhados"
+title: Criar gatilhos aninhados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recursive DML triggers [SQL Server]
+- DML triggers, nested
+- triggers [SQL Server], nested
+- direct recursion [SQL Server]
+- triggers [SQL Server], recursive
+- DML triggers, recursive
+- RECURSIVE_TRIGGERS option
+- indirect recursion [SQL Server]
+- nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed1505ace274659400d797ae5ba8b27dcdf80557
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar gatilhos aninhados
-  Os gatilhos DML e DDL são aninhados quando um gatilho executa uma ação que inicia outro gatilho. Essas ações podem iniciar outros gatilhos, e assim por diante. Os gatilhos DML e DDL podem ser aninhados em até 32 níveis. Você pode controlar se os gatilhos AFTER podem ser aninhados pela opção de configuração do servidor **nested triggers**. Os gatilhos INSTEAD OF (apenas gatilhos DML podem ser gatilhos INSTEAD OF) podem ser aninhados, independentemente dessa configuração.  
+# <a name="create-nested-triggers"></a>Criar gatilhos aninhados
+  Os gatilhos DML e DDL são aninhados quando um gatilho executa uma ação que inicia outro gatilho. Essas ações podem iniciar outros gatilhos, e assim por diante. Os gatilhos DML e DDL podem ser aninhados em até 32 níveis. Você pode controlar se os gatilhos AFTER podem ser aninhados pela opção de configuração do servidor **nested triggers** . Os gatilhos INSTEAD OF (apenas gatilhos DML podem ser gatilhos INSTEAD OF) podem ser aninhados, independentemente dessa configuração.  
   
 > [!NOTE]  
 >  Qualquer referência a um código gerenciado de um gatilho [!INCLUDE[tsql](../../includes/tsql-md.md)] conta como um nível em relação ao limite de 32 níveis de aninhamento. Os métodos invocados a partir do código gerenciado não são contados em relação a esse limite.  
@@ -50,7 +54,7 @@ AS
 > [!NOTE]  
 >  Como os gatilhos são executados em uma transação, uma falha em qualquer nível de um conjunto de gatilhos aninhados cancela toda a transação e todas as modificações de dados são revertidas. Inclua instruções PRINT em seus gatilhos de modo que você possa determinar onde a falha ocorreu.  
   
-## Gatilhos recursivos  
+## <a name="recursive-triggers"></a>Gatilhos recursivos  
  Um gatilho AFTER não pode ser chamado recursivamente a menos que a opção do banco de dados RECURSIVE_TRIGGERS seja definida.  
   
  Existem dois tipos de grupos de recursão:  
@@ -59,15 +63,15 @@ AS
   
      Essa recursão ocorre quando um gatilho é acionado e executa uma ação que faz com que o mesmo gatilho seja acionado novamente. Por exemplo, um aplicativo atualiza a tabela **T3**; isso faz com que o gatilho **Trig3** seja acionado. **Trig3** atualiza a tabela **T3** novamente; isso faz com que o gatilho **Trig3** seja acionado novamente.  
   
-     A recursão direta também pode ocorrer quando o mesmo gatilho é chamado novamente, mas após um gatilho de um tipo diferente (AFTER ou INSTEAD OF) ter sido chamado. Em outras palavras, a recursão direta de um gatilho INSTEAD OF pode ocorrer quando o mesmo gatilho INSTEAD OF é chamado pela segunda vez, mesmo se um ou mais gatilhos AFTER forem chamados no meio disso. Da mesma maneira, a recursão direta de um gatilho AFTER pode ocorrer quando o mesmo gatilho AFTER é chamado pela segunda vez, mesmo se um ou mais gatilhos INSTEAD OF forem chamados no meio disso. Por exemplo, um aplicativo atualiza a tabela **T4**. Essa atualização faz com que o gatilho INSTEAD OF **Trig4** seja acionado. **Trig4** atualiza a tabela **T5**. Essa atualização faz com que o gatilho AFTER **Trig5** seja acionado. **Trig5** atualiza a tabela **T4** e essa atualização faz com que o gatilho INSTEAD OF **Trig4** seja acionado novamente. Essa cadeia de eventos é considerada uma recursão direta para **Trig4**.  
+     A recursão direta também pode ocorrer quando o mesmo gatilho é chamado novamente, mas após um gatilho de um tipo diferente (AFTER ou INSTEAD OF) ter sido chamado. Em outras palavras, a recursão direta de um gatilho INSTEAD OF pode ocorrer quando o mesmo gatilho INSTEAD OF é chamado pela segunda vez, mesmo se um ou mais gatilhos AFTER forem chamados no meio disso. Da mesma maneira, a recursão direta de um gatilho AFTER pode ocorrer quando o mesmo gatilho AFTER é chamado pela segunda vez, mesmo se um ou mais gatilhos INSTEAD OF forem chamados no meio disso. Por exemplo, um aplicativo atualiza a tabela **T4**. Essa atualização faz com que o gatilho INSTEAD OF **Trig4** seja acionado. **Trig4** atualiza a tabela **T5**. Essa atualização faz com que o gatilho AFTER **Trig5** seja acionado. **Trig5** atualiza a tabela **T4**e essa atualização faz com que o gatilho INSTEAD OF **Trig4** seja acionado novamente. Essa cadeia de eventos é considerada uma recursão direta para **Trig4**.  
   
 -   Recursão indireta  
   
-     Essa recursão ocorre quando um gatilho é acionado e executa uma ação que faz com que outro gatilho do mesmo tipo (AFTER ou INSTEAD OF) seja acionado. Esse segundo gatilho executa uma ação que faz com que o gatilho original seja acionado novamente. Em outras palavras, a recursão indireta pode ocorrer quando um gatilho INSTEAD OF for chamado pela segunda vez, mas não até que outro gatilho INSTEAD OF seja chamado no meio disso. Da mesma maneira, a recursão indireta pode ocorrer quando um gatilho AFTER for chamado pela segunda vez, mas não até que outro gatilho AFTER seja chamado no meio disso. Por exemplo, um aplicativo atualiza a tabela **T1**. Essa atualização faz com que o gatilho AFTER **Trig1** seja acionado. **Trig1** atualiza a tabela **T2** e essa atualização faz com que o gatilho AFTER **Trig2** seja acionado. **Trig2**, por sua vez, atualiza a tabela **T1**, o que faz com que o gatilho AFTER **Trig1** seja acionado novamente.  
+     Essa recursão ocorre quando um gatilho é acionado e executa uma ação que faz com que outro gatilho do mesmo tipo (AFTER ou INSTEAD OF) seja acionado. Esse segundo gatilho executa uma ação que faz com que o gatilho original seja acionado novamente. Em outras palavras, a recursão indireta pode ocorrer quando um gatilho INSTEAD OF for chamado pela segunda vez, mas não até que outro gatilho INSTEAD OF seja chamado no meio disso. Da mesma maneira, a recursão indireta pode ocorrer quando um gatilho AFTER for chamado pela segunda vez, mas não até que outro gatilho AFTER seja chamado no meio disso. Por exemplo, um aplicativo atualiza a tabela **T1**. Essa atualização faz com que o gatilho AFTER **Trig1** seja acionado. **Trig1** atualiza a tabela **T2**e essa atualização faz com que o gatilho AFTER **Trig2** seja acionado. **Trig2** , por sua vez, atualiza a tabela **T1** , o que faz com que o gatilho AFTER **Trig1** seja acionado novamente.  
   
  Somente a recursão direta de gatilhos AFTER é impedida quando a opção do banco de dados RECURSIVE_TRIGGERS estiver definida como OFF. Para desabilitar a recursão indireta de gatilhos AFTER, defina também a opção do servidor **nested triggers** como **0**.  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra o uso de gatilhos recursivos para resolver uma relação de autorreferência (também conhecida como fechamento transitivo). Por exemplo, a tabela `emp_mgr` define o seguinte:  
   
 -   Um funcionário (`emp`) em uma empresa.  
@@ -181,9 +185,9 @@ Paul                           Alice                          0
   
  **Para definir a opção do banco de dados RECURSIVE_TRIGGERS**  
   
--   [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+-   [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Configurar a opção de configuração de servidor nested triggers](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)  
   

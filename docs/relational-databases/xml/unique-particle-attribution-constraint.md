@@ -1,29 +1,33 @@
 ---
-title: "Restri&#231;&#227;o de atribui&#231;&#227;o de part&#237;cula exclusiva | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "unique particle attribution"
-helpviewer_keywords: 
-  - "coleções de esquema [SQL Server], atribuição de partícula exclusiva"
-  - "coleções de esquema XML [SQL Server], atribuição de partícula exclusiva"
-  - "regra de restrição de UPA"
-  - "regra de restrição de atribuição de partícula exclusiva"
+title: "Restrição de atribuição de partícula exclusiva | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- unique particle attribution
+helpviewer_keywords:
+- schema collections [SQL Server], unique particle attribution
+- XML schema collections [SQL Server], unique particle attribution
+- UPA constraint rule
+- unique particle attribution constraint rule
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e8b99a18280070f3960e6e9259e36144e22889c2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restri&#231;&#227;o de atribui&#231;&#227;o de part&#237;cula exclusiva
+# <a name="unique-particle-attribution-constraint"></a>Restrição de atribuição de partícula exclusiva
   Em XSD, modelos de conteúdo complexos são restritos pela regra de restrição UPA (atribuição de partícula exclusiva). Essa regra requer que cada elemento em um documento da instância corresponda sem-ambiguidade a exatamente uma partícula `<xsd:element>` ou `<xsd:any>` no modelo de conteúdo de seu pai. Qualquer esquema que contenha um tipo com um modelo de conteúdo potencialmente ambíguo é rejeitado.  
   
  Os casos mais comuns de ambiguidade são caracteres curinga `<xsd:any>` e partículas que têm intervalos variáveis de ocorrências, como minOccurs < maxOccurs. Por exemplo, o modelo de conteúdo a seguir é ambíguo porque um elemento <`e1`> pode corresponder ao elemento `<xsd:element>` ou `<xsd:any>`.  
@@ -76,7 +80,7 @@ caps.handback.revision: 14
   
  Para um documento como `<root><e1/><e3/></root>`, a sequência `<e1/><e3/>` corresponde de maneira não ambígua à segunda `<xsd:sequence>`. No entanto, como o `<xsd:element>` ao qual `<e1/>` corresponde não pode ser determinado sem olhar adiante para `<e3/>`, o modelo de conteúdo viola a regra de restrição de UPA.  
   
-## Descobrindo mais informações  
+## <a name="finding-more-information"></a>Descobrindo mais informações  
  O documento a seguir é publicado pelo World Wide Web Consortium (W3C) e contém a descrição técnica da restrição de atribuição de partícula ambígua.  
   
  "XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation":  
@@ -87,7 +91,7 @@ caps.handback.revision: 14
   
  Para ver o documento, visite [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?linkid=48881).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Coleções de esquemas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

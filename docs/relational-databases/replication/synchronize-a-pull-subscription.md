@@ -1,27 +1,31 @@
 ---
-title: "Synchronize a Pull Subscription | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pull subscriptions [SQL Server replication], synchronizing"
-  - "synchronization [SQL Server replication], pull subscriptions"
-  - "assinaturas [replicação do SQL Server], pull"
+title: Sincronizar uma assinatura pull | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pull subscriptions [SQL Server replication], synchronizing
+- synchronization [SQL Server replication], pull subscriptions
+- subscriptions [SQL Server replication], pull
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38b72e808e19854400bf8d4baa867148f4c5a867
+ms.lasthandoff: 04/11/2017
+
 ---
-# Synchronize a Pull Subscription
-  Este tópico descreve como sincronizar uma assinatura pull em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicação](../../relational-databases/replication/agents/replication-agents-overview.md), ou objetos de gerenciamento de replicação (RMO).  
+# <a name="synchronize-a-pull-subscription"></a>Sincronizar uma assinatura pull
+  Este tópico descreve como sincronizar uma assinatura pull no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicação](../../relational-databases/replication/agents/replication-agents-overview.md), ou RMO (Replication Management Objects).  
   
  **Neste tópico**  
   
@@ -29,36 +33,36 @@ caps.handback.revision: 45
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-     [Agentes de replicação](#ReplProg)  
+     [Replication Agents](#ReplProg)  
   
      [RMO (Replication Management Objects)](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Assinaturas são sincronizadas pelo Agente de Distribuição (para replicação transacional e de instantâneo) ou pelo Agente de Mesclagem (para replicação de mesclagem). Os agentes podem ser executados continuamente, sob demanda ou em um agendamento. Para obter mais informações sobre como especificar agendas de sincronização, consulte [especificar agendas de sincronização](../../relational-databases/replication/specify-synchronization-schedules.md).  
+ Assinaturas são sincronizadas pelo Agente de Distribuição (para replicação transacional e de instantâneo) ou pelo Agente de Mesclagem (para replicação de mesclagem). Os agentes podem ser executados continuamente, sob demanda ou em um agendamento. Para obter mais informações sobre como especificar agendas de sincronização, consulte [Especificar agendas de sincronização](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
  Sincronize uma assinatura em demanda na pasta **Assinaturas Locais** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-#### Para sincronizar uma assinatura pull sob demanda no Management Studio  
+#### <a name="to-synchronize-a-pull-subscription-on-demand-in-management-studio"></a>Para sincronizar uma assinatura pull sob demanda no Management Studio  
   
 1.  Conecte-se ao Assinante no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó do servidor.  
   
 2.  Expanda a pasta **Replicação** e, então, expanda a pasta **Assinaturas Locais** .  
   
-3.  Clique com botão direito a assinatura que você deseja sincronizar e, em seguida, clique em **Exibir o Status de sincronização**.  
+3.  Clique com o botão direito do mouse na assinatura a ser sincronizada e clique em **Exibir Status da Sincronização**.  
   
-4.  No **Exibir o Status de sincronização - \< assinante>: \< Banco_de_dados_de_assinatura>** caixa de diálogo, clique em **Iniciar**. Quando a sincronização estiver concluída, a mensagem **Sincronização concluída** será exibida.  
+4.  Na caixa de diálogo **Exibir Status da Sincronização – \<Subscriber>:\<SubscriptionDatabase>**, clique em **Iniciar**. Quando a sincronização estiver concluída, a mensagem **Sincronização concluída** será exibida.  
   
 5.  Clique em **Fechar**.  
   
-##  <a name="ReplProg"></a> agentes de replicação  
+##  <a name="ReplProg"></a> Replication Agents  
  As assinaturas pull podem ser sincronizadas programaticamente e sob demanda chamando o arquivo executável do agente de replicação apropriado do prompt de comando. O arquivo executável do agente de replicação chamado dependerá do tipo de publicação para a qual a assinatura pull pertence. Para obter mais informações, consulte [Replication Agents](../../relational-databases/replication/agents/replication-agents.md).  
   
 > [!NOTE]  
 >  Os agentes de replicação conectam-se ao servidor local usando as credenciais de Autenticação do Windows do usuário que inicializou o agente a partir do prompt de comando. Estas credenciais de Windows também são usadas ao conectar a servidores remotos que usam Autenticação Integrada do Windows.  
   
-#### Para iniciar o agente de distribuição no prompt de comando ou de um arquivo em lotes  
+#### <a name="to-start-the-distribution-agent-from-the-command-prompt-or-from-a-batch-file"></a>Para iniciar o agente de distribuição no prompt de comando ou de um arquivo em lotes  
   
-1.  No prompt de comando ou em um arquivo em lotes, inicie o [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md) executando **distrib.exe**, especificando os seguintes argumentos de linha de comando:  
+1.  Do prompt de comando ou em um arquivo em lote, inicie o [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md) executando **distrib.exe**, especificando os seguintes argumentos de linha de comando:  
   
     -   **-Publisher**  
   
@@ -96,9 +100,9 @@ caps.handback.revision: 45
   
     -   **-SubscriberSecurityMode** = **0**  
   
-#### Para iniciar o agente de mesclagem no prompt de comando ou de um arquivo em lotes  
+#### <a name="to-start-the-merge-agent-from-the-command-prompt-or-from-a-batch-file"></a>Para iniciar o agente de mesclagem no prompt de comando ou de um arquivo em lotes  
   
-1.  No prompt de comando ou em um arquivo em lotes, inicie o [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md) executando **replmerg.exe**, especificando os seguintes argumentos de linha de comando:  
+1.  Do prompt de comando ou em um arquivo em lotes, inicie o [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md) executando **replmerg.exe**, especificando os seguintes argumentos de linha de comando:  
   
     -   **-Publisher**  
   
@@ -182,13 +186,13 @@ SET Publication=AdvWorksSalesOrdersMerge
  É possível sincronizar as assinaturas pull programaticamente usando o RMO (Replication Management Objects) e o acesso de código gerenciado para as funcionalidades do agente de replicação. As classes usadas para sincronizar uma assinatura pull dependem do tipo de publicação ao qual a assinatura pertence.  
   
 > [!NOTE]  
->  Se quiser iniciar uma sincronização que execute autonomamente sem afetar seu aplicativo, inicie o agente em modo assíncrono. Porém, se quiser monitorar o resultado da sincronização e receber retornos de chamada do agente durante o processo de sincronização (por exemplo, se quiser exibir uma barra de progresso), inicie o agente de forma síncrona. Para os Assinantes do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] , você deve iniciar o agente de forma síncrona.  
+>  Se quiser iniciar uma sincronização que execute autonomamente sem afetar seu aplicativo, inicie o agente em modo assíncrono. Porém, se quiser monitorar o resultado da sincronização e receber retornos de chamada do agente durante o processo de sincronização (por exemplo, se quiser exibir uma barra de progresso), inicie o agente de forma síncrona. For [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] Subscribers, you must start the agent synchronously.  
   
-#### Para sincronizar uma assinatura pull com um instantâneo ou publicação transacional  
+#### <a name="to-synchronize-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para sincronizar uma assinatura pull com um instantâneo ou publicação transacional  
   
-1.  Criar uma conexão com o assinante usando o <xref:Microsoft.SqlServer.Management.Common.ServerConnection> classe.  
+1.  Crie uma conexão com o Assinante usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Criar uma instância do <xref:Microsoft.SqlServer.Replication.TransPullSubscription> de classe e defina as seguintes propriedades:  
+2.  Crie uma instância de classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription> e defina as propriedades a seguir:  
   
     -   O nome do banco de dados de assinatura para <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
   
@@ -196,47 +200,47 @@ SET Publication=AdvWorksSalesOrdersMerge
   
     -   O nome do banco de dados de publicação para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>.  
   
-    -   O nome do publicador para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>.  
+    -   O nome do Publicador para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>.  
   
     -   A conexão criada na etapa 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Chamar o <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> método para obter as demais propriedades. Se esse método retornar **false**, verifique se a assinatura existe.  
+3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as demais propriedades da assinatura. Se esse método retornar **false**, verifique se a assinatura existe.  
   
 4.  Inicie o Distribution Agent no Assinante de uma das seguintes maneiras:  
   
-    -   Chamar o <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizeWithJob%2A> método na instância do <xref:Microsoft.SqlServer.Replication.TransPullSubscription> da etapa 2. Esse método inicia o Distribution Agent em modo assíncrono e o controle retorna imediatamente para o seu aplicativo enquanto o trabalho do agente está em execução. Não é possível chamar esse método para [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] assinantes ou se a assinatura foi criada com um valor de **false** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (o padrão).  
+    -   Chame o método <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizeWithJob%2A> na instância de <xref:Microsoft.SqlServer.Replication.TransPullSubscription> da etapa 2. Esse método inicia o Distribution Agent em modo assíncrono e o controle retorna imediatamente para o seu aplicativo enquanto o trabalho do agente está em execução. Você não poderá chamar este método para Assinantes do [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] ou se a assinatura foi criada com um valor de **false** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (o padrão).  
   
-    -   Obter uma instância do <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> classe a partir de <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> propriedade e chame o <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> método. Esse método inicia o agente de forma síncrona e o controle permanece com o trabalho do agente em execução. Durante a execução síncrona, você pode manipular o <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> eventos enquanto o agente está em execução.  
+    -   Obtenha uma instância de classe <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> da propriedade <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> e chame o método <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A>. Esse método inicia o agente de forma síncrona e o controle permanece com o trabalho do agente em execução. Durante execução síncrona, você pode manipular o evento <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> enquanto o agente está em execução.  
   
         > [!NOTE]  
-        >  Se você tiver especificado um valor de **false** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (o padrão) quando você criou a inscrição de recepção, você também precisará especificar <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A>, e opcionalmente <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> e <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A> porque o agente de metadados relativos ao trabalho para a assinatura não está disponível em [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md).  
+        >  Se você especificou o valor de **false** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (o padrão) ao criar o assinatura pull, também será necessário especificar <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A> e, opcionalmente, <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> e <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A>, pois os metadados relacionados ao trabalho do agente para a assinatura não estão disponíveis em [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md).  
   
-#### Para sincronizar uma assinatura pull para publicação de mesclagem  
+#### <a name="to-synchronize-a-pull-subscription-to-a-merge-publication"></a>Para sincronizar uma assinatura pull para publicação de mesclagem  
   
-1.  Criar uma conexão com o assinante usando o <xref:Microsoft.SqlServer.Management.Common.ServerConnection> classe.  
+1.  Crie uma conexão com o Assinante usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Criar uma instância do <xref:Microsoft.SqlServer.Replication.MergePullSubscription> de classe e defina as seguintes propriedades:  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription> e defina as propriedades a seguir:  
   
     -   O nome do banco de dados de assinatura para <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
   
     -   O nome da publicação à qual a assinatura pertence para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>.  
   
-    -   O nome do banco de dados publicado <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>.  
+    -   O nome do banco de dados publicado para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>.  
   
-    -   O nome do publicador para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>.  
+    -   O nome do Publicador para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>.  
   
     -   A conexão criada na etapa 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Chamar o <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> método para obter as demais propriedades. Se esse método retornar **false**, verifique se a assinatura existe.  
+3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as demais propriedades da assinatura. Se esse método retornar **false**, verifique se a assinatura existe.  
   
 4.  Inicie o Merge Agent no Assinante de uma das seguintes maneiras:  
   
-    -   Chamar o <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizeWithJob%2A> método na instância do <xref:Microsoft.SqlServer.Replication.MergePullSubscription> da etapa 2. Esse método inicia o Merge Agent em modo assíncrono e o controle retorna imediatamente para o seu aplicativo enquanto o trabalho do agente está em execução. Não é possível chamar esse método para [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] assinantes ou se a assinatura foi criada com um valor de **false** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (o padrão).  
+    -   Chame o método <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizeWithJob%2A> na instância de <xref:Microsoft.SqlServer.Replication.MergePullSubscription> da etapa 2. Esse método inicia o Merge Agent em modo assíncrono e o controle retorna imediatamente para o seu aplicativo enquanto o trabalho do agente está em execução. Você não poderá chamar este método para Assinantes do [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] ou se a assinatura foi criada com um valor de **false** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (o padrão).  
   
-    -   Obter uma instância do <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> classe a partir de <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> propriedade e chame o <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> método. Esse método inicia o Merge Agent de forma síncrona e o controle permanece com o trabalho do agente em execução. Durante a execução síncrona, você pode manipular o <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> eventos enquanto o agente está em execução.  
+    -   Obtenha uma instância de classe <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> da propriedade <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> e chame o método <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A>. Esse método inicia o Merge Agent de forma síncrona e o controle permanece com o trabalho do agente em execução. Durante execução síncrona, você pode manipular o evento <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> enquanto o agente está em execução.  
   
         > [!NOTE]  
-        >  Se você tiver especificado um valor de **false** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (o padrão) quando você criou a inscrição de recepção, você também precisará especificar <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>, e opcionalmente <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>, e <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> porque o agente de metadados relativos ao trabalho para a assinatura não está disponível em [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md).  
+        >  Se você especificou um valor de **false** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (o padrão) ao criar a assinatura pull, também será necessário especificar <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A> e, opcionalmente, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> e <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A>, pois os metadados relacionados ao trabalho do agente para a assinatura não estão disponíveis em [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md).  
   
 ###  <a name="PShellExample"></a> Exemplos (RMO)  
  Esse exemplo sincroniza a assinatura pull para uma publicação transacional, onde o agente é iniciado em modo assíncrono usando o trabalho do agente.  
@@ -826,9 +830,9 @@ Finally
 End Try  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Sincronizar dados](../../relational-databases/replication/synchronize-data.md)   
  [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Práticas recomendadas em relação à segurança de replicação](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

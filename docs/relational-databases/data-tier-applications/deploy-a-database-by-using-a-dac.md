@@ -1,31 +1,35 @@
 ---
-title: "Implantar um banco de dados usando um DAC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbdeployment.settings.f1"
-  - "sql13.swb.dbdeployment.progress.f1"
-  - "sql13.swb.dbdeployment.summary.f1"
-  - "sql13.swb.dbdeployment.results.f1"
-  - "sql13.swb.dbdeployment.welcome.f1"
-helpviewer_keywords: 
-  - "assistente para implantar banco de dados"
-  - "implantação de banco de dados [SQL Server]"
+title: Implantar um banco de dados usando um DAC | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbdeployment.settings.f1
+- sql13.swb.dbdeployment.progress.f1
+- sql13.swb.dbdeployment.summary.f1
+- sql13.swb.dbdeployment.results.f1
+- sql13.swb.dbdeployment.welcome.f1
+helpviewer_keywords:
+- deploy database wizard
+- database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 57703923bd142330e2a46e72eb4faaee18fa7285
+ms.lasthandoff: 04/11/2017
+
 ---
-# Implantar um banco de dados usando um DAC
+# <a name="deploy-a-database-by-using-a-dac"></a>Implantar um banco de dados usando um DAC
   Use o Assistente **Implantar Banco de Dados no SQL Azure** para implantar um banco de dados entre uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e um servidor [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] ou entre dois servidores [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
 ##  <a name="BeforeBegin"></a> Antes de começar  
@@ -43,7 +47,7 @@ caps.handback.revision: 11
   
 -   Do [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] para uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
--   Entre dois servidores [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+-   Entre dois servidores [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] .  
   
  O assistente não oferece suporte à implantação de bancos de dados entre duas instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 11
 ###  <a name="Security"></a> Segurança  
  Para melhorar a segurança, os logons de Autenticação do SQL Server são armazenados em um arquivo BACPAC DAC sem senha. Quando o arquivo BACPAC é importado, o logon é criado como um logon desabilitado com uma senha gerada. Para habilitar os logons, faça logon usando um logon que tenha a permissão de ALTER ANY LOGIN e use ALTER LOGIN para habilitar o logon e atribuir uma nova senha que possa ser comunicada ao usuário. Isso não é necessário para logons de Autenticação do Windows porque suas senhas não são gerenciadas pelo SQL Server.  
   
-#### Permissões  
+#### <a name="permissions"></a>Permissões  
  O assistente requer permissões de exportação de DAC no banco de dados de origem. O logon exige pelo menos as permissões ALTER ANY LOGIN e VIEW DEFINITION no escopo do banco de dados, bem como as permissões SELECT em **sys.sql_expression_dependencies**. A exportação de um DAC pode ser feita por membros da função de servidor fixa securityadmin que também são membros da função de banco de dados fixa database_owner no banco de dados do qual o DAC é exportado. Membros da função de servidor fixa sysadmin ou da conta interna do administrador do sistema do SQL Server denominada **sa** também podem exportar um DAC.  
   
  O assistente requer permissões de importação de DAC no servidor ou na instância de destino. O logon deve ser um membro das funções de servidor fixas **sysadmin** ou **serveradmin** , ou da função de servidor fixa **dbcreator** e ter as permissões ALTER ANY LOGIN. A conta interna do administrador de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chamada **sa** também pode importar um DAC. A importação de um DAC com logons no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] exige associação nas funções loginmanager ou serveradmin. A importação de um DAC sem logons no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] exige a associação nas funções dbmanager ou serveradmin.  
@@ -60,7 +64,7 @@ caps.handback.revision: 11
 ##  <a name="UsingDeployDACWizard"></a> Usando o Assistente para Implantar Banco de Dados  
  **Para migrar um banco de dados usando o Assistente para Implantar Banco de dados**  
   
-1.  Conecte-se ao local do banco de dados que você deseja implantar. Você pode especificar uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou um servidor [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+1.  Conecte-se ao local do banco de dados que você deseja implantar. Você pode especificar uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou um servidor [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] .  
   
 2.  No **Pesquisador de Objetos**, expanda o nó da instância que contém o banco de dados.  
   
@@ -74,10 +78,10 @@ caps.handback.revision: 11
   
     -   [Configurações de Implantação](#Deployment_settings)  
   
-    -   [Validação](#Validation)  
-  
     -   [Página de Resumo](#Summary)  
   
+    -   [Andamento](#Progress)  
+    
     -   [Resultados](#Results)  
   
 ##  <a name="Introduction"></a> Página de Introdução  
@@ -87,7 +91,7 @@ caps.handback.revision: 11
   
 -   **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página de Introdução no futuro.  
   
--   **Avançar** - Continua na página **Configurações de Implantação**.  
+-   **Avançar** - Continua na página **Configurações de Implantação** .  
   
 -   **Cancelar** – Cancela a operação e fecha o Assistente.  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 11
   
  Clique em **Concluir** para fechar o Assistente.  
   
-## Usando um aplicativo .NET Framework  
+## <a name="using-a-net-framework-application"></a>Usando um aplicativo .NET Framework  
  **Para implantar um banco de dados usando os métodos DacStoreExport() e Import() em um aplicativo .Net Framework.**  
   
  Para exibir um exemplo de código, baixe o aplicativo de exemplo do DAC em [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)  
@@ -138,7 +142,7 @@ caps.handback.revision: 11
   
 6.  Use o método **Import** do tipo **Microsoft.SqlServer.Management.Dac.DacStore** para importar o banco de dados para um arquivo BACPAC. Especifique o arquivo BACPAC criado pela exportação.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exportar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Importar um arquivo BACPAC para criar um novo banco de dados de usuário](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)  

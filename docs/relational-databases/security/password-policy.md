@@ -1,52 +1,56 @@
 ---
-title: "Pol&#237;tica de senha | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/25/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "instrução ALTER LOGON"
-  - "senhas [SQL Server], imposição de política"
-  - "logons [SQL Server], senhas"
-  - "Opção CHECK_EXPIRATION"
-  - "senhas complexas [SQL Server]"
-  - "senhas [SQL Server], expiração"
-  - "redefinições manuais de contagem de senha inválida"
-  - "opção MUST_CHANGE"
-  - "validade [SQL Server]"
-  - "senha expirada [SQL Server]"
-  - "símbolos [SQL Server]"
-  - "NetValidatePasswordPolicy() API"
-  - "senhas [SQL Server]"
-  - "política de senha [SQL Server]"
-  - "redefinindo contagens de senha incorreta"
-  - "segurança [SQL Server], senhas"
-  - "Opção CHECK_POLICY"
-  - "senhas [SQL Server], símbolos"
-  - "contagens de senha incorreta"
-  - "senhas [SQL Server], complexidade"
-  - "caracteres [SQL Server], políticas de senha"
+title: "Política de senha | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/25/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ALTER LOGIN statement
+- passwords [SQL Server], policy enforcement
+- logins [SQL Server], passwords
+- CHECK_EXPIRATION option
+- complex passwords [SQL Server]
+- passwords [SQL Server], expiration
+- manual bad password count resets
+- MUST_CHANGE option
+- expiration [SQL Server]
+- expired password [SQL Server]
+- symbols [SQL Server]
+- NetValidatePasswordPolicy() API
+- passwords [SQL Server]
+- password policy [SQL Server]
+- resetting bad password counts
+- security [SQL Server], passwords
+- CHECK_POLICY option
+- passwords [SQL Server], symbols
+- bad password counts
+- passwords [SQL Server], complexity
+- characters [SQL Server], password policies
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1843956926a6eb59efbc4dc14dc50f1dd3403d07
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pol&#237;tica de senha
+# <a name="password-policy"></a>Política de senha
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar os mecanismos de política de senha do Windows. A política de senha se aplica a um logon que usa a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a um usuário de banco de dados independente com senha.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode aplicar as mesmas políticas de complexidade e expiração usadas no Windows para senhas usadas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta funcionalidade depende da `NetValidatePasswordPolicy` API.  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] impõe a complexidade da senha. As seções de imposição de política e expiração de senha não se aplicam ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-## Complexidade de senha  
+## <a name="password-complexity"></a>Complexidade de senha  
  As políticas de complexidade de senha são projetadas para deter ataques de força bruta aumentando o número de possíveis senhas. Quando a política de complexidade de senha é imposta, as novas senhas devem atender às seguintes diretrizes:  
   
 -   A senha não contém o nome de conta do usuário.  
@@ -65,10 +69,10 @@ caps.handback.revision: 41
   
  As senhas podem ter até 128 caracteres. Você deve usar senhas que sejam longas e complexas.  
   
-## Vencimento da senha  
+## <a name="password-expiration"></a>Vencimento da senha  
  As políticas de vencimento da senha são usadas para gerenciar o tempo de vida de uma senha. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impõe a política de expiração de senha, os usuários são lembrados a alterar as senhas antigas e as contas com senhas expiradas são desabilitadas.  
   
-## Imposição de política  
+## <a name="policy-enforcement"></a>Imposição de política  
  A imposição da política de senha pode ser configurada separadamente para cada logon do SQL Server. Use [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md) Para configurar as opções da política de senha de um logon do SQL Server. As regras seguintes se aplicam à configuração da imposição de política de senha:  
   
 -   Quando CHECK_POLICY é alterado para ON, o seguinte comportamento ocorre:  
@@ -77,7 +81,7 @@ caps.handback.revision: 41
   
     -   O histórico de senhas é inicializado com o valor do hash da senha atual.  
   
-    -   As opções **duração do bloqueio de conta**, **limite de bloqueio de conta** e **zerar contador de bloqueios de conta após** também estão habilitadas.  
+    -   As opções**duração do bloqueio de conta**, **limite de bloqueio de conta**e **zerar contador de bloqueios de conta após** também estão habilitadas.  
   
 -   Quando CHECK_POLICY é alterado para OFF, o seguinte comportamento ocorre:  
   
@@ -103,7 +107,7 @@ caps.handback.revision: 41
   
  A política de senha pode ser configurada no Windows ou transmitida por um domínio. Para exibir a política de senha do computador, use o snap-in do MMC da Política de Segurança Local (**secpol.msc**).  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)  
@@ -116,7 +120,8 @@ caps.handback.revision: 41
   
  [Criar um usuário de banco de dados](../../relational-databases/security/authentication-access/create-a-database-user.md)  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
  [Senhas fortes](../../relational-databases/security/strong-passwords.md)  
   
   
+

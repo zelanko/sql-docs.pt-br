@@ -1,28 +1,32 @@
 ---
-title: "Exibir ou alterar as propriedades de um banco de dados | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exibindo bancos de dados"
-  - "exibindo banco de dados [SQL Server]"
-  - "bancos de dados [SQL Server], exibição"
-  - "exibindo bancos de dados"
+title: Exibir ou alterar as propriedades de um banco de dados | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- displaying databases
+- database viewing [SQL Server]
+- databases [SQL Server], viewing
+- viewing databases
 ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ead93afe9ce79d5cee37f190f5c2d2707f69b880
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exibir ou alterar as propriedades de um banco de dados
+# <a name="view-or-change-the-properties-of-a-database"></a>Exibir ou alterar as propriedades de um banco de dados
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Este tópico descreve como exibir ou alterar os propriedades de um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Depois de alterar uma propriedade de banco de dados, a modificação entra em vigor imediatamente.  
@@ -54,7 +58,7 @@ caps.handback.revision: 40
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para exibir ou alterar as propriedades de um banco de dados  
+#### <a name="to-view-or-change-the-properties-of-a-database"></a>Para exibir ou alterar as propriedades de um banco de dados  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e expanda-a.  
   
@@ -63,21 +67,21 @@ caps.handback.revision: 40
 3.  Na caixa de diálogo **Propriedades do Banco de Dados** , selecione uma página para exibir as informações correspondentes. Por exemplo, selecione a página **Arquivos** para exibir os dados e as informações do arquivo de log.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
- O Transact-SQL fornece vários métodos diferentes para exibir as propriedades de um banco de dados e para alterar essas propriedades. Para exibir as propriedades de um banco de dados, é possível usar a função [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) e a exibição do catálogo [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Para alterar as propriedades de um banco de dados, você pode usar a versão da instrução ALTER DATABASE para seu ambiente: [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) ou [ALTER DATABASE &#40;Banco de Dados SQL do Azure&#41;](../../t-sql/statements/alter-database-azure-sql-database.md). Para exibir as propriedades de banco de dados com escopo, use a exibição de catálogo [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md), e para alterá-las, use a instrução [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
+ O Transact-SQL fornece vários métodos diferentes para exibir as propriedades de um banco de dados e para alterar essas propriedades. Para exibir as propriedades de um banco de dados, é possível usar a função [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) e a exibição do catálogo [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) . Para alterar as propriedades de um banco de dados, é possível usar a versão da instrução ALTER DATABASE para seu ambiente: [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) ou [ALTER DATABASE (Banco de Dados SQL do Azure)](../../t-sql/statements/alter-database-azure-sql-database.md). Para exibir as propriedades de banco de dados com escopo, use a exibição de catálogo [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) , e para alterá-las, use a instrução [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) .  
   
-#### Para exibir uma propriedade de um banco de dados usando a função DATABASEPROPERTYEX  
+#### <a name="to-view-a-property-of-a-database-by-using-the-databasepropertyex-function"></a>Para exibir uma propriedade de um banco de dados usando a função DATABASEPROPERTYEX  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] e, em seguida, conecte-se ao banco de dados para o qual você deseja exibir suas propriedades.  
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo usa a função do sistema [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) para retornar o status da opção de banco de dados AUTO_SHRINK no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Um valor de retorno 1 significa que a opção está definida como ON e um valor de retorno 0 significa que a opção está definida como OFF.  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo usa a função do sistema [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) para retornar o status da opção de banco de dados AUTO_SHRINK no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Um valor de retorno 1 significa que a opção está definida como ON e um valor de retorno 0 significa que a opção está definida como OFF.  
   
     ```tsql  
     SELECT DATABASEPROPERTYEX('AdventureWorks2012', 'IsAutoShrink');  
     ```  
   
-#### Para exibir as propriedades de um banco de dados consultando sys.databases  
+#### <a name="to-view-the-properties-of-a-database-by-querying-sysdatabases"></a>Para exibir as propriedades de um banco de dados consultando sys.databases  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] e, em seguida, conecte-se ao banco de dados para o qual você deseja exibir suas propriedades.  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 40
     FROM sys.databases WHERE name = 'AdventureWorks2012';  
     ```  
   
-#### Para exibir as propriedades de uma configuração de escopo do banco de dados consultando sys.databases_scoped_configuration  
+#### <a name="to-view-the-properties-of-a-database-scoped-configuration-by-querying-sysdatabasesscopedconfiguration"></a>Para exibir as propriedades de uma configuração de escopo do banco de dados consultando sys.databases_scoped_configuration  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] e, em seguida, conecte-se ao banco de dados para o qual você deseja exibir suas propriedades.  
   
@@ -105,7 +109,7 @@ caps.handback.revision: 40
   
      Para obter mais exemplos, veja [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)  
   
-#### Para alterar as propriedades de um banco de dados do SQL Server 2016 usando ALTER DATABASE  
+#### <a name="to-change-the-properties-of-a-sql-server-2016-database-using-alter-database"></a>Para alterar as propriedades de um banco de dados do SQL Server 2016 usando ALTER DATABASE  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -119,9 +123,9 @@ caps.handback.revision: 40
   
      Para verificar a alteração, selecione a segunda instrução `SELECT` e clique em **Executar**.  
   
-     [!code-sql[DatabaseDDL#AlterDatabase9](../../relational-databases/databases/codesnippet/tsql/view-or-change-the-prope_1.sql)]  
+     [!code-sql[DatabaseDDL #AlterDatabase9](../../relational-databases/databases/codesnippet/tsql/view-or-change-the-prope_1.sql)]  
   
-#### Para alterar as propriedades de escopo do banco de dados usando ALTER DATABASE SCOPED CONFIGURATION  
+#### <a name="to-change-the-database-scoped-properties-using-alter-database-scoped-configuration"></a>Para alterar as propriedades de escopo do banco de dados usando ALTER DATABASE SCOPED CONFIGURATION  
   
 1.  Conecte-se ao banco de dados na instância do SQL Server.  
   
@@ -133,13 +137,14 @@ caps.handback.revision: 40
     ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY   
     ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [ALTER DATABASE &#40;Banco de Dados SQL do Azure&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [ALTER DATABASE (Banco de Dados SQL do Azure)](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
  [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)  
 
   
   
+

@@ -1,33 +1,37 @@
 ---
-title: "Estimar requisitos de mem&#243;ria para tabelas com otimiza&#231;&#227;o de mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Estimar requisitos de memória para tabelas com otimização de memória | Microsoft Docs"
+ms.custom: 
+ms.date: 12/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea8b5ddea3edfbe5d2521bd30e4a51fd62a2b482
+ms.lasthandoff: 04/11/2017
+
 ---
-# Estimar requisitos de mem&#243;ria para tabelas com otimiza&#231;&#227;o de mem&#243;ria
+# <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar requisitos de memória para tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 As tabelas com otimização de memória requerem a existência de memória suficiente para manter todas as linhas e índices na memória. Como a memória é um recurso finito, é importante compreender e gerenciar o uso de memória no sistema. Os tópicos nessa seção abordam os cenários comuns de uso e gerenciamento de memória.
 
-Se você estiver criando uma nova tabela com otimização de memória ou estiver migrando uma tabela com base em disco existente para uma tabela com otimização de memória [!INCLUDE[hek_2](../../includes/hek-2-md.md)], é importante ter uma estimativa razoável das necessidades de memória de cada tabela para que você possa fornecer ao servidor memória suficiente. Esta seção descreve como estimar a quantidade de memória necessária para manter dados para uma tabela com otimização de memória.  
+Se você estiver criando uma nova tabela com otimização de memória ou estiver migrando uma tabela com base em disco existente para uma tabela com otimização de memória [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , é importante ter uma estimativa razoável das necessidades de memória de cada tabela para que você possa fornecer ao servidor memória suficiente. Esta seção descreve como estimar a quantidade de memória necessária para manter dados para uma tabela com otimização de memória.  
   
 Se você pretende migrar de tabelas baseadas em disco para tabelas com otimização de memória, antes de continuar neste tópico, veja o tópico [Determinando se uma tabela ou procedimento armazenado deve ser movido para OLTP in-memory](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) para obter diretrizes sobre as melhores tabelas para migração. Todos os tópicos em [Migrando para OLTP in-memory](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) fornecem diretrizes sobre como migrar de tabelas baseadas em disco para tabelas com otimização de memória. 
   
 ## <a name="basic-guidance-for-estimating-memory-requirements"></a>Diretrizes básicas para estimar os requisitos de memória
 
-A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], não há nenhum limite no tamanho das tabelas com otimização de memória, embora as tabelas precisem caber na memória.  No [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o tamanho dos dados com suporte é de 256 GB para tabelas SCHEMA_AND_DATA.
+A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], não há nenhum limite no tamanho das tabelas com otimização de memória, embora as tabelas precisem caber na memória.  No [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , o tamanho dos dados com suporte é de 256 GB para tabelas SCHEMA_AND_DATA.
 
 O tamanho de uma tabela com otimização de memória corresponde ao tamanho dos dados, além da sobrecarga para cabeçalhos de linha. Ao migrar uma tabela baseada em disco para uma tabela com otimização de memória, o tamanho da tabela com otimização de memória aproximadamente corresponderá ao tamanho do índice clusterizado ou do heap da tabela original baseada em disco.
 
@@ -50,7 +54,7 @@ Quando houver uma carga de trabalho ativa, é necessária memória adicional par
   
 - [Memória para o crescimento](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
-###  <a name="a-namebkmkexampletablea-example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a> Exemplo de tabela com otimização de memória  
+###  <a name="bkmk_ExampleTable"></a> Exemplo de tabela com otimização de memória  
 
 Considere o esquema de tabela com otimização de memória a seguir:
   
@@ -82,7 +86,7 @@ GO
 
 Usando esse esquema, determinaremos a memória mínima necessária para essa tabela com otimização de memória.  
   
-###  <a name="a-namebkmkmemoryfortablea-memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a> Memória da tabela  
+###  <a name="bkmk_MemoryForTable"></a> Memória da tabela  
 
 Uma linha de tabela com otimização de memória é composta de três partes:
   
@@ -101,7 +105,7 @@ Veja a seguir uma computação de tamanho para 5.000.000 (5 milhões) de linhas 
   
 Pelos cálculos acima, o tamanho de cada linha na tabela com otimização de memória é 24 + 32 + 200 ou 256 bytes.  Como temos 5 milhões de linhas, a tabela consumirá 5.000.000 * 256 bytes, ou 1,280,000,000 bytes – aproximadamente 1.28 GB.  
   
-###  <a name="a-namebkmkindexmeemorya-memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a> Memória para índices  
+###  <a name="bkmk_IndexMeemory"></a> Memória para índices  
 
 #### <a name="memory-for-each-hash-index"></a>Memória para cada índice de hash  
   
@@ -130,11 +134,11 @@ SELECT COUNT(DISTINCT [Col2])
   
 Se você estiver criando uma nova tabela, precisará estimar o tamanho da matriz ou a coleta de dados dos testes antes da implantação.  
   
-Para obter informações sobre como os índices de hash funcionam em tabelas com otimização de memória [!INCLUDE[hek_2](../../includes/hek-2-md.md)], veja [Índices de hash](../Topic/Hash%20Indexes.md).  
+Para obter informações sobre como os índices de hash funcionam em tabelas com otimização de memória [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , veja [Índices de hash](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
   
 #### <a name="setting-the-hash-index-array-size"></a>Definindo o tamanho da matriz de índice de hash  
   
-O tamanho da matriz de hash é definido por `(bucket_count= value)`, em que `value` é um valor inteiro maior que zero. Se `value` não for uma potência de 2, o bucket_count real será arredondado até a potência seguinte mais próxima de 2.  Em nossa tabela de exemplo, (bucket_count = 5000000), já que 5.000.000 não é a uma potência de 2, o número de buckets real é arredondado até 8.388.608 (2^23).  Você deve usar esse número, e não 5.000.000 quando calcular a memória necessária à matriz de hash.  
+O tamanho da matriz de hash é definido por `(bucket_count= value)` , em que `value` é um valor inteiro maior que zero. Se `value` não for uma potência de 2, o bucket_count real será arredondado até a potência seguinte mais próxima de 2.  Em nossa tabela de exemplo, (bucket_count = 5000000), já que 5.000.000 não é a uma potência de 2, o número de buckets real é arredondado até 8.388.608 (2^23).  Você deve usar esse número, e não 5.000.000 quando calcular a memória necessária à matriz de hash.  
   
 Assim, em nosso exemplo, a memória necessária para cada matriz de hash é:  
   
@@ -164,7 +168,7 @@ SELECT * FRON t_hk
    WHERE c2 > 5;  
 ```  
   
-###  <a name="a-namebkmkmemoryforrowversionsa-memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a> Memória para o controle de versão de linha
+###  <a name="bkmk_MemoryForRowVersions"></a> Memória para o controle de versão de linha
 
 Para evitar bloqueios, OLTP de memória usa a simultaneidade otimista ao atualizar ou excluir linhas. Isso significa que quando uma linha é atualizada, uma versão de linha adicional será criada. Além disso, as exclusões são lógicas – a linha existente é marcada como excluída, mas não é removida imediatamente. O sistema mantém as versões de linhas antigas (incluindo as linhas excluídas) disponíveis até que todas as transações que possivelmente poderiam usar a versão tenham concluído a execução. 
   
@@ -180,16 +184,18 @@ A necessidade de memória para linhas obsoletas é estimada pela multiplicação
   
 `memoryForRowVersions = rowVersions * rowSize`  
   
-###  <a name="a-namebkmktablevariablesa-memory-for-table-variables"></a><a name="bkmk_TableVariables"></a> Memória para variáveis de tabela
+###  <a name="bkmk_TableVariables"></a> Memória para variáveis de tabela
   
 A memória usada para uma variável de tabela é liberada apenas quando a variável de tabela sai do escopo. As linhas excluídas, inclusive as linhas excluídas como parte de uma atualização, de uma variável de tabela, não estão sujeitas à coleta de lixo. Nenhuma memória é liberada até a variável de tabela sair do escopo.  
   
 As variáveis de tabela definidas em um lote SQL grande, e não em um escopo do procedimento, que são usadas em muitas transações podem consumir bastante memória. Como elas não têm coleta de lixo, as linhas excluídas em uma variável de tabela podem consumir muita memória e diminuir o desempenho, pois as operações de leitura precisam verificar as linhas excluídas.  
   
-###  <a name="a-namebkmkmemoryforgrowtha-memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a> Memória para o crescimento
+###  <a name="bkmk_MemoryForGrowth"></a> Memória para o crescimento
 
 Os cálculos acima estima suas necessidades de memória para a tabela como existe atualmente. Além dessa memória, você precisa estimar o aumento da tabela e fornecimento de memória suficiente para acomodar esse crescimento.  Por exemplo, se você antecipar o crescimento de 10% no múltiplo da necessidade dos resultados acima por 1,1 para obter a memória total necessária para a tabela.  
   
 ## <a name="see-also"></a>Consulte também
 
-[Migrando para o OLTP in-memory](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+[Migrando para OLTP na memória](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+
+

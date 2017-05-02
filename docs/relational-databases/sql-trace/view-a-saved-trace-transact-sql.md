@@ -1,29 +1,33 @@
 ---
-title: "Exibir um rastreamento salvo (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rastreamentos [SQL Server], exibindo"
-  - "exibindo rastreamentos"
-  - "exibindo rastreamentos"
+title: Exibir um rastreamento salvo (Transact-SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], viewing
+- displaying traces
+- viewing traces
 ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ac0fccff82a4324911481ea1179ca3cab01b8f10
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exibir um rastreamento salvo (Transact-SQL)
+# <a name="view-a-saved-trace-transact-sql"></a>Exibir um rastreamento salvo (Transact-SQL)
   Este tópico descreve como usar funções internas para exibir um rastreamento salvo.  
   
-### Exibir um rastreamento específico  
+### <a name="to-view-a-specific-trace"></a>Exibir um rastreamento específico  
   
 1.  Execute **fn_trace_getinfo** especificando a identificação do rastreamento sobre o qual informações são necessárias. Esta função retorna uma tabela que lista o rastreamento, a propriedade de rastreamento e as informações sobre a propriedade.  
   
@@ -34,7 +38,7 @@ caps.handback.revision: 22
     FROM ::fn_trace_getinfo(trace_id)  
     ```  
   
-### Exibir todos os rastreamentos existentes  
+### <a name="to-view-all-existing-traces"></a>Exibir todos os rastreamentos existentes  
   
 1.  Execute **fn_trace_getinfo** especificando `0` ou `default`. Esta função retorna uma tabela que lista todos os rastreamentos, suas propriedades e as informações sobre essas propriedades.  
   
@@ -45,12 +49,12 @@ caps.handback.revision: 22
     FROM ::fn_trace_getinfo(default)  
     ```  
   
-## Segurança do .NET Framework  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Para executar a função interna **fn_trace_getinfo**, o usuário precisa da seguinte permissão:  
   
  ALTER TRACE no servidor.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [Exibir e analisar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)  
   

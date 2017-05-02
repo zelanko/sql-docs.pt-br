@@ -1,35 +1,39 @@
 ---
-title: "Propriedades da coluna de tabela (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vdtsql.chm:65558"
-  - "vdtsql.chm:69657"
-  - "vdt.ppg.columns"
+title: Propriedades da coluna de tabela (SQL Server Management Studio) | Microsoft Docs
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vdtsql.chm:65558
+- vdtsql.chm:69657
+- vdt.ppg.columns
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8eefd641ac7c9672b6e5f52412bd7cafe623ea09
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propriedades da coluna de tabela (SQL Server Management Studio)
+# <a name="table-column-properties-sql-server-management-studio"></a>Propriedades da coluna de tabela (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   As propriedades aparecem no painel inferior do Criador de Tabelas. A menos que seja indicado o contrário, será possível editar as propriedades na janela Propriedades quando a coluna for selecionada. As **Propriedades de Colunas** podem ser exibidas em categorias ou em ordem alfabética. Muitas propriedades aparecem ou podem ser alteradas apenas para certos tipos de dados.  
   
 > [!NOTE]  
->  Se a tabela for publicada para replicação, será necessário fazer alterações no esquema usando a instrução [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) do [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  
+>  Se a tabela for publicada para replicação, será necessário fazer alterações no esquema usando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER TABLE [do](../../t-sql/statements/alter-table-transact-sql.md) ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  
   
  **Geral**  
- Expande para mostrar **Nome**, **Permitir Nulos**, **Tipo de Dados**, **Valor Padrão ou Associação**, **Comprimento**, **Precisão** e **Escala**.  
+ Expande para mostrar **Nome**, **Permitir Nulos**, **Tipo de Dados**, **Valor Padrão ou Associação**, **Comprimento**, **Precisão**e **Escala**.  
   
  **Nome**  
  Exibe o nome da coluna selecionada.  
@@ -40,7 +44,7 @@ caps.handback.revision: 33
  **Tipo de Dados**  
  Exibe o tipo de dados para a coluna selecionada. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
   
- **Valor ou Associação Padrão**  
+ **Valor Padrão ou Associação**  
  Exibe o padrão para a coluna sempre que nenhum valor for especificado para a mesma. O valor desse campo pode ser o valor de uma restrição padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o nome de uma restrição geral para a qual a coluna será associada. A lista suspensa contém todos os padrões gerais definidos no banco de dados. Para associar a coluna a um padrão geral, faça a seleção na lista suspensa. Alternativamente, para criar uma restrição padrão para a coluna, digite o valor padrão diretamente como texto.  
   
  **Comprimento**  
@@ -53,16 +57,16 @@ caps.handback.revision: 33
  Exibe o número máximo de dígitos para valores nessa coluna. Essa propriedade mostra **0** para tipos de dados não numéricos.  
   
  **Criador de Tabelas**  
- Expande a seção **Designer de Tabela**.  
+ Expande a seção **Designer de Tabela** .  
   
  **Agrupamento**  
- Exibe a sequência de agrupamento que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica como padrão à coluna, sempre que os valores de coluna forem usados para ordenar as linhas de um resultado de consulta. Para editar o agrupamento, selecione a propriedade, clique na reticência (...) que aparece à direita do valor da propriedade para associar a caixa de diálogo **Agrupamento**.  
+ Exibe a sequência de agrupamento que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica como padrão à coluna, sempre que os valores de coluna forem usados para ordenar as linhas de um resultado de consulta. Para editar o agrupamento, selecione a propriedade, clique na reticência (...) que aparece à direita do valor da propriedade para associar a caixa de diálogo **Agrupamento** .  
   
  **Especificação de Coluna Computada**  
  Exibe informações sobre uma coluna computada. O valor mostrado para propriedade é igual ao valor da propriedade filho **Fórmula** e exibe a fórmula para a coluna computada.  
   
 > [!NOTE]  
->  Para alterar o valor mostrado para a propriedade **Especificação de Coluna Computada**, você deve expandi-la e editar a propriedade filho **Fórmula**.  
+>  Para alterar o valor mostrado para a propriedade **Especificação de Coluna Computada** , você deve expandi-la e editar a propriedade filho **Fórmula** .  
   
 -   A**Fórmula** exibe a fórmula para a coluna computada. Para editar essa propriedade, digite diretamente uma fórmula nova.  
   
@@ -74,7 +78,7 @@ caps.handback.revision: 33
  Exibe informações sobre o tipo de dados do campo, no mesmo formato que a instrução SQL CREATE TABLE. Por exemplo, um campo que contém uma cadeia de caracteres de comprimento variável com um comprimento de máximo de 20 caracteres seria representado como "varchar(20)". Para alterar essa propriedade, digite o valor diretamente.  
   
  **Descrição**  
- Exibe o texto que descreve a coluna. Para editar a descrição, selecione a propriedade, clique na reticência (...) que aparece à direita do valor da propriedade e edite a descrição na caixa de diálogo **Descrição da Propriedade**.  
+ Exibe o texto que descreve a coluna. Para editar a descrição, selecione a propriedade, clique na reticência (...) que aparece à direita do valor da propriedade e edite a descrição na caixa de diálogo **Descrição da Propriedade** .  
   
  **Determinística**  
  Mostra se o tipo de dados da coluna selecionada pode ser determinado com certeza.  
@@ -86,11 +90,11 @@ caps.handback.revision: 33
  Exibe informações sobre um índice de texto completo. O valor dessa propriedade é o valor da propriedade filho **É texto completo indexado** e indica se a coluna é texto completo indexado.  
   
 > [!NOTE]  
->  Para alterar o valor mostrado para a propriedade **Especificação de texto completo**, é necessário expandir e editar a propriedade filho **É texto completo indexado**.  
+>  Para alterar o valor mostrado para a propriedade **Especificação de texto completo** , é necessário expandir e editar a propriedade filho **É texto completo indexado** .  
   
 -   **É texto completo indexado** Indica se essa coluna é texto completo indexado. Essa propriedade só poderá ser definida como **Sim** se o tipo de dados para essa coluna for pesquisável com texto completo e se a tabela à qual essa coluna pertence tiver um índice de texto completo especificado para isso. Para editar a propriedade, clique no valor correspondente, expanda a lista suspensa e escolha um valor.  
   
--   **Coluna de tipo texto completo** Exibe o nome da coluna, na qual a coluna é de texto completo indexado. Essa propriedade deve ser definida, se a propriedade **Tipo de dados** para a coluna for **imagem** ou **varbinary**. A coluna nomeada na propriedade deve ser de tipo **[n]char, [n]varchar** ou **xml** e a lista suspensa para a propriedade só deve conter colunas que tiverem um desses três tipos de dados. Linhas na coluna nomeada pela propriedade indicam o tipo de documento das linhas correspondentes na coluna pesquisável de texto completo. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
+-   **Coluna de tipo texto completo** Exibe o nome da coluna, na qual a coluna é de texto completo indexado. Essa propriedade deve ser definida, se a propriedade **Tipo de dados** para a coluna for **imagem** ou **varbinary**. A coluna nomeada na propriedade deve ser de tipo **[n]char, [n]varchar** ou **xml**e a lista suspensa para a propriedade só deve conter colunas que tiverem um desses três tipos de dados. Linhas na coluna nomeada pela propriedade indicam o tipo de documento das linhas correspondentes na coluna pesquisável de texto completo. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
   
 -   **Idioma** Indica o idioma do separador de palavras usado para indexar a coluna. O valor armazenado na propriedade é o identificador de localidade para o separador de palavras. Para obter mais informações sobre os separadores de palavras e LCIDs, consulte os Separadores de Palavras e os Lematizadores. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 33
  Exibe informações sobre se e como a coluna impõe exclusividade em seus valores. O valor da propriedade indica se esta coluna é ou não uma coluna de identidade e se é igual ao valor da propriedade filho **É identidade**.  
   
 > [!NOTE]  
->  Para alterar o valor mostrado para a propriedade **Especificação de identidade**, é necessário expandir e editar a propriedade filho **É identidade**.  
+>  Para alterar o valor mostrado para a propriedade **Especificação de identidade** , é necessário expandir e editar a propriedade filho **É identidade** .  
   
 -   **É identidade** Indica se a coluna é ou não uma coluna de identidade. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
   
@@ -133,6 +137,7 @@ caps.handback.revision: 33
  Mostra o tamanho em bytes permitido pelo tipo de dados de coluna. Por exemplo, um tipo de dados nchar pode ter um comprimento de 10 (número de caracteres), mas teria um tamanho de 20 para conjuntos de caracteres de Unicode.  
   
 > [!NOTE]  
->  O comprimento de um tipo de dados **(max)** varia para cada linha. **sp_help** retorna (-1) como o comprimento de colunas **(max)**. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] exibe -1 como o tamanho de coluna.  
+>  O comprimento de um tipo de dados **(max)** varia para cada linha. **sp_help** retorna (-1) como o comprimento de colunas **(max)** . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] exibe -1 como o tamanho de coluna.  
   
   
+

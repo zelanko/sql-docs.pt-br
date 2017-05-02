@@ -1,23 +1,27 @@
 ---
-title: "Sele&#231;&#245;es e jun&#231;&#245;es em exibi&#231;&#245;es do sistema dos Eventos Estendidos no SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SELECTs e JOINs de exibições do sistema de Eventos Estendidos no SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 08/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9a3f027fddc3ab7094b2ca82ae1f9ad3190a886
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sele&#231;&#245;es e jun&#231;&#245;es em exibi&#231;&#245;es do sistema dos Eventos Estendidos no SQL Server
+# <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Seleções e junções em exibições do sistema dos Eventos Estendidos no SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -32,15 +36,15 @@ A maioria dos exemplos é gravada para o SQL Server. Mas, com pequenas edições
 
 
 
-## A. Informações básicas
+## <a name="a-foundational-information"></a>A. Informações básicas
 
 
 Há dois conjuntos de exibições do sistema para eventos estendidos:
 
 
-#### Exibições do catálogo:
+#### <a name="catalog-views"></a>Exibições do catálogo:
 
-- Essas exibições armazenam informações sobre a *definição* de cada sessão de evento que é criada por [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md) ou por uma interface do usuário SSMS equivalente. Mas essas exibições não sabem nada sobre se alguma das sessões já começou a ser executada.
+- Essas exibições armazenam informações sobre a *definição* de cada sessão de evento que é criada por [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md)ou por uma interface do usuário SSMS equivalente. Mas essas exibições não sabem nada sobre se alguma das sessões já começou a ser executada.
     - Por exemplo, se o **Pesquisador de Objetos** do SSMS mostrar que não há nenhuma sessão de eventos definida, realizar a seleção da exibição *sys.server_event_session_targets* com SELECT retornará zero linhas.
 
 
@@ -49,7 +53,7 @@ Há dois conjuntos de exibições do sistema para eventos estendidos:
     - *sys.database\_event\_session\** é o prefixo de nome no Banco de Dados SQL.
 
 
-#### DMVs (exibições de gerenciamento dinâmico):
+#### <a name="dynamic-management-views-dmvs"></a>DMVs (exibições de gerenciamento dinâmico):
 
 - Armazenam informações sobre a *atividade atual* das sessões de evento em execução. Mas esses DMVs sabem muito sobre a definição das sessões.
     - Mesmo se todas as sessões de eventos estiverem paradas no momento, um SELECT da exibição de *sys.dm_xe_packages* ainda retornará linhas porque vários pacotes são carregados na memória ativa na inicialização do servidor.
@@ -58,10 +62,10 @@ Há dois conjuntos de exibições do sistema para eventos estendidos:
 
 - O prefixo do nome para DMVs de eventos estendidos é:
     - *sys.dm\_xe\_\** é o nome do prefixo no SQL Server.
-    - *sys.dm\_xe\_database\_\** geralmente é o prefixo de nome no Banco de Dados SQL.
+    - *sys.dm\_xe\_bancodedados\_\** geralmente é o prefixo de nome no Banco de Dados SQL.
 
 
-#### Permissões:
+#### <a name="permissions"></a>Permissões:
 
 
 Para realizar a seleção com SELECT das exibições do sistema, a seguinte permissão é necessária:
@@ -72,7 +76,7 @@ Para realizar a seleção com SELECT das exibições do sistema, a seguinte perm
 
 <a name="section_B_catalog_views"></a>
 
-## B. Exibições do catálogo
+## <a name="b-catalog-views"></a>B. Exibições do catálogo
 
 
 Esta seção corresponde e correlaciona três diferentes perspectivas tecnológicas na mesma sessão de eventos definida. A sessão foi definida e é visível no **Pesquisador de Objetos** do SQL Server Management Studio (SSMS.exe), mas a sessão não está em execução no momento.
@@ -87,7 +91,7 @@ A documentação de referência sobre as exibições de catálogo para eventos e
 
 
 
-#### A sequência nesta seção B:
+#### <a name="the-sequence-in-this-section-b"></a>A sequência nesta seção B:
 
 
 - [B.1 Perspectiva da interface do usuário do SSMS](#section_B_1_SSMS_UI_perspective)
@@ -99,7 +103,7 @@ A documentação de referência sobre as exibições de catálogo para eventos e
 
 
 - [B.3 Perspectiva SELECT JOIN UNION da exibição de catálogo](#section_B_3_Catalog_view_S_J_UNION)
-    - Emita uma instrução T-SQL SELECT das exibições de catálogo do sistema para nossa sessão de evento. Os resultados corresponderem às especificações de instrução **CREATE EVENT SESSION**.
+    - Emita uma instrução T-SQL SELECT das exibições de catálogo do sistema para nossa sessão de evento. Os resultados corresponderem às especificações de instrução **CREATE EVENT SESSION** .
 
 
 &nbsp;
@@ -108,10 +112,10 @@ A documentação de referência sobre as exibições de catálogo para eventos e
 
 <a name="section_B_1_SSMS_UI_perspective"></a>
 
-### B.1 Perspectiva da interface do usuário do SSMS
+### <a name="b1-ssms-ui-perspective"></a>B.1 Perspectiva da interface do usuário do SSMS
 
 
-No SSMS, no seu **Pesquisador de Objetos**, é possível iniciar a caixa de diálogo **Nova Sessão** expandindo **Gerenciamento** > **Eventos Estendidos** e clicando com o botão direito do mouse em **Sessões** > **Nova Sessão**.
+No SSMS, no seu **Pesquisador de Objetos**, é possível iniciar a caixa de diálogo **Nova Sessão** expandindo **Gerenciamento** > **Eventos Estendidos**e clicando com o botão direito do mouse em **Sessões** > **Nova Sessão**.
 
 Na caixa de diálogo grande **Nova Sessão**, em sua primeira seção chamada **Geral**, vemos que a opção foi selecionada para **Iniciar a sessão de evento na inicialização do servidor**.
 
@@ -147,7 +151,7 @@ Isso conclui a perspectiva da interface do usuário do SSMS em uma definição d
 
 <a name="section_B_2_TSQL_perspective"></a>
 
-### B.2 Perspectiva do Transact-SQL
+### <a name="b2-transact-sql-perspective"></a>B.2 Perspectiva do Transact-SQL
 
 
 Independentemente de como uma definição de sessão do evento é criada, na interface do usuário do SSMS, a sessão pode ser submetida à engenharia reversa em um script do Transact-SQL perfeitamente correspondente. Você pode examinar as capturas de tela de Nova Sessão anteriores e comparar as especificações visíveis com as cláusulas no seguinte script **CREATE EVENT SESSION** do T-SQL gerado.
@@ -205,7 +209,7 @@ Isso conclui a perspectiva do T-SQL.
 
 <a name="section_B_3_Catalog_view_S_J_UNION"></a>
 
-### B.3 Perspectiva SELECT JOIN UNION da exibição de catálogo
+### <a name="b3-catalog-view-select-join-union-perspective"></a>B.3 Perspectiva SELECT JOIN UNION da exibição de catálogo
 
 
 Não tenha medo! A instrução T-SQL SELECT é longa apenas porque une, com UNION, vários SELECTs pequenos. Qualquer um dos SELECTs pequenos pode ser executado sozinho. Os pequenos SELECT mostram como as várias exibições de catalogação do sistema devem ser unidas, utilizando JOIN.
@@ -343,7 +347,7 @@ ORDER BY
 ```
 
 
-#### Saída
+#### <a name="output"></a>Saída
 
 
 A seguir está a saída real da execução de SELECT JOIN UNION anterior. Os nomes de parâmetro de saída e os valores mapeiam para o que é claramente visível na instrução CREATE EVENT SESSION anterior.
@@ -373,7 +377,7 @@ Isso conclui a seção sobre exibições do catálogo.
 
 <a name="section_C_DMVs"></a>
 
-## C. DMVs (Exibições de gerenciamento dinâmico)
+## <a name="c-dynamic-management-views-dmvs"></a>C. DMVs (Exibições de gerenciamento dinâmico)
 
 
 Agora, vamos mudar para DMVs. Esta seção fornece várias instruções Transact-SQL SELECT que servem, cada uma, a uma finalidade de negócios útil específica. Além disso, os SELECTs demonstram como unir as DMVs com JOIN para quaisquer novos usos desejados.
@@ -400,7 +404,7 @@ Aqui está a lista de SELECTs nesta seção C de DMV:
 
 <a name="section_C_1_list_packages"></a>
 
-### C.1 Lista de todos os pacotes
+### <a name="c1-list-of-all-packages"></a>C.1 Lista de todos os pacotes
 
 
 Todos os objetos que você pode usar na área de eventos estendidos são provenientes de pacotes que são carregados no sistema. Esta seção lista todos os pacotes e suas descrições.
@@ -417,7 +421,7 @@ SELECT  --C.1
 ```
 
 
-#### Saída
+#### <a name="output"></a>Saída
 
 Aqui está a lista de pacotes.
 
@@ -456,7 +460,7 @@ XtpRuntime     Extended events for the XTP Runtime
 
 <a name="section_C_2_count_object_type"></a>
 
-### C.2 Contagem de cada tipo de objeto
+### <a name="c2-count-of-every-object-type"></a>C.2 Contagem de cada tipo de objeto
 
 
 Esta seção informa sobre os tipos de objetos que contêm pacotes de eventos. É exibida uma lista completa de todos os tipos de objeto que estão em *sys.dm\_xe\_objects*, juntamente com a contagem para cada tipo.
@@ -475,7 +479,7 @@ SELECT  --C.2
 ```
 
 
-#### Saída
+#### <a name="output"></a>Saída
 
 Aqui está a contagem de objetos por tipo de objeto. Existem aproximadamente 1915 objetos.
 
@@ -499,7 +503,7 @@ Count-of-Type   object_type
 
 <a name="section_C_3_select_all_available_objects"></a>
 
-### C.3 SELECT todos os itens disponíveis classificados por tipo
+### <a name="c3-select-all-available-items-sorted-by-type"></a>C.3 SELECT todos os itens disponíveis classificados por tipo
 
 
 O SELECT a seguir retorna aproximadamente 1915 linhas, uma para cada objeto.
@@ -530,7 +534,7 @@ SELECT  --C.3
 ```
 
 
-#### Saída
+#### <a name="output"></a>Saída
 
 Para aguçar seu apetite, a seguir está uma amostragem arbitrária dos objetos retornados pelo SELECT anterior.
 
@@ -566,7 +570,7 @@ type           package0       xml                           Well formed XML frag
 
 <a name="section_C_4_data_fields"></a>
 
-### C.4 Campos de dados disponíveis para seu evento
+### <a name="c4-data-fields-available-for-your-event"></a>C.4 Campos de dados disponíveis para seu evento
 
 
 A instrução SELECT a seguir retorna todos os campos de dados que são específicos para seu tipo de evento.
@@ -595,7 +599,7 @@ SELECT  -- C.4
         AND
         o.object_type = 'event'
         AND
-        o.name        = '<EVENT-NAME-HERE!>'  --'lock_deadlock'
+        o.name        = '\<EVENT-NAME-HERE!>'  --'lock_deadlock'
     ORDER BY
         [Package],
         [Event],
@@ -603,11 +607,11 @@ SELECT  -- C.4
 ```
 
 
-#### Saída
+#### <a name="output"></a>Saída
 
-As linhas a seguir foram retornadas pelo SELECT, WHERE `o.name = 'lock_deadlock'` anterior:
+As linhas a seguir foram retornadas pelo SELECT, WHERE `o.name = 'lock_deadlock'`anterior:
 
-- Cada linha representa um filtro opcional para o evento *sqlserver.lock_deadlock*.
+- Cada linha representa um filtro opcional para o evento *sqlserver.lock_deadlock* .
 - A coluna *\[Column-Description\]* é omitida da exibição a seguir. Geralmente, seu valor é NULL.
 
 
@@ -642,7 +646,7 @@ sqlserver   lock_deadlock   transaction_id
 
 <a name="section_C_5_map_values_fields"></a>
 
-### C.5 *sys.dm_xe_map_values* e campos de evento
+### <a name="c5-sysdmxemapvalues-and-event-fields"></a>C.5 *sys.dm_xe_map_values* e campos de evento
 
 
 A instrução SELECT a seguir inclui um JOIN para a exibição complicada chamada *sys.dm_xe_map_values*.
@@ -682,7 +686,7 @@ SELECT  --C.5
     WHERE
         do.object_type = 'event'
         AND
-        do.name        = '<YOUR-EVENT-NAME-HERE!>'  --'lock_deadlock'
+        do.name        = '\<YOUR-EVENT-NAME-HERE!>'  --'lock_deadlock'
     ORDER BY
         [Package],
         [Object],
@@ -691,7 +695,7 @@ SELECT  --C.5
 ```
 
 
-#### Saída
+#### <a name="output"></a>Saída
 
 <a name="resource_type_dmv_actual_row"></a>
 
@@ -719,7 +723,7 @@ you could put:
 
 <a name="section_C_6_parameters_targets"></a>
 
-### C.6 Parâmetros para destinos
+### <a name="c6-parameters-for-targets"></a>C.6 Parâmetros para destinos
 
 
 A instrução SELECT a seguir retorna todos os parâmetros para o seu destino. Cada parâmetro está marcado para indicar se é obrigatório. Os valores que você atribui a parâmetros afetam o comportamento do destino.
@@ -754,7 +758,7 @@ SELECT  --C.6
     WHERE
         o.object_type = 'target'
         AND
-        o.name     LIKE '%'    -- Or '<YOUR-TARGET-NAME-HERE!>'.
+        o.name     LIKE '%'    -- Or '\<YOUR-TARGET-NAME-HERE!>'.
     ORDER BY
         [Package],
         [Target],
@@ -763,7 +767,7 @@ SELECT  --C.6
 ```
 
 
-#### Saída
+#### <a name="output"></a>Saída
 
 As linhas de parâmetros a seguir são um subconjunto daquelas retornadas pela instrução SELECT anterior, no SQL Server 2016.
 
@@ -784,7 +788,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 
 <a name="section_C_7_dmv_select_target_data_column"></a>
 
-### C.7 SELECT de DMV convertendo a coluna target_data para XML
+### <a name="c7-dmv-select-casting-targetdata-column-to-xml"></a>C.7 SELECT de DMV convertendo a coluna target_data para XML
 
 
 Esse SELECT de DMV retorna linhas de dados do destino de sua sessão de eventos ativa. Os dados são convertidos em XML, o que torna sua célula retornada clicável para a exibição fácil no SSMS.
@@ -804,18 +808,18 @@ SELECT  --C.7
 
             ON s.address = t.event_session_address
     WHERE
-        s.name = '<Your-Session-Name-Here!>';
+        s.name = '\<Your-Session-Name-Here!>';
 ```
 
 
-#### Saída, a única linha, incluindo sua célula XML
+#### <a name="output-the-only-row-including-its-xml-cell"></a>Saída, a única linha, incluindo sua célula XML
 
 Aqui está a única linha resultante do SELECT anterior. A coluna *XML-Cast* contém uma cadeia de caracteres de XML que o SSMS entende que é XML. Portanto, o SSMS compreende que ele deve tornar a célula de XML-Cast clicável.
 
 
 Para esta execução:
 
-- O valor *s.name =* foi definido para uma sessão de evento para o evento *checkpoint_begin*.
+- O valor *s.name =* foi definido para uma sessão de evento para o evento *checkpoint_begin* .
 - O destino era um *ring_buffer*.
 
 
@@ -826,7 +830,7 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
 ```
 
 
-#### Saída, XML exibido formatado quando a célula é clicada
+#### <a name="output-xml-displayed-pretty-when-cell-is-clicked"></a>Saída, XML exibido formatado quando a célula é clicada
 
 
 Quando a célula XML-CAST é clicada, a seguinte exibição formatada aparece.
@@ -852,7 +856,7 @@ Quando a célula XML-CAST é clicada, a seguinte exibição formatada aparece.
 
 <a name="section_C_8_select_function_disk"></a>
 
-### C.8 SELECT FROM de uma função para recuperar dados de event_file da unidade de disco
+### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>C.8 SELECT FROM de uma função para recuperar dados de event_file da unidade de disco
 
 
 Suponha que sua sessão de eventos coletou alguns dados e foi parada posteriormente. Se sua sessão tiver sido definida para usar o destino event_file, você ainda poderá recuperar os dados chamando a função *sys.fn_xe_target_read_file*.
@@ -872,7 +876,7 @@ SELECT  --C.8
     FROM
         sys.fn_xe_file_target_read_file(
 
-            '<YOUR-PATH-FILE-NAME-ROOT-HERE!>*.xel',
+            '\<YOUR-PATH-FILE-NAME-ROOT-HERE!>*.xel',
             --'C:\Junk\Checkpoint_Begins_ES*.xel',  -- Example.
 
             NULL, NULL, NULL
@@ -880,7 +884,7 @@ SELECT  --C.8
 ```
 
 
-#### Saída, linhas retornadas pelo SELECT FROM da função
+#### <a name="output-rows-returned-by-select-from-the-function"></a>Saída, linhas retornadas pelo SELECT FROM da função
 
 
 A seguir estão as linhas retornadas pelo SELECT FROM da função anterior. A coluna do XML mais à direita contém os dados que são especificamente sobre a ocorrência do evento.
@@ -896,7 +900,7 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   ch
 ```
 
 
-#### Saída, uma célula XML
+#### <a name="output-one-xml-cell"></a>Saída, uma célula XML
 
 
 Aqui está o conteúdo da primeira célula XML, do conjunto de linhas retornado anterior.
@@ -915,4 +919,6 @@ Aqui está o conteúdo da primeira célula XML, do conjunto de linhas retornado 
   </action>
 </event>
 ```
+
+
 

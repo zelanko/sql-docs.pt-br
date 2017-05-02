@@ -1,23 +1,27 @@
 ---
-title: "Gerenciar a Reten&#231;&#227;o de Dados Hist&#243;ricos em Tabelas Temporais com Vers&#227;o do Sistema | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gerenciar a retenção de dados históricos em tabelas temporais com controle de versão do sistema | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 caps.latest.revision: 23
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c8237dfcc25045fb0fec915c942ea7968e02a13
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gerenciar a Reten&#231;&#227;o de Dados Hist&#243;ricos em Tabelas Temporais com Vers&#227;o do Sistema
+# <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gerenciar a Retenção de Dados Históricos em Tabelas Temporais com Versão do Sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Com tabelas temporais com versão do sistema, a tabela de histórico pode aumentar o tamanho do banco de dados mais do que tabelas regulares, especialmente nas seguintes condições:  
@@ -28,7 +32,7 @@ caps.handback.revision: 23
   
  Uma tabela de histórico grande e crescente pode se tornar um problema, tanto devido a custos de armazenamento puro, como por impor um desempenho imposto sobre consultas temporais. Portanto, o desenvolvimento de uma política de retenção de dados para o gerenciamento de dados na tabela de histórico é um aspecto importante do planejamento e gerenciamento do ciclo de vida de cada tabela temporal.  
   
-## Gerenciamento da retenção de dados da tabela de histórico  
+## <a name="data-retention-management-for-history-table"></a>Gerenciamento da retenção de dados da tabela de histórico  
  O gerenciamento da retenção de dados da tabela temporal começa com a determinação do período de retenção necessário para cada tabela temporal. Sua política de retenção, na maioria dos casos, deve ser considerada parte da lógica de negócios do aplicativo usando as tabelas temporais. Por exemplo, aplicativos na auditoria de dados e cenários de viagem de tempo têm requisitos sólidos em termos de quanto tempo os dados históricos devem estar disponíveis para consulta online.  
   
  Após determinar o período de retenção de dados, a próxima etapa é desenvolver um plano para gerenciar os dados históricos, como e onde você armazena seus dados históricos e como excluir dados históricos anteriores aos requisitos de retenção. Com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você tem as três abordagens a seguir para gerenciar dados históricos na tabela de histórico temporal:  
@@ -41,11 +45,11 @@ caps.handback.revision: 23
   
  Com cada uma dessas abordagens, a lógica para a migração ou limpeza de dados históricos baseia-se na coluna que corresponde ao término do período na tabela atual. O final do valor do período para cada linha determina o momento em que a versão de linha se torna "fechada", ou seja, quando ela chega à tabela de histórico. Por exemplo, a condição `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` especifica que dados históricos com mais de um mês precisam ser removidos ou movidos da tabela de histórico.  
   
-> **OBSERVAÇÃO:** os exemplos deste tópico usam este [exemplo de Tabela Temporal](https://msdn.microsoft.com/library/mt590957.aspx).  
+> **OBSERVAÇÃO:**  os exemplos deste tópico usam este [exemplo de Tabela Temporal](https://msdn.microsoft.com/library/mt590957.aspx).  
   
-## Utilização da abordagem do Stretch Database  
+## <a name="using-stretch-database-approach"></a>Utilização da abordagem do Stretch Database  
   
-> **OBSERVAÇÃO:** o uso da abordagem do Stretch Database só se aplica ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e não se aplica ao [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+> **OBSERVAÇÃO:**  o uso da abordagem do Stretch Database só se aplica ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e não se aplica ao [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md) em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migra os dados históricos de forma transparente para o Azure. Para mais segurança, é possível criptografar dados em movimento usando o recurso [Sempre Criptografado](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) do SQL Server. Além disso, você pode usar a [Segurança em nível de linha](../../relational-databases/security/row-level-security.md) e outros recursos de segurança avançados do SQL Server com o Stretch Database e o Temporal para proteger seus dados.  
   
@@ -62,26 +66,26 @@ caps.handback.revision: 23
   
  Você pode configurar uma tabela de histórico temporal para o Stretch usando o Assistente de transferência ou o Transact-SQL e pode habilitar para ampliação uma tabela de histórico temporal enquanto o sistema de controle de versão é definido como **ON**. Não é permitido ampliar a tabela atual porque isso não faz sentido.  
   
-### Usando o Assistente de Ampliação para ampliar a tabela de histórico inteira  
+### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Usando o Assistente de Ampliação para ampliar a tabela de histórico inteira  
  O método mais fácil para iniciantes é usar o Assistente de ampliação para habilitar a ampliação do banco de dados inteiro e escolher a tabela de histórico temporal no assistente de ampliação (este exemplo supõe que você tenha configurado a tabela Department como uma tabela temporal com versão do sistema em um banco de dados vazio). No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], não é possível clicar com o botão direito do mouse na própria tabela de histórico temporal e clicar em Ampliar.  
   
-1.  Clique com o botão direito do mouse em seu banco de dados e aponte para **Tarefas**, aponte para **Stretch** e clique em **Habilitar** para iniciar o assistente.  
+1.  Clique com o botão direito do mouse em seu banco de dados e aponte para **Tarefas**, aponte para **Stretch**e clique em **Habilitar** para iniciar o assistente.  
   
-2.  Na janela **Selecionar tabelas**, marque a caixa de seleção da tabela de histórico temporal e clique em Avançar.  
+2.  Na janela **Selecionar tabelas** , marque a caixa de seleção da tabela de histórico temporal e clique em Avançar.  
   
-     ![Selecting the history table on the Select tables page](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Selecting the history table on the Select tables page")  
+     ![Selecionando a tabela de histórico na página Selecionar tabelas](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Selecionando a tabela de histórico na página Selecionar tabelas")  
   
-3.  Na janela **Configurar o Azure**, forneça suas credenciais de logon. Entre no Microsoft Azure ou se inscreva em uma conta. Selecione a assinatura a ser usada e escolha a região do Azure. Em seguida, crie um novo servidor ou escolha um servidor existente. Clique em **Avançar**.  
+3.  Na janela **Configurar o Azure** , forneça suas credenciais de logon. Entre no Microsoft Azure ou se inscreva em uma conta. Selecione a assinatura a ser usada e escolha a região do Azure. Em seguida, crie um novo servidor ou escolha um servidor existente. Clique em **Avançar**.  
   
-     ![Create new Azure server - Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-4.png "Create new Azure server - Stretch Database wizard")  
+     ![Criar novo servidor do Azure – Assistente do Stretch Database](../../relational-databases/tables/media/stretch-wizard-4.png "Criar novo servidor do Azure – Assistente do Stretch Database")  
   
-4.  Na janela **Proteger credenciais**, forneça uma senha para a chave mestra de banco de dados para proteger suas credenciais de banco de dados SQL Server de origem e clique em Avançar.  
+4.  Na janela **Proteger credenciais** , forneça uma senha para a chave mestra de banco de dados para proteger suas credenciais de banco de dados SQL Server de origem e clique em Avançar.  
   
-     ![Secure credentials page of the Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-6.png "Secure credentials page of the Stretch Database wizard")  
+     ![Página Proteger Credenciais do Assistente do Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Página Proteger Credenciais do Assistente do Stretch Database")  
   
-5.  Na janela **Selecionar endereço IP**, forneça o intervalo de endereços IP do SQL Server para permitir que o servidor do Azure se comunique com o SQL Server (se você selecionar um servidor existente para o qual uma regra de firewall já exista, basta clicar em Avançar aqui para usar a regra de firewall existente). Clique em **Avançar** e em **Concluir** para habilitar o Stretch Database e transferir a tabela de histórico temporal.  
+5.  Na janela **Selecionar endereço IP** , forneça o intervalo de endereços IP do SQL Server para permitir que o servidor do Azure se comunique com o SQL Server (se você selecionar um servidor existente para o qual uma regra de firewall já exista, basta clicar em Avançar aqui para usar a regra de firewall existente). Clique em **Avançar** e em **Concluir** para habilitar o Stretch Database e transferir a tabela de histórico temporal.  
   
-     ![Select IP address page of the Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-7.png "Select IP address page of the Stretch Database wizard")  
+     ![Página Selecionar endereço IP do Assistente do Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Página Selecionar endereço IP do Assistente do Stretch Database")  
   
 6.  Após a conclusão do assistente, verifique se seu banco de dados foi habilitado com êxito para Stretch. Observe os ícones no Pesquisador de Objetos indicando que o banco de dados foi transferido  
   
@@ -95,15 +99,15 @@ caps.handback.revision: 23
   
 -   [Habilitar o Stretch Database para uma tabela](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
-### Usando o Transact-SQL para alongar a tabela de histórico inteira  
- Você também pode usar o Transact-SQL para habilitar o Stretch no servidor local e para [Habilitar Stretch Database em um banco de dados](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). Você pode [usar o Transact-SQL para habilitar o Stretch Database em uma tabela](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1). Com um banco de dados habilitado anteriormente para Stretch Database, execute o seguinte script Transact-SQL para alongar uma tabela de histórico temporal com controle de versão do sistema existente:  
+### <a name="using-transact-sql-to-stretch-the-entire-history-table"></a>Usando o Transact-SQL para alongar a tabela de histórico inteira  
+ Você também pode usar o Transact-SQL para habilitar o Stretch no servidor local e para [Habilitar Stretch Database em um banco de dados](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). Você pode  [usar o Transact-SQL para habilitar o Stretch Database em uma tabela](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1). Com um banco de dados habilitado anteriormente para Stretch Database, execute o seguinte script Transact-SQL para alongar uma tabela de histórico temporal com controle de versão do sistema existente:  
   
 ```  
 ALTER TABLE <history table name>   
 SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));  
 ```  
   
-### Usando o Transact-SQL para alongar uma parte da tabela de histórico  
+### <a name="using-transact-sql-to-stretch-a-portion-of-the-history-table"></a>Usando o Transact-SQL para alongar uma parte da tabela de histórico  
  Para transferir apenas uma parte da tabela de histórico, comece criando uma [função de predicado embutido](https://msdn.microsoft.com/library/mt613432.aspx). Para este exemplo, vamos supor que você tenha configurado a função de predicado embutido pela primeira vez no dia 1 de dezembro de 2015 e deseja alongar para o Azure todas as datas de histórico anteriores ao dia 1 de novembro de 2015. Para fazer isso, comece criando a seguinte função:  
   
 ```  
@@ -157,7 +161,7 @@ COMMIT ;
   
  Use o SQL Server Agent ou outro mecanismo de agendamento para garantir uma definição de função de predicado válida o tempo todo.  
   
-## Uso da Abordagem de Particionamento de Tabela  
+## <a name="using-table-partitioning-approach"></a>Uso da Abordagem de Particionamento de Tabela  
  O[Particionamento de tabela](https://msdn.microsoft.com/library/ms188730.aspx) pode tornar as tabelas grandes mais gerenciáveis e escalonáveis. Usando a abordagem de particionamento de tabela, você pode usar partições de tabela de histórico para implementar a limpeza de dados personalizados ou o arquivamento offline com base em uma condição de tempo. O particionamento de tabela também oferece benefícios de desempenho ao consultar tabelas temporais em um subconjunto de histórico de dados por meio da eliminação da partição.  
   
  Com o particionamento de tabela, você pode implementar uma abordagem de janela deslizante para mover a parte mais antiga dos dados históricos da tabela de histórico e manter constante o tamanho da parte retida em termos de idade, mantendo os dados na tabela de histórico iguais ao período de retenção necessário. A operação de extração de dados da tabela de histórico é suportada enquanto SYSTEM_VERSIONING estiver configurado como ATIVO. Isso significa que você pode limpar uma parte dos dados de histórico sem introduzir uma janela de manutenção ou bloquear suas cargas de trabalho regulares.  
@@ -201,7 +205,7 @@ Com o passar do tempo, as novas linhas na tabela de histórico serão levadas pa
   
 3.  SPLIT RANGE: crie uma nova partição vazia 7 usando o [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) com SPLIT RANGE (veja o exemplo A). Ao adicionar um novo limite superior usando essa função, você cria efetivamente uma partição separada para o mês seguinte.  
   
-### Use o Transact-SQL para criar partições na tabela de histórico  
+### <a name="use-transact-sql-to-create-partitions-on-history-table"></a>Use o Transact-SQL para criar partições na tabela de histórico  
  Use o script Transact-SQL na janela de código abaixo para criar a função de partição, o esquema de partição e recriar o índice clusterizado para ser alinhado por partição com o esquema de partição, as partições. Para este exemplo, vamos criar uma abordagem de janela deslizante de seis meses com partições mensais começando em setembro de 2015.  
   
 ```  
@@ -243,7 +247,7 @@ COMMIT TRANSACTION;
   
 ```  
   
-### Usando o Transact-SQL para manter partições no cenário de janela deslizante  
+### <a name="using-transact-sql-to-maintain-partitions-in-sliding-window-scenario"></a>Usando o Transact-SQL para manter partições no cenário de janela deslizante  
  Use o script Transact-SQL na janela de código abaixo para manter as partições no cenário de janela deslizante. Neste exemplo, iremos alternar a partição para setembro de 2015 usando o MERGE RANGE e, em seguida, adicionar uma nova partição para março de 2016 usando o SPLIT RANGE.  
   
 ```  
@@ -316,7 +320,7 @@ COMMIT TRANSACTION
   
 1.  Na etapa (1) criar nova tabela de preparo para o mês que deseja remover (outubro seria o próximo em nosso exemplo)  
   
-2.  Na etapa (3) criar e verificar a restrição que coincide com o mês dos dados que você deseja remover:`[SysEndTime]<=N'2015-10-31T23:59:59.999'` para a partição de outubro  
+2.  Na etapa (3) criar e verificar a restrição que coincide com o mês dos dados que você deseja remover: `[SysEndTime]<=N'2015-10-31T23:59:59.999'` para a partição de outubro  
   
 3.  Na etapa (4) ALTERNAR partição 1 para a tabela de preparo criada recentemente  
   
@@ -326,7 +330,7 @@ COMMIT TRANSACTION
   
  No entanto, a solução ideal seria executar regularmente um script Transact-SQL genérico que fosse capaz de executar a ação apropriada todos os meses sem modificar o script. É possível generalizar o script acima para agir sobre parâmetros fornecidos (limite inferior que precisa ser mesclado e o novo limite que será criado com divisão de partição). Para evitar a criação de uma tabela de preparo a cada mês, você pode criar uma antecipadamente e reutilizá-la alterando a restrição de verificação para corresponder à partição que será alternada. Examine as páginas a seguir para obter ideias sobre [como a janela deslizante pode ser totalmente automatizada](https://msdn.microsoft.com/library/aa964122.aspx) usando um script Transact-SQL.  
   
-### Considerações sobre desempenho com o particionamento de tabela  
+### <a name="performance-considerations-with-table-partitioning"></a>Considerações sobre desempenho com o particionamento de tabela  
  É importante executar as operações MERGE e SPLIT RANGE para evitar qualquer movimentação de dados já que ela pode sobrecarregar o desempenho de forma significativa. Para obter mais informações, veja [Modificar uma função de partição](../../relational-databases/partitions/modify-a-partition-function.md). Faça isso usando RANGE LEFT em vez de RANGE RIGHT quando usar [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md).  
   
  Vamos primeiro explicar visualmente o significado das opções RANGE LEFT e RANGE RIGHT:  
@@ -343,7 +347,7 @@ COMMIT TRANSACTION
   
  Conclusão: usar RANGE LEFT na partição deslizante é muito mais simples para o gerenciamento de partição e evita a movimentação de dados. No entanto, definir limites de partição com RANGE RIGHT é um pouco mais simples já que você não precisa lidar com problemas de escala de tempo de data e hora.  
   
-## Usando a Abordagem de Script de Limpeza Personalizada  
+## <a name="using-custom-cleanup-script-approach"></a>Usando a Abordagem de Script de Limpeza Personalizada  
  Em casos quando o Stretch Database e o particionamento de tabela abordados não são opções viáveis, a terceira abordagem é excluir os dados da tabela de histórico usando o script de limpeza personalizada. Excluir dados da tabela de histórico só é possível quando **SYSTEM_VERSIONING = OFF**. Para evitar a inconsistência de dados, execute a limpeza durante a janela de manutenção (quando as cargas de trabalho que modificam dados não estão ativas) ou dentro de uma transação (bloqueando efetivamente outras cargas de trabalho).  Esta operação requer a permissão **CONTROL** nas tabelas atuais e de histórico.  
   
  Para bloquear minimamente os aplicativos regulares e consultas do usuário, exclua dados em partes menores com um atraso ao executar o script de limpeza dentro de uma transação. Embora, para todos os cenários, não haja um tamanho ideal para cada bloco de dados a ser excluído, a exclusão de mais de 10.000 linhas em uma única transação pode impor um impacto significativo.  
@@ -421,7 +425,7 @@ BEGIN TRAN
 COMMIT;  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tabelas temporais](../../relational-databases/tables/temporal-tables.md)   
  [Introdução a Tabelas Temporais com Controle da Versão do Sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Verificações de consistência do sistema de tabela temporal](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -432,3 +436,4 @@ COMMIT;
  [Funções e exibições de metadados de tabela temporal](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

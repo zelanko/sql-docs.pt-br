@@ -1,24 +1,28 @@
 ---
-title: "Gerenciar Categorias de Pol&#237;tica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.policycategories.f1"
+title: "Gerenciar categorias de política | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.policycategories.f1
 ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 952740a7191b43f61f9cff035b0ad944fe802084
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gerenciar Categorias de Pol&#237;tica
+# <a name="manage-policy-categories"></a>Gerenciar Categorias de Política
   Este tópico descreve como aplicar uma ou todas as políticas disponíveis em uma categoria a toda a instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -50,7 +54,7 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para aplicar políticas de categoria a uma instância do SQL Server  
+#### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>Para aplicar políticas de categoria a uma instância do SQL Server  
   
 1.  No **Pesquisador de Objetos**, clique no sinal de adição para expandir o servidor no qual você aplicará políticas de categoria.  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para aplicar políticas de categoria a uma instância do SQL Server  
+#### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>Para aplicar políticas de categoria a uma instância do SQL Server  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

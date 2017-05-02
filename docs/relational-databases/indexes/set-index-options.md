@@ -1,35 +1,39 @@
 ---
-title: "Op&#231;&#245;es Set Index | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "opção ALLOW_ROW_LOCKS"
-  - "opção SORT_IN_TEMPDB"
-  - "cláusula DROP_EXISTING"
-  - "dados grandes, índices"
-  - "PAD_INDEX"
-  - "STATISTICS_NORECOMPUTE"
-  - "Opção de índice MAXDOP, configurando"
-  - "opções de índice [SQL Server]"
-  - "opção de índice MAXDOP"
-  - "opção IGNORE_DUP_KEY"
-  - "opção ALLOW_PAGE_LOCKS"
-  - "ONLINE"
+title: "Definir opções de índice | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ALLOW_ROW_LOCKS option
+- SORT_IN_TEMPDB option
+- DROP_EXISTING clause
+- large data, indexes
+- PAD_INDEX
+- STATISTICS_NORECOMPUTE
+- MAXDOP index option, setting
+- index options [SQL Server]
+- MAXDOP index option
+- IGNORE_DUP_KEY option
+- ALLOW_PAGE_LOCKS option
+- ONLINE
 ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6cd0050887729a84dfa637ce86e51b5edcc8ee45
+ms.lasthandoff: 04/11/2017
+
 ---
-# Op&#231;&#245;es Set Index
+# <a name="set-index-options"></a>Opções Set Index
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Este tópico descreve como modificar as propriedades de um índice no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -63,7 +67,7 @@ caps.handback.revision: 44
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para modificar as propriedades de um índice no Designer de Tabela  
+#### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>Para modificar as propriedades de um índice no Designer de Tabela  
   
 1.  No Pesquisador de Objetos, clique no sinal de adição ao lado do banco de dados que contém a tabela na qual você modificar as propriedades de um índice.  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 44
   
 3.  Clique com o botão direito do mouse na tabela em que você deseja modificar as propriedades de um índice e selecione **Design**.  
   
-4.  No menu **Designer de Tabela**, clique em **Índices/Chaves**.  
+4.  No menu **Designer de Tabela** , clique em **Índices/Chaves**.  
   
 5.  Selecione o índice a ser modificado. Suas propriedades aparecerão na grade principal.  
   
@@ -79,9 +83,9 @@ caps.handback.revision: 44
   
 7.  Clique em **Fechar**.  
   
-8.  No menu **Arquivo**, selecione **Salvar***table_name*.  
+8.  No menu **Arquivo** , selecione **Salvar***table_name*.  
   
-#### Para modificar as propriedades de um índice no Pesquisador de Objetos  
+#### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>Para modificar as propriedades de um índice no Pesquisador de Objetos  
   
 1.  No Pesquisador de Objetos, clique no sinal de adição ao lado do banco de dados que contém a tabela na qual você modificar as propriedades de um índice.  
   
@@ -97,11 +101,11 @@ caps.handback.revision: 44
   
 7.  Altere as configurações de alguma ou de todas as propriedades para personalizar o índice.  
   
-8.  Para adicionar, remover ou alterar a posição de uma coluna de índice, selecione a página **Geral** na caixa de diálogo **Propriedades do Índice –** *index_name*. Para obter mais informações, consulte [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).  
+8.  Para adicionar, remover ou alterar a posição de uma coluna de índice, selecione a página **Geral** na caixa de diálogo **Propriedades do Índice –** *index_name* . Para obter mais informações, consulte [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para ver as propriedades de todos os índices em uma tabela  
+#### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>Para ver as propriedades de todos os índices em uma tabela  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -135,7 +139,7 @@ caps.handback.revision: 44
   
     ```  
   
-#### Para definir as propriedades de um índice  
+#### <a name="to-set-the-properties-of-an-index"></a>Para definir as propriedades de um índice  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -150,3 +154,4 @@ caps.handback.revision: 44
  Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
   
+

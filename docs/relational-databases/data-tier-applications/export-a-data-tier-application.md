@@ -1,40 +1,44 @@
 ---
-title: "Exportar um aplicativo da camada de dados | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.exportdac.progress.f1"
-  - "sql13.swb.exportdac.summary.f1"
-  - "sql13.swb.exportdac.results.f1"
-  - "sql13.swb. exportdac.results.f1"
-  - "sql13.swb. exportdac.summary.f1"
-  - "sql13.swb. exportdac.settings.f1"
-  - "sql13.swb.exportdac.welcome.f1"
-  - "sql13.swb.exportdac.settings.f1"
-helpviewer_keywords: 
-  - "Como [DAC], exportar"
-  - "assistente [DAC], exportar"
-  - "exportar DAC"
-  - "aplicativo da camada de dados [SQL Server], exportar"
+title: Exportar um aplicativo da camada de dados | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.exportdac.progress.f1
+- sql13.swb.exportdac.summary.f1
+- sql13.swb.exportdac.results.f1
+- sql13.swb. exportdac.results.f1
+- sql13.swb. exportdac.summary.f1
+- sql13.swb. exportdac.settings.f1
+- sql13.swb.exportdac.welcome.f1
+- sql13.swb.exportdac.settings.f1
+helpviewer_keywords:
+- How to [DAC], export
+- wizard [DAC], export
+- export DAC
+- data-tier application [SQL Server], export
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6a68d0e0a9347331c31b6e4d09b1ec7e9856742a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exportar um aplicativo da camada de dados
+# <a name="export-a-data-tier-application"></a>Exportar um aplicativo da camada de dados
   A exportação de um aplicativo de camada de dados implantado (DAC) ou de um banco de dados cria um arquivo de exportação que contém as definições dos objetos no banco de dados e todos os dados contidos nas tabelas. O arquivo de exportação pode ser importado para outra instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], ou para [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC entre instâncias, criar um arquivo morto ou criar uma cópia local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-## Antes de começar  
+## <a name="before-you-begin"></a>Antes de começar  
  O processo de exportação compila um arquivo de exportação DAC em duas fases.  
   
 1.  A exportação compila uma definição de DAC no arquivo de exportação – BACPAC– do mesmo modo que uma extração de DAC compila uma definição de DAC em um arquivo de pacote de DAC. A definição do DAC exportada inclui todos os objetos no banco de dados atual. Se o processo de exportação for executado em um banco de dados que foi implantado originalmente de um DAC, e tiverem sido feitas alterações diretamente no banco de dados depois da implantação, a definição exportada corresponderá ao objeto definido no banco de dados, e não ao que foi definido no DAC original.  
@@ -43,10 +47,9 @@ caps.handback.revision: 19
   
  O processo de exportação define a versão de DAC como 1.0.0.0 e a descrição de DAC no arquivo de exportação para uma cadeia de caracteres vazia. Se o banco de dados foi implantado de um DAC, a definição do DAC no arquivo de exportação conterá o nome atribuído ao DAC original; caso contrário, o nome do DAC será definido como o nome do banco de dados.  
   
- Há um aplicativo de exemplo nos Laboratórios [!INCLUDE[ssSDS](../../includes/sssds-md.md)] que podem ser usados para testar a exportação e importação de DACs e bancos de dados. Para obter instruções sobre como baixar e usar o exemplo, consulte [Importação e exportação para banco de dados SQL do Windows Azure](http://go.microsoft.com/fwlink/?LinkId=219404).  
-  
+
 ###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
- Um DAC ou banco de dados só pode ser exportado de um banco de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior.  
+ Um DAC ou banco de dados só pode ser exportado de um banco de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior.  
   
  Você não poderá exportar um banco de dados com objetos sem suporte em um DAC ou usuários contidos. Para obter mais informações sobre os tipos de objetos com suporte em um DAC, consulte [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
@@ -85,7 +88,7 @@ caps.handback.revision: 19
   
  **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página de Introdução no futuro.  
   
- **Avançar** – Segue para a página **Selecionar Pacote de DAC**.  
+ **Avançar** – Segue para a página **Selecionar Pacote de DAC** .  
   
  **Cancelar** – Cancela a operação e fecha o Assistente.  
   
@@ -96,7 +99,7 @@ caps.handback.revision: 19
   
 -   **Salvar no Microsoft Azure** – Cria um arquivo BACPAC em um contêiner do Microsoft Azure. Você deve se conectar a um contêiner do Windows Azure para validar esta opção. Observe que esta opção também exige que você especifique um diretório local para o arquivo temporário. Observe que o arquivo temporário será criado no local especificado e permanecerá lá depois que a operação for concluída.  
   
- Para especificar um subconjunto de tabelas a serem exportadas, use a opção **Avançado**.  
+ Para especificar um subconjunto de tabelas a serem exportadas, use a opção **Avançado** .  
   
 ##  <a name="Validation"></a> Página de Validação  
  Use a página de validação para revisar os problemas que bloqueiam a operação. Para continuar, resolva os problemas de bloqueio e clique em **Executar Novamente a Validação** para verificar se a validação foi bem-sucedida.  
@@ -125,7 +128,7 @@ caps.handback.revision: 19
   
 3.  Use o método **Export** do tipo **Microsoft.SqlServer.Management.Dac.DacStore** para exportar o DAC. Especifique o nome do DAC a ser exportado e o caminho para a pasta onde o arquivo de exportação será colocado.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Extrair um DAC de um banco de dados](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)  
   

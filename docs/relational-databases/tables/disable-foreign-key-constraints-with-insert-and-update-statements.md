@@ -1,28 +1,32 @@
 ---
-title: "Desabilitar restri&#231;&#245;es FOREIGN KEY com instru&#231;&#245;es INSERT e UPDATE | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restrições [SQL Server], chaves estrangeiras"
-  - "chaves estrangeiras [SQL Server], desabilitando restrições"
-  - "desabilitando restrições"
-  - "Instrução UPDATE [SQL Server], restrições de chave estrangeira"
-  - "Instrução INSERT [SQL Server], restrições de chave estrangeira"
+title: "Desabilitar restrições Foreign Key com instruções INSERT e UPDATE | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- constraints [SQL Server], foreign keys
+- foreign keys [SQL Server], disabling constraints
+- disabling constraints
+- UPDATE statement [SQL Server], foreign key constraints
+- INSERT statement [SQL Server], foreign key constraints
 ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a72cfad873d2fe891c9f10c3c5f8c0ede3a68ff2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Desabilitar restri&#231;&#245;es FOREIGN KEY com instru&#231;&#245;es INSERT e UPDATE
+# <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>Desabilitar restrições FOREIGN KEY com instruções INSERT e UPDATE
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Você pode desabilitar uma restrição de chave estrangeira durante transações INSERT e UPDATE no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use esta opção se você souber que novos dados violarão a restrição existente ou se a restrição se aplicar somente aos dados que já estão no banco de dados.  
@@ -53,7 +57,7 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para desabilitar uma restrição de chave estrangeira para instruções INSERT e UPDATE  
+#### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>Para desabilitar uma restrição de chave estrangeira para instruções INSERT e UPDATE  
   
 1.  No **Pesquisador de Objetos**, expanda a tabela com a restrição e expanda a pasta **Chaves** .  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para desabilitar uma restrição de chave estrangeira para instruções INSERT e UPDATE  
+#### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>Para desabilitar uma restrição de chave estrangeira para instruções INSERT e UPDATE  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

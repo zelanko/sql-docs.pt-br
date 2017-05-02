@@ -1,23 +1,27 @@
 ---
-title: "Criando uma tabela com otimiza&#231;&#227;o de mem&#243;ria e um procedimento armazenado compilado nativamente | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Criando uma tabela com otimização de memória e um procedimento armazenado compilado nativamente | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cf291b900f61590446776dab273d2fcc14509234
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criando uma tabela com otimiza&#231;&#227;o de mem&#243;ria e um procedimento armazenado compilado nativamente
+# <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Criando uma tabela com otimização de memória e um procedimento armazenado compilado nativamente
   Este tópico contém um exemplo que apresenta a você a sintaxe do OLTP na memória.  
   
  Para permitir que um aplicativo use o OLTP na memória, você precisa concluir as seguintes tarefas:  
@@ -233,7 +237,7 @@ ORDER BY so.so_id, sod.lineitem_id
   
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Exemplos de código de OLTP na memória](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   

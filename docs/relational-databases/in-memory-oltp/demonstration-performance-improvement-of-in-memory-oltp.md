@@ -1,25 +1,29 @@
 ---
-title: "Demonstra&#231;&#227;o: aprimoramento do desempenho do OLTP na mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Demonstração: melhoria do desempenho do OLTP in-memory | Microsoft Docs"
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6a6edd38b5efb5b617308b9359eea8d255daeb8d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Demonstra&#231;&#227;o: aprimoramento do desempenho do OLTP na mem&#243;ria
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demonstração: aprimoramento do desempenho do OLTP na memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  O exemplo de código neste tópico mostra o desempenho rápido de tabelas com otimização de memória. A melhoria de desempenho é evidente quando os dados em uma tabela com otimização de memória são acessados de [!INCLUDE[tsql](../../includes/tsql-md.md)] tradicional, interpretado. Essa melhoria do desempenho é ainda maior quando os dados em uma tabela com otimização de memória são acessados de um NCSProc (procedimento armazenado compilado nativamente).  
+  O exemplo de código neste tópico mostra o desempenho rápido de tabelas com otimização de memória. A melhoria de desempenho é evidente quando os dados em uma tabela com otimização de memória são acessados de [!INCLUDE[tsql](../../includes/tsql-md.md)]tradicional, interpretado. Essa melhoria do desempenho é ainda maior quando os dados em uma tabela com otimização de memória são acessados de um NCSProc (procedimento armazenado compilado nativamente).  
  
 Para ver uma demonstração mais abrangente de possíveis aprimoramentos de desempenho do OLTP in-memory, consulte [Demonstração do desempenho do OLTP in-memory v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0). 
   
@@ -27,10 +31,10 @@ Para ver uma demonstração mais abrangente de possíveis aprimoramentos de dese
   
  A melhoria de desempenho oferecida por tabelas com otimização de memória é feita completamente quando os dados em uma tabela com otimização de memória são acessados de um NCSProc.  
   
-## Exemplo de código  
+## <a name="code-example"></a>Exemplo de código  
  As subseções a seguir descrevem cada etapa.  
   
-### Etapa 1a: pré-requisito se estiver usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>Etapa 1a: pré-requisito se estiver usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  As etapas nesta primeira subseção aplicam-se apenas se você estiver executando no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e não se aplicam se você estiver executando no [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Faça o seguinte:  
   
 1.  Use o SQL Server Management Studio (SSMS.exe) para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Qualquer outra ferramenta semelhante a SSMS.exe é aceitável.  
@@ -56,7 +60,7 @@ USE imoltp;
 go  
 ```  
   
-### Etapa 1b: pré-requisito se estiver usando [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>Etapa 1b: pré-requisito se estiver usando [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
  Esta subseção aplica-se apenas se você estiver usando o [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Faça o seguinte:  
   
 1.  Decida qual banco de dados de teste existente será usado para o exemplo de código.  
@@ -65,7 +69,7 @@ go
   
  Se você quiser instruções sobre como usar o portal do Azure para isso, veja [Introdução ao Banco de Dados SQL do Azure](http://azure.microsoft.com/documentation/articles/sql-database-get-started).  
   
-### Etapa 2: criar tabelas com otimização de memória e NCSProc  
+### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Etapa 2: criar tabelas com otimização de memória e NCSProc  
  Essa etapa cria tabelas com otimização de memória e um NCSProc (procedimento armazenado compilado nativamente). Faça o seguinte:  
   
 1.  Use SSMS.exe para conectar-se ao novo banco de dados.  
@@ -115,7 +119,7 @@ END;
 go  
 ```  
   
-### Etapa 3: executar o código  
+### <a name="step-3-run-the-code"></a>Etapa 3: executar o código  
  Agora você pode executar as consultas que demonstrarão o desempenho de tabelas com otimização de memória. Faça o seguinte:  
   
 1.  Use o SSMS.exe para executar o comando T-SQL a seguir no banco de dados.  
@@ -193,7 +197,8 @@ go
 3937 ms , C: memory-optimized table with hash index and native SP.  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

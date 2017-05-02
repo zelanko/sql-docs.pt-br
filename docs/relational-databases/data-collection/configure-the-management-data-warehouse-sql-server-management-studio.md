@@ -1,47 +1,51 @@
 ---
-title: "Configurar o Data Warehouse de Gerenciamento (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.datacollection.wizard_completecfg.f1"
-  - "sql13.swb.dc.datacollection.wizard_config.f1"
-  - "sql13.swb.dc.datacollection.wizard_finish.f1"
-  - "sql13.swb.dc.datacollection.wizard_maploginuser.f1"
-  - "sql13.swb.dc.datacollection.wizard_choosemdw.f1"
-  - "sql13.swb.dc.datacollection.wizard_welcome.f1"
-  - "sql13.swb.dc.datacollection.wizard_createmdw.f1"
-helpviewer_keywords: 
-  - "data warehouse [SQL Server], várias instâncias"
-  - "data warehouse [SQL Server], configurando"
-  - "Configurar o Assistente de Data Warehouse de Gerenciamento"
-  - "data warehouse de gerenciamento, configurando"
+title: Configurar o Data Warehouse de Gerenciamento (SQL Server Management Studio) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.datacollection.wizard_completecfg.f1
+- sql13.swb.dc.datacollection.wizard_config.f1
+- sql13.swb.dc.datacollection.wizard_finish.f1
+- sql13.swb.dc.datacollection.wizard_maploginuser.f1
+- sql13.swb.dc.datacollection.wizard_choosemdw.f1
+- sql13.swb.dc.datacollection.wizard_welcome.f1
+- sql13.swb.dc.datacollection.wizard_createmdw.f1
+helpviewer_keywords:
+- data warehouse [SQL Server], multiple instances
+- data warehouse [SQL Server], configuring
+- Configure Management Data Warehouse Wizard
+- management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0be7c28ff6d9359ae858902f7b2d07cee6f353f6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar o Data Warehouse de Gerenciamento (SQL Server Management Studio)
+# <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurar o Data Warehouse de Gerenciamento (SQL Server Management Studio)
   Este tópico descreve como configurar o data warehouse de gerenciamento para oferecer suporte de armazenamento de dados em uma ou várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usam o coletor de dados. Essas instâncias podem estar no mesmo servidor ou em servidores diferentes. Este tópico também fornece descrições da interface do usuário para a caixa de diálogo [Assistente para Configurar Data Warehouse de Gerenciamento](#Wizard) . Para obter informações sobre como configurar um coletor de dados, consulte [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
   
 > [!NOTE]  
 >  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent estiver configurado para ser executado usando uma das contas de serviço do Sistema (Sistema Local, Serviço de Rede ou Serviço Local) e o data warehouse de gerenciamento for criado em uma instância diferente do coletor de dados, você deverá configurar os conjuntos de coleta para usar um proxy para carregar dados no data warehouse de gerenciamento.  
   
-### Configurar o data warehouse de gerenciamento em uma ou várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Configurar o data warehouse de gerenciamento em uma ou várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Verifique se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent está em execução.  
   
 2.  No Pesquisador de Objetos, expanda o nó **Gerenciamento** .  
   
-3.  Clique com o botão direito do mouse em **Coleta de Dados**, expanda **Tarefas** e clique em **Configurar Data Warehouse de Gerenciamento**.  
+3.  Clique com o botão direito do mouse em **Coleta de Dados**, expanda **Tarefas**e clique em **Configurar Data Warehouse de Gerenciamento**.  
   
 4.  Use o [Assistente para Configurar Data Warehouse de Gerenciamento](#Wizard) para criar um data warehouse de gerenciamento, configurar logons, habilitar a coleta de dados e iniciar os **Conjuntos de Coleta de Dados do Sistema**.  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 28
   
     -   Use o Assistente para Configurar Data Warehouse de Gerenciamento para configurar a coleta de dados para o data warehouse de gerenciamento existente.  
   
-    -   Clique com o botão direito do mouse em **Coleta de Dados** e clique em **Propriedades**. Na guia **Geral** , especifique o data warehouse de gerenciamento existente e o servidor no qual ele está instalado.  
+    -   Clique com o botão direito do mouse em **Coleta de Dados**e clique em **Propriedades**. Na guia **Geral** , especifique o data warehouse de gerenciamento existente e o servidor no qual ele está instalado.  
   
 6.  Repita a etapa 5 até que todas as instâncias do banco de dados que usam o coletor de dados sejam configuradas para carregar os dados para o data warehouse de gerenciamento compartilhado.  
   
@@ -92,7 +96,7 @@ caps.handback.revision: 28
   
  Especifique um logon marcando a caixa de seleção **Mapear** para o logon.  
   
- **Associação à função de banco de dados para:** *\<nome do banco de dados>*  
+ **Associação à função de banco de dados para:** *\<nome do data warehouse>*  
  Selecione a função do data warehouse de gerenciamento para o qual o logon está mapeado marcando a caixa de seleção em uma ou mais da opções a seguir:  
   
 -   **mdw_admin**  
@@ -113,7 +117,7 @@ caps.handback.revision: 28
  Use esta página para exibir os resultados de cada etapa de configuração.  
   
  **Detalhes**  
- Exibe cada etapa de configuração como uma linha na grade **Detalhes**. Cada linha contém uma coluna **Ação** que descreve a etapa e uma coluna **Status** que indica o sucesso ou a falha da etapa. Se houver um erro, será exibida uma mensagem na coluna **Mensagem** .  
+ Exibe cada etapa de configuração como uma linha na grade **Detalhes** . Cada linha contém uma coluna **Ação** que descreve a etapa e uma coluna **Status** que indica o sucesso ou a falha da etapa. Se houver um erro, será exibida uma mensagem na coluna **Mensagem** .  
   
  **Parar**  
  Pare o processamento do assistente.  
@@ -132,10 +136,10 @@ caps.handback.revision: 28
  **Fechar**  
  Feche o assistente.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
  [Gerenciar coleta de dados](../../relational-databases/data-collection/manage-data-collection.md)  
   
   

@@ -1,28 +1,32 @@
 ---
-title: "RBS (Armazenamento de Blob Remoto) [SQL Server] | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Remote Blob Store (RBS) [SQL Server]"
-  - "RBS (Remote Blob Store) [SQL Server]"
+title: RBS (Armazenamento de Blobs Remoto) (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 11/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Remote Blob Store (RBS) [SQL Server]
+- RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5dd24af4232914ff6b86e036827364f1cb8c16a1
+ms.lasthandoff: 04/11/2017
+
 ---
-# RBS (Armazenamento de Blob Remoto) [SQL Server]
+# <a name="remote-blob-store-rbs-sql-server"></a>RBS (Armazenamento de Blob Remoto) [SQL Server]
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Remote BLOB Store (RBS) é um componente complementar opcional que permite aos administradores de bancos de dados armazenar objetos binários grandes em soluções de armazenamento de mercadorias, e não diretamente no servidor de banco de dados principal.  
+  O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Remote BLOB Store (RBS) é um componente complementar opcional que permite aos administradores de bancos de dados armazenar objetos binários grandes em soluções de armazenamento de mercadorias, e não diretamente no servidor de banco de dados principal.  
   
  O RBS está incluído na mídia de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , mas não é instalado pelo programa de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 19
 ### <a name="credential-store-symmetric-key"></a>Chave simétrica do repositório de credenciais  
  Se um provedor requer a instalação e o uso de um segredo armazenado no repositório de credenciais, o RBS usa uma chave simétrica para criptografar os segredos de provedor que um cliente pode usar para obter autorização para o repositório de blob do provedor.  
   
--   O RBS 2016 usa uma chave simétrica do **AES_128**. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] não permite a criação de novas chaves do **TRIPLE_DES**, exceto por motivos de compatibilidade com versões anteriores. Para obter mais informações, consulte [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
+-   O RBS 2016 usa uma chave simétrica do **AES_128** . [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] não permite a criação de novas chaves do **TRIPLE_DES**, exceto por motivos de compatibilidade com versões anteriores. Para obter mais informações, consulte [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
   
 -   O RBS 2014 e versões anteriores usam um repositório de credenciais que mantém os segredos criptografados usando o algoritmo de chave simétrica **TRIPLE_DES** que está desatualizado. Se no momento você estiver usando o **TRIPLE_DES**, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você aperfeiçoe a segurança, seguindo as etapas deste tópico para girar sua chave para um método de criptografia mais forte.  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 19
  Ao usar o RBS, você deve girar periodicamente a chave simétrica do repositório de credenciais. Essa é uma melhor prática comum de segurança para atender às políticas de segurança organizacional.  Um modo de girar a chave simétrica do repositório de credenciais do RBS é usar o [script abaixo](#Key_rotation) no banco de dados RBS.  Você também pode usar esse script para migrar para propriedades com nível de criptografia mais forte, como o comprimento da chave ou algoritmo. Faça backup de seu banco de dados antes da rotação de chaves.  Na conclusão do seu script, ele tem algumas etapas de verificação.  
 Se suas políticas de segurança exigem diferentes propriedades de chave (por exemplo, comprimento de chave ou algoritmo) daquelas fornecidas, o script pode ser usado como um modelo. Modifique as propriedades de chave em dois locais: 1) a criação da chave temporárias 2) a criação da chave permanente.  
   
-##  <a name="a-namerbsresourcesa-rbs-resources"></a><a name="rbsresources"></a> Recursos do RBS  
+##  <a name="rbsresources"></a> RBS resources  
   
  **Exemplos do RBS**  
  Os exemplos do RBS disponíveis em [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) demonstram como desenvolver um aplicativo RBS, e como desenvolver e instalar um provedor RBS personalizado.  
@@ -80,7 +84,7 @@ Se suas políticas de segurança exigem diferentes propriedades de chave (por ex
  **Blog do RBS**  
  O [blog do RBS](http://go.microsoft.com/fwlink/?LinkId=210315) fornece informações adicionais para ajudá-lo a compreender, implantar e manter o RBS.  
   
-##  <a name="a-namekeyrotationa-key-rotation-script"></a><a name="Key_rotation"></a> Script de rotação de chaves  
+##  <a name="Key_rotation"></a> Key rotation script  
  Este exemplo cria um procedimento armazenado denominado `sp_rotate_rbs_symmetric_credential_key` para substituir a chave simétrica do repositório de credenciais do RBS usada atualmente  
 por uma de sua escolha.  Você talvez queira fazer isso se houver uma política de segurança que exija   
 a rotação de chaves periódica ou se houver requisitos de algoritmo específico.  
@@ -232,3 +236,4 @@ SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
   
   
+

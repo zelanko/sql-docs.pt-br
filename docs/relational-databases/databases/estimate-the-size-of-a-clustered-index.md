@@ -1,34 +1,38 @@
 ---
-title: "Estimar o tamanho de um &#237;ndice clusterizado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "alocação de espaço [SQL Server], tamanho do índice"
-  - "tamanho [SQL Server], tabelas"
-  - "espaço em disco [SQL Server], índices"
-  - "prevendo o tamanho da tabela [SQL Server]"
-  - "tamanho da tabela [SQL Server]"
-  - "estimando o tamanho da tabela"
-  - "espaço [SQL Server], índices"
-  - "índices clusterizados, tamanho da tabela"
-  - "índices não clusterizados [SQL Server], tamanho da tabela"
-  - "criando bancos de dados [SQL Server], estimando o tamanho"
-  - "calculando o tamanho da tabela"
+title: "Estimar o tamanho de um índice clusterizado | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], index size
+- size [SQL Server], tables
+- disk space [SQL Server], indexes
+- predicting table size [SQL Server]
+- table size [SQL Server]
+- estimating table size
+- space [SQL Server], indexes
+- clustered indexes, table size
+- nonclustered indexes [SQL Server], table size
+- designing databases [SQL Server], estimating size
+- calculating table size
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ecae889b68740652ab237201bfad2cde58dd39b5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Estimar o tamanho de um &#237;ndice clusterizado
+# <a name="estimate-the-size-of-a-clustered-index"></a>Estimar o tamanho de um índice clusterizado
   Você pode usar as seguintes etapas para estimar a quantidade de espaço exigida para armazenar dados em um índice clusterizado:  
   
 1.  Calcule o espaço usado para armazenar dados no nível folha do índice clusterizado.  
@@ -37,25 +41,25 @@ caps.handback.revision: 49
   
 3.  Some os valores calculados.  
   
-## Etapa 1. Calcular o espaço usado para armazenar dados no nível folha  
+## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Etapa 1. Calcular o espaço usado para armazenar dados no nível folha  
   
 1.  Especifique o número de linhas que estarão presentes na tabela:  
   
-     ***Num_Rows*** = número de linhas na tabela  
+     ***Num_Rows***  = número de linhas na tabela  
   
 2.  Especifique o número de colunas de comprimento fixo e variável e calcule o espaço necessário para o seu armazenamento:  
   
      Calcule o espaço que cada um desses grupos de colunas ocupa dentro da linha de dados. O tamanho de uma coluna depende do tipo de dados e da especificação de comprimento.  
   
-     ***Num_Cols*** = número total de colunas (comprimento fixo e tamanho variável)  
+     ***Num_Cols***  = número total de colunas (comprimento fixo e tamanho variável)  
   
-     ***Fixed_Data_Size*** = tamanho total em bytes de todas as colunas de tamanho fixo  
+     ***Fixed_Data_Size***  = tamanho total em bytes de todas as colunas de tamanho fixo  
   
-     ***Num_Variable_Cols*** = número de colunas de tamanho variável  
+     ***Num_Variable_Cols***  = número de colunas de tamanho variável  
   
-     ***Max_Var_Size*** = tamanho máximo em bytes de todas as colunas de comprimento variável  
+     ***Max_Var_Size***  = tamanho máximo em bytes de todas as colunas de comprimento variável  
   
-3.  Se o índice clusterizado for do tipo não exclusivo, explique a coluna do *indicador de exclusividade*:  
+3.  Se o índice clusterizado for do tipo não exclusivo, explique a coluna do *indicador de exclusividade* :  
   
      O identificador de exclusividade é uma coluna de comprimento variável que permite valor nulo. Ele será não nulo e terá 4 bytes de tamanho em linhas com valores de chave não exclusivos. Esse valor faz parte da chave de índice e é necessário para garantir que cada linha tenha um valor de chave exclusivo.  
   
@@ -82,7 +86,7 @@ caps.handback.revision: 49
      Os bytes adicionados a ***Max_Var_Size*** são para acompanhar cada coluna de variáveis. Essa fórmula presume que todas as colunas de comprimento variável estão 100% completas. Se você prevê que um percentual menor do espaço de armazenamento da coluna de tamanho variável será usada, poderá ajustar o valor ***Max_Var_Size*** de acordo com esse percentual para obter uma estimativa mais precisa do tamanho geral da tabela.  
   
     > [!NOTE]  
-    >  É possível combinar colunas **varchar**, **nvarchar**, **varbinary** ou **sql_variant** que fazem com que a largura total da tabela definida exceda 8.060 bytes. O tamanho de cada uma dessas colunas ainda deve ficar dentro do limite de 8.000 bytes para uma coluna **varchar**, **varbinary** ou **sql_variant** e 4.000 bytes para colunas **nvarchar**. Entretanto, as larguras combinadas podem exceder o limite de 8.060 bytes em uma tabela.  
+    >  É possível combinar colunas **varchar**, **nvarchar**, **varbinary**ou **sql_variant** que fazem com que a largura total da tabela definida exceda 8.060 bytes. O tamanho de cada uma dessas colunas ainda deve ficar dentro do limite de 8.000 bytes para uma coluna **varchar**, **varbinary**ou **sql_variant** e 4.000 bytes para colunas **nvarchar** . Entretanto, as larguras combinadas podem exceder o limite de 8.060 bytes em uma tabela.  
   
      Se não houver colunas de tamanho variável, defina ***Variable_Data_Size*** como 0.  
   
@@ -114,20 +118,20 @@ caps.handback.revision: 49
   
      ***Leaf_space_used***  = 8192 x ***Num_Leaf_Pages***  
   
-## Etapa 2. Calcular o espaço usado para armazenar as informações de índice  
+## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Etapa 2. Calcular o espaço usado para armazenar as informações de índice  
  Você pode usar as seguintes etapas para estimar a quantidade de espaço necessária para armazenar os níveis superiores do índice:  
   
 1.  Especifique o número de colunas de comprimento fixo e variável na chave do índice e calcule o espaço necessário para seu armazenamento:  
   
      As colunas de chave de um índice podem incluir colunas de comprimento fixo e variável. Para estimar o tamanho da linha de índice no nível interior, calcule o espaço que cada um desses grupos de colunas ocupa na linha do índice. O tamanho de uma coluna depende do tipo de dados e da especificação de comprimento.  
   
-     ***Num_Key_Cols*** = número total de colunas de chaves (tamanho fixo e tamanho variável)  
+     ***Num_Key_Cols***  = número total de colunas de chaves (tamanho fixo e tamanho variável)  
   
-     ***Fixed_Key_Size*** = tamanho total em bytes de todas as colunas de chaves de tamanho fixo  
+     ***Fixed_Key_Size***  = tamanho total em bytes de todas as colunas de chaves de tamanho fixo  
   
-     ***Num_Variable_Key_Cols*** = número de colunas de chaves de tamanho variável  
+     ***Num_Variable_Key_Cols***  = número de colunas de chaves de tamanho variável  
   
-     ***Max_Var_Key_Size*** = tamanho máximo em bytes de todas as colunas de chaves de tamanho variável  
+     ***Max_Var_Key_Size***  = tamanho máximo em bytes de todas as colunas de chaves de tamanho variável  
   
 2.  Explique qualquer indicador de exclusividade, caso o índice seja do tipo não exclusivo:  
   
@@ -145,7 +149,7 @@ caps.handback.revision: 49
   
      Se houver colunas que permitem valor nulo na chave de índice, parte da linha do índice será reservada para o bitmap nulo. Calcule seu tamanho:  
   
-     ***Index_Null_Bitmap*** = 2 + ([número de colunas na linha de índice + 7] / 8)  
+     ***Index_Null_Bitmap***  = 2 + ([número de colunas na linha de índice + 7] / 8)  
   
      Somente a parte do inteiro da expressão anterior deve ser usada. Descarte todo o restante.  
   
@@ -193,7 +197,7 @@ caps.handback.revision: 49
   
      ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
   
-## Etapa 3. Some os valores calculados  
+## <a name="step-3-total-the-calculated-values"></a>Etapa 3. Some os valores calculados  
  Some os valores obtidos nas duas etapas anteriores:  
   
  Tamanho do índice clusterizado (bytes) = ***Leaf_Space_Used*** + ***Index_Space_used***  
@@ -210,7 +214,7 @@ caps.handback.revision: 49
   
 -   Valores de LOB (Objeto Grande)  
   
-     O algoritmo usado para determinar exatamente quanto espaço será usado para armazenar os valores de tipos de dados LOB **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml** e **image** é complexo. É suficiente adicionar o tamanho médio dos valores LOB esperados, multiplicá-lo por ***Num_Rows*** e adicioná-lo ao tamanho total de índice clusterizado.  
+     O algoritmo usado para determinar exatamente quanto espaço será usado para armazenar os valores de tipos de dados LOB **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml**e **image** é complexo. É suficiente adicionar o tamanho médio dos valores LOB esperados, multiplicá-lo por ***Num_Rows***e adicioná-lo ao tamanho total de índice clusterizado.  
   
 -   Compactação  
   
@@ -220,7 +224,7 @@ caps.handback.revision: 49
   
      Para obter informações sobre os requisitos de espaço de colunas esparsas, consulte [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Índices clusterizados e não clusterizados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Estimar o tamanho de uma tabela](../../relational-databases/databases/estimate-the-size-of-a-table.md)   
  [Criar índices clusterizados](../../relational-databases/indexes/create-clustered-indexes.md)   

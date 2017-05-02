@@ -1,42 +1,46 @@
 ---
-title: "Reorganizar e recriar &#237;ndices | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.index.rebuild.f1"
-  - "sql13.swb.indexproperties.fragmentation.f1"
-  - "sql13.swb.index.reorg.f1"
-helpviewer_keywords: 
-  - "desfragmentação de objeto grande"
-  - "índices [SQL Server], reorganizando"
-  - "reorganização de índice [SQL Server]"
-  - "reorganizando índices"
-  - "desfragmentando tipos de dados de objeto grande"
-  - "fragmentação de índice [SQL Server]"
-  - "recriação de índice [SQL Server]"
-  - "recriando índices"
-  - "índices [SQL Server], recompilando"
-  - "desfragmentando índices"
-  - "índices não clusterizados [SQL Server], desfragmentando"
-  - "fragmentação [SQL Server]"
-  - "desfragmentação de índice [SQL Server]"
-  - "dados LOB [SQL Server], desfragmentando"
-  - "índices clusterizados, desfragmentando"
+title: "Reorganizar e recompilar índices | Microsoft Docs"
+ms.custom: 
+ms.date: 04/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.index.rebuild.f1
+- sql13.swb.indexproperties.fragmentation.f1
+- sql13.swb.index.reorg.f1
+helpviewer_keywords:
+- large object defragmenting
+- indexes [SQL Server], reorganizing
+- index reorganization [SQL Server]
+- reorganizing indexes
+- defragmenting large object data types
+- index fragmentation [SQL Server]
+- index rebuilding [SQL Server]
+- rebuilding indexes
+- indexes [SQL Server], rebuilding
+- defragmenting indexes
+- nonclustered indexes [SQL Server], defragmenting
+- fragmentation [SQL Server]
+- index defragmenting [SQL Server]
+- LOB data [SQL Server], defragmenting
+- clustered indexes, defragmenting
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 caps.latest.revision: 70
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3c0adf0cb598d11b8bf07d31281c63561fd8db43
+ms.lasthandoff: 04/11/2017
+
 ---
-# Reorganizar e recriar &#237;ndices
+# <a name="reorganize-and-rebuild-indexes"></a>Reorganizar e recriar índices
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Este tópico descreve como reorganizar ou recompilar índice fragmentado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] mantém os índices automaticamente sempre que são realizadas operações de entrada, atualização ou exclusão nos dados subjacentes. No decorrer do tempo, essas modificações podem fazer com que as informações do índice sejam dispersadas pelo banco de dados (fragmentadas). A fragmentação ocorre quando os índices têm páginas nas quais a ordem lógica, com base no valor de chave, não corresponde à ordem física do arquivo de dados. Índices com fragmentação pesada podem degradar o desempenho da consulta e causar lentidão de resposta do aplicativo.  
@@ -80,9 +84,9 @@ caps.handback.revision: 70
   
  Depois que o grau de fragmentação for conhecido, use a tabela a seguir para determinar o melhor método para corrigir a fragmentação.  
   
-|Valor **avg_fragmentation_in_percent**|Instrução corretiva|  
+|Valor**avg_fragmentation_in_percent** |Instrução corretiva|  
 |-----------------------------------------------|--------------------------|  
-|> 5% e \< = 30%|ALTER INDEX REORGANIZE|  
+|> 5% e < = 30%|ALTER INDEX REORGANIZE|  
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON)*|  
   
  \* A recriação de um índice pode ser executada online ou offline. A reorganização de um índice sempre é executada online. Para atingir disponibilidade semelhante à opção de reorganização, recrie índices online.  
@@ -108,11 +112,11 @@ caps.handback.revision: 70
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner**.  
+ Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedureFrag"></a> Usando o SQL Server Management Studio  
   
-#### Para verificar a fragmentação de um índice  
+#### <a name="to-check-the-fragmentation-of-an-index"></a>Para verificar a fragmentação de um índice  
   
 1.  No Pesquisador de Objetos, expanda o banco de dados que contém a tabela na qual você deseja verificar a fragmentação de um índice.  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 70
   
 ##  <a name="TsqlProcedureFrag"></a> Usando Transact-SQL  
   
-#### Para verificar a fragmentação de um índice  
+#### <a name="to-check-the-fragmentation-of-an-index"></a>Para verificar a fragmentação de um índice  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -207,7 +211,7 @@ caps.handback.revision: 70
   
 ##  <a name="SSMSProcedureReorg"></a> Usando o SQL Server Management Studio  
   
-#### Para reorganizar ou recriar um índice  
+#### <a name="to-reorganize-or-rebuild-an-index"></a>Para reorganizar ou recriar um índice  
   
 1.  No Pesquisador de Objetos, expanda o banco de dados que contém a tabela na qual você deseja reorganizar um índice.  
   
@@ -225,7 +229,7 @@ caps.handback.revision: 70
   
 8.  Clique em **OK.**  
   
-#### Para reorganizar todos os índices de uma tabela  
+#### <a name="to-reorganize-all-indexes-in-a-table"></a>Para reorganizar todos os índices de uma tabela  
   
 1.  No Pesquisador de Objetos, expanda o banco de dados que contém a tabela na qual você deseja reorganizar os índices.  
   
@@ -241,7 +245,7 @@ caps.handback.revision: 70
   
 7.  Clique em **OK.**  
   
-#### Para recriar um índice  
+#### <a name="to-rebuild-an-index"></a>Para recriar um índice  
   
 1.  No Pesquisador de Objetos, expanda o banco de dados que contém a tabela na qual você deseja reorganizar um índice.  
   
@@ -261,7 +265,7 @@ caps.handback.revision: 70
   
 ##  <a name="TsqlProcedureReorg"></a> Usando Transact-SQL  
   
-#### Para reorganizar um índice desfragmentado  
+#### <a name="to-reorganize-a-defragmented-index"></a>Para reorganizar um índice desfragmentado  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -279,7 +283,7 @@ caps.handback.revision: 70
     GO  
     ```  
   
-#### Para reorganizar todos os índices de uma tabela  
+#### <a name="to-reorganize-all-indexes-in-a-table"></a>Para reorganizar todos os índices de uma tabela  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -296,7 +300,7 @@ caps.handback.revision: 70
     GO  
     ```  
   
-#### Para recriar um índice desfragmentado  
+#### <a name="to-rebuild-a-defragmented-index"></a>Para recriar um índice desfragmentado  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -306,7 +310,7 @@ caps.handback.revision: 70
   
      [!code-sql[IndexDDL#AlterIndex1](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_1.sql)]  
   
-#### Para recriar todos os índices de uma tabela  
+#### <a name="to-rebuild-all-indexes-in-a-table"></a>Para recriar todos os índices de uma tabela  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -318,7 +322,8 @@ caps.handback.revision: 70
   
  Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Práticas recomendadas de desfragmentação de índice do Microsoft SQL Server 2000](http://technet.microsoft.com/library/cc966523.aspx)  
   
   
+

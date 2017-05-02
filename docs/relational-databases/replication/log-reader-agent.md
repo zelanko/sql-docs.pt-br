@@ -1,32 +1,36 @@
 ---
-title: "Agente de Leitor de Log | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.logreaderagent.f1"
-helpviewer_keywords: 
-  - "caixa de diálogo Log Reader Agent"
+title: Agente de Leitor de Log | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.logreaderagent.f1
+helpviewer_keywords:
+- Log Reader Agent dialog box
 ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7b1922e8a9bb857328a94e3f2b0773f84c29eb54
+ms.lasthandoff: 04/11/2017
+
 ---
-# Agente de Leitor de Log
-  O **Log Reader Agent** caixa de diálogo exibe informações detalhadas sobre o Log Reader Agent, incluindo status, histórico, mensagens informativas e qualquer mensagem de erro.  
+# <a name="log-reader-agent"></a>Agente de Leitor de Log
+  A caixa de diálogo **Log Reader Agent** exibe informações detalhadas sobre o Log Reader Agent, incluindo status, histórico, mensagens informativas e qualquer mensagem de erro.  
   
-## Opções  
- Selecione as sessões do Log Reader Agent para exibir a partir de **exibição** menu e, em seguida, selecione uma sessão específica na grade rotulada **sessões do Log Reader Agent**. Informações detalhadas sobre essa sessão são exibidas na grade rotulada **Ações na sessão selecionada**. Se a sessão selecionada terminou em erro, a área de texto rotulada **Detalhes ou mensagem de erro da sessão selecionada** também será exibida.  
+## <a name="options"></a>Opções  
+ Selecione as sessões do Log Reader Agent a serem exibidas no menu **Exibir** e depois selecione uma sessão específica na grade rotulada **Sessões do Log Reader Agent**. Informações detalhadas sobre essa sessão são exibidas na grade rotulada **Ações na sessão selecionada**. Se a sessão selecionada terminou em erro, a área de texto rotulada **Detalhes ou mensagem de erro da sessão selecionada** também será exibida.  
   
- **Exibição**  
+ **Exibir**  
  Selecione as sessões do Log Reader Agent a serem exibidas. O Log Reader Agent normalmente é executado continuamente, portanto pode haver somente uma sessão para exibir.  
   
  **Status**  
@@ -56,15 +60,15 @@ caps.handback.revision: 18
  Todas as mensagens informativas e de erro que o Log Reader Agent registrou durante a sessão selecionada.  
   
  **Tempo da Ação**  
- A hora em que a ação descrita na **mensagem de ação** coluna foi executada.  
+ O tempo no qual a ação descrita na coluna **Mensagem de Ação** foi executada.  
   
  **Detalhes ou mensagem de erro da sessão selecionada**  
- Exibido somente se a sessão selecionada exibir um valor de **erro** no **Status** coluna. Essa área de texto exibe informações de erro detalhadas e o comando tentado no momento do erro. Também inclui links para conteúdo adicional relacionado ao erro.  
+ Exibido somente se a sessão selecionada exibir um valor de **Erro** na coluna **Status** . Essa área de texto exibe informações de erro detalhadas e o comando tentado no momento do erro. Também inclui links para conteúdo adicional relacionado ao erro.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Iniciar o Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Exibir informações e executar tarefas para os agentes associados com uma publicação e 40; Monitor de replicação e 41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
- [Replicação de monitoramento](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Visão geral dos agentes de replicação.](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Exibir informações e executar tarefas para os agentes associados a uma publicação &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
+ [Monitorando a Replicação](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

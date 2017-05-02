@@ -1,28 +1,32 @@
 ---
-title: "Requisitos para usar tabelas com otimiza&#231;&#227;o de mem&#243;ria | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Requisitos para usar tabelas com otimização de memória | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 caps.latest.revision: 65
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d30c5b808c13258e784187182eab23b0a50c76e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Requisitos para usar tabelas com otimiza&#231;&#227;o de mem&#243;ria
+# <a name="requirements-for-using-memory-optimized-tables"></a>Requisitos para usar tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Para usar o OLTP in-memory no Banco de Dados do Azure, consulte [Introdução a Na Memória no Banco de Dados SQL](http://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
   
- Além dos [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md), estes são os requisitos para usar o OLTP in-memory:  
+ Além dos [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), estes são os requisitos para usar o OLTP in-memory:  
   
 -   SQL Server 2016 SP1 (ou posterior), qualquer edição. Para o SQL Server 2014 e SQL Server 2016 RTM (pré-SP1), você precisa da edição Enterprise, Developer ou Evaluation.
     - Observação: o OLTP na memória requer a versão de 64 bits do SQL Server.  
@@ -41,7 +45,7 @@ caps.handback.revision: 65
   
      Para instalar a geração de relatórios ([Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP in-memory](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (para gerenciar o OLTP in-memory por meio do Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ), [Baixar o SSMS (SQL Server Management Studio)](https://msdn.microsoft.com/library/mt238290.aspx).  
   
-## <a name="important-notes-on-using-includehek2tokenhek2mdmd"></a>Observações importantes sobre o uso do [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
+## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Observações importantes sobre o uso do [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   
 -   A partir do SQL Server 2016, não há limite no tamanho das tabelas com otimização de memória que não seja a memória disponível. No SQL Server 2014, o tamanho total na memória de todas as tabelas duráveis em um banco de dados não deve exceder 250 GB para bancos de dados do SQL Server 2014. Para obter mais informações, consulte [Estimar requisitos de memória para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).  
     - Observação: a partir do SQL Server 2016 SP1, a Standard Edition e a Express Edition oferecem suporte a OLTP na memória, mas elas impõem cotas na quantidade de memória que você pode usar para tabelas com otimização de memória em um determinado banco de dados. Na Standard Edition são 32 GB por banco de dados; na Express Edition são 352 MB por banco de dados. 
@@ -49,6 +53,7 @@ caps.handback.revision: 65
 -   Se você criar um ou vários bancos de dados com tabelas com otimização de memória, deverá habilitar a inicialização imediata de arquivo (conceda à conta de inicialização do serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o direito de usuário SE_MANAGE_VOLUME_NAME) para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sem a inicialização imediata de arquivo, os arquivos de armazenamento com otimização de memória (arquivos delta e de dados) serão inicializados após a criação, que pode ter um impacto negativo no desempenho de sua carga de trabalho. Para obter mais informações sobre a inicialização imediata de arquivo, consulte [Inicialização de arquivo de banco de dados](http://msdn.microsoft.com/library/ms175935\(SQL.105\).aspx). Para obter informações sobre como habilitar a inicialização imediata de arquivo, consulte [Como e por que habilitar a inicialização imediata de arquivo](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
   
 ## <a name="see-also"></a>Consulte também  
- [OLTP na memória &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

@@ -1,23 +1,27 @@
 ---
-title: "Tabelas temporais | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/11/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Tabelas temporais | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/11/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 caps.latest.revision: 47
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a4cdbe630a64ce01c6319dcc5791c0f3f9b3176b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tabelas temporais
+# <a name="temporal-tables"></a>Tabelas temporais
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] introduz o suporte para tabelas temporais com versão do sistema como um recurso de banco de dados que dá suporte interno para fornecer informações sobre os dados armazenados na tabela em qualquer ponto no tempo em vez de apenas os dados que estão corretos no momento atual. Temporal é um recurso de banco de dados que foi introduzido no ANSI SQL 2011 e agora é oferecido no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -56,14 +60,14 @@ caps.handback.revision: 47
   
 -   **Vídeo:** para obter uma discussão de 20 minutos sobre o recurso temporal, veja [Temporal no SQL Server 2016](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
   
-## O que é uma tabela temporal com versão do sistema?  
+## <a name="what-is-a-system-versioned-temporal-table"></a>O que é uma tabela temporal com versão do sistema?  
  Uma tabela temporal com versão do sistema é um novo tipo de tabela de usuário do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], projetado para manter um histórico completo de alterações de dados e permitir uma análise fácil de pontos no tempo. Esse tipo de tabela temporal é conhecido como tabela temporal com versão do sistema porque o período de validade para cada linha é gerenciado pelo sistema (ou seja, o mecanismo de banco de dados).  
   
  Cada tabela temporal tem duas colunas explicitamente definidas, cada um com um tipo de dados **datetime2** . Essas colunas são chamadas de colunas de período. Essas colunas de período são usadas exclusivamente pelo sistema para gravar o período de validade para cada linha sempre que uma linha é modificada.  
   
  Além dessas colunas de período, uma tabela temporal também contém uma referência a outra tabela com um esquema espelhado. O sistema usa essa tabela para armazenar a versão anterior da linha automaticamente sempre que uma linha na tabela temporal é atualizada ou excluída. Essa tabela adicional é conhecida como a tabela de histórico, enquanto a tabela principal que armazena as versões atuais (reais) das linhas é conhecida como a tabela atual ou simplesmente como a tabela temporal. Durante a criação da tabela temporal, os usuários podem especificar uma tabela de histórico existente (deve ter um esquema compatível) ou deixar que o sistema crie a tabela de histórico padrão.  
   
-## Por que temporal?  
+## <a name="why-temporal"></a>Por que temporal?  
  As fontes de dados reais são dinâmicas e geralmente as decisões comerciais dependem das informações que os analistas podem obter da evolução dos dados. Os casos de uso de tabelas temporais incluem:  
   
 -   Auditar todas as alterações de dados e executar análise forense de dados quando necessário  
@@ -76,7 +80,7 @@ caps.handback.revision: 47
   
 -   Recuperar alterações acidentais em dados e erros de aplicativos  
   
-## Como funciona a tabela temporal?  
+## <a name="how-does-temporal-work"></a>Como funciona a tabela temporal?  
  A versão do sistema para uma tabela é implementada como um par de tabelas, uma tabela atual e uma tabela de histórico. Dentro de cada uma dessas tabelas, as seguintes colunas **datetime2** adicionais são usadas para definir o período de validade para cada registro:  
   
 -   Coluna de início do período: o sistema registra a hora de início da linha na coluna, normalmente denotada como a coluna **SysStartTime** .  
@@ -111,12 +115,12 @@ CREATE TABLE dbo.Employee
   
  **DELETES:** em uma **DELETE**, o sistema armazena o valor anterior do registro na tabela de histórico e define o valor para a coluna **SysEndTime** como a hora de início da transação atual (no fuso horário UTC) com base no relógio do sistema. Isso marca a linha como fechada, com um período registrado para o qual a linha anterior era válida. Na tabela atual, a linha é removida. As consultas da tabela atual não retornarão essa linha. Somente as consultas que lidam com dados de histórico retornarão dados cujo linha está fechada.  
   
- **MERGE:** em uma **MERGE**, a operação se comporta exatamente como se até três instruções (uma **INSERT**, uma **UPDATE** e/ou uma **DELETE**) fossem executadas, dependendo do que é especificado como ações na instrução **MERGE**.  
+ **MERGE:** em uma **MERGE**, a operação se comporta exatamente como se até três instruções (uma **INSERT**, uma **UPDATE**e/ou uma **DELETE**) fossem executadas, dependendo do que é especificado como ações na instrução **MERGE** .  
   
 > [!IMPORTANT]  
->  As horas registradas nas colunas datetime2 do sistema baseiam-se na hora de início da própria transação. Por exemplo, todas as linhas inseridas em uma única transação terão o mesmo horário UTC registrado na coluna correspondente ao início do período **SYSTEM_TIME**.  
+>  As horas registradas nas colunas datetime2 do sistema baseiam-se na hora de início da própria transação. Por exemplo, todas as linhas inseridas em uma única transação terão o mesmo horário UTC registrado na coluna correspondente ao início do período **SYSTEM_TIME** .  
   
-## Como faço para consultar dados temporais?  
+## <a name="how-do-i-query-temporal-data"></a>Como faço para consultar dados temporais?  
  A instrução **SELECT** da cláusula **FROM***\<table>* tem uma nova cláusula **FOR SYSTEM_TIME** com cinco subcláusulas temporais específicas para consultar dados das tabelas atual e histórica. Essa nova sintaxe de instrução **SELECT** é suportada diretamente em uma única tabela, propagada por meio de várias associações e exibições em várias tabelas temporais.  
   
  ![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")  
@@ -136,23 +140,23 @@ SELECT * FROM Employee
 > Nesse caso, a consulta temporal exibe somente versões de linha anteriores às transações e que se tornaram reais após as transações.  
 > Se você precisa incluir as linhas na análise, veja diretamente a tabela de histórico.  
   
- Na tabela a seguir, SysStartTime na coluna Qualifying Rows representa o valor na coluna **SysStartTime** da tabela que está sendo consultada e **SysEndTime** representa o valor da coluna **SysEndTime** da tabela que está sendo consultada. Para obter a sintaxe completa e exemplos, veja [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) e [Consultando dados em uma tabela temporal com controle de versão do sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
+ Na tabela a seguir, SysStartTime na coluna Qualifying Rows representa o valor na coluna **SysStartTime** da tabela que está sendo consultada e **SysEndTime** representa o valor da coluna **SysEndTime** da tabela que está sendo consultada. Para obter a sintaxe completa e exemplos, veja [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) e [Consultando dados em uma tabela temporal com controle da versão do sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
 |Expressão|Linhas de qualificação|Descrição|  
 |----------------|---------------------|-----------------|  
 |**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Retorna uma tabela com uma linha que contém os valores que foram reais (atuais) no momento especificado no passado. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores na linha que era válida no ponto no tempo especificado pelo parâmetro *<date_time>*. O valor de uma linha é considerado válido se o valor de *system_start_time_column_name* é menor ou igual ao valor do parâmetro *<date_time>* e o valor de *system_end_time_column_name* é maior que o valor do parâmetro *<date_time>*.|  
-|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime \< end_date_time AND SysEndTime > start_date_time|Retorna uma tabela com os valores para todas as versões de linha que estavam ativas no intervalo de tempo especificado, não importando se eles começaram a ser ativos antes do valor de parâmetro *<start_date_time>* para o argumento FROM ou deixaram de ser ativos após o valor de parâmetro *<end_date_time>* para o argumento TO. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores para todas as versões de linha que estavam ativas a qualquer momento durante o intervalo de tempo especificado. As linhas que se tornaram ativas exatamente no limite inferior definido pelo ponto de extremidade FROM são incluídos e os registros que se tornaram ativos exatamente no limite superior definido pelo ponto de extremidade TO não são incluídos.|  
+|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|Retorna uma tabela com os valores para todas as versões de linha que estavam ativas no intervalo de tempo especificado, não importando se eles começaram a ser ativos antes do valor de parâmetro *<start_date_time>* para o argumento FROM ou deixaram de ser ativos após o valor de parâmetro *<end_date_time>* para o argumento TO. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores para todas as versões de linha que estavam ativas a qualquer momento durante o intervalo de tempo especificado. As linhas que deixaram de ser ativas exatamente no limite inferior definido pelo ponto de extremidade FROM não são incluídas e os registros que se tornaram ativos exatamente no limite superior definido pelo ponto de extremidade TO também não são incluídos.|  
 |**BETWEEN**<start_date_time>**AND**<end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|A mesma descrição acima para **FOR SYSTEM_TIME FROM** <start_date_time>**TO** <end_date_time> é válida, exceto que a tabela de linhas retornada inclui linhas que se tornaram ativas no limite superior definido pelo ponto de extremidade <end_date_time>.|  
 |**CONTAINED IN** (<start_date_time> , <end_date_time>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|Retorna uma tabela com os valores para todas as versões de linha que foram abertas e fechadas dentro do intervalo de tempo especificado definido por dois valores de data e hora para o argumento CONTAINED IN. As linhas que se tornaram ativas exatamente no limite inferior ou que deixaram de ser ativas exatamente no limite superior são incluídas.|  
 |**ALL**|Todas as linhas|Retorna a união de linhas que pertencem às tabelas atual e de histórico.|  
   
 > [!NOTE]  
->  Opcionalmente, você pode optar por ocultar essas colunas de período, de modo que as consultas que não fazem referência explícita a essas colunas não as retornarão (o cenário **SELECT \* FROM***\<table>*). Para retornar uma coluna oculta, basta fazer referência explícita à coluna oculta na consulta. Da mesma forma, as instruções **INSERT** e **BULK INSERT** continuarão como se as novas colunas de período não estivessem presentes (e os valores da coluna serão populados automaticamente). Para obter detalhes sobre como usar a cláusula **HIDDEN**, veja [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
+>  Opcionalmente, você pode optar por ocultar essas colunas de período, de modo que as consultas que não fazem referência explícita a essas colunas não as retornarão (o cenário **SELECT \* FROM***\<table>*). Para retornar uma coluna oculta, basta fazer referência explícita à coluna oculta na consulta. Da mesma forma, as instruções **INSERT** e **BULK INSERT** continuarão como se as novas colunas de período não estivessem presentes (e os valores da coluna serão populados automaticamente). Para obter detalhes sobre como usar a cláusula **HIDDEN** , veja [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
-## Este artigo foi útil para você? Estamos atentos  
+## <a name="did-this-article-help-you-were-listening"></a>Este artigo foi útil para você? Estamos atentos  
  Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Introdução a Tabelas Temporais com Controle da Versão do Sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [Cenários de uso da tabela temporal](../../relational-databases/tables/temporal-table-usage-scenarios.md)   
@@ -164,3 +168,4 @@ SELECT * FROM Employee
  [Funções e exibições de metadados de tabela temporal](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

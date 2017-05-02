@@ -1,28 +1,32 @@
 ---
-title: "Criar fun&#231;&#245;es definidas pelo usu&#225;rio (Mecanismo de Banco de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cláusula SCHEMABINDING "
-  - "funções associadas a esquemas [SQL Server]"
-  - "funções definidas pelo usuário [SQL Server], criando"
-  - "instrução CREATE FUNCTION"
-  - "instruções válidas [SQL Server]"
+title: "Criar funções definidas pelo usuário (Mecanismo de Banco de Dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SCHEMABINDING clause
+- schema-bound functions [SQL Server]
+- user-defined functions [SQL Server], creating
+- CREATE FUNCTION statement
+- valid statements [SQL Server]
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d4ea2a247e4d8a55cd3467510f19115cc3163bc2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar fun&#231;&#245;es definidas pelo usu&#225;rio (Mecanismo de Banco de Dados)
+# <a name="create-user-defined-functions-database-engine"></a>Criar funções definidas pelo usuário (Mecanismo de Banco de Dados)
   Este tópico descreve como criar uma UDF (função definida pelo usuário) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
   
@@ -36,7 +40,7 @@ caps.handback.revision: 38
   
 -   As funções definidas pelo usuário não podem retornar vários conjuntos de resultados. Use um procedimento armazenado se precisar retornar vários conjuntos de resultados.  
   
--   O tratamento de erros é restringido em uma função definida pelo usuário. Um UDF não oferece suporte a TRY…CATCH, @ERROR ou RAISERROR.  
+-   O tratamento de erros é restringido em uma função definida pelo usuário. Um UDF não dá suporte a TRY…CATCH, @ERROR ou RAISERROR.  
   
 -   As funções definidas pelo usuário não podem chamar um procedimento armazenado, mas podem chamar um procedimento armazenado estendido.  
   
@@ -177,7 +181,7 @@ FROM dbo.ufn_FindReports(1);
   
 ```  
   
-## Mais exemplos  
+## <a name="more-examples"></a>Mais exemplos  
  - [Funções definidas pelo usuário](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  - [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 
   - [Alter Function (Transact SQL)](https://msdn.microsoft.com/library/ms173799.aspx) 
@@ -185,3 +189,4 @@ FROM dbo.ufn_FindReports(1);
  - [Drop Partition Function (Transact SQL)](https://msdn.microsoft.com/library/ms187759(SQL.130).aspx)
  - Veja mais exemplos na [comunidade](https://www.bing.com/search?q=user%20defined%20function%20%22sql%20server%202016%22%20examples&qs=n&form=QBRE&pq=user%20defined%20function%20%22sql%20server%202016%22%20examples&sc=0-48&sp=-1&sk=&cvid=C3AD337125A840AD9EEFA3AAC36A3712)
   
+

@@ -1,25 +1,29 @@
 ---
-title: "SQL Server, objeto General Statistics | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:General Statistics"
-  - "objeto General Statistics"
+title: "SQL Server, objeto Estatísticas Gerais | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:General Statistics
+- General Statistics object
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e179c0523d8d406f9413f98a0a5a7acbc7e714a1
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, objeto General Statistics
+# <a name="sql-server-general-statistics-object"></a>SQL Server, objeto General Statistics
   O objeto **SQLServer:General Statistics** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar a atividade geral em todo o servidor, como o número de conexões atuais e o número de usuários que se conectam e se desconectam, por segundo, dos computadores que executam uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso pode ser útil ao trabalhar com sistemas do tipo OLTP, em que há muitos clientes conectando-se e desconectando-se de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Esta tabela descreve os contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **do** .  
@@ -51,7 +55,7 @@ caps.handback.revision: 26
 |**Transações**|Número de inscrições de transações (combinações de locais, DTC e acopladas).|  
 |**Conexões de Usuário**|Conta o número de usuários atualmente conectados ao SQL Server.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

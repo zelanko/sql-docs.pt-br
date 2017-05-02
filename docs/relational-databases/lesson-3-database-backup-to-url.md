@@ -1,25 +1,29 @@
 ---
-title: "Li&#231;&#227;o 3: Backup de banco de dados em URL | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lição 3: Backup de banco de dados em uma URL | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 83414948fcd1f8db58f2e6a66f948a5427d0c999
+ms.lasthandoff: 04/11/2017
+
 ---
-# Li&#231;&#227;o 3: Backup de banco de dados em URL
+# <a name="lesson-3-database-backup-to-url"></a>Lição 3: Backup de banco de dados em URL
 Nesta lição, você aprenderá a fazer backup do banco de dados AdventureWorks2014 da instância local do SQL Server 2016 no contêiner do Azure criado na [Lição 1: Criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
 > [!NOTE]  
@@ -50,9 +54,10 @@ Para fazer backup de um banco de dados no armazenamento de Blobs, siga estas eta
   
 5.  Expanda Contêineres, expanda o contêiner criado na Lição 1 e verifique se o backup da etapa 3 acima é exibido nesse contêiner.  
   
-    ![On-premises backup file appears as blob in Azure container](../relational-databases/media/0d060e51-012f-4c61-ab8d-16d461d0ffad.JPG "On-premises backup file appears as blob in Azure container")  
+    ![O arquivo de backup local aparece como um blob no contêiner do Azure](../relational-databases/media/0d060e51-012f-4c61-ab8d-16d461d0ffad.JPG "O arquivo de backup local aparece como um blob no contêiner do Azure")  
   
 **Próxima lição:**  
   
 [Lição 4: Restaurar o banco de dados na máquina virtual por meio da URL](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
+

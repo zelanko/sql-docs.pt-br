@@ -1,32 +1,36 @@
 ---
-title: "Administra&#231;&#227;o (Replica&#231;&#227;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "replicação transacional, administrando"
-  - "administrando a replicação"
-  - "administrando a replicação, sobre como administrar"
-  - "replicação [SQL Server], administrando"
-  - "replicação de mesclagem [replicação do SQL Server], administrando"
+title: "Administração (replicação) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transactional replication, administering
+- administering replication
+- administering replication, about administering
+- replication [SQL Server], administering
+- merge replication [SQL Server replication], administering
 ms.assetid: a3d4e7c6-feb5-411b-8bb9-70b6d943420c
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6fce305f204c339fbace4eaf79a5bd9342686a9c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Administra&#231;&#227;o (Replica&#231;&#227;o)
+# <a name="administration-replication"></a>Administração (Replicação)
   Esta seção contém informações sobre como administrar topologias de replicação. Recomendamos que você leia primeiro o tópico de práticas recomendadas e, então, siga os links desse tópico para obter informações mais detalhadas nesta seção e em outras.  
   
-## Nesta seção  
- [Práticas recomendadas para administração de replicação](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
+## <a name="in-this-section"></a>Nesta seção  
+ [Melhores práticas para a administração de replicação](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
  Descreve uma variedade de práticas recomendadas, inclusive informações sobre backup e restauração, tarefas de monitoração, desempenho e manutenção.  
   
  [Perguntas frequentes para os administradores de replicação](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
@@ -44,7 +48,7 @@ caps.handback.revision: 38
  [Validar os dados replicados](../../../relational-databases/replication/validate-replicated-data.md)  
  Fornece informações sobre como validar dados em Assinantes para determinar se os dados correspondem aos dados no Publicador.  
   
-## Consulte também  
- [Monitoramento e 40; Replicação e 41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
+## <a name="see-also"></a>Consulte também  
+ [Monitoramento &#40;replicação&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

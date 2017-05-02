@@ -1,23 +1,27 @@
 ---
-title: "Gerenciar sess&#245;es de evento no Pesquisador de Objetos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gerenciar sessões de evento no Pesquisador de Objetos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1bfecba6078a80485bfcd9448c8be19d0c69328
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gerenciar sess&#245;es de evento no Pesquisador de Objetos
+# <a name="manage-event-sessions-in-the-object-explorer"></a>Gerenciar sessões de evento no Pesquisador de Objetos
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Este tópico aborda as ações que você pode executar no **Pesquisador de Objetos** que afetam os Eventos Estendidos:  
@@ -34,10 +38,10 @@ caps.handback.revision: 10
   
 -   Excluir uma sessão de Eventos Estendidos  
   
-## Criar uma sessão de Eventos Estendidos  
- Para obter mais informações sobre como criar uma sessão de Eventos Estendidos, consulte [Criar uma sessão de Eventos Estendidos](../Topic/Create%20an%20Extended%20Events%20Session.md).  
+## <a name="create-an-extended-events-session"></a>Criar uma sessão de Eventos Estendidos  
+ Para obter mais informações sobre como criar uma sessão de Eventos Estendidos, consulte [Criar uma sessão de Eventos Estendidos](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74).  
   
-## Iniciando ou interrompendo uma sessão de Eventos Estendidos  
+## <a name="starting-or-stopping-an-extended-events-session"></a>Iniciando ou interrompendo uma sessão de Eventos Estendidos  
  Você pode iniciar ou interromper uma sessão de Eventos Estendidos através do **Editor de Consultas** usando a instrução **ALTER EVENT SESSION** ou usando o nó **Eventos Estendidos** do **Pesquisador de Objetos**.  
   
  Quando você interrompe uma sessão de eventos, a sessão não é mais listada como uma sessão ativa no DMV (exibição de gerenciamento dinâmico) sys.dm_xe_sessions. No entanto, a definição de sessão permanece intacta e você pode reiniciar a sessão. Para remover completamente uma definição de sessão, você deve excluir a sessão.  
@@ -46,7 +50,7 @@ caps.handback.revision: 10
   
  Ao interromper uma sessão que usa um destino na memória, como o buffer de anéis, particionamento, emparelhamento de eventos ou destinos do contador de eventos síncrono, todas as informações armazenadas no buffer da sessão (a coluna target_data do sys.dm_xe_session_targets DMV) serão perdidas. Para acessar os dados do evento após interromper a sessão, salve os dados antes de interrompê-la ou configure a sessão para usar o destino de arquivo.  
   
-### Iniciar ou interromper uma sessão de Eventos Estendidos usando o Editor de Consultas  
+### <a name="start-or-stop-an-extended-events-session-using-query-editor"></a>Iniciar ou interromper uma sessão de Eventos Estendidos usando o Editor de Consultas  
  Para iniciar uma sessão, emita as seguintes instruções, substituindo *session_name* pelo nome da sessão de Eventos Estendidos:  
   
 ```  
@@ -63,25 +67,25 @@ ON SERVER
 STATE = STOP  
 ```  
   
-### Iniciar ou interromper uma sessão de Eventos Estendidos no Pesquisador de Objetos  
- Para iniciar ou interromper uma sessão de Eventos Estendidos no **Pesquisador de Objetos**, expanda os nós **Gerenciamento**, **Eventos Estendidos** e **Sessões**, clique com o botão direito do mouse em uma sessão e clique em **Iniciar Sessão** ou **Interromper Sessão**.  
+### <a name="start-or-stop-an-extended-events-session-in-object-explorer"></a>Iniciar ou interromper uma sessão de Eventos Estendidos no Pesquisador de Objetos  
+ Para iniciar ou interromper uma sessão de Eventos Estendidos no **Pesquisador de Objetos**, expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões** , clique com o botão direito do mouse em uma sessão e clique em **Iniciar Sessão** ou **Interromper Sessão**.  
   
-## Exportar um modelo da sessão de Eventos Estendidos  
- Você pode exportar uma sessão de Eventos Estendidos usando o **Pesquisador de Objetos** e salvá-la como um arquivo de modelo .xml. Por exemplo, talvez você queira exportar uma sessão e aplicar o modelo a uma nova sessão de eventos usando o **Assistente para Nova Sessão** ou o assistente **Nova Sessão**.  
+## <a name="export-an-extended-events-session-template"></a>Exportar um modelo da sessão de Eventos Estendidos  
+ Você pode exportar uma sessão de Eventos Estendidos usando o **Pesquisador de Objetos**e salvá-la como um arquivo de modelo .xml. Por exemplo, talvez você queira exportar uma sessão e aplicar o modelo a uma nova sessão de eventos usando o **Assistente para Nova Sessão** ou o assistente **Nova Sessão** .  
   
  Quando você exportar uma sessão, não se esqueça de salvar o arquivo de modelo em um local que use o sistema de arquivos NTFS e de restringir o acesso aos usuários que tenham autorização para exibir as informações.  
   
  Para exportar uma sessão de Eventos Estendidos usando o **Pesquisador de Objetos**:  
   
-1.  Expanda os nós **Gerenciamento**, **Eventos Estendidos** e **Sessões**  
+1.  Expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões**  
   
 2.  Clique com o botão direito do mouse na sessão a ser exportada e selecione **Export Session (Exportar Sessão)**.  
   
-3.  Na caixa de diálogo **Salvar Como**, selecione um local para salvar o arquivo, digite o nome do arquivo na caixa **Nome de arquivo** e clique em **Salvar**.  
+3.  Na caixa de diálogo **Salvar Como** , selecione um local para salvar o arquivo, digite o nome do arquivo na caixa **Nome de arquivo** e clique em **Salvar**.  
   
-     Se você salvar o arquivo no local de modelo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] padrão, o modelo aparecerá na lista suspensa de modelos predefinidos quando você usar o **Assistente para Nova Sessão** e a caixa de diálogo **Nova Sessão**.  
+     Se você salvar o arquivo no local de modelo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] padrão, o modelo aparecerá na lista suspensa de modelos predefinidos quando você usar o **Assistente para Nova Sessão** e a caixa de diálogo **Nova Sessão** .  
   
-## Importar um modelo da sessão de Eventos Estendidos  
+## <a name="import-an-extended-events-session-template"></a>Importar um modelo da sessão de Eventos Estendidos  
  Usando o **Pesquisador de Objetos**, você pode importar um modelo para uma sessão de Eventos Estendidos. Por exemplo, talvez você queira fazer isso para criar uma sessão de um modelo que foi exportado de outra instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Para importar uma sessão de Eventos Estendidos, você deve ter as permissões de **ALTER ANY EVENT SESSION** necessárias.  
@@ -90,37 +94,37 @@ STATE = STOP
   
  Para importar uma sessão de Eventos Estendidos:  
   
-1.  No **Pesquisador de Objetos**, expanda os nós **Gerenciamento** e **Eventos Estendidos**.  
+1.  No **Pesquisador de Objetos**, expanda os nós **Gerenciamento**e **Eventos Estendidos** .  
   
 2.  Clique com o botão direito do mouse em **Sessões** e selecione **Nova Sessão**.  
   
 3.  Especifique um nome para a sessão.  
   
-4.  Expanda a caixa suspensa **Modelo**.  
+4.  Expanda a caixa suspensa **Modelo** .  
   
-5.  Clique em **\<File From …>Open (\<Arquivo De…> Abrir)** e procure a sessão (arquivo XML) a ser importada.  
+5.  Clique em **\<Arquivo De…> Abrir** e procure a sessão (arquivo XML) que você deseja importar.  
   
- A sessão aparece abaixo do nó **Sessões**. Por padrão, a sessão não é iniciada.  
+ A sessão aparece abaixo do nó **Sessões** . Por padrão, a sessão não é iniciada.  
   
-## Editar uma sessão de Eventos Estendidos  
+## <a name="edit-an-extended-events-session"></a>Editar uma sessão de Eventos Estendidos  
  Você pode editar uma sessão de Eventos Estendidos no Pesquisador de Objetos.  
   
  Para editar uma sessão de Eventos Estendidos:  
   
-1.  No **Pesquisador de Objetos**, expanda os nós **Gerenciamento**, **Eventos Estendidos** e **Sessões**.  
+1.  No **Pesquisador de Objetos**, expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões** .  
   
 2.  Clique com o botão direito do mouse em uma sessão e selecione **Propriedades**.  
   
-3.  Na seção **Selecionar uma página**, selecione as páginas que deseja editar.  
+3.  Na seção **Selecionar uma página** , selecione as páginas que deseja editar.  
   
 4.  Depois que você terminar de revisar a sessão de eventos, clique em **OK**.  
   
-## Criar o script de uma definição de sessão de eventos usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>Criar o script de uma definição de sessão de eventos usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  O Assistente para Nova Sessão e a caixa de diálogo Nova Sessão têm uma opção Script que gera o [!INCLUDE[tsql](../../includes/tsql-md.md)] que define a sessão de Eventos Estendidos.  
   
- Você pode acessar o [!INCLUDE[tsql](../../includes/tsql-md.md)] de uma sessão de Eventos Estendidos existente clicando o botão direito do mouse no nome da sessão, selecionando **Sessão de Script como** e selecionando **Create para**.  
+ Você pode acessar o [!INCLUDE[tsql](../../includes/tsql-md.md)] de uma sessão de Eventos Estendidos existente clicando o botão direito do mouse no nome da sessão, selecionando **Sessão de Script como**e selecionando **Create para**.  
   
-## Excluir uma sessão de Eventos Estendidos  
+## <a name="delete-an-extended-events-session"></a>Excluir uma sessão de Eventos Estendidos  
  Você pode excluir uma sessão de Eventos Estendidos:  
   
 -   No Editor de Consultas usando **DROP EVENT SESSION**.  
@@ -136,7 +140,7 @@ STATE = STOP
   
  Para excluir uma sessão de Eventos Estendidos no **Pesquisador de Objetos**:  
   
-1.  Expanda os nós **Gerenciamento**, **Eventos Estendidos** e **Sessões**.  
+1.  Expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões** .  
   
 2.  Clique com o botão direito do mouse em uma sessão e selecione **Excluir**.  
   

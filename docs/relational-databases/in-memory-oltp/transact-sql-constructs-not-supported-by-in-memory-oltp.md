@@ -1,22 +1,26 @@
 ---
-title: "Constru&#231;&#245;es do Transact-SQL sem suporte pelo OLTP na mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Construções do Transact-SQL sem suporte no OLTP in-memory | Microsoft Docs"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 caps.latest.revision: 51
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3539b07a27be375ebfe58e16a4792d9095fce0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Constru&#231;&#245;es do Transact-SQL sem suporte pelo OLTP na mem&#243;ria
+# <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construções do Transact-SQL sem suporte pelo OLTP na memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   As tabelas com otimização de memória, procedimentos armazenados compilados de modo nativo e funções definidas pelo usuário não dão suporte à área de superfície completa do [!INCLUDE[tsql](../../includes/tsql-md.md)] que tem suporte em tabelas com base em disco, procedimentos armazenados do [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretados e funções definidas pelo usuário. Ao tentar usar um dos recursos sem suporte, o servidor retornará um erro.  
@@ -51,7 +55,7 @@ caps.handback.revision: 51
 |----------|----------|----------------|  
 |Recurso|ON|As tabelas com otimização de memória não podem ser colocadas em um grupo de arquivos ou esquema de partição. Remova a cláusula ON da instrução **CREATE TABLE** .<br /><br /> Todas as tabelas com otimização de memória são mapeadas para um grupo de arquivos com otimização de memória.|  
 |Tipo de dados|*Nome do tipo de dados*|Não há suporte para o tipo de dados indicado. Substitua o tipo por um dos tipos de dados com suporte. Para obter mais informações, veja [Tipos de dados com suporte no OLTP in-memory](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
-|Recurso|Colunas computadas|As colunas computadas não têm suporte para tabelas com otimização de memória. Remova as colunas computadas da instrução **CREATE TABLE** .<br/><br/>**Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há suporte para colunas computadas em índices e tabelas com otimização de memória.|  
+|Recurso|Colunas computadas|As colunas computadas não têm suporte para tabelas com otimização de memória. Remova as colunas computadas da instrução **CREATE TABLE** .<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há suporte para colunas computadas em índices e tabelas com otimização de memória.|  
 |Recurso|Replicação|Não há suporte para a replicação nas tabelas com otimização de memória.|  
 |Recurso|FILESTREAM|O armazenamento FILESTREAM não tem suporte para colunas de tabelas com otimização de memória. Remova a palavra-chave **FILESTREAM** da definição de coluna.|  
 |Recurso|SPARSE|As colunas de tabelas com otimização de memória não podem ser definidas como SPARSE. Remova a palavra-chave **SPARSE** da definição de coluna.|  
@@ -136,7 +140,7 @@ caps.handback.revision: 51
 |Operador|OFFSET|Não há suporte para esse operador. Remova **OFFSET** do procedimento armazenado compilado de modo nativo.|  
 |Operador|INTERSECT|Não há suporte para esse operador. Remova **INTERSECT** do procedimento armazenado compilado de modo nativo. Em alguns casos, um INNER JOIN pode ser usado para obter o mesmo resultado.|  
 |Operador|EXCEPT|Não há suporte para esse operador. Remova **EXCEPT** do procedimento armazenado compilado de modo nativo.|  
-|Operador|APPLY|Não há suporte para esse operador. Remova **APPLY** do procedimento armazenado compilado de modo nativo.<br/><br/>**Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há suporte para o operador APPLY em módulos compilados nativamente.|  
+|Operador|APPLY|Não há suporte para esse operador. Remova **APPLY** do procedimento armazenado compilado de modo nativo.<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há suporte para o operador APPLY em módulos compilados nativamente.|  
 |Operador|PIVOT|Não há suporte para esse operador. Remova **PIVOT** do procedimento armazenado compilado de modo nativo.|  
 |Operador|UNPIVOT|Não há suporte para esse operador. Remova **UNPIVOT** do procedimento armazenado compilado de modo nativo.|  
 |Operador|CONTAINS|Não há suporte para esse operador. Remova **CONTAINS** do procedimento armazenado compilado de modo nativo.|  
@@ -152,20 +156,20 @@ caps.handback.revision: 51
 |Opção|FOR XML|Não há suporte para essa opção. Remova **FOR XML** do procedimento armazenado compilado de modo nativo.|  
 |Opção|FOR BROWSE|Não há suporte para essa opção. Remova **FOR BROWSE** do procedimento armazenado compilado de modo nativo.|  
 |Dica de junção|HASH, MERGE|Os procedimentos armazenados nativamente compilados oferecem suporte somente a junções de loops aninhados. Não há suporte para junções de hash e mesclagem. Remova a dica de junção.|  
-|Dica de consulta|*Dica de consulta*|Essa dica de consulta não está dentro de procedimentos armazenados nativamente compilados. Para obter dicas de consulta com suporte, veja [Dicas de consulta &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).|  
+|Dica de consulta|*Dica de consulta*|Essa dica de consulta não está dentro de procedimentos armazenados nativamente compilados. Para obter dicas de consulta com suporte, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).|  
 |Opção|PERCENT|Essa opção não tem suporte com cláusulas **TOP** . Remova **PERCENT** da consulta no procedimento armazenado compilado de modo nativo.|  
 |Opção|WITH TIES|Essa opção não tem suporte com cláusulas **TOP** . Remova **WITH TIES** da consulta no procedimento armazenado compilado de modo nativo.|  
 |Função de agregação|*Função de agregação*|Não há suporte para essa cláusula. Para obter mais informações sobre procedimentos armazenados compilados de modo nativo, veja [Procedimentos armazenados compilados de modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Função de classificação|*Função de classificação*|As funções de classificação não têm suporte em procedimentos armazenados nativamente compilados. Remova-as da definição de procedimento.|  
 |Função|*Função*|Não há suporte para essa função. Remova-a do procedimento armazenado nativamente compilado.|  
-|Instrução|*Instrução*|Não há suporte para essa instrução. Remova-a do procedimento armazenado nativamente compilado.|  
+|de|*Instrução*|Não há suporte para essa instrução. Remova-a do procedimento armazenado nativamente compilado.|  
 |Recurso|MIN e MAX usados com cadeias de caracteres e binários|As funções de agregação **MIN** e **MAX** não podem ser usadas para valores de cadeias de caracteres binários e caracteres dentro de procedimentos armazenados compilados de modo nativo.|  
 |Recurso|GROUP BY ALL|ALL não pode ser usado com cláusulas GROUP BY em procedimentos armazenados compilados de modo nativo. Remova ALL da cláusula GROUP BY.|  
 |Recurso|GROUP BY ()|Não suporte para o agrupamento por uma lista vazia. Remova a cláusula GROUP BY ou inclua colunas na lista de agrupamentos.|  
 |Recurso|ROLLUP|**ROLLUP** não pode ser usado com cláusulas **GROUP BY** em procedimentos armazenados compilados de modo nativo. Remova **ROLLUP** da definição de procedimento.|  
 |Recurso|CUBE|**CUBE** não pode ser usado com cláusulas **GROUP BY** em procedimentos armazenados compilados de modo nativo. Remova **CUBE** da definição de procedimento.|  
 |Recurso|GROUPING SETS|**GROUPING SETS** não pode ser usado com cláusulas **GROUP BY** em procedimentos armazenados compilados de modo nativo. Remova **GROUPING SETS** da definição do procedimento.|  
-|Recurso|BEGIN TRANSACTION, COMMIT TRANSACTION e ROLLBACK TRANSACTION|Use blocos ATOMIC para controlar transações e tratamento de erros. Para obter mais informações, veja [Blocos atômicos](../../relational-databases/in-memory-oltp/blocos-atômicos-nos-procedimentos-nativos.md).|  
+|Recurso|BEGIN TRANSACTION, COMMIT TRANSACTION e ROLLBACK TRANSACTION|Use blocos ATOMIC para controlar transações e tratamento de erros. Para obter mais informações, veja [Blocos atômicos](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).|  
 |Recurso|Declarações de variável de tabela embutidas.|As variáveis de tabela devem referenciar explicitamente os tipos de tabela com otimização de memória definidos. Você deve criar um tipo de tabela com otimização de memória e usar esse tipo para a declaração variável, em vez de especificar o tipo embutido.|  
 |Recurso|Tabelas baseadas em disco|As tabelas baseadas em disco não podem ser acessadas nos procedimentos armazenados compilados de modo nativo. Remova as referências a tabelas baseadas em disco dos procedimentos armazenados compilados de modo nativo. Ou migre as tabelas baseadas em disco para tabelas com otimização de memória.|  
 |Recurso|Exibições|As exibições não podem ser acessadas nos procedimentos armazenados compilados de modo nativo. Em vez das exibições, referencie as tabelas base subjacentes.|  
@@ -184,6 +188,7 @@ caps.handback.revision: 51
 |Recurso|DTC|As transações que acessam tabelas com otimização de memória não podem ser transações distribuídas.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Migrando para o OLTP in-memory](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+ [Migrando para OLTP na memória](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

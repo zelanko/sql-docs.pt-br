@@ -1,32 +1,36 @@
 ---
-title: "Pesquisar texto com curingas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.wildcards"
-  - "vswildcardsbuilder"
-helpviewer_keywords: 
-  - "pesquisas [SQL Server Management Studio], curingas"
-  - "Editor de Consulta [SQL Server Management Studio], pesquisas com curinga"
-  - "opções de curinga [SQL Server Management Studio]"
+title: Pesquisar texto com curingas | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.wildcards
+- vswildcardsbuilder
+helpviewer_keywords:
+- searches [SQL Server Management Studio], wildcards
+- Query Editor [SQL Server Management Studio], wildcard searches
+- wildcard options [SQL Server Management Studio]
 ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c34c1db9c36da6e23375df861ed5a3ad6d2bd12f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pesquisar texto com curingas
+# <a name="search-text-with-wildcards"></a>Pesquisar texto com curingas
   As expressões a seguir podem substituir caracteres ou dígitos no campo **Localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **do** .  
   
-#### Para pesquisar usando curingas  
+#### <a name="to-search-using-wildcards"></a>Para pesquisar usando curingas  
   
 1.  Para habilitar o uso de curingas no campo **Localizar** durante a Localização Rápida, **Localizar em Arquivos**, **Substituição Rápida**ou em operações **Substituir nos Arquivos** , selecione a opção **Usar** em **Opções de Pesquisa** e selecione **Curingas**.  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 23
 |Um ou mais caracteres|*|Corresponde a qualquer um ou mais caracteres. Por exemplo, new* corresponde a qualquer texto que inclui "new", como newfile.txt.|  
 |Conjunto de caracteres|[ ]|Corresponde a qualquer um dos caracteres especificados no conjunto.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Pesquisar e substituir](../../relational-databases/scripting/search-and-replace.md)   
  [Pesquisar texto com expressões regulares](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
   

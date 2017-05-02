@@ -1,57 +1,61 @@
 ---
-title: "Fun&#231;&#245;es de n&#237;vel de banco de dados | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.roleproperties.database.f1"
-  - "sql13.swb.roleproperties.object.f1"
-  - "SQL13.SWB.DBROLEPROPERTIES.GENERAL.F1"
-  - "sql13.swb.roleproperties.general.f1"
-helpviewer_keywords: 
-  - "função db_denydatareader"
-  - "usuários [SQL Server], funções de banco de dados"
-  - "funções de nível de banco de dados [SQL Server]"
-  - "função db_denydatawriter"
-  - "funções [SQL Server], banco de dados"
-  - "entidades [SQL Server], nível de banco de dados"
-  - "função db_backupoperator"
-  - "credenciais [SQL Server], funções"
-  - "função db_accessadmin"
-  - "esquemas [SQL Server], funções"
-  - "permissões [SQL Server], funções"
-  - "funções de banco de dados [SQL Server], listadas"
-  - "função db_datareader"
-  - "função db_ddladmin"
-  - "função db_datawriter"
-  - "função db_securityadmin"
-  - "função db_owner"
-  - "funções de banco de dados [SQL Server]"
-  - "funções de banco de dados fixas [SQL Server]"
-  - "autenticação [SQL Server], funções"
-  - "grupos [SQL Server], funções"
+title: "Funções de nível de banco de dados | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.roleproperties.database.f1
+- sql13.swb.roleproperties.object.f1
+- SQL13.SWB.DBROLEPROPERTIES.GENERAL.F1
+- sql13.swb.roleproperties.general.f1
+helpviewer_keywords:
+- db_denydatareader role
+- users [SQL Server], database roles
+- database-level roles [SQL Server]
+- db_denydatawriter role
+- roles [SQL Server], database
+- principals [SQL Server], database-level
+- db_backupoperator role
+- credentials [SQL Server], roles
+- db_accessadmin role
+- schemas [SQL Server], roles
+- permissions [SQL Server], roles
+- database roles [SQL Server], listed
+- db_datareader role
+- db_ddladmin role
+- db_datawriter role
+- db_securityadmin role
+- db_owner role
+- database roles [SQL Server]
+- fixed database roles [SQL Server]
+- authentication [SQL Server], roles
+- groups [SQL Server], roles
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ccfe7ee55e50f0530b33855f4ad57549a1da712
+ms.lasthandoff: 04/11/2017
+
 ---
-# Fun&#231;&#245;es de n&#237;vel de banco de dados
+# <a name="database-level-roles"></a>Funções de nível de banco de dados
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Para gerenciar facilmente as permissões em seus bancos de dados, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece várias *funções* , que são entidades de segurança que agrupam outras entidades. Elas são como ***grupos*** no sistema operacional [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. As funções de nível de banco de dados são permitidas em todo banco de dados em seus escopos de permissões.  
 
-Para adicionar e remover usuários de uma função de banco de dados, use as opções `ADD MEMBER` e `DROP MEMBER` da instrução [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md). [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] não dá suporte ao uso de `ALTER ROLE`. Em vez disso, use os antigos procedimentos [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) e [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md).
+Para adicionar e remover usuários de uma função de banco de dados, use as opções `ADD MEMBER` e `DROP MEMBER` da instrução [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) . [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] não dá suporte ao uso de `ALTER ROLE`. Em vez disso, use os antigos procedimentos [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) e [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) .
   
- Há dois tipos de funções no nível do banco de dados: *funções de banco de dados fixas*, que são predefinidas no banco de dados, e *funções de banco de dados definidas por usuário*, que você pode criar.  
+ Há dois tipos de funções no nível do banco de dados: *funções de banco de dados fixas* , que são predefinidas no banco de dados, e *funções de banco de dados definidas por usuário* , que você pode criar.  
   
  As funções de banco de dados fixas são definidas no nível de banco de dados e existem em cada banco de dados. Os membros da função de banco de dados **db_owner** podem gerenciar a associação a funções de banco de dados fixas. Também há algumas funções de banco de dados com finalidade especial no banco de dados msdb.  
   
@@ -62,9 +66,9 @@ Para adicionar e remover usuários de uma função de banco de dados, use as op�
 
 As permissões de funções de banco de dados definidas pelo usuário podem ser personalizadas com instruções GRANT, DENY e REVOKE. Para obter mais informações, consulte [Permissões (Mecanismo de Banco de Dados)](../../../relational-databases/security/permissions-database-engine.md).
 
-Para obter uma lista de todas as permissões, consulte o cartaz [Permissões do Mecanismo de Banco de Dados](http://go.microsoft.com/fwlink/?LinkId=229142). (As permissões em nível de servidor não podem ser concedidas às funções de banco de dados. Logons e outras entidades em nível de servidor – como funções de servidor – não podem ser adicionados às funções de banco de dados. Para a segurança em nível de servidor no [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], use [funções de servidor](../../../relational-databases/security/authentication-access/server-level-roles.md). As permissões em nível de servidor não podem ser concedidas por meio das funções no [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
+Para obter uma lista de todas as permissões, consulte o cartaz [Permissões do Mecanismo de Banco de Dados](http://go.microsoft.com/fwlink/?LinkId=229142) . (As permissões em nível de servidor não podem ser concedidas às funções de banco de dados. Logons e outras entidades em nível de servidor – como funções de servidor – não podem ser adicionados às funções de banco de dados. Para a segurança em nível de servidor no [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], use [funções de servidor](../../../relational-databases/security/authentication-access/server-level-roles.md) . As permissões em nível de servidor não podem ser concedidas por meio das funções no [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
 
-## <a name="fixeddatabase-roles"></a>Funções de banco de dados fixas
+## <a name="fixed-database-roles"></a>funções de banco de dados fixas
   
  A tabela a seguir mostra as funções de banco de dados fixas e suas funcionalidades. Essas funções existem em todos os bancos de dados. As permissões atribuídas às funções de banco de dados fixas não podem ser alteradas.   
   
@@ -84,7 +88,7 @@ As permissões atribuídas às funções de banco de dados fixas não podem ser 
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-database-role-permissions.jpg)
 
-## <a name="special-roles-for-includesssdsmdtokensssdsmdmd-and-includesssdwmdtokensssdwmdmd"></a>Funções especiais para [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
+## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>Funções especiais para [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
 Essas funções de banco de dados existem somente no banco de dados mestre virtual. As permissões são restritas às ações executadas no mestre. Somente os usuários de banco de dados no mestre podem ser adicionados a essas funções. Logons não podem ser adicionados a essas funções, mas é possível criar usuários com base nos logons e esses usuários podem ser adicionados às funções. Os usuários de banco de dados independente no mestre também podem ser adicionados a essas funções.
 
@@ -122,7 +126,7 @@ Quando o R Services está instalado, as funções adicionais de banco de dados f
 |**rpkgs-private** |Fornece acesso a pacotes compartilhados com as mesmas permissões que a função rpkgs-users. Os membros desta função também podem instalar, remover e usar pacotes com escopo definido como particular.|
 |**rpkgs-shared** |Fornece as mesmas permissões que a função pkgs-private. Os usuários que são membros dessa função também podem instalar ou remover pacotes compartilhados.|
   
-## <a name="working-with-databaselevel-roles"></a>Trabalhando com funções de nível de banco de dados  
+## <a name="working-with-database-level-roles"></a>Trabalhando com funções de nível de banco de dados  
  A tabela a seguir explica os comandos, exibições e funções para trabalhar com funções de nível de banco de dados.  
   
 |Recurso|Tipo|Description|  
@@ -139,14 +143,14 @@ Quando o R Services está instalado, as funções adicionais de banco de dados f
 |[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Comando|Cria uma nova função de banco de dados no banco de dados atual.|  
 |[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Comando|Remove uma função de banco de dados do banco de dados atual.|  
 |[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Comando|Adiciona um usuário de banco de dados, uma função de banco de dados, o logon do Windows ou um grupo do Windows em uma função de banco de dados no banco de dados atual. Todas as plataformas, exceto [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)], devem usar o `ALTER ROLE` em vez disso.|  
-|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Comando|Remove uma conta de segurança de uma função do SQL Server no banco de dados atual. Todas as plataformas, exceto [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)], devem usar o `ALTER ROLE` em vez disso.|
+|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Comando|Remove uma conta de segurança de uma função do SQL Server no banco de dados atual. Todas as plataformas, exceto [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] , devem usar o `ALTER ROLE` em vez disso.|
 |[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissões | Adiciona a permissão a uma função.
 |[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissões | Nega uma permissão a uma função.
 |[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissões | Remove uma permissão concedida ou negada anteriormente.
   
   
 ## <a name="public-database-role"></a>Função de banco de dados pública  
- Cada usuário do banco de dados pertence à função de banco de dados **pública** . Quando permissões específicas não são concedidas ou são negadas a um usuário em um objeto seguro, o usuário herda as permissões concedidas como **públicas** naquele objeto. Os usuários do banco de dados não podem ser removidos da função **pública**. 
+ Cada usuário do banco de dados pertence à função de banco de dados **pública** . Quando permissões específicas não são concedidas ou são negadas a um usuário em um objeto seguro, o usuário herda as permissões concedidas como **públicas** naquele objeto. Os usuários do banco de dados não podem ser removidos da função **pública** . 
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
@@ -160,3 +164,4 @@ Quando o R Services está instalado, as funções adicionais de banco de dados f
  [sp_helprotect &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)  
   
   
+

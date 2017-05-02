@@ -1,23 +1,27 @@
 ---
-title: "In&#237;cio R&#225;pido: Eventos estendidos no SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Início Rápido: Eventos estendidos no SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 09/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2c02a1b16e4ab6375c0479f494838649ed7a413f
+ms.lasthandoff: 04/11/2017
+
 ---
-# In&#237;cio R&#225;pido: Eventos estendidos no SQL Server
+# <a name="quick-start-extended-events-in-sql-server"></a>Início Rápido: Eventos estendidos no SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -45,25 +49,25 @@ Este artigo faz o seguinte:
 Blogs e outras conversas informais, às vezes, referem-se aos eventos estendidos pela abreviação *xevents*.
 
 
-> [AZURE.NOTE] Para obter informações sobre as diferenças de eventos estendidos entre o Microsoft SQL Server e o banco de dados SQL do Azure, veja [Eventos estendidos no Banco de Dados SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).
+> [!NOTE]
+> Para obter informações sobre as diferenças de eventos estendidos entre o Microsoft SQL Server e o banco de dados SQL do Azure, veja [Eventos estendidos no Banco de Dados SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).
 
 
-## Preparações antes da demonstração
+## <a name="preparations-before-demo"></a>Preparações antes da demonstração
 
 
 As etapas preliminares a seguir serão necessárias para a realização real da próxima demonstração.
 
-
 1. [Baixar o SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
-    - Todos os meses, é necessário instalar a atualização mais recente mensal do SSMS.
+  - Todos os meses, é necessário instalar a atualização mais recente mensal do SSMS.
 2. Faça logon no Microsoft SQL Server 2014 ou superior, ou em um Banco de Dados SQL do Azure em que `SELECT @@version` retorna um valor cujo primeiro nó é 12 ou superior.
 3. Verifique se sua conta tem a [permissão de servidor](../../t-sql/statements/grant-server-permissions-transact-sql.md) de **ALTER ANY EVENT SESSION**.
-    - Se estiver interessado, veja mais detalhes sobre segurança e permissões relacionadas aos eventos estendidos ao final deste artigo no [Apêndice](#appendix1).
+  - Se estiver interessado, veja mais detalhes sobre segurança e permissões relacionadas aos eventos estendidos ao final deste artigo no [Apêndice](#appendix1).
 
 
 
 
-## Demonstração da integração do SSMS
+## <a name="demo-of-ssms-integration"></a>Demonstração da integração do SSMS
 
 
 SSMS.exe fornece uma interface do usuário excelente para eventos estendidos. A interface do usuário é tão boa que muitos usuários não veem a necessidade de interagir com os eventos estendidos usando o Transact-SQL ou as DMVs (exibições de gerenciamento dinâmico) voltadas para eventos estendidos.
@@ -71,10 +75,10 @@ SSMS.exe fornece uma interface do usuário excelente para eventos estendidos. A 
 Nesta seção, é possível ver as etapas da interface do usuário para criação de um evento estendido e ver os dados que ele relata. Após as etapas, você pode ler sobre os conceitos envolvidos nas etapas para obter uma compreensão mais profunda.
 
 
-### Etapas de demonstração
+### <a name="steps-of-demo"></a>Etapas de demonstração
 
 
-Você pode entender as etapas mesmo se optar por não realizá-las. A demonstração inicia a caixa de diálogo **Nova Sessão**. Processamos suas quatro páginas chamadas:
+Você pode entender as etapas mesmo se optar por não realizá-las. A demonstração inicia a caixa de diálogo **Nova Sessão** . Processamos suas quatro páginas chamadas:
 
 - Geral
 - Eventos
@@ -87,13 +91,9 @@ O texto e as capturas de tela de suporte podem não ser exatas quando a interfac
 
 1. Conecte-se ao SSMS.
 
-2. No Pesquisador de Objetos, clique em **Gerenciamento** > **Eventos Estendidos** > **Nova Sessão**.
-    -  A caixa de diálogo **Nova Sessão** é preferível a **Assistente de Nova Sessão**, embora as duas sejam semelhantes.
+2. No Pesquisador de Objetos, clique em **Gerenciamento** > **Eventos Estendidos** > **Nova Sessão**. A caixa de diálogo **Nova Sessão** é preferível a **Assistente de Nova Sessão**, embora as duas sejam semelhantes.
 
-    ![Pesquisador de Objetos do SSMS, Gerenciamento, Eventos Estendidos, Nova Sessão.](/Image/SQL%20Server/xevents%2dsession%2dnewsessions%2d05%2dgeneral%2dssms%2drightclick%2dnot%2dwizard%2epng)
-
-3. No canto superior esquerdo, clique na página **Geral**. Digite *YourSession* ou qualquer nome que desejar na caixa de texto **Nome da sessão**.
-    - *Não* pressione o botão **OK** ainda, que aparece apenas ao final da demonstração.
+3. No canto superior esquerdo, clique na página **Geral** . Digite *YourSession*ou qualquer nome que desejar na caixa de texto **Nome da sessão** . *Não* pressione o botão **OK** ainda, que aparece apenas ao final da demonstração.
 
     ![Nova Sessão > Geral > Nome da sessão](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
@@ -102,27 +102,28 @@ O texto e as capturas de tela de suporte podem não ser exatas quando a interfac
     ![Nova Sessão > Eventos > Selecionar > Biblioteca de eventos, Eventos selecionados](../../relational-databases/extended-events/media/xevents-session-newsessions-14-events-ssms-rightclick-not-wizard.png)
 
 5. Na área **Biblioteca de eventos**, na lista suspensa, escolha **Somente nomes de evento**.
-    - Na caixa de texto, digite **sql**, que filtra e reduz a longa lista de eventos disponíveis usando um operador *contains*.
+    - Na caixa de texto, digite **sql**, que filtra e reduz a longa lista de eventos disponíveis usando um operador *contains* .
     - Role e clique no evento chamado **sql_statement_completed**.
-    - Clique no botão de seta para a direita **>** para mover o evento para a caixa **Eventos selecionados**.
+    - Clique no botão de seta para a direita **>** para mover o evento para a caixa **Eventos selecionados** .
 
-6. Na página **Eventos**, clique no botão **Configurar** à extrema direita.
+6. Na página **Eventos** , clique no botão **Configurar** à extrema direita.
     - Com o lado esquerdo cortado para melhor exibição, na captura de tela a seguir, é possível ver a área **Opções de configuração de evento**.
 
     ![Nova Sessão > Eventos > Configurar > Filtro (Predicado) > Campo](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. Clique na guia **Filtro (Predicado)**. Em seguida, clique em **Clique aqui para adicionar uma cláusula** para capturar todas as instruções SQL SELECT que têm uma cláusula HAVING.
+7. Clique na guia **Filtro (Predicado)**. Em seguida, clique em **Clique aqui para adicionar uma cláusula**para capturar todas as instruções SQL SELECT que têm uma cláusula HAVING.
 
-8. No lista suspensa **Campo**, escolha **sqlserver.sql_text**.
-  - Em **Operador**, escolha um operador LIKE.
-  - Em **Valor**, digite **%SELECT%HAVING%**.
+8. No lista suspensa **Campo** , escolha **sqlserver.sql_text**.
+   - Em **Operador** , escolha um operador LIKE.
+   - Em **Valor** , digite **%SELECT%HAVING%**.
 
-    > [AZURE.NOTE] Neste nome de duas partes, *sqlserver* é o nome do pacote e *sql_text* é o nome do campo. O evento anterior que escolhemos, *sql_statement_completed*, deve estar no mesmo pacote que o campo escolhido.
+    > [!NOTE]
+    > Neste nome de duas partes, *sqlserver* é o nome do pacote e *sql_text* é o nome do campo. O evento anterior que escolhemos, *sql_statement_completed* , deve estar no mesmo pacote que o campo escolhido.
 
-9. No canto superior esquerdo, clique na página **Armazenamento de Dados**.
+9. No canto superior esquerdo, clique na página **Armazenamento de Dados** .
 
-10. Na área **Destinos**, clique em **Clique aqui para um destino**.
-    - Na lista suspensa **Tipo**, escolha **event_file**.
+10. Na área **Destinos** , clique em **Clique aqui para um destino**.
+    - Na lista suspensa **Tipo** , escolha **event_file**.
     - Isso significa que os dados de evento serão armazenados em um arquivo que pode ser exibido.
 
     ![Nova Sessão > Armazenamento de Dados > Destinos > Tipo > event_file](../../relational-databases/extended-events/media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png)
@@ -142,13 +143,13 @@ O texto e as capturas de tela de suporte podem não ser exatas quando a interfac
     ![O nó da nova *event session* chamado YourSession, no Pesquisador de Objetos, em Gerenciamento > Eventos Estendidos > Sessões](../../relational-databases/extended-events/media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png)
 
 
-#### Editar a sessão de evento
+#### <a name="edit-your-event-session"></a>Editar a sessão de evento
 
 
-No **Pesquisador de Objetos** do SSMS, é possível editar a sessão de evento clicando com o botão direito do mouse em seu nó e clicando em **Propriedades**. A mesma caixa de diálogo com várias páginas é exibida.
+No **Pesquisador de Objetos**do SSMS, é possível editar a sessão de evento clicando com o botão direito do mouse em seu nó e clicando em **Propriedades**. A mesma caixa de diálogo com várias páginas é exibida.
 
 
-### T-SQL correspondente da sessão de evento
+### <a name="corresponding-t-sql-for-your-event-session"></a>T-SQL correspondente da sessão de evento
 
 
 Você usou a interface do usuário do SSMS para gerar um script T-SQL que criou a sessão de evento. É possível ver o script gerado da seguinte maneira:
@@ -189,12 +190,13 @@ GO
 ```
 
 
-> [AZURE.NOTE] Para o Banco de Dados SQL do Azure, na instrução anterior CREATE EVENT SESSION, a cláusula ON SERVER será ON DATABASE.
+> [!NOTE]
+> Para o Banco de Dados SQL do Azure, na instrução anterior CREATE EVENT SESSION, a cláusula ON SERVER será ON DATABASE.
 > 
 > Para obter mais informações sobre as diferenças de eventos estendidos entre o Microsoft SQL Server e o banco de dados SQL do Azure, veja [Eventos estendidos no Banco de Dados SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).
 
 
-#### Pré-DROP da sessão de evento
+#### <a name="pre-drop-of-the-event-session"></a>Pré-DROP da sessão de evento
 
 
 Antes da instrução CREATE EVENT SESSION, você talvez queira emitir condicionalmente um DROP EVENT SESSION caso o nome já exista.
@@ -214,7 +216,7 @@ go
 ```
 
 
-#### ALTER para iniciar e interromper a sessão de evento
+#### <a name="alter-to-start-and-stop-the-event-session"></a>ALTER para iniciar e interromper a sessão de evento
 
 
 Quando você cria uma sessão de evento, o padrão é que ela não inicie a execução automaticamente. Você pode iniciar ou interromper a sessão de evento a qualquer momento, usando a instrução T-SQL ALTER EVENT SESSION a seguir.
@@ -230,15 +232,15 @@ ALTER EVENT SESSION [YourSession]
 
 Você tem a opção de informar a sessão de evento para ser iniciada automaticamente quando a instância do SQL Server é iniciada. Veja a palavra-chave **STARTUP STATE = ON** em CREATE EVENT SESSION.
 
-- A interface do usuário do SSMS oferece uma caixa de seleção correspondente na página **Nova Sessão** > **Geral**.
+- A interface do usuário do SSMS oferece uma caixa de seleção correspondente na página **Nova Sessão** > **Geral** .
 
 
-## Testar sua sessão de evento
+## <a name="test-your-event-session"></a>Testar sua sessão de evento
 
 
 Teste sua sessão de evento com estas etapas simples:
 
-1. No **Pesquisador de Objetos** do SSMS, clique com o botão direito do mouse no nó da sessão de evento e clique em **Iniciar Sessão**.
+1. No **Pesquisador de Objetos**do SSMS, clique com o botão direito do mouse no nó da sessão de evento e clique em **Iniciar Sessão**.
 2. Execute a instrução `SELECT...HAVING` a seguir algumas vezes.
     - O ideal é que você possa alterar o valor `HAVING Count` entre as duas execuções, ativando/desativando entre 2 e 3. Isso permite que você veja as diferenças nos resultados.
 3. Clique com o botão direito do mouse no nó da sessão e clique em **Interromper Sessão**.
@@ -288,13 +290,14 @@ trace_event_id         3
 
 <a name="select-the-full-results-xml-37"/>
 
-### Selecionar os resultados completos como XML
+### <a name="select-the-full-results-as-xml"></a>Selecionar os resultados completos como XML
 
 
 No SSMS, execute a instrução T-SQL SELECT a seguir para retornar resultados em que cada linha fornece os dados sobre a ocorrência de um evento. CAST AS XML facilita a exibição dos resultados.
 
 
-> [AZURE.NOTE] O sistema de eventos sempre acrescenta um número longo ao nome de arquivo de *.xel* event_file especificado. Antes de executar a instrução SELECT a seguir por meio do arquivo, copie o nome completo fornecido pelo sistema e cole-o em SELECT.
+> [!NOTE]
+> O sistema de eventos sempre acrescenta um número longo ao nome de arquivo de *.xel* event_file especificado. Antes de executar a instrução SELECT a seguir por meio do arquivo, copie o nome completo fornecido pelo sistema e cole-o em SELECT.
 
 
 ```tsql
@@ -318,11 +321,11 @@ SELECT
 
 A cláusula SELECT anterior oferece duas maneiras de exibir os resultados completos de qualquer linha de evento específica:
 
-- Execute SELECT no SSMS e clique em uma célula da coluna **event_data_XML**. Isso é muito útil.
-- Copie a cadeia de caracteres longa de XML de uma célula na coluna **event_data**. Cole em qualquer editor de texto simples como Notepad.exe e salve a cadeia de caracteres em um arquivo com a extensão .XML. Em seguida, abra o arquivo .XML com um navegador.
+- Execute SELECT no SSMS e clique em uma célula da coluna **event_data_XML** . Isso é muito útil.
+- Copie a cadeia de caracteres longa de XML de uma célula na coluna **event_data** . Cole em qualquer editor de texto simples como Notepad.exe e salve a cadeia de caracteres em um arquivo com a extensão .XML. Em seguida, abra o arquivo .XML com um navegador.
 
 
-#### Exibição de resultados de um evento
+#### <a name="display-of-results-for-one-event"></a>Exibição de resultados de um evento
 
 
 Em seguida, vemos uma parte dos resultados, que estão em formato XML. Esse XML é editado aqui para torná-lo mais curto para exibição. Observe que `<data name="row_count">` exibe um valor de `6`, que corresponde às nossas seis linhas de resultados exibidas anteriormente. Além disso, podemos ver a instrução SELECT inteira.
@@ -372,7 +375,7 @@ Em seguida, vemos uma parte dos resultados, que estão em formato XML. Esse XML 
 ```
 
 
-## SSMS para exibir os resultados
+## <a name="ssms-to-display-results"></a>SSMS para exibir os resultados
 
 
 Há vários recursos avançados da interface do usuário do SSMS que podem ser usados para exibir os dados capturados de um evento estendido. Os detalhes estão em:
@@ -383,10 +386,10 @@ Há vários recursos avançados da interface do usuário do SSMS que podem ser u
 Os conceitos básicos começam com as opções do menu de contexto rotuladas **Exibir Dados de Destino** e **Inspecionar Dados Dinâmicos**.
 
 
-### Exibir dados de destino
+### <a name="view-target-data"></a>Exibir Dados de Destino
 
 
-No **Pesquisador de Objetos** do SSMS, é possível clicar com o botão direito do mouse no nó de destino que está sob o nó da sessão de evento. No menu de contexto, clique em **Exibir Dados de Destino**. O SSMS exibe os dados.
+No **Pesquisador de Objetos**do SSMS, é possível clicar com o botão direito do mouse no nó de destino que está sob o nó da sessão de evento. No menu de contexto, clique em **Exibir Dados de Destino**. O SSMS exibe os dados.
 
 A exibição não é atualizada conforme novos dados são reportados pelo evento. Mas você pode clicar em **Exibir Dados de Destino** novamente.
 
@@ -394,30 +397,30 @@ A exibição não é atualizada conforme novos dados são reportados pelo evento
 ![Exibir Dados de Destino, no SSMS, Gerenciamento > Eventos Estendidos > Sessões > YourSession > package0.event_file, clique com o botão direito do mouse](../../relational-databases/extended-events/media/xevents-viewtargetdata-ssms-targetnode-61.png)
 
 
-### Assistir dados ao vivo
+### <a name="watch-live-data"></a>Assistir dados ao vivo
 
 
-No **Pesquisador de Objetos** do SSMS, é possível clicar com o botão direito do mouse no nó da sessão de evento. No menu de contexto, clique em **Inspecionar Dados Dinâmicos**. O SSMS exibe dados de entrada conforme sua chegada em tempo real.
+No **Pesquisador de Objetos**do SSMS, é possível clicar com o botão direito do mouse no nó da sessão de evento. No menu de contexto, clique em **Inspecionar Dados Dinâmicos**. O SSMS exibe dados de entrada conforme sua chegada em tempo real.
 
 
 ![Inspecionar Dados Dinâmicos, no SSMS, Gerenciamento > Eventos Estendidos > Sessões > YourSession > clique com o botão direito do mouse](../../relational-databases/extended-events/media/xevents-watchlivedata-ssms-yoursessionnode-63.png)
 
 
-## Cenários
+## <a name="scenarios"></a>Cenários
 
 
 Há inúmeros cenários para o uso efetivo dos eventos estendidos. Os artigos a seguir fornecem exemplos de cenários que envolvem os bloqueios usados durante as consultas.
 
 
-Cenários específicos de sessões de evento destinadas à avaliação de bloqueios são descritos nos artigos a seguir. Os artigos também mostram algumas técnicas avançadas, como o uso de **@dbid** e de `EXECUTE (@YourSqlString)` dinâmico:
+Cenários específicos de sessões de evento destinadas à avaliação de bloqueios são descritos nos artigos a seguir. Os artigos também mostram algumas técnicas avançadas, como o uso de **@dbid**e de `EXECUTE (@YourSqlString)`dinâmico:
 
 - [Localizar os objetos que detêm a maioria dos bloqueios](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - Esse cenário usa o destino package0.histogram, que processa os dados brutos de evento antes de exibi-los para você.
 - [Determinar quais consultas estão mantendo bloqueios](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
-  - Esse cenário usa o [destino package0.pair_matching](Event%20Pairing%20Target.md), em que o par de eventos é sqlserver.lock_acquire e lock_release.
+  - Esse cenário usa o [destino package0.pair_matching](http://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3), em que o par de eventos é sqlserver.lock_acquire e lock_release.
 
 
-## Termos e conceitos nos eventos estendidos
+## <a name="terms-and-concepts-in-extended-events"></a>Termos e conceitos nos eventos estendidos
 
 
 A tabela a seguir lista os termos usados para eventos estendidos e descreve seus significados.
@@ -433,7 +436,7 @@ A tabela a seguir lista os termos usados para eventos estendidos e descreve seus
 | pacote | Um qualificador de nome anexado a cada item em um conjunto de itens centrado em torno de um núcleo de eventos. <br/> <br/> Por exemplo, um pacote pode ter eventos sobre o texto T-SQL. Um evento pode tratar de todo o T-SQL em um lote delimitado por GO. Enquanto isso, outro evento mais estreito designa instruções T-SQL individuais. Além disso, para qualquer instrução T-SQL, há eventos de início e concluídos. <br/> <br/> Os campos apropriados para os eventos também estão no pacote com os eventos. A maioria dos destinos está em *package0* e é usada com eventos de vários outros pacotes. |
 
 
-## Como descobrir os eventos disponíveis em pacotes
+## <a name="how-to-discover-the-available-events-in-packages"></a>Como descobrir os eventos disponíveis em pacotes
 
 
 O T-SQL SELECT a seguir retorna uma linha para cada evento disponível cujo nome contém a cadeia de caracteres de três “sql”. Obviamente, você pode editar o valor LIKE para procurar nomes de eventos diferentes. As linhas também dão nome ao pacote que contém o evento.
@@ -474,21 +477,21 @@ Package-Guid = 655FD93F-3364-40D5-B2BA-330F7FFB6491
 ```
 
 
-#### Interface do usuário do SSMS para pesquisa
+#### <a name="ssms-ui-for-search"></a>Interface do usuário do SSMS para pesquisa
 
 
-Outra opção de pesquisa é usar a interface do usuário do SSMS da caixa de diálogo **Nova Sessão** > **Eventos** > **Biblioteca de Eventos**, mostrada em uma captura de tela anterior.
+Outra opção de pesquisa é usar a interface do usuário do SSMS da caixa de diálogo **Nova Sessão** > **Eventos** > **Biblioteca de Eventos** , mostrada em uma captura de tela anterior.
 
 
 
-#### Classes de evento de Rastreamento do SQL, com eventos estendidos
+#### <a name="sql-trace-event-classes-with-extended-events"></a>Classes de evento de Rastreamento do SQL, com eventos estendidos
 
 
 Uma descrição do uso dos eventos estendidos com colunas e classes de evento do Rastreamento do SQL está disponível em: [Exibir os Eventos Estendidos equivalentes às classes do Rastreamento do SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
 
 
 
-#### ETW (Rastreamento de Eventos para Windows), com os eventos estendidos
+#### <a name="event-tracing-for-windows-etw-with-extended-events"></a>ETW (Rastreamento de Eventos para Windows), com os eventos estendidos
 
 
 Descrições de como usar os eventos estendidos com o ETW (Rastreamento de Eventos para Windows) estão disponíveis em:
@@ -502,13 +505,13 @@ Os eventos ETW não estão disponíveis nos eventos estendidos do Banco de Dados
 
 
 
-## Itens adicionais
+## <a name="additional-items"></a>Itens adicionais
 
 
 Esta seção apresenta brevemente alguns itens diversos.
 
 
-### Sessões de evento instaladas com o SQL Server
+### <a name="event-sessions-installed-with-sql-server"></a>Sessões de evento instaladas com o SQL Server
 
 
 O SQL Server é fornecido com alguns eventos estendidos já criados. Todos são configurados para serem iniciados sempre que o sistema SQL é iniciado. Essas sessões de evento coletam dados que podem ser úteis em caso de erro do sistema. Como todos os eventos estendidos, eles consomem apenas uma pequena quantidade de recursos, e a Microsoft recomenda que sejam executados sozinhos.
@@ -521,13 +524,13 @@ Você pode ver essas sessões de evento no SSMS **Pesquisador de Objetos** em **
 
 
 
-### Provedor do PowerShell para eventos estendidos
+### <a name="powershell-provider-for-extended-events"></a>Provedor do PowerShell para eventos estendidos
 
 
 Você pode gerenciar os eventos estendidos do SQL Server usando o provedor do PowerShell do SQL Server. Encontre detalhes em: [Usar o Provedor do PowerShell para Eventos Estendidos](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
 
 
-### Exibições do sistema para eventos estendidos
+### <a name="system-views-for-extended-events"></a>Exibições do sistema para eventos estendidos
 
 
 As exibições do sistema para os eventos estendidos incluem:
@@ -553,7 +556,7 @@ As exibições do sistema para os eventos estendidos incluem:
 
 
 <a name="appendix1"></a>
-## Apêndice: SELECTs para determinar o proprietário da permissão com antecedência
+## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a>Apêndice: SELECTs para determinar o proprietário da permissão com antecedência
 
 
 As permissões mencionadas neste artigo são:
@@ -565,7 +568,7 @@ As permissões mencionadas neste artigo são:
 As instruções SELECT do Transact-SQL podem relatar quem tem essas permissões.
 
 
-#### Permissões diretas UNION e permissões derivadas de função
+#### <a name="union-direct-permissions-plus-role-derived-permissions"></a>Permissões diretas UNION e permissões derivadas de função
 
 
 A instrução SELECT...UNION ALL a seguir retorna linhas que mostram quem tem as permissões necessárias para criar sessões de evento e consultar as exibições de catálogo do sistema em busca de eventos estendidos.
@@ -621,7 +624,7 @@ SELECT
 ```
 
 
-#### função HAS_PERMS_BY_NAME
+#### <a name="haspermsbyname-function"></a>função HAS_PERMS_BY_NAME
 
 
 A instrução SELECT a seguir relata as permissões. Ela utiliza a função interna [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).
@@ -639,7 +642,7 @@ SELECT HAS_PERMS_BY_NAME(
 ```
 
 
-#### Links de segurança
+#### <a name="security-links"></a>Links de segurança
 
 Estes são os links para a documentação relacionada a essas instruções SELECT e às permissões:
 
@@ -648,13 +651,15 @@ Estes são os links para a documentação relacionada a essas instruções SELEC
 - [Permissões de servidor GRANT (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
 - [sys.server_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms188786.aspx)
 - Especialmente, para o Banco de Dados SQL do Azure [database_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms187328.aspx)
-- Blog: [Effective Database Engine Permissions](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx) (permissões eficientes do Mecanismo de Banco de Dados)
-- [Cartaz](http://go.microsoft.com/fwlink/?LinkId=229142) que permite zoom, como um PDF, que exibe a hierarquia de todas as permissões do SQL Server.
+- Blog: [Effective Database Engine Permissions](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)(permissões eficientes do Mecanismo de Banco de Dados)
+- [Cartaz](http://go.microsoft.com/fwlink/?LinkId=229142)que permite zoom, como um PDF, que exibe a hierarquia de todas as permissões do SQL Server.
 
 
 
-## Links para informações de suporte
+## <a name="links-to-supporting-information"></a>Links para informações de suporte
 
 
 - [sys.fn_xe_file_target_read_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)
+
+
 

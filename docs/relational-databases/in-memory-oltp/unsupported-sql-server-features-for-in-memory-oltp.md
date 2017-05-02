@@ -1,27 +1,31 @@
 ---
-title: "Recursos do SQL Server sem suporte para OLTP na Mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Recursos do SQL Server sem suporte para OLTP in-memory | Microsoft Docs
+ms.custom: 
+ms.date: 10/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 caps.latest.revision: 55
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1b1d4a26616fe83a241267bc87b9e799d883e26
+ms.lasthandoff: 04/11/2017
+
 ---
-# Recursos do SQL Server sem suporte para OLTP na Mem&#243;ria
+# <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Recursos do SQL Server sem suporte para OLTP na Memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Este tópico discute os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com ou sem suporte para uso com objetos com otimização de memória.  
   
-## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Recursos sem suporte para OLTP in-memory  
+## <a name="includessnoversionincludesssnoversion-mdmd-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Recursos sem suporte para OLTP in-memory  
  Os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a seguir não têm suporte em um banco de dados que possui objetos com otimização de memória (incluindo o grupo de arquivos de dados com otimização de memória).  
   
 |Recurso sem suporte|Descrição do recurso|  
@@ -49,7 +53,7 @@ caps.handback.revision: 55
 |Banco de dados de recursos, tempdb|Sim|Não há nenhuma limitação em transações entre bancos de dados que, salvo um banco de dados de usuário único, usam somente banco de dados de recursos e o tempdb.|  
 |mestre|somente leitura|As transações entre bancos de dados que tocam o OLTP na memória e o banco de dados mestre falharão na confirmação se incluírem gravações no banco de dados mestre. As transações entre bancos de dados que leem apenas no mestre e usam somente um banco de dados de usuário são permitidas.|  
   
-## Cenários sem suporte  
+## <a name="scenarios-not-supported"></a>Cenários sem suporte  
   
 -   Não há suporte para a contenção de banco de dados ([Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)) no OLTP in-memory. Há suporte para autenticação de banco de dados independente. No entanto, todos os objetos OLTP na memória são marcados como "contenção recente" em dm_db_uncontained_entities do DMV.  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 55
   
 -   Cursores dinâmicos e de conjunto de chaves em consultas que acessam tabelas com otimização de memória. Esses cursores são degradados para estático e somente leitura.  
   
--   O uso de **MERGE INTO***target* com *target* é uma tabela com otimização de memória. Há suporte para **MERGE USING***source* em tabelas com otimização de memória.  
+-   O uso de **MERGE INTO***target* com *target* é uma tabela com otimização de memória. **MERGE USING***source* em tabelas com otimização de memória.  
   
 -   Não há suporte para o tipo de dados ROWVERSION (TIMESTAMP). Veja [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) para obter mais informações.  
   
@@ -71,7 +75,8 @@ caps.handback.revision: 55
   
 -   PBM (gerenciamento baseado em política). Não há suporte para impedir e registrar somente modos do PBM. A existência dessas políticas no servidor pode impedir que a DDL do OLTP na memória seja executada com êxito. Há suporte para os modos sob demanda e ao agendar.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Suporte ao SQL Server para OLTP na memória](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   
+

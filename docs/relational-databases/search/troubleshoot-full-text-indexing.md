@@ -1,26 +1,30 @@
 ---
-title: "Solucionar problemas na indexa&#231;&#227;o de texto completo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "índices [pesquisa de texto completo]"
-  - "solução de problemas [SQL Server], pesquisa de texto completo"
-  - "solucionando problemas [pesquisa de texto completo]"
+title: "Solucionar problemas de indexação de texto completo | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [full-text search]
+- troubleshooting [SQL Server], full-text search
+- troubleshooting [full-text search]
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5d3238bdf788f27c7e004139b66d0fcb501a57a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Solucionar problemas na indexa&#231;&#227;o de texto completo
+# <a name="troubleshoot-full-text-indexing"></a>Solucionar problemas na indexação de texto completo
      
 ##  <a name="failure"></a> Solucionar problemas de falhas na indexação de texto completo  
  Ao popular ou manter um índice de texto completo, o indexador de texto completo, pelas razões descritas a seguir, talvez falhe ao indexar uma ou mais linhas. Esses erros em nível de linha não impedem a conclusão da população. O indexador ignora essas linhas, o que significa que não é possível consultar seu conteúdo.  
@@ -45,20 +49,18 @@ caps.handback.revision: 43
   
  Você deve exibir o registro de rastreamento no final de qualquer operação significativa de indexação de texto completo ou ao descobrir que a população não foi concluída.  
   
-### Componentes não assinados  
+### <a name="unsigned-components"></a>Componentes não assinados  
  Por padrão, o indexador de texto completo requer os filtros e separadores de palavras que carrega ao assinar. Se não estiverem assinados, o que algumas vezes é o caso quando os componentes personalizados são instalados, é necessário configurar o indexador de texto completo para ignorar a verificação de assinatura.  
   
 > [!IMPORTANT]  
->  Ignorar a verificação de assinatura torna menos segura a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Recomendamos assinar quaisquer componentes implementados ou garantir que os componentes que você adquirir estão assinados. Para obter informações sobre componentes de assinatura, veja [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
+>  Ignorar a verificação de assinatura torna menos segura a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Recomendamos assinar quaisquer componentes implementados ou garantir que os componentes que você adquirir estão assinados. Para obter informações sobre componentes de assinatura, veja [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
- [Neste tópico](#top)  
   
 ##  <a name="state"></a> Índice de texto completo em estado inconsistente após o log de transações ser restaurado  
  Ao restaurar o log de transações de um banco de dados, é possível que apareça um aviso indicando que o índice de texto completo não está em um estado consistente. O motivo pelo qual isso ocorre é que o índice de texto completo de uma tabela foi modificado após ter sido feito o backup do banco de dados. Para trazer o índice de texto completo a um estado consistente, você deve executar uma população completa (rastreamento) na tabela. Para obter mais informações, veja [Popular índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
   
- [Neste tópico](#top)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [Popular índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md)  
   

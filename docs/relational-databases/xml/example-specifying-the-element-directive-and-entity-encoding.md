@@ -1,25 +1,29 @@
 ---
-title: "Exemplo: Especificando a diretiva ELEMENT e codifica&#231;&#227;o de entidade | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "diretiva ELEMENT"
-  - "codificação de entidade [XML]"
+title: "Exemplo: especificando a diretiva ELEMENT e a codificação de entidade | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ELEMENT directive
+- entity encoding [XML]
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d2ddb67aee711a217bd9f75b62ef14067e4aac55
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemplo: Especificando a diretiva ELEMENT e codifica&#231;&#227;o de entidade
+# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Exemplo: Especificando a diretiva ELEMENT e codificação de entidade
   Este exemplo ilustra a diferença entre as diretivas **ELEMENT** e **XML** . A entidade dos dados é definida pela diretiva **ELEMENT** , mas não pela diretiva **XML** . O elemento \<Summary> é atribuído como XML, `<Summary>This is summary description</Summary>`, na consulta.  
   
  Considere esta consulta:  
@@ -67,7 +71,7 @@ FOR XML EXPLICIT
 </ProductModel>  
 ```  
   
- Em vez de atribuir um valor de XML estático, a consulta a seguir usa o método **query()** do tipo **xml** para recuperar a descrição resumida do modelo do produto da coluna CatalogDescription de tipo **xml**. Como se sabe que o resultado é de tipo **xml** , nenhuma definição de entidade é aplicada.  
+ Em vez de atribuir um valor de XML estático, a consulta a seguir usa o método **query()** do tipo **xml** para recuperar a descrição resumida do modelo do produto da coluna CatalogDescription de tipo **xml** . Como se sabe que o resultado é de tipo **xml** , nenhuma definição de entidade é aplicada.  
   
 ```  
 SELECT  1 as Tag,  
@@ -91,7 +95,7 @@ ORDER BY [ProductModel!1!ProdModelID],Tag
 FOR XML EXPLICIT  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usar o modo EXPLICIT com FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

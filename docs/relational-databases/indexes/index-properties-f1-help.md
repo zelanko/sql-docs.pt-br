@@ -1,30 +1,34 @@
 ---
-title: "Ajuda de F1 de Propriedades do &#205;ndice  | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.swb.indexproperties.filter.f1"
-  - "sql13.swb.indexproperties.partitions.f1"
-  - "sql13.swb.indexproperties.general.f1"
-  - "sql13.swb.indexproperties.storage.f1"
-  - "sql13.swb.indexproperties.columns.f1"
-  - "sql13.swb.indexproperties.options.f1"
-  - "sql13.swb.indexproperties.spatial.f1"
+title: "Ajuda de F1 de propriedades do índice | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.swb.indexproperties.filter.f1
+- sql13.swb.indexproperties.partitions.f1
+- sql13.swb.indexproperties.general.f1
+- sql13.swb.indexproperties.storage.f1
+- sql13.swb.indexproperties.columns.f1
+- sql13.swb.indexproperties.options.f1
+- sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d646d06bd41ce4db35011d65ecab45109326c15
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ajuda de F1 de Propriedades do &#205;ndice 
+# <a name="index-properties-f1-help"></a>Ajuda de F1 de Propriedades do Índice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   As seções neste tópico referem-se a várias propriedades de índice que estão disponíveis usando caixas de diálogo do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -63,7 +67,7 @@ caps.handback.revision: 38
  Se você selecionar **Espacial** no campo **Tipo de índice** , a caixa de seleção **Exclusiva** ficará esmaecida.  
   
  **Colunas de chave de índice**  
- Adicione as colunas desejadas à grade **Colunas de chave de índice**. Quando mais de uma coluna é adicionada, as colunas devem ser listadas na ordem desejada. A ordem de coluna em um índice pode ter um grande impacto no desempenho do índice.  
+ Adicione as colunas desejadas à grade **Colunas de chave de índice** . Quando mais de uma coluna é adicionada, as colunas devem ser listadas na ordem desejada. A ordem de coluna em um índice pode ter um grande impacto no desempenho do índice.  
   
  Não é permitido que mais de 16 colunas participem de um único índice composto. Para mais de 16 colunas, consulte as colunas incluídas no final deste tópico.  
   
@@ -94,7 +98,7 @@ caps.handback.revision: 38
  Exibe se a coluna que participa da chave de índice permite armazenar valores NULL na tabela ou coluna de exibição.  
   
  **Adicionar**  
- Adiciona uma coluna à chave de índice. Selecione colunas de tabela da caixa de diálogo **Selecionar Colunas da caixa de diálogo** *\<nome da tabela>* que aparece quando você clica em **Adicionar**. No caso de um índice espacial, depois que você seleciona uma coluna, este botão fica esmaecido.  
+ Adiciona uma coluna à chave de índice. Selecione colunas de tabela da caixa de diálogo **Selecionar colunas de** *\<nome da tabela>* que aparece quando você clica em **Adicionar**. No caso de um índice espacial, depois que você seleciona uma coluna, este botão fica esmaecido.  
   
  **Remover**  
  Remove a coluna selecionada da participação na chave de índice.  
@@ -129,7 +133,7 @@ caps.handback.revision: 38
  **Identidade**  
  Exibe **Sim** para colunas de identidade e **Não** quando a coluna não é uma coluna de identidade.  
   
- **Permitir Nulos**  
+ **Allow Nulls**  
  Exibe **Sim** quando a definição da tabela permitir valores nulos para a coluna. Exibe **Não** quando a definição da tabela não permite nulos para a coluna.  
   
 ##  <a name="Storage"></a> Opções da página de armazenamento  
@@ -178,35 +182,35 @@ caps.handback.revision: 38
 ##  <a name="Spatial"></a> Opções de índice da página Espacial  
  Use a página **Espacial** para exibir ou especificar os valores das propriedades espaciais. Para obter mais informações, veja [Dados espaciais &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
-### Caixa delimitadora  
+### <a name="bounding-box"></a>Caixa delimitadora  
  A *caixa delimitadora* é o perímetro da grade de alto nível de um plano geométrico. Os parâmetros da caixa delimitadora só existem no mosaico de grade geométrica. Esses parâmetros ficarão indisponíveis se o **Esquema de Mosaico** for **Grade geográfica**.  
   
  O painel exibe as coordenadas **(***X mín.***,***Y mín.***)** e **(***X máx.***,***Y máx.***)** da caixa delimitadora. Não há valores de coordenada padrão. Portanto, ao criar um novo índice espacial em uma **geometry** coluna de tipo, será necessário especificar os valores de coordenada.  
   
- **X-min**  
+ **X mín.**  
  A coordenada X do canto inferior esquerdo da caixa delimitadora.  
   
- **Y-min**  
+ **Y mín.**  
  A coordenada Y do canto inferior esquerdo da caixa delimitadora.  
   
- **X-max**  
+ **X máx.**  
  Coordenada X do canto superior direito da caixa delimitadora.  
   
- **Y-max**  
+ **Y máx.**  
  Coordenada Y do canto superior direito da caixa delimitadora.  
   
-### Geral  
+### <a name="general"></a>Geral  
  **Esquema de Mosaico**  
  Indica o esquema de mosaico do índice. Os esquemas de mosaico com suporte são os seguintes:  
   
  **Grade geométrica**  
- Especifica o esquema de mosaico de grade geométrica, que se aplica a uma coluna do tipo de dados **geometria**.  
+ Especifica o esquema de mosaico de grade geométrica, que se aplica a uma coluna do tipo de dados **geometria** .  
   
  **Grade Automática de Geometria**  
  Esta opção é habilitada para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando o nível de compatibilidade de banco de dados é definido como 110 ou superior.  
   
  **Grade geográfica**  
- Especifica o esquema de mosaico de grade de geografia, que se aplica a uma coluna do tipo de dados **geografia**.  
+ Especifica o esquema de mosaico de grade de geografia, que se aplica a uma coluna do tipo de dados **geografia** .  
   
  **Grade Automática de Geografia**  
  Esta opção é habilitada para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando o nível de compatibilidade de banco de dados é definido como 110 ou superior.  
@@ -216,9 +220,9 @@ caps.handback.revision: 38
  **Células por Objeto**  
  Indica o número de células por objeto do mosaico que pode ser usado para um único objeto espacial no índice. Esse número pode ser qualquer inteiro entre 1 e 8.192, inclusive. O padrão é 16, e 8 para versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando o nível de compatibilidade de banco de dados é definido como 110 ou superior.  
   
- No nível superior, se um objeto abranger mais células que o especificado por *n*, a indexação usará o número de células necessário para fornecer um mosaico de nível superior completo. Nesses casos, um objeto poderia receber mais que o número de células especificado. Nesse caso, o número máximo de células geradas pela grade de nível superior, que depende da densidade **Nível 1**.  
+ No nível superior, se um objeto abranger mais células que o especificado por *n*, a indexação usará o número de células necessário para fornecer um mosaico de nível superior completo. Nesses casos, um objeto poderia receber mais que o número de células especificado. Nesse caso, o número máximo de células geradas pela grade de nível superior, que depende da densidade **Nível 1** .  
   
-### Grades  
+### <a name="grids"></a>Grades  
  Este painel mostra a densidade da grade a cada nível do esquema de mosaico. A densidade é especificada como **Baixa**, **Média**ou **Alta**. O padrão **Média**. **Baixa** representa uma grade de 4x4 (16 células), **Média** representa uma grade de 8x8 (64 células) e **Alta** representa uma grade de 16x16 (256 células). Essas opções não estão disponíveis quando as opções de mosaico **Grade Automática de Geometria** ou **Grade Automática de Geografia** são escolhidas.  
   
  **Nível 1**  
@@ -239,9 +243,10 @@ caps.handback.revision: 38
  **Expressão de filtro**  
  Define quais linhas de dados devem ser incluídas no índice filtrado. Por exemplo, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções Set Index](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   
+

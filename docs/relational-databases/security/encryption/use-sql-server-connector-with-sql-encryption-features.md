@@ -1,25 +1,29 @@
 ---
-title: "Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Conector do SQL Server, usando"
-  - "EKM, com o Conector do SQL Server"
+title: Usar o Conector do SQL Server com recursos de criptografia do SQL | Microsoft Docs
+ms.custom: 
+ms.date: 04/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Connector, using
+- EKM, with SQL Server Connector
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e24c6b23aeafcbeebf5cf5515803c7eb909a65db
+ms.lasthandoff: 04/11/2017
+
 ---
-# Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL)
+# <a name="use-sql-server-connector-with-sql-encryption-features"></a>Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   As atividades de criptografia do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comuns do que usam uma chave assimétrica protegidas pelo Cofre de Chaves do Azure incluem três áreas a seguir.  
@@ -30,12 +34,12 @@ caps.handback.revision: 13
   
 -   Criptografia de nível de coluna usando uma chave assimétrica do Key Vault  
   
- Concluir as partes I a IV do tópico [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) (Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure), antes continuar com as etapas nesse tópico.  
+ Concluir as partes I a IV do tópico [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)(Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure), antes continuar com as etapas nesse tópico.  
  
 > [!NOTE]  
 >  Versões 1.0.0.440 e anteriores foram substituídas e não têm mais suporte em ambientes de produção. Atualize para a versão 1.0.1.0 ou posterior visitando o [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) e usando as instruções da página [Manutenção e solução de problemas do Conector do SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) em "Atualização do Conector do SQL Server".  
   
-## Transparent Data Encryption usando uma chave assimétrica do Cofre de Chaves do Azure  
+## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Transparent Data Encryption usando uma chave assimétrica do Cofre de Chaves do Azure  
  Depois de concluir as Partes I a IV do tópico Setup Steps for Extensible Key Management Using the Azure Key Vault (Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure), use a chave de Cofre de Chaves do Azure para criptografar a chave de criptografia do banco de dados usando TDE.  
 Você precisará criar uma credencial e um logon e criar uma chave de criptografia do banco de dados que fará criptografia dos dados e logs no banco de dados. Para criptografar um banco de dados a permissão **CONTROL** é exigida no banco de dados. O gráfico a seguir mostra a hierarquia da chave de criptografia ao usar o Cofre de Chaves do Azure.  
   
@@ -47,9 +51,9 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
   
      Modificar o script [!INCLUDE[tsql](../../../includes/tsql-md.md)] abaixo das seguintes maneiras:  
   
-    -   Edite o argumento `IDENTITY` (`ContosoDevKeyVault`) para que ele aponte para o Cofre de Chaves do Azure.
-        - Se você estiver usando o **Azure público**, substitua o argumento `IDENTITY` pelo nome do Cofre de Chaves do Azure da Parte II.
-        - Se você estiver usando uma **nuvem privada do Azure** (por ex:. Azure Governamental, Azure China ou Azure Alemanha), substitua o argumento `IDENTITY` pelo URI de Cofre que será retornado na Parte II, etapa 3. Não inclua “https://” no URI de Cofre.   
+    -   Edite o argumento `IDENTITY` (`ContosoDevKeyVault`) para apontar para o Cofre de Chaves do Azure.
+        - Se você estiver usando o **Azure público**, substitua o argumento `IDENTITY` pelo nome do seu Cofre de Chaves do Azure da Parte II.
+        - Se você estiver usando uma **nuvem privada do Azure** (por ex:. Azure Governamental, Azure China ou Azure Alemanha), substitua o argumento `IDENTITY` pelo URI do Cofre retornado na Parte II, etapa 3. Não inclua “https://” no URI do Cofre.   
   
     -   Substitua a primeira parte do argumento do `SECRET` pela **ID do Cliente** do Azure Active Directory da Parte I. Neste exemplo, a **ID do Cliente** é `EF5C8E094D2A4A769998D93440D8115D`.  
   
@@ -79,7 +83,7 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
     -- for the Database engine to use when it loads a database   
     -- encrypted by TDE.  
     CREATE LOGIN TDE_Login   
-    FROM ASYMMETRIC KEY ContosoRSAKey0;  
+    FROM ASYMMETRIC KEY CONTOSO_KEY;  
     GO   
   
     -- Alter the TDE Login to add the credential for use by the   
@@ -99,7 +103,7 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
   
     CREATE DATABASE ENCRYPTION KEY   
     WITH ALGORITHM = AES_256   
-    ENCRYPTION BY SERVER ASYMMETRIC KEY ContosoRSAKey0;  
+    ENCRYPTION BY SERVER ASYMMETRIC KEY CONTOSO_KEY;  
     GO  
     ```  
   
@@ -112,15 +116,15 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
     GO  
     ```  
   
-     Usando [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], verifique se a TDE foi ativada conectando-se ao banco de dados com o Pesquisador de Objetos. Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas** e clique em **Gerenciar Criptografia de Banco de Dados**.  
+     Usando [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], verifique se a TDE foi ativada conectando-se ao banco de dados com o Pesquisador de Objetos. Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**e clique em **Gerenciar Criptografia de Banco de Dados**.  
   
      ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
   
-     Na caixa de diálogo **Gerenciar Criptografia de Banco de Dados**, confirme se a TDE está ativada e se a chave assimétrica está criptografando a DEK.  
+     Na caixa de diálogo **Gerenciar Criptografia de Banco de Dados** , confirme se a TDE está ativada e se a chave assimétrica está criptografando a DEK.  
   
      ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
   
-     Como alternativa, você pode executar o seguinte script [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Um estado de criptografia de 3 indica um banco de dados criptografado.  
+     Como alternativa, você pode executar o seguinte script [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Um estado de criptografia de 3 indica um banco de dados criptografado.  
   
     ```tsql  
     USE MASTER  
@@ -136,7 +140,7 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
     > [!NOTE]  
     >  O banco de dados do `tempdb` é criptografado automaticamente sempre que qualquer banco de dados habilita TDE.  
   
-## Criptografia de backups usando uma chave assimétrica do Key Vault  
+## <a name="encrypting-backups-by-using-an-asymmetric-key-from-the-key-vault"></a>Criptografia de backups usando uma chave assimétrica do Key Vault  
  Há suporte para backups criptografados começando com [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. O exemplo a seguir cria e restaura um backup criptografado e uma chave de criptografia de dados protegida pela chave assimétrica no cofre de chave.  
 O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acessar o Cofre de Chaves durante o carregamento de banco de dados. É recomendável criar outra ID do cliente e Segredo do Azure Active Directory na Parte I para o Mecanismo de Banco de Dados, para limitar as permissões de Cofre de Chaves que são concedidas.  
   
@@ -144,9 +148,9 @@ O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acess
   
      Modificar o script [!INCLUDE[tsql](../../../includes/tsql-md.md)] abaixo das seguintes maneiras:  
   
-    -   Edite o argumento `IDENTITY` (`ContosoDevKeyVault`) para que ele aponte para o Cofre de Chaves do Azure.
-        - Se você estiver usando o **Azure público**, substitua o argumento `IDENTITY` pelo nome do Cofre de Chaves do Azure da Parte II.
-        - Se você estiver usando uma **nuvem privada do Azure** (por ex:. Azure Governamental, Azure China ou Azure Alemanha), substitua o argumento `IDENTITY` pelo URI de Cofre que será retornado na Parte II, etapa 3. Não inclua “https://” no URI de Cofre.    
+    -   Edite o argumento `IDENTITY` (`ContosoDevKeyVault`) para apontar para o Cofre de Chaves do Azure.
+        - Se você estiver usando o **Azure público**, substitua o argumento `IDENTITY` pelo nome do seu Cofre de Chaves do Azure da Parte II.
+        - Se você estiver usando uma **nuvem privada do Azure** (por ex:. Azure Governamental, Azure China ou Azure Alemanha), substitua o argumento `IDENTITY` pelo URI do Cofre retornado na Parte II, etapa 3. Não inclua “https://” no URI do Cofre.    
   
     -   Substitua a primeira parte do argumento do `SECRET` pela **ID do Cliente** do Azure Active Directory da Parte I. Neste exemplo, a **ID do Cliente** é `EF5C8E094D2A4A769998D93440D8115D`.  
   
@@ -194,7 +198,9 @@ O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acess
   
 3.  **Backup de banco de dados**  
   
-     Faça backup do banco de dados especificando a criptografia com a chave simétrica armazenada no cofre de chaves.  
+     Faça backup do banco de dados especificando a criptografia com a chave assimétrica armazenada no cofre de chaves.
+     
+     No exemplo abaixo, observe que, se o banco de dados já foi criptografado com TDE e a chave assimétrica `CONTOSO_KEY_BACKUP` é diferente da chave assimétrica TDE, o backup será criptografado tanto pela chave assimétrica TDE quanto por `CONTOSO_KEY_BACKUP`. A instância de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precisará das duas chaves para descriptografar o backup.
   
     ```tsql  
     USE master;  
@@ -207,6 +213,16 @@ O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acess
     GO  
     ```  
   
+4.  **Restaurar o banco de dados**  
+    
+    Para restaurar um backup de banco de dados criptografado com TDE, a instância de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] primeiro deve ter uma cópia da chave de cofre de chaves assimétrica usada para criptografia. Isso poderia ser feito assim:  
+    
+    - Se a chave assimétrica original usada para TDE não estiver mais no cofre de chaves, restaure o backup da chave de cofre de chaves ou importe novamente a chave de uma HSM local. **Importante:** para que a impressão digital da chave corresponda a impressão digital registrada no backup do banco de dados, a chave deve ser nomeada com o **mesmo nome de chave do cofre de chaves** que recebeu originalmente.
+    
+    - Aplique as etapas 1 e 2 na instância de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+    
+    - Uma vez que a instância de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiver acesso às chaves assimétricas usadas para criptografar o backup, restaure o banco de dados no servidor.
+    
      Código de restauração de exemplo:  
   
     ```tsql  
@@ -218,13 +234,13 @@ O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acess
   
      Para obter mais informações sobre opções de backup, consulte [BACKUP (Transact-SQL)](../../../t-sql/statements/backup-transact-sql.md).  
   
-## Criptografia de nível de coluna usando uma chave assimétrica do Key Vault  
+## <a name="column-level-encryption-by-using-an-asymmetric-key-from-the-key-vault"></a>Criptografia de nível de coluna usando uma chave assimétrica do Key Vault  
  O exemplo a seguir cria uma chave simétrica protegida pela chave assimétrica no cofre de chave. Em seguida, a chave simétrica é usada para criptografar dados no banco de dados.  
   
 > [!IMPORTANT]  
 >  Você não poderá usar a mesma chave assimétrica para criptografia de backup se você já tiver usado essa chave para TDE ou criptografia de backup (nos exemplos anteriores).  
   
- Este exemplo usa a chave assimétrica do `CONTOSO_KEY_COLUMNS` armazenada no cofre de chaves, que pode ser importada ou criada anteriormente, como descrito na Etapa 3, seção 3 do [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) (Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure). Para usar essa chave assimétrica no banco de dados `ContosoDatabase`, você deve executar a instrução `ContosoDatabase` novamente, para fornecer ao banco de dados `CREATE ASYMMETRIC KEY` uma referência para a chave.  
+ Este exemplo usa a chave assimétrica do `CONTOSO_KEY_COLUMNS` armazenada no cofre de chaves, que pode ser importada ou criada anteriormente, como descrito na Etapa 3, seção 3 do [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)(Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure). Para usar essa chave assimétrica no banco de dados `ContosoDatabase` , você deve executar a instrução `CREATE ASYMMETRIC KEY` novamente, para fornecer ao banco de dados `ContosoDatabase` uma referência para a chave.  
   
 ```tsql  
 USE [ContosoDatabase];  
@@ -265,10 +281,11 @@ SELECT CONVERT(VARCHAR, DECRYPTBYKEY(@DATA));
 CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;  
 ```  
   
-## Consulte também  
- [Setup Steps for Extensible Key Management Using the Azure Key Vault (Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure)](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
+## <a name="see-also"></a>Consulte também  
+ [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
  [Gerenciamento extensível de chaves usando o Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [Opção de configuração de servidor EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Manutenção e solução de problemas do Conector do SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   
+

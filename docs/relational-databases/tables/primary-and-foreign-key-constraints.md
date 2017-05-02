@@ -1,28 +1,32 @@
 ---
-title: "Restri&#231;&#245;es de chave prim&#225;ria e chave estrangeira | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "chaves estrangeiras [SQL Server], integridade referencial em cascata"
-  - "Restrições FOREIGN KEY"
-  - "chaves estrangeiras [SQL Server]"
-  - "chaves estrangeiras [SQL Server], sobre restrições de chaves estrangeiras"
+title: "Restrições de chave primária e chave estrangeira | Microsoft Doc"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- foreign keys [SQL Server], cascading referential integrity
+- FOREIGN KEY constraints
+- foreign keys [SQL Server]
+- foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d9a08e9dab4377688b994c024c67df607c14879
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restri&#231;&#245;es de chave prim&#225;ria e chave estrangeira
+# <a name="primary-and-foreign-key-constraints"></a>Restrições de chave primária e chave estrangeira
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Chave primárias e estrangeiras são dois tipos de restrições que podem ser usadas para impor integridade de dados nas tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esses são objetos de banco de dados importantes.  
@@ -31,7 +35,7 @@ caps.handback.revision: 20
   
  [Restrições PRIMARY KEY](../../relational-databases/tables/primary-and-foreign-key-constraints.md#PKeys)  
   
- [Restrições FOREIGN KEY](../../relational-databases/tables/primary-and-foreign-key-constraints.md#FKeys)  
+ [Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md#FKeys)  
   
  [Tarefas relacionadas](../../relational-databases/tables/primary-and-foreign-key-constraints.md#Tasks)  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 20
   
  Conforme mostrado na ilustração a seguir, as colunas **ProductID** e **VendorID** da tabela **Purchasing.ProductVendor** formam uma restrição de chave primária composta para essa tabela. Isso garante que cada linha da tabela **ProductVendor** tem uma combinação exclusiva de **ProductID** e **VendorID**. Isso impede a inserção de linhas duplicadas.  
   
- ![Restrição de PRIMARY KEY composta](../../relational-databases/tables/media/fund04.gif "Restrição de PRIMARY KEY composta")  
+ ![Restrição PRIMARY KEY de composição](../../relational-databases/tables/media/fund04.gif "Restrição PRIMARY KEY de composição")  
   
 -   Uma tabela pode conter apenas uma restrição PRIMARY KEY.  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 20
   
 -   Se a chave primária for definida em uma coluna de tipo CLR definida pelo usuário, a implementação do tipo deverá oferecer suporte a uma ordenação binária.  
   
-##  <a name="FKeys"></a> Restrições FOREIGN KEY  
+##  <a name="FKeys"></a> Foreign Key Constraints  
  Uma chave estrangeira (FK) é uma coluna ou combinação de colunas usada para estabelecer e impor um link entre os dados de duas tabelas, a fim de controlar os dados que podem ser armazenados na tabela de chave estrangeira. Em uma referência de chave estrangeira, cria-se um link entre duas tabelas quando a coluna ou as colunas que contêm o valor de chave primária para uma tabela são referenciadas pela coluna ou colunas de outra tabela. Essa coluna torna-se uma chave estrangeira na segunda tabela.  
   
  Por exemplo, a tabela **Sales.SalesOrderHeader** tem um link de chave estrangeira para a tabela **Sales.SalesPerson** porque existe uma relação lógica entre os pedidos de vendas e os vendedores. A coluna **SalesPersonID** na tabela **SalesOrderHeader** corresponde à coluna de chave primária da tabela **SalesPerson** . A coluna **SalesPersonID** na tabela **SalesOrderHeader** é a chave estrangeira para a tabela **SalesPerson** . Criando essa relação de chave estrangeira, um valor para **SalesPersonID** não poderá ser inserido na tabela **SalesOrderHeader** se ela não existir na tabela **SalesPerson** .  
@@ -69,19 +73,19 @@ caps.handback.revision: 20
   
 -   O uso de mais de 253 referências de chave estrangeira não está disponível atualmente para índices columnstore, tabelas com otimização de memória, Stretch Database nem tabelas particionadas de chave estrangeiras.  
   
-### Índices em restrições de chave estrangeira  
+### <a name="indexes-on-foreign-key-constraints"></a>Índices em restrições de chave estrangeira  
  Diferente das restrições de chave primária, a criação de uma restrição de chave estrangeira não cria automaticamente um índice correspondente. No entanto, a criação manual de um índice em uma chave estrangeira geralmente é útil pelos seguintes motivos:  
   
 -   As colunas de chave estrangeira são frequentemente usadas em critérios de junção quando os dados de tabelas relacionadas são combinados em consultas, fazendo a correspondência de uma ou mais colunas na restrição FOREIGN KEY de uma tabela com uma ou mais colunas de chave exclusiva ou primária de outra tabela. Um índice habilita o [!INCLUDE[ssDE](../../includes/ssde-md.md)] a localizar rapidamente dados relacionados na tabela de chave estrangeira. Porém, a criação desse índice não é obrigatória. Os dados de duas tabelas relacionadas podem ser combinados até mesmo se nenhuma restrição PRIMARY KEY ou FOREIGN KEY tiver sido definida entre as tabelas, mas uma relação de chave estrangeira entre duas tabelas indica que estas foram otimizadas para serem combinadas em uma consulta que usa chaves como critérios.  
   
 -   As alterações feitas em restrições PRIMARY KEY são verificadas com restrições FOREIGN KEY em tabelas relacionadas.  
   
-### Integridade referencial  
+### <a name="referential-integrity"></a>Integridade referencial  
  Embora o propósito principal da restrição FOREIGN KEY seja controlar os dados que podem ser armazenados na tabela de chave estrangeira, ela também controla as alterações efetuadas nos dados da tabela de chave primária. Por exemplo, se a linha de um vendedor for excluída da tabela **Sales.SalesPerson** e a ID do vendedor for usada para pedidos de vendas na tabela **Sales.SalesOrderHeader** , a integridade relacional entre as duas tabelas será quebrada; os pedidos de vendas do vendedor excluído ficarão órfãos na tabela **SalesOrderHeader** sem um link para os dados na tabela **SalesPerson** .  
   
  Uma restrição FOREIGN KEY impede essa situação. A restrição impõe a integridade referencial ao garantir que não possam ser feitas alterações na tabela de chave primária se essas alterações invalidarem o link para os dados na tabela de chave estrangeira. Se for feita uma tentativa de exclusão da linha em uma tabela de chave primária ou alteração de um valor de chave primária, a ação apresentará falha quando o valor de chave primária excluído ou alterado corresponder a um valor na restrição FOREIGN KEY de outra tabela. Para obter sucesso ao alterar ou excluir uma linha em uma restrição FOREIGN KEY, você precisa primeiro excluir os dados de chave estrangeira da tabela de chave estrangeira ou alterar os dados de chave estrangeira na tabela de chave estrangeira, o que vinculará a chave estrangeira aos diversos dados de chave primária.  
   
-#### Integridade referencial em cascata  
+#### <a name="cascading-referential-integrity"></a>Integridade referencial em cascata  
  Usando restrições de integridade referencial em cascata, é possível definir as ações que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa quando o usuário tenta excluir ou atualizar uma chave para a qual apontam as chaves estrangeiras existentes. As ações em cascata a seguir podem ser definidas.  
   
  NO ACTION  
@@ -98,7 +102,7 @@ caps.handback.revision: 20
   
  CASCADE, SET NULL, SET DEFAULT e NO ACTION podem ser combinados nas tabelas que tenham relacionamentos referenciais entre si. Se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] encontrar NO ACTION, parará e reverterá as ações CASCATA, SET NULL e SET DEFAULT. Quando uma instrução DELETE provoca uma combinação de ações CASCADE, SET NULL, SET DEFAULT e NO ACTION, todas as ações CASCADE, SET NULL e SET DEFAULT são aplicadas antes que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifique se existe alguma NO ACTION.  
   
-### Gatilhos e ações referenciais em cascata  
+### <a name="triggers-and-cascading-referential-actions"></a>Gatilhos e ações referenciais em cascata  
  As ações referenciais em cascata acionam os gatilhos de AFTER UPDATE ou AFTER DELETE da seguinte maneira:  
   
 -   Todas as ações referenciais em cascata causadas diretamente por DELETE ou UPDATE originais são executadas em primeiro lugar.  
@@ -125,7 +129,7 @@ caps.handback.revision: 20
 |Descreve como criar uma chave primária.|[Criar chaves primárias](../../relational-databases/tables/create-primary-keys.md)|  
 |Descreve como excluir uma chave primária.|[Excluir chaves primárias](../../relational-databases/tables/delete-primary-keys.md)|  
 |Descreve como modificar uma chave primária.|[Modificar chaves primárias](../../relational-databases/tables/modify-primary-keys.md)|  
-|Descreve como criar relações de chave estrangeira|[Criar relações de chaves estrangeiras](../../relational-databases/tables/criar-relações-de-chaves-estrangeiras.md)|  
+|Descreve como criar relações de chave estrangeira|[Criar relações de chaves estrangeiras](../../relational-databases/tables/create-foreign-key-relationships.md)|  
 |Descreve como modificar relações de chave estrangeira.|[Modificar relações de chave estrangeira](../../relational-databases/tables/modify-foreign-key-relationships.md)|  
 |Descreve como excluir relações de chave estrangeira.|[Excluir relações de chaves estrangeiras](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
 |Descreve como exibir propriedades de chave estrangeira.|[Exibir propriedades de chave estrangeira](../../relational-databases/tables/view-foreign-key-properties.md)|  
@@ -133,3 +137,4 @@ caps.handback.revision: 20
 |Descreve como desabilitar restrições de chave estrangeira durante uma instrução INSERT e UPDATE.|[Desabilitar restrições FOREIGN KEY com instruções INSERT e UPDATE](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
   
   
+

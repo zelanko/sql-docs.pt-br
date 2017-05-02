@@ -1,24 +1,28 @@
 ---
-title: "Criar uma chave mestra de banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "chave mestra de banco de dados [SQL Server], criando"
+title: Criar uma chave mestra do banco de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database master key [SQL Server], creating
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2ea4a853ecc29a2173b9a471cb380fb77ce39c0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar uma chave mestra de banco de dados
+# <a name="create-a-database-master-key"></a>Criar uma chave mestra de banco de dados
   Este tópico descreve como criar uma chave mestra de banco de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -38,7 +42,7 @@ caps.handback.revision: 16
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Criar uma chave mestra de banco de dados  
+#### <a name="to-create-a-database-master-key"></a>Criar uma chave mestra de banco de dados  
   
 1.  Escolha uma senha por criptografar a cópia da chave mestra que será armazenada no banco de dados.  
   

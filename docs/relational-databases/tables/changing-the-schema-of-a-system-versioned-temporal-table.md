@@ -1,28 +1,32 @@
 ---
-title: "Alterando o esquema de uma tabela temporal com vers&#227;o do sistema | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Alterando o esquema de uma tabela temporal com versão do sistema | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
 caps.latest.revision: 13
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97eadf63fb8332ef55d8ccb699241a5e5f0e19d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Alterando o esquema de uma tabela temporal com vers&#227;o do sistema
+# <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>Alterando o esquema de uma tabela temporal com versão do sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Use a instrução **ALTER TABLE** para adicionar, alterar ou remover uma coluna.  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  Aqui estão alguns exemplos que alteram o esquema de tabela temporal.  
   
 ```  
@@ -52,11 +56,11 @@ ALTER TABLE dbo.Department
   
 ```  
   
-### Observações importantes  
+### <a name="important-remarks"></a>Observações importantes  
   
--   Permissão **CONTROL** nas tabelas atual e de histórico é necessária para alterar o esquema da tabela temporal.  
+-   Permissão**CONTROL** nas tabelas atual e de histórico é necessária para alterar o esquema da tabela temporal.  
   
--   Durante uma operação de **ALTER TABLE**, o sistema mantém um bloqueio de esquema em ambas as tabelas.  
+-   Durante uma operação de **ALTER TABLE** , o sistema mantém um bloqueio de esquema em ambas as tabelas.  
   
 -   A alteração de esquema especificada é propagada para a tabela de histórico de forma apropriada (dependendo do tipo de alteração)  
   
@@ -84,7 +88,7 @@ ALTER TABLE dbo.Department
   
     -   Adicionando uma coluna **ROWGUIDCOL** ou alterando a coluna existente para **ROWGUIDCOL**  
   
-         O exemplo a seguir demonstra como alterar o esquema no qual a configuração **SYSTEM_VERSIONING = OFF** ainda é necessária (adicionando a coluna **IDENTITY**).   
+         O exemplo a seguir demonstra como alterar o esquema no qual a configuração **SYSTEM_VERSIONING = OFF** ainda é necessária (adicionando a coluna **IDENTITY** ).   
         Observe que este exemplo desabilita a verificação de consistência de dados. Essa verificação é desnecessária quando a alteração de esquema é feita dentro de uma transação, uma vez que nenhuma alteração de dados simultânea pode ocorrer.  
   
         ```  
@@ -101,10 +105,10 @@ ALTER TABLE dbo.Department
   
         ```  
   
-## Este artigo foi útil para você? Estamos atentos  
+## <a name="did-this-article-help-you-were-listening"></a>Este artigo foi útil para você? Estamos atentos  
  Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Changing%20the%20Schema%20of%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tabelas temporais](../../relational-databases/tables/temporal-tables.md)   
  [Introdução a Tabelas Temporais com Controle da Versão do Sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Gerenciar a Retenção de Dados Históricos em Tabelas Temporais com Versão do Sistema](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   
@@ -116,3 +120,4 @@ ALTER TABLE dbo.Department
  [Parando o controle de versão do sistema de uma tabela temporal com versão do sistema](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

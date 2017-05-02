@@ -1,28 +1,32 @@
 ---
-title: "Criar &#237;ndices n&#227;o clusterizados | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "criação de índice [SQL Server], índices não clusterizados"
-  - "índices não clusterizados [SQL Server], criando"
-  - "índices não clusterizados [SQL Server], restrição EXCLUSIVA"
-  - "índices [SQL Server], não clusterizados"
-  - "índices não clusterizados [SQL Server], restrição PRIMARY KEY"
+title: "Criar índices não clusterizados | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index creation [SQL Server], nonclustered indexes
+- nonclustered indexes [SQL Server], creating
+- nonclustered indexes [SQL Server], UNIQUE constraint
+- indexes [SQL Server], nonclustered
+- nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38b54a03706cbb44f0c4001d00d5505201940be6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar &#237;ndices n&#227;o clusterizados
+# <a name="create-nonclustered-indexes"></a>Criar índices não clusterizados
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Você pode criar índices não clusterizados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um índice não clusterizado é uma estrutura de índice separada dos dados armazenados em uma tabela que reorganiza um ou mais colunas selecionadas. Índices não clusterizados costumam ser uma forma mais rápida de localizar dados do que a busca na tabela subjacente; as consultas às vezes podem ser totalmente respondidas pelos dados no índice não clusterizado, ou o índice não clusterizado pode apontar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para as linhas na tabela subjacente. Geralmente, os índices não clusterizados são criados para aprimorar o desempenho de consultas utilizadas com frequência, não cobertas pelo índice clusterizado, ou para localizar linhas em uma tabela sem um índice clusterizado (denominado heap). Você pode criar vários índices não clusterizados em uma tabela ou exibição indexada.  
@@ -61,11 +65,11 @@ caps.handback.revision: 41
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner**.  
+ Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para criar um índice não clusterizado usando o Designer de Tabela  
+#### <a name="to-create-a-nonclustered-index-by-using-the-table-designer"></a>Para criar um índice não clusterizado usando o Designer de Tabela  
   
 1.  No Pesquisador de Objetos, expanda o banco de dados que contém a tabela na qual você deseja criar um índice não clusterizado.  
   
@@ -73,19 +77,19 @@ caps.handback.revision: 41
   
 3.  Clique com o botão direito do mouse na tabela na qual você deseja criar um índice não clusterizado e selecione **Design**.  
   
-4.  No menu **Designer de Tabela**, clique em **Índices/Chaves**.  
+4.  No menu **Designer de Tabela** , clique em **Índices/Chaves**.  
   
-5.  Na caixa de diálogo **Índices/Chaves**, clique em **Adicionar**.  
+5.  Na caixa de diálogo **Índices/Chaves** , clique em **Adicionar**.  
   
-6.  Selecione o novo índice na caixa de texto **Índice ou Chave Exclusiva/Primária Selecionada**.  
+6.  Selecione o novo índice na caixa de texto **Índice ou Chave Exclusiva/Primária Selecionada** .  
   
-7.  Na grade, selecione **Criar como Clusterizado** e escolha **Não** na lista suspensa, à direita da propriedade.  
+7.  Na grade, selecione **Criar como Clusterizado**e escolha **Não** na lista suspensa, à direita da propriedade.  
   
 8.  Clique em **Fechar**.  
   
-9. No menu **Arquivo**, clique em **Salvar***table_name*.  
+9. No menu **Arquivo** , clique em **Salvar***table_name*.  
   
-#### Para criar um índice não clusterizado usando o Pesquisador de Objetos  
+#### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>Para criar um índice não clusterizado usando o Pesquisador de Objetos  
   
 1.  No Pesquisador de Objetos, expanda o banco de dados que contém a tabela na qual você deseja criar um índice não clusterizado.  
   
@@ -93,13 +97,13 @@ caps.handback.revision: 41
   
 3.  Expanda a tabela na qual você deseja criar um índice não clusterizado.  
   
-4.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Não Clusterizado…**.  
+4.  Clique com o botão direito do mouse na pasta **Índices** , aponte para **Novo Índice**e selecione **Índice Não Clusterizado…**.  
   
 5.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
 6.  Na guia **Colunas de chave de índice**, clique em **Adicionar…**.  
   
-7.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice não clusterizado.  
+7.  Na caixa de diálogo **Selecionar Colunas de***table_name* , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice não clusterizado.  
   
 8.  Clique em **OK**.  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 41
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para criar um índice não clusterizado em uma tabela  
+#### <a name="to-create-a-nonclustered-index-on-a-table"></a>Para criar um índice não clusterizado em uma tabela  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -133,3 +137,4 @@ caps.handback.revision: 41
  Para obter mais informações, consulte [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

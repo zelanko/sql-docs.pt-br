@@ -1,27 +1,31 @@
 ---
-title: "Exemplos: Usando modo AUTO | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modo AUTO FOR XML, exemplos"
+title: 'Exemplos: usando o modo AUTO | Microsoft Docs'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd35722bc0392701813ad17877c19c8ef0583988
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemplos: Usando modo AUTO
+# <a name="examples-using-auto-mode"></a>Exemplos: Usando modo AUTO
   Os exemplos a seguir ilustram o uso do modo AUTO. Muitas dessas consultas são especificadas em relação a documentos XML de instruções da fabricação de bicicletas que são armazenados na coluna da tabela ProductModel no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-## Exemplo: Recuperando informações de cliente, pedido e detalhes do pedido  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Exemplo: Recuperando informações de cliente, pedido e detalhes do pedido  
  Essa consulta recupera informações de cliente, pedido e detalhes do pedido de um cliente específico.  
   
 ```  
@@ -92,7 +96,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## Exemplo: Especificando GROUP BY e funções de agregação  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>Exemplo: Especificando GROUP BY e funções de agregação  
  A consulta a seguir retorna IDs de clientes individuais e o número de pedidos do cliente.  
   
 ```  
@@ -112,7 +116,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## Exemplo: Especificando colunas computadas em modo AUTO  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Exemplo: Especificando colunas computadas em modo AUTO  
  Essa consulta retorna nomes de clientes individuais concatenados e informações de pedido. Porque a coluna computada é atribuída ao nível interno encontrado naquele ponto, o elemento <`SOH`> neste exemplo. Os nomes concatenados dos clientes são adicionados como atributos do elemento <`SOH`> no resultado.  
   
 ```  
@@ -165,8 +169,8 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## Exemplo: Retornando dados binários  
- Esta consulta retorna uma fotografia do produto a partir da tabela `ProductPhoto`. `ThumbNailPhoto` é uma coluna **varbinary (max)** na tabela `ProductPhoto`. Por padrão, o modo `AUTO` retorna para os dados binários uma referência que é uma URL relativa à raiz virtual do banco de dados onde a consulta é executada. O atributo de chave `ProductPhotoID` deve ser especificado para identificar a imagem. Para recuperar uma referência de imagem, conforme ilustrado neste exemplo, a chave primária da tabela também deve ser especificada na cláusula `SELECT` para identificar uma linha exclusivamente.  
+## <a name="example-returning-binary-data"></a>Exemplo: Retornando dados binários  
+ Esta consulta retorna uma fotografia do produto a partir da tabela `ProductPhoto` . `ThumbNailPhoto` é uma coluna **varbinary (max)** na tabela `ProductPhoto` . Por padrão, o modo `AUTO` retorna para os dados binários uma referência que é uma URL relativa à raiz virtual do banco de dados onde a consulta é executada. O atributo de chave `ProductPhotoID` deve ser especificado para identificar a imagem. Para recuperar uma referência de imagem, conforme ilustrado neste exemplo, a chave primária da tabela também deve ser especificada na cláusula `SELECT` para identificar uma linha exclusivamente.  
   
 ```  
 SELECT ProductPhotoID, ThumbNailPhoto  
@@ -185,7 +189,7 @@ FOR XML AUTO;
   
  `ThumbNailPhoto= "dbobject/Production.ProductPhoto[@ProductPhotoID='70']/@ThumbNailPhoto" />`  
   
- A mesma consulta é executada com a opção `BINARY BASE64`. A consulta retorna os dados binários em formato codificado na base64.  
+ A mesma consulta é executada com a opção `BINARY BASE64` . A consulta retorna os dados binários em formato codificado na base64.  
   
 ```  
 SELECT ProductPhotoID, ThumbNailPhoto  
@@ -221,7 +225,7 @@ FOR XML AUTO;
   
  Isso pode ser um problema, principalmente quando são executadas consultas de dbobject em um banco de dados que diferencia maiúsculas e minúsculas. Para evitar isso, as maiúsculas e minúsculas do nome da tabela ou coluna especificado nas consultas devem corresponder às maiúsculas e minúsculas do nome da tabela ou coluna do banco de dados.  
   
-## Exemplo: Entendendo a codificação  
+## <a name="example-understanding-the-encoding"></a>Exemplo: Entendendo a codificação  
  Este exemplo mostra as várias codificações que ocorrem no resultado.  
   
  Crie esta tabela:  
@@ -268,7 +272,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   Se os valores dos elementos e atributos contiverem qualquer caractere especial da URL com significado especial na URL, eles serão codificados apenas no valor da URL DBOBJECT e apenas quando o caractere especial fizer parte de um nome de tabela ou coluna. No resultado, o caractere `#` que faz parte do nome da tabela `Col#&2` é codificado como `_x0023_ in the DBOJBECT URL`.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usar o modo AUTO com FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
   
   

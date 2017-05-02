@@ -1,24 +1,28 @@
 ---
-title: "Lendo p&#225;ginas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "páginas"
+title: "Lendo páginas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pages
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
 caps.latest.revision: 3
-author: "pmasl"
-ms.author: "pelopes"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: pmasl
+ms.author: pelopes
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7ac5398f3b10db59812539e58abaff9ef2c7cd0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lendo p&#225;ginas
+# <a name="reading-pages"></a>Lendo páginas
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 A E/S de uma instância do SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] inclui leituras lógicas e físicas. Uma leitura lógica ocorre sempre que o [!INCLUDE[ssDE](../includes/ssde-md.md)] solicita uma página do [cache do buffer](../relational-databases/memory-management-architecture-guide.md). Se a página não estiver atualmente no cache do buffer, a leitura física copiará primeiramente a página de disco no cache.

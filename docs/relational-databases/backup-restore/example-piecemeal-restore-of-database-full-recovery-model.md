@@ -1,33 +1,37 @@
 ---
-title: "Exemplo: Restaura&#231;&#227;o de banco de dados por etapas (modelo de recupera&#231;&#227;o completa) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modelo de recuperação completa [SQL Server], exemplo de RESTORE"
-  - "restaurações por etapas [SQL Server], modelo de recuperação completa"
-  - "sequências de restauração [SQL Server], por etapas"
+title: "Exemplo: restauração por etapas de banco de dados (modelo de recuperação completa) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full recovery model [SQL Server], RESTORE example
+- piecemeal restores [SQL Server], full recovery model
+- restore sequences [SQL Server], piecemeal
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a939ad4e9e5313961f681c06f896a9f53a906e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemplo: Restaura&#231;&#227;o de banco de dados por etapas (modelo de recupera&#231;&#227;o completa)
+# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>Exemplo: Restauração de banco de dados por etapas (modelo de recuperação completa)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Uma sequência de restauração por etapas restaura e recupera um banco de dados em etapas no nível do grupo de arquivos, começando pelo grupo de arquivos primário e todos os grupos de arquivo secundários de leitura e gravação.  
   
  Nesse exemplo, o banco de dados `adb` é restaurado em um computador novo depois de um desastre. O banco de dados está usando o modelo de recuperação completa; portanto, antes do início da restauração, um backup do final do log deve ser extraído do banco de dados. Antes do desastre, todos os grupos de arquivos estão online. O grupo de arquivos `B` é somente leitura. Todos os grupos de arquivos secundários precisam ser restaurados, mas são restaurados em ordem de importância: `A` (mais alto), `C`, e por fim `B`. Nesse exemplo, há quatro backups de log, inclusive o backup do final do log.  
   
-## Backup do final do log  
+## <a name="tail-log-backup"></a>Backup do final do log  
  Antes de restaurar o banco de dados, o administrador do banco de dados deve fazer backup do final do log. Como o banco de dados está danificado, é preciso usar a opção NO_TRUNCATE para criar o backup do final do log:  
   
 ```  
@@ -36,7 +40,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
  O backup do final do log é o último backup aplicado nas sequências de restauração a seguir.  
   
-## Sequências da restauração  
+## <a name="restore-sequences"></a>Sequências da restauração  
   
 > [!NOTE]  
 >  A sintaxe para uma sequência de restauração online é igual à de uma sequência de restauração offline.  
@@ -82,7 +86,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
      Todos os grupos de arquivos agora estão online.  
   
-## Exemplos adicionais  
+## <a name="additional-examples"></a>Exemplos adicionais  
   
 -   [Exemplo: restauração por etapas de banco de dados &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
@@ -96,11 +100,11 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 -   [Exemplo: restauração online de um arquivo somente leitura &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Restauração online &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurações por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   
   

@@ -1,34 +1,38 @@
 ---
-title: "Planos de manuten&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.AG.MAINTPLAN.LEGACY.F1"
-helpviewer_keywords: 
-  - "planos de manutenção [SQL Server], sobre planos de manutenção de banco de dados"
-  - "planos de manutenção [SQL Server], nível de compatibilidade do banco de dados exibido no designer"
-  - "planos de manutenção [SQL Server]"
+title: "Planos de manutenção | Microsoft Docs"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.AG.MAINTPLAN.LEGACY.F1
+helpviewer_keywords:
+- maintenance plans [SQL Server], about database maintenance plans
+- maintenance plans [SQL Server], database compatibility level displayed in designer
+- maintenance plans [SQL Server]
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b739e1421507dd0794b732dfc910e5ec3671c235
+ms.lasthandoff: 04/11/2017
+
 ---
-# Planos de manuten&#231;&#227;o
+# <a name="maintenance-plans"></a>Planos de manutenção
   Os planos de manutenção criam um fluxo de trabalho das tarefas necessárias para garantir que o banco de dados seja otimizado, armazenado regularmente em backup e livre de inconsistências. O Assistente de Plano de Manutenção também cria os planos principais de manutenção, mas criar planos de forma manual pode oferecer uma flexibilidade bem maior.  
   
-## Benefícios de planos de manutenção  
+## <a name="benefits-of-maintenance-plans"></a>Benefícios de planos de manutenção  
  No [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)], os planos de manutenção criam um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que é executado por um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Os planos de manutenção podem ser executados de forma manual ou automática em intervalos agendados.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornecem os seguintes recursos:  
+ Os planos de manutenção do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornecem os seguintes recursos:  
   
 -   Criação de fluxo de trabalho usando uma série de tarefas básicas de manutenção. É igualmente possível criar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] próprios e personalizados.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 44
   
 -   Suporte à Autenticação do Windows e à Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-## Funcionalidade de plano de manutenção  
+## <a name="maintenance-plan-functionality"></a>Funcionalidade de plano de manutenção  
  É possível criar planos de manutenção para executar as seguintes tarefas:  
   
 -   Reorganizar os dados de páginas de índice e de dados através da recompilação de índices com um novo fator de preenchimento. A recompilação de índices com um novo fator de preenchimento garante que essas páginas de bancos de dados tenham espaços em branco e dados distribuídos igualmente. Também possibilita o crescimento mais rápido no futuro. Para obter mais informações, veja [Especificar fator de preenchimento para um índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
@@ -57,15 +61,16 @@ caps.handback.revision: 44
   
  Os resultados gerados pelas tarefas de manutenção podem ser gravados como relatórios em arquivos de texto ou como tabelas de plano de manutenção (**sysmaintplan_log** e **sysmaintplan_logdetail**) em **msdb**. Para exibir os resultados no visualizador de arquivos de log, clique com o botão direito do mouse em **Planos de Manutenção** e clique em **Exibir Histórico**.  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  Use os tópicos a seguir como introdução rápida aos planos de manutenção.  
   
 |||  
 |-|-|  
-|**Descrição**|**Tópico**|  
+|**Description**|**Tópico**|  
 |Configure a opção **Agent XPs** de configuração do servidor para habilitar os procedimentos armazenados estendidos do SQL Server Agent.|[Opção Agent XPs de configuração do servidor](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |Descreve como criar um plano de manutenção usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Criar um plano de manutenção](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |Descreve como criar um plano de manutenção usando a Superfície de Design do Plano de Manutenção.|[Criar um plano de manutenção &#40;Superfície de Design do Plano de Manutenção&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
-|Documenta a funcionalidade de plano de manutenção disponível no Pesquisador de Objetos.|[Nó de Planos de Manutenção &#40;Pesquisador de Objetos&#41;](../../relational-databases/maintenance-plans/maintenance-plans-node-object-explorer.md)|  
+|Documenta a funcionalidade de plano de manutenção disponível no Pesquisador de Objetos.|[Nó de planos de manutenção &#40;Pesquisador de Objetos&#41;](../../relational-databases/maintenance-plans/maintenance-plans-node-object-explorer.md)|  
   
   
+

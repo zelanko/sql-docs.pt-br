@@ -1,27 +1,31 @@
 ---
-title: "Classe de evento RPC:Completed | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/04/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento RPC:Completed"
+title: Classe de evento RPC:Completed | Microsoft Docs
+ms.custom: 
+ms.date: 12/04/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RPC:Completed event class
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b7fe53e7186d8b3408c2ecf838d1e1c11c96097f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento RPC:Completed
+# <a name="rpccompleted-event-class"></a>classe de evento RPC:Completed
   A classe de evento RPC:Completed indica que uma chamada de procedimento remoto foi concluída.  
   
-## Colunas de dados da classe de evento RPC:Completed  
+## <a name="rpccompleted-event-class-data-columns"></a>Colunas de dados da classe de evento RPC:Completed  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -29,7 +33,7 @@ caps.handback.revision: 34
 |BinaryData|**image**|Valor binário dependente da classe de evento capturada no rastreamento.|2|Sim|  
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
 |CPU|**int**|Tempo de CPU usado pelo evento. Em microssegundos, começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Em milissegundos em versões anteriores.|18|Sim|  
-|DatabaseID|**Int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
+|DatabaseID|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |Duration|**bigint**|Tempo de CPU usado pelo evento. Em microssegundos, começando com [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Em milissegundos em versões anteriores.|13|Sim|  
 |EndTime|**datetime**|Hora de término da chamada de procedimento remoto.|15|Sim|  
@@ -56,7 +60,8 @@ caps.handback.revision: 34
 |Writes|**bigint**|Número de gravações de página emitido pela chamada de procedimento remoto.|17|Sim|  
 |XactSequence|**bigint**|Token que descreve a transação atual.|50|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
+

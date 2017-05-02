@@ -1,27 +1,31 @@
 ---
-title: "Modificar exibi&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exibições [SQL Server], renomeando"
-  - "exibições [SQL Server], modificando"
-  - "modificando exibições"
-  - "renomeando exibições"
+title: "Modificar exibições | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], renaming
+- views [SQL Server], modifying
+- modifying views
+- renaming views
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 242d7b946699560cf24c59a262e3a14a5c08b8d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modificar exibi&#231;&#245;es
+# <a name="modify-views"></a>Modificar exibições
   Depois de definir uma exibição, é possível alterar sua definição [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sem descartar e recriar a exibição usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -55,7 +59,7 @@ caps.handback.revision: 22
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para modificar uma exibição  
+#### <a name="to-modify-a-view"></a>Para modificar uma exibição  
   
 1.  No **Pesquisador de Objetos**, clique no sinal de adição ao lado do banco de dados onde sua exibição está localizada e clique no sinal de adição ao lado da pasta **Exibições** .  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 22
   
     1.  Marque ou desmarque as caixas de seleção de qualquer elemento que você deseja adicionar ou remover.  
   
-    2.  Clique com o botão direito do mouse no painel de diagrama, selecione **Adicionar Tabela…** e selecione as colunas adicionais que deseja incluir na exibição na caixa de diálogo **Adicionar Tabela**.  
+    2.  Clique com o botão direito do mouse no painel de diagrama, selecione **Adicionar Tabela…**e selecione as colunas adicionais que deseja incluir na exibição na caixa de diálogo **Adicionar Tabela** .  
   
     3.  Clique com o botão direito do mouse na barra de título da tabela que deseja remover e selecione **Remove**.  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 22
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para modificar uma exibição  
+#### <a name="to-modify-a-view"></a>Para modificar uma exibição  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

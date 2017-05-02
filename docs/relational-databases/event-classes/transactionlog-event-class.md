@@ -1,27 +1,31 @@
 ---
-title: "Classe de evento TransactionLog | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento TransactionLog"
+title: Classe de evento TransactionLog | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TransactionLog event class
 ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10d15b8736b871175db262d9c2a4d940b9489771
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento TransactionLog
+# <a name="transactionlog-event-class"></a>classe de evento TransactionLog
   Use a classe de evento TransactionLog para monitorar a atividade nos logs de transações em uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-## Colunas de dados da classe de evento TransactionLog  
+## <a name="transactionlog-event-class-data-columns"></a>Colunas de dados da classe de evento TransactionLog  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -50,7 +54,7 @@ caps.handback.revision: 33
 |StartTime|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   

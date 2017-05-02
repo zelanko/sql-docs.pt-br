@@ -1,29 +1,33 @@
 ---
-title: "Habilitar um banco de dados para replica&#231;&#227;o (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bancos de dados [replica&#231;&#227;o do SQL Server]"
+title: "Habilitar um banco de dados para replicação (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases [SQL Server replication]
 ms.assetid: 8092faa3-9cff-4f81-926c-6a0070d1ce2c
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fac174d6994a6912020343afddc59d4f449d7a62
+ms.lasthandoff: 04/11/2017
+
 ---
-# Habilitar um banco de dados para replica&#231;&#227;o (SQL Server Management Studio)
-  Um banco de dados está implicitamente habilitado para replicação quando um membro de **sysadmin** função fixa de servidor cria uma publicação com o novo Assistente de publicação. Um membro do **sysadmin** função fixa de servidor também pode habilitar um banco de dados para replicação explicitamente, para que um membro do **db_owner** função fixa de banco de dados pode criar uma ou mais publicações no banco de dados. Para habilitar um banco de dados explicitamente, use o **bancos de dados de publicação** página o **Propriedades do publicador - \< publicador>** caixa de diálogo. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [criar uma publicação](../../relational-databases/replication/publish/create-a-publication.md).  
+# <a name="enable-a-database-for-replication-sql-server-management-studio"></a>Habilitar um banco de dados para replicação (SQL Server Management Studio)
+  Um banco de dados está implicitamente habilitado para replicação quando um membro da função do servidor fixa **sysadmin** cria uma publicação no Assistente para Novas Publicações. Um membro da função de servidor fixa **sysadmin** também pode habilitar um banco de dados explicitamente para replicação, assim, um membro da função de banco de dados fixa **db_owner** pode criar uma ou mais publicações naquele banco de dados. Para habilitar um banco de dados explicitamente, use a página **Bancos de Dados de Publicação** da caixa de diálogo **Propriedades do Publicador – \<Publisher>**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
-### Para habilitar um banco de dados para replicação  
+### <a name="to-enable-a-database-for-replication"></a>Para habilitar um banco de dados para replicação  
   
-1.  No **bancos de dados de publicação** página do **Propriedades do publicador - \< publicador>** caixa de diálogo, selecione o **transacional** e/ou **Mesclar** caixa de seleção para cada banco de dados que você deseja replicar. Selecione **transacional** para habilitar o replicação de instantâneo no banco de dados.  
+1.  Na página **Bancos de Dados de Publicação** da caixa de diálogo **Propriedades do Publicador – \<Publisher>**, selecione a caixa de seleção **Transacional** e/ou **Mesclagem** para cada banco de dados que deseja replicar. Selecione **Transacional** para habilitar o banco de dados para replicação de instantâneo.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

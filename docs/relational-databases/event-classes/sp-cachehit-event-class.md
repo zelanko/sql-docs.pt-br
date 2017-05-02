@@ -1,27 +1,31 @@
 ---
-title: "Classe de evento SP:CacheHit | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe de evento SP:CacheHit"
+title: Classe de evento SP:CacheHit | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SP:CacheHit event class
 ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e285c108238e7a0950f2d8648337b31e2fbd3cf8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento SP:CacheHit
+# <a name="spcachehit-event-class"></a>classe de evento SP:CacheHit
   A classe de evento SP:CacheHit indica que um procedimento armazenado está no cache de plano.  
   
-## Colunas de dados da classe de evento SP:CacheHit  
+## <a name="spcachehit-event-class-data-columns"></a>Colunas de dados da classe de evento SP:CacheHit  
   
 |Nome da coluna de dados|**Tipo de dados**|Descrição|ID da coluna|Filtrável|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
@@ -51,7 +55,7 @@ caps.handback.revision: 41
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |XactSequence|**bigint**|Token que descreve a transação atual.|50|Sim|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

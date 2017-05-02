@@ -1,22 +1,26 @@
 ---
-title: "Estat&#237;sticas para tabelas com otimiza&#231;&#227;o de mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Estatísticas para tabelas com otimização de memória | Microsoft Docs"
+ms.custom: 
+ms.date: 10/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 caps.latest.revision: 18
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd78478647e468be36959aa201c94720be106d08
+ms.lasthandoff: 04/11/2017
+
 ---
-# Estat&#237;sticas para tabelas com otimiza&#231;&#227;o de mem&#243;ria
+# <a name="statistics-for-memory-optimized-tables"></a>Estatísticas para tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   O otimizador de consulta usa estatísticas sobre colunas para criar planos de consulta que melhoram o desempenho das consultas. As estatísticas são coletadas de tabelas no banco de dados e armazenadas nos metadados do banco de dados.  
@@ -27,13 +31,13 @@ caps.handback.revision: 18
   
  Considerações para estatísticas em tabelas com otimização de memória:  
   
--   A partir do SQL Server 2016 e do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], há suporte para a atualização automática de estatísticas em tabelas com otimização de memória, durante o uso de um nível de compatibilidade de banco de dados de, no mínimo, 130. Veja [Nível de compatibilidade de ALTER DATABASE (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20(Transact-SQL).md). Se um banco de dados contiver tabelas que foram criadas anteriormente com um nível de compatibilidade mais baixo, as estatísticas precisarão ser atualizadas manualmente uma vez, para habilitar a atualização automática das estatísticas no futuro.
+-   A partir do SQL Server 2016 e do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], há suporte para a atualização automática de estatísticas em tabelas com otimização de memória, durante o uso de um nível de compatibilidade de banco de dados de, no mínimo, 130. Veja [Nível de compatibilidade de ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Se um banco de dados contiver tabelas que foram criadas anteriormente com um nível de compatibilidade mais baixo, as estatísticas precisarão ser atualizadas manualmente uma vez, para habilitar a atualização automática das estatísticas no futuro.
   
 -   Para procedimentos armazenados compilados de modo nativo, os planos de execução para consultas no procedimento são otimizados quando o procedimento é compilado. Elas não são recompiladas automaticamente quando as estatísticas são atualizadas. Portanto, as tabelas devem conter um conjunto representativo de dados antes que os procedimentos sejam criados.  
   
 -   Os procedimentos armazenados compilados de modo nativo podem ser recompilados manualmente usando [sp_recompile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md), e são recompilados automaticamente se o banco de dados é colocado offline e colocado online novamente, ou se há um failover de banco de dados ou uma reinicialização de servidor.  
   
-## Habilitando a atualização automática de estatísticas em tabelas existentes
+## <a name="enabling-automatic-update-of-statistics-in-existing-tables"></a>Habilitando a atualização automática de estatísticas em tabelas existentes
 
 Quando as tabelas são criadas em um banco de dados que tem o nível de compatibilidade de, no mínimo, 130, a atualização automática de estatísticas é habilitada para todas as estatísticas nessa tabela e nenhuma outra ação é necessária.
 
@@ -83,12 +87,12 @@ FROM sys.stats s JOIN sys.tables o ON s.object_id=o.object_id
 WHERE o.is_memory_optimized=1
 ```
 
-## Diretrizes para implantação de tabelas e procedimentos  
+## <a name="guidelines-for-deploying-tables-and-procedures"></a>Diretrizes para implantação de tabelas e procedimentos  
  Para garantir que o otimizador de consulta tem estatísticas atualizadas durante a criação de planos de consulta, implante tabelas com otimização de memória e procedimentos armazenados compilados de modo nativo que acessam essas tabelas usando estas quatro etapas:  
   
-1.  Verifique se o banco de dados tem um nível de compatibilidade de, no mínimo, 130. Veja [Nível de compatibilidade de ALTER DATABASE (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20(Transact-SQL).md).
+1.  Verifique se o banco de dados tem um nível de compatibilidade de, no mínimo, 130. Veja [Nível de compatibilidade de ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
-2.  Crie tabelas e índices. Os índices são especificados embutidos nas instruções **CREATE TABLE**.  
+2.  Crie tabelas e índices. Os índices são especificados embutidos nas instruções **CREATE TABLE** .  
   
 3.  Carregue dados nas tabelas.  
   
@@ -96,7 +100,8 @@ WHERE o.is_memory_optimized=1
   
  A criação de procedimentos armazenados compilados de modo nativo após o carregamento dos dados e a atualização das estatísticas garante que o otimizador tem estatísticas disponíveis para as tabelas com otimização de memória. Isso garantirá planos de consulta eficientes quando o procedimento for compilado.  
 
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
+

@@ -1,26 +1,30 @@
 ---
-title: "Gerenciar e monitorar a pesquisa de texto completo em uma inst&#226;ncia do servidor | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pesquisa de texto completo [SQL Server], sobre"
-  - "pesquisa de texto completo [SQL Server], gerenciamento de servidor"
+title: "Gerenciar e monitorar a pesquisa de texto completo em uma instância do servidor | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], about
+- full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 657d78f548e8368ad2ff4c554fc6f731d7fb27fa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gerenciar e monitorar a pesquisa de texto completo em uma inst&#226;ncia do servidor
+# <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gerenciar e monitorar a pesquisa de texto completo em uma instância do servidor
   A administração de texto completo para uma instância de servidor inclui:  
   
 -   Tarefas de gerenciamento do sistema, como gerenciar o serviço Iniciador FDHOST (MSSQLFDLauncher), reiniciar o processo do daemon de filtro caso você altere as credenciais da conta de serviço, configurar as propriedades de texto completo no servidor e fazer backup de catálogos de texto completo. No nível do servidor, por exemplo, é possível especificar um idioma de texto completo padrão diferente do idioma padrão da instância do servidor como um todo.  
@@ -32,11 +36,11 @@ caps.handback.revision: 19
 ##  <a name="props"></a> Exibindo ou alterando as propriedades do servidor referentes à pesquisa de texto completo  
  Você pode exibir as propriedades de texto completo de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-#### Para exibir e alterar as propriedades do servidor de alterações para pesquisa de texto completo  
+#### <a name="to-view-and-change-server-properties-for-full-text-search"></a>Para exibir e alterar as propriedades do servidor de alterações para pesquisa de texto completo  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor e clique em **Propriedades**.  
   
-2.  Na caixa de diálogo **Propriedades do Servidor**, clique na página **Avançado** para exibir as informações do servidor sobre a pesquisa de texto completo. As propriedades de texto completo são:  
+2.  Na caixa de diálogo **Propriedades do Servidor** , clique na página **Avançado** para exibir as informações do servidor sobre a pesquisa de texto completo. As propriedades de texto completo são:  
   
     -   **Idioma de Texto Completo Padrão**  
   
@@ -54,18 +58,18 @@ caps.handback.revision: 19
         > [!NOTE]  
         >  A recompilação pode ser executada no modo multi-threaded e, se houver mais de 10 CPUs disponíveis, ela poderá ser executada mais rápido do que a importação se você permitir que a recompilação use todas as CPUs.  
   
-         Se um catálogo de texto completo não estiver disponível, os índices de texto completo associados serão recompilados. Essa opção está disponível apenas para bancos de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+         Se um catálogo de texto completo não estiver disponível, os índices de texto completo associados serão recompilados. Essa opção está disponível apenas para bancos de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
-         **Recompilar**  
+         **Recriar**  
          Os catálogos de texto completo são recompilados usando-se os separadores de palavras novos e aprimorados. A recompilação de índices pode demorar um pouco, e uma quantidade significativa de memória e CPU pode ser necessária após a atualização.  
   
          **Redefinir**  
          Os catálogos de texto completo são redefinidos. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] os arquivos de catálogos de texto completo são removidos, mas os metadados dos catálogos e dos índices de texto completo são preservados. Depois de serem atualizados, todos os índices de texto completo são desabilitados para o controle de alteração e os rastreamentos não são iniciados automaticamente. O catálogo permanecerá vazio até você executar uma população completa manualmente, depois que a atualização for concluída.  
   
-         Para obter informações sobre como escolher uma opção de atualização de texto completo, consulte [Atualizar pesquisa de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  
+         Para obter informações sobre como escolher uma opção de atualização de texto completo, consulte[Atualizar pesquisa de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  
   
         > [!NOTE]  
-        >  A opção de atualização de texto completo também pode ser definida com o uso da ação [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option**.  
+        >  A opção de atualização de texto completo também pode ser definida com o uso da ação [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option** .  
   
 ##  <a name="metadata"></a> Exibindo propriedades de servidor de texto completo adicionais  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] as funções podem ser utilizadas para obter o valor de diversas propriedades da pesquisa de texto completo no nível do servidor. Essas informações são úteis para administrar e solucionar problemas de pesquisa de texto completo.  

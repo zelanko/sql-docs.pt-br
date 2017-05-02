@@ -1,26 +1,30 @@
 ---
-title: "Definir ou alterar o agrupamento de coluna | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "banco de dados tempdb [SQL Server], agrupamentos"
-  - "agrupamentos [SQL Server], coluna"
+title: Definir ou alterar o agrupamento de coluna | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tempdb database [SQL Server], collations
+- collations [SQL Server], column
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2329cf91fb56aaefe0180d0862f8b4d127cd9489
+ms.lasthandoff: 04/11/2017
+
 ---
-# Definir ou alterar o agrupamento de coluna
-  É possível substituir o agrupamento de banco de dados para dados **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext** especificando um agrupamento diferente para uma coluna específica de uma tabela e usando uma das seguintes opções:  
+# <a name="set-or-change-the-column-collation"></a>Definir ou alterar o agrupamento de coluna
+  É possível substituir o agrupamento de banco de dados para dados **char**, **varchar**, **text**, **nchar**, **nvarchar**e **ntext** especificando um agrupamento diferente para uma coluna específica de uma tabela e usando uma das seguintes opções:  
   
 -   A cláusula COLLATE de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) e [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md). Por exemplo:  
   
@@ -51,13 +55,13 @@ caps.handback.revision: 29
   
 -   Uma restrição FOREIGN KEY  
   
- Ao trabalhar com **tempdb**, a cláusula [COLLATE](../Topic/COLLATE%20\(Transact-SQL\).md) inclui uma opção *database_default* para especificar que a coluna em uma tabela temporária usa o agrupamento padrão do banco de dados de usuário atual para a conexão em vez do agrupamento de **tempdb**.  
+ Ao trabalhar com **tempdb**, a cláusula [COLLATE](~/t-sql/statements/collations.md) inclui uma opção *database_default* para especificar que a coluna em uma tabela temporária usa o agrupamento padrão do banco de dados de usuário atual para a conexão em vez do agrupamento de **tempdb**.  
   
-## Agrupamentos e colunas de texto  
+## <a name="collations-and-text-columns"></a>Agrupamentos e colunas de texto  
  Você pode inserir ou atualizar valores em uma coluna **texto** cujo agrupamento seja diferente da página de código do agrupamento padrão do banco de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte implicitamente os valores para o agrupamento da coluna.  
   
-## Agrupamentos e tempdb  
- O banco de dados **tempdb** é criado toda vez que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado e tem o mesmo agrupamento padrão que o banco de dados **model**. Normalmente isso é igual ao agrupamento padrão da instância. Se você criar um banco de dados de usuário e especificar um agrupamento padrão diferente do **modelo**, o banco de dados de usuário terá um agrupamento padrão diferente do **tempdb**. Todos os procedimentos armazenados temporários ou tabelas temporárias são criados e armazenados em **tempdb**. Isso significa que todas as colunas implícitas em tabelas temporárias e todas as constantes, variáveis e parâmetros coercíveis padrão em procedimentos armazenados temporários têm agrupamentos diferentes dos objetos comparáveis criados em tabelas e procedimentos armazenados permanentes.  
+## <a name="collations-and-tempdb"></a>Agrupamentos e tempdb  
+ O banco de dados **tempdb** é criado toda vez que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado e tem o mesmo agrupamento padrão que o banco de dados **model** . Normalmente isso é igual ao agrupamento padrão da instância. Se você criar um banco de dados de usuário e especificar um agrupamento padrão diferente do **modelo**, o banco de dados de usuário terá um agrupamento padrão diferente do **tempdb**. Todos os procedimentos armazenados temporários ou tabelas temporárias são criados e armazenados em **tempdb**. Isso significa que todas as colunas implícitas em tabelas temporárias e todas as constantes, variáveis e parâmetros coercíveis padrão em procedimentos armazenados temporários têm agrupamentos diferentes dos objetos comparáveis criados em tabelas e procedimentos armazenados permanentes.  
   
  Isso pode levar a problemas com uma desigualdade em agrupamentos entre bancos de dados definidos pelo usuário e objetos de banco de dados do sistema. Por exemplo, uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o agrupamento Latin1_General_CS_AS e você executa as seguintes instruções:  
   
@@ -80,7 +84,7 @@ INSERT INTO #TestTempTab
 GO  
 ```  
   
- Com o exemplo anterior, o banco de dados **tempdb** usa o agrupamento Latin1_General_CS_AS, `TestDB` e `TestTab.Col1` usam o agrupamento `Estonian_CS_AS`. Por exemplo:  
+ Com o exemplo anterior, o banco de dados **tempdb** usa o agrupamento Latin1_General_CS_AS, `TestDB` e `TestTab.Col1` usam o agrupamento `Estonian_CS_AS` . Por exemplo:  
   
 ```  
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
@@ -99,7 +103,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
        );  
     ```  
   
--   Especifique o agrupamento correto para a coluna `#TestTempTab`:  
+-   Especifique o agrupamento correto para a coluna `#TestTempTab` :  
   
     ```  
     CREATE TABLE #TestTempTab  
@@ -108,9 +112,10 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
        );  
     ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definir ou alterar o agrupamento do servidor](../../relational-databases/collations/set-or-change-the-server-collation.md)   
  [Definir ou alterar o agrupamento de banco de dados](../../relational-databases/collations/set-or-change-the-database-collation.md)   
  [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
+

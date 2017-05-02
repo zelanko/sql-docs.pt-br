@@ -1,22 +1,26 @@
 ---
-title: "SXI (&#237;ndices XML seletivos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SXI (índices XML seletivos) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9c9821e721ce4fdc9187bb69c75cf05c74ff3f40
+ms.lasthandoff: 04/11/2017
+
 ---
-# SXI (&#237;ndices XML seletivos)
+# <a name="selective-xml-indexes-sxi"></a>SXI (índices XML seletivos)
   Os índices XML seletivos são outro tipo de índice XML que está disponível para você além de índices XML comuns. Os objetivos do recurso de índice XML seletivo são os seguintes:  
   
 -   Melhorar o desempenho das consultas em dados XML armazenados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -42,7 +46,6 @@ caps.handback.revision: 8
   
 4.  Não há necessidade de atualizar aplicativos para se beneficiar dos índices XML seletivos.  
   
- [Neste tópico](#top)  
   
 ##  <a name="compare"></a> Índices XML seletivos e índices XML primários  
   
@@ -55,7 +58,6 @@ caps.handback.revision: 8
   
 -   Você dá suporte a consultas de elementos desconhecidos ou de elementos em um local desconhecido na estrutura do documento.  
   
- [Neste tópico](#top)  
   
 ##  <a name="example"></a> Exemplo simples de índice XML seletivo  
  Considere o fragmento XML a seguir como um documento XML em uma tabela de aproximadamente 500.000 linhas:  
@@ -98,9 +100,8 @@ FOR
   
  Para obter mais informações sobre esses elementos, consulte [Tarefas relacionadas](#reltasks).  
   
- [Neste tópico](#top)  
   
-## Recursos com suporte, pré-requisitos e limitações  
+## <a name="supported-features-prerequisites-and-limitations"></a>Recursos com suporte, pré-requisitos e limitações  
   
 ###  <a name="features"></a> Recursos XML com suporte  
  Os índices XML seletivos dão suporte à XQuery com suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nos métodos exist(), value() e nodes().  
@@ -113,7 +114,6 @@ FOR
   
 -   Para o método modify(), os índices XML seletivos não são usados para atualizar documentos XML.  
   
- [Neste tópico](#top)  
   
 ###  <a name="unsupported"></a> Recursos XML sem suporte  
  Os índices XML seletivos não dão suporte aos recursos a seguir que têm suporte na implementação de XML do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -130,7 +130,6 @@ FOR
   
 -   Especificação e recuperação do identificador de um nó usando a função id().  
   
- [Neste tópico](#top)  
   
 ###  <a name="prereq"></a> Pré-requisitos  
  Os pré-requisitos a seguir devem existir para que se possa criar um índice XML seletivo em uma coluna XML em uma tabela de usuário:  
@@ -141,7 +140,6 @@ FOR
   
 -   A chave de clustering da tabela de usuário é limitada a 15 colunas quando usada com índices XML seletivos.  
   
- [Neste tópico](#top)  
   
 ###  <a name="limits"></a> Limitações  
  **Requisitos e limitações gerais**  
@@ -194,7 +192,6 @@ FOR
   
 -   Não há suporte para índices XML seletivos e índices XML seletivos secundários no Orientador de Otimização de Banco de Dados.  
   
- [Neste tópico](#top)  
   
 ##  <a name="reltasks"></a> Tarefas relacionadas  
   
@@ -205,6 +202,5 @@ FOR
 |Crie, altere ou remova um índice XML seletivo.|[Criar, alterar e remover índices XML seletivos](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)|  
 |Crie, altere ou remova um índice XML seletivo secundário.|[Criar, alterar e remover índices XML seletivos secundários](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)|  
   
- [Neste tópico](#top)  
   
   

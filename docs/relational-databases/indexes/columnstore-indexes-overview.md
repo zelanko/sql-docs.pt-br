@@ -1,43 +1,47 @@
 ---
-title: "Guia de &#205;ndices Columnstore | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "criação de índices, columnstore"
-  - "índices [SQL Server], columnstore"
-  - "índice columnstore"
-  - "índice columnstore, descrito"
-  - "xVelocity, índices columnstore"
+title: "Índices columnstore – visão geral| Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes creation, columnstore
+- indexes [SQL Server], columnstore
+- columnstore index
+- columnstore index, described
+- xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 caps.latest.revision: 80
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 80
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 33a0dbca3c96a38466c560487965c8825ff5328d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Guia de &#205;ndices Columnstore
+# <a name="columnstore-indexes---overview"></a>Índices columnstore – visão geral
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   O *índice columnstore* é o padrão para armazenar e consultar grandes tabelas de fatos de repositório de dados. Ele usa armazenamento de dados baseado em coluna e processamento de consultas para alcançar um **desempenho de consulta até 10 vezes melhor** no data warehouse em relação ao armazenamento tradicional orientado por linha e até **10 vezes mais compactação de dados** em relação ao tamanho dos dados descompactados. A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], os índices columnstore permitem a análise operacional, a capacidade de executar análises de alto desempenho em tempo real em uma carga de trabalho transacional.  
   
  Passar para cenários:  
   
--   [Índices columnstore para Data Warehouse](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)  
+-   [Índices columnstore para Data Warehouse](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
   
 -   [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
   
-## O que é um índice columnstore?  
+## <a name="what-is-a-columnstore-index"></a>O que é um índice columnstore?  
  Um *columnstore index* é uma tecnologia para armazenamento, recuperação e gerenciamento de dados usando um formato de dados colunar, chamado columnstore.  
   
-### Termos e conceitos essenciais  
+### <a name="key-terms-and-concepts"></a>Termos e conceitos essenciais  
  Os termos e conceitos essenciais a seguir estão associados aos índices columnstore.  
   
  columnstore  
@@ -61,12 +65,12 @@ caps.handback.revision: 80
   
 -   Cada segmento de coluna é compactado junto e armazenado em meio físico.  
   
- ![Segmento de coluna](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Segmento de coluna")  
+ ![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
   
  índice columnstore clusterizado  
  Um *índice columnstore clusterizado* é o armazenamento físico da tabela inteira.  
   
- ![Índice columnstore clusterizado](../../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Índice columnstore clusterizado")  
+ ![Clustered Columnstore Index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
   
  Para reduzir a fragmentação dos segmentos de coluna e melhorar o desempenho, o índice columnstore pode armazenar alguns dados temporariamente em um índice clusterizado, chamado deltastore, e em uma lista árvore B de IDs para linhas excluídas. As operações de deltastore são tratadas em segundo plano. Para retornar os resultados corretos da consulta, o índice columnstore clusterizado combina os resultados da consulta de columnstore e deltastore.  
   
@@ -100,24 +104,24 @@ caps.handback.revision: 80
   
 -   Muitas vezes, as consultas selecionam apenas algumas colunas de uma tabela, o que reduz a E/S total da mídia física.  
   
-## Quando devo usar um índice columnstore?  
+## <a name="when-should-i-use-a-columnstore-index"></a>Quando devo usar um índice columnstore?  
  Casos de uso recomendados:  
   
--   Use um índice columnstore clusterizado para armazenar tabelas de fatos e tabelas de dimensões grandes para cargas de trabalho de data warehouse. Isso melhora o desempenho de consulta e a compactação de dados em até 10 vezes. Consulte [Columnstore Indexes for Data Warehousing](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md).  
+-   Use um índice columnstore clusterizado para armazenar tabelas de fatos e tabelas de dimensões grandes para cargas de trabalho de data warehouse. Isso melhora o desempenho de consulta e a compactação de dados em até 10 vezes. Consulte [Columnstore Indexes for Data Warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md).  
   
 -   Use um índice columnstore não clusterizado para executar análises em tempo real em uma carga de trabalho OLTP. Veja [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
-### Como escolher entre um índice rowstore e um índice columnstore?  
+### <a name="how-do-i-choose-between-a-rowstore-index-and-a-columnstore-index"></a>Como escolher entre um índice rowstore e um índice columnstore?  
  Índices rowstore têm melhor desempenho em consultas que buscam nos dados, procurando um valor específico, ou para consultas em um pequeno intervalo de valores. Use índices rowstore com cargas de trabalho transacionais, pois eles tendem a exigir principalmente buscas de tabela em vez de verificações de tabela.  
   
  Os índices columnstore oferecem altos ganhos de desempenho para consultas analíticas que examinam grandes quantidades de dados, especialmente em tabelas grandes.  Use índices columnstore em cargas de trabalho de data warehouse e análise, especialmente em tabelas de fatos, pois eles tendem a exigir verificações de tabela completas em vez de buscas de tabela.  
   
-### Posso combinar rowstore e columnstore na mesma tabela?  
+### <a name="can-i-combine-rowstore-and-columnstore-on-the-same-table"></a>Posso combinar rowstore e columnstore na mesma tabela?  
  Sim. Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode criar um índice columnstore não clusterizado atualizável em uma tabela rowstore. O índice columnstore armazena uma cópia das colunas escolhidas, então você precisa de espaço adicional, mas ela será compactada em 10 vezes, em média. Com isso, você pode executar análises no índice columnstore e transações no índice rowstore ao mesmo tempo. O repositório de colunas é atualizado quando dados são alterados na tabela rowstore, assim, ambos os índices trabalham com os mesmos dados.  
   
  Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode ter um ou mais índices rowstore não clusterizados em um índice columnstore. Fazendo isso, você pode executar buscas de tabela eficientes no columnstore subjacente. Outras opções também são disponibilizadas. Por exemplo, você pode impor uma restrição de chave primária usando uma restrição UNIQUE na tabela rowstore. Como um valor não exclusivo não poderá ser inserido na tabela rowstore, o SQL Server não pode inserir o valor no columnstore.  
   
-## Metadados  
+## <a name="metadata"></a>Metadados  
  Todas as colunas em um índice columnstore são armazenadas nos metadados como colunas incluídas. O índice columnstore não tem colunas de chave.  
   
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
@@ -146,7 +150,7 @@ caps.handback.revision: 80
   
 -   [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  Todas as tabelas relacionais usam rowstore como formato de dados subjacente, a menos que você as especifique como um índice columnstore clusterizado. CREATE TABLE cria uma tabela rowstore, a menos que você especifique a opção WITH CLUSTERED COLUMNSTORE INDEX.  
   
  Ao criar uma tabela com a instrução CREATE TABLE, você pode criá-la como columnstore especificando a opção WITH CLUSTERED COLUMNSTORE INDEX. Se você já tiver uma tabela rowstore e quiser convertê-la em columnstore, pode usar a instrução CREATE COLUMNSTORE INDEX. Para obter exemplos, veja.  
@@ -159,22 +163,28 @@ caps.handback.revision: 80
 |Converta uma tabela columnstore em rowstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Geralmente, isso não é necessário, mas pode haver ocasiões em que você precisa para realizar essa conversão. Exemplos mostram como converter um columnstore em uma pilha ou um índice clusterizado.|  
 |Crie um índice columnstore em uma tabela rowstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Uma tabela rowstore pode ter um índice columnstore.  Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o índice columnstore pode ter uma condição filtrada. Exemplos mostram a sintaxe básica.|  
 |Crie índices de alto desempenho para análises operacionais.|[Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Descreve como criar índices de árvore B e columnstore complementares para que consultas OLTP usem índices de árvore B e consultas de análise usem índices columnstore.|  
-|Crie índices columnstore de alto desempenho para data warehouse.|[Índices columnstore para Data Warehouse](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)|Descreve como usar índices de árvore B em tabelas columnstore para criar consultas de data warehouse de alto desempenho.|  
-|Use um índice de árvore B para impor uma restrição de chave primária em um índice columnstore.|[Índices columnstore para Data Warehouse](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)|Mostra como combinar índices columnstore e de árvore B para impor restrições de chave primária no índice columnstore.|  
+|Crie índices columnstore de alto desempenho para data warehouse.|[Índices columnstore para Data Warehouse](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Descreve como usar índices de árvore B em tabelas columnstore para criar consultas de data warehouse de alto desempenho.|  
+|Use um índice de árvore B para impor uma restrição de chave primária em um índice columnstore.|[Índices columnstore para Data Warehouse](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Mostra como combinar índices columnstore e de árvore B para impor restrições de chave primária no índice columnstore.|  
 |Remover um índice columnstore|[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|A remoção de um índice columnstore usa a sintaxe DROP INDEX padrão usada pelos índices de árvore B. Remover um índice columnstore clusterizado converterá a tabela columnstore em uma pilha.|  
 |Excluir uma linha de um índice columnstore|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Use [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) para excluir uma linha.<br /><br /> **linha columnstore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marca a linha como excluída logicamente, mas não recupera o armazenamento físico da linha até que o índice seja recriado.<br /><br /> **linha deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exclui a linha lógica e fisicamente.|  
 |Atualizar uma linha no índice columnstore|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|Use [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) para atualizar uma linha.<br /><br /> **linha columnstore** :  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marca a linha como excluída logicamente e insere a linha atualizada no deltastore.<br /><br /> **linha deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atualiza a linha no deltastore.|  
-|Carregar dados em um índice columnstore|[Carregamento de dados dos índices columnstore](../Topic/Columnstore%20Indexes%20Data%20Loading.md)||  
-|Força todas as linhas no deltastore a ir para o columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Desfragmentação de índices columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)|ALTER INDEX com a opção REBUILD força todas as linhas a ir para o columnstore.|  
+|Carregar dados em um índice columnstore|[Carregamento de dados dos índices columnstore](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)||  
+|Força todas as linhas no deltastore a ir para o columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Desfragmentação de índices columnstore](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)|ALTER INDEX com a opção REBUILD força todas as linhas a ir para o columnstore.|  
 |Desfragmentar um índice columnstore|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX … REORGANIZE desfragmenta os índices columnstore online.|  
 |Mescle tabelas com índices columnstore.|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)||  
   
-## Consulte também  
- [Carregamento de dados dos índices columnstore](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [Resumo de recursos com versão dos índices columnstore](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
- [Desempenho de consultas de índices ColumnStore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
+## <a name="see-also"></a>Consulte também  
+ [Carregamento de dados dos índices columnstore](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
+ [Resumo de recursos com versão dos índices columnstore](~/relational-databases/indexes/columnstore-indexes-what-s-new.md)   
+ [Desempenho de consultas de índices ColumnStore](~/relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Índices columnstore para Data Warehouse](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
- [Desfragmentação de índices columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+ [Índices columnstore para Data Warehouse](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
+ [Desfragmentação de índices columnstore](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+
+
+
+
+
+

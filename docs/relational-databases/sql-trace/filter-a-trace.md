@@ -1,28 +1,32 @@
 ---
-title: "Filtrar um rastreamento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "filtros [SQL Server], eventos"
-  - "eventos [SQL Server], filtros"
-  - "filtros [SQL Server]"
-  - "filtros [SQL Server], rastreamentos"
-  - "rastreamentos [SQL Server], filtros"
+title: Filtrar um rastreamento | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server], events
+- events [SQL Server], filters
+- filters [SQL Server]
+- filters [SQL Server], traces
+- traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6315705010a41afb985682e63338cc95237b5e78
+ms.lasthandoff: 04/11/2017
+
 ---
-# Filtrar um rastreamento
+# <a name="filter-a-trace"></a>Filtrar um rastreamento
   Os filtros limitam os eventos coletados em um rastreamento. Se não houver um filtro definido, serão retornados todos os eventos das classes de evento selecionadas na saída do rastreamento. Por exemplo, limitar os nomes de usuário do Windows em um rastreamento a usuários específicos restringe os dados de saída apenas a esses usuários.  
   
  Não é obrigatório definir um filtro para um rastreamento. Porém, um filtro minimiza a sobrecarga incorrida durante um rastreamento. O filtro retorna dados focados e, logo, facilita a análise e a auditoria do desempenho.  
@@ -34,7 +38,7 @@ caps.handback.revision: 28
   
  Um outro exemplo: se você monitorar consultas para determinar os lotes de execução mais demorada, defina critérios de evento de rastreamento de modo a monitorar apenas os lotes cuja execução leve mais de 30 segundos (valor mínimo de CPU de 30.000 milissegundos).  
   
-## Diretrizes para a criação de filtros  
+## <a name="filter-creation-guidelines"></a>Diretrizes para a criação de filtros  
  Em geral, siga estas etapas para filtrar um rastreamento.  
   
 1.  Identifique os eventos que deseja incluir no rastreamento.  
@@ -61,8 +65,8 @@ caps.handback.revision: 28
   
 |Operador relacional|Símbolo do operador|Descrição|  
 |-------------------------|---------------------|-----------------|  
-|Como|LIKE|Especifica que os dados de evento de rastreamento devem ser semelhantes ao texto digitado. Permite vários valores.|  
-|Não semelhante a|NOT LIKE|Especifica que os dados de evento de rastreamento não devem ser semelhantes ao texto digitado. Permite vários valores.|  
+|Como|Como|Especifica que os dados de evento de rastreamento devem ser semelhantes ao texto digitado. Permite vários valores.|  
+|Não semelhante a|Não semelhante a|Especifica que os dados de evento de rastreamento não devem ser semelhantes ao texto digitado. Permite vários valores.|  
 |Igual a|=|Especifica que os dados de evento de rastreamento devem ser iguais ao valor digitado. Permite vários valores.|  
 |É diferente de|<>|Especifica que os dados de evento de rastreamento devem ser diferentes do valor digitado. Permite vários valores.|  
 |Maior que|>|Especifica que os dados de evento de rastreamento devem ser maiores que o valor digitado.|  
@@ -126,7 +130,7 @@ caps.handback.revision: 28
 |**SqlHandle**|Use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para filtrar eventos nesta coluna de dados. Para obter mais informações, consulte [Filtrar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**StartTime**|>=, <=|  
 |**Estado**|=, <>, >=, <=|  
-|**Success**|=, <>, >=, <=|  
+|**Êxito**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
 |**TargetLoginSid**|Use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para filtrar eventos nesta coluna de dados. Para obter mais informações, consulte [Filtrar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**TargetUserName**|LIKE, NOT LIKE|  
@@ -136,11 +140,11 @@ caps.handback.revision: 28
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- \* Se rastrear eventos do utilitário **osql** ou do utilitário **sqlcmd**, sempre acrescente **%** aos filtros na coluna de dados **TextData**.  
+ \* Se rastrear eventos do utilitário **osql** ou do utilitário **sqlcmd** , sempre acrescente **%** aos filtros na coluna de dados **TextData** .  
   
- Por precaução em razão da segurança, o Rastreamento do SQL omite do rastreamento, automaticamente, toda informação dos procedimentos armazenados relacionados que afetem senhas. Este mecanismo de segurança não é configurável e está sempre em vigor. Ele impede os usuários que detêm permissões para rastrear toda a atividade no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de capturar senhas.  
+ Por precaução em razão da segurança, o Rastreamento do SQL omite do rastreamento, automaticamente, toda informação dos procedimentos armazenados relacionados que afetem senhas. Este mecanismo de segurança não é configurável e está sempre em vigor. Ele impede os usuários que detêm permissões para rastrear toda a atividade no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de capturar senhas.  
   
- Os seguintes procedimentos armazenados relacionados à segurança são monitorados, mas nenhuma saída é gravada na coluna de dados **TextData**:  
+ Os seguintes procedimentos armazenados relacionados à segurança são monitorados, mas nenhuma saída é gravada na coluna de dados **TextData** :  
   
  [sp_addapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)  
   

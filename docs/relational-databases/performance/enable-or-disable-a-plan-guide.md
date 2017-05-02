@@ -1,27 +1,31 @@
 ---
-title: "Habilitar ou desabilitar um guia de plano | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "guias de plano [SQL Server], desabilitando"
-  - "habilitando guias de plano"
-  - "guias de plano [SQL Server], habilitando"
-  - "desabilitar guias de plano"
+title: Habilitar ou desabilitar um guia de plano | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- plan guides [SQL Server], disabling
+- enabling plan guides
+- plan guides [SQL Server], enabling
+- disabling plan guides
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1d76a7087ce1225c2ae3f4f685cb234b53dbf0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Habilitar ou desabilitar um guia de plano
+# <a name="enable-or-disable-a-plan-guide"></a>Habilitar ou desabilitar um guia de plano
   Você pode desabilitar e habilitar guias de plano no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um único ou todos os guias de plano de um banco de dados podem ser habilitados ou desabilitados.  
   
  **Neste tópico**  
@@ -53,7 +57,7 @@ caps.handback.revision: 6
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para habilitar ou desabilitar um guia de plano  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>Para habilitar ou desabilitar um guia de plano  
   
 1.  Clique no sinal de adição para expandir o banco de dados no qual você deseja desabilitar ou habilitar um guia de plano e clique no sinal de adição para expandir a pasta **Programação** .  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 6
   
 4.  Na caixa de diálogo **Desabilitar Guia de Plano** ou **Habilitar Guia de Plano** , verifique se a ação escolhida foi bem-sucedida e clique em **Fechar**.  
   
-#### Para desabilitar ou habilitar todos os guias de plano de um banco de dados  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>Para desabilitar ou habilitar todos os guias de plano de um banco de dados  
   
 1.  Clique no sinal de adição para expandir o banco de dados no qual você deseja desabilitar ou habilitar um guia de plano e clique no sinal de adição para expandir a pasta **Programação** .  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 6
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para habilitar ou desabilitar um guia de plano  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>Para habilitar ou desabilitar um guia de plano  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 6
   
     ```  
   
-#### Para desabilitar ou habilitar todos os guias de plano de um banco de dados  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>Para desabilitar ou habilitar todos os guias de plano de um banco de dados  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

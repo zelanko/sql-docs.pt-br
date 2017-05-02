@@ -1,34 +1,38 @@
 ---
-title: "Exibir os Eventos Estendidos equivalentes &#224;s classes do Rastreamento do SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Rastreamento do SQL, equivalentes de eventos estendidos"
-  - "eventos estendidos [SQL Server], equivalentes do Rastreamento do SQL"
-  - "eventos estendidos [SQL Server], eventos configuráveis pelo usuário"
+title: "Exibir os Eventos Estendidos equivalentes às classes do Rastreamento do SQL | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Trace, extended events equivalents
+- extended events [SQL Server], SQL Trace equivalents
+- extended events [SQL Server], user configurable events
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfa6eb722a8dcbd4c3a9e72d731fe8a59d436ba8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exibir os Eventos Estendidos equivalentes &#224;s classes do Rastreamento do SQL
+# <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Exibir os Eventos Estendidos equivalentes às classes do Rastreamento do SQL
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Se você desejar usar os Eventos Estendidos para coletar dados de evento equivalentes a colunas e classes de evento do Rastreamento do SQL, será útil entender como os eventos do Rastreamento do SQL são mapeados para os eventos e as ações dos Eventos Estendidos.  
   
  Você pode usar o seguinte procedimento para exibir os eventos e as ações dos Eventos Estendidos que são equivalentes a cada evento do Rastreamento do SQL e suas colunas associadas.  
   
-## Para exibir os equivalentes de Eventos Estendidos a eventos do Rastreamento do SQL usando o Editor de Consulta  
+## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>Para exibir os equivalentes de Eventos Estendidos a eventos do Rastreamento do SQL usando o Editor de Consulta  
   
 -   No Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], execute a seguinte consulta:  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 13
   
 -   Para as classes de evento do Rastreamento do SQL configuráveis pelo usuário (UserConfigurable:1 a UserConfigurable:9), os Eventos Estendidos usam um único evento para substituí-las. O evento é chamado user_event. Este evento é gerado por meio de sp_trace_generateevent, o mesmo procedimento armazenado usado pelo Rastreamento do SQL. O evento user_event é retornado, independentemente de qual ID de evento é passada para o procedimento armazenado. No entanto, um campo event_id é retornado como parte dos dados do evento. Isso permite a você criar um predicado baseado na ID do evento. Por exemplo, se você usar UserConfigurable:0 (ID de evento = 82) no código, poderá adicionar o evento user_event à sessão e especificar o predicado “event_id = 82”. Portanto, você não precisa alterar o código, pois o procedimento armazenado sp_trace_generateevent gera o evento user_event dos Eventos Estendidos, e a classe de evento equivalente do Rastreamento do SQL.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   
   

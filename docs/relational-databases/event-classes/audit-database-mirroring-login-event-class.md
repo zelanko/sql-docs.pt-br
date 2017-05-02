@@ -1,29 +1,33 @@
 ---
-title: "Classe de evento Audit Database Mirroring Login | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "notificações de eventos [SQL Server], espelhamento do banco de dados"
-  - "Classe de evento Audit Database Mirroring Login"
-  - "espelhamento do banco de dados [SQL Server], notificações de eventos"
+title: Classe de evento Audit Database Mirroring Login | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], database mirroring
+- Audit Database Mirroring Login event class
+- database mirroring [SQL Server], event notifications
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68d56190a6435a36e8ca96e0228aae7f19f133d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe de evento Audit Database Mirroring Login
+# <a name="audit-database-mirroring-login-event-class"></a>Classe de evento Audit Database Mirroring Login
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um evento **Audit Database Mirroring Login** para relatar mensagens de auditoria relacionadas a segurança de transporte de espelhamento de banco de dados.  
   
-## Colunas de dados da classe de evento Audit Database Mirroring Login  
+## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Database Mirroring Login  
   
 |Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -47,7 +51,7 @@ caps.handback.revision: 16
 |**SPID**|**int**|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |**StartTime**|**datetime**|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
 |**Estado**|**int**|Indica o local, dentro do código-fonte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte da Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|Não|  
-|**TargetUserName**|**nvarchar**|Estado do logon. Um dos seguintes:<br /><br /> **INITIAL**<br /><br /> **WAIT LOGIN NEGOTIATE**<br /><br /> **ONE ISC**<br /><br /> **ONE ASC**<br /><br /> **TWO ISC**<br /><br /> **TWO ASC**<br /><br /> **Confirmação WAIT ISC**<br /><br /> **Confirmação WAIT ASC**<br /><br /> **WAIT REJECT**<br /><br /> **WAIT PRE-MASTER SECRET**<br /><br /> **WAIT VALIDATION**<br /><br /> **WAIT ARBITRATION**<br /><br /> **ONLINE**<br /><br /> **ERROR**<br /><br /> <br /><br /> Observação: ISC = Iniciar contexto de segurança. ASC = Aceitar contexto de segurança.|39|Não|  
+|**TargetUserName**|**nvarchar**|Estado do logon. Um dos seguintes:<br /><br /> **INITIAL**<br /><br /> **WAIT LOGIN NEGOTIATE**<br /><br /> **ONE ISC**<br /><br /> **ONE ASC**<br /><br /> **TWO ISC**<br /><br /> **TWO ASC**<br /><br /> **Confirmação WAIT ISC**<br /><br /> **Confirmação WAIT ASC**<br /><br /> **WAIT REJECT**<br /><br /> **WAIT PRE-MASTER SECRET**<br /><br /> **WAIT VALIDATION**<br /><br /> **WAIT ARBITRATION**<br /><br /> **ONLINE**<br /><br /> **ERROR**<br /><br /> <br /><br /> Observação: ISC = Iniciar contexto de segurança. ASC = Aceitar contexto de segurança.|39|Não|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Não|  
   
  A tabela abaixo lista os valores de subclasse para essa classe de evento.  
@@ -59,9 +63,9 @@ caps.handback.revision: 16
 |3|Message Format Error|Um evento Message Format Error informa que o logon de espelhamento de banco de dados recebeu uma mensagem que não corresponde ao formato esperado. A mensagem pode ter sido corrompida ou um programa diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode estar enviando mensagens para a porta usada pelo espelhamento de banco de dados.|  
 |4|Negotiate Failure|Um evento Negotiate Failure informa que o ponto de extremidade de espelhamento de banco de dados local e o ponto de extremidade de espelhamento de banco de dados remoto oferecem suporte a níveis de autenticação mutuamente exclusivos.|  
 |5|Authentication Failure|Um evento Authentication Failure informa que um  ponto de extremidade de espelhamento de banco de dados não pode executar autenticação para a conexão devido a um erro. Para Autenticação do Windows, esse evento informa que o ponto de extremidade de espelhamento do banco de dados não pode usar a Autenticação do Windows. Para autenticação com base em certificado, esse evento informa que o ponto de extremidade de espelhamento de banco de dados não pode acessar o certificado.|  
-|6|Authorization Failure|Um evento Authorization Failure informa que um ponto de extremidade de espelhamento de banco de dados negou autorização para a conexão. Para Autenticação do Windows, esse evento informa que o identificador de segurança para a conexão não corresponde a um usuário de banco de dados. Para autenticação baseada em certificado, esse evento relata que a chave pública fornecida na mensagem não corresponde a um certificado no banco de dados **master**.|  
+|6|Authorization Failure|Um evento Authorization Failure informa que um ponto de extremidade de espelhamento de banco de dados negou autorização para a conexão. Para Autenticação do Windows, esse evento informa que o identificador de segurança para a conexão não corresponde a um usuário de banco de dados. Para autenticação baseada em certificado, esse evento relata que a chave pública fornecida na mensagem não corresponde a um certificado no banco de dados **master** .|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

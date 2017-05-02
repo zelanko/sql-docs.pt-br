@@ -1,27 +1,31 @@
 ---
-title: "Coleta de Lixo de XTP do SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Coleta de lixo de SQL Server XTP | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 84e7b0df9fdd52f6f67113b9dc019fc905a9aaff
+ms.lasthandoff: 04/11/2017
+
 ---
-# Coleta de Lixo de XTP do SQL Server
+# <a name="sql-server-xtp-garbage-collection"></a>Coleta de Lixo de XTP do SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   O objeto de desempenho Coleta de Lixo de XTP do SQL Server contém os contadores relacionados ao coletor de lixo do mecanismo OLTP in-memory.  
   
- Esta tabela descreve os contadores de **Coleta de Lixo de XTP do SQL Server**.  
+ Esta tabela descreve os contadores de **Coleta de Lixo de XTP do SQL Server** .  
   
 |Contador|Descrição|  
 |-------------|-----------------|  
@@ -39,7 +43,7 @@ caps.handback.revision: 8
 |**Linhas varridas tocadas/s**|O número de linhas tocadas durante varreduras de canto sujo (em média), por segundo.|  
 |**Verificações de varredura iniciadas/s**|O número de verificações de varredura de canto sujo iniciadas (em média), por segundo.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Contadores de desempenho XTP &#40;OLTP in-memory&#41; do SQL Server](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

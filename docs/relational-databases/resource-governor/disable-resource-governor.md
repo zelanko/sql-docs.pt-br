@@ -1,29 +1,33 @@
 ---
-title: "Desabilitar Administrador de Recursos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Administrador de recursos, desabilitando"
+title: Desabilitar Resource Governor | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, disabling
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47091df9ec1318e7bb66ef1a32346c7445b4abd6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Desabilitar Administrador de Recursos
+# <a name="disable-resource-governor"></a>Desabilitar Administrador de Recursos
   Você pode desabilitar o Administrador de Recursos usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou Transact-SQL.  
   
--   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Para desabilitar o Administrador de Recursos, usando:** [Pesquisador de Objetos](#RGOffObjEx), [Propriedades do Administrador de Recursos](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
+-   **To disable Resource Governorn, using:**  [Object Explorer](#RGOffObjEx), [Resource Governor Properties](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  A desabilitação do Administrador de Recursos gera os seguintes resultados:  
@@ -53,14 +57,14 @@ caps.handback.revision: 7
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra o Pesquisador de Objetos e expanda recursivamente o nó **Gerenciamento** para baixo e incluindo o **Administrador de Recursos**.  
   
-2.  Clique com o botão direito do mouse em **Administrador de Recursos** e, então, clique em **Desabilitar**.  
+2.  Clique com o botão direito do mouse em **Administrador de Recursos**e, então, clique em **Desabilitar**.  
   
 ##  <a name="RGOffProp"></a> Desabilitar o Administrador de Recursos usando as Propriedades do Administrador de Recursos  
  **Para desabilitar o Administrador de Recursos usando a página de propriedades do Administrador de Recursos**  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra o Pesquisador de Objetos e expanda recursivamente o nó **Gerenciamento** para baixo e incluindo o **Administrador de Recursos**.  
   
-2.  Clique com o botão direito do mouse em **Administrador de Recursos** e clique em **Propriedades**, para abrir a página **Propriedades do Administrador de Recursos**.  
+2.  Clique com o botão direito do mouse em **Administrador de Recursos** e clique em **Propriedades**, para abrir a página **Propriedades do Administrador de Recursos** .  
   
 3.  Clique na caixa de seleção **Habilitar Administrador de Recursos** , verifique se a caixa não está selecionada e clique em **OK**.  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 7
   
 1.  Execute a instrução **ALTER RESOURCE GOVERNOR DISABLE** .  
   
-### Exemplo (Transact-SQL)  
+### <a name="example-transact-sql"></a>Exemplo (Transact-SQL)  
  O exemplo a seguir habilita o Administrador de Recursos.  
   
 ```  
@@ -77,7 +81,7 @@ ALTER RESOURCE GOVERNOR DISABLE;
 GO  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de recursos do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

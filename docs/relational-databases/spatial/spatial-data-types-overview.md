@@ -1,27 +1,31 @@
 ---
-title: "Vis&#227;o geral de tipos de dados espaciais | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tipo de dados de geometria [SQL Server], entendendo"
-  - "tipo de dados de geografia [SQL Server], dados espaciais"
-  - "dados espaciais planares [SQL Server], tipo de dados de geometria"
-  - "tipos de dados espaciais [SQL Server]"
+title: "Visão geral de tipos de dados espaciais | Microsoft Docs"
+ms.custom: 
+ms.date: 11/01/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geometry data type [SQL Server], understanding
+- geography data type [SQL Server], spatial data
+- planar spatial data [SQL Server], geometry data type
+- spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4bfd021048962cb632a2d5e553ea9d6bb35a8c20
+ms.lasthandoff: 04/11/2017
+
 ---
-# Vis&#227;o geral de tipos de dados espaciais
+# <a name="spatial-data-types-overview"></a>Visão geral de tipos de dados espaciais
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Há dois tipos de dados espaciais. O tipo de dados **geometry** dá suporte a dados planares ou a dados euclidianos (planisfério). O tipo de dados **geometry** está de acordo com os Recursos Simples do Open Geospatial Consortium (OGC) para o SQL Specification versão 1.1.0 e compatível com o SQL MM (padrão ISO).  
@@ -29,22 +33,22 @@ caps.handback.revision: 51
  Além disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao tipo de dados **geometry** que armazena dados elipsoidais (globo), como coordenadas de latitude e longitude de GPS.  
   
 > [!IMPORTANT]  
->  Para obter uma descrição detalhada e exemplos de recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo aprimoramentos nos tipos de dados espaciais, baixe o white paper, [New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407) (Novos recursos espaciais no SQL Server codinome "Denali").  
+>  Para obter uma descrição detalhada e exemplos de recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo aprimoramentos nos tipos de dados espaciais, baixe o white paper, [New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407)(Novos recursos espaciais no SQL Server codinome "Denali").  
   
 ##  <a name="objects"></a> Objetos de dados espaciais  
  Os tipos de dados **geometry** e **geography** oferecem suporte a dezesseis objetos de dados espaciais, ou tipos de instâncias. No entanto, apenas onze desses tipos de instâncias *podem ser instanciados*. É possível criar e trabalhar com essas instâncias (ou criar uma instância delas) em um banco de dados. Essas instâncias derivam determinadas propriedades de seus tipos de dados pai que as distingue como **Points**, **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** ou como instâncias **geometry** ou **geography** múltiplas em uma **GeometryCollection**. O tipo**Geography** tem um tipo de instância adicional, **FullGlobe**.  
   
  A figura a seguir ilustra a hierarquia **geometry** na qual os tipos de dados **geometry** e **geography** se baseiam. Os tipos a partir dos quais se podem criar instâncias de **geometry** e **geography** são indicados em azul.  
   
- ![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.png) 
+ ![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.gif) 
   
- Como a figura indica, os dez tipos dos quais se pode criar uma instância dos tipos de dados **geometry** e **geography** são **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**e **GeometryCollection**. Há um tipo adicional do qual se pode criar uma instância para o tipo de dados de geography: **FullGlobe**. Os tipos **geometry** e **geography** podem reconhecer uma instância específica desde que ela esteja bem-formada, ainda que não esteja definida explicitamente. Por exemplo, se você definir uma instância de **Point** explicitamente usando o método STPointFromText(), **geometry** e **geography** a reconhecerão como uma instância de **Point**, desde que a entrada do método esteja bem formada. Se você definir a mesma instância usando o método `STGeomFromText()`, os tipos de dados **geometry** e **geography** reconhecem a instância como um **Point**.  
+ Como a figura indica, os dez tipos dos quais se pode criar uma instância dos tipos de dados **geometry** e **geography** são **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**e **GeometryCollection**. Há um tipo adicional do qual se pode criar uma instância para o tipo de dados de geography: **FullGlobe**. Os tipos **geometry** e **geography** podem reconhecer uma instância específica desde que ela esteja bem-formada, ainda que não esteja definida explicitamente. Por exemplo, se você definir uma instância de **Point** explicitamente usando o método STPointFromText(), **geometry** e **geography** a reconhecerão como uma instância de **Point**, desde que a entrada do método esteja bem formada. Se você definir a mesma instância usando o método `STGeomFromText()` , os tipos de dados **geometry** e **geography** reconhecem a instância como um **Point**.  
   
  Os subtipos dos tipos geometry e geography são divididos em tipos simples e de coleção.  Alguns métodos como `STNumCurves()` só funcionam com tipos simples.  
   
  Os tipos simples incluem:  
   
--   [Ponto](../../relational-databases/spatial/point.md)  
+-   [Point](../../relational-databases/spatial/point.md)  
   
 -   [LineString](../../relational-databases/spatial/linestring.md)  
   
@@ -70,34 +74,34 @@ caps.handback.revision: 51
 ##  <a name="differences"></a> Diferenças entre os tipos de dados de geometria e geografia  
  Os dois tipos de dados espaciais sempre se comportam de maneira muito semelhante, mas há algumas diferenças importantes na maneira como eles são armazenados e manipulados.  
   
-### Como bordas de conexão são definidas  
+### <a name="how-connecting-edges-are-defined"></a>Como bordas de conexão são definidas  
  Os dados definidos para os tipos **LineString** e **Polygon** são somente vértices.  A borda de conexão entre dois vértices em um tipo geometry é uma linha reta.  No entanto, a borda de conexão entre dois vértices em um tipo de geografia é um amplo arco elíptico curto entre os dois vértices.  Uma grande elipse é a interseção do elipsoide com um plano no centro, e um amplo arco elíptico é um segmento de arco na grande elipse.  
   
-### Como são definidos segmentos de arco circular  
+### <a name="how-circular-arc-segments-are-defined"></a>Como são definidos segmentos de arco circular  
  Os segmentos de arco circular para tipos geometry são definidos no plano de coordenadas cartesianas XY (são ignorados valores Z). Os segmentos de arco circular para tipos geography são definidos por segmentos de curva em uma esfera de referência. Qualquer paralelo na esfera de referência pode ser definido por dois arcos circulares complementares, onde os pontos para ambos os arcos têm um ângulo de latitude constante.  
   
-### Medidas em tipos de dados espaciais  
- No sistema planar ou de terra plana, as medidas de distâncias e de áreas são fornecidas na mesma unidade de medida das coordenadas. Usando o tipo de dados **geometry**, a distância entre (2, 2) e (5, 6) é de 5 unidades, independentemente das unidades usadas.  
+### <a name="measurements-in-spatial-data-types"></a>Medidas em tipos de dados espaciais  
+ No sistema planar ou de terra plana, as medidas de distâncias e de áreas são fornecidas na mesma unidade de medida das coordenadas. Usando o tipo de dados **geometry** , a distância entre (2, 2) e (5, 6) é de 5 unidades, independentemente das unidades usadas.  
   
- No sistema elipsoidal ou de terra redonda, as coordenadas são fornecidas em graus de latitude ou de longitude. No entanto os comprimentos e áreas são normalmente medidos em metros e metros quadrados, embora a medida possa depender do SRID (identificador de referência espacial) da instância de **geography**. A unidade de medida mais comum para o tipo de dados **geography** é em metros.  
+ No sistema elipsoidal ou de terra redonda, as coordenadas são fornecidas em graus de latitude ou de longitude. No entanto os comprimentos e áreas são normalmente medidos em metros e metros quadrados, embora a medida possa depender do SRID (identificador de referência espacial) da instância de **geography** . A unidade de medida mais comum para o tipo de dados **geography** é em metros.  
   
-### Orientação de dados espaciais  
+### <a name="orientation-of-spatial-data"></a>Orientação de dados espaciais  
  No sistema de planar, a orientação de anel de um polígono não é um fator importante. Por exemplo, um polígono descrito por ((0, 0), (10, 0), (0, 20), (0, 0)) é o mesmo que um polígono descrito por ((0, 0), (0, 20), (10, 0), (0, 0)). Os Recursos Simples do OGC para SQL Specification não ditam uma ordenação de anel e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não impõe ordenação de anel.  
   
  Em um sistema elipsoidal, um polígono não tem nenhum significado ou é ambíguo, sem uma orientação. Por exemplo, um anel ao redor do equador descreve o hemisfério norte ou o sul? Se usarmos o tipo de dados **geography** para armazenar a instância espacial, deveremos especificar a orientação do anel e descrever precisamente o local da instância. O interior do polígono em um sistema elipsoidal é definido pela regra à esquerda.  
   
- Quando o nível de compatibilidade é 100 ou abaixo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o tipo de dados **geography** tem as seguintes restrições:  
+ Quando o nível de compatibilidade é 100 ou abaixo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , o tipo de dados **geography** tem as seguintes restrições:  
   
 -   Cada instância de **geography** deve se ajustar dentro de um único hemisfério. Nenhum objeto espacial maior do que um hemisfério pode ser armazenado.  
   
 -   Qualquer instância de **geography** de uma representação WKT (Well-Known Text) ou WKB (Well-Known Binary) do Open Geospatial Consortium (OGC) que reproduza um objeto maior do que um hemisfério aciona uma **ArgumentException**.  
   
--   Os métodos de tipo de dados **geography** que requerem a entrada de duas instâncias de **geography**, como STIntersection(), STUnion(), STDifference() e STSymDifference(), retornarão nulo se os resultados dos métodos não se ajustarem dentro de um único hemisfério. STBuffer() também retornará nulo se a saída ultrapassar um único hemisfério.  
+-   Os métodos de tipo de dados **geography** que requerem a entrada de duas instâncias de **geography** , como STIntersection(), STUnion(), STDifference() e STSymDifference(), retornarão nulo se os resultados dos métodos não se ajustarem dentro de um único hemisfério. STBuffer() também retornará nulo se a saída ultrapassar um único hemisfério.  
   
  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **FullGlobe** é um tipo especial de polígono que abrange o globo inteiro. **FullGlobe** tem uma área, mas nenhuma borda ou vértices.  
   
-### Anéis externos e internos não são importantes no tipo de dados geography  
- Os Recursos Simples do OGC para SQL Specification discutem anéis externos e internos, mas essa distinção faz pouco sentido para o tipo de dados **geography** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: qualquer anel de um polígono pode ser usado como anel externo.  
+### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Anéis externos e internos não são importantes no tipo de dados geography  
+ Os Recursos Simples do OGC para SQL Specification discutem anéis externos e internos, mas essa distinção faz pouco sentido para o tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type; any ring of a polygon can be taken to be the outer ring.  
   
  Para obter mais informações sobre especificações do OCG, consulte o seguinte:  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 51
 > [!NOTE]  
 >  Se forem fornecidos valores Z para segmentos de arco circular, eles deverão ser iguais para todos os pontos no segmento de arco circular para que o segmento seja aceito para entrada. Por exemplo, `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` é aceito, mas `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` não é.  
   
-### Comparação de LineString e CircularString  
+### <a name="linestring-and-circularstring-comparison"></a>Comparação de LineString e CircularString  
  O diagrama a seguir mostra triângulos isósceles idênticos (o triângulo A usa segmentos de linha para definir o triângulo, e o triângulo B usa segmentos de arco circular para definir o triângulo):  
   
   ![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif)
@@ -154,13 +158,13 @@ LS LengthCS Length
 5.65685…6.28318…  
 ```  
   
- A ilustração a seguir mostra como cada tipo é armazenado (a linha vermelha mostra **LineString**`@g1` e a linha azul mostra **CircularString**`@g2`):  
+ A ilustração a seguir mostra como cada tipo é armazenado (a linha vermelha mostra **LineString**`@g1`e a linha azul mostra **CircularString**`@g2`):  
   
  ![e52157b5-5160-4a4b-8560-50cdcf905b76](../../relational-databases/spatial/media/e52157b5-5160-4a4b-8560-50cdcf905b76.gif)  
   
- Como a ilustração acima mostra, as instâncias **CircularString** usam menos pontos para armazenar limites de curva com maior precisão que instâncias **LineString** . As instâncias **CircularString** são úteis para armazenar limites circulares como um raio de pesquisa de vinte milhas de um ponto específico. Instâncias**LineString** são boas para armazenar limites que são lineares como um quarteirão de cidade.  
+ Como a ilustração acima mostra, as instâncias **CircularString** usam menos pontos para armazenar limites de curva com maior precisão que instâncias **LineString** . As instâncias**CircularString** são úteis para armazenar limites circulares como um raio de pesquisa de vinte milhas de um ponto específico. Instâncias**LineString** são boas para armazenar limites que são lineares como um quarteirão de cidade.  
   
-### Comparação de LineString e CompoundCurve  
+### <a name="linestring-and-compoundcurve-comparison"></a>Comparação de LineString e CompoundCurve  
  Os exemplos de código seguintes mostram como armazenar a mesma figura usando instâncias **LineString** e **CompoundCurve** :  
   
 ```tsql  
@@ -179,7 +183,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0,
   
  Uma instância **CompoundCurve** pode armazenar o segmento de arco circular (2 2, 1 3, 0 2) diretamente, ao passo que uma instância **LineString** teria que converter a curva em vários segmentos de linha menores.  
   
-### Comparação de CircularString e CompoundCurve  
+### <a name="circularstring-and-compoundcurve-comparison"></a>Comparação de CircularString e CompoundCurve  
  O exemplo de código a seguir mostra como a fatia de pizza pode ser armazenada em uma instância **CircularString** :  
   
 ```tsql  
@@ -202,18 +206,19 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING( 3 6.3246, 0 7, -3 6.3246
 SELECT @g.ToString(), @g.STLength();  
 ```  
   
-### Comparação de Polygon e CurvePolygon  
+### <a name="polygon-and-curvepolygon-comparison"></a>Comparação de Polygon e CurvePolygon  
  Instâncias**CurvePolygon** podem usar instâncias **CircularString** e **CompoundCurve** instances when defining their exterior e interior rings.  Instâncias**Polygon** não podem usar os tipos de segmento de arco circular: **CircularString** e **CompoundCurve**.  
  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 
 - [Dados espaciais (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [Referência de método de tipo de dados geometry](https://msdn.microsoft.com/library/bb933973.aspx) 
-- [Referência de método de tipo de dados geography](../Topic/geography%20Data%20Type%20Method%20Reference.md)   
+- [Referência de método de tipo de dados geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
 - [STNumCurves &#40;Tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
 - [STNumCurves &#40;Tipo de dados geography&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
 - [STGeomFromText &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   
 - [STGeomFromText &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
   
   
+

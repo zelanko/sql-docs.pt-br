@@ -1,26 +1,30 @@
 ---
-title: "Modificar ou renomear gatilhos DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "renomeando gatilhos"
-  - "modificando gatilhos"
-  - "Gatilhos DML, modificando"
+title: Modificar ou renomear gatilhos DML | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- renaming triggers
+- modifying triggers
+- DML triggers, modifying
 ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ac7956829213d52669a3408a9a64c597cafa03d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modificar ou renomear gatilhos DML
+# <a name="modify-or-rename-dml-triggers"></a>Modificar ou renomear gatilhos DML
   Este tópico descreve como modificar um gatilho DML no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -47,7 +51,7 @@ caps.handback.revision: 29
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Recomendamos que você não use o procedimento armazenado [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md) para renomear um gatilho. A alteração de qualquer parte de um nome de objeto pode quebrar scripts e procedimentos armazenados. Renomear um gatilho não altera o nome do objeto correspondente na coluna de definição da exibição de catálogo [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md). Nós recomendamos que você remova e recrie o gatilho.  
+-   Recomendamos que você não use o procedimento armazenado [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md) para renomear um gatilho. A alteração de qualquer parte de um nome de objeto pode quebrar scripts e procedimentos armazenados. Renomear um gatilho não altera o nome do objeto correspondente na coluna de definição da exibição de catálogo [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) . Nós recomendamos que você remova e recrie o gatilho.  
   
 -   Se você alterar o nome de um objeto referenciado por um gatilho DML, é preciso modificar o gatilho para que seu texto reflita o novo nome. Portanto, antes de renomear um objeto, exiba primeiramente as dependências do objeto para determinar se algum gatilho foi afetado pela mudança proposta.  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 29
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para modificar um gatilho DML  
+#### <a name="to-modify-a-dml-trigger"></a>Para modificar um gatilho DML  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 29
   
 4.  Modifique o gatilho e clique em **Executar**.  
   
-#### Para renomear um gatilho DML  
+#### <a name="to-rename-a-dml-trigger"></a>Para renomear um gatilho DML  
   
 1.  [Exclua o gatilho](../../relational-databases/triggers/delete-or-disable-dml-triggers.md) que você deseja renomear.  
   
@@ -86,13 +90,13 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para modificar um gatilho usando ALTER TRIGGER  
+#### <a name="to-modify-a-trigger-using-alter-trigger"></a>Para modificar um gatilho usando ALTER TRIGGER  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole os seguintes exemplos na consulta. Execute o primeiro exemplo para criar um gatilho DML que imprime uma mensagem definida pelo usuário para o cliente quando um usuário tenta adicionar ou alterar dados na tabela `SalesPersonQuotaHistory`. Execute a instrução [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) para modificar o gatilho a ser disparado apenas nas atividades `INSERT` . Esse gatilho é útil porque lembra ao usuário que atualiza ou insere linhas nessa tabela que também notifique o departamento `Compensation` .  
+3.  Copie e cole os seguintes exemplos na consulta. Execute o primeiro exemplo para criar um gatilho DML que imprime uma mensagem definida pelo usuário para o cliente quando um usuário tenta adicionar ou alterar dados na tabela `SalesPersonQuotaHistory` . Execute a instrução [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) para modificar o gatilho a ser disparado apenas nas atividades `INSERT` . Esse gatilho é útil porque lembra ao usuário que atualiza ou insere linhas nessa tabela que também notifique o departamento `Compensation` .  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -120,7 +124,7 @@ GO
   
 ```  
   
-#### Para renomear um gatilho usando DROP TRIGGER e ALTER TRIGGER  
+#### <a name="to-rename-a-trigger-using-drop-trigger-and-alter-trigger"></a>Para renomear um gatilho usando DROP TRIGGER e ALTER TRIGGER  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -143,7 +147,7 @@ GO
   
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

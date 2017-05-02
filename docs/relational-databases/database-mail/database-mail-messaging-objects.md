@@ -1,33 +1,37 @@
 ---
-title: "Objetos do sistema de mensagens do Database Mail | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Database Mail [SQL Server], banco de dados de host"
-  - "Database Mail [SQL Server], objetos de mensagem"
-  - "bancos de dados de host de correio [SQL Server]"
-  - "banco de dados de host [Database Mail]"
+title: Objetos do sistema de mensagens do Database Mail | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], host databases
+- Database Mail [SQL Server], messaging objects
+- mail host databases [SQL Server]
+- host databases [Database Mail]
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0ac02628b0b385841805994ec17dd121d84d7399
+ms.lasthandoff: 04/11/2017
+
 ---
-# Objetos do sistema de mensagens do Database Mail
+# <a name="database-mail-messaging-objects"></a>Objetos do sistema de mensagens do Database Mail
   O banco de dados **msdb** é o host de Database Mail. Este banco de dados contém os procedimentos armazenados e objetos de mensagens para o Database Mail. O Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] contém o Assistente para Configuração do Database Mail, que permite habilitar o Database Mail, criar e gerenciar perfis e contas e configurar opções do Database Mail.  
   
 ##  <a name="ComponentsAndConcepts"></a> Objetos no banco de dados **msdb**  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve ser habilitado no banco de dados **msdb**. Porém, o Database Mail não usa o sistema de rede do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Portanto, os usuários não têm que criar um ponto de extremidade do [!INCLUDE[ssSB](../../includes/sssb-md.md)] para usar o Database Mail. O processo externo do Database Mail usa uma conexão [!INCLUDE[vstecado](../../includes/vstecado-md.md)] padrão para se comunicar com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve ser habilitado no banco de dados **msdb** . Porém, o Database Mail não usa o sistema de rede do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Portanto, os usuários não têm que criar um ponto de extremidade do [!INCLUDE[ssSB](../../includes/sssb-md.md)] para usar o Database Mail. O processo externo do Database Mail usa uma conexão [!INCLUDE[vstecado](../../includes/vstecado-md.md)] padrão para se comunicar com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Quando habilitado, o Database Mail expõe os seguintes objetos no banco de dados **msdb**.  
+ Quando habilitado, o Database Mail expõe os seguintes objetos no banco de dados **msdb** .  
   
  Esses objetos são a interface para o Database Mail dentro do banco de dados de host de correio. Outros objetos estão instalados para implementar a funcionalidade oferecida pelos objetos listados acima. No entanto, esses objetos são reservados para uso interno.  
   
@@ -46,9 +50,8 @@ caps.handback.revision: 31
 |[sysmail_start_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|**Procedimento armazenado**|Inicia os objetos do Service Broker utilizados pelo programa externo. Esses objetos são iniciados por padrão.|  
 |[sysmail_stop_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|**Procedimento armazenado**|Interrompe os objetos do Service Broker que são utilizados pelo programa externo.|  
   
- [&#91;Início&#93;](#Top)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   

@@ -1,26 +1,30 @@
 ---
-title: "View Resource Governor Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.rg.properties.f1"
-helpviewer_keywords: 
-  - "Resource Governor, properties"
+title: Exibir propriedades do Administrador de Recursos | Microsoft Docs
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.rg.properties.f1
+helpviewer_keywords:
+- Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e856286b6048e320481b5983685fbfcd4e838c1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# View Resource Governor Properties
+# <a name="view-resource-governor-properties"></a>View Resource Governor Properties
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Você pode criar ou configurar entidades do Administrador de Recursos, como pools de recursos e grupos de cargas de trabalho, usando a página de Propriedades do Administrador de Recursos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -56,13 +60,13 @@ caps.handback.revision: 28
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra o Pesquisador de Objetos e expanda recursivamente o nó **Gerenciamento** para baixo e incluindo o **Administrador de Recursos**.  
   
-2.  Clique com o botão direito do mouse em **Administrador de Recursos** e clique em **Propriedades**, para abrir a página **Propriedades do Administrador de Recursos**.  
+2.  Clique com o botão direito do mouse em **Administrador de Recursos** e clique em **Propriedades**, para abrir a página **Propriedades do Administrador de Recursos** .  
   
 3.  Para obter descrições dos campos na página, consulte [Propriedades do Administrador de Recursos](#RGProp).  
   
 4.  Para salvar as alterações, clique em **OK**.  
   
-##  <a name="RGProp"></a> Propriedades do Administrador de Recursos  
+##  <a name="RGProp"></a> Resource Governor properties  
  **Nome da função de classificação**  
  Especifique a função de classificação selecionando-a na lista.  
   
@@ -115,14 +119,14 @@ caps.handback.revision: 28
   
  Para obter mais informações, consulte [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md).  
   
-## Exibir as propriedades do administrador de recursos usando Transact-SQL  
+## <a name="view-resource-governor-properties-using-transact-sql"></a>Exibir as propriedades do administrador de recursos usando Transact-SQL  
  **Exibir as propriedades do administrador de recursos usando Transact-SQL**  
   
 1.  Para exibir as definições de entidades do administrador de recursos, use o [Exibições do catálogo do administrador de recursos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md).  
   
 2.  Para exibir a configuração atual de entidades do administrador de recursos, use o [Exibições de gerenciamento dinâmico relacionadas ao Administrador de Recursos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).  
   
-## Mais informações
+## <a name="more-information"></a>Mais informações
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de recursos do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
@@ -130,3 +134,4 @@ caps.handback.revision: 28
  [Função de classificação do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-classifier-function.md)  
   
   
+

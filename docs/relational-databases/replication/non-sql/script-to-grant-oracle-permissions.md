@@ -1,30 +1,34 @@
 ---
-title: "Script para conceder permiss&#245;es da Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "publicação Oracle [replicação do SQL Server], script para conceder permissões"
+title: "Script para conceder permissões da Oracle | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], script to grant permissions
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dd6d7d2d41813cd3a6748aa6e8bb31e2a09363a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Script para conceder permiss&#245;es da Oracle
-  O script fornecido neste tópico é usado durante a configuração do banco de dados Oracle que publicará dados usando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replicação. Esse script também está disponível no seguinte diretório após a instalação: *\< unidade>*:\\\Program Files\Microsoft SQL Server\\*\< nome_da_instância>*\mssql\install\oracleadmin.SQL.. Para obter mais informações sobre como configurar o banco de dados Oracle, consulte [Configurar um editor Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
+# <a name="script-to-grant-oracle-permissions"></a>Script para conceder permissões da Oracle
+  O script fornecido neste tópico é usado durante a configuração de um banco de dados Oracle que publicará dados usando a replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Esse script também está disponível no seguinte diretório após a instalação: *\<unidade>*:\\\Arquivos de Programas\Microsoft SQL Server\\\*\<InstanceName>*\MSSQL\Install\oracleadmin.sql. Para obter mais informações sobre como configurar o banco de dados Oracle, consulte [Configurar um Publicador Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
->  Este script inclui a instrução `GRANT CREATE ANY TRIGGER TO &&AdminLogin;` que é necessária para os gatilhos usados pela replicação transacional. Se você usar somente replicação de instantâneos, remova essa linha do script.  
+>  Este script inclui a instrução `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`que é necessária para os gatilhos usados pela replicação transacional. Se você usar somente replicação de instantâneos, remova essa linha do script.  
   
- **Para executar o script do Oracle SQL\*além de utilitário**  
+ **Para executar o script do utilitário Oracle SQL\*Plus**  
   
 1.  No SQL Server Distributor, abra uma janela de prompt de comando.  
   
@@ -34,7 +38,7 @@ caps.handback.revision: 37
     sqlplus system/P@$$W0rd@orcl @"c:\Program Files\Microsoft SQL Server\<InstanceName>\MSSQL\Install\oracleadmin.sql"  
     ```  
   
-     Neste exemplo, a conta interna Oracle **system** é usado para se conectar ao banco de dados Oracle com um nome de rede de "orcl".  
+     Neste exemplo, a conta interna Oracle **sistema** é usada para se conectar a um banco de dados Oracle com um nome de rede de "orcl".  
   
 3.  Quando solicitado, especifique o nome de usuário, a senha de usuário e o espaço de tabela padrão.  
   
@@ -123,7 +127,7 @@ GRANT CREATE VIEW TO &&ReplLogin;
 GRANT CREATE ANY TRIGGER TO &&ReplLogin;  
 ```  
   
-## Consulte também  
- [Configurar um publicador Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)  
+## <a name="see-also"></a>Consulte também  
+ [Configurar um Publicador Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)  
   
   

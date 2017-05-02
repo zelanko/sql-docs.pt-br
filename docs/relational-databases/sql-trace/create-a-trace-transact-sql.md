@@ -1,28 +1,32 @@
 ---
-title: "Criar um rastreamento (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rastreamentos [SQL Server], exemplo"
-  - "rastreamentos [SQL Server], criando"
+title: Criar um rastreamento (Transact-SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], example
+- traces [SQL Server], creating
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b765401c07820ed80a92a2393544253106abb512
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criar um rastreamento (Transact-SQL)
+# <a name="create-a-trace-transact-sql"></a>Criar um rastreamento (Transact-SQL)
   Este tópico descreve como usar procedimentos armazenados para criar um rastreamento.  
   
-### Para criar um rastreamento  
+### <a name="to-create-a-trace"></a>Para criar um rastreamento  
   
 1.  Execute **sp_trace_create** com os parâmetros exigidos para criar um novo rastreamento. O novo rastreamento estará em um estado parado (*status* é **0**).  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 19
     > [!IMPORTANT]  
     >  Ao contrário dos procedimentos armazenados comuns, os parâmetros de todos os procedimentos armazenados do SQL Server Profiler (**sp_trace_*xx***) só podem ser digitados e não dão suporte à conversão automática de tipo de dados. Se esses parâmetros não forem chamados pelos tipos de dados com parâmetros de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O código a seguir demonstra a criação de um rastreamento usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ele está em três partes: criação do rastreamento, população do arquivo de rastreamento e interrupção do rastreamento. Personalize o rastreamento adicionando os eventos que deseja rastrear. Para obter a lista de eventos e colunas, veja [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
  O seguinte código cria um rastreamento, acrescenta eventos ao rastreamento e depois inicia o rastreamento:  
@@ -70,7 +74,7 @@ GO
   
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  Agora que o rastreamento foi criado e iniciado, execute o código a seguir para popular o rastreamento com atividade.  
   
 ```  
@@ -81,7 +85,7 @@ GO
   
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O rastreamento pode ser interrompido e reiniciado a qualquer momento. Neste exemplo, execute o código a seguir para interromper o rastreamento, fechar o rastreamento e excluir sua definição.  
   
 ```  
@@ -97,10 +101,10 @@ EXEC sp_trace_setstatus @TraceID, 2
   
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  Para examinar o arquivo de rastreamento, abra o arquivo SampleTrace.trc usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do SQL Server Profiler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

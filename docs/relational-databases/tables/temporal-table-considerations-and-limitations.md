@@ -1,23 +1,27 @@
 ---
-title: "Considera&#231;&#245;es e limita&#231;&#245;es da tabela temporal | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Considerações e limitações da tabela temporal | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 caps.latest.revision: 18
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 22bab0bc2c039e68a336ac827a3e2d028ca77c78
+ms.lasthandoff: 04/11/2017
+
 ---
-# Considera&#231;&#245;es e limita&#231;&#245;es da tabela temporal
+# <a name="temporal-table-considerations-and-limitations"></a>Considerações e limitações da tabela temporal
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Há algumas considerações e limitações a serem consideradas ao trabalhar com tabelas temporais, devido à natureza do controle de versão do sistema.  
@@ -36,23 +40,23 @@ caps.handback.revision: 17
   
 -   As tabelas de histórico e temporais não podem ser **FILETABLE** e podem conter colunas de qualquer tipo de dados com suporte além de **FILESTREAM** porque **FILETABLE** e **FILESTREAM** permitem a manipulação de dados fora de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, portanto, o controle de versão do sistema não pode ser garantido.  
   
--   Embora as tabelas temporais deem suporte a tipos de dados de blob, como **(n)varchar(max)**, **varbinary(max)**, **(n)text** e **image**, elas incorrerão em custos significativos de armazenamento e terão implicações de desempenho devido a seu tamanho. Assim, ao criar seu sistema, tome cuidado ao usar esses tipos de dados.  
+-   Embora as tabelas temporais deem suporte a tipos de dados de blobs, como **(n)varchar(max)**, **varbinary(max)**, **(n)text** e **image**, elas incorrerão em custos significativos de armazenamento e terão implicações de desempenho devido a seu tamanho. Assim, ao criar seu sistema, tome cuidado ao usar esses tipos de dados.  
   
 -   A tabela de histórico deve ser criada no mesmo banco de dados da tabela atual. As consultas temporais no **Linked Server** não têm suporte.  
   
 -   A tabela de histórico não pode ter restrições (chave primária, chave estrangeira, restrições de tabela ou coluna).  
   
--   Não há suporte para exibições indexadas em consultas temporais (consultas que usam a cláusula **FOR SYSTEM_TIME**)  
+-   Não há suporte para exibições indexadas em consultas temporais (consultas que usam a cláusula **FOR SYSTEM_TIME** )  
   
 -   A opção online (**WITH (ONLINE = ON**) não tem nenhum efeito em **ALTER TABLE ALTER COLUMN** no caso da tabela temporal com controle de versão do sistema. A coluna ALTER não é executada online, independentemente de qual valor tenha sido especificado para a opção ONLINE.  
   
--   As instruções **INSERT** e **UPDATE** não podem fazer referência às colunas de período SYSTEM_TIME. As tentativas de inserir valores diretamente nessas colunas serão bloqueadas.  
+-   As instruções**INSERT** e **UPDATE** não podem fazer referência às colunas de período SYSTEM_TIME. As tentativas de inserir valores diretamente nessas colunas serão bloqueadas.  
   
--   Não há suporte para **TRUNCATE TABLE** quando **SYSTEM_VERSIONING** é **ON**  
+-   **TRUNCATE TABLE** is not supported while **SYSTEM_VERSIONING** is **ON**  
   
 -   Não é permitida a modificação direta dos dados em uma tabela de histórico.  
   
--   O**ON DELETE CASCADE** e o **ON UPDATE CASCADE** não são permitidos na tabela atual. Em outras palavras, quando a tabela temporal estiver referenciando a tabela na relação de chave estrangeira (correspondente a *parent_object_id* em sys.foreign_keys), as opções CASCADE não serão permitidas. Para trabalhar com essa limitação, use a lógica do aplicativo ou gatilhos AFTER para manter a consistência de exclusão na tabela de chave primária (correspondente a *referenced_object_id* em sys.foreign_keys). Se a tabela de chave primária for temporal e a tabela de referência não for temporal, não haverá essa limitação.  
+-   O**ON DELETE CASCADE** e o **ON UPDATE CASCADE** não são permitidos na tabela atual. Em outras palavras, quando a tabela temporal estiver referenciando a tabela na relação de chave estrangeira (correspondente a *parent_object_id* em sys.foreign_keys), as opções CASCADE não serão permitidas. Para trabalhar com essa limitação, use a lógica do aplicativo ou gatilhos AFTER para manter a consistência de exclusão na tabela de chave primária (correspondente a  *referenced_object_id* em sys.foreign_keys). Se a tabela de chave primária for temporal e a tabela de referência não for temporal, não haverá essa limitação.  
   
 -   Os gatilhos**INSTEAD OF** não são permitidos na tabela atual ou de histórico para evitar a anulação da lógica de DML. Os gatilhos**AFTER** são permitidos somente na tabela atual. Eles são bloqueados na tabela de histórico para evitar a anulação da lógica de DML.  
   
@@ -93,10 +97,10 @@ caps.handback.revision: 17
   
 -   Uma tabela de histórico não pode ser configurada como tabela atual em uma cadeia de tabelas de histórico.  
   
-## Este artigo foi útil para você? Estamos atentos  
+## <a name="did-this-article-help-you-were-listening"></a>Este artigo foi útil para você? Estamos atentos  
  Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20Considerations%20and%20Limitations%20page)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tabelas temporais](../../relational-databases/tables/temporal-tables.md)   
  [Introdução a Tabelas Temporais com Controle da Versão do Sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Verificações de consistência do sistema de tabela temporal](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -107,3 +111,4 @@ caps.handback.revision: 17
  [Funções e exibições de metadados de tabela temporal](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

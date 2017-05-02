@@ -1,25 +1,29 @@
 ---
-title: "SQL Server, objeto SQL Statistics | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:SQL Statistics"
-  - "objeto SQL Statistics"
+title: "SQL Server, objeto Estatística de SQL| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:SQL Statistics
+- SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 90e7987d1a367ed1c79d34640917cbacebf89ddf
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, objeto SQL Statistics
+# <a name="sql-server-sql-statistics-object"></a>SQL Server, objeto SQL Statistics
   O objeto **SQLServer:SQL Statistics** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar a compilação e o tipo de solicitações enviadas a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A monitoração do número de compilações e recompilações de consultas e do número de lotes recebidos por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma indicação da velocidade com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está processando as consultas do usuário e o grau de eficácia com que o otimizador de consulta está processando as consultas.  
   
  Compilação é uma parte significativa do tempo de retorno de uma consulta. Para economizar no custo da compilação, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] salva o plano de consulta compilado em um cache de consulta. O objetivo do cache é reduzir a compilação por meio do armazenamento das consultas compiladas para reutilização posterior encerrando, assim, a solicitação para recompilar consultas quando forem executadas mais tarde. Porém, cada consulta exclusiva deve ser compilada pelo menos uma vez. Recompilações de consultas podem ser causadas pelos seguintes fatores:  
@@ -46,7 +50,7 @@ caps.handback.revision: 31
 |**Recompilações de SQL/s**|Número de recompilações de instruções por segundo. Conta o número de vezes que as recompilações de instrução são acionadas. Geralmente é preferível que as recompilações sejam baixas.|  
 |**Param. Autom. sem segurança/s**|Número de tentativas de parametrização automática não segura por segundo. Por exemplo, a consulta tem algumas características que impedem o plano armazenado em cache de ser compartilhado. Esses são designados como inseguros. Isso não conta o número de parametrizações forçadas.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [SQL Server, objeto Cache de planos](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

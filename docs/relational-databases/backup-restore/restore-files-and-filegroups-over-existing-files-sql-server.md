@@ -1,30 +1,34 @@
 ---
-title: "Restaurar arquivos e grupos de arquivos sobre arquivos existentes (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restaurando arquivos [SQL Server], tópicos de instruções"
-  - "restaurando arquivos [SQL Server], etapas"
-  - "restaurações de arquivos [SQL Server], tópicos de instruções"
-  - "grupos de arquivos [SQL Server], restaurando"
-  - "restaurando grupos de arquivos [SQL Server]"
-  - "substituindo grupos de arquivos"
-  - "substituindo arquivos"
+title: Restaurar arquivos e grupos de arquivos sobre arquivos existentes (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring files [SQL Server], how-to topics
+- restoring files [SQL Server], steps
+- file restores [SQL Server], how-to topics
+- filegroups [SQL Server], restoring
+- restoring filegroups [SQL Server]
+- overwriting filegroups
+- overwriting files
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97826d94662c704199c48929d0be00a09e478b09
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar arquivos e grupos de arquivos sobre arquivos existentes (SQL Server)
+# <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>Restaurar arquivos e grupos de arquivos sobre arquivos existentes (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como restaurar arquivos e grupos de arquivos sobre arquivos existentes no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -64,11 +68,11 @@ caps.handback.revision: 29
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para restaurar arquivos e grupos de arquivos sobre arquivos existentes  
+#### <a name="to-restore-files-and-filegroups-over-existing-files"></a>Para restaurar arquivos e grupos de arquivos sobre arquivos existentes  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expanda essa instância e expanda **Bancos de Dados**.  
   
-2.  Clique com o botão direito do mouse no banco de dados desejado, aponte para **Tarefas** e para **Restaurar**, e clique em **Arquivos e Grupos de Arquivos**.  
+2.  Clique com o botão direito do mouse no banco de dados desejado, aponte para **Tarefas**e para **Restaurar**, e clique em **Arquivos e Grupos de Arquivos**.  
   
 3.  Na página **Geral** , na caixa de listagem **Banco de dados de destino** , digite o banco de dados a ser restaurado. Você pode digitar um novo banco de dados ou escolher um banco de dados existente na lista suspensa. A lista inclui todos os bancos de dados do servidor, excluindo os bancos de dados do sistema **mestre** e **tempdb**.  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 29
     |-----------------|------------|  
     |**Restaurar**|As caixas de seleção selecionadas indicam os conjuntos de backup a serem restaurados.|  
     |**Nome**|O nome do conjunto de backup.|  
-    |**Tipo de arquivo**|Especifica o tipo de dados no backup: **Dados**, **Log**ou **Filestream Data**. Dados que são contidos em tabelas estão nos arquivos **Dados** . Dados de log de transações estão nos arquivos **Log** . Dados de BLOB (objeto binário grande) armazenados no sistema de arquivos estão localizados em arquivos de **Dados do Fluxo de Arquivos**.|  
+    |**Tipo de arquivo**|Especifica o tipo de dados no backup: **Dados**, **Log**ou **Filestream Data**. Dados que são contidos em tabelas estão nos arquivos **Dados** . Dados de log de transações estão nos arquivos **Log** . Dados de BLOB (objeto binário grande) armazenados no sistema de arquivos estão localizados em arquivos de **Dados do Fluxo de Arquivos** .|  
     |**Tipo**|Tipo de backup realizado: **Completo**, **Diferencial**ou **Log de Transações**.|  
     |**Servidor**|Nome da instância do Mecanismo de Banco de Dados que executou a operação de backup.|  
     |**Nome Lógico do Arquivo**|O nome lógico do arquivo.|  
@@ -102,13 +106,13 @@ caps.handback.revision: 29
   
 6.  No painel **Selecionar uma página** , clique na página **Opções** .  
   
-7.  No painel **Opções de restauração**, selecione **Substituir o banco de dados existente (WITH REPLACE)**. A operação de restauração substitui os bancos de dados existentes e seus arquivos relacionados, mesmo se já existirem outros bancos de dados ou arquivos com o mesmo nome.  
+7.  No painel **Opções de restauração** , selecione **Substituir o banco de dados existente (WITH REPLACE)**. A operação de restauração substitui os bancos de dados existentes e seus arquivos relacionados, mesmo se já existirem outros bancos de dados ou arquivos com o mesmo nome.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para restaurar arquivos e grupos de arquivos sobre arquivos existentes  
+#### <a name="to-restore-files-and-filegroups-over-existing-files"></a>Para restaurar arquivos e grupos de arquivos sobre arquivos existentes  
   
 1.  Execute a instrução RESTORE DATABASE para restaurar o backup de arquivos e grupo de arquivos, especificando:  
   
@@ -138,7 +142,7 @@ caps.handback.revision: 29
          Os backups de log de transações, se aplicados, devem cobrir a hora em que os backups dos arquivos e grupos de arquivos foram feitos.  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
- O exemplo seguinte restaura os arquivos e grupos de arquivos para o banco de dados `MyNwind`  e substitui qualquer arquivo existente do mesmo nome. Também serão aplicados dois logs de transações para restaurar o banco de dados a hora atual.  
+ O exemplo seguinte restaura os arquivos e grupos de arquivos para o banco de dados `MyNwind` e substitui qualquer arquivo existente do mesmo nome. Também serão aplicados dois logs de transações para restaurar o banco de dados a hora atual.  
   
 ```tsql  
 USE master;  
@@ -165,9 +169,9 @@ RESTORE LOG MyNwind
 GO  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurar arquivos e grupos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)   
  [Copiar bancos de dados com backup e restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)  
   
