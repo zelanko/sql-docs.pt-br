@@ -1,35 +1,40 @@
 ---
-title: "Criar um usu&#225;rio de banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.user.securables.f1"
-  - "SQL13.SWB.DATABASEUSER.GENERAL.F1"
-helpviewer_keywords: 
-  - "usuários de banco de dados, criando"
-  - "criando usuários com o Management Studio"
-  - "mapeando usuários"
-  - "usuários [SQL Server], criando"
-  - "adições de usuário de banco de dados [SQL Server]"
-  - "usuários de banco de dados, mapeando\"
-  - "CREATE USER [Management Studio]"
-  - "usuários [SQL Server], adicionando"
-  - "mapeando usuários de banco de dados"
+title: "Criar um usuário de banco de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 04/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.user.securables.f1
+- SQL13.SWB.DATABASEUSER.GENERAL.F1
+helpviewer_keywords:
+- database users, creating
+- creating users with Management Studio
+- mapping users
+- users [SQL Server], creating
+- database user additions [SQL Server]
+- database users, mapping
+- CREATE USER [Management Studio]
+- users [SQL Server], adding
+- mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
----
-# Criar um usu&#225;rio de banco de dados
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 29621ffb4694c725024b6fee7220f6b2e76d305a
+ms.lasthandoff: 05/03/2017
+
+---   
+
+# <a name="create-a-database-user"></a>Criar um usuário de banco de dados
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Este tópico descreve como criar os tipos mais comuns de usuários de banco de dados. Há onze tipos de usuários: A lista completa é fornecida no tópico [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Todas as variedades de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dão suporte a usuários de banco de dados, mas não necessariamente todos os tipos de usuários.  
@@ -37,11 +42,11 @@ caps.handback.revision: 31
  Você pode criar um usuário de banco de dados usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 ##  <a name="Understanding"></a> Noções básicas sobre os tipos de usuários  
- [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] apresenta seis opções ao criar um usuário de banco de dados. O gráfico a seguir mostra as seis opções na caixa verde e indica o que elas representam.  
+ O [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] apresenta seis opções ao criar um usuário do banco de dados. O gráfico a seguir mostra as seis opções na caixa verde e indica o que elas representam.  
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
-### Selecionando o tipo de usuário  
+### <a name="selecting-the-type-of-user"></a>Selecionando o tipo de usuário  
  **Logon ou usuário que não está mapeado para um logon**  
   
  Se você ainda não conhece o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], pode ser difícil determinar que tipo de usuário deseja criar. Primeiro pergunte-se: a pessoa ou grupo que precisa acessar o banco de dados tem um logon? Os logons no banco de dados mestre são comuns para as pessoas que gerenciam o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e pessoas que precisam acessar muitos ou todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Nessa situação, você criará um **usuário do SQL com logon**. O usuário de banco de dados é a identidade do logon quando é conectado a um banco de dados. O usuário de banco de dados pode usar o mesmo nome como o logon, mas isso não é requerido. Este tópico pressupõe que já exista um logon no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como criar um logon, veja [Criar um logon](../../../relational-databases/security/authentication-access/create-a-login.md)  
@@ -54,7 +59,7 @@ caps.handback.revision: 31
   
 > **DICA!** Para as pessoas da sua organização, a autenticação do Windows é uma opção melhor, pois eles não precisam lembrar uma senha adicional e a autenticação do Windows oferece recursos de segurança adicionais, como o Kerberos.  
   
-##  <a name="Restrictions"></a> Plano de fundo  
+##  <a name="Restrictions"></a> Informações básicas  
  Um usuário é uma entidade de segurança no nível de banco de dados. Logons devem ser mapeados para um usuário de banco de dados para ser conectados a um banco de dados. Um logon pode ser mapeado para bancos de dados diferentes como usuários diferentes, mas pode ser mapeado somente como um usuário em cada banco de dados. Em um banco de dados parcialmente independente, um usuário pode ser criado sem logon. Para obter mais informações sobre os usuários de banco de dados independente, veja [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Se o usuário convidado em um banco de dados estiver habilitado, um logon que não estiver mapeado para um usuário de banco de dados poderá acessar o banco de dados como um usuário convidado.  
   
 > **IMPORTANTE:** O usuário convidado normalmente é desabilitado. Não habilite o usuário convidado, a menos que seja necessário.  
@@ -64,7 +69,7 @@ caps.handback.revision: 31
 ##  <a name="Permissions"></a> Permissões  
  Requer a permissão **ALTER ANY USER** no banco de dados.  
   
-##  <a name="SSMSProcedure"></a> Criar um usuário com o SSMS  
+##  <a name="SSMSProcedure"></a> Criar um usuário com SSMS  
   
  
 1.  No Pesquisador de Objetos, expanda a pasta **Bancos de Dados** .  
@@ -75,7 +80,7 @@ caps.handback.revision: 31
   
 4.  Na caixa de diálogo **Usuário de banco de dados – Novo** da página **Geral** , selecione um dos seguintes tipos de usuário na lista **Tipo de usuário** :  
   
-    -   **usuário do SQL com logon**  
+    -   **Usuário do SQL com logon**  
   
     -   **Usuário do SQL com senha**  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 31
      **Esquema padrão**  
      Insira o esquema que terá a propriedade dos objetos criados por esse usuário. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Esquema**. **Esquema padrão** estará disponível se você ou selecionar **Usuário do SQL com logon**, **Usuário do SQL sem logon**ou **Usuário do Windows** na lista **Tipo de usuário** .  
   
-     **Nome de certificado**  
+     **Nome do certificado**  
      Insira o certificado a ser usado para o usuário de banco de dados. Opcionalmente, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Certificado**. **Nome de certificado** estará disponível se você selecionar **Usuário mapeado para um certificado** na lista **Tipo de Usuário** .  
   
      **Nome da chave assimétrica**  
@@ -112,8 +117,8 @@ caps.handback.revision: 31
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### Opções adicionais  
- A caixa de diálogo **Usuário do Banco de Dados – Novo** também oferece opções em quatro páginas adicionais: **Esquemas Proprietários**, **Associação**, **Protegíveis**e **Propriedades Estendidas**.  
+### <a name="additional-options"></a>Opções adicionais  
+ A caixa de diálogo **Usuário de banco de dados – Novo** também oferece opções em quatro páginas adicionais: **Esquemas Proprietários**, **Associação**, **Protegíveis**e **Propriedades Estendidas**.  
   
 -   A página **Esquemas Proprietários** lista todos os possíveis esquemas que podem ser possuídos pelo novo usuário de banco de dados. Para adicionar esquemas a ou removê-los de um usuário de banco de dados, sob **Esquemas possuídos por este usuário**, marque ou desmarque as caixas de seleção ao lado dos esquemas.  
   
@@ -133,12 +138,12 @@ caps.handback.revision: 31
      Exiba ou especifique as propriedades estendidas do objeto. Cada propriedade estendida consiste em um par de nomes/valores de metadados associado ao objeto.  
   
      **Reticências (...)**  
-     Clique no botão de reticências **(…)** depois do **Valor** para abrir a caixa de diálogo **Valor da Propriedade Estendida**. Digite ou exiba o valor da propriedade estendida neste local maior. Para obter mais informações, consulte [Caixa de diálogo Valor da Propriedade Estendida](http://msdn.microsoft.com/library/ms189353.aspx).  
+     Clique no botão de reticências **(…)** depois do **Valor** para abrir a caixa de diálogo **Valor da Propriedade Estendida** . Digite ou exiba o valor da propriedade estendida neste local maior. Para obter mais informações, consulte [Caixa de diálogo Valor da Propriedade Estendida](http://msdn.microsoft.com/library/ms189353.aspx).  
   
      **Delete (excluir)**  
      Remove a propriedade estendida selecionada.  
   
-##  <a name="TsqlProcedure"></a> Criar um usuário usando o T-SQL  
+##  <a name="TsqlProcedure"></a> Criar um usuário usando T-SQL  
     
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -159,9 +164,10 @@ caps.handback.revision: 31
   
  Para obter mais informações, veja [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md), que contém muitos outros exemplos do [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Crie um logon](../../../relational-databases/security/authentication-access/create-a-login.md)   
+ [Criar um logon](../../../relational-databases/security/authentication-access/create-a-login.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   
   
+
