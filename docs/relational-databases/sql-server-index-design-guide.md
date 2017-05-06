@@ -26,9 +26,9 @@ ms.lasthandoff: 04/11/2017
 # <a name="sql-server-index-design-guide"></a>Guia de criação de índice do SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Os índices criados inadequadamente e a falta de índices são as principais fontes de afunilamentos do aplicativo de banco de dados. A criação eficiente de índices é muito importante para alcançar um bom desempenho de banco de dados e de aplicativo. Este guia de criação de índice do SQL Server contém informações e práticas recomendadas para ajudar você a criar índices efetivos para atender às necessidades de seu aplicativo.  
+Os índices criados inadequadamente e a falta de índices são as principais fontes de afunilamentos do aplicativo de banco de dados. A criação eficiente de índices é muito importante para alcançar um bom desempenho de banco de dados e de aplicativo. Este guia de criação de índice do SQL Server contém informações e práticas recomendadas para ajudar você a criar índices efetivos para atender às necessidades de seu aplicativo.  
     
- Este guia presume que o leitor tenha uma compreensão geral dos tipos de índices disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma descrição geral dos tipos de índices, consulte [Tipos de índice](http://msdn.microsoft.com/library/ms175049.aspx).  
+Este guia presume que o leitor tenha uma compreensão geral dos tipos de índices disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma descrição geral dos tipos de índices, consulte [Tipos de índice](http://msdn.microsoft.com/library/ms175049.aspx).  
   
   
 ##  <a name="Basics"></a> Noções básicas sobre criação de índice  
@@ -82,7 +82,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Escreva consultas que insiram ou modifiquem o máximo de filas possível em uma única instrução, em vez de usar consultas múltiplas para atualizar essas mesmas filas. Ao usar apenas uma instrução, pode-se explorar uma manutenção otimizada do índice.  
   
--   Avalie o tipo da consulta e como as colunas são usadas na consulta. Por exemplo, uma coluna usada em uma consulta de correspondência exata seria uma boa candidata para um índice clusterizado ou não clusterizado.  
+-   Avalie o tipo da consulta e como as colunas são usadas na consulta. Por exemplo, uma coluna usada em uma consulta de correspondência exata seria uma boa candidata para um índice clusterizado ou não clusterizado.
   
 ### <a name="column-considerations"></a>Considerações sobre colunas  
  Quando você projeta um índice, considere as seguintes diretrizes para as colunas:  
@@ -588,9 +588,8 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
   
 ##  <a name="Additional_Reading"></a> Leitura adicional  
- [Melhorando o desempenho com exibições indexadas do SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-  
- [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[Melhorando o desempenho com exibições indexadas do SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   
 
