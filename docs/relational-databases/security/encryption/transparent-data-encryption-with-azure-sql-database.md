@@ -22,9 +22,10 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1c607015f1ead5b19d4c32c5bac62eb624b0578b
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/11/2017
  [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] não dá suporte à integração do Cofre da Chave do Azure com TDE. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em execução em uma máquina virtual do Azure pode usar uma chave assimétrica do Cofre da Chave. Para obter mais informações, veja [Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 ##  <a name="Permissions"></a> Permissões  
- Para configurar a TDE por meio do portal do Azure, usando a API REST ou usando o PowerShell, você deve estar conectado como o proprietário do Azure, o Colaborador ou o Gerenciador de segurança do SQL.  
+ Para configurar a TDE por meio do portal do Azure, usando a API REST ou usando o PowerShell, você deve estar conectado como o proprietário do Azure, o Parceiro ou o Gerenciador de segurança do SQL.  
   
  Para configurar a TDE usando [!INCLUDE[tsql](../../../includes/tsql-md.md)] , é requerido o seguinte:  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/11/2017
   
 ##  <a name="Preview"></a> Habilitar a TDE em um banco de dados usando o Portal  
   
-1.  Visite o Portal do Azure em [https://portal.azure.com](https://portal.azure.com) e entre com sua conta do Administrador ou Colaborador do Azure.  
+1.  Visite o Portal do Azure em [https://portal.azure.com](https://portal.azure.com) e entre com sua conta do Administrador ou Parceiro do Azure.  
   
 2.  Na faixa à esquerda, clique para **PROCURAR**e, em seguida, clique em **Bancos de dados SQL**.  
   
@@ -112,7 +113,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-disable-tde-by-using-the-azure-portal"></a>Para desabilitar a TDE usando o Portal do Azure  
   
-1.  Visite o Portal do Azure em [https://portal.azure.com](https://portal.azure.com) e entre com sua conta do Administrador ou Colaborador do Azure.  
+1.  Visite o Portal do Azure em [https://portal.azure.com](https://portal.azure.com) e entre com sua conta do Administrador ou Parceiro do Azure.  
   
 2.  Na faixa à esquerda, clique para **PROCURAR**e, em seguida, clique em **Bancos de dados SQL**.  
   
