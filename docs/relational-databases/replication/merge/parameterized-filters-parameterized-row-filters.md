@@ -24,9 +24,10 @@ caps.latest.revision: 69
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c16383cadde524f23f8a6b94a14c282666856780
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
   
  Os filtros com parâmetros são usados em uma única tabela e normalmente são combinados com filtros de junção para estender a filtragem a tabelas relacionadas. Para obter mais informações, consulte [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
- Para definir ou modificar um filtro de linha com parâmetros, consulte [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+ Para definir ou modificar um filtro de linha com parâmetros, consulte [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 ## <a name="how-parameterized-filters-work"></a>Como funcionam os filtros com parâmetros  
  Um filtro de linha com parâmetros usa uma cláusula WHERE para selecionar os dados apropriados a serem publicados. Em vez de especificar um valor literal na cláusula (como faria com um filtro de linha estático), você especifica uma das seguintes funções do sistema ou ambas: SUSER_SNAME() e HOST_NAME(). Funções definidas pelo usuário também podem ser usadas, mas devem incluir SUSER_SNAME() ou HOST_NAME() no corpo da função, ou avaliar uma dessas funções de sistema (como `MyUDF(SUSER_SNAME()`). Se uma função definida pelo usuário incluir SUSER_SNAME() ou HOST_NAME() no corpo da função, você não pode passar parâmetros para a função.  
