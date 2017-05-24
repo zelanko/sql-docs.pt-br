@@ -19,9 +19,10 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 891399921dc50cc1a5463f9735462c94ce442df4
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/11/2017
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Quando você usar filtros com parâmetros, será possível controlar como os filtros serão processados pela replicação de mesclagem, especificando a opção **use partition groups** ou a opção **keep partition changes** ao criar uma publicação. Essas opções melhoram o desempenho de sincronização para publicações com artigos filtrados, armazenando metadados adicionais no banco de dados de publicação. Você pode controlar como os dados serão compartilhados entre Assinantes definindo as **opções de partição** ao criar um artigo. Para obter mais informações sobre esses requisitos, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+-   Quando você usar filtros com parâmetros, será possível controlar como os filtros serão processados pela replicação de mesclagem, especificando a opção **use partition groups** ou a opção **keep partition changes** ao criar uma publicação. Essas opções melhoram o desempenho de sincronização para publicações com artigos filtrados, armazenando metadados adicionais no banco de dados de publicação. Você pode controlar como os dados serão compartilhados entre Assinantes definindo as **opções de partição** ao criar um artigo. Para obter mais informações sobre esses requisitos, consulte [filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
      Com os assinantes do [!INCLUDE[ssEW](../../../includes/ssew-md.md)]SQL Server Compact, keep_partition_changes deve ser definido como true para assegurar que as exclusões sejam propagadas corretamente. Quando definido como falso, o assinante pode ter mais linhas do que o esperado.  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades da Publicação – \<Publicação>**, clique em **Adicionar** e, em seguida, em **Adicionar Filtro**.  
   
-2.  Criar um filtro com parâmetros. Para obter mais informações, consulte [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+2.  Criar um filtro com parâmetros. Para obter mais informações, consulte [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 3.  Selecione a opção que corresponde ao modo em que os dados serão compartilhados entre Assinantes:  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 04/11/2017
   
     -   **Uma linha dessa tabela irá para apenas uma assinatura**  
   
-     Se você selecionar **Uma linha desta tabela irá para apenas uma assinatura**, a replicação de mesclagem pode otimizar o desempenho armazenando e processando uma quantia menor de metadados. No entanto, será necessário certificar-se de que os dados são particionados de forma que uma linha não seja replicada em mais de um Assinante. Para obter mais informações, consulte a seção "Configurando opções de partição" no tópico [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     Se você selecionar **Uma linha desta tabela irá para apenas uma assinatura**, a replicação de mesclagem pode otimizar o desempenho armazenando e processando uma quantia menor de metadados. No entanto, será necessário certificar-se de que os dados são particionados de forma que uma linha não seja replicada em mais de um Assinante. Para obter mais informações, consulte a seção "Configurando opções de partição" no tópico [filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 04/11/2017
   
     -   **Sem-sobreposição, compartilhados entre assinaturas**  
   
-     Para obter mais informações sobre essas opções e sobre como estão relacionadas às opções disponíveis nas caixas de diálogo **Adicionar Filtro** e **Editar Filtro** , consulte a seção "Definindo as opções de partição'" em [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     Para obter mais informações sobre essas opções e sobre como estão relacionadas às opções disponíveis nas caixas de diálogo **Adicionar Filtro** e **Editar Filtro** , consulte a seção "Definindo as opções de partição'" em [filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
