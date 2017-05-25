@@ -19,18 +19,19 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bffe545296432d465fd744092519c9882ccc04c1
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Adicionar dependências a um recurso do SQL Server
   Este tópico descreve como adicionar dependências a um recurso de FCI (Instância de Cluster de Failover) do AlwaysOn usando o snap-in Gerenciador de Cluster de Failover. O snap-in Gerenciador de Cluster de Failover é o aplicativo de gerenciamento de cluster do serviço WSFC (Windows Server Failover Clustering).  
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Prerequisites](#Prerequisites)  
+-   **Antes de começar:**  [Limitações e Restrições](#Restrictions), [Pré-requisitos](#Prerequisites)  
   
--   **To add a dependency to a SQL Server resource, using:** [Windows Failover Cluster Manager](#WinClusManager)  
+-   **Para adicionar uma dependência a um recurso do SQL Server usando:** [Gerenciador de Cluster de Failover do Windows](#WinClusManager)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
