@@ -16,9 +16,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2a8a21c9fc7ade45f13e055a30f4649af13677af
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ Clicando neste botão, você exibe uma lista dos objetos que são rastreados por
 Clicando neste botão, você exibe uma lista dos objetos que são rastreados por dependência e dos quais depende o objeto selecionado.  
   
 **Dependências**  
-Se você clicar em **Objetos que dependem de** *<selected object>* , será exibida uma exibição hierárquica dos objetos que dependem do objeto selecionado. Se você clicar em **Objetos dos quais** *<selected object>* **depende** is clicked, this displays an hierarchical view of objects on which the selected object depende.  
+Se você clicar em **Objetos que dependem de** *<selected object>* , será exibida uma exibição hierárquica dos objetos que dependem do objeto selecionado. Se você clicar em **Objetos dos quais** *<selected object>* **depende**, será exibida uma exibição hierárquica dos objetos dos quais depende o objeto selecionado.  
   
 **Nome**  
 Exibe o nome do objeto selecionado no modo de exibição de árvore **Dependências** acima.  

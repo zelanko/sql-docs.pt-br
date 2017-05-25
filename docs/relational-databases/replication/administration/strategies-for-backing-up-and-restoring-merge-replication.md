@@ -19,9 +19,10 @@ caps.latest.revision: 48
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b518488e5ac42e28487f984bfd65ca196dfbe723
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -64,16 +65,16 @@ ms.lasthandoff: 04/11/2017
   
  Se você sincronizar com um Assinante que está executando uma versão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior ao [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], então a assinatura não poderá ser anônima; deverá ser uma assinatura de cliente ou de servidor (chamadas de assinaturas locais e assinaturas globais nas versões anteriores).  
   
- Para sincronizar uma assinatura, consulte [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+ Para sincronizar uma assinatura, consulte [Sincronizar uma assinatura push](../../../relational-databases/replication/synchronize-a-push-subscription.md) e [Sincronizar uma assinatura pull](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ### <a name="reinitializing-all-subscriptions"></a>Reinicializando todas as assinaturas  
  Reinicializar todas as assinatura assegura que todos os Assinantes estarão em um estado consistente com o banco de dados de publicação restaurado. Essa abordagem deverá ser usada se desejar retornar uma topologia inteira ao estado anterior, representado por um determinado backup de banco de dados de publicação. Por exemplo, é possível reinicializar todas as assinaturas, se estiver restaurando um banco de dados de publicação a partir de um point-in-time especifico, como um mecanismo de recuperação para uma operação em lote executada erroneamente.  
   
  Se você escolher essa opção, gere um instantâneo novo para entregar aos Assinantes reinicializados, imediatamente depois de restaurar seu banco de dados de publicação.  
   
- Para reinicializar uma assinatura, consulte [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md).  
+ Para reinicializar uma assinatura, consulte [Reinicializar uma assinatura](../../../relational-databases/replication/reinitialize-a-subscription.md).  
   
- Para criar e aplicar um instantâneo, consulte [Create e Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) e [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Para criar e aplicar um instantâneo, consulte [Criar e aplicar o instantâneo inicial](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) e [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>Fazendo backup e restaurando o banco de dados de distribuição  
  Com a replicação de mesclagem, deve ser realizado regularmente o backup do banco de dados de distribuição, e, pode ser restaurado sem nenhuma consideração especial, contanto que o backup usado não seja anterior ao menor período de retenção de todas as publicações que usam o Distribuidor. Por exemplo, se houver três publicações com períodos de retenção de 10, 20, e 30 dias, respectivamente, o backup usado para restaurar o banco de dados não deve ter mais de 10 dias. O banco de dados de distribuição tem uma função limitada na replicação de mesclagem: não armazena nenhum dos dados usados no controle de alterações e não fornece o armazenamento temporário das mudanças de replicação de mesclagem a serem encaminhadas aos bancos de dados de assinatura (como faz na replicação transacional).  
@@ -89,7 +90,7 @@ ms.lasthandoff: 04/11/2017
   
  Para definir o período de retenção da publicação, consulte [Definir o período de expiração para assinaturas](../../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md).  
   
- Para sincronizar uma assinatura, consulte [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+ Para sincronizar uma assinatura, consulte [Sincronizar uma assinatura push](../../../relational-databases/replication/synchronize-a-push-subscription.md) e [Sincronizar uma assinatura pull](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>Fazendo backup e restaurando um banco de dados de republicação  
  Quando um banco de dados assina os dados de um Publicador e, por sua vez, publica os mesmos dados em outros bancos de dados de assinatura, isso é chamado de banco de dados de republicação. Ao restaurar um banco de dados de republicação, siga as diretrizes descritas em "Fazendo backup e restaurando um banco de dados de publicação" e "Fazendo backup e restaurando um banco de dados de assinatura" neste tópico.  
