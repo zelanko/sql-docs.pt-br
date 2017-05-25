@@ -20,9 +20,10 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e4e8eb9804660085223e0845adeb093511871316
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -65,13 +66,13 @@ ms.lasthandoff: 04/11/2017
   
 1.  A caixa de diálogo **Atualizar Senhas de Replicação** que está disponível na pasta **Replicação** do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Se você alterar a senha para uma conta do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou uma conta do Windows no servidor em uma topologia de replicação, use essa caixa de diálogo ao invés de atualizar a senha para cada agente que usa essa conta. Se agentes em mais de um servidor usam a mesma conta, você deverá conectar-se a cada servidor e alterar a senha. A senha será atualizada em todos os lugares em que a replicação usa a senha. A senha não é atualizada em outros lugares, como servidores vinculados.  
   
-2.  A página **Segurança do Agente** da caixa de diálogo **Propriedades da Publicação – \<Publicação>**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+2.  A página **Segurança do Agente** da caixa de diálogo **Propriedades da Publicação – \<Publicação>**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-3.  A caixa de diálogo **Propriedades da Assinatura – \<Assinatura>**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) e [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+3.  A caixa de diálogo **Propriedades da Assinatura – \<Assinatura>**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de assinatura push](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) e [Exibir e modificar propriedades de assinatura pull](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
-4.  As caixas de diálogo **Propriedades do Distribuidor – \<Distribuidor>** e **Propriedades do Banco de Dados de Distribuição – \<Banco de Dados>**. Para obter mais informações sobre como acessar essas caixas de diálogo, consulte [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+4.  As caixas de diálogo **Propriedades do Distribuidor – \<Distribuidor>** e **Propriedades do Banco de Dados de Distribuição – \<Banco de Dados>**. Para obter mais informações sobre como acessar essas caixas de diálogo, consulte [Exibir e modificar as propriedades do Distribuidor e do Publicador](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-5.  A caixa de diálogo **Propriedades do Publicador – \<Publisher>**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+5.  A caixa de diálogo **Propriedades do Publicador – \<Publisher>**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de Publicador e Distribuidor](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>Para alterar a senha para uma conta usada por um ou mais agentes  
   
