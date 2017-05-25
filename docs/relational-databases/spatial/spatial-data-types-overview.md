@@ -19,9 +19,10 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4bfd021048962cb632a2d5e553ea9d6bb35a8c20
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -101,7 +102,7 @@ ms.lasthandoff: 04/11/2017
  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **FullGlobe** é um tipo especial de polígono que abrange o globo inteiro. **FullGlobe** tem uma área, mas nenhuma borda ou vértices.  
   
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Anéis externos e internos não são importantes no tipo de dados geography  
- Os Recursos Simples do OGC para SQL Specification discutem anéis externos e internos, mas essa distinção faz pouco sentido para o tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type; any ring of a polygon can be taken to be the outer ring.  
+ Os Recursos Simples do OGC para SQL Specification discutem anéis externos e internos, mas essa distinção faz pouco sentido para o tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geometry** : qualquer anel de um polígono pode ser usado como anel externo.  
   
  Para obter mais informações sobre especificações do OCG, consulte o seguinte:  
   
