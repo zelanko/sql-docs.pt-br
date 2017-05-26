@@ -20,9 +20,10 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 246e2e5db5c3e64973c165be8b03e03b7c8226a5
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
   
  Considere [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], que têm uma mão-de-obra móvel que entrega inventário para lojas individuais. Cada vendedor recebe uma assinatura com base em seu logon que recupera os dados para as lojas que eles atendem. O administrador opta por gerar instantâneos previamente e atualizá-los todos os domingos. Ocasionalmente, um novo usuário é adicionado ao sistema e precisa de dados para uma partição que não tem um instantâneo disponível. O administrador também opta por permitir instantâneos inicializados pelo Assinante a fim de evitar a situação em que um Assinante não possa fazer assinatura para a publicação por que o instantâneo ainda não está disponível. Quando o novo Assinante faz a conexão pela primeira vez, o instantâneo é gerado para a partição especificada e aplicado no Assinante ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve estar sendo executado no Publicador para permitir que o instantâneo seja gerado).  
   
- Para criar um instantâneo para uma publicação com filtros com parâmetros, consulte [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Para criar um instantâneo para uma publicação com filtros com parâmetros, consulte [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="security-settings-for-the-snapshot-agent"></a>Configurações de segurança para o Agente de Instantâneo  
  O Agente de Instantâneo cria instantâneos para cada partição. Para instantâneos gerados previamente e instantâneos solicitados por um Assinante, o agente é executado e faz conexões sob as credenciais que foram especificadas quando o trabalho do snapshot agent para a publicação foi criado (o trabalho é criado pelo Assistente para Nova Publicação ou **sp_addpublication_snapshot**). Para alterar as credenciais, use **sp_changedynamicsnapshot_job**. Para obter mais informações, consulte [sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md).  

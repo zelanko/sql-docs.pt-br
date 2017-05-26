@@ -16,9 +16,10 @@ caps.latest.revision: 48
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 22e745406fe58c38e44e42395844a55efff3f57a
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/11/2017
   
  Por padrão, a replicação transacional propaga alterações aos Assinantes por um conjunto de procedimentos armazenados instalados em cada Assinante. Quando ocorre uma inserção, atualização ou exclusão em uma tabela no Publicador, a operação é convertida em uma chamada para um procedimento armazenado no Assinante. O procedimento armazenado aceita parâmetros que mapeiam para as colunas da tabela, permitindo que essas colunas sejam alteradas no Assinante.  
   
- Para definir o método de propagação de alterações de dados para artigos transacionais, consulte [Set the Propagation Method for Data Changes to Transactional Articles](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md).  
+ Para definir o método de propagação de alterações de dados para artigos transacionais, consulte [Definir o método de propagação de alterações de dados para artigos transacionais](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md).  
   
 ## <a name="default-and-custom-stored-procedures"></a>Procedimentos armazenados padrão e personalizados  
  Os três procedimentos que a replicação cria por padrão para cada artigo de tabela são:  
