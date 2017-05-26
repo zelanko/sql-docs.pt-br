@@ -20,9 +20,10 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 666ad0200e8429c470772fc68110d14a7809d12a
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   
--   Programação Transact-SQL de replicação: [Enable Updating Subscriptions for Transactional Publications](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   Programação Transact-SQL de replicação: [Habilitar atualização de assinaturas para publicações transacionais](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **Para exibir conflitos de dados**  
   
@@ -81,6 +82,6 @@ ms.lasthandoff: 04/11/2017
  A detecção de conflitos segundo a política Assinante vence significa que a última transação de Assinante que atualizar o Publicador vence. Nesse caso, quando um conflito é detectado, a transação enviada pelo Assinante ainda é usada, e o Publicador é atualizado. Essa política é adequada para aplicativos em que essas alterações não comprometem a integridade de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Assinaturas atualizáveis para replicação transacional](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

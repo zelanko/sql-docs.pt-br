@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
 Depois de executar uma consulta no **Designer de Consulta e Exibição**, você pode limpar o painel de Resultados. Esse procedimento aplica-se a consultas criadas usando as opções **Abrir Exibição** ou **Abrir Tabela** do Pesquisador de Objetos. No[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], após executar uma consulta no Editor de Consultas, o painel de Resultados não pode ser apagado, exceto se a janela do Editor de Consultas for fechada ou se outra consulta for executada.  
   
 > [!NOTE]  
-> Isso não desfaz as alterações feitas no banco de dados. Para obter mais informações sobre como funciona o painel de Resultados, consulte [Work with Data in the Results Pane &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  
+> Isso não desfaz as alterações feitas no banco de dados. Para obter mais informações sobre como funciona o painel de Resultados, consulte [Trabalhar com dados no painel de resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  
   
 ### <a name="to-clear-query-results-of-a-view"></a>Para limpar os resultados de consulta de uma exibição  
   
@@ -42,6 +42,6 @@ Depois de executar uma consulta no **Designer de Consulta e Exibição**, você 
 ## <a name="see-also"></a>Consulte também  
 [Executar consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
 [Parar uma consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/stop-a-query-visual-database-tools.md)  
-[Trabalhar com dados no painel de resultados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Trabalhar com dados no painel de resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   
 
