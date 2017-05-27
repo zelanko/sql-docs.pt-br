@@ -46,10 +46,10 @@ ms.lasthandoff: 04/11/2017
  Selecione essa opção se quiser permitir que os Assinantes solicitem geração e aplicação de  instantâneo. Os Assinantes podem exigir essa opção, se não tiverem um instantâneo disponível para a partição, na primeira vez em que sincronizarem.  
   
 ## <a name="see-also"></a>Consulte também  
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Criar uma publicação](../../relational-databases/replication/publish/create-a-publication.md)   
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [Filtros de linha com parâmetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [Instantâneos para publicações de mesclagem com filtros parametrizados](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   
