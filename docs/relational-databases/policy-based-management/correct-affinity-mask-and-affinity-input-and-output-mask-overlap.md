@@ -1,5 +1,5 @@
 ---
-title: "Sobreposição correta de máscara de afinidade e máscara de entrada e saída de afinidade | Microsoft Docs"
+title: "Corrigir a sobreposição de máscara de afinidade e máscara de afinidade de entrada e saída | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>Correct Affinity Mask and Affinity Input and Output Mask Overlap
+# <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>Corrigir a sobreposição de máscara de afinidade e máscara de afinidade de entrada e saída
   Esta regra verifica se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possui um ou mais processadores atribuídos para serem usados com as opções de máscara de afinidade e máscara de E/S de afinidade. Em um computador com mais de um processador, as opções de máscara de afinidade e máscara de E/S de afinidade são empregadas para designar quais CPUs o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]utiliza. Ao habilitar uma CPU com a máscara de afinidade e a máscara de E/S de afinidade você poderá reduzir o desempenho forçando o uso excessivo do processador.  
   
 ## <a name="best-practices-recommendations"></a>Práticas Recomendadas  
