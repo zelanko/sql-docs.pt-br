@@ -24,7 +24,7 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set the SQL Server Connection for the SQL Server Agent Service (SQL Server Management Studio)
+# <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>Definir a Conexão do SQL Server para o Serviço do SQL Server Agent (SQL Server Management Studio)
 Este tópico descreve como definir a conexão entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent e o [!INCLUDE[ssDE](../../includes/ssde_md.md)] no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. O serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent pode se conectar a uma instância local do SQL Server usando autenticação do Windows.  
   
 **Neste tópico**  
