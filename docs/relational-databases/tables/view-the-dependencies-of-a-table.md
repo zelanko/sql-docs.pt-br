@@ -58,7 +58,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  Clique com o botão direito do mouse em uma tabela e clique em **Exibir Dependências**.  
   
-3.  Na caixa de diálogo **Dependências do Objeto***\<object name>*, selecione **Objetos que dependem do**  *\<<nome do objeto>* ou **Objetos dos quais o ***\<object name>***depende**.  
+3.  Na caixa de diálogo **Dependências do Objeto***\<object name>*, selecione **Objetos que dependem do**  *\<<nome do objeto>* ou **Objetos dos quais o** *\<object name>***depende**.  
   
 4.  Selecione um objeto na grade **Dependências** . O tipo de objeto (como “Gatilho” ou “Procedimento Armazenado”) aparece na caixa **Tipo** .  
   
