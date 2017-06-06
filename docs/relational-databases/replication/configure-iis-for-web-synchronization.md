@@ -19,16 +19,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ac612d72c1a82d49a7cfcf41aa9aa2989ee25b2
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: 9555085ef832e4277da89e062aa28872b5eeb4fe
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para sincronização da Web
   Os procedimentos neste tópico compõem a segunda etapa para configurar a sincronização da Web para replicação de mesclagem. Esta etapa é executada depois que você habilita uma publicação para sincronização da Web. Para obter uma visão geral do processo de configuração, consulte [Configurar Sincronização da Web](../../relational-databases/replication/configure-web-synchronization.md). Depois de concluir os procedimentos neste tópico, continue na terceira etapa, configurando uma assinatura para usar a sincronização da Web. A terceira etapa é descrita nos seguintes tópicos:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [How to: Configure a Subscription to Use Web Synchronization \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Como configurar uma assinatura para usar a sincronização da Web \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
   
 -   Programação [!INCLUDE[tsql](../../includes/tsql-md.md)] de replicação: [Como configurar uma Assinatura para usar a sincronização da Web (Programação Transact-SQL de replicação)](http://msdn.microsoft.com/library/ms345206.aspx)  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  O site da Web que você especificar fornece acesso aos componentes que são usados pela sincronização da Web. O site da Web não fornece acesso a outros dados ou páginas da Web, a menos que você o configure para fazer isso.  
   
--   Cria um diretório virtual e seu alias associado. O alias é usado ao acessar os componentes de sincronização da Web. Por exemplo, se o endereço de IIS for https://*servidor.domínio.com* e você especificar um alias de 'websync1', o endereço de acesso ao componente replisapi.dll será https://*servidor.domínio.com*/websync1/replisapi.dll.  
+-   Cria um diretório virtual e seu alias associado. O alias é usado ao acessar os componentes de sincronização da Web. Por exemplo, se o endereço de IIS for `https://server.domain.com` e você especificar um alias de 'websync1', o endereço de acesso ao componente replisapi.dll será `https://server.domain.com/websync1/replisapi.dll`.  
   
 -   Usa a Autenticação Básica. Recomendamos o uso da Autenticação Básica porque ela torna possível executar o IIS e o Publicador/Distribuidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em computadores separados (configuração recomendada) sem exigir delegação Kerberos. Usar o SSL com Autenticação Básica assegura que logons, senhas e todos os dados sejam criptografados em trânsito. (SSL é necessário, independentemente do tipo de autenticação usado.) Para obter mais informações sobre as práticas recomendadas para sincronização da Web, consulte a seção "Práticas recomendadas de segurança para a sincronização da Web" em [Configure a sincronização da Web](../../relational-databases/replication/configure-web-synchronization.md).  
   
@@ -327,7 +327,7 @@ ms.lasthandoff: 04/11/2017
   
     5.  Clique em **OK**.  
   
-2.  No Assinante, no Internet Explorer, conecte-se ao servidor em modo de diagnóstico adicionando `?diag` ao endereço para o replisapi.dll. Por exemplo: https://server.domain.com/directory/replisapi.dll? diag.  
+2.  No Assinante, no Internet Explorer, conecte-se ao servidor em modo de diagnóstico adicionando `?diag` ao endereço para o replisapi.dll. Por exemplo: `https://server.domain.com/directory/replisapi.dll?diag`.  
   
 3.  Se o certificado especificado para o IIS não for reconhecido pelo sistema operacional Windows, a caixa de diálogo **Alerta da Segurança** será exibida. Esse alerta pode ocorrer porque o certificado é um certificado de teste ou porque o certificado foi emitido por uma autoridade de certificação (CA) que não é reconhecida pelo Windows.  
   

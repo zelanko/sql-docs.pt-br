@@ -1,7 +1,7 @@
 ---
 title: Configurar o Firewall do Windows para permitir acesso ao SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 05/13/2016
+ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,18 +28,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fb4cb189914d6636b76816490e9d38f9f4240101
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: 5849c0c3d38756795a7aef83b04e95eb0ffcc305
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Os sistemas de Firewall ajudam a impedir o acesso não autorizado aos recursos do computador. Se um firewall estiver ativado mas não corretamente configurado, as tentativas de conexão ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderão ser bloqueadas.  
+ > Para o conteúdo relacionado a versões anteriores do SQL Server, consulte [Configurar o Firewall do Windows para permitir acesso ao SQL Server](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx).
+
+Os sistemas de Firewall ajudam a impedir o acesso não autorizado aos recursos do computador. Se um firewall estiver ativado mas não corretamente configurado, as tentativas de conexão ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderão ser bloqueadas.  
   
- Para acessar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] através de um firewall, é necessário configurar o firewall no computador que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O firewall é um componente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Você também pode instalar um firewall de outra empresa. Este tópico discute como configurar o firewall do Windows, mas os princípios básicos se aplicam a outros programas de firewall.  
+Para acessar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] através de um firewall, é necessário configurar o firewall no computador que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O firewall é um componente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Você também pode instalar um firewall de outra empresa. Este tópico discute como configurar o firewall do Windows, mas os princípios básicos se aplicam a outros programas de firewall.  
   
 > [!NOTE]  
 >  Este tópico apresenta uma visão geral da configuração do firewall e resume informações de interesse de um administrador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre o firewall e informações sobre firewall autoritativo, consulte a documentação do firewall, como [Windows Firewall with Advanced Security and IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
@@ -51,35 +53,6 @@ ms.lasthandoff: 04/11/2017
 -   [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
 -   [Configurar um firewall para acesso ao servidor de relatório](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
-  
-## <a name="in-this-topic"></a>Neste tópico  
- Este tópico tem as seguintes seções:  
-  
- [Informações básicas sobre o firewall](#BKMK_basic)  
-  
- [Configurações padrão do firewall](#BKMK_default)  
-  
- [Programas para configurar o firewall](#BKMK_programs)  
-  
- [Portas usadas pelo Mecanismo de Banco de Dados](#BKMK_ssde)  
-  
- [Portas usadas pelo Analysis Services](#BKMK_ssas)  
-  
- [Portas usadas pelo Reporting Services](#BKMK_ssrs)  
-  
- [Portas usadas pelo Integration Services](#BKMK_ssis)  
-  
- [Portas e serviços adicionais](#BKMK_additional_ports)  
-  
- [Interação com outras regras do firewall](#BKMK_other_rules)  
-  
- [Visão geral de perfis do firewall](#BKMK_profiles)  
-  
- [Configurações adicionais do firewall usando o item Firewall do Windows no Painel de Controle](#BKMK_additional_settings)  
-  
- [Usando o snap-in Firewall do Windows com Segurança Avançada](#BKMK_WF_msc)  
-  
- [Solucionando problemas de configurações do firewall](#BKMK_troubleshooting)  
   
 ##  <a name="BKMK_basic"></a> Informações básicas sobre o firewall  
  Os firewalls inspecionam pacotes recebidos e os comparam a um conjunto de regras. Se as regras autorizarem o pacote, o firewall o transmitirá ao protocolo TCP/IP para processamento adicional. Se as regras não autorizarem o pacote, o firewall o descartará e, se o log estiver habilitado, criará uma entrada em seu arquivo de log.  
@@ -105,34 +78,9 @@ ms.lasthandoff: 04/11/2017
 >  A ativação do firewall afetará outros programas que acessam este computador, como o compartilhamento de arquivos e impressoras, e conexões de área de trabalho remota. Os administradores devem considerar todos os aplicativos que estão em execução no computador antes de ajustar as configurações do firewall.  
   
 ##  <a name="BKMK_programs"></a> Programas para configurar o firewall  
- Há três maneiras de configurar o Firewall do Windows.  
-  
--   **Item Firewall do Windows no Painel de Controle**  
-  
-     O item **Firewall do Windows** pode ser aberto do Painel de Controle.  
-  
-    > [!IMPORTANT]  
-    >  Alterações feitas no item **Firewall do Windows** do Painel de Controle afetam somente o perfil atual. Dispositivos móveis, como laptops, não devem usar o item **Firewall do Windows** do Painel de Controle, uma vez que o perfil pode mudar quando conectado em uma configuração diferente. Assim, o perfil anteriormente configurado não terá efeito. Para obter mais informações sobre perfis, consulte [Guia de introdução ao Firewall do Windows com Segurança Avançada](http://go.microsoft.com/fwlink/?LinkId=116080).  
-  
-     O item **Firewall do Windows** no Painel de Controle permite configurar opções básicas. Entre elas estão as seguintes:  
-  
-    -   Ativar ou desativar o item **Firewall do Windows** no Painel de Controle  
-  
-    -   Habilitar e desabilitar regras  
-  
-    -   Conceder exceções para portas e programas  
-  
-    -   Definir algumas restrições de escopo  
-  
-     O item **Firewall do Windows** no Painel de Controle é mais apropriado para usuários que não têm experiência em configuração de firewall e que estão configurando opções básicas do firewall para computadores que não são móveis. Você também pode abrir o item **Firewall do Windows** no Painel de Controle através do comando **run** executando o seguinte procedimento:  
-  
-    #### <a name="to-open-the-windows-firewall-item"></a>Para abrir o item Firewall do Windows  
-  
-    1.  No menu **Iniciar** , clique em **Executar**e digite `firewall.cpl`.  
-  
-    2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
--   **Console de Gerenciamento Microsoft (MMC)**  
+Defina as configurações do Firewall do Windows com o **Console de Gerenciamento Microsoft** ou **netsh**.  
+
+-  **Console de Gerenciamento Microsoft (MMC)**  
   
      O snap-in do MMC Firewall do Windows com Segurança Avançada permite definir configurações de firewall mais avançadas. Este snap-in apresenta a maioria das opções de firewall de um jeito fácil de usar, além de todos os perfis de firewall. Para obter mais informações, veja [Usando o snap-in Firewall do Windows com Segurança Avançada](#BKMK_WF_msc) , mais adiante neste tópico.  
   
@@ -185,18 +133,29 @@ ms.lasthandoff: 04/11/2017
   
  Uma alternativa à configuração de uma instância nomeada para escutar em uma porta fixa é criar uma exceção no firewall para um programa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como o **sqlservr.exe** (para o [!INCLUDE[ssDE](../../includes/ssde-md.md)]). Isso pode ser conveniente, mas o número da porta não será exibido na coluna **Porta Local** da página **Regras de Entrada** quando você usar o snap-in Firewall do Windows com Segurança Avançada do MMC. Isso pode tornar mais difícil auditar quais portas estão abertas. Outra consideração é que um service pack ou atualização cumulativa pode alterar o caminho para o executável do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o que invalidará a regra do firewall.  
   
-> [!NOTE]  
->  O procedimento a seguir usa o item **Firewall do Windows** no Painel de Controle. O snap-in Firewall do Windows com Segurança Avançada do MMC pode configurar uma regra mais complexa. Isso inclui configurar uma exceção de serviço, que pode ser útil para proporcionar defesa mais vigorosa. Veja abaixo [Usando o snap-in Firewall do Windows com Segurança Avançada](#BKMK_WF_msc) .  
+##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>Para adicionar uma exceção de programa ao firewall usando o Firewall do Windows com Segurança Avançada
   
-###### <a name="to-add-a-program-exception-to-the-firewall-using-the-windows-firewall-item-in-control-panel"></a>Para adicionar uma exceção de programa ao firewall usando o item Firewall do Windows no Painel de Controle  
-  
-1.  Na guia **Exceções** do item **Firewall do Windows** , clique em **Adicionar um programa**.  
-  
-2.  Navegue até o local da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você deseja permitir por meio do firewall, por exemplo **C:\Arquivos de Programas\Microsoft SQL Server\MSSQL13.<instance_name>\MSSQL\Binn**, escolha **sqlservr.exe** e clique em **Abrir**.  
-  
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
- Para obter mais informações sobre pontos de extremidade, veja [Configurar o Mecanismo de Banco de Dados para escutar em várias portas TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) e [Exibições de catálogo de pontos de extremidade &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md).  
+1. No menu Iniciar, digite *wf.msc*. Clique em **Firewall do Windows com Segurança Avançada**.
+
+1. No painel esquerdo, clique em **Regras de entrada**.
+
+1. No painel direito, em **Ações**, clique em **Nova regra...**. O **Assistente de Nova Regra de Entrada** é aberto.
+
+1. Em **Tipo de regra**, clique em **Programa**. Clique em **Avançar**.
+
+1. Em **Programa**, clique em **Este caminho de programa**. Clique em **Procurar** para localizar a instância do SQL Server. O programa é chamado sqlservr.exe. Ele normalmente encontra-se em:
+
+   `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
+
+   Clique em **Avançar**.
+
+1. Na página **Ação**, clique em **Permitir a conexão**.  
+
+1. Perfil, inclua todos os três perfis. Clique em **Avançar**.
+
+1. Em **Nome**, digite um nome para a regra. Clique em **Concluir**.
+
+Para obter mais informações sobre pontos de extremidade, veja [Configurar o Mecanismo de Banco de Dados para escutar em várias portas TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) e [Exibições de catálogo de pontos de extremidade &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md). 
   
 ###  <a name="BKMK_ssas"></a> Portas usadas pelo Analysis Services  
  A tabela a seguir lista as portas que são mais usadas pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -213,14 +172,14 @@ ms.lasthandoff: 04/11/2017
  Para obter instruções passo a passo para configurar o Firewall do Windows para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], veja [Configurar o Firewall do Windows para permitir acesso ao Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 ###  <a name="BKMK_ssrs"></a> Portas usadas pelo Reporting Services  
- A tabela a seguir lista as portas que são mais usadas pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+A tabela a seguir lista as portas que são mais usadas pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 |Recurso|Porta|Comentários|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Serviços Web|Porta TCP 80|Usada para uma conexão HTTP com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] por meio de uma URL. Não é recomendável usar a regra pré-configurada **Serviços da World Wide Web (HTTP)**. Para obter mais informações, consulte a seção [Interação com outras regras do firewall](#BKMK_other_rules) abaixo.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurado para uso por HTTPS|Porta TCP 443|Usada para uma conexão HTTPS por meio de uma URL. HTTPS é uma conexão HTTP que usa o protocolo SSL. Não é recomendável usar a regra pré-configurada **Serviços Seguros da World Wide Web (HTTPS)**. Para obter mais informações, consulte a seção [Interação com outras regras do firewall](#BKMK_other_rules) abaixo.|  
   
- Quando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se conecta a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você também deve abrir as portas apropriadas para esses serviços. Para obter instruções passo a passo para configurar o Firewall do Windows para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], veja [Configurar um Firewall para acesso ao Servidor de Relatório](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
+Quando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se conecta a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você também deve abrir as portas apropriadas para esses serviços. Para obter instruções passo a passo para configurar o Firewall do Windows para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], veja [Configurar um Firewall para acesso ao Servidor de Relatório](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
 ###  <a name="BKMK_ssis"></a> Portas usadas pelo Integration Services  
  A tabela a seguir lista as portas que são usadas pelo serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -229,10 +188,10 @@ ms.lasthandoff: 04/11/2017
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] chamadas de procedimento remoto (MS RPC)<br /><br /> Usada pelo tempo de execução do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|Porta TCP 135<br /><br /> Consulte [Considerações especiais sobre a porta 135](#BKMK_port_135)|O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa o DCOM na porta 135. O Gerenciador de Controle de Serviços usa a porta 135 para executa tarefas como iniciar e parar o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e transmitir solicitações de controle ao serviço em execução. O número da porta não pode ser alterado.<br /><br /> Esta porta só precisa ser aberta se você está se conectando a uma instância remota do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a partir do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou de um aplicativo personalizado.|  
   
- Para obter instruções passo a passo para configurar o Firewall do Windows para o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Serviço do Integration Services &#40;Serviço SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
+Para obter instruções passo a passo para configurar o Firewall do Windows para o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Serviço do Integration Services &#40;Serviço SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
 ###  <a name="BKMK_additional_ports"></a> Portas e serviços adicionais  
- A tabela a seguir lista portas e serviços dos quais o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode depender.  
+A tabela a seguir lista portas e serviços dos quais o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode depender.  
   
 |Cenário|Porta|Comentários|  
 |--------------|----------|--------------|  
@@ -289,7 +248,7 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE]  
 >  Se você usar o item **Firewall do Windows** no Painel de Controle configurará apenas o perfil do firewall.  
   
-#### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>Para alterar o escopo de uma exceção do firewall usando o item Firewall do Windows no Painel de Controle  
+### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>Para alterar o escopo de uma exceção do firewall usando o item Firewall do Windows no Painel de Controle  
   
 1.  No item **Firewall do Windows** do Painel de Controle, selecione um programa ou porta na guia **Exceções** e clique em **Propriedades** ou em **Editar**.  
   
@@ -328,7 +287,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Exigência de IPsec para conexões de entrada  
   
-#### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>Para criar uma nova regra de firewall usando o assistente de Nova Regra  
+### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>Para criar uma nova regra de firewall usando o assistente de Nova Regra  
   
 1.  No menu Iniciar, clique em **Executar**, digite **WF.msc**e clique em **OK**.  
   
@@ -351,7 +310,7 @@ ms.lasthandoff: 04/11/2017
   
     2.  No prompt de comando, digite **netstat -n -a**.  
   
-         A opção **-n** instrui o **netstat** para exibir numericamente o endereço e o número da porta das conexões TCP ativas. A opção **-a** instrui o **netstat** a exibir as portas TCP e UDP escutadas pelo computador.  
+         A opção **-n** instrui o **netstat** a exibir numericamente o endereço e o número da porta das conexões TCP ativas. A opção **-a** instrui o **netstat** a exibir as portas TCP e UDP escutadas pelo computador.  
   
 -   O utilitário **PortQry** pode ser usado para relatar o status das portas TCP/IP como escutando, não escutando ou filtrado. (Com o status filtrado, a porta pode ou não estar escutando; esse status indica que o utilitário não recebeu uma resposta da porta.) O utilitário **PortQry** está disponível para download no [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkId=28590).  
   
