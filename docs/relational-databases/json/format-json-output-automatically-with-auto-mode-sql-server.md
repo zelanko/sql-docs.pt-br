@@ -44,7 +44,7 @@ Com a opção **AUTO** , o formato da saída JSON é determinado automaticamente
   
 Os resultados da cláusula FOR JSON AUTO serão semelhantes aos da FOR JSON PATH quando apenas uma tabela for usada na consulta. Nesse caso, FOR JSON AUTO não criará objetos aninhados. A única diferença é que a FOR JSON AUTO gera aliases separadas por pontos (por exemplo, `Info.MiddleName` no exemplo a seguir) como chaves com pontos, não como objetos aninhados.  
   
-```tsql  
+```sql  
 SELECT TOP 5   
        BusinessEntityID As Id,  
        FirstName, LastName,  
@@ -88,7 +88,7 @@ SELECT TOP 5
   
  Quando você une tabelas, as colunas na primeira tabela são geradas como propriedades do objeto raiz. As colunas na segunda tabela são geradas como propriedades de um objeto aninhado. O nome da tabela ou o alias da segunda tabela (por exemplo, `D` no exemplo a seguir) é usado como o nome da matriz aninhada.  
   
-```tsql  
+```sql  
 SELECT TOP 2 SalesOrderNumber,  
         OrderDate,  
         UnitPrice,  
@@ -123,7 +123,7 @@ FOR JSON AUTO
  **Consulta 3**  
  Em vez de usar o FOR JSON AUTO, você pode aninhar uma subconsulta FOR JSON PATH na instrução SELECT, conforme mostrado no exemplo a seguir. Este exemplo produz o mesmo resultado do exemplo anterior.  
   
-```tsql  
+```sql  
 SELECT TOP 2  
     SalesOrderNumber,  
     OrderDate,  

@@ -48,7 +48,7 @@ Cada propriedade do objeto JSON ou cada elemento da matriz é retornado como uma
 Aqui está um exemplo rápido que usa **OPENJSON** com o esquema padrão e retorna uma linha para cada propriedade do objeto JSON.  
  
 **Exemplo**
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 
 SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
@@ -80,7 +80,7 @@ Aqui está um exemplo rápido que usa **OPENJSON** com um esquema para os result
   
 **Exemplo**
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json =   
   N'[  
