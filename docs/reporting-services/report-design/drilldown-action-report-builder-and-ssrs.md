@@ -1,53 +1,58 @@
 ---
-title: "A&#231;&#227;o de an&#225;lise detalhada (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10249"
-  - "10186"
-  - "10092"
-  - "10167"
-  - "10174"
-  - "sql13.rtp.rptdesigner.charttitleproperties.visibility.f1"
-  - "10155"
-  - "sql13.rtp.rptdesigner.chartproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.pictureproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.majorgridlineproperties.visibility.f1"
-  - "10123"
-  - "10425"
-  - "sql13.rtp.rptdesigner.axisproperties.visibility.f1"
-  - "10217"
-  - "10161"
-  - "10215"
-  - "sql13.rtp.rptdesigner.legendproperties.visibility.f1"
-  - "10258"
-  - "10144"
-  - "sql13.rtp.rptdesigner.subreportproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.textboxproperties.visibility.f1"
-  - "10062"
-  - "sql13.rtp.rptdesigner.serieslabelproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.rectangleproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.calculatedseriesproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.chartareaproperties.visibility.f1"
-  - "10053"
-  - "sql13.rtp.rptdesigner.minorgridlineproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.seriesproperties.visibility.f1"
+title: "Ação de busca detalhada (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10249"
+- "10186"
+- "10092"
+- "10167"
+- "10174"
+- sql13.rtp.rptdesigner.charttitleproperties.visibility.f1
+- "10155"
+- sql13.rtp.rptdesigner.chartproperties.visibility.f1
+- sql13.rtp.rptdesigner.pictureproperties.visibility.f1
+- sql13.rtp.rptdesigner.majorgridlineproperties.visibility.f1
+- "10123"
+- "10425"
+- sql13.rtp.rptdesigner.axisproperties.visibility.f1
+- "10217"
+- "10161"
+- "10215"
+- sql13.rtp.rptdesigner.legendproperties.visibility.f1
+- "10258"
+- "10144"
+- sql13.rtp.rptdesigner.subreportproperties.visibility.f1
+- sql13.rtp.rptdesigner.textboxproperties.visibility.f1
+- "10062"
+- sql13.rtp.rptdesigner.serieslabelproperties.visibility.f1
+- sql13.rtp.rptdesigner.rectangleproperties.visibility.f1
+- sql13.rtp.rptdesigner.calculatedseriesproperties.visibility.f1
+- sql13.rtp.rptdesigner.chartareaproperties.visibility.f1
+- "10053"
+- sql13.rtp.rptdesigner.minorgridlineproperties.visibility.f1
+- sql13.rtp.rptdesigner.seriesproperties.visibility.f1
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10cbda042d03d5405c136894017418e341665c99
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# A&#231;&#227;o de an&#225;lise detalhada (Construtor de Relat&#243;rios e SSRS)
+# <a name="drilldown-action-report-builder-and-ssrs"></a>Ação de análise detalhada (Construtor de Relatórios e SSRS)
   Ao fornecer ícones de sinal de adição ou de subtração em uma caixa de texto, você permitirá que os usuários ocultem ou exibam itens interativamente. Isso se chama *busca detalhada* . Para uma tabela ou matriz, você pode mostrar ou ocultar linhas e colunas estáticas ou linhas e colunas que estão associadas a grupos.  
   
  ![rs_drilldown](../../reporting-services/report-design/media/rs-drilldown.gif "rs_drilldown")  
@@ -70,10 +75,10 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Comparando relatórios de busca detalhada com relatórios detalhados  
- Em um relatório de busca detalhada, um usuário clica em um botão de adição ou subtração para expandir ou recolher uma seção de um relatório para mostrar dados detalhados no local. Em um relatório detalhado, o usuário clica em um link para um valor resumido e isso abre um relatório relacionado separado para mostrar dados de detalhes. Os dados de detalhes só são recuperados quando o relatório de detalhes é executado. Normalmente, os relatórios detalhados exigem menos recursos do que os relatórios de busca detalhada. Para obter mais informações, consulte [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md).  
+## <a name="comparing-drilldown-and-drillthrough-reports"></a>Comparando relatórios de busca detalhada com relatórios detalhados  
+ Em um relatório de busca detalhada, um usuário clica em um botão de adição ou subtração para expandir ou recolher uma seção de um relatório para mostrar dados detalhados no local. Em um relatório detalhado, o usuário clica em um link para um valor resumido e isso abre um relatório relacionado separado para mostrar dados de detalhes. Os dados de detalhes só são recuperados quando o relatório de detalhes é executado. Normalmente, os relatórios detalhados exigem menos recursos do que os relatórios de busca detalhada. Para obter mais informações, consulte [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
-## Suporte à extensão de renderização para itens de relatório ocultos  
+## <a name="rendering-extension-support-for-hidden-report-items"></a>Suporte à extensão de renderização para itens de relatório ocultos  
  Só há suporte para a alternância de mostrar e ocultar itens de relatório por extensões de renderização que dão suporte à interatividade de usuário, como a extensão de renderização HTML usada quando você executa um relatório no Construtor de Relatórios e no Gerenciador de Relatórios, por exemplo. Outras extensões de renderização exibem itens ocultos. A lista a seguir descreve suporte para itens de relatório com visibilidade condicional:  
   
 -   Em HTML, se os itens estiverem ocultos, eles não serão visíveis no código-fonte HTML.  
@@ -84,8 +89,8 @@ caps.handback.revision: 9
   
  Para obter mais informações, consulte [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
-## Consulte também  
- [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)   
  [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   

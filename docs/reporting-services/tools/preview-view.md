@@ -1,31 +1,36 @@
 ---
-title: "Modo Visualizar | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.previewview.f1"
-helpviewer_keywords: 
-  - "Modo Visualizar [Reporting Services]"
+title: "Exibição de visualização | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.previewview.f1
+helpviewer_keywords:
+- Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 36
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c8e94485414df0b390cb55866448bb12863c4f7
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Modo Visualizar
-No Designer de Relatórios do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], use a exibição **Visualização** para exibir o relatório renderizado. Quando um relatório é visualizado, o Designer de Relatórios o executa localmente e o exibe no modo Visualizar. Nesse modo de exibição, o relatório é processado por completo. Se o relatório tiver uma consulta complexa ou se contiver muitos dados, a visualização poderá demorar vários minutos para ser concluída na primeira vez. Nas alterações subsequentes que afetam apenas o formato do relatório, a visualização usa dados armazenados em cache.
+# <a name="preview-view"></a>Modo Visualizar
+No Designer de Relatórios do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , use a exibição **Visualização** para exibir o relatório renderizado. Quando um relatório é visualizado, o Designer de Relatórios o executa localmente e o exibe no modo Visualizar. Nesse modo de exibição, o relatório é processado por completo. Se o relatório tiver uma consulta complexa ou se contiver muitos dados, a visualização poderá demorar vários minutos para ser concluída na primeira vez. Nas alterações subsequentes que afetam apenas o formato do relatório, a visualização usa dados armazenados em cache.
 
   ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)  
-## Opções  
+## <a name="options"></a>Opções  
  Use a barra de ferramentas para gerenciar as funções de visualização.  
 
 ![ssrs_ssdt_viewer_toolbar](../../reporting-services/tools/media/ssrs-ssdt-viewer-toolbar.png)
@@ -84,8 +89,9 @@ No Designer de Relatórios do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnov
  **(18) Localizar Próximo**  
  Escolha essa opção para procurar a próxima instância do texto de pesquisa.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 + [Visualizando relatórios](../../reporting-services/reports/previewing-reports.md)
 + [Ajuda F1 do Designer de Relatórios](../../reporting-services/tools/report-designer-f1-help.md)  
   
   
+

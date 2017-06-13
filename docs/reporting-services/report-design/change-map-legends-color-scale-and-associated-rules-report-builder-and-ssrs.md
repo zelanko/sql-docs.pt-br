@@ -1,53 +1,58 @@
 ---
-title: "Alterar legendas de mapa, escala de cores e regras associadas (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.mapcolorscaleproperties.labels.f1"
-  - "sql13.rtp.rptdesigner.mappointlayerproperties.typerules.f1"
-  - "sql13.rtp.rptdesigner.shared.maprulesdistribution.f1"
-  - "10512"
-  - "10539"
-  - "10533"
-  - "sql13.rtp.rptdesigner.maplegendtitleproperties.general.f1"
-  - "10534"
-  - "10516"
-  - "sql13.rtp.rptdesigner.mapdistancescaleproperties.general.f1"
-  - "sql13.rtp.rptdesigner.mapcolorscaleproperties.general.f1"
-  - "sql13.rtp.rptdesigner.mapcolorscaletitleproperties.general.f1"
-  - "10514"
-  - "sql13.rtp.rptdesigner.mappointlayerproperties.sizerules.f1"
-  - "10513"
-  - "sql13.rtp.rptdesigner.shared.mapruleslegend.f1"
-  - "sql13.rtp.rptdesigner.shared.embeddedlabels.f1"
-  - "10510"
-  - "10509"
-  - "sql13.rtp.rptdesigner.maplegendproperties.general.f1"
-  - "10540"
-  - "10517"
+title: "Alterar regras de associados a escala de cores de legendas de mapa no construtor de relatórios SSRS | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.mapcolorscaleproperties.labels.f1
+- sql13.rtp.rptdesigner.mappointlayerproperties.typerules.f1
+- sql13.rtp.rptdesigner.shared.maprulesdistribution.f1
+- "10512"
+- "10539"
+- "10533"
+- sql13.rtp.rptdesigner.maplegendtitleproperties.general.f1
+- "10534"
+- "10516"
+- sql13.rtp.rptdesigner.mapdistancescaleproperties.general.f1
+- sql13.rtp.rptdesigner.mapcolorscaleproperties.general.f1
+- sql13.rtp.rptdesigner.mapcolorscaletitleproperties.general.f1
+- "10514"
+- sql13.rtp.rptdesigner.mappointlayerproperties.sizerules.f1
+- "10513"
+- sql13.rtp.rptdesigner.shared.mapruleslegend.f1
+- sql13.rtp.rptdesigner.shared.embeddedlabels.f1
+- "10510"
+- "10509"
+- sql13.rtp.rptdesigner.maplegendproperties.general.f1
+- "10540"
+- "10517"
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: aee605482e4de390b545f63ac96bfc123cee568a
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Alterar legendas de mapa, escala de cores e regras associadas (Construtor de Relat&#243;rios e SSRS)
-  Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], um mapa pode conter legendas de mapa, uma escala de cores e uma escala de distância. Essas partes de um mapa ajudam os usuários a interpretar a visualização de dados no mapa.  
+# <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Alterar legendas de mapa, escala de cores e regras associadas (Construtor de Relatórios e SSRS)
+  Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , um mapa pode conter legendas de mapa, uma escala de cores e uma escala de distância. Essas partes de um mapa ajudam os usuários a interpretar a visualização de dados no mapa.  
   
  As legendas incluem as seguintes partes de um mapa:  
   
--   **Legenda de mapa** Exibe um guia para ajudar a interpretar os dados analíticos que variam na exibição de elementos de mapas em uma camada do mapa. Um mapa pode ter várias legendas. Para cada camada do mapa, especifique qual legenda deve ser usada. Uma legenda pode fornecer um guia para mais de uma camada do mapa.  
+-   **Legenda de mapa** Exibe um guia para ajudar a interpretar os dados analíticos que variam na exibição de elementos de mapas em uma camada do mapa. Um mapa pode ter várias legendas. Para cada camada do mapa, especifique qual legenda deve ser usada. Uma legenda pode fornecer um guia para mais de uma camada do mapa.  
   
--   **Escala de cores** Exibe um guia para ajudar a interpretar as cores no mapa. Um mapa tem uma escala de cores. Várias camadas podem fornecer os dados para a escala de cores.  
+-   **Escala de cores** Exibe um guia para ajudar a interpretar as cores no mapa. Um mapa tem uma escala de cores. Várias camadas podem fornecer os dados para a escala de cores.  
   
 -   **Escala de distância** Exibe um guia para ajudar a interpretar a escala do mapa. Um mapa tem uma escala de distância. O valor de zoom do visor do mapa atual determina a escala de distância.  
   
@@ -55,13 +60,13 @@ caps.handback.revision: 12
   
 ##  <a name="Viewport"></a> Para alterar a posição de uma legenda em relação ao visor  
   
-#### Para alterar a posição de uma legenda em relação ao visor  
+#### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>Para alterar a posição de uma legenda em relação ao visor  
   
-1.  No modo de exibição de Design, clique com o botão direito do mouse na legenda e abra a página **Propriedades** do *\<item do relatório>*.  
+1.  No modo Design, clique na legenda e abra o  *\<item de relatório >***propriedades** página.  
   
 2.  Em **Posição**, clique no local que especifica onde exibir a legenda em relação ao visor.  
   
-3.  Para exibir a legenda fora do visor, selecione **Mostrar \<item de relatório> fora do visor**.  
+3.  Para exibir a legenda fora do visor, selecione **Mostrar \<item de relatório > fora do visor**.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -70,9 +75,9 @@ caps.handback.revision: 12
   
 ##  <a name="MapLegend"></a> Para alterar o layout de uma legenda de mapa  
   
-#### Para alterar o layout de uma legenda de mapa  
+#### <a name="to-change-the-layout-of-a-map-legend"></a>Para alterar o layout de uma legenda de mapa  
   
-1.  No modo de exibição de Design, clique com o botão direito do mouse na legenda e abra a página **Propriedades da Legenda**.  
+1.  No modo de exibição de Design, clique com o botão direito do mouse na legenda e abra a página **Propriedades da Legenda** .  
   
 2.  Em **Layout da legenda**, clique no layout de tabela que você deseja usar para a legenda. À medida que você clica em opções diferentes, o layout na superfície de design é alterado.  
   
@@ -80,44 +85,44 @@ caps.handback.revision: 12
   
 ##  <a name="MapLegendTitle"></a> Para mostrar ou ocultar um título de legenda de mapa  
   
-#### Para mostrar ou ocultar um título de legenda de mapa  
+#### <a name="to-show-or-hide-a-map-legend-title"></a>Para mostrar ou ocultar um título de legenda de mapa  
   
 -   Clique com o botão direito do mouse na legenda do mapa na superfície de design e clique em **Mostrar Título da Legenda**.  
   
 ##  <a name="ColorScaleTitle"></a> Para mostrar ou ocultar um título de escala de cores  
   
-#### Para mostrar ou ocultar um título de escala de cores  
+#### <a name="to-show-or-hide-a-color-scale-title"></a>Para mostrar ou ocultar um título de escala de cores  
   
 -   Clique com o botão direito do mouse na escala de cores na superfície de design e clique em **Mostrar Título da Escala de Cores**.  
   
 ##  <a name="MoveItems"></a> Para remover itens da primeira legenda  
  Crie quantas legendas adicionais forem necessárias e atualize as regras de cada camada do mapa, especificando em qual legenda devem ser exibidos os resultados de regras.  
   
-#### Para criar uma nova legenda  
+#### <a name="to-create-a-new-legend"></a>Para criar uma nova legenda  
   
 -   No modo de exibição de Design, clique com o botão direito do mouse no mapa fora do visor do mapa e clique em **Adicionar Legenda**.  
   
      Uma nova legenda será exibida no mapa.  
   
-#### Para exibir resultados de regra em uma legenda  
+#### <a name="to-display-rule-results-in-a-legend"></a>Para exibir resultados de regra em uma legenda  
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra de Cores**.  
+2.  Com o botão direito na camada que tem os dados que você deseja e, em seguida, clique em  *\<mapear tipo de elemento >***regra de cor**.  
   
 3.  Clique em **Legenda**.  
   
-4.  Na lista suspensa **Mostrar nesta legenda**, clique no nome da legenda na qual devem ser exibidos os resultados da regra.  
+4.  Na lista suspensa **Mostrar nesta legenda** , clique no nome da legenda na qual devem ser exibidos os resultados da regra.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="TemplateStyle"></a> Para variar cores do elemento do mapa com base em um estilo de modelo  
   
-#### Para variar cores do elemento do mapa com base em um estilo de modelo  
+#### <a name="to-vary-map-element-colors-based-on-a-template-style"></a>Para variar cores do elemento do mapa com base em um estilo de modelo  
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra de Cores**.  
+2.  Com o botão direito na camada que tem os dados que você deseja e, em seguida, clique em  *\<mapear tipo de elemento >***regra de cor**.  
   
 3.  Clique em **Aplicar estilo do modelo**.  
   
@@ -127,11 +132,11 @@ caps.handback.revision: 12
   
 ##  <a name="ColorPalette"></a> Para variar as cores do elemento do mapa com base em uma paleta de cores  
   
-#### Para variar as cores do elemento do mapa com base em uma paleta de cores  
+#### <a name="to-vary-map-element-colors-based-on-color-palette"></a>Para variar as cores do elemento do mapa com base em uma paleta de cores  
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra de Cores**.  
+2.  Com o botão direito na camada que tem os dados que você deseja e, em seguida, clique em  *\<mapear tipo de elemento >***regra de cor**.  
   
 3.  Clique em **Visualizar dados usando a paleta de cores**.  
   
@@ -145,15 +150,15 @@ caps.handback.revision: 12
   
 ##  <a name="ColorRanges"></a> Para variar as cores do elemento do mapa com base em intervalos de cores  
   
-#### Para variar as cores do elemento do mapa com base em intervalos de cores  
+#### <a name="to-vary-map-element-colors-based-on-color-ranges"></a>Para variar as cores do elemento do mapa com base em intervalos de cores  
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra de Cores**.  
+2.  Com o botão direito na camada que tem os dados que você deseja e, em seguida, clique em  *\<mapear tipo de elemento >***regra de cor**.  
   
 3.  Clique em **Visualizar dados usando intervalos de cores**.  
   
-     Essa opção, aliada às cores inicial, intermediária e final que você especifica nessa página e as opções especificadas na página **Distribuição**, divide os dados analíticos relacionados em intervalos. O processador de relatório atribui a cor apropriada a cada elemento do mapa com base nos dados associados e no intervalo em que se enquadra.  
+     Essa opção, aliada às cores inicial, intermediária e final que você especifica nessa página e as opções especificadas na página **Distribuição** , divide os dados analíticos relacionados em intervalos. O processador de relatório atribui a cor apropriada a cada elemento do mapa com base nos dados associados e no intervalo em que se enquadra.  
   
 4.  Em **Campo de dados**, digite o nome do campo que contém os dados analíticos que você deseja visualizar por cor.  
   
@@ -167,11 +172,11 @@ caps.handback.revision: 12
   
 ##  <a name="CustomColors"></a> Para variar as cores do elemento do mapa com base em cores personalizadas  
   
-#### Para variar as cores do elemento do mapa com base em cores personalizadas  
+#### <a name="to-vary-map-element-colors-based-on-custom-colors"></a>Para variar as cores do elemento do mapa com base em cores personalizadas  
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra de Cores**.  
+2.  Com o botão direito na camada que tem os dados que você deseja e, em seguida, clique em  *\<mapear tipo de elemento >***regra de cor**.  
   
 3.  Clique em **Visualizar dados usando cores personalizadas**.  
   
@@ -185,13 +190,13 @@ caps.handback.revision: 12
   
 ##  <a name="DistributionOptions"></a> Para definir as opções de distribuição de uma legenda  
   
-#### Para definir as opções de distribuição de uma legenda  
+#### <a name="to-set-distribution-options-for-a-legend"></a>Para definir as opções de distribuição de uma legenda  
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra de Cores**.  
+2.  Com o botão direito na camada que tem os dados que você deseja e, em seguida, clique em  *\<mapear tipo de elemento >***regra de cor**.  
   
-3.  Selecione a opção **Visualizar dados usando** \<tipo de regra>. Para usar as opções de distribuição, você deve criar intervalos na página **Distribuição** com base nos dados analíticos associados à camada.  
+3.  Selecione o **visualizar dados por meio de** \<tipo de regra > opção. Para usar as opções de distribuição, você deve criar intervalos na página **Distribuição** com base nos dados analíticos associados à camada.  
   
 4.  Clique em **Distribuição**.  
   
@@ -205,7 +210,7 @@ caps.handback.revision: 12
   
     -   **Personalizar**. Especifique seu próprio número de intervalos para controlar a distribuição de valores.  
   
-     Para obter mais informações sobre as opções de distribuição, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+     Para obter mais informações sobre as opções de distribuição, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 6.  Em **Número de subintervalos**, digite o número de subintervalos a ser usado. Quando o tipo de distribuição for **Ideal**, o número de subintervalos será calculado automaticamente.  
   
@@ -217,13 +222,13 @@ caps.handback.revision: 12
   
 ##  <a name="RuleLegend"></a> Para alterar o conteúdo de uma legenda de regras  
   
-#### Para alterar o conteúdo da legenda de cor, tamanho, largura ou tipo de marcador  
+#### <a name="to-change-the-contents-of-a-color-size-width-or-marker-type-legend"></a>Para alterar o conteúdo da legenda de cor, tamanho, largura ou tipo de marcador  
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra**.  
+2.  Com o botão direito na camada que tem os dados que você deseja e, em seguida, clique em  *\<mapear tipo de elemento >***regra**.  
   
-3.  Verifique se a opção **Visualizar dados usando** \<*tipo de regra*> está selecionada.  
+3.  Verifique **visualizar dados por meio de** \< *tipo de regra*> está selecionada.  
   
 4.  Em **Campo de dados**, verifique se os dados analíticos visualizados na camada estão selecionados.  
   
@@ -238,13 +243,13 @@ caps.handback.revision: 12
   
 ##  <a name="ColorScale"></a> Para alterar o conteúdo da escala de cores  
   
-#### Para alterar o conteúdo da escala de cores ou de uma legenda de cor  
+#### <a name="to-change-the-contents-of-the-color-scale-or-a-color-legend"></a>Para alterar o conteúdo da escala de cores ou de uma legenda de cor  
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra de Cores**.  
+2.  Com o botão direito na camada que tem os dados que você deseja e, em seguida, clique em  *\<mapear tipo de elemento >***regra de cor**.  
   
-3.  Selecione a opção de regra de cor a ser usada. Para exibir itens em uma legenda do mapa ou escala de cores, você deve selecionar uma das opções de **Visualizar dados usando** \<tipo de regra>.  
+3.  Selecione a opção de regra de cor a ser usada. Para exibir itens em uma escala de cores ou de legenda do mapa, você deve selecionar uma da **visualizar dados por meio de** \<tipo de regra > Opções.  
   
 4.  Em **Campo de dados**, verifique se os dados analíticos visualizados na camada estão selecionados.  
   
@@ -259,11 +264,11 @@ caps.handback.revision: 12
   
 ##  <a name="HideItems"></a> Para remover todos os itens de uma legenda  
   
-#### Para ocultar itens com base em uma regra  
+#### <a name="to-hide-items-based-on-a-rule"></a>Para ocultar itens com base em uma regra  
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra**.  
+2.  Com o botão direito na camada que tem os dados que você deseja e, em seguida, clique em  *\<mapear tipo de elemento >***regra**.  
   
 3.  Clique em **Legenda**.  
   
@@ -272,19 +277,19 @@ caps.handback.revision: 12
 ##  <a name="ChangeFormatItems"></a> Para alterar o formato de conteúdo em uma legenda  
  Defina as opções de legenda para a regra associada à legenda de mapa.  
   
-#### Para alterar o formato de conteúdo em uma legenda  
+#### <a name="to-change-the-format-of-content-in-a-legend"></a>Para alterar o formato de conteúdo em uma legenda  
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<mapear tipo de elemento>***Regra**.  
+2.  Com o botão direito na camada que tem os dados que você deseja e, em seguida, clique em  *\<mapear tipo de elemento >***regra**.  
   
 3.  Clique em **Legenda**.  
   
-4.  O **Texto de legenda** exibe as palavras-chave que especificam quais dados são exibidos na legenda. Use as palavras-chave do mapa e os formatos personalizados para ajudar a controlar o formato do texto da legenda. Por exemplo, #FROMVALUE {C2} especifica um formato de moeda com duas casas decimais. Para obter mais informações, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+4.  O**Texto de legenda** exibe as palavras-chave que especificam quais dados são exibidos na legenda. Use as palavras-chave do mapa e os formatos personalizados para ajudar a controlar o formato do texto da legenda. Por exemplo, #FROMVALUE {C2} especifica um formato de moeda com duas casas decimais. Para obter mais informações, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   

@@ -1,34 +1,39 @@
 ---
-title: "Exibir cabe&#231;alhos de linhas e colunas em v&#225;rias p&#225;ginas (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Exibir cabeçalhos de coluna e linha em várias páginas (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97fe2b81898c3172db4d387afbac3be4086fac11
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Exibir cabe&#231;alhos de linhas e colunas em v&#225;rias p&#225;ginas (Construtor de Relat&#243;rios e SSRS)
+# <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Exibir cabeçalhos de linhas e colunas em várias páginas (Construtor de Relatórios e SSRS)
   Você pode controlar se os cabeçalhos de linha e de coluna serão repetidos em cada página de um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] em uma região de dados tablix (uma tabela, matriz ou lista) que abrange várias páginas.
   
  O modo como você controla as linhas e as colunas dependerá se a região de dados de tablix tem cabeçalhos de grupo. Quando você clicar em uma região de dados de tablix que tem cabeçalhos de grupo, uma linha pontilhada mostrará as áreas de tablix, como mostrado na figura seguinte:  
   
- ![Áreas da região de dados Tablix](../../reporting-services/report-design/media/rs-tablixareas.gif "Áreas da região de dados Tablix")  
+ ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
   
  Cabeçalhos de grupos de linhas e colunas são criados automaticamente quando você adiciona grupos usando o assistente de Nova Tabela ou de Novo Gráfico, adicionando campos ao painel Agrupamento ou usando menus de contexto. Se a região de dados de tablix tiver apenas uma área de corpo de tablix e nenhum cabeçalho de grupo, as linhas e as colunas serão os membros do tablix.  
   
  Para membros estáticos, você pode exibir as linhas adjacentes superiores ou as colunas adjacentes em várias páginas.  
   
-## Para exibir cabeçalhos de linha em várias páginas  
+## <a name="to-display-row-headers-on-multiple-pages"></a>Para exibir cabeçalhos de linha em várias páginas  
   
 1.  Clique com o botão direito do mouse na alça de canto, na linha ou na coluna de uma região de dados tablix e, em seguida, clique em **Propriedades do Tablix**.  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 8
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Para exibir cabeçalhos de coluna em várias páginas  
+## <a name="to-display-column-headers-on-multiple-pages"></a>Para exibir cabeçalhos de coluna em várias páginas  
   
 1.  Clique com o botão direito do mouse na alça de canto, na linha ou na coluna de uma região de dados tablix e, em seguida, clique em **Propriedades do Tablix**.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 8
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Para exibir uma linha ou coluna estática em várias páginas  
+## <a name="to-display-a-static-row-or-column-on-multiple-pages"></a>Para exibir uma linha ou coluna estática em várias páginas  
   
 1.  Na superfície de design, clique no manipulador de linha ou coluna da região de dados de tablix para selecioná-la. O painel Agrupamento exibe os grupos de linhas e colunas.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 8
   
  À medida que você exibe cada página do relatório que a região de dados do tablix abrange, os membros de tablix se repetem em cada página.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Controlando quebras de páginas, títulos, colunas e linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   

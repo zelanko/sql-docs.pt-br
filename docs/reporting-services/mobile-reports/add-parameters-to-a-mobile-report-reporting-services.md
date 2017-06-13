@@ -1,29 +1,34 @@
 ---
-title: "Adicionar par&#226;metros a um relat&#243;rio m&#243;vel | Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Adicionar parâmetros a um relatório móvel | O Reporting Services | Microsoft Docs"
+ms.custom: 
+ms.date: 11/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 113cb057-deec-40eb-abc8-f35d3900eaa6
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6fad62a6549f4b9752bde07e39f53175768a68cb
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Adicionar par&#226;metros a um relat&#243;rio m&#243;vel | Reporting Services
+# <a name="add-parameters-to-a-mobile-report--reporting-services"></a>Adicionar parâmetros a um relatório móvel | Reporting Services
 Você pode criar um relatório móvel do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] com parâmetros, para que você e os leitores do relatório possam filtrar seus relatórios. Um relatório com parâmetros também pode ser o destino de um [detalhamento de um relatório de origem](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md). 
 
 Para criar um relatório móvel com parâmetros, comece com um conjunto de dados compartilhado com, pelo menos, um parâmetro. Leia sobre [como criar parâmetros em um conjunto de dados compartilhado](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
 
-Depois de adicionar parâmetros a um relatório móvel, você cria uma URL para [abrir o relatório com parâmetros de cadeia de consulta](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters.md).
+Depois de adicionar parâmetros a um relatório móvel, você cria uma URL para [abrir o relatório com parâmetros de cadeia de consulta](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md).
 
-1. Na barra superior do portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)], selecione **Novo** > **Relatório Móvel**.  
+1. Na barra superior do portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] , selecione **Novo** > **Relatório Móvel**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
@@ -31,7 +36,7 @@ Depois de adicionar parâmetros a um relatório móvel, você cria uma URL para 
   
 3. No canto superior direito, selecione **Adicionar Dados**.  
   
-4. Selecione **Servidor de Relatório** e um servidor.  
+4. Selecione **Servidor de Relatório**e um servidor.  
   
 5. Navegue até os conjuntos de dados compartilhados no servidor e escolha um que têm parâmetros.  
   
@@ -55,10 +60,12 @@ Depois de adicionar parâmetros a um relatório móvel, você cria uma URL para 
 
    ![sql-server-mobile-report-publisher-Selection-List-Category-Selected](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png)   
   
-### Consulte também  
--  [Abrir um relatório móvel com parâmetros de cadeia de caracteres de consulta específicos](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters.md)
+### <a name="see-also"></a>Consulte também  
+-  [Abrir um relatório móvel com parâmetros de cadeia de caracteres de consulta específicos](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md)
 -  [Adicionar o detalhamento de um relatório móvel para outros relatórios móveis ou URLs](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)
 -  [Criar um conjunto de dados compartilhado ou inserido](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)
 - [Criar e publicar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
+
+

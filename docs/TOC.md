@@ -1,25 +1,21 @@
-# [Usando bancos de dados relacionais](./relational-databases/toc.md)
-        
-# [SQL Server no Linux](./linux/TOC.md)        
-        
-# [R no SQL Server](./advanced-analytics/r-services/toc.md)        
-        
-# [SQL Server](./sql-server/toc.md)        
+# [Usando bancos de dados relacionais](relational-databases/database-features.md)
+# [SQL Server no Linux](./linux/index.md?toc=%2fsql%2fdocs%2flinux%2ftoc.json)
+# [Análise avançada no SQL Server](advanced-analytics/getting-started-with-machine-learning-services.md)
+# [SQL Server](sql-server/sql-server-technical-documentation.md)
         
 # Linguagens        
-## [dmx](./dmx/toc.md)        
-## [mdx](./mdx/toc.md)        
-## [Transact-SQL](./t-sql/toc.md)        
-## [XQuery](./xquery/toc.md)        
+## [dmx](dmx/data-mining-extensions-dmx-reference.md)
+## [mdx](mdx/analysis-services-language-reference.md)
+## [Transact-SQL](t-sql/language-reference.md)
+## [XQuery](xquery/xquery-language-reference-sql-server.md)
         
-# [Exemplos](./sample/TOC.md)        
-        
-# [Ferramentas](./tools/toc.md)        
+# [Exemplos](sample/microsoft-sql-server-samples.md)
+# [Ferramentas](tools/command-prompt-utility-reference-database-engine.md)
         
 # Desenvolvedor        
-## [SSDT (SQL Server Data Tools)](./ssdt/TOC.md)        
-## [ADO (ActiveX Data Objects)](./ado/TOC.md)        
-## [Drivers de dados e de conexão do SQL Server](./connect/TOC.md)        
-## [SSMS (SQL Server Management Studio)](./ssms/TOC.md)        
+## [SSDT (SQL Server Data Tools)](ssdt/download-sql-server-data-tools-ssdt.md)
+## [ADO (ActiveX Data Objects)](ado/microsoft-activex-data-objects-ado.md)
+## [Drivers de dados e de conexão do SQL Server](connect/sql-server-driver-documentation.md)
+## [SSMS (SQL Server Management Studio)](ssms/download-sql-server-management-studio-ssms.md)
         
-# [White papers](./whitepapers/toc.md)
+# [White papers](whitepapers/microsoft-white-papers.md)

@@ -1,23 +1,28 @@
 ---
-title: "Manage a Reporting Services SharePoint Service Application | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gerenciar um aplicativo de serviço do SharePoint do Reporting Services | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 caps.latest.revision: 18
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 18
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0930c8f5d3b0af4460c3deac2b8aa780e1f2568
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Manage a Reporting Services SharePoint Service Application
+# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Manage a Reporting Services SharePoint Service Application
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são gerenciados na Administração Central do SharePoint. As páginas Gerenciamento e Propriedades permitem atualizar a configuração do aplicativo de serviço, bem como as tarefas de administração comuns.  
   
  Este tópico aborda as seguintes informações:  
@@ -36,7 +41,7 @@ caps.handback.revision: 18
   
 -   [Provisionar Assinaturas e Alertas](#bkmk_provisionsubscriptions)  
   
-## Para abrir a página de propriedades de gerenciamento de aplicativos de serviço  
+## <a name="to-open-service-application-properties-page"></a>Para abrir a página de propriedades de gerenciamento de aplicativos de serviço  
  Para abrir a página de propriedades de um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , siga as etapas abaixo:  
   
 1.  Na Administração Central, no grupo Gerenciamento de Aplicativos, clique em **Gerenciar aplicativos de serviço**.  
@@ -109,7 +114,7 @@ caps.handback.revision: 18
 |Configuração|Comentários|  
 |-------------|--------------|  
 |Habilitar Download do Construtor de Relatórios|O padrão é TRUE.<br /><br /> Especifica se os clientes podem ver o botão para baixar o aplicativo de construtor de relatórios.|  
-|URL de Inicialização do Construtor de Relatórios|Especifique uma URL personalizada quando o servidor de relatórios não usar a URL padrão do Construtor de Relatórios. Essa configuração é opcional. Se você não especificar um valor, a URL padrão será usada, o que inicia o Construtor de Relatórios. Para iniciar o Construtor de Relatórios 3.0 como um aplicativo ClickOnce, digite o valor a seguir: http://\<nome_do_computador>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|URL de Inicialização do Construtor de Relatórios|Especifique uma URL personalizada quando o servidor de relatórios não usar a URL padrão do Construtor de Relatórios. Essa configuração é opcional. Se você não especificar um valor, a URL padrão será usada, o que inicia o Construtor de Relatórios. Para iniciar o construtor de relatórios 3.0 como um clique-aplicativo ClickOnce, digite o seguinte valor: http://\<computername > / ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Habilitar Impressão de Cliente|O padrão é TRUE.<br /><br /> Especifica se os usuários podem baixar o controle do cliente, que fornece opções de impressão.|  
 |Editar Tempo Limite da Sessão|O padrão é 7200 segundos.|  
 |Editar Limite de Cache de Sessão|O padrão é 5.|  
@@ -117,7 +122,7 @@ caps.handback.revision: 18
 ##  <a name="bkmk_managejobs"></a> Gerenciar trabalhos  
  Você pode visualizar e excluir os trabalhos em execução; por exemplo trabalhos que foram criados pelas assinaturas de relatórios e assinaturas controladas por dados. A página não é usada para gerenciar assinaturas, mas trabalhos que foram disparados por uma assinatura. Por exemplo, uma assinatura que foi agendada para ser executada uma vez a cada hora gerará um trabalho por hora que será exibido na página **Gerenciar Trabalhos** .  
   
- ![gerenciamento de trabalhos em execução](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "gerenciamento de trabalhos em execução")  
+ ![Gerenciar trabalhos em execução](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "gerenciar trabalhos em execução")  
   
 ##  <a name="bkmk_keymgt"></a> Gerenciamento de chaves  
  A tabela a seguir resume as páginas de gerenciamento de chaves  
@@ -127,8 +132,8 @@ caps.handback.revision: 18
   
 |Página|Description|  
 |----------|-----------------|  
-|Chave de Criptografia de Backup|1) Digite uma senha nas caixas **Senha:** e **Confirmar Senha:**, e clique em **Exportar**. Você verá um aviso se a senha digitada não atender aos requisitos de complexidade da política de domínio.<br /><br /> 2) Será solicitado que você informe um local em que o arquivo da chave será salvo. É recomendável armazenar o arquivo da chave em um computador que não seja o que está executando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. O nome de arquivo padrão é o mesmo do aplicativo de serviço.|  
-|Restaurar chave de criptografia|1) Digite ou navegue até o arquivo da chave na caixa **Local do Arquivo**<br /><br /> 2) Na caixa **Senha**, digite a senha que foi usada para fazer backup do arquivo de criptografia.<br /><br /> 3) Clique em **OK**|  
+|Chave de Criptografia de Backup|1) Digite uma senha nas caixas **Senha:** e **Confirmar Senha:** , e clique em **Exportar**. Você verá um aviso se a senha digitada não atender aos requisitos de complexidade da política de domínio.<br /><br /> 2) Será solicitado que você informe um local em que o arquivo da chave será salvo. É recomendável armazenar o arquivo da chave em um computador que não seja o que está executando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. O nome de arquivo padrão é o mesmo do aplicativo de serviço.|  
+|Restaurar chave de criptografia|1) Digite ou navegue até o arquivo da chave na caixa **Local do Arquivo**<br /><br /> 2) Na caixa **Senha** , digite a senha que foi usada para fazer backup do arquivo de criptografia.<br /><br /> 3) Clique em **OK**|  
 |Alterar Chave de Criptografia|Esta operação criará uma nova chave e criptografará novamente seu conteúdo criptografado. Se você tiver muito conteúdo, esta operação poderá levar várias horas.<br /><br /> Quando a operação de alteração de chave de criptografia for concluída, é recomendado que você faça um backup de sua nova chave.|  
 |Conteúdo Criptografado Excluído|O conteúdo excluído não pode ser recuperado.<br /><br /> **\*\* Importante \*\*** A ação de excluir e recriar a chave simétrica não pode ser invertida ou desfeita. Excluir ou recriar a chave simétrica pode ter ramificações importantes em sua instalação atual. Se você excluir a chave, quaisquer dados existentes criptografados pela chave simétrica também serão excluídos. Os dados excluídos incluem cadeias de caracteres de conexão a fontes de dados de relatório externas, cadeias de caracteres de conexões armazenadas e algumas informações de assinatura.|  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 18
   
  Você pode usar qualquer conta de usuário do Windows. Para obter melhores resultados, escolha uma conta que tenha permissões de leitura e permissões de logon na rede a fim de dar suporte a conexões com outros computadores. Ela deve ter a permissão de leitura em qualquer imagem externa ou arquivo de dados que você deseja usar em um relatório. Não especifique uma conta local, a menos que todas as fontes de dados do relatório e imagens externas estejam armazenadas no computador do servidor de relatório. Use a conta somente para o processamento autônomo de relatórios.  
   
- ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.png "Conteúdo relacionado ao PowerShell")  
+ ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "conteúdo relacionado ao PowerShell")  
   
  O seguinte exemplo é de um comando do PowerShell para retornar a lista de aplicativos de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com a propriedade UEAccount:  
   
@@ -155,12 +160,12 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
  Para obter mais informações, consulte [Cmdlets do PowerShell para o modo SharePoint do Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
-### Opções  
+### <a name="options"></a>Opções  
  **Especificar uma conta de execução**  
  Selecione para especificar uma conta.  
   
  **Conta**  
- Insira uma conta de usuário de domínio do Windows. Use este formato: *\<domínio>\\<conta_de_usuário\>*.  
+ Insira uma conta de usuário de domínio do Windows. Use este formato:  *\<domínio >\\< conta de usuário\>*.  
   
  **Senha**  
  Digite a senha.  
@@ -171,7 +176,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_email"></a> Configurações de email  
  Use esta página para especificar configurações do protocolo SMTP que habilitem a entrega de email do servidor de relatório a partir do servidor de relatório. Você pode usar a extensão de entrega de email do Servidor de Relatório para distribuir relatórios ou notificações de processamento de relatório por meio de assinaturas de email. A extensão de entrega de email do Servidor de relatório requer um servidor SMTP e um endereço de email a ser usado no campo De:.  
   
-### Opções  
+### <a name="options"></a>Opções  
  **Usar Servidor SMTP Server**  
  Especifica que o email do servidor de relatório é roteado por um servidor SMTP.  
   
@@ -184,7 +189,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_provisionsubscriptions"></a> Provisionar Assinaturas e Alertas  
  Use esta página para verificar se o SQL Server Agent está em execução e provisionar acesso para que o Reporting Services use o SQL Server Agent. O SQL Server Agent é necessário para assinaturas, agendas e alertas de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [Provisionar Assinaturas e Alertas para aplicativos de serviço SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
-## Associação de proxy  
+## <a name="proxy-association"></a>Associação de proxy  
  Ao criar o aplicativo de serviço Reporting Services, você selecionou o aplicativo Web para associar e provisionar permissões para acesso pelo aplicativo de serviço Reporting Services. Se você optou por não fazer a associação ou se você deseja alterar a associação, execute as seguintes etapas.  
   
 1.  Na Administração Central do SharePoint, em Gerenciamento de Aplicativo, clique em **Configurar Associações de Aplicativo de Serviço**.  

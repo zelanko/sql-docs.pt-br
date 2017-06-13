@@ -1,36 +1,41 @@
 ---
-title: "Cabe&#231;alhos e rodap&#233;s de p&#225;gina (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10125"
-  - "sql13.rtp.rptdesigner.pagefooter.border.f1"
-  - "10121"
-  - "10120"
-  - "10122"
-  - "sql13.rtp.rptdesigner.pageheader.general.f1"
-  - "10123"
-  - "sql13.rtp.rptdesigner.pageheader.fill.f1"
-  - "sql13.rtp.rptdesigner.pageheader.border.f1"
-  - "sql13.rtp.rptdesigner.pagefooter.fill.f1"
-  - "sql13.rtp.rptdesigner.pagefooter.general.f1"
-  - "10124"
+title: "Cabeçalhos e rodapés de página (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10125"
+- sql13.rtp.rptdesigner.pagefooter.border.f1
+- "10121"
+- "10120"
+- "10122"
+- sql13.rtp.rptdesigner.pageheader.general.f1
+- "10123"
+- sql13.rtp.rptdesigner.pageheader.fill.f1
+- sql13.rtp.rptdesigner.pageheader.border.f1
+- sql13.rtp.rptdesigner.pagefooter.fill.f1
+- sql13.rtp.rptdesigner.pagefooter.general.f1
+- "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f89d2e283daf9b9ac107c098d38db4feab17a736
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Cabe&#231;alhos e rodap&#233;s de p&#225;gina (Construtor de Relat&#243;rios e SSRS)
+# <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Cabeçalhos e rodapés de página (Construtor de Relatórios e SSRS)
   Um relatório pode conter um cabeçalho e um rodapé nas partes superior e inferior de cada página, respectivamente. Os cabeçalhos e rodapés podem conter texto estático, imagens, linhas, retângulos, bordas, cor e imagens de plano de fundo e expressões. Expressões incluem referências a campos de conjunto de dados de relatórios com exatamente um conjunto de dados e chamadas de função de agregação que incluem o conjunto de dados como um escopo.  
   
 > [!NOTE]  
@@ -45,10 +50,10 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Cabeçalhos e rodapés de relatórios  
+## <a name="report-headers-and-footers"></a>Cabeçalhos e rodapés de relatórios  
  Cabeçalhos e rodapés de página não são iguais aos cabeçalhos e rodapés de relatório. Os relatórios não têm uma área especial para cabeçalho ou rodapé de relatório. Um cabeçalho de relatório consiste nos itens de relatório que são colocados na parte superior do corpo do relatório na superfície de design de relatório. Eles aparecem somente uma vez como o primeiro conteúdo no relatório. Um rodapé de relatório consiste de itens de relatório que são colocados na parte inferior do corpo de relatório. Eles aparecem somente uma vez como o último conteúdo no relatório.  
   
-## Exibindo dados variáveis em um cabeçalho ou rodapé de página  
+## <a name="displaying-variable-data-in-a-page-header-or-footer"></a>Exibindo dados variáveis em um cabeçalho ou rodapé de página  
  Os cabeçalhos e rodapés de página podem incluir conteúdo estático, porém o mais comum é a exibição de conteúdo variável, como números de página ou informações sobre o conteúdo da página. Para exibir dados variáveis que são diferentes em cada página,use uma expressão.  
   
  Se houver apenas um conjunto de dados definido no relatório, você poderá adicionar expressões simples, como `[FieldName]` a um cabeçalho ou rodapé de página. Arraste o campo da coleção de campos do conjunto de dados do painel de dados do relatório ou da coleção Campos Internos para o cabeçalho ou rodapé da página. Uma caixa de texto com a expressão apropriada será adicionada automaticamente.  
@@ -66,7 +71,7 @@ caps.handback.revision: 6
   
  As seções seguintes deste tópico apresentam expressões prontas para uso que obtêm dados variáveis geralmente usados em cabeçalhos e rodapés. Também há uma seção sobre como a extensão de renderização do Excel processa cabeçalhos e rodapés. Para obter mais informações sobre expressões, consulte [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
-### Adicionando totais da página calculados a um cabeçalho ou rodapé  
+### <a name="adding-calculated-page-totals-to-a-header-or-footer"></a>Adicionando totais da página calculados a um cabeçalho ou rodapé  
  Em alguns relatórios, é útil incluir um valor calculado no cabeçalho ou no rodapé de cada relatório; por exemplo, uma soma do total por página se a página contiver valores numéricos. Como não é possível fazer referência aos campos diretamente, a expressão inserida no cabeçalho ou no rodapé deve fazer referência ao nome do item do relatório (por exemplo, uma caixa de texto) e não ao campo de dados:  
   
  `=Sum(ReportItems!Textbox1.Value)`  
@@ -75,7 +80,7 @@ caps.handback.revision: 6
   
  Ao calcular totais de página, podem haver diferenças nos totais se você usar extensões de renderização diferentes para exibir o relatório. A saída paginada é calculada de forma diferente para cada extensão de renderização. A mesma página exibida em HTML pode mostrar totais diferentes quando exibida em PDF se o volume de dados na página do PDF for diferente. Para obter mais informações, consulte [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
-### Para relatórios com vários conjuntos de dados   
+### <a name="for-reports-with-multiple-datasets"></a>Para relatórios com vários conjuntos de dados   
  Para relatórios com mais de um conjunto de dados, não é possível adicionar campos ou imagens vinculadas a dados diretamente a um cabeçalho ou rodapé. No entanto, você pode escrever uma expressão que, indiretamente, faz referência a um campo ou a uma imagem vinculada a dados que você deseja usar em um cabeçalho ou rodapé.  
   
  Para colocar dados variáveis em um cabeçalho ou rodapé:  
@@ -90,28 +95,28 @@ caps.handback.revision: 6
   
  Não é possível usar funções de agregação em campos no cabeçalho ou rodapé de página. Você só pode usar uma função de agregação em itens de relatório no corpo de relatório. Para expressões comuns em cabeçalhos e rodapés de página, consulte [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
-#### Adicionando uma imagem vinculada a dados a um cabeçalho ou rodapé  
+#### <a name="adding-a-data-bound-image-to-a-header-or-footer"></a>Adicionando uma imagem vinculada a dados a um cabeçalho ou rodapé  
  Você pode usar dados de imagem armazenados em um banco de dados em um cabeçalho ou rodapé. No entanto, não pode fazer referência a campos do banco de dados diretamente do item de relatório Imagem. Em vez disso, adicione uma caixa de texto ao corpo do relatório e, em seguida, defina a caixa de texto para o campo de dados que contém a imagem (observe que o valor deve ser codificado para base64). Você pode ocultar a caixa de texto do corpo do relatório para evitar mostrar a imagem codificada em base64. Em seguida, é possível fazer referência ao valor da caixa de texto oculta do item de relatório Imagem no cabeçalho ou rodapé de página.  
   
  Por exemplo, suponha que haja um relatório composto por páginas de informações de produto. No cabeçalho de cada página, você deseja exibir uma fotografia do produto. Para imprimir uma imagem armazenada no cabeçalho do relatório, defina uma caixa de texto oculta chamada `TXT_Photo` no corpo do relatório que recupere a imagem do banco de dados e use uma expressão para conferir a ela um valor:  
   
  `=Convert.ToBase64String(Fields!Photo.Value)`  
   
- No cabeçalho, adicione um item de relatório Imagem que usa a caixa de texto `TXT_Photo`, decodificada para mostrar a imagem:  
+ No cabeçalho, adicione um item de relatório Imagem que usa a caixa de texto `TXT_Photo` , decodificada para mostrar a imagem:  
   
  `=Convert.FromBase64String(ReportItems!TXT_Photo.Value)`  
   
-## Usando cabeçalhos e rodapés para posicionar texto  
+## <a name="using-headers-and-footers-to-position-text"></a>Usando cabeçalhos e rodapés para posicionar texto  
  É possível usar cabeçalhos e rodapés para posicionar texto em uma página. Por exemplo, suponha você esteja criando um relatório que você deseja enviar aos clientes. Você pode usar um cabeçalho ou rodapé para posicionar o endereço do cliente de forma que ele apareça na janela do envelope quando dobrado.  
   
  Se você estiver usando a caixa de texto apenas para popular um cabeçalho ou rodapé, poderá ocultá-la no corpo de relatório. O posicionamento da caixa de texto no corpo do relatório pode definir se o valor aparecerá no cabeçalho ou no rodapé da primeira ou da última página do relatório. Por exemplo, se houver tabelas, matrizes ou listas que fazem com que o relatório tenha várias páginas, o valor da caixa de texto oculta aparecerá na última página. Para que ele apareça na primeira página, posicione a caixa de texto oculta na parte superior do corpo de relatório.  
   
-## Criando relatórios com cabeçalhos e rodapés de página para processadores específicos  
+## <a name="designing-reports-with-page-headers-and-footers-for-specific-renderers"></a>Criando relatórios com cabeçalhos e rodapés de página para processadores específicos  
  Quando um relatório é processado, os dados e as informações de layout são combinados. Quando você exibir um relatório, a informações combinadas serão transmitidas a um processador que determinará a quantidade de dados do relatório que caberá em cada página.  
   
  Se você usar um navegador para exibir um relatório do servidor de relatório, o processador de HTML controlará o conteúdo das páginas do relatório que você verá. Se você planeja entregar os relatórios em formatos diferentes daquele usado na exibição ou se planeja imprimir os relatórios em um formato específico, convém otimizar o layout do relatório para o processador que você pretende usar para gerar o formato final. Para obter mais informações sobre paginação de relatório, consulte [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-### Trabalhando com cabeçalhos e rodapés de página no Excel  
+### <a name="working-with-page-headers-and-footers-in-excel"></a>Trabalhando com cabeçalhos e rodapés de página no Excel  
  Ao definir cabeçalhos e rodapés de página para relatórios que se destinam à extensão de renderização do Excel, siga estas diretrizes para obter os melhores resultados:  
   
 -   Use rodapés de página para exibir números de página.  
@@ -126,7 +131,7 @@ caps.handback.revision: 6
   
  Para obter mais informações, consulte [Exportar para Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Inserir uma imagem em um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   

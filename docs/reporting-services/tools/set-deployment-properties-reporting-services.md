@@ -1,28 +1,33 @@
 ---
-title: "Definir propriedades de implanta&#231;&#227;o (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "relatórios [Reporting Services], implantação"
-  - "publicando relatórios [Reporting Services]"
-  - "propriedades [Reporting Services], implantação"
-  - "implantando relatórios [Reporting Services]"
+title: "Definir propriedades de implantação (Reporting Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reports [Reporting Services], deploying
+- publishing reports [Reporting Services]
+- properties [Reporting Services], deployment
+- deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 caps.latest.revision: 44
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 44
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 30d542287f81032aa1bc2540d461a8f8c163b2f9
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Definir propriedades de implanta&#231;&#227;o (Reporting Services)
+# <a name="set-deployment-properties-reporting-services"></a>Definir propriedades de implantação (Reporting Services)
   No[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você deve especificar o servidor de relatório e opcionalmente as pastas para os relatórios e fontes de dados compartilhados, de forma a poder publicar os itens no projeto do Servidor de Relatório para um servidor de relatório. As propriedades e os valores que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] precisa para compilar, visualizar e implantar relatórios são armazenados em configurações de projeto do Servidor de Relatório. Você pode criar vários conjuntos nomeados para essas propriedades de projetos, para que você possa alternar de maneira conveniente entre os conjuntos de propriedades. Cada conjunto de propriedades é uma configuração. Por exemplo, você pode ter uma configuração para publicar relatórios em um servidor de teste e uma configuração diferente para publicar relatórios para um servidor de produção.  
   
  Use o Gerenciador de Configuração para criar e gerenciar conjuntos de propriedades de projeto em configurações de projeto. O Gerenciador de Configurações é um recurso suportado pelo [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], no qual o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] se baseia.  
@@ -33,7 +38,7 @@ caps.handback.revision: 44
 > [!NOTE]  
 >  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], a ação de publicar relatórios de um projeto ou solução do Servidor de Relatório é conhecida como *implantar relatórios*.  
   
-### Para definir as propriedades de implantação  
+### <a name="to-set-deployment-properties"></a>Para definir as propriedades de implantação  
   
 1.  Clique com o botão direito do mouse no projeto de relatório e clique em **Propriedades**.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 44
     > [!NOTE]  
     >  Você pode usar várias configurações para alternar rapidamente entre diferentes servidores de relatório ou configurações.  
   
-3.  Na caixa de texto **OutputPath**, digite ou cole o caminho no sistema de arquivos local para armazenar a definição de relatório usada na verificação de build, implantação e visualização de relatórios. O caminho deve ser diferente do caminho que você usa para o projeto e um caminho relativo que é uma pasta filho sob o caminho do projeto.  
+3.  Na caixa de texto **OutputPath**  , digite ou cole o caminho no sistema de arquivos local para armazenar a definição de relatório usada na verificação de build, implantação e visualização de relatórios. O caminho deve ser diferente do caminho que você usa para o projeto e um caminho relativo que é uma pasta filho sob o caminho do projeto.  
   
 4.  Na caixa de texto **ErrorLevel**  , digite a severidade dos problemas de compilação que são relatados como erros. Problemas que ocorrem ao compilar relatórios, fontes de dados ou outros recursos de projeto com níveis de severidade menor ou igual ao valor de **ErrorLevel**  são relatados como erros; caso contrário, os problemas são relatados como avisos. Qualquer erro causará falha na tarefa de compilação. Os níveis de severidade válidos são de 0 a 4, inclusive. O valor padrão é 2.  
   
@@ -67,20 +72,20 @@ caps.handback.revision: 44
   
      Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL de um site de nível superior ou subsite do SharePoint. Se você não especificar um site, o site de nível superior padrão será usado (por exemplo, http://*servername*, http://*servername*/*site* ou http://*servername*/*site*/*subsite*).  
   
-### Para definir as propriedades do Gerenciador de Configuração  
+### <a name="to-set-configuration-manager-properties"></a>Para definir as propriedades do Gerenciador de Configuração  
   
 1.  Clique com o botão direito do mouse no projeto de relatório e clique em **Propriedades**.  
   
 2.  Na caixa de diálogo **Páginas de Propriedades** do projeto, clique no **Gerenciador de Configuração**.  
   
-3.  Na caixa de diálogo **Gerenciador de Configuração** , selecione a configuração a ser editado. A configuração ativa no momento é exibida como **Ativa(***\<configuration>***)**.  
+3.  Na caixa de diálogo **Gerenciador de Configuração** , selecione a configuração a ser editado. A configuração ativa no momento é exibida como **Active (***\<Configuração >***)**.  
   
 4.  Em **Contextos do Projeto**, para cada projeto na solução, selecione ou desmarque **Build** ou **Deploy**.  
   
     > [!NOTE]  
     >  Se **Build** estiver selecionado, o Designer de Relatórios cria o projeto de relatórios e procura erros antes de exibir ou publicar em um servidor de relatórios. Se **Deploy** estiver selecionado, o Designer de Relatórios publicará os relatórios no servidor de relatórios conforme definido nas propriedades de implantação. Se **Deploy** não estiver selecionado, o Designer de Relatórios exibirá o relatório especificado na propriedade **StartItem** em uma janela de visualização local.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Publicando fontes de dados e relatórios](../../reporting-services/reports/publishing-data-sources-and-reports.md)   
  [Visualizando relatórios](../../reporting-services/reports/previewing-reports.md)   
  [Ajuda F1 do Designer de Relatórios](../../reporting-services/tools/report-designer-f1-help.md)   

@@ -1,28 +1,33 @@
 ---
-title: "Criar uma assinatura controlada por dados (Tutorial do SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "assinaturas [Reporting Services], tutoriais"
-  - "instruções passo a passo [Reporting Services]"
-  - "assinaturas controladas por dados"
+title: Criar uma assinatura controlada por dados (Tutorial SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 05/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- subscriptions [Reporting Services], tutorials
+- walkthroughs [Reporting Services]
+- data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: 50
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 50
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ca542c75d289b79284c5affeea5095ac032e1e0
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Criar uma assinatura controlada por dados (Tutorial do SSRS)
+# <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Criar uma assinatura controlada por dados (Tutorial do SSRS)
 Este tutorial do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ensina os conceitos de assinaturas controladas por dados, apresentando um exemplo simples que cria uma assinatura controlada por dados para gerar e salvar a saída do relatório filtrado em um compartilhamento de arquivos. 
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] As assinaturas controladas por dados permitem personalizar e automatizar a distribuição de um relatório baseado em dados de assinante dinâmicos. As assinaturas controladas por dados foram desenvolvidas para os seguintes tipos de cenário:  
   
@@ -31,7 +36,7 @@ Este tutorial do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ensi
 -   Distribuição de relatórios para um grupo específico de destinatários baseado em critérios predefinidos. Por exemplo, enviar um relatório de desempenho de vendas para todos os gerentes de vendas de uma organização.
 + Automatize a geração de relatórios em uma ampla variedade de formatos, por exemplo, .xlsx e .pdf.  
   
-## O que você aprenderá  
+## <a name="what-you-will-learn"></a>O que você aprenderá  
  Este tutorial divide-se em três lições:  
  Lição | Comentários
  ------- | --------------
@@ -52,7 +57,7 @@ Etapa  |Description
  
    ![ssrs_tutorial_datadriven_flow](../reporting-services/media/ssrs-tutorial-datadriven-flow.png) 
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
 As assinaturas controladas por dados normalmente são criadas e mantidas por administradores de servidor de relatórios. As etapas para criar assinaturas controladas por dados exige a criação de consultas, o conhecimento das fontes de dados que contêm dados do assinante e permissões elevadas em um servidor de relatório.  
   
 O tutorial usa o relatório *Pedido de vendas* criado no tutorial [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) e dados do banco de dados de exemplo **AdventureWorks2014**.  
@@ -65,9 +70,9 @@ Para usar este tutorial, seu computador deve ter os seguintes itens instalados:
   
 -   O serviço do SQL Server Agent deve estar em execução.  
   
--   Um relatório que inclui parâmetros. Este tutorial presume o uso do relatório de exemplo, `Sales Orders`, criado por meio do tutorial [Criar um relatório de tabela básico &#40;SSRS Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
+-   Um relatório que inclui parâmetros. Este tutorial presume o uso do relatório de exemplo, `Sales Orders` , criado por meio do tutorial [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
--   O banco de dados de exemplo **AdventureWorks2014**, que fornece dados ao relatório de exemplo.  
+-   O banco de dados de exemplo **AdventureWorks2014** , que fornece dados ao relatório de exemplo.  
   
 -   Uma atribuição de função [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] que inclui a tarefa Gerenciar todas as assinaturas no relatório de exemplo. Esta tarefa é obrigatória para definir uma assinatura controlada por dados. Se você for administrador no computador, a atribuição de função padrão para administradores locais fornecerá as permissões necessárias para criar assinaturas controladas por dados. Para obter mais informações, consulte [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
@@ -75,7 +80,9 @@ Para usar este tutorial, seu computador deve ter os seguintes itens instalados:
   
 **Tempo estimado para concluir o tutorial:** 30 minutos. Mais 30 minutos se você não concluiu o tutorial de relatório básico.  
   
-## Consulte também  
-[Assinaturas controladas por dados](../reporting-services/subscriptions/data-driven-subscriptions.md)  
+## <a name="see-also"></a>Consulte também  
+[Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
+
+

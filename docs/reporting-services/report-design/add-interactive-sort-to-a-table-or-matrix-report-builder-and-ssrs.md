@@ -1,26 +1,31 @@
 ---
-title: "Adicionar classifica&#231;&#227;o interativa a uma tabela ou matriz (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10121"
-  - "sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1"
+title: "Adicionar classificação interativa a uma tabela ou matriz (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10121"
+- sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ab2138bdee0abc064ae1fabb06ef04ed3c490170
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Adicionar classifica&#231;&#227;o interativa a uma tabela ou matriz (Construtor de Relat&#243;rios e SSRS)
+# <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Adicionar classificação interativa a uma tabela ou matriz (Construtor de Relatórios e SSRS)
   Adicione botões de classificação interativa para permitir que os usuários alterem a ordem de classificação de linhas e colunas em tabelas e matrizes. Esse recurso só é suportado em formatos de renderização que dão suporte à interação do usuário, como o HTML.  
   
  Ao criar um botão de classificação interativa, você deve especificar o que classificar, pelo que classificar e o escopo ao qual aplicar a classificação. Por exemplo, você pode classificar linhas de detalhes pelo sobrenome do cliente, valores do grupo de subcategorias dentro de um grupo de categorias por vendas ou valores de grupos de categorias e subcategorias combinados por totais.  
@@ -44,7 +49,7 @@ caps.handback.revision: 7
 ##  <a name="SortingDetailRows"></a> Classificando linhas de detalhes para um tabela sem grupos  
  Adicione um botão de classificação interativa a um cabeçalho de coluna para permitir que um usuário clique no cabeçalho da coluna e classifique as linhas de detalhes em uma tabela pelo valor exibido naquela coluna.  
   
-#### Para adicionar um botão de classificação interativa a um cabeçalho de coluna para classificar a tabela pelo valor  
+#### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-the-table-by-value"></a>Para adicionar um botão de classificação interativa a um cabeçalho de coluna para classificar a tabela pelo valor  
   
 1.  No modo de exibição de Design do relatório, em uma tabela sem grupos, clique com o botão direito do mouse na caixa de texto no cabeçalho da coluna ao qual você deseja adicionar um botão de classificação interativa e clique em **Propriedades da Caixa de Texto**.  
   
@@ -62,12 +67,12 @@ caps.handback.revision: 7
   
  Para verificar a ação de classificação, clique em **Executar** para visualizar o relatório e clique nos botões de classificação interativa.  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
+ ![Ícone de seta usado com de volta para o link superior](../../analysis-services/instances/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior") [voltar ao início](#BackToTop)  
   
 ##  <a name="SortingTopLevelParent"></a> Classificando um grupo de linhas pai de nível superior para um tabela ou matriz  
  Adicione um botão de classificação interativa a um cabeçalho de coluna para permitir que um usuário clique no cabeçalho da coluna e classifique as linhas do grupo pai em uma tabela ou matriz pelo valor exibido naquela coluna. A ordem dos grupos filho permanece inalterada.  
   
-#### Para adicionar um botão de classificação interativa a um cabeçalho de coluna para classificar grupos  
+#### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-groups"></a>Para adicionar um botão de classificação interativa a um cabeçalho de coluna para classificar grupos  
   
 1.  Em uma tabela ou matriz, no modo de exibição de Design do relatório, clique com o botão direito do mouse na caixa de texto no cabeçalho da coluna do grupo ao qual você deseja adicionar um botão de classificação interativa e clique em **Propriedades da Caixa de Texto**.  
   
@@ -86,12 +91,12 @@ caps.handback.revision: 7
   
  Para verificar a ação de classificação, clique em **Executar** para visualizar o relatório e clique nos botões de classificação interativa.  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
+ ![Ícone de seta usado com de volta para o link superior](../../analysis-services/instances/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior") [voltar ao início](#BackToTop)  
   
 ##  <a name="SortingChildGroups"></a> Classificando grupos filho ou linhas de detalhes de um grupo  
  Adicione um botão de classificação interativa a uma linha de cabeçalho de grupo para permitir que os usuários classifiquem os valores de um grupo filho de um grupo pai ou classifiquem as linhas de detalhes do grupo filho interno.  
   
-#### Para adicionar um botão de classificação interativa a uma caixa de texto em um cabeçalho de linha de grupo para classificar grupos filho ou linhas de detalhes  
+#### <a name="to-add-an-interactive-sort-button-to-a-text-box-in-a-group-row-header-to-sort-child-groups-or-detail-rows"></a>Para adicionar um botão de classificação interativa a uma caixa de texto em um cabeçalho de linha de grupo para classificar grupos filho ou linhas de detalhes  
   
 1.  No modo de exibição de Design do relatório, clique com o botão direito do mouse na caixa de texto na linha do cabeçalho do grupo ao qual você deseja adicionar um botão de classificação interativa e clique em **Propriedades da Caixa de Texto**.  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 7
   
  Para verificar a ação de classificação, clique em **Executar** para visualizar o relatório e clique nos botões de classificação interativa.  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
+ ![Ícone de seta usado com de volta para o link superior](../../analysis-services/instances/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior") [voltar ao início](#BackToTop)  
   
 ##  <a name="SortingMultipleRowGroups"></a> Classificando linhas com base em uma expressão de grupo complexa  
  Adicione um botão de classificação interativa a um cabeçalho de coluna para permitir que um usuário clique no cabeçalho da coluna e classifique os grupos pai e filho combinados. Para obter esse efeito, é necessário alterar a expressão de grupo para que seja uma composição dos dois grupos. Por exemplo, suponha que uma matriz exibe totais de inventário de uma loja de itens agrupados por cor e tamanho. Para classificar as linhas com base na combinação de cor e tamanho, em vez de ter um grupo separado para cor e outro para tamanho, é possível definir um grupo com base na combinação de cor e tamanho. Para obter mais informações sobre como definir expressões de grupo, consulte [Exemplos de expressões de grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
@@ -118,7 +123,7 @@ caps.handback.revision: 7
   
  Normalmente, ao classificar linhas com base em vários grupos, você deseja ver os totais das linhas classificadas, independentemente dos grupos de colunas. Neste procedimento, nenhum grupo de colunas é usado. Você começa adicionando uma matriz e removendo o grupo de colunas padrão. Como alternativa, você pode começar adicionando uma tabela e removendo o grupo de detalhes.  
   
-#### Para adicionar um botão de classificação interativa a um cabeçalho de coluna para classificar vários grupos  
+#### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-multiple-groups"></a>Para adicionar um botão de classificação interativa a um cabeçalho de coluna para classificar vários grupos  
   
 1.  Na exibição de design do relatório, adicione uma matriz.  
   
@@ -132,7 +137,7 @@ caps.handback.revision: 7
   
 5.  Em **Nome**, substitua o nome padrão por um nome que especifique os vários grupos pelos quais você deseja agrupar.  
   
-6.  Em **Expressões de grupo**, em **Agrupar em**, clique no botão Expressão (**fx**) para abrir a caixa de diálogo **Expressão**.  
+6.  Em **Expressões de grupo**, em **Agrupar em**, clique no botão Expressão (**fx**) para abrir a caixa de diálogo **Expressão** .  
   
 7.  Digite a expressão que especifica todos os campos pelos quais você deseja agrupar. Por exemplo, a expressão de grupo a seguir combina um campo denominado Cor e um campo denominado Tamanho: `=Fields!Color.Value & Fields!Size.Value`.  
   
@@ -162,18 +167,18 @@ caps.handback.revision: 7
   
      Você adicionou o botão de classificação à caixa de texto.  
   
-16. (Opcional) Você pode suprimir valores duplicados nas colunas que exibem valores de grupo. Na superfície de design de relatório, clique na caixa de texto que exibe o valor do qual você deseja ocultar valores repetidos. No painel Propriedades, role até **HideDuplicates** e, na lista suspensa, selecione o nome do conjunto de dados que está vinculado a esta matriz.  
+16. (Opcional) Você pode suprimir valores duplicados nas colunas que exibem valores de grupo. Na superfície de design de relatório, clique na caixa de texto que exibe o valor do qual você deseja ocultar valores repetidos. No painel Propriedades, role até **HideDuplicates**e, na lista suspensa, selecione o nome do conjunto de dados que está vinculado a esta matriz.  
   
  Para verificar a ação de classificação, clique em **Executar** para visualizar o relatório e clique no botão de classificação interativa. A matriz é classificada pelos valores combinados da expressão de grupo, embora cada valor individual seja exibido em sua própria coluna.  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
+ ![Ícone de seta usado com de volta para o link superior](../../analysis-services/instances/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior") [voltar ao início](#BackToTop)  
   
 ##  <a name="SynchronizingSortOrder"></a> Sincronizando a ordem de classificação para várias regiões de dados  
  Adicione um botão de classificação interativa que permita que um usuário clique em um botão de classificação e classifique várias regiões de dados. Ao criar um botão de classificação interativa, é possível especificar se a classificação deve ser sincronizada para várias regiões de dados com base no mesmo conjunto de dados do relatório. Por exemplo, um relatório poder incluir uma matriz e um gráfico que exibem os dados graficamente. Quando um usuário altera a ordem de classificação das linhas na matriz, o gráfico exibe a mesma ordem de classificação automaticamente.  
   
  Para sincronizar a ordem de classificação, você deve usar expressões de classificação idênticas para as regiões de dados ou grupos a serem classificados e definir o escopo da classificação para que seja um ancestral mútuo das duas regiões de dados. O ancestral mútuo pode ser o conjunto de dados ao qual as duas regiões de dados estão vinculadas ou uma região contentora de dados dentro da qual as duas regiões de dados aparecem. Por exemplo, assuma que um relatório tem uma matriz e um gráfico que exibem dados do mesmo conjunto de dados e que estão contidos em uma lista. Para sincronizar a ação de classificação, você deve especificar a classificação interativa em uma coluna na matriz e definir o escopo para a lista. Quando o usuário classifica a matriz, o gráfico também é classificado.  
   
-#### Para sincronizar a ordem de classificação com um gráfico para um botão de classificação interativa em uma região de dados da matriz  
+#### <a name="to-synchronize-sort-order-with-a-chart-for-an-interactive-sort-button-on-a-matrix-data-region"></a>Para sincronizar a ordem de classificação com um gráfico para um botão de classificação interativa em uma região de dados da matriz  
   
 1.  Na exibição de design do relatório, adicione uma matriz ao relatório.  
   
@@ -215,9 +220,9 @@ caps.handback.revision: 7
   
  Para verificar a ação de classificação, clique em **Executar** para visualizar o relatório e clique no botão de classificação interativa. A matriz é classificada pelos valores combinados da expressão de grupo, embora cada valor individual seja exibido em sua própria coluna.  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
+ ![Ícone de seta usado com de volta para o link superior](../../analysis-services/instances/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior") [voltar ao início](#BackToTop)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Classificação interativa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
  [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   

@@ -1,41 +1,46 @@
 ---
-title: "Assinaturas e entrega (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "assinaturas [Reporting Services], distribuindo relatórios"
-  - "relatórios [Reporting Services], distribuindo"
-  - "distribuindo relatórios [Reporting Services]"
-  - "relatórios publicados [Reporting Services], distribuindo"
-  - "enviando relatórios"
-  - "compartilhando relatórios"
-  - "entregando relatórios [Reporting Services]"
-  - "distribuindo relatórios [Reporting Services], assinaturas"
-  - "assinaturas [Reporting Services], sobre assinaturas"
-  - "assinaturas [Reporting Services]"
+title: Assinaturas e entrega (Reporting Services) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [Reporting Services], report distribution
+- reports [Reporting Services], distributing
+- distributing reports [Reporting Services]
+- published reports [Reporting Services], distributing
+- sending reports
+- sharing reports
+- delivering reports [Reporting Services]
+- distributing reports [Reporting Services], subscriptions
+- subscriptions [Reporting Services], about subscriptions
+- subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 caps.latest.revision: 56
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 56
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 5ecd364a199f122c98471f112e153d98d2778852
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Assinaturas e entrega (Reporting Services)
+# <a name="subscriptions-and-delivery-reporting-services"></a>Assinaturas e entrega (Reporting Services)
   Uma assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é uma configuração que fornece um relatório em um momento específico ou em resposta a um evento, em um formato de arquivo que você especificar. Por exemplo, toda quarta-feira, salvar o relatório MonthlySales.rdl como um documento do Microsoft Word em um compartilhamento de arquivo. As assinaturas podem ser usadas para agendar e automatizar a entrega de um relatório e com um conjunto específico de valores de parâmetros do relatório.  
   
  Você pode criar várias assinaturas para um único relatório e variar as opções de assinatura. Por exemplo, você pode especificar valores de parâmetros diferentes para produzir três versões de um relatório, como um relatório de vendas da região Ocidental, da região Oriental e de todas as vendas.  
   
- ![exemplo de fluxo de assinatura ssrs](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "exemplo de fluxo de assinatura ssrs")  
+ ![fluxo de assinatura ssrs exemplo](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "fluxo de assinatura do ssrs de exemplo")  
   
- As assinaturas não estão disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ As assinaturas não estão disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  **Neste tópico:**  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 56
   
 -   [Monitorar assinaturas do Reporting Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
   
--   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)  
+-   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
 ##  <a name="bkmk_subscription_scenarios"></a> Cenários de assinatura e de entrega  
  Para cada assinatura, você pode configurar opções de entrega, e as opções disponíveis são determinadas pela extensão de entrega escolhida. Uma extensão de entrega é um módulo que dá suporte a alguma maneira de distribuição. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui várias extensões de entrega. Também a extensão de entrega que pode estar disponível por outros fornecedores.  
@@ -102,7 +107,7 @@ caps.handback.revision: 56
 |Requisito|Description|  
 |-----------------|-----------------|  
 |Permissões|Você deve ter acesso ao relatório. Antes de assinar um relatório, você deve ter permissão para exibi-lo.<br /><br /> Para servidores de relatório do modo Nativo, as atribuições de função a seguir afetam as assinaturas:<br /><br /> -   A tarefa “Gerenciar assinaturas individuais” permite que os usuários criem, modifiquem e excluam assinaturas para um relatório específico. Nas funções predefinidas, essa tarefa faz parte das funções Navegador e Construtor de Relatórios. As atribuições de função que incluem essa tarefa permitem que um usuário gerencie somente as assinaturas que ele cria.<br />-   A tarefa “Gerenciar todas as assinaturas” permite que os usuários acessem e modifiquem todas as assinaturas. Essa tarefa é obrigatória para criar assinaturas controladas por dados. Em funções predefinidas, a função Gerenciador de Conteúdo inclui essa tarefa.|  
-|Credenciais armazenadas|Para criar uma assinatura, o relatório deve usar credenciais armazenadas ou nenhuma credencial para recuperar dados em tempo de execução. Você não pode assinar um relatório que é configurado para usar as credenciais representadas ou delegadas do usuário atual para conectar-se a uma fonte de dados externa. As credenciais armazenadas podem ser uma conta do Windows ou uma conta de usuário de banco de dados. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> É necessário ter permissão para exibir o relatório e criar assinaturas individuais. É necessário habilitar**Eventos Agendados e Entrega de Relatórios** no servidor de relatórios. Para saber mais, consulte [old_Criar e gerenciar assinaturas de servidores de relatório no modo Nativo](http://msdn.microsoft.com/pt-br/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).|  
+|Credenciais armazenadas|Para criar uma assinatura, o relatório deve usar credenciais armazenadas ou nenhuma credencial para recuperar dados em tempo de execução. Você não pode assinar um relatório que é configurado para usar as credenciais representadas ou delegadas do usuário atual para conectar-se a uma fonte de dados externa. As credenciais armazenadas podem ser uma conta do Windows ou uma conta de usuário de banco de dados. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> É necessário ter permissão para exibir o relatório e criar assinaturas individuais. É necessário habilitar**Eventos Agendados e Entrega de Relatórios** no servidor de relatórios. Para saber mais, consulte [old_Criar e gerenciar assinaturas de servidores de relatório no modo Nativo](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).|  
 |Valores dependentes do usuário em um relatório|Somente para assinaturas padrão, você pode criar assinaturas para relatórios que incorporam informações da conta de usuário em um filtro ou como texto que aparece no relatório. No relatório, o nome da conta de usuário é especificado por uma expressão **User!UserID** resolvida no usuário atual. Ao criar uma assinatura, o usuário que cria a assinatura é considerado o usuário atual.|  
 |Nenhuma segurança do item de modelo|Não é possível assinar um relatório do Construtor de Relatórios que use um modelo como uma fonte de dados se o modelo contiver configurações de segurança do item de modelo. Somente relatórios que usam a segurança do item de modelo são incluídos nesta restrição.|  
 |Valores de parâmetro|Se o relatório usar parâmetros, um valor de parâmetro deverá ser especificado com o próprio relatório ou na assinatura definida. Se valores padrão forem definidos no relatório, você poderá definir o valor de parâmetro a ser usado como o padrão.|  
@@ -146,15 +151,15 @@ caps.handback.revision: 56
   
  A extensão de entrega renderiza o relatório no formato definido na assinatura e, em seguida, entrega o relatório ou a notificação ao destino especificado. Se não for possível entregar um relatório, uma entrada será registrada no arquivo de log do servidor de relatório. Se desejar oferecer suporte para operações de repetição, configure o servidor de relatório para tentar entregar novamente caso a primeira tentativa falhe.  
   
-### Processando uma assinatura padrão  
+### <a name="processing-a-standard-subscription"></a>Processando uma assinatura padrão  
  As assinaturas padrão produzem uma instância de um relatório. O relatório é entregue em uma única pasta compartilhada ou nos endereços de email especificados na assinatura. O layout e os dados do relatório não variam. Se o relatório usar parâmetros, uma assinatura padrão será processada com um único valor para cada parâmetro do relatório.  
   
-### Processando uma assinatura controlada por dados  
+### <a name="processing-a-data-driven-subscription"></a>Processando uma assinatura controlada por dados  
  As assinaturas controladas por dados podem produzir muitas instâncias de relatório que são entregues a vários destinos. O layout do relatório não varia, mas os dados podem variar se os valores de parâmetro forem transmitidos a partir de um conjunto de resultados de assinante. As opções de entrega que afetam a renderização do relatório e a anexação ou o vínculo do relatório ao email também podem variar dependendo do assinante quando os valores são transmitidos a partir do conjunto de linhas.  
   
  As assinaturas controladas por dados podem produzir um grande número de entregas. O servidor de relatório cria um envio para cada linha do conjunto que é retornado da consulta de assinatura.  
   
-### Características de entrega de relatório  
+### <a name="report-delivery-characteristics"></a>Características de entrega de relatório  
  Os relatórios que são entregues por meio de assinaturas padrão normalmente são renderizados como relatórios estáticos. Esses relatórios são baseados no instantâneo de execução de relatório mais recente ou são gerados como um relatório estático para concluir uma entrega. Se a opção **Incluir Link** for selecionada em uma assinatura para um relatório executado sob demanda, o servidor de relatório executará o relatório quando você clicar no hiperlink.  
   
 > [!NOTE]  
@@ -162,7 +167,7 @@ caps.handback.revision: 56
   
  Os relatórios que são entregues por uma assinatura controlada por dados podem ser gerados novamente enquanto a assinatura está sendo processada. O servidor de relatório não observa uma instância específica de um relatório ou seu conjunto de dados para concluir uma assinatura controlada por dados. Se a assinatura usar valores de parâmetro diferentes para assinantes diferentes, o servidor de relatório gerará o relatório novamente para produzir o resultado necessário. Se os dados subjacentes forem atualizados após a primeira cópia do relatório ser criada e entregue, os usuários que obtiverem relatórios posteriormente no processo poderão ver dados baseados em um conjunto de dados diferente. Você pode usar o relatório executado como um instantâneo para verificar se a mesma instância do relatório é entregue a todos os assinantes. No entanto, se uma atualização agendada do instantâneo ocorrer durante o processamento da assinatura, os usuários ainda poderão obter dados diferentes em seus relatórios.  
   
-### Acionando o processamento de assinaturas  
+### <a name="triggering-subscription-processing"></a>Acionando o processamento de assinaturas  
  O servidor de relatório usa dois tipos de eventos para acionar o processamento de assinaturas: um evento controlado por tempo que é especificado em uma agenda ou um evento de atualização de instantâneo.  
   
  Um gatilho controlado por tempo usa uma agenda específica do relatório ou uma agenda compartilhada para especificar quando uma assinatura deve ser executada. Para relatórios sob demanda e em cache, as agendas são a única opção de gatilho.  
@@ -172,7 +177,7 @@ caps.handback.revision: 56
 ##  <a name="bkmk_code"></a> Controle programático de assinaturas  
  O modelo de objeto [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permite que você audite e controle programaticamente as assinaturas e o processamento de assinaturas.  Veja a seguir alguns exemplos e uma introdução:  
   
--   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)  
+-   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
 -   Para obter exemplos de como usar o PowerShell para habilitar e desabilitar assinaturas, consulte [Disable or Pause Report and Subscription Processing](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
   
@@ -180,10 +185,11 @@ caps.handback.revision: 56
   
 -   Para obter um exemplo de script do PowerShell para listar todas as assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuradas para usar a **Conta de compartilhamento de arquivos**, consulte [Configurações de assinatura e uma conta de compartilhamento de arquivos &#40;Configuration Manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Agendas](../../reporting-services/subscriptions/schedules.md)   
  [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Monitorar assinaturas do Reporting Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
   
   
+

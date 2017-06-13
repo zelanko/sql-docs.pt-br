@@ -1,0 +1,1 @@
+**Aplica-se a:**![Sim](media/yes.png)SQL Server Analysis Services (começando com 2016)![Sim](media/yes.png)Azure Analysis Services

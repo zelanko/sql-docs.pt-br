@@ -1,23 +1,28 @@
 ---
-title: "&#193;reas da regi&#227;o de dados Tablix (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Áreas da região de dados Tablix (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1f264426872fea87eec1da8ab17243bbe82ae76
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# &#193;reas da regi&#227;o de dados Tablix (Construtor de Relat&#243;rios e SSRS)
+# <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Áreas da região de dados Tablix (Construtor de Relatórios e SSRS)
  Em um [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] relatório paginado, uma região de dados tablix tem quatro áreas que contêm células tablix:   
 * O canto  
 * A área do grupo de linhas  
@@ -28,7 +33,7 @@ As células de cada área têm uma função distinta. Você adiciona células à
   
 Na superfície de design, linhas pontilhadas denotam as quatro áreas de uma região de dados Tablix selecionada. A figura a seguir mostra as áreas de uma região de Tablix com grupos de linhas aninhados com base na categoria e na subcategoria, grupos de colunas aninhados com base na geografia e em país/região e um grupo de colunas adjacente com base no ano.  
   
- ![Áreas da região de dados Tablix](../../reporting-services/report-design/media/rs-tablixareas.gif "Áreas da região de dados Tablix")  
+ ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
   
  A lista seguinte descreve cada área:  
   
@@ -44,11 +49,11 @@ Na superfície de design, linhas pontilhadas denotam as quatro áreas de uma reg
   
  A figura seguinte mostra a região de dados Tablix em Visualização.  
   
- ![Visualização, canto de Tablix, linha & grupos de colunas, corpo](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "Visualização, canto de Tablix, linha & grupos de colunas, corpo")  
+ ![Grupos de visualização, canto de Tablix, linha e coluna, corpo](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "grupos de visualização, canto de Tablix, linha e coluna, corpo")  
   
  A área de grupo de linhas exibe duas instâncias de grupo de categoria para Clothing e Components. O grupo de colunas exibe uma instância de grupo de geografia para North America, com duas instâncias de grupo país/região aninhadas para Canada (CA) e United States (US). Além disso, a coluna adjacente exibe duas instâncias de grupo de ano para 2003 e 2004. A linha da coluna Total exibe os totais da linha; a linha de totais que se repete com o grupo da categoria mostra os totais das subcategorias, e a linha de total geral exibe os totais das categorias uma vez para essa região de dados.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Tutoriais do Construtor de Relatórios](../../reporting-services/report-builder-tutorials.md)   
  [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   

@@ -1,24 +1,29 @@
 ---
-title: "Tutorial: Adicionar um gr&#225;fico de colunas ao relat&#243;rio (Construtor de Relat&#243;rios) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Tutorial: Adicionar um gráfico de colunas ao relatório (construtor de relatórios) | Microsoft Docs"
+ms.custom: 
+ms.date: 09/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutorial: Adicionar um gr&#225;fico de colunas ao relat&#243;rio (Construtor de Relat&#243;rios)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de colunas ao relatório (Construtor de Relatórios)
 Neste tutorial, você cria um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] com um gráfico de colunas, exibindo uma série como um conjunto de barras verticais agrupadas por categoria. 
 
 Gráficos de colunas são úteis para:  
@@ -35,7 +40,7 @@ A ilustração seguinte mostra o gráfico de coluna que você criará, com uma m
   
 Tempo estimado para concluir este tutorial: 15 minutos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
 Para obter informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Chart"></a>1. Criar um relatório de gráfico no Assistente de Gráfico  
@@ -44,7 +49,7 @@ Nesta seção, você aprende a usar o Assistente de Gráfico para criar um conju
 > [!NOTE]  
 > A consulta deste tutorial contém os valores de dados para que ela não precise de uma fonte de dados externa. Isso torna a consulta bastante longa. Em um ambiente empresarial, uma consulta não conteria os dados. Isso é apenas para fins de aprendizado.  
   
-### Para criar um relatório de gráfico  
+### <a name="to-create-a-chart-report"></a>Para criar um relatório de gráfico  
   
 1.  [Inicie o Construtor de Relatórios](../reporting-services/report-builder/start-report-builder.md) no computador, no portal da Web do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou no modo integrado do SharePoint.  
   
@@ -56,9 +61,9 @@ Nesta seção, você aprende a usar o Assistente de Gráfico para criar um conju
   
 3.  No painel direito, clique em **Assistente de Gráfico**.  
   
-4.  Na página **Escolher um conjunto de dados**, clique em **Criar um conjunto de dados** e em **Avançar**.  
+4.  Na página **Escolher um conjunto de dados**, clique em **Criar um conjunto de dados**e em **Avançar**.  
   
-5.  Na página **Escolher uma conexão com uma fonte de dados**, selecione uma fonte de dados existente ou procure o servidor de relatório, selecione uma fonte de dados e clique em **Avançar**. Talvez seja necessário inserir um nome de usuário e uma senha.  
+5.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório, selecione uma fonte de dados e clique em **Avançar**. Talvez seja necessário inserir um nome de usuário e uma senha.  
   
     > [!NOTE]  
     > A fonte de dados escolhida não tem importância, contanto que você tenha permissões suficientes. Você não obterá dados da fonte de dados. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -93,11 +98,11 @@ Nesta seção, você aprende a usar o Assistente de Gráfico para criar um conju
 ## <a name="ChartType"></a>2. Escolher o tipo de gráfico  
 Você pode escolher um dentre vários tipos de gráficos predefinidos e modificar o gráfico depois de concluir o assistente.  
   
-### Para adicionar um gráfico de colunas  
+### <a name="to-add-a-column-chart"></a>Para adicionar um gráfico de colunas  
   
-1.  Na página **Escolher um tipo de gráfico**, o gráfico de colunas é o tipo de gráfico padrão. Clique em **Avançar**.  
+1.  Na página **Escolher um tipo de gráfico** , o gráfico de colunas é o tipo de gráfico padrão. Clique em **Avançar**.  
   
-2.  Na página **Organizar campos de gráfico**, arraste o campo SalesDate até **Categorias**. As categorias são exibidas no eixo horizontal.  
+2.  Na página **Organizar campos de gráfico** , arraste o campo SalesDate até **Categorias**. As categorias são exibidas no eixo horizontal.  
   
 3.  Arraste o campo Sales até **Valores**. A caixa **Valores** exibe Sum(Sales) porque a soma do valor total das vendas é agregada para cada data. Os valores são exibidos no eixo vertical.  
   
@@ -126,7 +131,7 @@ Por padrão, o eixo horizontal exibe valores em um formato geral que é dimensio
   
 3.  Na guia **Número**, em **Categoria**, selecione **Data**.  
   
-5.  Na caixa **Tipo**, selecione **31 de janeiro de 2000**.  
+5.  Na caixa **Tipo** , selecione **31 de janeiro de 2000**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -138,7 +143,7 @@ A data é exibida no formato selecionado. O gráfico ainda não rotula cada cate
   
 É possível personalizar a exibição de rótulo como o giro dos rótulos e a especificação do intervalo.  
   
-## 4. Girar os rótulos de eixo no eixo horizontal  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Girar os rótulos de eixo no eixo horizontal  
   
 1.  Alterne para a exibição de design de relatório.  
   
@@ -171,7 +176,7 @@ A legenda é criada automaticamente de categoria e dados de série. Você pode m
   
 3.  Em **Layout e Posição**, selecione uma posição diferente. Por exemplo, selecione a opção intermediária inferior.  
   
-    Quando a legenda estiver posicionada na parte superior ou inferior de um gráfico, o layout da legenda será alterado de vertical para horizontal. Você pode selecionar um layout diferente na caixa **Layout**.  
+    Quando a legenda estiver posicionada na parte superior ou inferior de um gráfico, o layout da legenda será alterado de vertical para horizontal. Você pode selecionar um layout diferente na caixa **Layout** .  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -218,7 +223,7 @@ Por padrão, o eixo vertical exibe valores em um formato geral que é dimensiona
 
     ![report-builder-column-chart-format-y-axis](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## 8. Mostrar todos os rótulos no eixo horizontal (x)
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Mostrar todos os rótulos no eixo horizontal (x)
 
 Observe que apenas alguns dos rótulos no eixo x são mostrados. Nesta seção, você define uma propriedade no painel Propriedades para mostrar todas elas.
 
@@ -244,7 +249,7 @@ Uma média móvel é uma média dos dados na série, calculada ao longo do tempo
   
 1.  Alterne para a exibição de design de relatório.  
   
-2.  Clique duas vezes no gráfico para exibir o painel **Dados do Gráfico**.  
+2.  Clique duas vezes no gráfico para exibir o painel **Dados do Gráfico** .  
   
 3.  Clique com o botão direito do mouse no campo **[Sum(Sales)]** na área **Valores** e clique em **Adicionar Série Calculada**.  
 
@@ -254,7 +259,7 @@ Uma média móvel é uma média dos dados na série, calculada ao longo do tempo
   
 5.  Em **Definir Parâmetros da Fórmula**, em **Período**, selecione **4**.  
   
-6.  Na guia **Borda**, em **Largura da linha**, selecione **3pt**.  
+6.  Na guia **Borda** , em **Largura da linha**, selecione **3pt**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -272,7 +277,7 @@ O gráfico exibe uma linha que mostra a média móvel para o total de vendas por
   
 3.  Digite **Gráfico de Vendas**, pressione ENTER e digite **Janeiro a dezembro de 2015**, da seguinte forma:  
   
-    **Gráfico de vendas**  
+    **Gráfico de Vendas**  
   
     **Janeiro a dezembro de 2015**  
   
@@ -288,7 +293,7 @@ O gráfico exibe uma linha que mostra a média móvel para o total de vendas por
   
 ## <a name="Save"></a>11. Salvar o relatório  
   
-### Para salvar o relatório  
+### <a name="to-save-the-report"></a>Para salvar o relatório  
   
 1.  Alterne para a exibição de design de relatório.  
   
@@ -300,10 +305,12 @@ O gráfico exibe uma linha que mostra a média móvel para o total de vendas por
   
 4.  Clique em **Salvar**.  
   
-## Próximas etapas  
+## <a name="next-steps"></a>Próximas etapas  
 Você concluiu com êxito o tutorial Adicionando um gráfico de colunas ao seu relatório. Para saber mais sobre gráficos, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 -    [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md) 
 -    [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

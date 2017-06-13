@@ -1,31 +1,36 @@
 ---
-title: "Carregar arquivos em uma pasta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "publicando relatórios [Reporting Services], carregando arquivos"
-  - "relatórios [Reporting Services], publicando"
-  - "carregando relatórios [Reporting Services]"
-  - "carregando arquivos [Reporting Services]"
-  - "arquivos [Reporting Services], carregando"
-  - "arquivos [Reporting Services]"
-  - "pastas [Reporting Services], carregando arquivos para"
+title: Carregar arquivos em uma pasta | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publishing reports [Reporting Services], uploading files
+- reports [Reporting Services], publishing
+- uploading reports [Reporting Services]
+- uploading files [Reporting Services]
+- files [Reporting Services], uploading
+- files [Reporting Services]
+- folders [Reporting Services], uploading files to
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 42
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Carregar arquivos em uma pasta
+# <a name="upload-files-to-a-folder"></a>Carregar arquivos em uma pasta
   Você pode carregar arquivos do sistema de arquivos e armazená-los como itens gerenciados em um banco de dados do servidor de relatório. O que acontece quando o arquivo é carregado depende do tipo de arquivo.  
   
 -   Carregar um arquivo .rdl é equivalente a publicar um relatório.  
@@ -39,13 +44,13 @@ caps.handback.revision: 42
   
  Visualmente, os arquivos carregados em um banco de dados do servidor de relatório são representados na hierarquia de pastas com os seguintes ícones.  
   
- ![ícone de relatório](../../reporting-services/report-server/media/hlp-16doc.png "ícone de relatório")  
+ ![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")  
 ícone de relatório  
   
- ![Ícone de modelo](../../reporting-services/report-server/media/model-icon.png "Ícone de modelo")  
+ ![Ícone de modelo](../../reporting-services/report-server/media/model-icon.gif "Model icon")  
 ícone de modelo de relatório  
   
- ![ícone de recurso genérico](../../reporting-services/report-server/media/hlp-16file.png "ícone de recurso genérico")  
+ ![ícone de recurso genérico](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")  
 ícone de recurso genérico  
   
  Ao ser carregado, o arquivo sempre é colocado na pasta que está selecionada atualmente. Você pode navegar até a pasta na qual deseja incluir o item primeiro ou carregar um arquivo e, em seguida, movê-lo para um local final posteriormente.  
@@ -58,8 +63,8 @@ caps.handback.revision: 42
 |Carregar qualquer arquivo como um objeto binário|Gerenciar recursos|  
 |Exibir o conteúdo de uma pasta|Exibir recursos, exibir relatórios|  
   
-## Consulte também  
- [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+## <a name="see-also"></a>Consulte também  
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tarefas e permissões](../../reporting-services/security/tasks-and-permissions.md)   
  [Carregar um arquivo ou relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  

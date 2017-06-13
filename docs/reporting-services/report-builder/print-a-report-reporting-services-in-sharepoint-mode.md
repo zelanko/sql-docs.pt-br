@@ -1,26 +1,31 @@
 ---
-title: "Imprimir um relat&#243;rio (Reporting Services no modo do SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "impressão de relatórios, aplicativo Web do SharePoint"
-  - "impressão de relatórios"
+title: "Imprimir um relatório (Reporting Services no modo do SharePoint) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- printing reports, SharePoint Web application
+- printing reports
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f89c8f0d330561aacd678e4556fdaf2910b5dcc7
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Imprimir um relat&#243;rio (Reporting Services no modo do SharePoint)
+# <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Imprimir um relatório (Reporting Services no modo do SharePoint)
   Para um servidor de relatório que é executado no modo do SharePoint, há três maneiras de imprimir um relatório em um aplicativo Web do SharePoint:  
   
 -   **Em um site do SharePoint,** escolha **Imprimir** no menu **Ações** que é exibido na barra de ferramentas do relatório quando você abre o relatório. Isso oferece a funcionalidade de impressão do Reporting Services, que inclui uma caixa de diálogo padrão para **Imprimir** usada para selecionar uma impressora, especificar páginas e margens e visualizar o relatório. Esse recurso de impressão destina-se a ser usado no lugar do comando Imprimir do menu Arquivo de um navegador. Quando você imprime relatórios dessa maneira, eles são impressos como foram criados, sem os elementos adicionais que aparecem em impressões de páginas da Web.  
@@ -36,7 +41,7 @@ caps.handback.revision: 11
   
  Os autores de relatórios podem criar relatórios especialmente para saída de impressão ou para um formato de aplicativo específico. Em virtude da forma como a paginação é implementada para diferentes formatos de aplicativo, talvez você não consiga obter resultados de saída de impressão otimizados para todos os relatórios em todos os formatos de exportação. Em contraste com relatórios que são criados para saída de impressão, as páginas de relatório na tela são criadas para acomodar quantidades variáveis de dados. Por exemplo, os relatórios que incluem uma matriz podem fazer com que uma página cresça tanto horizontal quanto verticalmente, dependendo de como você expande as linhas e colunas. Ao imprimir um relatório de tamanho variável, um usuário que não expandir uma matriz obterá resultados de impressão diferentes do um usuário que a expandir. Para a maioria dos relatórios exportados, as impressões de relatório incluem tudo que é visível no relatório, conforme visualizado pelo usuário em um monitor de computador.  
   
-### Como imprimir relatórios no menu Ações  
+### <a name="how-to-print-reports-from-the-actions-menu"></a>Como imprimir relatórios no menu Ações  
   
 1.  Abra o relatório.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 11
   
      Para exibir o relatório antes de imprimi-lo, clique no botão **Visualizar** . A primeira página do relatório é aberta em uma janela de visualização separada. Páginas adicionais ficam disponíveis quando o relatório é processado no servidor de relatórios. Um relatório visualizado é processado em formato EMF. É possível navegar até a página anterior ou a próxima chegando até a última, e o botão **Avançar** é desabilitado. Para modificar as margens de impressão na página de visualização, clique no botão **Margens** . A caixa de diálogo **Margens** será exibida. Configure as margens superior, inferior, direita e esquerda e clique em **OK**. A caixa de diálogo é fechada, e as configurações são armazenadas para a renderização da visualização e da impressão.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Habilitar e desabilitar a impressão do lado do cliente para Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   

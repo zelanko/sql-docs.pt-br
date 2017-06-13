@@ -1,23 +1,28 @@
 ---
-title: "Especificar o tamanho de um indicador usando uma express&#227;o (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Especifique o tamanho de um indicador usando uma expressão (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50bf03c9ad36de5e98451705aaae5c0afa79c70b
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Especificar o tamanho de um indicador usando uma express&#227;o (Construtor de Relat&#243;rios e SSRS)
+# <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>Especificar o tamanho de um indicador usando uma expressão (Construtor de Relatórios e SSRS)
   Além de cor, direção e forma, você pode usar tamanho para maximizar o impacto visual de indicadores.  
   
  Um indicador tem uma coleção de estados de indicador denominados IndicatorStates. A coleção IndicatorStates normalmente tem vários estados. Cada estado é um membro da coleção e é representado por um ícone. Juntos, os estados constituem a coleção IndicatorsStates.  
@@ -34,19 +39,19 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Para especificar o tamanho do ícone de indicador usando uma expressão  
+### <a name="to-specify-the-indicator-icon-size-using-an-expression"></a>Para especificar o tamanho do ícone de indicador usando uma expressão  
   
 1.  Clique no indicador que você deseja alterar.  
   
 2.  No painel Propriedades, localize a propriedade IndicatorStates.  
   
-     Se o painel Propriedades for organizado por categoria, você localizará IndicatorStates na categoria **Estados**.  
+     Se o painel Propriedades for organizado por categoria, você localizará IndicatorStates na categoria **Estados** .  
   
 3.  Clique no botão de reticências **(...)** ao lado de IndicatorStates. A caixa de diálogo **Editor de Coleções IndicatorState** será aberta.  
   
      Selecione todos os membros da coleção.  
   
-4.  Na lista **Propriedades de Multisseleção**, clique na seta para baixo ao lado de ScaleFactor e clique em **Expressão**.  
+4.  Na lista **Propriedades de Multisseleção** , clique na seta para baixo ao lado de ScaleFactor e clique em **Expressão**.  
   
 5.  Na caixa de diálogo **Expressão** , escreva a expressão.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 7
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

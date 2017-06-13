@@ -1,23 +1,28 @@
 ---
-title: "Imprimir relat&#243;rios (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Imprimir relatórios (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e57d90ca72920722ddcf16d5d5708a782db5a71f
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Imprimir relat&#243;rios (Construtor de Relat&#243;rios e SSRS)
+# <a name="print-reports-report-builder-and-ssrs"></a>Imprimir relatórios (Construtor de Relatórios e SSRS)
   Depois de salvar um relatório em um servidor de relatório, você pode exibir e imprimir o relatório de um navegador, do Gerenciador de Relatórios ou qualquer aplicativo usado para exibir um relatório exportado. Antes de salvar um relatório, você pode imprimi-lo quando o visualiza.  
   
  Todo o processamento de impressão é executado sob demanda e no computador cliente. Não existe funcionalidade de impressão no servidor que permita encaminhar um trabalho de impressão diretamente de um servidor de relatório para uma impressora conectada ao servidor Web. As impressoras e opções de impressão são selecionadas por usuários de relatórios individuais, usando uma caixa de diálogo **Imprimir** padrão.  
@@ -33,12 +38,12 @@ caps.handback.revision: 8
 3.  Para a maioria dos relatórios exportados, as impressões de relatório incluem tudo que é visível no relatório, conforme visualizado pelo usuário em um monitor de computador. O espaço em branco da superfície de design do relatório é preservado. Para adicionar ou remover páginas em branco adicionais horizontalmente, altere a largura de página do relatório.  
   
 > [!NOTE]  
->  As impressões de relatórios HTML só poderão incluir o conteúdo na primeira página se você estiver usando o comando Imprimir do navegador. Você pode obter resultados melhores se imprimir relatórios HTML usando o recurso de impressão do cliente [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obter mais informações, consulte [Imprimir relatórios em um navegador com o controle de impressão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md).  
+>  As impressões de relatórios HTML só poderão incluir o conteúdo na primeira página se você estiver usando o comando Imprimir do navegador. Você pode obter resultados melhores se imprimir relatórios HTML usando o recurso de impressão do cliente [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Imprimir relatórios em um navegador com o controle de impressão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
  [Imprimir relatórios em um navegador com o controle de impressão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
  Descreve como usar a impressão do lado do cliente para imprimir relatórios de seu navegador da Web ou Gerenciador de Relatórios.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 8
  [Imprimir um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
  Fornece instruções passo a passo sobre como imprimir um relatório, como controlar as margens em uma página e como especificar o tamanho do papel para os relatórios que serão renderizados por renderizadores de quebra de página não flexível: PDF, imagem ou impressão.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Imagens &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   

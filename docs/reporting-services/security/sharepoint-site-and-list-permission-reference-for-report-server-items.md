@@ -1,28 +1,33 @@
 ---
-title: "Refer&#234;ncia &#224; permiss&#227;o de listas e sites do SharePoint para itens do servidor de relat&#243;rio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "permissões [Reporting Services], modo integrado do SharePoint"
-  - "Integração do SharePoint [Reporting Services], permissões"
-  - "segurança [Reporting Services], modo integrado do SharePoint"
-  - "conjuntos de permissões [Reporting Services]"
+title: "Site do SharePoint e referência de permissão da lista de itens do servidor de relatório | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- security [Reporting Services], SharePoint integrated mode
+- permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca45a9fc4c37798983c4cc8956fbb27828a5ff01
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Refer&#234;ncia &#224; permiss&#227;o de listas e sites do SharePoint para itens do servidor de relat&#243;rio
+# <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Referência à permissão de listas e sites do SharePoint para itens do servidor de relatório
   Este tópico fornece uma referência das permissões no SharePoint que podem ser usadas para conceder acesso a operações do servidor de relatório para um servidor de relatório executado em modo integrado do SharePoint. Se você estiver criando níveis de permissão personalizados, este tópico poderá ajudá-lo a escolher as permissões a serem usadas.  
   
  O SharePoint fornece trinta e três permissões que podem ser usadas para controlar o acesso a conteúdos e operações. Algumas, mas não todas delas são aplicáveis a documentos e operações que envolvem um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Você pode usar as tabelas de referência de permissão deste artigo para saber quais permissões dão suporte a tarefas específicas de relatórios.  
@@ -41,7 +46,7 @@ caps.handback.revision: 14
 |-|  
 |[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo do SharePoint &#124; SharePoint 2010 e SharePoint 2013.|  
   
-## Permissões de lista  
+## <a name="list-permissions"></a>Permissões de lista  
  As permissões que você define na biblioteca que contém os itens de servidor de relatório determinam como os usuários acessam esses itens.  
   
 |Permissão|Description|F|C|V|Operação do servidor de relatório|  
@@ -58,7 +63,7 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  Outras permissões de lista incluem Substituir Check-out, Aprovar Itens e Exibir Páginas de Aplicativo. Essas permissões não são avaliadas pelo servidor de relatório. O servidor de relatório não lida com essas operações.  
   
-## Permissões de site  
+## <a name="site-permissions"></a>Permissões de site  
  As permissões de site determinam o acesso a operações de servidor de relatório não diretamente relacionadas a itens armazenados em uma biblioteca específica. Os exemplos incluem a criação e o gerenciamento de agendas compartilhadas, que podem ser usadas por itens em várias bibliotecas, e a configuração da Web Part do Visualizador de Relatórios, que pode ser usada em todo um site.  
   
 |Permissão|Description|F|C|V|Operação do servidor de relatório|  
@@ -72,8 +77,8 @@ caps.handback.revision: 14
 |Usar Interfaces Remotas|Usar as interfaces SOAP, Web DAV ou SharePoint Designer para acessar o site.|X|X|X|Usado para chamar o ponto de extremidade do proxy do URL para o servidor de relatório.|  
 |Abrir|Abrir um site, uma lista ou pasta para acessar itens nesse contêiner.|X|X|X|Ler propriedades de agendas e de itens.|  
   
-## Consulte também  
- [Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Comparar funções e tarefas no Reporting Services com permissões e grupos do SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

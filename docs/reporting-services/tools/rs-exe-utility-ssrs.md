@@ -1,47 +1,42 @@
 ---
-title: "RS.exe Utility (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "automatic report server tasks"
-  - "rs utility"
-  - "command prompt utilities [Reporting Services]"
-  - "report servers [Reporting Services], automating tasks"
-  - "command prompt utilities [SQL Server], rs"
-  - "scripts [Reporting Services], command prompt"
-  - "implantando relatórios [Reporting Services]"
+title: "Utilitário RS.exe (SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- automatic report server tasks
+- rs utility
+- command prompt utilities [Reporting Services]
+- report servers [Reporting Services], automating tasks
+- command prompt utilities [SQL Server], rs
+- scripts [Reporting Services], command prompt
+- deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: 56
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 56
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 70f9afea9e9fe495c66ac98ea8ec4f3e9b1e3a6d
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# RS.exe Utility (SSRS)
+# <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   O utilitário rs.exe processa o script que você fornece em um arquivo de entrada. Use esse utilitário para automatizar a implantação de servidor de relatório e tarefas de administração.  
   
 > [!NOTE]  
 >  A partir do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], o utilitário **rs** tem suporte nos servidores de relatório configurados para o modo integrado do SharePoint e em servidores configurados no modo nativo. As versões anteriores suportavam apenas configurações em modo nativo.  
   
- **Neste tópico:**  
-  
--   [Local do arquivo](#bkmk_filelocation)  
-  
--   [Argumentos](#bkmk_arguments)  
-  
--   [Permissões](#bkmk_permissions)  
-  
--   [Exemplos](#bkmk_examples)  
-  
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -62,7 +57,7 @@ rs {-?}
   
 ##  <a name="bkmk_arguments"></a> Argumentos  
  **-?**  
- (Opcional) Exibe a sintaxe de argumentos **rs**.  
+ (Opcional) Exibe a sintaxe de argumentos **rs** .  
   
  **-i** *input_file*  
  (Obrigatório) Especifica o arquivo .rss a ser executado. Esse valor pode ser um parente ou caminho totalmente qualificado para o arquivo .rss.  
@@ -74,7 +69,7 @@ rs {-?}
  (Opcional) Especifica uma conta do usuário usada para conexão com o servidor de relatório. Se **-u** e **-p** forem omitidos, a conta do usuário do Windows atual será usada.  
   
  **-p** *password*  
- (Obrigatório se **-u** for especificado). Especifica a senha para usar com o argumento **-u**. Esse valor diferencia maiúsculas de minúsculas.  
+ (Obrigatório se **-u** for especificado). Especifica a senha para usar com o argumento **-u** . Esse valor diferencia maiúsculas de minúsculas.  
   
  **-e**  
  (Opcional) Especifica o ponto de extremidade SOAP no qual o script deve ser executado. Os valores válidos são os seguintes:  
@@ -102,15 +97,15 @@ rs {-?}
   
  `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- Variáveis globais são criadas com os nomes dados e definidos para os valores fornecidos. Por exemplo,**-v a=**"**1**" **-v b=**"**2**" resulta em uma variável chamada **a** com valor de "**1**" e variável **b** com valor de "**2**".  
+ Variáveis globais são criadas com os nomes dados e definidos para os valores fornecidos. Por exemplo, **-v a=**"**1**" **-v b=**"**2**" resulta em uma variável chamada **a** com valor de "**1**" e variável **b** com valor de "**2**".  
   
- Variáveis globais estão disponíveis para qualquer função no script. Uma barra invertida e aspas (**\\"**) são interpretadas como aspas duplas. As aspas só serão necessárias se a cadeia de caracteres contiver um espaço. Nomes de variáveis devem ser válidas para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]; eles devem iniciar com um caractere alfabético ou sublinhado e conter caracteres alfabéticos, dígitos ou sublinhados. Palavras reservadas não podem ser usadas como nomes de variável. Para obter mais informações sobre como usar variáveis globais, consulte [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder-and-ssrs.md).  
+ Variáveis globais estão disponíveis para qualquer função no script. Uma barra invertida e aspas (**\\"**) são interpretadas como aspas duplas. As aspas só serão necessárias se a cadeia de caracteres contiver um espaço. Nomes de variáveis devem ser válidas para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]; eles devem iniciar com um caractere alfabético ou sublinhado e conter caracteres alfabéticos, dígitos ou sublinhados. Palavras reservadas não podem ser usadas como nomes de variável. Para obter mais informações sobre como usar variáveis globais, consulte [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
  **-t**  
  (Opcional) Produz mensagens de erro para o log de rastreamento. Esse argumento não exige um valor. Para obter mais informações, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
 ##  <a name="bkmk_permissions"></a> Permissões  
- Para executar essa ferramenta, você deve ter permissão para se conectar à instância do servidor de relatório no qual o script está sendo executado. Você pode executar scripts para fazer alterações no computador local ou em um computador remoto. Para fazer alterações em um servidor de relatório instalado em um computador remoto, especifique o computador remoto no argumento **-s**.  
+ Para executar essa ferramenta, você deve ter permissão para se conectar à instância do servidor de relatório no qual o script está sendo executado. Você pode executar scripts para fazer alterações no computador local ou em um computador remoto. Para fazer alterações em um servidor de relatório instalado em um computador remoto, especifique o computador remoto no argumento **-s** .  
   
 ##  <a name="bkmk_examples"></a> Exemplos  
  O exemplo a seguir ilustra como especificar o arquivo de script que contém o script [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET e os métodos do serviço Web que você quer executar.  
@@ -123,7 +118,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
   
  Para ver exemplos adicionais, consulte [Executar um arquivo de script do Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md)  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Você pode definir scripts para definir propriedades do sistema, publicar relatórios, e assim sucessivamente. Os scripts que você cria podem incluir qualquer método de API do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações sobre os métodos e propriedades disponíveis, consulte [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  O script deve ser gravado no código [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET e armazenado em Unicode ou arquivo de texto UTF-8 com uma extensão de nome de arquivo .rss. Você não pode depurar scripts com o utilitário **rs** . Para depurar um script, execute o código no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
@@ -131,10 +126,10 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 > [!TIP]  
 >  Para obter um exemplo detalhado, consulte [Script rs.exe do Reporting Services de exemplo para copiar conteúdo entre Servidores de Relatório](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
-## Consulte também  
- [Executar um arquivo de script do Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
- [Implantação de script e tarefas administrativas](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [Gerar scripts com o utilitário rs.exe e o serviço Web](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
- [Utilitários de prompt de comando do servidor de relatório &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
+## <a name="see-also"></a>Consulte também  
+- [Executar um arquivo de Script do Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
+- [Implantação de script e tarefas administrativas](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
+- [Script com o utilitário rs.exe e o serviço Web](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
+- [Utilitários de Prompt de comando do servidor de relatório &#40; SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
   
   

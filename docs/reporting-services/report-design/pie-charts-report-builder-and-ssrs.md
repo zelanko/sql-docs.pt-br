@@ -1,33 +1,38 @@
 ---
-title: "Gr&#225;ficos de pizza (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gráficos de pizza (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dfa24b2135c34e95dae65e0a6fee4bf5da6b3d16
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Gr&#225;ficos de pizza (Construtor de Relat&#243;rios e SSRS)
+# <a name="pie-charts-report-builder-and-ssrs"></a>Gráficos de pizza (Construtor de Relatórios e SSRS)
   Gráficos de pizza e gráficos de rosca exibem dados como uma proporção do todo. Os gráficos de pizza são os mais usados para fazer comparações entre grupos. Gráficos de pizza e de rosca, além dos gráficos pirâmide e funil, compõem um grupo de gráficos conhecidos como gráficos de forma. Os gráficos de forma não têm nenhum eixo. Quando um campo numérico é solto em um gráfico de forma, o gráfico calcula a porcentagem de cada valor com relação ao total. Para obter mais informações sobre gráficos de forma, consulte [Gráficos de forma &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  
   
  A ilustração a seguir mostra um gráfico de pizza em 3-D com nomes de rótulos formatados como porcentagens.  A legenda está posicionada no centro-direito.  
   
- ![Gráfico de pizza](../../reporting-services/report-design/media/piechart.gif "Gráfico de pizza")  
+ ![Gráfico de pizza](../../reporting-services/report-design/media/piechart.gif "gráfico de pizza")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Variações  
+## <a name="variations"></a>Variações  
   
 -   **Pizza destacada**. Um gráfico de pizza onde todas as fatias são distanciadas do centro da pizza. Além do gráfico de pizza destacada, no qual todas as fatias estão separadas, você pode criar um gráfico com fatias destacadas, no qual apenas uma fatia é chamada.  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 7
   
 -   **Pizza Destacada em 3D**. Um gráfico de pizza destacada que tem um estilo 3D aplicado.  
   
-## Considerações de dados para exibição em um gráfico de pizza  
+## <a name="data-considerations-for-display-on-a-pie-chart"></a>Considerações de dados para exibição em um gráfico de pizza  
   
 -   Gráficos de pizza são comuns em relatórios devido ao seu impacto visual. Porém, gráficos de pizza são um tipo de gráfico muito simplificado que pode não representar da melhor maneira os seus dados. Considere usar um gráfico de pizza apenas após os dados terem sido agregados a sete pontos de dados ou menos.  
   
@@ -55,19 +60,19 @@ caps.handback.revision: 7
   
 -   De modo igual a todos os demais tipos de gráficos, um gráfico pizza gera as cores com base nos valores das cores incluídas na paleta padrão. Esta abordagem faz com que gráficos de pizza diferentes podem colorir pontos de dados de modo diferente quando estiver usando vários gráficos de pizza em um relatório. Se tiver vários gráficos de pizza no seu relatório, talvez seja melhor definir cores manualmente para cada grupo de categoria a fim de reter a mesma cor nos diferentes gráficos. Para obter mais informações sobre como definir cores em um gráfico, consulte [Formatando as cores da série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
-## Aplicando estilos de desenho a um gráfico de pizza  
+## <a name="applying-drawing-styles-to-a-pie-chart"></a>Aplicando estilos de desenho a um gráfico de pizza  
  Você pode acrescentar estilos de desenho especiais ao gráfico de pizza para aumentar seu impacto visual. Estilos de desenho incluem efeitos oblíquos e côncavos. Esses efeitos estão disponíveis apenas em um gráfico de pizza 2D. A ilustração a seguir mostra um exemplo dos estilos de desenho oblíquos e côncavos em um gráfico de pizza.  
   
- ![Estilos de Desenho de Pizza](../../reporting-services/report-design/media/rs-piedrawingeffects-concave2.png "Estilos de Desenho de Pizza")  
+ ![Estilos de desenho de pizza](../../reporting-services/report-design/media/rs-piedrawingeffects-concave2.gif "estilos de desenho de pizza")  
   
- Para obter mais informações, consulte [Como adicionar bisel, alto-relevo e estilos de textura a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs.md).  
+ Para obter mais informações, consulte [Como adicionar bisel, alto-relevo e estilos de textura a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
-## Exibindo valores de porcentagem em um gráfico de pizza  
+## <a name="displaying-percentage-values-on-a-pie-chart"></a>Exibindo valores de porcentagem em um gráfico de pizza  
  De modo similar aos demais gráficos de Forma, os gráficos de pizza representam proporções do total. Como resultado, está comum formatar os rótulos de gráfico de pizza como porcentagens. Para ser consistente com os demais tipos de gráfico, o gráfico não exibe os rótulos de porcentagem por padrão. Para obter mais informações sobre como exibir valores como porcentagens no gráfico, consulte [Exibir valores de porcentagem em um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md). Para obter mais informações sobre como formatar números como porcentagens em seu relatório, consulte [Formatação de números e datas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
- ![Gráfico de pizza com rótulos de ponto de dados como porcentagens](../../reporting-services/report-design/media/rs-piechartpercentages.png "Gráfico de pizza com rótulos de ponto de dados como porcentagens")  
+ ![Rótulos como porcentagens de ponto do gráfico de pizza com dados](../../reporting-services/report-design/media/rs-piechartpercentages.gif "rótulos como porcentagens de ponto do gráfico de pizza com dados")  
   
-## Impedindo a sobreposição de rótulos em um gráfico de pizza  
+## <a name="preventing-overlapped-labels-on-a-pie-chart"></a>Impedindo a sobreposição de rótulos em um gráfico de pizza  
  Se houver muitos pontos de dados em um gráfico de pizza, os rótulos dos dados serão sobrepostos. Há vários modos para impedir a sobreposição de rótulos:  
   
 -   Diminuir o tamanho da fonte dos rótulos do ponto de dados.  
@@ -78,19 +83,19 @@ caps.handback.revision: 7
   
 -   Coletar as pequenas fatias da pizza em uma fatia.  
   
-## Consolidando fatias pequenas em um gráfico de pizza  
+## <a name="consolidating-small-slices-on-a-pie-chart"></a>Consolidando fatias pequenas em um gráfico de pizza  
  Quando o gráfico de pizza tiver muitos pontos, os dados ficarão obscuros e difíceis de ler. Caso os dados tenham muitos pontos de dados pequenos, há dois modos de coletar várias fatias:  
   
 -   Colete fatias de dados menores em uma fatia do gráfico de pizza. Isso é muito útil nas situações em que, por exemplo, você quer que o gráfico de pizza tenha "outro" ponto de dados que apenas colete os demais dados. Para obter mais informações, consulte [Coletar fatias pequenas em um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md).  
   
 -   Colete fatias pequenas em um gráfico de pizza suplementar. O segundo gráfico de pizza não é exibido no designer. Na verdade, durante o processamento do relatório, o gráfico calcula se um segundo gráfico de pizza deve ser mostrado com base nos valores dos pontos de dados. Nesse caso, os valores são adicionados a outro gráfico de pizza.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Exibir rótulos de pontos de dados fora de um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Coletar fatias pequenas em um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Exibir valores percentuais em um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Tutorial: Adicionar um gráfico de pizza ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Formatando a legenda em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-the-legend-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatando a legenda em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [Pontos de dados vazios e nulos em gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Formatando as cores da série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
   

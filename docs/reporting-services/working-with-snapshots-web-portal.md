@@ -1,41 +1,50 @@
 ---
-title: "Trabalhando com instant&#226;neos (portal da Web) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Trabalhar com instantâneos (portal da web) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/25/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 5
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: f158c027acfd2acdf7a745c640babad561ec0d20
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Trabalhando com instant&#226;neos (portal da Web)
-Você pode controlar se os instantâneos são criados para um relatório selecionando as **reticências (...)** de um relatório, **Gerenciar** e **Caching** ou **Instantâneos de Histórico**.  
+# <a name="working-with-snapshots-web-portal"></a>Trabalhando com instantâneos (portal da Web)
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
+Você pode controlar se os instantâneos são criados para um relatório selecionando o **reticências (...)**  de um relatório, selecionando **gerenciar** e selecionando **cache** ou **instantâneos de histórico**.  
   
-> [!NOTE] O serviço SQL Server Agent precisa ser iniciado.  
+> [!NOTE]
+> O serviço SQL Server Agent precisa ser iniciado.  
    
 Você pode criar um instantâneo de cache para permitir um carregamento mais rápido de propriedades específicas de execução. Você também pode trabalhar com instantâneos de histórico para capturas pontuais.  
   
-## Criando um instantâneo de cache  
+## <a name="creating-a-cache-snapshot"></a>Criando um instantâneo de cache  
   
 Você pode criar um instantâneo fazendo o seguinte.  
   
 ![ssRSWebPortal-report-caching4](../reporting-services/media/ssrswebportal-report-caching4.png)  
   
-1.  Na página **Cache**, selecione **Sempre executar esse relatório contra instantâneos gerados previamente** para habilitar as opções para a criação de um instantâneo.  
+1.  Na página **Cache** , selecione **Sempre executar esse relatório contra instantâneos gerados previamente** para habilitar as opções para a criação de um instantâneo.  
   
 2.  Selecione **Criar instantâneos do cache segundo uma agenda** se quiser agendar um instantâneo recorrente. Você pode usar uma agenda compartilhada ou definir uma agenda personalizada para atualizar o instantâneo.  
   
 3.  Selecione **Criar um instantâneo do cache quando eu clicar em Aplicar, nesta página** se quiser criar um instantâneo do cache agora. Se você selecionar somente essa opção, o instantâneo não será atualizado.  
   
-## Criar, modificar e excluir instantâneos de histórico  
+## <a name="create-modify-and-delete-history-snapshots"></a>Criar, modificar e excluir instantâneos de histórico  
   
 Para trabalhar com instantâneos de histórico, gerencie um relatório e selecione **Instantâneos de Histórico**.  
   
@@ -53,7 +62,7 @@ Para gerar um instantâneo de histórico, o relatório deve ser executado de mod
   
 3.  Você poderá selecionar um instantâneo de histórico a ser exibido. Instantâneos exibidos em histórico de relatórios só são diferenciados pela data e hora em que foram criados. Não existe indicação visual para distinguir se um relatório foi gerado em resposta a uma operação programada ou manual.  
   
-### Agenda e configurações  
+### <a name="schedule-and-settings"></a>Agenda e configurações  
   
 Selecionar **Agenda e Configurações** fornecerá opções adicionais para agendar e controlar a retenção dos instantâneos criados.  
   
@@ -65,7 +74,12 @@ Você também pode definir como quer reter os instantâneos.
   
 **Salvar instantâneos de cache no histórico de relatórios também**  
   
-Marcar essa opção copiará um instantâneo de relatório gerado com base nas propriedades de execução de relatório no histórico de relatórios. Você pode definir propriedades de execução de relatório para executar um relatório de um instantâneo gerado. Definindo essa propriedade de histórico de relatórios você pode manter um registro de todos os instantâneos gerados com o tempo, colocando cópias deles no histórico de relatórios.  
-  
-  
-  
+Marcar essa opção copiará um instantâneo de relatório gerado com base nas propriedades de execução de relatório no histórico de relatórios. Você pode definir propriedades de execução de relatório para executar um relatório de um instantâneo gerado. Definindo essa propriedade de histórico de relatórios você pode manter um registro de todos os instantâneos gerados com o tempo, colocando cópias deles no histórico de relatórios.
+
+## <a name="next-steps"></a>Próximas etapas
+
+[Portal da Web](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Trabalhando com relatórios paginados](working-with-paginated-reports-web-portal.md)  
+[Trabalhar com conjuntos de dados compartilhados](../reporting-services/work-with-shared-datasets-web-portal.md)
+
+Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

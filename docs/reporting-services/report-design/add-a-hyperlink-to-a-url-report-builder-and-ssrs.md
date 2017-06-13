@@ -1,26 +1,31 @@
 ---
-title: "Adicionar um hiperlink a uma URL (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/07/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Adicionar um hiperlink a uma URL (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 09/07/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
----
-# Adicionar um hiperlink a uma URL (Construtor de Relat&#243;rios e SSRS)
-Saiba como adicionar ações de hiperlink a caixas de texto, imagens, gráficos e medidores nos relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Links podem ir para outros relatórios, indicadores em um relatório ou URLs estáticas ou dinâmicas. 
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c4d66e7d74d06cbad20351f80a312be95cc253c0
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
 
- Você pode adicionar uma ação de hiperlink a um item que tem uma propriedade **Action**, por exemplo, uma caixa de texto, imagem ou série calculada em um gráfico. Quando o usuário clicar nesse item de relatório, ocorrerá a ação definida.  
+---
+# <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Adicionar um hiperlink a uma URL (Construtor de Relatórios e SSRS)
+Saiba como adicionar ações de hiperlink a caixas de texto, imagens, gráficos e medidores nos relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . Links podem ir para outros relatórios, indicadores em um relatório ou URLs estáticas ou dinâmicas. 
+
+ Você pode adicionar uma ação de hiperlink a um item que tem uma propriedade **Action** , por exemplo, uma caixa de texto, imagem ou série calculada em um gráfico. Quando o usuário clicar nesse item de relatório, ocorrerá a ação definida.  
   
 *   Você pode **adicionar um hiperlink que abrirá um navegador com uma URL** especificada. O hiperlink pode ser uma URL estática ou uma expressão avaliada como uma URL. Se você tiver um campo em um banco de dados que contenha URLs, a expressão poderá conter esse campo, resultando em uma lista dinâmica de hiperlinks no relatório. Verifique se os leitores do relatório têm acesso à URL fornecida.  
    
@@ -33,15 +38,15 @@ Tente adicionar hiperlinks com dados de exemplo no [Tutorial: Formatar texto &#4
 > [!NOTE]  
 >  Links associados a campos de conjuntos de dados podem ser vulneráveis à violação para fins mal-intencionados. Para obter mais informações, consulte [Proteger relatórios e recursos](../../reporting-services/security/secure-reports-and-resources.md).  
   
-## Para adicionar um hiperlink e...   
+## <a name="to-add-a-hyperlink-and"></a>Para adicionar um hiperlink e...   
   
 1.  No modo de exibição de Design de relatório, clique com o botão direito do mouse na caixa de texto, na imagem ou no gráfico a que você deseja adicionar um link e, em seguida, clique em **Propriedades**.  
   
-2.  Na caixa de diálogo Propriedades, clique na guia **Ação**. Continue lendo para obter informações sobre as opções.  
+2.  Na caixa de diálogo Propriedades, clique na guia **Ação** . Continue lendo para obter informações sobre as opções.  
 
-## ... adicionar detalhamento a outro relatório
+## <a name="-add-drillthrough-to-another-report"></a>... adicionar detalhamento a outro relatório
 
-1. Na guia **Ação**, selecione **Ir para o relatório**. 
+1. Na guia **Ação** , selecione **Ir para o relatório**. 
 
 2. Especifique o relatório de destino e os parâmetros que você deseja usar. Os nomes de parâmetro devem corresponder aos parâmetros definidos para o relatório de destino. 
 
@@ -55,11 +60,11 @@ Tente adicionar hiperlinks com dados de exemplo no [Tutorial: Formatar texto &#4
    
 6. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
    
-## ... adicionar um indicador
+## <a name="-add-a-bookmark"></a>... adicionar um indicador
 
-É possível criar link para indicadores em um local do relatório atual. Para criar um link para um indicador, primeiro é necessário definir a propriedade **Bookmark** de um item de relatório. Para definir a propriedade **Bookmark**, selecione um item de relatório e, no painel Propriedades, digite um valor ou uma expressão para a ID do indicador. Por exemplo, SalesChart ou 5TopSales.
+É possível criar link para indicadores em um local do relatório atual. Para criar um link para um indicador, primeiro é necessário definir a propriedade **Bookmark** de um item de relatório. Para definir a propriedade **Bookmark** , selecione um item de relatório e, no painel Propriedades, digite um valor ou uma expressão para a ID do indicador. Por exemplo, SalesChart ou 5TopSales.
 
-1. Na guia **Ação**, selecione **Ir para o indicador**. 
+1. Na guia **Ação** , selecione **Ir para o indicador**. 
 
 2. Digite ou selecione a ID de indicador para a qual o relatório deverá pular. Clique no botão Expressão (fx) para alterar a expressão. 
 
@@ -69,9 +74,9 @@ Tente adicionar hiperlinks com dados de exemplo no [Tutorial: Formatar texto &#4
    
 3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-## ... adicionar um hiperlink 
+## <a name="-add-a-hyperlink"></a>... adicionar um hiperlink 
   
-1. Na guia **Ação**, selecione **Ir para URL**. Aparecerá uma seção adicional na caixa de diálogo para essa opção.  
+1. Na guia **Ação** , selecione **Ir para URL**. Aparecerá uma seção adicional na caixa de diálogo para essa opção.  
   
 4.  Em **Selecionar URL**, digite ou selecione uma URL ou uma expressão avaliada como uma URL, ou clique na seta suspensa e no nome de um campo que contenha uma URL. 
 
@@ -81,14 +86,15 @@ Tente adicionar hiperlinks com dados de exemplo no [Tutorial: Formatar texto &#4
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-## Depois de adicionar um hiperlink
+## <a name="after-you-add-a-hyperlink"></a>Depois de adicionar um hiperlink
   
 1.  (Opcional) O texto não é formatado automaticamente como um link. Para textos, é recomendável alterar sua cor e seu efeito para indicar que ele é um link. Por exemplo, altere a cor para azul e o efeito para sublinhado na seção **Fonte** da guia Página Inicial da Faixa de Opções.  
   
 7.  Para testar o link, clique em **Executar** para visualizar o relatório e, em seguida, no item de relatório no qual você definiu esse link.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Criar um mapa de documentos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
   
   
+

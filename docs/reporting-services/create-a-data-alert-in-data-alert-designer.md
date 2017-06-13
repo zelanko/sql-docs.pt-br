@@ -1,27 +1,38 @@
 ---
-title: "Criar um alerta de dados no Designer de Alertas de Dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Criar um alerta de dados no Designer de alertas de dados | Microsoft Docs
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 5203aab062888ca40ee83ee3f00521d6661defba
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Criar um alerta de dados no Designer de Alertas de Dados
-  Você cria definições de alerta de dados no Designer de Alertas de Dados. Depois de salvar as definições de alertas, é possível abri-la novamente, editá-la e salvá-la novamente no Designer de Alertas de Dados. Para obter informações sobre como editar definições de alertas, consulte [Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) e [Editar um alerta de dados no Designer de Alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
-  
-### Para criar uma definição de alerta de dados  
-  
+# <a name="create-a-data-alert-in-data-alert-designer"></a>Criar um alerta de dados no Designer de Alertas de Dados
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+Você cria definições de alerta de dados no Designer de Alertas de Dados. Depois de salvar as definições de alertas, é possível abri-la novamente, editá-la e salvá-la novamente no Designer de Alertas de Dados. Para obter informações sobre como editar definições de alertas, consulte [Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) e [Editar um alerta de dados no Designer de Alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md).
+
+> [!NOTE]
+> Integração do Reporting Services com o SharePoint não está mais disponível após o SQL Server 2016.
+
+## <a name="create-a-data-alert-definition"></a>Criar uma definição de alerta de dados
+ 
 1.  Localize a biblioteca do SharePoint que contém o relatório para o qual você deseja criar uma definição de alerta de dados.  
   
 2.  Clique no relatório.  
@@ -35,7 +46,7 @@ caps.handback.revision: 13
   
      A imagem a seguir mostra o menu **Ações** .  
   
-     ![Open Alert Designer from SharePoint library](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
+     ![Abra o Designer de alertas de biblioteca do SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "abrir o Designer de alertas de biblioteca do SharePoint")  
   
      O Designer de Alertas de Dados é aberto e mostra as primeiras 100 linhas do primeiro feed de dados que o relatório gera em uma tabela.  
   
@@ -44,9 +55,9 @@ caps.handback.revision: 13
     >   
     >  Se a opção **Novo Alerta de Dados** estiver acinzentada, a fonte de dados de relatório está configurada para usar credenciais de segurança integradas ou para solicitar credenciais. Para tornar a opção **Novo Alerta de Dados** disponível, você deve atualizar a fonte de dados para usar credenciais armazenadas ou nenhuma credencial.  
   
-     O nome do feed de dados é exibido na lista suspensa **Nome de dados do relatório**.  
+     O nome do feed de dados é exibido na lista suspensa **Nome de dados do relatório** .  
   
-4.  Opcionalmente, selecione um feed de dados diferente na lista suspensa **Nome de dados do relatório**.  
+4.  Opcionalmente, selecione um feed de dados diferente na lista suspensa **Nome de dados do relatório** .  
   
      Se nenhum feed de dados for gerado a partir do relatório, você não poderá criar uma definição de alerta para o relatório. O layout do relatório determina o conteúdo de cada feed de dados. Para obter mais informações, consulte [Gerando feeds de dados de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
@@ -76,7 +87,7 @@ caps.handback.revision: 13
   
      Uma cláusula OR é adicionada sob e na regra AND.  
   
-12. Opcionalmente, clique na seta para baixo, selecione **Modo de Seleção de Campo** e selecione uma coluna na lista.  
+12. Opcionalmente, clique na seta para baixo, selecione **Modo de Seleção de Campo**e selecione uma coluna na lista.  
   
      Você notará que as reticências **(...)** em que clica para adicionar cláusulas OR desapareceram.  
   
@@ -105,19 +116,20 @@ caps.handback.revision: 13
   
 19. Digite os endereços de email dos destinatários da mensagem de alerta. Separe os endereços com ponto-e-vírgulas.  
   
-     Se o endereço de email da pessoa que criou a definição de alerta estiver disponível, ele será adicionado à caixa **Destinatário(s)**.  
+     Se o endereço de email da pessoa que criou a definição de alerta estiver disponível, ele será adicionado à caixa **Destinatário(s)** .  
   
 20. Opcionalmente, na caixa de texto **Assunto** , atualize a linha de Assunto da mensagem de alerta.  
   
-     O Assunto padrão é **Alerta de dados para \<nome do alerta de dados>**.  
+     O assunto padrão é **de alertas de dados para \<nome do alerta de dados >**.  
   
 21. Opcionalmente, na caixa de texto **Descrição** , digite uma descrição da mensagem de alerta.  
   
 22. Clique em **Salvar**.  
-  
-## Consulte também  
- [Designer de Alertas de Dados](../reporting-services/data-alert-designer.md)   
- [Gerenciador de Alertas de dados para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
-  
-  
+
+## <a name="see-also"></a>Consulte também
+
+[Designer de Alertas de Dados](../reporting-services/data-alert-designer.md)   
+[Gerenciador de Alertas de dados para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Alertas de dados do Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
+
+Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

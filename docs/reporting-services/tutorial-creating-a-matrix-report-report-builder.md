@@ -1,56 +1,38 @@
 ---
-title: "Tutorial: criando um relat&#243;rio de matriz (Construtor de Relat&#243;rios) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Tutorial: Criando um relatório de matriz (construtor de relatórios) | Microsoft Docs"
+ms.custom: 
+ms.date: 06/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: 15
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 14
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee55d7f9499b638828a6312761dd1b7480a7816c
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutorial: criando um relat&#243;rio de matriz (Construtor de Relat&#243;rios)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: criando um relatório de matriz (Construtor de Relatórios)
 Este tutorial ensina a criar um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] com uma matriz de dados de vendas de exemplo em grupos de linhas e colunas aninhados. 
 
 Você também cria um grupo de colunas adjacentes, formata colunas e gira o texto. A ilustração a seguir mostra um relatório semelhante ao que você criará.  
   
 ![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
-  
-## <a name="BackToTop"></a>O que você aprenderá  
-Neste tutorial, você vai:  
-  
-1.  [Criar um relatório de matriz e um conjunto de dados no Assistente de Nova Tabela ou Matriz](#CreateMatrix)  
-  
-2.  [Organizar dados e escolher o layout no Assistente de Nova Tabela ou Matriz](#Groups)  
-  
-3.  [Formatar dados](#FormatData)  
-  
-4.  [Adicionar grupo de colunas adjacente](#AdjacentGroup)  
-  
-5.  [Alterar a Largura das Colunas](#Width)  
-  
-6.  [Mesclar células na matriz](#MergeCells)  
-  
-7.  [Adicionar um cabeçalho e um título de relatório](#HeaderTitle)  
-  
-8.  [Salvar o relatório](#Save)  
-  
-### Etapa opcional  
-  
-1.  [Girar caixa de texto em 270 graus](#RotateTextBox)  
-  
+   
 Tempo estimado para concluir este tutorial: 20 minutos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
 Para obter informações sobre os requisitos, consulte [Pré-requisitos dos tutoriais](../reporting-services/prerequisites-for-tutorials-report-builder.md). 
   
 ## <a name="CreateMatrix"></a>1. Criar um relatório de matriz e um conjunto de dados no Assistente de Nova Tabela ou Matriz  
@@ -59,7 +41,7 @@ Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto 
 > [!NOTE]  
 > Neste tutorial, como já contém os valores de dados, a consulta não precisa de uma fonte de dados externa. Isso torna a consulta bastante longa. Em um ambiente empresarial, uma consulta não conteria os dados. Isso é apenas para fins de aprendizado.  
   
-### Para criar uma matriz  
+### <a name="to-create-a-matrix"></a>Para criar uma matriz  
   
 1.  [Inicie o Construtor de Relatórios](../reporting-services/report-builder/start-report-builder.md) no computador, no portal da Web do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou no modo integrado do SharePoint.  
   
@@ -71,15 +53,15 @@ Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto 
   
 3.  No painel direito, clique em **Assistente de Tabela ou Matriz**.  
   
-4.  Na página **Escolher um conjunto de dados**, clique em **Criar um conjunto de dados**.  
+4.  Na página **Escolher um conjunto de dados** , clique em **Criar um conjunto de dados**.  
   
 5.  Clique em **Avançar**.  
   
-6.  Na página **Escolher uma conexão com uma fonte de dados**, selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou você não tiver acesso a um servidor de relatório, em vez disso, será possível usar uma fonte de dados inserida. Para obter informações sobre como criar uma fonte de dados inserida, consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou você não tiver acesso a um servidor de relatório, em vez disso, será possível usar uma fonte de dados inserida. Para obter informações sobre como criar uma fonte de dados inserida, consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Clique em **Avançar**.  
   
-8.  Na página **Crie uma consulta**, clique em **Editar como Texto**.  
+8.  Na página **Crie uma consulta** , clique em **Editar como Texto**.  
   
 9. Copie e cole a seguinte consulta no painel de consulta:  
   
@@ -123,7 +105,7 @@ Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto 
 ## <a name="Groups"></a>2. Organizar dados e escolher o layout no Assistente de Nova Tabela ou Matriz  
 Use o assistente para fornecer um design inicial no qual exibir dados. O painel de visualização no assistente ajuda a visualizar o resultado dos dados de agrupamento antes de concluir o design da matriz.  
   
-1.  Na página **Organizar campos**, arraste Territory de **Campos disponíveis** até **Grupos de linhas**.  
+1.  Na página **Organizar campos** , arraste Territory de **Campos disponíveis** até **Grupos de linhas**.  
   
 2.  Arraste SalesDate até **Grupos de linhas** e coloque-o abaixo de Territory.  
   
@@ -174,7 +156,7 @@ Use o assistente para fornecer um design inicial no qual exibir dados. O painel 
 ## <a name="FormatData"></a>3. Formatar dados  
 Por padrão, os dados resumidos do campo Sales exibem um número geral e o campo SalesDate exibe informações de data e hora. Nesta seção, você formata o campo Sales para exibir o número como moeda e o campo SalesDate para exibir apenas a data. Ative/desative **Estilos de Espaço Reservado** para exibir caixas de texto formatadas e texto de espaço reservado como valores de exemplo.  
   
-### Para formatar campos  
+### <a name="to-format-fields"></a>Para formatar campos  
   
 1.  Clique em **Design** a fim de alternar para a exibição de design.  
   
@@ -182,7 +164,7 @@ Por padrão, os dados resumidos do campo Sales exibem um número geral e o campo
   
 3.  Na guia **Início** > **Número** > **Moeda**. As células são alteradas para mostrar a moeda formatada.  
   
-    Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**$12,345.00**]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números**, clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
+    Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**$12,345.00**]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
     
     ![report-builder-placeholder-value](../reporting-services/media/report-builder-placeholder-value.png)
   
@@ -201,15 +183,15 @@ Os valores de data só exibem datas e os valores de vendas são exibidos como mo
   
 Nesta seção, você adiciona um grupo de colunas adjacente ao grupo de colunas Subcategory, copie células para popular o novo grupo de colunas e use uma expressão para criar o valor do cabeçalho do grupo de colunas.  
   
-### Para adicionar um grupo de colunas adjacente  
+### <a name="to-add-an-adjacent-column-group"></a>Para adicionar um grupo de colunas adjacente  
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
-2.  Clique com o botão direito do mouse na célula que contém `[Subcategory]`, aponte para **Adicionar Grupo** e clique em **Adjacente à Direita**.  
+2.  Clique com o botão direito do mouse na célula que contém `[Subcategory]`, aponte para **Adicionar Grupo**e clique em **Adjacente à Direita**.  
   
     A caixa de diálogo **Grupo Tablix** é aberta.  
   
-3.  Na lista **Agrupar Por**, selecione SalesDate e clique em **OK**.  
+3.  Na lista **Agrupar Por** , selecione SalesDate e clique em **OK**.  
   
     Um novo grupo de colunas é adicionado à direita do grupo de colunas Subcategory.  
   
@@ -245,7 +227,7 @@ O relatório inclui colunas nomeadas Monday e Tuesday. O conjunto de dados cont�
 ## <a name="Width"></a>5. Alterar a Largura das Colunas  
 Um relatório que inclua uma matriz normalmente se expande horizontalmente, bem como verticalmente, quando executado. O controle da expansão horizontal será especialmente importante se você planejar exportar o relatório para formatos como Microsoft Word ou Adobe PDF, usados em relatórios impressos. Se o relatório se expandir horizontalmente em várias páginas, será difícil compreender o relatório impresso. Para minimizar a expansão horizontal, é possível redimensionar colunas seguindo exclusivamente a largura necessária para exibir os dados sem quebra de texto. Também é possível renomear colunas para que os títulos se ajustem à largura necessária para exibir os dados.  
   
-### Para renomear e redimensionar as colunas  
+### <a name="to-rename-and-resize-the-columns"></a>Para renomear e redimensionar as colunas  
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
@@ -274,7 +256,7 @@ As colunas que contêm as quantidades agora são mais estreitas e são nomeadas 
 ## <a name="MergeCells"></a>6. Mesclar células na matriz  
 A área de canto está no canto superior esquerdo da matriz. Dependendo do número de grupos de linhas e de colunas na matriz, o número de células na área de canto varia. A matriz, interna neste tutorial, tem quatro células na área de canto. As células são organizadas em duas linhas e duas colunas, o que reflete a profundidade das hierarquias dos grupos de linhas e de colunas. As quatro células não são usadas neste relatório, e você as mesclará em uma só.  
   
-### Para mesclar células na matriz  
+### <a name="to-merge-matrix-cells"></a>Para mesclar células na matriz  
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
@@ -297,7 +279,7 @@ A célula no canto superior da matriz não está mais visível.
 ## <a name="HeaderTitle"></a>7. Adicionar um cabeçalho e um título de relatório  
 Um título é exibido na parte superior do relatório. É possível colocar o título em um cabeçalho do relatório. No entanto, se ele não usar um cabeçalho, será possível colocar o título em uma caixa de texto na parte superior do corpo do relatório. Neste tutorial, você irá remover a caixa de texto na parte superior do relatório e adicionar um título ao cabeçalho.  
   
-### Para adicionar um cabeçalho e um título de relatório  
+### <a name="to-add-a-report-header-and-report-title"></a>Para adicionar um cabeçalho e um título de relatório  
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
@@ -307,7 +289,7 @@ Um título é exibido na parte superior do relatório. É possível colocar o t�
   
     Um cabeçalho é adicionado à parte superior do corpo do relatório.  
   
-4.  Na guia **Inserir**, clique em **Caixa de Texto** e arraste uma caixa de texto para dentro do cabeçalho do relatório. Crie a caixa de texto com 15,24 centímetros de comprimento e 1,90 centímetros de altura e posicione-a no lado esquerdo do cabeçalho do relatório.  
+4.  Na guia **Inserir** , clique em **Caixa de Texto**e arraste uma caixa de texto para dentro do cabeçalho do relatório. Crie a caixa de texto com 15,24 centímetros de comprimento e 1,90 centímetros de altura e posicione-a no lado esquerdo do cabeçalho do relatório.  
   
 5.  Na caixa de texto, digite **Vendas por Região, Subcategoria e Dia**.  
   
@@ -324,7 +306,7 @@ O relatório inclui um título do relatório no cabeçalho do relatório.
   
 Neste tutorial, salve o relatório em um servidor de relatório. Se você não tiver acesso ao servidor de relatório, salve o relatório no computador.  
   
-### Para salvar o relatório em um servidor de relatório  
+### <a name="to-save-the-report-on-a-report-server"></a>Para salvar o relatório em um servidor de relatório  
   
 1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
@@ -340,7 +322,7 @@ Neste tutorial, salve o relatório em um servidor de relatório. Se você não t
   
 O relatório será salvo no servidor de relatório. O nome do servidor de relatório ao qual você está conectado é exibido na barra de status da parte inferior da janela.  
   
-#### Para salvar o relatório no computador  
+#### <a name="to-save-the-report-on-your-computer"></a>Para salvar o relatório no computador  
   
 1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
@@ -355,7 +337,7 @@ Um relatório com matrizes pode se expandir horizontal e verticalmente quando ex
   
 Uma caixa de texto também pode exibir texto na horizontal, vertical (de cima para baixo). Para obter mais informações, consulte [Caixas de texto &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
   
-### Para girar caixa de texto em 270 graus  
+### <a name="to-rotate-text-box-270-degrees"></a>Para girar caixa de texto em 270 graus  
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
@@ -378,14 +360,16 @@ Uma caixa de texto também pode exibir texto na horizontal, vertical (de cima pa
   
 O nome de território é escrito verticalmente, de baixo para cima. A altura do grupo de linhas Territory varia de acordo com o tamanho do nome do território.  
   
-## Próximas etapas  
+## <a name="next-steps"></a>Próximas etapas  
 Isso conclui o tutorial sobre como criar um relatório de matriz. Para obter mais informações sobre matrizes, consulte: 
 -    [Tabelas, matrizes e listas](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [Criar uma matriz](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
 -    [Áreas da região de dados Tablix](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md) 
 -    [Células, linhas e colunas da região de dados Tablix](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md)  
 [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

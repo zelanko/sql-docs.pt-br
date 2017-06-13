@@ -1,23 +1,28 @@
 ---
-title: "Exibir n&#250;meros de p&#225;gina ou outras propriedades do relat&#243;rio (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Exibir números de página ou outras propriedades de relatório (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f2fc7a28d8c8b0a66e706a9518290d0ca56c876
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Exibir n&#250;meros de p&#225;gina ou outras propriedades do relat&#243;rio (Construtor de Relat&#243;rios e SSRS)
+# <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Exibir números de página ou outras propriedades do relatório (Construtor de Relatórios e SSRS)
   É fácil adicionar números de página, um título de relatório, nome de arquivo e outras propriedades de relatório aos cabeçalhos ou rodapés de seu relatório. Essas propriedades são armazenadas como campos na pasta Campos Internos no painel de dados do relatório:  
   
 -   Tempo de execução  
@@ -44,7 +49,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Para adicionar um número de página ou outras propriedades de relatório  
+### <a name="to-add-a-page-number-or-other-report-properties"></a>Para adicionar um número de página ou outras propriedades de relatório  
   
 1.  No painel de dados do relatório, expanda a pasta Campos Internos.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 7
     >   
     >  Uma caixa de texto que contém a expressão simples [&PageNumber] é adicionada.  
   
-### Para adicionar a palavra "Página" antes do número de página  
+### <a name="to-add-the-word-page-before-the-page-number"></a>Para adicionar a palavra "Página" antes do número de página  
   
 1.  Clique com o botão direito do mouse na caixa de texto que contém [&PageNumber] e clique em **Expressões**.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 7
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Para adicionar o número total de páginas após o número de página  
+### <a name="to-add-total-number-of-pages-after-the-page-number"></a>Para adicionar o número total de páginas após o número de página  
   
 1.  Clique com o botão direito do mouse na caixa de texto com a expressão e clique em **Expressões**.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 7
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   

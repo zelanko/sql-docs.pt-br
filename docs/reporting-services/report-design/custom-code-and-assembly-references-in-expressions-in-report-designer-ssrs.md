@@ -1,36 +1,41 @@
 ---
-title: "Refer&#234;ncias a c&#243;digo personalizado e assemblies em express&#245;es no Designer de Relat&#243;rios (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "items [Reporting Services], expressions"
-  - "data [Reporting Services], expressions"
-  - "expressions [Reporting Services], about expressions"
-  - "expressions [Reporting Services]"
-  - "SSRS, expressions"
-  - "formulas [Reporting Services]"
-  - "data manipulation [Reporting Services]"
-  - "SQL Server Reporting Services, expressões"
+title: "Código personalizado e referências de Assembly em expressões no relatam Designer (SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- items [Reporting Services], expressions
+- data [Reporting Services], expressions
+- expressions [Reporting Services], about expressions
+- expressions [Reporting Services]
+- SSRS, expressions
+- formulas [Reporting Services]
+- data manipulation [Reporting Services]
+- SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: 77
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 77
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc8491006425de79f8e96be1affb10687a1553f9
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Refer&#234;ncias a c&#243;digo personalizado e assemblies em express&#245;es no Designer de Relat&#243;rios (SSRS)
+# <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Referências a código personalizado e assemblies em expressões no Designer de Relatórios (SSRS)
   É possível adicionar referências ao código personalizado inserido em um relatório ou aos assemblies personalizados criados e salvos em seu computador e implantá-los no servidor de relatório. Use o código inserido para constantes personalizadas, funções complexas ou funções usadas várias vezes em um mesmo relatório. Use assemblies de código personalizado para manter o código em um único local e compartilhá-lo para uso em vários relatórios. O código personalizado pode incluir novas constantes, variáveis, funções ou sub-rotinas personalizadas. É possível incluir referências somente leitura em coleções internas, como a coleção de Parâmetros. No entanto, não é possível passar conjuntos de valores de dados do relatório para funções personalizadas. Especificamente, não há suporte para agregações personalizadas.  
   
 > [!IMPORTANT]  
->  Para cálculos de detecção de hora avaliados uma vez em tempo de execução que você deseja manter com o mesmo valor ao longo do processamento do relatório, considere se uma variável de relatório ou uma variável de grupo deve ser usada. Para obter mais informações, consulte [Referências de coleções de variáveis de grupo e de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-and-group-variables-collections-references-report-builder-and-ssrs.md).  
+>  Para cálculos de detecção de hora avaliados uma vez em tempo de execução que você deseja manter com o mesmo valor ao longo do processamento do relatório, considere se uma variável de relatório ou uma variável de grupo deve ser usada. Para obter mais informações, consulte [Referências de coleções de variáveis de grupo e de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
   
  O Designer de Relatórios é o ambiente de criação preferido a ser usado para adicionar código personalizado a um relatório. O Construtor de Relatórios dá suporte ao processamento de relatórios que têm expressões válidas ou que incluem referências a assemblies personalizados em um servidor de relatório. O Construtor de Relatórios não fornece uma maneira de adicionar uma referência a um assembly personalizado.  
   
@@ -50,14 +55,14 @@ caps.handback.revision: 77
 2.  Visualizar um relatório com referências a assemblies personalizados no modo local.  
   
 ##  <a name="Common"></a> Incluindo referências em funções usadas frequentemente  
- Use a caixa de diálogo **Expressão** para exibir uma lista categorizada de funções comuns internas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Quando você expande **Funções Comuns** e clica em uma categoria, o painel **Item** exibe a lista de funções incluídas em uma expressão. As funções comuns incluem classes dos namespaces [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> e <xref:System.Convert> e funções de biblioteca em tempo de execução [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Por conveniência, é possível exibir as funções usadas mais frequentemente na caixa de diálogo **Expressão** , onde elas são listadas por categoria: Texto, Data e Hora, Matemática, Inspeção, Fluxo do Programa, Agregação, Financeira, Conversão e Diversas. As funções usadas com menor frequência não são exibidas na lista, mas ainda podem ser usadas em uma expressão.  
+ Use a caixa de diálogo **Expressão** para exibir uma lista categorizada de funções comuns internas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Quando você expande **Funções Comuns** e clica em uma categoria, o painel **Item** exibe a lista de funções incluídas em uma expressão. As funções comuns incluem classes a partir de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> e <xref:System.Convert> namespaces e [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] as funções de biblioteca de tempo de execução. Por conveniência, é possível exibir as funções usadas mais frequentemente na caixa de diálogo **Expressão** , onde elas são listadas por categoria: Texto, Data e Hora, Matemática, Inspeção, Fluxo do Programa, Agregação, Financeira, Conversão e Diversas. As funções usadas com menor frequência não são exibidas na lista, mas ainda podem ser usadas em uma expressão.  
   
  Para usar uma função interna, clique duas vezes no nome da função no painel Item. Uma descrição da função é exibida no painel Descrição e um exemplo de chamada da função é exibido no painel Exemplo. No painel de código, quando você digita o nome da função seguido por um parêntese esquerdo **(**, a ajuda do IntelliSense exibe cada sintaxe válida para a chamada de função. Por exemplo, para calcular o valor máximo de um campo denominado `Quantity` em uma tabela, adicione a expressão simples `=Max(` ao painel Código e use as marcas inteligentes para exibir todas as sintaxes válidas possíveis para a chamada da função. Para concluir este exemplo, digite `=Max(Fields!Quantity.Value)`.  
   
- Para obter mais informações sobre cada função, consulte <xref:System.Math>, <xref:System.Convert> e [Membros da Biblioteca de Tempo de Execução do Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) no MSDN.  
+ Para obter mais informações sobre cada função, consulte <xref:System.Math>, <xref:System.Convert>, e [membros da biblioteca em tempo de execução do Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) no MSDN.  
   
 ##  <a name="NotCommon"></a> Incluindo referências em funções usadas com menor frequência  
- Para incluir uma referência em outros namespaces de CLR usados com menor frequência, você deve usar uma referência totalmente qualificada, por exemplo, <xref:System.Text.StringBuilder>. O IntelliSense não tem suporte no painel de código da caixa de diálogo **Expressão** para essas funções usadas com menor frequência.  
+ Para incluir uma referência a outro menos usadas namespaces CLR, você deve usar uma referência totalmente qualificada, por exemplo, <xref:System.Text.StringBuilder>. O IntelliSense não tem suporte no painel de código da caixa de diálogo **Expressão** para essas funções usadas com menor frequência.  
   
  Para obter mais informações, consulte [Membros da biblioteca em tempo de execução do Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) no MSDN.  
   
@@ -114,7 +119,7 @@ Public Function FixSpelling(ByVal s As String) As String
 End Function  
 ```  
   
- Para obter mais informações sobre coleções de objetos internos e inicialização, consulte [Referências globais internas e referências de usuários &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-globals-and-users-references-report-builder-and-ssrs.md) e [Inicializando objetos Assembly personalizados](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md).  
+ Para obter mais informações sobre coleções de objetos internos e inicialização, consulte [Referências globais internas e referências de usuários &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md) e [Inicializando objetos Assembly personalizados](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md).  
   
 ##  <a name="Parameters"></a> Incluindo referências a parâmetros no código  
  É possível fazer referência à coleção de parâmetros globais por meio de código personalizado em um bloco de código da definição do relatório ou em um assembly personalizado fornecido. A coleção de parâmetros é somente leitura e não possui iteradores públicos. Não é possível usar uma construção [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **do** para percorrer a coleção. É preciso saber o nome do parâmetro definido na definição de relatório antes de referenciá-lo no código. No entanto, é possível iterar através de todos os valores de um parâmetro de vários valores.  
@@ -180,7 +185,7 @@ End Function
  Para obter mais informações sobre como acessar o código, consulte [Accessing Custom Assemblies Through Expressions](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md).  
   
 ##  <a name="collections"></a> Passando coleções internas para assemblies personalizados  
- Se você deseja passar coleções internas, como *Globals* ou *Parameters*, em um assembly personalizado para processamento, você deve adicionar uma referência de assembly no projeto de código ao assembly que define as coleções internas e acessar o namespace correto. O assembly que você precisará referenciar será diferente dependendo da finalidade para a qual você está desenvolvendo o assembly personalizado: para um relatório executado em um servidor de relatórios (relatório do servidor) ou um relatório executado localmente em um aplicativo .NET (relatório local). Obtenha detalhes a seguir.  
+ Se você deseja passar coleções internas, como *Globals* ou *Parameters* , em um assembly personalizado para processamento, você deve adicionar uma referência de assembly no projeto de código ao assembly que define as coleções internas e acessar o namespace correto. O assembly que você precisará referenciar será diferente dependendo da finalidade para a qual você está desenvolvendo o assembly personalizado: para um relatório executado em um servidor de relatórios (relatório do servidor) ou um relatório executado localmente em um aplicativo .NET (relatório local). Obtenha detalhes a seguir.  
   
 -   **Namespace:** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   
@@ -190,7 +195,7 @@ End Function
   
  Como o conteúdo das coleções *Fields* e *ReportItems* pode ser alterado dinamicamente em tempo de execução, você não deverá retê-las durante as chamadas no assembly personalizado (por exemplo, em uma variável de membro). A mesma recomendação geralmente se aplica a todas as coleções internas.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Adicionar código a um relatório &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
  [Usando assemblies personalizados com relatórios](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Adicionar uma referência de assembly a um relatório &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   

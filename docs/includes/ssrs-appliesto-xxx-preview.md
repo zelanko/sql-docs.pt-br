@@ -1,1 +1,1 @@
-**ESTE TÓPICO APLICA-SE A:**![no](media/no.png)SQL Server 2016![yes](media/yes.png)Technical Preview de janeiro de 2017 dos relatórios do Power BI no SQL Server Reporting Services
+**Este tópico aplica-se a:**![sem](media/no.png)SQL Server 2016![Sim](media/yes.png)servidor de relatório do Power BI

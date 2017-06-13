@@ -1,29 +1,34 @@
 ---
-title: "Fixar itens do Reporting Services nos pain&#233;is do Power BI | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pbi"
-  - "painel"
-  - "pin"
-  - "powerbi"
-  - "integração do power bi"
+title: "Fixar itens do Reporting Services nos painéis do Power BI | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pbi
+- dashboard
+- pin
+- powerbi
+- power bi integration
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 caps.latest.revision: 23
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 23
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ce952f1d25529948bbcc3dbae5f1707af9683b11
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Fixar itens do Reporting Services nos pain&#233;is do Power BI
+# <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Fixar itens do Reporting Services nos painéis do Power BI
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] permite que os usuários fixem itens de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] da barra de ferramentas do visualizador de relatórios em um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] como um novo bloco.   Para fixar, o administrador precisa primeiro integrar o servidor de relatório ao Azure Active Directory e ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
  ![rs_powerbi_icon](../reporting-services/media/ssrs-powerbi-icon.png "rs_powerbi_icon")  
@@ -32,11 +37,11 @@ caps.handback.revision: 23
   
 ##  <a name="bkmk_requirements_to_pin"></a> Requisitos para fixação  
   
--   O servidor de relatório é configurado para integração do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] . Para obter mais informações, consulte [Integração do Servidor de Relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). Se o servidor de relatório não tiver sido configurado, você não verá o botão **Fixar no painel do Power BI** na barra de ferramentas.  
+-   O servidor de relatório é configurado para integração do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] . Para obter mais informações, consulte [Integração do servidor de relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). Se o servidor de relatório não tiver sido configurado, você não verá o botão **Fixar no painel do Power BI** na barra de ferramentas.  
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   Você fixa do visualizador de relatórios do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], por exemplo, http://myserver/Reports.  Não é possível fixar do [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)], do designer de relatórios no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], nem de uma url do servidor de relatório.  Por exemplo, http://myserver/Report`Server`.  
+-   Fixar do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Visualizador de relatórios em t[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]ele, por exemplo `http://myserver/Reports`.  Não é possível fixar do [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)], do designer de relatórios no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], nem de uma url do servidor de relatório.  Por exemplo `http://myserver/ReportServer`.  
   
 -   Seu navegador precisa ser configurado para permitir pop-ups do site do servidor de relatório.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 23
     Consulte a seção “Configurar credenciais armazenadas para uma fonte de dados específica do relatório (Modo nativo)” em [Armazenar credenciais em uma fonte de dados do Reporting Services](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
 ##  <a name="bkmk_supported_items"></a> Itens que podem ser fixados  
- Os itens de relatório a seguir podem ser fixados em um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .  Você não pode fixar itens aninhados dentro de uma região de dados. Por exemplo, não é possível fixar um item aninhado em uma tabela ou lista do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ Os itens de relatório a seguir podem ser fixados em um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .  Você não pode fixar itens aninhados dentro de uma região de dados. Por exemplo, não é possível fixar um item aninhado em uma tabela ou lista do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 -   Gráficos  
   
@@ -63,25 +68,25 @@ caps.handback.revision: 23
   
 ##  <a name="bkmk_to_pin"></a> Para fixar um item de relatório  
   
-1. Verifique se você está conectado ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], selecione o item de menu **Minhas Configurações** e conecte-se. Consulte [Minhas Configurações para integração do Power BI &#40;portal da Web&#41;](http://msdn.microsoft.com/pt-br/85c2fac7-80bf-45b7-8654-764b5f5231f5) para obter mais informações.
+1. Verifique se você está conectado ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], selecione o item de menu **Minhas Configurações** e conecte-se. Consulte  [Minhas Configurações para integração do Power BI &#40;portal Web&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5) para obter mais informações.
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
 2. Navegue até a pasta [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] que contém o relatório e exiba-o.  
   
-3. Ao exibir o relatório, selecione o botão **Fixar no Power BI** na barra de ferramentas.  Você será solicitado a se conectar, caso ainda não o tenha feito.  Se o botão [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] não estiver visível, o servidor de relatório não foi integrado ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Para obter mais informações, consulte [Integração do Servidor de Relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+3. Ao exibir o relatório, selecione o botão **Fixar no Power BI** na barra de ferramentas.  Você será solicitado a se conectar, caso ainda não o tenha feito.  Se o botão [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] não estiver visível, o servidor de relatório não foi integrado ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Para obter mais informações, consulte [Integração do servidor de relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
     ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
 4. Clique no item de relatório que você quer fixar no [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Você só pode fixar um item de cada vez.  O visualizador de relatórios apresenta uma exibição sombreada do seu relatório, e os itens de relatório que podem ser fixados são realçados, enquanto os itens que não podem ser fixados aparecerão com um sombreado escuro.  
   
-    **(1)** selecione o grupo que contém o painel que você quer fixar, **(2)** selecione o painel no qual você quer fixar o item e **(3)** selecione a frequência com que você quer que o bloco seja atualizado no dashboard.   ![observação](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "observação") A atualização é gerenciada pelas assinaturas do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e, depois que o item é fixado, você pode editar a assinatura e configurar outro agendamento de atualização.  
+    **(1)** selecione o grupo que contém o painel que você quer fixar, **(2)** selecione o painel no qual você quer fixar o item e **(3)** selecione a frequência com que você quer que o bloco seja atualizado no dashboard.   ![Observação](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Observação") a atualização é gerenciada pelo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] assinaturas e depois que o item é fixado, você pode editar a assinatura e configurar uma agenda de atualização diferentes.  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   
 5. Selecione **Fixar**  
   
-    Na caixa de diálogo **Fixação Bem-Sucedida**, você pode selecionar o link **Ver no Power BI** para navegar até o painel e ver o item que você acabou de fixar.  
+    Na caixa de diálogo **Fixação Bem-Sucedida** , você pode selecionar o link **Ver no Power BI** para navegar até o painel e ver o item que você acabou de fixar.  
   
 6. Selecione **Fechar** para retornar o relatório para a exibição normal.  
   
@@ -93,7 +98,7 @@ No painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , o item de rela
 
 **(1)** Você pode fixar o bloco em outros painéis.
 
-**(2)** Em **Detalhes do Bloco**, você observará que o título do relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é usado para o título padrão do bloco.
+**(2)** Em **Detalhes do Bloco** , você observará que o título do relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é usado para o título padrão do bloco.
 
 **(3)** O subtítulo do bloco é baseado na data e hora em que o bloco foi fixado ou nos dados que foram atualizados pela última vez no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. O agendamento da atualização é gerenciado pela assinatura do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que foi criada automaticamente quando você fixou o item de relatório.
 
@@ -109,13 +114,13 @@ No painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , o item de rela
   
       Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
--   **Itens fixados mostram dados obsoletos** em um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] e ele foi atualizado por um período.  O token de credenciais do usuário expirou e você precisa se conectar novamente.  O registro da credencial do usuário no Azure e no [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] é válido por 90 dias. No [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], clique em **Minhas Configurações**. Para obter mais informações, veja [Minhas Configurações para integração do Power BI &#40;portal da Web&#41;](http://msdn.microsoft.com/pt-br/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
+-   **Itens fixados mostram dados obsoletos** em um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] e ele foi atualizado por um período.  O token de credenciais do usuário expirou e você precisa se conectar novamente.  O registro da credencial do usuário no Azure e no [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] é válido por 90 dias. No[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], clique em **Minhas Configurações**. Para obter mais informações, consulte [Minhas Configurações para integração do Power BI &#40;portal Web&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
   
 -   **Itens fixados mostram dados obsoletos** em um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] e ele não foi atualizado nem mesmo uma vez.  O problema é que o relatório não foi configurado para usar credenciais armazenadas. Um relatório deve usar credenciais armazenadas porque a ação de fixar um item de relatório cria uma assinatura do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para gerenciar o agendamento de atualização dos blocos. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] exigem credenciais armazenadas. Ao analisar a página **Minhas Assinaturas** , você verá uma mensagem de erro semelhante à seguinte:  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **As credenciais do Power BI expiraram:**  você tenta fixar um item e vê a mensagem de erro a seguir. No [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], clique em **Minhas Configurações** e, na página Minhas Configurações, clique em **Entrar**. Consulte [Minhas Configurações para integração do Power BI &#40;portal da Web&#41;](http://msdn.microsoft.com/pt-br/85c2fac7-80bf-45b7-8654-764b5f5231f5) para obter mais informações.  
+-   **As credenciais do Power BI expiraram:**  você tenta fixar um item e vê a mensagem de erro a seguir. No [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], clique em **Minhas Configurações** e, na página Minhas Configurações, clique em **Entrar**. Consulte  [Minhas Configurações para integração do Power BI &#40;portal Web&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5) para obter mais informações.  
   
         Cannot Pin : Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
@@ -130,20 +135,22 @@ No painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , o item de rela
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
   
-     Você também pode editar as propriedades de assinatura e alterar o **Nome Visual do Relatório** para o nome do item de relatório apropriado. ![change the visual used for the power bi refresh](../reporting-services/media/ssrs-powerbi-subscription-visual.png "change the visual used for the power bi refresh")  
+     Você também pode editar as propriedades de assinatura e alterar o **Nome Visual do Relatório** para o nome do item de relatório apropriado. ![alterar o visual usado para a atualização do power bi](../reporting-services/media/ssrs-powerbi-subscription-visual.png "alterar o visual usado para a atualização do power bi")  
   
 -   **Excluir um bloco**. Se você excluir um bloco no [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)], a assinatura associada não será excluída no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e, na página **Minhas assinaturas**, um erro semelhante ao que se segue será exibido. É possível excluir a assinatura.  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The item 'Tile deleted af7131d9-5eaf-480f-ba45-943a07d19c9f' cannot be found.  
 
-## Vídeo
+## <a name="video"></a>Vídeo
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Integração do servidor de relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
- [Minhas Configurações para integração do Power BI &#40;portal Web&#41;](http://msdn.microsoft.com/pt-br/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+ [Minhas Configurações para integração do Power BI &#40;portal Web&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
  [Painéis no Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

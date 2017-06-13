@@ -1,32 +1,37 @@
 ---
-title: "Proteger relat&#243;rios e recursos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "segurança [Reporting Services], relatórios"
-  - "segurança [Reporting Services], recursos"
-  - "relatórios [Reporting Services], segurança"
-  - "relatórios confidenciais [Reporting Services]"
-  - "recursos [Reporting Services], segurança"
+title: "Proteger relatórios e recursos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [Reporting Services], reports
+- security [Reporting Services], resources
+- reports [Reporting Services], security
+- confidential reports [Reporting Services]
+- resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 caps.latest.revision: 47
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 47
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66e32b412558ec3c06fcbfcb3b4dbd1b7b2e06e0
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Proteger relat&#243;rios e recursos
+# <a name="secure-reports-and-resources"></a>Proteger relatórios e recursos
   É possível definir a segurança de relatórios e recursos individuais para controlar o nível de acesso que os usuários têm a esses itens. Por padrão, somente os usuários que são membros do grupo interno de **Administradores** podem executar relatórios, exibir recursos, modificar propriedades e excluir os itens. Todos os outros usuários devem ter atribuições de função que permitam o acesso a um relatório ou recurso.  
   
-## Access baseado em funções a relatórios e recursos  
+## <a name="role-based-access-to-reports-and-resources"></a>Access baseado em funções a relatórios e recursos  
  Para conceder acesso a relatórios e recursos, você pode permitir que os usuários herdem as atribuições de função existentes de uma pasta pai ou criem uma nova atribuição de função no próprio item.  
   
  Na maioria dos casos, você provavelmente vai usar as permissões que são herdadas de uma pasta pai. A definição de segurança em relatórios e recursos individuais é necessária somente se você desejar ocultar o relatório ou recurso dos usuários que não precisam saber de sua existência ou desejar aumentar o nível de acesso para um relatório ou item. Esses objetivos não são mutuamente exclusivos. Você pode restringir o acesso a um relatório a um grupo menor de usuários e fornecer a todos ou a alguns deles privilégios adicionais para gerenciar o relatório.  
@@ -35,7 +40,7 @@ caps.handback.revision: 47
   
  Depois de definir a segurança em um relatório ou recurso, essas configurações permanecem com o item, mesmo que ele seja movido para um novo local. Por exemplo, se você mover um relatório ao qual somente poucas pessoas têm acesso, o relatório continuará disponível somente para esses usuários mesmo que seja movido para uma pasta que tem uma política de segurança relativamente aberta.  
   
-## Diminuindo ataques de injeção HTML em um relatório ou documento publicado  
+## <a name="mitigating-html-injection-attacks-in-a-published-report-or-document"></a>Diminuindo ataques de injeção HTML em um relatório ou documento publicado  
  No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], relatórios e recursos são processados com a identidade de segurança do usuário que está executando o relatório. Se o relatório contiver expressões, scripts, itens de relatório personalizados ou assemblies personalizados, o código será executado com as credenciais do usuário. Se um recurso for um documento HTML que contém script. o script será executado quando o usuário abrir o documento no servidor de relatório. A possibilidade de executar scripts ou códigos em um relatório é um recurso avançado que pode ser um pouco arriscado. Se o código for suspeito, o servidor de relatório e o usuário que está executando o relatório estarão vulneráveis a ataques.  
   
  Ao conceder acesso a relatórios e recursos processados como HTML, é importante lembrar que os relatórios são processados em confiança total e que scripts possivelmente suspeitos podem ser enviados ao cliente. Dependendo das configurações do navegador, o cliente executará o HTML no nível de confiança especificado no navegador.  
@@ -46,21 +51,21 @@ caps.handback.revision: 47
   
 -   Todos os editores devem evitar publicar relatórios e recursos provenientes de origens desconhecidas ou não confiáveis. Se necessário, abra o arquivo em um editor de textos e procure scripts e URLs suspeitos.  
   
-## Parâmetros de Relatórios e Injeção de Script  
+## <a name="report-parameters-and-script-injection"></a>Parâmetros de Relatórios e Injeção de Script  
  Os Parâmetros de Relatório proporcionam flexibilidade para o projeto geral e a emissão do relatório. Porém, essa mesma flexibilidade pode, em alguns casos, ser usada por um invasor em ataques de atração. Para atenuar o risco de execução acidental de scripts mal-intencionados, abra apenas relatórios renderizados de fontes confiáveis. Recomenda-se que você considere o seguinte cenário, que é um potencial ataque de injeção de script ao Renderizador de HTML:  
   
 1.  Um relatório contém uma caixa de texto com a ação de hiperlink definida como o valor de um parâmetro que pode conter texto mal-intencionado.  
   
 2.  O relatório é publicado em um servidor de relatórios ou de outra forma disponibilizado de modo que o valor de parâmetro de relatório possa ser controlado pela URL de uma página da Web.  
   
-3.  Um invasor cria um link para a página da Web ou o servidor de relatório, especificando o valor do parâmetro no "javascript:\<malicious script here>" e envia esse link a outra pessoa em um ataque de atração.  
+3.  Um invasor cria um link para a página da web ou o servidor de relatório especificando o valor do parâmetro no formulário "javascript:\<script mal-intencionado aqui >" e envia esse link para alguém em um ataque de atração.  
   
-## Atenuando ataques de injeção de script em um hiperlink de um relatório ou documento publicado  
+## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>Atenuando ataques de injeção de script em um hiperlink de um relatório ou documento publicado  
  Relatórios podem conter hiperlinks inseridos no valor da propriedade Action de um item de relatório ou parte de um item de relatório. Hiperlinks podem ser associados a dados que recuperados de uma fonte de dados externa quando o relatório é processado. Se um usuário mal-intencionado modificar os dados subjacentes, o hiperlink pode correr o risco de explorações de script. Se um usuário clicar no link no relatório publicado ou exportado, o script mal-intencionado pode ser executado.  
   
  Para atenuar o risco de incluir links em um relatório que executam inadvertidamente scripts mal-intencionados, associe hiperlinks a dados apenas de fontes confiáveis. Verifique se os dados dos resultados da consulta e as expressões que associam dados a hiperlinks não criam links que possam ser explorados. Por exemplo, não baseie um hiperlink em uma expressão que concatene dados de vários campos de conjuntos de dados. Se necessário, navegue até o relatório e use "Exibir origem" para verificar scripts e URLs suspeitos.  
   
-## Diminuindo ataques de injeção SQL em um relatório parametrizado  
+## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>Diminuindo ataques de injeção SQL em um relatório parametrizado  
  Em qualquer relatório que inclua um parâmetro do tipo **String**, use uma lista de valores disponíveis (também conhecida como uma lista de valores válidos) e verifique se todos os usuários que executam o relatório têm somente as permissões necessárias para exibir os dados do relatório. Quando você define um parâmetro do tipo **String**, é exibida para o usuário uma caixa de texto que pode ter qualquer valor. Uma lista de valores disponíveis limita os valores que podem ser inseridos. Se o parâmetro do relatório estiver associado a um parâmetro de consulta e uma lista de valores disponíveis não for usada, um usuário do relatório poderá digitar sintaxe SQL na caixa de texto, abrindo potencialmente o relatório e o servidor a um ataque de injeção SQL. Se o usuário tiver permissões suficientes para executar a nova instrução SQL, resultados indesejados podem ser produzidos no servidor.  
   
  Se um parâmetro de relatório não estiver associado a um parâmetro de consulta e os valores de parâmetro forem incluídos no relatório, um usuário do relatório poderá digitar a sintaxe de expressão ou uma URL no valor de parâmetro e processar o relatório em Excel ou HTML. Se outro usuário exibir o relatório e clicar no conteúdo do parâmetro renderizado, o usuário poderá executar acidentalmente o script ou link mal-intencionado.  
@@ -70,10 +75,10 @@ caps.handback.revision: 47
 > [!NOTE]  
 >  Em versões anteriores da documentação, foi incluído um exemplo de criação de uma consulta dinâmica como uma expressão. Esse tipo de consulta cria uma vulnerabilidade a ataques de injeção SQL e, portanto, não é recomendado.  
   
-## Protegendo relatórios confidenciais  
+## <a name="securing-confidential-reports"></a>Protegendo relatórios confidenciais  
  Os relatórios que contêm informações confidenciais devem ser protegidos no nível de acesso aos dados, solicitando que os usuários forneçam credenciais para acessar dados confidenciais. Para obter mais informações, consulte [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Você também pode proteger uma pasta deixá-la inacessível para usuários não autorizados. Para obter mais informações, consulte [Proteger pastas](../../reporting-services/security/secure-folders.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criar e gerenciar atribuições de função](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Configurar o acesso ao Construtor de Relatórios](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   

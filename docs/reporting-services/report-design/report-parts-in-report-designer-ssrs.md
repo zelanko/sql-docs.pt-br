@@ -1,25 +1,32 @@
 ---
-title: "Partes de relat&#243;rio no Designer de Relat&#243;rios (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.components.f1"
+title: "Partes no Designer de relatórios (SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Partes de relat&#243;rio no Designer de Relat&#243;rios (SSRS)
+
+# <a name="report-parts-in-report-designer-ssrs"></a>Partes de relatório no Designer de Relatórios (SSRS)
+
   No Designer de Relatórios, depois de criar tabelas, gráficos e outros itens de relatório paginado em um projeto, você pode publicá-los como *partes de relatório* em um servidor de relatório ou site do SharePoint integrado com um servidor de relatório de forma que você e outros usuários possam reutilizá-las em outros relatórios.  
   
  Em geral, as partes do relatório funcionam da mesma maneira no Designer de Relatórios e no Construtor de Relatórios. Para ler sobre a funcionalidade básica, consulte [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -27,7 +34,7 @@ caps.handback.revision: 11
  Há diferenças fundamentais na maneira como as partes do relatório funcionam no Designer de Relatórios. Uma diferença principal é o fluxo de trabalho. O Construtor de Relatórios permite criação colaboradora: eu crio uma parte de relatório e a publico. Você pode reutilizar, modificar e republicá-la. No Designer de Relatórios, a publicação é unidirecional: eu posso publicar uma parte de relatório no Designer de Relatórios, e você pode reutilizá-la. Mas eu não posso reutilizar uma parte de relatório existente em um relatório em Designer de Relatórios. Este tópico aborda essas diferenças, depois de uma visão geral rápida das partes de relatório.  
   
 ##  <a name="ComponentWorkflow"></a> Ciclo de vida da publicação de partes de relatório  
- ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.png "rs_ComponentCreation")  
+ ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  No Designer de Relatórios, a Pessoa A cria um projeto que contém um relatório com um gráfico que depende de um conjunto de dados inserido.  
   
@@ -35,7 +42,7 @@ caps.handback.revision: 11
   
 3.  A Pessoa B cria um relatório em branco no Construtor de Relatórios e adiciona o gráfico a ele. O gráfico agora faz parte do relatório da Pessoa B, junto com o conjunto de dados inserido. A Pessoa B pode modificar as instâncias do gráfico e do conjunto de dados que estão no relatório. Isso não terá nenhum efeito nas instâncias do gráfico e do conjunto de dados no servidor de relatório, nem quebrará a relação entre as instâncias no relatório e no servidor de relatório.  
   
-     ![rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.png "rs_BIDScomponentupdate")  
+     ![rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.gif "rs_BIDScomponentupdate")  
   
 4.  No Designer de Relatórios, a Pessoa A modifica o gráfico no relatório original.  
   
@@ -74,9 +81,8 @@ caps.handback.revision: 11
   
 2.  Implante o relatório.  
   
- Quando você implanta o relatório, a parte de relatório é publicada em um site do SharePoint ou servidor de relatório e outros usuários podem reutilizá-la. Para publicar uma parte de relatório, você deve ter uma conexão com um servidor de relatório do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e permissões suficientes nesse servidor ao implantar o relatório.  
+ Quando você implanta o relatório, a parte de relatório é publicada em um site do SharePoint ou servidor de relatório e outros usuários podem reutilizá-la. Para publicar uma parte de relatório, você deve ter uma conexão para e permissões suficientes no servidor de relatório quando você implanta o relatório.  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ##  <a name="SearchReuseComponents"></a> Reutilizando partes de relatório  
  Ao contrário do Construtor de Relatórios, você não pode pesquisar e reutilizar uma parte de relatório em um projeto diferente daquele em ela foi criada.  
@@ -89,10 +95,9 @@ caps.handback.revision: 11
  Você pode modificar e, em seguida, republicar a parte de relatório no site ou no servidor. Os autores de relatório do Construtor de Relatórios que adicionaram essa parte de relatório a um relatório serão informados sobre a alteração na próxima vez que abrirem o relatório. Eles podem escolher aceitar ou não as alterações.  
   
  Você também pode optar por publicar como novo um relatório que já publicou. Na caixa de diálogo Publicar Partes de Relatório, clique em Publicar como uma nova parte de relatório. Essa nova parte de relatório tem uma nova identificação exclusiva e não tem nenhuma relação com a parte de relatório antiga.  
-  
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
-  
-## Consulte também  
- [Gerenciando partes de relatório](../../reporting-services/report-design/managing-report-parts.md)  
-  
-  
+
+## <a name="next-steps"></a>Próximas etapas
+
+[Gerenciando partes de relatório](../../reporting-services/report-design/managing-report-parts.md)  
+
+Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

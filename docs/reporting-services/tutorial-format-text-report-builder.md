@@ -1,60 +1,47 @@
 ---
-title: "Tutorial: Formatar texto (Construtor de Relat&#243;rios) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Tutorial: Formatar texto (construtor de relatórios) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 caps.latest.revision: 16
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: cfbe1001a049466af839363db29156df6b972556
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutorial: Formatar texto (Construtor de Relat&#243;rios)
-Neste tutorial, você treina como formatar texto de várias maneiras em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. É possível testar diferentes formatos. 
+
+# <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatar texto (Construtor de Relatórios)
+
+Neste tutorial, você treina como formatar texto de várias maneiras em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . É possível testar diferentes formatos. 
 
 Depois de configurar o relatório em branco com a fonte de dados e o conjunto de dados, é possível escolher os formatos que você quer explorar. A ilustração a seguir mostra um relatório semelhante ao que você criará.  
   
 ![report-build-format-report](../reporting-services/media/report-build-format-report.png) 
   
 Em uma etapa, você comete um erro de propósito, para poder ver o porquê do erro. Em seguida, você corrige o erro para obter o efeito desejado.  
-   
-## <a name="BackToTop"></a>O que você aprenderá  
-  
-### Configurar o relatório  
-1. [Criar um relatório em branco com uma fonte de dados e um conjunto de dados](#CreateReport)  
-  
-2. [Adicionar um campo à superfície de design do relatório (incorretamente e, em seguida, corretamente)](#AddField)  
-  
-3. [Adicionar uma tabela à superfície de design do relatório](#AddTable)  
-  
-### Escolher e selecionar  
-* [Adicionar um hiperlink ao relatório](#AddHyperlink)  
-  
-* [Girar texto no relatório](#RotateText)  
-  
-* [Formatar moeda](#FormatCurrency)  
-  
-* [Exibir texto com formatação HTML](#FormatHTML)  
-  
-* [Salvar o relatório](#Save)  
-  
+    
 Tempo estimado para concluir este tutorial: 20 minutos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
 Para obter informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="CreateReport"></a>Criar um relatório em branco com uma fonte de dados e um conjunto de dados  
   
-### Para criar um relatório em branco  
+### <a name="to-create-a-blank-report"></a>Para criar um relatório em branco  
   
 1.  [Inicie o Construtor de Relatórios](../reporting-services/report-builder/start-report-builder.md) no computador, no portal da Web do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou no modo integrado do SharePoint.  
   
@@ -66,30 +53,30 @@ Para obter informações sobre os requisitos, consulte [Pré-requisitos para tut
   
 3.  No painel direito, clique em **Relatório em Branco**.  
   
-### Para criar uma fonte de dados  
+### <a name="to-create-a-data-source"></a>Para criar uma fonte de dados  
   
 1.  No painel Dados do Relatório, clique em **Nova** > **Fonte de Dados**.  
 
-    Se o painel **Dados do Relatório** não estiver visível, na guia **Exibir**, marque **Dados do Relatório**.
+    Se o painel **Dados do Relatório** não estiver visível, na guia **Exibir** , marque **Dados do Relatório**.
   
-2.  Na caixa **Nome**, digite: **TextDataSource**  
+2.  Na caixa **Nome** , digite: **TextDataSource**  
   
 3.  Clique em **Usar uma conexão inserida no meu relatório**.  
   
-4.  Verifique se o tipo de conexão é Microsoft SQL Server e, na caixa **Cadeia de conexão**, digite: `Data Source = <servername>`  
+4.  Verifique se o tipo de conexão é Microsoft SQL Server e, na caixa **Cadeia de conexão** , digite: `Data Source = <servername>`  
   
     > [!NOTE]  
-    > A expressão `<servername>`, por exemplo, Report001, especifica um computador no qual há uma instância do Mecanismo de Banco de Dados do SQL Server instalada. Este tutorial não precisa de dados específicos; ele só precisa de uma conexão com um banco de dados [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Se você já tiver uma conexão de fonte de dados listada em **Conexões de Fonte de Dados**, será possível selecioná-la e ir para o próximo procedimento, “Para criar uma fonte de dados”. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > A expressão `<servername>`, por exemplo, Report001, especifica um computador no qual há uma instância do Mecanismo de Banco de Dados do SQL Server instalada. Este tutorial não precisa de dados específicos. ele só precisa de uma conexão para um banco de dados do SQL Server. Se você já tiver uma conexão de fonte de dados listada em **Conexões de Fonte de Dados**, será possível selecioná-la e ir para o próximo procedimento, “Para criar uma fonte de dados”. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### Para criar um conjunto de dados  
+### <a name="to-create-a-dataset"></a>Para criar um conjunto de dados  
   
 1.  No painel Dados do Relatório, clique em **Novo** > **Conjunto de Dados**.  
   
 2.  Verifique se a fonte de dados é **TextDataSource**.  
   
-3.  Na caixa **Nome**, digite: **TextDataset.**  
+3.  Na caixa **Nome** , digite: **TextDataset.**  
   
 4.  Verifique se o tipo de consulta **Texto** está selecionado e, em seguida, clique em **Designer de Consulta**.  
   
@@ -144,7 +131,7 @@ Para obter informações sobre os requisitos, consulte [Pré-requisitos para tut
 ## <a name="AddField"></a>Adicionar um campo à superfície de design do relatório  
 Se você quiser que um campo do conjunto de dados seja exibido em um relatório, seu primeiro impulso poderá ser de arrastá-lo diretamente para a superfície de design. Este exercício aponta por que isso não funciona e o que fazer em vez disso.  
   
-### Para adicionar um campo ao relatório (e obter o resultado errado)  
+### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>Para adicionar um campo ao relatório (e obter o resultado errado)  
   
 1.  Arraste o campo **FullName** do painel Dados do Relatório até a superfície de design.  
   
@@ -158,7 +145,7 @@ Se você quiser que um campo do conjunto de dados seja exibido em um relatório,
   
 4.  Selecione a expressão `<Expr>` na caixa de texto.  
   
-5.  No painel Propriedades, na propriedade **Valor**, você vê o seguinte (se o painel Propriedades não estiver visível, na guia **Exibir**, marque **Propriedades**):  
+5.  No painel Propriedades, na propriedade **Valor** , você vê o seguinte (se o painel Propriedades não estiver visível, na guia **Exibir** , marque **Propriedades**):  
   
     ```  
     =First(Fields!FullName.Value, "TextDataSet")  
@@ -170,13 +157,13 @@ Se você quiser que um campo do conjunto de dados seja exibido em um relatório,
   
 6.  Selecione a caixa de texto (se a expressão estiver selecionada, pressione ESC para marcar a caixa de texto) e pressione a tecla DEL.  
   
-### Para adicionar um campo ao relatório (e obter o resultado certo)  
+### <a name="to-add-a-field-to-the-report-and-get-the-right-result"></a>Para adicionar um campo ao relatório (e obter o resultado certo)  
   
-1.  Na guia **Inserir** da faixa de opções, na área **Regiões de Dados**, clique em **Lista**. Clique na superfície de design e, em seguida, arraste-a para criar uma caixa com aproximadamente 5,08 centímetros de largura e 2,54 centímetros de altura.  
+1.  Na guia **Inserir** da faixa de opções, na área **Regiões de Dados** , clique em **Lista**. Clique na superfície de design e, em seguida, arraste-a para criar uma caixa com aproximadamente 5,08 centímetros de largura e 2,54 centímetros de altura.  
   
 2.  Arraste o campo **FullName** do painel Dados do Relatório até a caixa de listagem.  
   
-    Desta vez, o Construtor de Relatórios cria uma caixa de texto com a expressão `[FullName]`.  
+    Desta vez, o Construtor de Relatórios cria uma caixa de texto com a expressão `[FullName]` .  
   
 3.  Clique em **Executar**.  
   
@@ -186,7 +173,7 @@ Se você quiser que um campo do conjunto de dados seja exibido em um relatório,
   
 5.  Selecione a expressão na caixa de texto.  
   
-6.  No painel Propriedades, na propriedade **Valor**, o seguinte é exibido:  
+6.  No painel Propriedades, na propriedade **Valor** , o seguinte é exibido:  
   
     ```  
     =Fields!FullName.Value  
@@ -203,11 +190,11 @@ Crie essa tabela para que você tenha um local para colocar os hiperlinks e o te
   
 2.  Na página **Escolher um conjunto de dados** do Assistente de Nova Tabela ou Matriz, clique em **Escolher um conjunto de dados existente neste relatório ou em um conjunto de dados compartilhado** > **TextDataset (neste Relatório)** > **Avançar**.  
   
-3.  Na página **Organizar campos**, arraste os campos **Territory**, **LinkText** e **Product** até **Grupos de Linhas**, arraste o campo **Sales** até **Valores** e clique em **Avançar**.  
+3.  Na página **Organizar campos** , arraste os campos **Territory**, **LinkText**e **Product** até **Grupos de Linhas**, arraste o campo **Sales** até **Valores**e clique em **Avançar**.  
 
     ![report-builder-text-arrange-fields](../reporting-services/media/report-builder-text-arrange-fields.png)
   
-4.  Na página **Escolher o layout**, desmarque a caixa de seleção **Expandir/recolher grupos** para que seja possível ver toda a tabela e clique em **Avançar**. 
+4.  Na página **Escolher o layout** , desmarque a caixa de seleção **Expandir/recolher grupos** para que seja possível ver toda a tabela e clique em **Avançar**. 
   
 5.  Clique em **Concluir**.  
   
@@ -219,7 +206,7 @@ Crie essa tabela para que você tenha um local para colocar os hiperlinks e o te
   
 8.  Clique em **Design** para retornar à exibição de design.  
   
-9. Selecione a célula **Total** na coluna **LinkText** e mantenha a tecla SHIFT pressionada e selecione as duas células à direita: a célula vazia na coluna **Product** e a célula `[Sum(Sales)]` da coluna **Sales**.  
+9. Selecione a célula **Total** na coluna **LinkText** e mantenha a tecla SHIFT pressionada e selecione as duas células à direita: a célula vazia na coluna **Product** e a célula `[Sum(Sales)]` da coluna **Sales** .  
   
 11. Com essas três células selecionadas, clique com o botão direito do mouse em uma delas e clique em **Excluir Linhas**.  
 
@@ -236,11 +223,11 @@ Nesta seção, você adiciona um hiperlink ao texto na tabela da seção anterio
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
-2.  Clique com o botão direito do mouse na célula que contém `[LinkText]` e clique em **Propriedades da Caixa de Texto**.  
+2.  Clique com o botão direito do mouse na célula que contém `[LinkText]`e clique em **Propriedades da Caixa de Texto**.  
   
-3.  Na guia **Ação**, clique em **Ir para URL**.  
+3.  Na guia **Ação** , clique em **Ir para URL**.  
   
-5.  Na caixa **Selecionar URL**, clique em **[URL]** e em **OK**.  
+5.  Na caixa **Selecionar URL** , clique em **[URL]**e em **OK**.  
   
 6.  Observe que o texto não parece diferente. Você precisa fazê-lo parecer um texto de link.  
   
@@ -263,14 +250,14 @@ Nesta seção, você gira um texto na tabela das seções anteriores.
   
 2.  Clique na célula que contém `[Territory].`  
   
-3.  Na guia **Início**, na seção **Fonte**, clique no botão **Negrito**.  
+3.  Na guia **Início** , na seção **Fonte** , clique no botão **Negrito** .  
   
-4.  Se o painel Propriedades não estiver aberto, na guia **Exibir**, marque a caixa de seleção **Propriedades**.  
+4.  Se o painel Propriedades não estiver aberto, na guia **Exibir** , marque a caixa de seleção **Propriedades** .  
   
 5.  Localize a propriedade WritingMode no painel Propriedades e altere-a de **Padrão** para **Rotate270**.  
  
     > [!NOTE]  
-    > Quando as propriedades no painel Propriedades estiverem organizadas em categorias, WritingMode estará na categoria **Localização**. Verifique se você selecionou a célula, e não o texto WritingMode é uma propriedade da caixa de texto, não do texto.  
+    > Quando as propriedades no painel Propriedades estiverem organizadas em categorias, WritingMode estará na categoria **Localização** . Verifique se você selecionou a célula, e não o texto WritingMode é uma propriedade da caixa de texto, não do texto.  
 
     ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
    
@@ -290,11 +277,11 @@ Agora o texto na célula `[Territory]` é executado verticalmente da parte infer
   
 3.  Na guia **Início** > grupo **Número** > botão **Moeda**.  
   
-4.  (Opcional) Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**US$ 12.345,00**]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números**, clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
+4.  (Opcional) Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**US$ 12.345,00**]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
 
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
   
-5.  (Opcional) Na guia **Início**, no grupo **Número**, clique no botão **Diminuir Decimais** duas vezes para exibir valores em dólares sem centavos.  
+5.  (Opcional) Na guia **Início** , no grupo **Número** , clique no botão **Diminuir Decimais** duas vezes para exibir valores em dólares sem centavos.  
   
 6.  Clique em Executar (**!**) para visualizar o relatório.  
   
@@ -306,7 +293,7 @@ O relatório agora exibe dados formatados e é mais fácil de ler.
   
 1.  Clique em **Design** a fim de alternar para a exibição de design.  
   
-2.  Na guia **Inserir**, clique em **Caixa de Texto** e, na superfície de design, clique e arraste para criar uma caixa de texto abaixo da tabela, com cerca de 10 centímetros de largura e 8 centímetros de altura.  
+2.  Na guia **Inserir** , clique em **Caixa de Texto**e, na superfície de design, clique e arraste para criar uma caixa de texto abaixo da tabela, com cerca de 10 centímetros de largura e 8 centímetros de altura.  
   
 3.  Copiar esse texto e cole-o na caixa de texto:  
   
@@ -334,7 +321,7 @@ O relatório agora exibe dados formatados e é mais fácil de ler.
   
     Essa é uma propriedade do texto, não da caixa de texto, portanto, em uma caixa de texto você pode ter uma mistura de texto sem formatação e texto que usa marcas HTML como estilos.  
   
-6.  Na página **Geral**, em **Tipo de marcação**, clique em **HTML – Interpretar marcas HTML como estilos**.  
+6.  Na página **Geral** , em **Tipo de marcação**, clique em **HTML – Interpretar marcas HTML como estilos**.  
   
 7.  Clique em **OK**.  
   
@@ -349,7 +336,7 @@ O texto na caixa de texto é exibido como um título, um parágrafo e uma lista 
   
 Neste tutorial, salve o relatório em um servidor de relatório. Se você não tiver acesso ao servidor de relatório, salve o relatório no computador.  
   
-### Para salvar o relatório em um servidor de relatório  
+### <a name="to-save-the-report-on-a-report-server"></a>Para salvar o relatório em um servidor de relatório  
   
 1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
@@ -365,7 +352,7 @@ Neste tutorial, salve o relatório em um servidor de relatório. Se você não t
   
 O relatório será salvo no servidor de relatório. O nome do servidor de relatório ao qual você está conectado é exibido na barra de status da parte inferior da janela.  
   
-### Para salvar o relatório no computador  
+### <a name="to-save-the-report-on-your-computer"></a>Para salvar o relatório no computador  
   
 1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
@@ -374,12 +361,13 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
 3.  Em **Nome**, substitua o nome padrão por um nome de sua escolha. 
   
 4.  Clique em **Salvar**.  
-  
-## Próximas etapas  
-Há várias maneiras de formatar um texto no Construtor de Relatórios. O [Tutorial: Criando um relatório de forma livre &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contém mais exemplos.  
-  
-## Consulte também  
--   [Tutoriais do Construtor de Relatórios ](../reporting-services/report-builder-tutorials.md) 
--   [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
--   [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
+
+## <a name="next-steps"></a>Próximas etapas
+
+Há várias maneiras de formatar um texto no Construtor de Relatórios. [Tutorial: Criando um relatório de forma livre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contém mais exemplos.  
+
+[Tutoriais do construtor de relatórios ](../reporting-services/report-builder-tutorials.md)  
+ [formatando itens de relatório](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+[Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+
+Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

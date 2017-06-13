@@ -1,24 +1,29 @@
 ---
-title: "Dicas de design de relat&#243;rios (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Relatório de dicas de Design (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d30cf6d4ad8e2a4903172230469f1ba41bab360
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Dicas de design de relat&#243;rios (Construtor de Relat&#243;rios e SSRS)
-  Use as dicas a seguir para ajudar na criação de seus relatórios paginados no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+# <a name="report-design-tips-report-builder-and-ssrs"></a>Dicas de design de relatórios (Construtor de Relatórios e SSRS)
+  Use as dicas a seguir para ajudar na criação de seus relatórios paginados no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
         2.  **Região de dados como um feed de dados.** Com permissões apropriadas, um leitor de relatório pode criar um feed de dados de ATOM de uma região de dados.  
   
--   Use sublinhados em vez de espaços em nomes de relatório. Se você baixar um relatório do portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], os espaços serão substituídos por sublinhados. Se você usar o recurso de download para salvar relatórios localmente e, em seguida, incluí-los no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o uso de sublinhados manterá as dependências do relatório para sub-relatórios e os links de detalhamento precisos.  
+-   Use sublinhados em vez de espaços em nomes de relatório. Se você baixar um relatório do portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , os espaços serão substituídos por sublinhados. Se você usar o recurso de download para salvar relatórios localmente e, em seguida, incluí-los no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o uso de sublinhados manterá as dependências do relatório para sub-relatórios e os links de detalhamento precisos.  
   
 ##  <a name="Data"></a> Trabalhando com dados  
   
@@ -157,7 +162,7 @@ caps.handback.revision: 12
   
  Esse comportamento, as propriedades de largura e de altura dos itens do relatório, o tamanho do corpo do relatório, a definição da altura e da largura da página, as configurações de margem do relatório pai e o suporte específico à renderização são todos combinados para determinar quais itens do relatório se ajustam em uma página renderizada. Para obter mais informações, consulte [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Construtor de Relatórios no SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Tutoriais do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Tutoriais do Construtor de Relatórios](../../reporting-services/report-builder-tutorials.md)  

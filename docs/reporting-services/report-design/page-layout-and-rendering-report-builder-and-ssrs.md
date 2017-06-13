@@ -1,23 +1,28 @@
 ---
-title: "Layout de p&#225;gina e renderiza&#231;&#227;o (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Layout de página e renderização (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d688ed124a419017e97d405d7f5bd80e6e3bf530
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Layout de p&#225;gina e renderiza&#231;&#227;o (Construtor de Relat&#243;rios e SSRS)
+# <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Layout de página e renderização (Construtor de Relatórios e SSRS)
 Leia sobre as extensões de renderização do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para relatórios paginados se tiver certeza de que seu relatório tem a aparência desejada, incluindo o layout da página, quebras de página e tamanho do papel. 
 
  Quando você exibe relatórios no servidor de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou no painel de visualização do Construtor de Relatórios ou o Designer de Relatórios, o relatório é renderizado primeiro pelo renderizador HTML. Você poderá então exportar o relatório para diferentes formatos como arquivos do Excel ou CSV. O relatório exportado pode ser usado então para análise adicional no Excel ou como fonte de dados para aplicativos que podem importar e usar arquivos CSV.  
@@ -38,7 +43,7 @@ Outros itens de relatório são vinculados e exibem um item simples.
 
 Um relatório também pode conter sub-relatórios.  
   
-## Layout da página
+## <a name="page-layout"></a>Layout da página
 
  Com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você pode colocar itens de relatório em qualquer local na superfície de design. De maneira interativa, é possível colocar, expandir e assumir a forma inicial do item de relatório usando linhas ajustadas e redimensionando alças. Você poderá colocar regiões de dados com diferentes conjuntos de dados ou até os mesmos dados em diferentes formatos, lado a lado. Ao colocar um item de relatório na superfície de design, ele apresenta tamanho, forma e relação inicial padrão com relação a todos os outros itens de relatório. 
  
@@ -65,7 +70,7 @@ Um relatório também pode conter sub-relatórios.
   
 -   **Renderizadores de quebra de página impressa** Os renderizadores de quebra de página impressa mantêm o layout e a formatação do relatório. O arquivo resultante é otimizado para uma experiência consistente de impressão ou para exibir o relatório online em formato de livro. Os renderizadores de quebra de página impressa disponíveis são TIFF e PDF.  
   
- Quando você visualiza um relatório no Construtor de Relatórios, no Designer de Relatórios ou executa um relatório no servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ele sempre é renderizado primeiro em HTML. Depois que executar o relatório, é possível exportá-lo para diversos formatos de arquivo. Para obter mais informações, consulte [Exportar Relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ Quando você visualiza um relatório no Construtor de Relatórios, no Designer de Relatórios ou executa um relatório no servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ele sempre é renderizado primeiro em HTML. Depois que executar o relatório, é possível exportá-lo para diversos formatos de arquivo. Para obter mais informações, consulte [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ##  <a name="RenderingBehaviors"></a> Comportamentos de renderização  
  Dependendo do renderizador selecionado, algumas regras são aplicadas durante a renderização do relatório. Como os itens de relatório são ajustados juntos em uma página é determinado pela combinação destes fatores:  
@@ -85,7 +90,7 @@ Um relatório também pode conter sub-relatórios.
   
  Para desenvolver com êxito um relatório que seja facilmente lido pelos seus usuários bem como que seja otimizado para o processador que pretende usar na entrega do relatório, você deve entender as regras utilizadas para controlar a paginação no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Os relatórios exportados com o uso das extensões de renderização de **dados** e de **página flexível** na memória geralmente não são afetados pela paginação. Quando você usa uma extensão de renderização de dados, o relatório é renderizado como conjunto de linhas de tabela no formato XML ou CSV. Para assegurar que os dados de relatório exportados sejam utilizáveis, você deve entender as regras aplicadas para renderizar um conjunto de linhas de tabela mescladas de um relatório.  
   
- Ao usar uma extensão de renderização de **página flexível**, como a extensão de renderização HTML, talvez você queira saber qual a aparência do relatório quando impresso e também como ele será renderizado usando um renderizador de página de não flexível como PDF. Durante a criação ou a atualização de um relatório você pode visualizá-lo e exportá-lo no Construtor de Relatórios e no Designer de Relatórios.  
+ Ao usar uma extensão de renderização de **página flexível** , como a extensão de renderização HTML, talvez você queira saber qual a aparência do relatório quando impresso e também como ele será renderizado usando um renderizador de página de não flexível como PDF. Durante a criação ou a atualização de um relatório você pode visualizá-lo e exportá-lo no Construtor de Relatórios e no Designer de Relatórios.  
   
  Os renderizadores de **página impressa** têm o maior impacto no layout do relatório e o tamanho de página física. Para saber mais, consulte [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
    
@@ -113,8 +118,8 @@ Um relatório também pode conter sub-relatórios.
  [Controlando quebras de páginas, títulos, colunas e linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  Fornece informações sobre como usar quebras de página.  
   
-## Consulte também  
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

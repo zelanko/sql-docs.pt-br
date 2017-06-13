@@ -1,40 +1,45 @@
 ---
-title: "Manage a Running Process | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "report processing [Reporting Services], status information"
-  - "jobs [Reporting Services]"
-  - "exibindo trabalhos"
-  - "canceling jobs"
-  - "user jobs [Reporting Services]"
-  - "system jobs [Reporting Services]"
-  - "report processing [Reporting Services], managing running processes"
-  - "processes [Reporting Services]"
-  - "scanning processes [Reporting Services]"
-  - "status information [Reporting Services]"
-  - "report processing [Reporting Services]"
-  - "canceling subscriptions"
-  - "report servers [Reporting Services], jobs"
-  - "data-driven subscriptions"
-  - "displaying jobs"
-  - "assinaturas [Reporting Services], processos em execução"
+title: "Gerenciar um processo em execução | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- report processing [Reporting Services], status information
+- jobs [Reporting Services]
+- viewing jobs
+- canceling jobs
+- user jobs [Reporting Services]
+- system jobs [Reporting Services]
+- report processing [Reporting Services], managing running processes
+- processes [Reporting Services]
+- scanning processes [Reporting Services]
+- status information [Reporting Services]
+- report processing [Reporting Services]
+- canceling subscriptions
+- report servers [Reporting Services], jobs
+- data-driven subscriptions
+- displaying jobs
+- subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 caps.latest.revision: 53
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 53
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Manage a Running Process
+# <a name="manage-a-running-process"></a>Manage a Running Process
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] monitora o status dos trabalhos que estão em execução no servidor de relatório. Em intervalos regulares, o servidor de relatório examina os trabalhos em andamento e grava as informações de status no banco de dados do servidor de relatório ou os bancos de dados de aplicativo de serviço para o modo do SharePoint. Um trabalho está em andamento se algum dos seguintes processos estiver ocorrendo: execução de consulta em um servidor de banco de dados remoto ou local, processamento de relatórios e renderização de relatórios.  
   
  Você pode gerenciar *trabalhos de usuário* e *trabalhos de sistema*.  
@@ -73,7 +78,7 @@ caps.handback.revision: 53
   
  Não é possível usar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para listar ou cancelar a geração de modelos, o processamento de modelos ou assinaturas controladas por dados. O Reporting Services não permite cancelar a geração ou o processamento de modelos. Porém, você pode cancelar assinaturas controladas por dados usando as instruções fornecidas neste tópico.  
   
-### Como cancelar assinaturas ou o processamento de relatórios  
+### <a name="how-to-cancel-report-processing-or-subscription"></a>Como cancelar assinaturas ou o processamento de relatórios  
   
 1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], conecte-se ao servidor de relatório. Para obter instruções, consulte [Conectar-se a um Servidor de Relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 53
   
 3.  Clique com o botão direito do mouse no relatório e clique em **Cancelar Trabalhos**.  
   
-### Como cancelar uma assinatura controlada por dados  
+### <a name="how-to-cancel-a-data-driven-subscription"></a>Como cancelar uma assinatura controlada por dados  
   
 1.  Abra o arquivo RSReportServer.config em um editor de texto.  
   
@@ -97,13 +102,13 @@ caps.handback.revision: 53
   
 7.  Salve o arquivo.  
   
-### Definindo configurações de frequência para recuperar o status do trabalho  
+### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Definindo configurações de frequência para recuperar o status do trabalho  
  Um trabalho em execução é armazenado no banco de dados temporário do servidor de relatório. Você pode modificar as configurações do arquivo RSReportServer.config para controlar a frequência em que o servidor de relatório examina trabalhos em andamento e o intervalo após o qual o status de um trabalho em execução muda de “novo” para “em execução”. A configuração **RunningRequestsDbCycle** especifica com que frequência o servidor de relatório examina processos em execução. Por padrão, as informações de status são registradas a cada 60 segundos. A configuração **RunningRequestsAge** especifica o intervalo em que um trabalho passa de “novo” para “em execução”.  
   
 ##  <a name="bkmk_sharepoint"></a> Exibir e cancelar trabalhos (modo do SharePoint)  
  O gerenciamento de trabalhos em uma implantação no modo do SharePoint é realizado por meio da Administração Central do SharePoint, para cada aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-#### Para gerenciar trabalhos no modo do SharePoint  
+#### <a name="to-manage-jobs-in-sharepoint-mode"></a>Para gerenciar trabalhos no modo do SharePoint  
   
 1.  Na Administração Central do SharePoint, clique em **Gerenciar aplicativos de serviço**.  
   
@@ -116,14 +121,14 @@ caps.handback.revision: 53
 5.  Ou clique na caixa do seu trabalho e clique em **Excluir** para cancelar o trabalho. Excluir o trabalho não exclui a assinatura.  
   
 ##  <a name="bkmk_programmatically"></a> Gerenciando trabalhos programaticamente  
- Você pode gerenciar trabalhos programaticamente ou usando um script. Para obter mais informações, consulte <xref:ReportService2010.ReportingService2010.ListJobs%2A> e <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
+ Você pode gerenciar trabalhos programaticamente ou usando um script. Para obter mais informações, consulte <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Cancelar Trabalhos do Servidor de Relatório &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
  [Propriedades do Trabalho &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
  [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Monitorando o desempenho do servidor de relatório](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

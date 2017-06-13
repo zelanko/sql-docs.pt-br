@@ -1,28 +1,36 @@
 ---
-title: "Tutoriais do Construtor de Relat&#243;rios | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Tutoriais do construtor de relatórios | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 0db221b65dff8a531893657c47c776dc350c4aef
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutoriais do Construtor de Relat&#243;rios
-Use os tutoriais do Construtor de Relatórios a seguir para saber como criar relatórios paginados do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
+# <a name="report-builder-tutorials"></a>Tutoriais do Construtor de Relatórios
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
+Use os tutoriais do Construtor de Relatórios a seguir para saber como criar relatórios paginados do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
   
 [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)  
-Para usar estes tutoriais, você deve ter acesso somente leitura a um banco de dados [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e permissões para acessar um servidor de relatório do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
+Para usar esses tutoriais, você deve ter acesso somente leitura para um banco de dados do SQL Server e permissões para acessar um [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] servidor de relatório.  
   
 Para obter ajuda para esses pré-requisitos, entre em contato com o administrador do servidor de relatório.  
   
@@ -67,11 +75,11 @@ Siga as etapas deste tutorial para aprender como criar relatórios para um cená
   
 [Tutorial: Apresentando expressões](../reporting-services/tutorial-introducing-expressions.md)  
 Siga as etapas deste tutorial para aprender como usar expressões para concatenar, calcular e pesquisar valores de campo e mostrá-los em um relatório. Você também aprenderá como exibir condicionalmente diferentes imagens e estados de indicador usando expressões.  
-  
-## Consulte também  
-[Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder/report-design-view-report-builder.md)  
+
+## <a name="next-steps"></a>Próximas etapas
+
+[Modo de exibição de Design de relatório](../reporting-services/report-builder/report-design-view-report-builder.md)  
 [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-[Tutorial: Criar um relatório de gráfico rápido offline &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
-  
-  
-  
+[Tutorial: Criar um relatório de gráfico rápido Offline](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+
+Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

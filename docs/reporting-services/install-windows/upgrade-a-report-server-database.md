@@ -1,34 +1,42 @@
 ---
-title: "Atualizar um banco de dados do servidor de relat&#243;rio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "atualizando bancos de dados"
-  - "banco de dados do servidor de relatório"
-  - "atualizando o Reporting Services"
+title: "Atualizar um banco de dados do servidor de relatório | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- upgrading databases
+- report server database
+- upgrading Reporting Services
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 caps.latest.revision: 44
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 44
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 89bb5de5f669d033dd18bc63e11ef5bd29644542
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Atualizar um banco de dados do servidor de relat&#243;rio
-  O banco de dados do servidor de relatório fornece armazenamento para uma ou mais instâncias do servidor de relatório. Como o esquema do banco de dados do servidor de relatório pode ser alterado a cada versão nova do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é necessário que a versão do banco de dados corresponda à versão da instância do servidor de relatório que você está usando. Na maioria dos casos, um banco de dados do servidor de relatório pode ser atualizado automaticamente sem ação específica de sua parte.  
+
+# <a name="upgrade-a-report-server-database"></a>Atualizar um banco de dados do servidor de relatório
+
+O banco de dados do servidor de relatório fornece armazenamento para uma ou mais instâncias do servidor de relatório. Como o esquema do banco de dados do servidor de relatório pode ser alterado a cada versão nova do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é necessário que a versão do banco de dados corresponda à versão da instância do servidor de relatório que você está usando. Na maioria dos casos, um banco de dados do servidor de relatório pode ser atualizado automaticamente sem ação específica de sua parte.  
   
  **Modo nativo:** no modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , o banco de dados do servidor de relatório é realmente composto de dois bancos de dados que têm os nomes padrão de “ReportServer e ReportServerTempDB.”  
   
- **Modo do SharePoint:** no modo do SharePoint do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , o banco de dados do servidor de relatório é na verdade uma coleção de bancos de dados que foi criada para cada instância do aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
-  
-## Maneiras de atualizar um banco de dados do servidor de relatório de modo nativo  
+ **Modo do SharePoint:** no modo do SharePoint do SQL Server 2016 Reporting Services do report Server banco de dados é na verdade uma coleção de bancos de dados é criada para cada instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aplicativo de serviço.  
+
+## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Maneiras de atualizar um banco de dados do servidor de relatório de modo nativo
+
  A seguinte lista identifica as condições nas quais um banco de dados do servidor de relatório é atualizado:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atualiza uma única instância de um servidor de relatório. O esquema de banco de dados do servidor de relatório é atualizado automaticamente após a inicialização do serviço, e o servidor de relatório determina que a versão do esquema de banco de dados não corresponde à do servidor.  
@@ -41,7 +49,7 @@ caps.handback.revision: 44
   
  Depois que o esquema for atualizado, você não poderá reverter a atualização para uma versão anterior. Sempre faça backup do banco de dados do servidor de relatório, caso precise recriar uma instalação anterior.  
   
-## Como o esquema, os metadados e o conteúdo do servidor de relatório são atualizados  
+## <a name="how-the-schema-metadata-and-report-server-content-is-updated"></a>Como o esquema, os metadados e o conteúdo do servidor de relatório são atualizados  
  O banco de dados do servidor de relatório é atualizado em três estágios:  
   
 1.  O esquema é atualizado automaticamente após a instalação e a inicialização do serviço ou quando você seleciona um banco de dados do servidor de relatório do modo nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que é uma versão antiga. Além disso, o serviço do Servidor de Relatório verifica a versão do banco de dados durante a inicialização. Se o servidor de relatório estiver conectado a um banco de dados que seja de uma versão anterior, o servidor de relatório atualizará o banco de dados durante a inicialização.  
@@ -52,7 +60,7 @@ caps.handback.revision: 44
   
  Além do banco de dados do servidor de relatório, um servidor de relatório também usa um banco de dados temporário. O banco de dados temporário é atualizado automaticamente quando você atualiza o banco de dados do servidor de relatório.  
   
-## Permissões necessárias para atualizar um banco de dados do Servidor de Relatório  
+## <a name="permissions-required-to-upgrade-a-report-server-database"></a>Permissões necessárias para atualizar um banco de dados do Servidor de Relatório  
  Se você estiver atualizando uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que contenha um banco de dados do servidor de relatório, poderá ver uma mensagem de erro se a atualização de banco de dados for executada com permissões insuficientes. Por padrão, a Instalação usa o token de segurança do usuário que está executando o programa Instalação para se conectar à instância remota do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e atualizar o esquema. Se você tiver permissões de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **do** no servidor de banco de dados que hospeda os bancos de dados do servidor de relatório, a atualização do banco de dados será bem-sucedida. Da mesma maneira, se você executar a Instalação no prompt de comando e especificar os argumentos RSUPGRADEDATABASEACCOUNT e RSUPGRADEPASSWORD para uma conta que tem a permissão de **sysadmin** para modificar o esquema no computador remoto, a atualização do banco de dados será bem-sucedida.  
   
  Todavia, se você não tiver permissão de **sysadmin** no banco de dados do computador remoto, a conexão será recusada com o seguinte erro:  
@@ -61,14 +69,15 @@ caps.handback.revision: 44
   
  Nesse ponto, os arquivos de programas do servidor de relatório serão atualizados, mas o banco de dados do servidor de relatório estará no formato da versão anterior. O servidor de relatório ficará indisponível até que você conclua o processo de atualização por meio da atualização manual do banco de dados.  
   
-#### Para atualizar um banco de dados de modo nativo com scripts  
- Você pode usar scripts do WMI para atualizar um banco de dados do servidor de relatórios. Para obter mais informações, consulte [Método GenerateDatabaseUpgradeScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/generatedatabaseupgradescript-method-wmi-msreportserver-configurationsetting.md)  
+#### <a name="to-upgrade-a-native-mode-database-with-scripts"></a>Para atualizar um banco de dados de modo nativo com scripts  
+ Você pode usar scripts do WMI para atualizar um banco de dados do servidor de relatórios. Para obter mais informações, consulte [Método GenerateDatabaseUpgradeScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)  
   
-## Consulte também  
- [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/create-a-report-server-database-ssrs-configuration-manager.md)   
- [Assistente para Alterar o Banco de Dados &#40;Configuration Manager&#41;](../Topic/Change%20Database%20Wizard%20\(Configuration%20Manager\).md)   
- [Atualizar e migrar o Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [Migrar uma instalação do Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
-  
-  
+## <a name="next-steps"></a>Próximas etapas
+
+[Gerenciador de configuração do Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[Criar um banco de dados do servidor de relatório](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+[Assistente de banco de dados de alteração](http://msdn.microsoft.com/library/1a2e8d18-5997-482f-a9c1-87d99f7407b8)   
+[Atualizar e migrar o Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+[Migrar uma instalação do Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+
+Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

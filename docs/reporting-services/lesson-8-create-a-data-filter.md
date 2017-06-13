@@ -1,38 +1,43 @@
 ---
-title: "Li&#231;&#227;o 8: Criar um filtro de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lição 8: Criar um filtro de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea0e116101c9599268b3fc2f3cd556d2149433c8
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Li&#231;&#227;o 8: Criar um filtro de dados
+# <a name="lesson-8-create-a-data-filter"></a>Lição 8: Criar um filtro de dados
 Após adicionar uma ação de detalhamento no relatório pai, a próxima etapa é criar um filtro de dados para a tabela de dados definida para o relatório filho.  
   
 Você pode criar um filtro baseado em tabela **ou** um filtro de consulta para o relatório de detalhamento. Esta lição fornece instruções para ambas as opções.  
   
-## Filtro baseado em tabela  
+## <a name="table-based-filter"></a>Filtro baseado em tabela  
 É necessário concluir as seguintes tarefas para implementar um filtro baseado em tabela.  
   
 -   Adicione uma expressão de filtro ao tablix no relatório filho.  
   
--   Criar uma função que seleciona dados não filtrados na tabela **PurchaseOrderDetail**.  
+-   Criar uma função que seleciona dados não filtrados na tabela **PurchaseOrderDetail** .  
   
 -   Adicionar um manipulador de eventos que associa a DataTable **PurchaseOrderDetail** ao relatório filho.  
   
-### Para adicionar uma expressão de filtro ao tablix no relatório filho  
+### <a name="to-add-a-filter-expression-to-the-tablix-in-the-child-report"></a>Para adicionar uma expressão de filtro ao tablix no relatório filho  
   
 1.  Abra o relatório filho.  
   
@@ -40,17 +45,17 @@ Você pode criar um filtro baseado em tabela **ou** um filtro de consulta para o
   
 3.  Selecione a página **filtros** e **Adicionar**.  
   
-4.  No campo **Expressão**, clique em **ProductID** na lista suspensa. Esta é a coluna à qual você aplicará o filtro.  
+4.  No campo **Expressão** , clique em **ProductID** na lista suspensa. Esta é a coluna à qual você aplicará o filtro.  
   
-5.  Clique no operador igual (**=**) na lista suspensa **Operador**.  
+5.  Clique no operador igual (**=**) na lista suspensa **Operador** .  
   
-6.  Clique no botão de expressão ao lado do campo **Valor**, selecione **Parâmetros** na área **Categoria** e clique duas vezes em **productid** na área **Valores**. O campo **Definir expressão para: Valor** agora deve conter uma expressão semelhante a **=Parameters!productid.Value**.  
+6.  Clique no botão de expressão ao lado do campo **Valor** , selecione **Parâmetros** na área **Categoria** e clique duas vezes em **productid** na área **Valores** . O campo **Definir expressão para: Valor** agora deve conter uma expressão semelhante a **=Parameters!productid.Value**.  
   
-7.  Selecione **OK** e **OK** novamente na caixa de diálogo **Propriedades do Tablix**.  
+7.  Selecione **OK** e **OK** novamente na caixa de diálogo **Propriedades do Tablix** .  
   
 8.  Salve o arquivo .rdlc.  
   
-### Para criar uma função que seleciona dados não filtrados na tabela PurchaseOrdeDetail.  
+### <a name="to-create-a-function-that-selects-unfiltered-data-from-the-purchaseordedetail-table"></a>Para criar uma função que seleciona dados não filtrados na tabela PurchaseOrdeDetail.  
   
 1.  No Gerenciador de Soluções, expanda Default.aspx e clique duas vezes em Default.aspx.cs.  
   
@@ -64,7 +69,7 @@ Você pode criar um filtro baseado em tabela **ou** um filtro de consulta para o
   
     4.  Preencha a instância do DataSet com os dados não filtrados executando a consulta.  
   
-    5.  Retorna a DataTable **PurchaseOrderDetail**.  
+    5.  Retorna a DataTable **PurchaseOrderDetail** .  
   
         A função terá aparência similar à mostrada abaixo (Isso é apenas para fins de referência. Você pode seguir o padrão desejado para buscar os dados necessários ao relatório filho).  
   
@@ -102,15 +107,15 @@ Você pode criar um filtro baseado em tabela **ou** um filtro de consulta para o
             }  
         ```  
   
-### Para adicionar um manipulador de eventos que associe a DataTable PurchaseOrderDetail ao relatório filho.  
+### <a name="to-add-an-event-handler-that-binds-the-purchaseorderdetail-datatable-to-the-child-report"></a>Para adicionar um manipulador de eventos que associe a DataTable PurchaseOrderDetail ao relatório filho.  
   
 1.  Abra Default.aspx no modo designer.  
   
 2.  Clique com o botão direito do mouse no controle ReportViewer e selecione **Propriedades**.  
   
-3.  Na página **Propriedades**, selecione o ícone **Eventos**.  
+3.  Na página **Propriedades** , selecione o ícone **Eventos** .  
   
-4.  Clique duas vezes no evento **Detalhamento**.  
+4.  Clique duas vezes no evento **Detalhamento** .  
   
     Isso adicionará uma seção do manipulador de eventos ao código, que será semelhante ao bloco abaixo.  
   
@@ -122,7 +127,7 @@ Você pode criar um filtro baseado em tabela **ou** um filtro de consulta para o
   
 5.  Conclua o manipulador de eventos. Ela deve incluir a funcionalidade a seguir.  
   
-    1.  Busque a referência de objeto do relatório filho no parâmetro *DrillthroughEventArgs*.  
+    1.  Busque a referência de objeto do relatório filho no parâmetro *DrillthroughEventArgs* .  
   
     2.  Chame a função **GetPurchaseOrderDetail**  
   
@@ -153,14 +158,14 @@ Você pode criar um filtro baseado em tabela **ou** um filtro de consulta para o
   
 6.  Salve o arquivo.  
   
-## Filtro de consulta  
+## <a name="query-filter"></a>Filtro de consulta  
 É necessário concluir as seguintes tarefas para implementar um filtro de consulta.  
   
--   Crie uma função que seleciona dados filtrados da tabela **PurchaseOrderDetail**.  
+-   Crie uma função que seleciona dados filtrados da tabela **PurchaseOrderDetail** .  
   
 -   Adicione um manipulador de eventos que recupera valores de parâmetro e associa a DataTable **PurchaseOrdeDetail** ao relatório filho.  
   
-### Para criar uma função que selecione dados filtrados na tabela PurchaseOrderDetail  
+### <a name="to-create-a-function-that-selects-filtered-data-from-the-purchaseorderdetail-table"></a>Para criar uma função que selecione dados filtrados na tabela PurchaseOrderDetail  
   
 1.  No Gerenciador de Soluções, expanda Default.aspx e clique duas vezes em Default.aspx.cs.  
   
@@ -174,7 +179,7 @@ Você pode criar um filtro baseado em tabela **ou** um filtro de consulta para o
   
     4.  Preencha a instância do DataSet com os dados filtrados executando a consulta.  
   
-    5.  Retorna a DataTable **PurchaseOrderDetail**.  
+    5.  Retorna a DataTable **PurchaseOrderDetail** .  
   
         A função terá aparência similar à mostrada abaixo (Isso é apenas para fins de referência. Você pode seguir o padrão desejado para buscar os dados necessários ao relatório filho).  
   
@@ -218,15 +223,15 @@ Você pode criar um filtro baseado em tabela **ou** um filtro de consulta para o
             }  
         ```  
   
-### Para adicionar um manipulador de eventos que recupere valores de parâmetro e associe a DataTable PurchaseOrdeDetail ao relatório filho  
+### <a name="to-add-an-event-handler-that-retrieves-parameter-values-and-binds-the-purchaseordedetail-datatable-to-the-child-report"></a>Para adicionar um manipulador de eventos que recupere valores de parâmetro e associe a DataTable PurchaseOrdeDetail ao relatório filho  
   
 1.  Abra Default.aspx no modo designer.  
   
 2.  Clique com o botão direito do mouse no controle ReportViewer e selecione **Propriedades**.  
   
-3.  No painel **Propriedades**, selecione o ícone **Eventos**.  
+3.  No painel **Propriedades** , selecione o ícone **Eventos** .  
   
-4.  Clique duas vezes no evento **Detalhamento**.  
+4.  Clique duas vezes no evento **Detalhamento** .  
   
     Isso adicionará uma seção do manipulador de eventos ao código, que será semelhante ao conteúdo abaixo.  
   
@@ -238,13 +243,13 @@ Você pode criar um filtro baseado em tabela **ou** um filtro de consulta para o
   
 5.  Conclua o manipulador de eventos. Ele deve incluir a seguinte funcionalidade.  
   
-    1.  Busque a referência de objeto do relatório filho no parâmetro *DrillthroughEventArgs*.  
+    1.  Busque a referência de objeto do relatório filho no parâmetro *DrillthroughEventArgs* .  
   
     2.  Obtenha a lista de parâmetros do relatório filho no objeto do relatório filho buscado.  
   
     3.  Itere pela coleção do parâmetro e recupere o valor do parâmetro **ProductID**, passado pelo relatório pai.  
   
-    4.  Chame a função **GetPurchaseOrderDetail** e passe o valor para o parâmetro **ProductID**.  
+    4.  Chame a função **GetPurchaseOrderDetail**e passe o valor para o parâmetro **ProductID**.  
   
     5.  Associe a DataTable **PurchaseOrderDetail** à fonte de dados correspondente do Relatório.  
   
@@ -289,8 +294,10 @@ Você pode criar um filtro baseado em tabela **ou** um filtro de consulta para o
   
 6.  Salve o arquivo.  
   
-## Próxima tarefa  
+## <a name="next-task"></a>Próxima tarefa  
 Você criou, com êxito, um filtro de dados para a tabela de dados definida para o relatório filho. Em seguida, você compilará e executará o aplicativo de site. Consulte [Lição 9: Criar e executar o aplicativo](../reporting-services/lesson-9-build-and-run-the-application.md).  
   
   
   
+
+

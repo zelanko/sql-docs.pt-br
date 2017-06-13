@@ -1,26 +1,31 @@
 ---
-title: "Configurar a autentica&#231;&#227;o B&#225;sica no servidor de relat&#243;rio | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services, configuração"
-  - "Autenticação Básica"
+title: "Configurar a autenticação básica no servidor de relatório | Microsoft Docs"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services, configuration
+- Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 caps.latest.revision: 28
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 28
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfadbdb617198fe04b789d0d1d6589f4af2d887f
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Configurar a autentica&#231;&#227;o B&#225;sica no servidor de relat&#243;rio
+# <a name="configure-basic-authentication-on-the-report-server"></a>Configurar a autenticação Básica no servidor de relatório
   Por padrão, o Reporting Services aceita solicitações que especificam a autenticação Negotiate e NTLM. Se a sua implantação inclui aplicativos cliente ou navegadores que usam autenticação Básica, adicione a autenticação Básica à lista de tipos suportados. Além disso, para usar o Construtor de Relatórios, você deve habilitar o acesso Anônimo aos arquivos do Construtor de Relatórios.  
   
  Para configurar a autenticação Básica no servidor de relatório, edite os elementos XML e os valores no arquivo RSReportServer.config. É possível copiar e colar os exemplos deste tópico para substituir os valores padrão.  
@@ -34,13 +39,13 @@ caps.handback.revision: 28
 > [!NOTE]  
 >  As instruções a seguir são válidas para um servidor de relatório no modo nativo. Se o servidor de relatório for implantado no modo integrado do SharePoint, use as configurações de autenticação padrão que especificam a segurança integrada do Windows. O servidor de relatório usa recursos internos da extensão padrão da Autenticação do Windows para dar suporte ao servidor de relatório no modo integrado do SharePoint.  
   
-### Para configurar um servidor de relatório para usar a autenticação Básica  
+### <a name="to-configure-a-report-server-to-use-basic-authentication"></a>Para configurar um servidor de relatório para usar a autenticação Básica  
   
 1.  Abra o RSReportServer.config em um editor de texto.  
   
-     O arquivo está localizado em *\<unidade>:*\Arquivos de Programas\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer.  
+     O arquivo está localizado em  *\<unidade >:*\Program Files\Microsoft Server\MSRS13 de SQL. MSSQLSERVER\Reporting Services\ReportServer.  
   
-2.  Localize \<**Authentication**>.  
+2.  Localizar \< **autenticação**>.  
   
 3.  Copie uma das estruturas XML a seguir que seja mais adequada para as suas necessidades. A primeira estrutura XML oferece espaços reservados para especificar todos os elementos, que estão descritos na próxima seção:  
   
@@ -65,13 +70,13 @@ caps.handback.revision: 28
           </AuthenticationTypes>  
     ```  
   
-4.  Cole-a nas entradas existentes para \<**Authentication**>.  
+4.  Cole-o sobre entradas existentes para \< **autenticação**>.  
   
-     Se você estiver usando vários tipos de autenticação, adicione apenas o elemento **RSWindowsBasic**, mas não exclua as entradas para **RSWindowsNegotiate**, **RSWindowsNTLM** ou **RSWindowsKerberos**.  
+     Se você estiver usando vários tipos de autenticação, adicione apenas o elemento **RSWindowsBasic** , mas não exclua as entradas para **RSWindowsNegotiate**, **RSWindowsNTLM**ou **RSWindowsKerberos**.  
   
      Observe que não é possível usar **Personalizada** com outros tipos de autenticação.  
   
-5.  Substitua os valores vazios de \<**Realm**> ou \<**DefaultDomain**> por valores válidos para seu ambiente.  
+5.  Substitua valores vazios de \< **Realm**> ou \< **DefaultDomain**> com valores que são válidos para o seu ambiente.  
   
 6.  Salve o arquivo.  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 28
   
 8.  Reinicie o servidor de relatório para terminar as sessões que estão atualmente abertas.  
   
-## Referência de RSWindowsBasic  
+## <a name="rswindowsbasic-reference"></a>Referência de RSWindowsBasic  
  Os elementos a seguir podem ser especificados na configuração da autenticação Básica.  
   
 |Elemento|Required|Valores válidos|  
@@ -88,8 +93,9 @@ caps.handback.revision: 28
 |Realm|Opcional|Especifica uma partição de recursos que inclui recursos de autorização e autenticação usados para controlar o acesso a recursos protegidos da organização.|  
 |DefaultDomain|Opcional|Especifica o domínio usado pelo servidor para autenticar o usuário. Este valor é opcional, mas, caso seja omitido, o servidor de relatório usará o nome do computador como domínio. Se o computador for um membro de domínio, esse domínio será o padrão. Se você instalou o servidor de relatório em um controlador de domínio, o domínio usado será o que é controlado pelo computador.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Domínios do aplicativo para aplicativos do Servidor de Relatório](../../reporting-services/report-server/application-domains-for-report-server-applications.md)   
  [Segurança e proteção do Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)  
   
   
+

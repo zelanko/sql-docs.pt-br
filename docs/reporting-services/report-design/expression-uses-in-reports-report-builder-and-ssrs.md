@@ -1,28 +1,33 @@
 ---
-title: "Uso de express&#245;es em relat&#243;rios (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "expressões [Reporting Services], sobre expressões"
+title: "Expressão usa em relatórios (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 caps.latest.revision: 59
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 59
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 546817a006d06b1acbea5962cc1a3230867e111e
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Uso de express&#245;es em relat&#243;rios (Construtor de Relat&#243;rios e SSRS)
-Em relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], as expressões são usadas em toda a definição de relatório para especificar ou calcular valores para parâmetros, consultas, filtros, propriedades de itens de relatório, definições de classificação e grupo, propriedades de caixa de texto, indicadores, mapas do documento, conteúdo de cabeçalho e rodapé de página dinâmica, imagens e definições de fonte de dados dinâmicos. Este tópico contém exemplos dos muitos lugares em que você pode usar expressões para variar o conteúdo ou a aparência de um relatório. Esta lista não é completa. Você pode definir uma expressão para qualquer propriedade em uma caixa de diálogo que exiba o botão de expressão (**fx**) ou em uma lista suspensa que exibe **\<Expressão...>**.  
+# <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Uso de expressões em relatórios (Construtor de Relatórios e SSRS)
+Em relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , as expressões são usadas em toda a definição de relatório para especificar ou calcular valores para parâmetros, consultas, filtros, propriedades de itens de relatório, definições de classificação e grupo, propriedades de caixa de texto, indicadores, mapas do documento, conteúdo de cabeçalho e rodapé de página dinâmica, imagens e definições de fonte de dados dinâmicos. Este tópico contém exemplos dos muitos lugares em que você pode usar expressões para variar o conteúdo ou a aparência de um relatório. Esta lista não é completa. Você pode definir uma expressão para qualquer propriedade em uma caixa de diálogo que exibe a expressão (**fx**) botão ou em uma lista suspensa que exibe  **\<expressão... >**.  
   
- As expressões podem ser simples ou complexas. As *expressões simples* contêm uma referência a um único campo de conjunto de dados, parâmetro ou campo interno. As expressões complexas podem conter várias referências internas, operadores e chamadas de função. Por exemplo, uma expressão complexa pode incluir a função Sum aplicada ao campo Sales.  
+ As expressões podem ser simples ou complexas. As*expressões simples* contêm uma referência a um único campo de conjunto de dados, parâmetro ou campo interno. As expressões complexas podem conter várias referências internas, operadores e chamadas de função. Por exemplo, uma expressão complexa pode incluir a função Sum aplicada ao campo Sales.  
   
  As expressões são gravadas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Uma expressão começa com um sinal de igual (=) seguido por uma combinação de referências a coleções internas, como campos de conjunto de dados e parâmetros, constantes, funções e operadores.  
   
@@ -59,7 +64,7 @@ Em relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnover
 |Formate os dados de uma caixa de texto de acordo com o valor.|Cor de um espaço reservado dentro de uma caixa de texto na linha de detalhes de um tablix. Use **Caixa de Diálogo Propriedades de Caixa de Texto, Fonte**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Calcule um valor uma única vez para fazer referência a ele em todo o relatório.|Valor de uma variável de relatório. Use **Caixa de Diálogo Propriedades de Relatório, Variáveis**.|`=Variables!MyCalculation.Value`|  
 |Inclua valores específicos de mais de um campo de um conjunto de dados.|Equação de filtro para um grupo em um tablix. Use **Caixa de Diálogo de Propriedades de Grupo Tablix, Filtros**.|Para o tipo de dados, selecione **Booliano**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|Oculte uma caixa de texto na superfície de design que pode ser alternada pelo usuário através de um parâmetro booliano denominado *Show*.|Propriedade oculta em uma caixa de texto. Use **Caixa de Diálogo de Propriedades de Caixa de Texto, Visibilidade**.|`=Not Parameters!` *Show\<parâmetro booliano>* `.Value`|  
+|Oculte uma caixa de texto na superfície de design que pode ser alternada pelo usuário através de um parâmetro booliano denominado *Show*.|Propriedade oculta em uma caixa de texto. Use **Caixa de Diálogo de Propriedades de Caixa de Texto, Visibilidade**.|`=Not Parameters!`*Mostrar\<parâmetro booliano >*`.Value`|  
 |Especifique um cabeçalho de página dinâmico ou o conteúdo de um rodapé.|Valor de um espaço reservado dentro de uma caixa de texto que é colocada no cabeçalho ou rodapé de uma página.|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |Especifique uma fonte de dados dinamicamente usando um parâmetro.|Cadeia de conexão na Fonte de dados. Use **Caixa de Diálogo de Propriedades de Fonte de Dados, Geral**.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |Identifique todos os valores para um parâmetro multivalor escolhido pelo usuário.|Valor de um espaço reservado dentro de uma caixa de texto. Use **Caixa de Diálogo de Propriedades de Grupo Tablix, Filtros**.|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  
@@ -68,7 +73,7 @@ Em relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnover
 |Especifique uma data formatada para uma determinada cultura.|Valor de um espaço reservado dentro de uma caixa de texto em uma região de dados. Use **Caixa de Diálogo Propriedades de Caixa de Texto, Geral**.|`=Fields!OrderDate.Value.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("de-DE"))`|  
 |Concatene uma cadeia de caracteres e um número formatado como porcentagem com duas casas decimais.|Valor de um espaço reservado dentro de uma caixa de texto em uma região de dados. Use **Caixa de Diálogo Propriedades de Caixa de Texto, Geral**.|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

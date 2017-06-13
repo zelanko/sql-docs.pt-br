@@ -2,7 +2,7 @@
 title: Always Encrypted (mecanismo de banco de dados) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/13/2017
+ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f848c5ebf1233d6b34dcf00bb7084adcebc95ea1
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>Sempre criptografados (mecanismo de banco de dados)
@@ -126,33 +126,32 @@ Use o [Assistente do Always Encrypted](../../../relational-databases/security/en
 
 -   Depois de alterar a definição de um objeto criptografado, execute [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) para atualizar os metadados Always Encrypted para o objeto.
   
- O Always Encrypted não tem suporte para as colunas com as características abaixo (por exemplo, a cláusula *Encrypted WITH* não pode ser usada em **CREATE TABLE/ALTER TABLE** para uma coluna, se alguma das condições a seguir se aplicarem à coluna):  
+O Always Encrypted não tem suporte para as colunas com as características abaixo (por exemplo, a cláusula *Encrypted WITH* não pode ser usada em **CREATE TABLE/ALTER TABLE** para uma coluna, se alguma das condições a seguir se aplicarem à coluna):  
   
 -   Colunas usando um dos seguintes tipos de dados: **xml**, **timestamp**/**rowversion**, **image**, **ntext**, **text**, **sql_variant**, **hierarchyid**, **geography**, **geometry**, alias e tipos definidos pelo usuário.  
-  
 - Colunas FILESTREAM  
-  
-- Colunas com a propriedade ROWGUIDCOL.
-- Colunas de cadeia de caracteres (varchar, char, etc.) com agrupamentos não bin2
-- Colunas que são chaves para índices não clusterizados usando uma coluna criptografada de forma aleatória como uma coluna de chave (colunas criptografadas de forma determinística são permitidas)
-- Colunas que são chaves para índices clusterizados usando uma coluna criptografada de forma aleatória como uma coluna de chave (colunas criptografadas de forma determinística são permitidas)
-- Colunas que são chaves para índices de texto completo contendo colunas criptografadas, aleatórias e determinísticas
-- Colunas referenciadas por colunas computadas (quando a expressão realiza operações sem suporte para o Sempre Criptografado)
-- Conjunto de colunas esparsas
-- Colunas que são referenciadas por estatísticas
-- Colunas usando tipo de alias
-- Colunas de particionamento
-- Colunas com restrições padrão
-- Colunas referenciadas por restrições exclusivas ao usar a criptografia aleatória (há suporte para a criptografia determinística)
-- Colunas de chave primária ao usar a criptografia aleatória (há suporte para a criptografia determinística)
-- Fazer referência a colunas em restrições de chave estrangeira ao usar a criptografia aleatória, ou ao usar a criptografia determinística, se as colunas referenciadas e de referência usarem algoritmos ou chaves diferentes
-- Colunas referenciadas por restrições de verificação
-- Colunas em tabelas que usam a captura de alteração de dados
-- Colunas de chave primária em tabelas com controle de alterações
-- Colunas mascaradas (usando a Máscara de Dados Dinâmicos)
-- Colunas em tabelas Stretch Database. (Tabelas com colunas criptografadas com o Sempre Criptografado podem ser habilitadas para Stretch.)
-- Colunas em tabelas externas (PolyBase) (observação: há suporte para o uso de tabelas externas e tabelas com colunas criptografadas na mesma consulta)
-- Não há suporte para parâmetros com valor de tabela com direcionamento a colunas criptografadas.
+- Colunas com a propriedade de identidade  
+- Colunas com a propriedade ROWGUIDCOL.  
+- Colunas de cadeia de caracteres (varchar, char, etc.) com agrupamentos não bin2  
+- Colunas que são chaves para índices não clusterizados usando uma coluna criptografada de forma aleatória como uma coluna de chave (colunas criptografadas de forma determinística são permitidas)  
+- Colunas que são chaves para índices clusterizados usando uma coluna criptografada de forma aleatória como uma coluna de chave (colunas criptografadas de forma determinística são permitidas)  
+- Colunas que são chaves para índices de texto completo contendo colunas criptografadas, aleatórias e determinísticas  
+- Colunas referenciadas por colunas computadas (quando a expressão realiza operações sem suporte para o Sempre Criptografado)  
+- Conjunto de colunas esparsas  
+- Colunas que são referenciadas por estatísticas  
+- Colunas usando tipo de alias  
+- Colunas de particionamento  
+- Colunas com restrições padrão  
+- Colunas referenciadas por restrições exclusivas ao usar a criptografia aleatória (há suporte para a criptografia determinística)  
+- Colunas de chave primária ao usar a criptografia aleatória (há suporte para a criptografia determinística)  
+- Fazer referência a colunas em restrições de chave estrangeira ao usar a criptografia aleatória, ou ao usar a criptografia determinística, se as colunas referenciadas e de referência usarem algoritmos ou chaves diferentes  
+- Colunas referenciadas por restrições de verificação  
+- Colunas em tabelas que usam a captura de alteração de dados  
+- Colunas de chave primária em tabelas com controle de alterações  
+- Colunas mascaradas (usando a Máscara de Dados Dinâmicos)  
+- Colunas em tabelas Stretch Database. (Tabelas com colunas criptografadas com o Sempre Criptografado podem ser habilitadas para Stretch.)  
+- Colunas em tabelas externas (PolyBase) (observação: há suporte para o uso de tabelas externas e tabelas com colunas criptografadas na mesma consulta)  
+- Não há suporte para parâmetros com valor de tabela com direcionamento a colunas criptografadas.  
 
 As cláusulas a seguir não podem ser usadas para colunas criptografadas:
 

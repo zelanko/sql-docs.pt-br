@@ -1,33 +1,36 @@
 ---
-title: "Construtor de Relat&#243;rios no SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "10428"
-helpviewer_keywords: 
-  - "visão geral do Construtor de Relatórios"
-  - "introdução"
+title: "Relatório do construtor no SQL Server 2016 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+f1_keywords:
+- "10428"
+helpviewer_keywords:
+- overview of Report Builder
+- getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 caps.latest.revision: 35
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 35
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c2a8702fcee392936451e4a55a4b97327de2b97d
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Construtor de Relat&#243;rios no SQL Server 2016
+# <a name="report-builder-in-sql-server-2016"></a>Construtor de Relatórios no SQL Server 2016
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] é uma ferramenta para criação de relatórios paginados para usuários comerciais que preferem trabalhar em um ambiente autônomo em vez de usar o Designer de Relatórios no Visual Studio.  Quando você cria um relatório paginado, você está criando uma definição de relatório que especifica onde obter os dados, que dados obter e como exibir os dados. Ao executar o relatório, o processador de relatório obtém todas as informações especificadas, recupera os dados e combina-os ao layout de relatório para gerar este relatório. Você pode visualizar o seu relatório no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] e publicá-lo em um servidor de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em modo nativo ou em modo integrado do SharePoint, onde outras pessoas poderão executá-lo.  
   
- [Iniciar o Construtor de Relatórios](../../reporting-services/report-builder/start-report-builder.md)  
-  
- ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.gif "rs_GettingStartedReport")  
+ ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
  Esse relatório paginado caracteriza uma matriz com grupos de linhas e colunas, minigráficos, indicadores e um gráfico de pizza resumido na célula de canto, acompanhada de um mapa com dois conjuntos de dados geográficos representados pela cor e pelo tamanho do círculo.  
   
@@ -45,7 +48,7 @@ caps.handback.revision: 35
   
 -   **Crie relatórios paginados com tabela, matriz, gráfico e layouts de relatório de forma livre.** Crie relatórios de tabelas para dados baseados em colunas, relatórios de matriz (como relatórios de tabela de referência cruzada ou de Tabela Dinâmica) para dados resumidos, relatórios de gráficos para dados geográficos e relatórios de formato livre para qualquer outra finalidade. Os relatórios podem ser inseridos em outros relatórios e gráficos, junto com listas, gráficos e controles para aplicativos dinâmicos baseados na Web.  
   
--   **Use várias fontes de dados para gerar relatórios.** Crie relatórios usando dados de qualquer tipo de fonte de dados que tenham um provedor de dados gerenciado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], um provedor OLE DB ou uma fonte de dados ODBC. Você pode criar relatórios que usam dados relacionais e multidimensionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion e outros bancos de dados. Você pode usar uma extensão de processamento de dados XML para recuperar dados de qualquer fonte de dados XML. Também é possível usar funções com valor de tabela para projetar fontes de dados personalizadas.  
+-   **Use várias fontes de dados para gerar relatórios.** Crie relatórios usando dados de qualquer tipo de fonte de dados que tenham um provedor de dados gerenciado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], um provedor OLE DB ou uma fonte de dados ODBC. Você pode criar relatórios que usam dados relacionais e multidimensionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion e outros bancos de dados. Você pode usar uma extensão de processamento de dados XML para recuperar dados de qualquer fonte de dados XML. Também é possível usar funções com valor de tabela para projetar fontes de dados personalizadas.  
   
 -   **Modifique relatórios existentes.** Com o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], você pode personalizar e atualizar relatórios criados no Designer de Relatórios do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -53,7 +56,7 @@ caps.handback.revision: 35
   
 -   **Adicione gráficos, medidores, minigráficos e indicadores** para resumir dados em um formato visual e apresentar grandes volumes de informações agregadas de forma concisa.  
   
--   **Adicione recursos interativos**, como mapas de documento, botões para mostrar/ocultar e links de detalhamento, a sub-relatórios e relatórios de detalhamento. Use parâmetros e filtros para filtrar dados para exibições personalizadas.  
+-   **Adicione recursos interativos** , como mapas de documento, botões para mostrar/ocultar e links de detalhamento, a sub-relatórios e relatórios de detalhamento. Use parâmetros e filtros para filtrar dados para exibições personalizadas.  
   
 -   **Insira ou referencie imagens** e outros recursos, incluindo conteúdo externo.  
   
@@ -70,18 +73,21 @@ caps.handback.revision: 35
 > [!NOTE]  
 >  Os relatórios publicados são gerenciados em um servidor de relatório ou um servidor de relatório no modo integrado do SharePoint por um administrador do servidor de relatório. Os administradores de servidor de relatório podem definir a segurança, estabelecer as propriedades e agendar operações, como histórico de relatório e entrega de relatório de email. Também podem criar agendas e fontes de dados compartilhadas e disponibilizá-las para uso geral. Os administradores também gerenciam todas as pastas de servidor de relatório. A possibilidade de executar tarefas de gerenciamento depende das permissões de usuário.  
   
-##  <a name="InThisSection"></a> Nesta seção  
- [Novidades no Reporting Services e no Construtor de Relatórios para SQL Server 2016](What's%20New%20in%20Reporting%20Services%20\(SSRS\).md)  
-  Descreve os novos recursos nesta versão do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
+## <a name="see-also"></a>Consulte também  
+  [Iniciar o Construtor de Relatórios](../../reporting-services/report-builder/start-report-builder.md)  
   
- [Tutorial: Criando um relatório de gráfico rápido offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [Instalar o Construtor de Relatórios](../../reporting-services/install-windows/install-report-builder.md)
+
+  [Novidades no Reporting Services e no Construtor de Relatórios para SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+  Descreve os novos recursos nesta versão do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].   
+  [Tutorial: Criando um relatório de gráfico rápido Offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Apresenta o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] e os assistentes disponíveis para ajudá-lo a criar relatórios. O tutorial fornece um conjunto de dados com o qual trabalhar, de modo que você não precise se conectar a uma fonte de dados para começar.  
   
  [Planejando um relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  Fornece informações sobre o que você deve considerar antes de começar a criar seu relatório.  
   
  [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
- Define os conceitos-chave usados em toda a documentação do [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
+ Define os conceitos-chave usados em toda a documentação do [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] .  
   
  [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  Explica os diferentes painéis e regiões da exibição de design de relatório.  
@@ -92,7 +98,5 @@ caps.handback.revision: 35
  [Atalhos de teclado &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  Descreve as teclas de atalho disponíveis para navegar e criar relatórios no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
   
-## Consulte também  
- [Iniciar o Construtor de Relatórios](../../reporting-services/report-builder/start-report-builder.md)  
-  
-  
+
+

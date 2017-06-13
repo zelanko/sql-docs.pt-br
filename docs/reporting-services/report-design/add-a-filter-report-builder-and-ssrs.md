@@ -1,23 +1,28 @@
 ---
-title: "Adicionar um filtro (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Adicionar um filtro (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 088e219e120eeb6b4608db9379811caf1b5406cd
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Adicionar um filtro (Construtor de Relat&#243;rios e SSRS)
+# <a name="add-a-filter-report-builder-and-ssrs"></a>Adicionar um filtro (Construtor de Relatórios e SSRS)
   Adicione um filtro a um conjunto de dados, região de dados ou grupo quando quiser incluir ou excluir valores específicos para cálculos ou exibição. Os filtros são aplicados em tempo de execução, primeiro, no conjunto de dados, depois, na região de dados e, em seguida, no grupo, de cima para baixo nas hierarquias de grupo. Em uma tabela, matriz ou lista, os filtros para grupos de linha, grupos de coluna e grupos adjacentes são aplicados de forma independente. Em um gráfico, os filtros para grupos de categoria e grupos de série são aplicados de forma independente.  
   
  Para adicionar um filtro, é necessário especificar uma ou mais equações de filtro. Uma equação de filtro é composta por uma expressão que identifica os dados que você deseja filtrar, um operador, e o valor para comparação. Os tipos de dados dos dados filtrados e o valor devem coincidir. Não há suporte para filtragem de valores de agregação para um conjunto de dados ou região de dados.  
@@ -29,11 +34,11 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Para definir um filtro em uma região de dados  
+### <a name="to-set-a-filter-on-a-data-region"></a>Para definir um filtro em uma região de dados  
   
-1.  Abra um relatório no modo de exibição de **Design**.  
+1.  Abra um relatório no modo de exibição de **Design** .  
   
-2.  Selecione a região de dados na superfície de design e clique com o botão direito do mouse em *\<data region>***Propriedades**. Para um medidor, selecione **Propriedades do Painel de Medidores**. A caixa de diálogo *\<data region>***Propriedades** é aberta.  
+2.  Selecione a região de dados na superfície de design e, em seguida, clique com botão direito  *\<região de dados >***propriedades**. Para um medidor, selecione **Propriedades do Painel de Medidores**. O  *\<região de dados >***propriedades** caixa de diálogo é aberta.  
   
     > [!NOTE]  
     >  Em uma região de dados do Tablix, clique com o botão direito do mouse na alça de canto da célula, linha ou coluna e clique em **Propriedades do Tablix**.  
@@ -46,7 +51,7 @@ caps.handback.revision: 8
   
 6.  Na caixa suspensa, selecione o tipo de dados que coincide com o tipo de dados da expressão criada na etapa 5.  
   
-7.  Na caixa **Operador**, selecione o operador que você deseja que o filtro use para comparar os valores nas caixas **Expressão** e **Valor**. O operador escolhido determinará o número de valores que serão usados na próxima etapa.  
+7.  Na caixa **Operador** , selecione o operador que você deseja que o filtro use para comparar os valores nas caixas **Expressão** e **Valor** . O operador escolhido determinará o número de valores que serão usados na próxima etapa.  
   
 8.  Na caixa **Valor**, digite a expressão ou o valor em relação ao qual você deseja que o filtro avalie o valor em **Expressão**.  
   
@@ -54,9 +59,9 @@ caps.handback.revision: 8
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Para definir um filtro em um grupo de colunas ou linhas Tablix  
+### <a name="to-set-a-filter-on-a-tablix-row-or-column-group"></a>Para definir um filtro em um grupo de colunas ou linhas Tablix  
   
-1.  Abra um relatório no modo de exibição de **Design**.  
+1.  Abra um relatório no modo de exibição de **Design** .  
   
 2.  Clique com o botão direito do mouse na região de dados da tabela, matriz ou lista na superfície de design para selecioná-la. O painel Agrupamento exibe os grupos do item selecionado.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 8
   
 7.  Na caixa suspensa, selecione o tipo de dados que coincide com o tipo de dados da expressão criada na etapa 5.  
   
-8.  Na caixa **Operador**, selecione o operador que você deseja que o filtro use para comparar os valores nas caixas **Expressão** e **Valor**. O operador escolhido determinará o número de valores que serão usados na próxima etapa.  
+8.  Na caixa **Operador** , selecione o operador que você deseja que o filtro use para comparar os valores nas caixas **Expressão** e **Valor** . O operador escolhido determinará o número de valores que serão usados na próxima etapa.  
   
 9. Na caixa **Valor**, digite a expressão ou o valor em relação ao qual você deseja que o filtro avalie o valor em **Expressão**.  
   
@@ -78,9 +83,9 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Para definir um filtro em um grupo de categoria de Gráfico  
+### <a name="to-set-a-filter-on-a-chart-category-group"></a>Para definir um filtro em um grupo de categoria de Gráfico  
   
-1.  Abra um relatório no modo de exibição de **Design**.  
+1.  Abra um relatório no modo de exibição de **Design** .  
   
 2.  Na superfície do design, clique duas vezes no gráfico para chamar as zonas de descarte de campo de dados, série e categoria.  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 8
   
 7.  Na caixa suspensa, selecione o tipo de dados que coincide com o tipo de dados da expressão criada na etapa 5.  
   
-8.  Na caixa **Operador**, selecione o operador que você deseja que o filtro use para comparar os valores nas caixas **Expressão** e **Valor**. O operador escolhido determinará o número de valores que serão usados na próxima etapa.  
+8.  Na caixa **Operador** , selecione o operador que você deseja que o filtro use para comparar os valores nas caixas **Expressão** e **Valor** . O operador escolhido determinará o número de valores que serão usados na próxima etapa.  
   
 9. Na caixa **Valor**, digite a expressão ou o valor em relação ao qual você deseja que o filtro avalie o valor em **Expressão**.  
   
@@ -102,9 +107,9 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Para definir um filtro em um grupo de série de Gráfico  
+### <a name="to-set-a-filter-on-a-chart-series-group"></a>Para definir um filtro em um grupo de série de Gráfico  
   
-1.  Abra um relatório no modo de exibição de **Design**.  
+1.  Abra um relatório no modo de exibição de **Design** .  
   
 2.  Na superfície do design, clique duas vezes no gráfico para chamar as zonas de descarte de campo de dados, série e categoria.  
   
@@ -118,7 +123,7 @@ caps.handback.revision: 8
   
 7.  Na caixa suspensa, selecione o tipo de dados que coincide com o tipo de dados da expressão criada na etapa 5.  
   
-8.  Na caixa **Operador**, selecione o operador que você deseja que o filtro use para comparar os valores nas caixas **Expressão** e **Valor**. O operador escolhido determinará o número de valores que serão usados na próxima etapa.  
+8.  Na caixa **Operador** , selecione o operador que você deseja que o filtro use para comparar os valores nas caixas **Expressão** e **Valor** . O operador escolhido determinará o número de valores que serão usados na próxima etapa.  
   
 9. Na caixa **Valor**, digite a expressão ou o valor em relação ao qual você deseja que o filtro avalie o valor em **Expressão**.  
   
@@ -126,8 +131,8 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Consulte também  
- [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+## <a name="see-also"></a>Consulte também  
+ [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Medidores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

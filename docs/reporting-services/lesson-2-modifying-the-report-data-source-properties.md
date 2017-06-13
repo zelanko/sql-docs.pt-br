@@ -1,25 +1,30 @@
 ---
-title: "Lesson 2: Modifying the Report Data Source Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lição 2: Modificar os dados do relatório de origem propriedades | Microsoft Docs"
+ms.custom: 
+ms.date: 05/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: 43
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 43
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be153d2ba1469034cad5e31e5e823d6ac5be4b4e
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lesson 2: Modifying the Report Data Source Properties
-Nesta lição do tutorial do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)], você usa o portal da Web para selecionar um relatório que será entregue aos destinatários. A assinatura controlada por dados que será definida distribuirá o relatório **Pedidos de Vendas** criado no tutorial [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  Nas etapas a seguir, você modificará as informações da conexão de fonte de dados usadas pelo relatório para obter dados. Somente relatórios que usam **credenciais armazenadas** para acessar uma fonte de dados de relatório podem ser distribuídos por uma assinatura controlada por dados. Credenciais armazenadas são necessárias para o processamento de relatório autônomo.  
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
+Nesta lição do tutorial do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , você usa o portal da Web para selecionar um relatório que será entregue aos destinatários. A assinatura controlada por dados que será definida distribuirá o relatório **Pedidos de Vendas** criado no tutorial [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  Nas etapas a seguir, você modificará as informações da conexão de fonte de dados usadas pelo relatório para obter dados. Somente relatórios que usam **credenciais armazenadas** para acessar uma fonte de dados de relatório podem ser distribuídos por uma assinatura controlada por dados. Credenciais armazenadas são necessárias para o processamento de relatório autônomo.  
   
 Você também modificará o conjunto de dados e relatório para usar um parâmetro para filtrar o relatório no `[Order]` para que a assinatura possa produzir instâncias diferentes do relatório para pedidos específicos e formatos de renderização.  
   
@@ -33,7 +38,7 @@ Você também modificará o conjunto de dados e relatório para usar um parâmet
  **Observação:** a URL do *portal* da Web é "Reports", não a URL do *Servidor* de Relatório "Reportserver".  
 3.  Navegue até a pasta que contém o relatório **Pedidos de Vendas** e, no menu de contexto do relatório, clique em **Gerenciar**.  
  
- ![ssrs_tutorial_datadriven_manage_report](../reporting-services/media/ssrs-tutorial-datadriven-manage-report.gif)
+ ![ssrs_tutorial_datadriven_manage_report](../reporting-services/media/ssrs-tutorial-datadriven-manage-report.png)
   
 3.  Clique em **Fontes de Dados** no painel esquerdo.  
   
@@ -86,8 +91,8 @@ Você também modificará o conjunto de dados e relatório para usar um parâmet
  Nas etapas a seguir, você adicionará um parâmetro ao relatório.  O parâmetro de relatório alimenta o parâmetro de conjunto de dados. 
 ## <a name="bkmk_add_reportparameter"></a>Para adicionar um parâmetro de relatório e republicar o relatório  
   
-1.  No painel **Dados do Relatório**, expanda a pasta de parâmetros e clique duas vezes no parâmetro **Ordernumber**.  Ele foi criado automaticamente como parte das etapas anteriores, quando o parâmetro foi adicionado ao conjunto de dados. Clique em **Novo** e em **Parâmetro...**  
- ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.gif) 
+1.  No painel **Dados do Relatório** , expanda a pasta de parâmetros e clique duas vezes no parâmetro **Ordernumber** .  Ele foi criado automaticamente como parte das etapas anteriores, quando o parâmetro foi adicionado ao conjunto de dados. Clique em **Novo** e em **Parâmetro...**  
+ ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
 2.  Verifique se o **Nome** é `OrderNumber`.  
   
 3.  Verifique se o **Prompt** é `OrderNumber`.  
@@ -103,7 +108,7 @@ Você também modificará o conjunto de dados e relatório para usar um parâmet
     -   Clicar em Exibir Relatório para ver o relatório completo sem usar um parâmetro.  
   
     -   Desmarque a opção **Null** e digite um número de pedido, por exemplo *so71949*, e clique em **Exibir Relatório** para exibir apenas uma pedido no relatório.  
-    ![ssrs_tutorial_datadriven_reportviewer_parameter](../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif) 
+    ![ssrs_tutorial_datadriven_reportviewer_parameter](../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png) 
  
   
 ## <a name="bkmk_redeploy"></a>Implantar o relatório novamente  
@@ -112,11 +117,11 @@ Você também modificará o conjunto de dados e relatório para usar um parâmet
   
 2.  Na barra de ferramentas, clique em **Compilar** e, em seguida, em **Implantar tutorial**.  
   
-## Próximas etapas  
+## <a name="next-steps"></a>Próximas etapas  
 + Você configurou o relatório com êxito para obter dados usando as credenciais armazenadas, e os dados podem ser filtrados com um parâmetro. 
 + Na próxima lição, você configura a assinatura usando as páginas Assinatura Controlada por Dados do portal da Web. Consulte [Lição 3: Definindo uma assinatura controlada por dados](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 [Gerenciar fontes de dados de relatório](../reporting-services/report-data/manage-report-data-sources.md)  
 [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
@@ -124,3 +129,5 @@ Você também modificará o conjunto de dados e relatório para usar um parâmet
   
   
   
+
+

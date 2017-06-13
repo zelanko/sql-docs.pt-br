@@ -1,22 +1,30 @@
 ---
-title: "Li&#231;&#227;o 1: Criando um projeto do servidor de relat&#243;rios (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "Lição 1: Criando um projeto do servidor de relatório (Reporting Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 caps.latest.revision: 57
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 55
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: bead48dd2f32047b2782a54204bf06a145a7d71d
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Li&#231;&#227;o 1: Criando um projeto do servidor de relat&#243;rios (Reporting Services)
+# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lição 1: Criando um projeto do servidor de relatórios (Reporting Services)
+
+ > Para conteúdo relacionado a versões anteriores do SQL Server, consulte [lição 1: Criando um projeto do servidor de relatório (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
+
 Nesta lição, você criará um *projeto do servidor de relatórios* e um *arquivo de definição de relatório (.rdl)* [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] no Visual Studio. 
 
 Para criar um relatório com o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], primeiro você precisa de um projeto do servidor de relatório em que possa salvar o arquivo de definição (.rdl) do relatório e outros arquivos de recursos de que precisa para o relatório. 
@@ -39,7 +47,7 @@ Nas próximas lições, você define uma fonte de dados para o relatório, defin
 
 5. Clique em **Projeto do Servidor de Relatório** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
 
-   >**Observação**: se as opções **Business Intelligence** ou **Projeto do Servidor de Relatório** não estiverem visíveis, será necessário atualizar o SSDT com os modelos de Business Intelligence. Consulte [Baixar o SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx)  
+   >**Observação**: se você não vir o **Business Intelligence** ou **Report Server Project** opções, você precisa atualizar o SSDT com os modelos de Business Intelligence. Consulte [Baixar o SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx)  
   
 5.  Em **Nome**, digite **Tutorial**.  
 
@@ -53,9 +61,9 @@ Nas próximas lições, você define uma fonte de dados para o relatório, defin
   
 ## <a name="to-create-a-new-report-definition-file"></a>Para criar um novo arquivo de definição de relatório  
   
-1.  No painel **Gerenciador de Soluções**, clique com o botão direito do mouse em **Relatórios** > **Adicionar** > **Novo Item**. 
+1.  No painel **Gerenciador de Soluções** , clique com o botão direito do mouse em **Relatórios** > **Adicionar** > **Novo Item**. 
 
-    >**Dica**: se você não vir o painel **Gerenciador de Soluções**, no menu **Exibir**, clique em **Gerenciador de Soluções**. 
+    >**Dica**: se você não vir o painel **Gerenciador de Soluções** , no menu **Exibir** , clique em **Gerenciador de Soluções**. 
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
   
@@ -77,3 +85,5 @@ Você criou um projeto de relatório chamado "Tutorial" e adicionou um arquivo d
 ## <a name="see-also"></a>Consulte também  
 [Criar um Relatório de Tabela Básico &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
+
+

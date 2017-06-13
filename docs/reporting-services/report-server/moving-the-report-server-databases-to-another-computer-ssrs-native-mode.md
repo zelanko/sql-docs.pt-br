@@ -1,26 +1,33 @@
 ---
-title: "Movendo os bancos de dados do servidor de relat&#243;rio para outro computador (modo nativo do SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Movendo os bancos de dados do servidor de relatório para outro computador (modo nativo do SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 10
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Movendo os bancos de dados do servidor de relat&#243;rio para outro computador (modo nativo do SSRS)
+
+# <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Movendo os bancos de dados do servidor de relatório para outro computador (modo nativo do SSRS)
+
   É possível mover os bancos de dados do servidor de relatório usados em uma instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] para uma instância que está em outro computador. Os bancos de dados reportserver e reportservertempdb devem ser movidos ou copiados juntos. Uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requer os dois bancos de dados; o banco de dados reportservertempdb deve ser relacionado por nome ao banco de dados reportserver primário que está sendo movido.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
   
  A movimentação de um banco de dados não afeta as operações agendadas que estão definidas atualmente para itens de servidor de relatório.  
   
@@ -37,8 +44,8 @@ caps.handback.revision: 10
 > [!IMPORTANT]  
 >  As etapas descritas neste tópico são recomendadas quando a realocação do banco de dados do servidor de relatório for a única alteração feita na instalação existente. A migração de uma instalação inteira do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (ou seja, a movimentação do banco de dados e a alteração da identidade do serviço Windows do Servidor de Relatório que usa o banco de dados) exige a reconfiguração da conexão e a redefinição de uma chave de criptografia.  
   
-## Desanexando e anexando os bancos de dados do servidor de relatório  
- Se conseguir colocar o servidor de relatório offline, você poderá desanexar os bancos de dados para movê-los para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usada. Esta abordagem preserva as permissões nos bancos de dados. Se você estiver usando um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , mova-o para outra instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Depois de mover os bancos de dados, reconfigure a conexão do servidor de relatório com o banco de dados. Se você estiver executando uma implantação de expansão, deverá reconfigurar a conexão do banco de dados do servidor de relatório para cada servidor de relatório da implantação.  
+## <a name="detaching-and-attaching-the-report-server-databases"></a>Desanexando e anexando os bancos de dados do servidor de relatório  
+ Se conseguir colocar o servidor de relatório offline, você poderá desanexar os bancos de dados para movê-los para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usada. Esta abordagem preserva as permissões nos bancos de dados. Se você estiver usando um banco de dados do SQL Server, mova-o para outra instância do SQL Server. Depois de mover os bancos de dados, reconfigure a conexão do servidor de relatório com o banco de dados. Se você estiver executando uma implantação de expansão, deverá reconfigurar a conexão do banco de dados do servidor de relatório para cada servidor de relatório da implantação.  
   
  Realize as etapas a seguir para mover os bancos de dados:  
   
@@ -70,10 +77,10 @@ caps.handback.revision: 10
   
 14. Reinicie o serviço Servidor de Relatório.  
   
-## Fazendo backup e restaurando os bancos de dados do servidor de relatório  
+## <a name="backing-up-and-restoring-the-report-server-databases"></a>Fazendo backup e restaurando os bancos de dados do servidor de relatório  
  Se não for possível colocar o servidor de relatório offline, use o recurso de backup e restauração para realocar os bancos de dados do servidor de relatório. Você deve usar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] para fazer o backup e a restauração. Depois de restaurar os bancos de dados, configure o servidor de relatório para usar o banco de dados na nova instância do servidor. Para obter mais informações, consulte as instruções no final deste tópico.  
   
-### Usando BACKUP e COPY_ONLY para fazer backup dos bancos de dados do servidor de relatório  
+### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>Usando BACKUP e COPY_ONLY para fazer backup dos bancos de dados do servidor de relatório  
  Ao fazer backup dos bancos de dados, defina o argumento COPY_ONLY. Faça backup dos bancos de dados e dos arquivos de log.  
   
 ```  
@@ -136,7 +143,7 @@ BACKUP LOG ReportServerTempDB
    WITH COPY_ONLY  
 ```  
   
-### Usando RESTORE e MOVE para realocar os bancos de dados do servidor de relatório  
+### <a name="using-restore-and-move-to-relocate-the-report-server-databases"></a>Usando RESTORE e MOVE para realocar os bancos de dados do servidor de relatório  
  Ao restaurar os bancos de dados, inclua o argumento MOVE para especificar um caminho. Use o argumento NORECOVERY para executar a restauração inicial; isso mantém o banco de dados no estado RESTORING, permitindo que você tenha tempo de revisar os backups de log para determinar qual deve ser restaurado. A etapa final repete a operação RESTORE com o argumento RECOVERY.  
   
  O argumento MOVE usa o nome lógico do arquivo de dados. Para localizar o nome lógico, execute a seguinte instrução: `RESTORE FILELISTONLY FROM DISK='C:\ReportServerData.bak';`  
@@ -197,7 +204,7 @@ RESTORE DATABASE ReportServerTempDB
 GO  
 ```  
   
-### Como configurar a conexão do banco de dados do servidor de relatório  
+### <a name="how-to-configure-the-report-server-database-connection"></a>Como configurar a conexão do banco de dados do servidor de relatório  
   
 1.  Inicie o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager e abra uma conexão com o servidor de relatório.  
   
@@ -214,16 +221,17 @@ GO
 7.  Clique em **Avançar** e em **Concluir**.  
   
 > [!NOTE]  
->  Uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exige que a instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] inclua a função **RSExecRole**. A criação de funções, o registro de logon e as atribuições de função ocorrem quando a conexão do banco de dados do servidor de relatório é definida por meio da ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se você usar abordagens alternativas (especificamente, se usar o utilitário de prompt de comando rsconfig.exe) para configurar a conexão, o servidor de relatório não estará em um estado de funcionamento. Talvez seja necessário gravar o código WMI para disponibilizar o servidor de relatório. Para obter mais informações, consulte [Acessar o provedor WMI do Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
-  
-## Consulte também  
- [Criar o RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
- [Iniciar e parar o serviço Servidor de Relatório](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
- [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Configurar a conta de execução autônoma &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Utilitário rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
- [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-and-manage-encryption-keys-ssrs-configuration-manager.md)   
- [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
-  
-  
+>  Uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exige que a instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] inclua a função **RSExecRole** . A criação de funções, o registro de logon e as atribuições de função ocorrem quando a conexão do banco de dados do servidor de relatório é definida por meio da ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se você usar abordagens alternativas (especificamente, se usar o utilitário de prompt de comando rsconfig.exe) para configurar a conexão, o servidor de relatório não estará em um estado de funcionamento. Talvez seja necessário gravar o código WMI para disponibilizar o servidor de relatório. Para obter mais informações, consulte [Acessar o provedor WMI do Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
+
+## <a name="next-steps"></a>Próximas etapas
+
+[Criar o RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
+[Iniciar e parar o serviço Servidor de Relatório](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
+[Configurar uma Conexão de banco de dados do servidor de relatório](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Configurar a conta de execução autônoma](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+[Gerenciador de configuração do Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[Utilitário rsconfig](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
+[Configurar e gerenciar chaves de criptografia](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+[Banco de dados de servidor de relatório](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
+
+Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

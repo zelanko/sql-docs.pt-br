@@ -1,23 +1,28 @@
 ---
-title: "Aplicativos de servi&#231;o Sharepoint de backup e restaura&#231;&#227;o do Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Backup e restauração do Reporting Services aplicativos de serviço do SharePoint | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: a4f320a1e806dce3411137abc74f2fe07bab7217
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aplicativos de servi&#231;o Sharepoint de backup e restaura&#231;&#227;o do Reporting Services
+# <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Aplicativos de serviço Sharepoint de backup e restauração do Reporting Services
   Este tópico descreve como fazer backup de um aplicativo de serviços [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e restaurá-lo usando a Administração Central do SharePoint ou o PowerShell. O tópico contém:  
   
 -   [Limitações e restrições](#bkmk_Restrictions)  
@@ -33,7 +38,7 @@ caps.handback.revision: 11
 ###  <a name="bkmk_Restrictions"></a> Limitações e restrições  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser parcialmente submetidos a backup e restaurados usando a funcionalidade de backup e restauração do SharePoint. **São necessárias etapas adicionais** e as etapas são documentadas neste tópico. No momento, o processo de backup **não** faz backup das chaves de criptografia e das credenciais para UEAs (contas de execução autônomas) ou autenticação de janelas no banco de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser parcialmente submetidos a backup e restaurados usando a funcionalidade de backup e restauração do SharePoint. **São necessárias etapas adicionais** e as etapas são documentadas neste tópico. No momento, o processo de backup **não** faz backup das chaves de criptografia e das credenciais para UEAs (contas de execução autônomas) ou autenticação de janelas no banco de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ###  <a name="bkmk_recommendations"></a> Recomendações  
   
@@ -52,8 +57,8 @@ caps.handback.revision: 11
   
 3.  Verifique se o aplicativo de serviço usa uma UEA ou uma autenticação do Windows para acesso ao banco de dados. Em caso afirmativo, anote as credenciais a fim de que você possa usá-las para configurar o aplicativo de serviço depois que ele for restaurado.  
   
-### Backup das chaves de criptografia usando a Administração Central  
- Para obter informações sobre como fazer backup de chaves de criptografia do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte a seção "Chaves de criptografia" de [Gerenciar um aplicativo do serviço SharePoint do Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
+### <a name="backup-the-encryption-keys-using-central-administration"></a>Backup das chaves de criptografia usando a Administração Central  
+ Para obter informações sobre como fazer backup de chaves de criptografia do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consulte a seção "Chaves de criptografia" de [Gerenciar um aplicativo do serviço SharePoint do Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ###  <a name="bkmk_centraladmin"></a> Backup do aplicativo de serviço usando a Administração Central do SharePoint  
  Para fazer backup do aplicativo de serviço, conclua as seguintes etapas:  
@@ -74,7 +79,7 @@ caps.handback.revision: 11
   
  [Backup de um aplicativo de serviço (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
   
-### Verificar conta de execução e autenticação do banco de dados  
+### <a name="verify-execution-account-and-database-authentication"></a>Verificar conta de execução e autenticação do banco de dados  
  **Conta de Execução:** Para verificar se seu aplicativo de serviço está usando uma conta de execução:  
   
 1.  Na Administração Central do SharePoint, clique em **Gerenciar Aplicativos de Serviço** no grupo **Gerenciamento de Aplicativos** .  
@@ -91,7 +96,7 @@ caps.handback.revision: 11
   
 2.  Clique no nome do aplicativo de serviço e, em seguida, clique em **Propriedades** na faixa de opções do SharePoint.  
   
-3.  Leia a seção **Banco de Dados do Serviço SQL Server Reporting Services**.  
+3.  Leia a seção **Banco de Dados do Serviço SQL Server Reporting Services** .  
   
 4.  Se a Autenticação do Windows estiver configurada, você precisará saber as credenciais para que possa configurar o aplicativo de serviço após sua restauração. Não continue com o procedimento de backup e restauração até que saiba as credenciais corretas.  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 11
   
 3.  Se seu aplicativo de serviço estava usando uma conta de execução ou uma autenticação do Windows para acesso ao banco de dados, configure as credenciais.  
   
-### Restaurar o aplicativo de serviço usando a Administração Central do SharePoint  
+### <a name="restore-the-service-application-using-sharepoint-central-administration"></a>Restaurar o aplicativo de serviço usando a Administração Central do SharePoint  
   
 1.  Na Administração Central do SharePoint, clique em **Restaurar de um backup** no grupo **Backup e Restauração** .  
   
@@ -124,12 +129,12 @@ caps.handback.revision: 11
   
  [Restauração de um aplicativo de serviço (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx).  
   
- [Restauração de um aplicativo de serviço (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx).  
+ [Restauração de um aplicativo de serviço (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx).  
   
-### Restauração das chaves de criptografia usando a Administração Central  
- Para obter informações sobre como restaurar chaves de criptografia do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte a seção "Chaves de criptografia" de [Gerenciar um aplicativo do serviço SharePoint do Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
+### <a name="restore-the-encryption-keys-using-central-administration"></a>Restauração das chaves de criptografia usando a Administração Central  
+ Para obter informações sobre como restaurar chaves de criptografia do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consulte a seção "Chaves de criptografia" de [Gerenciar um aplicativo do serviço SharePoint do Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
-### Configurar a conta de execução e a autenticação do banco de dados  
+### <a name="configure-the-execution-account-and-database-authentication"></a>Configurar a conta de execução e a autenticação do banco de dados  
  **Conta de execução:** Se seu aplicativo de serviço estiver usando uma conta de execução, execute as seguintes etapas para configurá-lo:  
   
 1.  Na Administração Central do SharePoint, clique em **Gerenciar Aplicativos de Serviço** no grupo **Gerenciamento de Aplicativos** .  
@@ -148,7 +153,7 @@ caps.handback.revision: 11
   
 2.  Clique no nome do aplicativo de serviço e, em seguida, clique em **Propriedades** na faixa de opções do SharePoint.  
   
-3.  Leia a seção **Banco de Dados do Serviço SQL Server Reporting Services**.  
+3.  Leia a seção **Banco de Dados do Serviço SQL Server Reporting Services** .  
   
 4.  Selecione **Autenticação do Windows**.  
   

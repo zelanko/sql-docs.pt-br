@@ -1,38 +1,43 @@
 ---
-title: "Definir a localidade em um relat&#243;rio ou caixa de texto (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "localidades [Reporting Services]"
+title: "Definir a localidade em um relatório ou caixa de texto (Reporting Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- locales [Reporting Services]
 ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
 caps.latest.revision: 43
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 43
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3ce894281c47d0e54837917b05e785e9d106cdfa
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Definir a localidade em um relat&#243;rio ou caixa de texto (Reporting Services)
+# <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>Definir a localidade em um relatório ou caixa de texto (Reporting Services)
   A propriedade **Language** em um relatório ou caixa de texto contém as configurações de localidade, que determinam os formatos padrão para a exibição dos dados do relatório que são diferenciados por idioma e região, como, por exemplo, data, moeda ou valores numéricos. A propriedade **Language** em uma caixa de texto substitui a propriedade **Language** em um relatório. Quando nenhum valor é especificado para **Language**, o Reporting Services usa a localidade do sistema operacional no servidor de relatórios para os relatórios publicados ou do computador em que o relatório está sendo gerado na visualização do relatório.  
   
  Em relatórios em HTML, você pode substituir o valor **Idioma** padrão e usar o idioma especificado pelo cabeçalho HTTP do cliente navegador usando o campo interno User!Language em uma expressão para a propriedade **Language** de um relatório ou caixa de texto.  
   
  A propriedade **Language** também pode ser especificada para um relatório em uma URL. Para mais informações, consulte [Definir o idioma dos parâmetros do relatório em uma URL](../../reporting-services/set-the-language-for-report-parameters-in-a-url.md).  
   
-### Para definir a localidade para um relatório  
+### <a name="to-set-the-locale-for-a-report"></a>Para definir a localidade para um relatório  
   
 1.  No modo Design, clique fora da superfície de design para selecionar o relatório.  
   
 2.  No painel Propriedades, na propriedade **Language** , digite ou selecione o idioma que deseja usar no relatório.  
   
-### Para definir a localidade para uma caixa de texto  
+### <a name="to-set-the-locale-for-a-text-box"></a>Para definir a localidade para uma caixa de texto  
   
 1.  No modo Design, selecione a caixa de texto para a qual você deseja aplicar as configurações de localidade.  
   
@@ -50,8 +55,8 @@ caps.handback.revision: 43
   
     -   Na propriedade **UnicodeBiDi** , digite ou selecione o nível de inserção bidirecional que deseja usar na caixa de texto.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Considerações de design de solução para implantações multilíngues ou globais (Reporting Services)](http://msdn.microsoft.com/pt-br/55630eca-d1e5-4ac6-93c7-9a3f15c0d08a)  
+ [Considerações de design de solução para implantações multilíngues ou globais (Reporting Services)](http://msdn.microsoft.com/en-us/55630eca-d1e5-4ac6-93c7-9a3f15c0d08a)  
   
   

@@ -20,10 +20,10 @@ author: sabotta
 ms.author: carlasab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 229b4aac242bc8be7e2058bad708f0bdee604796
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: c4f53b76e5f01a639cb15f95f28a8d7118178783
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="sql-server-resources"></a>Recursos do SQL Server
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   
  Saiba mais sobre os novos recursos no SQL Server
  - [Novidades no SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
- - [Novidades no SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)  
+ - [Novidades no SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)  
   
  O[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] é o maior passo à frente no histórico de plataforma de dados da Microsoft, com análise operacional em tempo real, visualizações avançadas em dispositivos móveis, análise interna avançada, nova tecnologia de segurança avançada e novos cenários de nuvem híbridos. Outros benefícios incluem melhor desempenho na memória, expansão dos dados OLTP para o Microsoft Azure e gerenciamento simplificado de dados relacionais e não relacionais.  
   

@@ -1,28 +1,33 @@
 ---
-title: "Proteger pastas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pastas de alta segurança [Reporting Services]"
-  - "pastas da baixa segurança"
-  - "pastas [Reporting Services], segurança"
-  - "segurança [Reporting Services], pastas"
+title: Proteger pastas | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- high-security folders [Reporting Services]
+- low-security folders
+- folders [Reporting Services], security
+- security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 caps.latest.revision: 34
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 34
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5aad5bbe0b53e2e6669df93496795f4c5b6a3bca
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Proteger pastas
+# <a name="secure-folders"></a>Proteger pastas
   A segurança de pasta é a base para proteger todo o conteúdo em um servidor de relatório. Como a segurança é herdada em toda a estrutura de pastas, é possível designar seções grandes ou pequenas da hierarquia de pasta para permitir determinados tipos de acesso.  
   
  As pastas de alta segurança podem ser usadas para armazenar relatórios confidenciais ou como áreas de preparação; por exemplo, você pode ter uma pasta usada para testar os relatórios antes de movê-los para um local final. Para controlar o acesso a essa área, você pode definir uma atribuição de função que permite somente aos autores de relatório adicionar e excluir itens e uma segunda atribuição de função que permite aos testadores executar relatórios, mas não adicionar ou remover itens. Como as atribuições de função são definidas explicitamente para testadores e autores de relatório, nenhum outro usuário (exceto os administradores do sistema local) pode acessar a pasta.  
@@ -31,7 +36,7 @@ caps.handback.revision: 34
   
  A segurança de pasta é a base da segurança no nível do item, começando com o nó raiz da hierarquia de pastas do servidor de relatório, a pasta Base. Como segurança é herdada, é aconselhável definir uma política de segurança bastante restritiva na pasta Base. Usar a função **Navegador** nas atribuições de função da pasta Base é exatamente o mesmo que fornecer o acesso somente exibição.  
   
-## Tarefas e acesso à pasta  
+## <a name="tasks-and-folder-access"></a>Tarefas e acesso à pasta  
  Ao criar atribuições de função para pastas, considere as tarefas listadas na tabela a seguir.  
   
 |Selecione esta tarefa|Para dar permissão para|  
@@ -42,7 +47,7 @@ caps.handback.revision: 34
 |Gerenciar fontes de dados|Adicionar novos itens de fontes de dados compartilhadas a uma pasta e alterar as fontes de dados compartilhadas existentes.|  
 |Definir segurança em itens|Criar e modificar atribuições de função que controlam o acesso à pasta. Essa tarefa deve ser usada com “Exibir pastas” ou “Gerenciar pastas”. Se não for, não terá nenhum efeito porque o usuário não poderá selecionar o item.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Proteger relatórios e recursos](../../reporting-services/security/secure-reports-and-resources.md)   
  [Proteger itens de fontes de dados compartilhadas](../../reporting-services/security/secure-shared-data-source-items.md)   
  [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  

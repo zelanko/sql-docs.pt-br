@@ -1,38 +1,43 @@
 ---
-title: "Propriedades de campos estendidos para um banco de dados do Analysis Services (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Propriedades de campo estendidas para uma análise dos serviços de banco de dados (SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2a73370c0ae9f3d405a185d53754aa0620d593e3
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Propriedades de campos estendidos para um banco de dados do Analysis Services (SSRS)
-  A extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte às propriedades de campo estendidas. As propriedades de campo estendidas são propriedades adicionais às propriedades de campo **Value** e **IsMissing** que estão disponíveis na fonte de dados e que têm suporte na extensão de processamento de dados. As propriedades estendidas não são exibidas no painel Dados do Relatório como parte da coleção de campos de um conjunto de dados do relatório. Você pode inclui os valores de propriedade do campo estendido em seu relatório escrevendo expressões que os especifiquem por nome usando a coleção interna de **Fields**.  
+# <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriedades de campos estendidos para um banco de dados do Analysis Services (SSRS)
+  A extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte às propriedades de campo estendidas. As propriedades de campo estendidas são propriedades adicionais às propriedades de campo **Value** e **IsMissing** que estão disponíveis na fonte de dados e que têm suporte na extensão de processamento de dados. As propriedades estendidas não são exibidas no painel Dados do Relatório como parte da coleção de campos de um conjunto de dados do relatório. Você pode inclui os valores de propriedade do campo estendido em seu relatório escrevendo expressões que os especifiquem por nome usando a coleção interna de **Fields** .  
   
- As propriedades estendidas incluem propriedades predefinidas e propriedades personalizadas. As propriedades predefinidas são propriedades comuns a várias fontes de dados mapeadas para nomes de propriedade de campo específico e podem ser acessadas por nome por meio da coleção interna de **Fields**. As propriedades personalizadas são específicas de cada provedor de dados e podem ser acessadas por meio da coleção interna de **Fields** apenas pela sintaxe usando o nome da propriedade estendida como uma cadeia de caracteres.  
+ As propriedades estendidas incluem propriedades predefinidas e propriedades personalizadas. As propriedades predefinidas são propriedades comuns a várias fontes de dados mapeadas para nomes de propriedade de campo específico e podem ser acessadas por nome por meio da coleção interna de **Fields** . As propriedades personalizadas são específicas de cada provedor de dados e podem ser acessadas por meio da coleção interna de **Fields** apenas pela sintaxe usando o nome da propriedade estendida como uma cadeia de caracteres.  
   
- Ao usar o designer de consultas MDX do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no modo gráfico para definir a consulta, um conjunto predefinido de propriedades de células e propriedades de dimensão é adicionado automaticamente à consulta MDX. Apenas as propriedades estendidas que estiverem especificamente listadas na consulta MDX em seu relatório poderão ser usadas. Dependendo do relatório, é possível modificar o texto do comando MDX padrão para incluir outra dimensão ou propriedades personalizadas definidas no cubo. Para obter mais informações sobre os campos estendidos disponíveis nas fontes de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Criando e usando valores de propriedade &#40;MDX&#41;](../Topic/Creating%20and%20Using%20Property%20Values%20\(MDX\).md).  
+ Ao usar o designer de consultas MDX do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no modo gráfico para definir a consulta, um conjunto predefinido de propriedades de células e propriedades de dimensão é adicionado automaticamente à consulta MDX. Apenas as propriedades estendidas que estiverem especificamente listadas na consulta MDX em seu relatório poderão ser usadas. Dependendo do relatório, é possível modificar o texto do comando MDX padrão para incluir outra dimensão ou propriedades personalizadas definidas no cubo. Para obter mais informações sobre os campos estendidos disponíveis nas fontes de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Criando e usando valores de propriedade &#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2).  
   
-## Trabalhando com as propriedades de campo em um relatório  
- As propriedades de campo estendidas incluem as propriedades predefinidas e as propriedades específicas para um provedor de dados. As propriedades de campo não são exibidas com a lista de campos no painel **Dados do Relatório**, embora elas estejam na consulta criada para um conjunto de dados; portanto, não é possível arrastar as propriedades de campo para a superfície de design de relatórios. Em vez disso, você deverá arrastar o campo para o relatório e alterar a propriedade **Value** do campo para a propriedade que você quer usar. Por exemplo, se os dados da célula de um cubo já tiverem sido formatados, você poderá usar a propriedade de campo FormattedValue usando a seguinte expressão: `=Fields!FieldName.FormattedValue`.  
+## <a name="working-with-field-properties-in-a-report"></a>Trabalhando com as propriedades de campo em um relatório  
+ As propriedades de campo estendidas incluem as propriedades predefinidas e as propriedades específicas para um provedor de dados. As propriedades de campo não são exibidas com a lista de campos no painel **Dados do Relatório** , embora elas estejam na consulta criada para um conjunto de dados; portanto, não é possível arrastar as propriedades de campo para a superfície de design de relatórios. Em vez disso, você deverá arrastar o campo para o relatório e alterar a propriedade **Value** do campo para a propriedade que você quer usar. Por exemplo, se os dados da célula de um cubo já tiverem sido formatados, você poderá usar a propriedade de campo FormattedValue usando a seguinte expressão: `=Fields!FieldName.FormattedValue`.  
   
  Para consultar uma propriedade estendida que não seja predefinida, use a seguinte sintaxe em uma expressão:  
   
 -   *Fields!FieldName("PropertyName")*  
   
-## Propriedades de campo predefinidas  
- Na maioria dos casos, as propriedades de campo predefinidas são aplicadas a medidas, níveis ou dimensões. Uma propriedade de campo predefinida deve ter um valor correspondente armazenado na fonte de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Se não existir um valor ou se você especificar uma propriedade de campo em um nível apenas para medida (por exemplo), a propriedade retornará um valor nulo.  
+## <a name="predefined-field-properties"></a>Propriedades de campo predefinidas  
+ Na maioria dos casos, as propriedades de campo predefinidas são aplicadas a medidas, níveis ou dimensões. Uma propriedade de campo predefinida deve ter um valor correspondente armazenado na fonte de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se não existir um valor ou se você especificar uma propriedade de campo em um nível apenas para medida (por exemplo), a propriedade retornará um valor nulo.  
   
  Para consultar uma propriedade predefinida a partir de uma expressão, use as seguintes sintaxes:  
   
@@ -60,12 +65,12 @@ caps.handback.revision: 7
 |**ParentUniqueName**|**Cadeia de caracteres**|Para hierarquias pai-filho, retorna um nome totalmente qualificado do nível pai.|  
   
 > [!NOTE]  
->  Os valores dessas propriedades de campo estendidas passarão a existir somente se a fonte de dados (por exemplo, o cubo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]) fornecer esses valores quando você executar e recuperar os dados de seus conjuntos de dados. Dessa forma, você poderá consultar esses valores da propriedade de campo a partir de qualquer expressão usando a sintaxe descrita na seguinte seção. Entretanto, como esses campos são específicos para esse provedor de dados, as alterações que forem feitas nesse valor não serão salvas com a definição de relatório.  
+>  Os valores dessas propriedades de campo estendidas passarão a existir somente se a fonte de dados (por exemplo, o cubo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) fornecer esses valores quando você executar e recuperar os dados de seus conjuntos de dados. Dessa forma, você poderá consultar esses valores da propriedade de campo a partir de qualquer expressão usando a sintaxe descrita na seguinte seção. Entretanto, como esses campos são específicos para esse provedor de dados, as alterações que forem feitas nesse valor não serão salvas com a definição de relatório.  
   
-### Exemplo de propriedades estendidas  
+### <a name="example-extended-properties"></a>Exemplo de propriedades estendidas  
  Para ilustrar as propriedades estendidas, a consulta MDX e o conjunto de resultados a seguir incluem várias propriedades de membro disponíveis a partir de um atributo de dimensão definido para um cubo. As propriedades de membro incluídas são MEMBER_CAPTION, UNIQUENAME, Properties("Nome do Dia"), MEMBER_VALUE, PARENT_UNIQUE_NAME e MEMBER_KEY.  
   
- Essa consulta MDX é executada no cubo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW, incluído com os bancos de dados de exemplo do [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+ Essa consulta MDX é executada no cubo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW, incluído com os bancos de dados de exemplo do [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
 ```  
 WITH MEMBER [Measures].[DateCaption]   
@@ -131,7 +136,7 @@ CELL PROPERTIES
 |Propriedade|Value|  
 |--------------|-----------|  
 |CellOrdinal|0|  
-|VALUE|2481|  
+|Value|2481|  
 |BACK_COLOR|(null)|  
 |FORE_COLOR|(null)|  
 |FORMATTED_VALUE|2,481|  
@@ -140,7 +145,7 @@ CELL PROPERTIES
 |FONT_SIZE|(null)|  
 |FONT_FLAGS|(null)|  
   
- Se você criar um conjunto de dados de relatório com essa consulta e associar o conjunto de dados a uma tabela, poderá ver a propriedade VALUE padrão de um campo, por exemplo, `=Fields!Month_of_Year!Value`. Se você definir essa expressão como a expressão de classificação para a tabela, seus resultados servirão para classificar a tabela em ordem alfabética, por mês, porque o campo Value usa um tipo de dados **String**. Para classificar a tabela de forma que os meses fiquem na ordem correta do ano, de janeiro a dezembro, use a seguinte expressão:  
+ Se você criar um conjunto de dados de relatório com essa consulta e associar o conjunto de dados a uma tabela, poderá ver a propriedade VALUE padrão de um campo, por exemplo, `=Fields!Month_of_Year!Value`. Se você definir essa expressão como a expressão de classificação para a tabela, seus resultados servirão para classificar a tabela em ordem alfabética, por mês, porque o campo Value usa um tipo de dados **String** . Para classificar a tabela de forma que os meses fiquem na ordem correta do ano, de janeiro a dezembro, use a seguinte expressão:  
   
 ```  
 =Fields!Month_of_Year("MEMBER_VALUE")  
@@ -148,9 +153,9 @@ CELL PROPERTIES
   
  Isso classifica o valor do campo em seu tipo de dados de inteiro original a partir da fonte de dados.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder-and-ssrs.md)   
+ [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "Renderizando itens de relat&#243;rio (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Renderização de itens de relatório (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a254c48e1639c95b1d93f180f1fdd00326a79ae
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Renderizando itens de relat&#243;rio (Construtor de Relat&#243;rios e SSRS)
+# <a name="rendering-report-items-report-builder-and-ssrs"></a>Renderizando itens de relatório (Construtor de Relatórios e SSRS)
   O número, o tamanho e o local de itens de relatório afetam a maneira como os renderizadores paginam o corpo de relatório. A seguir uma descrição de como vários itens de relatório são renderizados.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Sobrepondo itens de relatório  
+## <a name="overlapping-report-items"></a>Sobrepondo itens de relatório  
  Os itens de relatório sobrepostos não têm suporte no HTML, MHTML, Word, Excel, na Visualização, nem no Visualizador de Relatórios. Se itens sobrepostos existirem, eles são removidos. As regras a seguir se aplicam aos itens de relatório sobrepostos:  
   
 -   Se a sobreposição vertical de itens de relatório for maior, um dos itens de sobreposição é removido para a direita. O item mais a esquerda permanece onde é posicionado.  
@@ -36,7 +41,7 @@ caps.handback.revision: 7
   
  Os itens de relatórios sobrepostos têm suporte nos formatos de quebra de página não flexíveis, inclusive na impressão.  
   
-## Visibilidade e itens de relatório  
+## <a name="visibility-and-report-items"></a>Visibilidade e itens de relatório  
  Itens de relatório podem ser ocultados ou exibidos por padrão ou ocultados e exibidos condicionalmente usando expressões. Opcionalmente, a visibilidade pode ser trocada clicando em outro item de relatório.  
   
  As regras de visibilidade a seguir se aplicam quando à renderização de itens de relatórios:  
@@ -47,7 +52,7 @@ caps.handback.revision: 7
   
 -   Se a visibilidade de um item de relatório e seu conteúdo puder ser alternada clicando em outro item de relatório, então a paginação muda para acomodar o item de relatório e seu conteúdo somente quando ele é inicialmente exibido.  
   
-## Mantendo unidos itens de relatório em uma única página  
+## <a name="keeping-report-items-together-on-a-single-page"></a>Mantendo unidos itens de relatório em uma única página  
  Vários itens de relatório dentro de um relatório podem ser mantidos unidos em uma única página, implicitamente ou explicitamente configurando as propriedades de manutenção com o grupo ou manutenção de união. Os itens de relatório são sempre renderizados na mesma página se o item de relatório não tiver qualquer quebra de página lógica e for menor em tamanho de que a área utilizável da página. Se um item de relatório não couber totalmente na página na qual ele deveria iniciar normalmente, uma quebra de página não flexível é inserida antes do item de relatório, forçando-o para a página seguinte. Para os processadores de quebra de página flexível, esta página é estendida para acomodar o item de relatório.  
   
  Quando o item de relatório for sempre oculto, as regras para manter os itens unidos são ignoradas.  
@@ -68,7 +73,7 @@ caps.handback.revision: 7
   
 -   Itens de relatórios podem ser alternados em uma região de dados tablix.  
   
-### Ordem de prioridade  
+### <a name="priority-order"></a>Ordem de prioridade  
  Devido às limitações no tamanho de página, conflitos podem surgir entre as regras para manter unidos itens de relatório. Quando conflitos ocorrerem, a ordem de prioridade a seguir é usada para manter os itens unidos durante a renderização:  
   
 -   Linhas, gráficos e imagens.  
@@ -85,7 +90,7 @@ caps.handback.revision: 7
   
 -   Regiões de dados Tablix com uma propriedade KeepTogether explícita definida como **true**.  
   
-### Sub-relatórios  
+### <a name="subreports"></a>Sub-relatórios  
  Um sub-relatório renderiza como um retângulo que contém outro relatório definido em um arquivo .rdl de relatório separado. O arquivo de sub-relatório deve ser publicado a um servidor de relatório antes de poder ser acessado pelo relatório pai.  
   
  As regras a seguir se aplicam quando renderizar sub-relatórios:  
@@ -104,10 +109,10 @@ caps.handback.revision: 7
   
  Para obter mais informações sobre sub-relatórios, consulte [Sub-relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

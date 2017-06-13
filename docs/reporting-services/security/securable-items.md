@@ -1,28 +1,33 @@
 ---
-title: "Itens proteg&#237;veis | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "itens protegíveis [Reporting Services]"
-  - "funções [Reporting Services], itens protegíveis"
-  - "segurança [Reporting Services], itens protegíveis listados"
-  - "segurança baseada em função [Reporting Services], itens protegíveis"
+title: "Itens protegíveis | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- securable items [Reporting Services]
+- roles [Reporting Services], securable items
+- security [Reporting Services], securable items listed
+- role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 caps.latest.revision: 45
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 45
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1c11b204b5a48e4324f49e05467cc3ac96e7fa4
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Itens proteg&#237;veis
+# <a name="securable-items"></a>Itens protegíveis
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa a segurança baseada em função para controlar o acesso a itens armazenados em um servidor de relatório. Quando você concede acesso a um servidor de relatório para um usuário, normalmente faz isso criando um par de atribuições de função:  
   
 -   No nível de site  
@@ -47,7 +52,7 @@ caps.handback.revision: 45
   
  Outras construções, como agendas e assinaturas, não são protegidas explicitamente. Agendas e assinaturas operam dentro da segurança de um relatório.  
   
-## Descrições de itens  
+## <a name="item-descriptions"></a>Descrições de itens  
  A tabela a seguir lista itens protegíveis e descreve suas características.  
   
 |Item|Características|  
@@ -59,10 +64,10 @@ caps.handback.revision: 45
 |Fontes de dados compartilhadas|As fontes de dados compartilhadas podem ser protegidas para limitar o acesso ao item e a suas páginas de propriedade. Para obter mais informações, consulte [Proteger itens de fonte de dados compartilhada](../../reporting-services/security/secure-shared-data-source-items.md).|  
 |Conjuntos de dados compartilhados|Os conjuntos de dados compartilhados podem ser protegidos para controlar as ações que podem ser executadas pelos usuários, como a exibição ou alteração da definição ou a alteração das propriedades de um conjunto de dados compartilhado específico.<br /><br /> Para obter mais informações, consulte [Proteger itens de conjunto de dados compartilhados](../../reporting-services/security/secure-shared-dataset-items.md).|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](../../reporting-services/security/create-delete-or-modify-a-role-management-studio.md)   
+ [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modificar ou excluir uma atribuição de função &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/modify-or-delete-a-role-assignment-report-manager.md)  
+ [Modificar ou excluir uma atribuição de função &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
   
   

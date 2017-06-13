@@ -1,29 +1,34 @@
 ---
-title: "Monitorar assinaturas do Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "assinaturas [Reporting Services], inativas"
-  - "assinaturas [Reporting Services], status"
-  - "monitorando [Reporting Services], assinaturas"
-  - "informações de status [Reporting Services]"
-  - "assinaturas inativas [Reporting Services]"
+title: Monitor de Reporting Services assinaturas | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [Reporting Services], inactive
+- subscriptions [Reporting Services], status
+- monitoring [Reporting Services], subscriptions
+- status information [Reporting Services]
+- inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 caps.latest.revision: 36
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 36
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 388c564367a3eaeb3f7e0f58f07997079322040d
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Monitorar assinaturas do Reporting Services
+# <a name="monitor-reporting-services-subscriptions"></a>Monitorar assinaturas do Reporting Services
   Você pode monitorar assinaturas [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da interface do usuário, do Windows PowerShell ou arquivos de log. As opções disponíveis para monitoramento dependem de qual modo de servidor de relatório está em execução.  
   
 ||  
@@ -49,23 +54,23 @@ caps.handback.revision: 36
 |------------|-----------------|  
 |Nova assinatura|Aparece quando você cria a assinatura.|  
 |Inativa|Aparece quando uma assinatura não pode ser processada. Para obter mais informações, consulte "Gerenciando assinaturas inativas" posteriormente neste tópico.|  
-|Concluído: \<*number*> processados de \<*number*> totais; \<*number*> erros.|Mostra o status de uma execução de assinatura controlada por dados; essa mensagem é proveniente do Processador de Agendamento e Entrega.|  
-|\<*number*> processados|O número de notificações que o Processador de Agendamento e Entrega entregou com êxito ou que não está mais tentando entregar. Quando uma entrega controlada por dados for concluída, o número de notificações processadas deve ser igual ao número total de notificações geradas.|  
-|\<*number*> total|O número total de notificações geradas para a última entrega para a assinatura.|  
-|\<*number*> erro|O número de notificações que o Processador de Agendamento e Entrega não pôde entregar ou que não está mais tentando entregar.|  
+|Concluído: \< *número*> processados de \< *número*> total; \< *número*> erros.|Mostra o status de uma execução de assinatura controlada por dados; essa mensagem é proveniente do Processador de Agendamento e Entrega.|  
+|\<*número*> processados|O número de notificações que o Processador de Agendamento e Entrega entregou com êxito ou que não está mais tentando entregar. Quando uma entrega controlada por dados for concluída, o número de notificações processadas deve ser igual ao número total de notificações geradas.|  
+|\<*número*> total|O número total de notificações geradas para a última entrega para a assinatura.|  
+|\<*número*> erro|O número de notificações que o Processador de Agendamento e Entrega não pôde entregar ou que não está mais tentando entregar.|  
 |Falha ao enviar mensagem: falha no transporte ao se conectar ao servidor.|Indica que o servidor de relatório não se conectou ao servidor de email; essa mensagem é emitida pela extensão de entrega de email.|  
-|O arquivo \<*filename*> foi gravado em \<path>.|Indica que a entrega no local de compartilhamento de arquivos teve êxito; esta mensagem é emitida pela extensão de entrega do compartilhamento de arquivos.|  
+|Arquivo \< *filename*> foi gravada \<caminho >.|Indica que a entrega no local de compartilhamento de arquivos teve êxito; esta mensagem é emitida pela extensão de entrega do compartilhamento de arquivos.|  
 |Erro desconhecido ao gravar o arquivo.|Indica que a entrega no local de compartilhamento de arquivos não teve êxito; esta mensagem é emitida pela extensão de entrega do compartilhamento de arquivos.|  
-|Falha ao conectar-se à pasta de destino, \<path>. Verifique se a pasta de destino ou o compartilhamento de arquivos existe.|Indica que a pasta especificada não foi localizada; esta mensagem é emitida pela extensão de entrega do compartilhamento de arquivos.|  
-|O arquivo \<filename> não pôde ser gravado em \<path>. Tentando repetir.|Indica que o arquivo não pôde ser atualizado com uma versão mais recente; esta mensagem é emitida pela extensão de entrega do compartilhamento de arquivos.|  
-|Falha ao gravar o arquivo \<filename>: \<mensagem>|Indica que a entrega no local de compartilhamento de arquivos não teve êxito; esta mensagem é emitida pela extensão de entrega do compartilhamento de arquivos.|  
-|\<mensagens de status personalizadas>|Mensagens de status sobre êxito e falha de entrega, fornecidas pelas extensões de entrega. Se você estiver usando uma extensão de entrega personalizada ou de terceiros, poderão ser fornecidas mensagens de status adicionais.|  
+|Falha ao conectar-se a pasta de destino, \<caminho >. Verifique se a pasta de destino ou o compartilhamento de arquivos existe.|Indica que a pasta especificada não foi localizada; esta mensagem é emitida pela extensão de entrega do compartilhamento de arquivos.|  
+|O arquivo \<filename > não pôde ser gravado para \<caminho >. Tentando repetir.|Indica que o arquivo não pôde ser atualizado com uma versão mais recente; esta mensagem é emitida pela extensão de entrega do compartilhamento de arquivos.|  
+|Falha ao gravar o arquivo \<filename >: \<mensagem >|Indica que a entrega no local de compartilhamento de arquivos não teve êxito; esta mensagem é emitida pela extensão de entrega do compartilhamento de arquivos.|  
+|\<mensagens de status personalizadas >|Mensagens de status sobre êxito e falha de entrega, fornecidas pelas extensões de entrega. Se você estiver usando uma extensão de entrega personalizada ou de terceiros, poderão ser fornecidas mensagens de status adicionais.|  
   
  Os administradores de servidor de relatório também podem monitorar assinaturas padrão que estão sendo processadas no momento. As assinaturas controladas por dados não podem ser monitoradas. Para obter mais informações, consulte [Gerenciar um processo em execução](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
  Se uma assinatura não puder ser entregue (por exemplo, se o servidor de email não estiver disponível), a extensão de entrega repete a entrega. Uma configuração especifica o número de tentativas que serão feitas. O valor padrão é nenhuma tentativa. Em alguns casos, o relatório pode ter sido processado sem dados (por exemplo, se a fonte de dados estiver offline). Nesse caso, o texto sobre isso é fornecido no corpo da mensagem.  
   
-### Arquivos de log de modo nativo  
+### <a name="native-mode-log-files"></a>Arquivos de log de modo nativo  
  Se ocorrer um erro durante a entrega, será inserida uma entrada no log de rastreamento do servidor de relatório.  
   
  Os administradores de servidor de relatório podem analisar os arquivos **reportserverservice_\*.log** para determinar o status de entrega da assinatura. Para entrega de email, os arquivos de log do servidor de relatórios incluem um registro do processamento e das entregas para contas de email específicas. Este é o local padrão dos arquivos de log:  
@@ -93,7 +98,7 @@ caps.handback.revision: 36
   
 4.  Selecione **Gerenciar assinaturas**  
   
-### Arquivos de log do SharePoint ULS  
+### <a name="sharepoint-uls-log-files"></a>Arquivos de log do SharePoint ULS  
  As informações relacionadas a assinaturas são gravadas no log do SharePoint ULS. Para obter mais informações sobre como configurar eventos [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para o log ULS, consulte [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  A seguir está um exemplo de entrada de log ULS relacionado a assinaturas [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ||||||||  
@@ -102,7 +107,7 @@ caps.handback.revision: 36
 |5/21/2014 14:34:06:15|Pool de Aplicativos: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extensão de email do servidor de relatório|Inesperado|(vazio)|**Erro ao enviar email.** Exceção: System.Net.Mail.SmtpException: caixa de correio indisponível. A resposta do servidor foi: o cliente 5.7.1 não tem permissões para enviar como esse remetente no System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) em System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) em System.Net.Mail.SmtpClient.Send(MailMessage message) em Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> Use o PowerShell para monitorar assinaturas  
- Por exemplo, scripts do PowerShell que você pode usar para verificar o status do modo nativo ou assinaturas de modo do SharePoint, consulte [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md).  
+ Por exemplo, scripts do PowerShell que você pode usar para verificar o status do modo nativo ou assinaturas de modo do SharePoint, consulte [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
 ##  <a name="bkmk_manage_inactive"></a> Gerenciando assinaturas inativas  
  Se uma assinatura se tornar inativa, você deverá excluí-la ou reativá-la resolvendo as condições subjacentes que impedem que ela seja processada. As assinaturas podem se tornar inativas se ocorrerem condições que impeçam o processamento. Essas condições incluem:  
@@ -119,8 +124,8 @@ caps.handback.revision: 36
   
  Quando as condições fazem com que a assinatura se torne inativa, a assinatura reflete esse fato quando o servidor de relatório executa a assinatura. Se uma assinatura for agendada para entregar um relatório todas as sextas-feiras às 2 da manhã, e a extensão da entrega usada foi desinstalada às segundas-feiras às 9 da manhã, a assinatura não refletirá seu estado inativo até sexta-feira às 2 da manhã.  
   
-## Consulte também  
- [old_Crie e gerencie assinaturas de servidores de relatório no modo nativo](http://msdn.microsoft.com/pt-br/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+## <a name="see-also"></a>Consulte também  
+ [old_Crie e gerencie assinaturas de servidores de relatório no modo nativo](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
  [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

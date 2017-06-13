@@ -1,33 +1,38 @@
 ---
-title: "Gr&#225;ficos de &#225;rea (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gráficos de área (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cbb5e600306a5d107f7cbd542fb2c66abe96b35a
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Gr&#225;ficos de &#225;rea (Construtor de Relat&#243;rios e SSRS)
+# <a name="area-charts-report-builder-and-ssrs"></a>Gráficos de área (Construtor de Relatórios e SSRS)
   Um gráfico de área exibe uma série como um conjunto de pontos conectados por uma linha, com toda a área preenchida abaixo da linha. Para obter mais informações sobre como adicionar dados a um gráfico de área, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  A ilustração a seguir mostra um exemplo de um gráfico de áreas empilhadas. Os dados são bem-adequados para serem exibidos em um gráfico de áreas empilhadas porque o gráfico pode exibir os totais de todas as séries, bem como a proporção com que cada série contribui no total.  
   
- ![Gráfico de área](../../reporting-services/report-design/media/areachart.gif "Gráfico de área")  
+ ![Gráfico de área](../../reporting-services/report-design/media/areachart.gif "gráfico de área")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Variações  
+## <a name="variations"></a>Variações  
   
 -   **Área empilhada**. Um gráfico de áreas no qual várias séries são empilhadas verticalmente. Se houver apenas uma série em seu gráfico, o gráfico de áreas empilhadas exibirá o mesmo que o gráfico de áreas.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 6
   
 -   **Área suave**. Um gráfico de áreas onde os pontos de dados são conectados por uma linha suave em vez de uma linha regular. Use um gráfico de áreas suaves em vez de um gráfico de áreas quando você estiver mais preocupado com as tendências de exibição do que com a exibição dos valores dos pontos de dados individuais.  
   
-## Considerações de dados para gráficos de área  
+## <a name="data-considerations-for-area-charts"></a>Considerações de dados para gráficos de área  
   
 -   Junto com o gráfico de linhas, o gráfico de áreas é o único tipo de gráfico que exibe dados contiguamente. Por esta razão, normalmente um gráfico de áreas é usado para representar dados que ocorrem em um período de tempo contínuo.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 6
   
 -   O comportamento do gráfico de áreas é bem semelhante ao comportamento dos gráficos de colunas e linhas. Se você estiver fazendo uma comparação entre várias séries, use um gráfico de colunas. Se estiver analisando tendências durante um determinado período de tempo, use um gráfico de linhas.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Gráficos de linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)   

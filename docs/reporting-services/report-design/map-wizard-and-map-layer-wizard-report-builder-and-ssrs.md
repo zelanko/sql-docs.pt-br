@@ -1,34 +1,39 @@
 ---
-title: "Assistente de Mapa e Assistente de Camada do Mapa (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.mapandlayerwizard.f1"
-  - "10542"
-  - "MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME"
+title: "Assistente de mapa e Assistente de camada do mapa (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.rtp.rptdesigner.mapandlayerwizard.f1
+- "10542"
+- MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 8eb09925e1f1b1e1f79cc9e9b7e3fdd56d7ed165
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Assistente de Mapa e Assistente de Camada do Mapa (Construtor de Relat&#243;rios e SSRS)
- Nos relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], o Assistente de Mapa e o Assistente de Camada do Mapa automatizam a tarefa de criar um mapa, adicionar uma camada a um mapa ou alterar as opções de camada do mapa em uma camada existente.  
+# <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistente de Mapa e Assistente de Camada do Mapa (Construtor de Relatórios e SSRS)
+ Nos relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , o Assistente de Mapa e o Assistente de Camada do Mapa automatizam a tarefa de criar um mapa, adicionar uma camada a um mapa ou alterar as opções de camada do mapa em uma camada existente.  
   
  Antes de adicionar um mapa a um relatório ou uma camada a um mapa, colete estas informações:  
   
 -   **Fonte de dados espaciais.** O local ou a conexão com uma fonte que fornece dados espaciais, por exemplo, o nome de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um banco de dados que contém dados espaciais ou o nome de um arquivo de forma ESRI (Environmental Systems Research Institute, Inc.).  
   
--   **.** Um campo que contém conjuntos de coordenadas que especificam locais da fonte de dados espaciais.  
+-   **Spatial data.** Um campo que contém conjuntos de coordenadas que especificam locais da fonte de dados espaciais.  
   
 -   **Dados analíticos.** Dados analíticos a serem usados para variar a exibição do mapa, por exemplo, vendas anuais da loja.  
   
@@ -112,7 +117,7 @@ caps.handback.revision: 11
   
  Para obter mais informações, consulte a documentação do tipo de dados espaciais que você está usando.  
   
-###  <a name="MapGallery"></a> O que é a Galeria de Mapas?  
+###  <a name="MapGallery"></a>O que é a Galeria de mapas?  
  A galeria de mapas contém mapas de relatórios localizados na pasta da galeria de mapas do ambiente de criação de relatórios. Os mapas da galeria o ajudam a começar rapidamente a adicionar mapas a seu relatório. Os mapas predefinidos na galeria são fornecidos por um provedor de mapa.  
   
 > [!NOTE]  
@@ -120,8 +125,8 @@ caps.handback.revision: 11
   
  Para estender a galeria de mapas, você pode adicionar ou remover relatórios do diretório dessa galeria e adicionar pastas para organizar os mapas. Para obter mais informações, consulte [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-###  <a name="Shapefile"></a> O que é um Arquivo de Forma ESRI?  
- Um Arquivo de Forma ESRI é um conjunto de arquivos com dados no formato de dados espaciais de Arquivo de Forma ESRI (Environmental Systems Research Institute, Inc.). Em geral, esse conjunto de arquivos inclui o arquivo *\<nome_de_arquivo>*.shp, que contém os dados espaciais e um arquivo de suporte, *\<nome_de_arquivo>*.dbf.  
+###  <a name="Shapefile"></a>O que é um arquivo de forma ESRI?  
+ Um Arquivo de Forma ESRI é um conjunto de arquivos com dados no formato de dados espaciais de Arquivo de Forma ESRI (Environmental Systems Research Institute, Inc.). O conjunto de arquivos normalmente inclui o  *\<filename >*. shp que contém os dados espaciais e um arquivo de suporte, * \<filename >*. dbf.  
   
  Quando você especifica um arquivo de forma como fonte de dados espaciais e ele está em seu computador local, os dados espaciais são inseridos automaticamente no relatório. Para usar dados espaciais de um arquivo ESRI dinamicamente, faça o seguinte:  
   
@@ -136,7 +141,7 @@ caps.handback.revision: 11
  Uma consulta espacial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é uma consulta de conjunto de dados que especifica dados do tipo de dados SQLGeometry ou SQLGeography de um banco de dados relacionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Ao definir uma fonte de dados no assistente, você verá diferentes designers de consulta na página Crie uma Consulta, dependendo do tipo de fonte de dados ao qual estiver se conectando. Para obter mais informações, consulte [Designers de consulta &#40;Construtor de Relatórios&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md).  
+>  Ao definir uma fonte de dados no assistente, você verá diferentes designers de consulta na página Crie uma Consulta, dependendo do tipo de fonte de dados ao qual estiver se conectando. Para obter mais informações, consulte [Designers de consulta &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
  Quando você executa a consulta no designer de consulta, o conjunto de resultados exibe uma coluna com dados espaciais que aparecem como texto. Por exemplo, uma linha poderia conter dados espaciais que constituem um único ponto e a linha seguinte poderia conter dados espaciais que definissem um conjunto de pontos. Cada linha se torna um elemento do mapa. Você pode variar a exibição de cada elemento do mapa como uma unidade indivisível.  
   
@@ -185,7 +190,7 @@ caps.handback.revision: 11
   
 -   **Híbrido.** Exibe a combinação de **Rodoviário** e **Aéreo** .  
   
- Para obter mais informações sobre peças, consulte [Sistema de Peças do Bing Maps](http://go.microsoft.com/fwlink/?LinkId=147315). Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](http://go.microsoft.com/fwlink/?LinkId=151371) e a [Política de Privacidade](http://go.microsoft.com/fwlink/?LinkId=151372).  
+ Para obter mais informações sobre peças, consulte [Sistema de Peças do Bing Maps](http://go.microsoft.com/fwlink/?LinkId=147315). Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](http://go.microsoft.com/fwlink/?LinkId=151371).  
   
  Para visualizar um plano de fundo de peça no modo Design, você deve ter acesso à Internet. Para visualizar o plano de fundo de peça na visualização de um relatório em um servidor de relatório, esse servidor deve ser configurado para dar suporte a peças de mapa do Bing. Para obter mais informações, consulte [Solucionar problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e [Planejar um relatório de mapa](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
@@ -247,9 +252,9 @@ caps.handback.revision: 11
   
 -   **Pontos.** Você pode especificar regras de cor, tamanho e tipo de marcador.  
   
- O processador de relatório aplica as regras que você define e determina automaticamente a lista de itens a serem exibidos em uma legenda. Por padrão, os resultados de todas regras para todas as camadas exibidas na primeira legenda. Você poderá ajustar isso depois que concluir o assistente. Para obter mais informações, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ O processador de relatório aplica as regras que você define e determina automaticamente a lista de itens a serem exibidos em uma legenda. Por padrão, os resultados de todas regras para todas as camadas exibidas na primeira legenda. Você poderá ajustar isso depois que concluir o assistente. Para obter mais informações, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Solução de problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Planejar um relatório de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  

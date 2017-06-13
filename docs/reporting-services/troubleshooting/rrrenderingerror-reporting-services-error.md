@@ -1,27 +1,32 @@
 ---
-title: "rrRenderingError - Erro do Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rrRenderingError"
+title: rrRenderingError - erro do Reporting Services | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- rrRenderingError
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
 caps.latest.revision: 26
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 26
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1acdcb76215bc8f7a3ae1017649a3e3a2cbcdc94
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# rrRenderingError - Erro do Reporting Services
+# <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Erro do Reporting Services
     
-## Detalhes  
+## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
@@ -31,7 +36,7 @@ caps.handback.revision: 26
 |Componente|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texto da mensagem|Ocorreu um erro na renderização do relatório. (rrRenderingError) %1|  
   
-## Explicação  
+## <a name="explanation"></a>Explicação  
  Esta mensagem é retornada quando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não puder renderizar ou exportar o relatório.  
   
  Uma mensagem que indica que o tamanho não é suportado, normalmente, é exibida quando o tamanho da página de RDL especificada não é válida. Especifique um tamanho válido de página de RDL e, em seguida, tente novamente.  
@@ -56,7 +61,7 @@ caps.handback.revision: 26
   
  Uma mensagem que indica que o número de colunas excede o máximo de colunas possível por folha, normalmente, é exibida quando o número de colunas em uma planilha do Excel é excedido.  
   
-## Ação do usuário  
+## <a name="user-action"></a>Ação do usuário  
   
-## Somente interno  
+## <a name="internal-only"></a>Somente interno  
   

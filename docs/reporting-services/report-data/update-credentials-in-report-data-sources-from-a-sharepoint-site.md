@@ -1,30 +1,35 @@
 ---
-title: "Atualizar credenciais em fontes de dados de relat&#243;rio de um site do SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Atualizar credenciais em fontes de dados de relatório de um Site do SharePoint | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 12
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85652be59a369ff3b571f8858a744962b5b3f619
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Atualizar credenciais em fontes de dados de relat&#243;rio de um site do SharePoint
+# <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Atualizar credenciais em fontes de dados de relatório de um site do SharePoint
   Este tópico descreve como atualizar as fontes de dados incorporadas nos relatórios e nas fontes de dados compartilhadas salvas em uma biblioteca de documentos do SharePoint.  
   
  Muitos de seus relatórios poderiam incluir fontes de dados ou usar fontes de dados compartilhadas configuradas para usar a Autenticação do Windows. Em algumas circunstâncias, como a criação de alertas de dados em relatórios salvos em uma biblioteca de documentos do SharePoint, você precisa atualizar as credenciais de fonte de dados para credenciais armazenadas ou não requerer nenhuma credencial.  
   
  Para usar credenciais armazenadas em relatórios, você poderia optar por criar e usar um novo logon do SQL Server. Para obter mais informações, consulte [Crie um logon](../../relational-databases/security/authentication-access/create-a-login.md).  
   
-### Para atualizar uma fonte de dados incorporada para usar credenciais armazenadas  
+### <a name="to-update-an-embedded-data-source-to-use-stored-credentials"></a>Para atualizar uma fonte de dados incorporada para usar credenciais armazenadas  
   
 1.  Vá para a biblioteca de documentos do SharePoint onde salvou o relatório.  
   
@@ -32,9 +37,9 @@ caps.handback.revision: 12
   
      A página Gerenciar Fontes de Dados será aberta.  
   
-3.  Na coluna **Nome**, clique na fonte de dados.  
+3.  Na coluna **Nome** , clique na fonte de dados.  
   
-4.  Em **Tipo de Conexão**, verifique se a opção **Fonte de dados personalizada** está selecionada.  
+4.  Em **Tipo de Conexão** , verifique se a opção **Fonte de dados personalizada** está selecionada.  
   
      Essa opção indica que a fonte de dados está incorporada no relatório.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 12
   
 7.  Digite um nome de usuário e uma senha.  
   
-    -   Se a conta for uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domínio>\\<conta\>, e selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**.  
+    -   Se a conta é uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domínio >\\< conta\>e, em seguida, selecione **usar as credenciais do Windows ao conectar-se à fonte de dados**.  
   
     -   Se o nome de usuário e a senha forem credenciais do banco de dados, não selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**. Se o servidor de banco de dados oferecer suporte à representação ou delegação, você poderá selecionar **Definir o contexto de execução para esta conta**.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 12
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Para atualizar uma fonte de dados compartilhada para usar credenciais armazenadas  
+### <a name="to-update-a-shared-data-source-to-use-stored-credentials"></a>Para atualizar uma fonte de dados compartilhada para usar credenciais armazenadas  
   
 1.  Vá para a biblioteca de documentos do SharePoint onde salvou a fonte de dados compartilhada.  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 12
   
 5.  Digite um nome de usuário e uma senha.  
   
-    -   Se a conta for uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domínio>\\<conta\>, e selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados.**  
+    -   Se a conta é uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domínio >\\< conta\>e, em seguida, selecione **usar as credenciais do Windows ao conectar-se à fonte de dados.**  
   
     -   Se o nome de usuário e a senha forem credenciais do banco de dados, não selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**. Se o servidor de banco de dados oferecer suporte à representação ou delegação, você poderá selecionar **Definir o contexto de execução para esta conta**.  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 12
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Carregar documentos em uma biblioteca do SharePoint &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
   

@@ -1,23 +1,28 @@
 ---
-title: "Exportando para um arquivo CSV (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Exportando para um arquivo CSV (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 60c8d93cd6901e6a18337212f8906ccbbf0f5522
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Exportando para um arquivo CSV (Construtor de Relat&#243;rios e SSRS)
+# <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportando para um arquivo CSV (Construtor de Relatórios e SSRS)
   A extensão de renderização CSV (Comma-Separated Value) renderiza relatórios paginados como uma representação mesclada dos dados de um relatório padronizado, em formato de texto simples que pode ser facilmente lido e que também permite a troca com vários aplicativos.  
   
  A extensão de renderização do CSV usa um delimitador de caracteres da cadeia de caracteres para separar campos e linhas, um delimitador configurável para ser um caractere diferente de uma vírgula. O arquivo resultante pode ser aberto em um programa de planilha como o [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ou pode ser utilizado como um formato de importação para outros programas. O relatório exportado torna-se um arquivo .csv e retorna um tipo MIME de **text/csv**.  
@@ -37,7 +42,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  Você pode alterar o delimitador de campo para qualquer caractere que desejar, inclusive o TAB, alterando as configurações de informações de dispositivo. Para obter mais informações, consulte [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
--   A cadeia de caracteres delimitadora de registro é o retorno de carro e a alimentação de linha (\<cr>\<lf>).  
+-   A cadeia de caracteres delimitadora de registro é o retorno de carro e alimentação de linha (\<cr >\<lf >).  
   
 -   A cadeia de caracteres qualificadora de texto é formada por aspas (").  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 8
 |Indicador|Renderiza como um único registro com o nome do estado ativo, estados disponíveis e o valor de dados.|  
 |Mapeamento|Renderiza uma linha com os rótulos e os valores para cada membro do mapa de uma camada do mapa.<br /><br /> Se o mapa tiver várias camadas, os valores nas linhas variarão, dependendo do fato de as camadas do mapa usarem as mesmas regiões de dados do mapa ou regiões de dados do mapa diferentes. Se várias camadas do mapa usarem a mesma região de dados, as linhas conterão dados de todas as camadas.|  
   
-### Dados hierárquicos e agrupados  
+### <a name="hierarchical-and-grouped-data"></a>Dados hierárquicos e agrupados  
  Os dados hierárquicos e agrupados devem ser para ser mesclados para que possam ser representados no formato CSV.  
   
  A extensão de renderização mescla o relatório em uma estrutura de árvores que representa os grupos aninhados dentro da região de dados. Para mesclar o relatório:  
@@ -96,12 +101,11 @@ caps.handback.revision: 8
   
  Para obter mais informações, consulte [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ##  <a name="RenderingModes"></a> Modos do renderizador  
  A extensão de renderização CSV pode operar em dois modos: um otimizado para o Excel e o outro otimizado para aplicativos de terceiros que requerem total compatibilidade com a especificação CSV no RFC 4180. Dependendo do modo usado, as regiões de dados semelhantes são controladas de maneira diferente.  
   
-### Modo Padrão  
+### <a name="default-mode"></a>Modo Padrão  
  O modo Padrão é otimizado para Excel. Quando renderizado no modo padrão, o relatório é renderizado como um arquivo CSV com várias seções de dados renderizados por CSV. Cada região de dados semelhante é delimitada por uma linha vazia. As regiões de dados semelhantes dentro do corpo do relatório são renderizadas como blocos de dados separados dentro do arquivo CSV. O resultado é um arquivo CSV em que:  
   
 -   As caixas de texto individuais do relatório são renderizadas como o primeiro bloco de dados dentro do arquivo CSV.  
@@ -110,16 +114,16 @@ caps.handback.revision: 8
   
 -   As regiões de dados aninhadas são renderizadas diagonalmente no mesmo bloco de dados.  
   
-#### Formatação  
+#### <a name="formatting"></a>Formatação  
  Os valores numéricos são renderizados em seus estados de formatação. O Excel pode reconhecer os valores numéricos formatados, como moeda, porcentagem e data, e formatar as células de maneira adequada quando importar o arquivo CSV.  
   
-### Modo Compatível  
+### <a name="compliant-mode"></a>Modo Compatível  
  O modo Compatível é otimizado para aplicativos de terceiros.  
   
-#### Regiões de Dados  
+#### <a name="data-regions"></a>Regiões de Dados  
  Apenas a primeira linha do arquivo contém os cabeçalhos de coluna e cada linha tem o mesmo número de colunas.  
   
-#### Formatação  
+#### <a name="formatting"></a>Formatação  
  Os valores não são formatados.  
   
 ##  <a name="Interactivity"></a> Interatividade  
@@ -139,17 +143,15 @@ caps.handback.revision: 8
   
 -   Indicadores  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ##  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  
  Você pode alterar algumas configurações padrão deste renderizador, incluindo qual o modo de processamento, quais caracteres serão usados como delimitadores e quais caracteres serão usados como a cadeia de caracteres padrão do qualificador de texto, alterando as configurações de informações de dispositivo. Para obter mais informações, consulte [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

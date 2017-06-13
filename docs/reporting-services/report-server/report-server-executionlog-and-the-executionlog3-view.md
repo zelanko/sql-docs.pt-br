@@ -1,26 +1,31 @@
 ---
-title: "ExecutionLog do servidor de relat&#243;rio e exibi&#231;&#227;o do ExecutionLog3 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "logs [Reporting Services], execução"
-  - "logs de execução [Reporting Services]"
+title: "Relatório ExecutionLog do servidor e a exibição do ExecutionLog3 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [Reporting Services], execution
+- execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: 41
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 41
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f54e9b1c9aa0a17634048f91932c4aad2d69888b
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# ExecutionLog do servidor de relat&#243;rio e exibi&#231;&#227;o do ExecutionLog3
+# <a name="report-server-executionlog-and-the-executionlog3-view"></a>ExecutionLog do servidor de relatório e exibição do ExecutionLog3
   O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o log de execução do servidor de relatório contém informações sobre os relatórios executados no servidor ou em vários servidores em uma implantação em expansão no modo nativo ou no farm do SharePoint. É possível usar o log de execução de relatório para descobrir a frequência na qual um relatório é solicitado, quais são os formatos de saída mais usados e qual é o tempo de processamento em milissegundos em cada fase do processamento. O log contém informações sobre o período de tempo gasto na execução da consulta do conjunto de dados de um relatório e a hora gasta no processamento dos dados. Se você for um administrador de servidor de relatório, poderá revisar as informações de log, identificar tarefas demoradas e dar sugestões aos autores de relatório sobre as áreas do relatório (conjunto de dados ou processamento) que eles podem melhorar.  
   
  Os servidores de relatório configurados no modo do SharePoint também podem utilizar os logs ULS do SharePoint. Para obter mais informações, consulte [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
@@ -45,7 +50,7 @@ caps.handback.revision: 41
 -   [Campos de log (ExecutionLog)](#bkmk_executionlog)  
   
 ##  <a name="bkmk_sharepoint"></a> Configurações de um servidor de relatório no modo SharePoint  
- Você pode ativar ou desativar a execução de relatório nas configurações de sistema de um aplicativo de serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ Você pode ativar ou desativar a execução de relatório nas configurações de sistema de um aplicativo de serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Por padrão, as entradas de log são mantidas por 60 dias. Entradas que excedem essa data são removidas às 2h00 diariamente. Em uma instalação madura, somente 60 dias de informações estarão disponíveis em um dado momento.  
   
@@ -53,13 +58,13 @@ caps.handback.revision: 41
   
  **Para habilitar o log de execução:**  
   
-1.  Na Administração Central do SharePoint, clique em **Gerenciar aplicativos de serviço** no grupo **Gerenciamento de Aplicativos**.  
+1.  Na Administração Central do SharePoint, clique em **Gerenciar aplicativos de serviço** no grupo **Gerenciamento de Aplicativos** .  
   
 2.  Clique no nome do aplicativo de serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a ser configurado.  
   
 3.  Clique em **Configurações do Sistema**.  
   
-4.  Selecione **Habilitar Log de Execução** na seção **Log**.  
+4.  Selecione **Habilitar Log de Execução** na seção **Log** .  
   
 5.  Clique em **OK**.  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 41
   
  Você precisa habilitar o log conforme descrito nas etapas anteriores e concluir as seguintes etapas:  
   
-1.  Na página **Configurações do Sistema** do aplicativo de serviços [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], localize a seção **Definido pelo usuário**.  
+1.  Na página **Configurações do Sistema** do aplicativo de serviços [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , localize a seção **Definido pelo usuário** .  
   
 2.  Altere o **ExecutionLogLevel** para **detalhado**. Esse é um campo de entrada de texto, e os dois valores possíveis são **detalhado** e **normal**.  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 41
   
 3.  Clique com o botão direito do mouse no nome do servidor e clique em **Propriedades**. Se a opção Propriedades for desabilitada, verifique se você executou o SQL Server Management Studio com privilégios administrativos.  
   
-4.  Clique na página **Log**.  
+4.  Clique na página **Log** .  
   
 5.  Selecione **Habilitar log de execução de relatório**.  
   
@@ -94,9 +99,9 @@ caps.handback.revision: 41
   
  Você precisa habilitar o log conforme descrito nas etapas anteriores e concluir as seguintes etapas:  
   
-1.  Na caixa de diálogo **Propriedades do Servidor**, clique na página **Avançado**.  
+1.  Na caixa de diálogo **Propriedades do Servidor** , clique na página **Avançado** .  
   
-2.  Na seção **Definido pelo usuário**, altere o **ExecutionLogLevel** para **detalhado**. Esse é um campo de entrada de texto, e os dois valores possíveis são **detalhado** e **normal**.  
+2.  Na seção **Definido pelo usuário** , altere o **ExecutionLogLevel** para **detalhado**. Esse é um campo de entrada de texto, e os dois valores possíveis são **detalhado** e **normal**.  
   
 ##  <a name="bkmk_executionlog3"></a> Campos de log (ExecutionLog3)  
  Esta exibição adicionou o nó de diagnóstico de desempenho adicional à coluna **AdditionalInfo** baseada em XML. A coluna AdditionalInfo contém uma estrutura XML de 1 para muitos campos adicionais de informação. Este é um exemplo de instrução Transact-SQL para recuperar linhas da exibição ExecutionLog3. O exemplo presume que o nome do banco de dados do servidor de relatório seja **ReportServer**:  
@@ -373,7 +378,7 @@ select * from ExecutionLog order by TimeStart DESC
 |ByteCount|Tamanho de relatórios renderizados em bytes.|  
 |RowCount|Número de linhas retornadas pelas consultas.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Referência de erros e eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

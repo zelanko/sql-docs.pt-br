@@ -1,0 +1,5 @@
+# [Implantando uma extensão de renderização](deploying-a-rendering-extension.md)
+# [Implementando uma extensão de renderização](implementing-a-rendering-extension.md)
+# [Implementando a Interface IRenderingExtension](implementing-the-irenderingextension-interface.md)
+# [Removendo uma extensão de renderização](removing-a-rendering-extension.md)
+# [Visão geral de extensões de renderização](rendering-extensions-overview.md)

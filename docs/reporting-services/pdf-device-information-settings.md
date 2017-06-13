@@ -1,26 +1,31 @@
 ---
-title: "Configura&#231;&#245;es de informa&#231;&#245;es do dispositivo PDF  | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "configurações de informações do dispositivo [Reporting Services], renderização de PDF"
-  - "PDF [Reporting Services]"
+title: "Configurações de informações do dispositivo PDF | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- device information settings [Reporting Services], PDF rendering
+- PDF [Reporting Services]
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 caps.latest.revision: 41
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 41
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e02ae92cfb973c7287fde080628fcc26cb784276
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Configura&#231;&#245;es de informa&#231;&#245;es do dispositivo PDF 
+# <a name="pdf-device-information-settings"></a>Configurações de informações do dispositivo PDF
   A tabela a seguir lista as configurações de informações de dispositivo para a renderização de relatórios no formato PDF.  
   
 |Configuração|Value|  
@@ -39,7 +44,7 @@ caps.handback.revision: 41
 |**PageWidth**|A largura da página, em polegadas, a ser definida para o relatório. Inclua um valor inteiro ou um decimal seguido por um "in" (por exemplo, 8,5in). Esse valor substitui as configurações originais do relatório.|  
 |**StartPage**|A primeira página do relatório a ser renderizada. O valor **0** indica que todas as páginas serão renderizadas. O valor padrão é **1**.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Passando configurações de informações de dispositivos para extensões de renderização](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personalizar parâmetros de extensão de renderização em RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Referência técnica &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  

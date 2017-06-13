@@ -1,36 +1,41 @@
 ---
-title: "Criar, modificar e excluir fontes de dados compartilhadas (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modificando propriedades de fonte de dados"
-  - "fontes de dados compartilhadas [Reporting Services]"
-  - "removendo fontes de dados compartilhadas"
-  - "funções [Reporting Services], fontes de dados compartilhadas"
-  - "fontes de dados [Reporting Services], compartilhadas"
-  - "fontes de dados [Reporting Services], modificando propriedades"
-  - "excluindo fontes de dados compartilhadas"
+title: Criar, modificar e excluir fontes de dados compartilhadas (SSRS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying data source properties
+- shared data sources [Reporting Services]
+- removing shared data sources
+- roles [Reporting Services], shared data sources
+- data sources [Reporting Services], shared
+- data sources [Reporting Services], modifying properties
+- deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 caps.latest.revision: 53
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 53
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 3d4025539369dcc955e8675a92def39e356cb86d
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Criar, modificar e excluir fontes de dados compartilhadas (SSRS)
-  Uma fonte de dados compartilhada é um conjunto de propriedades de conexão de fonte de dados que pode ser referenciada por vários relatórios, modelos e assinaturas controladas por dados que são executados em um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  As fontes de dados compartilhadas fornecem um modo fácil de gerenciar as propriedades da fonte de dados que geralmente são alteradas com o passar do tempo. Se a conta de usuário ou senha for alterada ou se você mover o banco de dados para outro servidor, as informações de conexão poderão ser atualizadas em um único lugar.  
+# <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Criar, modificar e excluir fontes de dados compartilhadas (SSRS)
+  Uma fonte de dados compartilhada é um conjunto de propriedades de conexão de fonte de dados que pode ser referenciada por vários relatórios, modelos e assinaturas controladas por dados que são executados em um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  As fontes de dados compartilhadas fornecem um modo fácil de gerenciar as propriedades da fonte de dados que geralmente são alteradas com o passar do tempo. Se a conta de usuário ou senha for alterada ou se você mover o banco de dados para outro servidor, as informações de conexão poderão ser atualizadas em um único lugar.  
   
  O ícone seguinte indica uma fonte de dados compartilhada na hierarquia da pasta do Gerenciador de Relatórios:  
   
- ![Ícone de fonte de dados compartilhada](../../reporting-services/report-data/media/hlp-16datasource.png "Ícone de fonte de dados compartilhada")  
+ ![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
 ícone de fonte de dados compartilhada  
   
  As fontes de dados compartilhadas são opcionais para relatórios e assinaturas controladas por dados, mas são obrigatórias para modelos de relatórios. Se você planeja usar os modelos de relatório para relatórios ad hoc, deve criar e manter um item fonte de dados compartilhada para fornecer informações de conexão ao modelo.  
@@ -47,7 +52,7 @@ caps.handback.revision: 53
   
  Uma fonte de dados compartilhada não contém informações de consulta usadas para a recuperação de dados. A consulta sempre é mantida dentro de uma definição do relatório.  
   
-## Criando e modificando fontes de dados compartilhadas  
+## <a name="creating-and-modifying-shared-data-sources"></a>Criando e modificando fontes de dados compartilhadas  
  Para criar uma fonte de dados compartilhada ou modificar suas propriedades, é preciso ter permissões para **Gerenciar fontes de dados** no servidor de relatório. Se o servidor de relatórios for executado em modo nativo, você poderá usar o Gerenciador de Relatórios para criar e configurar a fonte de dados compartilhada. Se o servidor de relatórios for executado no modo integrado do SharePoint, use as páginas de aplicativo em um site do SharePoint. Para qualquer servidor de relatórios independentemente de seu modo, você pode criar uma fonte de dados compartilhada no Designer de Relatórios e publicá-la em um servidor de destino.  
   
  Depois de criar uma fonte de dados compartilhada no servidor de relatórios, você poderá criar atribuições de função para controlar o acesso a ela, movê-la para outro local, renomeá-la ou torná-la offline para evitar o processamento de relatórios durante as operações de manutenção na fonte de dados externa. Se renomear ou mover um item fonte de dados compartilhada para outro local na hierarquia de pastas do servidor de relatórios, as informações de caminho em todos os relatórios ou assinaturas que fazem referência à fonte de dados compartilhada serão atualizadas. Ao colocar a fonte de dados no estado offline, todos os relatórios, modelos e assinaturas não serão executados enquanto a fonte de dados não for reativada.  
@@ -59,13 +64,13 @@ caps.handback.revision: 53
 1.  Na barra de ferramentas do painel Dados do Relatório, clique em **Nova** e em **Fonte de Dados**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
   
     > [!NOTE]  
-    >  Se o painel Dados do Relatório não estiver visível, clique em **Dados do Relatório** no menu **Exibir**.  
+    >  Se o painel Dados do Relatório não estiver visível, clique em **Dados do Relatório** no menu **Exibir** .  
   
-2.  Na caixa de texto **Nome**, digite um nome para a fonte de dados ou aceite o padrão. O nome da fonte de dados é usado internamente no relatório. Para fins de esclarecimento, recomendamos que o nome da fonte de dados contenha o nome do banco de dados especificado na cadeia de conexão.  
+2.  Na caixa de texto **Nome** , digite um nome para a fonte de dados ou aceite o padrão. O nome da fonte de dados é usado internamente no relatório. Para fins de esclarecimento, recomendamos que o nome da fonte de dados contenha o nome do banco de dados especificado na cadeia de conexão.  
   
 3.  Verifique se a opção **Usar referência da fonte de dados compartilhada** está selecionada e escolha uma das opções a seguir.  
   
-    1.  Clique em **Nova**. Na caixa de diálogo de propriedades **Fonte de Dados Compartilhada**, siga as etapas 2 e 3 para criar uma nova fonte de dados.  
+    1.  Clique em **Nova**. Na caixa de diálogo de propriedades **Fonte de Dados Compartilhada** , siga as etapas 2 e 3 para criar uma nova fonte de dados.  
   
     2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -77,17 +82,17 @@ caps.handback.revision: 53
   
  **Para criar uma fonte de dados compartilhada no Gerenciador de Relatórios**  
   
-1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  No Gerenciador de Relatórios, navegue até a página **Conteúdo** .  
   
 3.  Clique em **Nova Fonte de Dados**. A página **Nova Fonte de Dados** será aberta.  
   
-4.  Digite um nome para o item. Um nome deve conter pelo menos um caractere e deve começar com uma letra. Ele também pode incluir certos símbolos, mas não espaços nem os caracteres ; ? : @ & = + , $ / * \< > | " /.  
+4.  Digite um nome para o item. Um nome deve conter pelo menos um caractere e deve começar com uma letra. Ele também pode incluir certos símbolos, mas não espaços nem os caracteres ; ? : @ & = + , $ / * < > | " /.  
   
 5.  Como opção, digite uma descrição para oferecer aos usuários informações sobre a conexão. Essa descrição será exibida na página **Conteúdo** no Gerenciador de Relatórios.  
   
-6.  Na lista **Tipo de fonte de dados**, especifique a extensão de processamento de dados usada para processar dados da fonte de dados.  
+6.  Na lista **Tipo de fonte de dados** , especifique a extensão de processamento de dados usada para processar dados da fonte de dados.  
   
 7.  Em **Cadeia de conexão**, especifique a cadeia de conexão usada pelo servidor de relatório para se conectar à fonte de dados. Recomendamos que você não especifique credenciais na cadeia de conexão.  
   
@@ -124,7 +129,7 @@ caps.handback.revision: 53
   
 3.  Modifique a fonte de dados e clique em **Aplicar**.  
   
-## Excluindo fontes de dados compartilhadas  
+## <a name="deleting-shared-data-sources"></a>excluindo fontes de dados compartilhadas  
  Você pode excluir uma fonte de dados compartilhada da mesma forma que exclui qualquer item do servidor de relatórios.  
   
  **Para excluir uma fonte de dados compartilhada**  
@@ -135,9 +140,9 @@ caps.handback.revision: 53
   
          Clique no item para abri-lo. A página Propriedades Gerais será aberta.  
   
-         Clique em **Excluir** e em **OK**.  
+         Clique em **Excluir**e em **OK**.  
   
-    -   Na página **Conteúdo**, navegue até a pasta que contém a fonte de dados que você quer excluir.  
+    -   Na página **Conteúdo** , navegue até a pasta que contém a fonte de dados que você quer excluir.  
   
          Focalize o item, clique na lista suspensa e, no menu de contexto, clique em **Excluir**.  
   
@@ -151,7 +156,7 @@ caps.handback.revision: 53
   
  Não existe a operação Desfazer para a exclusão de uma fonte de dados compartilhada. Entretanto, em caso de exclusão acidental, você poderá criar uma nova fonte de dados compartilhada usando os mesmos valores de propriedades daquela que foi excluída. Também será preciso abrir cada relatório, modelo e assinatura controlada por dados para reassociar a fonte de dados compartilhada ao item que a usa, mas como as propriedades serão as mesmas, os relatórios, os modelos e as assinaturas continuarão funcionando normalmente.  
   
-## Importando fontes de dados compartilhadas  
+## <a name="importing-shared-data-sources"></a>Importando fontes de dados compartilhadas  
  **Para importar uma origem de dados existente no Designer de Relatórios**  
   
 1.  No Gerenciador de Soluções, clique com o botão direito do mouse na pasta **Fontes de Dados Compartilhadas** no projeto do servidor de relatório e clique em **Adicionar Item Existente**. A caixa de diálogo **Adicionar Item Existente** será aberta.  
@@ -160,7 +165,7 @@ caps.handback.revision: 53
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Fontes de dados compartilhadas no SharePoint  
+## <a name="shared-data-sources-in-sharepoint"></a>Fontes de dados compartilhadas no SharePoint  
  Ao executar um relatório a partir de uma biblioteca do SharePoint, as informações de conexão podem ser definidas no relatório ou em um arquivo externo vinculado ao relatório. Se as informações de conexão estiverem inseridas no relatório, ele será denominado uma fonte de dados personalizada. Se as informações de conexão estiverem definidas em um arquivo externo, ele será denominado uma fonte de dados compartilhados. O arquivo externo pode ser um arquivo de fonte de dados do servidor de relatório (.rsds) ou um arquivo de conexão de dados do Office (.odc).  
   
  Um arquivo .rsds é semelhante a um arquivo .rds, mas tem um esquema diferente. Para criar um arquivo .rsds, você pode publicar um arquivo .rds do Designer de Relatórios ou do Designer de Modelo em uma biblioteca do SharePoint (um novo arquivo .rsds é criado a partir do arquivo .rds original). Se preferir, você pode criar um novo arquivo em uma biblioteca em um site do SharePoint.  
@@ -173,7 +178,7 @@ caps.handback.revision: 53
   
 1.  Clique na guia **Documentos** na faixa de opções da biblioteca.  
   
-2.  No menu **Novo Documento**, clique em **Fonte de Dados de Relatório**  
+2.  No menu **Novo Documento** , clique em **Fonte de Dados de Relatório**  
   
     > [!NOTE]  
     >  Caso você não veja o item **Fonte de Dados de Relatório** no menu, isso significa que o tipo de conteúdo da fonte de dados de relatório não foi habilitado. Para obter mais informações, veja [Adicionar os tipos de conteúdo do Reporting Services à sua biblioteca do SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
@@ -215,7 +220,7 @@ caps.handback.revision: 53
   
  Tenha cuidado ao excluir um modelo de relatório. Se você excluir um modelo, não será mais possível abrir e modificar relatórios baseados nesse modelo no Construtor de Relatórios. Se você excluir por engano um modelo usado por relatórios existentes, será preciso gerar novamente o modelo, recriar e salvar os relatórios que usam o modelo e especificar novamente a segurança de todos os itens do modelo que deseje usar. Você não pode simplesmente gerar o modelo de novo e, em seguida, anexá-lo a um relatório existente.  
   
-## Itens Dependentes  
+## <a name="dependent-items"></a>Itens Dependentes  
  Para exibir a lista de relatórios e modelos que usam a fonte de dados, abra a página Itens Dependentes da fonte de dados compartilhada. Você pode acessar essa página quando abrir a fonte de dados no Gerenciador de Relatórios ou uma página de aplicativo do SharePoint. Observe que a página Itens Dependente não mostra as assinaturas controladas por dados. Se uma fonte de dados compartilhada for usada por uma assinatura, a assinatura não será exibida na lista de itens dependentes.  
   
  **Para exibir itens dependentes no SharePoint**  
@@ -228,14 +233,15 @@ caps.handback.revision: 53
   
      No caso de modelos de relatórios, a lista de itens dependentes mostra os relatórios criados no Construtor de Relatórios. No caso de fontes de dados compartilhadas, a lista de itens dependentes pode incluir relatórios e modelos de relatório.  
   
-## Consulte também  
- [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](../Topic/Create%20and%20Manage%20Shared%20Data%20Sources%20\(Reporting%20Services%20in%20SharePoint%20Integrated%20Mode\).md)   
+## <a name="see-also"></a>Consulte também  
+ [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Gerenciar fontes de dados de relatório](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [Conexões de dados ou fontes de dados inseridas e compartilhadas &#40;Construtor de Relatórios e SSRS&#41;](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md)   
- [Página Propriedades de Fontes de Dados &#40;Gerenciador de Relatórios&#41;](../Topic/Data%20Sources%20Properties%20Page%20\(Report%20Manager\).md)   
- [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Conexões de dados ou fontes de dados inseridas e compartilhadas &#40;Construtor de Relatórios e SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
+ [Página Propriedades de Fontes de Dados &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
  [Configurar propriedades de fonte de dados para um relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
+

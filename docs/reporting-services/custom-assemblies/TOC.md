@@ -1,0 +1,8 @@
+# [Acessando Assemblies personalizados por meio de expressões](accessing-custom-assemblies-through-expressions.md)
+# [Declarando permissões em Assemblies personalizados](asserting-permissions-in-custom-assemblies.md)
+# [Implantando um Assembly personalizado](deploying-a-custom-assembly.md)
+# [Como: depurar Assemblies personalizados](how-to-debug-custom-assemblies.md)
+# [Inicializando objetos Assembly personalizados](initializing-custom-assembly-objects.md)
+# [Referenciando Assemblies em um arquivo RDL](referencing-assemblies-in-an-rdl-file.md)
+# [Usando assemblies personalizados com relatórios](using-custom-assemblies-with-reports.md)
+# [Usando Assemblies personalizados de nome forte](using-strong-named-custom-assemblies.md)

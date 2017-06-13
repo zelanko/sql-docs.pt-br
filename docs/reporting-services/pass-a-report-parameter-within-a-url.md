@@ -1,26 +1,31 @@
 ---
-title: "Transmitir um par&#226;metro de relat&#243;rio em uma URL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "acesso de URL [Reporting Services], passando parâmetros"
-  - "passando parâmetros [Reporting Services]"
+title: "Passar um parâmetro de relatório em uma URL | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- URL access [Reporting Services], passing parameters
+- passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 36
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3b076b74a6082e34dc9c489c0383fd6a5c3bd4f
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Transmitir um par&#226;metro de relat&#243;rio em uma URL
+# <a name="pass-a-report-parameter-within-a-url"></a>Transmitir um parâmetro de relatório em uma URL
   Você pode transmitir parâmetros de relatório a um relatório incluindo-os em uma URL de relatório. Esses parâmetros de URL não são prefixados, pois eles são transmitidos diretamente para o mecanismo de processamento de relatório.  
   
 > [!IMPORTANT]  
@@ -75,7 +80,7 @@ parameter
 SalesOrderNumber:isnull=true  
 ```  
   
- Para passar um valor **booliano**, use 0 para false ou 1 para true. Para passar um valor **flutuante**, inclua o separador decimal da localidade do servidor  
+ Para passar um valor **booliano** , use 0 para false ou 1 para true. Para passar um valor **flutuante** , inclua o separador decimal da localidade do servidor  
   
 > [!NOTE]  
 >  Se o seu relatório contiver um parâmetro que tenha um valor padrão e o valor da propriedade **Prompt** for **false** (isto é, a propriedade Avisar Usuário não for selecionada no Gerenciador de Relatórios), você não poderá transmitir um valor para esse parâmetro em uma URL. Isso fornece aos administradores a opção de impedir que usuários finais adicionem ou modifiquem os valores de determinados parâmetros de relatório.  
@@ -105,7 +110,7 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Acesso à URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [Referência de parâmetro de acesso de URL](../reporting-services/url-access-parameter-reference.md)  
   

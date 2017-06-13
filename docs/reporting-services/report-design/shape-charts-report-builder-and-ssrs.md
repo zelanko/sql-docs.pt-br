@@ -1,39 +1,44 @@
 ---
-title: "Gr&#225;ficos de forma (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "A forma de gráficos (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 84ee7a9030bb27725994a33860b26b8754034cd9
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Gr&#225;ficos de forma (Construtor de Relat&#243;rios e SSRS)
+# <a name="shape-charts-report-builder-and-ssrs"></a>Gráficos de forma (Construtor de Relatórios e SSRS)
   Um gráfico de forma exibe os dados de valor como porcentagens do todo. São usados gráficos de forma normalmente para mostrar comparações proporcionais entre valores diferentes em um conjunto. Categorias são representadas por segmentos individuais da forma. O tamanho do segmento é determinado pelo valor. Os gráficos de forma tem uso semelhante aos gráficos de pizza, exceto que eles classificam as categorias do maior para o menor.  
   
  Um gráfico de funil exibe valores como proporções que diminuem progressivamente. O tamanho da área é determinado pelo valor da série como porcentagem do total de todos os valores. Por exemplo, você pode usar um gráfico de funil para exibir tendências de visita do site. É provável que o gráfico de funil exibirá um ampla área na parte superior, indicando o número de vez que uma página é visitada e as outras áreas serão proporcionalmente menores. Para obter mais informações sobre como adicionar dados a um gráfico de funil, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  A ilustração a seguir mostra um exemplo de gráfico de funil.  
   
- ![Gráfico de funil](../../reporting-services/report-design/media/rs-funnelchart.png "Gráfico de funil")  
+ ![Gráfico de funil](../../reporting-services/report-design/media/rs-funnelchart.gif "gráfico de funil")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Variações  
+## <a name="variations"></a>Variações  
   
 -   **Pirâmide**. Um gráfico de pirâmide exibe dados proporcionais de forma que o gráfico se parece com uma pirâmide.  
   
-## Considerações de dados para gráficos de forma  
+## <a name="data-considerations-for-shape-charts"></a>Considerações de dados para gráficos de forma  
   
 -   Gráficos de forma são comuns em relatórios devido ao seu impacto visual. Porém, os gráficos de forma são um tipo de gráfico muito simplificado que pode não representar da melhor maneira os seus dados. Considere usar um gráfico de forma apenas assim que os dados tiverem sido agregados a sete pontos de dados ou menos. Em geral, use o gráfico de forma para exibir só uma categoria por região de dados.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 8
   
 -   Você pode aplicar estilos de desenho adicionais a gráficos de pizza e rosca para melhorar o impacto visual. Consulte [Formatação de cores de série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md) para obter mais informações.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Pontos de dados vazios e nulos em gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

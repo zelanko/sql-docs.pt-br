@@ -1,23 +1,28 @@
 ---
-title: "Comportamentos de renderiza&#231;&#227;o (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Comportamentos de renderização (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Comportamentos de renderiza&#231;&#227;o (Construtor de Relat&#243;rios e SSRS)
+# <a name="rendering-behaviors-report-builder--and-ssrs"></a>Comportamentos de renderização (Construtor de Relatórios e SSRS)
   Dependendo do renderizador selecionado, algumas regras são aplicadas ao corpo do relatório e ao seu conteúdo quando um relatório é renderizado. Como os itens de relatório são ajustados juntos em uma página é determinado pela combinação destes fatores:  
   
 -   Renderizando regras.  
@@ -35,7 +40,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Comportamentos Gerais para HTML, MHTML, Word e Excel (Processadores de Quebra de Página Flexível)  
+## <a name="general-behaviors-for-html-mhtml-word-and-excel-soft-page-break-renderers"></a>Comportamentos Gerais para HTML, MHTML, Word e Excel (Processadores de Quebra de Página Flexível)  
  Os relatórios exportados utilizando os formatos HTML e MHTML são otimizados para uma experiência baseada em telas de computador onde as páginas podem ter vários comprimentos. Quebras de páginas são inseridas verticalmente apenas em locais aproximados dentro do corpo do relatório. Esses locais aproximados são determinados pela configuração da altura interativa no painel Propriedades. Por exemplo, suponhamos que a altura interativa seja definida para 5 polegadas. Quando o relatório é renderizado, a altura da página será de aproximadamente 5 polegadas em comprimento. O Word e o Excel paginam baseado em quebras de páginas lógicas e ignoram a configuração da altura interativa.  
   
 > [!NOTE]  
@@ -58,7 +63,7 @@ caps.handback.revision: 7
   
 -   Margens de página não são aplicadas.  
   
-## Comportamentos Gerais para PDF, Imagem e Impressão (Processadores de Quebras de Página não Flexíveis)  
+## <a name="general-behaviors-for-pdf-image-and-print-hard-page-break-renderers"></a>Comportamentos Gerais para PDF, Imagem e Impressão (Processadores de Quebras de Página não Flexíveis)  
  Os relatórios exportados usando o PDF e Imagem são otimizados para uma experiência impressa ou similar a um livro onde as páginas têm um tamanho consistente. As quebras de página são inseridas vertical e horizontalmente em locais específicos dentro do corpo do relatório. Estes locais específicos são determinados pela configuração da largura e altura da página.  
   
 > [!NOTE]  
@@ -79,12 +84,12 @@ caps.handback.revision: 7
     > [!NOTE]  
     >  A configuração da largura interativa não é usada nos renderizadores de quebra de página impressa.  
   
-## Espaçamento mínimo entre itens de relatório  
+## <a name="minimum-spacing-between-report-items"></a>Espaçamento mínimo entre itens de relatório  
  Itens de relatório aumentam dentro do corpo do relatório para acomodar o seu conteúdo. Por exemplo, uma região de dados matriz, geralmente se expande na largura e comprimento da página quando o relatório é renderizado, e a altura de uma caixa de texto se ajusta dependendo dos dados retornados da expressão.  
   
  Os processadores mantêm um espaço mínimo entre os itens de relatório que você definir no layout do relatório. Ao colocar um item de relatório adjacente a outro no layout do relatório, a distância entre os itens de relatório torna-se uma distância mínimo que deve ser mantida conforme o relatório é aumentado horizontal e verticalmente. Por exemplo, se acrescentar uma região de dados matriz a um relatório e depois adicionar um retângulo de 0,25 polegadas à direita da matriz, esse espaço será mantidos enquanto a matriz aumenta. Cada item é movido para a direita para manter uma distância mínima dos itens que terminam à sua esquerda.  
   
-## Cabeçalhos e rodapés de página  
+## <a name="page-headers-and-footers"></a>Cabeçalhos e rodapés de página  
  Os cabeçalhos e rodapés de página aparecem nas partes superior e inferior de cada página renderizada. É possível formatar o cabeçalho e o rodapé da página para incluir uma borda colorida, um estilo de borda e uma largura de borda. Você pode também adicionar uma cor de fundo ou imagem em segundo plano. Essas opções de formatação são todas renderizadas, dependendo do formato escolhido.  
   
  As regras a seguir se aplicam aos cabeçalhos e rodapés das páginas quando renderizados em HTML ou no formato de renderização MHTM:  
@@ -112,7 +117,7 @@ caps.handback.revision: 7
   
 -   Os cabeçalhos e os rodapés definidos no arquivo RDL original não são renderizados quando o relatório é processado como um sub-relatório.  
   
-## Quebras de página lógicas  
+## <a name="logical-page-breaks"></a>Quebras de página lógicas  
  As quebras de página lógicas são aquelas que você insere antes ou após os itens de relatório ou grupos. As quebras de página ajudam a determinar como o conteúdo é ajustado a uma página de relatório para exibição ideal ao ser renderizado ou exportado para o relatório.  
   
  As regras a seguir se aplicam quando renderizar quebras de página lógicas:  
@@ -127,8 +132,8 @@ caps.handback.revision: 7
   
 -   As quebras de página lógicas definidas em itens em células de tabela ou matriz não são mantidas. Isso não se aplica a itens em listas.  
   
-## Consulte também  
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando para HTML &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
  [Layout da página e renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   

@@ -1,47 +1,56 @@
 ---
-title: "Arquivo de configura&#231;&#227;o ReportingServicesService | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rastreamentos [Reporting Services]"
-  - "Serviço Servidor de Relatório do Windows, arquivo de configuração ReportingServicesService"
-  - "arquivo de configuração ReportingServicesService"
+title: "Arquivo de configuração ReportingServicesService | Microsoft Docs"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [Reporting Services]
+- Report Server Windows service, ReportingServicesService configuration file
+- ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 caps.latest.revision: 41
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 40
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 72985f45d29d0f7f2d5a40494da929dfdfbbdc12
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Arquivo de configura&#231;&#227;o ReportingServicesService
-  O arquivo ReportingServicesService.exe.config inclui configurações de rastreamento.  
+# <a name="reportingservicesservice-configuration-file"></a>arquivo de configuração ReportingServicesService
+ ||  
+|-|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server 2016|
   
-## Local do arquivo  
+O arquivo ReportingServicesService.exe.config inclui configurações de rastreamento.  
+  
+## <a name="file-location"></a>Local do arquivo  
  Este arquivo está localizado na pasta \Reporting Services\Report Server\Bin.  
   
-## Editando diretrizes  
+## <a name="editing-guidelines"></a>Editando diretrizes  
  Você pode modificar este arquivo para renomear o arquivo de log ou aumentar ou diminuir níveis de rastreamento. Não modifique nenhuma outra configuração. Para obter instruções, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Para obter mais informações sobre logs de rastreamento, consulte [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-## Configuração de exemplo  
+## <a name="example-configuration"></a>Configuração de exemplo  
  O exemplo a seguir mostra as configurações e os valores padrão localizados no arquivo ReportingServicesService.exe.config.  
   
 ```  
 <configSections>  
       <section name="RStrace" type="Microsoft.ReportingServices.Diagnostics.RSTraceSectionHandler,Microsoft.ReportingServices.Diagnostics" />  
 </configSections>  
-<system.diagnostics>  
+\<system.diagnostics>  
       <switches>  
           <add name="DefaultTraceSwitch" value="3" />  
       </switches>  
-</system.diagnostics>  
+\</system.diagnostics>  
 <RStrace>  
       <add name="FileName" value="ReportServerService_" />  
       <add name="FileSizeLimitMb" value="32" />  
@@ -68,7 +77,7 @@ caps.handback.revision: 40
 </runtime>  
 ```  
   
-## Definições de configuração  
+## <a name="configuration-settings"></a>Definições de configuração  
  A tabela a seguir fornece informações sobre configurações específicas. As configurações são apresentadas na ordem em que aparecem no arquivo de configuração.  
   
 |Configuração|Description|  
@@ -78,14 +87,15 @@ caps.handback.revision: 40
 |**FileName**|Especifica a primeira parte do nome de arquivo de log. O valor especificado por **Prefix** completa o resto do nome. Por padrão, o nome é ReportServerService_.|  
 |**FileSizeLimitMb**|Especifica o limite superior do tamanho do log de rastreamento. O arquivo é medido em megabytes. Os valores válidos são de 0 a um inteiro máximo. O valor padrão é 32.|  
 |**KeepFilesForDays**|Especifica o número de dias depois dos quais um arquivo de log de rastreamento será excluído. Os valores válidos são de 0 a um inteiro máximo. O valor padrão é 14.|  
-|**Prefixo**|Especifica um valor gerado que diferencia uma instância de log de outra. Por padrão, os valores do carimbo de data/hora são adicionados aos nomes de arquivo de log de rastreamento. Esse valor é definido como " tid, time ". Não modifique esta configuração.|  
+|**Prefix**|Especifica um valor gerado que diferencia uma instância de log de outra. Por padrão, os valores do carimbo de data/hora são adicionados aos nomes de arquivo de log de rastreamento. Esse valor é definido como " tid, time ". Não modifique esta configuração.|  
 |**TraceListeners**|Especifica um destino para a saída do conteúdo do log de rastreamento. Você pode especificar vários destinos usando uma vírgula para separar cada um. Os valores válidos incluem:<br /><br /> DebugWindow (padrão)<br /><br /> File (padrão)<br /><br /> StdOut|  
 |**TraceFileMode**|Especifica se os logs de rastreamento contêm dados para um período de 24 horas. Um log de rastreamento exclusivo deve existir para cada componente em cada dia. Esse valor é definido como "Unique (default)". Não modifique esse valor.|  
 |**Componentes**|Especifica os componentes para os quais são criados logs de rastreamento. O valor padrão é **all**. Outros valores válidos para esta configuração incluem os nomes de componentes internos. Não modifique esse valor.|  
 |**Tempo de execução**|Especifica configurações que oferecem suporte para a compatibilidade com versões anteriores. As configurações de tempo de execução são usadas para redirecionar solicitações relacionadas à versão anterior de Microsoft.ReportingServices.Interfaces para a nova versão.<br /><br /> Todas as configurações desta seção são descritas na documentação do produto [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para obter mais informações, procure “Configurações de esquema de tempo de execução” no site do MSDN ou na documentação do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Arquivos de configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md)  
   
   
+

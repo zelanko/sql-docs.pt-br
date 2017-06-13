@@ -1,30 +1,35 @@
 ---
-title: "Log de aplicativo do Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Logs de aplicativo do Windows [Reporting Services]"
-  - "logs [Reporting Services], logs de aplicativos do Windows"
-  - "Logs de aplicativo [Reporting Services]"
+title: Log de aplicativo do Windows | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows application logs [Reporting Services]
+- logs [Reporting Services], Windows application logs
+- application logs [Reporting Services]
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 caps.latest.revision: 32
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 32
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8e1716d9e81043992e5c92f260835cda7742972
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Log de aplicativo do Windows
+# <a name="windows-application-log"></a>Log de aplicativo do Windows
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] grava mensagens de evento no log do aplicativo do Windows. Você pode usar as informações das mensagens gravadas no log de aplicativo para obter mais detalhes sobre os eventos gerados pelos aplicativos do servidor de relatório em execução no sistema local.  
   
-## Exibindo eventos do servidor de relatório  
+## <a name="viewing-report-server-events"></a>Exibindo eventos do servidor de relatório  
  Use o recurso Visualizador de Eventos para exibir o arquivo de log e para filtrar as mensagens contidas nele. Para obter mais informações sobre mensagens de evento, consulte [Referência de erros e eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md). Para obter mais informações sobre o log de aplicativo do Windows ou o Visualizador de Eventos, consulte a documentação do produto Windows.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece três fontes de evento:  
@@ -47,7 +52,7 @@ caps.handback.revision: 32
 |Auditoria Bem-sucedida|Um evento de segurança que descreve um logon bem-sucedido.|  
 |Auditoria com Falha|Um evento que é registrado quando uma tentativa de logon falha.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Referência de erros e eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   

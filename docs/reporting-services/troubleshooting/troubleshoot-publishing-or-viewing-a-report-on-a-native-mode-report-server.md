@@ -1,29 +1,34 @@
 ---
-title: "Solu&#231;&#227;o de problemas ao publicar ou exibir um relat&#243;rio em um Servidor de Relat&#243;rio no modo nativo | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Solucionar problemas de publicação ou exibindo um relatório em um servidor de relatório do modo nativo | Microsoft Docs"
+ms.custom: 
+ms.date: 02/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 6
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c0c974553c7c05fdbf853be1a2028c30eaffc3b2
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Solu&#231;&#227;o de problemas ao publicar ou exibir um relat&#243;rio em um Servidor de Relat&#243;rio no modo nativo
+# <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Solução de problemas ao publicar ou exibir um relatório em um Servidor de Relatório no modo nativo
   
   
   
 Quando você publica ou carrega um relatório em um servidor de relatório configurado no modo nativo, talvez tenha problemas específicos para exibir relatórios no servidor de relatório. Use este tópico para ajudar a solucionar esses problemas.   
   
-## Por que minhas credenciais são solicitadas quando publico um relatório?  
+## <a name="why-am-i-being-prompted-for-credentials-when-i-publish-a-report"></a>Por que minhas credenciais são solicitadas quando publico um relatório?  
 Para implantar um relatório em um servidor de relatório, você deve especificar o endereço do servidor. Talvez você veja a caixa de diálogo de Logon do Reporting Services, que solicita suas credenciais.   
   
 O nome do servidor de relatório não foi especificado corretamente  
@@ -33,25 +38,25 @@ Quando você implanta o relatório em um servidor de relatório no modo nativo, 
   
 Verifique se a URL do servidor de relatório é o endereço do servidor de relatório (por exemplo, `http://localhost/reportserver`), e não o endereço do diretório virtual Gerenciador de Relatórios (por exemplo, `http://localhost/reports`). Caso tenha especificado um número de porta para o servidor de relatório diferente do número da porta padrão 80, deverá especificá-lo no endereço do servidor de relatório (por exemplo, `http://localhost:81/reportserver`).   
   
- ## Nada acontece quando alterno itens no meu relatório publicado.  
+ ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>Nada acontece quando alterno itens no meu relatório publicado.  
   Quando você exibe um relatório na visualização local, pode alternar os itens no relatório e mostrá-los ou ocultá-los. Quando você exibe o mesmo relatório após publicá-lo no servidor de relatório, o recurso de alternância de itens não funciona mais.   
   
-\<nome do servidor de relatório> Inclui um sublinhado (_)  
+\<nome do servidor de relatório > inclui um sublinhado (_)  
   
 Se um relatório for executado sem erros, mas os itens de alternância não funcionam (por exemplo, você clica em um ícone expandir (+) e nada acontece), verifique o nome do computador que está hospedando o servidor de relatório. Se o nome do computador incluir um sublinhado, isso indica que os itens de alternância não estão funcionando. Esse é um problema conhecido. Não há uma solução.   
   
 Para executar relatórios com itens de alternância, use um computador cujo nome não tenha caracteres de sublinhado.  
   
-## As imagens e os gráficos não são carregados quando eu uso Executar como e um navegador para executar meu relatório.  
+## <a name="images-and-charts-do-not-load-when-i-use-run-as-and-a-browser-to-run-my-report"></a>As imagens e os gráficos não são carregados quando eu uso Executar como e um navegador para executar meu relatório.  
 Quando você executa o Gerenciador de Relatórios em um contexto de segurança diferente, talvez não veja todos os itens em um relatório.   
   
-### Permissões insuficientes na pasta Arquivos Temporários da Internet  
+### <a name="insufficient-permissions-on-internet-temporary-file-folders"></a>Permissões insuficientes na pasta Arquivos Temporários da Internet  
   
 Em algumas circunstâncias, quando você usa o Gerenciador de Relatórios para exibir os relatórios publicados que incluem gráficos ou imagens, talvez não os veja. Por exemplo, quando você usa o comando **Executar como** da Microsoft para exibir um relatório usando um contexto de segurança diferente, talvez você não tenha permissão para a pasta em que o servidor de relatório armazena em cache gráficos e imagens como arquivos temporários da Internet.   
   
 Verifique se você tem permissão para acessar as pastas que contêm os arquivos em cache.   
     
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Erros e eventos (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [Solucionar problemas de recuperação de dados com relatórios do Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
@@ -60,3 +65,5 @@ Verifique se você tem permissão para acessar as pastas que contêm os arquivos
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+
+

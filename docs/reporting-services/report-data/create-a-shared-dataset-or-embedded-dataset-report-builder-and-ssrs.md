@@ -1,24 +1,29 @@
 ---
-title: "Criar um conjunto de dados compartilhado ou um conjunto de dados inserido (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Criar um conjunto de dados compartilhado ou um conjunto de dados inserido (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 10/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25caf057e8d75fd3ed463f4165b3259331d18182
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Criar um conjunto de dados compartilhado ou um conjunto de dados inserido (Construtor de Relat&#243;rios e SSRS)
-Os conjuntos de dados inseridos são para uso em um único relatório do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Os conjuntos de dados compartilhados em um servidor de relatório podem ser usados por vários relatórios, móveis e paginados. Para criar um conjunto de dados, é necessária uma fonte de dados inserida ou compartilhada.  
+# <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Criar um conjunto de dados compartilhado ou um conjunto de dados inserido (Construtor de Relatórios e SSRS)
+Os conjuntos de dados inseridos são para uso em um único relatório do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Os conjuntos de dados compartilhados em um servidor de relatório podem ser usados por vários relatórios, móveis e paginados. Para criar um conjunto de dados, é necessária uma fonte de dados inserida ou compartilhada.  
   
  Use o **Construtor de Relatórios** para executar as seguintes tarefas:  
   
@@ -41,7 +46,7 @@ Os conjuntos de dados inseridos são para uso em um único relatório do [!INCLU
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Para abrir o Construtor de Relatórios e criar um conjunto de dados compartilhado  
+## <a name="to-open-report-builder-and-create-a-shared-dataset"></a>Para abrir o Construtor de Relatórios e criar um conjunto de dados compartilhado  
   
 1.  Abra o Construtor de Relatórios. O **Painel de novo relatório ou conjunto de dados** abre, como mostrado na figura seguinte:  
   
@@ -62,7 +67,7 @@ Os conjuntos de dados inseridos são para uso em um único relatório do [!INCLU
   
 7.  Para sair do Construtor de Relatórios, clique em **Construtor de Relatórios**e em **Sair do Construtor de Relatórios**. Para trabalhar com relatórios, clique em **Construtor de Relatórios**e em **Novo** ou **Abrir**.  
   
-## Para definir opções de parâmetro de consulta  
+## <a name="to-set-query-parameter-options"></a>Para definir opções de parâmetro de consulta  
   
 1.  Abra o Construtor de Relatórios.  
   
@@ -81,7 +86,7 @@ Os conjuntos de dados inseridos são para uso em um único relatório do [!INCLU
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
   
-## Para criar um conjunto de dados a partir de um banco de dados relacional do SQL Server  
+## <a name="to-create-a-dataset-from-a-sql-server-relational-database"></a>Para criar um conjunto de dados a partir de um banco de dados relacional do SQL Server  
   
 1.  No painel de dados do relatório, clique com o botão direito do mouse no nome da fonte de dados e clique em **Adicionar Conjunto de Dados**. A página **Consulta** da caixa de diálogo **Propriedades do Conjunto de Dados** é aberta.  
   
@@ -110,11 +115,12 @@ Os conjuntos de dados inseridos são para uso em um único relatório do [!INCLU
   
      O conjunto de dados e sua coleção de campos aparecerão no painel de dados do relatório abaixo do nó da fonte de dados.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [Conjuntos de dados inseridos e compartilhados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
+

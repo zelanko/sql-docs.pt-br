@@ -1,3 +1,4 @@
+# [Visual Database Tools](visual-database-tools.md)
 # [Caixa de diálogo Adicionar Tabela (Designers de Consulta e Exibição) (Ferramentas de Banco de Dados Visual)](add-table-dialog-box-query-and-view-designers-visual-database-tools.md)
 # [Caixa de diálogo Salvar Script de Alteração (Ferramentas de Banco de Dados Visual)](save-change-script-dialog-box-visual-database-tools.md)
 # [Reconciliar alterações feitas por vários usuários (Ferramentas de Banco de Dados Visual)](reconcile-changes-made-by-multiple-users-visual-database-tools.md)
@@ -155,7 +156,6 @@
 # [Usar cláusulas HAVING e WHERE na mesma consulta (Ferramentas de Banco de Dados Visual)](use-having-and-where-clauses-in-the-same-query-visual-database-tools.md)
 # [Navegar no Designer de Consulta e Exibição (Ferramentas de Banco de Dados Visual)](navigate-in-the-query-and-view-designer-visual-database-tools.md)
 # [Trabalhar com colunas em consultas de agregação (Ferramentas de Banco de Dados Visual)](work-with-columns-in-aggregate-queries-visual-database-tools.md)
-# [Ferramentas de Banco de Dados Visual](visual-database-tools.md)
 # [Selecionar linhas que não correspondem a um valor (Ferramentas de Banco de Dados Visual)](select-rows-that-do-not-match-a-value-visual-database-tools.md)
 # [Caixa de diálogo Notificações Pós-salvamento (Ferramentas de Banco de Dados Visual)](post-save-notifications-dialog-box-visual-database-tools.md)
 # [Salvar consultas (Ferramentas de Banco de Dados Visual)](save-queries-visual-database-tools.md)

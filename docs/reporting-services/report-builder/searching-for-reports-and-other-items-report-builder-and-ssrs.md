@@ -1,23 +1,28 @@
 ---
-title: "Pesquisando relat&#243;rios e outros itens (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Procurando relatórios e outros itens (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9663bbf0c11ce1d41f02cc22027f2c69aa07b057
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Pesquisando relat&#243;rios e outros itens (Construtor de Relat&#243;rios e SSRS)
+# <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>Pesquisando relatórios e outros itens (Construtor de Relatórios e SSRS)
   Você pode usar o Gerenciador de Relatórios para pesquisar um servidor de relatório à procura de itens específicos por nome ou descrição. Você pode procurar por relatórios publicados, modelos de relatório, pastas, fontes de dados compartilhadas e recursos. Você não pode procurar por agendas, proprietários, atribuições de função, instantâneos específicos no histórico de relatório ou assinaturas. A pesquisa é executada no banco de dados do servidor de relatórios no qual os itens estão armazenados.  
   
 > [!NOTE]  
@@ -32,7 +37,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Localizando e exibindo relatórios no Gerenciador de Relatórios &#40;Construtor de Relatórios e SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx)   
  [Usando Meus Relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

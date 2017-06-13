@@ -1,34 +1,41 @@
 ---
-title: "Caixa de di&#225;logo P&#225;ginas de Propriedades do Projeto | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.rpt.rptdesigner.projectpropertypages.general.f1"
-helpviewer_keywords: 
-  - "caixa de diálogo Páginas de Propriedades do Projeto"
+title: "Caixa de diálogo páginas de propriedades do projeto | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.rpt.rptdesigner.projectpropertypages.general.f1
+helpviewer_keywords:
+- Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 caps.latest.revision: 35
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 35
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 659be9982440426eee0d8b5a2df8d54b4d32bbc4
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Caixa de di&#225;logo P&#225;ginas de Propriedades do Projeto
-  Use as páginas de propriedades do projeto para configurar as propriedades de implantação de um projeto do Servidor de Relatório. Para abrir essa caixa de diálogo, no menu **Projeto**, clique em *\<Report Project Name>***Propriedades**.  
+
+# <a name="project-property-pages-dialog-box"></a>caixa de diálogo Páginas de Propriedades do Projeto
+
+  Use as páginas de propriedades do projeto para configurar as propriedades de implantação de um projeto do Servidor de Relatório. Para abrir essa caixa de diálogo, a partir de **projeto** menu, clique em  *\<nome do projeto de relatório >***propriedades**.  
   
  Depois que você definir as propriedades de configuração, poderá selecionar uma configuração na lista suspensa **Configurações da Solução** da barra de ferramentas.  
 
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
-## Opções  
+## <a name="options"></a>Opções  
  **Configuração**  
  Selecione a configuração a ser editada. Inicialmente, estão disponíveis as seguintes configurações: **Debug**, **DebugLocal**e **Release**. A configuração ativa aparece primeiro; por exemplo, **Active(Debug)**.  
   
@@ -55,7 +62,7 @@ caps.handback.revision: 35
  Selecione **True** para substituir a fonte de dados no servidor pela fonte de dados no projeto quando os relatórios são publicados. Selecione **False** para deixar a fonte de dados existente no servidor.  
   
  **TargetServerVersion**  
- Selecione a versão apropriada do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou selecione **Detectar Versão** para determinar automaticamente a versão instalada no servidor identificado pela propriedade **TargetServer URL**. O valor padrão é **[!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)]**.  
+ Selecione a versão apropriada do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou selecione **Detectar Versão** para determinar automaticamente a versão instalada no servidor identificado pela propriedade **TargetServer URL** . O valor padrão é **SQL Server 2016**.  
   
  **TargetDataSourceFolder**  
  O nome da pasta na qual serão armazenadas as fontes de dados compartilhadas publicadas. Se você não especificar uma pasta, a fonte de dados será publicada na mesma pasta do relatório. Se a pasta não existir no servidor de relatório, o Designer de Relatórios irá criar a pasta quando os relatórios forem publicados.  
@@ -80,11 +87,12 @@ caps.handback.revision: 35
 + `http:\\<servername>`, 
 + `http:\\<servername\<site>` 
 + `http:\\<servername>\<site>\<subsite>`.  
-  
-## Consulte também  
- [Publicar Relatórios](../Topic/Publish%20Reports.md)   
- [Publicar um relatório em uma biblioteca do SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [Definir propriedades de implantação &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
- [Ajuda F1 do Designer de Relatórios](../../reporting-services/tools/report-designer-f1-help.md)  
-  
-  
+
+## <a name="next-steps"></a>Próximas etapas
+
+[Publicar Relatórios](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
+[Publicar um relatório em uma biblioteca do SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
+[Definir propriedades de implantação &#40; Reporting Services &#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+[Ajuda F1 do Designer de Relatórios](../../reporting-services/tools/report-designer-f1-help.md)  
+
+Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

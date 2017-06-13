@@ -1,26 +1,31 @@
 ---
-title: "Criar um novo relat&#243;rio de n&#237;vel (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Criar um relatório de nível (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 232b8e03dc8e5e2130d127408f356ba2dc0492d5
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Criar um novo relat&#243;rio de n&#237;vel (Construtor de Relat&#243;rios e SSRS)
-Um relatório de nível é um tipo de relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que mostra as linhas ou grupos filho de detalhes recuados sob um grupo pai na mesma coluna, conforme ilustrado no seguinte exemplo:  
+# <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Criar um novo relatório de nível (Construtor de Relatórios e SSRS)
+Um relatório de nível é um tipo de relatório paginado do  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que mostra as linhas ou grupos filho de detalhes recuados sob um grupo pai na mesma coluna, conforme ilustrado no seguinte exemplo:  
   
- ![Relatório de nível renderizado](../../reporting-services/report-design/media/steppedreportrendered.gif "Relatório de nível renderizado")  
+ ![Relatório de nível renderizado](../../reporting-services/report-design/media/steppedreportrendered.gif "renderizados escalonada relatório")  
   
  Os relatórios de tabela tradicionais colocam o grupo pai em uma coluna adjacente no relatório. A nova região de dados tablix permite adicionar um grupo e linhas ou grupos filho de detalhe à mesma coluna. Para diferenciar as linhas de grupo de linhas de detalhes ou de grupos filho, você pode aplicar uma formatação, como cor da fonte, ou recuar as linhas de detalhes.  
   
@@ -32,7 +37,7 @@ Um relatório de nível é um tipo de relatório paginado do [!INCLUDE[ssRSnover
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Para criar um relatório de nível  
+## <a name="to-create-a-stepped-report"></a>Para criar um relatório de nível  
   
 1.  Crie um relatório de tabela. Por exemplo, insira uma região de dados tablix e adicione campos à linha Dados.  
   
@@ -40,23 +45,23 @@ Um relatório de nível é um tipo de relatório paginado do [!INCLUDE[ssRSnover
   
     1.  Clique em qualquer lugar da tabela para selecioná-la. O painel Agrupamento exibe o grupo Detalhes no painel Grupos de Linha.  
   
-    2.  No painel Agrupamento, clique com o botão direito do mouse em Grupo de Detalhes, aponte para **Adicionar Grupo** e clique em **Grupo Pai**.  
+    2.  No painel Agrupamento, clique com o botão direito do mouse em Grupo de Detalhes, aponte para **Adicionar Grupo**e clique em **Grupo Pai**.  
   
-    3.  Na caixa de diálogo **Grupo Tablix**, forneça um nome para o grupo e digite ou selecione uma expressão de grupo na lista suspensa. A lista suspensa exibe as expressões de campo simples que estão disponíveis no painel de Dados do Relatório. Por exemplo, [PostalCode] é uma expressão de campo simples para o campo PostalCode em um conjunto de dados.  
+    3.  Na caixa de diálogo **Grupo Tablix** , forneça um nome para o grupo e digite ou selecione uma expressão de grupo na lista suspensa. A lista suspensa exibe as expressões de campo simples que estão disponíveis no painel de Dados do Relatório. Por exemplo, [PostalCode] é uma expressão de campo simples para o campo PostalCode em um conjunto de dados.  
   
     4.  Selecione **Adicionar cabeçalho de grupo**. Esta opção adiciona uma linha estática acima do grupo para o rótulo do grupo e os totais do grupo. Da mesma forma, você pode selecionar **Adicionar rodapé de grupo** para adicionar uma linha estática sob o grupo. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      Você tem agora, um relatório tabular básico. Quando ele for renderizado, você poderá ver uma coluna com o valor da instância do grupo, e uma ou mais colunas com os dados dos detalhes agrupados. A figura a seguir mostra como pode ser a aparência da região de dados na superfície de design.  
   
-     ![Região de dados de tabela com grupo](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "Região de dados de tabela com grupo")  
+     ![Região de dados de tabela com grupo](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "região de dados de tabela com grupo")  
   
      A figura a seguir mostra como pode ser a aparência da região de dados renderizada quando você visualizar o relatório.  
   
-     ![Relatório agrupado renderizado.](../../reporting-services/report-design/media/tablereportrendered.gif "Relatório agrupado renderizado.")  
+     ![Relatório agrupado renderizado](../../reporting-services/report-design/media/tablereportrendered.gif "renderizados agrupados relatório")  
   
 3.  Em um relatório de nível, você não precisa da primeira coluna que mostra a instância de grupo. Em vez disso, copie o valor na célula de cabeçalho do grupo, exclua a coluna do grupo e cole na primeira caixa de texto na linha de cabeçalho do grupo. Para remover a coluna de grupo, clique com o botão direito do mouse na coluna de grupo ou na célula e clique em **Excluir Colunas**. A figura a seguir mostra como pode ser a aparência da região de dados na superfície de design.  
   
-     ![Região de dados com linha de cabeçalho de grupo](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "Região de dados com linha de cabeçalho de grupo")  
+     ![Região de dados com a linha de cabeçalho de grupo](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "região de dados com a linha de cabeçalho de grupo")  
   
 4.  Para recuar as linhas de detalhes sob a linha de cabeçalho do grupo na mesma coluna, altere o preenchimento da célula de dados de detalhes.  
   
@@ -78,32 +83,32 @@ Um relatório de nível é um tipo de relatório paginado do [!INCLUDE[ssRSnover
   
      Sua região de dados será semelhante ao exemplo a seguir.  
   
-     ![Região de dados para relatório de nível](../../reporting-services/report-design/media/steppedreportdataregion.gif "Região de dados para relatório de nível")  
+     ![Região de dados para o relatório de nível](../../reporting-services/report-design/media/steppedreportdataregion.gif "região de dados para o relatório de nível")  
   
      **Região de dados para layout de relatório de nível**  
   
      Na guia **Página Inicial** , clique em **Executar**. O relatório exibe o grupo com os níveis de recuo para os valores do grupo filho.  
   
-## Para criar um relatório de nível com vários grupos  
+## <a name="to-create-a-stepped-report-with-multiple-groups"></a>Para criar um relatório de nível com vários grupos  
   
 1.  Crie um relatório conforme descrito no procedimento anterior.  
   
 2.  Acrescente grupos adicionais ao seu relatório.  
   
-    1.  No painel Grupos de Linha, clique com o botão direito do mouse no grupo, clique em **Adicionar Grupo** e escolha o tipo de grupo que deseja adicionar.  
+    1.  No painel Grupos de Linha, clique com o botão direito do mouse no grupo, clique em **Adicionar Grupo**e escolha o tipo de grupo que deseja adicionar.  
   
         > [!NOTE]  
         >  Há várias maneiras para acrescentar grupos a uma região de dados. Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
     2.  Na caixa de diálogo **Grupo Tablix** , digite um nome.  
   
-    3.  Em **Expressão de grupo**, digite uma expressão ou selecione um campo do conjunto de dados para agrupar. Para criar uma expressão, clique no botão de expressão (**fx**) para abrir a caixa de diálogo **Expressão**.  
+    3.  Em **Expressão de grupo**, digite uma expressão ou selecione um campo do conjunto de dados para agrupar. Para criar uma expressão, clique no botão de expressão (**fx**) para abrir a caixa de diálogo **Expressão** .  
   
     4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  Altere o preenchimento da célula que exibe os dados do grupo.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

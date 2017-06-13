@@ -1,1 +1,1 @@
- Mecanismo de Banco de Dados do SQL Server 2016 
+ Mecanismo de banco de dados do SQL Server de 2017 

@@ -1,24 +1,29 @@
 ---
-title: "Tutorial: criando um relat&#243;rio de formato livre (Construtor de Relat&#243;rios) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Tutorial: Criando um relatório de formato livre (construtor de relatórios) | Microsoft Docs"
+ms.custom: 
+ms.date: 09/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 356d795aec5249ecf4f990d549c8eacb70e25f03
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutorial: criando um relat&#243;rio de formato livre (Construtor de Relat&#243;rios)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: criando um relatório de formato livre (Construtor de Relatórios)
 Neste tutorial, você cria um relatório paginado que atua como um boletim informativo. Cada página exibe um texto estático, visuais de resumo e dados de vendas de exemplo detalhados.
 
 ![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
@@ -27,7 +32,7 @@ O relatório agrupa informações por território e exibe o nome do gerente de v
   
 Tempo estimado para concluir este tutorial: 20 minutos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
 Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="BlankReport"></a>1. Criar um relatório em branco, uma fonte de dados e um conjunto de dados  
@@ -35,7 +40,7 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
 > [!NOTE]  
 > Neste tutorial, como contém os valores de dados, a consulta não precisa de uma fonte de dados externa. Isso torna a consulta bastante longa. Em um ambiente empresarial, uma consulta não conteria os dados. Isso é apenas para fins de aprendizado.  
   
-### Para criar um relatório em branco  
+### <a name="to-create-a-blank-report"></a>Para criar um relatório em branco  
   
 1.  [Inicie o Construtor de Relatórios](../reporting-services/report-builder/start-report-builder.md) no computador, no portal da Web do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou no modo integrado do SharePoint.  
   
@@ -47,7 +52,7 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
  
 3.  No painel direito, clique em **Relatório em Branco**.  
   
-### Para criar uma nova fonte de dados  
+### <a name="to-create-a-new-data-source"></a>Para criar uma nova fonte de dados  
   
 1.  No painel Dados do Relatório, clique em **Nova** > **Fonte de Dados**.  
   
@@ -63,11 +68,11 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
   
 6.  Clique em **OK**.  
   
-### Para criar um novo conjunto de dados  
+### <a name="to-create-a-new-dataset"></a>Para criar um novo conjunto de dados  
   
 1.  No painel Dados do Relatório, clique em **Novo** > **Conjunto de Dados**.  
   
-2.  Na caixa **Nome**, digite: **ListDataset**.  
+2.  Na caixa **Nome** , digite: **ListDataset**.  
   
 3.  Clique em **Usar um conjunto de dados inserido em meu relatório**e verifique se a fonte de dados é **ListDataSource**.  
   
@@ -119,15 +124,15 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="List"></a>2. Adicionar e configurar uma lista  
-No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], a região de dados da lista é ideal para criar relatórios de forma livre. Ela se baseia na região de dados *tablix*, assim como tabelas e matrizes. Para obter mais informações, consulte [Criar faturas e formulários com listas](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], a região de dados da lista é ideal para criar relatórios de forma livre. Ela se baseia na região de dados *tablix* , assim como tabelas e matrizes. Para obter mais informações, consulte [Criar faturas e formulários com listas](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 Você usará uma lista para exibir as informações de vendas das regiões de vendas em um relatório formatado como um boletim informativo. As informações são agrupadas por território. Você irá adicionar um novo grupo de linhas que reúne dados por território e, em seguida, excluir o grupo de linhas interno Detalhes.  
   
-### Para adicionar uma lista  
+### <a name="to-add-a-list"></a>Para adicionar uma lista  
   
 1.  Na guia **Inserir** > **Regiões de Dados** > **Lista**. 
 
-2. Clique no corpo do relatório (entre as áreas do título e do rodapé) e arraste para criar a caixa de listagem. Crie a caixa de listagem com cerca de 18 centímetros de altura e 16 centímetros de largura. Para obter o tamanho exato, no painel **Propriedades**, em **Posição**, digite valores para as propriedades **Largura** e **Altura**.
+2. Clique no corpo do relatório (entre as áreas do título e do rodapé) e arraste para criar a caixa de listagem. Crie a caixa de listagem com cerca de 18 centímetros de altura e 16 centímetros de largura. Para obter o tamanho exato, no painel **Propriedades** , em **Posição**, digite valores para as propriedades **Largura** e **Altura** .
   
     > [!NOTE]  
     > Esse relatório usa o tamanho de papel Carta (21,6 X 27,9) e margens de 2,54 centímetros. Uma caixa de listagem com mais de 23 centímetros de altura ou mais de 16 centímetros de largura pode gerar páginas em branco.  
@@ -136,23 +141,23 @@ Você usará uma lista para exibir as informações de vendas das regiões de ve
   
     ![report-builder-free-form-tablix-properties](../reporting-services/media/report-builder-free-form-tablix-properties.png) 
   
-3.  Na lista suspensa **Nome do conjunto de dados**, selecione **ListDataset**.  
+3.  Na lista suspensa **Nome do conjunto de dados** , selecione **ListDataset**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 5.  Clique com o botão direito do mouse na lista e clique em **Propriedades do Retângulo**.  
   
-6.  Na guia **Geral**, marque a caixa de seleção **Adicionar uma quebra de página após**.  
+6.  Na guia **Geral** , marque a caixa de seleção **Adicionar uma quebra de página após** .  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### Para adicionar um novo grupo de linhas e excluir o grupo Detalhes  
+### <a name="to-add-a-new-row-group-and-to-delete-the-details-group"></a>Para adicionar um novo grupo de linhas e excluir o grupo Detalhes  
   
-1.  No painel Grupos de Linhas, clique com o botão direito do mouse no grupo Detalhes, aponte para **Adicionar Grupo** e clique em **Grupo Pai**.  
+1.  No painel Grupos de Linhas, clique com o botão direito do mouse no grupo Detalhes, aponte para **Adicionar Grupo**e clique em **Grupo Pai**.  
   
     ![report-builder-free-form-add-parent-group](../reporting-services/media/report-builder-free-form-add-parent-group.png)  
   
-2.  Na lista **Agrupar por**, selecione `[Territory].`  
+2.  Na lista **Agrupar por** , selecione `[Territory].`  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -173,9 +178,9 @@ Você usará uma lista para exibir as informações de vendas das regiões de ve
 ## <a name="Graphics"></a>3. Adicionar elementos gráficos  
 Uma das vantagens de usar uma região de dados da lista é que você pode adicionar itens de relatório como retângulos e caixas de texto em qualquer lugar, em vez de estar limitado a um layout de tabela. Você aprimorará a aparência do relatório, adicionando um gráfico (um retângulo preenchido com uma cor).  
   
-### Para adicionar elementos gráficos ao relatório  
+### <a name="to-add-graphic-elements-to-the-report"></a>Para adicionar elementos gráficos ao relatório  
   
-1.  Na guia **Inserir**, selecione **Retângulo**. 
+1.  Na guia **Inserir** , selecione **Retângulo**. 
 
 2. Clique no canto superior esquerdo da lista e arraste para criar o retângulo com 17,78 centímetros de altura e 8,89 centímetros de largura. Novamente, para obter o tamanho exato, no painel **Propriedades**, em **Posição**, digite valores para **Largura** e **Altura**.
   
@@ -196,15 +201,15 @@ O lado esquerdo do relatório agora tem um gráfico vertical que consiste em um 
 ## <a name="Text"></a>4. Adicionar texto de formato livre  
 Você pode adicionar caixas de texto para exibir um texto estático que é repetido em cada página de relatório, bem como campos de dados.  
   
-### Para adicionar texto ao relatório  
+### <a name="to-add-text-to-the-report"></a>Para adicionar texto ao relatório  
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
 2.  Na guia **Inserir** > **Caixa de Texto**. Clique no canto superior esquerdo da lista, dentro do retângulo que você adicionou anteriormente, e arraste para criar a caixa de texto com 9,76 centímetros de largura e 12,70 centímetros de altura.  
   
-3.  Com o cursor na caixa de texto, digite: **Boletim informativo para**. Inclua um espaço após a palavra “para”, para separar o texto do campo que será adicionado na próxima etapa.   
+3.  Com o cursor na caixa de texto, digite: **Boletim informativo para** . Inclua um espaço após a palavra “para”, para separar o texto do campo que será adicionado na próxima etapa.   
   
-    ![Adicionar texto do cabeçalho do boletim informativo](../reporting-services/media/tutorial-newsletterfor.png "Adicionar texto do cabeçalho do boletim informativo")  
+    ![Adicionar texto de título de boletim informativo](../reporting-services/media/tutorial-newsletterfor.png "adicionar texto de título de boletim informativo")  
   
 4.  Arraste o campo `[Territory]` de ListDataSet no painel Dados do Relatório até a caixa de texto e coloque-o após “Boletim informativo para”.  
   
@@ -288,13 +293,13 @@ O relatório exibe texto estático e cada página de relatório inclui dados per
 ## <a name="Table"></a>5. Adicionar uma tabela para mostrar detalhes de vendas  
 Use o Assistente de Nova Tabela e Matriz para adicionar uma tabela ao relatório de formato livre. Depois de concluir o assistente, você adicionará manualmente uma linha para totais.  
   
-### Para adicionar uma tabela  
+### <a name="to-add-a-table"></a>Para adicionar uma tabela  
   
 1.  Na guia **Inserir** > área **Regiões de Dados** > **Tabela** > **Assistente de Tabela**.  
   
 2.  Na página **Escolher um conjunto de dados**, clique em **ListDataset** > **Avançar**.  
   
-4.  Na página **Organizar campos**, arraste o campo Product de **Campos disponíveis** até **Valores**.  
+4.  Na página **Organizar campos** , arraste o campo Product de **Campos disponíveis** até **Valores**.  
   
 5.  Repita a etapa 3 para SalesDate, Quantity e Sales. Posicione SalesDate abaixo de Product, Quantity abaixo de SalesDate e Sales abaixo de SalesDate.  
   
@@ -313,7 +318,7 @@ Use o Assistente de Nova Tabela e Matriz para adicionar uma tabela ao relatório
     > [!NOTE]  
     > Verifique se a tabela está dentro da caixa de listagem e dentro do retângulo cinza.  
   
-12. Com a tabela selecionada, no painel **Grupo de Linhas**, clique com o botão direito do mouse em **Detalhes** > **Adicionar Total** > **Após**.  
+12. Com a tabela selecionada, no painel **Grupo de Linhas** , clique com o botão direito do mouse em **Detalhes** > **Adicionar Total** > **Após**.  
   
     ![report-builder-free-form-table-totals](../reporting-services/media/report-builder-free-form-table-totals.png)
   
@@ -336,7 +341,7 @@ O primeiro relatório exibe uma tabela com detalhes e totais de vendas.
   
 Neste tutorial, salve o relatório em um servidor de relatório. Se você não tiver acesso ao servidor de relatório, salve o relatório no computador.  
   
-### Para salvar o relatório em um servidor de relatório  
+### <a name="to-save-the-report-on-a-report-server"></a>Para salvar o relatório em um servidor de relatório  
   
 1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
@@ -352,7 +357,7 @@ Neste tutorial, salve o relatório em um servidor de relatório. Se você não t
   
 O relatório será salvo no servidor de relatório. O nome do servidor de relatório ao qual você está conectado é exibido na barra de status da parte inferior da janela.  
   
-### Para salvar o relatório no computador  
+### <a name="to-save-the-report-on-your-computer"></a>Para salvar o relatório no computador  
   
 1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
@@ -365,7 +370,7 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
 ## <a name="Line"></a>7. (Opcional) Adicionar uma linha para separar áreas do relatório  
 Adicione uma linha para separar as áreas editoriais e detalhadas do relatório.  
   
-### Para adicionar uma linha  
+### <a name="to-add-a-line"></a>Para adicionar uma linha  
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
@@ -380,17 +385,17 @@ Adicione uma linha para separar as áreas editoriais e detalhadas do relatório.
 ## <a name="Visualization"></a>8. (Opcional) Adicionar visualizações de dados de resumo  
 Os retângulos ajudam a controlar a renderização do relatório. Posicione um gráfico de pizza e de colunas dentro de um retângulo para garantir que o relatório seja renderizado da maneira desejada.  
   
-### Para adicionar um retângulo  
+### <a name="to-add-a-rectangle"></a>Para adicionar um retângulo  
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
 2.  Na guia **Inserir** > **Itens de Relatório** >  **Retângulo**. Arraste o retângulo para dentro da caixa de listagem à direita da tabela para criar um retângulo com cerca de 6 centímetros de largura e 20 centímetros de altura.  
   
-3.  Com o novo retângulo selecionado, no painel Propriedades, crie **BorderColor LightGrey**, **BorderStyle Solid** e **BorderWidth 2 pt**. 
+3.  Com o novo retângulo selecionado, no painel Propriedades, crie **BorderColor LightGrey**, **BorderStyle Solid**e **BorderWidth 2 pt**. 
 
 4. Alinhe as partes superiores do retângulo e da tabela.  
   
-## Para adicionar um gráfico de pizza  
+## <a name="to-add-a-pie-chart"></a>Para adicionar um gráfico de pizza  
   
 1.  Na guia **Inserir** > **Visualizações de Dados** > **Gráfico** > **Assistente de Gráfico**.  
   
@@ -400,7 +405,7 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
   
 4.  Na página Organizar Campos de Gráfico, arraste Product até **Categorias**.  
   
-5.  Arraste Quantity até **Valores** e clique em **Avançar**.  
+5.  Arraste Quantity até **Valores**e clique em **Avançar**.  
   
 6.  Clique em **Concluir**.  
   
@@ -412,7 +417,7 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
   
 12. Na guia **Início** > **Fonte**, crie o título:
     * **Fonte** **Interface do usuário do Sego Seminegrito**.
-    * **Tamanho** **12 pt**.
+    * **Size** **12 pt**.
     * **Cor** **Preto**.  
 
 13. Clique com o botão direito do mouse na legenda > **Propriedades da Legenda**.
@@ -425,15 +430,15 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
 
      ![report-builder-free-form-pie](../reporting-services/media/report-builder-free-form-pie.png)
   
-## Para adicionar um gráfico de colunas  
+## <a name="to-add-a-column-chart"></a>Para adicionar um gráfico de colunas  
   
 1.  Na guia **Inserir** > **Visualizações de Dados** > **Gráfico** > **Assistente de Gráfico**.  
   
 2.  Na página **Escolher um conjunto de dados**, clique em **ListDataset** e em **Avançar**.  
   
-3.  Clique em **Coluna** e em **Avançar**.  
+3.  Clique em **Coluna**e em **Avançar**.  
   
-4.  Na página **Organizar campos de gráfico**, arraste o campo Product até o painel **Categorias**.  
+4.  Na página **Organizar campos de gráfico** , arraste o campo Product até o painel **Categorias**.  
   
 5.  Arraste Sales até **Valores** e clique em **Avançar**.  
   
@@ -451,8 +456,8 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
   
 12. Na guia **Início** > **Fonte**, crie o título:
     * **Fonte** **Interface do usuário do Sego Seminegrito**.
-    * **Tamanho** **12 pt**.
-    * **Cor** **Preto**.  
+    * **Size** **12 pt**.
+    * **Color** **Black**.  
   
 15. Clique com o botão direito do mouse na legenda e, em seguida, clique em **Excluir Legenda**.  
   
@@ -461,10 +466,10 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
   
     ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
 
-12. Selecione o eixo do gráfico e, na guia *Início** > **Número** > **Moeda**.
+12. Selecione o eixo do gráfico e na *início** guia > **número** > **moeda**.
 
 13. Selecione **Diminuir Decimal** duas vezes para que o número mostre apenas dólares, sem centavos.      
-### Para verificar se os gráficos estão dentro do retângulo  
+### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>Para verificar se os gráficos estão dentro do retângulo  
 
 Você pode usar retângulos como contêineres para outros itens em uma página de relatório. Leia mais sobre [retângulos como contêineres](../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).
   
@@ -485,7 +490,7 @@ Você pode usar retângulos como contêineres para outros itens em uma página d
     > [!NOTE]  
     > Se os gráficos não estiverem dentro do retângulo, o relatório renderizado não exibirá os gráficos juntos.  
   
-### Para deixar os gráficos com o mesmo tamanho  
+### <a name="to-make-the-charts-the-same-size"></a>Para deixar os gráficos com o mesmo tamanho  
   
 1.  Selecione o gráfico de pizza, pressione a tecla Ctrl e selecione o gráfico de colunas.  
   
@@ -500,7 +505,7 @@ O relatório agora exibe dados de vendas resumidos em gráficos de pizza e de co
   
 
   
-## Próximas etapas  
+## <a name="next-steps"></a>Próximas etapas  
 Isso conclui o tutorial sobre como criar um relatório de forma livre.  
   
 Para obter mais informações sobre listas, consulte: 
@@ -508,8 +513,10 @@ Para obter mais informações sobre listas, consulte:
 * [Criar faturas e formulários com listas](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Células, linhas e colunas da região de dados Tablix &#40;Construtor de Relatórios&#41; e SSRS](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-Para obter mais informações sobre designers de consultas, consulte [Designers de Consultas &#40;Construtor de Relatórios&#41;](../Topic/Query%20Designers%20(Report%20Builder).md) e [Interface do usuário do Designer de Consultas Baseadas em Texto &#40;Construtor de Relatórios&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+Para obter mais informações sobre designers de consultas, consulte [Designers de Consultas &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) e [Interface do usuário do Designer de Consultas Baseadas em Texto &#40;Construtor de Relatórios&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md) 
   
+
+

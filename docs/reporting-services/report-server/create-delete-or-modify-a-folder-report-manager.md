@@ -1,49 +1,54 @@
 ---
-title: "Criar, excluir ou modificar uma pasta (Gerenciador de Relat&#243;rios) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "removendo pastas"
-  - "modificando pastas"
-  - "excluindo pastas"
-  - "pastas [Reporting Services], criando"
-  - "pastas [Reporting Services], excluindo"
-  - "pastas [Reporting Services], modificando"
+title: "Criar, excluir ou modificar uma pasta (Gerenciador de relatórios) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing folders
+- modifying folders
+- deleting folders
+- folders [Reporting Services], creating
+- folders [Reporting Services], deleting
+- folders [Reporting Services], modifying
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 caps.latest.revision: 49
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 49
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ad8509d26a0ad1cac7efb75bed728b8501b0545e
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Criar, excluir ou modificar uma pasta (Gerenciador de Relat&#243;rios)
+# <a name="create-delete-or-modify-a-folder-report-manager"></a>Criar, excluir ou modificar uma pasta (Gerenciador de Relatórios)
   É possível criar pastas para organizar e administrar os itens publicados em um servidor de relatório. Criar pastas pode ajudar os usuários a localizar relatórios de seu interesse. Para gerenciadores de conteúdo, pastas fornecem uma estrutura para a aplicação de permissões. É possível criar atribuições de função em pastas específicas para restringir o acesso a relatórios em desenvolvimento ou que não devem ser distribuídos amplamente.  
   
-### Para criar uma pasta  
+### <a name="to-create-a-folder"></a>Para criar uma pasta  
   
-1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  No Gerenciador de Relatórios, selecione a pasta Base e clique em **Nova Pasta**. Ou, para criar uma pasta na pasta já existente, navegue até essa pasta na página **Conteúdo** e clique na pasta para abri-la. Clique em **Nova Pasta**.  
   
      A página **Nova Pasta** será aberta.  
   
-3.  Digite um nome de pasta. Um nome de pasta pode incluir espaços, mas não pode incluir caracteres reservados usados para codificação de URL: ; ? : @ & = + , $ / * \< > |. Não é possível digitar uma série de nomes de pasta para criar várias pastas de uma vez.  
+3.  Digite um nome de pasta. Um nome de pasta pode incluir espaços, mas não pode incluir caracteres reservados usados para codificação de URL: ; ? : @ & = + , $ / * < > |. Não é possível digitar uma série de nomes de pasta para criar várias pastas de uma vez.  
   
 4.  Como opção, digite uma descrição.  
   
-5.  Selecione **Ocultar na exibição de lista** se não deseja exibir a pasta na exibição padrão da página **Conteúdo**. A pasta só será visível a usuários quando eles clicarem em **Mostrar Detalhes** na página **Conteúdo**.  
+5.  Selecione **Ocultar na exibição de lista** se não deseja exibir a pasta na exibição padrão da página **Conteúdo** . A pasta só será visível a usuários quando eles clicarem em **Mostrar Detalhes** na página **Conteúdo** .  
   
 6.  Clique em **OK**.  
   
-### Para excluir uma pasta  
+### <a name="to-delete-a-folder"></a>Para excluir uma pasta  
   
 1.  No Gerenciador de Relatórios, navegue até a página **Conteúdo** e localize o item que você deseja modificar.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 49
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Para modificar ou excluir uma pasta  
+### <a name="to-modify-or-delete-a-folder"></a>Para modificar ou excluir uma pasta  
   
 1.  No Gerenciador de Relatórios, navegue até a página **Conteúdo** e localize o item que você deseja modificar.  
   
@@ -67,15 +72,16 @@ caps.handback.revision: 49
   
     -   Para modificar o texto de exibição sobre a pasta, digite um nome ou descrição.  
   
-    -   Para exibir a pasta na exibição padrão na página **Conteúdo**, desmarque **Ocultar na exibição de lista**.  
+    -   Para exibir a pasta na exibição padrão na página **Conteúdo** , desmarque **Ocultar na exibição de lista**.  
   
 6.  Ou, para remover a pasta e seu conteúdo, clique em **Excluir**.  
   
 7.  Clique em **Aplicar** para salvar as alterações.  
   
-## Consulte também  
- [Página Nova Pasta &#40;Gerenciador de Relatórios&#41;](../Topic/New%20Folder%20Page%20\(Report%20Manager\).md)   
- [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../Topic/Contents%20Page%20\(Report%20Manager\).md)   
+## <a name="see-also"></a>Consulte também  
+ [Página Nova Pasta &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
+ [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
+

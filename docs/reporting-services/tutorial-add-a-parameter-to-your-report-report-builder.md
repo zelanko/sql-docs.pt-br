@@ -1,67 +1,41 @@
 ---
-title: "Tutorial: Adicionar um par&#226;metro ao relat&#243;rio (Construtor de Relat&#243;rios) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Tutorial: Adicionar um parâmetro ao relatório (construtor de relatórios) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: a3e5da225eb8008f74d6fc5aade3e55543d93d91
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutorial: Adicionar um par&#226;metro ao relat&#243;rio (Construtor de Relat&#243;rios)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Adicionar um parâmetro ao relatório (Construtor de Relatórios)
 Neste tutorial, você adiciona um parâmetro a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] para que os leitores do relatório possam filtrar um ou mais valores nos dados do relatório. 
   
 ![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
 
 Os parâmetros de relatório são criados automaticamente para cada parâmetro de consulta incluído em uma consulta de conjunto de dados. O tipo de dados do parâmetro determina como ele aparece na barra de ferramentas de exibição de relatório. 
-  
-## <a name="BackToTop"></a>O que você aprenderá  
-Neste tutorial, você aprenderá o seguinte:  
-  
-1.  [Criar um relatório de matriz e um conjunto de dados no Assistente de Tabela ou Matriz](#Setup)  
-  
-2.  [Organizar dados e escolher o layout no Assistente](#CompleteWizard)  
-  
-3.  [Adicionar um parâmetro de consulta para criar um parâmetro de relatório](#Query)  
-  
-4.  [Alterar o tipo de dados padrão e outras propriedades de um parâmetro de relatório](#ChangeDefaultProperties)  
-  
-    1.  [Adicionar um conjunto de dados para fornecer valores disponíveis e nomes para exibição](#AddDataset)  
-  
-    2.  [Especificar os valores disponíveis a serem mostrados em uma lista](#AvailableValues)  
-  
-    3.  [Especificar um valor padrão](#DefaultValues)  
-  
-    4.  [Pesquisar um par nome/valor](#NameValue)  
-  
-5.  [Exibir o valor selecionado de parâmetro no relatório](#Expression)  
-  
-6.  [Usar o parâmetro de relatório em um filtro](#Filter)  
-  
-7.  [Alterar o parâmetro de relatório para aceitar vários valores](#Multivalued)  
-  
-8.  [Adicionar um parâmetro booliano para visibilidade condicional](#Boolean)  
-  
-9. [Adicionar um título de relatório](#Title)  
-  
-10. [Salvar o relatório](#Save)  
-  
+   
 > [!NOTE]  
 > Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial desta série: [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 25 minutos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
 Para obter informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Setup"></a>1. Criar um relatório de matriz e um conjunto de dados no Assistente de Tabela ou Matriz  
@@ -70,7 +44,7 @@ Criar um relatório de matriz, uma fonte de dados e um conjunto de dados.
 > [!NOTE]  
 > Neste tutorial, a consulta contém os valores de dados para que não precise de uma fonte de dados externa. Isso torna a consulta bastante longa. Em um ambiente empresarial, uma consulta não conteria os dados. Isso é apenas para fins de aprendizado.  
   
-### Para criar um novo relatório de matriz  
+### <a name="to-create-a-new-matrix-report"></a>Para criar um novo relatório de matriz  
   
 1.  [Inicie o Construtor de Relatórios](../reporting-services/report-builder/start-report-builder.md) no computador, no portal da Web do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou no modo integrado do SharePoint.  
   
@@ -82,15 +56,15 @@ Criar um relatório de matriz, uma fonte de dados e um conjunto de dados.
   
 3.  No painel direito, clique em **Assistente de Tabela ou Matriz**.  
   
-4.  Na página **Escolher um conjunto de dados**, clique em **Criar um conjunto de dados** > **Avançar**.  
+4.  Na página **Escolher um conjunto de dados** , clique em **Criar um conjunto de dados** > **Avançar**.  
   
-7.  Na página **Escolher uma conexão com uma fonte de dados**, selecione uma fonte de dados na lista ou procure o servidor de relatório para selecionar uma. Selecione uma fonte de dados do tipo **SQL Server**.  
+7.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados na lista ou procure o servidor de relatório para selecionar uma. Selecione uma fonte de dados do tipo **SQL Server**.  
       
 8.  Clique em **Avançar**.  
 
     Talvez seja necessário inserir suas credenciais.    
      
-9. Na página **Crie uma consulta**, clique em **Editar como Texto**.  
+9. Na página **Crie uma consulta** , clique em **Editar como Texto**.  
   
 10. Cole a seguinte consulta no painel vazio na parte superior:  
   
@@ -112,7 +86,7 @@ Criar um relatório de matriz, uma fonte de dados e um conjunto de dados.
     FROM CTE  
     ```  
   
-    Esta consulta combina os resultados de várias instruções SELECT [!INCLUDE[tsql](../includes/tsql-md.md)] dentro de uma expressão de tabela comum para especificar valores baseados em dados simplificados do banco de dados de exemplo Contoso. As subcategorias são câmeras digitais, câmeras digitais SLR (reflex de lente única), filmadoras e acessórios.  
+    Esta consulta combina os resultados de várias instruções SELECT [!INCLUDE[tsql_md](../includes/tsql-md.md)] dentro de uma expressão de tabela comum para especificar valores baseados em dados simplificados do banco de dados de exemplo Contoso. As subcategorias são câmeras digitais, câmeras digitais SLR (reflex de lente única), filmadoras e acessórios.  
   
 11. Na barra de ferramentas do designer de consultas, clique em **Executar** (**!**) para ver os dados.   
   
@@ -125,9 +99,9 @@ Criar um relatório de matriz, uma fonte de dados e um conjunto de dados.
 ## <a name="CompleteWizard"></a>2. Organizar dados e escolher o layout no Assistente  
 O assistente fornece um design inicial para a exibição de dados. O painel de visualização no assistente ajuda a visualizar o resultado do agrupamento de dados antes de concluir o design da tabela ou da matriz.  
   
-### Para organizar dados em grupos  
+### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
   
-1.  Na página **Organizar campos**, arraste Subcategoria até **Grupos de linhas**.  
+1.  Na página **Organizar campos** , arraste Subcategoria até **Grupos de linhas**.  
   
 2.  Arraste StoreID até **Grupos de colunas**.  
   
@@ -137,7 +111,7 @@ O assistente fornece um design inicial para a exibição de dados. O painel de v
   
 4.  Clique em **Avançar**.  
   
-5.  Na página **Escolher o Layout**, em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
+5.  Na página **Escolher o Layout** , em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
   
     Quando você executar o relatório, a última coluna mostrará a quantidade total de cada subcategoria para todos os repositórios, e a última linha mostrará a quantidade total para todas as subcategorias de cada repositório.  
   
@@ -156,19 +130,19 @@ O assistente fornece um design inicial para a exibição de dados. O painel de v
 10. Clique em **Executar** para visualizar o relatório.  
   
 O relatório será executado no servidor de relatório e exibirá o título e a hora em que o processamento de relatório ocorreu.  
-  
-![ssRB_ParamTut__Preview1](../reporting-services/media/ssrb-paramtut-preview1.png)  
+
+![ssRB_ParamTut__Preview1](../reporting-services/media/ssrb-paramtut-preview1.png)
   
 Neste cenário, os cabeçalhos de coluna exibem o identificador da loja, mas não o nome dela. Posteriormente, você irá adicionar uma expressão para pesquisar o nome do repositório em um conjunto de dados contendo pares de identificador/nome do repositório.  
   
 ## <a name="Query"></a>3. Adicionar um parâmetro de consulta para criar um parâmetro de relatório  
 Quando você adicionar um parâmetro de consulta a uma consulta, o Construtor de Relatórios criará automaticamente um parâmetro de relatório de valor único com propriedades padrão para nome, aviso e tipo de dados.  
   
-### Para adicionar um parâmetro de consulta  
+### <a name="to-add-a-query-parameter"></a>Para adicionar um parâmetro de consulta  
   
 1.  Clique em **Design** para mudar de volta para o modo Design.  
   
-2.  No painel Dados do Relatório, expanda a pasta **Conjuntos de Dados**, clique com o botão direito do mouse em **DataSet1** e clique em **Consulta**.  
+2.  No painel Dados do Relatório, expanda a pasta **Conjuntos de Dados** , clique com o botão direito do mouse em **DataSet1**e clique em **Consulta**.  
   
 3.  Adicione a seguinte cláusula [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** como a última linha da consulta:  
   
@@ -176,7 +150,7 @@ Quando você adicionar um parâmetro de consulta a uma consulta, o Construtor de
     WHERE StoreID = (@StoreID)  
     ```  
   
-    A cláusula **WHERE** limita os dados recuperados ao identificador de loja especificado pelo parâmetro de consulta *@StoreID*.  
+    A caixa de diálogo **WHERE** limita os dados recuperados ao identificador de loja especificado pelo parâmetro de consulta *@StoreID*.  
   
 4.  Na barra de ferramentas do designer de consultas, clique em **Executar** (**!**). A caixa de diálogo **Definir Parâmetros de Consulta** é aberta e solicita um valor para o parâmetro de consulta *@StoreID*.  
   
@@ -188,22 +162,22 @@ Quando você adicionar um parâmetro de consulta a uma consulta, o Construtor de
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-8.  No painel Dados do Relatório, expanda a pasta **Parâmetros**.  
+8.  No painel Dados do Relatório, expanda a pasta **Parâmetros** .  
   
-Observe que agora há um parâmetro de relatório chamado *@StoreID* e um painel Parâmetros, em que você pode dispor os parâmetros do relatório.   
+Observe que agora há um parâmetro de relatório chamado *@StoreID*e um painel Parâmetros, em que você pode dispor os parâmetros do relatório.   
   
 ![ssRB_ParamPane](../reporting-services/media/ssrb-parampane.png)  
   
-Um painel Parâmetros não está visível? No menu **Exibir**, selecione **Parâmetros**.  
+Um painel Parâmetros não está visível? No menu **Exibir** , selecione **Parâmetros**.  
   
 ## <a name="ChangeDefaultProperties"></a>4. Alterar o tipo de dados padrão e outras propriedades de um parâmetro de relatório  
 Depois de criar um parâmetro, você poderá ajustar os valores padrão das propriedades.  
   
-### Para alterar o tipo de dados padrão de um parâmetro de relatório  
+### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>Para alterar o tipo de dados padrão de um parâmetro de relatório  
   
 Por padrão, o parâmetro criado tem o tipo de dados **Texto**. Como o identificador de loja é um inteiro, você pode alterar o tipo de dados para Inteiro.  
   
-1.  No painel Dados do Relatório, no nó **Parâmetros**, clique com o botão direito do mouse em *@StoreID* e em **Propriedades do Parâmetro**.  
+1.  No painel Dados do Relatório, no nó **Parâmetros** , clique com o botão direito do mouse em *@StoreID*e em **Propriedades do Parâmetro**.  
   
 2.  Em **Prompt**, digite **Identificador de loja?** Este texto aparece na barra de ferramentas do visualizador de relatórios quando você executa o relatório.  
   
@@ -213,16 +187,16 @@ Por padrão, o parâmetro criado tem o tipo de dados **Texto**. Como o identific
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Clique em **Executar** para visualizar o relatório. O visualizador de relatórios exibe o prompt **Identificador de loja?** para *@StoreID*.  
+6.  Clique em **Executar** para visualizar o relatório. O visualizador de relatórios exibe o prompt **Store Identifier?** para *@StoreID*.  
   
-7.  Na barra de ferramentas do visualizador de relatórios, ao lado de ID da Loja, digite **200** e clique em **Exibir Relatório**.  
+7.  Na barra de ferramentas do visualizador de relatórios, ao lado de ID da Loja, digite **200**e clique em **Exibir Relatório**.  
   
 ![SSRB_ParamTutStoreID](../reporting-services/media/ssrb-paramtutstoreid.png)  
   
 ## <a name="AddDataset"></a>4a. Adicionar um conjunto de dados para fornecer valores disponíveis e nomes para exibição  
 Para garantir que os leitores do relatório digitem somente valores válidos para um parâmetro, você poderá criar uma lista suspensa de valores a serem escolhidos. Os valores podem vir de um conjunto de dados ou de uma lista especificada por você. Devem ser fornecidos valores disponíveis de um conjunto de dados com uma consulta que não contém uma referência ao parâmetro.  
   
-### Para criar um conjunto de dados com valores válidos para um parâmetro  
+### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>Para criar um conjunto de dados com valores válidos para um parâmetro  
   
 1.  Clique em **Design** para mudar para o modo Design.  
   
@@ -247,16 +221,16 @@ Para garantir que os leitores do relatório digitem somente valores válidos par
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    O painel Dados do Relatório exibe os campos StoreID e StoreName no nó de conjunto de dados **Lojas**.  
+    O painel Dados do Relatório exibe os campos StoreID e StoreName no nó de conjunto de dados **Lojas** .  
   
 ## <a name="AvailableValues"></a>4b. Especificar os valores disponíveis a serem mostrados em uma lista 
 Depois de criar um conjunto de dados para fornecer os valores disponíveis, altere as propriedades do relatório para especificar qual conjunto de dados e campo serão usados para popular a lista suspensa de valores válidos na barra de ferramentas Visualizador de Relatórios.  
   
-### Para fornecer valores disponíveis para um parâmetro a partir de um conjunto de dados  
+### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Para fornecer valores disponíveis para um parâmetro a partir de um conjunto de dados  
   
-1.  No painel Dados do Relatório, clique com o botão direito do mouse no parâmetro *@StoreID* e clique em **Propriedades do Parâmetro**.  
+1.  No painel Dados do Relatório, clique com o botão direito do mouse no parâmetro *@StoreID*e em **Propriedades do Parâmetro**.  
   
-2.  Clique em **Valores Disponíveis** e em **Obter valores de uma consulta**.  
+2.  Clique em **Valores Disponíveis**e em **Obter valores de uma consulta**.  
   
 3.  Em **Conjunto de Dados**, na lista suspensa, clique em **Repositórios**.  
   
@@ -283,44 +257,44 @@ O relatório exibe a quantidade vendida de Acessórios, Filmadoras e Câmeras Di
 ## <a name="DefaultValues"></a>4c. Especificar um valor padrão 
 Você pode especificar um valor padrão para cada parâmetro, de forma que o relatório seja executado automaticamente.  
   
-### Para especificar um valor padrão a partir de um conjunto de dados  
+### <a name="to-specify-a-default-value-from-a-dataset"></a>Para especificar um valor padrão a partir de um conjunto de dados  
   
 1.  Alterne para o modo Design.  
   
-2.  No painel Dados do Relatório, clique com o botão direito do mouse em *@StoreID* e clique em **Propriedades do Parâmetro**.  
+2.  No painel Dados do Relatório, clique com o botão direito do mouse em *@StoreID*e em **Propriedades do Parâmetro**.  
   
-3.  Clique em **Valores Padrão** e em **Obter valores de uma consulta**.  
+3.  Clique em **Valores Padrão**e em **Obter valores de uma consulta**.  
   
 4.  Em **Conjunto de Dados**, na lista suspensa, clique em **Repositórios**.  
   
 5.  Em **Campo de valor**, na lista suspensa, clique em StoreID.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK_md](../includes/clickok-md.md)]  
   
 7.  Visualize o relatório.  
   
-Em *@StoreID*, o visualizador de relatórios exibe o valor “Loja Online da Contoso na América do Norte” porque ele é o primeiro valor do conjunto de resultados do conjunto de dados **Lojas**. O relatório exibe a quantidade vendida de Câmeras Digitais do identificador de loja **199**.  
+For *@StoreID*, o visualizador de relatórios exibe o valor “Loja Online da Contoso na América do Norte” porque ele é o primeiro valor do conjunto de resultados do conjunto de dados **Lojas**. O relatório exibe a quantidade vendida de Câmeras Digitais do identificador de loja **199**.  
   
-### Para especificar um valor padrão personalizado  
+### <a name="to-specify-a-custom-default-value"></a>Para especificar um valor padrão personalizado  
   
 1.  Alterne para o modo Design.  
   
-2.  No painel Dados do Relatório, clique com o botão direito do mouse em *@StoreID* e clique em **Propriedades do Parâmetro**.  
+2.  No painel Dados do Relatório, clique com o botão direito do mouse em *@StoreID*e clique em **Propriedades do Parâmetro**.  
   
 3.  Clique em **Valores Padrão** > **Especificar valores** > **Adicionar**. Uma nova linha de valor é adicionada.  
   
 4.  Em **Valor**, digite **200**.  
   
-5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK_md](../includes/clickok-md.md)] 
   
 6.  Visualize o relatório.  
   
-Em *@StoreID*, o visualizador de relatórios exibe “Loja de Catálogos Contoso” porque ele é o nome de exibição do identificador de loja **200**. O relatório exibe a quantidade vendida de Acessórios, Filmadoras e Câmeras Digitais SLR para o identificador de repositório **200**.  
+For *@StoreID*, o visualizador de relatórios exibe “Loja de Catálogos Contoso” porque ele é o nome de exibição do identificador de loja **200**. O relatório exibe a quantidade vendida de Acessórios, Filmadoras e Câmeras Digitais SLR para o identificador de repositório **200**.  
   
 ## <a name="NameValue"></a>4d. Pesquisar um par nome/valor  
 Um conjunto de dados pode conter o identificador e o campo de nome correspondente. Quando você só tiver um identificador, poderá pesquisar o nome correspondente em um conjunto de dados criado por você, incluindo pares de nome/valor.  
   
-### Para pesquisar um valor em um conjunto de dados  
+### <a name="to-look-up-a-value-from-a-dataset"></a>Para pesquisar um valor em um conjunto de dados  
   
 1.  Alterne para o modo Design.  
   
@@ -328,7 +302,7 @@ Um conjunto de dados pode conter o identificador e o campo de nome correspondent
   
 3.  No painel de expressão, exclua todo o texto, exceto o **sinal de igualdade** (=). inicial.  
   
-4.  Em **Categoria**, expanda **Funções Comuns** e clique em **Diversos**. O painel Item exibe um conjunto de funções.  
+4.  Em **Categoria**, expanda **Funções Comuns**e clique em **Diversos**. O painel Item exibe um conjunto de funções.  
   
 5.  Em Item, clique duas vezes em **Pesquisa**. O painel de expressão exibe `=Lookup(`. O painel Exemplo exibe um exemplo de sintaxe de Pesquisa.  
   
@@ -351,7 +325,7 @@ O cabeçalho de coluna na parte superior de cada coluna exibe o nome da loja em 
 ## <a name="Expression"></a>5. Exibir o valor selecionado de parâmetro no relatório  
 Quando os leitores do relatório tem dúvidas sobre um relatório, é útil saber quais valores de parâmetros eles escolheram. Você pode preservar os valores selecionados pelos usuários para cada parâmetro no relatório. Uma forma de fazer isso é exibir os parâmetros em uma caixa de texto no rodapé da página.  
   
-### Para exibir o valor de parâmetro selecionado e o rótulo em um rodapé de página  
+### <a name="to-display-the-selected-parameter-value-and-label-on-a-page-footer"></a>Para exibir o valor de parâmetro selecionado e o rótulo em um rodapé de página  
   
 1.  Alterne para o modo Design.  
   
@@ -372,13 +346,13 @@ Quando os leitores do relatório tem dúvidas sobre um relatório, é útil sabe
 ## <a name="Filter"></a>6. Usar o parâmetro de relatório em um filtro  
 Os filtros ajudam a controlar os dados a serem usados em um relatório, depois de recuperados em uma fonte de dados externa. Para permitir que os leitores do relatório controlem os dados que eles querem ver, você pode incluir o parâmetro de relatório em um filtro da matriz.  
   
-### Para especificar um parâmetro em um filtro de matriz  
+### <a name="to-specify-a-parameter-in-a-matrix-filter"></a>Para especificar um parâmetro em um filtro de matriz  
   
 1.  Alterne para o modo Design.  
   
 2.  Clique com o botão direito do mouse em um identificador de cabeçalho de linha ou coluna na matriz e clique em **Propriedades do Tablix**.  
   
-3.  Clique em **Filtros** e em **Adicionar**. Uma nova linha de filtro é exibida.  
+3.  Clique em **Filtros**e em **Adicionar**. Uma nova linha de filtro é exibida.  
   
 4.  Em **Expressão**, na lista suspensa, selecione o campo de conjunto de dados StoreID. O tipo de dados exibe **Inteiro**. Quando o valor da expressão for um campo de conjunto de dados, o tipo de dados será definido automaticamente.  
   
@@ -394,26 +368,26 @@ Os filtros ajudam a controlar os dados a serem usados em um relatório, depois d
   
     A matriz só exibe dados para o "Repositório de Catálogos Contoso".  
   
-9. Na barra de ferramentas do visualizador de relatórios, para **Nome da loja?**, selecione **Loja Online Contoso na Ásia** e clique em **Exibir Relatório**.  
+9. Na barra de ferramentas do visualizador de relatórios, para **Nome da loja?**, selecione **Loja Online Contoso na Ásia**e clique em **Exibir Relatório**.  
   
 A matriz exibe dados correspondentes ao repositório que você selecionou.  
   
 ## <a name="Multivalued"></a>7. Alterar o parâmetro de relatório para aceitar vários valores  
 Para alterar um parâmetro de valor único para vários valores, você deve alterar a consulta e todas as expressões que contêm alguma referência ao parâmetro, incluindo filtros. Um parâmetro de vários valores é uma matriz de valores. Em uma consulta de conjunto de dados, a sintaxe de consulta deve testar a inclusão de um valor em um conjunto de valores. Em uma expressão de relatório, a sintaxe da expressão deve acessar uma matriz de valores, em vez de um valor individual.  
   
-### Para alterar um parâmetro de valor único para vários valores  
+### <a name="to-change-a-parameter-from-single-to-multivalued"></a>Para alterar um parâmetro de valor único para vários valores  
   
 1.  Alterne para o modo Design.  
   
-2.  No painel Dados do Relatório, clique com o botão direito do mouse em *@StoreID* e clique em **Propriedades do Parâmetro**.  
+2.  No painel Dados do Relatório, clique com o botão direito do mouse em *@StoreID*e clique em **Propriedades do Parâmetro**.  
   
 3.  Selecione **Permitir vários valores**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  No painel Dados do Relatório, expanda a pasta **Conjuntos de Dados**, clique com o botão direito do mouse em **DataSet1** e clique em **Consulta**.  
+5.  No painel Dados do Relatório, expanda a pasta **Conjuntos de Dados** , clique com o botão direito do mouse em **DataSet1**e clique em **Consulta**.  
   
-6.  Altere o **sinal de igualdade** (=) para **IN** na cláusula [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE**, na última linha da consulta:  
+6.  Altere o **sinal de igualdade** (=) para **IN** na cláusula [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** clause na cláusula last line na cláusula query:  
   
     ```  
     WHERE StoreID IN (@StoreID)  
@@ -449,7 +423,7 @@ Para alterar um parâmetro de valor único para vários valores, você deve alte
   
     Cada valor válido aparece junto a uma caixa de seleção.  
   
-18. Clique em **Selecionar Tudo** e em **Exibir Relatório**.  
+18. Clique em **Selecionar Tudo**e em **Exibir Relatório**.  
   
     O relatório exibe a quantidade vendida de todas as subcategorias de todos os repositórios.  
   
@@ -460,9 +434,9 @@ Para alterar um parâmetro de valor único para vários valores, você deve alte
  
 ## <a name="Boolean"></a>8. Adicionar um parâmetro booliano para visibilidade condicional  
   
-### Para adicionar um parâmetro booliano  
+### <a name="to-add-a-boolean-parameter"></a>Para adicionar um parâmetro booliano  
   
-1.  Na superfície de design, no painel Dados do Relatório, clique com o botão direito do mouse em **Parâmetros** e clique em **Adicionar Parâmetro**.  
+1.  Na superfície de design, no painel Dados do Relatório, clique com o botão direito do mouse em **Parâmetros**e clique em **Adicionar Parâmetro**.  
   
 2.  Em **Nome**, digite ShowSelections.  
   
@@ -472,19 +446,19 @@ Para alterar um parâmetro de valor único para vários valores, você deve alte
   
 5.  Clique em **Valores Padrão**.  
   
-6.  Clique em **Especificar valor** e em **Adicionar**.  
+6.  Clique em **Especificar valor**e em **Adicionar**.  
   
 7.  Em **Valor**, digite **False**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### Para definir a visibilidade com base em um parâmetro booliano  
+### <a name="to-set-visibility-based-on-a-boolean-parameter"></a>Para definir a visibilidade com base em um parâmetro booliano  
   
 1.  Na superfície de design, clique com o botão direito do mouse na caixa de texto no rodapé de página que exibe os valores de parâmetros e clique em **Propriedades da Caixa de Texto**.  
   
 2.  Clique em **Visibilidade**.  
   
-3.  Selecione a opção **Mostrar ou ocultar com base em uma expressão** e clique no botão de expressão **Fx**.  
+3.  Selecione a opção **Mostrar ou ocultar com base em uma expressão**e clique no botão de expressão **Fx**.  
   
 4.  Digite a seguinte expressão: `=Not Parameters!ShowSelections.Value`  
   
@@ -504,7 +478,7 @@ Para alterar um parâmetro de valor único para vários valores, você deve alte
   
 ## <a name="Title"></a>9. Adicionar um título de relatório  
   
-### Para adicionar um título de relatório  
+### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
 
 1.  Alterne para o modo Design.  
    
@@ -514,7 +488,7 @@ Para alterar um parâmetro de valor único para vários valores, você deve alte
   
 ## <a name="Save"></a>10. Salvar o relatório  
   
-### Para salvar o relatório em um servidor de relatório  
+### <a name="to-save-the-report-on-a-report-server"></a>Para salvar o relatório em um servidor de relatório  
   
 1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
@@ -522,7 +496,7 @@ Para alterar um parâmetro de valor único para vários valores, você deve alte
   
 3.  Selecione ou digite o nome do servidor de relatório no qual você tem permissão para salvar relatórios.  
   
-    A mensagem **Conectando-se a um servidor de relatório** é exibida. Quando a conexão for concluída, você verá o conteúdo da pasta do relatório que o administrador do servidor de relatório especificou como o local padrão para relatórios.  
+    A mensagem **Conectando-se a um servidor de relatório**é exibida. Quando a conexão for concluída, você verá o conteúdo da pasta do relatório que o administrador do servidor de relatório especificou como o local padrão para relatórios.  
   
 4.  Em **Nome**, substitua o nome padrão por Relatório de Vendas com Parâmetros.  
   
@@ -530,10 +504,11 @@ Para alterar um parâmetro de valor único para vários valores, você deve alte
   
 O relatório será salvo no servidor de relatório. O servidor de relatório ao qual você está conectado aparece na barra de status na parte inferior da janela.  
   
-## Próximas etapas  
+## <a name="next-steps"></a>Próximas etapas  
 Isso conclui o passo a passo da adição de um parâmetro ao seu relatório. Para saber mais sobre parâmetros, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 * [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md)
 * [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-*  [Função Lookup](../reporting-services/report-design/lookup-function-report-builder-and-ssrs.md)   
+*  [Função Lookup](../reporting-services/report-design/report-builder-functions-lookup-function.md)   
+

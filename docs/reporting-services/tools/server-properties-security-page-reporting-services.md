@@ -1,25 +1,30 @@
 ---
-title: "Propriedades do Servidor (p&#225;gina Seguran&#231;a) - Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.serverproperties.security.f1"
+title: "Propriedades do servidor (página segurança) - Reporting Services | Microsoft Docs"
+ms.custom: 
+ms.date: 06/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.serverproperties.security.f1
 ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8da36c90d2eb22600ad6560a37367e68de933971
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Propriedades do Servidor (p&#225;gina Seguran&#231;a) - Reporting Services
+# <a name="server-properties-security-page---reporting-services"></a>Propriedades do Servidor (página Segurança) - Reporting Services
   Use esta página [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] no [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] para desativar recursos que podem comprometer um servidor de relatório potencialmente. A desativação desse recurso limitará algumas funcionalidades, mas pode aprimorar a segurança geral do servidor de relatório, reduzindo ameaças específicas.  
   
  Para abrir esta página:
@@ -28,7 +33,7 @@ caps.handback.revision: 11
  3) Clique com o botão direito do mouse no nome do servidor de relatório e selecione **Propriedades**. 
  4) Clique em **Segurança** para abrir essa página.  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Habilitar a segurança integrada do Windows para as fontes de dados do relatório**  
  Especifique se uma conexão com uma fonte de dados de relatório pode ser feita usando o token de segurança do Windows do usuário que solicitou o relatório.  
   
@@ -41,10 +46,11 @@ caps.handback.revision: 11
   
  A desativação dessa opção reduz uma ameaça de que um usuário mal-intencionado inicie um ataque de negação de serviço, carregando o servidor de relatório com solicitações de **LoadReportDefinition** .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definir propriedades do servidor de relatório &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Conectar-se a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Servidor de Relatório na ajuda F1 do Management Studio ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
+ [Servidor de Relatório na ajuda F1 do Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   
   
+

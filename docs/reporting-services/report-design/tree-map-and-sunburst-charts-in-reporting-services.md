@@ -1,23 +1,28 @@
 ---
-title: "Gr&#225;ficos de mapa de &#225;rvore e explos&#227;o solar no Reporting Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Mapa de árvore e gráficos explosão solar no Reporting Services | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/31/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Gr&#225;ficos de mapa de &#225;rvore e explos&#227;o solar no Reporting Services
+# <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Gráficos de mapa de árvore e explosão solar no Reporting Services
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   As visualizações de mapa de árvore e explosão solar do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são ótimas para representar visualmente os dados hierárquicos.   Este tópico é uma visão geral de como adicionar um gráfico de mapa de árvore ou explosão solar a um relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . O tópico também inclui um exemplo de consulta do Adventureworks para ajudar você a começar.  
@@ -31,12 +36,12 @@ caps.handback.revision: 16
   
  ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
-### Para inserir um gráfico de mapa de árvore e configurá-lo com os exemplos de dados de Adventureworks  
+### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>Para inserir um gráfico de mapa de árvore e configurá-lo com os exemplos de dados de Adventureworks  
  **Observação:** antes de adicionar um gráfico ao relatório, crie uma fonte de dados e um conjunto de dados.  Para obter os exemplos de dados e um exemplo de consulta, confira a seção [Exemplo de dados do Adventureworks](#bkmk_sample_data) neste tópico.  
   
-1.  Clique com o botão direito do mouse na superfície do design, clique em **Inserir** e em **Gráfico**.  
+1.  Clique com o botão direito do mouse na superfície do design, clique em **Inserir**e em **Gráfico** .  
   
-     Selecione Mapa de Árvore ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
+     Selecione mapa de árvore ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -60,13 +65,12 @@ caps.handback.revision: 16
     =Fields!SubcategoryName.Value &": " &Format(Sum(Fields!LineTotal.Value),"C")  
     ```  
   
-     Para obter mais informações, consulte [Mostrar dicas de ferramentas em uma série &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md).  
+     Para obter mais informações, consulte [Mostrar dicas de ferramenta em uma série &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md).  
   
 6.  Altere o título de gráfico padrão para "Vendas categorizadas por região".  
   
 7.  A quantidade de valores de rótulo exibidos é afetada pelo tamanho da fonte, o tamanho da área geral do gráfico e o tamanho de retângulos específicos.  Para ver mais rótulos, altere a propriedade de fonte do Rótulo de LineTotal para 10 pt, em vez do padrão de 8 pt.  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Neste tópico](#bkmk_top)  
   
 ##  <a name="bkmk_sunburst_chart"></a> Gráfico explosão solar  
  ![ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")  
@@ -75,12 +79,12 @@ caps.handback.revision: 16
   
  ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
-### Para inserir um gráfico de explosão solar e configurá-lo com os exemplos de dados de Adventureworks  
+### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>Para inserir um gráfico de explosão solar e configurá-lo com os exemplos de dados de Adventureworks  
  **Observação:** antes de adicionar um gráfico ao relatório, crie uma fonte de dados e um conjunto de dados.  Para obter os exemplos de dados e um exemplo de consulta, confira a seção [Exemplo de dados do Adventureworks](#bkmk_sample_data) neste tópico.  
   
-1.  Clique com o botão direito do mouse na superfície do design, clique em **Inserir** e em **Gráfico**.  
+1.  Clique com o botão direito do mouse na superfície do design, clique em **Inserir**e em **Gráfico** .  
   
-     Selecione Explosão Solar ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
+     Selecione explosão solar ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -104,7 +108,6 @@ caps.handback.revision: 16
   
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Neste tópico](#bkmk_top)  
   
 ##  <a name="bkmk_sample_data"></a> Exemplo de dados do Adventureworks  
  Esta seção inclui um exemplo de consulta e as etapas básicas para criar uma fonte de dados e o conjunto de dados em [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Se o relatório já contiver uma fonte de dados e o conjunto de dados, ignore esta seção.  
@@ -119,7 +122,7 @@ caps.handback.revision: 16
   
 2.  **Criar uma fonte de dados:**  
   
-    1.  No painel **Dados do Relatório**, clique com o botão direito do mouse em **Fonte de Dados** e clique em **Adicionar fonte de dados**.  
+    1.  No painel **Dados do Relatório** , clique com o botão direito do mouse em **Fonte de Dados** e clique em **Adicionar fonte de dados**.  
   
     2.  Escolha **Usar uma conexão inserida em meu relatório**.  
   
@@ -137,7 +140,7 @@ caps.handback.revision: 16
   
 3.  **Criar um conjunto de dados:**  
   
-    -   No painel **Dados do Relatório**, clique com o botão direito do mouse em **Conjuntos de Dados** e clique em **Adicionar conjunto de dados**.  
+    -   No painel **Dados do Relatório** , clique com o botão direito do mouse em **Conjuntos de Dados** e clique em **Adicionar conjunto de dados**.  
   
     -   Escolha **Usar um conjunto de dados inserido em meu relatório**.  
   
@@ -172,9 +175,8 @@ caps.handback.revision: 16
   
      Para obter mais informações sobre como criar um conjunto de dados, consulte [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Neste tópico](#bkmk_top)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Modo de exibição de Design de conjunto de dados compartilhados &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
  [Mostrar dicas de ferramenta em uma série &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)   
  [Tutorial: mapas de árvore no Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)   
@@ -182,3 +184,5 @@ caps.handback.revision: 16
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

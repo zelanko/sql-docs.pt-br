@@ -1,29 +1,34 @@
 ---
-title: "Adicionar uma imagem de plano de fundo (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Adicionar uma imagem de plano de fundo (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 35b41f21f12487ef0ff32daa999ce4e4075c4180
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Adicionar uma imagem de plano de fundo (Construtor de Relat&#243;rios e SSRS)
+# <a name="add-a-background-image-report-builder-and-ssrs"></a>Adicionar uma imagem de plano de fundo (Construtor de Relatórios e SSRS)
   Você pode adicionar uma imagem de plano de fundo a um item de relatório tais como um retângulo, uma caixa de texto, uma lista, uma matriz, uma tabela, algumas partes de um gráfico, ou uma seção de relatório como cabeçalho de página, rodapé de página ou corpo de relatório. Você pode definir uma imagem de tela de fundo para qualquer item selecionado na superfície de design do relatório que exiba **BackgroundImage** no painel Propriedades. Assim como outras imagens, a imagem de plano de fundo pode ser uma URL para uma imagem no servidor de relatório, uma imagem de um campo de conjunto de dados ou uma imagem inserida na definição de relatório. Para usar uma imagem inserida no relatório, primeiro adicione a imagem à definição de relatório antes de adicioná-la à superfície de design.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Para inserir uma imagem na definição de relatório  
+### <a name="to-embed-an-image-in-the-report-definition"></a>Para inserir uma imagem na definição de relatório  
   
 1.  No painel de dados do relatório, clique com o botão direito do mouse no nó **Imagens** e clique em **Adicionar Imagem**.  
   
@@ -32,13 +37,13 @@ caps.handback.revision: 10
   
 2.  Navegue até a imagem a ser inserida em sua definição de relatório e clique em **OK**.  
   
-### Para adicionar uma imagem de plano de fundo  
+### <a name="to-add-a-background-image"></a>Para adicionar uma imagem de plano de fundo  
   
 1.  No modo Design de Relatório, selecione o item de relatório ao qual você deseja adicionar uma imagem de plano de fundo.  
   
-2.  Se o painel Propriedades não estiver visível, na guia **Exibir**, selecione **Propriedades**.  
+2.  Se o painel Propriedades não estiver visível, na guia **Exibir** , selecione **Propriedades**.  
   
-3.  No painel Propriedades, expanda **BackgroundImage** e faça o seguinte:  
+3.  No painel Propriedades, expanda **BackgroundImage**e faça o seguinte:  
   
     -   Para uma imagem inserida:  
   
@@ -63,12 +68,12 @@ caps.handback.revision: 10
         > [!NOTE]  
         >  MIMEType só poderá ser aplicado se a propriedade **Source** estiver definida como **Banco de Dados**. Se a propriedade **Source** estiver definida como **Externa** ou **Inserida**, o valor **MIMEType** será ignorado.  
   
-    -   Para **BackgroundRepeat**, selecione uma expressão, **Default**, **Repeat**, **RepeatX** ou **RepeatY** ou **Clip**.  
+    -   Para **BackgroundRepeat**, selecione uma expressão, **Default**, **Repeat**, **RepeatX**ou **RepeatY**ou **Clip**.  
   
-         Para as imagens de tela de fundo em um gráfico, **BackgroundRepeat** poderá ser definido como **Default**, **Repeat**, **Fit** e **Clip**, mas não **RepeatX** ou **RepeatY**.  
+         Para as imagens de tela de fundo em um gráfico, **BackgroundRepeat** poderá ser definido como **Default**, **Repeat**, **Fit**e **Clip**, mas não **RepeatX** ou **RepeatY**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Imagens &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [Caixa de diálogo Propriedades da Imagem, Geral &#40;Construtor de Relatórios e SSRS&#41;](../Topic/Image%20Properties%20Dialog%20Box,%20General%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Caixa de diálogo Propriedades da Imagem, Geral &#40;Construtor de Relatórios e SSRS&#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

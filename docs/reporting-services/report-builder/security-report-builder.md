@@ -1,23 +1,28 @@
 ---
-title: "Seguran&#231;a (Construtor de Relat&#243;rios) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Segurança (construtor de relatórios) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 7e6f09ff050246777e307f73280c764dd6da3ad7
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Seguran&#231;a (Construtor de Relat&#243;rios)
+# <a name="security-report-builder"></a>Segurança (Construtor de Relatórios)
   O Construtor de Relatórios é um aplicativo cliente de criação de relatórios projetado para funcionar com um servidor de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . O servidor de relatório pode ser configurado para funcionar em modo nativo como um servidor autônomo ou em modo integrado do SharePoint para oferecer suporte a relatórios em um site do SharePoint.  
   
  No Construtor de Relatórios, você pode criar relatórios, conjuntos de dados compartilhados e partes de relatório reutilizáveis. A partir de um servidor de relatório ou um site do SharePoint, você pode editar relatórios e adicionar fontes de dados compartilhadas, conjunto de dados compartilhados e partes de relatório compartilhadas.  
@@ -55,7 +60,6 @@ caps.handback.revision: 10
   
      Se você não puder se conectar ou navegar até um site do SharePoint ou subsite, entre em contato com o administrador de site do SharePoint.  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ##  <a name="Reports"></a> Compreensão da segurança para relatórios publicados e itens relacionados a relatórios  
  A segurança para relatórios e itens relacionados a relatórios é gerenciada pelo administrador de servidor de relatório. Itens relacionados a relatório incluem fontes de dados inseridas e compartilhadas, inclusive credenciais, conjuntos de dados compartilhados, parâmetros, partes de relatório e modelos.  
@@ -74,7 +78,7 @@ caps.handback.revision: 10
   
 -   [Gerenciar conjuntos de dados compartilhados](../../reporting-services/report-data/manage-shared-datasets.md)  
   
-### Atualize notificações para partes de relatório  
+### <a name="update-notifications-for-report-parts"></a>Atualize notificações para partes de relatório  
  As partes de relatório são publicadas em um servidor de relatório para que outras pessoas possam compartilhá-las. Através de design, você especifica o local no qual as partes de relatório serão publicadas.  
   
  Os usuários que incluem partes de relatório em seus relatórios podem habilitar o recurso de atualização. Quando este recurso for habilitado, os usuários receberão notificações assim que as partes de relatório forem alteradas no servidor de relatório.  
@@ -83,7 +87,6 @@ caps.handback.revision: 10
   
  Para obter mais informações, consulte [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ##  <a name="Data"></a> Compreensão da segurança para dados de relatório e fontes de dados externas  
  Para acessar dados de cada fonte de dados externa em um relatório, crie uma fonte de dados inserida, adicione uma referência a uma fonte de dados compartilhada ou compartilhe o conjunto de dados em seu relatório.  
@@ -92,22 +95,20 @@ caps.handback.revision: 10
   
  As credenciais não são salvas na definição de relatório. Elas são gerenciadas independentemente do relatório no servidor de relatório, ou site do SharePoint, e no cliente de criação de relatório.  
   
- No momento do design do relatório, as credenciais são usadas para executar consultas de conjunto de dados e visualizar o relatório. No momento do design, as credenciais são usadas para executar consultas de relatório e consultas de cache. Você também pode armazenar em cache os resultados de consulta de conjunto de dados compartilhados independentemente. O tempo de design e o tempo de execução de credenciais podem ser diferentes. Para obter mais informações, consulte [Especificar as credenciais no Construtor de Relatórios](../Topic/Specify%20Credentials%20in%20Report%20Builder.md).  
+ No momento do design do relatório, as credenciais são usadas para executar consultas de conjunto de dados e visualizar o relatório. No momento do design, as credenciais são usadas para executar consultas de relatório e consultas de cache. Você também pode armazenar em cache os resultados de consulta de conjunto de dados compartilhados independentemente. O tempo de design e o tempo de execução de credenciais podem ser diferentes. Para obter mais informações, consulte [Especificar as credenciais no Construtor de Relatórios](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
  Para obter mais informações sobre dados de segurança, consulte os seguintes tópicos da documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- Para obter mais informações sobre fontes de dados, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+ Para obter mais informações sobre fontes de dados, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ##  <a name="Models"></a> Compreensão de modelos e filtros de segurança  
  Quando os dados são recuperados de um modelo de relatório com base em dados externos, você pode aplicar filtros de segurança no modelo. Essa é uma boa maneira de proteger dados, de forma que cada usuário que executar um relatório poderá consultar somente os dados que eles tiverem permissões.  
   
  Os parâmetros de relatório não são usados para segurança no nível de linha; eles não evitam que usuários ou grupos de usuários vejam linhas específicas de dados. Para aplicar segurança aos dados exibidos em um relatório, use filtros de segurança ou segurança do item de modelo.  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ##  <a name="Interactive"></a> Compreensão da segurança para criação de relatórios para recursos interativos  
  Frequentemente, os relatórios usam parâmetros para permitir que um usuário personalize a exibição de um relatório interativamente. Use as dicas a seguir para criar relatórios que seguem as práticas recomendadas:  
@@ -118,10 +119,9 @@ caps.handback.revision: 10
   
  Depois que os itens são publicados em um servidor de relatório, o administrador de servidor de relatório pode ajudar a protegê-los, atribuindo segurança com base em função ou segurança no nível do item ou da pasta. Para obter mais informações, consulte [Proteger relatórios e recursos](../../reporting-services/security/secure-reports-and-resources.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](http://go.microsoft.com/fwlink/?linkid=121312).  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
-## Consulte também  
- [Instalar e desinstalar o Construtor de Relatórios](../Topic/Install%20and%20Uninstall%20Report%20Builder.md)   
+## <a name="see-also"></a>Consulte também  
+ [Instalar e desinstalar o Construtor de Relatórios](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

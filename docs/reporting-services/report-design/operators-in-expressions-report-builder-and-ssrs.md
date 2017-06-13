@@ -1,29 +1,34 @@
 ---
-title: "Operadores em express&#245;es (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Operadores em expressões (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 35e702d0d1944cd5e7f2b7120da07e272f30cf70
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Operadores em express&#245;es (Construtor de Relat&#243;rios e SSRS)
+# <a name="operators-in-expressions-report-builder-and-ssrs"></a>Operadores em expressões (Construtor de Relatórios e SSRS)
   Um operador é um símbolo que representa ações aplicadas a um ou mais termos em uma expressão. As seguintes categorias de operadores têm suporte em uma expressão: aritmética, de comparação, de concatenação, lógica ou de bit a bit e de deslocamento de bit.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Aritmética  
+### <a name="arithmetic"></a>Aritmética  
  Os operadores aritméticos executam operações matemáticas sobre dois termos numéricos em uma expressão.  
   
 |Operador|Description|  
@@ -36,7 +41,7 @@ caps.handback.revision: 8
 |+|Soma dois números.|  
 |-|Retorna a diferença entre dois números ou indica o valor negativo de um termo numérico.|  
   
-### Comparação  
+### <a name="comparison"></a>Comparação  
  Os operadores de comparação testam se duas expressões são iguais.  
   
 |Operador|Description|  
@@ -50,7 +55,7 @@ caps.handback.revision: 8
 |Como|Determina se uma cadeia de caracteres específica corresponde a um padrão especificado. Um padrão pode incluir caracteres normais e curingas. Durante a correspondência de padrões, os caracteres normais devem corresponder exatamente aos caracteres especificados na cadeia de caracteres. No entanto, os caracteres curinga podem ser correspondidos a fragmentos arbitrários da cadeia de caracteres. O uso de caracteres curinga torna o operador LIKE mais flexível que o uso dos operadores de comparação de cadeias de caracteres = e !=.<br /><br /> A tabela a seguir lista os caracteres que podem ser usados como curingas:<br /><br /> %: qualquer cadeia de zero ou mais caracteres.<br /><br /> _: qualquer caractere único.<br /><br /> [ ]: qualquer caractere único dentro do intervalo (por exemplo, [a-f]) ou conjunto (por exemplo, [aeiou]) especificado.<br /><br /> [^]: qualquer caractere único que não esteja dentro do intervalo (por exemplo, [^a-f]) ou conjunto (por exemplo, [^aeiou]) especificado|  
 |Is|Compara duas referências de objeto.|  
   
-### Concatenação de cadeias de caracteres  
+### <a name="string-concatenation"></a>Concatenação de cadeias de caracteres  
  A concatenação de cadeias de caracteres anexa a segunda cadeia de caracteres à primeira em uma expressão. Para outras operações de cadeia de caracteres, use funções internas.  
   
 |Operador|Description|  
@@ -58,7 +63,7 @@ caps.handback.revision: 8
 |&|Concatena duas cadeias de caracteres|  
 |+|Concatena duas cadeias de caracteres|  
   
-### Lógico e de bit a bit  
+### <a name="logical-and-bitwise"></a>Lógico e de bit a bit  
  Os operadores lógicos e de bit a bit executam manipulações lógicas entre dois termos inteiros em uma expressão.  
   
 |Operador|Description|  
@@ -70,7 +75,7 @@ caps.handback.revision: 8
 |AndAlso|Executa a conjunção lógica em duas expressões.|  
 |OrElse|Executa a disjunção lógica em duas expressões.|  
   
-### Bit Shift  
+### <a name="bit-shift"></a>Bit Shift  
  Os operadores bit a bit executam manipulações de bit entre dois termos inteiros em uma expressão.  
   
 |Operador|Description|  
@@ -78,11 +83,11 @@ caps.handback.revision: 8
 |<\<|Executa um deslocamento aritmético à esquerda em um padrão de bit.|  
 |>>|Executa um deslocamento aritmético à direita em um padrão de bit.|  
   
-## Consulte também  
- [Caixa de diálogo Expressão](../Topic/Expression%20Dialog%20Box.md)   
+## <a name="see-also"></a>Consulte também  
+ [Caixa de diálogo Expressão](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Caixa de diálogo Expressão &#40;Construtor de Relatórios&#41;](../Topic/Expression%20Dialog%20Box%20\(Report%20Builder\).md)  
+ [Caixa de diálogo Expressão &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
   
   

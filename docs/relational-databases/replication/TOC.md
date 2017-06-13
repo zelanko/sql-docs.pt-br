@@ -73,7 +73,7 @@
 ### [Validar dados no assinante](validate-data-at-the-subscriber.md)  
 ## [Replicação de script](scripting-replication.md)  
 
-# [Conceitos de desenvolvedor](concepts/index.md)
+# [Conceitos de desenvolvedor](../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)
 
 # [Referência técnica](technical-reference-replication.md)  
 ## [Referência de propriedades](properties-reference-replication.md)  
@@ -277,11 +277,11 @@
 # [Tutoriais de replicação](replication-tutorials.md)  
 # [Preparando o servidor para a replicação](tutorial-preparing-the-server-for-replication.md)  
 ## [Lição 1: criando contas do Windows para a replicação](lesson-1-creating-windows-accounts-for-replication.md)  
-## [Lição 2: preparando a pasta do instantâneo](lesson-2-preparing-the-snapshot-folder.md)  
+## [Lição 2: Preparando a pasta do instantâneo](lesson-2-preparing-the-snapshot-folder.md)  
 ## [Lição 3: configurando a distribuição](lesson-3-configuring-distribution.md)  
 # [Replicando dados entre servidores completamente conectados](tutorial-replicating-data-between-continuously-connected-servers.md)  
 ## [Lição 1: publicando dados que usam replicação transacional](lesson-1-publishing-data-using-transactional-replication.md)  
-## [Lição 2: criando uma assinatura para a publicação transacional](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
+## [Lição 2: Criando uma assinatura na publicação transacional](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
 ## [Lição 3: validando a assinatura e medindo a latência](lesson-3-validating-the-subscription-and-measuring-latency.md)  
 # [Replicando dados com clientes móveis](tutorial-replicating-data-with-mobile-clients.md)  
 ## [Lição 1: publicando dados usando a replicação de mesclagem](lesson-1-publishing-data-using-merge-replication.md)  

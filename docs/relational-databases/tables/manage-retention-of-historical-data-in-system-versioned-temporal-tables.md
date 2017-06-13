@@ -2,7 +2,7 @@
 title: "Gerenciar a retenção de dados históricos em tabelas temporais com controle de versão do sistema | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 08/31/2016
+ms.date: 05/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c8237dfcc25045fb0fec915c942ea7968e02a13
+ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
+ms.openlocfilehash: 1fdb84c01f9e25c6ad818a6350a08df9ceaeae93
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/20/2017
 
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gerenciar a Retenção de Dados Históricos em Tabelas Temporais com Versão do Sistema
@@ -36,14 +36,16 @@ ms.lasthandoff: 04/11/2017
 ## <a name="data-retention-management-for-history-table"></a>Gerenciamento da retenção de dados da tabela de histórico  
  O gerenciamento da retenção de dados da tabela temporal começa com a determinação do período de retenção necessário para cada tabela temporal. Sua política de retenção, na maioria dos casos, deve ser considerada parte da lógica de negócios do aplicativo usando as tabelas temporais. Por exemplo, aplicativos na auditoria de dados e cenários de viagem de tempo têm requisitos sólidos em termos de quanto tempo os dados históricos devem estar disponíveis para consulta online.  
   
- Após determinar o período de retenção de dados, a próxima etapa é desenvolver um plano para gerenciar os dados históricos, como e onde você armazena seus dados históricos e como excluir dados históricos anteriores aos requisitos de retenção. Com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você tem as três abordagens a seguir para gerenciar dados históricos na tabela de histórico temporal:  
+ Após determinar o período de retenção de dados, a próxima etapa é desenvolver um plano para gerenciar os dados históricos, como e onde você armazena seus dados históricos e como excluir dados históricos anteriores aos requisitos de retenção. As seguintes abordagens para gerenciar dados históricos na tabela de histórico temporal estão disponíveis:  
   
--   [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#Anchor_1)  
+-   [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)  
   
--   [Particionamento de Tabela](https://msdn.microsoft.com/library/mt637341.aspx#Anchor_2)  
+-   [Particionamento de Tabela](https://msdn.microsoft.com/library/mt637341.aspx#using-table-partitioning-approach)  
   
--   [Script de Limpeza Personalizada](https://msdn.microsoft.com/library/mt637341.aspx#Anchor_3)  
-  
+-   [Script de Limpeza Personalizada](https://msdn.microsoft.com/library/mt637341.aspx#using-custom-cleanup-script-approach)  
+
+-   [Política de retenção](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)  
+
  Com cada uma dessas abordagens, a lógica para a migração ou limpeza de dados históricos baseia-se na coluna que corresponde ao término do período na tabela atual. O final do valor do período para cada linha determina o momento em que a versão de linha se torna "fechada", ou seja, quando ela chega à tabela de histórico. Por exemplo, a condição `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` especifica que dados históricos com mais de um mês precisam ser removidos ou movidos da tabela de histórico.  
   
 > **OBSERVAÇÃO:**  os exemplos deste tópico usam este [exemplo de Tabela Temporal](https://msdn.microsoft.com/library/mt590957.aspx).  
@@ -425,7 +427,78 @@ BEGIN TRAN
     EXEC (@enableVersioningScript);  
 COMMIT;  
 ```  
-  
+
+## <a name="using-temporal-history-retention-policy-approach"></a>Usando a abordagem de política de retenção de histórico Temporal
+> **Observação:** usando a política de retenção de histórico Temporal abordagem se aplica a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e 2017 do SQL Server a partir do CTP 1.3.  
+
+Retenção de histórico temporal pode ser configurado no nível de tabela individuais, que permite aos usuários criar vencimento flexível políticas. A aplicação de retenção temporal é simple: requer apenas um parâmetro a ser definido durante a alteração de esquema ou criação de tabela.
+
+Depois de definir a política de retenção, o banco de dados do SQL Azure inicia verificando regularmente se há linhas de histórico que são qualificadas para a limpeza automática de dados. Identificação de linhas correspondentes e sua remoção da tabela de histórico ocorrem de modo transparente, na tarefa em segundo plano que é programada e executada pelo sistema. Condição de idade para as linhas da tabela de histórico é verificada com base na coluna que representa o final do período SYSTEM_TIME. Se o período de retenção, por exemplo, é definido como seis meses, linhas de tabela qualificadas para limpeza atendem a seguinte condição:
+```
+ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
+```
+No exemplo anterior, supomos que a coluna de ValidTo corresponde ao final do período SYSTEM_TIME.
+### <a name="how-to-configure-retention-policy"></a>Como configurar a política de retenção?
+Antes de configurar a política de retenção para uma tabela temporal, verifique primeiro se a retenção de histórico temporal está habilitada no nível do banco de dados:
+```
+SELECT is_temporal_history_retention_enabled, name
+FROM sys.databases
+```
+Sinalizador de banco de dados **is_temporal_history_retention_enabled** é definida como ON, por padrão, mas os usuários podem alterá-lo com a instrução ALTER DATABASE. Automaticamente, ela é definida como OFF após ponto na operação de restauração do tempo. Para ativar a limpeza de retenção de histórico temporal para seu banco de dados, execute a seguinte instrução:
+```
+ALTER DATABASE <myDB>
+SET TEMPORAL_HISTORY_RETENTION  ON
+```
+Política de retenção é configurada durante a criação de uma tabela especificando o valor do parâmetro HISTORY_RETENTION_PERIOD:
+```
+CREATE TABLE dbo.WebsiteUserInfo
+(  
+    [UserID] int NOT NULL PRIMARY KEY CLUSTERED
+  , [UserName] nvarchar(100) NOT NULL
+  , [PagesVisited] int NOT NULL
+  , [ValidFrom] datetime2 (0) GENERATED ALWAYS AS ROW START
+  , [ValidTo] datetime2 (0) GENERATED ALWAYS AS ROW END
+  , PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)
+ )  
+ WITH
+ (
+     SYSTEM_VERSIONING = ON
+     (
+        HISTORY_TABLE = dbo.WebsiteUserInfoHistory,
+        HISTORY_RETENTION_PERIOD = 6 MONTHS
+     )
+ );
+```
+Você pode especificar o período de retenção usando unidades de tempo diferentes: dias, semanas, meses e anos. Se HISTORY_RETENTION_PERIOD for omitido, será assumida retenção infinito. Você também pode usar palavras-chave infinito explicitamente.
+Em alguns cenários, você talvez queira configurar retenção após a criação de tabela ou alterar anteriormente valor configurado. Neste caso use a instrução ALTER TABLE:
+```
+ALTER TABLE dbo.WebsiteUserInfo
+SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 9 MONTHS));
+```
+Para examinar o estado atual da política de retenção, use a seguinte consulta que une o sinalizador de habilitação de tempo de retenção no nível do banco de dados com períodos de retenção para tabelas individuais:
+```
+SELECT DB.is_temporal_history_retention_enabled,
+SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,
+T1.name as TemporalTableName,  SCHEMA_NAME(T2.schema_id) AS HistoryTableSchema,
+T2.name as HistoryTableName,T1.history_retention_period,
+T1.history_retention_period_unit_desc
+FROM sys.tables T1  
+OUTER APPLY (select is_temporal_history_retention_enabled from sys.databases
+where name = DB_NAME()) AS DB
+LEFT JOIN sys.tables T2   
+ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
+```
+### <a name="how-sql-database-deletes-aged-rows"></a>Como o banco de dados SQL exclui antigos linhas?
+O processo de limpeza depende do layout do índice da tabela de histórico. É importante observar que *somente tabelas de histórico com um índice clusterizado (árvore B ou columnstore) podem ter uma política de retenção finito configurada*. Uma tarefa em segundo plano é criada para executar a limpeza de dados antigos para todas as tabelas temporais com período de retenção finito. Lógica de limpeza para o índice clusterizado rowstore (árvore B) exclui as linhas antigas em partes menores (até 10 K) minimizando a pressão no log do banco de dados e o subsistema de e/s. Embora a lógica de limpeza utiliza o índice de árvore B necessário, ordem de exclusões para as linhas mais antigas que o período de retenção não pode ser garantido firmemente. Portanto, *não têm nenhuma dependência na ordem de limpeza em seus aplicativos*.
+
+A tarefa de limpeza para o columnstore clusterizado remove os grupos de toda a linha de uma vez (normalmente contém 1 milhão de linhas cada), que é muito eficiente, especialmente quando os dados históricos são gerados em uma alta velocidade.
+
+![Clustered columnstore retenção](../../relational-databases/tables/media/cciretention.png "Clustered columnstore retenção")
+
+Compactação de dados excelente e torna a limpeza retenção eficiente columnstore índice clusterizado uma opção ideal para cenários quando sua carga de trabalho gera rapidamente grande quantidade de dados históricos. Esse padrão é comum para cargas de trabalho intensivas de processamento de transações que usam tabelas temporais para controle de alterações e auditoria, análise de tendências ou IoT ingestão de dados.
+
+Verifique [gerenciar dados históricos em tabelas temporais com a política de retenção](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy) para obter mais detalhes.
+
 ## <a name="see-also"></a>Consulte também  
  [Tabelas temporais](../../relational-databases/tables/temporal-tables.md)   
  [Introdução a Tabelas Temporais com Controle da Versão do Sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

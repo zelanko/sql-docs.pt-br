@@ -1,38 +1,43 @@
 ---
-title: "Adicionar locais personalizados a um mapa (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE"
+title: "Adicionar locais personalizados a um mapa (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c78f99c32d37e36986c4ea8bac20c12f87d4d568
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Adicionar locais personalizados a um mapa (Construtor de Relat&#243;rios e SSRS)
-  Depois que adicionar um mapa a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], você poderá adicionar seus próprios locais de ponto.  
+# <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>Adicionar locais personalizados a um mapa (Construtor de Relatórios e SSRS)
+  Depois que adicionar um mapa a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , você poderá adicionar seus próprios locais de ponto.  
   
  As propriedades de exibição de todos os pontos em uma camada são controladas pela definição de opções para as propriedades de ponto da camada. Para um ponto inserido selecionado, você pode substituir as propriedades de exibição.  
   
 > [!NOTE]  
 >  Quando você substituir as propriedades de exibição da camada para o ponto inserido, as alterações feitas não serão reversíveis.  
   
- Para obter mais informações, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ Para obter mais informações, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Para adicionar uma camada de ponto  
+## <a name="to-add-a-point-layer"></a>Para adicionar uma camada de ponto  
   
 1.  Na superfície de design de relatório, clique no mapa para selecioná-lo e exibir o painel Mapa.  
   
@@ -40,15 +45,15 @@ caps.handback.revision: 10
   
 3.  Na lista suspensa, clique em **Adicionar Camada de Ponto**. Uma camada de ponto sem pontos é adicionada ao mapa. Por padrão, a camada de ponto está pronta para pontos inseridos.  
   
-## Para adicionar um ponto personalizado  
+## <a name="to-add-a-custom-point"></a>Para adicionar um ponto personalizado  
   
 1.  Na superfície de design de relatório, clique no mapa para selecioná-lo e exibir o painel Mapa.  
   
-2.  No painel Mapa, clique com o botão direito do mouse em uma camada de ponto que tenha o tipo **Inserido** e clique em **Adicionar Ponto**. O cursor se transforma em uma cruz.  
+2.  No painel Mapa, clique com o botão direito do mouse em uma camada de ponto que tenha o tipo **Inserido**e clique em **Adicionar Ponto**. O cursor se transforma em uma cruz.  
   
 3.  Para adicionar um ponto, clique em um local no mapa. Um ponto inserido é adicionado à camada selecionada no local em que você clica.  
   
-## Para personalizar a exibição para um ponto inserido  
+## <a name="to-customize-the-display-for-an-embedded-point"></a>Para personalizar a exibição para um ponto inserido  
   
 1.  Clique com o botão direito do mouse no ponto e clique em **Propriedades de Ponto**. A caixa de diálogo **Propriedades do Ponto Inserido do Mapa** aparece.  
   
@@ -56,8 +61,8 @@ caps.handback.revision: 10
   
 3.  Clique nas páginas e defina as propriedades de exibição que você deseja aplicar a esse ponto.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)  
+ [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
   

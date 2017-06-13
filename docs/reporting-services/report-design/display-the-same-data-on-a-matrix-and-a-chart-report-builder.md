@@ -1,23 +1,28 @@
 ---
-title: "Exibir os mesmos dados em uma matriz e um gr&#225;fico (Construtor de Relat&#243;rios) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Exibir os mesmos dados em uma matriz e um gráfico (construtor de relatórios) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bf125e2438d3d79662920c8fbc93faab8e8024d4
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Exibir os mesmos dados em uma matriz e um gr&#225;fico (Construtor de Relat&#243;rios)
+# <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Exibir os mesmos dados em uma matriz e um gráfico (Construtor de Relatórios)
   Quando quiser mostrar os mesmos dados em uma matriz e em um gráfico, defina propriedades em ambas as regiões de dados para especificar o mesmo conjunto de dados, além das mesmas expressões para filtros, grupos, classificações e dados.  
   
  Como as regiões de dados terão o mesmo ancestral de dados (o conjunto de dados de relatório), você pode adicionar um botão de classificação interativo à matriz que, quando clicado, altera a ordem de classificação tanto da matriz quanto do gráfico. Para obter mais informações, consulte [Adicionar classificação interativa a uma tabela ou matriz &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
@@ -29,7 +34,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Para adicionar uma matriz e um gráfico e exibir os mesmos dados  
+### <a name="to-add-a-matrix-and-chart-to-display-the-same-data"></a>Para adicionar uma matriz e um gráfico e exibir os mesmos dados  
   
 1.  Abra um relatório no modo Design.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 6
   
 3.  Na guia **Inserir** , no grupo **Regiões de Dados** , clique em **Gráfico**e, em seguida, selecione o tipo de gráfico. Um gráfico será adicionado ao relatório.  
   
-4.  (Opcional) Na guia **Inserir**, no grupo **Itens de Relatório**, clique em **Retângulo** e clique no relatório. Um retângulo será adicionado ao relatório. Arraste a matriz e o gráfico das etapas 2 e 3 para o retângulo.  
+4.  (Opcional) Na guia **Inserir** , no grupo **Itens de Relatório** , clique em **Retângulo**e clique no relatório. Um retângulo será adicionado ao relatório. Arraste a matriz e o gráfico das etapas 2 e 3 para o retângulo.  
   
      Ao colocar várias regiões de dados no contêiner do retângulo, você ajuda a controlar como a matriz e o gráfico serão renderizados quando você exibir o relatório.  
   
@@ -47,13 +52,13 @@ caps.handback.revision: 6
   
      Por padrão, a função de agregação Sum é usada para calcular o valor do grupo. Caso altere a função de agregação na matriz, você deve alterá-la no gráfico também.  
   
-6.  Na matriz, clique com o botão direito do mouse na célula com dados, clique em **Propriedades da Caixa de Texto** e em **Número**. Escolha um formato apropriado ao valor do campo de conjunto de dados.  
+6.  Na matriz, clique com o botão direito do mouse na célula com dados, clique em **Propriedades da Caixa de Texto**e em **Número**. Escolha um formato apropriado ao valor do campo de conjunto de dados.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 8.  Arraste o mesmo campo do conjunto de dados que você escolheu na etapa 3 para a área **Valores** no gráfico.  
   
-9. No gráfico, clique com o botão direito do mouse no eixo Y, clique em **Propriedades do Eixo** e em **Número**. Escolha o mesmo formato dos dados escolhidos na etapa 4.  
+9. No gráfico, clique com o botão direito do mouse no eixo Y, clique em **Propriedades do Eixo**e em **Número**. Escolha o mesmo formato dos dados escolhidos na etapa 4.  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -95,9 +100,9 @@ caps.handback.revision: 6
   
 25. Visualize o resultado. Os grupos de linhas e de colunas da matriz exibem os mesmos dados dos grupos de séries e de categorias do gráfico.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+ [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   

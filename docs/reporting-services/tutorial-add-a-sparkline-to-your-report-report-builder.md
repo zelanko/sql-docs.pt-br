@@ -1,55 +1,40 @@
 ---
-title: "Tutorial: Adicionar um minigr&#225;fico ao relat&#243;rio (Construtor de Relat&#243;rios) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Tutorial: Adicionar um minigráfico ao relatório (construtor de relatórios) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutorial: Adicionar um minigr&#225;fico ao relat&#243;rio (Construtor de Relat&#243;rios)
-Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)], você cria uma tabela básica com um minigráfico em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].   
+
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adicionar um minigráfico ao relatório (Construtor de Relatórios)
+
+Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)], você cria uma tabela básica com um minigráfico em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
   
-Minigráficos e barras de dados são gráficos pequenos e simples que transmitem muitas informações em um espaço pequeno, geralmente em tabelas e matrizes dos relatórios do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. A ilustração a seguir mostra um relatório semelhante ao que você criará.  
+Minigráficos e barras de dados são gráficos pequenos e simples que transmitem muitas informações em um espaço pequeno, geralmente em tabelas e matrizes dos relatórios do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . A ilustração a seguir mostra um relatório semelhante ao que você criará.  
   
 ![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
-   
-## <a name="BackToTop"></a>O que você aprenderá  
-Neste tutorial, você aprenderá a:  
-  
-1. [Criar um relatório com uma tabela](#CreateTable)  
-  
-2. [Criar uma consulta e o layout da tabela no Assistente de Tabela ou Matriz](#Query)
- 
-    2a. (opcional) [Formatar dados como moeda](#FormatCurrency)  
-  
-    2b. (opcional) [Formatar dados como datas](#FormatDates)  
-  
-3. [Adicionar um minigráfico à tabela](#Sparkline)  
-  
-4. [Alinhar os minigráficos vertical e horizontalmente](#AlignSparklines)  
-  
-### Outras etapas opcionais  
-7. [Alterar a Largura das Colunas](#Width)  
-  
-8. [Adicionar um título de relatório](#Title)  
-  
-9. [Salvar o relatório](#Save)  
-  
+     
 Tempo estimado para concluir este tutorial: 30 minutos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
 Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="CreateTable"></a>1. Criar um relatório com uma tabela  
@@ -64,10 +49,10 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
   
 3.  No painel direito, clique em **Assistente de Tabela ou Matriz**.  
   
-4.  Na página **Escolher um conjunto de dados**, selecione **Criar um conjunto de dados** > **Avançar**. A página **Escolher uma conexão com uma fonte de dados** é aberta.  
+4.  Na página **Escolher um conjunto de dados** , selecione **Criar um conjunto de dados** > **Avançar**. A página **Escolher uma conexão com uma fonte de dados** é aberta.  
   
     > [!NOTE]  
-    > Este tutorial não precisa de dados específicos; ele só precisa de uma conexão com um banco de dados [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Se você já tiver uma conexão de fonte de dados listada em **Conexões de Fonte de Dados**, será possível selecioná-la e ir para a etapa 10. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Este tutorial não precisa de dados específicos. ele só precisa de uma conexão para um banco de dados do SQL Server. Se você já tiver uma conexão de fonte de dados listada em **Conexões de Fonte de Dados**, será possível selecioná-la e ir para a etapa 10. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  Clique em **Nova**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
   
@@ -85,7 +70,7 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    Você voltará à página **Escolher uma conexão com uma fonte de dados**.  
+    Você voltará à página **Escolher uma conexão com uma fonte de dados** .  
   
 11. Para verificar se é possível se conectar à fonte de dados, clique em **Testar Conexão**.  
   
@@ -101,13 +86,13 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
 > [!NOTE]  
 > Neste tutorial, a consulta contém os valores de dados para que não precise de uma fonte de dados externa. Isso torna a consulta bastante longa. Em um ambiente empresarial, uma consulta não conteria os dados. Isso é apenas para fins de aprendizado.  
   
-### Para criar uma consulta e o layout da tabela no Assistente de Tabela 
+### <a name="to-create-a-query-and-table-layout-in-the-table-wizard"></a>Para criar uma consulta e o layout da tabela no Assistente de Tabela 
   
-1.  Na página **Criar uma consulta**, o designer de consultas relacionais é aberto. Para este tutorial, você usará o designer de consulta baseado em texto.  
+1.  Na página **Criar uma consulta** , o designer de consultas relacionais é aberto. Para este tutorial, você usará o designer de consulta baseado em texto.  
   
 2.  Clique em **Editar Como Texto**. O designer de consulta baseado em texto exibe um painel de consulta e um painel de resultados.  
   
-3.  Cole a consulta [!INCLUDE[tsql](../includes/tsql-md.md)] a seguir na caixa **Consulta**.  
+3.  Cole a consulta [!INCLUDE[tsql](../includes/tsql-md.md)] a seguir na caixa **Consulta** .  
   
     ```  
     SELECT CAST('2015-01-04' AS date) as SalesDate, 'Accessories' as Subcategory,   
@@ -144,11 +129,11 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 4.  Na barra de ferramentas do designer de consultas, clique em Executar (**!**).  
   
-    A consulta é executada e exibe o conjunto de resultados dos campos **SalesDate**, **Subcategory**, **Product**, **Sales** e **Quantity**.  
+    A consulta é executada e exibe o conjunto de resultados dos campos **SalesDate**, **Subcategory**, **Product**, **Sales**e **Quantity**.  
   
 5.  Clique em **Avançar**.  
   
-6.  Na página **Organizar campos**, arraste **Sales** até **Valores**.  
+6.  Na página **Organizar campos** , arraste **Sales** até **Valores**.  
   
     **Sales** é agregado pela função Sum. O valor é [Sum(Sales)].  
   
@@ -160,7 +145,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 9. Clique em **Avançar**.  
   
-10. Na página **Escolher o layout**, em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
+10. Na página **Escolher o layout** , em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
   
     O painel Visualizar do assistente exibe uma tabela com três linhas. Ao executar o relatório, cada linha será exibida da seguinte forma:  
   
@@ -178,7 +163,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 14. A tabela é adicionada à superfície de design. A tabela tem três colunas e três linhas.  
   
-    Pesquisar o painel Agrupamento. Se você não conseguir ver o painel Agrupamento, no menu **Exibir**, clique em **Agrupamento**. O painel Grupos de Linhas mostra um grupo de linhas: **Product**. O painel Grupos de Colunas mostra um grupo de colunas: **SalesDate**. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
+    Pesquisar o painel Agrupamento. Se você não conseguir ver o painel Agrupamento, no menu **Exibir** , clique em **Agrupamento**. O painel Grupos de Linhas mostra um grupo de linhas: **Product**. O painel Grupos de Colunas mostra um grupo de colunas: **SalesDate**. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
@@ -189,7 +174,7 @@ Por padrão, os dados de resumo do campo **Sales** exibem um número geral. Form
   
 1.  Clique em **Design** a fim de alternar para a exibição de design.  
   
-2.  Clique na célula da segunda linha (sob a linha dos cabeçalhos de coluna) na coluna **SalesDate**. Mantenha pressionada a tecla Ctrl e selecione todas as células que contêm `[Sum(Sales)]`. 
+2.  Clique na célula da segunda linha (sob a linha dos cabeçalhos de coluna) na coluna **SalesDate** . Mantenha pressionada a tecla Ctrl e selecione todas as células que contêm `[Sum(Sales)]`. 
 
     ![report-builder-select-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
   
@@ -197,7 +182,7 @@ Por padrão, os dados de resumo do campo **Sales** exibem um número geral. Form
 
     ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**$12,345.00**]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números**, clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
+    Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**$12,345.00**]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
    
@@ -220,7 +205,7 @@ Os valores de **SalesDate** são exibidos no formato de data padrão e os valore
   
 2.  Selecione a coluna Total na tabela.  
   
-3.  Clique com o botão direito do mouse, aponte para **Inserir Coluna** e clique em **Esquerda**.  
+3.  Clique com o botão direito do mouse, aponte para **Inserir Coluna**e clique em **Esquerda**.  
 
     ![report-builder-add-column-left](../reporting-services/media/report-builder-add-column-left.png)
   
@@ -228,7 +213,7 @@ Os valores de **SalesDate** são exibidos no formato de data padrão e os valore
 
     ![report-builder-insert-sparkline](../reporting-services/media/report-builder-insert-sparkline.png)
   
-5.  Na caixa de diálogo **Selecionar Tipo de Minigráfico**, verifique se o primeiro minigráfico na linha **Coluna** está selecionado e clique em **OK**.  
+5.  Na caixa de diálogo **Selecionar Tipo de Minigráfico** , verifique se o primeiro minigráfico na linha **Coluna** está selecionado e clique em **OK**.  
   
 6.  Clique no minigráfico para mostrar o painel Dados do Gráfico.  
   
@@ -255,7 +240,7 @@ Os minigráficos são difíceis de ler quando todos não apresentam as mesmas me
   
 2.  Clique com o botão direito do mouse no minigráfico e clique em **Propriedades do Eixo Vertical**.  
   
-3.  Marque a caixa de seleção **Alinhar eixos em**. Tablix1 é a única opção da lista.  
+3.  Marque a caixa de seleção **Alinhar eixos em** . Tablix1 é a única opção da lista.  
   
      Isso define a altura das barras em cada minigráfico referente às outras. 
   
@@ -263,7 +248,7 @@ Os minigráficos são difíceis de ler quando todos não apresentam as mesmas me
   
 5.  Clique com o botão direito do mouse no minigráfico e clique em **Propriedades do Eixo Horizontal**.  
   
-6.  Marque a caixa de seleção **Alinhar eixos em**. Tablix1 é a única opção da lista. 
+6.  Marque a caixa de seleção **Alinhar eixos em** . Tablix1 é a única opção da lista. 
   
     Isso define a largura das barras em cada minigráfico referente às outras. Se alguns minigráficos tiverem menos barras em sequência do que outros, esses minigráficos terão espaços em branco para os dados não encontrados.  
   
@@ -280,7 +265,7 @@ Por padrão, cada célula da tabela contém uma caixa de texto. Uma caixa de tex
   
 Para reduzir a quantidade de espaço vertical que cada linha ocupa, expanda a largura da coluna para acomodar em uma única linha o conteúdo esperado das caixas de texto da coluna.  
   
-### Para alterar a largura das colunas  
+### <a name="to-change-the-width-of-columns"></a>Para alterar a largura das colunas  
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
@@ -295,11 +280,11 @@ Um título é exibido na parte superior do relatório. É possível colocar o t�
   
 O texto pode ser aprimorado ainda mais aplicando-se estilos, tamanhos e cores de fontes diferentes a frases e caracteres individuais do texto. Para obter mais informações, consulte [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
-### Para adicionar um título de relatório  
+### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
   
 1.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-2.  Digite **Vendas por Data** e clique fora da caixa de texto.  
+2.  Digite **Vendas por Data**e clique fora da caixa de texto.  
   
 3.  Marque a caixa de texto que contém **Vendas de Produtos**.  
   
@@ -310,9 +295,9 @@ O texto pode ser aprimorado ainda mais aplicando-se estilos, tamanhos e cores de
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Save"></a>9. Salvar o relatório  
-Salve o relatório em um servidor de relatório ou no computador. Se você não salvar o relatório no servidor de relatório, vários recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], como partes do relatório e sub-relatórios, não estarão disponíveis.  
+Salve o relatório em um servidor de relatório ou no computador. Se você não salvar o relatório no servidor de relatório, vários recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , como partes do relatório e sub-relatórios, não estarão disponíveis.  
   
-### Para salvar o relatório em um servidor de relatório  
+### <a name="to-save-the-report-on-a-report-server"></a>Para salvar o relatório em um servidor de relatório  
   
 1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
@@ -328,20 +313,21 @@ Salve o relatório em um servidor de relatório ou no computador. Se você não 
   
 O relatório será salvo no servidor de relatório. O nome do servidor de relatório ao qual você está conectado é exibido na barra de status da parte inferior da janela.  
   
-### Para salvar o relatório no computador  
+### <a name="to-save-the-report-on-your-computer"></a>Para salvar o relatório no computador  
   
 1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
-2.  Clique em **Área de Trabalho**, **Meus Documentos** ou **Meu computador** e procure a pasta na qual você quer salvar o relatório.  
+2.  Clique em **Área de Trabalho**, **Meus Documentos**ou **Meu computador**e procure a pasta na qual você quer salvar o relatório.  
   
 3.  Em **Nome**, substitua o nome padrão por **Vendas de Produtos**.  
   
 4.  Clique em **Salvar**.  
   
-## Próximas etapas  
-Isso conclui o tutorial para criar um relatório de tabela com minigráficos. Para obter mais informações sobre minigráficos, consulte [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+## <a name="next-steps"></a>Próximas etapas  
+
+Isso conclui o tutorial para criar um relatório de tabela com minigráficos. Para obter mais informações sobre minigráficos, consulte [minigráficos e barras de dados](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## Consulte também  
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md) 
 [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
+
+Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

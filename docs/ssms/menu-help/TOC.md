@@ -1,3 +1,4 @@
+# [Ajuda do menu do SQL Server Management Studio](sql-server-management-studio-menu-help.md)
 # [Ajuda de F1 da janela Propriedades (Management Studio)](properties-window-f1-help-management-studio.md)
 # [Opções (Ambiente – página de Fontes e Cores)](options-environment-fonts-and-colors-page.md)
 # [Opções (Ambiente – Ajuda – página Geral)](options-environment-help-general-page.md)
@@ -14,7 +15,6 @@
 # [Caixa de diálogo Windows (Ajuda do Gerenciador de Documentos da Microsoft)](windows-dialog-box-microsoft-document-explorer-help.md)
 # [Opções Avançadas de Salvamento](advanced-save-options.md)
 # [Salvar como](save-as.md)
-# [Ajuda do menu do SQL Server Management Studio](sql-server-management-studio-menu-help.md)
 # [Personalizar (página Barras de Ferramentas)](customize-toolbars-page.md)
 # [Opções (Designer – página Planos de Manutenção)](options-designers-maintenance-plans-page.md)
 # [Caixa de diálogo Escolher Pastas de Pesquisa (Visual Studio)](choose-search-folders-dialog-box-visual-studio.md)

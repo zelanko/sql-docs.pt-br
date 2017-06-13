@@ -1,24 +1,29 @@
 ---
-title: "Tutorial: Adicionar um gr&#225;fico de pizza ao relat&#243;rio (Construtor de Relat&#243;rios) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Tutorial: Adicionar um gráfico de pizza ao relatório (construtor de relatórios) | Microsoft Docs"
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutorial: Adicionar um gr&#225;fico de pizza ao relat&#243;rio (Construtor de Relat&#243;rios)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios)
 Neste tutorial, você cria um gráfico de pizza em um relatório paginado do Reporting Services. Você adiciona percentuais e combina fatias pequenas em uma única fatia.
 
 Gráficos de pizza e de rosca exibem dados como uma proporção do todo. Eles não têm eixo. Quando você adiciona um campo numérico a um gráfico de pizza, o gráfico calcula o percentual de cada valor com o total.  
@@ -28,30 +33,13 @@ A ilustração a seguir mostra o gráfico de pizza que será criado.
 ![report-builder-pie-chart-final](../reporting-services/media/report-builder-pie-chart-final.png)
   
 Se houver muitos pontos de dados em um gráfico de pizza, os rótulos dos pontos de dados podem ficar muito cheios para serem lidos. Nesse caso, considere a combinação de um número de fatias pequenas em uma fatia maior. Gráficos de pizza são mais fáceis de ler quando você agrega os dados em poucos pontos de dados.  
-  
-## <a name="BackToTop"></a>O que você aprenderá  
-Neste tutorial, você aprenderá a:  
-  
-1.  [Criar um gráfico de pizza no Assistente de gráfico](#Chart)  
-  
-2.  [Escolher o tipo de gráfico](#ChartType)  
-  
-3.  [Exibir as porcentagens em cada fatia do gráfico](#Percentages)  
-  
-4.  [Combinar pequenas fatias em uma fatia](#CombineSlices)  
-  
-5.  [Iniciar valores do gráfico de pizza na parte superior](#DrawingEffect)  
-  
-6.  [Adicionar um título de relatório](#Title)  
-  
-7.  [Salvar o relatório](#Save)  
-  
+ 
 > [!NOTE]  
 > Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos. Para obter instruções passo a passo sobre como procurar um servidor de relatório, adicionar uma fonte de dados e um conjunto de dados, consulte o primeiro tutorial desta série: [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 10 minutos  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
 Para obter informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Chart"></a>1. Criar um gráfico de pizza no Assistente de gráfico  
@@ -68,9 +56,9 @@ Nesta seção, você usa o Assistente de Gráfico para criar um conjunto de dado
   
 3.  No painel direito, clique em **Assistente de Gráfico**.  
   
-4.  Na página **Escolher um conjunto de dados**, clique em **Criar um conjunto de dados** e em **Avançar**.  
+4.  Na página **Escolher um conjunto de dados** , clique em **Criar um conjunto de dados**e em **Avançar**.  
   
-5.  Na página **Escolher uma conexão com uma fonte de dados**, selecione uma fonte de dados existente ou procure o servidor de relatório, selecione uma fonte de dados e clique em **Avançar**. Talvez seja necessário inserir um nome de usuário e uma senha.  
+5.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório, selecione uma fonte de dados e clique em **Avançar**. Talvez seja necessário inserir um nome de usuário e uma senha.  
   
     > [!NOTE]  
     > A fonte de dados escolhida não tem importância, contanto que você tenha permissões suficientes. Você não obterá dados da fonte de dados. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -101,11 +89,11 @@ Nesta seção, você usa o Assistente de Gráfico para criar um conjunto de dado
 Você pode escolher um dos diversos tipos de gráfico predefinidos.  
 
   
-1.  Na página **Escolher um tipo de gráfico**, clique em **Pizza** e em **Avançar**. A página **Organizar campos de gráfico** será aberta.  
+1.  Na página **Escolher um tipo de gráfico** , clique em **Pizza**e em **Avançar**. A página **Organizar campos de gráfico** será aberta.  
   
-    Na página **Organizar campos de gráfico**, arraste o campo Produto até o painel **Categorias**. Esse painel define o número de fatias do gráfico de pizza. Neste exemplo, haverá oito fatias, uma para cada produto.  
+    Na página **Organizar campos de gráfico** , arraste o campo Produto até o painel **Categorias** . Esse painel define o número de fatias do gráfico de pizza. Neste exemplo, haverá oito fatias, uma para cada produto.  
   
-2.  Arraste o campo Vendas até o painel **Valores**. Sales representa a quantidade de vendas da subcategoria. O painel **Valores** exibe `[Sum(Sales)]` porque o gráfico exibe a agregação de cada produto.  
+2.  Arraste o campo Vendas até o painel **Valores** . Sales representa a quantidade de vendas da subcategoria. O painel **Valores** exibe `[Sum(Sales)]` porque o gráfico exibe a agregação de cada produto.  
   
 3.  Clique em **Avançar** para ver uma visualização.  
   
@@ -133,14 +121,14 @@ Em cada fatia da pizza, é possível exibir uma porcentagem dessa fatia comparad
   
 3.  Clique com o botão direito do mouse em um rótulo e clique em **Propriedades do Rótulo da Série**.  
   
-4.  Na caixa **Rotular dados**, selecione **#PERCENT**.  
+4.  Na caixa **Rotular dados** , selecione **#PERCENT**.  
     
-5.  (Opcional) Para especificar quantas casas decimais o rótulo deve mostrar, na caixa **Rotular dados** após **#PERCENT**, digite **{Pn}**, em que *n* é o número de casas decimais a serem exibidas. Por exemplo, para não exibir nenhuma casa decimal, digite **#PERCENT{P0}**.  
+5.  (Opcional) Para especificar quantas casas decimais o rótulo mostra, no **Rotular dados** caixa após **#PERCENT**, tipo **{Pn}** onde  *n*  é o número de casas decimais a serem exibidas. Por exemplo, para não exibir nenhuma casa decimal, digite **#PERCENT{P0}**.  
 
-6.  Para exibir valores como porcentagens, a propriedade UseValueAsLabel deve ser falsa. Se for solicitado que você defina esse valor na caixa de diálogo **Confirmar Ação**, clique em **Sim**.  
+6.  Para exibir valores como porcentagens, a propriedade UseValueAsLabel deve ser falsa. Se for solicitado que você defina esse valor na caixa de diálogo **Confirmar Ação** , clique em **Sim**.  
   
     > [!NOTE]  
-    > O **Formato de Número** na caixa de diálogo **Propriedades do Rótulo de Série** não tem nenhum efeito quando você formata percentuais. Isso formata os rótulos como porcentagens, mas não calcula qual porcentagem do gráfico de pizza cada fatia representa.  
+    > O**Formato de Número** na caixa de diálogo **Propriedades do Rótulo de Série** não tem nenhum efeito quando você formata percentuais. Isso formata os rótulos como porcentagens, mas não calcula qual porcentagem do gráfico de pizza cada fatia representa.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -169,7 +157,7 @@ Três das fatias do gráfico são bastante pequenas. Você pode combinar várias
   
 7.  Verifique se a propriedade **CollectedThresholdUsePercent** está definida como **True**.  
   
-8.  Na guia **Início**, clique em **Executar** para visualizar o relatório.  
+8.  Na guia **Início** , clique em **Executar** para visualizar o relatório.  
   
 Na legenda, agora você vê a categoria “Outros”. A nova fatia da pizza combina todas as fatias que estavam abaixo de 5% em uma fatia que representa 6% da pizza inteira.  
 
@@ -201,11 +189,11 @@ Como o gráfico de pizza é a única visualização do relatório, o gráfico n�
 
 2. Na superfície de design, clique em **Clique para adicionar título**.  
   
-2.  Digite **Vendas de Câmeras e Filmadoras**, pressione ENTER e digite **Como um Percentual do Total de Vendas** para que fique assim:  
+2.  Digite **Vendas de Câmeras e Filmadoras**, pressione ENTER e digite **Como um Percentual do Total de Vendas**para que fique assim:  
   
-    **Vendas de câmeras e filmadoras**  
+    **Vendas de Câmeras e Filmadoras**  
   
-    **Como porcentagem das vendas totais**  
+    **Como um Percentual do Total de Vendas**  
   
 3.  Selecione **Vendas de Câmeras e Filmadoras**, na guia **Início** > seção **Fonte** > clique em **Negrito**.  
   
@@ -219,11 +207,11 @@ Como o gráfico de pizza é a única visualização do relatório, o gráfico n�
   
 ## <a name="Save"></a>7. Salvar o relatório  
   
-### Para salvar o relatório  
+### <a name="to-save-the-report"></a>Para salvar o relatório  
   
 1.  Alterne para a exibição de design de relatório.  
   
-2.  No menu **Arquivo**, clique em **Salvar**.  
+2.  No menu **Arquivo** , clique em **Salvar**.  
   
 3.  Em **Nome**, digite **Gráfico de Pizza de Vendas**.  
   
@@ -231,10 +219,12 @@ Como o gráfico de pizza é a única visualização do relatório, o gráfico n�
   
 O relatório é salvo no servidor de relatório.  
   
-## Próximas etapas  
+## <a name="next-steps"></a>Próximas etapas  
 Você concluiu com êxito o tutorial Adicionando um Gráfico de Pizza ao seu Relatório. Para saber mais sobre gráficos, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md)  
 [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

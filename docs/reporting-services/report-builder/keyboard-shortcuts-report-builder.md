@@ -1,26 +1,31 @@
 ---
-title: "Atalhos de teclado (Construtor de Relat&#243;rios) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "atalhos de teclado"
-  - "atalhos"
+title: "(Construtor de relatórios) de atalhos de teclado | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard shortcuts
+- shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 caps.latest.revision: 20
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 20
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Atalhos de teclado (Construtor de Relat&#243;rios)
+# <a name="keyboard-shortcuts-report-builder"></a>Atalhos de teclado (Construtor de Relatórios)
   Quando você cria e edita relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no Construtor de Relatórios, tem acesso a todas as teclas de atalho para navegação fornecidas pelo ambiente do Windows. Você pode selecionar de vários esquemas de mapeamento de teclado padrão.  
   
  Você pode navegar pela janela do Construtor de Relatórios ou selecionar e alterar opções em caixas de diálogo, sem usar o mouse.  
@@ -30,7 +35,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Os atalhos do teclado podem conter as teclas SHIFT, ALT e/ou CTRL em combinação com letras ou usar teclas de função. Por exemplo, F1 abre o arquivo de Ajuda do Construtor de Relatórios.  
   
-## Atalhos de teclado no Construtor de Relatórios  
+## <a name="keyboard-shortcuts-in-report-builder"></a>Atalhos de teclado no Construtor de Relatórios  
   
 |Description|Combinação de teclas|  
 |-----------------|---------------------|  
@@ -91,7 +96,7 @@ caps.handback.revision: 20
 |Reduz uma área de exibição do mapa quando um visor do mapa é selecionado.|CTRL +sinal de subtração (-)|  
 |Modo de acelerador para panorâmica e ampliação na área de exibição do mapa quando um visor do mapa é selecionado.|CTRL +clique com o botão esquerdo|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Construtor de Relatórios no SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Glossário &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  

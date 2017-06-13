@@ -1,30 +1,35 @@
 ---
-title: "Gerenciamento do Conte&#250;do do Servidor de Relat&#243;rio (Modo Nativo SSRS) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "administrando o Reporting Services"
-  - "relatórios publicados [Reporting Services], gerenciando"
-  - "servidores de relatório [Reporting Services], gerenciamento de conteúdo"
-  - "gerenciamento de conteúdo [Reporting Services]"
+title: "Relatórios de gerenciamento de conteúdo do servidor (modo nativo do SSRS) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administering Reporting Services
+- published reports [Reporting Services], managing
+- report servers [Reporting Services], content management
+- content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 caps.latest.revision: 50
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 50
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2289f62499f876cc296d6c939c4d9e70ccfe4c3f
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Gerenciamento do Conte&#250;do do Servidor de Relat&#243;rio (Modo Nativo SSRS)
-  No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o gerenciamento de conteúdo se refere ao gerenciamento de itens de servidor de relatório. Todos os itens podem ser gerenciados independentemente um do outro por propriedades e configurações de segurança. Qualquer item pode ser movido para um local diferente no namespace de pasta de servidor de relatório. Para gerenciar os itens com eficiência, você precisa saber quais tarefas são executadas por um gerenciador de conteúdo. A partir do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2, o portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está disponível. Este artigo examinará o Gerenciador de Relatórios e a experiência do novo portal da Web.  
+# <a name="report-server-content-management-ssrs-native-mode"></a>Gerenciamento do Conteúdo do Servidor de Relatório (Modo Nativo SSRS)
+  No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o gerenciamento de conteúdo se refere ao gerenciamento de itens de servidor de relatório. Todos os itens podem ser gerenciados independentemente um do outro por propriedades e configurações de segurança. Qualquer item pode ser movido para um local diferente no namespace de pasta de servidor de relatório. Para gerenciar os itens com eficiência, você precisa saber quais tarefas são executadas por um gerenciador de conteúdo. A partir do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2, o portal da Web do  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está disponível. Este artigo examinará o Gerenciador de Relatórios e a experiência do novo portal da Web.  
   
 > [!NOTE]  
 >  O gerenciamento de conteúdo é diferente da administração de servidor de relatório. Para obter mais informações sobre como gerenciar o ambiente em que um servidor de relatório é executado, consulte [Servidor de Relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
@@ -61,11 +66,11 @@ caps.handback.revision: 50
   
 |Ícone|Item móvel|  
 |----------|-------------------|  
-|![ícone de relatório](../../reporting-services/report-server/media/hlp-16doc.png "ícone de relatório")|Relatório|  
-|![Ícone de relatório vinculado](../../reporting-services/report-server/media/hlp-16linked.png "Ícone de relatório vinculado")|Relatório vinculado|  
-|![Ícone de pasta](../../reporting-services/report-server/media/hlp-16folder.png "Ícone de pasta")|Pasta|  
-|![ícone de recurso genérico](../../reporting-services/report-server/media/hlp-16file.png "ícone de recurso genérico")|Recurso genérico|  
-|![Ícone de fonte de dados compartilhada](../../reporting-services/report-data/media/hlp-16datasource.png "Ícone de fonte de dados compartilhada")|Fonte de dados compartilhada|  
+|![Ícone de relatório](../../reporting-services/report-server/media/hlp-16doc.gif "ícone de relatório")|Relatório|  
+|![Ícone de relatório vinculado](../../reporting-services/report-server/media/hlp-16linked.gif "ícone de relatório vinculado")|Relatório vinculado|  
+|![Ícone de pasta](../../reporting-services/report-server/media/hlp-16folder.gif "ícone de pasta")|Pasta|  
+|![ícone de recurso genérico](../../reporting-services/report-server/media/hlp-16file.gif "ícone de recurso genérico")|Recurso genérico|  
+|![Ícone de fonte de dados compartilhado](../../reporting-services/report-data/media/hlp-16datasource.png "ícone de fonte de dados compartilhado")|Fonte de dados compartilhada|  
 ||Conjunto de dados compartilhado|  
   
  Nem todos os itens com os quais você trabalha podem ser movidos. Não é possível mover itens associados a um relatório, como assinaturas ou histórico de relatório. Esses itens são movidos com os seus relatórios associados. De maneira semelhante, não é possível mover itens, como agendas compartilhadas, que existem fora da hierarquia de pasta. Não é possível mover itens sem a devida permissão. A permissão para mover um item é concedida quando as seguintes tarefas são selecionadas na atribuição de função para o item em questão: "Gerenciar relatórios," "Gerenciar modelos", "Gerenciar pastas" e "Gerenciar fontes de dados".  
@@ -97,7 +102,7 @@ caps.handback.revision: 50
   
 -   Outras pastas  
   
-### Pastas reservadas  
+### <a name="reserved-folders"></a>Pastas reservadas  
  Pastas predefinidas são reservadas pelo Reporting Services; elas não podem ser movidas, renomeadas ou excluídas. As pastas definidas pelo usuário incluem qualquer pasta criada por um usuário ou administrador do servidor de relatórios com permissão para adicionar itens a uma pasta.  
   
  A tabela a seguir descreve as pastas predefinidas que ancoram a hierarquia de pastas e fornecem uma estrutura para vários recursos.  
@@ -108,15 +113,15 @@ caps.handback.revision: 50
 |Usuários|Esta pasta aparece quando você habilita o recurso Meus Relatórios. Ela contém subpastas para todos os usuários que usam o recurso Meus Relatórios e está acessível somente para administradores do servidor de relatórios. Cada nome de subpasta corresponde ao nome do usuário.|  
 |Meus Relatórios|Fornece uma área de trabalho pessoal para cada usuário.|  
   
-### Criando pastas  
+### <a name="creating-folders"></a>Criando pastas  
  Você pode criar uma pasta em qualquer pasta disponível na hierarquia.  
   
  Se você estiver criando pastas com a finalidade de restringir o acesso a relatórios e modelos específicos, especifique atribuições de funções que permitam aos usuários procurar, mas não exibir o conteúdo de pastas pai que estão no caminho da pasta.  
   
-### Modificando propriedades de pasta  
+### <a name="modifying-folder-properties"></a>Modificando propriedades de pasta  
  Após criar uma pasta, você pode modificar propriedades para renomear a pasta, adicionar ou modificar a descrição ou mover a pasta para outro local. Estas propriedades estão disponíveis na página Propriedades gerais da pasta. Para obter mais informações sobre como definir propriedades que concedem acesso a uma pasta, consulte [Proteger Pastas](../../reporting-services/security/secure-folders.md).  
   
-### Excluindo pastas e conteúdos de pasta  
+### <a name="deleting-folders-and-folder-contents"></a>Excluindo pastas e conteúdos de pasta  
  Ao excluir uma pasta, você exclui todos os itens contidos nela. Antes de excluir uma pasta, observe o conteúdo para determinar se a pasta contém itens que podem ser mencionados ou usados por outros itens em outra parte da hierarquia de pasta. Os itens mencionados incluem definições de relatório que oferecem suporte para relatórios vinculados, fontes de dados compartilhadas e recursos.  
   
  Se um relatório que tem um ou mais relatórios vinculados que fazem referência a ele for excluído, os relatórios vinculados ficarão inválidos após a exclusão. Não é possível determinar com antecedência quais relatórios vinculados serão afetados porque o relatório não retém informações sobre relatórios vinculados. No entanto, você pode revisar as propriedades de um relatório vinculado para descobrir em qual relatório ele é baseado. Por outro lado, os itens de fontes de dados compartilhadas listam todos os relatórios que usam o item atualmente, de modo que é possível determinar com facilidade se as informações de conexão estão em uso. Para obter mais informações, consulte [Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md). Finalmente, os recursos que são usados por relatórios não identificam esses relatórios.  
@@ -128,7 +133,7 @@ caps.handback.revision: 50
 ##  <a name="bkmk_Resources"></a> Recursos  
  Um recurso é um item gerenciado armazenado, mas não processado, em um servidor de relatório. Normalmente, um recurso fornece conteúdo externo para usuários de relatórios. Alguns exemplos incluem uma imagem em um arquivo .jpg, um arquivo de forma ESRI que contém dados espaciais ou um arquivo HTML que descreve as regras de negócio usadas em um relatório. O arquivo JPG, SHP ou HTML é armazenado no servidor de relatório, mas o servidor de relatório passa o arquivo diretamente ao navegador em vez de processá-lo antes. Para obter mais informações, consulte [Imagens &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) e a seção "Adicionando dados a um mapa" em [&#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-### Adicionando e exibindo um recurso  
+### <a name="adding-and-viewing-a-resource"></a>Adicionando e exibindo um recurso  
  Para adicionar um recurso a um servidor de relatórios, você carrega ou publica um arquivo:  
   
 |Operação|Tipo de arquivo|  
@@ -140,10 +145,10 @@ caps.handback.revision: 50
   
  Um recurso poder ser visualizado por usuários de relatórios dependendo dos recursos de exibição do navegador. Como recursos não são processados pelo servidor de relatório, é necessário que o navegador forneça o recurso de exibição para renderizar o tipo MIME específico. Se o navegador não for capaz de renderizar o conteúdo, os usuários que visualizam o recurso conseguirão visualizar somente as propriedades gerais do recurso.  
   
-### Gerenciamento e segurança de um recurso  
+### <a name="securing-and-managing-a-resource"></a>Gerenciamento e segurança de um recurso  
  Recursos existem em relatórios, fontes de dados compartilhadas, agendas compartilhadas e pastas como itens nomeados na hierarquia de pasta do servidor de relatório. É possível procurar, exibir, proteger e definir propriedades em recursos assim como acontece com qualquer outro item armazenado em um servidor de relatório. Para visualizar ou gerenciar um recurso, é necessário ter a tarefa Exibir recursos ou a tarefa Gerenciar recursos na sua atribuição de função.  
   
-### Fazendo referência a um recurso de imagem de um relatório  
+### <a name="referencing-an-image-resource-from-a-report"></a>Fazendo referência a um recurso de imagem de um relatório  
  Recursos podem conter uma imagem à qual você faz referência em um relatório. Se as exigências de relatório incluírem o uso de imagens externas, considere as seguintes vantagens de armazenar a imagem como recurso:  
   
 -   Armazenamento centralizado no banco de dados do servidor de relatório. Se você mover o banco de dados do servidor de relatório e seu conteúdo, a imagem externa permanecerá com o relatório. Não é necessário rastrear os arquivos de imagem armazenados em disco em computadores diferentes.  
@@ -169,15 +174,15 @@ caps.handback.revision: 50
   
 |Caractere|Valor de escape|Exemplo|  
 |---------------|------------------|-------------|  
-|(espaço)|[ ]|*Nome Sobrenome* se transforma em *Nome[ ]Sobrenome*|  
+|(espaço)|[ ]|*Nome Sobrenome* se transforma em *Nome[ ]Sobrenome*|  
 |\ (barra invertida)|Substituída por um caractere de espaço único|*Nomededomínio\Nomedeusuário* se transforma em *Nomededomínio Nomedeusuário*|  
 |@ (símbolo de arroba)|[arroba]|*nomedeusuário*@hotmail.com se transforma em *nomedeusuário*[arroba]hotmail.com|  
 |& (e comercial)|[E comercial]|*nomedeusuário*@*empresa*&*empresa.com* se transforma em *nomedeusuário*[arroba]*empresa*[E comercial]*empresa.com*|  
-|$ (cifrão)|[cifrão]|*Nome d* $*Usuário* se transforma em *Nome de*[ ][cifrão]*Usuário*|  
+|$ (cifrão)|[cifrão]|*Nome d* $*Usuário* se transforma em *Nome de*[ ][cifrão]*Usuário*|  
   
  O recurso Meus Relatórios é opcional. Ao instalar um servidor de relatório, Meus Relatórios é desabilitado por padrão. Para obter mais informações sobre como habilitar esse recurso, consulte [Habilitar e desabilitar Meus Relatórios](../../reporting-services/report-server/enable-and-disable-my-reports.md). Para obter mais informações, consulte [Proteger Meus Relatórios](../../reporting-services/security/secure-my-reports.md).  
   
-## Tarefas  
+## <a name="tasks"></a>Tarefas  
  [Carregar arquivos em uma pasta](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
  [Criar, excluir ou modificar uma pasta &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md)  
@@ -186,7 +191,7 @@ caps.handback.revision: 50
   
  [Carregar arquivos em uma pasta](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Ferramentas do Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Funções e permissões &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
  [Relatórios do Reporting Services &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  

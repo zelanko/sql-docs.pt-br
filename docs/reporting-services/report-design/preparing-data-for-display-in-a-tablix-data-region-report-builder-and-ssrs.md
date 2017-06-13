@@ -1,30 +1,35 @@
 ---
-title: "Preparando dados para exibi&#231;&#227;o em uma regi&#227;o de dados Tablix (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Preparando dados para exibição em uma região de dados Tablix (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
 caps.latest.revision: 5
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 5
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2d206770f54c16f08b958dbc06e7d613a960ad7a
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Preparando dados para exibi&#231;&#227;o em uma regi&#227;o de dados Tablix (Construtor de Relat&#243;rios e SSRS)
+# <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>Preparando dados para exibição em uma região de dados Tablix (Construtor de Relatórios e SSRS)
   Uma região de dados tablix exibe dados de um conjunto de dados. É possível exibir todos os dados recuperados do conjunto de dados ou criar filtros para exibir apenas um subconjunto dos dados. Você também pode adicionar expressões condicionais para preencher valores nulos ou modificar a consulta de um conjunto de dados para incluir colunas que identificam a ordem de classificação de uma coluna existente.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Trabalhando com nulos e espaços em branco em valores de campo  
- Entre os dados da coleção de campos em um conjunto de dados estão todos os valores recuperados da fonte de dados em tempo de execução, inclusive valores nulos e espaços em branco. Valores nulos e espaços em branco costumam ser indistinguíveis. Na maioria dos casos, trata-se do comportamento desejado. Por exemplo, funções de agregação numéricas como [Sum](../../reporting-services/report-design/sum-function-report-builder-and-ssrs.md) e [Avg](../../reporting-services/report-design/avg-function-report-builder-and-ssrs.md) ignoram valores nulos. Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/aggregate-functions-reference-report-builder-and-ssrs.md).  
+## <a name="working-with-nulls-and-blanks-in-field-values"></a>Trabalhando com nulos e espaços em branco em valores de campo  
+ Entre os dados da coleção de campos em um conjunto de dados estão todos os valores recuperados da fonte de dados em tempo de execução, inclusive valores nulos e espaços em branco. Valores nulos e espaços em branco costumam ser indistinguíveis. Na maioria dos casos, trata-se do comportamento desejado. Por exemplo, funções de agregação numéricas como [Sum](../../reporting-services/report-design/report-builder-functions-sum-function.md) e [Avg](../../reporting-services/report-design/report-builder-functions-avg-function.md) ignoram valores nulos. Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
  Caso você queira tratar valores nulos de maneira diferente, é possível usar expressões condicionais ou o código personalizado para substituir um valor personalizado do valor nulo. Por exemplo, a seguinte expressão substitui o texto `Null` independentemente de onde o valor nulo ocorra no campo `[Size]`.  
   
@@ -32,12 +37,12 @@ caps.handback.revision: 5
 =IIF(Fields!Size.Value IS NOTHING,"Null",Fields!Size.Value)  
 ```  
   
- Para obter mais informações sobre como eliminar nulos dos dados antes de recuperá-los por meio de uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o uso de consultas do [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte "Valores nulos" e "Valores nulos e junções" na documentação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nos [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Para obter mais informações sobre como eliminar nulos dos dados antes de recuperá-los por meio de uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o uso de consultas do [!INCLUDE[tsql](../../includes/tsql-md.md)] , consulte "Valores nulos" e "Valores nulos e junções" na documentação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nos [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
   
-## Tratando nomes de campo nulos  
- Não há problemas em testar valores nulos em uma expressão contanto que o próprio campo esteja no conjunto de resultados da consulta. Usando código personalizado, é possível testar se o próprio campo está presente nos campos da coleção retornados da fonte de dados em tempo de execução. Para obter mais informações, consulte [Referências de coleções de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/dataset-fields-collection-references-report-builder-and-ssrs.md).  
+## <a name="handling-null-field-names"></a>Tratando nomes de campo nulos  
+ Não há problemas em testar valores nulos em uma expressão contanto que o próprio campo esteja no conjunto de resultados da consulta. Usando código personalizado, é possível testar se o próprio campo está presente nos campos da coleção retornados da fonte de dados em tempo de execução. Para obter mais informações, consulte [Referências de coleções de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  
   
-## Adicionando uma coluna de ordem de classificação  
+## <a name="adding-a-sort-order-column"></a>Adicionando uma coluna de ordem de classificação  
  Por padrão, é possível classificar valores de um campo de conjunto de dados por ordem alfabética. Para classificar em uma ordem diferente, é possível adicionar uma nova coluna ao conjunto de dados que define a ordem de classificação desejada em uma região de dados. Por exemplo, para classificar o campo `[Color]` e os itens branco e preto primeiro, é possível adicionar uma coluna `[ColorSortOrder]`, mostrada na seguinte consulta:  
   
 ```  
@@ -54,7 +59,7 @@ FROM Production.Product p
   
  Para classificar uma região de dados de tabela de acordo com essa ordem de classificação, defina a expressão de classificação no grupo detalhado como `=Fields!ColorSortOrder.Value`. Para obter mais informações, consulte [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

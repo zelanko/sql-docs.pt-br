@@ -1,23 +1,28 @@
 ---
-title: "Classifica&#231;&#227;o interativa (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Classificação interativa (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b5a259bbe965efc86a9f11ad377525455bdfbd5
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Classifica&#231;&#227;o interativa (Construtor de Relat&#243;rios e SSRS)
+# <a name="interactive-sort-report-builder-and-ssrs"></a>Classificação interativa (Construtor de Relatórios e SSRS)
   É possível adicionar botões de classificação interativos para permitir que um usuário alterne entres as ordens crescente e decrescente para linhas de uma tabela ou para linhas e colunas de uma matriz. O uso mais comum da classificação interativa é adicionar um botão de classificação a todos os cabeçalhos de coluna. Assim, o usuário pode escolher a coluna pela qual classificar.  
   
  No entanto, é possível adicionar um botão de classificação interativo a qualquer caixa de texto, e não apenas a cabeçalhos de coluna. Por exemplo, em uma caixa de texto de uma linha fora de um grupo de linhas, você pode especificar uma classificação para as linhas ou as colunas do grupo pai, linhas ou colunas do grupo filho, ou linhas ou colunas detalhadas. Também é possível combinar campos em uma única expressão de grupo e classificar por vários campos.  
@@ -51,12 +56,12 @@ caps.handback.revision: 7
   
  O processador de relatório aplica a classificação interativa após a aplicação de todas as expressões da região de dados e da classificação de grupo. Para obter mais informações, consulte [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
-## Adicionando classificação interativa a vários grupos  
+## <a name="adding-interactive-sort-for-multiple-groups"></a>Adicionando classificação interativa a vários grupos  
  Em uma tabela com grupos de linhas aninhados com base em um único campo de conjunto de dados, é possível adicionar um botão de classificação interativo que classifica valores de grupo pai, de grupo filho ou linhas detalhadas. No entanto, talvez você queira fornecer ao usuário a possibilidade de classificar a tabela por valores dos grupos pai e filho sem que seja necessário clicar várias vezes.  
   
  Para isso, você deve refazer a tabela para agrupar uma expressão que combina vários campos. Por exemplo, em um conjunto de dados com contagens de inventário, caso a tabela original seja agrupada por tamanho e por cor, você pode especificar um único grupo com uma expressão formada por tamanho e cor. Para obter mais informações, consulte [Adicionar classificação interativa a uma tabela ou matriz &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Adicionar classificação interativa a uma tabela ou matriz &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  

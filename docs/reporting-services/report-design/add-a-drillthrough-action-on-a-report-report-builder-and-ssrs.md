@@ -1,23 +1,28 @@
 ---
-title: "Adicionar uma a&#231;&#227;o de detalhamento a um relat&#243;rio (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Adicionar uma ação de detalhamento em um relatório (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f1e5c7c678cb3c38d9e0225ce47bc2dca91ab326
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Adicionar uma a&#231;&#227;o de detalhamento a um relat&#243;rio (Construtor de Relat&#243;rios e SSRS)
+# <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Adicionar uma ação de detalhamento a um relatório (Construtor de Relatórios e SSRS)
   O relatório aberto quando você clica no link no relatório principal é conhecido como um *relatório detalhado*. Este link de detalhamento habilita uma ação de detalhamento.  
   
  Os relatórios detalhados devem ser publicados no mesmo servidor de relatório do relatório principal, mas podem estar em pastas diferentes. Você pode adicionar um link de detalhamento a qualquer item que tenha uma propriedade **Ação** , por exemplo, uma caixa de texto, uma imagem ou pontos de dados de um gráfico.  
@@ -27,7 +32,7 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Para adicionar uma ação de detalhamento  
+### <a name="to-add-a-drillthrough-action"></a>Para adicionar uma ação de detalhamento  
   
 1.  No modo de exibição de Design, clique com o botão direito do mouse na caixa de texto, na imagem ou no gráfico ao qual você quer adicionar um link e clique em **Propriedades**.  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 9
   
 5.  Em **Use estes parâmetros para executar o relatório**, clique em **Adicionar**. Uma linha nova é adicionada à grade de parâmetros.  
   
-    -   Na caixa de texto **Nome**, clique na lista suspensa ou digite o nome do parâmetro de relatório no relatório de detalhamento.  
+    -   Na caixa de texto **Nome** , clique na lista suspensa ou digite o nome do parâmetro de relatório no relatório de detalhamento.  
   
         > [!NOTE]  
         >  Os nomes na lista de parâmetros devem corresponder exatamente aos parâmetros esperados no relatório de destino. Por exemplo, nomes de parâmetro devem ter maiúsculas e minúsculas correspondentes. Caso não correspondam ou se algum parâmetro esperado não for listado, haverá falha no relatório detalhado.  
@@ -59,8 +64,8 @@ caps.handback.revision: 9
   
 7.  Para testar o link, execute o relatório e clique no item de relatório definido com o link.  
   
-## Consulte também  
- [Caixa de diálogo Propriedades de Ação &#40;Construtor de Relatórios e SSRS&#41;](../Topic/Action%20Properties%20Dialog%20Box%20\(Report%20Builder%20and%20SSRS\).md)   
+## <a name="see-also"></a>Consulte também  
+ [Caixa de diálogo Propriedades de Ação &#40;Construtor de Relatórios e SSRS&#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
  [Formatando pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Mostrar dicas de ferramenta em uma série &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   

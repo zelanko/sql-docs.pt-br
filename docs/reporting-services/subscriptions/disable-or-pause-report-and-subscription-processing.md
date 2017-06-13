@@ -1,34 +1,39 @@
 ---
-title: "Desabilitar ou pausar o processamento de relat&#243;rio e assinatura | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/29/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pausando agendas"
-  - "assinaturas [Reporting Services], pausando"
-  - "processamento de relatório [Reporting Services], pausando"
-  - "fontes de dados compartilhadas [Reporting Services]"
-  - "pausando processamento de assinatura"
-  - "pausando processamento de relatório"
-  - "pausando temporariamente o processamento de relatório "
-  - "desabilitando fontes de dados compartilhadas"
-  - "funções [Reporting Services], modificando"
-  - "agendas compartilhadas [Reporting Services], pausando"
+title: "Desabilitar ou pausar de relatório e processamento de assinaturas | Microsoft Docs"
+ms.custom: 
+ms.date: 09/29/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pausing schedules
+- subscriptions [Reporting Services], pausing
+- report processing [Reporting Services], pausing
+- shared data sources [Reporting Services]
+- pausing subscription processing
+- pausing report processing
+- temporarily stopping report processing
+- disabling shared data sources
+- roles [Reporting Services], modifying
+- shared schedules [Reporting Services], pausing
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 caps.latest.revision: 47
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 47
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9fa43a5766fc82bfb716f275600b50eaab6c1ed0
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Desabilitar ou pausar o processamento de relat&#243;rio e assinatura
+# <a name="disable-or-pause-report-and-subscription-processing"></a>Desabilitar ou pausar o processamento de relatório e assinatura
   Há várias abordagens que você pode usar para desabilitar ou pausar o processamento de relatório e assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As abordagens neste tópico abrangem a desabilitação de uma assinatura para interromper a conexão com a fonte de dados. Nem todas as abordagens são possíveis com os dois modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As tabelas a seguir resumem os métodos e os modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com suporte:  
   
 ##  <a name="bkmk_top"></a> Neste tópico  
@@ -47,9 +52,9 @@ caps.handback.revision: 47
 > [!TIP]  
 >  Novo no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]! **Habilitar e desabilitar assinaturas**. Novas opções de interface de usuário permitem que você desabilite e habilite rapidamente as assinaturas. As assinaturas desabilitadas mantêm suas outras propriedades de configuração, como o cronograma, e podem ser facilmente habilitadas. Você também pode habilitar e desabilitar programaticamente assinaturas ou auditar quais assinaturas são desabilitadas.  
   
- ![reporting services subscription ribbon](../../reporting-services/subscriptions/media/ssrs-subscription-ribbon.png "reporting services subscription ribbon")  
+ ![Reporting services a faixa de opções de assinatura](../../reporting-services/subscriptions/media/ssrs-subscription-ribbon.png "do reporting services da faixa de opções de assinatura")  
   
- No Gerenciador de Relatórios no modo Nativo, navegue até a assinatura na página **Minhas Assinaturas** ou na página **Gerenciar** de uma assinatura individual. Selecione uma ou mais assinaturas e clique na no botão desabilitar ![disable a reporting services subscription](../../reporting-services/subscriptions/media/ssrs-disable-subscription.png "disable a reporting services subscription") ou no botão habilitar ![enable a reporting services subscription](../../reporting-services/subscriptions/media/ssrs-enable-subscription.png "enable a reporting services subscription") na faixa de opções. As assinaturas desabilitadas serão marcadas com um ícone de aviso ![status warning of a reporting services subscriptio](../../reporting-services/subscriptions/media/ssrs-subscription-warning.png "status warning of a reporting services subscriptio") e o status será listado como **Desabilitado**.  
+ No Gerenciador de Relatórios no modo Nativo, navegue até a assinatura na página **Minhas Assinaturas** ou na página **Gerenciar** de uma assinatura individual. Selecione uma ou mais assinaturas e, em seguida, clique em Desabilitar ![desabilitar uma assinatura de serviços de relatório](../../reporting-services/subscriptions/media/ssrs-disable-subscription.png "desabilitar uma assinatura de serviços de relatório") botão ou no botão Habilitar ![habilitar uma assinatura de serviços de relatório](../../reporting-services/subscriptions/media/ssrs-enable-subscription.png "habilitar uma assinatura de serviços de relatório") na faixa de opções. Assinaturas desabilitadas serão marcadas com um ícone de aviso ![aviso do status do reporting services subscriptio](../../reporting-services/subscriptions/media/ssrs-subscription-warning.png "aviso do status do reporting services subscriptio") e o status é listado como **desabilitado**.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] escreve uma linha no log do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] quando uma assinatura é desabilitada, e outra entrada quando a assinatura é habilitada. Por exemplo, no arquivo de log do servidor de relatório:  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 47
   
  `library!ReportServer_0-1!2eec!10/16/2014-16:44:18:: i INFO: Call to EnableSubscriptionAction(SubscriptionID=e843bc2b-023e-45a3-ba23-22f9dc9a0934).`  
   
- ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.png "Conteúdo relacionado ao PowerShell") **Usar o Windows PowerShell para desabilitar uma única assinatura:** use o seguinte script do PowerShell para desabilitar uma assinatura específica. Atualize o nome do servidor e a ID da assinatura.  
+ ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "conteúdo relacionado ao PowerShell") **usar o Windows PowerShell para desabilitar uma única assinatura:** Use o seguinte script do PowerShell para desabilitar uma assinatura específica. Atualize o nome do servidor e a ID da assinatura.  
   
 ```  
 #disable specific subscription  
@@ -81,7 +86,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.png "Conteúdo relacionado ao PowerShell") **Usar o Windows PowerShell para listar todas as assinaturas desabilitadas:** use o seguinte script do PowerShell para listar todas as assinaturas desabilitadas no servidor de relatório atual no modo Nativo. Atualize o nome do servidor.  
+ ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "conteúdo relacionado ao PowerShell") **usar o Windows PowerShell para listar todas as assinaturas desabilitadas:** Use o seguinte script do PowerShell para listar todas as assinaturas desabilitadas no servidor de relatório atual do modo nativo. Atualize o nome do servidor.  
   
 ```  
 #list all disabled subscriptions  
@@ -92,7 +97,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.png "Conteúdo relacionado ao PowerShell") **Usar o Windows PowerShell para habilitar todas as assinaturas desabilitadas:** use o seguinte script do PowerShell para habilitar todas as assinaturas desabilitadas no momento. Atualize o nome do servidor.  
+ ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "conteúdo relacionado ao PowerShell") **usar o Windows PowerShell para habilitar todas as assinaturas desabilitadas:** Use o seguinte script do PowerShell para habilitar todas as assinaturas desabilitadas no momento. Atualize o nome do servidor.  
   
 ```  
 #enable all subscriptions  
@@ -106,7 +111,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.png "Conteúdo relacionado ao PowerShell") **Usar o Windows PowerShell para DESABILITAR todas as assinaturas:** use o seguinte script do PowerShell para desabilitar **TODAS** as assinaturas.  
+ ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "conteúdo relacionado ao PowerShell") **usar o Windows PowerShell para desabilitar todas as assinaturas:** Use o seguinte script do PowerShell para desabilitar **todos os** assinaturas.  
   
 ```  
 #DISABLE all subscriptions  
@@ -122,7 +127,7 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="bkmk_pause_schedule"></a> Pausar uma agenda compartilhada  
  Se um relatório ou assinatura for executado a partir de uma agenda compartilhada, você pode pausar a agenda para impedir o processamento. Todos os processamentos de relatório e assinatura controlados pelo agendamento serão adiados até o agendamento ser retomado.  
   
--   **Modo do SharePoint:** ![Configurações do SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.png "Configurações do SharePoint") Nas **Configurações do site**, selecione **Gerenciar agendas compartilhadas**. Selecione a agenda e clique em **Pausar agendamentos selecionados**.  
+-   **Modo do SharePoint:** ![configurações SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "configurações SharePoint") na **configurações do Site**, selecione **gerenciar agendamentos compartilhados**. Selecione a agenda e clique em **Pausar agendamentos selecionados**.  
   
 -   **Modo Nativo:** no Gerenciador de Relatórios, clique em **Configurações do Site**. Selecione a agenda e clique em **Pausar**.  
   
@@ -131,7 +136,7 @@ ForEach ($subscription in $subscriptions)
   
  Observe que o relatório ainda é carregado mesmo que a fonte de dados não esteja disponível. O relatório não contém dados, mas os usuários com as permissões adequadas podem acessar as páginas de propriedade, as configurações de segurança, o histórico de relatórios e as informações de assinatura associadas ao relatório.  
   
--   **Modo do SharePoint:** para desabilitar uma fonte de dados compartilhada em um servidor de relatório no modo do SharePoint, navegue até a biblioteca de documentos que contém a fonte de dados. ![Ícone de fonte de dados compartilhada](../../reporting-services/report-data/media/hlp-16datasource.png "Ícone de fonte de dados compartilhada") Clique na fonte de dados e desmarque a caixa de seleção **Habilitar esta fonte de dados**.  
+-   **Modo do SharePoint:** para desabilitar uma fonte de dados compartilhada em um servidor de relatório no modo do SharePoint, navegue até a biblioteca de documentos que contém a fonte de dados. ![Ícone de fonte de dados compartilhado](../../reporting-services/report-data/media/hlp-16datasource.png "ícone de fonte de dados compartilhado") clique na fonte de dados e, em seguida, desmarque o **habilitar esta fonte de dados** caixa de seleção.  
   
 -   **Modo Nativo:** Para desabilitar uma fonte de dados compartilhada, abra a fonte de dados no Gerenciador de Relatórios e desmarque a caixa de seleção **Habilitar esta fonte de dados** .  
   
@@ -158,18 +163,19 @@ ForEach ($subscription in $subscriptions)
   
 -   Biblioteca do SharePoint (disponível somente a partir de um site do SharePoint que é integrado com um servidor de relatório no modo integrado do SharePoint)  
   
- A entrega de email deve ser configurada antes de ser usada. Se você não configurá-la, esse recurso não estará disponível. Para saber mais, confira [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/pt-br/b838f970-d11a-4239-b164-8d11f4581d83).  
+ A entrega de email deve ser configurada antes de ser usada. Se você não configurá-la, esse recurso não estará disponível. Para saber mais, confira [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
   
- Se você desejar desabilitar extensões específicas, remova as entradas de extensão no arquivo **RSReportServer.config** . Para saber mais, confira [Arquivos de configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md) e [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/pt-br/b838f970-d11a-4239-b164-8d11f4581d83).  
+ Se você desejar desabilitar extensões específicas, remova as entradas de extensão no arquivo **RSReportServer.config** . Para saber mais, confira [Arquivos de configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md) e [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
   
  Depois de ser removida, a extensão de entrega não está mais disponível no Gerenciador de Relatórios ou em um site do SharePoint. A remoção de uma extensão de entrega pode resultar em assinaturas inativas. Exclua as assinaturas ou configure-as para usar uma extensão de entrega diferente antes de remover uma extensão.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Arquivos de configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Configurar o Gerenciador de Relatórios &#40;Modo Nativo&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
  [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [Página Propriedades de Segurança, Itens &#40;Gerenciador de Relatórios&#41;](../Topic/Security%20Properties%20Page,%20Items%20\(Report%20Manager\).md)  
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Página Propriedades de Segurança, Itens &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
   
   
+
