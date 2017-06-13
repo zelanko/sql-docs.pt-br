@@ -1,7 +1,7 @@
 ---
 title: "Início Rápido 1: tecnologias do OLTP in-memory para um desempenho mais rápido do Transact-SQL | Microsoft Docs"
 ms.custom: 
-ms.date: 12/02/2016
+ms.date: 06/12/2017"
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 82286b0d52ff37697ad9197b88c45935137a8dae
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 82d13af37ad323a642ae84fab6973429a0a084c2
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Pesquisa de áreas iniciais em OLTP in-memory
@@ -516,107 +516,5 @@ Aqui estão os links para outros artigos que abordam as considerações especiai
 Aqui estão os artigos que oferecem o código para demonstrar os ganhos de desempenho que você pode obter usando OLTP in-memory:  
   
 - [Demonstração: aprimoramento do desempenho do OLTP in-memory](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) oferece uma demonstração em pequena escala dos maiores ganhos potenciais de desempenho.  
-- O[banco de dados de exemplo para o OLTP In-Memory](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) oferece uma demonstração de escala maior.  
-  
-  
-  
-\<!--  
-  
-e1328615-6b59-4473-8a8d-4f360f73187d , dn817827.aspx ,  “Introdução ao Columnstore para análise operacional em tempo real”  
-  
-f98af4a5-4523-43b1-be8d-1b03c3217839 , gg492088.aspx , “Guias de índices Columnstore”  
-  
-14dddf81-b502-49dc-a6b6-d18b1ae32d2b , dn133165.aspx , “Tabelas com otimização de memória”  
-  
-d5ed432c-10c5-4e4f-883c-ef4d1fa32366 , dn133184.aspx , “Procedimentos armazenados compilados nativamente”  
-  
-14106cc9-816b-493a-bcb9-fe66a1cd4630 , dn639109.aspx , “O grupo de arquivos com otimização de memória”  
-  
-f222b1d5-d2fa-4269-8294-4575a0e78636 , dn465873.aspx , “Associar um banco de dados com tabelas com otimização de memória a um pool de recursos”  
-  
-86805eeb-6972-45d8-8369-16ededc535c7 , dn511012.aspx , “Índices em tabelas com otimização de memória”  
-  
-16ef63a4-367a-46ac-917d-9eebc81ab29b , dn133166.aspx , “Diretrizes para usar índices em tabelas com otimização de memória”  
-  
-e3f8009c-319d-4d7b-8993-828e55ccde11 , dn246937.aspx , “Construções do Transact-SQL sem suporte no OLTP in-memory”  
-  
-2cd07d26-a1f1-4034-8d6f-f196eed1b763 , dn133169.aspx , “Transações em tabelas com otimização de memória”  
-OBSERVAÇÃO: CONSULTE mt668425.aspx “Comportamentos e diretrizes para transações tabelas com otimização de memória”, que serão substituídos em breve.  
-f2a35c37-4449-49ee-8bba-928028f1de66 , dn169141.aspx , “Diretrizes para lógica de repetição das transações em tabelas com otimização de memória”  
-  
-7a458b9c-3423-4e24-823d-99573544c877 , dn465869.aspx , “Monitorar e solucionar problemas de uso de memória”  
-  
-5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8 , dn282389.aspx , “Estimar requisitos de memória para tabelas com otimização de memória”  
-  
-b0a248a4-4488-4cc8-89fc-46906a8c24a1 , dn205318.aspx , “Tamanho da tabela e da linha em tabelas com otimização de memória”  
-  
-162d1392-39d2-4436-a4d9-ee5c47864c5a , dn296452.aspx , “Particionamento no nível do aplicativo”  
-  
-3f867763-a8e6-413a-b015-20e9672cc4d1 , dn133171.aspx , “Padrão de aplicativo para particionamento de tabelas com otimização de memória”  
-  
-86805eeb-6972-45d8-8369-16ededc535c7 , dn511012.aspx , “Índices em tabelas com otimização de memória”  
-  
-d82f21fa-6be1-4723-a72e-f2526fafd1b6 , dn465872.aspx , “Gerenciando memória para OLTP com otimização de memória”  
-  
-622aabe6-95c7-42cc-8768-ac2e679c5089 , dn133174.aspx , “Criando e gerenciando armazenamento para objetos com otimização de memória”  
-  
-bd102e95-53e2-4da6-9b8b-0e4f02d286d3 , dn535766.aspx , “Variáveis de tabela com otimização de memória”; “variável de tabela de uma tabela com otimização de memória”  
-OBSOLETE. Consulte 38512a22-7e63-436f-9c13-dde7cf5c2202 , mt718711.aspx , “Tabela temporária e variável de tabela mais rápidas usando a otimização de memória”  
-  
-  
-f0d5dd10-73fd-4e05-9177-07f56552bdf7 , ms191320.aspx , “Criar funções definidas pelo usuário (Mecanismo de Banco de Dados)”; “funções com valor de tabela”  
-  
-d2546e40-fdfc-414b-8196-76ed1f124bf5 , dn935012.aspx , “Funções escalares definidas pelo usuário para OLTP in-memory”; “funções escalares definidas pelo usuário”  
-  
-405cdac5-a0d4-47a4-9180-82876b773b82 , dn247639.aspx , “Migrando para OLTP in-memory”  
-  
-3f083347-0fbb-4b19-a6fb-1818d545e281 , dn624160.aspx , “Backup, restauração e recuperação de tabelas com otimização de memória”  
-  
-690b70b7-5be1-4014-af97-54e531997839 , dn269114.aspx , “Alterando tabelas com otimização de memória”  
-  
-  
-b1cc7c30-1747-4c21-88ac-e95a5e58baac , dn133080.aspx , “Propriedades novas e atualizadas, exibições do sistema, procedimentos armazenados, tipos de espera e DMVs para OLTP in-memory”  
-. . . . .  
-TAMBÉM: “Suporte ao Transact-SQL para OLTP in-memory”  
-  
-  
-c1ef96f1-290d-4952-8369-2f49f27afee2 , dn205133.aspx , “Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP in-memory”  
-  
-181989c2-9636-415a-bd1d-d304fc920b8a , dn284308.aspx , “Orientador de otimização de memória”  
-  
-55548cb2-77a8-4953-8b5a-f2778a4f13cf , dn452282.aspx , “Monitorando o desempenho de procedimentos armazenados compilados nativamente”  
-  
-d3898a47-2985-4a08-bc70-fd8331a01b7b , dn358355.aspx , “Orientador de compilação nativa”  
-  
-f43faad4-2182-4b43-a76a-0e3b405816d1 , dn296678.aspx , “Problemas de migração de procedimentos armazenados compilados nativamente”  
-  
-e1d03d74-2572-4a55-afd6-7edf0bc28bdb , dn133186.aspx , “OLTP in-memory (otimização na memória)”  
-  
-c6def45d-d2d4-4d24-8068-fab4cd94d8cc , dn530757.aspx , “Demonstração: aprimoramento do desempenho do OLTP in-memory”  
-  
-405cdac5-a0d4-47a4-9180-82876b773b82 , dn247639.aspx , “Migrando para OLTP in-memory”  
-  
-f76fbd84-df59-4404-806b-8ecb4497c9cc , bb522682.aspx , “Opções de ALTER DATABASE SET (Transact-SQL)”  
-  
-e6b34010-cf62-4f65-bbdf-117f291cde7b , dn452286.aspx , “Criando procedimentos armazenados compilados nativamente”  
-  
-df347f9b-b950-4e3a-85f4-b9f21735eae3 , mt465764.aspx , “Banco de dados de exemplo para OLTP in-memory”  
-  
-38512a22-7e63-436f-9c13-dde7cf5c2202 , mt718711.aspx , “Tabela temporária e variável de tabela mais rápidas usando a otimização de memória”  
-  
-38512a22-7e63-436f-9c13-dde7cf5c2202 , mt718711.aspx , “Tabela temporária e variável de tabela mais rápidas usando a otimização de memória”  
-  
-  
-  
-  
-H1 # Início Rápido 1: tecnologias na memória para cargas de trabalho transacionais mais rápidas  
-{1c25a164-547d-43c4-8484-6b5ee3cbaf3a} em maiúsculas  
-mt718711.aspx no MSDN  
-  
-GeneMi , 2016-05-07  00:07am  
--->  
-  
-  
-  
-
+- O [banco de dados de exemplo para o OLTP In-Memory](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) oferece uma demonstração de escala maior.  
 

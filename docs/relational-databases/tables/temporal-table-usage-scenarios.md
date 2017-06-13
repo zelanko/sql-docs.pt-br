@@ -2,7 +2,7 @@
 title: "Cenários de uso de tabela temporal | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/13/2017
+ms.date: 05/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,27 +16,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bb6a2865838df1d66119f68c6d8cd19809a8f86c
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="temporal-table-usage-scenarios"></a>Cenários de uso da tabela temporal
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Tabelas temporais geralmente são úteis em cenários que exigem o acompanhamento do histórico de alterações de dados.    
-Recomendamos que você considere tabelas temporais nos seguintes casos de uso, devido a enormes benefícios de produtividade:  
-  
--   [Auditoria de dados](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_0)  
-  
--   [Análise pontual (viajar nos tempos)](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_1)  
-  
--   [Detecção de anomalias](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_2)  
-  
--   [Dimensões com alteração lenta](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_3)  
-  
--   [Reparando dados corrompidos em nível de linha](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
+Recomendamos que você considere tabelas temporais nos seguintes casos de uso para os benefícios de produtividade principal.  
   
 ## <a name="data-audit"></a>Auditoria de dados  
  Use controle temporal da versão do sistema em tabelas que armazenam informações críticas para as quais você precisa acompanhar o que foi alterado, quando o foi e para executar análise forense dados em qualquer ponto no tempo.    

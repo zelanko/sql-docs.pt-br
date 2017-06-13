@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c256bc9ecc0e518bb54d206a04f36d2b736500d8
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 527cb99c5caf0bb805e17f3b77b7d5e017e28ace
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>Como FOR JSON converte tipos de dados do SQL Server para tipos de dados JSON (SQL Server)
@@ -31,13 +31,16 @@ ms.lasthandoff: 04/11/2017
   
 |Categoria|Tipo de dados do SQL Server|Tipo de dados JSON|  
 |--------------|--------------|---------------|  
-|Tipos de cadeia de caracteres e caracteres|(n)(var)(char)|cadeia de caracteres|  
+|Tipos de cadeia de caracteres e caracteres|char, nchar, varchar, nvarchar|cadeia de caracteres|  
 |Tipos numéricos|int, bigint, float, decimal, numeric|number|  
 |Tipo de Bit|bit|Booliano (verdadeiro ou falso)|  
 |Tipos de data e hora|date, datetime, datetime2, time, datetimeoffset|cadeia de caracteres|  
 |Tipos binários|varbinary, binary, image, timestamp, rowversion|Cadeia de caracteres codificada em BASE64|  
-|Tipos CLR|CLR, geometria, geografia|Sem suporte. Estes tipos retornam um erro.<br /><br /> Na instrução SELECT, use CAST ou CONVERT ou use um método ou propriedade CLR para converter os dados em um tipo de dados que pode ser convertido em um tipo JSON. Por exemplo, use **ToString ()** para qualquer tipo CLR ou **STAsText()** para o tipo de geometria. O tipo do valor de saída JSON é derivado do tipo de retorno da conversa que você usa na instrução SELECT.|  
+|Tipos CLR|geometria, geografia, outros tipos CLR|Sem suporte. Estes tipos retornam um erro.<br /><br /> Na instrução SELECT, use CAST ou converter, ou usar um método ou propriedade CLR para converter os dados de origem para um tipo de dados do SQL Server que pode ser convertido com êxito em um tipo JSON. Por exemplo, use **stastext ()** para o tipo de geometria ou use **ToString ()** para qualquer tipo CLR. O tipo do valor de saída JSON é derivado do tipo de retorno da conversa que você aplicar na instrução SELECT.|  
 |Outros tipos|uniqueidentifier, money|cadeia de caracteres|  
+
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Saiba mais sobre o suporte interno a JSON no SQL Server  
+Para muitas soluções específicas, casos de uso e recomendações, consulte o [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no banco de dados SQL Azure por Jovan Popovic, gerente de programas da Microsoft.
   
 ## <a name="see-also"></a>Consulte também  
  [Formatar os resultados da consulta como JSON com o FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  

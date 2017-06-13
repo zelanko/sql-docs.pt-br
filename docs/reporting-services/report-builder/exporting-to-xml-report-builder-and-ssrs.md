@@ -1,23 +1,28 @@
 ---
-title: "Exportando para XML (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Exportando para XML (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e3bbe7d68c378bd74e70ceb0c6d219da427db099
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Exportando para XML (Construtor de Relat&#243;rios e SSRS)
+# <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportando para XML (Construtor de Relatórios e SSRS)
   A extensão XML de renderização retorna um relatório paginado no formato XML. O esquema para o XML do relatório é específico para este relatório e contém somente dados. As informações de layout não são renderizadas e a paginação não é mantida pela extensão XML de renderização. O XML gerado por esta extensão pode ser importado para um banco de dados, usado como uma mensagem de dados XML ou enviado para um aplicativo personalizado.  
   
 > [!NOTE]  
@@ -53,7 +58,6 @@ caps.handback.revision: 8
   
 -   **Images, lines, and custom report items** são ignorados.  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ##  <a name="DataTypes"></a> Tipos de dados  
  Ao elemento ou atributo da caixa de texto é atribuído um tipo de dados XSD baseado nos valores que a caixa de texto exibe.  
@@ -70,17 +74,16 @@ caps.handback.revision: 8
 |**String**, **Char**|**xsd:string**|  
 |Outro|**xsd:string**|  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ##  <a name="XMLSpecificRenderingRules"></a> Regras de renderização específicas de XML  
  As seções a seguir descrevem como as extensões de renderização XML interpretam os itens dentro do relatório.  
   
-### Corpo do relatório  
+### <a name="report-body"></a>Corpo do relatório  
  Um relatório é renderizado como elemento raiz do documento XML. O nome do elemento é obtido do conjunto de propriedades DataElementName no painel Propriedades.  
   
  As definições do namespace XML e os atributos de referência do esquema também estão incluídos no elemento do relatório. As variáveis estão destacadas em negrito:  
   
- \<**Report** xmlns=”**SchemaName**” xmlns:xsi=”http://www.w3.org/2001/XMLSchema-instance” xsi:**schemaLocation**=”**SchemaNameReportURL**&amp;rc%3aSchema=true” Name=”ReportName”>  
+ <**Relatório** xmlns = "**SchemaName**" xmlns: xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**= "**SchemaNameReportURL**&amp;rc % 3aSchema = true" Name = "ReportName" >  
   
  Os valores das variáveis são os seguintes:  
   
@@ -91,48 +94,47 @@ caps.handback.revision: 8
 |SchemaName|Report.SchemaName. Se nulo, então Report.Name. Se o Report.Name for usado, ele será codificado primeiro com XmlConvert.EncodeLocalName.|  
 |ReportName|O nome do relatório.|  
   
-### Caixas de texto  
+### <a name="text-boxes"></a>Caixas de texto  
  Caixas de texto são renderizadas como elementos ou atributos de acordo com a propriedade RDL DataElementStyle. O nome do elemento ou atributo é obtido da propriedade RDL TextBox.DataElementName.  
   
-### Gráficos, barras de dados e minigráficos  
+### <a name="charts-data-bars-and-sparklines"></a>Gráficos, barras de dados e minigráficos  
  Gráficos, barras de dados e minigráficos são renderizados em XML. Os dados são estruturados.  
   
-### Indicadores  
+### <a name="gauges-and-indicators"></a>Indicadores  
  Indicadores são renderizados em XML. Os dados são estruturados.  
   
-### Sub-relatórios  
+### <a name="subreports"></a>Sub-relatórios  
  Um sub-relatório é renderizado como um elemento. O nome do elemento é obtido da propriedade RDL DataElementName. A configuração da propriedade TextBoxesAsElements do relatório substitui aquela do sub-relatório. Namespace e atributos XSLT não são adicionados ao elemento de sub-relatório.  
   
-### Retângulos  
+### <a name="rectangles"></a>Retângulos  
  Um retângulo é renderizado como um elemento. O nome do elemento é obtido da propriedade RDL DataElementName.  
   
-### Itens de Relatório Personalizados  
+### <a name="custom-report-items"></a>Itens de Relatório Personalizados  
  CRI (CustomReportItems) não são visíveis para a extensão de renderização. Se um item de relatório personalizado existir no relatório, a extensão de renderização o executa como um item de relatório convencional.  
   
-### Imagens  
+### <a name="images"></a>Imagens  
  As imagens não são renderizadas.  
   
-### Linhas  
+### <a name="lines"></a>Linhas  
  As linhas não são renderizadas.  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
-### Tabelas, matrizes e listas  
+### <a name="tables-matrices-and-lists"></a>Tabelas, matrizes e listas  
  Tabelas, matrizes e listas são renderizadas como um elemento. O nome do elemento é obtido da propriedade RDL DataElementName do Tablix.  
   
-#### Linhas e Colunas  
+#### <a name="rows-and-columns"></a>Linhas e Colunas  
  As colunas são renderizadas dentro das linhas.  
   
-#### Canto do Tablix  
+#### <a name="tablix-corner"></a>Canto do Tablix  
  O canto não é renderizado. Apenas o conteúdo do canto é renderizado.  
   
-#### Células Tablix  
+#### <a name="tablix-cells"></a>Células Tablix  
  As células Tablix são renderizadas como elementos. O nome do elemento é obtido da propriedade RDL DataElementName da célula.  
   
-#### Subtotais automáticos  
+#### <a name="automatic-subtotals"></a>Subtotais automáticos  
  Os subtotais automáticos do Tablix não são renderizados.  
   
-#### Itens de linha e de coluna que não se repetem com um grupo  
+#### <a name="row-and-column-items-that-do-not-repeat-with-a-group"></a>Itens de linha e de coluna que não se repetem com um grupo  
  Os itens que não se repetem com um grupo, como os rótulos, subtotais e totais são renderizados como elementos. O nome do elemento é obtido da propriedade RDL TablixMember.DataElementName.  
   
  A propriedade TablixMember.DataElementOutput RDL controla se um item não repetido é renderizado.  
@@ -147,33 +149,29 @@ caps.handback.revision: 8
   
  Se um membro não repetitivo não tiver nenhuma Tablix célula correspondente, ele não será renderizado. Isto pode ocorrer no case de uma célula Tablix onde atravessa mais de uma coluna.  
   
-#### Linhas e Colunas que se repetem com um grupo  
+#### <a name="rows-and-columns-that-repeat-with-a-group"></a>Linhas e Colunas que se repetem com um grupo  
  Linhas e colunas que se repetem em um grupo são renderizadas de acordo com as regras Tablix.DataElementOutput. O nome do elemento é obtido da propriedade DataElementName.  
   
  Cada valor exclusivo dentro de um grupo é renderizado como um elemento filho do grupo. O nome para o elemento é obtido da propriedade Group.DataElementName.  
   
  Se o valor da propriedade DataElementOutput for igual à Saída, o cabeçalho de um item repetido será renderizado com um filho do elemento de detalhes.  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ##  <a name="CustomFormatsXSLTransformations"></a> Formatos personalizados e transformações XSL  
  Os arquivos XML produzidos pela extensão de renderização XML podem ser transformados em qualquer formato que utiliza as Transformações de XSL (XSLT). Esta funcionalidade pode ser usada para produzir dados em formatos que já não têm suporte pelas extensões de renderização existentes. Considere o uso da extensão de renderização XML e o XSLT antes de tentar criar sua própria extensão de renderização.  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ##  <a name="DuplicateName"></a> Nomes duplicados  
  Se houver nomes de elemento de dados duplicados dentro do mesmo escopo, o processador exibirá uma mensagem de erro.  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ##  <a name="XSLTTransformations"></a> Transformações XSLT  
  O processador XML pode aplicar uma transformação XSLT do lado de servidor para os dados de XML originais. Quando um XSLT é aplicado, o processador emite o conteúdo transformado ao invés dos dados XML originais. A transformação ocorre no servidor, não no cliente.  
   
- O XSLT a ser aplicado à saída é definido no arquivo de definição do relatório com a propriedade DataTransform do relatório ou com o parâmetro XSLT *DeviceInfo*. Se nenhum desses valores for definido, a transformação ocorre sempre que o processador XML é usado. Ao usar assinaturas, o XSLT deve ser definido na propriedade RDL DataTransform.  
+ O XSLT a ser aplicado à saída é definido no arquivo de definição do relatório com a propriedade DataTransform do relatório ou com o parâmetro XSLT *DeviceInfo* . Se nenhum desses valores for definido, a transformação ocorre sempre que o processador XML é usado. Ao usar assinaturas, o XSLT deve ser definido na propriedade RDL DataTransform.  
   
  Se um arquivo XSLT for especificado, tanto pela propriedade de definição DataTransform como pela definição das informações do dispositivo, o XSLT especificado no DataTransform ocorrerá primeiro, seguido do XSLT definido pelas configurações das informações do dispositivo.  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
 ###  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  
  Você pode alterar algumas configurações padrão para este processador alterando as configurações de informações de dispositivo, incluindo:  
@@ -194,12 +192,11 @@ caps.handback.revision: 8
   
  Para obter mais informações, consulte [XML Device Information Settings](../../reporting-services/xml-device-information-settings.md).  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#BackToTop)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

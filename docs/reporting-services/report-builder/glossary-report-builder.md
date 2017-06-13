@@ -1,23 +1,28 @@
 ---
-title: "Gloss&#225;rio (Construtor de Relat&#243;rios) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Glossário (construtor de relatórios) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Gloss&#225;rio (Construtor de Relat&#243;rios)
+# <a name="glossary-report-builder"></a>Glossário (Construtor de Relatórios)
   
   
 |Termo|Definição|  
@@ -76,7 +81,7 @@ caps.handback.revision: 8
 |regras de cores|O algoritmo que atribui cores automaticamente a cada elemento do mapa em uma camada do mapa.|  
 |escala de cores|Um tipo de legenda de mapa usado para interpretar o que as cores representam em um mapa.|  
 |common language runtime|O mecanismo no núcleo da execução do código gerenciado. O tempo de execução fornece código gerenciado com serviços, como integração entre linguagens, segurança de acesso do código, gerenciamento do tempo de vida de objetos e suporte à depuração e à criação de perfis.|  
-|expressão complexa|Uma expressão que não pode ser representada como uma única referência de campo interno e é exibida na superfície de design como <\<Expr>>.|  
+|expressão complexa|Uma expressão que não pode ser representada como uma referência de campo interno única e é exibida na superfície de design como <\<Expr >>.|  
 |concatenação|A combinação de duas ou mais cadeias de caracteres ou expressões em uma única cadeia de caracteres ou expressão, ou para combinar duas ou mais cadeias binárias ou expressões binárias em uma única cadeia ou expressão binária.|  
 |simultaneidade|Um processo que permite que vários usuários acessem e alterem dados compartilhados ao mesmo tempo. O SQL Server usa bloqueio para permitir que vários usuários acessem e alterem dados compartilhados ao mesmo tempo sem entrar em conflito.|  
 |arquivo config|Consulte outro termo: arquivo de configuração|  
@@ -358,7 +363,7 @@ caps.handback.revision: 8
 |instância do usuário|Uma instância do SQL Server Express que é gerada pela instância pai em nome de um usuário.|  
 |eixo de valor (y)|O eixo para exibir valores de dados numéricos em um gráfico. Em geral, o eixo vertical. Exceção: em gráficos de barras, os eixos são invertidos, e o eixo y exibe os dados do agrupamento.|  
 |expressão de valor|Uma expressão na linguagem MDX que retorna um valor. Expressões de valor podem funcionar em conjuntos, tuplas, membros, níveis, números ou cadeias de caracteres.|  
-|variável|1. No Integration Services, armazena valores que podem ser usados em scripts, em expressões e em expressões de propriedade para definir valores de colunas e as propriedades de objetos de pacote. <br />2. Entidades definidas às quais valores são atribuídos. Uma variável local é definida com uma instrução DECLARE@localvariable e recebe um valor inicial dentro do lote de instruções onde é declarada com uma instrução SELECT ou SET@localvariable.|  
+|variável|1. No Integration Services, armazena valores que podem ser usados em scripts, em expressões e em expressões de propriedade para definir valores de colunas e as propriedades de objetos de pacote. <br />2. Entidades definidas às quais valores são atribuídos. Uma variável local é definida com um DECLARE@localvariable instrução e atribuído um valor inicial dentro do lote de instruções onde é declarada com um SELECT ou SET@localvariable instrução.|  
 |intervalo de variáveis|Uma opção em um gráfico do Reporting Services que pode ser especificada para calcular automaticamente o número ideal de rótulos que podem ser colocados em um eixo, com base na largura ou na altura do gráfico.|  
 |virtualização|Em mapas, gráficos e medidores, a maneira como um usuário opta por visualizar dados analíticos.|  
 |serviço Web|No Reporting Services, um serviço que usa o protocolo SOAP sobre HTTP e atua como uma interface de comunicações entre programas cliente e o servidor de relatório.|  
@@ -369,7 +374,7 @@ caps.handback.revision: 8
 |eixo x|Consulte outro termo: eixo de categoria (x)|  
 |eixo y|Consulte outro termo: eixo de valor (y)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

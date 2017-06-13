@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ea85d2dff3afe1b5e5b56117255576f8d0ae2180
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: c153135f84f7cb9671840a55f29927fb06ea819e
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>Converter dados JSON em linhas e colunas com OPENJSON (SQL Server)
@@ -144,8 +144,8 @@ A função **OPENJSON** está disponível somente no **nível de compatibilidade
 Você pode alterar um nível de compatibilidade do banco de dados usando o seguinte comando:   
 `ALTER DATABASE <DatabaseName> SET COMPATIBILITY_LEVEL = 130`  
 
-## <a name="learn-more-about-openjson-and-built-in-json-support-in-sql-server"></a>Saiba mais sobre o OPENJSON e o suporte interno a JSON no SQL Server  
- [Postagens no blog por Jovan Popovic, gerente de programas da Microsoft](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)  
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Saiba mais sobre o suporte interno a JSON no SQL Server  
+Para muitas soluções específicas, casos de uso e recomendações, consulte o [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no banco de dados SQL Azure por Jovan Popovic, gerente de programas da Microsoft.
   
 ## <a name="see-also"></a>Consulte também  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  

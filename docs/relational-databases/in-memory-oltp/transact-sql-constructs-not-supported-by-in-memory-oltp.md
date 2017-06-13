@@ -1,7 +1,7 @@
 ---
 title: "Construções do Transact-SQL sem suporte no OLTP in-memory | Microsoft Docs"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a3539b07a27be375ebfe58e16a4792d9095fce0c
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construções do Transact-SQL sem suporte pelo OLTP na memória
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/11/2017
 |Operação|Atualização de colunas de chave primária|As colunas de chave primária nas tabelas com otimização de memória e em tipos de tabela não podem ser atualizadas. Se a chave primária precisar ser atualizada, exclua a linha antiga e insira a nova linha com a chave primária atualizada.|  
 |Operação|CREATE INDEX|Os índices nas tabelas com otimização de memória devem ser especificados embutidos com a instrução **CREATE TABLE** , ou com a instrução **ALTER TABLE** .|  
 |Operação|CREATE FULLTEXT INDEX|Os índices de texto completo não têm suporte para tabelas com otimização de memória.|  
-|Operação|alteração de esquema|As tabelas com otimização de memória e os procedimentos armazenados compilados de modo nativo não dão suporte a alterações de esquema, por exemplo, **sp_rename**.<br /><br /> Tentar fazer determinadas alterações de esquema resultará no erro 12320. As operações que exigem uma alteração da versão do esquema, por exemplo, por meio da mudança do nome, não têm suporte tabelas com otimização de memória.<br /><br /> Determinadas alterações de esquema usando ALTER TABLE e ALTER PROCEDURE são permitidas.|  
+|Operação|alteração de esquema|As tabelas com otimização de memória e os procedimentos armazenados compilados de modo nativo não dão suporte a alterações de esquema, por exemplo, **sp_rename**.<br /><br /> Tentar fazer determinadas alterações de esquema resultará no erro 12320. As operações que exigem uma alteração da versão do esquema, por exemplo, por meio da mudança do nome, não têm suporte tabelas com otimização de memória.<br /><br /> Determinadas alterações de esquema usando ALTER TABLE e ALTER PROCEDURE são permitidas.<br/><br/>**Aplica-se a:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>Começando com [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], sp_rename tem suporte.| 
 |Operação|TRUNCATE TABLE|A operação TRUNCATE não tem suporte para tabelas com otimização de memória. Para remover todas as linhas de uma tabela, exclua todas as linhas usando **DELETE FROM***table* ou remova e recrie a tabela.|  
 |Operação|ALTER AUTHORIZATION|Não há suporte para alteração do proprietário de uma tabela com otimização de memória ou procedimentos armazenados nativamente compilados existentes. Descarte e recrie a tabela ou o procedimento para alterar a propriedade.|  
 |Operação|ALTER SCHEMA|Transferindo um protegível entre esquemas.|  

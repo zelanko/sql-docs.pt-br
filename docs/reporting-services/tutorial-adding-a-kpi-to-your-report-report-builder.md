@@ -1,63 +1,49 @@
 ---
-title: "Tutorial: adicionando um KPI ao relat&#243;rio (Construtor de Relat&#243;rios) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Tutorial: Adicionando um KPI ao relatório (construtor de relatórios) | Microsoft Docs"
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 6ff993552c5c5b8a3e48c672a29f6567107f2331
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutorial: adicionando um KPI ao relat&#243;rio (Construtor de Relat&#243;rios)
-Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)], você adiciona um KPI (indicador chave de desempenho) a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: adicionando um KPI ao relatório (Construtor de Relatórios)
+Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , você adiciona um KPI (indicador chave de desempenho) a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
 
 Os KPIs são valores mensuráveis com importância comercial. Nesse cenário, o resumo das vendas por subcategorias de produto é o KPI. O estado atual do KPI é mostrado com cores, medidores e indicadores.
   
 A ilustração a seguir é semelhante ao relatório que você criará.  
   
 ![report-builder-kpi-report](../reporting-services/media/report-builder-kpi-report.png)
-  
-## <a name="BackToTop"></a>O que você aprenderá  
-Neste tutorial, você aprenderá a adicionar um KPI definindo a cor da tela de fundo das células da tabela com base no valor da célula, além de adicionar e configurar um medidor e indicador. Você também aprende a escrever a expressão que define a cor do plano de fundo das células da tabela.  
-  
-Este tutorial contém os seguintes procedimentos:  
-  
-1.  [Criar um relatório de tabela e conjunto de dados no Assistente de Tabela ou Matriz](#Table)  
-  
-2.  [Organizar dados e escolher o layout no Assistente de Tabela ou Matriz](#CompleteWizard)  
-  
-3.  [Usar cores do plano de fundo para exibir um KPI](#BackgroundColors)  
-  
-4.  [Exibir um KPI usando um medidor](#Gauge)  
-  
-5.  [Exibir um KPI usando um indicador](#Indicator)  
-  
-6.  [Adicionar um título de relatório](#Title)  
-  
-7.  [Salvar o relatório](#Save)  
-  
+    
 > [!NOTE]  
 > Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, consulte o primeiro tutorial desta série: [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 15 minutos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
 Para obter informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Table"></a>1. Criar um relatório de tabela e conjunto de dados no Assistente de Tabela ou Matriz  
 Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto de dados inserido e exibe os dados em uma tabela.  
  
-### Para criar uma tabela com um conjunto de dados inserido  
+### <a name="to-create-a-table-with-an-embedded-dataset"></a>Para criar uma tabela com um conjunto de dados inserido  
   
 1.  [Inicie o Construtor de Relatórios](../reporting-services/report-builder/start-report-builder.md) no computador, no portal da Web do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou no modo integrado do SharePoint.  
   
@@ -69,15 +55,15 @@ Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto 
   
 3.  No painel direito, clique em **Assistente de Tabela ou Matriz**.  
   
-4.  Na página **Escolher um conjunto de dados**, clique em **Criar um conjunto de dados**.  
+4.  Na página **Escolher um conjunto de dados** , clique em **Criar um conjunto de dados**.  
   
 5.  Clique em **Avançar**.  
   
-6.  Na página **Escolher uma conexão com uma fonte de dados**, selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou se você não tiver acesso a um servidor de relatório, será possível usar uma fonte de dados inserida. Para obter mais informações, consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou se você não tiver acesso a um servidor de relatório, será possível usar uma fonte de dados inserida. Para obter mais informações, consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Clique em **Avançar**.  
   
-8.  Na página **Crie uma consulta**, clique em **Editar como Texto**.  
+8.  Na página **Crie uma consulta** , clique em **Editar como Texto**.  
   
 9. Copie e cole a seguinte consulta no painel de consulta:  
 
@@ -124,7 +110,7 @@ Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto 
 ## <a name="CompleteWizard"></a>2. Organizar dados e escolher o layout no Assistente  
 O Assistente de Tabela ou Matriz fornece um design inicial no qual os dados serão exibidos. O painel de visualização no assistente ajuda a visualizar o resultado do agrupamento de dados antes de concluir o design da tabela ou da matriz.  
   
-### Para organizar dados em grupos e escolher um layout 
+### <a name="to-organize-data-into-groups-and-choose-a-layout"></a>Para organizar dados em grupos e escolher um layout 
   
 1.  Na página Organizar campos, arraste Product até **Valores**.  
   
@@ -168,7 +154,7 @@ Para cada produto vendido em uma data específica, a tabela exibe o nome do prod
 
 ![report-builder-kpi-basic-table](../reporting-services/media/report-builder-kpi-basic-table.png)
     
-### Formatar datas e moeda
+### <a name="format-dates-and-currency"></a>Formatar datas e moeda
 Vamos aumentar a largura das colunas e definir o formato para as datas e a moeda.
 
 1. Clique em **Design** para voltar para o modo Design.
@@ -179,11 +165,11 @@ Vamos aumentar a largura das colunas e definir o formato para as datas e a moeda
 
 4. Na guia **Início** > **Número** > **Moeda**. As células são alteradas para mostrar a moeda formatada.
 
-   Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [$12,345.00]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números**, clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.
+   Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [$12,345.00]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
 
-5. (Opcional) Na guia **Início**, no grupo **Número**, clique no botão **Diminuir Decimais** duas vezes para exibir valores em dólares sem centavos.
+5. (Opcional) Na guia **Início** , no grupo **Número** , clique no botão **Diminuir Decimais** duas vezes para exibir valores em dólares sem centavos.
 
 6. Clique na célula que contém [SalesDate].
 
@@ -198,7 +184,7 @@ Vamos aumentar a largura das colunas e definir o formato para as datas e a moeda
 ## <a name="BackgroundColors"></a>3. Usar cores do plano de fundo para exibir um KPI  
 As cores do plano de fundo podem ser definidas como uma expressão avaliada quando você executa o relatório.  
   
-### Para exibir o estado atual de um KPI usando cores de plano de fundo  
+### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>Para exibir o estado atual de um KPI usando cores de plano de fundo  
   
 1.  Na tabela, clique com o botão direito do mouse na segunda célula `[Sum(Sales)]` (a linha do subtotal que exibe as vendas de uma subcategoria) e clique em **Propriedades da Caixa de Texto**. 
 
@@ -206,7 +192,7 @@ As cores do plano de fundo podem ser definidas como uma expressão avaliada quan
     
     ![report-builder-text-box-properties](../reporting-services/media/report-builder-text-box-properties.png)
   
-2.  Em **Preencher**, clique no botão **fx** ao lado da opção **Cor de preenchimento** e insira a seguinte expressão no campo **Definir expressão para: BackgroundColor**:  
+2.  Em **Preencher** , clique no botão **fx** ao lado da opção **Cor de preenchimento** e insira a seguinte expressão no campo **Definir expressão para: BackgroundColor** :  
   
     `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
@@ -223,7 +209,7 @@ Na linha de subtotal que exibe as vendas de uma subcategoria, a cor do plano de 
 ## <a name="Gauge"></a>4. Exibir um KPI usando um medidor  
 Um medidor representa um único valor em um conjunto de dados. Este tutorial usa um medidor linear horizontal porque sua forma e simplicidade facilitam a leitura, mesmo quando é menor e usado em uma célula da tabela. Para obter mais informações, consulte [Medidores &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
-### Para exibir o estado presente de um KPI que usa um medidor  
+### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>Para exibir o estado presente de um KPI que usa um medidor  
   
 1.  Mude novamente para o modo Design.  
   
@@ -260,11 +246,11 @@ Um medidor representa um único valor em um conjunto de dados. Este tutorial usa
     > [!NOTE]  
     > Em vez de uma constante como 25.000, é possível usar uma expressão para calcular dinamicamente o valor da opção **Máximo**. A expressão usaria a agregação do recurso de agregação e semelhante à expressão `=Max(Sum(Fields!Sales.value), "Tablix1")`.  
 
-14. Na guia **Rótulos**, marque **Ocultar rótulos de escala**.
+14. Na guia **Rótulos** , marque **Ocultar rótulos de escala**.
 
 15. Clique em **OK**.
   
-14. Arraste o medidor na tabela até a segunda célula vazia na coluna KPI Linear, na linha que exibe o subtotal de vendas do campo `Subcategory`, ao lado do campo ao qual você adicionou a fórmula de cor da tela de fundo.  
+14. Arraste o medidor na tabela até a segunda célula vazia na coluna KPI Linear, na linha que exibe o subtotal de vendas do campo `Subcategory` , ao lado do campo ao qual você adicionou a fórmula de cor da tela de fundo.  
   
     > [!NOTE]  
     > Talvez você precise redimensionar a coluna para que o medidor linear horizontal se ajuste à célula. Para redimensionar a coluna, selecione a tabela e arraste as alças da coluna. A superfície de design do relatório é redimensionada para se ajustar à tabela.  
@@ -278,7 +264,7 @@ Um medidor representa um único valor em um conjunto de dados. Este tutorial usa
 ## <a name="Indicator"></a>5. Exibir um KPI usando um indicador  
 Indicadores são medidores pequenos e simples que comunicam valores de dados em um relance. Por conta de seu tamanho e simplicidade, os indicadores costumam ser usados em tabelas e matrizes. Para obter mais informações, consulte [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
-### Para exibir o estado atual de um KPI usando um indicador  
+### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>Para exibir o estado atual de um KPI usando um indicador  
   
 1.  Alterne para o modo Design.  
   
@@ -298,9 +284,9 @@ Indicadores são medidores pequenos e simples que comunicam valores de dados em 
   
 8.  Clique com o botão direito do mouse no indicador e clique em **Propriedades do Indicador**.  
   
-9. Na guia **Valores e Estados**, na caixa **Valor**, selecione **[Sum(Sales)]**. Não altere nenhuma outra opção.  
+9. Na guia **Valores e Estados** , na caixa **Valor** , selecione **[Sum(Sales)]**. Não altere nenhuma outra opção.  
   
-    Por padrão, a sincronização de dados ocorre na região de dados e o valor **Tablix1**, o nome da região de dados da tabela no relatório, é exibido na caixa **Escopo de sincronização**.  
+    Por padrão, a sincronização de dados ocorre na região de dados e o valor **Tablix1**, o nome da região de dados da tabela no relatório, é exibido na caixa **Escopo de sincronização** .  
   
     Nesse relatório, é possível alterar também o escopo de um indicador colocado na célula do subtotal da subcategoria para sincronização no campo SalesDate.  
   
@@ -315,20 +301,20 @@ Um título é exibido na parte superior do relatório. É possível colocar o t�
   
 Você pode aprimorar o texto ainda mais com a aplicação de estilos, tamanhos e cores de fontes diferentes a frases e caracteres individuais do texto. Para obter mais informações, consulte [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
-### Para adicionar um título de relatório  
+### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
   
 1.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-2.  Digite **KPIs de Vendas de Produtos** e clique fora da caixa de texto.  
+2.  Digite **KPIs de Vendas de Produtos**e clique fora da caixa de texto.  
   
-3.  Opcionalmente, clique com o botão direito do mouse na caixa de texto que contém **KPI de Vendas de Produtos**, clique em **Propriedades da Caixa de Texto** e, na guia Fonte, selecione estilos, tamanhos e cores de fontes diferentes.  
+3.  Opcionalmente, clique com o botão direito do mouse na caixa de texto que contém **KPI de Vendas de Produtos**, clique em **Propriedades da Caixa de Texto**e, na guia Fonte, selecione estilos, tamanhos e cores de fontes diferentes.  
   
 4.  Clique em **Executar** para visualizar o relatório.  
   
 ## <a name="Save"></a>7. Salvar o relatório  
-Salve o relatório em um servidor de relatório ou no computador. Se você não salvar o relatório no servidor de relatório, vários recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], como partes do relatório e sub-relatórios, não estarão disponíveis.  
+Salve o relatório em um servidor de relatório ou no computador. Se você não salvar o relatório no servidor de relatório, vários recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , como partes do relatório e sub-relatórios, não estarão disponíveis.  
   
-### Para salvar o relatório em um servidor de relatório  
+### <a name="to-save-the-report-on-a-report-server"></a>Para salvar o relatório em um servidor de relatório  
   
 1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
@@ -344,25 +330,27 @@ Salve o relatório em um servidor de relatório ou no computador. Se você não 
   
 O relatório será salvo no servidor de relatório. O nome do servidor de relatório ao qual você está conectado é exibido na barra de status da parte inferior da janela.  
   
-### Para salvar o relatório no computador  
+### <a name="to-save-the-report-on-your-computer"></a>Para salvar o relatório no computador  
   
 1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
-2.  Clique em **Área de Trabalho**, **Meus Documentos** ou **Meu computador** e procure a pasta na qual você quer salvar o relatório.  
+2.  Clique em **Área de Trabalho**, **Meus Documentos**ou **Meu computador**e procure a pasta na qual você quer salvar o relatório.  
   
 > [!NOTE]  
-> Se você não tiver acesso a um servidor de relatório, clique em **Área de Trabalho**, **Meus Documentos** ou **Meu computador** e salve o relatório no computador.  
+> Se você não tiver acesso a um servidor de relatório, clique em **Área de Trabalho**, **Meus Documentos**ou **Meu computador** e salve o relatório no computador.  
   
 1.  Em **Nome**, substitua o nome padrão por **KPI de Vendas de Produtos**.  
   
 2.  Clique em **Salvar**.  
   
-## Próximas etapas  
+## <a name="next-steps"></a>Próximas etapas  
 Você completou com êxito o tutorial Adicionando um KPI ao relatório. Para obter mais informações, consulte:
 *  [Medidores](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [Indicadores](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 * [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md)
 * [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

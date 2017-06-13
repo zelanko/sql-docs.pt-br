@@ -1,31 +1,36 @@
 ---
-title: "Comparar fun&#231;&#245;es e tarefas no Reporting Services com grupos e permiss&#245;es do SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "permissões [Reporting Services], de modo integrado do SharePoint"
-  - "segurança [Reporting Services], tarefas"
-  - "funções [Reporting Services], predefinidas"
-  - "Integração do SharePoint [Reporting Services], permissões"
-  - "permissões [Reporting Services], modo nativo"
-  - "segurança [Reporting Services], funções predefinidas"
-  - "segurança [Reporting Services], modo integrado do SharePoint"
+title: "Relatório de funções de serviços-tarefas vs. Permissões de grupos do SharePoint | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- security [Reporting Services], tasks
+- roles [Reporting Services], predefined
+- SharePoint integration [Reporting Services], permissions
+- permissions [Reporting Services], native mode
+- security [Reporting Services], predefined roles
+- security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 19
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 779105655150aae2f1397865c67f8e835fd99646
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Comparar fun&#231;&#245;es e tarefas no Reporting Services com grupos e permiss&#245;es do SharePoint
+# <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Relatório de funções de serviços-tarefas vs. Permissões de grupos do SharePoint
   Este tópico compara recursos de autorização baseado em função e tarefas no modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com os recursos de segurança nos produtos do SharePoint. Este tópico compara a terminologia e as características de funções, tarefas, grupos do SharePoint, níveis de permissão e permissões.  
   
 ||  
@@ -43,7 +48,7 @@ caps.handback.revision: 19
 ##  <a name="bkmk_compare_tools_terms"></a> Comparar ferramentas de permissão e terminologia  
  **Modo nativo:** os objetos de permissão do modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (funções e tarefas) são criados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e configurados para usuários individuais no Gerenciador de Relatórios.  
   
- **Modo do SharePoint:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o modo do SharePoint utiliza os recursos de permissão do SharePoint. Os grupos e as permissões do SharePoint são gerenciados da página **Configurações de Site** a seguir.  
+ **SharePoint mode:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode utilizes the SharePoint permission features. Os grupos e as permissões do SharePoint são gerenciados da página **Configurações de Site** a seguir.  
   
  A tabela a seguir compara objetos e conceitos relacionados à permissão entre o modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o SharePoint.  
   
@@ -66,7 +71,7 @@ caps.handback.revision: 19
 |**Gerenciador de Conteúdo**<br /><br /> Permissões totais em todos os itens e operações do nível de item, inclusive permissões para definir segurança.|Use o grupo **Proprietários** para conceder controle total no gerenciamento de itens de servidor de relatório em um site do SharePoint. O grupo **Proprietários** tem permissões Controle Total, que permitem que os membros do grupo alterem o conteúdo, as páginas ou a funcionalidade do site. O acesso Controle Total deve ser limitado somente a administradores de site.|  
 |**Meus Relatórios**|Não há nenhum grupo equivalente. **Meus Relatórios** não tem suporte em um servidor de relatório executado no modo do SharePoint. Você pode usar o recurso Meu Site no [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] se desejar usar uma funcionalidade equivalente.|  
 |**Publicador**<br /><br /> Adicionar, atualizar, exibir e excluir relatórios, modelos de relatórios, fontes de dados compartilhadas e recursos.|Use o grupo **Membros** para conceder permissões para adicionar itens, editar itens e atualizar referências aos itens dependentes em um site do SharePoint. O grupo **Membros** tem permissões de nível Colaborar, que permitem aos membros do grupo exibir páginas, adicionar e atualizar itens e enviar alterações para aprovação.|  
-|**Construtor de Relatórios**<br /><br /> Exibir relatórios, gerenciar assinaturas individuais automaticamente e abrir relatórios no Construtor de Relatórios.|Não há nenhum nível de permissão pronto predefinido ou grupo do SharePoint que seja equivalente à definição de relatório do Construtor de Relatórios. Por padrão, os usuários que pertencem ao grupo **Membros** ou ao grupo **Proprietários** têm permissão para usar o Construtor de Relatórios. Se desejar disponibilizar o Construtor de Relatórios para mais usuários, crie configurações de segurança personalizadas para fornecer um nível de permissão similar ao fornecido pela função do Construtor de Relatórios. Para obter mais informações, consulte [Definir permissões para itens do Servidor de Relatório em um site do SharePoint &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/security/set permissions for report server items on a sharepoint site.md).|  
+|**Construtor de Relatórios**<br /><br /> Exibir relatórios, gerenciar assinaturas individuais automaticamente e abrir relatórios no Construtor de Relatórios.|Não há nenhum nível de permissão pronto predefinido ou grupo do SharePoint que seja equivalente à definição de relatório do Construtor de Relatórios. Por padrão, os usuários que pertencem ao grupo **Membros** ou ao grupo **Proprietários** têm permissão para usar o Construtor de Relatórios. Se desejar disponibilizar o Construtor de Relatórios para mais usuários, crie configurações de segurança personalizadas para fornecer um nível de permissão similar ao fornecido pela função do Construtor de Relatórios. Para obter mais informações, consulte [Definir permissões para itens do Servidor de Relatório em um site do SharePoint &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md).|  
 |-|Use o grupo **Visualizadores** para conceder permissões para exibir relatórios renderizados. O grupo **Visualizadores** não pode baixar ou exibir o conteúdo de itens de relatório.<br /><br /> **Observação:** a partir do SQL Server 2012 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o grupo **Visualizadores** não tem permissões para criar assinaturas.|  
 |**Usuário do Sistema** e **Administrador do Sistema**|Estas funções não são necessárias para um servidor de relatório executado no modo do SharePoint. **Usuário do Sistema** e **Administrador do Sistema** correspondem às permissões no nível do farm do SharePoint ou do aplicativo Web. O servidor de relatório não fornece nenhuma funcionalidade que requer autorização nesse nível.|  
   
@@ -102,11 +107,11 @@ caps.handback.revision: 19
 |Exibir propriedades do servidor de relatório|Sistema|Nenhum (não aplicável). O servidor de relatório não controla se um usuário tem permissão para exibir configurações de integração em Administração Central.|  
 |Exibir agendas compartilhadas|Sistema|Abrir itens.|  
   
-## Consulte também  
- [Definir permissões para itens do Servidor de Relatório em um site do SharePoint &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/security/set permissions for report server items on a sharepoint site.md)   
+## <a name="see-also"></a>Consulte também  
+ [Definir permissões para itens do Servidor de Relatório em um site do SharePoint &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Definir permissões para operações do servidor de relatório em um aplicativo Web do SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Definições de função](../../reporting-services/security/role-definitions.md)   
- [Funções predefinidas](../../reporting-services/security/predefined-roles.md)  
+ [Funções predefinidas](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   

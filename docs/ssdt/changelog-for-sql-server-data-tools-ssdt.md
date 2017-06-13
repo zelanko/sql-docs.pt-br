@@ -15,18 +15,150 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8798c5319cdce7b68f71868722aacfbf4cb34d9f
+ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
+ms.openlocfilehash: 243d2e6187a58554cee80066912de7dfcc0c52fc
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/20/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log de mudanças para o SSDT (SQL Server Data Tools)
-Este log de alterações é para o [SSDT (SQL Server Data Tools) para Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx), lançado junto com o [SQL Server 2016](https://msdn.microsoft.com/library/ms130214.aspx).  
+Esse log de alteração é para [SQL Server Data Tools (SSDT) para Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx).  
   
-Para postagens detalhadas sobre as novidades e alterações, visite o [Blog da equipe do SSDT](https://blogs.msdn.microsoft.com/ssdt/).  
+As mensagens detalhadas sobre os novos e alterados, visite [o blog da equipe do SSDT](https://blogs.msdn.microsoft.com/ssdt/)
 
-## <a name="ssdt-165-for-sql-server-2016"></a>SSDT 16.5 (para SQL Server 2016)
+## <a name="ssdt-171"></a>SSDT 17.1
+Número da compilação: 14.0.61705.170
+
+### <a name="whats-new"></a>O que há de novo?
+**Projetos do AS:**
+- Os usuários podem definir a codificação de dicas de colunas na interface do usuário em modelos de 1400
+- O IntelliSense não relacionados ao modelo agora está disponível no modo offline
+- Gerenciador de modelos de tabela agora contém um nó para representar nomeadas expressões M disponíveis no modelo (modelos de tabela do nível de compatibilidade 1400)
+- Azure Active Directory seletor de pessoas semelhante ao IAM do Portal do Microsoft Azure agora disponível ao configurar os membros da função em modelos de tabela
+
+**Projetos de bancos de dados:**
+- Atualizado para DacFx 17.1
+
+### <a name="bug-fixes"></a>Correções de bugs
+- Corrigido um problema em que o nome do grupo de Designers do Business Intelligence foi exibido incorretamente em Opções do Visual Studio em VS2017
+- Corrigido um problema em que uma falha pode ocorrer a geração de um mapa de código para uma solução com um projeto de relatório ou como o projeto
+- Um número fixo de problemas com a integração de PowerQuery para modelos de tabela do Analysis Services 1400 nível de compatibilidade
+- Corrigido um problema no novo editor DAX em que o operador de atribuição não pôde ser em uma linha separada ao definir uma medida de janela de ferramenta
+- Corrigido um problema que impediu a exibição de tabela medidas de atualização ao renomear medidas na perspectiva
+- Atualizado mecanismo do Analysis Services integrada de espaço de trabalho e modelo de objeto de tabela que corrige uma regressão que causou a projetos de tabela 1200, que contém traduções em implantar o servidor SQL Server 2016 Analysis Services
+- Corrigido um problema de desempenho que fez creation\deletion de novas fontes de dados tabulares 1400 muito lentas
+- Corrigido um problema em que o diagrama DSV em modelos multidimensionais foi parar renderização se alterar o modo de exibição rapidamente entre diferentes DSVs
+
+## <a name="dacfx-171"></a>17.1 DacFx
+- Corrigido um problema ao criptografar uma coluna com tabelas com otimização de memória com outras colunas de identidade
+- Suporte SQLDOM para a opção CATALOG_COLLATION para criar o banco de dados
+
+## <a name="dacfx-1701"></a>DacFx 17.0.1 
+- Corrija o problema com bancos de dados com uma chave assimétrica por um HSM com um provedor de EKM [item Connect](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
+
+## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17,0 (dá suporte a até 2017 do SQL Server)
+Número da compilação: 14.0.61704.140
+
+### <a name="whats-new"></a>O que há de novo?
+**Projetos de bancos de dados:**
+- Corrigindo um índice clusterizado em uma exibição não bloqueia a implantação
+- Cadeias de caracteres de comparação de esquema relacionadas à criptografia de coluna usarão o próprio nome em vez do nome da instância.   
+- Adição de uma nova opção de linha de comando para SqlPackage: ModelFilePath.  Isso fornece uma opção para usuários avançados especificar um arquivo externo model.xml para importação, publicação e operações de script   
+- A API do DacFx foi estendida para dar suporte à autenticação do Azure AD Universal e autenticação multifator (MFA)
+
+**Projetos do IS:**
+- O Gerenciador de Fontes OData do SSIS e o Gerenciador de Conexões OData agora têm suporte para conexão aos feeds OData do Microsoft Dynamics AX Online e do Microsoft Dynamics CRM Online.
+- Projeto SSIS agora dá suporte à versão do servidor de destino de "SQL Server 2017" 
+- Suporte para a tarefa de controle de CDC, separador de CDC e CDC fonte durante o direcionamento 2017 do SQL Server. 
+
+**Projetos do AS:**
+- A integração do Analysis Services PowerQuery (modelos de tabela do nível de compatibilidade 1400):
+    - O DirectQuery está disponível para SQL, Oracle, Teradata e se o usuário instalou 3º drivers de terceiros
+    - Adicionar colunas, por exemplo PowerQuery
+    - Opções de modelos de 1400 (Propriedades do nível de modelo usadas pelo mecanismo de M) de acesso a dados
+        - Habilitar a combinação rápida (o padrão é falso - quando definido como true, o mashup mecanismo irá ignorar os níveis de privacidade de fonte de dados ao combinar dados)
+        - Habilitar herdado redireciona (o padrão é false – quando definido como true, o mecanismo mashup seguirá redirecionamentos de HTTP que são potencialmente inseguros.  Por exemplo, um redirecionamento de um HTTPS para um URI de HTTP)  
+        - Retornar valores de erro como Null (o padrão é false – quando definido como true, erros de nível de célula será retornado como null. Quando for falso, será gerada uma exceção é uma célula contiver um erro)  
+    - Fontes de dados adicionais (fontes de dados de arquivo) usando PowerQuery
+        - Excel 
+        - Texto/CSV 
+        - Xml 
+        - JSON 
+        - Pasta 
+        - Banco de dados do Access 
+        - Armazenamento de blobs do Azure 
+    - Interface de usuário PowerQuery localizada
+- Janela de ferramenta do Editor DAX
+    - DAX melhor experiência para expressões de linhas de detalhes, disponíveis por meio do modo de exibição, o menu de outras janelas no SSDT, colunas calculadas e medidas de edição
+    - Aprimoramentos para parser\Intellisense DAX
+
+
+**Projetos do RS:**
+- O controle de RVC incorporável agora está disponível com suporte ao SSRS 2016
+
+### <a name="bug-fixes"></a>Correções de bugs
+**Projetos do AS:**
+- Correção da prioridade de modelo para projetos de BI, para que não aparecem na parte superior das categorias de Novos Projetos no VS
+- Correção de um travamento do VS que pode ocorrer em circunstâncias raras durante a abertura de solução SSIS, SSAS ou SSRS
+- Tabular: uma variedade de aprimoramentos e correções de desempenho para análise de DAX e barra de fórmulas.
+- Tabular: o Gerenciador de Modelos de Tabela não estará visível se nenhum projeto Tabular do SSAS estiver aberto.
+- Multidimensionais: corrigido um problema em que a caixa de diálogo de processamento não era utilizável em computadores com alto DPI.
+- Tabular: corrigido um problema em que o SSDT falha ao abrir qualquer projeto do BI quando o SSMS já está aberto.[Conectar Item](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- Tabular: corrigido um problema em que hierarquias não estavam sendo corretamente salvas no arquivo bim em um modelo 1103.[Conectar Item](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
+- Tabular: corrigido um problema em que modo de espaço de trabalho integrado era permitido em computadores de 32 bits mesmo quando não havia suporte.
+- Tabular: corrigido um problema em que clicar em qualquer coisa no modo de semisseleção (digitando uma expressão DAX mas clicando em uma medida, por exemplo) poderia causar falhas.
+- Tabela: Corrigido um problema em que o Assistente de implantação redefiniria a propriedade .Name de volta para "Model". [Conectar Item](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- Tabular: corrigido um problema em que selecionar uma hierarquia em TME deveria exibir propriedades mesmo se a exibição de diagrama não estivesse selecionada.
+- Tabular: corrigido um problema em que colar na barra de fórmula DAX colaria imagens ou outros tipos de conteúdo em vez de texto ao colar de determinados aplicativos.
+- Tabular: corrigido um problema em que alguns modelos antigos no 1103 não podiam ser abertos devido à presença de medidas com uma definição específica.
+- Tabular: corrigido um problema em que as sessões do XEvent não puderam ser excluídas.
+- Correção de um problema que causa falha ao tentar compilar arquivos "smproj" do AS com devenv.com
+- Correção de um problema que estava finalizando as alterações de texto com muita frequência ao usar o IME em coreano em títulos de guia de planilha de modelo de tabela do AS
+- Correção de um problema no qual o intellisense para a função DAX Related() não estava funcionando corretamente para mostrar colunas de outras tabelas
+- Aprimoramento da importação de projeto de tabela do AS da caixa de diálogo de banco de dados por meio da classificação da lista de bancos de dados do AS
+- Correção de um problema ao criar tabelas calculadas no modelo de tabela do AS em que as Tabelas não eram listadas como os objetos sugeridos na expressão
+- Correção de um problema de visualização de modelos do AS 1400 tentando abrir usando o servidor de Espaço de Trabalho Integrado após a visualização do código
+- Correção de um problema que impedia algumas fontes de dados (sem suporte para o catálogo inicial) de funcionar corretamente em determinadas circunstâncias 
+- O Assistente de Implantação deve aplicar as alterações em partições de tabela calculadas, mesmo quando a opção de manter as partições estiver habilitada
+- Correção de um problema no qual a caixa de diálogo Propriedades Avançadas da Conexão do AS existente não mostrava a lista completa até a nova seleção
+- Alguns problemas foram corrigidos com recortados cadeias de caracteres de interface do usuário que eram exibidos em algumas versões localizadas
+- Um número fixo de problemas com a integração de PowerQuery no nível de compatibilidade 1400 como modelos de tabela
+- Corrigido um problema com modelos de estilo do Assistente de relatório não aparecer corretamente
+- Corrigido um problema com o Assistente de relatório que pode levar a configurações de fonte de dados incorretos durante a alteração do SQL para AS
+- Corrigido um problema que causa a falha de compilação de projeto do Analysis Services (tabela) da linha de comando (devenv.com\exe)
+- Corrigido um problema com o analisador de medidas DAX para mostrar a cor do texto realçado e correto ao iniciar com letras antes: =
+- Corrigido um problema disparar um ObjectRefException se caminhos tem muito tentar mostrar todos os arquivos de projeto de tabela no modo integrado do espaço de trabalho
+- Corrigido um problema com o Designer de fonte de dados Compact 4.0 cliente provedor de dados em que ela aparece indisponível
+- Corrigido um problema que causou um erro ao tentar navegar como modelo de mineração no VS2017
+- Corrigido um problema em que o modelo multidimensional em VS2017 em que o diagrama DSV para renderização depois de alterar os modos de exibição e atinge, em seguida, uma exceção
+- Corrigido um problema Visualizando relatórios com uma conexão como falha em VS2017
+ 
+
+**Projetos do RS:**
+- Correção de um problema durante a criação de relatórios no SSDT em que o modo de exibição de árvore dos parâmetros, fontes de dados e conjuntos de dados eram recolhidos quando a maioria das alterações era feita 
+- Corrigido um problema em que Salvar deveria salvar a versão do RDL e não a versão mais recente.
+- Corrigido um problema em que o SSDT RS está fazendo backup de arquivos quando o backup é desativado, entre vários outros problemas.
+- Corrigido um problema no construtor de relatórios em que um erro seria exibido quando você clicasse em "Dividir Células". [Conectar Item](http://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
+- Corrigido um problema em que o cache pode gerar dados incorretos em um relatório. [Conectar Item](http://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
+
+**Projetos do IS:**
+- Corrigido um problema em que a configuração run64bitruntime não permanecia.
+- Corrigido um problema em que DataViewer não salvava colunas exibidas.
+- Corrigido um problema que Partes do Pacote oculta anotações. [Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3106624/package-parts-hide-annotations)
+- Corrigido um problema que partes do pacote descarta as anotações e layouts de fluxo de dados. [Conectar Item](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)
+- Corrigido um problema em que o SSDT falha ao importar o projeto do SQL Server.
+- Corrigido um problema com Hadoop TimeoutInMinutes de tarefa de sistema de arquivo padrão para 10 após a abertura salva o pacote do SSIS e em tempo de execução.
+
+**Projetos de bancos de dados:**
+- Implantação do DACPAC SSDT adiciona configuração novamente para IgnoreColumnOrder [item do Connect](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
+- SSDT falha ao compilar se STRING_SPLIT for usado [item do Connect](http://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
+- Correção de problema em que DeploymentContributors tem acesso ao modelo público, mas o esquema de backup não foi inicializado [problema do Github](https://github.com/Microsoft/DACExtensions/issues/8)
+- Correção temporária de DacFx para o posicionamento de FILEGROUP
+- Correção do erro de "Referência não resolvida" para sinônimos externos. 
+- Always Encrypted: a criptografia online não desabilita o controle de alterações em cancelamento e não funciona corretamente se o controle de alterações não tiver sido limpo antes de iniciar a criptografia
+
+
+## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16.5 (dá suporte a até o SQL Server 2016)
 Lançamento: 20 de outubro de 2016
 
 Número de build: 14.0.61021.0

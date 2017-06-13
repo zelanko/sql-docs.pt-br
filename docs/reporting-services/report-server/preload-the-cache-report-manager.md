@@ -1,33 +1,38 @@
 ---
-title: "Pr&#233;-carregar o cache (Gerenciador de Relat&#243;rios) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cache [Reporting Services]"
-  - "pré-carregando o cache"
+title: "Pré-carregar o Cache (Gerenciador de relatórios) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cache [Reporting Services]
+- preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 caps.latest.revision: 35
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 35
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Pr&#233;-carregar o cache (Gerenciador de Relat&#243;rios)
+# <a name="preload-the-cache-report-manager"></a>Pré-carregar o cache (Gerenciador de Relatórios)
   Você pode pré-carregar o cache para um conjunto de dados compartilhado criando um plano de atualização do cache para o conjunto de dados compartilhado.  
   
  Você pode pré-carregar o cache para um relatório de duas maneiras:  
   
 1.  Criar um plano de atualização do cache para o relatório. Este é o método preferencial.  
   
-2.  Usar uma assinatura controlada por dados para pré-carregar o cache com instâncias de relatórios com parâmetros. Essa era a única maneira de pré-carregar o cache em versões do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] anteriores ao [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Para obter mais informações, consulte [Armazenamento de relatórios em cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
+2.  Usar uma assinatura controlada por dados para pré-carregar o cache com instâncias de relatórios com parâmetros. Essa era a única maneira de pré-carregar o cache em versões do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] anteriores ao [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Para obter mais informações, consulte [Armazenando relatórios em cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
  As condições a seguir devem ser atendidas para que seja possível armazenar em cache um relatório ou um conjunto de dados compartilhado:  
   
@@ -37,9 +42,9 @@ caps.handback.revision: 35
   
 -   O serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve estar em execução.  
   
-### Para pré-carregar o cache criando um plano de atualização do cache  
+### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>Para pré-carregar o cache criando um plano de atualização do cache  
   
-1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  No Gerenciador de Relatórios, navegue até a página **Conteúdo** e navegue até o item que deseja armazenar em cache.  
   
@@ -58,15 +63,15 @@ caps.handback.revision: 35
   
 7.  Para uma agenda compartilhada, clique em **Agenda Compartilhada**e selecione o nome da agenda a ser usada.  
   
-     Para um agendamento personalizado, clique em **Agendamento específico do item** e clique em **Configurar**.  
+     Para um agendamento personalizado, clique em **Agendamento específico do item**e clique em **Configurar**.  
   
 8.  Configurar a agenda  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Para pré-carregar o cache com um relatório específico ao usuário usando uma assinatura controlada por dados  
+### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>Para pré-carregar o cache com um relatório específico ao usuário usando uma assinatura controlada por dados  
   
-1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  No Gerenciador de Relatórios, navegue até a página **Conteúdo** e navegue até o relatório para o qual você deseja criar uma assinatura.  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 35
      Ou, para criar uma agenda personalizada, clique em **Em um agendamento criado para esta assinatura** e clique em **Avançar**. Configure a agenda e clique em **Concluir**.  
   
     > [!NOTE]  
-    >  Para que os assinantes recebam o relatório mais recente, a gente que você configura deve ser consistente com a agenda de entrega do relatório definida para os assinantes. Para obter mais informações, consulte [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+    >  Para que os assinantes recebam o relatório mais recente, a gente que você configura deve ser consistente com a agenda de entrega do relatório definida para os assinantes. Para obter mais informações, consulte [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 14. Configure as opções de Execução para o relatório como pode ser visto a seguir. Na página de relatório, clique na guia **Propriedades** .  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 35
   
 18. Clique em **Aplicar**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Assinaturas controladas por dados](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Desempenho, instantâneos, caching &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   

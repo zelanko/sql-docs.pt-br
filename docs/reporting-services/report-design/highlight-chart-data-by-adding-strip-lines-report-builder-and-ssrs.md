@@ -1,23 +1,28 @@
 ---
-title: "Real&#231;ar dados do gr&#225;fico adicionando faixas (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Realçar dados do gráfico adicionando faixas (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04bc46bc61a1091d715e348e44ac7ee22e4a891d
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Real&#231;ar dados do gr&#225;fico adicionando faixas (Construtor de Relat&#243;rios e SSRS)
+# <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Realçar dados do gráfico adicionando faixas (Construtor de Relatórios e SSRS)
   As faixas são intervalos horizontais ou verticais que sombreiam o plano de fundo do gráfico em intervalos regulares ou personalizados. É possível usar faixas para:  
   
 -   Melhorar a legibilidade para pesquisar valores individuais no gráfico. Especificar faixas em intervalos regulares para ajudar a separar pontos de dados ao ler o gráfico.  
@@ -31,17 +36,17 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Para exibir faixas entrelaçadas em intervalos regulares de um gráfico  
+### <a name="to-display-interlaced-strip-lines-at-regular-intervals-on-a-chart"></a>Para exibir faixas entrelaçadas em intervalos regulares de um gráfico  
   
 1.  Para mostrar faixas horizontais, clique com o botão direito do mouse em o eixo de gráfico vertical e clique em **Propriedades VerticalAxis**.  
   
      Para mostrar faixas verticais, clique com o botão direito do mouse em o eixo de gráfico horizontal e clique em **Propriedades do Eixo Vertical**.  
   
-2.  Selecione a opção **Usar entrelaçamento**. Faixas cinza são exibidas no gráfico.  
+2.  Selecione a opção **Usar entrelaçamento** . Faixas cinza são exibidas no gráfico.  
   
 3.  (Opcional) Especifique uma cor para as faixas usando a lista suspensa **Cor** adjacente.  
   
-### Para exibir faixas entrelaçadas em intervalos personalizados em um gráfico  
+### <a name="to-display-interlaced-strip-lines-at-custom-intervals-on-a-chart"></a>Para exibir faixas entrelaçadas em intervalos personalizados em um gráfico  
   
 1.  Para mostrar faixas horizontais, clique com o botão direito do mouse em o eixo de gráfico vertical e clique em **Propriedades VerticalAxis**.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  Por padrão, o Intervalo é definido como Automático, o que significa que o gráfico não calcula um intervalo para faixas personalizadas. O gráfico calculará intervalos para faixas apenas se o valor de um intervalo estiver definido.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Formatando rótulos dos eixos de um gráfico #40;Construtor de Relatórios e SSRS#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Adicionar uma média móvel a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  

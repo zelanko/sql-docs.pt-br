@@ -1,33 +1,38 @@
 ---
-title: "Gr&#225;ficos polares (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gráficos polares (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 369ab4b047ef4f9b9f73265f974a52c2c0197a79
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Gr&#225;ficos polares (Construtor de Relat&#243;rios e SSRS)
+# <a name="polar-charts-report-builder-and-ssrs"></a>Gráficos polares (Construtor de Relatórios e SSRS)
   Um gráfico polar exibe uma série como um conjunto de pontos agrupados por categoria em um círculo de 360 graus. Os valores são representados pelo comprimento do ponto, conforme medido do centro do círculo. Quanto mais distante o ponto está do centro, maior é o seu valor. São exibidos rótulos de categoria no perímetro do gráfico. Para obter mais informações sobre como adicionar dados a um gráfico polar, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Variações  
+## <a name="variations"></a>Variações  
   
 -   **Gráfico de radar**. Um gráfico de radar exibe uma série como uma linha ou área circular. Ao contrário do gráfico polar, o gráfico de radar não exibe dados em termos de coordenadas polares.  
   
-## Considerações de dados para gráficos polares  
+## <a name="data-considerations-for-polar-charts"></a>Considerações de dados para gráficos polares  
   
 -   O gráfico de radar é útil para comparações entre várias séries de dados de categoria.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 7
   
 -   Os gráficos polares não podem ser combinados com qualquer outro tipo de gráfico na mesma área de gráfico.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como um gráfico de radar pode ser usado. A tabela a seguir fornece dados de amostra do gráfico.  
   
 |Nome|Sales|  
@@ -52,7 +57,7 @@ caps.handback.revision: 7
   
  ![Gráfico de radar](../../reporting-services/report-design/media/rs-radarchart.gif "Gráfico de radar")  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   

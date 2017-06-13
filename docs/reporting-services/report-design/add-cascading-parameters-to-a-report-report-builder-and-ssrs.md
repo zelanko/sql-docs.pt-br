@@ -1,35 +1,40 @@
 ---
-title: "Adicionar par&#226;metros em cascata a um relat&#243;rio (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Adicionar parâmetros em cascata a um relatório (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8efc7a0b7120faa53a63bd07c51029a1b379f9e
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Adicionar par&#226;metros em cascata a um relat&#243;rio (Construtor de Relat&#243;rios e SSRS)
+# <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Adicionar parâmetros em cascata a um relatório (Construtor de Relatórios e SSRS)
   Os parâmetros em cascata fornecem um modo de gerenciar grandes volumes de dados de relatório. É possível definir um conjunto de parâmetros relacionados de forma que a lista de valores de um parâmetro dependa do valor escolhido em outro parâmetro. Por exemplo, o primeiro parâmetro é independente e pode apresentar uma lista de categorias de produtos. Quando o usuário seleciona uma categoria, o segundo parâmetro é dependente do valor do primeiro parâmetro. Seus valores são atualizados com uma lista de subcategorias dentro da categoria escolhida. Quando o usuário exibe o relatório, os valores dos dois parâmetros de categoria e subcategoria são usados para filtrar dados do relatório.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Para criar parâmetros em cascata, primeiro você define a consulta de conjunto de dados e inclui um parâmetro de consulta para cada parâmetro em cascata necessário. Você também deve criar um conjunto de dados separado para cada parâmetro em cascata para fornecer valores disponíveis. Para obter mais informações, consulte [Adicionar, alterar ou excluir valores disponíveis de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add, change, or delete available values for a report parameter.md).  
+ Para criar parâmetros em cascata, primeiro você define a consulta de conjunto de dados e inclui um parâmetro de consulta para cada parâmetro em cascata necessário. Você também deve criar um conjunto de dados separado para cada parâmetro em cascata para fornecer valores disponíveis. Para obter mais informações, consulte [Adicionar, alterar ou excluir valores disponíveis de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
  A ordem é importante para parâmetros em cascata porque a consulta do conjunto de dados para um parâmetro posterior na lista inclui uma referência a cada parâmetro anterior na lista. Em tempo de execução, a ordem dos parâmetros no painel de dados do relatório determina a ordem na qual as consultas de parâmetro aparecem no relatório e, portanto, a ordem na qual um usuário escolhe cada valor de parâmetro sucessivo.  
   
  Para obter informações sobre como criar parâmetros em cascata com diversos valores e o recurso Selecionar Tudo, consulte [Como ter um parâmetro em cascata de diversos valores com Selecionar Tudo](http://go.microsoft.com/fwlink/?LinkId=184757).  
   
-## Para criar o conjunto de dados principal com uma consulta que inclui múltiplos parâmetros relacionados  
+## <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>Para criar o conjunto de dados principal com uma consulta que inclui múltiplos parâmetros relacionados  
   
 1.  No painel Dados do Relatório, clique com o botão direito do mouse em uma fonte de dados e clique em **Adicionar Conjunto de Dados**.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 11
   
  Em seguida, você criará um conjunto de dados que fornece os valores para o parâmetro independente.  
   
-## Para criar um conjunto de dados para fornecer valores para um parâmetro independente  
+## <a name="to-create-a-dataset-to-provide-values-for-an-independent-parameter"></a>Para criar um conjunto de dados para fornecer valores para um parâmetro independente  
   
 1.  No painel Dados do Relatório, clique com o botão direito do mouse em uma fonte de dados e clique em **Adicionar Conjunto de Dados**.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 11
   
  Em seguida, você definirá as propriedades do primeiro parâmetro para usar este conjunto de dados para popular seus valores disponíveis em tempo de execução.  
   
-## Para definir os valores disponíveis para um parâmetro de relatório  
+## <a name="to-set-available-values-for-a-report-parameter"></a>Para definir os valores disponíveis para um parâmetro de relatório  
   
 1.  No painel Dados do Relatório, na pasta Parâmetros, clique com o botão direito do mouse no primeiro parâmetro e clique em **Propriedades do Parâmetro**.  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 11
   
  Em seguida, você criará um conjunto de dados que fornece os valores para um parâmetro dependente.  
   
-## Para criar um conjunto de dados para fornecer valores para um parâmetro dependente  
+## <a name="to-create-a-dataset-to-provide-values-for-a-dependent-parameter"></a>Para criar um conjunto de dados para fornecer valores para um parâmetro dependente  
   
 1.  No painel Dados do Relatório, clique com o botão direito do mouse em uma fonte de dados e clique em **Adicionar Conjunto de Dados**.  
   
@@ -115,13 +120,13 @@ caps.handback.revision: 11
     WHERE (Category = @Category)  
     ```  
   
-     Na cláusula WHERE, Category é o nome de um campo de \<table> e @Category é um parâmetro de consulta. Essa instrução gera uma lista de subcategorias para a categoria especificada em @Category. Em tempo de execução, esse valor será preenchido com o valor escolhido pelo usuário para o parâmetro de relatório que tem o mesmo nome.  
+     Na cláusula WHERE, a categoria é o nome de um campo de \<tabela > e @Category é um parâmetro de consulta. Essa instrução gera uma lista de subcategorias para a categoria especificada em @Category. Em tempo de execução, esse valor será preenchido com o valor escolhido pelo usuário para o parâmetro de relatório que tem o mesmo nome.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
  Em seguida, você definirá as propriedades do segundo parâmetro para usar este conjunto de dados para popular seus valores disponíveis em tempo de execução.  
   
-## Para definir os valores disponíveis para um parâmetro de relatório  
+## <a name="to-set-available-values-for-a-report-parameter"></a>Para definir os valores disponíveis para um parâmetro de relatório  
   
 1.  No painel Dados do Relatório, na pasta Parâmetros, clique com o botão direito do mouse no primeiro parâmetro e clique em **Propriedades do Parâmetro**.  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 11
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Para testar os parâmetros em cascata  
+## <a name="to-test-the-cascading-parameters"></a>Para testar os parâmetros em cascata  
   
 1.  Clique em **Executar**.  
   
@@ -153,12 +158,12 @@ caps.handback.revision: 11
   
 4.  Clique em **Exibir Relatório**. O relatório atualiza a exibição com base nos parâmetros escolhidos.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Adicionar, alterar ou excluir um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Tutoriais do Construtor de Relatórios](../../reporting-services/report-builder-tutorials.md)   
- [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+ [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

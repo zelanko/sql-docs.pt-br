@@ -2,7 +2,7 @@
 title: Criptografia do SQL Server | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/03/2016
+ms.date: 05/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,24 +20,24 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 441968f81086a875ee526d31dcaf753c1e103868
+ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
+ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/16/2017
 
 ---
 # <a name="sql-server-encryption"></a>Criptografia do SQL Server
   Criptografia é o processo de confundir dados pelo uso de uma chave ou senha. Isso pode tornar os dados inúteis sem a chave de descriptrografia correspondente ou senha. A criptografia não resolve problemas de controle de acesso. Porém, aumenta a segurança, limitando perda de dados mesmo se os controles de acesso forem ignorados. Por exemplo, se o computador host do banco de dados for malconfigurado e um hacker obtiver dados confidenciais, as informações roubadas poderão ser inúteis se estiverem criptografadas.  
   
- Você pode usar criptografia no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para conexões, dados e procedimentos armazenados. A tabela seguinte contém mais informações sobre criptografia no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
-  
+
 > [!IMPORTANT]  
 >  Embora a criptografia seja uma ferramenta valiosa para ajudar a garantir a segurança, não deve ser considerada em todos os dados ou conexões. Quando você estiver decidindo se a criptografia deve ser implementada, considere como os usuários acessarão os dados. Se os usuários acessarem dados por uma rede pública, a criptografia de dados poderá ser necessária para aumentar a segurança. No entanto, se todos os acessos envolverem uma configuração de intranet segura, a criptografia poderá não ser necessária. Qualquer uso de criptografia deve também incluir uma estratégia de manutenção de senhas, chaves e certificados.  
   
 > [!NOTE]  
 >  As informações mais recentes sobre o protocolo TSL1.2 estão disponíveis em [Suporte a TLS 1.2 para o Microsoft SQL Server](https://support.microsoft.com/kb/3135244).  
-  
-## <a name="in-this-section"></a>Nesta seção  
+
+Você pode usar criptografia no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para conexões, dados e procedimentos armazenados. Os tópicos a seguir contêm mais informações sobre criptografia no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+
  [Hierarquia de criptografia](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
  Informações sobre a hierarquia de criptografia no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 04/11/2017
  Informações sobre como usar um certificado para criptografar dados.  
   
 ## <a name="external-resources"></a>Recursos externos  
- [Microsoft TechNet: TechCenter do SQL Server: Segurança e proteção do SQL Server 2005](https://msdn.microsoft.com/sqlserver/bb895847.aspx)  
+ [Microsoft TechNet: TechCenter do SQL Server: proteção e segurança do SQL Server 2012](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  Informações atuais sobre segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte também  

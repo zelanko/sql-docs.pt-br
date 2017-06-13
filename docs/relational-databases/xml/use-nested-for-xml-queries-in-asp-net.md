@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3ecd3e1bd26780c54fa4ab24d48526f12398445b
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: 080c4c94b10836dd58206ebf690ea45a946994b0
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>Usar consultas FOR XML aninhadas no ASP.NET
@@ -94,7 +94,7 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
   
 2.  Salve o aplicativo .aspx no diretório c:\inetpub\wwwroot (GetSalesOrderInfo.aspx).  
   
-3.  Execute o aplicativo (http://server/GetSalesOrderInfo.aspx).  
+3.  Execute o aplicativo (`http://server/GetSalesOrderInfo.aspx`).  
   
 ## <a name="see-also"></a>Consulte também  
  [Usar consultas FOR XML aninhadas](../../relational-databases/xml/use-nested-for-xml-queries.md)  

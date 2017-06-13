@@ -1,36 +1,41 @@
 ---
-title: "Personalizar os dados e a exibi&#231;&#227;o de um mapa ou de uma camada do mapa (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10521"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.filter.f1"
-  - "10515"
-  - "10512"
-  - "10520"
-  - "sql13.rtp.rptdesigner.shared.font.f1"
-  - "10523"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.general.f1"
-  - "sql13.rtp.rptdesigner.shared.number.f1"
-  - "sql13.rtp.rptdesigner.shared.shadowdv.f1"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.variables.f1"
-  - "10507"
+title: "Personalizar os dados e a exibição de um mapa ou camada do mapa (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10521"
+- sql13.rtp.rptdesigner.mapgroupproperties.filter.f1
+- "10515"
+- "10512"
+- "10520"
+- sql13.rtp.rptdesigner.shared.font.f1
+- "10523"
+- sql13.rtp.rptdesigner.mapgroupproperties.general.f1
+- sql13.rtp.rptdesigner.shared.number.f1
+- sql13.rtp.rptdesigner.shared.shadowdv.f1
+- sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
+- "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9751ad1f640181db57e4107ff1debfa510d3b0e
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Personalizar os dados e a exibi&#231;&#227;o de um mapa ou de uma camada do mapa (Construtor de Relat&#243;rios e SSRS)
+# <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizar os dados e a exibição de um mapa ou de uma camada do mapa (Construtor de Relatórios e SSRS)
   Depois de adicionar um mapa ou uma camada do mapa a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] usando um assistente, você poderá alterar a aparência do mapa no relatório. Você pode fazer melhorias considerando as seguintes ideias:  
   
 -   Para ajudar os usuários a compreender como interpretar a exibição de dados em um mapa, você pode adicionar legendas e uma escala de cores, e adicionar rótulos e dicas de ferramentas.  
@@ -69,7 +74,7 @@ caps.handback.revision: 13
   
 -   Dê a ilusão de profundidade especificando uma sombra.  
   
- Para alterar essas opções, clique com o botão direito do mouse no mapa, clique em **Mapa** e altere as opções.  
+ Para alterar essas opções, clique com o botão direito do mouse no mapa, clique em **Mapa**e altere as opções.  
   
 ##  <a name="Viewport"></a> Alterar as opções do visor  
  Use as opções do visor para alterar a exibição do mapa que aparece em seu relatório.  
@@ -88,7 +93,7 @@ caps.handback.revision: 13
   
 -   Resolução e simplificação. Escolha um equilíbrio entre o tempo de desenho e contornos detalhados para linhas e polígonos.  
   
- Para alterar estas opções, clique com o botão direito do mouse no visor do mapa, use a página [Caixa de diálogo Propriedades do Visor do Mapa, Geral](../Topic/Map%20Viewport%20Properties%20Dialog%20Box,%20General.md) e as páginas relacionadas.  
+ Para alterar estas opções, clique com o botão direito do mouse no visor do mapa, use a página [Caixa de diálogo Propriedades do Visor do Mapa, Geral](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) e as páginas relacionadas.  
   
 ##  <a name="Legends"></a> Alterar as opções das legendas  
  As legendas ajudam os usuários a interpretar os dados em um mapa.  
@@ -119,7 +124,7 @@ caps.handback.revision: 13
  Para obter mais informações sobre as camadas, consulte [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ##  <a name="DataGrouping"></a> Alterar agrupamento de dados para a camada  
- Você pode personalizar o modo de agregar dados espaciais para suas próprias formas. Para definir as propriedades do grupo para uma camada, selecione a camada no painel Mapa e, no painel Propriedades para a camada, clique em **Grupo** e clique nas reticências (…) para abrir as propriedades do grupo. Nesta caixa de diálogo, você pode especificar expressões de grupo, criar variáveis de grupo e filtrar dados que são usados para agrupar.  
+ Você pode personalizar o modo de agregar dados espaciais para suas próprias formas. Para definir as propriedades do grupo para uma camada, selecione a camada no painel Mapa e, no painel Propriedades para a camada, clique em **Grupo**e clique nas reticências (…) para abrir as propriedades do grupo. Nesta caixa de diálogo, você pode especificar expressões de grupo, criar variáveis de grupo e filtrar dados que são usados para agrupar.  
   
  A expressão de grupo especifica o modo como os dados analíticos que têm uma relação com dados espaciais são agregados para cada elemento do mapa na camada. Por padrão, a expressão de grupo é o conjunto de campos de correspondência especificado para a relação entre os dados espaciais e os dados analíticos. Por exemplo, para um mapa de bolhas que exibe locais de cidade e o tamanho da população de um país ou região, os campos de correspondência incluem o nome da cidade [Cidade] e o nome da região [Região], porque pode haver várias cidades com o mesmo nome. A expressão de grupo correspondente inclui dois campos: [Cidade] e [Região].  
   
@@ -159,9 +164,9 @@ caps.handback.revision: 13
   
 -   Substituir opções para pontos inseridos individuais, linhas ou polígonos em uma camada. As alterações que você faz são permanentes. Para reverter estas alterações, recarregue os dados da camada.  
   
- Para obter mais informações, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ Para obter mais informações, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   

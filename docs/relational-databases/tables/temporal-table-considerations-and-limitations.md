@@ -2,7 +2,7 @@
 title: "Considerações e limitações da tabela temporal | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/24/2017
+ms.date: 05/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22bab0bc2c039e68a336ac827a3e2d028ca77c78
+ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
+ms.openlocfilehash: 5ee3aa9223ae8ab832eff23a1da1755278e86d0b
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considerações e limitações da tabela temporal
@@ -57,7 +57,9 @@ ms.lasthandoff: 04/11/2017
   
 -   Não é permitida a modificação direta dos dados em uma tabela de histórico.  
   
--   O**ON DELETE CASCADE** e o **ON UPDATE CASCADE** não são permitidos na tabela atual. Em outras palavras, quando a tabela temporal estiver referenciando a tabela na relação de chave estrangeira (correspondente a *parent_object_id* em sys.foreign_keys), as opções CASCADE não serão permitidas. Para trabalhar com essa limitação, use a lógica do aplicativo ou gatilhos AFTER para manter a consistência de exclusão na tabela de chave primária (correspondente a  *referenced_object_id* em sys.foreign_keys). Se a tabela de chave primária for temporal e a tabela de referência não for temporal, não haverá essa limitação.  
+-   O**ON DELETE CASCADE** e o **ON UPDATE CASCADE** não são permitidos na tabela atual. Em outras palavras, quando a tabela temporal estiver referenciando a tabela na relação de chave estrangeira (correspondente a *parent_object_id* em sys.foreign_keys), as opções CASCADE não serão permitidas. Para trabalhar com essa limitação, use a lógica do aplicativo ou gatilhos AFTER para manter a consistência de exclusão na tabela de chave primária (correspondente a  *referenced_object_id* em sys.foreign_keys). Se a tabela de chave primária for temporal e a tabela de referência não for temporal, não haverá essa limitação. 
+
+    **Observação:** essa limitação se aplica apenas ao SQL Server 2016. Opções CASCADE têm suporte no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e CTP 2.0 a partir de 2017 do SQL Server.  
   
 -   Os gatilhos**INSTEAD OF** não são permitidos na tabela atual ou de histórico para evitar a anulação da lógica de DML. Os gatilhos**AFTER** são permitidos somente na tabela atual. Eles são bloqueados na tabela de histórico para evitar a anulação da lógica de DML.  
   

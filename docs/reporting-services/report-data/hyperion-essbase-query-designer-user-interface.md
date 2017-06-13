@@ -1,33 +1,38 @@
 ---
-title: "Interface de usu&#225;rio do Designer de Consulta do Hyperion Essbase | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10013"
-  - "sql13.rtp.rptdesigner.dataview.hyperionessbasequerydesigner.f1"
-helpviewer_keywords: 
-  - "Designer de Consulta do Hyperion Essbase"
-  - "fontes de dados [Reporting Services], Hyperion Essbase"
-  - "dados multidimensionais [Reporting Services]"
-  - "designers de consulta [Reporting Services]"
-  - "Hyperion Essbase [Reporting Services], designer de consultas"
+title: "Interface de usuário do Designer do Hyperion Essbase consulta | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10013"
+- sql13.rtp.rptdesigner.dataview.hyperionessbasequerydesigner.f1
+helpviewer_keywords:
+- Hyperion Essbase Query Designer
+- data sources [Reporting Services], Hyperion Essbase
+- multidimensional data [Reporting Services]
+- query designers [Reporting Services]
+- Hyperion Essbase [Reporting Services], query designer
 ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
 caps.latest.revision: 23
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 23
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68a0a5da224c0f6f78eca8df1ae766e85d7750f2
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Interface de usu&#225;rio do Designer de Consulta do Hyperion Essbase
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece um designer de consultas gráficas para criar consultas MDX (Multidimensional Expression) para uma fonte de dados do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. O designer de consultas gráficas MDX tem dois modos: Design e Consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros de um cubo definido na fonte de dados para criar uma consulta MDX que recupere dados quando o relatório for processado.  
+# <a name="hyperion-essbase-query-designer-user-interface"></a>Interface de usuário do Designer de Consulta do Hyperion Essbase
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece um designer de consultas gráficas para criar consultas MDX (Multidimensional Expression) para uma fonte de dados do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] . O designer de consultas gráficas MDX tem dois modos: Design e Consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros de um cubo definido na fonte de dados para criar uma consulta MDX que recupere dados quando o relatório for processado.  
   
 > [!IMPORTANT]  
 >  Os usuários acessam fontes de dados quando criam e executam consultas. Você deve conceder permissões mínimas nas fontes de dados, como permissões somente leitura.  
@@ -36,12 +41,12 @@ caps.handback.revision: 23
   
  Esta seção descreve os botões da barra de ferramentas e os painéis do designer de consulta para cada modo do designer de consultas gráficas.  
   
-## Designer de Consultas Gráficas no modo Design  
+## <a name="graphical-query-designer-in-design-mode"></a>Designer de Consultas Gráficas no modo Design  
  Quando você edita uma consulta MDX para um conjunto de dados que usa uma fonte de dados do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] , o designer de consultas gráficas será aberto no modo Design.  
   
  A figura a seguir mostra os painéis do modo Design.  
   
- ![Designer de Consulta da fonte de dados do Hyperion Essbase](../../reporting-services/report-data/media/rsqd-dshyperionessbase-mdx-designmode.gif "Designer de Consulta da fonte de dados do Hyperion Essbase")  
+ ![Designer de consulta de fonte de dados Hyperion Essbase](../../reporting-services/report-data/media/rsqd-dshyperionessbase-mdx-designmode.gif "Designer de consulta de fonte de dados Hyperion Essbase")  
   
  A tabela a seguir lista os painéis neste modo.  
   
@@ -57,26 +62,26 @@ caps.handback.revision: 23
   
  No painel Filtro, você pode selecionar os valores de dimensão para limitar os dados recuperados da fonte de dados. Os valores definidos no filtro no modo Design são exibidos na cláusula Where do MDX no modo Consulta.  
   
-### Barra de ferramentas do Designer de Consultas Gráficas na barra de ferramentas do modo Design  
+### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>Barra de ferramentas do Designer de Consultas Gráficas na barra de ferramentas do modo Design  
  A barra de ferramentas do designer de consulta fornece botões para ajudá-lo a criar consultas MDX por meio da interface gráfica. A tabela a seguir mostra os botões e descreve suas funções.  
   
 |Botão|Description|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. Não disponível para esse tipo de fonte de dados.|  
 |**Importar**|Importa uma consulta existente de um arquivo de definição de relatório (.rdl) no sistema de arquivos. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Refresh dataset fields](../../reporting-services/report-data/media/rsqdicon-refreshfields.gif "Refresh dataset fields")|Atualiza metadados na fonte de dados.|  
-|![Adicionar membro calculado](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.png "Adicionar membro calculado")|Exibe a caixa de diálogo **Construtor de Membro Calculado** . Use essa opção para criar ou editar expressões de um membro calculado, incluindo a definição da propriedade **Ordem de Resolução** .|  
-|![Alternar para mostrar células vazias](../../reporting-services/report-data/media/rsqdicon-showemptycells.png "Alternar para mostrar células vazias")|Alterna entre mostrar ou não células vazias no painel Dados. (Equivale a usar a cláusula NON EMPTY em MDX).|  
-|![Executar a consulta automaticamente](../../reporting-services/report-data/media/rsqdicon-autoexecute.png "Executar a consulta automaticamente")|Executa automaticamente a consulta e mostra o resultado toda vez que é feita uma alteração, por exemplo, excluindo uma coluna no painel Dados. Os resultados são mostrados no painel Dados.|  
-|![Excluir](../../reporting-services/report-data/media/rsqdicon-delete.png "Excluir")|Exclui o item selecionado da consulta. Use esse botão para excluir as linhas selecionadas no painel Filtro.|  
-|![Executar a consulta](../../reporting-services/report-data/media/rsqdicon-run.png "Executar a consulta")|Executa a consulta e exibe os resultados no painel Dados.|  
-|![Cancel the query](../../reporting-services/report-data/media/rsqdicon-cancel.gif "Cancel the query")|Cancela a consulta.|  
-|![Alternar para o modo de Design](../../reporting-services/media/rsqdicon-designmode.png "Alternar para o modo de Design")|Alterna entre o modo Design e o modo Consulta.|  
+|![Atualizar campos de conjunto de dados](../../reporting-services/report-data/media/rsqdicon-refreshfields.gif "atualizar campos de conjunto de dados")|Atualiza metadados na fonte de dados.|  
+|![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Exibe a caixa de diálogo **Construtor de Membro Calculado** . Use essa opção para criar ou editar expressões de um membro calculado, incluindo a definição da propriedade **Ordem de Resolução** .|  
+|![Alternar para mostrar células vazias](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "alternância para mostrar células vazias")|Alterna entre mostrar ou não células vazias no painel Dados. (Equivale a usar a cláusula NON EMPTY em MDX).|  
+|![Executar a consulta automaticamente](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "executar a consulta automaticamente")|Executa automaticamente a consulta e mostra o resultado toda vez que é feita uma alteração, por exemplo, excluindo uma coluna no painel Dados. Os resultados são mostrados no painel Dados.|  
+|![Excluir](../../reporting-services/report-data/media/rsqdicon-delete.gif "Excluir")|Exclui o item selecionado da consulta. Use esse botão para excluir as linhas selecionadas no painel Filtro.|  
+|![Execute a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "executar a consulta")|Executa a consulta e exibe os resultados no painel Dados.|  
+|![Cancelar a consulta](../../reporting-services/report-data/media/rsqdicon-cancel.gif "cancelar a consulta")|Cancela a consulta.|  
+|![Alternar para o modo de Design](../../reporting-services/media/rsqdicon-designmode.gif "alternar para modo de Design")|Alterna entre o modo Design e o modo Consulta.|  
   
-## Designer de consultas gráficas no modo Consulta  
+## <a name="graphical-query-designer-in-query-mode"></a>Designer de consultas gráficas no modo Consulta  
  Para alterar o designer de consultas gráficas para o modo Consulta, clique no botão de alternância **Modo Design** na barra de ferramentas. A figura a seguir indica as partes do designer de consulta no modo Consulta.  
   
- ![Designer de Consulta em Modo de Consulta para Hyperion](../../reporting-services/report-data/media/rsqd-hyperionessbase-mdx-querymode.gif "Designer de Consulta em Modo de Consulta para Hyperion")  
+ ![Designer de consulta em modo de consulta para Hyperion](../../reporting-services/report-data/media/rsqd-hyperionessbase-mdx-querymode.gif "Designer de consulta em modo de consulta para Hyperion")  
   
  A tabela a seguir descreve a função de cada painel.  
   
@@ -89,18 +94,18 @@ caps.handback.revision: 23
   
  No painel Metadados, você pode arrastar as medidas e dimensões da guia **Metadados** para o painel Consulta MDX. Você pode arrastar as funções da guia **Funções** para o painel Consulta MDX. Quando você executar a consulta, o painel Resultado exibirá os resultados da consulta MDX atual.  
   
-### Barra de ferramentas do Designer de Consultas Gráficas no modo Consulta  
+### <a name="toolbar-for-the-graphical-query-designer-in-query-mode"></a>Barra de ferramentas do Designer de Consultas Gráficas no modo Consulta  
  A barra de ferramentas do designer de consulta fornece botões para ajudá-lo a criar consultas MDX por meio da interface gráfica. Os botões da barra de ferramentas são idênticos nos modos Design e Consulta, mas os botões a seguir não estão ativados no modo Consulta:  
   
 -   **Editar como Texto**  
   
--   **Adicionar Membro Calculado** (![Adicionar membro calculado](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.png "Adicionar membro calculado"))  
+-   **Adicionar Membro Calculado** (![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
--   **Mostrar Células Vazias** (![Alternar para mostrar células vazias](../../reporting-services/report-data/media/rsqdicon-showemptycells.png "Alternar para mostrar células vazias"))  
+-   **Mostrar células vazias** (![alternância para mostrar células vazias](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "alternância para mostrar células vazias"))  
   
--   **Executar Automaticamente** (![Executar a consulta automaticamente](../../reporting-services/report-data/media/rsqdicon-autoexecute.png "Executar a consulta automaticamente"))  
+-   **Executar automaticamente** (![executar a consulta automaticamente](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "executar a consulta automaticamente"))  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Arquivo de configuração RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   

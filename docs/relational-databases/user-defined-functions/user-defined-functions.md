@@ -18,10 +18,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4c8c44b4c07b26676fd424acb36ea7ccce19df3
+ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
+ms.openlocfilehash: 12297570eae81459949b6c910fba26525e27d9ed
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/05/2017
 
 ---
 # <a name="user-defined-functions"></a>Funções definidas pelo usuário
@@ -44,7 +44,8 @@ Por que usá-las?
   
      Uma operação que filtra dados com base em alguma restrição complexa que não pode ser expressa em uma única expressão escalar pode ser expressa como uma função. Em seguida, a função pode ser invocada na cláusula WHERE para reduzir o número ou linhas enviadas ao cliente.  
   
-> **OBSERVAÇÃO:** as funções [!INCLUDE[tsql](../../includes/tsql-md.md)] definidas pelo usuário em consultas só podem ser executadas em um único thread (plano de execução serial).  
+> [!NOTE]
+> As funções definidas pelo usuário [!INCLUDE[tsql](../../includes/tsql-md.md)] em consultas só podem ser executadas em um único thread (plano de execução serial).  
   
 ##  <a name="FunctionTypes"></a> Tipos de funções  
 **Função escalar**  
@@ -62,12 +63,13 @@ O  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece muitas fun�
   
  As instruções em um bloco BEGIN... END não podem ter nenhum efeito colateral. Os efeitos colaterais da função são as alterações permanentes realizada no estado de um recurso que tem um escopo fora da função como uma modificação em uma tabela do banco de dados. As únicas alterações que podem ser feitas pelas instruções na função são alterações em objetos locais à função, como cursores ou variáveis locais. As modificações em tabelas de banco de dados, operações em cursores que não são locais à função, envio de e-mail, tentativa de modificação em catálogo e geração de um conjunto de resultados retornados ao usuário são exemplos de ações que não devem ser realizadas em uma função.  
   
-> **OBSERVAÇÃO:** se a instrução CREATE FUNCTION produzir efeitos colaterais nos recursos que não existem quanto a instrução CREATE FUNCTION for emitida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executará a instrução. Porém, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não executa a função quando é chamada.  
+> [!NOTE]
+> Se a instrução CREATE FUNCTION produzir efeitos colaterais contra os recursos que não existem quanto a instrução CREATE FUNCTION é emitida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa a instrução. Porém, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não executa a função quando é chamada.  
   
  O número de vezes em que uma função especificada em uma consulta é realmente executada pode variar entre os planos de execução desenvolvidos pelo otimizador. Um exemplo é a função chamada por uma subconsulta em uma cláusula WHERE. O número de vezes em que a subconsulta e sua função são executadas pode variar com os caminhos de acesso diferentes escolhidos pelo otimizador.  
   
 ##  <a name="ValidStatements"></a> Instruções válidas em uma função  
- Os tipos de instruções que são válidos em uma função incluem:  
+Os tipos de instruções que são válidos em uma função incluem:  
   
 -   As instruções DECLARE podem ser usadas para definir variáveis de dados e cursores que são locais à função.  
   
@@ -110,7 +112,7 @@ O  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece muitas fun�
 ##  <a name="SchemaBound"></a> Funções associadas a esquema  
  CREATE FUNCTION dá suporte à cláusula SCHEMABINDING que associa a função ao esquema de qualquer objeto que ela referencia, como tabelas, exibições e demais funções definidas pelo usuário. Uma tentativa para alterar ou descartar qualquer objeto referenciado por uma função associada a esquema falhará.  
   
- Essas condições devem ser cumpridas antes de especificar SCHEMABINDING em [CREATE FUNCTION](https://msdn.microsoft.com/library/ms186755.aspx):  
+ Essas condições devem ser cumpridas antes de especificar SCHEMABINDING em [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md):  
   
 -   Todas as exibições e as funções definidas pelo usuário referenciadas pela função devem ser associadas a esquema.  
   
@@ -138,7 +140,4 @@ O  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece muitas fun�
 |Descreve como exibir a definição de uma função definida pelo usuário.|[Exibir funções definidas pelo usuário](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
-
-
-
 

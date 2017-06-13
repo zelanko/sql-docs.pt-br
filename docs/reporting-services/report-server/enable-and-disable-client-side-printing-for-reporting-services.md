@@ -1,45 +1,44 @@
 ---
-title: "Habilitar e desabilitar a impress&#227;o do lado do cliente para Reporting Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/14/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pdf"
-  - "visualizador"
-  - "visualizador de relatórios"
-  - "barra de ferramentas"
+title: "Habilitar e desabilitar a impressão do lado do cliente para o Reporting Services | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pdf
+- viewer
+- reportviewer
+- toolbar
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee650a09b57ae92abda378fea6fc780b550fbac4
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Habilitar e desabilitar a impress&#227;o do lado do cliente para Reporting Services
-  O botão Imprimir na barra de ferramentas do visualizador de relatórios usa o formato PDF (Portable Document Format) para a impressão do lado do cliente de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exibidos em um navegador. A nova experiência de impressão remota usa a extensão de renderização de PDF incluída no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para renderizar o relatório no formato PDF. Você pode baixar um formulário .PDF do relatório ou, se você tiver um aplicativo instalado para exibição de arquivos .PDF, o botão de impressão exibirá uma caixa de diálogo de impressão para itens de configuração de página comuns como tamanho e orientação da página, além de uma visualização do arquivo .PDF. Embora a impressão do lado do cliente esteja habilitada por padrão, você pode desabilitar o recurso para impedi-lo de ser usado.  
+
+# <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Habilitar e desabilitar a impressão do lado do cliente para Reporting Services
+
+  O botão Imprimir na barra de ferramentas do visualizador de relatórios usa o formato PDF (Portable Document Format) para a impressão do lado do cliente de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exibidos em um navegador. A nova experiência de impressão remota usa a extensão de renderização de PDF incluída no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]para renderizar o relatório no formato PDF. Você pode baixar um formulário .PDF do relatório ou, se você tiver um aplicativo instalado para exibição de arquivos .PDF, o botão de impressão exibirá uma caixa de diálogo de impressão para itens de configuração de página comuns como tamanho e orientação da página, além de uma visualização do arquivo .PDF. Embora a impressão do lado do cliente esteja habilitada por padrão, você pode desabilitar o recurso para impedi-lo de ser usado.  
   
- Versões anteriores do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usavam um controle ActiveX que exigia o download do servidor de relatório para o computador cliente. Se você atualizar seu servidor de relatório para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o controle de impressão não será removido do servidor de relatório nem dos computadores cliente.  
-  
-##  <a name="bkmk_top"></a> Neste tópico  
-  
--   [A Experiência de Impressão](#bkmk_clientside_printexpereince)  
-  
--   [Solucionar problemas de impressão do lado do cliente](#bkmk_troubleshoot_clientsideprinting)  
-  
--   [Habilitar e desabilitar a impressão do lado do cliente](#bkmk_enable)  
-  
+ Versões anteriores do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usavam um controle ActiveX que exigia o download do servidor de relatório para o computador cliente. Se você atualizar seu servidor de relatório para o SQL Server 2016 o controle de impressão não é removido do servidor de relatório ou computadores cliente.  
+
 ##  <a name="bkmk_clientside_printexpereince"></a> A Experiência de Impressão  
- Quando você clica no botão Imprimir ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") na barra de ferramentas do visualizador de relatórios, a experiência varia dependendo de quais aplicativos de visualização de .PDF estão instalados no computador cliente e de qual navegador está sendo usado.   Você pode baixar o arquivo PDF ou configurar as opções de impressão de uma caixa de diálogo, ou mesmo fazer ambos, dependendo do computador cliente.  
+ Quando você clica em Imprimir ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") botão na barra de ferramentas de Visualizador de relatórios, a experiência varia dependendo do que. Aplicativos de visualização de PDF estão instalados no computador cliente e o navegador que você está usando.   Você pode baixar o arquivo PDF ou configurar as opções de impressão de uma caixa de diálogo, ou mesmo fazer ambos, dependendo do computador cliente.  
   
- ![Barra de ferramentas do relatório](../../reporting-services/media/ssrs-htmlviewer-toolbar.gif "Barra de ferramentas do relatório")  
+ ![Barra de ferramentas relatório](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "barra de ferramentas relatório")  
   
 |||  
 |-|-|  
@@ -51,11 +50,11 @@ caps.handback.revision: 14
 ##  <a name="bkmk_troubleshoot_clientsideprinting"></a> Solucionar problemas de impressão do lado do cliente  
  Se o botão de impressão da barra de ferramentas do visualizador de relatórios estiver desabilitado, verifique o seguinte:  
   
--   A impressão do lado do cliente está desabilitada para o servidor de relatório no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Consulte a seção [Habilitar e desabilitar a impressão do lado do cliente](#bkmk_enable) neste tópico.  
+-   A impressão do lado do cliente está desabilitada para o servidor de relatório no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Consulte a seção  [Habilitar e desabilitar a impressão do lado do cliente](#bkmk_enable) neste tópico.  
   
--   A extensão de renderização de PDF do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] está desabilitada. Examine a seção `<Extension Name="PDF"` do arquivo **rsreportserver.config**.  
+-   A extensão de renderização de PDF do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] está desabilitada. Examine a seção `<Extension Name="PDF"` do arquivo **rsreportserver.config** .  
   
--   Você está exibindo o relatório no modo de comparação, que usa o antigo mecanismo de renderização HTML4 do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. A experiência de impressão de PDF requer o mecanismo de renderização HTML 5.  Clique no botão **Experimentar Visualização** na barra de ferramentas.  
+-   Você está exibindo o relatório no modo de comparação, que usa o antigo mecanismo de renderização HTML4 do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . A experiência de impressão de PDF requer o mecanismo de renderização HTML 5.  Clique no botão **Experimentar Visualização** na barra de ferramentas.  
   
      ![ssrs_html5_switch2html5](../../reporting-services/report-server/media/ssrs-html5-switch2html5.png "ssrs_html5_switch2html5")  
   
@@ -96,7 +95,7 @@ caps.handback.revision: 14
   
  O exemplo de script a seguir ilustra uma abordagem para desabilitar a impressão do lado do cliente. Compile e execute o seguinte código [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para definir a propriedade **EnableClientPrinting** como **False**. Depois de executar o código, reinicialize o IIS.  
   
-### Exemplo de Script  
+### <a name="sample-script"></a>Exemplo de Script  
   
 ```  
 Imports System  
@@ -119,6 +118,7 @@ Dim rs As New ReportingService()
         End Try  
     End Sub 'Main  
 End Class 'Sample  
-```  
-  
-  
+```
+
+Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

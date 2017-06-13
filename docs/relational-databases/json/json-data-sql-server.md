@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3daaaa3dc2fb53344b009a5b3ab3d1cfbdd19350
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: e2a427682aebeeccc82a1b7f6521399b8a0b6fe8
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="json-data-sql-server"></a>Dados JSON (SQL Server)
@@ -70,15 +70,15 @@ Caso haja texto JSON armazenado em tabelas de banco de dados, você poderá usar
 
 **Exemplo**
   
- No seguinte exemplo, a consulta usa dados relacionais e JSON (armazenados na coluna jsonCol) de uma tabela:  
+ No exemplo a seguir, a consulta usa relacionais e dados JSON (armazenados em uma coluna chamada `jsonCol`) de uma tabela:  
   
-```tsql  
+```sql  
 SELECT Name,Surname,
  JSON_VALUE(jsonCol,'$.info.address.PostCode') AS PostCode,
  JSON_VALUE(jsonCol,'$.info.address."Address Line 1"')+' '
   +JSON_VALUE(jsonCol,'$.info.address."Address Line 2"') AS Address,
  JSON_QUERY(jsonCol,'$.info.skills') AS Skills
-FROM PeopleCollection
+FROM People
 WHERE ISJSON(jsonCol)>0
  AND JSON_VALUE(jsonCol,'$.info.address.Town')='Belgrade'
  AND Status='Active'
@@ -92,7 +92,7 @@ Para obter mais informações, veja [Validar, consultar e alterar dados JSON com
 ### <a name="change-json-values"></a>Alterar os valores JSON
 Se você precisar modificar partes do texto JSON, poderá usar a função **JSON_MODIFY** para atualizar o valor de uma propriedade em uma cadeia de caracteres JSON e retornar a cadeia de caracteres JSON atualizada. O exemplo a seguir atualiza o valor de uma propriedade em uma variável que contém JSON.  
   
-```tsql  
+```sql  
 DECLARE @jsonInfo NVARCHAR(MAX)
 
 SET @jsonInfo=JSON_MODIFY(@jsonInfo,'$.info.address[0].town','London') 
@@ -103,7 +103,7 @@ Você não precisa de uma linguagem de consulta personalizada para consultar o J
   
  O seguinte exemplo chama **OPENJSON** e transforma a matriz de objetos armazenados na variável `@json` em um conjunto de linhas que pode ser consultado com uma instrução SQL **SELECT** padrão:  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json =  
 N'[  
@@ -140,7 +140,7 @@ Formate dados do SQL Server ou os resultados de consultas SQL como JSON, adicion
   
  O exemplo a seguir usa o modo PATH com a cláusula FOR JSON.  
   
-```tsql  
+```sql  
 SELECT id, firstName AS "info.name", lastName AS "info.surname", age, dateOfBirth as dob  
 FROM People  
 FOR JSON PATH  
@@ -190,7 +190,7 @@ Se houver cargas de trabalhos JSON puras, em que você queira usar uma linguagem
   
  Essa URL do OData representa uma solicitação para as colunas ProductID e ProductName do produto com id 1. Você pode usar **FOR JSON** para formatar o resultado conforme esperado no SQL Server.  
   
-```tsql  
+```sql  
 SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
  AS '@odata.context',   
  ProductID, Name as ProductName   
@@ -204,7 +204,7 @@ O resultado dessa consulta é um texto JSON que está em conformidade total com 
 ## <a name="analyze-json-data-with-sql-queries"></a>Analisar dados JSON com consultas SQL  
  Se você precisar filtrar ou agregar dados JSON para fins de relatório, poderá usar **OPENJSON** para transformar o JSON em um formato relacional. Em seguida, use [!INCLUDE[tsql](../../includes/tsql-md.md)] padrão e funções internas para preparar os relatórios.  
   
-```tsql  
+```sql  
 SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date  
 FROM   SalesOrderRecord AS Tab  
           CROSS APPLY  
@@ -225,7 +225,7 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 ## <a name="import-json-data-into-sql-server-tables"></a>Importar dados JSON em tabelas do SQL Server  
  Se você precisar carregar dados JSON de um serviço externo no SQL Server, poderá usar **OPENJSON** para importar os dados para o SQL Server em vez de analisá-los na camada de aplicativo.  
   
-```tsql  
+```sql  
 DECLARE @jsonVariable NVARCHAR(MAX)
 
 SET @jsonVariable = N'[  
@@ -321,7 +321,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   
 ### <a name="microsoft-blog-posts"></a>Postagens no blog da Microsoft  
   
--   [Postagens no blog por Jovan Popovic, gerente de programas da Microsoft](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)  
+-   Para muitas soluções específicas, casos de uso e recomendações, consulte o [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no banco de dados SQL Azure por Jovan Popovic, gerente de programas da Microsoft.  
   
 ### <a name="reference-topics"></a>Tópicos de referência  
   

@@ -1,23 +1,28 @@
 ---
-title: "Escolhendo as ferramentas de Business Intelligence (BI) da Microsoft para o Analysis e Reporting | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "Escolhendo Ferramentas de Microsoft Business Intelligence (BI) para análise e relatórios | Microsoft Docs"
+ms.custom: 
+ms.date: 09/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
 caps.latest.revision: 16
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 16
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1545eb448d447b17721e145aaa5942119d17b447
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Escolhendo as ferramentas de Business Intelligence (BI) da Microsoft para o Analysis e Reporting
+# <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>Escolhendo Ferramentas de Microsoft Business Intelligence (BI) para análise e relatório
 Escolher a ferramenta de business intelligence correta pode ser muito complicado. Saiba mais sobre as diferentes ofertas da Microsoft e encontre a que atende melhor às suas necessidades.
 
 A tabela a seguir mapeia as cargas de trabalho para análise de dados e emissão de relatórios para as ferramentas BI da Microsoft mais adequadas para cargas de trabalho. Para obter mais informações sobre de um produto, clique no link do produto na tabela.  
@@ -33,7 +38,7 @@ A tabela a seguir mapeia as cargas de trabalho para análise de dados e emissão
 |Execute análise de previsão de autoatendimento||||||[Suplementos de Data Mining para Excel](http://msdn.microsoft.com/library/dn282385.aspx) (com suporte para Excel 2016)|  
 |Visualize e explore dados||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [Mapas 3D](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |Faça perguntas usando a consulta de linguagem natural|||||[P & R](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
-|Acesse relatórios usando dispositivos móveis||||[HTML 5 (dá suporte à visualização arquivos de < 10 MB)](http://go.microsoft.com/fwlink/?LinkId=391853)|[HTML 5 (dá suporte à visualização de <1 GB)](http://go.microsoft.com/fwlink/?LinkId=799619)<br /><br /> [Aplicativos do Power BI para dispositivos móveis](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/)|[Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)<br/>(usando os aplicativos do Power BI para dispositivos móveis)|  
+|Acesse relatórios usando dispositivos móveis||||[HTML 5 (dá suporte à visualização arquivos de &lt; 10 MB)](http://go.microsoft.com/fwlink/?LinkId=391853)|[HTML 5 (dá suporte à visualização de &lt;1 GB)](http://go.microsoft.com/fwlink/?LinkId=799619)<br /><br /> [Aplicativos do Power BI para dispositivos móveis](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/)|[Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)<br/>(usando os aplicativos do Power BI para dispositivos móveis)|  
 |Colabore e compartilhe|||[Sites do SharePoint](http://go.microsoft.com/fwlink/?LinkId=391849)|[Sites da equipe do SharePoint](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
 |**BI corporativo**|Profissional de TI||||||  
 |Crie modelos corporativos multidimensionais e tabulares||||||[Analysis Services](https://msdn.microsoft.com/library/bb522607.aspx)|  
@@ -48,3 +53,4 @@ A tabela a seguir mapeia as cargas de trabalho para análise de dados e emissão
  *O Reporting Services tem vários recursos que dão suporte à entrega de relatórios paginados modernos.  
   
   
+

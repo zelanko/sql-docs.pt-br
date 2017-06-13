@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80239c8fbf3111d0161dece677b369aea30d9060
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: ecc4752f5bf52931df9c7af62b5828b92f8f0123
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurar o IIS 7 para sincronização da Web
@@ -286,7 +286,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
     4.  Se um servidor proxy for usado, clique em **Usar um servidor proxy para a rede local** e **Ignorar servidor proxy para endereços locais**e clique em **OK**.  
   
-2.  No Assinante, no Internet Explorer, conecte-se ao servidor em modo de diagnóstico adicionando `?diag` ao endereço para o replisapi.dll. Por exemplo: **https://server.domain.com/directory/replisapi.dll?diag**.  
+2.  No Assinante, no Internet Explorer, conecte-se ao servidor em modo de diagnóstico adicionando `?diag` ao endereço para o replisapi.dll. Por exemplo: `https://server.domain.com/directory/replisapi.dll?diag`.  
   
     > [!NOTE]  
     >  No exemplo anterior, **server.domain.com** deve ser substituído pelo nome exato de **Emitido para** listado na seção **Certificados de Servidor** no Gerenciador do IIS.  

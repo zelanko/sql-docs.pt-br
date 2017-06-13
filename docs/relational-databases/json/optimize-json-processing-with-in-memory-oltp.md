@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4e0331c288665fd9f69444d0d14366dfa69a668f
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 12ef08a1f90e0346828a9dafb4052864254954d7
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Otimizar o processamento JSON com o OLTP in-memory
@@ -161,18 +161,6 @@ AS BEGIN
 END
 ```
 
-## <a name="next-steps"></a>Próximas etapas
-O JSON em módulos nativos do OLTP in-memory oferece uma melhoria de desempenho para a funcionalidade interna do JSON disponível no SQL Server e no Banco de Dados SQL do Azure.
-
-Para saber mais sobre os principais cenários para uso do JSON, confira alguns destes recursos:
-
--   [Blog do TechNet](https://blogs.technet.microsoft.com/dataplatforminsider/2016/01/05/json-in-sql-server-2016-part-1-of-4/)
--   [Documentação do MSDN](https://msdn.microsoft.com/library/dn921897.aspx)
--   [Vídeo do Channel 9](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
-
-Para saber mais sobre os vários cenários para integrar o JSON no aplicativo, confira os seguintes recursos:
--   Assista às demonstrações neste [vídeo do Channel 9](https://channel9.msdn.com/Events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds).
--   Encontre um cenário que corresponde ao caso de uso em [postagens de blog do JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/).
--   Encontre exemplos em nosso [repositório GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/json/).
-
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Saiba mais sobre o suporte interno a JSON no SQL Server  
+Para muitas soluções específicas, casos de uso e recomendações, consulte o [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no banco de dados SQL Azure por Jovan Popovic, gerente de programas da Microsoft.
 

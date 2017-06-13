@@ -1,7 +1,7 @@
 ---
 title: Configurar a criptografia de coluna usando o PowerShell | Microsoft Docs
 ms.custom: 
-ms.date: 01/10/2017
+ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 65fa326c931ed4a4bd534e7f70ca4e93811ee44d
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="configure-column-encryption-using-powershell"></a>Configurar a criptografia de coluna usando o PowerShell
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Este artigo fornece as etapas para definir a configuração de destino Always Encrypted para colunas de banco de dados que usam o cmdlet [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx) (no módulo do *SqlServer* PowerShell). O cmdlet **Set-SqlColumnEncryption** modifica tanto o esquema de banco de dados de destino quanto os dados armazenados nas colunas selecionadas. Os dados armazenados em uma coluna podem ser criptografados, criptografados novamente ou descriptografados, de acordo com as configurações de criptografia de destino especificadas para as colunas e a configuração de criptografia atual.
+Este artigo fornece as etapas para definir a configuração de destino Always Encrypted para colunas de banco de dados que usam o cmdlet [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) (no módulo do *SqlServer* PowerShell). O cmdlet **Set-SqlColumnEncryption** modifica tanto o esquema de banco de dados de destino quanto os dados armazenados nas colunas selecionadas. Os dados armazenados em uma coluna podem ser criptografados, criptografados novamente ou descriptografados, de acordo com as configurações de criptografia de destino especificadas para as colunas e a configuração de criptografia atual.
 Para obter informações sobre o suporte a Always Encrypted no módulo SqlServer PowerShell para Always Encrypted, veja [Configurar Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
@@ -41,7 +41,7 @@ O cmdlet **Set-SqlColumnEncryption** oferece suporte a duas abordagens para defi
 
 Com a abordagem offline, as tabelas de destino (e as tabelas relacionadas às tabelas de destino, por exemplo, qualquer tabela com a qual uma tabela de destino tem relações de chave estrangeira) estão disponíveis para transações por toda a duração da operação de gravação. A semântica das restrições de chave estrangeira (**CHECK** ou **NOCHECK**) sempre são preservadas ao usar a abordagem offline.
 
-Com a abordagem online (requer o módulo do PowerShell do SqlServer do SSMS 17.0 ou uma versão posterior), a operação de copiar e criptografar, descriptografar ou criptografar novamente os dados é realizada incrementalmente. Os aplicativos podem ler e gravar dados de e nas tabelas de destino durante a operação de movimentação de dados, exceto a última iteração, cuja duração é limitada pelo parâmetro **MaxDownTimeInSeconds** (você pode definir). Para detectar e processar as alterações, que os aplicativos podem fazer enquanto os dados estão sendo copiados, o cmdlet habilita o [Controle de Alterações](https://msdn.microsoft.com/library/bb964713.aspx) no banco de dados de destino. Por causa disso, a abordagem online provavelmente consome mais recursos no lado do servidor que a abordagem online. A operação também pode levar muito mais tempo com a abordagem online, especialmente se uma carga de trabalho de gravação intensa estiver em execução no banco de dados. A abordagem online pode ser usada para criptografar uma tabela por vez e a tabela deve ter uma chave primária. Por padrão, as restrições de chave estrangeira são recriadas com a opção **NOCHECK** para minimizar o impacto nos aplicativos. É possível impor a preservação da semântica de restrições de chave estrangeira, especificando a opção **KeepCheckForeignKeyConstraints**.
+Com a abordagem online (requer a versão de módulo do SqlServer PowerShell 21.x ou posterior), a operação de cópia e criptografar, descriptografar ou criptografar novamente os dados é executada de forma incremental. Os aplicativos podem ler e gravar dados de e nas tabelas de destino durante a operação de movimentação de dados, exceto a última iteração, cuja duração é limitada pelo parâmetro **MaxDownTimeInSeconds** (você pode definir). Para detectar e processar as alterações, que os aplicativos podem fazer enquanto os dados estão sendo copiados, o cmdlet habilita o [Controle de Alterações](../../track-changes/enable-and-disable-change-tracking-sql-server.md) no banco de dados de destino. Por causa disso, a abordagem online provavelmente consome mais recursos no lado do servidor que a abordagem online. A operação também pode levar muito mais tempo com a abordagem online, especialmente se uma carga de trabalho de gravação intensa estiver em execução no banco de dados. A abordagem online pode ser usada para criptografar uma tabela por vez e a tabela deve ter uma chave primária. Por padrão, as restrições de chave estrangeira são recriadas com a opção **NOCHECK** para minimizar o impacto nos aplicativos. É possível impor a preservação da semântica de restrições de chave estrangeira, especificando a opção **KeepCheckForeignKeyConstraints**.
 
 Aqui estão as diretrizes para escolher entre as abordagens online e offline:
 
@@ -61,9 +61,9 @@ Tarefa  |Artigo  |Acessa chaves de texto não criptografado/repositório de chav
 ---|---|---|---
 Etapa 1. Inicie um ambiente do PowerShell e importe o módulo do SqlServer. | [Importar o módulo do SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Não | Não
 Etapa 2. Conecte-se ao servidor e banco de dados | [Conectando a um banco de dados](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Não | Sim
-Etapa 3. Autentique no Azure se a chave mestra de coluna (que protege a chave de criptografia de coluna a ser girada) estiver armazenada no Cofre de Chaves do Azure | [Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx) | Sim | Não
-Etapa 4. Construir uma matriz de objetos SqlColumnEncryptionSettings - uma para cada coluna de banco de dados que você deseja criptografar, criptografar novamente ou descriptografar. SqlColumnMasterKeySettings é um objeto que existe na memória (no PowerShell). Especifica o esquema de criptografia de destino para uma coluna. | [New-SqlColumnEncryptionSettings](https://msdn.microsoft.com/library/mt759825.aspx) | Não | Não
-Etapa 5. Defina a configuração de criptografia desejada, especificada na matriz de objetos SqlColumnMasterKeySettings que você criou na etapa anterior. A coluna será criptografada, criptografada novamente ou descriptografada, dependendo das configurações de destino especificadas e a configuração de criptografia atual da coluna.| [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)<br><br>**Observação:** esta etapa pode levar muito tempo. Seus aplicativos não poderão acessar as tabelas por meio da operação inteira ou de parte dela, dependendo da abordagem (online versus offline) selecionada. | Sim | Sim
+Etapa 3. Autentique no Azure se a chave mestra de coluna (que protege a chave de criptografia de coluna a ser girada) estiver armazenada no Cofre de Chaves do Azure | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sim | Não
+Etapa 4. Construir uma matriz de objetos SqlColumnEncryptionSettings - uma para cada coluna de banco de dados que você deseja criptografar, criptografar novamente ou descriptografar. SqlColumnMasterKeySettings é um objeto que existe na memória (no PowerShell). Especifica o esquema de criptografia de destino para uma coluna. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | Não | Não
+Etapa 5. Defina a configuração de criptografia desejada, especificada na matriz de objetos SqlColumnMasterKeySettings que você criou na etapa anterior. A coluna será criptografada, criptografada novamente ou descriptografada, dependendo das configurações de destino especificadas e a configuração de criptografia atual da coluna.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Observação:** esta etapa pode levar muito tempo. Seus aplicativos não poderão acessar as tabelas por meio da operação inteira ou de parte dela, dependendo da abordagem (online versus offline) selecionada. | Sim | Sim
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>Criptografar colunas usando a abordagem offline - exemplo
 

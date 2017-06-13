@@ -1,7 +1,7 @@
 ---
 title: Excluir colunas de uma tabela | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 04/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20aa31c62de21e9718f504538ae4199395a5dab0
+ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
+ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>Excluir colunas de uma tabela
@@ -66,7 +66,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela da qual você deseja excluir colunas e selecione **Excluir**.  
+2.  Em **Pesquisador de objetos**, localize a tabela da qual você deseja excluir colunas e expandir para expor os nomes de coluna. 
+
+3.  Clique com botão direito a coluna que você deseja excluir e escolha **excluir**.  
   
 3.  Na caixa de diálogo **Excluir Objeto** , clique em **OK**.  
   
@@ -101,3 +103,4 @@ ms.lasthandoff: 04/11/2017
  Para obter exemplos adicionais, consulte [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ##  <a name="FollowUp"></a>  
+

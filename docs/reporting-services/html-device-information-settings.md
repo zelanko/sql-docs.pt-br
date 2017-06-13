@@ -1,29 +1,34 @@
 ---
-title: "Configura&#231;&#245;es de informa&#231;&#245;es do dispositivo HTML  | Microsoft Docs"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "HTML [Reporting Services], renderizando"
-  - "configurações de informações do dispositivo [Reporting Services], renderização de HTML"
+title: "Configurações de informações do dispositivo HTML | Microsoft Docs"
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- HTML [Reporting Services], rendering
+- device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 caps.latest.revision: 49
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 48
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 111e6d65b6c74156b39e81a1b7d9af0cb45501d3
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Configura&#231;&#245;es de informa&#231;&#245;es do dispositivo HTML 
-  A tabela a seguir lista as configurações de informações de dispositivos para renderização no formato HTML.  
+# <a name="html-device-information-settings"></a>Configurações de informações do dispositivo HTML
+A tabela a seguir lista as configurações de informações de dispositivos para renderização no formato HTML.  
   
 > [!IMPORTANT]  
->  As configurações de informações de dispositivo listadas na tabela abaixo com um **(\*)** foram preteridas e não devem ser usadas em novos aplicativos. Para obter mais informações, consulte [Recursos preteridos no SQL Server Reporting Services no SQL Server 2016](../Topic/Deprecated%20Features%20in%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md).  
+>  As configurações de informações de dispositivo listadas na tabela abaixo com um **(\*)** foram preteridas e não devem ser usadas em novos aplicativos. Para obter mais informações, consulte [Recursos preteridos no SQL Server Reporting Services no SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)   
   
 |Configuração|Value|  
 |-------------|-----------|  
@@ -37,7 +42,7 @@ caps.handback.revision: 48
 |**HTMLFragment**|Indica se um fragmento de HTML é criado no lugar de um documento HTML completo. Um fragmento de HTML inclui o conteúdo do relatório em um elemento TABLE e omite os elementos HTML e BODY. O valor padrão é **false**. Se você estiver renderizando para HTML usando o método **M:ReportExecution2005.ReportExecutionService.Render(System.String,System.String,System.String@,System.String@,System.String@, ReportExecution2005.Warning[]@,System.String[]@)** da API SOAP, precisará definir essas informações de dispositivo para **true** se você estiver processando um relatório com imagens. A renderização usando SOAP com o conjunto de propriedade **HTMLFragment** definido como **true** cria URLs contendo informações da sessão que podem ser usadas para solicitar imagens corretamente. As imagens devem ser recursos carregados no banco de dados do servidor de relatório.|  
 |**ImageConsolidation**|Indica se o gráfico renderizado, mapa, medidor e imagens de medidor serão consolidados em uma única imagem grande. A consolidação de imagens ajuda a melhorar o desempenho do relatório no navegador do cliente quando o relatório contém muitos itens de visualização de dados. O valor padrão é **true** para a maioria dos navegadores modernos.|  
 |**JavaScript**|Indica se JavaScript é compatível com o relatório renderizado. O valor padrão é **true**.|  
-|**LinkTarget**|O destino de hiperlinks no relatório. Você pode destinar uma janela ou quadro fornecendo o nome da janela, como **LinkTarget**=*window_name* ou destinar uma nova janela usando **LinkTarget**=_blank. Outros nomes de destino válidos incluem _self, _parent e _top.|  
+|**LinkTarget**|O destino de hiperlinks no relatório. Você pode destinar uma janela ou quadro fornecendo o nome da janela, como **LinkTarget**=*window_name*ou destinar uma nova janela usando **LinkTarget**=_blank. Outros nomes de destino válidos incluem _self, _parent e _top.|  
 |**OnlyVisibleStyles(\*)**|Indica se somente os estilos compartilhados são gerados para a página renderizada atualmente.|  
 |**OutlookCompat**|Indica se ocorrerá renderização com metadados extras que melhoram a aparência do relatório no Outlook. Para os demais, o valor padrão é **false**.|  
 |**Parâmetros**|Indica se deve mostrar ou ocultar a área de parâmetros da barra de ferramentas. Se você definir esse parâmetro como um valor **true**, a área de parâmetros da barra de ferramentas será exibida. O valor padrão desse parâmetro é **true**.|  
@@ -45,14 +50,14 @@ caps.handback.revision: 48
 |**ReplacementRoot(\*)**|A cadeia de caracteres que precede todos os links de detalhamento, alternância e indicadores no relatório quando forem renderizados fora do controle ReportViewer. Por exemplo, este é usado para redirecionar um clique do usuário a uma página personalizada.|  
 |**ResourceStreamRoot(\*)**|A cadeia de caracteres a ser pré-demarcada na URL para todos os recursos de imagem, como imagens para alternância ou classificação.|  
 |**Seção**|O número da página do relatório para renderizar. Um valor **0** indica que todas as seções do relatório serão renderizadas. O valor padrão é **1**.|  
-|**StreamRoot (\*)**|O caminho usado para prefixar o valor do atributo **src** do elemento IMG no relatório de HTML retornado pelo servidor de relatório. Por padrão, o servidor de relatório fornece o caminho. Você pode usar essa configuração para especificar um caminho de raiz para as imagens em um relatório (por exemplo, **http://\<servername>/resources/companyimages**).|  
+|**StreamRoot (\*)**|O caminho usado para prefixar o valor do atributo **src** do elemento IMG no relatório de HTML retornado pelo servidor de relatório. Por padrão, o servidor de relatório fornece o caminho. Você pode usar essa configuração para especificar um caminho raiz para as imagens em um relatório (por exemplo, **http://\<servername >/recursos/companyimages**).|  
 |**StyleStream**|Indica se os estilos e scripts são criados como um fluxo separado em vez de no documento. O valor padrão é **false**.|  
 |**Barra de Ferramentas**|Indica se deve mostrar ou ocultar a barra de ferramentas. O padrão desse parâmetro é **true**. Se o valor desse parâmetro for **false**, todas as demais opções (menos o mapa do documento) serão ignoradas. Se você omitir esse parâmetro, a barra de ferramentas será exibida automaticamente para renderizar formatos que dão suporte a ele.<br /><br /> A barra de ferramentas do Visualizador de Relatório é renderizada quando você usa o acesso de URL para renderizar um relatório. A barra de ferramentas não é renderizada por meio da API SOAP. Entretanto, a configuração de informações de dispositivo **Toolbar** afeta o modo como o relatório é exibido ao usar o método de SOAP **Render** . Se o valor desse parâmetro for **true** ao usar o SOAP para renderizar para HTML, somente a primeira seção do relatório será renderizada. Se o valor for **false**, o relatório HTML inteiro será renderizado como uma única página HTML.|  
 |**UserAgent**|A cadeia de caracteres **user-agent** do navegador que faz a solicitação, a qual é encontrada na solicitação HTTP.|  
-|**Zoom (\*)**|O valor de zoom do relatório como uma porcentagem de número inteiro ou uma constante de cadeia de caracteres. Os valores de cadeia de caracteres padrão incluem **Page Width** e **Whole Page**. Esse parâmetro é ignorado pelas versões do [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer anteriores ao Internet Explorer 5.0 e por todos os navegadores que não são da [!INCLUDE[msCoName](../includes/msconame-md.md)]. O valor padrão desse parâmetro é **100**.|  
-|**DataVisualizationFitSizing**|Indica comportamento de ajuste de visualização de dados quando dentro de um tablix. Isso inclui gráfico, medidor e mapa.<br /><br /> Os valores possíveis são **Aproximado** e **Exato**.<br /><br /> O valor padrão é **Aproximado**. Se a configuração for removida do arquivo **rsreportserver.config**, o comportamento padrão será **Exato**.<br /><br /> Habilitar **Exato** pode ter impacto de desempenho porque o processamento para determinar o tamanho exato pode levar mais tempo.|  
+|**Zoom (\*)**|O valor de zoom do relatório como uma porcentagem de número inteiro ou uma constante de cadeia de caracteres. Os valores de cadeia de caracteres padrão incluem **Page Width** e **Whole Page**. Esse parâmetro é ignorado pelas versões do [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer anteriores ao Internet Explorer 5.0 e por todos os navegadores que não são da[!INCLUDE[msCoName](../includes/msconame-md.md)] . O valor padrão desse parâmetro é **100**.|  
+|**DataVisualizationFitSizing**|Indica comportamento de ajuste de visualização de dados quando dentro de um tablix. Isso inclui gráfico, medidor e mapa.<br /><br /> Os valores possíveis são **Aproximado** e **Exato**.<br /><br /> O valor padrão é **Aproximado**. Se a configuração for removida do arquivo **rsreportserver.config** , o comportamento padrão será **Exato**.<br /><br /> Habilitar **Exato** pode ter impacto de desempenho porque o processamento para determinar o tamanho exato pode levar mais tempo.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Passando configurações de informações de dispositivos para extensões de renderização](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personalizar parâmetros de extensão de renderização em RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Referência técnica &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  

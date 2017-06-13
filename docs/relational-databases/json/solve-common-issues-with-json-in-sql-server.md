@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: abae3fc5a3d8edab6e4b465ce4cae038e45222d0
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 94435e9fb466887a00c8d22076f229481a83f280
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Solucionar problemas comuns com JSON no SQL Server
@@ -32,21 +32,21 @@ ms.lasthandoff: 04/11/2017
 ## <a name="for-json-and-json-output"></a>Saída de FOR JSON e JSON
 
 ### <a name="for-json-path-or-for-json-auto"></a>FOR JSON PATH ou FOR JSON AUTO?  
- **Pergunta.** Preciso criar um resultado de texto JSON de uma consulta SQL simples em uma única tabela. FOR JSON PATH e FOR JSON AUTO produzem a mesma saída. Qual dessas duas opções deve usar?  
+ **Pergunta.** Quero criar um resultado de texto JSON de uma consulta SQL simples em uma única tabela. FOR JSON PATH e FOR JSON AUTO produzem a mesma saída. Qual dessas duas opções deve usar?  
   
- **Resposta.** Use FOR JSON PATH. Embora não haja diferença na saída JSON, o modo AUTO tem lógica adicional que verifica se as colunas devem ser aninhadas. Considere a opção padrão PATH.  
+ **Resposta.** Use FOR JSON PATH. Embora não haja nenhuma diferença na saída JSON, o modo AUTO se aplica a lógica adicional que verifica se as colunas devem ser aninhadas. Considere a opção padrão PATH.  
 
 ### <a name="create-a-nested-json-structure"></a>Criar uma estrutura aninhada de JSON  
- **Pergunta.** Preciso produzir JSON complexo com várias matrizes no mesmo nível. FOR JSON PATH pode criar objetos aninhados usando caminhos e FOR JSON AUTO cria o nível de aninhamento para cada tabela. Nenhuma dessas duas opções me permite gerar a saída desejada. Como posso criar um formato JSON personalizado que as opções existentes não suportam diretamente?  
+ **Pergunta.** Quero produzir JSON complexo com várias matrizes no mesmo nível. FOR JSON PATH pode criar objetos aninhados usando caminhos e FOR JSON AUTO cria o nível de aninhamento para cada tabela. Nem uma destas duas opções me permite gerar a saída desejada. Como posso criar um formato JSON personalizado que as opções existentes não suportam diretamente?  
   
- **Resposta.** Você pode criar qualquer estrutura de dados adicionando consultas FOR JSON como expressões de coluna que retornam texto JSON ou criar JSON manualmente usando a função JSON_QUERY, conforme é mostrado no exemplo a seguir.  
+ **Resposta.** Você pode criar qualquer estrutura de dados Adicionando consultas FOR JSON como expressões de coluna que retornam texto JSON. Você também pode criar JSON manualmente usando a função JSON_QUERY. O exemplo a seguir demonstra essas técnicas.  
   
-```tsql  
+```sql  
 SELECT col1, col2, col3,  
-             (SELECT col11, col12, col13 FROM t11 WHERE t11.FK = t1.PK FOR JSON PATH) as t11,  
-             (SELECT col21, col22, col23 FROM t21 WHERE t21.FK = t1.PK FOR JSON PATH) as t21,  
-             (SELECT col31, col32, col33 FROM t31 WHERE t31.FK = t1.PK FOR JSON PATH) as t31,  
-             JSON_QUERY('{"'+col4'":"'+col5+'"}' as t41  
+     (SELECT col11, col12, col13 FROM t11 WHERE t11.FK = t1.PK FOR JSON PATH) as t11,  
+     (SELECT col21, col22, col23 FROM t21 WHERE t21.FK = t1.PK FOR JSON PATH) as t21,  
+     (SELECT col31, col32, col33 FROM t31 WHERE t31.FK = t1.PK FOR JSON PATH) as t31,  
+     JSON_QUERY('{"'+col4'":"'+col5+'"}' as t41  
 FROM t1  
 FOR JSON PATH  
 ```  
@@ -54,45 +54,45 @@ FOR JSON PATH
 Todos os resultados de uma consulta FOR JSON ou a função JSON_QUERY nas expressões de coluna são formatados como um sub-objeto JSON aninhado separado e incluídos no resultado principal.  
 
 ### <a name="prevent-double-escaped-json-in-for-json-output"></a>Evitar JSON de escape duplo na saída FOR JSON  
- **Pergunta.** Tenho um texto JSON armazenado em uma coluna de tabela. Desejo incluí-lo na saída do FOR JSON. FOR JSON realiza o escape de todos os caracteres em JSON, estou recebendo uma string JSON em vez de um objeto aninhado, como mostrado no exemplo a seguir.  
+ **Pergunta.** Tenho um texto JSON armazenado em uma coluna de tabela. Desejo incluí-lo na saída do FOR JSON. Mas, FOR JSON ignora todos os caracteres em JSON, portanto, estou recebendo uma string JSON em vez de um objeto aninhado, como mostrado no exemplo a seguir.  
   
-```tsql  
-SELECT 'Text' as myText, '{"day":23}' as myJson  
+```sql  
+SELECT 'Text' AS myText, '{"day":23}' AS myJson  
 FOR JSON PATH  
 ```  
   
  Essa consulta gera a saída a seguir.  
   
 ```json  
-[{"myText":"Text","myJson":"{\"day\":23}"}]  
+[{"myText":"Text", "myJson":"{\"day\":23}"}]  
 ```  
   
  Como impedir esse comportamento? Desejo que `{"day":23}` seja retornado como um objeto JSON e não como texto de escape.  
   
- **Resposta.** O JSON armazenado em uma coluna de texto ou um literal é tratado como qualquer texto. Ele é colocado entre aspas duplas e inclui escape. Se você quiser retornar um objeto JSON sem escape, é preciso passar essa coluna como um argumento para a função JSON_QUERY, conforme é mostrado no exemplo a seguir.  
+ **Resposta.** O JSON armazenado em uma coluna de texto ou um literal é tratado como qualquer texto. Ou seja, ele foi colocado entre aspas duplas e escape. Se você quiser retornar um objeto JSON sem escape, passe a coluna JSON como um argumento para a função JSON_QUERY, conforme mostrado no exemplo a seguir.  
   
-```tsql  
+```sql  
 SELECT col1, col2, col3, JSON_QUERY(jsoncol1) AS jsoncol1  
 FROM tab1  
 FOR JSON PATH  
 ```  
   
- JSON_QUERY sem seu segundo parâmetro opcional retorna somente o primeiro argumento como resultado. Como JSON_QUERY retorna um JSON válido, FOR JSON sabe que esse resultado não precisa de escape.
+ JSON_QUERY sem seu segundo parâmetro opcional retorna somente o primeiro argumento como resultado. Como JSON_QUERY sempre retorna um JSON válido, FOR JSON sabe que esse resultado não precisa de escape.
 
 ### <a name="json-generated-with-the-withoutarraywrapper-clause-is-escaped-in-for-json-output"></a>O JSON gerado com a cláusula WITHOUT_ARRAY_WRAPPER tem escape na saída FOR JSON  
  **Pergunta.** Estou tentando formatar uma expressão de coluna usando FOR JSON e a opção WITHOUT_ARRAY_WRAPPER.  
   
-```tsql  
+```sql  
 SELECT 'Text' as myText,  
-       (SELECT 12 day, 8 mon FOR JSON PATH, WITHOUT_ARRAY_WRAPPER) as myJson  
+   (SELECT 12 day, 8 mon FOR JSON PATH, WITHOUT_ARRAY_WRAPPER) as myJson  
 FOR JSON PATH   
 ```  
   
  Parece que o texto retornado pela consulta FOR JSON tem escape como texto sem formatação. Isso ocorre somente se a opção WITHOUT_ARRAY_WRAPPER for especificada. Por que ele não é tratado como um objeto JSON e incluído sem escape no resultado?  
   
- **Resposta.** Se você especificar a opção WITHOUT_ARRAY_WRAPPER, o texto JSON gerado não é necessariamente válido. Portanto, a consulta FOR JSON externa pressupõe que ele é um texto sem formatação e realiza o escape da string. Se você tiver certeza de que a saída JSON é válida, insira-a na função JSON_QUERY para promovê-la a JSON com formato correto, conforme é mostrado no exemplo a seguir.  
+ **Resposta.** Se você especificar o `WITHOUT_ARRAY_WRAPPER` opção interna `FOR JSON`, o texto JSON resultante não é necessariamente válido JSON. Portanto, externa `FOR JSON` pressupõe que ele é um texto sem formatação e ignora a cadeia de caracteres. Se você tiver certeza de que o JSON de saída é válido, colocá-los com o `JSON_QUERY` na função para promovê-lo para corretamente formatado JSON, conforme mostrado no exemplo a seguir.  
   
-```tsql  
+```sql  
 SELECT 'Text' as myText,  
       JSON_QUERY((SELECT 12 day, 8 mon FOR JSON PATH, WITHOUT_ARRAY_WRAPPER)) as myJson  
 FOR JSON PATH    
@@ -101,35 +101,35 @@ FOR JSON PATH
 ## <a name="openjson-and-json-input"></a>Entrada de OPENJSON e JSON
 
 ### <a name="return-a-nested-json-sub-object-from-json-text-with-openjson"></a>Retornar um sub-objeto JSON aninhado de texto JSON com OPENJSON  
- **Pergunta.** Não consigo abrir uma matriz de objetos JSON complexos que contém valores escalares, objetos e matrizes usando OPENJSON com um esquema explícito. Quando faço referência a uma chave na cláusula WITH, somente valores escalares são retornados. Objetos e matrizes são retornados como valores nulos. Como extrair objetos ou matrizes de objetos JSON?  
+ **Pergunta.** Não consigo abrir uma matriz de objetos JSON complexos que contém valores escalares, objetos e matrizes usando OPENJSON com um esquema explícito. Quando faço referência a uma chave na cláusula WITH, somente valores escalares são retornados. Objetos e matrizes são retornados como valores nulos. Como extrair objetos ou matrizes como objetos JSON?  
   
  **Resposta.** Se você quiser retornar um objeto ou uma matriz como uma coluna, use a opção AS JSON na definição de coluna, conforme mostrado no exemplo a seguir.  
   
-```tsql  
+```sql  
 SELECT scalar1, scalar2, obj1, obj2, arr1  
 FROM OPENJSON(@json)  
-             WITH ( scalar1 int,  
-                          scalar2 datetime2,  
-                          obj1 NVARCHAR(MAX) AS JSON,  
-                          obj2 NVARCHAR(MAX) AS JSON,  
-                          arr1 NVARCHAR(MAX) AS JSON)  
+    WITH ( scalar1 int,  
+        scalar2 datetime2,  
+        obj1 NVARCHAR(MAX) AS JSON,  
+        obj2 NVARCHAR(MAX) AS JSON,  
+        arr1 NVARCHAR(MAX) AS JSON)  
 ```  
 
-### <a name="use-openjson-instead-of-jsonvalue-to-return-long-text-values"></a>Use OPENJSON no lugar de JSON_VALUE para retornar valores de texto longos  
+### <a name="return-long-text-value-with-openjson-instead-of-jsonvalue"></a>Retornar o valor de texto longo com OPENJSON em vez de JSON_VALUE
  **Pergunta.** Tenho uma chave de descrição em texto JSON que contém texto longo. `JSON_VALUE(@json, '$.description')` retorna NULL em vez de um valor.  
   
  **Resposta.** JSON_VALUE foi projetado para retornar valores escalares pequenos. Geralmente, a função retorna NULL em vez de um erro de estouro. Se quiser retornar valores maiores, use OPENJSON, que oferece suporte a valores de NVARCHAR(MAX), conforme é mostrado no exemplo a seguir.  
   
-```tsql  
+```sql  
 SELECT myText FROM OPENJSON(@json) WITH (myText NVARCHAR(MAX) '$.description')  
 ```  
 
-### <a name="use-openjson-instead-of-jsonvalue-to-handle-duplicate-keys"></a>Use OPENJSON no lugar de JSON_VALUE para tratar chaves duplicadas  
+### <a name="handle-duplicate-keys-with-openjson-instead-of-jsonvalue"></a>Lidar com chaves duplicadas com OPENJSON em vez de JSON_VALUE
  **Pergunta.** Tenho chaves duplicadas no texto JSON. JSON_VALUE retorna apenas a primeira chave encontrada no caminho. Como retornar todas as chaves que têm o mesmo nome?  
   
- **Resposta.** As funções escalares internas do JSON retornam somente a primeira ocorrência do objeto referenciado. Se você precisar de mais de uma chave, use a função com valor de tabela OPENJSON, conforme é mostrado no exemplo a seguir.  
+ **Resposta.** Funções escalares internas do JSON retornam somente a primeira ocorrência do objeto referenciado. Se você precisar de mais de uma chave, use a função com valor de tabela OPENJSON, conforme é mostrado no exemplo a seguir.  
   
-```tsql  
+```sql  
 SELECT value FROM OPENJSON(@json, '$.info.settings')  
 WHERE [key] = 'color'  
 ```  
@@ -148,4 +148,6 @@ WHERE [key] = 'color'
   
  **Resposta.** Coloque-os entre aspas em caminhos JSON. Por exemplo, `JSON_VALUE(@json, '$."$info"."First Name".value')`.
  
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Saiba mais sobre o suporte interno a JSON no SQL Server  
+Para muitas soluções específicas, casos de uso e recomendações, consulte o [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no banco de dados SQL Azure por Jovan Popovic, gerente de programas da Microsoft.
 

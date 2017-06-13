@@ -18,13 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 02f8701f04f1f19c12c6ed31e9fd0e2f0f8f6e83
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 7eb8ea4b29caaf7f1600bbd31db4f669b86476c1
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/12/2017
 
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Retornar dados de um procedimento armazenado
+
+ > Para conteúdo relacionado a versões anteriores do SQL Server, consulte [retornar dados de um procedimento armazenado](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
+
   Há duas formas de retornar conjuntos de resultados ou dados de um procedimento para um programa de chamada: parâmetros de saída e códigos de retorno. Este tópico fornece informações sobre as duas abordagens.  
   
 ## <a name="returning-data-using-an-output-parameter"></a>Retornando dados por meio de um parâmetro de saída  

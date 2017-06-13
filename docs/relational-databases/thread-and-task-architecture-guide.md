@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b66cd3d05632792b851f039aa653c15de18c78b
+ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
+ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/07/2017
 
 ---
 # <a name="thread-and-task-architecture-guide"></a>guia de arquitetura de threads e tarefas
@@ -51,7 +51,6 @@ A sobrecarga envolvida na troca de contextos de thread não é muito grande. A m
 Esses sistemas poderão observar um pequeno aumento no desempenho se o valor lightweight pooling for definido como 1.
 
 Não recomendamos o uso de agendamento do modo fibra para operação de rotina. Isso porque ele pode diminuir o desempenho, inibindo os benefícios regulares de alternância de contexto, e porque alguns componentes do SQL Server não funcionam corretamente no modo fibra. Para saber mais, veja lightweight pooling.
-
 
 ## <a name="thread-and-fiber-execution"></a>Execução de fibra e thread
 
@@ -94,15 +93,14 @@ Não confie no aumento automático para aumentar o tamanho do arquivo de log de 
 
 O desempenho de operações de índice, como criar ou recompilar índices, pode ser melhorado em computadores com muitas CPUs definindo-se temporariamente o modelo de recuperação do banco de dados como bulk-logged ou simples. Essas operações de índice podem gerar atividade de log significativa, e a contenção de log pode afetar a melhor opção de DOP (grau de paralelismo) feita pelo SQL Server.
 
-Além disso, considere ajustar a configuração de MAXDOP (grau máximo de paralelismo) para essas operações. As diretrizes a seguir se baseiam em testes internos e são recomendações gerais. Você deverá testar várias configurações de MAXDOP diferentes para determinar a configuração ideal para o seu ambiente.
+Além disso, considere ajustar a **grau máximo de paralelismo (MAXDOP)** opção de configuração de servidor para essas operações. As diretrizes a seguir se baseiam em testes internos e são recomendações gerais. Você deverá testar várias configurações de MAXDOP diferentes para determinar a configuração ideal para o seu ambiente.
 
 * Para o modelo de recuperação completa, limite o valor do grau máximo da opção de paralelismo a oito ou menos.   
 * Para o modelo bulk-logged ou simples, considere definir o valor da opção grau máximo de paralelismo como um valor maior que oito.   
 * Para servidores que tenham o NUMA configurado, o grau máximo de paralelismo não deve exceder o número de CPUs atribuídas a cada nó NUMA. Isso ocorre porque é mais provável que a consulta use memória local de 1 nó NUMA, o que pode melhorar o tempo de acesso à memória.  
-* Para os servidores que têm o hyperthreading habilitado e foram fabricados até 2009, o valor MAXDOP não deve exceder o número de processadores físicos.  
+* Para servidores com hyper-threading habilitado e foram fabricados em 2009 ou anterior (antes do recurso hyper-threading foi aprimorado), o valor MAXDOP não deve exceder o número de processadores físicos, em vez de processadores lógicos.
 
-
-Para saber mais sobre o grau máximo da opção de paralelismo, veja [Definir o grau máximo da opção de paralelismo](../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).
+Para obter mais informações sobre a opção grau máximo de paralelismo, consulte [configurar o grau máximo de paralelismo opção de configuração de servidor](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>Configurar o número máximo de threads de trabalho
 
@@ -120,17 +118,17 @@ Em geral, o número de arquivos de dados tempdb deve corresponder ao número de 
 
 A tabela a seguir lista os componentes do SQL Server e indica se eles podem usar mais de 64 CPUs.
 
-|Nome do processo    |Programa executável    |Usar mais de 64 CPUs |  
+|Nome do processo   |Programa executável |Usar mais de 64 CPUs |  
 |----------|----------|----------|  
-|Mecanismo de Banco de Dados do SQL Server    |Sqlserver.exe    |Sim |  
-|Reporting Services    |Rs.exe    |Não |  
-|Analysis Services    |As.exe    |Não |  
-|Integration Services    |Is.exe    |Não |  
-|Service Broker    |Sb.exe    |Não |  
-|Pesquisa de Texto Completo    |Fts.exe    |Não |  
-|SQL Server Agent    |Sqlagent.exe    |Não |  
-|SQL Server Management Studio    |Ssms.exe    |Não |  
-|instalação do SQL Server    |Setup.exe    |Não |  
+|Mecanismo de Banco de Dados do SQL Server |Sqlserver.exe  |Sim |  
+|Reporting Services |Rs.exe |Não |  
+|Analysis Services  |As.exe |Não |  
+|Integration Services   |Is.exe |Não |  
+|Service Broker |Sb.exe |Não |  
+|Pesquisa de Texto Completo   |Fts.exe    |Não |  
+|SQL Server Agent   |Sqlagent.exe   |Não |  
+|SQL Server Management Studio   |Ssms.exe   |Não |  
+|instalação do SQL Server   |Setup.exe  |Não |  
 
 
 

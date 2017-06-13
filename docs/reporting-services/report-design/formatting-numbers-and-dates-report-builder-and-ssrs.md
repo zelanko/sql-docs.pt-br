@@ -1,35 +1,40 @@
 ---
-title: "Formatando n&#250;meros e datas (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.placeholderproperties.number.f1"
-  - "10127"
-  - "sql13.rtp.rptdesigner.textboxproperties.number.f1"
-  - "10130"
-  - "10286"
-  - "sql13.rtp.rptdesigner.serieslabelproperties.number.f1"
-  - "10285"
-  - "sql13.rtp.rptdesigner.axisproperties.number.f1"
+title: "Formatando números e datas (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.placeholderproperties.number.f1
+- "10127"
+- sql13.rtp.rptdesigner.textboxproperties.number.f1
+- "10130"
+- "10286"
+- sql13.rtp.rptdesigner.serieslabelproperties.number.f1
+- "10285"
+- sql13.rtp.rptdesigner.axisproperties.number.f1
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Formatando n&#250;meros e datas (Construtor de Relat&#243;rios e SSRS)
+# <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Formatando números e datas (Construtor de Relatórios e SSRS)
   Você pode formatar números e datas em regiões de dados selecionando um formato na página **Número** da caixa de diálogo **Propriedades** da região de dados correspondentes.  
   
- Para especificar cadeias de caracteres de formato dentro de um item de relatório de caixa de texto, selecione o item que você deseja formatar, clique com o botão direito do mouse, selecione **Propriedades da Caixa de Texto** e clique em **Número**. É possível formatar células individuais em uma tabela ou região de dados de matriz da mesma forma, porque as células em uma tabela ou matriz são caixas de texto individuais.  
+ Para especificar cadeias de caracteres de formato dentro de um item de relatório de caixa de texto, selecione o item que você deseja formatar, clique com o botão direito do mouse, selecione **Propriedades da Caixa de Texto**e clique em **Número**. É possível formatar células individuais em uma tabela ou região de dados de matriz da mesma forma, porque as células em uma tabela ou matriz são caixas de texto individuais.  
   
  Uma região de dados do gráfico, normalmente, mostra datas ao longo do eixo de categoria (x) e valores ao longo do eixo de valor (y). Para especificar a formatação em um gráfico, clique com o botão direito do mouse em um eixo e selecione **Propriedades do Eixo**. No eixo de valor, você pode especificar formatos apenas para números. Para obter mais informações, consulte [Formatação de rótulos de eixos em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Considerações para formatação de números e datas  
+## <a name="considerations-for-formatting-numbers-and-dates"></a>Considerações para formatação de números e datas  
  Antes de formatar números e datas em seu relatório, considere o seguinte:  
   
 -   Por padrão, números são formatados para refletir as configurações culturais no computador cliente. Use cadeias de caracteres de formatação para especificar como os números são exibidos de forma que a formatação seja consistente, independentemente do local onde a pessoa que está exibindo o relatório está localizada.  
@@ -56,7 +61,7 @@ caps.handback.revision: 6
   
 -   Se você selecionar **Moeda** em **Categoria** e marcar a opção **Mostrar valores em**, poderá selecionar **Milhares**, **Milhões**ou **Bilhões** para exibir números usando formatos financeiros. Por exemplo, se o valor do campo for 1.789.905.394 e você selecionar **Bilhões** e especificar 2 casas decimais, o valor exibido no relatório será 1,78.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Formatando linhas, cores e imagens &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   

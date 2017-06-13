@@ -15,10 +15,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 06e3118f67db6f01dad0344b42024534081433fb
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: b76a0f262fd12e53797c0ad86c991a6e4423927a
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Práticas recomendadas e solução de problemas de backup do SQL Server para URL
@@ -99,8 +99,8 @@ ms.lasthandoff: 04/11/2017
   
 -   Ao fazer a restauração em um backup compactado, você verá o seguinte erro:  
   
-    -   Ocorreu a **SqlException 3284. Gravidade: 16 Estado: 5**  
-        **A marca de arquivo de mensagem no dispositivo 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" não está alinhada. Emita novamente a instrução Restore com o mesmo tamanho de bloco usado para criar o conjunto de backup: '65536' parece um valor possível.**  
+    -   `SqlException 3284 occurred. Severity: 16 State: 5`  
+        **Marca de arquivo de mensagem no dispositivo `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` não está alinhado. Emita novamente a instrução Restore com o mesmo tamanho de bloco usado para criar o conjunto de backup: '65536' parece um valor possível.**  
   
          Para corrigir esse erro, emita novamente a instrução **BACKUP** com **BLOCKSIZE = 65536** especificada.  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 04/11/2017
   
 -   A gravação em "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" falhou: o backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: não é possível ler dados da conexão de transporte: a conexão foi fechada.  
   
--   Ocorreu um erro de E/S não recuperável no arquivo "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Não foi possível coletar o erro a partir do Ponto de Extremidade Remoto.  
+-   Ocorreu um erro de e/s não recuperável no arquivo "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" erro não pôde ser coletado do ponto de extremidade remoto.  
   
      Msg 3013, Nível 16, Estado 1, Linha 2  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 04/11/2017
   
  **Configurações de proxy padrão não escolhidas:**  
   
- Às vezes as configurações padrão não são escolhidas causando erros da autenticação do proxy como aquele mostrado abaixo:*Ocorreu um erro irrecuperável de E/S no arquivo "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" o Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: o servidor remoto retornou um erro: (407)* **Autenticação de proxy necessária**.  
+ Às vezes, as configurações padrão não são escolhidas causando erros de autenticação, como mostrado abaixo do proxy:*Ocorreu um erro de e/s não recuperável no arquivo "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: o servidor remoto retornou um erro: (407)* **Autenticação de proxy necessária**.  
   
  Para resolver esse problema, crie um arquivo de configuração que permite que o processo de Backup para URL use as configurações de proxy padrão usando as seguintes etapas:  
   

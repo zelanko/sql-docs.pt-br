@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f04f47c6230a65140c405db039ce737ad3aa7762
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: c105f4fae3b3fffb61ef892cecbbe75754ccfd28
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Arquivos de dados do SQL Server no Microsoft Azure
@@ -126,7 +126,7 @@ ON
  Esta seção descreve as ferramentas e as bibliotecas de referência de programação que podem ser usadas ao armazenar arquivos de dados do SQL Server no Armazenamento do Azure.  
   
 ### <a name="powershell-support"></a>Suporte ao PowerShell  
- Use cmdlets do PowerShell para armazenar arquivos de dados do SQL Server no serviço de Armazenamento de Blobs do Azure, fazendo referência a um caminho de URL do Armazenamento de Blobs, em vez de um caminho do arquivo. Acesse os Blobs usando o formato de URL`: http://storageaccount.blob.core.windows.net/<container>/<blob>` a seguir.  
+ Use cmdlets do PowerShell para armazenar arquivos de dados do SQL Server no serviço de Armazenamento de Blobs do Azure, fazendo referência a um caminho de URL do Armazenamento de Blobs, em vez de um caminho do arquivo. Acessar Blobs usando o seguinte formato de URL: `http://storageaccount.blob.core.windows.net/<container>/<blob>` .  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>Suporte a objeto SQL Server e contadores de desempenho  
  A partir do SQL Server 2014, um novo objeto SQL Server foi adicionado para ser usado com o recurso Arquivos de Dados do SQL Server no Armazenamento do Azure. O novo objeto SQL Server é chamado de [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) e pode ser usado pelo Monitor do Sistema para monitorar a atividade ao executar o SQL Server com o Armazenamento do Microsoft Azure.  

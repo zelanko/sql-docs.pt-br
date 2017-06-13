@@ -28,10 +28,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd4ac1d2f93c1fa776473cdc7b1b99a07b5f8164
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 204b0e834db9ad1c5fe7d3f08f507629313e3cad
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar o Assistente para Indexação de Texto Completo
@@ -100,11 +100,11 @@ ms.lasthandoff: 04/11/2017
      Especifique o grupo de arquivos no qual criar o índice de texto completo.  
   
      e. Selecione um valor:  
-    |Value|Descrição|  
-    |-----------|-----------------|
-      |**<default>**| Se a tabela ou exibição não for particionada, selecione para usar o mesmo grupo de arquivos da tabela ou exibição subjacente. Se a tabela ou exibição for particionada, o grupo de arquivos primário será utilizado|
+      |Value|Descrição|  
+      |-----------|-----------------|
+      |**<default>**| Se a tabela ou exibição não for particionada, selecione para usar o mesmo grupo de arquivos da tabela ou exibição subjacente. Se a tabela ou exibição for particionada, o grupo de arquivos primário é usado|
       |**PRIMARY**|Selecione para usar o grupo de arquivos primário para o novo índice de texto completo.|
-             *grupo de arquivos padrão especificado pelo usuário*|Se existir uma lista de palavras irrelevantes padrão definida pelo usuário, selecione seu nome na lista para usar esse grupo de arquivos para o novo índice de texto completo.|  
+      *grupo de arquivos padrão especificado pelo usuário*|Se existir uma lista de palavras irrelevantes padrão definida pelo usuário, selecione seu nome na lista para usar esse grupo de arquivos para o novo índice de texto completo.|   
   
      
  11. **Selecionar lista de palavras irrelevantes de texto completo**  

@@ -1,26 +1,31 @@
 ---
-title: "Formatando escalas de um medidor (Construtor de Relat&#243;rios e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Formatando escalas em um medidor (construtor de relatórios e SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a25ea1cb8702758096118371c4261e8189c2e91
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Formatando escalas de um medidor (Construtor de Relat&#243;rios e SSRS)
-  Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], a escala do medidor é o intervalo de números, limitados por um mínimo e um máximo, mostrado em um medidor. Normalmente, a escala de um medidor contém rótulos de marcas de escala do medidor que fornecem uma leitura precisa do que o ponteiro do medidor mostra. Geralmente, a escala de um medidor está associada a um ou mais ponteiros do medidor. Você pode ter mais de uma escala no mesmo medidor.  
+# <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formatando escalas de um medidor (Construtor de Relatórios e SSRS)
+  Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , a escala do medidor é o intervalo de números, limitados por um mínimo e um máximo, mostrado em um medidor. Normalmente, a escala de um medidor contém rótulos de marcas de escala do medidor que fornecem uma leitura precisa do que o ponteiro do medidor mostra. Geralmente, a escala de um medidor está associada a um ou mais ponteiros do medidor. Você pode ter mais de uma escala no mesmo medidor.  
   
- ![Visão geral de elementos em uma escala de medidor](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "Visão geral de elementos em uma escala de medidor")  
+ ![Visão geral dos elementos em uma escala de medidor](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "visão geral dos elementos em uma escala de medidor")  
   
  Diferente de gráficos, nos quais vários grupos são definidos, o medidor mostra apenas um valor. Você deve definir os valores mínimo e máximo da escala. Os números do intervalo são calculados automaticamente com base nos valores especificados para o mínimo e máximo.  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 8
   
  O raio da escala é a distância do centro do medidor até o meio da barra da escala. O valor do raio da escala é medido como uma porcentagem do diâmetro do medidor. É uma prática recomendada manter o raio da escala abaixo de um valor de 35. Se você especificar um valor maior que 35, a escala será provavelmente desenhada fora dos limites do medidor. A ilustração a seguir mostra como o raio da escala é medido em relação ao diâmetro do medidor na barra da escala.  
   
- ![Raio da escala em relação ao diâmetro do medidor](../../reporting-services/report-design/media/scaleradiusdiagram.gif "Raio da escala em relação ao diâmetro do medidor")  
+ ![Raio da escala em relação ao diâmetro do medidor](../../reporting-services/report-design/media/scaleradiusdiagram.gif "raio da escala em relação ao diâmetro do medidor")  
   
  O ângulo inicial é o ângulo de rotação, entre 0 e 360, no qual a escala começará. A posição zero (0) está localizada na parte inferior do medidor, e o ângulo inicial gira no sentido horário. Por exemplo, um ângulo inicial de 90 graus inicia a escala na posição de 9 horas.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 8
   
 -   1% do valor menor da altura ou da largura do medidor em um medidor linear.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Formatando intervalos de um medidor &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatando ponteiros de um medidor &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatar rótulos de eixo como datas ou moedas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   

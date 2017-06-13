@@ -19,10 +19,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d5b90faa09f6185ffe5e273e43707bc9dc2dc1c0
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 62b958f5a1c032e11b5aaef37692b5de21a0bec4
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="data-collector-security"></a>Segurança do coletor de dados
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- Para obter mais informações, veja [Funções do Integration Services &#40;Serviço do SSIS&#41;](../../integration-services/service/integration-services-roles-ssis-service.md).  
+ Para obter mais informações, veja [Funções do Integration Services &#40;Serviço do SSIS&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
 ### <a name="dcproxy-role"></a>Função dc_proxy  
  Membros da função **dc_proxy** têm acesso de Leitura aos conjuntos de coleta do coletor de dados e às propriedades de nível de coletor. Os membros dessa função também podem executar tarefas de sua propriedade e criar etapas de tarefa executadas como uma conta proxy existente.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- Para obter mais informações, veja [Funções do Integration Services &#40;Serviço do SSIS&#41;](../../integration-services/service/integration-services-roles-ssis-service.md).  
+ Para obter mais informações, veja [Funções do Integration Services &#40;Serviço do SSIS&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
 ## <a name="permissions-for-configuring-and-using-the-management-data-warehouse"></a>Permissões para configurar e usar o Data Warehouse de gerenciamento  
  Dependendo da tarefa, os usuários devem ser membros de uma ou mais das funções de banco de dados fixas fornecidas para acessar o data warehouse de gerenciamento. Em ordem de acesso mais privilegiado para acesso menos privilegiado, as funções são as seguintes:  

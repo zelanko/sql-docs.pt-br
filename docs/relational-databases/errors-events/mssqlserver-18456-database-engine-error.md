@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_18456 | Microsoft Docs
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 06/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8985dc2e2715758797eb253aee8382d68f0f2dd6
+ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
+ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
@@ -76,6 +76,11 @@ Para aumentar a segurança, a mensagem de erro que é retornada ao cliente ocult
 |11|O logon é válido, mas houve falha no acesso ao servidor. Uma causa possível deste erro é quando o usuário do Windows tem acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como membro do grupo de administradores locais, mas o Windows não está fornecendo credenciais de administrador. Para se conectar, inicie o programa de conexão usando a opção **Executar como administrador** e, depois, adicione o usuário do Windows ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um logon específico.|  
 |12|O logon é válido, mas houve falha no acesso ao servidor.|  
 |18|A senha deve ser alterada.|  
+|38, 46|Não foi possível localizar o banco de dados solicitado pelo usuário.|
+|102 - 111|Falha do AAD.|
+|122 - 124|Falha devido a nome de usuário vazio ou a senha.|
+|126|Banco de dados solicitado pelo usuário não existe.|
+|132 - 133|Falha do AAD.|
   
 Outros estados de erro existem e significam um erro de processamento interno inesperado.  
   

@@ -15,70 +15,35 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2da0c759864e746414f8bf17388463c9a4bfdf88
+ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
+ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>Resumo de recursos com controle de versão do PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Resumo dos recursos do PolyBase disponíveis para serviços e produtos do SQL Server.  
+Resumo de recursos do PolyBase disponíveis para serviços e produtos do SQL Server.  
   
 ## <a name="feature-summary-for-product-releases"></a>Resumo de recursos para versões do produto  
  Esta tabela resume os principais recursos para o PolyBase e os produtos nos quais eles estão disponíveis.  
   
-### [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- Esses recursos se aplicam ao [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] em execução local ou em uma máquina virtual do Azure.  O PolyBase não está disponível no SQL Server 2014 e em versões anteriores.  
-  
-|||  
-|-|-|  
-|**Recurso**|**Disponibilidade**|  
-|Consultar dados do Hadoop com [!INCLUDE[tsql](../../includes/tsql-md.md)]|sim|  
-|Consultar o armazenamento de blobs do Azure com [!INCLUDE[tsql](../../includes/tsql-md.md)]|sim|  
-|Importar dados do Hadoop|sim|  
-|Importar dados do armazenamento de blobs do Azure|Sim| 
-|Importar dados do Azure Data Lake Store|não|   
-|Exportar dados para o Hadoop|sim|  
-|Exportar dados para o armazenamento de blobs do Azure|Sim|  
-|Exportar dados do Azure Data Lake Store|não|
-|Executar consultas do PolyBase nas ferramentas de BI da Microsoft|sim|  
-|Enviar cálculos de consulta por push ao Hadoop|sim|  
-  
-### [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
- Esses recursos se aplicam ao [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
-  
-|||  
-|-|-|  
-|**Recurso**|**Disponibilidade**|  
-|Consultar dados do Hadoop com [!INCLUDE[tsql](../../includes/tsql-md.md)]|não|  
-|Consultar o armazenamento de blobs do Azure com [!INCLUDE[tsql](../../includes/tsql-md.md)]|sim|  
-|Importar dados do Hadoop|não|  
-|Importar dados do armazenamento de blobs do Azure|Sim|
-|Importar dados do Azure Data Lake Store|Sim|     
-|Exportar dados para o Hadoop|não|  
-|Exportar dados para o armazenamento de blobs do Azure|Sim|  
-|Exportar dados para o Azure Data Lake Store|Sim|
-|Executar consultas do PolyBase nas ferramentas de BI da Microsoft|sim|  
-|Enviar cálculos de consulta por push ao Hadoop|não|  
-  
-### [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Esses recursos se aplicam ao [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
-  
-|||  
-|-|-|  
-|**Recurso**|**Disponibilidade**|  
-|Consultar dados do Hadoop com [!INCLUDE[tsql](../../includes/tsql-md.md)]|sim|  
-|Consultar o armazenamento de blobs do Azure com [!INCLUDE[tsql](../../includes/tsql-md.md)]|sim|  
-|Importar dados do Hadoop|sim|  
-|Importar dados do armazenamento de blobs do Azure|Sim|  
-|Importar dados do Azure Data Lake Store|não|   
-|Exportar dados para o Hadoop|sim|  
-|Exportar dados para o armazenamento de blobs do Azure|Sim|  
-|Exportar dados para o Azure Data Lake Store|não|
-|Executar consultas do PolyBase nas ferramentas de BI da Microsoft|sim|  
-|Enviar cálculos de consulta por push ao Hadoop|sim|  
+||||||
+|-|-|-|-|-|   
+|**Recurso**|**SQL Server 2016**|**Banco de Dados SQL do Azure**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
+|Consultar dados do Hadoop com [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|não|não|Sim|
+|Importar dados do Hadoop|Sim|não|não|Sim|
+|Exportar dados para o Hadoop  |Sim|não|não| Sim|
+|Enviar cálculos de consulta por push ao Hadoop|Sim|não|não|Sim|  
+|Importar dados do armazenamento de blobs do Azure|sim|não|sim|Sim| 
+|Exportar dados para o armazenamento de blobs do Azure|sim|não|sim|Sim|  
+|Importar dados do Azure Data Lake Store|não|não|sim|não|    
+|Exportar dados do Azure Data Lake Store|não|não|sim|não|
+|Executar consultas do PolyBase nas ferramentas de BI da Microsoft|Sim|não|sim|Sim|   
+
+
+
   
 ## <a name="see-also"></a>Consulte também  
  [Guia do PolyBase](../../relational-databases/polybase/polybase-guide.md)  

@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 829f7d57569e55eed5bc50634c5a9baad6f7d8ee
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 44bfd54aa494dd52174eeed8479e14a99d810af3
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="json-path-expressions-sql-server"></a>Expressões de demarcador JSON (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Use demarcadores JSON para fazer referência às propriedades de objetos JSON. Demarcadores JSON usam uma sintaxe semelhante a Javascript.  
+ Use expressões de demarcador JSON para fazer referência às propriedades de objetos JSON.  
   
  Você precisa fornecer uma expressão de demarcador ao chamar as funções a seguir.  
   
@@ -43,16 +43,25 @@ ms.lasthandoff: 04/11/2017
 ## <a name="parts-of-a-path-expression"></a>Partes de uma expressão de caminho
  Uma expressão de demarcador tem dois componentes.  
   
-1.  O [modo demarcador](#PATHMODE) opcional, **lax** ou **strict**.  
+1.  Opcional [modo path](#PATHMODE), com um valor de **lax** ou **estrito**.  
   
 2.  O [demarcador](#PATH) em si.  
-  
+
 ##  <a name="PATHMODE"></a> Path mode  
  No início da expressão de demarcador, opcionalmente, declare o modo demarcador especificando a palavra-chave **lax** ou **strict**. O padrão é **lax**.  
   
--   No modo **lax** , as funções retornam valores vazios se a expressão do demarcador contiver um erro. Por exemplo, se você solicitar o valor **$.name**, e o texto JSON não contiver uma chave **name** , a função retornará nula.  
+-   Em **lax** modo, a função retorna valores vazios se a expressão de caminho contém um erro. Por exemplo, se você solicitar o valor **$. Name**, e o texto JSON não contiver uma **nome** chave, a função retornará um valor nulo, mas não gerará um erro.  
   
--   No modo **strict** , as funções gerarão erros se a expressão do demarcador contiver um erro.  
+-   Em **estrito** modo, a função gerará um erro se a expressão de caminho contém um erro.  
+
+A consulta a seguir especifica explicitamente `lax` modo na expressão de caminho.
+
+```sql  
+DECLARE @json NVARCHAR(MAX)
+SET @json=N'{ ... }'
+
+SELECT * FROM OPENJSON(@json, N'lax $.info')
+```  
   
 ##  <a name="PATH"></a> Path  
  Após a declaração de modo de demarcador opcional, especifique o demarcador em si.  
@@ -65,7 +74,7 @@ ms.lasthandoff: 04/11/2017
   
     -   Elementos da matriz. Por exemplo, `$.product[3]`. Matrizes são baseadas em zero.  
   
-    -   O operador ponto (`.`) indica um membro de um objeto.  
+    -   O operador ponto (`.`) indica um membro de um objeto. Por exemplo, em `$.people[1].surname`, `surname` é um filho de `people`.
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos nesta seção fazem referência ao texto JSON a seguir.  
@@ -93,15 +102,18 @@ ms.lasthandoff: 04/11/2017
 |$|{ "people": [ { "name": "John", "surname": "Doe" },<br />   { "name": "Jane", "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>Como as funções internas tratam caminhos duplicados  
- Se o texto JSON contiver propriedades duplicadas – por exemplo, duas chaves com o mesmo nome no mesmo nível –, as funções JSON_VALUE e JSON_QUERY retornarão o primeiro valor que corresponde ao caminho. Para analisar um objeto JSON que contém chaves duplicadas, use OPENJSON, conforme mostrado no exemplo a seguir.  
+ Se o texto JSON contiver propriedades duplicadas - por exemplo, duas chaves com o mesmo nome no mesmo nível - o **JSON_VALUE** e **JSON_QUERY** funções retornam apenas o primeiro valor que corresponde ao caminho. Para analisar um objeto JSON que contém chaves duplicadas e retornar todos os valores, use **OPENJSON**, conforme mostrado no exemplo a seguir.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json=N'{"person":{"info":{"name":"John", "name":"Jack"}}}'
 
 SELECT value
 FROM OPENJSON(@json,'$.person.info') 
 ```  
+
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Saiba mais sobre o suporte interno a JSON no SQL Server  
+Para muitas soluções específicas, casos de uso e recomendações, consulte o [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no banco de dados SQL Azure por Jovan Popovic, gerente de programas da Microsoft.
   
 ## <a name="see-also"></a>Consulte também  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)   

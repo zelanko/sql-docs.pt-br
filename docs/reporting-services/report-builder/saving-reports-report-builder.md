@@ -1,24 +1,29 @@
 ---
-title: "Salvando relat&#243;rios (Construtor de Relat&#243;rios) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Salvando relatórios (construtor de relatórios) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5d4f5efbe000946f543fd9b22b5a45f48e06050
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/13/2017
+
 ---
-# Salvando relat&#243;rios (Construtor de Relat&#243;rios)
-  No Construtor de Relatórios, você pode salvar um relatório paginado em um servidor de relatório do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], na biblioteca do SharePoint, no compartilhamento de arquivos no qual você tem permissão de gravação ou no computador. 
+# <a name="saving-reports-report-builder"></a>Salvando relatórios (Construtor de Relatórios)
+  No Construtor de Relatórios, você pode salvar um relatório paginado em um servidor de relatório do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , na biblioteca do SharePoint, no compartilhamento de arquivos no qual você tem permissão de gravação ou no computador. 
   
 Quando salva um relatório, na verdade, você está salvando a definição do relatório, que descreve o layout dele. Você não está salvando os dados. Sempre que o relatório é executado, seus dados são atualizados e é provável que sejam diferentes da execução anterior do relatório.  
   
@@ -37,7 +42,7 @@ Quando salva um relatório, na verdade, você está salvando a definição do re
   
 -   Os relatórios ficam disponíveis para outros que têm permissão para acessar a pasta na qual você salvou o relatório.  
   
--   Os relatórios podem ser gerenciados e exibidos no portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   Os relatórios podem ser gerenciados e exibidos no portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 -   Recursos de relatório, como fontes de dados, imagens e sub-relatórios são armazenados em um local para acesso mais fácil.  
   
@@ -62,9 +67,9 @@ Quando salva um relatório, na verdade, você está salvando a definição do re
   
 -   [Salvar um relatório em uma biblioteca do SharePoint &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
    
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Relatórios, partes de relatório e definições de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Instalar e desinstalar o Construtor de Relatórios](../Topic/Install%20and%20Uninstall%20Report%20Builder.md)   
+ [Instalar e desinstalar o Construtor de Relatórios](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Imprimir relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  
