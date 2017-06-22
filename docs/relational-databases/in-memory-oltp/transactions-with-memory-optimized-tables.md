@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 03f81b7010fdba70cccc916406b70131dd24cb8d
+ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
+ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transações com tabelas com otimização de memória
@@ -35,24 +35,6 @@ Os níveis de isolamento de transação no SQL Server são aplicados de maneira 
 Para obter condições de erro específicas de transações em tabelas com otimização de memória, vá para a seção [Detecção de conflito e lógica de repetição](#confdetretry34ni).
   
 Para saber mais gerais, veja [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
-  
-  
-  
-#### <a name="sections-in-this-article"></a>Seções deste artigo:  
-  
-- [Pessimista versus otimista](#pessvoptim22ni)  
-- [Modos de iniciação da transação](#txninitmodes24ni)  
-  - [Exemplo de código com o modo Explicit](#codeexamexpmode25ni)  
-- [Controle de versão de linha](#rowver28ni)  
-- [Níveis de isolamento da transação](#confdegreeiso30ni)  
-- [Tempo de vida e fases da transação](#txnphaslife32ni)  
-- [Detecção de conflito e lógica de repetição](#confdetretry34ni)  
-  - [Repita o exemplo de código T-SQL](#retrytsqlcodeexam35ni)  
-- [Transação entre contêineres](#crossconttxn38ni)  
-- [Limitações](#limitations40ni)  
-- [Procedimentos armazenados compilados nativamente](#natcompstorprocs42ni)  
-- [Outros links de transação](#othertxnlinks44ni)  
-  
   
   
 <a name="pessvoptim22ni"/>  

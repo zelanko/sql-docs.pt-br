@@ -1,9 +1,9 @@
 # [Usando bancos de dados relacionais](relational-databases/database-features.md)
-# [SQL Server no Linux](./linux/index.md?toc=%2fsql%2fdocs%2flinux%2ftoc.json)
+# [SQL Server no Linux](./linux/index.md?toc=/sql/linux/toc.json)
 # [Análise avançada no SQL Server](advanced-analytics/getting-started-with-machine-learning-services.md)
 # [SQL Server](sql-server/sql-server-technical-documentation.md)
         
-# Linguagens        
+# Linguagens     
 ## [dmx](dmx/data-mining-extensions-dmx-reference.md)
 ## [mdx](mdx/analysis-services-language-reference.md)
 ## [Transact-SQL](t-sql/language-reference.md)
@@ -12,7 +12,7 @@
 # [Exemplos](sample/microsoft-sql-server-samples.md)
 # [Ferramentas](tools/command-prompt-utility-reference-database-engine.md)
         
-# Desenvolvedor        
+# Desenvolvedor     
 ## [SSDT (SQL Server Data Tools)](ssdt/download-sql-server-data-tools-ssdt.md)
 ## [ADO (ActiveX Data Objects)](ado/microsoft-activex-data-objects-ado.md)
 ## [Drivers de dados e de conexão do SQL Server](connect/sql-server-driver-documentation.md)

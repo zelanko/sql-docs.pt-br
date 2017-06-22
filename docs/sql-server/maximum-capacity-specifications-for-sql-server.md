@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: b03d9514e39fad101a305784b6852e012e3e4aad
+ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
+ms.openlocfilehash: b93591eb1d0f34b792adc6f2c998dbfdd9fca4b5
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificações de capacidade máxima do SQL Server
@@ -140,14 +140,14 @@ ms.lasthandoff: 05/12/2017
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objeto de replicação||Tamanhos/números máximos do SQL Server (64 bits)|  
 |--------------------------------------------------|-|---------------------------------------------------|  
-|Artigos (publicação de mesclagem)||256|  
+|Artigos (publicação de mesclagem)||2048|  
 |Artigos (publicação de instantâneo ou transacional)||32,767|  
 |Colunas em uma tabela* (publicação de mesclagem)||246|  
 |Colunas em uma tabela** (instantâneo do[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou publicação transacional)||1,000|  
 |Colunas em uma tabela** (instantâneo do Oracle ou publicação transacional)||995|  
 |Bytes para uma coluna usada em um filtro de linha (publicação de mesclagem)||1,024|  
 |Bytes para uma coluna usada em um filtro de linha (publicação de instantâneo ou transacional)||8,000|  
-  
+
  *Se o controle de linha for usado para detecção de conflitos (o padrão), a tabela base poderá incluir no máximo 1.024 colunas, mas as colunas deverão ser filtradas do artigo para que um máximo de 246 colunas seja publicado. Se o rastreamento de coluna for usado, a tabela base poderá incluir no máximo 246 colunas.  
   
  **A tabela base pode incluir o número máximo de colunas permitidas no banco de dados de publicação (1.024 para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), mas as colunas devem ser filtradas do artigo se excederem o máximo especificado para o tipo de publicação.  
