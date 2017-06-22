@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 09253894ace06e9bd0b6a515e133eb8e2f5860a1
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Desenvolver usando o Always Encrypted com o Provedor de Dados .NET Framework
@@ -262,7 +262,7 @@ Para obter um valor de texto sem formatação de uma chave de criptografia de co
 
 O processo para obter uma chave de criptografia de coluna:
 
-1.    Se o Always Encrypted estiver habilitado em uma consulta, o Provedor de Dados .NET Framework para SQL Server chama **sys.sp_describe_parameter_encryption** de forma transparente para recuperar metadados de criptografia para parâmetros que se destinam a colunas criptografadas, caso a consulta tenha parâmetros. Para dados criptografados contidos nos resultados de uma consulta, o SQL Server anexa metadados de criptografia automaticamente. As informações sobre a chave mestra de coluna incluem:
+1.  Se o Always Encrypted estiver habilitado em uma consulta, o Provedor de Dados .NET Framework para SQL Server chama **sys.sp_describe_parameter_encryption** de forma transparente para recuperar metadados de criptografia para parâmetros que se destinam a colunas criptografadas, caso a consulta tenha parâmetros. Para dados criptografados contidos nos resultados de uma consulta, o SQL Server anexa metadados de criptografia automaticamente. As informações sobre a chave mestra de coluna incluem:
     - O nome de um provedor de repositório de chaves que encapsula um repositório de chaves que contém a chave mestra de coluna. 
     - O caminho de chave que especifica o local da chave mestra da coluna no repositório de chaves.
     
@@ -270,8 +270,8 @@ O processo para obter uma chave de criptografia de coluna:
 
     - O valor criptografado de uma chave de criptografia de coluna.
     - O nome do algoritmo que foi usado para criptografar a chave de criptografia de coluna.
-2.    O Provedor de Dados .NET Framework para SQL Server usa o nome do provedor de repositório de chaves mestras de coluna para pesquisar o objeto de provedor (uma instância de uma classe derivada da Classe SqlColumnEncryptionKeyStoreProvider) em uma estrutura de dados interna.
-3.    Para descriptografar a chave de criptografia de coluna, o Provedor de Dados .NET Framework para SQL Server chama o Método SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey, passando o caminho da chave mestra de coluna, o valor criptografado da chave de criptografia de coluna e o nome do algoritmo de criptografia, usado para gerar a chave de criptografia de coluna criptografada.
+2.  O Provedor de Dados .NET Framework para SQL Server usa o nome do provedor de repositório de chaves mestras de coluna para pesquisar o objeto de provedor (uma instância de uma classe derivada da Classe SqlColumnEncryptionKeyStoreProvider) em uma estrutura de dados interna.
+3.  Para descriptografar a chave de criptografia de coluna, o Provedor de Dados .NET Framework para SQL Server chama o Método SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey, passando o caminho da chave mestra de coluna, o valor criptografado da chave de criptografia de coluna e o nome do algoritmo de criptografia, usado para gerar a chave de criptografia de coluna criptografada.
 
 
 

@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 96c12312979d6815f9f1fbbcbad2b33db0b53db6
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-if-backup-or-restore-continues-or-stops-after-error"></a>Especificar se o backup ou a restauração continuam ou param depois de um erro

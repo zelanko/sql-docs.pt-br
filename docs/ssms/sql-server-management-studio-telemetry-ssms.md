@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 49a53643e94d64fc47932bc2ee8dc3200967ae23
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>Auditoria local da coleta de comentários sobre o uso do SSMS
@@ -28,9 +28,9 @@ O SSMS (SQL Server Management Studio) contém recursos habilitados para Internet
 ## <a name="audit-feature-usage-data"></a>Dados de uso do recurso de auditoria
 
 Para ver os dados de uso do recurso que são coletados pelo SSMS, faça o seguinte:
-1.    Inicie o SSMS.
-2.    Clique em **Exibir**, depois clique em **Saída** no menu principal para mostrar a janela **Saída**. 
-3.    Quando a janela **Saída** estiver visível, escolha **Telemetria** no menu **Mostrar saída de:**.
+1.  Inicie o SSMS.
+2.  Clique em **Exibir**, depois clique em **Saída** no menu principal para mostrar a janela **Saída**. 
+3.  Quando a janela **Saída** estiver visível, escolha **Telemetria** no menu **Mostrar saída de:**.
 
 Ao usar o SSMS para interagir com bancos de dados, a janela **Saída** mostra os dados coletados.
 

@@ -33,7 +33,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 26b3c7967d7549f6f192afcac64888dcb68d6c7c
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar o Assistente para Copiar Banco de Dados
@@ -76,9 +76,9 @@ O Assistente para Copiar Banco de Dados move ou copia bancos de dados e determin
 -   O método **desanexar e anexar** desanexa o banco de dados, move ou copia os arquivos .mdf, .ndf e .ldf do banco de dados e os reanexa ao banco de dados no novo local. Ao utilizar o método **desanexar e anexar** , para evitar perda ou inconsistência de dados, as sessões ativas não podem ser anexadas ao banco de dados que está sendo movido ou copiado. No método [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object, permitem-se sessões ativas porque o banco de dados nunca é colocado offline.  
 
 -    A transferência de trabalhos do SQL Server Agent que faz referência a bancos de dados que ainda não existem no servidor de destino causará a falha de toda a operação.  O Assistente tenta criar um trabalho do SQL Server Agent antes de criar o banco de dados.  Como uma solução alternativa:
-     1.    Crie um banco de dados do shell no servidor de destino com o mesmo nome do banco de dados a ser copiado ou movido.  Veja [Criar um banco de dados](../../relational-databases/databases/create-a-database.md).
+     1. Crie um banco de dados do shell no servidor de destino com o mesmo nome do banco de dados a ser copiado ou movido.  Veja [Criar um banco de dados](../../relational-databases/databases/create-a-database.md).
      
-     2.    Na página **Configurar Banco de Dados de Destino** , selecione **Remover qualquer banco de dados no servidor de destino que tenha o mesmo nome e continuar a transferência do banco de dados, substituindo arquivos de banco de dados existentes**.
+     2. Na página **Configurar Banco de Dados de Destino** , selecione **Remover qualquer banco de dados no servidor de destino que tenha o mesmo nome e continuar a transferência do banco de dados, substituindo arquivos de banco de dados existentes**.
 
 > **IMPORTANTE:** O método **desanexar e anexar** fará com que a propriedade de banco de dados de origem e destino seja definida como o logon que executa o **Assistente para Copiar Banco de Dados**.  Veja [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md) para alterar a propriedade de um banco de dados.
   
@@ -301,44 +301,44 @@ Fornece qualquer mensagem que retornou de cada etapa.
 ### <a name="common-steps"></a>**Etapas comuns** 
 Independentemente de você optar por **Mover** ou **Copiar**, **Desanexar e Anexar** ou **SMO**, as cinco etapas listadas abaixo serão as mesmas.  Para resumir, as etapas são listadas aqui uma vez e todos os exemplos serão iniciados na **Etapa 6**.
 
-1.    No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
+1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
 
-2.    Expanda **Bancos de Dados**, clique com o botão direito do mouse em um banco de dados, aponte para **Tarefas**e clique em **Copiar Banco de Dados...**
+2.  Expanda **Bancos de Dados**, clique com o botão direito do mouse em um banco de dados, aponte para **Tarefas**e clique em **Copiar Banco de Dados...**
 
-3.    Se a tela inicial **Bem-vindo ao Assistente para Copiar Banco de Dados** for exibida, clique em **Avançar**.
+3.  Se a tela inicial **Bem-vindo ao Assistente para Copiar Banco de Dados** for exibida, clique em **Avançar**.
 
-4.    Página**Selecionar um Servidor de Origem** : especifique o servidor com o banco de dados a ser movido ou copiado.  Selecione o método de autenticação.  Se você escolher a opção **Usar Autenticação do SQL Server** , será necessário inserir suas credenciais de logon.  Clique em **Avançar** para estabelecer a conexão com o servidor de origem.  Essa conexão permanece aberta durante a sessão.
+4.  Página**Selecionar um Servidor de Origem** : especifique o servidor com o banco de dados a ser movido ou copiado.  Selecione o método de autenticação.  Se você escolher a opção **Usar Autenticação do SQL Server** , será necessário inserir suas credenciais de logon.  Clique em **Avançar** para estabelecer a conexão com o servidor de origem.  Essa conexão permanece aberta durante a sessão.
 
-5.    Na página**Selecionar um Servidor de Destino** : especifique o servidor para o qual o banco de dados será movido ou copiado.  Selecione o método de autenticação.  Se você escolher a opção **Usar Autenticação do SQL Server** , será necessário inserir suas credenciais de logon.  Clique em **Avançar** para estabelecer a conexão com o servidor de origem.  Essa conexão permanece aberta durante a sessão.
+5.  Na página**Selecionar um Servidor de Destino** : especifique o servidor para o qual o banco de dados será movido ou copiado.  Selecione o método de autenticação.  Se você escolher a opção **Usar Autenticação do SQL Server** , será necessário inserir suas credenciais de logon.  Clique em **Avançar** para estabelecer a conexão com o servidor de origem.  Essa conexão permanece aberta durante a sessão.
 
      > **OBSERVAÇÃO** É possível iniciar o Assistente para Copiar Banco de Dados em qualquer banco de dados.  Você pode usar o Assistente para Copiar Banco de Dados por meio do servidor de origem ou de destino.
   
 ### <a name="a--move-database-using-detach-and-attach-method-to-an-instance-on-a-different-physical-server--a-login-and-sql-server-agent-job-will-be-moved-as-well"></a>**A.  Mova o banco de dados usando o método desanexar e anexar para uma instância em um servidor físico diferente.  Um logon e um trabalho do SQL Server Agent também serão movidos.**  
 O exemplo a seguir moverá o banco de dados `Sales` , um logon do Windows chamado `contoso\Jennie` e um trabalho do SQL Server Agent denominado `Jennie’s Report` de uma instância de 2008 do SQL Server no `Server1` para uma instância de 2016 do SQL Server no `Server2`.  `Jennie’s Report` usa o banco de dados `Sales` .  `Sales` ainda não existir no servidor de destino, `Server2`.  `Server1` será reatribuída a uma equipe diferente após a movimentação do banco de dados.
   
-6.    Conforme observado em [Limitações e restrições](#Restrictions)acima, um banco de dados shell precisa ser criado no servidor de destino durante a transferência de um trabalho do SQL Server Agent que faz referência a um banco de dados que ainda não existe no servidor de destino.  Crie um banco de dados shell chamado `Sales` no servidor de destino. 
+6.  Conforme observado em [Limitações e restrições](#Restrictions)acima, um banco de dados shell precisa ser criado no servidor de destino durante a transferência de um trabalho do SQL Server Agent que faz referência a um banco de dados que ainda não existe no servidor de destino.  Crie um banco de dados shell chamado `Sales` no servidor de destino. 
 
-7.    De volta ao **Assistente**, página **Selecionar Método de Transferência** : examine e mantenha os valores padrão.  Clique em **Avançar**.
+7.  De volta ao **Assistente**, página **Selecionar Método de Transferência** : examine e mantenha os valores padrão.  Clique em **Avançar**.
   
-8.    Página**Selecionar Bancos de Dados** : marque a caixa de seleção **Mover** do banco de dados desejado, `Sales`.  Clique em **Avançar**.
+8.  Página**Selecionar Bancos de Dados** : marque a caixa de seleção **Mover** do banco de dados desejado, `Sales`.  Clique em **Avançar**.
   
-9.    Página**Configurar Banco de Dados de Destino** : o **Assistente** identificou que `Sales` já existe no servidor de destino, que foi criado na **Etapa 6** acima, e acrescentou `_new` ao nome do **Banco de dados de destino** .  Exclua `_new` da caixa de texto **Banco de dados de destino** .  Se desejar, altere o **Nome do Arquivo**e a **Pasta de Destino**.  Selecione **Remover qualquer banco de dados no servidor de destino que tenha o mesmo nome e continuar a transferência do banco de dados, substituindo arquivos de banco de dados existentes**.  Clique em **Avançar**.
+9.  Página**Configurar Banco de Dados de Destino** : o **Assistente** identificou que `Sales` já existe no servidor de destino, que foi criado na **Etapa 6** acima, e acrescentou `_new` ao nome do **Banco de dados de destino** .  Exclua `_new` da caixa de texto **Banco de dados de destino** .  Se desejar, altere o **Nome do Arquivo**e a **Pasta de Destino**.  Selecione **Remover qualquer banco de dados no servidor de destino que tenha o mesmo nome e continuar a transferência do banco de dados, substituindo arquivos de banco de dados existentes**.  Clique em **Avançar**.
   
-10.    Página**Selecionar Objetos do Servidor** : no painel **Objetos relacionados selecionados:** , clique no botão de reticências de **Logons de nome de objeto**.  Em **Opções de Cópia** , selecione **Copiar somente os logons selecionados:**.  Marque a caixa de **Mostrar todos os logons de servidor**.  Marque a caixa **Logon** de `contoso\Jennie`.  Clique em **OK**.  No painel **Objetos relacionados disponíveis:** , selecione **Trabalhos do SQL Server Agent** e clique no botão **>** .  No painel **Objetos relacionados selecionados:** , clique no botão de reticências de **Trabalhos do SQL Server Agent**.  Em **Opções de Cópia** , selecione **Copiar somente os trabalhos selecionados**.  Marque a caixa de `Jennie’s Report`.  Clique em **OK**.  Clique em **Avançar**.  
+10. Página**Selecionar Objetos do Servidor** : no painel **Objetos relacionados selecionados:** , clique no botão de reticências de **Logons de nome de objeto**.  Em **Opções de Cópia** , selecione **Copiar somente os logons selecionados:**.  Marque a caixa de **Mostrar todos os logons de servidor**.  Marque a caixa **Logon** de `contoso\Jennie`.  Clique em **OK**.  No painel **Objetos relacionados disponíveis:** , selecione **Trabalhos do SQL Server Agent** e clique no botão **>** .  No painel **Objetos relacionados selecionados:** , clique no botão de reticências de **Trabalhos do SQL Server Agent**.  Em **Opções de Cópia** , selecione **Copiar somente os trabalhos selecionados**.  Marque a caixa de `Jennie’s Report`.  Clique em **OK**.  Clique em **Avançar**.  
   
-11.    Página**Local dos arquivos de banco de dados de origem** : clique no botão de reticências de **Compartilhamento de arquivos no servidor de origem** e navegue até o local da Pasta especificado.  Por exemplo, para o local da Pasta `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` , use `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` em **Compartilhamento de arquivos no servidor de origem**.  Clique em **Avançar**.
+11. Página**Local dos arquivos de banco de dados de origem** : clique no botão de reticências de **Compartilhamento de arquivos no servidor de origem** e navegue até o local da Pasta especificado.  Por exemplo, para o local da Pasta `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` , use `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` em **Compartilhamento de arquivos no servidor de origem**.  Clique em **Avançar**.
   
-12.    Página**Configurar o pacote** : na caixa de texto **Nome do pacote:** insira `SalesFromServer1toServer2_Move`.  Marque a caixa **Salvar logs de transferência?** .  Na lista suspensa **Opções de Log** , selecione **Arquivo de texto**.  Observe o **Caminho do arquivo de log de erros**; examine, conforme desejado.  Clique em **Avançar**.  
+12. Página**Configurar o pacote** : na caixa de texto **Nome do pacote:** insira `SalesFromServer1toServer2_Move`.  Marque a caixa **Salvar logs de transferência?** .  Na lista suspensa **Opções de Log** , selecione **Arquivo de texto**.  Observe o **Caminho do arquivo de log de erros**; examine, conforme desejado.  Clique em **Avançar**.  
   
      > **OBSERVAÇÃO** O **Caminho do arquivo de log de erros** é o caminho no servidor de destino.
   
-13.    Página**Agendar o pacote** : selecione o proxy relevante na lista suspensa **Conta proxy do Integration Services** .  Clique em **Avançar**.
+13. Página**Agendar o pacote** : selecione o proxy relevante na lista suspensa **Conta proxy do Integration Services** .  Clique em **Avançar**.
 
-14.    Página**Concluir o Assistente** : examine o resumo das opções selecionadas.  Clique em **Voltar** para alterar uma opção.  Clique em **Concluir** para executar a tarefa.  Durante a transferência, a página **Executando operação** monitora informações de status sobre a execução do **Assistente**.
+14. Página**Concluir o Assistente** : examine o resumo das opções selecionadas.  Clique em **Voltar** para alterar uma opção.  Clique em **Concluir** para executar a tarefa.  Durante a transferência, a página **Executando operação** monitora informações de status sobre a execução do **Assistente**.
 
-15.    Página**Executando a operação** : se a operação for bem-sucedida, clique em **Fechar**.  Se a operação for bem-sucedida, examine o log de erros e, possivelmente, selecione **Voltar** para uma análise posterior.  Caso contrário, clique em **Fechar**.
+15. Página**Executando a operação** : se a operação for bem-sucedida, clique em **Fechar**.  Se a operação for bem-sucedida, examine o log de erros e, possivelmente, selecione **Voltar** para uma análise posterior.  Caso contrário, clique em **Fechar**.
   
-16.    **Etapas pós-movimentação** Considere a execução das seguintes instruções T-SQL no novo host, `Server2`:
+16. **Etapas pós-movimentação** Considere a execução das seguintes instruções T-SQL no novo host, `Server2`:
   
      ~~~ tsql 
      ALTER AUTHORIZATION ON DATABASE::Sales TO sa;
@@ -352,7 +352,7 @@ O exemplo a seguir moverá o banco de dados `Sales` , um logon do Windows chamad
      EXEC sp_updatestats;
      ~~~
  
-17.    **Limpeza de etapas pós-movimentação**  
+17. **Limpeza de etapas pós-movimentação**  
 Como `Server1` será movido para uma equipe diferente e a operação **Move** não será repetida, considere a execução das seguintes etapas:
      -    Exclua o pacote SSIS `SalesFromServer1toServer2_Move` no `Server2`.
      -    Excluindo um trabalho `SalesFromServer1toServer2_Move` do SQL Server Agent no `Server2`.
@@ -363,27 +363,27 @@ Como `Server1` será movido para uma equipe diferente e a operação **Move** n�
 ### <a name="b-----copy-database-using-detach-and-attach-method-to-the-same-instance-and-set-recurring-schedule"></a>**B.     Copie o banco de dados usando o método desanexar e anexar na mesma instância e defina o agendamento recorrente.**  
 Neste exemplo, o banco de dados `Sales` será copiado e criado como `SalesCopy` na mesma instância.  Depois disso, `SalesCopy`será recriado semanalmente.
 
-6.    Página**Selecionar um Método de Transferência** : examine e mantenha os valores padrão.  Clique em **Avançar**.
+6.  Página**Selecionar um Método de Transferência** : examine e mantenha os valores padrão.  Clique em **Avançar**.
 
-7.    Página**Selecionar Bancos de Dados** : marque a caixa de seleção **Copiar** do banco de dados `Sales` .  Clique em **Avançar**.
+7.  Página**Selecionar Bancos de Dados** : marque a caixa de seleção **Copiar** do banco de dados `Sales` .  Clique em **Avançar**.
 
-8.    Página**Configurar Banco de Dados de Destino** : altere o nome do **Banco de dados de destino** para `SalesCopy`.  Se desejar, altere o **Nome do Arquivo**e a **Pasta de Destino**.  Selecione **Remover qualquer banco de dados no servidor de destino que tenha o mesmo nome e continuar a transferência do banco de dados, substituindo arquivos de banco de dados existentes**.  Clique em **Avançar**.
+8.  Página**Configurar Banco de Dados de Destino** : altere o nome do **Banco de dados de destino** para `SalesCopy`.  Se desejar, altere o **Nome do Arquivo**e a **Pasta de Destino**.  Selecione **Remover qualquer banco de dados no servidor de destino que tenha o mesmo nome e continuar a transferência do banco de dados, substituindo arquivos de banco de dados existentes**.  Clique em **Avançar**.
 
-9.    Página**Configurar o pacote** : na caixa de texto **Nome do pacote:** insira `SalesCopy Weekly Refresh`.  Marque a caixa **Salvar logs de transferência?** .  Clique em **Avançar**.
+9.  Página**Configurar o pacote** : na caixa de texto **Nome do pacote:** insira `SalesCopy Weekly Refresh`.  Marque a caixa **Salvar logs de transferência?** .  Clique em **Avançar**.
 
-10.    Página**Agendar o pacote** : clique no botão de opção **Agendamento:** e no botão **Alterar Agendamento** . 
+10. Página**Agendar o pacote** : clique no botão de opção **Agendamento:** e no botão **Alterar Agendamento** . 
  
     1. Página**Novo agendamento de trabalho** : na caixa de texto **Nome** , insira `Weekly on Sunday`. 
           
     2. Clique em **OK**.
 
-11.    Selecione o proxy relevante na lista suspensa **Conta proxy do Integration Services** .  Clique em **Avançar**.
+11. Selecione o proxy relevante na lista suspensa **Conta proxy do Integration Services** .  Clique em **Avançar**.
 
-12.    Página**Concluir o Assistente** : examine o resumo das opções selecionadas.  Clique em **Voltar** para alterar uma opção.  Clique em **Concluir** para executar a tarefa.  Durante a criação de pacote, a página **Executando operação** monitora informações de status sobre a execução do **Assistente**.
+12. Página**Concluir o Assistente** : examine o resumo das opções selecionadas.  Clique em **Voltar** para alterar uma opção.  Clique em **Concluir** para executar a tarefa.  Durante a criação de pacote, a página **Executando operação** monitora informações de status sobre a execução do **Assistente**.
 
-13.    Página**Executando a operação** : se a operação for bem-sucedida, clique em **Fechar**.  Se a operação for bem-sucedida, examine o log de erros e, possivelmente, selecione **Voltar** para uma análise posterior.  Caso contrário, clique em **Fechar**.
+13. Página**Executando a operação** : se a operação for bem-sucedida, clique em **Fechar**.  Se a operação for bem-sucedida, examine o log de erros e, possivelmente, selecione **Voltar** para uma análise posterior.  Caso contrário, clique em **Fechar**.
 
-14.    Inicie manualmente o Trabalho `SalesCopy weekly refresh`do SQL Server Agent recém-criado.  Examine o histórico de trabalhos e garanta que `SalesCopy` agora existe na instância.
+14. Inicie manualmente o Trabalho `SalesCopy weekly refresh`do SQL Server Agent recém-criado.  Examine o histórico de trabalhos e garanta que `SalesCopy` agora existe na instância.
 
   
 ##  <a name="FollowUp"></a> Acompanhamento: Após a atualização de um banco de dados  

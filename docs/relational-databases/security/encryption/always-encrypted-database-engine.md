@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/25/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>Sempre criptografados (mecanismo de banco de dados)
@@ -103,15 +103,15 @@ Use o [Assistente do Always Encrypted](../../../relational-databases/security/en
 > [!NOTE]  
 >  Para obter um vídeo que inclui o uso do assistente, confira [Introdução ao Always Encrypted com SSMS](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS).
 
-1.    Conecte a um banco de dados existente que contém as tabelas com as colunas que você deseja criptografar usando o **Pesquisador de Objetos** do Management Studio ou crie um novo banco de dados, crie uma ou mais tabelas com colunas para criptografar e conecte-se a elas.
-2.    Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas** e clique em **Criptografar Colunas** para abrir o **Assistente do Always Encrypted**.
-3.    Examine a página **Introdução** e, em seguida, clique em **Avançar**.
-4.    Na página **Seleção de Coluna** , expanda as tabelas e selecione as colunas que você deseja criptografar.
-5.    Para cada coluna selecionada para criptografia, defina o **Tipo de Criptografia** como *Determinística* ou *Aleatória*.
-6.    Para cada coluna selecionada para criptografia, selecione uma **Chave de Criptografia**. Se você ainda não criou nenhuma chave de criptografia para esse banco de dados, selecione a opção padrão de uma nova chave gerada automaticamente e clique em **Avançar**.
-7.    Na página **Configuração da Chave Mestra** , selecione um local para armazenar a nova chave e uma fonte de chave mestra e clique em **Avançar**.
-8.    Na página **Validação** , escolha se deseja executar o script imediatamente ou criar um script do PowerShell e, em seguida, clique em **Avançar**.
-9.    Na página **Resumo** , examine as opções que você selecionou e clique em **Concluir**. Feche o assistente após a conclusão.
+1.  Conecte a um banco de dados existente que contém as tabelas com as colunas que você deseja criptografar usando o **Pesquisador de Objetos** do Management Studio ou crie um novo banco de dados, crie uma ou mais tabelas com colunas para criptografar e conecte-se a elas.
+2.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas** e clique em **Criptografar Colunas** para abrir o **Assistente do Always Encrypted**.
+3.  Examine a página **Introdução** e, em seguida, clique em **Avançar**.
+4.  Na página **Seleção de Coluna** , expanda as tabelas e selecione as colunas que você deseja criptografar.
+5.  Para cada coluna selecionada para criptografia, defina o **Tipo de Criptografia** como *Determinística* ou *Aleatória*.
+6.  Para cada coluna selecionada para criptografia, selecione uma **Chave de Criptografia**. Se você ainda não criou nenhuma chave de criptografia para esse banco de dados, selecione a opção padrão de uma nova chave gerada automaticamente e clique em **Avançar**.
+7.  Na página **Configuração da Chave Mestra** , selecione um local para armazenar a nova chave e uma fonte de chave mestra e clique em **Avançar**.
+8.  Na página **Validação** , escolha se deseja executar o script imediatamente ou criar um script do PowerShell e, em seguida, clique em **Avançar**.
+9.  Na página **Resumo** , examine as opções que você selecionou e clique em **Concluir**. Feche o assistente após a conclusão.
 
   
 ## <a name="feature-details"></a>Detalhes do recurso  

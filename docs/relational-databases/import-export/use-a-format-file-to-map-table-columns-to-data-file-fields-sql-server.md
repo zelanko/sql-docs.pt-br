@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d90982485ab979118f4f7b02881aa8ea53cc9818
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados (SQL Server)
@@ -86,20 +86,20 @@ Compare as alterações:
 ```
 13.0
 4
-1       SQLCHAR    0       7       ","      1     PersonID               ""
-2       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR 0       7       ","      1     PersonID               ""
+2       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 **After (após)**
 ```
 13.0
 4
-1       SQLCHAR    0       7       ","      1     PersonID               ""
-2       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR 0       7       ","      1     PersonID               ""
+2       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 O arquivo de formato modificado agora reflete:

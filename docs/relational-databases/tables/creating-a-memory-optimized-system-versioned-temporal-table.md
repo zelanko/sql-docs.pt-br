@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 32df29be26fb5e26217a09bbb20b9cef39539aee
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="creating-a-memory-optimized-system-versioned-temporal-table"></a>Criação de uma tabela temporal com controle da versão do sistema com otimização de memória

@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a5505599725d2b45c34f11a95d27fc616784df2c
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Caixa de diálogo Windows (Ajuda do Gerenciador de Documentos da Microsoft)

@@ -51,5 +51,5 @@
     > [!NOTE]
     > **admin_addr** é o recurso de cluster de IP virtual que é configurado durante a configuração do cluster inicial de um nó.
 
-7.    **Procedimentos de remoção**. Se você precisar remover um nó do cluster, use o script de inicialização **ha-cluster-remove**. Para obter mais informações, consulte [visão geral dos Scripts de inicialização](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap).  
+7.  **Procedimentos de remoção**. Se você precisar remover um nó do cluster, use o script de inicialização **ha-cluster-remove**. Para obter mais informações, consulte [visão geral dos Scripts de inicialização](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap).  
 

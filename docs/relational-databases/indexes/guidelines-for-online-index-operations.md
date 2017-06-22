@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>Diretrizes para operações de índice online
@@ -97,7 +97,7 @@ Para obter mais informações, consulte [Disk Space Requirements for Index DDL O
 >
 
 Quando você executar a recompilação de índice online retomáveis as diretrizes a seguir se aplicam:
--    Gerenciando, planejamento e extensão das janelas de manutenção de índice. Você pode pausar e reiniciar uma operação de recompilação de índice várias vezes para ajustar as janelas de manutenção.
+-   Gerenciando, planejamento e extensão das janelas de manutenção de índice. Você pode pausar e reiniciar uma operação de recompilação de índice várias vezes para ajustar as janelas de manutenção.
 - Recuperação de falhas de recompilação de índice (como os failovers de banco de dados ou ficar sem espaço em disco).
 - Quando uma operação de índice está em pausa, índice original e a um recém-criado exigem espaço em disco e precisam ser atualizados durante as operações DML.
 

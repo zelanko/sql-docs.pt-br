@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d9f1b75bc40693248526282a6565db340930601b
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint-ca"></a>Ativar o recurso de sincronização de arquivos de servidor de relatório no SharePoint CA
