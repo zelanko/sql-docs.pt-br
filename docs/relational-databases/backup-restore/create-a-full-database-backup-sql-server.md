@@ -1,7 +1,7 @@
 ---
 title: Criar um backup completo do banco de dados (SQL Server) | Microsoft Docs
 ms.custom: 
-ms.date: 07/25/2016
+ms.date: 06/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,19 +20,19 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: fb2aa3981cd5107cf3ea6f6dc0408acfe3292701
+ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
+ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Criar um backup completo de banco de dados (SQL Server)
 
- > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Criar um backup de banco de dados completo (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
+ > Para o SQL Server 2014, acesse [Criar um backup completo de banco de dados (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
 
   Este tópico descreve como criar um backup de banco de dados completo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell.  
   
->  Para obter informações sobre o backup do SQL Server no serviço de armazenamento de Blobs do Microsoft Azure, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) e [Backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+>  Para obter informações sobre o backup do SQL Server no serviço de armazenamento de Blobs do Azure, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) e [Backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar. 
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/05/2017
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   À medida que um banco de dados aumenta, os backups completos de banco de dados levam mais tempo para serem concluídos e exigem mais espaço de armazenamento. Para um banco de dados grande, convém complementar um backup de banco de dados completo com uma série de *backups de bancos de dados diferenciais*. Para obter mais informações, veja [Backups diferenciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md) e [Backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+-   À medida que um banco de dados aumenta de tamanho, os backups completos do banco de dados levam mais tempo para serem concluídos e exigem mais espaço de armazenamento. Para um banco de dados grande, considere complementar um backup de banco de dados completo com uma série de [backups de banco de dados diferencial]((../../relational-databases/backup-restore/differential-backups-sql-server.md). Para saber mais, confira [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 -   Estime o tamanho de um backup de banco de dados completo usando o procedimento armazenado do sistema [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  
   
@@ -198,7 +198,7 @@ Neste exemplo, será feito backup do banco de dados `Sales` com criptografia no 
 
 7.  Clique em **OK**.
 
-#### <a name="d--backing-up-to-the-microsoft-azure-blob-storage-service"></a>**D.  Fazendo backup no serviço de armazenamento de Blobs do Microsoft Azure**
+#### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.  Fazer backup no serviço de armazenamento de Blobs do Azure**
 #### <a name="common-steps"></a>**Etapas comuns**  
 Os três exemplos abaixo executam um backup completo do banco de dados do `Sales` no serviço de Armazenamento de Blobs do Microsoft Azure.  O nome da Conta de armazenamento é `mystorageaccount`.  O contêiner é chamado `myfirstcontainer`.  Para resumir, as quatro primeiras etapas são listadas aqui uma vez e todos os exemplos serão iniciados na **Etapa 5**.
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
@@ -212,7 +212,7 @@ Os três exemplos abaixo executam um backup completo do banco de dados do `Sales
     **D1.  Já existe um backup distribuído para URL e uma credencial do SQL Server**  
 Uma política de acesso armazenado foi criada com direitos de leitura, gravação e listagem.  A credencial do SQL Server, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, foi criada usando uma Assinatura de Acesso Compartilhado associada à política de acesso armazenado.  
 *
-    5.    Selecione `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` do **contêiner de armazenamento do Azure:** caixa de texto
+    5.  Selecione `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` do **contêiner de armazenamento do Azure:** caixa de texto
 
     6.  Na caixa de texto **Arquivo de Backup:** , digite `Sales_stripe1of2_20160601.bak`.
 
@@ -247,7 +247,7 @@ Uma política de acesso armazenado foi criada com direitos de leitura, gravaçã
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-### <a name="to-create-a-full-database-backup"></a>Para criar um backup de banco de dados completo  
+### <a name="create-a-full-database-backup"></a>Criar um backup de banco de dados completo  
   
 1.  Execute a instrução BACKUP DATABASE para criar o backup do banco de dados completo, especificando:  
   
@@ -299,7 +299,7 @@ Uma política de acesso armazenado foi criada com direitos de leitura, gravaçã
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
   
-#### <a name="a-backing-up-to-a-disk-device"></a>**A. Fazendo backup em um dispositivo de disco**  
+#### <a name="a-back-up-to-a-disk-device"></a>**A. Fazer backup em um dispositivo de disco**  
  O exemplo a seguir faz backup de banco de dados completo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] em um disco, usando `FORMAT` para criar um novo conjunto de mídia.  
   
 ```tsql  
@@ -313,7 +313,7 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-#### <a name="b-backing-up-to-a-tape-device"></a>**B. Fazendo backup em um dispositivo de fita**  
+#### <a name="b-back-up-to-a-tape-device"></a>**B. Fazer backup em um dispositivo de fita**  
  O exemplo a seguir faz backup do banco de dados completo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] em fita, anexando o backup aos backups anteriores.  
   
 ```tsql  
@@ -326,7 +326,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### <a name="c-backing-up-to-a-logical-tape-device"></a>**C. Fazendo backup em um dispositivo de fita lógico**  
+#### <a name="c-back-up-to-a-logical-tape-device"></a>**C. Fazer backup em um dispositivo de fita lógico**  
  O exemplo a seguir cria um dispositivo de backup lógico para uma unidade de fita. O exemplo faz backup completo do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nesse dispositivo.  
   
 ```tsql  

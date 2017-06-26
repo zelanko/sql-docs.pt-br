@@ -1,7 +1,7 @@
 ---
 title: Tipos de dados com suporte para o OLTP in-memory | Microsoft Docs
 ms.custom: 
-ms.date: 06/05/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
-ms.openlocfilehash: 0095d4e8ab9f3dc48e9414dc888213b79b3c34c6
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: ee8d16f8999f2e3e39d90086993c9a46a30ac21a
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Tipos de Dados com Suporte para o OLTP na Memória
@@ -57,7 +57,7 @@ Para os tipos de dados da cadeia de caracteres e binários anteriores, começand
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>Identificar LOBs e outras colunas que estão fora de linha
 
-Tabelas com otimização de memória a partir do SQL Server 2016, oferecem suporte a colunas fora de linha, que permite que uma única linha da tabela ser maior que 8060 bytes. A instrução SELECT do Transact-SQL a seguir relata todas as colunas que estão fora de linha em tabelas com otimização de memória. Observe que:
+Começando com o SQL Server 2016, as tabelas com otimização de memória [dão suporte a colunas fora de linha](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md), permitindo que uma única linha da tabela seja maior que 8060 bytes. A instrução SELECT do Transact-SQL a seguir relata todas as colunas que estão fora de linha em tabelas com otimização de memória. Observe que:
 
 - Todas as colunas de chave de índice são armazenadas em linha.
   - Chaves de índice não exclusivas agora podem incluir colunas que permitem valor nulo, em tabelas com otimização de memória.
@@ -91,6 +91,7 @@ SELECT
 ## <a name="see-also"></a>Consulte também  
  [Suporte ao Transact-SQL para OLTP na memória](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
  [Implementando SQL_VARIANT em uma tabela com otimização de memória](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
+ [Tamanho da tabela e da linha em tabelas com otimização de memória](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
 

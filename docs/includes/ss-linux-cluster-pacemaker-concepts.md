@@ -22,13 +22,19 @@ Um usuário pode optar por substituir o comportamento padrão e configurar o rec
 Para definir `REQUIRED_COPIES_TO_COMMIT` como 0, execute:
 
 ```bash
-sudo pcs resource update <**ag1**> required_copies_to_commit=0
+sudo pcs resource update <**ag_cluster**> required_copies_to_commit=0
+```
+
+O comando equivalente, usando crm (no SLES), é:
+
+```bash
+sudo crm resource param <**ag_cluster**> set required_synchronized_secondaries_to_commit 0
 ```
 
 Para reverter para padrão valor calculado, execute:
 
 ```bash
-sudo pcs resource update <**ag1**> required_copies_to_commit=
+sudo pcs resource update <**ag_cluster**> required_copies_to_commit=
 ```
 
 >[!NOTE]
