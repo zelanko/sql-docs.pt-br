@@ -1,3 +1,5 @@
+# [Métodos de Web do serviço do servidor de relatório](report-server-web-service-methods.md)
+
 # [Métodos de autorização](authorization-methods.md)
 # [Fontes de dados e os métodos de Conexão](data-sources-and-connection-methods.md)
 # [Métodos de relatórios vinculados](linked-reports-methods.md)
@@ -7,6 +9,5 @@
 # [Métodos de parâmetros de relatório](report-parameters-methods.md)
 # [Métodos de gerenciamento do Namespace de servidor de relatórios](report-server-namespace-management-methods.md)
 # [Pontos de extremidade serviço Web de servidor de relatório](report-server-web-service-endpoints.md)
-# [Métodos de Web do serviço do servidor de relatório](report-server-web-service-methods.md)
 # [Métodos de planejamento](scheduling-methods.md)
 # [Assinatura e métodos de entrega](subscription-and-delivery-methods.md)

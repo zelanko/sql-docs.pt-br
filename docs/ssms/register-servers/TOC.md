@@ -1,4 +1,6 @@
 # [Registrar servidores](register-servers.md)  
+
+# Ações
 ## [Registrar um servidor conectado (SQL Server Management Studio)](register-a-connected-server-sql-server-management-studio.md)  
 ## [Criar um novo servidor registrado (SQL Server Management Studio)](create-a-new-registered-server-sql-server-management-studio.md)  
 ## [Exibir Servidores Registrados no SQL Server Management Studio](view-registered-servers-in-sql-server-management-studio.md)  

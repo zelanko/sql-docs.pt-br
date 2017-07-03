@@ -1,3 +1,7 @@
+
+# [Central de desempenho do Mecanismo de Banco de Dados do SQL Server e do Banco de Dados SQL do Azure](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+# [Configurar Espaços de Armazenamento com um cache com write-back de NVDIMM-N](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
+
 # [Processamento de consulta adaptável](adaptive-query-processing.md)
 # [Ajuste automático](../automatic-tuning/automatic-tuning.md)
 # [Estimativa de cardinalidade](cardinality-estimation-sql-server.md)  
@@ -50,8 +54,5 @@
 ## [Validar guias de plano depois da atualização](validate-plan-guides-after-upgrade.md)  
 ## [Excluir um guia de plano](delete-a-plan-guide.md)  
 ## [Habilitar ou desabilitar um guia de plano](enable-or-disable-a-plan-guide.md)  
-
-# [Central de desempenho do Mecanismo de Banco de Dados do SQL Server e do Banco de Dados SQL do Azure](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-## [Configurar Espaços de Armazenamento com um cache com write-back de NVDIMM-N](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
 #[Monitorar o uso de recursos (Monitor do Sistema)](../performance-monitor/monitor-resource-usage-system-monitor.md) 

@@ -27,7 +27,7 @@
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [Mecanismo de Banco de Dados](../database-engine/configure-windows/sql-server-database-engine.md)
 # [Data Quality Services](../data-quality-services/data-quality-services.md)
-# [Clusters de failover](../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)
+# [Clusters de failover](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
 # [Instalar](../sql-server/install/planning-a-sql-server-installation.md)
 # [Serviços de Integração](../integration-services/sql-server-integration-services.md)
 # [Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)
