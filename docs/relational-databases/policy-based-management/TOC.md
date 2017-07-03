@@ -1,4 +1,6 @@
-# [Administrar servidores através do uso de gerenciamento baseado em políticas](administer-servers-by-using-policy-based-management.md)  
+# [Administrar servidores com Gerenciamento Baseado em Políticas](administer-servers-by-using-policy-based-management.md)  
+
+# Gerenciamento Baseado em Políticas
 ## [Armazenamento do gerenciamento baseado em políticas](policy-based-management-storage.md)  
 ## [Configurar as propriedades gerais do gerenciamento baseado em políticas](configure-the-general-properties-of-policy-based-management.md)  
 ## [Configurar alertas para notificar os administradores sobre falhas de políticas](configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -61,16 +63,18 @@
 ### [Caixa de diálogo Criar Nova Política ou Abrir Política, página Geral](create-new-policy-or-open-policy-dialog-box-general-page.md)  
 ### [Caixa de diálogo Criar Nova Política ou Abrir Política, página Descrição](create-new-policy-or-open-policy-dialog-box-description-page.md)  
 ### [Caixa de diálogo Exibir Políticas](view-policies-dialog-box.md)  
-### [Caixa de diálogo Avaliar Políticas, página de Seleção de Política](evaluate-policies-dialog-box-policy-selection-page.md)  
-### [Caixa de diálogo Avaliar Políticas, página de Resultados da Avaliação](evaluate-policies-dialog-box-evaluation-results-page.md)  
+### [Caixa de diálogo Avaliar Políticas, página Seleção de Políticas](evaluate-policies-dialog-box-policy-selection-page.md)  
+### [Caixa de diálogo Avaliar Políticas, página Resultados da Avaliação](evaluate-policies-dialog-box-evaluation-results-page.md)  
 ### [Caixa de diálogo Propriedades de Faceta, página Geral](facet-properties-dialog-box-general-page.md)  
-### [Caixa de diálogo Propriedades da Faceta, página de Políticas Dependentes](facet-properties-dialog-box-dependent-policies-page.md)  
-### [Caixa de diálogo Propriedades da Faceta, página de Condições Dependentes](facet-properties-dialog-box-dependent-conditions-page.md)  
+### [Caixa de diálogo Propriedades da Faceta, página Políticas Dependentes](facet-properties-dialog-box-dependent-policies-page.md)  
+### [Caixa de diálogo Propriedades da Faceta, página Condições Dependentes](facet-properties-dialog-box-dependent-conditions-page.md)  
 ### [Caixa de diálogo Exibição Detalhada de Resultados](results-detailed-view-dialog-box.md)  
 ### [Caixa de diálogo Exibir Facetas](view-facets-dialog-box.md)  
 ### [Caixa de diálogo Selecionar Origem](select-source-dialog-box.md)  
 ### [Caixa de diálogo Exportar como Política](export-as-policy-dialog-box.md)  
 ### [Caixa de diálogo Importar Políticas](import-policies-dialog-box.md)  
+
+
 # [Tutorial: administrando servidores com o uso do gerenciamento baseado em políticas](tutorial-administering-servers-by-using-policy-based-management.md)  
 ## [Lição 1: criar e aplicar uma política desativada por padrão](lesson-1-create-and-apply-an-off-by-default-policy.md)  
 ### [Lição 1-1 – Criar a política desativada por padrão](lesson-1-1-create-the-off-by-default-policy.md)  

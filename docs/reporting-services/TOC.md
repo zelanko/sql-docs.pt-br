@@ -1,4 +1,6 @@
-# [Visão geral](create-deploy-and-manage-mobile-and-paginated-reports.md)
+# [O que é o SQL Server Reporting Services (SSRS)?](create-deploy-and-manage-mobile-and-paginated-reports.md)
+
+# Visão geral
 ## [Novidades no Reporting Services](what-s-new-in-sql-server-reporting-services-ssrs.md) 
 ## [Conceitos do Reporting Services (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Recursos e tarefas do Reporting Services](reporting-services-features-and-tasks-ssrs.md)   
@@ -69,7 +71,7 @@
 
 # Desenvolvedor
 ## [Integração de aplicativos](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
-## [Serviço web servidor de relatório](../reporting-services/report-server-web-service/accessing-the-soap-api.md)
+## [Serviço web servidor de relatório](../reporting-services/report-server-web-service/report-server-web-service.md)
 ## [Extensões](../reporting-services/extensions/reporting-services-extension-library.md)
 ## [Itens de relatório personalizados](../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)
 ## [Assemblies personalizados](../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)
@@ -82,7 +84,7 @@
 ### [Configurações das informações do dispositivo CSV](csv-device-information-settings.md)  
 ### [Configurações das informações do dispositivo do Excel](excel-device-information-settings.md)  
 ### [Configurações de informações do dispositivo HTML](html-device-information-settings.md)  
-### [Configurações de informações de dispositivo da imagem](image-device-information-settings.md)  ### [configurações de informações do dispositivo MHTML](mhtml-device-information-settings.md)  
+### [Configurações de Informações de Dispositivo da Imagem](image-device-information-settings.md)  ### [Configurações de Informações do Dispositivo MHTML](mhtml-device-information-settings.md)  
 ### [Configurações de informações do dispositivo PDF](pdf-device-information-settings.md)  
 ### [Configurações de informações do dispositivo PPTX](pptx-device-information-settings.md)  
 ### [Configurações de informações do dispositivo XML](xml-device-information-settings.md)  
@@ -107,12 +109,12 @@
 
 ## [Criar um relatório detalhado (RDLC) com parâmetros usando o ReportViewer (Tutorial SSRS)](create-drillthrough-rdlc-report-with-parameters-reportviewer.md)  
 ### [Lição 1: Criar um novo Site](lesson-1-create-a-new-web-site.md)  
-### [Lição 2: Definir uma Conexão de dados e a tabela de dados para o relatório pai](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
-### [Lição 3: Criar o relatório pai usando o Assistente de relatório](lesson-3-design-the-parent-report-using-the-report-wizard.md)  
-### [Lição 4: Definir uma Conexão de dados e a tabela de dados para o relatório filho](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
-### [Lição 5: Criar o relatório filho usando o Assistente de relatório](lesson-5-design-the-child-report-using-the-report-wizard.md)  
-### [Lição 6: Adicionar um controle ReportViewer ao aplicativo](lesson-6-add-a-reportviewer-control-to-the-application.md)  
-### [Lição 7: Adicionar ação de detalhamento no relatório pai](lesson-7-add-drillthrough-action-on-parent-report.md)  
+### [Lição 2: Definir uma conexão de dados e uma tabela de dados para o relatório pai](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
+### [Lição 3: Criar o relatório pai usando o Assistente de Relatório](lesson-3-design-the-parent-report-using-the-report-wizard.md)  
+### [Lição 4: Definir uma conexão de dados e uma tabela de dados para o relatório filho](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
+### [Lição 5: Criar o relatório filho usando o Assistente de Relatório](lesson-5-design-the-child-report-using-the-report-wizard.md)  
+### [Lição 6: adicionar um controle ReportViewer ao aplicativo](lesson-6-add-a-reportviewer-control-to-the-application.md)  
+### [Lição 7: Adicionar ação de detalhamento ao relatório pai](lesson-7-add-drillthrough-action-on-parent-report.md)  
 ### [Lição 8: Criar um filtro de dados](lesson-8-create-a-data-filter.md)  
 ### [Lição 9: Criar e executar o aplicativo](lesson-9-build-and-run-the-application.md)  
 

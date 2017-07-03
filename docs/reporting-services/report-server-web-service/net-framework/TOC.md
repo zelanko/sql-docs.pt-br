@@ -1,17 +1,8 @@
-
-# Tratamento de exceção +
-## [Tratamento de exceções no Reporting Services](../../report-server-web-service-net-framework-exception-handling/handling-exceptions-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json)
-## [Introdução ao tratamento de exceção no Reporting Services](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json)
-
-
-# Cabeçalhos de SOAP +
-## [Métodos de envio em lote](../../report-server-web-service-net-framework-soap-headers/batching-methods.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
-## [Identificando o estado de execução](../../report-server-web-service-net-framework-soap-headers/identifying-execution-state.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
-## [Definindo o Namespace Item para o método GetProperties](../../report-server-web-service-net-framework-soap-headers/setting-the-item-namespace-for-the-getproperties-method.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
-## [Usando o Reporting Services cabeçalhos SOAP](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
-
-
 # [Criando aplicativos que usam o serviço Web e o .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)
+
+# [Introdução ao Tratamento de Exceções no Reporting Services +](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json)
+# [Usando os cabeçalhos SOAP do Reporting Services +](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
+
 # [Chamando métodos de serviço Web](calling-web-service-methods.md)
 # [Criando o Proxy do serviço Web](creating-the-web-service-proxy.md)
 # [Omitindo valores para objetos de serviço da Web opcionais](omitting-values-for-optional-web-service-objects.md)

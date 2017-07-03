@@ -3,9 +3,22 @@
 # [Compatibilidade com versões anteriores de replicação](replication-backward-compatibility.md)  
 ## [Recursos preteridos na Replicação do SQL Server](deprecated-features-in-sql-server-replication.md)  
 ## [Alterações significativas na replicação do SQL Server](breaking-changes-in-sql-server-replication.md)  
+
+# Áreas de Replicação
+## [Administração de Replicação](./administration/administration-replication.md)
+## [Replication Agents](./agents/replication-agents.md)
+## [Conceitos de desenvolvedor](../../relational-databases/replication/concepts/replication-developer-documentation.md)
+## [Monitorando a Replicação](./monitor/monitoring-replication.md)
+## [Replicação de Banco de Dados Heterogênea não SQL](./non-sql/heterogeneous-database-replication.md)
+## [Publicar dados e objetos de banco de dados](./publish/publish-data-and-database-objects.md)
+## [Segurança para Replicação](./security/security-overview-replication.md)
+
 # [Recursos e tarefas de replicação](replication-features-and-tasks.md)  
 ## [Tipos de replicação](types-of-replication.md)  
 ### [Replicação de instantâneo](snapshot-replication.md)  
+### [Replicação de Mesclagem](./merge/merge-replication.md)
+### [Replicação transacional](./transactional/transactional-replication.md) 
+
 ## [Replicação para assinantes de tabela com otimização de memória](replication-to-memory-optimized-table-subscribers.md)  
 ## [Replicação para Banco de Dados SQL](replication-to-sql-database.md)  
 ## [Republicar dados](republish-data.md)  
@@ -72,8 +85,6 @@
 ### [Validar informações de partição para um assinante de mesclagem](validate-partition-information-for-a-merge-subscriber.md)  
 ### [Validar dados no assinante](validate-data-at-the-subscriber.md)  
 ## [Replicação de script](scripting-replication.md)  
-
-# [Conceitos de desenvolvedor](../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)
 
 # [Referência técnica](technical-reference-replication.md)  
 ## [Referência de propriedades](properties-reference-replication.md)  
