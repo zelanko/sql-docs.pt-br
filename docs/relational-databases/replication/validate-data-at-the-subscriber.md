@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fcd9d7f9e729a1d2ebb7cc876ce3807aa839f079
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="validate-data-at-the-subscriber"></a>Validar dados no assinante
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
  A validação de dados é um processo de três etapas:  
   
-1.  Uma única assinatura ou todas as assinaturas para uma publicação são *marcadas* para validação. Mark subscriptions for validation in the **Validate Subscription**, **Validate Subscriptions**, and **Validate All Subscriptions** dialog boxes, which are available from the **Local Publications** folder and the **Local Subscriptions** folder in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você também pode marcar assinaturas da guia **Todas as Assinaturas** , a guia **Lista de Observação da Assinatura** e o nó de publicações no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
+1.  Uma única assinatura ou todas as assinaturas para uma publicação são *marcadas* para validação. Marque as assinaturas para validação nas caixas de diálogo **Validar Assinatura**, **Validar Assinaturas**e **Validar Todas as Assinaturas** que estão disponíveis na pasta **Publicações Locais** e na pasta **Assinaturas Locais** no [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você também pode marcar assinaturas da guia **Todas as Assinaturas** , a guia **Lista de Observação da Assinatura** e o nó de publicações no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
   
 2.  Uma assinatura é validada da próxima vez em que for sincronizada pelo Distribution Agent (para replicação transacional) ou pelo Merge Agent (replicação de mesclagem). O Distribution Agent normalmente é executado continuamente, nesse caso a validação ocorre imediatamente; o Merge Agent normalmente é executado por solicitação, neste caso a validação ocorrerá após você executar o agente.  
   
@@ -312,13 +312,13 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-validate-data-for-all-articles-in-a-transactional-publication"></a>Para validar dados para todos os artigos em uma publicação transacional  
   
-1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication>. Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar **false**, as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A>. Passe o seguinte:  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A> . Passe o seguinte:  
   
     -   <xref:Microsoft.SqlServer.Replication.ValidationOption>  
   
@@ -332,25 +332,25 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-validate-data-in-all-subscriptions-to-a-merge-publication"></a>Para validar dados em todas as assinaturas para uma publicação de mesclagem  
   
-1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar **false**, as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A>. Passe o <xref:Microsoft.SqlServer.Replication.ValidationOption> desejado.  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> . Passe o <xref:Microsoft.SqlServer.Replication.ValidationOption>desejado.  
   
 5.  Execute o Merge Agent para cada assinatura iniciar a validação ou espere pela próxima execução de agente marcada. Para obter mais informações, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md). O resultado da operação de validação é gravado no histórico de agente que você exibe usando o Replication Monitor. Para obter mais informações, consulte [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
   
 #### <a name="to-validate-data-in-a-single-subscription-to-a-merge-publication"></a>Para validar os dados em uma única assinatura em uma publicação de mesclagem  
   
-1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar **false**, as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A>. Passe o nome do Assinante e banco de dados de assinatura que estão sendo validados e o <xref:Microsoft.SqlServer.Replication.ValidationOption> desejado.  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> . Passe o nome do Assinante e banco de dados de assinatura que estão sendo validados e o <xref:Microsoft.SqlServer.Replication.ValidationOption>desejado.  
   
 5.  Execute o Merge Agent para a assinatura iniciar a validação ou espere pela próxima execução de agente marcada. Para obter mais informações, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md). O resultado da operação de validação é gravado no histórico de agente que você exibe usando o Replication Monitor. Para obter mais informações, consulte [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
   

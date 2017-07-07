@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0d09693778fa9382d40dfb02f0c3fb4b212f86ed
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
@@ -218,61 +218,61 @@ O exemplo a seguir restaura um banco de dados para seu estado às 1h23min17s em 
 ### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>**E.  Restaurar um backup do serviço de Armazenamento do Microsoft Azure**
 #### <a name="common-steps"></a>**Etapas comuns**
 Os dois exemplos a seguir executam uma restauração de `Sales` de um backup localizado no serviço de armazenamento do Microsoft Azure.  O nome da Conta de armazenamento é `mystorageaccount`.  O contêiner é chamado `myfirstcontainer`.  Para resumir, as seis primeiras etapas são listadas aqui uma vez e todos os exemplos serão iniciados na **Etapa 7**.
-1.    No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
+1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
 
-2.    Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**.
+2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**.
 
-3.    Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
+3.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
 
-4.    Clique no botão Procurar (...) para abrir a caixa de diálogo **Selecione dispositivos de backup** .  
-5.    Selecione **URL** na lista suspensa **Tipo de mídia de backup:** .
+4.  Clique no botão Procurar (...) para abrir a caixa de diálogo **Selecione dispositivos de backup** .  
+5.  Selecione **URL** na lista suspensa **Tipo de mídia de backup:** .
 
-6.    Clique em **Adicionar** e a caixa de diálogo **Selecione um Local do Arquivo de Backup** será aberta.
+6.  Clique em **Adicionar** e a caixa de diálogo **Selecione um Local do Arquivo de Backup** será aberta.
 
     #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>**E1.   Restaurar um backup distribuído sobre um banco de dados e em uma assinatura de acesso compartilhado existentes.**
     Uma política de acesso armazenado foi criada com direitos de leitura, gravação, exclusão e lista.  Uma assinatura de acesso compartilhado associada à política de acesso armazenado foi criada para o contêiner `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.  Basicamente, as etapas são as mesmas que seriam usadas se já existisse uma credencial do SQL Server.  Atualmente, o banco de dados `Sales` existe no servidor.  Os arquivos de backup são `Sales_stripe1of2_20160601.bak` e `Sales_stripe2of2_20160601.bak`.  
 *  
-    7.    Selecione `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` na lista suspensa **Contêiner de armazenamento do Azure:** se já existir uma credencial do SQL Server; caso contrário, insira manualmente o nome do contêiner, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+    7.  Selecione `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` na lista suspensa **Contêiner de armazenamento do Azure:** se já existir uma credencial do SQL Server; caso contrário, insira manualmente o nome do contêiner, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
     
-    8.    Insira a assinatura de acesso compartilhado na caixa RTF **Assinatura de acesso compartilhado:** .
-       9.    Clique em **OK** e a caixa de diálogo **Localizar Arquivo de Backup no Microsoft Azure** será aberta.
-    10.    Expanda **Contêineres** e navegue até `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+    8.  Insira a assinatura de acesso compartilhado na caixa RTF **Assinatura de acesso compartilhado:** .
+       9.   Clique em **OK** e a caixa de diálogo **Localizar Arquivo de Backup no Microsoft Azure** será aberta.
+    10. Expanda **Contêineres** e navegue até `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
     
-    11.    Mantenha pressionada a tecla CTRL e selecione os arquivos `Sales_stripe1of2_20160601.bak` e `Sales_stripe2of2_20160601.bak`.
-    12.    Clique em **OK**.
-    13.    Clique em **OK** para retornar à página **Geral** .
-    14.    Clique em **Opções** no painel **Selecionar uma página** .
-    15.    Na seção Opções de **restauração** , marque a opção **Substituir o banco de dados existente (WITH REPLACE)**.
-    16.    Na seção **Backup da parte final do log** , desmarque a opção **Fazer backup da parte final do log antes da restauração**.
-    17.    Na seção **Conexões de servidor** , marque a opção **Fechar conexões existentes com o banco de dados de destino**.
-    18.    Clique em **OK**.
+    11. Mantenha pressionada a tecla CTRL e selecione os arquivos `Sales_stripe1of2_20160601.bak` e `Sales_stripe2of2_20160601.bak`.
+    12. Clique em **OK**.
+    13. Clique em **OK** para retornar à página **Geral** .
+    14. Clique em **Opções** no painel **Selecionar uma página** .
+    15. Na seção Opções de **restauração** , marque a opção **Substituir o banco de dados existente (WITH REPLACE)**.
+    16. Na seção **Backup da parte final do log** , desmarque a opção **Fazer backup da parte final do log antes da restauração**.
+    17. Na seção **Conexões de servidor** , marque a opção **Fechar conexões existentes com o banco de dados de destino**.
+    18. Clique em **OK**.
 
     #### <a name="e2---a-shared-access-signature-does-not-exist"></a>**E2.   Não há uma assinatura de acesso compartilhado**
     Neste exemplo, atualmente, o banco de dados `Sales` não existe no servidor.
-    7.    Clique em **Adicionar** e a caixa de diálogo **Conectar-se a uma Assinatura da Microsoft** será aberta.  
+    7.  Clique em **Adicionar** e a caixa de diálogo **Conectar-se a uma Assinatura da Microsoft** será aberta.  
     
-    8.    Conclua a caixa de diálogo **Conectar-se a uma Assinatura da Microsoft** e clique em **OK** para retornar à caixa de diálogo **Selecionar um local de arquivo de backup** .  Veja [Conectar-se a uma assinatura do Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) para obter mais informações.
-    9.    Clique em **OK** na caixa de diálogo **Selecionar um local de arquivo de backup** e a caixa de diálogo **Localizar arquivo de backup no Microsoft Azure** será aberta.
-    10.    Expanda **Contêineres** e navegue até `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-    11.    Selecione o arquivo de backup e clique em **OK**.
-    12.    Clique em **OK** para retornar à página **Geral** .
-    13.    Clique em **OK**.
+    8.  Conclua a caixa de diálogo **Conectar-se a uma Assinatura da Microsoft** e clique em **OK** para retornar à caixa de diálogo **Selecionar um local de arquivo de backup** .  Veja [Conectar-se a uma assinatura do Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) para obter mais informações.
+    9.  Clique em **OK** na caixa de diálogo **Selecionar um local de arquivo de backup** e a caixa de diálogo **Localizar arquivo de backup no Microsoft Azure** será aberta.
+    10. Expanda **Contêineres** e navegue até `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+    11. Selecione o arquivo de backup e clique em **OK**.
+    12. Clique em **OK** para retornar à página **Geral** .
+    13. Clique em **OK**.
 
-#### <a name="f----restore-local-backup-to-microsoft-azure-storage-url"></a>**F.    Restaurar o backup local no Armazenamento do Microsoft Azure (URL)**
+#### <a name="f---restore-local-backup-to-microsoft-azure-storage-url"></a>**F.   Restaurar o backup local no Armazenamento do Microsoft Azure (URL)**
 O banco de dados `Sales` será restaurado para o contêiner de armazenamento do Microsoft Azure `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` de um backup localizado em `E:\MSSQL\BAK`.  A credencial do SQL Server para o contêiner do Azure já foi criada.  Uma credencial do SQL Server para o contêiner de destino já deve existir, pois não pode ser criada por meio da tarefa **Restaurar** .  Atualmente, o banco de dados `Sales` não existe no servidor.
-1.    No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
+1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
 
-2.    Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**.
-3.    Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
-4.    Clique no botão Procurar (...) para abrir a caixa de diálogo **Selecione dispositivos de backup** .  
-5.    Selecione **Arquivo** na lista suspensa **Tipo de mídia de backup:** .
-6.    Clique em **Adicionar** e a caixa de diálogo **Localizar arquivo de backup** será aberta.
-7.    Navegue até `E:\MSSQL\BAK`, selecione o arquivo de backup e clique em **OK**.
-8.    Clique em **OK** para retornar à página **Geral** .
-9.    Clique em **Arquivos** no painel **Selecionar uma página** .
-10.    Marque a caixa de seleção **Relocar todos os arquivos para a pasta**.
-11.    Insira o contêiner, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, nas caixas de texto de **Pasta do arquivo de dados:** e **Pasta do arquivo de log:**.
-12.    Clique em **OK**.
+2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**.
+3.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
+4.  Clique no botão Procurar (...) para abrir a caixa de diálogo **Selecione dispositivos de backup** .  
+5.  Selecione **Arquivo** na lista suspensa **Tipo de mídia de backup:** .
+6.  Clique em **Adicionar** e a caixa de diálogo **Localizar arquivo de backup** será aberta.
+7.  Navegue até `E:\MSSQL\BAK`, selecione o arquivo de backup e clique em **OK**.
+8.  Clique em **OK** para retornar à página **Geral** .
+9.  Clique em **Arquivos** no painel **Selecionar uma página** .
+10. Marque a caixa de seleção **Relocar todos os arquivos para a pasta**.
+11. Insira o contêiner, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, nas caixas de texto de **Pasta do arquivo de dados:** e **Pasta do arquivo de log:**.
+12. Clique em **OK**.
 
 
 ## <a name="see-also"></a>Consulte também    
