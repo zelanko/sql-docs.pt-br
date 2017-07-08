@@ -1,1 +1,1 @@
-![Baixar](../ssdt/media/download.png)[Baixar o driver JDBC](http://go.microsoft.com/fwlink/?LinkId=245496)
+![Baixar](../ssdt/media/download.png)[Baixar o driver JDBC](https://go.microsoft.com/fwlink/?linkid=852460)
