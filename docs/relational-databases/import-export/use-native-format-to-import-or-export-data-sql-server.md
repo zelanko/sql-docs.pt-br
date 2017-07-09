@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4cb08ec44780935a8340d267fd3790af5150659b
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Usar o formato nativo para importar ou exportar dados (SQL Server)
@@ -68,14 +68,14 @@ Para importar dados em formato nativo com êxito, garanta que:
   
      O [utilitário bcp](../../tools/bcp-utility.md) usa o formato de dados binário interno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para gravar dados não caracteres de uma tabela para um arquivo de dados.  
   
--   Dados[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) ou [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)   
+-   Dados[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) ou [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
   
      No início de cada campo [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) ou [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) , o [bcp](../../tools/bcp-utility.md) adiciona o tamanho do prefixo.  
   
     > [!IMPORTANT]
     >  Quando o modo nativo é usado, por padrão, o [utilitário bcp](../../tools/bcp-utility.md) converte caracteres do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em caracteres OEM antes de copiá-los em um arquivo de dados. O [utilitário bcp](../../tools/bcp-utility.md) converte caracteres de um arquivo de dados em caracteres ANSI antes de importá-los em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Durante essas conversões, podem ser perdidos dados de caractere estendidos. Para caracteres estendidos, use o formato nativo Unicode ou especifique uma página de código.
   
--   Dados[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)   
+-   Dados[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)  
   
      Se dados [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) forem armazenados como SQLVARIANT em um arquivo de dados do formato nativo, os dados manterão todas as suas características. Os metadados que registram o tipo de dados de cada valor de dado são armazenados com os valores de dados. Esses metadados são usados para recriar o valor de dado com o mesmo tipo de dados em uma coluna [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) de destino.  
   
@@ -150,7 +150,7 @@ Notepad D:\BCP\myNative.fmt
 Os exemplos abaixo usam o banco de dados e os arquivos de formato criados acima.
 
 ### **Usando bcp e formato nativo para exportar dados**<a name="bcp_native_export"></a>
-Opção**-n** e comando **OUT** .  Observação: o arquivo de dados criado neste exemplo será usado em todos os exemplos subsequentes.  No prompt de comando, digite os seguintes comandos:
+**-n** e comando **OUT** .  Observação: o arquivo de dados criado neste exemplo será usado em todos os exemplos subsequentes.  No prompt de comando, digite os seguintes comandos:
 ```
 bcp TestDatabase.dbo.myNative OUT D:\BCP\myNative.bcp -T -n
 
@@ -159,7 +159,7 @@ NOTEPAD D:\BCP\myNative.bcp
 ```
 
 ### **Usando bcp e formato nativo para importar dados sem um arquivo de formato**<a name="bcp_native_import"></a>
-Opção**-n** e comando **IN** .  No prompt de comando, digite os seguintes comandos:
+**-n** e comando **IN** .  No prompt de comando, digite os seguintes comandos:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
@@ -172,7 +172,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **Usando bcp e formato nativo para importar dados com um arquivo de formato não XML**<a name="bcp_native_import_fmt"></a>
-Opções**-n** e **-f** switches e **IN** comme.  No prompt de comando, digite os seguintes comandos:
+**-n** e **-f** e comando **IN** .  No prompt de comando, digite os seguintes comandos:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"

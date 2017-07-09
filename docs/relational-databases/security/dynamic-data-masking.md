@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2a16a7b0399a696c670887e49b4cf5c32012afb1
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="dynamic-data-masking"></a>Mascaramento de dados dinâmicos
@@ -30,10 +30,10 @@ O DDM (mascaramento de dados dinâmicos) limita a exposição de dados confidenc
 
 O mascaramento de dados dinâmicos ajuda a impedir o acesso não autorizado a dados confidenciais, permitindo que os clientes especifiquem a quantidade de dados confidenciais a revelar, com impacto mínimo sobre a camada de aplicativo. O DDM pode ser configurado no banco de dados para ocultar dados confidenciais no conjunto de resultados de uma consulta em relação aos campos do banco de dados designados, sendo que os dados no banco de dados não são alterados. O mascaramento de dados dinâmicos é fácil de usar com aplicativos existentes, já que as regras de mascaramento são aplicadas nos resultados da consulta. Muitos aplicativos podem mascarar dados confidenciais sem modificar consultas existentes.
 
-*     Uma política de mascaramento de dados central atua diretamente nos campos confidenciais do banco de dados.
-*     Designe usuários ou funções com privilégios, que têm acesso aos dados confidenciais.
-*     O DDM traz recursos de mascaramento completo e mascaramento parcial, bem como uma máscara aleatória para dados numéricos.
-*     Comandos simples do [!INCLUDE[tsql_md](../../includes/tsql-md.md)] definem e gerenciam máscaras.
+*  Uma política de mascaramento de dados central atua diretamente nos campos confidenciais do banco de dados.
+*  Designe usuários ou funções com privilégios, que têm acesso aos dados confidenciais.
+*  O DDM traz recursos de mascaramento completo e mascaramento parcial, bem como uma máscara aleatória para dados numéricos.
+*  Comandos simples do [!INCLUDE[tsql_md](../../includes/tsql-md.md)] definem e gerenciam máscaras.
 
 Por exemplo, um profissional de suporte de call center pode identificar os chamadores usando vários dígitos de seu número do seguro social ou número de cartão de crédito, mas esses itens de dados não devem ser totalmente expostos para o profissional de suporte. Uma regra de mascaramento pode ser definida para mascarar todos exceto os quatro últimos dígitos de qualquer número do seguro social ou número de cartão de crédito no conjunto de resultado de qualquer consulta. Em outro exemplo, ao usar a máscara de dados apropriada para proteger dados de informações de identificação pessoal (PII), um desenvolvedor pode consultar os ambientes de produção para fins de solução de problemas sem violar os regulamentos de conformidade.
 
