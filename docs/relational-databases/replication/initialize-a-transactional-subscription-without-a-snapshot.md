@@ -25,14 +25,18 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inicializar uma assinatura transacional sem um instantâneo
+<a id="initialize-a-transactional-subscription-without-a-snapshot" class="xliff"></a>
+
+# Inicializar uma assinatura transacional sem um instantâneo
   Por padrão, uma assinatura a uma publicação transacional é inicializada com um instantâneo, que é gerado pelo Agente de Instantâneo e aplicado pelo Agente de Distribuição. Em alguns cenários, como os que envolvem grandes conjuntos de dados iniciais, é preferível inicializar uma assinatura usando outro método. Outros métodos de inicializar um Assinante incluem:  
   
 -   Especificando um backup. Restaure o backup no Assinante e, então, o Agente de Distribuição copia os metadados de replicação e procedimentos do sistema necessários. Inicializando com um backup é a forma mais fácil de entregar os dados ao Assinante e é conveniente, porque qualquer backup recente pode ser usado se for feito após a publicação ter sido habilitada para inicialização com um backup.  
   
 -   Copiando um conjunto de dados inicial ao Assinante por outro mecanismo, como anexando um banco de dados. Você deve assegurar-se de que os dados e o esquema corretos estão no Assinante e, então, o Agente de Distribuição copia os metadados e procedimentos do sistema necessários.  
   
-## <a name="initializing-a-subscription-with-a-backup"></a>Inicializando uma assinatura com um backup  
+<a id="initializing-a-subscription-with-a-backup" class="xliff"></a>
+
+## Inicializando uma assinatura com um backup  
  Um backup contém um banco de dados inteiro; portanto, cada banco de dados de assinatura conterá uma cópia completa do banco de dados de publicação quando este for inicializado:  
   
 -   O backup inclui tabelas que não são especificadas como artigos para a publicação.  
@@ -55,7 +59,9 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  Se uma assinatura for inicializada sem usar um instantâneo, a em que o serviço do SQL Server será executado no Publicador deverá ter permissões para gravação na pasta do instantâneo no Distribuidor. Para obter mais informações sobre permissões, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-### <a name="ensuring-the-suitability-of-a-backup"></a>Assegurando que um backup é adequado  
+<a id="ensuring-the-suitability-of-a-backup" class="xliff"></a>
+
+### Assegurando que um backup é adequado  
  Um backup será adequado para inicializar um Assinante se todas as transações que ocorreram, feitas após o backup, estiverem armazenadas no Distribuidor. A replicação exibirá uma mensagem de erro se o backup não for adequado.  
   
  Para ajudar assegurar que um backup é adequado para uso, siga estas diretrizes:  
@@ -70,14 +76,18 @@ ms.lasthandoff: 06/22/2017
   
 -   Colunas de carimbo de hora assinadas no banco de dados restaurado devem ser convertidas a colunas **binárias(8)** : copie o conteúdo das tabelas contendo colunas de carimbo de hora para as novas tabelas com esquemas correspondentes a menos que existam colunas **binárias (8)** no lugar de colunas de carimbo de hora, descarte as tabelas originais e renomeie as novas tabelas com os mesmos nomes das tabelas originais.  
   
-## <a name="initializing-a-subscription-with-an-alternative-method"></a>Inicializando uma assinatura com um método alternativo  
+<a id="initializing-a-subscription-with-an-alternative-method" class="xliff"></a>
+
+## Inicializando uma assinatura com um método alternativo  
  É possível inicializar uma assinatura usando qualquer método que permita copiar o esquema do banco de dados de publicação e dados ao Assinante, como [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Quando você usar um método alternativo para inicializar o Assinante, objetos de suporte de replicação são copiados ao Assinante.  
   
  Diferente de inicializar com um backup, você ou seu aplicativo devem assegurar que os dados e o esquema estão sincronizados corretamente na hora que você adicionar a assinatura. Por exemplo, se houver atividade no Publicador, durante o tempo em que os dados e o esquema são copiados no Assinante e a Assinatura é adicionada, as alterações resultantes dessa atividade poderão não ser replicadas no Assinante.  
   
  Para inicializar uma assinatura com um método alternativo, consulte [Initialize a Subscription Manually](../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-## <a name="see-also"></a>Consulte também  
+<a id="see-also" class="xliff"></a>
+
+## Consulte também  
  [Inicializar uma assinatura](../../relational-databases/replication/initialize-a-subscription.md)  
   
   
