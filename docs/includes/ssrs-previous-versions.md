@@ -1,0 +1,1 @@
+> Para obter conteúdo relacionado a versões anteriores do SQL Server Reporting Services, consulte [SQL Server Reporting Services 2014](https://msdn.microsoft.com/library/ms159106(v=sql.120).aspx).
