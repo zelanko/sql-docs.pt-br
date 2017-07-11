@@ -25,14 +25,18 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 43c8168aa5dc9cfb55c117f8a25ead5e8f2a9a4f
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="improve-the-performance-of-full-text-indexes"></a>Melhorar o desempenho de índices de texto completo
+<a id="improve-the-performance-of-full-text-indexes" class="xliff"></a>
+
+# Melhorar o desempenho de índices de texto completo
 Este tópico descreve algumas das causas comuns de baixo desempenho para consultas e índices de texto completo. Ele também fornece algumas sugestões para atenuar esses problemas e melhorar o desempenho.
   
 ##  <a name="causes"></a> Common causes of performance issues
-### <a name="hardware-resource-issues"></a>Problemas de recursos de hardware
+<a id="hardware-resource-issues" class="xliff"></a>
+
+### Problemas de recursos de hardware
 O desempenho da indexação de texto completo e das consultas de texto completo é influenciado por recursos de hardware, como memória, velocidade de disco, velocidade da CPU e pela arquitetura do computador.  
 
 A principal causa da diminuição do desempenho da indexação de texto completo são os limites em termos de recursos de hardware.  
@@ -46,14 +50,18 @@ A principal causa da diminuição do desempenho da indexação de texto completo
     > [!NOTE]  
     >  A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], o Mecanismo de Texto Completo pode usar memória AWE, pois o mecanismo faz parte do processo sqlservr.exe.  
 
-### <a name="full-text-batching-issues"></a>Problemas de envio em lote de texto completo
+<a id="full-text-batching-issues" class="xliff"></a>
+
+### Problemas de envio em lote de texto completo
  Se o sistema não tiver gargalos de hardware, o desempenho de indexação da pesquisa de texto completo dependerá principalmente do seguinte:  
   
 -   O tempo necessário para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] criar lotes de texto completo.  
   
 -   A rapidez com que o daemon de filtro pode consumir esses lotes.  
 
-### <a name="full-text-index-population-issues"></a>Problemas da população do índice de texto completo
+<a id="full-text-index-population-issues" class="xliff"></a>
+
+### Problemas da população do índice de texto completo
 -   **Tipo de população**. Ao contrário da população completa, a população de controle de alterações incremental, manual e automática não foi desenvolvida para maximizar os recursos de hardware a fim de obter maior velocidade. Portanto, as sugestões de ajustes neste tópico não podem melhorar o desempenho de indexação de texto completo ao usar população de acompanhamento de alteração incremental, manual ou automática.  
   
 -   **Mesclagem mestra**. Quando a população for concluída, um processo de mesclagem final será disparado, mesclando os fragmentos de índice em um índice de texto completo mestre. Isso resulta em desempenho aprimorado de consultas, uma vez que apenas o índice precisa ser consultado, em vez de uma série de fragmentos de índice, e melhores estatísticas de pontuação podem ser usadas para classificação de relevância. No entanto, a mesclagem mestra pode ser de E/S intensiva, porque grandes quantidades de dados precisam ser gravados e lidos quando os fragmentos de índice são mesclados, embora isso não bloqueie as consultas de entrada.  
@@ -74,7 +82,9 @@ Para maximizar o desempenho de seus índices de texto completo, implemente as se
 -   Se você usar a população incremental com base em uma coluna de carimbo de data/hora, crie um índice secundário da coluna **carimbo de data/hora** para melhorar o desempenho da população incremental.  
   
 ##  <a name="full"></a> Solucionar problemas de desempenho das populações completas  
-### <a name="review-the-full-text-crawl-logs"></a>Examine os logs de rastreamento de texto completo
+<a id="review-the-full-text-crawl-logs" class="xliff"></a>
+
+### Examine os logs de rastreamento de texto completo
  Para ajudar no diagnóstico de problemas de desempenho, examine os logs de rastreamento de texto completo.
  
 Quando um erro ocorrer durante um rastreamento, o recurso de registro de rastreamento de pesquisa de texto completo cria e mantém um log de rastreamento, que é um texto sem-formatação. Cada log de rastreamento corresponde a um catálogo de texto completo específico. Por padrão, os logs de rastreamento para uma determinada instância (no exemplo, a instância padrão) estão localizados na pasta `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG`.
@@ -86,11 +96,13 @@ O arquivo de log de rastreamento segue o seguinte esquema de nomeação:
 As partes variáveis do nome do arquivo de log de rastreamento são as seguintes.
 -   <**DatabaseID**> – a ID de um banco de dados. <**dbid**> é um número de cinco dígitos com zeros à esquerda.  
 -   <**FullTextCatalogID**> – ID do catálogo de texto completo. <**catid**> é um número de cinco dígitos com zeros à esquerda.  
--   <**n**> – É um inteiro que indica um ou mais logs de rastreamento que existem do mesmo catálogo de texto completo.  
+-   <**n**> – é um inteiro que indica que existe um ou mais logs de rastreamento do mesmo catálogo de texto completo.  
   
  Por exemplo, `SQLFT0000500008.2` é o arquivo de log de rastreamento de um banco de dados com a ID de banco de dados = 5 e a ID de catálogo de texto completo = 8. O 2 no final do nome do arquivo indica que há dois arquivos de log de rastreamento para esse par de banco de dados/catálogo.  
 
-### <a name="check-physical-memory-usage"></a>Verificar uso de memória física  
+<a id="check-physical-memory-usage" class="xliff"></a>
+
+### Verificar uso de memória física  
  Durante uma população de texto completo, é possível que o fdhost.exe ou o sqlservr.exe fique com pouca memória não tenha memória suficiente.
 -   Se o log de rastreamento de texto completo mostrar que fdhost.exe está sendo reiniciado com frequência ou que o código de erro 8007008 está sendo retornado, isso indica que um desses processos está sendo executado sem memória.
 -   Se fdhost.exe estiver gerando despejos, principalmente em computadores grandes com várias CPUs, talvez ele esteja ficando com memória insuficiente.  
@@ -108,7 +120,9 @@ As partes variáveis do nome do arquivo de log de rastreamento são as seguintes
 
 -   **Problemas de paginação**. O tamanho insuficiente do arquivo de paginação, como em um sistema que tem um arquivo de paginação pequeno com crescimento restrito, também pode fazer com que o fdhost.exe ou o sqlservr.exe fique com memória insuficiente. Se os logs de rastreamento não indicarem nenhuma falha relacionada à memória, é provável que o desempenho esteja lento devido a excesso de paginação.  
   
-### <a name="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe"></a>Estimar requisitos de memória do processo do host do daemon de filtro (fdhost.exe)  
+<a id="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe" class="xliff"></a>
+
+### Estimar requisitos de memória do processo do host do daemon de filtro (fdhost.exe)  
  A quantidade de memória necessária para o processo do fdhost.exe para uma população depende principalmente do número de intervalos de rastreamento de texto completo que ele usa, do tamanho da ISM (memória compartilhada de entrada) e do número de máximo de instâncias da ISM.  
   
  A quantidade de memória consumida (em bytes) pelo host do daemon de filtro pode ser estimada aproximadamente usando a fórmula a seguir:  
@@ -143,7 +157,9 @@ Para obter informações essenciais sobre as fórmulas a seguir, consulte as not
 2.  500 MB é uma estimativa da memória exigida por outros processos no sistema. Se o sistema estiver executando trabalho adicional, aumente esse valor de maneira correspondente.  
 3.  .*ism_size* é presumido como 8 MB para plataformas x64.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Exemplo: estimar as necessidades de memória do fdhost.exe  
+<a id="example-estimate-the-memory-requirements-of-fdhostexe" class="xliff"></a>
+
+ #### Exemplo: estimar as necessidades de memória do fdhost.exe  
   
  Este exemplo é para um computador 8GM de RAM com 64 bits e 4 processadores de núcleo dual. O primeiro cálculo estima a memória necessária para fdhost.exe —*F*. O número de intervalos de rastreamento é `8`.  
   
@@ -153,7 +169,9 @@ Para obter informações essenciais sobre as fórmulas a seguir, consulte as not
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>Exemplo: Definindo a configuração max server memory  
+<a id="example-setting-max-server-memory" class="xliff"></a>
+
+ #### Exemplo: Definindo a configuração max server memory  
   
  Este exemplo usa as instruções [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] para definir **max server memory** com o valor calculado para *M* no exemplo anterior, `7052`:  
   
@@ -168,7 +186,9 @@ GO
   
 Para obter informações sobre as opções de memória do servidor, consulte [Opções de configuração do servidor de memória de servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
-### <a name="check-cpu-usage"></a>Verificar uso de CPU  
+<a id="check-cpu-usage" class="xliff"></a>
+
+### Verificar uso de CPU  
 O desempenho das populações completas não é ideal quando o consumo de CPU médio for menor que cerca de 30 por cento. Esta seção discute alguns fatores que afetam o consumo da CPU.  
   
 -   Tempo de espera alto para páginas  
@@ -211,7 +231,9 @@ O mecanismo de texto completo usa dois tipos de filtros ao popular um índice de
   
 Para solucionar esse problema, marque o filtro para o documento de contêiner (neste caso, o Word) como filtro de thread único. Para marcar um filtro como filtro de thread único, defina o valor de Registro **ThreadingModel** para o filtro como **Apartment Threaded**. Para obter informações sobre Single-Threaded Apartments, veja o white paper [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159)(Compreendendo e usando os modelos de threading COM).  
   
-## <a name="see-also"></a>Consulte também  
+<a id="see-also" class="xliff"></a>
+
+## Consulte também  
  [Opções Server Memory de configuração do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [Opção max full-text crawl range de configuração de servidor](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Popular índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md)   

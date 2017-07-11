@@ -2,7 +2,7 @@
 title: "Alterando tabelas com otimização de memória | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 10/04/2016
+ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,18 +16,22 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e4a8b3f4dabec4d46813c570e1a04fd469075a66
+ms.sourcegitcommit: 7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7
+ms.openlocfilehash: bd27f9755945abf7c09118a5997bb3745e66ab57
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="altering-memory-optimized-tables"></a>Alterando tabelas com otimização de memória
+<a id="altering-memory-optimized-tables" class="xliff"></a>
+
+# Alterando tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Alterações de esquema e de índice em tabelas com otimização de memória podem ser executadas usando a instrução ALTER TABLE. O aplicativo de banco de dados pode continuar em execução e qualquer operação que acessa a tabela será bloqueada até que o processo de alteração seja concluído.  
+  Alterações de esquema e de índice em tabelas com otimização de memória podem ser executadas usando a instrução ALTER TABLE. No SQL Server 2016 e no Banco de Dados SQL do Azure as operações ALTER TABLE em tabelas com otimização de memória são OFFLINE, o que significa que a tabela não está disponível para consulta enquanto a operação está em andamento. O aplicativo de banco de dados pode continuar em execução e qualquer operação que acessa a tabela será bloqueada até que o processo de alteração seja concluído. É possível combinar várias operações ADD, DROP ou ALTER em uma única instrução ALTER TABLE.
   
-## <a name="alter-table"></a>ALTER TABLE  
+<a id="alter-table" class="xliff"></a>
+
+## ALTER TABLE  
  
 A sintaxe ALTER TABLE é usada para fazer alterações no esquema de tabela, bem como para adicionar, excluir e recompilar índices. Índices são considerados parte da definição de tabela:  
   
@@ -80,12 +84,37 @@ A sintaxe ALTER TABLE é usada para fazer alterações no esquema de tabela, bem
   
  Para obter mais informações sobre a funcionalidade ALTER TABLE e a sintaxe completa, veja [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
-## <a name="schema-bound-dependency"></a>Dependência associada a esquema  
+<a id="schema-bound-dependency" class="xliff"></a>
+
+## Dependência associada a esquema  
  Procedimentos armazenados compilados de modo nativo devem ser associados a esquema, o que significa que eles têm uma dependência associada a esquema nas tabelas com otimização de memória que eles acessam e nas colunas às quais eles fazem referência. A dependência associada a esquema é uma relação entre duas entidades que impede que a entidade referenciada seja cancelada ou modificada de modo incompatível enquanto existir a entidade mencionada.  
   
  Por exemplo, se um procedimento armazenado compilado de modo nativo associado a esquema fizer referência a uma coluna *c1* da tabela *mytable*, a coluna *c1* não poderá ser removida. Da mesma forma, se houver um procedimento desse tipo com uma instrução INSERT sem uma lista de colunas (por exemplo, `INSERT INTO dbo.mytable VALUES (...)`), nenhuma coluna da tabela poderá ser removida.  
+ 
+<a id="logging-of-alter-table-on-memory-optimized-tables" class="xliff"></a>
+
+## Log de ALTER TABLE em tabelas com otimização de memória
+Em uma tabela com otimização de memória, a maioria dos cenários de ALTER TABLE agora é executada em paralelo e resulta em uma otimização das gravações no log de transações. A otimização é obtida apenas registrando as alterações de metadados no log de transações. No entanto, as operações de ALTER TABLE a seguir são executadas em thread único e não têm otimização de log.
+
+A operação single-threaded, nesse caso, registraria todo o conteúdo da tabela alterada no log de transações. A seguir, a lista das operações de thread único:
+
+- Alterar ou adicionar uma coluna para usar um tipo de objeto grande (LOB): nvarchar(max), varchar(max) ou varbinary(max).
+
+- Adicionar ou remover um índice COLUMNSTORE.
+
+- Quase tudo o que afeta uma [coluna fora de linha](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).
+
+    - Fazer com que uma coluna na linha mova-se para fora de linha.
+
+    - Fazer com que uma coluna fora de linha mova-se para dentro da linha.
+
+    - Crie uma nova coluna fora de linha.
+
+    - *Exceção:* o aumento de uma coluna já fora de linha é registrado de forma otimizada. 
   
-## <a name="examples"></a>Exemplos  
+<a id="examples" class="xliff"></a>
+
+## Exemplos  
  O exemplo a seguir altera o número de buckets de um índice de hash existente. Isso recompila o índice de hash com o novo número de buckets, enquanto outras propriedades do índice de hash permanecem as mesmas.  
   
 ```tsql
@@ -150,29 +179,10 @@ GO
 
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
 
-## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>Log de ALTER TABLE em tabelas com otimização de memória
 
+<a id="see-also" class="xliff"></a>
 
-Em uma tabela com otimização de memória, a maioria dos cenários de ALTER TABLE agora é executada em paralelo e resulta em uma otimização das gravações no log de transações. A otimização é que apenas as alterações de metadados são gravadas no log de transações. No entanto, as operações de ALTER TABLE a seguir são executadas em thread único e não têm otimização de log.
-
-As operações de thread único requerem que todo o conteúdo da tabela alterada seja gravado no log. A seguir, a lista das operações de thread único:
-
-- Alterar ou adicionar uma coluna para usar um tipo de objeto grande (LOB): nvarchar(max), varchar(max) ou varbinary(max).
-
-- Adicionar ou remover um índice COLUMNSTORE.
-
-- Quase tudo o que afeta uma [coluna fora de linha](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).
-
-    - Fazer com que uma coluna na linha mova-se para fora de linha.
-
-    - Fazer com que uma coluna fora de linha mova-se para dentro da linha.
-
-    - Crie uma nova coluna fora de linha.
-
-    - *Exceção:* o aumento de uma coluna já fora de linha é registrado de forma otimizada.
-
-
-## <a name="see-also"></a>Consulte também  
+## Consulte também  
 
 [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   

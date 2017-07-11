@@ -19,23 +19,27 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
-ms.openlocfilehash: 4650cfdda4eef32d1d09f4d4407b61f964832b8d
+ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
+ms.openlocfilehash: 53e0f5d479d7fc3cdeae2c6ce121734b6fc16f21
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 06/28/2017
 
 ---
-# <a name="monitoring-performance-by-using-the-query-store"></a>Monitorar o desempenho usando o Repositório de Consultas
+<a id="monitoring-performance-by-using-the-query-store" class="xliff"></a>
+
+# Monitorar o desempenho usando o Repositório de Consultas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   O recurso Repositório de Consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece informações sobre escolha e desempenho do plano de consulta. Ele simplifica a solução de problemas, ajudando você a identificar rapidamente diferenças de desempenho causadas por alterações nos planos de consulta. O Repositório de Consultas captura automaticamente um histórico das consultas, dos planos e das estatísticas de tempo de execução e os mantém para sua análise. Ele separa os dados por janelas por hora, permitindo que você veja os padrões de uso do banco de dados e entenda quando as alterações aos planos de consulta ocorreram no servidor. O repositório de consultas pode ser configurado usando a opção [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
   
  Para obter informações sobre operar o Repositório de consultas no Banco de dados SQL do Azure, consulte [Operando o Repositório de Consultas no Banco de dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/).  
   
-##  <a name="Enabling"></a> Enabling the Query Store  
+##  <a name="Enabling"></a> Habilitando o Repositório de Consultas  
  O repositório de consultas não está ativo para novos bancos de dados por padrão.  
   
-#### <a name="use-the-query-store-page-in-management-studio"></a>Usar a página Repositório de Consultas no Management Studio  
+<a id="use-the-query-store-page-in-management-studio" class="xliff"></a>
+
+#### Usar a página Repositório de Consultas no Management Studio  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um banco de dados e clique em **Propriedades**.  
   
@@ -46,7 +50,9 @@ ms.lasthandoff: 06/23/2017
   
 3.  Na caixa **Modo de operação (Solicitado)** , selecione **Ativado**.  
   
-#### <a name="use-transact-sql-statements"></a>Usar Instruções Transact-SQL  
+<a id="use-transact-sql-statements" class="xliff"></a>
+
+#### Usar Instruções Transact-SQL  
   
 1.  Use a instrução **ALTER DATABASE** para habilitar o repositório de consultas. Por exemplo:  
   
@@ -63,7 +69,9 @@ ms.lasthandoff: 06/23/2017
  Planos de execução para qualquer consulta específica no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente envolvem horas extras por vários motivos diferentes, como alterações de estatísticas, alterações de esquema, criação/exclusão de índices, etc. O cache de procedimento (no qual os planos de consulta em cache são armazenados) armazena apenas o plano de execução mais recente. Os planos também são removidos do cache do plano devido à pressão da memória. Como resultado, as regressões do desempenho de consulta causadas por alterações no plano de execução podem não ser triviais e podem ter resolução lenta.  
   
  Como o repositório de consultas mantém vários planos de execução por consulta, ele pode impor políticas para direcionar o processador de consultas para usar um plano de execução específico para uma consulta. Isso é conhecido como imposição de plano. A imposição de plano no repositório de consultas é fornecida usando um mecanismo semelhante à dica de consulta [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) , mas não requer nenhuma alteração nos aplicativos do usuário. A imposição de plano pode resolver uma regressão de desempenho de consulta causada por uma alteração do plano em um período muito curto.  
-  
+
+ As **estatísticas de espera** são outra fonte de informações que ajudam a solucionar problemas de desempenho no SQL Server. Por muito tempo, as estatísticas de espera estavam disponíveis somente no nível da instância, o que tornava difícil refazer o caminho para a consulta real. No SQL Server 2017 e no Banco de Dados SQL do Azure adicionamos outra dimensão no Repositório de Consultas que controla as estatísticas de espera. 
+
  Cenários comuns para o uso do recurso Repositório de Consultas são:  
   
 -   Localizar e corrigir rapidamente uma regressão de desempenho do plano, forçando o plano de consulta anterior. Corrigir consultas com regressão recente no desempenho devido a alterações no plano de execução.  
@@ -75,8 +83,15 @@ ms.lasthandoff: 06/23/2017
 -   Fazer auditoria de histórico dos planos de consulta para determinada consulta.  
   
 -   Analisar os padrões de uso dos recursos (CPU, E/S e memória) para determinado banco de dados.  
+-   Identifique as principais n consultas que estão esperando em recursos. 
+-   Entenda a natureza de espera de um plano ou de uma consulta específica.
   
- O armazenamento de consultas contém dois repositórios; um **repositório de planos** para manter as informações do plano de execução e um **repositório de estatísticas de tempo de execução** para manter as informações de estatísticas de execução. O número de planos exclusivos que pode ser armazenado para uma consulta no repositório de planos é limitado pela opção de configuração **max_plans_per_query** . Para melhorar o desempenho, as informações são gravadas nos dois repositórios de forma assíncrona. Para otimizar o uso do espaço, as estatísticas de tempo de execução no repositório de estatísticas de tempo de execução são agregadas em uma janela de tempo fixa. As informações nesses repositórios são visíveis consultando as exibições de catálogo do repositório de consultas.  
+O Repositório de Consultas contém três repositórios:
+- um **repositório de plano** para manter as informações de plano de execução
+- um **repositório de estatísticas de tempo de execução** para manter as informações de estatísticas de execução. 
+- um **repositório de estatísticas de espera** para manter as informações de estatísticas de espera.
+ 
+ O número de planos exclusivos que pode ser armazenado para uma consulta no repositório de planos é limitado pela opção de configuração **max_plans_per_query** . Para melhorar o desempenho, as informações são gravadas nos dois repositórios de forma assíncrona. Para otimizar o uso do espaço, as estatísticas de tempo de execução no repositório de estatísticas de tempo de execução são agregadas em uma janela de tempo fixa. As informações nesses repositórios são visíveis consultando as exibições de catálogo do repositório de consultas.  
   
  A consulta a seguir retorna informações sobre consultas e planos no repositório de consultas.  
   
@@ -89,7 +104,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
  
-##  <a name="Regressed"></a> Use the Regressed Queries Feature  
+##  <a name="Regressed"></a> Usar o recurso Consultas Regredidas  
  Depois de habilitar o repositório de consultas, atualize a parte do banco de dados do painel Pesquisador de Objetos para adicionar a seção **Repositório de Consultas** .  
   
  ![Árvore do repositório de consulta no Pesquisador de Objetos](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Árvore do repositório de consulta no Pesquisador de Objetos")  
@@ -99,8 +114,22 @@ JOIN sys.query_store_query_text AS Txt
  ![Consultas regressadas no Pesquisador de Objetos](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Consultas regressadas no Pesquisador de Objetos")  
   
  Para impor um plano, selecione uma consulta e um plano e, em seguida, clique em **Impor Plano.** Você pode impor apenas planos que foram salvos pelo recurso de plano de consulta e ainda são mantidos no cache do plano de consulta.  
- 
-##  <a name="Options"></a> Configuration Options 
+##  <a name="Waiting"></a> Localizando consultas de espera
+
+A partir do SQL Server 2017 CTP 2.0 e do Banco de Dados SQL do Azure, as estatísticas de espera por consulta estão disponíveis para clientes do Repositório de Consultas. No Repositório de Consultas os tipos de espera são combinados em **categorias de espera**. O mapeamento completo está disponível aqui [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)
+
+As **categorias de espera** combinam tipos diferentes de espera em buckets semelhantes por natureza. Categorias de espera diferentes exigem um acompanhamento de análise diferente para resolver o problema, mas os tipos de espera da mesma categoria levam a experiências de solução de problemas muito semelhantes e fornecer a consulta afetada com base nas esperas seria a peça que faltava para concluir a maioria dessas investigações de com êxito.
+
+Aqui estão alguns exemplos de como você pode obter mais informações sobre sua carga de trabalho antes e depois de introduzir as categorias de espera no Repositório de Consultas:
+
+|||| 
+|-|-|-|  
+|Experiência anterior|Nova experiência|Ação|
+|RESOURCE_SEMAPHORE alto de esperas por banco de dados|Esperas de memória alta no Repositório de Consultas para consultas específicas|Localize as consultas com maior consumo de memória no Repositório de Consultas. Essas consultas estão provavelmente atrasando o andamento das consultas afetadas. Considere usar a dica de consulta MAX_GRANT_PERCENT para essas consultas ou para as consultas afetadas.|
+|Espera de LCK_M_X alta por banco de dados|Esperas de bloqueio altas no Repositório de Consultas para consultas específicas|Verifique os textos de consulta das consultas afetadas e identifique as entidades de destino. Pesquise outras consultas no Repositório de Consultas que modificam a mesma entidade, que são executadas com frequência e/ou têm alta duração. Depois de identificar essas consultas, considere alterar a lógica do aplicativo para melhorar a simultaneidade ou use um nível de isolamento menos restritivo.|
+|Esperas de PAGEIOLATCH_SH altas por banco de dados|Esperas de buffer de E/S altas no Repositório de Consultas para consultas específicas|Localize as consultas com um grande número de leituras físicas no Repositório de Consultas. Se elas corresponderem às consultas com esperas de E/S, considere introduzir um índice na entidade subjacente, para fazer buscas em vez de verificações e, portanto, minimizar a sobrecarga de E/S das consultas.|
+|Esperas de SOS_SCHEDULER_YIELD altas por banco de dados|Esperas de CPU altas no Repositório de Consultas para consultas específicas|Localize as consultas com maior consumo de CPU no Repositório de Consultas. Entre elas, identifique as consultas para as quais a tendência de CPU alta se correlaciona às esperas de CPU altas para as consultas afetadas. Concentre-se em otimizar essas consultas – poderia haver uma regressão de plano ou talvez um índice ausente.| 
+##  <a name="Options"></a> Opções de configuração 
 
 As seguintes opções estão disponíveis para configurar parâmetros de repositório de consulta.
 
@@ -135,14 +164,16 @@ As seguintes opções estão disponíveis para configurar parâmetros de reposit
   
  Para obter mais informações sobre como definir opções usando instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , consulte [Gerenciamento de opção](#OptionMgmt).  
   
-##  <a name="Related"></a> Related Views, Functions, and Procedures  
+##  <a name="Related"></a> Exibições, Funções e Procedimentos Relacionados  
  Exiba e gerencie o Repositório de Consultas por meio do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou usando as exibições e os procedimentos a seguir.  
 
 ||| 
 |-|-|  
 |[sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
   
-### <a name="query-store-catalog-views"></a>Exibições do catálogo de repositório de consulta  
+<a id="query-store-catalog-views" class="xliff"></a>
+
+### Exibições do catálogo de repositório de consulta  
  As exibições do catálogo apresentam informações sobre o Repositório de Consultas.  
 
 ||| 
@@ -152,7 +183,9 @@ As seguintes opções estão disponíveis para configurar parâmetros de reposit
 |[sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|  
 |[sys.query_store_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
   
-### <a name="query-store-stored-procedures"></a>Procedimentos armazenados do repositório de consulta  
+<a id="query-store-stored-procedures" class="xliff"></a>
+
+### Procedimentos armazenados do repositório de consulta  
  Os procedimentos armazenados configuram o Repositório de Consultas.  
 
 ||| 
@@ -163,7 +196,7 @@ As seguintes opções estão disponíveis para configurar parâmetros de reposit
  
 ##  <a name="Scenarios"></a> Principais cenários de uso  
   
-###  <a name="OptionMgmt"></a> Option Management  
+###  <a name="OptionMgmt"></a> Gerenciamento de opção  
  Esta seção fornece algumas diretrizes sobre como gerenciar recursos do próprio repositório de consultas.  
   
  **O Repositório de Consultas está ativo no momento?**  
@@ -233,7 +266,8 @@ SET QUERY_STORE (
     INTERVAL_LENGTH_MINUTES = 15,  
     SIZE_BASED_CLEANUP_MODE = AUTO,  
     QUERY_CAPTURE_MODE = AUTO,  
-    MAX_PLANS_PER_QUERY = 1000  
+    MAX_PLANS_PER_QUERY = 1000,
+    WAIT_STATS_CAPTURE_MODE = ON 
 );  
 ```  
   
@@ -287,7 +321,7 @@ DEALLOCATE adhoc_queries_cursor;
 -   **sp_query_store_remove_plan** – para remover um único plano.  
  
   
-###  <a name="Peformance"></a> Performance Auditing and Troubleshooting  
+###  <a name="Peformance"></a> Auditoria e solução de problemas de desempenho  
  O Repositório de Consultas mantém um histórico das métricas de compilação e de tempo de execução durante as execuções de consulta, permitindo que você faça perguntas sobre sua carga de trabalho.  
   
  **Últimas *n* consultas executadas no banco de dados?**  
@@ -424,7 +458,24 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
 ```  
   
  Para ver todas as regressões de desempenho (não apenas as relacionadas a alteração na escolha do plano), basta remover a condição `AND p1.plan_id <> p2.plan_id` da consulta anterior.  
-  
+
+ **Consultas que estão aguardando mais?**
+ Essa consulta retornará as dez principais consultas que mais esperam. 
+ 
+ ```tsql 
+  SELECT TOP 10
+    qt.query_text_id,
+    q.query_id,
+    p.plan_id,
+    sum(total_query_wait_time_ms) AS sum_total_wait_ms
+FROM sys.query_store_wait_stats ws
+JOIN sys.query_store_plan p ON ws.plan_id = p.plan_id
+JOIN sys.query_store_query q ON p.query_id = q.query_id
+JOIN sys.query_store_query_text qt ON q.query_text_id = qt.query_text_id
+GROUP BY qt.query_text_id, q.query_id, p.plan_id
+ORDER BY sum_total_wait_ms DESC
+ ```
+ 
  **Consultas com regressão recente de desempenho (comparando execuções recentes e históricas)?** A próxima consulta compara os períodos de execução baseados na execução da consulta. Nesse exemplo específico, a consulta compara a execução no período recente (uma hora) com o período do histórico (último dia) e identifica as que introduziram o `additional_duration_workload`. Essa métrica é calculada como uma diferença entre a média de execução recente e a média de execução do histórico, multiplicado pelo número de execuções recentes. Representa, na verdade, quanto de duração adicional as execuções recentes introduziram em comparação com histórico:  
   
 ```tsql  
@@ -509,7 +560,7 @@ OPTION (MERGE JOIN);
 ```  
  
   
-###  <a name="Stability"></a> Maintaining Query Performance Stability  
+###  <a name="Stability"></a> Manter a estabilidade do desempenho da consulta  
  Para consultas executadas várias vezes, você pode perceber que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa diferentes planos, resultando em diferentes utilizações de recurso e duração. Com o Repositório de Consultas, você pode detectar quando o desempenho da consulta regrediu e determinar o plano ideal dentro de um período de interesse. Em seguida, você pode impor esse plano ideal para execução futura da consulta.  
   
  Você também pode identificar desempenho inconsistente de consulta para uma consulta com parâmetros ( autoparametrizada ou parametrizada manualmente). Entre diferentes planos, você pode identificar o plano que é rápido e ideal o suficiente para todos ou a maioria dos valores de parâmetro e impor esse plano, mantendo desempenho previsível para o conjunto mais amplo de cenários de usuário.  
@@ -528,7 +579,9 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+<a id="see-also" class="xliff"></a>
+
+## Consulte também  
  [Prática recomendada com o Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Usar o Repositório de Consultas com OLTP na memória](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Cenários de uso do Repositório de Consultas](../../relational-databases/performance/query-store-usage-scenarios.md)   

@@ -32,10 +32,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d68baa882e382b2b68e5eded3ea7807e4b13aa6d
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="populate-full-text-indexes"></a>Popular índices de texto completo
+<a id="populate-full-text-indexes" class="xliff"></a>
+
+# Popular índices de texto completo
   A criação e a manutenção de um índice de texto completo envolvem popular o índice usando um processo chamado *população* (também conhecido como *rastreamento*).  
   
 ##  <a name="types"></a> Types of population  
@@ -44,7 +46,9 @@ Um índice de texto completo dá suporte aos seguintes tipos de população:
 -   População automática ou manual com base em **controle de alterações**
 -   População incremental com base em um **carimbo de data/hora**
   
-## <a name="full-population"></a>População completa  
+<a id="full-population" class="xliff"></a>
+
+## População completa  
  Durante uma população completa, entradas de índice são criadas para todas as linhas de uma tabela ou exibição indexada. Uma população completa de um índice de texto completo cria entradas de índice para todas as linhas da tabela base ou da exibição indexada.  
   
 Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] popula totalmente um novo índice de texto completo assim que ele é criado.
@@ -53,7 +57,9 @@ Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] popula 
 
 Para criar um índice de texto completo sem populá-lo imediatamente, especifique a `CHANGE_TRACKING OFF, NO POPULATION` cláusula na instrução `CREATE FULLTEXT INDEX`. Se você especificar `CHANGE_TRACKING MANUAL`, o mecanismo de texto completo não populará o novo índice de texto completo até que você execute uma instrução `ALTER FULLTEXT INDEX` usando a cláusula `START FULL POPULATION` ou `START INCREMENTAL POPULATION`. 
 
-### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>Exemplo – criar um índice de texto completo sem executar uma população completa  
+<a id="example---create-a-full-text-index-without-running-a-full-population" class="xliff"></a>
+
+### Exemplo – criar um índice de texto completo sem executar uma população completa  
  O exemplo a seguir cria um índice de texto completo na tabela `Production.Document` do banco de dados de exemplo `AdventureWorks` . Este exemplo usa `WITH CHANGE_TRACKING OFF, NO POPULATION` para atrasar a população completa inicial.  
   
 ```tsql
@@ -72,7 +78,9 @@ GO
   
 ```  
   
-### <a name="example---run-a-full-population-on-a-table"></a>Exemplo – executar uma população completa em uma tabela  
+<a id="example---run-a-full-population-on-a-table" class="xliff"></a>
+
+### Exemplo – executar uma população completa em uma tabela  
  O exemplo a seguir executa uma população completa na tabela `Production.Document` do banco de dados de exemplo `AdventureWorks` .  
   
 ```tsql
@@ -80,7 +88,9 @@ ALTER FULLTEXT INDEX ON Production.Document
    START FULL POPULATION;  
 ```  
    
-## <a name="population-based-on-change-tracking"></a>População com base em controle de alterações
+<a id="population-based-on-change-tracking" class="xliff"></a>
+
+## População com base em controle de alterações
  Como opção, você pode usar o controle de alterações para manter um índice de texto completo após a população completa inicial. Há uma pequena sobrecarga associada ao controle de alterações porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém uma tabela em que controla as alterações feitas na tabela base desde a última população. Quando você usa o controle de alterações, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém um registro das linhas na tabela base ou na exibição indexada que foram modificadas por atualizações, exclusões ou inserções. As alterações nos dados feitas por meio de WRITETEXT e UPDATETEXT não são refletidas no índice de texto completo e não são coletadas pelo controle de alterações.  
   
 > [!NOTE]  
@@ -88,7 +98,9 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  Quando você habilita o controle de alterações durante a criação do índice, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] popula completamente o novo índice de texto completo imediatamente após sua criação. Consequentemente, as alterações são controladas e propagadas para o índice de texto completo.
 
-### <a name="enable-change-tracking"></a>Habilitar o controle de alterações
+<a id="enable-change-tracking" class="xliff"></a>
+
+### Habilitar o controle de alterações
 Há dois tipos de controle de alterações:
 -   Automático (opção `CHANGE_TRACKING AUTO`). O controle de alterações automático é o comportamento padrão.
 -   Manual (opção `CHANGE_TRACKING MANUAL`).   
@@ -149,14 +161,18 @@ Há dois tipos de controle de alterações:
     GO  
     ```
    
-### <a name="disable-change-tracking"></a>Desabilitar o controle de alterações 
+<a id="disable-change-tracking" class="xliff"></a>
+
+### Desabilitar o controle de alterações 
   
 -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
   
 -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
    
   
-## <a name="incremental-population-based-on-a-timestamp"></a>População incremental com base em um carimbo de data/hora  
+<a id="incremental-population-based-on-a-timestamp" class="xliff"></a>
+
+## População incremental com base em um carimbo de data/hora  
  Uma população incremental é um mecanismo alternativo para popular um índice de texto completo manualmente. Se uma tabela tiver um volume alto de inserções, usar a população incremental poderá ser mais eficiente do que usar a população manual.
  
  Você pode executar uma população incremental para um índice de texto completo que tem CHANGE_TRACKING definido como MANUAL ou OFF. 
@@ -170,7 +186,9 @@ Em alguns casos, a solicitação de uma população incremental resulta em uma p
 -   Se a primeira população em um índice de texto completo for uma população incremental, ele indexará todas as linhas, tornando-a equivalente a uma população completa. 
 -   Se nenhum metadado que afete o índice de texto completo da tabela for alterado desde a última população, as solicitações de população incremental serão implementadas como populações completas. Isso inclui alterações de metadados geradas pela alteração de qualquer coluna, índice ou definições de índice de texto completo. 
 
-### <a name="run-an-incremental-population"></a>Executar uma população incremental
+<a id="run-an-incremental-population" class="xliff"></a>
+
+### Executar uma população incremental
   
  Para executar uma população incremental, execute uma instrução `ALTER FULLTEXT INDEX` usando a cláusula `START INCREMENTAL POPULATION`.  
   
@@ -221,11 +239,13 @@ O arquivo de log de rastreamento segue o seguinte esquema de nomeação:
 As partes variáveis do nome do arquivo de log de rastreamento são as seguintes.
 -   <**DatabaseID**> – a ID de um banco de dados. <**dbid**> é um número de cinco dígitos com zeros à esquerda.  
 -   <**FullTextCatalogID**> – ID do catálogo de texto completo. <**catid**> é um número de cinco dígitos com zeros à esquerda.  
--   <**n**> – É um inteiro que indica um ou mais logs de rastreamento que existem do mesmo catálogo de texto completo.  
+-   <**n**> – é um inteiro que indica que existe um ou mais logs de rastreamento do mesmo catálogo de texto completo.  
   
  Por exemplo, `SQLFT0000500008.2` é o arquivo de log de rastreamento de um banco de dados com a ID de banco de dados = 5 e a ID de catálogo de texto completo = 8. O 2 no final do nome do arquivo indica que há dois arquivos de log de rastreamento para esse par de banco de dados/catálogo.  
 
-## <a name="see-also"></a>Consulte também  
+<a id="see-also" class="xliff"></a>
+
+## Consulte também  
  [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
  [Iniciar a pesquisa de texto completo](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Criar e gerenciar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md)   

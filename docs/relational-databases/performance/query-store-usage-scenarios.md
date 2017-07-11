@@ -18,13 +18,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce278d494e2d5ab7dfc82e244a9d6b8821099cc0
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: 171f33aa7ff745b8a66efe2cd5f3879d78b1c9f4
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="query-store-usage-scenarios"></a>Cenários de uso do Repositório de Consultas
+<a id="query-store-usage-scenarios" class="xliff"></a>
+
+# Cenários de uso do Repositório de Consultas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   O Repositório de Consultas pode ser usado em um amplo conjunto de cenários ao rastrear e garantir que o desempenho previsível da carga de trabalho é essencial. Veja alguns exemplos que você pode levar em consideração:  
@@ -35,29 +37,33 @@ ms.lasthandoff: 04/11/2017
   
 -   Fazer testes A/B  
   
--   Manter a estabilidade do desempenho durante a atualização para o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+-   Manter a estabilidade do desempenho durante a atualização para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais recente  
   
 -   Identificar e melhorar cargas de trabalho ad hoc  
   
-## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>Apontar e corrigir consultas com regressões de escolha do plano  
+<a id="pinpoint-and-fix-queries-with-plan-choice-regressions" class="xliff"></a>
+
+## Apontar e corrigir consultas com regressões de escolha do plano  
  Durante a execução da consulta regular, o Otimizador de Consulta pode decidir usar um plano diferente porque entradas importantes foram modificadas: a cardinalidade dos dados mudou, índices foram criados, alterados ou descartados, estatísticas foram recompiladas, etc.  Na maioria das vezes, o novo plano escolhido é melhor ou quase igual ao que estava sendo usado anteriormente. No entanto, há casos em que o novo plano é consideravelmente pior — essa situação é conhecida como regressão de alteração da escolha do plano. Antes do Repositório de Consultas, havia um problema bastante difícil de identificar e corrigir, pois o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornecia armazenamento de dados interno para que os usuários examinassem os planos de execução que eram usados ao longo do tempo.  
   
- Agora, com o Repositório de Consultas, você pode rapidamente:  
+ Com o Repositório de Consultas, você pode rapidamente:  
   
 -   Identificar todas as consultas cujas métricas de execução foram degradadas no período de interesse (última hora, dia, semana, etc.) Use as **Consultas Regredidas** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para agilizar a análise.  
   
 -   Entre as consultas regredidas, é muito fácil encontrar aquelas que tiveram vários planos e que foram degradadas devido à escolha de um plano ruim. Use o painel **Resumo do Plano** em **Consultas Regredidas** para visualizar todos os planos de uma consulta regredida e o respectivo desempenho ao longo do tempo.  
   
--   Forçar o plano anterior no histórico, caso seja provado que ele é melhor. Use o botão **Forçar Plano** em **Consultas Regredidas** de modo a forçar o plano selecionado para a consulta.  
+-   Forçar o plano anterior no histórico, caso seja provado que ele é melhor. Usar o botão **Forçar plano** em **Consultas Regredidas** para forçar o plano selecionado para a consulta.  
   
  ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
  Para obter uma descrição detalhada do cenário, veja o blog [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) (Repositório de Consultas: uma caixa preta de dados para seu banco de dados).  
   
-## <a name="identify-and-tune-top-resource-consuming-queries"></a>Identificar e ajustar as principais consultas de consumo  
+<a id="identify-and-tune-top-resource-consuming-queries" class="xliff"></a>
+
+## Identificar e ajustar as principais consultas de consumo  
  Embora a carga de trabalho possa gerar milhares de consultas, no geral, apenas algumas delas usam de fato a maioria dos recursos do sistema e, portanto, exigem sua atenção. Entre as principais consultas de consumo de recurso, normalmente, você encontrará aquelas que são regredidas ou que podem ser aprimoradas com ajuste adicional.  
   
- A maneira mais fácil de começar a exploração é abrir as **Principais Consultas de Consumo de Recursos** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  A interface do usuário é separada em três painéis: um histograma que representa as principais consultas de consumo de recursos (esquerdo), um resumo do plano para a consulta selecionada (direito) e o plano de consulta visual para o plano selecionado (inferior). Clique no botão **Configurar** para controlar quantas consultas você deseja analisar e o intervalo de tempo de interesse. Além disso, você pode escolher entre diferentes dimensões de consumo de recursos (duração, CPU, memória, E/S, número de execução) e a linha de base (Média, Mín., Máx., Total, Desvio Padrão).  
+ A maneira mais fácil de começar a exploração é abrir as **Principais Consultas de Consumo de Recursos** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. A interface do usuário é separada em três painéis: um histograma que representa as principais consultas de consumo de recursos (esquerdo), um resumo do plano para a consulta selecionada (direito) e o plano de consulta visual para o plano selecionado (inferior). Clique no botão **Configurar** para controlar quantas consultas você deseja analisar e o intervalo de tempo de interesse. Além disso, você pode escolher entre diferentes dimensões de consumo de recursos (duração, CPU, memória, E/S, número de execução) e a linha de base (Média, Mín., Máx., Total, Desvio Padrão).  
   
  ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
@@ -75,8 +81,10 @@ ms.lasthandoff: 04/11/2017
   
 5.  Pense em reescrever a consulta dispendiosa. Por exemplo, aproveite a parametrização da consulta e reduza o uso do SQL dinâmico. Implemente a lógica ideal ao ler os dados (aplique a filtragem de dados no lado do banco de dados, não do aplicativo).  
   
-## <a name="ab-testing"></a>Fazer testes A/B  
- Use o Repositório de Consultas para comparar o desempenho da carga de trabalho antes e depois da alteração de aplicativo que você planeja introduzir.  A lista a seguir contém vários exemplos em que é possível usar o Repositório de Consultas para avaliar o impacto do ambiente ou a alteração do aplicativo no desempenho da carga de trabalho:  
+<a id="ab-testing" class="xliff"></a>
+
+## Fazer testes A/B  
+ Use o Repositório de Consultas para comparar o desempenho da carga de trabalho antes e depois da alteração de aplicativo que você planeja introduzir. A lista a seguir contém vários exemplos em que é possível usar o Repositório de Consultas para avaliar o impacto do ambiente ou a alteração do aplicativo no desempenho da carga de trabalho:  
   
 -   Distribuindo a nova versão do aplicativo.  
   
@@ -98,7 +106,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  Compare os resultados de 1 a 3.  
   
-    1.  Abra **Consumo Geral do Banco de Dados** para determinar o impacto no banco de dados inteiro  
+    1.  Abra **Consumo geral do banco de dados** para determinar o impacto no banco de dados inteiro.  
   
     2.  Abra **Principais Consultas de Consumo de Recursos** (ou execute sua própria análise usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]) para analisar o impacto da alteração nas consultas mais importantes.  
   
@@ -118,22 +126,26 @@ ms.lasthandoff: 04/11/2017
   
  Com base na análise, você provavelmente mantém o índice, uma vez que o desempenho da consulta foi aprimorado.  
   
-## <a name="keep-performance-stability-during-the-upgrade-to-sql-server-2016"></a>Manter a estabilidade do desempenho durante a atualização para o SQL Server 2016  
+## <a name="CEUpgrade"></a> Manter a estabilidade do desempenho durante a atualização para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais recente  
  Antes do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], os usuários eram expostos ao risco de regressão de desempenho durante a atualização para a versão mais recente da plataforma. O motivo disso era o fato de que a versão mais recente do Otimizador de Consulta ficava ativa imediatamente assim que novos bits eram instalados.  
   
- A partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , todas as alterações no Otimizador de Consulta são associadas ao `COMPATIBILITY_LEVEL`mais recente, de modo que os planos não são alterados diretamente no ponto da atualização, mas sim quando um usuário muda o `COMPATIBILITY_LEVEL` para o mais recente. Esse recurso, em combinação com o Repositório de Consultas, fornece um excelente nível de controle sobre o desempenho da consulta no processo de atualização. O fluxo de trabalho de atualização recomendado é mostrado na imagem a seguir:  
+ A partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] todas as alterações do otimizador de consulta são associadas ao [nível de compatibilidade do banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) mais recente, portanto, os planos não são alterados diretamente no ponto de atualização, mas sim quando um usuário altera o `COMPATIBILITY_LEVEL` para o mais recente. Esse recurso, em combinação com o Repositório de Consultas, fornece um excelente nível de controle sobre o desempenho da consulta no processo de atualização. O fluxo de trabalho de atualização recomendado é mostrado na figura a seguir:  
   
  ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
-1.  Atualize o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem alterar o `COMPATIBILITY_LEVEL`. Ele não expõe você ao Otimizador de Consulta mais recente, mas fornece recursos do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , incluindo o Repositório de Consultas.  
+1.  Atualizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem alterar o nível de compatibilidade do banco de dados. Isso não expõe as últimas alterações do otimizador de consulta, mas ainda fornece os recursos mais recente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo o Repositório de Consultas.  
   
-2.  Habilite o Repositório de Consultas: capture consultas e planos e estabeleça a linha de base de desempenho com o `COMPATIBILITY_LEVEL`anterior. Mantenha-se nesta etapa tempo suficiente para capturar todos os planos e estabilizar a linha de base.  
+2.  Habilite o Repositório de Consultas. Para obter mais informações sobre este tópico, consulte [Manter o Repositório de Consultas ajustado à sua carga de trabalho](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
+
+3.  Permitir que o Repositório de Consultas capture consultas e planos e estabeleça uma linha de base de desempenho com o nível de compatibilidade do banco de dados original/anterior. Mantenha-se nesta etapa tempo suficiente para capturar todos os planos e uma linha de base estável. Isso pode ter a duração de um ciclo comercial normal de uma carga de trabalho de produção.  
   
-3.  Passe para o nível de compatibilidade mais recente: exponha a carga de trabalho ao Otimizador de Consulta mais recente e permita que ele crie potencialmente novos planos.  
+4.  Passe para o nível de compatibilidade do banco de dados mais recente: exponha sua carga de trabalho para as últimas alterações do otimizador de consulta e deixe-o possivelmente criar novos planos.  
   
-4.  Use o Repositório de Consultas para correções de regressão e análise: para a maioria, o novo Otimizador de Consulta deve gerar planos melhores. No entanto, o Repositório de Consultas fornecerá uma maneira fácil de identificar as regressões de escolha do plano e as corrigirá usando o mecanismo para forçar o plano.  
+5.  Use o Repositório de Consultas para correções de regressão e análise: geralmente, as novas alterações do otimizador de consulta geram planos melhores. No entanto, o Repositório de Consultas fornecerá uma maneira fácil de identificar as regressões de escolha do plano e corrigi-las usando um mecanismo para forçar plano.  
   
-## <a name="identify-and-improve-ad-hoc-workloads"></a>Identificar e melhorar cargas de trabalho ad hoc  
+<a id="identify-and-improve-ad-hoc-workloads" class="xliff"></a>
+
+## Identificar e melhorar cargas de trabalho ad hoc  
  Algumas cargas de trabalho não têm consultas dominantes que você possa ajustar a fim de melhorar o desempenho geral do aplicativo. Geralmente, essas cargas de trabalho são caracterizadas por um número relativamente grande de consultas diferentes, cada uma delas consumindo parte dos recursos do sistema. Sendo exclusivas, essas consultas são executadas muito raramente (em geral, apenas uma vez, por isso, ad hoc), de modo que o respectivo consumo do tempo de execução não é crítico. Por outro lado, considerando que esse aplicativo está gerando novas consultas o tempo todo, uma parte significativa dos recursos do sistema é gasto na compilação de consulta, o que não é ideal. Essa não é uma situação ideal para o Repositório de Consultas, uma vez que o número grande de consultas e planos enchem o espaço que você reservou, o que significa que o Repositório de Consultas provavelmente acabará no modo somente leitura muito rapidamente. Se você ativou a **Política de Limpeza Baseada em Tamanho** ([altamente recomendado](https://msdn.microsoft.com/library/mt604821.aspx) para manter o Repositório de Consultas sempre funcionando), o processo em segundo plano limpará as estruturas do Repositório de Consultas na maior parte do tempo, também usando recursos significativos do sistema.  
   
  A exibição**Principais Consultas de Consumo de Recursos** fornecerá a primeira indicação da natureza ad hoc da carga de trabalho:  
@@ -144,7 +156,7 @@ ms.lasthandoff: 04/11/2017
   
  Como alternativa, é possível executar o script [!INCLUDE[tsql](../../includes/tsql-md.md)] para obter o número total de textos de consulta, consultas e planos no sistema e determinar o quanto eles são diferentes comparando os respectivos query_hash e plan_hash:  
   
-```  
+```tsql  
 /*Do cardinality analysis when suspect on ad-hoc workloads*/  
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
@@ -165,8 +177,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
  A abordagem com modelos de consulta individuais exige a criação do guia de plano:  
   
-```  
-  
+```tsql  
 /*Apply plan guide for the selected query template*/  
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
@@ -188,21 +199,23 @@ EXEC sp_create_plan_guide
   
  Se todas as consultas (ou a maioria delas) forem candidatas à parametrização automática, alterar `FORCED PARAMETERIZATION` para o banco de dados inteiro poderá ser uma opção mais adequada:  
   
-```  
-  
+```tsql  
 /*Apply forced parameterization for entire database*/  
 ALTER DATABASE <database name> SET PARAMETERIZATION  FORCED;  
 ```  
-  
+
+ > [!NOTE]
+ > Para obter mais informações sobre este tópico, consulte [Diretrizes para uso da parametrização forçada](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).
+
  Depois de aplicar algumas dessas etapas, **Principais Consultas de Consumo de Recursos** mostrará uma imagem diferente da sua carga de trabalho.  
   
  ![query-store-usage-8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
   
- Em alguns casos, seu aplicativo pode gerar muitas consultas diferentes que não são boas candidatas à parametrização automática. Nesse caso, você verá um grande número de consultas no sistema, mas a taxa entre consultas exclusivas e query_hash exclusivo é, provavelmente, próximo a 1.  
+ Em alguns casos, seu aplicativo pode gerar muitas consultas diferentes que não são boas candidatas à parametrização automática. Nesse caso, você verá um grande número de consultas no sistema, mas a taxa entre consultas exclusivas e o `query_hash` exclusivo será, provavelmente, próximo a 1.  
   
- Nesse caso, talvez seja conveniente definir 'otimizar para cargas de trabalho ad hoc' a fim de evitar desperdício de memória cache em consultas que provavelmente não serão executadas novamente. Para impedir a captura dessas consultas no Repositório de Consultas, defina `QUERY_CAPTURE_MODE` para `AUTO`.  
+ Nesse caso talvez você queira habilitar a opção de servidor [**Otimizar para cargas de trabalho ad hoc**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) para evitar desperdício de memória de cache em consultas que provavelmente não serão executadas novamente. Para impedir a captura dessas consultas no Repositório de Consultas, defina `QUERY_CAPTURE_MODE` para `AUTO`.  
   
-```  
+```tsql  
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  
@@ -218,7 +231,9 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
     (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+<a id="see-also" class="xliff"></a>
+
+## Consulte também  
  [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Melhor prática com o Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   

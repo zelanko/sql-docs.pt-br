@@ -29,10 +29,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 915d79db6a2c8f55443c92cb568bac8a9cc2c7d4
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="use-alerts-for-replication-agent-events"></a>Usar Alertas para eventos do agente de replicação
+<a id="use-alerts-for-replication-agent-events" class="xliff"></a>
+
+# Usar Alertas para eventos do agente de replicação
   Os Agentes [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporcionam um modo para monitorar eventos, como eventos do agente de replicação, usando alertas. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent monitora o log do aplicativo do Windows para eventos que são associados com alertas. Se esse evento ocorrer, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent responderá automaticamente, executando uma tarefa que você definiu e/ou enviando uma mensagem de email ou pager a um operador especificado. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui um conjunto de alertas predefinidos para agentes de replicação que você pode configurar para executar uma tarefa e/ou notificar um operador. Para obter mais informações sobre como definir uma tarefa a executar, consulte a seção “Automatizando uma resposta para um alerta” neste tópico.  
   
  Os alertas a seguir são instalados quando um computador é configurado como um Distribuidor:  
@@ -53,15 +55,21 @@ ms.lasthandoff: 04/11/2017
   
  **Para configurar os alertas de replicação predefinidos**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configurar alertas de replicação predefinidos – &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
-## <a name="viewing-the-application-log-directly"></a>Exibindo o log do aplicativo diretamente  
+<a id="viewing-the-application-log-directly" class="xliff"></a>
+
+## Exibindo o log do aplicativo diretamente  
  Para visualizar o log do aplicativo do Windows, use o recurso Visualizador de Eventos do Windows do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . O log do aplicativo contém mensagens de erro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , assim como mensagens para muitas outras atividades no computador. Ao contrário do log de erros do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , um novo aplicativo não é criado a cada vez que se inicia o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (cada sessão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grava novos eventos a um log de aplicativos existente); entretanto, é possível especificar quanto tempo os eventos registrados serão retidos. Ao exibir o log do aplicativo do Windows, é possível filtrar o log para eventos específicos. Para obter mais informações, consulte a documentação do Windows.  
   
-## <a name="automating-a-response-to-an-alert"></a>Automatizando uma resposta para um alerta  
+<a id="automating-a-response-to-an-alert" class="xliff"></a>
+
+## Automatizando uma resposta para um alerta  
  A replicação fornece um trabalho de resposta para assinaturas que apresentam falhas na validação dos dados, e também fornece uma estrutura para criar respostas automáticas adicionais para alertas. O trabalho de resposta é intitulado **Reinicializar assinaturas em falha de validação de dados** e é armazenado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, na pasta **Trabalhos** do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Para obter informações sobre como habilitar esse trabalho de resposta, consulte [configurar alertas predefinidos de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md). Se artigos em uma publicação transacional falharem na validação, o trabalho de resposta reinicializa apenas esses artigos que falharam. Se artigos em uma publicação de mesclagem apresentarem falha na validação, o trabalho de resposta reinicializa todos os artigos na publicação.  
   
-### <a name="framework-for-automating-responses"></a>Estrutura para automatizar respostas  
+<a id="framework-for-automating-responses" class="xliff"></a>
+
+### Estrutura para automatizar respostas  
  Normalmente, quando ocorre um alerta, a única informação se tem que o ajuda a entender o que causou o alerta e a ação apropriada a tomar está na própria mensagem de alerta. A análise dessas informações pode ser suscetível a erros e ser demorada. A replicação torna as respostas automáticas mais fáceis ao fornecer informações adicionais sobre o alerta na tabela do sistema **sysreplicationalerts** ; a informação fornecida já é analisada em um formato simples usado por programas personalizados.  
   
  Por exemplo, se a validação dos dados na tabela **Sales.SalesOrderHeader** no Assinante A falhar, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode acionar a mensagem 20574, notificando essa falha. A mensagem recebida será: "A assinatura do Assinante 'A', para o artigo 'SalesOrderHeader' na publicação 'MyPublication' falhou na validação de dados".  
@@ -90,7 +98,9 @@ close hc
 deallocate hc  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+<a id="see-also" class="xliff"></a>
+
+## Consulte também  
  [Administração do agente de replicação](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [Monitoramento &#40;replicação&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
