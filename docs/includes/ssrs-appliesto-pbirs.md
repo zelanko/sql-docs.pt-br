@@ -1,0 +1,1 @@
+![sim](media/yes.png)Servidor de Relatório do Power BI
