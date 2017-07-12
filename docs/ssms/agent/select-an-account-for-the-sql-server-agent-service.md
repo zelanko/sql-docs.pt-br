@@ -32,7 +32,9 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="select-an-account-for-the-sql-server-agent-service"></a>Selecionar uma conta para o Serviço do SQL Server Agent
+<a id="select-an-account-for-the-sql-server-agent-service" class="xliff"></a>
+
+# Selecionar uma conta para o Serviço do SQL Server Agent
 A conta de inicialização do serviço define a conta do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows na qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent é executado, bem como suas permissões de rede. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent é executado como uma conta de usuário especificada. Selecione uma conta para o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Configuration Manager, no qual estão disponíveis as seguintes opções:  
   
 -   **Conta interna**. Em uma lista, você pode escolher uma das seguintes contas de serviço Windows internas:  
@@ -44,7 +46,9 @@ A conta de inicialização do serviço define a conta do [!INCLUDE[msCoName](../
   
 -   **Esta conta**. Permite-lhe especificar a conta de domínio do Windows na qual deve ser executado o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Recomendamos escolher uma conta de usuário do Windows que não seja membro do grupo **Administradores** do Windows. Porém, há limitações ao uso de administração multisservidor quando a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent não é membro do grupo **Administradores** local. Para obter mais informações, consulte 'Tipos de conta de serviço com suporte' a seguir neste tópico.  
   
-## <a name="windows-domain-account-permissions"></a>Permissões de contas de domínio do Windows  
+<a id="windows-domain-account-permissions" class="xliff"></a>
+
+## Permissões de contas de domínio do Windows  
 Para maior segurança, selecione **Esta conta**, que especifica uma conta de domínio do Windows. A conta de domínio do Windows que você especificar deve ter as seguintes permissões:  
   
 -   Em todas as versões do Windows, permissão para efetuar logon como um serviço (SeServiceLogonRight)  
@@ -68,14 +72,18 @@ Para maior segurança, selecione **Esta conta**, que especifica uma conta de dom
 > [!NOTE]  
 > Para receber notificação de alertas do WMI, a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent deve deter permissão para o namespace que contém os eventos do WMI e ALTER ANY EVENT NOTIFICATION.  
   
-## <a name="sql-server-role-membership"></a>Associação a funções do SQL Server  
+<a id="sql-server-role-membership" class="xliff"></a>
+
+## Associação a funções do SQL Server  
 A conta em cujo nome é executado o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent deve ser membro das seguintes funções do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] :  
   
 -   A conta deve ser membro da função de servidor fixa **sysadmin** .  
   
 -   Para usar o processamento de trabalhos multisservidor, a conta deve ser membro da função de banco de dados **TargetServersRole** do **msdb** no servidor mestre.  
   
-## <a name="supported-service-account-types"></a>Tipos de conta de serviço com suporte  
+<a id="supported-service-account-types" class="xliff"></a>
+
+## Tipos de conta de serviço com suporte  
 A tabela a seguir lista os tipos de conta do Windows que podem ser usadas para o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
   
 |Tipo de conta de serviço|Servidor não cluster|Servidor em cluster|Controlador de domínio (não cluster)|  
@@ -87,29 +95,39 @@ A tabela a seguir lista os tipos de conta do Windows que podem ser usadas para o
 |Conta Sistema Local (NT AUTHORITY\System)|Tem suporte<br /><br />Consulte Limitação 2, abaixo.|Sem suporte|Tem suporte<br /><br />Consulte Limitação 2, abaixo.|  
 |Conta do Serviço Local (NT AUTHORITY\LocalService)|Sem suporte|Sem suporte|Sem suporte|  
   
-### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Limitação 1: Usando contas não administrativas para administração multisservidor  
+<a id="limitation-1-using-non-administrative-accounts-for-multiserver-administration" class="xliff"></a>
+
+### Limitação 1: Usando contas não administrativas para administração multisservidor  
 A inscrição de servidores de destino para um servidor mestre pode falhar com a seguinte mensagem de erro: "Falha na operação de inscrição".  
   
 Para resolver esse erro, reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Para obter mais informações, veja [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser](http://msdn.microsoft.com/en-us/32660a02-e5a1-411a-9e57-7066ca459df6).  
   
-### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Limitação 2: Usando a conta Sistema Local para administração multisservidor  
+<a id="limitation-2-using-the-local-system-account-for-multiserver-administration" class="xliff"></a>
+
+### Limitação 2: Usando a conta Sistema Local para administração multisservidor  
 Quando o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent é executado com a conta Sistema Local, só haverá suporte para administração multisservidor se o servidor mestre e o servidor de destino residirem no mesmo computador. Se você usar essa configuração, será retornada a seguinte mensagem quando você inscrever servidores de destino para o servidor mestre:  
   
 "Verifique se a conta de inicialização de agente de *<target_server_computer_name>* tem direitos para fazer logon como um servidor de destino".  
   
 Você pode ignorar essa mensagem informativa. A operação de inscrição deve ser concluída com êxito. Para obter mais informações, veja [Criar um ambiente multisservidor](../../ssms/agent/create-a-multiserver-environment.md).  
   
-### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>Limitação 3: Usando a conta de Serviço de Rede, quando ela é um usuário do SQL Server  
+<a id="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user" class="xliff"></a>
+
+### Limitação 3: Usando a conta de Serviço de Rede, quando ela é um usuário do SQL Server  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent poderá não conseguir iniciar se você executar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent com a conta de Serviço de Rede e esta tiver recebido acesso explicitamente para fazer logon em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] como um usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
 Para resolver isso, reinicialize o computador em que está sendo executado o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Isso só precisa ser feito uma vez.  
   
-### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Limitação 4: Usando a conta do Serviço de Rede quando os serviços de relatório do SQL Server são executados no mesmo computador  
+<a id="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer" class="xliff"></a>
+
+### Limitação 4: Usando a conta do Serviço de Rede quando os serviços de relatório do SQL Server são executados no mesmo computador  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent poderá não conseguir iniciar se você executar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent com a conta do Serviço de Rede e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] também estiver em execução no mesmo computador.  
   
 Para resolver isso, reinicie o computador em que está sendo executado o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e, em seguida, reinicialize os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Isso só precisa ser feito uma vez.  
   
-## <a name="common-tasks"></a>Tarefas comuns  
+<a id="common-tasks" class="xliff"></a>
+
+## Tarefas comuns  
 **Para especificar a conta de inicialização do serviço do SQL Server Agent**  
   
 -   [Definir a conta de inicialização de serviço para o SQL Server Agent &amp;#40;SQL Server Configuration Manager&amp;#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
@@ -121,7 +139,9 @@ Para resolver isso, reinicie o computador em que está sendo executado o [!INCLU
 > [!NOTE]  
 > Use o Gerenciador de Configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] para especificar que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent deve ser iniciado quando o sistema operacional for iniciado.  
   
-## <a name="see-also"></a>Consulte também  
+<a id="see-also" class="xliff"></a>
+
+## Consulte também  
 [Configurando as contas de serviço do Windows](http://msdn.microsoft.com/en-us/309b9dac-0b3a-4617-85ef-c4519ce9d014)  
 [Gerenciamento de serviços usando o Gerenciador de Computador SQL](http://msdn.microsoft.com/en-us/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [Implementar a segurança do SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)  
