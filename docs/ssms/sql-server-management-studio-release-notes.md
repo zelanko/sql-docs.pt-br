@@ -21,7 +21,9 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio - Notas de Versão
+<a id="sql-server-management-studio----release-notes" class="xliff"></a>
+
+# SQL Server Management Studio - Notas de Versão
 Bem-vindo à nossa versão com disponibilidade geral do SQL Server Management Studio!  Esta versão do SQL Server Management Studio (SSMS) é uma instalação autônoma fora da versão do SQL Server. Nosso objetivo é atualizar isso frequentemente com novsa funcionalidade, correções e suporte para os recursos mais recentes no SQL Server e banco de dados SQL do Azure.  
   
 Para instalar o SQL Server Management Studio mais recente, veja [Download SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).  
@@ -61,11 +63,15 @@ Versões do SSMS não localizadas para o inglês exigem o [pacote de atualizaç�
 5. **Clicar em Ajuda ou pressionar F1 não abre a ajuda**  
 Alguns ambientes exibem o seguinte ao clicar em Ajuda ou pressionar F1: **você precisará de um novo aplicativo para abrir o ms-xhelp**. Esse erro é um problema conhecido e será corrigido em uma versão futura.
   
-## <a name="feedback"></a>Comentários  
+<a id="feedback" class="xliff"></a>
+
+## Comentários  
   
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Fórum das Ferramentas de Cliente SQL](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Registre um problema ou uma sugestão no Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback).  
   
-## <a name="see-also"></a>Consulte também  
+<a id="see-also" class="xliff"></a>
+
+## Consulte também  
 [Tutorial do SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
 [Baixar o SQL Server Management Studio &amp;#40;SSMS&amp;#41;](../ssms/download-sql-server-management-studio-ssms.md)  
 [Versões anteriores do SQL Server Management Studio](../ssms/previous-sql-server-management-studio-releases.md)  

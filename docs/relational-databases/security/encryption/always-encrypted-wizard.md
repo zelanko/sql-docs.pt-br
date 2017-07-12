@@ -21,34 +21,42 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1e2d16b6082708a23bb83de101bc6d8d16251027
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/12/2017
 
 ---
-# <a name="always-encrypted-wizard"></a>Assistente de Sempre Criptografado
+<a id="always-encrypted-wizard" class="xliff"></a>
+
+# Assistente do Always Encrypted
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Use o **Assistente de Sempre Criptografado** para ajudar a proteger dados confidenciais armazenados em um banco de dados do SQL Server. Sempre Criptografado permite que os clientes criptografem os dados confidenciais em aplicativos de cliente e nunca revelem as chaves de criptografia para o SQL Server. Como resultado, o Sempre Criptografado fornece uma separação entre aqueles que possuem os dados (e podem exibi-lo) e aqueles que gerenciam os dados (mas que não devem ter acesso).  Para obter uma descrição completa do recurso, veja [Always Encrypted &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
+  Use o **Assistente do Always Encrypted** para ajudar a proteger dados confidenciais armazenados em um banco de dados do SQL Server. O Always Encrypted permite que os clientes criptografem os dados confidenciais em aplicativos de cliente e nunca revelem as chaves de criptografia para o SQL Server. Como resultado, o Always Encrypted fornece uma separação entre aqueles que possuem os dados (e podem exibi-lo) e aqueles que gerenciam os dados (mas que não devem ter acesso).  Para obter uma descrição completa do recurso, veja [Always Encrypted &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
  Para ver uma explicação passo a passo completa que mostra como configurar o Always Encrypted com o assistente e usá-lo em um aplicativo cliente, confira [Tutorial do Banco de Dados SQL: Proteger dados confidenciais com o Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
   
- Para obter um vídeo que inclui o uso do assistente, confira [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Manter os dados confidenciais seguros com o Sempre Criptografado). Confira também o Blog da Equipe de Segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](http://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx)(Assistente de Criptografia do SSMS – Habilitando o Sempre Criptografado em algumas etapas simples).  
+ Para obter um vídeo que inclui o uso do assistente, confira [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Manter os dados confidenciais seguros com o Always Encrypted). Confira também o Blog da Equipe de Segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](http://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx)(Assistente de Criptografia do SSMS – Habilitando o Always Encrypted em algumas etapas simples).  
   
  **Permissões:** para consultar colunas criptografadas e selecionar chaves usando este assistente, é necessário ter as permissões `VIEW ANY COLUMN MASTER KEY DEFINITION` e `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` . Para criar novas chaves, você também deve ter as permissões `ALTER ANY COLUMN MASTER KEY` e `ALTER ANY COLUMN ENCRYPTION KEY` .  
   
-#### <a name="to-open-the-always-encrypted-wizard"></a>Para abrir o Assistente de Sempre Criptografado  
+<a id="to-open-the-always-encrypted-wizard" class="xliff"></a>
+
+#### Para abrir o Assistente do Always Encrypted  
   
 1.  Conecte-se ao seu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o componente do Pesquisador de objetos do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
 2.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**e clique em **Criptografar Colunas**.  
   
-## <a name="column-selection-page"></a>Página de seleção de coluna  
+<a id="column-selection-page" class="xliff"></a>
+
+## Página de seleção de coluna  
  Localize uma tabela e uma coluna e selecione um tipo de criptografia (determinístico ou aleatório) e uma chave de criptografia para as colunas selecionadas. Para descriptografar uma coluna criptografada, selecione **Texto não criptografado**. Para girar uma chave de criptografia de coluna, selecione uma chave de criptografia diferente e o assistente descriptografará a coluna e criptografará novamente a coluna com a nova chave. (Há suporte no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para a criptografia de tabelas temporais e na memória, mas ela não pode ser configurada por este assistente.)  
   
-## <a name="master-key-configuration-page"></a>Página de configuração de chave mestra  
+<a id="master-key-configuration-page" class="xliff"></a>
+
+## Página de configuração de chave mestra  
  Crie uma nova chave mestra de coluna no Repositório de Certificados do Windows ou no Cofre de Chaves do Azure. Para saber mais, confira os links abaixo em Armazenamento de chaves.  
   
  Se você escolher uma chave de criptografia de coluna gerada automaticamente na página Seleção de Coluna, configure uma chave mestra de coluna com a qual a chave de criptografia de coluna gerada será criptografada. Se você já tiver uma chave mestra de coluna definida no banco de dados, selecione-a. (Para usar uma chave mestra de coluna existente, o usuário deve ter permissão para acessar a chave). Ou, você pode gerar uma chave mestra de coluna em um armazenamento de chaves selecionado (Repositório de Certificados do Windows ou o Cofre de Chaves do Azure) e definir a chave no banco de dados.  
@@ -65,7 +73,9 @@ ms.lasthandoff: 06/22/2017
   
  O assistente só oferecia suporte a duas opções. Os Módulos de Segurança de Hardware e os repositórios de cliente devem ser configurados com [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-## <a name="always-encrypted-terms"></a>Termos do Sempre Criptografado  
+<a id="always-encrypted-terms" class="xliff"></a>
+
+## Termos do Always Encrypted  
   
 -   **Criptografia determinística** usa um método que sempre gera o mesmo valor criptografado para qualquer valor de texto não criptografado. O uso de criptografia determinística permite agrupamento, filtragem por igualdade e junção de tabelas com base em valores criptografados, mas também poderia habilitar usuários não autorizados para estimar informações sobre valores criptografados examinando padrões na coluna criptografada. Esse problema aumenta quando há um pequeno conjunto de possíveis valores criptografados, como True/False ou região Norte/Sul/Leste/Oeste. A criptografia determinística deve usar um agrupamento de colunas com uma ordem de classificação binary2 para as colunas de caracteres.  
   
@@ -75,7 +85,9 @@ ms.lasthandoff: 06/22/2017
   
 -   **Chaves de criptografia de coluna** são usadas para criptografar dados confidenciais armazenados em colunas de banco de dados. Todos os valores em uma coluna podem ser criptografados usando uma chave de criptografia de coluna única. Valores criptografados de chaves de criptografia de coluna são armazenados no banco de dados nos modos de exibição de catálogo do sistema. Você deve armazenar chaves de criptografia de coluna em um local seguro/confiável para backup.  
   
-## <a name="see-also"></a>Consulte também  
+<a id="see-also" class="xliff"></a>
+
+## Consulte também  
  [Always Encrypted &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   
