@@ -1,7 +1,7 @@
 ---
 title: Identidade visual do portal da web | Microsoft Docs
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,22 +15,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 19742f59b104d18633a954dc2f8bc9824b58ef21
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: fcca4ace177a9d606a49db485fe6c61c4ef24355
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
-# <a name="branding-the-web-portal"></a>Identidade visual do portal da Web
+# Identidade visual do portal da Web
+<a id="branding-the-web-portal" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Você pode alterar a aparência do portal da Web criando uma identidade visual para o seu negócio. Isso é feito por meio de um pacote de marca. O pacote de marca foi projetado para que você não precise de um conhecimento avançado de CSS (folha de estilo em cascata) para criá-lo.  
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
-## <a name="creating-the-brand-package"></a>Criação do pacote de marca  
+## Criação do pacote de marca
+<a id="creating-the-brand-package" class="xliff"></a>  
   
 Um pacote de marca para o Reporting Services é composto por três itens, e é empacotado como um arquivo zip.   
   
@@ -40,7 +42,8 @@ Um pacote de marca para o Reporting Services é composto por três itens, e é e
   
 Os arquivos devem ter os nomes listados acima. O arquivo zip pode receber o nome que você quiser.  
   
-### <a name="metadataxml"></a>metadata.xml  
+### metadata.xml
+<a id="metadataxml" class="xliff"></a>  
   
 O arquivo metadata.xml permite que você defina o nome do pacote de marca, e possui uma entrada de referência para os arquivos colors.json e logo.png.  
   
@@ -63,7 +66,8 @@ Exemplo com um arquivo de logotipo.
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### <a name="colorsjson"></a>Colors.json  
+### Colors.json
+<a id="colorsjson" class="xliff"></a>  
   
 Quando o pacote de marca é carregado, o servidor extrai os pares de nome/valor apropriados do arquivo colors.json e os mescla com a folha de estilo LESS mestre, brand.less. Esse arquivo LESS é processado, e o arquivo CSS resultante é fornecido ao cliente. Todas as cores na folha de estilos seguem a representação hexadecimal de seis caracteres de uma cor.  
   
@@ -114,13 +118,15 @@ Na primeira vez que você se conecta a um servidor com o Publicador de Relatóri
   
 Assim, você pode usar esse tema para todos os relatórios móveis que criar, mesmo se eles não forem para o mesmo servidor no qual seu tema está implantado.   
   
-### <a name="using-a-logo"></a>Como usar um logotipo  
+### Como usar um logotipo
+<a id="using-a-logo" class="xliff"></a>  
   
 Se você incluir um logotipo com o pacote de marca, ele será exibido no portal da Web no lugar do nome que você definiu para o portal da Web no menu Configurações do Site.  
   
 O arquivo que você incluir para o logotipo deve usar o formato de arquivo PNG. As dimensões do arquivo serão ajustadas após o upload para o servidor. Ele deve ser dimensionado para 290px x 60px aproximadamente.  
    
-## <a name="applying-the-brand-package-to-the-web-portal"></a>Aplicação do pacote de marca ao portal da Web  
+## Aplicação do pacote de marca ao portal da Web
+<a id="applying-the-brand-package-to-the-web-portal" class="xliff"></a>  
   
 Para adicionar, baixar ou remover um pacote de marca, você pode fazer o seguinte.  
   
@@ -140,7 +146,8 @@ Para adicionar, baixar ou remover um pacote de marca, você pode fazer o seguint
   
 Você também pode **Baixar** ou **Remover** o pacote. A remoção do pacote redefinirá imediatamente o portal da Web com a marca padrão.  
   
-## <a name="metadataxml-example"></a>Exemplo de metadata.xml  
+## Exemplo de metadata.xml
+<a id="metadataxml-example" class="xliff"></a>  
   
     \<?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
@@ -154,7 +161,8 @@ Você também pode **Baixar** ou **Remover** o pacote. A remoção do pacote red
         </Contents>  
     </SystemResourcePackage>  
    
-## <a name="colorsjson-example"></a>Exemplo de colors.json  
+## Exemplo de colors.json
+<a id="colorsjson-example" class="xliff"></a>  
   
     {  
         "name":"Multicolored example brand",  

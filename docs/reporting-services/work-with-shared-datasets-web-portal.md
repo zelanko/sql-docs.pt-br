@@ -1,7 +1,7 @@
 ---
 title: Trabalhando com conjuntos de dados compartilhados (portal da web) | Microsoft Docs
 ms.custom: 
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,21 +15,23 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6dfbc134c0f0e351648d19cf8c485fe25a58eb99
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="work-with-shared-datasets---web-portal"></a>Trabalhar com conjuntos de dados compartilhados - portal da web
+# Trabalhar com conjuntos de dados compartilhados - portal da web
+<a id="work-with-shared-datasets---web-portal" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Com um conjunto de dados compartilhado, você pode gerenciar as configurações de um conjunto de dados separadamente dos relatórios e outros itens de catálogo que o usam. Os conjuntos de dados compartilhados podem ser usados com relatórios paginados e móveis, juntamente com os KPIs.
 
 Você pode exibir e gerenciar as propriedades de um conjunto de dados compartilhado dentro do portal da Web. O portal da Web pode iniciar o Construtor de Relatórios para criar ou editar conjuntos de dados compartilhados.
 
-## <a name="create-a-shared-dataset"></a>Criar um conjunto de dados compartilhado
+## Criar um conjunto de dados compartilhado
+<a id="create-a-shared-dataset" class="xliff"></a>
   
 Para criar um novo conjunto de dados compartilhado, você pode fazer o seguinte.  
   
@@ -47,7 +49,8 @@ Para criar um novo conjunto de dados compartilhado, você pode fazer o seguinte.
   
 6.  Crie seu conjunto de dados e selecione o ícone **Salvar** no canto superior esquerdo para salvar o conjunto de dados de volta no servidor de relatório.  
   
-## <a name="manage-an-existing-shared-dataset"></a>Gerenciar um conjunto de dados compartilhado existente
+## Gerenciar um conjunto de dados compartilhado existente
+<a id="manage-an-existing-shared-dataset" class="xliff"></a>
   
 Para gerenciar um conjunto de dados compartilhado existente, você pode fazer o seguinte.  
   
@@ -62,13 +65,15 @@ Para gerenciar um conjunto de dados compartilhado existente, você pode fazer o 
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-## <a name="properties"></a>Propriedades
+## Propriedades
+<a id="properties" class="xliff"></a>
   
 Na tela de propriedades, você pode alterar o **nome** a e **descrição** do conjunto de dados. Você também pode **Excluir**, **Mover**, **Editar no Construtor de Relatórios**, **Baixar** ou **Substituir**.  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
-## <a name="caching"></a>Cache
+## Cache
+<a id="caching" class="xliff"></a>
   
 Quando o assunto é armazenar dados em cache para um conjunto de dados, há opções. Você começará com uma simples seleção.  
   
@@ -82,7 +87,8 @@ A seleção de **Armazenar cópias deste relatório em cache e utilizá-las quan
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   
-### <a name="cache-expiration"></a>Validade do cache  
+### Validade do cache
+<a id="cache-expiration" class="xliff"></a>  
   
 Você pode controlar se deseja expirar o cache do conjunto de dados compartilhados após um determinado período, ou se prefere fazer isso com base em uma agenda. Você pode usar uma agenda compartilhada  
   
@@ -91,7 +97,8 @@ Você pode controlar se deseja expirar o cache do conjunto de dados compartilhad
 > [!NOTE]
 > A configuração de uma expiração não atualiza o cache. Sem um plano de atualização de cache, os dados serão atualizados na próxima execução do conjunto de dados.  
   
-### <a name="cache-refresh-plans"></a>Planos de atualização do cache  
+### Planos de atualização do cache
+<a id="cache-refresh-plans" class="xliff"></a>  
   
 Você pode usar os Planos de Atualização do Cache para criar agendas de pré-carregamento do cache com cópias temporárias de dados para um conjunto de dados compartilhado. Um plano de atualização inclui uma agenda e a opção para especificar ou substituir valores de parâmetros. Você não pode substituir valores de parâmetros que estão marcados como somente leitura. Você pode criar e usar mais de um plano de atualização.   
   

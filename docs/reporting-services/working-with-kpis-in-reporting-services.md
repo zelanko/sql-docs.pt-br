@@ -1,6 +1,6 @@
 ---
 title: Trabalhando com KPIs no Reporting Services | Microsoft Docs
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,15 +14,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b451b1773d97d490c0021cdf8cfcfb14c07117b4
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="working-with-kpis-in-reporting-services"></a>Trabalhando com KPIs no Reporting Services
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# Trabalhando com KPIs no Reporting Services
+<a id="working-with-kpis-in-reporting-services" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Um KPI (indicador chave de desempenho) é uma indicação visual que informa o progresso feito em relação a um objetivo.  Os KPIs são valiosos para que equipes, gerentes e empresas avaliem rapidamente o progresso feito em relação a objetivos mensuráveis.   
   
@@ -34,16 +36,19 @@ Ao usar os KPIs no SSRS para SQL Server 2016, você pode obter respostas rapidam
   
 -   Qual foi o mínimo que eu concluí?  
   
-## <a name="creating-a-dataset"></a>Criando um conjunto de dados  
+## Criando um conjunto de dados
+<a id="creating-a-dataset" class="xliff"></a>  
 Um KPI usa apenas a primeira linha de dados de um conjunto de dados compartilhado. Verifique se os dados que pretende usar estão localizados na primeira linha. Para criar um conjunto de dados compartilhado, você pode usar o Construtor de Relatórios ou o SQL Server Data Tools.  
   
 > **Observação**: o conjunto de dados não precisa estar na mesma pasta que o KPI.  
   
-## <a name="placement-of-kpis"></a>Posicionamento de KPIs  
+## Posicionamento de KPIs
+<a id="placement-of-kpis" class="xliff"></a>  
   
 Os KPIs podem ser criados em qualquer pasta no servidor de relatório.  Antes de criar um KPI, convém escolher o local certo para colocá-lo. Você pode colocá-lo em uma pasta que seja visível para os usuários e, ao mesmo tempo, seja relevante para outros relatórios e KPIs relacionados.  
   
-## <a name="adding-a-kpi"></a>Adicionando um KPI  
+## Adicionando um KPI
+<a id="adding-a-kpi" class="xliff"></a>  
   
 Depois de determinar o local do KPI, vá para essa pasta e escolha **Novo** > **KPI** no menu superior.  
   
@@ -91,7 +96,8 @@ Para usar os dados de conjunto de dados compartilhado, faça o seguinte:
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
-## <a name="removing-a-kpi"></a>Removendo um KPI  
+## Removendo um KPI
+<a id="removing-a-kpi" class="xliff"></a>  
   
 Para remover um KPI, você pode fazer o seguinte:  
   
@@ -103,11 +109,13 @@ Para remover um KPI, você pode fazer o seguinte:
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   
-## <a name="refreshing-a-kpi"></a>Atualizando um KPI  
+## Atualizando um KPI
+<a id="refreshing-a-kpi" class="xliff"></a>  
   
 Para atualizar o KPI, você precisará configurar um cache para o conjunto de dados compartilhado. Para obter mais informações sobre cache de planos de atualização, consulte [trabalhar com conjuntos de dados compartilhados](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
-## <a name="next-steps"></a>Próximas etapas
+## Próximas etapas
+<a id="next-steps" class="xliff"></a>
   
 [Portal da Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Trabalhar com conjuntos de dados compartilhados](../reporting-services/work-with-shared-datasets-web-portal.md)

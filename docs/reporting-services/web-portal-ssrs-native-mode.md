@@ -15,16 +15,15 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: e3dff8b613f933caa84522b31bdc862aa9c799f7
 ms.contentlocale: pt-br
 ms.lasthandoff: 07/10/2017
 
 ---
-<a id="web-portal-ssrs-native-mode" class="xliff"></a>
-
 # Portal da Web (Modo Nativo do SSRS)
+<a id="web-portal-ssrs-native-mode" class="xliff"></a>
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -32,9 +31,8 @@ Portal da web do Reporting Services é uma experiência baseada na web que permi
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png)
 
-<a id="what-is-the-web-portal" class="xliff"></a>
-
 ## O que é o portal da web
+<a id="what-is-the-web-portal" class="xliff"></a>
 
 Você pode usar o portal da web para executar as seguintes tarefas:
 
@@ -72,17 +70,15 @@ Em uma nova instalação, somente os administradores locais têm permissões suf
 > [!NOTE]
 > Se você estiver navegando para o portal da Web no computador local em que o servidor está em execução, será exibida uma mensagem indicando que você não tem permissão para exibir essa pasta. Isso se deve ao UAC (Controle de Acesso Universal) e ao fato de que você não está executando o navegador como um administrador. Não é possível executar o Edge como um administrador. Você precisará usar o Internet Explorer. É possível navegar até o servidor remotamente ou iniciar o Internet Explorer como administrador e navegar até o portal da Web. Se quiser usar o portal da Web remotamente, você precisará conceder direitos de pasta ao gerenciador de conteúdo da sua conta.  
 
-<a id="start-and-use-the-web-portal" class="xliff"></a>
-
 ## Iniciar e usar o portal da Web
+<a id="start-and-use-the-web-portal" class="xliff"></a>
 
 O portal da web é um aplicativo web que você abre digitando a [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] URL na barra de endereços da janela do navegador. Ao iniciar o [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], as páginas, os links e as opções exibidas variam com base nas permissões que você tem no servidor de relatório. Para executar uma tarefa, você deve estar atribuído a uma função que inclua a tarefa.  Um usuário que é atribuído a uma função que possui permissões totais tem acesso ao conjunto completo de menus e páginas de aplicativo disponíveis para gerenciar um servidor de relatório. Um usuário atribuído a uma função que possui permissões totais para exibir e executar relatórios vê apenas os menus e páginas que oferecem suporte a essas atividades. Cada usuário pode ter diferentes atribuições de função para diferentes servidores de relatório ou mesmo para diversos relatórios e pastas armazenados em um único servidor de relatório.
 
 Para saber mais sobre funções, confira [Concedendo permissões em um servidor de relatório no modo nativo](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).
 
-<a id="start-the-web-portal" class="xliff"></a>
-
 ### Iniciar o portal da web
+<a id="start-the-web-portal" class="xliff"></a>
 
 Para iniciar o portal da web em um navegador, faça o seguinte:
 
@@ -94,9 +90,8 @@ Para iniciar o portal da web em um navegador, faça o seguinte:
 
     O servidor de relatório pode estar configurado para usar uma porta específica. Por exemplo *http://[NomeDoComputador]:80/relatórios* ou *http://[NomeDoComputador]:8080/relatórios*.
 
-<a id="grouping-by-categories" class="xliff"></a>
-
 ## Agrupando por categorias
+<a id="grouping-by-categories" class="xliff"></a>
 
 O portal da web agrupará itens em diferentes categorias. As categorias disponíveis incluem:
 
@@ -115,9 +110,8 @@ Você pode controlar o que é exibido selecionando **Exibir** no canto superior 
 
 ![ssRSWebPortal-hidden](../reporting-services/media/ssrswebportal-hidden.png)
 
-<a id="power-bi-desktop-reports-and-excel-workbooks" class="xliff"></a>
-
 ### Relatórios do Power BI Desktop e pastas de trabalho do Excel
+<a id="power-bi-desktop-reports-and-excel-workbooks" class="xliff"></a>
 
 É possível carregar, organizar e gerenciar permissões para relatórios do Power BI Desktop e pastas de trabalho do Excel. Eles serão agrupados juntas no portal da Web.
 
@@ -125,17 +119,15 @@ Você pode controlar o que é exibido selecionando **Exibir** no canto superior 
 
 Os arquivos são armazenados no Reporting Services, semelhante a outros arquivos de recurso. Selecionar um desses itens os baixará localmente no desktop. Você pode salvar as alterações feitas ao carregá-las no servidor de relatório.
 
-<a id="search-for-items" class="xliff"></a>
-
 ## Pesquisar itens
+<a id="search-for-items" class="xliff"></a>
 
 Você pode inserir uma equipe de pesquisa e verá tudo que pode ser acessado. Os resultados são categorizados em KPIs, relatórios, conjuntos de dados e outros itens. Desse modo, você pode interagir com os resultados e adicioná-los aos seus favoritos.
 
 ![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
 
-<a id="web-portal-tasks" class="xliff"></a>
-
 ## Tarefas do portal da Web
+<a id="web-portal-tasks" class="xliff"></a>
 
 [Identidade visual do portal da Web](../reporting-services/branding-the-web-portal.md)
 
@@ -143,9 +135,8 @@ Você pode inserir uma equipe de pesquisa e verá tudo que pode ser acessado. Os
 
 [Working with shared datasets (Trabalhando com conjuntos de dados compartilhados)](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-<a id="see-also" class="xliff"></a>
-
 ## Consulte também
+<a id="see-also" class="xliff"></a>
 
 [Criar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 [Configurar um URL (Gerenciador de configurações SSRS)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  

@@ -1,7 +1,7 @@
 ---
 title: "Instalar o Reporting e serviços de informações da Internet lado a lado | Microsoft Docs"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,24 +17,28 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1818a4b076dd6e1c81c0a9b39b781516bdf718e0
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: f7e12ebcec8e06828430e10c377205e2421f50f4
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
-# <a name="install-reporting-and-internet-information-services-side-by-side"></a>Instalar o Reporting e serviços de informações da Internet lado a lado
+# Instalar o Reporting e serviços de informações da Internet lado a lado
+<a id="install-reporting-and-internet-information-services-side-by-side" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-  Você pode instalar e executar o SQL Server Reporting Services (SSRS) e serviços de informações da Internet (IIS) no mesmo computador. A versão do IIS utilizada determina os problemas de interoperabilidade a serem resolvidos.  
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+Você pode instalar e executar o SQL Server Reporting Services (SSRS) e serviços de informações da Internet (IIS) no mesmo computador. A versão do IIS utilizada determina os problemas de interoperabilidade a serem resolvidos.  
   
 |Versão do IIS|Problemas|Descrição|  
 |-----------------|------------|-----------------|  
 |8.0, 8.5|As solicitações dirigidas a um aplicativo são aceitas por um aplicativo diferente.<br /><br /> O HTTP.SYS impõe as regras de precedência a reservas de URL. As solicitações enviadas a aplicativos com o mesmo nome de diretório virtual e que, ao mesmo tempo, monitoram a porta 80 podem não alcançar o destino pretendido se a reserva de URL for fraca, em relação à reserva de URL de outro aplicativo.|Em determinadas condições, um ponto de extremidade registrado que substitui outro ponto de extremidade de URL no esquema de reserva de URL pode receber solicitações HTTP destinadas a outro aplicativo.<br /><br /> Se você usar nomes do diretório virtual exclusivos para o serviço Web Servidor de Relatórios e o [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] , esse conflito será evitado.<br /><br /> Informações detalhadas sobre esse cenário são fornecidas neste tópico.|  
   
-## <a name="precedence-rules-for-url-reservations"></a>Regras de precedência para reservas de URL  
+## Regras de precedência para reservas de URL
+<a id="precedence-rules-for-url-reservations" class="xliff"></a>  
  Antes de tratar de problemas de interoperabilidade entre o IIS e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você deve entender as regras de precedência de reserva de URL. As regras de precedência podem ser generalizadas na seguinte instrução: uma reserva de URL tem valores definidos mais explicitamente é a primeira a receber solicitações que correspondam à URL.  
   
 -   Uma reserva de URL que especifica um diretório virtual é mais explícita que uma que omite um diretório virtual.  
@@ -55,7 +59,8 @@ ms.lasthandoff: 06/22/2017
   
  Uma indicação de um conflito de porta é que você verá a seguinte mensagem de erro: 'System.IO.FileLoadException: O processo não pode acessar o arquivo porque está sendo usado por outro processo. (Exceção de HRESULT: 0x80070020).'  
   
-## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>Reservas de URL para o IIS 8.0, 8.5 com o SQL Server Reporting Services  
+## Reservas de URL para o IIS 8.0, 8.5 com o SQL Server Reporting Services
+<a id="url-reservations-for-iis-80-85-with-sql-server-reporting-services" class="xliff"></a>  
  Dadas as regras de precedência na seção anterior, você pode começar a compreender como as reservas de URL definidas para o Reporting Services e o ISS promovem a interoperabilidade. O Reporting Services recebe solicitações que especificam explicitamente os nomes de diretório virtuais para seus aplicativos; o IIS recebe todas as solicitações restantes, que podem ser direcionadas a aplicativos executados no modelo de processo do IIS.  
   
 |Aplicativo|Reserva de URL|Descrição|Recebimento de solicitação|  
@@ -64,7 +69,8 @@ ms.lasthandoff: 06/22/2017
 |Portal da Web|`http://+:80/Reports`|Curinga forte na porta 80, com o diretório virtual Reports.|Recebe todas as solicitações na porta 80 que especificam o diretório virtual de relatórios. O [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] recebe todas as solicitações para http://\<computername > / reports.|  
 |IIS|`http://*:80/`|Curinga fraco na porta 80.|Recebe todas as solicitações restantes na porta 80 não recebidas por outro aplicativo.|  
 
-## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>Implantações lado a lado do SQL Server Reporting Services no IIS 8.0, 8.5
+## Implantações lado a lado do SQL Server Reporting Services no IIS 8.0, 8.5
+<a id="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85" class="xliff"></a>
 
  Os problemas de interoperabilidade entre o ISS e o Reporting Services ocorrem quando sites do IIS têm nomes de diretório virtual idênticos aos usados pelo Reporting Services. Por exemplo, suponha que você tenha a seguinte configuração:  
   
@@ -82,7 +88,8 @@ ms.lasthandoff: 06/22/2017
   
 -   Para instalações configuradas manualmente, adote as convenções de nomenclatura padrão nas URLs configuradas. Se você instalar o [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] como uma instância nomeada, inclua o nome da instância ao criar um diretório virtual.  
 
-## <a name="next-steps"></a>Próximas etapas
+## Próximas etapas
+<a id="next-steps" class="xliff"></a>
 
 [Configurar as URLs do servidor de relatório](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [Configurar uma URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   

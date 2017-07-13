@@ -2,7 +2,7 @@
 title: Suporte ao navegador para Reporting Services e Power View | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/30/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -26,22 +26,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6a1f9f1dd348561e46c4e01dc4f635ef83f28193
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="browser-support-for-reporting-services-and-power-view"></a>Suporte ao navegador para Reporting Services e Power View
+# Suporte ao navegador para Reporting Services e Power View
+<a id="browser-support-for-reporting-services-and-power-view" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Saiba mais sobre o navegador versões têm suporte para gerenciar e exibir o SQL Server Reporting Services, os controles ReportViewer e Power View.
 
 > [!NOTE]
 > Integração do Reporting Services com o SharePoint não está mais disponível após o SQL Server 2016.
 
-## <a name="browser-requirements-for-the-web-portal"></a>Requisitos de navegador para o portal da web
+## Requisitos de navegador para o portal da web
+<a id="browser-requirements-for-the-web-portal" class="xliff"></a>
 
 Esta é a lista atual de navegadores com suporte para o portal da web.
 
@@ -71,7 +73,8 @@ Esta é a lista atual de navegadores com suporte para o portal da web.
 
  **(+)** A versão lançada mais recente
 
-## <a name="browser-requirements-for-the-reportviewer-web-control-2015"></a>Requisitos de navegador para o controle da Web do ReportViewer (2015)
+## Requisitos de navegador para o controle da Web do ReportViewer (2015)
+<a id="browser-requirements-for-the-reportviewer-web-control-2015" class="xliff"></a>
 
  Veja a seguir uma lista atual de navegadores com suporte com o controle da Web do ReportViewer (2015). O visualizador de relatórios dá suporte à exibição de relatórios do portal da Web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e de bibliotecas do SharePoint.  
 
@@ -90,9 +93,10 @@ Esta é a lista atual de navegadores com suporte para o portal da web.
 
  **(+)** A versão lançada mais recente
 
- Se você estiver usando um produto SharePoint integrado ao [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], confira [Planejar suporte ao navegador no SharePoint 2016](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+ Se você estiver usando um produto SharePoint integrado ao [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], confira  [Planejar suporte ao navegador no SharePoint 2016](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
 
-### <a name="authentication-requirements"></a>Requisitos de autenticação
+### Requisitos de autenticação
+<a id="authentication-requirements" class="xliff"></a>
 
  Os navegadores dão suporte a esquemas de autenticação específicos que devem ser tratados pelo servidor de relatório para que a solicitação do cliente seja bem-sucedida. A tabela a seguir identifica os tipos de autenticação padrão com suporte por cada navegador que é executado em um sistema operacional Windows.
 
@@ -106,7 +110,8 @@ Esta é a lista atual de navegadores com suporte para o portal da web.
 
  **(+)** A versão lançada mais recente
 
-### <a name="script-requirements-for-viewing-reports"></a>Requisitos de script para exibição de relatórios
+### Requisitos de script para exibição de relatórios
+<a id="script-requirements-for-viewing-reports" class="xliff"></a>
 
  Para usar o visualizador de relatórios, configure o seu navegador para executar scripts.
 
@@ -119,7 +124,8 @@ Esta é a lista atual de navegadores com suporte para o portal da web.
 > [!NOTE]
 > A barra de ferramentas de relatório faz parte do componente Visualizador de HTML. Por padrão, a barra de ferramentas aparece na parte superior de todos os relatórios que são renderizados em uma janela de navegador. O visualizador de relatórios fornece recursos que incluem a habilidade de pesquisar informações no relatório, rolar até uma página específica e ajustar o tamanho da página para visualização. Para obter mais informações sobre a barra de ferramentas de relatório ou o Visualizador de HTML, consulte [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md).
 
-## <a name="browser-support-for-reportviewer-web-server-controls-in-visual-studio"></a>Suporte ao navegador em controles de servidor Web do ReportViewer no Visual Studio
+## Suporte ao navegador em controles de servidor Web do ReportViewer no Visual Studio
+<a id="browser-support-for-reportviewer-web-server-controls-in-visual-studio" class="xliff"></a>
 
  O controle ReportViewer de servidor Web é usado para inserir a funcionalidade de relatório em um aplicativo Web ASP.NET. Os controles estão incluídos no Visual Studio e dão suporte a navegadores e versões de navegador diferentes dos outros componentes descritos neste tópico. O tipo de navegador usado para exibir o aplicativo determina o tipo de funcionalidade de ReportViewer que você pode fornecer em seu aplicativo. Use a tabela fornecida neste tópico para determinar qual dos navegadores com suporte está sujeito a restrições de funcionalidade de relatório e as plataformas com suporte.  
 
@@ -135,7 +141,8 @@ Esta é a lista atual de navegadores com suporte para o portal da web.
 
  **(+)** A versão lançada mais recente
 
-## <a name="power-view-browser-support"></a>Suporte ao navegador no Power View
+## Suporte ao navegador no Power View
+<a id="power-view-browser-support" class="xliff"></a>
 
 **Microsoft Windows**  
 *Windows 7, 8.1, 10; Windows Server 2008 R2, 2012, 2012 R2*
@@ -152,7 +159,8 @@ Esta é a lista atual de navegadores com suporte para o portal da web.
 
  Para saber mais sobre o suporte a navegadores do SharePoint 2016, confira [Planejar suporte ao navegador no SharePoint 2013](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
 
-## <a name="next-steps"></a>Próximas etapas
+## Próximas etapas
+<a id="next-steps" class="xliff"></a>
 
 [Localizando e exibindo relatórios no portal da web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Ferramentas do Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
