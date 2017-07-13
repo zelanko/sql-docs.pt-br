@@ -16,17 +16,21 @@ caps.latest.revision: 54
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8df15a6d8f9875fbecf9e14fcdae51d37c7154fe
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/10/2017
 
 ---
-# <a name="full-text-search"></a>Pesquisa de Texto Completo
+<a id="full-text-search" class="xliff"></a>
+
+# Pesquisa de Texto Completo
   A Pesquisa de Texto Completo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] permite que usuários e aplicativos executem consultas de texto completo em dados baseados em caracteres nas tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
-## <a name="basic-tasks"></a>Tarefas básicas
+<a id="basic-tasks" class="xliff"></a>
+
+## Tarefas básicas
 Este tópico fornece uma visão geral da pesquisa de texto completo e descreve sua arquitetura e seus componentes. Se você preferir começar imediatamente, aqui estarão as tarefas básicas.
 -   [Iniciar a pesquisa de texto completo](../../relational-databases/search/get-started-with-full-text-search.md)
 -   [Criar e gerenciar catálogos de texto completo](../../relational-databases/search/create-and-manage-full-text-catalogs.md)
@@ -37,7 +41,9 @@ Este tópico fornece uma visão geral da pesquisa de texto completo e descreve s
 > [!NOTE]
 > Full-Text Search is an optional component of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se você não selecionou a pesquisa de texto completo quando instalou o SQL Server, execute a instalação do SQL Server novamente para adicioná-la.
 
-## <a name="overview"></a>Visão geral
+<a id="overview" class="xliff"></a>
+
+## Visão geral
 Um índice de texto completo inclui uma ou mais colunas baseadas em caractere em uma tabela. Essas colunas podem ter qualquer um destes tipos de dados: **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** ou **varbinary(max)** e **FILESTREAM**. Cada índice de texto completo indexa uma ou mais colunas da tabela base, e cada coluna pode usar um idioma específico.  
   
  As consultas de texto completo executam pesquisas linguísticas nos dados de texto em índices de texto completo trabalhando em palavras e frases com base em regras de um idioma específico, como inglês ou japonês. As consultas de texto completo podem incluir palavras e frases simples ou várias formas de uma palavra ou frase. Uma consulta de texto completo retorna todos os documentos que contiverem, pelo menos, uma correspondência (também conhecida como uma *ocorrência*). Uma correspondência ocorre quando um documento de destino contém todos os termos especificados na consulta de texto completo e atende a quaisquer outros critérios de pesquisa, como a distância entre os termos correspondentes.    
@@ -146,7 +152,9 @@ Um índice de texto completo inclui uma ou mais colunas baseadas em caractere em
 ###  <a name="querying"></a> Processo de consulta de texto completo  
  O processador de consultas passa as partes do texto completo de uma consulta para o Mecanismo de Texto Completo para processamento. O Mecanismo de Texto Completo executa a quebra de palavras e, opcionalmente, expansões do dicionário de sinônimos, lematização e processamento de palavras irrelevantes (palavras de ruído). Em seguida, as partes de texto completo da consulta são representadas na forma de operadores SQL, principalmente como STVFs (funções com valor de tabela de fluxo). Durante a execução da consulta, essas STVFs acessam o índice invertido para recuperar os resultados corretos. Os resultados são retornados para o cliente neste momento ou processados mais um pouco antes de serem retornados ao cliente.  
 
-## <a name="full-text-index-architecture"></a>Arquitetura de índice de texto completo
+<a id="full-text-index-architecture" class="xliff"></a>
+
+## Arquitetura de índice de texto completo
   As informações contidas em índices de texto completo são usadas pelo Mecanismo de Texto Completo para compilar consultas de texto completo que podem procurar determinadas palavras ou combinações de palavras rapidamente em uma tabela. Um índice de texto completo armazena informações sobre palavras importantes e sua localização em uma ou mais colunas de uma tabela de banco de dados. Um índice de texto completo consiste em um tipo especial de índice funcional com base em token que é criado e mantido pelo Mecanismo de Texto Completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O processo de criação de um índice de texto completo é diferente da criação de outros tipos de índices. Em vez de criar uma estrutura de árvore B com base em um valor armazenado em uma linha específica, o Mecanismo de Texto Completo cria uma estrutura de índice compactada, empilhada e invertida com base em tokens individuais do texto que está sendo indexado.  O tamanho de um índice de texto completo é limitado apenas pelos recursos de memória disponíveis do computador no qual a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada.  
   
  A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], os índices de texto completo são integrados ao Mecanismo de Banco de Dados e deixam de residir no sistema de arquivos, como ocorria nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em um novo banco de dados, agora o catálogo de texto completo é um objeto virtual que não pertence a nenhum grupo de arquivos; ele é simplesmente um conceito lógico que faz referência a um grupo dos índices de texto completo. Porém, observe que, durante a atualização de um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , para qualquer catálogo de texto completo que contenha arquivos de dados, é criado um novo grupo de arquivos. Para obter mais informações, veja [Atualizar pesquisa de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  
@@ -232,7 +240,9 @@ Só é permitido um índice de texto completo por tabela. Para que um índice de
 |Assembly|1|2|6|  
 |3|1|2|7|  
 
-### <a name="differences-between-full-text-indexes-and-regular-sql-server-indexes"></a>Diferenças entre índices de texto completo e índices regulares do SQL Server:  
+<a id="differences-between-full-text-indexes-and-regular-sql-server-indexes" class="xliff"></a>
+
+### Diferenças entre índices de texto completo e índices regulares do SQL Server:  
   
 |Índices de texto completo|Índices regulares do SQL Server|  
 |------------------------|--------------------------------|  

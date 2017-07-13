@@ -14,14 +14,16 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be3d7e956f6ed89f14fc63c36d97974cc9218933
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/10/2017
 
 ---
-# <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Alterar o separador de palavras usado para inglês dos EUA e inglês do Reino Unido
+<a id="change-the-word-breaker-used-for-us-english-and-uk-english" class="xliff"></a>
+
+# Alterar o separador de palavras usado para inglês dos EUA e inglês do Reino Unido
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala uma nova versão (versão 14.0.4999.1038) do separador de palavras e lematizador para o idioma inglês, substituindo a versão anterior desses componentes (versão 12.0.6828.0). Para obter informações sobre o comportamento alterado dos novos componentes, veja [Alterações de comportamento na pesquisa de texto completo](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). Este tópico descreve como alternar da nova versão desses componentes para a versão anterior, ou alternar da versão anterior para a nova versão. Para instalações em cluster, essas alterações devem ser feitas em todos os nós primários e passivos.  
   
  As versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usavam separadores de palavras diferentes representados por CLSIDs distintos para o inglês dos EUA (LCID 1033) e o inglês do Reino Unido (LCID 2057). Nesta versão, ambos o LCIDs usam os mesmos componentes com os mesmos CLSIDs, como é mostrado na seguinte tabela:  
@@ -35,9 +37,13 @@ ms.lasthandoff: 06/22/2017
   
  Para obter mais informações sobre separadores de palavras e lematizadores, veja [Configurar e gerenciar separadores de palavras e lematizadores para pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-## <a name="switching-from-the-current-english-word-breaker-to-the-previous-english-word-breakers"></a>Alternando do separador de palavras em inglês atual para os separadores de palavras em inglês anteriores  
+<a id="switching-from-the-current-english-word-breaker-to-the-previous-english-word-breakers" class="xliff"></a>
+
+## Alternando do separador de palavras em inglês atual para os separadores de palavras em inglês anteriores  
   
-#### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>Para alternar da versão atual do separador de palavras em inglês dos EUA para a versão anterior  
+<a id="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version" class="xliff"></a>
+
+#### Para alternar da versão atual do separador de palavras em inglês dos EUA para a versão anterior  
   
 1.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
@@ -59,7 +65,9 @@ ms.lasthandoff: 06/22/2017
   
 6.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-#### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>Para alternar da versão atual do separador de palavras em inglês do Reino Unido para a versão anterior  
+<a id="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version" class="xliff"></a>
+
+#### Para alternar da versão atual do separador de palavras em inglês do Reino Unido para a versão anterior  
   
 1.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
@@ -81,9 +89,13 @@ ms.lasthandoff: 06/22/2017
   
 6.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="switching-back-from-the-previous-english-word-breakers-to-the-current-english-word-breaker"></a>Alternando de separadores de palavras em inglês dos EUA anteriores para o separador de palavras em inglês atual  
+<a id="switching-back-from-the-previous-english-word-breakers-to-the-current-english-word-breaker" class="xliff"></a>
+
+## Alternando de separadores de palavras em inglês dos EUA anteriores para o separador de palavras em inglês atual  
   
-#### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>Para alternar da versão anterior do separador de palavras em inglês dos EUA para a versão atual  
+<a id="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version" class="xliff"></a>
+
+#### Para alternar da versão anterior do separador de palavras em inglês dos EUA para a versão atual  
   
 1.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
@@ -105,7 +117,9 @@ ms.lasthandoff: 06/22/2017
   
 6.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-#### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>Para alternar da versão anterior do separador de palavras em inglês do Reino Unido para a versão atual  
+<a id="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version" class="xliff"></a>
+
+#### Para alternar da versão anterior do separador de palavras em inglês do Reino Unido para a versão atual  
   
 1.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
@@ -127,7 +141,9 @@ ms.lasthandoff: 06/22/2017
   
 6.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+<a id="see-also" class="xliff"></a>
+
+## Consulte também  
  [Reverter os separadores de palavras usados por pesquisa à versão anterior](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
  [Alterações de comportamento na pesquisa de texto completo](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
