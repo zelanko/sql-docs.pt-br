@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_2814 | Microsoft Docs
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f2408e7a6e34e903ecd9c24d93db222de69f6398
+ms.translationtype: HT
+ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
+ms.openlocfilehash: 3bca883d9f5b13b81e021014193df43fc3f5f6e3
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 # <a name="mssqlserver2814"></a>MSSQLSERVER_2814
@@ -57,29 +57,24 @@ A tabela a seguir lista os motivos da recompilação.
   
 ## <a name="user-action"></a>Ação do usuário  
   
-1.  Para exibir a instrução que causa a recompilação, execute a consulta a seguir. Substitua os espaços reservados *sql_handle*, *starting_offset*, *ending_offset* e *plan_handle* pelos valores especificados na mensagem de erro. Observe que as colunas **database_name** e **object_name** serão NULL para instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc e preparadas.  
+1.  Para exibir a instrução que causa a recompilação, execute a consulta a seguir. Substitua os espaços reservados *sql_handle*, *starting_offset*, *ending_offset* e *plan_handle* pelos valores especificados na mensagem de erro. As colunas **database_name** e **object_name** são NULL para instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc e preparadas.  
   
-    SELECT DB_NAME(st.dbid) AS database_name  
-  
-    , OBJECT_NAME(st.objectid) AS object_name  
-  
-    , st.text  
-  
+    ```sql   
+    SELECT DB_NAME(st.dbid) AS database_name,  
+        OBJECT_NAME(st.objectid) AS object_name,  
+        st.text  
     FROM sys.dm_exec_query_stats AS qs  
-  
     CROSS APPLY sys.dm_exec_sql_text (*sql_handle*) AS st  
-  
     WHERE qs.statement_start_offset = *starting_offset*  
-  
     AND qs.statement_end_offset = *ending_offset*  
-  
-    AND qs.plan_handle = *plan_handle*;  
+    AND qs.plan_handle = *plan_handle*;
+    ```
   
 2.  Com base na descrição do código do motivo, modifique a instrução, o lote ou o procedimento para evitar recompilações. Por exemplo, um procedimento armazenado pode conter uma ou mais instruções SET. Essas instruções devem ser removidas do procedimento. Para obter mais exemplos dos motivos e das resoluções da recompilação, consulte [Problemas de compilação em lote, recompilação e cache de planos no SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=69175).  
   
 3.  Se o problema persistir, contate os Serviços de Atendimento ao Cliente da Microsoft.  
   
 ## <a name="see-also"></a>Consulte também  
-[SQL:StmtRecompile Event Class](../Topic/SQL:StmtRecompile%20Event%20Class.md)  
+[SQL:StmtRecompile Event Class](../event-classes/sql-stmtrecompile-event-class.md)  
   
 

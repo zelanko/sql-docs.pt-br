@@ -1,7 +1,7 @@
 ---
 title: Renomear um procedimento armazenado | Microsoft Docs
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 07/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8082b0cdf5788bd4b96c14ff60dbd9103c27bd74
+ms.translationtype: HT
+ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
+ms.openlocfilehash: 1d0ddb568fd162f4be42234607b5b8484cb89f60
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="rename-a-stored-procedure"></a>Renomear um procedimento armazenado
@@ -47,8 +47,10 @@ ms.lasthandoff: 06/22/2017
   
 -   Os nomes de procedimento devem estar de acordo com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
--   Renomear uma procedimento armazenado não alterará o nome do objeto correspondente na coluna de definição da exibição de catálogo **sys.sql_modules** . Assim, é recomendável não renomear esse tipo de objeto. Em vez disso, remova-o e recrie o procedimento armazenado com seu nome novo.  
-  
+-   Renomear um procedimento armazenado mantém o `object_id` e todas as permissões que forem especificamente atribuídas ao procedimento. Descartar e recriar o objeto cria um novo `object_id` e remove quaisquer permissões atribuídas especificamente ao procedimento.
+
+-   Renomear um procedimento armazenado não altera o nome do objeto correspondente na coluna de definição da exibição de catálogo **sys.sql_modules** . Para fazer isso, remova-o e recrie o procedimento armazenado com seu nome novo.  
+
 -   A alteração do nome ou definição de um procedimento pode causar falha em objetos dependentes que não são atualizados para refletir as alterações que tenham sido feitas no procedimento. Para obter mais informações, veja [Exibir as dependências de um procedimento armazenado](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).  
   
 ###  <a name="Security"></a> Segurança  
@@ -65,15 +67,10 @@ ms.lasthandoff: 06/22/2017
 #### <a name="to-rename-a-stored-procedure"></a>Para renomear um procedimento armazenado  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda essa instância.  
-  
 2.  Expanda **Bancos de Dados**, expanda o banco de dados ao qual pertence o procedimento e expanda **Programação**.  
-  
 3.  [Determinar as dependências do procedimento armazenado](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).  
-  
 4.  Expanda **Procedimentos Armazenados**, clique com o botão direito do mouse no procedimento a ser renomeado e clique em **Renomear**.  
-  
 5.  Modifique o nome do procedimento.  
-  
 6.  Modifique o nome do procedimento referenciado em qualquer objeto dependente ou script.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
@@ -81,18 +78,14 @@ ms.lasthandoff: 06/22/2017
 #### <a name="to-rename-a-stored-procedure"></a>Para renomear um procedimento armazenado  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
 2.  Na barra Padrão, clique em **Nova Consulta**.  
-  
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo mostra como renomear um procedimento removendo-o e recriando-o com um novo nome. O primeiro exemplo cria o procedimento armazenado `'HumanResources.uspGetAllEmployeesTest`. O segundo exemplo renomeia o procedimento armazenado para `HumanResources.uspEveryEmployeeTest`.  
   
-```tsql  
+```sql  
 --Create the stored procedure.  
 USE AdventureWorks2012;  
 GO  
-IF OBJECT_ID ( 'HumanResources.uspGetAllEmployeesTest', 'P' ) IS NOT NULL   
-    DROP PROCEDURE HumanResources.uspGetAllEmployeesTest;  
-GO  
+
 CREATE PROCEDURE HumanResources.uspGetAllEmployeesTest  
 AS  
     SET NOCOUNT ON;  
@@ -101,17 +94,7 @@ AS
 GO  
   
 --Rename the stored procedure.  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'HumanResources.uspGetAllEmployeesTest', 'P' ) IS NOT NULL   
-    DROP PROCEDURE HumanResources.uspGetAllEmployeesTest;  
-GO  
-CREATE PROCEDURE HumanResources.uspEveryEmployeeTest  
-AS  
-    SET NOCOUNT ON;  
-    SELECT LastName, FirstName, Department  
-    FROM HumanResources.vEmployeeDepartmentHistory;  
-GO  
+EXEC sp_rename 'HumanResources.uspGetAllEmployeesTest', 'HumanResources.uspEveryEmployeeTest'; 
 ```  
   
 ## <a name="see-also"></a>Consulte também  
@@ -124,3 +107,4 @@ GO
  [Exibir as dependências de um procedimento armazenado](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)  
   
   
+

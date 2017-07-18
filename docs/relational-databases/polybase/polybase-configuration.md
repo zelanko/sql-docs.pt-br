@@ -1,7 +1,7 @@
 ---
 title: "Configuração do PolyBase | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,11 +14,11 @@ caps.latest.revision: 17
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7ac4f40e66a0bb82f811aa75a3d69e14a3a97188
+ms.translationtype: HT
+ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
+ms.openlocfilehash: dd9edc9dccf29c21bb37bb0347c8a8cdb87e2b21
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 # <a name="polybase-configuration"></a>Configuração do PolyBase
@@ -27,7 +27,7 @@ ms.lasthandoff: 06/23/2017
   Use os procedimentos a seguir para configurar o PolyBase.  
   
 ## <a name="external-data-source-configuration"></a>Configuração da fonte de dados externa  
- Garanta conectividade com a fonte de dados externa no SQL Server. O tipo de conectividade influencia consideravelmente o desempenho esperado da consulta. Por exemplo, um link Ethernet de 10 Gbit resultará em um menor tempo de resposta para consultas do PolyBase do que um link Ethernet de 1 Gbit.  
+ Garanta conectividade com a fonte de dados externa no SQL Server. O tipo de conectividade influencia consideravelmente o desempenho da consulta. Por exemplo, um link Ethernet de 10 Gbit resultará em um menor tempo de resposta para consultas do PolyBase do que um link Ethernet de 1 Gbit.  
   
  É necessário configurar o SQL Server para se conectar com a versão do Hadoop ou do armazenamento de Blobs do Azure usando **sp_configure**. O PolyBase oferece suporte a duas distribuições do Hadoop: HDP (Hortonworks Data Platform) e CDH (Cloudera Distributed Hadoop).  Para obter uma lista completa de fontes de dados externas com suporte, veja [Configuração de conectividade do PolyBase &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
  

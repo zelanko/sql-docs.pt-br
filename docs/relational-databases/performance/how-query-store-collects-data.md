@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58db786512aa1ed167df55831c6a7cc3c53224bd
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>Como o Repositório de Consultas coleta dados
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="views"></a>Exibições  
  O diagrama a seguir mostra os modos de exibição do Repositório de Consultas e suas relações lógicas, com informações de tempo de compilação, apresentadas como entidades azuis:  
   
- ![query-store-process-1views](../../relational-databases/performance/media/query-store-process-1views.png "query-store-process-1views")  
+ ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
   
  **Descrições de exibições**  
   
@@ -68,7 +68,8 @@ ms.lasthandoff: 04/11/2017
   
  No caso de uma falha do sistema, o Repositório de Consultas pode perder dados de tempo de execução até a quantidade definida com `DATA_FLUSH_INTERVAL_SECONDS`. O valor padrão de 900 segundos (15 minutos) é um bom equilíbrio entre desempenho de captura de consulta e a disponibilidade de dados.  
 No caso de pressão de memória, as estatísticas de tempo de execução podem ser liberadas para o disco antes do que foi definido com `DATA_FLUSH_INTERVAL_SECONDS`.  
-Durante a leitura do Repositório de Consultas, os dados na memória e no disco são unificados de maneira transparente.  
+Durante a leitura do Repositório de Consultas, os dados na memória e no disco são unificados de maneira transparente.
+No caso de encerramento de sessão ou reinicialização/falha de aplicativo do cliente, as estatísticas de consulta não serão gravadas.  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

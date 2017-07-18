@@ -1,7 +1,7 @@
 ---
 title: "Diretrizes para operações de índice online | Microsoft Docs"
 ms.custom: 
-ms.date: 04/14/2017
+ms.date: 07/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ caps.latest.revision: 64
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
-ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>Diretrizes para operações de índice online
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/23/2017
 -   Índices não clusterizados não exclusivos podem ser criados online, quando a tabela contiver tipos de dados LOB, mas nenhuma dessas colunas são usadas na definição de índice seja como colunas-chaves ou colunas não chave.  
   
 -   Os índices em tabelas temporárias locais, não podem ser criados, recriados ou soltos offline. Esta restrição não se aplica a índices em tabelas temporárias globais.
-- Índices podem ser retomados de onde parou após uma falha inesperada, o failover de banco de dados, ou um **pausar** comando. Consulte [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Este recurso está em visualização pública para o SQL Server 2017.
+- Índices podem ser retomados de onde parou após uma falha inesperada, o failover de banco de dados, ou um **pausar** comando. Consulte [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Este recurso está em visualização pública para o SQL Server 2017 e o Banco de Dados SQL do Azure.
 
 > [!NOTE]  
 >  As operações de índice online não estão disponíveis em todas as edições de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte pelas edições](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -93,7 +93,7 @@ Para obter mais informações, consulte [Disk Space Requirements for Index DDL O
 ## <a name="resumable-index-rebuild-considerations"></a>Considerações de recompilação de índice retomáveis
 
 > [!NOTE]
-> Consulte [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Este recurso está em visualização pública para o SQL Server 2017.
+> Consulte [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Este recurso está em visualização pública para o SQL Server 2017 e o Banco de Dados SQL do Azure.
 >
 
 Quando você executar a recompilação de índice online retomáveis as diretrizes a seguir se aplicam:

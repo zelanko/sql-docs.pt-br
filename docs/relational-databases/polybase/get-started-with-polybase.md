@@ -2,7 +2,7 @@
 title: "Introdução ao PolyBase | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 5/30/2017
+ms.date: 7/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -24,11 +24,11 @@ caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
-ms.openlocfilehash: 59bf4021617603f0720c23ca192f4ddb65aa6834
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: baf9d02b824a8aae2a282d0f6203791c4b72f1f8
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="get-started-with-polybase"></a>Introdução ao PolyBase
@@ -56,7 +56,8 @@ ms.lasthandoff: 06/23/2017
 -   Memória mínima: 4 GB  
   
 -   Espaço mínimo no disco rígido: 2 GB    
--   A conectividade TCP/IP deve estar habilitada. (Veja [Habilitar ou desabilitar um protocolo de rede de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  
+
+-   A conectividade TCP/IP deve estar habilitada. (Veja [Habilitar ou desabilitar um protocolo de rede de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).) As edições do SQL Server Developer e Express têm o TCP/IP desabilitado por padrão. O PolyBase pode ser instalado, mas não será totalmente iniciado até que o TCP/IP esteja habilitado. Você deve habilitar manualmente o TCP/IP para ter a funcionalidade PolyBase. 
   
  
  Uma fonte de dados externa, uma das seguintes:  
@@ -156,7 +157,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
  Para obter detalhes, veja [Grupos de escala horizontal do PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
   
 ## <a name="create-t-sql-objects"></a>Criar objetos T-SQL  
- Crie objetos dependendo da fonte de dados externa, Hadoop ou armazenamento do Azure.  
+ Crie objetos dependendo da fonte de dados externa, armazenamento do Azure ou Hadoop.  
   
 ### <a name="hadoop"></a>Hadoop  
   
@@ -354,7 +355,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
  Após a atualização do SQL Server 2016 RC1 para RC2 ou RC3, as consultas poderão falhar. Para obter detalhes e uma solução, veja [Notas de versão do SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) e procure “PolyBase”.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Para entender o recurso de expansão, veja [Grupos de escala horizontal do PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  Para monitorar o PolyBase, veja [Solução de problemas do PolyBase](../../relational-databases/polybase/polybase-troubleshooting.md). Para solucionar problemas de desempenho do PolyBase, confira [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).  
+ Para entender o recurso de expansão, veja [Grupos de escala horizontal do PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  Para monitorar o PolyBase, veja [Solução de problemas do PolyBase](../../relational-databases/polybase/polybase-troubleshooting.md). Para solucionar problemas de desempenho do PolyBase, confira [Solução de problemas do PolyBase com exibições dinâmicas de gerenciamento](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).  
   
 ## <a name="see-also"></a>Consulte também  
  [Guia do PolyBase](../../relational-databases/polybase/polybase-guide.md)   

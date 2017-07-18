@@ -1,7 +1,7 @@
 ---
 title: "Versões anteriores do SQL Server Management Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 07/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,29 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
-ms.openlocfilehash: 200753bf64d92043171788852227c6199b64711d
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: f55f56b31aec2e094a35200e6fe08b28c93affb0
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="previous-sql-server-management-studio-releases"></a>Versões anteriores do SQL Server Management Studio
   
 As seguintes versões anteriores do SQL Server Management Studio estão disponíveis.
+
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-170-releasehttpgomicrosoftcomfwlinklinkid847722"></a>![baixar](../ssdt/media/download.png) [SQL Server Management Studio versão 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
+
+**Informações sobre versão**  
+  
+*Esta versão do SSMS usa o shell isolado do Visual Studio 2015.*  
+O número da versão: 17.0  
+O número de build desta versão: 14.0.17099.0
+
+## <a name="changelog"></a>Log de alteração  
+
+Confira [17.0](sql-server-management-studio-changelog-ssms.md#ssms-170-release).
+
    
 ## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1653-releasehttpgomicrosoftcomfwlinklinkid840946"></a>![baixar](../ssdt/media/download.png) [versão do SQL Server Management Studio 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
 
@@ -207,7 +220,7 @@ Versões do SSMS não localizadas para o inglês exigem o [pacote de atualizaç�
 *  Corrigido um problema em que Ctrl + Q não seleciona a barra de ferramentas Início Rápido.
     
 *  Corrigido um problema em que alterar o MaxSize de um banco de dados usando a caixa de diálogo Propriedades do Servidor foi interrompida para bancos de dados com menos de 2 TB.  
-[Item do Microsoft Connect nº1231091](https://connect.microsoft.com/SQLServer/feedback/details/1231091)
+[Item nº 1231091 do Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/1231091)
     
 *  Corrigido um problema em que o Assistente de Restauração do Banco de Dados não aceita nomes de arquivos com espaços em branco à esquerda:   
 [Item nº 2395147 do Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/2395147)
