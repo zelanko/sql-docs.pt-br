@@ -17,11 +17,11 @@ caps.latest.revision: 5
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
-ms.openlocfilehash: bb13d94c5ef1eb36c3d50d3217f259a09c39e832
+ms.translationtype: HT
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: 0052444959911431f68bb40fd5059fb45b0d3412
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
@@ -37,7 +37,7 @@ O processamento de uma única instrução SQL é o modo mais básico para o [!IN
 
 Uma instrução `SELECT` não é de procedimento; ela não determina as etapas exatas que o servidor de banco de dados deve usar para recuperar os dados solicitados. Isso significa que o servidor de banco de dados deve analisar a instrução para determinar o modo mais eficiente para extrair os dados solicitados. Isso é conhecido como otimização da instrução `SELECT` . O componente que faz isso é chamado de Otimizador de Consulta. A entrada do Otimizador de Consulta consiste em uma consulta, o esquema de banco de dados (definições de tabela e de índice) e as estatísticas de banco de dados. A saída do Otimizador de Consulta é um plano de execução de consulta, às vezes chamado de plano de consulta ou apenas de plano. O conteúdo de um plano de consulta é descrito posteriormente com mais detalhe neste tópico.
 
-As entradas e as saídas do Otimizador de Consulta durante a otimização de uma única instrução `SELECT` são ilustradas no seguinte diagrama: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` são ilustradas no seguinte diagrama: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 Uma instrução `SELECT` define apenas o seguinte:  
 * O formato do conjunto de resultados. Isso é especificado principalmente na lista de seleção. Porém, outras cláusulas como `ORDER BY` e `GROUP BY` também afetam a forma final do conjunto de resultados.
@@ -58,13 +58,13 @@ Um plano de execução de consulta é uma definição do seguinte:
 * Os métodos usados para extrair dados de cada tabela.  
   Geralmente, há métodos diferentes para acessar os dados em cada tabela. Se forem necessárias apenas algumas linhas com valores de chave específicos, o servidor de banco de dados poderá usar um índice. Se forem necessárias todas as linhas da tabela, o servidor de banco de dados poderá ignorar os índices e executar um exame na tabela. Se forem necessárias todas as linhas de uma tabela, mas houver um índice cujas colunas de chave estão em um `ORDER BY`, executando um exame de índice em vez de um exame de tabela, uma classificação separada do conjunto de resultados poderá ser salva. Se uma tabela for muito pequena, os exames de tabela poderão ser o método mais eficiente para quase todos os acessos à tabela.
 
-O processo de selecionar um plano de execução de muitos planos possíveis é chamado de otimização. O Otimizador de Consulta é um dos componentes mais importantes de um sistema de banco de dados SQL. Embora certa sobrecarga seja usada pelo Otimizador de Consulta para analisar a consulta e selecionar um plano, ela geralmente será salva várias vezes quando o Otimizador de Consulta escolher um plano de execução eficiente. Por exemplo, duas empresas de construção podem oferecer projetos idênticos para uma casa. Se, no início, uma empresa ficar alguns dias planejando como a casa será construída, e a outra empresa começar a construir sem planejamento, a empresa que gasta algumas horas para planejar o projeto provavelmente terminará primeiro.
+O processo de selecionar um plano de execução de muitos planos possíveis é chamado de otimização. O otimizador de consulta é um dos componentes mais importantes de um sistema de banco de dados SQL. Enquanto alguma sobrecarga estiver sendo usada pelo otimizador de consulta para analisar a consulta e selecionar um plano, ela será salva várias vezes quando o otimizador de consulta escolher um plano de execução eficiente. Por exemplo, duas empresas de construção podem oferecer projetos idênticos para uma casa. Se, no início, uma empresa ficar alguns dias planejando como a casa será construída, e a outra empresa começar a construir sem planejamento, a empresa que gasta algumas horas para planejar o projeto provavelmente terminará primeiro.
 
-O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é baseado em custo. Cada plano de execução possível tem um custo associado em termos de quantidade de recursos de computação usados. O Otimizador de Consulta deve analisar os possíveis planos e escolher aquele com o menor custo estimado. Algumas instruções `SELECT` complexas têm milhares de planos de execução possíveis. Nesses casos, o Otimizador de Consulta não analisa todas as combinações possíveis. Em vez disso, usa algoritmos complexos para encontrar um plano de execução que tenha um custo razoavelmente próximo do custo mínimo possível.
+O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é baseado em custo. Cada plano de execução possível tem um custo associado em termos de quantidade de recursos de computação usados. O otimizador de consulta deve analisar os possíveis planos e escolher o que tenha o menor custo estimado. Algumas instruções `SELECT` complexas têm milhares de planos de execução possíveis. Nesses casos, o otimizador de consulta não analisa todas as combinações possíveis. Em vez disso, usa algoritmos complexos para encontrar um plano de execução que tenha um custo razoavelmente próximo do custo mínimo possível.
 
 O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não escolhe apenas o plano de execução com o menor custo de recurso, ele escolhe o plano que retorna resultados o mais rápido possível ao usuário com um custo razoável em recursos. Por exemplo, o processamento de uma consulta em paralelo normalmente usa mais recursos que o processamento em série, mas completa a consulta de forma mais rápida. O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usará um plano de execução paralelo para retornar os resultados se a carga do servidor não for afetada adversamente.
 
-O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se baseia nas estatísticas de distribuição ao estimar os custos de recurso de métodos diferentes para extrair informações de uma tabela ou um índice. São mantidas estatísticas de distribuição para colunas e índices. Elas indicam a seletividade dos valores em um índice ou uma coluna específica. Por exemplo, em uma tabela que representa carros, muitos carros têm o mesmo fabricante, mas cada carro tem um VIN (número de identificação de veículo) exclusivo. Um índice no VIN é mais seletivo que um índice no fabricante. Se as estatísticas do índice não forem atuais, o Otimizador de Consulta poderá não fazer a melhor escolha para o estado atual da tabela. Para saber mais sobre como manter as estatísticas de índice atuais, veja Usar estatísticas para melhorar o desempenho da consulta. 
+O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se baseia nas estatísticas de distribuição ao estimar os custos de recurso de métodos diferentes para extrair informações de uma tabela ou um índice. São mantidas estatísticas de distribuição para colunas e índices. Elas indicam a seletividade dos valores em um índice ou uma coluna específica. Por exemplo, em uma tabela que representa carros, muitos carros têm o mesmo fabricante, mas cada carro tem um VIN (número de identificação de veículo) exclusivo. Um índice no VIN é mais seletivo que um índice no fabricante. Se as estatísticas de índice não forem atuais, o otimizador de consulta poderá não fazer a melhor escolha para o estado atual da tabela. Para saber mais sobre como manter as estatísticas de índice atuais, veja Usar estatísticas para melhorar o desempenho da consulta. 
 
 O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é importante porque ele habilita o servidor de banco de dados a ajustar dinamicamente conforme as alterações das condições no banco de dados sem exigir a entrada de um programador ou administrador de banco de dados. Isso habilita os programadores a se concentrarem na descrição do resultado final da consulta. Eles podem confiar que o Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] criará um plano de execução eficiente para o estado do banco de dados toda vez que a instrução for executada.
 
@@ -74,7 +74,7 @@ As etapas básicas usadas pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 
 1. O analisador examina a instrução `SELECT` e a divide em unidades lógicas, como palavras-chave, expressões, operadores e identificadores.
 2. Uma árvore de consulta, às vezes chamada de árvore de sequência, é criada descrevendo as etapas lógicas necessárias para transformar os dados de origem no formato solicitado pelo conjunto de resultados.
-3. O Otimizador de Consulta analisa modos diferentes pelos quais as tabelas de origem podem ser acessadas. Ele seleciona a série de etapas que retorna os resultados mais rapidamente e usa menos recursos. A árvore de consulta é atualizada para registrar essa série exata de etapas. A versão final, otimizada da árvore de consulta é chamada de plano de execução.
+3. O otimizador de consulta analisa modos diferentes pelos quais as tabelas de origem podem ser acessadas. Ele seleciona a série de etapas que retorna os resultados mais rapidamente e usa menos recursos. A árvore de consulta é atualizada para registrar essa série exata de etapas. A versão final, otimizada da árvore de consulta é chamada de plano de execução.
 4. O mecanismo relacional é iniciado com a execução do plano de execução. Como as etapas que exigem dados das tabelas base são processadas, o mecanismo relacional solicita que o mecanismo de armazenamento rejeite os dados dos conjuntos de linhas solicitados do mecanismo relacional.
 5. O mecanismo relacional processa os dados retornados do mecanismo de armazenamento no formato definido para o conjunto de resultados e retorna o conjunto de resultados ao cliente.
 
@@ -92,12 +92,12 @@ Talvez o mecanismo relacional precise criar uma tabela de trabalho para executar
 
 O processador de consultas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trata as exibições indexadas e não indexadas de forma diferente: 
 
-* As linhas de uma exibição indexada são armazenadas no banco de dados no mesmo formato de uma tabela. Se o Otimizador de Consulta decidir usar uma exibição indexada em um plano de consulta, a exibição indexada será tratada da mesma forma que uma tabela base.
+* As linhas de uma exibição indexada são armazenadas no banco de dados no mesmo formato de uma tabela. Se o otimizador de consulta decidir usar uma exibição indexada em um plano de consulta, a exibição indexada será tratada da mesma forma que uma tabela base.
 * Somente a definição de uma exibição não indexada é armazenada, e não as linhas da exibição. O Otimizador de Consulta incorpora a lógica da definição de exibição no plano de execução criado para a instrução SQL que referencia a exibição não indexada. 
 
 A lógica usada pelo Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para decidir quando usar uma exibição indexada é semelhante à lógica usada para decidir quando usar um índice em uma tabela. Se os dados na exibição indexada abrangerem toda ou parte da instrução SQL e o Otimizador de Consulta determinar que um índice na exibição é o caminho de acesso de baixo custo, o Otimizador de Consulta escolherá o índice independentemente de a exibição ser referenciada pelo nome na consulta.
 
-Quando uma instrução SQL referencia uma exibição não indexada, o analisador e o Otimizador de Consulta analisam a origem da instrução SQL e a exibição e depois as resolvem em um único plano de execução. Não há um plano para a instrução SQL e um plano separado para a exibição.
+Quando uma instrução SQL referencia uma exibição não indexada, o analisador e o otimizador de consulta analisam a origem da instrução SQL e a exibição. Depois, as resolvem em um único plano de execução. Não há um plano para a instrução SQL e um plano separado para a exibição.
 
 Por exemplo, considere a seguinte exibição:
 
@@ -198,37 +198,37 @@ O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
   * `CONCAT_NULL_YIELDS_NULL`
   * `QUOTED_IDENTIFIER` 
   * A opção de sessão `NUMERIC_ROUNDABORT` está definida como OFF.
-* O Otimizador de Consulta encontra uma correspondência entre os elementos e as colunas de índice de exibição na consulta, tais como: 
+* O otimizador de consulta encontra uma correspondência entre os elementos e as colunas de índice de exibição na consulta, tais como: 
   * Predicados de critérios de pesquisa na cláusula WHERE
   * Operações de união
   * Funções de agregação
   * Cláusulas`GROUP BY` 
   * Referências de tabela
-* O custo estimado do uso do índice é o custo mais baixo de qualquer mecanismo de acesso considerado pelo Otimizador de Consulta. 
+* O custo estimado do uso do índice é o custo mais baixo de qualquer mecanismo de acesso considerado pelo otimizador de consulta. 
 * Toda tabela referenciada na consulta (diretamente ou ao expandir uma exibição para acessar suas tabelas subjacentes) que corresponde a uma referência de tabela na exibição indexada deve ter o mesmo conjunto de dicas aplicado na consulta.
 
 > [!NOTE] 
 > As dicas `READCOMMITTED` e `READCOMMITTEDLOCK` sempre são dicas diferentes consideradas nesse contexto, independentemente do nível de isolamento da transação atual.
  
-Diferentemente dos requisitos das opções `SET` e dicas de tabela, essas são as mesmas regras que o Otimizador de Consulta usa para determinar se um índice de tabela abrange uma consulta. Não é necessário especificar mais nada na consulta para uma exibição indexada a ser utilizada.
+Diferentemente dos requisitos das opções `SET` options and table hints, these are the same rules that the Query Optimizer uses to determine whether a table index covers a query. Não é necessário especificar mais nada na consulta para uma exibição indexada a ser utilizada.
 
-Uma consulta não precisa referenciar explicitamente uma exibição indexada na cláusula `FROM` para que o Otimizador de Consulta use a exibição indexada. Se a consulta tiver referências a colunas nas tabelas base, que também estão presentes na exibição indexada e o Otimizador de Consulta estimar que o uso da exibição indexada fornecerá o menor custo de mecanismo de acesso, ele escolherá a exibição indexada, semelhante ao modo pelo qual escolhe índices de tabela base quando eles não são referenciados diretamente em uma consulta. O Otimizador de Consulta pode escolher a exibição quando ela contém colunas que não são referenciadas pela consulta, contanto que a exibição ofereça a opção de menor custo que abrange uma ou mais das colunas especificadas na consulta.
+Uma consulta não precisa referenciar explicitamente uma exibição indexada na cláusula `FROM` clause for the Query Optimizer to use the indexed view. Se a consulta tiver referências a colunas nas tabelas base, que também estão presentes na exibição indexada, e o otimizador de consulta estimar que o uso da exibição indexada fornecerá o menor custo de mecanismo de acesso, o otimizador de consulta escolherá a exibição indexada, semelhante ao modo pelo qual escolhe índices de tabela base quando eles não são referenciados diretamente em uma consulta. O otimizador de consulta pode escolher a exibição quando ela contém colunas que não são referenciadas pela consulta, contanto que a exibição ofereça a opção de menor custo para cobrir uma ou mais das colunas especificadas na consulta.
 
-O Otimizador de Consulta trata uma exibição indexada referenciada na cláusula `FROM` como uma exibição padrão. O Otimizador de Consulta expande a definição da exibição da consulta no início do processo de otimização. Depois, a correspondência da exibição indexada é executada. A exibição indexada pode ser usada no plano de execução final selecionado pelo Otimizador de Consulta ou, em vez disso, o plano pode materializar os dados necessários da exibição acessando as tabelas base referenciadas pela exibição. O Otimizador de Consulta escolhe a alternativa de menor custo.
+The Query Optimizer treats an indexed view referenced in the `FROM` como uma exibição padrão. O otimizador de consulta expande a definição da exibição da consulta no início do processo de otimização. Depois, a correspondência da exibição indexada é executada. A exibição indexada pode ser usada no plano de execução final selecionado pelo Otimizador de Consulta ou, em vez disso, o plano pode materializar os dados necessários da exibição acessando as tabelas base referenciadas pela exibição. O Otimizador de Consulta escolhe a alternativa de menor custo.
 
 #### <a name="using-hints-with-indexed-views"></a>Usando dicas com exibições indexadas
 
-Você pode evitar que os índices de exibições sejam usados para uma consulta usando a dica de consulta `EXPAND VIEWS` . Ou, então, pode usar a dica de tabela `NOEXPAND` para forçar o uso de um índice para uma exibição indexada especificada na cláusula `FROM` de uma consulta. Contudo, deixe o Otimizador de Consulta determinar dinamicamente os melhores métodos de acesso a serem usados para cada consulta. Limite seu uso de `EXPAND` e `NOEXPAND` a casos específicos em que os testes têm mostrado que melhoram o desempenho consideravelmente.
+Você pode evitar que os índices de exibições sejam usados para uma consulta usando a dica de consulta `EXPAND VIEWS` . Ou, então, pode usar a dica de tabela `NOEXPAND` para forçar o uso de um índice para uma exibição indexada especificada na cláusula `FROM` de uma consulta. Porém, deve deixar o otimizador de consulta determinar dinamicamente os melhores métodos de acesso a serem usados para cada consulta. Limite seu uso de `EXPAND` e `NOEXPAND` a casos específicos em que os testes têm mostrado que melhoram o desempenho consideravelmente.
 
-A opção `EXPAND VIEWS` especifica que o Otimizador de Consulta não usa nenhum índice de exibição para a consulta inteira. 
+A opção `EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 
 
-Quando `NOEXPAND` é especificado para uma exibição, o Otimizador de Consulta considera o uso de qualquer índice definido na exibição. `NOEXPAND` especificado com a cláusula `INDEX()` opcional força o Otimizador de Consulta a usar os índices especificados. O`NOEXPAND` pode ser especificado apenas para uma exibição indexada e não pode ser especificado para uma exibição não indexada.
+Quando `NOEXPAND` is specified for a view, the Query Optimizer considers using any indexes defined on the view. O`NOEXPAND` especificado com a cláusula `INDEX()` clause forces the Query Optimizer to use the specified indexes. O`NOEXPAND` pode ser especificado apenas para uma exibição indexada e não pode ser especificado para uma exibição não indexada.
 
 Quando `NOEXPAND` ou `EXPAND VIEWS` não é especificado em uma consulta que contém uma exibição, a exibição é expandida para acessar as tabelas subjacentes. Se a consulta que compõe a exibição tiver quaisquer dicas de tabela, as dicas serão propagadas às tabelas subjacentes. (Esse processo é explicado com mais detalhes em Resolução de exibição.) Contanto que o conjunto de dicas existente nas tabelas subjacentes da exibição sejam idênticos, a consulta será elegível para ser correspondida a uma exibição indexada. Na maioria das vezes, essas dicas corresponderão umas às outras porque estão sendo diretamente herdadas da exibição. No entanto, se a consulta referenciar tabelas em vez de exibições e as dicas aplicadas diretamente nessas tabelas não forem idênticas, a consulta não será elegível para correspondência com uma exibição indexada. Se as dicas `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK`ou `XLOCK` forem aplicadas às tabelas referenciadas na consulta depois da expansão da exibição, a consulta não será elegível para a correspondência da exibição indexada.
 
 Se uma dica de tabela na forma de `INDEX (index_val[ ,...n] )` fizer referência a uma exibição em uma consulta, e você não especificar a dica `NOEXPAND` , a dica de índice será ignorada. Para especificar o uso de um determinado índice, use `NOEXPAND`. 
 
-Geralmente, quando o Otimizador de Consulta corresponde uma exibição indexada a uma consulta, as dicas especificadas nas tabelas ou exibições da consulta são aplicadas diretamente à exibição indexada. Se o Otimizador de Consulta optar por não usar uma exibição indexada, qualquer dica será propagada diretamente às tabelas referenciadas na exibição. Para saber mais, veja Resolução de exibição. Essa propagação se aplica a dicas de união. Elas são aplicadas somente em sua posição original na consulta. As dicas de união não são consideradas pelo Otimizador de Consulta quando há correspondência entre as consultas e as exibições indexadas. Se um plano de consulta usar uma exibição indexada que corresponde a parte de uma consulta que contém uma dica de junção, esta não será usada no plano.
+Geralmente, quando o Otimizador de Consulta corresponde uma exibição indexada a uma consulta, as dicas especificadas nas tabelas ou exibições da consulta são aplicadas diretamente à exibição indexada. Se o otimizador de consulta optar por não usar uma exibição indexada, qualquer dica será propagada diretamente às tabelas referenciadas na exibição. Para saber mais, veja Resolução de exibição. Essa propagação se aplica a dicas de união. Elas são aplicadas somente em sua posição original na consulta. As dicas de união não são consideradas pelo otimizador de consulta quando há correspondência entre as consultas e as exibições indexadas. Se um plano de consulta usar uma exibição indexada que corresponde a parte de uma consulta que contém uma dica de junção, esta não será usada no plano.
 
 Não são permitidas dicas nas definições de exibições indexadas. No modo de compatibilidade 80 e superior, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ignora as dicas em definições de exibição indexada quando as mantêm, ou ao executar consultas que usam exibições indexadas. Embora o uso de dicas em definições de exibição indexada não produza um erro de sintaxe no modo de compatibilidade 80, elas são ignoradas.
 
@@ -239,7 +239,7 @@ O processador de consultas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
 O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cria planos inteligentes e dinâmicos que usam de forma eficaz as consultas distribuídas para acessar dados de tabelas de membro remoto: 
 
 * O Processador de Consultas usa o OLE DB primeiro para recuperar as definições de restrição de verificação de cada tabela de membro. Isso permite ao processador de consultas mapear a distribuição de valores da chave entre as tabelas de membro.
-* O Processador de Consultas compara os intervalos de chaves especificados em uma cláusula `WHERE` da instrução SQL com o mapa que mostra como as linhas são distribuídas nas tabelas de membro. O processador de consultas cria um plano de execução de consulta que usa consultas distribuídas para recuperar apenas essas linhas remotas exigidas para completar a instrução SQL. O plano de execução também é criado de forma que qualquer acesso a tabelas de membro remoto, tanto para dados quanto para metadados, seja adiado até as informações serem exigidas.
+* The Query Processor compares the key ranges specified in an SQL statement `WHERE` da instrução SQL com o mapa que mostra como as linhas são distribuídas nas tabelas de membro. O processador de consultas cria um plano de execução de consulta que usa consultas distribuídas para recuperar apenas essas linhas remotas exigidas para completar a instrução SQL. O plano de execução também é criado de forma que qualquer acesso a tabelas de membro remoto, tanto para dados quanto para metadados, seja adiado até as informações serem exigidas.
 
 Por exemplo, considere um sistema em que uma tabela de clientes é particionada entre Server1 (`CustomerID` de 1 até 3299999), Server2 (`CustomerID` de 3300000 até 6599999) e Server3 (`CustomerID` de 6600000 até 9999999).
 
@@ -370,7 +370,7 @@ A coluna `recompile_cause` do xEvent `sql_statement_recompile` contém um códig
 > [!NOTE]
 > Quando a opção do banco de dados `AUTO_UPDATE_STATISTICS` for definida como `ON`, as consultas serão recompiladas quando destinadas a tabelas ou exibições indexadas cujas estatísticas foram atualizadas ou cujas cardinalidades foram alteradas significativamente desde a última execução. Esse comportamento se aplica a tabelas padrão definidas pelo usuário, tabelas temporárias e tabelas inseridas e excluídas criadas por disparadores de DML. Se o desempenho de consulta for afetado por recompilações excessivas, considere a alteração dessa configuração para `OFF`. Quando a opção do banco de dados `AUTO_UPDATE_STATISTICS` for definida como `OFF`, não ocorrerá nenhuma recompilação com base em estatísticas ou alterações de cardinalidade, com exceção das tabelas inseridas e excluídas criadas por disparadores de DML `INSTEAD OF`. Como essas tabelas são criadas em tempdb, a recompilação de consultas que as acessam depende da configuração de `AUTO_UPDATE_STATISTICS` em tempdb. Observe que no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, as consultas continuam a recompilação com base nas alterações de cardinalidade para as tabelas inseridas e excluídas do gatilho DML, mesmo quando essa configuração estiver definida como `OFF`.
 
-### <a name="parameters-and-execution-plan-reuse"></a>Reutilização de parâmetros e plano de execução
+### <a name="PlanReuse"></a> Reutilização de Parâmetros e Plano de Execução
 
 O uso de parâmetros, inclusive de marcadores de parâmetro em aplicativos ADO, OLE DB e ODBC, pode aumentar a reutilização de planos de execução. 
 
@@ -438,7 +438,7 @@ WHERE AddressID = 1 + 2;
 
 Porém, ela pode ser parametrizada de acordo com as regras de parametrização simples. Quando se tenta usar a parametrização forçada, mas ela falha, há uma tentativa subsequente de parametrização simples.
 
-### <a name="simple-parameterization"></a>Parametrização simples
+### <a name="SimpleParam"></a> Parametrização Simples
 
 No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o uso de parâmetros ou marcadores de parâmetro nas instruções Transact-SQL aumenta a capacidade do mecanismo relacional de corresponder as instruções SQL novas com planos de execução existentes compilados anteriormente.
 
@@ -474,7 +474,7 @@ No comportamento padrão de parametrização simples, o [!INCLUDE[ssNoVersion](.
 
 Alternativamente, você pode especificar que, uma consulta única e quaisquer outras que sejam sintaticamente equivalentes e apenas diferem nos valores de parâmetro, sejam parametrizadas. 
 
-### <a name="forced-parameterization"></a>Parametrização forçada
+### <a name="ForcedParam"></a> Parametrização Forçada
 
 É possível substituir o comportamento padrão da parametrização simples do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificando que todas as instruções `SELECT`, `INSERT`, `UPDATE` e `DELETE` em um banco de dados tenham parâmetros e sejam sujeitas a determinadas limitações. A parametrização forçada é habilitada pela configuração da opção `PARAMETERIZATION` como `FORCED` na instrução `ALTER DATABASE` . A parametrização forçada pode melhorar o desempenho de alguns bancos de dados reduzindo a frequência de compilações e recompilações de consulta. Os bancos de dados que podem se beneficiar da parametrização forçada geralmente são aqueles em que há suporte a grandes volumes de consultas simultâneas de origens tais como aplicativos de ponto-de-venda.
 
@@ -525,11 +525,11 @@ Quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parametriza lite
 * Literais binários parametrizados em varbinary(8000), caso o literal caiba em 8000 bytes. Se for maior do que 8000 bytes, será convertido em varbinary(max).
 * Literais de moeda parametrizados em money.
 
-#### <a name="guidelines-for-using-forced-parameterization"></a>Diretrizes para uso da parametrização forçada
+#### <a name="ForcedParamGuide"></a> Diretrizes para Uso da Parametrização Forçada
 
 Considere as seguintes diretrizes ao definir a opção `PARAMETERIZATION` como FORCED:
 
-* A parametrização forçada altera as constantes literais em uma consulta para parâmetros ao compilar uma consulta. Portanto, o Otimizador de Consulta poderia escolher planos inferiores para consultas. Especificamente, é menos provável que o Otimizador de Consulta corresponda uma consulta a uma exibição indexada ou um índice em uma coluna computada. Além disso, ele pode escolher planos com qualidade inferior para consultas inseridas em tabelas particionadas e exibições particionadas distribuídas. A parametrização forçada não deve ser usada em ambientes que dependem excessivamente de exibições indexadas e índices em colunas computadas. Via de regra, a opção `PARAMETERIZATION FORCED` só deve ser usada por administradores de banco de dados experientes depois de determinarem que isso não afeta o desempenho de forma negativa.
+* A parametrização forçada altera as constantes literais em uma consulta para parâmetros ao compilar uma consulta. Portanto, o otimizador de consulta poderia escolher planos com qualidade inferior para consultas. Em particular, é menos provável que o otimizador de consulta efetue uma correspondência entre uma consulta uma exibição indexada ou um índice em uma coluna computada. Além disso, ele pode escolher planos com qualidade inferior para consultas inseridas em tabelas particionadas e exibições particionadas distribuídas. A parametrização forçada não deve ser usada em ambientes que dependem excessivamente de exibições indexadas e índices em colunas computadas. Via de regra, a opção `PARAMETERIZATION FORCED` só deve ser usada por administradores de banco de dados experientes depois de determinarem que isso não afeta o desempenho de forma negativa.
 * As consultas distribuídas que referenciam mais de um banco de dados são elegíveis para parametrização forçada, contanto que a opção `PARAMETERIZATION` seja definida como `FORCED` no banco de dados cujo contexto está sendo executado pela consulta.
 * A definição da opção `PARAMETERIZATION` como `FORCED` libera todos os planos de consulta do cache de plano de um banco de dados, menos os que estão sendo compilados, recompilados ou em execução. Os planos de consultas que estiverem sendo compilados ou em execução durante a mudança de configuração serão parametrizados da próxima vez que a consulta for executada.
 * A definição da opção `PARAMETERIZATION` é uma operação online que não exige nenhum bloqueio exclusivo no nível de banco de dados.
@@ -538,7 +538,7 @@ Considere as seguintes diretrizes ao definir a opção `PARAMETERIZATION` como F
 É possível substituir o comportamento da parametrização forçada especificando a tentativa da parametrização simples em uma única consulta, e em quaisquer outras que sejam sintaticamente equivalentes, mas diferem apenas nos valores de parâmetro. Reciprocamente, pode-se especificar a tentativa da parametrização forçada em apenas um conjunto de consultas sintaticamente equivalentes, mesmo se a parametrização forçada estiver desabilitada no banco de dados. [Guias de plano](../relational-databases/performance/plan-guides.md) são usados para essa finalidade.
 
 > [!NOTE]
-> Quando a opção `PARAMETERIZATION` é definida como `FORCED`, o relatório de mensagens de erro pode ser diferente daquele da parametrização simples: podem ser informadas várias mensagens de erro em casos em que poucas mensagens seriam informadas na parametrização simples, e o número de linhas nas quais ocorrem erros pode ser informado incorretamente.
+> Quando a opção `PARAMETERIZATION` é definida como `FORCED`, o relatório de mensagens de erro pode ser diferente de quando a opção `PARAMETERIZATION` está configurada para `SIMPLE`: podem ser relatadas várias mensagens de erro na parametrização forçada, em que poucas mensagens seriam informadas na parametrização simples, e o número de linhas nas quais ocorrem erros pode ser relatado incorretamente.
 
 ### <a name="preparing-sql-statements"></a>Preparando instruções SQL
 
@@ -580,7 +580,7 @@ No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o modelo de preparaç
 * O modelo de preparação/execução é portátil para outros bancos de dados, inclusive para versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
  
-### <a name="parameter-sniffing"></a>Detecção de parâmetros
+### <a name="ParamSniffing"></a> Detecção de Parâmetros
 “Detecção de parâmetro” refere-se a um processo no qual o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] “fareja” os valores de parâmetro atuais durante a compilação ou recompilação e os passa para o Otimizador de Consulta para que eles podem ser usados para gerar planos de execução de consulta possivelmente mais eficientes.
 
 Valores de parâmetro são detectados durante a compilação ou recompilação para os seguintes tipos de lotes:
@@ -606,7 +606,7 @@ O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 * Um plano de execução em série é considerado mais rápido que qualquer plano de execução paralelo possível para a consulta em questão.
 * A consulta contém operadores escalares ou relacionais que não podem ser executados em paralelo. Certos operadores podem fazer com que uma seção do plano de consulta seja executada no modo em série ou que todo o plano seja executado no modo em série.
 
-### <a name="degree-of-parallelism"></a>Grau de paralelismo
+### <a name="DOP"></a> Grau de Paralelismo
 
 O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detecta automaticamente o melhor grau de paralelismo para cada instância de uma execução de consulta paralela ou operação DDL (linguagem de definição de dados) do índice. Isso é feito baseado nos seguintes critérios: 
 
@@ -614,13 +614,13 @@ O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detecta automaticamente
   Apenas computadores que têm mais de uma CPU podem usar consultas paralelas. 
 
 2. Se há threads de trabalho suficientes disponíveis.  
-  Cada operação de consulta ou índice exige um determinado número de threads de trabalho para execução. A execução de um plano paralelo exige mais threads de trabalho que um plano consecutivo e o número de threads de trabalho exigidos aumenta conforme o grau de paralelismo. Quando o requisito de thread de trabalho do plano paralelo de um grau específico de paralelismo não puder ser atendido, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] diminuirá automaticamente o grau de paralelismo ou abandonará completamente o plano paralelo no contexto de carga de trabalho especificado. Depois, ele executará o plano consecutivo (um thread de trabalho). 
+  Cada operação de consulta ou índice exige um determinado número de threads de trabalho para execução. A execução de um plano paralelo exige mais threads de trabalho que um plano serial e o número de threads de trabalho exigidos aumenta conforme o grau de paralelismo. Quando o requisito de thread de trabalho do plano paralelo de um grau específico de paralelismo não puder ser atendido, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] diminuirá automaticamente o grau de paralelismo ou abandonará completamente o plano paralelo no contexto de carga de trabalho especificado. Depois, ele executará o plano consecutivo (um thread de trabalho). 
 
 3. O tipo de operação de consulta ou de índice executada.  
   As operações de índice que criam ou reconstroem um índice, ou descartam um índice cluster e as consultas que usam ciclos de CPU frequentemente são as melhores opções para um plano paralelo. Por exemplo, junções de tabelas grandes, agregações grandes e classificação de conjuntos de resultados grandes são boas alternativas. As consultas simples, frequentemente encontradas em aplicativos de processamento de transações, localizam a coordenação adicional exigida para executar uma consulta em paralelo que supera o aumento de desempenho potencial. Para distinguir as consultas que se beneficiam de paralelismo das que não se beneficiam, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compara o custo estimado da execução da operação de consulta ou índice com o valor [limite de custo para paralelismo](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). Embora não recomendado, os usuários podem alterar o valor padrão, 5 usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). 
 
 4. Se houver um número suficiente de linhas para processar.  
-  Se o Otimizador de Consulta determinar que o número de linhas é muito baixo, ele não apresentará os operadores de troca para distribuir as linhas. Por conseguinte, os operadores serão executados em série. A execução dos operadores em um plano consecutivo evita cenários quando os custos de inicialização, distribuição e coordenação excedem os ganhos alcançados pela execução de operador paralela.
+  Se o otimizador de consulta determinar que o número de linhas é muito baixo, não apresentará os operadores de troca para distribuir as linhas. Por conseguinte, os operadores serão executados em série. A execução dos operadores em um plano consecutivo evita cenários quando os custos de inicialização, distribuição e coordenação excedem os ganhos alcançados pela execução de operador paralela.
 
 5. Se as estatísticas de distribuição atuais estiverem disponíveis.  
   Se o grau mais alto de paralelismo não for possível, os graus inferiores serão considerados antes de o plano paralelo ser abandonado.  
@@ -633,7 +633,7 @@ No tempo de execução, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.
 
 Em um plano de execução de consulta paralelo, os operadores de inserção, atualização e exclusão são executados em série. Porém, a cláusula WHERE de uma instrução UPDATE ou DELETE, ou a parte SELECT de uma instrução INSERT pode ser executada em paralelo. As alterações de dados reais são, depois, aplicadas em série ao banco de dados.
 
-Cursores estáticos e controlados por conjunto de chaves podem ser populados por planos de execução paralelos. Porém, o comportamento dos cursores dinâmicos só pode ser fornecido por meio da execução consecutiva. O Otimizador de Consulta sempre gera um plano de execução em série para uma consulta que faz parte de um cursor dinâmico.
+Cursores estáticos e controlados por conjunto de chaves podem ser populados por planos de execução paralelos. Porém, o comportamento dos cursores dinâmicos só pode ser fornecido por meio da execução consecutiva. O otimizador de consulta sempre gera um plano de execução consecutivo para uma consulta que faz parte de um cursor dinâmico.
 
 #### <a name="overriding-degrees-of-parallelism"></a>Substituindo graus de paralelismo
 
@@ -641,7 +641,7 @@ Você pode usar a opção de configuração de servidor [grau máximo de paralel
 
 A configuração da opção de grau máximo de paralelismo como 0 (padrão) permite que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] use todos os processadores disponíveis até um máximo de 64 processadores em uma execução de plano paralelo. Embora [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] defina um destino de tempo de execução de 64 processadores lógicos quando a opção MAXDOP é definida como 0, um valor diferente pode ser definido manualmente se necessário. Configurar MAXDOP como 0 para consultas e índices permite ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar todos os processadores disponíveis até um máximo de 64 processadores para as consultas ou índices específicos em uma execução de plano paralela. MAXDOP não é um valor de imposto para todas as consultas em paralelo, mas sim um destino provisório para todas as consultas qualificadas para paralelismo. Isso significa que, se não houver threads de trabalho disponíveis suficientes no tempo de execução, uma consulta poderá ser executada com um grau menor de paralelismo que a opção da configuração de servidor MAXDOP.
 
-Consulte este [artigo do Suporte da Microsoft](https://support.microsoft.com/en-us/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server) para ver as práticas recomendadas de configuração do MAXDOP.
+Consulte este [artigo do Suporte da Microsoft](http://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server) para ver as práticas recomendadas de configuração do MAXDOP.
 
 ### <a name="parallel-query-example"></a>Exemplo de consulta paralela
 
@@ -665,7 +665,7 @@ WHERE o_orderdate >= '2000/04/01'
    ORDER BY o_orderpriority
 ```
 
-Suponha que os índices a seguir estão definidos nas tabelas lineitem e orders:
+Suponha que os índices a seguir estão definidos nas tabelas `lineitem` e `orders`:
 
 ```tsql
 CREATE INDEX l_order_dates_idx 
@@ -751,7 +751,7 @@ As fases principais de uma operação de índice paralela incluem o seguinte:
 
 As instruções `CREATE TABLE` ou `ALTER TABLE` individuais podem ter várias restrições que exigem a criação de um índice. Essas operações de criação de vários índices são executadas em série, embora cada operação de criação de índice individual possa ser uma operação paralela em um computador com várias CPUs.
 
-## <a name="distributted-query-architecture"></a>Arquitetura de consulta distribuída
+## <a name="distributed-query-architecture"></a>Arquitetura de consulta distribuída
 
 O Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a dois métodos para referenciar fontes de dados OLE DB heterogêneas em instruções Transact-SQL:
 
@@ -791,7 +791,7 @@ O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especifica um mecanismo
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>Aperfeiçoamentos de processamento de consultas em tabelas e índices particionados
 
-O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2008 melhorou o desempenho do processamento de consultas em tabelas particionadas para muitos planos paralelos, alterou a maneira como os planos paralelos e seriais são representados e aprimorou as informações de particionamento fornecidas nos planos de execução de tempo de compilação e tempo de execução. Este tópico descreve esses aperfeiçoamentos, fornece orientação sobre como interpretar os planos de execução de consultas de tabelas e índices particionados e fornece as práticas recomendadas para aperfeiçoar o desempenho de consultas em objetos particionados. 
+O [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] melhorou o desempenho do processamento de consultas em tabelas particionadas para muitos planos paralelos, alterou a maneira como os planos paralelos e seriais são representados e aprimorou as informações de particionamento fornecidas nos planos de execução de tempo de compilação e tempo de execução. Este tópico descreve esses aperfeiçoamentos, fornece orientação sobre como interpretar os planos de execução de consultas de tabelas e índices particionados e fornece as práticas recomendadas para aperfeiçoar o desempenho de consultas em objetos particionados. 
 
 > [!NOTE]
 > Há suporte para tabelas e índices particionados apenas nas edições Enterprise, Developer e Evaluation do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -802,7 +802,7 @@ No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a representação int
 
 Agora a eliminação de partição está concluída na operação de busca.
 
-Além disso, o Otimizador de Consulta é estendido para que uma operação de busca ou de verificação com uma condição possa ser realizada em `PartitionID` (como a coluna lógica principal) e possivelmente em outras colunas de chave de índice e, depois, para que uma busca de segundo nível, com uma condição diferente, possa ser realizada em uma ou mais colunas adicionais, para cada valor diferente que atenda à qualificação para a operação de busca de primeiro nível. Ou seja, essa operação, chamada de busca seletiva, permite que o Otimizador de Consulta realize uma operação de busca ou de verificação baseada em uma condição para determinar as partições a serem acessadas e uma operação de busca de segundo nível no operador para retornar linhas dessas partições que atendam a uma condição diferente. Por exemplo, considere a consulta abaixo.
+In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` (como a coluna lógica principal) e possivelmente em outras colunas de chave de índice e, depois, uma busca de segundo nível, com uma condição diferente, possa ser realizada em uma ou mais colunas adicionais, para cada valor diferente que atenda à qualificação para a operação de busca de primeiro nível. Ou seja, essa operação, chamada de busca seletiva, permite que o otimizador de consulta realize uma operação de busca ou de exame baseada em uma condição para determinar as partições a serem acessadas e uma operação de busca de segundo nível no operador para retornar linhas dessas partições que atendam a uma condição diferente. Por exemplo, considere a consulta abaixo.
 
 ```tsql
 SELECT * FROM T WHERE a < 10 and b = 2;
@@ -816,7 +816,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 Para solucionar a consulta, o processador de consulta realiza uma operação de busca de primeiro nível para encontrar todas as partições que contenham linhas que atendam à condição `T.a < 10`. Isso identifica as partições a serem acessadas. Em cada partição identificada, o processador realiza uma busca de segundo nível no índice clusterizado na coluna b para encontrar as linhas que atendem à condição `T.b = 2` e `T.a < 10`. 
 
-A ilustração a seguir é uma representação lógica da operação de busca seletiva. Ela mostra a tabela T com dados nas colunas a e b. As partições são numeradas de 1 a 4 com os limites de partição mostrados por linhas verticais tracejadas. Uma operação de busca de primeiro nível nas partições (não mostrada na ilustração) determinou que as partições 1, 2 e 3 atendem à condição de busca implícita pelo particionamento definido para a tabela e o predicado na coluna a. Ou seja, `T.a < 10`. O caminho atravessado pela parte da busca de segundo nível da operação de busca seletiva é ilustrado pela linha curva. Essencialmente, a operação de busca seletiva procura, em cada uma destas partições, por linhas que atendam à condição `b = 2`. O custo total da operação de busca seletiva é igual ao de três buscas de índice separadas.   
+A ilustração a seguir é uma representação lógica da operação de busca seletiva. Ela mostra a tabela `T` com dados nas colunas `a` e `b`. As partições são numeradas de 1 a 4 com os limites de partição mostrados por linhas verticais tracejadas. Uma operação de busca de primeiro nível nas partições (não mostrada na ilustração) determinou que as partições 1, 2 e 3 atendem à condição de busca implícita pelo particionamento definido para a tabela e o predicado na coluna `a`. Ou seja, `T.a < 10`. O caminho atravessado pela parte da busca de segundo nível da operação de busca seletiva é ilustrado pela linha curva. Essencialmente, a operação de busca seletiva procura, em cada uma destas partições, por linhas que atendam à condição `b = 2`. O custo total da operação de busca seletiva é igual ao de três buscas de índice separadas.   
 
 ![skip_scan](../relational-databases/media/skip-scan.gif)
 
@@ -914,7 +914,7 @@ Um heap particionado é tratado como um índice lógico na ID da partição. A e
 
 #### <a name="interpreting-execution-plans-for-collocated-joins"></a>Interpretando planos de execução para junções colocadas
 
-Uma colocação de junção pode ocorrer quando duas tabelas são particionadas usando a mesma função de particionamento ou função equivalente e as colunas de particionamento de ambos os lados da junção são especificadas na condição de junção da consulta. O Otimizador de Consulta pode gerar um plano em que as partições de cada uma das tabelas que tenham IDs de partição iguais sejam unidas separadamente. As junções colocadas podem ser mais rápidas que as junções não colocadas porque podem exigir menos memória e tempo de processamento. O Otimizador de Consulta escolhe um plano não colocado ou colocado com base em estimativas de custo.
+Uma colocação de junção pode ocorrer quando duas tabelas são particionadas usando a mesma função de particionamento ou função equivalente e as colunas de particionamento de ambos os lados da junção são especificadas na condição de junção da consulta. O otimizador de consulta pode gerar um plano em que as partições de cada uma das tabelas que tenham IDs de partição iguais sejam unidas separadamente. As junções colocadas podem ser mais rápidas que as junções não colocadas porque podem exigir menos memória e tempo de processamento. O Otimizador de Consulta escolhe um plano não colocado ou colocado com base em estimativas de custo.
 
 Em um plano colocado, a junção `Nested Loops` lê uma ou mais partições de índice e tabela unidas a partir da parte interna. Os números dos operadores `Constant Scan` representam os números de partições. 
 
@@ -943,24 +943,24 @@ Embora o exemplo anterior sugira um modo objetivo para alocar threads de trabalh
 
 Vejamos outro exemplo, vamos supor que a tabela possui quatro partições na coluna A com pontos de limite (10, 20, 30), um índice na coluna B e a consulta tem uma cláusula de predicado `WHERE B IN (50, 100, 150)`. Como as partições da tabela têm base nos valores de A, os valores de B podem ocorrer em qualquer uma das partições da tabela. Dessa forma, o processador de consulta buscará cada um dos três valores de B (50, 100, 150) em cada uma das quatro partições de tabela. O processador de consulta atribuirá threads de trabalho proporcionalmente para que possa executar cada um desses 12 exames de consulta em paralelo.
 
-|As partições de tabela baseadas na coluna A    |Buscas para coluna B em cada partição de tabela |
+|As partições de tabela baseadas na coluna A |Buscas para coluna B em cada partição de tabela |
 |----|----|
-|Partição de tabela 1: A < 10     |B=50, B=100, B=150 |
-|Partição de tabela 2: A >= 10 AND A < 20     |B=50, B=100, B=150 |
-|Partição de tabela 3: A >= 20 AND A < 30     |B=50, B=100, B=150 |
-|Partição de tabela 4: A >= 30     |B=50, B=100, B=150 |
+|Partição de tabela 1: A < 10   |B=50, B=100, B=150 |
+|Partição de tabela 2: A >= 10 AND A < 20   |B=50, B=100, B=150 |
+|Partição de tabela 3: A >= 20 AND A < 30   |B=50, B=100, B=150 |
+|Partição de tabela 4: A >= 30  |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>Práticas recomendadas
 
 Para melhorar o desempenho das consultas que acessam uma grande quantidade de dados de grandes tabelas e índices particionados, recomendamos as seguintes práticas:
 
-* Distribuir cada partição em muitos discos.
+* Distribuir cada partição em muitos discos. Isso é especialmente relevante ao usar discos de rotação.
 * Quando possível, usar um servidor com memória principal suficiente para ajustar as partições acessadas com frequência ou todas as partições na memória para reduzir o custo de E/S.
 * Se os dados que você consultar não se ajustarem na memória, compacte as tabelas e os índices. Isso reduzirá o custo de E/S.
 * Usar um servidor com processadores rápidos e o máximo possível de núcleos de processador, para se beneficiar da capacidade de processamento de consultas paralelas.
 * Verificar se o servidor tem largura de banda suficiente do controlador de E/S. 
 * Criar um índice clusterizado em todas as tabelas particionadas grandes para beneficiar-se de otimizações de exames da árvore B.
-* Seguir as práticas recomendadas no documento [Loading Bulk Data into a Partitioned Table](http://go.microsoft.com/fwlink/?LinkId=154561)(Carregar dados em massa em uma tabela particionada) quando estiver carregando dados em massa em tabelas particionadas.
+* Seguir as práticas recomendadas no documento [The Data Loading Performance Guide](http://msdn.microsoft.com/en-us/library/dd425070.aspx)(Guia de Desempenho de Carregamento de Dados) quando estiver carregando dados em massa em tabelas particionadas.
 
 ### <a name="example"></a>Exemplo
 
@@ -1034,5 +1034,6 @@ GO
 
 ##  <a name="Additional_Reading"></a> Leitura adicional  
  [Referência de operadores físicos e lógicos de plano de execução](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
- [Eventos estendidos](../relational-databases/extended-events/extended-events.md)
+ [Eventos estendidos](../relational-databases/extended-events/extended-events.md)  
+ [Melhor prática com o Repositório de Consultas](../relational-databases/performance/best-practice-with-the-query-store.md)
 
