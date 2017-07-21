@@ -18,24 +18,23 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b05886a719709061a7d2e5d98b1d5560d24dc839
+ms.translationtype: MT
+ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
+ms.openlocfilehash: 475435073cef3f748e26a2a71c31a55fa7e6304d
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="access-report-server-items-using-url-access"></a>Acessar itens do Servidor de Relatório usando o acesso à URL
-  Este tópico descreve como acessar itens de catálogo de tipos diferentes em um banco de dados de servidor de relatório ou em um site do SharePoint usando*rs:Command*=*Value*. Não é necessário adicionar de fato essa cadeia de caracteres de parâmetro. Se você omiti-la, o servidor de relatório avaliará o tipo de item e selecionará o valor de parâmetro apropriado automaticamente. No entanto, usar a cadeia de caracteres *rs:Command*=*Value* na URL melhora o desempenho do servidor de relatórios.  
+  Este tópico descreve como para acessar itens do catálogo de tipos diferentes em um relatório de dados do servidor de base ou em um site do SharePoint usando *rs: Command*=*valor*. Não é necessário adicionar de fato essa cadeia de caracteres de parâmetro. Se você omiti-la, o servidor de relatório avaliará o tipo de item e selecionará o valor de parâmetro apropriado automaticamente. No entanto, usar a cadeia de caracteres *rs:Command*=*Value* na URL melhora o desempenho do servidor de relatórios.  
   
  Observe a sintaxe do proxy `_vti_bin` nos exemplos a seguir. Para obter mais informações sobre como usar a sintaxe do proxy, consulte [Referência de parâmetro de acesso à URL](../reporting-services/url-access-parameter-reference.md).  
   
 ## <a name="access-a-report"></a>Acessar um relatório  
  Para exibir um relatório no navegador, use o parâmetro *rs:Command*=*Render* . Por exemplo:  
   
- **Nativo** `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
-  
- **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
+ - **Nativo** `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
+ - **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
 > [!TIP]  
 >  É importante que a URL inclua a sintaxe do proxy `_vti_bin` para rotear a solicitação através do SharePoint e do proxy HTTP [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . O proxy adiciona qualquer contexto à solicitação HTTP, o contexto necessário para garantir a execução adequada do relatório para servidores de relatório no modo do SharePoint.  
@@ -80,7 +79,6 @@ ms.lasthandoff: 06/22/2017
  A interface do usuário que você vê é semelhante ao modo de procura do diretório usado pelo [!INCLUDE[msCoName](../includes/msconame-md.md)] IIS (Servidor de Informações da Internet). O número de versão, inclusive o número de compilação, do servidor de relatório também é exibido embaixo da listagem de pastas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Acesso à URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [Referência de parâmetro de acesso de URL](../reporting-services/url-access-parameter-reference.md)  
-  
-  
+ [Acesso de URL &#40; SSRS &#41;](../reporting-services/url-access-ssrs.md)   
+ [Referência de parâmetro de acesso de URL](../reporting-services/url-access-parameter-reference.md) 
+
