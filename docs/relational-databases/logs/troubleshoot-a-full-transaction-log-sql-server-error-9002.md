@@ -22,11 +22,11 @@ caps.latest.revision: 59
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 09bb30a44ef1675353fe8fa5bd9245c3f25c3894
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/21/2017
 
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Solução de problemas em um log de transação completa (SQL Server Erro 9002)
@@ -114,8 +114,7 @@ Essa instrução permite identificar a ID do proprietário da transação, de mo
 Às vezes, você precisa encerrar o processo. Talvez seja necessário usar a instrução [KILL](https://msdn.microsoft.com/library/ms173730.aspx) . Use esta instrução com muito cuidado, especialmente quando processos críticos que você não deseja encerrar estiverem em execução. Para obter mais informações, consulte [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx)
 
 ## <a name="see-also"></a>Consulte também  
-[Artigo de suporte da base de dados – Um log de transações aumenta inesperadamente ou fica cheio no SQL Server](https://support.microsoft.com/en-us/kb/317375)
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+[Artigo de suporte da base de dados – Um log de transações aumenta inesperadamente ou fica cheio no SQL Server](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Gerenciar o tamanho do arquivo de log de transações](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  
