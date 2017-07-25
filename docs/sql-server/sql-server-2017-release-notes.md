@@ -14,15 +14,15 @@ caps.latest.revision: 41
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 67c1c0f3a9da6cc5d050da5db8a493f5da934c2a
-ms.openlocfilehash: fa45fea4ebb378f035b4b4af2b1fa8a20bc152a5
+ms.translationtype: HT
+ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
+ms.openlocfilehash: a2950b6aef0e12653efbb9eb26fd3f1ae6cb951e
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/17/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>Notas de versão do SQL Server de 2017
-Este tópico descreve as limitações e problemas com [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. Para obter informações relacionadas, consulte o seguinte:
+Este tópico descreve as limitações e problemas com [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. Para obter informações relacionadas, consulte os artigos a seguir:
 
 - [O que há de novo no SQL Server de 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 - [Notas de versão do Linux do SQL Server](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
@@ -31,6 +31,16 @@ Este tópico descreve as limitações e problemas com [!INCLUDE[ssSQLv14_md](../
  **Experimente:**    
    -   [![Baixar no Centro de Avaliação](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Baixar o [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] no **[Centro de Avaliação](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
+## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 versão Release Candidate (RC1 – julho de 2017)
+
+### <a name="sql-server-integration-services-ssis-rc1---july-2017"></a>SQL Server Integration Services (SSIS) (RC1 – julho de 2017)
+- **Problema e impacto sobre o cliente:** o parâmetro *runincluster* do procedimento armazenado **[catalog].[create_execution]** foi renomeado como *runinscaleout*, a fim de obter consistência e legibilidade.
+- **Solução alternativa:** se você tiver scripts existentes para executar pacotes no Scale Out, será necessário alterar o nome do parâmetro de *runincluster* para *runinscaleout* para que os scripts funcionem no RC1.
+
+- **Problema e impacto sobre o cliente:** no SQL Server Management Studio (SSMS) 17.1 e versões anteriores, não é possível disparar a execução do pacote em Scale Out no RC1. A mensagem de erro é: "*@runincluster* não é um parâmetro para o procedimento **create_execution**." Esse problema é corrigido na próxima versão do SSMS, a versão 17.2. A versão 17.2 e posteriores do SSMS oferecem suporte ao novo nome de parâmetro e execução de execução em Scale Out. 
+- **Solução alternativa:** até a versão 17.2 do SSMS ser disponibilizada, é possível usar a versão existente do SSMS para gerar o script de execução do pacote e, em seguida, alterar o nome do parâmetro *runincluster* para *runinscaleout* no script e executá-lo.
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-21-may--2017"></a>2017 CTP 2.1 (maio de 2017) do SQL Server
 ### <a name="documentation-ctp-21"></a>Documentação (CTP 2.1)
 - **Problema e impacto sobre o cliente:** a documentação para [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] é limitada e o conteúdo está incluído no conjunto de documentação [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] .  O conteúdo em artigos que seja específico a [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] será anotado com **Aplica-se a**. 
@@ -96,78 +106,10 @@ Este tópico descreve as limitações e problemas com [!INCLUDE[ssSQLv14_md](../
 
    Recupera a instância do SQL Server que hospeda a réplica secundária.
 
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-14-march--2017"></a>O SQL Server de 2017 CTP 1.4 (março de 2017)
-
-### <a name="documentation-ctp-14"></a>Documentação (CTP 1.4)
-- **Problema e impacto sobre o cliente:** a documentação para [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] é limitada e o conteúdo está incluído no conjunto de documentação [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] .  O conteúdo em artigos que seja específico a [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] será anotado com **Aplica-se a**. 
-- **Problema e impacto sobre o cliente:** nenhum conteúdo offline está disponível para [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-13-february--2017"></a>O SQL Server de 2017 CTP 1.3 (fevereiro de 2017)
-### <a name="supported-installation-scenarios-ctp-13"></a>Cenários de instalação com suporte (CTP 1.3)
-O[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] destina-se a ser usado apenas como uma versão de teste.  Não há suporte para implantações de produção. É recomentado que você instale e teste [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] em uma máquina virtual.
-
-### <a name="documentation-ctp-13"></a>Documentação (CTP 1.3)
-- **Problema e impacto sobre o cliente:** a documentação para [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] é limitada e o conteúdo está incluído no conjunto de documentação [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] .  O conteúdo em artigos que seja específico a [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] será anotado com **Aplica-se a**. 
-- **Problema e impacto sobre o cliente:** nenhum conteúdo offline está disponível para [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
-
-### <a name="sql-server-integration-services-ssis-ctp-13"></a>SQL Server Integration Services (SSIS) (CTP 1.3)
-#### <a name="cdc-components-not-supported-in-this-ctp-release"></a>Não há suporte para componentes do CDC nesta versão CTP
--   **Problema e impacto sobre o cliente**: não há suporte para o CDC Control Task, CDC Source e CDC Splitter nesta versão CTP.
--   **Solução alternativa**: não há solução alternativa.
-
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-12-january--2017"></a>O SQL Server de 2017 CTP 1.2 (janeiro de 2017)
-### <a name="supported-installation-scenarios-ctp-12"></a>Cenários de instalação com suporte (CTP 1.2)
-O[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] destina-se a ser usado apenas como uma versão de teste.  Não há suporte para implantações de produção. É recomentado que você instale e teste [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] em uma máquina virtual.
-
-### <a name="sql-server-database-engine-ctp-12"></a>Mecanismo de Banco de Dados do SQL Server (CTP 1.2)
-- **Problema e impacto sobre o cliente:** em alguns casos, o serviço MSSQLSERVER travará no estado "Iniciando".
-- **Solução alternativa:** para contornar este problema:
-  -  Crie uma dependência entre o serviço do `mssqlserver` e o serviço do `keyiso` . Uma maneira de fazer isso é executar o comando a seguir em um Prompt de Comando elevado: `sc config mssqlserver depend= keyiso`
-  - Reinicialize o computador.
-
-### <a name="documentation-ctp-12"></a>Documentação (CTP 1.2)
-- **Problema e impacto sobre o cliente:** a documentação para [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] é limitada e o conteúdo está incluído no conjunto de documentação [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] .  O conteúdo em artigos que seja específico a [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] será anotado com **Aplica-se a:**. 
-- **Problema e impacto sobre o cliente:** nenhum conteúdo offline está disponível para [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
- 
-### <a name="sql-server-integration-services-ssis-ctp-12"></a>SQL Server Integration Services (SSIS) (CTP 1.2)
-#### <a name="deleting-the-ssis-catalog-may-fail-when-ssis-scale-out-is-installed"></a>A exclusão do Catálogo do SSIS poderá falhar quando a Expansão do SSIS estiver instalada
-**Problema e impacto sobre o cliente**: quando o recurso Expansão do SSIS estiver instalado em um computador, a exclusão do banco de dados do catálogo do SSISDB poderá falhar com o seguinte erro: “Não foi possível remover o logon *'login'* pois o usuário fez logon”.
-   
-**Solução alternativa**:
--   Em um computador com o Mestre de Expansão, execute o comando “services.msc” para abrir a janela Serviços. Interrompa o serviço Mestre de Cluster do SQL Server Integration Services.
--   Nos computadores de Trabalho de Expansão que se conectam ao mestre, execute o comando “services.msc” para abrir a janela Serviços. Interrompa o serviço Trabalho de Cluster do SQL Server Integration Services.
-
-Agora você poderá excluir o banco de dados do catálogo do SSISDB.
-
-### <a name="sql-server-master-data-services-ctp-12"></a>SQL Server Master Data Services (CTP 1.2)
-#### <a name="transaction-may-not-work-when-the-entity-transaction-log-type-is-set-to-attribute"></a>A transação pode não funcionar quando o tipo de log de transação de entidade é definido como atributo
-**Problema e impacto sobre o cliente:** quando o tipo de log de transação de entidade é definido como **Atributo** em [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] (o valor padrão é **Membro**), os seguintes cenários de falham:
-
-* As transações de alterações de entidade não são exibidas no site.
-* Não é possível abrir a página **Transações** no site e reverter uma transação.
-* Não é possível atualizar uma entidade com uma anotação de transação no site.
-
-**Solução alternativa**: não há solução alternativa.
-
-#### <a name="copy-version-may-not-work-when-copy-only-committed-version-is-set-to-false"></a>Copiar a versão pode não funcionar quando **Copiar somente versão confirmada** for definido como falso
--  **Problema e impacto sobre o cliente:** quando a configuração **Copiar somente versão confirmada** for definida como **Não** (o valor padrão é **Sim**), a operação de cópia de versão pode falhar. Não há nenhuma mensagem de erro.
--  **Solução alternativa**: não há solução alternativa.
-
 ##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) Entre em contato com a equipe de engenharia do SQL Server 
 - [Stack Overflow (rótulo sql-server) – faça perguntas técnicas](http://stackoverflow.com/questions/tagged/sql-server)
 - [Fóruns do MSDN – faça perguntas técnicas](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect – relatar bugs e solicitar recursos](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit – discussão geral sobre R](https://www.reddit.com/r/SQLServer/)
 
-
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
-
-

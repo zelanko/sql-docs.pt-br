@@ -13,18 +13,16 @@ ms.custom: UpdArt.exe
 ms.workload: powershell
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 95bb4d58c6885a2f48b21b1b8f19dd4cc1de1751
+ms.translationtype: HT
+ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
+ms.openlocfilehash: 4deafa319e6eaf801bc23527c73078b61094039c
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/19/2017
 
 ---
-<a id="new-and-recently-updated-powershell-docs" class="xliff"></a>
-
-# Novos e atualizados recentemente: documentos do PowerShell
+# <a name="new-and-recently-updated-powershell-docs"></a>Novos e atualizados recentemente: documentos do PowerShell
 
 
 
@@ -36,7 +34,7 @@ Atualizações recentes são relatadas para o intervalo de data a seguir e o ass
 
 
 
-- *Intervalo de datas das atualizações:* &nbsp; **17-05-2017** &nbsp; até &nbsp; **30-06-2017**
+- *Intervalo de datas das atualizações:* &nbsp; **23-05-2017** &nbsp; até &nbsp; **17-07-2017**
 - *Área de assunto:* &nbsp; **PowerShell**.
 
 
@@ -44,22 +42,29 @@ Atualizações recentes são relatadas para o intervalo de data a seguir e o ass
 
 &nbsp;
 
-<a id="new-articles-created-recently" class="xliff"></a>
-
-## Novos artigos criados recentemente
+## <a name="new-articles-created-recently"></a>Novos artigos criados recentemente
 
 Os links a seguir direcionam para novos artigos que foram adicionados recentemente.
 
 
-*Não existem novos artigos a serem listados, no momento.*
+***Não existem novos artigos a serem listados, no momento.***
+
 
 
 
 &nbsp;
 
-<a id="updated-articles-with-excerpts" class="xliff"></a>
+<a name="compactupdatedlist"/>
 
-## Artigo atualizado com trechos
+## <a name="compact-list-of-articles-updated-recently"></a>Lista compacta dos artigos atualizados recentemente
+
+Essa lista compacta fornece links para todos os artigos atualizados listados na seção Trechos.
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>Artigo atualizado com trechos
 
 Esta seção exibe os trechos de atualizações coletados a partir de artigos que encontraram recentemente uma atualização grande.
 
@@ -71,68 +76,48 @@ Para essas e outras razões, não copiar o código desses trechos e não em como
 
 &nbsp;
 
-*Nenhum artigo nesta área foi atualizado recentemente, no momento.*
+***Nenhum artigo nesta área foi atualizado recentemente, no momento.***
 
 
 
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-<a id="compact-list-of-articles-updated-recently" class="xliff"></a>
-
-## Lista compacta dos artigos atualizados recentemente
-
-Essa lista compact fornece links para todos os artigos atualizados que estão listados na seção anterior.
-
-
-
-
-
-<a name="sisters2"/>
+<a name="similars2"/>
 
 &nbsp;
 
-<a id="sister-articles" class="xliff"></a>
-
-## Artigos irmã
+## <a name="similar-articles"></a>Artigos Semelhantes
 
 Esta seção lista os artigos muito semelhantes a artigos atualizados recentemente em outras áreas de assunto, dentro do mesmo repositório GitHub.com: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
-<!--  20170630-1150  -->
+<!--  20170717-1101  -->
 
-<a id="subject-areas-which-do-have-new-or-recently-updated-articles" class="xliff"></a>
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Áreas de assunto que têm artigos novos ou atualizados recentemente
 
-#### Áreas de assunto que têm artigos novos ou atualizados recentemente
-
-- [Novo + atualizado (12 + 2): documentos de **Análise Avançada para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Novo + atualizado (1 + 0): documentos do **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Novo + atualizado (0 + 2): documentos de **Conexão ao SQL**](../connect/new-updated-connect.md)
-- [Novo + atualizado (3 + 0): documentos do **Mecanismo de Banco de Dados do SQL**](../database-engine/new-updated-database-engine.md)
-- [Novo + atualizado (1 + 2): documentos do **Integration Services para SQL**](../integration-services/new-updated-integration-services.md)
-- [Novo + atualizado (2 + 8): documentos do **Linux para SQL**](../linux/new-updated-linux.md)
-- [Novo + atualizado (1 + 0): documentos do **MDS (Master Data Services) para SQL**](../master-data-services/new-updated-master-data-services.md)
-- [Novo + atualizado (5 + 5): documentos de **Bancos de dados relacionais do SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Novo + atualizado (2 + 0): documentos do **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Novo + atualizado (0 + 4): documentos do **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Novo + atualizado (0 + 1): documentos do **SSDT (SQL Server Data Tools)**](../ssdt/new-updated-ssdt.md)
-- [Novo + atualizado (0 + 1): documentos do **SSMS (SQL Server Management Studio)**](../ssms/new-updated-ssms.md)
-- [Novo + atualizado (1 + 0): documentos de **Ferramentas para SQL**](../tools/new-updated-tools.md)
+- [Novo + Atualizado (4 + 4): documentos de **Análise Avançada para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Novo + Atualizado (2 + 0): documentos do **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Novo + Atualizado (1 + 2): documentos de **Conexão ao SQL**](../connect/new-updated-connect.md)
+- [Novo + Atualizado (6 + 0): documentos do **Mecanismo de Banco de Dados do SQL**](../database-engine/new-updated-database-engine.md)
+- [Novo + Atualizado (13 + 2): documentos do **Linux para SQL**](../linux/new-updated-linux.md)
+- [Novo + Atualizado (1 + 0): documentos do **Master Data Services (MDS) para SQL**](../master-data-services/new-updated-master-data-services.md)
+- [Novo + Atualizado (1 + 0): documentos do **Open Database Connectivity (ODBC) para SQL**](../odbc/new-updated-odbc.md)
+- [Novo + Atualizado (8 + 4): documentos de **Bancos de Dados Relacionais do SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Novo + Atualizado (2 + 2): documentos do **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Novo + Atualizado (0 + 1): documentos do **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Novo + Atualizado (1 + 0): documentos do **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Novo + Atualizado (1 + 0): documentos de **Ferramentas para SQL**](../tools/new-updated-tools.md)
 
 
-<a id="subject-areas-which-have-no-new-or-recently-updated-articles" class="xliff"></a>
-
-#### Áreas de assunto que não têm nenhum artigo novo ou atualizado recentemente
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Áreas de assunto que não têm nenhum artigo novo ou atualizado recentemente
 
 - [Novo + atualizado (0 + 0): documentos do **ADO (ActiveX Data Objects) para SQL**](../ado/new-updated-ado.md)
 - [Novo + atualizado (0 + 0): documentos do **Data Quality Services para SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Novo + atualizado (0 + 0): documentos de **Extensões DMX (Data Mining) para SQL**](../dmx/new-updated-dmx.md)
+- [Novo + Atualizado (0 + 0): documentos do **Integration Services para SQL**](../integration-services/new-updated-integration-services.md)
 - [Novo + atualizado (0 + 0): documentos de **Expressão MDX para SQL**](../mdx/new-updated-mdx.md)
-- [Novo + atualizado (0 + 0): documentos do **ODBC (Open Database Connectivity) para SQL**](../odbc/new-updated-odbc.md)
 - [Novo + atualizado (0 + 0): documentos do **PowerShell para SQL**](../powershell/new-updated-powershell.md)
+- [Novo + Atualizado (0 + 0): documentos do **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
 - [Novo + atualizado (0 + 0): documentos de **Exemplos para SQL**](../sample/new-updated-sample.md)
+- [Novo + Atualizado (0 + 0): documentos do **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
 - [Novo + atualizado (0 + 0): documentos do **SSMA (SQL Server Migration Assistant)**](../ssma/new-updated-ssma.md)
-- [Novo + atualizado (0 + 0): documentos do **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 - [Novo + atualizado (0 + 0): documentos do **XQuery para SQL**](../xquery/new-updated-xquery.md)
 
 

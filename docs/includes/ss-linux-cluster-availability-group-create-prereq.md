@@ -41,29 +41,30 @@ Antes de criar o grupo de disponibilidade, você precisa:
    sudo vi /etc/hosts
    ```
 
-   A exemplo a seguir mostra `/etc/hosts` na **node1** com adições para **node1** e **node2**. Neste documento **node1** refere-se à réplica primária do SQL Server. **Node2** refere-se ao SQL Server secundário.;
+   A exemplo a seguir mostra `/etc/hosts` no **node1** com adições para **node1**, **node2** e **node3**. Neste documento, **node1** se refere ao servidor que hospeda a réplica primária. **node2** e **node3** se referem a servidores que hospedam réplicas secundárias.
 
 
    ```
    127.0.0.1   localhost localhost4 localhost4.localdomain4
    ::1       localhost localhost6 localhost6.localdomain6
-   10.128.18.128 node1
+   10.128.18.12 node1
    10.128.16.77 node2
+   10.128.15.33 node3
    ```
 
 ### <a name="install-sql-server"></a>Instalar o SQL Server
 
 Instale o SQL Server. Os links a seguir apontam para instruções de instalação do SQL Server para diversas distribuições. 
 
-- [Red Hat Enterprise Linux](..\linux\sql-server-linux-setup-red-hat.md)
+- [Red Hat Enterprise Linux](../linux/quickstart-install-connect-red-hat.md)
 
-- [SUSE Linux Enterprise Server](..\linux\sql-server-linux-setup-suse-linux-enterprise-server.md)
+- [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)
 
-- [Ubuntu](..\linux\sql-server-linux-setup-ubuntu.md)
+- [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
 
 ## <a name="enable-always-on-availability-groups-and-restart-sqlserver"></a>Habilitar grupos de disponibilidade AlwaysOn e reinicie o SQL Server
 
-Habilitar grupos de disponibilidade AlwaysOn em cada nó que hospeda o serviço do SQL Server e reinicie o `mssql-server`.  Execute o seguinte script:
+Habilite grupos de disponibilidade AlwaysOn em cada nó que hospeda uma instância do SQL Server e, em seguida, reinicie o `mssql-server`.  Execute o seguinte script:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
@@ -72,7 +73,7 @@ sudo systemctl restart mssql-server
 
 ##  <a name="enable-alwaysonhealth-event-session"></a>Habilitar a sessão de evento AlwaysOn_health 
 
-Você pode habilitar optionaly grupos de disponibilidade AlwaysOn específico eventos estendidos para ajudar com o diagnóstico da causa raiz ao solucionar problemas de um grupo de disponibilidade.
+Como opção, é possível habilitar eventos estendidos de grupos de disponibilidade Always On para ajudar com o diagnóstico da causa raiz ao solucionar problemas de um grupo de disponibilidade. Execute o comando a seguir em cada instância do SQL Server. 
 
 ```Transact-SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
@@ -83,7 +84,7 @@ Para obter mais informações sobre essa sessão XE, consulte [sempre em eventos
 
 ## <a name="create-db-mirroring-endpoint-user"></a>Criar usuário do ponto de extremidade de espelhamento de banco de dados
 
-Script Transact-SQL a seguir cria um logon denominado `dbm_login`e um usuário chamado `dbm_user`. Atualize o script com uma senha forte. Execute o seguinte comando em todos os servidores do SQL para criar o usuário de ponto de extremidade de espelhamento de banco de dados.
+Script Transact-SQL a seguir cria um logon denominado `dbm_login`e um usuário chamado `dbm_user`. Atualize o script com uma senha forte. Execute o seguinte comando em todos as instâncias do SQL Server para criar o usuário de ponto de extremidade de espelhamento de banco de dados.
 
 ```Transact-SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
@@ -94,7 +95,7 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 O serviço do SQL Server no Linux usa certificados para autenticar a comunicação entre os pontos de extremidade de espelhamento. 
 
-Script Transact-SQL a seguir cria uma chave mestra e o certificado. Em seguida, faz o certificado de backup e protege o arquivo com uma chave privada. Atualize o script com senhas fortes. Conecte-se ao servidor SQL primário e execute a seguinte Transact-SQL para criar o certificado:
+Script Transact-SQL a seguir cria uma chave mestra e o certificado. Em seguida, faz o certificado de backup e protege o arquivo com uma chave privada. Atualize o script com senhas fortes. Conecte-se à instância primária do SQL Server e execute a seguinte Transact-SQL para criar o certificado:
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -116,7 +117,7 @@ cd /var/opt/mssql/data
 scp dbm_certificate.* root@**<node2>**:/var/opt/mssql/data/
 ```
 
-No servidor de destino, dê permissão ao usuário mssql para acessar o certificado.
+Em cada servidor de destino, dê permissão ao usuário mssql para acessar o certificado.
 
 ```bash
 cd /var/opt/mssql/data
@@ -144,7 +145,6 @@ Os pontos de espelhamento de banco de dados usam o Protocolo de Controle de Tran
 
 O Transact-SQL a seguir cria um ponto de extremidade de escutando chamado `Hadr_endpoint` para o grupo de disponibilidade. Iniciar o ponto de extremidade e concede a permissão de conexão para o usuário que você criou. Antes de executar o script, substitua os valores entre `**< ... >**`.
 
-
 >[!NOTE]
 >Para esta versão, não use um endereço IP diferente para o IP do ouvinte. Estamos trabalhando para corrigir esse problema, mas o único valor aceitável para agora é '0.0.0.0'.
 
@@ -164,5 +164,8 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 
 >[!IMPORTANT]
 >A porta TCP no firewall precisa ser aberta para a porta do ouvinte.
+
+>[!IMPORTANT]
+>Para a versão do SQL Server 2017, o único método de autenticação com suporte para o ponto de extremidade com espelhamento de banco de dados é o `CERTIFICATE`. A opção `WINDOWS` será habilitada em uma versão futura.
 
 Para obter mais informações, consulte [o banco de dados do ponto de extremidade espelhamento (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
