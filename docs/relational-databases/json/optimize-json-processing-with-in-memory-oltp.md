@@ -1,7 +1,7 @@
 ---
 title: Otimizar o processamento JSON com o OLTP in-memory | Microsoft Docs
 ms.custom: 
-ms.date: 02/03/2017
+ms.date: 07/18/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -14,17 +14,17 @@ caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 12ef08a1f90e0346828a9dafb4052864254954d7
+ms.translationtype: HT
+ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
+ms.openlocfilehash: a0118939a71b06d7c3258efdfbe291a910358c37
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Otimizar o processamento JSON com o OLTP in-memory
 [!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
-O SQL Server e o Banco de Dados SQL do Azure permitem que você trabalhe com um texto formatado como JSON. Para aumentar o desempenho das consultas OLTP que processam dados JSON, é possível armazenar documentos JSON em tabelas com otimização de memória usando colunas de cadeia de caracteres padrão (tipo NVARCHAR).
+O SQL Server e o Banco de Dados SQL do Azure permitem que você trabalhe com um texto formatado como JSON. Para aumentar o desempenho de consultas que processam dados JSON, é possível armazenar documentos JSON em tabelas com otimização de memória usando colunas de cadeia de caracteres padrão (tipo NVARCHAR). Armazenar dados JSON em tabelas com otimização de memória aumenta o desempenho da consulta com o uso do acesso a dados na memória sem bloqueio.
 
 ## <a name="store-json-in-memory-optimized-tables"></a>Armazenar JSON em tabelas com otimização de memória
 O exemplo a seguir mostra uma tabela do `Product` com otimização de memória, com duas colunas JSON, `Tags` e `Data`:
@@ -42,17 +42,18 @@ CREATE TABLE xtp.Product(
 
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
-Armazenar dados JSON em tabelas com otimização de memória aumenta o desempenho da consulta com o uso do acesso a dados na memória sem bloqueio.
 
-## <a name="optimize-json-with-additional-in-memory-features"></a>Otimizar o JSON com recursos adicionais na memória
-Os novos recursos disponíveis no SQL Server e no Banco de Dados SQL do Azure permitem integrar por completo as funcionalidades do JSON às tecnologias existentes do OLTP in-memory. Por exemplo, você pode fazer o seguinte:
- - Validar a estrutura de documentos JSON armazenados em tabelas com otimização de memória usando restrições CHECK compiladas nativamente.
- - Expor e tipar fortemente os valores armazenados em documentos JSON usando colunas computadas.
- - Indexar valores em documentos JSON usando índices com otimização de memória.
- - Compilar consultas SQL nativamente que usam valores de documentos JSON ou formatar os resultados como um texto JSON.
+## <a name="optimize-json-processing-with-additional-in-memory-features"></a>Otimizar o processamento JSON com recursos adicionais na memória
+Os recursos disponíveis no SQL Server e no Banco de Dados SQL do Azure permitem integrar por completo as funcionalidades do JSON às tecnologias existentes do OLTP in-memory. Por exemplo, você pode fazer o seguinte:
+ - [Validar a estrutura de documentos JSON](#validate) armazenados em tabelas com otimização de memória usando restrições CHECK compiladas nativamente.
+ - [Expor e tipar fortemente os valores](#computedcol) armazenados em documentos JSON usando colunas computadas.
+ - [Indexar valores](#index) em documentos JSON usando índices com otimização de memória.
+ - [Compilar nativamente consultas SQL](#compile) que usam valores de documentos JSON ou formatar os resultados como um texto JSON.
 
-## <a name="validate-json-columns"></a>Validar colunas JSON
-O SQL Server e o Banco de Dados SQL do Azure permitem adicionar restrições CHECK compiladas nativamente que validam o conteúdo de documentos JSON armazenados em uma coluna de cadeia de caracteres, conforme mostrado no exemplo a seguir.
+## <a name="validate"></a> Validar colunas JSON
+O SQL Server e o Banco de Dados SQL do Azure permitem adicionar restrições CHECK compiladas nativamente que validam o conteúdo de documentos JSON armazenados em uma coluna de cadeia de caracteres. Com as restrições CHECK JSON compiladas nativamente, é possível garantir que o texto JSON armazenado nas tabelas com otimização de memória está formatado corretamente.
+
+O exemplo a seguir cria uma tabela `Product` com uma coluna JSON `Tags`. A coluna `Tags` tem uma restrição CHECK que utiliza a função `ISJSON` para validar o texto JSON na coluna.
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -70,7 +71,7 @@ CREATE TABLE xtp.Product(
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
 
-A restrição CHECK compilada nativamente pode ser adicionada em tabelas existentes que contêm colunas JSON:
+Também é possível adicionar a restrição CHECK compilada nativamente a tabelas existentes que contêm colunas JSON.
 
 ```sql
 ALTER TABLE xtp.Product
@@ -78,14 +79,14 @@ ALTER TABLE xtp.Product
         CHECK (ISJSON(Data)=1)
 ```
 
-Com as restrições CHECK JSON compiladas nativamente, é possível garantir que o texto JSON armazenado nas tabelas com otimização de memória está formatado corretamente.
-
-## <a name="expose-json-values-using-computed-columns"></a>Expor valores JSON usando colunas computadas
-Colunas computadas permitem expor valores do texto JSON e acessar esses valores sem reavaliar as expressões que buscam um valor do texto JSON e sem analisar a estrutura JSON novamente. Os valores expostos são fortemente tipados e fisicamente persistentes nas colunas computadas. O acesso de valores JSON com colunas computadas persistentes é mais rápido do que o acesso de valores no documento JSON.
+## <a name="computedcol"></a> Expor valores JSON usando colunas computadas
+Colunas computadas permitem expor valores do texto JSON e acessar esses valores sem buscar o valor do texto JSON e sem analisar a estrutura JSON novamente. Os valores expostos dessa maneira são fortemente tipados e fisicamente persistentes nas colunas computadas. O acesso a valores JSON com colunas computadas persistentes é mais rápido do que o acesso a valores diretamente no documento JSON.
 
 O seguinte exemplo mostra como expor estes dois valores por meio da coluna JSON `Data`:
 -   O país no qual um produto foi fabricado.
 -   O custo de fabricação do produto.
+
+Neste exemplo, as colunas computadas `MadeIn` e `Cost` são atualizadas sempre que o documento JSON armazenado na coluna `Data` é alterado.
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -103,10 +104,14 @@ CREATE TABLE xtp.Product(
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
 
-As colunas computadas `MadeIn` e `Cost` são atualizadas sempre que o documento JSON armazenado na coluna `Data` é alterado.
+## <a name="index"></a> Valores de índice em colunas JSON
+O SQL Server e o Banco de Dados SQL do Azure permitem indexar valores em colunas JSON usando índices com otimização de memória. Os valores JSON indexados devem ser expostos e fortemente tipados com colunas computadas, conforme mostrado no exemplo anterior.
 
-## <a name="index-values-in-json-columns"></a>Valores de índice em colunas JSON
-O SQL Server e o Banco de Dados SQL do Azure permitem indexar valores em colunas JSON usando índices com otimização de memória. Os valores JSON que são indexados devem ser expostos e fortemente tipados com colunas computadas, conforme mostrado no exemplo a seguir.
+Os valores em colunas JSON podem ser indexados com índices NONCLUSTERED e HASH padrão.
+-   Os índices NONCLUSTERED otimizam consultas que selecionam intervalos de linhas por algum valor JSON ou classifica os resultados por valores JSON.
+-   Os índices HASH otimizam consultas que selecionam uma única linha ou algumas linhas especificando um valor exato a ser encontrado.
+
+O exemplo a seguir cria uma tabela que expõe valores JSON com duas colunas computadas. O exemplo cria um índice NONCLUSTERED em um valor JSON e um índice HASH no outro.
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -129,12 +134,11 @@ ALTER TABLE Product
     ADD INDEX [idx_Product_Cost] NONCLUSTERED HASH(Cost)
         WITH (BUCKET_COUNT=20000)
 ```
-Os valores em colunas JSON podem ser indexados com índices NONCLUSTERED e HASH padrão.
--   Os índices NONCLUSTERED otimizam consultas que selecionam intervalos de linhas por algum valor JSON ou classifica os resultados por valores JSON.
--   Os índices HASH oferecem um desempenho ideal na busca de uma única linha ou de algumas linhas especificando o valor exato a ser encontrado.
 
-## <a name="native-compilation-of-json-queries"></a>Compilação nativa de consultas JSON
-Por fim, a compilação nativa de procedimentos, funções e gatilhos Transact-SQL que contêm consultas com funções JSON aumenta o desempenho de consultas e reduz os ciclos de CPU necessários para execução dos procedimentos. O exemplo a seguir mostra um procedimento compilado nativamente que usa várias funções JSON – JSON_VALUE, OPENJSON e JSON_MODIFY.
+## <a name="compile"></a> Compilação nativa de consultas JSON
+Se os procedimentos, funções e gatilhos contêm consultas que usam funções JSON internas, a compilação nativa aumentará o desempenho dessas consultas e reduzirá os ciclos de CPU necessários para executá-los.
+
+O exemplo a seguir mostra um procedimento compilado nativamente que usa várias funções JSON – **JSON_VALUE**, **OPENJSON** e **JSON_MODIFY**.
 
 ```sql
 CREATE PROCEDURE xtp.ProductList(@ProductIds nvarchar(100))

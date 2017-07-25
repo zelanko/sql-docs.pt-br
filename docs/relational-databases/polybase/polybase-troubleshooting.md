@@ -20,11 +20,11 @@ caps.latest.revision: 22
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bef55c15906ea76d2993d41e3eb7cbfd4bac9a4f
+ms.translationtype: HT
+ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
+ms.openlocfilehash: e65ea926f3a2d2fb3c30c511a1fbba6150de7b42
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>Solucionando problemas do PolyBase
@@ -232,4 +232,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="error-messages-and-possible-solutions"></a>Mensagens de erro e possíveis soluções
 
 Para solucionar erros de tabela externa, confira o blog de Murshed Zaman [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions (Erros de instalação do PolyBase e possíveis soluções)").
+
+## <a name="see-also"></a>Consulte também
+[Solucionar problemas de conectividade do PolyBase Kerberos](polybase-troubleshoot-connectivity.md)
 

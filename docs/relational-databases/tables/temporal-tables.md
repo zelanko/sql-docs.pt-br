@@ -15,17 +15,17 @@ caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a4cdbe630a64ce01c6319dcc5791c0f3f9b3176b
+ms.translationtype: HT
+ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
+ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="temporal-tables"></a>Tabelas temporais
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] introduz o suporte para tabelas temporais com versão do sistema como um recurso de banco de dados que dá suporte interno para fornecer informações sobre os dados armazenados na tabela em qualquer ponto no tempo em vez de apenas os dados que estão corretos no momento atual. Temporal é um recurso de banco de dados que foi introduzido no ANSI SQL 2011 e agora é oferecido no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  O SQL Server 2016 introduz o suporte para tabelas temporais com versão do sistema como um recurso de banco de dados que oferece suporte interno para fornecer informações sobre os dados armazenados na tabela em qualquer ponto no tempo, em vez de apenas os dados que estão corretos atualmente. Temporal é um recurso de banco de dados que foi introduzido no ANSI SQL 2011 e agora é oferecido no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **Início Rápido**  
   

@@ -2,7 +2,7 @@
 title: "Validar, consultar e alterar dados JSON com funções internas (SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/02/2016
+ms.date: 07/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,17 +18,17 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: e2b7d75694080b52e9c31e58ffd1e1f738b1035c
+ms.translationtype: HT
+ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
+ms.openlocfilehash: 017f0c1a33ea00e675115d91e6654ec7730b4bd3
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Validar, consultar e alterar dados JSON com funções internas (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  O suporte interno para JSON inclui as funções internas a seguir, descritas neste tópico.  
+O suporte interno para JSON inclui as funções internas a seguir, descritas brevemente neste tópico.  
   
 -   [ISJSON](#ISJSON) testa se uma cadeia de caracteres contém JSON válido.  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="json-text-for-the-examples-on-this-page"></a>Texto JSON para os exemplos nesta página
 O exemplos nesta página usam o texto JSON a seguir, que contém um elemento complexo.
 
-```json  
+```sql 
 DECLARE @jsonInfo NVARCHAR(MAX)
 
 SET @jsonInfo=N'{  
@@ -61,44 +61,44 @@ SET @jsonInfo=N'{
 ##  <a name="ISJSON"></a> Validar texto JSON por meio da função ISJSON  
  A função **ISJSON** testa se uma cadeia de caracteres contém JSON válido.  
   
- O exemplo a seguir retorna o texto JSON se a coluna contiver JSON válido.  
+O exemplo a seguir retorna linhas em que a coluna `json_col` contém um JSON válido.  
   
 ```sql  
-SELECT id,json_col
+SELECT id, json_col
 FROM tab1
-WHERE ISJSON(json_col)>0 
+WHERE ISJSON(json_col) > 0 
 ```  
-  
- Para obter mais informações, veja [ISJSON &#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md).  
+
+Para obter mais informações, veja [ISJSON &#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md).  
   
 ##  <a name="VALUE"></a> Extrair um valor de texto JSON por meio da função JSON_VALUE  
- A função **JSON_VALUE** extrai um valor escalar de uma cadeia de caracteres JSON.  
+A função **JSON_VALUE** extrai um valor escalar de uma cadeia de caracteres JSON.  
   
- O exemplo a seguir extrai o valor de uma propriedade JSON para uma variável local.  
+O exemplo a seguir extrai o valor de uma propriedade JSON aninhada `town` para uma variável local.  
   
 ```sql  
-SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')  
+SET @town = JSON_VALUE(@jsonInfo, '$.info.address.town')  
 ```  
   
- Para obter mais informações, veja [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md).  
+Para obter mais informações, veja [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md).  
   
 ##  <a name="QUERY"></a> Extrair um objeto ou uma matriz de texto JSON por meio da função JSON_QUERY  
- A função **JSON_QUERY** extrai um objeto ou uma matriz de uma cadeia de caracteres JSON.  
+A função **JSON_QUERY** extrai um objeto ou uma matriz de uma cadeia de caracteres JSON.  
  
- O exemplo a seguir mostra como retornar um fragmento JSON nos resultados da consulta.  
+O exemplo a seguir mostra como retornar um fragmento JSON nos resultados da consulta.  
   
 ```sql  
-SELECT FirstName,LastName,JSON_QUERY(jsonInfo,'$.info.address') AS Address
+SELECT FirstName, LastName, JSON_QUERY(jsonInfo,'$.info.address') AS Address
 FROM Person.Person
 ORDER BY LastName
 ```  
   
- Para obter mais informações, veja [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md).  
+Para obter mais informações, veja [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md).  
   
 ##  <a name="JSONCompare"></a> Comparar JSON_VALUE e JSON_QUERY  
- A principal diferença entre **JSON_VALUE** e **JSON_QUERY** é que **JSON_VALUE** retorna um valor escalar, enquanto **JSON_QUERY** retorna um objeto ou uma matriz.  
+A principal diferença entre **JSON_VALUE** e **JSON_QUERY** é que **JSON_VALUE** retorna um valor escalar, enquanto **JSON_QUERY** retorna um objeto ou uma matriz.  
   
- Considere o seguinte texto JSON de exemplo.  
+Considere o seguinte texto JSON de exemplo.  
   
 ```json  
 {
@@ -108,9 +108,9 @@ ORDER BY LastName
 }  
 ```  
   
- Neste texto JSON de exemplo, membros de dados "a" e "c" são valores de cadeia de caracteres, enquanto o membro de dados "b" é uma matriz. **JSON_VALUE** e **JSON_QUERY** retornam os seguintes resultados:  
+Neste texto JSON de exemplo, membros de dados "a" e "c" são valores de cadeia de caracteres, enquanto o membro de dados "b" é uma matriz. **JSON_VALUE** e **JSON_QUERY** retornam os seguintes resultados:  
   
-|Consulta|**JSON_VALUE** retorna|**JSON_QUERY** retorna|  
+|Caminho|**JSON_VALUE** retorna|**JSON_QUERY** retorna|  
 |-----------|-----------------------------|-----------------------------|  
 |**$**|NULL ou erro|`{ "a": "[1,2]", "b": [1,2], "c":"hi"}`|  
 |**$.a**|[1,2]|NULL ou erro|  
@@ -119,15 +119,15 @@ ORDER BY LastName
 |**$.c**|hi|NULL ou erro|  
   
 ## <a name="test-jsonvalue-and-jsonquery-with-the-adventureworks-sample-database"></a>Teste JSON_VALUE e JSON_QUERY com o banco de dados de exemplo AdventureWorks  
- Teste as funções internas descritas neste tópico, executando os exemplos a seguir com o banco de dados de exemplo AdventureWorks, que contém dados JSON. Para obter o banco de dados de exemplo AdventureWorks [clique aqui](http://www.microsoft.com/en-us/download/details.aspx?id=49502).  
+Teste as funções internas descritas neste tópico, executando os exemplos a seguir com o banco de dados de exemplo AdventureWorks, que contém dados JSON. Para obter o banco de dados de exemplo AdventureWorks [clique aqui](http://www.microsoft.com/en-us/download/details.aspx?id=49502).  
   
- Nos exemplos a seguir, a coluna de informações na tabela de SalesOrder_json contém texto JSON.  
+Nos exemplos a seguir, a coluna `Info` na tabela `SalesOrder_json` contém texto JSON.  
   
 ### <a name="example-1---return-both-standard-columns-and-json-data"></a>Exemplo 1 - Retornar dados JSON e colunas padrão  
- A consulta a seguir retorna os valores e colunas relacionais padrão de uma coluna JSON.  
+A consulta a seguir retorna os valores de colunas relacionais padrão e de uma coluna JSON.  
   
 ```sql  
-SELECT SalesOrderNumber,OrderDate,Status,ShipDate,Status,AccountNumber,TotalDue,
+SELECT SalesOrderNumber, OrderDate, Status, ShipDate, Status, AccountNumber, TotalDue,
  JSON_QUERY(Info,'$.ShippingInfo') ShippingInfo,
  JSON_QUERY(Info,'$.BillingInfo') BillingInfo,
  JSON_VALUE(Info,'$.SalesPerson.Name') SalesPerson,
@@ -135,11 +135,11 @@ SELECT SalesOrderNumber,OrderDate,Status,ShipDate,Status,AccountNumber,TotalDue,
  JSON_VALUE(Info,'$.Customer.Name') Customer,
  JSON_QUERY(OrderItems,'$') OrderItems
 FROM Sales.SalesOrder_json
-WHERE ISJSON(Info)>0
+WHERE ISJSON(Info) > 0
 ```  
   
 ### <a name="example-2--aggregate-and-filter-json-values"></a>Exemplo 2- Agregar e filtrar valores JSON  
- A consulta a seguir agrega subtotais por nome do cliente (armazenado em JSON) e status (armazenado em uma coluna comum). Em seguida, ela filtra os resultados por cidade (armazenado em JSON) e OrderDate (armazenado em uma coluna comum).  
+A consulta a seguir agrega subtotais por nome do cliente (armazenado em JSON) e status (armazenado em uma coluna comum). Em seguida, ela filtra os resultados por cidade (armazenado em JSON) e OrderDate (armazenado em uma coluna comum).  
   
 ```sql  
 DECLARE @territoryid INT;
@@ -149,22 +149,22 @@ SET @territoryid=3;
 
 SET @city=N'Seattle';
 
-SELECT JSON_VALUE(Info,'$.Customer.Name') AS Customer,Status,SUM(SubTotal) AS Total
+SELECT JSON_VALUE(Info, '$.Customer.Name') AS Customer, Status, SUM(SubTotal) AS Total
 FROM Sales.SalesOrder_json
 WHERE TerritoryID=@territoryid
- AND JSON_VALUE(Info,'$.ShippingInfo.City')=@city
- AND OrderDate>'1/1/2015'
-GROUP BY JSON_VALUE(Info,'$.Customer.Name'),Status
+ AND JSON_VALUE(Info, '$.ShippingInfo.City') = @city
+ AND OrderDate > '1/1/2015'
+GROUP BY JSON_VALUE(Info, '$.Customer.Name'), Status
 HAVING SUM(SubTotal)>1000
 ```  
   
 ##  <a name="MODIFY"></a> Atualizar valores de propriedade em texto JSON por meio da função JSON_MODIFY  
- A função **JSON_MODIFY**  atualiza o valor de uma propriedade em uma cadeia de caracteres JSON e retorna a cadeia de caracteres JSON atualizada.  
+A função **JSON_MODIFY** atualiza o valor de uma propriedade em uma cadeia de caracteres JSON e retorna a cadeia de caracteres JSON atualizada.  
   
- O exemplo a seguir atualiza o valor de uma propriedade em uma variável que contém JSON.  
+O exemplo a seguir atualiza o valor de uma propriedade JSON em uma variável que contém JSON.  
   
 ```sql  
-SET @info=JSON_MODIFY(@jsonInfo,"$.info.address[0].town",'London')    
+SET @info = JSON_MODIFY(@jsonInfo, "$.info.address[0].town", 'London')    
 ```  
   
  Para obter mais informações, veja [JSON_MODIFY &#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md).  
