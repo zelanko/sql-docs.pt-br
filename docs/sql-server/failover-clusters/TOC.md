@@ -3,7 +3,7 @@
 # [Administração de logons e trabalhos depois da troca de funções](management-of-logins-and-jobs-after-role-switching-sql-server.md)  
 # [Solução de problemas de usuários órfãos](troubleshoot-orphaned-users-sql-server.md)  
 
-# [Instalação do cluster de failover (artigos)](install/TOC.md)  
+# [Instalação do cluster de failover](install/sql-server-failover-cluster-installation.md)  
 
 # [WSFC (Windows Server Failover Clustering) com o SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
 ## [Configuração de modos de quorum e votação do WSFC](windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
