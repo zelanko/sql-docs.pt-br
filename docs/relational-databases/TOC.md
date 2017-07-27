@@ -1,322 +1,111 @@
-
-
-# [Recursos de banco de dados](database-features.md)
-
-
+# [Visão geral](database-features.md)
 # [Artigos novos e atualizados recentemente](new-updated-relational-databases.md)
 
-
-
-# Visão geral
-
-
-## [Recursos entre instâncias do Mecanismo de Banco de Dados](database-engine-cross-instance-features.md)
-
-
-## [Referência técnica](technical-reference-database-engine.md)  
-
-
-## [Referência de recurso](feature-reference-database-engine.md)   
-
-
-
 # [Guias do SQL Server](sql-server-guides.md)
-
-
 ## Guia de solução de problemas e monitoramento de grupos de disponibilidade AlwaysOn
-
-
 ## [Design de índice](sql-server-index-design-guide.md)
-
-
 ## [Arquitetura de gerenciamento de memória](memory-management-architecture-guide.md)
-
-
 ### [Lendo páginas](reading-pages.md)  
-
-
 ### [Gravando Páginas](writing-pages.md)
-
-
 ## [Arquitetura de páginas e extensões](pages-and-extents-architecture-guide.md)
-
-
 ## [Otimização e a validação após a migração](post-migration-validation-and-optimization-guide.md)
-
-
 ## [Arquitetura de processamento de consulta](query-processing-architecture-guide.md)
-
-
 ## [Arquitetura de tarefa e thread](thread-and-task-architecture-guide.md)
-
-
 ## [Gerenciamento e arquitetura de Log de transações](sql-server-transaction-log-architecture-and-management-guide.md)
-
-
 ## Guia de Controle de Versão de Linha e Bloqueio de Transações
 
-
-
 # [Backup e restauração](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
-
-
 # [Blob](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
 
-
-
 # [Agrupamentos](../relational-databases/collations/collation-and-unicode-support.md)
-
-
 # [Configuration Manager](sql-server-configuration-manager.md)  
-
-
 # [Cursores](cursors.md)  
-
-
 # [Coleta de Dados](../relational-databases/data-collection/data-collection.md)
-
-
 # [Compactação de dados](../relational-databases/data-compression/data-compression.md)
-
-
 # [Aplicativos da camada de dados](../relational-databases/data-tier-applications/data-tier-applications.md)
-
-
 # [Database Mail](../relational-databases/database-mail/database-mail.md)
-
-
 # [Bancos de dados](../relational-databases/databases/databases.md)
 
-
-
 # Desenvolver clientes
-
-
 ## [Integração com o CLR](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)
-
-
 ## [Programação de procedimentos armazenados estendidos](../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)
-
-
 ## [Referência de procedimentos armazenados estendidos](../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)
-
-
 ## [Mensagens de erro do Express Localdb](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)
-
-
 ## [APIs de instância do Express Localdb](../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md)
-
-
 ## [Cliente nativo](../relational-databases/native-client/sql-server-native-client-programming.md)
-
-
 ## [Server Management Objects (SMO)](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)
-
-
 ## [SQLXML](../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)
-
-
 ## Provedor de WMI (Instrumentação de Gerenciamento do Windows)
-
-
 ### [Configuração do provedor de WMI](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)
-
-
 ### [Classes de configuração do provedor de WMI](../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md)
-
-
 ### [Eventos de servidor do provedor de WMI](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)
 
-
-
 # [Erros e eventos](../relational-databases/errors-events/errors-and-events-reference-database-engine.md)
-
-
 # [Classes de evento](../relational-databases/event-classes/sql-server-event-class-reference.md)
-
-
 # [Eventos estendidos](../relational-databases/extended-events/extended-events.md)
-
-
 # [Gráficos](../relational-databases/graphs/sql-graph-overview.md)
-
-
 # [Dados hierárquicos](hierarchical-data-sql-server.md)  
-
-
 # [Importar e exportar](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)
-
-
 # [OLTP in-memory](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
-
-
 # [Índices](../relational-databases/indexes/indexes.md)
-
-
 # [JSON](../relational-databases/json/json-data-sql-server.md)
-
-
 # [Servidores vinculados](../relational-databases/linked-servers/linked-servers-database-engine.md)
-
-
 # [Planos de Manutenção](../relational-databases/maintenance-plans/maintenance-plans.md)
-
-
 # [Gerenciar](../relational-databases/manage/sql-server-utility-features-and-tasks.md)
-
-
 ## [Gerenciamento de ciclo de vida do banco de dados](database-lifecycle-management.md)  
-
-
 ## [Administrar vários servidores usando os Servidores de Gerenciamento Centrais](administer-multiple-servers-using-central-management-servers.md)  
 
-
-
 # [Partições](../relational-databases/partitions/partitioned-tables-and-indexes.md)
-
-
 # [Desempenho](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
-
-
 # [Gerenciamento baseado em políticas](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
-
-
 # [PolyBase](../relational-databases/polybase/polybase-guide.md)
-
-
 # [Replicação](../relational-databases/replication/sql-server-replication.md)
-
-
 # [Resource Governor](../relational-databases/resource-governor/resource-governor.md)
-
-
 # [Script](../relational-databases/scripting/database-engine-scripting.md)
-
-
 # [Pesquisar](../relational-databases/search/full-text-search.md)
-
-
 # [Segurança](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)
-
-
 # [Números de sequência](../relational-databases/sequence-numbers/sequence-numbers.md)
-
-
 # [Service Broker](../relational-databases/service-broker/event-notifications.md)
-
-
 # [Operadores de plano de execução](showplan-logical-and-physical-operators-reference.md)  
-
-
 # [Espacial](../relational-databases/spatial/spatial-data-sql-server.md)
-
-
 # [Rastreamento do SQL](../relational-databases/sql-trace/sql-trace.md)
-
-
 # [Estatísticas](../relational-databases/statistics/statistics.md)
-
-
 # [Procedimentos armazenados](../relational-databases/stored-procedures/stored-procedures-database-engine.md)
-
-
 # [Sinônimos](../relational-databases/synonyms/synonyms-database-engine.md)
-
-
 # [Exibições de catálogo do sistema](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
-
-
 # [Exibições de compatibilidade do sistema](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
-
-
 # [Exibições de gerenciamento dinâmico do sistema](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-
-
 # [Funções do sistema](../relational-databases/system-functions/system-functions-for-transact-sql.md)
-
-
 # [Exibições do esquema de informações do sistema](../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
-
-
 # [Procedimentos armazenados do sistema](../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
-
-
 # [Tabelas do sistema](../relational-databases/system-tables/system-tables-transact-sql.md)
-
-
 # [Exibições do sistema](../relational-databases/system-views/replication-views-transact-sql.md)
-
-
 # [Tabelas](../relational-databases/tables/tables.md)
-
-
 # [Controlar alterações](../relational-databases/track-changes/track-data-changes-sql-server.md)
-
-
 # [Gatilhos](../relational-databases/triggers/logon-triggers.md)
-
-
 # [Funções definidas pelo usuário](../relational-databases/user-defined-functions/user-defined-functions.md)
-
-
 # [Exibições](../relational-databases/views/views.md)
-
-
 # [xml](../relational-databases/xml/xml-data-sql-server.md)
-
-
 
 # [Tutoriais](database-engine-tutorials.md)  
 
-
-
 ## [Introdução ao Mecanismo de Banco de Dados](tutorial-getting-started-with-the-database-engine.md)  
-
-
 ### [Lição 1: conectando-se ao Mecanismo de Banco de Dados](lesson-1-connecting-to-the-database-engine.md)  
-
-
 ### [Lição 2: conectando de outro computador](lesson-2-connecting-from-another-computer.md)  
-
-
 
 ## [Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 
-
-
 ## [Assinando procedimentos armazenados com um certificado](tutorial-signing-stored-procedures-with-a-certificate.md)  
-
-
 
 ## [Cadeias de propriedade e troca de contexto](tutorial-ownership-chains-and-context-switching.md)  
 
-
-
 ## [Como usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-
-
 ### [Lição 1: criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure](lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
-
-
 ### [Lição 2: Criar uma credencial do SQL Server usando uma assinatura de acesso compartilhado](lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
-
-
 ### [Lição 3: backup de banco de dados em URL](lesson-3-database-backup-to-url.md)  
-
-
 ### [Lição 4: restaurar o banco de dados na máquina virtual por meio da URL](lesson-4-restore-database-to-virtual-machine-from-url.md)  
-
-
 ### [Lição 5: fazer backup do banco de dados usando o backup de instantâneo de arquivo](lesson-5-backup-database-using-file-snapshot-backup.md)  
-
-
 ### [Lição 6: gerar log de atividade e de backup usando o backup de instantâneo de arquivo](lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
-
-
 ### [Lição 7: restaurar um banco de dados em um ponto no tempo](lesson-7-restore-a-database-to-a-point-in-time.md)  
-
-
 ### [Lição 8. Restaurar como um novo banco de dados por meio do backup de log](lesson-8-restore-as-new-database-from-log-backup.md)  
-
-
 ### [Lição 9: gerenciar conjuntos de backup e backups de instantâneo de arquivo](lesson-9-manage-backup-sets-and-file-snapshot-backups.md)  
