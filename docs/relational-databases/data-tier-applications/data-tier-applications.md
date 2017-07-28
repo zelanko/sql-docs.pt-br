@@ -69,7 +69,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Podem importar um DACPAC em um projeto de banco de dados e continuar criando o banco de dados.  
   
-O SQL Server Data Tools também oferece suporte a um Local DB para desenvolvimento de aplicativo de banco de dados desconectado do lado do cliente. O desenvolvedor pode fazer um instantâneo deste banco de dados local para criar o DACPAC contido em um arquivo .dacpac.  
+        O SQL Server Data Tools também oferece suporte a um Local DB para desenvolvimento de aplicativo de banco de dados desconectado do lado do cliente. O desenvolvedor pode fazer um instantâneo deste banco de dados local para criar o DACPAC contido em um arquivo .dacpac.  
   
     -   Independentemente, o desenvolvedor pode publicar um projeto de banco de dados diretamente em um banco de dados sem precisar gerar um DACPAC. A operação de publicar segue comportamento semelhante à operação de implantar de outras ferramentas.  
   
