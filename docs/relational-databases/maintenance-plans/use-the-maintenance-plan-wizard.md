@@ -1,6 +1,6 @@
 ---
 title: "Usar o Assistente de Plano de Manutenção | Microsoft Docs"
-ms.date: 08/19/2016
+ms.date: 06/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -37,11 +37,11 @@ caps.latest.revision: 43
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4fa73a78b9f6e32edcf8395b344f1bcb7e8f5cc
+ms.translationtype: HT
+ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
+ms.openlocfilehash: 29245ecd82ef8f4401869008bcdb883880eec0bd
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar o Assistente de Plano de Manutenção
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/11/2017
 
 Para se proteger contra essa elevação de privilégio ao executar planos de manutenção, conjuntos de coletas de dados e outros pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure os trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que executam pacotes para usar uma conta proxy com privilégios limitados ou apenas adicione membros **sysadmin** às funções **db_ssisadmin** e **dc_admin** .  
 
-##  <a name="Prerequisite"></a> Pré-requisito 
+##  <a name="Prerequisite"></a> Pré-requisitos 
 Você deve habilitar a [Opção Agent XPs de configuração do servidor](../../database-engine/configure-windows/agent-xps-server-configuration-option.md).
   
   
@@ -110,7 +110,7 @@ Você deve habilitar a [Opção Agent XPs de configuração do servidor](../../d
   
                 -   Se você selecionar **Diário**, na caixa **Ocorre periodicamente a cada** , digite a frequência com que a agenda de trabalho se repete em dias.  
   
-                -   Se você selecionar **Semanal**, na caixa **Ocorre periodicamente a cada** , digite a frequência com que a agenda de trabalho se repete em semanas. Selecione o dia ou os dias da semana em que a agenda de trabalho é executada.  
+                -   Se você selecionar **Semanal**, na caixa **Ocorre periodicamente a cada** , digite a frequência com que a agenda de trabalho se repete em semanas. Selecione o dia da semana em que a agenda de trabalho é executada.  
   
                 -   Se você selecionar **Mensalmente**, selecione **Dia** ou **O**.  
   
@@ -203,7 +203,7 @@ Caixa de seleção**Incluir índices**
      O banco de dados é condensado para páginas contíguas, mas elas não são desalocadas e os arquivos de banco de dados não são reduzidos. Use essa opção se quiser que o banco de dados expanda novamente e não desejar realocar espaço. Com essa opção, os arquivos de banco de dados não são reduzidos ao máximo possível. A opção NOTRUNCATE é usada.  
   
      **Retornar espaço livre para o sistema operacional**  
-     O banco de dados é condensado para páginas contíguas e as páginas são liberadas de volta ao sistema operacional para serem usadas por outros programas. Esses arquivos de banco de dados são reduzidos ao máximo possível. A opção TRUNCATEONLY é usada. Essa é a opção padrão.  
+     O banco de dados é condensado para páginas contíguas e as páginas são liberadas de volta ao sistema operacional para serem usadas por outros programas. A opção TRUNCATEONLY é usada. Essa é a opção padrão.  
   
 ## <a name="define-the-index-tasks"></a>Definir as tarefas de índice  
   
@@ -262,7 +262,7 @@ Caixa de seleção**Incluir índices**
     > **OBSERVAÇÃO:** as operações de índice online não estão disponíveis em todas as edições do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
      Caixa de seleção**MAXDOP**   
-     Substitui a opção de configuração de grau máximo de paralelismo de sp_configure para DBCC CHECKDB. Para obter mais informações, consulte [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
+     Substitui a opção de configuração de grau máximo de paralelismo de sp_configure para DBCC CHECKDB. Para obter mais informações, veja [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
 #### <a name="define-the-update-statistics-task"></a>Definir a tarefa de atualização de estatísticas  
   
