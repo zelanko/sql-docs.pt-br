@@ -1,21 +1,7 @@
-
-
 # [Baixar o SSDT](download-sql-server-data-tools-ssdt.md)
-
-
 # [Artigos novos e atualizados recentemente](new-updated-ssdt.md)
-
-
 # [Log de mudanças para o SSDT](changelog-for-sql-server-data-tools-ssdt.md)
-
-
 # [Estrutura de aplicativo da camada de dados – termos de licença](data-tier-application-framework-license-terms.md)
-
-
 # [Versões anteriores do SSDT e SSDT-BI](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)
-
-
 # [Ferramentas do SQL Server](sql-server-tools.md)
-
-
 # [Termos de Licença – SSDT](sql-server-data-tools-license-terms.md)
