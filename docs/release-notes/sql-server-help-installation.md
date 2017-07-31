@@ -16,24 +16,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 caps.latest.revision: 8
 author: sabotta
 ms.author: carlasab
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: ca52d53cf25fa0ead6abd9b870f4d8dab424d11a
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="help-viewer-and-offline-content-for-sql-server" class="xliff"></a>
-
-# Help Viewer e conteúdo offline para o SQL Server
+# <a name="help-viewer-and-offline-content-for-sql-server"></a>Help Viewer e conteúdo offline para o SQL Server
   
   
   
 Este artigo mostra como instalar o Help Viewer e exibir a documentação do SQL Server offline. O artigo aborda a documentação do [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], do SQL Server 2016 e do SQL Server 2017. 
 
-<a id="install-help-viewer" class="xliff"></a>
-
-## Instalar o Help Viewer
+## <a name="install-help-viewer"></a>Instalar o Help Viewer
 A tabela a seguir lista as ferramentas que instalam o Help Viewer, com base na versão do SQL Server que você está usando. Instale uma das ferramentas listadas para instalar o Help Viewer.
 
 
@@ -56,9 +52,7 @@ A tabela a seguir lista as ferramentas que instalam o Help Viewer, com base na v
 > Você pode exibir a Ajuda local fo [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] usando o Help Viewer 2. x somente quando ao **Instalar o conteúdo do disco**. 
 
 
-<a id="sql-server-2016-sql-server-2017-offline-content" class="xliff"></a>
-
-## Conteúdo offline do SQL Server 2016, SQL Server 2017  
+## <a name="sql-server-2016-sql-server-2017-offline-content"></a>Conteúdo offline do SQL Server 2016, SQL Server 2017  
  
 **Para instalar o conteúdo offline**  
 1. Abra o Help Viewer iniciando o SQL Server Management Studio ou o Visual Studio e, em seguida, clicando em **Adicionar e Remover Conteúdo da Ajuda** no menu **Ajuda**.  
@@ -85,9 +79,7 @@ A tabela a seguir lista as ferramentas que instalam o Help Viewer, com base na v
    >[!IMPORTANT]
    > Se aparecer uma mensagem indicando que a operação de movimentação falhou, feche a caixa de mensagem, feche o Help Viewer e, em seguida, abra novamente o Help Viewer. Agora, o novo local para o conteúdo deve aparecer no **Caminho do repositório local**.   
  
-<a id="includesssql14mdincludessssql14-mdmd-offline-content" class="xliff"></a>
-
-## Conteúdo offline do [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 
+## <a name="includesssql14mdincludessssql14-mdmd-offline-content"></a>Conteúdo offline do [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 
  
   
 **Para instalar o conteúdo offline**  
@@ -118,9 +110,7 @@ A tabela a seguir lista as ferramentas que instalam o Help Viewer, com base na v
   
     ![HelpViewer1_withContentInstalled_ZoomedIn](../release-notes/media/helpviewer1-withcontentinstalled-zoomedin.png)  
   
-<a id="view-online-content-in-help-viewer" class="xliff"></a>
-
-## Exibir conteúdo online no Help Viewer
+## <a name="view-online-content-in-help-viewer"></a>Exibir conteúdo online no Help Viewer
 
 Nao Help Viewer v2. x, você pode exibir o conteúdo online seguindo um dos procedimentos a seguir.
 
@@ -140,17 +130,13 @@ No Help Viewer v1.x, você pode exibir o conteúdo online, fazendo o seguinte.
 
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../release-notes/media/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
 
-<a id="f1-help-and-other-tips" class="xliff"></a>
-
-## Ajuda F1 e outras dicas
+## <a name="f1-help-and-other-tips"></a>Ajuda F1 e outras dicas
 
 Quando você pressiona F1, o tópico correspondente aparece online. O tópico não pode ser exibido na Ajuda local.
 
 Além disso, o Help Viewer não dá suporte a configurações de proxy, nem ao formato ISO. 
 
 
-<a id="additional-information" class="xliff"></a>
-
-## Informações adicionais
+## <a name="additional-information"></a>Informações adicionais
 [Microsoft Help Viewer – Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
 
