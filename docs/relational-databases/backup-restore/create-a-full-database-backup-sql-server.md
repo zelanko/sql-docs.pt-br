@@ -19,11 +19,11 @@ caps.latest.revision: 63
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
 ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Criar um backup completo de banco de dados (SQL Server)
@@ -259,14 +259,14 @@ Uma política de acesso armazenado foi criada com direitos de leitura, gravaçã
   
      BACKUP DATABASE *database*  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *backup_device* [ **, o**...*n* ]  
   
      [ WITH *com_opções* [ **,**...*o* ] ] ;  
   
     |Opção|Descrição|  
     |------------|-----------------|  
     |*database*|É o banco de dados do qual fazer backup.|  
-    |*backup_device* [ **,**...*n* ]|Especifica uma lista de 1 a 64 dispositivos de backup a serem usados para a operação de backup. Você pode especificar um dispositivo de backup físico ou pode especificar um dispositivo de backup lógico correspondente, se já definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
+    |*backup_device* [ **, o**...*n* ]|Especifica uma lista de 1 a 64 dispositivos de backup a serem usados para a operação de backup. Você pode especificar um dispositivo de backup físico ou pode especificar um dispositivo de backup lógico correspondente, se já definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
     |WITH *with_options* [ **,**...*o* ]|Opcionalmente, especifica uma ou mais opções adicionais, *o*. Para obter informações sobre os fundamentos de opções, consulte a etapa 2.|  
   
 2.  Opcionalmente, especifique uma ou mais opções WITH. Algumas opções WITH básicas são descritas aqui. Para obter informações sobre todas as opções WITH, consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  

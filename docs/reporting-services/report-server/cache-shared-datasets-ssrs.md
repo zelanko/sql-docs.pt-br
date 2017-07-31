@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
 -   A consulta é executada como o resultado de uma referência de conjunto de dados compartilhado em um relatório que é entregue por email, onde é provável que um grande número de pessoas clique no link em um curto período de tempo.  
   
--   A lista a seguir fornece exemplos de quando não armazenar em cache um conjunto de dados compartilhado:  
+ A lista a seguir fornece exemplos de quando não armazenar em cache um conjunto de dados compartilhado:  
   
 -   Os resultados da consulta devem sempre incluir os dados mais recentes.  
   
