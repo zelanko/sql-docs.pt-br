@@ -17,11 +17,11 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: ee5bbf86cb33e358b108b9a0bd63fb52913d98d0
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>Conectar-se a um servidor registrado (SQL Server Management Studio)
