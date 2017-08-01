@@ -15,7 +15,7 @@
 ## [Fazer backup da chave mestra de serviço](back-up-the-service-master-key.md)  
 ## [Restaurar a chave mestra de serviço](restore-the-service-master-key.md)  
 ## [Criar uma chave mestra de banco de dados](create-a-database-master-key.md)  
-## [Fazer backup de uma chave mestra de banco de dados](back-up-a-database-master-key.md)  
+## [Fazer backup da chave mestra de um banco de dados](back-up-a-database-master-key.md)  
 ## [Restaurar uma chave mestra de banco de dados](restore-a-database-master-key.md)  
 ## [Criar chaves simétricas idênticas em dois servidores](create-identical-symmetric-keys-on-two-servers.md)  
 ## [Criptografar uma coluna de dados](encrypt-a-column-of-data.md)  
