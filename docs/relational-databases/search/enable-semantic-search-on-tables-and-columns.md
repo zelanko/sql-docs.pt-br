@@ -20,12 +20,10 @@ ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 40724f35684d4da590d02163028a14ef711e392d
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="enable-semantic-search-on-tables-and-columns" class="xliff"></a>
-
-# Habilitar a pesquisa semântica em tabelas e colunas
+# <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar a pesquisa semântica em tabelas e colunas
   Descreve como habilitar ou desabilitar a indexação semântica estatística em colunas selecionadas que contêm documentos ou texto.  
   
  A pesquisa semântica estatística usa os índices que são criados pela Pesquisa de Texto Completo e cria índices adicionais. Como resultado dessa dependência na pesquisa de texto completo, você cria um novo índice semântico ao definir um novo índice de texto completo ou ao alterar um índice de texto completo existente. Você pode criar um novo índice semântico usando instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , ou usando o Assistente para Indexação de Texto Completo e outras caixas de diálogo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conforme descrito neste tópico.  
@@ -59,9 +57,7 @@ ms.lasthandoff: 07/10/2017
 ##  <a name="HowToEnableCreate"></a> Criar um índice semântico quando não existe índice de texto completo  
  Quando você criar um novo índice de texto completo com a instrução **CREATE FULLTEXT INDEX** , poderá habilitar a indexação semântica no nível de coluna especificando a palavra-chave **STATISTICAL_SEMANTICS** como parte da definição de coluna. Você também poderá habilitar a indexação semântica ao usar o Assistente para Indexação de Texto Completo para criar um novo índice de texto completo.  
   
-<a id="create-a-new-semantic-index-by-using-transact-sql" class="xliff"></a>
-
- ### Criar um novo índice semântico usando Transact-SQL  
+ ### <a name="create-a-new-semantic-index-by-using-transact-sql"></a>Criar um novo índice semântico usando Transact-SQL  
  
  Chame a instrução **CREATE FULLTEXT INDEX** e especifique **STATISTICAL_SEMANTICS** para cada coluna na qual você queira criar um índice semântico. Para obter mais informações sobre todas as opções para esta instrução, veja [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
@@ -121,17 +117,13 @@ ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO
 GO  
 ```  
   
-<a id="create-a-new-semantic-index-by-using-sql-server-management-studio" class="xliff"></a>
-
-### Criar um novo índice semântico usando o SQL Server Management Studio  
+### <a name="create-a-new-semantic-index-by-using-sql-server-management-studio"></a>Criar um novo índice semântico usando o SQL Server Management Studio  
  Execute o Assistente para Indexação de Texto Completo e habilite **Semântica Estatística** na página **Selecionar Colunas da Tabela** para cada coluna na qual você queira criar um índice semântico. Para obter mais informações, inclusive sobre como iniciar o Assistente de Indexação de Texto Completo, veja [Usar o Assistente de Indexação de Texto Completo](../../relational-databases/search/use-the-full-text-indexing-wizard.md).  
   
 ##  <a name="HowToEnableAlter"></a> Criar um índice semântico quando existe um índice de texto completo  
  Você pode adicionar a indexação semântica ao alterar um índice de texto completo existente com a instrução **ALTER FULLTEXT INDEX** . Você também pode adicionar indexação semântica usando várias caixas de diálogo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-<a id="add-a-semantic-index-by-using-transact-sql" class="xliff"></a>
-
-### Adicionar um novo índice semântico usando Transact-SQL  
+### <a name="add-a-semantic-index-by-using-transact-sql"></a>Adicionar um novo índice semântico usando Transact-SQL  
  Chame a instrução **ALTER FULLTEXT INDEX** com as opções descritas abaixo para cada coluna na qual você queira adicionar um índice semântico. Para obter mais informações sobre todas as opções para esta instrução, veja [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md).  
   
  Os índices de texto completo e semântico são ambos repopulados após uma chamada a **ALTER**, a menos que você especifique de outra forma.  
@@ -154,14 +146,10 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-<a id="add-a-semantic-index-by-using-sql-server-management-studio" class="xliff"></a>
-
-### Adicionar um índice semântico usando o SQL Server Management Studio  
+### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>Adicionar um índice semântico usando o SQL Server Management Studio  
  Você pode alterar as colunas que são habilitadas para indexação semântica e de texto completo na página **Colunas de Índice de Texto Completo** da caixa de diálogo **Propriedades do Índice de Texto Completo** . Para obter mais informações, veja [Gerenciar índices de texto completo](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
 
-<a id="alter-a-semantic-index" class="xliff"></a>
-
-## Alterar um índice semântico
+## <a name="alter-a-semantic-index"></a>Alterar um índice semântico
   
 ###  <a name="addreq"></a> Requisitos e restrições para alterar um índice existente  
   
@@ -172,9 +160,7 @@ GO
 ##  <a name="dropping"></a> Remover um índice semântico  
 Você pode remover a indexação semântica ao alterar um índice de texto completo existente com a instrução **ALTER FULLTEXT INDEX** . Você também pode descartar a indexação semântica usando várias caixas de diálogo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-<a id="drop-a-semantic-index-by-using-transact-sql" class="xliff"></a>
-
- ### Descartar um novo índice semântico usando Transact-SQL  
+ ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Descartar um novo índice semântico usando Transact-SQL  
 Para remover apenas a indexação semântica de uma ou mais colunas, chame a instrução **ALTER FULLTEXT INDEX** com a opção **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** . Você pode remover a indexação de várias colunas em uma única instrução **ALTER** .  
   
 ```tsql  
@@ -199,9 +185,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-<a id="drop-a-semantic-index-by-using-sql-server-management-studio" class="xliff"></a>
-
- ### Descartar um índice semântico usando o SQL Server Management Studio  
+ ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>Descartar um índice semântico usando o SQL Server Management Studio  
  Você pode alterar as colunas que são habilitadas para indexação semântica e de texto completo na página **Colunas de Índice de Texto Completo** da caixa de diálogo **Propriedades do Índice de Texto Completo** . Para obter mais informações, veja [Gerenciar índices de texto completo](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
 ###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
@@ -210,12 +194,8 @@ GO
   
 -   Você não pode especificar a opção **NO POPULATION** ao remover a indexação semântica da última coluna de uma tabela para a qual a indexação semântica foi habilitada. Um ciclo de população é necessário para remover os resultados que foram previamente indexados.  
   
-<a id="check-whether-semantic-search-is-enabled-on-database-objects" class="xliff"></a>
-
-## Verificar se a pesquisa semântica está habilitada em objetos de banco de dados  
-<a id="is-semantic-search-enabled-for-a-database" class="xliff"></a>
-
-### A pesquisa semântica está habilitada para um banco de dados?
+## <a name="check-whether-semantic-search-is-enabled-on-database-objects"></a>Verificar se a pesquisa semântica está habilitada em objetos de banco de dados  
+### <a name="is-semantic-search-enabled-for-a-database"></a>A pesquisa semântica está habilitada para um banco de dados?
   
  Consulte a propriedade **IsFullTextEnabled** da função de metadados [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
@@ -226,9 +206,7 @@ SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')
 GO  
 ```  
   
-<a id="is-semantic-search-enabled-for-a-table" class="xliff"></a>
-
-### A pesquisa semântica está habilitada para uma tabela?  
+### <a name="is-semantic-search-enabled-for-a-table"></a>A pesquisa semântica está habilitada para uma tabela?  
  
  Consulte a propriedade **TableFullTextSemanticExtraction** na função de metadados [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md).  
   
@@ -239,9 +217,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID('table_name'), 'TableFullTextSemanticExtractio
 GO  
 ```  
   
-<a id="is-semantic-search-enabled-for-a-column" class="xliff"></a>
-
- ### A pesquisa semântica está habilitada para uma coluna?
+ ### <a name="is-semantic-search-enabled-for-a-column"></a>A pesquisa semântica está habilitada para uma coluna?
    
  Para determinar se a pesquisa de semântica está habilitada para uma coluna específica:  
   
@@ -267,9 +243,7 @@ GO
   
      Um valor True indica que a coluna especificada está habilitada para a indexação semântica, além da indexação de texto completo.  
   
-<a id="determine-what-can-be-indexed-for-semantic-search" class="xliff"></a>
-
-## Determinar o que pode ser indexado para Pesquisa Semântica  
+## <a name="determine-what-can-be-indexed-for-semantic-search"></a>Determinar o que pode ser indexado para Pesquisa Semântica  
   
 ###  <a name="HowToCheckLanguages"></a> Verificar os idiomas com suporte para a pesquisa semântica  
   

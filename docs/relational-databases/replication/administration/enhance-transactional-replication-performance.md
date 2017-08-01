@@ -25,29 +25,23 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 441ae5e2f835146f3d25bda645c44b33fa0146d2
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="enhance-transactional-replication-performance" class="xliff"></a>
-
-# Aprimorar o desempenho da replicação transacional
+# <a name="enhance-transactional-replication-performance"></a>Aprimorar o desempenho da replicação transacional
   Após considerar as dicas para o de desempenho geral descritas em [Aprimorando o Desempenho Geral da Replicação](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), considere essas áreas adicionais específicas da replicação transacional.  
   
-<a id="database-design" class="xliff"></a>
-
-## Design de banco de dados  
+## <a name="database-design"></a>Design de banco de dados  
   
 -   Minimize o tamanho de transação em seu design de aplicativo.  
   
      Por padrão, a replicação transacional propaga as alterações de acordo com limites da transação. Em transações menores, é menos provável que o Distribution Agent tenha que reenviar a transação devido a problemas de rede. Se for necessário que o agente reenvie uma transação, a quantidade de dados enviada será menor.  
   
-<a id="distributor-configuration" class="xliff"></a>
-
-## Configuração do Distribuidor  
+## <a name="distributor-configuration"></a>Configuração do Distribuidor  
   
 -   Configure o Distribuidor em um servidor dedicado.  
   
@@ -57,9 +51,7 @@ ms.lasthandoff: 06/22/2017
   
      Teste a replicação com uma carga típica para seu sistema para determinar a quantidade de espaço necessária para armazenar comandos. Certifique-se de que o banco de dados seja amplo o suficiente para armazenar comandos, sem ter que aumentá-lo frequentemente. Para obter mais informações sobre como alterar o tamanho de um banco de dados, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
   
-<a id="publication-design" class="xliff"></a>
-
-## Design de publicação  
+## <a name="publication-design"></a>Design de publicação  
   
 -   Replique a execução de procedimento armazenado ao fazer atualizações em lote em tabelas publicadas.  
   
@@ -69,9 +61,7 @@ ms.lasthandoff: 06/22/2017
   
      Se não puder usar o parâmetro **- SubscriptionStreams** (descrito mais adiante neste tópico), considere a criação de várias publicações. Espalhar os artigos por essas publicações permite à replicação aplicar alterações em paralelo aos Assinantes.  
   
-<a id="subscription-considerations" class="xliff"></a>
-
-## Considerações sobre assinatura  
+## <a name="subscription-considerations"></a>Considerações sobre assinatura  
   
 -   Use agentes independentes ao invés de agentes compartilhados se tiver várias publicações no mesmo Publicador (esse é o padrão para o Assistente para Nova Publicação).  
   
@@ -81,9 +71,7 @@ ms.lasthandoff: 06/22/2017
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar agendamentos de sincronização](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
-<a id="distribution-agent-and-log-reader-agent-parameters" class="xliff"></a>
-
-## Parâmetros do Distribution Agent e do Log Reader Agent  
+## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Parâmetros do Distribution Agent e do Log Reader Agent  
   
 -   Para resolver gargalos esporádicos e acidentais, use o parâmetro **–MaxCmdsInTran** para o Agente de Leitor de Log.  
   

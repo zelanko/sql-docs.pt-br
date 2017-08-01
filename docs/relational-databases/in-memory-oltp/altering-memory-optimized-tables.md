@@ -15,23 +15,19 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7
 ms.openlocfilehash: bd27f9755945abf7c09118a5997bb3745e66ab57
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="altering-memory-optimized-tables" class="xliff"></a>
-
-# Alterando tabelas com otimização de memória
+# <a name="altering-memory-optimized-tables"></a>Alterando tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Alterações de esquema e de índice em tabelas com otimização de memória podem ser executadas usando a instrução ALTER TABLE. No SQL Server 2016 e no Banco de Dados SQL do Azure as operações ALTER TABLE em tabelas com otimização de memória são OFFLINE, o que significa que a tabela não está disponível para consulta enquanto a operação está em andamento. O aplicativo de banco de dados pode continuar em execução e qualquer operação que acessa a tabela será bloqueada até que o processo de alteração seja concluído. É possível combinar várias operações ADD, DROP ou ALTER em uma única instrução ALTER TABLE.
   
-<a id="alter-table" class="xliff"></a>
-
-## ALTER TABLE  
+## <a name="alter-table"></a>ALTER TABLE  
  
 A sintaxe ALTER TABLE é usada para fazer alterações no esquema de tabela, bem como para adicionar, excluir e recompilar índices. Índices são considerados parte da definição de tabela:  
   
@@ -84,16 +80,12 @@ A sintaxe ALTER TABLE é usada para fazer alterações no esquema de tabela, bem
   
  Para obter mais informações sobre a funcionalidade ALTER TABLE e a sintaxe completa, veja [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
-<a id="schema-bound-dependency" class="xliff"></a>
-
-## Dependência associada a esquema  
+## <a name="schema-bound-dependency"></a>Dependência associada a esquema  
  Procedimentos armazenados compilados de modo nativo devem ser associados a esquema, o que significa que eles têm uma dependência associada a esquema nas tabelas com otimização de memória que eles acessam e nas colunas às quais eles fazem referência. A dependência associada a esquema é uma relação entre duas entidades que impede que a entidade referenciada seja cancelada ou modificada de modo incompatível enquanto existir a entidade mencionada.  
   
  Por exemplo, se um procedimento armazenado compilado de modo nativo associado a esquema fizer referência a uma coluna *c1* da tabela *mytable*, a coluna *c1* não poderá ser removida. Da mesma forma, se houver um procedimento desse tipo com uma instrução INSERT sem uma lista de colunas (por exemplo, `INSERT INTO dbo.mytable VALUES (...)`), nenhuma coluna da tabela poderá ser removida.  
  
-<a id="logging-of-alter-table-on-memory-optimized-tables" class="xliff"></a>
-
-## Log de ALTER TABLE em tabelas com otimização de memória
+## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>Log de ALTER TABLE em tabelas com otimização de memória
 Em uma tabela com otimização de memória, a maioria dos cenários de ALTER TABLE agora é executada em paralelo e resulta em uma otimização das gravações no log de transações. A otimização é obtida apenas registrando as alterações de metadados no log de transações. No entanto, as operações de ALTER TABLE a seguir são executadas em thread único e não têm otimização de log.
 
 A operação single-threaded, nesse caso, registraria todo o conteúdo da tabela alterada no log de transações. A seguir, a lista das operações de thread único:
@@ -112,9 +104,7 @@ A operação single-threaded, nesse caso, registraria todo o conteúdo da tabela
 
     - *Exceção:* o aumento de uma coluna já fora de linha é registrado de forma otimizada. 
   
-<a id="examples" class="xliff"></a>
-
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  O exemplo a seguir altera o número de buckets de um índice de hash existente. Isso recompila o índice de hash com o novo número de buckets, enquanto outras propriedades do índice de hash permanecem as mesmas.  
   
 ```tsql
@@ -180,9 +170,7 @@ GO
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
 
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 
 [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   

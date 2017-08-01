@@ -17,16 +17,14 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: 171f33aa7ff745b8a66efe2cd5f3879d78b1c9f4
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="query-store-usage-scenarios" class="xliff"></a>
-
-# Cenários de uso do Repositório de Consultas
+# <a name="query-store-usage-scenarios"></a>Cenários de uso do Repositório de Consultas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   O Repositório de Consultas pode ser usado em um amplo conjunto de cenários ao rastrear e garantir que o desempenho previsível da carga de trabalho é essencial. Veja alguns exemplos que você pode levar em consideração:  
@@ -41,9 +39,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Identificar e melhorar cargas de trabalho ad hoc  
   
-<a id="pinpoint-and-fix-queries-with-plan-choice-regressions" class="xliff"></a>
-
-## Apontar e corrigir consultas com regressões de escolha do plano  
+## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>Apontar e corrigir consultas com regressões de escolha do plano  
  Durante a execução da consulta regular, o Otimizador de Consulta pode decidir usar um plano diferente porque entradas importantes foram modificadas: a cardinalidade dos dados mudou, índices foram criados, alterados ou descartados, estatísticas foram recompiladas, etc.  Na maioria das vezes, o novo plano escolhido é melhor ou quase igual ao que estava sendo usado anteriormente. No entanto, há casos em que o novo plano é consideravelmente pior — essa situação é conhecida como regressão de alteração da escolha do plano. Antes do Repositório de Consultas, havia um problema bastante difícil de identificar e corrigir, pois o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornecia armazenamento de dados interno para que os usuários examinassem os planos de execução que eram usados ao longo do tempo.  
   
  Com o Repositório de Consultas, você pode rapidamente:  
@@ -58,9 +54,7 @@ ms.lasthandoff: 06/22/2017
   
  Para obter uma descrição detalhada do cenário, veja o blog [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) (Repositório de Consultas: uma caixa preta de dados para seu banco de dados).  
   
-<a id="identify-and-tune-top-resource-consuming-queries" class="xliff"></a>
-
-## Identificar e ajustar as principais consultas de consumo  
+## <a name="identify-and-tune-top-resource-consuming-queries"></a>Identificar e ajustar as principais consultas de consumo  
  Embora a carga de trabalho possa gerar milhares de consultas, no geral, apenas algumas delas usam de fato a maioria dos recursos do sistema e, portanto, exigem sua atenção. Entre as principais consultas de consumo de recurso, normalmente, você encontrará aquelas que são regredidas ou que podem ser aprimoradas com ajuste adicional.  
   
  A maneira mais fácil de começar a exploração é abrir as **Principais Consultas de Consumo de Recursos** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. A interface do usuário é separada em três painéis: um histograma que representa as principais consultas de consumo de recursos (esquerdo), um resumo do plano para a consulta selecionada (direito) e o plano de consulta visual para o plano selecionado (inferior). Clique no botão **Configurar** para controlar quantas consultas você deseja analisar e o intervalo de tempo de interesse. Além disso, você pode escolher entre diferentes dimensões de consumo de recursos (duração, CPU, memória, E/S, número de execução) e a linha de base (Média, Mín., Máx., Total, Desvio Padrão).  
@@ -81,9 +75,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Pense em reescrever a consulta dispendiosa. Por exemplo, aproveite a parametrização da consulta e reduza o uso do SQL dinâmico. Implemente a lógica ideal ao ler os dados (aplique a filtragem de dados no lado do banco de dados, não do aplicativo).  
   
-<a id="ab-testing" class="xliff"></a>
-
-## Fazer testes A/B  
+## <a name="ab-testing"></a>Fazer testes A/B  
  Use o Repositório de Consultas para comparar o desempenho da carga de trabalho antes e depois da alteração de aplicativo que você planeja introduzir. A lista a seguir contém vários exemplos em que é possível usar o Repositório de Consultas para avaliar o impacto do ambiente ou a alteração do aplicativo no desempenho da carga de trabalho:  
   
 -   Distribuindo a nova versão do aplicativo.  
@@ -143,9 +135,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Use o Repositório de Consultas para correções de regressão e análise: geralmente, as novas alterações do otimizador de consulta geram planos melhores. No entanto, o Repositório de Consultas fornecerá uma maneira fácil de identificar as regressões de escolha do plano e corrigi-las usando um mecanismo para forçar plano.  
   
-<a id="identify-and-improve-ad-hoc-workloads" class="xliff"></a>
-
-## Identificar e melhorar cargas de trabalho ad hoc  
+## <a name="identify-and-improve-ad-hoc-workloads"></a>Identificar e melhorar cargas de trabalho ad hoc  
  Algumas cargas de trabalho não têm consultas dominantes que você possa ajustar a fim de melhorar o desempenho geral do aplicativo. Geralmente, essas cargas de trabalho são caracterizadas por um número relativamente grande de consultas diferentes, cada uma delas consumindo parte dos recursos do sistema. Sendo exclusivas, essas consultas são executadas muito raramente (em geral, apenas uma vez, por isso, ad hoc), de modo que o respectivo consumo do tempo de execução não é crítico. Por outro lado, considerando que esse aplicativo está gerando novas consultas o tempo todo, uma parte significativa dos recursos do sistema é gasto na compilação de consulta, o que não é ideal. Essa não é uma situação ideal para o Repositório de Consultas, uma vez que o número grande de consultas e planos enchem o espaço que você reservou, o que significa que o Repositório de Consultas provavelmente acabará no modo somente leitura muito rapidamente. Se você ativou a **Política de Limpeza Baseada em Tamanho** ([altamente recomendado](https://msdn.microsoft.com/library/mt604821.aspx) para manter o Repositório de Consultas sempre funcionando), o processo em segundo plano limpará as estruturas do Repositório de Consultas na maior parte do tempo, também usando recursos significativos do sistema.  
   
  A exibição**Principais Consultas de Consumo de Recursos** fornecerá a primeira indicação da natureza ad hoc da carga de trabalho:  
@@ -231,9 +221,7 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
     (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Melhor prática com o Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   

@@ -21,16 +21,14 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 3a224f5be40f6f7a68a28cb4c8f741c24527e8bd
 ms.openlocfilehash: b164e70bf4b1e7586d8e70ab8edb7baa1dfcaade
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="create-a-database-schema" class="xliff"></a>
-
-# Criar um esquema de banco de dados
+# <a name="create-a-database-schema"></a>Criar um esquema de banco de dados
   Este tópico descreve como criar um esquema no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -65,9 +63,7 @@ ms.lasthandoff: 07/05/2017
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-<a id="to-create-a-schema" class="xliff"></a>
-
-##### Para criar um esquema  
+##### <a name="to-create-a-schema"></a>Para criar um esquema  
   
 1.  No Pesquisador de Objetos, expanda a pasta **Bancos de Dados** .  
   
@@ -81,9 +77,7 @@ ms.lasthandoff: 07/05/2017
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-<a id="additional-options" class="xliff"></a>
-
-### Opções adicionais  
+### <a name="additional-options"></a>Opções adicionais  
  A caixa de diálogo **Esquema – Novo** também oferece opções em duas páginas adicionais: **Protegíveis** e **Propriedades Estendidas**.  
   
 -   A página **Permissões** lista todos os protegíveis e as permissões possíveis nesses protegíveis que podem ser concedidos ao logon.  
@@ -92,9 +86,7 @@ ms.lasthandoff: 07/05/2017
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-<a id="to-create-a-schema" class="xliff"></a>
-
-#### Para criar um esquema  
+#### <a name="to-create-a-schema"></a>Para criar um esquema  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

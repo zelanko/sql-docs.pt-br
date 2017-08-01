@@ -19,15 +19,14 @@ caps.latest.revision: 20
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 722e026f8b8e8f1e04a93ba58f78aa7135b528de
-ms.openlocfilehash: b8b90960e312ed5e26d5379dac1312849818022d
+ms.translationtype: HT
+ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
+ms.openlocfilehash: c2ed145cb54f90bdbb368d120651a6875f9d5b5c
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# Objetos T-SQL do PolyBase
-<a id="polybase-t-sql-objects" class="xliff"></a>
+# <a name="polybase-t-sql-objects"></a>Objetos T-SQL do PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Para usar o PolyBase, você precisa criar tabelas externas para fazer referência a seus dados externos.  
@@ -45,12 +44,10 @@ ms.lasthandoff: 06/30/2017
 > [!NOTE]
 >  O PolyBase no SQL Server 2016 dá suporte somente a usuários do Windows. Se você tentar usar um usuário do SQL para consultar uma tabela externa do PolyBase, a consulta falhará.
 
-## Pré-requisitos
-<a id="prerequisites" class="xliff"></a>  
+## <a name="prerequisites"></a>Pré-requisitos  
  Configurar o PolyBase. Veja [Configuração do PolyBase](../../relational-databases/polybase/polybase-configuration.md).  
   
-## Criar tabelas externas para Hadoop
-<a id="create-external-tables-for-hadoop" class="xliff"></a>  
+## <a name="create-external-tables-for-hadoop"></a>Criar tabelas externas para Hadoop  
  **1. Criar uma credencial com escopo de banco de dados**  
   
  Esta etapa é necessária somente para clusters de Hadoop protegidos por Kerberos.  
@@ -128,8 +125,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
   
-## Criar tabelas externas para o armazenamento de blobs do Azure
-<a id="create-external-tables-for-azure-blob-storage" class="xliff"></a>  
+## <a name="create-external-tables-for-azure-blob-storage"></a>Criar tabelas externas para o armazenamento de blobs do Azure  
  **1. Criar uma credencial com escopo de banco de dados**  
   
 ```sql  
@@ -204,8 +200,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
  
-## Criar tabelas externas para o Azure Data Lake Store
-<a id="create-external-tables-for-azure-data-lake-store" class="xliff"></a>
+## <a name="create-external-tables-for-azure-data-lake-store"></a>Criar tabelas externas para o Azure Data Lake Store
 Somente há suporte para o Azure Data Lake Store no PolyBase no SQL Data Warehouse.
 Para obter mais informações sobre o SQL Data Warehouse do Azure e o ADLS, acesse [Carregar com o Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
  
@@ -297,12 +292,10 @@ WITH
 CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)  
 ```  
 
-## Próximas etapas
-<a id="next-steps" class="xliff"></a>  
+## <a name="next-steps"></a>Próximas etapas  
  Para obter exemplos de consultas, veja [Consultas do PolyBase](../../relational-databases/polybase/polybase-queries.md).  
   
-## Consulte também
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Consulte também  
  [Introdução ao PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Guia do PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   

@@ -20,16 +20,14 @@ caps.latest.revision: 106
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 33b11df8c6894b8acd24da6afd4e2f825fc93445
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="upgrade-full-text-search" class="xliff"></a>
-
-# Atualizar pesquisa de texto completo
+# <a name="upgrade-full-text-search"></a>Atualizar pesquisa de texto completo
   A atualização da pesquisa de texto completo para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é feita durante a instalação e quando os arquivos de banco de dados e os catálogos de texto completo da versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são anexados, restaurados ou copiados por meio do Assistente para Copiar Banco de Dados.  
   
   
@@ -85,9 +83,7 @@ ms.lasthandoff: 06/22/2017
   
      A importação ou a recompilação durante a atualização usa muitos recursos da CPU, o que faz com que o restante da instância do servidor demore para ser atualizado e ficar online. Se colocar a instância do servidor online o mais rápido possível é importante para você e se você deseja executar uma população manual depois da atualização, a opção **Redefinir** é a mais adequada.  
   
-<a id="ensure-consistent-query-results-after-importing-a-full-text-index" class="xliff"></a>
-
-## Assegurar resultados de consulta consistentes após importar um índice de texto completo  
+## <a name="ensure-consistent-query-results-after-importing-a-full-text-index"></a>Assegurar resultados de consulta consistentes após importar um índice de texto completo  
  Se um catálogo de texto completo foi importado durante a atualização de um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], podem ocorrer incompatibilidades entre a consulta e o conteúdo do índice de texto completo devido a diferenças no comportamento dos antigos e dos novos separadores de palavras. Nesse caso, para garantir compatibilidade total entre as consultas e o conteúdo do índice de texto completo, escolha uma das opções a seguir:  
   
 -   Recompilar o catálogo de texto completo que contém o índice de texto completo ([ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* REBUILD)  
@@ -96,9 +92,7 @@ ms.lasthandoff: 06/22/2017
   
  Para obter mais informações sobre separadores de palavras, consulte [Configurar e gerenciar separadores de palavras e lematizadores para pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-<a id="upgrade-noise-word-files-to-stoplists" class="xliff"></a>
-
-## Atualizar arquivos de palavra de ruído para listas de palavras irrelevantes (stoplist)  
+## <a name="upgrade-noise-word-files-to-stoplists"></a>Atualizar arquivos de palavra de ruído para listas de palavras irrelevantes (stoplist)  
 Quando um banco de dados é atualizado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], os arquivos de palavras de ruído não são mais usados. No entanto, os antigos arquivos de palavras de ruído ficam armazenados na pasta FTDATA\ FTNoiseThesaurusBak, e você poderá usá-los posteriormente quando atualizar ou criar as listas de palavras irrelevantes do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  Depois de atualizar do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
@@ -118,9 +112,7 @@ Quando um banco de dados é atualizado do [!INCLUDE[ssCurrent](../../includes/ss
   
      A cláusula STOPLIST OFF remove a filtragem de palavras irrelevantes e disparará a população da tabela, sem filtrar nenhuma das palavras consideradas palavras de ruído.  
   
-<a id="backup-and-imported-full-text-catalogs" class="xliff"></a>
-
-## Backup e catálogos de texto completo importados  
+## <a name="backup-and-imported-full-text-catalogs"></a>Backup e catálogos de texto completo importados  
  Nos catálogos de texto completo que são recompilados ou redefinidos durante a atualização (e nos novos catálogos de texto completo), o catálogo de texto completo é um conceito lógico e não reside em um grupo de arquivos. Portanto, para fazer backup de um catálogo de texto completo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], é necessário identificar cada grupo de arquivos que contém um índice de texto completo do catálogo e fazer backup de cada um deles. Para obter mais informações, consulte [Fazer backup e restaurar índices e catálogos de texto completo](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md).  
   
  Nos catálogos de texto completo importados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o catálogo de texto completo ainda é um arquivo de banco de dados em seu próprio grupo de arquivos. O processo de backup do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para catálogos de texto completo ainda é aplicável, a diferença é que o serviço MSFTESQL não existe no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações sobre o processo do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consulte [Backing Up and Restoring Full-Text Catalogs](http://go.microsoft.com/fwlink/?LinkId=209154) (Backup e restauração de catálogos de texto completo) nos Manuais Online do SQL Server 2005.  
@@ -163,9 +155,7 @@ Quando um banco de dados é atualizado do [!INCLUDE[ssCurrent](../../includes/ss
   
 -   [Restaurações completas de banco de dados &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)  
   
-<a id="example" class="xliff"></a>
-
-### Exemplo  
+### <a name="example"></a>Exemplo  
  O exemplo a seguir usa a cláusula MOVE na instrução [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) para restaurar um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] denominado `ftdb1`. O banco de dados, o log e os arquivos de catálogo do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] são movidos para novos locais da instância de servidor do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , como segue:  
   
 -   O arquivo de banco de dados, `ftdb1.mdf`, é movido para `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL13.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`.  
@@ -190,9 +180,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  Para obter mais informações sobre desanexar e anexar um banco de dados, consulte [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) e [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
-<a id="see-also" class="xliff"></a>
-
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Iniciar a pesquisa de texto completo](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Configurar e gerenciar separadores de palavras e lematizadores de pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar e gerenciar filtros para pesquisa](../../relational-databases/search/configure-and-manage-filters-for-search.md)  

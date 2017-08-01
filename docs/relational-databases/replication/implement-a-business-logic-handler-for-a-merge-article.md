@@ -22,16 +22,14 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1e8b91f880f5cc4f5db69f09fb0bded2b51aaa3c
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="implement-a-business-logic-handler-for-a-merge-article" class="xliff"></a>
-
-# Implementar um manipulador de lógica de negócios para um artigo de mesclagem
+# <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementar um manipulador de lógica de negócios para um artigo de mesclagem
   Este tópico descreve como implementar um manipulador de lógica de negócios para um artigo de mesclagem no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a programação de replicação o RMO (Replication Management Objects).  
   
  O namespace <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa uma interface que permite gravar lógicas comerciais complexas para manipular eventos que ocorrem durante o processo de sincronização da replicação de mesclagem. Os métodos do manipulador de lógica de negócios podem ser invocados pelo processo de replicação para cada linha alterada que seja replicada durante a sincronização.  
@@ -58,9 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="ReplProg"></a> Usando a programação de replicação  
   
-<a id="to-create-and-deploy-a-business-logic-handler" class="xliff"></a>
-
-#### Para criar e implantar um manipulador de lógica de negócios  
+#### <a name="to-create-and-deploy-a-business-logic-handler"></a>Para criar e implantar um manipulador de lógica de negócios  
   
 1.  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, crie um novo projeto para o assembly .NET que contém o código que implementa o manipulador de lógica de negócios.  
   
@@ -103,9 +99,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  O manipulador de lógica de negócios precisa ser implantado em todos os servidores em que o Merge Agent é executado, incluindo-se o servidor IIS que hospeda o replisapi.dll durante o uso da sincronização da Web.  
   
-<a id="to-register-a-business-logic-handler" class="xliff"></a>
-
-#### Para registrar um manipulador de lógica de negócios  
+#### <a name="to-register-a-business-logic-handler"></a>Para registrar um manipulador de lógica de negócios  
   
 1.  No Publicador, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) para verificar se o assembly ainda não foi registrado como manipulador de lógica de negócios.  
   
@@ -114,15 +108,11 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Se o assembly não for implantado no mesmo diretório do executável do Merge Agent, no mesmo diretório do aplicativo que inicia sincronicamente o Merge Agent ou no cache de assembly global (GAC), será necessário especificar o caminho completo com o nome do assembly para **@dotnet_assembly_name**. Ao usar a sincronização da Web, especifique o local do assembly no servidor da Web.  
   
-<a id="to-use-a-business-logic-handler-with-a-new-table-article" class="xliff"></a>
-
-#### Para usar um manipulador de lógica de negócios com um novo artigo de tabela  
+#### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Para usar um manipulador de lógica de negócios com um novo artigo de tabela  
   
 1.  Execute [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) para definir um artigo, especificando o nome amigável do manipulador de lógica de negócios para **@article_resolver**. Para obter mais informações, consulte [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-<a id="to-use-a-business-logic-handler-with-an-existing-table-article" class="xliff"></a>
-
-#### Para usar um manipulador de lógica de negócios com um artigo de tabela existente  
+#### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Para usar um manipulador de lógica de negócios com um artigo de tabela existente  
   
 1.  Execute [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), especificando **@publication**, **@article**, um valor de **article_resolver** para **@property** e o nome amigável do manipulador de lógica de negócios para **@value**.  
   
@@ -139,9 +129,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
   
-<a id="to-create-a-business-logic-handler" class="xliff"></a>
-
-#### Para criar um manipulador de lógica de negócios  
+#### <a name="to-create-a-business-logic-handler"></a>Para criar um manipulador de lógica de negócios  
   
 1.  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, crie um novo projeto para o assembly .NET que contém o código que implementa o manipulador de lógica de negócios.  
   
@@ -182,9 +170,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  Construa o projeto para criar o assembly de manipulador de lógica de negócios.  
   
-<a id="to-register-a-business-logic-handler" class="xliff"></a>
-
-#### Para registrar um manipulador de lógica de negócios  
+#### <a name="to-register-a-business-logic-handler"></a>Para registrar um manipulador de lógica de negócios  
   
 1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -202,15 +188,11 @@ ms.lasthandoff: 06/22/2017
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - um valor de **true**.  
   
-<a id="to-deploy-a-business-logic-handler" class="xliff"></a>
-
-#### Para implantar um manipulador de lógica de negócios  
+#### <a name="to-deploy-a-business-logic-handler"></a>Para implantar um manipulador de lógica de negócios  
   
 1.  Implante o assembly no servidor em que o Merge Agent é executado no local do arquivo especificado quando o manipulador de lógica de negócios foi registrado no Distribuidor. Para uma assinatura pull o agente é executado no Assinante e para uma assinatura push envio o agente é executado no Distribuidor. Durante o uso da sincronização da Web, o agente é executado no servidor da Web. Se no caminho completo não tiver sido incluído com o nome do assembly quando o manipulador de lógica de negócios foi registrado, implante o assembly no mesmo diretório que o executável Merge Agent, no mesmo diretório que o aplicativo que inicia de forma síncrona o Merge Agent. Você pode instalar o assembly no GAC se houver múltiplos aplicativos que usem o mesmo assembly.  
   
-<a id="to-use-a-business-logic-handler-with-a-new-table-article" class="xliff"></a>
-
-#### Para usar um manipulador de lógica de negócios com um novo artigo de tabela  
+#### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Para usar um manipulador de lógica de negócios com um novo artigo de tabela  
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -226,9 +208,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.Article.Create%2A> . Para obter mais informações, consulte [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-<a id="to-use-a-business-logic-handler-with-an-existing-table-article" class="xliff"></a>
-
-#### Para usar um manipulador de lógica de negócios com um artigo de tabela existente  
+#### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Para usar um manipulador de lógica de negócios com um artigo de tabela existente  
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -261,9 +241,7 @@ ms.lasthandoff: 06/22/2017
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-<a id="see-also" class="xliff"></a>
-
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Implementar um resolvedor de conflitos personalizado para um artigo de mesclagem](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Depurar um manipulador de lógica de negócios &#40;Programação de Replicação&#41;](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)   
  [Melhores práticas de segurança da replicação](../../relational-databases/replication/security/replication-security-best-practices.md)   
