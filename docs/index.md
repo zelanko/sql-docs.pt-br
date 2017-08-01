@@ -7,7 +7,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 733d1495b9dbe1ad5c7028df3b8d28884d6cebf3
 ms.openlocfilehash: 160ac8567e3a74738da5083d67f8c8015cf19c16
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 
@@ -412,7 +412,7 @@ ms.lasthandoff: 07/20/2017
                                                     <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-desktop-get-the-desktop/">Power BI Desktop</a></li>
                                                     <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/">Aplicativos móveis do Power BI</a></li>
                                                     <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-developer-overview-of-power-bi-rest-api/">Desenvolvedor do Power BI</a></li>
-                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/reportserver-get-started/">Servidor de relatórios de BI de energia</a></li>
+                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/reportserver-get-started/">Servidor de Relatório do Power BI</a></li>
                                                 </ul>
                                             </div>
                                         </div>

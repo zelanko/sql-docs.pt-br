@@ -3,7 +3,7 @@
 # [Log de erros do SQL Server Agent](sql-server-agent-error-log.md)
 ## [Exibir o log de erros do SQL Server Agent (SQL Server Management Studio)](view-sql-server-agent-error-log-sql-server-management-studio.md)
 ## [Renomear o log de erros do SQL Server Agent (SSMS)](rename-a-sql-server-agent-error-log-sql-server-management-studio.md)
-## [Gravar mensagens de rastreamento de execução para o Log de erros do agente do SQL Server (SSMS)](write-execution-trace-messages-to-sql-server-agent-log-ssms.md)
+## [Para gravar mensagens de rastreamento de execução no log de erros do SQL Server Agent](write-execution-trace-messages-to-sql-server-agent-log-ssms.md)
 
 # [Tarefas de administração automatizadas (SQL Server Agent)](automated-administration-tasks-sql-server-agent.md)
 ## [Implementar a segurança do SQL Server Agent](implement-sql-server-agent-security.md)
@@ -129,7 +129,7 @@
 ## [Propriedades de conta proxy – nova Conta proxy (página Geral)](proxy-account-properties-new-proxy-account-general-page.md)
 ## [Propriedades da conta proxy – Nova conta proxy (guia Entidades)](proxy-account-properties-new-proxy-account-principals-tab.md)
 ## [Editor de proxy – Adicionar entidade de segurança](proxy-editor-add-principal.md)
-## [Remove Steps from a SQL Server Agent Master Job](remove-steps-from-a-sql-server-agent-master-job.md)
+## [Remover etapas de um trabalho mestre do SQL Server Agent](remove-steps-from-a-sql-server-agent-master-job.md)
 ## [Resize the Job History Log](resize-the-job-history-log.md)
 ## [Executar Trabalhos](run-jobs.md)
 ## [Agendar um trabalho](schedule-a-job.md)

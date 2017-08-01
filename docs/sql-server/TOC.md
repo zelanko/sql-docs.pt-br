@@ -2,7 +2,7 @@
 
 # Visão geral
 ## [Novidades no SQL Server 2016](what-s-new-in-sql-server-2016.md)
-## [O que há de novo no SQL Server de 2017](what-s-new-in-sql-server-2017.md)
+## [Novidades no SQL Server 2017](what-s-new-in-sql-server-2017.md)
 ## [Edições e recursos com suporte do SQL Server 2016](editions-and-components-of-sql-server-2016.md)
 ## [Edições e recursos com suporte do SQL Server 2017](editions-and-components-of-sql-server-2017.md)
 ## [Especificações de capacidade máxima do SQL Server](maximum-capacity-specifications-for-sql-server.md)
@@ -17,13 +17,13 @@
 ## [Microsoft SQL Server](../release-notes/microsoft-sql-server.md)
 ## [Notas de Versão do SQL Server](../release-notes/sql-server-release-notes.md)
 ## [Notas de Versão do SQL Server 2016](sql-server-2016-release-notes.md)
-## [Notas de versão do SQL Server de 2017](sql-server-2017-release-notes.md)
+## [Notas de Versão do SQL Server 2017.](sql-server-2017-release-notes.md)
 
 ## [SQL Server 2014 Release Notes](../release-notes/sql-server-2014-release-notes.md)
 ## [Notas de Versão do SQL Server 2012](../release-notes/sql-server-2012-release-notes.md)
 ## [SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)
 ## [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)
-## [Notas de versão do SQL Server 2012 SP3](../release-notes/sql-server-2012-sp3-release-notes.md)
+## [Notas de Versão do SQL Server 2012 SP3](../release-notes/sql-server-2012-sp3-release-notes.md)
 ## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
