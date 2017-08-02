@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bc46faf06a34a41f94ee9eb4fa05c2a9ce3a5cec
+ms.translationtype: HT
+ms.sourcegitcommit: 8ec830912e034436d2de0613c793c08ce961c031
+ms.openlocfilehash: bc10ed9c7b6ea1a240b9274c9880c44fa3e8f3ab
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/25/2017
 
 ---
 # <a name="use-tokens-in-job-steps"></a>Usar tokens em etapas de trabalho
@@ -63,15 +63,15 @@ As tabelas a seguir listam e descrevem os tokens e macros para os quais há supo
   
 ### <a name="sql-server-agent-tokens"></a>Tokens do SQL Server Agent  
   
-|Token|Description|  
+|Token|Descrição|  
 |---------|---------------|  
 |**(A-DBN)**|Nome do banco de dados. Se o trabalho é executado por um alerta, o valor de nome de banco de dados substitui este token automaticamente na etapa de trabalho.|  
 |**(A-SVR)**|Nome de servidor. Se o trabalho é executado por um alerta, o valor de nome de servidor substitui este token automaticamente na etapa de trabalho.|  
 |**(A-ERR)**|Número de erro. Se o trabalho é executado por um alerta, o valor de número de erro substitui este token automaticamente na etapa de trabalho.|  
 |**(A-SEV)**|Severidade do erro. Se o trabalho é executado por um alerta, o valor de severidade do erro substitui este token automaticamente na etapa de trabalho.|  
 |**(A-MSG)**|Texto de mensagem. Se o trabalho é executado por um alerta, o valor de texto de mensagem substitui este token automaticamente na etapa de trabalho.|  
-|**(AGENT_JOB_NAME)**|O nome do trabalho.|  
-|**(AGENT_STEP_NAME)**|O nome da etapa.|  
+|**(JOBNAME)**|O nome do trabalho.|  
+|**(STEPNAME)**|O nome da etapa.|  
 |**(DATE)**|Data atual (em formato AAAAMMDD).|  
 |**(INST)**|Nome da instância. Para uma instância padrão, este token terá o nome da instância padrão: MSSQLSERVER.|  
 |**(JOBID)**|ID do trabalho.|  
@@ -90,7 +90,7 @@ As tabelas a seguir listam e descrevem os tokens e macros para os quais há supo
   
 ### <a name="sql-server-agent-escape-macros"></a>Macros de fuga do SQL Server Agent  
   
-|Macros de fuga|Description|  
+|Macros de fuga|Descrição|  
 |-----------------|---------------|  
 |**$(ESCAPE_SQUOTE(***token_name***))**|Ignora aspas simples (') na cadeia de caracteres de substituição do token. Substitui um aspa simples por duas aspas simples.|  
 |**$(ESCAPE_DQUOTE(***token_name***))**|Ignora aspas duplas (") na cadeia de caracteres de substituição do token. Substitui um aspa dupla por duas aspas duplas.|  
