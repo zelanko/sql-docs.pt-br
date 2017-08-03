@@ -27,7 +27,7 @@
 ### [Exibir um plano de execução real](display-an-actual-execution-plan.md)  
 ### [Salvar um plano de execução em formato XML](save-an-execution-plan-in-xml-format.md)  
 ## [Estatísticas de consulta dinâmica](live-query-statistics.md)  
-## [Monitorar o desempenho com o Repositório de Consultas](monitoring-performance-by-using-the-query-store.md)  
+## [Monitorando o desempenho com o repositório de consultas](monitoring-performance-by-using-the-query-store.md)  
 ## [Usar o Repositório de Consultas com OLTP in-memory](using-the-query-store-with-in-memory-oltp.md)  
 ## [Melhor prática com o Repositório de Consultas](best-practice-with-the-query-store.md)  
 ## [Cenários de uso do Repositório de Consultas](query-store-usage-scenarios.md)  
