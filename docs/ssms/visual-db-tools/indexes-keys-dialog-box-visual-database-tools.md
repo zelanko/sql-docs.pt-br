@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1fefdecbd07572aabddd724be6e997fa5b0d6fce
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices – Chaves (Visual Database Tools)
@@ -37,7 +37,7 @@ Lista os índices e as chaves primárias/exclusivas existentes. Selecione um par
 **Adicionar**  
 Crie um novo índice ou chave primária ou exclusiva.  
   
-**Delete (excluir) (excluir)**  
+**Delete (excluir)**  
 Exclua a chave ou o índice selecionado na lista **Índice ou Chave Exclusiva/Primária Selecionada** .  
   
 **Categoria Geral**  

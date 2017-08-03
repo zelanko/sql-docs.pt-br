@@ -19,18 +19,18 @@ caps.latest.revision: 48
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 00d990aa777630847e0993631ee1c7bbce781d54
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="partitioned-tables-and-indexes"></a>Tabelas e índices particionados
   O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte ao particionamento de tabelas e índices. Os dados de tabelas e índices particionados são divididos em unidades que podem ser difundidas por mais de um grupo de arquivos em um banco de dados. Os dados são particionados horizontalmente, de forma que os grupos de linhas são mapeados em partições individuais. Todas as partições de um único índice ou de uma única tabela devem residir no mesmo banco de dados. A tabela ou o índice é tratado como uma única entidade lógica quando são executadas consultas ou atualizações nos dados. Antes do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, as tabelas e os índices particionados não estavam disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!IMPORTANT]  
-> O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece suporte a até 15.000 partições por padrão. Nas versões anteriores do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o número de partições foi limitado a 1.000 por padrão. Nos sistemas baseados em x86, a criação de uma tabela ou de um índice com mais de 1000 partições é possível, mas não tem suporte.  
+>  O[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece suporte a até 15.000 partições por padrão. Nas versões anteriores do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o número de partições foi limitado a 1.000 por padrão. Nos sistemas baseados em x86, a criação de uma tabela ou de um índice com mais de 1000 partições é possível, mas não tem suporte.  
   
 ## <a name="benefits-of-partitioning"></a>Benefícios do particionamento  
  O particionamento de tabelas ou índices grandes pode ter a capacidade de gerenciamento e os benefícios de desempenho a seguir.  

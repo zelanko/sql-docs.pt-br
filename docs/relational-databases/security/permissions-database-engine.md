@@ -23,11 +23,11 @@ caps.latest.revision: 76
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e1c8c3f3c82e39da5e5f3b1cd018af8b3b2d26d7
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="permissions-database-engine"></a>Permissões (Mecanismo de Banco de Dados)
@@ -46,7 +46,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
 Para obter dicas sobre como planejar um sistema de permissões, confira [Introdução a permissões de mecanismo de banco de dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
   
-##  <a name="_conventions"></a> Permissions Naming Conventions  
+##  <a name="_conventions"></a> Convenções de Nomenclatura de Permissões  
  A seguir, encontram-se as convenções gerais a serem adotadas ao se nomear permissões:  
   
 -   CONTROL  
@@ -102,7 +102,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 ## <a name="chart-of-sql-server-permissions"></a>Gráfico de permissões do SQL Server  
  Para obter um cartaz gráfico dimensionado de todas as permissões do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em formato pdf, veja [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
-##  <a name="_securables"></a> Permissions Applicable to Specific Securables  
+##  <a name="_securables"></a> Permissões Aplicáveis a Protegíveis Específicos  
  A tabela a seguir lista classes principais de permissões e os tipos de protegíveis aos quais elas podem ser aplicadas.  
   
 |Permissão|Aplica-se a|  
@@ -124,7 +124,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 > [!CAUTION]  
 >  As permissões padrão concedidas aos objetos de sistema no momento da instalação são avaliadas cuidadosamente contra possíveis ameaças e não precisam ser alteradas como parte do sistema de proteção de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Qualquer alteração nas permissões nos objetos de sistema poderia limitar ou interromper a funcionalidade e potencialmente pode deixar a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um estado sem suporte.  
   
-##  <a name="_permissions"></a> SQL Server Permissions  
+##  <a name="_permissions"></a> Permissões do SQL Server  
  A tabela a seguir fornece uma lista completa de permissões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . As permissões[!INCLUDE[ssSDS](../../includes/sssds-md.md)] estão disponíveis apenas para protegíveis base com suporte. Não é possível dar permissões no nível do servidor no [!INCLUDE[ssSDS](../../includes/sssds-md.md)], no entanto, permissões de banco de dados são disponibilizadas em alguns casos.  
   
 |Protegível base|Permissões granulares no protegível base|Código de tipo de permissão|Protegível que contém o protegível base|Permissão no protegível de contêiner que implica permissão granular no protegível base|  
@@ -366,7 +366,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a> Summary of the Permission Check Algorithm  
+##  <a name="_algorithm"></a> Resumo do algoritmo de verificação de permissão  
  A verificação de permissões pode ser uma tarefa complexa. O algoritmo de verificação de permissão inclui a sobreposição de associações de grupo e o encadeamento de propriedades, as permissões explícita e implícita, e pode ser afetado pelas permissões em classes de protegíveis que contêm a entidade protegível. O processo geral do algoritmo é coletar todas as permissões pertinentes. Se nenhum bloqueio DENY for localizado, o algoritmo irá procurar uma permissão GRANT que fornece acesso suficiente. O algoritmo contém três elementos essenciais, o **contexto de segurança**, o **espaço de permissão**e a **permissão necessária**.  
   
 > [!NOTE]  
@@ -428,7 +428,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 DENY na tabela é substituído por GRANT em uma coluna. No entanto, um DENY posterior na tabela removerá a coluna GRANT. 
   
-##  <a name="_examples"></a> Examples  
+##  <a name="_examples"></a> Exemplos  
  Os exemplos nesta seção mostram como recuperar informações sobre permissões.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Retornando a lista completa de permissões que podem ser concedidas  

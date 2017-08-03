@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0134010294aec01d47271a7e00e6a13e4a3ad208
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="partitioning-with-temporal-tables"></a>Particionamento de Tabelas Temporais
@@ -32,9 +32,9 @@ ms.lasthandoff: 06/22/2017
   
 -   **Tabela atual:**  
   
-    -   É possível usar o **SWITCH IN** na tabela atual para facilitar o carregamento de dados e a consulta enquanto o **SYSTEM_VERSIONING** estiver **ON**  
+    -   **SWITCH IN** na tabela atual para facilitar o carregamento de dados e a consulta enquanto o **SYSTEM_VERSIONING** estiver **ON**  
   
-    -   **SWITCH OUT** is not permitted while **SYSTEM_VERSIONING** is **ON**  
+    -   **SWITCH OUT** não é permitido enquanto **SYSTEM_VERSIONING** estiver **ON**  
   
 -   **Tabela de histórico:**  
   

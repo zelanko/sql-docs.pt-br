@@ -16,15 +16,15 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5114c8b5fba96020c07758e8c0143c33540a8ad5
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices Espaciais (Ferramentas de Banco de Dados Visual)
-Use a caixa de diálogo **Índices Espaciais** em colunas de tipo de dados de **geometria** ou **geografia** (*colunas espaciais*), que não podem ser indexadas usando a caixa de diálogo **Índice/Chaves**. Cada coluna espacial pode ter mais de um índice espacial, mas eles devem ser criados um de cada vez.  
+Use a caixa de diálogo **Índices Espaciais** em colunas de tipo de dados de **geometria** ou **geografia** (*colunas espaciais*), que não podem ser indexadas usando a caixa de diálogo **Índice/Chaves** . Cada coluna espacial pode ter mais de um índice espacial, mas eles devem ser criados um de cada vez.  
   
 Para obter informações sobre restrições de criação de índices espaciais, consulte [Visão geral de índices espaciais](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293).  
   
@@ -35,7 +35,7 @@ Lista os índices espaciais existentes. Selecione um índice para mostrar suas p
 **Adicionar**  
 Cria um novo índice espacial.  
   
-**Delete (excluir) (excluir)**  
+**Delete (excluir)**  
 Exclui o índice espacial selecionado na lista **Índice Espacial Selecionado** .  
   
 **Células por Objeto**  

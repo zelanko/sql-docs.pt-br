@@ -20,11 +20,11 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 82a29880c3595f5c3df5814a65c163ddd02da6a8
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementar o resolvedor de conflitos personalizado para um artigo de mesclagem
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
  Você pode gravar seu próprio resolvedor de conflito personalizado como um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] em cada Publicador. Durante a sincronização, esse procedimento armazenado será invocado quando forem encontrados conflitos em um artigo para o qual o resolvedor foi registrado, e a informação na linha em conflito é passada pelo Merge Agent para os parâmetros requeridos do procedimento. Resolvedores de conflito personalizados com base em procedimento armazenado sempre são criados no Publicador.  
   
 > [!NOTE]  
-> Resolvedores de procedimento armazenado do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] só são invocados para resolver conflitos de linha baseados em alterações. Eles não podem ser usados para tratar de outros tipos de conflitos como falhas de inserção devido a violações de PRIMARY KEY ou violações de restrições de índice exclusivo.  
+>  Resolvedores de procedimento armazenado do[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] só são invocados para resolver conflitos de linha baseados em alterações. Eles não podem ser usados para tratar de outros tipos de conflitos como falhas de inserção devido a violações de PRIMARY KEY ou violações de restrições de índice exclusivo.  
   
 #### <a name="to-create-a-stored-procedure-based-custom-conflict-resolver"></a>Para criar um resolvedor de conflitos personalizado com base em procedimentos armazenados  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 06/22/2017
 2.  Execute [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), especificando **@publication**, **@article**, um valor de **resolver_info** para **@property**, e o nome do procedimento armazenado que implementa a lógica do resolvedor de conflitos para **@value**.  
   
 ##  <a name="COM"></a> Usando um resolvedor personalizado com base em COM  
- O namespace <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa uma interface, permitindo que você grave lógicas de negócios complexas para manipular eventos e resolva conflitos que ocorram durante o processo de sincronização da replicação de mesclagem. Para obter mais informações, consulte [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). Você também pode gravar sua própria lógica corporativa personalizada com base em código nativo para resolver conflitos. Essa lógica é criada como um componente COM e compilada em bibliotecas de vínculo dinâmico (DLL), usando produtos como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. O resolvedor de conflitos personalizado com base em COM deve implementar a interface **ICustomResolver** , que é projetada especificamente para resolução de conflitos.  
+ O namespace <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa uma interface, permitindo que você grave lógicas empresariais complexas para manipular eventos e resolva conflitos que ocorram durante o processo de sincronização da replicação de mesclagem. Para obter mais informações, consulte [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). Você também pode gravar sua própria lógica corporativa personalizada com base em código nativo para resolver conflitos. Essa lógica é criada como um componente COM e compilada em bibliotecas de vínculo dinâmico (DLL), usando produtos como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. O resolvedor de conflitos personalizado com base em COM deve implementar a interface **ICustomResolver** , que é projetada especificamente para resolução de conflitos.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>Para criar e registrar um resolvedor de conflitos personalizado com base em COM  
   

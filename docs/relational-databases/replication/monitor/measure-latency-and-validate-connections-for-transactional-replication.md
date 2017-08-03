@@ -20,11 +20,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b2ef601ab4c3dca3b524805e9cce7798213deab9
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir a latência e validar as conexões para a replicação transacional
@@ -140,46 +140,46 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Para publicar um token de rastreamento em uma publicação transacional  
   
-1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication>.  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication> .  
   
-3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação e defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> como a conexão criada na etapa 1.  
+3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação, e a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
 4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar **false**, as propriedades de publicação na etapa 3 foram definidas incorretamente ou a publicação não existe.  
   
-5.  Chame o método <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A>. Esse método insere um token de rastreamento no log de transações da publicação.  
+5.  Chame o método <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> . Esse método insere um token de rastreamento no log de transações da publicação.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Para determinar a latência e validar as conexões para uma publicação transacional  
   
-1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> .  
   
-3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>; além disso, defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
+3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> ; e, defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
 4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar **false**, as propriedades do monitor da publicação na etapa 3 foram definidas incorretamente ou a publicação não existe.  
   
-5.  Chame o método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>. Converta o objeto <xref:System.Collections.ArrayList> retornado em uma matriz de objetos <xref:Microsoft.SqlServer.Replication.TracerToken>.  
+5.  Chame o método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> . Converta o objeto <xref:System.Collections.ArrayList> retornado em uma matriz de objetos <xref:Microsoft.SqlServer.Replication.TracerToken> .  
   
-6.  Chame o método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A>. Passe um valor <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> para um token de rastreamento da etapa 5. Isso retorna as informações da latência para o token de rastreamento selecionado como um objeto <xref:System.Data.DataSet>. Se todas as informações do token de rastreamento forem retornadas, a conexão entre o Publicador e o Distribuidor e a conexão entre o Distribuidor e o Assinante serão efetivas e a topologia de replicação estará funcionando.  
+6.  Chame o método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> . Passe um valor de <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> para um token de rastreamento da etapa 5. Isso retorna as informações da latência para o token de rastreamento selecionado como um objeto <xref:System.Data.DataSet> . Se todas as informações do token de rastreamento forem retornadas, a conexão entre o Publicador e o Distribuidor e a conexão entre o Distribuidor e o Assinante serão efetivas e a topologia de replicação estará funcionando.  
   
 #### <a name="to-remove-tracer-tokens"></a>Para remover tokens de rastreamento  
   
-1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> .  
   
-3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>; além disso, defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
+3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> ; e, defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
 4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar **false**, as propriedades do monitor da publicação na etapa 3 foram definidas incorretamente ou a publicação não existe.  
   
-5.  Chame o método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>. Converta o objeto <xref:System.Collections.ArrayList> retornado em uma matriz de objetos <xref:Microsoft.SqlServer.Replication.TracerToken>.  
+5.  Chame o método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> . Converta o objeto <xref:System.Collections.ArrayList> retornado em uma matriz de objetos <xref:Microsoft.SqlServer.Replication.TracerToken> .  
   
-6.  Chame o método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A>. Passe um dos seguintes valores:  
+6.  Chame o método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A> . Passe um dos seguintes valores:  
   
-    -   O <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> de um token de rastreamento da etapa 5. Isso exclui as informações para um token selecionado.  
+    -   O <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> para um token de rastreamento da etapa 5. Isso exclui as informações para um token selecionado.  
   
-    -   Um objeto <xref:System.DateTime>. Isso exclui as informações de todos os tokens anteriores à data e hora especificadas.  
+    -   Um objeto <xref:System.DateTime> . Isso exclui as informações de todos os tokens anteriores à data e hora especificadas.  
   
   

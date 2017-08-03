@@ -18,11 +18,11 @@ caps.latest.revision: 141
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 880d10a367cc625bcc313b19c06ee4504e955a19
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar o cluster de failover
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="BestPractices"></a> Práticas recomendadas  
   
--   Review [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [Release Notes](http://go.microsoft.com/fwlink/?LinkId=296445)  
+-   Examine [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [Notas de versão](http://go.microsoft.com/fwlink/?LinkId=296445)  
   
 -   Instale o software de pré-requisito. Antes de executar a Instalação para instalar ou atualizar para o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], instale os pré-requisitos a seguir para reduzir o tempo de instalação. É possível instalar software de pré-requisito em cada nó de cluster de failover e, em seguida, reiniciar os nós uma vez antes de executar a Instalação.  
   

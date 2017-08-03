@@ -16,15 +16,15 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 88cb1d98e64580b53af2587c431430d91615d0b6
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices XML (Visual Database Tools)
-Use a caixa de diálogo **Índices XML** para criar índices para colunas do tipo de dados XML, que não podem ser indexadas utilizando a caixa de diálogo **Índice/Chaves**. Cada coluna XML pode ter mais de um índice XML, mas o primeiro a ser criado (primário) será a base para os demais (secundários). Se você excluir o índice XML primário, os índices secundários também serão excluídos.  
+Use a caixa de diálogo **Índices XML** para criar índices para colunas do tipo de dados XML, que não podem ser indexadas utilizando a caixa de diálogo **Índice/Chaves** . Cada coluna XML pode ter mais de um índice XML, mas o primeiro a ser criado (primário) será a base para os demais (secundários). Se você excluir o índice XML primário, os índices secundários também serão excluídos.  
   
 ## <a name="options"></a>Opções  
 **Índice XML selecionado**  
@@ -33,7 +33,7 @@ Lista os índices XML existentes. Selecione para exibir suas propriedades na gra
 **Adicionar**  
 Cria um índice XML novo.  
   
-**Delete (excluir) (excluir)**  
+**Delete (excluir)**  
 Exclui um índice XML selecionado na lista **Índice XML selecionado** . Se você excluir o índice XML primário, você será notificado que isso também excluirá todos os índices secundários e você pode continuar ou cancelar a ação.  
   
 **Categoria Geral**  

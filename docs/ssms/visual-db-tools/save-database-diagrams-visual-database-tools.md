@@ -18,11 +18,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8e5689586f18c72f6657af5a68a3d63483d3fa78
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Salvar diagramas de banco de dados (Visual Database Tools)
@@ -39,6 +39,6 @@ Salvando um diagrama de banco de dados, você pode salvar todas as alterações 
 3.  Clique em **Sim** (ou **OK** quando se trata de um novo diagrama) para atualizar o banco de dados para corresponder com seu diagrama.  
   
 ## <a name="see-also"></a>Consulte também  
-[Trabalhar com diagramas de banco de dados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

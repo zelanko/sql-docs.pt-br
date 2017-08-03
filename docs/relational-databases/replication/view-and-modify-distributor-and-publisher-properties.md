@@ -19,11 +19,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b0c9adb0d7fa110c08f280706d17706f4af07b07
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Exibir e modificar propriedades de Publicador e Distribuidor
@@ -130,23 +130,23 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-view-and-modify-distributor-properties"></a>Para exibir e modificar as propriedades do Distribuidor  
   
-1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
   
 3.  (Opcional) Verificar a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> para verificar se o servidor conectado no momento é um Distribuidor.  
   
 4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> para obter as propriedades do servidor.  
   
-5.  (Opcional) Para alterar as propriedades, defina um novo valor para uma ou mais propriedades do Distribuidor que podem ser definidas no objeto <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
+5.  (Opcional) Para alterar as propriedades, defina um novo valor para uma ou mais propriedades do Distribuidor que podem ser definidas no objeto <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
   
 6.  (Opcional) Se a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> no objeto <xref:Microsoft.SqlServer.Replication.ReplicationServer> é definida para **true**, chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para confirmar as alterações para o servidor.  
   
 #### <a name="to-view-and-modify-distribution-database-properties"></a>Para exibir e modificar as propriedades do banco de dados de distribuição  
   
-1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase>. Especifique a propriedade name e passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase> . Especifique o nome da propriedade e passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do servidor. Se este método retornar **false**, o banco de dados com o nome especificado não existirá no servidor.  
   
@@ -156,9 +156,9 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-view-and-modify-publisher-properties"></a>Para exibir e modificar as propriedades do Publicador  
   
-1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher>. Especifique a propriedade <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> e passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher> . Especifique a propriedade <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> e passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
   
 3.  (Opcional) Para alterar propriedades, defina um novo valor para uma das propriedades <xref:Microsoft.SqlServer.Replication.DistributionPublisher> que podem ser definidas.  
   
@@ -166,30 +166,30 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>Para alterar a senha para a conexão administrativa do Publicador para o Distribuidor  
   
-1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
   
 3.  Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
 4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> para obter as propriedades do objeto.  
   
-5.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A>. Passe o novo valor de senha para o parâmetro *password* .  
+5.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Passe o novo valor de senha para o parâmetro *password* .  
   
     > [!IMPORTANT]  
     >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](http://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework do Windows.  
   
 6.  (Opcional) Execute as etapas seguintes para alterar a senha em cada Publicador remoto que usa esse Distribuidor:  
   
-    1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+    1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-    2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
+    2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
   
     3.  Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 6a.  
   
     4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> para obter as propriedades do objeto.  
   
-    5.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A>. Passe o novo valor de senha da etapa 5 para o parâmetro *password* .  
+    5.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Passe o novo valor de senha da etapa 5 para o parâmetro *password* .  
   
 ###  <a name="PShellExample"></a> Exemplo (RMO)  
  Este exemplo mostra como alterar a Distribuição e as propriedades do banco de dados de distribuição.  
