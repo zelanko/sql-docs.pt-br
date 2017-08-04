@@ -1,1 +1,1 @@
-  **2017 do Microsoft SQL Server**  
+  **Microsoft SQL Server 2017**  
