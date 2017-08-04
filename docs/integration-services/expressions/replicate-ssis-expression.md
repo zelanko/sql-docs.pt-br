@@ -1,47 +1,52 @@
 ---
-title: "REPLICATE (Express&#227;o SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "função REPLICATE"
+title: "REPLICATE (expressão SSIS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c94e5f4221251b3b931ebabc5076620ba6ab0e7e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# REPLICATE (Express&#227;o SSIS)
+# <a name="replicate-ssis-expression"></a>REPLICATE (Expressão SSIS)
   Retorna uma expressão de caractere que é replicada várias vezes. O argumento *times* deve ser avaliado como um inteiro.  
   
 > [!NOTE]  
 >  A função REPLICATE usa com frequência cadeias longas e, portanto, é mais provável de incorrer o limite de 4.000 caracteres no tamanho da expressão. Se o resultado da avaliação de uma expressão tiver o tipo de dados DT_WSTR ou DT_STR do Integration Services, a expressão truncará em 4.000 caracteres. Se o tipo de resultado de uma subexpressão for DT_STR ou DT_WSTR, essa subexpressão será truncada em 4.000 caracteres, independentemente do tipo de resultado da expressão geral. As consequências do truncamento podem ser controladas muito bem ou causam um aviso ou um erro. Para obter mais informações, consulte [Sintaxe &#40;SSIS&#41;](../../integration-services/expressions/syntax-ssis.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 REPLICATE(character_expression,times)  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *character_expression*  
  É uma expressão de caractere a ser replicada.  
   
  *times*  
  É uma expressão de inteiro que especifica o número de vezes que *character_expression* é replicado.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Se *times* for zero, a função retornará uma cadeia de comprimento zero.  
   
  Se *times* for um número negativo, a função retornará um erro.  
@@ -52,7 +57,7 @@ REPLICATE(character_expression,times)
   
  REPLICATE retornará um resultado nulo se o argumento for nulo.  
   
-## Exemplos de expressões  
+## <a name="expression-examples"></a>Exemplos de expressões  
  Esse exemplo replica um literal de cadeia três vezes. O resultado de retorno é "Mountain BikeMountain BikeMountain Bike".  
   
 ```  
@@ -71,7 +76,7 @@ REPLICATE(Name, @Times)
 REPLICATE(@Name, (DT_I4(Times))  
 ```  
   
-## Consulte também  
- [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Consulte também  
+ [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

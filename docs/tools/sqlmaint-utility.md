@@ -1,36 +1,41 @@
 ---
-title: "Utilit&#225;rio sqlmaint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "planos de manutenção do banco de dados [SQL Server]"
-  - "utilitário sqlmaint"
-  - "mantendo bancos de dados [SQL Server]"
-  - "backups [SQL Server], utilitário sqlmaint"
-  - "utilitários de prompt de comando [SQL Server], sqlmaint"
-  - "planos de manutenção [SQL Server], prompt de comando"
-  - "fazendo backup [SQL Server], utilitário sqlmaint"
+title: "Utilitário Sqlmaint | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database maintenance plans [SQL Server]
+- sqlmaint utility
+- maintaining databases [SQL Server]
+- backups [SQL Server], sqlmaint utility
+- command prompt utilities [SQL Server], sqlmaint
+- maintenance plans [SQL Server], command prompt
+- backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: fbc02b1b8d89972cfd25739f4055842e303450c1
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Utilit&#225;rio sqlmaint
+# <a name="sqlmaint-utility"></a>Utilitário sqlmaint
   O utilitário**sqlmaint** executa um conjunto especificado de operações de manutenção em um ou mais bancos de dados. Use o **sqlmaint** para executar verificações DBCC, fazer backup de um banco de dados e do respectivo log de transações, atualizar estatísticas e recompilar índices. Todas as atividades de manutenção de banco de dados geram um relatório que pode ser enviado a um arquivo de texto designado, arquivo HTML ou conta de email. O**sqlmaint** executa planos de manutenção de bancos de dados criados com versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para executar planos de manutenção do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no prompt de comando, use o [Utilitário dtexec](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] Em vez disso, use o recurso de plano de manutenção do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obter mais informações sobre planos de manutenção, veja [Planos de manutenção](../relational-databases/maintenance-plans/maintenance-plans.md).  
+>  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] Em vez disso, use o recurso de plano de manutenção do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações sobre planos de manutenção, veja [Planos de manutenção](../relational-databases/maintenance-plans/maintenance-plans.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -72,7 +77,7 @@ sqlmaint
 number[minutes | hours | days | weeks | months]  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  Os parâmetros e seus valores devem ser separados por um espaço. Por exemplo, deve haver um espaço entre **-S** e *server_name*.  
   
  **-?**  
@@ -105,7 +110,7 @@ number[minutes | hours | days | weeks | months]
  **-Rpt** *text_file*  
  Especifica o caminho completo e o nome do arquivo no qual será gerado o relatório. O relatório também é gerado na tela. O relatório mantém informações de versão adicionando uma data ao nome do arquivo. A data é gerada da seguinte forma: ao final do nome do arquivo, mas antes do ponto final, no formato _*aaaaMMddhhmm*. *aaaa* = ano, *MM* = mês, *dd* = dia, *hh* = hora, *mm* = minuto.  
   
- Se você executar o utilitário às 10h23 em 1º de dezembro de 1996, e esse é o valor de *text_file*:  
+ Se você executar o utilitário às 10h23 em 1º de dezembro de 1996, e esse é o valor de *text_file* :  
   
 ```  
 c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.rpt  
@@ -117,18 +122,18 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.rpt
 c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_199612011023.rpt  
 ```  
   
- O nome do arquivo UNC completo é necessário para *text_file*, quando **sqlmaint** acessa um servidor remoto.  
+ O nome do arquivo UNC completo é necessário para *text_file* , quando **sqlmaint** acessa um servidor remoto.  
   
  **-To**  *operator_name*  
  Especifica o operador para quem o relatório gerado será enviado por meio do SQL Mail.  
   
  **-HtmlRpt** *html_file*  
- Especifica o caminho completo e nome do arquivo no qual um relatório HTML será gerado. **sqlmaint** gera o nome de arquivo, acrescentando uma cadeia de caracteres no formato _*aaaaMMddhhmm* ao nome do arquivo, da mesma forma que faz para o parâmetro **-Rpt**.  
+ Especifica o caminho completo e nome do arquivo no qual um relatório HTML será gerado. **sqlmaint** gera o nome de arquivo, acrescentando uma cadeia de caracteres no formato _*aaaaMMddhhmm* ao nome do arquivo, da mesma forma que faz para o parâmetro **-Rpt** .  
   
- O nome do arquivo UNC completo é necessário para *html_file*, quando **sqlmaint** acessa um servidor remoto.  
+ O nome do arquivo UNC completo é necessário para *html_file* , quando **sqlmaint** acessa um servidor remoto.  
   
  **-DelHtmlRpt** \<*time_period*>  
- Especifica que qualquer relatório HTML no diretório de relatórios deverá ser excluído se o intervalo de tempo depois da criação do arquivo de relatório exceder \<*time_period*>. **-DelHtmlRpt** procura arquivos cujos nomes correspondem ao padrão gerado pelo parâmetro *html_file*. Se *html_file* for c:\Arquivos de Programas\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, **-DelHtmlRpt** fará com que **sqlmaint** exclua todos os arquivos cujos nomes correspondem ao padrão C:\Arquivos de Programas\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm e que sejam anteriores ao \<*time_period*> especificado.  
+ Especifica que qualquer relatório HTML no diretório de relatório ser excluído se exceder o intervalo de tempo depois da criação do arquivo de relatório \< *time_period*>. **-DelHtmlRpt** procura arquivos cujos nomes correspondem ao padrão gerado pelo parâmetro *html_file* . Se *html_file* é c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, em seguida, **- DelHtmlRpt** faz com que **sqlmaint** para excluir todos os arquivos cujos nomes correspondem ao padrão C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*. htm e que sejam mais antigos que o especificado \< *time_period*>.  
   
  **-RmUnusedSpace** *threshold_percent free_percent*  
  Especifica que o espaço não usado seja removido do banco de dados especificado em **-D**. Essa opção só é útil para bancos de dados definidos para crescer automaticamente. *Threshold_percent* especifica o tamanho em megabytes que o banco de dados deve atingir, antes que **sqlmaint** tente remover o espaço de dados não utilizado. Se o banco de dados for menor que *threshold_percent*, nenhuma ação será tomada. *Free_percent* especifica quanto espaço não utilizado deve permanecer no banco de dados, especificado como um percentual do tamanho final do banco de dados. Por exemplo, se um banco de dados com 200 MB contiver 100 MB de dados, especificar 10 para *free_percent* resultará em um tamanho final de banco de dados de 110 MB. Observe que um banco de dados não será expandido se for menor do que *free_percent* somado à quantidade de dados no banco de dados. Por exemplo, se um banco de dados de 108 MB tiver 100 MB de dados, especificar 10 para *free_percent* não expandirá o banco de dados para 110 MB; ele permanecerá com 108 MB.  
@@ -136,7 +141,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-CkDB** | **-CkDBNoIdx**  
  Especifica que uma instrução DBCC CHECKDB ou DBCC CHECKDB com a opção de NOINDEX seja executada no banco de dados especificado em **-D**. Para obter mais informações, consulte DBCC CHECKDB.  
   
- Um aviso será gravado em *text_file*, se o banco de dados estiver em uso, quando **sqlmaint** for executado.  
+ Um aviso será gravado em *text_file* , se o banco de dados estiver em uso, quando **sqlmaint** for executado.  
   
  **-CkAl** | **-CkAlNoIdx**  
  Especifica que uma instrução DBCC CHECKALLOC com a opção de NOINDEX seja executada no banco de dados especificado em **-D**. Para obter mais informações, veja [DBCC CHECKALLOC &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md).  
@@ -189,7 +194,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 ```  
   
- Se usar o parâmetro **-BkUpDB**, também será necessário especificar a mídia usando o parâmetro **-BkUpMedia**.  
+ Se usar o parâmetro **-BkUpDB** , também será necessário especificar a mídia usando o parâmetro **-BkUpMedia** .  
   
  **-BkUpMedia**  
  Especifica o tipo de mídia do backup: DISK ou TAPE.  
@@ -197,20 +202,20 @@ dbname_log_yyyymmddhhmm.BAK
  **DISK**  
  Especifica que a mídia de backup é disco.  
   
- **-DelBkUps**\< *time_period* >  
- Para backups em disco, especifica que qualquer arquivo de backup no diretório de backups deverá ser excluído se o intervalo de tempo depois da criação do backup exceder o \<*time_period*>.  
+ **-DelBkUps**< *time_period* >  
+ Para backups em disco, especifica que qualquer arquivo de backup no diretório de backup ser excluído se o intervalo de tempo após a criação do backup exceder o \< *time_period*>.  
   
  **-CrBkSubDir**  
- Para backups em disco, especifica que um subdiretório deverá ser criado no diretório [*backup_path*] ou no diretório de backup padrão se o **-UseDefDir** também for especificado. O nome do subdiretório é gerado com base no nome do banco de dados especificado em **-D**. **-CrBkSubDir** oferece um modo fácil de colocar todos os backups de bancos de dados diferentes em subdiretórios separados, sem a necessidade de alterar o parâmetro *backup_path*.  
+ Para backups em disco, especifica que um subdiretório deverá ser criado no diretório [*backup_path*] ou no diretório de backup padrão se o **-UseDefDir** também for especificado. O nome do subdiretório é gerado com base no nome do banco de dados especificado em **-D**. **-CrBkSubDir** oferece um modo fácil de colocar todos os backups de bancos de dados diferentes em subdiretórios separados, sem a necessidade de alterar o parâmetro *backup_path* .  
   
  **-UseDefDir**  
- Para backups de disco, especifica que o arquivo de backup seja criado no diretório padrão de backup. **UseDefDir** substituirá *backup_path* se ambos forem especificados. Com uma instalação padrão do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o diretório padrão de backup é C:\Arquivos de Programas\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup.  
+ Para backups de disco, especifica que o arquivo de backup seja criado no diretório padrão de backup. **UseDefDir** substituirá *backup_path* se ambos forem especificados. Com uma instalação padrão do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o diretório padrão de backup é C:\Arquivos de Programas\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup.  
   
  **TAPE**  
  Especifica que a mídia de backup é fita.  
   
  **-BkUpOnlyIfClean**  
- Especifica que o backup ocorrerá apenas se nenhuma verificação **-Ck** especificada encontrar problemas nos dados. As ações de manutenção são executadas na mesma sequência em que aparecem no prompt de comando. Especifique o parâmetro **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl** ou **-CkCat** antes de **-BkUpDB**/**-BkUpLog** caso também for especificar **-BkUpOnlyIfClean**, ou o backup ocorrerá independentemente de a verificação relatar problemas ou não.  
+ Especifica que o backup ocorrerá apenas se nenhuma verificação **-Ck** especificada encontrar problemas nos dados. As ações de manutenção são executadas na mesma sequência em que aparecem no prompt de comando. Especifique o parâmetro **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**ou **-CkCat** antes de **-BkUpDB**/**-BkUpLog** caso também for especificar **-BkUpOnlyIfClean**, ou o backup ocorrerá independentemente de a verificação relatar problemas ou não.  
   
  **-VrfyBackup**  
  Especifica que o RESTORE VERIFYONLY será executado no backup quando este for concluído.  
@@ -226,50 +231,51 @@ dbname_log_yyyymmddhhmm.BAK
   
  Se apenas o *number* for especificado, a parte de data padrão será **weeks**.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  O utilitário **sqlmaint** executa operações de manutenção em um ou mais bancos de dados. Se **-D** for especificado, as operações especificadas nas demais opções serão executadas apenas no banco de dados especificado. Se **-PlanName** ou **-PlanID** forem especificados, a única informação que **sqlmaint** recuperará do plano de manutenção especificado será a lista de bancos de dados no plano. Todas as operações especificadas nos demais parâmetros do **sqlmaint** são aplicadas a cada banco de dados na lista obtida do plano. O utilitário **sqlmaint** não aplica atividades de manutenção definidas no próprio plano.  
   
  O utilitário **sqlmaint** retorna 0 se for executado com êxito ou 1 se apresentar falha. A falha é informada:  
   
 -   Se alguma ação de manutenção apresentar falha.  
   
--   Se as verificações **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl** ou **-CkCat** encontrarem problemas nos dados.  
+-   Se as verificações **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**ou **-CkCat** encontrarem problemas nos dados.  
   
 -   Se uma falha geral for encontrada.  
   
-## Permissões  
+## <a name="permissions"></a>Permissões  
  O utilitário **sqlmaint** pode ser executado por qualquer usuário do Windows com a permissão **Ler e Executar** no `sqlmaint.exe`que, por padrão, é armazenado na pasta `x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER1\MSSQL\Binn` . Adicionalmente, o logon [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificado com **-ID_logon** deve ter as permissões exigidas pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para executar a ação especificada. Se a conexão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar a autenticação do Windows, o logon do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mapeado para autenticar o usuário do Windows deve ter as permissões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exigidas para realizar a ação especificada.  
   
  Por exemplo, o uso de **-BkUpDB** exige permissão para executar a instrução BACKUP. Além disso, o uso do argumento **-UpdOptiStats** exige permissão para executar a instrução UPDATE STATISTICS. Para obter mais informações, consulte as seções "Permissões" dos tópicos correspondentes nos Manuais Online.  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
   
-### A. Realização de verificações DBCC em um banco de dados  
+### <a name="a-performing-dbcc-checks-on-a-database"></a>A. Realização de verificações DBCC em um banco de dados  
   
 ```  
 sqlmaint -S MyServer -D AdventureWorks2012 -CkDB -CkAl -CkCat -Rpt C:\MyReports\AdvWks_chk.rpt  
 ```  
   
-### B. Atualização de estatísticas usando uma amostra de 15% em todos os bancos de dados em um plano. Também, reduz qualquer banco de dados que tenha alcançado 110 MB para ter só 10% de espaço livre.  
+### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>B. Atualização de estatísticas usando uma amostra de 15% em todos os bancos de dados em um plano. Também, reduz qualquer banco de dados que tenha alcançado 110 MB para ter só 10% de espaço livre.  
   
 ```  
 sqlmaint -S MyServer -PlanName MyUserDBPlan -UpdOptiStats 15 -RmUnusedSpace 110 10  
 ```  
   
-### C. Realização de backup de todos os bancos de dados em um plano nos respectivos subdiretórios individuais no diretório padrão x:\Arquivos de Programas\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Diretório de backup. Exclui também qualquer backup com mais de 2 semanas  
+### <a name="c-backing-up-all-the-databases-in-a-plan-to-their-individual-subdirectories-in-the-default-xprogram-filesmicrosoft-sql-servermssql13mssqlservermssqlbackup-directory-also-delete-any-backups-older-than-2-weeks"></a>C. Realização de backup de todos os bancos de dados em um plano nos respectivos subdiretórios individuais no diretório padrão x:\Arquivos de Programas\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Diretório de backup. Exclui também qualquer backup com mais de 2 semanas  
   
 ```  
 sqlmaint -S MyServer -PlanName MyUserDBPlan -BkUpDB -BkUpMedia DISK -UseDefDir -CrBkSubDir -DelBkUps 2weeks  
 ```  
   
-### D. Realização de backup de um banco de dados no diretório padrão x:\Arquivos de Programas\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Diretório de backup.\  
+### <a name="d-backing-up-a-database-to-the-default-xprogram-filesmicrosoft-sql-servermssql13mssqlservermssqlbackup-directory"></a>D. Realização de backup de um banco de dados no diretório padrão x:\Arquivos de Programas\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Diretório de backup.\  
   
 ```  
 sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../t-sql/statements/update-statistics-transact-sql.md)  
   
   
+

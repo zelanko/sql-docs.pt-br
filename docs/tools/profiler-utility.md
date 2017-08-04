@@ -1,34 +1,39 @@
 ---
-title: "Utilit&#225;rio Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "utilitários de prompt de comando [SQL Server], utilitário profiler90"
-  - "utilitário profiler90"
-  - "Profiler [SQL Server Profiler], iniciando"
-  - "SQL Server Profiler, iniciando"
-  - "iniciando o SQL Server Profiler"
+title: "Utilitário Profiler | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- command prompt utilities [SQL Server], profiler90 utility
+- profiler90 utility
+- Profiler [SQL Server Profiler], starting
+- SQL Server Profiler, starting
+- starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7387a32510b879e995b998b1a3e9d56a7e691a3
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Utilit&#225;rio Profiler
+# <a name="profiler-utility"></a>Utilitário Profiler
   O utilitário **profiler** inicia a ferramenta [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. Os argumentos opcionais listados posteriormente neste tópico permitem controlar como o aplicativo é iniciado.  
   
 > [!NOTE]  
 >  O utilitário **profiler** não foi criado para ser usado para rastreamentos de script. Para saber mais, confira [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -51,27 +56,27 @@ profiler
 ]  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  **/?**  
- Exibe o resumo da sintaxe dos argumentos de **profiler**.  
+ Exibe o resumo da sintaxe dos argumentos de **profiler** .  
   
  **/U** *login_id*  
- ID de logon do usuário para autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. IDs de logon diferenciam maiúsculas de minúsculas.  
+ ID de logon do usuário para autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . IDs de logon diferenciam maiúsculas de minúsculas.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
   
  **/P** *password*  
- Especifica uma senha especificada pelo usuário para a autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Especifica uma senha especificada pelo usuário para a autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **/E**  
  Especifica a conexão com a autenticação do Windows com as credenciais do usuário atual.  
   
  **/S**  *sql_server_name*  
- Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O Profiler vai se conectar automaticamente ao servidor especificado usando as informações de autenticação especificadas nas opções **/U** e **/P** ou na opção **/E**. Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/S** *sql_server_name*\\*instance_name*.  
+ Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O Profiler vai se conectar automaticamente ao servidor especificado usando as informações de autenticação especificadas nas opções **/U** e **/P** ou na opção **/E** . Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/S** *sql_server_name*\\*instance_name*.  
   
  **/A**  *analysis_services_server_name*  
- Especifica uma instância do Analysis Services. O Profiler vai se conectar automaticamente ao servidor especificado usando as informações de autenticação especificadas nas opções **/U** e **/P** ou na opção **/E**. Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/A** *analysis_services_server_name\instance_name*.  
+ Especifica uma instância do Analysis Services. O Profiler vai se conectar automaticamente ao servidor especificado usando as informações de autenticação especificadas nas opções **/U** e **/P** ou na opção **/E** . Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , use **/A** *analysis_services_server_name\instance_name*.  
   
  **/D** *database*  
  Especifica o nome do banco de dados a ser usado com a conexão. Essa opção selecionará o banco de dados padrão para o usuário especificado se nenhum banco de dados for especificado.  
@@ -104,7 +109,7 @@ profiler
 |DD|Dia de dois dígitos|  
 |YY|Ano de dois dígitos|  
 |hh|Hora de dois dígitos em um relógio de 24 horas|  
-|mm|Minuto de dois dígitos|  
+|MM|Minuto de dois dígitos|  
 |ss|Segundo de dois dígitos|  
   
 > [!NOTE]  
@@ -116,14 +121,14 @@ profiler
  **/Z**  *file_size*  
  Especifica o tamanho do arquivo de rastreamento em megabytes (MB). O tamanho padrão é 5 MB. Se a substituição estiver habilitada, todos os arquivos de substituição serão limitados ao valor especificado neste argumento.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Para iniciar um rastreamento com um modelo específico, use as opções **/S** e **/T** juntas. Por exemplo, para iniciar um rastreamento usando o modelo Padrão em MyServer\MyInstance, digite o seguinte no prompt de comando:  
   
 ```  
 profiler /S MyServer\MyInstance /T "Standard"  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "+ (Adi&#231;&#227;o) (SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "+ (adição)"
-  - "operador de adição (+)"
-  - "adicionando expressões"
+title: + (Adicionar) (SSIS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- + (add)
+- add operator (+)
+- adding expressions
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04596cf4762f2473da1555f4ce5f9cd210678986
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# + (Adi&#231;&#227;o) (SSIS)
+# <a name="-add-ssis"></a>+ (Adição) (SSIS)
   Soma duas expressões numéricas.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -31,17 +36,17 @@ numeric_expression1 + numeric_expression2
   
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *numeric_expression1, numeric_ expression2*  
  É qualquer expressão válida de um tipo de dados numérico.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  Determinado por tipos de dados dos dois argumentos. Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Se qualquer operando for nulo, o resultado será nulo.  
   
-## Exemplos de expressões  
+## <a name="expression-examples"></a>Exemplos de expressões  
  Este exemplo soma literais numéricos.  
   
 ```  
@@ -60,8 +65,8 @@ VacationHours + SickLeaveHours
 StandardCost + (StandardCost * @[Profit%])  
 ```  
   
-## Consulte também  
- [Precedência de operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40;Expressão do SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Consulte também  
+ [Precedência do operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40; Expressão SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

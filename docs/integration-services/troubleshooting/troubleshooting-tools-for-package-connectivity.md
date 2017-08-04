@@ -1,39 +1,44 @@
 ---
-title: "Solucionando problemas de ferramentas para conectividade de pacote | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Pacotes do SQL Server Integration Services, solução de problemas"
-  - "Pacotes SSIS, solução de problemas"
-  - "Integration Services, solução de problemas"
-  - "conectividade [Integration Services], solução de problemas"
-  - "erros [Integration Services], solução de problemas"
-  - "pacotes [Integration Services], solução de problemas"
+title: "Ferramentas de solução de problemas de conectividade do pacote | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Integration Services packages, troubleshooting
+- SSIS packages, troubleshooting
+- Integration Services, troubleshooting
+- connectivity [Integration Services], troubleshooting
+- errors [Integration Services], troubleshooting
+- packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3799e224930806445bc1c27f37c05b95a0bbbae
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Solucionando problemas de ferramentas para conectividade de pacote
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui recursos e ferramentas que você pode usar para solucionar problemas de conectividade entre pacotes e fontes de dados das quais os pacotes extraem e carregam dados.  
+# <a name="troubleshooting-tools-for-package-connectivity"></a>Solucionando problemas de ferramentas para conectividade de pacote
+O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contém recursos e ferramentas que você pode usar para solucionar problemas de conectividade entre pacotes e fontes de dados das quais os pacotes extraem e carregam dados.  
   
-## Solucionando problemas com provedores de dados externos  
+## <a name="troubleshooting-issues-with-external-data-providers"></a>Solucionando problemas com provedores de dados externos  
  Muitos pacotes falham durante as interações com os provedores de dados externos. Entretanto, as mensagens que esses provedores retornam ao [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] geralmente não fornecem informações suficientes para iniciar a solução de problemas da interação. Para direcionar a solução de problemas necessária, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui as mensagens de log que podem ser usadas para solucionar problemas de interação do pacote com as fontes de dados externas.  
   
 -   **Habilitar os logs e selecionar o evento Diagnóstico do pacote para ver as mensagens de solução de problemas**. Os seguintes componentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] são capazes de gravar uma mensagem para o log antes e após cada chamada a um provedor de dados externos:  
   
     -   Gerenciador de conexões do OLE DB, origem e destino do OLE DB  
   
-    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] gerenciador de conexões e fonte ADO NET  
+    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]Gerenciador de conexão e a origem do ADO NET  
   
     -   Tarefa Executar SQL  
   
@@ -67,8 +72,8 @@ caps.handback.revision: 13
     ExternalRequest_post: 'IDbConnection.Close finished'. The external request has completed."  
     ```  
   
-## Consulte também  
- [Solucionando problemas de ferramentas para desenvolvimento de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Solucionando problemas de ferramentas para execução de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+## <a name="see-also"></a>Consulte também  
+ [Solucionando problemas de ferramentas para desenvolvimento de pacote](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Ferramentas de solução de problemas para execução do pacote](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

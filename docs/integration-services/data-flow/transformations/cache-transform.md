@@ -1,31 +1,36 @@
 ---
-title: "Transforma&#231;&#227;o Cache | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.cachetrans.f1"
-helpviewer_keywords: 
-  - "transformação Cache"
+title: "Transformação cache | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.cachetrans.f1
+helpviewer_keywords:
+- Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c03d2c178b4632b334078c72ab87a11d645fe7da
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transforma&#231;&#227;o Cache
+# <a name="cache-transform"></a>transformação Cache
   A Transformação Cache gera um conjunto de dados de referência para uma Transformação Pesquisa, gravando dados de uma fonte de dados conectada no fluxo de dados para um gerenciador de conexões de Cache. A transformação Pesquisa executa pesquisas, unindo dados em colunas de entrada de uma fonte de dados conectados com colunas no banco de dados de referência.  
   
  Você pode usar o gerenciador de conexões de Cache quando deseja configurar a Transformação Pesquisa para executar no modo de cache cheio. Nesse modo, o conjunto de dados de referência é carregado no cache antes da execução da Transformação Pesquisa.  
   
- Para obter instruções sobre como configurar a Transformação Pesquisa em modo de cache cheio com o gerenciador de conexões de Cache e a Transformação Cache, consulte [Implementar uma Transformação Pesquisa em modo cache cheio usando o Gerenciador de Conexões do Cache](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - cache connection manager.md).  
+ Para obter instruções sobre como configurar a Transformação Pesquisa em modo de cache cheio com o gerenciador de conexões de Cache e a Transformação Cache, consulte [Implementar uma Transformação Pesquisa em modo cache cheio usando o Gerenciador de Conexões do Cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md).  
   
  Para obter mais informações sobre o cache do conjunto de dados de referência, consulte [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 30
   
  Para obter mais informações, consulte [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) e [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).  
   
-## Configuração da transformação Cache  
+## <a name="configuration-of-the-cache-transform"></a>Configuração da transformação Cache  
  Você pode configurar o gerenciador de conexões de cache para salvar os dados em um arquivo de cache (.caw).  
   
  Você pode configurar a transformação Cache das seguintes formas:  
@@ -54,7 +59,7 @@ caps.handback.revision: 30
   
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)  
   

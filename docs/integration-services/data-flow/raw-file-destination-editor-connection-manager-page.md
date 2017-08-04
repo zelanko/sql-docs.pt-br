@@ -1,24 +1,29 @@
 ---
-title: "Editor de destino Arquivo Bruto (p&#225;gina Gerenciador de Conex&#245;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rawfiledestinationconnectionmanager.f1"
+title: "Editor de destino arquivo bruto (página Gerenciador de Conexão) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rawfiledestinationconnectionmanager.f1
 ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9f27180b2dca144905af1a5346d3d8747aa8248a
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de destino Arquivo Bruto (p&#225;gina Gerenciador de Conex&#245;es)
+# <a name="raw-file-destination-editor-connection-manager-page"></a>Editor de destino Arquivo Bruto (página Gerenciador de Conexões)
   Use o Editor de Destino Arquivo Bruto para configurar o destino Arquivo Bruto para gravar dados brutos em um arquivo.  
   
  **O que você deseja fazer?**  
@@ -60,7 +65,7 @@ caps.handback.revision: 8
  **Alias de Saída**  
  Especifique um nome alternativo a ser usado para a coluna de saída.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Destino do arquivo bruto](../../integration-services/data-flow/raw-file-destination.md)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "Iniciador do Daemon de Filtro de Texto Completo do SQL (guia Servi&#231;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Iniciador do Daemon de filtro de texto completo SQL (guia serviço) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9373c57ebf5b2688b13948a2a8af531f4f633d03
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Iniciador do Daemon de Filtro de Texto Completo do SQL (guia Servi&#231;o)
-  A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], o serviço do Iniciador do Daemon de Filtro de Texto Completo do SQL (Iniciador FDHOST) é usado pelo texto completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este serviço deverá estar em execução se você usar a pesquisa de texto completo. Para obter informações sobre os processos do host do daemon de filtro, consulte "Arquitetura da pesquisa de texto completo" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>Iniciador do Daemon de Filtro de Texto Completo do SQL (guia Serviço)
+  A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], o serviço do Iniciador do Daemon de Filtro de Texto Completo do SQL (Iniciador FDHOST) é usado pelo texto completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este serviço deverá estar em execução se você usar a pesquisa de texto completo. Para obter informações sobre os processos do host do daemon de filtro, consulte "Arquitetura da pesquisa de texto completo" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Use a guia **Serviço** na caixa de diálogo **Propriedades do Iniciador do Daemon de Filtro de Texto Completo do SQL** para exibir ou especificar as opções a seguir.  
+ Use a guia **Serviço**na caixa de diálogo **Propriedades do Iniciador do Daemon de Filtro de Texto Completo do SQL** para exibir ou especificar as opções a seguir.  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Caminho Binário**  
  Lista o local dos arquivos de programas usados por este serviço.  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 8
  Quando ocorre um erro, o número do erro é exibido nesta caixa. Use esse número para solucionar problemas de falhas procurando-o na Base de Dados de Conhecimento [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou forneça o número à sua equipe de suporte técnico.  
   
  **Host Name**  
- Exibe o nome do computador ou cluster que está executando o serviço [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Exibe o nome do computador ou cluster que está executando o serviço [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Nome**  
  Indica o nome para exibição do serviço.  

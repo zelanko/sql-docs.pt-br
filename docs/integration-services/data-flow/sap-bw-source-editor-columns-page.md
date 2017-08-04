@@ -1,24 +1,29 @@
 ---
-title: "Editor de Origem de SAP BW (p&#225;gina Colunas) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwsource.columns.f1"
+title: "Editor de origem do SAP BW (página colunas) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwsource.columns.f1
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2047fddb6986bd3014015d742053bfb0dda42019
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de Origem de SAP BW (p&#225;gina Colunas)
+# <a name="sap-bw-source-editor-columns-page"></a>Editor de Origem de SAP BW (página Colunas)
   Use a página **Colunas** do **Editor de Origem SAP BW** para mapear uma coluna de saída em cada coluna externa (origem).  
   
  Para saber mais sobre o componente de origem do SAP BW do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 para SAP BW, consulte [Origem SAP BW](../../integration-services/data-flow/sap-bw-source.md).  
@@ -33,11 +38,11 @@ caps.handback.revision: 10
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém a origem SAP BW.  
   
-2.  Na guia **Fluxo de Dados**, clique duas vezes na fonte SAP BW.  
+2.  Na guia **Fluxo de Dados** , clique duas vezes na fonte SAP BW.  
   
 3.  No **Editor de Origem SAP BW**, clique em **Colunas** para abrir a página **Colunas** do editor.  
   
-## Opções  
+## <a name="options"></a>Opções  
   
 > [!NOTE]  
 >  Se você não souber todos os valores necessários para configurar a origem, talvez precise perguntar ao administrador do SAP.  
@@ -53,12 +58,12 @@ caps.handback.revision: 10
  Para alterar a ordem das colunas, na lista **Colunas Externas Disponíveis** , desmarque as caixas de seleção para todas as colunas. Em seguida, selecione as colunas na ordem que você quer que elas apareçam.  
   
  **Coluna de Saída**  
- Forneça um nome exclusivo para cada coluna de saída. O padrão é o nome da coluna externa (origem) selecionada. No entanto, você pode inserir qualquer nome descritivo exclusivo. [!INCLUDE[ssIS](../../includes/ssis-md.md)] exibirá os nomes de **Coluna de Saída** para as colunas ao configurar os componentes downstream que consomem os dados dessa fonte.  
+ Forneça um nome exclusivo para cada coluna de saída. O padrão é o nome da coluna externa (origem) selecionada. No entanto, você pode inserir qualquer nome descritivo exclusivo. [!INCLUDE[ssIS](../../includes/ssis-md.md)]Exibirá o **coluna de saída** nomes para as colunas ao configurar os componentes downstream que consomem os dados dessa fonte.  
   
-## Consulte também  
- [Editor de Origem SAP BW &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [Editor de Origem SAP BW &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [Editor de Origem SAP BW &#40;Página Avançado&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+## <a name="see-also"></a>Consulte também  
+ [Editor de origem do SAP BW &#40; Página Gerenciador de Conexão &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
+ [Editor de origem do SAP BW &#40; Página de saída de erro &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [Editor de origem do SAP BW &#40; Página Avançado &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Ajuda F1 do Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

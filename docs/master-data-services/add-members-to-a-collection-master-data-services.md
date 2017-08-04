@@ -1,27 +1,32 @@
 ---
-title: "Adicionar membros a uma cole&#231;&#227;o (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "coleções [Master Data Services], adicionando membros"
+title: "Adicionar membros a uma coleção (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Master Data Services], adding members
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56799f639b1ea5833926ee8965c60ba936c90f98
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Adicionar membros a uma cole&#231;&#227;o (Master Data Services)
+# <a name="add-members-to-a-collection-master-data-services"></a>Adicionar membros a uma coleção (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode adicionar membros folha e consolidados a uma coleção.  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** .  
@@ -30,7 +35,7 @@ caps.handback.revision: 7
   
 -   Uma coleção deve existir. Para obter mais informações, consulte [Criar uma coleção &#40;Master Data Services&#41;](../master-data-services/create-a-collection-master-data-services.md).  
   
-### Para adicionar membros a uma coleção  
+### <a name="to-add-members-to-a-collection"></a>Para adicionar membros a uma coleção  
   
 1.  Na home page do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 7
   
 11. Opcionalmente, defina valores de peso clicando no valor na coluna **Peso** .  
   
-## Consulte também  
- [Coleções &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+## <a name="see-also"></a>Consulte também  
+ [Coleções de &#40; Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
   
   

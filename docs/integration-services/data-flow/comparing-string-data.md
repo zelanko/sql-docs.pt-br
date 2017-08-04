@@ -1,31 +1,36 @@
 ---
-title: "Comparando dados de cadeia de caracteres | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "comparando dados de cadeia de caracteres"
-  - "opções de comparação [Integration Services]"
-  - "localidades [Integration Services]"
-  - "convertendo dados de cadeia de caracteres"
-  - "comparações de cadeia de caracteres"
+title: Comparando dados de cadeia de caracteres | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- comparing string data
+- comparison options [Integration Services]
+- locales [Integration Services]
+- converting string data
+- string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee8d749695838be53ebbb0b9de11baf722ace7e2
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Comparando dados de cadeia de caracteres
+# <a name="comparing-string-data"></a>comparando dados de cadeia de caracteres
   Comparações de cadeia de caracteres são uma parte importante de muitas das transformações realizadas pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e as comparações de cadeia de caracteres também são usadas na avaliação de expressões em variáveis e expressões de propriedade. Por exemplo, a transformação de Classificação compara valores em um conjunto de dados para classificar dados em ordem crescente ou decrescente.  
   
-## Configurando transformações para comparações de cadeias de caracteres  
+## <a name="configuring-transformations-for-string-comparisons"></a>Configurando transformações para comparações de cadeias de caracteres  
  As transformações Classificação, Agregação, Agrupamento Difuso e Pesquisa Difusa podem ser personalizadas para alterar a maneira que as cadeias de caracteres são comparadas no nível da coluna. Por exemplo, é possível especificar que uma comparação ignore caixas altas e baixas, o que significa que os caracteres maiúsculos e minúsculos são tratados da mesma forma.  
   
  As seguintes transformações usam expressões que podem incluir comparações de cadeias de caracteres.  
@@ -36,7 +41,7 @@ caps.handback.revision: 39
   
  Variáveis, mapeamentos de variáveis e restrições de precedência também usam expressões que podem incluir comparações de cadeias de caracteres. Para obter mais informações sobre expressões, consulte [Integration Services &#40;SSIS&#41; Expressões](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
-## Processando durante a comparação de cadeias de caracteres  
+## <a name="processing-during-string-comparison"></a>Processando durante a comparação de cadeias de caracteres  
  Dependendo dos dados e da configuração da transformação, o seguinte processamento pode ocorrer durante a comparação dos dados da cadeia de caracteres:  
   
 -   Convertendo dados em Unicode. Se os dados de origem ainda não forem Unicode, eles serão convertidos automaticamente para Unicode antes da comparação ocorrer.  
@@ -45,7 +50,7 @@ caps.handback.revision: 39
   
 -   Aplicando opções de comparação no nível de coluna para alterar a sensibilidade das comparações.  
   
-## Convertendo os dados da cadeia de caracteres para Unicode  
+## <a name="converting-string-data-to-unicode"></a>Convertendo os dados da cadeia de caracteres para Unicode  
  Dependendo das operações que a transformação realiza e a configuração da transformação, os dados da cadeia de caracteres podem ser convertidos no tipo de dados DT_WSTR, que é uma representação Unicode dos caracteres da cadeia de caracteres.  
   
  Os dados de cadeias de caracteres que têm o tipo DT_STR são convertidos em Unicode por meio do uso da página de código da coluna. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dá suporte a páginas de código no nível de coluna, e cada coluna pode ser convertida por meio de uma página de código diferente.  
@@ -56,12 +61,12 @@ caps.handback.revision: 39
   
  Os arquivos não têm páginas de código. Ao invés disso, os gerenciadores de conexões de Arquivo Simples e de Vários Arquivos Simples usados por um pacote para conectar aos dados de arquivo incluem uma propriedade para especificar a página de código do arquivo. A página de código pode ser definida apenas no nível de arquivo, não no nível da coluna.  
   
-## Configuração de localidade  
+## <a name="setting-locale"></a>Configuração de localidade  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não usa a página de código para inscrever regras específicas de localidades para classificar dados ou interpretar data, hora e dados decimais. Em vez disso, a transformação lê a localidade definida pela propriedade LocaleId no componente de fluxo de dados, tarefa de Fluxo de Dados, contêiner ou pacote. Por padrão, a localidade de uma transformação é herdada de sua tarefa de Fluxo de Dados, que, por sua vez, herda do pacote. Se a tarefa de Fluxo de Dados estiver em um contêiner como o Loop For, ela herdará sua localidade do contêiner.  
   
  Também é possível especificar uma localidade para o gerenciamento de conexões de Arquivo Simples e um gerenciador de conexões de Vários Arquivos Simples.  
   
-## Definindo opções de comparação  
+## <a name="setting-comparison-options"></a>Definindo opções de comparação  
  A localidade fornece as regras básicas para comparar dados de cadeia de caracteres. Por exemplo, a localidade especifica a posição de classificação de cada letra no alfabeto. No entanto, essas regras podem não ser suficientes para as comparações que algumas transformações realizam e o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oferece suporte a um conjunto de opções de comparação avançadas que vão além das regras de comparação de uma localidade. Estas opções de comparação são definidas no nível da coluna. Por exemplo, um das opções de comparação permite que você ignore caracteres de não espaçamento. O efeito dessa opção é ignorar diacríticos como o acento, que torna "a" e "á" idênticos para fins de comparação.  
   
  A seguinte tabela descreve as opções de comparação e um estilo de classificação.  
@@ -79,9 +84,9 @@ caps.handback.revision: 39
   
  O sinalizador de comparação **FullySensitive** é exibido na caixa de diálogo **Editor Avançado** para as transformações Agrupamento Difuso e Pesquisa Difusa. Selecionar o sinalizador de comparação **FullySensitive** significa que todas as opções de comparação se aplicam.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tipos de dados do Integration Services](../../integration-services/data-flow/integration-services-data-types.md)   
- [Análise rápida](../Topic/Fast%20Parse.md)   
- [Análise padrão](../Topic/Standard%20Parse.md)  
+ [Análise rápida](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
+ [Análise padrão](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
   
   

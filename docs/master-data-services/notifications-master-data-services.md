@@ -1,33 +1,38 @@
 ---
-title: "Notifica&#231;&#245;es (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "notificações [Master Data Services]"
-  - "notificações [Master Data Services], sobre notificações"
-  - "email [Master Data Services]"
-  - "email [Master Data Services], sobre notificações por email"
+title: "Notificações (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- notifications [Master Data Services]
+- notifications [Master Data Services], about notifications
+- e-mail [Master Data Services]
+- e-mail [Master Data Services], about e-mail notifications
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 caps.latest.revision: 15
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c6aaf32300709193fc98cafc6563ad76aa45d5f0
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Notifica&#231;&#245;es (Master Data Services)
+# <a name="notifications-master-data-services"></a>Notificações (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] pode ser configurado para enviar uma notificação por email quando há falha na validação da regra de negócio ou quando o status de uma versão do modelo é alterado ou o status de um conjunto de alterações muda.  
   
-## Como as notificações são enviadas  
- As notificações são configuradas no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. As notificações enviam mensagens de email por meio do Database Mail na instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] que hospeda o banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Para obter mais informações sobre o Database Mail, consulte [Objetos de configuração do Database Mail](../relational-databases/database-mail/database-mail-configuration-objects.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+## <a name="how-notifications-are-sent"></a>Como as notificações são enviadas  
+ As notificações são configuradas no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. As notificações enviam mensagens de email por meio do Database Mail na instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] que hospeda o banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Para obter mais informações sobre o Database Mail, consulte [Objetos de configuração do Database Mail](../relational-databases/database-mail/database-mail-configuration-objects.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-## Quando as notificações são enviadas  
+## <a name="when-notifications-are-sent"></a>Quando as notificações são enviadas  
  Depois que as notificações são configuradas, notificações por email automatizadas podem ser enviadas nas instâncias a seguir.  
   
 |Instância|Description|  
@@ -36,17 +41,17 @@ caps.handback.revision: 15
 |O status da versão do modelo é alterado|Cada vez que o status de uma versão de modelo muda, os usuários que são administradores de modelo recebem notificações automaticamente. A notificação contém as informações a seguir.<br /><br /> Modelo<br /><br /> Versão<br /><br /> status atual e anterior da versão<br /><br /> Hora da emissão da notificação<br /><br /> Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).|  
 |Alterações de status do conjunto de alterações|Cada vez que o status de um conjunto de alterações muda para uma entidade que exige aprovação, os administradores da entidade e/ou proprietários do conjunto de alteração recebe notificações automaticamente. A notificação contém as informações a seguir.<br /><br /> Modelo<br /><br /> Versão<br /><br /> Nome do conjunto de alterações<br /><br /> Status Anterior<br /><br /> Novo status<br /><br /> Link para aplicar o conjunto de alterações para exibir e modificar as alterações pendentes.<br /><br /> Para obter mais informações, consulte [Conjuntos de alterações &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)|  
   
-## Configurações do sistema  
+## <a name="system-settings"></a>Configurações do sistema  
  Existem configurações no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] que afetam as notificações. Essas configurações podem ser ajustadas no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou diretamente na tabela de Configurações do Sistema do banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Configurar o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para enviar notificações por email.|[Configurar notificações por email &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)|  
 |Configurar o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para enviar notificações quando os valores dos atributos são alterados.|[Configurar regras de negócio para enviar notificações &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
   
 -   [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   

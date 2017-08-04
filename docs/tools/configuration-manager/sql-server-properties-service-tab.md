@@ -1,25 +1,30 @@
 ---
-title: "Propriedades do SQL Server (guia Servi&#231;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Propriedades do SQL Server (guia serviço) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17df1facd3c4c3f9035017c0156e6e3aed910d33
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriedades do SQL Server (guia Servi&#231;o)
-  Use a guia **Serviço** na caixa de diálogo **Propriedades de MSSQLSERVER** para exibir ou especificar as opções a seguir.  
+# <a name="sql-server-properties-service-tab"></a>Propriedades do SQL Server (guia Serviço)
+  Use a guia **Serviço**na caixa de diálogo **Propriedades de MSSQLSERVER** para exibir ou especificar as opções a seguir.  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Caminho Binário**  
  Lista o local dos arquivos de programas usados por este serviço.  
   
@@ -30,7 +35,7 @@ caps.handback.revision: 22
  Quando ocorre um erro, o número do erro é exibido nesta caixa. Use esse número para solucionar problemas de falhas procurando-o na Base de Dados de Conhecimento [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou forneça o número à sua equipe de suporte técnico.  
   
  **Host Name**  
- Exibe o nome do computador ou cluster que está executando o serviço [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Exibe o nome do computador ou cluster que está executando o serviço [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Nome**  
  Indica o nome para exibição do serviço.  

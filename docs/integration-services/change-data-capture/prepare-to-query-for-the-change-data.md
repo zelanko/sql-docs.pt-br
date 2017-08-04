@@ -1,30 +1,35 @@
 ---
-title: "Preparar para consultar os dados de altera&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "carga incremental [Integration Services], preparando consulta"
+title: "Preparar para consultar os dados de alteração | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b15733feeca10976315834b2dfc897cc8a9d1216
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Preparar para consultar os dados de altera&#231;&#227;o
+# <a name="prepare-to-query-for-the-change-data"></a>Preparar para consultar os dados de alteração
   No fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza uma carga incremental de dados de alteração, a terceira e última tarefa servem para consultar as alterações dos dados e adicionar uma tarefa de fluxo de dados.  
   
 > [!NOTE]  
 >  A segunda tarefa para o fluxo de controle garante que os dados de alteração para o intervalo selecionado estarão prontos. Para obter mais informações sobre essa tarefa, consulte [Determinar se os dados de alteração estão prontos](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md). Para obter uma descrição do processo geral de criação do fluxo de controle, consulte [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
-## Considerações de criação  
+## <a name="design-considerations"></a>Considerações de criação  
  Para recuperar os dados de alteração, você chamará uma função com valor de tabela de Transact-SQL que aceita os pontos de extremidade do intervalo como parâmetros de entrada e retorna dados de alteração para o intervalo especificado. Um componente de origem no fluxo de dados chama esta função. Para obter informações sobre esse componente de origem, consulte [Recuperar e compreender os dados de alteração](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md).  
   
  Os componentes de fonte do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usados com mais frequência, incluindo a fonte OLE DB, a fonte ADO e a fonte ADO NET, não podem derivar informações de parâmetros para uma função com valor de tabela. Entretanto, a maioria das fontes não pode chamar uma função parametrizada diretamente.  
@@ -40,31 +45,31 @@ caps.handback.revision: 26
   
  Este tópico usa a primeira opção de design e monta uma consulta parametrizada como uma cadeia de caracteres.  
   
-## Preparando a Consulta  
+## <a name="preparing-the-query"></a>Preparando a Consulta  
  Antes de concatenar os valores dos parâmetros de entrada em uma cadeia de caracteres simples, é preciso configurar as variáveis do pacote que a consulta precisa.  
   
-#### Para definir as variáveis do pacote  
+#### <a name="to-set-up-package-variables"></a>Para definir as variáveis do pacote  
   
--   No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], na janela **Variáveis**, crie uma variável com um tipo de dados String para manter a cadeia de caracteres de consulta que retorna da tarefa Executar SQL.  
+-   No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], na janela **Variáveis** , crie uma variável com um tipo de dados String para manter a cadeia de caracteres de consulta que retorna da tarefa Executar SQL.  
   
      Este exemplo usa o nome da variável, SqlDataQuery.  
   
  Com a variável de pacote criada, você pode usar tanto uma tarefa Script quanto uma tarefa Executar SQL para concatenar os valores dos parâmetros de entrada. Os dois procedimentos a seguir descrevem como configurar esses componentes.  
   
-#### Usar uma tarefa Script para concatenar a cadeia de caracteres de consulta  
+#### <a name="to-use-a-script-task-to-concatenate-the-query-string"></a>Usar uma tarefa Script para concatenar a cadeia de caracteres de consulta  
   
-1.  Na guia **Fluxo de Controle**, adicione uma tarefa Script ao pacote após o contêiner Loop For e conecte o contêiner Loop For à tarefa.  
+1.  Na guia **Fluxo de Controle** , adicione uma tarefa Script ao pacote após o contêiner Loop For e conecte o contêiner Loop For à tarefa.  
   
     > [!NOTE]  
     >  Este procedimento assume que o pacote executa uma carga incremental a partir de uma tabela simples. Caso o pacote faça os carregamentos a partir de várias tabelas e tenha um pacote pai com vários pacotes filhos, a tarefa será adicionada como o primeiro componente para cada pacote filho. Para obter mais informações, consulte [Executar uma carga incremental de várias tabelas](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md).  
   
-2.  No **Editor da Tarefa Script**, na página **Script**, selecione as seguintes opções:  
+2.  No **Editor da Tarefa Script**, na página **Script** , selecione as seguintes opções:  
   
-    1.  Para **ReadOnlyVariables**, selecione **User::DataReady**, **User::ExtractStartTime** e **User::ExtractEndTime**.  
+    1.  Para **ReadOnlyVariables**, selecione **User::DataReady**, **User::ExtractStartTime**e **User::ExtractEndTime** .  
   
     2.  Para **ReadWriteVariables**, selecione User::SqlDataQuery na lista.  
   
-3.  No **Editor da Tarefa Script**, na página **Script**, clique em **Editar Script** para abrir o ambiente de desenvolvimento de script.  
+3.  No **Editor da Tarefa Script**, na página **Script** , clique em **Editar Script** para abrir o ambiente de desenvolvimento de script.  
   
 4.  No procedimento Principal, digite um dos seguintes segmentos de código:  
   
@@ -127,14 +132,14 @@ caps.handback.revision: 26
   
 6.  Feche o ambiente de desenvolvimento de script e o **Editor da Tarefa Script**.  
   
-#### Usar uma tarefa Executar SQL para concatenar a cadeia de caracteres de consulta  
+#### <a name="to-use-an-execute-sql-task-to-concatenate-the-query-string"></a>Usar uma tarefa Executar SQL para concatenar a cadeia de caracteres de consulta  
   
-1.  Na guia **Fluxo de Controle**, adicione uma tarefa Executar SQL ao pacote após o contêiner Loop For e conecte o contêiner Loop For à essa tarefa.  
+1.  Na guia **Fluxo de Controle** , adicione uma tarefa Executar SQL ao pacote após o contêiner Loop For e conecte o contêiner Loop For à essa tarefa.  
   
     > [!NOTE]  
     >  Este procedimento assume que o pacote executa uma carga incremental a partir de uma tabela simples. Caso o pacote faça os carregamentos a partir de várias tabelas e tenha um pacote pai com vários pacotes filhos, a tarefa será adicionada como o primeiro componente para cada pacote filho. Para obter mais informações, consulte [Executar uma carga incremental de várias tabelas](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md).  
   
-2.  No **Editor da Tarefa Executar SQL**, na página **Geral**, selecione as seguintes opções:  
+2.  No **Editor da Tarefa Executar SQL**, na página **Geral** , selecione as seguintes opções:  
   
     1.  Para **Conjunto de Resultados**, selecione **Linha simples**.  
   
@@ -187,14 +192,14 @@ caps.handback.revision: 26
   
  `select * from CDCSample. uf_Customer('2007-06-11 14:21:58', '2007-06-12 14:21:58')`  
   
-## Adicionando uma tarefa de fluxo de dados  
+## <a name="adding-a-data-flow-task"></a>Adicionando uma tarefa de fluxo de dados  
  A última etapa que projeta o fluxo de controle para o pacote é adicionar uma tarefa de fluxo de dados.  
   
-#### Adicionar uma tarefa de fluxo de dados e completar o fluxo de controle  
+#### <a name="to-add-a-data-flow-task-and-complete-the-control-flow"></a>Adicionar uma tarefa de fluxo de dados e completar o fluxo de controle  
   
--   Na guia **Fluxo de Controle**, adicione uma tarefa de fluxo de dados e conecte a tarefa que concatenou a cadeia de caracteres de consulta.  
+-   Na guia **Fluxo de Controle** , adicione uma tarefa de fluxo de dados e conecte a tarefa que concatenou a cadeia de caracteres de consulta.  
   
-## Próxima etapa  
+## <a name="next-step"></a>Próxima etapa  
  Depois de preparar a cadeia de caracteres de consulta e configurar a tarefa de fluxo de dados, a próxima etapa é criar a função com valor de tabela que irá recuperar os dados de alteração do banco de dados.  
   
  **Próximo tópico:** [Criar a função para recuperar os dados de alteração](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  

@@ -1,26 +1,31 @@
 ---
-title: "Data Profiling Task Editor (Profile Requests Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataprofilingtask.profilerequests.f1"
-helpviewer_keywords: 
-  - "Editor da tarefa Criação de Perfil de Dados"
+title: "Editor da tarefa (página de solicitações de perfil) de criação de perfil de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.profilerequests.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ac9d7e62bfad28176582537c59e733f51223a4f0
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Data Profiling Task Editor (Profile Requests Page)
+# <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   Use a página **Solicitações de Perfil** do **Editor da Tarefa Criação de Perfil de Dados** para selecionar e configurar os perfis que deseja computar. Em uma tarefa Criação de Perfil de Dados simples, você pode calcular várias perfis para várias colunas ou combinações de colunas em várias tabelas ou exibições.  
   
  Para obter mais informações sobre como usar a Tarefa Criação de Perfil de Dados, consulte [Configuração da Tarefa Criação de Perfil de Dados](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Para obter mais informações sobre como usar o Visualizador de Perfil de Dados para analisar a saída da Tarefa Criação de Perfil de Dados, consulte [Visualizador de Perfil de Dados](../../integration-services/control-flow/data-profile-viewer.md).  
@@ -29,14 +34,14 @@ caps.handback.revision: 26
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém a tarefa Criação de Perfil de Dados.  
   
-2.  Na guia **Fluxo de Controle**, clique duas vezes na tarefa Criação de Perfil de Dados.  
+2.  Na guia **Fluxo de Controle** , clique duas vezes na tarefa Criação de Perfil de Dados.  
   
 3.  No **Editor da Tarefa Criação de Perfil de Dados**, clique em **Solicitações de Perfil**.  
   
-## Usando o painel de solicitações  
+## <a name="using-the-requests-pane"></a>Usando o painel de solicitações  
  O painel de solicitações é o painel exibido no topo da página. Esse painel lista todos os perfis configurados para a tarefa Criação de Perfil Dados atual. Se nenhum perfil foi configurado, o painel de solicitações ficará vazio. Para adicionar um novo perfil, clique em uma área vazia embaixo da coluna **Tipo de Perfil** e selecione o tipo de perfil da lista. Para configurar um perfil, selecione o perfil no painel de solicitações e depois defina as propriedades do perfil no painel **Propriedades da Solicitação** .  
   
-### Opções do painel de solicitações  
+### <a name="requests-pane-options"></a>Opções do painel de solicitações  
  O painel de solicitações tem as seguintes opções:  
   
  **Exibição**  
@@ -44,14 +49,14 @@ caps.handback.revision: 26
   
  As colunas no painel de solicitações foram alteradas com base na **Exibição** selecionada. Para obter mais informações sobre cada uma dessas colunas, consulte a próxima seção, "Colunas do painel de solicitações".  
   
-### Colunas do painel de solicitações  
+### <a name="requests-pane-columns"></a>Colunas do painel de solicitações  
  As colunas exibidas pelo painel de solicitações dependem da **Exibição** selecionada:  
   
 -   Se **Todas as Solicitações**for selecionado, o painel de solicitações terá duas colunas: **Tipo de Perfil** e **ID da Solicitação**.  
   
 -   Se desejar exibir um dos cinco perfis de coluna, o painel de solicitações terá quatro colunas: **Tipo de Perfil**, **Tabela ou Exibição**, **Coluna**e **ID da Solicitação**.  
   
--   Se optar por exibir um perfil Chave Candidata, o painel de solicitações terá quatro colunas: **Tipo de Perfil**, **Tabela ou Exibição**, **Colunas de Chave** e **ID da Solicitação**.  
+-   Se optar por exibir um perfil Chave Candidata, o painel de solicitações terá quatro colunas: **Tipo de Perfil**, **Tabela ou Exibição**, **Colunas de Chave**e **ID da Solicitação**.  
   
 -   Se desejar exibir um perfil Dependência Funcional, o painel de solicitações terá cinco colunas: **Tipo de Perfil**, **Tabela ou Exibição**, **Colunas Determinantes**, **Coluna Dependente**e **ID da Solicitação**.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 26
   
  As seções a seguir descrevem cada dessas colunas.  
   
-#### Colunas comuns a todas as exibições  
+#### <a name="columns-common-to-all-views"></a>Colunas comuns a todas as exibições  
  **Tipo de Perfil**  
  Selecione um perfil de dados das opções seguintes:  
   
@@ -77,76 +82,76 @@ caps.handback.revision: 26
  **RequestID**  
  Exibe o identificador da solicitação. Normalmente, não é necessário alterar o valor gerado automaticamente.  
   
-#### Colunas comuns a todos os perfis individuais  
+#### <a name="columns-common-to-all-individual-profiles"></a>Colunas comuns a todos os perfis individuais  
  **Gerenciador de Conexões**  
  Exibe o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] que se conecta ao banco de dados de origem.  
   
- **Request ID**  
+ **ID da Solicitação**  
  Exibe um identificador da solicitação. Normalmente, não é necessário alterar o valor gerado automaticamente.  
   
-#### Colunas comuns aos cinco perfis de colunas individuais  
+#### <a name="columns-common-to-the-five-individual-column-profiles"></a>Colunas comuns aos cinco perfis de colunas individuais  
  **Tabela ou Exibição**  
  Exibe a tabela ou exibição que contêm a coluna selecionada.  
   
  **Coluna**  
  Exibe a coluna selecionada para a criação de perfil.  
   
-#### Colunas específicas ao perfil Chave de Candidato  
+#### <a name="columns-specific-to-the-candidate-key-profile"></a>Colunas específicas ao perfil Chave de Candidato  
  **Tabela ou Exibição**  
  Exibe a tabela ou exibição que contêm as colunas selecionadas.  
   
  **Colunas de Chave**  
  Exibe as colunas selecionadas para a criação de perfil.  
   
-#### Colunas específicas ao perfil Dependência Funcional  
+#### <a name="columns-specific-to-the-functional-dependency-profile"></a>Colunas específicas ao perfil Dependência Funcional  
  **Tabela ou Exibição**  
  Exibe a tabela ou exibição que contêm as colunas selecionadas.  
   
  **Colunas Determinantes**  
  Exibe as colunas selecionadas para a criação de perfil como coluna ou colunas determinantes. No exemplo no qual o código postal dos Estados Unidos determina o estado nos Estados Unidos, a coluna determinante seria a coluna Código Postal.  
   
- **Coluna dependente**  
+ **Dependent column**  
  Exibe as colunas selecionadas para a criação de perfil como coluna dependente. No exemplo no qual o código postal dos Estados Unidos determina o estado nos Estados Unidos, a coluna dependente seria a coluna com os estados.  
   
-#### Colunas específicas ao perfil Inclusão de Valor  
- **Tabela Lateral do Subconjunto ou Exibição**  
+#### <a name="columns-specific-to-the-value-inclusion-profile"></a>Colunas específicas ao perfil Inclusão de Valor  
+ **Tabela Lateral de Subconjunto ou Exibição**  
  Exibe a tabela ou exibição que contêm a coluna ou colunas selecionadas como colunas laterais de subconjunto.  
   
  **Tabela Lateral de Superconjunto ou Exibição**  
  Exibe a tabela ou exibição que contêm a coluna ou colunas selecionadas como colunas laterais de superconjunto.  
   
- **Colunas Laterais do Subconjunto**  
+ **Colunas Laterais de Subconjunto**  
  Exibe a coluna ou colunas selecionadas para a criação de perfil como colunas laterais de subconjunto. No exemplo no qual você deseja verificar se os valores em uma coluna com estados dos Estados Unidos estão em uma tabela de referência com códigos de estados dos Estados Unidos de dois caracteres, a coluna de subconjunto é a coluna com os estados na tabela de origem.  
   
  **Colunas Laterais de Superconjunto**  
  Exibe a coluna ou colunas selecionadas para a criação de perfil como colunas laterais de superconjunto. No exemplo no qual você deseja verificar se os valores em uma coluna com estados dos Estados Unidos estão em uma tabela de referência com códigos de estados dos Estados Unidos de dois caracteres, a coluna de superconjunto é a coluna com os códigos dos estados na tabela de referência.  
   
-## Usando o painel Propriedades de Solicitação  
+## <a name="using-the-request-properties-pane"></a>Usando o painel Propriedades de Solicitação  
  O painel **Propriedades de Solicitação** é exibido debaixo do painel de solicitações. Esse painel exibe as opções para o perfil selecionado no painel de solicitações.  
   
 > [!NOTE]  
->  Após selecionar um **Tipo de Perfil**, é necessário selecionar o campo **ID da Solicitação** para exibir as propriedades da solicitação de perfil no painel **Propriedades de Solicitação**.  
+>  Após selecionar um **Tipo de Perfil**, é necessário selecionar o campo **ID da Solicitação** para exibir as propriedades da solicitação de perfil no painel **Propriedades de Solicitação** .  
   
  Essas opções variam com base no perfil selecionado. Para obter mais informações sobre as opções para tipos de perfil individual, consulte os seguintes tópicos:  
   
--   [Opções da solicitação de perfil Chave de Candidato &#40;tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação do perfil chave de candidato &#40; dados de criação de perfil de tarefa &#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Opções da solicitação do perfil Razão Nula de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação de perfil de razão nula de coluna &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Opções da solicitação do perfil Estatísticas de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação de perfil de estatísticas de coluna &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação do perfil Distribuição de Valor de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação de perfil de distribuição do coluna valor &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opções da solicitação de perfil Distribuição de Tamanho de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Comprimento de coluna distribuição opções de solicitação de perfil &#40; dados de criação de perfil de tarefa &#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opções da solicitação do perfil Padrão de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação de perfil de padrão de coluna &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Opções da solicitação do perfil Dependência Funcional &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Funcional opções de solicitação de perfil de dependência &#40; dados de criação de perfil de tarefa &#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Opções da solicitação do perfil Inclusão de Valor &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação de perfil de inclusão de valor &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## Consulte também  
- [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>Consulte também  
+ [Editor da tarefa &#40; de criação de perfil de dados Página geral &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulário de perfil rápido de tabela única &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

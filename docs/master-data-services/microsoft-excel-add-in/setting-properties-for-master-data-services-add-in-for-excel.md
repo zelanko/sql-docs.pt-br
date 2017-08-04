@@ -1,33 +1,38 @@
 ---
-title: "Definindo propriedades para o Suplemento do Master Data Services para Excel | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Definir propriedades para o suplemento do Master Data Services para Excel | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14b4715ce4acdc48f6425d2343cb45cd8311d982
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Definindo propriedades para o Suplemento do Master Data Services para Excel
+# <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Definindo propriedades para o Suplemento do Master Data Services para Excel
   As configurações do suplemento Master Data Services para Excel determinam como os dados são carregados do MDS para o suplemento do Excel e como os dados são publicados do suplemento do Excel para o MDS.  
   
  Para criar configurações para o suplemento do Excel, abra o **Excel**, clique no menu **Dados Mestres** e clique em **Configurações**. Qualquer um com acesso ao Excel pode alterar essas configurações. As configurações se aplicam ao computador em que o Excel está aberto.  
   
-## Configurações de suplemento do Excel  
+## <a name="excel-add-in-settings"></a>Configurações de suplemento do Excel  
   
 ||||  
 |-|-|-|  
 |Guia e seção|Configuração|Description|  
-|Configurações: publicação|Mostrar a caixa de diálogo **Publicar e Anotar** ao publicar|Selecione para exibir a caixa de diálogo **Publicar e Anotar** depois de clicar em **Publicar**, permitindo a inserção de uma única anotação para todas as alterações ou a inserção de uma anotação para cada alteração.<br /><br /> Desmarque para especificar que o processo Publicar seja iniciado sem a exibição da caixa de diálogo **Publicar e Anotar**. Você não terá a oportunidade de inserir uma anotação.|  
+|Configurações: publicação|Mostrar a caixa de diálogo **Publicar e Anotar** ao publicar|Selecione para exibir a caixa de diálogo **Publicar e Anotar** depois de clicar em **Publicar**, permitindo a inserção de uma única anotação para todas as alterações ou a inserção de uma anotação para cada alteração.<br /><br /> Desmarque para especificar que o processo Publicar seja iniciado sem a exibição da caixa de diálogo **Publicar e Anotar** . Você não terá a oportunidade de inserir uma anotação.|  
 |Configurações: versão|Seleção de versão|Selecione a versão dos dados mestres que será carregada no suplemento do Excel. Pode ser:<br /><br /> **Nenhuma** para que a versão não use como padrão nenhuma versão<br /><br /> **Mais antiga** para usar como padrão a versão mais antiga **Mais Nova** para usar como padrão a versão mais recente.|  
 |Configurações: log|Ativar o log detalhado|Habilite o registro em log para o processo de carregar dados mestres do MDS para o Suplemento do Excel, para que o resultado de cada comando no serviço seja registrado em log.|  
 |Configurações: telemetria|Ativar coleta de dados de telemetria|Habilite a telemetria para ajudar a melhorar a qualidade, a confiabilidade e o desempenho do Suplemento [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] do Excel.|  

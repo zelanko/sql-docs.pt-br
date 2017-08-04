@@ -1,29 +1,34 @@
 ---
-title: "Criar uma entidade (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "entidades [Master Data Services], criando"
-  - "criando entidades [Master Data Services]"
+title: Criar uma entidade (Master Data Services) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- entities [Master Data Services], creating
+- creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2766ad2cb250200e7fbb3f19f96eab7b5f748a9a
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Criar uma entidade (Master Data Services)
+# <a name="create-an-entity-master-data-services"></a>Criar uma entidade (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie uma entidade para conter os membros e seus atributos.  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
@@ -32,7 +37,7 @@ caps.handback.revision: 9
   
 -   Deve existir um modelo. Para obter mais informações, consulte [Criar um modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
   
-### Para criar uma entidade  
+### <a name="to-create-an-entity"></a>Para criar uma entidade  
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
@@ -61,18 +66,18 @@ caps.handback.revision: 9
   
 10. Clique em **Salvar**.  
   
-## Colunas da grade  
+## <a name="grid-columns"></a>Colunas da grade  
  Para cada entidade criada, uma linha com treze colunas é adicionada à grade. A seguir estão as colunas.  
   
-|Nome|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
-|Status|O status da entidade. Quando você clica em **Salvar** , a imagem a seguir é exibida, indicando que a entidade está atualizando.<br /><br /> ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")<br /><br /> Se houver erros ao criar ou editar uma entidade, a imagem a seguir será exibida.<br /><br /> ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status")<br /><br /> Se o status for OK, a imagem a seguir será exibida.<br /><br /> ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")|  
+|Status|O status da entidade. Quando você clica em **Salvar** , a imagem a seguir é exibida, indicando que a entidade está atualizando.<br /><br /> ![Ícone de status de atualização](../master-data-services/media/mds-statusicon-updating.png "ícone de status de atualização")<br /><br /> Se houver erros ao criar ou editar uma entidade, a imagem a seguir será exibida.<br /><br /> ![Ícone de status de erro](../master-data-services/media/mds-statusicon-error.png "ícone de status de erro")<br /><br /> Se o status for OK, a imagem a seguir será exibida.<br /><br /> ![Ícone de status Okey](../master-data-services/media/mds-statusicon-ok.png "Okey status de ícone")|  
 |Nome|O nome da entidade.|  
-|Description|A descrição da entidade.|  
+|Descrição|A descrição da entidade.|  
 |Tabela de preparo|Nome do prefixo da tabela usado para armazenar dados.|  
 |Tipo de Log de Transações|O tipo de log de transações da entidade.|  
 |Criação automática de código|Especifica se a criação automática de código está habilitada.|  
-|Compactação de dados|Especifica se a compactação de dados está habilitada para a entidade.|  
+|Data Compression|Especifica se a compactação de dados está habilitada para a entidade.|  
 |É o Destino da Sincronização|Especifica se a entidade é o destino de uma relação de sincronização.|  
 |Hierarquia está Habilitada|Especifica se a entidade está habilitada para hierarquias explícitas. Essa coluna mostra Sim se existir pelo menos uma hierarquia explícita criada para a entidade.|  
 |Criado por|O nome do usuário que criou a entidade.|  
@@ -80,7 +85,7 @@ caps.handback.revision: 9
 |Atualizado por|O nome do usuário que atualizou a entidade pela última vez.|  
 |Atualizado em|A data e a hora em que a entidade foi atualizada pela última vez.|  
   
-## Próximas etapas  
+## <a name="next-steps"></a>Próximas etapas  
   
 -   [Criar um atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
@@ -88,10 +93,10 @@ caps.handback.revision: 9
   
 -   [Criar um atributo de arquivo &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
- [Hierarquias explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Editar uma entidade &#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
+ [Hierarquias explícitas &#40; Master Data Services &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
+ [Editar uma entidade &#40; Master Data Services &#41;](../master-data-services/edit-an-entity-master-data-services.md)   
  [Excluir uma entidade &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)  
   
   

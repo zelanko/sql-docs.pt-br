@@ -1,28 +1,33 @@
 ---
-title: "Configura&#231;&#245;es do sistema (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Master Data Services, configurações do sistema"
-  - "configurações do sistema [Master Data Services]"
+title: "Configurações do sistema (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Master Data Services, system settings
+- system settings [Master Data Services]
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 caps.latest.revision: 17
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0856c24aee54589941ba96aad979ef732d143f37
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configura&#231;&#245;es do sistema (Master Data Services)
+# <a name="system-settings-master-data-services"></a>Configurações do sistema (Master Data Services)
   Para todos os aplicativos Web e serviços Web associados a um banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , você pode definir configurações do sistema.  
   
- Muitas dessas configurações podem ser ajustadas no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] , na página **Banco de Dados** . Outras podem ser ajustadas na tabela de Configurações do Sistema (mdm.tblSystemSetting) no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+ Muitas dessas configurações podem ser ajustadas no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] , na página **Banco de Dados** . Outras podem ser ajustadas na tabela de Configurações do Sistema (mdm.tblSystemSetting) no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
  As configurações podem ser agrupadas nas seguintes categorias:  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 17
 |-----------------------------------|--------------------|-----------------|  
 |**Número de membros na hierarquia por padrão**|**HierarchyChildNodeLimit**|Na área funcional [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **do** , o número máximo de membros exibidos em cada nó de hierarquia antes que **...mais...** seja exibido. Você pode clicar em **...mais...** para mostrar o próximo grupo de membros. O valor padrão é **50**.|  
 |**Mostrar nomes na hierarquia por padrão**|**ShowNamesInHierarchy**|Na área funcional do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **do** , determina a configuração padrão que é selecionada quando você exibe hierarquias.<br /><br /> O valor padrão é **Yes** ou **1**, indicando que são exibidos o nome e o código de cada membro. Altere para **No** ou **2** para exibir somente o código.|  
-|**Número de atributos baseados em domínio em lista**|**DBAListRowLimit**|Na área funcional **Explorer** do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], o número de atributos exibidos em uma lista quando você clica duas vezes em um valor de atributo baseado em domínio na grade. O valor padrão é **50**. Se existirem mais de 50 membros, uma caixa de diálogo pesquisável será exibida no lugar.|  
+|**Número de atributos baseados em domínio em lista**|**DBAListRowLimit**|Na área funcional [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **do** , o número de atributos exibidos em uma lista quando você clica duas vezes em um valor de atributo baseado em domínio na grade. O valor padrão é **50**. Se existirem mais de 50 membros, uma caixa de diálogo pesquisável será exibida no lugar.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|Na área funcional [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **do** , o nível de similaridade usado ao empregar os critérios de filtragem **Correspondências** . O valor padrão é **0.3**. Defina um valor próximo de **1** para retornar uma correspondência mais próxima dos critérios de pesquisa. Defina como **1** para obter uma correspondência exata.|  
   
 ##  <a name="xls"></a> Configurações de Suplemento para Excel  
@@ -103,7 +108,7 @@ caps.handback.revision: 17
   
 |Configuração do Gerenciador de Configuração|Configuração do sistema|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**URL do Master Data Manager para notificações**|**MDMRootURL**|A URL do aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], que é usada no link em notificações por email; por exemplo, http://constoso/mds.|  
+|**URL do Master Data Manager para notificações**|**MDMRootURL**|A URL para o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] aplicativo web, que é usado no link em notificações por email, por exemplo `http://constoso/mds`.|  
 |**Intervalo de emails de notificação**|**NotificationInterval**|A frequência, em segundos, de envio de emails de notificação. O valor padrão é **120** segundos (2 minutos).|  
 |**Número de notificações em um único email**|**NotificationsPerEmail**|O número máximo de problemas de validação que serão listados em um único email de notificação. Problemas adicionais, caso existam, não serão incluídos no email, mas estarão disponíveis no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
 |**Formato de email padrão**|**EmailFormat**|O formato de todas as notificações por email. O valor padrão é **HTML** or **1**. A configuração de banco de dados **2** indica **Texto**.<br /><br /> Observação: você pode substituir isso por um usuário individual no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], alterando e salvando o **Formato de email** na guia **Geral** do usuário.|  
@@ -144,7 +149,7 @@ caps.handback.revision: 17
   
 -   **AttributeExplorerMarkAllActionMemberCount**  
   
-## Consulte também  
- [Segurança de objeto de banco de dados &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
+## <a name="see-also"></a>Consulte também  
+ [Segurança de objeto de banco de dados &#40; Master Data Services &#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   

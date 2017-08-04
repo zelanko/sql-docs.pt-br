@@ -1,27 +1,32 @@
 ---
-title: "Assistente para Criar Banco de Dados (Gerenciador de Configura&#231;&#227;o do Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.mds.configmanager.createdbwiz.f1"
+title: "Criar Assistente de banco de dados (Gerenciador de configuração do Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 442d6db191b1da4a741b05032c67b5d8b4a123a4
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Assistente para Criar Banco de Dados (Gerenciador de Configura&#231;&#227;o do Master Data Services)
+# <a name="create-database-wizard-master-data-services-configuration-manager"></a>Assistente para Criar Banco de Dados (Gerenciador de Configuração do Master Data Services)
   Use o assistente para **Criar Banco de Dados** para criar um banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## Servidor de Banco de Dados  
+## <a name="database-server"></a>Servidor de Banco de Dados  
  Especifique as informações para conexão com uma instância local ou remota do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] na qual hospedar o banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Para conexão com uma instância remota, o banco de dados deve estar habilitado para conexões remotas.  
   
 |Nome do controle|Description|  
@@ -32,7 +37,7 @@ caps.handback.revision: 9
 |**Senha**|Especifique a senha associada à conta de usuário:<br /><br /> Quando o **Tipo de autenticação** é **Usuário Atual – Segurança Integrada**, a caixa **Senha** é somente leitura e as credenciais da conta do usuário do Windows especificada são usadas para a conexão.<br /><br /> Quando o **Tipo de autenticação** é **Conta do SQL Server**, a caixa **Senha** está habilitada e você deve especificar a senha associada à conta de usuário especificada.|  
 |**Testar Conexão**|Verifique se a conta de usuário especificada pode se conectar à instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e se a conta tem permissão para criar um banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] nessa instância. Se você não clicar em **Testar Conexão**, a conexão será testada quando você clicar em **Avançar**.|  
   
-## Banco de dados  
+## <a name="database"></a>Banco de dados  
  Especifique um nome de banco de dados e as opções de agrupamento para o novo banco de dados. Os agrupamentos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornecem propriedades de regras de classificação, de diferenciação de maiúsculas e minúsculas e de diferenciação de acentos para seus dados. Os agrupamentos utilizados com tipos de dados de caractere, como char e varchar, determinam a página de código e os caracteres correspondentes que podem ser representados para o tipo de dados em questão. Para obter mais informações sobre agrupamento de banco de dados, consulte [Suporte a agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md).  
   
 |Nome do controle|Description|  
@@ -41,21 +46,20 @@ caps.handback.revision: 9
 |**Agrupamento padrão do SQL Server**|Selecione para usar a configuração de agrupamento atual do banco de dados da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada para o novo banco de dados.|  
 |**Agrupamento do Windows**|Especifique as configurações de agrupamento do Windows para uso com o novo banco de dados. Os agrupamentos do Windows definem regras para armazenar dados de caractere com base em uma localidade do Windows associada. Para obter mais informações sobre agrupamentos do Windows e as opções associadas, consulte [Nome de agrupamento do Windows &#40;Transact-SQL&#41;](../t-sql/statements/windows-collation-name-transact-sql.md).<br /><br /> Observação: a lista **Agrupamento do Windows** e as opções associadas são habilitadas apenas depois de você desmarcar a caixa **Agrupamento padrão do SQL Server** .|  
   
-## Conta Administrador  
+## <a name="administrator-account"></a>Conta Administrador  
   
 |Nome do controle|Description|  
 |------------------|-----------------|  
 |**Nome de usuário**|Especifique o Superusuário padrão para o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Um Superusuário tem acesso a todas as áreas funcionais e pode adicionar, excluir e atualizar todos os modelos. Para obter informações sobre a permissão de Superusuário e outros tipos de administradores no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], consulte [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).|  
   
-## Resumo  
+## <a name="summary"></a>Resumo  
  Exibe um resumo das opções selecionadas. Examine suas seleções e clique em **Avançar** para começar a criar o banco de dados com as configurações especificadas.  
   
-## Progresso e Conclusão  
+## <a name="progress-and-finish"></a>Progresso e Conclusão  
  Exibe o progresso do processo de criação. Depois que o banco de dados for criado, clique em **Concluir** para fechar o assistente de banco de dados e retornar à página **Bancos de dados** . O novo banco de dados é selecionado e você pode exibir e modificar as configurações do sistema.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Página Configuração do Banco de Dados &#40;Gerenciador de Configuração do Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [Introdução ao Master Data Services &#40;SQL Server 2016&#41;](../Topic/Get%20Started%20with%20Master%20Data%20Services%20\(SQL%20Server%202016\).md)   
- [Requisitos do banco de dados &#40;Master Data Services&#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
+[Configuração e instalação do Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md) [requisitos &#40; do banco de dados Master Data Services &#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
   
   

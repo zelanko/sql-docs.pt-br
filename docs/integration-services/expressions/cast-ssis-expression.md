@@ -1,32 +1,37 @@
 ---
-title: "Cast (Express&#227;o SSIS) | Microsoft Docs"
-ms.custom: 
-  - "ssisdev020617"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "função CAST"
-  - "operador de conversão"
-  - "convertendo tipos de dados [Integration Services]"
-  - "tipos de dados [Integration Services], expressões"
-  - "tipos de dados [Integration Services], convertendo"
+title: "Cast (expressão SSIS) | Microsoft Docs"
+ms.custom:
+- ssisdev020617
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CAST function
+- cast operator
+- converting data types [Integration Services]
+- data types [Integration Services], expressions
+- data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 caps.latest.revision: 61
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 199dca85523f6ba2f4d53ef89e1b9a73667a6472
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Cast (Express&#227;o SSIS)
+# <a name="cast-ssis-expression"></a>Cast (Expressão SSIS)
   Converte explicitamente uma expressão de um tipo de dados em um tipo de dados diferente. O operador cast também pode funcionar como um operador de truncamento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -34,20 +39,20 @@ caps.handback.revision: 61
   
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *type_spec*  
  É um tipo de dados [!INCLUDE[ssIS](../../includes/ssis-md.md)] válido.  
   
  *expressão*  
  É uma expressão válida.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  O tipo de dados de *type_spec*. Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  O diagrama a seguir mostra operações de conversão legais.  
   
- ![Conversões legais e não legais entre tipos de dados](../../integration-services/expressions/media/data-conversion.gif "Conversões legais e não legais entre tipos de dados")  
+ ![Conversões legais e não legais entre tipos de dados](../../integration-services/expressions/media/data-conversion.gif "conversões legais e não legais entre tipos de dados")  
   
  A conversão para alguns tipos de dados requer parâmetros. A tabela a seguir lista esses tipos de dados e seus parâmetros.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 61
   
  Para obter mais informações sobre a estrutura dos tipos de dados de data, consulte [Tipos de Dados do Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Exemplos de expressões SSIS  
+## <a name="ssis-expression-examples"></a>Exemplos de expressões SSIS  
  Este exemplo converte um valor numérico para um inteiro.  
   
 ```  
@@ -100,7 +105,7 @@ caps.handback.revision: 61
 (DT_NUMERIC,7,3)4000  
 ```  
   
- Este exemplo converte valores na coluna **FirstName**, definidos com um tipo de dados **nvarchar** e um comprimento de 50, para uma cadeia de caracteres usando a página de código 1252.  
+ Este exemplo converte valores na coluna **FirstName** , definidos com um tipo de dados **nvarchar** e um comprimento de 50, para uma cadeia de caracteres usando a página de código 1252.  
   
 ```  
 (DT_STR,50,1252)FirstName  
@@ -142,10 +147,10 @@ caps.handback.revision: 61
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## Consulte também  
- [Precedência de operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40;Expressão do SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
- [Expressões do Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Tipos de dados do Integration Services em expressões](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
+## <a name="see-also"></a>Consulte também  
+ [Precedência do operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40; Expressão do SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)   
+ [Integration Services &#40; SSIS &#41; Expressões](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Tipos de dados em expressões do Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
   
   

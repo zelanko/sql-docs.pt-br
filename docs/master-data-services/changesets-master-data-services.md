@@ -1,23 +1,28 @@
 ---
-title: "Conjuntos de altera&#231;&#245;es (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Conjuntos de alterações (Master Data Services) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc6c8911695be4768990f83db618ce72a220b1a7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Conjuntos de altera&#231;&#245;es (Master Data Services)
+# <a name="changesets-master-data-services"></a>Conjuntos de alterações (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] agora dá suporte à capacidade de salvar todas as alterações pendentes em uma entidade como conjuntos de alterações. Há dois cenários de uso para este recurso.  
   
 -   **É alterado quando “Aprovação necessária” é ativada pelo Administrador de Entidade**  
@@ -48,11 +53,11 @@ caps.handback.revision: 13
   
     3.  Quando estiver pronto, você confirma o conjunto de alterações. Consulte [Confirmar ou enviar um conjunto de alterações &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criar um conjunto de alterações &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
- [Aplicar e atualizar um conjunto de alterações &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
+ [Aplicar e atualizar um conjunto de alterações &#40; Master Data Services &#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [Confirmar ou enviar um conjunto de alterações &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   
- [Aprovar ou rejeitar um conjunto de alterações &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)   
- [Gerenciar conjuntos de alterações &#40;Master Data Services&#41;](../master-data-services/manage-changesets-master-data-services.md)  
+ [Aprovar ou rejeitar um conjunto de alterações &#40; Master Data Services &#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)   
+ [Gerenciar conjuntos de alterações &#40; Master Data Services &#41;](../master-data-services/manage-changesets-master-data-services.md)  
   
   

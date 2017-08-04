@@ -1,24 +1,29 @@
 ---
-title: "Adicionar tabelas a uma inst&#226;ncia CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "addTabs"
+title: "Adicionar tabelas a uma instância CDC | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee8cd785cdb0facdba880ee0502ec51508bca618
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Adicionar tabelas a uma inst&#226;ncia CDC
+# <a name="add-tables-to-a-cdc-instance"></a>Adicionar tabelas a uma instância CDC
   Use a caixa de diálogo Seleção de Tabela para adicionar tabelas da origem do Oracle para a instância CDC. As tabelas selecionadas são adicionadas à lista na guia **Tabelas** do editor de Propriedades.  
   
  Por padrão, nenhuma tabela está incluída na lista de tabelas nesta caixa de diálogo. Você pode marcar a caixa de seleção **(Selecionar Tudo)** ou pesquisar tabelas específicas.  
@@ -46,7 +51,7 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  Você pode exibir a lista de tabelas no visualizador. Ao usar o visualizador, as informações serão somente leitura. O visualizador também inclui uma lista das colunas capturadas na tabela. Para obter mais informações sobre como acessar o visualizador, consulte [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Como editar as propriedades de instância CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [Como gerenciar uma instância CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [Selecionar as tabelas Oracle para capturar alterações](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  

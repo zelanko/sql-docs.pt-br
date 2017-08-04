@@ -1,32 +1,37 @@
 ---
-title: "Editor da Tarefa Transferir Procedimentos Armazenados Mestres (P&#225;gina Geral) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transferstoredprocedurestask.general.f1"
-helpviewer_keywords: 
-  - "Editor da Tarefa Transferir Procedimentos Armazenados Mestres"
+title: "Transferência de Editor de tarefa de procedimentos armazenados mestres (página geral) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transferstoredprocedurestask.general.f1
+helpviewer_keywords:
+- Transfer Stored Procedures Task Editor
 ms.assetid: fa1abd4c-e2be-427f-be53-860e49c97227
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 59bb5b42a9c832df8af539f2490eec9e7edb81c8
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor da Tarefa Transferir Procedimentos Armazenados Mestres (P&#225;gina Geral)
+# <a name="transfer-master-stored-procedures-task-editor-general-page"></a>Editor da Tarefa Transferir Procedimentos Armazenados Mestres (Página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Transferir Procedimentos Armazenados Mestres** para nomear e descrever a tarefa Transferir Procedimentos Armazenados Mestres. Para obter mais informações sobre essa tarefa, consulte [Transfer Master Stored Procedures Task](../../integration-services/control-flow/transfer-master-stored-procedures-task.md).  
   
 > [!NOTE]  
 >  Essa tarefa transfere apenas procedimentos armazenados definidos pelo usuário pertencentes ao **dbo** de um banco de dados **mestre** no servidor de origem para um banco de dados **mestre** no servidor de destino. Os usuários devem receber a permissão CREATE PROCEDURE no banco de dados **mestre** no servidor de destino ou devem ser membros da função de servidor fixa **sysadmin** no servidor de destino para criar procedimentos armazenados ali.  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Nome**  
  Digite um nome exclusivo para a tarefa Transferir Procedimentos Armazenados Mestres. Esse nome é usado como rótulo no ícone de tarefa.  
   
@@ -36,10 +41,10 @@ caps.handback.revision: 25
  **Description**  
  Digite uma descrição da tarefa Transferir Procedimentos Armazenados Mestres.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Editor da Tarefa Transferir Procedimentos Armazenados Mestres &#40;Página Procedimentos Armazenados&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
+ [Editor da tarefa transferir mestre procedimentos armazenados &#40; Página de procedimentos armazenados &#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
  [Página Expressões](../../integration-services/expressions/expressions-page.md)  
   
   

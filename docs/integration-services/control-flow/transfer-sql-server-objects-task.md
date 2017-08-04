@@ -1,29 +1,34 @@
 ---
-title: "Tarefa Transferir Objetos do SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transfersqlserverobjectstask.f1"
-helpviewer_keywords: 
-  - "Tarefa Transferir Objetos do SQL Server [Integration Services]"
+title: Transferir tarefa de objetos do SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transfersqlserverobjectstask.f1
+helpviewer_keywords:
+- Transfer SQL Server Objects task [Integration Services]
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 45fec32beee153afea5f862c21cc607a2f807ce1
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Tarefa Transferir Objetos do SQL Server
+# <a name="transfer-sql-server-objects-task"></a>Tarefa Transferir Objetos do SQL Server
   A tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transfere um ou mais tipos de objetos para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por exemplo, a tarefa pode copiar tabelas e procedimentos armazenados. Dependendo da versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado como fonte, tipos diferentes de objetos estarão disponíveis para cópia. Por exemplo, só um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui esquemas e agregações definidos pelo usuário.  
   
-## Objetos a serem transferidos  
+## <a name="objects-to-transfer"></a>Objetos a serem transferidos  
  Funções de servidor, funções e usuários do banco de dados especificado poderão ser copiados, bem como as permissões para os objetos transferidos. Copiando os usuários, as funções e as permissões associados juntamente com os objetos, os objetos transferidos ficarão imediatamente operáveis no servidor de destino.  
   
  A tabela a seguir lista os tipos de objetos que podem ser copiados.  
@@ -46,7 +51,7 @@ caps.handback.revision: 35
   
  Os UDTs (Tipos Definidos pelo Usuário) criados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm dependências em assemblies CLR (Common Language Runtime). Se você usar a tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para transferir UDTs, terá de configurar a tarefa para transferir objetos dependentes. Para transferir objetos dependentes, defina a propriedade **IncludeDependentObjects** como **True**.  
   
-### Opções de tabela  
+### <a name="table-options"></a>Opções de tabela  
  Ao copiar tabelas, você poderá indicar os tipos de itens relacionados a tabelas a serem incluídos no processo de cópia. Os seguintes tipos de itens poderão ser copiados com a tabela relacionada:  
   
 -   Índices  
@@ -61,26 +66,26 @@ caps.handback.revision: 35
   
  Você também poderá indicar que o script gerado pela tarefa tenha o formato Unicode.  
   
-## Opções de destino  
+## <a name="destination-options"></a>Opções de destino  
  Você pode configurar a tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para incluir nomes de esquema, dados, propriedades estendidas de objetos transferidos e objetos dependentes na transferência. Se forem copiados dados, ela poderá substituir ou anexar dados existentes.  
   
  Algumas opções só se aplicam ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por exemplo, somente o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a esquemas.  
   
-## Opções de segurança  
+## <a name="security-options"></a>Opções de segurança  
  A tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode incluir usuários em nível de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e funções da fonte, logons [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e permissões para objetos transferidos. Por exemplo, a transferência pode incluir as permissões nas tabelas transferidas.  
   
-## Transferir objetos entre instâncias do SQL Server  
+## <a name="transfer-objects-between-instances-of-sql-server"></a>Transferir objetos entre instâncias do SQL Server  
  A tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a uma origem e a um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Eventos  
+## <a name="events"></a>Eventos  
  A tarefa ativa um evento de informações que informa o objeto transferido e um evento de aviso quando um objeto é substituído. Um evento de informações também é ativado para ações como o truncamento de tabelas de banco de dados.  
   
  A tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não informa progresso incremental da transferência do objeto; informa somente conclusão 0% e 100 % .  
   
-## Valor de execução  
- O valor de execução armazenado na propriedade da tarefa **ExecutionValue** retorna o número de objetos transferidos. Ao atribuir uma variável definida pelo usuário à propriedade **ExecValueVariable** da tarefa Transferir Objetos do SQL Server, as informações sobre a transferência do objeto podem ser disponibilizadas para outros objetos do pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../Topic/Use%20Variables%20in%20Packages.md).  
+## <a name="execution-value"></a>Valor de execução  
+ O valor de execução armazenado na propriedade da tarefa **ExecutionValue** retorna o número de objetos transferidos. Ao atribuir uma variável definida pelo usuário à propriedade **ExecValueVariable** da tarefa Transferir Objetos do SQL Server, as informações sobre a transferência do objeto podem ser disponibilizadas para outros objetos do pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
-## Entradas de log  
+## <a name="log-entries"></a>Entradas de log  
  A tarefa Transferir Objetos do SQL inclui as seguintes entradas de log personalizadas:  
   
 -   TransferSqlServerObjectsTaskStartTransferringObjects   Essa entrada de log informa que a transferência foi iniciada. A entrada do log contém a hora de início.  
@@ -89,10 +94,10 @@ caps.handback.revision: 35
   
  Além disso, uma entrada de log para um evento **OnInformation** informa o número de objetos dos tipos de objeto selecionados para transferência, o número de objetos transferidos e ações como truncamento de tabelas quando são transferidos dados com tabelas. Uma entrada de log para o evento **OnWarning** é gravada para cada objeto de destino que é substituído  
   
-## Segurança e permissões  
+## <a name="security-and-permissions"></a>Segurança e permissões  
  O usuário deve ter permissão para procurar objetos no servidor de origem e deve ter permissão para cancelar e criar objetos no servidor de destino; além disso, o usuário deve ter acesso ao banco de dados especificado e aos objetos do banco de dados.  
   
-## Configuração da tarefa Transferir Objetos do SQL Server  
+## <a name="configuration-of-the-transfer-sql-server-objects-task"></a>Configuração da tarefa Transferir Objetos do SQL Server  
  A tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser configurada para transferir todos os objetos, todos os objetos de um tipo ou somente objetos especificados de um tipo. Por exemplo, você pode escolher copiar somente tabelas selecionadas no banco de dados AdventureWorks.  
   
  Se a tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transferir tabelas, você poderá especificar os tipos de objetos relacionados à tabela a serem copiados com as tabelas. Por exemplo, você poderá especificar que as chaves primárias sejam copiadas com as tabelas.  
@@ -113,9 +118,9 @@ caps.handback.revision: 35
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configuração programática da tarefa Transferir Objetos do SQL Server  
+## <a name="programmatic-configuration-of-the-transfer-sql-server-objects-task"></a>Configuração programática da tarefa Transferir Objetos do SQL Server  
  Para obter mais informações sobre como definir essas propriedades programaticamente, clique no tópico a seguir:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferSqlServerObjectsTask.TransferSqlServerObjectsTask>  

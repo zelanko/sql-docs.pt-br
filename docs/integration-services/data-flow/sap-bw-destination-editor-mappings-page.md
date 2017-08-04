@@ -1,24 +1,29 @@
 ---
-title: "Editor de Destino de SAP BW (p&#225;gina Mapeamentos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwdestination.columns.f1"
+title: "Editor de destino do SAP BW (página mapeamentos) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwdestination.columns.f1
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 245ff83f84ff1a60a08f4a73d24ee76179b31e2b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de Destino de SAP BW (p&#225;gina Mapeamentos)
+# <a name="sap-bw-destination-editor-mappings-page"></a>Editor de Destino de SAP BW (página Mapeamentos)
   Use a página **Mapeamentos** do **Editor de Destino SAP BW** para mapear colunas de entrada para colunas de destino.  
   
  Para saber mais sobre o destino SAP BW do Connector 1.1 do [!INCLUDE[msCoName](../../includes/msconame-md.md)] para SAP BW, consulte [Destino SAP BW](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -30,11 +35,11 @@ caps.handback.revision: 11
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o destino SAP BW.  
   
-2.  Na guia **Fluxo de Dados**, clique duas vezes no destino SAP BW.  
+2.  Na guia **Fluxo de Dados** , clique duas vezes no destino SAP BW.  
   
 3.  No **Editor de Destino SAP BW**, clique em **Mapeamentos** para abrir a página **Mapeamentos** do editor.  
   
-## Opções  
+## <a name="options"></a>Opções  
   
 > [!NOTE]  
 >  Se você não souber todos os valores necessários para configurar o destino, talvez precise perguntar ao administrador do SAP.  
@@ -45,18 +50,18 @@ caps.handback.revision: 11
   
 -   A seção inferior é uma tabela que listas quais colunas de entrada foram mapeadas para quais colunas de saída.  
   
-### Opções da seção superior  
+### <a name="upper-section-options"></a>Opções da seção superior  
  A seção superior tem as seguintes opções:  
   
  **Colunas de Entrada Disponíveis**  
  Exiba a lista das colunas de entrada disponíveis.  
   
- Para mapear uma coluna de entrada para uma coluna de destino, arraste uma coluna da lista **Colunas de Entrada Disponíveis** e solte essa coluna em uma coluna na lista **Colunas de Destino Disponíveis**.  
+ Para mapear uma coluna de entrada para uma coluna de destino, arraste uma coluna da lista **Colunas de Entrada Disponíveis** e solte essa coluna em uma coluna na lista **Colunas de Destino Disponíveis** .  
   
  **Colunas de Destino Disponíveis**  
  Exiba a lista de colunas de destino disponíveis.  
   
- Para mapear uma coluna de entrada para uma coluna de destino, arraste uma coluna da lista **Colunas de Entrada Disponíveis** e solte essa coluna em uma coluna na lista **Colunas de Destino Disponíveis**.  
+ Para mapear uma coluna de entrada para uma coluna de destino, arraste uma coluna da lista **Colunas de Entrada Disponíveis** e solte essa coluna em uma coluna na lista **Colunas de Destino Disponíveis** .  
   
  A seção superior também tem um menu de contexto que você pode abrir clicando com o botão direito do mouse no plano de fundo. Esse menu de contexto contém as seguintes opções:  
   
@@ -66,21 +71,21 @@ caps.handback.revision: 11
   
 -   **Mapear Itens Correspondendo Nomes**  
   
-### Colunas da seção inferior  
+### <a name="lower-section-columns"></a>Colunas da seção inferior  
  A seção inferior é uma tabela de mapeamentos, e tem as seguintes colunas:  
   
  **Coluna de Entrada**  
  Visualize as colunas de entrada que você selecionou.  
   
- Para mapear uma coluna de entrada diferente para a mesma coluna de destino, selecione uma coluna diferente de entrada na lista. Para remover um mapeamento, selecione **\<ignorar>** para excluir a coluna de entrada da saída.  
+ Para mapear uma coluna de entrada diferente para a mesma coluna de destino, selecione uma coluna diferente de entrada na lista. Para remover um mapeamento, selecione  **\<ignorar >** para excluir a coluna de entrada da saída.  
   
  **Coluna de Destino**  
  Visualize cada coluna de destino disponível, esteja essa coluna mapeada ou não.  
   
-## Consulte também  
- [Editor de Destino SAP BW &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [Editor de Destino SAP BW &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [Editor de Destino SAP BW &#40;Página Avançado&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+## <a name="see-also"></a>Consulte também  
+ [Editor de destino do SAP BW &#40; Página Gerenciador de Conexão &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [Editor de destino do SAP BW &#40; Página de saída de erro &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [Editor de destino do SAP BW &#40; Página Avançado &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
  [Ajuda F1 do Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

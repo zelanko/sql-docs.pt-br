@@ -1,32 +1,37 @@
 ---
-title: "Transforma&#231;&#227;o Amostragem de Linhas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rowsamplingtrans.f1"
-helpviewer_keywords: 
-  - "sementes de amostragem [Integration Services]"
-  - "sementes aleatórias"
-  - "amostragem aleatória"
-  - "conjuntos de dados de exemplo [Integration Services]"
-  - "Transformação Amostragem de Linhas"
-  - "pacotes [Integration Services], exemplos"
-  - "conjuntos de dados [Integration Services], exemplos"
+title: "Transformação amostragem de linhas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rowsamplingtrans.f1
+helpviewer_keywords:
+- sampling seeds [Integration Services]
+- random seeds
+- random sampling
+- sample data sets [Integration Services]
+- Row Sampling transformation
+- packages [Integration Services], samples
+- datasets [Integration Services], sample
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7726faae94381cab80d6f1dc0a01a1cf56d34550
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transforma&#231;&#227;o Amostragem de Linhas
+# <a name="row-sampling-transformation"></a>Transformação Amostragem de Linhas
   A transformação Amostragem de Linhas é usada para obter um subconjunto selecionado aleatoriamente de um conjunto de dados de entrada. Você pode especificar o tamanho exato da amostra de saída e especificar uma semente para o gerador de números aleatórios.  
   
  Há muitos aplicativos para amostragem aleatória. Por exemplo, uma empresa que deseje selecionar 50 empregados aleatoriamente para receber prêmios em uma loteria poderia usar a transformação Amostragem de Linhas no banco de dados de empregados para gerar o número exato de vencedores.  
@@ -35,12 +40,12 @@ caps.handback.revision: 43
   
  Essa transformação é semelhante à transformação Amostragem Percentual, que cria um exemplo de conjunto dados selecionando uma porcentagem de linhas de entrada. Consulte [Transformação Amostragem Percentual](../../../integration-services/data-flow/transformations/percentage-sampling-transformation.md).  
   
-## Configurando a transformação Amostragem de Linhas  
+## <a name="configuring-the-row-sampling-transformation"></a>Configurando a transformação Amostragem de Linhas  
  A transformação Amostragem de Linhas cria um exemplo de conjunto de dados selecionando um número especificado de linhas de entrada de transformação. Como a seleção de linhas da entrada de transformação é aleatória, o exemplo resultante da entrada é representativo. Você também pode especificar a semente que será usada pelo gerador de números aleatórios para afetar a maneira como a transformação selecionará as linhas.  
   
  O uso da mesma semente aleatória na mesma entrada de transformação sempre cria a mesma saída de exemplo. Se nenhuma semente for especificada, a transformação usará a contagem de tiques do sistema operacional para criar o número aleatório. Portanto, você poderia usar a mesma semente durante o teste para verificar os resultados da transformação durante o desenvolvimento e teste do pacote e, em seguida, alterar para uma semente aleatória quando o pacote for colocado em produção.  
   
- A transformação Amostragem de Linha inclui a propriedade personalizada **SamplingValue**. Essa propriedade pode ser atualizada por uma expressão de propriedade quando o pacote é carregado. Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Usar expressões de propriedade em pacotes](../../../integration-services/expressions/use-property-expressions-in-packages.md) e [Propriedades personalizadas da transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+ A transformação Amostragem de Linha inclui a propriedade personalizada **SamplingValue** . Essa propriedade pode ser atualizada por uma expressão de propriedade quando o pacote é carregado. Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Usar expressões de propriedade em pacotes](../../../integration-services/expressions/use-property-expressions-in-packages.md) e [Propriedades personalizadas da transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
  Essa transformação tem uma entrada e duas saídas. Não tem nenhuma saída de erro.  
   
@@ -50,13 +55,13 @@ caps.handback.revision: 43
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](../Topic/Common%20Properties.md)  
+-   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
--   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
+-   [Propriedades personalizadas da transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  Para obter mais informações sobre como definir propriedades, consulte.  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
   

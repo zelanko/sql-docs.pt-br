@@ -1,22 +1,27 @@
 ---
-title: "Propriedades do SQL Server (guia Fazer Logon) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Propriedades do SQL Server (guia fazer logon) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4dde3f4735a42553155d7f58a310963ad599c374
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriedades do SQL Server (guia Fazer Logon)
+# <a name="sql-server-properties-log-on-tab"></a>Propriedades do SQL Server (guia Fazer Logon)
   Use a guia **Fazer Logon** da caixa de diálogo **Propriedades do SQL Server** para especificar a conta usada pelo serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , para alterar a senha de uma conta e para iniciar e parar o serviço. A alteração da senha de uma conta entra em vigor imediatamente.  
   
 > [!NOTE]  
@@ -24,7 +29,7 @@ caps.handback.revision: 25
 >   
 >  Para obter mais informações sobre como selecionar uma conta para executar o serviço, consulte "Configurando as contas de serviço do Windows" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Conta interna**  
  **Sistema Local**  
  -   Especifique a conta Sistema Local. Essa conta não requer uma senha. No entanto, ela pode impedir a interação do serviço com outros servidores, dependendo dos privilégios concedidos a ela.  

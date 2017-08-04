@@ -1,22 +1,27 @@
 ---
-title: "Caixa de di&#225;logo Definir Valor do Par&#226;metro | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Defina a caixa de diálogo de valor de parâmetro | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d2e74c467cc0f94d15bdd4a42a300a842012ecd5
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Caixa de di&#225;logo Definir Valor do Par&#226;metro
+# <a name="set-parameter-value-dialog-box"></a>Caixa de diálogo Definir Valor do Parâmetro
   Use a caixa de diálogo **Definir Valor do Parâmetro** para definir valores de parâmetros e propriedades do gerenciador de conexões para projetos e pacotes.  
   
  **O que você deseja fazer?**  
@@ -35,7 +40,7 @@ caps.handback.revision: 6
   
 3.  Expanda o nó **SSISDB** .  
   
-4.  Clique com o botão direito do mouse em um pacote ou projeto, clique em **Configurar** e clique no botão de reticências na guia **Parâmetros** ou na guia **Gerenciadores de Conexões**.  
+4.  Clique com o botão direito do mouse em um pacote ou projeto, clique em **Configurar**e clique no botão de reticências na guia **Parâmetros** ou na guia **Gerenciadores de Conexões** .  
   
 ##  <a name="option"></a> Configurar as opções  
  **Parâmetro**  

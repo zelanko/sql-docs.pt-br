@@ -1,29 +1,34 @@
 ---
-title: "+ (Concatenar) (Express&#227;o SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "concatenação [Integration Services]"
-  - "+ (operador de concatenação)"
-  - "operador de concatenação (+)"
+title: "+ (Concatenar) (Expressão SSIS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- concatenation [Integration Services]
+- + (concatenate operator)
+- concatenate operator (+)
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ba1fcd0a00289d7c2f97fa344be196885c7e7451
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# + (Concatenar) (Express&#227;o SSIS)
+# <a name="-concatenate-ssis-expression"></a>+ (Concatenar) (Expressão SSIS)
   Concatena duas expressões em uma expressão.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -31,14 +36,14 @@ character_expression1 + character_expression2
   
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *expression1, expression2*  
  É qualquer expressão de tipo de dados válida DT_STR, DT_WSTR, DT_TEXT, DT_NTEXT ou DT_IMAGE.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  A expressão pode usar um ou ambos os tipos de dados DT_STR e DT_WSTR.  
   
  A concatenação dos tipos de dados DT_STR e DT_WSTR retorna um resultado do tipo DT_WSTR. O comprimento da cadeia de caracteres é a soma dos comprimentos das cadeias originais expressas em caracteres.  
@@ -53,7 +58,7 @@ character_expression1 + character_expression2
   
  Literais da cadeia de caracteres devem estar entre aspas.  
   
-## Exemplos de expressões  
+## <a name="expression-examples"></a>Exemplos de expressões  
  Este exemplo concatena os valores nas colunas **FirstName** e **LastName** e insere um espaço entre eles.  
   
 ```  
@@ -66,8 +71,8 @@ FirstName + ' ' + LastName
 @ZIPCcode + "-" + @[ZipCode+4]  
 ```  
   
-## Consulte também  
- [Precedência de operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40;Expressão do SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Consulte também  
+ [Precedência do operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40; Expressão SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

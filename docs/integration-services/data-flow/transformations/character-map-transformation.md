@@ -1,29 +1,34 @@
 ---
-title: "Transforma&#231;&#227;o Mapas de Caracteres | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.charactertrans.f1"
-helpviewer_keywords: 
-  - "mapeamento mutuamente exclusivo [Integration Services]"
-  - "mapeando dados [Integration Services]"
-  - "funções de cadeia de caracteres"
-  - "Transformação Mapa de Caracteres [Integration Services]"
+title: "Transformação mapa de caracteres | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.charactertrans.f1
+helpviewer_keywords:
+- mutually exclusive mapping [Integration Services]
+- mapping data [Integration Services]
+- string functions
+- Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80818df1eb99cfe68012a119d4482698b17d0044
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transforma&#231;&#227;o Mapas de Caracteres
+# <a name="character-map-transformation"></a>Transformação Mapas de Caracteres
   A transformação Mapa de Caracteres aplica funções de cadeia de caracteres, como a conversão de letra minúscula em maiúscula, em dados de caracteres. Essa transformação funciona apenas em dados de coluna com um tipo de dados de cadeia de caracteres.  
   
  A transformação Mapa de Caracteres pode converter dados de coluna existentes ou adicionar uma coluna à saída de transformação e colocar os dados convertidos na coluna nova. Você pode aplicar conjuntos diferentes de operações de mapeamento na mesma coluna de entrada e colocar os resultados em colunas diferentes. Por exemplo, é possível converter a mesma coluna em maiúsculas e minúsculas e colocar os resultados em duas colunas diferentes.  
@@ -32,7 +37,7 @@ caps.handback.revision: 42
   
  Essa transformação tem uma entrada, uma saída e uma saída de erro.  
   
-## Mapeando operações  
+## <a name="mapping-operations"></a>Mapeando operações  
  A tabela a seguir descreve as operações de mapeamento suportadas pela transformação Mapa de Caracteres.  
   
 |Operação|Description|  
@@ -48,7 +53,7 @@ caps.handback.revision: 42
 |Chinês tradicional|Mapeia caracteres de chinês simplificado para caracteres de chinês tradicional.|  
 |Letras Maiúsculas|Converte caracteres em maiúsculas.|  
   
-## Operações de mapeamento mutuamente exclusivas  
+## <a name="mutually-exclusive-mapping-operations"></a>Operações de mapeamento mutuamente exclusivas  
  Mais de uma operação pode ser executada em uma transformação. Entretanto, algumas operações de mapeamento são mutuamente exclusivas. A tabela a seguir relaciona restrições que se aplicam quando você usa várias operações na mesma coluna. As operações nas colunas Operação A e Operação B são mutuamente exclusivas.  
   
 |Operação A|Operação B|  
@@ -60,7 +65,7 @@ caps.handback.revision: 42
 |Minúscula|Hiragana, katakana, meia largura, largura inteira|  
 |Letras Maiúsculas|Hiragana, katakana, meia largura, largura inteira|  
   
-## Configuração da transformação Mapa de Caracteres  
+## <a name="configuration-of-the-character-map-transformation"></a>Configuração da transformação Mapa de Caracteres  
  Você pode configurar a transformação Mapa de Caracteres das seguintes formas:  
   
 -   Especificando as colunas a serem convertidas.  
@@ -73,7 +78,7 @@ caps.handback.revision: 42
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](../Topic/Common%20Properties.md)  
+-   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

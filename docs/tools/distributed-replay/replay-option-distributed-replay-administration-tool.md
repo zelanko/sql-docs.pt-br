@@ -1,29 +1,34 @@
 ---
-title: "Op&#231;&#227;o Replay (ferramenta de administra&#231;&#227;o do Distributed Replay) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Opção replay (ferramenta de administração de reprodução distribuída) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 32c85446a36defba2e615b04d3d3cb9fd9149fe5
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Op&#231;&#227;o Replay (ferramenta de administra&#231;&#227;o do Distributed Replay)
-  A ferramenta de administração [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, **DReplay.exe**, é uma ferramenta de linha de comando que você pode usar para se comunicar com o controlador de reprodução distribuída. Este tópico descreve a opção de linha de comando **replay** e a sintaxe correspondente.  
+# <a name="replay-option-distributed-replay-administration-tool"></a>Opção Replay (ferramenta de administração do Distributed Replay)
+  A ferramenta de administração [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, **DReplay.exe**, é uma ferramenta de linha de comando que você pode usar para se comunicar com o controlador de reprodução distribuída. Este tópico descreve a opção de linha de comando **replay** e a sintaxe correspondente.  
   
  A opção **replay** inicia o estágio de reprodução de eventos, no qual o controlador despacha dados de reprodução aos clientes especificados, inicia a reprodução distribuída e sincroniza os clientes. Opcionalmente, cada cliente que participa da reprodução pode gravar a atividade de reprodução e salvar um arquivo de rastreamento de resultado localmente.  
   
- ![Ícone de vínculo de tópico](../../database-engine/configure-windows/media/topic-link.png "Ícone de vínculo de tópico") Para obter mais informações sobre as convenções de sintaxe usadas com a sintaxe da ferramenta de administração, consulte [Convenções de sintaxe do Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "ícone de link do tópico") para obter mais informações sobre as convenções de sintaxe usadas com a sintaxe da ferramenta de administração, consulte [convenções de sintaxe do Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -32,7 +37,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
     [-f status_interval]  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  **-m** *controller*  
  Especifica o nome do computador do controlador. Você pode usar "`localhost`" ou "`.`" para fazer referência ao computador local.  
   
@@ -81,7 +86,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  Se **-f** não for especificado, o intervalo padrão será de 30 segundos.  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  Neste exemplo, a reprodução distribuída deriva muito de seu comportamento a partir de um arquivo de configuração de reprodução modificado, `DReplay.exe.replay.config`.  
   
 -   O parâmetro **-m** especifica que um computador denominado `controller1` atua como o controlador. O nome do computador deve ser especificado quando o serviço de controlador é executado em um computador diferente.  
@@ -148,14 +153,14 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
 </Options>  
 ```  
   
-## Permissões  
+## <a name="permissions"></a>Permissões  
  Você deve executar a ferramenta de administração como um usuário interativo, um usuário local ou uma conta de usuário de domínio. Para usar uma conta de usuário local, a ferramenta de administração e o controlador devem estar em execução no mesmo computador.  
   
  Para saber mais, confira [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Reproduzir dados de rastreamento](../../tools/distributed-replay/replay-trace-data.md)   
- [Revisar os resultados da reprodução](../../tools/distributed-replay/review-the-replay-results.md)   
+ [Examine os resultados da reprodução](../../tools/distributed-replay/review-the-replay-results.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)   
  [Fórum do SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   

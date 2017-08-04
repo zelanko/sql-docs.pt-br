@@ -1,22 +1,27 @@
 ---
-title: "Configurar Distributed Replay | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurar Distributed Replay | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7d48bd22d10dfd3b33a61382ad3581123524924f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar Distributed Replay
+# <a name="configure-distributed-replay"></a>Configurar Distributed Replay
   Os detalhes de configuração do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay são especificados em arquivos XML no controlador do Distributed Replay, nos clientes e onde a ferramenta de administração estiver instalada. Esses arquivos incluem o seguinte:  
   
 -   [Arquivo de configuração do controlador](#DReplayController)  
@@ -30,7 +35,7 @@ caps.handback.revision: 43
 ##  <a name="DReplayController"></a> Arquivo de configuração do controlador: DReplayController.config  
  Quando o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller é iniciado, ele carrega o nível de log do arquivo de configuração do controlador, `DReplayController.config`. Esse arquivo está localizado na pasta em que você instalou o serviço de controlador de reprodução distribuída:  
   
- **\<controller installation path>\DReplayController.config**  
+ **\<caminho de instalação > \DReplayController.config**  
   
  O nível de log especificado pelo arquivo de configuração do controlador inclui o seguinte:  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 43
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Nível de log|`<LoggingLevel>`|Especifica o nível de log do serviço de controlador.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|Nenhum. Por padrão, o valor é `CRITICAL`.|  
   
-### Exemplo  
+### <a name="example"></a>Exemplo  
  Este exemplo mostra um arquivo de configuração do controlador que foi modificado para suprimir as entradas de log `INFORMATION` e `WARNING` .  
   
 ```  
@@ -51,7 +56,7 @@ caps.handback.revision: 43
 ##  <a name="DReplayClient"></a> Arquivo de configuração de cliente: DReplayClient.config  
  Quando o serviço cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay é iniciado, ele carrega as definições de configuração do arquivo de configuração de cliente, `DReplayClient.config`. Esse arquivo está localizado em cada cliente, na pasta em que você instalou o serviço de cliente de reprodução distribuída:  
   
- **\<client installation path>\DReplayClient.config**  
+ **\<caminho de instalação do cliente > \DReplayClient.config**  
   
  As configurações especificadas pelo arquivo de configuração de cliente incluem o seguinte:  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 43
 |Diretório de resultado do cliente|`<ResultDirectory>`|É o caminho local no cliente onde o arquivo de rastreamento de resultado da atividade de reprodução (do cliente) é salvo.<br /><br /> Os arquivos nesse diretório são substituídos na próxima reprodução.|Um nome de diretório completo, iniciando com a letra da unidade.|Nenhum. Se nenhum valor for especificado, o arquivo de rastreamento de resultado será salvo no mesmo local que o arquivo de configuração de cliente padrão. Se for especificado um valor e essa pasta não existir no cliente, o serviço do cliente não será iniciado.|  
 |Nível de log|`<LoggingLevel>`|É o nível de log do serviço do cliente.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|Nenhum. Por padrão, o valor é `CRITICAL`.|  
   
-### Exemplo  
+### <a name="example"></a>Exemplo  
  Este exemplo mostra um arquivo de configuração de cliente que foi modificado para especificar que o serviço de controlador está em execução em um computador diferente, um computador denominado `Controller1`. Os elementos `WorkingDirectory` e `ResultDirectory` foram configurados para usar as pastas `c:\ClientWorkingDir` e `c:\ResultTraceDir`, respectivamente. O nível de log foi alterado do valor padrão para suprimir as entradas de log `INFORMATION` e `WARNING` .  
   
 ```  
@@ -78,11 +83,11 @@ caps.handback.revision: 43
 ##  <a name="PreprocessConfig"></a> Arquivo de configuração de pré-processamento: DReplay.exe.preprocess.config  
  Quando você usar a ferramenta de administração para iniciar o estágio de pré-processamento, ela carregará as configurações de pré-processamento do arquivo de configuração de pré-processamento, `DReplay.exe.preprocess.config`.  
   
- Use o arquivo de configuração padrão ou use o parâmetro **-c** da ferramenta de administração para especificar o local de um arquivo de configuração de pré-processamento modificado. Para obter mais informações sobre como usar a opção de pré-processamento da ferramenta de administração, veja [Opção de Pré-processamento &#40;Ferramenta de Administração do Distributed Replay&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
+ Use o arquivo de configuração padrão ou use o parâmetro **-c** da ferramenta de administração para especificar o local de um arquivo de configuração de pré-processamento modificado. Para obter mais informações sobre como usar a opção de pré-processamento da ferramenta de administração, consulte [opção de pré-processamento &#40; ferramenta de administração do Distributed Replay &#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
   
  O arquivo de configuração de pré-processamento padrão está localizado na pasta em que você instalou a ferramenta de administração:  
   
- **\<administration tool installation path>\DReplayAdmin\DReplay.exe.preprocess.config**  
+ **\<caminho de instalação da ferramenta de Administração > \DReplayAdmin\DReplay.exe.preprocess.config**  
   
  As definições de configuração de pré-processamento são especificadas em elementos XML que são filhos do elemento `<PreprocessModifiers>` no arquivo de configuração de pré-processamento. Essas configurações incluem:  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 43
 |Incluir atividades de sessão de sistema|`<IncSystemSession>`|Indica se as atividades de sessão de sistema durante a captura serão incluídas durante a reprodução.|`Yes` &#124; `No`|Nenhum. Por padrão, o valor é `No`.|  
 |Tempo ocioso máximo|`<MaxIdleTime>`|Arredonda o tempo ocioso para um número absoluto (em segundos).|Um inteiro que é >= -1.<br /><br /> `-1` indica que não houve alteração do valor original no arquivo de rastreamento original.<br /><br /> `0` indica que há alguma atividade ocorrendo em um determinado momento.|Nenhum. Por padrão, o valor é `-1`.|  
   
-### Exemplo  
+### <a name="example"></a>Exemplo  
  O arquivo de configuração de pré-processamento padrão:  
   
 ```  
@@ -107,15 +112,15 @@ caps.handback.revision: 43
 ##  <a name="ReplayConfig"></a> Arquivo de configuração de reprodução: DReplay.exe.replay.config  
  Quando você usar a ferramenta de administração para iniciar o estágio de reprodução do evento, ela carregará as configurações de reprodução do arquivo de configuração de reprodução, `DReplay.exe.replay.config`.  
   
- Use o arquivo de configuração padrão ou use o parâmetro **-c** da ferramenta de administração para especificar o local de um arquivo de configuração de reprodução modificado. Para obter mais informações sobre como usar a opção de reprodução da ferramenta de administração, veja [Opção de Reprodução &#40;Ferramenta de administração do Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
+ Use o arquivo de configuração padrão ou use o parâmetro **-c** da ferramenta de administração para especificar o local de um arquivo de configuração de reprodução modificado. Para obter mais informações sobre como usar a opção de reprodução da ferramenta de administração, consulte [opção reprodução &#40; ferramenta de administração Distributed Replay &#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   
  O arquivo de configuração de reprodução padrão está localizado na pasta em que você instalou a ferramenta de administração:  
   
- **\<administration tool installation path>\DReplayAdmin\DReplay.exe.replay.config**  
+ **\<caminho de instalação da ferramenta de Administração > \DReplayAdmin\DReplay.exe.replay.config**  
   
  As definições de configuração de reprodução são especificadas em elementos XML que são filhos dos elementos `<ReplayOptions>` e `<OutputOptions>` do arquivo de configuração de reprodução.  
   
-### Elemento \<ReplayOptions>  
+### <a name="replayoptions-element"></a>\<ReplayOptions > elemento  
  As configurações especificadas pelo arquivo de configuração de reprodução no elemento `<ReplayOptions>` incluem o seguinte:  
   
 |Configuração|Elemento XML|Descrição|Valores permitidos|Required|  
@@ -130,7 +135,7 @@ caps.handback.revision: 43
 |Tempo limite de consulta|`<QueryTimeout>`|Especifica o valor do tempo limite de consulta, em segundos. Esse valor estará em vigor somente até que a primeira linha tenha sido retornada.|Inteiro >= 1<br /><br /> (`-1` para desabilitar)|Nenhum. Por padrão, o valor é `3600`.|  
 |Threads por cliente|`<ThreadsPerClient>`|Especifica o número de threads de reprodução que devem ser usados para cada cliente de reprodução.|Um inteiro entre `1` e `512`.|Nenhum. Se não especificado, o Distributed Replay usará o valor `255`.|  
   
-### Elemento \<OutputOptions>  
+### <a name="outputoptions-element"></a>\<OutputOptions > elemento  
  As configurações especificadas pelo arquivo de configuração de reprodução no elemento `<OutputOptions>` incluem o seguinte:  
   
 |Configuração|Elemento XML|Descrição|Valores permitidos|Required|  
@@ -138,7 +143,7 @@ caps.handback.revision: 43
 |Gravar contagem de linhas|`<RecordRowCount>`|Indica se a contagem de linhas de cada conjunto de resultados deve ser gravada.|`Yes` &#124; `No`|Nenhum. Por padrão, o valor é `Yes`.|  
 |Gravar conjunto de resultados|`<RecordResultSet>`|Indica se o conteúdo de todos os conjuntos de resultados deve ser gravado.|`Yes` &#124; `No`|Nenhum. Por padrão, o valor é `No`.|  
   
-### Exemplo  
+### <a name="example"></a>Exemplo  
  O arquivo de configuração de reprodução padrão:  
   
 ```  
@@ -162,7 +167,7 @@ caps.handback.revision: 43
 </Options>  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Fórum do SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   

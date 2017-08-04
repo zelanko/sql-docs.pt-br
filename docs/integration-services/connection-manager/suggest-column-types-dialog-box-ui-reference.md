@@ -1,29 +1,34 @@
 ---
-title: "Refer&#234;ncia da interface do usu&#225;rio da caixa de di&#225;logo Sugerir Tipos de Coluna | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.suggestdatatypes.f1"
+title: "Referência de interface do usuário de caixa de diálogo de tipos de coluna de sugerir | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.suggestdatatypes.f1
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb4d89741a2bbdbd4e93d983a7cc49b358df8d63
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Refer&#234;ncia da interface do usu&#225;rio da caixa de di&#225;logo Sugerir Tipos de Coluna
+# <a name="suggest-column-types-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Sugerir Tipos de Coluna
   Use a caixa de diálogo **Sugerir Tipos de Coluna** para identificar o tipo de dados e o tamanho das colunas em um Gerenciador de Conexões de Arquivos Simples, com base em uma amostragem do conteúdo dos arquivos.  
   
  Para saber mais sobre os tipos de dados usados pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Tipos de dados do Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Número de linhas**  
  Digite ou selecione o número de linhas na amostra que o algoritmo usa.  
   
@@ -42,8 +47,8 @@ caps.handback.revision: 25
  **Porcentagem de enchimento**  
  Digite ou selecione a porcentagem pela qual aumentar o tamanho de coluna para tipos de dados de caracteres. A porcentagem deve ser um inteiro.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Gerenciador de conexões de arquivos simples](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+ [Gerenciador de Conexão de arquivo simples](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   

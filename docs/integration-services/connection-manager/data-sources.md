@@ -1,25 +1,30 @@
 ---
-title: "Fontes de Dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "fontes de dados [Integration Services], sobre fontes de dados"
+title: Fontes de dados | Microsoft Docs
+ms.custom: 
+ms.date: 08/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3e5e277b421f98dbabedcb4df80ee902ea87fbd1
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Fontes de Dados
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclui um objeto de tempo de design que você pode usar em pacotes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]: a fonte de dados.  
+# <a name="data-sources"></a>Fontes de Dados
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclui um objeto de tempo de design que você pode usar em pacotes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : a fonte de dados.  
   
  Um objeto de fonte de dados é uma referência para uma conexão e, no mínimo, inclui uma cadeia de caracteres de conexão e um identificador de fonte de dados. Ele também pode incluir metadados adicionais como uma descrição, um nome, um nome de usuário e uma senha.  
   
@@ -33,8 +38,8 @@ caps.handback.revision: 41
   
 -   Uma fonte de dados oferece sincronização entre o objeto da fonte de dados e suas referências de pacote. Se a fonte de dados e os pacotes que a referenciam residem no mesmo projeto, a propriedade da cadeia de caracteres das referências de conexão da fonte de dados é automaticamente atualizada quando a fonte de dados é alterada.  
   
-## Referenciar fontes de dados  
- Para adicionar um objeto de fonte de dados a um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], clique com o botão direito do mouse na pasta **Fontes de Dados** no **Gerenciador de Soluções** e clique em **Nova Fonte de Dados**. O item é adicionado à pasta **Fontes de Dados** . Caso deseje usar objetos de fonte de dados criados em outros projetos, você terá que adicioná-los primeiro ao projeto.  
+## <a name="reference-data-sources"></a>Referenciar fontes de dados  
+ Para adicionar um objeto de fonte de dados a um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , clique com o botão direito do mouse na pasta **Fontes de Dados** no **Gerenciador de Soluções** e clique em **Nova Fonte de Dados**. O item é adicionado à pasta **Fontes de Dados** . Caso deseje usar objetos de fonte de dados criados em outros projetos, você terá que adicioná-los primeiro ao projeto.  
   
  Você usa o objeto da fonte de dados em um pacote adicionando um gerenciador de conexões que referencie o objeto da fonte de dados para o pacote. Você pode adicioná-lo ao pacote antes de construir o fluxo de controle do pacote e os fluxos de dados, ou como uma etapa na construção do fluxo de controle ou fluxo de dados.  
   
@@ -43,3 +48,4 @@ caps.handback.revision: 41
  Não há nenhuma dependência entre uma fonte de dados e os gerenciadores de conexões que fazem referência a ela. Se uma fonte de dados não faz mais parte do projeto, o pacote continua a ser válido, pois informações sobre a fonte de dados, tais como o tipo da conexão e a cadeia de caracteres da conexão, são inclusas na definição do pacote.  
   
   
+

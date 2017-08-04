@@ -1,36 +1,41 @@
 ---
-title: "Criar um Administrador de Entidade (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Criar um administrador de entidade (Master Data Services) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e26187fb7d92fcbae23646b92d6cf02ee5511f5e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Criar um Administrador de Entidade (Master Data Services)
+# <a name="create-an-entity-administrator-master-data-services"></a>Criar um Administrador de Entidade (Master Data Services)
   Em [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um administrador de entidade quando você quiser que um grupo ou usuário tenha todas as permissões para todos os objetos em uma ou mais entidades ou tenha permissão para aprovar os conjuntos de alterações pendentes.  
   
 > [!TIP]  
 >  Para simplificar a administração, crie um grupo local ou do Windows e configure-o como um administrador de entidade. Isso lhe permitirá adicionar e remover usuários do grupo sem acessar o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Permissões de Usuário e Grupo** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-## Para criar um Administrador de Entidade  
+## <a name="to-create-an-entity-administrator"></a>Para criar um Administrador de Entidade  
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Permissões de Usuário e Grupo**.  
   
@@ -44,11 +49,11 @@ caps.handback.revision: 5
   
 6.  Clique em **Salvar**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
- [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Atribuir permissões de membro de hierarquia &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [Permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Permissões de membro de hierarquia &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [Atribuir permissões de objeto modelo &#40; Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [Atribuir permissões de membro de hierarquia &#40; Master Data Services &#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [Permissões de objeto modelo &#40; Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Permissões de membro de hierarquia &#40; Master Data Services &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

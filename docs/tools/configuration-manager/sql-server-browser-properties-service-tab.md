@@ -1,22 +1,27 @@
 ---
-title: "Propriedades do Navegador do SQL Server (guia Servi&#231;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Propriedades do navegador do SQL Server (guia serviço) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2013060b53bfb3626d4623b80387904e8ccb15c3
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriedades do Navegador do SQL Server (guia Servi&#231;o)
+# <a name="sql-server-browser-properties-service-tab"></a>Propriedades do Navegador do SQL Server (guia Serviço)
   O programa Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado como um serviço no servidor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Escuta as solicitações de entrada de recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece informações sobre as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador.  
   
  Use a guia **Serviço** na caixa de diálogo **Propriedades do Navegador do SQL Server** para exibir as opções a seguir. Todas as propriedades, exceto **Modo Inicial** , são somente leitura.  

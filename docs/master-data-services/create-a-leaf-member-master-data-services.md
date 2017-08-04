@@ -1,32 +1,37 @@
 ---
-title: "Criar um membro folha (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "membros folha [Master Data Services], criando"
-  - "criando membros folha [Master Data Services]"
-  - "membros [Master Data Services], criando membros folha"
+title: Criar um membro folha (Master Data Services) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- leaf members [Master Data Services], creating
+- creating leaf members [Master Data Services]
+- members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3745604313dde3eda55c3d0f5d8f634bf7187440
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Criar um membro folha (Master Data Services)
+# <a name="create-a-leaf-member-master-data-services"></a>Criar um membro folha (Master Data Services)
   Em [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], crie um membro folha quando quiser adicionar dados mestres ao sistema. Se você quiser adicionar dados em massa, use tabelas de preparo. Para obter mais informações, consulte [Importar dados de tabelas &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   
  Você também pode usar o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] para importar os dados.  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** .  
@@ -35,7 +40,7 @@ caps.handback.revision: 14
   
      Para obter mais informações, consulte [Segurança &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md).  
   
-### Para criar um membro folha  
+### <a name="to-create-a-leaf-member"></a>Para criar um membro folha  
   
 1.  Na página inicial do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
   
@@ -57,8 +62,8 @@ caps.handback.revision: 14
   
 8.  Clique em **OK**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criar um membro consolidado &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)   
- [Membros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
+ [Membros &#40; Master Data Services &#41;](../master-data-services/members-master-data-services.md)  
   
   

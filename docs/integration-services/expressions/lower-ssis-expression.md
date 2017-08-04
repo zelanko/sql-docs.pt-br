@@ -1,49 +1,54 @@
 ---
-title: "LOWER (Express&#227;o SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "convertendo caracteres maiúsculos em minúsculos"
-  - "função LOWER"
-  - "caracteres maiúsculos [Integration Services]"
-  - "caracteres minúsculos"
+title: "LOWER (expressão SSIS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- converting uppercase to lowercase
+- LOWER function
+- uppercase characters [Integration Services]
+- lowercase characters
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1d8887035d26ba829dae2153e4e9261836ada70d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# LOWER (Express&#227;o SSIS)
+# <a name="lower-ssis-expression"></a>LOWER (Expressão SSIS)
   Retorna uma expressão character depois de converter caracteres maiúsculos em minúsculos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 LOWER(character_expression)  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *character_expression*  
  É uma expressão de caractere para converter para caracteres minúsculos.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  LOWER só funciona com o tipo de dados DT_WSTR. Um argumento *character_expression* que é um literal de cadeia de caracteres ou uma coluna de dados com o tipo de dados DT_STR é implicitamente convertido para o tipo de dados DT_WSTR antes de LOWER executar sua operação. Outros tipos de dados devem ser explicitamente convertidos para o tipo de dados DT_WSTR. Para obter mais informações, consulte [Tipos de dados do Integration Services](../../integration-services/data-flow/integration-services-data-types.md) e [Cast &#40;Expressão SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
  LOWER retornará um resultado nulo se o argumento for nulo.  
   
-## Exemplos de expressões  
+## <a name="expression-examples"></a>Exemplos de expressões  
  Este exemplo converte um literal de cadeia de caracteres para caracteres minúsculos. O resultado de retorno é "Nova Iorque".  
   
 ```  
@@ -62,8 +67,8 @@ LOWER(SUBSTRING(Color, 2, 15))
 LOWER(@CityName)  
 ```  
   
-## Consulte também  
- [UPPER &#40;Expressão do SSIS&#41;](../../integration-services/expressions/upper-ssis-expression.md)   
- [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Consulte também  
+ [SUPERIOR &#40; Expressão do SSIS &#41;](../../integration-services/expressions/upper-ssis-expression.md)   
+ [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

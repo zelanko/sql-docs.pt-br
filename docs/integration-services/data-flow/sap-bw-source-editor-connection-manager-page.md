@@ -1,24 +1,29 @@
 ---
-title: "Editor de Origem SAP BW (p&#225;gina Gerenciador de Conex&#245;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwsource.connection.f1"
+title: "Editor de origem do SAP BW (página Gerenciador de Conexão) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6f82377abc5fcbbcabed270e8181b1e7bae7b062
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de Origem SAP BW (p&#225;gina Gerenciador de Conex&#245;es)
+# <a name="sap-bw-source-editor-connection-manager-page"></a>Editor de Origem SAP BW (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem SAP BW** para selecionar o gerenciador de conexões SAP BW para a origem de SAP BW. Nesta página, você também seleciona o modo de execução e os parâmetros para extrair os dados do sistema SAP Netweaver BW.  
   
  Para saber mais sobre o componente de origem do SAP BW do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 para SAP BW, consulte [Origem SAP BW](../../integration-services/data-flow/sap-bw-source.md).  
@@ -33,11 +38,11 @@ caps.handback.revision: 11
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém a origem SAP BW.  
   
-2.  Na guia **Fluxo de Dados**, clique duas vezes na fonte SAP BW.  
+2.  Na guia **Fluxo de Dados** , clique duas vezes na fonte SAP BW.  
   
 3.  No **Editor de Origem SAP BW**, clique em **Gerenciador de Conexões** para abrir a página **Gerenciador de Conexões** do editor.  
   
-## Opções estáticas  
+## <a name="static-options"></a>Opções estáticas  
   
 > [!NOTE]  
 >  Se você não souber todos os valores necessários para configurar a origem, talvez precise perguntar ao administrador do SAP.  
@@ -46,7 +51,7 @@ caps.handback.revision: 11
  Selecione um gerenciador de conexões existente na lista ou crie uma nova conexão clicando em **Nova**.  
   
  **Nova**  
- Crie um novo gerenciador de conexões, usando a caixa de diálogo **Gerenciador de Conexões SAP BW**.  
+ Crie um novo gerenciador de conexões, usando a caixa de diálogo **Gerenciador de Conexões SAP BW** .  
   
  Para obter mais informações sobre essa caixa de diálogo, consulte [SAP BW Connection Manager Editor](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md).  
   
@@ -70,14 +75,14 @@ caps.handback.revision: 11
   
  Quando você clica em **Visualizar**, também abre a caixa de diálogo **Log de Solicitações** . Você pode usar essa caixa de diálogo para exibir os eventos que são registrados em log durante a solicitação que é feita no sistema SAP Netweaver BW para dados de exemplo. Para obter mais informações, consulte [Request Log](../../integration-services/data-flow/request-log.md).  
   
-## Opções dinâmicas do modo de execução  
+## <a name="execution-mode-dynamic-options"></a>Opções dinâmicas do modo de execução  
   
 > [!NOTE]  
 >  Se você não souber todos os valores necessários para configurar a origem, talvez precise perguntar ao administrador do SAP.  
   
-### Modo de execução = P - Disparar Cadeia de Processo  
+### <a name="execution-mode--p---trigger-process-chain"></a>Modo de execução = P - Disparar Cadeia de Processo  
   
-#### Opções de destino RFC  
+#### <a name="rfc-destination-options"></a>Opções de destino RFC  
  Você não precisa saber e inserir esses valores com antecedência. Use o botão **Pesquisar** para localizar e selecionar o destino RFC apropriado. Depois de selecionar um destino RFC, o componente insere os valores apropriados para essas opções.  
   
  **Host do gateway**  
@@ -90,20 +95,20 @@ caps.handback.revision: 11
  Insira a ID do programa que está associada ao destino RFC.  
   
  **Pesquisar**  
- Pesquisar o destino RFC usando a caixa de diálogo **Pesquisar Destino RFC**. Para obter mais informações sobre essa caixa de diálogo, consulte [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md).  
+ Pesquisar o destino RFC usando a caixa de diálogo **Pesquisar Destino RFC** . Para obter mais informações sobre essa caixa de diálogo, consulte [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md).  
   
-#### Opções da cadeia do processo  
+#### <a name="process-chain-options"></a>Opções da cadeia do processo  
  Você não precisa saber e inserir esses valores com antecedência. Use o botão **Pesquisar** para localizar e selecionar a cadeia de processo apropriada. Depois de selecionar uma cadeia de processo, o componente insere o valor apropriado para a opção.  
   
  **Cadeia de processo**  
  Digite o nome da cadeia de processo a ser disparada pela origem.  
   
  **Pesquisar**  
- Pesquisar a cadeia de processo usando a caixa de diálogo **Pesquisar Cadeia de Processo**. Para obter mais informações sobre essa caixa de diálogo, consulte [Look Up Process Chain](../../integration-services/data-flow/look-up-process-chain.md).  
+ Pesquisar a cadeia de processo usando a caixa de diálogo **Pesquisar Cadeia de Processo** . Para obter mais informações sobre essa caixa de diálogo, consulte [Look Up Process Chain](../../integration-services/data-flow/look-up-process-chain.md).  
   
-### Modo de execução = A - Aguardar Notificação  
+### <a name="execution-mode--w---wait-for-notify"></a>Modo de execução = A - Aguardar Notificação  
   
-#### Opções de destino RFC  
+#### <a name="rfc-destination-options"></a>Opções de destino RFC  
  Você não precisa saber e inserir esses valores com antecedência. Use o botão **Pesquisar** para localizar e selecionar o destino RFC apropriado. Depois de selecionar um destino RFC, o componente insere os valores apropriados para as opções.  
   
  **Host do gateway**  
@@ -116,16 +121,16 @@ caps.handback.revision: 11
  Insira a ID do programa que está associada ao destino RFC.  
   
  **Pesquisar**  
- Pesquisar o destino RFC usando a caixa de diálogo **Pesquisar Destino RFC**. Para obter mais informações sobre essa caixa de diálogo, consulte [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md).  
+ Pesquisar o destino RFC usando a caixa de diálogo **Pesquisar Destino RFC** . Para obter mais informações sobre essa caixa de diálogo, consulte [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md).  
   
-### Modo de execução = E - Extrair Somente  
+### <a name="execution-mode--e---extract-only"></a>Modo de execução = E - Extrair Somente  
  **Request ID**  
  Insira a ID de solicitação que está associada à extração.  
   
-## Consulte também  
- [Editor de Origem SAP BW &#40;Página Colunas&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [Editor de Origem SAP BW &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [Editor de Origem SAP BW &#40;Página Avançado&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+## <a name="see-also"></a>Consulte também  
+ [Editor de origem do SAP BW &#40; Página colunas &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
+ [Editor de origem do SAP BW &#40; Página de saída de erro &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [Editor de origem do SAP BW &#40; Página Avançado &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Ajuda F1 do Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

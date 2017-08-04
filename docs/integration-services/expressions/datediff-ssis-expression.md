@@ -1,35 +1,40 @@
 ---
-title: "DATEDIFF (Express&#227;o SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "instrução DATEDIFF"
-  - "datas [Integration Services], DATEDIFF"
+title: "DATEDIFF (expressão SSIS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DATEDIFF statement
+- dates [Integration Services], DATEDIFF
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c771f4788199c26fae2cfe46dfd66a18d67fcb6
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# DATEDIFF (Express&#227;o SSIS)
+# <a name="datediff-ssis-expression"></a>DATEDIFF (Expressão SSIS)
   Retorna o número de limites de data e hora entre duas datas especificadas. O parâmetro *datepart* identifica quais limites de data e hora serão comparados.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 DATEDIFF(datepart, startdate, endate)  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *datepart*  
  É o parâmetro que especifica qual parte da data será comparada e para a qual um valor será retornado.  
   
@@ -39,13 +44,13 @@ DATEDIFF(datepart, startdate, endate)
  *endate*  
  É a data de término do intervalo.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  A tabela a seguir lista as partes de data e as abreviações reconhecidas pelo avaliador de expressão.  
   
-|Datepart|Abreviações|  
+|datepart|Abreviações|  
 |--------------|-------------------|  
 |Year|aa, aaaa|  
 |Quarter|qq, q|  
@@ -67,7 +72,7 @@ DATEDIFF(datepart, startdate, endate)
   
  Se a data de término for anterior à data de início, a função retornará um número negativo. Se as datas de início e término forem iguais ou estiverem dentro do mesmo intervalo, a função retornará zero.  
   
-## Exemplos de expressões SSIS  
+## <a name="ssis-expression-examples"></a>Exemplos de expressões SSIS  
  Este exemplo calcula o número de dias entre dois literals de data. Se a data estiver no formato "mm/dd/aaaa", a função retornará 7.  
   
 ```  
@@ -86,12 +91,12 @@ DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
-## Consulte também  
- [DATEADD &#40;Expressão do SSIS&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [DATEPART &#40;Expressão do SSIS&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
- [DAY &#40;Expressão do SSIS&#41;](../../integration-services/expressions/day-ssis-expression.md)   
- [MONTH &#40;Expressão do SSIS&#41;](../../integration-services/expressions/month-ssis-expression.md)   
- [YEAR &#40;Expressão do SSIS&#41;](../../integration-services/expressions/year-ssis-expression.md)   
- [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Consulte também  
+ [DATEADD &#40; Expressão do SSIS &#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
+ [DATEPART &#40; Expressão do SSIS &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [DIA &#40; Expressão do SSIS &#41;](../../integration-services/expressions/day-ssis-expression.md)   
+ [MÊS &#40; Expressão do SSIS &#41;](../../integration-services/expressions/month-ssis-expression.md)   
+ [ANO &#40; Expressão do SSIS &#41;](../../integration-services/expressions/year-ssis-expression.md)   
+ [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

@@ -1,30 +1,35 @@
 ---
-title: "Tarefa Enviar Email | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sendmailtask.f1"
-helpviewer_keywords: 
-  - "email [Integration Services]"
-  - "Tarefa Enviar Email"
-  - "email [Integration Services]"
-  - "mensagens [Integration Services]"
-  - "enviando mensagens"
+title: Tarefa enviar email | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sendmailtask.f1
+helpviewer_keywords:
+- mail [Integration Services]
+- Send Mail task
+- e-mail [Integration Services]
+- messages [Integration Services]
+- sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: fd6f7a19c1b553ee06013a4a24fbbf26a759a6cd
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Tarefa Enviar Email
+# <a name="send-mail-task"></a>Tarefa Enviar Email
   A tarefa Enviar Email envia uma mensagem de email. Usando a tarefa Enviar Email, um pacote pode enviar mensagens se as tarefas no fluxo de trabalho do pacote tiverem êxito ou falharem ou enviar mensagens em resposta a um evento que o pacote ativa em tempo de execução. Por exemplo, a tarefa pode notificar um administrador de banco de dados sobre o êxito ou a falha da tarefa Fazer Backup do Banco de Dados.  
   
  Você pode configurar a tarefa Enviar Email das seguintes formas:  
@@ -54,8 +59,8 @@ caps.handback.revision: 51
   
  A tarefa usa um gerenciador de conexões SMTP para se conectar a um servidor de email. Para obter mais informações, consulte [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md).  
   
-## Mensagens de log personalizadas disponíveis na tarefa Enviar Email  
- A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Enviar Email. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>Mensagens de log personalizadas disponíveis na tarefa Enviar Email  
+ A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Enviar Email. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrada de log|Description|  
 |---------------|-----------------|  
@@ -63,7 +68,7 @@ caps.handback.revision: 51
 |**SendMailTaskEnd**|Indica que a tarefa terminou de enviar uma mensagem de email.|  
 |**SendMailTaskInfo**|Fornece informações descritivas sobre a tarefa.|  
   
-## Configurando a tarefa Enviar Email  
+## <a name="configuring-the-send-mail-task"></a>Configurando a tarefa Enviar Email  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
  Para obter informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
@@ -78,14 +83,14 @@ caps.handback.revision: 51
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
-## Tarefas relacionadas  
- Para obter informações sobre como definir essas propriedades no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)], clique em [Definir as propriedades de uma tarefa ou de um contêiner](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md).  
+## <a name="related-tasks"></a>Tarefas relacionadas  
+ Para obter informações sobre como definir essas propriedades no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , clique em [Definir as propriedades de uma tarefa ou de um contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
   
--   Artigo técnico sobre [Como enviar email com notificação de entrega em C#](http://go.microsoft.com/fwlink/?LinkId=237625) no site shareourideas.com  
+-   Artigo técnico sobre [Como enviar email com notificação de entrega em C#](http://go.microsoft.com/fwlink/?LinkId=237625)no site shareourideas.com  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
   

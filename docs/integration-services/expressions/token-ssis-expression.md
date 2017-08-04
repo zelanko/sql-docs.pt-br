@@ -1,31 +1,36 @@
 ---
-title: "TOKEN (express&#227;o SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "TOKEN (expressão SSIS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff578d1f2ba584c64e471fa9514c6fa76e581d8e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# TOKEN (express&#227;o SSIS)
+# <a name="token--ssis-expression"></a>TOKEN (expressão SSIS)
   Retorna um token (subcadeia de caracteres) de uma cadeia de caracteres com base nos delimitadores especificados, que separam os tokens na cadeia de caracteres, e o número do token que denota qual token deve ser retornado.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 TOKEN(character_expression, delimiter_string, occurrence)  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *character_expression*  
  Uma cadeia de caracteres que contém tokens separados por delimitadores.  
   
@@ -35,17 +40,17 @@ TOKEN(character_expression, delimiter_string, occurrence)
  *ocorrência*  
  Um inteiro assinado ou não assinado que especifica o token a ser retornado. Por exemplo, se você especificar 3 como um valor para esse parâmetro, o terceiro token da cadeia de caracteres será retornado.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## Comentários  
- Essa função divide a cadeia de caracteres <character_expression> em um conjunto de tokens separados pelos delimitadores especificados na <delimiter_string> e retorna o enésimo token, em que N é o número de ocorrência do token especificado pelo parâmetro \<occurrence>. Consulte a seção Exemplos para obter os usos dessa função.  
+## <a name="remarks"></a>Comentários  
+ Essa função divide a cadeia de caracteres < character_expression > em um conjunto de tokens separados pelos delimitadores especificados na < delimiter_string > e, em seguida, retorna o enésimo token onde N é o número de ocorrência do token especificado pelo \<ocorrência > parâmetro. Consulte a seção Exemplos para obter os usos dessa função.  
   
  Os comentários a seguir se aplicam à função TOKEN:  
   
 -   A cadeia de caracteres delimitadores pode conter um ou mais caracteres delimitadores.  
   
--   Se o valor do parâmetro \<occurrence> for mais alto que o número total de tokens na cadeia de caracteres, a função retornará NULL.  
+-   Se o valor de \<ocorrência > parâmetro for maior do que o número total de tokens na cadeia de caracteres, a função retornará NULL.  
   
 -   Delimitadores à esquerda são ignorados.  
   
@@ -55,7 +60,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
   
 -   É possível usar variáveis e colunas como valores de todos os argumentos da expressão.  
   
-## Exemplos de expressões  
+## <a name="expression-examples"></a>Exemplos de expressões  
  No exemplo a seguir, a função TOKEN retorna "a". A cadeia de caracteres "a little white dog" tem 4 tokens "a", "little", "white", "dog" separadas pelo delimitador " " (caractere de espaço). O segundo argumento, uma cadeia de caracteres delimitadora, especifica apenas um delimitador, o caractere de espaço, a ser usado na divisão da cadeia de caracteres de entrada em tokens. O último argumento, 1, especifica o primeiro token a ser retornado. O primeiro token é "a" nesta cadeia de caracteres de exemplo.  
   
 ```  
@@ -98,7 +103,7 @@ TOKEN("2009/01/01", "/"), 1
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  
 ```  
   
-## Consulte também  
- [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Consulte também  
+ [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

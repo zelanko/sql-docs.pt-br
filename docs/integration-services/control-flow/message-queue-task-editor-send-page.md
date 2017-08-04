@@ -1,31 +1,36 @@
 ---
-title: "Editor da Tarefa Fila de Mensagens (p&#225;gina Enviar) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.msgqueuetask.send.f1"
-helpviewer_keywords: 
-  - "Editor da Tarefa Fila de Mensagens"
+title: "Editor de tarefa de fila de mensagens (página Enviar) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.msgqueuetask.send.f1
+helpviewer_keywords:
+- Message Queue Task Editor
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0914b6ab2222fa91d7db229970b081d4a43314d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor da Tarefa Fila de Mensagens (p&#225;gina Enviar)
+# <a name="message-queue-task-editor-send-page"></a>Editor da Tarefa Fila de Mensagens (página Enviar)
   Use a página **Enviar** da caixa de diálogo **Editor da Tarefa Fila de Mensagens** para configurar uma tarefa de Fila de Mensagens para enviar mensagens de um pacote do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Para obter informações sobre essa tarefa, consulte [Message Queue Task](../../integration-services/control-flow/message-queue-task.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **UseEncryption**  
  Indique se a mensagem deve ser criptografada. O padrão é **False**.  
   
@@ -47,26 +52,26 @@ caps.handback.revision: 37
 |**Mensagem de variável**|A mensagem é armazenada em uma variável. Selecionar este valor faz com que seja exibida a opção dinâmica **VariableMessage**.|  
 |**Mensagem de cadeia de caracteres**|A mensagem é armazenada em uma tarefa Fila de Mensagens. Selecionar este valor faz com que seja exibida a opção dinâmica **StringMessage**.|  
   
-## Opções dinâmicas de MessageType  
+## <a name="messagetype-dynamic-options"></a>Opções dinâmicas de MessageType  
   
-### MessageType = Mensagem de arquivo de dados  
+### <a name="messagetype--data-file-message"></a>MessageType = Mensagem de arquivo de dados  
  **DataFileMessage**  
  Digite o caminho do arquivo de dados ou clique no botão de reticências **(…)** e localize o arquivo.  
   
-### MessageType = Mensagem de variável  
+### <a name="messagetype--variable-message"></a>MessageType = Mensagem de variável  
  **VariableMessage**  
  Digite os nomes das variáveis ou clique no botão de reticências **(…)** e selecione as variáveis. As variáveis são separadas por vírgulas.  
   
  **Tópicos Relacionados:** Selecionar Variáveis  
   
-### MessageType = Mensagem de cadeia de caracteres  
+### <a name="messagetype--string-message"></a>MessageType = Mensagem de cadeia de caracteres  
  **StringMessage**  
- Digite a mensagem de cadeia de caracteres ou clique no botão de reticências **(...)** e digite a mensagem na caixa de diálogo **Inserir Mensagem de Cadeia de Caracteres**.  
+ Digite a mensagem de cadeia de caracteres ou clique no botão de reticências **(...)** e digite a mensagem na caixa de diálogo **Inserir Mensagem de Cadeia de Caracteres** .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor da Tarefa Fila de Mensagens &#40;Página Geral&#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)   
- [Editor da Tarefa Fila de Mensagens &#40;Página Receber&#41;](../../integration-services/control-flow/message-queue-task-editor-receive-page.md)   
+ [Editor de tarefa da fila de mensagens &#40; Página geral &#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)   
+ [Editor de tarefa da fila de mensagens &#40; Receber página &#41;](../../integration-services/control-flow/message-queue-task-editor-receive-page.md)   
  [Página Expressões](../../integration-services/expressions/expressions-page.md)  
   
   

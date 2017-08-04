@@ -1,30 +1,35 @@
 ---
-title: "Processar inser&#231;&#245;es, atualiza&#231;&#245;es e exclus&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "carga incremental [Integration Services], processando dados"
+title: "Processar inserções, atualizações e exclusões | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: da3350dc91dff2547ca683f8c69a7160640e37da
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Processar inser&#231;&#245;es, atualiza&#231;&#245;es e exclus&#245;es
+# <a name="process-inserts-updates-and-deletes"></a>Processar inserções, atualizações e exclusões
   No fluxo de dados de um pacote do Integration Services, que executa uma carga incremental de dados de alteração, a segunda tarefa serve para separar inserções, atualizações e exclusões. Em seguida, você pode usar comandos apropriados para aplicá-los ao destino.  
   
 > [!NOTE]  
 >  A primeira tarefa na criação do fluxo de dados de um pacote que realize uma carga incremental de dados de alteração é configurar o componente de origem que executa a consulta que recupera os dados de alteração. Para obter mais informações sobre esse componente, consulte [Recuperar e compreender os dados de alteração](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md). Para obter uma descrição do processo geral para criar um pacote que realiza uma carga incremental de dados de alteração, consulte [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
-## Associando valores amigáveis para separar inserções, atualizações e exclusões  
+## <a name="associating-friendly-values-to-separate-inserts-updates-and-deletes"></a>Associando valores amigáveis para separar inserções, atualizações e exclusões  
  Na consulta de exemplo que recupera dados de alteração, a função **cdc.fn_cdc_get_net_changes_<capture_instance>** retorna somente a coluna de metadados chamada **__$operation**. Esta coluna de metadados contém um valor ordinal que indica qual operação causou a alteração.  
   
 > [!NOTE]  
@@ -43,13 +48,13 @@ select
      end as CDC_OPERATION  
 ```  
   
-## Configurando uma transformação de divisão condicional para direcionar inserções, atualizações e exclusões  
+## <a name="configuring-a-conditional-split-transformation-to-direct-inserts-updates-and-deletes"></a>Configurando uma transformação de divisão condicional para direcionar inserções, atualizações e exclusões  
  Para direcionar linhas de dados de alteração para uma de três saídas, a transformação de Divisão Condicional é ideal. A transformação apenas verifica o valor da coluna **CDC_OPERATION** em cada linha e determina se essa alteração foi uma inserção, atualização ou exclusão.  
   
 > [!NOTE]  
->  A coluna de CDC_OPERATION contém um valor da cadeia de caracteres amigável derivado do valor numérico na coluna **__$operation**.  
+>  A coluna de CDC_OPERATION contém um valor da cadeia de caracteres amigável derivado do valor numérico na coluna **__$operation** .  
   
-#### Para dividir inserções, atualizações e exclusões por processamento usando uma transformação de Divisão Condicional  
+#### <a name="to-split-inserts-updates-and-deletes-for-processing-by-using-a-conditional-split-transformation"></a>Para dividir inserções, atualizações e exclusões por processamento usando uma transformação de Divisão Condicional  
   
 1.  Na guia **Fluxo de Dados** , adicione uma transformação de Divisão Condicional.  
   
@@ -63,13 +68,13 @@ select
   
     3.  Digite uma linha com a condição `CDC_OPERATION == "D"` para direcionar as linhas excluídas para a saída para exclusões.  
   
-## Próxima etapa  
+## <a name="next-step"></a>Próxima etapa  
  Após você dividir as linhas por processamento, a próxima etapa é aplicar as alterações ao destino.  
   
  **Próximo tópico:** [Aplicar as alterações ao destino](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Transformação Divisão Condicional](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
- [Dividir um conjunto de dados por meio da transformação Divisão Condicional](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [Dividir um conjunto de dados usando a transformação divisão condicional](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

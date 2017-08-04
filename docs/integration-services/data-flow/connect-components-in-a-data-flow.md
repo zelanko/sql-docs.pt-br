@@ -1,28 +1,42 @@
 ---
-title: "Conectar componentes em um fluxo de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "componentes [Integration Services], conexões"
-  - "conexões [Integration Services], componentes de fluxo de dados"
+title: Conectar componentes em um fluxo de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- components [Integration Services], connections
+- connections [Integration Services], data flow components
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 73a379b190f05f4eedc361b4557afefd700a9664
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Conectar componentes em um fluxo de dados
+# <a name="connect-components-in-a-data-flow"></a>Conectar componentes em um fluxo de dados
   Este procedimento descreve como conectar a saída dos componentes em um fluxo de dados para outros componentes dentro do mesmo fluxo de dados.  
+Você constrói o fluxo de dados em um pacote na superfície de design da guia **Fluxo de Dados** no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Se o fluxo de dados contiver dois componentes de fluxo de dados, você poderá conectá-los vinculando a saída de uma fonte ou transformação à entrada de uma transformação ou destino. O conector entre dois componentes de fluxo de dados é chamado de caminho.  
   
-### Para conectar os componentes em um fluxo de dados  
+ O diagrama a seguir mostra um simples fluxo de dados com um componente de fonte, duas transformações, um componente de destino e os caminhos que os conecta.  
+  
+ ![Data flow](../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
+  
+ Depois de dois componentes terem sido conectados, você pode visualizar os metadados dos dados que se movimentam através do caminho e as propriedades do caminho em **Editor de Caminho de Fluxo de Dados**. Para obter mais informações, consulte [Integration Services Paths](../../integration-services/data-flow/integration-services-paths.md).  
+  
+ Você também pode adicionar os visualizadores de dados aos caminhos. Um visualizador de dados torna possível visualizar os dados que se movem entre os componentes de fluxo de dados quando o pacote é executado.  
+  
+### <a name="connect-components-in-a-data-flow"></a>Conectar componentes em um fluxo de dados  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -39,9 +53,8 @@ caps.handback.revision: 40
   
 6.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## Consulte também  
- [Adicionar ou excluir um componente em um fluxo de dados](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
- [Configurar uma saída de erro em um componente de fluxo de dados](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)   
- [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
+## <a name="see-also"></a>Consulte também  
+ [Adicionar ou excluir um componente de fluxo de dados](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
+ [Depurando o fluxo de dados](../../integration-services/troubleshooting/debugging-data-flow.md) [fluxo de dados](../../integration-services/data-flow/data-flow.md)  
   
   

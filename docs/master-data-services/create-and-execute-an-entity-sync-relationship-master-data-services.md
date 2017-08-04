@@ -1,26 +1,31 @@
 ---
-title: "Criar e executar um relacionamento de sincroniza&#231;&#227;o de entidade (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Criar e executar um relacionamento de sincronização de entidade (Master Data Services) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9efe68604f73df42930c5b3eb348e5c2b3e7965
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Criar e executar um relacionamento de sincroniza&#231;&#227;o de entidade (Master Data Services)
+# <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Criar e executar um relacionamento de sincronização de entidade (Master Data Services)
   A sincronização de entidade é uma sincronização unidirecional e repetível entre versões da entidade. Ela fornece uma maneira de compartilhar dados de entidade entre diferentes modelos.  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
  Pré-requisitos para criar e executar um relacionamento de sincronização de entidade:  
   
 -   Você deve ter permissão para acessar a área funcional Administração do Sistema. Para obter mais informações, consulte [Permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -61,17 +66,17 @@ caps.handback.revision: 6
   
 2.  Na página **Exibição de Modelos** , na barra de menus, aponte para **Gerenciar** e clique em **Sincronização de Entidades**.  
   
-3.  Na página **Manutenção de Sincronização de Entidades**, clique em **Adicionar**. Um painel aparece no lado direito.  
+3.  Na página **Manutenção de Sincronização de Entidades** , clique em **Adicionar**. Um painel aparece no lado direito.  
   
-4.  Na lista de origem **Modelo**, selecione um modelo.  
+4.  Na lista de origem **Modelo** , selecione um modelo.  
   
-5.  Na lista de origem **Versão**, selecione uma versão.  
+5.  Na lista de origem **Versão** , selecione uma versão.  
   
-6.  Na lista de origem **Entidade**, selecione uma entidade.  
+6.  Na lista de origem **Entidade** , selecione uma entidade.  
   
-7.  Na lista de destino **Modelo**, selecione um modelo.  
+7.  Na lista de destino **Modelo** , selecione um modelo.  
   
-8.  Na lista de destino **Versão**, selecione uma versão.  
+8.  Na lista de destino **Versão** , selecione uma versão.  
   
 9. Escolha **Entidade Existente** e selecione uma entidade na lista de entidades para sincronizar uma entidade existente ou escolha **Nova Entidade** e insira o nome da entidade de destino para sincronizar com uma nova entidade  
   
@@ -89,12 +94,12 @@ caps.handback.revision: 6
   
 4.  Clique em **Executar**.  
   
-## Informações de relacionamento de sincronização  
+## <a name="sync-relationship-information"></a>Informações de relacionamento de sincronização  
  Para cada relacionamento de sincronização criado, uma linha com dez colunas é adicionada à grade. A tabela a seguir descreve as colunas.  
   
 |Coluna|Description|  
 |------------|-----------------|  
-|Status|O status de relacionamento da sincronização.<br /><br /> Quando você clica em **Salvar** ou executa uma relação de sincronização, a imagem do ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") é exibida, indicando que a relação de sincronização está atualizando a imagem.<br /><br /> Se houver erros ao criar, editar ou executar uma relação de sincronização, a imagem do ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") será exibida.<br /><br /> Caso contrário, o status será OK e a imagem ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") será exibida.|  
+|Status|O status de relacionamento da sincronização.<br /><br /> Quando você clica em **salvar** ou executar um relacionamento de sincronização, o ![ícone de status de atualização](../master-data-services/media/mds-statusicon-updating.png "ícone de status de atualização") é exibida, indicando que a relação de sincronização está atualizando.<br /><br /> Se houver erros ao criar, editar ou executar um relacionamento de sincronização, o ![ícone de status de erro](../master-data-services/media/mds-statusicon-error.png "ícone de status de erro") imagem é exibida.<br /><br /> Caso contrário, o status é Okey e o ![ícone de status Okey](../master-data-services/media/mds-statusicon-ok.png "ícone de status Okey") imagem é exibida.|  
 |Modelo de origem|O nome do modelo de origem.|  
 |Versão de origem|O nome da versão de origem.|  
 |Entidade de origem|O nome da entidade de origem.|  
@@ -117,7 +122,7 @@ caps.handback.revision: 6
   
 -   **Em**: a data e a hora em que a sincronização foi atualizada pela última vez.  
   
-## Próximas etapas  
+## <a name="next-steps"></a>Próximas etapas  
  [Editar e excluir uma relação de sincronização de entidade &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   
   

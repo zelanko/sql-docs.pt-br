@@ -1,22 +1,27 @@
 ---
-title: "Visualiza&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Visualização | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f51bbd1d818a8ffd20e5124180947846c58f98c3
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Visualiza&#231;&#227;o
+# <a name="preview"></a>Visualização
   Use a caixa de diálogo **Visualizar** para visualizar os dados que a origem do SAP BW extrairá.  
   
 > [!IMPORTANT]  
@@ -34,7 +39,7 @@ caps.handback.revision: 10
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém a origem SAP BW.  
   
-2.  Na guia **Fluxo de Dados**, clique duas vezes na fonte SAP BW.  
+2.  Na guia **Fluxo de Dados** , clique duas vezes na fonte SAP BW.  
   
 3.  No **Editor de Origem SAP BW**, clique em **Gerenciador de Conexões** para abrir a página **Gerenciador de Conexões** do editor.  
   
@@ -45,12 +50,12 @@ caps.handback.revision: 10
     > [!NOTE]  
     >  Clicar em **Visualizar** também abre a caixa de diálogo **Log de Solicitações** . Para obter mais informações sobre essa caixa de diálogo, consulte [Request Log](../../integration-services/data-flow/request-log.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  A caixa de diálogo **Visualizar** exibe as linhas que são solicitadas do sistema SAP Netweaver BW. As colunas que são exibidas são as colunas definidas nos dados da origem.  
   
  Não há nenhuma outra opção nesta caixa de diálogo.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Editor de Origem SAP BW &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Ajuda F1 do Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

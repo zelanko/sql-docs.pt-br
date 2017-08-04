@@ -1,35 +1,40 @@
 ---
-title: "Criar um rastreamento (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rastreamentos [SQL Server], criando"
+title: Criar um rastreamento (SQL Server Profiler) | Microsoft Docs
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0008f30aa031c98e251fd1e4fc764b801a16858
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Criar um rastreamento (SQL Server Profiler)
+# <a name="create-a-trace-sql-server-profiler"></a>Criar um rastreamento (SQL Server Profiler)
   Este tópico descreve como usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para criar um rastreamento.  
   
-### Para criar um rastreamento  
+### <a name="to-create-a-trace"></a>Para criar um rastreamento  
   
 1.  No menu **Arquivo**, clique em **Novo Rastreamento** e conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     É exibida a caixa de diálogo **Propriedades do Rastreamento**.  
+     É exibida a caixa de diálogo **Propriedades do Rastreamento** .  
   
-    > **OBSERVAÇÃO:** a caixa de diálogo **Propriedades do Rastreamento** não será exibida, e o rastreamento será iniciado, se a opção **Iniciar rastreamento imediatamente após estabelecer a conexão** for selecionada. Para desabilitar essa configuração, no menu **Ferramentas* *, clique em **Opções** e desmarque a caixa de seleção Iniciar rastreamento imediatamente após estabelecer a conexão.  
+    > **OBSERVAÇÃO:** a caixa de diálogo **Propriedades do Rastreamento** não será exibida, e o rastreamento será iniciado, se a opção **Iniciar rastreamento imediatamente após estabelecer a conexão** for selecionada. Para desabilitar essa configuração, no **ferramentas* * menu, clique em **opções**e desmarque o iniciar rastreamento imediatamente após estabelecer a caixa de seleção da conexão.  
   
-2.  Na caixa **Nome do rastreamento**, digite um nome para o rastreamento.  
+2.  Na caixa **Nome do rastreamento** , digite um nome para o rastreamento.  
   
 3.  Na lista **Usar o modelo** , selecione um modelo como base para o rastreamento ou **Em branco** , se não quiser usar um modelo.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 28
   
     -   Clique em **Salvar em tabela** para capturar o rastreamento em uma tabela de banco de dados.  
   
-         Opcionalmente, clique em **Definir máximo de linhas** e especifique um valor.  
+         Opcionalmente, clique em **Definir máximo de linhas**e especifique um valor.  
   
     > **CUIDADO!** Quando você não salva os resultados do rastreamento em um arquivo ou tabela, pode exibir o rastreamento enquanto o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] estiver aberto. No entanto, os resultados serão perdidos depois que o rastreamento for interrompido e o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] for fechado. Para evitar perder os resultados do rastreamento dessa forma, clique em **Salvar** no menu **Arquivo** para salvar os resultados antes de fechar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
@@ -51,10 +56,11 @@ caps.handback.revision: 28
   
 7.  Clique em **Executar** para iniciar o rastreamento.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Permissões necessárias para executar o SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [Modelos e permissões do SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [Correlacionar um rastreamento com dados do log de desempenho do Windows &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   
+

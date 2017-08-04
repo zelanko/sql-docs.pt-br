@@ -1,31 +1,34 @@
 ---
-title: "Gerenciador de conex&#245;es do Armazenamento do Azure | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.afpstorageconn.f1"
-  - "sql14.dts.designer.afpstorageconn.f1"
+title: "Gerenciador de Conexão de armazenamento do Azure | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.afpstorageconn.f1
+- sql14.dts.designer.afpstorageconn.f1
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 848b0f0e3e639d31fa739e8d744fc4b80839a5fd
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Gerenciador de conex&#245;es do Armazenamento do Azure
+# <a name="azure-storage-connection-manager"></a>Gerenciador de conexões do Armazenamento do Azure
   O **gerenciador de conexões do Armazenamento do Azure** permite que um pacote SSIS se conecte a uma conta do Armazenamento do Azure usando os valores especificados para as propriedades: Nome da Conta de Armazenamento e Chave de Conta.  
-  
->   [!NOTE] Para garantir que o Gerenciador de Conexões do Armazenamento do Azure e os componentes que o utilizam (isto é, a Fonte, Destino, Tarefa de Upload e Tarefa de Download do Blob) possam se conectar tanto a contas de armazenamento de uso geral quanto a contas de armazenamento de blobs, verifique se você baixou a versão mais recente do Azure Feature Pack [aqui](https://www.microsoft.com/download/details.aspx?id=49492). Para obter mais informações sobre esses dois tipos de contas de armazenamento, consulte [Introdução ao Armazenamento do Microsoft Azure](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#general-purpose-storage-accounts).
-  
- O **gerenciador de conexões do Armazenamento do Azure** é um componente do Feature Pack do SSIS (SQL Server Integration Services) para Azure do SQL Server 2016. Baixe o Feature Pack [daqui](http://go.microsoft.com/fwlink/?LinkID=626967).  
+   
+ O **Gerenciador de conexão de armazenamento do Azure** é um componente do [SQL Server Integration Services (SSIS) Feature Pack para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
   
 1.  Na caixa de diálogo **Adicionar gerenciador de conexões do SSIS** , selecione **AzureStorage**e clique em **Adicionar**.  
   
@@ -42,3 +45,4 @@ caps.handback.revision: 11
 5.  Você pode ver as propriedades do gerenciador de conexões criado na janela **Propriedades** .  
   
   
+

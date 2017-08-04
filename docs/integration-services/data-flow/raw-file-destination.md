@@ -1,30 +1,35 @@
 ---
-title: "Destino do arquivo bruto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rawfiledest.f1"
-helpviewer_keywords: 
-  - "opções de anexo [Integration Services]"
-  - "destinos [Integration Services], Arquivo Bruto"
-  - "dados brutos [Integration Services]"
-  - "gravando dados brutos"
-  - "Destino do Arquivo Bruto"
+title: Destino arquivo bruto | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rawfiledest.f1
+helpviewer_keywords:
+- append options [Integration Services]
+- destinations [Integration Services], Raw File
+- raw data [Integration Services]
+- writing raw data
+- Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a890502e4db72f00d21ed9656441cc27fa5e532d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Destino do arquivo bruto
+# <a name="raw-file-destination"></a>Destino do Arquivo Bruto
   O destino Arquivo Bruto grava dados brutos em um arquivo. Devido ao formato dos dados ser nativo para o destino, os dados não requerem nenhuma tradução e pouca análise. Isso significa que o destino do Arquivo Bruto pode gravar dados mais rápido que outros destinos, tais como o Arquivo Plano e os destinos de OLE DB.  
   
  Além de gravar dados brutos em um arquivo, você também pode usar o destino Arquivo Bruto para gerar um arquivo bruto vazio que contém somente as colunas (arquivo somente de metadados), sem ter que executar o pacote. Use a fonte Arquivo Bruto para recuperar dados brutos que foram escritos previamente pelo destino. Você também pode apontar a fonte Arquivo Bruto para o arquivo somente de metadados.  
@@ -37,7 +42,7 @@ caps.handback.revision: 59
   
 -   Indique se o destino do Arquivo Bruto anexa dados a um arquivo existente que tenha o mesmo nome ou cria um arquivo novo.  
   
- O destino do Arquivo Bruto frequentemente é usado para gravar resultados intermediários de dados parcialmente processados entre as execuções de pacotes. Armazenar dados brutos significa que os dados podem ser lidos rapidamente por uma fonte de Arquivo Bruto e posteriormente ser transformados antes que ele seja carregado em seu destino final. Por exemplo, um pacote poderia ser executado várias vezes e cada vez gravar dados brutos em arquivos. Depois, um pacote diferente pode usar a fonte do Arquivo Bruto para ler a partir de cada arquivo, utilizar uma transformação do Union All para intercalar os dados em um conjunto de dados e então aplicar transformações adicionais que resumam os dados antes de carregá-los em seu destino final, tais como uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ O destino do Arquivo Bruto frequentemente é usado para gravar resultados intermediários de dados parcialmente processados entre as execuções de pacotes. Armazenar dados brutos significa que os dados podem ser lidos rapidamente por uma fonte de Arquivo Bruto e posteriormente ser transformados antes que ele seja carregado em seu destino final. Por exemplo, um pacote poderia ser executado várias vezes e cada vez gravar dados brutos em arquivos. Depois, um pacote diferente pode usar a fonte do Arquivo Bruto para ler a partir de cada arquivo, utilizar uma transformação do Union All para intercalar os dados em um conjunto de dados e então aplicar transformações adicionais que resumam os dados antes de carregá-los em seu destino final, tais como uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  O destino do Arquivo Bruto aceita dados nulos, mas não dados de objeto binário grande (BLOB).  
@@ -47,7 +52,7 @@ caps.handback.revision: 59
   
  Esta fonte tem uma entrada normal. Não dá suporte a uma saída de erro.  
   
-## Opções de acréscimo e arquivo novo  
+## <a name="append-and-new-file-options"></a>Opções de acréscimo e arquivo novo  
  A propriedade WriteOption inclui opções para acrescentar dados a um arquivo existente ou criar um arquivo novo.  
   
  A tabela seguinte descreve as opções disponíveis para a propriedade WriteOption.  
@@ -105,33 +110,33 @@ caps.handback.revision: 59
   
 6.  Substitua RawFile1 por RawFile2.  
   
-### Usando o destino do Arquivo Bruto em um loop  
+### <a name="using-the-raw-file-destination-in-a-loop"></a>Usando o destino do Arquivo Bruto em um loop  
  Se o fluxo de dados que usa o destino do Arquivo Bruto estiver em um loop, talvez você precise criar o arquivo uma vez e, em seguida, acrescentar dados ao arquivo quando o loop se repetir. Para acrescentar dados ao arquivo, os dados que são acrescentados devem corresponder ao formato do arquivo existente.  
   
  Para criar o arquivo na primeira iteração do loop e então acrescentar filas nas iterações subsequentes do loop, você precisa fazer o seguinte na hora do design:  
   
-1.  Defina a propriedade WriteOption como **CreateOnce** ou **CreateAlways** e execute uma iteração do loop. O arquivo é criado. Isto assegura que os metadados de dados acrescentados e o arquivo correspondam.  
+1.  Defina a propriedade WriteOption como **CreateOnce** ou **CreateAlways**e execute uma iteração do loop. O arquivo é criado. Isto assegura que os metadados de dados acrescentados e o arquivo correspondam.  
   
 2.  Redefina a propriedade WriteOption como **Append** e defina a propriedade ValidateExternalMetadata como **False**.  
   
- Se você usar a opção **TruncateAppend** em vez da opção **Append**, truncará filas que foram adicionadas a qualquer iteração anterior e então acrescentará novas filas. Usar a opção **TruncateAppend** também requer que os dados correspondam ao formato do arquivo.  
+ Se você usar a opção **TruncateAppend** em vez da opção **Append** , truncará filas que foram adicionadas a qualquer iteração anterior e então acrescentará novas filas. Usar a opção **TruncateAppend** também requer que os dados correspondam ao formato do arquivo.  
   
-## Configuração do destino Arquivo Bruto  
+## <a name="configuration-of-the-raw-file-destination"></a>Configuração do destino Arquivo Bruto  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](../Topic/Common%20Properties.md)  
+-   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de arquivo bruto](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  Para obter informações sobre como definir as propriedades do componente, consulte [Definir as propriedades de um componente de fluxo de dados](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Conteúdo relacionado  
- Entrada de blog, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx) (Arquivos brutos são incríveis), em sqlservercentral.com.  
+## <a name="related-content"></a>Conteúdo relacionado  
+ Entrada de blog, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)(Arquivos brutos são incríveis), em sqlservercentral.com.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Origem do arquivo bruto](../../integration-services/data-flow/raw-file-source.md)   
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
   

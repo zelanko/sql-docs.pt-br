@@ -1,22 +1,27 @@
 ---
-title: "Revisar os resultados da reprodu&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Examine os resultados da repetição | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b5509f22c53e1c285175969964abc4b977f8d9bc
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Revisar os resultados da reprodu&#231;&#227;o
+# <a name="review-the-replay-results"></a>Revisar os resultados da reprodução
   Depois que o recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay conclui uma reprodução distribuída, a atividade de reprodução para cada cliente pode ser capturada e salva em arquivos de rastreamento de resultado em cada cliente. Para capturar essa atividade, você deve usar o parâmetro **-o** ao executar a ferramenta de administração com a opção **reproduzir**. Para obter mais informações sobre a opção de reprodução, consulte [Opção Reprodução &#40;Ferramenta de administração de reprodução distribuída&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   
  O local onde os arquivos de rastreamento de resultado são armazenados é especificado pelo elemento XML `<ResultDirectory>` no arquivo de configuração de cliente, `DReplayClient.xml`, situado em cada cliente. Os arquivos de rastreamento no diretório de resultados do cliente são substituídos em cada reprodução.  
@@ -25,7 +30,7 @@ caps.handback.revision: 21
   
  Para obter mais informações sobre esses parâmetros de configuração, consulte [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md).  
   
-## Classes de evento capturadas em arquivos de rastreamento de resultado  
+## <a name="event-classes-captured-in-result-trace-files"></a>Classes de evento capturadas em arquivos de rastreamento de resultado  
  A tabela a seguir lista todas as classes de eventos que são capturadas nos dados de rastreamento de resultado.  
   
 |Categoria|Nome de EventClass|Frequência de captura|Ponto de captura|  
@@ -47,12 +52,12 @@ caps.handback.revision: 21
   
 -   Para cada falha ou cancelamento de evento, pode haver vários erros que são gerados.  
   
-## Mapeamento de coluna de classe de evento  
+## <a name="event-class-column-mapping"></a>Mapeamento de coluna de classe de evento  
  As figura a seguir lista as colunas do rastreamento de resultado disponíveis para cada tipo de classe de evento que é capturada durante a reprodução.  
   
- ![Mapeamento de coluna de classe de evento](../../tools/distributed-replay/media/eventclassmappings.gif "Mapeamento de coluna de classe de evento")  
+ ![Event class column mapping](../../tools/distributed-replay/media/eventclassmappings.gif "Event class column mapping")  
   
-## Descrições de coluna para rastreamento de resultado  
+## <a name="column-descriptions-for-result-trace"></a>Descrições de coluna para rastreamento de resultado  
  A tabela a seguir descreve as colunas dos dados de rastreamento de resultado.  
   
 |Nome da coluna de dados|Tipo de Dados|Descrição|ID da coluna|  
@@ -75,10 +80,10 @@ caps.handback.revision: 21
 |ReplayHostName|**nvarchar**|O nome do computador em que o aplicativo cliente está sendo executado durante a reprodução.|16|  
 |ApplicationName|**nvarchar**|O nome do aplicativo cliente que criou a conexão com a conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante a captura.|17|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Requisitos do Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Opções de linha de comando da ferramenta de administração &#40; Distributed Replay Utility &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

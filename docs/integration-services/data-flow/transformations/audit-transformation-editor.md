@@ -1,31 +1,36 @@
 ---
-title: "Editor de Transforma&#231;&#227;o Auditoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.audittransformation.f1"
-helpviewer_keywords: 
-  - "Editor de Transformação Auditoria"
+title: "Editor de transformação auditoria | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.audittransformation.f1
+helpviewer_keywords:
+- Audit Transformation Editor
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c4c3cc4b661c58476a98e3528e5853cf80b9861d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de Transforma&#231;&#227;o Auditoria
-  A opção Auditar Transformação permite ao fluxo de dados de um pacote incluir dados sobre o ambiente em que o pacote é executado. Por exemplo, o nome do pacote, o computador e o operador podem ser adicionados ao fluxo de dados. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui variáveis do sistema que fornecem essas informações.  
+# <a name="audit-transformation-editor"></a>Editor de Transformação Auditoria
+  A opção Auditar Transformação permite ao fluxo de dados de um pacote incluir dados sobre o ambiente em que o pacote é executado. Por exemplo, o nome do pacote, o computador e o operador podem ser adicionados ao fluxo de dados. O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui variáveis do sistema que fornecem essas informações.  
   
  Para saber mais sobre Auditar Transformação, consulte [Audit Transformation](../../../integration-services/data-flow/transformations/audit-transformation.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Nome da coluna de saída**  
  Forneça um nome para a nova coluna de saída que conterá as informações de auditoria.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 13
 |**Nome da tarefa**|Insira o nome da tarefa de Fluxo de Dados com a qual Auditar Transformação está associada.|  
 |**ID da Tarefa**|Insira o GUID que identifica com exclusividade a tarefa de Fluxo de Dados com a qual Auditar Transformação está associada.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)  
   
   

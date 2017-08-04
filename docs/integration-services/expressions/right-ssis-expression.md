@@ -1,44 +1,49 @@
 ---
-title: "RIGHT (Express&#227;o SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "função RIGHT"
+title: "RIGHT (expressão SSIS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b81ead33054642391dcd95d56746a90cf347dcc9
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# RIGHT (Express&#227;o SSIS)
+# <a name="right-ssis-expression"></a>RIGHT (Expressão SSIS)
   Retorna o número especificado de caracteres da parte mais à direita da expressão character especificada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 RIGHT(character_expression,integer_expression)  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *character_expression*  
  É uma expressão de caractere da qual extrair caracteres.  
   
  *integer_expression*  
  É uma expressão de inteiro que indica o número de caracteres retornados.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Se *integer_expression* for maior que o comprimento de *character_expression*, a função retornará *character_expression*.  
   
  Se *integer_expression* for zero, a função retornará uma cadeia de comprimento zero.  
@@ -51,7 +56,7 @@ RIGHT(character_expression,integer_expression)
   
  RIGHT retornará um resultado nulo se o argumento for nulo.  
   
-## Exemplos de expressões  
+## <a name="expression-examples"></a>Exemplos de expressões  
  O exemplo a seguir usa um literal de cadeia de caracteres. O resultado de retorno é `"Bike"`.  
   
 ```  
@@ -70,8 +75,8 @@ RIGHT(Name, @Times)
 RIGHT(Name, (DT_I2)@Times))  
 ```  
   
-## Consulte também  
- [LEFT &#40;Expressão SSIS&#41;](../../integration-services/expressions/left-ssis-expression.md)   
- [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Consulte também  
+ [ESQUERDA &#40; Expressão do SSIS &#41;](../../integration-services/expressions/left-ssis-expression.md)   
+ [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

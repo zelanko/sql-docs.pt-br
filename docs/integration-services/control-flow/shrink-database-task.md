@@ -1,28 +1,33 @@
 ---
-title: "Tarefa Reduzir Banco de Dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.shrinkdatabasetask.f1"
-helpviewer_keywords: 
-  - "Tarefa Reduzir Banco de Dados"
-  - "redução de banco de dados [Integration Services]"
-  - "reduzindo bancos de dados"
+title: Tarefa de banco de dados reduzir | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.shrinkdatabasetask.f1
+helpviewer_keywords:
+- Shrink Database task
+- database shrinking [Integration Services]
+- shrinking databases
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09f100f683f6ecabd697f751fdac39bbabe9598f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Tarefa Reduzir Banco de Dados
+# <a name="shrink-database-task"></a>Tarefa Reduzir Banco de Dados
   A tarefa Reduzir Banco de Dados reduz o tamanho de dados de bancos de dados e de arquivos de log do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Usando a tarefa Reduzir Banco de Dados, um pacote pode reduzir os arquivos de um único banco de dados ou de vários bancos de dados.  
@@ -32,7 +37,7 @@ caps.handback.revision: 42
 > [!WARNING]  
 >  Os dados movidos para reduzir um arquivo podem ser espalhados para qualquer local disponível no arquivo. Isso provoca uma fragmentação do índice e pode reduzir a velocidade do desempenho de consultas que pesquisam um intervalo do índice. Para eliminar a fragmentação, considere a recompilação dos índices no arquivo após a redução.  
   
-## Commands  
+## <a name="commands"></a>Commands  
  A tarefa Reduzir Banco de Dados encapsula um comando DBCC SHRINKDATABASE, inclusive os seguintes argumentos e opções:  
   
 -   *database_name*  
@@ -43,7 +48,7 @@ caps.handback.revision: 42
   
  Se a tarefa Reduzir Banco de Dados reduzir vários bancos de dados, a tarefa executará vários comandos SHRINKDATABASE, um para cada banco de dados. Todas as instâncias do comando SHRINKDATABASE usam os mesmos valores de argumento, exceto para o argumento *database_name*. Para obter mais informações, consulte [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
-## Configuração da tarefa Reduzir Banco de Dados  
+## <a name="configuration-of-the-shrink-database-task"></a>Configuração da tarefa Reduzir Banco de Dados  
  Você pode definir propriedades por meio do [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. Esta tarefa está na seção **Tarefas do Plano de Manutenção** da **Caixa de Ferramentas** , no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Para obter mais informações sobre as propriedades que podem ser definidas no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , clique no seguinte tópico:  
@@ -52,6 +57,6 @@ caps.handback.revision: 42
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   

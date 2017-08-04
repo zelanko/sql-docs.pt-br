@@ -1,28 +1,33 @@
 ---
-title: "Conex&#227;o de SQL Server para a cria&#231;&#227;o de inst&#226;ncia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Conexão do SQL Server para a instância criação | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 65f20b235b6a3c4bd22ce754467f36a9b03fdaab
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Conex&#227;o de SQL Server para a cria&#231;&#227;o de inst&#226;ncia
-  Uma das primeiras etapas ao criar uma Instância Oracle CDC é a criação de um banco de dados CDC na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino. Este banco de dados CDC está habilitado para SQL Server CDC e esta habilitação exige um logon que é um membro da função de servidor fixa `sysadmin`.  
+# <a name="sql-server-connection-for-instance-creation"></a>Conexão de SQL Server para a criação de instância
+  Uma das primeiras etapas ao criar uma Instância Oracle CDC é a criação de um banco de dados CDC na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino. Este banco de dados CDC está habilitado para SQL Server CDC e esta habilitação exige um logon que é um membro da função de servidor fixa `sysadmin` .  
   
- Quando um usuário que inicia o assistente **Criar uma Instância Oracle CDC** não é membro da função de servidor fixa `sysadmin`, a caixa de diálogo **Conecte-se ao SQL Server** abre e pede as credenciais para um membro da função `sysadmin` para realizar a tarefa de habilitar o banco de dados para SQL Server CDC. Quando o banco de dados CDC é criado, o logon `sysadmin` é descartado e o trabalho é retomado com o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] original usado quando o Oracle Designer Console foi inserido.  
+ Quando um usuário que inicia o assistente **Criar uma Instância Oracle CDC** não é membro da função de servidor fixa `sysadmin` , a caixa de diálogo **Conecte-se ao SQL Server** abre e pede as credenciais para um membro da função `sysadmin` para realizar a tarefa de habilitar o banco de dados para SQL Server CDC. Quando o banco de dados CDC é criado, o logon `sysadmin` é descartado e o trabalho é retomado com o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] original usado quando o Oracle Designer Console foi inserido.  
   
-## Lista de Tarefas  
- Insira as seguintes informações na caixa de diálogo **Conecte-se ao SQL Server**.  
+## <a name="task-list"></a>Lista de Tarefas  
+ Insira as seguintes informações na caixa de diálogo **Conecte-se ao SQL Server** .  
   
  **Nome do servidor**  
  Digite o nome do servidor em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está localizado.  
@@ -49,8 +54,8 @@ caps.handback.revision: 7
   
      Para obter informações sobre a caixa de diálogo Propriedades Avançadas de Conexão, consulte [Propriedades Avançadas de Conexão](../../integration-services/change-data-capture/advanced-connection-properties.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criar o banco de dados de alteração do SQL Server](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)   
- [Permissões necessárias para conexão do SQL Server para o Designer CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+ [Permissões necessárias para Conexão do SQL Server para o Designer CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

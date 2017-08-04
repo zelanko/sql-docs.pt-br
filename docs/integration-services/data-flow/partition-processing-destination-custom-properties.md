@@ -1,22 +1,27 @@
 ---
-title: "Propriedades personalizadas do destino Processamento de Parti&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Propriedades personalizadas do destino de processamento de partição | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d3ae46aa1d06fd7d4d5a977d40e3b40a5af4170
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propriedades personalizadas do destino Processamento de Parti&#231;&#245;es
+# <a name="partition-processing-destination-custom-properties"></a>Propriedades personalizadas do destino Processamento de Partições
   O destino Processamento de Partições tem propriedades personalizadas e propriedades comuns a todos os componentes de fluxo de dados.  
   
  A tabela a seguir descreve as propriedades personalizadas do destino Processamento de Partições. Todas as propriedades são de leitura/gravação.  
@@ -39,7 +44,7 @@ caps.handback.revision: 6
   
  Para obter mais informações, consulte [Destino de processamento de partições](../../integration-services/data-flow/partition-processing-destination.md).  
   
-## Consulte também  
- [Propriedades comuns](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>Consulte também  
+ [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

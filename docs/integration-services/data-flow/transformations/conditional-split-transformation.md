@@ -1,30 +1,35 @@
 ---
-title: "Transforma&#231;&#227;o Divis&#227;o Condicional | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.conditionalsplittrans.f1"
-helpviewer_keywords: 
-  - "Transformação Divisão Condicional"
-  - "rotear linhas para saídas diferentes [Integration Services]"
+title: "Transformação de divisão condicional | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.conditionalsplittrans.f1
+helpviewer_keywords:
+- Conditional Split transformation
+- route rows to different outputs [Integration Services]
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d5c9ba281713154357344891987131480331f9f0
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transforma&#231;&#227;o Divis&#227;o Condicional
+# <a name="conditional-split-transformation"></a>Transformação Divisão Condicional
   A transformação Divisão Condicional pode rotear linhas de dados para saídas diferentes, dependendo do conteúdo dos dados. A implementação da transformação Divisão Condicional é semelhante a uma estrutura de decisão CASE em uma linguagem de programação. A transformação avalia expressões e, com base nos resultados, direciona a linha de dados para a saída especificada. Essa transformação também fornece uma saída padrão, de forma que, se uma linha não corresponder a nenhuma expressão, ela será direcionada para a saída padrão.  
   
-## Configuração da transformação Divisão Condicional  
+## <a name="configuration-of-the-conditional-split-transformation"></a>Configuração da transformação Divisão Condicional  
  É possível configurar a transformação Divisão Condicional do seguinte modo:  
   
 -   Para cada condição a ser testada pela transformação, forneça uma expressão a ser avaliada pelo Booleano.  
@@ -51,11 +56,11 @@ caps.handback.revision: 51
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que você quer definir na caixa de diálogo **Editor de Transformação Divisão Condicional**, consulte [Editor de Transformação Divisão Condicional](../../../integration-services/data-flow/transformations/conditional-split-transformation-editor.md).  
+ Para obter mais informações sobre as propriedades que você quer definir na caixa de diálogo **Editor de Transformação Divisão Condicional** , consulte [Editor de Transformação Divisão Condicional](../../../integration-services/data-flow/transformations/conditional-split-transformation-editor.md).  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](../Topic/Common%20Properties.md)  
+-   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -65,10 +70,10 @@ caps.handback.revision: 51
   
 -   [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  [Dividir um conjunto de dados por meio da transformação Divisão Condicional](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

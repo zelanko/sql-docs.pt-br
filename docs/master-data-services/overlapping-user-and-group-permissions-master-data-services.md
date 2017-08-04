@@ -1,26 +1,31 @@
 ---
-title: "Sobrepondo permiss&#245;es de usu&#225;rio e grupo (Servi&#231;os de Dados Mestre) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "usuários [Master Data Services], resolução de permissões"
-  - "permissões [Master Data Services], sobreposições de usuário e grupo"
-  - "grupos [Master Data Services], resolução de permissões"
+title: "Sobrepondo permissões de usuário e grupo (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- users [Master Data Services], resolving permissions
+- permissions [Master Data Services], user and group overlaps
+- groups [Master Data Services], resolving permissions
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a415162382d8162a336d722d4630f7091427ff2
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Sobrepondo permiss&#245;es de usu&#225;rio e grupo (Servi&#231;os de Dados Mestre)
+# <a name="overlapping-user-and-group-permissions-master-data-services"></a>Sobrepondo permissões de usuário e grupo (Serviços de Dados Mestre)
   As permissões de um usuário são baseadas em:  
   
 -   Permissões das associações a grupos.  
@@ -38,7 +43,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  Você pode visualizar a resolução do usuário e do grupo sobrepondo permissões na interface do usuário. As guias **Modelos** e **Membros da Hierarquia** têm uma lista suspensa na qual é possível escolher **Efetivo** para exibir as permissões efetivas.  
   
-## Exemplo 1  
+## <a name="example-1"></a>Exemplo 1  
  ![mds_conc_user_group_ex_1](../master-data-services/media/mds-conc-user-group-ex-1.gif "mds_conc_user_group_ex_1")  
   
  O usuário pertence ao Grupo 1 e ao Grupo 2.  
@@ -51,7 +56,7 @@ caps.handback.revision: 7
   
  Resultado: a permissão efetiva do usuário é **Atualizar** para a entidade Produto.  
   
-## Exemplo 2  
+## <a name="example-2"></a>Exemplo 2  
  ![mds_conc_user_group_ex_2](../master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
   
  O usuário pertence ao Grupo 1 e ao Grupo 2.  
@@ -64,7 +69,7 @@ caps.handback.revision: 7
   
  Resultado: a permissão efetiva do usuário é **Negar** para a entidade Produto.  
   
-## Exemplo 3  
+## <a name="example-3"></a>Exemplo 3  
  ![mds_conc_user_group_ex_3](../master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
   
  O usuário pertence ao Grupo 1 e ao Grupo 2.  
@@ -77,8 +82,8 @@ caps.handback.revision: 7
   
  Resultado: a permissão efetiva do usuário é **Atualizar** para os membros.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Como as permissões são determinadas &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [Sobrepondo permissões de modelo e membro &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [Sobrepondo permissões de membro e modelo &#40; Master Data Services &#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

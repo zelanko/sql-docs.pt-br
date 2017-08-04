@@ -1,40 +1,45 @@
 ---
-title: "Editor do Gerenciador de Conex&#245;es de V&#225;rios Arquivos Simples (p&#225;gina Colunas) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.multifile.columns.f1"
-helpviewer_keywords: 
-  - "Editor do Gerenciador de Conexões de Vários Arquivos Simples"
+title: "Vários arquivos simples Editor do Gerenciador de Conexão (página colunas) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.multifile.columns.f1
+helpviewer_keywords:
+- Multiple Flat Files Connection Manager Editor
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f1f2dee040a886d66ffcd5bd3fa3a710a8552b7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor do Gerenciador de Conex&#245;es de V&#225;rios Arquivos Simples (p&#225;gina Colunas)
+# <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>Editor do Gerenciador de Conexões de Vários Arquivos Simples (página Colunas)
   Use o nó **Colunas** da caixa de diálogo **Editor do Gerenciador de Conexões de Vários Arquivos Simples** para especificar as informações da linha e da coluna e visualizar o primeiro arquivo selecionado.  
   
  Para saber mais sobre o gerenciador de conexões de Vários Arquivos Simples, consulte [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
   
-## Opções estáticas  
+## <a name="static-options"></a>Opções estáticas  
  **Nome do gerenciador de conexões**  
  Forneça um nome exclusivo para a conexão de Vários Arquivos Simples no fluxo de trabalho. O nome fornecido será exibido no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  **Description**  
  Descreva a conexão. Como prática recomendável, descreva a conexão em termos de objetivo, para tornar os pacotes autodocumentados e mais fáceis de manter.  
   
-## Opções dinâmicas do formato de arquivo simples  
+## <a name="flat-file-format-dynamic-options"></a>Opções dinâmicas do formato de arquivo simples  
   
-### Formato = Delimitado  
+### <a name="format--delimited"></a>Formato = Delimitado  
  **Delimitador de linha**  
  Selecione na lista de delimitadores de linha disponíveis ou digite o texto delimitador.  
   
@@ -66,7 +71,7 @@ caps.handback.revision: 30
  **Redefinir Colunas**  
  Remova todas as colunas, exceto as originais, clicando em **Redefinir Colunas**.  
   
-### Formato = Largura fixa  
+### <a name="format--fixed-width"></a>Formato = Largura fixa  
  **Fonte**  
  Selecione a fonte em que os dados de visualização serão exibidos.  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 30
  **Redefinir Colunas**  
  Remova todas as colunas, exceto as originais, clicando em **Redefinir Colunas**.  
   
-### Formato = Irregular à direita  
+### <a name="format--ragged-right"></a>Formato = Irregular à direita  
   
 > [!NOTE]  
 >  Arquivos irregulares à direita são arquivos nos quais toda coluna tem uma largura fixa, à exceção da última coluna. Ela é delimitada pelo delimitador de linha.  
@@ -107,10 +112,10 @@ caps.handback.revision: 30
  **Redefinir Colunas**  
  Remova todas as colunas, exceto as originais, clicando em **Redefinir Colunas**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Geral&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)   
- [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Avançado&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Visualização&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Editor do Gerenciador de Conexão de vários arquivos simples &#40; Página geral &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)   
+ [Editor do Gerenciador de Conexão de vários arquivos simples &#40; Página Avançado &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [Editor do Gerenciador de Conexão de vários arquivos simples &#40; Página de visualização &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

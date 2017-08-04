@@ -1,28 +1,33 @@
 ---
-title: "Classificar dados para as transforma&#231;&#245;es Mesclagem e Jun&#231;&#227;o de Mesclagem | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "atributos de classificação [Integration Services]"
-  - "colunas de saída [Integration Services]"
+title: "Classificar dados para transformações de junção de mesclagem e de mesclagem | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sort attributes [Integration Services]
+- output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9a99a414a74e873e5c09d22c6469a13ac04a32d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Classificar dados para as transforma&#231;&#245;es Mesclagem e Jun&#231;&#227;o de Mesclagem
+# <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Classificar dados para as transformações Mesclagem e Junção de Mesclagem
   No [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], as transformações Mesclagem e Junção de Mesclagem exigem dados classificados para suas entradas. Os dados de entrada devem ser classificados fisicamente e as opções de classificação devem ser definidas nas saídas e nas colunas de saída na origem ou na transformação upstream. Se as opções de classificação indicarem que os dados estão classificados, mas os dados não estiverem efetivamente classificados, os resultados da operação de mesclagem ou junção de mesclagem são imprevisíveis.  
   
-## Classificando os dados  
+## <a name="sorting-the-data"></a>Classificando os dados  
  Você pode classificar os dados usando um dos seguintes métodos:  
   
 -   Na origem, use uma cláusula de ORDER BY na instrução utilizada para carregar os dados.  
@@ -31,7 +36,7 @@ caps.handback.revision: 31
   
  Se os dados forem dados de cadeia de caracteres, as transformações Mesclagem e Junção de Mesclagem esperarão que os valores da cadeia de caracteres tenham sido classificados com o uso do agrupamento do Windows. Para fornecer valores de cadeia de caracteres às transformações Mesclagem e Junção de Mesclagem classificadas com o uso do agrupamento do Windows, use o procedimento a seguir.  
   
-#### Para fornecer valores da cadeia de caracteres que são classificados usando agrupamento de Windows  
+#### <a name="to-provide-string-values-that-are-sorted-by-using-windows-collation"></a>Para fornecer valores da cadeia de caracteres que são classificados usando agrupamento de Windows  
   
 -   Use uma transformação Classificação para classificar os dados.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 31
     > [!IMPORTANT]  
     >  Não é possível usar a cláusula ORDER BY sozinha porque ela utiliza um agrupamento do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para classificar valores de cadeia de caracteres. O uso do agrupamento do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode resultar em uma ordem de classificação diferente do agrupamento do Windows, o que pode fazer com que a transformação Mesclar ou Junção de Mesclagem produza resultados inesperados.  
   
-## Definindo opções de classificação nos dados  
+## <a name="setting-sort-options-on-the-data"></a>Definindo opções de classificação nos dados  
  Há duas propriedades de classificação importantes que devem ser definidas para a transformação de origem ou upstream que fornece dados às transformações Mesclar e Junção de Mesclagem:  
   
 -   A propriedade **IsSorted** da saída que indica se os dados foram classificados. Essa propriedade deve ser definida como **True**.  
@@ -58,7 +63,7 @@ caps.handback.revision: 31
   
  No entanto, se você não usar uma transformação Classificação para classificar os dados, defina essas propriedades de classificação manualmente na transformação de origem ou upstream. Para definir as propriedades de classificação manualmente na transformação de origem ou upstream, siga o procedimento a seguir.  
   
-#### Para definir atributos de classificação manualmente em um componente de origem ou transformação  
+#### <a name="to-manually-set-sort-attributes-on-a-source-or-transformation-component"></a>Para definir atributos de classificação manualmente em um componente de origem ou transformação  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 31
   
 5.  Clique na guia **Propriedades de Entrada e Saída** .  
   
-6.  Clique em **Saída do \<component name>** e defina a propriedade **IsSorted** como **True**.  
+6.  Clique em  **\<nome do componente > saída**e defina o **IsSorted** propriedade **True**.  
   
     > [!NOTE]  
     >  Se você definir manualmente a propriedade **IsSorted** da saída como **True** e os dados não forem classificados, poderão ocorrer ausências de dados ou comparações de dados inválidas na transformação Mesclagem ou Junção de Mesclagem de downstream durante a execução do pacote.  
@@ -87,7 +92,7 @@ caps.handback.revision: 31
   
     -   O valor padrão de 0 indica que a coluna não está classificada. Deixe o valor de 0 para colunas de saída que não participam da classificação.  
   
-     Como exemplo de como definir a propriedade **SortKeyPosition**, considere a seguinte instrução Transact-SQL que carrega os dados em uma origem:  
+     Como exemplo de como definir a propriedade **SortKeyPosition** , considere a seguinte instrução Transact-SQL que carrega os dados em uma origem:  
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   
@@ -105,11 +110,11 @@ caps.handback.revision: 31
   
 11. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## Consulte também  
- [Transformação Mesclar](../../../integration-services/data-flow/transformations/merge-transformation.md)   
- [Transformação Junção de Mesclagem](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
+## <a name="see-also"></a>Consulte também  
+ [Transformação de mesclagem](../../../integration-services/data-flow/transformations/merge-transformation.md)   
+ [Transformação junção de mesclagem](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Tarefa de Fluxo de Dados](../../../integration-services/control-flow/data-flow-task.md)  
+ [Tarefa de fluxo de dados](../../../integration-services/control-flow/data-flow-task.md)  
   
   

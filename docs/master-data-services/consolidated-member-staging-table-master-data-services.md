@@ -1,25 +1,30 @@
 ---
-title: "Tabela de preparo de membros consolidados (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "banco de dados [Master Data Services], tabela de preparo de atributos"
-  - "tabela de preparo de atributos [Master Data Services]"
+title: Consolidados a tabela de preparo de membro (Master Data Services) | Microsoft Docs
+ms.custom: 
+ms.date: 04/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database [Master Data Services], attributes staging table
+- attributes staging table [Master Data Services]
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e80d2ee59cc1e7b407c0642e97b4fe2077d6f6f1
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Tabela de preparo de membros consolidados (Master Data Services)
+# <a name="consolidated-member-staging-table-master-data-services"></a>Tabela de preparo de membros consolidados (Master Data Services)
   Use a tabela de preparo de membros consolidados (stg.name_Consolidated) no banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para criar, atualizar, desativar e excluir membros consolidados. Você também pode usar isso para atualizar valores de atributos para membros consolidados.  
   
 ##  <a name="TableColumns"></a> Colunas da tabela  
@@ -37,11 +42,12 @@ caps.handback.revision: 14
 |**Código**<br /><br /> Obrigatório, exceto quando códigos são gerados automaticamente para **ImportType1** ou **2**; consulte [Criação automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md) para obter mais informações|Um código exclusivo para o membro.|  
 |**Nome**<br /><br /> Opcional|Um nome para o membro.|  
 |**NewCode**|Use apenas se você estiver alterando o código do membro.|  
-|\<Attribute name>|Existe uma coluna para cada atributo da entidade. Use com um **ImportType** de **0** ou **2**. Para atributos de forma livre, especifique o novo texto ou valor da cadeia de caracteres para o atributo. Para atributos baseados em domínio, especifique o código do membro que será o atributo. Para atributos de link, a URL deve iniciar com **http://**.<br /><br /> <br /><br /> Observação: não é possível preparar atributos de arquivo.|  
+|\<Nome do atributo >|Existe uma coluna para cada atributo da entidade. Use com um **ImportType** de **0** ou **2**. Para atributos de forma livre, especifique o novo texto ou valor da cadeia de caracteres para o atributo. Para atributos baseados em domínio, especifique o código do membro que será o atributo. Para atributos de link, a URL deve iniciar com **http://**.<br /><br /> <br /><br /> Observação: não é possível preparar atributos de arquivo.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [Exibir erros que ocorrem durante o preparo &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [Erros de processo de preparo &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
+ [Erros de processo de preparo &#40; Master Data Services &#41;](../master-data-services/staging-process-errors-master-data-services.md)  
   
   
+

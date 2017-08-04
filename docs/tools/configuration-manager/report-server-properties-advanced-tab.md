@@ -1,25 +1,30 @@
 ---
-title: "Propriedades do servidor de relat&#243;rio (guia Avan&#231;ado) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Propriedades (guia Avançado) do servidor de relatório | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd77ea1315a7b959dbcfec479cd0da3bb11360bd
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriedades do servidor de relat&#243;rio (guia Avan&#231;ado)
+# <a name="report-server-properties-advanced-tab"></a>Propriedades do servidor de relatório (guia Avançado)
   Este serviço é o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se existirem propriedades personalizadas definidas, elas serão exibidas nessa guia, junto com seus valores.  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Relatório de Comentários do Cliente**  
  Indica se o Monitoramento da Qualidade do Serviço foi habilitado neste serviço. Para obter mais informações sobre o Relatório de Comentários do Cliente, pesquise "Configurações de relatório de erro e uso" nos Manuais Online.  
   

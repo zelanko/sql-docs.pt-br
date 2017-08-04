@@ -1,31 +1,36 @@
 ---
-title: "Editor do Gerenciador de Conex&#245;es do SQL Server Compact Edition (P&#225;gina Tudo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sqlmobileconnection.all.f1"
-helpviewer_keywords: 
-  - "Editor do Gerenciador de Conexões do SQL Server Compact"
+title: "SQL Server Compact Editor do Gerenciador de Conexão de edição (página tudo) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sqlmobileconnection.all.f1
+helpviewer_keywords:
+- SQL Server Compact Connection Manager Editor
 ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c55d48a878bfee46c823303ce662baca0d34bfbd
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor do Gerenciador de Conex&#245;es do SQL Server Compact Edition (P&#225;gina Tudo)
+# <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>Editor do Gerenciador de Conexões do SQL Server Compact Edition (Página Tudo)
   Use a caixa de diálogo **Gerenciador de Conexões do SQL Server Compact Edition** para especificar as propriedades de conexão com um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
  Para saber mais sobre o Gerenciador de conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition, consulte [Gerenciador de conexões do SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Limite de AutoShrink**  
  Especifique a quantidade de espaço livre, em percentual, que será permitido no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact antes que o processo de redução automática seja executado.  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 26
 |Value|Description|  
 |-----------|-----------------|  
 |**Somente Leitura**|Especifica acesso somente de leitura ao banco de dados.|  
-|**Read Write**|Especifica a permissão de leitura e gravação ao banco de dados.|  
+|**Leitura Gravação**|Especifica a permissão de leitura e gravação ao banco de dados.|  
 |**Exclusive**|Especifica o acesso exclusivo ao banco de dados.|  
 |**Shared Read**|Especifica que outros usuários podem ler de banco de dados ao mesmo tempo.|  
   
@@ -71,8 +76,8 @@ caps.handback.revision: 26
  **Senha**  
  Digite a senha para o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor do Gerenciador de Conexões do SQL Server Compact Edition &#40;Página de Conexão&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
+ [Editor SQL Server Compact Edition conexão Manager &#40;. Página Conexão &#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
   
   

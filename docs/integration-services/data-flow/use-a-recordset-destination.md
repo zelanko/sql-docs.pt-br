@@ -1,25 +1,30 @@
 ---
-title: "Usar um destino do conjunto de registros | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Destino do Conjunto de Registros"
+title: Usar um destino do conjunto de registros | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2423a1d19122a3eb13bd69c4bce495c96d81ff
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Usar um destino do conjunto de registros
-  O destino do Conjunto de Registros não salva dados em uma fonte de dados externa. Em vez disso, o destino do Conjunto de Registros salva dados na memória em um conjunto de registros armazenado em uma variável de pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do tipo de dados **Objeto**. Depois que o destino do Conjunto de Registros salva os dados, geralmente você usa um contêiner Loop Foreach com o enumerador ADO Foreach para processar uma linha do conjunto de registros de cada vez. O enumerador ADO Foreach salva o valor de cada coluna da linha atual em uma variável de pacote separada. Em seguida, as tarefas que você configura dentro do contêiner Loop Foreach leem esses valores das variáveis e executam alguma ação com eles.  
+# <a name="use-a-recordset-destination"></a>Usar um destino do conjunto de registros
+  O destino do Conjunto de Registros não salva dados em uma fonte de dados externa. Em vez disso, o destino do Conjunto de Registros salva dados na memória em um conjunto de registros armazenado em uma variável de pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do tipo de dados **Objeto** . Depois que o destino do Conjunto de Registros salva os dados, geralmente você usa um contêiner Loop Foreach com o enumerador ADO Foreach para processar uma linha do conjunto de registros de cada vez. O enumerador ADO Foreach salva o valor de cada coluna da linha atual em uma variável de pacote separada. Em seguida, as tarefas que você configura dentro do contêiner Loop Foreach leem esses valores das variáveis e executam alguma ação com eles.  
   
  Você pode usar o destino do Conjunto de Registros em muitos cenários diferentes. Veja alguns exemplos:  
   
@@ -29,10 +34,10 @@ caps.handback.revision: 11
   
  As seções a seguir primeiro descrevem o processo geral de uso do destino do Conjunto de Registros e depois mostram um exemplo específico de como utilizar o destino.  
   
-## Etapas gerais para o uso de um destino do conjunto de registros  
+## <a name="general-steps-to-using-a-recordset-destination"></a>Etapas gerais para o uso de um destino do conjunto de registros  
  O procedimento a seguir resume as etapas necessárias para salvar dados em um destino do Conjunto de Registros e usar o contêiner Loop Foreach para processar cada linha.  
   
-#### Para salvar dados em um destino do Conjunto de Registros e processar cada linha usando o contêiner Loop Foreach  
+#### <a name="to-save-data-to-a-recordset-destination-and-process-each-row-by-using-the-foreach-loop-container"></a>Para salvar dados em um destino do Conjunto de Registros e processar cada linha usando o contêiner Loop Foreach  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], crie ou abra um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -50,16 +55,16 @@ caps.handback.revision: 11
   
     1.  Na página **Coleção** , selecione o Enumerador ADO Foreach. Em seguida, para **Variável de origem do objeto ADO**, selecione a variável que contém o conjunto de registros.  
   
-    2.  Na página **Mapeamentos de Variáveis**, mapeie o índice com base em zero de cada coluna que você deseja usar para a variável apropriada.  
+    2.  Na página **Mapeamentos de Variáveis** , mapeie o índice com base em zero de cada coluna que você deseja usar para a variável apropriada.  
   
          Em cada iteração do loop, o enumerador popula essas variáveis com os valores de coluna da linha atual.  
   
 8.  Dentro do contêiner Loop Foreach, adicione e configure tarefas para processar uma linha do conjunto de registros de cada vez, lendo os valores das variáveis.  
   
-## Exemplo de uso do destino do Conjunto de Registros  
+## <a name="example-of-using-the-recordset-destination"></a>Exemplo de uso do destino do Conjunto de Registros  
  No exemplo a seguir, a tarefa de fluxo de dados carrega informações sobre os funcionários de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] da tabela Sales.SalesPerson em um destino do Conjunto de Registros. Em seguida, um contêiner Loop Foreach lê uma linha de dados de cada vez e chama uma tarefa Enviar Email. A tarefa Enviar Email usa expressões para enviar uma mensagem de email personalizada a cada vendedor sobre o valor de seu bônus.  
   
-#### Para criar o projeto e configurar as variáveis  
+#### <a name="to-create-the-project-and-configure-the-variables"></a>Para criar o projeto e configurar as variáveis  
   
 1.  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], crie um novo projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 11
   
          A variável **Bonus** contém o valor do bônus do vendedor.  
   
-#### Para configurar os gerenciadores de conexões  
+#### <a name="to-configure-the-connection-managers"></a>Para configurar os gerenciadores de conexões  
   
 1.  Na área Gerenciadores de Conexões do [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, adicione e configure um novo gerenciador de conexões OLE DB que se conecta ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 11
   
      A tarefa Enviar Email dentro do contêiner Loop Foreach usará esse gerenciador de conexões para enviar emails.  
   
-#### Para configurar o fluxo de dados e o destino do Conjunto de Registros  
+#### <a name="to-configure-the-data-flow-and-the-recordset-destination"></a>Para configurar o fluxo de dados e o destino do Conjunto de Registros  
   
 1.  Na guia **Fluxo de Controle** do [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, adicione uma tarefa de fluxo de dados à superfície de design.  
   
@@ -114,7 +119,7 @@ caps.handback.revision: 11
         ```  
   
         > [!NOTE]  
-        >  É necessário converter o valor **currency** na coluna Bônus em um **float**, antes de carregar esse valor em uma variável de pacote cujo tipo é **Double**.  
+        >  É necessário converter o valor **currency** na coluna Bônus em um **float** , antes de carregar esse valor em uma variável de pacote cujo tipo é **Double**.  
   
 4.  Na guia **Fluxo de Dados** , adicione um destino do Conjunto de Registros e conecte o destino após a fonte OLE DB.  
   
@@ -124,7 +129,7 @@ caps.handback.revision: 11
   
     2.  Na guia **Colunas de Entrada** , selecione todas as três colunas disponíveis.  
   
-#### Para configurar o contêiner Loop Foreach e executar o pacote  
+#### <a name="to-configure-the-foreach-loop-container-and-run-the-package"></a>Para configurar o contêiner Loop Foreach e executar o pacote  
   
 1.  Na guia **Fluxo de Controle** do [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, adicione um contêiner Loop Foreach e conecte esse contêiner após a tarefa de fluxo de dados.  
   

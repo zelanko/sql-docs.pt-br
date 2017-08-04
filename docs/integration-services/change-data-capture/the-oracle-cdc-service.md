@@ -1,27 +1,32 @@
 ---
-title: "O Servi&#231;o Oracle CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "O serviço Oracle CDC | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d1c3535f7818b1865d9ff7b0da1d098884b042ca
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# O Servi&#231;o Oracle CDC
+# <a name="the-oracle-cdc-service"></a>O Serviço Oracle CDC
   O Serviço Oracle CDC é um serviço do Windows que executa o programa xdbcdcsvc.exe. O Serviço Oracle CDC pode ser configurado para executar vários Serviços do Windows no mesmo computador, cada um com um nome de serviços do Windows diferente. Criar diversos serviços do Windows do Oracle CDC em um único computador geralmente é feito para obter uma separação melhor entre eles, ou quando cada um precisa trabalhar com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente.  
   
- Um Serviço Oracle CDC é criado usando o console de Configuração do Serviço Oracle CDC ou é definido por meio da interface de linha de comando criada no programa xdbcdcsvc.exe. Em ambos os casos, cada Serviço Oracle CDC criado está associado a uma única instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (que pode ser agrupada ou espelhada com a instalação do **AlwaysOn**) e as informações de conexão (cadeia de conexão e credenciais de acesso) fazem parte da configuração do serviço.  
+ Um Serviço Oracle CDC é criado usando o console de Configuração do Serviço Oracle CDC ou é definido por meio da interface de linha de comando criada no programa xdbcdcsvc.exe. Em ambos os casos, cada Serviço Oracle CDC criado está associado a uma única instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (que pode ser agrupada ou espelhada com a instalação do **AlwaysOn** ) e as informações de conexão (cadeia de conexão e credenciais de acesso) fazem parte da configuração do serviço.  
   
- Quando um Serviço Oracle CDC é iniciado, ele tenta se conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com a qual está associado, obtém a lista de instâncias do Oracle CDC que precisa tratar e executa uma validação inicial de ambiente. Os erros durante a inicialização de serviço e qualquer informação de iniciar/parar são gravados no log de eventos de aplicativo do Windows. Quando uma conexão ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é estabelecida, todos os erros e as mensagens de informações são gravadas na tabela **dbo.xdbcdc_trace** no banco de dados MSXDBCDC da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Uma das verificações feitas durante a inicialização é a verificação de que nenhum outro Serviço Oracle CDC com o mesmo nome está funcionando atualmente. Se um serviço com o mesmo nome estiver conectado atualmente de um computador diferente, o Serviço Oracle CDC inserirá um loop de espera, aguardando que o outro serviço se desconecte antes de continuar a tratar o trabalho do Oracle CDC.  
+ Quando um Serviço Oracle CDC é iniciado, ele tenta se conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com a qual está associado, obtém a lista de instâncias do Oracle CDC que precisa tratar e executa uma validação inicial de ambiente. Os erros durante a inicialização de serviço e qualquer informação de iniciar/parar são gravados no log de eventos de aplicativo do Windows. Quando uma conexão ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é estabelecida, todos os erros e as mensagens de informações são gravadas na tabela **dbo.xdbcdc_trace** no banco de dados MSXDBCDC da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Uma das verificações feitas durante a inicialização é a verificação de que nenhum outro Serviço Oracle CDC com o mesmo nome está funcionando atualmente. Se um serviço com o mesmo nome estiver conectado atualmente de um computador diferente, o Serviço Oracle CDC inserirá um loop de espera, aguardando que o outro serviço se desconecte antes de continuar a tratar o trabalho do Oracle CDC.  
   
  Quando o Serviço Oracle CDC passa todas as verificações de inicialização, ele verifica a tabela **dbo.xdbcdc_databases** no banco de dados MSXDBCDC em busca de todas as Instâncias Oracle CDC habilitadas. Para cada Instância Oracle CDC habilitada, o serviço inicia um subprocesso para tratar essa Instância Oracle CDC.  
   
@@ -38,24 +43,24 @@ GO
   
 ```  
   
- O processo da Instância Oracle CDC atualiza seu status na tabela do sistema **cdc.xdbcdc_state** e grava informações de erro na tabela **cdc.xdbcdc_trace**. A tabela **xdbcdc_state** é útil para monitorar o estado da Instância Oracle CDC. Ela fornece o status atualizado, vários contadores (como número de alterações lidas do Oracle, número de alterações gravadas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], número de transação confirmada gravada e o número atual de transações em andamento), bem como indicação de latência.  
+ O processo da Instância Oracle CDC atualiza seu status na tabela do sistema **cdc.xdbcdc_state** e grava informações de erro na tabela **cdc.xdbcdc_trace** . A tabela **xdbcdc_state** é útil para monitorar o estado da Instância Oracle CDC. Ela fornece o status atualizado, vários contadores (como número de alterações lidas do Oracle, número de alterações gravadas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], número de transação confirmada gravada e o número atual de transações em andamento), bem como indicação de latência.  
   
- A configuração da Instância Oracle CDC é salva na tabela **cdc.xdbcdc_config**, que é a tabela com a qual o console de Designer do Oracle CDC trabalha. Como a configuração inteira de uma Instância Oracle CDC está localizada na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino e nos bancos de dados CDC, é possível criar scripts de implantação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma Instância Oracle CDC. Isto é feito usando os consoles de Configuração de Serviço Oracle CDC e Designer Oracle CDC.  
+ A configuração da Instância Oracle CDC é salva na tabela **cdc.xdbcdc_config** , que é a tabela com a qual o console de Designer do Oracle CDC trabalha. Como a configuração inteira de uma Instância Oracle CDC está localizada na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino e nos bancos de dados CDC, é possível criar scripts de implantação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma Instância Oracle CDC. Isto é feito usando os consoles de Configuração de Serviço Oracle CDC e Designer Oracle CDC.  
   
-## Considerações sobre segurança  
+## <a name="security-considerations"></a>Considerações sobre segurança  
  Veja a seguir a descrição dos requisitos de segurança necessários para trabalhar com o Serviço CDC para Oracle.  
   
-### Proteção dos dados do Oracle de origem  
+### <a name="protection-of-source-oracle-data"></a>Proteção dos dados do Oracle de origem  
  O serviço Oracle CDC não exige acesso a dados de origem do Oracle e está protegido porque garante que as credenciais da mineração de logs não deem permissão SELECT a tabelas de cliente Oracle.  
   
-### Proteção dos dados de alteração do Oracle de origem  
+### <a name="protection-of-source-oracle-change-data"></a>Proteção dos dados de alteração do Oracle de origem  
  O serviço Oracle CDC é fornecido com credenciais de mineração de logs que permitem que o serviço capture alterações feitas a qualquer tabela no banco de dados Oracle. Os dados de alteração não têm as permissões de acesso granulares que as tabelas regulares, de modo que o acesso a dados de alteração ignora os controles internos de acesso a dados do Oracle.  
   
  As tabelas de origem capturadas do Oracle têm tabelas de espelho vazias com os mesmos nome de esquema e tabela no banco de dados CDC. Os dados capturados estão armazenados em instâncias de captura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e oferecem a mesma proteção fornecida para alterações capturadas do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter acesso aos dados de alteração associados a uma instância de captura, o usuário deve ter acesso de seleção a todas as colunas capturadas da tabela de espelho associada. Além disso, se uma função de acesso for especificada quando a instância de captura for criada, o chamador também deverá ser um membro da função de acesso especificada. Outras funções gerais de captura de dados de alteração para o acesso aos metadados estão acessíveis a todos os usuários de banco de dados por meio da função pública, embora o acesso aos metadados retornados também seja geralmente concedido pelo uso do acesso de seleção às tabelas de origem subjacentes e pela associação em qualquer função associada definida.  
   
  Isto significa que os usuários com a função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** têm (por padrão) acesso completo aos dados capturados; além disso, acesso adicional pode ser concedido por meio funções associadas ou pela concessão de acesso Select às colunas capturadas.  
   
-### Proteção de credenciais de mineração de logs do Oracle de origem  
+### <a name="protection-of-source-oracle-log-mining-credentials"></a>Proteção de credenciais de mineração de logs do Oracle de origem  
  A configuração do serviço Oracle CDC, armazenada no banco de dados CDC (na tabela cdc.xdbcdc_config) inclui o nome de usuário de mineração de logs e sua senha associada.  
   
  A senha de mineração de logs é armazenada criptografada por meio de uma chave assimétrica com o nome fixo `xdbcdc_asym_key` que é criado automaticamente com o comando a seguir:  
@@ -78,10 +83,10 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
  A chave assimétrica é criada automaticamente no banco de dados CDC quando o serviço CDC detecta um banco de dados CDC da instância Oracle que não tem esta chave assimétrica ou quando a chave existe, mas a senha não corresponde.  
   
-### Conta de serviço do Windows do Serviço Oracle CDC  
+### <a name="oracle-cdc-service-windows-service-account"></a>Conta de serviço do Windows do Serviço Oracle CDC  
  A conta de serviço usada com o serviço do Windows do Oracle CDC não exige nenhum privilégio adicional. Esta conta deve poder usar a API do Oracle Native Client e a API ODBC do SQL Server Native Client. Ela também precisa poder acessar a chave de configuração de serviço no Registro (este console de Configuração do Serviço CDC configura o ACL para isso).  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
   
 -   [Suporte de alta disponibilidade](../../integration-services/change-data-capture/high-availability-support.md)  
   
@@ -91,8 +96,8 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [Trabalhando com o Serviço Oracle CDC](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Como gerenciar um serviço CDC local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)   
- [Gerenciar um Serviço Oracle CDC](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+ [Gerenciar um serviço Oracle CDC](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

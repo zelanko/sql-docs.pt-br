@@ -1,22 +1,27 @@
 ---
-title: "Criar Novo InfoObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Criar novo InfoObject | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0135f5cbbe81cbe8d4a8c530a1d63c84a27f7d2
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Criar Novo InfoObject
+# <a name="create-new-infoobject"></a>Criar Novo InfoObject
   Use a caixa de diálogo **Criar Novo InfoObject** para criar um novo InfoObject no sistema SAP Netweaver BW.  
   
  Você pode abrir a caixa de diálogo **Criar InfoObject** da página **Gerenciador de Conexões** do **Editor de Destino SAP BW**. Para obter mais informações sobre o destino SAP BW, confira [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -28,7 +33,7 @@ caps.handback.revision: 10
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o destino SAP BW.  
   
-2.  Na guia **Fluxo de Dados**, clique duas vezes no destino SAP BW.  
+2.  Na guia **Fluxo de Dados** , clique duas vezes no destino SAP BW.  
   
 3.  No **Editor de Destino SAP BW**, clique em **Gerenciador de Conexões** para abrir a página **Gerenciador de Conexões** do editor.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 10
   
  Você também pode abrir a caixa de diálogo **Criar Novo InfoObject** clicando em **Novo** na seção **Atributos** da caixa de diálogo **Criar Novo InfoObject** .  
   
-## Opções gerais  
+## <a name="general-options"></a>Opções gerais  
  **Característica**  
  Crie um InfoObject que representa os dados da dimensão.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 10
  Indica que o InfoObject contém dados mestres na forma de atributos, textos ou hierarquias.  
   
 > [!NOTE]  
->  Selecione esta opção se o InfoObject representar dados dimensionais e você tiver selecionado a opção **Característica**.  
+>  Selecione esta opção se o InfoObject representar dados dimensionais e você tiver selecionado a opção **Característica** .  
   
  **Permitir caracteres minúsculos**  
  Permitir caracteres minúsculos nos dados do InfoObject.  
@@ -78,7 +83,7 @@ caps.handback.revision: 10
  **Salvar e ativar**  
  Salvar e ativar o novo InfoObject.  
   
-## Opções de tipo de dados  
+## <a name="data-type-options"></a>Opções de tipo de dados  
  **CHAR - Cadeia de caracteres**  
  Indica que o InfoObject contém dados de caracteres.  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 10
  **Comprimento**  
  Insira o comprimento dos dados.  
   
-## Opções de texto  
+## <a name="text-options"></a>Opções de texto  
  **Com textos**  
  Indica que o InfoObject contém textos.  
   
@@ -113,10 +118,10 @@ caps.handback.revision: 10
  **Dependente da hora do texto**  
  Indica que os textos dependem da hora.  
   
-## Seção de atributos  
+## <a name="attributes-section"></a>Seção de atributos  
  A seção **Atributos** consiste em uma lista de atributos para o InfoObject e as opções que permitem adicionar e remover atributos da lista.  
   
-### Lista de atributos  
+### <a name="attributes-list"></a>Lista de atributos  
  A lista **Atributos** exibe os atributos do InfoObject que você está criando. A lista **Atributos** tem os seguintes cabeçalhos de coluna:  
   
  **InfoObject**  
@@ -135,7 +140,7 @@ caps.handback.revision: 10
 |UNI|Unidades|  
 |TIM|Características de hora|  
   
-### Opções do atributo  
+### <a name="attributes-options"></a>Opções do atributo  
  Use as opções a seguir para adicionar e remover atributos para o InfoObject que você está criando:  
   
  **Adicionar**  
@@ -143,18 +148,18 @@ caps.handback.revision: 10
   
  Para adicionar um InfoObject existente, clique em Adicionar e use a caixa de diálogo **Pesquisar InfoObject** para localizar o InfoObject. Para obter mais informações sobre essa caixa de diálogo, consulte [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md).  
   
- **Nova**  
+ **Novo**  
  Adicione um novo InfoObject como um atributo.  
   
  Para criar e adicionar um novo InfoObject, clique em Novo e use uma nova instância da caixa de diálogo **Criar Novo InfoObject** para criar o novo InfoObject.  
   
  **Remover**  
- Remova o InfoObject selecionado da lista **Atributos**.  
+ Remova o InfoObject selecionado da lista **Atributos** .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criar InfoCube para os dados da transação](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [Criar InfoSource](../../integration-services/data-flow/create-infosource.md)   
- [Criar InfoSource para os dados da transação](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
+ [Criar InfoSource para dados de transação](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [Criar InfoSource para dados mestres](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [Ajuda F1 do Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

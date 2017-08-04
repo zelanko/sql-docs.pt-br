@@ -1,29 +1,34 @@
 ---
-title: "Editor da Transforma&#231;&#227;o Pesquisa (p&#225;gina Geral) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.lookuptransformation.general.f1"
+title: "Editor de transformação de pesquisa (página geral) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.lookuptransformation.general.f1
 ms.assetid: 4bd15e48-0feb-4f95-be91-5df58105dbfb
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7b83a90ac94b3f0499a232d341bfea2678877388
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor da Transforma&#231;&#227;o Pesquisa (p&#225;gina Geral)
+# <a name="lookup-transformation-editor-general-page"></a>Editor da Transformação Pesquisa (página Geral)
   Use a página **Geral** da caixa de diálogo Editor da Transformação Pesquisa para selecionar o modo de cache, selecionar o tipo de conexão e especificar como lidar com as linhas com entradas sem-correspondência.  
   
  Para saber mais sobre a transformação Pesquisa, consulte [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Cache cheio**  
  Gere e carregue o conjunto de dados de referência no cache antes de executar a transformação Pesquisa.  
   
@@ -46,14 +51,14 @@ caps.handback.revision: 18
   
  Ao selecionar uma opção na caixa de listas **Especificar como lidar com linhas com entradas sem-correspondência** , as linhas serão tratadas como erros. A opção **Erro** na página **Saída de Erro** estará disponível.  
   
-## Recursos externos  
+## <a name="external-resources"></a>Recursos externos  
  Entrada de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) (em inglês) em blogs.msdn.com  
   
-## Consulte também  
- [Gerenciador de conexões de cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md)   
- [Editor de Transformação Pesquisa &#40;Página Conexão&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)   
- [Editor de Transformação Pesquisa &#40;Guia Colunas&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
- [Editor de Transformação Pesquisa &#40;Página Avançado&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)   
- [Editor de Transformação Pesquisa &#40;Página Saída de Erro&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)  
+## <a name="see-also"></a>Consulte também  
+ [Gerenciador de Conexão de cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md)   
+ [Editor de transformação de pesquisa &#40; Página de Conexão &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)   
+ [Editor de transformação de pesquisa &#40; Página colunas &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
+ [Editor de transformação de pesquisa &#40; Página Avançado &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)   
+ [Editor de transformação de pesquisa &#40; Página de saída de erro &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)  
   
   

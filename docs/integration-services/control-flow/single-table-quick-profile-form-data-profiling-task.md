@@ -1,31 +1,36 @@
 ---
-title: "Single Table Quick Profile Form (Data Profiling Task) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataprofilingtask.quickprofile.f1"
-helpviewer_keywords: 
-  - "Editor da tarefa Criação de Perfil de Dados"
+title: "Um único formulário de perfil rápido de tabela (tarefa criação de perfil de dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.quickprofile.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 76de0987bec5d7886b41d2d415af2bd00e187f87
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Single Table Quick Profile Form (Data Profiling Task)
+# <a name="single-table-quick-profile-form-data-profiling-task"></a>Single Table Quick Profile Form (Data Profiling Task)
   Use o **Formulário de Perfil Rápido de Tabela Única** para configurar a tarefa Criação de Perfil de Dados para criar um perfil de uma tabela ou exibição única usando as configurações padrão.  
   
  Para obter mais informações sobre como usar a Tarefa Criação de Perfil de Dados, consulte [Configuração da Tarefa Criação de Perfil de Dados](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Para obter mais informações sobre como usar o Visualizador de Perfil de Dados para analisar a saída da Tarefa Criação de Perfil de Dados, consulte [Visualizador de Perfil de Dados](../../integration-services/control-flow/data-profile-viewer.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Conexão**  
  Selecione um gerenciador de conexões do [!INCLUDE[vstecado](../../includes/vstecado-md.md)] que usa o Provedor de Dados .NET para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) para se conectar com o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contém a tabela ou a exibição que você deseja analisar.  
   
@@ -50,8 +55,8 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  O tipo de perfil Valor Inclusão não está disponível no **Formulário de Perfil Rápido de Tabela Única**.  
   
-## Consulte também  
- [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Editor da tarefa Criação de Perfil de Dados &#40;Página Solicitações de Perfil&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
+## <a name="see-also"></a>Consulte também  
+ [Editor da tarefa &#40; de criação de perfil de dados Página geral &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Editor da tarefa &#40; de criação de perfil de dados Página de solicitações de perfil &#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   
   

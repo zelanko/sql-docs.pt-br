@@ -1,29 +1,34 @@
 ---
-title: "Editor da Transforma&#231;&#227;o Pesquisa (p&#225;gina Sa&#237;da de Erro) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.lookuptransformation.erroroutput.f1"
+title: "Editor de transformação de pesquisa (página saída de erro) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.lookuptransformation.erroroutput.f1
 ms.assetid: 15d53bb0-8be1-46fb-b459-04a397e75fac
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 120a040b37f3eae7e7ce4fc317f39434116f2ece
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor da Transforma&#231;&#227;o Pesquisa (p&#225;gina Sa&#237;da de Erro)
+# <a name="lookup-transformation-editor-error-output-page"></a>Editor da Transformação Pesquisa (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo **Editor da Transformação Pesquisa** para especificar as opções de tratamento de erros.  
   
  Para saber mais sobre a transformação Pesquisa, consulte [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Entrada/Saída**  
  Visualize o nome da entrada.  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 14
  **Aplicar**  
  Aplique a opção de tratamento de erros às células selecionadas.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)  
   
   

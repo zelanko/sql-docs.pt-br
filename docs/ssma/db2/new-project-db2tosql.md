@@ -1,0 +1,48 @@
+---
+title: Novo projeto (DB2ToSQL) | Microsoft Docs
+ms.prod: sql-non-specified
+ms.custom: 
+ms.date: 01/19/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- Azure SQL Database
+- SQL Server
+ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
+caps.latest.revision: 4
+author: sabotta
+ms.author: carlasab
+manager: lonnyb
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c97402a72bf7e9553e7e76c0c9d9c03a2b8bac31
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
+---
+# <a name="new-project-db2tosql"></a>Novo projeto (DB2ToSQL)
+Use o **novo projeto** caixa de diálogo para criar um novo projeto SSMA. Para acessar o **novo projeto** caixa de diálogo de **arquivo** menu, clique em **novo projeto**.  
+  
+## <a name="options"></a>Opções  
+**Nome**  
+Digite o nome do projeto. O SSMA acrescentará a extensão de arquivo.  
+  
+**Local**  
+Digite ou navegue até a pasta ou o local de rede para salvar o projeto.  
+  
+**Migrar para o**  
+Selecione uma versão do banco de dados de destino do abaixo da lista:  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+  
+-   Banco de dados SQL do Azure  
+  
+

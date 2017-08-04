@@ -1,26 +1,31 @@
 ---
-title: "Mostrar rela&#231;&#245;es muitos para muitos em Hierarquias Derivadas (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Mostrar relações muitos-para-muitos em hierarquias derivadas (Master Data Services) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5653a69d945fda68c197107461f6af0861135505
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Mostrar rela&#231;&#245;es muitos para muitos em Hierarquias Derivadas (Master Data Services)
+# <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Mostrar relações muitos para muitos em Hierarquias Derivadas (Master Data Services)
   As DHs (Hierarquias Derivadas) exibem relações um para muitos e, agora, também podem mostrar relações muitos para muitos.  
   
-## Relações M2M (muitos-para-muitos)  
+## <a name="many-to-many-m2m-relationships"></a>Relações M2M (muitos-para-muitos)  
  Uma relação M2M entre duas entidades pode ser modelada com o uso de uma terceira entidade que forneça um mapeamento entre elas:  
   
  ![mds_hierarchies_manytomany](../master-data-services/media/mds-hierarchies-manytomany.png "mds_hierarchies_manytomany")  
@@ -37,7 +42,7 @@ caps.handback.revision: 13
   
  ![mds_hierarchies_edit_derived_hierarchy_one](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-one.PNG "mds_hierarchies_edit_derived_hierarchy_one")  
   
- Na captura de tela acima, observe que a entidade **Employee** aparece sob **Níveis Atuais** no meio como o único nível. A Hierarquia Derivada **Visualização** à direita simplesmente mostra uma lista de todos os membros da entidade **Employee** . A seção **Níveis Disponíveis** à esquerda mostra quais níveis podem ser adicionados no nível superior atual (**Funcionário**). A maioria deles são DBAs (atributos baseados em domínio) na entidade **Funcionário**, incluindo o DBA **Departamento**.  
+ Na captura de tela acima, observe que a entidade **Employee** aparece sob **Níveis Atuais** no meio como o único nível. A Hierarquia Derivada **Visualização** à direita simplesmente mostra uma lista de todos os membros da entidade **Employee** . A seção **Níveis Disponíveis** à esquerda mostra quais níveis podem ser adicionados no nível superior atual (**Funcionário**). A maioria deles são DBAs (atributos baseados em domínio) na entidade **Funcionário** , incluindo o DBA **Departamento** .  
   
  A partir do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], há um novo tipo de nível que modela as relações M2M, por exemplo: **Classe (mapeado por meio de ClassRegistration.Student)**. O nome do nível é mais detalhado do que os outros de modo a refletir as informações extras necessárias para descrever inequivocamente a relação de mapeamento. Arraste e solte esse nível no nível **Employee** na seção **Níveis Atuais** :  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 13
   
  Os membros da entidade de mapeamento **ClassRegistration** não aparecem em qualquer lugar na Hierarquia Derivada. Eles são usados simplesmente para definir as relações entre os membros pai e filho na hierarquia.  
   
- Você pode editar a relação M2M modificando os membros da entidade de mapeamento, executando uma das ações a seguir. A relação M2M é somente leitura na página **Gerenciador de Hierarquias Derivadas**.  
+ Você pode editar a relação M2M modificando os membros da entidade de mapeamento, executando uma das ações a seguir. A relação M2M é somente leitura na página **Gerenciador de Hierarquias Derivadas** .  
   
 -   Modifique os membros da entidade de mapeamento na página **Gerenciador de Entidades** usando o suplemento Master Data Services para Excel ou usando os dados de preparo.  
   
@@ -76,9 +81,9 @@ Como mostra a imagem a seguir, o nome do nível que modela essa relação é ![m
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
-Para obter instruções sobre como implantar o modelo de exemplo Cliente e outros modelos de exemplo incluídos no [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consulte [Implantando dados e modelos de exemplo](../sql-server/media/master-data-services.png#deploySample).   
+Para obter instruções sobre como implantar o modelo de exemplo Cliente e outros modelos de exemplo incluídos no [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consulte [Implantando dados e modelos de exemplo](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md).   
   
-## Relação um para muitos  
+## <a name="one-many-relationship"></a>Relação um para muitos  
  Um membro de uma HD pode ser o pai de vários membros filho, mas, em geral, ele não pode ter mais de um pai (para ver as exceções, consulte [Segurança do membro](#bkmk_member_security)). Por exemplo, suponha que há duas entidades: Employee e Department, em que cada funcionário pertence a um único departamento. Essa relação é modelada adicionando à entidade Employee um DBA (atributo baseado em domínio) que faz referência à entidade Department:  
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
@@ -96,10 +101,11 @@ Para obter instruções sobre como implantar o modelo de exemplo Cliente e outro
   
 -   Uma Hierarquia Derivada com um nível M2M (um filho pode ser mapeado para muitos pais).  
   
-## Coleções  
+## <a name="collections"></a>Coleções  
  As Coleções e Hierarquias Explícitas foram preteridas. O procedimento armazenado de conversão (udpConvertCollectionAndConsolidatedMembersToLeaf) converte membros da coleção em membros folha e cria Hierarquias Derivadas muitos para muitos para capturar informações de associação de coleção.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Hierarquias derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   
+

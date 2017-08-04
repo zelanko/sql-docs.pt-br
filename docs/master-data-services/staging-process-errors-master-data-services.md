@@ -1,30 +1,35 @@
 ---
-title: "Erros de processo de preparo (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "processo de preparo [Master Data Services], mensagens de erro"
+title: Erros (Master Data Services) do processo de preparo | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 94184d750670e7c38f40c8705baaacc09eef1953
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Erros de processo de preparo (Master Data Services)
+# <a name="staging-process-errors-master-data-services"></a>Erros de processo de preparo (Master Data Services)
   Quando o processo de preparo é concluído, todos os registros processados nas tabelas de preparo têm um valor na coluna ErrorCode. Esses valores são listados na tabela a seguir.  
   
 |Código|Erro|Quando ocorre/detalhes|Aplica-se à tabela|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|O mesmo código de membro existe várias vezes na tabela de preparo.|Seu lote de preparo inclui o mesmo código de membro várias vezes. Nenhum membro é criado ou atualizado.|Folha<br /><br /> Consolidado<br /><br /> Relação|  
-|210003|Os valores de atributos fazem referência a um membro que não existe ou está inativo.|Quando você prepara atributos baseados em domínio, deve usar o código, em lugar do nome. Aplica-se a **ImportType0**, **1** e **2**.|Folha<br /><br /> Consolidado|  
+|210003|Os valores de atributos fazem referência a um membro que não existe ou está inativo.|Quando você prepara atributos baseados em domínio, deve usar o código, em lugar do nome. Aplica-se a **ImportType0**, **1**e **2**.|Folha<br /><br /> Consolidado|  
 |210006|O código de membro está inativo.|**ImportType** = **1** e você especificou um código de membro que não existe.|Folha<br /><br /> Consolidado<br /><br /> Relação|  
 |210032|O nome da hierarquia está ausente ou não é válido.|A hierarquia explícita não foi encontrada ou o valor de **HierarchyName** estava em branco.|Consolidado<br /><br /> Relação|  
 |210035|Como não existe uma regra de negócio de geração de código, o **MemberCode** é necessário.|Ao criar ou atualizar membros, um **MemberCode** sempre é necessário, a menos que você esteja usando a geração de código automática. Para obter mais informações, consulte [Criação automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).|Folha<br /><br /> Consolidado|  
@@ -39,9 +44,9 @@ caps.handback.revision: 8
 |210016|Não foi possível criar a relação porque ela causaria uma referência circular.|Isso ocorre quando você tenta atribuir um filho como um pai.|Relação|  
 |210046|O membro não pode ser um irmão de Root.|Isso ocorre quando **RelationshipType** = **2** (irmão) e o **ParentCode** ou **ChildCode** é **Root**. Membros não podem estar no mesmo nível do nó raiz; eles só podem ser filhos.|Relação|  
 |210047|O membro não pode ser um irmão de Unused.|Isso ocorre quando **RelationshipType** = **2** (irmão) e o **ParentCode** ou **ChildCode** é **Unused**. Os membros podem ser filhos apenas do nó Unused.|Relação|  
-|210048|**ParentCode** e **ChildCode** não podem ser iguais.|O valor de **ParentCode** é igual ao valor de **ChildCode**. Esses valores devem ser diferentes.|Relação|  
+|210048|**ParentCode** e **ChildCode** não podem ser iguais.|O valor de **ParentCode** é igual ao valor de **ChildCode** . Esses valores devem ser diferentes.|Relação|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Exibir erros que ocorrem durante o preparo &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   

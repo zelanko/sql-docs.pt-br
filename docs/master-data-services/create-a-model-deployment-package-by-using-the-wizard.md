@@ -1,29 +1,34 @@
 ---
-title: "Criar um pacote de implanta&#231;&#227;o de modelo usando o Assistente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pacotes de implantação [Master Data Services], criando"
-  - "modelos [Master Data Services], criando um pacote de implantação"
-  - "criando pacotes [Master Data Services]"
+title: "Criar um pacote de implantação de modelo usando o Assistente | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deployment packages [Master Data Services], creating
+- models [Master Data Services], creating a deployment package
+- creating packages [Master Data Services]
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 050a64ae675c953ea54e33bd813f93732804fe1b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Criar um pacote de implanta&#231;&#227;o de modelo usando o Assistente
+# <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Criar um pacote de implantação de modelo usando o Assistente
   Use o assistente de implantação de modelo do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] somente para criar um pacote dos objetos de modelo. Se você precisar incluir dados no pacote, consulte [Criar um pacote de implantação de modelo usando o MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   No aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , é preciso ter permissão para acessar a área funcional de **Administração do Sistema** .  
@@ -32,7 +37,7 @@ caps.handback.revision: 8
   
 -   Deve existir um modelo como base para o pacote que será criado. Para obter mais informações, consulte [Criar um modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
   
-### Para criar um pacote de implantação de modelo  
+### <a name="to-create-a-model-deployment-package"></a>Para criar um pacote de implantação de modelo  
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
@@ -50,11 +55,11 @@ caps.handback.revision: 8
   
 8.  Clique em **Fechar** para fechar o assistente.  
   
-## Próximas etapas  
+## <a name="next-steps"></a>Próximas etapas  
   
 -   [Implantar um pacote de implantação de modelo usando o Assistente](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
-## Consulte também  
- [Implantando modelos &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>Consulte também  
+ [Implantando modelos &#40; Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

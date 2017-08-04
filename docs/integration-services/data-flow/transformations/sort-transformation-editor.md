@@ -1,31 +1,36 @@
 ---
-title: "Editor de Transforma&#231;&#227;o Classifica&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sorttransformation.f1"
-helpviewer_keywords: 
-  - "Editor de Transformação Classificação"
+title: "Editor de transformação classificação | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sorttransformation.f1
+helpviewer_keywords:
+- Sort Transformation Editor
 ms.assetid: 8ae23970-49a9-4d6d-9f15-c7074783347c
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e5e2f2d7e377495c658ec0caaaf325bcc8550817
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de Transforma&#231;&#227;o Classifica&#231;&#227;o
+# <a name="sort-transformation-editor"></a>Editor de Transformação Classificação
   Use a caixa de diálogo **Editor de Transformação Classificação** para selecionar as colunas a classificar, definir a ordem de classificação e especificar se as duplicatas devem ser removidas.  
   
  Para saber mais sobre a transformação Classificação, consulte [Sort Transformation](../../../integration-services/data-flow/transformations/sort-transformation.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Colunas de Entrada Disponíveis**  
  Usando as caixas de seleção, especifique as colunas a classificar.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 25
  **Remover linhas com valores de classificação duplicados**  
  Indique se a transformação deve copiar as linhas duplicadas para a saída ou criar uma única entrada para todas as duplicatas, seguindo as opções de comparação de cadeia de caracteres especificadas.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)  
   
   

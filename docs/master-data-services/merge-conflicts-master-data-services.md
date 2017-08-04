@@ -1,33 +1,38 @@
 ---
-title: "Conflitos de mesclagem (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Mesclar conflitos (Master Data Services) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cd232ee139207f8ee78b0a5c549c81a26ee1e5e1
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Conflitos de mesclagem (Master Data Services)
+# <a name="merge-conflicts-master-data-services"></a>Conflitos de mesclagem (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se os dados que você estiver tentando publicar tiverem sido alterados por outro usuário, a publicação falhará com um erro de conflito. Para resolver esse erro, você pode executar conflitos de mesclagem e republicar as alterações.  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** .  
   
 -   Você deve ter, no mínimo, a permissão Atualizar para o objeto de modelo folha para a entidade que você está atualizando.  
   
-### Para mesclar conflitos  
+### <a name="to-merge-conflicts"></a>Para mesclar conflitos  
   
 1.  Na página **Explorer** , atualize o atributo de membro.  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 5
   
 4.  Depois de clicar em **Aplicar**, você poderá fazer alterações adicionais e publicar novamente. Ou você pode clicar em **Cancelar** para cancelar a atualização e a recarga da versão mais recente do servidor.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Membros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
   

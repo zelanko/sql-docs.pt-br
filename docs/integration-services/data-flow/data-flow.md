@@ -1,29 +1,34 @@
 ---
-title: "Fluxo de Dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dados de saída [Integration Services]"
-  - "fluxo de dados [Integration Services], elementos"
-  - "dados de entrada [Integration Services]"
-  - "metadados externos [Integration Services]"
-  - "fluxo de dados [Integration Services]"
-  - "erros [Integration Services], saídas de fluxo de dados"
+title: Fluxo de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- output data [Integration Services]
+- data flow [Integration Services], elements
+- input data [Integration Services]
+- external metadata [Integration Services]
+- data flow [Integration Services]
+- errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Fluxo de Dados
+# <a name="data-flow"></a>Fluxo de Dados
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece três tipos diferentes de componentes de fluxo de dados: fontes, transformações e destinos. As fontes extraem dados de armazenamentos de dados, como tabelas e exibições em bancos de dados relacionais, arquivos e bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . As transformações modificam, resumem e limpam dados. Os destinos carregam dados em repositórios de dados ou criam conjuntos de dados na memória.  
   
 > [!NOTE]  
@@ -31,11 +36,11 @@ caps.handback.revision: 70
   
  Além disso, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece caminhos que conectam a saída de um componente com a entrada de outro. Os caminhos definem a sequência de componentes e permitem que você adicione anotações ao fluxo de dados ou exiba a origem da coluna.  
   
- Você conecta os componentes de fluxo de dados conectando a saída de fontes e destinos à entrada de transformações e destinos. Quando estiver criando um fluxo de dados, você geralmente conecta o segundo componente e componentes subsequentes à medida que os adiciona ao fluxo de dados. Depois de conectar o componente, as colunas de entrada estão disponíveis para usar na configuração do componente. Quando nenhuma coluna de entrada estiver disponível, você terá que completar a configuração do componente depois que ele estiver conectado ao fluxo de dados. Para obter mais informações, consulte [Caminhos do Integration Services](../../integration-services/data-flow/integration-services-paths.md) e [Conectar componentes com caminhos](../Topic/Connect%20Components%20with%20Paths.md).  
+ Você conecta os componentes de fluxo de dados conectando a saída de fontes e destinos à entrada de transformações e destinos. Quando estiver criando um fluxo de dados, você geralmente conecta o segundo componente e componentes subsequentes à medida que os adiciona ao fluxo de dados. Depois de conectar o componente, as colunas de entrada estão disponíveis para usar na configuração do componente. Quando nenhuma coluna de entrada estiver disponível, você terá que completar a configuração do componente depois que ele estiver conectado ao fluxo de dados. Para obter mais informações, consulte [Caminhos do Integration Services](../../integration-services/data-flow/integration-services-paths.md) e [Conectar componentes com caminhos](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
   
  O diagrama a seguir exibe um fluxo de dados que tem uma fonte, uma transformação com uma entrada e uma saída e um destino. O diagrama inclui as entradas, as saídas e as saídas de erro, além da entrada, da saída e das colunas externas.  
   
- ![Componentes de fluxo de dados e suas entradas e saídas](../../integration-services/data-flow/media/mw-dts-dataflow.gif "Componentes de fluxo de dados e suas entradas e saídas")  
+ ![Componentes e suas entradas e saídas de fluxo de dados](../../integration-services/data-flow/media/mw-dts-dataflow.gif "componentes e suas entradas e saídas de fluxo de dados")  
   
 ## <a name="data-flow-implementation"></a>Implementação de fluxo de dados  
  Adicionar uma tarefa de Fluxo de Dados ao controle de fluxo de um pacote, é a primeira etapa na implementação de um fluxo de dados em um pacote. Um pacote pode incluir múltiplas tarefas de Fluxo de Dados, cada qual com seu próprio fluxo de dados. Por exemplo, se um pacote exige que os fluxos de dados sejam executados em uma sequência específica ou que outras tarefas sejam executadas entre os fluxos de dados, você deverá usar uma tarefa de Fluxo de Dados separada para cada fluxo de dados.  
@@ -166,7 +171,7 @@ caps.handback.revision: 70
  Para ver uma demonstração de como utilizar os ganhos de desempenho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity, consulte [Desempenho do Microsoft Connector para Oracle da Attunity (vídeo do SQL Server)](http://go.microsoft.com/fwlink/?LinkID=210369).  
   
 ## <a name="connection-managers"></a>Gerenciadores de conexões  
- Muitos componentes de fluxo de dados se conectam às fontes de dados e você deve adicionar ao pacote os gerenciadores de conexões necessários para que o componente possa ser configurado corretamente. Você pode adicionar os gerenciadores de conexões conforme cria o fluxo de dados ou antes que você comece a criação do fluxo de dados. Para obter mais informações, consulte [Conexões do Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) e [Criar gerenciadores de conexões](../Topic/Create%20Connection%20Managers.md).  
+ Muitos componentes de fluxo de dados se conectam às fontes de dados e você deve adicionar ao pacote os gerenciadores de conexões necessários para que o componente possa ser configurado corretamente. Você pode adicionar os gerenciadores de conexões conforme cria o fluxo de dados ou antes que você comece a criação do fluxo de dados. Para obter mais informações, consulte [Conexões do Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) e [Criar gerenciadores de conexões](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
   
 ## <a name="external-metadata"></a>Metadados externos  
  Quando você cria um fluxo de dados em um pacote usando o Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , são feitas cópias dos metadados das fontes e destinos nas colunas externas de fontes e destinos, servindo como um instantâneo do esquema. Quando o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] valida o pacote, o Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] compara esse instantâneo com o esquema da fonte ou do destino e envia erros e avisos, dependendo das alterações.  
@@ -215,3 +220,4 @@ caps.handback.revision: 70
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  Vídeo, [Desempenho do Microsoft Connector para Oracle da Attunity (vídeo do SQL Server)](http://go.microsoft.com/fwlink/?LinkID=210369), em technet.microsoft.com.  
+

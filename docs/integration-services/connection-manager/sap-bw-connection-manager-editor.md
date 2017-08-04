@@ -1,24 +1,29 @@
 ---
-title: "Editor do Gerenciador de Conex&#245;es de SAP BW | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwconnectionmanager.f1"
+title: "Editor do Gerenciador de Conexão do SAP BW | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwconnectionmanager.f1
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9f07a79e630550d7d0599026a91ee53f5b05d05
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor do Gerenciador de Conex&#245;es de SAP BW
+# <a name="sap-bw-connection-manager-editor"></a>Editor do Gerenciador de Conexões de SAP BW
   Use **Editor do Gerenciador de Conexões do SAP BW** para especificar as propriedades a serem usadas para se conectar a um sistema SAP Netweaver BW versão 7.  
   
  O gerenciador de conexões do SAP BW fornece conectividade para um sistema SAP Netweaver BW 7 para o uso pela origem ou destino do SAP BW. Para saber mais sobre o gerenciador de conexões do SAP BW do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 para SAP BW, consulte [Gerenciador de conexões SAP BW](../../integration-services/connection-manager/sap-bw-connection-manager.md).  
@@ -38,7 +43,7 @@ caps.handback.revision: 10
   
     -   Clique com o botão direito do mouse no gerenciador de conexões SAP BW e selecione **Editar**.  
   
-## Opções  
+## <a name="options"></a>Opções  
   
 > [!NOTE]  
 >  Se você não souber todos os valores necessários para configurar o gerenciador de conexões, talvez precise perguntar ao administrador do SAP.  
@@ -58,19 +63,19 @@ caps.handback.revision: 10
  **Usar servidor de aplicativo único**  
  Conecte-se a um único servidor de aplicativos.  
   
- Para se conectar a um grupo de servidores com balanceamento de carga, use a opção **Usar balanceamento de carga**.  
+ Para se conectar a um grupo de servidores com balanceamento de carga, use a opção **Usar balanceamento de carga** .  
   
  **Host**  
  Se estiver se conectando a um único servidor de aplicativos, especifique o nome do host.  
   
 > [!NOTE]  
->  Esta opção só estará disponível se você tiver selecionado a opção **Usar servidor de aplicativo único**.  
+>  Esta opção só estará disponível se você tiver selecionado a opção **Usar servidor de aplicativo único** .  
   
  **Número do sistema**  
  Se estiver se conectando a um único servidor de aplicativos, especifique o número do sistema.  
   
 > [!NOTE]  
->  Esta opção só estará disponível se você tiver selecionado a opção **Usar servidor de aplicativo único**.  
+>  Esta opção só estará disponível se você tiver selecionado a opção **Usar servidor de aplicativo único** .  
   
  **Usar balanceamento de carga**  
  Conecte-se a um grupo de servidores com balanceamento de carga.  
@@ -81,19 +86,19 @@ caps.handback.revision: 10
  Se estiver se conectando a um grupo de servidores com balanceamento de carga, especifique o nome do servidor de mensagens.  
   
 > [!NOTE]  
->  Esta opção só estará disponível se você tiver selecionado a opção **Usar balanceamento de carga**.  
+>  Esta opção só estará disponível se você tiver selecionado a opção **Usar balanceamento de carga** .  
   
  **Agrupar**  
  Se estiver se conectando a um grupo de servidores com balanceamento de carga, especifique o nome do grupo de servidores.  
   
 > [!NOTE]  
->  Esta opção só estará disponível se você tiver selecionado a opção **Usar balanceamento de carga**.  
+>  Esta opção só estará disponível se você tiver selecionado a opção **Usar balanceamento de carga** .  
   
  **SID**  
  Se estiver se conectando a um grupo de servidores com balanceamento de carga, especifique a ID do sistema para a conexão.  
   
 > [!NOTE]  
->  Esta opção só estará disponível se você tiver selecionado a opção **Usar balanceamento de carga**.  
+>  Esta opção só estará disponível se você tiver selecionado a opção **Usar balanceamento de carga** .  
   
  **Diretório de log**  
  Habilite o log para os componentes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 para SAP BW.  
@@ -113,7 +118,7 @@ caps.handback.revision: 10
  **Testar Conexão**  
  Teste a conexão usando os valores que você forneceu. Depois de clicar em **Testar Conexão**, uma caixa de mensagem aparecerá e indicará se a conexão foi bem-sucedida ou falhou.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Ajuda F1 do Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

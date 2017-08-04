@@ -1,27 +1,32 @@
 ---
-title: "Op&#231;&#245;es de repeti&#231;&#227;o (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rastreamentos [SQL Server], reproduzindo"
-  - "repetindo rastreamentos"
-  - "Health Monitor [SQL Server]"
-  - "Caixa de diálogo configuração de repetição"
+title: "Opções de repetição (SQL Server Profiler) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], replaying
+- replaying traces
+- health monitor [SQL Server]
+- Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e334fe938bd9cc93854fc25e0074292a653bc3d7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Op&#231;&#245;es de repeti&#231;&#227;o (SQL Server Profiler)
+# <a name="replay-options-sql-server-profiler"></a>Opções de repetição (SQL Server Profiler)
   Antes de repetir um rastreamento capturado com [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], especifique as seguintes opções de repetição na caixa de diálogo **Configuração de Repetição** . Para inicializar essa caixa de diálogo, abra o arquivo ou tabela de rastreamento a repetir no [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]e, no menu **Repetir** , clique em **Iniciar**. Para obter informações sobre quais permissões são necessárias para reproduzir um rastreamento, veja [Permissões necessárias para executar o SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
   
  Este tópico descreve as opções especificadas com a caixa de diálogo **Configuração de Repetição** .  
@@ -29,7 +34,7 @@ caps.handback.revision: 17
 > [!NOTE]  
 >  É recomendável usar o Distributed Replay Utility para reproduzir um aplicativo OLTP intensivo (com muitas conexões simultâneas ativas ou alta taxa de transferência). O Distributed Replay Utility pode reproduzir dados de rastreamento de vários computadores, com uma simulação melhor de uma carga de trabalho de missão crítica. Para obter mais informações, consulte [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   
-## Opções de repetição básicas  
+## <a name="basic-replay-options"></a>Opções de repetição básicas  
  **Servidor de repetição**  
  O servidor é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em relação ao qual se deseja repetir o rastreamento. O servidor deve cumprir os requisitos de repetição descritos em [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)".  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 17
 > [!NOTE]  
 >  Para um melhor desempenho da repetição, recomendamos selecionar eventos a repetir usando vários threads e não selecionar a exibição dos resultados da repetição.  
   
-## Opções de repetição avançadas  
+## <a name="advanced-replay-options"></a>Opções de repetição avançadas  
  **Repetir SPIDs do sistema**  
  Repetir todos os SPIDs. Essa é a opção padrão.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 17
  Repetir o número de SPID selecionado na lista.  
   
  **Limitar repetição por data e hora**  
- Repete o rastreamento para a **Hora de início** e **Hora de término** especificadas.  
+ Repete o rastreamento para a **Hora de início** e **Hora de término**especificadas.  
   
  **Intervalo de espera do Health Monitor**  
  Define o tempo de execução permitido a um processo até que o Health Monitor o encerre.  
@@ -73,12 +78,12 @@ caps.handback.revision: 17
  **Habilitar monitor de processos bloqueados do SQL Server**  
  Define a frequência com que o monitor de processos bloqueados procura processos bloqueados ou que estejam causando bloqueios.  
   
-## Sobre o Health Monitor  
- O Health Monitor é um thread de aplicativo que monitora os processos simulados envolvidos na repetição de um rastreamento e encerra os processos que se encontram bloqueados na repetição. Na guia **Opções de Repetição Avançadas** da caixa de diálogo **Configuração de Repetição**, é possível especificar o tempo, em segundos, que o Health Monitor deve esperar antes de encerrar um processo bloqueado (**Intervalo de espera do Health Monitor**). Se você definir esse intervalo como 0, o Health Monitor nunca encerrará os processos que causam bloqueios no rastreamento de repetição.  
+## <a name="about-the-health-monitor"></a>Sobre o Health Monitor  
+ O Health Monitor é um thread de aplicativo que monitora os processos simulados envolvidos na repetição de um rastreamento e encerra os processos que se encontram bloqueados na repetição. Na guia **Opções de Repetição Avançadas** da caixa de diálogo **Configuração de Repetição** , é possível especificar o tempo, em segundos, que o Health Monitor deve esperar antes de encerrar um processo bloqueado (**Intervalo de espera do Health Monitor**). Se você definir esse intervalo como 0, o Health Monitor nunca encerrará os processos que causam bloqueios no rastreamento de repetição.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Repetir rastreamentos](../../tools/sql-server-profiler/replay-traces.md)   
  [Requisitos para repetição](../../tools/sql-server-profiler/replay-requirements.md)   
- [Considerações para reproduzir rastreamentos &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
+ [Considerações para reproduzir rastreamentos &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

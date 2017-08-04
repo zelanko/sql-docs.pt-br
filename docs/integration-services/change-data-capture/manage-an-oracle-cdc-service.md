@@ -1,24 +1,29 @@
 ---
-title: "Gerenciar um Servi&#231;o Oracle CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "createSrv"
+title: "Gerenciar um serviço Oracle CDC | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- createSrv
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ece331cf561da80bf56df914fec6f42159ade23e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Gerenciar um Servi&#231;o Oracle CDC
+# <a name="manage-an-oracle-cdc-service"></a>Gerenciar um Serviço Oracle CDC
   Você pode usar o Console de Configuração do Serviço CDC para gerenciar um Serviço CDC específico.  
   
  **Para selecionar o serviço CDC com o qual você deseja trabalhar**  
@@ -37,10 +42,10 @@ caps.handback.revision: 8
   
      Você também pode clicar com o botão direito no serviço CDC com o qual você deseja trabalhar e selecionar a ação desejada. Consulte [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> O que pode fazer você com um Serviço CDC  
+##  <a name="BKMK_WhatcandowithCDCService"></a> What can you do with a CDC Service  
  Você pode realizar as seguintes ações ao trabalhar com um serviço CDC.  
   
-### Excluir o serviço  
+### <a name="delete-the-service"></a>Excluir o serviço  
  No painel **Ações** no lado direito do Console de Configuração do Serviço CDC, clique em **Excluir** para excluir o serviço.  
   
  Você também pode clicar com o botão direito do mouse no serviço CDC que deseja excluir e selecionar **Excluir**.  
@@ -51,12 +56,12 @@ caps.handback.revision: 8
   
  Para obter informações sobre os dados que você deverá inserir na caixa de diálogo Conecte-se ao SQL Server, consulte [Connection to SQL Server for Delete](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md).  
   
-### Editar as propriedades de serviço CDC  
+### <a name="edit-the-cdc-service-properties"></a>Editar as propriedades de serviço CDC  
  No painel **Ações** no lado direito do Console de Configuração do Serviço CDC, clique em **Propriedades**.  
   
  Você também pode clicar com o botão direito do mouse no serviço CDC em que deseja editar as propriedades e selecionar **Propriedades**.  
   
-## Consulte também  
- [Como gerenciar um serviço CDC local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
+## <a name="see-also"></a>Consulte também  
+ [Como gerenciar um serviço CDC Local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
   
   

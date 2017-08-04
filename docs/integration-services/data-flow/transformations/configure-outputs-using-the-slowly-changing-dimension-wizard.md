@@ -1,37 +1,42 @@
 ---
-title: "Configurar sa&#237;das por meio do Assistente para Dimens&#245;es de Altera&#231;&#227;o Lenta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "transformação Dimensão de Alteração Lenta"
-  - "dimensões de alteração lenta"
-  - "Assistente para dimensão de alteração lenta"
+title: "Configurar saídas por meio do Assistente para dimensões de alteração lenta | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Slowly Changing Dimension transformation
+- slowly changing dimensions
+- Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc89e598abbf0b224325d74501b47e3999bf472b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Configurar sa&#237;das por meio do Assistente para Dimens&#245;es de Altera&#231;&#227;o Lenta
+# <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurar saídas por meio do Assistente para Dimensões de Alteração Lenta
   O Assistente para Dimensões de Alteração Lenta funciona como o editor da transformação Dimensão de Alteração Lenta. Criar e configurar o fluxo de dados para alterar dados de dimensão lentamente pode ser uma tarefa complexa. O Assistente para Dimensões de Alteração Lenta oferece o método mais simples para criar o fluxo de dados para as saídas da transformação Dimensão de Alteração Lenta, guiando você pelas etapas de mapeamento de colunas, selecionando colunas de chave de negócio, definindo atributos de alteração de coluna e configurando o suporte para membros de dimensão deduzidos.  
   
  Você deve escolher pelo menos uma coluna de chave de negócio na tabela de dimensões e mapeá-la para uma coluna de entrada. O valor da chave de negócio vincula um registro na fonte a um registro na tabela de dimensões. A transformação usa esse mapeamento para localizar o registro na tabela de dimensões e determinar se um registro é novo ou está em alteração. A chave de negócio é geralmente a chave primária na fonte, mas poderá ser uma chave alternativa desde que identifique um registro com exclusividade e seu valor não se altere. A chave de negócio também pode ser uma chave composta, que consiste em várias colunas. A chave primária na tabela de dimensões é geralmente uma chave substituta, o que significa um valor numérico gerado automaticamente por uma coluna de identidade ou por uma solução personalizada, como um script.  
   
  Antes de poder executar o Assistente para Dimensões de Alteração Lenta, você deve adicionar uma fonte e uma transformação Dimensão de Alteração Lenta ao fluxo de dados e conectar a saída da fonte à entrada da transformação Dimensão de Alteração Lenta. Opcionalmente, o fluxo de dados pode incluir outras transformações entre a fonte de dados e a transformação Dimensão de Alteração Lenta.  
   
- Para abrir o Assistente para Dimensões de Alteração Lenta no Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)], clique duas vezes na transformação Dimensão de Alteração Lenta.  
+ Para abrir o Assistente para Dimensões de Alteração Lenta no Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , clique duas vezes na transformação Dimensão de Alteração Lenta.  
   
-## Criando saídas de Dimensão de Alteração Lenta  
+## <a name="creating-slowly-changing-dimension-outputs"></a>Criando saídas de Dimensão de Alteração Lenta  
   
-#### Para criar saídas da transformação Dimensão de Alteração Lenta  
+#### <a name="to-create-slowly-changing-dimension-transformation-outputs"></a>Para criar saídas da transformação Dimensão de Alteração Lenta  
   
 1.  Escolha o gerenciador de conexões para acessar a fonte de dados que contém a tabela de dimensões que você quer atualizar.  
   
@@ -73,12 +78,12 @@ caps.handback.revision: 43
   
      O diagrama a seguir exibe um exemplo de fluxo de dados que oferece suporte a atributos fixos, atributos de alteração e alterações de atributo histórico, membros deduzidos e alterações de registros correspondentes.  
   
-     ![Fluxo de dados do Assistente para Dimensões de Alteração Lenta](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "Fluxo de dados do Assistente para Dimensões de Alteração Lenta")  
+     ![Fluxo de dados de alteração lenta Assistente de dimensão](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "de fluxo de dados de alteração lenta Assistente de dimensão")  
   
-## Atualizando saídas de Dimensão de Alteração Lenta  
+## <a name="updating-slowly-changing-dimension-outputs"></a>Atualizando saídas de Dimensão de Alteração Lenta  
  O modo mais simples de atualizar a configuração de saídas da transformação Dimensão de Alteração Lenta é executar novamente o Assistente para Dimensões de Alteração Lenta e modificar as propriedades das páginas do assistente. Você também pode atualizar a transformação Dimensão de Alteração Lenta usando a caixa de diálogo **Editor Avançado** ou programaticamente.  
   
-## Consulte também  
- [Transformação Dimensão de Alteração Lenta](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+## <a name="see-also"></a>Consulte também  
+ [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

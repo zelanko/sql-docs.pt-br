@@ -1,25 +1,30 @@
 ---
-title: "Caixa de di&#225;logo Validar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.isprojectvalidate.f1"
-  - "sql13.ssis.ssms.ispackagevalidate.f1"
+title: "Caixa de diálogo validar | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.isprojectvalidate.f1
+- sql13.ssis.ssms.ispackagevalidate.f1
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d7ff51208136b767dfb6260e6cfc07e67615531e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Caixa de di&#225;logo Validar
+# <a name="validate-dialog-box"></a>Caixa de diálogo Validar
   Use a caixa de diálogo **Validar** para verificar os problemas comuns de um projeto ou pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Se houver um problema, uma mensagem será exibida na parte superior da caixa de diálogo. Caso contrário, o termo Ready aparecerá na parte superior.  

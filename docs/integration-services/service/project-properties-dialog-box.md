@@ -1,26 +1,31 @@
 ---
-title: "Caixa de di&#225;logo Propriedades do Projeto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.isprojectprop.general.f1"
-  - "sql13.ssis.ssms.isprojectprop.permissions.f1"
+title: "Caixa de diálogo Propriedades do projeto | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.isprojectprop.general.f1
+- sql13.ssis.ssms.isprojectprop.permissions.f1
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 106987c75957ab90773e49e22b65fd89d3e417e4
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Caixa de di&#225;logo Propriedades do Projeto
-  Um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é uma unidade de implantação. Cada projeto pode conter pacotes, parâmetros e referências de ambiente. Um projeto é um objeto protegível e pode definir permissões para principais de banco de dados. Quando um projeto é reimplantado, a versão anterior dele pode ser armazenada no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+# <a name="project-properties-dialog-box"></a>Caixa de diálogo Propriedades do Projeto
+  Um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é uma unidade de implantação. Cada projeto pode conter pacotes, parâmetros e referências de ambiente. Um projeto é um objeto protegível e pode definir permissões para principais de banco de dados. Quando um projeto é reimplantado, a versão anterior dele pode ser armazenada no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Os parâmetros de projeto e de pacote podem ser usados para atribuir valores às propriedades nos pacotes em tempo de execução. Alguns parâmetros exigem valores antes da execução do pacote. Valores de parâmetros que referenciam variáveis de ambiente requerem que o projeto tenha a referência de ambiente correspondente antes da execução.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 9
  Use a página **Permissões** para exibir e definir as permissões explícitas para o projeto.  
   
  Procurar  
- Clique em **Procurar** para selecionar usuários e funções para os quais você quer definir permissões, usando a caixa de diálogo **Procurar Todas as Entidades de Segurança**.  
+ Clique em **Procurar** para selecionar usuários e funções para os quais você quer definir permissões, usando a caixa de diálogo **Procurar Todas as Entidades de Segurança** .  
   
  **Nome**  
  Lista o nome do usuário ou função.  

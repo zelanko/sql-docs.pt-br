@@ -1,31 +1,36 @@
 ---
-title: "Exibindo o log do aplicativo do Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "logs do aplicativo [SQL Server]"
-  - "Logs do aplicativo do Windows [SQL Server]"
-  - "exibindo os logs do aplicativo do Windows"
-  - "erros [SQL Server], logs"
-  - "logs do sistema [SQL Server]"
-  - "logs de segurança [SQL Server]"
-  - "exibindo os logs do aplicativo do Windows"
-  - "logs [SQL Server], logs dos aplicativos do Windows "
+title: Exibindo o Log de aplicativo do Windows | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application logs [SQL Server]
+- Windows application logs [SQL Server]
+- viewing Windows application logs
+- errors [SQL Server], logs
+- system logs [SQL Server]
+- security logs [SQL Server]
+- displaying Windows application logs
+- logs [SQL Server], Windows application logs
 ms.assetid: f9853b74-7db7-47cc-b957-e49ed5bc0a1a
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 833f71530a08ad5648b35719f9fd636213c61595
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Exibindo o log do aplicativo do Windows
+# <a name="viewing-the-windows-application-log"></a>Exibindo o log do aplicativo do Windows
   Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é configurado para usar o log do aplicativo do Microsoft Windows, cada sessão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grava novos eventos nesse log. Ao contrário do log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , não é criado um novo log de aplicativos cada vez que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]é iniciada.  
   
  Exiba e gerencie o log do aplicativo do Windows usando Visualizador de Eventos do Windows ou o Visualizador de Log no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -42,6 +47,6 @@ caps.handback.revision: 20
   
  **Para exibir o log de aplicativos do Windows**  
   
- [Exibir o log de aplicativos do Windows &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows.md)  
+ [Exibir o log de aplicativos do Windows &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
   

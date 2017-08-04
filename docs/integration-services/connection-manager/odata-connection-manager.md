@@ -1,21 +1,26 @@
 ---
-title: "Gerenciador de Conex&#245;es OData | Microsoft Docs"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gerenciador de Conexão do OData | Microsoft Docs"
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 22374d52835c37ecf45fef20e15d563dad8e5917
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Gerenciador de Conex&#245;es OData
+# <a name="odata-connection-manager"></a>Gerenciador de Conexões OData
   Um gerenciador de conexões OData habilita um pacote a conectar-se a uma fonte OData. Um componente de origem OData se conecta a uma origem OData usando um gerenciador de conexões OData e consome dados do serviço. Para obter mais informações, consulte [OData Source](../../integration-services/data-flow/odata-source.md).  
   
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>Adição do Gerenciador de Conexões OData a um Pacote SSIS  

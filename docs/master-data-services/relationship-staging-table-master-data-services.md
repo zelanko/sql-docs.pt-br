@@ -1,25 +1,30 @@
 ---
-title: "Tabela de preparo de rela&#231;&#245;es (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tabela de preparo de relações [Master Data Services]"
-  - "banco de dados [Master Data Services], tabela de reações"
+title: "Tabela de preparo de relação (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 04/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- relationships staging table [Master Data Services]
+- database [Master Data Services], relationships table
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9b2a6a4d1bd4e62c5c8edb3a5149dab402e0b897
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Tabela de preparo de rela&#231;&#245;es (Master Data Services)
+# <a name="relationship-staging-table-master-data-services"></a>Tabela de preparo de relações (Master Data Services)
   Use a tabela de preparo de relação (stg.name_Relationship) no banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para alterar o local dos membros em uma hierarquia explícita, com base na relação que os membros têm entre si.  
   
 ##  <a name="TableColumns"></a> Colunas da tabela  
@@ -38,9 +43,10 @@ caps.handback.revision: 8
 |**Sort Order**|Opcional<br /><br /> Um inteiro que indica a ordem do membro em relação aos outros membros sob o pai. Cada membro filho deve ter um identificador exclusivo.||  
 |**ErrorCode**|Exibe um código de erro. Para todos os registros com um **ImportStatus_ID** de **2**, consulte [Erros de processo de preparo &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md).||  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [Exibir erros que ocorrem durante o preparo &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [Erros de processo de preparo &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
+ [Erros de processo de preparo &#40; Master Data Services &#41;](../master-data-services/staging-process-errors-master-data-services.md)  
   
   
+

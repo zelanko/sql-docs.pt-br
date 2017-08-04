@@ -1,24 +1,29 @@
 ---
-title: "Fazer altera&#231;&#245;es &#224;s tabelas selecionadas para capturar altera&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "makChanToTab"
+title: "Fazer alterações às tabelas selecionadas para capturar alterações | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- makChanToTab
 ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 962b3a3690bd8a0bf62de762509c4398773578ca
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Fazer altera&#231;&#245;es &#224;s tabelas selecionadas para capturar altera&#231;&#245;es
+# <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>Fazer alterações às tabelas selecionadas para capturar alterações
   Nesta caixa de diálogo, você pode selecionar colunas específicas da tabela selecionada da qual capturar alterações. Você também pode editar as informações de **Função de Segurança** e **Instância de Captura** .  
   
  Você pode fazer as seguintes alterações nas tabelas selecionadas para capturar alterações nessa caixa de diálogo.  
@@ -48,7 +53,7 @@ caps.handback.revision: 6
   
  No campo **Instância de Captura** , insira um nome para a instância de captura.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Como criar a instância de banco de dados de alteração do SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Selecionar tabelas e colunas Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   

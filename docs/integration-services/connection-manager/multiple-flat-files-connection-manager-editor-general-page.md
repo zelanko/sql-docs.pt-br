@@ -1,31 +1,36 @@
 ---
-title: "Editor do Gerenciador de Conex&#245;es de V&#225;rios Arquivos Simples (p&#225;gina Geral) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.multifile.general.f1"
-helpviewer_keywords: 
-  - "Editor do Gerenciador de Conexões de Vários Arquivos Simples"
+title: "Vários arquivos simples Editor do Gerenciador de Conexão (página geral) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.multifile.general.f1
+helpviewer_keywords:
+- Multiple Flat Files Connection Manager Editor
 ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 84e8e23d349266c6c1195a10410085654548c64f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor do Gerenciador de Conex&#245;es de V&#225;rios Arquivos Simples (p&#225;gina Geral)
+# <a name="multiple-flat-files-connection-manager-editor-general-page"></a>Editor do Gerenciador de Conexões de Vários Arquivos Simples (página Geral)
   Use a página **Geral** da caixa de diálogo do **Editor do Gerenciador de Conexões de Vários Arquivos Simples** para selecionar um grupo de arquivos que têm o mesmo formato de dados e para especificar seu formato de dados. Uma conexão de vários arquivos simples habilita um pacote a conectar-se com um grupo de arquivos de texto que têm o mesmo formato.  
   
  Para saber mais sobre o gerenciador de conexões de Vários Arquivos Simples, consulte [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Nome do gerenciador de conexões**  
  Forneça um nome exclusivo para a conexão de Vários Arquivos Simples no fluxo de trabalho. O nome fornecido será exibido no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
@@ -79,10 +84,10 @@ caps.handback.revision: 31
  **Nomes de coluna na primeira linha de dados**  
  Indique se deseja esperar ou fornecer nomes de coluna na primeira linha de dados.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Colunas&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Avançado&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Visualização&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Editor do Gerenciador de Conexão de vários arquivos simples &#40; Página colunas &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [Editor do Gerenciador de Conexão de vários arquivos simples &#40; Página Avançado &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [Editor do Gerenciador de Conexão de vários arquivos simples &#40; Página de visualização &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

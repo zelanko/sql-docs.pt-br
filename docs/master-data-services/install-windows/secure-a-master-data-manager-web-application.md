@@ -1,35 +1,40 @@
 ---
-title: "Proteger um aplicativo Web Master Data Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Proteger um aplicativo Web Master Data Manager | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3592f093d6138f443f856d8202fe23e8786b89aa
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Proteger um aplicativo Web Master Data Manager
+# <a name="secure-a-master-data-manager-web-application"></a>Proteger um aplicativo Web Master Data Manager
   Você pode proteger o aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] com HTTPS.  
   
 > [!NOTE]  
 >  O aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] pode usar HTTP ou HTTPS, mas não ambos.  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar o procedimento:  
   
 -   Você deve ser um administrador no servidor Web onde o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] é instalado.  
   
 -   O MDS deve ser instalado no servidor Web e um aplicativo Web deve existir. Para obter mais informações, veja [Instalar o Master Data Services](../../master-data-services/install-windows/install-master-data-services.md) e [Criar um aplicativo Web do Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md).  
   
-### Para proteger o aplicativo Web Master Data Manager com HTTPS  
+### <a name="to-secure-the-master-data-manager-web-application-with-https"></a>Para proteger o aplicativo Web Master Data Manager com HTTPS  
   
 1.  Depois que você confirmar que o aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] está configurado corretamente com HTTP, crie um certificado no IIS. Para obter mais informações, consulte [Configurando certificados de servidor no IIS 7](http://technet.microsoft.com/library/cc732230\(WS.10\).aspx).  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 9
   
 12. Salve o arquivo e feche-o. Se você receber um erro, pode ser porque o UAC está habilitado. Para obter mais informações, consulte [Desativar o controle de conta do usuário](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Agora, os usuários devem ser capazes de usar HTTPS para acessar o site.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criar um aplicativo Web do Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

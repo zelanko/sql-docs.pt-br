@@ -1,24 +1,29 @@
 ---
-title: "Conectar a um banco de dados de origem Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "oraDb"
+title: Conecte-se a um banco de dados de origem do Oracle | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a5c5a28264e255b50ee3d33986ba2b84c646c0f8
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Conectar a um banco de dados de origem Oracle
+# <a name="connect-to-an-oracle-source-database"></a>Conectar a um banco de dados de origem Oracle
   Use a página do Oracle de origem para fornecer as informações necessárias para conectar-se ao banco de dados de origem Oracle. A instância CDC lerá os logs de refazer do banco de dados Oracle aos quais você está conectado.  
   
  **Cadeia de conexão do Oracle**  
@@ -40,7 +45,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  Um usuário deve ter os privilégios a seguir concedidos no banco de dados Oracle para ser um usuário da mineração de logs.  
 >   
->  -   SELECT em <qualquer tabela capturada>  
+>  -   Selecione em \<any-tabela capturada >  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE em DBMS LOGMNR  
 > -   SELECT em V$LOGMNR CONTENTS  
@@ -64,7 +69,7 @@ caps.handback.revision: 8
   
  Depois de terminar de inserir informações nesta página, clique em **Avançar** para [Select Oracle Tables and Columns](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Como criar a instância de banco de dados de alteração do SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Editar propriedades da instância](../../integration-services/change-data-capture/edit-instance-properties.md)  
   

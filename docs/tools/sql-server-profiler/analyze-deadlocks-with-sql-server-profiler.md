@@ -1,42 +1,47 @@
 ---
-title: "Analisar deadlocks com o SQL Server Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "nós de processo [SQL Server Profiler]"
-  - "Profiler [SQL Server Profiler], deadlocks"
-  - "deadlocks [SQL Server], identificando a causa"
-  - "nós de recurso [SQL Server Profiler]"
-  - "gráficos [SQL Server Profiler]"
-  - "SQL Server Profiler, deadlocks"
-  - "eventos [SQL Server], deadlocks"
-  - "bordas [SQL Server Profiler]"
+title: Analisar Deadlocks com o SQL Server Profiler | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- process nodes [SQL Server Profiler]
+- Profiler [SQL Server Profiler], deadlocks
+- deadlocks [SQL Server], identifying cause
+- resource nodes [SQL Server Profiler]
+- graphs [SQL Server Profiler]
+- SQL Server Profiler, deadlocks
+- events [SQL Server], deadlocks
+- edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 929b037e2d3bc844e284adb51e96f0e4c5b4e1f7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Analisar deadlocks com o SQL Server Profiler
+# <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analisar deadlocks com o SQL Server Profiler
   Use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para identificar a causa de um deadlock. Um deadlock ocorre quando há uma dependência cíclica entre dois ou mais threads, ou processos, do mesmo conjunto de recursos dentro do SQL Server. Usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], é possível criar um rastreamento que registra, reproduz e exibe eventos de deadlock para análise.  
   
  Para rastrear eventos de deadlock, adicione a classe de evento **Deadlock graph** a um rastreamento. Esta classe de evento popula a coluna de dados **TextData** no rastreamento com dados XML sobre o processo e objetos que estão envolvidos no deadlock. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pode extrair o documento XML para um arquivo XML de deadlock (.xdl) que pode ser exibido posteriormente no SQL Server Management Studio. Você pode configurar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para extrair eventos **Deadlock graph** para um único arquivo contendo todos os eventos **Deadlock graph** ou para arquivos separados. Essa extração pode ser feita de qualquer uma destas formas:  
   
--   No momento da configuração do rastreamento, usando a guia **Configurações de Extração de Eventos** . Observe que essa guia não será exibida a menos que você selecione o evento **Deadlock graph** na guia **Seleção de Eventos**.  
+-   No momento da configuração do rastreamento, usando a guia **Configurações de Extração de Eventos** . Observe que essa guia não será exibida a menos que você selecione o evento **Deadlock graph** na guia **Seleção de Eventos** .  
   
 -   Usando a opção **Extrair Eventos do SQL Server** no menu **Arquivo** .  
   
 -   Eventos individuais também podem ser extraídos e salvos clicando com o botão direito do mouse em um evento específico e escolhendo **Extrair Dados de Evento**.  
   
-## Gráficos de deadlock  
+## <a name="deadlock-graphs"></a>Gráficos de deadlock  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] e o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usam um gráfico de espera de deadlock para descrever um deadlock. O gráfico de espera de deadlock contém nós de processo, nós de recurso e bordas representando as relações entre os processos e os recursos. Os componentes dos gráficos de espera estão definidos na tabela a seguir:  
   
  Nó de processo  
@@ -48,12 +53,12 @@ caps.handback.revision: 13
  Borda  
  Uma relação entre um processo e um recurso. Uma borda **request** ocorre quando um processo aguarda um recurso. Uma borda **owner** ocorre quando um recurso aguarda um processo. O modo de bloqueio encontra-se na descrição da borda. Por exemplo, **Modo: X**.  
   
-## Nó de processo de deadlock  
+## <a name="deadlock-process-node"></a>Nó de processo de deadlock  
  Em um gráfico de espera, o nó de processo contém informações sobre o processo. A tabela a seguir explica os componentes de um processo.  
   
 |Componente|Definição|  
 |---------------|----------------|  
-|ID de processo do servidor |Identificador de processo de servidor (SPID), um identificador atribuído pelo servidor ao processo proprietário do bloqueio.|  
+|ID de processo do servidor|Identificador de processo de servidor (SPID), um identificador atribuído pelo servidor ao processo proprietário do bloqueio.|  
 |ID de lote do servidor|Identificador de lote de servidor (SBID).|  
 |ID do contexto de execução|Identificador do contexto de execução (ECID). A ID do contexto de execução de determinado thread associado a uma SPID específica.<br /><br /> ECID = {0,1,2,3, *...n*}, em que 0 sempre representa o thread principal ou pai e {1,2,3, *...n*} representa os subthreads.|  
 |Prioridade do deadlock|Prioridade do deadlock para o processo. Para obter mais informações sobre os valores possíveis, veja [SET DEADLOCK_PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/set-deadlock-priority-transact-sql.md).|  
@@ -63,7 +68,7 @@ caps.handback.revision: 13
 |Buffer de entrada|Buffer de entrada do processo atual; define o tipo de evento e a instrução que são executados. Os valores possíveis incluem:<br /><br /> **Idioma**<br /><br /> **RPC**<br /><br /> **Nenhuma**|  
 |Instrução|Tipo de instrução. Os valores possíveis são:<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown (desconhecido)**|  
   
-## Nó de recurso de deadlock  
+## <a name="deadlock-resource-node"></a>Nó de recurso de deadlock  
  Em um deadlock, dois processos esperam por um recurso ocupado pelo outro processo. Em um gráfico de deadlock, os recursos são exibidos como nós de recurso.  
   
   

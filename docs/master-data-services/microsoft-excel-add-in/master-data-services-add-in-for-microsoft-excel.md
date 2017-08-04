@@ -1,23 +1,28 @@
 ---
-title: "Suplemento do Master Data Services para Microsoft Excel | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Suplemento do Master Data Services para Microsoft Excel | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 30
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 4d7a1a96cde8a7423aaa8d202ac7def518152279
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Suplemento do Master Data Services para Microsoft Excel
+# <a name="master-data-services-add-in-for-microsoft-excel"></a>Suplemento do Master Data Services para Microsoft Excel
   Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], você pode carregar listas filtradas de dados do MDS no Excel, em que pode trabalhar com elas da mesma maneira como trabalharia com outros dados. Quando você terminar, poderá publicar os dados no MDS novamente, onde serão armazenados centralmente. A segurança determina quais dados você pode exibir e atualizar.  
   
  Se você for um administrador, também poderá usar o [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] para novas entidades e atributos, e carregá-los com os dados. Isso elimina a necessidade de usar outras ferramentas para carregar dados em seus modelos.  
@@ -25,8 +30,8 @@ caps.handback.revision: 30
  No [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], você pode usar o DQS (Data Quality Services) para combinar os dados antes de carregá-los no MDS. Isso ajuda a evitar dados duplicados no MDS.  
 
 ## <a name="downloads"></a>Downloads 
->*  Baixe o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] para [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] SP1 [desta página do Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?linkid=836866).
->* Baixe o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] para SQL Server vNext CTP1 [desta página do Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?linkid=836867).
+>*  Baixar o suplemento do Master Data Services para Excel para SQL Server 2016 SP1 do [esta página do Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=836866). 
+>* Baixe o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] para SQL Server 2017 CTP1 de [esta página do Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=836867). Este suplemento também funciona para o SQL Server de 2017 RC1.
 
  
   
@@ -83,3 +88,4 @@ caps.handback.revision: 30
 -   [Segurança &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md)  
   
   
+

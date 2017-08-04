@@ -1,27 +1,32 @@
 ---
-title: "Organizar colunas exibidas em um rastreamento (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "organizando colunas de rastreamento exibidas [SQL Server]"
-  - "organizando colunas de rastreamento exibidas"
-  - "rastreamentos [SQL Server], colunas de dados"
+title: Organizar colunas exibidas em um rastreamento (SQL Server Profiler) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- organizing trace columns displayed [SQL Server]
+- arranging trace columns displayed
+- traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f1c097e900a9ed76bb5160ecab37238344d7a33
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Organizar colunas exibidas em um rastreamento (SQL Server Profiler)
-  É possível agrupar as colunas de dados em um rastreamento selecionando **Organizar Colunas** na tabela de rastreamento ou na caixa de diálogo **Propriedades do Arquivo de Rastreamento** , ou durante a definição do rastreamento. Agrupar as colunas de dados permite-lhe analisar melhor a saída de rastreamento do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Para obter mais informações, veja [Exibir e analisar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
+# <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organizar colunas exibidas em um rastreamento (SQL Server Profiler)
+  É possível agrupar as colunas de dados em um rastreamento selecionando **Organizar Colunas** na tabela de rastreamento ou na caixa de diálogo **Propriedades do Arquivo de Rastreamento** , ou durante a definição do rastreamento. Agrupar as colunas de dados permite-lhe analisar melhor a saída de rastreamento do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Para obter mais informações, veja [Exibir e analisar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
   
  **Organizar Colunas** permite agrupar os eventos do rastreamento ou agrupá-los e agregá-los pelas colunas de dados que você selecionar.  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 14
 |+ SQL:StmtCompleted (11)||||  
 |+ SQL:SmtStarting (21)||||  
   
-### Para agrupar as colunas de dados exibidas em um rastreamento  
+### <a name="to-group-data-columns-displayed-in-a-trace"></a>Para agrupar as colunas de dados exibidas em um rastreamento  
   
 1.  Abra um arquivo ou tabela de rastreamento existente.  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 14
   
 5.  Na caixa de diálogo **Organizar Colunas** , selecione as colunas que deseja exibir no grupo e clique em **Para Cima** para movê-las para baixo de **Grupos**. Tendo movido todas as colunas que deseja para baixo de **Grupos**, você pode usar os botões **Para Cima** e **Para Baixo** para reordená-las.  
   
-     Mover os nomes das colunas de dados para a lista **Grupos** significa que o rastreamento exibido será primeiro organizado na ordem em que as colunas de dados aparecem na lista **Grupos**, depois pela segunda coluna de dados na lista **Grupos** e assim por diante.  
+     Mover os nomes das colunas de dados para a lista **Grupos** significa que o rastreamento exibido será primeiro organizado na ordem em que as colunas de dados aparecem na lista **Grupos** , depois pela segunda coluna de dados na lista **Grupos** e assim por diante.  
   
 6.  Clique em **OK** na caixa de diálogo **Organizar Colunas** e, em seguida, clique em **OK** na caixa de diálogo **Propriedades da Tabela de Rastreamento** ou **Propriedades do Arquivo de Rastreamento** .  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 14
   
 7.  Para desagrupar os dados do rastreamento exibido, clique em **Exibição Agrupada** no menu **Exibir** para cancelar a seleção. Se desejar voltar à exibição agrupada, clique outra vez em **Exibição Agrupada** no menu **Exibir** para selecioná-la novamente.  
   
-### Para agrupar e agregar as colunas de dados em um rastreamento  
+### <a name="to-group-and-aggregate-data-columns-in-a-trace"></a>Para agrupar e agregar as colunas de dados em um rastreamento  
   
 1.  Abra um arquivo ou tabela de rastreamento existente.  
   
@@ -81,9 +86,9 @@ caps.handback.revision: 14
   
 7.  Para voltar à exibição normal dos dados do rastreamento, clique em **Exibição Agregada** no menu **Exibir** para cancelar a seleção. Se desejar voltar à exibição agregada, clique outra vez em **Exibição Agregada** no menu **Exibir** para selecioná-la novamente. Note que você também pode clicar em **Exibição Agrupada** no menu **Exibir** para exibir os eventos do rastreamento agrupado sem que eles sejam recolhidos.  
   
-## Consulte também  
- [Criar um rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [Abrir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+## <a name="see-also"></a>Consulte também  
+ [Criar um rastreamento &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Abrir uma tabela de rastreamento &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Abrir um arquivo de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
   

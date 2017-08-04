@@ -1,23 +1,28 @@
 ---
-title: "Criar um pacote de implanta&#231;&#227;o de modelo usando o MDSModelDeploy | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Criar um pacote de implantação de modelo usando MDSModelDeploy | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 59f983bc7fb8b25956a6edd61a6a9226384ffb8a
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Criar um pacote de implanta&#231;&#227;o de modelo usando o MDSModelDeploy
+# <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Criar um pacote de implantação de modelo usando o MDSModelDeploy
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], use a ferramenta MDSModelDeploy para criar um pacote. Dependendo dos comandos especificados, o pacote poderá conter:  
   
 -   Somente objetos de modelo.  
@@ -26,7 +31,7 @@ caps.handback.revision: 13
   
  Se desejar implantar um pacote que contém apenas objetos de modelo, você poderá usar o assistente de implantação de modelo no aplicativo Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Para obter mais informações, consulte [Criar um pacote de implantação de modelo usando o assistente](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 1.  As permissões básicas exigidas para executar a ferramenta MDSModelDeploy são as seguintes:  
@@ -57,7 +62,7 @@ caps.handback.revision: 13
   
  Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-### Para criar um pacote de implantação de modelo usando o MDSModelDeploy  
+### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Para criar um pacote de implantação de modelo usando o MDSModelDeploy  
   
 1.  Abra um Administrador: prompt de Comando.  
   
@@ -91,12 +96,12 @@ caps.handback.revision: 13
   
 6.  Pressione Enter. Quando o pacote é criado com êxito, uma mensagem é exibida informando que "A operação MDSModelDeploy foi concluída com êxito".  
   
-## Próximas etapas  
+## <a name="next-steps"></a>Próximas etapas  
   
--   [Implantar um pacote de implantação de modelo usando MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
+-   [Implantar um pacote de implantação de modelo usando o MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
-## Consulte também  
- [Opções de implantação de modelo &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)   
- [Implantando modelos &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>Consulte também  
+ [Opções de implantação de modelo &#40; Master Data Services &#41;](../master-data-services/model-deployment-options-master-data-services.md)   
+ [Implantando modelos &#40; Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

@@ -1,30 +1,35 @@
 ---
-title: "Copiar um pacote nas Ferramentas de Dados do SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pacotes [Integration Services], copiando"
-  - "copiando pacotes"
-  - "regenerando GUID do pacote"
-  - "atualizando propriedades de pacote"
+title: Copiar um pacote no SQL Server Data Tools | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- packages [Integration Services], copying
+- copying packages
+- regenerating package GUID
+- updating package properties
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 59a001e0aa360183e5e393faedc613cfabda0f02
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Copiar um pacote nas Ferramentas de Dados do SQL Server
+# <a name="copy-a-package-in-sql-server-data-tools"></a>Copiar um pacote nas Ferramentas de Dados do SQL Server
   Este tópico descreve como criar um novo pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] por meio da cópia de um pacote existente e como atualizar as propriedades **Name** e **GUID** do novo pacote.  
   
-### Para copiar um pacote  
+### <a name="to-copy-a-package"></a>Para copiar um pacote  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém o pacote que deseja copiar.  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 18
   
 3.  Verifique se o pacote que será copiado está selecionado no Gerenciador de Soluções ou a guia no Designer SSIS que contém o pacote é a guia ativa  
   
-4.  No menu **Arquivo**, clique em **Salvar \<package name> Como**.  
+4.  Sobre o **arquivo** menu, clique em **salvar \<nome do pacote > como**.  
   
     > [!NOTE]  
     >  O pacote deve ser aberto no Designer do SSIS antes que a opção **Salvar Como** aparecer no menu **Arquivo**.  
@@ -47,13 +52,13 @@ caps.handback.revision: 18
   
 9. Como opção, clique no plano de fundo da guia **Fluxo de Controle** e clique em **Propriedades**.  
   
-10. Na janela Propriedades, clique no valor da propriedade de ID e, na lista suspensa, clique em **\<Gerar Nova ID>**.  
+10. Na janela Propriedades, clique no valor da propriedade de ID e, em seguida, na lista suspensa, clique em  **\<gerar nova ID >**.  
   
 11. No menu **Arquivo** , clique em **Salvar Itens Selecionados** para salvar o novo pacote.  
   
-## Consulte também  
- [Salvar uma cópia de um pacote](../Topic/Save%20a%20Copy%20of%20a%20Package.md)   
- [Copiar pacotes nas Ferramentas de Dados do SQL Server](../integration-services/create-packages-in-sql-server-data-tools.md)   
- [Pacotes do Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-packages.md)  
+## <a name="see-also"></a>Consulte também  
+ [Salvar uma cópia de um pacote](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
+ [Criar pacotes no SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)   
+ [Integration Services &#40; SSIS &#41; Pacotes](../integration-services/integration-services-ssis-packages.md)  
   
   

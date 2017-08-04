@@ -1,25 +1,30 @@
 ---
-title: "Editor de Gerenciador de Conex&#245;es OData | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.odatasource.connectionmanager.f1"
-  - "sql13.dts.designer.odataconnectionmanager.f1"
+title: "Editor do Gerenciador de Conexão de OData | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.odatasource.connectionmanager.f1
+- sql13.dts.designer.odataconnectionmanager.f1
 ms.assetid: 7fc2b8f7-10a8-4adc-a5d3-a4ddf5db651c
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6f0f83d5033e78401971d2e6317cdd7e1eae51f3
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de Gerenciador de Conex&#245;es OData
+# <a name="odata-connection-manager-editor"></a>Editor de Gerenciador de Conexões OData
   Use a caixa de diálogo **Editor de Gerenciador de Conexões OData** para adicionar uma conexão ou editar uma conexão existente com um OData Source.  
   
 ## <a name="options"></a>Opções  

@@ -1,22 +1,27 @@
 ---
-title: "Propriedades personalizadas de destino ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Propriedades personalizadas do destino ODBC | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20a4e0f425cbd5d4d7fe7c3da4a17c2efe59d9e4
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propriedades personalizadas de destino ODBC
+# <a name="odbc-destination-custom-properties"></a>Propriedades personalizadas de destino ODBC
   A tabela a seguir descreve as propriedades personalizadas do destino ODBC. Todas as propriedades podem ser definidas a partir de expressões de propriedades SSIS.  
   
 |Nome da propriedade|Tipo de Dados|Description|  

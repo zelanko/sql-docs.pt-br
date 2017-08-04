@@ -1,23 +1,28 @@
 ---
-title: "Novidades no MDS (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: O que &#39; s no Master Data Services (MDS) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 caps.latest.revision: 85
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 85
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e341e5b15e33af6338447f5422138aea1b94240a
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Novidades no MDS (Master Data Services)
+# <a name="what39s-new-in-master-data-services-mds"></a>O que &#39; s no Master Data Services (MDS)
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   Este tópico resume as alterações e atualizações na versão [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
@@ -50,9 +55,9 @@ caps.handback.revision: 85
   
     ```  
     <configuration>  
-       <system.webServer>  
+       \<system.webServer>  
           <urlCompression doStaticCompression="true" doDynamicCompression="false " />  
-       </system.webServer>  
+       \</system.webServer>  
     </configuration>  
   
     ```  
@@ -176,7 +181,7 @@ caps.handback.revision: 85
     
  **Índices personalizados**  
   
- Você pode criar um índice não clusterizado em um atributo (índice único) ou em uma lista de atributos (índice composto), em uma entidade, para ajudar a melhorar o desempenho da consulta. Para obter mais informações, consulte [Índice personalizado&#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md).  
+ Você pode criar um índice não clusterizado em um atributo (índice único) ou em uma lista de atributos (índice composto), em uma entidade, para ajudar a melhorar o desempenho da consulta. Para obter mais informações, consulte [Índice personalizado #40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md).  
  
   **Filtros de atributos**  
   
@@ -227,9 +232,11 @@ caps.handback.revision: 85
  Os pacotes de exemplo foram atualizados para compatibilidade com novos cenários. Para saber mais, veja [Exemplos de SQL Server: Pacotes de implantação de modelo (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Recursos de Master Data Services e Data Quality Services suportados pelas edições do SQL Server 2016](../master-data-services/master data services and data quality services features support.md)  
+ [Recursos de Master Data Services e Data Quality Services suportados pelas edições do SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Recursos descontinuados do Master Data Services](../master-data-services/deprecated-master-data-services-features.md)   
  [Recursos descontinuados do Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

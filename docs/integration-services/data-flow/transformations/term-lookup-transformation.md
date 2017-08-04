@@ -1,32 +1,37 @@
 ---
-title: "Transforma&#231;&#227;o Pesquisa de Termo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.termlookuptrans.f1"
-helpviewer_keywords: 
-  - "extraindo dados [Integration Services]"
-  - "comparando termos extraídos [Integration Services]"
-  - "extração de texto [Integration Services]"
-  - "extrações de termos [Integration Services]"
-  - "pesquisas [Integration Services]"
-  - "contando itens extraídos"
-  - "transformação Pesquisa de Termos"
+title: "Transformação pesquisa de termos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.termlookuptrans.f1
+helpviewer_keywords:
+- extracting data [Integration Services]
+- match extracted terms [Integration Services]
+- text extraction [Integration Services]
+- term extractions [Integration Services]
+- lookups [Integration Services]
+- counting extracted items
+- Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3eefbab1c6f9b3cd5e51faa9e875a44218c33b3f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transforma&#231;&#227;o Pesquisa de Termo
+# <a name="term-lookup-transformation"></a>transformação Pesquisa de Termos
   A transformação Pesquisa de Termo corresponde termos extraídos de texto em uma coluna de entrada de transformação com termos em uma tabela de referência. Ela conta o número de vezes em que um termo na tabela de pesquisa ocorre no conjunto de dados de entrada e grava a contagem junto com o termo da tabela de referência nas colunas na saída de transformação. Essa transformação é útil para criar uma lista de palavras personalizada com base no texto de entrada, completa com estatísticas de frequência de palavras.  
   
  Antes de a transformação pesquisa de termos executar uma pesquisa, ela extrai palavras do texto em uma coluna de entrada usando o mesmo método da transformação extração de termos:  
@@ -39,7 +44,7 @@ caps.handback.revision: 56
   
  Para personalizar ainda mais quais os termos a corresponder, a transformação pesquisa de termos pode ser configurada para executar uma correspondência com diferenciação de maiúsculas e minúsculas.  
   
-## Correspondências  
+## <a name="matches"></a>Correspondências  
  A pesquisa de termos executa uma pesquisa e retorna um valor usando as regras a seguir:  
   
 -   Se a transformação estiver configurada para executar correspondências com diferenciação de maiúsculas e minúsculas, as correspondências que apresentarem falha na comparação com diferenciação de maiúsculas e minúsculas serão descartadas. Por exemplo, *estudante* e *ESTUDANTE* serão tratadas como palavras diferentes.  
@@ -61,12 +66,12 @@ caps.handback.revision: 56
 |Termos de referência|Windows, Windows 7 Professional|  
 |Saída|Windows|  
   
- A transformação pesquisa de termos pode corresponder substantivos e locuções nominais que contenham caracteres especiais e os dados na tabela de referência podem incluir esses caracteres. Os caracteres especiais são os seguintes: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ e ‘.  
+ A transformação pesquisa de termos pode corresponder substantivos e locuções nominais que contenham caracteres especiais e os dados na tabela de referência podem incluir esses caracteres. Os caracteres especiais são da seguinte maneira: %, @, &, $, #, \*,:,,., **,** ,!,?, \<, >, +, =, ^, ~, |, \\, /, (,), [,], {,}, ", e '.  
   
-## Tipos de dados  
+## <a name="data-types"></a>Tipos de dados  
  A transformação pesquisa de termos só pode usar uma coluna que tenha tipo de dados DT_WSTR ou DT_NTEXT. Se uma coluna contiver texto, mas não tiver um desses tipos de dados, a transformação Conversão de Dados poderá adicionar uma coluna com tipo de dados DT_WSTR ou DT_NTEXT para o fluxo de dados e copiar os valores da coluna para a coluna nova. A saída da transformação Conversão de Dados pode ser usada, então, como entrada para a transformação pesquisa de termos. Para obter mais informações, consulte [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
   
-## Configuração da transformação Pesquisa de Termo  
+## <a name="configuration-the-term-lookup-transformation"></a>Configuração da transformação Pesquisa de Termo  
  As colunas de entrada da transformação Pesquisa de Termo incluem a propriedade InputColumnType, que indica o uso da coluna. InputColumnType pode conter os valores a seguir:  
   
 -   O valor 0 indica que a coluna só é transmitida para a saída e não é usada na pesquisa.  
@@ -101,7 +106,7 @@ caps.handback.revision: 56
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](../Topic/Common%20Properties.md)  
+-   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

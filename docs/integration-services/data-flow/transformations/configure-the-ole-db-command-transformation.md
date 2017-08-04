@@ -1,28 +1,33 @@
 ---
-title: "Configurar a transforma&#231;&#227;o Comando OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parâmetros [Integration Services]"
-  - "transformação Comando OLE DB"
+title: "Configurar a transformação de comando OLE DB | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parameters [Integration Services]
+- OLE DB Command transformation
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a93d0ab78a39f8e87fbd9863822a06522d542db0
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Configurar a transforma&#231;&#227;o Comando OLE DB
+# <a name="configure-the-ole-db-command-transformation"></a>Configurar a transformação Comando OLE DB
   Para adicionar e configurar uma transformação Comando OLE DB, o pacote já deve incluir pelo menos uma tarefa Fluxo de Dados e uma origem, como, por exemplo, uma origem de arquivo simples ou uma origem de OLE DB. Essa transformação é normalmente usada para executar consultas parametrizadas.  
   
-### Para configurar a transformação Comando OLE DB  
+### <a name="to-configure-the-ole-db-command-transformation"></a>Para configurar a transformação Comando OLE DB  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 24
   
 6.  Na guia **Gerenciadores de Conexões** , selecione um gerenciador de conexões OLE DB na lista **Gerenciador de Conexões** . Para obter mais informações, consulte [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-7.  Clique na guia **Propriedades do Componente** e clique no botão de reticências **(...)**, na caixa **SqlCommand**.  
+7.  Clique na guia **Propriedades do Componente** e clique no botão de reticências **(...)** , na caixa **SqlCommand** .  
   
 8.  No **Editor de Valores de Cadeias de Caracteres**, digite a instrução SQL parametrizada, com o uso de um ponto de interrogação (?) como o marcador para cada parâmetro.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 24
   
 11. Expanda **Entrada de Comando OLE DB**e **Colunas Externas**.  
   
-12. Verifique se **Colunas Externas** lista uma coluna para cada parâmetro na instrução SQL. Os nomes das colunas são **Param_0**, **Param_1** e assim por diante.  
+12. Verifique se **Colunas Externas** lista uma coluna para cada parâmetro na instrução SQL. Os nomes das colunas são **Param_0**, **Param_1**e assim por diante.  
   
      Você não deve alterar os nomes de coluna. Se você alterar os nomes de coluna, o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] gerará um erro de validação para a transformação Comando OLE DB.  
   
@@ -70,10 +75,10 @@ caps.handback.revision: 24
   
 15. Para salvar o pacote atualizado, clique em **Salvar** no menu **Arquivo** .  
   
-## Consulte também  
- [Transformação Comando OLE DB](../../../integration-services/data-flow/transformations/ole-db-command-transformation.md)   
+## <a name="see-also"></a>Consulte também  
+ [Transformação comando OLE DB](../../../integration-services/data-flow/transformations/ole-db-command-transformation.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Tarefa de Fluxo de Dados](../../../integration-services/control-flow/data-flow-task.md)  
+ [Tarefa de fluxo de dados](../../../integration-services/control-flow/data-flow-task.md)  
   
   

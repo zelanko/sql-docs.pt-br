@@ -1,26 +1,31 @@
 ---
-title: "Conectar-se a uma pasta de trabalho do Excel | Microsoft Docs"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Excel [Integration Services]"
+title: Conecte-se para uma pasta de trabalho do Excel | Microsoft Docs
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Excel [Integration Services]
 ms.assetid: d9746318-3669-4ce2-bbb0-4a1bd471c9dd
 caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b36b92c9beb840f6a2ea66250a5a025aa587acef
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Conectar-se a uma pasta de trabalho do Excel
+# <a name="connect-to-an-excel-workbook"></a>Conectar-se a uma pasta de trabalho do Excel
   A conexão de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a uma pasta de trabalho do Microsoft Office Excel requer um gerenciador de conexões do Excel.  
   
- Você pode criar esses gerenciadores de conexões na área Gerenciadores de Conexões do [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer ou no Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Você pode criar esses gerenciadores de conexões na área Gerenciadores de Conexões do [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer ou no Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Provedores e drivers para arquivos do Microsoft Excel e Access**  
   
@@ -34,25 +39,25 @@ caps.handback.revision: 22
 |2010|[Tempo de execução do Microsoft Access 2010](https://www.microsoft.com/en-us/download/details.aspx?id=10910)|  
 |2013|[Tempo de execução do Microsoft Access 2013](http://www.microsoft.com/en-us/download/details.aspx?id=39358)|  
   
-### Para criar um gerenciador de conexões do Excel na área Gerenciadores de Conexões  
+### <a name="to-create-an-excel-connection-manager-from-the-connection-managers-area"></a>Para criar um gerenciador de conexões do Excel na área Gerenciadores de Conexões  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o pacote.  
   
-2.  Na área **Gerenciadores de Conexões**, clique com o botão direito do mouse em qualquer lugar da área e, em seguida, selecione **Nova Conexão**.  
+2.  Na área **Gerenciadores de Conexões** , clique com o botão direito do mouse em qualquer lugar da área e, em seguida, selecione **Nova Conexão**.  
   
-3.  Na caixa de diálogo **Adicionar Gerenciador de Conexões SSIS**, selecione **Excel** e configure o gerenciador de conexões.  
+3.  Na caixa de diálogo **Adicionar Gerenciador de Conexões SSIS** , selecione **Excel**e configure o gerenciador de conexões.  
   
      Para obter informações sobre as opções de configuração que estão disponíveis para este gerenciador de conexões, consulte [Editor de Gerenciador de Conexões Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md).  
   
-### Para criar uma conexão do Excel a partir do Assistente de Importação e Exportação do SQL Server  
+### <a name="to-create-an-excel-connection-from-the-sql-server-import-and-export-wizard"></a>Para criar uma conexão do Excel a partir do Assistente de Importação e Exportação do SQL Server  
   
-1.  Inicie a versão de 32 bits do Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Inicie a versão de 32 bits do Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-2.  Na página **Escolher uma Fonte de Dados**, para **Fonte de Dados**, selecione **Microsoft Excel** e configure a conexão do Excel.  
+2.  Na página **Escolher uma Fonte de Dados** , para **Fonte de Dados**, selecione **Microsoft Excel**e configure a conexão do Excel.  
   
      Para obter informações sobre as opções de configuração que estão disponíveis para este tipo de conexão, consulte [Editor de Gerenciador de Conexões Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Conectar-se a um banco de dados do Access](../../integration-services/connection-manager/connect-to-an-access-database.md)  
   
   

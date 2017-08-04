@@ -1,30 +1,35 @@
 ---
-title: "Copiar objetos de pacote | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "fluxo de controle [Integration Services], copiando objetos"
-  - "copiando objetos de pacote [Integration Services]"
-  - "fluxo de dados [Integration Services], copiando objetos"
-  - "gerenciadores de conexão [Integration Services], copiando"
+title: Copiar objetos de pacote | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control flow [Integration Services], copying objects
+- copying package objects [Integration Services]
+- data flow [Integration Services], copying objects
+- connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61e0e7c321323bba74e05afe4d28ce7f525843af
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Copiar objetos de pacote
+# <a name="copy-package-objects"></a>Copiar objetos de pacote
   Este tópico descreve como copiar os itens de fluxo de controle, itens de fluxo de dados e gerenciadores de conexões dentro de um pacote ou entre pacotes.  
   
-### Copiar itens de fluxo de controle e fluxo de dados  
+### <a name="to-copy-control-and-data-flow-items"></a>Copiar itens de fluxo de controle e fluxo de dados  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém os pacotes com os quais deseja trabalhar.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 14
   
 7.  Clique com o botão direito do mouse e clique em **Colar**.  
   
-### Copiar gerenciadores de conexões  
+### <a name="to-copy-connection-managers"></a>Copiar gerenciadores de conexões  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém o pacote com o qual deseja trabalhar.  
   
@@ -54,16 +59,16 @@ caps.handback.revision: 14
   
 3.  No Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] , clique na guia **Fluxo de Controle**, **Fluxo de Dados**ou **Manipulador de Eventos** .  
   
-4.  Na área **Gerenciadores de Conexões**, clique com o botão direito do mouse no gerenciador de conexões e clique em **Copiar**. Você pode copiar apenas um gerenciador de conexões por vez.  
+4.  Na área **Gerenciadores de Conexões** , clique com o botão direito do mouse no gerenciador de conexões e clique em **Copiar**. Você pode copiar apenas um gerenciador de conexões por vez.  
   
 5.  Se quiser copiar os itens para um pacote diferente, clique no pacote para o qual deseja copiar e, em seguida, clique na guia **Fluxo de Controle**, **Fluxo de Dados**ou **Manipulador de Eventos** .  
   
 6.  Clique com o botão direito do mouse na área **Gerenciadores de Conexões** e clique em **Colar**.  
   
-## Consulte também  
- [Fluxo de Controle](../integration-services/control-flow/control-flow.md)   
- [Fluxo de Dados](../integration-services/data-flow/data-flow.md)   
- [Conexões do SSIS &#40;Integration Services&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Copiar itens do projeto](../Topic/Copy%20Project%20Items.md)  
+## <a name="see-also"></a>Consulte também  
+ [Fluxo de controle](../integration-services/control-flow/control-flow.md)   
+ [Fluxo de dados](../integration-services/data-flow/data-flow.md)   
+ [Integration Services &#40; SSIS &#41; Conexões](../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Copiar itens de projeto](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
   

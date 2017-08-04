@@ -1,58 +1,63 @@
 ---
-title: "Tarefa de Fluxo de Dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataflowtask.f1"
-helpviewer_keywords: 
-  - "tarefa de fluxo de dados [Integration Services]"
-  - "performance [Integration Services]"
-  - "fluxo de dados [Integration Services], desempenho"
-  - "fluxo de dados [Integration Services], tarefa de fluxo de dados"
-  - "Integration Services, desempenho"
+title: Tarefa de fluxo de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataflowtask.f1
+helpviewer_keywords:
+- data flow task [Integration Services]
+- performance [Integration Services]
+- data flow [Integration Services], performance
+- data flow [Integration Services], Data Flow task
+- Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 caps.latest.revision: 75
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 8823647eeb74020da575143375d416a03e62d424
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Tarefa de Fluxo de Dados
+# <a name="data-flow-task"></a>Tarefa de Fluxo de Dados
   A tarefa de Fluxo de Dados encapsula o mecanismo de fluxo de dados que move dados entre as origens e os destinos, permitindo que o usuário transforme, limpe e modifique os dados à medida que são movidos. A adição de uma tarefa de Fluxo de Dados em um pacote de fluxo de controle permite que o pacote extraia, transforme e carregue dados.  
   
  Um fluxo de dados consiste em pelo menos um componente de fluxo de dados, mas normalmente é um conjunto de componentes de fluxo de dados conectados: fontes que extraem dados; transformações que modificam, roteiam ou resumem dados; e destinos que carregam dados.  
   
  Em tempo de execução, a tarefa de Fluxo de Dados cria um plano de execução a partir do fluxo de dados e o mecanismo de fluxo de dados executa o plano. Você pode criar uma tarefa de Fluxo de Dados que não tenha nenhum fluxo de dados, porém a tarefa será executada somente se pelo menos um fluxo de dados for incluído.  
   
- Para inserir dados de arquivos de texto em massa em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode usar a tarefa Inserção em Massa em vez de uma tarefa de Fluxo de Dados e um fluxo de dados. Porém, a tarefa de Inserção em Massa não pode transformar dados. Para obter mais informações, veja [Tarefa Inserção em Massa](../../integration-services/control-flow/bulk-insert-task.md).  
+ Para inserir dados de arquivos de texto em massa em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você pode usar a tarefa Inserção em Massa em vez de uma tarefa de Fluxo de Dados e um fluxo de dados. Porém, a tarefa de Inserção em Massa não pode transformar dados. Para obter mais informações, veja [Tarefa Inserção em Massa](../../integration-services/control-flow/bulk-insert-task.md).  
   
-## Vários fluxos  
+## <a name="multiple-flows"></a>Vários fluxos  
  Uma tarefa de Fluxo de Dados pode incluir vários fluxos de dados. Se uma tarefa copiar vários conjuntos de dados e se a ordem na qual os dados são copiados não for significativa, poderá ser mais conveniente incluir vários fluxos de dados na tarefa de Fluxo de Dados. Por exemplo, você poderia criar cinco fluxos de dados, cada um copiando dados de um arquivo simples para uma tabela de dimensão diferente em um esquema em estrela de data warehouse.  
   
  Entretanto, o mecanismo de fluxo de dados determina a ordem de execução quando há vários fluxos de dados em uma tarefa de fluxo de dados. Portanto, quando a ordem for importante, o pacote deverá usar várias tarefas de Fluxo de Dados, cada tarefa contendo um fluxo de dados. Você poderá então aplicar restrições de precedência para controlar a ordem de execução das tarefas.  
   
  O diagrama a seguir mostra uma tarefa de Fluxo de Dados com vários fluxos de dados.  
   
- ![Fluxos de dados](../../integration-services/control-flow/media/mw-dts-09.gif "Fluxos de dados")  
+ ![Fluxos de dados](../../integration-services/control-flow/media/mw-dts-09.gif "fluxos de dados")  
   
-## Entradas de log  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece um conjunto de eventos de log que estão disponíveis para todas as tarefas. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] também fornece entradas de log personalizadas a muitas tarefas. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../../integration-services/performance/custom-messages-for-logging.md). A tarefa de Fluxo de Dados inclui as seguintes entradas de log personalizadas:  
+## <a name="log-entries"></a>Entradas de log  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece um conjunto de eventos de log que estão disponíveis para todas as tarefas. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] também fornece entradas de log personalizadas a muitas tarefas. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md). A tarefa de Fluxo de Dados inclui as seguintes entradas de log personalizadas:  
   
 |Entrada de log|Description|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|Indica que a tarefa de Fluxo de Dados alterou o tamanho do buffer. A entrada de log descreve os motivos da mudança de tamanho e relaciona o novo tamanho do buffer temporário.|  
-|**OnPipelinePostEndOfRowset**|Indica que um componente recebeu o sinal de final do conjunto de linhas, definido pela última chamada do método **ProcessInput**. Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
-|**OnPipelinePostPrimeOutput**|Indica que o componente completou sua última chamada para o método **PrimeOutput**. Dependendo do fluxo de dados, várias entradas de log podem ser gravadas. Se o componente for uma fonte, essa entrada de log significa que o componente tem linhas de processamento concluídas.|  
-|**OnPipelinePreEndOfRowset**|Indica que um componente está prestes a receber o sinal de final do conjunto de linhas, definido pela última chamada do método **ProcessInput**. Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
-|**OnPipelinePrePrimeOutput**|Indica que o componente está prestes a receber sua chamada do método **PrimeOutput**. Dependendo do fluxo de dados, várias entradas de log podem ser gravadas.|  
-|**OnPipelineRowsSent**|Informa o número de linhas fornecido a uma entrada de componente por uma chamada para o método **ProcessInput**. A entrada de log inclui o nome do componente.|  
+|**OnPipelinePostEndOfRowset**|Indica que um componente recebeu o sinal de final do conjunto de linhas, definido pela última chamada do método **ProcessInput** . Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
+|**OnPipelinePostPrimeOutput**|Indica que o componente completou sua última chamada para o método **PrimeOutput** . Dependendo do fluxo de dados, várias entradas de log podem ser gravadas. Se o componente for uma fonte, essa entrada de log significa que o componente tem linhas de processamento concluídas.|  
+|**OnPipelinePreEndOfRowset**|Indica que um componente está prestes a receber o sinal de final do conjunto de linhas, definido pela última chamada do método **ProcessInput** . Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
+|**OnPipelinePrePrimeOutput**|Indica que o componente está prestes a receber sua chamada do método **PrimeOutput** . Dependendo do fluxo de dados, várias entradas de log podem ser gravadas.|  
+|**OnPipelineRowsSent**|Informa o número de linhas fornecido a uma entrada de componente por uma chamada para o método **ProcessInput** . A entrada de log inclui o nome do componente.|  
 |**PipelineBufferLeak**|Fornece informações sobre qualquer componente que manteve buffers ativos depois que o gerenciador de buffers for desativado. Se um buffer ainda estiver ativo, os recursos de buffers não foram liberados e pode haver perdas de memória. A entrada de log fornece o nome do componente e a ID do buffer.|  
 |**PipelineComponentTime**|Reporta o tempo (em milissegundos) que o componente gastou em cada uma das cinco principais etapas de processamento — Validate, PreExecute, PostExecute, ProcessInput e ProcessOutput.|  
 |**PipelineExecutionPlan**|Informa o plano de execução do fluxo de dados. O plano de execução fornece informações sobre como os buffers serão enviados para os componentes. Essas informações, em combinação com a entrada de log PipelineExecutionTrees, descrevem o que está ocorrendo na tarefa de Fluxo de Dados.|  
@@ -67,7 +72,7 @@ caps.handback.revision: 75
   
 -   [Data Flow Performance Features](../../integration-services/data-flow/data-flow-performance-features.md)  
   
-### Mensagens de amostra de uma tarefa de Fluxo de Dados  
+### <a name="sample-messages-from-a-data-flow-task"></a>Mensagens de amostra de uma tarefa de Fluxo de Dados  
  A tabela a seguir relaciona as mensagens de amostra de entradas de log para um pacote simples. O pacote usa uma origem OLE DB para extrair dados de uma tabela, uma transformação Classificar para classificar os dados e um destino OLE DB para gravar os dados em uma tabela diferente.  
   
 |Entrada de log|Mensagens|  
@@ -97,22 +102,22 @@ caps.handback.revision: 75
 |**InputName**|O valor da propriedade **Nome** da entrada para a transformação Classificação.|Classificar entrada|  
 |**RowsSent**|O número de linhas enviadas para a entrada da transformação Classificação.|76|  
   
-## Configuração da tarefa Fluxo de Dados  
+## <a name="configuration-of-the-data-flow-task"></a>Configuração da tarefa Fluxo de Dados  
  Você pode definir as propriedades na janela **Propriedades** ou programaticamente.  
   
- Para obter mais informações sobre como definir essas propriedades na janela **Propriedades**, clique no tópico a seguir:  
+ Para obter mais informações sobre como definir essas propriedades na janela **Propriedades** , clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configuração programática da tarefa Fluxo de Dados  
+## <a name="programmatic-configuration-of-the-data-flow-task"></a>Configuração programática da tarefa Fluxo de Dados  
  Para obter mais informações sobre como adicionar uma tarefa de fluxo de dados programaticamente em um pacote e definir propriedades de fluxo de dados, clique no tópico a seguir:  
   
 -   [Adicionando a tarefa Fluxo de Dados programaticamente](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
-## Tarefas relacionadas  
- [Definir as propriedades de uma tarefa ou contêiner](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>Tarefas relacionadas  
+ [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
  Vídeo, [Distribuidor de Dados Balanceados](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), em technet.microsoft.com.  
   
   

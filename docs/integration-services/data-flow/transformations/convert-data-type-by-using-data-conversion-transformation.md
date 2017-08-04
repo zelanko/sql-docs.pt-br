@@ -1,29 +1,34 @@
 ---
-title: "Converter dados em um tipo de dados diferente por meio da transforma&#231;&#227;o Convers&#227;o de Dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "convertendo tipos de dados [Integration Services]"
-  - "transformação Conversão de Dados"
-  - "tipos de dados [Integration Services], convertendo"
+title: "Converter o tipo de dados usando a transformação de conversão de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- converting data types [Integration Services]
+- Data Conversion transformation
+- data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 3a6de227fc2fd0e93abfc9e8ac5300dbf0a137ac
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Converter dados em um tipo de dados diferente por meio da transforma&#231;&#227;o Convers&#227;o de Dados
+# <a name="convert-data-type-by-using-data-conversion-transformation"></a>Converter o tipo de dados usando a transformação de conversão de dados
   Para adicionar e configurar uma transformação Conversão de Dados, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma fonte.  
   
-### Para converte dados em um tipo de dados diferente  
+### <a name="to-convert-data-to-a-different-data-type"></a>Para converte dados em um tipo de dados diferente  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -35,28 +40,28 @@ caps.handback.revision: 41
   
 5.  Clique duas vezes na transformação Conversão de Dados.  
   
-6.  Na caixa de diálogo **Editor de Transformação Conversão de Dados**, na tabela **Colunas de Entrada Disponíveis**, marque a caixa de seleção ao lado das colunas das quais o tipo de dados você deseja converter.  
+6.  Na caixa de diálogo **Editor de Transformação Conversão de Dados** , na tabela **Colunas de Entrada Disponíveis** , marque a caixa de seleção ao lado das colunas das quais o tipo de dados você deseja converter.  
   
     > [!NOTE]  
     >  É possível aplicar diversas conversões de dados a uma coluna de entrada.  
   
-7.  Como opção, modifique os valores padrão na coluna **Alias de Saída**.  
+7.  Como opção, modifique os valores padrão na coluna **Alias de Saída** .  
   
-8.  Na lista **Tipo de Dados**, selecione o novo tipo de dados para a coluna. O tipo de dados padrão é o tipo de dados da coluna de entrada.  
+8.  Na lista **Tipo de Dados** , selecione o novo tipo de dados para a coluna. O tipo de dados padrão é o tipo de dados da coluna de entrada.  
   
-9. Como opção, dependendo do tipo de dados selecionado, atualize os valores nas colunas **Comprimento**, **Precisão**, **Escala** e **Página de Código**.  
+9. Como opção, dependendo do tipo de dados selecionado, atualize os valores nas colunas **Comprimento**, **Precisão**, **Escala**e **Página de Código** .  
   
-10. Para configurar a saída de erro, clique em **Configurar Saída de Erro**. Para obter mais informações, consulte [Configurar uma saída de erro em um componente de fluxo de dados](../../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+10. Para configurar a saída de erro, clique em **Configurar Saída de Erro**. Para obter mais informações, consulte [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 11. Clique em **OK**.  
   
 12. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## Consulte também  
- [Transformação Conversão de Dados](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
+## <a name="see-also"></a>Consulte também  
+ [Transformação de conversão de dados](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Tipos de dados do Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
- [Tarefa de Fluxo de Dados](../../../integration-services/control-flow/data-flow-task.md)  
+ [Tarefa de fluxo de dados](../../../integration-services/control-flow/data-flow-task.md)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "Gerenciador de conex&#245;es de v&#225;rios arquivos simples | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gerenciador de conexões de vários arquivos simples"
-  - "conexões [Integration Services], arquivos simples"
-  - "arquivos simples"
-  - "conexões de arquivo simples [Integration Services]"
-  - "gerenciadores de conexões [Integration Services], vários arquivos simples"
-  - "conexões de vários arquivos simples"
+title: "Vários arquivos simples Gerenciador de Conexão | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Multiple Flat Files connection manager
+- connections [Integration Services], flat files
+- flat files
+- flat file connections [Integration Services]
+- connection managers [Integration Services], Multiple Flat Files
+- multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04900b28471f2dc4b0eb7d06fcc7f0c5acf69468
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Gerenciador de conex&#245;es de v&#225;rios arquivos simples
+# <a name="multiple-flat-files-connection-manager"></a>Gerenciador de conexões de vários arquivos simples
   Um gerenciador de conexões de Vários Arquivos Simples permite que um pacote acesse dados em vários arquivos simples. Por exemplo, uma fonte de Arquivo Simples pode usar um gerenciador de conexões de Vários Arquivos Simples quando a tarefa Fluxo de Dados está dentro de um contêiner de loop, como o contêiner Loop For. Em cada loop do contêiner, a fonte de Arquivo Simples carrega dados do nome de arquivo seguinte fornecido pelo gerenciador de conexões de Vários Arquivos Simples.  
   
  Quando você adiciona um gerenciador de conexões de Vários Arquivos Simples a um pacote, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria um gerenciador de conexões que resolverá uma conexão de Vários Arquivos Simples no tempo de execução, define as propriedades no gerenciador de conexões de Vários Arquivos Simples e adiciona o gerenciador de conexões de Arquivos Simples Múltiplos à coleção **Connections** do pacote.  
@@ -56,24 +61,24 @@ caps.handback.revision: 41
   
  Se você atualizar os comprimentos de coluna no gerenciador de conexões de Vários Arquivos Simples depois de adicionar e configurar a fonte de Arquivo Simples que usa o gerenciador de conexões, não será necessário redimensionar as colunas de saída manualmente na fonte de Arquivo Simples. Quando você abre a caixa de diálogo **Origem de Arquivo Simples** , a origem de arquivo simples fornece uma opção para sincronizar os metadados da coluna.  
   
-## Configuração do gerenciador de conexões de vários arquivos simples  
+## <a name="configuration-of-the-multiple-flat-files-connection-manager"></a>Configuração do gerenciador de conexões de vários arquivos simples  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
 -   [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Geral&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)  
   
--   [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Colunas&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [Editor do Gerenciador de Conexão de vários arquivos simples &#40; Página colunas &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Avançado&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [Editor do Gerenciador de Conexão de vários arquivos simples &#40; Página Avançado &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
 -   [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Visualização&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
  Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
-## Consulte também  
- [Fonte de Arquivo Simples](../../integration-services/data-flow/flat-file-source.md)   
+## <a name="see-also"></a>Consulte também  
+ [Origem de Arquivo Simples](../../integration-services/data-flow/flat-file-source.md)   
  [Destino de arquivo simples](../../integration-services/data-flow/flat-file-destination.md)   
- [Conexões do SSIS &#40;Integration Services&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services &#40; SSIS &#41; Conexões](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

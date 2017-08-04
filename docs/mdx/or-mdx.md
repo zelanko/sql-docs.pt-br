@@ -1,0 +1,84 @@
+---
+title: OU (MDX) | Microsoft Docs
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- OR
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- OR operator
+ms.assetid: 7634c08a-5b70-44cd-9422-6555fed6ae05
+caps.latest.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 61639a3309b222565eeb94b19d0c4b1fba69389f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
+---
+# <a name="or-mdx"></a>OR (MDX)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  Realiza uma disjunção lógica em duas expressões numéricas.  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```  
+  
+Expression1 OR Expression2   
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ Expression1  
+ Uma linguagem MDX válida que retorna um valor numérico.  
+  
+ Expression2  
+ Uma expressão MDX válida que retorna um valor numérico.  
+  
+## <a name="return-value"></a>Valor de retorno  
+ Um valor booliano que retorna **true** se um ou ambos os argumentos forem avaliados como **true**; caso contrário, **false**.  
+  
+## <a name="remarks"></a>Comentários  
+ O **ou** operador trata ambos os argumentos como valores boolianos (zero, 0, como **false**; caso contrário, **true**) antes que o operador realize a disjunção lógica. A tabela a seguir ilustra como o **ou** operador executa a disjunção lógica.  
+  
+|*Expression1*|*Expression2*|Valor de retorno|  
+|-------------------|-------------------|------------------|  
+|**true**|**true**|**true**|  
+|**true**|**false**|**true**|  
+|**false**|**true**|**true**|  
+|**false**|**false**|**false**|  
+  
+## <a name="example"></a>Exemplo  
+ A consulta a seguir contém uma medida calculada que retorna a cadeia de caracteres "CASADO OU HOMEM" (MARRIED OR MALE) se o membro atual na hierarquia de Gênero da dimensão de Cliente for Masculino ou o membro atual na hierarquia Status Matrimonial da dimensão de Cliente for Casado; caso contrário, ela retornará a cadeia de caracteres "MULHER OU SOLTEIRA" (UNMARRIED OR FEMALE).  
+  
+```  
+WITH  
+MEMBER MEASURES.ORDEMO AS  
+IIF(  
+([Customer].[Gender].CURRENTMEMBER IS [Customer].[Gender].&[M])  
+OR  
+([Customer].[Marital Status].CURRENTMEMBER IS [Customer].[Marital Status].&[M]),  
+"MARRIED OR MALE",  
+"UNMARRIED OR FEMALE")  
+SELECT [Customer].[Gender].[Gender].MEMBERS ON 0,  
+[Customer].[Marital Status].[Marital Status].MEMBERS ON 1  
+FROM [Adventure Works]  
+WHERE(MEASURES.ORDEMO)  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Referência de operador MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+  
+  
+

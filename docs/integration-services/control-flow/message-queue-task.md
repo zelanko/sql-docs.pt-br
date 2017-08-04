@@ -1,30 +1,35 @@
 ---
-title: "Tarefa Fila de Mensagens | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.messagequeuetask.f1"
-helpviewer_keywords: 
-  - "Tarefa Fila de Mensagens [Integration Services]"
-  - "recebendo mensagens"
-  - "mensagens [Integration Services]"
-  - "enviando mensagens"
+title: Tarefa fila de mensagens | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.messagequeuetask.f1
+helpviewer_keywords:
+- Message Queue task [Integration Services]
+- receiving messages
+- messages [Integration Services]
+- sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 caps.latest.revision: 68
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 68
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: bd765f2943b5bb1eb07a10664b1e9ce56bf01e29
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Tarefa Fila de Mensagens
-  A Tarefa Fila de Mensagens permite usar o serviço de Enfileiramento de Mensagens (também conhecido como MSMQ) para enviar e receber mensagens entre pacotes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou enviar mensagens a uma fila de aplicativos processada por um aplicativo personalizado. Essas mensagens podem adotar a forma de texto simples, arquivos ou variáveis e seus valores.  
+# <a name="message-queue-task"></a>Tarefa Fila de Mensagens
+  A Tarefa Fila de Mensagens permite usar o serviço de Enfileiramento de Mensagens (também conhecido como MSMQ) para enviar e receber mensagens entre pacotes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou enviar mensagens a uma fila de aplicativos processada por um aplicativo personalizado. Essas mensagens podem adotar a forma de texto simples, arquivos ou variáveis e seus valores.  
   
  Usando a tarefa Fila de Mensagens, você pode coordenar operações em toda sua empresa. As mensagens podem ser enfileiradas e entregues mais tarde se o destino estiver indisponível ou ocupado; por exemplo, a tarefa pode enfileirar mensagens para o laptop offline de representantes de vendas que recebem suas mensagens quando se conectarem à rede. Você pode usar a tarefa Fila de Mensagens para os seguintes propósitos:  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 68
 > [!NOTE]  
 >  A tarefa Fila de Mensagens não obedece ao Padrão Federal de Processamento de Informações (FIPS) 140-2 quando o sistema operacional do computador é configurado em modo FIPS e a tarefa usa criptografia. Se a tarefa Fila de Mensagens não usar criptografia, a tarefa poderá ser executada com êxito.  
   
-## Tipos de mensagem  
+## <a name="message-types"></a>Tipos de mensagem  
  Você pode configurar os tipos de mensagem que a tarefa Fila de Mensagens oferece dos seguintes modos:  
   
 -   A mensagem**Data file** especifica que um arquivo contém a mensagem. Ao receber mensagens, você pode configurar a tarefa para gravar o arquivo, pode substituir um arquivo existente e pode especificar o pacote do qual a tarefa pode receber mensagens.  
@@ -54,10 +59,10 @@ caps.handback.revision: 68
   
 -   **Variable** especifica que a mensagem contém uma ou mais variáveis. Você pode configurar a tarefa para especificar os nomes das variáveis incluídas na mensagem. Ao receber mensagens, você pode configurar a tarefa para especificar o pacote do qual ela pode receber mensagens e a variável que será o destino da mensagem.  
   
-## Enviando mensagens  
+## <a name="sending-messages"></a>enviando mensagens  
  Ao configurar a tarefa Fila de Mensagens para enviar mensagens, você pode usar um dos algoritmos de criptografia que são atualmente suportados pela tecnologia de Serviço de enfileiramento de mensagens, RC2 e RC4, para criptografar a mensagem. Ambos esses algoritmos de criptografia são agora considerados criptograficamente fracos comparados a algoritmos mais novos que a tecnologia de Serviço de enfileiramento de mensagens ainda não aceita. Então, você deve considerar cuidadosamente suas necessidades de criptografia ao enviar mensagens que usam a tarefa Fila de Mensagens.  
   
-## Recebendo mensagens  
+## <a name="receiving-messages"></a>recebendo mensagens  
  Ao receber mensagens, a tarefa Fila de Mensagens pode ser configurada dos seguintes modos:  
   
 -   Ignorar a mensagem ou remover a mensagem da fila.  
@@ -70,8 +75,8 @@ caps.handback.revision: 68
   
 -   Gravar o arquivo de mensagem com um nome de arquivo diferente, se a mensagem usar o tipo **Data file message** .  
   
-## Mensagens de registro personalizadas disponíveis na tarefa Fila de Mensagens  
- A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Fila de Mensagens. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>Mensagens de registro personalizadas disponíveis na tarefa Fila de Mensagens  
+ A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Fila de Mensagens. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrada de log|Description|  
 |---------------|-----------------|  
@@ -84,7 +89,7 @@ caps.handback.revision: 68
 |**MSMQTaskInfo**|Fornece informações descritivas sobre a tarefa.|  
 |**MSMQTaskTimeOut**|Indica que o tempo limite da tarefa foi esgotado.|  
   
-## Configuração da tarefa Fila de Mensagens  
+## <a name="configuration-of-the-message-queue-task"></a>Configuração da tarefa Fila de Mensagens  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente. Para obter informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
   
 -   [Editor da Tarefa Fila de Mensagens &#40;Página Geral&#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)  
@@ -97,10 +102,10 @@ caps.handback.revision: 68
   
  Para obter mais informações sobre como definir essas propriedades programaticamente, consulte a documentação da classe **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** no Guia do Desenvolvedor.  
   
-## Tarefas relacionadas  
- Para obter mais informações sobre como definir essas propriedades no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)], consulte [Definir as propriedades de uma tarefa ou um contêiner](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md).  
+## <a name="related-tasks"></a>Tarefas relacionadas  
+ Para obter mais informações sobre como definir essas propriedades no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consulte [Definir as propriedades de uma tarefa ou um contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
   

@@ -1,49 +1,57 @@
 ---
-title: "SSIS: Como criar um pacote ETL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "SSIS, tutoriais"
-  - "pacotes [Integration Services], tutoriais"
-  - "Integration Services, tutoriais"
-  - "SQL Server Integration Services, tutoriais"
-  - "logs [Integration Services], tutoriais"
-  - "instruções passo a passo [Integration Services]"
+title: SSIS como criar um pacote ETL | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- SSIS, tutorials
+- packages [Integration Services], tutorials
+- Integration Services, tutorials
+- SQL Server Integration Services, tutorials
+- logs [Integration Services], tutorials
+- walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 caps.latest.revision: 38
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 2005755d073f7bb4950268e0fba827860491d1c4
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# SSIS: Como criar um pacote ETL
-[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] O SSIS é uma plataforma para a criação de soluções para integração de dados de alto desempenho, incluindo também pacotes ETL (extração, transformação e carregamento) para armazenamento de dados. O SSIS inclui ferramentas gráficas e assistentes para criação e depuração de pacotes; tarefas para execução de funções de fluxo de trabalho como, por exemplo, operações de FTP, execução de instruções SQL e envio de mensagens de email; fontes de dados e destinos para extração e carregamento de dados; transformações para limpeza, agregação, junção e cópia de dados; um serviço de gerenciamento, o serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para administração de execução e armazenamento de pacotes; e APIs (interfaces de programação de aplicativo) para programação do modelo de objeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+# <a name="ssis-how-to-create-an-etl-package"></a>SSIS: Como criar um pacote ETL
+
+ > Para conteúdo relacionado a versões anteriores do SQL Server, consulte [Tutorial do SSIS: Criando um pacote ETL simples](https://msdn.microsoft.com/en-US/library/ms169917(SQL.120).aspx).
+
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] O SSIS é uma plataforma para a criação de soluções para integração de dados de alto desempenho, incluindo também pacotes ETL (extração, transformação e carregamento) para armazenamento de dados. O SSIS inclui ferramentas gráficas e assistentes para criação e depuração de pacotes; tarefas para execução de funções de fluxo de trabalho como, por exemplo, operações de FTP, execução de instruções SQL e envio de mensagens de email; fontes de dados e destinos para extração e carregamento de dados; transformações para limpeza, agregação, junção e cópia de dados; um serviço de gerenciamento, o serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para administração de execução e armazenamento de pacotes; e APIs (interfaces de programação de aplicativo) para programação do modelo de objeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 Neste tutorial, você aprenderá a usar o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer para criar um pacote simples do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O pacote que você cria conduz dados de um arquivo simples, formata esses dados e insere os dados formatados em uma tabela de fatos. Nas lições a seguir, o pacote é expandido para demonstrar looping, configurações de pacote, registro de log e fluxo de erros.  
   
 Ao instalar os dados de exemplo usados pelo tutorial, as versões concluídas dos pacotes criados para cada lição do tutorial também são instaladas. Ao utilizar os pacotes concluídos, será possível começar o tutorial em uma lição posterior, caso queira. Se esta for a primeira vez que você trabalha com pacotes ou com o novo ambiente de desenvolvimento, recomendamos que você comece pela lição 1.  
   
-## O que você aprenderá  
+## <a name="what-you-will-learn"></a>O que você aprenderá  
 O melhor modo de familiarizar-se com as novas ferramentas, controles e recursos disponíveis no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é utilizando-os. Este tutorial explicará como usar o Designer de [!INCLUDE[ssIS](../includes/ssis-md.md)] para criar um pacote de ETL simples com looping, configurações, lógica de fluxo de erros e registro de logs.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
 O tutorial é destinado a usuários familiarizados com operações básicas de banco de dados, mas que tiveram pouca experiência com os novos recursos disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 Para que você possa usar esse tutorial, os seguintes componentes devem estar instalados no sistema:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com o banco de dados **AdventureWorksDW2012** . Para reforçar a segurança, os bancos de dados de exemplo não são instalados por padrão. Para baixar o banco de dados **AdventureWorksDW2012** , consulte [Adventure Works para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=275026).  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]com o **AdventureWorksDW2012** banco de dados. Para reforçar a segurança, os bancos de dados de exemplo não são instalados por padrão. Para baixar o banco de dados **AdventureWorksDW2012** , consulte [Adventure Works para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=275026).  
   
     > [!IMPORTANT]  
-    > Quando você anexa o banco de dados (arquivo \*.mdf), o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pesquisará por padrão um arquivo .ldf. Você deve remover manualmente o arquivo .ldf antes de clicar em OK na caixa de diálogo **Anexar Bancos de Dados** .  
+    > Quando você anexa o banco de dados (arquivo\*.mdf), o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pesquisará por padrão um arquivo .ldf. Você deve remover manualmente o arquivo .ldf antes de clicar em OK na caixa de diálogo **Anexar Bancos de Dados** .  
     >   
     > Para obter mais informações sobre como anexar bancos de dados, consulte [Attach a Database](../relational-databases/databases/attach-a-database.md).  
   
@@ -55,7 +63,7 @@ Para que você possa usar esse tutorial, os seguintes componentes devem estar in
   
     3.  Clique no arquivo SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
-## Lições neste tutorial  
+## <a name="lessons-in-this-tutorial"></a>Lições neste tutorial  
 [Lição 1: Criar um projeto e pacote básico com o SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
 Nesta lição, você criará um pacote de ETL simples que extrairá dados de um arquivo simples, transformará os dados usando transformações de pesquisa e, por fim, carregará o resultado em um destino da tabela de fatos.  
   
@@ -76,3 +84,4 @@ Nesta lição, você expandirá o pacote criado na lição 5 para usar os novos 
   
   
   
+

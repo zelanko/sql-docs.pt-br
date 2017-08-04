@@ -1,24 +1,29 @@
 ---
-title: "Editor de destino Arquivo Bruto (p&#225;gina Colunas) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rawfiledestinationcolumns.f1"
+title: "Editor de destino arquivo bruto (página colunas) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rawfiledestinationcolumns.f1
 ms.assetid: 37f61d0b-1269-42ee-94ab-011cbaac63e9
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1b6ce96dc298d446952b185c8eccdfc9a7778a6c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de destino Arquivo Bruto (p&#225;gina Colunas)
+# <a name="raw-file-destination-editor-columns-page"></a>Editor de destino Arquivo Bruto (página Colunas)
   Use o Editor de Destino Arquivo Bruto para configurar o destino Arquivo Bruto para gravar dados brutos em um arquivo.  
   
  **O que você deseja fazer?**  
@@ -60,7 +65,7 @@ caps.handback.revision: 7
  **Alias de Saída**  
  Especifique um nome alternativo a ser usado para a coluna de saída.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Destino do arquivo bruto](../../integration-services/data-flow/raw-file-destination.md)  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "Formatos de exibi&#231;&#227;o de assinatura (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Formatos de exibição de assinatura (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5cddce206adbbec42907f426fcd25d92a5e6d91b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Formatos de exibi&#231;&#227;o de assinatura (Master Data Services)
+# <a name="subscription-view-formats-master-data-services"></a>Formatos de exibição de assinatura (Master Data Services)
   Com base na entidade ou na hierarquia derivada selecionada, os seguintes formatos estão disponíveis para sua exibição de assinatura.  
   
-## Formatos de exibição da assinatura  
+## <a name="subscription-view-formats"></a>Formatos de exibição da assinatura  
   
 |Nome|Description|  
 |----------|-----------------|  
@@ -38,7 +43,7 @@ caps.handback.revision: 9
 |**Filho de Pai Derivado (Exibição de Hierarquia Derivada)**|Contém uma estrutura de hierarquia derivada em formato filho de pai.|  
 |**Níveis Derivados (Exibição de Hierarquia Derivada)**|Contém uma estrutura de hierarquia derivada em formato de nível.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral: Exportando dados &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Criar uma exibição de assinatura para exportar dados &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   

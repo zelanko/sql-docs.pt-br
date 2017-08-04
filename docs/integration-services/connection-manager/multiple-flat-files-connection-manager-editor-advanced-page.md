@@ -1,33 +1,38 @@
 ---
-title: "Editor do Gerenciador de Conex&#245;es de V&#225;rios Arquivos Simples (P&#225;gina Avan&#231;ado) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.multifile.advanced.f1"
-helpviewer_keywords: 
-  - "Editor do Gerenciador de Conexões de Vários Arquivos Simples"
+title: "Vários arquivos simples Editor do Gerenciador de Conexão (página Avançado) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.multifile.advanced.f1
+helpviewer_keywords:
+- Multiple Flat Files Connection Manager Editor
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca2a47b75c7209fce3d1966ff749396047e550e3
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor do Gerenciador de Conex&#245;es de V&#225;rios Arquivos Simples (P&#225;gina Avan&#231;ado)
+# <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>Editor do Gerenciador de Conexões de Vários Arquivos Simples (Página Avançado)
   Use a página **Avançado** da caixa de diálogo **Editor do Gerenciador de Conexões de Vários Arquivos Simples** para definir propriedades como o tipo de dados e os delimitadores de cada coluna nos arquivos de texto com os quais o gerenciador de conexões de arquivos simples se conecta.  
   
  Por padrão, o tamanho da coluna de cadeia de caracteres é de 50 caracteres. É possível avaliar os dados de exemplo e automaticamente redimensionar o tamanho dessas colunas para impedir o truncamento de dados ou excesso de largura das colunas. Também é possível atualizar outros metadados para habilitar a compatibilidade com as colunas de destino. Por exemplo, você pode alterar o tipo de dados de uma coluna que contém apenas dados inteiros para um tipo de dados numérico, como DT_I2.  
   
  Para saber mais sobre o gerenciador de conexões de Vários Arquivos Simples, consulte [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Nome do gerenciador de conexões**  
  Forneça um nome exclusivo para o gerenciador de conexões de Vários Arquivos Simples no fluxo de trabalho. O nome fornecido será exibido na área **Gerenciadores de Conexões** do Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
@@ -64,10 +69,10 @@ caps.handback.revision: 36
  **Sugerir Tipos**  
  Use a caixa de diálogo **Sugerir Tipos de Coluna** para avaliar dados de exemplo no primeiro arquivo selecionado e obter sugestões de tipo de dados e tamanho de cada coluna. Para obter mais informações, consulte [Referência da interface do usuário da caixa de diálogo Sugerir Tipos de Coluna](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Geral&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)   
- [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Colunas&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Visualização&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Editor do Gerenciador de Conexão de vários arquivos simples &#40; Página geral &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)   
+ [Editor do Gerenciador de Conexão de vários arquivos simples &#40; Página colunas &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [Editor do Gerenciador de Conexão de vários arquivos simples &#40; Página de visualização &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

@@ -1,30 +1,35 @@
 ---
-title: "Adicionar ou excluir um componente em um fluxo de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "adicionando componentes"
-  - "componentes [Serviços de Integração], fluxo de dados"
+title: Adicionar ou excluir um componente de fluxo de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding components
+- components [Integration Services], data flow
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 229fd23eb82ff7b6a1139bf1bd00554162cfc038
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Adicionar ou excluir um componente em um fluxo de dados
+# <a name="add-or-delete-a-component-in-a-data-flow"></a>Adicionar ou excluir um componente em um fluxo de dados
   Os componentes de fluxo de dados são fontes, destinos e transformações em um fluxo de dados. Para adicionar componentes a um fluxo de dados, o fluxo de controle do pacote deve incluir uma tarefa Fluxo de Dados.  
   
  Os procedimentos a seguir descrevem como adicionar ou excluir um componente no fluxo de dados de um pacote.  
   
-### Para adicionar um componente a um fluxo de dados  
+### <a name="to-add-a-component-to-a-data-flow"></a>Para adicionar um componente a um fluxo de dados  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -32,11 +37,11 @@ caps.handback.revision: 42
   
 3.  Clique na guia **Fluxo de Controle** e clique duas vezes na tarefa Fluxo de Dados que contém o fluxo de dados ao qual você deseja adicionar um componente.  
   
-4.  Na Caixa de Ferramentas, expanda **Origens de Fluxos de Dados**, **Transformações de Fluxos de Dados** ou **Destinos de Fluxos de Dados** e arraste um item do fluxo de dados até a superfície de design da guia **Fluxo de Dados**.  
+4.  Na Caixa de Ferramentas, expanda **Origens de Fluxos de Dados**, **Transformações de Fluxos de Dados**ou **Destinos de Fluxos de Dados**e arraste um item do fluxo de dados até a superfície de design da guia **Fluxo de Dados** .  
   
 5.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-### Para excluir um componente de um fluxo de dados  
+### <a name="to-delete-a-component-from-a-data-flow"></a>Para excluir um componente de um fluxo de dados  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -50,9 +55,9 @@ caps.handback.revision: 42
   
 6.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Conectar componentes em um fluxo de dados](../../integration-services/data-flow/connect-components-in-a-data-flow.md)   
- [Configurar uma saída de erro em um componente de fluxo de dados](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)   
+ [Depurando o fluxo de dados](../../integration-services/troubleshooting/debugging-data-flow.md)   
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
   
   

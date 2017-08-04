@@ -1,22 +1,27 @@
 ---
-title: "Propriedades personalizadas OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Propriedades personalizadas OLE DB | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b10906c0cb7ba618c029bc79f9c5918a936dc918
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propriedades personalizadas OLE DB
+# <a name="ole-db-custom-properties"></a>Propriedades personalizadas OLE DB
   **Propriedades personalizadas de fontes**  
   
  A origem OLE DB tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
@@ -66,7 +71,7 @@ caps.handback.revision: 8
   
  Para obter mais informações, consulte [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
   
-## Consulte também  
- [Propriedades comuns](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>Consulte também  
+ [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

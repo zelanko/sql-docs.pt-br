@@ -1,31 +1,36 @@
 ---
-title: "Transforma&#231;&#227;o Pesquisa | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.lookuptrans.f1"
-helpviewer_keywords: 
-  - "transformação Pesquisa"
-  - "colunas de junção [Integration Services]"
-  - "cache [Integration Services]"
-  - "corresponde exatamente [Integration Services]"
-  - "pesquisas [Integration Services]"
-  - "correspondências exatas [Integration Services]"
+title: "Transformação pesquisa | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.lookuptrans.f1
+helpviewer_keywords:
+- Lookup transformation
+- joining columns [Integration Services]
+- cache [Integration Services]
+- match exactly [Integration Services]
+- lookups [Integration Services]
+- exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 caps.latest.revision: 106
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 106
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14e72d1f2d9790cd74c54eb7e152c0b29d278212
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transforma&#231;&#227;o Pesquisa
+# <a name="lookup-transformation"></a>Transformação Pesquisa
   A transformação Pesquisa executa pesquisas unindo dados em colunas de entrada com colunas em um conjunto de dados de referência. Você usa a pesquisa para acessar informações adicionais em uma tabela relacionada que tem como base valores de colunas comuns.  
   
  O conjunto de dados de referência pode ser um arquivo de cache, uma tabela ou uma exibição existente, uma nova tabela ou o resultado de uma consulta SQL. A transformação Pesquisa usa um gerenciador de conexões OLE DB ou um gerenciador de conexões de cache para se conectar ao conjunto de dados de referência. Para obter mais informações, consulte [Gerenciador de Conexões do OLE DB](../../../integration-services/connection-manager/ole-db-connection-manager.md) e [Gerenciador de Conexões de Cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md)  
@@ -74,14 +79,14 @@ caps.handback.revision: 106
   
 -   Saída de erro.  
   
-## Armazenando o conjunto de dados de referência em cache  
+## <a name="caching-the-reference-dataset"></a>Armazenando o conjunto de dados de referência em cache  
  Um cache na memória armazena o conjunto de dados de referência e uma tabela de hash que indexa os dados. O cache permanece na memória até que a execução do pacote seja concluída. Você pode persistir o cache para um arquivo de cache (.caw).  
   
  Quando você persiste o cache para um arquivo, o sistema carrega esse cache mais rapidamente. Isso melhora o desempenho da transformação Pesquisa e do pacote. Lembre-se de que, quando você usa um arquivo de cache, está trabalhando com dados que não são tão atuais quanto os dados do banco de dados.  
   
  A seguir, veja alguns benefícios adicionais da persistência de cache para um arquivo:  
   
--   ***Compartilhe o arquivo de cache entre vários pacotes. Para obter mais informações, consulte*** [Implementar uma Transformação de Pesquisa em modo de Cache Cheio usando o Gerenciador de Conexões de Cache](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - cache connection manager.md) ***.***  
+-   ***Compartilhe o arquivo de cache entre vários pacotes. Para obter mais informações, consulte*** [Implementar uma Transformação de Pesquisa em modo de Cache Cheio usando o Gerenciador de Conexões de Cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***.***  
   
 -   Implante o arquivo de cache com um pacote. ***Você pode usar os dados em vários computadores.*** Para obter mais informações, consulte [Criar e implantar um cache para a Transformação de Pesquisa](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -112,18 +117,18 @@ caps.handback.revision: 106
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diferem quanto à forma que comparam cadeias de caracteres. Se a transformação Pesquisa é configurada para carregar o conjunto de dados de referência no cache antes da execução da transformação Pesquisa, o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] faz a comparação de pesquisa no cache. Por outro lado, a operação de pesquisa usa uma instrução SQL parametrizada e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] faz a comparação de pesquisa. Isso significa que a transformação Pesquisa pode retornar um número diferente de correspondências a partir da mesma tabela de consulta, dependendo do tipo de cache.  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente. Para obter mais detalhes, consulte os tópicos a seguir.  
   
 -   [Implementar uma pesquisa no modo Sem Cache ou Cache Parcial](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [Implementar uma Transformação Pesquisa em modo cache cheio usando o Gerenciador de Conexões do Cache](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - cache connection manager.md)  
+-   [Implementar uma Transformação de Pesquisa em modo de Cache Cheio usando o Gerenciador de Conexões de Cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [Implementar uma transformação Pesquisa em modo de cache cheio por meio da transformação Gerenciador de Conexões OLE DB](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - ole db connection manager.md)  
+-   [Implementar uma transformação Pesquisa em modo de cache cheio por meio da transformação Gerenciador de Conexões OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
   
 -   Vídeo, [Como implementar a transformação Pesquisa no modo de Cache Cheio](http://go.microsoft.com/fwlink/?LinkId=131031), em msdn.microsoft.com  
   
@@ -133,12 +138,12 @@ caps.handback.revision: 106
   
 -   Exemplo [Transformação de Pesquisa](http://go.microsoft.com/fwlink/?LinkId=267528), em msftisprodsamples.codeplex.com.  
   
-     Para obter informações sobre como instalar exemplos e bancos de dados de exemplo do produto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consulte [Exemplos do produto SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=267527).  
+     Para obter informações sobre como instalar exemplos e bancos de dados de exemplo do produto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , consulte [Exemplos do produto SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=267527).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Transformação Pesquisa Difusa](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
- [Transformação Pesquisa de Termo](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
- [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   
+ [Transformação de pesquisa de termo](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
+ [Fluxo de dados](../../../integration-services/data-flow/data-flow.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "Criar Rela&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.createrelationships.f1"
+title: "Criar relações | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.createrelationships.f1
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9f511b91e0e085c07dcf4dfb7742514ddad6070
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Criar Rela&#231;&#245;es
+# <a name="create-relationships"></a>Criar Relações
   Use a caixa de diálogo **Criar Relações** para editar mapeamentos entre as colunas de origem e as colunas da tabela de pesquisa que você configurou no Editor de Transformação Pesquisa Difusa, no Editor de Transformação Pesquisa e no Editor de Transformação Pesquisa de Termos.  
   
 > [!NOTE]  
@@ -26,7 +31,7 @@ caps.handback.revision: 21
   
  Para saber mais sobre as transformações que usam a caixa de diálogo **Criar Relações** , consulte [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md), [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)e [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Coluna de Entrada**  
  Selecione na lista de colunas de entrada disponíveis.  
   
@@ -47,10 +52,10 @@ caps.handback.revision: 21
  **Alias de Saída de Similaridade**  
  Especifique o nome da nova coluna de saída que conterá as pontuações de similaridade da coluna selecionada. Se você deixar este valor vazio, a coluna de saída não será criada.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Transformação Pesquisa Difusa &#40;guia Colunas&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [Editor de Transformação Pesquisa &#40;Guia Colunas&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
- [Editor de Transformação Pesquisa de Termos &#40;Guia Pesquisa de Termos&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
+ [Editor de transformação pesquisa difusa &#40; Guia colunas &#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
+ [Editor de transformação de pesquisa &#40; Página colunas &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
+ [Editor de transformação de pesquisa de termos &#40; Termo de pesquisa guia &#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
   
   

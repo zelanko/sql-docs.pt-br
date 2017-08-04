@@ -1,30 +1,35 @@
 ---
-title: "Utilit&#225;rio tablediff | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "comparando dados"
-  - "utilitário tablediff"
-  - "tabelas [replica&#231;&#227;o do SQL Server]"
-  - "comparações de tabelas [SQL Server]"
-  - "utilitários de prompt de comando [SQL Server], tablediff"
-  - "solução de problemas [replicação do SQL Server], não convergência"
-  - "não convergência [SQL Server]"
+title: "Utilitário tablediff | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- comparing data
+- tablediff utility
+- tables [SQL Server replication]
+- table comparisons [SQL Server]
+- command prompt utilities [SQL Server], tablediff
+- troubleshooting [SQL Server replication], non-convergence
+- non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5ecdf895353c1ec75004b2268bbd055b255b53ab
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Utilit&#225;rio tablediff
+# <a name="tablediff-utility"></a>utilitário tablediff
   O utilitário **tablediff** é usado para comparar dados em duas tabelas para não convergência e é particularmente útil para solução de problemas de não convergência em uma topologia de replicação. Esse utilitário pode ser usado no prompt de comando ou em um arquivo em lotes para executar as seguintes tarefas:  
   
 -   Uma comparação linha por linha entre uma tabela de origem em uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agindo como um Publicador de replicação e a tabela de destino em uma ou mais instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agindo como Assinantes de replicação.  
@@ -37,7 +42,7 @@ caps.handback.revision: 30
   
 -   Registrar resultados em um arquivo de saída ou em uma tabela no banco de dados de destino.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -73,7 +78,7 @@ tablediff
 }  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  [ **-?** ]  
  Retorna a lista de parâmetros com suporte.  
   
@@ -90,13 +95,13 @@ tablediff
  O proprietário de esquema da tabela de origem. Por padrão, supõe-se que o proprietário de tabela seja dbo.  
   
  **-sourcepassword** *source_password*  
- É a senha para o logon usada para a conexão com o servidor de origem que usa Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ É a senha para o logon usada para a conexão com o servidor de origem que usa Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Quando possível, forneça credenciais de segurança em tempo de execução. Se você precisar armazenar credenciais em um arquivo de script, deverá proteger o arquivo para evitar acesso não autorizado.  
   
  **-sourceuser** *source_login*  
- É o logon usado para a conexão com o servidor de origem que usa Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se *source_login* não for fornecido, então a autenticação do Windows será usada no momento da conexão com o servidor de origem. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
+ É o logon usado para a conexão com o servidor de origem que usa Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se *source_login* não for fornecido, então a autenticação do Windows será usada no momento da conexão com o servidor de origem. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-sourcelocked**  
  A tabela de origem é bloqueada durante a comparação que usa dicas de tabela TABLOCK e HOLDLOCK.  
@@ -114,13 +119,13 @@ tablediff
  O proprietário de esquema da tabela de destino. Por padrão, supõe-se que o proprietário de tabela seja dbo.  
   
  **-destinationpassword** *destination_password*  
- É a senha para o logon usada para a conexão com o servidor de destino que usa Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ É a senha para o logon usada para a conexão com o servidor de destino que usa Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Quando possível, forneça credenciais de segurança em tempo de execução. Se você precisar armazenar credenciais em um arquivo de script, deverá proteger o arquivo para evitar acesso não autorizado.  
   
  **-destinationuser** *destination_login*  
- É o logon usado para a conexão com o servidor de destino que usa Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se *destination_login* não for fornecido, então a autenticação do Windows será usada no momento da conexão com o servidor. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
+ É o logon usado para a conexão com o servidor de destino que usa Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se *destination_login* não for fornecido, então a autenticação do Windows será usada no momento da conexão com o servidor. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-destinationlocked**  
  A tabela de destino é bloqueada durante a comparação que usa dicas de tabela TABLOCK e HOLDLOCK.  
@@ -128,7 +133,7 @@ tablediff
  **-b** *large_object_bytes*  
  É o número de bytes a comparar para colunas do tipo de dados de objeto grande, que inclui: **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)** e **varbinary(max)**. *large_object_bytes* segue o padrão do tamanho da coluna. Os dados acima de *large_object_bytes* não serão comparados.  
   
- **-bf** *number_of_statements*  
+ **-bf**  *number_of_statements*  
  É o número de instruções [!INCLUDE[tsql](../includes/tsql-md.md)] a serem gravadas no arquivo de script [!INCLUDE[tsql](../includes/tsql-md.md)] atual quando a opção **-f** é usada. Quando o número de instruções [!INCLUDE[tsql](../includes/tsql-md.md)] exceder *number_of_statements*, um arquivo de script [!INCLUDE[tsql](../includes/tsql-md.md)] novo será criado.  
   
  **-c**  
@@ -152,7 +157,7 @@ tablediff
  **-rc** *number_of_retries*  
  Número de vezes que o utilitário repete uma operação com falha.  
   
- **-ri** *retry_interval*  
+ **-ri**  *retry_interval*  
  Intervalo, em segundos, a esperar entre repetições.  
   
  **-strict**  
@@ -161,7 +166,7 @@ tablediff
  **-t** *connection_timeouts*  
  Define o período de tempo limite da conexão, em segundos, para conexões para o servidor de origem e servidor de destino.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -169,10 +174,10 @@ tablediff
 |**1**|Erro crítico|  
 |**2**|Diferenças de tabela|  
   
-## Comentários  
- O utilitário **tablediff** não pode ser usado com servidores não [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+## <a name="remarks"></a>Comentários  
+ O utilitário **tablediff** não pode ser usado com servidores não[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- Não há suporte para tabelas com colunas de tipo de dados **sql_variant**.  
+ Não há suporte para tabelas com colunas de tipo de dados **sql_variant** .  
   
  Por padrão, o utilitário **tablediff** dá suporte aos mapeamentos de tipo de dados a seguir entre colunas de origem e de destino.  
   
@@ -191,7 +196,7 @@ tablediff
   
  Use a opção **-strict** para desabilitar esses mapeamentos e executar uma validação rigorosa.  
   
- A tabela de origem na comparação deve conter pelo menos uma chave primária, identidade ou coluna ROWGUID. Quando você usa a opção **-strict**, a tabela de destino também deve ter uma chave primária, identidade ou coluna ROWGUID.  
+ A tabela de origem na comparação deve conter pelo menos uma chave primária, identidade ou coluna ROWGUID. Quando você usa a opção **-strict** , a tabela de destino também deve ter uma chave primária, identidade ou coluna ROWGUID.  
   
  O script [!INCLUDE[tsql](../includes/tsql-md.md)] gerado para trazer a tabela de destino em convergência não inclui os seguintes tipos de dados:  
   
@@ -211,16 +216,16 @@ tablediff
   
 -   **image**  
   
-## Permissões  
+## <a name="permissions"></a>Permissões  
  Para comparar tabelas, é preciso ter permissões SELECT ALL nos objetos de tabela que são comparados.  
   
  Para usar a opção **-et** é preciso ser membro da função de banco de dados fixo db_owner ou pelo menos ter permissão CREATE TABLE no banco de dados de assinatura e permissão ALTER no esquema de proprietário de destino no servidor de destino.  
   
  Para usar a opção **-dt** é preciso ser membro da função de banco de dados fixo db_owner ou pelo menos ter permissão ALTER no esquema de proprietário do destino no servidor de destino.  
   
- Para usar as opções **-o** ou **-f**, é preciso ter permissão de gravação para o local de diretório de arquivos especificado.  
+ Para usar as opções **-o** ou **-f** , é preciso ter permissão de gravação para o local de diretório de arquivos especificado.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Comparar tabelas replicadas para descobrir diferenças &#40;Programação de replicação&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

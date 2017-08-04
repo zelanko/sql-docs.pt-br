@@ -1,33 +1,38 @@
 ---
-title: "Sobrepondo permiss&#245;es de modelo e membro (Servi&#231;os de Dados Mestre) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modelos [Master Data Services], permissões efetivas"
-  - "permissões [Master Data Services], sobreposições do modelo e do membro"
-  - "membros [Master Data Services], permissões efetivas"
+title: "Sobrepondo permissões de membro (Master Data Services) e o modelo | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- models [Master Data Services], effective permissions
+- permissions [Master Data Services], model and member overlaps
+- members [Master Data Services], effective permissions
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ffb74e06b9b6bfed579959db993d418599086fef
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Sobrepondo permiss&#245;es de modelo e membro (Servi&#231;os de Dados Mestre)
+# <a name="overlapping-model-and-member-permissions-master-data-services"></a>Sobrepondo permissões de modelo e membro (Serviços de Dados Mestre)
   A permissão atribuída a um membro pode sobrepor a permissão atribuída a um objeto de modelo. Quando ocorrem sobreposições, a permissão mais restritiva tem efeito.  
   
  Se um membro tiver uma permissão que seja diferente daquela correspondente ao objeto de modelo, as seguintes regras se aplicarão:  
   
 -   **Negar** substitui todas as outras permissões.  
   
--   **Admin** permissão no nível do modelo substitui todas as outras permissões e é alterado para permissão de acesso de todos os (CRUD) nos níveis de sub.  
+-   A permissão**Admin** no nível do Modelo substitui todas as outras permissões e é alterada para a permissão de acesso Todos (CRUD) nos subníveis.  
   
 -   A permissão de acesso efetiva cruza as permissões dos membros e dos atributos.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 7
   
  ![mds_conc_security_member_overlap_table](../master-data-services/media/mds-conc-security-member-overlap-table.gif "mds_conc_security_member_overlap_table")  
   
-## Exemplo 1  
+## <a name="example-1"></a>Exemplo 1  
  ![mds_conc_overlap_model_1](../master-data-services/media/mds-conc-overlap-model-1.gif "mds_conc_overlap_model_1")  
   
  Na guia **Modelos** , a entidade Produto tem a permissão **Atualizar** atribuída. Todos os atributos da entidade herdam essa permissão.  
@@ -48,7 +53,7 @@ caps.handback.revision: 7
   
  ![mds_conc_overlap_model_example_1](../master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
-## Exemplo 2  
+## <a name="example-2"></a>Exemplo 2  
  ![mds_conc_overlap_model_2](../master-data-services/media/mds-conc-overlap-model-2.gif "mds_conc_overlap_model_2")  
   
  Na guia **Modelos** , o atributo Subcategory tem a permissão **Atualizar** atribuída.  
@@ -59,7 +64,7 @@ caps.handback.revision: 7
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## Exemplo 3  
+## <a name="example-3"></a>Exemplo 3  
  ![mds_conc_overlap_model_3](../master-data-services/media/mds-conc-overlap-model-3.gif "mds_conc_overlap_model_3")  
   
  Na guia **Modelos** , o atributo Subcategory tem a permissão **Leitura** atribuída.  
@@ -70,8 +75,8 @@ caps.handback.revision: 7
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## Consulte também  
- [Como as permissões são determinadas & #40. Master Data Services & 41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [Sobreposição de usuário e permissões de grupo e 40; Master Data Services & 41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
+## <a name="see-also"></a>Consulte também  
+ [Como as permissões são determinadas &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
+ [Sobrepondo permissões de grupo e usuário &#40; Master Data Services &#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

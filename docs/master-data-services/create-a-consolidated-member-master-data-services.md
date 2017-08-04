@@ -1,37 +1,42 @@
 ---
-title: "Criar um membro consolidado (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "04/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "criando membros consolidados [Master Data Services]"
-  - "membros [Master Data Services], criando membros consolidados"
-  - "membros consolidados [Master Data Services], criando"
+title: Criar um membro consolidado (Master Data Services) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 04/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating consolidated members [Master Data Services]
+- members [Master Data Services], creating consolidated members
+- consolidated members [Master Data Services], creating
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 caps.latest.revision: 12
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a50e1b7136542b4a230a461a81813e10730fba09
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Criar um membro consolidado (Master Data Services)
+# <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
   No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], crie um membro consolidado quando você desejar um nó pai para uma hierarquia explícita. Se você quiser adicionar dados em massa, use as tabelas de preparo. Para obter mais informações, consulte [Importar dados de tabelas &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md).  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** .  
   
 -   Você deve ter, no mínimo, a permissão **Atualização** para o objeto de modelo consolidado para a entidade à qual você está adicionando um membro, bem como **Criar permissão** para o Tipo Consolidado na entidade.  
   
-### Para criar um membro consolidado  
+### <a name="to-create-a-consolidated-member"></a>Para criar um membro consolidado  
   
 1.  Na página inicial do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
   
@@ -53,14 +58,11 @@ caps.handback.revision: 11
   
 10. Clique em **OK**.  
   
-## Próximas etapas  
-  
--   [Mover membros em uma hierarquia &#40;Master Data Services&#41;](../Topic/Move%20Members%20within%20a%20Hierarchy%20\(Master%20Data%20Services\).md)  
-  
-## Consulte também  
- [Criar uma hierarquia explícita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [Criar um membro folha &#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
- [Membros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [Hierarquias explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
+## <a name="see-also"></a>Consulte também  
+ [Criar uma hierarquia explícita &#40; Master Data Services &#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [Criar um membro folha &#40; Master Data Services &#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
+ [Membros &#40; Master Data Services &#41;](../master-data-services/members-master-data-services.md)   
+ [Hierarquias explícitas &#40; Master Data Services &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
   
+

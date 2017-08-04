@@ -1,31 +1,36 @@
 ---
-title: "Transformar dados com transforma&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "fluxo de dados [Integration Services], transformações"
-  - "transformações [Integration Services], sobre transformações"
-  - "transformando dados [Integration Services]"
+title: "Transformar dados com transformações | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data flow [Integration Services], transformations
+- transformations [Integration Services], about transformations
+- transforming data [Integration Services]
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d7feb12fd7b258fb876ff1ed554159e54a7ac33
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformar dados com transforma&#231;&#245;es
+# <a name="transform-data-with-transformations"></a>Transformar dados com transformações
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui três tipos de componentes de fluxo de dados: fontes, transformações e destinos.  
   
  O diagrama a seguir mostra um fluxo de dados simples que tem uma fonte, duas transformações e um destino.  
   
- ![Fluxo de dados](../../../integration-services/data-flow/transformations/media/mw-dts-08.gif "Fluxo de dados")  
+ ![Data flow](../../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] As transformações fornecem a seguinte funcionalidade:  
   
@@ -43,24 +48,24 @@ caps.handback.revision: 43
   
  Você também pode gravar transformações personalizadas. Para obter mais informações, consulte [Desenvolvendo um componente de fluxo de dados personalizado](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) e [Desenvolvendo tipos específicos de componentes de fluxo de dados](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
   
- Depois de adicionar a transformação ao designer de fluxo de dados, mas antes de configurar a transformação, você conecta a transformação ao fluxo de dados conectando a saída de outra transformação ou fonte no fluxo de dados à entrada desta transformação. O conector entre dois componentes de fluxo de dados é chamado de caminho. Para obter mais informações sobre como conectar componentes e trabalhar com caminhos, consulte [Conectar componentes com caminhos](../Topic/Connect%20Components%20with%20Paths.md).  
+ Depois de adicionar a transformação ao designer de fluxo de dados, mas antes de configurar a transformação, você conecta a transformação ao fluxo de dados conectando a saída de outra transformação ou fonte no fluxo de dados à entrada desta transformação. O conector entre dois componentes de fluxo de dados é chamado de caminho. Para obter mais informações sobre como conectar componentes e trabalhar com caminhos, consulte [Conectar componentes com caminhos](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
   
-### Para adicionar uma transformação a um fluxo de dados  
+### <a name="to-add-a-transformation-to-a-data-flow"></a>Para adicionar uma transformação a um fluxo de dados  
   
 -   [Adicionar ou excluir um componente em um fluxo de dados](../../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
-### Para conectar uma transformação a um fluxo de dados  
+### <a name="to-connect-a-transformation-to-a-data-flow"></a>Para conectar uma transformação a um fluxo de dados  
   
 -   [Conectar componentes em um fluxo de dados](../../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
   
-### Para definir as propriedades de uma transformação  
+### <a name="to-set-the-properties-of-a-transformation"></a>Para definir as propriedades de uma transformação  
   
 -   [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tarefa de Fluxo de Dados](../../../integration-services/control-flow/data-flow-task.md)   
- [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   
- [Conectar componentes com caminhos](../Topic/Connect%20Components%20with%20Paths.md)   
+ [Fluxo de dados](../../../integration-services/data-flow/data-flow.md)   
+ [Conectar componentes com caminhos](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [Tratamento de erros em dados](../../../integration-services/data-flow/error-handling-in-data.md)   
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)  
   

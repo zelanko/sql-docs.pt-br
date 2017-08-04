@@ -1,31 +1,36 @@
 ---
-title: "Gerenciador de conex&#245;es OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gerenciador de conexões OLE DB"
-  - "fontes de dados [Integration Services], conexões"
-  - "gerenciadores de conexão [Integration Services], OLE DB"
-  - "conexões [Integration Services], OLE DB"
+title: "Gerenciador de Conexão OLE DB | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLE DB connection manager
+- data sources [Integration Services], connections
+- connection managers [Integration Services], OLE DB
+- connections [Integration Services], OLE DB
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 94287024cf1a79384f888406a0c111644d6696fc
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Gerenciador de conex&#245;es OLE DB
+# <a name="ole-db-connection-manager"></a>gerenciador de conexões OLE DB
   Um gerenciador de conexões OLE DB permite que um pacote se conecte a uma fonte de dados usando um provedor OLE DB. Por exemplo, um gerenciador de conexões OLE DB que se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar o provedor OLE DB da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
     
 > [!NOTE]    
->  O provedor de OLEDB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 não dá suporte às novas palavras-chave de cadeia de conexão (MultiSubnetFailover=True) para clustering de failover de várias sub-redes. Para obter mais informações, consulte as [SQL Server Release Notes](http://go.microsoft.com/fwlink/?LinkId=247824) (Notas de versão do SQL Server) e o post do blog [Always On Multi-Subnet Failover and SSIS](http://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/) (Failover de várias sub-redes AlwaysOn e SSIS) em www.mattmasson.com.    
+>  O provedor de OLEDB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 não dá suporte às novas palavras-chave de cadeia de conexão (MultiSubnetFailover=True) para clustering de failover de várias sub-redes. Para obter mais informações, consulte as [SQL Server Release Notes](http://go.microsoft.com/fwlink/?LinkId=247824) (Notas de versão do SQL Server) e o post do blog [Always On Multi-Subnet Failover and SSIS](http://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/)(Failover de várias sub-redes AlwaysOn e SSIS) em www.mattmasson.com.    
     
 > [!NOTE]    
 >  Se a fonte de dados for [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007, ela exigirá um provedor de dados diferente das versões anteriores do Excel ou do Access. Para obter mais informações, consulte [Conectar-se a uma pasta de trabalho do Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md) e [Conectar-se a um banco de dados do Access](../../integration-services/connection-manager/connect-to-an-access-database.md).    
@@ -48,22 +53,22 @@ caps.handback.revision: 59
     
 -   Indique se a conexão criada a partir do gerenciador de conexões será retida em tempo de execução.    
     
-## Log    
+## <a name="logging"></a>Log    
  Você pode registrar as chamadas que o gerenciador de conexões OLE DB faz aos provedores de dados externos. É possível usar esse recurso de registro para solucionar problemas de conexões que o gerenciador de conexões OLE DB cria para as fontes de dados externas. Para registrar as chamadas que o gerenciador de conexões OLE DB cria para os provedores de dados externos, habilite o registro do pacote e selecione o evento **Diagnóstico** no nível de pacote. Para obter mais informações, consulte [Solucionando problemas de ferramentas para execução de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).    
     
-## Configuração do gerenciador de conexões OLEDB    
- Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)], consulte [Configurar Gerenciador de Conexões OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md). Para obter mais informações sobre como configurar um gerenciador de conexões programaticamente, consulte a documentação da classe **T:Microsoft.SqlServer.Dts.Runtime.ConnectionManager** no Guia do Desenvolvedor.    
+## <a name="configuration-of-the-oledb-connection-manager"></a>Configuração do gerenciador de conexões OLEDB    
+ Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consulte [Configurar Gerenciador de Conexões OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md). Para obter mais informações sobre como configurar um gerenciador de conexões programaticamente, consulte a documentação da classe **T:Microsoft.SqlServer.Dts.Runtime.ConnectionManager** no Guia do Desenvolvedor.    
     
-## Conteúdo relacionado    
+## <a name="related-content"></a>Conteúdo relacionado    
     
 -   Artigo do Wiki, [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670) (SSIS com Conectores Oracle) em social.technet.microsoft.com.    
     
--   Artigo técnico, [Connection Strings for OLE DB Providers](http://go.microsoft.com/fwlink/?LinkId=220744) (Cadeias de conexão para provedores de OLE DB), em carlprothman.net.    
+-   Artigo técnico, [Connection Strings for OLE DB Providers](http://go.microsoft.com/fwlink/?LinkId=220744)(Cadeias de conexão para provedores de OLE DB), em carlprothman.net.    
     
-## Consulte também    
+## <a name="see-also"></a>Consulte também    
  [Origem de OLE DB](../../integration-services/data-flow/ole-db-source.md)     
  [Destino OLE DB](../../integration-services/data-flow/ole-db-destination.md)     
  [Tarefa Executar SQL](../../integration-services/control-flow/execute-sql-task.md)     
- [Conexões do SSIS &#40;Integration Services&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)    
+ [Integration Services &#40; SSIS &#41; Conexões](../../integration-services/connection-manager/integration-services-ssis-connections.md)    
     
   

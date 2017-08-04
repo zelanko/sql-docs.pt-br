@@ -1,31 +1,36 @@
 ---
-title: "Editor do Gerenciador de Conex&#245;es SMTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.smtpconnection.f1"
-helpviewer_keywords: 
-  - "Editor do Gerenciador de Conexões SMTP"
+title: "Editor do Gerenciador de Conexão SMTP | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.smtpconnection.f1
+helpviewer_keywords:
+- SMTP Connection Manager Editor
 ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3ef8edce1f187ac427463a0a0722c12666265d93
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor do Gerenciador de Conex&#245;es SMTP
+# <a name="smtp-connection-manager-editor"></a>Editor do Gerenciador de Conexões SMTP
   Use a caixa de diálogo **Editor do Gerenciador de Conexões SMTP** para especificar um servidor SMTP.  
   
  Para saber mais sobre o Gerenciador de Conexões SMTP, consulte [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Nome**  
  Forneça um nome exclusivo para o gerenciador de conexões.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 37
  **Habilitar SSL (Secure Sockets Layer)**  
  Selecione para criptografar a comunicação utilizando a SSL (Secure Sockets Layer) ao enviar mensagens de email.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

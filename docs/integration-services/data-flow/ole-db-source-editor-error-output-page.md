@@ -1,31 +1,36 @@
 ---
-title: "Editor de Origem de OLE DB (p&#225;gina Sa&#237;da de Erro) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.oledbsourceadapter.errorhandling.f1"
-helpviewer_keywords: 
-  - "Editor de Origem de OLE DB"
+title: "Editor de origem OLE DB (página saída de erro) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.oledbsourceadapter.errorhandling.f1
+helpviewer_keywords:
+- OLE DB Source Editor
 ms.assetid: 7737c6ae-c16b-4856-aa6e-5882640093b7
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3656595e0e0f0a48a2f8d5d0082a0686b3061557
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de Origem de OLE DB (p&#225;gina Sa&#237;da de Erro)
+# <a name="ole-db-source-editor-error-output-page"></a>Editor de Origem de OLE DB (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo do **Editor de Origem OLE DB** para selecionar opções de tratamento de erro e definir propriedades em colunas de saída de erros.  
   
  Para saber mais sobre a origem de OLE DB, consulte [OLE DB Source](../../integration-services/data-flow/ole-db-source.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Entrada/Saída**  
  Exibe o nome da fonte de dados.  
   
@@ -49,11 +54,11 @@ caps.handback.revision: 25
  **Aplicar**  
  Aplique a opção de tratamento de erros às células selecionadas.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origem de OLE DB &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/ole-db-source-editor-connection-manager-page.md)   
- [Editor de Origem de OLE DB &#40;Página Colunas&#41;](../../integration-services/data-flow/ole-db-source-editor-columns-page.md)   
+ [Editor de origem OLE DB &#40; Página Gerenciador de Conexão &#41;](../../integration-services/data-flow/ole-db-source-editor-connection-manager-page.md)   
+ [Editor de origem OLE DB &#40; Página colunas &#41;](../../integration-services/data-flow/ole-db-source-editor-columns-page.md)   
  [Extrair dados por meio da origem OLE DB](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)   
- [Gerenciador de conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ [Gerenciador de Conexão do OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
   

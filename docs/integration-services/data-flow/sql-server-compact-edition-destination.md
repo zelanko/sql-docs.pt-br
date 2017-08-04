@@ -1,28 +1,33 @@
 ---
-title: "Destino do SQL Server Compact Edition | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sqlservercompactdest.f1"
-helpviewer_keywords: 
-  - "destinos [Integration Services], SQL Server Compact"
-  - "SQL Server Compact, destino"
-  - "inserindo dados"
+title: Destino do SQL Server Compact Edition | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sqlservercompactdest.f1
+helpviewer_keywords:
+- destinations [Integration Services], SQL Server Compact
+- SQL Server Compact, destination
+- inserting data
 ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ec7fef9755b0bfd277282de54696d6f6cff5547c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Destino do SQL Server Compact Edition
+# <a name="sql-server-compact-edition-destination"></a>Destino do SQL Server Compact Edition
   O destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact grava dados em bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
 > [!NOTE]  
@@ -36,19 +41,19 @@ caps.handback.revision: 56
   
  O destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact tem uma entrada e não aceita uma saída de erro.  
   
-## Configuração do destino do SQL Server Compact Edition  
+## <a name="configuration-of-the-sql-server-compact-edition-destination"></a>Configuração do destino do SQL Server Compact Edition  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](../Topic/Common%20Properties.md)  
+-   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas do destino SQL Server](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  Para obter mais informações sobre como definir as propriedades desse componente, consulte [Definir as propriedades de um componente de fluxo de dados](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
   
   

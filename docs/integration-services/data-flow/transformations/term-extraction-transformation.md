@@ -1,45 +1,50 @@
 ---
-title: "Transforma&#231;&#227;o Extra&#231;&#227;o de Termos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.termextractiontrans.f1"
-helpviewer_keywords: 
-  - "limites de palavras [Integration Services]"
-  - "extraindo dados [Integration Services]"
-  - "limites de sentença"
-  - "extrações de palavras [Integration Services]"
-  - "Transformação Extração de Termos"
-  - "marcando palavras"
-  - "dados normalizados [Integration Services]"
-  - "tokenizando texto [Integration Services]"
-  - "partes da fala [Integration Services]"
-  - "extração de texto [Integration Services]"
-  - "extrações de termos [Integration Services]"
-  - "derivando palavras [Integration Services]"
+title: "Transformação extração de termos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.termextractiontrans.f1
+helpviewer_keywords:
+- word boundaries [Integration Services]
+- extracting data [Integration Services]
+- sentence boundaries
+- word extractions [Integration Services]
+- Term Extraction transformation
+- tagging words
+- normalized data [Integration Services]
+- tokenizing text [Integration Services]
+- parts of speech [Integration Services]
+- text extraction [Integration Services]
+- term extractions [Integration Services]
+- stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 caps.latest.revision: 61
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1aff30861feebd429bf4c061a3b8cff3031c7528
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transforma&#231;&#227;o Extra&#231;&#227;o de Termos
+# <a name="term-extraction-transformation"></a>Transformação Extração de Termos
   A transformação Extração de Termo extrai termos de texto em uma coluna de entrada de transformação e grava os termos em uma coluna de saída de transformação. A transformação trabalha apenas com texto em inglês e usa seu próprio dicionário de inglês e informações linguísticas sobre o inglês.  
   
  Você pode usar a transformação Extração de Termos para descobrir o conteúdo de um conjunto de dados. Por exemplo, texto que contém mensagens de email pode fornecer comentários úteis sobre produtos, possibilitando o uso da transformação Extração de Termos para extrair os tópicos de discussão nas mensagens, como forma de analisar os comentários.  
   
-## Termos e tipos de dados extraídos  
- A transformação Extração de Termos só pode extrair substantivos, frases apenas nominais, tanto substantivos quanto frases nominais. Um substantivo é um substantivo único; uma frase nominal são pelo menos duas palavras, das quais uma é um substantivo e a outra é um substantivo ou um adjetivo. Por exemplo, se a transformação usar a opção só substantivos, extrairá termos como *bicicleta* e *paisagem*; se a transformação usar a opção de frase nominal, extrairá termos como *bicicleta azul nova*, *capacete de bicicleta* e *bicicletas encaixotadas*.  
+## <a name="extracted-terms-and-data-types"></a>Termos e tipos de dados extraídos  
+ A transformação Extração de Termos só pode extrair substantivos, frases apenas nominais, tanto substantivos quanto frases nominais. Um substantivo é um substantivo único; uma frase nominal são pelo menos duas palavras, das quais uma é um substantivo e a outra é um substantivo ou um adjetivo. Por exemplo, se a transformação usar a opção só substantivos, extrairá termos como *bicicleta* e *paisagem*; se a transformação usar a opção de frase nominal, extrairá termos como *bicicleta azul nova*, *capacete de bicicleta*e *bicicletas encaixotadas*.  
   
- Não são extraídos artigos e pronomes. Por exemplo, a transformação Extração de Termos extrai o termo *bicicleta* do texto *a bicicleta*, *minha bicicleta* e *aquela bicicleta*.  
+ Não são extraídos artigos e pronomes. Por exemplo, a transformação Extração de Termos extrai o termo *bicicleta* do texto *a bicicleta*, *minha bicicleta*e *aquela bicicleta*.  
   
  A transformação Extração de Termos gera uma contagem para cada termo que extrai. A contagem pode ser um valor de TFIDF ou a frequência bruta, significando o número de vezes que o termo normalizado aparece na entrada. Nesse caso, a contagem é representada por um número real que é maior do que 0. Por exemplo, a pontuação de TFIDF poderia ter o valor 0,5, e a frequência seria um valor como 1,0 ou 2,0.  
   
@@ -49,19 +54,19 @@ caps.handback.revision: 61
   
  A transformação Extração de Termos só pode trabalhar com texto em uma coluna que tenha ou DT_WSTR ou o tipo de dados DT_NTEXT. Se uma coluna contiver texto, mas não tiver um desses tipos de dados, a transformação Conversão de Dados pode adicionar uma coluna com tipo de dados DT_WSTR ou DT_NTEXT para o fluxo de dados e copiar os valores da coluna para a nova coluna. A saída da transformação Conversão de Dados pode, então, ser usada como entrada para a transformação Extração de Termos. Para obter mais informações, consulte [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
   
-## Exclusão de termos  
+## <a name="exclusion-terms"></a>Exclusão de termos  
  Além disso, a transformação Extração de Termos pode referir-se a uma coluna em uma tabela que contenha termos de exclusão, significando termos que a transformação não deve considerar ao extrair termos de um conjunto de dados. Isso é útil quando um conjunto de termos já foi identificado como inconsequente em um negócio específico e na indústria, porque o termo ocorre com uma frequência tão alta que se torna uma palavra de ruído. Por exemplo, ao extrair termos de um conjunto de dados que contém informações de apoio ao cliente sobre uma marca específica de carros, a própria marca poderá ser excluída porque a marca é mencionada com muita frequência e significativa. Portanto, os valores na lista de exclusão devem ser personalizados conforme o conjunto de dados com o qual está trabalhando.  
   
- Quando você acrescenta um termo à lista de exclusão, todos os termos - palavras ou frases nominais - que contenham o termo são também excluídos. Por exemplo, se a lista de exclusões incluir a apenas a palavra *dados* então, todos os termos que contenham essa palavra, como *dados*, *mineração de dados*, *integridade de dados* e *validade de dados* também serão excluídos. Se você quiser excluir apenas compostos que contenham a palavra *dados*, será necessário adicionar esses termos compostos explicitamente na lista de exclusões. Por exemplo, se você quisesse extrair incidências de *dados*, mas excluir *validação de dados*, você adicionaria *validação de dados* à lista de exclusão e teria certeza de que o termo *dados* seria removido da lista de exclusões.  
+ Quando você acrescenta um termo à lista de exclusão, todos os termos - palavras ou frases nominais - que contenham o termo são também excluídos. Por exemplo, se a lista de exclusões incluir a apenas a palavra *dados*então, todos os termos que contenham essa palavra, como *dados*, *mineração de dados*, *integridade de dados*e *validade de dados* também serão excluídos. Se você quiser excluir apenas compostos que contenham a palavra *dados*, será necessário adicionar esses termos compostos explicitamente na lista de exclusões. Por exemplo, se você quisesse extrair incidências de *dados*, mas excluir *validação de dados*, você adicionaria *validação de dados* à lista de exclusão e teria certeza de que o termo *dados* seria removido da lista de exclusões.  
   
  A tabela de referência deve ser uma tabela em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou do Access. A transformação Extração de Termos utiliza uma conexão OLE DB separada para conectar-se à tabela de referência. Para obter mais informações, consulte [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  A transformação Extração de Termos trabalha em um modo completamente pré-protegido. No momento da execução, a transformação Extração de Termos lê os termos de exclusão da tabela de referência e os armazena em sua memória privada antes que processe qualquer linha de entrada de transformação.  
   
-## Extrações de termos de texto  
+## <a name="extraction-of-terms-from-text"></a>Extrações de termos de texto  
  Para extrair termos do texto, a transformação Extração de Termos executa as seguintes tarefas.  
   
-### Identificação de palavras  
+### <a name="identification-of-words"></a>Identificação de palavras  
  Primeiro, a transformação Extração de Termos identifica palavras executando as seguintes tarefas:  
   
 -   Separando o texto em palavras usando espaços, quebras de linha e outros delimitadores vocabulares da língua inglesa. Por exemplo, sinais de pontuação tais como *?* e *** são caracteres delimitadores de palavras.  
@@ -74,9 +79,9 @@ caps.handback.revision: 61
   
 -   Reconhecendo quando caracteres especiais como o apóstrofo não devem separar palavras. Por exemplo, a palavra *bicicletas* não é separada em duas palavras e resulta no termo simples *bicicleta* (substantivo).  
   
--   Separando expressões de tempo, expressões monetárias, endereços de email e endereços postais. Por exemplo, a data *31 de janeiro de 2004* é separada em três marcas *janeiro*, *31* e *2004*.  
+-   Separando expressões de tempo, expressões monetárias, endereços de email e endereços postais. Por exemplo, a data *31 de janeiro de 2004* é separada em três marcas *janeiro*, *31*e *2004*.  
   
-### Palavras marcadas  
+### <a name="tagged-words"></a>Palavras marcadas  
  Segundo, a transformação Extração de Termos marca as palavras como uma das seguintes classes gramaticais:  
   
 -   Um substantivo na forma singular. Por exemplo, *bicicleta* e *batata*.  
@@ -109,8 +114,8 @@ caps.handback.revision: 61
 > [!NOTE]  
 >  Os termos extraídos continuam sujeitos ao tamanho máximo de termos e ao limite de frequência que a transformação utiliza.  
   
-### Palavras reduzidas  
- A transformação Extração de Termos também reduz substantivos para extrair apenas a forma singular de um substantivo. Por exemplo, a transformação extrai *homem* de *homens*, *rato* de *ratos* e *bicicleta* de *bicicletas*. A transformação usa seu dicionário para reduzir os substantivos. Gerúndios são tratados como substantivos caso estejam no dicionário.  
+### <a name="stemmed-words"></a>Palavras reduzidas  
+ A transformação Extração de Termos também reduz substantivos para extrair apenas a forma singular de um substantivo. Por exemplo, a transformação extrai *homem* de *homens*, *rato* de *ratos*e *bicicleta* de *bicicletas*. A transformação usa seu dicionário para reduzir os substantivos. Gerúndios são tratados como substantivos caso estejam no dicionário.  
   
  A transformação Extração de Termos reduz palavras até sua forma do dicionário conforme mostrado nestes exemplos por meio do uso do dicionário interno à transformação Extração de Termos.  
   
@@ -120,19 +125,19 @@ caps.handback.revision: 61
   
 -   Recuperando a forma singular de substantivos irregulares a partir do dicionário. Por exemplo, *gansos* torna-se *ganso*.  
   
-### Palavras normalizadas  
+### <a name="normalized-words"></a>Palavras normalizadas  
  A transformação Extração de Termos normaliza termos que só aparecem com inicial em maiúscula por causa de sua posição em uma oração e, ao invés disso, utiliza a forma sem inicial em minúscula. Por exemplo, nas orações *Cachorros perseguem bolas* e *Caminhos de montanha são íngremes*, seriam normalizadas *Cachorros* e *Montanha* para *cachorro* e *montanha*.  
   
  A transformação Extração de Termos normaliza palavras de forma que as versões de palavras com inicial em maiúscula ou normal não sejam tratadas como termos diferentes. Por exemplo, no texto *Você vê muitas bicicletas em Seattle* e *Bicicletas são azuis*, *bicicletas* e *Bicicletas* são reconhecidas como o mesmo termo e a transformação só mantém *bicicleta*. Substantivos próprios e palavras que não estão listadas no dicionário interno não são normalizados.  
   
-### Normalização de maiúsculas e minúsculas  
+### <a name="case-sensitive-normalization"></a>Normalização de maiúsculas e minúsculas  
  A transformação Extração de Termos pode ser configurada para considerar palavras com inicial minúscula e maiúscula ou como termos distintos, ou como variantes diferentes do mesmo termo.  
   
 -   Se a transformação for configurada para reconhecer diferenças de maiúsculas ou minúsculas, termos como *Método* e *método* serão extraídos como dois termos distintos. Nunca são normalizadas palavras com inicial em maiúscula que não sejam a primeira palavra em uma oração, sendo marcadas como substantivos próprios.  
   
 -   Se a transformação for configurada para ser sensível a iniciais maiúsculas e minúsculas, termos como *Método* e *método* serão reconhecidos como variantes de um único termo. A lista de termos extraídos poderia incluir ou *Método* ou *método*, dependendo de qual palavra ocorra primeiro no conjunto de dados de entrada. Se *Método* estiver com inicial em maiúscula apenas porque é a primeira palavra em uma oração, será extraído na forma normalizada.  
   
-## Oração e limites de vocábulos  
+## <a name="sentence-and-word-boundaries"></a>Oração e limites de vocábulos  
  A transformação Extração de Termos separa o texto em orações que usam os caracteres seguintes como limites de oração:  
   
 -   Caracteres 0x0d de quebra de linha ASCII (retorno de carro) e 0x0a (avanço de linha). Para usar esse caractere como um limite de orações, deve haver dois ou mais caracteres de quebra de linha consecutivos.  
@@ -145,7 +150,7 @@ caps.handback.revision: 61
   
 -   Combinações de números, sinais de pontuação e caracteres alfabéticos. Por exemplo, *A23B#99* retorna o termo *A23B*.  
   
--   Os caracteres %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, e ‘.  
+-   The characters, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, and ‘.  
   
     > [!NOTE]  
     >  Acrônimos que contêm um ou mais pontos (.) não são separados em várias sentenças.  
@@ -161,16 +166,16 @@ caps.handback.revision: 61
 -   ASCII 0x0a (alimentação de linha)  
   
     > [!NOTE]  
-    >  Se um apóstrofo estiver em uma palavra que seja uma contração, como *we're* ou *it's*, a palavra será quebrada até o apóstrofo; caso contrário, as letras que seguem o apóstrofo serão cortados. Por exemplo, *we're* é divido em *we* e *'re* e *bicycle’s* é cortada para *bicycle*.  
+    >  Se um apóstrofo estiver em uma palavra que seja uma contração, como *we're* ou *it's*, a palavra será quebrada até o apóstrofo; caso contrário, as letras que seguem o apóstrofo serão cortados. Por exemplo, *we're* é divido em *we* e *'re*e *bicycle’s* é cortada para *bicycle*.  
   
-## Configuração da transformação Extração de Termos  
+## <a name="configuration-of-the-term-extraction-transformation"></a>Configuração da transformação Extração de Termos  
  A transformação Extração de Texto utiliza algoritmos internos e modelos estatísticos para gerar seus resultados. Você pode ter que executar a transformação  Extração de Termos várias vezes e examinar os resultados para configurar a transformação, a fim de gerar o tipo de resultados que funcione para sua solução para filtragem de texto.  
   
  A transformação Extração de Termos tem uma entrada normal, uma saída e uma saída de erros.  
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Extração de Termos**, clique em um dos seguintes tópicos:  
+ Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Extração de Termos** , clique em um dos seguintes tópicos:  
   
 -   [Editor de Transformação Extração de Termos &#40;Guia Extração de Termos&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-term-extraction-tab.md)  
   
@@ -180,7 +185,7 @@ caps.handback.revision: 61
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](../Topic/Common%20Properties.md)  
+-   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

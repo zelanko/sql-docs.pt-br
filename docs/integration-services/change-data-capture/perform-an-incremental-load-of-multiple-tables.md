@@ -1,24 +1,29 @@
 ---
-title: "Executar uma carga incremental de v&#225;rias tabelas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "carga incremental [Integration Services], várias tabelas"
+title: "Executar uma carga Incremental de várias tabelas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 293e4a68eba8fa8cbc5a01773c948d5b56de1a91
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Executar uma carga incremental de v&#225;rias tabelas
+# <a name="perform-an-incremental-load-of-multiple-tables"></a>Executar uma carga incremental de várias tabelas
   No tópico [Melhorando cargas incrementais com o Change Data Capture](../../integration-services/change-data-capture/change-data-capture-ssis.md), o diagrama ilustra um pacote básico que executa uma carga incremental em apenas uma tabela. No entanto, carregar uma tabela não é tão comum quanto ter que realizar uma carga incremental de diversas tabelas.  
   
  Ao executar uma carga incremental de diversas tabelas, algumas etapas devem ser realizadas uma vez para todas as tabelas e outras etapas devem ser repetidas para cada tabela de origem. Você tem mais de uma opção para implementar estas etapas no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  
@@ -27,10 +32,10 @@ caps.handback.revision: 26
   
 -   Usar diversas tarefas de Fluxo de Dados em um único pacote.  
   
-## Carregando diversas tabelas usando um pacote pai e diversos pacotes filho  
+## <a name="loading-multiple-tables-by-using-a-parent-package-and-multiple-child-packages"></a>Carregando diversas tabelas usando um pacote pai e diversos pacotes filho  
  É possível usar um pacote pai para executar essas etapas que só precisam ser executadas uma vez. Os pacotes filho executarão essas etapas que precisam ser executadas para cada tabela de origem.  
   
-#### Para criar um pacote pai que executa essas etapas que só precisam ser executadas uma vez  
+#### <a name="to-create-a-parent-package-that-performs-those-steps-that-only-have-to-be-done-once"></a>Para criar um pacote pai que executa essas etapas que só precisam ser executadas uma vez  
   
 1.  Crie um pacote pai.  
   
@@ -44,9 +49,9 @@ caps.handback.revision: 26
   
 4.  Use diversas tarefas Executar Pacote para executar pacotes filho para cada tabela a ser carregada. Passe os pontos de extremidade calculados no pacote pai para cada pacote filho usando as Configurações de Variáveis do Pacote Pai.  
   
-     Para obter mais informações, consulte [Tarefa Executar Pacote](../../integration-services/control-flow/execute-package-task.md) e [Usar os valores de variáveis e parâmetros em um pacote filho](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md).  
+     Para obter mais informações, consulte [Tarefa Executar Pacote](../../integration-services/control-flow/execute-package-task.md) e [Usar os valores de variáveis e parâmetros em um pacote filho](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
-#### Para criar pacotes filho para executar as etapas que precisam ser executadas para cada tabela de origem  
+#### <a name="to-create-child-packages-to-perform-those-steps-that-have-to-be-done-for-each-source-table"></a>Para criar pacotes filho para executar as etapas que precisam ser executadas para cada tabela de origem  
   
 1.  Para cada tabela de origem, crie um pacote filho.  
   
@@ -68,10 +73,10 @@ caps.handback.revision: 26
   
          Para obter um exemplo de como usar essa transformação para aplicar atualizações e exclusões, consulte [Aplicar as alterações ao destino](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md).  
   
-## Carregando diversas tabelas usando diversas tarefas de Fluxo de Dados em um único pacote  
+## <a name="loading-multiple-tables-by-using-multiple-data-flow-tasks-in-a-single-package"></a>Carregando diversas tabelas usando diversas tarefas de Fluxo de Dados em um único pacote  
  Como alternativa, é possível usar um único pacote que contém uma tarefa de Fluxo de Dados separado para cada tabela de origem que será carregada.  
   
-#### Para carregar diversas tabelas usando diversas tarefas de Fluxo de Dados em um único pacote  
+#### <a name="to-load-multiple-tables-by-using-multiple-data-flow-tasks-in-a-single-package"></a>Para carregar diversas tabelas usando diversas tarefas de Fluxo de Dados em um único pacote  
   
 1.  Crie um único pacote.  
   

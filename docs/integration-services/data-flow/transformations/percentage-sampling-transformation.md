@@ -1,32 +1,37 @@
 ---
-title: "Transforma&#231;&#227;o Amostragem Percentual | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.percentagesamplingtrans.f1"
-helpviewer_keywords: 
-  - "testando modelos de mineração"
-  - "sementes de amostragem [Integration Services]"
-  - "mineração de dados [Analysis Services], conjuntos de dados de exemplo"
-  - "transformação Amostragem Percentual"
-  - "conjuntos de dados de exemplo [Integration Services]"
-  - "conjuntos de dados [Integration Services], exemplo"
-  - "treinando modelos de mineração"
+title: "Transformação amostragem percentual | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.percentagesamplingtrans.f1
+helpviewer_keywords:
+- testing mining models
+- sampling seeds [Integration Services]
+- data mining [Analysis Services], sample data sets
+- Percentage Sampling transformation
+- sample data sets [Integration Services]
+- datasets [Integration Services], sample
+- training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b304a50eeec9908427b7fd42319b88d78b151ff0
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transforma&#231;&#227;o Amostragem Percentual
+# <a name="percentage-sampling-transformation"></a>transformação Amostragem Percentual
   A transformação Amostragem Percentual cria um conjunto de dados de exemplo, selecionando um percentual das linhas de entrada da transformação. O conjunto de dados de exemplo é uma seleção aleatória das linhas da entrada da transformação, para que o exemplo resultante seja representativo da entrada.  
   
 > [!NOTE]  
@@ -36,7 +41,7 @@ caps.handback.revision: 46
   
  A transformação Amostragem Percentual também é útil para criar conjuntos de dados de exemplo para desenvolvimento de pacote. Aplicando-se a transformação Amostragem Percentual a um fluxo de dados, você pode reduzir de modo uniforme o tamanho do conjunto de dados, preservando as características de seus dados. O pacote de teste pode ser então executado mais rapidamente, pois ele usa um conjunto de dados pequeno, porém representativo.  
   
-## Configuração da transformação Amostragem Percentual  
+## <a name="configuration-the-percentage-sampling-transformation"></a>Configuração da transformação Amostragem Percentual  
  Você pode especificar uma amostragem da semente para modificar o comportamento do gerador de números aleatórios que a transformação utiliza para selecionar linhas. Se a mesma amostragem da semente for utilizada, a transformação sempre criará a mesma saída de exemplo. Se nenhuma semente for especificada, a transformação usará a contagem de tiques do sistema operacional para criar o número aleatório. Portanto, você pode optar por utilizar uma semente padrão quando quiser verificar os resultados da transformação durante o desenvolvimento e teste de um pacote e, em seguida, fazer a alteração para utilizar uma semente aleatória quando o pacote for colocado em produção.  
   
  Essa transformação é semelhante à transformação Amostragem de Linhas, que cria um conjunto dados de exemplo, selecionando um número especificado de linhas de entrada. Para obter mais informações, consulte [Row Sampling Transformation](../../../integration-services/data-flow/transformations/row-sampling-transformation.md).  
@@ -51,7 +56,7 @@ caps.handback.revision: 46
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](../Topic/Common%20Properties.md)  
+-   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

@@ -1,25 +1,30 @@
 ---
-title: "Propriedades do Navegador do SQL Server (guia Avan&#231;ado) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "As propriedades de navegador do SQL Server (guia Avançado) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ba79137a-cb72-4bf3-a650-e11d02cfce10
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f4c4d860ae086b8dd649bc74db8ed4ae3cf4fd1
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriedades do Navegador do SQL Server (guia Avan&#231;ado)
-  O programa Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado como um serviço no servidor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta as solicitações de entrada de recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece informações sobre as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador.  
+# <a name="sql-server-browser-properties-advanced-tab"></a>Propriedades do Navegador do SQL Server (guia Avançado)
+  O programa Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado como um serviço no servidor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Escuta as solicitações de entrada de recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece informações sobre as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador.  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Clusterizado**  
  Indica se este serviço for instalado como um recurso de um servidor clusterizado.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 19
  **ID da Instância**  
  Indica a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usou essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. A instância padrão é **MSSQL10_50.MSSQLSERVER**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Serviço Navegador do SQL Server](../../tools/configuration-manager/sql-server-browser-service.md)  
   
   

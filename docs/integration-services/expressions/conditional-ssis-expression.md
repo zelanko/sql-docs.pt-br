@@ -1,29 +1,34 @@
 ---
-title: "? : (Condicional) (Express&#227;o SSIS) | Microsoft Docs"
-ms.custom: 
-  - "ssisdev020617"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "operador condicional (?:)"
-  - "?: (operador condicional)"
+title: "? : (Condicional) (expressão SSIS) | Microsoft Docs"
+ms.custom:
+- ssisdev020617
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- conditional operator (?:)
+- '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 311168388a44f5a42118a7bd496ead4228338496
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# ? : (Condicional) (Express&#227;o SSIS)
+# <a name="--conditional-ssis-expression"></a>? : (Condicional) (Expressão SSIS)
   Retorna uma de duas expressões baseadas na avaliação de uma expressão booliana. Se a expressão Booleana for avaliada como TRUE, a primeira expressão será avaliada e o resultado será o resultado da expressão. Se a expressão Booleana for avaliada como FALSE, a segunda expressão será avaliada e seu resultado será o resultado da expressão.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -31,7 +36,7 @@ boolean_expression?expression1:expression2
   
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *boolean_expression*  
  É qualquer expressão válida que é avaliada como TRUE, FALSE ou NULL.  
   
@@ -41,10 +46,10 @@ boolean_expression?expression1:expression2
  *expression2*  
  É qualquer expressão válida.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  O tipo de dados de *expression1* ou *expression2*.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Se *boolean_expression* for avaliada como NULL, o resultado da expressão será NULL. Se uma expressão selecionada, *expression1* ou *expression2* for NULL, o resultado será NULL. Se uma expressão selecionada não for NULL, mas aquela não selecionada for NULL, o resultado será o valor da expressão selecionada.  
   
  Se *expression1* e *expression2* tiverem o mesmo tipo de dados, o resultado será aquele tipo de dados. As regras adicionais a seguir se aplicam aos tipos de resultado:  
@@ -84,21 +89,21 @@ boolean_expression?expression1:expression2
   
  Para obter mais informações sobre tipos de dados, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Exemplos de expressões  
+## <a name="expression-examples"></a>Exemplos de expressões  
  Este exemplo mostra uma expressão que condicionalmente é avaliada como `savannah` ou `unknown`.  
   
 ```  
 @AnimalName == "Elephant"? "savannah": "unknown"  
 ```  
   
- Este exemplo mostra uma expressão que faz referências a uma coluna **ListPrice**. **ListPrice** tem o tipo de dados DT_CY. A expressão multiplica **ListPrice** condicionalmente por .2 ou .1.  
+ Este exemplo mostra uma expressão que faz referências a uma coluna **ListPrice** . **ListPrice** tem o tipo de dados DT_CY. A expressão multiplica **ListPrice** condicionalmente por .2 ou .1.  
   
 ```  
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## Consulte também  
- [Precedência de operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40;Expressão do SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Consulte também  
+ [Precedência do operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40; Expressão SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

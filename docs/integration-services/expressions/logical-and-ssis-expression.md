@@ -1,43 +1,48 @@
 ---
-title: "&amp;&amp; (AND l&#243;gico) (Express&#227;o SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "&& (AND lógico)"
-  - "AND, AND lógico"
-  - "AND lógico (&&)"
+title: "&amp;&amp;(AND lógico) (Expressão SSIS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- '&& (logical AND)'
+- AND, logical AND
+- logical AND (&&)
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a52d1a0bf10aba48b1e628a9253c7f2361f58506
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# &amp;&amp; (AND l&#243;gico) (Express&#227;o SSIS)
+# <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp;(AND lógico) (Expressão SSIS)
   Executa uma operação AND lógica. A expressão será avaliada como TRUE se todas as condições forem TRUE.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 boolean_expression1 && boolean_expression2  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *boolean _expression1, boolean_expression2*  
  É qualquer expressão válida que é avaliada como TRUE, FALSE ou NULL.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  DT_BOOL  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  A tabela a seguir mostra o resultado do operador &&.  
   
 |Resultado|Expressão|Expressão|  
@@ -49,8 +54,8 @@ boolean_expression1 && boolean_expression2
 |NULL|NULL|TRUE|  
 |FALSE|NULL|FALSE|  
   
-## Exemplos de expressões  
- Este exemplo usa **StandardCost** e as colunas **ListPrice**. O exemplo avaliará como TRUE se o valor da coluna **StandardCost** for menor que 300 e a coluna **ListPrice** for maior que 500.  
+## <a name="expression-examples"></a>Exemplos de expressões  
+ Este exemplo usa **StandardCost** e as colunas **ListPrice** . O exemplo avaliará como TRUE se o valor da coluna **StandardCost** for menor que 300 e a coluna **ListPrice** for maior que 500.  
   
 ```  
 StandardCost < 300 && ListPrice > 500  
@@ -62,9 +67,9 @@ StandardCost < 300 && ListPrice > 500
 StandardCost < @SPrice && ListPrice > @LPrice  
 ```  
   
-## Consulte também  
- [& &#40;AND bit a bit&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)   
- [Precedência de operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40;Expressão do SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Consulte também  
+ [& &#40; AND bit a bit &#41; &#40; Expressão do SSIS &#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)   
+ [Precedência do operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40; Expressão SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

@@ -1,28 +1,33 @@
 ---
-title: "Transforma&#231;&#227;o Convers&#227;o de Dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataconversiontrans.f1"
-helpviewer_keywords: 
-  - "convertendo tipos de dados [Integration Services]"
-  - "transformação Conversão de Dados"
-  - "tipos de dados [Integration Services], convertendo"
+title: "Transformação de conversão de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataconversiontrans.f1
+helpviewer_keywords:
+- converting data types [Integration Services]
+- Data Conversion transformation
+- data types [Integration Services], converting
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 897651a9257aadeac68a392eeae8b51d0c87de8d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transforma&#231;&#227;o Convers&#227;o de Dados
+# <a name="data-conversion-transformation"></a>transformação Conversão de Dados
   A transformação Conversão de Dados converte os dados de uma coluna de entrada em um tipo diferente de dados e os copia em uma nova coluna de saída. Por exemplo, um pacote pode extrair dados de várias fontes e usar essa transformação para converter colunas em tipos de dados exigidos pelo armazenamento dos dados de destino. Você pode aplicar várias conversões em uma única coluna de entrada.  
   
  Usando essa transformação, um pacote pode executar os seguintes tipos de conversão de dados:  
@@ -43,15 +48,15 @@ caps.handback.revision: 53
   
  Essa transformação tem uma entrada, uma saída e uma saída de erro.  
   
-## Tarefas relacionadas  
- Você pode definir propriedades por meio do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer ou programaticamente. Para obter informações sobre como usar a transformação Conversão de Dados no Designer SSIS, consulte [Converter dados em um tipo de dados diferente por meio da transformação Conversão de Dados](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md) e [Editor de Transformação Conversão de Dados](../../../integration-services/data-flow/transformations/data-conversion-transformation-editor.md). Para obter informações sobre como definir as propriedades dessa transformação programaticamente, consulte [Propriedades comuns](../Topic/Common%20Properties.md) e [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+## <a name="related-tasks"></a>Tarefas relacionadas  
+ Você pode definir propriedades por meio do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer ou programaticamente. Para obter informações sobre como usar a transformação Conversão de Dados no Designer SSIS, consulte [Converter dados em um tipo de dados diferente por meio da transformação Conversão de Dados](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md) e [Editor de Transformação Conversão de Dados](../../../integration-services/data-flow/transformations/data-conversion-transformation-editor.md). Para obter informações sobre como definir as propriedades dessa transformação programaticamente, consulte [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) e [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
  Entrada de blog, [Comparação de desempenho entre as técnicas de conversão de tipo de dados no SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823), em blogs.msdn.com.  
   
-## Consulte também  
- [Análise rápida](../Topic/Fast%20Parse.md)   
- [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   
+## <a name="see-also"></a>Consulte também  
+ [Análise rápida](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
+ [Fluxo de dados](../../../integration-services/data-flow/data-flow.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

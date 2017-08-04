@@ -1,60 +1,65 @@
 ---
-title: "Propriedades personalizadas de Transforma&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "transformação Agregação [Integration Services]"
-  - "transformação Dimensão de Alteração Lenta"
-  - "Transformação Importar Coluna [Integration Services]"
-  - "Transformação Classificação"
-  - "Transformação Não Dinâmica"
-  - "Transformação Junção de Mesclagem"
-  - "Transformação Consulta de Mineração de Dados"
-  - "transformação Agrupamento Difuso"
-  - "transformação Conversão de Dados"
-  - "transformação Pesquisa Difusa"
-  - "Transformação Extração de Termos"
-  - "propriedades personalizadas da transformação Contagem de Linhas [Integration Services]"
-  - "transformações [Integration Services], propriedades"
-  - "transformação Dinâmica"
-  - "transformação Pesquisa"
-  - "transformação Amostragem Percentual"
-  - "Transformação Exportar Colunas [Integration Services]"
-  - "Transformação Amostragem de Linhas"
-  - "propriedades personalizadas da transformação Divisão Condicional [Integration Services]"
-  - "propriedades personalizadas [Integration Services]"
-  - "Transformação Auditoria"
-  - "transformação Pesquisa de Termos"
-  - "propriedades personalizadas da transformação Componente de Script [Integration Services]"
-  - "transformação Coluna Derivada"
-  - "transformação Comando OLE DB"
-  - "propriedades personalizadas da transformação Copiar Coluna [Integration Services]"
-  - "propriedades personalizadas da transformação Mapa de Caracteres [Integration Services]"
+title: "Propriedades personalizadas da transformação | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Aggregate transformation [Integration Services]
+- Slowly Changing Dimension transformation
+- Import Column transformation [Integration Services]
+- Sort transformation
+- Unpivot transformation
+- Merge Join transformation
+- Data Mining Query transformation
+- Fuzzy Grouping transformation
+- Data Conversion transformation
+- Fuzzy Lookup transformation
+- Term Extraction transformation
+- Row Count transformation custom properties [Integration Services]
+- transformations [Integration Services], properties
+- Pivot transformation
+- Lookup transformation
+- Percentage Sampling transformation
+- Export Column transformation [Integration Services]
+- Row Sampling transformation
+- Conditional Split transformation custom properties [Integration Services]
+- custom properties [Integration Services]
+- Audit transformation
+- Term Lookup transformation
+- Script Component transformation custom properties [Integration Services]
+- Derived Column transformation
+- OLE DB Command transformation
+- Copy Column transformation custom properties [Integration Services]
+- Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 caps.latest.revision: 72
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 72
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62ff6e04e7f26e6ca1af9760ebb17c5f41d37f0d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propriedades personalizadas de Transforma&#231;&#227;o
+# <a name="transformation-custom-properties"></a>Propriedades personalizadas de Transformação
   Além das propriedades comuns à maioria dos objetos Data Flow no modelo de objeto do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , muitos objetos Data Flow têm propriedades personalizadas específicas. Essas propriedades personalizadas estão disponíveis somente em tempo de execução e não constam da Documentação de Referência de Programação Gerenciada do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
   
- Este tópico lista e descreve as propriedades personalizadas de várias transformações de fluxo de dados. Para obter mais informações sobre as propriedades comuns à maioria dos objetos Data Flow, consulte [Common Properties](../Topic/Common%20Properties.md).  
+ Este tópico lista e descreve as propriedades personalizadas de várias transformações de fluxo de dados. Para obter mais informações sobre as propriedades comuns à maioria dos objetos Data Flow, consulte [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
- É possível definir algumas propriedades de transformações usando expressões de propriedade. Para obter mais informações, consulte [Propriedades de fluxo de dados que podem ser definidas usando expressões](../Topic/Data%20Flow%20Properties%20that%20Can%20Be%20Set%20by%20Using%20Expressions.md).  
+ É possível definir algumas propriedades de transformações usando expressões de propriedade. Para obter mais informações, consulte [Propriedades de fluxo de dados que podem ser definidas usando expressões](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8).  
   
-## Transformações com propriedades personalizadas  
+## <a name="transformations-with-custom-properties"></a>Transformações com propriedades personalizadas  
   
 ||||  
 |-|-|-|  
@@ -68,7 +73,7 @@ caps.handback.revision: 72
 |[Consulta de mineração de dados](#dmquery)|[Amostragem Percentual](#percent)|[Não Dinâmico](#unpivot)|  
 |[Coluna Derivada](#derived)|[Dinâmico](#pivot)||  
   
-### Transformações sem propriedades personalizadas  
+### <a name="transformations-without-custom-properties"></a>Transformações sem propriedades personalizadas  
  As transformações a seguir não têm nenhuma propriedade personalizada nos níveis do componente, da entrada ou da saída: [Merge Transformation](../../../integration-services/data-flow/transformations/merge-transformation.md), [Multicast Transformation](../../../integration-services/data-flow/transformations/multicast-transformation.md)e [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md). Somente as propriedades comuns a todos os componentes de fluxo de dados são usadas.  
   
 ##  <a name="aggregate"></a> Propriedades personalizadas da transformação Agregação  
@@ -140,7 +145,7 @@ caps.handback.revision: 72
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|Integer|Um valor que especifica o **LineageID** da coluna de entrada que é a fonte da coluna de saída.|  
-|MapFlags|Inteiro (enumeração)|Um valor que especifica as operações de cadeia de caracteres que a transformação Mapa de Caracteres executa na coluna. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **Inversão de byte** (2)<br /><br /> **Largura inteira** (6)<br /><br /> **Meia largura** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Caixas linguísticas** (7)<br /><br /> **Minúsculas** (0)<br /><br /> **Chinês simplificado** (8)<br /><br /> **Chinês tradicional** (9)<br /><br /> **Letras maiúsculas** (1)|  
+|MapFlags|Inteiro (enumeração)|Um valor que especifica as operações de cadeia de caracteres que a transformação Mapa de Caracteres executa na coluna. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **Inversão de byte** (2)<br /><br /> **Largura inteira** (6)<br /><br /> **Meia largura** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Caixas linguísticas** (7)<br /><br /> **Minúsculas** (0)<br /><br /> **Chinês simplificado** (8)<br /><br /> **Chinês tradicional**(9)<br /><br /> **Letras maiúsculas** (1)|  
   
  A entrada, as colunas de entrada e a saída da transformação Mapa de Caracteres não têm nenhuma propriedade personalizada.  
   
@@ -182,7 +187,7 @@ caps.handback.revision: 72
   
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
-|FastParse|Booliano|Um valor que indica se as colunas usam as rotinas de análise mais rápidas, mas que não fazem distinção entre localidades, que o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece ou as rotinas de análise padrão que fazem distinção entre localidades. O valor padrão dessa propriedade é **False**. Para obter mais informações, consulte [Fast Parse](../Topic/Fast%20Parse.md) e [Standard Parse](../Topic/Standard%20Parse.md). .<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação da Conversão de Dados**, mas pode ser definida usando o **Editor Avançado**.|  
+|FastParse|Booliano|Um valor que indica se as colunas usam as rotinas de análise mais rápidas, mas que não fazem distinção entre localidades, que o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece ou as rotinas de análise padrão que fazem distinção entre localidades. O valor padrão dessa propriedade é **False**. Para obter mais informações, consulte [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) e [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). .<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação da Conversão de Dados**, mas pode ser definida usando o **Editor Avançado**.|  
 |SourceInputColumnLineageId|Integer|O **LineageID** da coluna de entrada que é fonte da coluna de saída.|  
   
  A entrada, as colunas de entrada e a saída da transformação Conversão de Dados não têm nenhuma propriedade personalizada.  
@@ -259,7 +264,7 @@ caps.handback.revision: 72
   
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
-|Delimitadores|Cadeia de caracteres|Os delimitadores de token usados pela transformação. Os delimitadores padrão incluem os seguintes caracteres: espaço ( ), vírgula (,), ponto final (.), ponto-e-vírgula (;), dois-pontos (:), hífen (-), aspas ("), apóstrofo ('), E comercial (&), barra (/), barra invertida (\\), arroba (@), ponto de exclamação (!), ponto de interrogação (?), parêntese de abertura ((), parêntese de fechamento ()), menor que (\<), maior que (>), colchete de abertura ([), colchete de fechamento (]), chave de abertura ({), chave de fechamento (}), barra vertical ou pipe (&#124;), número (#), asterisco (*), circunflexo (^) e porcentagem (%).|  
+|Delimitadores|Cadeia de caracteres|Os delimitadores de token usados pela transformação. Os delimitadores padrão incluem os seguintes caracteres: () de espaço, vírgula (,), ponto (.),-e-vírgula (;), dois-pontos (:), hífen (-), aspas retas ("), a marca de aspas simples ('), e comercial (&), barra marca (/), barra invertida (\\), arroba (@), ponto de exclamação (!), ponto de interrogação (?), abertura de parênteses ((), fechar parênteses ()), menor que (\<), maior que (>), colchete ([), colchete (]), de abertura ({), colchete (}), barra vertical (&#124;) de fechamento de fechamento de abertura sinal de número (#), asterisco (*), circunflexo (^) e porcentagem (%)).|  
 |Exhaustive|Booliano|Um valor que especifica se cada registro de entrada é comparado a todos os outros registros de entrada. O valor de **True** destina-se especialmente a propósitos de depuração. O valor padrão dessa propriedade é **False**.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação do Agrupamento Difuso**, mas pode ser definida usando o **Editor Avançado**.|  
 |MaxMemoryUsage|Integer|A quantidade máxima de memória para uso pela transformação. O valor padrão dessa propriedade é **0**, que ativa o uso de memória dinâmica.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação do Agrupamento Difuso**, mas pode ser definida usando o **Editor Avançado**.|  
 |MinSimilarity|Double|O limite de semelhança usado pela transformação para identificar duplicatas, expresso como um valor entre 0 e 1.  O valor padrão dessa propriedade é 0.8.|  
@@ -288,15 +293,15 @@ caps.handback.revision: 72
 ##  <a name="flookup"></a> Propriedades personalizadas da transformação Pesquisa Difusa  
  A transformação Pesquisa Difusa tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
- A tabela a seguir descreve as propriedades personalizadas da transformação Pesquisa Difusa. Todas as propriedades, exceto **ReferenceMetadataXML**, são de leitura/gravação.  
+ A tabela a seguir descreve as propriedades personalizadas da transformação Pesquisa Difusa. Todas as propriedades, exceto **ReferenceMetadataXML** , são de leitura/gravação.  
   
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Booliano|Especifica se uma cópia da tabela de referência deve ser feita para a criação do índice de pesquisa difusa e pesquisas subsequentes. O valor padrão dessa propriedade é **True**.|  
-|Delimitadores|Cadeia de caracteres|Os delimitadores usados pela transformação para criar tokens de valores de coluna. Os delimitadores padrão incluem os seguintes caracteres: espaço ( ), vírgula (,), ponto final (.), ponto e vírgula (;), dois pontos (:), hífen (-), aspas ("), apóstrofo ('), E comercial (&), barra (/), barra invertida (\\), arroba (@), ponto de exclamação (!), ponto de interrogação (?), parêntese de abertura ((), parêntese de fechamento ()), menor que (\<), maior que (>), colchete de abertura ([), colchete de fechamento (]), chave de abertura ({), chave de fechamento (}), pipe (&#124;). sinal de número (#), asterisco (*), acento circunflexo (^) e porcentagem (%).|  
+|Delimitadores|Cadeia de caracteres|Os delimitadores usados pela transformação para criar tokens de valores de coluna. Os delimitadores padrão incluem os seguintes caracteres: espaço (), vírgula (,), semicolon(;) de ponto (.), hífen (-) do dois-pontos (:), aspas retas ("), a marca de aspas simples ('), e comercial (&), barra marca (/), barra invertida (\\), arroba (@), ponto de exclamação (!), ponto de interrogação (?), parêntese de abertura ((), fechar parênteses ()), menor que (\<), maior que (>), colchete ([), colchete (]), de abertura ({), colchete (}), barra vertical (&#124;) de fechamento de fechamento de abertura. sinal de número (#), asterisco (*), acento circunflexo (^) e porcentagem (%).|  
 |DropExistingMatchIndex|Booliano|Um valor que especifica se o índice de correspondência especificado em MatchIndexName é excluído quando MatchIndexOptions não é definido como ReuseExistingIndex. O valor padrão para essa propriedade é **True**.|  
 |Exhaustive|Booliano|Um valor que especifica se cada registro de entrada é comparado a todos os outros registros de entrada. O valor de **True** destina-se especialmente a propósitos de depuração. O valor padrão dessa propriedade é **False**.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação da Pesquisa Difusa**, mas pode ser definida usando o **Editor Avançado**.|  
-|MatchIndexName|Cadeia de caracteres|O nome do índice de correspondência. O índice de correspondência é a tabela na qual a transformação cria e salva o índice usado. Se o índice de correspondência for reutilizado, MatchIndexName especificará o índice a ser reutilizado. MatchIndexName deve ser um nome de identificador válido do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por exemplo, se o nome contiver espaços, deverá ser colocado entre colchetes.|  
+|MatchIndexName|Cadeia de caracteres|O nome do índice de correspondência. O índice de correspondência é a tabela na qual a transformação cria e salva o índice usado. Se o índice de correspondência for reutilizado, MatchIndexName especificará o índice a ser reutilizado. MatchIndexName deve ser um nome de identificador válido do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por exemplo, se o nome contiver espaços, deverá ser colocado entre colchetes.|  
 |MatchIndexOptions|Inteiro (enumeração)|Um valor que especifica como a transformação gerencia o índice de correspondência. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **ReuseExistingIndex** (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
 |MaxMemoryUsage|Integer|O tamanho máximo do cache para a tabela de pesquisa. O valor padrão desta propriedade é **0**, o que significa que não há limite para o tamanho do cache.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação da Pesquisa Difusa**, mas pode ser definida usando o **Editor Avançado**.|  
 |MaxOutputMatchesPerInput|Integer|O número máximo de correspondências que a transformação pode retornar para cada linha de entrada. O valor padrão desta propriedade é **1**.<br /><br /> Observação: Valores superiores a 100 só podem ser especificados usando o **Editor Avançado**.|  
@@ -333,7 +338,7 @@ caps.handback.revision: 72
 ##  <a name="lookup"></a> Propriedades personalizadas da transformação Pesquisa  
  A transformação Pesquisa tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
- A tabela a seguir descreve as propriedades personalizadas da transformação Pesquisa. Todas as propriedades, exceto **ReferenceMetadataXML**, são de leitura/gravação.  
+ A tabela a seguir descreve as propriedades personalizadas da transformação Pesquisa. Todas as propriedades, exceto **ReferenceMetadataXML** , são de leitura/gravação.  
   
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
@@ -342,8 +347,8 @@ caps.handback.revision: 72
 |MaxMemoryUsage|Integer|O tamanho máximo do cache para a tabela de pesquisa. O valor padrão desta propriedade é **25**, o que significa que não há limite para o tamanho do cache.|  
 |MaxMemoryUsage64|Integer|O tamanho máximo do cache para a tabela de pesquisa em um computador de 64 bits.|  
 |NoMatchBehavior|Inteiro (enumeração)|Um valor que especifica se linhas sem entradas de correspondência no conjunto de dados de referência são tratadas como erros.<br /><br /> Quando a propriedade é definida como **Tratar as linhas sem entradas correspondentes como erros** (0), as linhas sem entradas correspondentes são tratadas como erros. É possível especificar o que deve acontecer quando esse tipo de erro ocorre usando a página **Saída de Erro** da caixa de diálogo **Editor de Transformação Pesquisa** . Para obter mais informações, consulte [Editor de Transformação Pesquisa &#40;página Saída de Erro&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).<br /><br /> Quando a propriedade é definida como **Enviar linhas sem entradas correspondentes para a saída sem correspondência** (1), as linhas não são tratadas como erros.<br /><br /> O valor padrão é **Tratar as linhas sem entradas correspondentes como erros** (0).|  
-|ParameterMap|Cadeia de caracteres|Uma lista delimitada por ponto-e-vírgula de IDs de linhagem que são mapeadas para os parâmetros usados na instrução **SqlCommand**.|  
-|ReferenceMetaDataXML|Cadeia de caracteres|Metadados para as colunas na tabela de pesquisa copiados pela transformação para a sua saída.|  
+|ParameterMap|Cadeia de caracteres|Uma lista delimitada por ponto-e-vírgula de IDs de linhagem que são mapeadas para os parâmetros usados na instrução **SqlCommand** .|  
+|ReferenceMetadataXML|Cadeia de caracteres|Metadados para as colunas na tabela de pesquisa copiados pela transformação para a sua saída.|  
 |SqlCommand|Cadeia de caracteres|A instrução SELECT que popula a tabela de pesquisa.|  
 |SqlCommandParam|Cadeia de caracteres|A instrução SQL com parâmetros que popula a tabela de pesquisa.|  
   
@@ -395,7 +400,7 @@ caps.handback.revision: 72
 |-------------------|---------------|-----------------|  
 |CommandTimeOut|Integer|O número máximo de segundos em que o comando SQL pode ser executado antes que o tempo limite seja excedido. O valor **0** indica que não há limite de tempo. O valor padrão dessa propriedade é **0**.|  
 |DefaultCodePage|Integer|A página de código a ser usada quando informações de página de código não estão disponíveis na fonte de dados.|  
-|SQLCommand|Cadeia de caracteres|A instrução Transact-SQL executada pela transformação para cada linha no fluxo de dados.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
+|SqlCommand|Cadeia de caracteres|A instrução Transact-SQL executada pela transformação para cada linha no fluxo de dados.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
   
  A tabela seguinte descreve as propriedades personalizadas das colunas externas da transformação Comando OLE DB. Todas as propriedades são de leitura/gravação.  
   
@@ -515,7 +520,7 @@ caps.handback.revision: 72
 |FailOnLookupFailure|Booliano|Um valor que especifica se a transformação falha quando a pesquisa de um registro existente falha. O valor padrão dessa propriedade é **False**.|  
 |IncomingRowChangeType|Integer|Um valor que especifica se todas as linhas de entrada são novas ou se a transformação deve detectar o tipo de alteração.|  
 |InferredMemberIndicator|Cadeia de caracteres|O nome de coluna para o membro inferido.|  
-|SQLCommand|Cadeia de caracteres|A instrução SQL usada para criar um conjunto de linhas de esquema.|  
+|SqlCommand|Cadeia de caracteres|A instrução SQL usada para criar um conjunto de linhas de esquema.|  
 |UpdateChangingAttributeHistory|Booliano|Um valor que indica se atualizações de atributo de histórico são direcionadas à saída da transformação para alteração de atualizações de atributos.|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada da transformação Dimensão de Alteração Lenta. Todas as propriedades são de leitura/gravação.  
@@ -625,10 +630,10 @@ caps.handback.revision: 72
   
  Para obter mais informações, consulte [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Propriedades comuns](../Topic/Common%20Properties.md)   
- [Propriedades do caminho](../Topic/Path%20Properties.md)   
- [Propriedades de fluxo de dados que podem ser definidas usando expressões](../Topic/Data%20Flow%20Properties%20that%20Can%20Be%20Set%20by%20Using%20Expressions.md)  
+ [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
+ [Propriedades de caminho](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
+ [Propriedades de fluxo de dados que podem ser definidas usando expressões](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
   
   

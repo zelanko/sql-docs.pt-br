@@ -1,33 +1,38 @@
 ---
-title: "Editor Avan&#231;ado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.advancededitor.columnproperties.f1"
-  - "sql13.dts.designer.advancededitor.componentproperties.f1"
-  - "sql13.dts.designer.advancededitor.inputcolumns.f1"
-  - "sql13.dts.designer.advancededitor.connections.f1"
-  - "sql13.dts.designer.advancededitor.columnmappings.f1"
+title: "Editor Avançado | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.advancededitor.columnproperties.f1
+- sql13.dts.designer.advancededitor.componentproperties.f1
+- sql13.dts.designer.advancededitor.inputcolumns.f1
+- sql13.dts.designer.advancededitor.connections.f1
+- sql13.dts.designer.advancededitor.columnmappings.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a19014f742ea4be55028bd93d07b0c388159e0a0
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor Avan&#231;ado
+# <a name="advanced-editor"></a>Editor Avançado
   Use a caixa de diálogo **Editor Avançado** para configurar propriedades para o objeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] selecionado.  
   
  O **Editor Avançado** está disponível para a maioria dos objetos [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que têm propriedades configuráveis. É o único editor disponível para os objetos que não expõem uma interface de usuário personalizada.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] têm propriedades que podem ser definidas no nível de componente, no nível de entrada e saída e no nível de coluna de entrada e saída. O **Editor Avançado** enumera todas as propriedades comuns e personalizadas do objeto selecionado, e as exibe em até quatro das cinco guias a seguir, conforme aplicável:  
+ Os objetos de fluxo de dados [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] têm propriedades que podem ser definidas no nível de componente, no nível de entrada e saída e no nível de coluna de entrada e saída. O **Editor Avançado** enumera todas as propriedades comuns e personalizadas do objeto selecionado, e as exibe em até quatro das cinco guias a seguir, conforme aplicável:  
   
 -   **Gerenciadores de Conexões** – use esta guia para definir propriedades de conexão  
   
@@ -41,17 +46,17 @@ caps.handback.revision: 7
   
  As propriedades exibidas variam por componente. Para obter mais informações sobre as propriedades que podem ser exibidas no **Editor Avançado**, consulte os tópicos a seguir:  
   
--   [Propriedades comuns](../Topic/Common%20Properties.md)  
+-   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de Transformação](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [Propriedades do caminho](../Topic/Path%20Properties.md)  
+-   [Propriedades de caminho](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
   
  Para obter mais informações sobre o componente específico que você está editando, consulte a descrição do componente na seção Data Flow Elements da documentação [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Objects and Concepts:  
   
 -   [Transformações do Integration Services](../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   
