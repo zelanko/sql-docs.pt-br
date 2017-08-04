@@ -14,11 +14,11 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
 ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="configure-column-encryption-using-powershell"></a>Configurar a criptografia de coluna usando o PowerShell
@@ -41,7 +41,7 @@ O cmdlet **Set-SqlColumnEncryption** oferece suporte a duas abordagens para defi
 
 Com a abordagem offline, as tabelas de destino (e as tabelas relacionadas às tabelas de destino, por exemplo, qualquer tabela com a qual uma tabela de destino tem relações de chave estrangeira) estão disponíveis para transações por toda a duração da operação de gravação. A semântica das restrições de chave estrangeira (**CHECK** ou **NOCHECK**) sempre são preservadas ao usar a abordagem offline.
 
-Com a abordagem online (requer a versão de módulo do SqlServer PowerShell 21.x ou posterior), a operação de cópia e criptografar, descriptografar ou criptografar novamente os dados é executada de forma incremental. Os aplicativos podem ler e gravar dados de e nas tabelas de destino durante a operação de movimentação de dados, exceto a última iteração, cuja duração é limitada pelo parâmetro **MaxDownTimeInSeconds** (você pode definir). Para detectar e processar as alterações, que os aplicativos podem fazer enquanto os dados estão sendo copiados, o cmdlet habilita o [Controle de Alterações](../../track-changes/enable-and-disable-change-tracking-sql-server.md) no banco de dados de destino. Por causa disso, a abordagem online provavelmente consome mais recursos no lado do servidor que a abordagem online. A operação também pode levar muito mais tempo com a abordagem online, especialmente se uma carga de trabalho de gravação intensa estiver em execução no banco de dados. A abordagem online pode ser usada para criptografar uma tabela por vez e a tabela deve ter uma chave primária. Por padrão, as restrições de chave estrangeira são recriadas com a opção **NOCHECK** para minimizar o impacto nos aplicativos. É possível impor a preservação da semântica de restrições de chave estrangeira, especificando a opção **KeepCheckForeignKeyConstraints**.
+Com a abordagem online (requer o módulo do SqlServer PowerShell versão 21.x ou posterior), a operação de copiar e criptografar, descriptografar ou recriptografar os dados é realizada de forma incremental. Os aplicativos podem ler e gravar dados de e nas tabelas de destino durante a operação de movimentação de dados, exceto a última iteração, cuja duração é limitada pelo parâmetro **MaxDownTimeInSeconds** (você pode definir). Para detectar e processar as alterações, que os aplicativos podem fazer enquanto os dados estão sendo copiados, o cmdlet habilita o [Controle de Alterações](../../track-changes/enable-and-disable-change-tracking-sql-server.md) no banco de dados de destino. Por causa disso, a abordagem online provavelmente consome mais recursos no lado do servidor que a abordagem online. A operação também pode levar muito mais tempo com a abordagem online, especialmente se uma carga de trabalho de gravação intensa estiver em execução no banco de dados. A abordagem online pode ser usada para criptografar uma tabela por vez e a tabela deve ter uma chave primária. Por padrão, as restrições de chave estrangeira são recriadas com a opção **NOCHECK** para minimizar o impacto nos aplicativos. É possível impor a preservação da semântica de restrições de chave estrangeira, especificando a opção **KeepCheckForeignKeyConstraints**.
 
 Aqui estão as diretrizes para escolher entre as abordagens online e offline:
 

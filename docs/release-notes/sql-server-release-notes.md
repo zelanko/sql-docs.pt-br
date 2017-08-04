@@ -17,11 +17,11 @@ caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
 ms.openlocfilehash: f7eb9c1aed79253eaeb1263e4e9bf4768e41350a
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-release-notes"></a>Notas de Versão do SQL Server
@@ -41,7 +41,7 @@ As [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Notas de Versão descr
 [SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)  
   
 [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)  
-[Notas de versão do SQL Server 2012 SP3](../release-notes/sql-server-2012-sp3-release-notes.md)
+[Notas de Versão do SQL Server 2012 SP3](../release-notes/sql-server-2012-sp3-release-notes.md)
     
 ### <a name="sql-server-2008-r2"></a>SQL Server 2008 R2  
 [Notas de Versão do SQL Server 2008 R2](http://download.microsoft.com/download/E/7/D/E7DED7E4-5059-4E3E-82C5-B28BF3FD0AAC/SQLServer2008R2ReleaseNotes.htm)  

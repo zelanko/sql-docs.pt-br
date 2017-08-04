@@ -1,4 +1,4 @@
-2. Em todos os nós de cluster, crie um arquivo para armazenar o nome de usuário do SQL Server e a senha para o logon de Pacemaker. O comando a seguir cria e popula este arquivo:
+2. Em todos os nós de cluster, crie um arquivo para armazenar o nome de usuário e a senha do SQL Server para o logon do Pacemaker. O comando a seguir cria e popula este arquivo:
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
@@ -8,7 +8,7 @@
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```
 
-3. Em todos os nós de cluster, abra as portas do firewall Pacemaker. Para abrir essas portas com o `firewalld`, execute o seguinte comando:
+3. Em todos os nós de cluster, abra as portas do firewall do Pacemaker. Para abrir essas portas com o `firewalld`, execute o seguinte comando:
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability

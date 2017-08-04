@@ -19,11 +19,11 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
 ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>Excluir colunas de uma tabela
@@ -66,9 +66,9 @@ ms.lasthandoff: 06/23/2017
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  Em **Pesquisador de objetos**, localize a tabela da qual você deseja excluir colunas e expandir para expor os nomes de coluna. 
+2.  No **Pesquisador de Objetos**, localize a tabela da qual você deseja excluir colunas e expanda para expor os nomes das colunas. 
 
-3.  Clique com botão direito a coluna que você deseja excluir e escolha **excluir**.  
+3.  Clique com o botão direito do mouse na coluna que você quer excluir e escolha **Excluir**.  
   
 3.  Na caixa de diálogo **Excluir Objeto** , clique em **OK**.  
   

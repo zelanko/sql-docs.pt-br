@@ -18,16 +18,14 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: 53e0f5d479d7fc3cdeae2c6ce121734b6fc16f21
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
-<a id="monitoring-performance-by-using-the-query-store" class="xliff"></a>
-
-# Monitorar o desempenho usando o Repositório de Consultas
+# <a name="monitoring-performance-by-using-the-query-store"></a>Monitorar o desempenho usando o Repositório de Consultas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   O recurso Repositório de Consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece informações sobre escolha e desempenho do plano de consulta. Ele simplifica a solução de problemas, ajudando você a identificar rapidamente diferenças de desempenho causadas por alterações nos planos de consulta. O Repositório de Consultas captura automaticamente um histórico das consultas, dos planos e das estatísticas de tempo de execução e os mantém para sua análise. Ele separa os dados por janelas por hora, permitindo que você veja os padrões de uso do banco de dados e entenda quando as alterações aos planos de consulta ocorreram no servidor. O repositório de consultas pode ser configurado usando a opção [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
@@ -37,9 +35,7 @@ ms.lasthandoff: 06/28/2017
 ##  <a name="Enabling"></a> Habilitando o Repositório de Consultas  
  O repositório de consultas não está ativo para novos bancos de dados por padrão.  
   
-<a id="use-the-query-store-page-in-management-studio" class="xliff"></a>
-
-#### Usar a página Repositório de Consultas no Management Studio  
+#### <a name="use-the-query-store-page-in-management-studio"></a>Usar a página Repositório de Consultas no Management Studio  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um banco de dados e clique em **Propriedades**.  
   
@@ -50,9 +46,7 @@ ms.lasthandoff: 06/28/2017
   
 3.  Na caixa **Modo de operação (Solicitado)** , selecione **Ativado**.  
   
-<a id="use-transact-sql-statements" class="xliff"></a>
-
-#### Usar Instruções Transact-SQL  
+#### <a name="use-transact-sql-statements"></a>Usar Instruções Transact-SQL  
   
 1.  Use a instrução **ALTER DATABASE** para habilitar o repositório de consultas. Por exemplo:  
   
@@ -158,7 +152,7 @@ As seguintes opções estão disponíveis para configurar parâmetros de reposit
  Um número inteiro que representa a quantidade máxima de planos de manutenção para cada consulta. O valor padrão é 200.  
  
  `WAIT_STATS_CAPTURE_MODE`  
- Controla se o repositório de consultas captura informações de estatísticas de espera. Pode ser OFF = 0 ou em = 1 (padrão)  
+ Controla se o Repositório de Consultas captura informações de estatísticas de espera. Pode ser OFF = 0 ou ON = 1 (padrão)  
  
  Consulte a exibição **sys.database_query_store_options** para determinar as opções atuais do repositório de consultas. Para obter mais informações sobre os valores, consulte [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).  
   
@@ -171,9 +165,7 @@ As seguintes opções estão disponíveis para configurar parâmetros de reposit
 |-|-|  
 |[sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
   
-<a id="query-store-catalog-views" class="xliff"></a>
-
-### Exibições do catálogo de repositório de consulta  
+### <a name="query-store-catalog-views"></a>Exibições do catálogo de repositório de consulta  
  As exibições do catálogo apresentam informações sobre o Repositório de Consultas.  
 
 ||| 
@@ -181,11 +173,9 @@ As seguintes opções estão disponíveis para configurar parâmetros de reposit
 |[sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)|[sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)|  
 |[sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)|[sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)|  
 |[sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|  
-|[sys.query_store_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
+|[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
   
-<a id="query-store-stored-procedures" class="xliff"></a>
-
-### Procedimentos armazenados do repositório de consulta  
+### <a name="query-store-stored-procedures"></a>Procedimentos armazenados do repositório de consulta  
  Os procedimentos armazenados configuram o Repositório de Consultas.  
 
 ||| 
@@ -460,7 +450,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
  Para ver todas as regressões de desempenho (não apenas as relacionadas a alteração na escolha do plano), basta remover a condição `AND p1.plan_id <> p2.plan_id` da consulta anterior.  
 
  **Consultas que estão aguardando mais?**
- Essa consulta retornará as dez principais consultas que mais esperam. 
+Essa consulta retornará as dez principais consultas que mais esperam. 
  
  ```tsql 
   SELECT TOP 10
@@ -579,9 +569,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Prática recomendada com o Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Usar o Repositório de Consultas com OLTP na memória](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Cenários de uso do Repositório de Consultas](../../relational-databases/performance/query-store-usage-scenarios.md)   

@@ -19,11 +19,11 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
 ms.openlocfilehash: c27f699eb519c1e9a72756c26e8b320869786c6c
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="encrypt-a-column-of-data"></a>Criptografar uma coluna de dados
@@ -56,12 +56,12 @@ ms.lasthandoff: 06/23/2017
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
 
-Para usar os exemplos a seguir, você deve ter uma chave mestra de banco de dados. Se seu banco de dados ainda não tiver uma chave mestra de banco de dados, crie um executando a instrução a seguir fornecer sua senha:   
+Para usar os exemplos a seguir, você precisa ter uma chave mestra de banco de dados. Se seu banco de dados ainda não tiver uma chave mestra de banco de dados, crie uma executando a instrução a seguir e fornecendo sua senha:   
 ```  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
-Sempre faça backup sua chave mestra de banco de dados. Para obter mais informações sobre chaves mestras do banco de dados, consulte [CREATE MASTER KEY &#40; Transact-SQL &#41; ](../../../t-sql/statements/create-master-key-transact-sql.md).
+Sempre faça backup da chave mestra do seu banco de dados. Para obter mais informações sobre chaves mestras de banco de dados, consulte [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
 
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Para criptografar uma coluna de dados usando uma criptografia simétrica simples  
   

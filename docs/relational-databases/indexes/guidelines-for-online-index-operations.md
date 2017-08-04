@@ -25,7 +25,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
 ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>Diretrizes para operações de índice online
@@ -38,7 +38,7 @@ ms.lasthandoff: 07/11/2017
 -   Índices não clusterizados não exclusivos podem ser criados online, quando a tabela contiver tipos de dados LOB, mas nenhuma dessas colunas são usadas na definição de índice seja como colunas-chaves ou colunas não chave.  
   
 -   Os índices em tabelas temporárias locais, não podem ser criados, recriados ou soltos offline. Esta restrição não se aplica a índices em tabelas temporárias globais.
-- Índices podem ser retomados de onde parou após uma falha inesperada, o failover de banco de dados, ou um **pausar** comando. Consulte [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Este recurso está em visualização pública para o SQL Server 2017 e o Banco de Dados SQL do Azure.
+- Índices podem ser retomados de onde pararam após uma falha inesperada, failover de banco de dados ou um comando **PAUSE**. Consulte [Alterar Índice](../../t-sql/statements/alter-index-transact-sql.md). Este recurso está em visualização pública para o SQL Server 2017 e o Banco de Dados SQL do Azure.
 
 > [!NOTE]  
 >  As operações de índice online não estão disponíveis em todas as edições de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte pelas edições](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -93,26 +93,26 @@ Para obter mais informações, consulte [Disk Space Requirements for Index DDL O
 ## <a name="resumable-index-rebuild-considerations"></a>Considerações de recompilação de índice retomáveis
 
 > [!NOTE]
-> Consulte [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Este recurso está em visualização pública para o SQL Server 2017 e o Banco de Dados SQL do Azure.
+> Consulte [Alterar Índice](../../t-sql/statements/alter-index-transact-sql.md). Este recurso está em visualização pública para o SQL Server 2017 e o Banco de Dados SQL do Azure.
 >
 
-Quando você executar a recompilação de índice online retomáveis as diretrizes a seguir se aplicam:
--   Gerenciando, planejamento e extensão das janelas de manutenção de índice. Você pode pausar e reiniciar uma operação de recompilação de índice várias vezes para ajustar as janelas de manutenção.
-- Recuperação de falhas de recompilação de índice (como os failovers de banco de dados ou ficar sem espaço em disco).
-- Quando uma operação de índice está em pausa, índice original e a um recém-criado exigem espaço em disco e precisam ser atualizados durante as operações DML.
+As diretrizes a seguir se aplicam ao executar a recompilação de índice online retomável:
+-   Gerenciamento, planejamento e extensão das janelas de manutenção de índice. Você pode pausar e reiniciar uma operação de recompilação de índice várias vezes para adequar-se às janelas de manutenção.
+- Recuperação de falhas de recompilação de índice (tais como failovers de banco de dados ou ficar sem espaço em disco).
+- Quando uma operação de índice está em pausa, tanto o índice original quanto um recém-criado exigem espaço em disco e precisam ser atualizados durante as operações de DML.
 
-- Habilita o truncamento de logs de truncamento durante uma operação de recompilação de índice (esta operação não pode ser executada para uma operação de índice online regular).
-- SORT_IN_TEMPDB = ON não há suporte para a opção
+- Habilita o truncamento de logs durante uma operação de recompilação de índice (esta operação não pode ser realizada para uma operação de índice online regular).
+- A opção SORT_IN_TEMPDB=ON não é compatível
 
 > [!IMPORTANT]
-> Reconstrução retomável não exige que você manter aberta um truncamento de longa execução, permitindo que o truncamento de log durante essa operação e um melhor gerenciamento de espaço de log. Com o novo design, nós gerenciados para manter os dados necessários em um banco de dados junto com todas as referências necessárias para reiniciar a operação reiniciável.
+> A recompilação retomável não exige que você mantenha aberto um truncamento de longa execução, permitindo o truncamento de log durante essa operação e um melhor gerenciamento do espaço de log. Com o novo design, conseguimos manter os dados necessários em um banco de dados junto com todas as referências necessárias para reiniciar a operação retomável.
 >
 
-Em geral, não há nenhuma diferença de desempenho entre a recompilação de índice online reiniciável e não reiniciável. Quando você atualiza um índice retomável enquanto a operação de reconstrução de um índice está em pausa:
-- Para ler mais cargas de trabalho, o impacto no desempenho é insignificante. 
-- Para cargas de trabalho pesadas de atualização, você pode observar alguma diminuição de taxa de transferência (nosso teste mostra menor que 10% degradação).
+Em geral, não há nenhuma diferença de desempenho entre a recompilação de índice online retomável e não retomável. Quando você atualiza um índice retomável enquanto uma operação de recompilação de índice está em pausa:
+- Para cargas de trabalho primariamente de leitura, o impacto no desempenho é irrisório. 
+- Para cargas de trabalho com atualização intensa, você pode observar certa degradação da taxa de transferência (nossos testes mostram menos de 10% de degradação).
 
-Em geral, não há nenhuma diferença na qualidade de desfragmentação entre a recompilação de índice online reiniciável e não reiniciável.
+Em geral, não há nenhuma diferença na qualidade de desfragmentação entre a recompilação de índice online retomável e não retomável.
  
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Como funcionam as operações de índice online](../../relational-databases/indexes/how-online-index-operations-work.md)  

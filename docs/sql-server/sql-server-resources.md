@@ -19,11 +19,11 @@ caps.latest.revision: 45
 author: sabotta
 ms.author: carlasab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: c4f53b76e5f01a639cb15f95f28a8d7118178783
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-resources"></a>Recursos do SQL Server
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/23/2017
 - [Exemplos de bancos de dados e scripts Wide World Importers para SQL Server 2016 e Banco de Dados SQL do Azure](https://github.com/Microsoft/sql-server-samples)  
 - [Vídeos do SQL Server no Channel 9](https://channel9.msdn.com/Search?term=SQL%20Server%202016)  
   
-##  <a name="community"></a> Connect with the SQL Community  
+##  <a name="community"></a> Conecte-se à comunidade do SQL  
  A comunidade do SQL é forte e oferece um enorme número de recursos, abrangendo desde o treinamento até a conexão. Veja o que está acontecendo na comunidade do SQL Server.  
   
 -   [Blog da equipe do SQL Server](http://blogs.technet.com/b/dataplatforminsider/)  

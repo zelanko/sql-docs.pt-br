@@ -28,13 +28,13 @@ ms.translationtype: HT
 ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
 ms.openlocfilehash: baf9d02b824a8aae2a282d0f6203791c4b72f1f8
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="get-started-with-polybase"></a>Introdução ao PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Este tópico contém as Noções básicas sobre a execução do PolyBase em uma instância do SQL Server.
+  Este tópico contém as noções básicas sobre a execução do PolyBase em uma instância do SQL Server.
   
  Depois de executar as etapas a seguir, você terá:  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 07/14/2017
 -   Exemplos de consultas que usam objetos PolyBase  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Uma instância de [do SQL Server (64 bits)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) com o seguinte:  
+ Uma instância do [SQL Server (64 bits)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) com o seguinte:  
   
 -   Microsoft .NET Framework 4.5.  
   
@@ -64,13 +64,13 @@ ms.lasthandoff: 07/14/2017
   
 -   Cluster do Hadoop. Para obter as versões com suporte, veja [Configurar o PolyBase](#supported).  
 
--   Armazenamento de BLOBs do Azure
+-   Armazenamento de blobs do Azure
 
 > [!NOTE]
->   Se pretender usar a funcionalidade de pushdown de computação contra Hadoop, você precisará garantir que o cluster do Hadoop de destino tenha componentes principais do HDFS, Yarn/MapReduce com o servidor Jobhistory habilitado. O PolyBase envia a consulta de aplicação via MapReduce e recebe o status do servidor JobHistory. Sem o componente de consulta falhará. 
+>   Se pretender usar a funcionalidade de pushdown de computação contra Hadoop, você precisará garantir que o cluster do Hadoop de destino tenha componentes principais do HDFS, Yarn/MapReduce com o servidor Jobhistory habilitado. O PolyBase envia a consulta de aplicação via MapReduce e recebe o status do servidor JobHistory. A consulta falhará se não tiver um desses componentes. 
 
 ## <a name="install-polybase"></a>Instalar o PolyBase  
- Se você ainda não instalou o PolyBase, consulte [instalação do PolyBase](../../relational-databases/polybase/polybase-installation.md).  
+ Se você ainda não instalou o PolyBase, consulte [Instalação do PolyBase](../../relational-databases/polybase/polybase-installation.md).  
   
 ### <a name="how-to-confirm-installation"></a>Como confirmar a instalação  
  Após a instalação, execute o comando a seguir para confirmar que o PolyBase foi instalado com êxito. Se o PolyBase estiver instalado, retornará 1; caso contrário, 0.  
@@ -79,8 +79,8 @@ ms.lasthandoff: 07/14/2017
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
-##  <a name="supported"></a> Configure PolyBase  
- Após a instalação, você deve configurar o SQL Server para usar a versão de Hadoop ou armazenamento de BLOBs do Azure. O PolyBase oferece suporte a dois provedores do Hadoop, HDP Hortonworks Data Platform () e (Cloudera Distributed Hadoop).  As fontes de dados externas compatíveis incluem:  
+##  <a name="supported"></a> Configurar o PolyBase  
+ Após a instalação, você deve configurar o SQL Server para usar a versão do Hadoop ou Armazenamento de Blobs do Azure. O PolyBase é compatível com dois provedores de Hadoop, HDP (Hortonworks Data Platform) e CDH (Cloudera Distributed Hadoop).  As fontes de dados externas compatíveis incluem:  
   
 -   Hortonworks HDP 1.3 em Linux/Windows Server  
   
@@ -90,7 +90,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Cloudera CDH 4.3 em Linux  
   
--   Cloudera CDH 5.1 – 5.5, 5.9-5.11 no Linux  
+-   Cloudera CDH 5.1 – 5.5, 5.9 a 5.11 no Linux  
   
 -   Armazenamento de blobs do Azure  
   

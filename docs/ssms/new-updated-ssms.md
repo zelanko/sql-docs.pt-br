@@ -19,18 +19,18 @@ ms.translationtype: HT
 ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
 ms.openlocfilehash: 4938dd27bf3f42cc85f22de99fef01adbad08ace
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>Novos e atualizados recentemente: SSMS (SQL Server Management Studio) para SQL Server
 
 
 
-Quase todos os dias Microsoft atualiza alguns de seus artigos existentes em seu [Docs.Microsoft.com](http://docs.microsoft.com/) site de documentação. Este artigo exibe trechos de artigos atualizados recentemente. Links para novos artigos também podem ser listados.
+A Microsoft atualiza alguns de seus artigos existentes no site de documentação [Docs.Microsoft.com](http://docs.microsoft.com/) todos os dias. Este artigo exibe trechos de artigos atualizados recentemente. Links para novos artigos também podem ser listados.
 
-Este artigo é gerado por um programa que é executado novamente periodicamente. Ocasionalmente, um trecho pode aparecer com formatação imperfeita, ou como a redução do artigo de origem. Imagens nunca são exibidas aqui.
+Este artigo é gerado por um programa que é reexecutado periodicamente. Ocasionalmente, um trecho pode aparecer com formatação imperfeita ou como markdown do artigo de origem. Imagens nunca são exibidas aqui.
 
-Atualizações recentes são relatadas para o intervalo de data a seguir e o assunto:
+Atualizações recentes são relatadas para o intervalo de datas e o assunto a seguir:
 
 
 
@@ -107,11 +107,11 @@ Essa lista compacta fornece links para todos os artigos atualizados listados na 
 
 ## <a name="updated-articles-with-excerpts"></a>Artigo atualizado com trechos
 
-Esta seção exibe os trechos de atualizações coletados a partir de artigos que encontraram recentemente uma atualização grande.
+Esta seção exibe os trechos de atualizações coletados de artigos que passaram por uma grande atualização recentemente.
 
-Os trechos exibidos aqui aparecerão separados de seu contexto de semântico apropriado. Além disso, às vezes, um trecho é separado da sintaxe de markdown importantes que circunda no artigo real. Portanto, esses trechos são para apenas diretrizes gerais. Os trechos só permitem que você saber se seus interesses garantem a pena clique e visite o artigo real.
+Os trechos exibidos aqui aparecerão separados de seu contexto de semântico apropriado. Além disso, às vezes um trecho é separado da sintaxe de markdown importante que circunda no artigo real. Portanto, esses trechos servem apenas como orientações gerais. Os trechos só mostram a você se vale a pena clicar e visitar o artigo real conforme seus interesses.
 
-Para essas e outras razões, não copiar o código desses trechos e não em como verdadeiro exato qualquer trecho de texto. Em vez disso, consulte o artigo real.
+Por essas e outras razões, não copie o código desses trechos, nem considere-os como verdade exata. Em vez disso, visite o artigo real.
 
 
 
@@ -136,31 +136,31 @@ Para essas e outras razões, não copiar o código desses trechos e não em como
 
 **Versão do SSMS 17.1**
 
-Disponível | Número da compilação: 14.0.17119.0
+Disponibilidade geral | Número de build: 14.0.17119.0
 
 **Aprimoramentos**
 
 
-- Criador de perfil: Ajuda > sobre agora exibe o número da versão (por exemplo, 17.1)
-- Análise de usuários do serviço podem atualizar as credenciais para suas fontes de dados para 1200 modelos TM e acima no menu de contexto na fonte de dados
-- SSIS interno relatórios agora mostrar logs de execução de expansão do SSIS no CTP 2.1
+- Criador de perfil: Ajuda > A opção Sobre agora exibe o número de versão (por exemplo, 17.1)
+- Usuários do Analysis Service podem atualizar as credenciais para suas fontes de dados para modelos 1200 TM e superior no menu de contexto na fonte de dados
+- Relatórios de SSIS internos agora mostram logs de execução de expansão do SSIS no CTP 2.1
 - Aplicativo de gerenciamento de expansão do SSIS
   - Exibir informações básicas sobre o mestre de expansão.
-  - Adicione facilmente um trabalho para a implantação de expansão.
-  - Exibir todos os trabalhadores de expansão e informações básicas sobre eles e pode também habilitar ou desabilitá-las facilmente.
+  - Adicione facilmente um trabalho à implantação escalável.
+  - Exibir todos os trabalho de expansão e informações básicas sobre eles, além de poder habilitar ou desabilitá-los facilmente.
 
 **Correções de bugs**
 
-- AlwaysOn:
-  - Corrigido um problema em que as propriedades de uma réplica de disponibilidade foi sempre exibido como modo de "Failover automático" para grupos de disponibilidade do WSFC.
-  - Corrigido um problema em que a lista de roteamento somente leitura foi substituída ao atualizar o grupo de disponibilidade
-- Sempre criptografado: corrigido um problema em que o arquivo de log gerado estava ausente informações geradas por DacFx.
-- Plano de execução: corrigido no problema em que a interface do usuário foi sempre mostrando o atributo de tipo de junção real para operadores de junção não adaptável.
+- Always On:
+  - Correção de um problema em que as propriedades de uma réplica de disponibilidade sempre eram exibidas como o modo de “Failover automático” para AGs do WSFC.
+  - Correção de um problema em que a lista de roteamento somente leitura era substituída ao atualizar o Grupo de Disponibilidade
+- Always Encrypted: foi corrigido um problema em que o arquivo de log gerado não continha as informações geradas por DacFx.
+- Plano de execução: foi corrigido um problema em que a interface do usuário sempre mostrava o atributo de tipo de junção Real para operadores de junção Não adaptáveis.
 - Programa de instalação:
-  - Corrigido um problema onde o SSMS 17.0 foi recentes SSDT no Visual Studio 2013 [conectar-se o Item 3133479]
-  - Corrigido um problema em que a clicando em "Reiniciar" no final da instalação foi reiniciar não a máquina
-- Script: temporariamente impedindo SSMS exclusão acidental de objetos de banco de dados do Azure durante a tentativa de exclusão de script por desabilitar essa opção.  Correção apropriada será em uma versão futura do SSMS.
-- Pesquisador de objetos: corrigido um problema em que nó "Bancos de dados" não foi expandida quando conectado a um banco de dados do Azure criado usando "Como cópia"
+  - Correção de um problema em que o SSMS 17.0 estava interrompendo o SSDT no Visual Studio 2013 [Conectar Item 3133479]
+  - Correção de um problema em que a clicar em “Reiniciar” no final da instalação não estava reiniciando o computador
+- Script: para impedir temporariamente que o SSMS exclua acidentalmente objetos de banco de dados do Azure ao tentar usar script na exclusão, tal opção foi desabilitada.  Uma correção apropriada será incluída em uma versão futura do SSMS.
+- Pesquisador de Objetos: foi corrigido um problema em que o nó “Bancos de dados” não era expandido quando conectado a um Banco de Dados do Azure criado usando “AS COPY”
 
 
 

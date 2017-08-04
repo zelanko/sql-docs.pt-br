@@ -14,17 +14,17 @@ caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 1c842fde925e89901971a525c3e171ffce050269
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 95489b4e72f1321f7e1139f06040eb81a5956b15
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importar documentos JSON para o SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Este tópico descreve como importar arquivos JSON no SQL Server. Atualmente, há muitos JSON documentos armazenados em arquivos. Informações de log de aplicativos em arquivos JSON, sensores geram informações que são armazenadas em arquivos JSON e assim por diante. É importante ser capaz de ler os dados JSON armazenados em arquivos, carregar os dados no SQL Server e analisá-los.
+Este tópico descreve como importar arquivos JSON para o SQL Server. No momento, há muitos documentos JSON armazenados em arquivos. Informações de log de aplicativos em arquivos JSON, sensores que geram informações são armazenadas em arquivos JSON e assim por diante. É importante ser capaz de ler os dados JSON armazenados em arquivos, carregar os dados no SQL Server e analisá-los.
 
 ## <a name="import-a-json-document-into-a-single-column"></a>Importar um documento JSON em uma única coluna
 **OPENROWSET(BULK)** é uma função com valor de tabela que pode ler dados de qualquer arquivo na unidade local ou rede, se o SQL Server tiver acesso de leitura para esse local. Ela retorna uma tabela com uma única coluna com o conteúdo do arquivo. Há várias opções que podem ser usadas com a função OPENROWSET(BULK), como separadores. Mas, no caso mais simples, você pode simplesmente carregar todo o conteúdo de um arquivo como um valor de texto. (Esse valor grande único é conhecido como um objeto grande de caractere único ou SINGLE_CLOB.) 
@@ -38,7 +38,7 @@ SELECT BulkColumn
 
 OPENJSON(BULK) lê o conteúdo do arquivo e o retorna em `BulkColumn`.
 
-Você também pode carregar o conteúdo do arquivo em uma variável local ou em uma tabela, conforme mostrado no exemplo a seguir:
+Também é possível carregar o conteúdo do arquivo para uma variável local ou uma tabela, conforme mostrado no exemplo a seguir:
 
 ```sql
 -- Load file contents into a variable
@@ -54,7 +54,7 @@ SELECT BulkColumn
 Depois de carregar o conteúdo do arquivo JSON, você pode salvar o texto JSON em uma tabela.
 
 ## <a name="import-multiple-json-documents"></a>Importar vários documentos JSON
-Você pode usar a mesma abordagem para carregar um conjunto de arquivos JSON do sistema de arquivos em uma variável local, um por vez. Suponha que os arquivos são nomeados como `book<index>.json`.
+Use a mesma abordagem para carregar um conjunto de arquivos JSON do sistema de arquivos para variáveis locais um por vez. Suponha que os arquivos são nomeados como `book<index>.json`.
   
 ```sql
 DECLARE @i INT = 1
@@ -71,19 +71,19 @@ END
 ```
 
 ## <a name="import-json-documents-from-azure-file-storage"></a>Importar documentos JSON do Azure File Storage
-Você também pode usar OPENROWSET (Bulk) conforme descrito acima para ler arquivos JSON de outros locais de arquivo que pode ser acessado pelo SQL Server. Por exemplo, o Azure File Storage dá suporte ao protocolo SMB. Como resultado, você pode mapear uma unidade virtual local para o compartilhamento de armazenamento do Azure File usando o seguinte procedimento:
+Também é possível usar OPENROWSET(BULK) conforme descrito acima para ler os arquivos JSON de outros locais de arquivos que o SQL Server pode acessar. Por exemplo, o Azure File Storage dá suporte ao protocolo SMB. Como resultado, você pode mapear uma unidade virtual local para o compartilhamento de armazenamento do Azure File usando o seguinte procedimento:
 1.  Crie uma conta de armazenamento do arquivo (por exemplo, `mystorage`), um compartilhamento de arquivo (por exemplo, `sharejson`) e uma pasta no Azure File Storage usando o portal do Azure ou o Azure PowerShell.
 2.  Carregar alguns arquivos JSON no compartilhamento de armazenamento de arquivos.
 3.  Crie uma regra de firewall de saída no Firewall do Windows no computador que permite a porta 445. Observe que o seu provedor de serviços de Internet pode bloquear essa porta. Se você receber um erro DNS (erro 53) na etapa seguinte,então você não abriu a porta 445 ou seu ISP está bloqueando a porta.
-4. Montar o compartilhamento de armazenamento de arquivos do Azure como uma unidade local (por exemplo `T:`).
+4. Monte o compartilhamento do Armazenamento de Arquivos do Azure como uma unidade local (por exemplo, `T:`).
 
-    Aqui está a sintaxe de comando:
+    Esta é a sintaxe do comando:
 
     ```dos
     net use [drive letter] \\[storage name].file.core.windows.net\[share name] /u:[storage account name] [storage account access key]
     ```
 
-    Aqui está um exemplo que atribui a letra da unidade local `T:` para o compartilhamento de armazenamento de arquivos do Azure:
+    Veja este exemplo que atribui a letra da unidade local `T:` ao compartilhamento de Armazenamento de Arquivos do Azure:
 
     ```dos
     net use t: \\mystorage.file.core.windows.net\sharejson /u:myaccount hb5qy6eXLqIdBj0LvGMHdrTiygkjhHDvWjUZg3Gu7bubKLg==
@@ -91,7 +91,7 @@ Você também pode usar OPENROWSET (Bulk) conforme descrito acima para ler arqui
 
     Você pode encontrar a chave de conta de armazenamento e a chave de acesso da conta de armazenamento primária ou secundária na seção Chaves em Configurações no portal do Azure.
 
-5.  Agora é possível acessar os arquivos do compartilhamento de armazenamento de arquivos do Azure usando a unidade mapeada, conforme mostrado no exemplo a seguir:
+5.  Agora você pode acessar os arquivos JSON do compartilhamento de Armazenamento de Arquivos do Azure usando a unidade mapeada, conforme mostrado no exemplo a seguir:
 
     ```sql
     SELECT book.* FROM
@@ -105,7 +105,7 @@ Para mais informações sobre o Azure File Storage, consulte [Armazenamento de a
 
 ## <a name="import-json-documents-from-azure-blob-storage"></a>Importar documentos JSON do Armazenamento de Blobs do Azure
 
-Você pode carregar arquivos diretamente no banco de dados SQL do armazenamento de BLOBs do Azure com o comando T-SQL BULK INSERT ou a função OPENROWSET.
+Você pode carregar arquivos diretamente no Banco de Dados SQL do Azure do Armazenamento de Blobs do Azure com o comando T-SQL BULK INSERT ou a função OPENROWSET.
 
 Primeiro, crie uma fonte de dados externa, como mostrado no exemplo a seguir.
 
@@ -124,10 +124,10 @@ FROM 'data/product.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
-Para obter mais informações e um exemplo que usa OPENROWSET, consulte [carregando os arquivos do armazenamento de BLOBs do Azure no banco de dados do SQL Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/).
+Para obter mais informações e um exemplo OPENROWSET, consulte [Carregar arquivos do Armazenamento de Blobs do Azure para o Banco de Dados SQL do Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/).
 
 ## <a name="parse-json-documents-into-rows-and-columns"></a>Analisar documentos JSON em linhas e colunas
-Em vez de ler um arquivo JSON inteiro como um único valor, você talvez queira analisá-lo e retornar os registros no arquivo e suas propriedades em linhas e colunas. O exemplo a seguir usa um arquivo JSON de [este site](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json) que contém uma lista de livros.
+Em vez de ler um arquivo JSON inteiro como um único valor, pode ser útil analisá-lo e retornar os livros no arquivo e suas propriedades em linhas e colunas. Este exemplo usa um arquivo JSON [deste site](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json) que contém uma lista de livros.
 
 ### <a name="example-1"></a>Exemplo 1
 No exemplo mais simples, você pode carregar apenas a lista inteira do arquivo. 
@@ -139,7 +139,7 @@ SELECT value
 ```
 
 ### <a name="example-2"></a>Exemplo 2
-OPENROWSET lê um valor de texto simples do arquivo, retorna-o como uma BulkColumn e passa para a função OPENJSON. OPENJSON itera por meio da matriz de objetos JSON na matriz BulkColumn e retorna um registro em cada linha, formatada como JSON:
+OPENROWSET lê um valor de texto simples do arquivo, retorna-o como uma BulkColumn e passa para a função OPENJSON. O OPENJSON percorre a matriz de objetos JSON da matriz BulkColumn e retorna um livro em cada linha formatado como JSON:
 
 ```json
 {"id":"978-0641723445″, "cat":["book","hardcover"], "name":"The Lightning Thief", … 
@@ -172,7 +172,7 @@ Neste exemplo, OPENROWSET(BULK) lê o conteúdo do arquivo e passa esse conteúd
 Agora você pode retornar esta tabela ao usuário ou carregar os dados em outra tabela.
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Saiba mais sobre o suporte interno a JSON no SQL Server  
-Para muitas soluções específicas, casos de uso e recomendações, consulte o [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no banco de dados SQL Azure por Jovan Popovic, gerente de programas da Microsoft.
+Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure por Jovan Popovic, gerente de programas da Microsoft.
   
 ## <a name="see-also"></a>Consulte também
 [Converter dados JSON em linhas e colunas com OPENJSON](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)

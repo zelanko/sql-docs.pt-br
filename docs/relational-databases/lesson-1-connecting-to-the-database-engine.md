@@ -14,17 +14,17 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 87f75b288cdf7da9097350a117cbd2bf94b69758
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conectando-se ao mecanismo de banco de dados
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
- > Para conteúdo relacionado a versões anteriores do SQL Server, consulte [lição 1: conectar-se ao mecanismo de banco de dados](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx).
+ > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Lição 1: conectar-se ao Mecanismo de Banco de Dados](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx).
 
 Quando você instala o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], as ferramentas instaladas dependem da edição e de suas opções de instalação. Esta lição analisa as principais ferramentas e mostra como conectar e executar uma função básica (autorizar mais usuários).  
   
@@ -55,7 +55,7 @@ Os bancos de dados de exemplo e os exemplos não estão incluídos no [!INCLUDE[
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>Para iniciar o SQL Server Configuration Manager  
   
-- Nas versões atuais do Windows, na página **Iniciar**, digite **Configuration Manager** e clique em **SQL Server *versão* Configuration Manager**.   
+- Nas versões atuais do Windows, na página **Iniciar** , digite **Configuration Manager**e clique em **SQL Server *versão* Configuration Manager**.   
 -   Quando estiver usando versões mais antigas do Windows, no menu **Iniciar** , aponte para **Todos os Programas**, para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
   
 ## <a name="connect"></a>Conectando-se ao Management Studio  

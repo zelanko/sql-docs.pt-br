@@ -1,5 +1,5 @@
 ---
-title: "Documentação técnica do SQL Server | Microsoft Docs"
+title: "Documentação Técnica do SQL Server | Microsoft Docs"
 ms.date: 06/27/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
@@ -22,28 +22,26 @@ caps.latest.revision: 106
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: 334c3d130a1d0c8371c1a7810d82d443e1fbecc8
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="sql-server-technical-documentation" class="xliff"></a>
-
-# Documentação Técnica do SQL Server
+# <a name="sql-server-technical-documentation"></a>Documentação Técnica do SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
- > Para conteúdo relacionado a versões anteriores do SQL Server, consulte [instalação para SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx).
+ > Para ver conteúdo relacionado a versões anteriores do SQL Server, consulte [Instalação do SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx).
 
  Documentação para ajudá-lo a instalar, configurar e usar o SQL Server. O conteúdo inclui exemplos de ponta a ponta, exemplos de código e vídeos. Para tópicos de linguagem do [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] , confira [Referência de Linguagem](../t-sql/language-reference.md).
 
 Também é possível exibir a documentação do SQL Server offline usando o Help Viewer. Para obter mais informações, consulte [Help Viewer e conteúdo offline para o SQL Server](../release-notes/sql-server-help-installation.md).
 
-**SQL Server de 2017**
+**SQL Server 2017**
 
-- [Notas de versão do SQL Server de 2017](../sql-server/sql-server-2017-release-notes.md)
-- [O que há de novo no SQL Server de 2017](../sql-server/what-s-new-in-sql-server-2017.md)
+- [Notas de Versão do SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)
+- [Novidades no SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
  
 **SQL Server 2016:**
  
@@ -55,9 +53,7 @@ Também é possível exibir a documentação do SQL Server offline usando o Help
  - **[Crie uma Máquina Virtual com o SQL Server 2016 já instalado](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
  - **[Baixe a versão mais recente do SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**   
       
-<a id="sql-server-technologies" class="xliff"></a>
-
-## Tecnologias do SQL Server    
+## <a name="sql-server-technologies"></a>Tecnologias do SQL Server    
     
 |||    
 |-|-|    
@@ -71,10 +67,8 @@ Também é possível exibir a documentação do SQL Server offline usando o Help
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> O Reporting Services fornece às corporações a funcionalidade de relatórios online possibilitando criar relatórios que se conectam a conteúdos de várias fontes de dados, permite também, publicar os relatórios em diversos formatos e além disso centralizar o gerenciamento de segurança e de assinaturas.|    
 
     
-<a id="earlier-sql-server-versions" class="xliff"></a>
-
-## Versões anteriores do SQL Server
-- [Manuais Online para Manuais Online do SQL Server 2014](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
+## <a name="earlier-sql-server-versions"></a>Versões anteriores do SQL Server
+- [Manuais Online do SQL Server 2014 Manuais Online](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [Instalar o SQL Server e SQL Server 2014 Express e outras versões mais antigas](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx). (**Obrigado a [Scott Hanselman](http://www.hanselman.com/) para coletar todos os links de pacote do instalador em um único lugar!**)  
 - [Documentação técnica do SQL Server 2012](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
 - [Documentação do produto do SQL Server 2008 R2](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
@@ -86,9 +80,7 @@ Também é possível exibir a documentação do SQL Server offline usando o Help
 - [Bancos de dados e scripts de exemplo do AdventureWorks para SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
 - [Exemplos de SQL Server no GitHub](https://github.com/Microsoft/sql-server-samples) 
    
-<a id="more-information" class="xliff"></a>
-
- ## Mais informações   
+ ## <a name="more-information"></a>Mais informações   
 + [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md)
 + [Centro de Atualização do SQL Server](https://msdn.microsoft.com/library/ff803383.aspx) links e informações para todas as versões com suporte 
 + [Instalar o Mecanismo de Banco de Dados do SQL Server](../database-engine/install-windows/install-sql-server-database-engine.md) 

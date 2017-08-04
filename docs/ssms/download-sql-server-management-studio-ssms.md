@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: e14166437e035c347fec8f50a1248eeb0d0e5597
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: dcb3ee622bac9c70a235e1ff124f7041549825c0
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Baixar o SQL Server Management Studio (SSMS)
@@ -75,15 +75,15 @@ Para obter informações sobre a coleta de dados de usuário, consulte
   
 ## <a name="supported-operating-systems"></a>Sistemas Operacionais com suporte
   
-Esta versão do SSMS dá suporte às seguintes plataformas quando usada com o service pack mais recente disponível:   
-- Windows 10
-- Windows 8.1
-- Windows 8
-- Windows 7 (SP1)
+Esta versão do SSMS é compatível com as seguintes plataformas de 64 bits quando usada com o service pack mais recente disponível:
+- Windows 10 (64 bits)
+- Windows 8.1 (64 bits)
+- Windows 8 (64 bits)
+- Windows 7 (SP1) (64 bits)
 - Windows Server 2016
-- Windows Server 2012 (64 bits) 
-- Windows Server 2012 R2 (64 bits) 
-- Windows Server 2008 R2 (64 bits)  
+- Windows Server 2012 R2 (64 bits)
+- Windows Server 2012 (64 bits)
+- Windows Server 2008 R2 (64 bits)
 
 >[!NOTE]
 >O SSMS 17.X é baseado no shell do Visual Studio 2015 isolado, que foi lançado antes do Windows Server 2016. A Microsoft leva muito a sério a compatibilidade de aplicativo e garante que os aplicativos já fornecidos continuarão sendo executados nas versões mais recentes do Windows. Para minimizar problemas ao executar o SSMS no Windows Server 2016, verifique se o SSMS tem todas as atualizações mais recentes aplicadas. Se você tiver problemas com o SSMS no Windows Server 2016, contate o suporte. A equipe de suporte determina se o problema é com o SSMS, o Visual Studio ou com a compatibilidade do Windows. Em seguida, a equipe de suporte encaminha o problema à equipe apropriada para obter mais informações.

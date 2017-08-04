@@ -15,17 +15,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 1829f2a3b1d053173145df421ce7d8d35a0e29e3
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>Implementando uma expressão CASE em um procedimento armazenado compilado nativamente
 [!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
-  Expressões CASE têm suporte em procedimentos armazenados compilados nativamente. O exemplo a seguir demonstra uma maneira de usar a expressão CASE em uma consulta. A solução descrita para expressões CASE em módulos compilados nativamente não será necessária.
+  As expressões CASE são compatíveis com os procedimentos armazenados compilados nativamente. O exemplo a seguir demonstra uma maneira de usar a expressão CASE em uma consulta. A solução alternativa descrita para expressões CASE em módulos compilados nativamente não será necessária.
 
 ``` 
 -- Query using a CASE expression in a natively compiled stored procedure.

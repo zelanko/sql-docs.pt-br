@@ -1,5 +1,5 @@
 
-## <a name="add-a-database-to-the-availability-group"></a>Adicionar um banco de dados para o grupo de disponibilidade
+## <a name="add-a-database-to-the-availability-group"></a>Adicionar um banco de dados ao grupo de disponibilidade
 
 Verifique se o banco de dados que você está adicionando ao grupo de disponibilidade está em modo de recuperação completa e tem um backup de log válido. Se esse for um banco de dados de teste ou um novo banco de dados criado, faça um backup de banco de dados. No SQL Server primário, execute o seguinte Transact-SQL para criar e fazer backup de um banco de dados chamado `db1`.
 
@@ -16,9 +16,9 @@ Na réplica primária do SQL Server, execute o seguinte Transact-SQL para adicio
 ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1];
 ```
 
-### <a name="verify-that-the-database-is-created-on-the-secondary-servers"></a>Verifique se o banco de dados é criado nos servidores secundários
+### <a name="verify-that-the-database-is-created-on-the-secondary-servers"></a>Verificar se o banco de dados foi criado nos servidores secundários
 
-Em cada réplica secundária do SQL Server, execute a seguinte consulta para ver se o `db1` banco de dados foi criado e é sincronizado.
+Em cada réplica secundária do SQL Server, execute a consulta a seguir para ver se o banco de dados `db1` foi criado e está sincronizado.
 
 ```Transact-SQL
 SELECT * FROM sys.databases WHERE name = 'db1';

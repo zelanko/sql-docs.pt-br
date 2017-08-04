@@ -1,4 +1,4 @@
-3. Em todos os nós de cluster, abra as portas do firewall Pacemaker. Para abrir essas portas com o `firewalld`, execute o seguinte comando:
+3. Em todos os nós de cluster, abra as portas do firewall do Pacemaker. Para abrir essas portas com o `firewalld`, execute o seguinte comando:
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability

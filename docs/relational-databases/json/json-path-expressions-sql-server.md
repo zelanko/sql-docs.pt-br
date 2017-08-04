@@ -17,18 +17,18 @@ ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 44bfd54aa494dd52174eeed8479e14a99d810af3
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 07c873941669f7a36ff9b93651a938ecae2662b7
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="json-path-expressions-sql-server"></a>Expressões de demarcador JSON (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- Use expressões de demarcador JSON para fazer referência às propriedades de objetos JSON.  
+ Use expressões de demarcadores JSON para fazer referência às propriedades de objetos JSON.  
   
  Você precisa fornecer uma expressão de demarcador ao chamar as funções a seguir.  
   
@@ -43,18 +43,18 @@ ms.lasthandoff: 06/23/2017
 ## <a name="parts-of-a-path-expression"></a>Partes de uma expressão de caminho
  Uma expressão de demarcador tem dois componentes.  
   
-1.  Opcional [modo path](#PATHMODE), com um valor de **lax** ou **estrito**.  
+1.  O [modo demarcador](#PATHMODE) opcional, com valor de **lax** ou **strict**.  
   
 2.  O [demarcador](#PATH) em si.  
 
 ##  <a name="PATHMODE"></a> Path mode  
  No início da expressão de demarcador, opcionalmente, declare o modo demarcador especificando a palavra-chave **lax** ou **strict**. O padrão é **lax**.  
   
--   Em **lax** modo, a função retorna valores vazios se a expressão de caminho contém um erro. Por exemplo, se você solicitar o valor **$. Name**, e o texto JSON não contiver uma **nome** chave, a função retornará um valor nulo, mas não gerará um erro.  
+-   No modo **lax**, as funções retornarão valores vazios se a expressão do demarcador contiver um erro. Por exemplo, se você solicitar o valor **$.name** e o texto JSON não contiver uma chave **name**, a função retornará nula, mas não gerará um erro.  
   
--   Em **estrito** modo, a função gerará um erro se a expressão de caminho contém um erro.  
+-   No modo **strict**, a função gerará um erro se a expressão do demarcador contiver um erro.  
 
-A consulta a seguir especifica explicitamente `lax` modo na expressão de caminho.
+A consulta a seguir especifica explicitamente o modo `lax` na expressão de demarcador.
 
 ```sql  
 DECLARE @json NVARCHAR(MAX)
@@ -102,7 +102,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
 |$|{ "people": [ { "name": "John", "surname": "Doe" },<br />   { "name": "Jane", "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>Como as funções internas tratam caminhos duplicados  
- Se o texto JSON contiver propriedades duplicadas - por exemplo, duas chaves com o mesmo nome no mesmo nível - o **JSON_VALUE** e **JSON_QUERY** funções retornam apenas o primeiro valor que corresponde ao caminho. Para analisar um objeto JSON que contém chaves duplicadas e retornar todos os valores, use **OPENJSON**, conforme mostrado no exemplo a seguir.  
+ Se o texto JSON contiver propriedades duplicadas (por exemplo, duas chaves com o mesmo nome no mesmo nível), as funções **JSON_VALUE** e **JSON_QUERY** retornarão apenas o primeiro valor que corresponde ao caminho. Para analisar um objeto JSON que contém chaves duplicadas e retornar todos os valores, use **OPENJSON**, conforme mostrado no exemplo a seguir.  
   
 ```sql  
 DECLARE @json NVARCHAR(MAX)
@@ -113,7 +113,7 @@ FROM OPENJSON(@json,'$.person.info')
 ```  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Saiba mais sobre o suporte interno a JSON no SQL Server  
-Para muitas soluções específicas, casos de uso e recomendações, consulte o [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no banco de dados SQL Azure por Jovan Popovic, gerente de programas da Microsoft.
+Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure por Jovan Popovic, gerente de programas da Microsoft.
   
 ## <a name="see-also"></a>Consulte também  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)   

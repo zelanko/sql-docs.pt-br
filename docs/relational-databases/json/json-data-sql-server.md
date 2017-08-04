@@ -18,11 +18,11 @@ caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: e2a427682aebeeccc82a1b7f6521399b8a0b6fe8
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: fed02f20beb9bd84dfd5ac2add3c66daf207e07c
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="json-data-sql-server"></a>Dados JSON (SQL Server)
@@ -70,7 +70,7 @@ Caso haja texto JSON armazenado em tabelas de banco de dados, você poderá usar
 
 **Exemplo**
   
- No exemplo a seguir, a consulta usa relacionais e dados JSON (armazenados em uma coluna chamada `jsonCol`) de uma tabela:  
+ No exemplo a seguir, a consulta usa tanto dados JSON quanto relacionais (armazenados em uma coluna chamada `jsonCol`) de uma tabela:  
   
 ```sql  
 SELECT Name,Surname,
@@ -321,7 +321,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   
 ### <a name="microsoft-blog-posts"></a>Postagens no blog da Microsoft  
   
--   Para muitas soluções específicas, casos de uso e recomendações, consulte o [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no banco de dados SQL Azure por Jovan Popovic, gerente de programas da Microsoft.  
+-   Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure por Jovan Popovic, gerente de programas da Microsoft.  
   
 ### <a name="reference-topics"></a>Tópicos de referência  
   

@@ -19,18 +19,18 @@ ms.translationtype: HT
 ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
 ms.openlocfilehash: a3b52f0dc6a552c7eb0d41e0cca4137b97dd8f15
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-data-tools-ssdt"></a>Novos e atualizados recentemente: SSDT (SQL Server Data Tools)
 
 
 
-Quase todos os dias Microsoft atualiza alguns de seus artigos existentes em seu [Docs.Microsoft.com](http://docs.microsoft.com/) site de documentação. Este artigo exibe trechos de artigos atualizados recentemente. Links para novos artigos também podem ser listados.
+A Microsoft atualiza alguns de seus artigos existentes no site de documentação [Docs.Microsoft.com](http://docs.microsoft.com/) todos os dias. Este artigo exibe trechos de artigos atualizados recentemente. Links para novos artigos também podem ser listados.
 
-Este artigo é gerado por um programa que é executado novamente periodicamente. Ocasionalmente, um trecho pode aparecer com formatação imperfeita, ou como a redução do artigo de origem. Imagens nunca são exibidas aqui.
+Este artigo é gerado por um programa que é reexecutado periodicamente. Ocasionalmente, um trecho pode aparecer com formatação imperfeita ou como markdown do artigo de origem. Imagens nunca são exibidas aqui.
 
-Atualizações recentes são relatadas para o intervalo de data a seguir e o assunto:
+Atualizações recentes são relatadas para o intervalo de datas e o assunto a seguir:
 
 
 
@@ -47,7 +47,7 @@ Atualizações recentes são relatadas para o intervalo de data a seguir e o ass
 Os links a seguir direcionam para novos artigos que foram adicionados recentemente.
 
 
-***Não existem novos artigos a serem listados, no momento.***
+***Não existem novos artigos a serem listados no momento.***
 
 
 
@@ -66,17 +66,17 @@ Essa lista compacta fornece links para todos os artigos atualizados listados na 
 
 ## <a name="updated-articles-with-excerpts"></a>Artigo atualizado com trechos
 
-Esta seção exibe os trechos de atualizações coletados a partir de artigos que encontraram recentemente uma atualização grande.
+Esta seção exibe os trechos de atualizações coletados de artigos que passaram por uma grande atualização recentemente.
 
-Os trechos exibidos aqui aparecerão separados de seu contexto de semântico apropriado. Além disso, às vezes, um trecho é separado da sintaxe de markdown importantes que circunda no artigo real. Portanto, esses trechos são para apenas diretrizes gerais. Os trechos só permitem que você saber se seus interesses garantem a pena clique e visite o artigo real.
+Os trechos exibidos aqui aparecerão separados de seu contexto de semântico apropriado. Além disso, às vezes um trecho é separado da sintaxe de markdown importante que circunda no artigo real. Portanto, esses trechos servem apenas como orientações gerais. Os trechos só mostram a você se vale a pena clicar e visitar o artigo real conforme seus interesses.
 
-Para essas e outras razões, não copiar o código desses trechos e não em como verdadeiro exato qualquer trecho de texto. Em vez disso, consulte o artigo real.
+Por essas e outras razões, não copie o código desses trechos, nem considere-os como verdade exata. Em vez disso, visite o artigo real.
 
 
 
 &nbsp;
 
-***Nenhum artigo nesta área foi atualizado recentemente, no momento.***
+***Nenhum artigo nesta área foi atualizado recentemente no momento.***
 
 
 

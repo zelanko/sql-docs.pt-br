@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
 ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
@@ -77,10 +77,10 @@ Para aumentar a segurança, a mensagem de erro que é retornada ao cliente ocult
 |12|O logon é válido, mas houve falha no acesso ao servidor.|  
 |18|A senha deve ser alterada.|  
 |38, 46|Não foi possível localizar o banco de dados solicitado pelo usuário.|
-|102 - 111|Falha do AAD.|
-|122 - 124|Falha devido a nome de usuário vazio ou a senha.|
-|126|Banco de dados solicitado pelo usuário não existe.|
-|132 - 133|Falha do AAD.|
+|102 – 111|Falha de AAD.|
+|122 – 124|Falha devido a nome de usuário ou senha vazios.|
+|126|O banco de dados solicitado pelo usuário não existe.|
+|132 – 133|Falha de AAD.|
   
 Outros estados de erro existem e significam um erro de processamento interno inesperado.  
   
