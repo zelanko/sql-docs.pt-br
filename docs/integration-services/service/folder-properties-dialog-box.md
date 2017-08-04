@@ -1,29 +1,34 @@
 ---
-title: "Caixa de di&#225;logo Propriedades da Pasta | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.isfolderprop.permissions.f1"
-  - "sql13.ssis.ssms.iscreatefolder.f1"
-  - "sql13.ssis.ssms.isfolderprop.general.f1"
+title: "Caixa de diálogo de propriedades de pasta | Microsoft Docs"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.isfolderprop.permissions.f1
+- sql13.ssis.ssms.iscreatefolder.f1
+- sql13.ssis.ssms.isfolderprop.general.f1
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 37ac39c3aa4aea9c4c2d9ed65b7aadde7a27887b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Caixa de di&#225;logo Propriedades da Pasta
+# <a name="folder-properties-dialog-box"></a>Caixa de diálogo Propriedades da Pasta
   Uma pasta contém projetos e ambientes no catálogo do **SSISDB** . Cada pasta define permissões que se aplicam aos conteúdo da pasta. Para obter mais informações sobre permissões do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [catalog.grant_permission &#40;Banco de Dados do SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md).  
   
-## Para definir descrição de pasta e permissões  
+## <a name="to-set-folder-description-and-permissions"></a>Para definir descrição de pasta e permissões  
   
 1.  Clique com o botão direito do mouse na pasta e selecione **Propriedades**.  
   
@@ -35,8 +40,9 @@ caps.handback.revision: 8
   
 5.  Clique em **OK** para aceitar as alterações e feche a caixa de diálogo **Propriedades das Pastas** .  
   
-## Consulte também  
- [Servidor do Integration Services &#40;SSIS&#41;](https://msdn.microsoft.com/library/ms141134.aspx)   
- [catalog.grant_permission &#40;Banco de Dados do SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
+## <a name="see-also"></a>Consulte também  
+ [Integration Services &#40; SSIS &#41; Servidor](https://msdn.microsoft.com/library/ms141134.aspx)   
+ [Catalog. grant_permission &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
   
   
+
