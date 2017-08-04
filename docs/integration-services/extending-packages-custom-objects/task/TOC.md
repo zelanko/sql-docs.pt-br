@@ -1,0 +1,7 @@
+# [Desenvolver uma tarefa personalizada](developing-a-custom-task.md)
+# [Criar uma tarefa personalizada](creating-a-custom-task.md)
+# [Codificar uma tarefa personalizada](coding-a-custom-task.md)
+# [Conectar-se a fontes de dados em uma tarefa personalizada](connecting-to-data-sources-in-a-custom-task.md)
+# [Gerar e definir eventos em uma tarefa personalizada](raising-and-defining-events-in-a-custom-task.md)
+# [Adicionar suporte para depuração em uma tarefa personalizada](adding-support-for-debugging-in-a-custom-task.md)
+# [Desenvolver uma interface do usuário para uma tarefa personalizada](developing-a-user-interface-for-a-custom-task.md)

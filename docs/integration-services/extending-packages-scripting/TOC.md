@@ -1,0 +1,7 @@
+# [Estender pacotes com scripts](extending-packages-with-scripting.md)
+# [Comparar a tarefa Script e o componente de Script](comparing-the-script-task-and-the-script-component.md)
+# [Comparar soluções de script e objetos personalizados](comparing-scripting-solutions-and-custom-objects.md)
+# [Referenciar outros assemblies em soluções de script](referencing-other-assemblies-in-scripting-solutions.md)
+# [Depurar um script definindo pontos de interrupção em uma tarefa Script e um componente de Script](debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)
+# [Estender o pacote com a tarefa Script](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)
+# [Estender o fluxo de dados com o componente de Script](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)
