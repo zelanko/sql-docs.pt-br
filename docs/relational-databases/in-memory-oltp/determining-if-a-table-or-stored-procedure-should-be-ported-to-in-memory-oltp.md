@@ -2,7 +2,7 @@
 title: Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP in-memory | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/01/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,11 +18,11 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: b18d5078244bf83d8820bf3f03039ac120287f8a
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP na memória
@@ -48,6 +48,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="transaction-performance-analysis-reports"></a>Relatórios de Análise de desempenho da transação  
  Você pode gerar relatórios de análise de desempenho da transação no **Pesquisador de Objetos** clicando com o botão direito no banco de dados, selecionando **Relatórios**, **Relatórios Padrão**e **Visão Geral da Análise de Desempenho da Transação**. O banco de dados deve ter uma carga de trabalho ativa, ou uma execução recente de uma carga de trabalho, para gerar um relatório de análise significativo.  
   
+### <a name="tables"></a>Tabelas
+  
  Os detalhes relatados para uma tabela consistem em três seções:  
   
 -   Seção Estatísticas de Verificação  
@@ -57,9 +59,7 @@ ms.lasthandoff: 06/22/2017
     -   Percentual de total de acessos. O percentual de verificações e pesquisas nesta tabela em relação à atividade do banco de dados inteiro. Quanto mais alto for esse percentual, mais intensa será a utilização da tabela em comparação com outras tabelas no banco de dados.  
   
     -   Estatísticas de Pesquisa/Estatísticas de Verificação do Intervalo. Essa coluna registra o número de pesquisas de ponto e de verificações de intervalo (verificações de índice e de tabela) realizadas na tabela durante a criação de perfil. A média por transação é uma estimativa.  
-  
-    -   Ganho de Interoperabilidade e Ganho Nativo. Essas colunas calculam a quantidade de benefícios de desempenho uma pesquisa de ponto ou a verificação de intervalo teria se a tabela fosse convertida em uma tabela com otimização de memória.  
-  
+    
 -   Seção de Estatísticas de Contenção  
   
      Esta seção inclui uma tabela que mostra a contenção na tabela do banco de dados. Para saber mais sobre travas e bloqueios do banco de dados, confira Arquitetura de bloqueio. As colunas são apresentadas assim:  
@@ -74,8 +74,10 @@ ms.lasthandoff: 06/22/2017
   
      Esta seção inclui uma tabela que mostra a dificuldade de converter essa tabela de banco de dados em uma tabela com otimização de memória. Uma classificação de dificuldade mais alta indica mais dificuldade para converter a tabela. Para ver detalhes da conversão dessa tabela de banco de dados, use o Orientador de otimização da memória.  
   
- As estatísticas de verificação e contenção no relatório de detalhes da tabela são coletadas e agregadas de sys.dm_db_index_operational_stats (Transact-SQL).  
-  
+As estatísticas de verificação e contenção no relatório de detalhes da tabela são coletadas e agregadas de sys.dm_db_index_operational_stats (Transact-SQL).  
+
+### <a name="stored-procedures"></a>Procedimentos armazenados
+
  Um procedimento armazenado com alta taxa de tempo de CPU para o tempo decorrido é um candidato à migração. O relatório mostra todas as referências de tabela, pois os procedimentos armazenados compilados nativamente podem fazer referência apenas a tabelas com otimização de memória, que podem ser adicionadas ao custo de migração.  
   
  Os detalhes relatados para um procedimento armazenado consistem em duas seções:  
@@ -107,7 +109,7 @@ ms.lasthandoff: 06/22/2017
   
  Você pode gerar uma lista de verificação de migração no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando o comando **Gerar Listas de Verificação de Migração do OLTP in-memory** ou usando o PowerShell.  
   
- **Para gerar uma lista de verificação de migração usando o comando de interface de usuário**  
+**Para gerar uma lista de verificação de migração usando o comando de interface de usuário**  
   
 1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse em um banco de dados diferente do banco de dados do sistema, clique em **Tarefas**e clique em **Gerar Listas de Verificação de Migração de OLTP in-memory**.  
   
@@ -127,7 +129,7 @@ ms.lasthandoff: 06/22/2017
   
  Você pode verificar a precisão dos relatórios comparando-os com os relatórios gerados pela ferramenta Orientador de otimização da memória e pela ferramenta Native Compilation Advisor. Para obter mais informações, consulte [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) e [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md).  
   
- **Para gerar uma lista de verificação de migração usando o SQL Server PowerShell**  
+**Para gerar uma lista de verificação de migração usando o SQL Server PowerShell**  
   
 1.  No **Pesquisador de Objetos**, clique em um banco de dados e clique em **Iniciar PowerShell**. Verifique se o prompt a seguir é exibido.  
   
@@ -147,7 +149,7 @@ ms.lasthandoff: 06/22/2017
   
     -   O relatório da lista de verificação de migração é gerado para todas as tabelas e procedimentos armazenados no banco de dados, e o relatório está no local especificado por folder_path.  
   
- **Para gerar uma lista de verificação de migração usando o Windows PowerShell**  
+**Para gerar uma lista de verificação de migração usando o Windows PowerShell**  
   
 1.  Inicie uma sessão do Windows PowerShell com privilégios elevados.  
   
@@ -178,3 +180,4 @@ ms.lasthandoff: 06/22/2017
  [Migrando para OLTP na memória](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+
