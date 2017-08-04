@@ -50,11 +50,11 @@ caps.latest.revision: 333
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f6ac799e828d817eb19d6a8451c8c2011b0ea82f
 ms.openlocfilehash: 85e12d330f4c779deda67a739e107309074c0ea7
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Requisitos de hardware e software para a instalação do SQL Server
@@ -63,7 +63,7 @@ Este tópico lista os requisitos mínimos de hardware e software para a instala�
 
 O [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] introduz o suporte para o [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] no Linux. Para obter informações, consulte [[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] no Linux](../../linux/sql-server-linux-overview.md). 
 
-> Este tópico aplica-se ao [!INCLUDE[ss2016](../../includes/sssql15-md.md)] e posteriores. Para conteúdo relacionado a versões anteriores do SQL Server, consulte [requisitos de Hardware e Software para instalar o SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx). 
+> Este tópico aplica-se ao [!INCLUDE[ss2016](../../includes/sssql15-md.md)] e posteriores. Para conteúdo relacionado a versões anteriores do SQL Server, consulte [Requisitos de Hardware e Software para instalar o SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx). 
   
 **Experimente:**  
   
@@ -174,7 +174,7 @@ Os seguintes requisitos se aplicam a todas as instalações:
   
 \* Não há suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
-###  <a name="TOP_Breadth"></a> Breadth Editions of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]  
+###  <a name="TOP_Breadth"></a> Breadth Editions do [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]  
  A tabela a seguir mostra os requisitos de sistema operacional para as edições de amplitude do [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]:  
   
 |Edição do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Sistema operacional com suporte|  
@@ -232,7 +232,7 @@ Os seguintes requisitos se aplicam a todas as instalações:
     > [!WARNING]  
     >  A instalação de cluster de failover do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] só dá suporte a Disco Local para a instalação de arquivos tempdb. Verifique se o caminho especificado para os dados tempdb e os arquivos de log são válidos em todos os nós de cluster. Durante o failover, se os diretórios tempdb não estiverem disponíveis no nó do destino de failover, o recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não ficará online.  
   
-##  <a name="DC_support"></a> Installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Domain Controller  
+##  <a name="DC_support"></a> Há suporte para a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um Controlador de domínio  
  Por motivos de segurança, é recomendável não instalar o [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] em um controlador de domínio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não bloqueará a instalação em um computador que seja um controlador de domínio, mas as seguintes limitações se aplicam:  
   
 -   Você não pode executar os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um controlador de domínio sob uma conta de serviço local.  
