@@ -16,11 +16,11 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: 0218298a95d1e7df242b3ca7cbae657effead719
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Manutenção &amp; solução de problemas do Conector do SQL Server
@@ -170,8 +170,7 @@ Backups de chaves podem ser restaurados em regiões do Azure, desde que eles per
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>Em Configurando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**Quais são os pontos de extremidade que o Conector do SQL Server precisa acessar?** 
- O Conector se comunica com dois pontos de extremidade que precisam ser incluídos na lista de permissões. A única porta necessária para comunicação de saída a esses outros serviços é 443 para Https:
+**Quais são os pontos de extremidade que o Conector do SQL Server precisa acessar?** O Conector se comunica com dois pontos de extremidade que precisam ser incluídos na lista de permissões. A única porta necessária para comunicação de saída a esses outros serviços é 443 para Https:
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/*:443
   
@@ -188,7 +187,7 @@ Backups de chaves podem ser restaurados em regiões do Azure, desde que eles per
   
 -   Para criar uma chave assimétrica, é exigida uma permissão `CREATE ASYMMETRIC KEY` .  
 
-**Como posso alterar meu Active Directory padrão para que o cofre de chaves seja criado na mesma assinatura e Active Directory que a entidade de serviço criada para o Conector do [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]?**
+**Como posso alterar meu Active Directory padrão para que o cofre de chaves seja criado na mesma assinatura e o Active Directory como a entidade de serviço que criei para o Conector do [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] ?**
 
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
@@ -299,7 +298,7 @@ Versão do SQL Server  |Link de instalação redistribuível
 -   Referência dos [Cmdlets do Cofre de Chaves do Azure](https://msdn.microsoft.com/library/dn868052.aspx) do PowerShell  
   
 ## <a name="see-also"></a>Consulte também  
- [Extensible Key Management Using Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+ [Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL)](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [Opção de configuração de servidor EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Setup Steps for Extensible Key Management Using the Azure Key Vault (Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure)](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   

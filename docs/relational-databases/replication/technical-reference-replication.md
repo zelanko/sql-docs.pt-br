@@ -16,20 +16,20 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29ac4abdca7f7b8b3f77091bf91862471bb1066c
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="technical-reference-replication"></a>Referência técnica (replicação)
   Esta seção contém links para documentação de referência técnica para replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- ![Ícone de pasta de arquivo pequeno](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Erros e eventos**  
+ ![Ícone da pasta de arquivos pequenos](../../analysis-services/media/filefolder-small.png "Ícone da pasta de arquivos pequenos") **Erros e eventos**  
  [Referência de erros e eventos &#40;Replicação&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
- ![Ícone de pasta de arquivo pequeno](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Referência de recurso**  
+ ![Ícone da pasta de arquivos pequenos](../../analysis-services/media/filefolder-small.png "Ícone da pasta de arquivos pequenos") **Referência do recurso**  
  [Configure Distribution Wizard](../../relational-databases/replication/configure-distribution-wizard.md)  
   
  [Assistente para Nova Assinatura &#40;Referência de interface do usuário&#41;](../../relational-databases/replication/new-subscription-wizard-ui-reference.md)  
@@ -38,14 +38,14 @@ ms.lasthandoff: 06/22/2017
   
  [Mais…](../../relational-databases/replication/properties-reference-replication.md)  
   
- ![Ícone de pasta de arquivo pequeno](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Agentes de replicação**  
+ ![Ícone da pasta de arquivos pequenos](../../analysis-services/media/filefolder-small.png "Ícone da pasta de arquivos pequenos") **Agentes de replicação**  
  [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
  [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
  [Mais…](../../relational-databases/replication/agents/replication-agents.md)  
   
- ![Ícone de pasta de arquivo pequeno](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Procedimentos armazenados de replicação**  
+ ![Ícone da pasta de arquivos pequenos](../../analysis-services/media/filefolder-small.png "Ícone da pasta de arquivos pequenos") **Procedimentos armazenados de replicação**  
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)  
   
  [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)  
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
  [Mais…](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
- ![Ícone de pasta de arquivo pequeno](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Tabelas de replicação**  
+ ![Ícone da pasta de arquivos pequenos](../../analysis-services/media/filefolder-small.png "Ícone da pasta de arquivos pequenos") **Tabelas de replicação**  
  [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)  
   
  [MSpeer_response &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mspeer-response-transact-sql.md)  
@@ -67,14 +67,14 @@ ms.lasthandoff: 06/22/2017
   
  [Mais…](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
- ![Ícone de pasta de arquivo pequeno](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Exibições de replicação**  
+ ![Ícone da pasta de arquivos pequenos](../../analysis-services/media/filefolder-small.png "Ícone da pasta de arquivos pequenos") **Exibições de replicação**  
  [syspublications &#40;Modo de Exibição do Sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)  
   
  [syssubscriptions &#40;Modo de Exibição do Sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)  
   
  [Mais…](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
- ![Ícone de pasta de arquivo pequeno](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Biblioteca de classes de replicação**  
+ ![Ícone da pasta de arquivos pequenos](../../analysis-services/media/filefolder-small.png "Ícone da pasta de arquivos pequenos") **Biblioteca de classes de replicação**  
  <xref:Microsoft.SqlServer.Replication>  
   
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  

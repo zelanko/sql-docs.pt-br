@@ -26,11 +26,11 @@ caps.latest.revision: 52
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
 ms.openlocfilehash: f4f99b8869aca02d63b5aacaa883ce501e332ea7
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="server-level-roles"></a>Funções de nível de servidor
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/23/2017
   
  As funções de servidor fixas são fornecidas para conveniência e compatibilidade com versões anteriores. Atribua mais permissões específicas sempre que possível.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece nove funções de servidor fixas. As permissões que são concedidas às funções de servidor fixas (exceto **pública**) não pode ser alterado. A partir do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], você pode criar funções de servidor definidas pelo usuário e adicionar permissões do nível de servidor às funções de servidor definidas pelo usuário.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece nove funções de servidor fixas. A permissões que são concedidas às funções de servidor fixas (exceto **público**) não podem ser alteradas. A partir do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], você pode criar funções de servidor definidas pelo usuário e adicionar permissões do nível de servidor às funções de servidor definidas pelo usuário.  
   
  Você pode adicionar entidades de segurança no nível do servidor (logons do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , contas do Windows e grupos do Windows) em funções de nível de servidor. Cada membro de uma função de servidor fixa pode adicionar outros logons a essa mesma função. Os membros de funções de servidor definidas pelo usuário não podem acrescentar outras entidades de segurança de servidor à função.  
 >  [!NOTE]
@@ -49,17 +49,17 @@ ms.lasthandoff: 06/23/2017
 ## <a name="fixed-server-level-roles"></a>Funções fixas de nível de servidor  
  A tabela a seguir mostra as funções fixas de nível de servidor e seus recursos.  
   
-|Função fixa de nível de servidor|Description|  
+|Função fixa de nível de servidor|Descrição|  
 |------------------------------|-----------------|  
-|**sysadmin**|Membros de **sysadmin** função fixa de servidor pode executar qualquer atividade no servidor.|  
-|**ServerAdmin**|Os membros da função de servidor fixa **serveradmin** podem alterar as opções de configuração de todo o servidor e fechar o servidor.|  
-|**securityadmin**|Os membros da função de servidor fixa **securityadmin** gerenciam logons e suas propriedades. Eles podem `GRANT`, `DENY`, e `REVOKE` permissões em nível de servidor. Eles também podem `GRANT`, `DENY`, e `REVOKE` banco de dados de nível de permissões se eles têm acesso a um banco de dados. Além disso, eles podem redefinir senhas para logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **IMPORTANTE:** a capacidade de conceder acesso para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e configurar permissões de usuário permite que o administrador de segurança atribua a maioria das permissões de servidor. A função **securityadmin** deve ser tratada como equivalente à função **sysadmin** .|  
-|**processadmin**|Membros de **processadmin** função de servidor fixa pode encerrar os processos que estão em execução em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|**setupadmin**|Membros de **setupadmin** função de servidor fixa pode adicionar e remover servidores vinculados usando [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruções. (**sysadmin** associação é necessária ao usar [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)|  
-|**bulkadmin**|Membros de **bulkadmin** pode executar a função de servidor fixa a `BULK INSERT` instrução.|  
-|**diskadmin**|O **diskadmin** função de servidor fixa é usada para gerenciar arquivos em disco.|  
+|**sysadmin**|Os membros da função de servidor fixa **sysadmin** podem executar qualquer atividade no servidor.|  
+|**serveradmin**|Os membros da função de servidor fixa **serveradmin** podem alterar as opções de configuração de todo o servidor e fechar o servidor.|  
+|**securityadmin**|Os membros da função de servidor fixa **securityadmin** gerenciam logons e suas propriedades. Eles podem ter as permissões de nível de servidor `GRANT`, `DENY` e `REVOKE`. Eles também podem ter permissões de nível de banco de dados `GRANT`, `DENY` e `REVOKE` se tiverem acesso ao banco de dados. Além disso, eles podem redefinir senhas para logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **IMPORTANTE:** a capacidade de conceder acesso ao [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e de configurar permissões de usuário permitem que o administrador de segurança atribua a maioria das permissões de servidor. A função **securityadmin** deve ser tratada como equivalente à função **sysadmin** .|  
+|**processadmin**|Os membros da função de servidor fixa **processadmin** podem encerrar os processos em execução em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|**setupadmin**|Os membros da função de servidor fixa **setupadmin** podem adicionar e remover servidores vinculados usando instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)]. (A associação **sysadmin** é necessária ao usar o [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)|  
+|**bulkadmin**|Os membros da função de servidor fixa **bulkadmin** podem executar a instrução `BULK INSERT`.|  
+|**diskadmin**|A função de servidor fixa **diskadmin** é usada para gerenciar arquivos em disco.|  
 |**dbcreator**|Os membros da função de servidor fixa **dbcreator** podem criar, alterar, remover e restaurar qualquer banco de dados.|  
-|**público**|Cada [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logon pertence a **pública** função de servidor. Quando permissões específicas não são concedidas ou são negadas a uma entidade de servidor em um objeto seguro, o usuário herda as permissões concedidas como públicas naquele objeto. Somente atribua permissões públicas em qualquer objeto quando você quiser que ele esteja disponível para todos os usuários. Não é possível alterar associação em public.<br /><br /> **Observação:** **pública** é implementado Diferentemente de outras funções e permissões podem ser concedidas, negadas ou revogadas das funções de servidor fixa pública.|  
+|**público**|Todo logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pertence à função de servidor **pública**. Quando permissões específicas não são concedidas ou são negadas a uma entidade de servidor em um objeto seguro, o usuário herda as permissões concedidas como públicas naquele objeto. Somente atribua permissões públicas em qualquer objeto quando você quiser que ele esteja disponível para todos os usuários. Não é possível alterar associação em public.<br /><br /> **Observação:** **pública** é implementada de maneira diferente de outras funções e permissões podem ser concedidas, negadas ou revogadas das funções de servidor fixas públicas.|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>Permissões de funções de servidor fixas  
  Cada função de servidor fixa tem certas permissões atribuídas a ela. A imagem a seguir mostra as permissões atribuídas às funções de servidor.   

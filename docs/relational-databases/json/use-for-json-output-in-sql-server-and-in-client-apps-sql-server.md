@@ -18,20 +18,20 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 9383b62ac3413b0e4dc8780413bdde09bfc04af3
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 1fa05e61c8c057141eceee65c5c1da39c5d4200e
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="use-for-json-output-in-sql-server-and-in-client-apps-sql-server"></a>Usar a saída FOR JSON no SQL Server e em aplicativos cliente (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Os exemplos a seguir demonstram algumas maneiras de usar o **FOR JSON** cláusula e o JSON de saída em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou em aplicativos cliente.  
+Os exemplos a seguir demonstram algumas maneiras de usar a cláusula **FOR JSON** ou sua saída JSON em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou em aplicativos cliente.  
   
 ## <a name="use-for-json-output-in-sql-server-variables"></a>Use a saída FOR JSON em variáveis do SQL Server  
-A saída da cláusula FOR JSON é do tipo nvarchar (max), para que possa atribuí-lo a qualquer variável, conforme mostrado no exemplo a seguir.  
+A saída da cláusula FOR JSON é do tipo NVARCHAR(MAX), portanto pode ser atribuída a qualquer variável, conforme mostrado no exemplo a seguir.  
   
 ```sql  
 DECLARE @x NVARCHAR(MAX) = (SELECT TOP 10 * FROM Sales.SalesOrderHeader FOR JSON AUTO)  
@@ -65,7 +65,7 @@ FROM Sales.SalesOrderHeader H
 ```  
   
 ## <a name="merge-parent-and-child-data-into-a-single-table"></a>Mesclar dados pai e filho em uma única tabela  
-No exemplo a seguir, cada conjunto de linhas filho é formatado como uma matriz JSON. A matriz JSON torna-se o valor da coluna de detalhes na tabela pai.  
+No exemplo a seguir, cada conjunto de linhas filho é formatado como uma matriz JSON. A matriz JSON torna-se o valor da coluna Detalhes na tabela pai.  
   
 ```sql  
 SELECT TOP 10 SalesOrderId, OrderDate,  
@@ -78,7 +78,7 @@ FROM Sales.SalesOrderHeader H
 ```  
   
 ## <a name="update-the-data-in-json-columns"></a>Atualizar os dados nas colunas JSON  
- O exemplo a seguir demonstra que você pode atualizar o valor de uma coluna que contém o texto JSON.  
+ O exemplo a seguir demonstra que você pode atualizar o valor das colunas que contêm texto JSON.  
   
 ```sql  
 UPDATE SalesOrder  
@@ -113,7 +113,7 @@ else
 ```  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Saiba mais sobre o suporte interno a JSON no SQL Server  
-Para muitas soluções específicas, casos de uso e recomendações, consulte o [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no banco de dados SQL Azure por Jovan Popovic, gerente de programas da Microsoft.
+Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure por Jovan Popovic, gerente de programas da Microsoft.
  
 ## <a name="see-also"></a>Consulte também  
  [Formatar os resultados da consulta como JSON com o FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  

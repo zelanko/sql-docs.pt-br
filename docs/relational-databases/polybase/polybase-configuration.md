@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
 ms.openlocfilehash: dd9edc9dccf29c21bb37bb0347c8a8cdb87e2b21
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-configuration"></a>Configuração do PolyBase
@@ -31,7 +31,7 @@ ms.lasthandoff: 07/12/2017
   
  É necessário configurar o SQL Server para se conectar com a versão do Hadoop ou do armazenamento de Blobs do Azure usando **sp_configure**. O PolyBase oferece suporte a duas distribuições do Hadoop: HDP (Hortonworks Data Platform) e CDH (Cloudera Distributed Hadoop).  Para obter uma lista completa de fontes de dados externas com suporte, veja [Configuração de conectividade do PolyBase &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
  
- Observação: PolyBase não dá suporte a Cloudera criptografado zonas. 
+ Observação: o PolyBase não dá suporte a zonas criptografadas do Cloudera. 
   
 ### <a name="run-spconfigure"></a>Executar sp_configure  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 07/12/2017
     -   Mecanismo PolyBase do SQL Server  
   
 ## <a name="pushdown-configuration"></a>Configuração de empilhamento  
- Para melhorar o desempenho da consulta, habilite a computação de aplicação para um cluster de Hadoop que você precisa fornecer o SQL Server alguns parâmetros de configuração específicos para seu ambiente de Hadoop:  
+ Para melhorar o desempenho da consulta, habilite a computação de aplicação para um cluster de Hadoop. Será necessário fornecer ao SQL Server alguns parâmetros de configuração específicos para seu ambiente de Hadoop:  
   
 1.  Localize o arquivo **yarn-site.xml** no caminho de instalação do SQL Server. Normalmente, o caminho é:  
   
@@ -68,11 +68,11 @@ ms.lasthandoff: 07/12/2017
 
 4. Para todas as versões do CDH 5.X, você precisará adicionar os parâmetros de configuração **mapreduce.application.classpath** ao final do **arquivo yarn.site.xml** ou ao **arquivo mapred-site.xml**. O HortonWorks inclui essas configurações nas configurações **yarn.application.classpath**.
 
-## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>Arquivos de exemplo yarn-site.XML e mapred-site.XML para CDH cluster 5. x.
+## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>Arquivos yarn-site.xml e mapred-site.xml de exemplo para cluster CDH 5.X.
 
 
 
-Yarn-site.XML com a configuração yarn e mapreduce.application.classpath.
+Configuração de yarn-site.xml com yarn.application.classpath e mapreduce.application.classpath.
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>

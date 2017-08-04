@@ -17,11 +17,11 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Melhor prática com o Repositório de Consultas
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/23/2017
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tem um conjunto de interfaces do usuário projetadas para configurar o Repositório de Consultas, bem como para consumir os dados sobre sua carga de trabalho coletados.  
 Baixe a versão mais recente do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [aqui](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
   
- Para obter uma descrição rápida sobre como usar o Repositório de Consultas em cenários de solução de problemas, confira [Repositório de Consultas @Azure Blogs](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/).  
+ Para ver uma descrição rápida sobre como usar o Repositório de Consultas em cenários de solução de problemas, consulte [Repositório de Consultas @Azure Blogs](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
 ##  <a name="Insight"></a> Usar a Análise de Desempenho de Consultas no banco de dados SQL do Azure  
  Se você executar o Repositório de Consultas em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , você poderá usar a **Análise de Desempenho de Consultas** para analisar o consumo de DTU ao longo do tempo.  
@@ -143,8 +143,8 @@ Navegue até a subpasta do Repositório de Consultas sob o nó do banco de dados
 |Consultas regredidas|Identifique as consultas para as quais as métricas de execução regrediram recentemente (isto é, mudaram para pior). <br />Use esta exibição para correlacionar os problemas de desempenho observados em seu aplicativo com as consultas reais que precisam ser corrigidas ou melhoradas.|  
 |Consumo geral de recursos|Analise o consumo de recursos total do banco de dados para qualquer uma das métricas de execução.<br />Use esta exibição para identificar padrões de recurso (diariamente em vez de cargas de trabalho noturnas) e otimizar o consumo geral do seu banco de dados.|  
 |Consultas com maior consumo de recursos|Escolha uma métrica de execução de seu interesse e identifique as consultas que tinham os valores mais extremos em um intervalo de tempo fornecido. <br />Use esse modo de exibição para concentrar sua atenção nas consultas mais relevantes, as que apresentam o maior impacto no consumo de recursos do banco de dados.|  
-|Consultas com planos forçados|Listas forçado anteriormente usando o repositório de consultas de planos. <br />Use esta exibição para acessar rapidamente todos os planos atualmente forçados.|  
-|Consultas com variação alta|Analise consultas com variação alta de execução que se refere a qualquer uma das dimensões disponíveis, como uso de duração, tempo de CPU, e/s e memória no intervalo de tempo desejado.<br />Use esta exibição para identificar consultas com desempenho amplamente variável que possam afetar a experiência do usuário em seus aplicativos.|  
+|Consultas com planos forçados|Listas de planos forçados anteriormente usando o Repositório de Consultas. <br />Use esta exibição para acessar rapidamente todos os planos forçados no momento.|  
+|Consultas com alta variação|Analise consultas com alta variação de execução relacionadas a qualquer dimensão disponível, como Duração, Tempo de CPU, E/S e Uso de memória no intervalo de tempo desejado.<br />Use esta exibição para identificar consultas com desempenho amplamente variável que possam afetar a experiência do usuário em seus aplicativos.|  
 |Consultas rastreadas|Acompanhe a execução das consultas mais importantes em tempo real. Normalmente, você usa este modo de exibição quando você tem consultas com planos forçados e você deseja certificar-se de que o desempenho de consultas é estável.|
   
 > [!TIP]  
@@ -157,13 +157,13 @@ Navegue até a subpasta do Repositório de Consultas sob o nó do banco de dados
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
 > [!NOTE]  
-> O gráfico acima apresentar formas diferentes para planos de consulta específica, com os seguintes significados para cada status possíveis:<br />  
+> O gráfico acima pode conter formas diferentes para planos de consulta específicos, com os seguintes significados para cada status possível:<br />  
 > |Forma|Significado|  
 > |-------------------|-------------|
-> |Circle|Consulta concluída (execução Regular concluída com êxito)|
-> |Square|Cancelado (cliente iniciado anulou a execução)|
-> |Triangle|(Exceção anulada execução) com falha|
-> Além disso, o tamanho da forma reflete contagem de execução de consulta dentro do intervalo de tempo especificado, o aumento de tamanho com um número maior de execuções.  
+> |Circle|Consulta Concluída (Execução Regular concluída com êxito)|
+> |Square|Cancelado (Execução iniciada pelo cliente anulada)|
+> |Triangle|Falha (Execução anulada pela exceção)|
+> Além disso, o tamanho da forma reflete a contagem de execução de consulta dentro do intervalo de tempo especificado, aumentando de tamanho com um número maior de execuções.  
 
 -   Você pode concluir que há um índice ausente na consulta, impedindo a execução ideal. Essas informações são expostas no plano de execução de consulta. Crie o índice ausente e verifique o desempenho da consulta usando o Repositório de Consultas.  
   
@@ -175,7 +175,7 @@ Navegue até a subpasta do Repositório de Consultas sob o nó do banco de dados
   
 -   Reescreva consultas problemáticas. Por exemplo, para obter todos os benefícios da parametrização de consulta ou para implementar mais lógica ideal.  
   
-##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
+##  <a name="Verify"></a> Verificar se o Repositório de Consultas está coletando dados de consulta continuamente  
  O Repositório de Consultas pode alterar o modo de operação silenciosamente. Você deve monitorar regularmente o estado do Repositório de Consultas para garantir que o repositório de consultas esteja operando, e agir para evitar falhas devido a causas previsíveis. Execute a consulta a seguir para determinar o modo de operação e exibir os parâmetros mais relevantes:  
   
 ```tsql
@@ -233,11 +233,11 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- Se o problema persistir, isso indica corrupção de dados são persistidos no disco de repositório de consultas.
+ Se o problema persistir, isso indicará corrupção dos dados do Repositório de Consultas que estão persistidos no disco.
  
- Repositório de consultas pode ser recuperado executando **sp_query_store_consistency_check** armazenado procedimento no banco de dados afetado.
+ O Repositório de Consultas poderia ser recuperado executando o procedimento armazenado **sp_query_store_consistency_check** no banco de dados afetado.
  
- Se isso não ajudar, você pode tentar limpar o repositório de consultas antes de solicitar o modo de leitura / gravação.  
+ Se isso não ajudar, você poderá tentar limpar o Repositório de Consultas antes de solicitar o modo de leitura / gravação.  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   

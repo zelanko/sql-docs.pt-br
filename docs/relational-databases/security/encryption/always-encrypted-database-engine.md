@@ -21,11 +21,11 @@ caps.latest.revision: 58
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>Sempre criptografados (mecanismo de banco de dados)
@@ -130,7 +130,7 @@ O Always Encrypted não tem suporte para as colunas com as características abai
   
 -   Colunas usando um dos seguintes tipos de dados: **xml**, **timestamp**/**rowversion**, **image**, **ntext**, **text**, **sql_variant**, **hierarchyid**, **geography**, **geometry**, alias e tipos definidos pelo usuário.  
 - Colunas FILESTREAM  
-- Colunas com a propriedade de identidade  
+- Colunas com a propriedade IDENTITY  
 - Colunas com a propriedade ROWGUIDCOL.  
 - Colunas de cadeia de caracteres (varchar, char, etc.) com agrupamentos não bin2  
 - Colunas que são chaves para índices não clusterizados usando uma coluna criptografada de forma aleatória como uma coluna de chave (colunas criptografadas de forma determinística são permitidas)  

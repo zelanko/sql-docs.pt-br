@@ -23,17 +23,17 @@ caps.latest.revision: 26
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
 ms.openlocfilehash: f9fe99ddd630b8444819c94111f6a363e96105f5
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-guide"></a>Guia do PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  O PolyBase é uma tecnologia que acessa dados fora do banco de dados por meio de linguagem t-sql.  No SQL Server 2016, ele permite executar consultas em dados externos no Hadoop ou para importar/exportar dados do armazenamento de BLOBs do Azure. As consultas são otimizadas para enviar por push o cálculo para o Hadoop. No Azure SQL Data Warehouse, você pode importar/exportar dados do armazenamento de BLOBs do Azure e do repositório Azure Data Lake.
+  O PolyBase é uma tecnologia que acessa dados fora do banco de dados por meio da linguagem t-sql.  No SQL Server 2016, ela permite executar consultas em dados externos no Hadoop ou importar/exportar dados do Armazenamento de Blobs do Azure. As consultas são otimizadas para enviar por push o cálculo para o Hadoop. No SQL Data Warehouse do Azure, é possível importar/exportar dados do Armazenamento de Blobs do Azure e do Azure Data Lake Store.
   
   
  Para usar o PolyBase, veja [Introdução ao PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
@@ -43,15 +43,15 @@ ms.lasthandoff: 06/23/2017
 ## <a name="why-use-polybase"></a>Por que usar o PolyBase?  
 Para tomar boas decisões, você deseja analisar os dados relacionais e outros dados que não são estruturados em tabelas – especialmente, no Hadoop. Essa é uma tarefa difícil, a menos que você encontre uma maneira de transferir dados entre os diferentes tipos de armazenamentos de dados. O PolyBase preenche essa lacuna, operando em dados externos ao SQL Server.  
   
-Para manter a simplicidade, PolyBase não exige a instalação de software adicional para seu ambiente de Hadoop. A consulta de dados externos usa a mesma sintaxe que a consulta de uma tabela de banco de dados. Tudo isso acontece de forma transparente. Identificadores de PolyBase todos os detalhes dos bastidores e nenhum conhecimento sobre o Hadoop é necessário pelo usuário final para consultar tabelas externas. 
+Para simplificar, o PolyBase não exige instalação de software adicional no ambiente do Hadoop. A consulta de dados externos usa a mesma sintaxe que a consulta de uma tabela de banco de dados. Tudo isso acontece de forma transparente. O PolyBase cuida de todos os detalhes nos bastidores e não é necessário que o usuário final tenha qualquer conhecimento sobre o Hadoop para consultar tabelas externas. 
   
  O PolyBase pode:  
   
 -   **Consultar dados armazenados no Hadoop do SQL Server ou do PDW.** Os usuários estão armazenando dados em sistemas escalonáveis e distribuídos mais econômicos, como o Hadoop. O PolyBase facilita a consulta dos dados com T-SQL.  
   
--   **Consulte os dados armazenados no armazenamento de BLOBs do Azure.** O armazenamento de blobs do Azure é um local conveniente para armazenar dados para uso dos serviços do Azure.  O PolyBase facilita o acesso aos dados com T-SQL.  
+-   **Consulte os dados armazenados no Armazenamento de Blobs do Azure.** O armazenamento de blobs do Azure é um local conveniente para armazenar dados para uso dos serviços do Azure.  O PolyBase facilita o acesso aos dados com T-SQL.  
   
--   **Importar dados do repositório Azure Data Lake, armazenamento de BLOBs do Azure ou Hadoop** Aproveite a velocidade dos recursos de análise e tecnologia de columnstore do Microsoft SQL, importando dados do repositório Azure Data Lake, armazenamento de BLOBs do Azure ou Hadoop para tabelas relacionais. Não é necessário ter uma ferramenta separada de ETL ou importação.  
+-   **Importar dados do Hadoop, do Armazenamento de Blobs do Azure ou do Azure Data Lake Store** Aproveite a velocidade das funcionalidades de análise e tecnologia de columnstore do Microsoft SQL importando dados do Hadoop, do Armazenamento de Blobs do Azure ou do Azure Data Lake Store para tabelas relacionais. Não é necessário ter uma ferramenta separada de ETL ou importação.  
 
 -   **Exporte dados para o Hadoop, o Armazenamento de Blobs do Azure ou o Azure Data Lake Store.** Arquive dados no Hadoop, no Armazenamento de Blobs do Azure ou no Azure Data Lake Store para obter um armazenamento econômico e mantê-los online para fácil acesso.  
   

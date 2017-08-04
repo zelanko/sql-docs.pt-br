@@ -14,11 +14,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
 ms.openlocfilehash: bf29cd596c9b52ecf88fc715a580253de5477271
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planejar a adoção de recursos de OLTP in-memory no SQL Server
@@ -61,7 +61,7 @@ Uma tabela com otimização de memória que contém 200 GB de dados requer mais 
 
 Para um banco de dados hospedado no serviço de nuvem do Banco de Dados SQL do Azure, a camada de serviço escolhida afeta a quantidade de memória ativa que o banco de dados pode consumir. Você deve se planejar para monitorar o uso de memória do banco de dados usando um alerta. Para obter detalhes, confira:
 
-- Examine os limites de armazenamento do OLTP na memória para sua [preço](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
+- Examine os limites de armazenamento de OLTP in-memory para seu [Tipo de preço](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
 - [Monitorar o armazenamento no OLTP in-memory](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Variáveis de tabela com otimização de memória
@@ -114,7 +114,7 @@ Você trabalha com arquivos .dacpac no contexto de um projeto do Visual Studio d
 
 ### <a name="a4-guidance-for-whether-in-memory-oltp-features-are-right-for-your-application"></a>A.4 Diretrizes sobre a adequação dos recursos de OLTP in-memory para seu aplicativo
 
-Para obter orientação sobre como se os recursos do OLTP na memória podem melhorar o desempenho do seu aplicativo em particular, consulte:
+Para obter diretrizes sobre se os recursos de OLTP in-memory podem melhorar o desempenho de seu aplicativo específico, consulte:
 
 - [OLTP na memória (otimização na memória)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
@@ -122,7 +122,7 @@ Para obter orientação sobre como se os recursos do OLTP na memória podem melh
 
 ## <a name="b-unsupported-features"></a>B. Recursos sem suporte
 
-Recursos que não têm suporte em determinados cenários de OLTP na memória são descritos em:
+Os recursos não compatíveis com certos cenários de OLTP in-memory são descritos em:
 
 - [Recursos do SQL Server sem suporte para OLTP na Memória](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
@@ -159,7 +159,7 @@ A dica READPAST é útil em cenários em que várias sessões estão acessando e
 - Nenhuma coluna pode ser marcada para [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md) em uma tabela com otimização de memória.
 
 
-- Um [SEQUÊNCIA](../../t-sql/statements/create-sequence-transact-sql.md) não pode ser usado com uma restrição em uma tabela com otimização de memória. Por exemplo, você não pode criar uma restrição padrão com uma cláusula NEXT VALUE FOR. Sequências podem ser usadas com instruções INSERT e UPDATE.
+- Não é possível usar [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) com uma restrição em uma tabela com otimização de memória. Por exemplo, não é possível criar uma restrição DEFAULT com uma cláusula NEXT VALUE FOR. SEQUENCEs podem ser usados com instruções INSERT e UPDATE.
 
 
 ## <a name="c-administrative-maintenance"></a>C. Manutenção administrativa

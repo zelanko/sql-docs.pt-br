@@ -14,11 +14,11 @@ caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construções do Transact-SQL sem suporte pelo OLTP na memória
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/23/2017
 |----------|----------|----------------|  
 |Recurso|ON|As tabelas com otimização de memória não podem ser colocadas em um grupo de arquivos ou esquema de partição. Remova a cláusula ON da instrução **CREATE TABLE** .<br /><br /> Todas as tabelas com otimização de memória são mapeadas para um grupo de arquivos com otimização de memória.|  
 |Tipo de dados|*Nome do tipo de dados*|Não há suporte para o tipo de dados indicado. Substitua o tipo por um dos tipos de dados com suporte. Para obter mais informações, veja [Tipos de dados com suporte no OLTP in-memory](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
-|Recurso|Colunas computadas|As colunas computadas não têm suporte para tabelas com otimização de memória. Remova as colunas computadas da instrução **CREATE TABLE** .<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há suporte para colunas computadas em índices e tabelas com otimização de memória.|  
+|Recurso|Colunas computadas|As colunas computadas não têm suporte para tabelas com otimização de memória. Remova as colunas computadas da instrução **CREATE TABLE** .<br/><br/>**Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há suporte para colunas computadas em índices e tabelas com otimização de memória.|  
 |Recurso|Replicação|Não há suporte para a replicação nas tabelas com otimização de memória.|  
 |Recurso|FILESTREAM|O armazenamento FILESTREAM não tem suporte para colunas de tabelas com otimização de memória. Remova a palavra-chave **FILESTREAM** da definição de coluna.|  
 |Recurso|SPARSE|As colunas de tabelas com otimização de memória não podem ser definidas como SPARSE. Remova a palavra-chave **SPARSE** da definição de coluna.|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/23/2017
 |Operação|Atualização de colunas de chave primária|As colunas de chave primária nas tabelas com otimização de memória e em tipos de tabela não podem ser atualizadas. Se a chave primária precisar ser atualizada, exclua a linha antiga e insira a nova linha com a chave primária atualizada.|  
 |Operação|CREATE INDEX|Os índices nas tabelas com otimização de memória devem ser especificados embutidos com a instrução **CREATE TABLE** , ou com a instrução **ALTER TABLE** .|  
 |Operação|CREATE FULLTEXT INDEX|Os índices de texto completo não têm suporte para tabelas com otimização de memória.|  
-|Operação|alteração de esquema|As tabelas com otimização de memória e os procedimentos armazenados compilados de modo nativo não dão suporte a alterações de esquema, por exemplo, **sp_rename**.<br /><br /> Tentar fazer determinadas alterações de esquema resultará no erro 12320. As operações que exigem uma alteração da versão do esquema, por exemplo, por meio da mudança do nome, não têm suporte tabelas com otimização de memória.<br /><br /> Determinadas alterações de esquema usando ALTER TABLE e ALTER PROCEDURE são permitidas.<br/><br/>**Aplica-se a:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>Começando com [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], sp_rename tem suporte.| 
+|Operação|alteração de esquema|As tabelas com otimização de memória e os procedimentos armazenados compilados de modo nativo não dão suporte a alterações de esquema, por exemplo, **sp_rename**.<br /><br /> Tentar fazer determinadas alterações de esquema resultará no erro 12320. As operações que exigem uma alteração da versão do esquema, por exemplo, por meio da mudança do nome, não têm suporte tabelas com otimização de memória.<br /><br /> Determinadas alterações de esquema usando ALTER TABLE e ALTER PROCEDURE são permitidas.<br/><br/>**Aplica-se ao:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>A partir do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], há suporte para o sp_rename.| 
 |Operação|TRUNCATE TABLE|A operação TRUNCATE não tem suporte para tabelas com otimização de memória. Para remover todas as linhas de uma tabela, exclua todas as linhas usando **DELETE FROM***table* ou remova e recrie a tabela.|  
 |Operação|ALTER AUTHORIZATION|Não há suporte para alteração do proprietário de uma tabela com otimização de memória ou procedimentos armazenados nativamente compilados existentes. Descarte e recrie a tabela ou o procedimento para alterar a propriedade.|  
 |Operação|ALTER SCHEMA|Transferindo um protegível entre esquemas.|  
@@ -141,7 +141,7 @@ ms.lasthandoff: 06/23/2017
 |Operador|OFFSET|Não há suporte para esse operador. Remova **OFFSET** do procedimento armazenado compilado de modo nativo.|  
 |Operador|INTERSECT|Não há suporte para esse operador. Remova **INTERSECT** do procedimento armazenado compilado de modo nativo. Em alguns casos, um INNER JOIN pode ser usado para obter o mesmo resultado.|  
 |Operador|EXCEPT|Não há suporte para esse operador. Remova **EXCEPT** do procedimento armazenado compilado de modo nativo.|  
-|Operador|APPLY|Não há suporte para esse operador. Remova **APPLY** do procedimento armazenado compilado de modo nativo.<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há suporte para o operador APPLY em módulos compilados nativamente.|  
+|Operador|APPLY|Não há suporte para esse operador. Remova **APPLY** do procedimento armazenado compilado de modo nativo.<br/><br/>**Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há suporte para o operador APPLY em módulos compilados nativamente.|  
 |Operador|PIVOT|Não há suporte para esse operador. Remova **PIVOT** do procedimento armazenado compilado de modo nativo.|  
 |Operador|UNPIVOT|Não há suporte para esse operador. Remova **UNPIVOT** do procedimento armazenado compilado de modo nativo.|  
 |Operador|CONTAINS|Não há suporte para esse operador. Remova **CONTAINS** do procedimento armazenado compilado de modo nativo.|  

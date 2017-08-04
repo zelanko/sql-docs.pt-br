@@ -28,19 +28,19 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: 2a55f2852f3146cd20ace9448040c1f96d328f07
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="upgrade-a-data-tier-application"></a>Atualizar um aplicativo da camada de dados
   Use o Assistente para Atualizar Aplicativo da Camada de Dados ou um script do Windows PowerShell para alterar o esquema e as propriedades de um DAC (aplicativo da camada de dados) implantado no momento para coincidir com o esquema e as propriedades definidos em uma nova versão do DAC.  
   
--   **Before you begin:**  [Choosing DAC Upgrade Options](#ChoseDACUpgOptions), [Limitations and Restrictions](#LimitationsRestrictions), [Prerequisites](#Prerequisites), [Security](#Security), [Permissions](#Permissions)  
+-   **Antes de começar:**  [Escolhendo Opções de Atualização de DAC](#ChoseDACUpgOptions), [Limitações e Restrições](#LimitationsRestrictions), [Pré-requisitos](#Prerequisites), [Segurança](#Security), [Permissões](#Permissions)  
   
--   **To upgrade a DAC, using:**  [The Upgrade Data-tier Application Wizard](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **Para atualizar um DAC, usando:**  [O Assistente para Atualizar o Aplicativo da Camada de Dados](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  Uma atualização de DAC é um processo no local que altera o esquema do banco de dados existente para corresponder ao esquema definido em uma nova versão do DAC. A nova versão do DAC é fornecida em um arquivo de pacote DAC. Para obter mais informações sobre como criar um pacote de DAC, veja [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md).  
@@ -251,7 +251,7 @@ ms.lasthandoff: 06/23/2017
 7.  Feche o fluxo de arquivos usado para ler o arquivo de pacote de DAC.  
   
 ### <a name="example-powershell"></a>Exemplo (PowerShell)  
- O exemplo a seguir atualiza um DAC nomeado MyApplication em uma instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)], usando uma nova versão DAC em um pacote de MyApplication2017.dacpac.  
+ O exemplo a seguir faz upgrade de um DAC denominado MyApplication em uma instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)], usando uma nova versão de DAC em um pacote MyApplication2017.dacpac.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

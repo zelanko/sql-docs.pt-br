@@ -19,11 +19,11 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
 ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-encryption"></a>Criptografia do SQL Server
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/23/2017
 > [!NOTE]  
 >  As informações mais recentes sobre o protocolo TSL1.2 estão disponíveis em [Suporte a TLS 1.2 para o Microsoft SQL Server](https://support.microsoft.com/kb/3135244).  
 
-Você pode usar criptografia no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para conexões, dados e procedimentos armazenados. Os tópicos a seguir contêm mais informações sobre criptografia no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+Você pode usar criptografia no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para conexões, dados e procedimentos armazenados. A tabela a seguir contém mais informações sobre criptografia no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 
  [Hierarquia de criptografia](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
  Informações sobre a hierarquia de criptografia no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -79,7 +79,7 @@ Você pode usar criptografia no [!INCLUDE[ssNoVersion](../../../includes/ssnover
  Informações sobre como usar um certificado para criptografar dados.  
   
 ## <a name="external-resources"></a>Recursos externos  
- [Microsoft TechNet: TechCenter do SQL Server: proteção e segurança do SQL Server 2012](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
+ [Microsoft TechNet: TechCenter do SQL Server: Segurança e proteção do SQL Server 2012](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  Informações atuais sobre segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte também  

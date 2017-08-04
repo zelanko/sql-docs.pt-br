@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
 ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="thread-and-task-architecture-guide"></a>guia de arquitetura de threads e tarefas
@@ -93,14 +93,14 @@ Não confie no aumento automático para aumentar o tamanho do arquivo de log de 
 
 O desempenho de operações de índice, como criar ou recompilar índices, pode ser melhorado em computadores com muitas CPUs definindo-se temporariamente o modelo de recuperação do banco de dados como bulk-logged ou simples. Essas operações de índice podem gerar atividade de log significativa, e a contenção de log pode afetar a melhor opção de DOP (grau de paralelismo) feita pelo SQL Server.
 
-Além disso, considere ajustar a **grau máximo de paralelismo (MAXDOP)** opção de configuração de servidor para essas operações. As diretrizes a seguir se baseiam em testes internos e são recomendações gerais. Você deverá testar várias configurações de MAXDOP diferentes para determinar a configuração ideal para o seu ambiente.
+Além disso, considere ajustar a configuração de servidor **MAXDOP (grau máximo de paralelismo)** para essas operações. As diretrizes a seguir se baseiam em testes internos e são recomendações gerais. Você deverá testar várias configurações de MAXDOP diferentes para determinar a configuração ideal para o seu ambiente.
 
 * Para o modelo de recuperação completa, limite o valor do grau máximo da opção de paralelismo a oito ou menos.   
 * Para o modelo bulk-logged ou simples, considere definir o valor da opção grau máximo de paralelismo como um valor maior que oito.   
 * Para servidores que tenham o NUMA configurado, o grau máximo de paralelismo não deve exceder o número de CPUs atribuídas a cada nó NUMA. Isso ocorre porque é mais provável que a consulta use memória local de 1 nó NUMA, o que pode melhorar o tempo de acesso à memória.  
-* Para servidores com hyper-threading habilitado e foram fabricados em 2009 ou anterior (antes do recurso hyper-threading foi aprimorado), o valor MAXDOP não deve exceder o número de processadores físicos, em vez de processadores lógicos.
+* Para os servidores que têm o hyperthreading habilitado e foram fabricados até 2009 (antes da melhoria do recurso de hyperthreading), o valor de MAXDOP não deve exceder o número de processadores físicos, em vez de processadores lógicos.
 
-Para obter mais informações sobre a opção grau máximo de paralelismo, consulte [configurar o grau máximo de paralelismo opção de configuração de servidor](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+Para obter mais informações sobre o grau máximo da opção de paralelismo, veja [Configurar a opção grau máximo de paralelismo da configuração de servidor](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>Configurar o número máximo de threads de trabalho
 

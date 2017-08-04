@@ -21,19 +21,19 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: b821b7c7aa037467bfe2607267faa6aed0a47859
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="validate-a-dac-package"></a>Validar um pacote de DAC
   Esta é uma prática recomendada para revisar o conteúdo de um pacote de DAC antes de implantá-lo em produção e também para validar as ações de atualização antes de atualizar um DAC existente. Isso é especialmente válido durante a implantação de pacotes que não foram desenvolvidos em sua organização.  
   
-1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
+1.  **Antes de começar:**  [Pré-requisitos](#Prerequisites)  
   
-2.  **To upgrade a DAC, using:**  [View the Contents of a DAC](#ViewDACContents), [View Database Changes](#ViewDBChanges), [View Upgrade Actions](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
+2.  **Para atualizar um DAC, usando:**  [Exibir o Conteúdo de um DAC](#ViewDACContents), [Exibir Alterações no Banco de Dados](#ViewDBChanges), [Exibir Ações de Atualização](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> Pré-requisitos  
  Recomendamos não implantar um pacote de DAC de origens desconhecidas ou não confiáveis. Como os DACs podem conter código mal-intencionado que pode executar código [!INCLUDE[tsql](../../includes/tsql-md.md)] sem finalidade ou provocar erros modificando o esquema. Antes de usar um DAC de uma origem desconhecida ou não confiável, implante-o em uma instância de teste isolada do [!INCLUDE[ssDE](../../includes/ssde-md.md)], execute [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no banco de dados. Além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  
@@ -140,7 +140,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
 ### <a name="view-upgrade-actions-example-powershell"></a>Exibir o exemplo de ações de atualização (PowerShell)  
  **Exibir o exemplo de ações de atualização (PowerShell)**  
   
- O exemplo a seguir relata as instruções de Transact-SQL que seriam executadas para atualizar um DAC denominado MyApplicaiton para o esquema definido em um arquivo MyApplication2017.dacpac.  
+ O exemplo a seguir relata as instruções Transact-SQL que seriam executadas para atualizar um DAC denominado MyApplicaiton ao esquema definido em um arquivo MyApplication2017.dacpac.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

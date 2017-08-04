@@ -15,11 +15,11 @@ caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
 ms.openlocfilehash: 5ee3aa9223ae8ab832eff23a1da1755278e86d0b
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considerações e limitações da tabela temporal
@@ -53,13 +53,13 @@ ms.lasthandoff: 06/23/2017
   
 -   As instruções**INSERT** e **UPDATE** não podem fazer referência às colunas de período SYSTEM_TIME. As tentativas de inserir valores diretamente nessas colunas serão bloqueadas.  
   
--   **TRUNCATE TABLE** is not supported while **SYSTEM_VERSIONING** is **ON**  
+-   **TRUNCATE TABLE** quando **SYSTEM_VERSIONING** é **ON**  
   
 -   Não é permitida a modificação direta dos dados em uma tabela de histórico.  
   
 -   O**ON DELETE CASCADE** e o **ON UPDATE CASCADE** não são permitidos na tabela atual. Em outras palavras, quando a tabela temporal estiver referenciando a tabela na relação de chave estrangeira (correspondente a *parent_object_id* em sys.foreign_keys), as opções CASCADE não serão permitidas. Para trabalhar com essa limitação, use a lógica do aplicativo ou gatilhos AFTER para manter a consistência de exclusão na tabela de chave primária (correspondente a  *referenced_object_id* em sys.foreign_keys). Se a tabela de chave primária for temporal e a tabela de referência não for temporal, não haverá essa limitação. 
 
-    **Observação:** essa limitação se aplica apenas ao SQL Server 2016. Opções CASCADE têm suporte no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e CTP 2.0 a partir de 2017 do SQL Server.  
+    **OBSERVAÇÃO:** essa limitação se aplica apenas ao SQL Server 2016. Opções CASCADE têm suporte no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e no SQL Server 2017 a partir do CTP 2.0.  
   
 -   Os gatilhos**INSTEAD OF** não são permitidos na tabela atual ou de histórico para evitar a anulação da lógica de DML. Os gatilhos**AFTER** são permitidos somente na tabela atual. Eles são bloqueados na tabela de histórico para evitar a anulação da lógica de DML.  
   

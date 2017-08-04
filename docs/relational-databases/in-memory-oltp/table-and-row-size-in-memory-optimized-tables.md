@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
 ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>
-
-# Tamanho da tabela e da linha em tabelas com otimização de memória
+# <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamanho da tabela e da linha em tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Antes do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o tamanho dos dados na linha de uma tabela com otimização de memória não podia ter mais de [8.060 bytes](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). No entanto, no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no Banco de Dados SQL do Azure, agora é possível criar uma tabela com otimização de memória com várias colunas grandes [por exemplo, várias colunas de varbinary(8000)] e colunas LOB [ou seja, varbinary(max), varchar(max) e nvarchar(max)] e executar operações nela usando módulos T-SQL e tipos de tabela compilados nativamente. 
@@ -44,7 +42,7 @@ ms.lasthandoff: 07/10/2017
 
   Uma tabela com otimização de memória consiste em uma coleção de linhas e índices que contêm ponteiros para linhas. A figura a seguir ilustra uma tabela com índices e linhas que, por sua vez, têm cabeçalhos e corpos de linha:  
   
- ![Tabela com otimização de memória.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
+ ![Tabela com otimização de memória.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Tabela com otimização de memória.")  
 Tabela com otimização de memória composta por índices e linhas.  
 
 ##  <a name="bkmk_TableSize"></a> Calculando o tamanho da tabela
@@ -248,9 +246,7 @@ where object_id = object_id('dbo.Orders')
 
 A postagem no blog [What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) (Novidades para OLTP in-memory do SQL Server 2016 desde o CTP3) oferece mais detalhes sobre algumas dessas complexidades.   
  
-<a id="see-also" class="xliff"></a>
-
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

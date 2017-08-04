@@ -17,21 +17,21 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 36e612b6c3759d968687d8ba35286c399de02a74
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: bf0d7645df22c9a7540650e3c7f2ca2d0db8e1cc
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="remove-square-brackets-from-json---withoutarraywrapper-option"></a>Remover os colchetes da opção do JSON – WITHOUT_ARRAY_WRAPPER
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Para remover, por padrão, os colchetes que envolvem a saída JSON da cláusula **FOR JSON** , especifique a opção **WITHOUT_ARRAY_WRAPPER** . Use esta opção com um resultado de linha única para gerar um único objeto JSON como saída em vez de uma matriz com um único elemento.
+Para remover, por padrão, os colchetes que envolvem a saída JSON da cláusula **FOR JSON** , especifique a opção **WITHOUT_ARRAY_WRAPPER** . Use essa opção para gerar um resultado de linha única para um único objeto JSON como saída em vez de uma matriz com um único elemento.
 
-Se você usar essa opção com um resultado de várias linhas, a saída resultante não é JSON válido devido os vários elementos e os colchetes ausentes.  
+Se você usar essa opção com um resultado de várias linhas, a saída resultante não será um JSON válido devido aos vários elementos e aos colchetes ausentes.  
   
-## <a name="example-single-row-result"></a>Exemplo (resultados de uma linha)  
+## <a name="example-single-row-result"></a>Exemplo (resultados de linha única)  
 O exemplo a seguir mostra a saída da cláusula **FOR JSON** com e sem a opção **WITHOUT_ARRAY_WRAPPER** .  
   
  **Consulta**  
@@ -51,7 +51,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 } 
 ```  
   
- **Resultado** (padrão) sem o **WITHOUT_ARRAY_WRAPPER** opção  
+ **Resultado** (padrão) sem a opção **WITHOUT_ARRAY_WRAPPER**  
   
 ```json  
 [{
@@ -62,7 +62,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 ```  
 
 ## <a name="example-multiple-row-result"></a>Exemplo (resultados de várias linhas)
-Veja outro exemplo de uma cláusula **FOR JSON** com e sem a opção **WITHOUT_ARRAY_WRAPPER** . Este exemplo produz um resultado de várias linhas. A saída não é JSON válido devido os vários elementos e os colchetes ausentes.
+Veja outro exemplo de uma cláusula **FOR JSON** com e sem a opção **WITHOUT_ARRAY_WRAPPER** . Este exemplo produz um resultado de várias linhas. A saída não é um JSON válido devido aos vários elementos e aos colchetes ausentes.
   
  **Consulta**  
   
@@ -91,7 +91,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 } 
 ```  
   
- **Resultado** (padrão) sem o **WITHOUT_ARRAY_WRAPPER** opção  
+ **Resultado** (padrão) sem a opção **WITHOUT_ARRAY_WRAPPER**  
   
 ```json  
 [{
@@ -110,7 +110,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 ```  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Saiba mais sobre o suporte interno a JSON no SQL Server  
-Para muitas soluções específicas, casos de uso e recomendações, consulte o [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no banco de dados SQL Azure por Jovan Popovic, gerente de programas da Microsoft.
+Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure por Jovan Popovic, gerente de programas da Microsoft.
   
 ## <a name="see-also"></a>Consulte também  
  [Cláusula FOR &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  

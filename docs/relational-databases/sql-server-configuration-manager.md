@@ -30,12 +30,12 @@ ms.translationtype: HT
 ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
 ms.openlocfilehash: 8c9ab15a35c892a31b882797271629a5ec9ef1a0
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server Configuration Manager
 
- > Para conteúdo relacionado a versões anteriores do SQL Server, consulte [SQL Server Configuration Manager](https://msdn.microsoft.com/en-US/library/ms174212(SQL.120).aspx).
+ > Para ver conteúdo relacionado a versões anteriores do SQL Server, consulte [SQL Server Configuration Manager](https://msdn.microsoft.com/en-US/library/ms174212(SQL.120).aspx).
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager é uma ferramenta para gerenciar os serviços associados ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], configurar os protocolos de rede usados pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e para gerenciar a configuração de conectividade de rede de computadores cliente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] O Configuration Manager é um snap-in do [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console que está disponível no menu Iniciar ou pode ser adicionado a qualquer outra exibição do Console de Gerenciamento do [!INCLUDE[msCoName](../includes/msconame-md.md)] . O Console de Gerenciamento do [!INCLUDE[msCoName](../includes/msconame-md.md)] (**mmc.exe**) usa o arquivo **SQLServerManager\<versão>.msc** (como **SQLServerManager13.msc** para [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) para abrir o Configuration Manager. Estes são os caminhos para as últimas quatro versões quando o Windows está instalado na unidade C.  
   
