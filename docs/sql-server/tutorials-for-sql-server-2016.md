@@ -14,19 +14,19 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: erikre
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
 ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="tutorials-for-sql-server"></a>Tutoriais do SQL Server
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]fornece tutoriais para ajudá-lo a aprender novas tecnologias e recursos. Tutoriais para versões anteriores normalmente podem ser usados com as versões mais recentes. Quando um recurso mais recente de endereço de tutoriais, eles indica a versão mínima para concluir o tutorial.  
+[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fornece tutoriais para ajudar você a aprender novas tecnologias e recursos. Tutoriais para versões anteriores normalmente podem ser usados com as versões mais recentes. Quando um tutorial aborda um recurso mais recente, ele indicará a versão mínima para concluir o tutorial.  
      
--   Se um tutorial usar um do [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] bancos de dados, você deve baixar e usar a versão mais recente do CodePlex. Para obter mais informações, consulte [bancos de dados AdventureWorks e Scripts do SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
+-   Se um tutorial usar um dos bancos de dados do [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], baixe e use a versão mais recente do CodePlex. Para obter mais informações, consulte [Bancos de dados e scripts do AdventureWorks para SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
 -   Baixe uma pasta de trabalho do [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e os relatórios do [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] a serem usados com os tutoriais do [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] : vá para [Amostras do Power View para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734).  
 - Confira a nova amostra [Wide World Importers](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) disponível no repositório GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples) . 
 

@@ -21,16 +21,16 @@ caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 31c1a78b0f951933fea5927efd7acc13a6ce6f6c
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Desinstalar uma instância existente do SQL Server (Instalação)
 
- > Para conteúdo relacionado a versões anteriores do SQL Server, consulte [desinstalar uma instância existente do SQL Server (instalação)](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx).
+ > Para conteúdo relacionado a versões anteriores do SQL Server, consulte [Desinstalar uma instância existente do SQL Server (Instalação)](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx).
 
   Este artigo descreve como desinstalar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Seguindo as etapas deste tópico, você também prepara o sistema para que seja possível reinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

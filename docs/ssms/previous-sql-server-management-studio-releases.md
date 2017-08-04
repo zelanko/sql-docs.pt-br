@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
 ms.openlocfilehash: f55f56b31aec2e094a35200e6fe08b28c93affb0
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="previous-sql-server-management-studio-releases"></a>Versões anteriores do SQL Server Management Studio
