@@ -1,31 +1,36 @@
 ---
-title: "Usar express&#245;es de propriedade em pacotes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pacotes [Integration Services], expressões"
-  - "pacotes do Integration Services, expressões"
-  - "Pacotes do SQL Server Integration Services, expressões"
-  - "propriedades dinâmicas"
-  - "atualizando propriedades de pacote"
-  - "Pacotes do SSIS, expressões"
-  - "expressões [Integration Services], expressões de propriedade"
-  - "expressões de propriedade [Integration Services]"
+title: "Usar expressões de propriedade em pacotes | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- packages [Integration Services], expressions
+- Integration Services packages, expressions
+- SQL Server Integration Services packages, expressions
+- dynamic properties
+- updating package properties
+- SSIS packages, expressions
+- expressions [Integration Services], property expressions
+- property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 caps.latest.revision: 69
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 69
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7f1a931e20a1ab0bafae0e014b174cf718e9a69f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Usar express&#245;es de propriedade em pacotes
+# <a name="use-property-expressions-in-packages"></a>Usar expressões de propriedade em pacotes
   Uma expressão de propriedade é uma expressão atribuída a uma propriedade para ativar uma atualização dinâmica da propriedade no tempo de execução. Por exemplo, uma expressão de propriedade pode atualizar a linha Para se uma tarefa Enviar Email usar a inserção de emails que já estão armazenados em uma variável.  
   
  Uma expressão pode ser adicionada a um pacote, tarefa, Loop Foreach, Loop For, Sequência, enumerador Foreach, manipulador de eventos, gerenciador de conexões de um pacote ou nível de projeto ou provedor de logs. Qualquer propriedade desses objetos que são de leitura/gravação pode implementar uma expressão de propriedade. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] também dá suporte ao uso de expressões de propriedade em algumas propriedades personalizadas de componentes de fluxo de dados. As variáveis e as restrições de precedência não oferecem suporte às expressões de propriedade, mas elas incluem propriedades especiais que permitem o uso de expressões.  
@@ -40,7 +45,7 @@ caps.handback.revision: 69
   
 -   As variáveis nas expressões podem ser atualizadas pelos scripts da tarefa Script e da execução do componente Script.  
   
- As expressões são criadas usando a linguagem da expressão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. As expressões podem usar variáveis de sistema ou definidas pelo usuário, junto com operadores, funções e conversões de tipo fornecidos pela linguagem da expressão.  
+ As expressões são criadas usando a linguagem da expressão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . As expressões podem usar variáveis de sistema ou definidas pelo usuário, junto com operadores, funções e conversões de tipo fornecidos pela linguagem da expressão.  
   
 > [!NOTE]  
 >  Os nomes das variáveis do sistema e das variáveis definidas pelo usuário diferenciam maiúsculas de minúsculas.  
@@ -51,37 +56,37 @@ caps.handback.revision: 69
   
  Uma propriedade pode usar só uma expressão de propriedade e uma expressão de propriedade só pode ser aplicada a uma propriedade. Entretanto, você pode construir várias expressões de propriedade idênticas e atribuí-las a diferentes propriedades.  
   
- Algumas propriedades são definidas usando valores de enumeradores. Ao fazer referência ao membro do enumerador em uma expressão de propriedade, é preciso usar valores numéricos equivalentes ao nome amigável do membro do enumerador. Por exemplo, se uma expressão de propriedade define a propriedade **LoggingMode**, que usa um valor da enumeração **DTSLoggingMode**, a expressão de propriedade deve usar 0, 1 ou 2 em vez dos nomes amigáveis **Enabled**, **Disabled** ou **UseParentSetting**. Para obter mais informações, consulte [Constantes enumeradas em expressões de propriedade](../../integration-services/expressions/enumerated-constants-in-property-expressions.md).  
+ Algumas propriedades são definidas usando valores de enumeradores. Ao fazer referência ao membro do enumerador em uma expressão de propriedade, é preciso usar valores numéricos equivalentes ao nome amigável do membro do enumerador. Por exemplo, se uma expressão de propriedade define a propriedade **LoggingMode** , que usa um valor da enumeração **DTSLoggingMode** , a expressão de propriedade deve usar 0, 1 ou 2 em vez dos nomes amigáveis **Enabled**, **Disabled**ou **UseParentSetting**. Para obter mais informações, consulte [Constantes enumeradas em expressões de propriedade](../../integration-services/expressions/enumerated-constants-in-property-expressions.md).  
   
-## Interface de Usuário da Expressão de Propriedade  
+## <a name="property-expression-user-interface"></a>Interface de Usuário da Expressão de Propriedade  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece um conjunto de ferramentas para construir e gerenciar as expressões de propriedade.  
   
--   A página **Expressões**, localizada nos editores personalizados para tarefas, o contêiner do Loop For e os contêineres Foreach. A página **Expressões** permite editar as expressões e exibir uma lista de expressões de propriedade que usados por uma tarefa, por um Loop Foreach ou por um Loop For.  
+-   A página **Expressões** , localizada nos editores personalizados para tarefas, o contêiner do Loop For e os contêineres Foreach. A página **Expressões** permite editar as expressões e exibir uma lista de expressões de propriedade que usados por uma tarefa, por um Loop Foreach ou por um Loop For.  
   
--   A janela **Propriedades**, para editar expressões e visualizar uma lista de expressões de propriedade usada por um pacote ou por objetos do pacote.  
+-   A janela **Propriedades** , para editar expressões e visualizar uma lista de expressões de propriedade usada por um pacote ou por objetos do pacote.  
   
--   A caixa de diálogo **Editor de Expressões de Propriedade**, para criar, atualizar e excluir expressões de propriedade.  
+-   A caixa de diálogo **Editor de Expressões de Propriedade** , para criar, atualizar e excluir expressões de propriedade.  
   
--   A caixa de diálogo **Construtor de Expressões**, para construir uma expressão usando as ferramentas gráficas. A caixa de diálogo **Construtor de Expressões** pode avaliar as expressões para sua análise sem atribuir o resultado da avaliação à propriedade.  
+-   A caixa de diálogo **Construtor de Expressões** , para construir uma expressão usando as ferramentas gráficas. A caixa de diálogo **Construtor de Expressões** pode avaliar as expressões para sua análise sem atribuir o resultado da avaliação à propriedade.  
   
  O diagrama a seguir mostra as interfaces de usuário usadas para adicionar, alterar e remover as expressões de propriedade.  
   
- ![A interface de usuário para expressões de propriedade](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "A interface de usuário para expressões de propriedade")  
+ ![A interface do usuário para expressões de propriedade](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "a interface do usuário para expressões de propriedade")  
   
- Na janela **Propriedades** e na página **Expressões**, clique no botão Procurar **(…)** no nível de coleção **Expressões** para abrir a caixa de diálogo **Editor de Expressões de Propriedade**. O Editor de Expressões de Propriedade permite mapear uma propriedade para uma expressão e digitar uma expressão de propriedade. Se desejar usar ferramentas gráficas de expressão para criar e validar uma expressão, clique no botão Procurar **(…)** no nível de expressão para abrir a caixa de diálogo **Construtor de Expressões** e crie ou modifique (e, se desejar, avalie) a expressão.  
+ Na janela **Propriedades** e na página **Expressões** , clique no botão Procurar **(…)** no nível de coleção **Expressões** para abrir a caixa de diálogo **Editor de Expressões de Propriedade** . O Editor de Expressões de Propriedade permite mapear uma propriedade para uma expressão e digitar uma expressão de propriedade. Se desejar usar ferramentas gráficas de expressão para criar e validar uma expressão, clique no botão Procurar **(…)** no nível de expressão para abrir a caixa de diálogo **Construtor de Expressões** e crie ou modifique (e, se desejar, avalie) a expressão.  
   
- Você também pode abrir a caixa de diálogo **Construtor de Expressões** na caixa de diálogo **Editor de Expressões de Propriedade**.  
+ Você também pode abrir a caixa de diálogo **Construtor de Expressões** na caixa de diálogo **Editor de Expressões de Propriedade** .  
   
-#### Trabalhar com expressões de propriedade  
+#### <a name="to-work-with-property-expressions"></a>Trabalhar com expressões de propriedade  
   
 -   [Adicionar ou alterar uma expressão de propriedade](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-### Definindo as Expressões de Propriedade dos Componentes de Fluxo de Dados  
+### <a name="setting-property-expressions-of-data-flow-components"></a>Definindo as Expressões de Propriedade dos Componentes de Fluxo de Dados  
  Se você construir um pacote no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], as propriedades dos componentes de fluxo de dados que dão suporte às expressões de propriedade estarão expostas na tarefa de Fluxo de Dados à qual pertencem. Para adicionar, alterar e remover as expressões de propriedade dos componentes de fluxo de dados, clique com o botão direito do mouse na tarefa Fluxo de Dados do fluxo de dados ao qual os componentes de fluxo pertencem e clique em **Propriedades**. A janela Propriedades lista as propriedades de componentes de fluxo de dados com as quais você pode usar as expressões de propriedade. Por exemplo, para criar ou modificar uma expressão de propriedade SamplingValue de uma transformação Amostragem de Linha em um fluxo de dados chamado SampleCustomer, clique com o botão direito do mouse na tarefa Fluxo de Dados de cada fluxo ao qual a transformação Amostragem de Linha pertence e clique em **Propriedades**. A propriedade SamplingValue é listada na janela Propriedades e tem o formato [SampleCustomer]. [SamplingValue].  
   
- Na janela Propriedades, você adiciona, altera e remove as expressões de propriedade dos componentes de fluxo de dados da mesma maneira como as expressões de propriedade de outros tipos de objetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A janela Propriedades também fornece acesso a várias caixas de diálogo e construtores usados para adicionar, alterar ou remover as expressões de propriedade para os componentes de fluxo de dados. Para obter mais informações sobre as propriedades de componentes de fluxo de dados que podem ser usadas pelas expressões de propriedade, consulte [Propriedades personalizadas de transformação](../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+ Na janela Propriedades, você adiciona, altera e remove as expressões de propriedade dos componentes de fluxo de dados da mesma maneira como as expressões de propriedade de outros tipos de objetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . A janela Propriedades também fornece acesso a várias caixas de diálogo e construtores usados para adicionar, alterar ou remover as expressões de propriedade para os componentes de fluxo de dados. Para obter mais informações sobre as propriedades de componentes de fluxo de dados que podem ser usadas pelas expressões de propriedade, consulte [Propriedades personalizadas de transformação](../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
-## Carregando Expressões de Propriedade  
+## <a name="loading-property-expressions"></a>Carregando Expressões de Propriedade  
  Você não pode especificar ou controlar quando as expressões de propriedade estarão carregadas. As expressões de propriedade são avaliadas e carregadas quando o pacote e os objetos do pacote são validados. A validação ocorre quando você salva o pacote, abre o pacote no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] e executa o pacote.  
   
  No entanto, os valores atualizados das propriedades dos objetos do pacote que usam a expressão de propriedade no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] não poderão ser visualizados enquanto você não salvar o pacote, executá-lo ou reabri-lo após adicionar as expressões de propriedade.  
@@ -102,23 +107,23 @@ caps.handback.revision: 69
 |Provedores de logs|Após carregar as configurações<br /><br /> Antes da validação<br /><br /> Antes da execução<br /><br /> Antes de abrir os logs|  
 |Enumeradores Foreach|Após carregar as configurações<br /><br /> Antes da validação<br /><br /> Antes da execução<br /><br /> Antes de cada enumeração do loop|  
   
-## Usando as expressões de propriedade no Loop Foreach  
+## <a name="using-property-expressions-in-the-foreach-loop"></a>Usando as expressões de propriedade no Loop Foreach  
  Geralmente é útil implementar uma expressão de propriedade para definir o valor da propriedade **ConnectionString** dos gerenciadores de conexões que são usados dentro do contêiner Loop Foreach. Depois que o enumerador mapeia seu valor atual para uma variável em cada iteração do loop, a expressão de propriedade pode usar o valor dessa variável para atualizar o valor da propriedade **ConnectionString** dinamicamente.  
   
  Se você quiser usar as expressões de propriedade com a propriedade **ConnectionString** dos gerenciadores de conexões Arquivo, Vários Arquivos, Arquivos Simples e Vários Arquivos Simples usados pelo Loop Foreach, será preciso considerar algumas informações. Um pacote pode ser configurado para executar vários arquivos executáveis simultaneamente definindo a propriedade **MaxConcurrentExecutables** como um valor maior que 1 ou com o valor -1. Um valor definido como -1 permite o número máximo de arquivos executáveis sendo executados simultaneamente para igualar o número de processadores mais dois. Para evitar consequências negativas da execução paralela de executáveis, o valor de **MaxConcurrentExecutables** deveria ser definido como 1. Se **MaxConcurrentExecutables** não for definido como 1, o valor da propriedade **ConnectionString** não poderá ser garantido e os resultados serão imprevisíveis.  
   
  Por exemplo, considere um Loop Foreach que enumera arquivos em uma pasta, recupera os nomes de arquivo e usa uma tarefa Executar SQL para inserir cada nome de arquivos em uma tabela. Se **MaxConcurrentExecutables** não for definido como 1, poderão ocorrer conflitos de gravação se duas instâncias da tarefa Executar SQL tentarem gravar dados na tabela ao mesmo tempo.  
   
-## Expressões de Propriedades de Exemplo  
+## <a name="sample-property-expressions"></a>Expressões de Propriedades de Exemplo  
  As expressões de exemplo a seguir mostram como usar as variáveis de sistema, operadores, funções e literais de cadeia de caracteres em expressões de propriedade.  
   
-### Expressão de Propriedade para a Propriedade LoggingMode de um Pacote  
- A expressão de propriedade a seguir pode ser usada para definir a propriedade LoggingMode de um pacote. A expressão usa as funções DAY e GETDATE para obter um valor inteiro que represente o dia em uma data. Se o dia for o 1º ou 15º, o log será ativado; caso contrário, será desativado. O valor 1 é o número inteiro equivalente do membro do enumerador LoggingMode **Enabled** e o valor 2 é o inteiro equivalente ao membro **Disabled**. Na expressão, use o valor numérico em vez do nome de membro de enumerador.  
+### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>Expressão de Propriedade para a Propriedade LoggingMode de um Pacote  
+ A expressão de propriedade a seguir pode ser usada para definir a propriedade LoggingMode de um pacote. A expressão usa as funções DAY e GETDATE para obter um valor inteiro que represente o dia em uma data. Se o dia for o 1º ou 15º, o log será ativado; caso contrário, será desativado. O valor 1 é o número inteiro equivalente do membro do enumerador LoggingMode **Enabled**e o valor 2 é o inteiro equivalente ao membro **Disabled**. Na expressão, use o valor numérico em vez do nome de membro de enumerador.  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   
-### Expressão de Propriedade para o Assunto de uma Mensagem de Email  
- A expressão de propriedade a seguir pode ser usada para definir a propriedade Subject de uma tarefa Enviar Email e indicar um assunto de email útil. As expressões usam uma combinação de literais de cadeia de caracteres, variáveis de sistema, concatenação (+) e operadores de conversão, além das funções DATEDIFF e GETDATE. As variáveis de sistema são as variáveis `PackageName` e `StartTime`.  
+### <a name="property-expression-for-the-subject-of-an-e-mail-message"></a>Expressão de Propriedade para o Assunto de uma Mensagem de Email  
+ A expressão de propriedade a seguir pode ser usada para definir a propriedade Subject de uma tarefa Enviar Email e indicar um assunto de email útil. As expressões usam uma combinação de literais de cadeia de caracteres, variáveis de sistema, concatenação (+) e operadores de conversão, além das funções DATEDIFF e GETDATE. As variáveis de sistema são as variáveis `PackageName` e `StartTime` .  
   
  `"PExpression-->Package: (" + @[System::PackageName] + ") Started:"+  (DT_WSTR, 30) @[System::StartTime] + " Duration:"  +  (DT_WSTR,10) (DATEDIFF( "ss", @[System::StartTime] , GETDATE()  )) + " seconds"`  
   
@@ -126,8 +131,8 @@ caps.handback.revision: 69
   
  PExpression-->Pacote: (EmailRowCountPP) Iniciado em:3/4/2005 11:06:18 AM Duração:9 segundos.  
   
-### Expressão de Propriedade para a Mensagem de uma Mensagem de Email  
- A expressão de propriedade a seguir pode ser usada para definir a propriedade MessageSource de uma tarefa Enviar Email. A expressão usa uma combinação de literais de cadeia de caracteres, variáveis definidas pelo usuário e o operador de concatenação (+). As variáveis definidas pelo usuário são chamadas de `nasdaqrawrows`, `nyserawrows` e `amexrawrows`. O "\n" da cadeia de caracteres indica um retorno de carro.  
+### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Expressão de Propriedade para a Mensagem de uma Mensagem de Email  
+ A expressão de propriedade a seguir pode ser usada para definir a propriedade MessageSource de uma tarefa Enviar Email. A expressão usa uma combinação de literais de cadeia de caracteres, variáveis definidas pelo usuário e o operador de concatenação (+). As variáveis definidas pelo usuário são chamadas de `nasdaqrawrows`, `nyserawrows`e `amexrawrows`. O "\n" da cadeia de caracteres indica um retorno de carro.  
   
  `"Rows Processed: "  +   "\n" +"   NASDAQ: "  +   (dt_wstr,9)@[nasdaqrawrows]   + "\n" + "   NYSE: "  +  (dt_wstr,9)@[nyserawrows]  + "\n" + "   Amex: "  +  (dt_wstr,9)@[amexrawrows]`  
   
@@ -141,14 +146,14 @@ caps.handback.revision: 69
   
  AMEX: 1102  
   
-### Expressão de Propriedade para a Propriedade Executável de uma Tarefa Executar Processo  
+### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>Expressão de Propriedade para a Propriedade Executável de uma Tarefa Executar Processo  
  A expressão de propriedade a seguir pode ser usada para definir a propriedade Executable de uma tarefa Executar Processo. A expressão usa uma combinação de literais de cadeia de caracteres, operadores e funções. Ela também usa as funções DATEPART e GETDATE, além do operador condicional.  
   
  `DATEPART("weekday", GETDATE()) ==2?"notepad.exe":"mspaint.exe"`  
   
  Se for o segundo dia da semana, a tarefa Executar Processo executará o notepad.exe; caso contrário, a tarefa executará o arquivo mspaint.exe.  
   
-### Expressão de Propriedade para a Propriedade ConnectionString de um Gerenciador de Conexões de Arquivos Simples  
+### <a name="property-expression-for-the-connectionstring-property-of-a-flat-file-connection-manager"></a>Expressão de Propriedade para a Propriedade ConnectionString de um Gerenciador de Conexões de Arquivos Simples  
  A expressão de propriedade a seguir pode ser usada para definir a propriedade ConnectionString de um gerenciador de conexões de Arquivos Simples. A expressão usa apenas uma variável definida pelo usuário, `myfilenamefull`, que contém o caminho para um arquivo de texto.  
   
  `@[User::myfilenamefull]`  
@@ -156,7 +161,7 @@ caps.handback.revision: 69
 > [!NOTE]  
 >  As expressões de propriedade para os gerenciadores de conexões só podem ser acessadas usando a janela Propriedades. Para exibir as propriedades para um gerenciador de conexões, você deve selecionar o gerenciador de conexões na área **Gerenciadores de Conexões** do Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] quando abrir a janela Propriedades ou clicar com o botão direito do mouse no gerenciador de conexões e selecionar **Propriedades**.  
   
-### Expressão de Propriedade para a Propriedade ConfigString de um Provedor de Logs do Arquivo de Texto  
+### <a name="property-expression-for-the-configstring-property-of-a-text-file-log-provider"></a>Expressão de Propriedade para a Propriedade ConfigString de um Provedor de Logs do Arquivo de Texto  
  A expressão de propriedade a seguir pode ser usada para definir a propriedade ConfigString de um provedor de logs do Arquivo de Texto. A expressão usa apenas uma variável definida pelo usuário, `varConfigString`, que contém o nome do gerenciador de conexões do Arquivo a ser usado. O gerenciador de conexões do Arquivo especifica o caminho do arquivo de texto para o qual as entradas de log serão gravadas.  
   
  `@[User::varConfigString]`  
@@ -164,13 +169,13 @@ caps.handback.revision: 69
 > [!NOTE]  
 >  As expressões de propriedade para os provedores de logs só podem ser acessadas usando a janela Propriedades. Para exibir as propriedades de um provedor de logs, selecione o provedor de logs na guia **Explorador de Pacotes** do Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ao abrir a janela Propriedades ou clique com o botão direito do mouse no provedor de logs no Explorador de Pacotes e clique em **Propriedades**.  
   
-## Recursos externos  
+## <a name="external-resources"></a>Recursos externos  
   
 -   [Marca-texto de Expressão e Configuração (Projeto CodePlex)](http://go.microsoft.com/fwlink/?LinkId=146625)  
   
 -   Artigo técnico, [Exemplos de expressões SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
   
-## Consulte também  
- [Usar variáveis em pacotes](../Topic/Use%20Variables%20in%20Packages.md)  
+## <a name="see-also"></a>Consulte também  
+ [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

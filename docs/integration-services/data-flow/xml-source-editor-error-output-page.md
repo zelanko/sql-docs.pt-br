@@ -1,31 +1,36 @@
 ---
-title: "Editor de Origem XML (p&#225;gina Sa&#237;da de Erro) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmlsourceadapter.erroroutput.f1"
-helpviewer_keywords: 
-  - "Editor de Origem XML"
+title: "Editor de origem XML (página saída de erro) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmlsourceadapter.erroroutput.f1
+helpviewer_keywords:
+- XML Source Editor
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7398b9d0eab5aace59f5bf927b78a41eee1adec2
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de Origem XML (p&#225;gina Sa&#237;da de Erro)
+# <a name="xml-source-editor-error-output-page"></a>Editor de Origem XML (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo **Editor de Origem XML** , para selecionar opções de manipulação de erros e definir propriedades em colunas de saída de erros.  
   
  Para obter mais informações sobre a origem XML, consulte [XML Source](../../integration-services/data-flow/xml-source.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Entrada/Saída**  
  Exibe o nome da fonte de dados.  
   
@@ -49,10 +54,10 @@ caps.handback.revision: 18
  **Aplicar**  
  Aplique a opção de tratamento de erros às células selecionadas.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Origem XML &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/xml-source-editor-connection-manager-page.md)   
- [Editor de Origem XML &#40;Página Colunas&#41;](../../integration-services/data-flow/xml-source-editor-columns-page.md)   
+ [Editor de origem XML &#40; Página Gerenciador de Conexão &#41;](../../integration-services/data-flow/xml-source-editor-connection-manager-page.md)   
+ [Editor de origem XML &#40; Página colunas &#41;](../../integration-services/data-flow/xml-source-editor-columns-page.md)   
  [Extrair dados por meio da origem XML](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
   
   

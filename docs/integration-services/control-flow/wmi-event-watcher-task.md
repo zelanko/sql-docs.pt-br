@@ -1,27 +1,32 @@
 ---
-title: "Tarefa Detector de Eventos do WMI | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.wmieventwatchertask.f1"
-helpviewer_keywords: 
-  - "WQL [Integration Services]"
-  - "Tarefa Detector de Eventos do WMI [Integration Services]"
+title: Tarefa do detector de eventos WMI | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmieventwatchertask.f1
+helpviewer_keywords:
+- WQL [Integration Services]
+- WMI Event Watcher task [Integration Services]
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: f91107cf76f48f60b23b7ee1f0f93352468a1422
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Tarefa Detector de Eventos do WMI
+# <a name="wmi-event-watcher-task"></a>Tarefa Detector de Eventos do WMI
   A tarefa Detector de Eventos do WMI detecta um evento de Instrumentação de Gerenciamento do Windows (WMI) por meio de uma consulta de evento WQL (Management Instrumentation Query Language, Linguagem de Consulta de Instrumentação de Gerenciamento) para especificar eventos de interesse. É possível utilizar a tarefa Detector de Eventos do WMI para as seguintes finalidades:  
   
 -   Aguardar notificação de que foram adicionados arquivos a uma pasta e depois iniciar o processamento do arquivo.  
@@ -36,7 +41,7 @@ caps.handback.revision: 53
   
 -   [Tarefa Leitor de Dados do WMI](../../integration-services/control-flow/wmi-data-reader-task.md)  
   
-## Consultas WQL  
+## <a name="wql-queries"></a>Consultas WQL  
  WQL é um dialeto do SQL com extensões para dar suporte à notificação de eventos de WMI e outros recursos específicos ao WMI. Para obter mais informações sobre WQL, consulte a documentação da Instrumentação de Gerenciamento do Windows na [Biblioteca do MSDN](http://go.microsoft.com/fwlink/?linkid=62553).  
   
 > [!NOTE]  
@@ -54,8 +59,8 @@ SELECT * from __InstanceModificationEvent WITHIN 2 WHERE TargetInstance ISA 'Win
 SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_DirectoryContainsFile" and TargetInstance.GroupComponent= "Win32_Directory.Name=\"c:\\\\WMIFileWatcher\""   
 ```  
   
-## Mensagens de registro personalizadas disponíveis na tarefa Detector de Eventos do WMI  
- A tabela a seguir relaciona as entradas de registro personalizadas da tarefa Detector de Eventos do WMI. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-logging-messages-available-on-the-wmi-event-watcher-task"></a>Mensagens de registro personalizadas disponíveis na tarefa Detector de Eventos do WMI  
+ A tabela a seguir relaciona as entradas de registro personalizadas da tarefa Detector de Eventos do WMI. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrada de log|Description|  
 |---------------|-----------------|  
@@ -63,7 +68,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 |**WMIEventWatcherTimedout**|Indica que o tempo limite da tarefa foi esgotado.|  
 |**WMIEventWatcherWatchingForWMIEvents**|Indica que a tarefa começou a executar a consulta WQL. A entrada inclui a consulta.|  
   
-## Configuração da tarefa Detector de Eventos do WMI  
+## <a name="configuration-of-the-wmi-event-watcher-task"></a>Configuração da tarefa Detector de Eventos do WMI  
  Você pode configurar a tarefa Leitura de Dados do WMI das seguintes formas:  
   
 -   Especifique o gerenciador de conexões WMI a ser usado.  
@@ -74,7 +79,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   Definir como a tarefa responde ao evento. A tarefa pode ser configurada para ter êxito ou falhar, dependendo do evento, ou a tarefa pode apenas detectar o evento novamente.  
   
--   Especificar a ação que a tarefa adotará quando a consulta WMI expirar. Você pode registrar a expiração e o status após a expiração ou levantar um evento personalizado do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], indicando que o evento WMI expirou e registrando a expiração e o status da expiração.  
+-   Especificar a ação que a tarefa adotará quando a consulta WMI expirar. Você pode registrar a expiração e o status após a expiração ou levantar um evento personalizado do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , indicando que o evento WMI expirou e registrando a expiração e o status da expiração.  
   
 -   Definir como a tarefa responde à expiração. A tarefa pode ser configurada para ter êxito ou falhar, ou a tarefa pode apenas detectar o evento novamente.  
   
@@ -98,9 +103,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configuração programática da tarefa Detector de Eventos do WMI  
+## <a name="programmatic-configuration-of-the-wmi-event-watcher-task"></a>Configuração programática da tarefa Detector de Eventos do WMI  
  Para obter mais informações sobre como definir essas propriedades programaticamente, clique no tópico a seguir:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiEventWatcherTask.WmiEventWatcherTask>  

@@ -1,26 +1,31 @@
 ---
-title: "Editor de Transforma&#231;&#227;o N&#227;o Din&#226;mica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.unpivottransformation.f1"
-helpviewer_keywords: 
-  - "Editor de Transformação Não Dinâmica"
+title: "Editor de transformação não dinâmica | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.unpivottransformation.f1
+helpviewer_keywords:
+- Unpivot Transformation Editor
 ms.assetid: 72a36ef0-4070-4f6c-9c74-0720109617dd
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 186c56005a040d9a86f4d5dcb08599e2d650cb01
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de Transforma&#231;&#227;o N&#227;o Din&#226;mica
+# <a name="unpivot-transformation-editor"></a>Editor de Transformação Não Dinâmica
   Use a caixa de diálogo **Editor de Transformação Não Dinâmica** para selecionar as colunas que serão dinamizadas em linhas, e para especificar as colunas de dados e a nova coluna de saída de valor dinâmico.  
   
 > [!NOTE]  
@@ -28,7 +33,7 @@ caps.handback.revision: 35
   
  Para saber mais sobre transformação não dinâmica, consulte [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Colunas de Entrada Disponíveis**  
  Usando as caixas de seleção, especifique as colunas que serão dinamizadas em linhas.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 35
   
  No cenário Não Dinâmico descrito em [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), o nome de coluna de chave dinâmica é **Product** e designa a nova coluna **Product** , na qual as colunas **Ham**, **Soda**, **Milk**, **Beer**e **Chips** são não dinâmicos.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformação Dinâmica](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   

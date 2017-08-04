@@ -1,27 +1,32 @@
 ---
-title: "XML Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmltask.f1"
-helpviewer_keywords: 
-  - "XML [Integration Services]"
-  - "Tarefa XML [Integration Services]"
+title: Tarefa XML | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmltask.f1
+helpviewer_keywords:
+- XML [Integration Services]
+- XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 87e8a8a282e0d6973f1fd47157c9ea33b71a8c7f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML Task
+# <a name="xml-task"></a>XML Task
   A tarefa XML é usada para se trabalhar com dados XML. Usando essa tarefa, um pacote pode recuperar documentos XML, aplicar operações aos documentos usando folhas de estilos XSLT e expressões XPath, mesclar vários documentos ou validar, comparar e salvar os documentos atualizados em arquivos e variáveis.  
   
  Essa tarefa permite que um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] modifique dinamicamente os documentos XML no tempo de execução. Você pode usar a tarefa XML para os seguintes propósitos:  
@@ -36,7 +41,7 @@ caps.handback.revision: 59
   
  Você pode incluir dados XML em um fluxo de dados por meio de uma origem XML para extrair valores de um documento XML. Para obter mais informações, consulte [XML Source](../../integration-services/data-flow/xml-source.md).  
   
-## Operações XML  
+## <a name="xml-operations"></a>Operações XML  
  A primeira ação que a tarefa XML executa é recuperar um documento XML específico. Essa ação está incorporada à tarefa XML e ocorre automaticamente. O documento XML recuperado é usado como a fonte de dados para a operação que a tarefa XML executa.  
   
  As operações XML Diff, Merge e Patch requerem dois operandos. O primeiro operando especifica o documento XML de origem. O segundo operando também especifica um documento XML, e seu conteúdo depende dos requisitos da operação. Por exemplo, a operação Diff compara dois documentos; por isso, o segundo operando especifica outro documento XML similar com o qual o documento XML de origem é comparado.  
@@ -49,7 +54,7 @@ caps.handback.revision: 59
   
  A tarefa XML pode ser configurada para salvar o resultado da operação em uma variável ou em um arquivo. Caso salve um arquivo, a tarefa XML usará um gerenciador de conexões de arquivo para acessar o arquivo. Você também pode salvar os resultados de Diffgram gerados pela operação Diff nos arquivos e variáveis.  
   
-## Operações XML predefinidas  
+## <a name="predefined-xml-operations"></a>Operações XML predefinidas  
  A tarefa XML inclui um conjunto predefinido de operações para trabalhar com documentos XML. A tabela a seguir descreve essas operações.  
   
 |Operação|Description|  
@@ -61,7 +66,7 @@ caps.handback.revision: 59
 |XPath|Executa consultas e avaliações de XPath.|  
 |XSLT|Executa transformações de XSL em documentos XML.|  
   
-### Operação Diff  
+### <a name="diff-operation"></a>Operação Diff  
  A operação Diff pode ser configurada para usar um algoritmo de comparação diferente, dependendo de a comparação precisar ser rápida ou precisa. A operação também pode ser configurada para selecionar automaticamente a comparação rápida ou precisa com base no tamanho dos documentos que são comparados.  
   
  A operação Diff inclui um conjunto de opções que personalizam a comparação XML. A tabela a seguir descreve as opções.  
@@ -77,10 +82,10 @@ caps.handback.revision: 59
 |**IgnoreProcessingInstructions**|Um valor que especifica se as instruções de processamento devem ser comparadas.|  
 |**IgnoreDTD**|Um valor que especifica se o DTD deve ser ignorado.|  
   
-### Operação de mesclagem  
+### <a name="merge-operation"></a>Operação de mesclagem  
  Quando você usa uma instrução XPath para identificar o local de mesclagem no documento original, espera-se que esta instrução retorne um único nó. Se a instrução retornar vários nós, apenas o primeiro será usado. O conteúdo do segundo documento é mesclado no primeiro nó retornado pela consulta XPath.  
   
-### Operação XPath  
+### <a name="xpath-operation"></a>Operação XPath  
  A operação XPath pode ser configurada para usar tipos diferentes de funcionalidade XPath.  
   
 -   Selecione a opção **Avaliação** para implementar as funções XPath, como sum().  
@@ -89,12 +94,12 @@ caps.handback.revision: 59
   
 -   Selecione a opção **Valores** para retornar o valor de texto interno de todos os nós selecionados, concatenados em uma cadeia de caracteres.  
   
-### Operação Validation  
+### <a name="validation-operation"></a>Operação Validation  
  A operação Validation pode ser configurada para usar um esquema de definição DTD (Document Type Definition) ou XSD (XML Schema).  
   
  Habilite **ValidationDetails** para obter saída de erros detalhada. Para obter mais informações, consulte [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md).  
   
-## Codificação de documentos XML  
+## <a name="xml-document-encoding"></a>Codificação de documentos XML  
  A tarefa XML oferece suporte a mesclagem apenas de documentos Unicode. Isso significa que a tarefa só pode ser aplicada à operação Merge em documentos que tenham a codificação Unicode. O uso de outras codificações fará a tarefa XML falhar.  
   
 > [!NOTE]  
@@ -106,37 +111,37 @@ caps.handback.revision: 59
   
  `<?xml version="1.0" encoding="UTF-8"?>`  
   
-## Mensagens de log personalizadas disponíveis na tarefa XML  
- A tabela a seguir descreve a entrada de log personalizada da tarefa XML. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-logging-messages-available-on-the-xml-task"></a>Mensagens de log personalizadas disponíveis na tarefa XML  
+ A tabela a seguir descreve a entrada de log personalizada da tarefa XML. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrada de log|Description|  
 |---------------|-----------------|  
 |**XMLOperation**|Fornece informações sobre a operação executada pela tarefa|  
   
-## Configuração da tarefa XML  
+## <a name="configuration-of-the-xml-task"></a>Configuração da tarefa XML  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor da Tarefa XML &#40;página Geral&#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
+-   [Editor da tarefa XML &#40; Página geral &#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
   
--   [Validar XML com a Tarefa XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [Validar XML com a tarefa XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
 -   [Página Expressões](../../integration-services/expressions/expressions-page.md)  
   
  Para obter mais informações sobre como definir propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configuração programática da tarefa XML  
+## <a name="programmatic-configuration-of-the-xml-task"></a>Configuração programática da tarefa XML  
  Para obter mais informações sobre como definir essas propriedades programaticamente, clique no tópico a seguir:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
-## Tarefas relacionadas  
- [Definir as propriedades de uma tarefa ou contêiner](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>Tarefas relacionadas  
+ [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
   
 -   Entrada de blog, [XML Destination Script Component](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/), em agilebi.com  
   

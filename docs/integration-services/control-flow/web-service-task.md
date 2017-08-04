@@ -1,26 +1,31 @@
 ---
-title: "Tarefa Servi&#231;os Web | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.webservicetask.f1"
-helpviewer_keywords: 
-  - "Tarefa Serviço da Web [Integration Services]"
+title: "Tarefa serviço da Web | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.webservicetask.f1
+helpviewer_keywords:
+- Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: f91aa6e47ee1255c97e8ffd2f91a5fb559a942ca
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Tarefa Servi&#231;os Web
+# <a name="web-service-task"></a>Tarefa Serviços Web
   A tarefa Serviço Web executa um método de serviço Web. Você pode usar essa tarefa para os seguintes propósitos:  
   
 -   Gravar em uma variável os valores retornados pelo método de serviço da Web. Por exemplo, você pode obter a temperatura mais alta do dia a partir do método de serviço da Web e, em seguida, pode utilizar esse valor para atualizar uma variável usada em uma expressão que define um valor de coluna.  
@@ -50,7 +55,7 @@ caps.handback.revision: 57
  Os resultados do método de serviço da Web podem ser gravados em uma variável ou em um arquivo. Use o gerenciador de conexões de arquivos para especificar o arquivo ou fornecer o nome da variável na qual os resultados serão gravados. Para obter mais informações, consulte [Gerenciador de Conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager.md) e [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Mensagens de log personalizadas disponíveis na tarefa Serviço da Web  
- A tabela a seguir relaciona as entradas de log personalizadas que podem ser habilitadas para a tarefa Serviço da Web. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../../integration-services/performance/custom-messages-for-logging.md).  
+ A tabela a seguir relaciona as entradas de log personalizadas que podem ser habilitadas para a tarefa Serviço da Web. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrada de log|Description|  
 |---------------|-----------------|  
@@ -73,7 +78,7 @@ caps.handback.revision: 57
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Configuração programática da tarefa Serviço Web  
  Para obter mais informações sobre como definir essas propriedades programaticamente, clique em um dos tópicos a seguir:  
@@ -82,3 +87,4 @@ caps.handback.revision: 57
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  Vídeo, [Como: Chamar um serviço Web usando a tarefa Serviço da Web (vídeo do SQL Server)](http://go.microsoft.com/fwlink/?LinkId=259642), no technet.microsoft.com.  
+

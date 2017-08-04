@@ -1,0 +1,78 @@
+---
+title: "Usando expressões de dimensão | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- expressions [MDX], dimensions
+- dimensions [Analysis Services], MDX
+ms.assetid: 1d40cffb-e88f-4284-93cf-d62ab4f08395
+caps.latest.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 66a955b547f5760ae1193b541fde5f3dc13d323f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
+---
+# <a name="using-dimension-expressions"></a>Usando expressões de dimensão
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  Normalmente, expressões de dimensão e hierarquia são usadas ao passar parâmetros para funções em linguagem MDX para retornar membros, conjuntos ou tuplas a partir de uma hierarquia.  
+  
+ Expressões de dimensão só podem ser expressões simples porque elas são identificadores de objetos. Consulte [expressões &#40; MDX &#41; ](../mdx/expressions-mdx.md) para obter uma explicação de expressões simples e complexas.  
+  
+## <a name="dimension-expressions"></a>Expressões de dimensão  
+ Uma expressão de dimensão contém um identificador de dimensão ou uma função de dimensão.  
+  
+ As expressões de dimensão raramente são usadas automaticamente. Em vez disso, você normalmente especifica uma hierarquia em uma dimensão. A única exceção é quando você estar trabalhando com a dimensão Medidas, que não tem nenhuma hierarquia.  
+  
+ O exemplo a seguir mostra um membro calculado que usa a expressão [Measures] junto com as funções .Members e Count() para retornar o número de membros na dimensão Medidas:  
+  
+ `WITH MEMBER [Measures].[MeasureCount] AS`  
+  
+ `COUNT([Measures].MEMBERS)`  
+  
+ `SELECT [Measures].[MeasureCount] ON 0`  
+  
+ `FROM [Adventure Works]`  
+  
+ Um identificador de dimensão aparece como *Dimension_Name* na notação BNF usada para descrever instruções MDX.  
+  
+## <a name="hierarchy-expressions"></a>Expressões de hierarquia  
+ De modo similar, uma expressão de hierarquia contém um identificador de hierarquia ou uma função de hierarquia. O exemplo a seguir mostra o uso da expressão de hierarquia [Date].[Calendar], junto com as funções .Levels e .Count, para retornar o número de níveis na hierarquia Calendário da dimensão Data:  
+  
+ `WITH MEMBER [Measures].[CalendarLevelCount] AS`  
+  
+ `[Date].[Calendar].Levels.Count`  
+  
+ `SELECT [Measures].[CalendarLevelCount] ON 0`  
+  
+ `FROM [Adventure Works]`  
+  
+ O cenário mais comum onde são usadas expressões de hierarquia está relacionado à função .Members para retornar todos os membros em uma hierarquia. O exemplo a seguir retorna todos os membros de [Date].[Calendar] no eixo de linhas:  
+  
+ `SELECT [Measures].[Internet Sales Amount] ON 0,`  
+  
+ `[Date].[Calendar].MEMBERS ON 1`  
+  
+ `FROM [Adventure Works]`  
+  
+ Um identificador de hierarquia aparece como *Dimension_Name**.* *Hierarchy_Name* na notação BNF usada para descrever instruções MDX.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Expressões &#40; MDX &#41;](../mdx/expressions-mdx.md)  
+  
+  
+

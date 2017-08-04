@@ -1,28 +1,33 @@
 ---
-title: "Origem XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmlsource.f1"
-helpviewer_keywords: 
-  - "origens [Integration Services], XML"
-  - "origem XML [Integration Services]"
-  - "Editor de Origem XML"
+title: Origem XML | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmlsource.f1
+helpviewer_keywords:
+- sources [Integration Services], XML
+- XML source [Integration Services]
+- XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 caps.latest.revision: 47
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e3af9fa8b743b01b222d1596197aa83bbb39854
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Origem XML
+# <a name="xml-source"></a>Origem XML
   A origem XML lê um arquivo de dados XML e preenche as colunas na saída de origem com os dados.  
   
  Os dados de arquivos XML frequentemente incluem relações hierárquicas. Por exemplo, um arquivo de dados XML pode representar catálogos e itens em catálogos. Antes de os dados serem inseridos no fluxo de dados, é necessário determinar a relação dos elementos no arquivo de dados XML e gerar uma saída para cada elemento do arquivo.  
@@ -82,7 +87,7 @@ caps.handback.revision: 47
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](../Topic/Common%20Properties.md)  
+-   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de origem XML](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -92,3 +97,4 @@ caps.handback.revision: 47
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
  [Extrair dados por meio da origem XML](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+

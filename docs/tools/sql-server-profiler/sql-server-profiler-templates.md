@@ -1,29 +1,34 @@
 ---
-title: "Modelos do SQL Server Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modelos padrão do SQL Server Profiler"
-  - "modelos [SQL Server], SQL Server Profiler"
-  - "Profiler [SQL Server Profiler], modelos"
-  - "modelos de rastreamento [SQL Server]"
-  - "modelos predefinidos [SQL Server Profiler]"
-  - "SQL Server Profiler, modelos"
+title: Modelos do SQL Server Profiler | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default SQL Server Profiler templates
+- templates [SQL Server], SQL Server Profiler
+- Profiler [SQL Server Profiler], templates
+- trace templates [SQL Server]
+- predefined templates [SQL Server Profiler]
+- SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e99e38422da3d3d6acafd3e6a1cbbfa49bd3741d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Modelos do SQL Server Profiler
+# <a name="sql-server-profiler-templates"></a>Modelos do SQL Server Profiler
   Você pode usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para criar modelos que definem as classes de evento e colunas de dados a serem incluídas em rastreamentos. Depois de definir e salvar o modelo, você pode executar um rastreamento que registre os dados de cada classe de evento selecionada. É possível usar um modelo em muitos rastreamentos; o modelo propriamente dito não é executado.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] oferece modelos de rastreamento predefinidos que permitem configurar facilmente as classes de evento de que, muito provavelmente, você necessitará para rastreamentos específicos. O modelo Standard, por exemplo, ajuda a criar um rastreamento genérico para registrar logons, logoffs, lotes concluídos e informações de conexão. Esse modelo pode ser usado para executar rastreamentos sem modificação ou como ponto de partida para outros modelos com configurações de evento diferentes.  
@@ -33,7 +38,7 @@ caps.handback.revision: 35
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pode rastrear diversos tipos de servidor. Por exemplo, você pode rastrear [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Porém, as classes de evento que podem ser incluídas não são as mesmas para cada tipo de servidor. Por isso, o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] mantém modelos diferentes para servidores diferentes, disponibilizando o modelo específico correspondente ao tipo de servidor selecionado.  
   
-## Modelos predefinidos  
+## <a name="predefined-templates"></a>Modelos predefinidos  
  Além do modelo Standard (padrão), o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] contém vários modelos predefinidos para monitorar certos tipos de evento. A tabela a seguir lista os modelos predefinidos, suas finalidades e as classes de evento para as quais capturam informações.  
   
 |Nome do modelo|Finalidade do modelo|Classes de evento|  
@@ -50,18 +55,18 @@ caps.handback.revision: 35
   
  Para obter mais informações sobre classes de evento, veja [Referência de classes de evento do SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
-## Modelo padrão  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] designa automaticamente o modelo **Standard** como padrão aplicado a novos rastreamentos. Porém, você pode alterar o modelo padrão para qualquer outro modelo predefinido ou definido pelo usuário. Para alterar o modelo padrão, marque a caixa de seleção **Usar como modelo padrão para o tipo de servidor selecionado** ao criar ou editar um modelo, usando a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamento**.  
+## <a name="default-template"></a>Modelo padrão  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] designa automaticamente o modelo **Standard** como padrão aplicado a novos rastreamentos. Porém, você pode alterar o modelo padrão para qualquer outro modelo predefinido ou definido pelo usuário. Para alterar o modelo padrão, marque a caixa de seleção **Usar como modelo padrão para o tipo de servidor selecionado** ao criar ou editar um modelo, usando a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamento** .  
   
- Para navegar até a caixa de diálogo **Propriedades do Modelo de Rastreamento**, no menu **Arquivo** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], selecione **Modelos** e clique em **Novo Modelo** ou **Editar Modelo**.  
+ Para navegar até a caixa de diálogo **Propriedades do Modelo de Rastreamento** , no menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu, choose **Templates**, and then click **New Template** or **Edit Template**.  
   
 > [!NOTE]  
 >  O modelo padrão é específico a cada tipo de servidor. Alterar o padrão para um tipo de servidor não influi no modelo padrão de qualquer outro tipo de servidor. Para obter mais informações sobre como definir um modelo padrão para um servidor específico, veja [Definir padrões de definição de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md).  
   
-## Consulte também  
- [Criar um modelo de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Modificar um modelo de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
- [Exportar um modelo de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
+## <a name="see-also"></a>Consulte também  
+ [Criar um modelo de rastreamento &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Modificar um modelo de rastreamento &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
+ [Exportar um modelo de rastreamento &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
  [Importar um modelo de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
   

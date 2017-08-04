@@ -1,27 +1,32 @@
 ---
-title: "Tarefa Leitor de Dados do WMI | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.wmidatareadertask.f1"
-helpviewer_keywords: 
-  - "WQL [Integration Services]"
-  - "Tarefa Leitor de Dados do WMI [Integration Services]"
+title: Tarefa de leitor de dados do WMI | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmidatareadertask.f1
+helpviewer_keywords:
+- WQL [Integration Services]
+- WMI Data Reader task [Integration Services]
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 9edd5e03a79fde1aa580a47c3df294e59957e896
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Tarefa Leitor de Dados do WMI
+# <a name="wmi-data-reader-task"></a>Tarefa Leitor de Dados do WMI
   A tarefa Leitor de Dados do WMI executa consultas por meio da linguagem de consulta WMI (Instrumentação de Gerenciamento do Windows) que retorna informações de WMI sobre um sistema de computador. Pode-se utilizar o Leitor de Dados WMI para as seguintes finalidades:  
   
 -   Consultar os logs de eventos do Windows em um computador local ou remoto e gravar as informações em um arquivo ou variável.  
@@ -46,7 +51,7 @@ caps.handback.revision: 49
   
  A tarefa Leitor de Dados do WMI usa um gerenciador de conexões WMI para se conectar ao servidor do qual lê informações de WMI. Para obter mais informações, consulte [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md).  
   
-## Consulta WQL  
+## <a name="wql-query"></a>Consulta WQL  
  WQL é um dialeto do SQL com extensões para dar suporte à notificação de eventos de WMI e outros recursos específicos ao WMI. Para obter mais informações sobre WQL, consulte a documentação da Instrumentação de Gerenciamento do Windows na [Biblioteca do MSDN](http://go.microsoft.com/fwlink/?linkid=7022).  
   
 > [!NOTE]  
@@ -70,15 +75,15 @@ SELECT FreeSpace, DeviceId, Size, SystemName, Description FROM Win32_LlogicalDis
 Select * FROM Win32_QuickFixEngineering  
 ```  
   
-## Mensagens de log personalizadas disponíveis na tarefa Leitor de Dados do WMI  
- A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Leitor de Dados do WMI. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-logging-messages-available-on-the-wmi-data-reader-task"></a>Mensagens de log personalizadas disponíveis na tarefa Leitor de Dados do WMI  
+ A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Leitor de Dados do WMI. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrada de log|Description|  
 |---------------|-----------------|  
 |**WMIDataReaderGettingWMIData**|Indica que a tarefa começou a ser ler os dados do WMI.|  
 |**WMIDataReaderOperation**|Informa a consulta WQL executada pela tarefa.|  
   
-## Configuração da tarefa Leitor de Dados do WMI  
+## <a name="configuration-of-the-wmi-data-reader-task"></a>Configuração da tarefa Leitor de Dados do WMI  
  Você pode definir propriedades programaticamente ou por meio do Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Para obter informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
@@ -91,12 +96,12 @@ Select * FROM Win32_QuickFixEngineering
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiDataReaderTask.WmiDataReaderTask>  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
   
