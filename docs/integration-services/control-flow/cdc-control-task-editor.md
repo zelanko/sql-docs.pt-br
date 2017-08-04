@@ -1,24 +1,29 @@
 ---
-title: "CDC Control Task Editor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.cdccontroltask.config.f1"
+title: Editor da tarefa controle CDC | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9bcf6e5d0186e4b74c4ea8c3719193d1610c9bba
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC Control Task Editor
+# <a name="cdc-control-task-editor"></a>CDC Control Task Editor
   Use a caixa de diálogo **Editor da tarefa Controle CDC** para configurar a tarefa Controle CDC. A configuração da tarefa Controle CDC inclui definir uma conexão para o banco de dados CDC, a operação de tarefa CDC e as informações de gerenciamento de estado.  
   
  Para obter mais informações sobre a tarefa Controle CDC, consulte [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
@@ -27,9 +32,9 @@ caps.handback.revision: 10
   
 1.  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], abra o pacote do [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] que contém a tarefa Controle CDC.  
   
-2.  Na guia **Fluxo de Controle**, clique duas vezes na tarefa Controle CDC.  
+2.  Na guia **Fluxo de Controle** , clique duas vezes na tarefa Controle CDC.  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Gerenciador de conexões ADO.NET do banco de dados SQL Server CDC**  
  Selecione na lista um gerenciador de conexões existente ou clique em **Novo** para criar uma nova conexão. A conexão deve ser a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está habilitado para CDC e onde a tabela de alteração selecionada está localizada.  
   
@@ -38,17 +43,17 @@ caps.handback.revision: 10
   
 -   **Marcar início da carga inicial**: esta operação é usada ao executar uma carga inicial de um banco de dados ativo sem um instantâneo. Ela é invocada no começo de um pacote da carga inicial para registrar o LSN atual no banco de dados de origem antes de o pacote da carga inicial começar a ler as tabelas de origem. Isto exige uma conexão com o banco de dados de origem.  
   
-     Se você selecionar **Marcar início da carga inicial** ao trabalhar no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (ou seja, não Oracle), o usuário especificado no gerenciador de conexões deverá ser **db_owner** ou **sysadmin**.  
+     Se você selecionar **Marcar início da carga inicial** ao trabalhar no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (ou seja, não Oracle), o usuário especificado no gerenciador de conexões deverá ser  **db_owner** ou **sysadmin**.  
   
 -   **Marcar fim da carga inicial**: esta operação é usada ao executar uma carga inicial de um banco de dados ativo sem um instantâneo. Ela é invocada no início de um pacote da carga inicial para registrar o LSN atual no banco de dados de origem depois de o pacote da carga inicial terminar de ler as tabelas de origem. Este LSN é determinado pela gravação da hora atual quando esta operação ocorreu e, em seguida, consultando a tabela de mapeamento `cdc.lsn_time_`no banco de dados CDC, procurando uma alteração que ocorreu depois daquele momento  
   
-     Se você selecionar **Marcar fim da carga inicial** ao trabalhar no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (ou seja, não Oracle), o usuário especificado no gerenciador de conexões deverá ser **db_owner** ou **sysadmin**.  
+     Se você selecionar **Marcar fim da carga inicial** ao trabalhar no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (ou seja, não Oracle), o usuário especificado no gerenciador de conexões deverá ser  **db_owner** ou **sysadmin**.  
   
 -   **Marcar início do CDC**: esta operação é usada quando a carga inicial é feita de um banco de dados de instantâneo ou de um banco de dados novo. Ele é invocado em qualquer ponto dentro do pacote de carga inicial. A operação aceita um parâmetro que pode ser um LSN instantâneo, um nome de um banco de dados de instantâneo (do qual o LSN instantâneo será derivado automaticamente) ou pode ser deixado vazio e, nesse caso, o LSN do banco de dados atual será usado como o LSN inicial para o pacote de processamento de alteração.  
   
      Esta operação é usada em vez das operações Marcar início/fim da carga inicial.  
   
-     Se você selecionar **Marcar início de CDC** ao trabalhar no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (ou seja, não Oracle), o usuário especificado no gerenciador de conexões deverá ser **db_owner** ou **sysadmin**.  
+     Se você selecionar **Marcar início de CDC** ao trabalhar no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (ou seja, não Oracle), o usuário especificado no gerenciador de conexões deverá ser  **db_owner** ou **sysadmin**.  
   
 -   **Obter intervalo de processamento**: esta operação é usada em um pacote de processamento de alteração antes de invocar o fluxo de dados que usa o fluxo de dados de Origem de CDC. Ele estabelece um intervalo de LSNs que o fluxo de dados de origem de CDC lê quando é invocado. O intervalo é armazenado em uma variável de pacote SSIS que é usada pela Origem de CDC durante o processamento de fluxo de dados.  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 10
  **Nome do estado**  
  Digite um nome para associar com o estado de CDC persistente. A carga cheia e os pacotes CDC que funcionam com o mesmo contexto de CDC especificará um nome de estado comum. Esse nome é usado para verificar a linha de estado na tabela de estado  
   
-## Consulte também  
- [Propriedades personalizadas da tarefa Controle de CDC](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
+## <a name="see-also"></a>Consulte também  
+ [Propriedades personalizadas da tarefa controle CDC](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
   
   

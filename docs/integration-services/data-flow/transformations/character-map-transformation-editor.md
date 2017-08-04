@@ -1,31 +1,36 @@
 ---
-title: "Editor de Transforma&#231;&#227;o Mapas de Caracteres | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.charactermaptransformation.f1"
-helpviewer_keywords: 
-  - "Editor de Transformação Mapas de Caracteres"
+title: "Editor de transformação mapas de caracteres | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.charactermaptransformation.f1
+helpviewer_keywords:
+- Character Map Transformation Editor
 ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ddabff7405401657b44a4cbc9205cf6092949d7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de Transforma&#231;&#227;o Mapas de Caracteres
+# <a name="character-map-transformation-editor"></a>Editor de Transformação Mapas de Caracteres
   Use a caixa de diálogo **Editor de Transformação Mapas de Caracteres** para selecionar as funções de cadeia de caracteres a serem aplicadas aos dados de coluna, bem como para especificar se o mapeamento é uma alteração in-loco ou se deve ser adicionado como uma nova coluna.  
   
  Para saber mais sobre transformação Mapa de Caracteres, consulte [Character Map Transformation](../../../integration-services/data-flow/transformations/character-map-transformation.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Colunas de Entrada Disponíveis**  
  Use as caixas de seleção para selecionar as colunas a transformar, utilizando funções de cadeia de caracteres. Suas seleções aparecem na tabela abaixo.  
   
@@ -60,9 +65,9 @@ caps.handback.revision: 26
  Digite um alias para cada coluna de saída. O padrão é **Copiar de** seguido do nome da coluna de entrada; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
   
  **Configurar Saída de Erro**  
- Use a caixa de diálogo [Configurar Saída de Erro](../Topic/Configure%20Error%20Output.md) para especificar opções de tratamento de erro para esta transformação.  
+ Use a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar opções de tratamento de erro para esta transformação.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)  
   
   

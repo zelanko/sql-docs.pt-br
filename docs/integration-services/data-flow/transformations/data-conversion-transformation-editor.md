@@ -1,26 +1,31 @@
 ---
-title: "Editor de Transforma&#231;&#227;o Convers&#227;o de Dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataconversiontransformation.f1"
-helpviewer_keywords: 
-  - "Editor de Transformação Conversão de Dados"
+title: "Editor de transformação de conversão de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataconversiontransformation.f1
+helpviewer_keywords:
+- Data Conversion Transformation Editor
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 958e51a5e8b480f2c6c9f0e4b02dc1666140f090
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de Transforma&#231;&#227;o Convers&#227;o de Dados
+# <a name="data-conversion-transformation-editor"></a>Editor de Transformação Conversão de Dados
   Use a caixa de diálogo **Editor de Transformação Conversão de Dados** para selecionar as colunas a converter, selecionar o tipo de dados ao qual converter a coluna e definir atributos de conversão.  
   
 > [!NOTE]  
@@ -28,7 +33,7 @@ caps.handback.revision: 28
   
  Para saber mais sobre a transformação Conversão de Dados, consulte [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Colunas de Entrada Disponíveis**  
  Selecione as colunas a converter, utilizando as caixas de seleção. as seleções adicionam colunas de entrada à tabela abaixo.  
   
@@ -54,10 +59,10 @@ caps.handback.revision: 28
  Selecione a página de código apropriada para colunas de tipo DT_STR.  
   
  **Configurar saída de erro**  
- Especifique como tratar erros de nível de linha usando a caixa de diálogo [Configurar Saída de Erro](../Topic/Configure%20Error%20Output.md).  
+ Especifique como tratar erros de nível de linha usando a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Converter dados em um tipo de dados diferente por meio da transformação Conversão de Dados](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
+ [Converter dados em outro tipo de dados usando a transformação de conversão de dados](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
   
   

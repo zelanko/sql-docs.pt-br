@@ -1,48 +1,55 @@
 ---
-title: "Vis&#227;o geral do MDS (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "O que são dados mestres?"
-helpviewer_keywords: 
-  - "Master Data Services, visão geral"
-  - "Master Data Services"
+title: "Visão geral do Master Data Services (MDS) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- "O que são dados mestres?"
+helpviewer_keywords:
+- Master Data Services, overview
+- Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 caps.latest.revision: 28
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 4b1f65db7d29cfd0e081694b208f1add5cae21eb
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Vis&#227;o geral do MDS (Master Data Services)
+# <a name="master-data-services-overview-mds"></a>Visão geral do MDS (Master Data Services)
   Este tópico descreve os principais recursos de organização e gerenciamento de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
- >  Para ver uma descrição da arquitetura do [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consulte o artigo [Master Data Services – The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) (Master Data Services – Noções básicas) em simple-talk.com. Para obter informações sobre os novos recursos do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consulte [Novidades do MDS &#40;Master Data Services&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
+ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]permite que você gerencie um conjunto principal de dados da sua organização. Você pode organizar os dados em modelos, criar regras para atualizar os dados e controlar o que atualiza os dados. Com o Excel, você pode compartilhar o conjunto de dados mestre com outras pessoas em sua organização. 
+  
+ >  Para ver uma descrição da arquitetura do [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] , consulte o artigo [Master Data Services – The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) (Master Data Services – Noções básicas) em simple-talk.com. Para obter informações sobre os novos recursos do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consulte [Novidades do MDS &#40;Master Data Services&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
    **Para obter instruções de como instalar o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], configurar o Site e o banco de dados e implantar os modelos de exemplo, consulte** [Instalação e configuração do Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
   
  No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], o modelo é o contêiner de nível mais alto na estrutura de dados mestres. Você cria um modelo para gerenciar grupos de dados semelhantes, por exemplo, para gerenciar dados de produtos online. Um modelo contém uma ou mais entidades, que por sua vez contêm membros que são os registros de dados. Uma entidade é semelhante a uma tabela.  
   
  Por exemplo, o seu modelo de produto online pode conter entidades como produto, cor e estilo. A entidade de cor pode conter membros para as cores vermelho, prata e preto.  
   
- ![Color entity](../master-data-services/media/mds-productmodel-colorentity-composite.png "Color entity")  
+ ![Entidade de cor](../master-data-services/media/mds-productmodel-colorentity-composite.png "entidade de cor")  
   
  Modelos também contêm atributos que são definidos em entidades. Um atributo contém valores que ajudam a descrever os membros da entidade. Há atributos de forma livre e atributos baseados em domínio.  Um atributo baseado em domínio contém valores que são preenchidos por membros de uma entidade e podem ser usados como valores de atributo para outras entidades.  
   
- Por exemplo, a entidade de produto poderia ter atributos de forma livre para custo e peso. Além disso, há um atributo baseado em domínio para a cor ![Number 1](../master-data-services/media/mds-number1.png "Number 1") que contém valores populados pelos membros da entidade de cor. Essa lista mestra de cores é usada como valores de atributo para a entidade Produto ![Number 2](../master-data-services/media/mds-number2.png "Number 2").  
+ Por exemplo, a entidade de produto poderia ter atributos de forma livre para custo e peso. E, há um atributo baseado em domínio para a cor ![número 1](../master-data-services/media/mds-number1.png "número 1") que contém valores que são preenchidos pelos membros de entidade de cor. Essa lista mestra de cores é usada como valores de atributo para a entidade Product ![número 2](../master-data-services/media/mds-number2.png "número 2").  
   
- ![Domain-based attribute for color](../master-data-services/media/mds-productentity-color-domainattribute.png "Domain-based attribute for color")  
+ ![O atributo baseado em domínio para a cor](../master-data-services/media/mds-productentity-color-domainattribute.png "atributo baseado em domínio para a cor")  
   
- As hierarquias derivadas são provenientes das relações entre entidades em um modelo. Estas são relações de atributo baseado em domínio. No modelo de produto, por exemplo, você pode ter uma hierarquia derivada de cor ![Number 1](../master-data-services/media/mds-number1.png "Number 1") proveniente da relação entre as entidades de cor ![Number 2](../master-data-services/media/mds-number2.png "Number 2") e produto ![Number 3](../master-data-services/media/mds-number3.png "Number 3").  
+ As hierarquias derivadas são provenientes das relações entre entidades em um modelo. Estas são relações de atributo baseado em domínio. No modelo de produto, por exemplo, você pode ter uma hierarquia derivada de cor ![número 1](../master-data-services/media/mds-number1.png "número 1") que proveniente da relação entre a cor ![número 2](../master-data-services/media/mds-number2.png "número 2") e produto ![número 3](../master-data-services/media/mds-number3.png "número 3") entidades.  
   
- ![Color derived hierarchy](../master-data-services/media/mds-derivedhierarchy.png "Color derived hierarchy")  
+ ![Hierarquia derivada de cor](../master-data-services/media/mds-derivedhierarchy.png "cor de hierarquia derivada")  
   
  Depois de definir uma estrutura básica para seus dados, você poderá iniciar a adição de registros de dados (membros) usando o recurso de importação. Você carrega dados em tabelas de preparo, valida os dados usando regras de negócio e carrega os dados nas tabelas MDS.  Você também pode usar as regras de negócio para definir valores de atributo.  
   
@@ -64,7 +71,7 @@ caps.handback.revision: 27
 |Criar hierarquias derivadas|Hierarquias derivadas podem ser atualizadas conforme suas necessidades comerciais mudarem, garantindo que todos os membros sejam levados em conta no nível apropriado.|[Hierarquias derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)<br /><br /> [Criar uma hierarquia derivada &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |Se necessário, crie hierarquias explícitas|Se quiser criar hierarquias que não sejam fundamentadas em nível e incluam membros de uma única entidade, você pode criar hierarquias explícitas.|[Hierarquias explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)<br /><br /> [Criar uma hierarquia explícita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
 |Se necessário, crie coleções|Se quiser exibir diferentes agrupamentos de membros para fins de relatório ou análise e não precisar de uma hierarquia completa, crie uma coleção.<br /><br /> <br /><br /> Observação: os usuários podem criar coleções no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] se tiverem no mínimo uma permissão de **Atualização** no objeto modelo de coleção e acesso à área funcional do **Gerenciador** .|[Coleções &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)<br /><br /> [Criar uma coleção &#40;Master Data Services&#41;](../master-data-services/create-a-collection-master-data-services.md)|  
-|Criar metadados definidos pelo usuário|Para descrever seus objetos de modelo, adicione metadados definidos pelo usuário ao seu modelo. Os metadados podem incluir o proprietário de um objeto ou a origem dos dados.|[Metadados &#40;Master Data Services&#41;](../Topic/Metadata%20\(Master%20Data%20Services\).md)|  
+|Criar metadados definidos pelo usuário|Para descrever seus objetos de modelo, adicione metadados definidos pelo usuário ao seu modelo. Os metadados podem incluir o proprietário de um objeto ou a origem dos dados.||  
 |Bloquear uma versão do seu modelo e atribuir um sinalizador de versão|Bloqueie uma versão do seu modelo para impedir alterações nos membros, exceto por administradores. Quando os dados da versão tiverem sido validados com êxito de acordo com as regras de negócio, você poderá confirmar a versão, o que impedirá alterações nos membros por qualquer usuário.<br /><br /> Crie e atribua um sinalizador de versão ao modelo. Os sinalizadores ajudam os usuários e sistemas de assinatura a identificar qual versão de um modelo usar.|[Versões &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)<br /><br /> [Bloquear uma versão &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)<br /><br /> [Criar um sinalizador de versão &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
 |Criar exibições de assinatura|Para que seus sistemas de assinatura utilizem seus dados mestre, crie exibições de assinatura, que geram exibições padrão no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Visão geral: Exportando dados &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)<br /><br /> [Criar uma exibição de assinatura para exportar dados &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)|  
 |Configurar permissões de usuário e de grupo|Não é possível copiar permissões de usuário e de grupo de um ambiente de teste para um ambiente de produção. Entretanto, o ambiente de teste pode ser usado para determinar a segurança a ser usada subsequentemente na produção.|[Segurança &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)<br /><br /> [Adicionar um grupo &#40;Master Data Services&#41;](../master-data-services/add-a-group-master-data-services.md)<br /><br /> [Adicionar um usuário &#40;Master Data Services&#41;](../master-data-services/add-a-user-master-data-services.md)|  
@@ -72,3 +79,5 @@ caps.handback.revision: 27
  Quando estiver pronto, você poderá implantar o seu modelo, com ou sem os respectivos dados, no ambiente de produção. Para obter mais informações, consulte [Implantando modelos &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md).  
   
   
+
+

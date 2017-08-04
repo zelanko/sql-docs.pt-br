@@ -1,25 +1,30 @@
 ---
-title: "Permiss&#245;es de cole&#231;&#227;o (Servi&#231;os de Dados Mestre) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "coleções (Serviços de Dados Mestre), permissões"
-  - "permissões (Serviços de Dados Mestre), coleções"
+title: "Permissões de coleção (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Master Data Services], permissions
+- permissions [Master Data Services], collections
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6361881ec6af124d7bbfd6cb4b4b225259823a06
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Permiss&#245;es de cole&#231;&#227;o (Servi&#231;os de Dados Mestre)
+# <a name="collection-permissions-master-data-services"></a>Permissões de coleção (Serviços de Dados Mestre)
   As permissões de coleção aplicam-se a todas as membros coleções de uma entidade. Você não pode dar permissão a uma coleção específica; as permissões se aplicam a todas as coleções.  
   
 > [!NOTE]  
@@ -35,9 +40,9 @@ caps.handback.revision: 6
   
  As permissões Ler, Criar, Atualizar e Excluir podem ser combinadas. Ao atribuir Criar, Atualizar e Excluir, a permissão de leitura é atribuída automaticamente.  
   
-## Consulte também  
- [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Coleções &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
- [Permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
+## <a name="see-also"></a>Consulte também  
+ [Atribuir permissões de objeto modelo &#40; Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [Coleções de &#40; Master Data Services &#41;](../master-data-services/collections-master-data-services.md)   
+ [Permissões de objeto modelo &#40; Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

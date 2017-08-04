@@ -1,42 +1,47 @@
 ---
-title: "DAY (Express&#227;o SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "função DAY"
-  - "datas [Integration Services], DIA"
+title: "DAY (expressão SSIS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DAY function
+- dates [Integration Services], DAY
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 caps.latest.revision: 38
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e297f7021239ded4aa76ad61e75fddba528ccf6
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# DAY (Express&#227;o SSIS)
+# <a name="day-ssis-expression"></a>DAY (Expressão SSIS)
   Retorna um inteiro que representa a parte do dia em uma data.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 DAY(date)  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *date*  
  É uma expressão que retorna uma data válida ou uma cadeia de caracteres em formato de data.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  DAY retornará um resultado nulo se o argumento for nulo.  
   
  Um literal de data deve ser convertido explicitamente em um dos tipos de dados de data. Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -46,14 +51,14 @@ DAY(date)
   
  A função DAY é mais resumida, mas equivale a usar a DATEPART ("Dia", data).  
   
-## Exemplos de expressões  
+## <a name="expression-examples"></a>Exemplos de expressões  
  Este exemplo retorna o número do dia em um literal de data. Se a data estiver no formato "mm/dd/aaaa", este exemplo retornará 23.  
   
 ```  
 DAY((DT_DBTIMESTAMP)"11/23/2002")  
 ```  
   
- Este exemplo retorna o inteiro que representa o dia na coluna **ModifiedDate**.  
+ Este exemplo retorna o inteiro que representa o dia na coluna **ModifiedDate** .  
   
 ```  
 DAY(ModifiedDate)  
@@ -65,12 +70,12 @@ DAY(ModifiedDate)
 DAY(GETDATE())  
 ```  
   
-## Consulte também  
- [DATEADD &#40;Expressão do SSIS&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [DATEDIFF &#40;Expressão do SSIS&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
- [DATEPART &#40;Expressão do SSIS&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
- [MONTH &#40;Expressão do SSIS&#41;](../../integration-services/expressions/month-ssis-expression.md)   
- [YEAR &#40;Expressão do SSIS&#41;](../../integration-services/expressions/year-ssis-expression.md)   
- [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Consulte também  
+ [DATEADD &#40; Expressão do SSIS &#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
+ [DATEDIFF &#40; Expressão do SSIS &#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
+ [DATEPART &#40; Expressão do SSIS &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [MÊS &#40; Expressão do SSIS &#41;](../../integration-services/expressions/month-ssis-expression.md)   
+ [ANO &#40; Expressão do SSIS &#41;](../../integration-services/expressions/year-ssis-expression.md)   
+ [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

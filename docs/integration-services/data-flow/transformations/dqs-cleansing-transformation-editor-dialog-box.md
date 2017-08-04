@@ -1,25 +1,30 @@
 ---
-title: "Caixa de di&#225;logo Editor de Transforma&#231;&#227;o de Limpeza DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssdqs.designer.cleansing.f1"
-  - "sql13.SSDQS.DESIGNER.DQCONNECTION.F1"
+title: "Caixa de diálogo Editor de transformação de limpeza DQS | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssdqs.designer.cleansing.f1
+- sql13.SSDQS.DESIGNER.DQCONNECTION.F1
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee0247e25e5ada17f3d79ce9ba63576a5b866b42
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Caixa de di&#225;logo Editor de Transforma&#231;&#227;o de Limpeza DQS
+# <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Caixa de diálogo Editor de Transformação de Limpeza DQS
   Use a caixa de diálogo **Editor de Transformação de Limpeza DQS** para corrigir os dados usando Data Quality Services (DQS). Para obter mais informações, consulte [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  
   
  Para saber mais sobre a transformação, consulte [DQS Cleansing Transformation](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md).  
@@ -46,8 +51,8 @@ caps.handback.revision: 16
  **Gerenciador de conexões de qualidade de dados**  
  Selecione um gerenciador de conexões DQS existente na lista ou crie uma nova conexão clicando em **Novo**.  
   
- **Nova**  
- Crie um novo gerenciador de conexões, usando a caixa de diálogo **Gerenciador de Conexões de Limpeza DQS**. Consulte [Definir as opções na caixa de diálogo Gerenciador de Conexões de Limpeza DQS.](#manager)  
+ **Novo**  
+ Crie um novo gerenciador de conexões, usando a caixa de diálogo **Gerenciador de Conexões de Limpeza DQS** . Consulte [Definir as opções na caixa de diálogo Gerenciador de Conexões de Limpeza DQS.](#manager)  
   
  **Base de conhecimento de qualidade de dados**  
  Selecione uma base de dados de conhecimento do DQS para a fonte de dados conectada. Para obter mais informações sobre a base de dados de conhecimento do DQS, consulte [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
@@ -78,7 +83,7 @@ caps.handback.revision: 16
  Lista as colunas da fonte de dados conectada. Selecione uma ou mais colunas que contêm os dados que você quer corrigir.  
   
  **Coluna de Entrada**  
- Lista uma coluna de entrada que você selecionou na área **Colunas de Entrada Disponíveis**.  
+ Lista uma coluna de entrada que você selecionou na área **Colunas de Entrada Disponíveis** .  
   
  **Domínio**  
  Selecione um domínio para mapear para a coluna de entrada.  
@@ -123,11 +128,11 @@ caps.handback.revision: 16
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], abra um projeto existente do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ou crie um novo projeto.  
   
-2.  Clique com o botão direito do mouse na área de conexões, clique em **Nova Conexão** e, em seguida, clique em **DQS**.  
+2.  Clique com o botão direito do mouse na área de conexões, clique em **Nova Conexão**e, em seguida, clique em **DQS**.  
   
 3.  Clique em **Adicionar**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Aplicar regras de qualidade de dados à fonte de dados](../../../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

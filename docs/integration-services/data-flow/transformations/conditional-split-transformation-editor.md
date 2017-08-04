@@ -1,26 +1,31 @@
 ---
-title: "Editor de Transforma&#231;&#227;o Divis&#227;o Condicional | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.conditionalsplittransformation.f1"
-helpviewer_keywords: 
-  - "Editor de Transformação Divisão Condicional"
+title: "Editor de transformação de divisão condicional | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.conditionalsplittransformation.f1
+helpviewer_keywords:
+- Conditional Split Transformation Editor
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 769f9562af7bac75a488854319ba87ff8088329c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de Transforma&#231;&#227;o Divis&#227;o Condicional
+# <a name="conditional-split-transformation-editor"></a>Editor de Transformação Divisão Condicional
   Use a caixa de diálogo **Editor de Transformação Divisão Condicional** para criar expressões, definir a ordem na qual as expressões são avaliadas e nomear as saídas de uma divisão condicional. Essa caixa de diálogo inclui funções matemáticas, de cadeia de caracteres e de data/hora e operadores que você pode usar para criar expressões. A primeira condição avaliada como verdadeira determina a saída para a qual uma linha é direcionada.  
   
 > [!NOTE]  
@@ -28,7 +33,7 @@ caps.handback.revision: 33
   
  Para saber mais sobre a transformação Divisão Condicional, consulte [Transformação Divisão Condicional](../../../integration-services/data-flow/transformations/conditional-split-transformation.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Order**  
  Selecione uma fila e use as teclas de seta à direita para alterar a ordem de avaliação de expressões.  
   
@@ -46,10 +51,10 @@ caps.handback.revision: 33
  Digite um nome para a saída padrão ou use o padrão.  
   
  **Configurar saída de erro**  
- Especifique como tratar os erros usando a caixa de diálogo [Configurar Saída de Erro](../Topic/Configure%20Error%20Output.md).  
+ Especifique como tratar os erros usando a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Dividir um conjunto de dados por meio da transformação Divisão Condicional](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [Dividir um conjunto de dados usando a transformação divisão condicional](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

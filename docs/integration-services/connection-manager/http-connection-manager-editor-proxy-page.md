@@ -1,31 +1,36 @@
 ---
-title: "Editor do Gerenciador de Conex&#245;es de HTTP (P&#225;gina Proxy) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.httpconnection.proxy.f1"
-helpviewer_keywords: 
-  - "Editor do Gerenciador de Conexões de HTTP"
+title: "Editor do Gerenciador de Conexão de HTTP (página Proxy) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.httpconnection.proxy.f1
+helpviewer_keywords:
+- HTTP Connection Manager Editor
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 838fc4b195b0a3111b26b2a2a2f905bb5cc21b2c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor do Gerenciador de Conex&#245;es de HTTP (P&#225;gina Proxy)
+# <a name="http-connection-manager-editor-proxy-page"></a>Editor do Gerenciador de Conexões de HTTP (Página Proxy)
   Use a guia **Proxy** da caixa de diálogo **Editor do Gerenciador de Conexões de HTTP** para configurar o Gerenciador de Conexões de HTTP para usar um servidor proxy. Uma conexão HTTP permite que um pacote acesse um servidor Web usando o HTTP para enviar ou receber arquivos.  
   
  Para obter mais informações sobre o gerenciador de conexões de HTTP, consulte [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md). Para saber mais sobre um cenário de utilização geral para o Gerenciador de Conexões de HTTP, consulte [Web Service Task](../../integration-services/control-flow/web-service-task.md).  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Usar proxy**  
  Especifique se você quer que o Gerenciador de Conexões de HTTP conecte por de um servidor proxy.  
   
@@ -56,8 +61,8 @@ caps.handback.revision: 27
  **Remover**  
  Selecione um endereço e remova-o clicando em **Remover**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor do Gerenciador de Conexões HTTP &#40;Página Servidor&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ [Editor do Gerenciador de Conexão HTTP &#40; Página do servidor &#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
   
