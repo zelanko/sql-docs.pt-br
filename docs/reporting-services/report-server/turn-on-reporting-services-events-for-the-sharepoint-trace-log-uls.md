@@ -15,15 +15,15 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45d2f680e35666c9958665ac6c687725c6db0eb4
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
-# <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Ativar eventos do Reporting Services para o log de rastreamento do SharePoint (ULS)
+# <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
   A partir do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], os servidores do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo do SharePoint podem gravar eventos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no log de rastreamento do ULS (Serviço de Log Unificado do SharePoint). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] estão disponíveis na página Monitoramento da Administração Central do SharePoint.  
   
@@ -116,7 +116,7 @@ Get-SPDiagnosticConfig
 |Catálogo do servidor de relatório||  
 |Parte do servidor de relatório||  
 |Limpeza do servidor de relatório||  
-|Gerenciador de configuração do servidor de relatório|Entradas de exemplo:<br /><br /> Url interna do servidor de relatório `http://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing ou configuração ExtendedProtectionLevel inválida|  
+|Gerenciador de configuração do servidor de relatório|Entradas de exemplo:<br /><br /> URL interna do servidor de relatório MediumUsing `http://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing ou configuração ExtendedProtectionLevel inválida|  
 |Criptografia do servidor de relatório||  
 |Extensão de dados do servidor de relatório||  
 |Sondagem de BD do servidor de relatório||  
@@ -146,7 +146,7 @@ Get-SPDiagnosticConfig
 |Serviço compartilhado|Entradas de exemplo:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Acesso de MediumGranting a bancos de dados de conteúdo.<br /><br /> Instâncias de MediumProvisioning para ReportingWebServiceApplication<br /><br /> Alteração de conta de serviço MediumProcessing para ReportingWebServiceApplication<br /><br /> Permissões de banco de dados MediumSetting|  
   
 ##  <a name="bkmk_powershell"></a> Exiba um arquivo de log com o PowerShell  
- ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "conteúdo relacionado ao PowerShell")você pode usar o PowerShell para retornar uma lista da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] eventos relacionados a partir de um arquivo de Log ULS. Digite o seguinte comando do SharePoint 2010 Management Shell para retornar uma lista filtrada de linhas do arquivo de log ULS UESQL11SPOINT-20110606-1530.log, que contêm “**sql server reporting services**”:  
+ ![Conteúdo relacionado do PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado do PowerShell")Você pode usar o PowerShell para retornar uma lista de eventos relacionados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de um arquivo de log de ULS. Digite o seguinte comando do SharePoint 2010 Management Shell para retornar uma lista filtrada de linhas do arquivo de log ULS UESQL11SPOINT-20110606-1530.log, que contêm “**sql server reporting services**”:  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
@@ -161,4 +161,4 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  Para obter mais informações e as etapas para configurar o log de diagnóstico em um servidor SharePoint na Administração Central do SharePoint 2010, consulte [Configurar definições do log de diagnóstico (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

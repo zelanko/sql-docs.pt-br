@@ -1,5 +1,5 @@
 ---
-title: "Relatórios de gerenciamento de conteúdo do servidor (modo nativo do SSRS) | Microsoft Docs"
+title: "Gerenciamento do Conteúdo do Servidor de Relatório (Modo Nativo SSRS) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -21,18 +21,18 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2289f62499f876cc296d6c939c4d9e70ccfe4c3f
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gerenciamento do Conteúdo do Servidor de Relatório (Modo Nativo SSRS)
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o gerenciamento de conteúdo se refere ao gerenciamento de itens de servidor de relatório. Todos os itens podem ser gerenciados independentemente um do outro por propriedades e configurações de segurança. Qualquer item pode ser movido para um local diferente no namespace de pasta de servidor de relatório. Para gerenciar os itens com eficiência, você precisa saber quais tarefas são executadas por um gerenciador de conteúdo. A partir do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2, o portal da Web do  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está disponível. Este artigo examinará o Gerenciador de Relatórios e a experiência do novo portal da Web.  
   
 > [!NOTE]  
->  O gerenciamento de conteúdo é diferente da administração de servidor de relatório. Para obter mais informações sobre como gerenciar o ambiente em que um servidor de relatório é executado, consulte [Servidor de Relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+>  O gerenciamento de conteúdo é diferente da administração de servidor de relatório. Para obter mais informações sobre como gerenciar o ambiente em que um servidor de relatório é executado, consulte [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
  O gerenciamento de conteúdo inclui as seguintes tarefas:  
   
@@ -66,11 +66,11 @@ ms.lasthandoff: 06/22/2017
   
 |Ícone|Item móvel|  
 |----------|-------------------|  
-|![Ícone de relatório](../../reporting-services/report-server/media/hlp-16doc.gif "ícone de relatório")|Relatório|  
-|![Ícone de relatório vinculado](../../reporting-services/report-server/media/hlp-16linked.gif "ícone de relatório vinculado")|Relatório vinculado|  
-|![Ícone de pasta](../../reporting-services/report-server/media/hlp-16folder.gif "ícone de pasta")|Pasta|  
-|![ícone de recurso genérico](../../reporting-services/report-server/media/hlp-16file.gif "ícone de recurso genérico")|Recurso genérico|  
-|![Ícone de fonte de dados compartilhado](../../reporting-services/report-data/media/hlp-16datasource.png "ícone de fonte de dados compartilhado")|Fonte de dados compartilhada|  
+|![Ícone Relatório](../../reporting-services/report-server/media/hlp-16doc.gif "Ícone Relatório")|Relatório|  
+|![Ícone Relatório vinculado](../../reporting-services/report-server/media/hlp-16linked.gif "Ícone Relatório vinculado")|Relatório vinculado|  
+|![Ícone Pasta](../../reporting-services/report-server/media/hlp-16folder.gif "Ícone Pasta")|Pasta|  
+|![Ícone Recurso genérico](../../reporting-services/report-server/media/hlp-16file.gif "Ícone Recurso genérico")|Recurso genérico|  
+|![Ícone Fonte de dados compartilhada](../../reporting-services/report-data/media/hlp-16datasource.png "Ícone Fonte de dados compartilhada")|Fonte de dados compartilhada|  
 ||Conjunto de dados compartilhado|  
   
  Nem todos os itens com os quais você trabalha podem ser movidos. Não é possível mover itens associados a um relatório, como assinaturas ou histórico de relatório. Esses itens são movidos com os seus relatórios associados. De maneira semelhante, não é possível mover itens, como agendas compartilhadas, que existem fora da hierarquia de pasta. Não é possível mover itens sem a devida permissão. A permissão para mover um item é concedida quando as seguintes tarefas são selecionadas na atribuição de função para o item em questão: "Gerenciar relatórios," "Gerenciar modelos", "Gerenciar pastas" e "Gerenciar fontes de dados".  
@@ -131,14 +131,14 @@ ms.lasthandoff: 06/22/2017
  A visibilidade de um item em uma pasta depende das atribuições de função (isto é, da permissão para exibir um item) e das opções de exibição habilitadas para uma pasta. No Gerenciador de Relatórios, você pode definir a página Conteúdo para exibição de lista ou de detalhes. Em alguns casos, um relatório ou item pode estar oculto na exibição de lista. Não se esqueça de exibir uma pasta em detalhes antes de excluir seu conteúdo.  
   
 ##  <a name="bkmk_Resources"></a> Recursos  
- Um recurso é um item gerenciado armazenado, mas não processado, em um servidor de relatório. Normalmente, um recurso fornece conteúdo externo para usuários de relatórios. Alguns exemplos incluem uma imagem em um arquivo .jpg, um arquivo de forma ESRI que contém dados espaciais ou um arquivo HTML que descreve as regras de negócio usadas em um relatório. O arquivo JPG, SHP ou HTML é armazenado no servidor de relatório, mas o servidor de relatório passa o arquivo diretamente ao navegador em vez de processá-lo antes. Para obter mais informações, consulte [Imagens &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) e a seção "Adicionando dados a um mapa" em [&#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
+ Um recurso é um item gerenciado armazenado, mas não processado, em um servidor de relatório. Normalmente, um recurso fornece conteúdo externo para usuários de relatórios. Alguns exemplos incluem uma imagem em um arquivo .jpg, um arquivo de forma ESRI que contém dados espaciais ou um arquivo HTML que descreve as regras de negócio usadas em um relatório. O arquivo JPG, SHP ou HTML é armazenado no servidor de relatório, mas o servidor de relatório passa o arquivo diretamente ao navegador em vez de processá-lo antes. Para obter mais informações, consulte [Imagens &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) e a seção "Adicionando dados a um mapa" em [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ### <a name="adding-and-viewing-a-resource"></a>Adicionando e exibindo um recurso  
  Para adicionar um recurso a um servidor de relatórios, você carrega ou publica um arquivo:  
   
 |Operação|Tipo de arquivo|  
 |---------------|---------------|  
-|Carregar|Para carregar um recurso, é necessário usar o Gerenciador de Relatórios se o servidor de relatório estiver sendo executado no modo nativo ou por uma página de aplicativo em um site do SharePoint, se servidor for executado no modo integrado do SharePoint. Para obter mais informações, consulte [Carregar um arquivo ou relatório &#40;Gerenciador de Relatório&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) ou [Carregar documentos em uma biblioteca do SharePoint &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|Carregar|Para carregar um recurso, é necessário usar o Gerenciador de Relatórios se o servidor de relatório estiver sendo executado no modo nativo ou por uma página de aplicativo em um site do SharePoint, se servidor for executado no modo integrado do SharePoint. Para obter mais informações, consulte [Carregar um arquivo ou relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) ou [Carregar documentos em uma biblioteca do SharePoint &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
 |Publicar|Todos os arquivos em um projeto que não são relatórios, partes de relatório, fontes de dados ou conjuntos de dados são carregados como recursos. Para publicar um recurso, adicione um item existente a um projeto no Designer de Relatórios e publique o projeto em um servidor de relatório.|  
   
  Todos os recursos são gerados como arquivos em um sistema de arquivos, que são carregados subsequentemente em um servidor de relatório. Exceto pelas limitações de tamanho de arquivo padrão de 4 megabytes impostas pelo ASP.NET, não há restrições quanto ao tipo de arquivo que pode ser carregado. Entretanto, quando publicados em um servidor de relatório como recursos, tipos de arquivo com tipos MIME equivalentes são melhores que outros. Por exemplo, recursos com base em arquivos HTML e JPG serão abertos em uma janela de navegador quando o usuário clicar no recurso, renderizando o HTML como uma página da Web e o JPG como uma imagem que pode ser visualizada pelo usuário. De outro modo, recursos que não possuem tipos MIME equivalentes, como arquivos de aplicativos de desktop, por exemplo, talvez não sejam renderizados em uma janela do navegador.  

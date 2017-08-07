@@ -20,11 +20,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 30d542287f81032aa1bc2540d461a8f8c163b2f9
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Definir propriedades de implantação (Reporting Services)
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Na caixa de diálogo **Páginas de Propriedades** do projeto, clique no **Gerenciador de Configuração**.  
   
-3.  Na caixa de diálogo **Gerenciador de Configuração** , selecione a configuração a ser editado. A configuração ativa no momento é exibida como **Active (***\<Configuração >***)**.  
+3.  Na caixa de diálogo **Gerenciador de Configuração** , selecione a configuração a ser editado. A configuração ativa no momento é exibida como **Ativa(***\<configuration>***)**.  
   
 4.  Em **Contextos do Projeto**, para cada projeto na solução, selecione ou desmarque **Build** ou **Deploy**.  
   
@@ -87,10 +87,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Publicando fontes de dados e relatórios](../../reporting-services/reports/publishing-data-sources-and-reports.md)   
- [Visualizando relatórios](../../reporting-services/reports/previewing-reports.md)   
+ [Visualizar relatórios](../../reporting-services/reports/previewing-reports.md)   
  [Ajuda F1 do Designer de Relatórios](../../reporting-services/tools/report-designer-f1-help.md)   
  [Exemplos de URL para itens de relatório publicados em um Servidor de Relatório no modo do SharePoint &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [Caixa de diálogo Páginas de Propriedades do Projeto](../../reporting-services/tools/project-property-pages-dialog-box.md)   
- [Publicando relatórios em um servidor de relatórios](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
+ [Publicar relatórios em um servidor de relatórios](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
   
   

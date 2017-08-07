@@ -1,5 +1,5 @@
 ---
-title: "Exibir e explorar os relatórios de modo nativo usando Web Parts do SharePoint (SSRS) | Microsoft Docs"
+title: "Exibir e explorar os relatórios de Modo Nativo usando Web Parts do SharePoint (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,18 +15,18 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 507cac75588632cfd89f5275ee7038a49b8cdfc5
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
 
 > [!IMPORTANT]  
->  SQL Server Reporting Services não oferece mais suporte usando o modo nativo (RSWebParts.cab) web parts para acessar conteúdo do servidor de relatório em um site do SharePoint de um servidor de relatório do modo nativo. Use um [Web Part do Visualizador de Relatórios em um site do SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) .  
+>  O SQL Server Reporting Services não dá mais suporte ao uso de Web Parts no modo nativo (RSWebParts.cab) para acessar o conteúdo do servidor de relatório em um site do SharePoint de um servidor de relatório de modo nativo. Use um [Web Part do Visualizador de Relatórios em um site do SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) .  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece várias Web Parts que funcionam com versões específicas de um servidor de relatório e em modos de implantação específicos.  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 06/22/2017
   
 -   As versões com suporte de produtos de SharePoint e tecnologias são:  
   
-    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
+    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
   
     -   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] e [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="install-web-parts-using-powershell"></a>Instalar as Web Parts usando o PowerShell  
   
-1.  Copie o **RSWebParts.cab** em uma pasta no servidor SharePoint. Você pode copiar o mesmo em qualquer pasta do servidor SharePoint, e excluí-lo posteriormente após instalar Web Parts. Por padrão no SQL Server 2014 Reporting Services e anteriores, instala o arquivo RSWebParts.cab na pasta a seguir:  
+1.  Copie o **RSWebParts.cab** em uma pasta no servidor SharePoint. Você pode copiar o mesmo em qualquer pasta do servidor SharePoint, e excluí-lo posteriormente após instalar Web Parts. Por padrão, o SQL Server 2014 Reporting Services e anteriores instalam o arquivo RSWebParts.cab na pasta a seguir:  
   
     ```  
     C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint  
@@ -148,7 +148,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  Enquanto a página estiver em modo de edição, clique em **Editar Web Part** na Web Part do Visualizador de Relatórios.  
   
-7.  Na **URL do Gerenciador de Relatórios**, digite uma URL para uma instância do Gerenciador de Relatórios associada ao servidor de relatório de modo nativo que deseja acessar. Por padrão, uma URL do Gerenciador de relatórios tem a seguinte sintaxe: **http://\<servername > / reports**.  
+7.  Na **URL do Gerenciador de Relatórios**, digite uma URL para uma instância do Gerenciador de Relatórios associada ao servidor de relatório de modo nativo que deseja acessar. Por padrão, uma URL do Gerenciador de Relatórios tem a seguinte sintaxe: **http://\<nomedoservidor>/reports**.  
   
 8.  Em **Caminho do Relatório**, especifique uma barra invertida, seguida pelo caminho da pasta e o nome do relatório. **Not** inclua o nome do servidor nem o diretório virtual do Gerenciador de Relatórios. Por exemplo, para abrir o relatório de Vendas de Empresa na pasta do Aventure Works, especifique **/Adventure Works/Vendas da Empresa**. Veja a seguir outro exemplo no qual o relatório 'Produtos' está na pasta raiz **/Produtos**no servidor de relatório.  
   
@@ -174,4 +174,4 @@ ms.lasthandoff: 06/22/2017
   
     3.  Clique em **Visualizador de Relatórios**.  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

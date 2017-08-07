@@ -1,5 +1,5 @@
 ---
-title: "Mapa de árvore e gráficos explosão solar no Reporting Services | Microsoft Docs"
+title: "Gráficos de mapa de árvore e explosão solar no Reporting Services | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/31/2015
@@ -15,11 +15,11 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Gráficos de mapa de árvore e explosão solar no Reporting Services
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Clique com o botão direito do mouse na superfície do design, clique em **Inserir**e em **Gráfico** .  
   
-     Selecione mapa de árvore ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
+     Selecione o mapa de árvore ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Clique com o botão direito do mouse na superfície do design, clique em **Inserir**e em **Gráfico** .  
   
-     Selecione explosão solar ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
+     Selecione o gráfico de explosão solar ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   

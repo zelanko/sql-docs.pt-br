@@ -1,5 +1,5 @@
 ---
-title: "Controlando títulos de linha e coluna (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Controlando títulos de linha e coluna (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f83ece6730c623a8c710d9b3aef3f8b4786b83ca
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Controlando títulos de linha e coluna (Construtor de Relatórios e SSRS)
@@ -67,11 +67,11 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="Matrix"></a> Matriz  
  Por padrão, uma matriz simples tem um grupo de linhas e um grupo de colunas. A figura seguinte mostra uma matriz com um grupo de linhas baseado na Categoria e um grupo de colunas baseado na Geografia:  
   
- ![Matriz, linha categoria e grupo de colunas geografia](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "matriz, linha categoria e grupo de colunas geografia")  
+ ![Matriz, linha Categoria e grupo de colunas Geografia](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Matriz, linha Categoria e grupo de colunas Geografia")  
   
  As linhas pontilhadas mostram as quatro áreas de tablix. A área de grupo de linhas tem um cabeçalho de grupo de linhas que controla os rótulos da categoria na primeira coluna. De modo semelhante, a área do grupo de colunas tem um cabeçalho de grupo de colunas que controla os rótulos geográficos na primeira linha. Na visualização, à medida que a matriz se expande pela página, a primeira linha exibe os cabeçalhos de coluna, como mostrado na figura seguinte:  
   
- ![Visualização de matriz renderizada com grupos expandidos](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "visualização de matriz renderizada com grupos expandidos")  
+ ![Visualização de matriz renderizada com grupos expandidos](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Visualização de matriz renderizada com grupos expandidos")  
   
  Para repetir ou congelar cabeçalhos de coluna na primeira linha, defina as propriedades para cabeçalhos de coluna na região de dados tablix. Cabeçalhos de coluna para grupos de colunas aninhados são incluídos automaticamente.  
   
@@ -82,19 +82,19 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="TableNoGroups"></a> Tabela sem nenhum grupo de linhas  
  Por padrão, uma tabela simples sem grupos inclui o grupo de detalhes. A figura seguinte mostra uma tabela que exibe a categoria, o número do pedido e os dados da venda:  
   
- ![Design, tabela com uma estática, uma linha dinâmica](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "Design, tabela com uma estática, uma linha dinâmica")  
+ ![Design, tabela com uma linha estática, uma linha dinâmica](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "Design, tabela com uma linha estática, uma linha dinâmica")  
   
  Não há nenhuma linha pontilhada porque a tabela consiste apenas na área de corpo do tablix. A primeira linha exibe cabeçalhos de coluna e representa um membro tablix estático que não é associado a um grupo. A segunda linha exibe dados de detalhes e representa um membro tablix dinâmico associado ao grupo de detalhes. A seguinte figura mostra a tabela na visualização:  
   
- ![Visualização, tabela com uma estática, uma linha dinâmica](../../reporting-services/report-design/media/rs-tableheaderstaticpreview.gif "visualização, tabela com uma estática, uma linha dinâmica")  
+ ![Visualização, tabela com uma linha estática, uma linha dinâmica](../../reporting-services/report-design/media/rs-tableheaderstaticpreview.gif "Visualização, tabela com uma linha estática, uma linha dinâmica")  
   
  Para repetir ou congelar cabeçalhos de colunas, defina as propriedades no membro tablix da linha estática que faz parte da definição da região de dados tablix. Para selecionar a linha estática, você deve usar o modo Avançado do painel Agrupamento. A figura seguinte mostra o painel Grupos de Linhas:  
   
- ![Grupos, tabela com 1 estáticas, 1 linha dinâmica de linha](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpanedefault.gif "grupos de linhas, tabela com 1 estáticas, 1 linha dinâmica")  
+ ![Grupos de linha, tabela com uma linha estática, uma linha dinâmica](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpanedefault.gif "Grupos de linha, tabela com uma linha estática, uma linha dinâmica")  
   
  No modo Avançado, a figura seguinte mostra os membros tablix estáticos e dinâmicos para os grupos de linhas na tabela:  
   
- ![Grupos de linhas, Avançado para tabela padrão](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpaneadvanced.gif "grupos de linhas, Avançado para tabela padrão")  
+ ![Grupos de linhas, Avançado para tabela padrão](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpaneadvanced.gif "Grupos de linhas, Avançado para tabela padrão")  
   
  Para repetir ou congelar cabeçalhos de colunas para o membro tablix, selecione a linha estática rotulada (**Estático**). O painel de propriedades exibe as propriedades do membro tablix selecionado. Definindo propriedades para esse membro tablix, você pode controlar o modo como a primeira linha se repete ou permanece visível.  
   
@@ -107,15 +107,15 @@ ms.lasthandoff: 06/22/2017
   
  As linhas pontilhadas mostram a área dos grupos de linhas tablix e a área do corpo tablix. A área de grupo de linhas tem um cabeçalho de grupo de linhas, mas nenhum cabeçalho de grupo de colunas. A figura seguinte mostra essa tabela na visualização:  
   
- ![Visualização, tabela com um grupo de linhas e detalhes](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercellpreview.gif "visualização, tabela com um grupo de linhas e detalhes")  
+ ![Visualização, tabela com um grupo de linhas e detalhes](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercellpreview.gif "Visualização, tabela com um grupo de linhas e detalhes")  
   
  Para repetir ou congelar cabeçalhos de coluna, use a mesma abordagem do exemplo anterior. A figura seguinte mostra a exibição padrão do painel Grupos de Linhas:  
   
- ![Grupos de linhas, padrão com membros dinâmicos](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "grupos de linhas, padrão com membros dinâmicos")  
+ ![Grupos de linhas, padrão com membros dinâmicos](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "Grupos de linhas, padrão com membros dinâmicos")  
   
  Use o modo **Avançado** do painel Grupos de Linhas para exibir os membros tablix, como mostrado na figura seguinte:  
   
- ![Grupos, modo avançado com membros estáticos de linhas](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "grupos de linhas, modo avançado com membros estáticos")  
+ ![Grupos de linhas, modo avançado com membros estáticos](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "Grupos de linhas, modo avançado com membros estáticos")  
   
  Para membros tablix são listados os itens: **Estático**, (**Estático**), Categoria e (**Detalhes**). Um membro tablix que inclui parênteses () indica que não há nenhum cabeçalho de grupo correspondente. Para repetir ou congelar cabeçalhos de coluna, selecione o membro tablix Estático superior e defina as propriedades no painel Propriedades.  
   
@@ -134,15 +134,15 @@ ms.lasthandoff: 06/22/2017
   
  A tabela tem três linhas. A primeira linha contém cabeçalhos de coluna. A segunda linha contém o valor de grupo e os subtotais. A terceira linha contém os dados de detalhes. Não há nenhuma linha pontilhada porque há apenas uma área de corpo do tablix. A figura seguinte mostra essa tabela na visualização:  
   
- ![Visualização, tabela tem grupo de linhas, mas nenhum cabeçalho de grupo](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "visualização, tabela tem grupo de linhas, mas nenhum cabeçalho de grupo")  
+ ![Visualização, tabela tem grupo de linhas, mas nenhum cabeçalho de grupo](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "Visualização, tabela tem grupo de linhas, mas nenhum cabeçalho de grupo")  
   
  Para controlar o modo como as linhas se repetem ou permanecem visíveis, você deve definir propriedades no membro tablix para cada linha. No modo padrão, não há nenhuma diferença entre esse exemplo e o exemplo anterior para uma tabela com um grupo de linhas e um cabeçalho de grupo. A figura seguinte mostra o painel Agrupamento no modo padrão para essa tabela:  
   
- ![Grupos de linhas, padrão com membros dinâmicos](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "grupos de linhas, padrão com membros dinâmicos")  
+ ![Grupos de linhas, padrão com membros dinâmicos](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "Grupos de linhas, padrão com membros dinâmicos")  
   
  No entanto, no modo avançado, essa estrutura de layout mostra um conjunto diferente de membros tablix. A figura seguinte mostra o painel Agrupamento no modo avançado para essa tabela:  
   
- ![Linha de grupos, Avançado, nenhum cabeçalho de grupo. ] (../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Grupos de linhas, Avançado, nenhum cabeçalho de grupo.")  
+ ![Grupo de linhas, Avançado, nenhum cabeçalho de grupo.](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Grupos de linhas, Avançado, nenhum cabeçalho de grupo.")  
   
  No painel Grupos de Linhas, os membros tablix seguintes são listados: (**Estático**), (Categoria), (**Estático**) e (**Detalhes**). Para repetir ou congelar cabeçalhos de coluna, selecione o membro tablix (**Estático**) superior e defina as propriedades no painel Propriedades.  
   

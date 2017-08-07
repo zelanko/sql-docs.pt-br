@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5ecd364a199f122c98471f112e153d98d2778852
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Assinaturas e entrega (Reporting Services)
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  Você pode criar várias assinaturas para um único relatório e variar as opções de assinatura. Por exemplo, você pode especificar valores de parâmetros diferentes para produzir três versões de um relatório, como um relatório de vendas da região Ocidental, da região Oriental e de todas as vendas.  
   
- ![fluxo de assinatura ssrs exemplo](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "fluxo de assinatura do ssrs de exemplo")  
+ ![fluxo de assinatura do ssrs de exemplo](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "fluxo de assinatura do ssrs de exemplo")  
   
  As assinaturas não estão disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Adicionar um minigráfico ao relatório (construtor de relatórios) | Microsoft Docs"
+title: "Tutorial: Adicionar um minigráfico ao relatório (Construtor de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -52,7 +52,7 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
 4.  Na página **Escolher um conjunto de dados** , selecione **Criar um conjunto de dados** > **Avançar**. A página **Escolher uma conexão com uma fonte de dados** é aberta.  
   
     > [!NOTE]  
-    > Este tutorial não precisa de dados específicos. ele só precisa de uma conexão para um banco de dados do SQL Server. Se você já tiver uma conexão de fonte de dados listada em **Conexões de Fonte de Dados**, será possível selecioná-la e ir para a etapa 10. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Este tutorial não precisa de dados específicos. Ele só precisa de uma conexão com um banco de dados do SQL Server. Se você já tiver uma conexão de fonte de dados listada em **Conexões de Fonte de Dados**, será possível selecioná-la e ir para a etapa 10. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  Clique em **Nova**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
   
@@ -178,7 +178,7 @@ Por padrão, os dados de resumo do campo **Sales** exibem um número geral. Form
 
     ![report-builder-select-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
   
-3.  Na guia **Início** > grupo **Número** > clique em **Moeda**. As células são alteradas para mostrar a moeda formatada.  
+3.  Na guia **Início** > grupo **Número**, clique em **Moeda**. As células são alteradas para mostrar a moeda formatada.  
 
     ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
   
@@ -325,9 +325,9 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
   
 ## <a name="next-steps"></a>Próximas etapas  
 
-Isso conclui o tutorial para criar um relatório de tabela com minigráficos. Para obter mais informações sobre minigráficos, consulte [minigráficos e barras de dados](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Isso conclui o tutorial para criar um relatório de tabela com minigráficos. Para obter mais informações sobre minigráficos, consulte [Minigráficos e barras de dados](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md) 
 [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

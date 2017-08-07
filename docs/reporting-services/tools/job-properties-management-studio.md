@@ -1,5 +1,5 @@
 ---
-title: Propriedades (Management Studio) de trabalho | Microsoft Docs
+title: Propriedades de Trabalho (Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="job-properties-management-studio"></a>Propriedades do Trabalho (Management Studio)
@@ -55,7 +55,7 @@ ms.lasthandoff: 06/22/2017
  Para relatórios, esta coluna mostra quais processos de execução de relatório estão a caminho. Esse valor sempre é **Renderizar**.  
   
  **Descrição do Trabalho**  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não fornece descrições de trabalho por padrão.  
+ O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não fornece descrições de trabalho por padrão.  
   
  **Nome do servidor**  
  Exibe o nome do servidor de relatórios que está processando o trabalho. Se você configurou uma implantação em expansão, esse valor mostrará qual servidor está processando o trabalho.  
@@ -75,6 +75,6 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Consulte também  
  [Servidor de Relatório na ajuda F1 do Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Conectar-se a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md)  
+ [Gerenciar um processo em execução](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

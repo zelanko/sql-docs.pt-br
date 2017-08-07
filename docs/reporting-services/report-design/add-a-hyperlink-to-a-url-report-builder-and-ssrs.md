@@ -1,5 +1,5 @@
 ---
-title: "Adicionar um hiperlink a uma URL (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Adicionar um hiperlink a uma URL (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/07/2016
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4d66e7d74d06cbad20351f80a312be95cc253c0
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Adicionar um hiperlink a uma URL (Construtor de Relatórios e SSRS)
@@ -33,7 +33,7 @@ Saiba como adicionar ações de hiperlink a caixas de texto, imagens, gráficos 
  
  *  Além disso, você pode **adicionar um indicador a um local específico** no mesmo relatório. 
   
-Tente adicionar hiperlinks com dados de exemplo no [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+Tente adicionar hiperlinks com os dados de exemplo no [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  Links associados a campos de conjuntos de dados podem ser vulneráveis à violação para fins mal-intencionados. Para obter mais informações, consulte [Proteger relatórios e recursos](../../reporting-services/security/secure-reports-and-resources.md).  

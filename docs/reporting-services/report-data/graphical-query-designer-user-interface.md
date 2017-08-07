@@ -1,5 +1,5 @@
 ---
-title: "Interface de usuário do Designer de consulta gráfica | Microsoft Docs"
+title: "Interface do usuário do Designer de consultas gráficas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -24,11 +24,11 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3c3bc432fc4dd02527f617b920cdf045103247a9
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interface de usuário do Designer de consultas gráficas
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
  As seguintes opções estão disponíveis para o tipo de consulta:  
   
--   **Text** Supports standard [!INCLUDE[tsql](../../includes/tsql-md.md)] query text for relational database data sources, including data processing extensions for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Oracle.  
+-   **Text** Dá suporte a texto de consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] padrão para fontes de dados de bancos de dados relacionais, incluindo extensões de processamento de dados para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Oracle.  
   
 -   **TableDirect** Seleciona todas as colunas da tabela especificada. Por exemplo, para uma tabela chamada Clientes, isso equivale à instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] `SELECT * FROM Customers`.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="command-type-text"></a>Tipo de comando Text  
  No tipo **Text** , o designer de consultas gráficas apresenta quatro áreas, ou painéis. É possível especificar colunas, aliases, valores de classificação e valores de filtro para uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] . Você pode exibir o texto da consulta gerado a partir das seleções feitas, executar a consulta e ver o conjunto de resultados. A figura a seguir mostra os quatro painéis.  
   
- ![Designer de consultas gráficas para consulta sql](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "designer de consultas gráficas para consulta sql")  
+ ![Designer de consultas gráficas para consulta sql](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "Designer de consultas gráficas para consulta sql")  
   
  A tabela a seguir descreve a função de cada painel.  
   
@@ -77,17 +77,17 @@ ms.lasthandoff: 06/22/2017
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas.|  
 |**Importar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Botão de alternância do painel de diagrama de Mostrar/ocultar](../../reporting-services/report-data/media/rsqdicon-showhidediagram.gif "Mostrar/Ocultar botão de alternância de painel de diagrama")|Mostre ou oculte o painel Diagrama.|  
-|![Mostrar ou Ocultar grade alternância de painel](../../reporting-services/report-data/media/rsqdicon-showhidegrid.gif "Mostrar ou Ocultar grade alternância de painel")|Mostre ou oculte o painel Grade.|  
-|![Mostrar ou ocultar o botão de alternância de painel sql](../../reporting-services/report-data/media/rsqdicon-showhidesql.gif "Mostrar ou ocultar o botão de alternância de painel sql")|Mostre ou oculte o painel SQL.|  
-|![Mostrar ou ocultar resultados alternância de painel](../../reporting-services/report-data/media/rsqdicon-showhideresult.gif "Mostrar ou ocultar resultados alternância de painel")|Mostre ou oculte o painel Resultado.|  
-|![Execute a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "executar a consulta")|Executa a consulta.|  
-|![Verificar SQL no botão do painel SQL](../../reporting-services/report-data/media/rsqdicon-verifysql.gif "verificar SQL no botão do painel SQL")|Verifique se a sintaxe do texto da consulta está correta.|  
-|![Definir classificação crescente no campo selecionado](../../reporting-services/report-data/media/rsqdicon-sortascending.gif "definir classificação crescente no campo selecionado")|Defina a ordem de classificação como **Classificação Crescente** para a coluna selecionada no painel Diagrama.|  
-|![Definir classificação decrescente no campo selecionado](../../reporting-services/report-data/media/rsqdicon-sortdescending.gif "definir classificação decrescente no campo selecionado")|Defina a ordem de classificação como **Classificação Decrescente** para a coluna selecionada no painel Diagrama.|  
-|![Remover filtro no campo selecionado](../../reporting-services/report-data/media/rsqdicon-removefilter.gif "Remover filtro no campo selecionado")|Remova o filtro para a coluna selecionada no painel de diagrama está marcado como tendo um filtro (![gráfico de filtro ao lado da coluna de filtro selecionada](../../reporting-services/report-data/media/rsqdicon-filter.gif "gráfico de filtro ao lado da coluna de filtro selecionada")).|  
-|![Usar Agrupar por para o campo selecionado](../../reporting-services/report-data/media/rsqdicon-usegroupby.gif "usar Group By para o campo selecionado")|Mostre ou oculte a coluna **Agrupar por** do painel Grade. Quando o botão de alternância **Agrupar por** está ativo, uma coluna extra, chamada **Agrupar por** , é exibida no painel Grade e cada valor das colunas selecionadas na consulta usa como padrão **Agrupar por**, que faz com que a coluna selecionada seja incluída em uma cláusula Group By no texto SQL. Use o botão Agrupar por para adicionar automaticamente uma cláusula GROUP BY que inclua todas as colunas da cláusula SELECT. Quando a cláusula SELECT inclui chamadas de função de agregação (por exemplo, SUM(ColumnName)), inclua cada coluna que não seja de agregação na cláusula GROUP BY se desejar que ela apareça no conjunto de resultados.<br /><br /> Para aparecer no painel Resultado, cada coluna da consulta deve ter uma função de agregação definida para uso no cálculo do valor a ser exibido no painel Resultado, ou a coluna da consulta deve ser especificada na cláusula GROUP BY da consulta SQL.|  
-|![Adicionar uma nova tabela ao painel diagrama](../../reporting-services/report-data/media/rsqdicon-addtable.gif "adicionar uma nova tabela ao painel do diagrama")|Adicione uma nova tabela da fonte de dados ao painel Diagrama.<br /><br /> **Observação** Quando você adiciona uma nova tabela, o designer de consultas tenta combinar as relações de chave estrangeira da fonte de dados. Depois de adicionar uma tabela, verifique se as relações de chave estrangeira representadas por vínculos entre as tabelas estão corretas.|  
+|![Botão de alternância do painel do diagrama Mostrar/Ocultar](../../reporting-services/report-data/media/rsqdicon-showhidediagram.gif "Botão de alternância do painel do diagrama Mostrar/Ocultar")|Mostre ou oculte o painel Diagrama.|  
+|![Botão de alternância do painel da grade Mostrar ou Ocultar](../../reporting-services/report-data/media/rsqdicon-showhidegrid.gif "Botão de alternância do painel da grade Mostrar ou Ocultar")|Mostre ou oculte o painel Grade.|  
+|![Botão de alternância do painel sql Mostrar ou Ocultar](../../reporting-services/report-data/media/rsqdicon-showhidesql.gif "Botão de alternância do painel sql Mostrar ou Ocultar")|Mostre ou oculte o painel SQL.|  
+|![Botão de alternância do painel de resultado Mostrar ou Ocultar](../../reporting-services/report-data/media/rsqdicon-showhideresult.gif "Botão de alternância do painel de resultado Mostrar ou Ocultar")|Mostre ou oculte o painel Resultado.|  
+|![Executar a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta.|  
+|![Verificar SQL no botão do painel SQL](../../reporting-services/report-data/media/rsqdicon-verifysql.gif "Verificar SQL no botão do painel SQL")|Verifique se a sintaxe do texto da consulta está correta.|  
+|![Definir classificação crescente no campo selecionado](../../reporting-services/report-data/media/rsqdicon-sortascending.gif "Definir classificação crescente no campo selecionado")|Defina a ordem de classificação como **Classificação Crescente** para a coluna selecionada no painel Diagrama.|  
+|![Definir classificação decrescente no campo selecionado](../../reporting-services/report-data/media/rsqdicon-sortdescending.gif "Definir classificação decrescente no campo selecionado")|Defina a ordem de classificação como **Classificação Decrescente** para a coluna selecionada no painel Diagrama.|  
+|![Remover filtro no campo selecionado](../../reporting-services/report-data/media/rsqdicon-removefilter.gif "Remover filtro no campo selecionado")|Remova o filtro para a coluna selecionada no painel de diagrama que está marcado como tendo um filtro (![Gráfico de filtro ao lado da coluna de filtro selecionada](../../reporting-services/report-data/media/rsqdicon-filter.gif "Gráfico de filtro ao lado da coluna de filtro selecionada")).|  
+|![Usar Agrupar por para o campo selecionado](../../reporting-services/report-data/media/rsqdicon-usegroupby.gif "Usar Agrupar por para o campo selecionado")|Mostre ou oculte a coluna **Agrupar por** do painel Grade. Quando o botão de alternância **Agrupar por** está ativo, uma coluna extra, chamada **Agrupar por** , é exibida no painel Grade e cada valor das colunas selecionadas na consulta usa como padrão **Agrupar por**, que faz com que a coluna selecionada seja incluída em uma cláusula Group By no texto SQL. Use o botão Agrupar por para adicionar automaticamente uma cláusula GROUP BY que inclua todas as colunas da cláusula SELECT. Quando a cláusula SELECT inclui chamadas de função de agregação (por exemplo, SUM(ColumnName)), inclua cada coluna que não seja de agregação na cláusula GROUP BY se desejar que ela apareça no conjunto de resultados.<br /><br /> Para aparecer no painel Resultado, cada coluna da consulta deve ter uma função de agregação definida para uso no cálculo do valor a ser exibido no painel Resultado, ou a coluna da consulta deve ser especificada na cláusula GROUP BY da consulta SQL.|  
+|![Adicionar uma nova tabela ao painel de diagrama](../../reporting-services/report-data/media/rsqdicon-addtable.gif "Adicionar uma nova tabela ao painel de diagrama")|Adicione uma nova tabela da fonte de dados ao painel Diagrama.<br /><br /> **Observação** Quando você adiciona uma nova tabela, o designer de consultas tenta combinar as relações de chave estrangeira da fonte de dados. Depois de adicionar uma tabela, verifique se as relações de chave estrangeira representadas por vínculos entre as tabelas estão corretas.|  
   
 #### <a name="example"></a>Exemplo  
  A consulta a seguir retorna a lista de sobrenomes da tabela [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Pessoa **do banco de dados** :  
@@ -122,8 +122,8 @@ EXEC uspGetEmployeeManagers '1';
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas.|  
 |**Importar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Ícone do botão Designer de consultas genérico](../../reporting-services/report-data/media/icongenericquerydesigner.gif "ícone do botão Designer de consultas genérico")|Alterne entre o designer de consultas genéricas e o designer de consultas gráficas, preservando a exibição do texto da consulta ou do procedimento armazenado.|  
-|![Execute a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "executar a consulta")|Selecione todas as colunas da tabela selecionada.|  
+|![Ícone do botão Designer de consultas genérico](../../reporting-services/report-data/media/icongenericquerydesigner.gif "Ícone do botão Designer de consultas genérico")|Alterne entre o designer de consultas genéricas e o designer de consultas gráficas, preservando a exibição do texto da consulta ou do procedimento armazenado.|  
+|![Executar a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Executar a consulta")|Selecione todas as colunas da tabela selecionada.|  
   
 ### <a name="command-type-storedprocedure"></a>Tipo de comando StoredProcedure  
  No tipo **StoredProcedure** , o designer de consultas gráficas exibe uma lista suspensa dos procedimentos armazenados disponíveis na fonte de dados e um painel Resultado. A tabela a seguir descreve a função de cada painel.  
@@ -140,7 +140,7 @@ EXEC uspGetEmployeeManagers '1';
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas.|  
 |**Importar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Execute a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "executar a consulta")|Execute o procedimento armazenado selecionado.|  
+|![Executar a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Executar a consulta")|Execute o procedimento armazenado selecionado.|  
 |Lista suspensa Procedimento armazenado|Clique na seta para baixo para exibir uma lista dos procedimentos armazenados disponíveis na fonte de dados. Clique em qualquer procedimento armazenado da lista para selecioná-lo.|  
   
 #### <a name="example"></a>Exemplo  

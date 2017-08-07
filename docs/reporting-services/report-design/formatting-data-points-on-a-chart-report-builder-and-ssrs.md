@@ -1,5 +1,5 @@
 ---
-title: "Formatando pontos de dados em um gráfico (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Formatar pontos de dados em um gráfico (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -18,15 +18,15 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d1514b7ec2a5f1d7d2d5abd3513db47a208a2e24
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatando pontos de dados em um gráfico (Construtor de Relatórios e SSRS)
-Em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , um ponto de dados é a menor entidade individual no gráfico. Em gráficos sem-forma, os pontos de dados são representados de acordo com seu tipo de gráfico. Por exemplo, uma série de linhas consiste em um ou mais pontos de dados conectados. Em gráficos com forma, os pontos de dados são representados por fatias individuais ou segmentos acrescidos a todo o gráfico. Por exemplo, em um gráfico de pizza, cada pedaço é um ponto de dados. Para obter mais informações, consulte [Tipos de gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
+Em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , um ponto de dados é a menor entidade individual no gráfico. Em gráficos sem-forma, os pontos de dados são representados de acordo com seu tipo de gráfico. Por exemplo, uma série de linhas consiste em um ou mais pontos de dados conectados. Em gráficos com forma, os pontos de dados são representados por fatias individuais ou segmentos acrescidos a todo o gráfico. Por exemplo, em um gráfico de pizza, cada pedaço é um ponto de dados. Para obter mais informações, consulte [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
   
  Um ou mais pontos de dados formam uma série. Por padrão, todas as opções de formatação são aplicadas a todos os pontos de dados na série. Caso queira especificar propriedades para pontos de dados individuais, você pode especificar um campo ou expressão na série que formata um ponto de dados individual em tempo de execução com base no conjunto de dados.  
   
@@ -66,13 +66,13 @@ Em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 |Palavra-chave de gráfico|Description|Aplicável ao tipo de gráfico|Exemplo de uma expressão simples equivalente|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|Valor Y do ponto de dados.|Todos|`=Fields!MyDataField.Value`|  
-|#VALY2|Valor Y número 2 do ponto de dados.|Intervalo, bolha|Nenhum.|  
-|#VALY3|Valor Y número 3 do ponto de dados.|Ações, velas|Nenhum.|  
-|#VALY4|Valor Y número 4 do ponto de dados.|Ações, velas|Nenhum.|  
+|#VALY2|Valor Y número 2 do ponto de dados.|Intervalo, bolha|Nenhuma|  
+|#VALY3|Valor Y número 3 do ponto de dados.|Ações, velas|Nenhuma|  
+|#VALY4|Valor Y número 4 do ponto de dados.|Ações, velas|Nenhuma|  
 |#SERIESNAME|Nome da série.|Todos|Nenhuma|  
 |#LABEL|Rótulo do ponto de dados.|Todos|Nenhuma|  
 |#AXISLABEL|Rótulo do ponto de dados de eixo.|Forma|`=Fields!MyDataField.Value`|  
-|#INDEX|Índice do ponto de dados.|Todos|Nenhum.|  
+|#INDEX|Índice do ponto de dados.|Todos|Nenhuma|  
 |#PERCENT|Porcentagem do valor Y do ponto de dados.|Todos|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
 |#TOTAL|Total de todos os valores Y na série.|Todos|`=Sum(Fields!MyDataField.Value)`|  
 |#LEGENDTEXT|O texto correspondente ao texto do item de legenda.|Todos|Nenhuma|  
@@ -102,7 +102,7 @@ Em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
   
 ## <a name="see-also"></a>Consulte também  
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Formatando rótulos dos eixos de um gráfico #40;Construtor de Relatórios e SSRS#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatando rótulos dos eixos de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Formatar rótulos de eixo como datas ou moedas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Tutorial: Adicionar um gráfico de pizza ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   

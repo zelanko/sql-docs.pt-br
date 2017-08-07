@@ -18,11 +18,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7c25d6665198e0392aa70d649ca658adec84d2de
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxe do caminho do elemento para dados de relatório XML (SSRS)
@@ -37,9 +37,9 @@ ms.lasthandoff: 06/22/2017
 |----------------|--------------|  
 |**bold**|Texto que deve ser digitado exatamente como mostrado.|  
 |&#124; (barra vertical)|Separa itens de sintaxe. Somente um desses itens poderá ser selecionado.|  
-|`[ ]`(parênteses)|Itens de sintaxe opcionais. Não digite os colchetes.|  
+|`[ ]` (colchetes)|Itens de sintaxe opcionais. Não digite os colchetes.|  
 |**{ }** (chaves)|Delimita parâmetros de itens de sintaxe.|  
-|[**,**...*n*]|Indica que o item precedente pode ser repetido  *n*  número de vezes. As ocorrências são separadas por vírgulas.|  
+|[**,**...*n*]|Indica que o item precedente pode ser repetido *n* vezes. As ocorrências são separadas por vírgulas.|  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -80,13 +80,13 @@ XMLLocalName :: =
 |Termo|Definição|  
 |----------|----------------|  
 |Caminho do elemento|Define a sequência de nós a serem transpostos dentro do documento XML para recuperar dados do campo para um conjunto de dados com uma fonte de dados XML.|  
-|**ElementNode**|O nó XML no documento XML. Os nós são designados por marcas e existem em uma relação hierárquica com outros nós. Por exemplo, \<clientes > é o nó de elemento raiz. \<Cliente > é um subelemento de \<clientes >.|  
+|**ElementNode**|O nó XML no documento XML. Os nós são designados por marcas e existem em uma relação hierárquica com outros nós. Por exemplo, \<Clientes> é o nó do elemento raiz. \<Cliente> é um subelemento de \<Clientes>.|  
 |**XMLName**|O nome do nó. Por exemplo, o nome do nó Clientes é Clientes. Um **XMLName** pode ser prefixado com um identificador de namespace para nomear exclusivamente cada nó.|  
 |**Codificação**|Indica que o **Value** deste elemento é XML codificado e precisa ser decodificado e incluído como um subelemento desse elemento.|  
 |**FieldList**|Define o conjunto de elementos e atributos a serem usados para recuperar dados.<br /><br /> Se não estiverem especificados, todos os atributos e subelementos serão usados como campos. Se a lista de campos vazia for especificada (**{}**), nenhum campo deste nó será usado.<br /><br /> Um **FieldList** pode não conter um **Value** nem um **Element** ou **ElementNode**.|  
 |**Campo**|Especifica os dados recuperados como um campo do conjunto de dados.|  
-|**Atributo**|Um par de nome-valor dentro do **ElementNode**. Por exemplo, no nó do elemento \<Customer ID = "1" >, **ID** é um atributo e  **@ID(inteiro)** retorna "1" com um tipo inteiro no campo de dados correspondente **ID**.|  
-|**Value**|O valor do elemento. **Value** pode ser usado apenas no último **ElementNode** no caminho do elemento. Por exemplo, porque \<retornar > é um nó folha, se ele for incluído no final de um caminho de elemento, o valor de **retornar {@}** é **cadeira**.|  
+|**Atributo**|Um par de nome-valor dentro do **ElementNode**. Por exemplo, no nó do elemento \<ID do Cliente="1">, **ID** é um atributo e **@ID(Integer)** retorna "1" com um tipo inteiro na **ID** do campo de dados correspondente.|  
+|**Valor**|O valor do elemento. **Value** pode ser usado apenas no último **ElementNode** no caminho do elemento. Por exemplo, como \<Return> é um nó folha, se ele for incluído no final de um caminho do elemento, o valor de **Return {@}** será **Chair**.|  
 |**Element**|O valor do subelemento nomeado. Por exemplo, Clientes {}/Cliente {}/Sobrenome recupera valores apenas para o elemento Sobrenome.|  
 |**Tipo**|O tipo de dados opcional a ser usado para o campo criado desse elemento.|  
 |**NamespacePrefix**|O**NamespacePrefix** é definido no elemento Consulta XML. Se não existir nenhum elemento Consulta XML, os namespaces no **ElementPath** XML serão ignorados. Se existir um elemento Consulta XML, o **ElementPath** XML terá um atributo **IgnoreNamespaces**opcional. Se IgnoreNamespaces for **true**, os namespaces no **ElementPath** XML e no documento XML serão ignorados. Para obter mais informações, consulte [Sintaxe de consulta XML para dados de relatório XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).|  
