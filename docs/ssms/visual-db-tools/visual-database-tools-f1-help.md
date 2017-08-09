@@ -29,7 +29,7 @@ Estes tópicos discutem os comandos e opções nas caixas de diálogo e janelas 
 Para acessar tópicos da caixa de diálogo, pressione F1 quando você tiver uma caixa de diálogo aberta e ela possuir foco. Para acessar os tópicos da janela de propriedades, clique na janela Propriedades e pressione F1.  
   
 ## <a name="see-also"></a>Consulte também  
-[Criar tabelas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
-[Tópicos de instruções de como criar consultas e exibições &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Criar tabelas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 
