@@ -18,12 +18,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Trabalhando com instantâneos (portal da Web)
-<a id="working-with-snapshots-web-portal" class="xliff"></a>
+# <a name="working-with-snapshots-web-portal"></a>Trabalhando com instantâneos (portal da Web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -34,8 +33,7 @@ Você pode controlar se os instantâneos são criados para um relatório selecio
    
 Você pode criar um instantâneo de cache para permitir um carregamento mais rápido de propriedades específicas de execução. Você também pode trabalhar com instantâneos de histórico para capturas pontuais.  
   
-## Criando um instantâneo de cache
-<a id="creating-a-cache-snapshot" class="xliff"></a>  
+## <a name="creating-a-cache-snapshot"></a>Criando um instantâneo de cache  
   
 Você pode criar um instantâneo fazendo o seguinte.  
   
@@ -47,8 +45,7 @@ Você pode criar um instantâneo fazendo o seguinte.
   
 3.  Selecione **Criar um instantâneo do cache quando eu clicar em Aplicar, nesta página** se quiser criar um instantâneo do cache agora. Se você selecionar somente essa opção, o instantâneo não será atualizado.  
   
-## Criar, modificar e excluir instantâneos de histórico
-<a id="create-modify-and-delete-history-snapshots" class="xliff"></a>  
+## <a name="create-modify-and-delete-history-snapshots"></a>Criar, modificar e excluir instantâneos de histórico  
   
 Para trabalhar com instantâneos de histórico, gerencie um relatório e selecione **Instantâneos de Histórico**.  
   
@@ -66,8 +63,7 @@ Para gerar um instantâneo de histórico, o relatório deve ser executado de mod
   
 3.  Você poderá selecionar um instantâneo de histórico a ser exibido. Instantâneos exibidos em histórico de relatórios só são diferenciados pela data e hora em que foram criados. Não existe indicação visual para distinguir se um relatório foi gerado em resposta a uma operação programada ou manual.  
   
-### Agenda e configurações
-<a id="schedule-and-settings" class="xliff"></a>  
+### <a name="schedule-and-settings"></a>Agenda e configurações  
   
 Selecionar **Agenda e Configurações** fornecerá opções adicionais para agendar e controlar a retenção dos instantâneos criados.  
   
@@ -81,8 +77,7 @@ Você também pode definir como quer reter os instantâneos.
   
 Marcar essa opção copiará um instantâneo de relatório gerado com base nas propriedades de execução de relatório no histórico de relatórios. Você pode definir propriedades de execução de relatório para executar um relatório de um instantâneo gerado. Definindo essa propriedade de histórico de relatórios você pode manter um registro de todos os instantâneos gerados com o tempo, colocando cópias deles no histórico de relatórios.
 
-## Próximas etapas
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Próximas etapas
 
 [Portal da Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Trabalhando com relatórios paginados](working-with-paginated-reports-web-portal.md)  

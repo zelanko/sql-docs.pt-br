@@ -1,5 +1,5 @@
 ---
-title: "Migrar uma instalação do Reporting Services (Modo Nativo) | Microsoft Docs"
+title: "Migrar uma instalação do Reporting Services (modo nativo) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -23,11 +23,11 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b1e79ca61f1de78ca82cb65aadccd9ea214090a7
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/03/2017
 
 [!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)]
 
-Este tópico contém instruções passo a passo sobre como migrar uma das seguintes versões com suporte de uma implantação de modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para uma nova instância do SQL Server Reporting Services:  
+Este tópico fornece instruções passo a passo para a migração de uma das seguintes versões com suporte de um [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] implantação de modo nativo para uma nova instância do SQL Server Reporting Services:  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
@@ -47,7 +47,7 @@ Este tópico contém instruções passo a passo sobre como migrar uma das seguin
 
 Para obter informações sobre como migrar uma implantação do modo do SharePoint do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , veja [Migrar uma instalação do Reporting Services &#40;modo do SharePoint&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
- A migração é definida como a movimentação de arquivos de dados de aplicativo para uma nova instância do SQL Server. Estes são os motivos comuns para a migração da sua instalação:  
+ Migração é definida como a movimentação de arquivos de dados do aplicativo para uma nova instância do SQL Server. Estes são os motivos comuns para a migração da sua instalação:  
   
 -   Você tem uma implantação em grande escala ou requisitos de tempo de atividade.  
   
@@ -63,12 +63,12 @@ Para obter informações sobre como migrar uma implantação do modo do SharePoi
   
 -   Fazer backup da chaves de criptografia.  
   
--   Instalar uma nova instância do SQL Server. Se você estiver usando o mesmo hardware, poderá instalar o SQL Server lado a lado com a instalação existente se for uma das versões com suporte.  
+-   Instale uma nova instância do SQL Server. Se você estiver usando o mesmo hardware, você pode instalar o SQL Server lado a lado com a instalação existente se for uma versão com suporte.  
   
     > [!TIP]  
     >  Uma instalação lado a lado pode exigir que você instale o SQL Server como uma instância nomeada.  
   
--   Mover o banco de dados do servidor de relatório e outros arquivos de aplicativo da instalação existente para a nova instalação do SQL Server.  
+-   Mova o banco de dados do servidor de relatório e outros arquivos de aplicativo da instalação existente para sua nova instalação do SQL Server.  
   
 -   Mover todos os arquivos de aplicativos personalizados para a nova instalação.  
   
@@ -96,9 +96,9 @@ Para obter informações sobre como migrar uma implantação do modo do SharePoi
 -   Se houver poucos itens, você poderá republicar relatórios, modelos de relatório e fontes de dados compartilhadas do Designer de Relatórios, do Designer de Modelo e do Construtor de Relatórios no novo servidor de relatório. Você deve recriar atribuições de função, assinaturas, agendas compartilhadas, agendas de instantâneo de relatório, propriedades personalizadas definidas em relatórios ou outros itens, segurança de item de modelo e propriedades definidas no servidor de relatório. Você perderá os dados do histórico de relatório e do log de execução de relatório.  
   
 ##  <a name="bkmk_before_you_start"></a> Antes de iniciar  
- Embora você esteja migrando e não atualizando a instalação, considere a possibilidade de executar o Supervisor de Atualização na instalação existente para identificar problemas que poderiam afetar a migração. Esta etapa será especialmente útil se você estiver migrando um servidor de relatório que não instalou ou configurou. Ao executar o Supervisor de Atualização, você poderá obter informações sobre configurações personalizadas que podem não ter suporte em uma nova instalação do SQL Server.  
+ Embora você esteja migrando e não atualizando a instalação, considere a possibilidade de executar o Supervisor de Atualização na instalação existente para identificar problemas que poderiam afetar a migração. Esta etapa será especialmente útil se você estiver migrando um servidor de relatório que não instalou ou configurou. Ao executar o Supervisor de atualização, você pode obter informações sobre configurações personalizadas que não podem ter suporte em uma nova instalação do SQL Server.  
   
- Além disso, você deve estar ciente de várias alterações importantes feitas no SQL Server Reporting Services que afetarão a maneira como a instalação será migrada:
+ Além disso, você deve estar ciente de várias alterações importantes no SQL Server Reporting Services que afetam como migrar sua instalação:
  
 - O novo [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] substituiu o Gerenciador de Relatórios.
   
@@ -118,7 +118,7 @@ Para obter informações sobre como migrar uma implantação do modo do SharePoi
   
 - Se você usar folhas de estilos em cascata personalizadas no ambiente de relatório, elas não serão migradas. Você deverá movê-las manualmente após a migração.  
   
-Para obter mais informações sobre as alterações no SQL Server Reporting Services, veja a documentação do Supervisor de Atualização e [Novidades no Reporting Services](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).  
+Para obter mais informações sobre as alterações no SQL Server Reporting Services, consulte a documentação do Supervisor de atualização e [What's New in Reporting Services](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
 ## <a name="bkmk_backup"></a> Arquivos e dados para backup
 
@@ -126,7 +126,7 @@ Para obter mais informações sobre as alterações no SQL Server Reporting Serv
   
 1.  Faça backup da chave de criptografia do banco de dados do servidor de relatório. Esta etapa é fundamental para o sucesso da migração. Mais adiante no processo de migração, você deverá restaurar a chave de criptografia para que o servidor de relatório tenha novamente acesso aos dados criptografados. Para fazer backup da chave, use o Gerenciador de Configurações do Reporting Services.  
   
-2.  Faça backup do banco de dados do servidor de relatório usando qualquer um dos métodos suportados de backup de bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, confira as instruções sobre como fazer backup do banco de dados do servidor de relatório em [Movendo os bancos de dados do servidor de relatório para outro computador &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+2.  Faça backup do banco de dados do servidor de relatório usando qualquer um dos métodos suportados de backup de bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, confira as instruções sobre como fazer backup do banco de dados do servidor de relatório em [Movendo os bancos de dados do servidor de relatório para outro computador &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 3.  Faça backup dos arquivos de configuração do servidor de relatório. Os arquivos dos quais deve ser feito backup incluem:  
   
@@ -140,7 +140,7 @@ Para obter mais informações sobre as alterações no SQL Server Reporting Serv
   
     5.  Reportingservicesservice.exe.config  
   
-    6.  Web.config para o aplicativo [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] do Servidor de Relatório.  
+    6.  Web. config para o servidor de relatório [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] aplicativo.  
   
     7.  Machine.config de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] caso ele tenha sido modificado para operações do servidor de relatório.  
 
@@ -162,7 +162,7 @@ Para obter mais informações sobre as alterações no SQL Server Reporting Serv
   
  Para mover o banco de dados do servidor de relatório, faça o seguinte:  
   
-1.  Escolha a instância [!INCLUDE[ssDE](../../includes/ssde-md.md)] a ser usada. O SQL Server Reporting Services exige que você use uma das seguintes versões para hospedar o banco de dados do servidor de relatório:  
+1.  Escolha a instância [!INCLUDE[ssDE](../../includes/ssde-md.md)] a ser usada. SQL Server Reporting Services requer que você use uma das seguintes versões para hospedar o banco de dados do servidor de relatório:  
   
     -   SQL Server 2016  
   
@@ -198,7 +198,7 @@ Para obter mais informações sobre as alterações no SQL Server Reporting Serv
   
     -   Outros assemblies personalizados não devem exigir recompilação.  
   
-2.  Mova os assemblies para o novo servidor de relatório e para as pastas /bin. No SQL Server, os binários do servidor de relatório são localizados no seguinte local para a instância padrão do servidor de relatório:  
+2.  Mova os assemblies para a nova pasta de \bin do servidor de relatório. No SQL Server, os binários do servidor de relatório estão localizados no seguinte local para a instância padrão do servidor de relatório:  
   
      `\Program files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\bin`  
   
@@ -218,54 +218,54 @@ Para obter mais informações sobre as alterações no SQL Server Reporting Serv
 
 ## <a name="bkmk_configure_reportserver"></a> Configurar o servidor de relatório
 
- Configure as URLs do serviço Web Servidor de Relatórios e do portal da Web e configure a conexão com o banco de dados do servidor de relatório.  
+ Configurar as URLs para o portal de web e serviço Web servidor de relatório e configurar a conexão para o banco de dados do servidor de relatório.  
   
- Se você estiver migrando uma implantação em expansão, coloque todos os nós do servidor de relatório offline e migre um servidor de cada vez. Depois que o primeiro servidor de relatório for migrado e se conectar ao banco de dados de servidor de relatório, a versão desse banco de dados será automaticamente atualizada para a versão do banco de dados do SQL Server.  
+ Se você estiver migrando uma implantação em expansão, coloque todos os nós do servidor de relatório offline e migre um servidor de cada vez. Depois que o primeiro servidor de relatório é migrado e ele se conecta com êxito para o banco de dados do servidor de relatório, a versão de banco de dados do servidor de relatório é atualizada automaticamente para a versão de banco de dados do SQL Server.  
   
 > [!IMPORTANT]  
 >  Se qualquer um dos servidores de relatório da implantação em expansão estiver online e não foi migrado, poderá ocorrer uma exceção rsInvalidReportServerDatabase porque ele está usando um esquema mais antigo quando conectado ao atualizado.  
   
 > [!NOTE]  
->  Se o servidor de relatório migrado foi configurado como o banco de dados compartilhado para uma implantação em expansão, exclua todas as chaves de criptografia antigas da tabela **Keys** no banco de dados do **ReportServer** , antes de configurar o serviço de servidor de relatório. Se as chaves não forem removidas, o servidor de relatório migrado tentará inicializar em modo de implantação em expansão. Para obter mais informações, consulte [Adicionar e remover chaves de criptografia para implantação escalável &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) e [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+>  Se o servidor de relatório migrado foi configurado como o banco de dados compartilhado para uma implantação em expansão, exclua todas as chaves de criptografia antigas da tabela **Keys** no banco de dados do **ReportServer** , antes de configurar o serviço de servidor de relatório. Se as chaves não forem removidas, o servidor de relatório migrado tentará inicializar em modo de implantação em expansão. Para obter mais informações, veja [Adicionar e remover chaves de criptografia para implantação em expansão &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) e [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
 >   
->  As chaves em expansão não podem ser excluídas com o Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As chaves antigas devem ser excluídas da tabela **Keys** no banco de dados do **ReportServer** usando o SQL Server Management Studio. Exclua todas as linhas da tabela Keys. Isso desmarcará a tabela e a preparará para restaurar apenas a chave simétrica, conforme documentado nas etapas a seguir.  
+>  As chaves em expansão não podem ser excluídas com o Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. As chaves antigas devem ser excluídas da tabela **Keys** no banco de dados do **ReportServer** usando o SQL Server Management Studio. Exclua todas as linhas da tabela Keys. Isso desmarcará a tabela e a preparará para restaurar apenas a chave simétrica, conforme documentado nas etapas a seguir.  
 >   
->  Antes de excluir as chaves, é recomendável primeiro fazer backup da chave de Criptografia Simétrica. Você pode usar o Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para fazer backup da chave. Abra o Configuration Manager, clique na guia **Chaves de Criptografia** e clique no botão **Backup** . Você também pode gerar um script de comandos WMI para fazer backup da chave de criptografia. Para obter mais informações sobre o WMI, consulte [Método BackupEncryptionKey &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md).  
+>  Antes de excluir as chaves, é recomendável primeiro fazer backup da chave de Criptografia Simétrica. Você pode usar o Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para fazer backup da chave. Abra o Configuration Manager, clique na guia **Chaves de Criptografia** e clique no botão **Backup** . Você também pode gerar um script de comandos WMI para fazer backup da chave de criptografia. Para obter mais informações sobre o WMI, veja [Método BackupEncryptionKey &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md).  
   
-1.  Inicie o Gerenciador de Configurações do Reporting Services e se conecte à instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recém-instalada. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Inicie o Gerenciador de Configurações do Reporting Services e se conecte à instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recém-instalada. Para obter mais informações, consulte [Gerenciador de Configurações do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2.  Configure URLs para o servidor de relatório e o portal da Web. Para obter mais informações, veja [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+2.  Configure as URLs para o servidor de relatório e o portal da web. Para obter mais informações, veja [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
-3.  Configure o banco de dados do servidor de relatório selecionando o banco de dados do servidor de relatório existente da instalação anterior. Após a configuração bem-sucedida, os serviços do servidor de relatório serão reiniciados e, uma vez estabelecida a conexão com o banco de dados do servidor de relatório, o banco de dados será automaticamente atualizado para o SQL Server Reporting Services. Para obter mais informações sobre como executar o Assistente para Alterar Banco de Dados, usado para criar ou selecionar um banco de dados do servidor de relatório, consulte [Criar um banco de dados de servidor de relatório do modo nativo](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+3.  Configure o banco de dados do servidor de relatório selecionando o banco de dados do servidor de relatório existente da instalação anterior. Após a configuração bem-sucedida, os serviços de servidor de relatório serão reiniciados e, depois que uma conexão é feita para o banco de dados do servidor de relatório, o banco de dados será atualizado automaticamente para o SQL Server Reporting Services. Para obter mais informações sobre como executar o Assistente de banco de dados de alteração que você usa para criar ou selecionar um banco de dados do servidor de relatório, consulte [criar um banco de dados de servidor de relatório de modo nativo](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
 4.  Restaure as chaves de criptografia. Esta etapa é necessária para permitir a criptografia reversível em credenciais e cadeias de conexão pré-existentes que já estão no banco de dados do servidor de relatório. Para saber mais, confira [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
 5.  Se você instalou o servidor de relatório em um novo computador e está usando o Firewall do Windows, verifique se a porta TCP em que o servidor de relatório escuta está aberta. Por padrão, essa porta é a 80. Para obter instruções, veja [Configurar um firewall para acesso ao servidor de relatório](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
-6.  Se você desejar administrar localmente seu servidor de relatório de modo nativo, configure o sistema operacional para permitir a administração local com o portal da Web. Para obter mais informações, consulte [Configurar um servidor de relatório no modo nativo para a Administração Local](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+6.  Se você desejar administrar localmente seu servidor de relatório de modo nativo, você precisa configurar o sistema operacional para permitir a administração local com o portal da web. Para obter mais informações, consulte [configurar um servidor de relatório do modo nativo para administração Local](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
 
 ## <a name="bkmk_copy_custom_config"></a> Copiar parâmetros de configuração personalizados para o arquivo RSReportServer.config
 
-Se você modificou os arquivos RSReportServer.config ou RSWebApplication.config na instalação anterior, deverá fazer as mesmas modificações no novo arquivo RSReportServer.config. A lista a seguir resume alguns dos motivos pelos quais você pode ter modificado o arquivo de configuração anterior e apresenta links para informações adicionais sobre como definir as mesmas configurações no SQL Server 2016.  
+Se você modificou os arquivos RSReportServer.config ou RSWebApplication.config na instalação anterior, deverá fazer as mesmas modificações no novo arquivo RSReportServer.config. A lista a seguir resume alguns dos motivos pelos quais você pode ter modificado o arquivo de configuração anterior e fornece links para informações adicionais sobre como configurar as mesmas configurações no SQL Server 2016.  
   
 |Personalização|Informações|  
 |-------------------|-----------------|  
-|Entrega de email do Servidor de Relatório com configurações personalizadas|[Configurações de email – Modo Nativo do Reporting Services](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
+|Entrega de email do Servidor de Relatório com configurações personalizadas|[Configurações - Reporting Services modo nativo de email](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |Configurações de informações de dispositivo|[Personalizar parâmetros de extensão de renderização em RSReportServer.config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
 
 ## <a name="bkmk_windowsservice_group"></a> Grupo de Serviços do Windows e ACLs de segurança
 
- No [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], há um grupo de serviços, o grupo de Serviços Windows do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], usado para criar ACLs de segurança para todos os arquivos, pastas e chaves do registro instalados com o SQL Server Reporting Services. Este nome de grupo do Windows aparece no formato SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*>.  
+ Em [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], há um grupo de serviço, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] grupo de serviço do Windows, que é usado para criar ACLs de segurança para todas as chaves do registro, arquivos e pastas que são instaladas com o SQL Server Reporting Services. Este nome de grupo do Windows aparece no formato SQLServerReportServerUser$\<*nome_do_computador*>$\<*instance_name*>.  
 
 ## <a name="bkmk_verify"></a> Verificar a implantação
 
 1.  Teste os diretórios virtuais do servidor de relatório e do [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] abrindo um navegador e digitando a URL. Para obter mais informações, veja [Verificar uma instalação do Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
   
-2.  Teste os relatórios e verifique se eles contêm os dados esperados. Revise as informações de fonte de dados para detectar se as informações de conexão de fonte de dados ainda estão especificadas. O servidor de relatório usa o modelo de objeto de relatório ao processar e renderizar relatórios, mas não substitui os constructos [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] com elementos de linguagem de definição do novo relatório. Para obter mais informações sobre como os relatórios existentes são executados em uma nova versão do servidor de relatório, consulte [Atualizar relatórios](../../reporting-services/install-windows/upgrade-reports.md).  
+2.  Teste os relatórios e verifique se eles contêm os dados esperados. Revise as informações de fonte de dados para detectar se as informações de conexão de fonte de dados ainda estão especificadas. O servidor de relatório usa o modelo de objeto do relatório quando o processamento e renderização de relatórios, mas não substitui [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] constrói com novos elementos de linguagem de definição de relatório. Para saber mais sobre como relatórios existentes são executados em uma nova versão do seu servidor de relatório, consulte [atualizar relatórios](../../reporting-services/install-windows/upgrade-reports.md).  
 
 ## <a name="bkmk_remove_unused"></a> Remover programas e arquivos que não são usados
 
-Depois de migrar o servidor de relatório com êxito para uma nova instância, é recomendável executar as etapas descritas a seguir para remover programas e arquivos que não são mais necessários.  
+Depois que você migrou com êxito o servidor de relatório para uma nova instância, convém executar as seguintes etapas para remover programas e arquivos que não são mais necessários.  
   
 1.  Desinstale a versão anterior do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] caso não precise mais dela. Esta etapa não exclui os seguintes itens, mas você poderá removê-los manualmente se não precisar mais deles:  
   
@@ -286,9 +286,9 @@ Depois de migrar o servidor de relatório com êxito para uma nova instância, �
 ## <a name="next-steps"></a>Próximas etapas
 
 [Migrar uma instalação do Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)   
-[Banco de dados do servidor de relatório](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+[Banco de dados de servidor de relatório](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 [Atualizar e migrar o Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Compatibilidade com versões anteriores do Reporting Services](../../reporting-services/reporting-services-backward-compatibility.md)   
-[Gerenciador de Configurações do Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[Gerenciador de configuração do Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

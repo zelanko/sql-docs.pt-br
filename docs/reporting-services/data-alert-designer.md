@@ -26,11 +26,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Designer de Alertas de Dados
-<a id="data-alert-designer" class="xliff"></a>
+# <a name="data-alert-designer"></a>Designer de Alertas de Dados
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)][!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -68,8 +67,7 @@ Você cria e edita definições de alerta de dados no Designer de Alertas de Dad
  ![Áreas dentro da interface de usuário do Designer de alertas](../reporting-services/media/rs-alertdesigner.gif "áreas dentro da interface de usuário do Designer de alertas")  
   
   
-### Dados do alerta
-<a id="alert-data" class="xliff"></a>  
+### <a name="alert-data"></a>Dados do alerta  
  Quando você abre o Designer de Alerta de Dados, ele gera e disponibiliza todos os feeds de dados do relatório e a lista suspensa **Nome dos dados do relatório** contém os nomes dos feeds. Os feeds de dados são armazenados em cache na memória enquanto você cria a definição do alerta, e a tabela que exibe os dados do feed de dados é populada rapidamente quando você alterna entre feeds de dados para explorar os dados do relatório.  
   
  A primeira etapa na criação de uma definição de alerta de dados é selecionar o feed de dados de relatório que contém os dados a serem monitorados pelo alerta. Os relatórios podem ter zero ou vários feeds de dados. Se um relatório não tiver nenhum feed de dados, não será possível criar alertas para ele. Um feed de dados pode ser gerado por qualquer região de dados, inclusive todos os tipos de gráficos, indicadores, medidores, bem como tabelas, matrizes e listas.  
@@ -82,14 +80,12 @@ Você cria e edita definições de alerta de dados no Designer de Alertas de Dad
   
  Alguns relatórios têm milhões de linhas de dados. A tabela mostra apenas as primeiras 100 linhas de dados no feed.  
   
-### Nome do Alerta
-<a id="alert-name" class="xliff"></a>  
+### <a name="alert-name"></a>Nome do Alerta  
  Por padrão, a definição de alerta tem o mesmo nome que o relatório. É possível alterar o nome do alerta para que seja mais significativo. Isso facilita o gerenciamento de seus alertas, com a determinação de quais alertas devem ser atualizados, excluídos e assim por diante.  
   
  Você pode criar vários alertas em um relatório. É possível ter várias definições de alertas com o mesmo nome, mas é recomendável que os nomes dos alertas sejam exclusivos. Isso facilita a diferenciação e o gerenciamento de definições de alertas. Você pode exibir uma lista de todos os alertas criados no Gerenciador de Alerta de Dados. Para obter mais informações, consulte [Gerenciador de Alertas de dados para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md) e [Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
-### Regras e cláusulas
-<a id="rules-and-clauses" class="xliff"></a>  
+### <a name="rules-and-clauses"></a>Regras e cláusulas  
  O escopo das alterações de dados e nas regras de alerta definem as alterações de dados que acionam o alerta. Escopo das alterações de dados:  
   
 -   **Todos os dados têm**— pelo menos um valor atende às regras especificadas pela condição.  
@@ -160,8 +156,7 @@ Você cria e edita definições de alerta de dados no Designer de Alertas de Dad
   
  São incluídas regras e cláusulas na mensagem de alerta de dados.  
   
-### Configurações da agenda
-<a id="schedule-settings" class="xliff"></a>  
+### <a name="schedule-settings"></a>Configurações da agenda  
  A agenda definida para o alerta de dados define o padrão de recorrência para enviar a mensagem de alerta de dados, e quando iniciar e parar de enviar as mensagens de alerta. Os padrões são: uma vez, por minuto, diariamente e semanalmente. Embora um alerta tenha apenas uma agenda, é possível criar padrões complexos de recorrência que atendam à maioria das necessidades de negócios com o uso desses intervalos. Os seguintes são exemplos de padrões de recorrência comuns para uso em agendas:  
   
 -   **Diariamente a cada 10 dias** — envia alertas uma vez por dia, a cada 10 dias.  
@@ -179,8 +174,7 @@ Você cria e edita definições de alerta de dados no Designer de Alertas de Dad
 > [!IMPORTANT]  
 >  É recomendável que você não use um padrão de recorrência mais frequente que diariamente, a menos que você tenha uma razão comercial importante para fazer isso. O processamento da definição de alerta de dados em tempo real não é um cenário com suporte. O processamento muito frequente das definições de alerta de dados afeta o desempenho do servidor de relatórios e a implantação global do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-### Configurações de email
-<a id="email-settings" class="xliff"></a>  
+### <a name="email-settings"></a>Configurações de email  
  Você especifica os endereços de email de destinatários para receber mensagens de alerta de dados por email na opção **Destinatário(s)** . Vários endereços de email são separados por ponto-e-vírgulas, da mesma maneira que você faz com mensagens de email do Microsoft Office Outlook. Você também pode especificar grupos de distribuição como destinatários, o que torna o gerenciamento da lista de destinatários mais fácil e eficiente. Se o SharePoint puder determinar seu endereço de email quando você estiver criando uma definição de alerta, seu endereço de email será adicionado automaticamente à lista de destinatários. Caso contrário, você precisará adicionar-se explicitamente como um destinatário.  
   
  O assunto padrão do email é **de alertas de dados para \<nome do alerta >**. Você pode alterar o assunto para que se ajuste às suas necessidades.  
@@ -223,8 +217,7 @@ Você cria e edita definições de alerta de dados no Designer de Alertas de Dad
   
 -   [Criar um Alerta de Dados no Designer de Alertas de Dados](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 
-## Consulte também
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Consulte também
 
 [Alertas de dados do Reporting Services](../reporting-services/reporting-services-data-alerts.md)   
 [Gerenciador de alertas de dados para os administradores de alerta](../reporting-services/data-alert-manager-for-alerting-administrators.md)  

@@ -19,11 +19,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Reporting Services Data Alerts
-<a id="reporting-services-data-alerts" class="xliff"></a>
+# <a name="reporting-services-data-alerts"></a>Reporting Services Data Alerts
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)][!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -58,8 +57,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
   
  ![Fluxo de trabalho alertas do Reporting Services](../reporting-services/media/rs-alertingworkflow.gif "fluxo de trabalho alertas do Reporting Services")  
   
-### Relatórios com suporte de alertas de dados
-<a id="reports-supported-by-data-alerts" class="xliff"></a>  
+### <a name="reports-supported-by-data-alerts"></a>Relatórios com suporte de alertas de dados  
  Você pode criar alertas de dados em todos os tipos de relatórios profissionais que são escritos no idioma de definição de relatório (RDL) e criados no Designer de Relatórios ou no Construtor de Relatórios. Relatórios que incluem regiões de dados, como tabelas e gráficos, relatórios com sub-relatórios e relatórios complexos com vários grupos de colunas paralelos e regiões de dados aninhadas. Os únicos requisitos são o relatório incluir pelo menos uma região de dados de qualquer tipo e a fonte de dados de relatório ser configurada para usar credenciais armazenadas ou nenhuma credencial. Você não pode criar um alerta em um relatório que não tenha nenhuma região de dados.  
   
  Você não pode criar alertas de dados em relatórios criados com o [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)].  
@@ -74,34 +72,29 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
   
 -   [Autenticação com o servidor de relatório](../reporting-services/security/authentication-with-the-report-server.md)  
   
-### Executar relatórios
-<a id="run-reports" class="xliff"></a>  
+### <a name="run-reports"></a>Executar relatórios  
  A primeira etapa na criação de uma definição de alerta de dados é localizar o relatório desejado na biblioteca do SharePoint e depois executar o relatório. Não é possível criar um alerta em um relatório não contenha nenhum dado no momento.  
   
  Se o relatório for parametrizado, especifique os valores de parâmetros a serem usados quando você executar o relatório. Os valores de parâmetros serão salvos nas definições de alertas de dados que você cria em um relatório. Os valores são usados quando o relatório é executado novamente como uma etapa no processamento da definição de alertas de dados. Se você quiser alterar os valores de parâmetros necessários para executar novamente o relatório com esses valores de parâmetros e criar uma definição de alerta nessa versão do relatório.  
   
-### Criar definições de alertas de dados
-<a id="create-data-alert-definitions" class="xliff"></a>  
+### <a name="create-data-alert-definitions"></a>Criar definições de alertas de dados  
  O recurso de alertas de dados do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclui o Designer de Alertas de Dados, que você usa para criar definições de alertas de dados.  
   
  Para criar uma definição de alerta de dados, você executa o relatório e abre o Designer de Alertas de Dados do Visualizador de Relatórios do SharePoint no menu **Ações** . Os feeds de dados do relatório são gerados e as primeiras 100 linhas do feed de dados são exibidas em uma tabela de visualização de dados no Designer de Alertas de Dados. Todos os feeds de dados de um relatório são armazenados em cache enquanto você está trabalhando na definição de alerta no Designer de Alertas de Dados. O cache permite alternar rapidamente entre feeds de dados. Quando você reabre uma definição de alerta no Designer de Alertas de Dados, os feeds de dados são atualizados.  
   
  Definições de alertas de dados consistem em regras e cláusulas que os dados de relatório devem satisfazer para disparar uma mensagem de alerta de dados, um agendamento que define a frequência de envio da mensagem de alerta e, opcionalmente, as datas para iniciar e parar o envio da mensagem de alerta, informações como a linha de Assunto e uma descrição a ser incluída na mensagem de alerta e os destinatários da mensagem. Depois de criar uma definição de alerta, você a salva no banco de dados de alertas do SQL Server.  
   
-### Salvar definições de alertas de dados e metadados de alerta
-<a id="save-data-alert-definitions-and-alerting-metadata" class="xliff"></a>  
+### <a name="save-data-alert-definitions-and-alerting-metadata"></a>Salvar definições de alertas de dados e metadados de alerta  
  Quando você instala o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo integrado do SharePoint, o banco de dados de alertas do SQL Server é criado automaticamente.  
   
  As definições de alertas de dados e os metadados de alerta são salvos no banco de dados de alertas. Por padrão, esse banco de dados é denominado ReportingServices\<GUID > Alerting.  
   
  Quando você salva a definição de alerta de dados, o alerta cria um trabalho do SQL Server Agent para a definição do alerta. O trabalho inclui um agendamento de trabalho. O agendamento se baseia no padrão de recorrência que você define na definição de alerta. A execução do trabalho inicia o processamento da definição de alerta de dados.  
   
-### Processar definições de alerta de dados
-<a id="process-data-alert-definitions" class="xliff"></a>  
+### <a name="process-data-alert-definitions"></a>Processar definições de alerta de dados  
  Quando o agendamento do trabalho do SQL Server Agent inicia o processamento da definição de alerta, o relatório é executado para atualizar os feeds de dados de relatório. O serviço de alerta lê os feeds de dados e aplica as regras que as definições de alertas de dados especificam para os valores dos dados. Se um ou mais valores de dados satisfizerem as regras, uma instância de alerta de dados é criada e uma mensagem de alerta de dados com os resultados de alertas é enviada a todos os destinatários por email. Os resultados são linhas de dados de relatório que satisfizeram todas as regras no momento de criação da a instância de alerta. Para impedir várias mensagens de alerta com os mesmos resultados, você pode especificar que as mensagens somente sejam enviadas quando os resultados forem alterados. Nesse caso, uma instância alerta é criada e salva no banco de dados de alertas, mas nenhuma mensagem de alerta é gerada. Se um erro ocorrer, a instância de alerta também será salva no banco de dados de alertas e uma mensagem de alerta com os detalhes sobre o erro é enviada aos destinatários. A seção Diagnóstico e log têm posteriormente neste tópico tem mais informações sobre como registrar em log e solucionar problemas.  
   
-### Enviar mensagens de alerta de dados
-<a id="send-data-alert-messages" class="xliff"></a>  
+### <a name="send-data-alert-messages"></a>Enviar mensagens de alerta de dados  
  As mensagens de alerta de dados são enviadas por email.  
   
  A linha **De** contém um valor fornecido pela configuração de entrega de email do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . A linha **Para** lista os destinatários que você especificou ao criar o alerta no Designer de Alertas de Dados.  
@@ -155,8 +148,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
   
  Por padrão, as configurações MaxRetries e SecondsBeforeRetry se aplicam a todos os eventos que os alertas de dados disparam. Se você quiser mais controle granular das repetições e de atrasos de repetições, poderá adicionar elementos a todo e qualquer manipulador de eventos que especificar valores de MaxRetries e SecondsBeforeRetry diferentes.  
   
-### Manipuladores de Eventos e Repetir
-<a id="event-handlers-and-retry" class="xliff"></a>  
+### <a name="event-handlers-and-retry"></a>Manipuladores de Eventos e Repetir  
  Os manipuladores de eventos são:  
   
 |Manipulador de Eventos|Description|  
@@ -227,8 +219,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
 ##  <a name="DiagnosticsLogging"></a> Diagnóstico e log  
  Os alertas de dados fornecem várias maneiras para ajudar os operadores de informações e administradores a manter o controle de alertas e a compreender porque houve falha de alertas e para ajudar os administradores a usar os logs de execução para saber quais mensagens de alerta foram enviadas para quem, o número de instâncias de alertas e assim por diante.  
   
-### Gerenciador de Alertas de Dados
-<a id="data-alert-manager" class="xliff"></a>  
+### <a name="data-alert-manager"></a>Gerenciador de Alertas de Dados  
  O Gerenciador de Alertas de Dados lista definições de alertas e informações de erro que ajudam os operadores de informações e os administradores de alertas a compreenderem porque ocorreu uma falha. Algumas razões comuns de falha incluem:  
   
 -   O feed de dados do relatório foi alterado e as colunas que eram usadas nas regras da definição de alertas de dados não estão mais incluídas no feed de dados.  
@@ -237,14 +228,12 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
   
 -   O tipo de dados da fonte de dados subjacente foi alterado e a definição de alerta não é mais válida.  
   
-### Logs
-<a id="logs" class="xliff"></a>  
+### <a name="logs"></a>Logs  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece vários logs que podem ajudá-lo a saber mais sobre os relatórios que são executados durante o processamento de definições de alertas de dados, as instâncias de alertas de dados que são criadas e assim sucessivamente. Três logs são particularmente úteis: o log de execução de alerta, o log de execução do servidor de relatório e o log de rastreamento do servidor de relatório.  
   
  Para obter informações sobre outros logs do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , consulte [Fontes e arquivos de log do Reporting Services](../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
-#### Log de execução de alerta
-<a id="alerting-execution-log" class="xliff"></a>  
+#### <a name="alerting-execution-log"></a>Log de execução de alerta  
  O serviço de tempo de execução de alerta grava entradas na tabela ExecutionLogView do banco de dados de alertas. Você pode consultar a tabela ou executar os procedimentos armazenados a seguir para obter informações de diagnóstico mais sofisticadas sobre os alertas de dados salvos no banco de dados de alertas.  
   
 -   ReadAlertData  
@@ -265,12 +254,10 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
   
  Você pode usar o SQL Agent para executar o procedimento armazenado em uma agenda. Para obter mais informações, consulte [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec).  
   
-#### Log de execução de servidor de relatório
-<a id="report-server-execution-log" class="xliff"></a>  
+#### <a name="report-server-execution-log"></a>Log de execução de servidor de relatório  
  Relatórios são executados para gerar os feeds de dados nos quais as definições de alertas de dados se baseiam. O log de execução do servidor de relatório no banco de dados do servidor de relatório captura informações cada vez que o relatório é executado. Você pode consultar a exibição de ExecutionLog2 no banco de dados para obter informações detalhadas. Para obter mais informações, veja [ExecutionLog do servidor de relatório e exibição do ExecutionLog3](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
-#### Log de rastreamento do Servidor de Relatório
-<a id="report-server-trace-log" class="xliff"></a>  
+#### <a name="report-server-trace-log"></a>Log de rastreamento do Servidor de Relatório  
  O log de rastreamento do servidor de relatório contém informações detalhadas sobre as operações do serviço Servidor de Relatório, incluindo as operações executadas pelo serviço Web Servidor de Relatório, pelo Gerenciador de Relatórios e pelo processamento em segundo plano. As informações do log de rastreamento podem ser úteis se você estiver depurando um aplicativo que inclui um servidor de relatório ou investigando um problema específico que foi gravado no log de evento ou de execução. Para obter mais informações, consulte [Report Server Service Trace Log](../reporting-services/report-server/report-server-service-trace-log.md).  
   
 ##  <a name="PerformanceCounters"></a> Contadores de desempenho  
@@ -334,8 +321,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
   
 -   [Conceder permissões a usuários e administradores de alerta](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## Consulte também
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Consulte também
 
 [Designer de alertas de dados](../reporting-services/data-alert-designer.md)   
 [Gerenciador de Alertas de dados para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   

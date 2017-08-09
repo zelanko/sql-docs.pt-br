@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Relatório de mapa (Construtor de Relatórios) | Microsoft Docs"
+title: "Tutorial: Mapear relatórios (construtor de relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Relatório de mapa (construtor de relatórios)
@@ -35,7 +35,7 @@ Para variar a aparência de elementos de mapas, especifique um campo com valores
 Neste tutorial, você cria um relatório de mapa que exibe a localização de lojas em condados estatais de Nova York.  
    
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, consulte o primeiro tutorial desta série: [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 30 minutos.  
   
@@ -102,11 +102,11 @@ Nesta seção, você adiciona um mapa ao relatório na galeria de mapas. O mapa 
 15. Clique duas vezes no mapa para exibir o **Painel Camadas do Mapa**. O **Painel Camadas do Mapa** mostra uma camada de polígono, PolygonLayer1, do tipo de camada **Inserido**. Cada região é um elemento do mapa inserido nessa camada.  
   
     > [!NOTE]  
-    > Se o painel **Camadas do Mapa** não estiver visível, talvez ele esteja fora da exibição atual. Use a barra de rolagem na parte inferior da janela do modo Design para alterar sua exibição. Como alternativa, na guia **Exibir** , desmarque a opção **Dados do Relatório** para fornecer mais área de superfície de design.   
+    > Se o painel **Camadas do Mapa** não estiver visível, talvez ele esteja fora da exibição atual. Use a barra de rolagem na parte inferior da janela do modo Design para alterar sua exibição. Como alternativa, na guia **Exibir**, desmarque a opção **Dados do Relatório** para fornecer mais área de superfície de design.   
 
 15. Selecione a seta ao lado de PolygonLayer1 > **Propriedades do polígono**.
 
-16. Na guia **Fonte** , altere a cor para **Cinza-claro**.
+16. Na guia **Fonte**, altere a cor para **Cinza-claro**.
 
 17. Na guia **Início** > **Executar** para visualizar o relatório.  
   
@@ -124,9 +124,9 @@ Nesta seção, você usa o assistente de camadas do mapa para adicionar uma cama
   
 ### <a name="to-add-a-point-layer-based-on-a-sql-server-spatial-query"></a>Para adicionar uma camada de ponto com base em uma consulta espacial do SQL Server  
   
-1.  Na guia **Executar** > **Design** para mudar de volta para o modo de exibição de Design.  
+1.  Na guia **Executar** > **Design** para mudar de volta para o modo Design.  
   
-2.  Clique duas vezes no mapa para exibir o painel **Camadas do Mapa** . Na barra de ferramentas, clique no botão **Assistente de Nova Camada** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
+2.  Clique duas vezes no mapa para exibir o painel **Camadas do Mapa** . Na barra de ferramentas, clique o **Assistente de nova camada** botão ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
@@ -242,7 +242,7 @@ Use o assistente de camada do mapa para adicionar uma camada do mapa que exibe u
   
 1.  Alterne para o modo Design.  
   
-2.  Clique duas vezes no mapa para exibir o painel **Camada do Mapa** . Na barra de ferramentas, clique no botão **Assistente de Nova Camada** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
+2.  Clique duas vezes no mapa para exibir o painel **Camada do Mapa** . Na barra de ferramentas, clique o **Assistente de nova camada** botão ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
   
 3.  Na página **Escolher uma fonte de dados espaciais** , selecione **Consulta espacial do SQL Server** e clique em **Avançar**.  
   
@@ -297,7 +297,7 @@ Nesta seção, você adiciona uma camada do mapa que exibe uma tela de fundo do 
   
 1.  Alterne para o modo Design.  
   
-2.  Clique duas vezes no mapa para exibir o painel **Camada do Mapa** . Na barra de ferramentas, clique em **Adicionar Camada** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
+2.  Clique duas vezes no mapa para exibir o painel **Camada do Mapa** . Na barra de ferramentas, clique em **Adicionar camada** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
   
 3.  Na lista suspensa, clique em **Camada do Bloco**.  
   
@@ -308,7 +308,7 @@ Nesta seção, você adiciona uma camada do mapa que exibe uma tela de fundo do 
   
 4.  Clique na seta ao lado de TileLayer1 > **Propriedades do Bloco**.  
   
-5.  Na guia **Geral** , em **Tipo**, selecione **Aéreo**. A vista aérea não contém texto.  
+5.  Na guia **Geral**, em **Tipo**, selecione **Aéreo**. A vista aérea não contém texto.  
 
     ![report-builder-map-bing-aerial](../reporting-services/media/report-builder-map-bing-aerial.png)
   
@@ -317,7 +317,7 @@ Nesta seção, você adiciona uma camada do mapa que exibe uma tela de fundo do 
 ## <a name="Transparent"></a>5. Tornar uma camada transparente  
 Nesta seção, para permitir que os itens em uma camada sejam exibidos por meio de outra camada, você ajusta a ordem e a transparência das camadas para o efeito desejado. Você começa com a primeira camada criada, PolygonLayer1. 
   
-1.  Clique duas vezes no mapa para exibir o painel **Camada do Mapa** .  
+1.  Clique duas vezes no mapa para exibir o painel **Camada do Mapa**.  
   
 3.  Clique na seta ao lado de PolygonLayer1 > **Dados da Camada**. A caixa de diálogo **Mapear Propriedades de Camada do Polígono** aparece.  
   
@@ -413,7 +413,7 @@ Por padrão, os dados têm um formato geral. Nesta seção, você aplica formato
 
 2. Selecione a escala de cores. Na guia **Início** > seção **Número**, clique em **Moeda**.  
   
-4.  Ainda na seção **Número** , clique no botão **Diminuir Decimal** duas vezes.  
+4.  Ainda na seção **Número**, clique no botão **Diminuir Decimal** duas vezes.  
   
     A escala de cores exibe as vendas anuais no formato de moeda para cada intervalo.  
   
@@ -457,11 +457,11 @@ Você pode definir as opções de exibição padrão para todos os elementos de 
 Condados sem dados associados são exibidos em azul acinzentado. Somente os condados com dados analíticos associados têm as cores **Vermelho** a **Verde** nas regras de cores especificadas.  
   
 ## <a name="CustomPoint"></a>7. Adicionar um ponto personalizado  
-Para representar uma nova loja que ainda não foi construída, nesta seção, você especifica um ponto com o tipo de marcador **Estrela** .  
+Para representar uma nova loja que ainda não foi construída, nesta seção, você especifica um ponto com o tipo de marcador **Estrela**.  
   
 1.  Alterne para o modo Design.  
   
-2.  Clique duas vezes no mapa para exibir o painel **Camada do Mapa** . Na barra de ferramentas, clique em **Adicionar Camada**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer") e clique em **Camada de Pontos**.  
+2.  Clique duas vezes no mapa para exibir o painel **Camada do Mapa** . Na barra de ferramentas, clique em **Adicionar camada**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer"), em seguida, clique em **camada de ponto**.    
   
     Uma nova camada de ponto é adicionada ao mapa. Por padrão, a camada de ponto tem o tipo de dados espacial **Inserido**.  
   
@@ -532,7 +532,7 @@ Esse título aparecerá na parte superior do relatório. Os itens na parte super
   
 ## <a name="Save"></a>10. Salvar o relatório  
   
-1.  No modo de exibição de Design ou Visualização, no menu **Arquivo** > **Salvar Como**.
+1.  No modo Design ou Visualização, no menu **Arquivo** > **Salvar Como**.
  
 3.  Em **Nome**, digite **Vendas nas Lojas de Nova York**.  
 

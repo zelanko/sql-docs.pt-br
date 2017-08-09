@@ -18,12 +18,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 4f49f5376344d6c52159c3a4dcff553255c79320
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Trabalhando com assinaturas (portal da web)
-<a id="working-with-subscriptions-web-portal" class="xliff"></a>
+# <a name="working-with-subscriptions-web-portal"></a>Trabalhando com assinaturas (portal da web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -42,14 +41,12 @@ Na página Assinaturas, você pode criar novas assinaturas selecionando **+ Nova
   
 Essa página também oferece o status do resultado de execuções de assinatura na coluna **Resultado** . Se ocorreu um erro em uma assinatura, primeiro verifique a coluna de resultados para ver a mensagem.  
   
-## Criando ou editando uma assinatura
-<a id="creating-or-editing-a-subscription" class="xliff"></a>  
+## <a name="creating-or-editing-a-subscription"></a>Criando ou editando uma assinatura  
 Use a página Nova Assinatura ou Editar Assinatura para criar uma nova assinatura ou editar uma assinatura existente para um relatório. As opções nessa página variam, dependendo de sua atribuição de função. Os usuários com permissões avançadas podem trabalhar com opções adicionais.  
   
 As assinaturas têm suporte para relatórios que podem ser executados de modo autônomo. O relatório deve, no mínimo, usar credenciais armazenadas ou nenhuma credencial. Se o relatório usar parâmetros, um valor padrão deverá ser especificado. As assinaturas poderão ficar inativas se você alterar as configurações de execução do relatório ou remover os valores padrão usados por propriedades de parâmetro. Para saber mais, consulte [Crie e gerencie assinaturas de servidores de relatório no modo Nativo].  
   
-### Tipo de assinatura
-<a id="type-of-subscription" class="xliff"></a>  
+### <a name="type-of-subscription"></a>Tipo de assinatura  
 Você pode selecionar entre uma **Assinatura padrão** e uma **Assinatura controlada por dados**.  
   
 ![ssRSWebPortal-subscriptions3](../reporting-services/media/ssrswebportal-subscriptions3.png)  
@@ -60,8 +57,7 @@ Para criar uma assinatura controlada por dados, você deve saber como gravar uma
   
 Essa opção está disponível a usuários com permissões avançadas. Se você estiver usando a segurança padrão, as assinaturas controladas por dados não poderão ser usadas nos relatórios da pasta Meus Relatórios.  
   
-### Destino
-<a id="destination" class="xliff"></a>  
+### <a name="destination"></a>Destino  
 Selecione a extensão de entrega a ser usada para distribuir o relatório.   
   
 A disponibilidade de uma extensão de entrega depende se ela está instalada e configurada no servidor de relatório. O Email do Servidor de Relatório é a extensão de entrega padrão, mas deve ser configurado antes de ser usado. Entrega de Compartilhamento de Arquivo não requer configuração, mas você deve definir uma pasta compartilhada antes de usá-la.  
@@ -74,8 +70,7 @@ Dependendo da extensão de entrega selecionada, as configurações a seguir são
   
 -   Assinaturas de compartilhamento de arquivo fornecem campos que permitem especificar um local de destino. Você pode entregar qualquer relatório a um compartilhamento de arquivo. No entanto, relatórios que oferecem suporte a recursos interativos (incluindo relatórios matriz com suporte para busca detalhada em linhas e colunas) são renderizados como arquivos estáticos. Você não pode exibir busca detalhada em linhas e colunas em um arquivo estático. O nome do compartilhamento de arquivo deve ser especificado no formato UNC (Convenção de Nomenclatura Uniforme) (por exemplo, \mycomputer\public\myreportfiles). Não inclua barras invertidas à direita no nome do caminho. O arquivo de relatório será entregue em um formato de arquivo que tem base no formato de renderização (por exemplo, se você escolher Excel, o relatório será entregue como um arquivo .xlsx).  
   
-### Conjunto de dados de assinatura controlada por dados
-<a id="data-driven-subscription-dataset" class="xliff"></a>  
+### <a name="data-driven-subscription-dataset"></a>Conjunto de dados de assinatura controlada por dados  
 Para uma assinatura controlada por dados, você precisará definir o conjunto de dados usado para a assinatura. Selecione **Editar conjunto de dados** para fornecer essas informações.  
   
 ![ssRSWebPortal-subscriptions4](../reporting-services/media/ssrswebportal-subscriptions4.png)  

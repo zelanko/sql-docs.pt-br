@@ -18,19 +18,17 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: c6dcc44b05633004bd525d337c8303c1a8180121
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Trabalhando com relatórios paginados (portal da Web)
-<a id="working-with-paginated-reports-web-portal" class="xliff"></a>
+# <a name="working-with-paginated-reports-web-portal"></a>Trabalhando com relatórios paginados (portal da Web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Você pode exibir e gerenciar as propriedades de um relatório paginado dentro do portal da Web. O portal da Web pode iniciar o Construtor de Relatórios para criar ou editar relatórios paginados.  
    
-## Criar um relatório paginado
-<a id="create-a-paginated-report" class="xliff"></a>  
+## <a name="create-a-paginated-report"></a>Criar um relatório paginado  
   
 Para criar um novo conjunto de dados compartilhado, você pode fazer o seguinte.  
   
@@ -44,8 +42,7 @@ Para criar um novo conjunto de dados compartilhado, você pode fazer o seguinte.
   
 4.  Crie seu relatório e selecione o ícone **salvar** no canto superior esquerdo para salvar o relatório paginado de volta no servidor de relatório.  
   
-## Gerenciar um relatório paginado existente
-<a id="manage-an-existing-paginated-report" class="xliff"></a>  
+## <a name="manage-an-existing-paginated-report"></a>Gerenciar um relatório paginado existente  
   
 Para gerenciar um relatório paginado existente, você pode fazer o seguinte.  
   
@@ -60,22 +57,19 @@ Para gerenciar um relatório paginado existente, você pode fazer o seguinte.
     
     ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
-## Propriedades
-<a id="properties" class="xliff"></a>  
+## <a name="properties"></a>Propriedades  
   
 Na tela de propriedades, você pode alterar o **nome** a e **descrição** do relatório paginado. Você também pode **Excluir**, **Mover**, **Criar um relatório vinculado**, **Editar no Construtor de Relatórios**, **Baixar** ou **Substituir**.  
     
 ![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
    
-## Parâmetros
-<a id="parameters" class="xliff"></a>  
+## <a name="parameters"></a>Parâmetros  
   
 Você pode modificar os parâmetros existentes de um relatório paginado. Para adicionar um novo parâmetro, você deve editar o relatório no Construtor de Relatórios ou no SQL Server Data Tools.  
   
 ![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
-## Fonte de dados
-<a id="data-source" class="xliff"></a>  
+## <a name="data-source"></a>Fonte de dados  
 Você pode apontar para uma fonte de dados compartilhada ou inserir informações de conexão para uma fonte de dados personalizada.  
   
 ![ssRSWebPortal-relatório de datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
@@ -131,18 +125,15 @@ Isso permite a você não fornecer nenhuma credencial para a fonte de dados. Se 
   
 Para usar essa opção, a conta de execução autônoma deve estar previamente configurada para o seu servidor de relatório. A conta de execução autônoma é usada para conectar a fontes externas, quando outros cursos de credenciais não estiverem disponíveis. Se você especificar essa opção e a conta não estiver configurada, a conexão com a fonte de dados do relatório falhará e o processamento do relatório não ocorrerá. Para obter mais informações sobre essa conta, consulte [Configurar a conta de execução autônoma (Gerenciador de Configuração do SSRS)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-## Assinaturas
-<a id="subscriptions" class="xliff"></a>  
+## <a name="subscriptions"></a>Assinaturas  
 Uma assinatura do Reporting Services é uma configuração que fornece um relatório em um momento específico ou em resposta a um evento, em um formato de arquivo que você especificar. Por exemplo, toda quarta-feira, salvar o relatório MonthlySales.rdl como um documento do Microsoft Word em um compartilhamento de arquivo. As assinaturas podem ser usadas para agendar e automatizar a entrega de um relatório e com um conjunto específico de valores de parâmetros do relatório. Para obter mais informações, consulte [trabalhando com assinaturas](working-with-subscriptions-web-portal.md).
   
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
-## Itens Dependentes
-<a id="dependent-items" class="xliff"></a>  
+## <a name="dependent-items"></a>Itens Dependentes  
 Use a página Itens Dependentes para exibir uma lista de itens que fazem referência a este relatório. O ícone para cada tipo de item indica do que se trata. Você pode selecionar o **reticências (...)**  em cada item para gerenciar esses itens adicionais.  
   
-## Cache
-<a id="caching" class="xliff"></a>  
+## <a name="caching"></a>Cache  
 Quando o assunto é armazenar dados em cache para um relatório paginado, há opções. Você começará com uma simples seleção.  
   
 1.  **Sempre executar este relatório com os dados mais recentes** emitirá as consultas à fonte de dados sempre que você executar o relatório. Isso resulta em um relatório sob demanda que contém os dados mais atualizados. Uma nova instância do relatório será criada sempre que o relatório for aberto e ela conterá os resultados de uma nova consulta. Com essa abordagem, se dez usuários abrirem o relatório simultaneamente, dez consultas serão enviadas à fonte de dados para processamento.  
@@ -159,16 +150,14 @@ A seleção de **Armazenar cópias deste relatório em cache e utilizá-las quan
 
 Para obter mais informações, consulte [trabalhar com instantâneos](working-with-snapshots-web-portal.md).
   
-### Validade do cache
-<a id="cache-expiration" class="xliff"></a>  
+### <a name="cache-expiration"></a>Validade do cache  
   
 Você pode controlar se deseja expirar o cache do relatório paginado após um determinado período, ou se prefere fazer isso com base em uma agenda. Você pode usar uma agenda compartilhada  
   
 > [!NOTE]
 > Isso não atualiza o cache.  
   
-### Planos de atualização do cache
-<a id="cache-refresh-plans" class="xliff"></a>  
+### <a name="cache-refresh-plans"></a>Planos de atualização do cache  
   
 Você pode usar os Planos de Atualização do Cache para criar agendas de pré-carregamento do cache com cópias temporárias de dados para um relatório paginado. Um plano de atualização inclui uma agenda e a opção para especificar ou substituir valores de parâmetros. Você não pode substituir valores de parâmetros que estão marcados como somente leitura. Você pode criar e usar mais de um plano de atualização.  
    
@@ -187,8 +176,7 @@ Quando terminar, selecione **Criar Plano de Atualização do Cache**.
   
 Em seguida, você pode **Editar** ou **Excluir** os planos listados. A opção **Novo Com Base Em Existente** é habilitada quando um, e apenas um, plano de atualização do cache for selecionado. Essa opção criará um novo plano de atualização que é copiado do plano original. A página Plano de Atualização do Cache é aberta pré-populada com detalhes do plano que foi selecionado. Você pode modificar as opções do plano de atualização e salvar o plano com uma nova descrição.  
   
-## Instantâneos de histórico
-<a id="history-snapshots" class="xliff"></a>  
+## <a name="history-snapshots"></a>Instantâneos de histórico  
   
 Use a página Instantâneos de Histórico para exibir instantâneos de relatórios gerados e armazenados ao longo do tempo. Dependendo das opções definidas, o histórico do relatórios poderá conter somente os instantâneos mais recentes.  
   
@@ -198,8 +186,7 @@ Para gerar um instantâneo, o relatório deve ser executado de modo autônomo (o
   
 Você pode clicar em um instantâneo de histórico de relatórios para exibi-lo. Instantâneos exibidos em histórico de relatórios só são diferenciados pela data e hora em que foram criados. Não existe indicação visual para distinguir se um relatório foi gerado em resposta a uma operação programada ou manual.  
   
-## Segurança
-<a id="security" class="xliff"></a>  
+## <a name="security"></a>Segurança  
 Use a página Propriedades de Segurança para exibir ou modificar as definições de segurança que determinam o acesso ao relatório. Essa página está disponível para itens que você tem permissão para proteger.  
   
 O acesso aos itens é definido por atribuições de função que especificam as tarefas que um grupo ou usuário podem executar. Uma atribuição de função consiste em um nome de usuário ou grupo e em uma ou mais definições de função que especificam uma coleção de tarefas.  
@@ -208,8 +195,7 @@ O acesso aos itens é definido por atribuições de função que especificam as 
   
 Selecione para alterar a maneira como a segurança é definida para o item atual.
 
-## Próximas etapas
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Próximas etapas
 
 [Portal da Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Trabalhar com conjuntos de dados compartilhados](../reporting-services/work-with-shared-datasets-web-portal.md)

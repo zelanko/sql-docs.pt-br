@@ -23,12 +23,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 507c09d09f22f8326898b557997bc109785f30c0
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Combinações com suporte do SharePoint e do servidor do Reporting Services
-<a id="supported-combinations-of-sharepoint-and-reporting-services-server" class="xliff"></a>
+# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Combinações com suporte do SharePoint e do servidor do Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)][!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -39,13 +38,11 @@ Um servidor de relatório do SQL Server Reporting Services instalado no modo do 
 > [!NOTE]
 > Integração do Reporting Services com o SharePoint não está mais disponível após o SQL Server 2016.
 
-## Combinações de componentes do SharePoint e do Reporting Services com suporte
-<a id="supported-combinations-of-sharepoint-and-reporting-services-components" class="xliff"></a>
+## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>Combinações de componentes do SharePoint e do Reporting Services com suporte
 
  A tabela a seguir resume as combinações com suporte do servidor de relatório, o suplemento do Reporting Services para produtos SharePoint e produtos SharePoint. As combinações que não estão listadas na tabela a seguir não têm suporte
 
-### Combinações com suporte
-<a id="supported-combinations" class="xliff"></a>
+### <a name="supported-combinations"></a>Combinações com suporte
 
 ||Servidor de relatório|Suplemento|Versão do SharePoint|
 |-|-------------------|-------------|------------------------|
@@ -83,8 +80,7 @@ Um servidor de relatório do SQL Server Reporting Services instalado no modo do 
 
 - **Atualização:** o SharePoint 2010 com o suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado não pode ser atualizado no local para o SharePoint 2013. SharePoint 2013 exige o SQL Server 2012 SP1 ou posterior do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server suplemento e relatório. Para obter mais informações, consulte [Atualizar e migrar o Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
 
-## Próximas etapas
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Próximas etapas
 
  [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
  [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   

@@ -24,12 +24,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 4a02f1937207f0d3dd559c539d078b1a218666df
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Recursos preteridos do SQL Server Reporting Services no SQL Server 2016
-<a id="deprecated-features-in-sql-server-reporting-services-in-sql-server-2016" class="xliff"></a>
+# <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2016"></a>Recursos preteridos do SQL Server Reporting Services no SQL Server 2016
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -37,8 +36,7 @@ ms.lasthandoff: 07/03/2017
 
 Este tópico descreve os recursos preteridos do SQL Server Reporting Services. Os recursos ainda estão disponíveis na versão em que foram preteridos; porém, os recursos estão agendados para ser removidos em uma versão futura do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Não use recursos preteridos em novos aplicativos.
 
-## Recursos sem suporte na próxima versão do SQL Server Reporting Services
-<a id="features-not-supported-in-the-next-version-of-sql-server-reporting-services" class="xliff"></a>
+## <a name="features-not-supported-in-the-next-version-of-sql-server-reporting-services"></a>Recursos sem suporte na próxima versão do SQL Server Reporting Services
 
 Os seguintes recursos do SQL Server Reporting Services não suporte na próxima versão do SQL Server. Não use esses recursos em novo um trabalho de desenvolvimento e, assim que possível, modifique os aplicativos que os utilizam atualmente.
 
@@ -46,15 +44,13 @@ Os seguintes recursos do SQL Server Reporting Services não suporte na próxima 
 |--------------|------------------------| 
 |Servidor de relatório|Renderizador do HTML4.0. Use o renderizador do HTML5.|
 
-## Recursos sem suporte em versões anteriores do SQL Server Reporting Services
-<a id="features-not-supported-in-previous-versions-of-sql-server-reporting-services" class="xliff"></a>
+## <a name="features-not-supported-in-previous-versions-of-sql-server-reporting-services"></a>Recursos sem suporte em versões anteriores do SQL Server Reporting Services
 
 - [Recursos preteridos no SQL Server 2014 Reporting Services](https://msdn.microsoft.com/library/ms143509\(v=sql.120\).aspx)
 
 - [Recursos preteridos no SQL Server 2012 Reporting Services](https://msdn.microsoft.com/library/ms143509\(v=sql.110\).aspx)
 
-## Próximas etapas
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Próximas etapas
 
  [Novidades no Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) [compatibilidade com versões anteriores | O Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)   
  [Alterações de comportamento do SQL Server Reporting Services no SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  

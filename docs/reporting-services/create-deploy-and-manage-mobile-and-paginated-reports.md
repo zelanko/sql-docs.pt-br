@@ -26,12 +26,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 49f990d30564a2c4fc38a527e7da1e97f9a21ca1
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# O que é o SQL Server Reporting Services (SSRS)?
-<a id="what-is-sql-server-reporting-services-ssrs" class="xliff"></a>
+# <a name="what-is-sql-server-reporting-services-ssrs"></a>O que é o SQL Server Reporting Services (SSRS)?
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -41,8 +40,7 @@ Criar, implantar e gerenciar relatórios móveis e paginados do Reporting Servic
 
 ![SQL Server Reporting Services todos juntos](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services todos juntos")
 
-## Criar, implantar e gerenciar relatórios paginados e móveis
-<a id="create-deploy-and-manage-mobile-and-paginated-reports" class="xliff"></a>
+## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>Criar, implantar e gerenciar relatórios paginados e móveis
 
 O SQL Server Reporting Services é uma solução que os clientes implantam em seus locais para criar, publicar e gerenciar relatórios e entregá-los aos usuários corretos de diferentes maneiras: exibindo-os em um navegador da Web, em seus dispositivos móveis ou como um email em suas caixas de entrada.
 
@@ -57,8 +55,7 @@ Continue lendo para obter mais informações sobre cada produto.
 > [!NOTE]
 > Procurando o servidor de relatórios de BI de energia? Consulte [Introdução ao servidor de relatório do Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
-### Novidades no Reporting Services
-<a id="whats-new-in-reporting-services" class="xliff"></a>
+### <a name="whats-new-in-reporting-services"></a>Novidades no Reporting Services
 
 Essas fontes serão mantidas atualizadas com os novos recursos no SQL Server 2016 Reporting Services.
 
@@ -66,8 +63,7 @@ Essas fontes serão mantidas atualizadas com os novos recursos no SQL Server 201
 * [Blog da equipe do SQL Server Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/)
 * O [canal do YouTube Guy in a Cube](https://www.youtube.com/channel/UCFp1vaKzpfvoGai0vE5VJ0w)
 
-## Relatórios paginados
-<a id="paginated-reports" class="xliff"></a>
+## <a name="paginated-reports"></a>Relatórios paginados
 
 ![ssrs-paginated-reports](../reporting-services/media/ssrs-paginated-reports.png)
 
@@ -80,8 +76,7 @@ Essa carga de trabalho principal de BI ainda existe hoje, por isso nós a modern
 * Você pode exportar para novos formatos, como o PowerPoint. As visualizações do Reporting Services no PowerPoint são dinâmicas e editáveis e não apenas capturas de tela.
 * Você pode criar uma experiência híbrida do Power BI/Reporting Services: em vez de recriar seus relatórios do Reporting Services localmente no Power BI, você pode fixar visuais desses relatórios nos painéis do Power BI. E então, você pode monitorar tudo em um único lugar no seu painel do Power BI.
 
-## Relatórios móveis
-<a id="mobile-reports" class="xliff"></a>
+## <a name="mobile-reports"></a>Relatórios móveis
 
 ![ssrs-mobile-reports](../reporting-services/media/ssrs-mobile-reports.png)
 
@@ -91,8 +86,7 @@ O que você precisa para esses fatores de formas de tela muito diferentes não �
 
 Você cria esses relatórios móveis no novo aplicativo [Publicador de Relatórios Móveis](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) . Em seguida nos [aplicativos nativos do Power BI para dispositivos móveis](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) para Windows 10, iOS, Android e HTML5, você pode acessar os dados que tem no Power BI na nuvem, bem como seus dados do SQL Server 2016 Reporting Services local. Conforme cria visualizações, o Publicador de Relatórios Móveis gera automaticamente dados de exemplo para cada uma delas, assim você vê qual será a aparência da visualização com os seus dados e que tipo de dados funciona bem em cada visualização.
 
-## Portal da Web
-<a id="web-portal" class="xliff"></a>
+## <a name="web-portal"></a>Portal da Web
 
 ![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
 
@@ -108,22 +102,19 @@ E você ainda pode agendar processamento de relatórios, acessar relatórios sob
 
 Saiba mais sobre o [portal da Web (modo nativo do SSRS)](../reporting-services/web-portal-ssrs-native-mode.md).
 
-## Reporting Services no modo integrado do SharePoint
-<a id="reporting-services-in-sharepoint-integrated-mode" class="xliff"></a>
+## <a name="reporting-services-in-sharepoint-integrated-mode"></a>Reporting Services no modo integrado do SharePoint
 
 Você publica relatórios no Reporting Services no modo integrado do SharePoint. Você pode agendar o processamento de relatórios, acessar relatórios sob demanda, assinar relatórios publicados e exportar relatórios para outros aplicativos como o Microsoft Excel. Crie alertas de dados em relatórios publicados em um site do SharePoint e receba mensagens de email quando os dados do relatório forem alterados.  
 
 Mais sobre o [Servidor de Relatórios do Reporting Services no modo integrado do SharePoint](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md).
 
-## Recursos de programação do[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 
-<a id="includessrsnoversionincludesssrsnoversion-mdmd-programming-features" class="xliff"></a>
+## <a name="includessrsnoversionincludesssrsnoversion-mdmd-programming-features"></a>Recursos de programação do[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 
 
 Aproveite os recursos de programação do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para ampliar e personalizar sua funcionalidade de geração de relatórios, com APIs para integrar ou ampliar dados e processar relatórios em aplicativos personalizados.
 
 Mais sobre a [Documentação do Desenvolvedor do Reporting Services](../reporting-services/reporting-services-developer-documentation.md). 
 
-## Próximas etapas
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Próximas etapas
 
 * [Instalar o Reporting Services](../reporting-services/install-windows/install-reporting-services.md)  
 * [Instalar o Construtor de Relatórios](../reporting-services/install-windows/install-report-builder.md)   

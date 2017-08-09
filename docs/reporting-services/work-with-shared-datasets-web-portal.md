@@ -18,11 +18,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Trabalhar com conjuntos de dados compartilhados - portal da web
-<a id="work-with-shared-datasets---web-portal" class="xliff"></a>
+# <a name="work-with-shared-datasets---web-portal"></a>Trabalhar com conjuntos de dados compartilhados - portal da web
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -30,8 +29,7 @@ Com um conjunto de dados compartilhado, você pode gerenciar as configurações 
 
 Você pode exibir e gerenciar as propriedades de um conjunto de dados compartilhado dentro do portal da Web. O portal da Web pode iniciar o Construtor de Relatórios para criar ou editar conjuntos de dados compartilhados.
 
-## Criar um conjunto de dados compartilhado
-<a id="create-a-shared-dataset" class="xliff"></a>
+## <a name="create-a-shared-dataset"></a>Criar um conjunto de dados compartilhado
   
 Para criar um novo conjunto de dados compartilhado, você pode fazer o seguinte.  
   
@@ -49,8 +47,7 @@ Para criar um novo conjunto de dados compartilhado, você pode fazer o seguinte.
   
 6.  Crie seu conjunto de dados e selecione o ícone **Salvar** no canto superior esquerdo para salvar o conjunto de dados de volta no servidor de relatório.  
   
-## Gerenciar um conjunto de dados compartilhado existente
-<a id="manage-an-existing-shared-dataset" class="xliff"></a>
+## <a name="manage-an-existing-shared-dataset"></a>Gerenciar um conjunto de dados compartilhado existente
   
 Para gerenciar um conjunto de dados compartilhado existente, você pode fazer o seguinte.  
   
@@ -65,15 +62,13 @@ Para gerenciar um conjunto de dados compartilhado existente, você pode fazer o 
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-## Propriedades
-<a id="properties" class="xliff"></a>
+## <a name="properties"></a>Propriedades
   
 Na tela de propriedades, você pode alterar o **nome** a e **descrição** do conjunto de dados. Você também pode **Excluir**, **Mover**, **Editar no Construtor de Relatórios**, **Baixar** ou **Substituir**.  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
-## Cache
-<a id="caching" class="xliff"></a>
+## <a name="caching"></a>Cache
   
 Quando o assunto é armazenar dados em cache para um conjunto de dados, há opções. Você começará com uma simples seleção.  
   
@@ -87,8 +82,7 @@ A seleção de **Armazenar cópias deste relatório em cache e utilizá-las quan
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   
-### Validade do cache
-<a id="cache-expiration" class="xliff"></a>  
+### <a name="cache-expiration"></a>Validade do cache  
   
 Você pode controlar se deseja expirar o cache do conjunto de dados compartilhados após um determinado período, ou se prefere fazer isso com base em uma agenda. Você pode usar uma agenda compartilhada  
   
@@ -97,8 +91,7 @@ Você pode controlar se deseja expirar o cache do conjunto de dados compartilhad
 > [!NOTE]
 > A configuração de uma expiração não atualiza o cache. Sem um plano de atualização de cache, os dados serão atualizados na próxima execução do conjunto de dados.  
   
-### Planos de atualização do cache
-<a id="cache-refresh-plans" class="xliff"></a>  
+### <a name="cache-refresh-plans"></a>Planos de atualização do cache  
   
 Você pode usar os Planos de Atualização do Cache para criar agendas de pré-carregamento do cache com cópias temporárias de dados para um conjunto de dados compartilhado. Um plano de atualização inclui uma agenda e a opção para especificar ou substituir valores de parâmetros. Você não pode substituir valores de parâmetros que estão marcados como somente leitura. Você pode criar e usar mais de um plano de atualização.   
   

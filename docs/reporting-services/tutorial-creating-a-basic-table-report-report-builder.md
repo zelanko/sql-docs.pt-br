@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Criação de um relatório de tabela básico (Construtor de Relatórios) | Microsoft Docs"
+title: "Tutorial: Criando um relatório de tabela básico (construtor de relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/23/2016
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 021a980dee9f6cd72f663475ba084962fa543cd4
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: criando um relatório de tabela básico (Construtor de Relatórios)
@@ -64,7 +64,7 @@ Neste tutorial, você usará uma fonte de dados inserida. Para saber mais sobre 
   
 4.  Em **Selecionar um tipo de conexão**, verifique se a opção **Microsoft SQL Server** está selecionada.  
   
-5.  Em **Cadeia de Conexão**, digite o seguinte texto, em que \<servername> é o nome de uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+5.  Em **Cadeia de conexão**, digite o seguinte texto, em que \<servername> é o nome de uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
     ```  
     Data Source=<servername>  
@@ -72,7 +72,7 @@ Neste tutorial, você usará uma fonte de dados inserida. Para saber mais sobre 
   
     Como você usará uma consulta que contém os dados, em vez de recuperá-los de um banco de dados, a cadeia de conexão não incluirá o nome do banco de dados. Para saber mais, veja [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-6.  Clique na guia **Credenciais** . Insira as credenciais necessárias para acessar a fonte de dados externa.  
+6.  Clique na guia **Credenciais**. Insira as credenciais necessárias para acessar a fonte de dados externa.  
   
 7. Clique na guia Geral novamente. Para verificar se é possível se conectar à fonte de dados, clique em **Testar Conexão**.  
   
@@ -199,7 +199,7 @@ Por padrão, os dados resumidos do campo Sales exibe um número geral. Formate-o
   
 ### <a name="to-format-a-currency-field"></a>Para formatar um campo de conversor de moedas  
   
-1.  Para ver as caixas de texto formatadas e o texto de espaço reservado como valores de exemplo modo de exibição de Design, na guia **Início**, no grupo **Número**, clique na seta ao lado do ícone **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
+1.  Para ver as caixas de texto formatadas e o texto de espaço reservado como valores de exemplo no Modo Design, na guia **Início**, no grupo **Número**, clique na seta ao lado do ícone **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
   
 2.   Clique na célula da segunda linha (na linha dos cabeçalhos das colunas) na coluna Vendas e arraste-a para baixo para selecionar todas as células que contenham `[Sum(Sales)]`.  
   
@@ -320,7 +320,7 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
 4.  Clique em **Salvar**.  
   
 ## <a name="Export"></a>7. Exportar o relatório  
-Os relatórios podem ser exportados para diferentes formatos, como Microsoft Excel e arquivos CSV (valores separados por vírgula). Para obter mais informações, consulte [Export Reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+Os relatórios podem ser exportados para diferentes formatos, como Microsoft Excel e arquivos CSV (valores separados por vírgula). Para obter mais informações, consulte [Exportar Relatórios &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 Neste tutorial, você exportará o relatório para o Excel e definirá uma propriedade no relatório para atribuir um nome personalizado à guia Pasta de Trabalho.  
   
@@ -346,7 +346,7 @@ Neste tutorial, você exportará o relatório para o Excel e definirá uma propr
   
 3.  Na caixa de diálogo **Salvar Como** , navegue até o local em que você quer salvar o arquivo.  
   
-4.  Na caixa de texto **Nome do arquivo** , digite **Product_Sales_Excel**.  
+4.  Na caixa de texto **Nome do arquivo**, digite **Product_Sales_Excel**.  
   
 5.  Verifique se o tipo de arquivo é **Excel (\*.xlsx)**.  
   
