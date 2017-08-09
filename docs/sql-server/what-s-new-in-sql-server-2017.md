@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: db9f087684ae73a0a26cbb8ddedbc00a2651339c
+ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
+ms.openlocfilehash: 9bee627cf0c6918136dbc5adc510944eaaf05dbf
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novidades no SQL Server 2017
@@ -123,8 +123,13 @@ Os desenvolvedores do SQL Server agora têm acesso a bibliotecas de Python ML e 
 
 Para obter mais informações, consulte [Novidades do Serviços do SQL Server Machine Learning](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
+##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) Entre em contato com a equipe de engenharia do SQL Server 
+- [Stack Overflow (rótulo sql-server) – faça perguntas técnicas](http://stackoverflow.com/questions/tagged/sql-server)
+- [Fóruns do MSDN – faça perguntas técnicas](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+- [Microsoft Connect – relatar bugs e solicitar recursos](https://connect.microsoft.com/SQLServer/Feedback)
+- [Reddit - discussão geral sobre o SQL Server](https://www.reddit.com/r/SQLServer/)
+
 ## <a name="next-steps"></a>Próximas etapas
 - Consulte as [Notas de Versão do SQL Server 2017](sql-server-2017-release-notes.md).
 - Descubra as [Novidades do SQL Server 2017 no Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new).
 - Descubra as [Novidades do SQL Server 2016](what-s-new-in-sql-server-2016.md).
-
