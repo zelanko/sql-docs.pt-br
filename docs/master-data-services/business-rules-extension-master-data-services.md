@@ -117,7 +117,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 ## <a name="see-also"></a>Consulte também  
  [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Condições de regra de negócio & #40; Master Data Services & #41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [Ações de regra de negócio & #40; Master Data Services & #41;](../master-data-services/business-rule-actions-master-data-services.md)  
+ [Condições de regra de negócio &#40; Master Data Services &#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
+ [Ações de regra de negócio &#40; Master Data Services &#41;](../master-data-services/business-rule-actions-master-data-services.md)  
   
   

@@ -31,7 +31,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  Abra o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] arquivo Web. config em um editor de texto. Esse arquivo está na pasta WebApplication, no caminho de instalação do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
-2.  Localizar o **mdsWsHttpBehavior** seção em ** \<serviceBehaviors >**. Para o ** \<serviceMetadata >** elemento, defina **httpGetEnabled** para **true**.  
+2.  Localizar o **mdsWsHttpBehavior** seção em  **\<serviceBehaviors >**. Para o  **\<serviceMetadata >** elemento, defina **httpGetEnabled** para **true**.  
   
     > [!NOTE]  
     >  Se você quiser habilitar serviços Web sobre SSL Secure Sockets Layer (), defina **httpsGetEnabled** para **true** no **mdsWsHttpBehavior** seção do arquivo Web. config. Você também precisa alterar **mdsWsHTTPBinding** para que ele seja configurado para SSL, também e comente a seção não SSL.  
@@ -65,6 +65,6 @@ svcutil.exe http://<server_name:port>/<virtual_path>/Service/Service.svc
 -   *proxy_name* é o nome do arquivo proxy gerado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Operações de serviço Web categorizadas & #40; Master Data Services & #41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
+ [Operações de serviço Web categorizadas &#40; Master Data Services &#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
   
   

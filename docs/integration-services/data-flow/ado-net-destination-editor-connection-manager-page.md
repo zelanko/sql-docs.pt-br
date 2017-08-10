@@ -79,7 +79,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Editor de Destino ADO NET &#40;página Mapeamentos&#41;](../../integration-services/data-flow/ado-net-destination-editor-mappings-page.md)   
- [Editor de destino do ADO NET & #40; Página de saída de erro & #41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)   
+ [Editor de destino do ADO NET &#40; Página de saída de erro &#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)   
  [Gerenciador de Conexão ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)   
  [Tarefa Executar SQL](../../integration-services/control-flow/execute-sql-task.md)  
   

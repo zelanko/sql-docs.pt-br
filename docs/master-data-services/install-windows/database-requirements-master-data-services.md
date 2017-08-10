@@ -76,6 +76,6 @@ ms.lasthandoff: 08/02/2017
  [Criar um banco de dados do Master Data Services](../../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Banco de dados dos Master Data Services](../../master-data-services/master-data-services-database.md)   
  [Conecte-se a uma caixa de diálogo banco de dados do Master Data Services](../../master-data-services/connect-to-a-master-data-services-database-dialog-box.md)   
- [Criar Assistente de banco de dados & #40; Gerenciador de configuração do Master Data Services & #41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
+ [Criar Assistente de banco de dados &#40; Gerenciador de configuração do Master Data Services &#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
   
   

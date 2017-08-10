@@ -51,6 +51,6 @@ ms.lasthandoff: 08/03/2017
  Exiba todas as colunas de destino disponíveis.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de transformação cache & #40; Página Gerenciador de Conexão & #41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)  
+ [Editor de transformação cache &#40; Página Gerenciador de Conexão &#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)  
   
   

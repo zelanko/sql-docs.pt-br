@@ -65,7 +65,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Excluir permissões de membro de hierarquia &#40;Master Data Services&#41;](../master-data-services/delete-hierarchy-member-permissions-master-data-services.md)   
- [Atribuir permissões de objeto modelo & #40; Master Data Services & #41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Permissões de membro de hierarquia & #40; Master Data Services & #41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [Atribuir permissões de objeto modelo &#40; Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [Permissões de membro de hierarquia &#40; Master Data Services &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

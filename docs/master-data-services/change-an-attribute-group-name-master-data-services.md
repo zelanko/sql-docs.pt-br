@@ -53,8 +53,8 @@ ms.lasthandoff: 08/02/2017
 8.  Clique em **Salvar grupo**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Grupos de atributos & #40; Master Data Services & #41;](../master-data-services/attribute-groups-master-data-services.md)   
- [Criar um grupo de atributos & #40; Master Data Services & #41;](../master-data-services/create-an-attribute-group-master-data-services.md)   
- [Excluir um grupo de atributos & #40; Master Data Services & #41;](../master-data-services/delete-an-attribute-group-master-data-services.md)  
+ [Grupos de atributos &#40; Master Data Services &#41;](../master-data-services/attribute-groups-master-data-services.md)   
+ [Criar um grupo de atributos &#40; Master Data Services &#41;](../master-data-services/create-an-attribute-group-master-data-services.md)   
+ [Excluir um grupo de atributos &#40; Master Data Services &#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)  
   
   

@@ -134,16 +134,16 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [PeriodsToDate & #40; MDX & #41;](../mdx/periodstodate-mdx.md)   
- [Filhos & #40; MDX & #41;](../mdx/children-mdx.md)   
- [Hierarquize & #40; MDX & #41;](../mdx/hierarchize-mdx.md)   
- [Contagem de & #40; Definir & #41; & #40; MDX & #41;](../mdx/count-set-mdx.md)   
- [Filtro & #40; MDX & #41;](../mdx/filter-mdx.md)   
- [AddCalculatedMembers & #40; MDX & #41;](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel & #40; MDX & #41;](../mdx/drilldownlevel-mdx.md)   
- [Propriedades & #40; MDX & #41;](../mdx/properties-mdx.md)   
- [PrevMember & #40; MDX & #41;](../mdx/prevmember-mdx.md)   
- [Referência de função MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [PeriodsToDate &#40; MDX &#41;](../mdx/periodstodate-mdx.md)   
+ [Filhos &#40; MDX &#41;](../mdx/children-mdx.md)   
+ [Hierarquize &#40; MDX &#41;](../mdx/hierarchize-mdx.md)   
+ [Contagem de &#40; Definir &#41; &#40; MDX &#41;](../mdx/count-set-mdx.md)   
+ [Filtro &#40; MDX &#41;](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers &#40; MDX &#41;](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel &#40; MDX &#41;](../mdx/drilldownlevel-mdx.md)   
+ [Propriedades &#40; MDX &#41;](../mdx/properties-mdx.md)   
+ [PrevMember &#40; MDX &#41;](../mdx/prevmember-mdx.md)   
+ [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
 

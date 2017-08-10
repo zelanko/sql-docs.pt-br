@@ -1,5 +1,5 @@
 ---
-title: "Alterar um usuário & #39; s endereço de Email (Master Data Services) | Microsoft Docs"
+title: "Alterar um usuário &#39; s endereço de Email (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 08/02/2017
 
 ---
-# <a name="change-a-user39s-email-address-master-data-services"></a>Alterar um usuário & #39; s endereço de Email (Master Data Services)
+# <a name="change-a-user39s-email-address-master-data-services"></a>Alterar um usuário &#39; s endereço de Email (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode alterar o endereço de email para o qual são enviadas notificações e o formato padrão dos emails de notificação.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>Próximas etapas  
   
--   [Atribuir permissões de área funcional & #40; Master Data Services & #41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
+-   [Atribuir permissões de área funcional &#40; Master Data Services &#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Segurança &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
