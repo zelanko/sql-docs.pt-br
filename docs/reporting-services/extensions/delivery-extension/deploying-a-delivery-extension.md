@@ -21,11 +21,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d072577828375a08c133bb1a68d93e652e5cf168
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="deploying-a-delivery-extension"></a>Implantando uma extensão de entrega
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-deploy-a-deliver-extension-assembly-to-a-report-server"></a>Para implantar um assembly de extensão de entrega para um servidor de relatório  
   
-1.  Copie o assembly do local de preparação para o diretório bin do servidor de relatório no qual você deseja usar a extensão de entrega. O local padrão do diretório bin do servidor de relatório é %ProgramFiles%\Microsoft SQL Server\MSRS13. \<InstanceName > Services\ReportServer\bin..  
+1.  Copie o assembly do local de preparação para o diretório bin do servidor de relatório no qual você deseja usar a extensão de entrega. O local padrão do diretório bin do servidor de relatório é %ProgramFiles%\Microsoft SQL Server\MSRS13. \<InstanceName > Services\ReportServer\bin.  
   
     > [!IMPORTANT]  
     >  Se você estiver tentando substituir um assembly de extensão de entrega existente, primeiro deverá parar o serviço Servidor de Relatório antes de copiar o assembly atualizado. Reinicie o seu serviço depois de terminar de copiar o assembly.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
   
      O valor de **nome** é o nome exclusivo da extensão de entrega. O valor de **tipo** é uma lista separada por vírgulas que inclui uma entrada para o namespace totalmente qualificado da sua classe que implementa o <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> interface, seguido do nome do seu assembly (não incluindo a extensão de arquivo. dll). Por padrão, as extensões de entrega ficam visíveis. Para ocultar uma extensão de interfaces do usuário, como o portal da web, adicione um **visível** de atributo para o **extensão** elemento e defina-a como **false**.  
   
-5.  Finalmente, adicione um grupo de códigos para seu assembly personalizado que concede **FullTrust** permissão para a sua extensão de entrega. Você pode fazer isso adicionando o grupo de códigos ao arquivo rssrvpolicy. config localizado por padrão em %ProgramFiles%\Microsoft SQL Server\MSRS13. \<InstanceName > services\reportserver.. O grupo de códigos pode ter esta aparência:  
+5.  Finalmente, adicione um grupo de códigos para seu assembly personalizado que concede **FullTrust** permissão para a sua extensão de entrega. Você pode fazer isso adicionando o grupo de códigos ao arquivo rssrvpolicy. config localizado por padrão em %ProgramFiles%\Microsoft SQL Server\MSRS13. \<InstanceName > services\reportserver. O grupo de códigos pode ter esta aparência:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

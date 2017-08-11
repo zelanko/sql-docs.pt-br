@@ -30,15 +30,15 @@ caps.latest.revision: 101
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6cf3c3d62250f84184adc53d66d9ec274a2a1b3d
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Exemplos de expressões (Construtor de Relatórios e SSRS)
-Expressões costumam ser usadas em relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para controlar o conteúdo e a aparência do relatório. As expressões são escritas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]e podem usar funções internas, código personalizado, variáveis de relatório/grupo e variáveis definidas pelo usuário. As expressões começam com um sinal de igual (=). Para obter mais informações sobre o editor de expressões e os tipos de referências que podem ser incluídos, consulte [Uso de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) e [Adicionar uma expressão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
+Expressões costumam ser usadas em relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para controlar o conteúdo e a aparência do relatório. As expressões são escritas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]e podem usar funções internas, código personalizado, variáveis de relatório/grupo e variáveis definidas pelo usuário. As expressões começam com um sinal de igual (=). Para obter mais informações sobre o editor de expressões e os tipos de referências que podem ser incluídas, consulte [expressão usa relatórios &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md), e [adicionar uma expressão &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  Quando o RDL Sandboxing é habilitado, somente certos tipos e membros podem ser usados no texto da expressão durante o tempo de publicação do relatório. Para obter mais informações, consulte [Habilitar e desabilitar o RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md).  
@@ -67,13 +67,13 @@ Para obter exemplos de expressões para usos específicos, consulte os tópicos 
   
 -   [Referências de coleções de variáveis de grupo e de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
-Para obter mais informações sobre expressões simples e complexas, em que você pode usar expressões e os tipos de referências que pode incluir em uma expressão, consulte tópicos em [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Para obter mais informações sobre o contexto em que as expressões são avaliados para calcular agregações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+Para obter mais informações sobre expressões simples e complexas, em que você pode usar expressões e os tipos de referências que pode incluir em uma expressão, consulte tópicos em [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Para obter mais informações sobre o contexto no qual as expressões são avaliadas para calcular agregações, consulte [escopo das expressões para totais, agregações e coleções internas &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 Para aprender como gravar expressões que usam muitas das funções e dos operadores também empregados por exemplos de expressões neste tópico, mas no contexto da gravação de um relatório, consulte [Tutorial: introdução às expressões](../../reporting-services/tutorial-introducing-expressions.md).  
 
   
 ## <a name="functions"></a>Funções  
- Muitas expressões em um relatório contêm funções. É possível formatar dados, aplicar lógica e acessar metadados do relatório usando estas funções. Você pode escrever expressões que usam funções do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] biblioteca de tempo de execução e o <xref:System.Convert> e <xref:System.Math> namespaces. É possível adicionar referências a funções a partir de outros assemblies ou de código personalizado. Você também pode usar classes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], incluindo <xref:System.Text.RegularExpressions>.  
+ Muitas expressões em um relatório contêm funções. É possível formatar dados, aplicar lógica e acessar metadados do relatório usando estas funções. É possível gravar expressões que usam funções da biblioteca em tempo de execução do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e dos namespaces <xref:System.Convert> e <xref:System.Math> . É possível adicionar referências a funções a partir de outros assemblies ou de código personalizado. Você também pode usar classes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], incluindo <xref:System.Text.RegularExpressions>.  
   
 ##  <a name="VisualBasicFunctions"></a> Funções do Visual Basic  
  Você pode usar as funções do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para manipular os dados exibidos nas caixas de texto ou usados para parâmetros, propriedades ou outras áreas do relatório. Esta seção fornece exemplos que demonstram algumas dessas funções. Para obter mais informações, consulte [Membros da biblioteca em tempo de execução do Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) no MSDN.  
@@ -169,7 +169,7 @@ Para aprender como gravar expressões que usam muitas das funções e dos operad
     =DateAdd(DateInterval.Month,DateDiff(DateInterval.Month,CDate("01/01/1900"),Now())-1,CDate("01/01/1900"))  
     ```  
   
--   A expressão a seguir gera os anos de intervalo entre SellStartDate e LastReceiptDate. Esses campos estão em dois conjuntos de dados diferentes, DataSet1 e DataSet2. A [Função First &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md), que é uma função de agregação, retorna o primeiro valor de SellStartDate em DataSet1 e o primeiro valor de LastReceiptDate em DataSet2.  
+-   A expressão a seguir gera os anos de intervalo entre SellStartDate e LastReceiptDate. Esses campos estão em dois conjuntos de dados diferentes, DataSet1 e DataSet2. O [primeira função &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-first-function.md), que é uma função de agregação, retorna o primeiro valor do SellStartDate em DataSet1 e o primeiro valor de LastReceiptDate em DataSet2.  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -221,7 +221,7 @@ Para aprender como gravar expressões que usam muitas das funções e dos operad
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     A expressão a seguir resulta no mesmo valor que o anterior, usando membros de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> classe [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] funções:  
+     A expressão a seguir resulta no mesmo valor anterior, usando membros da classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> em vez das funções do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] :  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -240,7 +240,7 @@ Para aprender como gravar expressões que usam muitas das funções e dos operad
   
     ```  
   
--   O **Regex** funções do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> são úteis para alterar o formato de existentes cadeias de caracteres, por exemplo, um número de telefone de formatação. The following expression uses the **Replace** function to change the format of a ten-digit telephone number in a field from "*nnn*-*nnn*-*nnnn*" to "(*nnn*) *nnn*-*nnnn*":  
+-   O **Regex** do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> são úteis para alterar o formato de cadeias de caracteres existentes, por exemplo, a formatação de um número de telefone. A expressão a seguir usa a função **Replace** para alterar o formato de um número de telefone de dez dígitos em um campo de "*nnn*-*nnn*-*nnnn*" para "(*nnn*) *nnn*-*nnnn*":  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -485,7 +485,7 @@ Para aprender como gravar expressões que usam muitas das funções e dos operad
     ="http://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
     ```  
   
-     Para obter mais informações, consulte [Adicionar um hiperlink a um URL &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
+     Para obter mais informações, consulte [adicionar um hiperlink a uma URL &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
   
 -   A expressão a seguir controla condicionalmente se uma URL deve ser adicionada em uma caixa de texto. Essa expressão depende de um parâmetro denominado `IncludeURLs` que permite que um usuário decida se deve incluir URLs ativas em um relatório. Essa expressão é definida como uma ação em uma caixa de texto. Configurando o parâmetro como Falso e exibindo o relatório, você pode exportar o relatório Microsoft Excel sem hiperlinks.  
   
@@ -518,7 +518,7 @@ Para aprender como gravar expressões que usam muitas das funções e dos operad
     ```  
   
 ##  <a name="CustomCode"></a> Código Personalizado  
- É possível usar código personalizado em um relatório. O código personalizado é inserido em um relatório ou armazenado em um assembly personalizado que é usado no relatório. Para obter mais informações sobre o código personalizado, consulte [Referências a código personalizado e assemblies em expressões no Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ É possível usar código personalizado em um relatório. O código personalizado é inserido em um relatório ou armazenado em um assembly personalizado que é usado no relatório. Para obter mais informações sobre o código personalizado, consulte [código personalizado e referências de Assembly em expressões no Designer de relatórios &#40; SSRS &#41; ](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>Usando variáveis de grupo para agregação personalizada  
  Você pode inicializar o valor para uma variável de grupo que é local para um escopo de grupo específico e depois incluir uma referência a essa variável nas expressões. Um dos modos pelos quais é possível usar uma variável de grupo com código personalizado é implementar uma agregação personalizada. Para obter mais informações, consulte [Usando variáveis de grupo no Reporting Services 2008 para agregação personalizada](http://go.microsoft.com/fwlink/?LinkId=128714).  
@@ -560,9 +560,9 @@ Para aprender como gravar expressões que usam muitas das funções e dos operad
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplos de equações de filtro &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [Exemplos de expressões de grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Exemplos de expressões de grupo &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [Uso de expressões em relatórios &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtros geralmente usados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
   
