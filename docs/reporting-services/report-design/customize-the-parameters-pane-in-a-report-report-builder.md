@@ -14,7 +14,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d9ca14104f9dd60fda20d723290789733f0a9f4a
 ms.contentlocale: pt-br
@@ -24,7 +24,7 @@ ms.lasthandoff: 08/09/2017
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Personalizar o painel de parâmetros em um relatório (Construtor de Relatórios)
   Ao criar relatórios paginados com parâmetros no Construtor de Relatórios, você pode personalizar o painel Parâmetros. No modo de exibição de Design de relatório, você pode arrastar um parâmetro para uma coluna e linha específicas no painel Parâmetros. Você pode adicionar e remover colunas para alterar o layout do painel.  
   
- Quando você arrasta um parâmetro para uma nova coluna e linha no painel, a ordem do parâmetro é alterada no painel **Dados do Relatório** . Quando você altera a ordem do parâmetro no painel de **Dados do Relatório**, o local do parâmetro no painel é alterado. Para obter mais informações sobre por que a ordem do parâmetro é importante, consulte [Alterar a ordem de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
+ Quando você arrasta um parâmetro para uma nova coluna e linha no painel, a ordem do parâmetro é alterada no painel **Dados do Relatório** . Quando você altera a ordem do parâmetro no painel de **Dados do Relatório** , o local do parâmetro no painel é alterado. Para obter mais informações sobre por que a ordem do parâmetro é importante, consulte [alterar a ordem de um parâmetro de relatório &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
   
 ## <a name="to-customize-the-parameters-pane"></a>Para personalizar o painel de parâmetros  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Para mover um parâmetro para um novo local no painel de parâmetros, arraste o parâmetro para uma célula diferente no painel.  
   
-     Quando você altera o local do parâmetro no painel, a ordem do parâmetro na lista **Parâmetros** no painel de **Dados do Relatório** é altera automaticamente. Para obter mais informações sobre o impacto da ordem do parâmetro, consulte [Alterar a ordem de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+     Quando você altera o local do parâmetro no painel, a ordem do parâmetro na lista **Parâmetros** no painel de **Dados do Relatório** é altera automaticamente. Para obter mais informações sobre o impacto da ordem de parâmetros, consulte [alterar a ordem de um parâmetro de relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
 4.  Para acessar as propriedades para um parâmetro, siga um dos procedimentos a seguir.  
   
@@ -70,6 +70,6 @@ ms.lasthandoff: 08/09/2017
     -   No painel de **Dados do Relatório** , clique com o botão direito do mouse no parâmetro e depois clique em **Excluir**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Parâmetros de relatório &#40;Construtor de relatórios, Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

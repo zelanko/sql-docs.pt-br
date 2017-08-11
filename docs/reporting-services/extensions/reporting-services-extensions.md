@@ -20,14 +20,14 @@ helpviewer_keywords:
 - extensions [Reporting Services]
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 caps.latest.revision: 45
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cd4cd15bf03648329dab8bc7ef55314ece7cf9a2
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 37adf4c09f7f23294572a17631240ad88f51fc9e
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-extensions"></a>Extensões do Reporting Services
@@ -43,13 +43,13 @@ ms.lasthandoff: 06/22/2017
  [Considerações de segurança para extensões](../../reporting-services/extensions/security-considerations-for-extensions.md)  
  Descreve assuntos de segurança relacionados ao desenvolvimento e à implantação de extensões do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Implementando uma extensão de processamento de dados](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)  
+ [Implementar uma extensão de processamento de dados](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)  
  Descreve os requisitos e as etapas de implementação de uma extensão de processamento de dados para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Implementando uma extensão de entrega](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)  
+ [Implementar uma extensão de entrega](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)  
  Descreve os requisitos e as etapas para a implementação de uma extensão de entrega do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Implementando uma extensão de renderização](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)  
+ [Implementar uma extensão de renderização](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)  
  Contém uma introdução ao desenvolvimento de extensões de renderização.  
   
  [Implementando uma extensão de segurança](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  

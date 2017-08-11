@@ -17,7 +17,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7b23da886ccf8fc76cbe8e86a722e4e9a8f3e656
 ms.contentlocale: pt-br
@@ -35,9 +35,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="choosing-a-chart-type"></a>Escolhendo um tipo de gráfico  
  Cada tipo de gráfico tem características exclusivas para lhe ajudar a visualizar seu conjunto de dados. Você pode usar qualquer tipo de gráfico para exibir seus dados, mas esses serão mais facilmente lidos se usar um tipo de gráfico adequado para os seus dados, baseado no assunto que está tentando mostrar no seu relatório. A tabela a seguir resume os recursos de gráfico que afetam a adequação de um gráfico a seu conjunto de dados específico.  
   
- Você poderá alterar o tipo de gráfico depois de criá-lo. Para obter mais informações, consulte [Alterar um tipo de gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
+ Você poderá alterar o tipo de gráfico depois de criá-lo. Para obter mais informações, consulte [alterar um tipo de gráfico &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
   
- Exemplos de muitos desses tipos de gráficos estão disponíveis como relatórios de exemplo. Para obter mais informações sobre como baixar relatórios de exemplo, consulte [relatórios de exemplo do construtor de relatórios e Designer de relatórios](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Exemplos de muitos desses tipos de gráficos estão disponíveis como relatórios de exemplo. Para obter mais informações sobre como baixar relatórios de exemplo, consulte os [(Relatórios de exemplo do Construtor de relatórios e Designer de relatórios) do](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Tipo de gráfico|Exibir dados de taxa|Exibir dados de estoque|Exibir dados lineares|Exibir dados de vários valores|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -45,8 +45,8 @@ ms.lasthandoff: 08/09/2017
 |[Gráficos de barras &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)|||![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")||  
 |[Barras de dados](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|||![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")||  
 |[Gráficos de colunas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)|||![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")||  
-|[Gráficos de linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")||  
-|[Gráficos de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")||||  
+|[Gráficos de linha &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")||  
+|[Gráficos de pizza &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")||||  
 |[Gráficos polares &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)|![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")||||  
 |[Gráficos de intervalo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)|||![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")|![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")|  
 |[Gráficos de dispersão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md)|![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")||![Disponível](../../reporting-services/report-data/media/greencheck.gif "disponíveis")||  

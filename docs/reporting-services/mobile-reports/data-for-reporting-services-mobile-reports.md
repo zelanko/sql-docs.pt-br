@@ -15,7 +15,7 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fe007313e57ec01c5c456b0623b642555a25bf35
 ms.contentlocale: pt-br
@@ -29,7 +29,7 @@ Você pode importar dados de dois tipos de fontes:
   
 * **Arquivos do Excel locais**: selecione um documento do Excel e escolha as planilhas a serem importadas. Após a importação, os dados são armazenados na definição de relatório móvel. Para atualizar os dados do arquivo original do Excel, use o comando **Atualizar Dados** no canto superior direito da guia [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab. Leia mais sobre como [preparar dados do Excel para relatórios SSRS móveis](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md).  
   
-* **Conjuntos de dados compartilhados do [!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)]**: navegue pela lista de conjuntos de dados publicados no servidor e selecione as opções para adicionar ao relatório móvel. Relatórios móveis baseados em dados de servidor sempre permanecem conectados aos conjuntos de dados do servidor original e refletem o estado mais recente dos dados no servidor. Veja uma [lista de fontes de dados com suporte](https://msdn.microsoft.com/library/ms159219.aspx).   
+* **[!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)]conjuntos de dados compartilhados**: Navegue pela lista de conjuntos de dados publicados no servidor e selecione as opções para adicionar ao relatório móvel. Relatórios móveis baseados em dados de servidor sempre permanecem conectados aos conjuntos de dados do servidor original e refletem o estado mais recente dos dados no servidor. Veja uma [lista de fontes de dados com suporte](https://msdn.microsoft.com/library/ms159219.aspx).   
   
   Leia mais sobre [obter dados de conjuntos de dados no compartilhados no Publicador de Relatórios Móveis](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md).  
   

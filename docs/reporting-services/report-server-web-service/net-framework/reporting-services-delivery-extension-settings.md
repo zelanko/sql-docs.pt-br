@@ -26,14 +26,14 @@ helpviewer_keywords:
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 caps.latest.revision: 36
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 668c3d31af5f287d7d254c2dc666e20a5f6328fa
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: bc52f95cdc038c0074feb10b05fffe916b3d3da1
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Configurações da extensão de entrega do Reporting Services
@@ -45,7 +45,7 @@ ms.lasthandoff: 06/13/2017
 ## <a name="e-mail-delivery-settings"></a>Configurações de entrega de email  
  A tabela a seguir lista as configurações de entrega de email para assinaturas que usam o email do servidor de relatório.  
   
-|Configuração|Valor|  
+|Configuração|Value|  
 |-------------|-----------|  
 |**PARA**|O endereço de email que aparece no **para** linha da mensagem de email. Vários endereços de email são separados por ponto-e-vírgulas. Obrigatórios.|  
 |**CC**|O endereço de email que aparece no **Cc** linha da mensagem de email. Vários endereços de email são separados por ponto-e-vírgulas. Opcional.|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/13/2017
 ## <a name="file-share-delivery-settings"></a>Configurações de entrega de compartilhamento de arquivo  
  A tabela a seguir lista as configurações de entrega de compartilhamento de arquivo para assinaturas.  
   
-|Configuração|Valor|  
+|Configuração|Value|  
 |-------------|-----------|  
 |**NOME DE ARQUIVO**|O nome do arquivo salvo no disco.|  
 |**FILEEXTN**|Indica se será preciso incluir uma extensão de arquivo para o relatório renderizado. O valor é **true** ou **false**.|  
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/13/2017
 |**WRITEMODE**|O modo de gravação a ser usado durante o acesso ao disco. Os valores válidos são **nenhum**, **substituir**, e **AutoIncrement**.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência técnica &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)   
+ [Referência técnica &#40; SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)   
  [Criando aplicativos que usam o serviço Web e o .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

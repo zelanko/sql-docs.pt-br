@@ -14,14 +14,14 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 410863a8fc12424addbc8edba0196066fd1daf79
 ms.contentlocale: pt-br
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="custom-maps-in-reporting-services-mobile-reports"></a>mapas personalizados nos relatórios móveis do Reporting Services
+# <a name="custom-maps-in-reporting-services-mobile-reports"></a>Mapas personalizados nos relatórios móveis do Reporting Services
 Mapas geográficos no SQL Server Mobile Report Publisher são definidos em um formato conhecido como *de forma ESRI*.  
   
 Criado inicialmente por uma empresa privada, esse é agora um formato semiaberto amplamente usado em grande parte dos aplicativos GIS. Acordo com esse formato, o publicador de relatórios móveis requer dois arquivos a serem fornecidos ao definir um mapa:  

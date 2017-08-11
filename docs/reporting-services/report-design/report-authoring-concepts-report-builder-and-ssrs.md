@@ -18,7 +18,7 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a5a77b4a1dcf646e82658fb61697b82f7e5e807f
 ms.contentlocale: pt-br
@@ -32,13 +32,13 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Relatórios, partes de relatório e definições de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
+ [Relatórios, partes de relatório e as definições de relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  Apresenta os diversos termos usados para descrever um relatório em diferentes estados, incluindo a definição inicial, o relatório publicado e o relatório exibido conforme aparece para o usuário.  
   
  [Conjuntos de dados inseridos e compartilhados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  Explica as diferenças existentes na criação, no armazenamento e no gerenciamento de conjuntos de dados inseridos e compartilhados.  
   
- [Regiões de dados e mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
+ [Regiões de dados e mapas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Descreve os tipos de regiões de dados que podem ser adicionados a um layout de relatório. As regiões de dados determinam a aparência de um relatório: tabular, matriz, lista ou gráfico.  
   
  [Conceito de parâmetros de relatório (Construtor de Relatórios e SSRS)](https://msdn.microsoft.com/library/ee240844.aspx)  

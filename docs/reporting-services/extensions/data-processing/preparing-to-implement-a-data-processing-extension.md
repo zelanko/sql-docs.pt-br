@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 caps.latest.revision: 36
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee37721958f30f9fdae8573f205b59ae996f4df6
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 6d516201d8018b1d58b77be8e3cf543745da037a
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Preparando para implementar uma extensão de processamento de dados
@@ -73,17 +73,17 @@ ms.lasthandoff: 06/22/2017
   
 |Interface|Description|Implementação|  
 |---------------|-----------------|--------------------|  
-|IDbConnection|Representa uma sessão exclusiva com uma fonte de dados. No caso de um sistema de banco de dados cliente/servidor, a sessão pode ser equivalente a uma conexão de rede com o servidor.|Required|  
+|IDbConnection|Representa uma sessão exclusiva com uma fonte de dados. No caso de um sistema de banco de dados cliente/servidor, a sessão pode ser equivalente a uma conexão de rede com o servidor.|Obrigatório|  
 |IDbConnectionExtension|Representa propriedades de conexão adicionais que podem ser implementadas através de extensões de processamento de dados do [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] relativas a segurança e a autenticação.|Opcional|  
-|IDbTransaction|Representa uma transação local.|Required|  
+|IDbTransaction|Representa uma transação local.|Obrigatório|  
 |IDbTransactionExtension|Representa propriedades de transação adicionais que podem ser implementadas através de extensões de processamento de dados do [!INCLUDE[ssRS](../../../includes/ssrs-md.md)].|Opcional|  
-|IDbCommand|Representa uma consulta ou um comando usado durante a conexão a uma fonte de dados.|Required|  
+|IDbCommand|Representa uma consulta ou um comando usado durante a conexão a uma fonte de dados.|Obrigatório|  
 |IDbCommandAnalysis|Representa informações de comando adicionais para a análise de uma consulta e para o retorno de uma lista de nomes de parâmetro usados na consulta.|Opcional|  
-|IDataParameter|Representa um parâmetro ou par de nome/valor passado a um comando ou a uma consulta.|Required|  
-|IDataParameterCollection|Representa uma coleção de todos os parâmetros relevantes a um comando ou a uma consulta.|Required|  
-|IDataReader|Fornece um método de leitura de um fluxo de dados somente encaminhamento, somente leitura a partir da sua fonte de dados.|Required|  
+|IDataParameter|Representa um parâmetro ou par de nome/valor passado a um comando ou a uma consulta.|Obrigatório|  
+|IDataParameterCollection|Representa uma coleção de todos os parâmetros relevantes a um comando ou a uma consulta.|Obrigatório|  
+|IDataReader|Fornece um método de leitura de um fluxo de dados somente encaminhamento, somente leitura a partir da sua fonte de dados.|Obrigatório|  
 |IDataReaderExtension|Fornece um método de leitura de um ou mais fluxos somente encaminhamento de conjuntos de resultados, obtidos pela execução de um comando em uma fonte de dados. Essa interface oferece suporte adicional para agregações de campo.|Opcional|  
-|IExtension|Fornece a classe base para uma extensão de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Também permite que um implementador inclua um nome localizado para a extensão e passe configurações do arquivo de configuração para a extensão.|Required|  
+|IExtension|Fornece a classe base para uma extensão de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Também permite que um implementador inclua um nome localizado para a extensão e passe configurações do arquivo de configuração para a extensão.|Obrigatório|  
   
  As interfaces de extensão de processamento de dados são idênticas a um subconjunto das interfaces de provedor de dados, métodos e propriedades do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sempre que possível. Para obter mais informações sobre a implementação de um provedor de dados completo do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], consulte "Implementando um provedor de dados .NET Framework" na sua documentação do SDK (Software Development Kit) do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   

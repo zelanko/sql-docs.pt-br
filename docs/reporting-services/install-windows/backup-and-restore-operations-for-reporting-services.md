@@ -24,7 +24,7 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e3247864547983779f4037eb963ba6721a2b7654
 ms.contentlocale: pt-br
@@ -46,9 +46,9 @@ ms.lasthandoff: 08/09/2017
   
     -   [Atualizar e migrar o Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
-    -   [Migrar uma instalação do Reporting Services &#40;modo do SharePoint&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
+    -   [Migrar uma instalação do Reporting Services &#40; Modo do SharePoint &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
   
-    -   [Migrar uma instalação do Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+    -   [Migrar uma instalação do Reporting Services &#40; Modo nativo &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
 ## <a name="backing-up-the-report-server-databases"></a>Fazendo backup dos bancos de dados do servidor de relatório  
  Uma vez que um servidor de relatório é um servidor sem monitoração de estado, os dados de todos os aplicativos são armazenados nos bancos de dados **reportserver** e **reportservertempdb** que são executados em uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Você pode fazer backup dos bancos de dados **reportserver** e **reportservertempdb** que usam um dos métodos com suporte para fazer backup dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . As recomendações específicas para os bancos de dados do servidor de relatório incluem:  
@@ -68,7 +68,7 @@ ms.lasthandoff: 08/09/2017
  Você deve fazer backup das chaves de criptografia ao configurar uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pela primeira vez. Você também deve fazer backup das chaves sempre que alterar a identidade das contas de serviço ou renomear o computador. Para saber mais, confira [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Para servidores de relatório do modo do SharePoint, consulte a seção “Gerenciamento de chaves” de [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)(Gerenciar um aplicativo de serviço SharePoint do Reporting Services).  
   
 ## <a name="backing-up-the-configuration-files"></a>Fazendo backup dos arquivos de configuração  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa arquivos de configuração para armazenar as configurações do aplicativo. Você deve fazer backup dos arquivos quando configurar o servidor pela primeira vez e depois de implantar qualquer extensão personalizada. Os arquivos dos quais deve ser feito backup incluem:  
+ O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa arquivos de configuração para armazenar as configurações do aplicativo. Você deve fazer backup dos arquivos quando configurar o servidor pela primeira vez e depois de implantar qualquer extensão personalizada. Os arquivos dos quais deve ser feito backup incluem:  
   
 -   Rsreportserver.config  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Web.config para os aplicativos Servidor de Relatório e Gerenciador de Relatórios do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
   
--   Machine.config para [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
+-   Machine. config para[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
   
 ## <a name="backing-up-data-files"></a>Fazendo backup de arquivos de dados  
  Faça backup dos arquivos criados e mantidos no Designer de Relatórios e Designer de Modelos. Eles incluem arquivos de definição de relatórios (.rdl), arquivos de modelo de relatórios (.smdl), arquivos de fontes de dados compartilhadas (.rds), arquivos de exibição de dados (.dv), arquivos de fonte de dados (.ds), arquivos de projeto do servidor de relatório (.rptproj) e arquivos de solução de relatórios (.sln).  
@@ -91,7 +91,7 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Banco de dados de servidor de relatório](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+[Banco de dados do servidor de relatório](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 [Arquivos de configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
 [Utilitário rskeymgmt](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)   
 [Copiar bancos de dados com backup e restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   

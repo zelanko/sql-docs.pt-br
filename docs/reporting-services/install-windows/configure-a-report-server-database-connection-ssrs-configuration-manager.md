@@ -21,7 +21,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6d7a1e1b9b0c8fb3fe60022f79ebfd21d6c44a09
 ms.contentlocale: pt-br
@@ -41,7 +41,7 @@ Cada instância do servidor de relatório requer uma conexão com o banco de dad
   
 -   Configurar um servidor de relatório para usar um banco de dados do servidor de relatório diferente.  
   
--   Alterar a conta ou a senha do usuário usadas para a conexão do banco de dados. Você só precisa atualizar a conexão do banco de dados quando as informações da conta estiverem armazenadas no arquivo RSReportServer.config. Se estiver usando a conta de serviço para a conexão (que usa a segurança integrada do Windows como o tipo de credencial) a senha não será armazenada, eliminando a necessidade de atualizar as informações da conexão. Para obter mais informações sobre como alterar contas, veja [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+-   Alterar a conta ou a senha do usuário usadas para a conexão do banco de dados. Você só precisa atualizar a conexão do banco de dados quando as informações da conta estiverem armazenadas no arquivo RSReportServer.config. Se estiver usando a conta de serviço para a conexão (que usa a segurança integrada do Windows como o tipo de credencial) a senha não será armazenada, eliminando a necessidade de atualizar as informações da conexão. Para obter mais informações sobre como alterar contas, veja [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 -   Configurar uma implantação em expansão do servidor de relatório. A configuração de uma implantação em expansão requer que você crie várias conexões com um banco de dados do servidor de relatório. Para obter mais informações sobre como executar esta operação de várias etapas, veja [Configurar uma implantação em expansão do servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
@@ -61,7 +61,7 @@ Cada instância do servidor de relatório requer uma conexão com o banco de dad
   
 -   Nome da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que hospeda o banco de dados do servidor de relatório.  
   
--   Nome do banco de dados do servidor de relatório. Ao criar uma conexão pela primeira vez, é possível criar um novo banco de dados do servidor de relatório ou selecionar um banco de dados existente. Para obter mais informações, veja [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
+-   Nome do banco de dados do servidor de relatório. Ao criar uma conexão pela primeira vez, é possível criar um novo banco de dados do servidor de relatório ou selecionar um banco de dados existente. Para obter mais informações, veja [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
   
 -   Tipo de credencial. Você pode usar as contas de serviço, uma conta de domínio do Windows ou um logon de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -70,7 +70,7 @@ Cada instância do servidor de relatório requer uma conexão com o banco de dad
  As credenciais fornecidas devem ter acesso ao banco de dados do servidor de relatório. Se você usar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , essa etapa será executada automaticamente. Para obter mais informações sobre as permissões necessárias para acessar o banco de dados, consulte a seção "Permissões de banco de dados" deste tópico.  
   
 ### <a name="storing-database-connection-information"></a>Armazenando informações de conexão do banco de dados  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena e criptografa as informações de conexão nas seguintes configurações do RSreportserver.config. Você deve usar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou o utilitário rsconfig para criar valores criptografados para essas configurações.  
+ O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena e criptografa as informações de conexão nas seguintes configurações do RSreportserver.config. Você deve usar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou o utilitário rsconfig para criar valores criptografados para essas configurações.  
   
  Nem todos os valores são definidos para todo tipo de conexão. Se você configurar a conexão usando os valores padrão (ou seja, usando as contas de serviço para fazer a conexão), \< **LogonUser**>, \< **LogonDomain**>, e \< **LogonCred**> estarão vazios, da seguinte maneira:  
   
@@ -101,7 +101,7 @@ Cada instância do servidor de relatório requer uma conexão com o banco de dad
 ##### <a name="using-service-accounts-and-integrated-security"></a>Usando contas de serviço e segurança integrada  
  Você pode usar a segurança integrada do Windows para se conectar pela conta de serviço do Servidor de Relatório. A conta recebe direitos de logon no banco de dados do servidor de relatório. Esse será o tipo de credencial padrão escolhido pela Instalação se você instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na configuração padrão.  
   
- A conta de serviço é uma conta confiável que fornece uma abordagem de baixa-manutenção ao gerenciamento de uma conexão do banco de dados do servidor de relatório. Como a conta de serviço usa a segurança integrada do Windows para estabelecer a conexão, as credenciais não precisam ser armazenadas. Entretanto, se você alterar a senha ou a identidade da conta de serviço posteriormente (por exemplo, alternando de uma conta interna para uma conta do domínio), certifique-se de usar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para fazer a alteração. A ferramenta atualiza automaticamente as permissões de banco de dados para usar as informações de conta revisadas. Para obter mais informações, veja [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+ A conta de serviço é uma conta confiável que fornece uma abordagem de baixa-manutenção ao gerenciamento de uma conexão do banco de dados do servidor de relatório. Como a conta de serviço usa a segurança integrada do Windows para estabelecer a conexão, as credenciais não precisam ser armazenadas. Entretanto, se você alterar a senha ou a identidade da conta de serviço posteriormente (por exemplo, alternando de uma conta interna para uma conta do domínio), certifique-se de usar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para fazer a alteração. A ferramenta atualiza automaticamente as permissões de banco de dados para usar as informações de conta revisadas. Para obter mais informações, veja [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
  Se você configurar a conexão do banco de dados para usar a conta de serviço, a conta deverá ter permissões de rede se o banco de dados do servidor de relatório estiver em um computador remoto. Não use a conta de serviço se o banco de dados do servidor de relatório estiver em um domínio diferente, atrás de um firewall ou se você estiver usando a segurança de grupo de trabalho em vez da segurança de domínio. Em vez disso, use uma conta de usuário do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -132,7 +132,7 @@ Cada instância do servidor de relatório requer uma conexão com o banco de dad
 ## <a name="next-steps"></a>Próximas etapas
 
 [Criar um banco de dados do servidor de relatório](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
-[Gerenciar um servidor de relatório de modo nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+[Gerenciar um servidor de relatório do Reporting Services modo nativo](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Configurar a conta de serviço do servidor de relatório](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

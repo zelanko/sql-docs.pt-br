@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a401c2af14ba5e530d9efe3ff62eeae3ad9f8e7e
 ms.contentlocale: pt-br
@@ -69,8 +69,8 @@ ms.lasthandoff: 08/09/2017
   
 |Banco de Dados|Nome de exemplo||  
 |--------------|------------------|-|  
-|Banco de dados de catálogo|ReportingService_[service application GUID] **(\*)**|Usuário migra.|  
-|Banco de dados temporário|ReportingService_[service application GUID]TempDB **(\*)**|Usuário migra.|  
+|Banco de dados de catálogo|Reportingservice _ [GUID do aplicativo de serviço] **(\*)**|Usuário migra.|  
+|Banco de dados temporário|Reportingservice _ [GUID do aplicativo de serviço] TempDB **(\*)**|Usuário migra.|  
 |Bancos de dados de alerta|ReportingService_[GUID do aplicativo de serviço]_Alerting|Criado quando um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é criado.|  
   
  **(\*)** Os nomes de exemplo mostrados na tabela seguem a convenção de nomenclatura que o SSRS usa quando você cria um novo aplicativo de serviço SSRS. Se você estiver migrando de um servidor diferente, seu catálogo e tempDBs terão os nomes da instalação original.  

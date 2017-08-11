@@ -21,14 +21,14 @@ helpviewer_keywords:
 - hyperlinks [Reporting Services]
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 caps.latest.revision: 33
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f931c5bd79835f8cf2ce9ceb88078e9408ace71a
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: b8d7aff6c9afdfa6e6fb322d028b9bccf5cbaaf5
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>Integrar o Reporting Services usando o acesso à URL - aplicativo Web
@@ -89,6 +89,6 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0
  [Integrando o Reporting Services em aplicativos](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [Integrando o Reporting Services usando o acesso à URL](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
  [Usando o acesso à URL em um aplicativo do Windows](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)   
- [Acesso à URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
+ [Acesso de URL &#40; SSRS &#41;](../../reporting-services/url-access-ssrs.md)  
   
   

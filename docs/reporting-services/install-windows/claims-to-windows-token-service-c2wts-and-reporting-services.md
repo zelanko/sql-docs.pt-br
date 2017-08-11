@@ -19,7 +19,7 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2ab5f4b5d2774d9dc944ad17bb55063388b70a6d
 ms.contentlocale: pt-br
@@ -116,6 +116,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>Próximas etapas
 
 [Visão geral de reivindicações do Windows Token Service (c2WTS)](http://msdn.microsoft.com/library/ee517278.aspx)   
-[Planejar a autenticação Kerberos no SharePoint 2013](http://technet.microsoft.com/library/ee806870.aspx)  
+[Plano para autenticação Kerberos no SharePoint 2013](http://technet.microsoft.com/library/ee806870.aspx)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

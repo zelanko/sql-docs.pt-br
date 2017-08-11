@@ -17,14 +17,14 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], about extensions
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 caps.latest.revision: 41
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6cb9aec71556ad17066432725a1f37d9157c357d
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: bf4ef7421e85e95d40a28803adec2c279b9a80bc
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="rendering-extensions-overview"></a>Visão geral das extensões de renderização
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 |**PDF**|Renderiza um relatório no Adobe Acrobat Reader. O formato é mostrado como **Arquivo Acrobat (PDF)** na lista suspensa Exportar da barra de ferramentas de relatório.|  
 |**EXCEL**|Renderiza um relatório no [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)].|  
 |**WORD**|Renderizar um relatório no [!INCLUDE[ofprword](../../../includes/ofprword-md.md)].|  
-|**HTML 4.0** (parte da extensão de renderização HTML)|HTML é o formato usado para renderizar inicialmente o relatório. Se o seu navegador der suporte a HTML 4.0, esse será o formato usado. Caso contrário, o HTML 3.2 será usado.|  
+|**O HTML 4.0** (parte da extensão de renderização HTML)|HTML é o formato usado para renderizar inicialmente o relatório. Se o seu navegador der suporte a HTML 4.0, esse será o formato usado. Caso contrário, o HTML 3.2 será usado.|  
 |**MHTML** (parte da extensão de renderização HTML)|Renderiza um relatório em MHTML. O relatório é aberto no Internet Explorer. O formato é mostrado como **Arquivo Web** na lista suspensa Exportar da barra de ferramentas de relatório.|  
 |**NULL**|Não renderiza um relatório para um formato específico. Essa extensão de renderização é útil para colocar relatórios em cache. A renderização nula deve ser usada em conjunto com uma execução ou entrega agendada.|  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
  Cada uma das extensões de renderização implementadas pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] e enviadas com o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa um conjunto comum de interfaces. Isso garante que cada extensão implemente funcionalidade comparável e reduz a complexidade do código de renderização no núcleo do servidor de relatório.  
   
 ## <a name="rendering-object-model"></a>Modelo de objeto de renderização  
- Quando um relatório é processado, o resultado é um modelo de objeto publicamente exposto conhecido como ROM (Modelo de Objeto de Renderização). O Modelo de Objeto de Renderização é uma coleção de classes que definem os conteúdos, o layout e os dados de um relatório que foi processado. O ROM está disponível para desenvolvedores que queiram criar, desenvolver e implantar extensões de renderização personalizadas para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. O ROM é gerado quando o servidor de relatório processa a definição XML de um relatório junto com os dados de relatório definidos pelo usuário. Quando o processamento é concluído, o modelo de objeto público é usado por uma extensão de renderização para definir a saída do relatório. As classes públicas disponíveis da ROM são definidas no namespace **Microsoft.ReportingServices.OnDemandReportRendering**.  
+ Quando um relatório é processado, o resultado é um modelo de objeto publicamente exposto conhecido como ROM (Modelo de Objeto de Renderização). O Modelo de Objeto de Renderização é uma coleção de classes que definem os conteúdos, o layout e os dados de um relatório que foi processado. O ROM está disponível para desenvolvedores que queiram criar, desenvolver e implantar extensões de renderização personalizadas para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. O ROM é gerado quando o servidor de relatório processa a definição XML de um relatório junto com os dados de relatório definidos pelo usuário. Quando o processamento é concluído, o modelo de objeto público é usado por uma extensão de renderização para definir a saída do relatório. As classes públicas disponíveis de ROM são definidas no **Microsoft.ReportingServices.OnDemandReportRendering** namespace.  
   
 ## <a name="writing-custom-rendering-extensions"></a>Escrevendo extensões de renderização personalizadas  
  Antes de decidir criar uma extensão de renderização personalizada, avalie alternativas mais simples. Você pode:  
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Adicione formatação personalizada e recursos de apresentação combinando XSLT (Transformações XSL) com a saída do formato de renderização XML.  
   
- Escrever uma extensão de renderização personalizada é difícil. Normalmente, uma extensão de renderização deve dar suporte a todas as combinações possíveis de elementos de relatório e exige que você implemente centenas de classes, de interfaces, de métodos e de propriedades. Se você precisar renderizar um relatório em um formato não incluído no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e decidir escrever a sua própria implementação de código gerenciado de uma extensão de renderização, o código da extensão de renderização deve implementar a interface **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension**, exigida pelo servidor de relatório.  
+ Escrever uma extensão de renderização personalizada é difícil. Normalmente, uma extensão de renderização deve dar suporte a todas as combinações possíveis de elementos de relatório e exige que você implemente centenas de classes, de interfaces, de métodos e de propriedades. Se você deve renderizar um relatório em um formato que não está incluído no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e decidir escrever sua própria implementação de código gerenciado de uma extensão de renderização, o código de extensão de renderização deve implementar o **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension** interface, que é exigido pelo servidor de relatório.  
   
  Para obter documentação e whitepapers suplementares sobre o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], consulte os recursos técnicos mais recentes no [site do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=19951).  
   

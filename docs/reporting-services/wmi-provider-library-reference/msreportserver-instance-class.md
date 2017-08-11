@@ -23,7 +23,7 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 75976823433b59a52f3fe1fe17ebd86f48d33917
 ms.contentlocale: pt-br
@@ -49,9 +49,9 @@ public class MSReportServer_Instance
  Qualquer membro público estático (**Compartilhado** no [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) desse tipo é seguro para operações com vários threads. Não há garantia de que qualquer membro da instância seja seguro para threads.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
- **Plataforma:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **Plataforma:**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Membros MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  

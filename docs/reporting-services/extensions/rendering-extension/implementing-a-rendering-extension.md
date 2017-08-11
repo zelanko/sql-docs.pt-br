@@ -20,14 +20,14 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], implementing
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
 caps.latest.revision: 34
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 68e74b4a67a1edc6517c9e6b2b0160ce2db258b9
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: c6be8db763c82a47d0635169f33a0f0543910abe
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implementing-a-rendering-extension"></a>Implementando uma extensão de renderização
@@ -37,16 +37,16 @@ ms.lasthandoff: 06/22/2017
 >  Para determinar quais extensões de renderização estão disponíveis, exiba a lista das extensões instaladas no arquivo RSReportServer.config.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral de extensões de renderização](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)  
+ [Visão geral das extensões de renderização](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)  
  Introduz como escrever uma extensão de renderização personalizada para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- [Implementando a Interface IRenderingExtension](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)  
+ [Implementar a interface IRenderingExtension](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)  
  Descreve os atributos de uma extensão de renderização.  
   
  [Implantando uma extensão de renderização](../../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)  
  Descreve como implantar uma extensão de renderização em um servidor de relatório.  
   
- [Removendo uma extensão de renderização](../../../reporting-services/extensions/rendering-extension/removing-a-rendering-extension.md)  
+ [Remover uma extensão de renderização](../../../reporting-services/extensions/rendering-extension/removing-a-rendering-extension.md)  
  Descreve como remover uma extensão de renderização de um servidor de relatório.  
   
 ## <a name="see-also"></a>Consulte também  

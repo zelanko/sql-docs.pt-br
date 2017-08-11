@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 91700c92ed7f96e00ba05d7ee9ca96590d0a4837
 ms.contentlocale: pt-br
@@ -37,7 +37,7 @@ Para que os usuários e os administradores de alerta possam criar, editar, exclu
 
 Para obter mais informações sobre as permissões do SharePoint, consulte [Permissões de usuários e níveis de permissão (SharePoint Server 2010)](http://technet.microsoft.com/library/cc721640.aspx).
 
-## <a name="grant-permissions"></a>Conceder permissões
+## <a name="grant-permissions"></a>Conceder Permissões
   
 1.  Vá para o site do SharePoint ao qual você deseja conceder permissões.  
   
@@ -59,7 +59,7 @@ Para obter mais informações sobre as permissões do SharePoint, consulte [Perm
 
 ## <a name="see-also"></a>Consulte também
 
-[Definir permissões para itens do Servidor de Relatório em um site do SharePoint &#40;Reporting Services no modo integrado do SharePoint&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+[Definir permissões para itens do servidor de relatório em um Site do SharePoint &#40; O Reporting Services no SharePoint integrado modo &#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
 [Alertas de dados do Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -15,7 +15,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c398f3e0b6e3d6eae50fbd9f2bad35c47524c808
 ms.contentlocale: pt-br
@@ -33,27 +33,27 @@ ms.lasthandoff: 08/09/2017
  Use os tópicos nesta seção para ajudar a escrever expressões simples em um relatório.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)  
+ [Tipos de dados em expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)  
   
- [Constantes em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)  
+ [Constantes em expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)  
   
- [Operadores em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)  
+ [Operadores em expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)  
   
- [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
+ [Coleções internas em expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
   
- [Referências globais internas e referências de usuários &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+ [Globais internas e referências de usuários &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
- [Referências de coleções de parâmetros &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Referências de coleção de parâmetros &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
- [Referências de coleções de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)  
+ [Referências de coleção de campos do conjunto de dados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)  
   
- [Referências de coleções DataSources e DataSets &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)  
+ [Fontes de dados e referências de coleção de conjuntos de dados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)  
   
- [Referências de coleções de variáveis de grupo e de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [Relatório e referências de coleções de variáveis de grupo &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [Referências de coleções ReportItems &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md)  
+ [Referências de coleções ReportItems &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [Expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

@@ -20,7 +20,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b785da81bc694c8442d2a7a618e2abe8f1cec907
 ms.contentlocale: pt-br
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Concedendo permissões para itens do servidor de relatório em um site do SharePoint
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fornece recursos de segurança internos que podem ser usados para conceder acesso a itens do servidor de relatório acessados nos sites e bibliotecas do SharePoint. Se você já tiver atribuído permissões a usuários, esses mesmos usuários terão acesso a itens e operações do servidor de relatórios assim que você configurar a integração entre o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] e um servidor de relatório. Você pode usar permissões existentes para carregar definições de relatório e outros documentos, exibir relatórios, criar assinaturas e gerenciar itens.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fornece recursos de segurança internas que você pode usar para conceder acesso a itens de servidor de relatório que você acessa de bibliotecas e sites do SharePoint. Se você já tiver atribuído permissões a usuários, esses mesmos usuários terão acesso a itens e operações do servidor de relatórios assim que você configurar a integração entre o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] e um servidor de relatório. Você pode usar permissões existentes para carregar definições de relatório e outros documentos, exibir relatórios, criar assinaturas e gerenciar itens.  
   
  Se você não atribuiu permissões ou se não estiver familiarizado com os recursos de segurança no [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], siga essas orientações:  
   
@@ -47,11 +47,11 @@ ms.lasthandoff: 08/09/2017
   
 -   Objetos protegíveis incluem sites, listas, bibliotecas, pastas e documentos.  
   
--   Uma permissão é uma autorização para executar uma tarefa específica. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fornece 33 permissões predefinidas que você pode combinar em um nível de permissão.  
+-   Uma permissão é uma autorização para executar uma tarefa específica. O [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fornece 33 permissões predefinidas que você pode combinar em um nível de permissão.  
   
 -   Um nível de permissão é um conjunto de permissões que pode ser concedido a usuários ou grupos do SharePoint em um objeto que pode ser protegido como um site, biblioteca, lista, pasta, item ou documento. É equivalente a uma definição de função em [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Há cinco níveis de permissão predefinidos. Você pode personalizá-los ou criar novos, se necessário.  
   
--   Um grupo do SharePoint é um grupo de usuários que você pode criar em um site do SharePoint para gerenciar permissões para o site e fornecer uma lista de distribuição de email para membros do site. Um grupo do SharePoint consiste em contas de grupo e de usuário do Windows ou de logons de usuário, se você estiver usando a Autenticação de Formulários. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fornece três grupos. Você pode personalizá-los ou criar novos, se necessário.  
+-   Um grupo do SharePoint é um grupo de usuários que você pode criar em um site do SharePoint para gerenciar permissões para o site e fornecer uma lista de distribuição de email para membros do site. Um grupo do SharePoint consiste em contas de grupo e de usuário do Windows ou de logons de usuário, se você estiver usando a Autenticação de Formulários. O [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fornece três grupos. Você pode personalizá-los ou criar novos, se necessário.  
   
 -   A herança de permissão permite que subsites, listas e bibliotecas e itens herdem as configurações de segurança do site pai. Você pode usar as permissões herdadas para acessar itens do servidor de relatório armazenados em uma biblioteca do SharePoint. Usar a herança de permissão e os grupos predefinidos do SharePoint pode ajudar a simplificar sua implantação e fornece acesso imediato à maioria das operações do servidor de relatório.  
   
@@ -83,16 +83,16 @@ ms.lasthandoff: 08/09/2017
  [Usar a segurança interna no Windows SharePoint Services para itens do servidor de relatório](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
  Explica como podem ser usados os níveis de permissão e grupos do SharePoint predefinidos para acessar itens do servidor de relatório.  
   
- [Referência à permissão de listas e sites do SharePoint para itens do servidor de relatório](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ [Referência de permissão de lista de itens do servidor de relatório e sites do SharePoint](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  Fornece uma referência de todas as permissões de produtos do SharePoint que podem ser usadas para acessar operações do servidor de relatórios.  
   
- [Definir permissões para operações do servidor de relatório em um aplicativo Web do SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
+ [Definir permissões para operações de servidor de relatório em um aplicativo Web do SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  Descreve requisitos de permissão para relatórios ad hoc e sugere abordagens para tornar os recursos disponíveis.  
   
  [Comparar funções e tarefas no Reporting Services com permissões e grupos do SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
  Fornece um breve resumo de como os grupos do SharePoint são comparados com definições de função predefinidas no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Definir permissões para itens do Servidor de Relatório em um site do SharePoint &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [Definir permissões para itens do servidor de relatório em um Site do SharePoint &#40; O Reporting Services no SharePoint integrado modo &#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  Fornece instruções para criar novos grupos do SharePoint que têm permissão para iniciar o Construtor de Relatórios e definir a segurança do item do modelo. Este tópico também contém diretrizes gerais sobre como definir permissões personalizadas para qualquer item do servidor de relatório ou operação.  
   
 ## <a name="see-also"></a>Consulte também  

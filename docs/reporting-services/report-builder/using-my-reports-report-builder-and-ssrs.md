@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f394a1ad055276cc7f0a6d28f923215dde8e437a
 ms.contentlocale: pt-br
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  O recurso Meus Relatórios é opcional e pode ser desabilitado por um administrador de servidor de relatório. Se estiver habilitado, você verá uma pasta Meus Relatórios na pasta Base, que você pode acessar usando o Gerenciador de Relatórios em uma janela da Web. Para obter mais informações, consulte [Como localizar e exibir relatórios no Gerenciador de Relatórios &#40;Construtor de Relatórios e SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx).  
   
- Em um servidor de relatório configurado em modo integrado do SharePoint, não existe um equivalente à pasta Meus Relatórios. Para obter mais informações, consulte [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+ Em um servidor de relatório configurado em modo integrado do SharePoint, não existe um equivalente à pasta Meus Relatórios. Para obter mais informações, consulte [Como localizar, exibir e gerenciar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -49,6 +49,6 @@ ms.lasthandoff: 08/09/2017
  Quando você pesquisa em um banco de dados do servidor de relatório, o conteúdo da sua pasta Meus Relatórios é incluído na pesquisa, enquanto o conteúdo das outras pastas Meus Relatórios é excluído. Os resultados da pesquisa listam apenas os relatórios para os quais você tem acesso.  
   
 ## <a name="see-also"></a>Consulte também  
- [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Localizando, exibindo e Gerenciando relatórios &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

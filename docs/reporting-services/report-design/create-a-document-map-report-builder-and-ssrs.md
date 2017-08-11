@@ -15,7 +15,7 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3abd0b8ce2b463cf793b6b75c908a69308cb68a8
 ms.contentlocale: pt-br
@@ -116,7 +116,7 @@ O mapa do documento fornece um conjunto de links de navegação aos itens de rel
 4.  Cole a URL no Gerenciador de Relatórios e pressione ENTER. O relatório será executado e o mapa do documento será ocultado.  
   
 > [!NOTE]  
->  Para obter mais informações sobre como baixar relatórios de exemplo, consulte [relatórios de exemplo do construtor de relatórios e Designer de relatórios](http://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Para obter mais informações sobre como baixar relatórios de exemplo, consulte os [(Relatórios de exemplo do Construtor de relatórios e Designer de relatórios) do](http://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  Para obter mais informações, consulte “Acesso à URL” na [documentação do Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
 

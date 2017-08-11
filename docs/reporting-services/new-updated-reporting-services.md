@@ -4,7 +4,7 @@ description: "Trechos de código de exibição de conteúdo atualizado recenteme
 services: na
 documentationcenter: 
 author: MightyPen
-manager: jhubbard
+manager: craigg
 editor: 
 ms.service: na
 ms.topic: updart-autogen
@@ -15,11 +15,11 @@ ms.devlang: na
 ms.date: 07/17/2017
 ms.author: genemi
 ms.workload: reporting-services
-ms.translationtype: MT
-ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
-ms.openlocfilehash: 15609f8770c3bc2741fe389faed794fc14082cae
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 441dabbd57cb05db349265b2eaf338bed64bd20b
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="new-and-recently-updated-reporting-services-for-sql-server"></a>Novos e atualizados recentemente: Reporting Services para SQL Server

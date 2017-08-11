@@ -15,7 +15,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
 ms.contentlocale: pt-br
@@ -54,7 +54,7 @@ Você pode criar uma fonte de dados compartilhada para seus relatórios móveis 
 1. De seu portal da Web do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , clique em **Nova** > **Fonte de Dados**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. Insira as informações de sua fonte de dados > **OK**.  
+3. Insira suas informações de fonte de dados > **Okey**.  
   
     Por padrão, as fontes de dados não são exibidas no portal.    
    
@@ -235,7 +235,7 @@ As listas de seleção atuam como segmentações de dados no Power BI e Excel. P
   
 Agora que você criou elementos visuais no layout mestre, poderá criar um relatório móvel com um layout otimizado especificamente para os usuários de telefones.    
   
-1. No canto superior direito, clique no ícone da tela > **Telefone**.  
+1. No canto superior direito, clique no ícone de tela > **telefone**.  
   
 2. Na guia Layout, em **Instâncias de Controle**, veja os dois gráficos que você criou.   
   

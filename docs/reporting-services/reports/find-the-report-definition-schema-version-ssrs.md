@@ -19,7 +19,7 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 354f69ea0d63502a66db541f968f0efe2e690a6e
 ms.contentlocale: pt-br
@@ -90,6 +90,6 @@ Um arquivo de definição de relatório especifica o namespace do RDL para a ver
 ## <a name="next-steps"></a>Próximas etapas
 
 [Atualizar relatórios](../../reporting-services/install-windows/upgrade-reports.md)   
-[Linguagem de definição de relatório](../../reporting-services/reports/report-definition-language-ssrs.md)  
+[Linguagem RDL](../../reporting-services/reports/report-definition-language-ssrs.md)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

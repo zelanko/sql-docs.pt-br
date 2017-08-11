@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], about extensions
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 caps.latest.revision: 39
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c30ea734a30e00fdefeb9b30a1ced9c3f60d5fca
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 075724639c912f40c3ef7c49227ba653bd086fcd
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="data-processing-extensions-overview"></a>Visão geral das extensões de processamento de dados
@@ -41,13 +41,13 @@ ms.lasthandoff: 06/22/2017
  Você pode usar a API [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] de processamento de dados para adicionar processamento de dados ao seu servidor de relatório.  
   
 > [!NOTE]  
-> O  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] tem suporte interno para provedores de dados no [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Se você já implementou um provedor de dados completo, não precisará implementar uma extensão de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Entretanto, você deve considerar a extensão do seu provedor de dados para incluir funcionalidade específica para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005, que inclui credenciais de conexão seguros e agregações do lado de servidor.  
+>  O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] tem suporte interno para provedores de dados no [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Se você já implementou um provedor de dados completo, não precisará implementar uma extensão de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Entretanto, você deve considerar a extensão do seu provedor de dados para incluir funcionalidade específica para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005, que inclui credenciais de conexão seguros e agregações do lado de servidor.  
   
  Cada uma das extensões de processamento de dados incluídas com o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa um conjunto comum de interfaces. Isso garante que cada extensão implementa funcionalidade comparável.  
   
  Você pode desenvolver extensões de processamento de dados para as suas próprias fontes de dados, ou pode usar as interfaces para adicionar um processamento de uma camada de dados adicional a infraestruturas comuns de banco de dados. Você pode implantar suas extensões de processamento de dados personalizadas para habilitar a integração direta de dados nos servidores de relatórios existentes em sua organização. Você também poderá usá-las como parte de um pacote de relatórios personalizado fornecido a seus consumidores.  
   
- ![Arquitetura de extensão de processamento de dados](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "Data processing extension architecture")  
+ ![Arquitetura de extensão de processamento de dados](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "arquitetura de extensão de processamento de dados")  
 Arquitetura de extensão de processamento de dados do Reporting Services  
   
  As vantagens para a implementação de uma extensão de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluem:  
@@ -61,7 +61,7 @@ Arquitetura de extensão de processamento de dados do Reporting Services
 ## <a name="data-extension-process-flow"></a>Fluxo de processo de extensão de dados  
  Antes de desenvolver a sua extensão de dados personalizada, você precisa entender como o servidor de relatório usa extensões de dados para processar dados. Você também deve compreender os construtores e os métodos chamados pelo pelo servidor de relatório.  
   
- ![Fluxo de processo para a extensão de processamento de dados](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Process flow for data processing extension")  
+ ![Fluxo para a extensão de processamento de dados do processo](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "fluxo para a extensão de processamento de dados do processo")  
 O fluxo de processo passo a passo de uma extensão de dados chamada pelo servidor de relatório  
   
  A ilustração mostra a sequência de eventos a seguir:  

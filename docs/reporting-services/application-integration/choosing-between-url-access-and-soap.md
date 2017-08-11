@@ -19,20 +19,20 @@ helpviewer_keywords:
 - Web service [Reporting Services], application integration
 ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
 caps.latest.revision: 40
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6837170f3ebe0e92e7914c3f0f863aa9534e0cb8
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: d53edb542a9666f4d5636f362e6689f33dbf9dcc
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="choosing-between-url-access-and-soap"></a>Optando entre acesso à URL e SOAP
   A integração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a aplicativos personalizados pode ser desafiadora. No entanto, o desafio não é a complexidade do modelo de programação ou das APIs, mas as muitas maneiras possíveis de integrá-los. O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] foi criado a partir do zero como uma plataforma de desenvolvedor e, portanto, é compilado tendo em mente a flexibilidade da programação. Com a flexibilidade vem a necessidade de tomar decisões importantes sobre como integrar a navegação de relatórios e a funcionalidade de gerenciamento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aos seus aplicativos comerciais existentes.  
   
- ![Cenários de programação do Reporting Services](../../reporting-services/application-integration/media/bk-ext-04.gif "Reporting Services programming scenarios")  
+ ![Cenários de programação do Reporting Services](../../reporting-services/application-integration/media/bk-ext-04.gif "cenários de programação do Reporting Services")  
 A programação do Reporting Services dá suporte a uma grande variedade de cenários.  
   
  Existem dois modos de integrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a aplicativos personalizados: acesso à URL e a API SOAP do Reporting Services. A opção utilizada dependerá de vários fatores. Em alguns casos, a integração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aos seus aplicativos comerciais personalizados exigirá que você use o acesso à URL e o SOAP. Você deve fazer as seguintes perguntas:  
@@ -62,6 +62,6 @@ A programação do Reporting Services dá suporte a uma grande variedade de cen�
  [Integrando o Reporting Services em aplicativos](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [Integrando o Reporting Services usando SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   
  [Integrando o Reporting Services usando o acesso à URL](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [Referência técnica &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
+ [Referência técnica &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   

@@ -18,7 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: abb122ab9eec2ac66895e0b2bc7d1e2dc8490abf
 ms.contentlocale: pt-br
@@ -61,7 +61,7 @@ Os administradores de alerta do SharePoint podem exibir uma lista dos alertas de
 
 ## <a name="see-also"></a>Consulte também
 
-[Gerenciador de Alertas de dados para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Gerenciador de alertas de dados para os administradores de alerta](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Alertas de dados do Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

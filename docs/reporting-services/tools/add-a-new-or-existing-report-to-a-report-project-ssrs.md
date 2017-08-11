@@ -17,7 +17,7 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 94cc2ebfc2b11bd6bc3e2ab2ce07b5c22c14a12c
 ms.contentlocale: pt-br
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Para visualizar um relatório com fontes de dados existentes, é preciso ter as permissões para a fonte de dados do cliente que está criando o relatório. Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- Depois de adicionar um relatório, é possível definir as fontes de dados e os conjuntos de dados, e criar um layout de relatório. Para começar, consulte [Criando um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) ou [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
+ Depois de adicionar um relatório, é possível definir as fontes de dados e os conjuntos de dados, e criar um layout de relatório. Para começar, consulte [criar um relatório de tabela básico &#40; Tutorial do SSRS &#41; ](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) ou [tabelas &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 ## <a name="to-add-a-new-report-using-the-report-wizard"></a>Para adicionar um novo relatório usando o Assistente de Relatórios  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/09/2017
      O relatório é acrescentado ao projeto na pasta **Relatórios** . Quando você fechar e reabrir o projeto, os relatórios serão classificados pela ordem alfabética.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
+ [Reporting Services tutoriais &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
  Mais perguntas? [Tente o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   

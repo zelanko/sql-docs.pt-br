@@ -20,7 +20,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 79c838b6bc98b64ac57b83e193b25d861e905e38
 ms.contentlocale: pt-br
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Células, linhas e colunas da região de dados Tablix (Construtor de Relatórios) e SSRS
-  Para controlar como as linhas e colunas de uma região de dados tablix exibem dados em um relatório paginado [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , você deve compreender como especificá-las para dados detalhados, dados de grupo, além de rótulos e totais. Em muitos casos, é possível usar as estruturas padrão em uma tabela, matriz ou lista para exibir os dados. Para obter mais informações, consulte [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [matrizes](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) ou [listas](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+  Para controlar como as linhas e colunas de uma região de dados tablix exibem dados em um relatório paginado [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , você deve compreender como especificá-las para dados detalhados, dados de grupo, além de rótulos e totais. Em muitos casos, é possível usar as estruturas padrão em uma tabela, matriz ou lista para exibir os dados. Para obter mais informações, consulte [tabelas &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Matrizes](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md), ou [lista](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md) .  
   
  Uma região de dados tablix exibe dados detalhados em linhas e colunas detalhadas, além de dados agrupados em linhas e colunas agrupadas. Quando você adiciona grupos de linhas e de colunas a uma região de dados tablix, as linhas e as colunas nas quais os dados são exibidos são adicionadas automaticamente. É possível adicionar e remover manualmente linhas e colunas para personalizar uma região de dados tablix e controlar a forma como os dados são exibidos no relatório.  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 08/09/2017
   
  Quando há grupos detalhados, cada linha detalhada permanece dentro do grupo. A linha se repete em todos os valores do conjunto de resultados da consulta do conjunto de dados.  
   
- Para obter mais informações sobre hierarquias de grupos, consulte [Noções básicas sobre grupos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
+ Para obter mais informações sobre hierarquias de grupo, consulte [Noções básicas sobre grupos &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
  A seguinte figura mostra uma região de dados tablix com grupos de linhas aninhados e um grupo detalhado.  
   
@@ -99,10 +99,10 @@ ms.lasthandoff: 08/09/2017
   
  Para remover linhas e colunas associadas a um grupo, é possível excluí-lo. Ao excluir um grupo, você tem a opção de excluir apenas a definição de grupo ou excluir o grupo e todas as linhas e colunas associadas. Excluindo apenas o grupo, você preserva o layout da linha e da coluna na região de dados. Ao excluir o grupo e as linhas e colunas relacionadas, você está excluindo todas as linhas e colunas estáticas (inclusive cabeçalhos e rodapés do grupo), além das linhas e colunas dinâmicas (inclusive instâncias de grupo) associadas ao grupo.  
   
- Para obter instruções passo a passo sobre como adicionar ou excluir linhas e colunas, consulte [Inserir ou excluir uma linha &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md) e [Inserir ou excluir uma coluna &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
+ Para obter instruções passo a passo sobre como adicionar ou excluir linhas e colunas, consulte [inserir ou excluir uma linha &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md) e [inserir ou excluir uma coluna &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
 ## <a name="understanding-tablix-cells"></a>Compreendendo células Tablix  
- As células tablix pertencem a uma das quatro áreas tablix: corpo, áreas do grupo de linhas ou de colunas ou canto. Embora cada célula possa exibir qualquer valor no conjunto de dados, a função padrão de cada célula é determinada pelo local. Para obter informações detalhadas sobre áreas tablix, consulte [Áreas da região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ As células tablix pertencem a uma das quatro áreas tablix: corpo, áreas do grupo de linhas ou de colunas ou canto. Embora cada célula possa exibir qualquer valor no conjunto de dados, a função padrão de cada célula é determinada pelo local. Para obter informações detalhadas sobre áreas tablix, consulte [áreas da região de dados Tablix &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  Por padrão, células nas áreas dos grupos de linhas e de colunas tablix representam membros de grupo. Os membros do grupo são organizados em várias estruturas de árvore na definição de relatório. A hierarquia de grupo da linha se expande horizontalmente. A hierarquia de grupo da coluna se expande verticalmente. Essas células são adicionadas automaticamente quando você cria um grupo e exibem os valores exclusivos de um grupo em tempo de execução.  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 08/09/2017
  As células na área do corpo tablix podem exibir dados detalhados quando a célula está em uma linha ou coluna detalhada e dados agregados quando ela se encontra em uma linha ou coluna do grupo. O escopo dos dados de uma célula é a interseção entre os grupos internos de linhas e de colunas aos quais a célula pertence.  
   
 > [!NOTE]  
->  Os dados reais exibidos referentes a cada célula formam a expressão avaliada do item de relatório que ela contém, normalmente uma caixa de texto. Em uma célula pertencente a uma linha ou coluna detalhada, a expressão usa como padrão os dados detalhados (por exemplo, **[LineTotal])**. Em uma célula não pertencente a uma linha ou coluna detalhada, a expressão usa como padrão uma função de agregação (por exemplo, **Sum[LineTotal])**. Caso uma expressão não especifique uma função de agregação mesmo que a célula pertença a uma linha ou coluna do grupo, é exibido o primeiro valor do grupo. Para obter mais informações sobre agregações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+>  Os dados reais exibidos referentes a cada célula formam a expressão avaliada do item de relatório que ela contém, normalmente uma caixa de texto. Em uma célula pertencente a uma linha ou coluna detalhada, a expressão usa como padrão os dados detalhados (por exemplo, **[LineTotal])**. Em uma célula não pertencente a uma linha ou coluna detalhada, a expressão usa como padrão uma função de agregação (por exemplo, **Sum[LineTotal])**. Caso uma expressão não especifique uma função de agregação mesmo que a célula pertença a uma linha ou coluna do grupo, é exibido o primeiro valor do grupo. Para obter mais informações sobre agregações, consulte [escopo das expressões para totais, agregações e coleções internas &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="merging-and-splitting-cells"></a>Mesclando e dividindo células  
  Em uma área tablix, é possível mesclar várias células adjacentes. Por exemplo, você pode criar células para rótulos que incluam várias colunas ou linhas.  

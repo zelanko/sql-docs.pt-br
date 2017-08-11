@@ -17,7 +17,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 993571d2e5d70ba0553a0ed747caccfcadb3a0da
 ms.contentlocale: pt-br
@@ -43,22 +43,22 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Formatação de texto e espaços reservados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  Descreve como formatar texto e personalizar opções de formatação para diferentes blocos de texto em uma caixa de texto.  
   
- [Importando HTML para um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [Importando HTML para um relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
  Descreve como inserir e usar HTML em um relatório.  
   
- [Formatando números e datas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [Formatando números e datas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
  Descreve como usar as cadeias de caracteres de formatação padrão e personalizadas que têm suporte pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Formatando linhas, cores e imagens &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)  
+ [Formatando linhas, cores e imagens &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)  
  Descreve como formatar linhas, linhas de grade, cores e imagens em itens de relatório e regiões de dados.  
   
- [Definir a localidade em um relatório ou caixa de texto &#40;Reporting Services&#41;](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [Definir a localidade em um relatório ou caixa de texto &#40; Reporting Services &#41;](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Descreve como alterar a configuração para formatos de exibição de dados que diferem por idioma e região, como data, moeda e valores de número.  
   
 ## <a name="see-also"></a>Consulte também  
- [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [Formatando um gráfico de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   

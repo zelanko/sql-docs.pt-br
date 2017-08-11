@@ -17,14 +17,14 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services], about extensions
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 caps.latest.revision: 37
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3b201ef2225d7794b399c79a318627fc978b8b72
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 79894381bf493132c1f73d711ecd6d1ba282401e
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="delivery-extensions-overview"></a>Visão geral de extensões de entrega
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 |Email do servidor de relatório|Usa um servidor SMTP para enviar relatórios de email a usuários individuais ou a grupos.|  
 |Compartilhamento de arquivos do servidor de relatórios|Usado para distribuir relatórios em sua organização para o compartilhamentos de arquivos de rede. Oferece a capacidade de copiar um relatório automaticamente para um compartilhamento de arquivo em uma agenda designada.|  
   
- ![Arquitetura de extensão de entrega do Reporting Services](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services delivery extension architecture")  
+ ![Arquitetura de extensão de entrega de serviços de emissão de relatórios](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "arquitetura de extensão de entrega do Reporting Services")  
 Arquitetura da extensão de entrega do Reporting Services  
   
  As extensões de entrega são emparelhadas com as assinaturas. Durante a criação de uma assinatura, um usuário pode escolher uma das extensões de entrega disponíveis para determinar como o relatório será entregue. No [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], as assinaturas estão localizadas no banco de dados do servidor de relatório. Quando ocorre um evento, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] corresponde o evento às assinaturas contidas no banco de dados do servidor de relatório. Para cada assinatura ligada ao evento, o servidor de relatório criará uma notificação. Para assinaturas controladas por dados, uma notificação será criada para cada destinatário. Depois que a notificação for criada, o servidor de relatório invocará uma determinada extensão de entrega e passará valores para as configurações de extensão especificadas na notificação. A extensão de entrega envia a notificação ao usuário como especificado pela extensão de entrega selecionada.  

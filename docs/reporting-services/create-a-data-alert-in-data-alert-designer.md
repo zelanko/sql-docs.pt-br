@@ -15,7 +15,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5203aab062888ca40ee83ee3f00521d6661defba
 ms.contentlocale: pt-br
@@ -128,8 +128,8 @@ Você cria definições de alerta de dados no Designer de Alertas de Dados. Depo
 
 ## <a name="see-also"></a>Consulte também
 
-[Designer de Alertas de Dados](../reporting-services/data-alert-designer.md)   
-[Gerenciador de Alertas de dados para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Designer de alertas de dados](../reporting-services/data-alert-designer.md)   
+[Gerenciador de alertas de dados para os administradores de alerta](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Alertas de dados do Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

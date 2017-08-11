@@ -18,14 +18,14 @@ helpviewer_keywords:
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 caps.latest.revision: 30
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c7e953f9beea75f08e6c87a210975172e5768d68
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 1d7c7d5f46e1340de1fca0422ff91f64c910a32d
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="security-considerations-for-extensions"></a>Considerações de segurança para extensões
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
  As extensões implantadas em um servidor de relatório devem ser executado como totalmente confiável, que significa que sua extensão precisa fazer parte de um grupo de código que recebe o **FullTrust** conjunto de permissões. Isso também significa que a sua extensão poderá ter acesso a certos recursos e operações de servidor disponíveis por meio do CLR, dependendo do usuário autenticado para um determinado relatório. Para obter mais informações sobre grupos de código e extensões, consulte [Code Access Security no Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md).  
   
 > [!IMPORTANT]  
-> O  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impõe a segurança [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para todas as suas extensões.  
+>  O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impõe a segurança [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para todas as suas extensões.  
   
  As condições a seguir se aplicam à implantação de processamento de dados, à entrega, à renderização e às extensões de segurança do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   

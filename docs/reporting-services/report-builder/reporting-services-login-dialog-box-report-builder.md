@@ -17,7 +17,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 551b909cce14da7e6aeb277234a430cace112ed7
 ms.contentlocale: pt-br
@@ -38,6 +38,6 @@ ms.lasthandoff: 08/09/2017
  Digite a senha para fazer logon no serviço Web.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
+ [Ajuda do construtor de relatórios para caixas de diálogo, painéis e assistentes](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
   
   

@@ -17,7 +17,7 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7265597c2376d62b6d3e42c55c8d87e45f6d869e
 ms.contentlocale: pt-br
@@ -51,6 +51,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="internal-only"></a>Somente interno  
   
 ## <a name="see-also"></a>Consulte também  
- [Iniciar e parar o serviço Servidor de Relatório](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
+ [Iniciar e parar o serviço do servidor de relatório](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
   
   

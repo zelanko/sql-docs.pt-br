@@ -16,7 +16,7 @@ caps.latest.revision: 64
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 76224139b629d797735b88bfcc692a1e8abce336
 ms.contentlocale: pt-br
@@ -72,7 +72,7 @@ A visualização de um relatório permite exibir o relatório renderizado sem qu
 > No menu **Arquivo** , clique em **Salvar Tudo** para salvar o relatório.  
   
 ## <a name="next-steps"></a>Próximas etapas  
-Você adicionou uma região de dados de Tabela ao relatório, adicionou campos à região de dados e visualizou o relatório com êxito. Em seguida, você formatará cabeçalhos de colunas e valores de data e de moeda. Consulte [Lição 5: Formatando um relatório &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+Você adicionou uma região de dados de Tabela ao relatório, adicionou campos à região de dados e visualizou o relatório com êxito. Em seguida, você formatará cabeçalhos de colunas e valores de data e de moeda. Consulte [lição 5: formatando um relatório &#40; Reporting Services &#41; ](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
 [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  

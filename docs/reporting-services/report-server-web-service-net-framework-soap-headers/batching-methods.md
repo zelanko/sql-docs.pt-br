@@ -23,14 +23,14 @@ helpviewer_keywords:
 - multiple Web service methods
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
 caps.latest.revision: 36
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8b08c9f44efd416e3d5c9f24cb54f74569ba2882
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: ff92d909aad4d6de65e74cd4382c49560cf473c1
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="batching-methods"></a>Métodos de processamento em lote
@@ -109,7 +109,7 @@ class Sample
 ## <a name="see-also"></a>Consulte também  
  <xref:ReportService2005.ReportingService2005.CancelBatch%2A>   
  <xref:ReportService2005.ReportingService2005.CreateBatch%2A>   
- [Referência técnica &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Referência técnica &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
  [Usando o Reporting Services cabeçalhos SOAP](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   

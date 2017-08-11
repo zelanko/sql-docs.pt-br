@@ -19,7 +19,7 @@ caps.latest.revision: 31
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a09ebdeda6679c80f3eb32602d38068114e7bf36
 ms.contentlocale: pt-br
@@ -66,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
      ![Iniciar o construtor de relatórios](../../reporting-services/media/rb-getstarted.png "iniciar o construtor de relatórios")  
   
-     If the **Getting Started** dialog box does not appear, click **File** >**New**. A maior parte do conteúdo na caixa de diálogo **Novo Relatório ou Conjunto de Dados** é igual àquele encontrado na caixa de diálogo **Introdução** .  
+     Se a caixa de diálogo **Guia de Introdução** não aparece, clique em **Arquivo** >**Novo**. A maior parte do conteúdo na caixa de diálogo **Novo Relatório ou Conjunto de Dados** é igual àquele encontrado na caixa de diálogo **Introdução** .  
   
 2.  No painel esquerdo, verifique se **Novo Relatório** está selecionado.  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  Na caixa **Selecione o tipo de conexão** , clique em **XML**.  
   
-8.  Clique na guia **Credenciais** e selecione **Utilizar usuário atual do Windows. A delegação de Kerberos poderá ser necessária**, então, clique em **OK**.  
+8.  Clique o **credenciais** guia, selecione **utilizar usuário atual do Windows. A delegação de Kerberos pode ser necessária**e, em seguida, clique em **Okey**.  
   
 9. Na página **Escolha uma conexão com uma fonte de dados** , clique em **MyPieChart**e em **Avançar**.  
   
@@ -152,7 +152,7 @@ ms.lasthandoff: 08/09/2017
      A caixa de diálogo **Guia de Introdução** é exibida.  
   
     > [!NOTE]  
-    >  If the **Getting Started** dialog box does not appear, click **File** >**New**. A maior parte do conteúdo na caixa de diálogo **Novo Relatório ou Conjunto de Dados** é igual àquele encontrado na caixa de diálogo **Introdução** .  
+    >  Se a caixa de diálogo **Guia de Introdução** não aparece, clique em **Arquivo** >**Novo**. A maior parte do conteúdo na caixa de diálogo **Novo Relatório ou Conjunto de Dados** é igual àquele encontrado na caixa de diálogo **Introdução** .  
   
 2.  No painel esquerdo, verifique se **Novo Relatório** está selecionado.  
   
@@ -234,11 +234,11 @@ Observe que a superfície de design fica maior à medida que você arrasta.
   
  Finalmente, para salvar seus relatórios em um servidor de relatório ou site do SharePoint integrado a um servidor de relatório, você precisa da URL e de permissões. Você pode executar qualquer relatório que criar diretamente de seu computador, mas os relatórios têm mais funcionalidade quando executados no servidor de relatório ou site do SharePoint. Você precisa de permissões para executar seus relatórios ou de outras pessoas no servidor de relatório ou site do SharePoint em que eles foram publicados. Fale com o administrador do sistema para obter acesso.  
   
- Talvez seja útil ler sobre alguns dos conceitos e termos antes de começar. Veja [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). Além disso, dedique algum tempo ao planejamento, antes de criar seu primeiro relatório. Esse será um tempo bem gasto. Veja [Planejando um relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
+ Talvez seja útil ler sobre alguns dos conceitos e termos antes de começar. Consulte [conceitos &#40; de criação de relatórios Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). Além disso, dedique algum tempo ao planejamento, antes de criar seu primeiro relatório. Esse será um tempo bem gasto. Veja [Planejando um relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
 
 ## <a name="next-steps"></a>Próximas etapas
 
 [Tutoriais do Construtor de Relatórios](../../reporting-services/report-builder-tutorials.md)   
 [Construtor de Relatórios no SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

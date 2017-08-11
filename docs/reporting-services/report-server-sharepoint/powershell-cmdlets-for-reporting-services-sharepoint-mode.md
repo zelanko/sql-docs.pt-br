@@ -15,7 +15,7 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d68de45f8514de03e9804996da00d5f63d211311
 ms.contentlocale: pt-br
@@ -33,7 +33,7 @@ Quando você instala o SharePoint do SQL Server 2016 Reporting Services modo, os
 -   Gerenciamento de recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , por exemplo, extensões e chave de criptografia.  
 
 ##  <a name="bkmk_cmdlet_sum"></a> Resumo do cmdlet  
- Para executar os cmdlets, é necessário abrir o Shell de Gerenciamento do SharePoint. Você também pode usar o editor de interface gráfica do usuário incluído no Microsoft Windows, o **Ambiente de Script Integrado do Windows PowerShell (ISE)**. Para obter mais informações, consulte [iniciando o Windows PowerShell no Windows Server](http://technet.microsoft.com/library/hh847814.aspx). Nos resumos de cmdlet a seguir, as referências a 'bancos de dados' de aplicativo de serviço referem-se a todos os bancos de dados criados e usados por um aplicativo de serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Isso inclui a os bancos de dados de configuração, alerta e temp.  
+ Para executar os cmdlets, é necessário abrir o Shell de Gerenciamento do SharePoint. Você também pode usar o editor de interface gráfica do usuário incluído no Microsoft Windows, o **Ambiente de Script Integrado do Windows PowerShell (ISE)**. Para obter mais informações, consulte [Starting Windows PowerShell on Windows Server (Iniciando o Windows PowerShell no Windows Server)](http://technet.microsoft.com/library/hh847814.aspx). Nos resumos de cmdlet a seguir, as referências a 'bancos de dados' de aplicativo de serviço referem-se a todos os bancos de dados criados e usados por um aplicativo de serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Isso inclui a os bancos de dados de configuração, alerta e temp.  
   
  Se uma mensagem de erro semelhante à seguinte for exibida quando você digitar os exemplos do PowerShell:  
   
@@ -50,7 +50,7 @@ Quando você instala o SharePoint do SQL Server 2016 Reporting Services modo, os
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- Para obter mais informações, consulte [usar o Windows PowerShell para administrar o SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
+ Para obter mais informações, consulte [Usar o Windows PowerShell para administrar o SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>Para abrir p Shell de Gerenciamento do SharePoint e executar cmdlets  
   
@@ -280,8 +280,8 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 ## <a name="next-steps"></a>Próximas etapas
 
 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[Lista de verificação: Usar o PowerShell para verificar o PowerPivot para SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
-[Obter ajuda do SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
-[Scripts do PowerShell de gerenciamento do CodePlex SharePoint](http://sharepointpsscripts.codeplex.com/)   
+[Lista de verificação: usar o PowerShell para verificar o Power Pivot para SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[Obter Ajuda do SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[Scripts PowerShell scripts de gerenciamento do CodePlex SharePoint](http://sharepointpsscripts.codeplex.com/)   
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

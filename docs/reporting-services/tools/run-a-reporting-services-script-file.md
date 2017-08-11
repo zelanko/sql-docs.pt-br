@@ -17,7 +17,7 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ed67f96cd8487703e81ec702505724725e5c13d3
 ms.contentlocale: pt-br
@@ -25,7 +25,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="run-a-reporting-services-script-file"></a>Executar um arquivo de script do Reporting Services
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Os arquivos de script são executados no prompt de comando usando o ambiente de script do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (RS.exe). O RS.exe possui diversos argumentos de prompt de comando disponíveis para uso. Para obter mais informações sobre as opções de prompt de comando, consulte [Utilitário RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md). Para obter mais exemplos de script, consulte [Amostras de produto do SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+  Os arquivos de script [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são executados no prompt de comando usando o ambiente de script [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (RS.exe). O RS.exe possui diversos argumentos de prompt de comando disponíveis para uso. Para obter mais informações sobre as opções de prompt de comando, consulte [Utilitário RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md). Para obter mais exemplos de script, consulte [Amostras de produto do SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="sample-command-lines"></a>Linhas de Comando de Exemplo  
   
@@ -60,6 +60,6 @@ ms.lasthandoff: 08/09/2017
     ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência técnica &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
+ [Referência técnica &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   

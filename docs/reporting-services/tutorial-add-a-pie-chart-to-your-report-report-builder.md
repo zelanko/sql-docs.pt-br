@@ -16,7 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
 ms.contentlocale: pt-br
@@ -35,7 +35,7 @@ A ilustração a seguir mostra o gráfico de pizza que será criado.
 Se houver muitos pontos de dados em um gráfico de pizza, os rótulos dos pontos de dados podem ficar muito cheios para serem lidos. Nesse caso, considere a combinação de um número de fatias pequenas em uma fatia maior. Gráficos de pizza são mais fáceis de ler quando você agrega os dados em poucos pontos de dados.  
  
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos. Para obter instruções passo a passo sobre como procurar um servidor de relatório, adicionar uma fonte de dados e um conjunto de dados, consulte o primeiro tutorial desta série: [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos. Para instruções passo a passo sobre como navegar até um servidor de relatório, adicione uma fonte de dados e adicione um conjunto de dados, consulte o primeiro tutorial nesta série: [Tutorial: Criando um relatório de tabela básico &#40; Construtor de relatórios &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 10 minutos  
   
@@ -123,7 +123,7 @@ Em cada fatia da pizza, é possível exibir uma porcentagem dessa fatia comparad
   
 4.  Na caixa **Rotular dados** , selecione **#PERCENT**.  
     
-5.  (Opcional) Para especificar quantas casas decimais o rótulo mostra, no **Rotular dados** caixa após **#PERCENT**, tipo **{Pn}** onde  *n*  é o número de casas decimais a serem exibidas. Por exemplo, para não exibir nenhuma casa decimal, digite **#PERCENT{P0}**.  
+5.  (Opcional) Para especificar quantas casas decimais o rótulo deve mostrar, na caixa **Rotular dados** após **#PERCENT**, digite **{Pn}** , em que *n* é o número de casas decimais a serem exibidas. Por exemplo, para não exibir nenhuma casa decimal, digite **#PERCENT{P0}**.  
 
 6.  Para exibir valores como porcentagens, a propriedade UseValueAsLabel deve ser falsa. Se for solicitado que você defina esse valor na caixa de diálogo **Confirmar Ação** , clique em **Sim**.  
   
@@ -143,7 +143,7 @@ Três das fatias do gráfico são bastante pequenas. Você pode combinar várias
 
 1.  Alterne para a exibição de design de relatório.  
   
-2.  Se o painel Propriedades não estiver visível, na guia **Exibir** > grupo **Mostrar/Ocultar** > selecione **Propriedades**.  
+2.  Se o painel Propriedades não estiver visível, no **exibição** guia > **Mostrar/ocultar** grupo > selecione **propriedades**.  
   
 3.  Na superfície de design, clique em qualquer fatia do gráfico de pizza. As propriedades da série são exibidas no painel Propriedades.  
   
@@ -197,7 +197,7 @@ Como o gráfico de pizza é a única visualização do relatório, o gráfico n�
   
 3.  Selecione **Vendas de Câmeras e Filmadoras**, na guia **Início** > seção **Fonte** > clique em **Negrito**.  
   
-4.  Selecione **Como um Percentual do Total de Vendas** e, da guia **Início** > seção **Fonte**, defina o tamanho da fonte como **10**.  
+4.  Selecione **como uma porcentagem do Total de vendas**e na **início** guia > **fonte** seção > definir o tamanho da fonte **10**.  
   
 5.  (Opcional) Talvez seja necessário aumentar a altura da caixa de texto Título para acomodar as duas linhas de texto.  
   
@@ -220,7 +220,7 @@ Como o gráfico de pizza é a única visualização do relatório, o gráfico n�
 O relatório é salvo no servidor de relatório.  
   
 ## <a name="next-steps"></a>Próximas etapas  
-Você concluiu com êxito o tutorial Adicionando um Gráfico de Pizza ao seu Relatório. Para saber mais sobre gráficos, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Você concluiu com êxito o tutorial Adicionando um Gráfico de Pizza ao seu Relatório. Para saber mais sobre gráficos, consulte [gráficos &#40; Construtor de relatórios e SSRS &#41; ](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [minigráficos e barras de dados &#40; Construtor de relatórios e SSRS &#41; ](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md)  

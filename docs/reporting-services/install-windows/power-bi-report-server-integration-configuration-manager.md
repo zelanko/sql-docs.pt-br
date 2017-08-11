@@ -19,7 +19,7 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5ece1f5e492f4508d6c014709a953bfb4d29815a
 ms.contentlocale: pt-br
@@ -164,7 +164,7 @@ Na segunda vez que um usuário fixar um item, as etapas de 1 a 4 são ignoradas 
 ## <a name="next-steps"></a>Próximas etapas
 
 [Minhas configurações para integração do Power BI](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
-[Fixar itens do Reporting Services nos painéis do Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
+[Fixar itens do Reporting Services nos dashboards do Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Painéis no Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

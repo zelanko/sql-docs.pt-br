@@ -21,11 +21,11 @@ ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d860d17f29ca39fc5df422e616805c8bc040185d
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 0d6c14934417d4ece40596c17a7335e09ec1ad78
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
@@ -67,8 +67,8 @@ public void DeleteItem(string item);
   
 ## <a name="see-also"></a>Consulte também  
  [Acessando a API SOAP](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
- [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Servidor de Relatório do Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
+ [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Servidor de relatório do Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [Serviço Web servidor de relatório](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   

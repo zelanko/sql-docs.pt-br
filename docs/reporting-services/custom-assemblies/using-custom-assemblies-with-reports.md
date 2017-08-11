@@ -18,14 +18,14 @@ helpviewer_keywords:
 - custom assemblies [Reporting Services], about custom assemblies
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
 caps.latest.revision: 32
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fb818ce570a542a3cfcccec5c9290821c4e21181
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 0931134ffb0a1511a02a1919d0e68acc55d5f34b
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="using-custom-assemblies-with-reports"></a>Usando assemblies personalizados com relatórios
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
  [Referenciando Assemblies em um arquivo RDL](../../reporting-services/custom-assemblies/referencing-assemblies-in-an-rdl-file.md)  
  Descreve como referenciar seus assemblies personalizados em um arquivo de linguagem de definição de relatório.  
   
- [Implantando um assembly personalizado](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md)  
+ [Implantando um Assembly personalizado](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md)  
  Descreve como implantar um assembly personalizado para o Designer de Relatórios e para o servidor de relatório.  
   
  [Usando Assemblies personalizados de nome forte](../../reporting-services/custom-assemblies/using-strong-named-custom-assemblies.md)  
