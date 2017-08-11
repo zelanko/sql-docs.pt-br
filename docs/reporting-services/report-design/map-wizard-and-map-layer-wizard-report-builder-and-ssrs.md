@@ -19,11 +19,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8eb09925e1f1b1e1f79cc9e9b7e3fdd56d7ed165
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistente de Mapa e Assistente de Camada do Mapa (Construtor de Relatórios e SSRS)
@@ -117,7 +117,7 @@ ms.lasthandoff: 06/22/2017
   
  Para obter mais informações, consulte a documentação do tipo de dados espaciais que você está usando.  
   
-###  <a name="MapGallery"></a>O que é a Galeria de mapas?  
+###  <a name="MapGallery"></a> What is the map gallery?  
  A galeria de mapas contém mapas de relatórios localizados na pasta da galeria de mapas do ambiente de criação de relatórios. Os mapas da galeria o ajudam a começar rapidamente a adicionar mapas a seu relatório. Os mapas predefinidos na galeria são fornecidos por um provedor de mapa.  
   
 > [!NOTE]  
@@ -125,8 +125,8 @@ ms.lasthandoff: 06/22/2017
   
  Para estender a galeria de mapas, você pode adicionar ou remover relatórios do diretório dessa galeria e adicionar pastas para organizar os mapas. Para obter mais informações, consulte [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-###  <a name="Shapefile"></a>O que é um arquivo de forma ESRI?  
- Um Arquivo de Forma ESRI é um conjunto de arquivos com dados no formato de dados espaciais de Arquivo de Forma ESRI (Environmental Systems Research Institute, Inc.). O conjunto de arquivos normalmente inclui o  *\<filename >*. shp que contém os dados espaciais e um arquivo de suporte, * \<filename >*. dbf.  
+###  <a name="Shapefile"></a> What is an ESRI shapefile?  
+ Um Arquivo de Forma ESRI é um conjunto de arquivos com dados no formato de dados espaciais de Arquivo de Forma ESRI (Environmental Systems Research Institute, Inc.). O conjunto de arquivos normalmente inclui o  *\<filename >*. shp que contém os dados espaciais e um arquivo de suporte,  *\<filename >*. dbf.  
   
  Quando você especifica um arquivo de forma como fonte de dados espaciais e ele está em seu computador local, os dados espaciais são inseridos automaticamente no relatório. Para usar dados espaciais de um arquivo ESRI dinamicamente, faça o seguinte:  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 06/22/2017
  Uma consulta espacial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é uma consulta de conjunto de dados que especifica dados do tipo de dados SQLGeometry ou SQLGeography de um banco de dados relacionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Ao definir uma fonte de dados no assistente, você verá diferentes designers de consulta na página Crie uma Consulta, dependendo do tipo de fonte de dados ao qual estiver se conectando. Para obter mais informações, consulte [Designers de consulta &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
+>  Ao definir uma fonte de dados no assistente, você verá diferentes designers de consulta na página Crie uma Consulta, dependendo do tipo de fonte de dados ao qual estiver se conectando. Para obter mais informações, consulte [Designers de consulta &#40; Construtor de relatórios &#41; ](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
  Quando você executa a consulta no designer de consulta, o conjunto de resultados exibe uma coluna com dados espaciais que aparecem como texto. Por exemplo, uma linha poderia conter dados espaciais que constituem um único ponto e a linha seguinte poderia conter dados espaciais que definissem um conjunto de pontos. Cada linha se torna um elemento do mapa. Você pode variar a exibição de cada elemento do mapa como uma unidade indivisível.  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 06/22/2017
   
  Para obter mais informações sobre peças, consulte [Sistema de Peças do Bing Maps](http://go.microsoft.com/fwlink/?LinkId=147315). Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](http://go.microsoft.com/fwlink/?LinkId=151371).  
   
- Para visualizar um plano de fundo de peça no modo Design, você deve ter acesso à Internet. Para visualizar o plano de fundo de peça na visualização de um relatório em um servidor de relatório, esse servidor deve ser configurado para dar suporte a peças de mapa do Bing. Para obter mais informações, consulte [Solucionar problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e [Planejar um relatório de mapa](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
+ Para visualizar um plano de fundo de peça no modo Design, você deve ter acesso à Internet. Para visualizar o plano de fundo de peça na visualização de um relatório em um servidor de relatório, esse servidor deve ser configurado para dar suporte a peças de mapa do Bing. Para obter mais informações, consulte [Solução de problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e [Planejar um relatório de mapa](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
  Para obter mais informações sobre outras maneiras de personalizar uma camada lado a lado, consulte [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -256,7 +256,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Solução de problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [Planejar um relatório de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
- [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
+ [Planejar um relatório de mapa &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
+ [Mapas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
   

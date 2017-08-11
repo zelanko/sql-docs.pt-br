@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fb2ff6fdeb8f4d05866c09e87cd899a5dd2bb7ad
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de dados inseridos e compartilhados (Construtor de Relatórios e SSRS)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
  No Construtor de Relatórios, você pode fazer o seguinte:  
   
-1.  Para criar um conjunto de dados compartilhado, use o modo de exibição Design de Conjunto de Dados Compartilhado. É possível salvá-lo em um servidor de relatório ou site do SharePoint para compartilhar com outros relatórios. Você também pode navegar até o servidor de relatório e editar um conjunto de dados compartilhado existente. Nesta exibição, você pode criar uma consulta e definir todas as opções de conjunto de dados. Para obter mais informações, consulte [Exibição do design de conjunto de dados compartilhado &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
+1.  Para criar um conjunto de dados compartilhado, use o modo de exibição Design de Conjunto de Dados Compartilhado. É possível salvá-lo em um servidor de relatório ou site do SharePoint para compartilhar com outros relatórios. Você também pode navegar até o servidor de relatório e editar um conjunto de dados compartilhado existente. Nesta exibição, você pode criar uma consulta e definir todas as opções de conjunto de dados. Para obter mais informações, consulte [compartilhado exibição de Design de conjunto de dados &#40; Construtor de relatórios &#41; ](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
   
 2.  Para adicionar um conjunto de dados compartilhado a um relatório, abra o Construtor de Relatórios no Modo Design do Relatório. De um assistente ou do painel de dados do relatório, vá para o servidor de relatório e selecione o conjunto de dados compartilhado para adicionar seu relatório. Nesta exibição, você não pode alterar a consulta, exceto para adicionar campos. Você pode substituir outras opções de dados e adicionar filtros. Você não pode remover filtros.  
   
@@ -65,10 +65,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Conexões de dados ou fontes de dados inseridas e compartilhadas &#40;Construtor de Relatórios e SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Criar um conjunto de dados compartilhado ou conjunto de dados inserido &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [Coleção de campos de conjunto de dados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no construtor de relatórios](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

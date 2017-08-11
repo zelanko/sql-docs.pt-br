@@ -19,11 +19,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 56e19fe33a42086ef25001f605220f970d8b226a
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Criar e gerenciar assinaturas de servidores de relatório no modo SharePoint
@@ -91,7 +91,7 @@ ms.lasthandoff: 06/22/2017
   
 8.  Em **Opções de Substituição**, especifique uma opção que determina se as entregas subsequentes substituem um arquivo. Se desejar preservar as entregas anteriores, selecione **Criar arquivo com nome exclusivo**. Um número será anexado aos novos arquivos para criar um nome de arquivo exclusivo.  
   
-9. Em **Evento de Entrega**, especifique uma agenda ou um evento que cause a execução da assinatura. Você pode criar uma agenda personalizada, selecionar uma agenda compartilhada, se disponível, ou executar a assinatura sempre que os dados forem atualizados em um relatório executado com dados de instantâneo. Para obter mais informações sobre agendamentos e processamento de dados, consulte [Definir opções de processamento &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+9. Em **Evento de Entrega**, especifique uma agenda ou um evento que cause a execução da assinatura. Você pode criar uma agenda personalizada, selecionar uma agenda compartilhada, se disponível, ou executar a assinatura sempre que os dados forem atualizados em um relatório executado com dados de instantâneo. Para obter mais informações sobre agendas e processamento de dados, consulte [definir opções de processamento &#40; O Reporting Services no SharePoint integrado modo &#41; ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
 10. Em **Parâmetros**, caso você esteja criando uma assinatura para um relatório com parâmetros, especifique os valores que deseja usar com o relatório quando a assinatura for processada. A seção de parâmetros não está visível nessa página se o relatório selecionado não contém parâmetros. Para obter mais informações sobre parâmetros, consulte [Definir parâmetros em um relatório publicado &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 06/22/2017
   
 10. Em **Nome de Usuário** e **Senha**, digite as credenciais com permissão para gravar na pasta compartilhada.  
   
-11. Em **Evento de Entrega**, especifique uma agenda ou um evento que cause a execução da assinatura. Você pode criar uma agenda personalizada, selecionar uma agenda compartilhada, se disponível, ou executar a assinatura sempre que os dados forem atualizados em um relatório executado com dados de instantâneo. Para obter mais informações sobre agendamentos e processamento de dados, consulte [Definir opções de processamento &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+11. Em **Evento de Entrega**, especifique uma agenda ou um evento que cause a execução da assinatura. Você pode criar uma agenda personalizada, selecionar uma agenda compartilhada, se disponível, ou executar a assinatura sempre que os dados forem atualizados em um relatório executado com dados de instantâneo. Para obter mais informações sobre agendas e processamento de dados, consulte [definir opções de processamento &#40; O Reporting Services no SharePoint integrado modo &#41; ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
 12. Em **Parâmetros**, caso você esteja criando uma assinatura para um relatório com parâmetros, especifique os valores que deseja usar com o relatório quando a assinatura for processada. Para obter mais informações sobre parâmetros, consulte [Definir parâmetros em um relatório publicado &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 06/22/2017
   
      O formato de renderização e o navegador determinam se o relatório será inserido ou anexado. Se o navegador oferecer suporte a HTML 4.0 e MHTML, e você selecionar o formato de renderização de arquivo da Web, o relatório será inserido como parte da mensagem. Todos os outros formatos de renderização (CSV, PDF etc.) entregam os relatórios como anexos. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não verifica o tamanho do anexo ou mensagem antes de enviar o relatório. Se o anexo ou a mensagem exceder o limite máximo permitido pelo servidor de email, o relatório não será entregue. Escolha uma das outras opções de entrega (por exemplo, URL ou notificação) para relatórios grandes.  
   
-9. Em **Evento de Entrega**, especifique uma agenda ou um evento que cause a execução da assinatura. Você pode criar uma agenda personalizada, selecionar uma agenda compartilhada, se disponível, ou executar a assinatura sempre que os dados forem atualizados em um relatório executado com dados de instantâneo. Para obter mais informações sobre agendamentos e processamento de dados, consulte [Definir opções de processamento &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+9. Em **Evento de Entrega**, especifique uma agenda ou um evento que cause a execução da assinatura. Você pode criar uma agenda personalizada, selecionar uma agenda compartilhada, se disponível, ou executar a assinatura sempre que os dados forem atualizados em um relatório executado com dados de instantâneo. Para obter mais informações sobre agendas e processamento de dados, consulte [definir opções de processamento &#40; O Reporting Services no SharePoint integrado modo &#41; ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
 10. Em **Parâmetros**, caso você esteja criando uma assinatura para um relatório com parâmetros, especifique os valores que deseja usar com o relatório quando a assinatura for processada. Para obter mais informações sobre parâmetros, consulte [Definir parâmetros em um relatório publicado &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   

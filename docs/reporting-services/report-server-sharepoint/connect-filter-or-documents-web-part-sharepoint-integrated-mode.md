@@ -20,11 +20,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5745964338889cd378a109636b2f6ebbdc32db26
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="connect-filter-or-documents-web-part---sharepoint-integrated-mode"></a>Conecte-se o filtro ou a Web Part de documentos - modo integrado do SharePoint
@@ -81,8 +81,8 @@ ms.lasthandoff: 06/22/2017
 11. Verifique suas alterações e salve a página.  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar a Web Part do Visualizador de Relatórios a uma página da Web &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
- [Web Part do Visualizador de Relatórios em um site do SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Personalizar a Web Part do Visualizador de Relatórios](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)  
+ [Adicionar a Web Part do Visualizador de relatórios para uma página da Web &#40; O Reporting Services no SharePoint integrado modo &#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
+ [Web Part do Visualizador de relatórios em um Site do SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Personalizar a Web Part do Visualizador de relatórios](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)  
   
   

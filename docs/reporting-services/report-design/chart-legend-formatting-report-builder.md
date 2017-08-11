@@ -32,11 +32,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 37ae409b2c0d9d703c0bce162bc607c9f571cd29
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Legenda do gráfico - formatação (construtor de relatórios)
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="changing-the-text-or-color-of-a-legend-item-in-the-legend"></a>Alterando o texto ou a cor de um item de legenda na legenda  
  Quando um campo é colocado na zona de dispersão do campo de dados de um gráfico, um item de legenda é gerado automaticamente que contém o nome deste campo. Por padrão, o texto de cada item de legenda é extraído do nome do campo de dados. Cada item de legenda está conectado a uma série individual no gráfico, exceto para Gráficos de forma, nos quaisa legenda está conectada a pontos de dados individuais em vez de séries individuais. Quando um grupo de categorias é definido em um Gráfico de formas, o texto de cada item de legenda é extraído da representação da cadeia do grupo de categorias. Você pode especificar o texto do rótulo personalizado para gráficos de pizza, rosca e funil para mostrar informações diferentes do rótulo de grupo de categorias relacionadas a cada ponto de dados individuais na legenda. Para fazer isso, selecione a legenda e especifique o texto da legenda na caixa de diálogo **Propriedades da Série** ou na propriedade **LegendText** no painel Propriedades. Para obter mais informações, consulte [Alterar o texto de um item de legenda &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
- Você também pode especificar as palavras-chave que diferenciam maiúsculas de minúsculas específicas do gráfico para os atributos aos quais é feita referência com frequência na propriedade **LegendText** ou na caixa de diálogo **Propriedades da Série** . O controle de gráfico substitui essas palavras-chave em tempo de execução por sua representação de dados. Essa abordagem é útil nos Gráficos de forma porque é possível mostrar as informações relacionadas a pontos de dados específicos. Para obter mais informações, consulte [Formatação de pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+ Você também pode especificar as palavras-chave que diferenciam maiúsculas de minúsculas específicas do gráfico para os atributos aos quais é feita referência com frequência na propriedade **LegendText** ou na caixa de diálogo **Propriedades da Série** . O controle de gráfico substitui essas palavras-chave em tempo de execução por sua representação de dados. Essa abordagem é útil nos Gráficos de forma porque é possível mostrar as informações relacionadas a pontos de dados específicos. Para obter mais informações, consulte [Formatando pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
  A caixa colorida exibida para cada item de legenda é herdada a partir da cor de preenchimento de sua série correspondente. Se quiser alterar a cor exibida em um item de legenda, você terá que alterar a cor da série correspondente. Para obter mais informações, consulte [Formatando as cores da série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -85,11 +85,11 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Caixa de diálogo Propriedades da Legenda, Geral &#40;Construtor de Relatórios e SSRS&#41;](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
- [Alterar o texto de um item de legenda &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
- [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Formatando as cores da série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Ocultar itens de legenda no gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
+ [Alterar o texto de um Item de legenda &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
+ [Formatando um gráfico de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Formatando as cores de série em um gráfico de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Gráficos de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Ocultar itens de legenda no gráfico &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
  [Definir cores em um gráfico usando uma paleta &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   

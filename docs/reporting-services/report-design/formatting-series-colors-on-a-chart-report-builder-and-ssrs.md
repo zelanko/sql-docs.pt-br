@@ -20,11 +20,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 711b648b41294d6c32530407b31aec8401db389c
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Formatando as cores da série em um gráfico (Construtor de Relatórios e SSRS)
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
   
  Se houver mais séries que o número de cores da paleta, o gráfico começará a reutilizar as cores, ou seja, poderão existir duas séries com a mesma cor. Isso ocorrerá frequentemente se você estiver usando um gráfico de Forma, no qual a cada ponto de dados é atribuído uma cor da paleta. Para evitar confusão, defina uma paleta personalizada que tenha, no mínimo, o mesmo número de cores que o número de séries do gráfico.  
   
- Você pode selecionar uma paleta nova ou definir uma paleta personalizada no painel Propriedades. Para obter mais informações, consulte [Definir cores em um gráfico usando uma paleta &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md).  
+ Você pode selecionar uma paleta nova ou definir uma paleta personalizada no painel Propriedades. Para obter mais informações, consulte [definir cores em um gráfico usando uma paleta &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -45,15 +45,15 @@ ms.lasthandoff: 06/22/2017
  A paleta nomeada Padrão foi usada como a paleta de gráfico padrão nas versões anteriores do Reporting Services. Ela foi preservada com o mesmo nome para manter a consistência. A atualização dos gráficos será consistente usando a paleta Padrão, mas, após a atualização, considere alterá-la.  
   
 ## <a name="using-custom-palettes"></a>Usando paletas personalizadas  
- Para aplicar suas próprias cores ao gráfico, use uma paleta personalizada. Uma paleta personalizada permite que você adicione suas próprias cores na ordem que quiser que elas apareçam no gráfico. Uma paleta personalizada será especialmente útil se o número de séries do gráfico for desconhecido no momento da criação. Para obter mais informações, consulte [Definir cores em um gráfico usando uma paleta &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md).  
+ Para aplicar suas próprias cores ao gráfico, use uma paleta personalizada. Uma paleta personalizada permite que você adicione suas próprias cores na ordem que quiser que elas apareçam no gráfico. Uma paleta personalizada será especialmente útil se o número de séries do gráfico for desconhecido no momento da criação. Para obter mais informações, consulte [definir cores em um gráfico usando uma paleta &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md).  
   
 ## <a name="using-a-color-fill-on-each-series"></a>Usando uma cor preenchimento em cada série  
  Você também pode definir suas próprias cores no gráfico especificando uma cor para cada série no gráfico. Para isso, abra a caixa de diálogo **Propriedades da Série** e defina a propriedade **Cor** para **Preenchimento**. Essa abordagem anulará todas as paletas definidas. Geralmente, é melhor usar uma paleta personalizada para definir suas próprias cores porque o número de séries no conjunto de dados pode ser desconhecido até o processamento do relatório.  
   
- Essa abordagem é a mais adequada se você desejar definir a cor das séries condicionalmente com base em uma expressão.  Para obter mais informações, consulte [Formatação de pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+ Essa abordagem é a mais adequada se você desejar definir a cor das séries condicionalmente com base em uma expressão.  Para obter mais informações, consulte [Formatando pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Especificar cores consistentes em gráficos com várias formas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
+ [Especificar cores consistentes em vários gráficos com forma &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
   
  [Definir cores em um gráfico usando uma paleta &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md))  
   
@@ -61,8 +61,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Adicionar estilos de bisel, relevo e textura a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Adicionar estilos de bisel, alto-relevo e textura a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
+ [Gráficos de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Formatando a legenda em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 03787380e498b82c160583cf1e8391bf643edf7c
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tabelas (Construtor de Relatórios e SSRS)
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
  Para obter mais informações, consulte [Adicionar um total a um grupo ou a uma região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
 ##  <a name="AddingRowGroups"></a> Adicionando grupos de linhas a uma tabela  
- Da mesma forma como é possível arrastar um campo do painel de dados do relatório para uma célula a fim de exibir dados detalhados, você pode arrastar um campo para o painel Agrupamento a fim de adicionar um grupo. Em uma tabela, arraste o campo para o painel Grupos de Linhas. Após a adição de um grupo, a tabela automaticamente adiciona células a novas colunas da área do grupo de linhas em que os valores do grupo devem ser exibidos. Para obter mais informações sobre áreas, consulte [Áreas da região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ Da mesma forma como é possível arrastar um campo do painel de dados do relatório para uma célula a fim de exibir dados detalhados, você pode arrastar um campo para o painel Agrupamento a fim de adicionar um grupo. Em uma tabela, arraste o campo para o painel Grupos de Linhas. Após a adição de um grupo, a tabela automaticamente adiciona células a novas colunas da área do grupo de linhas em que os valores do grupo devem ser exibidos. Para obter mais informações sobre áreas, consulte [áreas da região de dados Tablix &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  A seguinte figura mostra uma tabela com dois grupos de linhas aninhados no modo Design. Os grupos de linhas foram criados arrastando o campo Ordem e o campo Data para o painel Grupos de Linhas e inserindo cada grupo como pai dos grupos existentes. A figura mostra um grupo pai baseado na data e um grupo filho baseado no número da ordem, bem como o grupo detalhado definido por padrão.  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 06/22/2017
   
  ![Tabela agrupada por data e, em seguida, solicitar](../../reporting-services/media/rs-basictablegroupspreview.png "tabela agrupada por data e, em seguida, ordenar")  
   
- Uma forma alternativa de exibir dados agrupados é recuando a hierarquia de grupo para exibir a relação aninhada dos grupos, e não apresentando cada valor na coluna própria. Esse estilo de formatação é chamado relatório em níveis. Para obter mais informações sobre como formatar informações agrupadas como um relatório em níveis, consulte [Criar um relatório de nível &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md).  
+ Uma forma alternativa de exibir dados agrupados é recuando a hierarquia de grupo para exibir a relação aninhada dos grupos, e não apresentando cada valor na coluna própria. Esse estilo de formatação é chamado relatório em níveis. Para obter mais informações sobre como formatar informações agrupadas como um relatório, consulte [criar um relatório de nível &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md).  
   
 ### <a name="adding-totals-to-row-groups"></a>Adicionando totais a grupos de linhas  
  Para mostrar totais de um grupo, é possível usar o comando **Adicionar Total** contextual. Em um grupo de linhas, o comando Adicionar Total adiciona uma linha fora do grupo para que ela só se repita uma vez em relação ao grupo. Em grupos aninhados, a linha de total do grupo filho está fora do grupo filho, mas dentro do grupo pai. Em casos assim, é útil definir a cor do plano de plano da linha de total do grupo filho para diferenciá-la das linhas detalhadas. Também é possível usar uma cor do plano de fundo diferente para diferenciar as linhas do cabeçalho e do rodapé da tabela. A seguinte figura mostra a tabela com uma linha de total adicionada para o grupo baseado nos números de ordens.  
@@ -120,8 +120,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Exemplos de expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Tabelas, matrizes e listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

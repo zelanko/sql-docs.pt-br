@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d8efc7a0b7120faa53a63bd07c51029a1b379f9e
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Adicionar parâmetros em cascata a um relatório (Construtor de Relatórios e SSRS)
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Para criar parâmetros em cascata, primeiro você define a consulta de conjunto de dados e inclui um parâmetro de consulta para cada parâmetro em cascata necessário. Você também deve criar um conjunto de dados separado para cada parâmetro em cascata para fornecer valores disponíveis. Para obter mais informações, consulte [Adicionar, alterar ou excluir valores disponíveis de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
+ Para criar parâmetros em cascata, primeiro você define a consulta de conjunto de dados e inclui um parâmetro de consulta para cada parâmetro em cascata necessário. Você também deve criar um conjunto de dados separado para cada parâmetro em cascata para fornecer valores disponíveis. Para obter mais informações, consulte [adicionar, alterar ou excluir valores disponíveis para um parâmetro de relatório &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
  A ordem é importante para parâmetros em cascata porque a consulta do conjunto de dados para um parâmetro posterior na lista inclui uma referência a cada parâmetro anterior na lista. Em tempo de execução, a ordem dos parâmetros no painel de dados do relatório determina a ordem na qual as consultas de parâmetro aparecem no relatório e, portanto, a ordem na qual um usuário escolhe cada valor de parâmetro sucessivo.  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 6.  Clique em **Executar** (**!**). Depois que você incluir parâmetros de consulta e executar a consulta, os parâmetros do relatório que correspondem aos parâmetros da consulta serão criados automaticamente.  
   
     > [!NOTE]  
-    >  A ordem dos parâmetros de consulta na primeira vez que você executa uma consulta determina a ordem como eles são criados no relatório. Para alterar a ordem, consulte [Alterar a ordem de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+    >  A ordem dos parâmetros de consulta na primeira vez que você executa uma consulta determina a ordem como eles são criados no relatório. Para alterar a ordem, consulte [alterar a ordem de um parâmetro de relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -160,10 +160,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionar, alterar ou excluir um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Parâmetros de relatório e &#40; Construtor de relatórios, Report Designer e &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Tutorial: Adicionar um parâmetro ao seu relatório &#40; Construtor de relatórios &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Tutoriais do Construtor de Relatórios](../../reporting-services/report-builder-tutorials.md)   
- [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Adicionar filtros de conjunto de dados, filtros de região de dados e filtros de grupo &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Relatório inserido conjuntos de dados e conjuntos de dados compartilhados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

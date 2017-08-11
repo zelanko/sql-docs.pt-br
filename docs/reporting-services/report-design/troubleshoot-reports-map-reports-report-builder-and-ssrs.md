@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 488c17afabc7dc828ccf88ed1e058f1e13c7e0b2
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solução de problemas de relatórios: relatórios de mapa (Construtor de Relatórios e SSRS)
@@ -212,7 +212,7 @@ ms.lasthandoff: 06/22/2017
  Para especificar dados relacionados a dados espaciais que não fazem parte de um conjunto de dados de relatório, você deve usar o símbolo #seguido por um rótulo que especifica o nome dos dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Solução de problemas do Construtor de Relatórios](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [Mapas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Solucionar problemas de construtor de relatórios](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   
   

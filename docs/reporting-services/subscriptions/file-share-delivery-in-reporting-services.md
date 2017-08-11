@@ -18,17 +18,17 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5e33585c625c49967304ca36ad91ccc1ebac32f1
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega de compartilhamento de arquivos no Reporting Services
   O SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui uma extensão de entrega de compartilhamento de arquivos que possibilita entregar um relatório a uma pasta. A extensão de entrega de compartilhamento de arquivos está disponível por padrão e não requer configuração adicional. Para que a entrega do arquivo seja bem-sucedida, você deve definir permissões de acesso de gravação na pasta compartilhada. A conta que exige permissões de gravador pode ser uma credencial configurada na assinatura ou uma **Conta de compartilhamento de arquivos** configurada para o servidor de relatório. Para obter mais informações sobre a conta de compartilhamento de arquivo, consulte [Configurações de assinatura e uma conta de compartilhamento de arquivos &#40;Gerenciador de Configurações&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Além disso, os usuários que precisam acessar os relatórios devem ter permissões de leitura na pasta compartilhada.  
   
- Para distribuir um relatório a um compartilhado de arquivos, defina uma assinatura padrão ou uma assinatura controlada por dados. Para saber como usar a entrega de compartilhamento de arquivos em uma assinatura controlada por dados, consulte [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md). Além disso, a conta que executa assinaturas de compartilhamentos de arquivos remotos exige direitos para logon local no computador [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Para distribuir um relatório a um compartilhado de arquivos, defina uma assinatura padrão ou uma assinatura controlada por dados. Para saber como usar a entrega de compartilhamento de arquivos em uma assinatura controlada por dados, consulte [criar uma assinatura controlada por dados &#40; Tutorial do SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md). Além disso, a conta que executa assinaturas de compartilhamentos de arquivos remotos exige direitos para logon local no computador [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ||  
 |-|  
@@ -87,6 +87,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Configurações de assinatura e uma conta de compartilhamento de arquivos &#40;Gerenciador de Configurações&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
+ [Configurações de assinatura e uma conta de compartilhamento de arquivos &#40; Configuration Manager &#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
   
   

@@ -10,14 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 caps.latest.revision: 9
+f1_keywords:
+- sql13.dts.designer.odatasource.connectionmanager.f1
+- sql13.dts.designer.odataconnectionmanager.f1
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 22374d52835c37ecf45fef20e15d563dad8e5917
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: b23a158bff546fd6ffb4208638c039d690379ce1
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="odata-connection-manager"></a>Gerenciador de Conexões OData
@@ -62,6 +65,24 @@ ms.lasthandoff: 08/03/2017
 |UserName|Nome de usuário para ser usado na autenticação básica.|  
 |Senha|Senha a ser usada na autenticação básica.|  
 |ConnectionString|Reflete outras propriedades do gerenciador de conexões.|  
+  
+## <a name="odata-connection-manager-editor"></a>Editor de Gerenciador de Conexões OData
+  Use a caixa de diálogo **Editor de Gerenciador de Conexões OData** para adicionar uma conexão ou editar uma conexão existente com um OData Source.  
+  
+### <a name="options"></a>Opções  
+ **Nome do gerenciador de conexões**  
+ Nome do gerenciador de conexões.  
+  
+ **Local do documento de serviço**  
+ URL do serviço OData. Por exemplo: http://services.odata.org/V3/Northwind/Northwind.svc/.  
+  
+ **Autenticação**  
+ Selecione **Autenticação do Windows** ou use **este nome de usuário e senha** para **autenticação básica**. Se você selecionar a segunda opção, insira o **nome de usuário** e a **senha**. 
+ 
+ Agora existem mais três opções. Selecione **Microsoft Dynamics AX Online** para Dynamics AX Online, selecione **Microsoft Dynamics CRM Online** para Dynamics CRM Online e selecione **Microsoft Online Services** para Microsoft Online Services. Se você selecionar uma destas três opções, digite o **nome de usuário** e **senha**.
+  
+ **Testar Conexão**  
+ Clique neste botão para testar a conexão com o OData Source.  
   
 ## <a name="see-also"></a>Consulte também  
  [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md)  

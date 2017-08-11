@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0411de7999d497b3198e6864d185cb54a4a5e1f5
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Adicionar um parâmetro com vários valores a um relatório
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
      Uma lista de valores disponíveis limita as escolhas do usuário aos valores válidos para o parâmetro. No caso de diversos valores, a lista começa com um recurso **Selecionar Tudo** , através do qual o usuário pode selecionar ou desmarcar todos os valores com um só clique. Se você optar por obter os valores disponíveis para o parâmetro de relatório de uma consulta de conjunto de dados, selecione um conjunto de dados que não contenha a variável de consulta que está associada ao mesmo parâmetro de relatório.  
   
-     Para obter mais informações, consulte [Adicionar, alterar ou excluir valores disponíveis de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
+     Para obter mais informações, consulte [adicionar, alterar ou excluir valores disponíveis para um parâmetro de relatório &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
 ## <a name="to-add-a-multi-value-parameter"></a>Para adicionar um parâmetro com vários valores  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
      Uma lista de valores disponíveis limita as escolhas do usuário aos valores válidos para o parâmetro. No caso de diversos valores, a lista começa com um recurso **Selecionar Tudo** , através do qual o usuário pode selecionar ou desmarcar todos os valores com um só clique. Se você optar por obter os valores disponíveis para o parâmetro de relatório de uma consulta de conjunto de dados, selecione um conjunto de dados que não contenha a variável de consulta que está associada ao mesmo parâmetro de relatório.  
   
-     Para obter mais informações, consulte [Adicionar, alterar ou excluir valores disponíveis de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
+     Para obter mais informações, consulte [adicionar, alterar ou excluir valores disponíveis para um parâmetro de relatório &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionar parâmetros em cascata a um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   

@@ -9,6 +9,9 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sqlmobileconnection.connection.f1
+- sql13.dts.designer.sqlmobileconnection.all.f1
 helpviewer_keywords:
 - SQL Server Compact, connection manager
 - connections [Integration Services], SQL Server Compact
@@ -19,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dad3c3c379b62863de834386783b595c984c49ed
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 6b3f09dad60239f595aaae0cac0162283d84430d
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>Gerenciador de Conexões do SQL Server Compact Edition
@@ -48,12 +51,72 @@ ms.lasthandoff: 08/03/2017
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
-  
--   [Editor do Gerenciador de Conexões do SQL Server Compact Edition &#40;Página de Conexão&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
-  
--   [Editor do Gerenciador de Conexões do SQL Server Compact Edition &#40;Página Tudo&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)  
-  
  Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
+## <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>Editor do Gerenciador de Conexões do SQL Server Compact Edition (página de Conexão)
+  Use a caixa de diálogo **Gerenciador de Conexões do SQL Server Compact Edition** para especificar as propriedades de conexão com um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
+ Para saber mais sobre o Gerenciador de conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition, consulte [Gerenciador de conexões do SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).  
+  
+### <a name="options"></a>Opções  
+ **Digite o caminho e o nome do arquivo do banco de dados**  
+ Digite o caminho e o nome do arquivo para o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+  
+ **Procurar**  
+ Localize o arquivo de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact desejado usando a caixa de diálogo **Selecionar banco de dados do SQL Server Compact Edition** .  
+  
+ **Digite a senha do banco de dados**  
+ Digite a senha para o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+  
+## <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>Editor do Gerenciador de Conexões do SQL Server Compact Edition (Página Tudo)
+  Use a caixa de diálogo **Gerenciador de Conexões do SQL Server Compact Edition** para especificar as propriedades de conexão com um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+  
+ Para saber mais sobre o Gerenciador de conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition, consulte [Gerenciador de conexões do SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).  
+  
+### <a name="options"></a>Opções  
+ **Limite de AutoShrink**  
+ Especifique a quantidade de espaço livre, em percentual, que será permitido no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact antes que o processo de redução automática seja executado.  
+  
+ **Escalonamento de Bloqueio Padrão**  
+ Especifique o número de bloqueios de banco de dados que o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact adquire antes de tentar escalonar bloqueios.  
+  
+ **Tempos Limite de Bloqueio Padrão**  
+ Especifique o intervalo padrão, em milissegundos, que uma transação esperará por um bloqueio.  
+  
+ **Intervalo de Liberação**  
+ Especifique o intervalo, em segundos, entre transações confirmadas para liberar os dados para o disco.  
+  
+ **Identificador de Localidade**  
+ Especifique a LCID (Identificação de Localidade) no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+  
+ **Tamanho Máximo do Buffer**  
+ Especifique a quantidade máxima de memória, em quilobytes, que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact usa antes de liberar os dados para o disco.  
+  
+ **Tamanho Máximo do Banco de Dados**  
+ Especifique o tamanho máximo, em megabytes, do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+  
+ **Modo**  
+ Especifique o modo de arquivo no qual abrir o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact. O valor padrão dessa propriedade é **Leitura Gravação**.  
+  
+ A opção Modo tem quatro valores, como descrito na tabela seguinte.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Somente Leitura**|Especifica acesso somente de leitura ao banco de dados.|  
+|**Leitura Gravação**|Especifica a permissão de leitura e gravação ao banco de dados.|  
+|**Exclusive**|Especifica o acesso exclusivo ao banco de dados.|  
+|**Shared Read**|Especifica que outros usuários podem ler de banco de dados ao mesmo tempo.|  
+  
+ **Informações de Persistência de Segurança**  
+ Especifique se as informações de segurança são retornadas como parte da cadeia de conexão. O valor padrão dessa opção é **False**.  
+  
+ **Diretório de Arquivo Temporário**  
+ Especifique o local do arquivo de banco de dados temporário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+  
+ **Fonte de dados**  
+ Especifique o nome do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+  
+ **Senha**  
+ Digite a senha para o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+  
+

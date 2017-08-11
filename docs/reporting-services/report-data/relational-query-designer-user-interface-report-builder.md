@@ -21,18 +21,18 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bd44bb279b61785784ce6ebe443ad78d30b4fc82
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interface de usuário do Designer de Consulta relacional (Construtor de Relatórios)
   O Construtor de Relatórios e o Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fornecem um designer de consulta gráfica e um designer de consulta com base em texto para ajudá-lo a criar uma consulta que especifique os dados a serem recuperados dos bancos de dados relacionais [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] para um conjunto de dados de relatório. Use o designer de consultas gráficas para explorar os metadados, criar uma consulta interativamente e exibir os dados da consulta. Use o designer de consulta baseado em texto para exibir a consulta que foi criada pelo designer de consultas gráficas ou modificar uma consulta. Também é possível importar uma consulta existente de um arquivo ou relatório.  
   
 > [!NOTE]  
->  No Construtor de Relatórios, para especificar uma consulta para tipos de fontes de dados Oracle, OLE DB, ODBC e Teradata, você deve usar o designer de consulta baseado em texto. Para obter mais informações, consulte [Interface de usuário do Designer de Consulta com base em texto &#40;Construtor de Relatórios&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+>  No Construtor de Relatórios, para especificar uma consulta para tipos de fontes de dados Oracle, OLE DB, ODBC e Teradata, você deve usar o designer de consulta baseado em texto. Para obter mais informações, consulte [Interface de usuário de Designer de consulta baseado em texto &#40; Construtor de relatórios &#41; ](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 > [!IMPORTANT]  
 >  Os usuários acessam fontes de dados quando criam e executam consultas. Você deve conceder permissões mínimas nas fontes de dados, como permissões somente leitura.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
  O designer de consultas gráficas é dividido em três áreas. Se a consulta usar tabelas/exibições ou procedimentos armazenados/funções com valor de tabela, o layout do designer de consulta será alterado.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] não dá suporte a procedimentos armazenados ou funções com valor de tabela.  
+>  [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)]não dá suporte a procedimentos armazenados ou funções com valor de tabela.  
   
  A figura a seguir mostra o designer de consultas gráficas quando ele é usado com tabelas ou exibições.  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 06/22/2017
   
  As agregações fornecem resumos de dados, e os dados são agrupados para oferecer suporte à agregação que entrega os dados resumidos. Quando você usa uma agregação na consulta, os outros campos retornados pela consulta são agrupados automaticamente e a consulta inclui a cláusula SQL GROUP BY. É possível resumir dados sem adicionar uma agregação usando somente a opção **Agrupado por** na lista **Grupo e Agregação** . Muitas das agregações incluem uma versão que usa a palavra-chave DISTINCT. A inclusão de DISTINCT elimina valores duplicados.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses [!INCLUDE[tsql](../../includes/tsql-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] uses [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Ambos os dialetos da linguagem SQL dão suporte à cláusula, à palavra-chave e às agregações fornecidas pelo designer de consulta.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../../includes/tsql-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] usa [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Ambos os dialetos da linguagem SQL dão suporte à cláusula, à palavra-chave e às agregações fornecidas pelo designer de consulta.  
   
  Para obter mais informações sobre o [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/transact-sql-reference-database-engine.md)nos [Manuais Online](http://go.microsoft.com/fwlink/?LinkId=141687) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em msdn.microsoft.com.  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Tabela Esquerda** Exibe o nome da primeira tabela que faz parte de uma relação de junção.  
   
--   **Tipo de Junção** Exibe o tipo de instrução SQL JOIN usada na consulta gerada automaticamente. Por padrão, se uma restrição de chave estrangeira for detectada, INNER JOIN será usada. Outros tipos de junção podem ser LEFT JOIN ou RIGHT JOIN. Se nenhum desses tipos de junção se aplicar, a coluna **Tipo de Junção** exibirá **Não relacionado**. Nenhuma junção CROSS JOIN é criada para tabelas não relacionadas. Em vez disso, você deve criar relações manualmente unindo colunas nas tabelas esquerda e direita. Para obter mais informações sobre tipos de JOINs, consulte "Fundamentos de JOIN" nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][Books Online](http://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
+-   **Tipo de Junção** Exibe o tipo de instrução SQL JOIN usada na consulta gerada automaticamente. Por padrão, se uma restrição de chave estrangeira for detectada, INNER JOIN será usada. Outros tipos de junção podem ser LEFT JOIN ou RIGHT JOIN. Se nenhum desses tipos de junção se aplicar, a coluna **Tipo de Junção** exibirá **Não relacionado**. Nenhuma junção CROSS JOIN é criada para tabelas não relacionadas. Em vez disso, você deve criar relações manualmente unindo colunas nas tabelas esquerda e direita. Para obter mais informações sobre tipos de JOINs, consulte "Fundamentos de JOIN" nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [do](http://go.microsoft.com/fwlink/?LinkId=141687) em msdn.microsoft.com.  
   
 -   **Tabela Direita** Exibe o nome da segunda tabela na relação de junção.  
   
@@ -199,9 +199,9 @@ ms.lasthandoff: 06/22/2017
  Quando você seleciona tabelas e colunas ou procedimentos armazenados e exibições no painel Exibição de Banco de dados, o designer de consulta recupera a chave primária subjacente e relações de chave estrangeira do esquema de banco de dados. Ao analisar essas relações, o designer de consulta detecta as relações entre duas tabelas e adiciona junções à consulta. Dessa forma, é possível modificar a consulta adicionando grupos e agregações, adicionando ou alterando relações e adicionando filtros. Para exibir o texto da consulta que mostra as colunas das quais os dados são recuperados, as junções entre tabelas e qualquer grupo ou agregação, clique em **Editar Como Texto**.  
   
 ## <a name="text-based-query-designer"></a>Designer de Consulta com Base em Texto  
- Para ter o máximo controle sobre sua consulta, use o designer de consulta baseado em texto. Para mudar para o designer de consulta baseado em texto, na barra de ferramentas, clique em **Editar como Texto**. Depois que você editar uma consulta no designer de consulta baseado em texto, não poderá mais usar o designer de consulta relacional. A consulta sempre será aberta no designer de consulta baseado em texto. Para obter mais informações, consulte [Interface de usuário do Designer de Consulta com base em texto &#40;Construtor de Relatórios&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+ Para ter o máximo controle sobre sua consulta, use o designer de consulta baseado em texto. Para mudar para o designer de consulta baseado em texto, na barra de ferramentas, clique em **Editar como Texto**. Depois que você editar uma consulta no designer de consulta baseado em texto, não poderá mais usar o designer de consulta relacional. A consulta sempre será aberta no designer de consulta baseado em texto. Para obter mais informações, consulte [Interface de usuário de Designer de consulta baseado em texto &#40; Construtor de relatórios &#41; ](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Designers de Consultas &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Designers de consulta &#40; Construtor de relatórios &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

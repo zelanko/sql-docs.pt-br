@@ -16,11 +16,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d18adbfb6ce7a50b458ac1f8197c197281e9d81e
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Sintaxe de reserva de URL (Gerenciador de Configurações do SSRS)
@@ -43,8 +43,8 @@ ms.lasthandoff: 06/22/2017
 |VirtualDirectory|ReportServer*[_InstanceName]*<br /><br /> Reports*[_InstanceName]*<br /><br /> \<personalizado >|Especifica o nome do aplicativo. Esse valor é uma cadeia de caracteres. Por padrão, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa ReportServer e Reports como os nomes de aplicativos para o serviço Web Servidor de Relatórios e Gerenciador de Relatórios. Você pode usar nomes diferentes se preferir.<br /><br /> Esse valor é necessário. Ele identifica o aplicativo.<br /><br /> Especifique apenas um diretório virtual para cada instância de aplicativo. Para criar várias URLs para o mesmo aplicativo na mesma instância, crie várias versões de **UrlString**. Para criar nomes de diretórios virtuais exclusivos para várias instâncias de aplicativo, considere a inclusão do nome da instância no nome do diretório virtual, usando o caractere sublinhado (_) para anexar o nome da instância. *InstanceName* é opcional, mas recomendado se você tiver várias instâncias no mesmo computador. Para obter mais informações sobre como definir reservas de URL para instâncias nomeadas, consulte [Reservas de URL para implantações do Servidor de Relatório com várias instâncias &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).<br /><br /> O valor do diretório virtual não diferencia maiúsculas de minúsculas. Você pode usar qualquer cadeia de caracteres, desde que não inclua caracteres separadores de URL ou codificação de URL.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Configurar URLs do servidor de relatório &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurar uma URL &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   
 

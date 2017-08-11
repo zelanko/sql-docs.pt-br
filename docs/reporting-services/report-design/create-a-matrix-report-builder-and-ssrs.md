@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2ae4ec5004c6299dc8201daa18ab89b432cab845
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Criar uma matriz (Construtor de Relatórios e SSRS)
@@ -48,11 +48,11 @@ ms.lasthandoff: 06/22/2017
   
  Adicione grupos arrastando campos de conjuntos de dados para as áreas do Grupos de Linhas e Grupos de Colunas do painel Agrupamento. O primeiro campo arrastado para o painel de grupos de linhas ou de colunas substitui o grupo de padrão vazio inicial. Você pode aplicar formatação a cada célula, dependendo dos dados.  
   
- ![Matriz, linha categoria e grupo de colunas geografia](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "matriz, linha categoria e grupo de colunas geografia")  
+ ![Matriz, linha Categoria e grupo de colunas Geografia](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Matriz, linha Categoria e grupo de colunas Geografia")  
   
  Em Visualização, a matriz é expandida para mostrar os valores dos grupos de linhas e colunas. As células exibem valores resumidos, conforme mostrado na figura a seguir.  
   
- ![Visualização de matriz renderizada com grupos expandidos](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "visualização de matriz renderizada com grupos expandidos")  
+ ![Visualização de matriz renderizada com grupos expandidos](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Visualização de matriz renderizada com grupos expandidos")  
   
  A matriz com a qual você inicia é um modelo baseado na região de dados tablix. É possível continuar desenvolvendo o design da matriz adicionando grupos de linhas ou de colunas adjacentes ou até mesmo linhas de detalhes. Para obter mais informações, consulte [Explorando a flexibilidade de uma região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 06/22/2017
   
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Referência de funções de agregação &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Exemplos de expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3676c9e127d69540a634053e37bf21dd8d06024e
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Especificar um intervalo do eixo (Construtor de Relatórios e SSRS)
@@ -48,7 +48,7 @@ Neste gráfico de coluna, o intervalo de rótulos horizontal é definido como Au
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  Na caixa de diálogo **Propriedades do Eixo Horizontal** > guia **Opções de Eixo**, defina **Intervalo** como **1** para mostrar cada rótulo de grupo de categorias. Para mostrar alternadamente o rótulo dos grupo de categorias no eixo x, digite **2**. 
+2.  No **propriedades do Eixo Horizontal** caixa de diálogo > **opções de eixo** guia, defina **intervalo** para **1** para mostrar cada rótulo de grupo de categoria. Para mostrar alternadamente o rótulo dos grupo de categorias no eixo x, digite **2**. 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -85,17 +85,17 @@ Por padrão, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] defin
   
 1.  Clique com o botão direito do mouse no eixo do gráfico que deseja alterar e clique em **Propriedades do Eixo**. 
   
-2.  Na caixa de diálogo **Propriedades do Eixo Horizontal** > guia **Opções de Eixo**, defina **Intervalo** como **Auto**. O gráfico exibirá o número ideal de rótulos de categorias que podem se ajustar ao longo do eixo.  
+2.  No **propriedades do Eixo Horizontal** caixa de diálogo > **opções de eixo** guia, defina **intervalo** para **automática**. O gráfico exibirá o número ideal de rótulos de categorias que podem se ajustar ao longo do eixo.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Formatando um gráfico de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Formatando pontos de dados em um gráfico (construtor de relatórios e SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Classificar dados em uma região de dados (construtor de relatórios e SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Caixa de diálogo Propriedades do Eixo, Opções do Eixo &#40;Construtor de Relatórios e SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
- [Especificar uma escala logarítmica &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [Plotar dados em um eixo secundário &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+ [Caixa de diálogo de propriedades do eixo, opções de eixo &#40; Construtor de relatórios e SSRS &#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+ [Especificar uma escala logarítmica &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [Plotar dados em um eixo secundário &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   
 

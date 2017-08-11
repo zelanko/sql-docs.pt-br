@@ -27,11 +27,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 58588838e0e74b545290df5ff0e77dc68ad5e918
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: e228d60a4ae01aa345f007be91109b7bccb76f5a
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Building Applications Using the Web Service and the .NET Framework
@@ -57,17 +57,17 @@ ms.lasthandoff: 06/13/2017
   
 |Tópico|Description|  
 |-----------|-----------------|  
-|[Criando o Proxy do serviço Web](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|Descreve as maneiras de adicionar uma classe proxy ao seu projeto usando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
+|[Criar o proxy do serviço Web](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|Descreve as maneiras de adicionar uma classe proxy ao seu projeto usando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
 |[Autenticação de serviço Web](../../../reporting-services/report-server-web-service/net-framework/web-service-authentication.md)|Descreve como as chamadas ao serviço Web Servidor de Relatório é autenticado.|  
-|[Chamando métodos de serviço Web](../../../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md)|Descreve como usar a API SOAP para chamar métodos de serviço Web em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
-|[Definindo a propriedade Url do serviço Web](../../../reporting-services/report-server-web-service/net-framework/setting-the-url-property-of-the-web-service.md)|Explica como direcionar seu proxy de serviço Web programaticamente a uma URL do novo servidor depois de criar a sua referência da Web.|  
-|[Fornecendo argumentos de método de serviço Web](../../../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md)|Descreve como invocar um método de serviço Web e fornecer argumentos de método.|  
-|[Omitindo valores para objetos de serviço da Web opcionais](../../../reporting-services/report-server-web-service/net-framework/omitting-values-for-optional-web-service-objects.md)|Descreve como omitir valores para objetos de serviço Web opcionais.|  
-|[Usando métodos do serviço da Web seguro](../../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)|Descreve o **SecureConnectionLevel** configuração e a maneira na qual ele afeta o uso da API de SOAP do Reporting Services.|  
-|[Passando configurações de informações de dispositivos para extensões de renderização](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)|Descreve as configurações de informações de dispositivo usadas para renderizar relatórios a formatos diferentes.|  
+|[Chamar métodos de serviço Web](../../../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md)|Descreve como usar a API SOAP para chamar métodos de serviço Web em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
+|[Definir a propriedade Url do serviço Web](../../../reporting-services/report-server-web-service/net-framework/setting-the-url-property-of-the-web-service.md)|Explica como direcionar seu proxy de serviço Web programaticamente a uma URL do novo servidor depois de criar a sua referência da Web.|  
+|[Fornecer argumentos de método de serviço Web](../../../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md)|Descreve como invocar um método de serviço Web e fornecer argumentos de método.|  
+|[Omitir valores para objetos opcionais do serviço Web](../../../reporting-services/report-server-web-service/net-framework/omitting-values-for-optional-web-service-objects.md)|Descreve como omitir valores para objetos de serviço Web opcionais.|  
+|[Usar métodos do serviço Web seguro](../../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)|Descreve o **SecureConnectionLevel** configuração e a maneira na qual ele afeta o uso da API de SOAP do Reporting Services.|  
+|[Passar configurações de informações de dispositivos para extensões de renderização](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)|Descreve as configurações de informações de dispositivo usadas para renderizar relatórios a formatos diferentes.|  
 |[Configurações de extensão de entrega do Reporting Services](../../../reporting-services/report-server-web-service/net-framework/reporting-services-delivery-extension-settings.md)|Descreve as configurações usadas para entregar relatórios usando o email do servidor de relatório.|  
 |[Usando o Reporting Services cabeçalhos SOAP](../../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|Explica o uso de cabeçalhos SOAP no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
-|[Introdução ao tratamento de exceção no Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|Fornece informações sobre o modo no qual o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] manipula erros.|  
+|[Introdução ao Tratamento de Exceções no Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|Fornece informações sobre o modo no qual o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] manipula erros.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Serviço Web servidor de relatório](../../../reporting-services/report-server-web-service/report-server-web-service.md)   

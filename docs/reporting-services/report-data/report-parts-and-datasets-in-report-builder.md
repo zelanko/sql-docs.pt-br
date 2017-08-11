@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5bd079fcfdd867bbcfb251c7e58fa485c9c56d17
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Partes de relatório e conjuntos de dados no Construtor de Relatórios
@@ -59,10 +59,10 @@ ms.lasthandoff: 06/22/2017
 >  Para assegurar que você e outros usuários possam continuar usando os dados de um conjunto de dados compartilhado com êxito, é necessário entender os princípios por trás da proteção de itens de relatório. Para obter mais informações, consulte [Proteger itens de conjunto de dados compartilhados](../../reporting-services/security/secure-shared-dataset-items.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Segurança &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/security-report-builder.md)   
- [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Modo de exibição de Design de relatório &#40; Construtor de relatórios &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [Segurança &#40; Construtor de relatórios &#41;](../../reporting-services/report-builder/security-report-builder.md)   
+ [Partes de relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
+ [Relatório de conjuntos de dados inseridos e compartilhados de conjuntos de dados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
 

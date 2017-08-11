@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personalizar parâmetros de extensão de renderização em RSReportServer.config
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
 -   A estrutura XML **DeviceInfo** define as configurações de informações de dispositivo que são usadas por uma extensão de renderização. A maioria dos parâmetros de extensão de renderização é especificada como configurações de informações de dispositivo.  
   
- Você pode usar um editor de texto para modificar o arquivo. O arquivo RSReportServer.config pode ser localizado na pasta \Reporting Services\Report Server\Bin. Para obter mais informações sobre como modificar arquivos de configuração, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ Você pode usar um editor de texto para modificar o arquivo. O arquivo RSReportServer.config pode ser localizado na pasta \Reporting Services\Report Server\Bin. Para obter mais informações sobre como modificar arquivos de configuração, consulte [modificar um arquivo de configuração do Reporting Services &#40; Rsreportserver. config &#41; ](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="changing-the-display-name"></a>Alterando o nome para exibição  
  O nome para exibição de uma extensão de renderização aparece na lista Exportar da barra de ferramentas de relatório. Exemplos de nomes para exibição padrão incluem arquivos da Web, TIFF e Acrobat (PDF). Você pode substituir o nome para exibição padrão por um valor personalizado especificando o elemento **OverrideNames** nos arquivos de configuração. Além disso, se duas instâncias de uma única extensão de renderização forem definidas, use o elemento **OverrideNames** para diferenciar cada instância na lista Exportar.  
@@ -136,11 +136,11 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Consulte também  
  [Arquivo de Configuração RsReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Arquivo de configuração RSReportDesigner](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Configurações das informações do dispositivo CSV](../reporting-services/csv-device-information-settings.md)   
- [Configurações das informações do dispositivo do Excel](../reporting-services/excel-device-information-settings.md)   
+ [Configurações de informações do dispositivo CSV](../reporting-services/csv-device-information-settings.md)   
+ [Configurações das informações de dispositivo do Excel](../reporting-services/excel-device-information-settings.md)   
  [Configurações de informações do dispositivo HTML](../reporting-services/html-device-information-settings.md)   
- [Configurações das informações do dispositivo do Image](../reporting-services/image-device-information-settings.md)   
- [Configurações das informações do dispositivo MHTML](../reporting-services/mhtml-device-information-settings.md)   
+ [Configurações de informações de dispositivo de imagem](../reporting-services/image-device-information-settings.md)   
+ [Configurações de informações do dispositivo MHTML](../reporting-services/mhtml-device-information-settings.md)   
  [Configurações de informações do dispositivo PDF](../reporting-services/pdf-device-information-settings.md)   
  [Configurações de informações do dispositivo XML](../reporting-services/xml-device-information-settings.md)  
   

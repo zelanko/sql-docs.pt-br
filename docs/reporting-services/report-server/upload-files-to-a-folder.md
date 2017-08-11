@@ -23,11 +23,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="upload-files-to-a-folder"></a>Carregar arquivos em uma pasta
@@ -44,13 +44,13 @@ ms.lasthandoff: 06/22/2017
   
  Visualmente, os arquivos carregados em um banco de dados do servidor de relatório são representados na hierarquia de pastas com os seguintes ícones.  
   
- ![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")  
+ ![Ícone Relatório](../../reporting-services/report-server/media/hlp-16doc.gif "Ícone Relatório")  
 ícone de relatório  
   
- ![Ícone de modelo](../../reporting-services/report-server/media/model-icon.gif "Model icon")  
+ ![Ícone de modelo](../../reporting-services/report-server/media/model-icon.gif "ícone de modelo")  
 ícone de modelo de relatório  
   
- ![ícone de recurso genérico](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")  
+ ![Ícone Recurso genérico](../../reporting-services/report-server/media/hlp-16file.gif "Ícone Recurso genérico")  
 ícone de recurso genérico  
   
  Ao ser carregado, o arquivo sempre é colocado na pasta que está selecionada atualmente. Você pode navegar até a pasta na qual deseja incluir o item primeiro ou carregar um arquivo e, em seguida, movê-lo para um local final posteriormente.  
@@ -64,9 +64,9 @@ ms.lasthandoff: 06/22/2017
 |Exibir o conteúdo de uma pasta|Exibir recursos, exibir relatórios|  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Concedendo permissões em um servidor de relatório do modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tarefas e permissões](../../reporting-services/security/tasks-and-permissions.md)   
- [Carregar um arquivo ou relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
+ [Carregar um arquivo ou relatório &#40; Gerenciador de relatórios &#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
   
   

@@ -22,11 +22,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f91b97d1877e365813f3aa2445fabea1a263ab2b
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-access-ssrs"></a>Acesso à URL (SSRS)
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
  Para conferir a lista completa de comandos e configurações disponíveis por acesso à URL, consulte [Referência de parâmetro de acesso de URL](../reporting-services/url-access-parameter-reference.md).  
   
 ## <a name="url-access-concepts"></a>Conceitos do acesso à URL  
- As solicitações de URL ao servidor de relatório contêm parâmetros processados pelo servidor de relatório. A forma como o servidor de relatório manipula as solicitações de URL dependerá dos parâmetros, dos prefixos de parâmetro e dos tipos de item incluídos na URL. As URLs dos servidores de relatório aderem às diretrizes de formatação de URL propostas pelo padrão de rascunho do consórcio W3C/IETF. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é compatível com a maioria dos navegadores de Internet ou dos aplicativos que dão suporte ao endereçamento de URL padrão.  
+ As solicitações de URL ao servidor de relatório contêm parâmetros processados pelo servidor de relatório. A forma como o servidor de relatório manipula as solicitações de URL dependerá dos parâmetros, dos prefixos de parâmetro e dos tipos de item incluídos na URL. As URLs dos servidores de relatório aderem às diretrizes de formatação de URL propostas pelo padrão de rascunho do consórcio W3C/IETF. A funcionalidade de URL do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é compatível com a maioria dos navegadores de Internet ou dos aplicativos que dão suporte ao endereçamento de URL padrão.  
   
 ### <a name="url-access-syntax"></a>Sintaxe do acesso à URL  
  As solicitações de URL podem conter vários parâmetros listados em qualquer ordem. Os parâmetros são separados por um E comercial (&) e os pares de nome/valor são separados por um sinal de igualdade (=).  
@@ -115,18 +115,18 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
 |Descrições das tarefas|Links|  
 |-----------------------|-----------|  
-|Acessar itens do servidor de relatório, como relatórios, fontes de dados compartilhadas e recursos.|[Acessar itens do Servidor de Relatório usando o acesso à URL](../reporting-services/access-report-server-items-using-url-access.md)|  
-|Transmitir parâmetros de relatório a um relatório.|[Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
-|Definir a localidade dos parâmetros de relatório na cadeia de caracteres de acesso à URL, o que define as interpretações de datas, moedas etc. específicas da localidade.|[Definir o idioma dos parâmetros do relatório em uma URL](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
-|Enviar configurações específicas da extensão de renderização que personalizam como o relatório é renderizado.|[Especificar configurações de informações do dispositivo em uma URL](../reporting-services/specify-device-information-settings-in-a-url.md)|  
+|Acessar itens do servidor de relatório, como relatórios, fontes de dados compartilhadas e recursos.|[Acessar itens de servidor de relatório com acesso à URL](../reporting-services/access-report-server-items-using-url-access.md)|  
+|Transmitir parâmetros de relatório a um relatório.|[Passar um parâmetro de relatório em uma URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
+|Definir a localidade dos parâmetros de relatório na cadeia de caracteres de acesso à URL, o que define as interpretações de datas, moedas etc. específicas da localidade.|[Definir o idioma para parâmetros de relatório em uma URL](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
+|Enviar configurações específicas da extensão de renderização que personalizam como o relatório é renderizado.|[Especificar configurações de informações de dispositivo em uma URL](../reporting-services/specify-device-information-settings-in-a-url.md)|  
 |Exportar um relatório diretamente para um formato de arquivo sem exibi-lo no navegador.|[Exportar um relatório com acesso à URL](../reporting-services/export-a-report-using-url-access.md)|  
 |Abrir um relatório e navegar diretamente ao local de uma cadeia de caracteres.|[Pesquisar um relatório com acesso à URL](../reporting-services/search-a-report-using-url-access.md)|  
-|Renderizar um instantâneo de histórico de relatório específico.|[Renderizar instantâneo de histórico de relatório com o acesso à URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
+|Renderizar um instantâneo de histórico de relatório específico.|[Renderizar um instantâneo de histórico de relatório com acesso à URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
+ [Passar um parâmetro de relatório em uma URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
  [Referência de parâmetro de acesso de URL](../reporting-services/url-access-parameter-reference.md)   
- [Integrando o Reporting Services por meio do acesso à URL](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Integrando o Reporting Services usando o acesso à URL](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
+ [Localizando, exibindo e Gerenciando relatórios &#40; Construtor de relatórios e SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

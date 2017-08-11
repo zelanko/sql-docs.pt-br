@@ -21,11 +21,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 68b5e38f2b4e71298fbf7b6ec6970fc7824c3cde
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsconfig-utility-ssrs"></a>Utilitário rsconfig (SSRS)
@@ -60,7 +60,7 @@ rsconfig {-?}
 |**-i**  *instancename*|Obrigatório se você estiver usando instâncias nomeadas.|Se você usou uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nomeada para hospedar o banco de dados do servidor de relatório, esse valor especificará a instância nomeada.|  
 |**-d**  *databasename*|Obrigatórios.|Especifica o nome do banco de dados do servidor de relatório.|  
 |**-a**  *authmethod*|Obrigatórios.|Especifica o método de autenticação usado pelo servidor de relatório para se conectar ao banco de dados do servidor de relatório. Os valores válidos são **Windows** ou **SQL** (este argumento não diferencia maiúsculas de minúsculas).<br /><br /> O**Windows** especifica que o servidor de relatório usa a Autenticação do Windows.<br /><br /> O**SQL** especifica que o servidor de relatório usa a Autenticação do SQL Server.|  
-|**-u**  *[domain\\]username*|Obrigatório com **-e**, opcional com **-c**.|Especifica uma conta de usuário para a conexão de banco de dados do servidor de relatório ou para a conta autônoma.<br /><br /> Para **rsconfig -e**, esse argumento é obrigatório. Deve ser uma conta de usuário do domínio.<br /><br /> Para **rsconfig -c** e **-a SQL**, esse argumento deve especificar um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Para **rsconfig -c** e **-a Windows**, este argumento pode especificar um usuário do domínio, uma conta interna ou as credenciais da conta de serviço. Se você estiver especificando uma conta de domínio, defina *domínio* e *nome de usuário* no formato *domínio\nomedeusuário*. Se você estiver usando uma conta interna, esse argumento será opcional. Se você quiser usar credenciais de conta de serviço, omita esse argumento.|  
+|**-u***[domínio\\] nome de usuário* |Obrigatório com **-e** , opcional com **-c**.|Especifica uma conta de usuário para a conexão de banco de dados do servidor de relatório ou para a conta autônoma.<br /><br /> Para **rsconfig -e**, esse argumento é obrigatório. Deve ser uma conta de usuário do domínio.<br /><br /> Para **rsconfig -c** e **-a SQL**, esse argumento deve especificar um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Para **rsconfig -c** e **-a Windows**, este argumento pode especificar um usuário do domínio, uma conta interna ou as credenciais da conta de serviço. Se você estiver especificando uma conta de domínio, defina *domínio* e *nome de usuário* no formato *domínio\nomedeusuário*. Se você estiver usando uma conta interna, esse argumento será opcional. Se você quiser usar credenciais de conta de serviço, omita esse argumento.|  
 |**-p**  *password*|Obrigatório se **-u** for especificado.|Especifica a senha a ser usada com o argumento *username* . Você poderá definir esse argumento como um valor em branco se a conta não exigir uma senha. Esse valor diferencia maiúsculas de minúsculas em contas de domínio.|  
 |**-t**|Opcional.|Produz mensagens de erro para o log de rastreamento. Esse argumento não exige um valor. Para obter mais informações, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
   
@@ -127,12 +127,12 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Configurar a conta de execução autônoma &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Armazenar dados criptografados do servidor de relatório &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Configurar uma Conexão de banco de dados do servidor de relatório &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar a conta de execução autônoma &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Reporting Services Report Server &#40; Modo nativo &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Criptografados de armazenamento de dados do servidor de relatório &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Arquivos de configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Utilitários de prompt de comando do servidor de relatório &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
+ [Utilitários de Prompt de comando do servidor de relatório &#40; SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [Arquivo de configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   

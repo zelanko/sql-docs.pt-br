@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6414ac861d66bdacde41575662c7c66fc5014839
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-shared-datasets"></a>Gerenciar conjuntos de dados compartilhados
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  A definição de conjunto de dados compartilhado inclui uma consulta, parâmetros de conjunto de dados, inclusive valores padrão, opções de dados, como diferenciação de maiúsculas e minúsculas, e filtros de conjunto de dados. Os valores definidos na definição são usados sempre que o conjunto de dados compartilhado é incluído em um relatório.  
   
- Para usar um conjunto de dados compartilhado em um relatório, você abre um aplicativo, como o Construtor de Relatórios, navega até o servidor de relatório ou site do SharePoint e seleciona o conjunto de dados compartilhado. Isso adiciona uma instância do conjunto de dados compartilhado ao relatório. No relatório, você não pode exibir ou alterar a consulta ou a fonte de dados compartilhada do conjunto de dados compartilhado. Você pode especificar um conjunto adicional de valores de propriedade de conjunto de dados que se apliquem à instância no relatório. Por exemplo, você pode adicionar um filtro ou alterar opções de dados, como diferenciação de maiúsculas e minúsculas. Para obter mais informações, veja [Conjuntos de dados inseridos de relatório e conjuntos de dados compartilhados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) na [documentação do Construtor de Relatórios](http://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
+ Para usar um conjunto de dados compartilhado em um relatório, você abre um aplicativo, como o Construtor de Relatórios, navega até o servidor de relatório ou site do SharePoint e seleciona o conjunto de dados compartilhado. Isso adiciona uma instância do conjunto de dados compartilhado ao relatório. No relatório, você não pode exibir ou alterar a consulta ou a fonte de dados compartilhada do conjunto de dados compartilhado. Você pode especificar um conjunto adicional de valores de propriedade de conjunto de dados que se apliquem à instância no relatório. Por exemplo, você pode adicionar um filtro ou alterar opções de dados, como diferenciação de maiúsculas e minúsculas. Para obter mais informações, consulte [conjuntos de dados inseridos de relatório e conjuntos de dados compartilhados &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) no [documentação do construtor de relatórios](http://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
   
 ## <a name="managing-shared-datasets"></a>Gerenciando conjuntos de dados compartilhados  
  Para gerenciar as propriedades de um conjunto de dados compartilhado publicado, você pode usar o Gerenciador de Relatórios para um servidor de relatório no modo nativo ou páginas do aplicativo em um site do SharePoint, caso você tenha implantado o servidor de relatório no modo integrado do SharePoint. As tarefas que você pode executar em um conjunto de dados compartilhado dependem de suas atribuições de função e do nível do site e permissões em nível de item, inclusive permissões na pasta se a herança de permissões estiver em vigor. A segurança em nível de item de conjuntos de dados compartilhados segue o mesmo modelo da segurança em nível de item de relatórios. Para obter mais informações, consulte [Proteger itens de conjunto de dados compartilhados](../../reporting-services/security/secure-shared-dataset-items.md).  
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
 |-|-|  
 |Editar nome|Alterar o nome do conjunto de dados compartilhado. Todas as referências de itens dependentes continuarão funcionando.|  
 |Editar Descrição|Alterar a descrição do conjunto de dados compartilhado.|  
-|Editar o tempo limite de execução da consulta|Definir o tempo limite de execução da consulta em segundos. Zere (0) segundo significa nenhum tempo limite. Determina o número de segundos antes do tempo limite da consulta do conjunto de dados se esgotar. Para especificar nenhum valor de tempo limite, use 0. Para obter mais informações, consulte [Definindo valores de tempo limite para processamento de relatórios e conjuntos de dados compartilhados &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
+|Editar o tempo limite de execução da consulta|Definir o tempo limite de execução da consulta em segundos. Zere (0) segundo significa nenhum tempo limite. Determina o número de segundos antes do tempo limite da consulta do conjunto de dados se esgotar. Para especificar nenhum valor de tempo limite, use 0. Para obter mais informações, consulte [valores de tempo limite da definição de relatório e processamento de conjunto de dados compartilhados &#40; SSRS &#41; ](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
 |Exibir itens dependentes|Exibir os itens que usam esse conjunto de dados compartilhado: partes de relatório publicadas, fontes de dados compartilhadas e relatórios.|  
   
  As seguintes propriedades de conjunto de dados compartilhado são configuradas automaticamente:  
@@ -126,6 +126,6 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Concedendo permissões em um servidor de relatório do modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

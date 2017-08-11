@@ -18,11 +18,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: de06ca0018df176e84db7e16e38c3c2021811fda
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="format-a-reporting-services-script-file"></a>Formatar um arquivo de script do Reporting Services
@@ -59,7 +59,7 @@ End Sub
   
 ## <a name="see-also"></a>Consulte também  
  [serviço Web Servidor de Relatórios](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Referência técnica &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Utilitário RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ [Referência técnica &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Utilitário RS.exe &#40; SSRS &#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
   

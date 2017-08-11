@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.smtpconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], SMTP
 - SMTP connection manager [Integration Services]
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d350ca1ef990278eb64fc0589787fc5ea9b6125f
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: b952c9427a9bd15b29b806a5afb9f11d75d7393a
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="smtp-connection-manager"></a>Gerenciador de conexões SMTP
@@ -52,4 +54,31 @@ ms.lasthandoff: 08/03/2017
   
  Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
+## <a name="smtp-connection-manager-editor"></a>Editor do Gerenciador de Conexões SMTP
+  Use a caixa de diálogo **Editor do Gerenciador de Conexões SMTP** para especificar um servidor SMTP.  
   
+ Para saber mais sobre o Gerenciador de Conexões SMTP, consulte [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md).  
+  
+### <a name="options"></a>Opções  
+ **Nome**  
+ Forneça um nome exclusivo para o gerenciador de conexões.  
+  
+ **Description**  
+ Descreva o gerenciador de conexões. Como prática recomendável, descreva o gerenciador de conexões em termos de objetivo, para tornar os pacotes autodocumentados e mais fáceis de manter.  
+  
+ **Servidor SMTP**  
+ Forneça o nome do servidor SMTP.  
+  
+ **Usar Autenticação do Windows**  
+ Selecione para enviar email usando um servidor SMTP que usa a Autenticação do Windows para autenticar o acesso ao servidor.  
+  
+> [!IMPORTANT]  
+>  O gerenciador de conexões SMTP dá suporte apenas para autenticação anônima e Autenticação do Windows. Ele não suporta a autenticação básica.  
+  
+> [!NOTE]  
+>  Ao utilizar o Microsoft Exchange como servidor SMTP, talvez seja preciso definir **Usar Autenticação do Windows** como **True**. Os servidores do Exchange podem ser configurados para não permitir conexões SMTP não autenticadas.  
+  
+ **Habilitar SSL (Secure Sockets Layer)**  
+ Selecione para criptografar a comunicação utilizando a SSL (Secure Sockets Layer) ao enviar mensagens de email.  
+  
+

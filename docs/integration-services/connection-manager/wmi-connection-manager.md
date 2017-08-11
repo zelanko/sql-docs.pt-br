@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmiconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], WMI
 - connection managers [Integration Services], WMI
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8bd256a462a8a0a51441024619f2ed81f6db753
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 6e314655d6a230bde897ffceb54fadb8d180d1db
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="wmi-connection-manager"></a>Gerenciador de conexões WMI
@@ -45,8 +47,37 @@ ms.lasthandoff: 08/03/2017
   
  Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
+## <a name="wmi-connection-manager-editor"></a>Editor do Gerenciador de Conexões WMI
+  Use a caixa de diálogo **Gerenciador de Conexões WMI** para especificar uma conexão WMI (Instrumentação de Gerenciamento do Windows) da Microsoft com um servidor.  
+  
+ Para obter mais informações sobre o gerenciador de conexões WMI, consulte [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md).  
+  
+### <a name="options"></a>Opções  
+ **Nome**  
+ Forneça um nome exclusivo para o gerenciador de conexões.  
+  
+ **Description**  
+ Descreva o gerenciador de conexões. Como prática recomendável, descreva o gerenciador de conexões em termos de objetivo, para tornar os pacotes autodocumentados e mais fáceis de manter.  
+  
+ **Nome do servidor**  
+ Forneça o nome do servidor com o qual deseja fazer a conexão WMI.  
+  
+ **Namespace**  
+ Especifique o namespace WMI.  
+  
+ **Usar a autenticação do Windows**  
+ Selecione para usar Autenticação do Windows. Se usar Autenticação do Windows, não será preciso fornecer um nome de usuário nem senha para a conexão.  
+  
+ **Nome de usuário**  
+ Se não usar Autenticação do Windows, será preciso fornecer um nome de usuário para a conexão.  
+  
+ **Senha**  
+ Se não usar Autenticação do Windows, será preciso fornecer uma senha para a conexão.  
+  
+ **Teste**  
+ Teste as configurações do gerenciador de conexões.  
+  
 ## <a name="see-also"></a>Consulte também  
  [Tarefa Serviços Web](../../integration-services/control-flow/web-service-task.md)   
  [Integration Services &#40; SSIS &#41; Conexões](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
-  
+

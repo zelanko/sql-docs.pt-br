@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 065902778339650fcd123556acdeabfe8504224f
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="process-large-reports"></a>Processar relatórios grandes
@@ -76,8 +76,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Consulte também  
  [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Definir propriedades de processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Pré-carregar o cache &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
+ [Especificar informações de Conexão para fontes de dados de relatório e credenciais](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Gerenciamento de conteúdo de servidor de relatório e &#40; Modo nativo do SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Pré-carregar o Cache de &#40; Gerenciador de relatórios &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   

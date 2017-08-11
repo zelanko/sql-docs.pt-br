@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a0738c8ac950a86ef877c26fd8b6a0f6a6b075f2
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Referência de erros e eventos (Reporting Services)
@@ -53,14 +53,14 @@ ms.lasthandoff: 06/22/2017
 |117|Erro|Inicialização/desligamento|Servidor de relatório|O banco de dados do servidor de relatório é uma versão inválida.|  
 |118|Aviso|Log|Servidor de relatório<br /><br /> Gerenciador de Relatórios|O arquivo de rastreamento não está mais no local do diretório previsto; um novo arquivo de rastreamento será criado no diretório padrão. Para obter mais informações, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |119|Erro|Ativação|Servidor de relatório<br /><br /> Processador de agendamento e entrega|*\<Fonte >* não recebeu acesso ao conteúdo do banco de dados de servidor de relatório.|  
-|120|Erro|Ativação|Servidor de relatório|A chave simétrica não pode ser descriptografada. Provavelmente, houve uma alteração na conta na qual o serviço é executado. Para obter mais informações, veja [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|120|Erro|Ativação|Servidor de relatório|A chave simétrica não pode ser descriptografada. Provavelmente, houve uma alteração na conta na qual o serviço é executado. Para obter mais informações, consulte [configurar e gerenciar chaves de criptografia &#40; Gerenciador de configurações do SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Erro|Inicialização/desligamento|Servidor de relatório|Falha ao iniciar o serviço RPC (Chamada de Procedimento Remoto).|  
 |122|Aviso|Entrega|Processador de agendamento e entrega|O Processador de Agendamento e Entrega não pode se conectar ao servidor de SMTP usado para entrega de email. Para obter mais informações sobre conexões de servidor SMTP, consulte [Configurar um servidor de relatório para entrega de email (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).|  
 |123|Aviso|Log|Servidor de relatório<br /><br /> Gerenciador de Relatórios|Falha no servidor de relatório ao gravar o log de rastreamento. Para obter mais informações sobre logs de rastreamento, consulte [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md).|  
-|124|Informações|Ativação|Servidor de relatório|O serviço Servidor de Relatório foi iniciado. Para obter mais informações, consulte [Inicializar um Servidor de Relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
-|125|Informações|Ativação|Servidor de relatório|A chave usada para criptografar dados foi extraída com êxito. Para obter mais informações sobre chaves, consulte [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
-|126|Informações|Ativação|Servidor de relatório|A chave usada para criptografar dados foi aplicada com êxito. Para obter mais informações sobre chaves, consulte [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
-|127|Informações|Ativação|Servidor de relatório|O conteúdo criptografado foi removido com êxito do banco de dados do servidor de relatório. Para obter mais informações sobre como excluir dados criptografados não recuperáveis, consulte [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|124|Informações|Ativação|Servidor de relatório|O serviço Servidor de Relatório foi iniciado. Para obter mais informações, consulte [inicializar um servidor de relatório &#40; Gerenciador de configurações do SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
+|125|Informações|Ativação|Servidor de relatório|A chave usada para criptografar dados foi extraída com êxito. Para obter mais informações sobre chaves, consulte [configurar e gerenciar chaves de criptografia &#40; Gerenciador de configurações do SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|126|Informações|Ativação|Servidor de relatório|A chave usada para criptografar dados foi aplicada com êxito. Para obter mais informações sobre chaves, consulte [configurar e gerenciar chaves de criptografia &#40; Gerenciador de configurações do SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|127|Informações|Ativação|Servidor de relatório|O conteúdo criptografado foi removido com êxito do banco de dados do servidor de relatório. Para obter mais informações sobre como excluir dados criptografados não recuperáveis, consulte [configurar e gerenciar chaves de criptografia &#40; Gerenciador de configurações do SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |128|Erro|Ativação|Servidor de relatório|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Componentes de edições diferentes não podem ser usados juntos.|  
 |129|Erro|Gerenciamento|Servidor de relatório<br /><br /> Processador de agendamento e entrega|Uma definição de arquivo de configuração criptografada não pode ser descriptografada.|  
 |130|Erro|Gerenciamento|Servidor de relatório<br /><br /> Processador de agendamento e entrega|*\<Fonte >* não é possível localizar o arquivo de configuração. Arquivos de configuração são exigidos pelo servidor de relatório.|  

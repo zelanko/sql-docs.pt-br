@@ -15,11 +15,11 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3674bb697d86ac79906aa4ee5172ad24030a22fc
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Imprimir relatórios em um navegador com o controle de impressão (Construtor de Relatórios e SSRS)
@@ -42,10 +42,10 @@ ms.lasthandoff: 06/22/2017
  Para visualizar um relatório, na caixa de diálogo **Imprimir** , clique no botão **Visualizar** . Clicar na visualização abre a primeira página do relatório em uma janela de visualização separada. Páginas adicionais ficam disponíveis quando o relatório é processado no servidor de relatórios. Um relatório visualizado é processado em formato EMF. É possível navegar até a página anterior ou a próxima chegando até a última, e o botão **Avançar** é desabilitado.  
   
 ### <a name="adjusting-print-margins"></a>Ajustando margens de impressão  
- É possível modificar as margens de impressão no relatório EMF processado antes de imprimi-lo. Para isso, na caixa de diálogo **Imprimir** , clique no botão **Visualizar** . Na parte superior da página de visualização, clique no botão **Margens** . A caixa de diálogo Margens é exibida. Configure as margens superior, inferior, direita e esquerda conforme desejado. [!INCLUDE[clickOK](../../includes/clickok-md.md)] A caixa de diálogo é fechada, e as configurações são armazenadas para a renderização da visualização e da impressão.  
+ É possível modificar as margens de impressão no relatório EMF processado antes de imprimi-lo. Para isso, na caixa de diálogo **Imprimir** , clique no botão **Visualizar** . Na parte superior da página de visualização, clique no botão **Margens** . A caixa de diálogo Margens é exibida. Configure as margens superior, inferior, direita e esquerda conforme desejado. [!INCLUDE[clickOK](../../includes/clickok-md.md)]A caixa de diálogo é fechada e as configurações são armazenadas para renderização da visualização e impressão.  
   
 ## <a name="see-also"></a>Consulte também  
- [Imprimir relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
- [Imprimir um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
+ [Imprimir relatórios &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
+ [Imprimir um relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
   
   

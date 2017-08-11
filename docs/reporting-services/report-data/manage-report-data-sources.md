@@ -20,11 +20,11 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9791cd34a321173e30bf2016956f02e54e62112c
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-report-data-sources"></a>Gerenciar fontes de dados de relatório
@@ -67,25 +67,25 @@ ms.lasthandoff: 06/22/2017
 |Tarefa|Ferramenta|Link|  
 |----------|----------|----------|  
 |Exibir exemplos de cadeias de conexão.||[Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
-|Escolher uma abordagem para obter credenciais para conectar-se a uma fonte de dados.||[Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)|  
-|Adicionar propriedades de conexão de fonte de dados a um arquivo de definição de relatório (.rdl).|Designer de Relatórios|[Criar uma fonte de dados inserida ou compartilhada &#40;SSRS&#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
-|Adicionar e vincular a um arquivo de fonte de dados compartilhada (.rds) em um projeto de relatório.|Designer de Relatórios|[Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)|  
+|Escolher uma abordagem para obter credenciais para conectar-se a uma fonte de dados.||[Especificar informações de Conexão para fontes de dados de relatório e credenciais](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)|  
+|Adicionar propriedades de conexão de fonte de dados a um arquivo de definição de relatório (.rdl).|Designer de Relatórios|[Criar uma fonte de dados inserida ou compartilhada &#40; SSRS &#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
+|Adicionar e vincular a um arquivo de fonte de dados compartilhada (.rds) em um projeto de relatório.|Designer de Relatórios|[Criar, modificar e excluir fontes de dados compartilhadas &#40; SSRS &#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |Crie uma lista predefinida de fontes de dados que os usuários possam selecionar em tempo de execução. Quando um usuário solicita um relatório, este fornece uma lista de fontes de dados. O usuário deve selecionar qual fonte de dados usar antes de executar o relatório. Para acrescentar uma lista de seleção de fonte de dados a um relatório, você usa uma expressão.<br /><br /> Isto é conhecido como uma conexão de fonte de dados dinâmica.|Designer de Relatórios|[Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
-|Criar um item de fonte de dados compartilhada em um servidor de relatório.|Gerenciador de Relatórios|[Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)|  
-|Armazenar credenciais como um pré-requisito para criar assinaturas ou instantâneos de relatório.|Gerenciador de Relatórios|[Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)|  
-|Editar propriedades de conexão da fonte de dados em um relatório publicado.|Gerenciador de Relatórios|[Configurar propriedades de fonte de dados para um relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
+|Criar um item de fonte de dados compartilhada em um servidor de relatório.|Gerenciador de Relatórios|[Criar, excluir ou modificar uma fonte de dados &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)|  
+|Armazenar credenciais como um pré-requisito para criar assinaturas ou instantâneos de relatório.|Gerenciador de Relatórios|[Armazenar credenciais em uma fonte de dados Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)|  
+|Editar propriedades de conexão da fonte de dados em um relatório publicado.|Gerenciador de Relatórios|[Configurar propriedades de fonte de dados para um relatório &#40; Gerenciador de relatórios &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
 |Criar um item de fonte de dados compartilhada em um servidor de relatório.|Site do SharePoint|[Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)|  
-|Usar informações de conexão .odc existentes com um relatório.|Site do SharePoint|[Usar uma conexão de dados do Office &#40;.odc&#41; com relatórios &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)|  
+|Usar informações de conexão .odc existentes com um relatório.|Site do SharePoint|[Use uma Conexão de dados do Office &#40;. ODC &#41; com relatórios &#40; O Reporting Services no SharePoint integrado modo &#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
 >  Gerenciar as conexões de fonte de dados para relatar fontes de dados não é o mesmo que gerenciar a conexão do servidor de relatório para o banco de dados do servidor de relatório. Para obter mais informações sobre uma conexão do servidor de relatório com seu armazenamento de dados, consulte [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Associar um relatório ou modelo a uma fonte de dados compartilhada &#40;SSRS&#41;](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
- [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)   
+ [Vincular um relatório ou modelo a uma fonte de dados &#40; SSRS &#41;](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [Criar, excluir ou modificar uma fonte de dados &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Armazenar credenciais em uma fonte de dados Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)   
  [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Fontes de dados com suporte no Reporting Services &#40; SSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+ [Gerenciamento de conteúdo de servidor de relatório &#40; Modo nativo do SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

@@ -22,11 +22,11 @@ caps.latest.revision: 63
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 464f02ee6324db06587ee1c7233f8fcd12026722
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Administrar um banco de dados de servidor de relatório (modo nativo do SSRS)
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
   
  Para administrar os bancos de dados do servidor de relatório, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma variedade de ferramentas.  
   
--   Para fazer backup e restaurar, mover ou recuperar um banco de dados do servidor de relatório, use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], os comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] ou os utilitários de prompt de comando de banco de dados. Para obter instruções, consulte [Movendo os bancos de dados do servidor de relatório para outro computador &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) nos Manuais Online do SQL Server.  
+-   Para fazer backup e restaurar, mover ou recuperar um banco de dados do servidor de relatório, use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], os comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] ou os utilitários de prompt de comando de banco de dados. Para obter instruções, consulte [movendo os bancos de dados do servidor de relatório para outro computador &#40; Modo nativo do SSRS &#41; ](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) nos Manuais Online do SQL Server.  
   
 -   Para copiar o conteúdo do banco de dados existente em outro banco de dados do servidor de relatórios, anexe uma cópia de um banco de dados do servidor de relatórios e use-a com uma instância diferente do servidor de relatórios. Se preferir, crie e execute um script que usa chamadas SOAP para recriar o conteúdo do servidor de relatórios em um novo banco de dados. Você pode usar o utilitário **rs** para executar o script.  
   
@@ -85,14 +85,14 @@ SET READ_COMMITTED_SNAPSHOT OFF
   
 ## <a name="see-also"></a>Consulte também  
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Criar um banco de dados de servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
- [Operações de backup e restauração para o Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
- [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Armazenar dados criptografados do servidor de relatório &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Criar um banco de dados do servidor de relatório do modo nativo &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Configurar a conta de serviço do servidor de relatório &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configurar uma Conexão de banco de dados do servidor de relatório &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Criar um banco de dados do servidor de relatório &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [Operações de backup e restauração do Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
+ [Banco de dados de servidor de relatório &#40; Modo nativo do SSRS &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [Reporting Services Report Server &#40; Modo nativo &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Criptografados de armazenamento de dados do servidor de relatório &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Configurar e gerenciar chaves de criptografia &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

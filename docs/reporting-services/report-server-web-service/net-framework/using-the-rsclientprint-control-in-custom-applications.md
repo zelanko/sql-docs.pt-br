@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8afee187160da9d35efd0c7079b649bac7e73740
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: 57312a2c4c75a9df1abc55baa833772c9949270c
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usando o controle RSClientPrint em aplicativos personalizados
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/13/2017
   
 ### <a name="rsclientprint-properties"></a>Propriedades do RSClientPrint  
   
-|Propriedade|Type|RW|Padrão|Description|  
+|Propriedade|Tipo|RW|Padrão|Description|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|RW|configuração de relatório|Obtém ou define a margem esquerda. O valor padrão, caso não seja definido pelo desenvolvedor ou especificado no relatório, é 12,2 milímetros.|  
 |MarginRight|Double|RW|configuração de relatório|Obtém ou define a margem direita. O valor padrão, caso não seja definido pelo desenvolvedor ou especificado no relatório, é 12,2 milímetros.|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 06/13/2017
 |PageHeight|Double|RW|configuração de relatório|Obtém ou define a altura da página. O valor padrão, caso não seja definido pelo desenvolvedor ou pela definição de relatório, é 279,4 milímetros.|  
 |Cultura|Int32|RW|Localidade do navegador|Especifica o LCID (identificador de localidade). Este valor determina a unidade de medida para a entrada de usuário. Por exemplo, se um usuário digita **3**, o valor será medido em milímetros, se o idioma seja o francês ou em polegadas se o idioma for inglês (Estados Unidos). Os valores válidos incluem: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |UICulture|Cadeia de caracteres|RW|Cultura do cliente|Especifica localização da cadeia de caracteres da caixa de diálogo. O texto da caixa de diálogo Imprimir está localizado para estes idiomas: chinês simplificado, chinês tradicional, inglês, francês, alemão, italiano, japonês, coreano e espanhol. Os valores válidos incluem: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|Authenticate|Boolean|RW|Falso|Especifica se o controle emite um comando GET para o servidor de relatório para iniciar uma conexão de impressão fora de sessão.|  
+|Authenticate|Booliano|RW|Falso|Especifica se o controle emite um comando GET para o servidor de relatório para iniciar uma conexão de impressão fora de sessão.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Quando definir a propriedade Authenticate  
  Quando você imprimir de uma sessão do navegador, você não precisa definir o **autenticar** propriedade. No contexto de uma sessão ativa, todas as solicitações do controle de impressão para o servidor de relatório serão manipuladas por meio do navegador. O navegador define as variáveis de sessão necessárias para a comunicação com o servidor de relatório.  
@@ -109,10 +109,10 @@ ms.lasthandoff: 06/13/2017
 ### <a name="rsprintclient-support-for-the-print-method"></a>Suporte de RSPrintClient para o método de impressão  
  O **RSClientPrint** objeto oferece suporte a **impressão** método usado para iniciar a caixa de diálogo de impressão. O **impressão** método tem os seguintes argumentos.  
   
-|Argumento|E/S|Type|Description|  
+|Argumento|E/S|Tipo|Description|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|Entrada|String|Especifica o diretório virtual do servidor de relatório (por exemplo, `https://adventure-works/reportserver`).|  
-|ReportPathParameters|Entrada|String|Especifica o nome completo para o relatório no namespace da pasta do servidor de relatório, incluindo os parâmetros. Os relatórios são recuperados por meio do acesso à URL. Por exemplo: "/AdventureWorks Sample Reports/Resumo de Vendas do Funcionário&EmpID=1234"|  
+|ServerPath|Entrada|Cadeia de caracteres|Especifica o diretório virtual do servidor de relatório (por exemplo, `https://adventure-works/reportserver`).|  
+|ReportPathParameters|Entrada|Cadeia de caracteres|Especifica o nome completo para o relatório no namespace da pasta do servidor de relatório, incluindo os parâmetros. Os relatórios são recuperados por meio do acesso à URL. Por exemplo: "/AdventureWorks Sample Reports/Resumo de Vendas do Funcionário&EmpID=1234"|  
 |ReportName|Entrada|Cadeia de caracteres|O nome curto do relatório (no exemplo anterior, o nome curto é Resumo de Vendas do Funcionário). Ele será exibido na caixa de diálogo Imprimir e na fila de impressão.|  
   
 ### <a name="example"></a>Exemplo  
@@ -150,7 +150,7 @@ ms.lasthandoff: 06/13/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Imprimir relatórios em um navegador com o controle de impressão &#40; Construtor de relatórios e SSRS &#41;](../../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
- [Imprimir relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
+ [Imprimir relatórios &#40; Construtor de relatórios e SSRS &#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Configurações de informações de dispositivo de imagem](../../../reporting-services/image-device-information-settings.md)  
   
   

@@ -21,11 +21,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f989ec80fe80d85381673cb12a90b8e3cea82da4
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Definir parâmetros no Designer de Consulta MDX do Analysis Services
@@ -68,7 +68,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  No **parâmetro** coluna, clique em  **\<Inserir parâmetro >**e, em seguida, digite o nome de um parâmetro.  
   
-5.  Na coluna **Dimensão** , escolha um valor na lista suspensa.  
+5.  Na coluna **Dimensão**, escolha um valor na lista suspensa.  
   
 6.  Na coluna **Hierarquia** , escolha um valor na lista suspensa.  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
      Para exibir o conjunto de dados que fornece os valores disponíveis para o parâmetro de relatório, clique com o botão direito do mouse em qualquer área em branco do painel de dados do relatório e clique em **Mostrar Conjuntos de Dados Ocultos**. O painel de dados do relatório exibe todos os conjuntos de dados do relatório.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tipo de conexão Analysis Services para MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
- [Interface do usuário do Designer de Consulta MDX do Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
+ [Tipo de Conexão do Analysis Services para MDX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Interface de usuário do Designer de consulta MDX do Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   

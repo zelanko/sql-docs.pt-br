@@ -20,11 +20,11 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1dd867551f7413e07ac70b290e73e817f34878b9
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxe de consulta XML para dados de relatório XML (SSRS)
@@ -61,14 +61,14 @@ ms.lasthandoff: 06/22/2017
   
 |Fonte de dados XML|Exemplo de consulta|  
 |---------------------|-------------------|  
-|Dados XML de serviço da Web <xref:ReportService2010.ReportingService2010.ListChildren%2A> método.|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
+|Dados XML de serviço Web do método <xref:ReportService2010.ReportingService2010.ListChildren%2A> .|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
 |Dados XML de serviço Web do SoapAction.|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>http://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
 |Documento XML ou dados XML inseridos que usam namespaces.<br /><br /> Elemento de consulta que especifica namespaces para um caminho de elemento.|`<Query xmlns:es="http://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
 |Documento XML inserido.|`<Query>`<br /><br /> `<XmlData>`<br /><br /> `<Customers>`<br /><br /> `<Customer ID="1">Bobby</Customer>`<br /><br /> `</Customers>`<br /><br /> `</XmlData>`<br /><br /> `<ElementPath>Customer {@}</ElementPath>`<br /><br /> `</Query>`|  
 |Documento XML que usa padrão.|*Nenhuma consulta*.<br /><br /> O caminho de elemento deriva do próprio documento XML e independe do namespace.|  
   
 > [!NOTE]  
->  O primeiro exemplo de serviço Web lista o conteúdo do servidor de relatório que usa o método <xref:ReportService2006.ReportingService2006.ListChildren%2A>. Para executar essa consulta, você deve criar uma nova fonte de dados e definir a cadeia de caracteres de conexão `http://localhost/reportserver/reportservice2006.asmx`. O <xref:ReportService2006.ReportingService2006.ListChildren%2A> método aceita dois parâmetros: **Item** e **recursiva**. Defina o valor padrão de **Item** para **/** e **Recursive** para **1**.  
+>  O primeiro exemplo de serviço Web lista o conteúdo do servidor de relatório que usa o método <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Para executar essa consulta, você deve criar uma nova fonte de dados e definir a cadeia de caracteres de conexão `http://localhost/reportserver/reportservice2006.asmx`. O método <xref:ReportService2006.ReportingService2006.ListChildren%2A> utiliza dois parâmetros: **Item** e **Recursive**. Defina o valor padrão de **Item** para **/** e **Recursive** para **1**.  
   
 ## <a name="specifying-namespaces"></a>Especificando namespaces  
  Use o elemento **Query** XML para especificar os namespaces usados nos dados XML da fonte de dados. A seguinte consulta XML usa o namespace **sales**. Os nós XML **ElementPath** para `sales:LineItems` e `sales:LineItem` usam o namespace **sales**.  
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Tipo de conexão XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
- [Tutoriais do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
+ [Tipo de conexão XML &#40; SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [Reporting Services tutoriais &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
   

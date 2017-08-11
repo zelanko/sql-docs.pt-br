@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4426bffe23295c623d0bba5592c1488cb0ede770
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-builder-functions---lookup-function"></a>Funções do construtor de relatórios - função Lookup
@@ -64,7 +64,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Retorna o valor da expressão resultante.  
   
- Para recuperar diversos valores para um único nome ou campo chave em que há uma relação de um para muitos, use [Função LookupSet &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md). Para chamar **Lookup** para um conjunto de valores, use [Função Multilookup &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
+ Para recuperar diversos valores para um único nome ou campo chave em que há uma relação de um para muitos, use [Função LookupSet &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md). Para chamar **pesquisa** para um conjunto de valores, use [Multilookup função &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
   
  As seguintes restrições são aplicadas:  
   
@@ -102,9 +102,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Uso de expressões em relatórios &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Exemplos de expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Tipos de dados em expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Escopo das expressões para totais, agregações e coleções internas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

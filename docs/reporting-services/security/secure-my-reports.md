@@ -21,18 +21,18 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 162f43fc4f81c228d90839c75d1959d71eff9322
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-my-reports"></a>Proteger Meus Relatórios
-  O recurso Meus Relatórios fornece uma área de trabalho gerenciada pelo usuário para trabalhar com relatórios. Para funcionar conforme pretendido, a pasta Meus Relatórios requer permissões menos restritivas do que as outras pastas que estão disponíveis para uso geral. Os usuários que têm permissões apenas para exibir e executar relatórios em outras pastas podem precisar de um conjunto maior de permissões para gerenciar suas pastas Meus Relatórios e seu próprio conteúdo. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma atribuição de função especializada e uma definição de função para essa finalidade.  
+  O recurso Meus Relatórios fornece uma área de trabalho gerenciada pelo usuário para trabalhar com relatórios. Para funcionar conforme pretendido, a pasta Meus Relatórios requer permissões menos restritivas do que as outras pastas que estão disponíveis para uso geral. Os usuários que têm permissões apenas para exibir e executar relatórios em outras pastas podem precisar de um conjunto maior de permissões para gerenciar suas pastas Meus Relatórios e seu próprio conteúdo. O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma atribuição de função especializada e uma definição de função para essa finalidade.  
   
 > [!NOTE]  
->  O recurso Meus Relatórios só está disponível no Gerenciador de Relatórios. Não está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+>  O recurso Meus Relatórios só está disponível no Gerenciador de Relatórios. Não está disponível em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="role-assignment-for-my-reports"></a>Atribuição de função para Meus Relatórios  
  A atribuição de função para Meus Relatórios tem elementos predefinidos e é criada automaticamente para cada usuário que ativa uma pasta Meus Relatórios. A atribuição automática de segurança feita pelo servidor de relatório é especialmente útil para organizações que usam muito o recurso Meus Relatórios porque os administradores não precisam permitir o acesso para cada usuário dessa funcionalidade.  
@@ -62,6 +62,6 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Consulte também  
  [Proteger relatórios e recursos](../../reporting-services/security/secure-reports-and-resources.md)   
  [Proteger pastas](../../reporting-services/security/secure-folders.md)   
- [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Concedendo permissões em um servidor de relatório do modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

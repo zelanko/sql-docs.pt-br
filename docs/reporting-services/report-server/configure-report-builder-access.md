@@ -19,11 +19,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1a85ea590db7794e4a8c09aac7d3f97df5b6d29b
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-report-builder-access"></a>Configurar o acesso ao Construtor de Relatórios
@@ -53,14 +53,14 @@ ms.lasthandoff: 06/22/2017
   
  Para definir propriedades de sistema do servidor de relatório, você pode usar o Management Studio ou script:  
   
--   Para usar o Management Studio, conecte-se ao servidor de relatório e use a página Propriedades Avançadas do Servidor para definir **EnableReportDesignClientDownload** como **false**. Para obter mais informações sobre como abrir essa página, consulte [Definir propriedades do servidor de relatório &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+-   Para usar o Management Studio, conecte-se ao servidor de relatório e use a página Propriedades Avançadas do Servidor para definir **EnableReportDesignClientDownload** como **false**. Para obter mais informações sobre como abrir essa página, consulte [definir propriedades do servidor de relatório &#40; Management Studio &#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 -   Para ver um exemplo de script que define uma propriedade de servidor de relatório, consulte [Implantação de script e tarefas administrativas](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
   
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>Atribuições de função que concedem o acesso ao Construtor de Relatórios em um servidor de relatório no modo nativo  
  Em um servidor de relatório no modo nativo, crie atribuições de função de usuário que incluem tarefas para usar o Construtor de Relatórios. Você deve ser Gerenciador de Conteúdo e Administrador de Sistema para criar ou modificar definições de função e atribuições de função em itens e no nível de site.  
   
- As instruções a seguir presumem que você está usando funções predefinidas. Se você tiver modificado as definições de função ou feito a atualização a partir do SQL Server 2000, verifique se as funções contêm as tarefas necessárias. Para obter mais informações sobre a criação de atribuições de função, consulte [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+ As instruções a seguir presumem que você está usando funções predefinidas. Se você tiver modificado as definições de função ou feito a atualização a partir do SQL Server 2000, verifique se as funções contêm as tarefas necessárias. Para obter mais informações sobre como criar atribuições de função, consulte [conceder acesso de usuário para um servidor de relatório &#40; Gerenciador de relatórios &#41; ](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
   
  Depois que você criar as atribuições de função, os usuários terão permissão para fazer o seguinte:  
   
@@ -171,9 +171,9 @@ ms.lasthandoff: 06/22/2017
  [Autenticação com o servidor de relatório](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Iniciar o Construtor de Relatórios](../../reporting-services/report-builder/start-report-builder.md)   
- [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Conectar-se a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Propriedades do sistema do servidor de relatório](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
+ [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Conectar a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Propriedades de sistema do servidor de relatório](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   
 

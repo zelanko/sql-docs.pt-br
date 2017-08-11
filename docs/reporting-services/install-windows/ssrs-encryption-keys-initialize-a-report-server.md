@@ -21,11 +21,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cca3d552a0e1ffb7fdfc09e98a334f8f4d196d84
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Chaves de criptografia do SSRS - inicializar um servidor de relatório
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 5.  O serviço Servidor de Relatório conecta-se novamente ao banco de dados do servidor de relatório e adiciona a chave simétrica aos valores do identificador de instalação e da chave pública que foram armazenados na etapa 3. Antes de armazená-la, o serviço Servidor de Relatório usa sua chave pública para criptografar a chave simétrica. Quando a chave simétrica for armazenada, o servidor de relatório será considerado inicializado e disponível para uso.  
   
 ## <a name="initializing-a-report-server-for-scale-out-deployment"></a>Inicializando um servidor de relatório para implantação de expansão  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte a um modelo de implantação de expansão que compartilha um único banco de dados de servidor de relatório entre várias instâncias do servidor de relatório. Para associar-se a uma implantação de expansão, um servidor de relatório deve criar e armazenar sua cópia da chave simétrica no banco de dados compartilhado. Embora uma única chave simétrica seja usada pelos servidores que usam o banco de dados, cada servidor de relatório tem sua cópia da chave. Cada cópia varia no fato de que ela é criptografada exclusivamente usando a chave pública que possui.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]oferece suporte a um modelo de implantação de expansão que compartilha um banco de dados do servidor de relatório único entre várias instâncias do servidor de relatório. Para associar-se a uma implantação de expansão, um servidor de relatório deve criar e armazenar sua cópia da chave simétrica no banco de dados compartilhado. Embora uma única chave simétrica seja usada pelos servidores que usam o banco de dados, cada servidor de relatório tem sua cópia da chave. Cada cópia varia no fato de que ela é criptografada exclusivamente usando a chave pública que possui.  
   
  O primeiro conjunto de etapas para a inicialização de um servidor de relatório para implantação de expansão é idêntico às três primeiras etapas que descrevem a inicialização para uma combinação de servidor único e banco de dados.  
   

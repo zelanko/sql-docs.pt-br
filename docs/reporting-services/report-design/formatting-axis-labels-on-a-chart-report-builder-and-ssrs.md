@@ -32,11 +32,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d3bb6bc91b9b96830074bac3de28fc6a5f6b0143
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formatando rótulos dos eixos de um gráfico (Construtor de Relatórios e SSRS)
@@ -105,16 +105,16 @@ ms.lasthandoff: 06/22/2017
  O gráfico calcula aproximadamente cinco intervalos de rótulos do eixo independentemente do tamanho do gráfico. Em gráficos mais largos ou mais altos, se você mostrar apenas cinco rótulos em um eixo, grandes lacunas poderão ser exibidas entre cada rótulo. Isso dificulta a identificação do valor de cada ponto de dados em relação ao eixo. Para evitar esse comportamento em gráficos mais largos ou mais altos, defina um intervalo de eixo variável. O gráfico calcula o número ideal de rótulos que podem ser exibidos no eixo baseados na largura ou altura do gráfico de acordo com o eixo correspondente. Para obter mais informações, consulte [Especificar um intervalo do eixo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="sorting-axis-values"></a>Classificando valores do eixo  
- Categorias são exibidas ao longo do eixo x para que sejam exibidas no conjunto de resultados. É possível alterar a ordem do grupo adicionando um comando SORT à consulta ou classificando o conjunto de dados usando uma expressão. As regiões de dados do gráfico são classificadas da mesma maneira que todas as outras regiões de dados. Para obter mais informações sobre como classificar dados, consulte [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
+ Categorias são exibidas ao longo do eixo x para que sejam exibidas no conjunto de resultados. É possível alterar a ordem do grupo adicionando um comando SORT à consulta ou classificando o conjunto de dados usando uma expressão. As regiões de dados do gráfico são classificadas da mesma maneira que todas as outras regiões de dados. Para obter mais informações sobre como classificar dados, consulte [classificar dados em uma região de dados &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-scalar-values-on-the-category-axis"></a>Especificando valores escalares no eixo de categoria  
  Por padrão, o gráfico exibe apenas os rótulos do eixo para pontos de dados no conjunto de dados que contêm valores válidos. Por exemplo, se você tiver os valores de 1, 2 e 6 no eixo de categoria, o gráfico mostrará apenas as categorias 1, 2 e 6. Para manter a escala de valores de categoria, você pode especificar que o gráfico use um eixo escalar. Neste cenário, o gráfico mostra os rótulos de 1 a 6 no eixo x, embora o conjunto de dados não contenha valores de 3 a 5.  
   
  Existem duas maneiras de definir um eixo escalar:  
   
--   Selecione a opção **Eixo escalar** na caixa de diálogo **Propriedades do Eixo** . Isso adiciona valores numéricos ou de data/hora ao eixo onde não existir nenhum valor de agrupamento de dados. Para obter mais informações, consulte [Caixa de diálogo Propriedades do Eixo, Opções do Eixo &#40;Construtor de Relatórios e SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
+-   Selecione a opção **Eixo escalar** na caixa de diálogo **Propriedades do Eixo** . Isso adiciona valores numéricos ou de data/hora ao eixo onde não existir nenhum valor de agrupamento de dados. Para obter mais informações, consulte [caixa de diálogo de propriedades do eixo, opções de eixo &#40; Construtor de relatórios e SSRS &#41; ](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
   
--   Selecione um campo ou digite uma expressão para a opção **Campo de categoria** na caixa de diálogo **Propriedades da Série**. O gráfico adicionará intervalos do eixo para todos os valores no campo de categoria especificado.  
+-   Selecione um campo ou digite uma expressão para a opção **Campo de categoria** na caixa de diálogo **Propriedades da Série** . O gráfico adicionará intervalos do eixo para todos os valores no campo de categoria especificado.  
   
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>Adicionando ou removendo margens laterais do eixo de categoria  
  Nos tipos de gráfico de Barras, Colunas Dispersão, o gráfico adiciona automaticamente margens laterais nas extremidades do eixo x. Não é possível alterar o tamanho da margem. Em todos os outros tipos de gráfico, as margens laterais não são adicionadas. Para obter mais informações, consulte [Adicionar ou remover margens de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
@@ -132,7 +132,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Formatando pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
+ [Gráficos de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Formatando pontos de dados em um gráfico de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   

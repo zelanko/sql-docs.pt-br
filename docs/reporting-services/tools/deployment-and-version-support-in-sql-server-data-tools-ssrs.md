@@ -15,11 +15,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29df783121de48e39d824b9b9e9666d764717ebc
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>Deployment and Version Support in SQL Server Data Tools (SSRS)
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   OutputPath é uma propriedade de build que identifica o caminho de pastas para armazenar a definição de relatório usada na verificação de build, na implantação e na visualização de relatórios.  
   
--   ErrorLevel é uma propriedade de build que identifica a severidade dos problemas de build relatados como erros. Problemas com níveis de severidade menor ou igual ao valor ErrorLevel são relatados como erros; caso contrário, os problemas são relatados como avisos. Para obter mais informações, consulte a seção “Validação de relatórios e níveis de erro” em [Criar relatórios com o Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+-   ErrorLevel é uma propriedade de build que identifica a severidade dos problemas de build relatados como erros. Problemas com níveis de severidade menor ou igual ao valor ErrorLevel são relatados como erros; caso contrário, os problemas são relatados como avisos. Para obter mais informações, consulte a seção "Validação de relatórios e níveis de erro" [criar relatórios com o Designer de relatórios &#40; SSRS &#41; ](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 -   TargetServerVersion é uma propriedade de implantação que identifica a versão esperada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que está instalado no servidor de relatório de destino especificado na propriedade TargetServerURL.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_SupportedVersions"></a> Versões com suporte  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o ambiente de desenvolvimento de 32 bits para projetos do Servidor de Relatório, não foi projetado para execução em computadores baseados em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]e não é instalado em servidores baseados em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Porém, o suporte para o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está disponível em computadores baseados em x64.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o ambiente de desenvolvimento de 32 bits para projetos do servidor de relatório não foi projetado para ser executado no [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-computadores com base em e não está instalado no [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-com base em servidores. Porém, o suporte para o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está disponível em computadores baseados em x64.  
   
  A tabela a seguir descreve as versões com suporte para criação e publicação de relatórios em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   

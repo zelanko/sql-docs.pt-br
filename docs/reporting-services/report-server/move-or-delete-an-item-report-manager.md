@@ -18,11 +18,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ede41000be34b24f362518e8963cee97db3e4a66
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Mover ou excluir um item (Gerenciador de Relatórios)
@@ -35,11 +35,11 @@ ms.lasthandoff: 06/22/2017
   
 |Ícone|Item móvel|  
 |----------|-------------------|  
-|![Ícone de relatório](../../reporting-services/report-server/media/hlp-16doc.gif "ícone de relatório")|Relatório|  
-|![Ícone de relatório vinculado](../../reporting-services/report-server/media/hlp-16linked.gif "ícone de relatório vinculado")|Relatório vinculado|  
-|![Ícone de pasta](../../reporting-services/report-server/media/hlp-16folder.gif "ícone de pasta")|Pasta|  
-|![ícone de recurso genérico](../../reporting-services/report-server/media/hlp-16file.gif "ícone de recurso genérico")|Recurso genérico|  
-|![Ícone de fonte de dados compartilhado](../../reporting-services/report-data/media/hlp-16datasource.png "ícone de fonte de dados compartilhado")|Fonte de dados compartilhada|  
+|![Ícone Relatório](../../reporting-services/report-server/media/hlp-16doc.gif "Ícone Relatório")|Relatório|  
+|![Ícone Relatório vinculado](../../reporting-services/report-server/media/hlp-16linked.gif "Ícone Relatório vinculado")|Relatório vinculado|  
+|![Ícone Pasta](../../reporting-services/report-server/media/hlp-16folder.gif "Ícone Pasta")|Pasta|  
+|![Ícone Recurso genérico](../../reporting-services/report-server/media/hlp-16file.gif "Ícone Recurso genérico")|Recurso genérico|  
+|![Ícone Fonte de dados compartilhada](../../reporting-services/report-data/media/hlp-16datasource.png "Ícone Fonte de dados compartilhada")|Fonte de dados compartilhada|  
 ||Conjunto de dados compartilhado|  
   
  Nem todos os itens com os quais você trabalha podem ser movidos. Não é possível mover itens associados a um relatório, como assinaturas ou histórico de relatório. Esses itens são movidos com os seus relatórios associados. De maneira semelhante, não é possível mover itens, como agendas compartilhadas, que existem fora da hierarquia de pasta. Não é possível mover itens sem a devida permissão. A permissão para mover um item é concedida quando as seguintes tarefas são selecionadas na atribuição de função para o item em questão: "Gerenciar relatórios," "Gerenciar modelos", "Gerenciar pastas" e "Gerenciar fontes de dados".  
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Página conteúdo &#40;Gerenciador de relatórios&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Localizando, exibindo e Gerenciando relatórios &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

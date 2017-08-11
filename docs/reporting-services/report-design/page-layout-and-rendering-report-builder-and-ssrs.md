@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d688ed124a419017e97d405d7f5bd80e6e3bf530
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Layout de página e renderização (Construtor de Relatórios e SSRS)
@@ -92,7 +92,7 @@ Um relatório também pode conter sub-relatórios.
   
  Ao usar uma extensão de renderização de **página flexível** , como a extensão de renderização HTML, talvez você queira saber qual a aparência do relatório quando impresso e também como ele será renderizado usando um renderizador de página de não flexível como PDF. Durante a criação ou a atualização de um relatório você pode visualizá-lo e exportá-lo no Construtor de Relatórios e no Designer de Relatórios.  
   
- Os renderizadores de **página impressa** têm o maior impacto no layout do relatório e o tamanho de página física. Para saber mais, consulte [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Os renderizadores de**página impressa** têm o maior impacto no layout do relatório e o tamanho de página física. Para saber mais, consulte [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
    
 ##  <a name="HowTo"></a> Tópicos de instruções  
  Esta seção lista procedimentos que mostram a você, passo a passo, como trabalhar com a paginação em relatórios.  

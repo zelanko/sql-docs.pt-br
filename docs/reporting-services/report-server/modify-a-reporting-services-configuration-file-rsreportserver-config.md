@@ -15,15 +15,15 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f5862f4faec4784aac678d578c155ac5992a55f6
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modificar um arquivo de configuração do Reporting Services (RSreportserver.config)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena configurações de aplicativo em um conjunto de arquivos de configuração. A instalação cria os arquivos de configuração para cada instância instalada do servidor de relatório. Em cada arquivo, os valores são definidos durante a instalação ou quando você usa ferramentas e aplicativos para configurar um servidor para operação. Em alguns casos, é necessário modificar um arquivo diretamente para adicionar ou definir configurações avançadas. As configurações são especificadas como elementos ou atributos XML. Se você entender de XML e arquivos de configuração, use um editor de texto ou de código para modificar configurações definidas pelo usuário.  
+  O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena configurações de aplicativo em um conjunto de arquivos de configuração. A instalação cria os arquivos de configuração para cada instância instalada do servidor de relatório. Em cada arquivo, os valores são definidos durante a instalação ou quando você usa ferramentas e aplicativos para configurar um servidor para operação. Em alguns casos, é necessário modificar um arquivo diretamente para adicionar ou definir configurações avançadas. As configurações são especificadas como elementos ou atributos XML. Se você entender de XML e arquivos de configuração, use um editor de texto ou de código para modificar configurações definidas pelo usuário.  
   
  Algumas configurações podem ser definidas somente com uma ferramenta. As configurações que contêm valores criptografados devem ser modificadas com a ferramenta Configuração do Reporting Services, o programa de Instalação ou o utilitário de linha de comando **rsconfig** . Você deve ser um membro do grupo Administradores local para executar estas ferramentas.  
   
@@ -98,9 +98,9 @@ ms.lasthandoff: 06/22/2017
   
     -   [Autenticação com o servidor de relatório](../../reporting-services/security/authentication-with-the-report-server.md)  
   
-    -   [Configurar o Portal da Web para transmitir Cookies de autenticação personalizados](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
+    -   [Configurar o portal da Web para passar cookies de autenticação personalizados](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
-    -   [Personalizar parâmetros de extensão de renderização em RSReportServer.config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+    -   [Personalizar parâmetros de extensão de renderização em rsreportserver. config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
 5.  Salve o arquivo.  
   

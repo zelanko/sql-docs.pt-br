@@ -20,11 +20,11 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7b64cfa425784e7e495b510f960a50109175537b
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Definindo valores de tempo limite para processamento de relatório e conjuntos de dados compartilhados (SSRS)
@@ -60,9 +60,9 @@ ms.lasthandoff: 06/22/2017
 >  Você pode definira configuração **RunningRequestsDbCycle** no arquivo RSReportServer.config para alterar a frequência de avaliação dos trabalhos em execução.  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir opções de processamento &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Definir opções de processamento &#40; O Reporting Services no SharePoint integrado modo &#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Reporting Services Report Server &#40; Modo nativo &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Gerenciar um processo em execução](../../reporting-services/subscriptions/manage-a-running-process.md)   
+ [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

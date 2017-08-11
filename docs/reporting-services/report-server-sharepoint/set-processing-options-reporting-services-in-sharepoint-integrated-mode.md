@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8f2a5c52f4fa9b04026490c1e66243bf0d660c13
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Definir opções de processamento (Reporting Services no modo integrado do SharePoint)
@@ -35,13 +35,13 @@ ms.lasthandoff: 06/22/2017
 -   Um histórico de relatórios é uma coleção de cópias de um relatório executadas anteriormente. É possível usar o histórico de relatórios para manter ao longo do tempo um registro de um relatório. Um histórico de relatórios não se destina a relatórios que contenham dados confidenciais ou pessoais. Por este motivo, um histórico de relatórios pode incluir somente os relatórios que consultem uma fonte de dados utilizando um conjunto único de credenciais (armazenadas ou usadas para a execução de um relatório de forma autônoma) disponível para todos os usuários que executem um relatório.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com o SharePoint utiliza recursos de gerenciamento de inserção e extração de conteúdo do SharePoint para salvar atualizações em tipos de conteúdo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . isso inclui a criação de instantâneos de relatórios. Portanto, se você ativou o controle de versões em uma biblioteca de documentos, verá a versão de relatório atualizada quando um novo instantâneo de histórico de relatórios for criado. Esse é um efeito colateral de atualizar instantâneos. Quando um instantâneo é atualizado, ele faz com que a propriedade LastExecution do relatório se altere, e isso causa uma alteração na versão do relatório.  
+    >  A Integração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com o SharePoint utiliza recursos de gerenciamento de inserção e extração de conteúdo do SharePoint para salvar atualizações em tipos de conteúdo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. isso inclui a criação de instantâneos de relatórios. Portanto, se você ativou o controle de versões em uma biblioteca de documentos, verá a versão de relatório atualizada quando um novo instantâneo de histórico de relatórios for criado. Esse é um efeito colateral de atualizar instantâneos. Quando um instantâneo é atualizado, ele faz com que a propriedade LastExecution do relatório se altere, e isso causa uma alteração na versão do relatório.  
   
 -   Você pode especificar valores de tempo limite para definir limites para o uso dos recursos do sistema.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo do SharePoint|  
   
  **Neste tópico:**  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Definir propriedades de processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Armazenando relatórios em cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Definindo valores de tempo limite para processamento de relatórios e conjuntos de dados compartilhados &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Cache de relatórios &#40; SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Definindo valores de tempo limite para o relatório e processamento de conjunto de dados compartilhado &#40; SSRS &#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 11e5762b794060577704a31cf59836839b464d76
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo de conexão Power Pivot (SSRS)
@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
  Ao contrário da conexão a um cubo do Analysis Services, um modelo do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] não tem nenhuma hierarquia. Para fornecer funcionalidade semelhante a segmentações de dados na pasta de trabalho, você deve criar parâmetros em cascata no relatório. Para obter mais informações, consulte [Adicionar parâmetros em cascata a um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
   
- Em alguns casos, pode ser necessário ajustar expressões para acomodar os valores de dados subjacentes do modelo do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Pode ser necessário modificar expressões para converter dados no tipo de dados correto ou adicionar ou remover uma função de agregação. Por exemplo, para converter o tipo de dados Cadeia de caracteres em Inteiro, use `=CInt`. Verifique sempre se o relatório exibe os valores esperados dos dados no modelo do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] antes de publicá-lo.  
+ Em alguns casos, pode ser necessário ajustar expressões para acomodar os valores de dados subjacentes do modelo do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pode ser necessário modificar expressões para converter dados no tipo de dados correto ou adicionar ou remover uma função de agregação. Por exemplo, para converter o tipo de dados Cadeia de caracteres em Inteiro, use `=CInt`. Verifique sempre se o relatório exibe os valores esperados dos dados no modelo do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] antes de publicá-lo.  
   
  Imagens de visualização de um relatório em uma Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] serão geradas apenas se as seguintes condições forem atendidas:  
   
@@ -69,6 +69,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Interface do usuário do Designer de Consultas MDX do Analysis Services &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
- [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [Expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

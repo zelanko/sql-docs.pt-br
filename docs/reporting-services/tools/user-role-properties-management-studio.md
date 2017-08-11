@@ -17,11 +17,11 @@ caps.latest.revision: 27
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 76bd80e1fc470d9cdb998d23834d0a3473d411fe
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="user-role-properties-management-studio"></a>Propriedades de Função do Usuário (Management Studio)
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/03/2017
   
  Uma definição de função de nível de item é uma coleção nomeada de tarefas que os usuários executam referentes a um item específico (ou seja, uma pasta, um relatório, recurso ou fonte de dados compartilhada). Definições de função são atribuídas a um usuário ou grupo para criar uma atribuição de função no Gerenciador de Relatórios. As tarefas na definição de função descrevem o que o usuário ou grupo pode fazer.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui várias definições predefinidas de função de nível de item com as que você pode trabalhar. Você pode modificar as definições de função alterando a lista de tarefas de cada um. A edição de uma definição de função afeta todas as atribuições de função que incluem a definição da função.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]inclui um número de definições de função de nível de item predefinidas que você pode trabalhar com. Você pode modificar as definições de função alterando a lista de tarefas de cada um. A edição de uma definição de função afeta todas as atribuições de função que incluem a definição da função.  
   
 > [!NOTE]  
 >  Atribuições de função de usuário só são usadas em um servidor de relatório que executa em modo nativo. Se o servidor de relatório estiver configurado para integração do SharePoint, essa página exibirá informações somente leitura sobre as funções e o nível de permissão definidos no site do SharePoint.  
@@ -48,9 +48,9 @@ ms.lasthandoff: 08/03/2017
  Fornece informações sobre cada tarefa. Você não pode modificar descrições de tarefa.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas em nível de item](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)   
+ [Tarefas de nível de item](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)   
  [Definições de função](../../reporting-services/security/role-definitions.md)   
- [Servidor de Relatório na ajuda F1 do Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Servidor de relatório na Ajuda de F1 do Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Tarefas e permissões](../../reporting-services/security/tasks-and-permissions.md)   
  [Funções predefinidas](../../reporting-services/security/role-definitions-predefined-roles.md)  
   

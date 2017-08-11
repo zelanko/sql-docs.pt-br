@@ -24,11 +24,11 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 003d81f131eeeadbf672e63f0c949e4a1a6df2ad
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-definition-language-ssrs"></a>Linguagem RDL (SSRS)
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece várias ferramentas para compilar arquivos RDL. Para obter mais informações, consulte [Ferramentas do Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
- Uma das maneiras mais fáceis de gerar RDL de um aplicativo é usar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] classes do <xref:System.Xml> namespace e <xref:System.Linq> namespace. Uma classe específica, a classe **XmlTextWriter** , pode ser usada para gravar RDL. Com o **XmlTextWriter**, você pode gerar uma definição de relatório completa do começo ao fim em qualquer aplicativo do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Os desenvolvedores também podem estender a linguagem RDL adicionando itens de relatório personalizados com propriedades personalizadas. Para obter mais informações sobre o **XmlTextWriter** classe e o <xref:System.Xml> namespace, consulte o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] guia do desenvolvedor. Para obter mais informações sobre a LINQ (Language-Integrated Query, consulta integrada à linguagem), pesquise "LINQ para XML" no MSDN.  
+ Uma das maneiras mais fáceis de gerar a linguagem RDL com um aplicativo é usar as classes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] do namespace <xref:System.Xml> e do namespace <xref:System.Linq> . Uma classe específica, a classe **XmlTextWriter** , pode ser usada para gravar RDL. Com o **XmlTextWriter**, você pode gerar uma definição de relatório completa do começo ao fim em qualquer aplicativo do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Os desenvolvedores também podem estender a linguagem RDL adicionando itens de relatório personalizados com propriedades personalizadas. Para obter mais informações sobre a classe **XmlTextWriter** e o namespace <xref:System.Xml> , consulte o Guia do Desenvolvedor do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para obter mais informações sobre a LINQ (Language-Integrated Query, consulta integrada à linguagem), pesquise "LINQ para XML" no MSDN.  
   
  A extensão de arquivo padrão para arquivos de definição de relatório é .rdl. Você também pode desenvolver arquivos de definição de relatório de cliente que têm as extensões .rdlc. O tipo de MIME para ambas as extensões é texto/xml. Para obter mais informações sobre feeds de dados de relatórios do SQL Server Reporting Services, consulte [Relatórios do Reporting Services &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md).  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Localizar a versão do esquema de definição de relatório &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
- [Usando assemblies personalizados com relatórios](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Itens de Relatório Personalizados](../../reporting-services/custom-report-items/custom-report-items.md)  
+ [Usando Assemblies personalizados com relatórios](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [Itens de relatório personalizados](../../reporting-services/custom-report-items/custom-report-items.md)  
   
   

@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.odbcconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], ODBC
 - ODBC connection manager
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a136e71727d1a0b729f7014448dd97d81a7af89d
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: f3e331efe9c6a297ef8d9dc342fb07c83ddafc03
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="odbc-connection-manager"></a>gerenciador de conexões ODBC
@@ -50,6 +52,23 @@ ms.lasthandoff: 08/03/2017
   
  Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
+## <a name="odbc-connection-manager-ui-reference"></a>Referência da interface do usuário do Gerenciador de Conexões ODBC
+  Use a caixa de diálogo **Configurar Gerenciador de Conexões ODBC** para adicionar uma conexão com uma fonte de dados ODBC.  
+  
+ Para saber mais sobre o gerenciador de conexões ODBC, consulte [Gerenciador de conexões ODBC](../../integration-services/connection-manager/odbc-connection-manager.md).  
+  
+### <a name="options"></a>Opções  
+ **Conexões de dados**  
+ Selecione um gerenciador de conexões ODBC existente na lista.  
+  
+ **Propriedades de conexão de dados**  
+ Exiba propriedades e valores para o gerenciador de conexões ODBC selecionado.  
+  
+ **Nova**  
+ Crie um gerenciador de conexões ODBC utilizando a caixa de diálogo **Gerenciador de Conexões** . Essa caixa de diálogo permite que você crie uma nova fonte de dados ODBC, caso necessário.  
+  
+ **Delete (excluir)**  
+ Selecione uma conexão e exclua-a usando o botão **Excluir** .  
 ## <a name="see-also"></a>Consulte também  
  [Conexões do SSIS &#40;Integration Services&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

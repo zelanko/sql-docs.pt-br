@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.smoconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], SMO
 - SMO connection manager
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 15ed4177b267642f5b6ef7186b5e03e74fa39767
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: d1f03b27dd5dca9e9a2940abf3731a2f5cefe0af
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="smo-connection-manager"></a>gerenciador de conexões SMO
@@ -42,6 +44,33 @@ ms.lasthandoff: 08/03/2017
  Para obter mais informações sobre as propriedades que podem ser definidas no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consulte [Editor do Gerenciador de Conexões do SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md).  
   
  Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+  
+## <a name="smo-connection-manager-editor"></a>Editor do Gerenciador de Conexões SMO
+  Use o **Editor do Gerenciador de Conexões SMO** para configurar uma conexão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uso das várias tarefas que transferem objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  
+ Para saber mais sobre o gerenciador de conexões SMO, consulte [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md).  
+  
+### <a name="options"></a>Opções  
+ **Nome do servidor**  
+ Digite o nome da instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou selecione o nome do servidor da lista.  
+  
+ **Atualizar**  
+ Atualize a lista de instâncias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponíveis que podem ser detectadas na rede.  
+  
+ **Usar Autenticação do Windows**  
+ Use a Autenticação do Windows para conectar-se à instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selecionada.  
+  
+ **Usar Autenticação do SQL Server**  
+ Use a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectar-se à instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selecionada.  
+  
+ **Nome de usuário**  
+ Se você selecionou a autenticação de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , digite o nome de usuário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  
+ **Senha**  
+ Se você selecionou a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , digite a senha.  
+  
+ **Testar Conexão**  
+ Teste a conexão como foi configurada.  
   
 ## <a name="see-also"></a>Consulte também  
  [Conexões do SSIS &#40;Integration Services&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  

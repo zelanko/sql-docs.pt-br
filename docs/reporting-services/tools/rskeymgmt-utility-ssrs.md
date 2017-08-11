@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitário rskeymgmt (SSRS)
@@ -100,7 +100,7 @@ rskeymgmt {-?}
  Especifica o nome do computador remoto que hospeda a instância do servidor de relatório que está sendo unido à implantação em expansão do servidor de relatório. Use o nome do computador que o identifica em sua rede.  
   
  **-n**  
- Especifica o nome da instância do servidor de relatório em um computador remoto. Esse argumento é opcional se você instalou o servidor de relatório no padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância (o valor padrão para  **-n**  é MSSQLSERVER). Se você instalou o servidor de relatório como uma instância nomeada,  **-n**  é necessário.  
+ Especifica o nome da instância do servidor de relatório em um computador remoto. Esse argumento será opcional se você instalou o servidor de relatório na instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o valor padrão para **-n** é MSSQLSERVER). Se você instalou o servidor de relatório como uma instância nomeada, **-n** será necessário.  
   
  **-u**  *useraccount*  
  Especifica a conta de administrador no computador remoto que você está unindo à implantação em expansão. Se uma conta não for especificada, as credenciais do usuário atual serão usadas.  
@@ -170,7 +170,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>Local do arquivo  
- Rskeymgmt.exe está localizado em  **\<* unidade*>: \Program Files\Microsoft SQL Server\110\Tools\Binn * * ou em * * \<* unidade*>: \Program arquivos (x86) \Microsoft SQL Server\110\Tools\Binn**. Você pode executar o utilitário de qualquer pasta em seu sistema de arquivos.  
+ Rskeymgmt.exe está localizado em  **\<* unidade*>: \Program Files\Microsoft SQL Server\110\Tools\Binn * * ou em  **\<* unidade*>: \Program arquivos (x86) \Microsoft SQL Server\110\Tools\Binn**. Você pode executar o utilitário de qualquer pasta em seu sistema de arquivos.  
   
 ## <a name="remarks"></a>Comentários  
  Um servidor de relatório criptografa credenciais armazenadas e informações de conexão. Uma chave pública e uma chave simétrica são usadas para criptografar dados. Um banco de dados do servidor de relatório deve ter chaves válidas para que o servidor de relatório seja executado. Você pode usar **rskeymgmt** para fazer backup, excluir ou restaurar as chaves. Se as chaves não puderem ser restauradas, essa ferramenta fornecerá um modo de excluir conteúdo criptografado que não pode mais ser usado.  
@@ -181,8 +181,8 @@ rskeymgmt -r <installationID>
   
 ## <a name="see-also"></a>Consulte também  
  [Implantação escalável: modo Nativo do Reporting Services &#40;Configuration Manager&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
- [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Utilitários de prompt de comando do servidor de relatório &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Reporting Services Report Server &#40; Modo nativo &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Utilitários de Prompt de comando do servidor de relatório &#40; SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [Configurar e gerenciar chaves de criptografia &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

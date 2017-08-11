@@ -17,11 +17,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 70ffdb98f998c46946452a2753b63f9f4bd95dfa
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visualizador de HTML e a barra de ferramentas de relatório
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="report-toolbar"></a>Barra de ferramentas de relatório  
  A barra de ferramentas de relatório fornece as funcionalidades de navegação na página, zoom, atualização, pesquisa, exportação, impressão e feed de dados para relatórios renderizados na extensão de renderização HTML.  
   
- A funcionalidade de impressão é opcional. Quando disponível, um ícone Impressora é exibido na barra de ferramentas de relatório. No primeiro uso, quando você clicar no ícone Impressora, um controle ActiveX será baixado e deverá ser instalado. Quando o controle estiver instalado e você clicar no ícone Impressora, a caixa de diálogo Imprimir será aberta para a seleção das impressoras configuradas para seu computador. A disponibilidade de impressão é determinada pelas configurações do servidor e navegador. Para obter mais informações, consulte [Imprimir relatórios em um navegador com o controle de impressão &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) e [Habilitar e desabilitar a impressão do lado do cliente para o Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ A funcionalidade de impressão é opcional. Quando disponível, um ícone Impressora é exibido na barra de ferramentas de relatório. No primeiro uso, quando você clicar no ícone Impressora, um controle ActiveX será baixado e deverá ser instalado. Quando o controle estiver instalado e você clicar no ícone Impressora, a caixa de diálogo Imprimir será aberta para a seleção das impressoras configuradas para seu computador. A disponibilidade de impressão é determinada pelas configurações do servidor e navegador. Para obter mais informações, consulte [imprimir relatórios em um navegador com o controle de impressão &#40; Construtor de relatórios e SSRS &#41; ](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) e [habilitar e desabilitar a impressão do lado do cliente para o Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  A barra de ferramentas de relatório é semelhante à ilustração a seguir. A barra de ferramentas de relatório exibida pode ser diferente da ilustração com base nos recursos do relatório ou nas opções de renderização disponíveis.  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 ||**Mostrar e ocultar ícones**|Mostrar ou ocultar campos de valor de parâmetro e o botão **Exibir Relatório** em um relatório que inclui parâmetros.|  
 |![Botão Atualizar do navegador na barra de ferramentas relatório](../reporting-services/media/htmlviewer-refresh.GIF "botão Atualizar do navegador na barra de ferramentas de relatório")|**Ícone de atualização de relatório**|Atualizar o relatório. Os dados de relatórios dinâmicos serão atualizados. Os relatórios armazenados em cache serão recarregados de onde estão armazenados.|  
 |![htmlviewer_datafeed](../reporting-services/media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**Ícone de feed de dados**|Feeds de dados gerados de relatórios.|  
-|![ssrs_powerbi_button_reportwviewer](../reporting-services/media/ssrs-powerbi-button-reportwviewer.png "ssrs_powerbi_button_reportwviewer")|**Fixar ao Painel do Power BI**|Fixar itens de relatório de suporte a um [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Se o botão não está visível, o servidor de relatório não foi integrado ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  Para obter mais informações, consulte [Integração do Servidor de Relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).|  
+|![ssrs_powerbi_button_reportwviewer](../reporting-services/media/ssrs-powerbi-button-reportwviewer.png "ssrs_powerbi_button_reportwviewer")|**Fixar ao Painel do Power BI**|Fixar itens de relatório de suporte a um [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Se o botão não está visível, o servidor de relatório não foi integrado ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  Para obter mais informações, consulte [Integração do servidor de relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).|  
   
 ### <a name="about-export-formats"></a>Sobre formatos de exportação  
  Na barra de ferramentas de relatório, você pode optar por exibir seu relatório em vários formatos. Os formatos disponíveis são determinados pelas extensões de renderização instaladas no servidor de relatório. Quando você seleciona outro formato, uma segunda janela do navegador é usada para exibir o relatório com um visualizador associado ao formato de exportação selecionado. Se um visualizador não estiver disponível para o formato selecionado, você poderá selecionar um formato diferente.  
@@ -79,7 +79,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Localizando, exibindo e Gerenciando relatórios &#40; Construtor de relatórios e SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

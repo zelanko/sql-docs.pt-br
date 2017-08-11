@@ -21,11 +21,11 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ce952f1d25529948bbcc3dbae5f1707af9683b11
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Fixar itens do Reporting Services nos painéis do Power BI
@@ -108,7 +108,7 @@ No painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , o item de rela
   
 ##  <a name="bkmk-troubleshoot"></a> Solucionar problemas  
   
--   **O botão [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] não está visível na barra de ferramentas do visualizador de relatórios:** isso indica que o servidor de relatório não foi integrado ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Para obter mais informações, consulte [Integração do Servidor de Relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+-   **O botão [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] não está visível na barra de ferramentas do visualizador de relatórios:** isso indica que o servidor de relatório não foi integrado ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Para obter mais informações, consulte [Integração do servidor de relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
 - **Não é possível fixar**: ao tentar fixar um item, você verá a seguinte mensagem de erro: Consulte a seção [Itens que podem ser fixados](#bkmk_supported_items).  
   

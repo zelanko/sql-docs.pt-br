@@ -15,11 +15,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Coleção de campos de conjuntos de dados (Construtor de Relatórios e SSRS)
@@ -103,7 +103,7 @@ ms.lasthandoff: 06/22/2017
     |**DateTimeTZ**|**DateTimeOffset**|Data e hora com deslocamento de fuso horário|  
     |**DateTime2**|**DateTime**|Data e hora com milissegundos fracionários|  
   
- Para obter mais informações sobre os tipos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Tipos de dados (Mecanismo de Banco de Dados)](http://go.microsoft.com/fwlink/?linkid=98362) e [Tipos de dados e funções de data e hora (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
+ Para obter mais informações sobre os tipos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [Tipos de dados (Mecanismo de Banco de Dados)](http://go.microsoft.com/fwlink/?linkid=98362) e [Tipos de dados e funções de data e hora (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
   
  Para obter mais informações sobre como incluir referências a um campo de conjunto de dados de uma expressão, consulte [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Caixa de diálogo Propriedades do Conjunto de Dados, Campos &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
- [Partes de relatório e conjuntos de dados no Construtor de Relatórios](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Partes de relatório e conjuntos de dados no construtor de relatórios](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Relatório inserido conjuntos de dados e conjuntos de dados compartilhados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

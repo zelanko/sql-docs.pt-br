@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0185d35444cdac141cb5d9626d85618b7eaf3358
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Localizando, exibindo e gerenciando relatórios (Construtor de Relatórios e SSRS)
@@ -72,21 +72,21 @@ ms.lasthandoff: 06/22/2017
   
 -   Crie novas pastas no servidor para organizar os relatórios da maneira desejada.  
   
- Algumas dessas tarefas talvez sejam executadas para você pelo administrador do servidor de relatório. Para saber mais sobre as tarefas executadas em um servidor de relatório, consulte [Servidor de Relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+ Algumas dessas tarefas talvez sejam executadas para você pelo administrador do servidor de relatório. Para saber mais sobre as tarefas executadas em um servidor de relatório, consulte [servidor de relatório do Reporting Services &#40; Modo nativo &#41; ](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
  Em geral, o Gerenciador de Relatórios contém pastas, relatórios, fontes de dados e modelos de relatório, bem como a pasta Meus Relatórios. A pasta Meus Relatórios é um espaço de trabalho pessoal que pode ser usado para armazenar e trabalhar com seus relatórios e para exibi-los. Outras pastas do servidor de relatórios são públicas e geralmente exigem que os usuários tenham permissões avançadas para adicionar ou modificar o conteúdo de pasta. Você pode criar pastas em Meus Relatórios para organizar ainda mais seus relatórios. Para obter mais informações, consulte [Usando Meus Relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md).  
   
  O Gerenciador de Relatórios exibe relatórios no Visualizador de HTML do Reporting Services. O Visualizador de HTML fornece uma estrutura para a exibição de relatórios em HTML e inclui uma barra de ferramentas de relatório, uma seção de parâmetro, uma seção de credenciais e um mapa do documento. A barra de ferramentas de relatório fornece as funcionalidades de navegação de página, zoom, atualização, pesquisa, exportação, impressão e feed de dados. A barra de ferramentas do relatório também é exibida em uma janela do navegador na parte superior de um relatório quando você acessa relatórios por uma URL. A funcionalidade de impressão é opcional e deve ser ativada pelo administrador. Quando disponível, um ícone Impressora é exibido na barra de ferramentas de relatório. As ilustrações a seguir mostram a barra de ferramentas de relatório em uma janela do Gerenciador de Relatórios e um close-up dos recursos da barra de ferramentas de relatório.  
   
- ![Barra de ferramentas de relatório no Gerenciador de relatórios](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "Report toolbar in Report Manager")  
+ ![Barra de ferramentas de relatório no Gerenciador de relatórios](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "barra de ferramentas de relatório no Gerenciador de relatórios")  
 Janela do Gerenciador de Relatórios  
   
- ![Barra de ferramentas do relatório](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
+ ![Barra de ferramentas relatório](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "barra de ferramentas relatório")  
 Barra de ferramentas do relatório  
   
- Após a execução de um relatório, você pode exportá-lo para outro formato, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ou PDF. Também é possível exportar o relatório usando uma extensão de renderização de dados, como CSV, e depois usar o arquivo de dados CSV como entrada para outro aplicativo. Para obter mais informações sobre como exportar relatórios, consulte [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) e [Exportar um relatório como outro tipo de arquivo &#40;Construtor de Relatórios e SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
+ Após a execução de um relatório, você pode exportá-lo para outro formato, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ou PDF. Também é possível exportar o relatório usando uma extensão de renderização de dados, como CSV, e depois usar o arquivo de dados CSV como entrada para outro aplicativo. Para obter mais informações sobre como exportar relatórios, consulte [exportar relatórios &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) e [exportar um relatório como outro tipo de arquivo &#40; Construtor de relatórios e SSRS &#41; ](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
   
- A maneira mais fácil de selecionar e executar um relatório é abrir o Gerenciador de Relatórios e procurar ou navegar até o relatório a ser exibido. Para obter instruções passo a passo sobre como abrir relatórios, consulte [Abrir e fechar um relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
+ A maneira mais fácil de selecionar e executar um relatório é abrir o Gerenciador de Relatórios e procurar ou navegar até o relatório a ser exibido. Para obter instruções passo a passo sobre como abrir relatórios, consulte [abrir e fechar um relatório &#40; Gerenciador de relatórios &#41; ](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
  Depois que executar um relatório, você poderá atualizá-lo para visualizar novos dados.  
   
@@ -107,7 +107,7 @@ Barra de ferramentas do relatório
   
  Para acessar as páginas do aplicativo, selecione ações específicas para itens a partir de um menu suspenso em um relatório ou outro item de servidor de relatórios que você adicionou anteriormente a uma biblioteca do SharePoint. Dependendo do item e suas permissões, você poderá também criar relatórios no Construtor de Relatórios, gerar modelos e definir a segurança de item de modelo.  
   
- Para obter mais informações sobre a tecnologia do SharePoint e do Reporting Services, consulte [Configuração e administração de um servidor de relatórios &#40;Modo do SharePoint do Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) nos [Manuais Online](http://go.microsoft.com/fwlink/?LinkId=154888) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em msdn.microsoft.com.  
+ Para obter mais informações sobre a tecnologia do Reporting Services e do SharePoint, consulte [configuração e administração de um servidor de relatório &#40; Reporting Services no modo do SharePoint &#41; ](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Manuais Online](http://go.microsoft.com/fwlink/?LinkId=154888) em msdn.microsoft.com.  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>Localizando itens de servidor de relatório em um site do SharePoint  
  Antes de poder definir as propriedades, primeiro você deve localizar o item. Os itens do servidor de relatório são sempre armazenados em bibliotecas ou em uma pasta de uma biblioteca.  
@@ -161,6 +161,6 @@ Barra de ferramentas do relatório
 ## <a name="see-also"></a>Consulte também  
  [Salvando relatórios &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [Construtor de Relatórios no SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Instalar e desinstalar o Construtor de Relatórios](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
+ [Instalar e desinstalar o construtor de relatórios](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
   
   

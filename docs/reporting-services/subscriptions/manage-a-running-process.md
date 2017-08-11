@@ -32,11 +32,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Assinaturas padrão de propriedade de usuários individuais.  
   
- O cancelamento de um trabalho só cancela os processos que estão em execução no servidor de relatório. Como o servidor de relatório não gerencia o processamento de dados que ocorre em outros computadores, cancele manualmente os processamentos de consulta que, consequentemente, ficam órfãos em outros sistemas. Especifique valores de tempo limite de consulta para desligar automaticamente consultas que estão demorando muito a serem executadas. Para obter mais informações, consulte [Definindo valores de tempo limite para processamento de relatórios e conjuntos de dados compartilhados &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Para obter mais informações sobre como pausar temporariamente um relatório, consulte [Desabilitar ou pausar o processamento de relatório e de assinatura](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
+ O cancelamento de um trabalho só cancela os processos que estão em execução no servidor de relatório. Como o servidor de relatório não gerencia o processamento de dados que ocorre em outros computadores, cancele manualmente os processamentos de consulta que, consequentemente, ficam órfãos em outros sistemas. Especifique valores de tempo limite de consulta para desligar automaticamente consultas que estão demorando muito a serem executadas. Para obter mais informações, consulte [valores de tempo limite da definição de relatório e processamento de conjunto de dados compartilhados &#40; SSRS &#41; ](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Para obter mais informações sobre como pausar temporariamente um relatório, consulte [Desabilitar ou pausar o processamento de relatório e de assinatura](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
   
 > [!NOTE]  
 >  Em circunstâncias raras, você talvez precise reinicializar o servidor para cancelar um processo. No modo do SharePoint, talvez seja necessário reiniciar o pool de aplicativos hospedando o aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Iniciar e parar o serviço Servidor de Relatório](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).  
@@ -121,14 +121,14 @@ ms.lasthandoff: 06/22/2017
 5.  Ou clique na caixa do seu trabalho e clique em **Excluir** para cancelar o trabalho. Excluir o trabalho não exclui a assinatura.  
   
 ##  <a name="bkmk_programmatically"></a> Gerenciando trabalhos programaticamente  
- Você pode gerenciar trabalhos programaticamente ou usando um script. Para obter mais informações, consulte <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
+ Você pode gerenciar trabalhos programaticamente ou usando um script. Para obter mais informações, consulte <xref:ReportService2010.ReportingService2010.ListJobs%2A>e <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Cancelar Trabalhos do Servidor de Relatório &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
- [Propriedades do Trabalho &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
- [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Propriedades de trabalho &#40; Management Studio &#41;](../../reporting-services/tools/job-properties-management-studio.md)   
+ [Modificar um arquivo de configuração do Reporting Services &#40; Rsreportserver. config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Monitorando o desempenho do servidor de relatório](../../reporting-services/report-server/monitoring-report-server-performance.md)  
+ [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Monitorar o desempenho do servidor de relatório](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

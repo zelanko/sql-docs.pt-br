@@ -163,11 +163,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8e9aa0032e0610b73c28ff50c7c8f616cca6a2fd
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Medidores (Construtor de Relatórios e SSRS)
@@ -197,7 +197,7 @@ ms.lasthandoff: 06/22/2017
   
  Os medidores lineares são retangulares, com orientação vertical ou horizontal, e lembram réguas. Os ponteiros do medidor frequentemente são termômetros, mas podem ser marcadores ou barras. Devido à sua forma, esse tipo de medidor é útil quando para integração a regiões de dados de tabela ou matriz para mostrar dados de progresso.  
   
- Sem ser essas diferenças, os dois tipos de medidores são intercambiáveis. No entanto, se você tiver que usar um medidor simples no relatório, considere utilizar indicador, em vez de um medidor. Para obter mais informações, consulte [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+ Sem ser essas diferenças, os dois tipos de medidores são intercambiáveis. No entanto, se você tiver que usar um medidor simples no relatório, considere utilizar indicador, em vez de um medidor. Para obter mais informações, consulte [indicadores &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
  As ilustrações a seguir mostram medidores radiais e lineares. O medidor radial é redondo e usa o ponteiro de agulha. O medidor linear é horizontal e usa o ponteiro de termômetro.  
   
@@ -305,9 +305,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Filtro, grupo e classificar dados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Parâmetros de relatório e &#40; Construtor de relatórios, Report Designer e &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Gráficos de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tabelas, matrizes e listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

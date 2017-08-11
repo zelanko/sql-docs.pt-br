@@ -23,11 +23,11 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0eceb425b1294026a1c82043800c6aaa2ec83972
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pausar e retomar agendas compartilhadas
@@ -69,8 +69,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Agendas](../../reporting-services/subscriptions/schedules.md)   
- [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [Alterar configurações de fuso horário e relógio em um servidor de relatório](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
+ [Criar, modificar e excluir agendas](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [Alterar as configurações de relógio em um servidor de relatório e fusos horários](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
  [Gerenciar um processo em execução](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.oledbconnection.f1
 helpviewer_keywords:
 - OLE DB connection manager
 - data sources [Integration Services], connections
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 94287024cf1a79384f888406a0c111644d6696fc
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 6a81892e0206775357c7fdf74ef81a7b8c3ae3c7
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ole-db-connection-manager"></a>gerenciador de conexões OLE DB
@@ -65,6 +67,29 @@ ms.lasthandoff: 08/03/2017
     
 -   Artigo técnico, [Connection Strings for OLE DB Providers](http://go.microsoft.com/fwlink/?LinkId=220744)(Cadeias de conexão para provedores de OLE DB), em carlprothman.net.    
     
+## <a name="configure-ole-db-connection-manager"></a>Configurar Gerenciador de Conexões OLE DB
+  Use a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** para adicionar uma conexão a uma fonte de dados, seja ela uma nova conexão ou a cópia de uma conexão existente.  
+  
+> [!NOTE]  
+>  Se a fonte de dados for [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, ela exigirá um gerenciador de conexões diferente de versões anteriores do Excel. Para obter mais informações, consulte [Conectar-se a uma pasta de trabalho do Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
+>   
+>  Se a fonte de dados for o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007, ela exigirá um provedor OLE DB diferente das versões anteriores do Access. Para obter mais informações, consulte [Conectar-se a um banco de dados do Access](../../integration-services/connection-manager/connect-to-an-access-database.md).  
+  
+ Para obter mais informações sobre o gerenciador de conexões OLE DB, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+  
+### <a name="options"></a>Opções  
+ **Conexões de dados**  
+ Selecione uma conexão de dados OLE DB existente na lista.  
+  
+ **Propriedades de conexão de dados**  
+ Exiba as propriedades e os valores da conexão de dados OLE DB selecionada.  
+  
+ **Nova**  
+ Crie uma conexão de dados OLE DB usando a caixa de diálogo **Gerenciador de Conexões** .  
+  
+ **Delete (excluir)**  
+ Selecione uma conexão de dados e a exclua usando o botão **Excluir** .  
+  
 ## <a name="see-also"></a>Consulte também    
  [Origem de OLE DB](../../integration-services/data-flow/ole-db-source.md)     
  [Destino OLE DB](../../integration-services/data-flow/ole-db-destination.md)     

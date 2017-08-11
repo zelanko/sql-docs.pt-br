@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a2d2ad7ae37e0f787709fb79afbf80ef3e584b5e
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Adicionar um gráfico a um relatório (Construtor de Relatórios e SSRS)
@@ -47,9 +47,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-add-a-chart-to-a-report"></a>Para adicionar um gráfico a um relatório  
   
-1.  Crie um relatório e defina um conjunto de dados. Para obter mais informações, consulte [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
+1.  Crie um relatório e defina um conjunto de dados. Para obter mais informações, consulte [conjuntos de dados de relatório &#40; SSRS &#41; ](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
-2.  Na guia **Inserir**, clique em **Gráfico** e em **Inserir Gráfico**.  
+2.  Na guia **Inserir** , clique em **Gráfico**e em **Inserir Gráfico**.  
   
 3.  Clique na superfície de design em que você deseja o canto superior esquerdo do gráfico e arraste até o local do canto inferior direito do gráfico.  
   
@@ -69,15 +69,15 @@ ms.lasthandoff: 06/22/2017
   
 10. Na guia **Executar** , clique em **Design** para continuar trabalhando no relatório.  
   
- Em gráficos com eixos, como gráficos de barras e de colunas, o eixo de categoria pode não exibir todos os rótulos de categoria. Para obter mais informações sobre como alterar os rótulos do eixo, consulte [Especificar um intervalo do eixo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
+ Em gráficos com eixos, como gráficos de barras e de colunas, o eixo de categoria pode não exibir todos os rótulos de categoria. Para obter mais informações sobre como alterar os rótulos do eixo, consulte [especificar um intervalo do eixo &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Pontos de dados vazios e nulos em gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Tutorial: adicionando um gráfico de barras ao relatório (Construtor de Relatórios)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutorial: adicionando um gráfico de barras a um relatório (Designer de Relatórios)](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [Tutorial: adicionando um gráfico de pizza ao seu relatório (Construtor de Relatórios)](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [Tutorial: adicionando um gráfico de pizza ao seu relatório (Designer de Relatórios)](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Gráficos de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tipos de gráfico &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [Pontos de dados vazios e nulos em gráficos &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Tutorial: Adicionando um gráfico de barras ao relatório (construtor de relatórios)](http://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Tutorial: Adicionando um gráfico de barras a um relatório (Designer de relatórios)](http://go.microsoft.com/fwlink/?LinkId=198042)   
+ [Tutorial: Adicionando um gráfico de pizza ao relatório (construtor de relatórios)](http://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Tutorial: Adicionando um gráfico de pizza a um relatório (Designer de relatórios)](http://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

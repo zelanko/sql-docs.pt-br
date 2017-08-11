@@ -20,11 +20,11 @@ caps.latest.revision: 22
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ed88ddae33151e46c080a8bd747fd8a7f5055eba
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="grouping-pane"></a>Painel Agrupamento
@@ -32,7 +32,7 @@ Ao projetar relatórios do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnovers
   
   ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Se o painel Agrupamento não estiver visível, no menu **Relatório** , clique em **Agrupamento**.
   
- As células nas áreas dos grupos de linhas e de colunas podem ser membros estáticos ou dinâmicos de um grupo. Os membros estáticos repetem-se uma vez por grupo e normalmente contêm rótulos ou totais. Já os membros dinâmicos se repetem uma vez por instância de grupo e normalmente contêm os valores exclusivos da expressão de grupo. À medida que você seleciona células Tablix nas áreas dos grupos de linhas ou de colunas, o membro do grupo correspondente é selecionado no painel Grupos de Linhas ou Grupos de Colunas. Por outro lado, caso você selecione grupos no painel Agrupamento, a célula correspondente associada ao membro do grupo é selecionada na superfície de design. Para obter mais informações sobre as áreas dos grupos de linhas e de colunas tablix, consulte [Áreas da região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ As células nas áreas dos grupos de linhas e de colunas podem ser membros estáticos ou dinâmicos de um grupo. Os membros estáticos repetem-se uma vez por grupo e normalmente contêm rótulos ou totais. Já os membros dinâmicos se repetem uma vez por instância de grupo e normalmente contêm os valores exclusivos da expressão de grupo. À medida que você seleciona células Tablix nas áreas dos grupos de linhas ou de colunas, o membro do grupo correspondente é selecionado no painel Grupos de Linhas ou Grupos de Colunas. Por outro lado, caso você selecione grupos no painel Agrupamento, a célula correspondente associada ao membro do grupo é selecionada na superfície de design. Para obter mais informações sobre áreas de grupo de linhas e colunas do Tablix, consulte [áreas da região de dados Tablix &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  O painel Agrupamento oferece suporte aos seguintes modos:  
   
@@ -76,7 +76,7 @@ Para editar os valores padrão, você deve selecionar o membro do grupo no paine
   
 -   **ToggleItem.** Cadeia de caracteres. O nome da caixa de texto à qual adicionar a imagem de alternância. A caixa de texto deve estar no mesmo escopo de grupo ou um escopo contentor.  
   
- Para obter mais informações sobre como esse comportamento pode ser controlado em uma região de dados Tablix, consulte [Controlando a exibição da região de dados Tablix em uma página do relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
+ Para obter mais informações sobre como esse comportamento pode ser controlado em uma região de dados Tablix, consulte [controlando a exibição da região de dados Tablix em uma página de relatório &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
  Nem todos os membros estáticos têm um cabeçalho correspondente a uma célula na superfície de design. No painel Agrupamento, a seguinte convenção indica se um membro estático não tem nenhum cabeçalho:  
   
@@ -86,7 +86,7 @@ Para editar os valores padrão, você deve selecionar o membro do grupo no paine
   
 ## <a name="see-also"></a>Consulte também  
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Filtro, grupo e classificar dados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

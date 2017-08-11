@@ -20,15 +20,15 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b1c11b204b5a48e4324f49e05467cc3ac96e7fa4
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="securable-items"></a>Itens protegíveis
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa a segurança baseada em função para controlar o acesso a itens armazenados em um servidor de relatório. Quando você concede acesso a um servidor de relatório para um usuário, normalmente faz isso criando um par de atribuições de função:  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]usa a segurança baseada em função para controlar o acesso a itens que são armazenados em um servidor de relatório. Quando você concede acesso a um servidor de relatório para um usuário, normalmente faz isso criando um par de atribuições de função:  
   
 -   No nível de site  
   
@@ -65,9 +65,9 @@ ms.lasthandoff: 08/03/2017
 |Conjuntos de dados compartilhados|Os conjuntos de dados compartilhados podem ser protegidos para controlar as ações que podem ser executadas pelos usuários, como a exibição ou alteração da definição ou a alteração das propriedades de um conjunto de dados compartilhado específico.<br /><br /> Para obter mais informações, consulte [Proteger itens de conjunto de dados compartilhados](../../reporting-services/security/secure-shared-dataset-items.md).|  
   
 ## <a name="see-also"></a>Consulte também  
- [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modificar ou excluir uma atribuição de função &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
+ [Concedendo permissões em um servidor de relatório do modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Criar, excluir ou modificar uma função &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Conceder acesso de usuário a um servidor de relatório &#40; Gerenciador de relatórios &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Modificar ou excluir uma atribuição de função &#40; Gerenciador de relatórios &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
   
   

@@ -26,11 +26,11 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8302c8f1713adc224c76b3f6dca11d984ff69c32
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-design-view-report-builder"></a>Exibição do design de relatório (Construtor de Relatórios)
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
 -   As propriedades dos itens de relatório, ao clicar com o botão direito do mouse nelas e ao clicar em **Propriedades**.  
   
- Para obter informações sobre como usar o teclado para manipular itens na superfície de design, consulte [Atalhos de teclado &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ Para obter informações sobre como usar o teclado para manipular itens na superfície de design, consulte [atalhos de teclado &#40; Construtor de relatórios &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
 ### <a name="design-surface-size-and-print-area"></a>Tamanho da superfície de design e área de impressão  
  O tamanho da superfície de design pode ser diferente do tamanho da área de impressão da página que você especifica para imprimir o relatório. A alteração do tamanho da superfície de design não alterará a área de impressão de seu relatório. Não importa que tamanho você definiu para a área de impressão de seu relatório, o tamanho de área de design completo não é alterado. Para obter mais informações, consulte [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  

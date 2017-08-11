@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e5d4e66fa2de743e7a28dfeba78bb7a753374a5a
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Adicionar filtros de conjunto de dados, de região de dados e de grupo
@@ -97,14 +97,14 @@ ms.lasthandoff: 06/22/2017
 ### <a name="value"></a>Valor  
  A expressão Valor especifica a parte final da equação do filtro. O processador de relatórios converte a expressão avaliada para o tipo de dados especificado e avalia a equação de filtro inteira para determinar se os dados especificados na Expressão são transmitidos pelo filtro.  
   
- Para converter para um tipo de dados que não seja um tipo de dados CLR, você deve modificar a expressão para converter explicitamente para um tipo de dados. Você pode usar as funções de conversão listadas na caixa de diálogo **Expressão** em **Funções Comuns**, **Conversão**. Por exemplo, para um campo `ListPrice` que representa os dados são armazenados como um **money** de tipo de dados em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonte de dados, a extensão de processamento de dados retorna o valor do campo como um <xref:System.Decimal> tipo de dados. Para definir um valor para usar somente valores maiores de **US$ 50.000,00** na moeda do relatório, converta o valor para Decimal usando a expressão `=CDec(50000.00)`.  
+ Para converter para um tipo de dados que não seja um tipo de dados CLR, você deve modificar a expressão para converter explicitamente para um tipo de dados. Você pode usar as funções de conversão listadas na caixa de diálogo **Expressão** em **Funções Comuns**, **Conversão**. Por exemplo, para um campo `ListPrice` que representa os dados armazenados como um tipo de dados **dinheiro** em uma fonte de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a extensão de processamento de dados retornará o valor de campo como um tipo de dados <xref:System.Decimal> . Para definir um valor para usar somente valores maiores de **US$ 50.000,00** na moeda do relatório, converta o valor para Decimal usando a expressão `=CDec(50000.00)`.  
   
  Esse valor também pode incluir uma referência de parâmetro para permitir que um usuário selecione um valor interativamente.  
   
  Voltar ao Início  
   
 ## <a name="see-also"></a>Consulte também  
- [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Uso de expressões em relatórios &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Parâmetros de relatório &#40;Construtor de relatórios, Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

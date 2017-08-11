@@ -21,11 +21,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 41e0843d517f4fe24c16c6071ba8a1921be68502
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Gerar scripts com o utilitário rs.exe e o serviço Web
@@ -41,8 +41,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Implantação de script e tarefas administrativas](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [serviço Web Servidor de Relatórios](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Referência técnica &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Utilitário RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ [Serviço Web servidor de relatório](../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Referência técnica &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Utilitário RS.exe &#40; SSRS &#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
   

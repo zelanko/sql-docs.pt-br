@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: af00978c2afb28937a008f22eebe76f1a3f78eb1
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="cache-a-report-report-manager"></a>Armazenar um relatório em cache (Gerenciador de Relatórios)
@@ -47,9 +47,9 @@ ms.lasthandoff: 06/22/2017
   
 6.  Selecione um das duas opções de cache a seguir e configure a validade do seguinte modo:  
   
-    -   Para configurar uma cópia armazenada em cache para expirar depois de um período de tempo específico, clique em **Armazenar uma cópia temporária do relatório em cache. Expirar cópia de relatório após alguns minutos**. Digite o número de minutos para a validade do relatório.  
+    -   Para configurar uma cópia armazenada em cache para expirar depois de um período de tempo específico, clique em **Armazenar uma cópia temporária do relatório em cache. Expirar cópia de relatório após um número de minutos**. Digite o número de minutos para a validade do relatório.  
   
-    -   Para configurar uma cópia armazenada em cache para expirar em uma agenda, clique em **Armazenar uma cópia temporária do relatório em cache. Expirar cópia de relatório no seguinte agendamento.** Clique em **Configurar** ou selecione uma agenda compartilhada para controlar a validade do relatório  
+    -   Para configurar uma cópia armazenada em cache para expirar em uma agenda, clique em **armazenar uma cópia temporária do relatório. Expire cópia de relatório na seguinte agenda.** Clique em **Configurar**ou selecione uma agenda compartilhada para controlar a validade do relatório  
   
 7.  Clique em **Aplicar**.  
   

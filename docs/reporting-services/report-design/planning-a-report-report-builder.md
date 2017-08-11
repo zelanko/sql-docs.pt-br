@@ -18,11 +18,11 @@ caps.latest.revision: 19
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fa6837d82c145d2bb079013238dd67332e512cc6
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="planning-a-report-report-builder"></a>Planejando um relatório (Construtor de Relatórios)
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Em qual formato você deseja que o relatório apareça?**  
   
-     Você pode renderizar relatórios online em um navegador como o portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou pode exportá-los para outros formatos como Excel, Word ou PDF. A forma final de seu relatório é uma consideração importante porque nem todos os recursos estão disponíveis em todos os formatos de exportação. Para obter mais informações, consulte [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+     Você pode renderizar relatórios online em um navegador como o portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou pode exportá-los para outros formatos como Excel, Word ou PDF. A forma final de seu relatório é uma consideração importante porque nem todos os recursos estão disponíveis em todos os formatos de exportação. Para obter mais informações, consulte [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 -   **Que estrutura você deseja usar para apresentar os dados no relatório?**  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Construtor de Relatórios no SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Relatório de criação conceitos &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Tutoriais do Construtor de Relatórios](../../reporting-services/report-builder-tutorials.md)  
   
   

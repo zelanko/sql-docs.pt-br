@@ -17,11 +17,11 @@ caps.latest.revision: 29
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7065e2f766ec3ce56bed2d9b3bc0e90c5290b6ea
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erro do Reporting Services
@@ -103,7 +103,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="cannot-compare-data-types-for-a-filter"></a>Não é possível comparar tipos de dados para um filtro  
  Em uma equação de filtro, a expressão de filtro que define o que filtrar e o valor do filtro devem ser do mesmo tipo de dados a ser comparado. Se ocorrer um dos seguintes erros, modifique a expressão do campo ou o valor do filtro de forma que os tipos de dados se correspondam:  
   
--   O processamento de  *\<tipo de item de relatório >* para o * \<nome do item de relatório >* não pode ser executada. Não é possível comparar dados de tipos  *\<tipo >* e * \<tipo >*. Verifique se o tipo de dados retornado pelo  *\<nome do item de relatório >*.  
+-   O processamento de  *\<tipo de item de relatório >* para o  *\<nome do item de relatório >* não pode ser executada. Não é possível comparar dados de tipos  *\<tipo >* e  *\<tipo >*. Verifique se o tipo de dados retornado pelo  *\<nome do item de relatório >*.  
   
 -   Falha ao avaliar o  *\<nome da propriedade >*.  
   
@@ -118,11 +118,11 @@ ms.lasthandoff: 06/22/2017
   
 -   O  *\<tipo de item de relatório >* '*\<nome do item de relatório >*' tem um escopo inválido "*\<nome do escopo >*". O escopo deve ser o escopo atual ou estar contido no escopo atual.  
   
--   O  *\<nome da propriedade >* expressão para o * \<tipo de item de relatório >* '*\<nome do item de relatório >*' tem um parâmetro de escopo que não é válido para uma função de agregação. O parâmetro de escopo deve ser definido para uma constante de cadeia de caracteres que seja igual ao nome de um grupo que a contenha, ao nome de uma região de dados que a contenha ou ao nome de um conjunto de dados.  
+-   O  *\<nome da propriedade >* expressão para o  *\<tipo de item de relatório >* '*\<nome do item de relatório >*' tem um parâmetro de escopo que não é válido para uma função de agregação. O parâmetro de escopo deve ser definido para uma constante de cadeia de caracteres que seja igual ao nome de um grupo que a contenha, ao nome de uma região de dados que a contenha ou ao nome de um conjunto de dados.  
   
  Para funções de agregação que calculam os totais de execução (**Previous**, **RunningValue**ou **RowNumber**), você pode especificar um parâmetro de escopo que seja um nome de grupo de linha ou de coluna, mas não ambos. Isso se aplica à seguinte mensagem de erro:  
   
--   **Anterior**, **RunningValue** ou **RowNumber** usadas nas células de dados de funções de agregação a  *\<tipo de item de relatório >* '*\<nome do item de relatório >*' Consulte agrupamento escopos em colunas e linhas do * \<tipo de item de relatório >*. Os parâmetros de escopo de todos os **anterior**, **RunningValue** e **RowNumber** agregar funções dentro de um  *\<tipo de item de relatório >* pode fazer referência a agrupamentos de linhas ou agrupamentos de colunas de dados, mas não ambos.  
+-   **Anterior**, **RunningValue** ou **RowNumber** usadas nas células de dados de funções de agregação a  *\<tipo de item de relatório >* '*\<nome do item de relatório >*' Consulte agrupamento escopos em colunas e linhas do  *\<tipo de item de relatório >*. Os parâmetros de escopo de todos os **anterior**, **RunningValue** e **RowNumber** agregar funções dentro de um  *\<tipo de item de relatório >* pode fazer referência a agrupamentos de linhas ou agrupamentos de colunas de dados, mas não ambos.  
   
  Para obter mais informações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) e [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -130,13 +130,13 @@ ms.lasthandoff: 06/22/2017
  Não use um escopo padrão para uma caixa de texto adicionada à superfície do design de relatórios quando o relatório tiver mais de um conjunto de dados. Use uma expressão que inclui o nome do conjunto de dados como o escopo e uma função de agregação. Por exemplo, `=First(Fields!FieldName.Value, "DataSet2")`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Referência de funções de agregação &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Exemplos de expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Filtros geralmente usados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Referências a código personalizado e assemblies em expressões no Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Referências de coleções de parâmetros &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Filtros comumente usados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
+ [Coleção de campos de conjunto de dados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Código personalizado e referências de Assembly em expressões no Designer de relatórios &#40; SSRS &#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [Referências de coleção de parâmetros &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

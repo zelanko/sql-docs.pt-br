@@ -22,11 +22,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7c902fc6195481ab6570612c5ac9012bba33ef79
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicadores (Construtor de Relatórios e SSRS)
@@ -113,7 +113,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="SizingIndicatators"></a> Dimensionando indicadores para maximizar o impacto visual  
  Além de cor, direção e forma, você pode usar o tamanho para maximizar o impacto visual de indicadores. Imagine um relatório que use indicadores para mostrar a satisfação do cliente com os diferentes tipos de bicicletas. O ícone usado pelo indicador pode ser configurado para tamanhos diferentes, dependendo da satisfação do cliente. Quanto maior a satisfação, maior o ícone que aparecerá no relatório. A imagem a seguir mostra um relatório de vendas de bicicletas, e os tamanhos dos ícones refletem o valor das vendas.  
   
- Use expressões para definir dinamicamente o tamanho das estrelas com base nos valores de campo usados pelo indicador. Para obter mais informações, veja [Especificar o tamanho de um indicador usando uma expressão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).  
+ Use expressões para definir dinamicamente o tamanho das estrelas com base nos valores de campo usados pelo indicador. Para obter mais informações, consulte [Especificar o tamanho de um indicador usando uma expressão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).  
   
  Para saber mais sobre gravar e usar expressões, consulte [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
@@ -186,7 +186,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Alterar os ícones de indicadores e os conjuntos de indicadores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Definir e configurar unidades de medida &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Definir e configurar unidades de medida &#40;Construtor de relatórios e SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
 -   [Definir o escopo da sincronização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
   
@@ -196,7 +196,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Medidores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Minigráficos e barras de dados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [Gráficos de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

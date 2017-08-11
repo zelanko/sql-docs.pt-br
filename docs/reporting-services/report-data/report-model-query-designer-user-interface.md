@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08ab050564e74a18d8231701f2355c042efc8685
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-model-query-designer-user-interface"></a>Interface de usuário do Designer de Consulta do modelo de relatório
@@ -63,7 +63,7 @@ ms.lasthandoff: 06/22/2017
 |**Importar**|Importa uma consulta existente de um arquivo de definição de relatório (.rdl) no sistema de arquivos. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Desfazer ação](../../reporting-services/report-data/media/rsqdicon-undo.gif "Desfazer ação")|Desfaz a última ação.|  
 |![Refazer ação](../../reporting-services/report-data/media/rsqdicon-redo.gif "Refazer ação")|Refaz a última ação.|  
-|![Execute a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "executar a consulta")|Executa a consulta e exibe as linhas resultantes no painel Resultado.|  
+|![Executar a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe as linhas resultantes no painel Resultado.|  
 |![Gráfico de filtro ao lado da coluna de filtro selecionada](../../reporting-services/report-data/media/rsqdicon-filter.gif "gráfico de filtro ao lado da coluna de filtro selecionada")|Abre a caixa de diálogo **Filtrar Dados** , que permite especificar quais dados você gostaria de filtrar. Os filtros podem ser especificados independentemente dos dados atuais que constam na Área de Design.|  
   
 ## <a name="text-based-query-designer"></a>Designer de Consulta baseado em texto  
@@ -89,12 +89,12 @@ ms.lasthandoff: 06/22/2017
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas.|  
 |**Importar**|Importa uma consulta de um relatório existente.|  
-|![Execute a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "executar a consulta")|Executa o texto da consulta e exibe o conjunto de linhas resultante no painel Resultado.|  
+|![Executar a consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Executar a consulta")|Executa o texto da consulta e exibe o conjunto de linhas resultante no painel Resultado.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas de Design da Consulta &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [Adicionar dados de fontes de dados externas &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [Conexão de modelo de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
+ [Conexão de modelo de relatório &#40; SSRS &#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
  [Arquivo de configuração RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   

@@ -18,11 +18,11 @@ caps.latest.revision: 41
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f54e9b1c9aa0a17634048f91932c4aad2d69888b
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>ExecutionLog do servidor de relatório e exibição do ExecutionLog3
@@ -379,8 +379,8 @@ select * from ExecutionLog order by TimeStart DESC
 |RowCount|Número de linhas retornadas pelas consultas.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
- [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Referência de erros e eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40; ULS &#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+ [Relatório de fontes e arquivos de Log de serviços](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+ [Referências de erros e eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

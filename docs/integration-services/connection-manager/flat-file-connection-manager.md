@@ -1,29 +1,39 @@
 ---
-title: "Gerenciador de conex&#245;es de arquivos simples | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gerenciadores de conexões [Integration Services], Arquivo Simples"
-  - "conexões [Integration Services], arquivos simples"
-  - "arquivos [Integration Services], conexões"
-  - "Gerenciador de conexões de arquivo simples"
-  - "arquivos simples"
-  - "conexões de arquivo simples [Integration Services]"
+title: "Simples de Gerenciador de Conexão de arquivo | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ffileconnection.general.f1
+- sql13.dts.designer.ffileconnection.columns.f1
+- sql13.dts.designer.ffileconnection.columnproperties.f1
+- sql13.dts.designer.ffileconnection.preview.f1
+helpviewer_keywords:
+- connection managers [Integration Services], Flat File
+- connections [Integration Services], flat files
+- files [Integration Services], connections
+- Flat File connection manager
+- flat files
+- flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 2b3f4c303b1d60cbbe23c639c36a6336ca07447f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/09/2017
+
 ---
-# Gerenciador de conex&#245;es de arquivos simples
+# <a name="flat-file-connection-manager"></a>Gerenciador de conexões de arquivos simples
   Um gerenciador de conexões de Arquivos Simples permite que um pacote acesse dados em um arquivo simples. Por exemplo, a origem e o destino dos Arquivos Simples podem usar gerenciadores de conexões de Arquivos Simples para extrair e carregar dados.  
   
  O gerenciador de conexões de arquivos simples pode acessar apenas um arquivo. Para consultar vários arquivos, utilize um gerenciador de conexões de vários arquivos simples em vez de um gerenciador de conexões de arquivos simples. Para obter mais informações, consulte [Gerenciador de conexões de vários arquivos simples](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
@@ -68,16 +78,222 @@ caps.handback.revision: 49
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
-  
--   [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Geral&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)  
-  
--   [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Colunas&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)  
-  
--   [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Avançado&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)  
-  
--   [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Visualização&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
-  
  Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
+## <a name="flat-file-connection-manager-editor-general-page"></a>Editor do Gerenciador de Conexões de Arquivos Simples (página Geral)
+  Use a página **Geral** da caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** para selecionar um arquivo e formato de dados. Uma conexão de arquivos simples habilita um pacote a conectar-se com um arquivo de texto.  
   
+ Para obter mais informações sobre o gerenciador de conexões de Arquivo Simples, consulte [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
+  
+### <a name="options"></a>Opções  
+ **Nome do gerenciador de conexões**  
+ Forneça um nome exclusivo para a conexão de arquivos simples no fluxo de trabalho. O nome fornecido será exibido no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+  
+ **Description**  
+ Descreva a conexão. Como prática recomendável, descreva a conexão em termos de objetivo, para tornar os pacotes autodocumentados e mais fáceis de manter.  
+  
+ **Nome do arquivo**  
+ Digite o caminho e o nome do arquivo a ser usado na conexão de arquivos simples.  
+  
+ **Procurar**  
+ Localize o nome do arquivo a ser usado na conexão de arquivos simples.  
+  
+ **Localidade**  
+ Especifique a localidade para fornecer informações de idioma específicas para solicitações e formatos de data e hora.  
+  
+ **Unicode**  
+ Indique se deve ser usado o Unicode. Se você usar o Unicode, não poderá especificar uma página de código.  
+  
+ **Página de código**  
+ Especifique a página de código do texto não Unicode.  
+  
+ **Formato**  
+ Indique se o arquivo usa formatação delimitada, de largura fixa ou irregular à direita.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Delimitado|As colunas são separadas por delimitadores, especificados na página **Colunas** .|  
+|Largura fixa|As colunas têm uma largura fixa.|  
+|Irregular à direita|Arquivos irregulares à direita são arquivos em que toda coluna tem uma largura fixa, à exceção da última coluna. Ela é delimitada pelo delimitador de linha.|  
+  
+ **Qualificador de texto**  
+ Especifique o qualificador de texto a ser usado. Por exemplo, você pode especificar que os campos de texto fiquem entre aspas.  
+  
+> [!NOTE]  
+>  Depois de selecionar um qualificador de texto, você não pode selecionar a opção **None** . Digite **None** para anular a seleção do qualificador de texto.  
+  
+ **Delimitador de linha de cabeçalho**  
+ Selecione na lista de delimitadores de linhas de cabeçalho ou digite o texto do delimitador.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**{CR}{LF}**|A linha do cabeçalho é delimitada por uma combinação de retorno de carro e avanço de linha.|  
+|**{CR}**|A linha do cabeçalho é delimitada por um retorno de carro.|  
+|**{LF}**|A linha do cabeçalho é delimitada por um avanço de linha.|  
+|**Ponto-e-vírgula {;}**|A linha do cabeçalho é delimitada por um ponto-e-vírgula.|  
+|**Dois-pontos {:}**|A linha do cabeçalho é delimitada por dois-pontos.|  
+|**Vírgula {,}**|A linha do cabeçalho é delimitada por uma vírgula.|  
+|**Tabulação {t}**|A linha do cabeçalho é delimitada por uma tabulação.|  
+|**Barra vertical {&#124;}**|A linha do cabeçalho é delimitada por uma barra vertical.|  
+  
+ **Linhas de cabeçalho a ignorar**  
+ Especifique o número de linhas de cabeçalho ou linhas de dados iniciais a ignorar, caso existam.  
+  
+ **Nomes de coluna na primeira linha de dados**  
+ Indique se deseja esperar ou fornecer nomes de coluna na primeira linha de dados.  
+## <a name="flat-file-connection-manager-editor-columns-page"></a>Editor do Gerenciador de Conexões de Arquivos Simples (página Colunas)
+  Use a página **Colunas** da caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** para especificar a linha e informações da coluna, e visualizar o arquivo.  
+  
+ Para obter mais informações sobre o gerenciador de conexões de Arquivo Simples, consulte [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
+  
+### <a name="static-options"></a>Opções estáticas  
+ **Nome do gerenciador de conexões**  
+ Forneça um nome exclusivo para a conexão de Arquivo Simples no fluxo de trabalho. O nome fornecido será exibido no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+  
+ **Description**  
+ Descreva a conexão. Como prática recomendável, descreva a conexão em termos de objetivo, para tornar os pacotes autodocumentados e mais fáceis de manter.  
+  
+### <a name="flat-file-format-dynamic-options"></a>Opções dinâmicas do formato de arquivo simples  
+  
+#### <a name="format--delimited"></a>Formato = Delimitado  
+ **Delimitador de linha**  
+ Selecione na lista de delimitadores de linha disponíveis ou digite o texto delimitador.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
+|**{CR}**|As linhas são delimitadas por um retorno de carro.|  
+|**{LF}**|As linhas são delimitadas por um avanço de linha.|  
+|**Ponto-e-vírgula {;}**|As linhas são delimitadas por um ponto-e-vírgula.|  
+|**Dois-pontos {:}**|As linhas são delimitadas por dois-pontos.|  
+|**Vírgula {,}**|As linhas são delimitadas por uma vírgula.|  
+|**Tabulação {t}**|As linhas são delimitadas por uma tabulação.|  
+|**Barra vertical {&#124;}**|As linhas são delimitadas por uma barra vertical.|  
+  
+ **Delimitador de coluna**  
+ Selecione na lista de delimitadores de coluna disponíveis ou digite o texto delimitador.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**{CR}{LF}**|As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.|  
+|**{CR}**|As colunas são delimitadas por um retorno de carro.|  
+|**{LF}**|As colunas são delimitadas por uma alimentação de linha.|  
+|**Ponto-e-vírgula {;}**|As colunas são delimitadas por um ponto-e-vírgula.|  
+|**Dois-pontos {:}**|As colunas são delimitadas por dois-pontos.|  
+|**Vírgula {,}**|As colunas são delimitadas por uma vírgula.|  
+|**Tabulação {t}**|As colunas são delimitadas por uma tabulação.|  
+|**Barra vertical {&#124;}**|As colunas são delimitadas por uma barra vertical.|  
+  
+ **Atualizar**  
+ Exiba o efeito de alterar os delimitadores a serem ignorados clicando em **Atualizar**. Esse botão só ficará visível após você alterar outras opções de conexão.  
+  
+ **Visualizar linhas**  
+ Exiba os dados de amostra do arquivo simples, dividido em colunas e linhas, usando as opções selecionadas.  
+  
+ **Redefinir Colunas**  
+ Remova todas as colunas, exceto as originais, clicando em **Redefinir Colunas**.  
+  
+#### <a name="format--fixed-width"></a>Formato = Largura fixa  
+ **Fonte**  
+ Selecione a fonte em que os dados de visualização serão exibidos.  
+  
+ **Colunas de dados de origem**  
+ Ajuste a largura da linha deslizando o marcador de linha vertical vermelho e ajuste a largura das colunas clicando na régua na parte superior da janela de visualização  
+  
+ **Largura da linha**  
+ Especifique o comprimento da linha antes de adicionar delimitadores para colunas individuais. Você também pode arrastar a linha vermelha vertical na janela de visualização para marcar o fim da linha. O valor de largura da linha é atualizado automaticamente.  
+  
+ **Redefinir Colunas**  
+ Remova todas as colunas, exceto as originais, clicando em **Redefinir Colunas**.  
+  
+#### <a name="format--ragged-right"></a>Formato = Irregular à direita  
+  
+> [!NOTE]  
+>  Arquivos irregulares à direita são arquivos em que toda coluna tem uma largura fixa, à exceção da última coluna. Ela é delimitada pelo delimitador de linha.  
+  
+ **Fonte**  
+ Selecione a fonte em que os dados de visualização serão exibidos.  
+  
+ **Colunas de dados de origem**  
+ Ajuste a largura da linha deslizando o marcador de linha vertical vermelho e ajuste a largura das colunas clicando na régua na parte superior da janela de visualização  
+  
+ **Delimitador de linha**  
+ Selecione na lista de delimitadores de linha disponíveis ou digite o texto delimitador.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
+|**{CR}**|As linhas são delimitadas por um retorno de carro.|  
+|**{LF}**|As linhas são delimitadas por um avanço de linha.|  
+|**Ponto-e-vírgula {;}**|As linhas são delimitadas por um ponto-e-vírgula.|  
+|**Dois-pontos {:}**|As linhas são delimitadas por dois-pontos.|  
+|**Vírgula {,}**|As linhas são delimitadas por uma vírgula.|  
+|**Tabulação {t}**|As linhas são delimitadas por uma tabulação.|  
+|**Barra vertical {&#124;}**|As linhas são delimitadas por uma barra vertical.|  
+  
+ **Redefinir Colunas**  
+ Remova todas as colunas, exceto as originais, clicando em **Redefinir Colunas**.  
+## <a name="flat-file-connection-manager-editor-advanced-page"></a>Editor do Gerenciador de Conexões de Arquivos Simples (página Avançado)
+  Use a página **Avançado** da caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** para definir propriedades que especificam como o Integration Services lê e grava dados em arquivos simples. Você pode alterar os nomes das colunas no arquivo simples e definir propriedades que incluem tipo de dados e delimitadores em cada coluna no arquivo.  
+  
+ Por padrão, o tamanho da coluna de cadeia de caracteres é de 50 caracteres. Você pode redimensionar o tamanho dessas colunas para prevenir truncamento de dados ou excesso de largura nas colunas. Também é possível atualizar outros metadados para habilitar a compatibilidade com as colunas de destino. Por exemplo, você pode alterar o tipo de dados de uma coluna que contém apenas dados inteiros para um tipo de dados numérico, como DT_I2. Você pode fazer essas modificações manualmente ou clicar no botão **Selecionar Tipos** para usar a caixa de diálogo **Sugerir Tipos de Coluna** para avaliar dados de amostra e tornar automáticas algumas dessas alterações.  
+  
+ Para obter mais informações sobre o gerenciador de conexões de Arquivo Simples, consulte [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
+  
+### <a name="options"></a>Opções  
+ **Nome do gerenciador de conexões**  
+ Forneça um nome exclusivo para o gerenciador de conexões de arquivo simples no fluxo de trabalho. O nome fornecido será exibido no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+  
+ **Description**  
+ Descreva o gerenciador de conexões. Como prática recomendável, descreva o gerenciador de conexões em termos de objetivo, para tornar os pacotes autodocumentados e mais fáceis de manter.  
+  
+ **Configurar as propriedades de cada coluna**  
+ Selecione uma coluna no painel esquerdo para exibir suas propriedades no painel direito. Consulte a tabela a seguir para obter uma descrição das propriedades dos tipos de dados. Algumas das propriedades listadas são configuráveis apenas para alguns formatos de arquivo simples.  
+  
+|Propriedade|Description|  
+|--------------|-----------------|  
+|**ColumnType**|Denota se a coluna é delimitada, de largura fixa ou com imperfeição à direita. Esta propriedade é somente leitura. Arquivos irregulares à direita são arquivos em que toda coluna tem uma largura fixa, à exceção da última coluna. Ela é delimitada pelo delimitador de linha.|  
+|**OutputColumnWidth**|Especifique um valor a ser armazenado como contagem de bytes; para arquivos Unicode, esse valor corresponde a uma contagem de caracteres. Na tarefa Fluxo de Dados, esse valor é usado para definir a largura de coluna de saída para a fonte de Arquivo Simples. No modelo de objeto, o nome desta propriedade é MaximumWidth.|  
+|**DataType**|Seleciona na lista de tipos de dados disponíveis. Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
+|**TextQualified**|Indique se os dados de texto são delimitados por caracteres qualificadores de texto, como aspas.<br /><br /> True: os dados de texto no arquivo simples são qualificados. False: os dados de texto no arquivo simples NÃO são qualificados.|  
+|**Nome**|Forneça um nome de coluna descritivo. Se você não digitar um nome, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] criará um nome automaticamente, no formato Coluna 0, Coluna 1 e assim por diante.|  
+|**DataScale**|Especifica a escala de dados numéricos. A escala se refere ao número de casas decimais. Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
+|**ColumnDelimiter**|Seleciona na lista de delimitadores de coluna disponíveis. Escolha delimitadores com pouca probabilidade de ocorrer no texto. Esse valor é ignorado para colunas de largura fixa.<br /><br /> **{CR}{LF}**. As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.<br /><br /> **{CR}**. As colunas são delimitadas por um retorno de carro.<br /><br /> **{LF}**. As colunas são delimitadas por uma alimentação de linha.<br /><br /> **Porto e vírgula {;}**. As colunas são delimitadas por um ponto-e-vírgula.<br /><br /> **Dois pontos {:}**. As colunas são delimitadas por dois-pontos.<br /><br /> **Vírgula {,}**. As colunas são delimitadas por uma vírgula.<br /><br /> **Tabulação {t}**. As colunas são delimitadas por uma tabulação.<br /><br /> **Barra vertical {&#124;}**. As colunas são delimitadas por uma barra vertical.|  
+|**DataPrecision**|Especifica a precisão de dados numéricos. A precisão se refere ao número de dígitos. Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
+|**InputColumnWidth**|Especifica um valor a ser armazenado como contagem de bytes; no caso de arquivos Unicode, isso será exibido como contagem de caracteres. Este valor é ignorado nas colunas delimitadas.<br /><br /> **Observação** No modelo de objeto, o nome desta propriedade é ColumnWidth.|  
+  
+ **Nova**  
+ Adicione uma nova coluna, clicando em **Nova**. Por padrão, o botão **Nova** adiciona uma nova coluna ao final da lista. O botão também tem as opções a seguir, disponíveis na lista suspensa.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Adicionar Coluna**|Adiciona uma nova coluna fim da lista.|  
+|**Insert Before**|Insere uma nova coluna antes da coluna selecionada.|  
+|**Insert After**|Insere uma nova coluna depois da coluna selecionada.|  
+  
+ **Delete (excluir)**  
+ Selecione uma coluna e remova-a, clicando em **Excluir**.  
+  
+ **Sugerir Tipos**  
+ Use a caixa de diálogo **Sugerir Tipos de Coluna** para avaliar dados de amostra no arquivo e obter sugestões de tipo de dados e tamanho de cada coluna. Para obter mais informações, consulte [Referência da interface do usuário da caixa de diálogo Sugerir Tipos de Coluna](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md).  
+## <a name="flat-file-connection-manager-editor-preview-page"></a>Editor do Gerenciador de Conexões de Arquivos Simples (página Visualização)
+  Use o nó **Visualização** da caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** para exibir os conteúdos do arquivo de origem em um formato tabular.  
+  
+ Para obter mais informações sobre o gerenciador de conexões de Arquivo Simples, consulte [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
+  
+### <a name="options"></a>Opções  
+ **Nome do gerenciador de conexões**  
+ Forneça um nome exclusivo para a conexão de Arquivo Simples no fluxo de trabalho. O nome fornecido será exibido no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+  
+ **Description**  
+ Descreva a conexão. Como prática recomendável, descreva a conexão em termos de objetivo, para tornar os pacotes autodocumentados e mais fáceis de manter.  
+  
+ **Linhas de dados a ignorar**  
+ Especifique quantas linhas serão ignoradas no início do arquivo simples.  
+  
+ **Atualizar**  
+ Exiba o efeito de alterar o número de linhas a ignorar, clicando em **Atualizar**. Esse botão só ficará visível após você alterar outras opções de conexão.  
+  
+ **Visualizar linhas**  
+ Exiba os dados no arquivo simples, dividido em colunas e linhas, de acordo com as opções que você selecionou.  
+ 

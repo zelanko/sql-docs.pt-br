@@ -19,11 +19,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e5941044afa950ba41e23ce1c3507a51e6121556
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizar a Web Part do Visualizador de Relatórios
@@ -97,7 +97,7 @@ ms.lasthandoff: 06/22/2017
  A área Parâmetros fornece campos para digitar valores antes de executar o relatório. Ela só é usada quando a definição de um relatório inclui parâmetros. Quando as áreas Parâmetros ou Credenciais são exibidas, a exibição do relatório é ajustada para usar a largura restante da Web Part. Você pode definir propriedades na Web Part para personalizar a largura da área Parâmetros. Também pode definir os rótulos exibidos ao lado dos parâmetros individuais na página. Para obter mais informações sobre como modificar rótulos de parâmetros, consulte [Definir parâmetros em um relatório publicado &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Web Part do Visualizador de Relatórios em um site do SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Adicionar a Web Part do Visualizador de Relatórios a uma página da Web &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [Web Part do Visualizador de relatórios em um Site do SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Adicionar a Web Part do Visualizador de relatórios para uma página da Web &#40; O Reporting Services no SharePoint integrado modo &#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

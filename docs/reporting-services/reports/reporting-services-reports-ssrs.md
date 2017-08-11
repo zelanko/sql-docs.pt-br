@@ -17,11 +17,11 @@ caps.latest.revision: 54
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fae0916939061f7e0206d749c9232691bca31f9d
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-reports-ssrs"></a>Relatórios do Reporting Services (SSRS)
@@ -63,7 +63,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Exportar (opcional).** Exporte o relatório para um formato de arquivo diferente.  
   
- Para obter mais informações, consulte [Estágios de relatórios](../../reporting-services/reporting-services-concepts-ssrs.md#bkmk_StagesofReports) em [Conceitos do Reporting Services e &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md).  
+ Para obter mais informações, consulte [estágios de relatórios](../../reporting-services/reporting-services-concepts-ssrs.md#bkmk_StagesofReports) na [conceitos do Reporting Services &#40; SSRS &#41; ](../../reporting-services/reporting-services-concepts-ssrs.md).  
   
 ## <a name="create-paginated-reports"></a>Criar relatórios paginados  
  Para criar relatórios paginados:  
@@ -86,31 +86,31 @@ ms.lasthandoff: 06/22/2017
   
     -   **Escolha uma visualização de dados.** Para cada conjunto de dados, escolha a região de dados que será usada para exibir os dados. Escolha entre lista de tabelas, gráficos, medidores e mapas. Para obter mais informações, consulte os tópicos a seguir:  
   
-        -   [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+        -   [Tabelas, matrizes e listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
-        -   [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+        -   [Gráficos de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
-        -   [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
+        -   [Minigráficos e barras de dados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
-        -   [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+        -   [Indicadores &#40;Construtor de relatórios e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
-        -   [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
+        -   [Mapas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
-        -   [Medidores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+        -   [Medidores &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
     -   **Personalize o layout e os dados.** Elabore o layout do relatório. Uma definição de relatório tem um corpo de relatório, fontes de dados, conjuntos de dados, regiões de dados, caixas de texto, linhas e imagens. Retângulos são usados como contêineres para layout e elementos visuais. Personalize cada região de dados gravando expressões para controlar filtro, grupo, classificação, formato e exibição dos dados. Adicione nomes de relatório, locais e outras informações de identificação que ajudam a gerenciar dúzias ou centenas de relatórios. Adicione elementos visuais e contêineres para organizar os elementos de layout na página. Para obter mais informações, consulte os tópicos a seguir:  
   
-        -   [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [Filtro, grupo e classificar dados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
-        -   [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+        -   [Parâmetros de relatório &#40;Construtor de relatórios, Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
-        -   [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+        -   [Expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
-        -   [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+        -   [Formatando itens de relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
-        -   [Imagens, caixas de texto, retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)  
+        -   [Imagens, caixas de texto, retângulos e linhas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)  
   
-        -   [Layout da página e renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+        -   [Layout de página e renderização &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
     -   **Configure recursos de interatividade.** Adicione recursos de interatividade para os leitores dos seus relatórios. Por exemplo, adicione botões de classificação ou itens de alternância de exibição das consultas. Para obter mais informações, consulte [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
@@ -121,10 +121,10 @@ ms.lasthandoff: 06/22/2017
 -   **Considere os componentes que podem reutilizados.**  Determine se alguma das fontes de dados ou consultas de conjunto de dados pode ser compartilhada para reutilização. Se puder, no servidor de relatório ou no site do SharePoint, crie fontes de dados ou conjuntos de dados compartilhados. Determine se as regiões de dados são adequadas para reutilização como partes de relatório. Para obter mais informações, consulte [Partes de relatório no Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
 ## <a name="preview-reports"></a>Visualizar relatórios  
- Cada ferramenta de criação de relatório oferece suporte à visualização de relatórios. Para obter mais informações, consulte a seção [Visualização](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview) em [Criar relatórios com o Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) e [Visualizando relatórios no Construtor de Relatórios](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+ Cada ferramenta de criação de relatório oferece suporte à visualização de relatórios. Para obter mais informações, consulte o [visualização](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview) seção [criar relatórios com o Designer de relatórios &#40; SSRS &#41; ](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md), e [Visualizando relatórios no construtor de relatórios](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="save-or-publish-reports"></a>Salvar ou publicar relatórios  
- Cada ferramenta de criação oferece suporte para salvar relatórios localmente ou publicá-los em um servidor de relatório ou no site do SharePoint. Para obter mais informações, consulte a seção [Salvar e implantar](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy) em [Criar relatórios com o Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) e [Salvando relatórios &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md).  
+ Cada ferramenta de criação oferece suporte para salvar relatórios localmente ou publicá-los em um servidor de relatório ou no site do SharePoint. Para obter mais informações, consulte o [salvar e implantar](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy) seção [criar relatórios com o Designer de relatórios &#40; SSRS &#41; ](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md), e [salvando relatórios &#40; Construtor de relatórios &#41; ](../../reporting-services/report-builder/saving-reports-report-builder.md).  
   
 ## <a name="view-reports"></a>Exibir relatórios  
  Além de visualizar um relatório salvo localmente ou publicado em um servidor de relatório, você pode fornecer uma variedade de experiências de exibição para os leitores de seus relatórios. Para exibir um relatório:  
@@ -167,7 +167,7 @@ ms.lasthandoff: 06/22/2017
  Você pode criar alertas de dados para relatórios publicados em um site do SharePoint. Os alertas de dados são baseados em feeds de dados de regiões de dados no relatório. Por padrão, as regiões de dados são nomeadas automaticamente. Os autores de relatório podem facilitar a criação de alertas de dados em seus relatórios nomeando regiões de dados com base no propósito de negócios. Ao criar um alerta de dados, você é notificado por email quando os dados atendem às condições especificadas. Para obter mais informações, consulte [Gerando feeds de dados de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Criar um alerta de dados no Designer de Alertas de Dados](../../reporting-services/create-a-data-alert-in-data-alert-designer.md) e [Alertas de dados do Reporting Services](../../reporting-services/reporting-services-data-alerts.md).  
   
 ## <a name="upgrade-reports"></a>Atualizar relatórios  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece suporte a várias versões de definições de relatório, servidores de relatório e sites do SharePoint. Para atualizar um relatório:  
+ O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece suporte a várias versões de definições de relatório, servidores de relatório e sites do SharePoint. Para atualizar um relatório:  
   
 -   Atualize uma instalação de servidor de relatório. Os relatórios compilados armazenados no servidor de relatório são atualizados automaticamente no primeiro uso. A definição de relatório (.rdl) não é alterada. Para obter mais informações, consulte [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
@@ -182,7 +182,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas do Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
- [Extensões &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
+ [Extensões de &#40; SSRS &#41;](../../reporting-services/extensions-ssrs.md)   
  [Servidor de Relatório do Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
   

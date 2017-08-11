@@ -26,11 +26,11 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fc98f8394e637ea9a627cffd8e40887484462df5
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>Especificar conexões para extensões de processamento de dados personalizadas
@@ -38,15 +38,15 @@ ms.lasthandoff: 06/22/2017
   
 -   Provedores de dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] personalizados (se os dados forem acessados por meio de fontes de dados DB2.NET, Oracle, ODP.NET ou Teradata, você poderá usar um provedor de dados .NET personalizados)  
   
--   Extensões de processamento de dados personalizados que oferecem suporte para <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>  
+-   Extensões de processamento de dados personalizados que dão suporte para <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>  
   
--   Extensões de processamento de dados personalizados que oferecem suporte para <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>  
+-   Extensões de processamento de dados personalizados que dão suporte para <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>  
   
 > [!NOTE]  
 >  Entre em contato com seu provedor de terceiros para saber como sua extensão de processamento de dados personalizados é implementada.  
   
 ## <a name="impersonation-and-custom-data-processing-extensions"></a>Representação e extensões de processamento de dados personalizados  
- Se sua extensão de processamento de dados se conecta a fontes de dados usando a representação, você deve usar o método Open no <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> ou <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> interfaces para fazer a solicitação. Se preferir, armazene o objeto de identidade de usuário (System.Security.Principal.WindowsIdentity) e, em seguida, reutilize-o nas outras APIs de extensão de processamento de dados.  
+ Se a sua extensão de processamento de dados personalizados se conecta a fontes de dados que usam a representação, use o método Open nas interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> ou <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> para fazer a solicitação. Se preferir, armazene o objeto de identidade de usuário (System.Security.Principal.WindowsIdentity) e, em seguida, reutilize-o nas outras APIs de extensão de processamento de dados.  
   
  Em versões anteriores do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], todas as extensões de processamento de dados personalizados eram chamadas de acordo com a representação de usuário. Nesta versão, somente o método Open será chamado conforme a representação do usuário. Se houver uma extensão de processamento de dados existente que precise de segurança integrada, modifique seu código para usar o método Open ou armazenar o objeto de identidade de usuário.  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
 |Nenhuma credencial|Você pode usar a opção Nenhuma credencial com provedores de dados .NET personalizados. Se a conta de execução autônoma for especificada, a cadeia de conexão determinará as credenciais que são usadas. O servidor de relatório representa a conta de execução autônoma para fazer a conexão.<br /><br /> Se a conta de execução autônoma não for definida, o servidor de relatório interromperá a conexão. Para obter mais informações sobre como definir a conta, consulte [Configurar a conta de execução autônoma &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
   
 ## <a name="connections-for-idbconnection"></a>Conexões para IDbConnection  
- Se você estiver usando uma extensão de processamento de dados que oferece suporte apenas a <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, você deve especificar a conexão da seguinte maneira:  
+ Se você estiver usando uma extensão de processamento de dados personalizados que dá suporte somente para <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, especifique a conexão da seguinte maneira:  
   
 1.  Configure a conta de execução autônoma. A conexão dessa conta é obrigatória para conexões feitas com **IDbConnection**. O servidor de relatório representa a conta ao fazer a conexão.  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/22/2017
  Ao usar **IDbConnection**, os seguintes tipos de credencial não têm suporte: segurança integrada, contas de usuário do Windows e credenciais de banco de dados. Se uma conexão de fonte de dados usar essas opções, a conexão será interrompida no servidor de relatório.  
   
 ## <a name="connections-for-idbconnectionextension"></a>Conexões para IDbConnectionExtension  
- Se você estiver usando um extensão de processamento com suporte, de dados personalizados <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>, você pode especificar a conexão das seguintes maneiras:  
+ Se você estiver usando uma extensão de processamento de dados personalizados que dá suporte para <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>, especifique a conexão da seguinte maneira:  
   
 |Credenciais|Conexões|  
 |-----------------|-----------------|  
@@ -83,11 +83,11 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar a conta de execução autônoma &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Especificar informações de Conexão para fontes de dados de relatório e credenciais](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Conexões de dados, fontes de dados e cadeias de conexão &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Implementando uma extensão de processamento de dados](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Configurar propriedades de fonte de dados para um relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Criar, excluir ou modificar uma fonte de dados &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Configurar propriedades de fonte de dados para um relatório &#40; Gerenciador de relatórios &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

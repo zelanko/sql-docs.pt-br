@@ -21,11 +21,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ffe0a7ea7f46ed7b1ae5d1e5070d58afa0540b12
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Adicionar e remover chaves de criptografia para implantação em expansão
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Execute **rskeymgmt.exe** localmente no computador que hospeda um servidor de relatório que já seja um membro da implantação de expansão do servidor de relatório.  
   
-2.  Use o argumento **-j** para unir um servidor de relatório ao banco de dados do servidor de relatório. Use o **-m** e  **-n**  argumentos para especificar a instância do servidor de relatório remoto que deseja adicionar à implantação. Use os argumentos **-u** e **-v** para especificar uma conta de administrador no computador remoto. Se estiver criando uma implantação de expansão com o uso de várias instâncias de servidor de relatório no mesmo computador, a sintaxe a ser usada é um pouco diferente. Para obter mais informações sobre a sintaxe que deve ser usada, consulte [Utilitário rskeymgmt &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md).  
+2.  Use o argumento **-j** para unir um servidor de relatório ao banco de dados do servidor de relatório. Use o utilitário **-m** r **-n** para especificar a instância do servidor de relatório remoto que deseja adicionar à implantação. Use os argumentos **-u** e **-v** para especificar uma conta de administrador no computador remoto. Se estiver criando uma implantação de expansão com o uso de várias instâncias de servidor de relatório no mesmo computador, a sintaxe a ser usada é um pouco diferente. Para obter mais informações sobre a sintaxe que deve ser usada, consulte [Utilitário rskeymgmt &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md).  
   
      O exemplo a seguir ilustra os argumentos que devem ser especificados se você estiver associando um servidor de relatório remoto a uma implantação de expansão (essas credenciais podem ser omitidas se você tiver permissões de administrador no computador remoto):  
   
@@ -68,8 +68,8 @@ ms.lasthandoff: 06/22/2017
  Essas etapas removem o servidor de relatório de uma implantação em expansão, mas não desinstalam a instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no servidor de relatório. Depois de remover o servidor de relatório da implantação em expansão, você pode desinstalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do servidor de relatório se não precisar mais do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nesse servidor. Para obter informações, consulte [Desinstalar uma instância existente do SQL Server &#40;Instalação&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) nos Manuais online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Configurar e gerenciar chaves de criptografia &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Inicializar um servidor de relatório &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   
 

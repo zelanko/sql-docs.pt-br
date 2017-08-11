@@ -4,16 +4,16 @@ description: "Este tópico contém as notas de versão e recursos com suporte pa
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: 1907ef1ae99146fe7cdf2ca124af22aabdc29b35
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de versão do SQL Server 2017 no Linux
@@ -152,6 +152,8 @@ As seções a seguir descrevem problemas conhecidos com esta versão do SQL Serv
       sudo systemctl restart mssql-server
       ```
 
+- Bancos de dados do SQL Server 2014 no Windows que usam OLTP na memória não podem ser restaurados no SQL Server 2017 no Linux. Para restaurar um banco de dados do SQL Server 2014 que usa o OLTP na memória, primeiro atualize os bancos de dados para SQL Server 2016 ou 2017 do SQL Server no Windows antes de movê-los para o SQL Server no Linux por meio de backup/restauração ou anexar/desanexar.
+
 #### <a name="remote-database-files"></a>Arquivos de banco de dados remoto
 
 - Não há suporte para a hospedagem de arquivos de banco de dados em um servidor NFS nesta versão. Isso inclui usar o NFS disco compartilhado para clustering de failover, bem como bancos de dados em instâncias não clusterizado. Estamos trabalhando em Habilitar o suporte do servidor NFS nas versões futuras.
@@ -267,6 +269,7 @@ Os seguintes recursos e serviços não estão disponíveis no Linux neste moment
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
 | &nbsp; | Consulta Distribuída |
+| &nbsp; | Serviços de aprendizado de máquina |
 | &nbsp; | Sistema os procedimentos armazenados estendidos (XP_CMDSHELL, etc.) |
 | &nbsp; | Tabela de arquivos |
 | &nbsp; | O conjunto de assemblies do CLR com o EXTERNAL_ACCESS ou UNSAFE permissão |
@@ -856,7 +859,7 @@ As seções a seguir descrevem problemas conhecidos com esta versão do SQL Serv
     - Change Data Capture
 
 #### <a name="in-memory-oltp"></a>OLTP na memória
-- Bancos de dados OLTP na memória somente podem ser criados no diretório /var/opt/mssql. Para obter mais informações, visite o [tópico de OLTP na memória](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
+- Bancos de dados OLTP na memória somente podem ser criados no diretório /var/opt/mssql. Para obter mais informações, visite o [tópico de OLTP na memória](sql-server-linux-performance-get-started.md#use-in-memory-oltp).
 
 #### <a name="sqlpackage"></a>SqlPackage
 - Usando SqlPackage requer a especificação de um caminho absoluto para arquivos. Usar caminhos relativos mapeará os arquivos sob a "tmp/sqlpackage. \<código \> /sistema/system32 "pasta. 

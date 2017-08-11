@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aef6ef0fe1f32f015abe3b48177f6e4d3e45648d
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Alterar a altura da linha ou a largura da coluna (Construtor de Relatórios e SSRS)
@@ -71,10 +71,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Região de dados Tablix (Construtor de Relatórios e SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
- [Células, linhas e colunas da região de dados Tablix (Construtor de Relatórios) e SSRS](https://msdn.microsoft.com/library/dd220511.aspx)   
- [Tabelas (Construtor de Relatórios e SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrizes (Construtor de Relatórios e SSRS)](https://msdn.microsoft.com/library/dd207149.aspx)   
- [Listas (Construtor de Relatórios e SSRS)](https://msdn.microsoft.com/library/dd239330.aspx)   
- [Tabelas, matrizes e listas (Construtor de Relatórios e SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Células da região de dados Tablix, linhas e colunas (construtor de relatórios) e SSRS](https://msdn.microsoft.com/library/dd220511.aspx)   
+ [Tabelas (construtor de relatórios e SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Matrizes (construtor de relatórios e SSRS)](https://msdn.microsoft.com/library/dd207149.aspx)   
+ [Listas (construtor de relatórios e SSRS)](https://msdn.microsoft.com/library/dd239330.aspx)   
+ [Tabelas, matrizes e listas (construtor de relatórios e SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

@@ -19,11 +19,11 @@ caps.latest.revision: 24
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 004db2495533a1155b58a49ac0af96943a997181
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
@@ -64,7 +64,7 @@ ms.lasthandoff: 06/22/2017
  No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o gerenciamento de conteúdo refere-se ao gerenciamento de relatórios, modelos, pastas, recursos e fontes de dados compartilhadas. Todos esses itens podem ser gerenciados independentemente um do outro por propriedades e configurações de segurança. Qualquer item pode ser movido para um local diferente no namespace de pasta de servidor de relatório. Para gerenciar os itens com eficiência, você precisa saber quais tarefas são executadas por um gerenciador de conteúdo.  
   
 > [!NOTE]  
->  O gerenciamento de conteúdo é diferente da administração de servidor de relatório. Para obter mais informações sobre como gerenciar o ambiente no qual um servidor de relatório é executado, consulte [Configuração e administração de um servidor de relatórios &#40;Modo do SharePoint do Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
+>  O gerenciamento de conteúdo é diferente da administração de servidor de relatório. Para obter mais informações sobre como gerenciar o ambiente no qual um servidor de relatório é executado, consulte [configuração e administração de um servidor de relatório &#40; Reporting Services no modo do SharePoint &#41; ](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
   
  O gerenciamento de conteúdo inclui as seguintes tarefas:  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Equilibrar as demandas de processamento de relatórios feitas pelo servidor agendando o processamento do relatório e especificando quais podem ser executados sob demanda e quais serão carregados a partir do cache.  
   
- A permissão para executar tarefas de gerenciamento é fornecida por duas funções predefinidas: **Administrador do Sistema** e **Gerenciador de Conteúdo**. O gerenciamento eficaz do conteúdo do servidor de relatório requer que você tenha as duas funções. Para obter mais informações sobre essas funções predefinidas, consulte [Funções e permissões &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
+ A permissão para executar tarefas de gerenciamento é fornecida por duas funções predefinidas: **Administrador do Sistema** e **Gerenciador de Conteúdo**. O gerenciamento eficaz do conteúdo do servidor de relatório requer que você tenha as duas funções. Para obter mais informações sobre estas funções predefinidas, consulte [funções e permissões &#40; Reporting Services &#41; ](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
  Ferramentas para gerenciar o conteúdo do servidor de relatórios incluem [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou Gerenciador de Relatórios. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] permite definir padrões e habilitar recursos. O Gerenciador de Relatórios é usado para conceder acesso a itens e operações do servidor de relatório, exibir e usar relatórios e outros tipos de conteúdo e exibir e usar todos os itens compartilhados e recursos de distribuição de relatórios.  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 06/22/2017
   
 |Operação|Tipo de arquivo|  
 |---------------|---------------|  
-|Carregar|Todos os arquivos são carregados como recursos, exceto arquivos de definição de relatório (.rdl) e modelo de relatório (.smdl).<br /><br /> Para carregar um recurso, é necessário usar o Gerenciador de Relatórios se o servidor de relatório estiver sendo executado no modo nativo ou por uma página de aplicativo em um site do SharePoint, se servidor for executado no modo integrado do SharePoint. Para obter mais informações, consulte [Carregar um arquivo ou relatório &#40;Gerenciador de Relatório&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) ou [Carregar documentos em uma biblioteca do SharePoint &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|Carregar|Todos os arquivos são carregados como recursos, exceto arquivos de definição de relatório (.rdl) e modelo de relatório (.smdl).<br /><br /> Para carregar um recurso, é necessário usar o Gerenciador de Relatórios se o servidor de relatório estiver sendo executado no modo nativo ou por uma página de aplicativo em um site do SharePoint, se servidor for executado no modo integrado do SharePoint. Para obter mais informações, consulte [Carregar um arquivo ou relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) ou [Carregar documentos em uma biblioteca do SharePoint &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
 |Publicar|Todos os arquivos em um projeto são carregados como recursos, exceto pelos arquivos .rdl, .smdl e .rds da fonte de dados. Para publicar um recurso, adicione um item existente a um projeto no Designer de Relatórios e publique o projeto em um servidor de relatório.|  
   
  Todos os recursos são gerados como arquivos em um sistema de arquivos, que são carregados subsequentemente em um servidor de relatório. Exceto pelas limitações de tamanho de arquivo padrão de 4 megabytes impostas pelo ASP.NET, não há restrições quanto ao tipo de arquivo que pode ser carregado. Entretanto, quando publicados em um servidor de relatório como recursos, tipos de arquivo com tipos MIME equivalentes são melhores que outros. Por exemplo, recursos com base em arquivos HTML e JPG serão abertos em uma janela de navegador quando o usuário clicar no recurso, renderizando o HTML como uma página da Web e o JPG como uma imagem que pode ser visualizada pelo usuário. De outro modo, recursos que não possuem tipos MIME equivalentes, como arquivos de aplicativos de desktop, por exemplo, talvez não sejam renderizados em uma janela do navegador.  

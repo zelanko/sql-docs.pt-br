@@ -22,11 +22,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Usar uma fonte de dados externa para obter dados de assinante (assinatura controlada por dados)
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
 -   modelos de relatório  
   
- Se você tiver uma extensão de processamento de dados que você deseja usar em assinaturas controladas por dados, ele deve implementar o <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> e <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> interfaces. A extensão de processamento de dados deve oferecer suporte para execuções de consulta somente de esquema. Essa consulta é usada para recuperar metadados de coluna em tempo de design, para que os usuários possam mapear colunas para opções de entrega e parâmetros de relatório na definição de assinatura. A execução de consulta somente de esquema ocorre em uma fase inicial, quando o usuário está definindo a assinatura.  
+ Se você tiver uma extensão de processamento de dados personalizada que deseja usar nas assinaturas controladas por dados, implemente as interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> e <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> . A extensão de processamento de dados deve oferecer suporte para execuções de consulta somente de esquema. Essa consulta é usada para recuperar metadados de coluna em tempo de design, para que os usuários possam mapear colunas para opções de entrega e parâmetros de relatório na definição de assinatura. A execução de consulta somente de esquema ocorre em uma fase inicial, quando o usuário está definindo a assinatura.  
   
 ## <a name="query-requirements"></a>Requisitos de consulta  
  Ao criar uma consulta que recupera dados de assinatura, considere o seguinte:  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Transmitindo valores de parâmetro do banco de dados de assinantes para o relatório  
  Se estiver criando uma assinatura controlada por dados para um relatório parametrizado, use valores de parâmetro variáveis para personalizar a saída de cada relatório. Por exemplo, o banco de dados de assinantes pode conter números de identificação de funcionários, datas de contratação, cargos e informações sobre a localização de escritórios que podem ser usados para filtrar dados de relatório. Se o relatório aceitar os parâmetros baseados nesses dados ou em outros dados de coluna disponíveis, você pode mapear o parâmetro para a coluna adequada.  
   
- Ao mapear campos de assinante para parâmetros de relatório, verifique se os tipos de dados e os comprimentos de coluna são compatíveis. Se houver uma desigualdade de tipo de dados, um erro ocorrerá durante o processamento da assinatura. Para saber mais sobre como usar dados de assinante em um relatório com parâmetros, consulte [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Ao mapear campos de assinante para parâmetros de relatório, verifique se os tipos de dados e os comprimentos de coluna são compatíveis. Se houver uma desigualdade de tipo de dados, um erro ocorrerá durante o processamento da assinatura. Para saber mais sobre como usar dados de assinante em um relatório com parâmetros, consulte [criar uma assinatura controlada por dados &#40; Tutorial do SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
 ## <a name="modifying-the-subscriber-data-source"></a>Modificando a fonte de dados de assinante  
  As modificações a seguir feitas na fonte de dados de assinante podem impedir a execução da assinatura:  
@@ -85,7 +85,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Criar, modificar e excluir assinaturas controladas por dados](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [Assinaturas controladas por dados](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Assinaturas e entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

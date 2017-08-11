@@ -27,11 +27,11 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 66a306d07b8556fe43659d4b078e2d31f3d51900
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-modify-and-delete-schedules"></a>Criar, modificar e excluir agendas
@@ -145,9 +145,9 @@ clique em **Cancelar**
   
 ## <a name="see-also"></a>Consulte também  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
- [Pause and Resume Shared Schedules](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
- [Armazenar um relatório em cache &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
- [Adicionar um instantâneo ao histórico de relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
+ [Pausar e retomar agendas compartilhadas](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
+ [Armazenar em cache um relatório &#40; Gerenciador de relatórios &#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
+ [Adicionar um instantâneo para o relatório histórico de &#40; Gerenciador de relatórios &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
   
   
 

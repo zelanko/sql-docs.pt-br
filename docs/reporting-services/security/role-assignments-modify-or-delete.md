@@ -21,11 +21,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1a0db8452d082dddf6f5ffc39c1a9bd5802bf114
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-assignments---modify-or-delete"></a>Atribuições de função - modificar ou excluir
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Consulte também  
  [Criar e gerenciar atribuições de função](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Atribuições de função](../../reporting-services/security/role-assignments.md)   
- [Página Configurações de Site &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
- [Atribuições de nova função do sistema: página Editar atribuições de função do sistema &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
+ [Página Configurações de site &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
+ [Novas atribuições de função do sistema: Editar página de atribuições de função do sistema &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
   
   

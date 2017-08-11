@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8c253794b7b884a3dd7835409e256245ae0dc5a2
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>Legenda do gráfico - Item alterar texto (construtor de relatórios)
@@ -59,8 +59,8 @@ ms.lasthandoff: 06/22/2017
 2.  Clique em **Legenda** e, na caixa **Texto da legenda personalizada** , digite um rótulo para a legenda. A série é atualizada com o texto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Formatando a legenda em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [Formatando as cores da série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Ocultar itens de legenda no gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)  
+ [Formatando a legenda em um gráfico de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [Formatando as cores de série em um gráfico de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Ocultar itens de legenda no gráfico &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)  
   
   

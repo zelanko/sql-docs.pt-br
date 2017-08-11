@@ -21,11 +21,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e04d57e159b255567ebde31308db68bfed33946
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="enable-and-disable-my-reports"></a>Habilitar e desabilitar Meus Relatórios
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
  Observe que se você ativar a opção Meus Relatórios, o servidor de relatório criará uma pasta Meus Relatórios para cada usuário com uma conta de domínio que clica no link Meus Relatórios, mesmo que o usuário não queria nem precise de uma pasta Meus Relatórios. Não há uma maneira sistemática de determinar quais pastas estão sendo usadas. Você deve revisar as pastas manualmente para ver se elas contêm alguma coisa.  
   
 ## <a name="see-also"></a>Consulte também  
- [Proteger Meus Relatórios](../../reporting-services/security/secure-my-reports.md)   
- [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Proteger meus relatórios](../../reporting-services/security/secure-my-reports.md)   
+ [Gerenciamento de conteúdo de servidor de relatório &#40; Modo nativo do SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

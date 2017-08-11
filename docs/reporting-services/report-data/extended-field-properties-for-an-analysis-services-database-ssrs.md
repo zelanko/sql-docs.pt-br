@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2a73370c0ae9f3d405a185d53754aa0620d593e3
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriedades de campos estendidos para um banco de dados do Analysis Services (SSRS)
@@ -27,7 +27,7 @@ ms.lasthandoff: 06/22/2017
   
  As propriedades estendidas incluem propriedades predefinidas e propriedades personalizadas. As propriedades predefinidas são propriedades comuns a várias fontes de dados mapeadas para nomes de propriedade de campo específico e podem ser acessadas por nome por meio da coleção interna de **Fields** . As propriedades personalizadas são específicas de cada provedor de dados e podem ser acessadas por meio da coleção interna de **Fields** apenas pela sintaxe usando o nome da propriedade estendida como uma cadeia de caracteres.  
   
- Ao usar o designer de consultas MDX do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no modo gráfico para definir a consulta, um conjunto predefinido de propriedades de células e propriedades de dimensão é adicionado automaticamente à consulta MDX. Apenas as propriedades estendidas que estiverem especificamente listadas na consulta MDX em seu relatório poderão ser usadas. Dependendo do relatório, é possível modificar o texto do comando MDX padrão para incluir outra dimensão ou propriedades personalizadas definidas no cubo. Para obter mais informações sobre os campos estendidos disponíveis nas fontes de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Criando e usando valores de propriedade &#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2).  
+ Ao usar o designer de consultas MDX do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no modo gráfico para definir a consulta, um conjunto predefinido de propriedades de células e propriedades de dimensão é adicionado automaticamente à consulta MDX. Apenas as propriedades estendidas que estiverem especificamente listadas na consulta MDX em seu relatório poderão ser usadas. Dependendo do relatório, é possível modificar o texto do comando MDX padrão para incluir outra dimensão ou propriedades personalizadas definidas no cubo. Para obter mais informações sobre campos estendidos disponíveis nas [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fontes de dados, consulte [criando e usando valores de propriedade &#40; MDX &#41; ](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Trabalhando com as propriedades de campo em um relatório  
  As propriedades de campo estendidas incluem as propriedades predefinidas e as propriedades específicas para um provedor de dados. As propriedades de campo não são exibidas com a lista de campos no painel **Dados do Relatório** , embora elas estejam na consulta criada para um conjunto de dados; portanto, não é possível arrastar as propriedades de campo para a superfície de design de relatórios. Em vez disso, você deverá arrastar o campo para o relatório e alterar a propriedade **Value** do campo para a propriedade que você quer usar. Por exemplo, se os dados da célula de um cubo já tiverem sido formatados, você poderá usar a propriedade de campo FormattedValue usando a seguinte expressão: `=Fields!FieldName.FormattedValue`.  
@@ -155,7 +155,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Coleções internas em expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Coleção de campos de conjunto de dados e &#40; Construtor de relatórios e SSRS & &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

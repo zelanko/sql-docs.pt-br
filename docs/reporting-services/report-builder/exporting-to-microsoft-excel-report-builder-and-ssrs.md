@@ -15,11 +15,11 @@ caps.latest.revision: 28
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4f612dc69be670d6a99418fbf8e17f34fb8e9d7c
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  Você pode alterar algumas configurações padrão desse renderizador alterando as configurações de informações de dispositivo. Para obter mais informações, consulte [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md).  
   
- Consulte [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) para obter detalhes sobre como exportar para o Excel.  
+ Consulte [exportar relatórios &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) para obter detalhes sobre como exportar para Excel.  
   
 > [!IMPORTANT]  
 >  Quando você define um parâmetro do tipo **String**, é exibida para o usuário uma caixa de texto que pode ter qualquer valor. Se um parâmetro de relatório não estiver associado a um parâmetro de consulta e os valores de parâmetro forem incluídos no relatório, um usuário do relatório poderá digitar a sintaxe de expressão, um script ou um URL no valor de parâmetro e processar o relatório em Excel. Se outro usuário exibir o relatório e clicar no conteúdo do parâmetro renderizado, o usuário poderá executar acidentalmente o script ou link mal-intencionado.  
@@ -148,7 +148,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Construtor de Relatórios em modo desconectado e você visualiza um relatório no Construtor de Relatórios. Como o arquivo de configuração de RSReportServer reside no servidor de relatório, as ferramentas ou produtos de que onde você exporta relatórios devem estar conectados a um servidor de relatório para ler o arquivo de configuração.  
   
--   O Web Part do Visualizador de Relatórios em modo local e o farm do SharePoint não são integrados com um servidor de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Relatórios em modo Local versus em modo Conectado no Visualizador de Relatórios &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   O Web Part do Visualizador de Relatórios em modo local e o farm do SharePoint não são integrados com um servidor de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [modo Local vs. em modo Conectado no Visualizador de Relatórios &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Se o renderizador de opção de menu **Excel 2003** estiver configurado para ficar visível, as opções Excel e Excel 2003 estarão disponíveis nos seguintes cenários:  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 06/22/2017
   
  Gráficos, minigráficos, barras de dados, mapas, medidores e indicadores são exportados como imagens. Os dados que eles descrevem, como os rótulos de valor e membro para um gráfico, não são exportados com eles e não estão disponíveis na pasta de trabalho do Excel, a menos que sejam incluídos em uma coluna ou linha em uma região de dados dentro de um relatório.  
   
- Se desejar trabalhar com dados de gráfico, minigráfico, barra de dados, mapas, medidor e indicador, exporte o relatório para um arquivo .csv ou gere feeds de dados compatíveis com o Atom a partir do relatório. Para obter mais informações, consulte [Exportação para um arquivo CSV &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) e [Gerando feeds de dados de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+ Se desejar trabalhar com dados de gráfico, minigráfico, barra de dados, mapas, medidor e indicador, exporte o relatório para um arquivo .csv ou gere feeds de dados compatíveis com o Atom a partir do relatório. Para obter mais informações, consulte [exportando para um arquivo CSV &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) e [gerando Feeds de dados de relatórios &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 ## <a name="page-sizing"></a>Dimensionamento de página  
  A extensão de renderização do Excel usa as definições de altura e largura da página para determinar a configuração do papel a ser definida na planilha do Excel. O Excel tenta corresponder as configurações de propriedade PageHeight e PageWidth a um dos tamanhos de papel mais comuns.  
@@ -273,11 +273,11 @@ ms.lasthandoff: 06/22/2017
  Se um relatório precisar ser renderizado em vários formatos e não for possível criar um layout de relatório que renderize da forma desejada em todos os formatos obrigatórios, você pode considerar usar o valor em RenderFormat global interno para alterar condicionalmente a aparência do relatório em tempo de execução. Dessa forma, é possível ocultar ou mostrar itens de relatório dependendo do renderizador usado para obter os melhores resultados em cada formato. Para obter mais informações, consulte [Referências de globais internas e referências de usuários &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Paginação no Reporting Services &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Comportamentos de renderização &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funcionalidade interativa para extensões &#40; de renderização de relatório diferente Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Renderizando itens de relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tabelas, matrizes e listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
 

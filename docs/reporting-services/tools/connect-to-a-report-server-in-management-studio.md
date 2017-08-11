@@ -25,11 +25,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 53ebe2ae1938dc656af351cf922f5d5d85d664b8
+ms.translationtype: MT
+ms.sourcegitcommit: 0bc7925f72d59170a24f4a82d1c1a73e618a97a0
+ms.openlocfilehash: f59854e37e292d03cf7d57443e3aa4b899a21a11
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Conectar-se a um servidor de relatório no Management Studio
@@ -61,9 +61,9 @@ ms.lasthandoff: 06/13/2017
   
 5.  Clique em **Conectar**. O servidor de relatório aparece no Pesquisador de Objetos.  
   
-6.  Clique com o botão direito do mouse no nó do servidor para definir as propriedades do sistema e os padrões do servidor. Para obter mais informações, consulte [Definir propriedades do servidor de relatório &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+6.  Clique com o botão direito do mouse no nó do servidor para definir as propriedades do sistema e os padrões do servidor. Para obter mais informações, consulte [definir propriedades do servidor de relatório &#40; Management Studio &#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
-### <a name="to-connect-to-a-sharepoint-integrated-mode-report-server"></a>Para conectar-se a um servidor de relatório no modo integrado do SharePoint   
+### <a name="to-connect-to-a-sharepoint-integrated-mode-report-server"></a>Para conectar-se a um servidor de relatório no modo integrado do SharePoint  
   
 1.  Se o Pesquisador de Objetos ainda não estiver aberto, selecione-o no menu Exibir.  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 06/13/2017
   
 5.  Clique em **Conectar**. O servidor de relatório aparece no Pesquisador de Objetos.  
   
-6.  Clique com o botão direito do mouse no nó do servidor para definir as propriedades do sistema e os padrões do servidor. Para obter mais informações, consulte [Definir propriedades do servidor de relatório &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+6.  Clique com o botão direito do mouse no nó do servidor para definir as propriedades do sistema e os padrões do servidor. Para obter mais informações, consulte [definir propriedades do servidor de relatório &#40; Management Studio &#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 ### <a name="to-register-a-report-server"></a>Para registrar um servidor de relatório  
   
@@ -119,6 +119,6 @@ ms.lasthandoff: 06/13/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Reporting Services no SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Reporting Services no SQL Server Management Studio &#40; SSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

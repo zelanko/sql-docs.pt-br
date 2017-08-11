@@ -23,11 +23,11 @@ caps.latest.revision: 57
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8a1cabc088c7c0ec6c69c8290549e035a4cec7bb
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Integrando o Reporting Services em aplicativos
@@ -45,19 +45,19 @@ ms.lasthandoff: 06/22/2017
  O acesso à URL é outra opção para a integração da exibição de relatório com os aplicativos, se os controles ReportViewer não forem uma opção. Além disso, o acesso à URL é útil para enviar aos usuários, por email, links para relatórios.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Integrando o Reporting Services usando SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)  
+ [Integração do Reporting Services usando SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)  
  Descreve como integrar a navegação de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o gerenciamento aos seus aplicativos comerciais existentes usando o serviço Web Servidor de Relatórios.  
   
  [Integrando o Reporting Services usando os controles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
  Descreve como integrar a exibição de relatório aos seus aplicativos existentes usando os controles ReportViewer.  
   
- [Integrando o Reporting Services usando o acesso à URL](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
+ [Integração do Reporting Services usando o acesso à URL](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
  Descreve como integrar navegação de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aos seus aplicativos comerciais existentes usando o acesso à URL.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Optando entre acesso à URL e SOAP](../../reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
- [Referência técnica &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Referência técnica &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
  [Serviço Web servidor de relatório](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   

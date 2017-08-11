@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9663bbf0c11ce1d41f02cc22027f2c69aa07b057
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>Pesquisando relatórios e outros itens (Construtor de Relatórios e SSRS)
@@ -38,9 +38,9 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Localizando e exibindo relatórios no Gerenciador de Relatórios &#40;Construtor de Relatórios e SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx)   
- [Usando Meus Relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
- [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Abrir e fechar um relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
+ [Localizando e exibindo relatórios no Gerenciador de relatórios &#40; Construtor de relatórios e SSRS &#41;](https://msdn.microsoft.com/library/dd255286.aspx)   
+ [Usando Meus relatórios &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
+ [Localizando, exibindo e Gerenciando relatórios &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Abrir e fechar um relatório &#40; Gerenciador de relatórios &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
   
   

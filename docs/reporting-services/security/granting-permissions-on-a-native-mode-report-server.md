@@ -27,18 +27,18 @@ caps.latest.revision: 60
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e587f50e041d42bb09d99fa03d4146216883fce6
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Concedendo permissões em um servidor de relatório no modo nativo
   O SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa autorização com base em funções e um subsistema de autenticação para determinar quem pode executar operações e acessar itens em um servidor de relatório. A autorização com base em funções é categorizada nas funções do conjunto de ações que um usuário ou grupo pode executar. A autenticação se baseia na Autenticação interna do Windows ou em um módulo de autenticação personalizado fornecido por você. É possível utilizar funções predefinidas ou personalizadas com qualquer tipo de autenticação.  
   
 ## <a name="using-roles-to-grant-report-server-access"></a>Usando funções para conceder acesso ao servidor de relatório  
- Todos os usuários interagem com um servidor de relatório dentro do contexto de uma função que define um nível específico de acesso. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui funções predefinidas que podem ser atribuídas a usuários e grupos para fornecer acesso imediato a um servidor de relatório. **ContentManager**, **Publisher**e **Browser** são exemplos de funções predefinidas. Cada função define uma coleção de tarefas relacionadas. Por exemplo, um **Publicador** tem permissão para adicionar relatórios e criar pastas para armazenar esses relatórios.  
+ Todos os usuários interagem com um servidor de relatório dentro do contexto de uma função que define um nível específico de acesso. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]inclui funções predefinidas que você pode atribuir aos usuários e grupos para fornecer acesso imediato a um servidor de relatório. **ContentManager**, **Publisher**e **Browser** são exemplos de funções predefinidas. Cada função define uma coleção de tarefas relacionadas. Por exemplo, um **Publicador** tem permissão para adicionar relatórios e criar pastas para armazenar esses relatórios.  
   
  Em geral, as atribuições de funções são herdadas de um nó pai, mas você pode dividir a herança de permissões criando uma nova atribuição de função para um determinado item. Um usuário que seja membro da função **Gerenciador de Conteúdo** de um relatório pode ser membro da função **Navegador** de outro relatório.  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
 >  Se você tiver configurado um servidor de relatório para ser executado no modo integrado do SharePoint, defina permissões no site do SharePoint para conceder acesso aos itens de servidor de relatório. Para obter mais informações, consulte [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
   
 ## <a name="who-sets-permissions"></a>Quem define permissões  
- Inicialmente, apenas usuários que são os membros do grupo de administradores local podem acessar um servidor de relatório. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é instalado com duas atribuições de função padrão que concedem acesso em nível de item e do sistema a membros do grupo de administradores local. Essas atribuições de funções internas permitem aos Administradores locais conceder acesso ao servidor de relatório para outros usuários e gerenciar itens do servidor de relatório. Não é possível excluir as atribuições de funções internas. Um administrador local sempre tem permissão para gerenciar totalmente uma instância do servidor de relatório.  
+ Inicialmente, apenas usuários que são os membros do grupo de administradores local podem acessar um servidor de relatório. O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é instalado com duas atribuições de função padrão que concedem acesso em nível de item e de sistema a membros do grupo de administradores local. Essas atribuições de funções internas permitem aos Administradores locais conceder acesso ao servidor de relatório para outros usuários e gerenciar itens do servidor de relatório. Não é possível excluir as atribuições de funções internas. Um administrador local sempre tem permissão para gerenciar totalmente uma instância do servidor de relatório.  
   
  Como as permissões totais em um servidor de relatório incluem permissões no nível de item e no nível de sistema, um administrador local recebe as seguintes funções:  
   
@@ -72,15 +72,15 @@ ms.lasthandoff: 06/22/2017
   
 |Ferramenta|Tarefas|  
 |----------|-----------|  
-|Management Studio – Usado para exibir, modificar, criar e excluir definições de funções.|[Criar, excluir ou modificar uma função &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|Gerenciador de Relatórios - Usado para atribuir usuários e grupos a funções.|[Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Modificar ou excluir uma atribuição de função &#40;Gerenciador de Relatórios&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|Management Studio – Usado para exibir, modificar, criar e excluir definições de funções.|[Criar, excluir ou modificar uma função &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
+|Gerenciador de Relatórios - Usado para atribuir usuários e grupos a funções.|[Conceder acesso de usuário a um servidor de relatório &#40; Gerenciador de relatórios &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Modificar ou excluir uma atribuição de função &#40; Gerenciador de relatórios &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [funções predefinidas](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Funções predefinidas](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [Concedendo permissões em itens de servidor de relatório em um Site do SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Autenticação com o servidor de relatório](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Criar e gerenciar atribuições de função](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Segurança e proteção do Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)   
- [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Gerenciamento de conteúdo de servidor de relatório &#40; Modo nativo do SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

@@ -22,11 +22,11 @@ caps.latest.revision: 51
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="schedules"></a>Agendas
@@ -129,7 +129,7 @@ ms.lasthandoff: 06/22/2017
 >  É possível usar a faceta **Configuração da Área da Superfície do Reporting Services** para parar as operações agendadas em uma base temporária ou permanente. Embora você possa criar e implantar extensões de entrega personalizadas, em si, o Processador de Agendamento e Entrega não é extensível. Não é possível alterar a forma como ele gerencia eventos e notificações. Para obter mais informações sobre volta fora recursos, consulte a seção **Eventos e entrega agendados** de [Turn Reporting Services Features On or Off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md).  
   
 ###  <a name="bkmk_stoppingagent"></a> Efeitos de parar o SQL Server Agent  
- O processamento de relatórios agendado usa o SQL Server Agent por padrão. Se você parar o serviço, nenhuma nova solicitação de processamento será adicionada á fila, a menos que seja adicionada programaticamente através do método <xref:ReportService2010.ReportingService2010.FireEvent%2A>. Quando você reinicializa o serviço, os trabalhos que criam solicitações de processamento de relatório são reiniciados. O servidor de relatório não tenta recriar os trabalhos de processamento de relatório que possam ter ocorrido anteriormente quando o SQL Server Agent estava offline. Se você parar o SQL Server Agent por uma semana, todas as operações agendadas nessa semana serão perdidas.  
+ O processamento de relatórios agendado usa o SQL Server Agent por padrão. Se você parar o serviço, nenhuma nova solicitação de processamento será adicionada à fila, a menos que seja adicionada programaticamente através do método <xref:ReportService2010.ReportingService2010.FireEvent%2A> . Quando você reinicializa o serviço, os trabalhos que criam solicitações de processamento de relatório são reiniciados. O servidor de relatório não tenta recriar os trabalhos de processamento de relatório que possam ter ocorrido anteriormente quando o SQL Server Agent estava offline. Se você parar o SQL Server Agent por uma semana, todas as operações agendadas nessa semana serão perdidas.  
   
 > [!NOTE]  
 >  A funcionalidade que o SQL Server Agent fornece ao Reporting Services pode ser substituída pelo código personalizado que usa o método <xref:ReportService2010.ReportingService2010.FireEvent%2A> para adicionar eventos de agendamento à fila.  
@@ -139,10 +139,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Criar, modificar e excluir instantâneos no histórico de relatório](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Assinaturas e entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Assinaturas controladas por dados](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Armazenando relatórios em cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Cache de relatórios &#40; SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Gerenciamento de conteúdo de servidor de relatório e &#40; Modo nativo do SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Conjuntos de dados compartilhados em cache &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   

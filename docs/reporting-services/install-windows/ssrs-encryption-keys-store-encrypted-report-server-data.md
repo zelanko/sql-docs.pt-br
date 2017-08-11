@@ -21,15 +21,15 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 42709e27ef13cadc3be92ce5afcbbf9ea35ab1f7
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Chaves de criptografia do SSRS - armazenar dados do servidor de relatório criptografado
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena valores criptografados no banco de dados do servidor de relatório e em arquivos de configuração. A maioria dos valores criptografados é credencial usada para acessar fontes de dados externas que fornecem dados a relatórios. Este tópico descreve quais valores são criptografados, a funcionalidade de criptografia usada no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], entre outros tipos de dados confidenciais armazenados sobre os quais é útil saber mais a respeito.  
+  O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena valores criptografados no banco de dados do servidor de relatório e em arquivos de configuração. A maioria dos valores criptografados é credencial usada para acessar fontes de dados externas que fornecem dados a relatórios. Este tópico descreve quais valores são criptografados, a funcionalidade de criptografia usada no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], entre outros tipos de dados confidenciais armazenados sobre os quais é útil saber mais a respeito.  
   
 ## <a name="encrypted-values"></a>Valores criptografados  
  A lista a seguir descreve os valores armazenados em uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
      Esse valor é criado durante a instalação ou configuração do servidor e, em seguida, é armazenado como um valor criptografado no banco de dados do servidor de relatório. O serviço Servidor de Relatório do Windows usa essa chave para criptografar e decifrar dados armazenados no banco de dados do servidor de relatório.  
   
 ## <a name="encryption-functionality-in-reporting-services"></a>Funcionalidade de criptografia no Reporting Services  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa funções criptográficas que fazem parte do sistema operacional Windows. São usadas as criptografias simétrica e assimétrica.  
+ O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa funções criptográficas que fazem parte do sistema operacional Windows. São usadas as criptografias simétrica e assimétrica.  
   
  Dados no banco de dados do servidor de relatório são criptografados por meio de uma chave simétrica. Há uma única chave simétrica para cada banco de dados de servidor de relatório. Essa chave simétrica é criptografada usando a chave pública de um par de chaves assimétricas gerado pelo Windows. A chave privada é mantida pela conta do serviço Servidor de Relatório do Windows.  
   
@@ -66,10 +66,10 @@ ms.lasthandoff: 06/22/2017
  Um servidor de relatório armazena outros dados que não são criptografados, mas que podem conter informações confidenciais que você quer proteger. Mais especificamente, instantâneos do histórico do relatório e instantâneos de execução do relatório contêm resultados de consultas que podem incluir dados destinados a usuários autorizados. Se você estiver usando a funcionalidade de instantâneo para relatórios que contêm dados confidenciais, saiba que os usuários que podem abrir tabelas em um banco de dados de servidor de relatório talvez possam visualizar partes de um relatório armazenado ao inspecionar o conteúdo da tabela.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não dá suporte ao armazenamento em cache nem histórico de relatórios que usam parâmetros com base na identificação de segurança do usuário.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]não oferecem suporte a cache ou histórico de relatórios que usam parâmetros com base na segurança identificação do usuário.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Configurar e gerenciar chaves de criptografia &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
 

@@ -14,11 +14,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e1fde5db0ebdf332d82cdb7269342aea036ec61
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurar a conta de serviço do servidor de relatório (Gerenciador de configurações SSRS)
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Atualiza automaticamente as permissões de logon na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usada para hospedar o banco de dados do servidor de relatório. A nova conta será adicionada ao **RSExecRole**.  
   
-     O logon do banco de dados da conta antiga não é removido automaticamente. Lembre-se de remover contas que não estejam mais sendo usadas. Para obter mais informações, veja [Administrar um banco de dados de servidor de relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) nos Manuais Online do SQL Server.  
+     O logon do banco de dados da conta antiga não é removido automaticamente. Lembre-se de remover contas que não estejam mais sendo usadas. Para obter mais informações, consulte [administrar um banco de dados do servidor de relatório &#40; Modo nativo do SSRS &#41; ](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) nos Manuais Online do SQL Server.  
   
      A concessão de permissões do banco de dados para a nova conta de serviço ocorrerá apenas se você tiver configurado a conexão de banco de dados do servidor de relatório para usar a conta de serviço. Se tiver configurado a conexão do banco de dados do servidor de relatório para usar uma conta de usuário do domínio ou um logon do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , as informações sobre a conexão não terão sido afetadas pela atualização da conta de serviço.  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Quando for solicitado que você faça backup da chave simétrica, digite um nome e um local de arquivo para o backup da chave simétrica, digite uma senha para bloquear e desbloquear o arquivo e clique em **OK**.  
   
-6.  Se o servidor de relatório usar a conta de serviço para se conectar ao banco de dados do servidor de relatório, as informações de conexão serão atualizadas para usar a nova conta ou senha. A atualização das informações da conexão exige que você se conecte ao banco de dados. Se a caixa de diálogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **** for exibida, insira as credenciais que têm permissão para conexão com o banco de dados e clique em **OK**.  
+6.  Se o servidor de relatório usar a conta de serviço para se conectar ao banco de dados do servidor de relatório, as informações de conexão serão atualizadas para usar a nova conta ou senha. A atualização das informações da conexão exige que você se conecte ao banco de dados. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Conexão de banco de dados** caixa de diálogo for exibida, insira as credenciais que têm permissão para se conectar ao banco de dados e, em seguida, clique em **Okey**.  
   
 7.  Quando for avisado para restaurar a chave simétrica, digite a senha que você especificou na etapa 5 e clique em **OK**.  
   
@@ -113,5 +113,5 @@ Os links e as diretrizes a seguir irão ajudá-lo a decidir qual a melhor opçã
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [Reporting Services Configuration Manager &#40; Modo nativo &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
 

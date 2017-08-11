@@ -15,11 +15,11 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 64cab4cc760ee1af2c3777bca88be2663d8039a4
+ms.translationtype: MT
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 967dfebc4add43efb039a3b5eb54f8e5d20f1fab
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Arquivo de Configuração RsReportServer.config
@@ -77,6 +77,7 @@ Para obter mais informações sobre como editar o arquivo, consulte [Modificar u
 |**DisableSecureFormsAuthenticationCookie**|O valor padrão é False.<br /><br /> Especifica se deve ser desabilitada a ação de forçar o cookie usada para o formulário e a autenticação personalizada serem marcados como seguros. A partir do SQL Server 2012, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] automaticamente marcará cookies de autenticação de formulários usados com extensões de autenticação personalizadas, como um cookie seguro quando enviado ao cliente. Ao alterar esta propriedade, os administradores de servidor de relatório e os autores de extensão de segurança personalizada podem reverter para o comportamento anterior que permitiu que o autor de extensão de segurança personalizado determinasse se deve marcar o cookie como um cookie seguro. É recomendado usar cookies seguros para autenticação de formulários para ajudar a impedir a detecção de rede e os ataques de retomada.|N|  
 |**CleanupCycleMinutes**|Especifica o número de minutos depois dos quais as sessões antigas e os instantâneos expirados são removidos dos bancos de dados do servidor de relatório. O intervalo de valores válidos é de 0 ao inteiro máximo. O padrão é 10. A configuração do valor como 0 desabilita o processo de limpeza do banco de dados.|N,S|  
 |**MaxActiveReqForOneUser**|Especifica o número máximo de relatórios que um usuário pode processar ao mesmo tempo. Quando o limite é atingido, solicitações adicionais de processamento do relatório são negadas. Os valores válidos são de 1 a um inteiro máximo. O padrão é 20.<br /><br /> A maioria das solicitações é processada muito rapidamente, de modo que é improvável que um único usuário tenha mais de 20 conexões abertas a qualquer momento. Se os usuários abrirem mais de 15 relatórios com processamento intenso ao mesmo tempo, talvez seja necessário aumentar esse valor.<br /><br /> Esta configuração é ignorada para servidores de relatório executados no modo integrado do SharePoint.|N,S|  
+|**MaxActiveReqForAnonymous**|Especifica o número máximo de solicitações anônimas podem estar no processo ao mesmo tempo. Quando o limite for atingido, mais solicitações de processamento são negadas. Os valores válidos são de 1 a um inteiro máximo. O padrão é 200.
 |**DatabaseQueryTimeout**|Especifica o número de segundos depois dos quais uma conexão com o banco de dados do servidor de relatório atinge o tempo limite. Este valor é transmitido para a propriedade System.Data.SQLClient.SQLCommand.CommandTimeout. Os valores válidos variam de 0 a 2147483647. O padrão é 120. Um valor 0 especifica um tempo de espera ilimitado e, portanto, não é recomendado.|N|  
 |**AlertingCleanupCycleMinutes**|O padrão é 20.<br /><br /> Determina com que frequência ocorre a limpeza de dados temporários armazenados no banco de dados de alertas.|P|  
 |**AlertingDataCleanupMinutes**|O padrão é 360.<br /><br /> Determina quanto tempo os dados de sessão usados para criar ou editar uma definição de alerta são mantidos dentro do banco de dados de alertas. O padrão é 6 horas.|P|  
@@ -846,7 +847,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [Inicializar um servidor de relatório &#40; Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Armazenar dados criptografados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- Ainda tem dúvidas? [Experimente o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Ainda tem dúvidas? [Tente o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
 

@@ -18,11 +18,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d0650fb86cd929d67170f54adec1424c36467dcc
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="update-a-resource-report-manager"></a>Atualizar um recurso (Gerenciador de Relatórios)
@@ -49,9 +49,9 @@ ms.lasthandoff: 06/22/2017
  Se o recurso que você está atualizando possuir uma imagem usada em um relatório, será necessário atualizar o relatório para visualizar a imagem atualizada.  
   
 ## <a name="see-also"></a>Consulte também  
- [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Página Carregar Arquivo &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [Página conteúdo &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Carregar arquivo de página &#40; Gerenciador de relatórios &#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [Carregar arquivos em uma pasta](../../reporting-services/report-server/upload-files-to-a-folder.md)   
- [Ajuda F1 do Gerenciador de Relatórios](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [Ajuda de F1 do Gerenciador de relatórios](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
   

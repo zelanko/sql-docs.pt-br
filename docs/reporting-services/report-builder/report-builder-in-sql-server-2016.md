@@ -20,11 +20,11 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c2a8702fcee392936451e4a55a4b97327de2b97d
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Construtor de Relatórios no SQL Server 2016
@@ -80,7 +80,7 @@ ms.lasthandoff: 06/22/2017
 
   [Novidades no Reporting Services e no Construtor de Relatórios para SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Descreve os novos recursos nesta versão do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].   
-  [Tutorial: Criando um relatório de gráfico rápido Offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [Tutorial: Criando um relatório de gráfico rápido offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Apresenta o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] e os assistentes disponíveis para ajudá-lo a criar relatórios. O tutorial fornece um conjunto de dados com o qual trabalhar, de modo que você não precise se conectar a uma fonte de dados para começar.  
   
  [Planejando um relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  

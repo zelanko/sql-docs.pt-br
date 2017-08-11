@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3b5e30cca2aa3c75ca4d13e89e7af7b181a18916
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="troubleshoot-reporting-services"></a>Solucionar problemas do Reporting Services
@@ -42,11 +42,11 @@ ms.lasthandoff: 06/22/2017
 +  [Solucionar problemas de conexão de banco de dados e servidor com o Reporting Services](https://msdn.microsoft.com/library/mt650905.aspx)  
 
  ![Ícone de pasta do arquivo pequeno](../../reporting-services/troubleshooting/media/filefolder-small.png)**referência de eventos e erros**   
- + [Referência de erros e eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ + [Referências de erros e eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 
 +  [Causa e resolução de erros do Reporting Services](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
 
 ## <a name="see-also"></a>Consulte também  
  [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40; ULS &#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
 
