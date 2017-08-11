@@ -1,25 +1,30 @@
 ---
-title: "Conectar-se a um banco de dados do Access | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Access [Integration Services]"
-  - "bancos de dados do Access [Integration Services]"
+title: Conecte-se a um banco de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Access [Integration Services]
+- Access databases [Integration Services]
 ms.assetid: 229fbd46-ef6a-4609-a4cc-d80d52c33cf1
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e6fe201622d38c10967c9c076da0d99d215ea33f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Conectar-se a um banco de dados do Access
+# <a name="connect-to-an-access-database"></a>Conectar-se a um banco de dados do Access
   Para conectar um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a uma fonte de dados do Microsoft Office Access, um gerenciador de conexões OLE DB e um provedor de dados são necessários. O provedor de dados usado depende da versão do Access que criou a fonte de dados:  
   
 -   Para o Access 2003 e anterior, o pacote requer o provedor OLE DB do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
@@ -31,13 +36,13 @@ caps.handback.revision: 18
 > [!NOTE]  
 >  Em um computador de 64 bits, você deve executar pacotes que se conectam a fontes de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access no modo de 32 bits. O provedor OLE DB para [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet e o provedor OLE DB para Mecanismo de Banco de Dados do Microsoft Office 12.0 Access estão disponíveis somente em versões de 32 bits.  
   
-## Conectando-se a uma fonte de dados em formato Access 2003 ou anterior  
+## <a name="connecting-to-a-data-source-in-access-2003-or-earlier-format"></a>Conectando-se a uma fonte de dados em formato Access 2003 ou anterior  
   
-#### Para criar um gerenciador de conexão do Access na área Gerenciadores de Conexões  
+#### <a name="to-create-an-access-connection-manager-from-the-connection-managers-area"></a>Para criar um gerenciador de conexão do Access na área Gerenciadores de Conexões  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o pacote.  
   
-2.  Na área **Gerenciadores de Conexões**, clique com o botão direito do mouse em qualquer lugar da área e selecione **Nova Conexão OLE DB**.  
+2.  Na área **Gerenciadores de Conexões** , clique com o botão direito do mouse em qualquer lugar da área e selecione **Nova Conexão OLE DB**.  
   
 3.  Na caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** , clique em **Novo**.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 18
   
 4.  Na caixa de diálogo **Gerenciador de Conexões** , para **Provedor**, selecione **Microsoft Jet 4.0 OLE DB Provider**e configure o gerenciador de conexões conforme adequado.  
   
-#### Para criar uma conexão do Access a partir do Assistente de Importação e Exportação do SQL Server  
+#### <a name="to-create-an-access-connection-from-the-sql-server-import-and-export-wizard"></a>Para criar uma conexão do Access a partir do Assistente de Importação e Exportação do SQL Server  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], inicie o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -53,14 +58,14 @@ caps.handback.revision: 18
   
      Ao selecionar **Microsoft Access** como a **Fonte de Dados**, o assistente cria automaticamente o gerenciador de conexões OLE DB necessário com o provedor de dados correto. Para obter mais informações, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-## Conectando-se a uma fonte de dados em formato Access 2007  
+## <a name="connecting-to-a-data-source-in-access-2007-format"></a>Conectando-se a uma fonte de dados em formato Access 2007  
  Para acessar uma fonte de dados do Access 2007, o gerenciador de conexões OLE DB requer o provedor OLE DB para o Microsoft Office 12.0 Access Database Engine. Esse provedor é instalado automaticamente com o sistema [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 2007. Se o sistema Office 2007 não estiver instalado no computador em que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] está em execução, será necessário instalar o provedor separadamente. Para instalar o provedor OLE DB para o Mecanismo de Banco de Dados do Microsoft Office 12.0 Access, faça download e instale os componentes nesta página da Web, [Driver do sistema Office 2007: Componentes de conectividade de dados](http://go.microsoft.com/fwlink/?LinkId=98155).  
   
-#### Para criar um gerenciador de conexões OLE DB na área Gerenciadores de Conexões  
+#### <a name="to-create-an-ole-db-connection-manager-from-the-connection-managers-area"></a>Para criar um gerenciador de conexões OLE DB na área Gerenciadores de Conexões  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o pacote.  
   
-2.  Na área **Gerenciadores de Conexões**, clique com o botão direito do mouse em qualquer lugar da área e selecione **Nova Conexão OLE DB**.  
+2.  Na área **Gerenciadores de Conexões** , clique com o botão direito do mouse em qualquer lugar da área e selecione **Nova Conexão OLE DB**.  
   
 3.  Na caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** , clique em **Novo**.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 18
     > [!NOTE]  
     >  Para se conectar a uma fonte de dados que usa o Access 2007, não é possível selecionar **Provedor OLE DB para Microsoft Jet 4.0** como a **Fonte de Dados**.  
   
-#### Para criar uma conexão OLE DB a partir do Assistente de Importação e Exportação do SQL Server  
+#### <a name="to-create-an-ole-db-connection-from-the-sql-server-import-and-export-wizard"></a>Para criar uma conexão OLE DB a partir do Assistente de Importação e Exportação do SQL Server  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], inicie o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 18
   
      Ao selecionar **Microsoft Office 12.0 Access Database Engine OLE DB Provider** como a **Fonte de Dados**, o assistente cria automaticamente o gerenciador de conexões OLE DB necessário com o provedor de dados correto. Para obter mais informações, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-## Consulte também  
- [Conectar-se a uma pasta de trabalho do Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
+## <a name="see-also"></a>Consulte também  
+ [Conecte-se para uma pasta de trabalho do Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
   

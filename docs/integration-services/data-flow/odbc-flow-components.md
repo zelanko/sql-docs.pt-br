@@ -1,34 +1,39 @@
 ---
-title: "Componentes de fluxo ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Componentes de fluxo ODBC | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bb47de9a618b4d83e961ff2e032861375b0d6c22
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Componentes de fluxo ODBC
+# <a name="odbc-flow-components"></a>Componentes de fluxo ODBC
   Este tópico descreve os conceitos necessários para criar um fluxo de dados ODBC usando [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
  O ODBC da Attunity para [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] ajuda os desenvolvedores do SSIS facilmente a criar pacotes facilmente que carregam e descarregam dados de bancos de dados com suporte do ODBC.  
   
  O Conector ODBC foi criado para obter o desempenho ideal ao carregar ou descarregar dados de um banco de dados com suporte ODBC no contexto do [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
-## Benefícios  
+## <a name="benefits"></a>Benefícios  
  A origem e o destino ODBC do [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] fornecem uma margem competitiva para o SSIS em projetos que lidam com o carregamento ou descarregamento de dados de bancos de dados com suporte ODBC.  
   
  A origem e o destino ODBC permitem integração de dados de alto desempenho com bancos de dados com ODBC habilitado. Ambos os componentes podem ser configurados para funcionar com associações de matriz de parâmetro row-wise para provedores ODBC de alto funcionamento com suporte a esse modo de associação e associações de parâmetro de linha única para provedores ODBC de baixo funcionamento.  
   
-## Introdução à origem e destino ODBC  
+## <a name="getting-started-with-the-odbc-source-and-destination"></a>Introdução à origem e destino ODBC  
  Antes de configurar pacotes que utilizam o [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)], você deve assegurar que os itens a seguir estejam disponíveis.  
   
 -   [Origem ODBC](../../integration-services/data-flow/odbc-source.md)  
@@ -61,10 +66,10 @@ caps.handback.revision: 10
   
  Editor de Destinos ADO NET (página Saída de Erro)  
   
-## Cenários de operação  
+## <a name="operating-scenarios"></a>Cenários de operação  
  Esta seção descreve alguns dos usos principais para os componentes de origem e destino ODBC.  
   
-### Dados de Cópia em massa de tabelas do SQL Server para qualquer tabela de banco de dados com suporte ODBC  
+### <a name="bulk-copy-data-from-sql-server-tables-to-any-odbc-supported-database-table"></a>Dados de Cópia em massa de tabelas do SQL Server para qualquer tabela de banco de dados com suporte ODBC  
  Você pode usar os componentes para copiar dados em massa de uma ou mais tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma única tabela de banco de dados com suporte ODBC.  
   
  O exemplo a seguir mostra como criar uma Tarefa de Fluxo de Dados SSIS que extrai dados de uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os carrega em uma tabela DB2.  
@@ -79,8 +84,8 @@ caps.handback.revision: 10
   
 -   Arraste um destino ODBC para a superfície de design, conecte a saída de origem ao destino ODBC e configure o destino para carregar os dados na tabela DB2 com os dados extraídos do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use o gerenciador de conexões ODBC criado anteriormente.  
   
-### Dados de Cópia em massa de tabelas de banco de dados com suporte ODBC para qualquer tabela SQL Server  
- Você pode usar os componentes para copiar dados em massa de uma ou mais tabelas de banco de dados com suporte ODBC para uma única tabela de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+### <a name="bulk-copy-data-from-odbc-supported-database-tables-to-any-sql-server-table"></a>Dados de Cópia em massa de tabelas de banco de dados com suporte ODBC para qualquer tabela SQL Server  
+ Você pode usar os componentes para copiar dados em massa de uma ou mais tabelas de banco de dados com suporte ODBC para uma única tabela de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  O exemplo a seguir mostra como criar uma Tarefa de Fluxo de Dados SSIS que extrai dados de uma tabela de banco de dados Sybase do e os carrega em uma tabela de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 10
   
 -   Arraste um destino OLE DB para a superfície de design, conecte a saída de origem ao destino OLE DB e configure o destino para carregar os dados na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com os dados extraídos do banco de dados Sybase. Use o gerenciador de conexões OLE DB criado anteriormente.  
   
-## Tipos de dados com suporte  
+## <a name="supported-data-types"></a>Tipos de dados com suporte  
  Os componentes ODBC Bulk SSIS oferecem suporte a todos os tipos de dados ODBC internos, incluindo suporte para objetos grandes (CLOBs e BLOBs).  
   
 Não há nenhum suporte de tipo de dados para tipos C extensíveis conforme descrito nas especificações ODBC 3.8. A tabela a seguir descreve quais tipos de dados SSIS são usados para cada tipo ODBC SQL. Um desenvolvedor de SSIS pode anular o mapeamento padrão e pode especificar um tipo de dados SSIS diferente para colunas de entrada/saída sem afetar o desempenho para as conversões de dados necessárias.  
@@ -128,7 +133,7 @@ Não há nenhum suporte de tipo de dados para tipos C extensíveis conforme desc
 |SQL_INTERVAL_YEAR<br /><br />SQL_INTERVAL_MONTH<br /><br />SQL_INTERVAL_DAY<br /><br />SQL_INTERVAL_HOUR<br /><br />SQL_INTERVAL_MINUTE<br /><br />SQL_INTERVAL_SECOND<br /><br />SQL_INTERVAL_YEAR_TO_MONTH<br /><br />SQL_INTERVAL_DAY_TO_HOUR<br /><br />SQL_INTERVAL_DAY_TO_MINUTE<br /><br />SQL_INTERVAL_DAY_TO_SECOND<br /><br />SQL_INTERVAL_HOUR_TO_MINUTE<br /><br />SQL_INTERVAL_HOUR_TO_SECOND<br /><br />SQL_INTERVAL_MINUTE_TO_SECOND|DT_WSTR|  
 |Tipos de dados específicos de provedor|DT_BYTES<br /><br />DT_IMAGE|DT_BYTES será usado se o comprimento de coluna for menor ou igual a 8.000.<br /><br />DT_IMAGE será usado se o comprimento de coluna for zero ou maior que 8.000.|  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
   
 -   [Origem ODBC](../../integration-services/data-flow/odbc-source.md)  
   

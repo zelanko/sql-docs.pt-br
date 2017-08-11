@@ -1,26 +1,31 @@
 ---
-title: "Reiniciar pacotes por meio de pontos de verifica&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pontos de verificação [Integration Services]"
-  - "reiniciando pacotes"
-  - "iniciando pacotes"
+title: "Reiniciar pacotes por meio de pontos de verificação | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- checkpoints [Integration Services]
+- restarting packages
+- starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 5207ffe29852aa5ed10144a3184917704682c49e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Reiniciar pacotes por meio de pontos de verifica&#231;&#227;o
+# <a name="restart-packages-by-using-checkpoints"></a>Reiniciar pacotes por meio de pontos de verificação
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode reinicializar pacotes que falharam a partir do ponto de falha, em vez de executar novamente todo o pacote. Se um pacote estiver configurado para usar pontos de verificação, serão gravadas informações sobre a execução do pacote em um arquivo de ponto de verificação. Quando o pacote com falha é executado novamente, o arquivo do ponto de verificação é usado para reiniciar o pacote a partir do ponto de falha. Se o pacote for executado com êxito, o arquivo de ponto de verificação é excluído e recriado na próxima vez que o pacote for executado.  
   
  Usar pontos de verificação em um pacote fornece os seguintes benefícios:  
@@ -33,7 +38,7 @@ caps.handback.revision: 54
   
  Se um pacote for configurado para usar pontos de verificação, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] capturará o ponto de reinicialização no arquivo de ponto de verificação. O tipo de contêiner que falha e a implementação de recursos como transações afetam o ponto de reinicialização registrado no arquivo de ponto de verificação. Os valores atuais das variáveis também são capturados no arquivo de ponto de verificação. No entanto, os valores de variáveis que têm o tipo de dados **Object** não são salvos em arquivos de ponto de verificação.  
   
-## Definindo os pontos de reinicialização  
+## <a name="defining-restart-points"></a>Definindo os pontos de reinicialização  
  O contêiner host da tarefa que encapsula uma única tarefa é a menor unidade atômica de trabalho que pode ser reiniciada. O contêiner Loop Foreach e um contêiner transacionado também são tratados como unidades atômicas de trabalho.  
   
  Se um pacote for interrompido enquanto um contêiner transacionado estiver executando, a transação será encerrada e qualquer trabalho realizado pelo contêiner será revertido. Quando o pacote for reinicializado, o contêiner que falhou será executado novamente. A conclusão de qualquer contêiner filho de contêiner transacionado não é registrada no arquivo de ponto de verificação. Portanto, quando o pacote for reinicializado, o contêiner transacionado e seus contêineres filho serão executados novamente.  
@@ -47,7 +52,7 @@ caps.handback.revision: 54
   
  Um pacote só pode ser reinicializado no nível de fluxo de controle. Não é possível reinicializar um pacote no meio de um fluxo de dados. Para evitar executar novamente todo o fluxo de dados, o pacote deve ser projetado para incluir diversos fluxos de dados, cada um usando uma tarefa de Fluxo de Dados diferente. Deste modo o pacote pode ser reinicializado, executando apenas uma tarefa de Fluxo de Dados novamente.  
   
-## Configurando um pacote para reiniciar  
+## <a name="configuring-a-package-to-restart"></a>Configurando um pacote para reiniciar  
  O arquivo de ponto de verificação inclui os resultados da execução de todos os contêineres concluídos, os valores atuais do sistema e variáveis definidas pelo usuário e informações de configuração do pacote. O arquivo também inclui o identificador exclusivo do pacote. Para reiniciar um pacote com êxito, o identificador do pacote no arquivo de ponto de verificação e o pacote devem corresponder; caso contrário a reinicialização falhará. Isto impede um pacote de usar um arquivo de ponto de verificação escrito por uma versão de pacote diferente. Se o pacote executar com êxito, após sua reinicialização o arquivo do ponto de verificação é excluído.  
   
  A seguinte tabela lista as propriedades de pacote definidas para implementar pontos de verificação.  
@@ -62,7 +67,7 @@ caps.handback.revision: 54
   
  É possível usar a propriedade ForceExecutionResult para testar o uso de pontos de verificação em um pacote. Ao definir ForceExecutionResult de uma tarefa ou contêiner como Falha, você pode imitar uma falha em tempo real. Ao executar novamente o pacote, a tarefa e os contêineres que falharam serão executados de novo.  
   
-### Uso do ponto de verificação  
+### <a name="checkpoint-usage"></a>Uso do ponto de verificação  
  A propriedade CheckpointUsage pode ser definida com os seguintes valores:  
   
 |Value|Description|  
@@ -74,20 +79,44 @@ caps.handback.revision: 54
 > [!NOTE]  
 >  A opção **/CheckPointing on** de dtexec equivale a definir a propriedade **SaveCheckpoints** do pacote como **True**, e a propriedade **CheckpointUsage** como Always. Para saber mais, veja [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
-## Protegendo arquivos de ponto de verificação  
- A proteção em nível de pacote não inclui proteção a arquivos de ponto de verificação; você deve proteger esses arquivos separadamente. Dados de ponto de verificação podem ser armazenados somente no sistema arquivos e você deve usar uma ACL (lista de controle de acesso) do sistema operacional para proteger o local ou a pasta onde armazena o arquivo. É importante proteger os arquivos de ponto de verificação, pois eles contém informações sobre o estado do pacote, incluindo os valores atuais de variáveis. Por exemplo, uma variável pode conter um conjunto de registros com muitas linhas de dados particulares como números de telefone. Para obter mais informações, consulte [Acesso aos arquivos usados por pacotes](../../integration-services/security/access-to-files-used-by-packages.md).  
+## <a name="securing-checkpoint-files"></a>Protegendo arquivos de ponto de verificação  
+ A proteção em nível de pacote não inclui proteção a arquivos de ponto de verificação; você deve proteger esses arquivos separadamente. Dados de ponto de verificação podem ser armazenados somente no sistema arquivos e você deve usar uma ACL (lista de controle de acesso) do sistema operacional para proteger o local ou a pasta onde armazena o arquivo. É importante proteger os arquivos de ponto de verificação, pois eles contém informações sobre o estado do pacote, incluindo os valores atuais de variáveis. Por exemplo, uma variável pode conter um conjunto de registros com muitas linhas de dados particulares como números de telefone. Para obter mais informações, consulte [Acesso aos arquivos usados por pacotes](../../integration-services/security/security-overview-integration-services.md#files).  
+
+## <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Configurar pontos de verificação para reinicializar um pacote com falha
+  Você pode configurar os pacotes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para reiniciá-los a partir de um ponto de falha em vez de executar novamente todo o pacote, selecionando as propriedades que se aplicam aos pontos de verificação.  
   
-### Para configurar as propriedades de ponto de verificação  
+### <a name="to-configure-a-package-to-restart"></a>Para configurar um pacote para reinicialização  
   
--   [Configurar pontos de verificação para reinicializar um pacote com falha](../../integration-services/packages/configure-checkpoints-for-restarting-a-failed-package.md)  
+1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote que você deseja configurar.  
   
-## Recursos externos  
+2.  No **Gerenciador de Soluções**, clique duas vezes no pacote para abri-lo.  
+  
+3.  Clique na guia **Fluxo de Controle** .  
+  
+4.  Clique com o botão direito do mouse em qualquer lugar da tela de fundo da superfície de design do fluxo de controle e clique em **Propriedades**.  
+  
+5.  Defina a propriedade SaveCheckpoints como **True**.  
+  
+6.  Digite o nome do arquivo de ponto de verificação na propriedade CheckpointFileName.  
+  
+7.  Defina a propriedade CheckpointUsage como um dos dois valores:  
+  
+    -   Selecione **Always** para reiniciar o pacote partindo sempre de um ponto de verificação.  
+  
+        > [!IMPORTANT]  
+        >  Um erro ocorrerá se o arquivo do ponto de verificação não estiver disponível.  
+  
+    -   Selecione **IfExists** para reiniciar o pacote apenas se o arquivo de ponto de verificação estiver disponível.  
+  
+8.  Configure as tarefas e os contêineres a partir dos quais o pacote pode ser reiniciado.  
+  
+    -   Clique com o botão direito do mouse em uma tarefa ou contêiner e clique em **Propriedades**.  
+  
+    -   Defina a propriedade FailPackageOnFailure como **True** para cada tarefa e contêiner selecionado.  
+    
+## <a name="external-resources"></a>Recursos externos  
   
 -   Artigo técnico, [Reinicialização automática de pacotes de SSIS depois de Failover ou Falha](http://go.microsoft.com/fwlink/?LinkId=200407), em social.technet.microsoft.com (a página pode estar em inglês)  
   
 -   ARtigo de suporte, [Pontos de verificação do SSIS não são honrados para itens de contêiner Loop For ou Loop Foreach](http://go.microsoft.com/fwlink/?LinkId=241633), em support.microsoft.com.  
-  
-## Consulte também  
- [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-  
-  
+

@@ -1,26 +1,31 @@
 ---
-title: "Confirmar ou Enviar um Conjunto de Altera&#231;&#245;es (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Confirmar ou enviar um conjunto de alterações (Master Data Services) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fd91aef621a480510896500070bd36e55d778d66
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Confirmar ou Enviar um Conjunto de Altera&#231;&#245;es (Master Data Services)
+# <a name="commit-or-submit-a-changeset-master-data-services"></a>Confirmar ou Enviar um Conjunto de Alterações (Master Data Services)
   Um conjunto de alterações é uma coleção de alterações pendentes nos dados mestre. Se as alterações da entidade não exigirem a aprovação do administrador, você poderá confirmar o conjunto de alterações. Se as alterações da entidade exigirem a aprovação do administrador, você poderá enviar o conjunto de alterações para a aprovação.  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** . Para obter mais informações, consulte [Permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
   
@@ -28,7 +33,7 @@ caps.handback.revision: 10
   
 -   Se as alterações da entidade exigirem a aprovação do administrador, você poderá enviar o conjunto de alterações para a aprovação somente se possui-lo e se o status do conjunto estiver aberto ou for rejeitado.  
   
-## Para confirmar um conjunto de alterações local  
+## <a name="to-commit-a-local-changeset"></a>Para confirmar um conjunto de alterações local  
  A opção de confirmação só estará disponível para conjuntos de alterações locais em entidades em que o Administrador de Entidade não tiver habilitado a necessidade de aprovação.  
   
 1.  Na home page do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , escolha o modelo e a versão e, em seguida, clique em **Explorer**.  
@@ -39,7 +44,7 @@ caps.handback.revision: 10
   
 4.  Clique em **Confirmar**.  
   
-## Para enviar um conjunto de alterações  
+## <a name="to-submit-a-changeset"></a>Para enviar um conjunto de alterações  
  A opção de envio só estará disponível em conjuntos de alterações em entidades em que o Administrador de Entidade tiver habilitado a necessidade de aprovação.  
   
 1.  Na home page do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , escolha o modelo e a versão e, em seguida, clique em **Explorer**.  
@@ -50,12 +55,12 @@ caps.handback.revision: 10
   
 4.  Clique em **Enviar**.  
   
-## Próximas etapas  
+## <a name="next-steps"></a>Próximas etapas  
  [Aprovar ou rejeitar um conjunto de alterações &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criar um conjunto de alterações &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
- [Aplicar e atualizar um conjunto de alterações &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
+ [Aplicar e atualizar um conjunto de alterações &#40; Master Data Services &#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [Aprovar ou rejeitar um conjunto de alterações &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
   
