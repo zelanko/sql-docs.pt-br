@@ -17,14 +17,14 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 caps.latest.revision: 45
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ed23ebf2bd6cbecbd028488c5188368e1a076d46
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: a60c685ebdfd9d549e100cf5b5eda0ab056c1c46
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="deploying-a-data-processing-extension-to-a-report-server"></a>Implantando uma extensão de processamento de dados para um servidor de relatório
@@ -34,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>Para implantar um assembly de extensão de processamento de dados  
   
-1.  Copie o assembly do local de preparo para o diretório bin do servidor de relatório no qual você deseja usar a extensão de processamento de dados. O local padrão do diretório bin do servidor de relatório é %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \< *Nome da instância*> Services\ReportServer\bin..  
+1.  Copie o assembly do local de preparo para o diretório bin do servidor de relatório no qual você deseja usar a extensão de processamento de dados. O local padrão do diretório bin do servidor de relatório é %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \< *Nome da instância*> Services\ReportServer\bin.  
   
     > [!NOTE]  
     >  Esta etapa impedirá uma atualização para uma instância mais nova do SQL Server. Para obter mais informações, consulte [Upgrade and Migrate Reporting Services](../../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
      O valor de **nome** é o nome exclusivo da extensão de processamento de dados. O valor de **tipo** é uma lista separada por vírgulas que inclui uma entrada para o namespace totalmente qualificado da sua classe que implementa o <xref:Microsoft.ReportingServices.Interfaces.IExtension> e <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> interfaces, seguidos do nome do seu assembly (não incluindo a extensão de arquivo. dll). Por padrão, as extensões de processamento de dados estão visíveis. Para ocultar uma extensão de interfaces do usuário, como o Gerenciador de Relatórios, adicione um atributo **Visible** ao elemento **Extension** e defina-o como **false**.  
   
-5.  Adicionar um grupo de código para seu assembly personalizado que concede **FullTrust** permissão para a sua extensão. Faça isso adicionando o grupo de códigos ao arquivo rssrvpolicy. config localizado por padrão em %ProgramFiles%\Microsoft SQL Server\\< MSRS10_50.\< *Nome da instância*> services\reportserver.. O grupo de códigos pode ter esta aparência:  
+5.  Adicionar um grupo de código para seu assembly personalizado que concede **FullTrust** permissão para a sua extensão. Faça isso adicionando o grupo de códigos ao arquivo rssrvpolicy. config localizado por padrão em %ProgramFiles%\Microsoft SQL Server\\< MSRS10_50.\< *Nome da instância*> services\reportserver. O grupo de códigos pode ter esta aparência:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

@@ -17,21 +17,21 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 caps.latest.revision: 44
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 260e104d2686ab9111c9b38c2ecf6c5da2fbdb91
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 3fbab7c48a0d522519a9e7ada9cf9c8cb1d40c7b
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="deploying-a-rendering-extension"></a>Implantando uma extensão de renderização
   Depois de ter escrito e compilado sua [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] relatar extensão de renderização em um [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] biblioteca, você precisa torná-lo detectável pelo servidor de relatório e pelo Designer de relatórios. Para fazer isso, copie a extensão para o diretório apropriado e adicione entradas para os arquivos de configuração [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] apropriados.  
   
 ## <a name="configuration-file-rendering-extension-element"></a>Elemento de extensão de renderização de arquivo de configuração  
- Quando uma extensão de renderização foi compilada em um .DLL, você adiciona uma entrada no arquivo rsreportserver.config. Por padrão, o local é %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > services\reportserver.. O elemento pai é \<renderizar >. Sob o elemento Render, existe um elemento Extension para cada extensão de renderização. O elemento **Extension** contém dois atributos, Name e Type.  
+ Quando uma extensão de renderização foi compilada em um .DLL, você adiciona uma entrada no arquivo rsreportserver.config. Por padrão, o local é %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > services\reportserver. O elemento pai é \<renderizar >. Sob o elemento Render, existe um elemento Extension para cada extensão de renderização. O elemento **Extension** contém dois atributos, Name e Type.  
   
  A tabela a seguir descreve os atributos para o elemento **Extension** para as extensões de renderização:  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-deploy-the-assembly"></a>Para implantar o assembly  
   
-1.  Copie o assembly do local de preparação para o diretório bin do servidor de relatório no qual você deseja usar a extensão de renderização. O local padrão do diretório Bin do servidor de relatório é %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > Services\ReportServer\bin..  
+1.  Copie o assembly do local de preparação para o diretório bin do servidor de relatório no qual você deseja usar a extensão de renderização. O local padrão do diretório Bin do servidor de relatório é %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > Services\ReportServer\bin.  
   
 2.  Depois da cópia do arquivo de assembly, abra o arquivo rsreportserver.config. O arquivo rsreportserver.config também está localizado no diretório bin do servidor de relatório. Você precisa criar uma entrada no arquivo de configuração para o seu arquivo de assembly de extensão. Você pode abrir o arquivo com [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou um editor de texto simples.  
   
