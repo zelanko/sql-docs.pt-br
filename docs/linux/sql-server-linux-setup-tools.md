@@ -186,8 +186,9 @@ Para instalar as ferramentas para Mac El Capitan e Serra, use os seguintes coman
 #brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install mssql-tools
-#for silent install ACCEPT_EULA=y brew install mssql-tools
+brew install --no-sandbox mssql-tools
+#for silent install: 
+#ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
 ## <a id="docker"></a>Docker
@@ -263,3 +264,4 @@ Para obter um exemplo de como usar **sqlcmd** para se conectar ao SQL Server e c
 - [Executar no Docker](quickstart-install-connect-ubuntu.md)
 
 Para obter um exemplo de como usar **bcp** para importação e exportação em massa dados, consulte [dados de cópia em massa para o SQL Server no Linux](sql-server-linux-migrate-bcp.md).
+
