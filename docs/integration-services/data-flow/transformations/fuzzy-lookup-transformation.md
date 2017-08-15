@@ -1,46 +1,51 @@
 ---
-title: "Transforma&#231;&#227;o Pesquisa Difusa | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fuzzylookuptrans.f1"
-helpviewer_keywords: 
-  - "limpando dados"
-  - "comparando dados"
-  - "delimitadores de token [Integration Services]"
-  - "índices temporários [Integration Services]"
-  - "tabelas temporárias [Integration Services]"
-  - "transformação Pesquisa Difusa"
-  - "tabelas de referência [Integration Services]"
-  - "corresponder dados similares [Integration Services]"
-  - "substituindo valores ausentes"
-  - "corrigindo dados [Integration Services]"
-  - "cache [Integration Services]"
-  - "padronizando dados [Integration Services]"
-  - "pesquisas [Integration Services]"
-  - "pontuações de confiança [Integration Services]"
-  - "correspondências difusas"
-  - "valores ausentes substituídos [Integration Services]"
-  - "limites de similaridade [Integration Services]"
+title: "Transformação pesquisa difusa | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fuzzylookuptrans.f1
+helpviewer_keywords:
+- cleaning data
+- comparing data
+- token delimiters [Integration Services]
+- temporary indexes [Integration Services]
+- temporary tables [Integration Services]
+- Fuzzy Lookup transformation
+- reference tables [Integration Services]
+- match similar data [Integration Services]
+- replacing missing values
+- correcting data [Integration Services]
+- cache [Integration Services]
+- standardizing data [Integration Services]
+- lookups [Integration Services]
+- confidence scores [Integration Services]
+- fuzzy matches
+- missing values replaced [Integration Services]
+- similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 caps.latest.revision: 75
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2c05d44e6a91c79e5a5ce71b1e26ac2f4a319a88
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transforma&#231;&#227;o Pesquisa Difusa
+# <a name="fuzzy-lookup-transformation"></a>transformação Pesquisa Difusa
   A transformação Pesquisa Difusa executa tarefas de limpeza de dados, como padronização de dados, correção de dados e fornecimento de valores ausentes.  
   
 > [!NOTE]  
->  Para obter informações mais detalhadas sobre a transformação Pesquisa Difusa, incluindo limitações de desempenho e de memória, consulte o white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604) (Pesquisa Difusa e Agrupamento Difuso no SQL Server Integration Services 2005).  
+>  Para obter informações mais detalhadas sobre a transformação Pesquisa Difusa, incluindo limitações de desempenho e de memória, consulte o white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(Pesquisa Difusa e Agrupamento Difuso no SQL Server Integration Services 2005).  
   
  A transformação Pesquisa Difusa difere da transformação Pesquisa no uso da correspondência difusa. A transformação Pesquisa usa uma junção por igualdade para localizar registros correspondentes na tabela de referência. Ela retorna registros com pelo menos um registro correspondente e retorna registros sem registros correspondentes. Por outro lado, a transformação Pesquisa Difusa usa a correspondência difusa para retornar uma ou mais correspondências aproximadas na tabela de referência.  
   
@@ -50,13 +55,13 @@ caps.handback.revision: 75
   
  Essa transformação tem uma entrada e uma saída.  
   
- Apenas colunas com os tipos de dados **DT_WSTR** e **DT_STR** podem ser usadas na correspondência difusa. A correspondência exata pode usar qualquer tipo de dados DTS, exceto **DT_TEXT**, **DT_NTEXT** e **DT_IMAGE**. Para obter mais informações, consulte [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Colunas que participam da junção entre a tabela de entrada e de referência deve ter tipos de dados compatíveis. Por exemplo, é válido para unir uma coluna com o tipo de dados DTS **DT_WSTR** a uma coluna com o tipo de dados **nvarchar** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mas inválido para unir uma coluna com o tipo de dados **DT_WSTR** a uma coluna com o tipo de dados **int**.  
+ Apenas colunas com os tipos de dados **DT_WSTR** e **DT_STR** podem ser usadas na correspondência difusa. A correspondência exata pode usar qualquer tipo de dados DTS, exceto **DT_TEXT**, **DT_NTEXT**e **DT_IMAGE**. Para obter mais informações, consulte [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Colunas que participam da junção entre a tabela de entrada e de referência deve ter tipos de dados compatíveis. Por exemplo, é válido para unir uma coluna com o tipo de dados DTS **DT_WSTR** a uma coluna com o tipo de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **do** , mas inválido para unir uma coluna com o tipo de dados **DT_WSTR** a uma coluna com o tipo de dados **int** .  
   
  Você pode personalizar essa transformação especificando a quantidade máxima de memória, o algoritmo de comparação de linha e o cache de índices e tabelas de referência que a transformação usa.  
   
  A quantidade de memória que a transformação Pesquisa Difusa usa pode ser configurada definindo a propriedade personalizada MaxMemoryUsage. Você pode especificar o número de megabytes (MB) ou usar o valor 0 para permitir que a transformação use uma quantidade dinâmica de memória com base nas suas necessidades e na memória física disponível. A propriedade personalizada MaxMemoryUsage pode ser atualizada por uma expressão de propriedade quando o pacote é carregado. Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Usar expressões de propriedade em pacotes](../../../integration-services/expressions/use-property-expressions-in-packages.md) e [Propriedades personalizadas da transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
-## Controlando o comportamento da correspondência difusa  
+## <a name="controlling-fuzzy-matching-behavior"></a>Controlando o comportamento da correspondência difusa  
  A transformação Pesquisa Difusa inclui três recursos para personalizar a pesquisa: número máximo de correspondências para retornar por linha de entrada, delimitadores de token e limites de similaridade.  
   
  A transformação retorna zero ou mais correspondências até o número de correspondências especificadas. A especificação de um número máximo de correspondências não garante que a transformação retorne o número máximo de correspondências; apenas garante que a transformação retorne no máximo o número de correspondências referido. Se você definir o número máximo de correspondências como um valor maior que 1, a saída da transformação poderá incluir mais de uma linha por pesquisa, e algumas das linhas podem ser duplicatas.  
@@ -79,7 +84,7 @@ caps.handback.revision: 75
   
  A transformação usa a conexão com o banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para criar as tabelas temporárias usadas pelo algoritmo de correspondência difusa.  
   
-## Executando a Transformação Pesquisa Difusa  
+## <a name="running-the-fuzzy-lookup-transformation"></a>Executando a Transformação Pesquisa Difusa  
  Quando o pacote executar a transformação pela primeira vez, ela copiará a tabela de referência, adicionará uma chave com um tipo de dados de inteiro à tabela nova e criará um índice na coluna-chave. Em seguida, a transformação criará um índice, denominado índice de correspondência, na cópia da tabela de referência. O índice de correspondência armazena os resultados da criação de tokens dos valores nas colunas de entrada de transformação e, em seguida, a transformação usa os tokens na operação de pesquisa. O índice de correspondência é uma tabela em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Quando o pacote for executado novamente, a transformação poderá usar um índice de correspondência existente ou criar um índice novo. Se a tabela de referência for estática, o pacote poderá evitar o processo potencialmente caro de recriar o índice para sessões repetidas de limpeza de dados. Se você optar por usar um índice existente, o índice será criado na primeira vez em que o pacote for executado. Se várias transformações de Pesquisa Difusa usarem a mesma tabela de referência, todas elas poderão usar o mesmo índice. Para usar novamente o índice, as operações de pesquisa devem ser idênticas; a pesquisa deve usar as mesmas colunas. Você pode nomear o índice e selecionar a conexão com o banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que salva o índice.  
@@ -95,32 +100,32 @@ caps.handback.revision: 75
 |**GenerateNewIndex**|Cria um índice novo, mas não o salva.|  
 |**ReuseExistingIndex**|Reutiliza um índice existente.|  
   
-### Manutenção da tabela de índices de correspondência  
+### <a name="maintenance-of-the-match-index-table"></a>Manutenção da tabela de índices de correspondência  
  A opção **GenerateAndMaintainNewIndex** instala acionadores na tabela de referência para manter a tabela de índices de referência e a tabela de referência sincronizadas. Se você precisar remover o gatilho instalado, será preciso executar o procedimento armazenado **sp_FuzzyLookupTableMaintenanceUnInstall** e fornecer o nome especificado na propriedade MatchIndexName como o valor de parâmetro de entrada.  
   
- Não exclua a tabela de índices de correspondência mantida antes de executar o procedimento armazenado **sp_FuzzyLookupTableMaintenanceUnInstall**. Se a tabela de índices de correspondência for excluída, os acionadores na tabela de referência não serão executados corretamente. Todas as atualizações subsequentes da tabela de referência falharão até que você descarte manualmente os acionadores da tabela de referência.  
+ Não exclua a tabela de índices de correspondência mantida antes de executar o procedimento armazenado **sp_FuzzyLookupTableMaintenanceUnInstall** . Se a tabela de índices de correspondência for excluída, os acionadores na tabela de referência não serão executados corretamente. Todas as atualizações subsequentes da tabela de referência falharão até que você descarte manualmente os acionadores da tabela de referência.  
   
  O comando SQL TRUNCATE TABLE não chama os acionadores DELETE. Se o comando TRUNCATE TABLE for usado na tabela de referência, a tabela de referência e o índice de correspondência não serão mais sincronizados, e a transformação Pesquisa Difusa falhará. Visto que os acionadores que mantêm a tabela de índices de correspondência são instalados na tabela de referência, você deverá usar o comando SQL DELETE em vez do TRUNCATE TABLE.  
   
 > [!NOTE]  
->  Quando você seleciona **Manter índice armazenado** na guia **Tabela de Referência** de **Editor de Transformação Pesquisa Difusa**, a transformação usa procedimentos armazenados gerenciados para manter o índice. Esses procedimentos armazenados gerenciados usam o recurso de integração de CLR (Common Language Runtime) no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por padrão, a integração de CLR no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não está habilitada. Para usar a funcionalidade **Manter índice armazenado** , você deve habilitar a integração de CLR. Para obter mais informações, consulte [Enabling CLR Integration](../Topic/Enabling%20CLR%20Integration.md).  
+>  Quando você seleciona **Manter índice armazenado** na guia **Tabela de Referência** de **Editor de Transformação Pesquisa Difusa**, a transformação usa procedimentos armazenados gerenciados para manter o índice. Esses procedimentos armazenados gerenciados usam o recurso de integração de CLR (Common Language Runtime) no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por padrão, a integração de CLR no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não está habilitada. Para usar a funcionalidade **Manter índice armazenado** , você deve habilitar a integração de CLR. Para obter mais informações, consulte [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
 >   
 >  Como a opção **Manter índice armazenado** requer a integração CLR, esse recurso funciona apenas quando você seleciona uma tabela de referência em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em que a integração CLR está habilitada.  
   
-## Comparação de linhas  
+## <a name="row-comparison"></a>Comparação de linhas  
  Quando você configura a transformação Pesquisa Difusa, é possível especificar o algoritmo de comparação que a transformação usa para localizar registros correspondentes na tabela de referência. Se você definir a propriedade Exhaustive como **True**, a transformação comparará todas as linhas na entrada com todas as outras linhas na tabela de referência. Esse algoritmo de comparação pode produzir resultados mais precisos, mas é provável que faça com que a transformação seja executada com mais lentidão, a menos que o número de linhas na tabela de referência seja pequeno. Se a propriedade Exhaustive for definida como **True**, toda a tabela de referência será carregada na memória. Para evitar problemas de desempenho, é aconselhável definir a propriedade Exhaustive como **True** somente durante o desenvolvimento de pacote.  
   
  Se a propriedade Exhaustive for definida como **False**, a transformação Pesquisa Difusa retornará apenas as correspondências que têm, pelo menos, um token ou uma subcadeia de caracteres indexado (a subcadeia de caracteres é denominada *q-gram*) em comum com o registro de entrada. Para maximizar a eficiência das pesquisas, apenas um subconjunto dos tokens em cada linha da tabela é indexado na estrutura de índice invertida que a transformação Pesquisa Difusa usa para localizar correspondências. Quando o conjunto de dados de entrada for pequeno, você poderá definir Exhaustive como **True** a fim de evitar a perda de correspondências para as quais não haja tokens em comum na tabela de índice.  
   
-## Cache de índices e tabelas de referência  
+## <a name="caching-of-indexes-and-reference-tables"></a>Cache de índices e tabelas de referência  
  Quando você configura a transformação Pesquisa Difusa, é possível especificar se a transformação deve armazenar parcialmente em cache o índice e a tabela de referência na memória antes de a transformação realizar o seu trabalho. Se a propriedade WarmCaches for definida como **True**, o índice e a tabela de referência serão carregados na memória. Quando a entrada tiver muitas linhas, defina a propriedade WarmCaches como **True** para melhorar o desempenho da transformação. Quando o número de linhas de entrada for pequeno, defina a propriedade WarmCaches como **False** para tornar mais rápida a reutilização de um índice grande.  
   
-## Tabelas e índices temporários  
- Durante a execução, a transformação Pesquisa Difusa cria objetos temporários, como tabelas e índices, no banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a que a transformação se conecta. O tamanho dessas tabelas e índices temporários é proporcional ao número de linhas e tokens na tabela de referência e ao número de tokens que a transformação Pesquisa Difusa cria; por esse motivo, eles podem consumir uma grande quantidade de espaço em disco. A transformação também consulta as tabelas temporárias. Portanto, você deverá considerar a conexão da transformação Pesquisa Difusa a uma instância de não produção de um banco de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], especialmente se o servidor de produção tiver espaço em disco disponível limitado.  
+## <a name="temporary-tables-and-indexes"></a>Tabelas e índices temporários  
+ Durante a execução, a transformação Pesquisa Difusa cria objetos temporários, como tabelas e índices, no banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a que a transformação se conecta. O tamanho dessas tabelas e índices temporários é proporcional ao número de linhas e tokens na tabela de referência e ao número de tokens que a transformação Pesquisa Difusa cria; por esse motivo, eles podem consumir uma grande quantidade de espaço em disco. A transformação também consulta as tabelas temporárias. Portanto, você deverá considerar a conexão da transformação Pesquisa Difusa a uma instância de não produção de um banco de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , especialmente se o servidor de produção tiver espaço em disco disponível limitado.  
   
  O desempenho dessa transformação poderá melhorar se as tabelas e os índices que ele usa estiverem no computador local. Se a tabela de referência que a transformação Pesquisa Difusa usar estiver no servidor de produção, considere copiar a tabela a um servidor de não produção e configurar a transformação Pesquisa Difusa para acessar a cópia. Com isso, impede-se que as consultas de pesquisa consumam recursos do servidor de produção. Além disso, se a transformação Pesquisa Difusa mantiver o índice de correspondência, ou seja, se MatchIndexOptions for definido como **GenerateAndMaintainNewIndex**, a transformação poderá bloquear a tabela de referência durante a operação de limpeza dos dados e impedir que outros usuários e aplicativos acessem essa tabela.  
   
-## Configurando a transformação pesquisa difusa  
+## <a name="configuring-the-fuzzy-lookup-transformation"></a>Configurando a transformação pesquisa difusa  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Pesquisa Difusa** , clique em um dos seguintes tópicos:  
@@ -133,16 +138,16 @@ caps.handback.revision: 75
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](../Topic/Common%20Properties.md)  
+-   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
--   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
+-   [Propriedades personalizadas da transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  Para obter detalhes sobre como definir as propriedades de um componente de fluxo de dados, consulte [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Transformação Pesquisa](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [Transformação Agrupamento Difuso](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Transformação agrupamento difuso](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
