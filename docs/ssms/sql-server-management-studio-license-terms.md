@@ -14,11 +14,11 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 51c7de44c90a78293fc3777a92261e30fbc5f28c
+ms.translationtype: HT
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 0569452520fad4183c4de2f15c59c7ca3a37586b
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - Termos de Licença
@@ -110,11 +110,13 @@ da Microsoft referentes a este software, salvo quando outros termos acompanharem
   
 **11.   EFEITO LEGAL.** Este contrato descreve alguns direitos legais. Você pode ter outros direitos de acordo com as leis do seu país. Você também pode ter direitos em relação à parte de quem o software foi adquirido. Este contrato não altera seus direitos previstos nas leis do seu país, caso essas leis não o permitam.  
   
-**12.   ISENÇÃO DE GARANTIA. O software é fornecido "no estado em que se encontra". Você assume o risco de usá-las. A Microsoft não oferece garantias nem condições contratuais. Você pode ter direitos de consumidor adicionais ou garantias estatutárias previstos em leis locais, que este contrato não pode alterar. Até o limite permitido pelas leis locais, a Microsoft exclui as garantias implícitas de comercialização, adequação a uma finalidade específica e não violação.**  
+**12.   O software pode incluir a versão prévia, beta ou outros recursos de pré-lançamento ou software oferecidos pela Microsoft, conforme descrito na documentação. VERSÕES PRÉVIAS SÃO FORNECIDAS "NO ESTADO," "COM TODAS AS FALHAS" E "CONFORME DISPONÍVEL" E SÃO EXCLUÍDAS DA GARANTIA LIMITADA E CONTRATOS DE NÍVEL DE SERVIÇO. As Versões prévias podem não ser contempladas pelo atendimento ao cliente. Versões prévias podem estar sujeitas a compromissos de segurança, conformidade e privacidade reduzidos ou diferentes. Podemos alterar ou descontinuar Versões prévias a qualquer momento sem aviso prévio. Podemos também optar por não liberar uma Versão prévia em "Disponibilidade geral".**
+
+**13.   ISENÇÃO DE GARANTIA. O software é licenciado "no estado em que se encontra." Você assume o risco de usá-las. A Microsoft não oferece garantias nem condições contratuais. Você pode ter direitos de consumidor adicionais ou garantias estatutárias previstos em leis locais, que este contrato não pode alterar. Até o limite permitido pelas leis locais, a Microsoft exclui as garantias implícitas de comercialização, adequação a uma finalidade específica e não violação.**  
   
 **PARA A AUSTRÁLIA - Você tem garantias estatutárias resguardadas pela Lei de Consumo Australiana, e nada nestes termos se destina a afetar esses direitos.**  
   
-**13.   LIMITAÇÕES E EXCLUSÕES DE RECURSOS E DANOS. A indenização por danos diretos pela Microsoft e seus fornecedores restringe-se ao valor de US$ 5,00 (cinco dólares americanos). Você não poderá reaver outros danos, incluindo danos consequenciais, por lucros cessantes, especiais, indiretos ou incidentais.**  
+**14.   LIMITAÇÕES E EXCLUSÕES DE RECURSOS E DANOS. A indenização por danos diretos pela Microsoft e seus fornecedores restringe-se ao valor de US$ 5,00 (cinco dólares americanos). Você não poderá reaver outros danos, incluindo danos consequenciais, por lucros cessantes, especiais, indiretos ou incidentais.**  
 Essa limitação se aplica a  
 * tudo o que estiver relacionado a softwares, serviços, conteúdo (incluindo o código) em sites da Internet de terceiros ou a programas de terceiros; e  
 * requerimentos judiciais ou extrajudiciais por violação de garantia ou condição, responsabilidade objetiva, negligência ou outro ato ilícito extracontratual na extensão permitida pela legislação aplicável.  
