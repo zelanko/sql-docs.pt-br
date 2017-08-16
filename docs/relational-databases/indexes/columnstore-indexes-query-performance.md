@@ -15,11 +15,11 @@ caps.latest.revision: 23
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b16232d4a183a75dd9cf76e57ca0751df19e3a2f
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 16e5ac5c58c00568541aa10352b11017c1bd9d3e
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="columnstore-indexes---query-performance"></a>Índices columnstore – desempenho da consulta
@@ -116,13 +116,17 @@ ms.lasthandoff: 06/22/2017
  ¹Aplica-se ao SQL Server 2016, Banco de Dados SQL V12 Premium Edition e SQL Data Warehouse    
     
 ### <a name="aggregate-pushdown"></a>Aplicação de agregação    
- Um caminho de execução normal para a computação de agregação buscar as linhas de qualificação do nó SCAN e agregar os valores em modo de lote.  Embora isso ofereça bom desempenho, no SQL Server 2016 a operação de agregação pode ser enviada por push para o nó SCAN para melhorar o desempenho da computação de agregação em ordens de magnitude além da execução do modo de lote, desde que as condições a seguir sejam atendidas    
-    
--   Os operadores de agregação com suporte são MIN, MAX, SUM, COUNT, AVG    
-    
--   Qualquer tipo de dados <= 64 bits tem suporte.  Por exemplo, bigint tem suporte já que seu tamanho é de 8 bytes, mas decimal (38,6) não tem, pois seu tamanho é de 17 bytes. Além disso, não há suporte para nenhum tipo de cadeia de caracteres    
-    
--   O operador de agregação deve ficar sobre o nó SCAN ou nó SCAN com agrupar por    
+ Um caminho de execução normal para a computação de agregação buscar as linhas de qualificação do nó SCAN e agregar os valores em modo de lote.  Embora isso ofereça bom desempenho, no SQL Server 2016 a operação de agregação pode ser enviada por push para o nó SCAN para melhorar o desempenho da computação de agregação em ordens de magnitude além da execução do modo de lote, desde que as condições a seguir sejam atendidas 
+ 
+-    As agregações são MIN, MAX, SUM, COUNT e COUNT(*). 
+-  O operador de agregação deve ficar sobre o nó SCAN ou nó SCAN com agrupar por.
+-  Essa agregação não é uma agregação de distinção.
+-  A coluna de agregação não é uma coluna de cadeia de caracteres.
+-  A coluna de agregação não é uma coluna virtual. 
+-  O tipo de dados de entrada e saída deve ser um dos seguintes e deve ter menos de 64 bits.
+    -  Tiny int, int, big int, small int, bit
+    -  Small money, money, decimal e numeric com precisão < = 18
+    -  Small date, date, datetime, datetime2, time
     
  A propagação de agregação é ainda mais acelerada pela agregação eficiente nos dados compactados/codificados em execução amigável a cache e aproveitando SIMD    
     
@@ -160,12 +164,12 @@ FROM FactResellerSalesXL_CCI
 -   Expressões que são avaliadas como NULOs não têm suporte    
     
 ## <a name="see-also"></a>Consulte também    
- Guia de índices Columnstore     
- Carregamento de dados dos índices columnstore     
+ Guia de Índices columnstore     
+ Carregamento de dados dos Índices columnstore     
  Resumo de recursos com versão dos índices columnstore     
- [Desempenho de consultas de índices ColumnStore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)     
+ [Desempenho de consultas de Índices columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)     
  [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
- Índices columnstore para Data Warehouse     
+ Índices columnstore para Data Warehousing     
  [Desfragmentação de índices columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)    
     
   

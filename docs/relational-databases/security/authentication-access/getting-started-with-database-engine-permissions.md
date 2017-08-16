@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 16d16229a267564977addc768e04e804d0b163cf
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 376e591e28bbdddbd635392b24c3d6652f3bd94d
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Guia de Introdução às permissões do mecanismo de banco de dados
@@ -168,7 +168,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  Para conferir um gráfico mostrando as relações entre as entidades de segurança [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e o servidor e os objetos de banco de dados, consulte [Hierarquia de permissões &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
 ## <a name="permissions-vs-fixed-server-and-fixed-database-roles"></a>Permissões versus Funções fixas de banco de dados e de servidor  
- As permissões das funções fixas de servidor e de banco de dados são semelhantes, mas não são exatamente as mesmas que as permissões granulares. Por exemplo, membros da função de servidor fixa `sysadmin` têm todas as permissões na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], assim como os logons com a permissão `CONTROL SERVER` . Mas a concessão da permissão `CONTROL SERVER` não torna um logon membro da função de servidor fixa sysadmin, e a adição de um logon à função de servidor fixa  `sysadmin` não concede explicitamente ao logon a permissão  `CONTROL SERVER` . Às vezes, um procedimento armazenado verificará as permissões consultando a função fixa e não verificando a permissão granular. Por exemplo, desanexar um banco de dados exige a associação à função de banco de dados fixa `db_owner` . A permissão `CONTROL DATABASE` equivalente não é suficiente. Esses dois sistemas operam em paralelo, mas raramente interagem entre si. A Microsoft recomenda, sempre que possível, o uso do sistema de permissão granular mais recente em vez das funções fixas.  
+ As permissões das funções fixas de servidor e de banco de dados são semelhantes, mas não são exatamente as mesmas que as permissões granulares. Por exemplo, membros da função de servidor fixa `sysadmin` têm todas as permissões na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], assim como os logons com a permissão `CONTROL SERVER` . Mas a concessão da permissão `CONTROL SERVER` não torna um logon membro da função de servidor fixa sysadmin e a adição de um logon à função de servidor fixa `sysadmin` não concede explicitamente ao logon a permissão `CONTROL SERVER`. Às vezes, um procedimento armazenado verificará as permissões consultando a função fixa e não verificando a permissão granular. Por exemplo, desanexar um banco de dados exige a associação à função de banco de dados fixa `db_owner` . A permissão `CONTROL DATABASE` equivalente não é suficiente. Esses dois sistemas operam em paralelo, mas raramente interagem entre si. A Microsoft recomenda, sempre que possível, o uso do sistema de permissão granular mais recente em vez das funções fixas.
   
 ## <a name="monitoring-permissions"></a>Permissões de monitoramento  
  Os modos de exibição a seguir retornam informações de segurança.  

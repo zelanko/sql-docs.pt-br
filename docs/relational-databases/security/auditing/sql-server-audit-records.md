@@ -1,7 +1,7 @@
 ---
 title: Registros de auditoria do SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,30 +16,30 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 21e4ed91a72a564ec39632899f81131fa4e7caf5
+ms.translationtype: HT
+ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
+ms.openlocfilehash: ef3a6055836ea2b54d68f162b07b16eb3357a3dd
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="sql-server-audit-records"></a>Registros de auditoria do SQL Server
   O recurso Auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite examinar grupos de eventos e eventos individuais no nível do servidor e no nível do banco de dados. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Auditorias consistem em zero ou mais itens de ação de auditoria registrados em um *destino*de auditoria. O destino de auditoria pode ser um arquivo binário, o log de eventos de Aplicativo do Windows ou o log de eventos de Segurança do Windows. Os registros enviados ao destino podem conter os elementos descritos na tabela a seguir.  
+ Auditorias consistem em zero ou mais itens de ação de auditoria registrados em um *destino*de auditoria. O destino de auditoria pode ser um arquivo binário, o log de eventos de Aplicativo do Windows ou o log de eventos de Segurança do Windows. Os registros enviados ao destino podem conter os elementos descritos na tabela a seguir:  
   
 |Nome da coluna|Descrição|Tipo|Sempre disponível|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Data/hora em que a ação auditável é acionada.|**datetime2**|Sim|  
 |**sequence_no**|Rastreia a sequência de registros dentro de um único registro de auditoria que é muito grande para se ajustar no buffer de gravação das auditorias.|**int**|Sim|  
 |**action_id**|ID da ação<br /><br /> Dica: para usar **action_id** como um predicado, ele deve ser convertido de uma cadeia de caracteres para um valor numérico. Para obter mais informações, veja [Filter SQL Server Audit on action_id / class_type predicate](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)(Filtrar a Auditoria do SQL Server no predicado action_id / class_type).|**varchar(4)**|Sim|  
-|**succeeded**|Indica se a ação que acionou o evento foi realizada com êxito|**bit** – 1 = Êxito, 0 = Falha|Sim|  
+|**succeeded**|Indica se a verificação de permissão da ação que aciona o evento de auditoria teve êxito ou falhou. |**bit**<br /> – 1 = Êxito, <br />0 = Falha|Sim|  
 |**permission_bitmask**|Quando aplicável, mostra as permissões concedidas, negadas ou revogadas|**bigint**|Não|  
-|**is_column_permission**|Sinalizador que indica uma permissão no nível da coluna|**bit** – 1 = Verdadeiro, 0 = Falso|Não|  
+|**is_column_permission**|Sinalizador que indica uma permissão no nível da coluna|**bit** <br />– 1 = True, <br />0 = False|Não|  
 |**session_id**|Identificação da sessão em que ocorreu o evento.|**int**|Sim|  
 |**server_principal_id**|ID do contexto de logon em que a ação é executada.|**int**|Sim|  
 |**database_principal_id**|ID do contexto do usuário de banco de dados no qual a ação é executada.|**int**|Não|  
-|**object_id**|ID primária da entidade na qual a auditoria ocorreu. Isso inclui:<br /><br /> objetos do servidor<br /><br /> bancos de dados<br /><br /> objetos de banco de dados<br /><br /> objetos de esquema|**int**|Não|  
+|**object_id**|ID primária da entidade na qual a auditoria ocorreu. Essa ID pode ser:<br /><br /> objetos do servidor<br /><br /> bancos de dados<br /><br /> objetos de banco de dados<br /><br /> objetos de esquema|**int**|Não|  
 |**target_server_principal_id**|Entidade de servidor a qual se aplica a ação auditável.|**int**|Sim|  
 |**target_database_principal_id**|Entidade de banco de dados a qual se aplica a ação auditável.|**int**|Não|  
 |**class_type**|Tipo de entidade auditável no qual ocorre a auditoria.|**varchar(2)**|Sim|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 |**server_instance_name**|Nome da instância de servidor no qual a auditoria ocorreu. Usa o formato máquina\instância padrão.|**nvarchar(120)**|Sim|  
 |**database_name**|O contexto do banco de dados no qual a ação aconteceu.|**sysname**|Não|  
 |**schema_name**|O contexto do esquema no qual a ação aconteceu.|**sysname**|Não|  
-|**object_name**|O nome da entidade na qual a auditoria ocorreu. Isso inclui:<br /><br /> objetos do servidor<br /><br /> bancos de dados<br /><br /> objetos de banco de dados<br /><br /> objetos de esquema<br /><br /> instrução TSQL (se houver)|**sysname**|Não|  
+|**object_name**|O nome da entidade na qual a auditoria ocorreu. Esse nome pode ser:<br /><br /> objetos do servidor<br /><br /> bancos de dados<br /><br /> objetos de banco de dados<br /><br /> objetos de esquema<br /><br /> instrução TSQL (se houver)|**sysname**|Não|  
 |**instrução**|instrução TSQL (se houver)|**nvarchar(4000)**|Não|  
 |**additional_information**|Qualquer informação adicional sobre o evento, armazenado em XML.|**nvarchar(4000)**|Não|  
   
@@ -114,3 +114,4 @@ ms.lasthandoff: 06/22/2017
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
   
   
+
