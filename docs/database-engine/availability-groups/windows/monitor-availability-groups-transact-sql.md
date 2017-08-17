@@ -1,29 +1,34 @@
 ---
-title: "Monitorar grupos de disponibilidade (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidade (SQL Server), monitorando"
-  - "Exibições de gerenciamento dinâmico [SQL Server], Grupos de disponibilidade AlwaysOn"
-  - "Grupos de Disponibilidade [SQL Server], réplicas de disponibilidade"
-  - "Grupos de disponibilidade [SQL Server], ouvinte"
-  - "Grupos de disponibilidade [SQL Server], bancos de dados"
-  - "exibições de catálogo [SQL Server], Grupos de Disponibilidade AlwaysOn"
+title: Monitorar grupos de disponibilidade (Transact-SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
+- dynamic management views [SQL Server], AlwaysOn Availability Groups
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], listeners
+- Availability Groups [SQL Server], databases
+- catalog views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 caps.latest.revision: 49
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3eee47f8a0a3a032e9ccf74600769c8f7388bbb1
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Monitorar grupos de disponibilidade (Transact-SQL)
+# <a name="monitor-availability-groups-transact-sql"></a>Monitorar grupos de disponibilidade (Transact-SQL)
   Para monitorar os grupos de disponibilidade e as réplicas e os bancos de dados associados usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)], o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornece um conjunto de exibições do catálogo e de gerenciamento dinâmico e propriedades de servidor. Usando as instruções SELECT [!INCLUDE[tsql](../../../includes/tsql-md.md)] , é possível usar as exibições para monitorar grupos de disponibilidade e suas réplicas e bancos de dados. As informações retornadas a um determinado grupo de disponibilidade dependem de se você está conectado à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que está hospedando a réplica primária ou uma réplica secundária.  
   
 > [!TIP]  
@@ -55,7 +60,7 @@ caps.handback.revision: 49
 ##  <a name="AoAgFeatureOnSI"></a> Monitorando o recurso Grupos de Disponibilidade AlwaysOn em uma instância de servidor  
  Para monitorar o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em uma instância de servidor, use a seguinte função interna:  
   
- função [SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md)  
+ função[SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md)  
  Retorna informações de propriedade de servidor sobre se o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] está habilitado e, nesse caso, se ele está iniciado na instância de servidor.  
   
  **Nomes de colunas:** IsHadrEnabled, HadrManagerStatus  
@@ -149,7 +154,7 @@ caps.handback.revision: 49
  Determina se a réplica atual é a réplica de backup preferencial.  
   
 > [!NOTE]  
->  Para obter informações sobre contadores de desempenho para réplicas de disponibilidade (o objeto de desempenho **SQLServer:Availability Replica**), consulte [SQL Server, Réplica de Disponibilidade](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
+>  Para obter informações sobre contadores de desempenho para réplicas de disponibilidade (o objeto de desempenho **SQLServer:Availability Replica**  ), consulte [SQL Server, Réplica de Disponibilidade](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
 ##  <a name="AvDbs"></a> Monitorando bancos de dados de disponibilidade  
  Para monitorar bancos de dados de disponibilidade, use as seguintes exibições:  
@@ -165,7 +170,7 @@ caps.handback.revision: 49
  [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
  Contém uma linha por banco de dados na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se um banco de dados pertencer a uma réplica de disponibilidade, a linha daquele banco de dados exibirá o GUID da réplica e o identificador exclusivo do banco de dados dentro de seu grupo de disponibilidade.  
   
- **Nomes de colunas do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:** replica_id, group_database_id  
+ **[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] :** replica_id, group_database_id  
   
  [sys.dm_hadr_auto_page_repair](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)  
  Retorna uma linha para cada tentativa de reparo automático de página em qualquer banco de dados de disponibilidade em uma réplica de disponibilidade hospedada para qualquer grupo de disponibilidade pela instância do servidor. Essa exibição contém linhas das últimas tentativas de reparo automático de página em um determinado banco de dados primário ou secundário, com um máximo de 100 linhas por banco de dados. Assim que o banco de dados atinge o máximo, a linha de sua próxima tentativa de conserto de página automático substitui uma das entradas existentes.  
@@ -186,7 +191,7 @@ caps.handback.revision: 49
 >  O local da réplica primária é a origem autoritativa de um grupo de disponibilidade.  
   
 > [!NOTE]  
->  Para obter informações sobre contadores de desempenho do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para réplicas de disponibilidade (o objeto de desempenho **SQLServer:Réplica de Banco de Dados**), veja [SQL Server, Réplica de Banco de Dados](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Além disso, para monitorar a atividade do log de transações em bancos de dados de disponibilidade, use os seguintes contadores do objeto de desempenho **SQLServer:Bancos de Dados**: **Tempo de Gravação de Liberação de Log (ms)**, **Liberações de Log/s**, **Erros de Cache do Pool de Logs/s**, **Leituras de Disco do Pool de Logs/s** e **Solicitações do Pool de Logs/s**. Para obter mais informações, consulte [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Para obter informações sobre contadores de desempenho do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para réplicas de disponibilidade (o objeto de desempenho **SQLServer:Réplica de Banco de Dados** ), veja [SQL Server, Réplica de Banco de Dados](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Além disso, para monitorar a atividade do log de transações em bancos de dados de disponibilidade, use os seguintes contadores do objeto de desempenho **SQLServer:Bancos de Dados** : **Tempo de Gravação de Liberação de Log (ms)**, **Liberações de Log/s**, **Erros de Cache do Pool de Logs/s**, **Leituras de Disco do Pool de Logs/s**e **Solicitações do Pool de Logs/s**. Para obter mais informações, consulte [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Monitorando ouvintes de grupo de disponibilidade  
  Para monitorar os ouvintes de grupo de disponibilidade em sub-redes do cluster do WSFC, use as seguintes exibições:  
@@ -208,12 +213,12 @@ caps.handback.revision: 49
   
  **Chave primária:** listener_id  
   
- Para obter informações sobre ouvintes do grupo de disponibilidade, veja [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativos &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+ Para obter informações sobre ouvintes do grupo de disponibilidade, veja [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativos &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Tarefas de monitoramento dos grupos de disponibilidade AlwaysOn:**  
   
--   [Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md)  
+-   [Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)  
   
 -   [Exibir as propriedades do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  
   
@@ -279,9 +284,9 @@ caps.handback.revision: 49
   
 -   [SQL Server, Réplica de Disponibilidade](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)  
   
--   [SQL Server, Réplica de banco de dados](../../../relational-databases/performance-monitor/sql-server-database-replica.md)  
+-   [SQL Server, Réplica de Banco de Dados](../../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
--   [SQL Server, objeto Databases](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
+-   [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
   
  **Gerenciamento baseado em políticas para grupos de disponibilidade AlwaysOn**  
   
@@ -289,9 +294,10 @@ caps.handback.revision: 49
   
 -   [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Monitoramento de grupos de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
+
