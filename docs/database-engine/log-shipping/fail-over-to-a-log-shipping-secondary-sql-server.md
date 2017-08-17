@@ -1,35 +1,40 @@
 ---
-title: "Failover para um envio de logs secund&#225;rio (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bancos de dados primários [SQL Server]"
-  - "arquivos de dados secundários [SQL Server], failover manual"
-  - "envio de logs [SQL Server], failover"
-  - "failover [SQL Server], envio de logs"
+title: "Fazer failover para um secundário do envio de logs (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- primary databases [SQL Server]
+- secondary data files [SQL Server], manual fail over
+- log shipping [SQL Server], failover
+- failover [SQL Server], log shipping
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 93360a54442a6a959b7044288bd74d16f13fa559
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Failover para um envio de logs secund&#225;rio (SQL Server)
+# <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Failover para um envio de logs secundário (SQL Server)
   O failover para um envio de logs secundário será útil se a instância do servidor primário falhar ou requerer manutenção.  
   
-## Preparando para um failover controlado  
+## <a name="preparing-for-a-controlled-failover"></a>Preparando para um failover controlado  
  Geralmente, os bancos de dados primário e secundário não são sincronizados porque o banco de dados primário continua sendo atualizado após seu último trabalho de backup. Além disso, em alguns casos, os backups de log de transações recentes não foram copiados nas instâncias do servidor secundário ou alguns backups de log copiados talvez ainda não tenham sido aplicados ao banco de dados secundário. Recomendamos que você comece sincronizando todos os bancos de dados secundários com o banco de dados primário, se possível.  
   
  Para obter informações sobre trabalhos do envio de log, veja [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## Fazendo failover  
+## <a name="failing-over"></a>Fazendo failover  
  Para fazer failover para um banco de dados secundário:  
   
 1.  Copie qualquer arquivo de backup não copiado do compartilhamento de backup na pasta de destino de cópia de cada servidor secundário.  
@@ -45,7 +50,7 @@ caps.handback.revision: 31
 4.  Depois que os servidores secundários forem sincronizados, você poderá fazer o failover para o banco de dados que preferir recuperando o banco de dados secundário e redirecionando os clientes para aquela instância de servidor. A recuperação coloca o banco de dados em um estado consistente e online.  
   
     > [!NOTE]  
-    >  Ao disponibilizar um banco de dados secundário, você deve assegurar que os metadados estejam consistentes com os metadados do banco de dados primário original. Para obter mais informações, consulte [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md).  
+    >  Ao disponibilizar um banco de dados secundário, você deve assegurar que os metadados estejam consistentes com os metadados do banco de dados primário original. Para obter mais informações, consulte [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 5.  Depois de recuperar um banco de dados secundário, você poderá reconfigurá-lo para que atue como um banco de dados primário para outros bancos de dados secundários.  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 31
   
 -   [Gerenciamento de logons e trabalhos após a troca de funções &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tabelas de envio de log e procedimentos armazenados](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)   
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Backups da parte final do log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  

@@ -1,32 +1,37 @@
 ---
-title: "Auditoria Local da coleta de coment&#225;rios sobre o uso do SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/28/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "dbe-security"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Auditoria Local"
+title: "Auditoria local da coleta de comentários sobre o uso do SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 02/28/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- dbe-security
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Local Audit
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 caps.latest.revision: 8
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 61366dbbcc5b4787783ea3e52112d827e2db026f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Auditoria Local da coleta de coment&#225;rios sobre o uso do SQL Server
-## Introdução
+# <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Auditoria Local da coleta de comentários sobre o uso do SQL Server
+## <a name="introduction"></a>Introdução
 
-O Microsoft SQL Server 2016 (SQL Server) contém recursos habilitados para Internet que podem coletar e enviar à Microsoft informações sobre o seu computador ou dispositivo ("informações padrão do computador"). O componente de Auditoria Local da [Coleta de comentários sobre o uso do SQL Server](http://support.microsoft.com/kb/3153756) grava dados coletados pelo serviço em uma pasta designada, que representa os dados (logs) que serão enviados à Microsoft. A finalidade da Auditoria Local é permitir que os clientes vejam todos os dados que a Microsoft coleta com esse recurso, para fins de conformidade, regulatórios ou de validação de privacidade.  
+O Microsoft SQL Server contém recursos habilitados para Internet que podem coletar e enviar à Microsoft informações sobre seu computador ou dispositivo (“informações padrão do computador”). O componente de Auditoria Local da [Coleta de comentários sobre o uso do SQL Server](http://support.microsoft.com/kb/3153756) grava dados coletados pelo serviço em uma pasta designada, que representa os dados (logs) que serão enviados à Microsoft. A finalidade da Auditoria Local é permitir que os clientes vejam todos os dados que a Microsoft coleta com esse recurso, para fins de conformidade, regulatórios ou de validação de privacidade.  
 
-No SQL Server 2016 CU2, a Auditoria Local é configurável no nível da instância para o Mecanismo de Banco do SQL Server e o SSAS (SQL Server Analysis Services). A Auditoria Local ainda não está habilitada para o SSIS (SQL Server Integration Services). Outros componentes do SQL Server que são instalados durante a instalação e as ferramentas do SQL Server que são baixadas ou instaladas após a instalação não têm o recurso de Auditoria Local para coleta de comentários sobre uso. 
+A partir do SQL Server 2016 CU2, a Auditoria Local é configurável no nível da instância no Mecanismo de Banco de Dados do SQL Server e o SSAS (Analysis Services). A Auditoria Local do SSIS (SQL Server Integration Services) é configurável com o Mecanismo de Banco de Dados. Outros componentes do SQL Server que são instalados durante a instalação e as ferramentas do SQL Server que são baixadas ou instaladas após a instalação não têm o recurso de Auditoria Local para coleta de comentários sobre uso. 
 
-## Pré-requisitos 
+## <a name="prerequisites"></a>Pré-requisitos 
 
 A seguir estão os pré-requisitos para habilitar a Auditoria Local em cada instância do SQL Server: 
 
@@ -34,7 +39,7 @@ A seguir estão os pré-requisitos para habilitar a Auditoria Local em cada inst
 
 1. O usuário deve ser um administrador do sistema ou ter uma função com acesso para adicionar e modificar a Chave do Registro, criar pastas, gerenciar a segurança das pastas e parar/iniciar um Serviço do Windows.  
 
-## Etapas de pré-configuração antes de ativar a Auditoria Local 
+## <a name="pre-configuration-steps-prior-to-turning-on-local-audit"></a>Etapas de pré-configuração antes de ativar a Auditoria Local 
 
 Antes de ativar a Auditoria Local, um administrador do sistema deve:
 
@@ -46,23 +51,23 @@ Antes de ativar a Auditoria Local, um administrador do sistema deve:
 
 1. Criar uma configuração de chave do registro para configurar o diretório de destino da Auditoria Local. 
 
-    Para o Mecanismo de Banco de Dados, crie a chave em *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL13.\<NOMEDAINSTÂNCIA\>\\CPE*. 
+    Para o Mecanismo de Banco de Dados e o Integration Services, crie a chave em *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL14.\<INSTANCENAME\>\\CPE*. 
     
-    Para o Analysis Services, crie a chave em *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS13.\<NOMEDAINSTÂNCIA\>\\CPE*.
+    Para o Analysis Services, crie a chave em *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS14.\<INSTANCENAME\>\\CPE*.
 
-### Obter a conta de logon de serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server
+### <a name="get-the-sql-server-ceip-service-logon-account"></a>Obter a conta de logon de serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server
 
 Execute as seguintes etapas para obter a conta de logon do serviço de telemetria do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server
  
-1. Inicie **Serviços** – clique no botão **Windows** e digite *Services.msc*. 
+1. Inicie **Serviços** – clique no botão **Windows**  e digite *Services.msc*. 
 
 2. Navegue até o serviço apropriado. Por exemplo, para o mecanismo de banco de dados, localize o **Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server *nome da instância***. Para o Analysis Services, localize **Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Analysis Services *nome da instância***. 
 
 3. Clique com o botão direito do mouse no serviço e escolha **Propriedades**. 
 
-4. Clique na guia **Logon**. A conta de Logon está listada em **Esta Conta**. 
+4. Clique na guia **Logon** . A conta de Logon está listada em **Esta Conta**. 
 
-### Configurar uma nova pasta para os arquivos de Auditoria Local.    
+### <a name="configure-a-new-folder-for-the-local-audit-files"></a>Configurar uma nova pasta para os arquivos de Auditoria Local.    
 
 Crie uma nova pasta (Diretório da Auditoria Local) em que a Auditoria Local gravará os logs. Por exemplo, o caminho completo para o Diretório da Auditoria Local para uma instância padrão do mecanismo de banco de dados seria: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
  
@@ -70,13 +75,13 @@ Crie uma nova pasta (Diretório da Auditoria Local) em que a Auditoria Local gra
 
   ||Decisão de design|Recomendação|  
   |------|-----------------|----------|  
-  |![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Disponibilidade de espaço |Com uma carga de trabalho moderada com cerca de 10 bancos de dados, planeje para ter cerca de 2 MB de espaço em disco por dia por instância.|  
-|![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Diretórios separados | Crie um diretório para cada instância. Por exemplo, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* para uma instância do SQL Server chamada `MSSQLSERVER`. Isso simplifica o gerenciamento de arquivos.
-|![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Pastas separadas |Use uma pasta específica para cada serviço. Por exemplo, para um determinado nome de instância, tenha uma pasta para o mecanismo de banco de dados. Se uma instância do SSAS usar o mesmo nome de instância, crie uma pasta separada para o SSAS. Ter instâncias do Mecanismo de Banco de Dados e do Analysis Services configuradas para a mesma pasta fará com que a Auditoria Local grave no mesmo arquivo de log para as duas instâncias.| 
-|![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Conceder permissões para a conta de logon do serviço de telemetria do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server|Habilite acesso para **Listar Conteúdo da Pasta**, **Ler** e **Gravar** à conta de logon do serviço de telemetria do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server|
+  |![Caixa de seleção](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Disponibilidade de espaço |Com uma carga de trabalho moderada com cerca de 10 bancos de dados, planeje para ter cerca de 2 MB de espaço em disco por dia por instância.|  
+|![Caixa de seleção](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Diretórios separados | Crie um diretório para cada instância. Por exemplo, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* para uma instância do SQL Server chamada `MSSQLSERVER`. Isso simplifica o gerenciamento de arquivos.
+|![Caixa de seleção](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Pastas separadas |Use uma pasta específica para cada serviço. Por exemplo, para um determinado nome de instância, tenha uma pasta para o mecanismo de banco de dados. Se uma instância do SSAS usar o mesmo nome de instância, crie uma pasta separada para o SSAS. Ter instâncias do Mecanismo de Banco de Dados e do Analysis Services configuradas para a mesma pasta fará com que a Auditoria Local grave no mesmo arquivo de log para as duas instâncias.| 
+|![Caixa de seleção](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Conceder permissões para a conta de logon do serviço de telemetria do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server|Habilite acesso para **Listar Conteúdo da Pasta**, **Ler** e **Gravar** à conta de logon do serviço de telemetria do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server|
 
 
-### Conceder permissões para a conta de logon do serviço de telemetria do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server
+### <a name="grant-permissions-to-the-sql-server-ciep-telemetry-service-logon-account"></a>Conceder permissões para a conta de logon do serviço de telemetria do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server
   
 1. No **Explorador de Arquivos**, navegue até o local em que a nova pasta está localizada.  
 
@@ -88,25 +93,25 @@ Crie uma nova pasta (Diretório da Auditoria Local) em que a Auditoria Local gra
 
 1. Clique em **Verificar Nomes** para validar o nome fornecido e clique em **OK**. 
 
-1. Na caixa de diálogo **Permissão**, escolha a conta de logon ao Serviço de Telemetria do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server e clique em **Listar Conteúdo da Pasta**, **Ler** e **Gravar**.  
+1. Na caixa de diálogo **Permissão** , escolha a conta de logon ao Serviço de Telemetria do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server e clique em **Listar Conteúdo da Pasta**, **Ler** e **Gravar**.  
 
 1. Clique em **OK** para aplicar as alterações de permissão imediatamente. 
   
-### Criar uma configuração de chave do registro para configurar o diretório de destino da Auditoria Local.
+### <a name="create-a-registry-key-setting-to-configure-local-audit-target-directory"></a>Criar uma configuração de chave do registro para configurar o diretório de destino da Auditoria Local.
 
 1. Inicie o regedit.  
 
 1. Navegue até o caminho do CPE apropriado. 
 
-    Para o Mecanismo de Banco de Dados, use *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL13.\<NOMEDAINSTÂNCIA\>\\CPE*. 
+    Para o Mecanismo de Banco de Dados e o Integration Services, use *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL14.\<INSTANCENAME\>\\CPE*. 
     
-    Para o Analysis Services, use *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS13.\<NOMEDAINSTÂNCIA\>\\CPE*.
+    Para o Analysis Services, use *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS14.\<INSTANCENAME\>\\CPE*.
 
 1. Clique com o botão direito do mouse no caminho do CPE e escolha **Novo**. Clique em **Valor da Cadeia**.
 
 1. Nomeie a nova chave do Registro `UserRequestedLocalAuditDirectory`. 
  
-## Ativando ou desativando a Auditoria Local
+## <a name="turning-local-audit-on-or-off"></a>Ativando ou desativando a Auditoria Local
 
 Depois de concluir as etapas de pré-configuração, você pode ativar a Auditoria Local. Para fazer isso, use uma conta de administrador do sistema ou com uma função semelhante com acesso para modificar chaves de registro para ativar ou desativar a Auditoria Local seguindo as etapas abaixo. 
 
@@ -114,9 +119,9 @@ Depois de concluir as etapas de pré-configuração, você pode ativar a Auditor
 
 1. Navegue até o caminho do CPE apropriado. 
 
-    Para o Mecanismo de Banco de Dados, use *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL13.\<NOMEDAINSTÂNCIA\>\\CPE*. 
+    Para o Mecanismo de Banco de Dados e o Integration Services, use *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL14.\<INSTANCENAME\>\\CPE*. 
     
-    Para o Analysis Services, use *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS13.\<NOMEDAINSTÂNCIA\>\\CPE*.
+    Para o Analysis Services, use *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS14.\<INSTANCENAME\>\\CPE*.
 
 1. Clique com o botão direito do mouse em **UserRequestedLocalAuditDirectory** e clique em *Modificar*. 
 
@@ -144,13 +149,13 @@ A Auditoria Local produzirá um arquivo de log por dia. Os arquivos de log estar
 
 > Observação: após habilitar a Auditoria Local, pode levar até 5 minutos para que o arquivo de log seja gravado pela primeira vez. 
 
-## Manutenção 
+## <a name="maintenance"></a>Manutenção 
 
 1. Para limitar o uso do espaço em disco pelos arquivos gravados pela Auditoria Local, configure uma política ou um trabalho regular para limpar o Diretório da Auditoria Local para remover arquivos antigos e desnecessários.  
 
 2. Proteja o caminho do Diretório da Auditoria Local para que ele seja acessível apenas para as pessoas apropriadas. Observe que os arquivos de log contêm as informações descritas em [Como configurar o SQL Server 2016 para enviar comentários à Microsoft](http://support.microsoft.com/kb/3153756). O acesso a este arquivo deve impedir que a maioria dos membros de sua organização o leiam.  
 
-## Dicionário de dados da estrutura de dados de saída da Auditoria Local 
+## <a name="data-dictionary-of-local-audit-output-data-structure"></a>Dicionário de dados da estrutura de dados de saída da Auditoria Local 
 
 - Os arquivos de log da Auditoria Local estão em JSON, contendo um conjunto de objetos (linhas) que representam pontos de dados que são enviados de volta para a Microsoft em **emitTime**.  
 
@@ -176,9 +181,9 @@ A Auditoria Local produzirá um arquivo de log por dia. Os arquivos de log estar
 | Instância | instanceName, correlationID, clientVersion 
 | Session | sessionID, traceName 
 | Consulta | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
-| Dados |  data 
+| data |  data 
 
-### Definição e exemplos de pares nome/valor 
+### <a name="namevalue-pairs-definition-and-examples"></a>Definição e exemplos de pares nome/valor 
 
 As colunas listadas abaixo representam a ordem da saída de arquivos da Auditoria Local. Hash unidirecional com SHA 256 é usado para valores mantidos em anonimato para um número de colunas abaixo.  
 
@@ -187,22 +192,22 @@ As colunas listadas abaixo representam a ordem da saída de arquivos da Auditori
 |hostname | Nome do computador mantido em anonimato em que o SQL Server está instalado| de3b3769a63970b63981ab7a956401388962c986bfd39d371f5870d800627d11 
 |domainHash| Hash de domínio mantido em anonimado do computador que hospeda a instância do SQL Server | de3b3769a63970b63981ab7a956401388962c986bfd39d371f5870d800627d11 
 |sqmId |Identificador que representa o computador em que o SQL Server está instalado | 02AF58F5-753A-429C-96CD-3900E90DB990 
-|instanceName| Nome da instância do SQL Server mantido em anonimato| e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 
-|SchemaVersion| Versão do esquema do SQLCEIP |  3 
+|NOMEDAINSTÂNCIA| Nome da instância do SQL Server mantido em anonimato| e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 
+|schemaVersion| Versão do esquema do SQLCEIP |  3 
 |emitTime |Hora de emissão do ponto de dados em UTC | 2016-09-08T17:20:22.1124269Z 
-|sessionId | Identificador da sessão para o serviço do SQLCEIP | 89decf9a-ad11-485c-94a7-fefb3a02ed86 
+|sessionID | Identificador da sessão para o serviço do SQLCEIP | 89decf9a-ad11-485c-94a7-fefb3a02ed86 
 | correlationId | Espaço reservado para um identificador adicional | 0 
-|sequência | Número de sequência de pontos de dados enviados dentro da sessão | 15 
+|sequence | Número de sequência de pontos de dados enviados dentro da sessão | 15 
 | clientVersion | Versão da instância do SQL Server | 13.0.2161.3 ((SQL16_RTM_QFE-CU).160907-1223) 
 | operatingSystem | A versão do sistema operacional em que a instância do SQL Server está instalada | Microsoft Windows Server 2012 R2 Datacenter 
 | querySetVersion | Versão de um grupo de definições de consulta | 1.0.0.0 
 |traceName | Categorias de rastreamentos: (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | Um identificador da consulta | SQLServerProperties.002 
 |data   | A saída das informações coletadas em queryIdentifier como uma saída de uma consulta T-SQL, sessão XE ou do aplicativo |   [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
-|consulta| Se aplicável, a definição da consulta T-SQL relacionada com o queryIdentifier que produz os dados.        Este componente não é carregado pelo serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server. Ele está incluído na Auditoria Local apenas como uma referência para os clientes.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolybaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolybaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
+|Consulta| Se aplicável, a definição da consulta T-SQL relacionada com o queryIdentifier que produz os dados.        Este componente não é carregado pelo serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server. Ele está incluído na Auditoria Local apenas como uma referência para os clientes.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolybaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolybaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
 |queryTimeInTicks | A duração necessária para que a consulta com a seguinte categoria de rastreamento seja executada: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
-### Categorias de rastreamento 
+### <a name="trace-categories"></a>Categorias de rastreamento 
 Atualmente, coletamos as seguintes categorias de rastreamento: 
 
 - **SQLServerXeQueries**: contém pontos de dados coletados por meio da sessão de Evento Estendido. 
@@ -215,7 +220,7 @@ Atualmente, coletamos as seguintes categorias de rastreamento:
 
 - **DigitalProductID**: contém pontos de dados para agregar IDs de produtos digitais com hash (SHA-256) anônimos de instâncias do SQL Server. 
 
-### Exemplos de arquivos da Auditoria Local
+### <a name="local-audit-file-examples"></a>Exemplos de arquivos da Auditoria Local
 
 
 
@@ -314,7 +319,7 @@ Abaixo, temos um trecho de uma saída de arquivo JSON da Auditoria Local.
     "queryTimeInTicks": 155834
   } 
 ```
-## Perguntas frequentes
+## <a name="frequently-asked-questions"></a>Perguntas frequentes
 
 **Como os DBAs leem os arquivos de log da Auditoria Local?**
 Esses arquivos de log são gravados no formato JSON. Cada linha será um objeto JSON que representa um trecho de telemetria carregado para a Microsoft. Os nomes dos campos devem ser autoexplicativos. 
@@ -336,7 +341,7 @@ Os DBAs precisarão gerenciar automaticamente a limpeza de arquivos no diretóri
 
 **Há um cliente ou ferramenta que posso usar para ler esta saída JSON?**
 A saída pode ser lida com o Bloco de notas, o Visual Studio ou qualquer leitor JSON de sua escolha.
-Você também pode ler o arquivo JSON e analisar os dados em uma instância do SQL Server 2016, conforme ilustrado abaixo. Para obter mais detalhes sobre como ler o arquivo JSON no SQL Server, visite [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](http://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/) (Importar arquivos JSON para o SQL Server usando OPENROWSET (BULK) e OPENJSON (Transact-SQL)).
+Você também pode ler o arquivo JSON e analisar os dados em uma instância do SQL Server 2016, conforme ilustrado abaixo. Para obter mais detalhes sobre como ler o arquivo JSON no SQL Server, visite [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](http://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(Importar arquivos JSON para o SQL Server usando OPENROWSET (BULK) e OPENJSON (Transact-SQL)).
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)
@@ -381,3 +386,8 @@ FROM OPENJSON(@JSONFile)
              )
 WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
+
+## <a name="see-also"></a>Consulte também
+[Auditoria Local da coleta de comentários sobre o uso do SSMS](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms)
+
+

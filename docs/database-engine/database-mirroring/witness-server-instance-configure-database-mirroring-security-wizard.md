@@ -1,38 +1,43 @@
 ---
-title: "Inst&#226;ncia de servidor testemunha (Assistente para Configurar Seguran&#231;a de Espelhamento de Banco de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.configdbmsecurwiz.witnsrvr.f1"
+title: "Instância de servidor testemunha (Assistente para Configurar Segurança de Espelhamento de Banco de Dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.configdbmsecurwiz.witnsrvr.f1
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6b73051639099ca66c3991a4b4faaef2d2ef60ec
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Inst&#226;ncia de servidor testemunha (Assistente para Configurar Seguran&#231;a de Espelhamento de Banco de Dados)
+# <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>Instância de servidor testemunha (Assistente para Configurar Segurança de Espelhamento de Banco de Dados)
   Use esta página para especificar as informações sobre a instância de servidor que servirá como a testemunha para a sessão.  
   
 > [!NOTE]  
->  Uma instância de servidor testemunha não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+>  Uma instância de servidor testemunha não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  **Para configurar o espelhamento de banco de dados usando o SQL Server Management Studio**  
   
--   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+-   [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Instância do servidor testemunha**  
- Se uma instância de servidor testemunha já for especificada (na página **Espelhamento** da caixa de diálogo **Propriedades do Banco de Dados**), essa instância será exibida (para obter mais informações, veja [Propriedades do banco de dados &#40;Página Espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)).  
+ Se uma instância de servidor testemunha já for especificada (na página **Espelhamento** da caixa de diálogo **Propriedades do Banco de Dados** ), essa instância será exibida (para obter mais informações, veja [Propriedades do banco de dados &#40;página Espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)).  
   
  Caso contrário, essa caixa de listagem exibir o nome do servidor atual. Observe que a instância de servidor testemunha não pode ser igual às instâncias do servidor principal ou espelho.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 41
  **Porta do Ouvinte**  
  O comportamento dessa opção depende de o ponto de extremidade do espelhamento existir nessa instância do servidor, como segue:  
   
--   Se a porta do ouvinte não existir para a instância de servidor, o número da porta 5022 será exibido na caixa de texto **Porta**. Você pode digitar qualquer número de porta disponível, como 7022.  
+-   Se a porta do ouvinte não existir para a instância de servidor, o número da porta 5022 será exibido na caixa de texto **Porta** . Você pode digitar qualquer número de porta disponível, como 7022.  
   
 -   Quando o ponto de extremidade do espelhamento já existir, o número da porta daquele ponto de extremidade será exibido. Se você precisar alterar aquela porta, use uma instrução ALTER ENDPOINT. Para obter mais informações, veja [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
@@ -62,12 +67,13 @@ caps.handback.revision: 41
   
  Para desabilitar a criptografia, desmarque a caixa de seleção. Para habilitar a criptografia novamente, marque a caixa de seleção.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Propriedades do banco de dados &#40;página Espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Testemunha de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   
+

@@ -1,27 +1,32 @@
 ---
-title: "Configurar a op&#231;&#227;o de configura&#231;&#227;o de servidor network packet size | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tamanho de pacote padrão"
-  - "tamanho [SQL Server], pacotes"
-  - "pacotes [SQL Server], tamanho"
-  - "opção network packet size"
+title: "Configurar a opção de configuração de servidor network packet size | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default packet size
+- size [SQL Server], packets
+- packets [SQL Server], size
+- network packet size option
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5dff5ae44e8b383d6cb3f10374da36d423c6b4e7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar a op&#231;&#227;o de configura&#231;&#227;o de servidor network packet size
+# <a name="configure-the-network-packet-size-server-configuration-option"></a>Configurar a opção de configuração de servidor network packet size
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como configurar a opção de configuração de servidor **network packet size** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **network packet size** define o tamanho do pacote (em bytes) usado pela rede inteira. Os pacotes são partes de dados de tamanho fixo que transferem solicitações e resultados entre clientes e servidores. O tamanho do pacote padrão é de 4.096 bytes.  
@@ -55,7 +60,7 @@ caps.handback.revision: 26
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Esta é uma opção avançada e deve ser alterada somente por um administrador de banco de dados experiente ou técnico certificado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Esta é uma opção avançada e deve ser alterada somente por um administrador de banco de dados experiente ou técnico certificado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Se um aplicativo fizer operações de cópia em massa ou enviar ou receber grandes quantidades de texto ou dados de imagem, um tamanho do pacote maior que o padrão poderá melhorar a eficiência, porque resulta em menos operações de leitura e gravação em rede. Se um aplicativo enviar e receber pequenas quantidades de informações, o tamanho do pacote poderá ser definido como 512 bytes, o que é suficiente para a maioria das transferências de dados.  
   
@@ -72,7 +77,7 @@ caps.handback.revision: 26
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para configurar a opção network packet size  
+#### <a name="to-configure-the-network-packet-size-option"></a>Para configurar a opção network packet size  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor e selecione **Propriedades**.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 26
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para configurar a opção network packet size  
+#### <a name="to-configure-the-network-packet-size-option"></a>Para configurar a opção network packet size  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -109,9 +114,10 @@ GO
 ##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção network packet size  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

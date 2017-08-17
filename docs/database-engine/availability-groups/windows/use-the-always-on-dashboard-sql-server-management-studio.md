@@ -1,30 +1,35 @@
 ---
-title: "Usar o Painel AlwaysOn (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.agdashboard.f1"
-helpviewer_keywords: 
-  - "Grupos de disponibilidade [SQL Server], políticas"
-  - "Grupos de disponibilidade [SQL Server], painel"
+title: Usar o painel do grupo de disponibilidade AlwaysOn (SQL Server Management Studio) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.agdashboard.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
+- Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 30
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b17125da076312057366a5f2150d513072b074f2
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Usar o Painel AlwaysOn (SQL Server Management Studio)
+# <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usar o painel do grupo de disponibilidade AlwaysOn (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Os administradores de banco de dados usam o Painel AlwaysOn para obter uma visão específica da integridade de um grupo de disponibilidade AlwaysOn e suas réplicas de disponibilidade e bancos de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Alguns dos usos típicos do Painel AlwaysOn são:  
+  Os administradores de banco de dados usam o painel do grupo de disponibilidade AlwaysOn para obter uma visão rápida da integridade de um grupo de disponibilidade e de suas réplicas de disponibilidade e seus bancos de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Alguns dos usos típicos do painel do grupo de disponibilidade são:  
   
 -   Escolhendo uma réplica para um failover manual.  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 30
   
 -   Avaliando o impacto do desempenho de uma réplica secundária de confirmação síncrona  
   
- O Painel AlwaysOn fornece estados e indicadores importantes de desempenho do grupo que permitem tomar decisões operacionais de alta disponibilidade usando os seguintes tipos de informações.  
+ O painel fornece estados e indicadores chave de desempenho do grupo de disponibilidade, que permitem tomar decisões operacionais sobre alta disponibilidade usando os tipos de informações a seguir.  
   
 -   Estado de acúmulo da réplica  
   
@@ -50,34 +55,6 @@ caps.handback.revision: 30
   
 -   Tempo para restauração do log  
   
- **Neste tópico:**  
-  
--   **Antes de começar:**  
-  
-     [Pré-requisitos](#Prerequisites)  
-  
-     [Segurança](#Security)  
-  
-     [Permissões](#Permissions)  
-  
--   **Introdução:**  
-  
-     [Painel AlwaysOn](#SSMSProcedure)  
-  
-     [Para alterar as opções do Painel AlwaysOn](#DashboardOptions)  
-  
--   **Painéis:**  
-  
-     [Resumo do grupo de disponibilidade](#AvGroupsView)  
-  
-     [Detalhes do grupo de disponibilidade](#AvGroupDetails)  
-  
-     [Detalhes da réplica de disponibilidade](#AvReplicaDetails)  
-  
-     [Para agrupar informações do grupo de disponibilidade](#AvDbDetails)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
-  
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
@@ -92,7 +69,7 @@ caps.handback.revision: 30
   
 1.  No Pesquisador de Objetos, conecte à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na qual você deseja executar o Painel AlwaysOn.  
   
-2.  Expanda o nó **Alta Disponibilidade AlwaysOn**, clique com o botão direito do mouse em **Grupos de Disponibilidade** e clique em **Mostrar Painel**.  
+2.  Expanda o nó **Alta Disponibilidade AlwaysOn** , clique com o botão direito do mouse em **Grupos de Disponibilidade** e clique em **Mostrar Painel**.  
   
 ###  <a name="DashboardOptions"></a> Para alterar as opções do Painel AlwaysOn  
  Você pode usar a caixa de diálogo [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Opções** para configurar o comportamento do Painel AlwaysOn do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para atualização e habilitação automática de uma política de AlwaysOn definida automaticamente.  
@@ -120,7 +97,7 @@ caps.handback.revision: 30
 -   **Manual**. Indica que nenhuma réplica está em modo de failover automático.  
   
  **Problemas**  
- Clique no link **Problemas** para abrir documentação de solução de problemas para determinado problema. Para obter uma lista de todos os problemas da política AlwaysOn, veja [Políticas do AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md).  
+ Clique no link **Problemas** para abrir documentação de solução de problemas para determinado problema. Para obter uma lista de todos os problemas da política AlwaysOn, veja [Políticas do AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!TIP]  
 >  Clique nos títulos das colunas para classificar as informações de grupo de disponibilidade pelo nome do grupo de disponibilidade, a instância primária, o modo de failover ou o Problema.  
@@ -131,10 +108,10 @@ caps.handback.revision: 30
  **Estado do grupo de disponibilidade**  
  Exibe o estado de integridade do grupo de disponibilidade.  
   
- **Instância primária**  
+ **Primary instance**  
  O nome da instância do servidor que está hospedando a réplica primária do grupo de disponibilidade.  
   
- **Modo de failover**  
+ **Failover mode**  
  Exibe o modo de failover para o qual a réplica está configurada. Os valores possíveis do modo de failover são:  
   
 -   **Automático**. Indica que uma ou mais réplicas estão em modo de failover automático.  
@@ -175,7 +152,7 @@ caps.handback.revision: 30
 -   **NULL**. Estado desconhecido. Este valor ocorre quando a instância do servidor local não pode se comunicar com o cluster de failover do WSFC (isto é, o nó local não faz parte do quorum do WSFC).  
   
  **Problemas**  
- Lista o nome do problema. Esse valor é mostrado por padrão. Para obter uma lista de todos os problemas da política AlwaysOn, veja [Políticas do AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md).  
+ Lista o nome do problema. Esse valor é mostrado por padrão. Para obter uma lista de todos os problemas da política AlwaysOn, veja [Políticas do AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Modo de Disponibilidade**  
  Indica a propriedade de réplica que você define separadamente para cada réplica de disponibilidade. Esse valor é ocultado por padrão. Os valores possíveis são:  
@@ -237,7 +214,7 @@ caps.handback.revision: 30
   
 -   **Bancos de dados de disponibilidade**  
   
--   **Estado da sincronização**  
+-   **Synchronization state**  
   
 -   **Prontidão de failover**  
   
@@ -290,7 +267,7 @@ caps.handback.revision: 30
     > [!CAUTION]  
     >  Quando um banco de dados está no estado INITIALIZING, um failover forçado da réplica secundária sempre deixará esse banco de dados em um estado no qual não pode ser iniciado.  
   
- **Prontidão de Failover**  
+ **Failover Readiness**  
  Indica em qual réplica de disponibilidade pode ser feito failover com ou sem perda de dados potencial. Essa coluna é mostrada por padrão. Os valores possíveis são:  
   
 -   **Perda de Dados**  
@@ -304,7 +281,7 @@ caps.handback.revision: 30
   
 -   **Crítico**. Clique para exibir os problemas críticos.  
   
- Para obter uma lista de todos os problemas da política AlwaysOn, veja [Políticas do AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md).  
+ Para obter uma lista de todos os problemas da política AlwaysOn, veja [Políticas do AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Suspenso**  
  Indica se o banco de dados está **Suspenso** ou **Retomado**. Esse valor é ocultado por padrão.  
@@ -379,8 +356,9 @@ caps.handback.revision: 30
   
 -   [Usar as políticas AlwaysOn para exibir a integridade de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Monitoramento de grupos de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
+

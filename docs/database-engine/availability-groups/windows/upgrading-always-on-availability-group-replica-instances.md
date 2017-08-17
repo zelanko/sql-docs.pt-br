@@ -1,30 +1,35 @@
 ---
-title: "Atualizar inst&#226;ncias de r&#233;plica do Grupo de Disponibilidade AlwaysOn | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Fazer upgrade das instâncias de réplica do Grupo de Disponibilidade AlwaysOn | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1783e700e516978e4eded68fa675addd8d31a234
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Atualizar inst&#226;ncias de r&#233;plica do Grupo de Disponibilidade AlwaysOn
+# <a name="upgrading-always-on-availability-group-replica-instances"></a>Atualizar instâncias de réplica do Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Ao atualizar um Grupo de Disponibilidade AlwaysOn do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para uma nova versão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], para um novo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]service pack ou atualização cumulativa do ou ao instalar um novo service pack ou atualização cumulativa do Windows, você pode reduzir o tempo de inatividade para a réplica primária para um único failover manual executando uma atualização sem interrupção (ou dois failovers manuais em caso de failback para a primária original). Durante o processo de atualização, uma réplica secundária não estará disponível para failover ou para operações somente leitura e, depois da atualização, poderá levar algum tempo para que a réplica secundária fique atualizada com o nó da réplica primária, dependendo do volume de atividade no nó da réplica primária (portanto, espere alto tráfego de rede).  
+  Ao atualizar um Grupo de Disponibilidade AlwaysOn do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para uma nova versão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , para um novo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]service pack ou atualização cumulativa do ou ao instalar um novo service pack ou atualização cumulativa do Windows, você pode reduzir o tempo de inatividade para a réplica primária para um único failover manual executando uma atualização sem interrupção (ou dois failovers manuais em caso de failback para a primária original). Durante o processo de atualização, uma réplica secundária não estará disponível para failover ou para operações somente leitura e, depois da atualização, poderá levar algum tempo para que a réplica secundária fique atualizada com o nó da réplica primária, dependendo do volume de atividade no nó da réplica primária (portanto, espere alto tráfego de rede).  
   
 > [!NOTE]  
 >  Este tópico limita a discussão à atualização do próprio SQL Server. Ele não aborda a atualização do sistema operacional que contém o Cluster de Failover do Windows Server (WSFC). Não há suporte para atualização do sistema operacional do Windows que hospeda o cluster de failover para sistemas operacionais anteriores ao Windows Server 2012 R2. Para atualizar um nó de cluster executado no Windows Server 2012 R2, veja [Atualização sem interrupção do sistema operacional do cluster](https://technet.microsoft.com/library/dn850430.aspx)  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
  Antes de começar, examine as seguintes informações importantes:  
   
 -   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verifique se você pode atualizar para o SQL Server 2016 de sua versão do sistema operacional Windows e da versão do SQL Server. Por exemplo, não é possível atualizar diretamente de uma instância do SQL Server 2005 para o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -33,9 +38,9 @@ caps.handback.revision: 14
   
 -   [Planejar e testar o plano de atualização do mecanismo de banco de dados](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): examine as notas de versão e os problemas conhecidos da atualização, a lista de verificação pré-atualização, e desenvolva e teste o plano de atualização.  
   
--   [Requisitos de hardware e software para a instalação do SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md): examine os requisitos de software para a instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se for necessário um software adicional, instale-o em cada nó antes de começar o processo de atualização para minimizar qualquer tempo de inatividade.  
+-   [Requisitos de hardware e software para a instalação do SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): examine os requisitos de software para a instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se for necessário um software adicional, instale-o em cada nó antes de começar o processo de atualização para minimizar qualquer tempo de inatividade.  
   
-## Práticas recomendadas de atualização sem interrupção de grupos de disponibilidade AlwaysOn  
+## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>Práticas recomendadas de atualização sem interrupção de grupos de disponibilidade AlwaysOn  
  As práticas recomendadas a seguir devem ser observadas durante as atualizações de servidor para minimizar o tempo de inatividade e a perda de dados dos grupos de disponibilidade:  
   
 -   Antes de iniciar a atualização sem interrupção,  
@@ -62,10 +67,10 @@ caps.handback.revision: 14
   
 -   Antes de fazer failover em um grupo de disponibilidade, verifique se o estado da sincronização do destino do failover é SINCRONIZADO.  
   
-## Processo de atualização sem interrupção  
+## <a name="rolling-upgrade-process"></a>Processo de atualização sem interrupção  
  Na prática, o processo exato dependerá de fatores como a topologia da implantação dos grupos de disponibilidade e o modo de confirmação de cada réplica. Mas, no cenário mais simples, a atualização sem interrupção é um processo de vários estágios que, na sua forma mais simples, envolve as seguintes etapas:  
   
- ![Atualização do Grupo de Disponibilidade no Cenário HADR](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Atualização do Grupo de Disponibilidade no Cenário HADR")  
+ ![Upgrade de grupo de disponibilidade no cenário HADR](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Upgrade de grupo de disponibilidade no cenário HADR")  
   
 1.  Remover o failover automático em todas as réplicas de confirmação síncrona  
   
@@ -81,10 +86,10 @@ caps.handback.revision: 14
   
  Se necessário, você pode executar um failover manual extra para retornar o grupo de disponibilidade à sua configuração original.  
   
-## Grupo de disponibilidade com uma réplica secundária remota  
+## <a name="availability-group-with-one-remote-secondary-replica"></a>Grupo de disponibilidade com uma réplica secundária remota  
  Se você tiver implantado um grupo de disponibilidade somente para recuperação de desastre, talvez seja necessário fazer failover do grupo de disponibilidade para uma réplica secundária de confirmação assíncrona. Essa configuração é ilustrada na figura a seguir:  
   
- ![Atualização do Grupo de Disponibilidade no Cenário DR](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Atualização do Grupo de Disponibilidade no Cenário DR")  
+ ![Upgrade de grupo de disponibilidade no cenário DR](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Upgrade de grupo de disponibilidade no cenário DR")  
   
  Nesse caso, você deve fazer failover do grupo de disponibilidade para uma réplica secundária de confirmação assíncrona durante a atualização sem interrupção. Para evitar a perda de dados, altere o modo de confirmação para confirmação síncrona e aguarde a réplica secundária ser sincronizada para que você possa fazer o failover do grupo de disponibilidade. Portanto, o processo de atualização sem interrupção possivelmente será o seguinte:  
   
@@ -108,10 +113,10 @@ caps.handback.revision: 14
   
 -   Durante a atualização do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] no local primário, altere o modo de disponibilidade novamente para confirmação assíncrona e, em seguida, reverta para confirmação síncrona quando estiver pronto para fazer failover para o local primário novamente  
   
-## Grupo de disponibilidade com nós de instância de cluster de failover  
+## <a name="availability-group-with-failover-cluster-instance-nodes"></a>Grupo de disponibilidade com nós de instância de cluster de failover  
  Se um grupo de disponibilidade contiver nós de FCI (instância de cluster de failover), você deverá atualizar os nós inativos antes de atualizar os nós ativos. A figura a seguir ilustra um cenário de grupo de disponibilidade comum com FCIs para alta disponibilidade local e confirmação assíncrona entre as FCIs de recuperação de desastre remota, e a sequência de upgrade.  
   
- ![Atualização do Grupo de Disponibilidade com FCIs](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "Atualização do Grupo de Disponibilidade com FCIs")  
+ ![Upgrade de grupo de disponibilidade com FCIs](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "Upgrade de grupo de disponibilidade com FCIs")  
   
 1.  Atualizar REMOTE2  
   
@@ -125,7 +130,7 @@ caps.handback.revision: 14
   
 6.  Atualizar PRIMARY1  
   
-## Atualizar instâncias do SQL Server com vários grupos de disponibilidade  
+## <a name="upgrade-update-sql-server-instances-with-multiple-availability-groups"></a>Atualizar instâncias do SQL Server com vários grupos de disponibilidade  
  Se você estiver executando vários grupos de disponibilidade com réplicas primárias em nós de servidor separados (uma configuração Ativo/Ativo), o caminho da atualização envolverá mais etapas de failover para preservar a alta disponibilidade no processo. Suponhamos que você esteja executando três grupos de disponibilidade nos três nós de servidor, conforme mostrado na tabela a seguir, e que todas as réplicas secundárias estejam em execução no modo de confirmação síncrona.  
   
 |Grupo de disponibilidade|Node1|Node2|Node3|  
@@ -163,8 +168,9 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  Em muitos casos, após a atualização sem interrupção, você executará failback para a réplica primária original.  
   
-## Consulte também  
- [Atualizar para o SQL Server 2016 usando o Assistente de Instalação &#40;Instalação&#41;](../../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)   
+## <a name="see-also"></a>Consulte também  
+ [Atualizar para o SQL Server 2016 usando o Assistente de Instalação &#40;Instalação&#41;](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Instalar o SQL Server 2016 do prompt de comando](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   
+

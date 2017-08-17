@@ -1,22 +1,27 @@
 ---
-title: "Instalar o SQL Server 2016 usando um arquivo de configura&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "home-page"
+title: "Instalar o SQL Server 2016 usando um arquivo de configuração | Microsoft Docs"
+ms.custom: 
+ms.date: 01/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: home-page
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: bfde812d87371a8ae730be4a01577f714334adc6
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Instalar o SQL Server 2016 usando um arquivo de configura&#231;&#227;o
+# <a name="install-sql-server-2016-using-a-configuration-file"></a>Instalar o SQL Server 2016 usando um arquivo de configuração
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A Instalação fornece a capacidade de gerar um arquivo de configuração baseado no padrão do sistema e em entradas de tempo de execução. É possível usar o arquivo de configuração para implantar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em toda a empresa com a mesma configuração. Também é possível padronizar instalações manuais em toda a empresa criando um arquivo em lotes que inicie o Setup.exe.  
   
  A Instalação dá suporte ao uso do arquivo de configuração apenas através do prompt de comando. A ordem de processamento dos parâmetros ao usar o arquivo de configuração é descrita a seguir:  
@@ -27,7 +32,7 @@ caps.handback.revision: 34
   
  O arquivo de configuração pode ser usado para acompanhar os parâmetros e valores de cada instalação. Isto torna o arquivo de configuração útil para verificar e auditar as instalações.  
   
-## Estrutura do arquivo de configuração  
+## <a name="configuration-file-structure"></a>Estrutura do arquivo de configuração  
  O ConfigurationFile.ini é um arquivo de texto com parâmetros (par de nome/valor) e comentários descritivos.  
   
  O seguinte exemplo é de um arquivo ConfigurationFile.ini:  
@@ -46,33 +51,33 @@ ACTION="Install"
 FEATURES=SQL,Tools  
 ```  
   
-#### Como gerar um arquivo de configuração  
+#### <a name="how-to-generate-a-configuration-file"></a>Como gerar um arquivo de configuração  
   
-1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Na pasta raiz, clique duas vezes em Setup.exe. Para instalar a partir de um compartilhamento de rede, localize a pasta raiz no compartilhamento e clique duas vezes em Setup.exe.  
+1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Na pasta raiz, clique duas vezes em Setup.exe. Para instalar a partir de um compartilhamento de rede, localize a pasta raiz no compartilhamento e clique duas vezes em Setup.exe.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition não cria um arquivo de configuração automaticamente. O comando a seguir iniciará a instalação e criará um arquivo de configuração.  
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
-2.  Conclua o assistente até a página **Pronto para Instalar** . O caminho para o arquivo de configuração é especificado na página **Pronto para Instalar** na seção do caminho do arquivo de configuração. Para obter mais informações sobre como instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Instalar o SQL Server 2016 por meio do Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/install-sql-server-2016-from-the-installation-wizard-setup.md).  
+2.  Conclua o assistente até a página **Pronto para Instalar** . O caminho para o arquivo de configuração é especificado na página **Pronto para Instalar** na seção do caminho do arquivo de configuração. Para obter mais informações sobre como instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Instalar o SQL Server 2016 por meio do Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 3.  Cancele a instalação sem realmente concluí-la para gerar o arquivo INI.  
   
     > [!NOTE]  
     >  A infraestrutura da instalação gravará todos os parâmetros adequados para as ações que foram executadas, com exceção de informações confidencias, como senhas. O parâmetro /IAcceptSQLServerLicenseTerms também não é gravado no arquivo de configuração e requer uma modificação do arquivo de configuração ou um valor a ser fornecido no prompt de comando. Para obter mais informações, consulte [Instalar o SQL Server 2016 do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Além disso, um valor é incluído para os parâmetros boolianos onde um valor geralmente não é fornecido por meio do prompt de comando.  
   
-## Usando o arquivo de configuração para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="using-the-configuration-file-to-install-includessnoversionincludesssnoversion-mdmd"></a>Usando o arquivo de configuração para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  É possível usar o arquivo de configuração apenas em instalações de linha de comando.  
   
 > [!NOTE]  
 >  Se você precisar fazer alterações no arquivo de configuração, é recomendável fazer uma cópia e trabalhar com a cópia.  
   
-#### Como usar um arquivo de configuração para instalar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance"></a>Como usar um arquivo de configuração para instalar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Execute a instalação por meio do prompt de comando e forneça o ConfigurationFile.ini usando o parâmetro *ConfigurationFile* .  
   
-#### Como usar um arquivo de configuração para preparar e concluir uma imagem de uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SysPrep)  
+#### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance-sysprep"></a>Como usar um arquivo de configuração para preparar e concluir uma imagem de uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SysPrep)  
   
 1.  Para preparar uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e configurá-las na mesma máquina.  
   
@@ -90,13 +95,13 @@ FEATURES=SQL,Tools
   
     -   O arquivo de configuração de imagem completo pode ser armazenado com a imagem do Windows para automatizar a configuração das instâncias preparadas.  
   
-#### Como instalar um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o arquivo de configuração  
+#### <a name="how-to-install-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Como instalar um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o arquivo de configuração  
   
 1.  Opção de Instalação Integrada (criar um único cluster de failover de nó em um nó e, para nós adicionais, executar AddNode neles):  
   
     -   Execute a opção "Instalar um Cluster de Failover" e capture o arquivo de configuração que lista todas as configurações de instalação.  
   
-    -   Execute a instalação de cluster de failover de linha de comando fornecendo o parâmetro *ConfigurationFile*.  
+    -   Execute a instalação de cluster de failover de linha de comando fornecendo o parâmetro *ConfigurationFile* .  
   
     -   Em um nó adicional a ser adicionado, execute AddNode para capturar o arquivo ConfigurationFile.ini aplicável ao cluster de failover existente.  
   
@@ -112,17 +117,17 @@ FEATURES=SQL,Tools
   
     -   Em seguida, você pode fornecer esse arquivo ConfigurationFile.ini para concluir o cluster de failover.  
   
-#### Como adicionar ou remover um nó de um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o arquivo de configuração  
+#### <a name="how-to-add-or-remove-a-node-to-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Como adicionar ou remover um nó de um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o arquivo de configuração  
   
 -   Se você tiver um arquivo de configuração que foi usado anteriormente para adicionar um nó ou para remover um nó de um cluster de failover, poderá reutilizar esse mesmo arquivo para adicionar ou remover nós adicionais.  
   
-#### Como atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o arquivo de configuração  
+#### <a name="how-to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Como atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o arquivo de configuração  
   
 1.  Execute Atualizar no nó passivo e capture o arquivo ConfigurationFile.ini. Isso pode ser feito executando a atualização real ou saindo no final sem fazer a atualização real.  
   
 2.  Em todos os nós adicionais a serem atualizados, forneça o arquivo ConfigurationFile.ini para concluir o processo.  
   
-## Sintaxe de exemplo  
+## <a name="sample-syntax"></a>Sintaxe de exemplo  
  Os exemplos a seguir mostram como usar o arquivo de configuração:  
   
 -   Para especificar o arquivo de configuração no prompt de comando:  
@@ -137,9 +142,10 @@ Setup.exe /ConfigurationFile=MyConfigurationFile.INI
 Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPASSWORD="************" /ISSVCPASSWORD="************" /RSSVCPASSWORD="************" /ConfigurationFile=MyConfigurationFile.INI  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Instalar o SQL Server 2016 do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Instalação do cluster de failover do SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [Atualizar uma instância de cluster de failover do SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   
+

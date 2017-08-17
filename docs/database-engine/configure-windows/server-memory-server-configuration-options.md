@@ -1,33 +1,38 @@
 ---
-title: "Op&#231;&#245;es Server Memory de configura&#231;&#227;o do servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gerenciador de Memória Virtual"
-  - "opção max server memory"
-  - "memória virtual [SQL Server]"
-  - "VMM"
-  - "opções server memory [SQL Server]"
-  - "servidores [SQL Server], memória"
-  - "pools de buffers [SQL Server]"
-  - "opção min server memory"
-  - "opções manual memory [SQL Server]"
-  - "memória [SQL Server], servidores"
+title: "Opções de configuração de servidor Server Memory | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Virtual Memory Manager
+- max server memory option
+- virtual memory [SQL Server]
+- VMM
+- server memory options [SQL Server]
+- servers [SQL Server], memory
+- buffer pools [SQL Server]
+- min server memory option
+- manual memory options [SQL Server]
+- memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 caps.latest.revision: 78
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 78
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3e94744eab69b635feb00ed9f5f8eb01b196c3b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Op&#231;&#245;es Server Memory de configura&#231;&#227;o do servidor
+# <a name="server-memory-server-configuration-options"></a>Opções Server Memory de configuração do servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Use as duas opções de memória de servidor, **memória mínima do servidor** e **memória máxima do servidor**, para reconfigurar a quantidade de memória (em megabytes) que é gerenciada pelo Gerenciador de Memória do SQL Server para um processo do SQL Server usado por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -39,26 +44,26 @@ caps.handback.revision: 78
   
  Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está usando memória dinamicamente, ele consulta o sistema periodicamente para determinar a quantidade de memória livre. Manter essa memória livre impede a paginação do SO (sistema operacional). Se menos memória estiver livre, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] liberará memória para o SO. Se houver mais memória livre, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá alocar mais memória. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adiciona memória apenas quando sua carga de trabalho exige mais. Um servidor em repouso não aumenta o tamanho de seu espaço de endereço virtual.  
   
- Veja o exemplo B para uma consulta que retorna a memória usada atualmente. A **memória máxima do servidor** controla a alocação de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo o pool de buffers, a memória de compilação, todos os caches, as concessões de memória qe, a memória de gerenciador de bloqueio e a memória do clr (essencialmente qualquer administrador de memória encontrado em **sys.dm_os_memory_clerks**). Memória para as pilhas de thread, heaps de memória, provedores de servidor vinculados diferentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e toda a memória alocada por um DLL não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não são controlados pela memória máxima do servidor.  
+ Veja o exemplo B para uma consulta que retorna a memória usada atualmente. A**memória máxima do servidor** controla a alocação de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluindo o pool de buffers, a memória de compilação, todos os caches, as concessões de memória qe, a memória de gerenciador de bloqueio e a memória do clr (essencialmente qualquer administrador de memória encontrado em **sys.dm_os_memory_clerks**). Memória para as pilhas de thread, heaps de memória, provedores de servidor vinculados diferentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e toda a memória alocada por um DLL não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não são controlados pela memória máxima do servidor.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a API de notificação de memória **QueryMemoryResourceNotification** para determinar quando o Gerenciador de Memória do SQL Server pode alocar e liberar memória.  
   
  E recomendável permitir que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use memória dinamicamente, porém, você pode definir as opções de memória manualmente e restringir a quantidade de memória que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode acessar. Antes de definir a quantidade de memória para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], determine a configuração de memória apropriada subtraindo, da memória física total, a memória necessária para o SO e quaisquer outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (e outros usos do sistema, caso o computador não esteja totalmente dedicado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Essa diferença é a quantidade máxima de memória que você pode atribuir ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Configurando as opções de memória manualmente  
+## <a name="setting-the-memory-options-manually"></a>Configurando as opções de memória manualmente  
  Defina **memória mínima do servidor** e **memória máxima do servidor** para abranger um intervalo de valores de memória. Esse método é útil para os administradores de sistema ou de banco de dados para configurar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com os requisitos de memória de outros aplicativos executados no mesmo computador.  
   
  Use **memória mínima do servidor** para garantir uma quantidade mínima de memória disponível para o Gerenciador de Memória do SQL Server em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não alocará imediatamente a quantidade de memória especificada em **memória mínima do servidor** na inicialização. Porém, depois que o uso de memória atingir esse valor devido à carga do cliente, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá liberar memória livre a menos que o valor de **memória mínima do servidor** seja reduzido.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aloque a quantidade de memória especificada em **memória mínima do servidor**. Se a carga do servidor nunca exigir a alocação da quantidade de memória especificada em **memória mínima do servidor**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será executado com menos memória.  
+>  Não há nenhuma garantia de que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aloque a quantidade de memória especificada em **min server memory**. Se a carga do servidor nunca exigir a alocação da quantidade de memória especificada em **memória mínima do servidor**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será executado com menos memória.  
   
  A quantidade mínima de memória permitida para a **memória máxima do servidor** é de 128 MB.  
   
-## Como configurar opções de memória no SQL Server Management Studio  
+## <a name="how-to-configure-memory-options-using-sql-server-management-studio"></a>Como configurar opções de memória no SQL Server Management Studio  
  Use as duas opções de memória de servidor, **memória mínima do servidor** e **memória máxima do servidor**, para reconfigurar a quantidade de memória (em megabytes) gerenciada pelo Gerenciador de Memória do SQL Server para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode alterar seus requisitos de memória dinamicamente com base nos recursos do sistema disponíveis.  
   
-### Procedimento para configurar uma quantidade fixa de memória  
+### <a name="procedure-for-configuring-a-fixed-amount-of-memory"></a>Procedimento para configurar uma quantidade fixa de memória  
  Para definir uma quantidade fixa de memória  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor e selecione **Propriedades**.  
@@ -67,25 +72,25 @@ caps.handback.revision: 78
   
 3.  Em **Opções de Memória do Servidor**, insira a quantidade desejada para **Memória mínima do servidor** e **Memória máxima do servidor**.  
   
-     Use as configurações padrão para permitir que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] altere seus requisitos de memória de forma dinâmica com base nos recursos disponíveis do sistema. A configuração padrão de **memória mínima do servidor** é 0 e a configuração padrão de **memória máxima do servidor** é 2147483647 megabytes (MB).  
+     Use as configurações padrão para permitir que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] altere seus requisitos de memória de forma dinâmica com base nos recursos disponíveis do sistema. A configuração padrão de **memória mínima do servidor** é 0 e a configuração padrão de **memória máxima do servidor** é 2147483647 megabytes (MB).  
   
-## Maximizar a taxa de transferência de dados para aplicativos de rede  
+## <a name="maximize-data-throughput-for-network-applications"></a>Maximizar a taxa de transferência de dados para aplicativos de rede  
  Para otimizar o uso de memória do sistema para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], limite a quantidade de memória usada pelo sistema para o cache de arquivo. Para limitar o cache do sistema de arquivos, verifique se a opção **Maximizar taxa de transferência de dados para compartilhamento de arquivos** não está selecionada. É possível especificar o menor cache do sistema de arquivos com a seleção de **Minimizar a memória usada** ou **Equilíbrio**.  
   
-#### Para verificar a configuração atual de seu sistema operacional  
+#### <a name="to-check-the-current-setting-on-your-operating-system"></a>Para verificar a configuração atual de seu sistema operacional  
   
-1.  Clique em **Iniciar**, clique em **Painel de Controle**, clique duas vezes em **Conexões de Rede** e duas vezes em **Conexão de Área Local**.  
+1.  Clique em **Iniciar**, clique em **Painel de Controle**, clique duas vezes em **Conexões de Rede**e duas vezes em **Conexão de Área Local**.  
   
 2.  Na guia **Geral** clique em **Propriedades**, selecione **Redes Microsoft de Compartilhamento de Arquivos e Impressoras**e clique em **Propriedades**.  
   
 3.  Se **Maximizar transferência de dados para aplicativos de rede** estiver selecionada, escolha qualquer outra opção, clique em **OK**e feche o restante das caixas de diálogo.  
   
-## Bloquear páginas na memória  
+## <a name="lock-pages-in-memory"></a>Bloquear páginas na memória  
  Essa política do Windows determina quais contas podem usar um processo para manter dados na memória física, impedindo o sistema de paginar os dados para a memória virtual em disco. O bloqueio de páginas na memória pode manter a resposta do servidor quando ocorre paginação de memória no disco. A opção **Bloquear Páginas na Memória** do SQL Server é definida para ON nas instâncias do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard Edition e com um valor mais alto quando a conta com privilégios para executar o sqlservr.exe recebeu o direito de usuário "LPIM" (Páginas Bloqueadas na Memória) do Windows.  
   
  Para desabilitar a opção **Bloquear Páginas na Memória** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remova o direito de usuário “Páginas Bloqueadas em Memória” para a conta de inicialização do SQL Server.  
   
-### Para desabilitar Bloquear Páginas na Memória  
+### <a name="to-disable-lock-pages-in-memory"></a>Para desabilitar Bloquear Páginas na Memória  
  Para desabilitar a opção Bloquear Páginas na Memória  
   
 1.  No menu **Iniciar** , clique em **Executar**. Na caixa **Abrir** , digite **gpedit.msc**.  
@@ -104,7 +109,7 @@ caps.handback.revision: 78
   
 6.  Na caixa de diálogo **Configuração da Política de Segurança Local** , selecione a conta com privilégios para executar o sqlservr.exe e clique em **Remover**.  
   
-## Gerenciador de Memória Virtual  
+## <a name="virtual-memory-manager"></a>Gerenciador de Memória Virtual  
  As regiões confirmadas de espaço de endereço são mapeadas para a memória física disponível pelo VMM (Gerenciador de Memória Virtual) do Windows.  
   
  Para obter mais informações sobre a quantidade de memória física com suporte de diferentes sistemas operacionais, consulte a documentação do Windows "Limites de memória para versões do Windows".  
@@ -113,7 +118,7 @@ caps.handback.revision: 78
   
  As opções **memória mínima do servidor** e **memória máxima do servidor** são opções avançadas. Se você estiver usando o procedimento armazenado no sistema **sp_configure** para alterar essas configurações, será possível alterá-las apenas quando **show advanced options** estiver definida como 1. Essas configurações entram em vigor imediatamente sem a reinicialização do servidor.  
   
-## Executando várias instâncias do SQL Server  
+## <a name="running-multiple-instances-of-sql-server"></a>Executando várias instâncias do SQL Server  
  Quando você estiver executando várias instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)], há três métodos que você pode usar para gerenciar a memória:  
   
 -   Use **max server memory** para controlar o uso de memória. Defina configurações máximas para cada instância, tomando cuidado para que a permissão total não seja maior que a memória física total de sua máquina. É recomendável que cada instância de memória seja proporcional à sua carga de trabalho ou tamanho de banco de dados esperado. Esse método tem a vantagem de que, quando novos processos ou instância forem iniciados, a memória livre estará disponível para eles imediatamente. A desvantagem é que se você não estiver executando todas as instâncias, nenhuma das instâncias sendo executadas poderá utilizar a memória livre restante.  
@@ -124,14 +129,14 @@ caps.handback.revision: 78
   
  É possível alterar essas configurações sem reinicializar as instâncias, para que você possa testar facilmente para encontrar as melhores configurações para seu padrão de uso.  
   
-## Fornecendo a quantidade máxima de memória para o SQL Server  
+## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>Fornecendo a quantidade máxima de memória para o SQL Server  
  A memória pode ser configurada até o limite de espaço do endereço virtual do processo em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (8 TB).  
   
  ***/3gb** é um parâmetro de inicialização do sistema operacional. Para obter mais informações, visite a [Biblioteca MSDN](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
   
-### Exemplo A  
+### <a name="example-a"></a>Exemplo A  
  O exemplo a seguir define a opção `max server memory` como 4 GB:  
   
 ```  
@@ -145,7 +150,7 @@ RECONFIGURE;
 GO  
 ```  
   
-### Exemplo B. Determinando a Alocação de Memória Atual  
+### <a name="example-b-determining-current-memory-allocation"></a>Exemplo B. Determinando a Alocação de Memória Atual  
  A instrução a seguir retorna informações sobre a memória alocada atualmente.  
   
 ```  
@@ -158,10 +163,11 @@ process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Monitorar e ajustar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

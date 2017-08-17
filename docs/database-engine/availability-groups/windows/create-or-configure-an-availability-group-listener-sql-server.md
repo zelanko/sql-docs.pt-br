@@ -1,31 +1,36 @@
 ---
-title: "Criar ou configurar um ouvinte de grupo de disponibilidade (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.newaglistener.general.f1"
-helpviewer_keywords: 
-  - "Grupos de disponibilidade [SQL Server], ouvintes"
-  - "Grupos de disponibilidade [SQL Server], conectividade de cliente"
+title: Criar ou configurar um ouvinte do grupo de disponibilidade (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.newaglistener.general.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], listeners
+- Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 caps.latest.revision: 52
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 51
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 85130cfb53873de6e378c26b68b9b4d601695614
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Criar ou configurar um ouvinte de grupo de disponibilidade (SQL Server)
-  Este tópico descreve como criar ou configurar um único *ouvinte de grupo de disponibilidade* para um Grupo de Disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+# <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Criar ou configurar um ouvinte de grupo de disponibilidade (SQL Server)
+  Este tópico descreve como criar ou configurar um único *ouvinte de grupo de disponibilidade* para um Grupo de Disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
->  Para criar o primeiro ouvinte de grupo de disponibilidade de um grupo de disponibilidade, é altamente recomendável ter o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Evite criar um ouvinte diretamente no cluster WSFC, exceto se necessário, por exemplo, para criar um ouvinte adicional.  
+>  Para criar o primeiro ouvinte de grupo de disponibilidade de um grupo de disponibilidade, é altamente recomendável ter o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Evite criar um ouvinte diretamente no cluster WSFC, exceto se necessário, por exemplo, para criar um ouvinte adicional.  
   
 -   **Antes de começar:**  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 51
 -   [Exibir propriedades do ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
   
 > [!NOTE]  
->  Se já houver um ouvinte e você desejar criar um ouvinte adicional, consulte [Para criar um ouvinte adicional para um grupo de disponibilidade (opcional)](#CreateAdditionalListener) posteriormente neste tópico.  
+>  Se já houver um ouvinte e você desejar criar um ouvinte adicional, consulte [Para criar um ouvinte adicional para um grupo de disponibilidade (opcional)](#CreateAdditionalListener)posteriormente neste tópico.  
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 51
 -   Se estiver configurando um ouvinte de grupo de disponibilidade em várias sub-redes e estiver planejando usar endereços IP estáticos, você precisará obter os endereços IP estáticos de cada sub-rede que hospeda uma réplica de disponibilidade para o grupo de disponibilidade para o qual está criando o ouvinte. Normalmente, você precisará solicitar os endereços IP estáticos aos administradores de rede.  
   
 > [!IMPORTANT]  
->  Antes de criar seu primeiro ouvinte, é altamente recomendável ler [Conectividade de Cliente AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
+>  Antes de criar seu primeiro ouvinte, é altamente recomendável ler [Conectividade de cliente AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
 ###  <a name="DNSnameReqs"></a> Requisitos para o nome DNS de um ouvinte de grupo de disponibilidade  
  Cada ouvinte de grupo de disponibilidade exige um nome de host DNS que é exclusivo no domínio e no NetBIOS. O nome DNS é um valor da cadeia de caracteres. Este nome pode conter somente caracteres alfanuméricos, traços (-) e hífens (_), em qualquer ordem. Os nomes de host DNS diferenciam maiúsculas de minúsculas. O comprimento máximo é 63 caracteres; no entanto, no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o comprimento máximo que você pode especificar é 15 caracteres.  
@@ -107,8 +112,8 @@ caps.handback.revision: 51
   
 |Permissões|Link|  
 |-----------------|----------|  
-|O CNO (nome do objeto de cluster) do cluster WSFC que está hospedando o grupo de disponibilidade deve ter a permissão **Criar Objetos de computador**.<br /><br /> No Active Directory, por padrão, um CNO não tem a permissão **Criar Objetos de computador** explicitamente e pode criar dez VCOs (objetos de computador virtual). Depois que os dez VCOs forem criados, a criação de VCOs adicionais apresentará falha. É possível impedir isso concedendo a permissão explicitamente ao CNO do cluster WSFC. Observe que o VCOs para grupos de disponibilidade que você excluiu não serão excluídos automaticamente no Active Directory e serão incluídos na contagem do limite padrão de dez VCOs, a menos que sejam excluídos manualmente.<br /><br /> Observação: em algumas organizações, a política de segurança proíbe a concessão da permissão **Criar Objetos de computador** a contas de usuário individuais.|*Steps for configuring the account for the person who installs the cluster* (Etapas para configurar a conta para a pessoa que instala o cluster) no [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer) (Guia passo a passo do cluster de failover: configurando contas no Active Directory)<br /><br /> *Steps for prestaging the cluster name account* (Etapas para pré-preparar a conta de nome do cluster) no [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating) (Guia passo a passo do cluster de failover: configurando contas no Active Directory)|  
-|Se sua organização exigir que você pré-configure a conta de computador para um nome de rede virtual de ouvinte, você precisará de associação no grupo **Operador de Conta** ou da assistência de seu administrador de domínio.|*Steps for prestaging an account for a clustered service or application* (Etapas para pré-preparar uma conta para um serviço ou aplicativo clusterizado) no [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2) (Guia passo a passo do cluster de failover: configurando contas no Active Directory).|  
+|O CNO (nome do objeto de cluster) do cluster WSFC que está hospedando o grupo de disponibilidade deve ter a permissão **Criar Objetos de computador** .<br /><br /> No Active Directory, por padrão, um CNO não tem a permissão **Criar Objetos de computador** explicitamente e pode criar dez VCOs (objetos de computador virtual). Depois que os dez VCOs forem criados, a criação de VCOs adicionais apresentará falha. É possível impedir isso concedendo a permissão explicitamente ao CNO do cluster WSFC. Observe que o VCOs para grupos de disponibilidade que você excluiu não serão excluídos automaticamente no Active Directory e serão incluídos na contagem do limite padrão de dez VCOs, a menos que sejam excluídos manualmente.<br /><br /> Observação: em algumas organizações, a política de segurança proíbe a concessão da permissão **Criar Objetos de computador** a contas de usuário individuais.|*Steps for configuring the account for the person who installs the cluster* (Etapas para configurar a conta para a pessoa que instala o cluster) no [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Steps for prestaging the cluster name account* (Etapas para configurar a conta para a pessoa que instala o cluster) no [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
+|Se sua organização exigir que você pré-configure a conta de computador para um nome de rede virtual de ouvinte, você precisará de associação no grupo **Operador de Conta** ou da assistência de seu administrador de domínio.|*Steps for prestaging an account for a clustered service or application* (Etapas para pré-preparar uma conta para um serviço ou aplicativo clusterizado) no [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)(Guia passo a passo do cluster de failover: configurando contas no Active Directory).|  
   
 > [!TIP]  
 >  Geralmente, é mais simples não pré-preparar a conta de computador para um nome de rede virtual de ouvinte. Se possível, deixe a conta ser criada e configurada automaticamente ao executar o Assistente de Alta Disponibilidade do WSFC.  
@@ -129,13 +134,13 @@ caps.handback.revision: 51
   
 1.  No Pesquisador de Objetos, conecte-se à instância do servidor que hospeda a réplica primária do grupo de disponibilidade e clique no nome do servidor para expandir a árvore de servidores.  
   
-2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
+2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
   
 3.  Clique no grupo de disponibilidade cujo ouvinte você deseja configurar e escolha uma das alternativas a seguir:  
   
-    -   Para criar um ouvinte, clique com o botão direito do mouse no nó **Ouvintes do Grupo de Disponibilidade** e selecione o comando **Novo Ouvinte**. Isso abre a caixa de diálogo **Novo Ouvinte do Grupo de Disponibilidade** . Para obter mais informações, consulte [Adicionar Ouvinte do Grupo de Disponibilidade (caixa de diálogo)](#AddAgListenerDialog), posteriormente neste tópico.  
+    -   Para criar um ouvinte, clique com o botão direito do mouse no nó **Ouvintes do Grupo de Disponibilidade** e selecione o comando **Novo Ouvinte** . Isso abre a caixa de diálogo **Novo Ouvinte do Grupo de Disponibilidade** . Para obter mais informações, consulte [Adicionar Ouvinte do Grupo de Disponibilidade (caixa de diálogo)](#AddAgListenerDialog), posteriormente neste tópico.  
   
-    -   Para alterar o número da porta de um ouvinte existente, expanda o nó **Ouvintes do Grupo de Disponibilidade**, clique com o botão direito do mouse no ouvinte e selecione o comando **Propriedades**. Digite o novo número da porta no campo **Porta** e clique em **OK**.  
+    -   Para alterar o número da porta de um ouvinte existente, expanda o nó **Ouvintes do Grupo de Disponibilidade** , clique com o botão direito do mouse no ouvinte e selecione o comando **Propriedades** . Digite o novo número da porta no campo **Porta** e clique em **OK**.  
   
 ###  <a name="AddAgListenerDialog"></a> Novo Ouvinte do Grupo de Disponibilidade (caixa de diálogo)  
  **Nome DNS do Ouvinte**  
@@ -235,13 +240,13 @@ caps.handback.revision: 51
     ```  
   
     > [!NOTE]  
-    >  Para exibir a sintaxe de um cmdlet, use o cmdlet **Get-Help[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no ambiente do ** PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Para exibir a sintaxe de um cmdlet, use o cmdlet **Get-Help[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no ambiente do**  PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **Para configurar e usar o provedor do SQL Server PowerShell**  
   
 -   [Provedor do SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-## Solução de problemas  
+## <a name="troubleshooting"></a>Solução de problemas  
   
 ###  <a name="ADQuotas"></a> Falha ao criar um ouvinte de grupo de disponibilidade devido a cotas do Active Directory  
  Pode haver falha na criação de um novo ouvinte de grupo de disponibilidade porque você atingiu uma cota do Active Directory para a conta da máquina do nó de cluster participante.  Para obter mais informações, consulte os artigos a seguir.  
@@ -281,14 +286,14 @@ caps.handback.revision: 51
   
      **Prós:** você não precisa aumentar o valor de tempo limite de conexão de cliente.  
   
-     **Contras**: se um failover de sub-rede cruzado ocorrer, o tempo de recuperação do cliente poderá ser de 15 minutos ou mais, dependendo da configuração de **HostRecordTTL** e da configuração da agenda de replicação DNS/AD entre sites.  
+     **Contras** : se um failover de sub-rede cruzado ocorrer, o tempo de recuperação do cliente poderá ser de 15 minutos ou mais, dependendo da configuração de **HostRecordTTL** e da configuração da agenda de replicação DNS/AD entre sites.  
   
 ###  <a name="RegisterAllProvidersIP"></a> Configuração RegisterAllProvidersIP  
- Quando você usa o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell para criar um ouvinte de grupo de disponibilidade, o Ponto de Acesso para Cliente é criado no WSFC com a propriedade **RegisterAllProvidersIP** definida como 1 (true). O efeito de esse valor de propriedade depende da cadeia de conexão do cliente, da seguinte maneira:  
+ Quando você usa o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell para criar um ouvinte de grupo de disponibilidade, o Ponto de Acesso para Cliente é criado no WSFC com a propriedade **RegisterAllProvidersIP** definida como 1 (true). O efeito de esse valor de propriedade depende da cadeia de conexão do cliente, da seguinte maneira:  
   
 -   Cadeias de conexão que definem **MultiSubnetFailover** como true  
   
-     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] define a propriedade **RegisterAllProvidersIP** como 1 para reduzir o tempo de reconexão após um failover para clientes cujas cadeias de conexão de cliente especificam `MultiSubnetFailover = True`, como recomendado. Observe que para usufruir das vantagens do recurso de várias sub-redes do ouvinte, seus clientes podem exigir um provedor de dados que dê suporte à palavra-chave **MultiSubnetFailover**. Para obter informações sobre o suporte do driver para failover de várias sub-redes, consulte [Conectividade de Cliente AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
+     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] define a propriedade  **RegisterAllProvidersIP** como 1 para reduzir o tempo de reconexão após um failover para clientes cujas cadeias de conexão de cliente especificam `MultiSubnetFailover = True`, como recomendado. Observe que para usufruir das vantagens do recurso de várias sub-redes do ouvinte, seus clientes podem exigir um provedor de dados que dê suporte à palavra-chave **MultiSubnetFailover** . Para obter informações sobre o suporte do driver para failover de várias sub-redes, consulte [Conectividade de cliente AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
      Para obter informações sobre clustering de várias sub-redes, consulte [Clustering de várias sub-redes do SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
@@ -329,7 +334,7 @@ Start-ClusterResource yourListenerName
   
 -   Informe o nome do host DNS do ouvinte aos desenvolvedores de aplicativos para uso em cadeias de conexão ao pedir conexões cliente com esse grupo de disponibilidade.  
   
--   Incentive os desenvolvedores a atualizarem cadeias de conexão do cliente para especificar `MultiSubnetFailover = True`, se possível. Para obter informações sobre o suporte do driver para failover de várias sub-redes, consulte [Conectividade de Cliente AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
+-   Incentive os desenvolvedores a atualizarem cadeias de conexão do cliente para especificar `MultiSubnetFailover = True`, se possível. Para obter informações sobre o suporte do driver para failover de várias sub-redes, consulte [Conectividade de cliente AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
 ###  <a name="CreateAdditionalListener"></a> Criar um ouvinte adicional para um grupo de disponibilidade (opcional)  
  Depois de criar um ouvinte pelo SQL Server, você poderá adicionar um ouvinte adicional, da seguinte maneira:  
@@ -356,9 +361,9 @@ Start-ClusterResource yourListenerName
   
          Para obter informações sobre como usar o Windows PowerShell para clusters de failover, consulte [Visão geral de comandos do gerenciador de servidor](http://technet.microsoft.com/library/cc732757.aspx#BKMK_wps).  
   
-2.  Inicie a escuta do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no novo ouvinte. Após criar um ouvinte adicional, conecte a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda a réplica principal do grupo de disponibilidade e use [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell para modificar a porta do ouvinte.  
+2.  Inicie a escuta do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no novo ouvinte. Após criar um ouvinte adicional, conecte a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda a réplica principal do grupo de disponibilidade e use [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell para modificar a porta do ouvinte.  
   
- Para obter mais informações, consulte [How to create multiple listeners for same availability group](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx) (Como criar vários ouvintes para o mesmo grupo de disponibilidade) (um blog da equipe do SQL Server AlwaysOn).  
+ Para obter mais informações, consulte [How to create multiple listeners for same availability group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/) (Como criar vários ouvintes para o mesmo grupo de disponibilidade) (um blog da equipe do SQL Server AlwaysOn).  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
@@ -368,13 +373,14 @@ Start-ClusterResource yourListenerName
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [Como criar vários ouvintes para o mesmo grupo de disponibilidade](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx)  
+-   [How to create multiple listeners for same availability group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/)  
   
--   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+ [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Clustering de várias sub-redes do SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
   
   
+

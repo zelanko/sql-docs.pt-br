@@ -1,25 +1,30 @@
 ---
-title: "Espelhamento de banco de dados e envio de logs (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espelhamento de banco de dados [SQL Server], interoperabilidade"
-  - "envio de logs [SQL Server], espelhamento de banco de dados"
+title: Espelhamento de banco de dados e envio de logs (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], interoperability
+- log shipping [SQL Server], database mirroring
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d043699e20a674009268ee168b457322fd0591ee
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Espelhamento de banco de dados e envio de logs (SQL Server)
+# <a name="database-mirroring-and-log-shipping-sql-server"></a>Espelhamento de banco de dados e envio de logs (SQL Server)
   Um determinado banco de dados pode ser espelhado ou ter o log enviado; ou ter os dois processos realizados simultaneamente. Para escolher o método a ser usado, considere o seguinte:  
   
 -   Você precisa de quantos servidores de destino?  
@@ -35,7 +40,7 @@ caps.handback.revision: 36
 > [!NOTE]  
 >  Para introduções a essas tecnologias, consulte [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md) e [Sobre o envio de Log &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## Combinando o envio de logs e o espelhamento de banco de dados  
+## <a name="combining-log-shipping-and-database-mirroring"></a>Combinando o envio de logs e o espelhamento de banco de dados  
  O banco de dados principal em uma sessão de espelhamento também pode agir como o banco de dados primário em uma configuração de envio de logs, ou vice-versa; uma vez que o compartilhamento de backup do envio de logs está intacto. A sessão de espelhamento de banco de dados é executada em qualquer modo operacional, síncrono (com a segurança de transação definida como FULL) ou assíncrono (com a segurança de transação definida como OFF).  
   
 > [!NOTE]  
@@ -48,7 +53,7 @@ caps.handback.revision: 36
   
  Durante uma sessão de envio de logs, os trabalhos de backup no banco de dados primário criam backups de log em uma pasta de backup. Nessa pasta, os backups são copiados por trabalhos de cópia dos servidores secundários. Para obterem êxito, os trabalhos de backup e de cópia devem ter acesso à pasta de backup de envio de logs. Para maximizar a disponibilidade do servidor primário, recomendamos que a pasta de backup seja estabelecida em um local de backup compartilhado em um computador host separado. Assegure de que todos os servidores de envio de logs, inclusive o servidor espelho/primário, possam acessar o local de backup compartilhado (conhecido como um *compartilhamento de backup*).  
   
- Para permitir que o envio de logs continue depois que houver falha no espelhamento de banco de dados, você também deverá configurar o servidor espelho como um servidor primário, usando a mesma configuração utilizada para o primário, no banco de dados principal. O banco de dados espelho está no estado de restauração, o que impede que os trabalhos de backup façam o backup do log no banco de dados espelho. Isso assegura que o banco de dados espelho/primário não interfira no banco de dados principal/primário cujos backups de log estão sendo copiados atualmente por servidores secundários. Para evitar alertas falsos, depois que o trabalho de backup é executado no banco de dados espelho/primário, ele emite uma mensagem para a tabela **log_shipping_monitor_history_detail** e o trabalho de agente retorna um status de êxito.  
+ Para permitir que o envio de logs continue depois que houver falha no espelhamento de banco de dados, você também deverá configurar o servidor espelho como um servidor primário, usando a mesma configuração utilizada para o primário, no banco de dados principal. O banco de dados espelho está no estado de restauração, o que impede que os trabalhos de backup façam o backup do log no banco de dados espelho. Isso assegura que o banco de dados espelho/primário não interfira no banco de dados principal/primário cujos backups de log estão sendo copiados atualmente por servidores secundários. Para evitar alertas falsos, depois que o trabalho de backup é executado no banco de dados espelho/primário, ele emite uma mensagem para a tabela**log_shipping_monitor_history_detail** e o trabalho de agente retorna um status de êxito.  
   
  O banco de dados espelho/primário está inativo na sessão de envio de logs. Porém, se houver falha no espelhamento, o banco de dados espelho anterior ficará online como o banco de dados principal. Nessa altura, aquele banco de dados também fica ativo como o banco de dados primário de envio de logs. Os trabalhos de backup de envio de logs que não puderam enviar previamente o log de envio naquele banco de dados, começam a enviar o log. Reciprocamente, um failover faz com que o banco de dados principal/primário anterior se torne o novo banco de dados espelho/primário e entre em estado de restauração, e os trabalhos de backup naquele banco de dados interrompam o backup de log.  
   
@@ -59,24 +64,24 @@ caps.handback.revision: 36
   
  Ao usar um monitor de envio de logs local, torna-se desnecessária qualquer consideração especial para acomodar esse cenário. Para obter informações sobre como usar uma instância de monitoramento remoto com esse cenário, consulte "O Impacto do espelhamento de banco de dados em uma instância de monitoramento remoto", mais adiante neste tópico.  
   
-## Failover do banco de dados principal para o banco de dados espelho  
- A figura a seguir mostra como o envio de logs e o espelhamento de banco dados trabalham juntos quando o espelhamento está sendo executado em modo de alta segurança com failover automático. Inicialmente, o **Server_A** é o servidor principal do espelhamento e o servidor primário do envio de logs. O **Server_B** é o servidor espelho, mas também está configurado como um servidor primário, só que inativo no momento. O **Server_C** e o **Server_D** são servidores de envio de logs secundários. Para maximizar a disponibilidade da sessão de envio de logs, o local de backup fica em um diretório de compartilhamento em um computador host separado.  
+## <a name="failing-over-from-the-principal-to-the-mirror-database"></a>Failover do banco de dados principal para o banco de dados espelho  
+ A figura a seguir mostra como o envio de logs e o espelhamento de banco dados trabalham juntos quando o espelhamento está sendo executado em modo de alta segurança com failover automático. Inicialmente, o **Server_A** é o servidor principal do espelhamento e o servidor primário do envio de logs. O**Server_B** é o servidor espelho, mas também está configurado como um servidor primário, só que inativo no momento. O**Server_C** e o **Server_D** são servidores de envio de logs secundários. Para maximizar a disponibilidade da sessão de envio de logs, o local de backup fica em um diretório de compartilhamento em um computador host separado.  
   
- ![Envio de logs e espelhamento de banco de dados](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "Envio de logs e espelhamento de banco de dados")  
+ ![Envio de logs e espelhamento de banco de dados](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "Log shipping and database mirroring")  
   
  Depois de um failover de espelhamento, o nome do servidor primário definido no servidor secundário permanece inalterado. .  
   
-## O impacto do espelhamento de banco de dados em uma instância de monitoramento remoto  
+## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>O impacto do espelhamento de banco de dados em uma instância de monitoramento remoto  
  Quando o envio de logs é usado com uma instância de monitoramento remoto, a combinação da sessão de envio de logs e de espelhamento de banco de dados afeta as informações nas tabelas de monitor. As informações sobre o primário formam uma combinação de um configurado no principal/primário e o monitor configurado em cada secundário.  
   
  Para continuar monitorando da maneira mais uniforme possível, ao usar um monitor remoto, recomendamos que você especifique o nome primário original ao configurar o primário no secundário. Essa abordagem também facilita a alteração da configuração de envio de logs do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para obter mais informações sobre o monitoramento, consulte [Monitorar o envio de logs &#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md).  
   
-## Configurando um espelhamento e um envio de logs em conjunto  
+## <a name="setting-up-mirroring-and-log-shipping-together"></a>Configurando um espelhamento e um envio de logs em conjunto  
  Para configurar um espelhamento de banco de dados junto com um envio de logs, siga as seguintes etapas:  
   
 1.  Restaure os backups do banco de dados principal/primário com NORECOVERY em outra instância de servidor a ser usada posteriormente como banco de dados espelho do espelhamento de banco de dados para o banco de dados principal/primário. Para obter mais informações, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-2.  Configure um espelhamento de banco de dados. Para obter mais informações, veja [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md) ou [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+2.  Configure um espelhamento de banco de dados. Para obter mais informações, veja [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) ou [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
 3.  Restaure os backups do banco de dados principal/primário para outras instâncias do servidor a serem usadas posteriormente como bancos de dados secundários de envio de logs para o banco de dados primário.  
   

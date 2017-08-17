@@ -1,224 +1,98 @@
 ---
-title: "Estabelecer uma sess&#227;o de espelhamento de banco de dados com a Autentica&#231;&#227;o do Windows (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Autenticação do Windows [SQL Server]"
-  - "espelhamento de banco de dados [SQL Server], segurança"
+title: "Estabelecer a sessão de espelhamento de banco de dados – Autenticação do Windows | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], sessions
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 caps.latest.revision: 58
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 77
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 104c736aa623fa6aa3c55c204559759eb9885800
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Estabelecer uma sess&#227;o de espelhamento de banco de dados com a Autentica&#231;&#227;o do Windows (Transact-SQL)
+# <a name="establish-database-mirroring-session---windows-authentication"></a>Estabelecer a sessão de espelhamento de banco de dados – Autenticação do Windows
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
- Depois que o banco de dados espelho estiver preparado (consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)), você poderá estabelecer uma sessão de espelhamento de banco de dados. As instâncias do servidor principal, espelho e testemunha devem ser instâncias de servidor separadas que deveriam estar em sistemas host separados.  
+ Para estabelecer uma sessão de espelhamento de banco de dados e modificar as propriedades de espelhamento de banco de dados para um banco de dados, use a página **Espelhamento** da caixa de diálogo **Propriedades de Banco de Dados** . Antes de usar a página **Espelhamento** para configurar o espelhamento de banco de dados, verifique se os requisitos a seguir foram atendidos:  
   
-> [!IMPORTANT]  
->  Recomendamos que você configure um espelhamento de banco de dados em períodos de pouca atividade porque a configuração de espelhamento pode comprometer o desempenho.  
-  
-> [!NOTE]  
->  Uma determinada instância do servidor pode participar de várias sessões de espelhamento de banco de dados simultâneas com os mesmos parceiros ou diferentes. Uma instância do servidor pode ser um parceiro em algumas sessões e uma testemunha em outras sessões. A instância do servidor espelho deve estar executando a mesma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como a instância do servidor principal. O espelhamento de banco de dados não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). Além disso, é altamente recomendável que elas sejam executadas em sistemas comparáveis que possam controlar cargas de trabalho idênticas.  
-  
-### Para estabelecer uma sessão de espelhamento de banco de dados  
-  
-1.  Crie o banco de dados espelho. Para obter mais informações, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
-  
-2.  Defina a segurança em cada instância do servidor.  
-  
-     Cada instância do servidor em uma sessão de espelhamento de banco de dados exige um ponto de extremidade de espelhamento de banco de dados. Se o ponto de extremidade não existir, você deve criá-lo.  
+-   As instâncias de servidor principal e espelho devem estar sendo executadas na mesma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]— Standard ou Enterprise. Além disso, é altamente recomendável que elas sejam executadas em sistemas comparáveis que possam controlar cargas de trabalho idênticas.  
   
     > [!NOTE]  
-    >  A forma de autenticação usada para o espelhamento de banco de dados por uma instância do servidor é uma propriedade do ponto de extremidade de espelhamento de banco de dados. Dois tipos de segurança de transporte estão disponíveis para o espelhamento de banco de dados: autenticação do Windows ou autenticação com certificado. Para obter mais informações, consulte [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md).  
+    >  Uma instância de servidor testemunha não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-     Em cada servidor parceiro, assegure que existe um ponto de extremidade de espelhamento de banco de dados. Independentemente do número de sessões de espelhamento a dar suporte, a instância do servidor só pode ter um ponto de extremidade de espelhamento de banco de dados. Se você pretende usar essa instância do servidor exclusivamente para parceiros em sessões de espelhamento de banco de dados, você poderá atribuir a função de parceiro ao ponto de extremidade (ROLE**=**PARTNER). Se você também pretende usar essa instância do servidor exclusivamente para testemunhas em sessões de espelhamento de banco de dados, você poderá definir o papel de parceiro ao ponto de extremidade como ALL.  
+-   O banco de dados espelho deve existir e ser atual.  
   
-     Para executar uma instrução SET PARTNER, o STATE dos pontos de extremidade de ambos os parceiros deve ser definido como STARTED.  
+     A criação de um banco de dados espelho requer a restauração de um backup recente do banco de dados principal (usando WITH NORECOVERY) na instância do servidor espelho. Requer também que, depois do backup completo, um ou mais backups de log sejam restaurados em sequência para o banco de dados espelho (usando WITH NORECOVERY). Para obter mais informações, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-     Para saber se uma instância do servidor tem um ponto de extremidade de espelhamento de banco de dados e saber sua função e estado, nessa instância, use a seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+-   Se as instâncias do servidor estiverem sendo executadas em contas de usuário de domínio diferentes, cada uma exigirá um logon no banco de dados **mestre** da outra. Se o logon não existir, você deverá criá-lo antes de configurar o espelhamento. Para obter mais informações, consulte [Permitir o acesso à rede a um ponto de extremidade de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
-    ```  
-    SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
-    ```  
+### <a name="to-configure-database-mirroring"></a>Para configurar o espelhamento de banco de dados  
   
-    > [!IMPORTANT]  
-    >  Não reconfigure um ponto de extremidade de espelhamento de banco de dados em uso. Se um ponto de extremidade do espelhamento de banco de dados já existir e estiver em uso, recomendamos que você use esse ponto de extremidade para cada sessão na instância do servidor. Cancelando um ponto de extremidade em uso pode fazer o ponto de extremidade reinicializar, interrompendo as conexões das sessões existentes, que podem aparecer como um erro às outras instâncias do servidor. Isso é particularmente importante em modo de alta segurança com failover automático no qual a reconfiguração de um ponto de extremidade em um parceiro poderia provocar um failover. Além disso, se uma testemunha foi definida para uma sessão, cancelar o ponto de extremidade de espelhamento de banco de dados poderá fazer com que o servidor principal daquela sessão perca quorum; se isso acontecer, o banco de dados será colocado offline e seus usuários serão desconectados. Para obter mais informações, consulte [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+1.  Depois de se conectar à instância do servidor principal, no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
-     Se o parceiro não tiver um ponto de extremidade, consulte [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+2.  Expanda os **Bancos de Dados**e selecione o banco de dados a ser espelhado.  
   
-3.  Se as instâncias de servidor estiverem sendo executadas em contas do usuário de domínio diferentes, cada uma exigirá um logon no banco de dados **mestre** dos outros. Se o logon não existir, você deve criá-lo. Para obter mais informações, consulte [Permitir o acesso à rede a um ponto de extremidade de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md).  
+3.  Clique com o botão direito do mouse no banco de dados, selecione **Tarefas**e clique em **Espelhar**. Isso abre a página **Espelhamento** da caixa de diálogo **Propriedades do Banco de Dados** .  
   
-4.  Para definir o servidor principal como parceiro no banco de dados espelho, conecte-se ao servidor espelho e emita a seguinte instrução:  
-  
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
-  
-     em que *<database_name>* é o nome do banco de dados a ser espelhado (esse nome é o mesmo em ambos os parceiros) e *<server_network_address>* é o endereço de rede de servidor do servidor principal.  
-  
-     A sintaxe para um endereço de rede do servidor é a seguinte:  
-  
-     TCP**://**\<*system-address>***:**\<*port>*  
-  
-     em que \<*system-address>* é uma cadeia que identifica inequivocamente o sistema de computador de destino, e \<*port>* é o número da porta usado pelo ponto de extremidade de espelhamento da instância do servidor parceiro. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
-  
-     Por exemplo, na instância do servidor espelho, a seguinte instrução ALTER DATABASE define o parceiro como a instância do servidor principal original. O nome de banco de dados é **AdventureWorks**, o endereço de sistema é DBSERVER1 - o nome de sistema do parceiro - e a porta usada pelo ponto de extremidade de espelhamento de banco de dados do parceiro é 7022:  
-  
-    ```  
-    ALTER DATABASE AdventureWorks   
-       SET PARTNER = 'TCP://DBSERVER1:7022'  
-    ```  
-  
-     Essa instrução prepara o servidor espelho para formar uma sessão quando é contatado pelo servidor principal.  
-  
-5.  Para definir o servidor espelho como parceiro no banco de dados principal, conecte-se ao servidor principal e emita a seguinte instrução:  
-  
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
-  
-     Para obter mais informações, consulte a etapa 4.  
-  
-     Por exemplo, na instância do servidor principal, a seguinte instrução ALTER DATABASE define o parceiro como a instância do servidor espelho original. O nome do banco de dados é **AdventureWorks**, o endereço do sistema é DBSERVER2 - o nome de sistema do parceiro - e a porta usada pelo ponto de extremidade de espelhamento de banco de dados do parceiro é 7025:  
-  
-    ```  
-    ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  
-    ```  
-  
-     Inserir essa instrução no servidor principal inicia a sessão de espelhamento de banco de dados.  
-  
-6.  Por padrão, uma sessão é definida como segurança de transação completa (SAFETY é definido como FULL), que inicia a sessão no modo síncrono de segurança alta, sem failover automático. Você pode reconfigurar a sessão para ser executada em modo de segurança alta com failover automático ou em modo assíncrono de alto desempenho, como se segue:  
-  
-    -   **Modo de segurança alta com failover automático**  
-  
-         Se você quiser que uma sessão de modo de segurança alta dê suporte a failover automático, acrescente uma instância do servidor testemunha. Para obter mais informações, consulte [Adicionar uma testemunha de espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md).  
-  
-    -   **Modo de alto desempenho**  
-  
-         Alternativamente, se você não quiser failover automático e preferir enfatizar o desempenho em vez da disponibilidade, desative a segurança de transação. Para obter mais informações, consulte [Alterar a segurança da transação em uma sessão de espelhamento de banco de dados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
-  
-        > [!NOTE]  
-        >  Em modo de alto desempenho, WITNESS deverá ser definido como OFF. Para obter mais informações, consulte [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
-  
-## Exemplo  
-  
-> [!NOTE]  
->  O exemplo seguinte estabelece uma sessão de espelhamento de banco de dados entre parceiros para um banco de dados espelho existente. Para obter informações sobre como criar um banco de dados espelho, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
-  
- O exemplo mostra as etapas básicas para criar uma sessão de espelhamento de banco de dados sem uma testemunha. Os dois parceiros são as instâncias de servidor padrão em dois sistemas de computador (PARTNERHOST1 e PARTNERHOST5). As duas instâncias do parceiro executam a mesma conta do usuário no domínio Windows (MYDOMAIN\dbousername).  
-  
-1.  Na instância do servidor principal (instância padrão em PARTNERHOST1), crie um ponto de extremidade dê suporte a todas as funções que usam a porta 7022:  
-  
-    ```  
-    --create an endpoint for this instance  
-    CREATE ENDPOINT Endpoint_Mirroring  
-        STATE=STARTED   
-        AS TCP (LISTENER_PORT=7022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
-    GO  
-    --Partners under same domain user; login already exists in master.  
-    ```  
+4.  Para começar a configurar o espelhamento, clique no botão **Configurar Segurança** para iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados.  
   
     > [!NOTE]  
-    >  Para encontrar um exemplo de como configurar um logon, consulte [Permitir o acesso à rede a um ponto de extremidade de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md).  
+    >  Durante uma sessão de espelhamento de banco de dados você pode usar esse assistente só para adicionar ou alterar a instância do servidor testemunha.  
   
-2.  Na instância do servidor espelho (instância padrão em PARTNERHOST5), crie um ponto de extremidade que dê suporte a todas as funções que usam a porta 7022:  
-  
-    ```  
-    --create an endpoint for this instance  
-    CREATE ENDPOINT Endpoint_Mirroring  
-        STATE=STARTED   
-        AS TCP (LISTENER_PORT=7022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
-    GO  
-    --Partners under same domain user; login already exists in master.  
-    ```  
-  
-3.  Na instância do servidor principal (em PARTNERHOST1), faça o backup do banco de dados:  
-  
-    ```  
-    BACKUP DATABASE AdventureWorks   
-        TO DISK = 'C:\AdvWorks_dbmirror.bak'   
-        WITH FORMAT  
-    GO  
-    ```  
-  
-4.  Na instância do servidor espelho (em `PARTNERHOST5`), restaure o banco de dados:  
-  
-    ```  
-    RESTORE DATABASE AdventureWorks   
-        FROM DISK = 'Z:\AdvWorks_dbmirror.bak'   
-        WITH NORECOVERY  
-    GO  
-    ```  
-  
-5.  Depois que você criar o backup de banco de dados completo, você deve criar um backup do log no banco de dados principal. Por exemplo, a seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] faz o backup do log ao mesmo arquivo usado pelo backup de banco de dados precedente:  
-  
-    ```  
-    BACKUP LOG AdventureWorks   
-        TO DISK = 'C:\AdventureWorks.bak'   
-    GO  
-    ```  
-  
-6.  Antes de poder iniciar o espelhamento, é necessário aplicar o backup de log exigido (e qualquer backup de log subsequente).  
-  
-     Por exemplo, a seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] restaura o primeiro log de C:\AdventureWorks.bak:  
-  
-    ```  
-    RESTORE LOG AdventureWorks   
-        FROM DISK = 'C:\ AdventureWorks.bak'   
-        WITH FILE=1, NORECOVERY  
-    GO  
-    ```  
-  
-7.  Na instância do servidor espelho, defina a instância do servidor em PARTNERHOST1 como o parceiro (fazendo dele o servidor principal inicial):  
-  
-    ```  
-    USE master;  
-    GO  
-    ALTER DATABASE AdventureWorks   
-        SET PARTNER =   
-        'TCP://PARTNERHOST1:7022'  
-    GO  
-    ```  
+5.  A opção Assistente para Configurar Segurança de Espelhamento de Banco de Dados cria o ponto de extremidade de espelhamento de banco de dados (se não existir nenhum) em cada instância do servidor e insere os endereços de rede do servidor no campo correspondente à função da instância do servidor (**Principal**, **Espelho**ou **Testemunha**).  
   
     > [!IMPORTANT]  
-    >  Por padrão, uma sessão de espelhamento de banco de dados é executada modo síncrono, o que depende de ter uma transação de segurança completa (SAFETY é definido como FULL). Para fazer com que uma sessão seja executada em modo assíncrono, de alto desempenho, defina SAFETY como OFF. Para obter mais informações, consulte [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
+    >  Ao criar um ponto de extremidade, o Assistente para Configurar Segurança de Espelhamento de Banco de Dados sempre usa a Autenticação do Windows. Antes de você poder usar o assistente com autenticação baseada em certificado, o ponto de extremidade do espelhamento deve ser configurado para usar certificados em cada uma das instâncias do servidor. Além disso, todos os campos da caixa de diálogo **Contas de Serviço** do assistente devem permanecer em branco. Para obter informações sobre como criar um ponto de extremidade de espelhamento de banco de dados para usar certificados, veja [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
-8.  Na instância do servidor principal, defina a instância do servidor em `PARTNERHOST5` como o parceiro (fazendo dele o servidor espelho inicial):  
+6.  Opcionalmente, altere o modo de operação. A disponibilidade de certos modos de operação depende da especificação de um endereço TCP para um servidor testemunha. As opções são as seguintes:  
   
-    ```  
-    USE master;  
-    GO  
-    ALTER DATABASE AdventureWorks   
-        SET PARTNER = 'TCP://PARTNERHOST5:7022'  
-    GO  
-    ```  
+    |Opção|Testemunha?|Explicação|  
+    |------------|--------------|-----------------|  
+    |**Alto desempenho (assíncrono)**|Nulo (se existir; não usado, mas a sessão requer um quorum)|Para maximizar o desempenho, o banco de dados espelho fica sempre um pouco atrás do banco de dados principal, nunca se aproximando muito. Porém, a lacuna entre os bancos de dados é geralmente pequena. A perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> Se a instância do servidor principal ficar indisponível, o espelho irá parar; mas se a sessão não tiver um servidor testemunha (como recomendado) ou se o servidor testemunha estiver conectado ao servidor espelho, o servidor espelho ficará acessível como espera passiva e o proprietário do banco de dados poderá forçar o serviço para a instância do servidor espelho (com possível perda de dados).<br /><br /> <br /><br /> Para obter mais informações, consulte [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).|  
+    |**Alta segurança sem failover automático (síncrono)**|Não|Todas as transações confirmadas têm a garantia de serem gravadas em disco no servidor espelho.<br /><br /> O failover manual é possível quando os parceiros estão conectados um ao outro e o banco de dados está sincronizado.<br /><br /> A perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> Se a instância do servidor principal ficar indisponível o espelho irá parar, mas ficará acessível como espera passiva e o proprietário de banco de dados poderá forçar o serviço para a instância do servidor espelho (com possível perda de dados).<br /><br /> <br /><br /> Para obter mais informações, consulte [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).|  
+    |**Alta segurança com failover automático (síncrono)**|Sim (obrigatório)|Todas as transações confirmadas têm a garantia de serem gravadas em disco no servidor espelho.<br /><br /> A disponibilidade é maximizada incluindo uma instância do servidor testemunha para dar suporte ao failover automático. Observe que você só poderá selecionar a opção **Alta segurança com failover automático (síncrono)** se tiver especificado antes um endereço de um servidor testemunha.<br /><br /> O failover manual é possível quando os parceiros estão conectados um ao outro e o banco de dados está sincronizado.<br /><br /> Na presença de um servidor testemunha, a perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor principal ficar indisponível, ocorrerá failover automático. A instância do servidor espelho é alternada para a função principal e oferece seu banco de dados como banco de dados principal.<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> <br /><br /> Para obter mais informações, consulte [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> **\*\* Importante \*\*** Se o servidor testemunha estiver desconectado, os parceiros deverão estar conectados entre si para que o banco de dados fique disponível. Para obter mais informações, consulte [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).|  
   
-9. Opcionalmente, se você pretender usar modo de segurança alta com failover automático, configure a instância do servidor testemunha. Para obter mais informações, consulte [Adicionar uma testemunha de espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md).  
+7.  Quando todas as seguintes condições existirem, clique em **Iniciar Espelhamento** para iniciar o espelhamento:  
   
-> [!NOTE]  
->  Para obter um exemplo completo mostrando a configuração da segurança, o preparo do banco de dados espelho, a configuração de parceiros e a adição de uma testemunha, consulte [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+    -   Você está atualmente conectado à instância do servidor principal.  
   
-## Consulte também  
- [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Permitir o acesso à rede a um ponto de extremidade de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)   
+    -   A segurança foi configurada corretamente.  
+  
+    -   Os endereços TCP totalmente qualificados das instâncias do servidor principal e espelho estão especificados (na seção **Endereços de rede do servidor** ).  
+  
+    -   Se o modo de operação estiver definido como **Alta segurança com failover automático (síncrono)**, o endereço TCP totalmente qualificado da instância do servidor testemunha também será especificado.  
+  
+8.  Depois que o espelhamento começar, você poderá alterar o modo de operação e salvar a alteração clicando em **OK**. Observe que você pode alternar para o modo de segurança alta com failover automático apenas se tiver especificado primeiro um endereço de servidor testemunha.  
+  
+    > [!NOTE]  
+    >  Para remover o servidor testemunha, exclua seu endereço de rede do campo **Testemunha** . Se você mudar do modo de alta segurança com failover automático para o modo de alto desempenho, o campo **Testemunha** será desmarcado automaticamente.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Espelhamento de banco de dados e envio de logs &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)   
- [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
+ [Propriedades do banco de dados &#40;página Espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Pausar ou retomar uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)   
+ [Configurar um banco de dados espelho para usar a propriedade confiável &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
+ [Remover o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)   
+ [Gerenciamento de logons e trabalhos após a troca de função &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
- [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Adicionar ou substituir uma testemunha de espelhamento de banco de dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   
+

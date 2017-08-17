@@ -1,27 +1,32 @@
 ---
-title: "Propriedades do servidor (p&#225;gina Diversas Configura&#231;&#245;es de Servidor) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.miscserversettings.f1"
+title: "Propriedades do servidor – página Configurações Diversas do Servidor | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.miscserversettings.f1
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 53069a083eff6c49fa5198743eb626ca429b96d1
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriedades do servidor (p&#225;gina Diversas Configura&#231;&#245;es de Servidor)
+# <a name="server-properties---misc-server-settings-page"></a>Propriedades do servidor – página Configurações Diversas do Servidor
   Use esta página para exibir ou modificar as configurações de servidor.  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Linguagem padrão para usuários**  
  Especifica a linguagem padrão para todos os logons recém-criados.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 22
  **Executando Valores**  
  Exiba os valores que estão sendo executados para as opções neste painel. Esses valores são somente leitura.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

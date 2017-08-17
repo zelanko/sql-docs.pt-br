@@ -1,29 +1,34 @@
 ---
-title: "PolyBase Connectivity Configuration (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PolyBase"
+title: "Configuração de conectividade do PolyBase (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 caps.latest.revision: 14
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b60b3ca22932fb4e48a4ae7d47240de073c5c930
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# PolyBase Connectivity Configuration (Transact-SQL)
+# <a name="polybase-connectivity-configuration-transact-sql"></a>Configuração de conectividade do PolyBase (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Exibe ou altera as definições de configurações globais para o PolyBase Hadoop e a conectividade do armazenamento de blobs do Azure.  
   
- ![Ícone de vínculo de tópico](../../database-engine/configure-windows/media/topic-link.png "Ícone de vínculo de tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,10 +48,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@configname=** ] **'***nome_da_opção***'**  
+ [ **@configname=** ] **'***option_name***'**  
  É o nome de uma opção de configuração. *option_name* é **varchar(35)**, com um padrão de NULL. Se não for especificado, a lista completa de opções será retornada.  
   
- [ **@configvalue=** ] **'***valor***'**  
+ [ **@configvalue=** ] **'***value***'**  
  É a nova definição de configuração. *value* é **int**, com um padrão NULL. O valor máximo depende da opção individual.  
   
  **'conectividade do hadoop'**  
@@ -70,9 +75,9 @@ RECONFIGURE
   
 -   Opção 5: Hortonworks HDP 2.0 no Linux  
   
--   Opção 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5 e 5.9 no Linux  
+-   Opção 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10 e 5.11 no Linux  
   
--   Opção 7: Hortonworks 2.1, 2.2, 2.3, 2.4, e 2.5 no Linux  
+-   Opção 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5 e 2.6 no Linux  
   
 -   Opção 7: Hortonworks 2.1, 2.2 e 2.3 no Windows Server  
   
@@ -86,7 +91,7 @@ RECONFIGURE
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-##  <a name="a-nameresultsetsa-result-sets"></a><a name="ResultSets"></a> Result Sets  
+##  <a name="ResultSets"></a> Result Sets  
  Quando é executado sem parâmetros, **sp_configure** retorna um conjunto de resultados com cinco colunas.  
   
 |Nome da coluna|Tipo de dados|Description|  
@@ -105,7 +110,7 @@ Após a execução de RECONFIGURE no [!INCLUDE[ssPDW](../../includes/sspdw-md.md
  RECONFIGURE não é permitido em uma transação explícita ou implícita.  
   
 ## <a name="permissions"></a>Permissões  
- Todos os usuários podem executar **sp_configure** sem parâmetros ou com o parâmetro @configname.  
+ Todos os usuários podem executar **sp_configure** sem parâmetros ou com o parâmetro @configname .  
   
  Exige a permissão no nível do servidor **ALTER SETTINGS** ou a associação à função de servidor fixa **sysadmin** para alterar um valor de configuração ou para executar RECONFIGURE.  
   
@@ -146,3 +151,4 @@ GO
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
   
+

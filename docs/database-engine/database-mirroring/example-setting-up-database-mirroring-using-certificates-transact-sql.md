@@ -1,27 +1,32 @@
 ---
-title: "Exemplo: Configurando espelhamento de banco de dados usando certificados (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espelhamento de banco de dados [SQL Server], implantação"
-  - "certificados [SQL Server], espelhamento de banco de dados"
-  - "autenticação [SQL Server], espelhamento de banco de dados"
-  - "espelhamento de banco de dados [SQL Server], segurança"
+title: 'Exemplo: configurar o espelhamento de banco de dados usando certificados (Transact-SQL) | Microsoft Docs'
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- certificates [SQL Server], database mirroring
+- authentication [SQL Server], database mirroring
+- database mirroring [SQL Server], security
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 caps.latest.revision: 50
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d6e25ad5bb119adb048ee80f89b1ff76baefb7bf
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Exemplo: Configurando espelhamento de banco de dados usando certificados (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemplo: Configurando espelhamento de banco de dados usando certificados (Transact-SQL)
   Este exemplo mostra todos os estágios necessários para criar uma sessão de espelhamento de banco de dados com uma autenticação baseada em certificado. Os exemplos deste tópico usam o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A menos que você possa garantir que sua rede está segura, recomendamos o uso de criptografia para conexões de espelhamento de banco de dados.  
   
  Ao copiar um certificado para outro sistema, use um método de cópia seguro. Seja extremamente cauteloso para manter todos os seus certificados em segurança.  
@@ -41,7 +46,7 @@ caps.handback.revision: 50
   
     2.  Configurar o Host_B para conexões de saída.  
   
-     Para obter informações sobre esse estágio de configuração do espelhamento de banco de dados, consulte [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md).  
+     Para obter informações sobre esse estágio de configuração do espelhamento de banco de dados, consulte [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
   
 2.  [Configurando conexões de saída](#ConfigureInboundConnections)  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 50
   
     2.  Configurar o Host_B para conexões de entrada.  
   
-     Para obter informações sobre esse estágio de configuração do espelhamento de banco de dados, consulte [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md).  
+     Para obter informações sobre esse estágio de configuração do espelhamento de banco de dados, consulte [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md).  
   
 3.  Criando o banco de dados espelho  
   
@@ -149,7 +154,7 @@ caps.handback.revision: 50
   
 5.  Usando qualquer método de cópia seguro, copie C:\HOST_ B_cert.cer para HOST_A.  
   
- Para obter mais informações, consulte [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md).  
+ Para obter mais informações, consulte [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
   
  [&#91;Início do Exemplo&#93;](#ExampleH2)  
   
@@ -223,11 +228,11 @@ caps.handback.revision: 50
 > [!IMPORTANT]  
 >  Se tiver a intenção de executar em modo de alta segurança com failover automático, você deve repetir as mesmas etapas de configuração para configurar a testemunha para conexões de saída e de entrada. Quando uma testemunha está envolvida, a configuração de conexões de entrada e de saída requer a configuração de logons e usuários para a testemunha nos dois parceiros, e vice-versa.  
   
- Para obter mais informações, consulte [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md).  
+ Para obter mais informações, consulte [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md).  
   
  [&#91;Início do Exemplo&#93;](#ExampleH2)  
   
-### Criando o banco de dados espelho  
+### <a name="creating-the-mirror-database"></a>Criando o banco de dados espelho  
  Para obter informações sobre como criar um banco de dados espelho, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 ###  <a name="ConfigureMirroringPartners"></a> Configurando os parceiros de espelhamento  
@@ -260,7 +265,7 @@ caps.handback.revision: 50
     ```  
   
     > [!NOTE]  
-    >  Se desejar executar em modo de alta segurança com failover automático, deixe a segurança da transação configurada como FULL (a configuração padrão) e adicione a testemunha o mais cedo possível após executar a segunda instrução SET PARTNER **'***partner_server***'**. Observe que a testemunha deve ser configurada primeiro para conexões de saída e de entrada.  
+    >  Se desejar executar em modo de alta segurança com failover automático, deixe a segurança da transação configurada como FULL (a configuração padrão) e adicione a testemunha o mais cedo possível após executar a segunda instrução SET PARTNER **'***partner_server***'** . Observe que a testemunha deve ser configurada primeiro para conexões de saída e de entrada.  
   
  [&#91;Início do Exemplo&#93;](#ExampleH2)  
   
@@ -268,22 +273,23 @@ caps.handback.revision: 50
   
 -   [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
--   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)  
+-   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)  
+-   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
 -   [Gerenciamento de logons e trabalhos após a troca de funções &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
--   [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md) (SQL Server)  
+-   [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md) (SQL Server)  
   
 -   [Solução de problemas de configuração de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
-## Consulte também  
- [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
- [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
+## <a name="see-also"></a>Consulte também  
+ [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+ [Especificar um endereço de rede do servidor &#40;espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Usar certificados para um ponto de extremidade de espelhamento de banco de dados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
+

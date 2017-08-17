@@ -1,29 +1,34 @@
 ---
-title: "Retomar um banco de dados de disponibilidade (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.resumedatamove.f1"
-helpviewer_keywords: 
-  - "Grupos de Disponibilidade [SQL Server], retomando um banco de dados"
-  - "bancos de dados secundários [SQL Server], no grupo de disponibilidade"
-  - "bancos de dados primários [SQL Server], no grupo de disponibilidade"
-  - "Grupos de disponibilidade [SQL Server], bancos de dados"
+title: Retomar um banco de dados de disponibilidade (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.resumedatamove.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], resuming a database
+- secondary databases [SQL Server], in availability group
+- primary databases [SQL Server], in availability group
+- Availability Groups [SQL Server], databases
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6fb24ab051691dc582c3b2e454fe60478d074b9d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Retomar um banco de dados de disponibilidade (SQL Server)
+# <a name="resume-an-availability-database-sql-server"></a>Retomar um banco de dados de disponibilidade (SQL Server)
   Você pode retomar um banco de dados de disponibilidade suspenso no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. A retomada de um banco de dados suspenso coloca o banco de dados no estado SYNCHRONIZING. A retomada do banco de dados primário também retoma todos os bancos de dados secundários que foram suspensos devido à suspensão do banco de dados primário. Se um banco de dados secundário foi suspenso localmente, na instância de servidor que hospeda a réplica secundária, o banco de dados secundário deverá ser retomado localmente. Quando um determinado banco de dados secundário e o banco de dados primário correspondente estiverem no estado SYNCHRONIZING, a sincronização de dados é retomada no banco de dados secundário.  
   
 > [!NOTE]  
@@ -47,7 +52,7 @@ caps.handback.revision: 38
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-### Limitações e restrições  
+### <a name="limitations-and-restrictions"></a>Limitações e restrições  
  O comando RESUME retorna assim que é aceito pela réplica que hospeda o banco de dados de destino, mas, na verdade, a retomada do banco de dados ocorre de forma assíncrona.  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
@@ -70,11 +75,11 @@ caps.handback.revision: 38
   
 1.  No Pesquisador de Objetos, conecte-se à instância de servidor que hospeda a réplica de disponibilidade na qual você deseja retomar o banco de dados e expanda a árvore de servidores.  
   
-2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
+2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
   
 3.  Expanda o grupo de disponibilidade.  
   
-4.  Expanda o nó **Bancos de dados de Disponibilidade**, clique com o botão direito do mouse no banco de dados e clique em **Retomar a Movimentação de Dados**.  
+4.  Expanda o nó **Bancos de dados de Disponibilidade** , clique com o botão direito do mouse no banco de dados e clique em **Retomar a Movimentação de Dados**.  
   
 5.  Na caixa de diálogo **Retomar a Movimentação de Dados** , clique em **OK**.  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 38
   
 1.  Conecte-se à instância do servidor que hospeda a réplica secundária, cujo banco de dados você deseja retomar.  
   
-2.  Retome o banco de dados secundário usando a seguinte instrução [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md):  
+2.  Retome o banco de dados secundário usando a seguinte instrução [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md):  
   
      ALTER DATABASE *database_name* SET HADR RESUME  
   
@@ -115,7 +120,8 @@ caps.handback.revision: 38
   
 -   [Suspender um banco de dados de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

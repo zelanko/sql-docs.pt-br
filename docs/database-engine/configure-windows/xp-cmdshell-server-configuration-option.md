@@ -1,29 +1,34 @@
 ---
-title: "Op&#231;&#227;o de configura&#231;&#227;o de servidor xp_cmdshell | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "xp_cmdshell"
+title: "Opção de configuração de servidor xp_cmdshell | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- xp_cmdshell
 ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b32eef170d0834b44932f753075bbd2df67762a2
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Op&#231;&#227;o de configura&#231;&#227;o de servidor xp_cmdshell
+# <a name="xpcmdshell-server-configuration-option"></a>Opção de configuração de servidor xp_cmdshell
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  A opção **xp_cmdshell** é uma opção de configuração de servidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite aos administradores de sistema controlar se o procedimento armazenado estendido **xp_cmdshell** pode ser executado em um sistema. Por padrão, a opção **xp_cmdshell** está desabilitada em novas instalações. Para habilitá-la, use o Gerenciamento Baseado em Políticas ou execute o procedimento armazenado do sistema **sp_configure**, como mostra o seguinte exemplo de código:  
+  A opção **xp_cmdshell** é uma opção de configuração de servidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite aos administradores de sistema controlar se o procedimento armazenado estendido **xp_cmdshell** pode ser executado em um sistema. Por padrão, a opção **xp_cmdshell** está desabilitada em novas instalações. Para habilitá-la, use o Gerenciamento Baseado em Políticas ou execute o procedimento armazenado do sistema **sp_configure** , como mostra o seguinte exemplo de código:  
   
 ```  
 -- To allow advanced options to be changed.  
@@ -40,8 +45,9 @@ RECONFIGURE;
 GO  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
+

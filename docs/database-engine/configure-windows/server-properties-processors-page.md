@@ -1,27 +1,32 @@
 ---
-title: "Propriedades do Servidor (p&#225;gina Processadores) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.processor.f1"
+title: "Propriedades do servidor (página Processadores) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.processor.f1
 ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b7667d7be2910280587e548eb2548e3224221d6
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriedades do Servidor (p&#225;gina Processadores)
+# <a name="server-properties---processors-page"></a>Propriedades do servidor – página Processadores
   Use esta página para exibir ou modificar suas opções de processador. As configurações de afinidade do processador só são habilitadas quando há mais de um processador instalado.  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Afinidade do Processador**  
  Atribui processadores a threads específicos para eliminar recargas do processador e reduzir a migração de thread pelos processadores. Para obter mais informações, veja [Opção affinity mask de configuração de servidor](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md).  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 25
  Especifica se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser executado em uma prioridade de agendamento do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows mais alta que outros processos no mesmo computador. Para obter mais informações, consulte [Configure the priority boost Server Configuration Option](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md).  
   
  **Usar fibras do Windows (lightweight pooling)**  
- Use fibras do Windows em vez de threads no serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Observe que isso só está disponível no Windows 2003 Server Edition. Para saber mais, veja [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md).  
+ Use fibras do Windows em vez de threads no serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Observe que isso só está disponível no Windows 2003 Server Edition. Para saber mais, veja [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md).  
   
  **Valores Configurados**  
  Exibe os valores configurados para as opções nesse painel. Se você alterar esses valores, clique em **Executando Valores** para verificar se as alterações entraram em vigor. Se não houver nenhum, a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverá ser reiniciada.  
@@ -49,7 +54,7 @@ caps.handback.revision: 25
  **Executando Valores**  
  Exiba os valores que estão sendo executados para as opções neste painel. Esses valores são somente leitura.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "Alterar o modo de disponibilidade de uma r&#233;plica de disponibilidade (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidade [SQL Server], implantando"
-  - "Grupos de disponibilidade [SQL Server], configurando"
-  - "Grupos de Disponibilidade [SQL Server], módulos de disponibilidade"
+title: "Alterar o modo de disponibilidade de uma réplica de disponibilidade (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], deploying
+- Availability Groups [SQL Server], configuring
+- Availability Groups [SQL Server], availability modes
 ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3a0d0596dea739f34b9ff94b2f0691e6ae70dc70
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Alterar o modo de disponibilidade de uma r&#233;plica de disponibilidade (SQL Server)
-  Este tópico descreve como alterar o modo de disponibilidade de uma réplica de disponibilidade em um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell. O modo de disponibilidade é uma propriedade de réplica que controla se a réplica confirma de forma assíncrona ou síncrona. O *modo de confirmação assíncrona* maximiza o desempenho às custas da alta disponibilidade e dá suporte apenas ao failover manual forçado (com possível perda de dados), que costuma ser chamado de *failover forçado*. O *modo de confirmação síncrona* enfatiza a alta disponibilidade sobre o desempenho e, quando a réplica secundária é sincronizada, dá suporte ao failover manual e, opcionalmente, ao failover automático.  
+# <a name="change-the-availability-mode-of-an-availability-replica-sql-server"></a>Alterar o modo de disponibilidade de uma réplica de disponibilidade (SQL Server)
+  Este tópico descreve como alterar o modo de disponibilidade de uma réplica de disponibilidade em um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell. O modo de disponibilidade é uma propriedade de réplica que controla se a réplica confirma de forma assíncrona ou síncrona. O*modo de confirmação assíncrona* maximiza o desempenho às custas da alta disponibilidade e dá suporte apenas ao failover manual forçado (com possível perda de dados), que costuma ser chamado de *failover forçado*. O*modo de confirmação síncrona* enfatiza a alta disponibilidade sobre o desempenho e, quando a réplica secundária é sincronizada, dá suporte ao failover manual e, opcionalmente, ao failover automático.  
   
 -   **Antes de começar:**  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 36
   
 1.  No Pesquisador de Objetos, conecte-se à instância de servidor que hospeda a réplica primária e expanda a árvore de servidores.  
   
-2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
+2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
   
 3.  Clique no grupo de disponibilidade cuja réplica você deseja alterar.  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 36
     > [!NOTE]  
     >  FAILOVER_MODE = AUTOMATIC terá suporte apenas se você também especificar AVAILABILITY_MODE = SYNCHRONOUS_COMMIT.  
   
-     O exemplo a seguir, inserido na réplica primária do grupo de disponibilidade `AccountsAG`, altera os modos de disponibilidade e de failover para confirmação síncrona e failover automático, respectivamente, para a réplica hospedada pela instância de servidor `INSTANCE09`.  
+     O exemplo a seguir, inserido na réplica primária do grupo de disponibilidade `AccountsAG` , altera os modos de disponibilidade e de failover para confirmação síncrona e failover automático, respectivamente, para a réplica hospedada pela instância de servidor `INSTANCE09` .  
   
     ```  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 36
   
 1.  Altere o diretório (**cd**) para a instância de servidor que hospeda a réplica primária.  
   
-2.  Use o cmdlet **Set-SqlAvailabilityReplica** com o parâmetro **AvailabilityMode** e, opcionalmente, o parâmetro **FailoverMode**.  
+2.  Use o cmdlet **Set-SqlAvailabilityReplica** com o parâmetro **AvailabilityMode** e, opcionalmente, o parâmetro **FailoverMode** .  
   
      Por exemplo, o comando a seguir modifica a réplica `MyReplica` no grupo de disponibilidade `MyAg` para usar o modo de disponibilidade de confirmação síncrona e para oferecer suporte ao failover automático.  
   
@@ -114,9 +119,10 @@ caps.handback.revision: 36
   
 -   [Provedor do SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidade &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
- [Failover e modos de failover &#40;grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)  
+ [Failover e modos de failover &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)  
   
   
+

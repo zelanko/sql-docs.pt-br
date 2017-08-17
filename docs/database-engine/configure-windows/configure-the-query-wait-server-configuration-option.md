@@ -1,26 +1,31 @@
 ---
-title: "Configurar a op&#231;&#227;o de configura&#231;&#227;o de servidor query wait | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "consultas [SQL Server], atingindo tempo limite"
-  - "tempo [SQL Server], tempo de espera da consulta"
-  - "opção query wait [SQL Server]"
+title: "Configurar a opção de configuração de servidor query wait | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [SQL Server], timing out
+- time [SQL Server], query wait time
+- query wait option [SQL Server]
 ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01ad4ae8b2d274dcb7f510f4f91b9830aa478a0f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar a op&#231;&#227;o de configura&#231;&#227;o de servidor query wait
+# <a name="configure-the-query-wait-server-configuration-option"></a>Configurar a opção de configuração de servidor query wait
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como configurar a opção de configuração de servidor **query wait** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. As consultas que solicitam muita memória (como as que envolvem classificação e hash) são enfileiradas quando não há memória disponível executar a consulta. A opção **espera de consulta** especifica o tempo em segundos (de 0 a 2147483647) que uma consulta deve esperar por recursos antes de o tempo limite ser excedido. O valor padrão dessa opção é -1. Isso significa que o tempo limite é calculado como 25 vezes o custo de consulta estimado.  
@@ -57,7 +62,7 @@ caps.handback.revision: 26
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para configurar a opção query wait  
+#### <a name="to-configure-the-query-wait-option"></a>Para configurar a opção query wait  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor e selecione **Propriedades**.  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 26
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para configurar a opção query wait  
+#### <a name="to-configure-the-query-wait-option"></a>Para configurar a opção query wait  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -91,12 +96,13 @@ GO
   
  Para obter mais informações, consulte [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção query wait  
+##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção query wait  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

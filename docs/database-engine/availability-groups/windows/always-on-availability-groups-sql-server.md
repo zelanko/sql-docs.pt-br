@@ -1,53 +1,46 @@
 ---
-title: "Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidade [SQL Server], sobre"
-  - "réplicas secundárias, consulte Grupos de disponibilidade [SQL Server]"
-  - "disponibilidade [SQL Server]"
-  - "AlwaysOn [SQL Server], consulte Grupos de disponibilidade [SQL Server]"
-  - "Grupos de Disponibilidade [SQL Server]"
+title: Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], about
+- secondary replicas, see Availability Groups [SQL Server]
+- availability [SQL Server]
+- AlwaysOn [SQL Server], see Availability Groups [SQL Server]
+- Availability Groups [SQL Server]
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 519a66344458046238aa4c8ce1b901fe84bacc7f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Grupos de Disponibilidade AlwaysOn (SQL Server)
+# <a name="always-on-availability-groups-sql-server"></a>Grupos de Disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   O recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] é uma solução de alta disponibilidade e de recuperação de desastres que fornece uma alternativa em nível corporativo para espelhamento de banco de dados. Apresentados no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], os [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] maximizam a disponibilidade de um conjunto de bancos de dados de usuário para uma empresa. Um *grupo de disponibilidade* dá suporte a um ambiente de failover para um conjunto discreto de bancos de dados de usuário, conhecidos como *bancos de dados de disponibilidade*, que fazem failover juntos. Um grupo de disponibilidade dá suporte a um conjunto de bancos de dados primários de leitura/gravação e a um dos oito conjuntos de bancos de dados secundários correspondentes. Opcionalmente, é possível tornar disponíveis os bancos de dados secundários para acesso somente leitura e/ou algumas operações de backup.  
   
  Um grupo de disponibilidade faz failover no nível de uma réplica de disponibilidade. Os failovers não são provocados por problemas de banco de dados, como um banco de dados que se torna suspeito devido à perda de um arquivo de dados, à exclusão de um banco de dados ou à corrupção de um log de transações.  
   
- **Neste tópico:**  
-  
--   [Benefícios](#Benefits)  
-  
--   [Termos e definições](#TermsAndDefinitions)  
-  
--   [Interoperabilidade e coexistência com outros recursos de mecanismo de banco de dados](#Interoperability)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
-  
--   [Conteúdo relacionado](#RelatedContent)  
-  
 ##  <a name="Benefits"></a> Benefícios  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornecem um conjunto diversificado de opções que melhoram a disponibilidade do banco de dados e habilitam o uso aprimorado de recursos. Os principais componentes são os seguintes:  
   
--   Permite até nove réplicas de disponibilidade. Uma *réplica de disponibilidade* é uma instanciação de um grupo de disponibilidade que é hospedado por uma instância específica do SQL Server e que mantém uma cópia local de cada banco de dados de disponibilidade pertencente ao grupo de disponibilidade. Cada grupo de disponibilidade suporta uma réplica primária e até oito réplicas secundárias. Para obter mais informações, consulte [Visão geral de grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
+-   Permite até nove réplicas de disponibilidade. Uma *réplica de disponibilidade* é uma instanciação de um grupo de disponibilidade que é hospedado por uma instância específica do SQL Server e que mantém uma cópia local de cada banco de dados de disponibilidade pertencente ao grupo de disponibilidade. Cada grupo de disponibilidade suporta uma réplica primária e até oito réplicas secundárias. Para obter mais informações, consulte [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
     > [!IMPORTANT]  
-    >  Cada réplica de disponibilidade deve residir em um nó diferente de um único cluster do WSFC (Windows Server Failover Clustering). Para obter mais informações sobre pré-requisitos, restrições e recomendações para grupos de disponibilidade, veja [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+    >  Cada réplica de disponibilidade deve residir em um nó diferente de um único cluster do WSFC (Windows Server Failover Clustering). Para obter mais informações sobre pré-requisitos, restrições e recomendações para grupos de disponibilidade, veja [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Dá suporte para modos de disponibilidade alternativos, como:  
   
@@ -67,7 +60,7 @@ caps.handback.revision: 34
   
      O uso de recursos secundários ativos melhora a eficiência de TI e reduz o custo devido à melhor utilização de recurso de hardware secundário. Além disso, descarregar aplicativos de intenção de leitura e trabalhos de backup para réplicas secundárias ajuda a melhorar o desempenho na réplica primária.  
   
--   Dá suporte a um ouvinte de grupo de disponibilidade para cada grupo de disponibilidade. Um *ouvinte do grupo de disponibilidade* é um nome do servidor ao qual os clientes podem se conectar para acessar um banco de dados em uma réplica primária ou secundária de um grupo de disponibilidade AlwaysOn. Os ouvintes de grupo de disponibilidade direcionam conexões de entrada para a réplica primária ou para uma réplica secundária somente leitura. O ouvinte fornece o failover rápido de aplicativo depois de um failover de grupo de disponibilidade. Para obter mais informações, consulte [Ouvintes de grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+-   Dá suporte a um ouvinte de grupo de disponibilidade para cada grupo de disponibilidade. Um *ouvinte do grupo de disponibilidade* é um nome do servidor ao qual os clientes podem se conectar para acessar um banco de dados em uma réplica primária ou secundária de um grupo de disponibilidade AlwaysOn. Os ouvintes de grupo de disponibilidade direcionam conexões de entrada para a réplica primária ou para uma réplica secundária somente leitura. O ouvinte fornece o failover rápido de aplicativo depois de um failover de grupo de disponibilidade. Para obter mais informações, consulte [Ouvintes de grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
 -   Dá suporte a uma política de failover flexível para proporcionar maior controle sobre o failover de disponibilidade-grupo. Para obter mais informações, consulte [Failover e modos de failover &#40;grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
@@ -77,13 +70,13 @@ caps.handback.revision: 34
   
 -   Fornece um conjunto integrado de ferramentas para simplificar a implantação e o gerenciamento de grupos de disponibilidade, incluindo:  
   
-    -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] para criar e gerenciar grupos de disponibilidade. Para obter mais informações, confira [Visão geral de instruções Transact-SQL para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md).  
+    -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] para criar e gerenciar grupos de disponibilidade. Para obter mais informações, consulte [Visão geral de instruções Transact-SQL para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md).  
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , como a seguir:  
   
         -   O [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] cria e configura um grupo de disponibilidade. Em alguns ambientes, este assistente também pode preparar automaticamente os bancos de dados secundários e iniciar a sincronização de dados para cada um deles. Para obter mais informações, veja [Usar a caixa de diálogo Novo Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md).  
   
-        -   O [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] adiciona um ou mais bancos de dados primários a um grupo de disponibilidade existente. Em alguns ambientes, este assistente também pode preparar automaticamente os bancos de dados secundários e iniciar a sincronização de dados para cada um deles. Para obter mais informações, veja [Usar o Assistente para Adicionar Banco de Dados a Grupo de Disponibilidade (SQL Server)](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md).  
+        -   O [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] adiciona um ou mais bancos de dados primários a um grupo de disponibilidade existente. Em alguns ambientes, este assistente também pode preparar automaticamente os bancos de dados secundários e iniciar a sincronização de dados para cada um deles. Para obter mais informações, veja [Usar o Assistente para Adicionar Banco de Dados a Grupo de Disponibilidade (SQL Server)](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md).  
   
         -   O [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] adiciona uma ou mais réplicas secundárias a um grupo de disponibilidade existente. Em alguns ambientes, este assistente também pode preparar automaticamente os bancos de dados secundários e iniciar a sincronização de dados para cada um deles. Para obter mais informações, veja [Usar o Assistente para Adicionar Réplica ao Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md).  
   
@@ -91,9 +84,9 @@ caps.handback.revision: 34
   
     -   O [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] monitora grupos de disponibilidade AlwaysOn, réplicas de disponibilidade e bancos de dados de disponibilidade e avalia os resultados para políticas AlwaysOn. Para obter mais informações, veja [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md).  
   
-    -   O painel Detalhes do Pesquisador de Objetos exibe informações básicas sobre grupos de disponibilidade existentes. Para obter mais informações, veja [Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md).  
+    -   O painel Detalhes do Pesquisador de Objetos exibe informações básicas sobre grupos de disponibilidade existentes. Para obter mais informações, veja [Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md).  
   
-    -   Cmdlets do PowerShell. Para obter mais informações, confira [Visão geral de cmdlets do PowerShell para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
+    -   Cmdlets do PowerShell. Para obter mais informações, consulte [Visão geral de cmdlets do PowerShell para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="TermsAndDefinitions"></a> Termos e definições  
  grupo de disponibilidade  
@@ -117,11 +110,11 @@ caps.handback.revision: 34
  réplica secundária  
  Uma réplica de disponibilidade que mantém uma cópia secundária de cada banco de dados de disponibilidade e serve como destinos potenciais de failover para o grupo de disponibilidade. Opcionalmente, uma réplica secundária pode incluir o suporte ao acesso somente leitura para que bancos de dados secundários possam oferecer suporte à criação de backups em bancos de dados secundários.  
   
- ouvinte de grupo de disponibilidade  
+ ouvinte do grupo de disponibilidade  
  Um nome do servidor ao qual os clientes podem se conectar para acessar um banco de dados em uma réplica primária ou secundária de um grupo de disponibilidade AlwaysOn. Os ouvintes de grupo de disponibilidade direcionam conexões de entrada para a réplica primária ou para uma réplica secundária somente leitura.  
   
 > [!NOTE]  
->  Para obter mais informações, consulte [Visão geral de grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
+>  Para obter mais informações, consulte [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="Interoperability"></a> Interoperabilidade e coexistência com outros recursos de mecanismo de banco de dados  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] podem ser usados com os seguintes recursos ou componentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
@@ -148,7 +141,7 @@ caps.handback.revision: 34
   
 -   [Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   
--   [SQL Server Agent](../../../ssms/agent/sql-server-agent.md)  
+-   [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)  
   
 -   [Reporting Services](../../../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)  
   
@@ -163,7 +156,7 @@ caps.handback.revision: 34
   
 -   **Blogs:**  
   
-     [Blogs da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](http://blogs.msdn.com/b/sqlAlways%20On/)  
+     [Blogs da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Blogs dos engenheiros do CSS SQL Server](http://blogs.msdn.com/b/psssql/)  
   
@@ -181,14 +174,15 @@ caps.handback.revision: 34
   
      [White papers da equipe de consultoria do cliente do SQL Server](http://sqlcat.com/)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
- [Configuração de uma instância de servidor para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)   
+ [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Configuração de uma instância de servidor para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)   
  [Criação e configuração de grupos de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Administração de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
  [Monitoramento de grupos de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
  [Visão geral de instruções Transact-SQL para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
- [Visão geral de cmdlets do PowerShell para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+ [Visão geral de cmdlets do PowerShell para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   
+

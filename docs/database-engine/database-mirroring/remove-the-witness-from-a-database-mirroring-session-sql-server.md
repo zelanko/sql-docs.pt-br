@@ -1,26 +1,31 @@
 ---
-title: "Remover a testemunha de uma sess&#227;o de espelhamento de banco de dados (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "testemunha [SQL Server], desativando"
-  - "testemunha [SQL Server], removendo"
-  - "espelhamento de banco de dados [SQL Server], testemunha"
+title: "Remover a testemunha de uma sessão de espelhamento de banco de dados (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- witness [SQL Server], turning off
+- witness [SQL Server], removing
+- database mirroring [SQL Server], witness
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f46a7668500b1a17b531c241e1e023cfb91d7f3f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Remover a testemunha de uma sess&#227;o de espelhamento de banco de dados (SQL Server)
+# <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Remover a testemunha de uma sessão de espelhamento de banco de dados (SQL Server)
   Este tópico descreve como remover uma testemunha de uma sessão de espelhamento de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Em qualquer momento durante uma sessão de espelhamento de banco de dados, o proprietário do banco de dados pode desativar a testemunha da sessão de espelhamento de banco de dados.  
   
  **Neste tópico**  
@@ -46,13 +51,13 @@ caps.handback.revision: 39
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para remover a testemunha  
+#### <a name="to-remove-the-witness"></a>Para remover a testemunha  
   
 1.  Conecte-se à instância do servidor principal e, no painel **Pesquisador de Objetos** , clique no nome do servidor para expandir a árvore do servidor.  
   
 2.  Expanda **Bancos de Dados**e selecione o banco de dados cuja testemunha deseja remover.  
   
-3.  Clique com o botão direito do mouse no banco de dados, selecione **Tarefas** e clique em **Espelhar**. Isso abre a página **Espelhamento** da caixa de diálogo **Propriedades do Banco de Dados** .  
+3.  Clique com o botão direito do mouse no banco de dados, selecione **Tarefas**e clique em **Espelhar**. Isso abre a página **Espelhamento** da caixa de diálogo **Propriedades do Banco de Dados** .  
   
 4.  Para remover o servidor testemunha, exclua seu endereço de rede do campo **Testemunha** .  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 39
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para remover a testemunha  
+#### <a name="to-remove-the-witness"></a>Para remover a testemunha  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] em qualquer instância de servidor de parceiro.  
   
@@ -69,25 +74,25 @@ caps.handback.revision: 39
   
 3.  Emita a seguinte instrução:  
   
-     [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md) *database_name* SET WITNESS OFF  
+     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *database_name* SET WITNESS OFF  
   
      em que *database_name* é o nome do banco de dados espelhado.  
   
-     O exemplo a seguir remove a testemunha do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+     O exemplo a seguir remove a testemunha do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
 ##  <a name="FollowUp"></a> Acompanhamento: depois de remover a testemunha  
- A desativação da testemunha altera o [modo operacional](../../database-engine/database-mirroring/database-mirroring-operating-modes.md) conforme a configuração de segurança da transação:  
+ A desativação da testemunha altera o [modo operacional](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)conforme a configuração de segurança da transação:  
   
 -   Se segurança de transação estiver definida como FULL (o padrão), a sessão usará o modo síncrono de alta proteção sem failover automático.  
   
 -   Se a segurança de transação estiver definida como OFF, a sessão irá operar de modo assíncrono (em modo de alto desempenho) sem exigir quorum. Sempre que a segurança de transação estiver desativada, é recomendável desativar também a testemunha.  
   
 > [!TIP]  
->  A configuração de segurança de transação do banco de dados é registrada em cada parceiro na exibição de catálogo [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) nas colunas **mirroring_safety_level** e **mirroring_safety_level_desc**.  
+>  A configuração de segurança de transação do banco de dados é registrada em cada parceiro na exibição de catálogo [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) nas colunas **mirroring_safety_level** e **mirroring_safety_level_desc** .  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
@@ -95,8 +100,8 @@ caps.handback.revision: 39
   
 -   [Adicionar ou substituir uma testemunha de espelhamento de banco de dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-## Consulte também  
- [Espelhamento de banco de dados ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Consulte também  
+ [Espelhamento de banco de dados ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [Alterar a segurança da transação em uma sessão de espelhamento de banco de dados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
  [Adicionar uma testemunha de espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
  [Testemunha de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-witness.md)  

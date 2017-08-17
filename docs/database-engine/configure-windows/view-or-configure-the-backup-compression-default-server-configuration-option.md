@@ -1,25 +1,30 @@
 ---
-title: "Exibir ou configurar a op&#231;&#227;o de configura&#231;&#227;o de servidor backup compression default | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Management Studio [SQL Server], opção padrão de compactação de backup"
-  - "compactação de backup [SQL Server], opção padrão de compactação de backup"
+title: "Exibir ou configurar a opção de configuração de servidor backup compression default | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Management Studio [SQL Server], backup compression default option
+- backup compression [SQL Server], backup compression default Option
 ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a6cbf2bc726dce79d1076ff7b2c1f2606c9b951e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Exibir ou configurar a op&#231;&#227;o de configura&#231;&#227;o de servidor backup compression default
+# <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>Exibir ou configurar a opção de configuração de servidor backup compression default
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como exibir ou configurar a opção de configuração de servidor **padrão de compactação de backup** em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção de **padrão de compactação de backup** determina se a instância de servidor cria backups compactados por padrão. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado, a opção de **padrão de compactação de backup** está desativada.  
@@ -46,9 +51,9 @@ caps.handback.revision: 30
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
--   A compactação de backup não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   A compactação de backup não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
--   Por padrão, a compactação aumenta consideravelmente o uso da CPU, e o consumo adicional da CPU por parte do processo de compactação pode afetar negativamente as operações simultâneas. Portanto, é recomendável criar backups compactados de baixa prioridade em uma sessão cujo uso da CPU é limitado pelo [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md). Para obter mais informações, consulte [Usar o Administrador de Recursos para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
+-   Por padrão, a compactação aumenta consideravelmente o uso da CPU, e o consumo adicional da CPU por parte do processo de compactação pode afetar negativamente as operações simultâneas. Portanto, é recomendável criar backups compactados de baixa prioridade em uma sessão cujo uso da CPU é limitado pelo [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md). Para obter mais informações, consulte [Usar o Resource Governor para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
   
 ###  <a name="Recommendations"></a> Recomendações  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para exibir ou configurar a opção padrão de compactação de backup  
+#### <a name="to-view-or-configure-the-backup-compression-default-option"></a>Para exibir ou configurar a opção padrão de compactação de backup  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor e selecione **Propriedades**.  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para exibir a opção padrão de compactação de backup  
+#### <a name="to-view-the-backup-compression-default-option"></a>Para exibir a opção padrão de compactação de backup  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -94,7 +99,7 @@ WHERE name = 'backup compression default' ;
 GO  
 ```  
   
-#### Para configurar a opção padrão de compactação de backup  
+#### <a name="to-configure-the-backup-compression-default-option"></a>Para configurar a opção padrão de compactação de backup  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -113,7 +118,7 @@ GO
 ##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção backup compression default  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
@@ -121,3 +126,5 @@ GO
  [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   
+
+

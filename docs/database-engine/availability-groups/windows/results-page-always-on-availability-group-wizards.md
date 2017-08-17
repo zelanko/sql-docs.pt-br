@@ -1,30 +1,35 @@
 ---
-title: "P&#225;gina de Resultados (Assistentes Grupo de Disponibilidade AlwaysOn) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.failoverwizard.results.f1"
-  - "sql13.swb.newagwizard.results.f1"
-  - "sql13.swb.addreplicawizard.results.f1"
-  - "sql13.swb.adddatabasewizard.results.f1"
+title: "Página Resultados (Assistentes do Grupo de Disponibilidade AlwaysOn) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.failoverwizard.results.f1
+- sql13.swb.newagwizard.results.f1
+- sql13.swb.addreplicawizard.results.f1
+- sql13.swb.adddatabasewizard.results.f1
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 2d5e0af523fbe56e4b3715e6e157436d80ee268c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# P&#225;gina de Resultados (Assistentes Grupo de Disponibilidade AlwaysOn)
+# <a name="results-page-always-on-availability-group-wizards"></a>Página de Resultados (Assistentes Grupo de Disponibilidade AlwaysOn)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Este tópico da ajuda descreve as opções da página **Resultados**. Este tópico aplica-se ao [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] e ao [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use esta página para exibir os resultados do assistente.  
+  Este tópico da ajuda descreve as opções da página **Resultados** . Este tópico aplica-se ao [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]e ao [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use esta página para exibir os resultados do assistente.  
   
 ##  <a name="PageOptions"></a> Opções da página Resultados  
  A grade **Resumo** contém as seguintes colunas:  
@@ -46,11 +51,12 @@ caps.handback.revision: 9
   
 -   [Usar o Assistente para Adicionar Réplica ao Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Usar o Assistente para Adicionar Banco de Dados ao Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usar o Assistente para Adicionar Banco de Dados ao Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
 -   [Usar o Assistente de Grupo de Disponibilidade de Failover &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

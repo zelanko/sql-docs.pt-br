@@ -1,24 +1,29 @@
 ---
-title: "Configurar a op&#231;&#227;o de configura&#231;&#227;o de servidor remote login timeout | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "opção remote login timeout"
+title: "Configurar a opção de configuração de servidor remote login timeout | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- remote login timeout option
 ms.assetid: 077adebe-0e3f-42a5-a75e-5e6d04847e2b
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9581ea300b05cd811cfddd73d04e24e9cac65bf4
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar a op&#231;&#227;o de configura&#231;&#227;o de servidor remote login timeout
+# <a name="configure-the-remote-login-timeout-server-configuration-option"></a>Configurar a opção de configuração de servidor remote login timeout
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como configurar a opção de configuração de servidor **remote login timeout** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **remote login timeout** especifica quantos segundos será necessário esperar antes de retornar de uma tentativa malsucedida para fazer logon em um servidor remoto. Por exemplo, se você está tentando fazer logon em um servidor remoto e esse servidor está inoperante, o **remote login timeout** ajuda a assegurar que não seja necessário aguardar indefinidamente antes do computador cessar as tentativas de fazer logon. O valor padrão desta opção é 10 segundos. Um valor 0 permite uma espera infinita.  
@@ -55,7 +60,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para configurar a opção remote login timeout  
+#### <a name="to-configure-the-remote-login-timeout-option"></a>Para configurar a opção remote login timeout  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor e selecione **Propriedades**.  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para configurar a opção remote login timeout  
+#### <a name="to-configure-the-remote-login-timeout-option"></a>Para configurar a opção remote login timeout  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -90,9 +95,10 @@ GO
 ##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção remote login timeout  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

@@ -1,31 +1,36 @@
 ---
-title: "Hist&#243;rico do espelhamento de banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.databasemirroringhistory.f1"
+title: "Histórico de espelhamento de banco de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.databasemirroringhistory.f1
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 caps.latest.revision: 25
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 24f7e8d76bc04e82c4403139c575c6c736648c48
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Hist&#243;rico do espelhamento de banco de dados
+# <a name="database-mirroring-history"></a>Histórico do espelhamento de banco de dados
   Use essa caixa de diálogo para exibir o histórico de status de espelhamento de um banco de dados espelho em uma instância de servidor especificada.  
   
  **Para usar o SQL Server Management Studio para monitorar o espelhamento de banco de dados**  
   
 -   [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Instância de servidor**  
  Nome da instância de servidor a partir da qual o histórico está sendo informado.  
   
@@ -72,17 +77,17 @@ caps.handback.revision: 25
 |**Conexão de Testemunha**|Estado da conexão de testemunha na sessão de espelhamento de banco de dados, Conectado ou Desconectado. Se não houver nenhum servidor testemunha, o valor será NULL.|  
 |**Log Não Enviado**|Tamanho, em quilobytes (KB), do log não enviado na fila de envio da instância de servidor principal.|  
 |**Tempo para Envio**|Tempo aproximado exigido pela instância de servidor principal para enviar o log atualmente na fila de envio para a instância de servidor espelho (a *taxa de envio*). Como a taxa de transações de entrada pode variar significativamente, a hora para enviar o log é uma estimativa. A taxa de envio, porém, pode ser útil para estimar aproximadamente a hora exigida para um failover manual.|  
-|**Taxa de Envio**|Taxa em que as transações estão sendo enviadas à instância de servidor espelho, em KB por segundo.|  
-|**Nova Taxa de Transação**|Taxa em que as transações de entrada estão sendo inseridas no log do servidor principal, em KB por segundo. Para determinar se o espelhamento está atrasado, acompanhando ou atualizado, compare esse valor ao valor do **Tempo para Envio**.|  
+|**Send Rate**|Taxa em que as transações estão sendo enviadas à instância de servidor espelho, em KB por segundo.|  
+|**Nova Taxa de Transação**|Taxa em que as transações de entrada estão sendo inseridas no log do servidor principal, em KB por segundo. Para determinar se o espelhamento está atrasado, acompanhando ou atualizado, compare esse valor ao valor do **Tempo para Envio** .|  
 |**Transação Não Enviada Mais Antiga**|Idade da transação não enviada mais antiga na fila de envio. A idade dessa transação indica quantos minutos de transações ainda não foram enviados à instância de servidor espelho. Esse valor ajuda a medir o potencial de perda de dados em termos de tempo.|  
 |**Log Não Restaurado**|A quantidade de log em espera na fila de restauração, em quilobytes (KB).|  
 |**Tempo para Recuperar**|Número aproximado de minutos exigido para que o log atualmente na fila de restauração seja aplicado ao banco de dados espelho.|  
 |**Taxa de Recuperação**|Taxa em que as transações estão sendo recuperadas no banco de dados espelho, em KB por segundo.|  
 |**Sobrecarga Espelhada Confirmada**|Atraso médio por transação em milissegundos (somente em modos síncronos). Esse atraso consiste na quantidade de sobrecarga incidente enquanto a instância do servidor principal aguarda que a instância do servidor espelho grave o registro do log da transação na fila de restauração.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

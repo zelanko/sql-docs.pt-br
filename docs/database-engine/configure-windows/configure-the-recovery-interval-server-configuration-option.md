@@ -1,31 +1,36 @@
 ---
-title: "Configurar a op&#231;&#227;o recovery interval de configura&#231;&#227;o de servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restaurando intervalo de recuperação [SQL Server]"
-  - "pontos de verificação [SQL Server]"
-  - "opção recovery interval [SQL Server]"
-  - "opção recovery interval padrão"
-  - "hora [SQL Server], intervalo de recuperação"
-  - "intervalo para recuperação [SQL Server]"
-  - "número máximo de minutos por recuperação de banco de dados"
-  - "recuperação [SQL Server], opção de intervalo de recuperação"
+title: "Configurar a opção de configuração de servidor recovery interval | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring recovery interval [SQL Server]
+- checkpoints [SQL Server]
+- recovery interval option [SQL Server]
+- default recovery interval option
+- time [SQL Server], recovery interval
+- interval for recovery [SQL Server]
+- maximum number of minutes per database recovery
+- recovery [SQL Server], recovery interval option
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9b07822ce0611d8fdd7de6f1dc4fd369d0128717
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar a op&#231;&#227;o recovery interval de configura&#231;&#227;o de servidor
+# <a name="configure-the-recovery-interval-server-configuration-option"></a>Configurar a opção recovery interval de configuração de servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como configurar a opção de configuração de servidor **recovery interval** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **recovery interval** define um limite superior em relação ao tempo que deve levar a recuperação de um banco de dados. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usa o valor especificado para esta opção para determinar a frequência aproximada de [pontos de verificação automáticos](../../relational-databases/logs/database-checkpoints-sql-server.md) para emitir pontos de verificação automáticos em determinado banco de dados.  
@@ -76,11 +81,11 @@ caps.handback.revision: 39
   
 2.  Clique no nó **Configurações de Banco de Dados** .  
   
-3.  Em **Recuperação**, na caixa **Intervalo de recuperação (minutos)**, digite ou selecione um valor de 0 a 32767 para definir o intervalo máximo de tempo, em minutos, que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deveria gastar recuperando cada banco de dados na inicialização. O padrão é 0, que indica configuração automática pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Na prática, isso significa um tempo de recuperação inferior a um minuto e um ponto de verificação a cada um minuto aproximadamente para bancos de dados ativos.  
+3.  Em **Recuperação**, na caixa **Intervalo de recuperação (minutos)** , digite ou selecione um valor de 0 a 32767 para definir o intervalo máximo de tempo, em minutos, que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deveria gastar recuperando cada banco de dados na inicialização. O padrão é 0, que indica configuração automática pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Na prática, isso significa um tempo de recuperação inferior a um minuto e um ponto de verificação a cada um minuto aproximadamente para bancos de dados ativos.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para definir o intervalo de recuperação  
+#### <a name="to-set-the-recovery-interval"></a>Para definir o intervalo de recuperação  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -102,17 +107,18 @@ GO
   
 ```  
   
- Para obter mais informações, consulte [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 ##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção recovery interval  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)   
  [Pontos de verificação de banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Opção show advanced options de configuração de servidor](../../database-engine/configure-windows/show-advanced-options-server-configuration-option.md)   
+ [Opção de configuração de servidor show advanced options](../../database-engine/configure-windows/show-advanced-options-server-configuration-option.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)  
   
   
+

@@ -1,35 +1,40 @@
 ---
-title: "Propriedades do Servidor (p&#225;gina Avan&#231;ado) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.advanced.f1"
+title: "Propriedades do servidor (página Avançado) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 caps.latest.revision: 65
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38ea8eca9d8d71269f0e6095a949e1aa027ec484
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriedades do Servidor (p&#225;gina Avan&#231;ado)
+# <a name="server-properties---advanced-page"></a>Propriedades do servidor – página Avançado
   Use esta página para exibir ou modificar as configurações avançadas do servidor.  
   
  **Para exibir as páginas Propriedades do Servidor**  
   
 -   [Exibir ou alterar as propriedades de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)  
   
-## Contenção  
+## <a name="containment"></a>Contenção  
  Habilitar bancos de dados independentes  
  Indica se esta instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite bancos de dados independentes. Quando definido como **True**, um banco de dados independente poderá ser criado, restaurado ou anexado. Quando definido como **False**, um banco de dados independente não pode ser criado, restaurado nem anexado a essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Alterar a propriedade de contenção pode ter um impacto na segurança do banco de dados. Habilitar bancos de dados independentes permite que proprietários de banco de dados concedam acesso a esse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Desabilitar bancos de dados independentes pode impedir que os usuários se conectem. Para entender o impacto da propriedade de contenção, veja [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md) e [Práticas recomendadas de segurança com bancos de dados independentes](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
-## FILESTREAM  
+## <a name="filestream"></a>FILESTREAM  
  **Nível de acesso FILESTREAM**  
  Mostra o nível de suporte de FILESTREAM atual configurado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para alterar o nível de acesso configurado, selecione um dos seguintes valores:  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 65
  **Nome do Compartilhamento de FILESTREAM**  
  Exibe o nome somente leitura do compartilhamento de FILESTREAM selecionado durante a instalação. Para obter mais informações, veja [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
-## Diversos  
+## <a name="miscellaneous"></a>Diversos  
  **Permitir que Gatilhos Disparem Outros Gatilhos**  
  Permite que gatilhos acionem outros gatilhos. Os gatilhos podem ser aninhados até no máximo 32 níveis. Para obter mais informações, confira a seção “Gatilhos aninhados” em [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 65
  **Importar**  
  Os catálogos de texto completo são importados. Essa operação é significativamente mais rápida que **Recriar**. No entanto, um catálogo de texto completo importado não usará os separadores de palavras novos e aprimorados introduzidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Sendo assim, no final, talvez você deseje recriar os catálogos de texto completo.  
   
- Se um catálogo de texto completo não estiver disponível, os índices de texto completo associados serão recompilados. Essa opção está disponível apenas para bancos de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ Se um catálogo de texto completo não estiver disponível, os índices de texto completo associados serão recompilados. Essa opção está disponível apenas para bancos de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
  **Recompilar**  
  Os catálogos de texto completo são recompilados usando-se os separadores de palavras novos e aprimorados. A recompilação de índices pode demorar um pouco, e uma quantidade significativa de memória e CPU pode ser necessária após a atualização.  
@@ -86,10 +91,10 @@ caps.handback.revision: 65
 > [!NOTE]  
 >  A opção de atualização de texto completo também pode ser definida com o uso da ação [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)upgrade_option.  
   
- Depois de anexar, restaurar ou copiar um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados se torna logo disponível e, em seguida, é atualizado de forma automática. Se o banco de dados tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices dependendo da configuração da propriedade de servidor **Opção de Atualização de Texto Completo**. Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida como **Importar**, se não houver um catálogo de texto completo disponível, os índices de texto completo associados serão recompilados. Para obter informações sobre como exibir ou alterar a configuração da propriedade **Full-Text Upgrade Option**, veja [Gerenciar e monitorar a pesquisa de texto completo para uma instância de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ Depois de anexar, restaurar ou copiar um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados se torna logo disponível e, em seguida, é atualizado de forma automática. Se o banco de dados tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices dependendo da configuração da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida como **Importar**, se não houver um catálogo de texto completo disponível, os índices de texto completo associados serão recompilados. Para obter informações sobre como exibir ou alterar a configuração da propriedade **Full-Text Upgrade Option** , veja [Gerenciar e monitorar a pesquisa de texto completo para uma instância de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  **Tamanho Máximo da Replicação de Texto**  
- Especifica o tamanho máximo (em bytes) de dados dos tipos **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **xml** e **image** que podem ser adicionados a uma coluna replicada ou capturada em uma única instrução INSERT, UPDATE, WRITETEXT ou UPDATETEXT. A alteração da configuração entra em vigor imediatamente. Para obter mais informações, veja [Configurar a opção max text repl size de configuração de servidor](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
+ Especifica o tamanho máximo (em bytes) de dados dos tipos **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **xml**e **image** que podem ser adicionados a uma coluna replicada ou capturada em uma única instrução INSERT, UPDATE, WRITETEXT ou UPDATETEXT. A alteração da configuração entra em vigor imediatamente. Para obter mais informações, veja [Configurar a opção max text repl size de configuração de servidor](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   
  **Examinar Procedimentos de Inicialização**  
  Especifica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] examinará a execução automática de procedimentos armazenados na inicialização. Se definido como **True**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] examina e executa todos os procedimentos armazenados executados automaticamente definidos no servidor. Se definido como **False** (o padrão), nenhum exame é executado. Para obter mais informações, veja [Configurar a opção scan for startup procs de configuração de servidor](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md).  
@@ -99,9 +104,9 @@ caps.handback.revision: 65
   
  Por exemplo, a configuração padrão de 2049 indica que a data digitada como ‘14/3/49’ será interpretada como 14 de março de 2049 e a data digitada como ‘14/3/50’ será interpretada como 14 de março de 1950. Para saber mais, veja [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
-## Rede  
+## <a name="network"></a>Rede  
  **Tamanho do Pacote de Rede**  
- Define o tamanho do pacote (em bytes) usado pela rede inteira. O tamanho do pacote padrão é de 4096 bytes. Se um aplicativo fizer operações de cópia em massa ou enviar ou receber quantias grandes quantidades de dados **text** ou **image**, um tamanho do pacote maior que o padrão poderá melhorar a eficiência, porque resulta em menos operações de leitura e gravação em rede. Se um aplicativo enviar e receber pequenas quantidades de informações, você pode definir o tamanho do pacote como 512 bytes, o que é suficiente para a maioria das transferências de dados. Para obter mais informações, veja [Configurar a opção network packet size de configuração de servidor](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md).  
+ Define o tamanho do pacote (em bytes) usado pela rede inteira. O tamanho do pacote padrão é de 4096 bytes. Se um aplicativo fizer operações de cópia em massa ou enviar ou receber quantias grandes quantidades de dados **text** ou **image** , um tamanho do pacote maior que o padrão poderá melhorar a eficiência, porque resulta em menos operações de leitura e gravação em rede. Se um aplicativo enviar e receber pequenas quantidades de informações, você pode definir o tamanho do pacote como 512 bytes, o que é suficiente para a maioria das transferências de dados. Para obter mais informações, veja [Configurar a opção network packet size de configuração de servidor](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md).  
   
 > [!NOTE]  
 >  Não altere o tamanho do pacote a menos que você tenha certeza que melhorará o desempenho. Para a maioria dos aplicativos, o tamanho do pacote padrão é o melhor.  
@@ -111,7 +116,7 @@ caps.handback.revision: 65
   
  A alteração da configuração entra em vigor imediatamente.  
   
-## Paralelismo:  
+## <a name="parallelism"></a>Paralelismo:  
  **Limite de Custo Para Paralelismo**  
  Especifica o limite sobre o qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria e executa planos paralelos para consultas. O custo faz referência a um tempo decorrido estimado em segundos, exigido para a execução do plano serial em uma configuração de hardware específica. Só defina esta opção em multiprocessadores simétricos. Para obter mais informações, veja [Configurar a opção cost threshold for parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md).  
   
@@ -126,7 +131,7 @@ caps.handback.revision: 65
  **Espera da Consulta**  
  Especifica o tempo em segundos (de 0 a 2147483647) que uma consulta espera por recursos antes de acusar tempo limite. Se o valor padrão -1 for usado, o tempo limite será calculado como 25 vezes o custo estimado da consulta. Para obter mais informações, veja [Configurar a opção query wait de configuração de servidor](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

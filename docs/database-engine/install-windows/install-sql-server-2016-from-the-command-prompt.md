@@ -1,96 +1,101 @@
 ---
-title: "Instalar o SQL Server 2016 do prompt de comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "instalando o SQL Server, prompt de comando"
-  - "scripts de instalação [SQL Server]"
-  - "scripts de manutenção [SQL Server]"
-  - "propriedade REMOVENODE"
-  - "componentes [SQL Server], removendo"
-  - "prompt de comando [SQL Server], instalações do SQL Server"
-  - "parâmetro ASACCOUNT"
-  - "clustering de failover [SQL Server], instalando"
-  - "banco de dados mestre [SQL Server], recriando"
-  - "parâmetro SQLCOLLATION"
-  - "clusters [SQL Server], instalando"
-  - "instalações autônomas [SQL Server]"
-  - "modificando agrupamentos"
-  - "parâmetro AGTPASSWORD"
-  - "parâmetro USESYSDB"
-  - "parâmetro RSPASSWORD"
-  - "parâmetro AUTOSTART"
-  - "parâmetro ASPASSWORD"
-  - "instalações autônomas [SQL Server]"
-  - "parâmetro SAMPLEDATABASESERVER"
-  - "adicionando componentes"
-  - "parâmetro SAPWD"
-  - "scripts [SQL Server], desinstalações"
-  - "instalações remotas [SQL Server]"
-  - "componentes [SQL Server], instalando"
-  - "parâmetro TARGETCOMPUTER"
-  - "parâmetro REMOVENODE"
-  - "parâmetro REINSTALLMODE"
-  - "scripts [SQL Server], manutenção"
-  - "recriando registro"
-  - "parâmetro SQLPASSWORD"
-  - "recriando bancos de dados"
-  - "propriedade IP"
-  - "parâmetro PIDKEY"
-  - "parâmetro RSCONFIGURATION"
-  - "parâmetro ADDLOCAL"
-  - "Instalação [SQL Server], prompt de comando"
-  - "parâmetro REBUILDDATABASE"
-  - "parâmetro SECURITYMODE"
-  - "propriedade REMOVE"
-  - "parâmetro DISABLENETWORKPROTOCOLS"
-  - "parâmetro INSTALLASDATADIR"
-  - "parâmetro REMOVE"
-  - "removendo componentes"
-  - "parâmetro SQLACCOUNT"
-  - "parâmetros [SQL Server], instalações do SQL Server"
-  - "parâmetro UPGRADE"
-  - "atalhos [SQL Server]"
-  - "atualizando componentes"
-  - "removendo o SQL Server"
-  - "instância clusterizada do SQL Server"
-  - "parâmetro INSTALLSQLDATADIR"
-  - "parâmetro RSACCOUNT"
-  - "parâmetro ADMINPASSWORD"
-  - "propriedade GROUP"
-  - "propriedade ERRORREPORTING"
-  - "scripts de desinstalação [SQL Server]"
-  - "parâmetro AGTACCOUNT"
-  - "parâmetro SAVESYSDB"
-  - "parâmetro INSTALLVS"
-  - "parâmetro INSTANCENAME"
-  - "scripts [SQL Server], instalações"
-  - "recriando o banco de dados, mestre"
-  - "desinstalando o SQL Server"
-  - "parâmetro ASCOLLATION"
-  - "arquivos .ini"
-  - "parâmetro ADDNODE"
-  - "instalações de linha de comando [SQL Server]"
-  - "parâmetro VS"
-  - "parâmetro INSTALLASDATADIR"
-  - "parâmetro INSTALLSQLDIR"
-  - "nós [Clustering de failover], prompt de comando"
-  - "parâmetro INSTALLSQLSHAREDDIR"
+title: Instalar o SQL Server por meio do prompt de comando | Microsoft Docs
+ms.custom: 
+ms.date: 07/11/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- installing SQL Server, command prompt
+- installation scripts [SQL Server]
+- maintenance scripts [SQL Server]
+- REMOVENODE property
+- components [SQL Server], removing
+- command prompt [SQL Server], SQL Server installations
+- ASACCOUNT parameter
+- failover clustering [SQL Server], installing
+- master database [SQL Server], rebuilding
+- SQLCOLLATION parameter
+- clusters [SQL Server], installing
+- unattended installations [SQL Server]
+- modifying collations
+- AGTPASSWORD parameter
+- USESYSDB parameter
+- RSPASSWORD parameter
+- AUTOSTART parameter
+- ASPASSWORD parameter
+- stand-alone installations [SQL Server]
+- SAMPLEDATABASESERVER parameter
+- adding components
+- SAPWD parameter
+- scripts [SQL Server], uninstallations
+- remote installations [SQL Server]
+- components [SQL Server], installing
+- TARGETCOMPUTER parameter
+- REMOVENODE parameter
+- REINSTALLMODE parameter
+- scripts [SQL Server], maintenance
+- rebuilding registry
+- SQLPASSWORD parameter
+- rebuilding databases
+- IP property
+- PIDKEY parameter
+- RSCONFIGURATION parameter
+- ADDLOCAL parameter
+- Setup [SQL Server], command prompt
+- REBUILDDATABASE parameter
+- SECURITYMODE parameter
+- REMOVE property
+- DISABLENETWORKPROTOCOLS parameter
+- INSTALLDATADIR parameter
+- REMOVE parameter
+- removing components
+- SQLACCOUNT parameter
+- parameters [SQL Server], SQL Server installations
+- UPGRADE parameter
+- shortcuts [SQL Server]
+- updating components
+- removing SQL Server
+- clustered instance of SQL Server
+- INSTALLSQLDATADIR parameter
+- RSACCOUNT parameter
+- ADMINPASSWORD parameter
+- GROUP property
+- ERRORREPORTING property
+- uninstallation scripts [SQL Server]
+- AGTACCOUNT parameter
+- SAVESYSDB parameter
+- INSTALLVS parameter
+- INSTANCENAME parameter
+- scripts [SQL Server], installations
+- rebuilding database, master
+- uninstalling SQL Server
+- ASCOLLATION parameter
+- .ini files
+- ADDNODE parameter
+- command line installations [SQL Server]
+- VS parameter
+- INSTALLASDATADIR parameter
+- INSTALLSQLDIR parameter
+- nodes [Faillover Clustering], command prompt
+- INSTALLSQLSHAREDDIR parameter
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
 caps.latest.revision: 255
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 254
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 458c1eba94f31cc9577a82eb429749b1b22fc21f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Instalar o SQL Server 2016 do prompt de comando
+# <a name="install-sql-server-from-the-command-prompt"></a>Instalar o SQL Server do prompt de comando
   Antes de executar a Configuração do SQL Server, examine [Como planejar uma instalação do SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
  A instalação de uma nova instância do SQL Server no prompt de comando permite especificar os recursos a serem instalados e como eles devem ser configurados. Você também pode especificar interação silenciosa, básica ou completa com a interface do usuário de Instalação.  
@@ -117,7 +122,7 @@ caps.handback.revision: 254
   
 > **OBSERVAÇÃO:** para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o SQL Server de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e execução no compartilhamento remoto. Para instalações de cluster de failover, você deve ter privilégios de administrador local com permissões para fazer logon como um serviço e atuar como parte do sistema operacional em todos os nós do cluster de failover.  
   
-##  <a name="a-nameproperusea-proper-use-of-setup-parameters"></a><a name="ProperUse"></a>Uso apropriado dos parâmetros de instalação  
+##  <a name="ProperUse"></a> Uso apropriado dos parâmetros de instalação  
  Use as diretrizes a seguir para desenvolver comandos de instalação com a sintaxe correta:  
   
 -   /PARAMETER  
@@ -175,7 +180,7 @@ caps.handback.revision: 254
   
 -   [Configuração de ID da Instância ou InstanceID](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md#InstanceID) 
   
-##  <a name="a-nameinstalla-installation-parameters"></a><a name="Install"></a> Parâmetros de instalação  
+##  <a name="Install"></a> Parâmetros de instalação  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a instalação.  
   
 |Componente do SQL Server|Parâmetro|Description|  
@@ -195,7 +200,7 @@ caps.handback.revision: 254
 |Controle de instalação do SQL Server|/INSTALLSHAREDWOWDIR<br /><br /> **Opcional**|Especifica um diretório de instalação não padrão para componentes compartilhados de 32 bits. Com suporte apenas em sistemas de 64 bits.<br /><br /> O padrão é %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server<br /><br /> Não é possível definir como %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server|  
 |Controle de instalação do SQL Server|/INSTANCEDIR<br /><br /> **Opcional**|Especifica um diretório de instalação não padrão para componentes específicos à instância.|  
 |Controle de instalação do SQL Server|/INSTANCEID<br /><br /> **Opcional**|Especifica um valor não padrão para uma [InstanceID](#InstanceID).|  
-|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](../Topic/Instance%20Configuration.md).|  
+|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **Opcional**|Especifica a conta do serviço de mecanismo. O padrão é **NT Authority\NETWORK SERVICE**.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Opcional**|Especifica a senha da conta de serviço de mecanismo.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de inicialização do serviço de mecanismo PolyBase: Automático (padrão), Desabilitado e Manual.|  
@@ -204,7 +209,7 @@ caps.handback.revision: 254
 |Controle de instalação do SQL Server|/PID<br /><br /> **Opcional**|Especifica a chave do produto (Product Key) da edição do SQL Server. Se esse parâmetro não for especificado, a versão Evaluation será usada.|  
 |Controle de instalação do SQL Server|/Q<br /><br /> **Opcional**|Especifica que a Instalação é executada em modo silencioso sem nenhuma interface do usuário. Isso é usado para instalações autônomas.|  
 |Controle de instalação do SQL Server|/QS<br /><br /> **Opcional**|Especifica que a Instalação é executada e mostra o andamento por meio da interface do usuário, mas não aceita nenhuma entrada nem mostra nenhuma mensagem de erro.|  
-|Controle de instalação do SQL Server|/UIMODE<br /><br /> **Opcional**|Especifica se deve apresentar somente o número mínimo de caixas de diálogo durante a instalação.<br /><br /> **/UIMode** somente pode ser usado com os parâmetros **/ACTION=INSTALL** e **UPGRADE** . Valores com suporte:<br /><br /> **/UIMODE=Normal** é o padrão para edições diferentes de Express e apresenta todas as caixas de diálogo de instalação para os recursos selecionados.<br /><br /> **/UIMODE=AutoAdvance** é o padrão para edições Express e ignora caixas de diálogo dispensáveis.<br /><br /> <br /><br /> Observe que quando combinado com outros parâmetros, **UIMODE** é substituído. Por exemplo, quando **/UIMODE=AutoAdvance** e **/ADDCURRENTUSERASSQLADMIN=FALSE** são ambos fornecidos, a caixa de diálogo de provisionamento não é automaticamente populada com o usuário atual.<br /><br /> A configuração **UIMode** não pode ser usada com os parâmetros **/Q** ou **/QS**.|  
+|Controle de instalação do SQL Server|/UIMODE<br /><br /> **Opcional**|Especifica se deve apresentar somente o número mínimo de caixas de diálogo durante a instalação.<br /><br /> **/UIMode** somente pode ser usado com os parâmetros **/ACTION=INSTALL** e **UPGRADE** . Valores com suporte:<br /><br /> **/UIMODE=Normal** é o padrão para edições diferentes de Express e apresenta todas as caixas de diálogo de instalação para os recursos selecionados.<br /><br /> **/UIMODE=AutoAdvance** é o padrão para edições Express e ignora caixas de diálogo dispensáveis.<br /><br /> <br /><br /> Observe que quando combinado com outros parâmetros, **UIMODE** é substituído. Por exemplo, quando **/UIMODE=AutoAdvance** e **/ADDCURRENTUSERASSQLADMIN=FALSE** são ambos fornecidos, a caixa de diálogo de provisionamento não é automaticamente populada com o usuário atual.<br /><br /> A configuração **UIMode** não pode ser usada com os parâmetros **/Q** ou **/QS** .|  
 |Controle de instalação do SQL Server|/SQMREPORTING<br /><br /> **Opcional**|Não tem efeito no SQL Server 2016. <br/><br/>Para gerenciar como os comentários de erro são enviados à Microsoft, veja [Como configurar o SQL Server 2016 para enviar comentários à Microsoft](http://support.microsoft.com/kb/3153756). <br/><br/>Em versões mais antigas, isso especifica o relatório de uso do recurso do SQL Server.<br /><br />Valores com suporte:<br /><br /> 0=desabilitado<br /><br /> 1=habilitado|  
 |Controle de instalação do SQL Server|/HIDECONSOLE<br /><br /> **Opcional**|Especifica se a janela do console é ocultada ou fechada.|  
 |SQL Server Agent|/AGTSVCACCOUNT<br /><br /> **Necessário**|Especifica a conta para o serviço do SQL Server Agent.|  
@@ -214,13 +219,13 @@ caps.handback.revision: 254
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **Opcional**|Especifica a configuração de agrupamento do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> Valor padrão: **Latin1_General_CI_AS**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de configuração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\<INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Config.<br /><br /> Para todas as outras instalações: %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\<INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Config.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\<INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Data.<br /><br /> Para todas as outras instalações: %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\<INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Data.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de log do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\ \<INSTANCEDIR>\\<IDInstânciaAS\>\OLAP\Log.<br /><br /> Para todas as outras instalações: %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\ \<INSTANCEDIR>\\<IDInstânciaAS\>\OLAP\Log.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de log do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\ <INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Log.<br /><br /> Para todas as outras instalações: %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\ <INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Log.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **Opcional**|Especifica o modo de servidor da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Os valores válidos são MULTIDIMENSIONAL, POWERPIVOT ou TABULAR. **ASSERVERMODE** diferencia maiúsculas de minúsculas. Todos os valores devem ser expressos em maiúsculas. Para obter mais informações sobre valores válidos, consulte [Instalar o Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md).|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **Necessário**|Especifica a conta de serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [Necessário](#Accounts)|Especifica a senha do serviço [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores com suporte:<br /><br /> **Automático**<br /><br /> **Desabilitado**<br /><br /> **Manual**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSYSADMINACCOUNTS<br /><br /> **Necessário**|Especifica as credenciais de administrador do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **Opcional**|Especifica o diretório de arquivos temporários do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\ \<INSTANCEDIR>\\<IDInstânciaAS\>\OLAP\Temp.<br /><br /> Para todas as outras instalações: %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\ \<INSTANCEDIR>\\<IDInstânciaAS\>\OLAP\Temp.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **Opcional**|Especifica o diretório de arquivos temporários do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\ <INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Temp.<br /><br /> Para todas as outras instalações: %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\ <INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Temp.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **Opcional**|Especifica se o provedor MSOLAP pode ser executado no processo.<br /><br /> Valor padrão: 1=habilitado|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMACCOUNT<br /><br /> **Necessário para SPI_AS_NewFarm**|Especifica uma conta de usuário de domínio para executar serviços de Administração Central do SharePoint e outros serviços essenciais em um farm.<br /><br /> Esse parâmetro é usado apenas para instâncias do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instaladas por meio de /ROLE = SPI_AS_NEWFARM.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMPASSWORD<br /><br /> **Necessário para SPI_AS_NewFarm**|Especifica uma senha para a conta do farm.|  
@@ -233,18 +238,18 @@ caps.handback.revision: 254
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **Opcional**|Especifica o modo de segurança do SQL Server.<br /><br /> Se esse parâmetro não for fornecido, apenas o modo de autenticação do Windows terá suporte.<br /><br /> Valor com suporte: **SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de backup.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Backup|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **Opcional**|Especifica as configurações de agrupamento do SQL Server.<br /><br /> O valor padrão baseia-se na localidade do sistema operacional Windows. Para obter mais informações, consulte [Collation Settings in Setup](http://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx).|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **Opcional**|Adiciona o usuário atual à função de servidor fixa **sysadmin** do SQL Server. O parâmetro /ADDCURRENTUSERASSQLADMIN pode ser usado ao instalar edições Express ou quando /Role=ALLFeatures_WithDefaults estiver sendo usado. Para saber mais, confira /ROLE abaixo.<br /><br /> O uso de /ADDCURRENTUSERASSQLADMIN é opcional, mas /ADDCURRENTUSERASSQLADMIN ou /SQLSYSADMINACCOUNTS é obrigatório. Valores padrão:<br /><br /> **True** para edições do[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> **False** para todas as outras edições|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **Opcional**|Adiciona o usuário atual à função de servidor fixa**sysadmin** do SQL Server. O parâmetro /ADDCURRENTUSERASSQLADMIN pode ser usado ao instalar edições Express ou quando /Role=ALLFeatures_WithDefaults estiver sendo usado. Para saber mais, confira /ROLE abaixo.<br /><br /> O uso de /ADDCURRENTUSERASSQLADMIN é opcional, mas /ADDCURRENTUSERASSQLADMIN ou /SQLSYSADMINACCOUNTS é obrigatório. Valores padrão:<br /><br /> **True** para edições do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> **False** para todas as outras edições|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **Necessário**|Especifica a conta de inicialização do serviço do SQL Server.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [Necessário](#Accounts)|Especifica a senha de SQLSVCACCOUNT.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço do SQL Server. Valores com suporte:<br /><br /> **Automático**<br /><br /> **Desabilitado**<br /><br /> **Manual**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **Necessário**|Use este parâmetro para provisionar logons para serem membros da função sysadmin.<br /><br /> Para as edições do SQL Server diferentes da [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], /SQLSYSADMINACCOUNTS é obrigatório. Para as edições do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], o uso de /SQLSYSADMINACCOUNTS é opcional, mas /SQLSYSADMINACCOUNTS ou /ADDCURRENTUSERASSQLADMIN é obrigatório.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **Opcional**|Especifica os diretórios para arquivos de dados tempdb. Ao especificar mais de um diretório, separe os diretórios com um espaço em branco. Se vários diretórios forem especificados, os arquivos de dados tempdb serão espalhados pelos diretórios de modo round robin.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> OBSERVAÇÃO: esse parâmetro também é adicionado ao cenário RebuildDatabase.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório para o arquivo de log tempdb.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> Observação: esse parâmetro também é adicionado ao cenário RebuildDatabase.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório para o arquivo de log tempdb.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> OBSERVAÇÃO: esse parâmetro também é adicionado ao cenário RebuildDatabase.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **Opcional**|Especifica o número de arquivos tempdb a ser adicionado pela configuração. Esse valor pode ser aumentado para o número de núcleos. Valor padrão:<br /><br /> 1 para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 ou o número de núcleos, o que for menor para todas as outras edições<br /><br /> **\*\* Importante \*\*** O arquivo de banco de dados primário para tempdb ainda será tempdb.mdf. Os arquivos tempdb adicionais são chamados de tempdb_mssql_#.ndf, em que # representa um número exclusivo para cada arquivo de banco de dados tempdb adicional criado durante a configuração. A finalidade dessa convenção de nomenclatura é torná-los exclusivos. Desinstalar uma instância do SQL Server exclui os arquivos com convenção de nomenclatura tempdb_mssql_#.ndf. Não use a convenção de nomenclatura tempdb_mssql_*.ndf para arquivos de banco de banco de dados de usuário.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Opcional**|Especifica o tamanho inicial de cada arquivo de dados tempdb em MB. A instalação permite o tamanho de até 1024 MB. Valor padrão = 8<br /><br /> Intervalo permitido: mín. = 8, máx. = 1024.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Opcional**|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 1024 MB.<br /><br /> Valor padrão: 64.  Intervalo permitido: mín. = 0, máx. = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Opcional**|Especifica o tamanho inicial do arquivo de log tempdb em MB. A instalação permite o tamanho de até 1024 MB. <br />Valor padrão: 8<br /><br /> Intervalo permitido: mín. = 8, máx. = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Opcional**|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 1024 MB.<br /><br /> Valor padrão: 64.  Intervalo permitido: mín. = 0, máx. = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Opcional**|Introduzido no [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Especifica o tamanho inicial de cada arquivo de dados do tempdb.<br/><br/>Padrão = 4 MB para o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e 8 MB para todas as outras edições.<br/><br/>Mín. = (4 ou 8 MB).<br/><br/>Máx. = 1.024 MB (262.144 MB para o [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)])|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Opcional**|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A configuração permite o tamanho de até 1.024.<br /><br /> Valor padrão: 64. Intervalo permitido: mín. = 0, máx. = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Opcional**|Introduzido no [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Especifica o tamanho inicial de cada arquivo de log do tempdb.<br/><br/>Padrão = 4 MB para o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e 8 MB para todas as outras edições.<br/><br/>Mín. = (4 ou 8 MB).<br/><br/>Máx. = 1.024 MB (262.144 MB para o [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)])|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Opcional**|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A configuração permite o tamanho de até 1024.<br /><br /> Valor padrão: 64. Intervalo permitido: mín. = 0, máx. = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de dados de bancos de dados do usuário.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCINSTANTFILEINIT<br /><br /> **Opcional**|Permite a inicialização instantânea de arquivo para conta de serviço SQL Server Para obter considerações sobre segurança e desempenho, consulte [Inicialização imediata de arquivo do banco de dados](../../relational-databases/databases/database-instant-file-initialization.md).<br /><br /> Valor padrão: "False"<br /><br /> Valor opcional: "True"|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de log de bancos de dados do usuário.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
@@ -264,7 +269,7 @@ caps.handback.revision: 254
 |R Services (no banco de dados)|MRCACHEDIRECTORY|Use este parâmetro para especificar o diretório de Cache para componentes do Microsoft R Open e do Microsoft R Server, conforme descrito [nesta seção](https://msdn.microsoft.com/library/mt695942.aspx). Essa configuração é normalmente usada ao instalar serviços do SQL Server R da linha de comando em um computador sem acesso à Internet.|  
   
 ###### <a name="sample-syntax"></a>Sintaxe de exemplo:  
- Para instalar uma nova instância autônoma com os componentes [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replicação e Pesquisa de Texto Completo, e ainda habilitar a inicialização instantânea de arquivo para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ Para instalar uma nova instância autônoma com os componentes [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replicação e Pesquisa de Texto Completo, e ainda habilitar a inicialização instantânea de arquivo para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 
   
 ```  
   
@@ -272,13 +277,13 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
   
 ```  
   
-##  <a name="a-namesysprepa-sysprep-parameters"></a><a name="SysPrep"></a>Parâmetros do SysPrep  
+##  <a name="SysPrep"></a> Parâmetros do SysPrep  
  Para obter mais informações sobre o SysPrep do SQL Server, consulte  
   
- [Instalar o SQL Server 2016 usando SysPrep](../../database-engine/install-windows/install-sql-server-2016-using-sysprep.md).  
+ [Instalar o SQL Server 2016 usando SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md). 
   
 #### <a name="prepare-image-parameters"></a>Parâmetros de preparação de imagem  
- Use os parâmetros da tabela a seguir para desenvolver scripts de linha de comando para preparar uma instância do SQL Server sem configurá-la.  
+ Use os parâmetros da tabela a seguir para desenvolver scripts de linha de comando para preparar uma instância do SQL Server sem configurá-la. 
   
 |Componente do SQL Server|Parâmetro|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -304,14 +309,14 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 |Controle de instalação do SQL Server|/QS<br /><br /> **Opcional**|Especifica que a Instalação é executada e mostra o andamento por meio da interface do usuário, mas não aceita nenhuma entrada nem mostra nenhuma mensagem de erro.|  
   
 ###### <a name="sample-syntax"></a>Sintaxe de exemplo:  
- Para preparar uma nova instância autônoma com os componentes de Replicação e Pesquisa de Texto Completo do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ Para preparar uma nova instância autônoma com os componentes de Replicação e Pesquisa de Texto Completo do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. 
   
 ```  
 Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
 #### <a name="complete-image-parameters"></a>Parâmetros de conclusão de imagem  
- Use os parâmetros da tabela a seguir para desenvolver scripts de linha de comando para concluir e configurar uma instância preparada do SQL Server.  
+ Use os parâmetros da tabela a seguir para desenvolver scripts de linha de comando para concluir e configurar uma instância preparada do SQL Server. 
   
 |Componente do SQL Server|Parâmetro|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -323,7 +328,7 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |Controle de instalação do SQL Server|/HELP, H, ?<br /><br /> **Opcional**|Exibe as opções de uso dos parâmetros de instalação.|  
 |Controle de instalação do SQL Server|/INDICATEPROGRESS<br /><br /> **Opcional**|Especifica que o arquivo de log de Instalação detalhado será conectado ao console.|  
 |Controle de instalação do SQL Server|/INSTANCEID<br /><br /> Antes do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 Atualização Cumulativa 2 (janeiro de 2013) **Obrigatório**<br /><br /> A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 Atualização Cumulativa 2 **Opcional**|Use a ID de Instância especificada durante a etapa de preparação da imagem.<br /><br /> Valores compatíveis: InstanceID de uma instância preparada.|  
-|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> Antes do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 Atualização Cumulativa 2 (janeiro de 2013) **Obrigatório**<br /><br /> A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 Atualização Cumulativa 2 **Opcional**|Especifica um nome de instância do SQL Server para a instância que está sendo concluída.<br /><br /> Para obter mais informações, consulte [Instance Configuration](../Topic/Instance%20Configuration.md).|  
+|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> Antes do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 Atualização Cumulativa 2 (janeiro de 2013) **Obrigatório**<br /><br /> A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 Atualização Cumulativa 2 **Opcional**|Especifica um nome de instância do SQL Server para a instância que está sendo concluída.<br /><br /> Para obter mais informações, consulte [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **Opcional**|Especifica a conta do serviço de mecanismo. O padrão é **NT Authority\NETWORK SERVICE**.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Opcional**|Especifica a senha da conta de serviço de mecanismo.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de inicialização do serviço de mecanismo PolyBase: Automático (padrão), Desabilitado e Manual.|  
@@ -349,11 +354,11 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço do SQL Server. Valores com suporte:<br /><br /> **Automático**<br /><br /> **Desabilitado**<br /><br /> **Manual**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **Necessário**|Use este parâmetro para provisionar logons para serem membros da função sysadmin.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **Opcional**|Especifica os diretórios para arquivos de dados tempdb. Ao especificar mais de um diretório, separe os diretórios com um espaço em branco. Se vários diretórios forem especificados, os arquivos de dados tempdb serão espalhados pelos diretórios de modo round robin.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> OBSERVAÇÃO: esse parâmetro também é adicionado ao cenário RebuildDatabase.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório para o arquivo de log tempdb.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> Observação: esse parâmetro também é adicionado ao cenário RebuildDatabase.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Opcional**|Especifica o tamanho inicial de cada arquivo de dados tempdb em MB. A instalação permite o tamanho de até 256 MB.<br /><br /> Valor padrão:<br /><br /> 4 para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 para todas as outras edições<br /><br /> Intervalo permitido: Mín. = valor padrão (4 ou 8), Máx. = 256|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Opcional**|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 256 MB.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: Mín. = 0, Máx. = 256|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Opcional**|Especifica o tamanho inicial do arquivo de log tempdb em MB. A instalação permite o tamanho de até 256 MB.<br /><br /> Valor padrão:<br /><br /> 4 para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 para todas as outras edições<br /><br /> Intervalo permitido: Mín. = valor padrão (4 ou 8), Máx. = 256|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Opcional**|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 256 MB.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: Mín. = 0, Máx. = 256|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório para o arquivo de log tempdb.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> OBSERVAÇÃO: esse parâmetro também é adicionado ao cenário RebuildDatabase.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Opcional**|Introduzido no [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Especifica o tamanho inicial de cada arquivo de dados do tempdb.<br/><br/>Padrão = 4 MB para o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e 8 MB para todas as outras edições.<br/><br/>Mín. = (4 ou 8 MB).<br/><br/>Máx. = 1.024 MB (262.144 MB para o [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)]).|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Opcional**|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A configuração permite o tamanho de até 1024.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: mín. = 0, máx. = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Opcional**|Especifica o tamanho inicial do arquivo de log tempdb em MB. A configuração permite o tamanho de até 1024.<br /><br /> Valor padrão:<br /><br /> 4 para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 para todas as outras edições<br /><br /> Intervalo permitido: Mín. = valor padrão (4 ou 8) e Máx. = 1.024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Opcional**|Introduzido no [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Especifica o tamanho inicial de cada arquivo de log do tempdb.<br/><br/>Padrão = 4 MB para o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e 8 MB para todas as outras edições.<br/><br/>Mín. = (4 ou 8 MB).<br/><br/>Máx. = 1.024 MB (262.144 MB para o [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)])|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **Opcional**|Especifica o número de arquivos tempdb a ser adicionado pela configuração. Esse valor pode ser aumentado para o número de núcleos. Valor padrão:<br /><br /> 1 para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 ou o número de núcleos, o que for menor para todas as outras edições<br /><br /> **\*\* Importante \*\*** O arquivo de banco de dados primário para tempdb ainda será tempdb.mdf. Os arquivos tempdb adicionais são chamados de tempdb_mssql_#.ndf, em que # representa um número exclusivo para cada arquivo de banco de dados tempdb adicional criado durante a configuração. A finalidade dessa convenção de nomenclatura é torná-los exclusivos. Desinstalar uma instância do SQL Server exclui os arquivos com convenção de nomenclatura tempdb_mssql_#.ndf. Não use a convenção de nomenclatura tempdb_mssql_\*.ndf para arquivos de banco de dados de usuário.<br /><br /> **\*\* Aviso \*\***[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] não tem suporte para configuração desse parâmetro. O programa de instalação instala apenas 1 arquivo de dados tempdb.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de dados de bancos de dados do usuário.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de log de bancos de dados do usuário.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
@@ -369,7 +374,7 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
 ###### <a name="sample-syntax"></a>Sintaxe de exemplo:  
- Para concluir uma instância autônoma preparada que inclui os componentes de Replicação e de Pesquisa de Texto Completo do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ Para concluir uma instância autônoma preparada que inclui os componentes de Replicação e de Pesquisa de Texto Completo do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 
   
 ```  
   
@@ -377,8 +382,8 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
   
 ```  
   
-##  <a name="a-nameupgradea-upgrade-parameters"></a><a name="Upgrade"></a>Parâmetros de atualização  
- Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para atualização.  
+##  <a name="Upgrade"></a> Parâmetros de atualização  
+ Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para atualização. 
   
 |Componente do SQL Server|Parâmetro|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -393,10 +398,10 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 |Controle de instalação do SQL Server|/INDICATEPROGRESS<br /><br /> **Opcional**|Especifica que o arquivo de log de Instalação detalhado será conectado ao console.|  
 |Controle de instalação do SQL Server|/ INSTANCEDIR<br /><br /> **Opcional**|Especifica um diretório de instalação não padrão para componentes compartilhados.|  
 |Controle de instalação do SQL Server|/INSTANCEID<br /><br /> **Necessário ao atualizar do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]** ou posterior.<br /><br /> **Opcional ao atualizar do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]**|Especifica um valor não padrão para uma [InstanceID](#InstanceID).|  
-|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](../Topic/Instance%20Configuration.md).|  
+|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |Controle de instalação do SQL Server|/PID<br /><br /> **Opcional**|Especifica a chave do produto (Product Key) da edição do SQL Server. Se esse parâmetro não for especificado, a versão Evaluation será usada.|  
 |Controle de instalação do SQL Server|/Q<br /><br /> **Opcional**|Especifica que a Instalação é executada em modo silencioso sem nenhuma interface do usuário. Isso é usado para instalações autônomas.|  
-|Controle de instalação do SQL Server|/UIMODE<br /><br /> **Opcional**|Especifica se deve apresentar somente o número mínimo de caixas de diálogo durante a instalação. <br />                **/UIMode** somente pode ser usado com os parâmetros **/ACTION=INSTALL** e **UPGRADE** . Valores com suporte:<br /><br /> **/UIMODE=Normal** é o padrão para edições diferentes de Express e apresenta todas as caixas de diálogo de instalação para os recursos selecionados.<br /><br /> **/UIMODE=AutoAdvance** é o padrão para edições Express e ignora caixas de diálogo dispensáveis.<br /><br /> Observe que a configuração **UIMode** não pode ser usada com os parâmetros **/Q** ou **/QS**.|  
+|Controle de instalação do SQL Server|/UIMODE<br /><br /> **Opcional**|Especifica se deve apresentar somente o número mínimo de caixas de diálogo durante a instalação. <br />                **/UIMode** somente pode ser usado com os parâmetros **/ACTION=INSTALL** e **UPGRADE** . Valores com suporte:<br /><br /> **/UIMODE=Normal** é o padrão para edições diferentes de Express e apresenta todas as caixas de diálogo de instalação para os recursos selecionados.<br /><br /> **/UIMODE=AutoAdvance** é o padrão para edições Express e ignora caixas de diálogo dispensáveis.<br /><br /> Observe que a configuração **UIMode** não pode ser usada com os parâmetros **/Q** ou **/QS** .|  
 |Controle de instalação do SQL Server|/SQMREPORTING<br /><br /> **Opcional**|Não tem efeito no SQL Server 2016. <br/><br/>Para gerenciar como os comentários de erro são enviados à Microsoft, veja [Como configurar o SQL Server 2016 para enviar comentários à Microsoft](http://support.microsoft.com/kb/3153756). <br/><br/>Em versões mais antigas, isso especifica o relatório de uso do recurso do SQL Server.<br /><br />Valores com suporte:<br /><br /> 1=habilitado<br /><br /> 0=desabilitado|  
 |Controle de instalação do SQL Server|/HIDECONSOLE<br /><br /> **Opcional**|Especifica se a janela do console deve ser ocultada ou fechada.|  
 |Serviço Navegador do SQL Server|/BROWSERSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço do SQL Server Browser. Valores com suporte:<br /><br /> **Automático**<br /><br /> **Desabilitado**<br /><br /> **Manual**|  
@@ -415,15 +420,15 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 Setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER /RSUPGRADEDATABASEACCOUNT="<Provide a SQL Server logon account that can connect to the report server during upgrade>" /RSUPGRADEPASSWORD="<Provide a password for the report server upgrade account>" /ISSVCAccount="NT Authority\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="a-namerepaira-repair-parameters"></a><a name="Repair"></a> Parâmetros de reparo  
- Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para reparação.  
+##  <a name="Repair"></a> Parâmetros de reparo  
+ Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para reparação. 
   
 |Componente do SQL Server|Parâmetro|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de instalação do SQL Server|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho de reparo.<br /><br /> Valores com suporte: **Repair**|  
 |Controle de instalação do SQL Server|/ENU<br /><br /> **Opcional**|Use esse parâmetro para instalar a versão em inglês do SQL Server em um sistema operacional localizado quando a mídia de instalação incluir pacotes do idioma inglês e do idioma correspondente ao sistema operacional.|  
 |Controle de instalação do SQL Server|/FEATURES<br /><br /> **Necessário**|Especifica os [componentes](#Feature) a serem reparados.|  
-|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](../Topic/Instance%20Configuration.md).|  
+|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **Opcional**|Especifica a conta do serviço de mecanismo. O padrão é **NT Authority\NETWORK SERVICE**.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Opcional**|Especifica a senha da conta de serviço de mecanismo.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de inicialização do serviço de mecanismo PolyBase: Automático (padrão), Desabilitado e Manual.|  
@@ -433,33 +438,33 @@ Setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 |Controle de instalação do SQL Server|/HIDECONSOLE<br /><br /> **Opcional**|Especifica se a janela do console é ocultada ou fechada.|  
   
 ###### <a name="sample-syntax"></a>Sintaxe de exemplo:  
- Reparar uma instância e os componentes compartilhados.  
+ Reparar uma instância e os componentes compartilhados. 
   
 ```  
 Setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>  
 ```  
   
-##  <a name="a-namerebuilda-rebuild-system-database-parameters"></a><a name="Rebuild"></a> Parâmetros de recompilação do banco de dados do sistema  
- Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para recompilar os bancos de dados do sistema mestre, modelo, msdb e tempdb. Para obter mais informações, consulte [Recriar bancos de dados do sistema](../../relational-databases/databases/rebuild-system-databases.md).  
+##  <a name="Rebuild"></a> Parâmetros de recompilação do banco de dados do sistema  
+ Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para recompilar os bancos de dados do sistema mestre, modelo, msdb e tempdb. Para obter mais informações, consulte [Recriar bancos de dados do sistema](../../relational-databases/databases/rebuild-system-databases.md). 
   
 |Componente do SQL Server|Parâmetro|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de instalação do SQL Server|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho de reconstrução do banco de dados.<br /><br /> Valores com suporte: **Rebuilddatabase**|  
-|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](../Topic/Instance%20Configuration.md).|  
+|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |Controle de instalação do SQL Server|/Q<br /><br /> **Opcional**|Especifica que a Instalação é executada em modo silencioso sem nenhuma interface do usuário. Isso é usado para instalações autônomas.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **Opcional**|Especifica um novo agrupamento no nível do servidor.<br /><br /> O valor padrão baseia-se na localidade do sistema operacional Windows. Para obter mais informações, consulte [Collation Settings in Setup](http://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx).|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **Necessário quando /SECURITYMODE=SQL tiver sido especificado durante a instalação da instância.**|Especifica a senha da conta SA do SQL.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **Necessário**|Use este parâmetro para provisionar logons para serem membros da função sysadmin.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **Opcional**|Especifica os diretórios para arquivos de dados tempdb. Ao especificar mais de um diretório, separe os diretórios com um espaço em branco. Se vários diretórios forem especificados, os arquivos de dados tempdb serão espalhados pelos diretórios de modo round robin.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> OBSERVAÇÃO: esse parâmetro também é adicionado ao cenário RebuildDatabase.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório para o arquivo de log tempdb.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> Observação: esse parâmetro também é adicionado ao cenário RebuildDatabase.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório para o arquivo de log tempdb.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> OBSERVAÇÃO: esse parâmetro também é adicionado ao cenário RebuildDatabase.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **Opcional**|Especifica o número de arquivos tempdb a ser adicionado pela configuração. Esse valor pode ser aumentado para o número de núcleos. Valor padrão:<br /><br /> 1 para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 ou o número de núcleos, o que for menor para todas as outras edições<br /><br /> **\*\* Importante \*\*** O arquivo de banco de dados primário para tempdb ainda será tempdb.mdf. Os arquivos tempdb adicionais são chamados de tempdb_mssql_#.ndf, em que # representa um número exclusivo para cada arquivo de banco de dados tempdb adicional criado durante a configuração. A finalidade dessa convenção de nomenclatura é torná-los exclusivos. Desinstalar uma instância do SQL Server exclui os arquivos com convenção de nomenclatura tempdb_mssql_#.ndf. Não use a convenção de nomenclatura tempdb_mssql_\*.ndf para arquivos de banco de dados de usuário.<br /><br /> **\*\* Aviso \*\***[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] não tem suporte para configuração desse parâmetro. O programa de instalação instala apenas 1 arquivo de dados tempdb.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Opcional**|Especifica o tamanho inicial de cada arquivo de dados tempdb em MB. A instalação permite o tamanho de até 256 MB. Valor padrão:<br /><br /> 4 para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 para todas as outras edições<br /><br /> Intervalo permitido: Mín. = valor padrão (4 ou 8), Máx. = 256|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Opcional**|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 256 MB.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: Mín. = 0, Máx. = 256|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Opcional**|Especifica o tamanho inicial do arquivo de log tempdb em MB. A instalação permite o tamanho de até 256 MB. Valor padrão:<br /><br /> 4 para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 para todas as outras edições<br /><br /> Intervalo permitido: Mín. = valor padrão (4 ou 8), Máx. = 256|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Opcional**|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 256 MB.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: Mín. = 0, Máx. = 256|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Opcional**|Introduzido no [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Especifica o tamanho inicial de cada arquivo de dados do tempdb.<br/><br/>Padrão = 4 MB para o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e 8 MB para todas as outras edições.<br/><br/>Mín. = (4 ou 8 MB).<br/><br/>Máx. = 1.024 MB (262.144 MB para o [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)]).|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Opcional**|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A configuração permite o tamanho de até 1024.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: mín. = 0, máx. = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Opcional**|Especifica o tamanho inicial do arquivo de log tempdb em MB. A configuração permite o tamanho de até 1024. Valor padrão:<br /><br /> 4 para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 para todas as outras edições<br /><br /> Intervalo permitido: Mín. = valor padrão (4 ou 8) e Máx. = 1.024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Opcional**|Introduzido no [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Especifica o tamanho inicial de cada arquivo de log do tempdb.<br/><br/>Padrão = 4 MB para o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e 8 MB para todas as outras edições.<br/><br/>Mín. = (4 ou 8 MB).<br/><br/>Máx. = 1.024 MB (262.144 MB para o [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)])|  
   
-##  <a name="a-nameuninstalla-uninstall-parameters"></a><a name="Uninstall"></a> Parâmetros de desinstalação  
- Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para desinstalação.  
+##  <a name="Uninstall"></a> Parâmetros de desinstalação  
+ Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para desinstalação. 
   
 |Componente do SQL Server|Parâmetro|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -468,23 +473,23 @@ Setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 |Controle de instalação do SQL Server|/FEATURES<br /><br /> **Necessário**|Especifica os [componentes](#Feature) a serem desinstalados.|  
 |Controle de instalação do SQL Server|/HELP, H, ?<br /><br /> **Opcional**|Exibe as opções de uso dos parâmetros.|  
 |Controle de instalação do SQL Server|/INDICATEPROGRESS<br /><br /> **Opcional**|Especifica que o arquivo de log de Instalação detalhado será conectado ao console.|  
-|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](../Topic/Instance%20Configuration.md).|  
+|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |Controle de instalação do SQL Server|/Q<br /><br /> **Opcional**|Especifica que a Instalação é executada em modo silencioso sem nenhuma interface do usuário. Isso é usado para instalações autônomas.|  
 |Controle de instalação do SQL Server|/HIDECONSOLE<br /><br /> **Opcional**|Especifica se a janela do console é ocultada ou fechada.|  
   
 ###### <a name="sample-syntax"></a>Sintaxe de exemplo:  
- Para desinstalar uma instância existente do SQL Server.  
+ Para desinstalar uma instância existente do SQL Server. 
   
 ```  
 Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERVER  
 ```  
   
- Para remover uma instância nomeada, especifique o nome da instância em vez de "MSSQLSERVER" no exemplo que foi mencionado anteriormente neste tópico.  
+ Para remover uma instância nomeada, especifique o nome da instância em vez de "MSSQLSERVER" no exemplo que foi mencionado anteriormente neste tópico. 
   
-##  <a name="a-nameclusterinstalla-failover-cluster-parameters"></a><a name="ClusterInstall"></a> Parâmetros de cluster de failover  
+##  <a name="ClusterInstall"></a> Parâmetros de cluster de failover  
  Antes de instalar uma instância de cluster de failover do SQL Server, verifique os tópicos a seguir:  
   
--   [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)  
+-   [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [[Considerações sobre segurança para uma instalação do SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)]
   
@@ -493,16 +498,16 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 -   [Instâncias do cluster de failover AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
     > [!IMPORTANT]  
-    >  Todos os comandos de instalação de cluster de failover requerem um cluster do Windows subjacente. Todos os nós que farão parte de um cluster de failover do SQL Server devem fazer parte do mesmo cluster do Windows.  
+    >  Todos os comandos de instalação de cluster de failover requerem um cluster do Windows subjacente. Todos os nós que farão parte de um cluster de failover do SQL Server devem fazer parte do mesmo cluster do Windows. 
   
- Teste e modifique os seguintes scripts de instalação de cluster de failover para que atendam às necessidades de sua organização.  
+ Teste e modifique os seguintes scripts de instalação de cluster de failover para que atendam às necessidades de sua organização. 
   
 #### <a name="integrated-install-failover-cluster-parameters"></a>Parâmetros de cluster de failover para instalação integrada  
- Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a instalação de cluster de failover.  
+ Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a instalação de cluster de failover. 
   
- Para obter mais informações sobre Instalação integrada, consulte [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+ Para obter mais informações sobre Instalação integrada, consulte [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
-> **OBSERVAÇÃO:** para adicionar outros nós após a instalação, use a ação [Adicionar nó](#AddNode).  
+> **OBSERVAÇÃO:** para adicionar outros nós após a instalação, use a ação [Adicionar nó](#AddNode). 
   
 |Componente do SQL Server|Parâmetro|Detalhes|  
 |-----------------------------------------|---------------|-------------|  
@@ -526,14 +531,14 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |Controle de instalação do SQL Server|/INSTALLSHAREDWOWDIR<br /><br /> **Opcional**|Especifica um diretório de instalação não padrão para componentes compartilhados de 32 bits. Com suporte apenas em sistemas de 64 bits.<br /><br /> O padrão é %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server<br /><br /> Não é possível definir como %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server|  
 |Controle de instalação do SQL Server|/INSTANCEDIR<br /><br /> **Opcional**|Especifica um diretório de instalação não padrão para componentes específicos à instância.|  
 |Controle de instalação do SQL Server|/INSTANCEID<br /><br /> **Opcional**|Especifica um valor não padrão para uma [InstanceID](#InstanceID).|  
-|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](../Topic/Instance%20Configuration.md).|  
+|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |Controle de instalação do SQL Server|/PID<br /><br /> **Opcional**|Especifica a chave do produto (Product Key) da edição do SQL Server. Se esse parâmetro não for especificado, a versão Evaluation será usada.|  
 |Controle de instalação do SQL Server|/Q<br /><br /> **Opcional**|Especifica que a Instalação é executada em modo silencioso sem nenhuma interface do usuário. Isso é usado para instalações autônomas.|  
 |Controle de instalação do SQL Server|/QS<br /><br /> **Opcional**|Especifica que a Instalação é executada e mostra o andamento por meio da interface do usuário, mas não aceita nenhuma entrada nem mostra nenhuma mensagem de erro.|  
 |Controle de instalação do SQL Server|/SQMREPORTING<br /><br /> **Opcional**|Não tem efeito no SQL Server 2016. <br/><br/>Para gerenciar como os comentários de erro são enviados à Microsoft, veja [Como configurar o SQL Server 2016 para enviar comentários à Microsoft](http://support.microsoft.com/kb/3153756). <br/><br/>Em versões mais antigas, isso especifica o relatório de uso do recurso do SQL Server.<br /><br />Valores com suporte:<br /><br /> 1=habilitado<br /><br /> 0=desabilitado|  
 |Controle de instalação do SQL Server|/HIDECONSOLE<br /><br /> **Opcional**|Especifica se a janela do console deve ser ocultada ou fechada.|  
 |Controle de instalação do SQL Server|/FAILOVERCLUSTERDISKS<br /><br /> **Opcional**|Especifica a lista de discos compartilhados a serem incluídos no grupo de recursos de cluster de failover do SQL Server.<br /><br /> Valor padrão: a primeira unidade é usada como a unidade padrão para todos os bancos de dados.|  
-|Controle de instalação do SQL Server|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **Necessário**|Especifica um endereço IP codificado. As codificações são separados por ponto-e-vírgula (;) e seguem o formato \<Tipo de IP>;\<endereço>;\<nome da rede>;\<máscara de sub-rede>. Os tipos IP com suporte incluem DHCP, IPv4 e IPv6.<br />Você pode especificar vários endereços IP de cluster de failover com um espaço entre eles. Consulte os exemplos a seguir:<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1|  
+|Controle de instalação do SQL Server|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **Necessário**|Especifica um endereço IP codificado. As codificações são separadas por ponto-e-vírgula (;) e seguem o formato \<IP Type>;\<address>;\<network name>;\<subnet mask>. Os tipos IP com suporte incluem DHCP, IPv4 e IPv6.<br />Você pode especificar vários endereços IP de cluster de failover com um espaço entre eles. Consulte os exemplos a seguir:<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1|  
 |Controle de instalação do SQL Server|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **Necessário**|Especifica o nome de rede da nova instância do cluster de failover do SQL Server. Esse nome é usado para identificar a nova instância de cluster de failover do SQL Server na rede.|  
 |SQL Server Agent|/AGTSVCACCOUNT<br /><br /> **Necessário**|Especifica a conta para o serviço do SQL Server Agent.|  
 |SQL Server Agent|/AGTSVCPASSWORD<br /><br /> [Necessário](#Accounts)|Especifica a senha da conta de serviço do SQL Server Agent.|  
@@ -541,9 +546,9 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **Opcional**|Especifica a configuração de agrupamento do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> Valor padrão: **Latin1_General_CI_AS**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de configuração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\<INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Config.<br /><br /> Para todas as outras instalações: %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\<INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Config.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\<INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Data.<br /><br /> Para todas as outras instalações: %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\<INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Data.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de log do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\ \<INSTANCEDIR>\\<IDInstânciaAS\>\OLAP\Log.<br /><br /> Para todas as outras instalações: %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\ \<INSTANCEDIR>\\<IDInstânciaAS\>\OLAP\Log.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de log do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\ <INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Log.<br /><br /> Para todas as outras instalações: %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\ <INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Log.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSYSADMINACCOUNTS<br /><br /> **Necessário**|Especifica as credenciais de administrador do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **Opcional**|Especifica o diretório de arquivos temporários do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\ \<INSTANCEDIR>\\<IDInstânciaAS\>\OLAP\Temp.<br /><br /> Para todas as outras instalações: %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\ \<INSTANCEDIR>\\<IDInstânciaAS\>\OLAP\Temp.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **Opcional**|Especifica o diretório de arquivos temporários do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\ <INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Temp.<br /><br /> Para todas as outras instalações: %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\ <INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Temp.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **Opcional**|Especifica se o provedor MSOLAP pode ser executado no processo.<br /><br /> Valor padrão: 1=habilitado|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **Opcional**|Especifica o modo de servidor da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Os valores válidos em um cenário de cluster são MULTIDIMENSIONAL ou TABULAR. **ASSERVERMODE** diferencia maiúsculas de minúsculas. Todos os valores devem ser expressos em maiúsculas. Para obter mais informações sobre os valores válidos, consulte Instalar o Analysis Services em modo Tabular.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **Necessário**|Especifica o diretório de dados dos arquivos de dados do SQL Server.<br /><br /> O diretório de dados deve ser especificado em um disco de cluster compartilhado.|  
@@ -556,12 +561,12 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **Necessário**|Use este parâmetro para provisionar logons para serem membros da função sysadmin.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de dados de bancos de dados do usuário.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **Opcional**|Especifica os diretórios para arquivos de dados tempdb. Ao especificar mais de um diretório, separe os diretórios com um espaço em branco. Se vários diretórios forem especificados, os arquivos de dados tempdb serão espalhados pelos diretórios de modo round robin.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> OBSERVAÇÃO: esse parâmetro também é adicionado ao cenário RebuildDatabase.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório para o arquivo de log tempdb.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> Observação: esse parâmetro também é adicionado ao cenário RebuildDatabase.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório para o arquivo de log tempdb.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> OBSERVAÇÃO: esse parâmetro também é adicionado ao cenário RebuildDatabase.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **Opcional**|Especifica o número de arquivos tempdb a ser adicionado pela configuração. Esse valor pode ser aumentado para o número de núcleos. Valor padrão:<br /><br /> 1 para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 ou o número de núcleos, o que for menor para todas as outras edições<br /><br /> **\*\* Importante \*\*** O arquivo de banco de dados primário para tempdb ainda será tempdb.mdf. Os arquivos tempdb adicionais são chamados de tempdb_mssql_#.ndf, em que # representa um número exclusivo para cada arquivo de banco de dados tempdb adicional criado durante a configuração. A finalidade dessa convenção de nomenclatura é torná-los exclusivos. Desinstalar uma instância do SQL Server exclui os arquivos com convenção de nomenclatura tempdb_mssql_#.ndf. Não use a convenção de nomenclatura tempdb_mssql_\*.ndf para arquivos de banco de dados de usuário.<br /><br /> **\*\* Aviso \*\***[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] não tem suporte para configuração desse parâmetro. O programa de instalação instala apenas 1 arquivo de dados tempdb.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Opcional**|Especifica o tamanho inicial de cada arquivo de dados tempdb em MB. A instalação permite o tamanho de até 256 MB. Valor padrão:<br /><br /> 4 para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 para todas as outras edições<br /><br /> Intervalo permitido: Mín. = valor padrão (4 ou 8), Máx. = 256|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Opcional**|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 256 MB.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: Mín. = 0, Máx. = 256|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Opcional**|Especifica o tamanho inicial do arquivo de log tempdb em MB. A instalação permite o tamanho de até 256 MB. <br /> Valor padrão:<br /><br /> 4 para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 para todas as outras edições<br /><br /> Intervalo permitido: Mín. = valor padrão (4 ou 8), Máx. = 256|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Opcional**|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 256 MB.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: Mín. = 0, Máx. = 256|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Opcional**|Introduzido no [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Especifica o tamanho inicial de cada arquivo de dados do tempdb.<br/><br/>Padrão = 8 MB.<br/><br/>Mín. = 8 MB.<br/><br/>Máx. = 1.024 MB (262.144 MB para o [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)]).|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Opcional**|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A configuração permite o tamanho de até 1024.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: mín. = 0, máx. = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Opcional**|Especifica o tamanho inicial do arquivo de log tempdb em MB. A configuração permite o tamanho de até 1024. <br /> Valor padrão:<br /><br /> 4 para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 para todas as outras edições<br /><br /> Intervalo permitido: Mín. = valor padrão (4 ou 8) e Máx. = 1.024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Opcional**|Introduzido no [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Especifica o tamanho inicial de cada arquivo de log do tempdb.<br/><br/>Padrão = 4 MB para o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e 8 MB para todas as outras edições.<br/><br/>Mín. = (4 ou 8 MB).<br/><br/>Máx. = 1.024 MB (262.144 MB para o [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)])|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de log de bancos de dados do usuário.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **Opcional**|Especifica o nível de acesso para o recurso FILESTREAM. Valores com suporte:<br /><br /> 0 =Desabilitar o suporte ao FILESTREAM desta instância. (Valor padrão)<br /><br /> 1=Habilitar FILESTREAM para o acesso de [!INCLUDE[tsql](../../includes/tsql-md.md)] .<br /><br /> 2=Habilitar FILESTREAM para o acesso de [!INCLUDE[tsql](../../includes/tsql-md.md)] e o acesso de fluxo de E/S de arquivo. (Inválido para cenários de cluster)<br /><br /> 3=Permitir que clientes remotos tenham acesso de streaming a dados FILESTREAM.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **Opcional**<br /><br /> **Necessário quando FILESTREAMLEVEL for maior do que 1.**|Especifica o nome do compartilhamento do Windows no qual os dados FILESTREAM serão armazenados.|  
@@ -575,20 +580,20 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Necessário](#Accounts)|Especifica a senha da conta de inicialização do serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
- É recomendável usar a SID do Serviço em vez de grupos de domínio.  
+ É recomendável usar a SID do Serviço em vez de grupos de domínio. 
   
 ##### <a name="additional-notes"></a>Observações adicionais:  
- O [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] são os únicos componentes com suporte a cluster. Os outros recursos não oferecem suporte a cluster e não têm alta disponibilidade por meio de failover.  
+ O [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] são os únicos componentes com suporte a cluster. Os outros recursos não oferecem suporte a cluster e não têm alta disponibilidade por meio de failover. 
   
 ###### <a name="sample-syntax"></a>Sintaxe de exemplo:  
- Para instalar uma instância de cluster de failover do SQL Server de nó único com o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a instância padrão.  
+ Para instalar uma instância de cluster de failover do SQL Server de nó único com o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a instância padrão. 
   
 ```  
 setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
 #### <a name="prepare-failover-cluster-parameters"></a>Parâmetros de preparação de cluster de failover  
- Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a preparação do cluster de failover. Essa é a primeira etapa da instalação avançada de cluster, na qual você deve preparar as instâncias de cluster de failover em todos os nós do cluster de failover. Para obter mais informações, consulte [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+ Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a preparação do cluster de failover. Essa é a primeira etapa da instalação avançada de cluster, na qual você deve preparar as instâncias de cluster de failover em todos os nós do cluster de failover. Para obter mais informações, consulte [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
 |Componente do SQL Server|Parâmetro|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -606,7 +611,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |Controle de instalação do SQL Server|/INSTALLSHAREDWOWDIR<br /><br /> **Opcional**|Especifica um diretório de instalação não padrão para componentes compartilhados de 32 bits. Com suporte apenas em sistemas de 64 bits.<br /><br /> O padrão é %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server<br /><br /> Não é possível definir como %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server|  
 |Controle de instalação do SQL Server|/INSTANCEDIR<br /><br /> **Opcional**|Especifica um diretório de instalação não padrão para componentes específicos à instância.|  
 |Controle de instalação do SQL Server|/INSTANCEID<br /><br /> **Opcional**|Especifica um valor não padrão para uma [InstanceID](#InstanceID).|  
-|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](../Topic/Instance%20Configuration.md).|  
+|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **Opcional**|Especifica a conta do serviço de mecanismo. O padrão é **NT Authority\NETWORK SERVICE**.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Opcional**|Especifica a senha da conta de serviço de mecanismo.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de inicialização do serviço de mecanismo PolyBase: Automático (padrão), Desabilitado e Manual.|  
@@ -635,10 +640,10 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Necessário](#Accounts)|Especifica a senha da conta de inicialização do serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
- É recomendável usar a SID do Serviço em vez de grupos de domínio.  
+ É recomendável usar a SID do Serviço em vez de grupos de domínio. 
   
 ###### <a name="sample-syntax"></a>Sintaxe de exemplo:  
- Para executar a etapa de "Preparação" de um cenário de instalação avançada de cluster de failover para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Para executar a etapa de "Preparação" de um cenário de instalação avançada de cluster de failover para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 
   
  No prompt de comando, execute o seguinte comando para preparar uma instância padrão:  
   
@@ -653,7 +658,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 ```  
   
 #### <a name="complete-failover-cluster-parameters"></a>Parâmetros de conclusão de cluster de failover  
- Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a conclusão do cluster de failover. Esta é a segunda etapa na opção de instalação avançada de cluster de failover. Depois de executar a preparação em todos os nós de cluster de failover, execute esse comando no nó que possui os discos compartilhados. Para obter mais informações, consulte [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+ Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a conclusão do cluster de failover. Esta é a segunda etapa na opção de instalação avançada de cluster de failover. Depois de executar a preparação em todos os nós de cluster de failover, execute esse comando no nó que possui os discos compartilhados. Para obter mais informações, consulte [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
 |Componente do SQL Server|Parâmetro|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -664,24 +669,24 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |Controle de instalação do SQL Server|/ERRORREPORTING<br /><br /> **Opcional**|Não tem efeito no SQL Server 2016. <br/><br/>Para gerenciar como os comentários de erro são enviados à Microsoft, veja [Como configurar o SQL Server 2016 para enviar comentários à Microsoft](http://support.microsoft.com/kb/3153756). <br/><br/>Em versões mais antigas, isso especifica o relatório de erros do SQL Server.<br /><br /> Para obter mais informações, consulte a [Política de Privacidade do Serviço de Relatório de Erros da Microsoft](http://go.microsoft.com/fwlink/?LinkID=72173). Valores com suporte:<br /><br /> 1=habilitado<br /><br /> 0=desabilitado|  
 |Controle de instalação do SQL Server|/HELP, H, ?<br /><br /> **Opcional**|Exibe as opções de uso dos parâmetros.|  
 |Controle de instalação do SQL Server|/INDICATEPROGRESS<br /><br /> **Opcional**|Especifica que o arquivo de log de Instalação detalhado será conectado ao console.|  
-|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](../Topic/Instance%20Configuration.md).|  
+|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |Controle de instalação do SQL Server|/PID<br /><br /> **Opcional**|Especifica a chave do produto (Product Key) da edição do SQL Server. Se esse parâmetro não for especificado, a versão Evaluation será usada.|  
 |Controle de instalação do SQL Server|/Q<br /><br /> **Opcional**|Especifica que a Instalação é executada em modo silencioso sem nenhuma interface do usuário. Isso é usado para instalações autônomas.|  
 |Controle de instalação do SQL Server|/QS<br /><br /> **Opcional**|Especifica que a Instalação é executada e mostra o andamento por meio da interface do usuário, mas não aceita nenhuma entrada nem mostra nenhuma mensagem de erro.|  
 |Controle de instalação do SQL Server|/SQMREPORTING<br /><br /> **Opcional**|Não tem efeito no SQL Server 2016. <br/><br/>Para gerenciar como os comentários de erro são enviados à Microsoft, veja [Como configurar o SQL Server 2016 para enviar comentários à Microsoft](http://support.microsoft.com/kb/3153756). <br/><br/>Em versões mais antigas, isso especifica o relatório de uso do recurso do SQL Server.<br /><br />Valores com suporte:<br /><br /> 1=habilitado<br /><br /> 0=desabilitado|  
 |Controle de instalação do SQL Server|/HIDECONSOLE<br /><br /> **Opcional**|Especifica se a janela do console é ocultada ou fechada.|  
 |Controle de instalação do SQL Server|/FAILOVERCLUSTERDISKS<br /><br /> **Opcional**|Especifica a lista de discos compartilhados a serem incluídos no grupo de recursos de cluster de failover do SQL Server.<br /><br /> Valor padrão:<br /><br /> A primeira unidade é usada como a unidade padrão para todos os bancos de dados.|  
-|Controle de instalação do SQL Server|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **Necessário**|Especifica um endereço IP codificado. As codificações são separados por ponto-e-vírgula (;) e seguem o formato \<Tipo de IP>;\<endereço>;\<nome da rede>;\<máscara de sub-rede>. Os tipos IP com suporte incluem DHCP, IPv4 e IPv6.<br />Você pode especificar vários endereços IP de cluster de failover com um espaço entre eles. Consulte os exemplos a seguir:<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1|  
+|Controle de instalação do SQL Server|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **Necessário**|Especifica um endereço IP codificado. As codificações são separadas por ponto-e-vírgula (;) e seguem o formato \<IP Type>;\<address>;\<network name>;\<subnet mask>. Os tipos IP com suporte incluem DHCP, IPv4 e IPv6.<br />Você pode especificar vários endereços IP de cluster de failover com um espaço entre eles. Consulte os exemplos a seguir:<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1|  
 |Controle de instalação do SQL Server|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **Necessário**|Especifica o nome de rede da nova instância do cluster de failover do SQL Server. Esse nome é usado para identificar a nova instância de cluster de failover do SQL Server na rede.|  
 |Controle de instalação do SQL Server|/CONFIRMIPDEPENDENCYCHANGE|Indica o consentimento para definir a dependência de recurso de endereço IP como OR para clusters de failover de várias sub-redes. Para obter mais informações, consulte [Criar um novo cluster de failover do SQL Server &#40;Instalação&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md). Valores com suporte:<br /><br /> 0 = False (padrão)<br /><br /> 1 = True|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de backup do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\<INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Backup.<br /><br /> Para todas as outras instalações: %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\<INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Backup.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **Opcional**|Especifica a configuração de agrupamento do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> Valor padrão: **Latin1_General_CI_AS**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de configuração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\<INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Config.<br /><br /> Para todas as outras instalações: %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\<INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Config.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\<INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Data.<br /><br /> Para todas as outras instalações: %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\\<INSTANCEDIR\>\\<IDInstânciaAS\>\OLAP\Data.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de log do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\ \<INSTANCEDIR>\\<IDInstânciaAS\>\OLAP\Log.<br /><br /> Para todas as outras instalações: %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\ \<INSTANCEDIR>\\<IDInstânciaAS\>\OLAP\Log.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de log do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Program Files(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\ \<INSTANCEDIR>\\<ASInstanceID\>\OLAP\Log.<br /><br /> Para todas as outras instalações: %Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\ \<INSTANCEDIR>\\<ASInstanceID\>\OLAP\Log.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **Opcional**|Especifica o modo de servidor da instância do Analysis Services. Os valores válidos em um cenário de cluster são MULTIDIMENSIONAL ou TABULAR. **ASSERVERMODE** diferencia maiúsculas de minúsculas. Todos os valores devem ser expressos em maiúsculas. Para obter mais informações sobre os valores válidos, consulte Instalar o Analysis Services em modo Tabular.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSYSADMINACCOUNTS<br /><br /> **Necessário**|Especifica as credenciais de administrador do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **Opcional**|Especifica o diretório para arquivos temporários do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Arquivos de Programas(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\ \<INSTANCEDIR>\\<IDInstânciaAS\>\OLAP\Temp.<br /><br /> Para todas as outras instalações: %Arquivos de Programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\ \<INSTANCEDIR>\\<IDInstânciaAS\>\OLAP\Temp.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **Opcional**|Especifica o diretório para arquivos temporários do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits: %Program Files(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\ \<INSTANCEDIR>\\<ASInstanceID\>\OLAP\Temp.<br /><br /> Para todas as outras instalações: %Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]SQL Server\ \<INSTANCEDIR>\\<ASInstanceID\>\OLAP\Temp.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **Opcional**|Especifica se o provedor MSOLAP pode ser executado no processo.<br /><br /> Valor padrão: 1=habilitado|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **Necessário**|Especifica o diretório de dados dos arquivos de dados do SQL Server.<br /><br /> O diretório de dados deve ser especificado em um disco de cluster compartilhado.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **Necessário quando /SECURITYMODE=SQL**|Especifica a senha da conta do SQL Server.|  
@@ -693,15 +698,15 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de log de bancos de dados do usuário.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **Disponível no modo Somente arquivos.**|Especifica o modo de Instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **Opcional**|Especifica os diretórios para arquivos de dados tempdb. Ao especificar mais de um diretório, separe os diretórios com um espaço em branco. Se vários diretórios forem especificados, os arquivos de dados tempdb serão espalhados pelos diretórios de modo round robin.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> OBSERVAÇÃO: esse parâmetro também é adicionado ao cenário RebuildDatabase.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório para o arquivo de log tempdb.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> Observação: esse parâmetro também é adicionado ao cenário RebuildDatabase.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório para o arquivo de log tempdb.<br /><br /> Valor padrão: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> OBSERVAÇÃO: esse parâmetro também é adicionado ao cenário RebuildDatabase.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **Opcional**|Especifica o número de arquivos tempdb a ser adicionado pela configuração. Esse valor pode ser aumentado para o número de núcleos. Valor padrão:<br /><br /> 1 para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 ou o número de núcleos, o que for menor para todas as outras edições.<br /><br /> **\*\* Importante \*\*** O arquivo de banco de dados primário para tempdb ainda será tempdb.mdf. Os arquivos tempdb adicionais são chamados de tempdb_mssql_#.ndf, em que # representa um número exclusivo para cada arquivo de banco de dados tempdb adicional criado durante a configuração. A finalidade dessa convenção de nomenclatura é torná-los exclusivos. Desinstalar uma instância do SQL Server exclui os arquivos com convenção de nomenclatura tempdb_mssql_#.ndf. Não use a convenção de nomenclatura tempdb_mssql_\*.ndf para arquivos de banco de dados de usuário.<br /><br /> **\*\* Aviso \*\***[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] não tem suporte para configuração desse parâmetro. O programa de instalação instala apenas 1 arquivo de dados tempdb.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Opcional**|Especifica o tamanho inicial de cada arquivo de dados tempdb em MB. A instalação permite o tamanho de até 256 MB. Valor padrão:<br /><br /> 4 para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 para todas as outras edições<br /><br /> Intervalo permitido: Mín. = valor padrão (4 ou 8), Máx. = 256|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Opcional**|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 256 MB.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: Mín. = 0, Máx. = 256|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Opcional**|Especifica o tamanho inicial do arquivo de log tempdb em MB. A instalação permite o tamanho de até 256 MB. <br /> Valor padrão:<br /><br /> 4 para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 para todas as outras edições<br /><br /> Intervalo permitido: Mín. = valor padrão (4 ou 8), Máx. = 256|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Opcional**|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 256 MB.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: Mín. = 0, Máx. = 256|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Opcional**|Introduzido no [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Especifica o tamanho inicial de cada arquivo de dados do tempdb.<br/><br/>Padrão = 8 MB.<br/><br/>Mín. = 8 MB.<br/><br/>Máx. = 1.024 MB (262.144 MB para o [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)]).|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Opcional**|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A configuração permite o tamanho de até 1024.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: mín. = 0, máx. = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Opcional**|Especifica o tamanho inicial do arquivo de log tempdb em MB. A configuração permite o tamanho de até 1024. <br /> Valor padrão:<br /><br /> 4 para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 para todas as outras edições<br /><br /> Intervalo permitido: Mín. = valor padrão (4 ou 8) e Máx. = 1.024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Opcional**|Introduzido no [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Especifica o tamanho inicial de cada arquivo de log do tempdb.<br/><br/>Padrão = 4 MB para o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e 8 MB para todas as outras edições.<br/><br/>Mín. = (4 ou 8 MB).<br/><br/>Máx. = 1.024 MB (262.144 MB para o [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)])|  
   
 ###### <a name="sample-syntax"></a>Sintaxe de exemplo:  
- Para executar a etapa de "Conclusão" de um cenário de instalação avançada de cluster de failover para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Execute o comando a seguir no computador que será o nó ativo no cluster de failover para torná-lo utilizável. Você deve executar a ação "CompleteFailoverCluster" no nó que possui o disco compartilhado no cluster de failover do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+ Para executar a etapa de "Conclusão" de um cenário de instalação avançada de cluster de failover para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Execute o comando a seguir no computador que será o nó ativo no cluster de failover para torná-lo utilizável. Você deve executar a ação "CompleteFailoverCluster" no nó que possui o disco compartilhado no cluster de failover do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . 
   
  No prompt de comando, execute o comando a seguir para concluir a instalação do cluster de failover para uma instância padrão:  
   
@@ -716,7 +721,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 ```  
   
 #### <a name="upgrade-failover-cluster-parameters"></a>Parâmetros de atualização de cluster de failover  
- Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a atualização de cluster de failover. Para obter mais informações, consulte [Atualizar uma instância de cluster de failover do SQL Server &#40;Instalação&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) e [Instâncias de cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+ Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a atualização de cluster de failover. Para obter mais informações, consulte [Atualizar uma instância de cluster de failover do SQL Server &#40;Instalação&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) e [Instâncias de cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
 |Componente do SQL Server|Parâmetro|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -731,7 +736,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |Controle de instalação do SQL Server|/INDICATEPROGRESS<br /><br /> **Opcional**|Especifica que o arquivo de log de Instalação detalhado será conectado ao console.|  
 |Controle de instalação do SQL Server|/ INSTANCEDIR<br /><br /> **Opcional**|Especifica um diretório de instalação não padrão para componentes compartilhados.|  
 |Controle de instalação do SQL Server|/INSTANCEID<br /><br /> **Necessário ao atualizar do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou superior.**<br /><br /> **Opcional ao atualizar do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]**|Especifica um valor não padrão para uma [InstanceID](#InstanceID).|  
-|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](../Topic/Instance%20Configuration.md).|  
+|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |Controle de instalação do SQL Server|/PID<br /><br /> **Opcional**|Especifica a chave do produto (Product Key) da edição do SQL Server. Se esse parâmetro não for especificado, a versão Evaluation será usada.|  
 |Controle de instalação do SQL Server|/Q<br /><br /> **Opcional**|Especifica que a Instalação é executada em modo silencioso sem nenhuma interface do usuário. Isso é usado para instalações autônomas.|  
 |Controle de instalação do SQL Server|/SQMREPORTING<br /><br /> **Opcional**|Não tem efeito no SQL Server 2016. Em versões mais antigas, isso especifica o relatório de uso do recurso do SQL Server.<br /><br />Valores com suporte:<br /><br /> 0=desabilitado<br /><br /> 1=habilitado|  
@@ -745,8 +750,8 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEDATABASEACCOUNT<br /><br /> **Opcional**|A propriedade só é usada ao atualizar um servidor de relatório no modo SharePoint que seja da versão 2008 R2 ou anterior. As demais operações de atualização são executadas para servidores de relatório que usam a arquitetura mais antiga do modo do SharePoint, que foi modificada no SQL Server 2012 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se essa opção não estiver incluída com a instalação de linha de comando, o serviço de conta padrão para a instância do servidor de relatório antigo será usado. Se esta propriedade for usada, forneça a senha para a conta usando a propriedade **/RSUPGRADEPASSWORD** .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEPASSWORD<br /><br /> **Opcional**|Senha da conta de serviço do Servidor de Relatórios existente.|  
   
-####  <a name="a-nameaddnodea-add-node-parameters"></a><a name="AddNode"></a> Parâmetros de adição de nó  
- Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para AddNode.  
+####  <a name="AddNode"></a> Parâmetros de adição de nó  
+ Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para AddNode. 
   
 |Componente do SQL Server|Parâmetro|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -758,7 +763,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |Controle de instalação do SQL Server|/CONFIGURATIONFILE<br /><br /> **Opcional**|Especifica o [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) a ser usado.|  
 |Controle de instalação do SQL Server|/HELP, H, ?<br /><br /> **Opcional**|Exibe as opções de uso dos parâmetros.|  
 |Controle de instalação do SQL Server|/INDICATEPROGRESS<br /><br /> **Opcional**|Especifica que o arquivo de log de Instalação detalhado será conectado ao console.|  
-|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](../Topic/Instance%20Configuration.md).|  
+|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **Opcional**|Especifica a conta do serviço de mecanismo. O padrão é **NT Authority\NETWORK SERVICE**.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Opcional**|Especifica a senha da conta de serviço de mecanismo.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de inicialização do serviço de mecanismo PolyBase: Automático (padrão), Desabilitado e Manual.|  
@@ -768,7 +773,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |Controle de instalação do SQL Server|/Q<br /><br /> **Opcional**|Especifica que a Instalação é executada em modo silencioso sem nenhuma interface do usuário. Isso é usado para instalações autônomas.|  
 |Controle de instalação do SQL Server|/QS<br /><br /> **Opcional**|Especifica que a Instalação é executada e mostra o andamento por meio da interface do usuário, mas não aceita nenhuma entrada nem mostra nenhuma mensagem de erro.|  
 |Controle de instalação do SQL Server|/HIDECONSOLE<br /><br /> **Opcional**|Especifica se a janela do console é ocultada ou fechada.|  
-|Controle de instalação do SQL Server|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **Necessário**|Especifica um endereço IP codificado. As codificações são separados por ponto-e-vírgula (;) e seguem o formato \<Tipo de IP>;\<endereço>;\<nome da rede>;\<máscara de sub-rede>. Os tipos IP com suporte incluem DHCP, IPv4 e IPv6.<br />Você pode especificar vários endereços IP de cluster de failover com um espaço entre eles. Consulte os exemplos a seguir:<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1<br /><br /> <br /><br /> Para obter mais informações, consulte [Adicionar ou remover nós em um cluster de failover do SQL Server &#40;Instalação&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).|  
+|Controle de instalação do SQL Server|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **Necessário**|Especifica um endereço IP codificado. As codificações são separadas por ponto-e-vírgula (;) e seguem o formato \<IP Type>;\<address>;\<network name>;\<subnet mask>. Os tipos IP com suporte incluem DHCP, IPv4 e IPv6.<br />Você pode especificar vários endereços IP de cluster de failover com um espaço entre eles. Consulte os exemplos a seguir:<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1<br /><br /> <br /><br /> Para obter mais informações, consulte [Adicionar ou remover nós em um cluster de failover do SQL Server &#40;Instalação&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).|  
 |Controle de instalação do SQL Server|/CONFIRMIPDEPENDENCYCHANGE<br /><br /> **Necessário**|Indica o consentimento para definir a dependência de recurso de endereço IP como OR para clusters de failover de várias sub-redes. Para obter mais informações, consulte [Adicionar ou remover nós em um cluster de failover do SQL Server &#40;Instalação&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). Valores com suporte:<br /><br /> 0 = False (padrão)<br /><br /> 1 = True|  
 |SQL Server Agent|/AGTSVCACCOUNT<br /><br /> **Necessário**|Especifica a conta para o serviço do SQL Server Agent.|  
 |SQL Server Agent|/AGTSVCPASSWORD<br /><br /> [Necessário](#Accounts)|Especifica a senha da conta de serviço do SQL Server Agent.|  
@@ -781,17 +786,17 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Necessário](#Accounts)|Especifica a senha da conta de inicialização do serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
   
 ##### <a name="additional-notes"></a>Observações adicionais:  
- O [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] são os únicos componentes com suporte a cluster. Os outros recursos não oferecem suporte a cluster e não têm alta disponibilidade por meio de failover.  
+ O [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] são os únicos componentes com suporte a cluster. Os outros recursos não oferecem suporte a cluster e não têm alta disponibilidade por meio de failover. 
   
 ###### <a name="sample-syntax"></a>Sintaxe de exemplo:  
- Para adicionar um nó a uma instância de cluster de failover existente com o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Para adicionar um nó a uma instância de cluster de failover existente com o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 
   
 ```  
 setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOUNT="<SQL account that is used on other nodes>" /SQLSVCPASSWORD="<password for SQL account>" /AGTSVCACCOUNT="<SQL Server Agent account that is used on other nodes>", /AGTSVCPASSWORD="<SQL Server Agent account password>" /ASSVCACCOUNT="<AS account that is used on other nodes>" /ASSVCPASSWORD=”<password for AS account>” /INDICATEPROGRESS /IACCEPTSQLSERVERLICENSETERMS /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;ClusterNetwork1;xxx.xxx.xxx.x" /CONFIRMIPDEPENDENCYCHANGE=0  
 ```  
   
 #### <a name="remove-node-parameters"></a>Parâmetros de remoção de nó  
- Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para RemoveNode. Para desinstalar um cluster de failover, execute RemoveNode em cada nó de cluster de failover. Para obter mais informações, consulte [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+ Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para RemoveNode. Para desinstalar um cluster de failover, execute RemoveNode em cada nó de cluster de failover. Para obter mais informações, consulte [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
 |Componente do SQL Server|Parâmetro|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -799,25 +804,25 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 |Controle de instalação do SQL Server|/CONFIGURATIONFILE<br /><br /> **Opcional**|Especifica o [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) a ser usado.|  
 |Controle de instalação do SQL Server|/HELP, H, ?<br /><br /> **Opcional**|Exibe as opções de uso dos parâmetros.|  
 |Controle de instalação do SQL Server|/INDICATEPROGRESS<br /><br /> **Opcional**|Especifica que o arquivo de log de Instalação detalhado será conectado ao console.|  
-|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](../Topic/Instance%20Configuration.md).|  
+|Controle de instalação do SQL Server|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome da instância do SQL Server.<br /><br /> Para obter mais informações, consulte [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).|  
 |Controle de instalação do SQL Server|/Q<br /><br /> **Opcional**|Especifica que a Instalação é executada em modo silencioso sem nenhuma interface do usuário. Isso é usado para instalações autônomas.|  
 |Controle de instalação do SQL Server|/QS<br /><br /> **Opcional**|Especifica que a Instalação é executada e mostra o andamento por meio da interface do usuário, mas não aceita nenhuma entrada nem mostra nenhuma mensagem de erro.|  
 |Controle de instalação do SQL Server|/HIDECONSOLE<br /><br /> **Opcional**|Especifica se a janela do console é ocultada ou fechada.|  
 |Controle de instalação do SQL Server|/CONFIRMIPDEPENDENCYCHANGE<br /><br /> **Necessário**|Indica o consentimento para alterar a definição da dependência de recurso de endereço IP de OR para AND para clusters de failover de várias sub-redes. Para obter mais informações, consulte [Adicionar ou remover nós em um cluster de failover do SQL Server &#40;Instalação&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). Valores com suporte:<br /><br /> 0 = False (padrão)<br /><br /> 1 = True|  
   
 ###### <a name="sample-syntax"></a>Sintaxe de exemplo:  
- Para remover um nó de uma instância de cluster de failover existente com o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Para remover um nó de uma instância de cluster de failover existente com o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 
   
 ```  
 setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICATEPROGRESS] /CONFIRMIPDEPENDENCYCHANGE=0  
 ```  
   
-##  <a name="a-nameaccountsa-service-account-parameters"></a><a name="Accounts"></a> Parâmetros de conta de serviço  
- É possível configurar os serviços do SQL Server com uma conta interna, uma conta local ou uma conta de domínio.  
+##  <a name="Accounts"></a> Parâmetros de conta de serviço  
+ É possível configurar os serviços do SQL Server com uma conta interna, uma conta local ou uma conta de domínio. 
   
-> **OBSERVAÇÃO:** ao usar uma conta de serviço gerenciado, conta virtual ou uma conta interna, você não deve especificar os parâmetros de senha correspondentes. Para obter mais informações sobre estas contas de serviço, consulte a seção **Novos tipos de conta disponíveis com o [!INCLUDE[win7](../../includes/win7-md.md)] e [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]** em [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+> **OBSERVAÇÃO:** ao usar uma conta de serviço gerenciado, conta virtual ou uma conta interna, você não deve especificar os parâmetros de senha correspondentes. Para obter mais informações sobre estas contas de serviço, consulte a seção **Novos tipos de conta disponíveis com o [!INCLUDE[win7](../../includes/win7-md.md)] e [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]** em [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). 
   
- Para obter mais informações sobre configuração de contas de serviço, consulte [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Para obter mais informações sobre configuração de contas de serviço, consulte [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). 
   
 |Componente do SQL Server|Parâmetro de conta|Parâmetro de senha|Tipo de inicialização|  
 |-----------------------------------------|-----------------------|------------------------|------------------|  
@@ -827,16 +832,16 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT|/ISSVCPASSWORD|/ISSVCStartupType|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT|/RSSVCPASSWORD|/RSSVCStartupType|  
   
-##  <a name="a-namefeaturea-feature-parameters"></a><a name="Feature"></a> Parâmetros de recursos  
- Para instalar recursos específicos, use o parâmetro /FEATURES e especifique o recurso pai ou os valores de recursos listados na tabela a seguir. Para obter uma lista de recursos com suporte nas edições do SQL Server, consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+##  <a name="Feature"></a> Parâmetros de funcionalidades  
+ Para instalar recursos específicos, use o parâmetro /FEATURES e especifique o recurso pai ou os valores de recursos listados na tabela a seguir. Para obter uma lista de recursos com suporte nas edições do SQL Server, consulte [Edições e recursos com suporte do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). 
   
-|Parâmetro de recurso pai|Parâmetro de recurso|Descrição|  
+|Parâmetro de recurso pai|Parâmetro de recurso|Description|  
 |:---|:---|:---|  
 |SQL||Instala o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], a Replicação, o Texto Completo e o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].|  
 ||SQLEngine|Instala apenas o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 ||Replicação|Instala o componente Replicação juntamente com o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 ||FullText|Instala o componente FullText com o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
-||DQ|Copia os arquivos necessários para concluir a instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Depois de concluir a instalação do SQL Server, execute o arquivo DQSInstaller.exe para concluir a instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. Para obter mais informações, consulte [Executar o DQSInstaller.exe para concluir a instalação do Data Quality Server](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md). O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] também é instalado.|  
+||DQ|Copia os arquivos necessários para concluir a instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Depois de concluir a instalação do SQL Server, execute o arquivo DQSInstaller.exe para concluir a instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Para obter mais informações, consulte [Executar o DQSInstaller.exe para concluir a instalação do Data Quality Server](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md). O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]também é instalado.|  
 ||PolyBase|Instala componentes do PolyBase.|  
 ||AdvancedAnalytics|Instala o R Services (no banco de dados).|  
 |AS||Instala todos os componentes do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
@@ -847,7 +852,6 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |SQL_SHARED_MR||Instala o Microsoft R Server.|  
 |Ferramentas*||Instala ferramentas de cliente e componentes dos Manuais Online do SQL Server.|  
 ||BC|Instala componentes de compatibilidade com versões anteriores.|  
-||BOL|Instala componentes de Manuais Online do SQL Server para exibir e gerenciar o conteúdo da ajuda.|
 ||Conn|Instala os componentes de conectividade.|
 ||DREPLAY_CTLR|Instala o Distributed Replay Controller|  
 ||DREPLAY_CLT|Instala o Distributed Replay Client|  
@@ -857,7 +861,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 
 *O SSMS (Ferramentas de Gerenciamento do SQL Server) agora está em um instalador autônomo separado do instalador do SQL Server. Para obter detalhes, consulte [Instalar o SQL Server Management Studio a partir da linha de comando](https://msdn.microsoft.com/library/bb500441.aspx#Anchor_1).
 
- **O LocalDB é uma opção na instalação de qualquer SKU do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Express. Para saber mais, consulte [SQL Server 2016 Express LocalDB](../../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
+ **O LocalDB é uma opção na instalação de qualquer SKU do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Express. Para saber mais, consulte [SQL Server 2016 Express LocalDB](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). 
   
 ### <a name="feature-parameter-examples"></a>Exemplos de parâmetros de recursos:  
   
@@ -867,38 +871,38 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=SQLEngine, FullText|Instala o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o texto completo.|  
 |/FEATURES=SQL, Tools|Instala o [!INCLUDE[ssDE](../../includes/ssde-md.md)] completo e todas as ferramentas.|  
 |/FEATURES=BOL|Instala componentes de Manuais Online do SQL Server para exibir e gerenciar o conteúdo da ajuda.|  
-|/FEATURES=SQLEngine, PolBase|Instala o mecanismo PolyBase.|  
+|/FEATURES=SQLEngine, PolyBase|Instala o mecanismo PolyBase.|  
   
-##  <a name="a-nameroleparametersa-role-parameters"></a><a name="RoleParameters"></a> Parâmetros de função  
- A função de instalação ou o parâmetro /Role é usado para instalar uma seleção pré-configurada de recursos. As funções do [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] instalam uma instância do [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] em um farm existente do SharePoint ou em um novo farm não configurado. São fornecidas duas funções de instalação para dar suporte a cada cenário. Você pode escolher somente uma função de instalação para instalar de cada vez. Se você escolher uma função de instalação, serão instalados os recursos e os componentes que pertencem à função. Você não pode variar os recursos e os componentes que são designados para aquela função. Para saber mais sobre como usar o parâmetro da função de recurso, consulte [Instalar o Power Pivot no Prompt de Comando](http://msdn.microsoft.com/pt-br/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328).  
+##  <a name="RoleParameters"></a> Parâmetros de função  
+ A função de instalação ou o parâmetro /Role é usado para instalar uma seleção pré-configurada de recursos. As funções do [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] instalam uma instância do [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] em um farm existente do SharePoint ou em um novo farm não configurado. São fornecidas duas funções de instalação para dar suporte a cada cenário. Você pode escolher somente uma função de instalação para instalar de cada vez. Se você escolher uma função de instalação, serão instalados os recursos e os componentes que pertencem à função. Você não pode variar os recursos e os componentes que são designados para aquela função. Para saber mais sobre como usar o parâmetro da função de recurso, consulte [Instalar o Power Pivot no Prompt de Comando](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328). 
   
- A função AllFeatures_WithDefaults é o comportamento padrão de edições do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e reduz o número de caixas de diálogo apresentadas ao usuário. Ela pode ser especificada na linha de comando ao instalar uma edição do SQL Server que não seja o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
+ A função AllFeatures_WithDefaults é o comportamento padrão de edições do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e reduz o número de caixas de diálogo apresentadas ao usuário. Ela pode ser especificada na linha de comando ao instalar uma edição do SQL Server que não seja o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
   
-|Função|Descrição|Instala…|  
+|Função|Description|Instala…|  
 |----------|-----------------|---------------|  
-|SPI_AS_ExistingFarm|Instala o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um farm existente do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ou em um servidor autônomo.|Mecanismo de cálculo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pré-configurado para o armazenamento e o processamento de dados na memória.<br /><br /> Pacotes de solução do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Programa instalador do [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> Manuais Online do SQL Server|  
-|SPI_AS_NewFarm|Instala o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e o [!INCLUDE[ssDE](../../includes/ssde-md.md)] como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um novo farm não configurado do Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ou em um servidor autônomo. A Instalação do SQL Server configurará o farm durante a instalação da função de recurso.|Mecanismo de cálculo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pré-configurado para o armazenamento e o processamento de dados na memória.<br /><br /> Pacotes de solução do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Manuais Online do SQL Server<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> Ferramentas de configuração<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
-|AllFeatures_WithDefaults|Instala todos os recursos que estão disponíveis com a edição atual.<br /><br /> Adiciona o usuário atual à função de servidor fixa **sysadmin** do SQL Server.<br /><br /> No [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ou posterior e quando o sistema operacional não é controlador de domínios, o [!INCLUDE[ssDE](../../includes/ssde-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são padronizados para usar a conta NTAUTHORITY\NETWORK SERVICE e o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é padronizado para usar a conta NTAUTHORITY\NETWORK SERVICE.<br /><br /> Essa função é habilitada por padrão em edições do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Para todas as outras edições, essa função não é habilitada, mas pode ser especificada por meio da interface do usuário ou de parâmetros de linha de comando.|Em edições do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], instala somente os recursos disponíveis na edição. Nas outras edições, instala todos os recursos do SQL Server.<br /><br /> O parâmetro **AllFeatures_WithDefaults** pode ser combinado com outros parâmetros que substituem as configurações de parâmetro **AllFeatures_WithDefaults**. Por exemplo, o uso do parâmetro **AllFeatures_WithDefaults** e do parâmetro **/Features=RS** substitui o comando para instalar todos os recursos e instala apenas o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], mas obriga o parâmetro **AllFeatures_WithDefaults** a usar a conta de serviço padrão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> Ao usar o parâmetro **AllFeatures_WithDefaults** junto com **/ADDCURRENTUSERASSQLADMIN=FALSE**, a caixa de diálogo de provisionamento não será preenchida automaticamente com o usuário atual. Adicione **/AGTSVCACCOUNT** e **/AGTSVCPASSWORD** para especificar uma conta de serviço e uma senha para o SQL Server Agent.|  
+|SPI_AS_ExistingFarm|Instala o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um farm existente do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ou em um servidor autônomo.|Mecanismo de cálculo do[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pré-configurado para o armazenamento e o processamento de dados na memória.<br /><br /> Pacotes de solução do[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] <br /><br /> Programa instalador do [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> Manuais Online do SQL Server|  
+|SPI_AS_NewFarm|Instala o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e o [!INCLUDE[ssDE](../../includes/ssde-md.md)] como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um novo farm não configurado do Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ou em um servidor autônomo. A Instalação do SQL Server configurará o farm durante a instalação da função de recurso.|Mecanismo de cálculo do[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pré-configurado para o armazenamento e o processamento de dados na memória.<br /><br /> Pacotes de solução do[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] <br /><br /> Manuais Online do SQL Server<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> Ferramentas de configuração<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
+|AllFeatures_WithDefaults|Instala todos os recursos que estão disponíveis com a edição atual.<br /><br /> Adiciona o usuário atual à função de servidor fixa **sysadmin** do SQL Server.<br /><br /> No [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ou posterior e quando o sistema operacional não é controlador de domínios, o [!INCLUDE[ssDE](../../includes/ssde-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são padronizados para usar a conta NTAUTHORITY\NETWORK SERVICE e o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é padronizado para usar a conta NTAUTHORITY\NETWORK SERVICE.<br /><br /> Essa função é habilitada por padrão em edições do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Para todas as outras edições, essa função não é habilitada, mas pode ser especificada por meio da interface do usuário ou de parâmetros de linha de comando.|Em edições do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], instala somente os recursos disponíveis na edição. Nas outras edições, instala todos os recursos do SQL Server.<br /><br /> O parâmetro **AllFeatures_WithDefaults** pode ser combinado com outros parâmetros que substituem as configurações de parâmetro **AllFeatures_WithDefaults** . Por exemplo, o uso do parâmetro **AllFeatures_WithDefaults** e do parâmetro **/Features=RS** substitui o comando para instalar todos os recursos e instala apenas o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], mas obriga o parâmetro **AllFeatures_WithDefaults** a usar a conta de serviço padrão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> Ao usar o parâmetro **AllFeatures_WithDefaults** junto com **/ADDCURRENTUSERASSQLADMIN=FALSE** , a caixa de diálogo de provisionamento não será preenchida automaticamente com o usuário atual. Adicione **/AGTSVCACCOUNT** e **/AGTSVCPASSWORD** para especificar uma conta de serviço e uma senha para o SQL Server Agent.|  
   
-##  <a name="a-namerollownershipa-controlling-failover-behavior-using-the-failoverclusterrollownership-parameter"></a><a name="RollOwnership"></a> Controlando o comportamento de Failover com o parâmetro /FAILOVERCLUSTERROLLOWNERSHIP  
- Para atualizar um cluster de failover do SQL Server para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você deve executar a Instalação em um nó de cluster de failover de cada vez, começando com os nós passivos. A Instalação determina quando executar o failover para o nó atualizado, dependendo do número total de nós na instância de cluster de failover e do número de nós que já foram atualizados. Quando metade ou mais da metade dos nós já tiver sido atualizada, por padrão, a Instalação provocará um failover em um nó atualizado.  
+##  <a name="RollOwnership"></a> Controlando o comportamento de failover com o parâmetro /FAILOVERCLUSTERROLLOWNERSHIP  
+ Para atualizar um cluster de failover do SQL Server para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você deve executar a Instalação em um nó de cluster de failover de cada vez, começando com os nós passivos. A Instalação determina quando executar o failover para o nó atualizado, dependendo do número total de nós na instância de cluster de failover e do número de nós que já foram atualizados. Quando metade ou mais da metade dos nós já tiver sido atualizada, por padrão, a Instalação provocará um failover em um nó atualizado. 
   
  Para controlar o comportamento de failover de nós de cluster durante o processo de atualização, execute a operação de atualização no prompt de comando e use o parâmetro /FAILOVERCLUSTERROLLOWNERSHIP para controlar o comportamento de failover antes de a operação de atualização colocar o nó offline. Este parâmetro é usado da seguinte maneira:  
   
--   /FAILOVERCLUSTERROLLOWNERSHIP=0 não estenderá a propriedade do cluster (mover grupo) para nós atualizados e não adicionará esse nó à lista de possíveis proprietários do cluster do SQL Server no final da atualização.  
+-   /FAILOVERCLUSTERROLLOWNERSHIP=0 não estenderá a propriedade do cluster (mover grupo) para nós atualizados e não adicionará esse nó à lista de possíveis proprietários do cluster do SQL Server no final da atualização. 
   
--   /FAILOVERCLUSTERROLLOWNERSHIP=1 estenderá a propriedade do cluster (mover grupo) para nós atualizados e adicionará esse nó à lista de possíveis proprietários do cluster do SQL Server no final da atualização.  
+-   /FAILOVERCLUSTERROLLOWNERSHIP=1 estenderá a propriedade do cluster (mover grupo) para nós atualizados e adicionará esse nó à lista de possíveis proprietários do cluster do SQL Server no final da atualização. 
   
--   /FAILOVERCLUSTERROLLOWNERSHIP=2 é a configuração padrão. Ele será usado se esse parâmetro não for especificado. Essa configuração indica que a Instalação do SQL Server gerenciará a propriedade (mover grupo) do cluster conforme necessário.  
+-   /FAILOVERCLUSTERROLLOWNERSHIP=2 é a configuração padrão. Ele será usado se esse parâmetro não for especificado. Essa configuração indica que a Instalação do SQL Server gerenciará a propriedade (mover grupo) do cluster conforme necessário. 
   
-##  <a name="a-nameinstanceida-instance-id-or-instanceid-configuration"></a><a name="InstanceID"></a> Configuração de ID da Instância ou InstanceID  
- O parâmetro ID da Instância ou /InstanceID é usado para especificar onde você pode instalar os componentes da instância e o caminho do Registro da instância. O valor de "INSTANCEID" é uma cadeia de caracteres e deve ser exclusivo.  
+##  <a name="InstanceID"></a> Configuração de ID da Instância ou InstanceID  
+ O parâmetro ID da Instância ou /InstanceID é usado para especificar onde você pode instalar os componentes da instância e o caminho do Registro da instância. O valor de "INSTANCEID" é uma cadeia de caracteres e deve ser exclusivo. 
   
--   ID da Instância SQL:MSSQL13.\<INSTANCEID>  
+-   ID da Instância SQL: MSSQL13.\<INSTANCEID>  
   
--   ID da Instância do AS:MSAS13.\<INSTANCEID>  
+-   ID da Instância AS: MSAS13.\<INSTANCEID>  
   
--   ID da Instância do RS:MSRS13.\<INSTANCEID>  
+-   ID da Instância RS: MSRS13.\<INSTANCEID>  
   
  Os componentes com suporte à instância são instalados nos seguintes locais:  
   
@@ -908,10 +912,11 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
  %Arquivos de Programas Microsoft SQL Server\\<IDInstânciaRS\>  
   
-> **OBSERVAÇÃO:** se INSTANCEID não for especificado na linha de comando, por padrão, a Instalação substituirá \<INSTANCEID> pelo \<INSTANCENAME>.  
+> **OBSERVAÇÃO:** se INSTANCEID não for especificada na linha de comando, por padrão, a Instalação substituirá a \<INSTANCEID> pelo \<INSTANCENAME>. 
   
 ## <a name="see-also"></a>Consulte também  
- [Instalar o SQL Server 2016 por meio do Assistente de Instalação](../../database-engine/install-windows/install-sql-server-2016-from-the-installation-wizard-setup.md)   
+ [Instalar o SQL Server 2016 por meio do Assistente de Instalação](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Instalação do cluster de failover do SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
- [[Instalar os recursos do Business Intelligence do SQL Server 2016](../../sql-server/install/install-sql-server-2016-business-intelligence-features.md)]  
+ [[Instalar os recursos do Business Intelligence do SQL Server 2016](../../sql-server/install/install-sql-server-business-intelligence-features.md)]  
   
+

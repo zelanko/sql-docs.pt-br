@@ -1,26 +1,31 @@
 ---
-title: "Configurar a op&#231;&#227;o query governor cost limit de configura&#231;&#227;o de servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "consultas [SQL Server], tempo de executar"
-  - "opção query governor cost limit [SQL Server]"
-  - "hora [SQL Server], hora de execução da consulta"
+title: "Configurar a opção de configuração de servidor query governor cost limit | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [SQL Server], time to execute
+- query governor cost limit option [SQL Server]
+- time [SQL Server], query run time
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c37c6564ace5110c3035003cecad2ab3b52461ac
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar a op&#231;&#227;o query governor cost limit de configura&#231;&#227;o de servidor
+# <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>Configurar a opção query governor cost limit de configuração de servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como configurar a opção de configuração de servidor **query governor cost limit** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção query governor cost limit especifica um limite máximo no intervalo de tempo durante o qual poderá ser executada uma consulta. Custo da consulta se refere a um tempo decorrido estimado, em segundos, que é exigido para concluir uma consulta em uma configuração de hardware específica. O valor padrão para esta opção é 0, que define o administrador de consultas como desativado. Isso permite que todas as consultas sejam executadas sem limite de tempo. Se você especificar um valor que não seja zero nem negativo, o administrador de consultas proibirá a execução de qualquer consulta com um custo estimado que exceda esse valor.  
@@ -45,9 +50,9 @@ caps.handback.revision: 28
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Esta é uma opção avançada e deve ser alterada somente por um administrador de banco de dados experiente ou técnico certificado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Esta é uma opção avançada e deve ser alterada somente por um administrador de banco de dados experiente ou técnico certificado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Para alterar o valor de query governor cost limit com base na conexão, use a instrução [SET QUERY_GOVERNOR_COST_LIMIT](../../t-sql/statements/set-query-governor-cost-limit-transact-sql.md).  
+-   Para alterar o valor de query governor cost limit com base na conexão, use a instrução [SET QUERY_GOVERNOR_COST_LIMIT](../../t-sql/statements/set-query-governor-cost-limit-transact-sql.md) .  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -56,19 +61,19 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para configurar a opção query governor cost limit  
+#### <a name="to-configure-the-query-governor-cost-limit-option"></a>Para configurar a opção query governor cost limit  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor e selecione **Propriedades**.  
   
 2.  Clique na página **Conexões** .  
   
-3.  Marque ou desmarque a caixa de seleção **Usar administrador de consultas para evitar consultas demoradas**.  
+3.  Marque ou desmarque a caixa de seleção **Usar administrador de consultas para evitar consultas demoradas** .  
   
      Se você marcar essa caixa de seleção, na caixa abaixo, insira um valor positivo a ser usado pelo administrador de consultas para impedir a execução de qualquer consulta com um tempo de execução além desse valor.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para configurar a opção query governor cost limit  
+#### <a name="to-configure-the-query-governor-cost-limit-option"></a>Para configurar a opção query governor cost limit  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -92,13 +97,14 @@ GO
   
  Para obter mais informações, consulte [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção query governor cost limit  
+##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção query governor cost limit  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SET QUERY_GOVERNOR_COST_LIMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-query-governor-cost-limit-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

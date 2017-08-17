@@ -1,26 +1,31 @@
 ---
-title: "Preparar um banco de dados espelho para espelhamento (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espelhamento do banco de dados [SQL Server], preparando para o espelhamento"
-  - "logons [SQL Server], espelhamento do banco de dados"
-  - "banco de dados espelho [SQL Server]"
+title: Preparar um banco de dados espelho para espelhamento (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], preparing for mirroring
+- logins [SQL Server], database mirroring
+- mirror database [SQL Server]
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 caps.latest.revision: 43
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e813cf330d3c2d61b9c3163bac75ec5441d06455
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Preparar um banco de dados espelho para espelhamento (SQL Server)
+# <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Preparar um banco de dados espelho para espelhamento (SQL Server)
   Antes de uma sessão de espelhamento do banco de dados poder iniciar, o proprietário do banco de dados ou administrador de sistema devem ter certeza de que o banco de dados espelho foi criado e está pronto para espelhar. A criação de um novo banco de dados espelho requer minimamente um backup cheio do banco de dados principal e um backup de log subsequente e a restauração de ambos sobre a instância do servidor espelho, usando WITH NORECOVERY.  
   
  Este tópico descreve como preparar um banco de dados espelho no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -49,7 +54,7 @@ caps.handback.revision: 43
   
 -   As instâncias de servidor principal e espelho devem ser executadas na mesma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Embora o servidor espelho possa ter uma versão posterior do SQL Server, essa configuração é recomendável somente durante um processo de atualização cuidadosamente planejado. Nessa configuração, você corre o risco de um failover automático, no qual a movimentação de dados é suspensa automaticamente porque os dados não podem migrar para uma versão anterior do SQL Server. Para obter mais informações, veja [Atualizando instâncias espelhadas](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
--   As instâncias de servidor principal e espelho devem ser executadas na mesma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre o suporte para espelhamento de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], veja [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   As instâncias de servidor principal e espelho devem ser executadas na mesma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre o suporte para espelhamento de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], veja [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   O banco de dados deve usar o modelo de recuperação completa.  
   
@@ -85,7 +90,7 @@ caps.handback.revision: 43
 -   Em um banco de dados de produção, sempre faça backup em um dispositivo separado.  
   
 ###  <a name="Security"></a> Segurança  
- TRUSTWORTHY é definido como OFF em um backup de banco de dados. Portanto, em um novo banco de dados espelho, TRUSTWORTHY será sempre OFF. Se o banco de dados tiver que ser confiável depois de um failover, serão necessárias etapas de instalação adicionais. Para obter mais informações, veja [Configurar um banco de dados espelho para usar a propriedade confiável &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
+ TRUSTWORTHY é definido como OFF em um backup de banco de dados. Portanto, em um novo banco de dados espelho, TRUSTWORTHY será sempre OFF. Se o banco de dados tiver que ser confiável depois de um failover, serão necessárias etapas de instalação adicionais. Para obter mais informações, veja [Configurar um banco de dados espelho para usar a propriedade confiável &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
   
  Para obter informações sobre como habilitar a decodificação automática da chave mestre de um banco de dados espelho, veja [Configurar um banco de dados espelho criptografado](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -97,7 +102,7 @@ caps.handback.revision: 43
   
 1.  Faça pelo menos um backup de log no banco de dados principal. Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
-2.  No banco de dados espelho, use RESTORE WITH NORECOVERY para restaurar todos os backups de logs efetuados no banco de dados principal desde que o espelhamento foi removido. Para obter mais informações, veja [Restaurar um backup do log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
+2.  No banco de dados espelho, use RESTORE WITH NORECOVERY para restaurar todos os backups de logs efetuados no banco de dados principal desde que o espelhamento foi removido. Para obter mais informações, veja [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
 ##  <a name="CombinedProcedure"></a> Para preparar um novo banco de dados espelho  
  **Para preparar um banco de dados espelho**  
@@ -128,7 +133,7 @@ caps.handback.revision: 43
   
     -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
-    -   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) e [Argumentos de RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+    -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) e [Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 7.  Usando RESTORE WITH NORECOVERY, aplique quaisquer backups de log pendentes ou backups ao banco de dados espelho.  
   
@@ -238,11 +243,11 @@ caps.handback.revision: 43
   
 1.  Se algum backup de log adicional tiver sido realizado desde sua operação RESTORE LOG mais recente, você deverá aplicar manualmente todos os backups de log adicionais, usando RESTORE WITH NORECOVERY.  
   
-2.  Inicie a sessão de espelhamento. Para obter mais informações, veja [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md) ou [Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
+2.  Inicie a sessão de espelhamento. Para obter mais informações, veja [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) ou o [Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md).  
   
 3.  Se você desabilitou o trabalho de backup no banco de dados principal, reabilite o trabalho.  
   
-4.  Se o banco de dados precisar estar confiável após um failover, serão necessárias etapas adicionais de instalação após o início do espelhamento. Para obter mais informações, veja [Configurar um banco de dados espelho para usar a propriedade confiável &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
+4.  Se o banco de dados precisar estar confiável após um failover, serão necessárias etapas adicionais de instalação após o início do espelhamento. Para obter mais informações, veja [Configurar um banco de dados espelho para usar a propriedade confiável &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
@@ -250,23 +255,25 @@ caps.handback.revision: 43
   
 -   [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
--   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
+-   [Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   
 -   [Configurar um banco de dados espelho criptografado](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   
 -   [Configurar um banco de dados espelho para usar a propriedade confiável &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+ [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Fazer backup e restaurar índices e catálogos de texto completo](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [Espelhamento de banco de dados e catálogos de texto completo &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)   
  [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [Argumentos de RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)  
   
   
+
+

@@ -1,34 +1,39 @@
 ---
-title: "Quorum: como uma testemunha afeta a disponibilidade do banco de dados (Espelhamento de Banco de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "quórum [SQL Server], espelhamento de banco de dados"
-  - "execução exposta no espelhamento de banco de dados [SQL Server]"
-  - "quorum testemunha a parceiro [SQL Server]"
-  - "parceiros [SQL Server], quorum parceiro a parceiro"
-  - "testemunha [SQL Server], quorum"
-  - "tem quorum [SQL Server]"
-  - "quorum [SQL Server]"
-  - "banco de dados espelho [SQL Server]"
-  - "quorum completo [SQL Server]"
-  - "modo de alta disponibilidade [SQL Server]"
+title: 'Quorum: como uma testemunha afeta a disponibilidade do banco de dados (Espelhamento de Banco de Dados) | Microsoft Docs'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- quorum [SQL Server], database mirroring
+- running exposed in database mirroring [SQL Server]
+- witness-to-partner quorum [SQL Server]
+- partners [SQL Server], partner-to-partner quorum
+- witness [SQL Server], quorum
+- have quorum [SQL Server]
+- quorum [SQL Server]
+- mirror database [SQL Server]
+- full quorum [SQL Server]
+- high-availability mode [SQL Server]
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 423b441557ac6d255414889deaaf50e7a510707d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Quorum: como uma testemunha afeta a disponibilidade do banco de dados (Espelhamento de Banco de Dados)
-  Sempre que uma testemunha é definida para uma sessão de espelhamento de banco de dados, é necessário usar o *quorum*. Quorum é a relação criada quando duas ou mais instâncias do servidor na sessão de espelhamento de banco de dados são conectadas entre si. Normalmente, o quorum envolve três instâncias do servidor interconectadas. Quando uma testemunha é definida, o quorum é exigido para tornar o banco de dados disponível. Desenvolvido para o modo de segurança alta com failover automático, o quorum verifica o banco de dados pertence a somente um parceiro por vez.  
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: como uma testemunha afeta a disponibilidade do banco de dados (Espelhamento de Banco de Dados)
+  Sempre que uma testemunha é definida para uma sessão de espelhamento de banco de dados, é necessário usar o *quorum* . Quorum é a relação criada quando duas ou mais instâncias do servidor na sessão de espelhamento de banco de dados são conectadas entre si. Normalmente, o quorum envolve três instâncias do servidor interconectadas. Quando uma testemunha é definida, o quorum é exigido para tornar o banco de dados disponível. Desenvolvido para o modo de segurança alta com failover automático, o quorum verifica o banco de dados pertence a somente um parceiro por vez.  
   
  Se uma determinada instância do servidor for desconectada da sessão de espelhamento, aquela instância perderá o quorum. Se nenhuma instância do servidor estiver conectada, a sessão perderá quorum e o banco de dados ficará indisponível. Há três tipos possíveis de quorum:  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 36
   
  A figura a seguir mostra esses tipos de quorum.  
   
- ![Quorums: completo; testemunha e parceiro; ambos os parceiros](../../database-engine/database-mirroring/media/dbm-failovautoquorum.gif "Quorums: completo; testemunha e parceiro; ambos os parceiros")  
+ ![Quorums: completo; testemunha e parceiro; ambos os parceiros](../../database-engine/database-mirroring/media/dbm-failovautoquorum.gif "Quorums: full; witness and partner; both partners")  
   
  Enquanto o servidor principal atual tiver quorum, o servidor deterá a função de principal e continuará a servir o banco de dados, a menos que o proprietário do banco de dados execute um failover manual. Se o servidor principal perder quorum, deixará de atender o banco de dados. O failover automático só será possível se o banco de dados principal perder quorum, garantindo que não está mais servindo o banco de dados.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  A testemunha só deverá ser definida quando você pretender usar o modo da segurança alta com failover automático. Em modo de alto desempenho, para o qual uma testemunha nunca é requerida, recomendamos definir a propriedade WITNESS como OFF. Para obter informações sobre o impacto de uma testemunha no modo de alto desempenho, veja [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
-## Quorum em sessões de modo de segurança alta  
+## <a name="quorum-in-high-safety-mode-sessions"></a>Quorum em sessões de modo de segurança alta  
  No modo de segurança alta, o quorum permite o failover automático ao fornecer um contexto no qual as instâncias do servidor com quorum arbitram o parceiro que detém a função de principal. O servidor principal atenderá o banco de dados, se o banco de dados tiver quorum. Se o servidor principal perder quorum quando o servidor espelho sincronizado e a testemunha retiverem quorum, ocorrerá o failover automático.  
   
  Os cenários de quorum para modo da segurança alta são os seguintes:  
@@ -91,20 +96,20 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  Quando uma sessão tiver o quorum parceiro a parceiro, se qualquer parceiro perder quorum, a sessão perderá quorum. Consequentemente, caso pretenda deixar a testemunha desconectada por muito tempo, recomendamos a remoção temporária da testemunha da sessão. Ao remover a testemunha, os requisitos de quorum serão removidos. Então, se o servidor espelho for desconectado, o servidor principal poderá continuar atendendo o banco de dados. Para obter informações sobre como adicionar ou remover uma testemunha, veja [Testemunha de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-witness.md).  
   
-### Como o quorum afeta a disponibilidade do banco de dados  
+### <a name="how-quorum-affects-database-availability"></a>Como o quorum afeta a disponibilidade do banco de dados  
  A ilustração a seguir mostra como a testemunha e os parceiros cooperam para garantir que, em um determinado momento, somente um parceiro detenha a função de principal e apenas o servidor principal atual possa colocar o seu banco de dados online. Ambos os cenários iniciam com quorum completo, **Partner_A** na função principal e **Partner_B** na função espelho.  
   
- ![Como a testemunha e os parceiros cooperam](../../database-engine/database-mirroring/media/dbm-quorum-scenarios.gif "Como a testemunha e os parceiros cooperam")  
+ ![Como a testemunha e os parceiros cooperam](../../database-engine/database-mirroring/media/dbm-quorum-scenarios.gif "How the witness and partners cooperate")  
   
- O cenário 1 mostra como, depois que o servidor principal (**Partner_A**) falha, a testemunha e o espelho concordam que o principal, **Partner_A**, não está mais disponível e formam quorum. O espelho, **Partner_B**, assume a função principal. O failover automático ocorre e o **Partner_B** coloca sua cópia do banco de dados online. Em seguida, **Partner_B** deixa de funcionar e o banco de dados fica offline. Posteriormente, o antigo servidor principal, **Partner_A**, reconecta-se à testemunha readquirindo quorum. Porém, ao comunicar-se com a testemunha, **Partner_A** toma conhecimento de que não pode colocar a sua cópia do banco de dados online porque **Partner_B** agora detém a função principal. Quando o **Partner_B** reassocia-se à sessão, coloca o banco de dados online novamente.  
+ O cenário 1 mostra como, depois que o servidor principal (**Partner_A**) falha, a testemunha e o espelho concordam que o principal, **Partner_A**, não está mais disponível e formam quorum. O espelho, **Partner_B** , assume a função principal. O failover automático ocorre e o **Partner_B**coloca sua cópia do banco de dados online. Em seguida, **Partner_B** deixa de funcionar e o banco de dados fica offline. Posteriormente, o antigo servidor principal, **Partner_A**, reconecta-se à testemunha readquirindo quorum. Porém, ao comunicar-se com a testemunha, **Partner_A** toma conhecimento de que não pode colocar a sua cópia do banco de dados online porque **Partner_B** agora detém a função principal. Quando o **Partner_B** reassocia-se à sessão, coloca o banco de dados online novamente.  
   
  No cenário 2, a testemunha perde quorum, enquanto os parceiros, **Partner_A** e **Partner_B**, retêm quorum entre si e o banco de dados permanece online. Então, os parceiros também perdem quorum e o banco de dados fica offline. Mais tarde, o servidor principal, **Partner_A**, reconecta-se à testemunha, recuperando quorum. A testemunha confirma se **Partner_A** ainda detém a função principal, e **Partner_A** coloca o banco de dados online.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Testemunha de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-witness.md)   
- [Possíveis falhas durante espelhamento de banco de dados](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
+ [Possíveis falhas durante o espelhamento de banco de dados](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [Estados de espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   
   

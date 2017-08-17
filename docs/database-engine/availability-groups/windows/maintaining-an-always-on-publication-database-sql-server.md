@@ -1,25 +1,30 @@
 ---
-title: "Mantendo um banco de dados de publica&#231;&#227;o AlwaysOn (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidade [SQL Server], interoperabilidade"
-  - "replicação [SQL Server], Grupos de Disponibilidade AlwaysOn"
+title: "Mantendo um banco de dados de publicação AlwaysOn (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], interoperability
+- replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 12c030081ec4015cb20702c0f674f870f8cb829d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Mantendo um banco de dados de publica&#231;&#227;o AlwaysOn (SQL Server)
+# <a name="maintaining-an-always-on-publication-database-sql-server"></a>Mantendo um banco de dados de publicação AlwaysOn (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tópico discute considerações especiais para manter um banco de dados de publicação quando você usa grupos de disponibilidade AlwaysOn.  
@@ -42,7 +47,7 @@ caps.handback.revision: 9
 -   Ao usar os procedimentos armazenados ou RMO (Replication Management Objects) para gerenciar na réplica primária atual, nos casos em que você especifica o nome do Publicador, especifique o nome da instância na qual o banco de dados foi habilitado para a replicação (o publicador original). Para determinar o nome apropriado, use a função **PUBLISHINGSERVERNAME** . Quando um banco de dados de publicação ingressa em um grupo de disponibilidade, os metadados de replicação armazenados nas réplicas de banco de dados secundárias são idênticos aos da réplica primária. Portanto, para os bancos de dados de publicação habilitados para replicação na réplica primária, o nome da instância do publicador armazenado em tabelas do sistema na réplica secundária é o nome da réplica primária, e não da secundária. Isso afeta a configuração e a manutenção da replicação, em caso de falha do banco de dados de publicação para uma réplica secundária. Por exemplo, se você estiver configurando a replicação com procedimentos armazenados em uma réplica secundária depois do failover e desejar uma assinatura pull de um banco de dados de publicação que foi habilitado em uma réplica diferente, especifique o nome do publicador original em vez do publicador atual como o parâmetro *@publisher* de **sp_addpullsubscription** ou **sp_addmergepulllsubscription**. Entretanto, se você habilitar um banco de dados de publicação depois do failover, o nome de instância de publicador armazenado nas tabelas do sistema será o nome do host primário atual. Neste caso, você usaria o nome de host da réplica primária atual para o parâmetro *@publisher* .  
   
     > [!NOTE]  
-    >  Para alguns procedimentos, como **sp_addpublication**, o parâmetro *@publisher* tem suporte apenas para os publicadores que não são instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; nesses casos, ele não é relevante para o AlwaysOn do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+    >  Para alguns procedimentos, como **sp_addpublication**, o parâmetro *@publisher* tem suporte apenas para os publicadores que não são instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; nesses casos, ele não é relevante para o AlwaysOn do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Para sincronizar uma assinatura no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] após o failover, sincronize as assinaturas pull do assinante e sincronize as assinaturas push do publicador ativo.  
   
@@ -111,16 +116,17 @@ caps.handback.revision: 9
   
 -   [Configurar a replicação para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   
--   [Replicação, controle de alterações, Change Data Capture e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate, track, change data capture - always on availability.md)  
+-   [Replicação, controle de alterações, Change Data Capture e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [Administração &#40;Replicação&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
   
 -   [Assinantes de replicação e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   
-## Consulte também  
- [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+## <a name="see-also"></a>Consulte também  
+ [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Grupos de disponibilidade AlwaysOn: interoperabilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Grupos de Disponibilidade AlwaysOn: Interoperabilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Replicação do SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   
   
+

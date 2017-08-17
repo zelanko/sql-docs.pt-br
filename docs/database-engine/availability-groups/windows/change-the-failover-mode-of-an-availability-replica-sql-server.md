@@ -1,28 +1,33 @@
 ---
-title: "Alterar o modo de failover de uma r&#233;plica de disponibilidade (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modos de failover [SQL Server]"
-  - "Grupos de disponibilidade [SQL Server], implantando"
-  - "Grupos de Disponibilidade [SQL Server], modos de failover"
-  - "Grupos de disponibilidade [SQL Server], configurando"
+title: "Alterar o modo de failover de uma réplica de disponibilidade (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- failover modes [SQL Server]
+- Availability Groups [SQL Server], deploying
+- Availability Groups [SQL Server], failover modes
+- Availability Groups [SQL Server], configuring
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 caps.latest.revision: 27
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6afdf6c384af21bd5b871dd79427c60c1ae980c8
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Alterar o modo de failover de uma r&#233;plica de disponibilidade (SQL Server)
-  Este tópico descreve como alterar o modo de failover de uma réplica de disponibilidade em um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell. O modo de failover é uma propriedade de réplica que determina o modo de failover para réplicas que executam sob modo de disponibilidade de confirmação síncrona. Para obter mais informações, veja [Failover e modos de failover &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) e [Modos de disponibilidade &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+# <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>Alterar o modo de failover de uma réplica de disponibilidade (SQL Server)
+  Este tópico descreve como alterar o modo de failover de uma réplica de disponibilidade em um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell. O modo de failover é uma propriedade de réplica que determina o modo de failover para réplicas que executam sob modo de disponibilidade de confirmação síncrona. Para obter mais informações, veja [Failover e modos de failover &#40;grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) e [Modos de disponibilidade &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
 -   **Antes de começar:**  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 27
   
 1.  No Pesquisador de Objetos, conecte-se à instância de servidor que hospeda a réplica primária e expanda a árvore de servidores.  
   
-2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
+2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
   
 3.  Clique no grupo de disponibilidade cuja réplica você deseja alterar.  
   
@@ -69,38 +74,25 @@ caps.handback.revision: 27
   
 1.  Conecte-se à instância de servidor que hospeda a réplica primária.  
   
-2.  Use a instrução [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) , da seguinte maneira:  
+2.  Use a instrução [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) , da seguinte maneira:
+
+   ```Transact-SQL
+   ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
+      WITH ( {  
+           AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }
+              | FAILOVER_MODE = { AUTOMATIC | MANUAL }
+            }  )
+   ```
+
+   No script anterior:
+
+      - *group_name* é o nome do grupo de disponibilidade.  
   
-     ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
+      - *server_name* é o nome do computador ou o nome da rede de cluster de failover. Para instâncias nomeadas, adicione “\instance_name”. Use o nome que hospeda a réplica que você deseja modificar.
   
-     WITH ( {  
+   Para obter mais informações sobre esses parâmetros, veja [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
-     AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
-  
-     | FAILOVER_MODE = { AUTOMATIC | MANUAL }  
-  
-     }  )  
-  
-     onde  
-  
-    -   *group_name* é o nome do grupo de disponibilidade.  
-  
-    -   { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
-  
-         Especifica o endereço da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda a réplica de disponibilidade a ser alterada. Os componentes desse endereço são os seguintes:  
-  
-         *system_name*  
-         É o nome do NetBIOS do sistema de computador no qual reside uma instância autônoma do servidor.  
-  
-         *FCI_network_name*  
-         É o nome de rede usado para acessar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no qual uma instância de servidor de destino é um parceiro de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (um FCI).  
-  
-         *instance_name*  
-         É o nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda a réplica de disponibilidade de destino. Para uma instância de servidor padrão, *instance_name* é opcional.  
-  
-     Para obter mais informações sobre esses parâmetros, veja [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
-  
-     O exemplo a seguir, inserido na réplica primária do grupo de disponibilidade *MyAG* , altera o modo de failover para failover automático na réplica de disponibilidade localizada na instância de servidor padrão em um computador denominado *COMPUTER01*.  
+   O exemplo a seguir, inserido na réplica primária do grupo de disponibilidade *MyAG* , altera o modo de failover para failover automático na réplica de disponibilidade localizada na instância de servidor padrão em um computador denominado *COMPUTER01*.  
   
     ```  
     ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH  
@@ -112,7 +104,7 @@ caps.handback.revision: 27
   
 1.  Altere o diretório (**cd**) para a instância de servidor que hospeda a réplica primária.  
   
-2.  Use o cmdlet **Set-SqlAvailabilityReplica** com o parâmetro **FailoverMode**. Ao definir uma réplica como failover automático, talvez seja preciso usar o parâmetro **AvailabilityMode** para alterar a réplica para o modo de disponibilidade de confirmação síncrona.  
+2.  Use o cmdlet **Set-SqlAvailabilityReplica** com o parâmetro **FailoverMode** . Ao definir uma réplica como failover automático, talvez seja preciso usar o parâmetro **AvailabilityMode** para alterar a réplica para o modo de disponibilidade de confirmação síncrona.  
   
      Por exemplo, o comando a seguir modifica a réplica `MyReplica` no grupo de disponibilidade `MyAg` para usar o modo de disponibilidade de confirmação síncrona e para oferecer suporte ao failover automático.  
   
@@ -128,9 +120,10 @@ caps.handback.revision: 27
   
 -   [Provedor do SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidade &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
- [Failover e modos de failover &#40;grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)  
+ [Failover e modos de failover &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)  
   
   
+

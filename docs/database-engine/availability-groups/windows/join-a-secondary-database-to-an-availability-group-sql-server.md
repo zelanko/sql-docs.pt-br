@@ -1,31 +1,36 @@
 ---
-title: "Unir um banco de dados secund&#225;rio a um grupo de disponibilidade (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.joindbs.f1"
-helpviewer_keywords: 
-  - "bancos de dados secundários [SQL Server], no grupo de disponibilidade"
-  - "bancos de dados secundários [SQL Server]"
-  - "Grupos de disponibilidade [SQL Server], junção"
-  - "Grupos de disponibilidade [SQL Server], configurando"
-  - "Grupos de disponibilidade [SQL Server], bancos de dados"
+title: "Ingressar um banco de dados secundário em um grupo de disponibilidade (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.joindbs.f1
+helpviewer_keywords:
+- secondary databases [SQL Server], in availability group
+- secondary databases [SQL Server]
+- Availability Groups [SQL Server], joining
+- Availability Groups [SQL Server], configuring
+- Availability Groups [SQL Server], databases
 ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 8a5afad01e18568d315f1602ad8908786f130400
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Unir um banco de dados secund&#225;rio a um grupo de disponibilidade (SQL Server)
-  Este tópico explica como unir um banco de dados secundário a um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Após preparar um banco de dados secundário para uma réplica secundária, você precisará unir o banco de dados ao grupo de disponibilidade o quanto antes. Isso iniciará a movimentação de dados do banco de dados primário correspondente para o banco de dados secundário.  
+# <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>Unir um banco de dados secundário a um grupo de disponibilidade (SQL Server)
+  Este tópico explica como unir um banco de dados secundário a um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Após preparar um banco de dados secundário para uma réplica secundária, você precisará unir o banco de dados ao grupo de disponibilidade o quanto antes. Isso iniciará a movimentação de dados do banco de dados primário correspondente para o banco de dados secundário.  
   
 -   **Antes de começar:**  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 39
   
 1.  No Pesquisador de Objetos, conecte-se à instância de servidor que hospeda a réplica secundária e expanda a árvore de servidores.  
   
-2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
+2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
   
 3.  Expanda o grupo de disponibilidade a ser alterado e expanda o nó **Bancos de Dados de Disponibilidade** .  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 39
   
 1.  Conecte-se à instância de servidor que hospeda a réplica secundária.  
   
-2.  Use a [cláusula SET HADR da instrução ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md) , da seguinte maneira:  
+2.  Use a [cláusula SET HADR da instrução ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) , da seguinte maneira:  
   
      ALTER DATABASE *database_name* SET HADR AVAILABILITY GROUP = *group_name*  
   
@@ -120,9 +125,10 @@ caps.handback.revision: 39
   
 -   [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Solucionar problemas de configuração de grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   
+

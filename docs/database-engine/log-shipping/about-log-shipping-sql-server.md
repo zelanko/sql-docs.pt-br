@@ -1,37 +1,42 @@
 ---
-title: "Sobre o envio de logs (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "servidores secundários [SQL Server]"
-  - "envio de logs [SQL Server], trabalhos"
-  - "trabalhos de cópia [SQL Server]"
-  - "bancos de dados primários [SQL Server]"
-  - "envio de logs [SQL Server], monitoramento"
-  - "envio de logs [SQL Server], sobre o envio de logs"
-  - "trabalhos de alerta [SQL Server]"
-  - "disponibilidade [SQL Server]"
-  - "trabalhos [SQL Server], envio de logs"
-  - "servidores monitor [SQL Server]"
-  - "trabalhos de restauração [SQL Server]"
-  - "envio de logs [SQL Server]"
-  - "trabalhos de backup [SQL Server]"
-  - "servidores primários [SQL Server]"
+title: Sobre o envio de logs (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- secondary servers [SQL Server]
+- log shipping [SQL Server], jobs
+- copy jobs [SQL Server]
+- primary databases [SQL Server]
+- log shipping [SQL Server], monitoring
+- log shipping [SQL Server], about log shipping
+- alert jobs [SQL Server]
+- availability [SQL Server]
+- jobs [SQL Server], log shipping
+- monitor servers [SQL Server]
+- restore jobs [SQL Server]
+- log shipping [SQL Server]
+- backup jobs [SQL Server]
+- primary servers [SQL Server]
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 caps.latest.revision: 65
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: dd5412ff60f00e648452796423fcf715d8e56168
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Sobre o envio de logs (SQL Server)
+# <a name="about-log-shipping-sql-server"></a>Sobre o envio de logs (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite o envio automático de backups do log de transações de um *banco de dados primário* em uma instância do *servidor primário* para um ou mais *banco de dados secundário* em outras instâncias de *servidor secundário* . Os backups de logs de transação são aplicados individualmente aos bancos de dados secundários. Uma terceira instância de servidor opcional, conhecida como *servidor monitor*, registra o histórico e o status das operações de backup e restauração e, opcionalmente, emite alertas se essas operações não forem executadas como foram agendadas.  
   
  **Neste tópico:**  
@@ -111,7 +116,7 @@ caps.handback.revision: 65
   
  Além disso, é possível configurar alertas para a configuração de envio de log.  
   
-### Uma configuração de envio de logs comum  
+### <a name="a-typical-log-shipping-configuration"></a>Uma configuração de envio de logs comum  
  A figura a seguir mostra a configuração do envio de logs com a instância do servidor primário, três instâncias de servidor secundário e uma instância de servidor monitor. A figura ilustra as etapas executadas pelos trabalhos de backup, cópia e restauração, como segue:  
   
 1.  A instância do servidor primário executa o trabalho de backup do log de transações do banco de dados primário. Essa instância do servidor coloca o backup do log em um arquivo de backup de log primário, enviado para a pasta de backup.  Nesta figura, a pasta de backup está em um diretório compartilhado, o *compartilhamento de backup*.  
@@ -122,12 +127,12 @@ caps.handback.revision: 65
   
  As instâncias de servidor primário e secundário enviam seus próprios históricos e status para a instância do servidor monitor.  
   
- ![Configuração mostrando trabalhos de backup, cópia & restauração](../../database-engine/log-shipping/media/ls-typical-configuration.gif "Configuração mostrando trabalhos de backup, cópia & restauração")  
+ ![Configuração mostrando trabalhos de backup, cópia e restauração](../../database-engine/log-shipping/media/ls-typical-configuration.gif "Configuration showing backup, copy, & restore jobs")  
   
 ##  <a name="Interoperability"></a> Interoperabilidade  
  O envio de logs pode ser usado com os seguintes recursos ou componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [Pré-requisitos para migrar de envio de logs para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs migrating log shipping to always on availability groups.md)  
+-   [Pré-requisitos para migrar de envio de logs para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
 -   [Espelhamento de banco de dados e envio de logs &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
@@ -158,7 +163,8 @@ caps.handback.revision: 65
   
 -   [Gerenciamento de logons e trabalhos após a troca de funções &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

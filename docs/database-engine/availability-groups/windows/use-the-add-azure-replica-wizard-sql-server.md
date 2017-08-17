@@ -1,24 +1,29 @@
 ---
-title: "Use o Assistente para Adicionar R&#233;plica do Azure (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.addreplicawizard.azurereplica.f1"
+title: "Usar o Assistente para Adicionar Réplica do Azure (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 24b3e9ec3cded630a18fef353ccaad3b5a2912b1
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Use o Assistente para Adicionar R&#233;plica do Azure (SQL Server)
+# <a name="use-the-add-azure-replica-wizard-sql-server"></a>Use o Assistente para Adicionar Réplica do Azure (SQL Server)
   Use o Assistente para Adicionar Réplica do Azure para ajudá-lo a criar a nova VM do Microsoft Azure em TI híbrida e a configurá-la como uma réplica secundária para um grupo de disponibilidade AlwaysOn novo ou existente.  
   
 -   **Antes de começar:**  
@@ -27,10 +32,10 @@ caps.handback.revision: 12
   
      [Segurança](#Security)  
   
--   **Para adicionar uma réplica usando:** [Assistente para Adicionar Réplica do Azure (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Para adicionar uma réplica usando:**  [Assistente para Adicionar Réplica do Azure (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
- Se você nunca adicionou uma réplica de disponibilidade a um grupo de disponibilidade, veja as seções “Instâncias de servidor” e “Grupos de disponibilidade e réplicas” em [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+ Se você nunca adicionou uma réplica de disponibilidade a um grupo de disponibilidade, veja as seções “Instâncias de servidor” e “Grupos de disponibilidade e réplicas” em [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 12
   
 1.  Primeiro, baixe o certificado de gerenciamento para a sua assinatura do Windows Azure. Clique em **Download** para abrir a página de entrada.  
   
-2.  Entre no Microsoft Azure com sua conta da Microsoft ou conta organizacional. Sua conta da Microsoft ou organizacional está no formato de um endereço de email, como HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Para obter mais informações sobre as credenciais do Azure, veja [Perguntas Frequentes sobre a Conta Institucional Microsoft](http://technet.microsoft.com/jj592903) e [Solucionando problemas de logon com sua conta organizacional](https://support.microsoft.com/kb/2756852).  
+2.  Entre no Microsoft Azure com sua conta da Microsoft ou conta organizacional. Sua conta da Microsoft ou organizacional está no formato de um endereço de email, como HYPERLINK “mailto:patc@contoso.com” patc@contoso.com. Para obter mais informações sobre as credenciais do Azure, veja [Perguntas Frequentes sobre a Conta Institucional Microsoft](http://technet.microsoft.com/jj592903) e [Solucionando problemas de logon com sua conta organizacional](https://support.microsoft.com/kb/2756852).  
   
 3.  Em seguida, conecte-se à sua assinatura clicando em **Conectar**. Quando você estiver conectado, as listas suspensas serão populadas com seus parâmetros do Microsoft Azure, como **Rede Virtual** e **Sub-Rede de Rede Virtual**.  
   
@@ -83,10 +88,10 @@ caps.handback.revision: 12
      Senha do administrador da máquina virtual (e confirmar senha)  
      A senha para o administrador padrão para a máquina virtual do Windows Azure  
   
-     Rede virtual  
+     Rede Virtual  
      A rede virtual na qual colocar a máquina virtual do Windows Azure  
   
-     Sub-rede da rede virtual  
+     Sub-Rede de Rede Virtual  
      A sub-rede da rede virtual na qual colocar a máquina virtual do Windows Azure  
   
      Domínio  
@@ -108,9 +113,10 @@ caps.handback.revision: 12
   
 -   [Adicionar uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+ [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Adicionar uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   
+

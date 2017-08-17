@@ -1,29 +1,34 @@
 ---
-title: "Op&#231;&#227;o de configura&#231;&#227;o de servidor in-doubt xact resolution | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "transações distribuídas [SQL Server], transações não resolvidas"
-  - "transações não resolvidas"
-  - "opção in-doubt xact resolution"
+title: "Opção de configuração de servidor in-doubt xact resolution | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- distributed transactions [SQL Server], unresolved transactions
+- unresolved transactions
+- in-doubt xact resolution option
 ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c3676d0c6b240bce2c7523cb2dceba90813fa3c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Op&#231;&#227;o de configura&#231;&#227;o de servidor in-doubt xact resolution
+# <a name="in-doubt-xact-resolution-server-configuration-option"></a>Opção de configuração de servidor in-doubt xact resolution
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Use a opção **in-doubt xact resolution** para controlar o resultado padrão de transações que o MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)]) não pode resolver. A incapacidade de resolver transações pode estar relacionada ao tempo de desligamento do MS DTC ou a um resultado de transação desconhecido no momento da recuperação.  
+  Use a opção **in-doubt xact resolution** para controlar o resultado padrão de transações que o MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) não pode resolver. A incapacidade de resolver transações pode estar relacionada ao tempo de desligamento do MS DTC ou a um resultado de transação desconhecido no momento da recuperação.  
   
  A tabela seguinte lista os possíveis valores de resultado para resolver uma transação incerta.  
   
@@ -78,9 +83,10 @@ GO
 > [!NOTE]  
 >  A configuração consistente desta opção por todas as instâncias [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envolvidas em qualquer transação distribuída ajudará a evitar inconsistências de dados.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

@@ -1,34 +1,39 @@
 ---
-title: "Configurar um banco de dados espelho para usar a propriedade confi&#225;vel (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "opção de banco de dados TRUSTWORTHY"
-  - "banco de dados espelho [SQL Server]"
-  - "espelhamento de banco de dados [SQL Server], segurança"
+title: "Configurar um banco de dados espelho para usar a propriedade confiável (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TRUSTWORTHY database option
+- mirror database [SQL Server]
+- database mirroring [SQL Server], security
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7b99c620aeb148558c5db6cfb15fefd2878ca180
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar um banco de dados espelho para usar a propriedade confi&#225;vel (Transact-SQL)
+# <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>Configurar um banco de dados espelho para usar a propriedade confiável (Transact-SQL)
   Quando é feito backup de um banco de dados, a propriedade TRUSTWORTHY do banco de dados é definida como OFF. Portanto, em um novo banco de dados espelho, TRUSTWORTHY está sempre OFF. Se o banco de dados precisar estar confiável após um failover, serão necessárias etapas adicionais de instalação após o início do espelhamento.  
   
 > [!NOTE]  
 >  Para obter informações sobre essa propriedade de banco de dados, veja [propriedade TRUSTWORTHY do banco de dados](../../relational-databases/security/trustworthy-database-property.md).  
   
-## Procedimento  
+## <a name="procedure"></a>Procedimento  
   
-#### Para configurar um banco de dados espelho para usar a Propriedade Trustworthy  
+#### <a name="to-setup-a-mirror-database-to-use-the-trustworthy-property"></a>Para configurar um banco de dados espelho para usar a Propriedade Trustworthy  
   
 1.  Na instância de servidor principal, verifique se o banco de dados principal está com a propriedade Trustworthy ativada.  
   
@@ -74,10 +79,10 @@ caps.handback.revision: 15
   
      No SQL Server Management Studio:  
   
-    -   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+    -   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## Consulte também  
- [Propriedade de banco de dados TRUSTWORTHY](../../relational-databases/security/trustworthy-database-property.md)   
+## <a name="see-also"></a>Consulte também  
+ [propriedade TRUSTWORTHY do banco de dados](../../relational-databases/security/trustworthy-database-property.md)   
  [Configurar um banco de dados espelho criptografado](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   
   

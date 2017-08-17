@@ -1,46 +1,37 @@
 ---
-title: "Selecione a P&#225;gina de Sincroniza&#231;&#227;o de Dados Inicial (Assistentes Grupo de Disponibilidade AlwaysOn) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.adddatabasewizard.selectinitialdatasync.f1"
-  - "sql13.swb.newagwizard.selectinitialdatasync.f1"
-  - "sql13.swb.addreplicawizard.selectinitialdatasync.f1"
+title: "Página Selecionar Sincronização de Dados Inicial – Assistente de Grupo de Disponibilidade AlwaysOn | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.adddatabasewizard.selectinitialdatasync.f1
+- sql13.swb.newagwizard.selectinitialdatasync.f1
+- sql13.swb.addreplicawizard.selectinitialdatasync.f1
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: bae5aa51a2a72e7f056bba56516ed357c61e4b8d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Selecione a P&#225;gina de Sincroniza&#231;&#227;o de Dados Inicial (Assistentes Grupo de Disponibilidade AlwaysOn)
+# <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Selecione a Página de Sincronização de Dados Inicial (Assistentes Grupo de Disponibilidade AlwaysOn)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Use a página **Selecionar Sincronização de Dados Inicial** do AlwaysOn para indicar sua preferência por sincronização de dados inicial de novos bancos de dados secundários. Essa página é compartilhada por três assistentes: o [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], o [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] e o [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  
+  Use a página **Selecionar Sincronização de Dados Inicial** do AlwaysOn para indicar sua preferência por sincronização de dados inicial de novos bancos de dados secundários. Essa página é compartilhada por três assistentes: o [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], o [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]e o [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  
   
- As opções possíveis incluem **Total**, **Somente junção**ou **Ignorar a sincronização de dados inicial**. Antes de selecionar **Total** ou **Somente junção** verifique se o ambiente atende aos pré-requisitos.  
-  
- **Neste tópico:**  
-  
--   [Recomendações](#Recommendations)  
-  
--   [Full (cheio)](#Full)  
-  
--   [Somente junção](#Joinonly)  
-  
--   [Ignorar sincronização de dados inicial](#Skip)  
-  
--   [Para preparar manualmente bancos de dados secundários](#PrepareSecondaryDbs)  
-  
--   [Tarefas relacionadas](#LaunchWiz)  
-  
+ As opções possíveis incluem **Propagação automática**, **Backup completo de log e de banco de dados**, **Somente junção** ou **Ignorar sincronização de dados inicial**. Antes de selecionar **Propagação automática**, **Completo** ou **Somente junção**, verifique se o ambiente atende aos pré-requisitos.  
+    
 ##  <a name="Recommendations"></a> Recomendações  
   
 -   Suspenda as tarefas de backup de log para os bancos de dados primários durante a sincronização de dados inicial.  
@@ -51,12 +42,16 @@ caps.handback.revision: 39
   
      Se for necessário que as operações de backup e restauração sejam altamente protegidas, é recomendável selecionar a opção **Somente junção** ou **Ignorar a sincronização de dados inicial** .  
   
-##  <a name="Full"></a> Total  
- Para cada banco de dados primário, a opção **Total** executará várias operações em um fluxo de trabalho: criará um backup completo e um backup de log do banco de dados primário, criará os bancos de dados secundários correspondentes restaurando esses backups em cada instância do servidor que estiver hospedando uma réplica secundária e unirá cada banco de dados secundário ao grupo de disponibilidade.  
+## <a name="Auto"></a> Propagação automática
+ 
+ O SQL Server cria automaticamente as réplicas secundárias para cada banco de dados no grupo. A propagação automática exige que os caminhos do arquivo de dados e de log sejam os mesmos em cada instância do SQL Server que faz parte do grupo. Disponível no [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] e posterior. Consulte [Inicializar automaticamente o grupo de disponibilidade AlwaysOn](automatically-initialize-always-on-availability-group.md).
+
+##  <a name="Full"></a> Backup completo de log e de banco de dados 
+ Para cada banco de dados primário, a opção **Backup completo de log e de banco de dados** executa várias operações em um fluxo de trabalho: cria um backup completo e um backup de log do banco de dados primário, cria os bancos de dados secundários correspondentes restaurando esses backups em cada instância de servidor que hospeda uma réplica secundária e ingressa cada banco de dados secundário no grupo de disponibilidade.  
   
  Selecione essa opção apenas se o ambiente atender os seguintes pré-requisitos para usar a sincronização de dados inicial completa, e se você desejar que o assistente inicie automaticamente a sincronização de dados.  
   
- **Pré-requisitos para usar sincronização de dados inicial total**  
+ **Pré-requisitos para o uso da sincronização de dados inicial do backup completo de log e de banco de dados**  
   
 -   Todos os caminhos de arquivos do banco de dados devem ser idênticos em cada instância de servidor que hospede uma réplica para o grupo de disponibilidade.  
   
@@ -76,7 +71,7 @@ caps.handback.revision: 39
   
  **Se os pré-requisitos forem atendidos**  
   
- Se estes pré-requisitos forem todos atendidos e você quiser que o assistente execute a sincronização de dados inicial completa, selecione a opção **Completa** e especifique um compartilhamento de rede. Isto fará o assistente criar um banco de dados completo e backups de log de todos os bancos de dados selecionados e colocar estes backups no compartilhamento de rede que você especificar. Em seguida, em cada instância do servidor que hospeda uma das novas réplicas secundárias, o assistente criará os bancos de dados secundários restaurando os backups com RESTORE WITH NORECOVERY. Depois de criar cada um dos bancos de dados secundários, o assistente unirá o novo banco de dados secundário ao grupo de disponibilidade. Assim que um banco de dados secundário é unido, as sincronização de dados é iniciada naquele banco de dados.  
+ Se todos estes pré-requisitos forem atendidos e você desejar que o assistente execute a sincronização de dados inicial completa, selecione a opção **Backup completo de log e de banco de dados** e especifique um compartilhamento de rede. Isto fará o assistente criar um banco de dados completo e backups de log de todos os bancos de dados selecionados e colocar estes backups no compartilhamento de rede que você especificar. Em seguida, em cada instância do servidor que hospeda uma das novas réplicas secundárias, o assistente criará os bancos de dados secundários restaurando os backups com RESTORE WITH NORECOVERY. Depois de criar cada um dos bancos de dados secundários, o assistente unirá o novo banco de dados secundário ao grupo de disponibilidade. Assim que um banco de dados secundário é unido, as sincronização de dados é iniciada naquele banco de dados.  
   
  **Especifique um local de rede compartilhado acessível por todas as réplicas**  
  Para criar e restaurar backups, o assistente requer que você especifique um compartilhamento de rede. A conta usada para iniciar o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] em cada instância de servidor que hospedará uma réplica de disponibilidade deve ter permissões de leitura e gravação no sistema de arquivos do compartilhamento de rede.  
@@ -93,7 +88,7 @@ caps.handback.revision: 39
  Selecione esta opção se você desejar executar seus próprios backups de banco de dados e de log de cada banco de dados primário e, em seguida, restaurá-los em cada instância de servidor que hospeda uma réplica secundária. Quando sair do assistente, você precisará unir cada banco de dados secundário em cada réplica secundária.  
   
 > [!NOTE]  
->  Para obter mais informações, veja [Iniciar movimentação de dados em um banco de dados secundário AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+>  Para obter mais informações, consulte [Iniciar movimentação de dados em um banco de dados secundário &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 ##  <a name="PrepareSecondaryDbs"></a> Para preparar manualmente bancos de dados secundários  
  Para preparar bancos de dados secundários independentemente de qualquer assistente do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , você pode usar uma das seguintes abordagens:  
@@ -104,14 +99,14 @@ caps.handback.revision: 39
   
      [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   Se você estiver adicionando um ou mais bancos de dados primários de envio de logs a um grupo de disponibilidade, poderá ser capaz de migrar um ou mais dos bancos de dados secundários correspondentes de envio de logs para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obter mais informações, veja [Pré-requisitos para migrar do envio de logs para os grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs migrating log shipping to always on availability groups.md).  
+-   Se você estiver adicionando um ou mais bancos de dados primários de envio de logs a um grupo de disponibilidade, poderá ser capaz de migrar um ou mais dos bancos de dados secundários correspondentes de envio de logs para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obter mais informações, consulte [Pré-requisitos para migrar de envio de logs para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
   
     > [!NOTE]  
     >  Depois que você criar todos os bancos de dados secundários para o grupo de disponibilidade, se você desejar executar backups em réplicas secundárias, precisará reconfigurar a preferência de backup automatizada do grupo de disponibilidade.  
   
      **Para obter mais informações, consulte:**  
   
-     [Pré-requisitos para migrar de envio de logs para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs migrating log shipping to always on availability groups.md)  
+     [Pré-requisitos para migrar de envio de logs para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
      [Configurar backup em réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -125,7 +120,7 @@ caps.handback.revision: 39
   
 -   [Usar o Assistente para Adicionar Réplica ao Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Usar o Assistente para Adicionar Banco de Dados ao Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usar o Assistente para Adicionar Banco de Dados ao Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
 -   [Usar o Assistente de Grupo de Disponibilidade de Failover &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
@@ -135,7 +130,8 @@ caps.handback.revision: 39
   
 -   [Usar a caixa de diálogo Novo Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

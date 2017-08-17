@@ -1,30 +1,35 @@
 ---
-title: "Exemplo: Configurando o espelhamento de banco de dados usando a Autentica&#231;&#227;o do Windows (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espelhamento de banco de dados [SQL Server], implantação"
-  - "Autenticação do Windows [SQL Server]"
-  - "autenticação [SQL Server], espelhamento de banco de dados"
-  - "espelhamento de banco de dados [SQL Server], segurança"
+title: "Exemplo: configurar o espelhamento de banco de dados com a Autenticação do Windows (T-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- Windows authentication [SQL Server]
+- authentication [SQL Server], database mirroring
+- database mirroring [SQL Server], security
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d5fafa948d63eae3402e6d5b14587170f3675a56
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Exemplo: Configurando o espelhamento de banco de dados usando a Autentica&#231;&#227;o do Windows (Transact-SQL)
-  Este exemplo mostra todas as fases necessárias para criar uma sessão de espelhamento de banco de dados com uma testemunha, usando a Autenticação do Windows. Os exemplos deste tópico usam o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Note que como uma alternativa para o uso de passos de [!INCLUDE[tsql](../../includes/tsql-md.md)], você pode usar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados para a configuração do espelhamento de banco de dados. Para obter mais informações, veja [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md).  
+# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>Exemplo: Configurando o espelhamento de banco de dados usando a Autenticação do Windows (Transact-SQL)
+  Este exemplo mostra todas as fases necessárias para criar uma sessão de espelhamento de banco de dados com uma testemunha, usando a Autenticação do Windows. Os exemplos deste tópico usam o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Note que como uma alternativa para o uso de passos de [!INCLUDE[tsql](../../includes/tsql-md.md)], você pode usar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados para a configuração do espelhamento de banco de dados. Para obter mais informações, veja [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
-## Pré-requisito  
+## <a name="prerequisite"></a>Pré-requisito  
  O exemplo usa o banco de dados de exemplo do **AdventureWorks** , que, por padrão, usa o modelo de recuperação simples. Para usar espelhamento de banco de dados com este banco de dados, você deve alterar isso para usar o modelo de recuperação completa. Para fazer isto em [!INCLUDE[tsql](../../includes/tsql-md.md)], use a instrução ALTER DATABASE, como se segue:  
   
 ```  
@@ -37,10 +42,10 @@ GO
   
  Para saber mais sobre como alterar o modelo de recuperação no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte [Exibir ou alterar o modelo de recuperação de um banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
-### Permissões  
+### <a name="permissions"></a>Permissões  
  Exige a permissão ALTER no banco de dados e permissão CREATE ENDPOINT ou associação na função de servidor fixa **sysadmin** .  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  Neste exemplo, os dois parceiros e a testemunha são as instâncias de servidor padrão em três sistemas de computador. As três instâncias de servidor executam o mesmo domínio do Windows, mas a conta do usuário (usada como conta de serviço de inicialização) é diferente para a instância de servidor testemunha do exemplo.  
   
  A tabela a seguir resume os valores usados neste exemplo.  
@@ -114,7 +119,7 @@ GO
     GO  
     ```  
   
-4.  Crie o banco de dados espelho. Para obter mais informações, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+4.  Crie o banco de dados espelho. Para obter mais informações, veja [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 5.  Na instância de servidor espelho em PARTNERHOST5, defina a instância de servidor em PARTNERHOST1 como o parceiro (fazendo dele a instância de servidor principal inicial).  
   
@@ -146,21 +151,22 @@ GO
   
 -   [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
--   [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+-   [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
 -   [Configurar um banco de dados espelho para usar a propriedade confiável &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
--   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)  
+-   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
--   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)  
+-   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [Exemplo: Configurando o espelhamento de banco de dados usando certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
- [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md)   
+ [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+ [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
+

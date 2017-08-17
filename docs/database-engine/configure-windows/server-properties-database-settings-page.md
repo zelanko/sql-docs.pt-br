@@ -1,27 +1,32 @@
 ---
-title: "Propriedades do Servidor (p&#225;gina Configura&#231;&#245;es de Banco de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.databasesettings.f1"
+title: "Propriedades do servidor (página Configurações do Banco de Dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17e75c3b87403fc9d27fccdc27464a1470d71743
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriedades do Servidor (p&#225;gina Configura&#231;&#245;es de Banco de Dados)
+# <a name="server-properties---database-settings-page"></a>Propriedades do servidor – página Configurações do Banco de Dados
   Use esta página para exibir ou modificar suas configurações de banco de dados.  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Fator de preenchimento padrão do índice**  
  Especifica o quanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve preencher cada página ao criar um índice novo usando dados existentes. O fator de preenchimento afeta o desempenho porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisa de tempo para dividir páginas quando elas está cheias.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 32
  Fornece um padrão de função de sistema durante a retenção de cada meio de backup depois que ele tenha sido usado para um backup de banco de dados ou backup de log de transações. Essa opção ajuda a proteger os backups para que não sejam substituídos até que o número especificado de dias tenha se passado.  
   
  **Compactar backup**  
- No [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou versões posteriores), indica a configuração atual da opção **padrão de compactação de backup**. Essa opção determina o padrão do nível de servidor para backups compactados, como segue:  
+ No [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou versões posteriores), indica a configuração atual da opção **padrão de compactação de backup** . Essa opção determina o padrão do nível de servidor para backups compactados, como segue:  
   
 -   Se a caixa **Compactar backup** estiver em branco, novos backups são descompactados por padrão.  
   
@@ -70,8 +75,8 @@ caps.handback.revision: 32
  **Executando Valores**  
  Exiba os valores que estão sendo executados para as opções neste painel. Esses valores são somente leitura.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [Especificar fator de preenchimento para um índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
+ [Especificar o fator de preenchimento para um índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   
   

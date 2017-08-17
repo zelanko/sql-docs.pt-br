@@ -1,32 +1,37 @@
 ---
-title: "Op&#231;&#227;o lightweight pooling de configura&#231;&#227;o de Servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "lightweight pooling padrão"
-  - "diminuindo sobrecarga"
-  - "opção lightweight pooling"
-  - "sobrecarga do sistema [SQL Server]"
-  - "desempenho [SQL Server], lightweight pooling"
-  - "alternância de contexto [SQL Server], opção lightweight pooling"
-  - "alternância de contexto excessiva [SQL Server]"
-  - "reduzindo sobrecarga"
-  - "sobrecarga [SQL Server]"
+title: "Opção de configuração de servidor lightweight pooling | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default lightweight pooling
+- decreasing overhead
+- lightweight pooling option
+- system overhead [SQL Server]
+- performance [SQL Server], lightweight pooling
+- context switching [SQL Server], lightweight pooling option
+- excessive context switching [SQL Server]
+- reducing overhead
+- overhead [SQL Server]
 ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c82f1c64430cd45299b9378f86c6670841de2707
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Op&#231;&#227;o lightweight pooling de configura&#231;&#227;o de Servidor
+# <a name="lightweight-pooling-server-configuration-option"></a>Opção lightweight pooling de configuração de Servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Use a opção **lightweight pooling** para fornecer meios para reduzir a sobrecarga do sistema associada à alternância excessiva de contexto que ocorre às vezes em ambientes SMP (multiprocessamento simétrico). Quando há alternância excessiva de contexto, o lightweight pooling pode fornecer melhor transferência realizando a alternância de contexto embutido, ajudando assim a reduzir as transições de chamadas entre o usuário e o kernel.  
@@ -43,10 +48,11 @@ caps.handback.revision: 31
 > [!NOTE]  
 >  Não há suporte para a execução de CLR (common language runtime) com lightweight pooling. Desabilite uma das duas opções: “clr enabled” ou “lightweight pooling”. Alguns dos recursos que dependem de CLR e não funcionam corretamente no modo fibra incluem o tipo de dados de hierarquia, a replicação e Gerenciamento Baseado em Políticas.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opção clr enabled de configuração de servidor](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Opção clr enabled de configuração de servidor](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)  
+ [Opção de configuração do servidor clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)  
   
   
+

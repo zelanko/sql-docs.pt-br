@@ -1,40 +1,36 @@
 ---
-title: "Especificar um endere&#231;o de rede do servidor (Espelhamento de banco de dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espelhamento de banco de dados [SQL Server], implantação"
-  - "espelhamento de banco de dados [SQL Server], ponto de extremidade"
-  - "pontos de extremidade, [SQL Server], espelhamento de banco de dados"
-  - "endereços de rede de servidor [SQL Server]"
+title: "Especificar um endereço de rede do servidor (espelhamento de banco de dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- database mirroring [SQL Server], endpoint
+- endpoints [SQL Server], database mirroring
+- server network addresses [SQL Server]
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 92b34f32f94e24e98c331f726cd15fe96361784c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Especificar um endere&#231;o de rede do servidor (Espelhamento de banco de dados)
+# <a name="specify-a-server-network-address-database-mirroring"></a>Especificar um endereço de rede do servidor (Espelhamento de banco de dados)
   A configuração de uma sessão de espelhamento de banco de dados requer um endereço de rede de servidor para cada uma das instâncias de servidor. O endereço de rede de servidor de uma instância de servidor deve identificar a instância de forma inequívoca fornecendo um endereço de sistema e número de porta na qual a instância está escutando.  
   
- Antes de você poder especificar uma porta em um endereço de rede de servidor, deve existir o ponto de extremidade do espelhamento de banco de dados na instância de servidor. Para obter mais informações, veja [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+ Antes de você poder especificar uma porta em um endereço de rede de servidor, deve existir o ponto de extremidade do espelhamento de banco de dados na instância de servidor. Para obter mais informações, veja [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
- **Neste tópico:**  
-  
--   [Sintaxe para um endereço de rede de servidor](#Syntax)  
-  
--   [B. Encontrando o nome de domínio completamente qualificado](#FindFqDn)  
-  
--   [Exemplos](#Examples)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
   
 ##  <a name="Syntax"></a> Sintaxe para um endereço de rede de servidor  
  A sintaxe para um endereço de rede de servidor é do formato:  
@@ -55,7 +51,7 @@ caps.handback.revision: 59
   
          *computer_name* **.** *domain_segment*[...**.***domain_segment*]  
   
-         em que *computer_name i* é o nome de rede do computador que executa a instância de servidor e *domain_segment*[...**.***domain_segment*] são as informações restantes de domínio do servidor; por exemplo: `localinfo.corp.Adventure-Works.com`.  
+         em que *computer_name i*é o nome de rede do computador que executa a instância de servidor e *domain_segment*[...**.***domain_segment*] são as informações restantes de domínio do servidor; por exemplo: `localinfo.corp.Adventure-Works.com`.  
   
          O conteúdo e número de segmentos de domínio são determinados dentro da companhia ou organização. Se você não conhecer o nome de domínio completamente qualificado do seu servidor, consulte seu administrador de sistema.  
   
@@ -68,9 +64,9 @@ caps.handback.revision: 59
   
      No endereço de rede de servidor de uma instância de servidor, somente o número da porta associado a seu ponto de extremidade de espelhamento distingue essa instância de qualquer outra instância no computador. A figura a seguir ilustra os endereços de rede de servidor de duas instâncias de servidor em um único computador. A instância padrão usa a porta `7022` e a instância nomeada usa a porta `7033`. O endereço de rede de servidor para estas duas instâncias de servidor é, respectivamente: `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` e `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`. Note que o endereço não contém o nome da instância de servidor.  
   
-     ![Endereços de rede de servidor de uma instância padrão](../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Endereços de rede de servidor de uma instância padrão")  
+     ![Endereços de rede do servidor de uma instância padrão](../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Endereços de rede do servidor de uma instância padrão")  
   
-     Para identificar a porta associada atualmente com o ponto de extremidade de espelhamento de banco de dados de uma instância de servidor, use a seguinte instrução do [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+     Para identificar a porta associada atualmente com o ponto de extremidade de espelhamento de banco de dados de uma instância de servidor, use a seguinte instrução do [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
     ```  
     SELECT type_desc, port FROM sys.tcp_endpoints  
@@ -78,37 +74,37 @@ caps.handback.revision: 59
   
      Encontre a fila cujo valor **type_desc** é "DATABASE_MIRRORING" e use o número da porta correspondente.  
   
-### Exemplos  
+### <a name="examples"></a>Exemplos  
   
-#### A. Usando um nome de sistema  
+#### <a name="a-using-a-system-name"></a>A. Usando um nome de sistema  
  O endereço de rede de servidor a seguir especifica um nome de sistema, `SYSTEM46`e a porta `7022`.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://SYSTEM46:7022';  
 ```  
   
-#### B. Usando um nome de domínio completamente qualificado  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>B. Usando um nome de domínio completamente qualificado  
  O endereço de rede de servidor a seguir especifica um nome de domínio completamente qualificado, `DBSERVER8.manufacturing.Adventure-Works.com`e a porta `7024`.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://DBSERVER8.manufacturing.Adventure-Works.com:7024';  
 ```  
   
-#### C. Usando IPv4  
+#### <a name="c-using-ipv4"></a>C. Usando IPv4  
  O endereço de rede de servidor a seguir especifica um endereço IPv4, `10.193.9.134`e a porta `7023`.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://10.193.9.134:7023';  
 ```  
   
-#### D. Usando IPv6  
+#### <a name="d-using-ipv6"></a>D. Usando IPv6  
  O endereço de servidor de rede a seguir contém um endereço IPv6, `2001:4898:23:1002:20f:1fff:feff:b3a3`, e a porta `7022`.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022';  
 ```  
   
-## B. Encontrando o nome de domínio completamente qualificado  
+## <a name="finding-the-fully-qualified-domain-name"></a>B. Encontrando o nome de domínio completamente qualificado  
  Para encontrar o nome de domínio completamente qualificado de um sistema, no prompt de comando do Windows desse sistema, digite:  
   
  **IPCONFIG /ALL**  
@@ -140,7 +136,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
 -   [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   

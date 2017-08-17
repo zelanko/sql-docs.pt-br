@@ -1,25 +1,30 @@
 ---
-title: "Abrir o Administrador de Fonte de Dados ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/07/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Administrador de Fonte de Dados ODBC"
-  - "abrindo o Administrador de Fonte de Dados ODBC"
+title: Abrir o Administrador de fonte de dados ODBC | Microsoft Docs
+ms.custom: 
+ms.date: 11/07/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ODBC Data Source Administrator
+- opening ODBC Data Source Administrator
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1fd0e266e1b233d23f299aa5248fc015d98efb8
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Abrir o Administrador de Fonte de Dados ODBC
+# <a name="open-the-odbc-data-source-administrator"></a>Abrir o Administrador de Fonte de Dados ODBC
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Este tópico descreve como abrir o Administrador de Fonte de Dados ODBC. O Administrador de Fonte de Dados ODBC é um componente do Windows. Use o Administrador de Fonte de Dados ODBC para criar e gerenciar fontes de dados ODBC.  
@@ -28,7 +33,7 @@ caps.handback.revision: 16
 
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-10"></a>Para abrir o Administrador de Fonte de Dados ODBC no Windows 10   
 
-1.  Na página **Iniciar**, digite **Fontes de Dados ODBC**. O *Aplicativo para Destop de Fontes de Dados ODBC* deve aparecer como uma opção. 
+1.  Na página **Iniciar** , digite **Fontes de Dados ODBC**. O *Aplicativo para Destop de Fontes de Dados ODBC* deve aparecer como uma opção. 
 
   
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-7"></a>Para abrir o Administrador de Fonte de Dados ODBC no Windows 7  
@@ -52,3 +57,4 @@ caps.handback.revision: 16
  [Verificar a versão do driver ODBC do SQL Server &#40;Windows&#41;](../../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md)  
   
   
+

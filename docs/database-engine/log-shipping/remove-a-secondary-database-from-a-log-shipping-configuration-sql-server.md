@@ -1,28 +1,33 @@
 ---
-title: "Remova um banco de dados secund&#225;rio de uma configura&#231;&#227;o de envio de logs (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "excluindo bancos de dados secundários"
-  - "bancos de dados secundários [SQL Server], no envio de logs"
-  - "removendo bancos de dados secundários"
-  - "arquivos de dados secundários [SQL Server], removendo"
-  - "envio de logs [SQL Server], banco de dados secundários"
+title: "Remover um banco de dados secundário de uma configuração de envio de logs (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deleting secondary databases
+- secondary databases [SQL Server], in log shipping
+- removing secondary databases
+- secondary data files [SQL Server], removing
+- log shipping [SQL Server], secondary databases
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
 caps.latest.revision: 19
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 9c0ced4d63693c2d299556a28796e55fccbcc2b5
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Remova um banco de dados secund&#225;rio de uma configura&#231;&#227;o de envio de logs (SQL Server)
+# <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>Remova um banco de dados secundário de uma configuração de envio de logs (SQL Server)
   Este tópico descreve como remover um banco de dados secundário de envio de logs no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -44,11 +49,11 @@ caps.handback.revision: 19
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Os procedimentos armazenados de envio de logs exigem a associação à função de servidor fixa **sysadmin**.  
+ Os procedimentos armazenados de envio de logs exigem a associação à função de servidor fixa **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para remover um banco de dados secundário de envio de logs  
+#### <a name="to-remove-a-log-shipping-secondary-database"></a>Para remover um banco de dados secundário de envio de logs  
   
 1.  Conecte à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é no momento o servidor primário para envio de logs e expanda essa instância.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para remover um banco de dados secundário  
+#### <a name="to-remove-a-secondary-database"></a>Para remover um banco de dados secundário  
   
 1.  No servidor primário, execute [sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md) para excluir as informações sobre o banco de dados secundário do servidor primário.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 19
     > [!NOTE]  
     >  Se não houver outro banco de dados secundário com a mesma ID secundária, **sp_delete_log_shipping_secondary_primary** será invocado de **sp_delete_log_shipping_secondary_database** e excluirá a entrada da ID secundária e os trabalhos de cópia e restauração.  
   
-3.  No servidor secundário, desabilite os trabalhos de cópia e restauração. Para obter mais informações, consulte [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
+3.  No servidor secundário, desabilite os trabalhos de cópia e restauração. Para obter mais informações, consulte [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 19
   
 -   [Executar failover para um secundário de envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Tabelas de envio de log e procedimentos armazenados](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

@@ -1,26 +1,31 @@
 ---
-title: "Configurar as op&#231;&#245;es de configura&#231;&#227;o de servidor user connections | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "padrões globais para todos os usuários [SQL Server]"
-  - "usuários [SQL Server], padrões globais"
-  - "opção user options [SQL Server]"
+title: "Configurar a opção de configuração de servidor user options | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- global default for all users [SQL Server]
+- users [SQL Server], global defaults
+- user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a801f77059d2aa6bacd89901c63f80dcc91bf84a
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar as op&#231;&#245;es de configura&#231;&#227;o de servidor user connections
+# <a name="configure-the-user-options-server-configuration-option"></a>Configurar as opções de configuração de servidor user connections
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como configurar a opção de configuração de servidor **user options** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **user options** especifica padrões globais para todos os usuários. Uma lista de opções de processamento de consulta padrão é definida para a duração da sessão de trabalho de um usuário. A opção **user options** permite alterar os valores padrão das opções SET (se as configurações padrão do servidor não forem apropriadas).  
@@ -67,7 +72,7 @@ caps.handback.revision: 25
     |8192|NUMERIC_ROUNDABORT|Gera um erro quando ocorre perda de precisão em uma expressão.|  
     |16384|XACT_ABORT|Reverte uma transação se uma instrução Transact-SQL ativar um erro em tempo de execução.|  
   
--   As posições de bit em **user options** são idênticas àquelas em @@OPTIONS. Cada conexão tem sua própria função @@OPTIONS que representa o ambiente de configuração. Ao fazer logon em uma instância do \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um usuário recebe um ambiente padrão que atribui o valor de **user options** atual a @@OPTIONS. Executar instruções SET para **user options** afeta o valor correspondente na função @@OPTIONS da sessão. Todas as conexões criadas depois que essa configuração foi alterada recebem o novo valor.  
+-   As posições de bit em **user options** são idênticas àquelas em @@OPTIONS. Cada conexão tem sua própria função @@OPTIONS, que representa o ambiente de configuração. Ao fazer logon em uma instância do \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um usuário recebe um ambiente padrão que atribui o valor atual de **user options** a @@OPTIONS. A execução de instruções SET para **user options** afeta o valor correspondente na função @@OPTIONS da sessão. Todas as conexões criadas depois que essa configuração foi alterada recebem o novo valor.  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -76,19 +81,19 @@ caps.handback.revision: 25
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para configurar a opção de configuração user options:  
+#### <a name="to-configure-the-user-options-configuration-option"></a>Para configurar a opção de configuração user options:  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor e selecione **Propriedades**.  
   
 2.  Clique no nó **Conexões** .  
   
-3.  Na caixa **Opções de conexão padrão**, selecione um ou mais atributos para configurar as opções de processamento de consulta padrão para todos os usuários conectados.  
+3.  Na caixa **Opções de conexão padrão** , selecione um ou mais atributos para configurar as opções de processamento de consulta padrão para todos os usuários conectados.  
   
      Por padrão, nenhuma opção de usuário está configurada.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para configurar a opção de configuração user options:  
+#### <a name="to-configure-the-user-options-configuration-option"></a>Para configurar a opção de configuração user options:  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -109,10 +114,11 @@ GO
 ##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção de configuração user options  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
+

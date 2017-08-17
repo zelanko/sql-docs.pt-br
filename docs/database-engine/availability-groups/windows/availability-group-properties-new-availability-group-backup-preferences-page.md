@@ -1,35 +1,40 @@
 ---
-title: "Propriedades de grupo de disponibilidade: novo grupo de disponibilidade (p&#225;gina Prefer&#234;ncias de Backup) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroupproperties.backuppreferences.f1"
-helpviewer_keywords: 
-  - "roteamento somente leitura"
+title: "Propriedades: Novo Grupo de Disponibilidade (página Preferências de Backup) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroupproperties.backuppreferences.f1
+helpviewer_keywords:
+- read-only routing
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 caps.latest.revision: 7
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c1eccc3d7673f6c8e7f127deda45e9f409447585
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriedades de grupo de disponibilidade: novo grupo de disponibilidade (p&#225;gina Prefer&#234;ncias de Backup)
+# <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>Propriedades de grupo de disponibilidade: novo grupo de disponibilidade (página Preferências de Backup)
   Use esta caixa de diálogo para exibir e alterar as preferências de backup do grupo de disponibilidade selecionado.  
   
  **Para exibir as propriedades do grupo de disponibilidade**  
   
 -   [Exibir as propriedades do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  
   
--   [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](../Topic/Use%20the%20Always On%20Dashboard%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](~/database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## Onde devem ocorrer os backups?  
+## <a name="where-should-backups-occur"></a>Onde devem ocorrer os backups?  
  **Preferir Secundário**  
  Especifica que os backups devem ocorrer em uma réplica secundária, exceto quando a réplica primária for a única réplica online. Nesse caso, o backup deve ocorrer na réplica primária. Essa é a opção padrão.  
   
@@ -43,9 +48,9 @@ caps.handback.revision: 7
  Especifica que você prefere que trabalhos de backup ignorem a função das réplicas de disponibilidade ao escolher a réplica para executar backups. Observe que os trabalhos de backup podem avaliar outros fatores, como prioridade de backup de cada réplica de disponibilidade em combinação com seu estado operacional e estado conectado.  
   
 > [!IMPORTANT]  
->  Não há nenhuma imposição da configuração de preferência de backup. A interpretação dessa preferência depende da lógica, se houver, que você usa para o script em trabalhos de backup para os bancos de dados em um determinado grupo de disponibilidade. Para obter mais informações, consulte [Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade AlwaysOn&#41;](../Topic/Active%20Secondaries:%20Backup%20on%20Secondary%20Replicas%20\(Always On%20Availability%20Groups\).md).  
+>  Não há nenhuma imposição da configuração de preferência de backup. A interpretação dessa preferência depende da lógica, se houver, que você usa para o script em trabalhos de backup para os bancos de dados em um determinado grupo de disponibilidade. Para obter mais informações, consulte [Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
-## Prioridades de backup de réplica  
+## <a name="replica-backup-priorities"></a>Prioridades de backup de réplica  
  Esta grade exibe a prioridade de backup atual de cada instância de servidor que hospeda uma réplica para o grupo de disponibilidade. Use essa grade para alterar a prioridade de backup de uma ou mais réplicas de disponibilidade.  
   
  **Instância do Servidor**  
@@ -57,8 +62,10 @@ caps.handback.revision: 7
  **Excluir Réplica**  
  Selecione se desejar que esta réplica de disponibilidade nunca seja escolhida para executar backups. Isso é útil, por exemplo, para uma réplica de disponibilidade remota para a qual você nunca deseja que ocorra o failover de backups.  
   
-## Consulte também  
- [Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade AlwaysOn&#41;](../Topic/Active%20Secondaries:%20Backup%20on%20Secondary%20Replicas%20\(Always On%20Availability%20Groups\).md)   
+## <a name="see-also"></a>Consulte também  
+ [Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
+
+

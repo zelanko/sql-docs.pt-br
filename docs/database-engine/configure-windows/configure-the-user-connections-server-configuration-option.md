@@ -1,33 +1,38 @@
 ---
-title: "Configurar a op&#231;&#227;o de configura&#231;&#227;o de servidor user connections | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "conexões simultâneas [SQL Server]"
-  - "opção user connections [SQL Server]"
-  - "usuários [SQL Server], conexões simultâneas"
-  - "número máximo de conexões de usuário simultâneas"
-  - "conexões [SQL Server], simultâneas"
+title: "Configurar a opção de configuração de servidor user connections | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- simultaneous connections [SQL Server]
+- user connections option [SQL Server]
+- users [SQL Server], simultaneous connections
+- maximum number of simultaneous user connections
+- connections [SQL Server], simultaneous
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 64d4e5e4e8cf6a2c278c9c7dc51443a28eaeedcf
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar a op&#231;&#227;o de configura&#231;&#227;o de servidor user connections
+# <a name="configure-the-user-connections-server-configuration-option"></a>Configurar a opção de configuração de servidor user connections
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como definir a opção de configuração de servidor **user connections** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **user connections** especifica o número máximo de conexões de usuário simultâneas permitido em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O número real de conexões de usuário permitidas depende também da versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você está usando e dos limites de seu aplicativo ou aplicativos e hardware. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite um máximo de 32.767 conexões de usuário. Como **conexões de usuário** é uma opção dinâmica (autoconfigurável), o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajusta o número máximo de conexões de usuário automaticamente conforme o necessário, até o valor máximo permitido. Por exemplo, se somente 10 usuários estiverem conectados, 10 objetos de conexão de usuário serão alocados. Na maioria dos casos, não é necessário alterar o valor dessa opção. O padrão é 0, o que significa que as permitidas conexões máximas (32,767) de usuário são permitidas.  
   
- Para determinar o número máximo de conexões de usuário que seu sistema permite, você pode executar [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ou pode consultar a exibição de catálogo [sys.configuration](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).  
+ Para determinar o número máximo de conexões de usuário que seu sistema permite, você pode executar [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ou pode consultar a exibição de catálogo [sys.configuration](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) .  
   
  **Neste tópico**  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 29
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para configurar a opção user connections  
+#### <a name="to-configure-the-user-connections-option"></a>Para configurar a opção user connections  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor e clique em **Propriedades**.  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para configurar a opção user connections  
+#### <a name="to-configure-the-user-connections-option"></a>Para configurar a opção user connections  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -102,9 +107,10 @@ GO
 ##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção user connections  
  O servidor deve ser reiniciado para que a configuração entre em vigor.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

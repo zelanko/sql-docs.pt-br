@@ -1,26 +1,31 @@
 ---
-title: "Espelhamento de banco de dados e instant&#226;neos de banco de dados (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espelhamento de banco de dados [SQL Server], interoperabilidade"
-  - "instantâneos [instantâneos do banco de dados do SQL Server], espelhamento de banco de dados"
-  - "instantâneos do banco de dados, [SQL Server], espelhamento de banco de dados"
+title: "Espelhamento de banco de dados e instantâneos do banco de dados (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], interoperability
+- snapshots [SQL Server database snapshots], database mirroring
+- database snapshots [SQL Server], database mirroring
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 32381132f193eae0c3ecae20247d36dcefb8f658
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Espelhamento de banco de dados e instant&#226;neos de banco de dados (SQL Server)
+# <a name="database-mirroring-and-database-snapshots-sql-server"></a>Espelhamento de banco de dados e instantâneos de banco de dados (SQL Server)
   Você pode tirar proveito de um banco de dados espelho que você está mantendo para fins de disponibilidade para descarregar relatórios. Para usar um banco de dados espelho para relatórios, você pode criar um instantâneo do banco de dados no banco de dados espelho e direcionar as solicitações de conexão de clientes para o instantâneo mais recente. Um instantâneo do banco de dados é um instantâneo consistente de transações, estático e somente leitura de seu banco de dados de origem tal como ele estava no momento da criação do instantâneo. Para criar um instantâneo do banco de dados em um banco de dados espelho, o banco de dados precisa estar no estado de espelhamento sincronizado.  
   
  Ao contrário do próprio banco de dados espelho, um instantâneo do banco de dados está acessível aos clientes. Contanto que o servidor espelho esteja se comunicando com o servidor principal, você pode dirigir os clientes que estejam inserindo informações para que se conectem a um instantâneo. Observe que devido ao fato de o instantâneo do banco de dados ser estático, os novos dados não estão disponíveis. Para tornar dados relativamente recentes disponíveis a seus usuários, você precisa criar periodicamente um novo instantâneo do banco de dados e fazer com que os aplicativos dirijam as conexões de entrada de clientes para o instantâneo mais recente.  
@@ -35,10 +40,10 @@ caps.handback.revision: 40
 > [!NOTE]  
 >  Para uma solução de relatórios dedicada que seja bem dimensionável, pense em replicação. Para obter mais informações, consulte [Replicação do SQL Server](../../relational-databases/replication/sql-server-replication.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  Esse exemplo cria instantâneos em um banco de dados espelho.  
   
- Suponha que o banco de dados de uma sessão de espelhamento de banco de dados seja [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Esse exemplo cria três instantâneos do banco de dados na cópia espelhada do banco de dados `AdventureWorks` que está na unidade `F`. Os instantâneos são nomeados `AdventureWorks_0600`, `AdventureWorks_1200` e `AdventureWorks_1800` para identificar seu horário aproximado de criação.  
+ Suponha que o banco de dados de uma sessão de espelhamento de banco de dados seja [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Esse exemplo cria três instantâneos do banco de dados na cópia espelhada do banco de dados `AdventureWorks` que está na unidade `F` . Os instantâneos são nomeados `AdventureWorks_0600`, `AdventureWorks_1200`e `AdventureWorks_1800` para identificar seu horário aproximado de criação.  
   
 1.  Crie o primeiro instantâneo do banco de dados no espelho de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
@@ -76,9 +81,8 @@ caps.handback.revision: 40
   
 -   [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [&#91;Início&#93;](#Top)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Instantâneos de banco de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [Conectar clientes a uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
   

@@ -1,25 +1,30 @@
 ---
-title: "Op&#231;&#227;o de configura&#231;&#227;o de servidor XPs SMO e DMO | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Opção de configuração de servidor SMO and DMO XPs | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bcd945ba-5d81-4124-9a2b-d87491c2a369
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccd3457a8081eea7d57c9c3d673adf2b3fb6db07
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Op&#231;&#227;o de configura&#231;&#227;o de servidor XPs SMO e DMO
+# <a name="smo-and-dmo-xps-server-configuration-option"></a>Opção de configuração de servidor XPs SMO e DMO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Use a opção SMO e DMO XPs para habilitar os procedimentos armazenados estendidos do SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object) neste servidor.  
+  Use a opção SMO e DMO XPs para habilitar os procedimentos armazenados estendidos do SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object) neste servidor.  
   
  Observe que começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o DMO foi removido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 15
   
  A configuração é efetuada imediatamente.  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  O exemplo a seguir habilita os procedimentos armazenados estendidos do SMO.  
   
 ```  
@@ -46,7 +51,8 @@ RECONFIGURE
 GO  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Guia de Programação do SMO &#40;SQL Server Management Objects&#41;](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   
+

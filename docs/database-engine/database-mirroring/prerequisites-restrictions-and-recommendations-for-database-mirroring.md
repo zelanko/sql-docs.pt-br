@@ -1,54 +1,47 @@
 ---
-title: "Pr&#233;-requisitos, restri&#231;&#245;es e recomenda&#231;&#245;es para espelhamento de banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espelhamento de banco de dados [SQL Server], implantação"
-  - "parceiros [SQL Server]"
-  - "espelhamento de banco de dados [SQL Server], pré-requisitos"
-  - "espelhamento de banco de dados [SQL Server], recomendações"
-  - "espelhamento de banco de dados [SQL Server], restrições"
-  - "espelhamento de banco de dados [SQL Server], planejamento"
-  - "espelhamento do banco de dados [SQL Server], sobre o espelhamento do banco de dados"
+title: "Pré-requisitos, restrições e recomendações para o espelhamento de banco de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- partners [SQL Server]
+- database mirroring [SQL Server], prerequisites
+- database mirroring [SQL Server], recommendations
+- database mirroring [SQL Server], restrictions
+- database mirroring [SQL Server], planning
+- database mirroring [SQL Server], about database mirroring
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 caps.latest.revision: 55
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d07bee6a462ed184e7bceabb4edcf7903110fd26
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Pr&#233;-requisitos, restri&#231;&#245;es e recomenda&#231;&#245;es para espelhamento de banco de dados
+# <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Pré-requisitos, restrições e recomendações para espelhamento de banco de dados
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
  Este tópico descreve os pré-requisitos e as recomendações para configuração do espelhamento de banco de dados. Para obter uma introdução ao espelhamento de banco de dados, consulte [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- **Neste tópico:**  
-  
--   [Suporte para espelhamento de banco de dados](#DbmSupport)  
-  
--   [Pré-requisitos](#Prerequisites)  
-  
--   [Restrições](#Restrictions)  
-  
--   [Recomendações para configuração de servidores de parceiro](#RecommendationsForPartners)  
-  
--   [Recomendações para implantação de espelhamento de banco de dados](#RecommendationsForDeploying)  
   
 ##  <a name="DbmSupport"></a> Suporte para espelhamento de banco de dados  
- Para obter mais informações sobre o suporte para espelhamento de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], veja [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Para obter mais informações sobre o suporte para o espelhamento de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte [Edições e recursos com suporte do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   
- Observe que o espelhamento de banco de dados funciona com qualquer nível de compatibilidade de banco de dados com suporte. Para obter informações sobre os níveis de compatibilidade com suporte, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ Observe que o espelhamento de banco de dados funciona com qualquer nível de compatibilidade de banco de dados com suporte. Para obter informações sobre os níveis de compatibilidade com suporte, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
- [&#91;Início&#93;](#Top)  
   
 ##  <a name="Prerequisites"></a> Pré-requisitos  
   
@@ -71,7 +64,6 @@ caps.handback.revision: 54
     > [!IMPORTANT]  
     >  Se o espelhamento de banco de dados for interrompido, antes que você possa reiniciá-lo, todos os backups de logs subsequentes do banco de dados principal deverão ser aplicados ao banco de dados espelho.  
   
- [&#91;Início&#93;](#Top)  
   
 ##  <a name="Restrictions"></a> Restrições  
   
@@ -81,9 +73,8 @@ caps.handback.revision: 54
   
 -   O espelhamento de banco de dados não oferece suporte a FILESTREAM. Um grupo de arquivos FILESTREAM não pode ser criado no servidor principal. O espelhamento de banco de dados não pode ser configurado para um banco de dados que contenha grupos de arquivos FILESTREAM.  
   
--   Não há suporte para espelhamento de banco de dados com transações de banco de dados cruzado ou transações distribuídas. Para obter mais informações, consulte [Transações entre bancos de dados e transações distribuídas para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions - always on availability and database mirroring.md).  
+-   Não há suporte para espelhamento de banco de dados com transações de banco de dados cruzado ou transações distribuídas. Para obter mais informações, consulte [Transações entre bancos de dados e transações distribuídas para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
- [&#91;Início&#93;](#Top)  
   
 ##  <a name="RecommendationsForPartners"></a> Recomendações para configuração de servidores de parceiro  
   
@@ -105,7 +96,6 @@ caps.handback.revision: 54
   
 -   Não fazemos nenhuma recomendação sobre a confiabilidade de uma WAN (rede de longa distância) para espelhamento de banco de dados no modo de alta segurança. Se você decidir usar o modo de alta segurança em uma WAN, cuidado ao adicionar uma testemunha à sessão, porque podem ocorrer failovers automáticos indesejados. Para obter mais informações, veja [Recomendações para implantação de espelhamento de banco de dados](#RecommendationsForDeploying), posteriormente neste tópico.  
   
- [&#91;Início&#93;](#Top)  
   
 ##  <a name="RecommendationsForDeploying"></a> Recomendações para implantação de espelhamento de banco de dados  
  Um desempenho ideal de espelhamento de banco de dados é obtido usando uma operação assíncrona. Uma sessão de espelhamento que usa operação síncrona pode experimentar desempenho reduzido quando sua carga de trabalho gerar grandes quantidades de dados de log de transações.  
@@ -125,12 +115,12 @@ caps.handback.revision: 54
   
 3.  Aguarde para habilitar o failover automático até que esteja confiante de que o modo de alta segurança sem failover automático esteja atendendo às necessidades comerciais e que os erros de rede não estejam provocando falhas. Para obter mais informações, veja [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
- [&#91;Início&#93;](#Top)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+ [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Solução de problemas de configuração de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   
+

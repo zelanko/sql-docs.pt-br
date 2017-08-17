@@ -1,24 +1,29 @@
 ---
-title: "Atualiza&#231;&#227;o do envio de logs para SQL Server 2016 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "envio de logs [SQL Server], atualização"
+title: Fazendo upgrade do envio de logs para o SQL Server 2016 (Transact-SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 02/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], upgrading
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 caps.latest.revision: 59
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 05c650a9f5929704a512b28033d6f06f54415a26
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Atualiza&#231;&#227;o do envio de logs para SQL Server 2016 (Transact-SQL)
+# <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Atualização do envio de logs para SQL Server 2016 (Transact-SQL)
   Ao atualizar de uma configuração de envio de logs do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma nova versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , um novo service pack do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou uma atualização cumulativa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a atualização de seus servidores de envio de log na ordem apropriada preservará sua solução de recuperação de desastres de envio de log.  
   
 > [!NOTE]  
@@ -45,7 +50,7 @@ caps.handback.revision: 59
   
 -   [Planejar e testar o plano de atualização do mecanismo de banco de dados](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): examine as notas de versão e os problemas conhecidos da atualização, a lista de verificação pré-atualização, e desenvolva e teste o plano de atualização.  
   
--   [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md): examine os requisitos de software para a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Se for necessário um software adicional, instale-o em cada nó antes de começar o processo de atualização para minimizar qualquer tempo de inatividade.  
+-   [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): examine os requisitos de software para a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Se for necessário um software adicional, instale-o em cada nó antes de começar o processo de atualização para minimizar qualquer tempo de inatividade.  
   
 ##  <a name="ProtectData"></a> Proteja os dados antes da atualização  
  Como uma prática recomendada, sugerimos que você proteja seus dados antes de uma atualização de envio de logs.  
@@ -85,11 +90,12 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  O envio de log também dá suporte à opção [Executar failover para um secundário de envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) e, opcionalmente, [Alterar funções entre servidores de envio de log primários e secundários &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md). No entanto, como o envio de logs raramente é configurado como uma solução de alta disponibilidade (opções mais recentes são muito mais robustas), o failover geralmente não reduzirá o tempo de inatividade, pois os objetos de banco de dados do sistema não serão sincronizados, e permitir que os clientes localizem e se conectem facilmente a um secundário promovido pode ser um trabalho difícil.  
   
-## Consulte também  
- [Atualizar para o SQL Server 2016 usando o Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)   
+## <a name="see-also"></a>Consulte também  
+ [Atualizar para o SQL Server 2016 usando o Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Instalar o SQL Server 2016 do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Configurar o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)   
  [Monitorar o envio de logs &#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)   
  [Tabelas de envio de log e procedimentos armazenados](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   
+

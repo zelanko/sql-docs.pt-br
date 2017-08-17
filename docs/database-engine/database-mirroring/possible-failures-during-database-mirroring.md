@@ -1,30 +1,35 @@
 ---
-title: "Poss&#237;veis falhas durante espelhamento de banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "período de tempo limite [espelhamento de banco de dados do SQL Server]"
-  - "erros recuperáveis [SQL Server]"
-  - "espelhamento de banco de dados [SQL Server], solução de problemas"
-  - "erros de tempo limite [SQL Server]"
-  - "solução de problemas, [SQL Server], espelhamento de banco de dados"
-  - "erros de hardware"
-  - "sessões de espelhamento de banco de dados com falhas [SQL Server]"
+title: "Possíveis falhas durante o espelhamento de banco de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time-out period [SQL Server database mirroring]
+- soft errors [SQL Server]
+- database mirroring [SQL Server], troubleshooting
+- timeout errors [SQL Server]
+- troubleshooting [SQL Server], database mirroring
+- hard errors
+- failed database mirroring sessions [SQL Server]
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 caps.latest.revision: 59
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 8c97371185c1fe7bdd38c7ed172d5a49ae27b58c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Poss&#237;veis falhas durante espelhamento de banco de dados
+# <a name="possible-failures-during-database-mirroring"></a>Possíveis falhas durante espelhamento de banco de dados
   Problemas físicos, do sistema operacional ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem causar uma falha em uma sessão de espelhamento de banco de dados. O espelhamento de banco de dados não verifica regularmente os componentes dos quais o Sqlservr.exe depende para verificar se estão funcionando corretamente ou se houve falha. Porém, para alguns tipos de falhas, o componente afetado informa um erro ao Sqlservr.exe. Um erro informado por outro componente é chamado um *erro de hardware*. Para detectar outras falhas que de outra forma passariam despercebidas, o espelhamento de banco de dados implementa seu próprio mecanismo de tempo limite. Quando ocorre um tempo limite de espelhamento, o espelhamento de banco de dados assume que ocorreu uma falha e declara um *erro de software*. Porém, algumas falhas que acontecem no nível da instância do SQL Server não causam espelhamento para tempo limite e podem não ser detectadas.  
   
 > [!IMPORTANT]  
@@ -32,7 +37,7 @@ caps.handback.revision: 59
   
  A velocidade da detecção de erro e, consequentemente, o tempo de reação da sessão de espelhamento a uma falha depende do tipo de falha: de hardware ou de software. Alguns erros de hardware, como falhas de rede, são informados imediatamente. Porém, em alguns casos, períodos de tempo limite específicos do componente podem atrasar o relatório de alguns erros de hardware. Para erros de software, a duração do período de tempo limite de espelhamento determina a velocidade de detecção de erros. Por padrão, esse período é 10 segundos. Esse é o valor mínimo recomendado.  
   
-## Falhas devido a erros de hardware  
+## <a name="failures-due-to-hard-errors"></a>Falhas devido a erros de hardware  
  As possíveis causas de erros de hardware incluem (mas não se limitam a) as seguintes condições:  
   
 -   Uma conexão ou um cabo interrompido  
@@ -73,7 +78,7 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  O espelhamento não protege contra problemas específicos para clientes que acessam os servidores. Considere, por exemplo, um caso em que um adaptador de rede pública controla as conexões do cliente com a instância do servidor principal, enquanto uma placa de interface de rede privada controla todo o tráfego de espelhamento entre as instâncias do servidor. Nesse caso, uma falha do adaptador de rede pública impediria os clientes de acessarem o banco de dados, embora o banco de dados continuasse a ser espelhado.  
   
-## Falhas devido a erros recuperáveis  
+## <a name="failures-due-to-soft-errors"></a>Falhas devido a erros recuperáveis  
  Condições que poderiam ocasionar tempos-limite de espelhamento incluem (mas não se limitam a) o seguinte:  
   
 -   Erros de rede, como tempos-limite de link de TCP, pacotes descartados ou corrompidos ou pacotes que estão em ordem incorreta.  
@@ -84,7 +89,7 @@ caps.handback.revision: 59
   
 -   Recursos computacionais insuficientes, tais como sobrecarga de uma CPU ou disco, filling up do log de transações ou o sistema está sendo executado sem memória ou threads. Nesses casos, é preciso aumentar o período de tempo limite, reduzir a carga de trabalho ou alterar o hardware para controlar a carga de trabalho.  
   
-### O mecanismo de tempo-limite de espelhamento  
+### <a name="the-mirroring-time-out-mechanism"></a>O mecanismo de tempo-limite de espelhamento  
  Como os erros recuperáveis não são diretamente detectáveis por uma instância do servidor, um erro recuperável poderia potencialmente fazer uma instância do servidor aguardar indefinidamente. Para evitar isso, o espelhamento de banco de dados implementa seu próprio mecanismo de tempo-limite com base em cada instância do servidor em uma sessão de espelhamento enviando um ping em cada conexão aberta em um intervalo fixo.  
   
  Para manter uma conexão aberta, uma instância do servidor deve receber um ping naquela conexão dentro do período de tempo-limite definido, mais o tempo necessário para enviar um ou mais pings. A recepção de um ping durante o período de tempo-limite indica que a conexão ainda está aberta e que as instâncias do servidor estão se comunicando por ela. Ao receber um ping, uma instância do servidor reajusta seu contador de tempo-limite naquela conexão.  
@@ -103,10 +108,10 @@ caps.handback.revision: 59
   
 -   Consulte **mirroring_connection_timeout** em [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
-## Respondendo a um erro  
+## <a name="responding-to-an-error"></a>Respondendo a um erro  
  Independentemente do tipo de erro, uma instância do servidor que detecta um erro responde adequadamente com base na função da instância, no modo de operação da sessão e no estado de qualquer outra conexão na sessão. Para obter informações sobre o que ocorre na perda de um parceiro, consulte [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Estimar a interrupção do serviço durante troca de função &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   

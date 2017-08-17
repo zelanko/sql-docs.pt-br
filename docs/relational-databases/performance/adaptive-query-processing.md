@@ -2,7 +2,7 @@
 title: "Processamento de consultas adaptável em bancos de dados Microsoft SQL | Microsoft Docs | Microsoft Docs"
 description: "Recursos de processamento de consulta adaptável para melhorar o desempenho da consulta no SQL Server (2017 e posteriores) e no Banco de Dados SQL do Azure."
 ms.custom: 
-ms.date: 07/19/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
-ms.openlocfilehash: eff546e84d3f872406136f68a7fdbbd8147175ca
+ms.sourcegitcommit: d6cf5e76f4edac2aed3842870fdb0362b9661802
+ms.openlocfilehash: b609b1895637dd90cc3fc94422012c5bf4b4bd81
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -101,10 +101,10 @@ A consulta retorna 336 linhas.  Habilitando as Estatísticas de consultas dinâm
 ![Resultados da consulta: 336 linhas](./media/4_AQPStats336Rows.png)
 
 No plano, vemos o seguinte:
-- Temos uma verificação de índice columnstore usado para fornecer linhas para a fase de build da junção hash.
-- Temos o novo operador de junção adaptável. Este operador define um limite que é usado para decidir quando alternar para um plano de loops aninhados.  Para o nosso exemplo, o limite é de 78 linhas.  Tudo que for &gt;= 78 linhas usará uma junção hash.  Quando estiver abaixo do limite, uma junção de loops aninhados será usada.
-- Como retornamos 336 linhas, estamos excedendo o limite e, portanto, a segunda branch representa a fase de investigação de uma operação de junção de hash padrão. Observe que as Estatísticas de consultas dinâmicas mostram as linhas que passam pelos operadores – nesse caso, "672 de 672".
-- E a última branch é nossa Busca de índice clusterizado a ser usada pela junção de loops aninhados que não teve o limite excedido. Observe que podemos ver "0 de 336" linhas exibidas (a branch não é usada).
+1. Temos uma verificação de índice columnstore usado para fornecer linhas para a fase de build da junção hash.
+1. Temos o novo operador de junção adaptável. Este operador define um limite que é usado para decidir quando alternar para um plano de loops aninhados.  Para o nosso exemplo, o limite é de 78 linhas.  Tudo que for &gt;= 78 linhas usará uma junção hash.  Quando estiver abaixo do limite, uma junção de loops aninhados será usada.
+1. Como retornamos 336 linhas, estamos excedendo o limite e, portanto, a segunda branch representa a fase de investigação de uma operação de junção de hash padrão. Observe que as Estatísticas de consultas dinâmicas mostram as linhas que passam pelos operadores – nesse caso, "672 de 672".
+1. E a última branch é nossa Busca de índice clusterizado a ser usada pela junção de loops aninhados que não teve o limite excedido. Observe que podemos ver "0 de 336" linhas exibidas (a branch não é usada).
  Agora vamos comparar o plano com a mesma consulta, mas desta vez para um valor de quantidade que só tem uma linha na tabela:
  
 ```sql

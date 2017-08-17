@@ -1,26 +1,31 @@
 ---
-title: "Vis&#227;o geral do SQL Server Monitor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.sqlservermonitor.main.f1"
-helpviewer_keywords: 
-  - "SQL Server Monitor [SQL Server]"
+title: "Visão geral do SQL Server Monitor | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.sqlservermonitor.main.f1
+helpviewer_keywords:
+- SQL Server Monitor [SQL Server]
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eab6968a0727d4c04983dcc1129e3a49f9c23ca4
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Vis&#227;o geral do SQL Server Monitor
+# <a name="sql-server-monitor-overview"></a>Visão geral do SQL Server Monitor
   O SQL Server Monitor não realiza funções de monitoramento, mas hospeda módulos que as realizam. Os módulos do SQL Server Monitor incluem o Replication Monitor e o Monitor de Espelhamento de Banco de Dados.  
   
  Para usar um desses módulos, selecione o módulo no menu **Ir** . O módulo presentemente selecionado possui o conteúdo de navegação e os painéis de detalhes, interação de usuário nos painéis de detalhes e as consultas de conteúdo e status.  
@@ -28,7 +33,7 @@ caps.handback.revision: 22
 > [!NOTE]  
 >  Para obter mais informações sobre esses monitores, consulte [Replicação de monitoramento](../../relational-databases/replication/monitor/monitoring-replication-overview.md) e [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md).  
   
-## Permissões  
+## <a name="permissions"></a>Permissões  
   
 -   Replication Monitor  
   
@@ -38,13 +43,13 @@ caps.handback.revision: 22
   
      Para monitorar um espelhamento de banco de dados, é preciso ser membro da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **dbm_monitor** na instância do servidor. Se você for um membro do **sysadmin** ou do **dbm_monitor** em apenas uma das instâncias do servidor parceiro, o monitor poderá se conectar apenas àquele parceiro e não poderá recuperar as informações do outro parceiro. Para obter mais informações, consulte [Database Mirroring Monitor Overview](../../database-engine/database-mirroring/database-mirroring-monitor-overview.md).  
   
-## Menu Opções  
+## <a name="menu-options"></a>Menu Opções  
  O SQL Server Monitor possui um menu que contém comandos que pertencem ao SQL Server Monitor. Esse menu pode igualmente conter comandos do módulo selecionado.  
   
  As opções de menu a seguir pertencem ao SQL Server Monitor.  
   
  **Arquivo**  
- Esse menu contém o comando **Sair**.  
+ Esse menu contém o comando **Sair** .  
   
  **Ação**  
  Contém o menu de contexto do nó selecionado na árvore de navegação.  
@@ -60,7 +65,7 @@ caps.handback.revision: 22
   
 -   [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   
   

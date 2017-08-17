@@ -1,25 +1,30 @@
 ---
-title: "Replica&#231;&#227;o e envio de logs (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "replicando [SQL Server], envio de logs e"
-  - "envio de logs [SQL Server], replicação e"
+title: "Envio de logs e replicação (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], log shipping and
+- log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 caps.latest.revision: 30
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ed95df5cd7c02d5c8c6789dbbcf416a40c279460
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Replica&#231;&#227;o e envio de logs (SQL Server)
+# <a name="log-shipping-and-replication-sql-server"></a>Replicação e envio de logs (SQL Server)
   O envio de logs envolve duas cópias de um único banco de dados que, normalmente, residem em computadores diferentes. Em determinado momento, apenas uma cópia do banco de dados está atualmente disponível aos clientes. Essa cópia é conhecida como o banco de dados primário. As atualizações feitas pelos clientes no banco de dados primário são propagadas por meio do envio de logs para a outra cópia do banco de dados, conhecida como banco de dados secundário. O envio de logs envolve a aplicação de um log de transações de todas as inserções, atualizações ou exclusões feitas no banco de dados primário para o banco de dados secundário.  
   
  O envio de logs pode ser usado em combinação com a replicação, com o seguinte comportamento:  
@@ -33,7 +38,7 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  É recomendável usar espelhamento de banco de dados, em vez de envio de logs, para dar mais disponibilidade ao banco de dados de publicação. Para obter mais informações, consulte [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
-## Requisitos e procedimentos para replicação do secundário caso o primário seja perdido  
+## <a name="requirements-and-procedures-for-replicating-from-the-secondary-if-the-primary-is-lost"></a>Requisitos e procedimentos para replicação do secundário caso o primário seja perdido  
  Lembre-se dos requisitos e considerações a seguir:  
   
 -   Se o primário contiver mais de um banco de dados de publicação, envie os logs de todos os bancos de dados de publicação ao mesmo secundário.  
@@ -44,7 +49,7 @@ caps.handback.revision: 30
   
 -   O envio de logs não oferece garantia contra a perda de dados. Uma falha no banco de dados primário pode resultar na perda de dados para os quais ainda não foi feito o backup ou para backups perdidos durante a falha.  
   
-### Envio de logs com replicação transacional  
+### <a name="log-shipping-with-transactional-replication"></a>Envio de logs com replicação transacional  
  Para replicação transacional, o comportamento do envio de logs depende da opção **sincronizar com backup** . Essa opção pode ser definida no banco de dados de publicação e no banco de dados de distribuição; no envio de logs para o Publicador, apenas a configuração no banco de dados de publicação é relevante.  
   
  Definir essa opção no banco de dados de publicação assegura que as transações não serão entregues ao banco de dados de distribuição até ser realizado o backup do banco de dados de publicação. O último backup do banco de dados de publicação poderá então ser restaurado no servidor secundário sem qualquer possibilidade do banco de dados de distribuição possuir transações que o banco de dados de publicação restaurado não possua. Essa opção garante que se ocorrer failover do Publicador para o servidor secundário, será mantida a consistência entre o Publicador, o Distribuidor e os Assinantes. A latência e a taxa de transferência serão afetadas porque as transações não poderão ser entregues ao banco de dados de distribuição até que tenha sido feito backup no Publicador. É recomendável definir essa opção no banco de dados de publicação caso o seu aplicativo possa tolerar essa latência. Se a opção **sincronizar com backup** ainda não estiver definida, os Assinantes poderão receber alterações que não estão mais incluídas no banco de dados recuperado no servidor secundário. Para obter mais informações, consulte [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
@@ -55,7 +60,7 @@ caps.handback.revision: 30
   
 2.  Configure o envio de logs para o banco de dados de publicação. Para obter mais informações, consulte [Configurar o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
   
-3.  Se ocorrer falha no Publicador, restaure o último log do banco de dados no servidor secundário por meio da opção KEEP_REPLICATION do RESTORE LOG. Isso retém todas as configurações de replicação do banco de dados. Para obter mais informações, consulte [Failover para um envio de logs secundário&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) e [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+3.  Se ocorrer falha no Publicador, restaure o último log do banco de dados no servidor secundário por meio da opção KEEP_REPLICATION do RESTORE LOG. Isso retém todas as configurações de replicação do banco de dados. Para obter mais informações, consulte [Failover para um envio de logs secundário&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) e [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 4.  Restaure o banco de dados **msdb** e os bancos de dados **mestres** do primário no secundário. Para obter mais informações, consulte [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md). Se o primário também era um Distribuidor, restaure o banco de dados de distribuição do primário no secundário.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 30
   
 1.  Configure o envio de logs para o banco de dados de publicação. Para obter mais informações, consulte [Configurar o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
   
-2.  Se ocorrer falha no Publicador, restaure o último log do banco de dados no servidor secundário por meio da opção KEEP_REPLICATION do RESTORE LOG. Isso retém todas as configurações de replicação do banco de dados. Para obter mais informações, consulte [Failover para um envio de logs secundário&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) e [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+2.  Se ocorrer falha no Publicador, restaure o último log do banco de dados no servidor secundário por meio da opção KEEP_REPLICATION do RESTORE LOG. Isso retém todas as configurações de replicação do banco de dados. Para obter mais informações, consulte [Failover para um envio de logs secundário&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) e [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 3.  Restaure o banco de dados **msdb** e os bancos de dados **mestres** do primário no secundário. Para obter mais informações, consulte [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md). Se o primário também era um Distribuidor, restaure o banco de dados de distribuição do primário no secundário.  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 30
   
 8.  As transações que já foram distribuídas ao Assinante podem ser aplicadas no Publicador. Para garantir que o Agente de Distribuição não tenha uma falha com um erro ao tentar aplicar novamente essas transações a um Assinante, especifique o perfil do agente intitulado **Continuar em caso de erros de consistência de dados**.  
   
-### Envio de logs com replicação de mesclagem  
+### <a name="log-shipping-with-merge-replication"></a>Envio de logs com replicação de mesclagem  
  Siga as etapas do procedimento a seguir para configurar a replicação de mesclagem e envio de logs.  
   
  **Para configurar a replicação de mesclagem e envio de logs**  
@@ -96,7 +101,7 @@ caps.handback.revision: 30
   
 2.  Se ocorrer falha no Publicador, no servidor secundário, renomeie o computador e, em seguida, renomeie a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que corresponda ao nome do servidor primário. Para obter informações sobre como renomear um computador, consulte a documentação do Windows. Para obter informações sobre como renomear o servidor, consulte [Renomear um computador que hospeda uma instância autônoma do SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) e [Renomear uma instância do cluster de failover do SQL Server](../../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).  
   
-3.  Restaure o último log do banco de dados no servidor secundário por meio da opção KEEP_REPLICATION do RESTORE LOG. Isso retém todas as configurações de replicação do banco de dados. Para obter mais informações, consulte [Failover para um envio de logs secundário&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) e [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+3.  Restaure o último log do banco de dados no servidor secundário por meio da opção KEEP_REPLICATION do RESTORE LOG. Isso retém todas as configurações de replicação do banco de dados. Para obter mais informações, consulte [Failover para um envio de logs secundário&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) e [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 4.  Restaure o banco de dados **msdb** e os bancos de dados **mestres** do primário no secundário. Para obter mais informações, consulte [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md). Se o primário também era um Distribuidor, restaure o banco de dados de distribuição do primário no secundário.  
   
@@ -112,7 +117,7 @@ caps.handback.revision: 30
   
      Se você sincronizar com um Assinante que está executando uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], a assinatura não poderá ser anônima; ela deverá ser a assinatura de um cliente ou de um servidor (referenciadas como assinaturas locais e assinaturas globais nas versões anteriores). Para obter mais informações, consulte [Sincronizar dados](../../relational-databases/replication/synchronize-data.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Recursos e tarefas de replicação](../../relational-databases/replication/replication-features-and-tasks.md)   
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  

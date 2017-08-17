@@ -1,26 +1,31 @@
 ---
-title: "FILESTREAM e FileTable com grupos de disponibilidade AlwaysOn (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], Grupos de disponibilidade"
-  - "FILESTREAM [SQL Server], Grupos de disponibilidade"
-  - "Grupos de disponibilidade [SQL Server], interoperabilidade"
+title: FILESTREAM e FileTable com Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], Availability Groups
+- FILESTREAM [SQL Server], Availability Groups
+- Availability Groups [SQL Server], interoperability
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cdd5119460d5b982c30c3e04e924e9a6b501f559
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# FILESTREAM e FileTable com grupos de disponibilidade AlwaysOn (SQL Server)
+# <a name="filestream-and-filetable-with-always-on-availability-groups-sql-server"></a>FILESTREAM e FileTable com grupos de disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tópico contém informações sobre como o usar os recursos FILESTREAM e FileTable com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -78,14 +83,15 @@ caps.handback.revision: 15
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
--   [Habilitar e configurar FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
+-   [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [Habilitar os pré-requisitos para FileTable](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
  Nenhum.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

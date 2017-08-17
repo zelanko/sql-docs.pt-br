@@ -1,24 +1,29 @@
 ---
-title: "Colocar um grupo de disponibilidade offline (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidade [SQL Server], desconectar"
+title: Colocar um grupo de disponibilidade offline (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], take offline
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1aa3279aaba12034c58c2b0afdfc4a1016c4fd0d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Colocar um grupo de disponibilidade offline (SQL Server)
+# <a name="take-an-availability-group-offline-sql-server"></a>Colocar um grupo de disponibilidade offline (SQL Server)
   Este tópico descreve como passar um grupo de disponibilidade AlwaysOn do estado ONLINE para o estado OFFLINE usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)] no [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] e em versões posteriores. Não há perda de dados para bancos de dados de confirmação síncrona, pois, se alguma réplica de confirmação síncrona não é sincronizada, a operação OFFLINE gera um erro e deixa o grupo de disponibilidade ONLINE. Quando o grupo de disponibilidade permanece online, isso protege bancos de dados de confirmação síncrona não sincronizados contra possível perda de dados. Depois que um grupo de disponibilidade se torna offline, seus bancos de dados ficam indisponíveis para os clientes e você não pode recolocar o grupo de disponibilidade online. Portanto, coloque um grupo de disponibilidade offline somente para migrar os recursos do grupo de disponibilidade de um cluster WSFC para outro.  
   
  Durante uma migração entre clusters de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], se algum aplicativo se conectar diretamente à réplica primária de um grupo de disponibilidade, o grupo de disponibilidade deverá ser colocado offline. A migração entre clusters de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dá suporte à atualização do sistema operacional com tempo de inatividade mínimo de grupos de disponibilidade. O cenário típico é usar a migração entre clusters de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para a atualização do sistema operacional para [!INCLUDE[win8](../../../includes/win8-md.md)] ou para o [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. Para obter mais informações, veja [Migração entre clusters de grupos de disponibilidade AlwaysOn para atualização do sistema operacional](http://msdn.microsoft.com/library/jj873730.aspx).  
@@ -31,7 +36,7 @@ caps.handback.revision: 37
   
      [Segurança](#Security)  
   
--   **Para colocar um grupo de disponibilidade offline usando: ** [Transact-SQL](#TsqlProcedure)  
+-   **Para colocar um grupo de disponibilidade offline usando:**  [Transact-SQL](#TsqlProcedure)  
   
 -   **Acompanhamento:**  [depois que o grupo de disponibilidade estiver offline](#FollowUp)  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 37
 -   O grupo de disponibilidade deve estar online no momento.  
   
 ###  <a name="Recommendations"></a> Recomendações  
- Antes de você colocar o grupo de disponibilidade offline, exclua o ouvinte do grupo de disponibilidade ou os ouvintes. Para obter mais informações, veja [Remover um ouvinte do Grupo de Disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md).  
+ Antes de você colocar o grupo de disponibilidade offline, exclua o ouvinte do grupo de disponibilidade ou os ouvintes. Para obter mais informações, veja [Remover um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md).  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 37
   
      em que *group_name* é o nome do grupo de disponibilidade.  
   
-### Exemplo  
+### <a name="example"></a>Exemplo  
  O exemplo a seguir coloca o grupo de disponibilidade `AccountsAG` offline.  
   
 ```  
@@ -90,9 +95,10 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 -   [Artigos técnicos do SQL Server 2012](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   
+

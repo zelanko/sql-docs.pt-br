@@ -1,39 +1,44 @@
 ---
-title: "Op&#231;&#227;o affinity mask de configura&#231;&#227;o de servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "opção de máscara de afinidade padrão"
-  - "recarregando o cache de processador"
-  - "cache de processador [SQL Server]"
-  - "CPU [SQL Server], licenciamento"
-  - "chamada de processo adiada"
-  - "opção affinity mask"
-  - "afinidade do processador [SQL Server]"
-  - "SMP"
-  - "DPC"
+title: "Opção de configuração de servidor affinity mask | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default affinity mask option
+- reloading processor cache
+- processor cache [SQL Server]
+- CPU [SQL Server], licensing
+- deferred process call
+- affinity mask option
+- processor affinity [SQL Server]
+- SMP
+- DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0aa50b8c593ced9089a939eb5490380872d38472
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Op&#231;&#227;o affinity mask de configura&#231;&#227;o de servidor
+# <a name="affinity-mask-server-configuration-option"></a>Opção affinity mask de configuração de servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).  
   
- Para realizar multitarefas, o [!INCLUDE[msCoName](../../includes/msconame-md.md)], às vezes, movem threads de processos entre processadores diferentes. Embora eficiente de um ponto de vista de sistema operacional, essa atividade pode reduzir o desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sob cargas de sistema pesadas, à medida que cada cache de processador é recarregado repetidamente com dados. Atribuir processadores a threads específicos poderá melhorar o desempenho nessas condições eliminando recargas de processador e reduzindo a migração de thread entre processadores (reduzindo portanto a alternância de contexto); tal associação entre um thread e um processador é chamada de afinidade do processador.  
+ Para realizar multitarefas, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] , às vezes, movem threads de processos entre processadores diferentes. Embora eficiente de um ponto de vista de sistema operacional, essa atividade pode reduzir o desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sob cargas de sistema pesadas, à medida que cada cache de processador é recarregado repetidamente com dados. Atribuir processadores a threads específicos poderá melhorar o desempenho nessas condições eliminando recargas de processador e reduzindo a migração de thread entre processadores (reduzindo portanto a alternância de contexto); tal associação entre um thread e um processador é chamada de afinidade do processador.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à afinidade de processador por meio de duas opções de máscara de afinidade: máscara de afinidade (também conhecida como **máscara de afinidade de CPU**) e máscara de E/S de afinidade. Para obter mais informações sobre a opção de máscara de opção de E/S de afinidade, veja [Opção de configuração de servidor de máscara de entrada/saída de afinidade](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md). O suporte para afinidade de CPU e E/S em servidores com 33 a 64 processadores exige o uso adicional da [Opção de configuração de servidor de máscara affinity64](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) e [Opção de configuração de servidor de máscara de entrada/saída affinity64](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md), respectivamente.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 52
 > [!CAUTION]  
 >  Não configure afinidade de CPU no sistema operacional Windows e também configure a máscara de afinidade em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essas definições estão tentando alcançar o mesmo resultado e se as configurações forem inconsistentes, você poderá ter resultados imprevisíveis. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Você poderá configurar melhor a afinidade de CPU no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]com a opção sp_configure.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  Como exemplo de configuração da opção de máscara de afinidade, se os processadores 1, 2 e 5 forem selecionados como disponíveis com os bits 1, 2 e 5 definidos como 1 e os bits 0, 3, 4, 6 e 7 definidos como 0, um valor hexadecimal de 0x26 ou o decimal equivalente de `38` será especificado. Numere os bits da direita para a esquerda. A opção de máscara de afinidade inicia a contagem de processadores de 0 a 31, de forma que no exemplo a seguir o contador `1` represente o segundo processador no servidor.  
   
 ```  
@@ -117,21 +122,21 @@ GO
   
  A opção de máscara de afinidade é uma opção avançada. Se você estiver usando o procedimento armazenado no sistema sp_configure para alterar a configuração, será possível alterar a **máscara de afinidade** apenas quando **mostrar opções avançadas** estiver definido como 1. Após executar o comando RECONFIGURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] , a nova configuração terá efeito imediatamente sem a necessidade de reiniciar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Acesso de memória não uniforme (NUMA)  
+## <a name="non-uniform-memory-access-numa"></a>Acesso de memória não uniforme (NUMA)  
  Ao usar hardware baseado em NUMA com a máscara de afinidade definida, todo agendador em um nó terá uma afinidade com sua própria CPU. Quando a máscara de afinidade não estiver definida, cada agendador terá uma afinidade com o grupo de CPUs dentro do nó NUMA e um agendador mapeado para o nó NUMA N1 poderá agendar trabalho em qualquer CPU no nó, mas não em CPUs associadas a outro nó.  
   
  Qualquer operação sendo executada em um único nó NUMA só poderá usar páginas de buffer daquele nó. Quando uma operação é executada paralelamente nas CPUs a partir de vários nós, a memória poderá ser usada a partir de qualquer nó envolvido.  
   
-## Problemas de licenciamento  
+## <a name="licensing-issues"></a>Problemas de licenciamento  
  A afinidade dinâmica é restrita com rigor pelo licenciamento de CPU. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não permite nenhuma configuração de opções de máscara de afinidade que viole a política de licenciamento.  
   
-### Inicialização  
+### <a name="startup"></a>Inicialização  
  Se uma máscara de afinidade especificada violar a política de licenciamento durante a inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou durante a anexação do banco de dados, a camada do mecanismo concluirá o processo de inicialização ou a operação de anexação/restauração do banco de dados e depois redefinirá o valor de execução de sp_configure da máscara de afinidade como zero, emitindo uma mensagem de erro para o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### Reconfiguração  
+### <a name="reconfigure"></a>Reconfiguração  
  Se uma máscara de afinidade especificada violar a política de licenciamento ao executar o comando RECONFIGURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] , uma mensagem de erro será reportada à sessão do cliente e ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o administrador do banco de dados terá que reconfigurar a máscara de afinidade. Nenhum comando RECONFIGURE WITH OVERRIDE é aceito nesse caso.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
@@ -139,3 +144,4 @@ GO
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+

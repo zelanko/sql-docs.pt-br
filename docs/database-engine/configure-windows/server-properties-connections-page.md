@@ -1,35 +1,40 @@
 ---
-title: "Propriedades do servidor (p&#225;gina Conex&#245;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.connections.f1"
+title: "Propriedades do servidor (página Conexões) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73d0b32c2688c912c282c7c4acab0bd9ecb5633f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriedades do servidor (p&#225;gina Conex&#245;es)
+# <a name="server-properties---connections-page"></a>Propriedades do servidor – página Conexões
   Use esta página para exibir ou modificar suas opções de conexão.  
   
-## Conexões  
+## <a name="connections"></a>Conexões  
  **Número máximo de conexões simultâneas (0 = ilimitado)**  
  Se definido como um valor diferente de zero, limita o número de conexões que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permitirá.  
   
 > [!CAUTION]  
 >  A definição para um valor pequeno, como 1 ou 2, pode impedir que os administradores se conectem para administrar o servidor; no entanto, a Conexão dedicada de administrador está sempre apta a se conectar.  
   
-## Opções de conexão padrão  
- **Opções de conexão padrão**  
+## <a name="default-connection-options"></a>Opções de conexão padrão  
+ **Default connection options**  
  Especifica as opções de conexão padrão, como descrito na tabela a seguir.  
   
 |Opções de configuração|Descrição|  
@@ -52,7 +57,7 @@ caps.handback.revision: 27
   
  Para obter mais informações sobre opções de conexão, pesquise sobre a opção específica nos Manuais Online.  
   
-## Conexões do servidor remoto  
+## <a name="remote-server-connections"></a>Conexões do servidor remoto  
  **Permitir conexões remotas com este servidor**  
  Controla a execução de procedimentos armazenados de servidores remotos que executam instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Marcar essa caixa de seleção tem o mesmo efeito que definir a opção **sp_configureremote access** como 1. Desmarcá-la evita a execução de procedimentos armazenados de um servidor remoto.  
   
@@ -60,17 +65,17 @@ caps.handback.revision: 27
  Especifica quanto tempo (em segundos) uma operação remota pode levar antes que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chegue ao tempo limite. O padrão é 600 segundos ou uma espera de 10 minutos.  
   
  **Requer transações distribuídas para comunicação servidor a servidor**  
- Protege as ações de um procedimento servidor-a-servidor por meio de uma transação do MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)]). Para obter mais informações, consulte [Configure the remote proc trans Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).  
+ Protege as ações de um procedimento servidor-a-servidor por meio de uma transação do MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Para obter mais informações, consulte [Configure the remote proc trans Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).  
   
-## Opções Property Page Display  
+## <a name="property-page-display-options"></a>Opções Property Page Display  
  **Valores Configurados**  
  Exibe os valores configurados para as opções nesse painel. Se você alterar esses valores, clique em **Executando Valores** para verificar se as alterações entraram em vigor. Se não houver nenhum, a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverá ser reiniciada.  
   
  **Executando Valores**  
  Exiba os valores que estão sendo executados para as opções neste painel. Esses valores são somente leitura.  
   
-## Consulte também  
- [Opções &#40;Execução da consulta: SQL Server: página Avançado&#41;](../Topic/Options%20\(Query%20Execution:%20SQL%20Server:%20Advanced%20Page\).md)   
+## <a name="see-also"></a>Consulte também  
+ [Opções &#40;Execução da consulta: SQL Server: página Avançado&#41;](http://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

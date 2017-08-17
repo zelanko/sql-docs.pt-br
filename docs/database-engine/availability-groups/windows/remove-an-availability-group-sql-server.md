@@ -1,28 +1,33 @@
 ---
-title: "Remover um grupo de disponibilidade (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.deleteag.f1"
-helpviewer_keywords: 
-  - "Grupos de disponibilidade [SQL Server], removendo"
-  - "Grupos de disponibilidade [SQL Server], removendo"
+title: Remover um grupo de disponibilidade (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.deleteag.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], removing
+- Availability Groups [SQL Server], dropping
 ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
 caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 393f088ea977236aa7feba6107828eb64e646b64
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Remover um grupo de disponibilidade (SQL Server)
-  Este tópico descreve como excluir (remover) um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se uma instância de servidor que hospeda uma das réplicas de disponibilidade estiver offline quando você exclui um grupo de disponibilidade, ela removerá a réplica de disponibilidade local quando estiver online novamente. O descarte de um grupo de disponibilidade exclui qualquer ouvinte de grupo de disponibilidade associado.  
+# <a name="remove-an-availability-group-sql-server"></a>Remover um grupo de disponibilidade (SQL Server)
+  Este tópico descreve como excluir (remover) um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se uma instância de servidor que hospeda uma das réplicas de disponibilidade estiver offline quando você exclui um grupo de disponibilidade, ela removerá a réplica de disponibilidade local quando estiver online novamente. O descarte de um grupo de disponibilidade exclui qualquer ouvinte de grupo de disponibilidade associado.  
   
  Observe que, se for necessário, você pode remover um grupo de disponibilidade de qualquer nó WSFC (Windows Server Failover Clustering) que processa as credenciais de segurança corretas para o grupo de disponibilidade. Isso permite excluir um grupo de disponibilidade quando nenhuma de suas réplicas de disponibilidade permanece.  
   
@@ -67,15 +72,15 @@ caps.handback.revision: 48
   
 1.  No Pesquisador de Objetos, conecte-se à instância de servidor que hospeda a réplica primária, se possível, ou conecte-se a outra instância de servidor que é habilitada para Grupos de Disponibilidade AlwaysOn em um nó WSFC que possuem as credenciais de segurança corretas para o grupo de disponibilidade. Expanda a árvore de servidor.  
   
-2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
+2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
   
 3.  Essa etapa depende de se você deseja excluir vários grupos de disponibilidade ou apenas um grupo de disponibilidade da seguinte maneira:  
   
-    -   Para excluir vários grupos de disponibilidade (cujas réplicas primárias estão na instância de servidor conectada), use o painel **Detalhes do Pesquisador de Objetos** para exibir e selecionar todos os grupos de disponibilidade que você deseja excluir. Para obter mais informações, veja [Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md).  
+    -   Para excluir vários grupos de disponibilidade (cujas réplicas primárias estão na instância de servidor conectada), use o painel **Detalhes do Pesquisador de Objetos** para exibir e selecionar todos os grupos de disponibilidade que você deseja excluir. Para obter mais informações, veja [Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md).  
   
     -   Para excluir um único grupo de disponibilidade, selecione-o no painel **Pesquisador de Objetos** ou no painel **Detalhes do Pesquisador de Objetos** .  
   
-4.  Clique com o botão direito do mouse no grupo ou grupos de disponibilidade selecionados e selecione o comando **Excluir**.  
+4.  Clique com o botão direito do mouse no grupo ou grupos de disponibilidade selecionados e selecione o comando **Excluir** .  
   
 5.  Na caixa de diálogo **Remover Grupo de Disponibilidade** , para excluir todos os grupos de disponibilidade listados, clique em **OK**. Se você não desejar remover todos os grupos de disponibilidade listados, clique em **Cancelar**.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 48
   
      em que *group_name* é o nome do grupo de disponibilidade a ser removido.  
   
-     O exemplo a seguir exclui o grupo de disponibilidade `MyAG`.  
+     O exemplo a seguir exclui o grupo de disponibilidade `MyAG` .  
   
     ```  
     DROP AVAILABILITY GROUP MyAG;  
@@ -103,7 +108,7 @@ caps.handback.revision: 48
   
 1.  Altere o diretório (**cd**) na instância de servidor que hospeda a réplica primária, se possível, ou conecte-se a outra instância de servidor que esteja habilitada para Grupos de Disponibilidade AlwaysOn em um nó WSFC que possuam as credenciais de segurança corretas para o grupo de disponibilidade.  
   
-2.  Use o cmdlet **Remove-SqlAvailabilityGroup**.  
+2.  Use o cmdlet **Remove-SqlAvailabilityGroup** .  
   
      Por exemplo, o comando a seguir remove o grupo de disponibilidade denominado `MyAg`. Este comando pode ser executado em qualquer instância de servidor que hospeda uma réplica de disponibilidade para o grupo de disponibilidade.  
   
@@ -123,8 +128,9 @@ caps.handback.revision: 48
   
 -   [How It Works: DROP AVAILABILITY GROUP Behaviors](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (Como funcionam os comportamentos de DROP AVAILABILITY GROUP) (blog CSS SQL Server Engineers)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Criação e configuração de grupos de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
   
+

@@ -1,30 +1,35 @@
 ---
-title: "Remover um banco de dados prim&#225;rio de um grupo de disponibilidade (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.removeprimarydb.f1"
-helpviewer_keywords: 
-  - "bancos de dados primários [SQL Server], no grupo de disponibilidade"
-  - "Grupos de Disponibilidade [SQL Server], removendo"
-  - "Grupos de disponibilidade [SQL Server], configurando"
-  - "Grupos de disponibilidade [SQL Server], bancos de dados"
+title: "Remover um banco de dados primário de um grupo de disponibilidade (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.removeprimarydb.f1
+helpviewer_keywords:
+- primary databases [SQL Server], in availability group
+- Availability Groups [SQL Server], removing
+- Availability Groups [SQL Server], configuring
+- Availability Groups [SQL Server], databases
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 caps.latest.revision: 28
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 64c6b353bb46dd08f69823e85826fc93553e6e0d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Remover um banco de dados prim&#225;rio de um grupo de disponibilidade (SQL Server)
-  Este tópico descreve como remover o banco de dados primário e os bancos de dados secundários correspondentes de um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+# <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>Remover um banco de dados primário de um grupo de disponibilidade (SQL Server)
+  Este tópico descreve como remover o banco de dados primário e os bancos de dados secundários correspondentes de um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   **Antes de começar:**  
   
@@ -58,13 +63,13 @@ caps.handback.revision: 28
   
 1.  No Pesquisador de Objetos, conecte-se à instância do servidor que hospeda a réplica primária do banco de dados ou bancos de dados a serem removidos e expanda a árvore de servidores.  
   
-2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
+2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
   
 3.  Selecione o grupo de disponibilidade e expanda o nó **Bancos de Dados de Disponibilidade** .  
   
 4.  Essa etapa depende de se você deseja remover vários grupos de bancos de dados ou apenas um banco de dados, da seguinte maneira:  
   
-    -   Para remover vários bancos de dados, use o painel **Detalhes do Pesquisador de Objetos** para exibir e selecionar todos os bancos de dados que você deseja remover. Para obter mais informações, veja [Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md).  
+    -   Para remover vários bancos de dados, use o painel **Detalhes do Pesquisador de Objetos** para exibir e selecionar todos os bancos de dados que você deseja remover. Para obter mais informações, veja [Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md).  
   
     -   Para remover um único banco de dados, selecione-o no painel **Pesquisador de Objetos** ou no painel **Detalhes do Pesquisador de Objetos** .  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 28
   
      em que *group_name* é o nome do grupo de disponibilidade e *database_name* é o nome do banco de dados a ser removido.  
   
-     O exemplo a seguir remove um banco de dados denominado `Db6` do grupo de disponibilidade `MyAG`.  
+     O exemplo a seguir remove um banco de dados denominado `Db6` do grupo de disponibilidade `MyAG` .  
   
     ```  
     ALTER AVAILABILITY GROUP MyAG REMOVE DATABASE Db6;  
@@ -94,7 +99,7 @@ caps.handback.revision: 28
   
 1.  Altere o diretório (**cd**) para a instância de servidor que hospeda a réplica primária.  
   
-2.  Use o cmdlet **Remove-SqlAvailabilityDatabase**, especificando o nome do banco de dados de disponibilidade a ser removido do grupo de disponibilidade. Quando você está conectado a uma instância do servidor que hospeda a réplica primária, o banco de dados primário e os bancos de dados secundários correspondentes são todos removidos do grupo de disponibilidade.  
+2.  Use o cmdlet **Remove-SqlAvailabilityDatabase** , especificando o nome do banco de dados de disponibilidade a ser removido do grupo de disponibilidade. Quando você está conectado a uma instância do servidor que hospeda a réplica primária, o banco de dados primário e os bancos de dados secundários correspondentes são todos removidos do grupo de disponibilidade.  
   
      Por exemplo, o comando a seguir remove o banco de dados de disponibilidade `MyDb9` do grupo de disponibilidade denominado `MyAg`. Como o comando é executado na instância do servidor que hospeda a réplica primária, o banco de dados primário e todos os bancos de dados secundários correspondentes são removidos do grupo de disponibilidade. A sincronização de dados não ocorrerá mais para este banco de dados em nenhuma réplica secundária.  
   
@@ -123,8 +128,9 @@ caps.handback.revision: 28
   
      Para obter mais informações, veja [Recuperar um banco de dados sem restaurar dados &#40;Transact-SQL&#41;](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Remover um banco de dados secundário de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md)  
   
   
+

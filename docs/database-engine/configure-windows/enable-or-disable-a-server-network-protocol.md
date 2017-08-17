@@ -1,39 +1,44 @@
 ---
-title: "Habilitar ou desabilitar um protocolo de rede de servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "protocolos de rede [SQL Server], desabilitando"
-  - "conexões remotas [SQL Server], habilitando usando o Configuration Manager"
-  - "protocolos [SQL Server], habilitando usando o Configuration Manager"
-  - "protocolos [SQL Server], desabilitando usando o Configuration Manager"
-  - "desabilitando protocolos de rede, Configuration Manager"
-  - "protocolos de rede [SQL Server], habilitando"
-  - "habilitando protocolos de rede, Configuration Manager"
-  - "configuração da área da superfície [SQL Server], protocolos de conexão"
-  - "conexões [SQL Server], habilitando a conexão remota usando o Configuration Manager"
+title: Habilitar ou desabilitar um protocolo de rede de servidor | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- network protocols [SQL Server], disabling
+- remote connections [SQL Server], enabling using Configuration Manager
+- protocols [SQL Server], enabling using Configuration Manager
+- protocols [SQL Server], disabling using Configuration Manager
+- disabling network protocols, Configuration Manager
+- network protocols [SQL Server], enabling
+- enabling network protocols, Configuration Manager
+- surface area configuration [SQL Server], connection protocols
+- connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7bb0a9abeba4730bd2d5d4e57cd7b02b2b93b55c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
 # Habilitar ou desabilitar um protocolo de rede de servidor
   Todos os protocolos de rede são instalados pela Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mas podem ou não ser habilitados. Este tópico descreve como habilitar ou desabilitar um protocolo de rede de servidor no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou o PowerShell. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve ser interrompido e reiniciado para que a alteração entre em vigor.  
   
 > [!IMPORTANT]  
->  Durante instalação do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], é adicionado um logon para o grupo BUILTIN\Users. Assim, todos os usuários autenticados do computador podem acessar a instância do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] como membros da função pública. O logon BUILTIN\Users pode ser removido com segurança para restringir o acesso a [!INCLUDE[ssDE](../../includes/ssde-md.md)] aos usuários do computador que têm logons individuais ou que são membros de outros grupos do Windows com logons.  
+>  Durante instalação do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , é adicionado um logon para o grupo BUILTIN\Users. Assim, todos os usuários autenticados do computador podem acessar a instância do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] como membros da função pública. O logon BUILTIN\Users pode ser removido com segurança para restringir o acesso a [!INCLUDE[ssDE](../../includes/ssde-md.md)] aos usuários do computador que têm logons individuais ou que são membros de outros grupos do Windows com logons.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 e SSL 3.0. Se você impor um protocolo diferente (como TLS 1.1 ou TLS 1.2) fazendo alterações na camada de sistema operacional SChannel, suas conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderão falhar.  
+>  Os provedores de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dão suporte ao TLS 1.0 e SSL 3.0. Se você impor um protocolo diferente (como TLS 1.1 ou TLS 1.2) fazendo alterações na camada de sistema operacional SChannel, suas conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderão falhar.  
   
  **Neste tópico**  
   
@@ -49,13 +54,13 @@ caps.handback.revision: 29
   
 1.  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, no painel de console, expanda **Configuração de Rede do SQL Server**.  
   
-2.  No painel de console, clique em **Protocolos do** *\<instance name>*.  
+2.  No painel do console, clique em **Protocolos de** *\<instance name>*.  
   
 3.  No painel de detalhes, clique com o botão direito do mouse no protocolo que você quer alterar e clique em **Habilitar** ou **Desabilitar**.  
   
 4.  No painel de console, clique em **Serviços do SQL Server**.  
   
-5.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server (***\<instance name>***)** e clique em **Reiniciar** para parar e reiniciar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server (***\<instance name>***)** e, depois, clique em **Reiniciar** para parar e reiniciar o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="PowerShellProcedure"></a> Usando o SQL Server PowerShell  
   

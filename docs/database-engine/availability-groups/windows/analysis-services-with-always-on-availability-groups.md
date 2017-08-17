@@ -1,22 +1,27 @@
 ---
-title: "Analysis Services com grupos de disponibilidade AlwaysOn | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Analysis Services com Grupos de Disponibilidade AlwaysOn | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d4ba885d49b16d3ef6d4796ddcef420b0dc6c149
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Analysis Services com grupos de disponibilidade AlwaysOn
+# <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services com grupos de disponibilidade AlwaysOn
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Um grupo de disponibilidade AlwaysOn é uma coleção predefinida de bancos de dados relacionais do SQL Server que faz failover junto quando condições disparam um failover em qualquer um dos bancos de dados, redirecionando solicitações para um banco de dados espelhado em outra instância no mesmo grupo de disponibilidade. Se você estiver usando grupos de disponibilidade como sua solução de alta disponibilidade, poderá usar um banco de dados nesse grupo como uma fonte de dados em uma solução de tabela do Analysis Services ou multidimensional. Todas as operações do Analysis Services a seguir funcionam como esperado ao usar um banco de dados de disponibilidade: processando ou importando dados, consultando dados relacionais diretamente (usando o armazenamento de ROLAP ou o modo DirectQuery), e writeback.  
@@ -50,7 +55,7 @@ caps.handback.revision: 12
 > [!NOTE]  
 >  As etapas a seguir pressupõem a existência de um grupo de disponibilidade AlwaysOn e de bancos de dados. Se você estiver configurando um novo grupo, use o Assistente Novo Grupo de Disponibilidade para criar o grupo e unir os bancos de dados. O assistente verifica pré-requisitos, fornece orientação para cada etapa e executa a sincronização inicial. Para obter mais informações, consulte [Usar a caixa de diálogo Assistente de Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
   
-#### Etapa 1: configurar o acesso em uma réplica de disponibilidade  
+#### <a name="step-1-configure-access-on-an-availability-replica"></a>Etapa 1: configurar o acesso em uma réplica de disponibilidade  
   
 1.  No Pesquisador de Objetos, conecte-se à instância de servidor que hospeda a réplica primária e expanda a árvore de servidores.  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 12
   
 5.  Na caixa de diálogo **Propriedades da Réplica de Disponibilidade** , altere o acesso de conexão para a função secundária, da seguinte forma:  
   
-    -   Na lista suspensa **Secundária legível**, selecione **Somente intenção de leitura**.  
+    -   Na lista suspensa **Secundária legível** , selecione **Somente intenção de leitura**.  
   
     -   Na lista suspensa **Conexões na função primária** , selecione **Permitir todas as conexões**. Esse é o padrão.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 12
   
          Esta propriedade também é um requisito para failover planejado. Se você desejar executar um failover manual planejado para fins de testes, defina **Modo de disponibilidade** como **Confirmação síncrona** para as réplicas primária e secundária.  
   
-#### Etapa 2: configurar o roteamento somente leitura  
+#### <a name="step-2-configure-read-only-routing"></a>Etapa 2: configurar o roteamento somente leitura  
   
 1.  Conecte-se à réplica primária.  
   
@@ -140,15 +145,13 @@ caps.handback.revision: 12
   
      O ouvinte de grupo de disponibilidade redireciona uma conexão de cliente a uma réplica primária para solicitações de leitura/gravação ou para uma réplica secundária quando você especifica a intenção de leitura na cadeia de conexão. Como funções de réplica serão alteradas durante um failover (em que a primária se torna a secundária e uma secundária se torna primária), você sempre deve especificar o ouvinte de forma que a conexão de cliente seja redirecionada conformemente.  
   
-     Para determinar o nome do ouvinte do grupo de disponibilidade, você pode solicitar a um administrador de banco de dados ou se conectar a uma instância no grupo de disponibilidade e exibir sua configuração de disponibilidade de AlwaysOn. Na captura de tela a seguir, o ouvinte do grupo de disponibilidade é o **AdventureWorks2**.  
-  
-     ![](../Image/SSAS_Always OnInfoInSSMS.png)  
+     Para determinar o nome do ouvinte do grupo de disponibilidade, você pode solicitar a um administrador de banco de dados ou se conectar a uma instância no grupo de disponibilidade e exibir sua configuração de disponibilidade de AlwaysOn.   
   
 4.  Ainda no Gerenciador de Conexões, clique em **Tudo** no painel de navegação esquerdo para exibir a grade de propriedades do provedor de dados.  
   
      Defina **Intenção de Aplicativo** como **READONLY** se você estiver configurando uma conexão de cliente somente leitura para uma réplica secundária. Caso contrário, mantenha o **READWRITE** padrão para redirecionar a conexão para a réplica primária.  
   
-5.  Em Informações da Representação, selecione **Usar um nome de usuário e uma senha específicos do Windows** e insira uma conta de usuário de domínio do Windows que tenha um mínimo de permissões **db_datareader** no banco de dados.  
+5.  Em Informações da Representação, selecione **Usar um nome de usuário e uma senha específicos do Windows**e insira uma conta de usuário de domínio do Windows que tenha um mínimo de permissões **db_datareader** no banco de dados.  
   
      Não escolha **Usar as credenciais do usuário atual** ou **Herdar**. Você pode escolher **Usar a conta de serviço**, mas apenas se essa conta tiver permissões de leitura no banco de dados.  
   
@@ -163,7 +166,7 @@ caps.handback.revision: 12
 ##  <a name="bkmk_test"></a> Testar a configuração  
  Depois que você configurar a réplica secundária e criar uma conexão da fonte de dados no Analysis Services, poderá confirmar esse processamento e comandos de consulta serão redirecionados para a réplica secundária. Você também pode executar um failover manual planejado para verificar seu plano de recuperação para este cenário.  
   
-#### Etapa 1: confirmar que a conexão da fonte de dados é redirecionada para a réplica secundária  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Etapa 1: confirmar que a conexão da fonte de dados é redirecionada para a réplica secundária  
   
 1.  Inicie o SQL Server Profiler e conecte à instância do SQL Server que hospeda a réplica secundária.  
   
@@ -179,9 +182,9 @@ caps.handback.revision: 12
   
      Na janela de rastreamento, você deve consultar eventos do aplicativo **Microsoft SQL Server Analysis Services**. Você deve consultar instruções **SELECT** que recuperam dados de um banco de dados na instância do servidor que hospeda a réplica secundária, provando que a conexão foi feita através do ouvinte para a réplica secundária.  
   
-#### Etapa 2: executar um failover planejado para testar a configuração  
+#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>Etapa 2: executar um failover planejado para testar a configuração  
   
-1.  No [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], verifique as réplicas primária e secundária para garantir que ambas estão configuradas para o modo de confirmação síncrona e estão sincronizadas no momento.  
+1.  No [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] , verifique as réplicas primária e secundária para garantir que ambas estão configuradas para o modo de confirmação síncrona e estão sincronizadas no momento.  
   
      As etapas a seguir assumem que uma réplica secundária é configurada para a confirmação síncrona.  
   
@@ -196,9 +199,9 @@ caps.handback.revision: 12
   
 4.  No [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], conecte-se à réplica secundária.  
   
-5.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
+5.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
   
-6.  Clique com o botão direito do mouse no grupo de disponibilidade do qual fazer failover e selecione o comando **Failover**. Isso inicia o Assistente de Grupo de Disponibilidade de Failover. Use o assistente para escolher a réplica da qual será criada a nova réplica primária.  
+6.  Clique com o botão direito do mouse no grupo de disponibilidade do qual fazer failover e selecione o comando **Failover** . Isso inicia o Assistente de Grupo de Disponibilidade de Failover. Use o assistente para escolher a réplica da qual será criada a nova réplica primária.  
   
 7.  Confirme que o failover teve êxito:  
   
@@ -228,11 +231,12 @@ caps.handback.revision: 12
   
  Para fazer isso, crie uma fonte de dados adicional em um modelo do Analysis Services para oferece suporte à conexão de leitura/gravação. Ao criar a fonte de dados adicional, use o mesmo nome de ouvinte e banco de dados especificados na conexão somente leitura, mas, em vez de modificar a **Intenção de Aplicativo**, mantenha o padrão que dá suporte a conexões READWRITE. Você pode adicionar um novo fato ou tabelas de dimensão à sua exibição de fonte de dados com base na fonte de dados de leitura/gravação e, depois, habilitar o write-back nas novas tabelas.  
   
-## Consulte também  
- [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+## <a name="see-also"></a>Consulte também  
+ [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Secundárias ativas: réplicas secundárias legíveis &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Políticas AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)   
+ [Políticas AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Habilitar o write-back de dimensão](../../../analysis-services/multidimensional-models/enable-dimension-writeback.md)  
+ [Habilitar o write-back de dimensão](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
   
+

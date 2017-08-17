@@ -1,29 +1,34 @@
 ---
-title: "Removendo o espelhamento de banco de dados (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espelhamento de banco de dados [SQL Server], removendo"
-  - "parando o espelhamento de banco de dados [SQL Server]"
-  - "removendo o espelhamento de banco de dados [SQL Server]"
+title: Removendo o espelhamento de banco de dados (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], removing
+- stopping database mirroring [SQL Server]
+- removing database mirroring [SQL Server]
 ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6bd2dd9e264437e8d40d2fe66a1394c468e99c59
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Removendo o espelhamento de banco de dados (SQL Server)
+# <a name="removing-database-mirroring-sql-server"></a>Removendo o espelhamento de banco de dados (SQL Server)
   O proprietário do banco de dados pode interromper manualmente uma sessão de espelhamento de banco de dados a qualquer momento, em qualquer parceiro.  
   
-## Impacto da remoção do espelhamento  
+## <a name="impact-of-removing-mirroring"></a>Impacto da remoção do espelhamento  
  Quando o espelhamento é removido, acontece o seguinte:  
   
 -   A relação entre os parceiros e entre cada parceiro e a testemunha se rompe permanentemente, caso exista alguma relação.  
@@ -46,14 +51,13 @@ caps.handback.revision: 31
   
  **Para inicializar o espelhamento de banco de dados**  
   
--   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
+-   [Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   
- ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.png "Ícone de seta usado com o link Voltar ao Início") [&#91;Início&#93;](#Top)  
   
-## Consulte também  
- [Espelhamento de banco de dados ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Consulte também  
+ [Espelhamento de banco de dados ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Pausando e retomando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  

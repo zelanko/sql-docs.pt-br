@@ -1,28 +1,33 @@
 ---
-title: "Pausar ou retomar uma sess&#227;o de espelhamento de banco de dados (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "continuando o espelhamento de banco de dados"
-  - "espelhamento de banco de dados [SQL Server], sessões"
-  - "espelhamento de banco de dados [SQL Server], pausando"
-  - "espelhamento de banco de dados [SQL Server], retomando"
-  - "pausando o espelhamento de banco de dados"
+title: "Pausar ou retomar uma sessão de espelhamento de banco de dados (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resuming database mirroring
+- database mirroring [SQL Server], sessions
+- database mirroring [SQL Server], pausing
+- database mirroring [SQL Server], resuming
+- pausing database mirroring
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c8cb7cac464772284682e74d2f8157df190adcef
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Pausar ou retomar uma sess&#227;o de espelhamento de banco de dados (SQL Server)
+# <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Pausar ou retomar uma sessão de espelhamento de banco de dados (SQL Server)
   Este tópico descreve como pausar ou retomar o espelhamento de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -53,13 +58,13 @@ caps.handback.revision: 34
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Para pausar ou retomar uma sessão de espelhamento de banco de dados, use a página **Espelhamento de Propriedades do Banco de Dados** .  
   
-#### Para pausar ou retomar o espelhamento de banco de dados  
+#### <a name="to-pause-or-resume-database-mirroring"></a>Para pausar ou retomar o espelhamento de banco de dados  
   
 1.  Durante uma sessão de espelhamento de banco de dados, faça a conexão com a instância do servidor principal e, no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
 2.  Expanda **Bancos de Dados**e selecione o banco de dados.  
   
-3.  Clique com o botão direito do mouse no banco de dados, selecione **Tarefas** e clique em **Espelhar**. Isso abre a página **Espelhamento** da caixa de diálogo **Propriedades do Banco de Dados** .  
+3.  Clique com o botão direito do mouse no banco de dados, selecione **Tarefas**e clique em **Espelhar**. Isso abre a página **Espelhamento** da caixa de diálogo **Propriedades do Banco de Dados** .  
   
 4.  Para pausar a sessão, clique em **Pausar**.  
   
@@ -71,25 +76,25 @@ caps.handback.revision: 34
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para pausar o espelhamento de banco de dados  
+#### <a name="to-pause-database-mirroring"></a>Para pausar o espelhamento de banco de dados  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] para qualquer um dos parceiros.  
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Emita a seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+3.  Emita a seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
      ALTER DATABASE *database_name* SET PARTNER SUSPEND  
   
      em que *database_name* é o banco de dados espelhado cuja sessão você deseja suspender.  
   
-     O exemplo a seguir pausa o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+     O exemplo a seguir pausa o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET PARTNER SUSPEND;  
     ```  
   
-##### Para retomar o espelhamento de banco de dados.  
+##### <a name="to-resume-database-mirroring"></a>Para retomar o espelhamento de banco de dados.  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] para qualquer um dos parceiros.  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 34
   
      em que *database_name* é o banco de dados espelhado cuja sessão você deseja retomar.  
   
-     O exemplo a seguir pausa o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+     O exemplo a seguir pausa o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
@@ -111,7 +116,7 @@ caps.handback.revision: 34
   
 -   **Depois de pausar o espelhamento de banco de dados**  
   
-     No banco de dados primário, tome precauções para evitar um log de transações cheio. Para obter mais informações, veja [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+     No banco de dados primário, tome precauções para evitar um log de transações cheio. Para obter mais informações, consulte [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 -   **Depois de retomar o espelhamento de banco de dados**  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 34
   
 -   [Remover o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

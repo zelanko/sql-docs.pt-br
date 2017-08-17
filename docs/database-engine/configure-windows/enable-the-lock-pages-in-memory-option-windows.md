@@ -1,24 +1,29 @@
 ---
-title: "Habilitar a op&#231;&#227;o Bloquear P&#225;ginas na Mem&#243;ria (Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "opção Bloquear Páginas na Memória"
+title: "Habilitar a opção Bloquear Páginas na Memória (Windows) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Lock Pages in Memory option
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f62d2e7f2187433acdaf775d0835b1f5f7d6e5a3
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Habilitar a op&#231;&#227;o Bloquear P&#225;ginas na Mem&#243;ria (Windows)
+# <a name="enable-the-lock-pages-in-memory-option-windows"></a>Habilitar a opção Bloquear Páginas na Memória (Windows)
   Essa política do Windows determina quais contas podem usar um processo para manter dados na memória física, impedindo o sistema de paginar os dados para a memória virtual em disco.  
   
 > [!NOTE]  
@@ -26,7 +31,7 @@ caps.handback.revision: 35
   
  Use a ferramenta Política de Grupo do Windows (gpedit.msc) para habilitar essa política para a conta usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você deve ser um administrador do sistema para alterar essa política.  
   
-### Para habilitar a opção de bloqueio de páginas na memória  
+### <a name="to-enable-the-lock-pages-in-memory-option"></a>Para habilitar a opção de bloqueio de páginas na memória  
   
 1.  No menu **Iniciar** , clique em **Executar**. Na caixa **Abrir** , digite **gpedit.msc**.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 35
   
 8.  Faça logoff e depois faça logon para que essas alterações entrem em vigor.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções Server Memory de configuração do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
   

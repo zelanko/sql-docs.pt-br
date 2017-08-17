@@ -1,24 +1,29 @@
 ---
-title: "Inst&#226;ncia de servidor espelho (Assistente para Configurar Seguran&#231;a de Espelhamento de Banco de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.configdbmsecurwiz.mirrorsrvr.f1"
+title: "Instância do servidor espelho (Assistente para Configurar Segurança de Espelhamento de Banco de Dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.configdbmsecurwiz.mirrorsrvr.f1
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 78dc5246eb4665e0f66af57198d5634cac502506
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Inst&#226;ncia de servidor espelho (Assistente para Configurar Seguran&#231;a de Espelhamento de Banco de Dados)
+# <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>Instância de servidor espelho (Assistente para Configurar Segurança de Espelhamento de Banco de Dados)
   Use esta página para especificar informações sobre a instância de servidor com o banco de dados espelho.  
   
 > [!IMPORTANT]  
@@ -26,13 +31,13 @@ caps.handback.revision: 42
   
  **Para configurar o espelhamento de banco de dados usando o SQL Server Management Studio**  
   
--   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+-   [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## Opções  
+## <a name="options"></a>Opções  
  **Instância do servidor espelho**  
- Se uma instância de servidor espelho já for especificada (na página **Espelhamento** da caixa de diálogo **Propriedades do Banco de Dados**), essa instância será exibida; para obter mais informações, veja [Propriedades do banco de dados &#40;Página Espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md).  
+ Se uma instância de servidor espelho já for especificada (na página **Espelhamento** da caixa de diálogo **Propriedades do Banco de Dados** ), essa instância será exibida; para obter mais informações, veja [Propriedades do banco de dados &#40;página Espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md).  
   
  Caso contrário, insira o nome da instância de servidor espelho. Observe que a instância de servidor espelho não pode ser igual à instância de servidor principal.  
   
@@ -62,10 +67,10 @@ caps.handback.revision: 42
   
  Para desabilitar a criptografia, desmarque a caixa de seleção. Para habilitar a criptografia novamente, marque a caixa de seleção.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Propriedades do banco de dados &#40;página Espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

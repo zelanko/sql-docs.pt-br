@@ -1,31 +1,36 @@
 ---
-title: "Troca de fun&#231;&#227;o durante uma sess&#227;o de espelhamento de banco de dados (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "troca de função [SQL Server]"
-  - "parceiros de espelhamento [SQL Server]"
-  - "failover [SQL Server]"
-  - "parceiros de failover [SQL Server]"
-  - "espelhamento de banco de dados [SQL Server], parceiros"
-  - "parceiros em sessões de espelhamento de banco de dados [ SQL Server]"
-  - "failover [SQL Server], espelhamento de banco de dados"
-  - "espelhamento de banco de dados [SQL Server], failover"
+title: "Troca de função durante uma sessão de espelhamento de banco de dados (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- role switching [SQL Server]
+- mirroring partners [SQL Server]
+- failover [SQL Server]
+- failover partners [SQL Server]
+- database mirroring [SQL Server], partners
+- partners in database mirroring sessions [SQL Server]
+- failover [SQL Server], database mirroring
+- database mirroring [SQL Server], failover
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 caps.latest.revision: 50
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e49ab29353985dc5e3de035b7a67da9928412c23
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Troca de fun&#231;&#227;o durante uma sess&#227;o de espelhamento de banco de dados (SQL Server)
+# <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Troca de função durante uma sessão de espelhamento de banco de dados (SQL Server)
   No contexto da sessão de espelhamento de banco de dados, as funções principal e espelho podem ser, normalmente, alternadas em um processo conhecido como *troca de função*. Na troca de função, o servidor espelho age como o *parceiro de failover* do servidor principal, assumindo a função principal, recuperando a cópia do banco de dados e colocando-a online como novo banco de dados principal. O antigo servidor principal, quando disponível, assume a função espelho e seu banco de dados se torna o novo banco de dados espelho. Potencialmente, as funções podem ser alternadas como resposta a várias falhas ou por razões administrativas.  
   
 > [!NOTE]  
@@ -33,7 +38,7 @@ caps.handback.revision: 50
   
  A ilustração a seguir mostra os parceiros de espelhamento, **Partner_A** e **Partner_B**, trocando as funções principal e espelho através de diversos failovers automáticos ou manuais.  
   
- ![Parceiros que alternam duas vezes entre as funções](../../database-engine/database-mirroring/media/dbm-roleswitching.gif "Parceiros que alternam duas vezes entre as funções")  
+ ![Parceiros que trocam de funções duas vezes](../../database-engine/database-mirroring/media/dbm-roleswitching.gif "Partners switching twice between roles")  
   
 > [!IMPORTANT]  
 >  Após a troca de função, os trabalhos executados no antigo banco de dados principal devem ser recriados no servidor principal novo para que lá sejam executados. Para obter mais informações, veja [Administração de logons e trabalhos após a troca de funções &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
@@ -72,9 +77,9 @@ caps.handback.revision: 50
   
  Após a troca de função, metadados específicos precisam estar presentes em ambos os parceiros para garantir que todos os usuários dos bancos de dados possam acessar o novo banco de dados principal. Além disso, os trabalhos de backup precisam ser criados no servidor principal novo, para garantir que o banco de dados continue a ser armazenado no cronograma habitual. Para obter mais informações, veja [Administração de logons e trabalhos após a troca de funções &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
- Durante a troca de função, a quantidade de tempo que o espelhamento de banco de dados ficará fora de serviço depende do tipo de troca de função e da causa da troca de função. Para obter mais informações, veja [Estime a interrupção do serviço durante troca de função &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
+ Durante a troca de função, a quantidade de tempo que o espelhamento de banco de dados ficará fora de serviço depende do tipo de troca de função e da causa da troca de função. Para obter mais informações, consulte [Estimar a interrupção do serviço durante troca de função &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
   
-##  <a name="ManualFailover"></a> Failover Manual  
+##  <a name="ManualFailover"></a> Manual Failover  
  O failover manual desconecta os clientes do banco de dados e reverte as funções dos parceiros. Apenas o modo de alta segurança oferece suporte ao failover manual.  
   
  **Nesta seção:**  
@@ -93,7 +98,7 @@ caps.handback.revision: 50
   
  A figura a seguir ilustra uma instância do uso do failover manual para manter a disponibilidade de banco de dados enquanto você atualiza uma instância de servidor de banco de dados. Quando a atualização é concluída, um administrador pode, opcionalmente, fazer failover de volta para a instância de servidor original. Isso é útil quando o administrador deseja interromper a sessão de espelhamento e usar o servidor espelho em outro lugar. Dessa forma, uma única instância de servidor pode ser usada repetidamente ao atualizar uma série de instâncias de servidor de banco de dados.  
   
- ![Failover manual planejado](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "Failover manual planejado")  
+ ![Failover manual planejado](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "Planned manual failover")  
   
 ###  <a name="ConditionsForManualFo"></a> Condições exigidas para um failover manual  
  O failover manual exige que a segurança da transação seja definida como FULL (ou seja, modo de alta segurança). Quando os parceiros estão conectados e o banco de dados já está sincronizado, há suporte ao failover manual.  
@@ -122,7 +127,7 @@ caps.handback.revision: 50
     > [!NOTE]  
     >  Assim que o servidor espelho novo tiver sincronizado novamente os bancos de dados, o failover será novamente possível, mas na direção inversa.  
   
- Após o failover, os clientes devem se reconectar ao banco de dados principal atual. Para obter mais informações, veja [Conectar clientes a uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ Após o failover, os clientes devem se reconectar ao banco de dados principal atual. Para obter mais informações, consulte [Conectar clientes a uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
  **Para iniciar o failover manual**  
   
@@ -130,7 +135,7 @@ caps.handback.revision: 50
   
 -   [Executar failover manualmente em uma sessão de espelhamento de banco de dados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
-##  <a name="AutomaticFailover"></a> Failover automático  
+##  <a name="AutomaticFailover"></a> Automatic Failover  
  Há suporte para o failover automático somente em sessões de espelhamento de banco de dados executadas com uma testemunha em modo de segurança alta (*modo de segurança alta com failover automático*). No modo de segurança alta com failover automático, depois de sincronizado o banco de dados, se o banco de dados principal ficar indisponível, ocorrerá um failover automático. Um failover automático faz com que o servidor espelho assuma a função de servidor principal e torne sua cópia do banco de dados online como o banco de dados principal. A exigência de sincronização do banco de dados evita a perda de dados durante o failover, pois toda transação confirmada no banco de dados principal também está confirmada no banco de dados espelho.  
   
 > [!IMPORTANT]  
@@ -184,7 +189,7 @@ caps.handback.revision: 50
   
  Inicialmente, todos os três servidores estão conectados (a sessão tem quorum completo). **Partner_A** é o servidor principal e **Partner_B** é o servidor espelho. **Partner_A** (ou o banco de dados principal em **Partner_A**) torna-se indisponível. A testemunha e **Partner_B** reconhecem que o principal não está mais disponível na sessão que retém quorum. **Partner_B** se torna o servidor principal e disponibiliza sua cópia do banco de dados como o novo banco de dados principal. Por fim, o **Partner_A** se reconecta à sessão e descobre que agora o **Partner_B** possui a função principal. **Partner_A** assume a função de espelho.  
   
- Após o failover, os clientes devem se reconectar ao banco de dados principal atual. Para obter mais informações, veja [Conectar clientes a uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ Após o failover, os clientes devem se reconectar ao banco de dados principal atual. Para obter mais informações, consulte [Conectar clientes a uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 > [!NOTE]  
 >  As transações que foram preparadas usando o Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , mas que ainda não estiverem confirmadas quando ocorrer um failover, serão consideradas anuladas depois da falha do banco de dados.  
@@ -210,7 +215,7 @@ caps.handback.revision: 50
     > [!NOTE]  
     >  A desativação da testemunha enquanto retém a segurança de transação completa faz com que a sessão fique em modo de segurança alta sem failover automático.  
   
-##  <a name="ForcedService"></a> Serviço forçado (com possível perda de dados)  
+##  <a name="ForcedService"></a> Forced Service (with Possible Data Loss)  
  O espelhamento de banco de dados permite forçar o serviço (com possível perda de dados) como método de recuperação de desastres, para permitir o uso de um servidor espelho como servidor em espera passiva. Só é possível forçar o serviço se o servidor principal estiver desconectado do servidor espelho em uma sessão de espelhamento. Já que forçar o serviço pode ocasionar a perda de dados, esse recurso deve ser usado de forma cautelosa e moderada.  
   
  O suporte para o serviço forçado depende do modo operacional e do estado da sessão, conforme a seguir:  
@@ -239,11 +244,11 @@ caps.handback.revision: 50
 ###  <a name="TypicalCaseFS"></a> Casos comuns de serviço forçado  
  A figura a seguir ilustra um caso comum de serviço forçado (com possível perda de dados).  
   
- ![Serviço forçado com possível perda de dados](../../database-engine/database-mirroring/media/dbm-forced-service.gif "Serviço forçado com possível perda de dados")  
+ ![Forçando o serviço com possível perda de dados](../../database-engine/database-mirroring/media/dbm-forced-service.gif "Forcing service with possible data loss")  
   
  Na figura, o servidor principal original, **Partner_A**, torna-se indisponível para o servidor espelho, **Partner_B**, fazendo com que o banco de dados espelho seja desconectado. Depois de garantir que **Partner_A** não está disponível aos clientes, o administrador do banco de dados força o serviço, com possível perda de dados, no **Partner_B**. **Partner_B** se torna o servidor principal e é executado com o banco de dados *exposto* (ou seja, sem estar espelhado). Nesse momento, os clientes podem se reconectar ao **Partner_B**.  
   
- Quando **Partner_A** se torna disponível, ele se reconecta ao novo servidor principal, associando-se novamente à sessão e assumindo a função espelho. A sessão de espelhamento fica imediatamente suspensa, sem sincronizar o novo banco de dados espelho. A suspensão da sessão permite que o administrador do banco de dados decida retomar a sessão ou, em casos extremos, remover e tentar recuperar os dados do antigo banco de dados principal. Nesse caso, o administrador do banco de dados escolhe retomar o espelhamento. Nesse momento, o **Partner_A** assume a função de servidor espelho e reverte o antigo banco de dados principal no ponto específico da última transação sincronizada com êxito; se nenhuma transação confirmada foi gravada em disco no servidor espelho antes de o serviço ser forçado, essas transações são perdidas. Em seguida, **Partner_A** confirma o novo banco de dados espelho, aplicando as alterações feitas no novo banco de dados principal, já que o servidor espelho antigo tornou-se o novo servidor principal.  
+ Quando **Partner_A** se torna disponível, ele se reconecta ao novo servidor principal, associando-se novamente à sessão e assumindo a função espelho. A sessão de espelhamento fica imediatamente suspensa, sem sincronizar o novo banco de dados espelho. A suspensão da sessão permite que o administrador do banco de dados decida retomar a sessão ou, em casos extremos, remover e tentar recuperar os dados do antigo banco de dados principal. Nesse caso, o administrador do banco de dados escolhe retomar o espelhamento. Nesse momento, o **Partner_A** assume a função de servidor espelho e reverte o antigo banco de dados principal no ponto específico da última transação sincronizada com êxito; se nenhuma transação confirmada foi gravada em disco no servidor espelho antes de o serviço ser forçado, essas transações são perdidas. Em seguida,**Partner_A** confirma o novo banco de dados espelho, aplicando as alterações feitas no novo banco de dados principal, já que o servidor espelho antigo tornou-se o novo servidor principal.  
   
 > [!NOTE]  
 >  Embora o modo de alto desempenho não exija testemunhas, caso uma seja configurada, só será possível forçar o serviço se a testemunha estiver conectada ao servidor espelho no momento.  
@@ -264,7 +269,7 @@ caps.handback.revision: 50
 ###  <a name="ManageDataLoss"></a> Gerenciando a perda potencial de dados  
  Depois que o serviço é forçado, assim que o antigo servidor principal estiver disponível, pressupondo que o seu banco de dados não foi danificado, é possível tentar gerenciar a perda potencial de dados. A abordagem disponível para o gerenciamento da perda potencial de dados depende se o servidor principal original foi conectado ao seu parceiro e associado novamente à sessão de espelhamento. Presumindo que o servidor principal original pode acessar a instância principal nova, a reconexão ocorre de forma automática e transparente.  
   
-#### O servidor principal original foi reconectado  
+#### <a name="the-original-principal-server-has-reconnected"></a>O servidor principal original foi reconectado  
  Normalmente, depois de uma falha, quando o servidor principal original reinicia, reconecta-se rapidamente ao seu parceiro. Na reconexão, o servidor principal original se torna o servidor espelho. Seu banco de dados se torna o banco de dados espelho e insere o estado recuperando antes de a sessão ser suspensa. O banco de dados espelho não será revertido a menos que o espelhamento seja retomado.  
   
  Entretanto, o banco de dados de recuperação não pode ser acessado, por isso, não é possível inspecioná-lo para avaliar os dados que seriam perdidos caso o espelhamento retomasse. Assim, a decisão de retomar ou remover o espelhamento depende se é aceitável a perda dos dados.  
@@ -277,7 +282,7 @@ caps.handback.revision: 50
   
      Continuar o espelhamento faz com que o banco de dados espelho novo seja revertido, conforme a primeira etapa da sincronização do banco de dados. Se houver registros de log aguardando na fila de envio no momento da falha, as transações correspondentes serão perdidas, mesmo se tiverem sido confirmadas.  
   
-#### O servidor principal original não foi reconectado  
+#### <a name="the-original-principal-server-has-not-reconnected"></a>O servidor principal original não foi reconectado  
  Se for possível impedir temporariamente que o servidor principal original seja reconectado na rede ao servidor principal novo, você poderá inspecionar o banco de dados principal original para avaliar os dados que seriam perdidos caso o espelhamento retomasse.  
   
 -   Se a perda potencial de dados for aceitável  
@@ -307,11 +312,11 @@ caps.handback.revision: 50
   
 -   [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)  
   
--   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Estimar a interrupção do serviço durante troca de função &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Possíveis falhas durante espelhamento de banco de dados](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
+ [Possíveis falhas durante o espelhamento de banco de dados](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [Conectar clientes a uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Testemunha de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [Restaurações completas de banco de dados &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

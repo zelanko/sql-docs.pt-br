@@ -1,33 +1,38 @@
 ---
-title: "Op&#231;&#245;es (SQL Server AlwaysOn, p&#225;gina Painel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Alwayson.Dashboard"
+title: "Opções (SQL Server AlwaysOn, página Painel) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.ToolsOptionsPages.Alwayson.Dashboard
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 caps.latest.revision: 8
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6edac25ccc503679e45bdc3477a819e0285e2909
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Op&#231;&#245;es (SQL Server AlwaysOn, p&#225;gina Painel)
+# <a name="options-sql-server-always-on-dashboard-page"></a>Opções (SQL Server AlwaysOn, página Painel)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Use a página **Painel do SQL Server AlwaysOn** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Opções** para configurar o Painel do AlwaysOn.  
   
  **Para acessar essa página:**  
   
- No menu **Ferramentas**, clique em **Opções**, expanda a pasta **SQL Server AlwaysOn** e clique em **Painel**.  
+ No menu **Ferramentas** , clique em **Opções**, expanda a pasta **SQL Server AlwaysOn** e clique em **Painel**.  
   
-## Nessa página  
+## <a name="on-this-page"></a>Nessa página  
  **Ativar atualização automática.**  
  Clique para habilitar a atualização automática. As opções são:  
   
@@ -38,7 +43,8 @@ caps.handback.revision: 8
  **Habilite sua política de AlwaysOn definida pelo usuário.**  
  Se você tiver definido sua própria política de AlwaysOn, clique nessa opção para habilitar sua política.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
+

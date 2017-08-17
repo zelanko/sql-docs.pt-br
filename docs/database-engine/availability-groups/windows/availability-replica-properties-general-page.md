@@ -1,34 +1,39 @@
 ---
-title: "Propriedades de r&#233;plica de disponibilidade (p&#225;gina Geral) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilityreplicaproperties.general.f1"
+title: "Propriedades da réplica de disponibilidade (página Geral) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilityreplicaproperties.general.f1
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3720e9230366bb59290d78212ee5ba94fe4d1c71
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriedades de r&#233;plica de disponibilidade (p&#225;gina Geral)
+# <a name="availability-replica-properties-general-page"></a>Propriedades de réplica de disponibilidade (página Geral)
   Use esta caixa de diálogo para exibir as propriedades de uma réplica de disponibilidade.  
   
-## Lista de Tarefas  
+## <a name="task-list"></a>Lista de Tarefas  
  **Para exibir as propriedades da réplica de disponibilidade**  
   
 -   [Exibir as propriedades da réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  
   
 -   [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## Lista de elementos de interface do usuário  
+## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
  **Nome do grupo de disponibilidade**  
  O nome do grupo de disponibilidade. Esse é um nome especificado pelo usuário que deve ser exclusivo no WSFC (Windows Server Failover Cluster).  
   
@@ -54,9 +59,9 @@ caps.handback.revision: 14
  **Confirmação síncrona**  
  A réplica primária espera para confirmar uma determinada transação até que a réplica secundária tenha gravado a transação em disco.  
   
- Para obter mais informações, veja [Modos de disponibilidade &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+ Para obter mais informações, consulte [Modos de disponibilidade &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
- **Modo de failover**  
+ **Failover mode**  
  O modo de failover da réplica, um dos seguintes:  
   
  **Automatic**  
@@ -86,7 +91,7 @@ caps.handback.revision: 14
  **Sim**  
  Todas as conexões são permitidas para os bancos de dados secundários desta réplica, mas somente para acesso de leitura. Os bancos de dados secundários estão disponíveis para acesso de leitura.  
   
- Para obter mais informações, veja [Secundárias ativas: réplicas secundárias legíveis &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Para obter mais informações, consulte [Secundárias ativas: réplicas secundárias legíveis &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **Tempo limite da sessão (segundos)**  
  O período de tempo limite, em segundos. O período de tempo limite é o tempo máximo que a réplica espera para receber uma mensagem de outra réplica antes de considerar que a conexão entre a réplica primária e secundária falhou. O tempo limite da sessão detecta se réplicas secundárias estão conectadas à réplica primária. Ao detectar uma falha de conexão com uma réplica secundária, a réplica primária considera a réplica secundária como NOT_SYNCHRONIZED. Ao detectar uma falha de conexão com a réplica primária, uma réplica secundária simplesmente tenta se conectar outra vez.  
@@ -95,9 +100,10 @@ caps.handback.revision: 14
 >  Os tempos limites de sessão não causam failovers automáticos.  
   
  **URL do Ponto de Extremidade**  
- Representação de cadeia de caracteres do ponto de extremidade de espelhamento de banco de dados especificado pelo usuário usado pelas conexões entre réplicas primária e secundária para sincronização de dados. Para obter informações sobre a sintaxe das URLs de ponto de extremidade, veja [Especificar a URL do ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md).  
+ Representação de cadeia de caracteres do ponto de extremidade de espelhamento de banco de dados especificado pelo usuário usado pelas conexões entre réplicas primária e secundária para sincronização de dados. Para obter informações sobre a sintaxe das URLs de ponto de extremidade, veja [Especificar a URL do ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

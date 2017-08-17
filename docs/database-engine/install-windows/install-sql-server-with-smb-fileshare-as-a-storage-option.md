@@ -1,30 +1,35 @@
 ---
-title: "Instalar o SQL Server com o compartilhamento de arquivos SMB como uma op&#231;&#227;o de armazenamento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Instalar o SQL Server com o compartilhamento de arquivos SMB como uma opção de armazenamento | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1f56f9b3716e8950ceea9110f7ece301ac8c0c74
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Instalar o SQL Server com o compartilhamento de arquivos SMB como uma op&#231;&#227;o de armazenamento
-  A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], os bancos de dados do sistema (Mestre, Modelo, MSDB e TempDB) e os bancos de dados de usuário do [!INCLUDE[ssDE](../../includes/ssde-md.md)] podem ser instalados com um servidor de arquivos SMB (protocolo SMB) como uma opção de armazenamento. Isso se aplica a instalações autônomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a FCI (instalações de cluster de failover) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Instalar o SQL Server com o compartilhamento de arquivos SMB como uma opção de armazenamento
+  A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], os bancos de dados do sistema (Mestre, Modelo, MSDB e TempDB) e os bancos de dados de usuário do [!INCLUDE[ssDE](../../includes/ssde-md.md)] podem ser instalados com um servidor de arquivos SMB (protocolo SMB) como uma opção de armazenamento. Isso se aplica a instalações autônomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a FCI (instalações de cluster de failover) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  O fluxo de arquivos não tem suporte em um compartilhamento de arquivos SMB.  
   
-## Considerações sobre instalação  
+## <a name="installation-considerations"></a>Considerações sobre instalação  
   
-### Formatos de compartilhamento de arquivo SMB:  
+### <a name="smb-file-share-formats"></a>Formatos de compartilhamento de arquivo SMB:  
  Embora especificando o compartilhamento de arquivos SMB, os formatos de caminho a seguir têm suporte da UNC (Convenção de Nomenclatura Universal) para bancos de dados autônomos e FCI.  
   
 -   \\\ServerName\ShareName\  
@@ -45,14 +50,14 @@ caps.handback.revision: 23
   
 -   Unidades de rede mapeadas.  
   
-### Instruções DLL (linguagem de definição de dados) com suporte  
+### <a name="supported-data-definition-language-ddl-statements"></a>Instruções DLL (linguagem de definição de dados) com suporte  
  As instruções DDL de [!INCLUDE[tsql](../../includes/tsql-md.md)] e os procedimentos armazenados de mecanismo de banco de dados a seguir dão suporte a compartilhamentos de arquivos SMB:  
   
 1.  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
 2.  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   
-3.  [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+3.  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 4.  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 23
   
 6.  [sp_attach_single_file_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md)  
   
-### Opções de instalação  
+### <a name="installation-options"></a>Opções de instalação  
   
 -   Na página de interface do usuário de instalação “Configuração do Mecanismo de Banco de Dados”, guia “Diretórios de Dados”, defina o parâmetro Diretório raiz de dados como “\\\\fileserver1\share1\.”  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 23
   
      Para obter mais informações sobre o uso das várias opções de parâmetro de linha de comando no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], veja [Instalar o SQL Server 2016 por meio do Prompt de Comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-## Considerações sobre o sistema operacional (protocolo SMB vs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Considerações sobre o sistema operacional (protocolo SMB vs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Sistemas operacionais Windows diferentes têm versões de protocolo SMB diferentes e a versão do protocolo SMB é transparente para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode localizar os benefícios das versões diferentes do protocolo SMB com relação ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 |Sistema operacional|versão do protocolo SMB2|Benefícios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -90,12 +95,12 @@ caps.handback.revision: 23
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)]incluindo o Server Core|3.0|O suporte para failover transparente de compartilhamentos de arquivos fornece zero tempo de inatividade sem a intervenção de administrador exigida para DBA do SQL ou administrador de servidor de arquivos em configurações do cluster de servidor de arquivos.<br /><br /> Suporte para ES usando diversas interfaces de rede simultaneamente, assim como tolerância para falhas de interface de rede.<br /><br /> Suporte para interfaces de rede com recursos de RDMA.<br /><br /> Para obter mais informações sobre estes recursos e o protocolo SMB, confira [Visão geral do protocolo SMB](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Suporte SoFS (Servidor de arquivo de expansão) com disponibilidade contínua.|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, incluindo o Server Core|3.2|O suporte para failover transparente de compartilhamentos de arquivos fornece zero tempo de inatividade sem a intervenção de administrador exigida para DBA do SQL ou administrador de servidor de arquivos em configurações do cluster de servidor de arquivos.<br /><br /> Suporte para IO usando diversas interfaces de rede simultaneamente, assim como tolerância para falhas de interface de rede, usando SMB Multichannel.<br /><br /> Suporte para interfaces de rede com recursos de RDMA usando SMB Direct.<br /><br /> Para obter mais informações sobre estes recursos e o protocolo SMB, confira [Visão geral do protocolo SMB](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Suporte SoFS (Servidor de arquivo de expansão) com disponibilidade contínua.<br /><br /> Otimizado para leitura/gravação aleatória pequena de E/S comum para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> O MTU (Unidade de transmissão máxima) é ativado por padrão, o que melhora significativamente o desempenho em grandes transferências sequenciais como data warehouse do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o backup de banco de dados ou restauração.|  
   
-## Considerações sobre segurança  
+## <a name="security-considerations"></a>Considerações sobre segurança  
   
 -   A conta de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a conta de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent devem ter as permissões de compartilhamento FULL CONTROL e permissões NTFS nas pastas de compartilhamento SMB. A conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser uma conta de domínio ou uma conta de sistema se for usado um servidor de arquivos SMB. Para obter mais informações sobre compartilhamento e permissões NTFS, veja [Permissões de compartilhamento e NTFS em um servidor de arquivos](http://go.microsoft.com/fwlink/?LinkId=245535) (http://go.microsoft.com/fwlink/?LinkId=245535).  
   
     > [!NOTE]  
-    >  As permissões de compartilhamento FULL CONTROL e as permissões NTFS nas pastas de compartilhamento SMB devem ser restritas a: conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e usuários do Windows com funções de servidor admin.  
+    >  As permissões de compartilhamento FULL CONTROL e as permissões NTFS nas pastas de compartilhamento SMB devem ser restritas a: conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e usuários do Windows com funções de servidor admin.  
   
      Era recomendado usar a conta de domínio como uma conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se a conta do sistema for usada como uma conta de serviço, conceda as permissões para a conta do computador no formato: *<domain_name>***\\***<computer_name>***$**.  
   
@@ -108,9 +113,9 @@ caps.handback.revision: 23
   
 -   A conta usada para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ter privilégios SeSecurityPrivilege no servidor de arquivos SMB. Para conceder esse privilégio, use o console Política de Segurança Local no servidor de arquivos para adicionar a conta de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à política Gerenciar a auditoria e o log de segurança. Essa configuração está disponível na seção Atribuições de Direitos do Usuário, em Políticas Locais, no console Política de Segurança Local.  
   
-## Problemas conhecidos  
+## <a name="known-issues"></a>Problemas conhecidos  
   
--   Ao desanexar um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que reside no armazenamento anexado por rede, você poderá ter um problema de permissão de banco de dados ao tentar reanexar o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O problema é definido [neste artigo da Base de Dados de Conhecimento](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321). Para resolver este problema, consulte a seção **Mais Informações** no artigo da Base de Dados de Conhecimento.  
+-   Ao desanexar um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que reside no armazenamento anexado por rede, você poderá ter um problema de permissão de banco de dados ao tentar reanexar o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O problema é definido [neste artigo da Base de Dados de Conhecimento](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321). Para resolver este problema, consulte a seção **Mais Informações** no artigo da Base de Dados de Conhecimento.  
   
 -   Se o compartilhamento de arquivos SMB é usado como uma opção de armazenamento para uma instância clusterizada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por padrão o log de diagnóstico do cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode ser gravado no compartilhamento de arquivos porque a DLL de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tem a permissão de leitura/gravação no compartilhamento de arquivos. Para resolver esse problema, tente um dos seguintes métodos:  
   
@@ -123,7 +128,7 @@ caps.handback.revision: 23
         SET DIAGNOSTICS LOG PATH = 'C:\logs';  
         ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Planejando uma instalação do SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
   

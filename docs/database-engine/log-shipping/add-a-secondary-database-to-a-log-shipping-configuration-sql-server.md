@@ -1,27 +1,32 @@
 ---
-title: "Adicionar um banco de dados secund&#225;rio a uma configura&#231;&#227;o de envio de logs (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "adicionando bancos de dados secundários"
-  - "bancos de dados secundários [SQL Server], no envio de logs"
-  - "arquivos de dados secundários [SQL Server], adicionando"
-  - "envio de logs [SQL Server], banco de dados secundários"
+title: "Adicionar um banco de dados secundário a uma configuração de envio de logs (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding secondary databases
+- secondary databases [SQL Server], in log shipping
+- secondary data files [SQL Server], adding
+- log shipping [SQL Server], secondary databases
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d1f64d49c5baf05dc1c7f18c4c0c568a94e424ae
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Adicionar um banco de dados secund&#225;rio a uma configura&#231;&#227;o de envio de logs (SQL Server)
+# <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>Adicionar um banco de dados secundário a uma configuração de envio de logs (SQL Server)
   Este tópico descreve como adicionar um banco de dados secundário a uma configuração de envio de logs existente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -43,11 +48,11 @@ caps.handback.revision: 20
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Os procedimentos armazenados de envio de logs exigem a associação à função de servidor fixa **sysadmin**.  
+ Os procedimentos armazenados de envio de logs exigem a associação à função de servidor fixa **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para adicionar um banco de dados secundário de envio de logs  
+#### <a name="to-add-a-log-shipping-secondary-database"></a>Para adicionar um banco de dados secundário de envio de logs  
   
 1.  Clique com o botão direito do mouse no banco de dados que deve ser usado como banco de dados primário na configuração de envio de logs e clique em **Propriedades**.  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 20
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para adicionar um banco de dados secundário de envio de logs  
+#### <a name="to-add-a-log-shipping-secondary-database"></a>Para adicionar um banco de dados secundário de envio de logs  
   
 1.  No servidor secundário, execute [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md) fornecendo os detalhes do servidor primário e banco de dados. Esse procedimento armazenado retorna a ID secundária e as ID de tarefa de cópia e restauração.  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 20
   
 4.  No servidor primário, execute [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) para adicionar as informações necessárias sobre o novo banco de dados secundário ao servidor primário.  
   
-5.  No servidor secundário, habilite as tarefas de cópia e restauração. Para obter mais informações, consulte [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
+5.  No servidor secundário, habilite as tarefas de cópia e restauração. Para obter mais informações, consulte [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 20
   
 -   [Executar failover para um secundário de envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Tabelas de envio de log e procedimentos armazenados](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

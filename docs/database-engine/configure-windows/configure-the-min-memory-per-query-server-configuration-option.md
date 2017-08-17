@@ -1,30 +1,35 @@
 ---
-title: "Configurar a op&#231;&#227;o min memory per query de configura&#231;&#227;o de servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "memória [SQL Server], consultas"
-  - "memória mínima de consulta"
-  - "consultas [SQL Server], memória"
-  - "opção min memory per query"
+title: "Configurar a opção de configuração de servidor min memory per query | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- memory [SQL Server], queries
+- minimum query memory
+- queries [SQL Server], memory
+- min memory per query option
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e49ed68ce5e3f4621017db6cd09d2eec680b77f2
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar a op&#231;&#227;o min memory per query de configura&#231;&#227;o de servidor
+# <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Configurar a opção min memory per query de configuração de servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Este tópico descreve como configurar a opção de configuração de servidor **min memory per query** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **min memory per query** especifica a quantidade mínima de memória (em quilobytes) que será alocada para a execução de uma consulta. Por exemplo, se **min memory per query** for definida como 2.048 KB, a consulta terá a garantia de obter no mínimo esse total de memória. O valor padrão é 1.024 KB. O valor mínimo é de 512 KB e o valor máximo é 2.147.483.647 KB (2 GB).  
+  Este tópico descreve como configurar a opção de configuração de servidor **min memory per query** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **min memory per query** especifica a quantidade mínima de memória (em quilobytes) que será alocada para a execução de uma consulta. Por exemplo, se **min memory per query** for definida como 2.048 KB, a consulta terá a garantia de obter no mínimo esse total de memória. O valor padrão é 1.024 KB. O valor mínimo é de 512 KB e o valor máximo é 2.147.483.647 KB (2 GB).  
   
  **Neste tópico**  
   
@@ -63,17 +68,17 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para configurar a opção min memory per query  
+#### <a name="to-configure-the-min-memory-per-query-option"></a>Para configurar a opção min memory per query  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor e selecione **Propriedades**.  
   
 2.  Clique no nó **Memória** .  
   
-3.  Na caixa **Memória mínima por consulta**, insira a quantidade mínima de memória (em quilobytes) que será alocada para a execução de uma consulta.  
+3.  Na caixa **Memória mínima por consulta** , insira a quantidade mínima de memória (em quilobytes) que será alocada para a execução de uma consulta.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para configurar a opção min memory per query  
+#### <a name="to-configure-the-min-memory-per-query-option"></a>Para configurar a opção min memory per query  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -95,13 +100,14 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção min memory per query  
+##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção min memory per query  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Configurar a opção de configuração de servidor index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
+ [Configurar a opção index create memory de configuração de servidor](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   
   
+

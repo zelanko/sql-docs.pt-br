@@ -1,29 +1,34 @@
 ---
-title: "Configurar o envio de logs (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "envio de logs [SQL Server], habilitando"
-  - "envio de logs [SQL Server], configurando"
+title: Configurar o envio de logs (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], enabling
+- log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a1703b56628ba9c509f66cb3d722e6636bd29486
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar o envio de logs (SQL Server)
+# <a name="configure-log-shipping-sql-server"></a>Configurar o envio de logs (SQL Server)
   Este tópico descreve como configurar o envio de logs no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versões posteriores e oferecem suporte à compactação de backup. Ao criar uma configuração de envio de logs, é possível controlar o comportamento de compactação de backup dos backups de log. Para obter mais informações, veja [Compactação de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
+>  O [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versões posteriores dão suporte à compactação de backup. Ao criar uma configuração de envio de logs, é possível controlar o comportamento de compactação de backup dos backups de log. Para obter mais informações, veja [Compactação de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
  **Neste tópico**  
   
@@ -52,11 +57,11 @@ caps.handback.revision: 42
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Os procedimentos armazenados de envio de logs exigem a associação à função de servidor fixa **sysadmin**.  
+ Os procedimentos armazenados de envio de logs exigem a associação à função de servidor fixa **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para configurar o envio de logs  
+#### <a name="to-configure-log-shipping"></a>Para configurar o envio de logs  
   
 1.  Clique com o botão direito do mouse no banco de dados que deve ser usado como banco de dados primário na configuração de envio de logs e, em seguida, clique em **Propriedades**.  
   
@@ -125,7 +130,7 @@ caps.handback.revision: 42
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para configurar o envio de logs  
+#### <a name="to-configure-log-shipping"></a>Para configurar o envio de logs  
   
 1.  Inicialize o banco de dados secundário, restaurando um backup completo do banco de dados primário no servidor secundário.  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 42
   
 9. No servidor primário, execute [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) para adicionar as informações necessárias sobre o novo banco de dados secundário ao servidor primário.  
   
-10. No servidor secundário, habilite as tarefas de cópia e restauração. Para obter mais informações, consulte [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
+10. No servidor secundário, habilite as tarefas de cópia e restauração. Para obter mais informações, consulte [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
@@ -163,7 +168,7 @@ caps.handback.revision: 42
   
 -   [Executar failover para um secundário de envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Tabelas de envio de log e procedimentos armazenados](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

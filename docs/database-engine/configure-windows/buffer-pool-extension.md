@@ -1,25 +1,30 @@
 ---
-title: "Extens&#227;o do pool de buffers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Extensão do pool de buffers | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0b4c2b33ef0dcdee0ac79340760790ba8938b431
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Extens&#227;o do pool de buffers
-  Introduzida no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], a extensão do pool de buffers fornece a integração consistente de uma extensão de memória RAM não volátil (isto é, unidade de estado sólido) com o pool de buffers do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para melhorar significativamente a taxa de transferência de E/S. A extensão do pool de buffers não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+# <a name="buffer-pool-extension"></a>Extensão do pool de buffers
+  Introduzida no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], a extensão do pool de buffers fornece a integração consistente de uma extensão de memória RAM não volátil (isto é, unidade de estado sólido) com o pool de buffers do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para melhorar significativamente a taxa de transferência de E/S. A extensão do pool de buffers não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-## Benefícios da extensão do pool de buffers  
+## <a name="benefits-of-the-buffer-pool-extension"></a>Benefícios da extensão do pool de buffers  
  A principal finalidade de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é armazenar e recuperar dados, de modo que a intensa E/S de disco é uma característica importante do Mecanismo de Banco de Dados. Como as operações de E/S de disco podem consumir muitos recursos e levar um tempo relativamente longo para terminar, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se concentra em tornar a E/S altamente eficiente. O pool de buffers serve como fonte de alocação de memória primária do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O gerenciamento de buffer é um componente fundamental para alcançar essa eficiência. O componente de gerenciamento de buffer consiste em dois mecanismos: o gerenciador de buffer, para acessar e atualizar páginas de banco de dados, e o cache do pool de buffers, para reduzir a E/S do arquivo de banco de dados.  
   
  As páginas de índice e dados são lidas do disco no pool de buffers e as páginas modificadas (também conhecidas como páginas sujas) são gravadas novamente no disco. A demanda de memória nos pontos de verificação de servidor e banco de dados faz com que as páginas sujas dinâmicas (ativas) no cache do buffer sejam removidas do cache e gravadas nos discos mecânicos e, em seguida, lidas novamente no cache. Normalmente, essas operações de E/S são leituras e gravações aleatórias pequenas de 4 a 16 KB de dados. Os padrões de E/S aleatória pequena incorrem em buscas frequentes, competição por braço do disco mecânico, aumento de latência de E/S e redução da taxa de transferência de E/S agregada do sistema.  
@@ -40,7 +45,7 @@ caps.handback.revision: 23
   
 -   Uma arquitetura de cache que pode se beneficiar das unidades de memória de baixo custo presentes e futuras  
   
-### Conceitos  
+### <a name="concepts"></a>Conceitos  
  Os termos a seguir são aplicáveis ao recurso de extensão do pool de buffers.  
   
  SSD (unidade de estado sólido)  
@@ -57,16 +62,16 @@ caps.handback.revision: 23
  Ponto de verificação  
  Um ponto de verificação cria um bom ponto conhecido a partir do qual o [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode começar a aplicar as alterações contidas no log de transações durante a recuperação após uma pane ou um desligamento inesperado. Um ponto de verificação grava as páginas sujas e as informações do log de transações da memória no disco e, além disso, registra informações sobre o log de transações. Para obter mais informações, consulte [Pontos de verificação de banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
-## Detalhes da extensão do pool de buffers  
+## <a name="buffer-pool-extension-details"></a>Detalhes da extensão do pool de buffers  
  O armazenamento de SSD é usado como uma extensão para o subsistema de memória, e não para o subsistema de armazenamento de disco. Isto é, o arquivo de extensão do pool de buffers permite que o gerenciador do pool de buffers use a memória flash NAND e DRAM para manter um pool de buffers muito maior de páginas indiferentes na memória RAM não volátil apoiada por SSDs. Isso cria uma hierarquia de cache de vários níveis com o nível 1 (L1) como a DRAM e o nível 2 (L2) como o arquivo de extensão do pool de buffers na SSD. Somente páginas limpas são gravadas no cache L2, o que ajuda a manter a segurança dos dados. O gerenciador de buffer manipula a movimentação de páginas limpas entre os caches L1 e L2.  
   
- A ilustração a seguir fornece uma visão geral arquitetônica de alto nível do pool de buffers em relação a outros componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ A ilustração a seguir fornece uma visão geral arquitetônica de alto nível do pool de buffers em relação a outros componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- ![Arquitetura da extensão do pool de buffers da SSD](../../database-engine/configure-windows/media/ssdbufferpoolextensionarchitecture.gif "Arquitetura da extensão do pool de buffers da SSD")  
+ ![Arquitetura da extensão do pool de buffers do SSD](../../database-engine/configure-windows/media/ssdbufferpoolextensionarchitecture.gif "Arquitetura da extensão do pool de buffers do SSD")  
   
  Quando habilitada, a extensão do pool de buffers especifica o tamanho e o caminho do arquivo de cache do pool de buffers na SSD. Esse arquivo é uma extensão contígua de armazenamento na SSD e é configurado estaticamente durante a inicialização da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As alterações nos parâmetros da configuração do arquivo poderão ser realizadas somente quando o recurso de extensão do pool de buffers estiver desabilitado. Quando a extensão do pool de buffers é desabilitada, todas as definições da configuração relacionadas são removidas do Registro. O arquivo de extensão do pool de buffers é excluído durante o desligamento da instância do SQL Server.  
   
-## Práticas recomendadas  
+## <a name="best-practices"></a>Práticas recomendadas  
  É recomendável seguir estas práticas recomendadas.  
   
 -   Depois de habilitar a extensão do Pool de buffers pela primeira vez, é recomendável reiniciar a instância do SQL Server para obter todos os benefícios de desempenho.  
@@ -75,7 +80,7 @@ caps.handback.revision: 23
   
 -   Teste toda a extensão do pool de buffers antes da implementação em um ambiente de produção. Uma vez na produção, evite fazer alterações de configuração no arquivo ou desative o recurso. Essas atividades podem ter um impacto negativo no desempenho do servidor, pois o pool de buffers é significativamente reduzido quando o recurso é desabilitado. Quando desabilitado, a memória usada para oferecer suporte ao recurso não é recuperada até que a instância do SQL Server seja reiniciada. No entanto, se o recurso for reabilitado, a memória será reutilizada sem precisar reiniciar a instância.  
   
-## Informações de retorno sobre a extensão do pool de buffers  
+## <a name="return-information-about-the-buffer-pool-extension"></a>Informações de retorno sobre a extensão do pool de buffers  
  Você pode usar as exibições de gerenciamento dinâmico a seguir para exibir a configuração da extensão do pool de buffers e informações de retorno sobre as páginas de dados na extensão.  
   
 -   [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
@@ -93,7 +98,7 @@ caps.handback.revision: 23
 |sqlserver.buffer_pool_extension_pages_evicted|É acionado quando uma página é removida do arquivo de extensão do pool de buffers.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_eviction_thresholds_recalculated|É acionado quando o limite de remoção é calculado.|*warm_threshold*<br /><br /> *cold_threshold*<br /><br /> *pages_bypassed_eviction*<br /><br /> *eviction_bypass_reason*<br /><br /> *eviction_bypass_reason_description*|  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |||  
 |-|-|  
@@ -104,3 +109,4 @@ caps.handback.revision: 23
 |Monitorar a extensão do pool de buffers|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)<br /><br /> [Contadores de desempenho](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|  
   
   
+

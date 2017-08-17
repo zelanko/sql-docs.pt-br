@@ -1,27 +1,32 @@
 ---
-title: "Configurar a op&#231;&#227;o de configura&#231;&#227;o de servidor max text repl size | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "opção max text repl size"
+title: "Configurar a opção de configuração de servidor max text repl size | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- max text repl size option
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3bb392a22a4954fd536a1f366c4b94a9d4cac1f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar a op&#231;&#227;o de configura&#231;&#227;o de servidor max text repl size
+# <a name="configure-the-max-text-repl-size-server-configuration-option"></a>Configurar a opção de configuração de servidor max text repl size
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Este tópico descreve como configurar a opção de configuração de servidor **max text repl size** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **max text repl size** especifica o tamanho máximo (em bytes) de dados dos tipos **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** e **image** que podem ser adicionados a uma coluna replicada ou capturada em uma única instrução INSERT, UPDATE, WRITETEXT ou UPDATETEXT. O valor padrão é 65536 bytes. O valor -1 indica que não há limite de tamanho além do limite imposto pelo tipo de dados.  
+  Este tópico descreve como configurar a opção de configuração de servidor **max text repl size** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **max text repl size** especifica o tamanho máximo (em bytes) de dados dos tipos **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**e **image** que podem ser adicionados a uma coluna replicada ou capturada em uma única instrução INSERT, UPDATE, WRITETEXT ou UPDATETEXT. O valor padrão é 65536 bytes. O valor -1 indica que não há limite de tamanho além do limite imposto pelo tipo de dados.  
   
  **Neste tópico**  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 35
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para configurar a opção max text repl size  
+#### <a name="to-configure-the-max-text-repl-size-option"></a>Para configurar a opção max text repl size  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor e selecione **Propriedades**.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 35
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para configurar a opção max text repl size  
+#### <a name="to-configure-the-max-text-repl-size-option"></a>Para configurar a opção max text repl size  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -88,7 +93,7 @@ GO
 ##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção max text repl size  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Recursos e tarefas de replicação](../../relational-databases/replication/replication-features-and-tasks.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
@@ -99,3 +104,4 @@ GO
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
   
   
+

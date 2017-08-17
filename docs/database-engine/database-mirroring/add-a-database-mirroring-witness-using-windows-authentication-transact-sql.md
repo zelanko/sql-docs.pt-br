@@ -1,26 +1,31 @@
 ---
-title: "Adicionar uma testemunha de espelhamento de banco de dados usando a Autentica&#231;&#227;o do Windows (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "testemunha [SQL Server], estabelecendo"
-  - "Autenticação do Windows [SQL Server]"
-  - "espelhamento de banco de dados [SQL Server], testemunha"
+title: "Adicionar uma testemunha de espelhamento de banco de dados usando a Autenticação do Windows (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- witness [SQL Server], establishing
+- Windows authentication [SQL Server]
+- database mirroring [SQL Server], witness
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 caps.latest.revision: 51
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0e37425e42bbe7c320894de9368c0113373d2e4d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Adicionar uma testemunha de espelhamento de banco de dados usando a Autentica&#231;&#227;o do Windows (Transact-SQL)
+# <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Adicionar uma testemunha de espelhamento de banco de dados usando a Autenticação do Windows (Transact-SQL)
   Para definir uma testemunha para um banco de dados, o proprietário do banco de dados nomeia uma instância do Mecanismo de Banco de Dados para a função de servidor testemunha. A instância do servidor testemunha pode ser executada no mesmo computador que a instância do servidor principal ou espelho, mas isso reduz a robustez de failover automático substancialmente.  
   
  A localização da testemunha em um computador separado é altamente recomendável. Uma determinada instância do servidor pode participar de várias sessões de espelhamento de banco de dados simultâneos com os mesmos ou diferentes parceiros. Um determinado servidor pode ser um parceiro em algumas sessões e uma testemunha em outras sessões.  
@@ -30,7 +35,7 @@ caps.handback.revision: 51
 > [!IMPORTANT]  
 >  É recomendável configurar um espelhamento de banco de dados fora do horário de pico, pois a configuração pode afetar o desempenho.  
   
-### Para estabelecer uma testemunha  
+### <a name="to-establish-a-witness"></a>Para estabelecer uma testemunha  
   
 1.  Na instância do servidor testemunha, verifique se existe um ponto de extremidade para espelhamento de banco de dados. Independentemente do número de sessões de espelhamento com suporte, a instância do servidor só deve ter um ponto de extremidade do espelhamento de banco de dados. Se você pretende usar essa instância de servidor exclusivamente como testemunha nas sessões de espelhamento de banco de dados, atribua a função de testemunha ao ponto de extremidade (ROLE**=**WITNESS). Se você também pretender usar essa instância do servidor como testemunha em uma ou mais sessões de espelhamento de banco de dados, atribua a função do ponto de extremidade como ALL.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 51
   
      Se a testemunha não tiver um ponto de extremidade, veja [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
-2.  Se as instâncias do parceiro estiverem sendo executadas em contas de usuário de domínio diferentes, crie um logon para cada uma das diferentes contas no banco de dados mestre de cada instância. Para obter mais informações, consulte [Permitir o acesso à rede a um ponto de extremidade de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md).  
+2.  Se as instâncias do parceiro estiverem sendo executadas em contas de usuário de domínio diferentes, crie um logon para cada uma das diferentes contas no banco de dados mestre de cada instância. Para obter mais informações, consulte [Permitir o acesso à rede a um ponto de extremidade de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
 3.  Conecte-se ao servidor principal e emita a seguinte instrução:  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 51
   
      TCP**://**\<*system-address>***:**\<*port>*  
   
-     em que \<*system-address>* é uma cadeia que identifica inequivocamente o sistema de computador de destino, e \<*port>* é o número da porta usado pelo ponto de extremidade de espelhamento da instância do servidor parceiro. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
+     em que \<*system-address>* é uma cadeia de caracteres que identifica sem ambiguidade o sistema de computador de destino e \<*port>* é o número da porta usada pelo ponto de extremidade de espelhamento da instância do servidor parceiro. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
      Por exemplo, na instância do servidor principal, a seguinte instrução ALTER DATABASE define a testemunha. O nome do banco de dados é **AdventureWorks**, o endereço do sistema é DBSERVER3 – o nome do sistema testemunha, e a porta usada pelo ponto de extremidade do espelhamento de banco de dados da testemunha é `7022`:  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 51
       SET WITNESS = 'TCP://DBSERVER3:7022'  
     ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir estabelece uma testemunha do espelhamento de dados. Na instância do servidor testemunha (instância padrão em `WITNESSHOST4`):  
   
 1.  Crie um ponto de extremidade para essa instância do servidor para a função WITNESS usando apenas a porta `7022`.  
@@ -125,11 +130,11 @@ caps.handback.revision: 51
   
  Para obter um exemplo completo mostrando a configuração da segurança, o preparo do banco de dados espelho, a configuração de parceiros e a adição de uma testemunha, consulte [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Permitir o acesso à rede a um ponto de extremidade de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)   
- [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)   
+ [Permitir o acesso à rede a um ponto de extremidade de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)   
+ [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)   
  [Remover a testemunha de uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
  [Testemunha de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   

@@ -1,26 +1,31 @@
 ---
-title: "Exibir propriedades do ouvinte do grupo de disponibilidade (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/11/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygrouplistenerproperties.general.f1"
-helpviewer_keywords: 
-  - "Grupos de disponibilidade (SQL Server), monitorando"
+title: Exibir propriedades do ouvinte do grupo de disponibilidade (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 07/11/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygrouplistenerproperties.general.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 412b0c4d11084319487a2c03e5cc7a42dbcbb361
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Exibir propriedades do ouvinte do grupo de disponibilidade (SQL Server)
+# <a name="view-availability-group-listener-properties-sql-server"></a>Exibir propriedades do ouvinte do grupo de disponibilidade (SQL Server)
   Este tópico descreve como exibir as propriedades de um *ouvinte do grupo de disponibilidade* AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)] no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   **Para exibir as propriedades do ouvinte, usando:**  
@@ -34,11 +39,11 @@ caps.handback.revision: 18
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância de servidor que hospeda qualquer réplica de disponibilidade do grupo de disponibilidade cujo ouvinte você deseja exibir. Clique no nome do servidor para expandir a arvore de servidores.  
   
-2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
+2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
   
 3.  Expanda o nó do grupo de disponibilidade e expanda o nó **Ouvintes de Grupos de Disponibilidade** .  
   
-4.  Clique com o botão direito do mouse no ouvinte que você deseja exibir e selecione o comando **Propriedades**.  
+4.  Clique com o botão direito do mouse no ouvinte que você deseja exibir e selecione o comando **Propriedades** .  
   
 5.  Isso abre a caixa de diálogo **Propriedades do Ouvinte do Grupo de Disponibilidade** . Para obter mais informações, veja [Propriedades do Ouvinte do Grupo de Disponibilidade (caixa de diálogo)](#AgListenerPropertiesDialog), mais adiante neste tópico.  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 18
  **Nomes de colunas:** listener_id, ip_address, is_ipv4, port, type, type_desc, state, state_desc, start_time  
   
 > [!NOTE]  
->  Para obter mais informações sobre como usar o [!INCLUDE[tsql](../../../includes/tsql-md.md)] para monitorar seu ambiente do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], veja [Monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md).  
+>  Para obter mais informações sobre como usar o [!INCLUDE[tsql](../../../includes/tsql-md.md)] para monitorar seu ambiente do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , veja [Monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md).  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
@@ -92,9 +97,10 @@ caps.handback.revision: 18
   
 -   [Remover um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+ [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   
+

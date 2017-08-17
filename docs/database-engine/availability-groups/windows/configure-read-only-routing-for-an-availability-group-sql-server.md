@@ -1,30 +1,35 @@
 ---
-title: "Configurar o roteamento somente leitura para um grupo de disponibilidade (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "roteamento somente leitura"
-  - "Grupos de disponibilidade [SQL Server], réplicas secundárias legíveis"
-  - "Grupos de disponibilidade [SQL Server], roteamento somente leitura"
-  - "réplicas secundárias legíveis"
-  - "Grupos de disponibilidade [SQL Server], conectividade de cliente"
-  - "Grupos de disponibilidade [SQL Server], réplicas secundárias ativas"
+title: Configurar o roteamento somente leitura para um grupo de disponibilidade (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- read-only routing
+- Availability Groups [SQL Server], readable secondary replicas
+- Availability Groups [SQL Server], read-only routing
+- readable secondary replicas
+- Availability Groups [SQL Server], client connectivity
+- Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 9133508e63863bc4e73b9569108cb67c6c37d2f6
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar o roteamento somente leitura para um grupo de disponibilidade (SQL Server)
-  Para configurar um grupo de disponibilidade AlwaysOn para oferecer suporte ao roteamento somente leitura no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], você pode usar o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell. *Roteamento somente leitura* refere-se à capacidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de encaminhar solicitações de conexão somente leitura para uma [réplica secundária legível](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) AlwaysOn disponível (ou seja, uma réplica que é configurada para permitir cargas de trabalho somente leitura ao ser executada sob a função secundária). Para dar suporte ao roteamento somente leitura, o grupo de disponibilidade deve ter um [ouvinte do grupo de disponibilidade](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md). Clientes somente leitura devem direcionar suas solicitações de conexão para este ouvinte e as cadeias de conexão do cliente devem especificar a intenção do aplicativo como "somente leitura." Ou seja, elas devem ser *solicitações de conexão de intenção de leitura*.  
+# <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Configurar o roteamento somente leitura para um grupo de disponibilidade (SQL Server)
+  Para configurar um grupo de disponibilidade AlwaysOn para oferecer suporte ao roteamento somente leitura no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], você pode usar o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell. *Roteamento somente leitura* refere-se à capacidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de encaminhar solicitações de conexão somente leitura para uma [réplica secundária legível](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) AlwaysOn disponível (ou seja, uma réplica que é configurada para permitir cargas de trabalho somente leitura ao ser executada sob a função secundária). Para dar suporte ao roteamento somente leitura, o grupo de disponibilidade deve ter um [ouvinte do grupo de disponibilidade](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md). Clientes somente leitura devem direcionar suas solicitações de conexão para este ouvinte e as cadeias de conexão do cliente devem especificar a intenção do aplicativo como "somente leitura." Ou seja, elas devem ser *solicitações de conexão de intenção de leitura*.  
   
 > [!NOTE]  
 >  Para obter informações sobre como configurar uma réplica secundária legível, veja [Configurar o acesso somente leitura em uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
@@ -46,7 +51,7 @@ caps.handback.revision: 32
     > [!NOTE]  
     >  A configuração do roteamento somente leitura não tem suporte do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
--   **Acompanhamento:** [Depois de configurar o roteamento somente leitura](#FollowUp)  
+-   **Acompanhamento:**  [Depois de configurar o roteamento somente leitura](#FollowUp)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 32
   
 -   O grupo de disponibilidade deve possuir um ouvinte de grupo de disponibilidade. Para obter mais informações, veja [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
--   Uma ou mais réplicas de disponibilidade devem estar configuradas para aceitar somente leitura na função secundária (ou seja, para serem [réplicas secundárias legíveis](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)). Para obter mais informações, consulte [Configurar o acesso somente leitura em uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
+-   Uma ou mais réplicas de disponibilidade devem estar configuradas para aceitar somente leitura na função secundária (ou seja, para serem [réplicas secundárias legíveis](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)). Para obter mais informações, veja [Configurar o acesso somente leitura em uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
 -   Você deve estar conectado à instância do servidor que hospeda a réplica primária atual.  
   
@@ -66,7 +71,7 @@ caps.handback.revision: 32
   
 -   Para cada réplica secundária legível que deve dar suporte a roteamento somente leitura, você precisa especificar uma *URL de roteamento somente leitura*. Esta URL só entra em vigor quando a réplica local estiver sendo executada sob a função secundária. A URL do roteamento somente leitura deve ser especificada réplica por réplica, quando necessário. Cada URL de roteamento somente leitura é usada para solicitações de conexão de intenção de leitura para uma réplica secundária legível específica. Normalmente, toda réplica secundária legível é atribuída uma URL de roteamento somente leitura.  
   
-     Para obter informações sobre como calcular a URL de roteamento somente leitura de uma réplica de disponibilidade, veja [Calculando read_only_routing_url de AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
+     Para obter informações sobre como calcular a URL de roteamento somente leitura de uma réplica de disponibilidade, veja [Calculando read_only_routing_url de AlwaysOn](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
   
 -   Para cada réplica de disponibilidade que você quer dar suporte a roteamento somente leitura quando é a réplica primária, você precisará especificar uma *lista de roteamento somente leitura*. Uma determinada lista de roteamento somente leitura só entra em vigor quando a réplica local estiver sendo executada em uma função primária. Essa lista deve ser especificada réplica por réplica, quando necessário. Normalmente, cada lista de roteamento somente leitura deveria conter todas as URLs de roteamento somente leitura, com a URL da réplica local no final da lista.  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 32
     >  As solicitações de conexão de intenção de leitura são roteadas para a primeira entrada disponível na lista de roteamento somente leitura da réplica primária atual. No entanto, o balanceamento de carga entre réplicas somente leitura é suportado. Para obter mais informações, veja [Configurar o balanceamento de carga entre réplicas somente leitura](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
   
 > [!NOTE]  
->  Para obter informações sobre ouvintes do grupo de disponibilidade e mais informações sobre roteamento somente leitura, veja [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativos &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+>  Para obter informações sobre ouvintes do grupo de disponibilidade e mais informações sobre roteamento somente leitura, veja [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 32
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-### Configurar uma lista de roteamento somente leitura  
+### <a name="configure-a-read-only-routing-list"></a>Configurar uma lista de roteamento somente leitura  
  Use as etapas a seguir para configurar o roteamento somente leitura usando o Transact-SQL. Para obter um exemplo de código, veja [Exemplo (Transact-SQL)](#TsqlExample), mais adiante nesta seção.  
   
 1.  Conecte-se à instância de servidor que hospeda a réplica primária.  
@@ -104,7 +109,7 @@ caps.handback.revision: 32
          É uma cadeia de caracteres, como um nome de sistema, um nome de domínio totalmente qualificado ou um endereço IP, que identifica de forma exclusiva o sistema do computador de destino.  
   
          *port*  
-         É um número de porta que é usado pelo mecanismo de banco de dados da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+         É um número de porta que é usado pelo mecanismo de banco de dados da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
          Por exemplo:   `SECONDARY_ROLE (READ_ONLY_ROUTING_URL = N'TCP://COMPUTER01.contoso.com:1433')`  
   
@@ -124,7 +129,7 @@ caps.handback.revision: 32
         >  Você precisa definir a URl de roteamento somente leitura antes de configurar a lista de roteamento somente leitura.  
   
 ###  <a name="loadbalancing"></a> Configurar o balanceamento de carga entre réplicas somente leitura  
- A partir do [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], é possível configurar o balanceamento de carga em um conjunto de réplicas somente leitura. Anteriormente, o roteamento somente leitura sempre direcionava o tráfego para a primeira réplica disponível na lista de roteamento. Para tirar proveito desse recurso, use um nível de parênteses aninhados em torno das instâncias de servidor **READ_ONLY_ROUTING_LIST** nos comandos **CREATE AVAILABILITY GROUP** ou **ALTER AVAILABILITY GROUP**.  
+ A partir do [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], é possível configurar o balanceamento de carga em um conjunto de réplicas somente leitura. Anteriormente, o roteamento somente leitura sempre direcionava o tráfego para a primeira réplica disponível na lista de roteamento. Para tirar proveito desse recurso, use um nível de parênteses aninhados em torno das instâncias de servidor **READ_ONLY_ROUTING_LIST** nos comandos **CREATE AVAILABILITY GROUP** ou **ALTER AVAILABILITY GROUP** .  
   
  Por exemplo, a lista de roteamento a seguir balanceia a carga da solicitação de conexão de intenção de leitura entre duas réplicas somente leitura, `Server1` e `Server2`. Os parênteses aninhados que envolvem esses servidores identificam o conjunto de balanceamento de carga. Se nenhuma das réplicas estiver disponível neste conjunto, ele continuará a tentar se conectar consecutivamente a outras réplicas, `Server3` e `Server4`, na lista de roteamento somente leitura.  
   
@@ -141,7 +146,7 @@ READ_ONLY_ROUTING_LIST = (('Server1','Server2'), ('Server3', 'Server4', 'Server5
  Há suporte para apenas um nível de parênteses aninhados.  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
- O exemplo a seguir modifica duas réplicas de disponibilidade de um grupo de disponibilidade existente, `AG1` para oferecer suporte ao roteamento somente leitura quando uma dessas réplicas possui a função primária no momento. Para identificar as instâncias de servidor que hospedam a réplica de disponibilidade, este exemplo especifica os nomes da instância — `COMPUTER01` e `COMPUTER02`.  
+ O exemplo a seguir modifica duas réplicas de disponibilidade de um grupo de disponibilidade existente, `AG1` para oferecer suporte ao roteamento somente leitura quando uma dessas réplicas possui a função primária no momento. Para identificar as instâncias de servidor que hospedam a réplica de disponibilidade, este exemplo especifica os nomes da instância —`COMPUTER01` e `COMPUTER02`.  
   
 ```  
 ALTER AVAILABILITY GROUP [AG1]  
@@ -177,20 +182,20 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
   
-### Configurar uma lista de roteamento somente leitura  
+### <a name="configure-a-read-only-routing-list"></a>Configurar uma lista de roteamento somente leitura  
  Use as etapas a seguir para configurar o roteamento somente leitura usando o PowerShell. Para obter um exemplo de código, consulte [Exemplo (PowerShell)](#PSExample), posteriormente nesta seção.  
   
 1.  Defina o padrão (**cd**) como a instância de servidor que hospeda a réplica primária.  
   
-2.  Ao adicionar uma réplica de disponibilidade a um grupo de disponibilidade, use o cmdlet **New-SqlAvailabilityReplica**. Ao modificar uma réplica de disponibilidade existente, use o cmdlet **Set-SqlAvailabilityReplica**. Os parâmetros relevantes são os seguintes:  
+2.  Ao adicionar uma réplica de disponibilidade a um grupo de disponibilidade, use o cmdlet **New-SqlAvailabilityReplica** . Ao modificar uma réplica de disponibilidade existente, use o cmdlet **Set-SqlAvailabilityReplica** . Os parâmetros relevantes são os seguintes:  
   
-    -   Para configurar o roteamento somente leitura para a função secundária, especifique o parâmetro **ReadonlyRoutingConnectionUrl"***url***"**.  
+    -   Para configurar o roteamento somente leitura para a função secundária, especifique o parâmetro **ReadonlyRoutingConnectionUrl"***url***"** .  
   
          em que *url* é o FQDN (nome de domínio totalmente qualificado de conectividade) e a porta a ser usada no roteamento para a réplica em conexões somente leitura. Por exemplo:  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          Para obter mais informações, veja [Calculando read_only_routing_url do Always On](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
   
-    -   Para configurar o acesso de conexão para a função primária, especifique **ReadonlyRoutingList"***server***"** [ **,**...*n* ], em que *server* identifica uma instância de servidor que hospeda uma réplica secundária somente leitura no grupo de disponibilidade. Por exemplo:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   Para configurar o acesso de conexão para a função primária, especifique **ReadonlyRoutingList"***server***"** [ **,**...*n* ], em que *server* identifica uma instância de servidor que hospeda uma réplica secundária somente leitura em um grupo de disponibilidade. Por exemplo:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  Você precisa definir a URl de roteamento somente leitura de uma réplica antes de configurar sua lista de roteamento somente leitura.  
@@ -198,14 +203,14 @@ GO
     > [!NOTE]  
     >  Para exibir a sintaxe de um cmdlet, use o cmdlet **Get-Help** no ambiente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
-### Configurar e usar o provedor do SQL Server PowerShell  
+### <a name="set-up-and-use-the-sql-server-powershell-provider"></a>Configurar e usar o provedor do SQL Server PowerShell  
   
 -   [Provedor do SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
--   [Obter Ajuda do SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 ###  <a name="PSExample"></a> Exemplo (PowerShell)  
- O exemplo a seguir configura a réplica primária e uma réplica secundária em um grupo de disponibilidade para o roteamento somente leitura. Primeiro, o exemplo atribui uma URL de roteamento somente leitura a cada réplica. Em seguida, ele define a lista de roteamento somente leitura na réplica primária. As conexões com o conjunto de propriedades "ReadOnly" na cadeia de conexão serão redirecionados à réplica secundária. Se a réplica secundária não estiver legível (conforme determinado pela configuração **ConnectionModeInSecondaryRole**), a conexão será direcionada de volta para a réplica primária.  
+ O exemplo a seguir configura a réplica primária e uma réplica secundária em um grupo de disponibilidade para o roteamento somente leitura. Primeiro, o exemplo atribui uma URL de roteamento somente leitura a cada réplica. Em seguida, ele define a lista de roteamento somente leitura na réplica primária. As conexões com o conjunto de propriedades "ReadOnly" na cadeia de conexão serão redirecionados à réplica secundária. Se a réplica secundária não estiver legível (conforme determinado pela configuração **ConnectionModeInSecondaryRole** ), a conexão será direcionada de volta para a réplica primária.  
   
 ```  
 Set-Location SQLSERVER:\SQL\PrimaryServer\default\AvailabilityGroups\MyAg  
@@ -221,7 +226,7 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer
  Quando a réplica primária atual e as réplicas secundárias legíveis são configuradas para oferecer suporte ao roteamento somente leitura em ambas as funções, as réplicas secundárias legíveis podem receber solicitações de conexão com intenção de leitura de clientes que se conectam pelo ouvinte de grupo de disponibilidade.  
   
 > [!TIP]  
->  Com o [Utilitário bcp](../../../tools/bcp-utility.md) ou o [Utilitário sqlcmd](../../../tools/sqlcmd-utility.md), você pode especificar o acesso somente leitura a qualquer réplica secundária habilitada para acesso somente leitura especificando a opção **-K ReadOnly**.  
+>  Com o [Utilitário bcp](../../../tools/bcp-utility.md) ou o [Utilitário sqlcmd](../../../tools/sqlcmd-utility.md), você pode especificar o acesso somente leitura a qualquer réplica secundária habilitada para acesso somente leitura especificando a opção **-K ReadOnly** .  
   
 ###  <a name="ConnStringReqsRecs"></a> Requisitos e recomendações para cadeias de conexão de cliente  
  Para que um aplicativo cliente use o roteamento somente leitura, sua cadeia de conexão deve atender aos seguintes requisitos:  
@@ -242,9 +247,9 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer
 Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly;MultiSubnetFailover=True  
 ```  
   
- Para obter mais informações sobre a intenção do aplicativo somente leitura e o roteamento somente leitura, veja [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+ Para obter mais informações sobre a intenção do aplicativo somente leitura e o roteamento somente leitura, veja [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-### Se o roteamento somente leitura não estiver funcionando corretamente  
+### <a name="if-read-only-routing-is-not-working-correctly"></a>Se o roteamento somente leitura não estiver funcionando corretamente  
  Para obter informações sobre como solucionar problemas de uma configuração de roteamento somente leitura, veja [O roteamento somente leitura não está funcionando corretamente](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md#ROR).  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
@@ -270,9 +275,9 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 -   **Blogs:**  
   
-     [Calculando read_only_routing_url do AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)  
+     [Calculando read_only_routing_url de AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)  
   
-     [Blogs da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](http://blogs.msdn.com/b/sqlAlways%20On/)  
+     [Blogs da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Blogs dos engenheiros do CSS SQL Server](http://blogs.msdn.com/b/psssql/)  
   
@@ -282,11 +287,12 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
      [White papers da equipe de consultoria do cliente do SQL Server](http://sqlcat.com/)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Secundárias ativas: réplicas secundárias legíveis &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)  
+ [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
+

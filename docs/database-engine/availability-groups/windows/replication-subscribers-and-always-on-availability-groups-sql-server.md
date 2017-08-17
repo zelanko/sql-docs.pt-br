@@ -1,31 +1,36 @@
 ---
-title: "Assinantes de replica&#231;&#227;o e Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "assinantes de failover com AlwaysOn"
-  - "Grupos de disponibilidade [SQL Server], interoperabilidade"
-  - "replicação [SQL Server], Grupos de Disponibilidade AlwaysOn"
+title: "Assinantes de replicação e Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- failover subscribers with AlwaysOn
+- Availability Groups [SQL Server], interoperability
+- replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 caps.latest.revision: 19
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 777e170ba0f7b64a1522c614c52661f1a70a7bab
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Assinantes de replica&#231;&#227;o e Grupos de Disponibilidade AlwaysOn (SQL Server)
+# <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Assinantes de replicação e Grupos de Disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Quando um grupo de disponibilidade AlwaysOn contendo um banco de dados que é um assinante de replicação executar failover, a assinatura de replicação poderá falhar. Para assinantes transacionais, o agente de distribuição continuará a replicar automaticamente se a assinatura estiver usando o nome do ouvinte do grupo de disponibilidade do assinante. Para mesclar assinantes, um administrador de replicação deve reconfigurar o assinante manualmente, recriando a assinatura.  
   
-## O que tem suporte  
+## <a name="what-is-supported"></a>O que tem suporte  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte ao failover automático do publicador, ao failover automático dos assinantes transacionais e ao failover manual dos assinantes de mesclagem. Não há suporte para o failover de um distribuidor em um banco de dados de disponibilidade. O AlwaysOn não pode ser combinado com cenários Websync e ssNoVersion Compact.  
   
  **Failover de uma assinatura pull de mesclagem**  
@@ -36,7 +41,7 @@ caps.handback.revision: 19
   
  Uma assinatura push apresenta falha após o failover do grupo de disponibilidade porque o agente de push não pode mais se conectar ao banco de dados de assinatura original no assinante original.  
   
-## Como criar uma assinatura transacional em um ambiente AlwaysOn  
+## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>Como criar uma assinatura transacional em um ambiente AlwaysOn  
  Para a replicação transacional, use as seguintes etapas para configurar e fazer o failover de um grupo de disponibilidade do assinante:  
   
 1.  Antes de criar a assinatura, adicione o banco de dados do assinante ao grupo de disponibilidade AlwaysOn apropriado.  
@@ -60,7 +65,7 @@ caps.handback.revision: 19
   
  Quando você cria sua assinatura seguindo essas etapas, não precisa fazer nada após um failover.  
   
-## Criando uma assinatura push de replicação transacional  
+## <a name="creating-a-transactional-replication-push-subscription"></a>Criando uma assinatura push de replicação transacional  
   
 ```  
 -- commands to execute at the publisher, in the publisher database:  
@@ -79,7 +84,7 @@ EXEC sp_addpushsubscription_agent @publication = N'<publication name>',
 GO  
 ```  
   
-## Para retomar os Agentes de Mesclagem após o failover do grupo de disponibilidade do assinante  
+## <a name="to-resume-the-merge-agents-after-the-availability-group-of-the-subscriber-fails-over"></a>Para retomar os Agentes de Mesclagem após o failover do grupo de disponibilidade do assinante  
  Para a replicação de mesclagem, um administrador de replicação deve reconfigurar o assinante manualmente com as seguintes etapas:  
   
 1.  Execute **sp_subscription_cleanup** para remover a assinatura antiga no assinante. Execute esta ação na nova réplica primária (a antiga réplica secundária).  
@@ -90,3 +95,4 @@ GO
 >  O processo atual é inconveniente para assinantes de replicação de mesclagem; entretanto, o cenário principal para a replicação de mesclagem é de usuários desconectados (áreas de trabalho, laptops, dispositivos de fone) que não usarão grupos de disponibilidade AlwaysOn no assinante.  
   
   
+

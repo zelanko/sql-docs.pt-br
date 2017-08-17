@@ -1,28 +1,33 @@
 ---
-title: "Criar um ponto de extremidade de espelhamento de banco de dados para a Autentica&#231;&#227;o do Windows (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espelhamento de banco de dados [SQL Server], implantação"
-  - "espelhamento de banco de dados [SQL Server], ponto de extremidade"
-  - "pontos de extremidade, [SQL Server], espelhamento de banco de dados"
-  - "Autenticação do Windows [SQL Server]"
-  - "espelhamento de banco de dados [SQL Server], segurança"
+title: "Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- database mirroring [SQL Server], endpoint
+- endpoints [SQL Server], database mirroring
+- Windows authentication [SQL Server]
+- database mirroring [SQL Server], security
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 caps.latest.revision: 61
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cb13a780fbc5c554ae9ed134436fd0738119601b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Criar um ponto de extremidade de espelhamento de banco de dados para a Autentica&#231;&#227;o do Windows (Transact-SQL)
+# <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows (Transact-SQL)
   Este tópico descreve como criar um ponto de extremidade de espelhamento de banco de dados que usa a Autenticação do Windows no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para oferecer suporte ao espelhamento de banco de dados ou ao [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exige um ponto de extremidade de espelhamento de banco de dados. Uma instância do servidor só pode ter em um ponto de extremidade do espelhamento de banco de dados, que tem uma porta única. Um ponto de extremidade do espelhamento de banco de dados poderá usar qualquer porta que estiver disponível no sistema local quando o ponto de extremidade for criado. Todas as sessões de espelhamento de banco de dados em uma instância do servidor escutam aquela porta e todas as conexões que chegam para o espelhamento de banco de dados usam aquela porta.  
   
 > [!IMPORTANT]  
@@ -32,7 +37,7 @@ caps.handback.revision: 61
   
 -   **Antes de começar:**  [Segurança](#Security)  
   
--   **Para criar um ponto de extremidade do espelhamento de banco de dados, usando:** [Transact-SQL](#TsqlProcedure)  
+-   **Para criar um ponto de extremidade do espelhamento de banco de dados, usando:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -43,11 +48,11 @@ caps.handback.revision: 61
 >  O algoritmo RC4 é preterido. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Recomendamos usar AES.  
   
 ####  <a name="Permissions"></a> Permissões  
- Exige a permissão CREATE ENDPOINT ou a associação na função de servidor fixa sysadmin. Para obter mais informações, veja [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+ Exige a permissão CREATE ENDPOINT ou a associação na função de servidor fixa sysadmin. Para obter mais informações, consulte [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para criar um ponto de extremidade do espelhamento de banco de dados que usa a Autenticação do Windows  
+#### <a name="to-create-a-database-mirroring-endpoint-that-uses-windows-authentication"></a>Para criar um ponto de extremidade do espelhamento de banco de dados que usa a Autenticação do Windows  
   
 1.  Conecte-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na qual você deseja criar um ponto de extremidade do espelhamento de banco de dados.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 61
   
      onde  
   
-    -   *\<endpointName>* é um nome exclusivo para o ponto de extremidade do espelhamento de banco de dados da instância do servidor.  
+    -   *\<endpointName>* é um nome exclusivo do ponto de extremidade de espelhamento de banco de dados da instância de servidor.  
   
     -   STARTED especifica que o ponto de extremidade deve ser iniciado e começar a escutar conexões. Um ponto de extremidade do espelhamento de banco de dados é normalmente criado no estado STARTED. Alternativamente, você pode iniciar uma sessão em um estado STOPPED (o padrão) ou no estado DISABLED.  
   
@@ -129,7 +134,7 @@ caps.handback.revision: 61
          Para permitir que uma instância do servidor sirva como uma função em uma sessão de espelhamento de banco de dados e uma função diferente em outra sessão, especifique ROLE=ALL. Para restringir uma instância do servidor como sendo um parceiro ou uma testemunha, especifique ROLE=PARTNER ou ROLE=WITNESS, respectivamente.  
   
         > [!NOTE]  
-        >  Para obter mais informações sobre opções de Espelhamento de Banco de Dados para diferentes edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+        >  Para obter mais informações sobre opções de Espelhamento de Banco de Dados para diferentes edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
      Para obter uma descrição completa da sintaxe CREATE ENDPOINT, veja [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
@@ -179,28 +184,30 @@ GO
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para configurar um ponto de extremidade de espelhamento de banco de dados**  
   
--   [Criar um ponto de extremidade de espelhamento de banco de dados para grupos de disponibilidade AlwaysOn &#40;SQL Server PowerShell&#41;](../../database-engine/availability-groups/windows/database mirroring - always on availability groups- powershell.md)  
+-   [Criar um ponto de extremidade de espelhamento de banco de dados para grupos de disponibilidade AlwaysOn &#40;SQL Server PowerShell&#41;](../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Usar certificados para um ponto de extremidade de espelhamento de banco de dados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)  
+    -   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)  
+    -   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [Especificar a URL do ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)  
+-   [Especificar a URL do ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Para exibir informações sobre o ponto de extremidade de espelhamento de banco de dados**  
   
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [Escolher um algoritmo de criptografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
- [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
- [Exemplo: Configurando o espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
+ [Especificar um endereço de rede do servidor &#40;espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
+ [Exemplo: configurando o espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   
+
+

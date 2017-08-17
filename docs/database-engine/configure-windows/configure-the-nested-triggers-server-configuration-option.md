@@ -1,24 +1,29 @@
 ---
-title: "Configurar a op&#231;&#227;o de configura&#231;&#227;o de servidor nested triggers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "opção nested triggers"
+title: "Configurar a opção de configuração de servidor nested triggers | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- nested triggers option
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 28dc19f9d28cc2556ac948c857298dfc29eebb1b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar a op&#231;&#227;o de configura&#231;&#227;o de servidor nested triggers
+# <a name="configure-the-nested-triggers-server-configuration-option"></a>Configurar a opção de configuração de servidor nested triggers
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como configurar a opção de configuração de servidor **nested triggers** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **nested triggers** controla se um gatilho AFTER pode ser colocado em cascata. Ou seja, executar uma ação que inicia outro gatilho que inicia outro gatilho e assim por diante. Quando **nested triggers** é definido como 0, os gatilhos AFTER não podem ser colocados em cascata. Quando **nested triggers** é definido como 1 (o padrão), os gatilhos AFTER podem ser colocados em cascata em até 32 níveis. Gatilhos INSTEAD OF podem ser aninhados, independentemente da configuração dessa opção.  
@@ -46,15 +51,15 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para configurar a opção nested triggers  
+#### <a name="to-configure-the-nested-triggers-option"></a>Para configurar a opção nested triggers  
   
 1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse em um servidor e selecione **Propriedades**.  
   
-2.  Na página **Avançado**, defina a opção **Permitir que Gatilhos Disparem Outros Gatilhos** como **Verdadeiro** (o padrão) ou **Falso**.  
+2.  Na página **Avançado** , defina a opção **Permitir que Gatilhos Disparem Outros Gatilhos** como **Verdadeiro** (o padrão) ou **Falso**.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para configurar a opção nested triggers  
+#### <a name="to-configure-the-nested-triggers-option"></a>Para configurar a opção nested triggers  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -81,10 +86,11 @@ GO
 ##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção nested triggers  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criar gatilhos aninhados](../../relational-databases/triggers/create-nested-triggers.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

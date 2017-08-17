@@ -1,29 +1,34 @@
 ---
-title: "Sobre Acesso de conex&#227;o de cliente a r&#233;plicas de disponibilidade (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de Disponibilidade [SQL Server], réplicas de disponibilidade"
-  - "Grupos de disponibilidade [SQL Server], réplicas secundárias legíveis"
-  - "réplicas secundárias ativas [SQL Server], acesso somente leitura a"
-  - "Grupos de disponibilidade [SQL Server], configurando"
-  - "Grupos de disponibilidade [SQL Server], conectividade de cliente"
-  - "Grupos de disponibilidade [SQL Server], réplicas secundárias ativas"
+title: "Sobre o acesso de conexão de cliente a réplicas de disponibilidade (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], readable secondary replicas
+- active secondary replicas [SQL Server], read-only access to
+- Availability Groups [SQL Server], configuring
+- Availability Groups [SQL Server], client connectivity
+- Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5fd4c6e3172fb2386e1b683153df98e526f304ef
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Sobre Acesso de conex&#227;o de cliente a r&#233;plicas de disponibilidade (SQL Server)
+# <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Sobre Acesso de conexão de cliente a réplicas de disponibilidade (SQL Server)
   Em um grupo de disponibilidade AlwaysOn, você pode configurar uma ou mais réplicas de disponibilidade para permitir conexões somente leitura quando elas estiverem sendo executadas na função secundária (ou seja, executando como uma réplica secundária). Você também pode configurar cada réplica de disponibilidade para permitir ou excluir conexões somente leitura quando ela estiver sendo executada na função primária (ou seja, em execução como uma réplica primária).  
   
  Para facilitar o acesso de clientes aos bancos de dados primário ou secundário de um determinado grupo de disponibilidade, você deve definir um ouvinte de grupo de disponibilidade. Por padrão, o ouvinte do grupo de disponibilidade direciona as conexões de entrada para a réplica primária. No entanto, você pode configurar um grupo de disponibilidade para suportar o roteamento somente leitura que permite que seu ouvinte de grupo de disponibilidade redirecione as solicitações de conexão de aplicativos de tentativa de leitura a uma réplica secundária legível. Para obter mais informações, veja [Configurar o roteamento somente leitura para um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).  
@@ -31,7 +36,7 @@ caps.handback.revision: 15
  Durante um failover, uma réplica secundária faz a transição para a função primária e a réplica primária antiga faz a transição para a réplica secundária. Durante o processo de failover, todas as conexões de cliente com a réplica primária e as réplicas secundárias são terminadas. Após o failover, quando um cliente se reconecta ao ouvinte de grupo de disponibilidade, o ouvinte reconecta o cliente à nova réplica primária, com exceção de uma solicitação conexão de tentativa de leitura. Se o roteamento somente leitura estiver configurado nas instâncias de cliente e de servidor que hospedam a nova réplica primária e pelo menos em uma réplica secundária legível, as solicitações de conexão de tentativa de leitura serão redirecionadas a uma réplica secundária com suporte para o tipo de acesso de conexão exigido pelo cliente. Para garantir uma experiência de cliente amigável depois de um failover, é importante configurar o acesso de conexão para as funções secundárias e primária de cada réplica de disponibilidade.  
   
 > [!NOTE]  
->  Para obter informações sobre o ouvinte do grupo de disponibilidade, que manipula as solicitações de conexão do cliente, consulte [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativos &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+>  Para obter informações sobre o ouvinte do grupo de disponibilidade, que manipula as solicitações de conexão do cliente, consulte [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
  **Neste tópico:**  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 15
  Permitir qualquer conexão somente leitura  
  Todos os bancos de dados secundários estão disponíveis para conexões de acesso de leitura. Essa opção permite a conexão de clientes com versão inferior.  
   
- Para obter mais informações, consulte [Configurar o acesso somente leitura em uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
+ Para obter mais informações, veja [Configurar o acesso somente leitura em uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
 ##  <a name="ConnectAccessForPrimary"></a> Tipos de acesso de conexão com suporte da função primária  
  A função primária dá suporte a duas alternativas para conexões de cliente, da seguinte maneira:  
@@ -72,7 +77,7 @@ caps.handback.revision: 15
   
  Para obter mais informações sobre essa propriedade de conexão, consulte [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Para obter mais informações, consulte [Configurar o acesso somente leitura em uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
+ Para obter mais informações, veja [Configurar o acesso somente leitura em uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
 ##  <a name="HowConnectionAccessAffectsConnectivity"></a> Como a configuração de acesso de conectividade afeta a conectividade de clientes  
  As configurações de acesso de conexão de uma réplica determinam se uma tentativa de conexão é reprovada ou tem êxito. A tabela a seguir resume quando uma determinada tentativa de conexão é reprovada ou tem êxito para cada configuração de acesso de conexão.  
@@ -85,11 +90,11 @@ caps.handback.revision: 15
 |Secundário|Tentativa de leitura somente|Intenção de leitura/gravação ou nenhuma intenção de conexão especificada|Failure|  
 |Primária|Tudo (esse é o comportamento padrão da função primária).|Intenção de somente leitura, leitura/gravação ou nenhuma intenção de conexão especificada|Success|  
 |Primária|Leitura-gravação|Tentativa de leitura somente|Failure|  
-|Primária|Leitura-gravação|Intenção de leitura/gravação ou nenhuma intenção de conexão especificada|Êxito|  
+|Primária|Leitura-gravação|Intenção de leitura/gravação ou nenhuma intenção de conexão especificada|Success|  
   
- Para obter informações sobre como configurar um grupo de disponibilidade para aceitar conexões de cliente às suas réplicas, consulte [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativos &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+ Para obter informações sobre como configurar um grupo de disponibilidade para aceitar conexões de cliente às suas réplicas, consulte [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-### Exemplo de configuração de acesso de conexão  
+### <a name="example-connection-access-configuration"></a>Exemplo de configuração de acesso de conexão  
  Dependendo de como as diferentes réplicas de disponibilidade são configuradas para acesso de conexão, o suporte para conexões de clientes pode ser alterado depois que um grupo de disponibilidade sofre failover. Por exemplo, considere um grupo de disponibilidade para o qual o relatório é executado em réplicas secundárias de confirmação assíncrona remotas. Todos os aplicativos somente leitura dos bancos de dados deste grupo de disponibilidade definem sua propriedade de conexão **Application Intent** como **ReadOnly**. Portanto, todas as conexões somente leitura são conexões de intenção de leitura.  
   
  Este grupo de disponibilidade de exemplo possui duas réplicas da confirmação síncrona no centro de computação principal e duas réplicas da confirmação assíncrona em um site de satélite. Para a função primária, todas as réplicas são configuradas para acesso de leitura/gravação, o que impede conexões de intenção de leitura com a réplica primária em todas as situações. A função secundária de confirmação síncrona usa a configuração de acesso de conexão padrão ("nenhuma"), que impede todas as conexões de cliente sob a função secundária.  Em comparação, as réplicas de confirmação assíncronas são configuradas para permitir conexões de intenção de leitura sob a função secundária. A tabela a seguir resume essa configuração de exemplo:  
@@ -119,11 +124,12 @@ caps.handback.revision: 15
   
 -   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+ [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Estatísticas](../../../relational-databases/statistics/statistics.md)  
   
   
+

@@ -1,28 +1,33 @@
 ---
-title: "Configurar a op&#231;&#227;o remote proc trans de configura&#231;&#227;o de servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "opção remote proc trans"
-  - "transações distribuídas [SQL Server], imposição"
+title: "Configurar a opção de configuração de servidor remote proc trans | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- remote proc trans option
+- distributed transactions [SQL Server], enforcing
 ms.assetid: cfbc6158-ab96-44b4-87eb-ea278c1b0c6b
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02ca15d71c0353fa2a6e0e0240a59bf54da9fea3
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar a op&#231;&#227;o remote proc trans de configura&#231;&#227;o de servidor
+# <a name="configure-the-remote-proc-trans-server-configuration-option"></a>Configurar a opção remote proc trans de configuração de servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Este tópico descreve como configurar a opção de configuração de servidor **remote proc trans** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **remote proc trans** ajuda a proteger as ações de um procedimento servidor-para-servidor por meio de uma transação MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)]).  
+  Este tópico descreve como configurar a opção de configuração de servidor **remote proc trans** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **remote proc trans** ajuda a proteger as ações de um procedimento servidor-para-servidor por meio de uma transação MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ).  
   
  Defina o valor de **remote proc trans** como 1 para fornecer uma transação distribuída coordenada pelo MS DTC que protege as propriedades ACID (atômica, consistente, isolada e durável) das transações. As sessões iniciadas após a definição dessa opção como 1 herdam os parâmetros de configuração como padrão.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 23
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para configurar a opção remote proc trans  
+#### <a name="to-configure-the-remote-proc-trans-option"></a>Para configurar a opção remote proc trans  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor e selecione **Propriedades**.  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 23
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para configurar a opção remote proc trans  
+#### <a name="to-configure-the-remote-proc-trans-option"></a>Para configurar a opção remote proc trans  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -97,9 +102,10 @@ GO
 ##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção remote proc trans  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

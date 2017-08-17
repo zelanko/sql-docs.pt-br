@@ -1,30 +1,35 @@
 ---
-title: "Secund&#225;rias ativas: backup em r&#233;plicas secund&#225;rias (Grupos de Disponibilidade AlwaysOn) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "prioridade de backup"
-  - "backup em réplicas secundárias"
-  - "Grupos de Disponibilidade [SQL Server], réplicas de disponibilidade"
-  - "Grupos de disponibilidade [SQL Server], backup em réplicas secundárias"
-  - "réplicas secundárias ativas [SQL Server], backup em"
-  - "preferência de backup automatizada"
-  - "Grupos de disponibilidade [SQL Server], réplicas secundárias ativas"
+title: "Secundárias ativas: backup em réplicas secundárias – disponibilidade AlwaysOn | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup priority
+- backup on secondary replicas
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], backup on secondary replicas
+- active secondary replicas [SQL Server], backup on
+- automated backup preference
+- Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c3645d6ab80136fc110c85315ba8dfc36e500eb3
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Secund&#225;rias ativas: backup em r&#233;plicas secund&#225;rias (Grupos de Disponibilidade AlwaysOn)
+# <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>Secundárias ativas: backup em réplicas secundárias (Grupos de Disponibilidade AlwaysOn)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Os recursos secundários ativos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluem suporte para execução de operações de backup em réplicas secundárias. As operações de backup podem colocar tensão significativa na E/S e na CPU (com compactação de backup). O descarregamento de backups em uma réplica secundária sincronizada ou em sincronização permite usar os recursos na instância do servidor que hospeda a réplica primária para suas cargas de trabalho de camada-1.  
@@ -70,12 +75,13 @@ caps.handback.revision: 34
   
 -   [Usar o Assistente de Plano de Manutenção](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
--   [Implementar trabalhos](../../../ssms/agent/implement-jobs.md)  
+-   [Implementar trabalhos](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Backups somente cópia &#40;SQL Server&#41;](../../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
+

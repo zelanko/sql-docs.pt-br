@@ -1,26 +1,31 @@
 ---
-title: "Remover envio de log (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "envio de logs [SQL Server], removendo"
-  - "removendo envio de log"
-  - "excluindo o envio de log"
+title: Remover o envio de logs (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], removing
+- removing log shipping
+- deleting log shipping
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: daec2b5c293d683423b85f59fc75b7b27f76f541
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Remover envio de log (SQL Server)
+# <a name="remove-log-shipping-sql-server"></a>Remover envio de log (SQL Server)
   Este tópico descreve como remover o envio de logs no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -42,11 +47,11 @@ caps.handback.revision: 18
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Os procedimentos armazenados de envio de logs exigem a associação à função de servidor fixa **sysadmin**.  
+ Os procedimentos armazenados de envio de logs exigem a associação à função de servidor fixa **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
-#### Para remover envio de logs  
+#### <a name="to-remove-log-shipping"></a>Para remover envio de logs  
   
 1.  Conecte à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é no momento o servidor primário para envio de logs e expanda essa instância.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
-#### Para remover envio de log  
+#### <a name="to-remove-log-shipping"></a>Para remover envio de logs  
   
 1.  No servidor primário de envio de logs, execute [sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md) para excluir as informações sobre o banco de dados secundário do servidor primário.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 18
   
 3.  No servidor primário de envio de logs, execute **sp_delete_log_shipping_primary_database** para excluir informações sobre a configuração de envio do log no servidor primário. Isso também exclui a tarefa de backup.  
   
-4.  No servidor primário para envio de logs, desabilite o trabalho de backup. Para obter mais informações, consulte [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
+4.  No servidor primário para envio de logs, desabilite o trabalho de backup. Para obter mais informações, consulte [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
   
 5.  No servidor secundário para envio de logs, desabilite os trabalhos de cópia e restauração.  
   
@@ -91,9 +96,9 @@ caps.handback.revision: 18
   
 -   [Executar failover para um secundário de envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [Desabilitar ou habilitar um trabalho](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Tabelas de envio de log e procedimentos armazenados](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

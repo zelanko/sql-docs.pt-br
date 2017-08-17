@@ -1,44 +1,49 @@
 ---
-title: "Failover e modos de failover (Grupos de Disponibilidade AlwaysOn) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de Disponibilidade [SQL Server], réplicas de disponibilidade"
-  - "Grupos de disponibilidade [SQL Server], failover"
-  - "Grupos de Disponibilidade [SQL Server], modos de failover"
-  - "failover [SQL Server], Grupos de Disponibilidade AlwaysOn"
+title: Failover e modos de failover (Grupos de Disponibilidade AlwaysOn) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], failover
+- Availability Groups [SQL Server], failover modes
+- failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: 75
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 74
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 54450a69119f344ba40787e7ce076ad84e0b211d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Failover e modos de failover (Grupos de Disponibilidade AlwaysOn)
+# <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover e modos de failover (Grupos de Disponibilidade AlwaysOn)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Dentro do contexto de um grupo de disponibilidade, as funções primária e secundária das réplicas de disponibilidade, normalmente, são intercambiáveis em um processo conhecido como *failover*. Existem três formas de failover: failover automático (sem perda de dados), failover manual planejado (sem perda de dados) e failover manual forçado (com possível perda de dados), geralmente chamado de *failover forçado*. Os failovers automáticos e manuais planejados preservam todos os seus dados. Um grupo de disponibilidade faz failover no nível da réplica de disponibilidade. Ou seja, um grupo de disponibilidade realiza failover em uma de suas réplicas secundárias (o *destino de failover* atual).  
+  Dentro do contexto de um grupo de disponibilidade, as funções primária e secundária das réplicas de disponibilidade, normalmente, são intercambiáveis em um processo conhecido como *failover*. Existem três formas de failover: failover automático (sem perda de dados), failover manual planejado (sem perda de dados) e failover manual forçado (com possível perda de dados), geralmente chamado de *failover forçado*. Os failovers automáticos e manuais planejados preservam todos os seus dados. Um grupo de disponibilidade faz failover no nível da réplica de disponibilidade. Ou seja, um grupo de disponibilidade realiza failover em uma de suas réplicas secundárias (o *destino de failover*atual).  
   
 > [!NOTE]  
 >  Problemas no nível do banco de dados, como um banco de dados que se torna suspeito devido à perda de um arquivo de dados, à exclusão de um banco de dados ou à corrupção de um log de transações não causam o failover do grupo de disponibilidade.  
   
  Durante o failover, o destino de failover assume a função primária, recupera seus bancos de dados e os coloca online como os novos bancos de dados primários. A réplica primária anterior, quando disponível, alterna para a função secundária, e seus bancos de dados se tornam bancos de dados secundários. Potencialmente, essas funções podem ser alternadas (ou usar um destino de failover diferente) como resposta a várias falhas ou por razões administrativas.  
   
- Os formulários de failover aos quais uma determinada réplica de disponibilidade dá suporte são especificados pela propriedade *modo de failover*. Para uma determinada réplica de disponibilidade, os possíveis modos de failover dependem do [modo de disponibilidade](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md) da réplica, da seguinte maneira:  
+ Os formulários de failover aos quais uma determinada réplica de disponibilidade dá suporte são especificados pela propriedade *modo de failover* . Para uma determinada réplica de disponibilidade, os possíveis modos de failover dependem do [modo de disponibilidade](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md) da réplica, da seguinte maneira:  
   
 -   **Réplicas de confirmação síncrona** dão suporte a duas configurações: automática ou manual. A configuração "automática" dá suporte a failover automático e failover manual. Para evitar a perda de dados, os failovers automático e planejado requerem que o destino de failover seja uma réplica secundária de confirmação síncrona com um estado de sincronização íntegro (isso indica que cada banco de dados secundário no destino de failover é sincronizado com seu banco de dados primário correspondente). Sempre que uma réplica secundária não atender a essas duas condições, ela dará suporte somente ao failover forçado. Observe que o failover forçado também dá suporte a réplicas cujo estado da função é RESOLVING.  
   
 -   **Réplicas de confirmação assíncrona** dão suporte somente ao modo de failover manual. Além disso, como elas nunca são sincronizadas, dão suporte apenas ao failover forçado.  
   
 > [!NOTE]  
->  Depois de um failover, os aplicativos cliente que precisam acessar os bancos de dados primários devem conectar-se com a nova réplica primária. Além disso, se a nova réplica secundária estiver configurada para permitir acesso somente leitura, os aplicativos cliente somente leitura poderão conectar-se a ela. Para obter informações sobre como clientes conectam a um grupo de disponibilidade, veja [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativos &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+>  Depois de um failover, os aplicativos cliente que precisam acessar os bancos de dados primários devem conectar-se com a nova réplica primária. Além disso, se a nova réplica secundária estiver configurada para permitir acesso somente leitura, os aplicativos cliente somente leitura poderão conectar-se a ela. Para obter informações sobre como clientes conectam a um grupo de disponibilidade, veja [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativos &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
  **Seções deste tópico:**  
   
@@ -82,21 +87,21 @@ caps.handback.revision: 74
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Failover automático|Não|Não|Sim|  
 |Failover manual planejado|Não|Sim|Sim|  
-|Failover forçado|Sim|Sim|Sim**\***|  
+|failover forçado|Sim|Sim|Sim**\***|  
   
  **\***Se você emitir um comando de failover forçado em uma réplica secundária sincronizada, a réplica secundária se comportará da mesma forma que um failover manual.  
   
  A quantidade de tempo durante o qual o banco de dados fica indisponível durante um failover depende do tipo de failover e de sua causa.  
   
 > [!IMPORTANT]  
->  Para dar suporte a conexões de cliente depois de um failover, com exceção de bancos de dados independentes, os logons e os trabalhos definidos em quaisquer dos bancos de dados primários antigos devem ser recriados manualmente no novo banco de dados primário. Para obter mais informações, consulte [Gerenciamento de logons e trabalhos para os bancos de dados de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins and jobs for availability group databases.md).  
+>  Para dar suporte a conexões de cliente depois de um failover, com exceção de bancos de dados independentes, os logons e os trabalhos definidos em quaisquer dos bancos de dados primários antigos devem ser recriados manualmente no novo banco de dados primário. Para obter mais informações, consulte [Gerenciamento de logons e trabalhos para os bancos de dados de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md).  
   
-### Conjuntos de failover  
+### <a name="failover-sets"></a>Conjuntos de failover  
  As formas de failover possíveis para um determinado grupo de disponibilidade podem ser compreendidas em termos de conjuntos de failover. Um conjunto de failover consiste na réplica primária e nas réplicas secundárias que oferecem suporte a uma determinada forma de failover, da seguinte maneira:  
   
--   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (opcional):** em um grupo de disponibilidade específico, existe um par de réplicas de disponibilidade (inclusive a réplica primária atual) configurado para o modo de confirmação síncrona com failover automático, se houver. Um conjunto de failover automático terá efeito apenas se a réplica secundária estiver SYNCHRONIZED no momento com a réplica primária.  
+-   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (opcional):**  em um grupo de disponibilidade específico, existe um par de réplicas de disponibilidade (inclusive a réplica primária atual) configurado para o modo de confirmação síncrona com failover automático, se houver. Um conjunto de failover automático terá efeito apenas se a réplica secundária estiver SYNCHRONIZED no momento com a réplica primária.  
   
--   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (opcional):** em um grupo de disponibilidade específico, um conjunto de duas ou três réplicas de disponibilidade (inclusive a réplica primária atual) configurado para o modo de confirmação síncrona, se houver. Um conjunto de failover de confirmação síncrona terá efeito se as réplicas secundárias estiverem configuradas para o modo de failover manual e pelo menos uma réplica secundária estiver SYNCHRONIZED no momento com a réplica primária.  
+-   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (opcional):**  em um grupo de disponibilidade específico, um conjunto de duas ou três réplicas de disponibilidade (inclusive a réplica primária atual) configurado para o modo de confirmação síncrona, se houver. Um conjunto de failover de confirmação síncrona terá efeito se as réplicas secundárias estiverem configuradas para o modo de failover manual e pelo menos uma réplica secundária estiver SYNCHRONIZED no momento com a réplica primária.  
   
 -   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  dentro de um determinado grupo de disponibilidade, o conjunto de todas as réplicas de disponibilidade cujo estado operacional é ONLINE no momento, independentemente do modo de disponibilidade e do modo de failover. O conjunto de failover inteiro se tornará relevante quando nenhuma réplica secundária estiver SYNCHRONIZED no momento com a réplica primária.  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 74
   
 |Réplica|Modo de disponibilidade e configurações de modo de failover|  
 |-------------|--------------------------------------------------|  
-|A|Modo de confirmação síncrona com failover automático|  
+|Um|Modo de confirmação síncrona com failover automático|  
 |B|Modo de confirmação síncrona com failover automático|  
 |C|Confirmação síncrona apenas com failover manual planejado|  
 |D|Confirmação assíncrona (apenas com failover forçado)|  
@@ -115,7 +120,7 @@ caps.handback.revision: 74
   
  ![Como a configuração da réplica primária afeta o failover](../../../database-engine/availability-groups/windows/media/aoag-failoversetexample.gif "Como a configuração da réplica primária afeta o failover")  
   
-##  <a name="AutomaticFailover"></a> Failover automático  
+##  <a name="AutomaticFailover"></a> Automatic Failover  
  Um failover automático faz com que uma réplica secundária qualificada faça a transição automática para a função primária depois que a réplica primária se torna indisponível. O failover automático é mais adequado quando o nó WSFC que hospeda a réplica primária é local em relação ao nó que hospeda a réplica secundária. Isso ocorre porque a sincronização de dados funciona melhor com baixa latência de mensagem entre computadores e porque as conexões cliente podem permanecer locais.  
   
  **Nesta seção:**  
@@ -131,7 +136,7 @@ caps.handback.revision: 74
   
 -   Um conjunto de failover automático existe. Este conjunto consiste em uma réplica primária e uma réplica secundária (o *destino do failover automático*) que estão configuradas para modo de confirmação síncrona e ambas estão definidas como failover AUTOMATIC. Se a réplica primária estiver definida como failover MANUAL, o failover automático não poderá ocorrer, mesmo que uma réplica secundária esteja definida como failover AUTOMATIC.  
   
-     Para obter mais informações, veja [Modos de disponibilidade &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+     Para obter mais informações, consulte [Modos de disponibilidade &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
 -   O destino do failover automático tem um estado de sincronização íntegro (isto indica que todo banco de dados secundário no destino de failover é sincronizado com seu banco de dados primário correspondente).  
   
@@ -142,7 +147,7 @@ caps.handback.revision: 74
   
 -   O cluster do WSFC (Windows Server Failover Clustering) tem quorum. Para obter mais informações, veja [Configuração de modos de quorum WSFC e votação &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
--   A réplica primária se tornou indisponível, e os níveis da condição de failover definidos por sua política de failover flexível foram atendidos. Para obter informações sobre os níveis de condição de failover, consulte [Política de failover flexível para failover automático de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible automatic failover policy - availability group.md).  
+-   A réplica primária se tornou indisponível, e os níveis da condição de failover definidos por sua política de failover flexível foram atendidos. Para obter informações sobre os níveis de condição de failover, consulte [Política de failover flexível para failover automático de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
 ###  <a name="HowAutoFoWorks"></a> Como o failover automático funciona  
  Um failover automático inicia a seguinte sequência de ações:  
@@ -163,13 +168,13 @@ caps.handback.revision: 74
 ###  <a name="EnableAutoFo"></a> Para configurar o failover automático  
  Uma réplica de disponibilidade pode ser configurada para dar suporte a failover automático a qualquer momento.  
   
- **Para configurar um failover automático**  
+ **To configure automatic failover**  
   
 1.  Verifique se a réplica secundária está configurada para usar o modo de disponibilidade de confirmação síncrona. Para obter mais informações, consulte [Alterar o modo de disponibilidade de uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md).  
   
 2.  Defina o modo do failover como automático. Para obter mais informações, consulte [Alterar o modo de failover de uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md).  
   
-3.  Opcionalmente, altere a política de failover flexível do grupo de disponibilidade para especificar as classificações de falhas que podem causar um failover automático. Para obter mais informações, consulte [Configurar a política de failover flexível para controlar condições de failover automático &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/configure flexible automatic failover policy.md) e [Política de failover para instâncias de cluster de failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md).  
+3.  Opcionalmente, altere a política de failover flexível do grupo de disponibilidade para especificar as classificações de falhas que podem causar um failover automático. Para obter mais informações, consulte [Configurar a política de failover flexível para controlar condições de failover automático &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md) e [Política de failover para instâncias de cluster de failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md).  
   
 ##  <a name="ManualFailover"></a> Failover manual planejado (sem perda de dados)  
  Um failover manual faz com que uma réplica secundária sincronizada faça a transição para a função primária depois que um administrador de banco de dados emite um comando de failover manual na instância do servidor que hospeda a réplica secundária de destino. Para dar suporte ao failover manual, a réplica secundária e a réplica primária atual devem ser configuradas para o modo de confirmação síncrona, se houver. Todo banco de dados secundário na réplica de disponibilidade deve ser unido ao grupo de disponibilidade e sincronizado com seu banco de dados primário correspondente (ou seja, a réplica secundária deve ser sincronizada). Isso garante que todas as transações confirmadas em um banco de dados primário antigo também foram confirmadas no novo banco de dados primário. Portanto, os novos bancos de dados primários são idênticos aos bancos de dados primários antigos.  
@@ -182,7 +187,7 @@ caps.handback.revision: 74
   
 3.  O destino de failover (em `Node02`) se torna a nova réplica primária. Como esse é um failover planejado, a réplica primária anterior alterna para a função secundária durante o failover e coloca seus bancos de dados online como bancos de dados secundários imediatamente.  
   
- ![Ilustração de um failover manual planejado](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "Ilustração de um failover manual planejado")  
+ ![Ilustração de um failover manual planejado](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "Illustation of a planned manual failover")  
   
  **Nesta seção:**  
   
@@ -220,16 +225,16 @@ caps.handback.revision: 74
     > [!NOTE]  
     >  Assim que a nova réplica secundária tiver sincronizado os bancos de dados novamente, o failover será possível, mas na direção reversa.  
   
- Após o failover, os clientes devem se reconectar ao banco de dados primário atual. Para obter mais informações, consulte [Ouvintes de grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+ Após o failover, os clientes devem se reconectar ao banco de dados primário atual. Para obter mais informações, consulte [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
 ###  <a name="ManualFailoverDuringUpgrades"></a> Mantendo a disponibilidade durante as atualizações  
  O administrador de banco de dados de seus grupos de disponibilidade pode usar failovers manuais para manter a disponibilidade dos bancos de dados quando você atualizar hardware ou software. Para usar um grupo de disponibilidade para atualizações de software, a instância do servidor e/ou o nó do computador que hospeda a réplica secundária de destino já deverá ter recebido as atualizações. Para obter mais informações, consulte [Atualizar instâncias de réplica do Grupo de Disponibilidade AlwaysOn](../../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).  
   
 ##  <a name="ForcedFailover"></a> Failover forçado (com possível perda de dados)  
- O failover forçado de um grupo de disponibilidade (com possível perda de dados) é um método de recuperação de desastres que permite usar uma réplica secundária como um servidor em espera passiva. Como o failover forçado gera riscos de possível perda de dados, esse recurso deve ser usado com cautela e moderação. É recomendável forçar o failover apenas se você precisar restaurar serviço para seus bancos de dados de disponibilidade imediatamente e estiver disposto a perder dados. Para obter mais informações sobre os pré-requisitos e as recomendações para forçar failover e para obter um cenário de exemplo que usa um failover forçado para se recuperar de uma falha catastrófica, consulte [Executar um failover manual forçado de um Grupo de Disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+ O failover forçado de um grupo de disponibilidade (com possível perda de dados) é um método de recuperação de desastres que permite usar uma réplica secundária como um servidor em espera passiva. Como o failover forçado gera riscos de possível perda de dados, esse recurso deve ser usado com cautela e moderação. É recomendável forçar o failover apenas se você precisar restaurar serviço para seus bancos de dados de disponibilidade imediatamente e estiver disposto a perder dados. Para obter mais informações sobre os pré-requisitos e as recomendações para forçar failover e para obter um cenário de exemplo que usa um failover forçado para se recuperar de uma falha catastrófica, consulte [Executar um failover manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 > [!WARNING]  
->  O failover forçado requer que o cluster WSFC tenha quorum. Para obter informações sobre como configurar e forçar o quorum, consulte [Clustering de Failover do Windows Server &#40;WSFC&#41; com o SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
+>  O failover forçado requer que o cluster WSFC tenha quorum. Para obter informações sobre como configurar e forçar o quorum, consulte [WSFC &#40;Windows Server Failover Clustering&#41; com o SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
  **Nesta seção:**  
   
@@ -275,7 +280,7 @@ caps.handback.revision: 74
   
 1.  Conecte-se à réplica primária.  
   
-2.  Consulte as colunas **last_commit_lsn** (LSN da última transação confirmada) e **last_commit_time** (hora da última confirmação) da exibição de gerenciamento dinâmico [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).  
+2.  Consulte as colunas **last_commit_lsn** (LSN da última transação confirmada) e **last_commit_time** (hora da última confirmação) da exibição de gerenciamento dinâmico [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
 3.  Compare os valores retornados para cada banco de dados primário e cada um de seus bancos de dados secundários. A diferença entre LSNs da Última Confirmação indica o tempo de retardo.  
   
@@ -289,7 +294,7 @@ caps.handback.revision: 74
   
  Assim que a réplica primária antiga estiver disponível, supondo que seus bancos de dados não estejam danificados, você poderá tentar gerenciar a possível perda de dados. A abordagem disponível para o gerenciamento da perda potencial de dados depende de se a réplica primária original conectou-se com a nova réplica primária. Presumindo que a réplica primária original pode acessar a nova instância primária, a reconexão ocorrerá de forma automática e transparente.  
   
-#### A réplica primária original foi reconectada  
+#### <a name="the-original-primary-replica-has-reconnected"></a>A réplica primária original foi reconectada  
  Normalmente, depois de uma falha, quando a réplica primária original é reiniciada, ela se reconecta rapidamente a sua parceira. Na reconexão, a réplica primária original se torna a réplica secundária. Seus bancos de dados se tornam os bancos de dados secundários e entram no estado SUSPENDED. Os novos bancos de dados secundários não serão revertidos a menos que você os retome.  
   
  Contudo, os bancos de dados suspensos estão inacessíveis. Portanto, você não pode inspecioná-los para avaliar os dados que seriam perdidos se você retomasse um banco de dados específico. Portanto, a decisão de retomar ou remover um banco de dados secundário dependerá de se você está propenso a aceitar alguma perda dos dados, da seguinte maneira:  
@@ -302,7 +307,7 @@ caps.handback.revision: 74
   
      A retomada de um novo banco de dados secundário faz com que ele seja revertido como a primeira etapa na sincronização do banco de dados. Se houver registros de log aguardando na fila de envio no momento da falha, as transações correspondentes serão perdidas, mesmo se tiverem sido confirmadas.  
   
-#### A réplica primária original não foi reconectada  
+#### <a name="the-original-primary-replica-has-not-reconnected"></a>A réplica primária original não foi reconectada  
  Se for possível impedir temporariamente que a réplica primária original seja reconectada na rede com a nova réplica primária, você poderá inspecionar os bancos de dados primários originais para avaliar os dados que seriam perdidos se eles fossem retomados.  
   
 -   Se a perda potencial de dados for aceitável  
@@ -325,7 +330,7 @@ caps.handback.revision: 74
   
 -   [Alterar o modo de failover de uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [Configurar a política de failover flexível para controlar condições de failover automático &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/configure flexible automatic failover policy.md)  
+-   [Configurar a política de failover flexível para controlar condições de failover automático &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
   
  **Para executar um failover manual**  
   
@@ -335,7 +340,7 @@ caps.handback.revision: 74
   
 -   [Usar o Assistente de Grupo de Disponibilidade de Failover &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Gerenciamento de logons e trabalhos para os bancos de dados de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins and jobs for availability group databases.md)  
+-   [Gerenciamento de logons e trabalhos para os bancos de dados de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)  
   
  **Para definir a configuração de quorum do WSFC**  
   
@@ -349,14 +354,15 @@ caps.handback.revision: 74
   
 -   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidade &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [WSFC &#40;Windows Server Failover Clustering&#41; com o SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [Transações em bancos de dados e transações distribuídas para Grupos de Disponibilidade AlwaysOn e espelhamento de banco de dados &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions - always on availability and database mirroring.md)   
+ [Transações entre bancos de dados e transações distribuídas para Grupos de Disponibilidade AlwaysOn e o Espelhamento de Banco de Dados &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)   
  [Política de failover para instâncias de cluster de failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [Política de failover flexível para failover automático de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible automatic failover policy - availability group.md)  
+ [Política de failover flexível para failover automático de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)  
   
   
+

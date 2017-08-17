@@ -1,40 +1,34 @@
 ---
-title: "Modos de opera&#231;&#227;o de espelhamento de banco de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espelhamento de banco de dados [SQL Server], modos de operação"
+title: "Modos de operação do Espelhamento de Banco de Dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], operating modes
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 4427cd045642ed4f59e1c9fdb0ab1a5916841bf0
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Modos de opera&#231;&#227;o de espelhamento de banco de dados
+# <a name="database-mirroring-operating-modes"></a>Modos de operação de espelhamento de banco de dados
   Este tópico descreve os modos de operação síncronos e assíncronos de sessões de espelhamento de banco de dados.  
   
 > [!NOTE]  
 >  Para obter uma introdução ao espelhamento de banco de dados, consulte [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- **Neste tópico:**  
-  
--   [Termos e definições](#TermsAndDefinitions)  
-  
--   [Espelhamento de banco de dados assíncrono (Modo de alto desempenho)](#async)  
-  
--   [Espelhamento de banco de dados síncrono (modo de alta segurança)](#Sync)  
-  
--   [Configurações Transact-SQL e modos de operação de espelhamento de banco de dados](#TsqlSettingsAndOpModes)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
   
 ##  <a name="TermsAndDefinitions"></a> Termos e definições  
  Esta seção introduz alguns termos que são essenciais para este tópico.  
@@ -51,11 +45,11 @@ caps.handback.revision: 21
  Witness (testemunha)  
  Para uso apenas com o modo de alta segurança, uma instância opcional do SQL Server que permite ao servidor espelho reconhecer se um failover automático deve ser iniciado. Ao contrário dos dois parceiros de failover, a testemunha não atende ao banco de dados. O suporte ao failover automático é a única função da testemunha.  
   
-## Espelhamento de banco de dados assíncrono (Modo de alto desempenho)  
+## <a name="asynchronous-database-mirroring-high-performance-mode"></a>Espelhamento de banco de dados assíncrono (Modo de alto desempenho)  
  Esta seção descreve como funciona o espelhamento de banco de dados assíncrono, quando é apropriado usar o modo de alto desempenho e como responder se o servidor principal falhar.  
   
 > [!NOTE]  
->  A maioria das edições do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] só dão suporte ao espelhamento de banco de dados síncrono ("somente segurança completa"). Para obter informações sobre as edições que dão suporte completo ao espelhamento de banco de dados, veja “Alta disponibilidade (AlwaysOn)” em [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+>  A maioria das edições do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] só dão suporte ao espelhamento de banco de dados síncrono ("somente segurança completa"). Para obter informações sobre as edições que dão suporte completo ao espelhamento de banco de dados, consulte “Alta disponibilidade (AlwaysOn)” em [Edições e recursos com suporte do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   
  Quando a segurança de transação está definida como OFF, a sessão de espelhamento de banco de dados opera de maneira assíncrona. A operação assíncrona dá suporte apenas a um modo de operação — modo de alto desempenho. Esse modo aumenta desempenho às custas de alta disponibilidade. O modo de alto desempenho usa apenas o servidor principal e o servidor espelho. Problemas no servidor espelho nunca causam impacto no servidor principal. Com a perda do servidor principal, o banco de dados espelho fica marcado como DESCONECTADO, mas está disponível em espera passiva.  
   
@@ -63,7 +57,7 @@ caps.handback.revision: 21
   
  A figura a seguir mostra a configuração de uma sessão que usa modo de alto desempenho.  
   
- ![Configuração de parceiro apenas de uma sessão](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "Configuração de parceiro apenas de uma sessão")  
+ ![Configuração apenas para parceiro de uma sessão](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "Partner-only configuration of a session")  
   
  No modo de alto desempenho, assim que o servidor principal envia o log para uma transação para o servidor espelho, o servidor principal envia uma confirmação para o cliente, sem esperar uma confirmação do servidor espelho. As transações são confirmadas sem esperar que o servidor espelho grave o log no disco. A operação assíncrona permite a execução do servidor principal com latência de transação mínima.  
   
@@ -75,7 +69,7 @@ caps.handback.revision: 21
   
 -   [O impacto de uma testemunha no modo de alto desempenho](#WitnessImpactOnHighPerf)  
   
--   [Respondendo à falha no principal](#WhenPrincipalFails)  
+-   [Respondendo à falha do principal](#WhenPrincipalFails)  
   
 ###  <a name="WhenUseHighPerf"></a> Quando o modo de alto desempenho é apropriado?  
  O modo de alto desempenho pode ser útil em um cenário de recuperação de desastre no qual os servidores principal e espelho estão separados por uma distância significativa e onde você não deseja que erros pequenos causem impacto ao servidor principal.  
@@ -97,7 +91,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  Para obter informações sobre os tipos de quoruns, veja [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
-###  <a name="WhenPrincipalFails"></a> Respondendo à falha no principal  
+###  <a name="WhenPrincipalFails"></a> Respondendo à falha do principal  
  Quando o principal falhar, o proprietário do banco de dados tem várias escolhas, como se segue:  
   
 -   Deixar o banco de dados indisponível até que o principal fique disponível novamente.  
@@ -109,7 +103,7 @@ caps.handback.revision: 21
      Se o banco de dados principal estiver perdido mas o servidor principal ainda estiver sendo executado, tente imediatamente fazer o backup da parte final do log no banco de dados principal. Se o backup da parte final do log for bem-sucedido, a remoção do espelhamento pode ser a melhor alternativa. Após a remoção do espelhamento, é possível restaurar o log no banco de dados espelho anterior, que preserva todos os dados.  
   
     > [!NOTE]  
-    >  Se o backup da parte final do log falhar e você não puder esperar pela recuperação do servidor principal, considere forçar o serviço, que tem a vantagem de manter o estado da sessão.   
+    >  Se o backup da parte final do log falhar e você não puder esperar pela recuperação do servidor principal, considere forçar o serviço, que tem a vantagem de manter o estado da sessão.  
   
 -   Serviço forçado (com possível perda de dados) no servidor espelho.  
   
@@ -154,14 +148,14 @@ caps.handback.revision: 21
 ###  <a name="HighSafetyWithOutAutoFailover"></a> Modo de segurança alta sem failover automático  
  A figura a seguir mostra a configuração do modo de segurança alta sem failover automático. A configuração consiste apenas nos dois parceiros.  
   
- ![Comunicação de parceiros sem uma testemunha](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "Comunicação de parceiros sem uma testemunha")  
+ ![Comunicação de parceiros sem uma testemunha](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "Partners communicating without a witness")  
   
  Quando os parceiros estão conectados e o banco de dados já está sincronizado, há suporte ao failover manual. Se a instância de servidor espelho diminuir, a instância de servidor principal não será afetada e as execuções serão expostas (ou seja, sem espelhamento dos dados). Se o servidor principal estiver perdido, o espelho será suspenso, mas o serviço poderá ser forçado para o servidor espelho (com possível perda de dados). Para obter mais informações, veja [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
 ###  <a name="HighSafetyWithAutoFailover"></a> Modo de segurança alta com failover automático  
  O failover automático fornece alta disponibilidade, assegurando que o banco de dados ainda funcione depois da perda de um servidor. O failover automático exige que a sessão tenha uma terceira instância de servidor, a *testemunha*que, idealmente, reside em um terceiro computador. A figura a seguir mostra a configuração da sessão do modo de segurança alta que oferece suporte a failover automático.  
   
- ![A testemunha e dois parceiros de uma sessão](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "A testemunha e dois parceiros de uma sessão")  
+ ![A testemunha e dois parceiros de uma sessão](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "The witness and two partners of a session")  
   
  Ao contrário dos dois parceiros, a testemunha não atende ao banco de dados. A testemunha simplesmente oferece suporte a failover automático verificando se o servidor principal está funcionando. O servidor espelho apenas iniciará o failover automático se o espelho e a testemunha permanecerem conectados um ao outro depois de serem desconectados do servidor principal.  
   
@@ -190,7 +184,7 @@ caps.handback.revision: 21
  Esta seção descreve uma sessão de espelhamento de banco de dados em termos das configurações de ALTER DATABASE e dos estados do banco de dados espelho e da testemunha, se houver. A seção destina-se a usuários que administram o espelhamento de banco de dados usando sobretudo ou exclusivamente o [!INCLUDE[tsql](../../includes/tsql-md.md)], em vez de usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 > [!TIP]  
->  Como alternativa ao uso do [!INCLUDE[tsql](../../includes/tsql-md.md)], é possível controlar o modo de operação de uma sessão no Pesquisador de Objetos usando a página **Espelhamento** da caixa de diálogo **Propriedades do Banco de Dados** . Para obter mais informações, veja [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md).  
+>  Como alternativa ao uso do [!INCLUDE[tsql](../../includes/tsql-md.md)], é possível controlar o modo de operação de uma sessão no Pesquisador de Objetos usando a página **Espelhamento** da caixa de diálogo **Propriedades do Banco de Dados** . Para obter mais informações, consulte [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
  **Nesta seção:**  
   
@@ -205,11 +199,11 @@ caps.handback.revision: 21
   
  **Nesta seção:**  
   
--   [Segurança de transação](#TxnSafety)  
+-   [Transaction Safety](#TxnSafety)  
   
 -   [Estado de testemunha](#WitnessState)  
   
-####  <a name="TxnSafety"></a> Segurança de transação  
+####  <a name="TxnSafety"></a> Transaction Safety  
  Segurança de transação é uma propriedade de banco de dados específica de espelhamento que determina se uma sessão de espelhamento de banco de dados opera de forma síncrona ou assíncrona. Há dois níveis de segurança: FULL e OFF.  
   
 -   SAFETY FULL  
@@ -222,13 +216,13 @@ caps.handback.revision: 21
   
 -   SAFETY OFF  
   
-     A desativação da segurança de transação faz a sessão operar de forma assíncrona, em modo de alto desempenho. Se a propriedade SAFETY for definida como OFF, a propriedade WITNESS também deve ser definida como OFF (o padrão). Para obter informações sobre o impacto da testemunha no modo de alto desempenho, veja [O estado da testemunha](#WitnessState), mais adiante neste tópico. Para obter mais informações sobre como executar com a segurança de transação desligada, veja [Espelhamento de banco de dados Assíncrono (Modo de alto desempenho)](#async), anteriormente neste tópico.  
+     A desativação da segurança de transação faz a sessão operar de forma assíncrona, em modo de alto desempenho. Se a propriedade SAFETY for definida como OFF, a propriedade WITNESS também deve ser definida como OFF (o padrão). Para obter informações sobre o impacto da testemunha no modo de alto desempenho, veja [O estado da testemunha](#WitnessState), mais adiante neste tópico. Para obter mais informações sobre como executar com a segurança de transação desligada, veja [Espelhamento de banco de dados Assíncrono (Modo de alto desempenho)](#asynchronous-database-mirroring-high-performance-mode), anteriormente neste tópico.  
   
  A configuração de segurança de transação do banco de dados é registrada em cada parceiro na exibição de catálogo **sys.database_mirroring** nas colunas **mirroring_safety_level** e **mirroring_safety_level_desc**. Para obter mais informações, veja [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
  A qualquer momento, o proprietário do banco de dados pode alterar o nível de segurança da transação.  
   
-####  <a name="WitnessState"></a> Estado da testemunha  
+####  <a name="WitnessState"></a> O estado da testemunha  
  Se uma testemunha tiver sido definida, é necessário quorum, para que o estado da testemunha seja sempre significativo.  
   
  Se existir, a testemunha terá um dos dois estados:  
@@ -254,7 +248,7 @@ caps.handback.revision: 21
  **Se uma testemunha estiver presente no modo de desempenho alto, ela não participará da sessão. Porém, para tornar o banco de dados disponível, pelo menos duas das instâncias do servidor devem permanecer conectadas. Portanto, recomendamos manter a propriedade WITNESS definida como OFF em sessões de modo de desempenho alto. Para obter mais informações, consulte [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="ViewWitness"></a> Exibindo a configuração de segurança e estado da testemunha  
- Para exibir a configuração de segurança e o estado da testemunha para um banco de dados, use a exibição de catálogo **sys.database_mirroring**. As colunas relevantes são as seguintes:  
+ Para exibir a configuração de segurança e o estado da testemunha para um banco de dados, use a exibição de catálogo **sys.database_mirroring** . As colunas relevantes são as seguintes:  
   
 |Fator|Colunas|Descrição|  
 |------------|-------------|-----------------|  
@@ -284,7 +278,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [Adicionar ou substituir uma testemunha de espelhamento de banco de dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
--   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
 -   [Adicionar uma testemunha de espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
@@ -292,7 +286,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [Alterar a segurança da transação em uma sessão de espelhamento de banco de dados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Testemunha de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
