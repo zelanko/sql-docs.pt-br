@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 61366dbbcc5b4787783ea3e52112d827e2db026f
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: a768e5237b997e5f9b05e9476c907ea66f886c7b
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Auditoria Local da coleta de comentários sobre o uso do SQL Server
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/02/2017
 
 O Microsoft SQL Server contém recursos habilitados para Internet que podem coletar e enviar à Microsoft informações sobre seu computador ou dispositivo (“informações padrão do computador”). O componente de Auditoria Local da [Coleta de comentários sobre o uso do SQL Server](http://support.microsoft.com/kb/3153756) grava dados coletados pelo serviço em uma pasta designada, que representa os dados (logs) que serão enviados à Microsoft. A finalidade da Auditoria Local é permitir que os clientes vejam todos os dados que a Microsoft coleta com esse recurso, para fins de conformidade, regulatórios ou de validação de privacidade.  
 
-A partir do SQL Server 2016 CU2, a Auditoria Local é configurável no nível da instância no Mecanismo de Banco de Dados do SQL Server e o SSAS (Analysis Services). A Auditoria Local do SSIS (SQL Server Integration Services) é configurável com o Mecanismo de Banco de Dados. Outros componentes do SQL Server que são instalados durante a instalação e as ferramentas do SQL Server que são baixadas ou instaladas após a instalação não têm o recurso de Auditoria Local para coleta de comentários sobre uso. 
+A partir do SQL Server 2016 CU2, a Auditoria Local é configurável no nível da instância no Mecanismo de Banco de Dados do SQL Server e o SSAS (Analysis Services). No SQL Server 2016 CU4 e no SQL Server 2016 SP1, a Auditoria Local também está habilitada para o SQL Server Integration Services (SSIS). Outros componentes do SQL Server que são instalados durante a instalação e as ferramentas do SQL Server que são baixadas ou instaladas após a instalação não têm o recurso de Auditoria Local para coleta de comentários sobre uso. 
 
 ## <a name="prerequisites"></a>Pré-requisitos 
 
@@ -61,7 +61,7 @@ Execute as seguintes etapas para obter a conta de logon do serviço de telemetri
  
 1. Inicie **Serviços** – clique no botão **Windows**  e digite *Services.msc*. 
 
-2. Navegue até o serviço apropriado. Por exemplo, para o mecanismo de banco de dados, localize o **Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server *nome da instância***. Para o Analysis Services, localize **Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Analysis Services *nome da instância***. 
+2. Navegue até o serviço apropriado. Por exemplo, para o mecanismo de banco de dados, localize o **Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server \<nome da instância\>**. Para o Analysis Services, localize **Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Analysis Services \<nome da instância\>**. Para o Integration Services, localize o **serviço 13 do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Integration Services**.
 
 3. Clique com o botão direito do mouse no serviço e escolha **Propriedades**. 
 
