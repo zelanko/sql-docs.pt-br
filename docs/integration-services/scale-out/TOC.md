@@ -4,6 +4,7 @@
 # [Passo a passo: configurar a Expansão do Integration Services](walkthrough-set-up-integration-services-scale-out.md)
 # [Mestre de Expansão](integration-services-ssis-scale-out-master.md)
 # [Trabalhador de Expansão](integration-services-ssis-scale-out-worker.md)
+# [Gerenciador do Scale Out](integration-services-ssis-scale-out-manager.md)
 # [Executar pacotes no Scale Out](run-packages-in-integration-services-ssis-scale-out.md)
 # [Alterar a conta para registor em log do Scale Out](change-logdb-account.md)
 # [Lidar com certificados no Scale Out](deal-with-certificates-in-ssis-scale-out.md)
