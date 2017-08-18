@@ -19,11 +19,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ecf6dd4edb70904d902f11940da42dc33765708f
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Abrir o Designer de Tabela (Visual Database Tools)
@@ -47,7 +47,7 @@ Você pode abrir o Designer de Tabela abrindo uma tabela nova ou existente.
     O menu **Designer de Tabela** é adicionado ao menu principal e a tabela é aberta nos painéis do designer.  
   
 ## <a name="see-also"></a>Consulte também  
-[Criar tabelas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Criar tabelas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 [Tabelas](http://msdn.microsoft.com/en-us/82d7819c-b801-4309-a849-baa63083e83f)  
   
 

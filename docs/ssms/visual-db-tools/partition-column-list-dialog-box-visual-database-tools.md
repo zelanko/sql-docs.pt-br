@@ -16,11 +16,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5f285297c725a85eedcbb225b7180ade91728beb
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Caixa de diálogo Lista de Colunas de Partição (Visual Database Tools)
@@ -36,6 +36,6 @@ Coluna
 Fornece uma lista suspensa onde você pode escolher a coluna em que deseja aplicar a função de partição.  
   
 ## <a name="see-also"></a>Consulte também  
-[Propriedades da tabela &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
+[Propriedades da tabela &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
   
 

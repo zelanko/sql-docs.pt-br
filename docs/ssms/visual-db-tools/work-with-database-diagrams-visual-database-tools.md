@@ -21,36 +21,36 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f6ecc2b7d8048af0d596d49efb918d533348d62f
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>Trabalhar com diagramas de banco de dados (Visual Database Tools)
 Você pode criar um diagrama visual de seu banco de dados usando o Designer de Banco de Dados. Os tópicos a seguir abrangem a noções básicas do uso do designer para trabalhar com diagramas de banco de dados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
-[Criar um novo diagrama de banco de dados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-a-new-database-diagram-visual-database-tools.md)  
+[Criar um novo diagrama de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-a-new-database-diagram-visual-database-tools.md)  
   
-[Salvar diagramas de banco de dados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/save-database-diagrams-visual-database-tools.md)  
+[Salvar diagramas de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-database-diagrams-visual-database-tools.md)  
   
-[Abrir diagramas de banco de dados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/open-database-diagrams-visual-database-tools.md)  
+[Abrir diagramas de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-database-diagrams-visual-database-tools.md)  
   
-[Excluir um diagrama de banco de dados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/delete-a-database-diagram-visual-database-tools.md)  
+[Excluir um diagrama de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/delete-a-database-diagram-visual-database-tools.md)  
   
-[Renomear um diagrama de banco de dados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/rename-a-database-diagram-visual-database-tools.md)  
+[Renomear um diagrama de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rename-a-database-diagram-visual-database-tools.md)  
   
-[Descartar alterações feitas em diagramas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/discard-changes-made-to-diagrams-visual-database-tools.md)  
+[Descartar alterações feitas em diagramas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/discard-changes-made-to-diagrams-visual-database-tools.md)  
   
-[Reconciliar um diagrama de banco de dados com um banco de dados modificado &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/reconcile-a-database-diagram-with-a-modified-database-visual-database-tools.md)  
+[Reconciliar um diagrama de banco de dados com um banco de dados modificado &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/reconcile-a-database-diagram-with-a-modified-database-visual-database-tools.md)  
   
-[Mostrar propriedades do diagrama &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/show-diagram-properties-visual-database-tools.md)  
+[Mostrar propriedades do diagrama &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/show-diagram-properties-visual-database-tools.md)  
   
 ## <a name="related-sections"></a>Seções relacionadas  
-[Trabalhar com tabelas no diagrama de banco de dados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
+[Trabalhar com tabelas no diagrama de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   
-[Trabalhar com layout de diagrama &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
+[Trabalhar com layout de diagrama &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   
 

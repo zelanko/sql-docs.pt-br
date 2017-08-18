@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7cc7f7c8972fae08c956db86f95250d830fba39b
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navegar no Designer de Consulta e Exibição (Visual Database Tools)
@@ -31,7 +31,7 @@ Você pode trabalhar no Designer de Consulta e Exibição usando o teclado ou o 
   
 ## <a name="any-pane"></a>Qualquer painel  
   
-|**Para**|**Pressioneione**|**Clique**|  
+|**Para**|**Pressione**|**Clique**|  
 |----------|-------------|-------------|  
 |Mover entre os painéis do Designer de Consulta e Exibição|F6, SHIFT+F6|Em qualquer lugar no painel de destino|  
   
@@ -40,7 +40,7 @@ Você pode trabalhar no Designer de Consulta e Exibição usando o teclado ou o 
   
 ## <a name="diagram-pane"></a>Painel Diagrama  
   
-|**Para**|**Pressioneione**|**Clique**|  
+|**Para**|**Pressione**|**Clique**|  
 |----------|-------------|-------------|  
 |Mover entre tabelas, outros objetos estruturados em tabelas (e para linhas de junção, se disponíveis)|TAB ou SHIFT+TAB|Na tabela, no objeto estruturado por tabela ou na linha de junção a ser movida|  
 |Mover entre as colunas de uma tabela ou objeto estruturado por tabela|Teclas de direção|Na coluna para a qual ir|  
@@ -90,7 +90,7 @@ Para obter mais informações, consulte [Painel SQL &#40;Visual Database Tools&#
   
 ## <a name="results-pane"></a>Painel de Resultados  
   
-|**Para**|**Pressioneione**|**Clique**|  
+|**Para**|**Pressione**|**Clique**|  
 |----------|-------------|-------------|  
 |Mover entre células|Teclas de direção, TAB ou SHIFT+TAB|Na célula de destino|  
 |Mover para a primeira ou para a última célula na fila atual|HOME ou END||  
@@ -116,6 +116,6 @@ Para obter mais informações, consulte [Painel SQL &#40;Visual Database Tools&#
 Para obter mais informações, consulte [Painel de Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
   
 ## <a name="see-also"></a>Consulte também  
-[Tópicos de instruções de como criar consultas e exibições &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 

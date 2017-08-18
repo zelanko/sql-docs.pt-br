@@ -17,15 +17,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f6955727dd2fa31e76ad6cf5e0195650abdc2ded
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="open-queries-visual-database-tools"></a>Abrir consultas (Visual Database Tools)
-Você pode abrir uma consulta existente no Designer de Consulta e Exibição usando o comando **Abrir**.  
+Você pode abrir uma consulta existente no Designer de Consulta e Exibição usando o comando **Abrir** .  
   
 ### <a name="to-open-a-query-in-all-panes"></a>Para abrir uma consulta em todos os painéis  
   
@@ -39,8 +39,8 @@ Você pode abrir uma consulta existente no Designer de Consulta e Exibição usa
 > Por padrão, o Designer de Consulta e Exibição abre todos os painéis (SQL, Critérios, Diagrama e Resultados), mas esse padrão pode ser alterado na caixa de diálogo **Opções** . Para abrir esses painéis, caso estejam fechados, no menu **Designer de Consultas** aponte para **Painel**, depois clique no painel que você deseja abrir.  
   
 ## <a name="see-also"></a>Consulte também  
-[Executar operações básicas com consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[Salvar consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
-[Trabalhar com dados no painel de resultados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Executar operações básicas com consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Salvar consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
+[Trabalhar com dados no painel de resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   
 

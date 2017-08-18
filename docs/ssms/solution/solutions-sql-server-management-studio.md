@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 095f51e1ba4713d13133eac5bb42d8b468a4cada
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="solutions-sql-server-management-studio"></a>Soluções (SQL Server Management Studio)
@@ -58,7 +58,7 @@ Soluções e projetos podem ser integrados em um banco de dados do [!INCLUDE[msC
   
 ## <a name="see-also"></a>Consulte também  
 [Gerenciador de Soluções](../../ssms/solution/solution-explorer.md)  
-[Projetos &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
+[Projetos &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [Controle do código-fonte do Gerenciador de Soluções](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
   
 

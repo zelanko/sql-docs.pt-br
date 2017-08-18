@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 233790dcaeb47f6803e8eb7f586321c880f2a3e5
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="general-user-interface-elements"></a>Elementos gerais da interface de usuário
@@ -37,7 +37,7 @@ Descreve como o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] h
 [Caixa de diálogo Ferramentas Externas](../ssms/external-tools-dialog-box.md)  
 Permite que você adicione ferramentas que não fazem parte do **ao menu** Ferramentas [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
   
-[Janela Propriedades &amp;#40;Management Studio&amp;#41;](../ssms/properties-window-management-studio.md)  
+[Janela Propriedades &#40;Management Studio&#41;](../ssms/properties-window-management-studio.md)  
 Permite que você exiba propriedades e eventos de objetos selecionados localizados em editores e designers. Também permite a edição e exibição das propriedades de arquivos, projetos e soluções. Algumas propriedades podem ser editadas na janela Propriedades.  
   
 [Usar a Caixa de Ferramentas](../ssms/use-the-toolbox.md)  

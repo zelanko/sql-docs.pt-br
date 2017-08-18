@@ -18,17 +18,17 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6474761a4aaf0d0e3d8cea032b54be39ed759a92
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Navegar no Designer de Diagrama de Banco de Dados (Visual Database Tools)
 Você pode trabalhar no Designer de Diagrama de Banco de Dados usando o teclado, assim como o mouse. Consulte as tabelas a seguir para obter os métodos específicos usados no Designer de Diagrama de Banco de Dados.  
   
-|**Para**|**Pressioneione**|  
+|**Para**|**Pressione**|  
 |----------|-------------|  
 |Acessar o menu Diagrama de Banco de Dados|ALT+M|  
 |Mover entre tabelas e relações, se houver|TAB ou SHIFT+TAB|  
@@ -42,6 +42,6 @@ Você pode trabalhar no Designer de Diagrama de Banco de Dados usando o teclado,
 |Zoom|CTRL+ PLUS KEY ou MINUS KEY|  
   
 ## <a name="see-also"></a>Consulte também  
-[Criar diagramas de banco de dados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
+[Criar diagramas de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
   
 

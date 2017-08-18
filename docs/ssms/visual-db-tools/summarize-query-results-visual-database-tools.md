@@ -18,11 +18,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c2192e6a80331af869eb5cf0fcf26c39a47610e1
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>Resumir resultados da consulta (Visual Database Tools)
@@ -31,20 +31,20 @@ Quando você cria consultas de agregação, certos princípios lógicos se aplic
 Compreendendo os princípios de consultas de agregação e o comportamento do Designer de Consulta e Exibição, você pode criar consultas de agregação logicamente corretas. O princípio prioritário é que consultas de agregação podem resultar apenas em informações resumidas. Assim, a maioria dos princípios que se seguem descreve as maneiras como você pode referenciar colunas de dados individuais dentro de uma consulta de agregação.  
   
 ## <a name="in-this-section"></a>Nesta seção  
-[Trabalhar com colunas em consultas de agregação &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-columns-in-aggregate-queries-visual-database-tools.md)  
+[Trabalhar com colunas em consultas de agregação &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-columns-in-aggregate-queries-visual-database-tools.md)  
 Descreve conceitos sobre como agrupar e resumir colunas com as cláusulas GROUP BY, WHERE e HAVING.  
   
-[Contar linhas em uma tabela &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/count-rows-in-a-table-visual-database-tools.md)  
+[Contar linhas em uma tabela &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/count-rows-in-a-table-visual-database-tools.md)  
 Fornece etapas para contar o número de linhas em uma tabela ou o número das linhas de uma tabela que atendem a um conjunto de critérios.  
   
-[Resumir ou agregar valores para todas as linhas em uma tabela &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md)  
+[Resumir ou agregar valores para todas as linhas em uma tabela &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md)  
 Oferece etapas para resumir todas as linhas, em vez de um conjunto de linhas agrupadas.  
   
-[Resumir ou agregar valores usando expressões personalizadas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-using-custom-expressions-visual-database-tools.md)  
+[Resumir ou agregar valores usando expressões personalizadas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-using-custom-expressions-visual-database-tools.md)  
 Oferece etapas para usar expressões para resumir ou agregar, em vez de usar as cláusulas predefinidas.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
-[Tópicos de instruções de como criar consultas e exibições &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 Oferece links para tópicos que cobrem o modo de usar o Designer de Consulta e Exibição.  
   
 

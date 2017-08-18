@@ -16,17 +16,17 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0b2d75f1354337a4df50386d56311394c3f554b6
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>Caixa de diálogo Comentário do SQL (Visual Database Tools)
 Esta caixa de diálogo fornece uma área editável onde você pode escrever uma descrição detalhada da consulta. Para acessar essa caixa de diálogo, abra a consulta ou exibição no Designer de Consulta e Exibição e na janela **Propriedades** , selecione o **Comentário SQL**e clique nas reticências (**…**) à direita do campo de propriedade.  
   
 ## <a name="see-also"></a>Consulte também  
-[Mostrar propriedades de consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/show-query-properties-visual-database-tools.md)  
+[Mostrar propriedades de consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/show-query-properties-visual-database-tools.md)  
   
 

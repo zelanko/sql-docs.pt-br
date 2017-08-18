@@ -18,28 +18,28 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dc12e48c23b2e362b972f6d6e6d04f953a8f09c3
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>Consultar com parâmetros (Visual Database Tools)
 Em muitas instâncias, é útil criar uma consulta que pode ser reutilizada muitas vezes nos aplicativos com uma entrada diferente a cada vez. Nesta seção você encontrará informações sobre como criar consultas de parâmetros para usos gerais.  
   
 ## <a name="in-this-section"></a>Nesta seção  
-[Consultas de parâmetros &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/parameter-queries-visual-database-tools.md)  
+[Consultas de parâmetros &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/parameter-queries-visual-database-tools.md)  
 Aprenda sobre consultas de uso geral.  
   
-[Criar consultas com parâmetros não nomeados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-queries-with-unnamed-parameters-visual-database-tools.md)  
+[Criar consultas com parâmetros não nomeados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-with-unnamed-parameters-visual-database-tools.md)  
 Crie uma consulta usando parâmetros sem-nome.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
-[Executar operações básicas com consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Executar operações básicas com consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 Fornece links para tópicos que cobrem as tarefas de consulta mais comuns.  
   
-[Especificar critérios de pesquisa &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 Fornece links para tópicos que abrangem as várias maneiras de fazer uma pesquisa e como pesquisar o que você deseja.  
   
 

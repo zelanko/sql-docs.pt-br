@@ -21,11 +21,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a747402098366d0bbe387b76938fc5fbde8ed87a
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="view-information-about-an-operator"></a>Exibir informações sobre um operador
@@ -72,11 +72,11 @@ Para obter detalhes sobre as permissões dessas funções, consulte [Funções d
   
     Para obter mais informações sobre as opções disponíveis contidas na caixa de diálogo *operator_name***Propriedades** , consulte:  
   
-    -   [Propriedades do operador – Novo operador &amp;#40;página Geral&amp;#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
+    -   [Propriedades do operador – Novo operador &#40;página Geral&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
-    -   [Propriedades do operador – Novo operador &amp;#40;página Notificações&amp;#41;](../../ssms/agent/operator-properties-new-operator-notifications-page.md)  
+    -   [Propriedades do operador – Novo operador &#40;página Notificações&#41;](../../ssms/agent/operator-properties-new-operator-notifications-page.md)  
   
-    -   [Propriedades do operador &amp;#40;página Histórico&amp;#41;](../../ssms/agent/operator-properties-history-page.md)  
+    -   [Propriedades do operador &#40;página Histórico&#41;](../../ssms/agent/operator-properties-history-page.md)  
   
 5.  Quando terminar, clique em **OK**.  
   

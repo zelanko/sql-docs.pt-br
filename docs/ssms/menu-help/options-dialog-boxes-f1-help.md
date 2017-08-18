@@ -17,31 +17,31 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8af8c347e4225f1beb4cef6f4b515568115146f1
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Ajuda de F1 das caixas de diálogo opções
 Esta seção contém a ajuda de F1 para as caixas de diálogo disponíveis quando se clica em **Opções** no menu **Ferramentas** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
-[Opções &amp;#40;Designers – Designers do Analysis Services – Geral&amp;#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
+[Opções &#40;Designers – Designers do Analysis Services – Geral&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   
-[Opções &amp;#40;Designers – página Planos de manutenção&amp;#41;](../../ssms/menu-help/options-designers-maintenance-plans-page.md)  
+[Opções &#40;Designers – página Planos de manutenção&#41;](../../ssms/menu-help/options-designers-maintenance-plans-page.md)  
   
-[Opções &amp;#40;Designers – página Designers de Tabela e Banco de dados&amp;#41;](../../ssms/menu-help/options-designers-table-and-database-designers-page.md)  
+[Opções &#40;Designers – página Designers de Tabela e Banco de dados&#41;](../../ssms/menu-help/options-designers-table-and-database-designers-page.md)  
   
-[Opções &amp;#40;página Ambiente – Fontes e Cores&amp;#41;](../../ssms/menu-help/options-environment-fonts-and-colors-page.md)  
+[Opções &#40;página Ambiente – Fontes e Cores&#41;](../../ssms/menu-help/options-environment-fonts-and-colors-page.md)  
   
-[Opções &amp;#40;página Ambiente – Geral&amp;#41;](../../ssms/menu-help/options-environment-general-page.md)  
+[Opções &#40;página Ambiente – Geral&#41;](../../ssms/menu-help/options-environment-general-page.md)  
   
-[Opções &amp;#40;página Ambiente – Ajuda – Geral&amp;#41;](../../ssms/menu-help/options-environment-help-general-page.md)  
+[Opções &#40;página Ambiente – Ajuda – Geral&#41;](../../ssms/menu-help/options-environment-help-general-page.md)  
   
-[Opções &amp;#40;página Ambiente – Ajuda – Online&amp;#41;](../../ssms/menu-help/options-environment-help-online-page.md)  
+[Opções &#40;página Ambiente – Ajuda – Online&#41;](../../ssms/menu-help/options-environment-help-online-page.md)  
   
-[Opções &amp;#40;página Ambiente – Teclado&amp;#41;](../../ssms/menu-help/options-environment-keyboard-page.md)  
+[Opções &#40;página Ambiente – Teclado&#41;](../../ssms/menu-help/options-environment-keyboard-page.md)  
   
 [Opções (página Execução da consulta – Analysis Server – Geral)](http://msdn.microsoft.com/en-us/456867d0-724c-449c-abf9-013a694d7924)  
   

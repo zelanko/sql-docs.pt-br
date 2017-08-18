@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 81ad964781f4d467f27d0693522f601bb86119fc
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-server-management-studio-menu-help"></a>Ajuda do menu do SQL Server Management Studio
@@ -31,17 +31,17 @@ Essa seção contém Ajuda F1 para as caixas de diálogo e páginas disponíveis
   
 [Opções avançadas de salvar](../../ssms/menu-help/advanced-save-options.md)  
   
-[Caixa de diálogo Escolher Pastas de Pesquisa &amp;#40;Visual Studio&amp;#41;](../../ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md)  
+[Caixa de diálogo Escolher Pastas de Pesquisa &#40;Visual Studio&#41;](../../ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md)  
   
-[Escolher itens da caixa de ferramenta &amp;#40;página Tarefas de Manutenção&amp;#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
+[Escolher itens da caixa de ferramenta &#40;página Tarefas de Manutenção&#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
   
-[Personalizar &amp;#40;página Comandos&amp;#41;](../../ssms/menu-help/customize-commands-page.md)  
+[Personalizar &#40;página Comandos&#41;](../../ssms/menu-help/customize-commands-page.md)  
   
-[Personalizar &amp;#40;página Barras de Ferramentas&amp;#41;](../../ssms/menu-help/customize-toolbars-page.md)  
+[Personalizar &#40;página Barras de Ferramentas&#41;](../../ssms/menu-help/customize-toolbars-page.md)  
   
 [Ferramentas externas](../../ssms/menu-help/external-tools.md)  
   
-[Abrir com &amp;#40;Novo Arquivo&amp;#41;](../../ssms/menu-help/open-with-new-file.md)  
+[Abrir com &#40;Novo Arquivo&#41;](../../ssms/menu-help/open-with-new-file.md)  
   
 [Ajuda de F1 das caixas de diálogo opções](../../ssms/menu-help/options-dialog-boxes-f1-help.md)  
   
@@ -49,6 +49,6 @@ Essa seção contém Ajuda F1 para as caixas de diálogo e páginas disponíveis
   
 [Salvar alterações](../../ssms/menu-help/save-changes.md)  
   
-[Caixa de diálogo Windows&amp;#40;Ajuda do Gerenciador de Documentos da Microsoft&amp;#41;](../../ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md)  
+[Caixa de diálogo Windows&#40;Ajuda do Gerenciador de Documentos da Microsoft&#41;](../../ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md)  
   
 

@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b9bb3d6b6f64dae6aa3fc79494fd85730b380daf
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>Caixa de diálogo Salvar (Visual Database Tools)
@@ -38,6 +38,6 @@ Especifique se esta caixa de diálogo será exibida na próxima vez que você sa
 Exiba a caixa de diálogo **Salvar como** , que pedirá um local para salvar o arquivo de texto com a lista de tabelas. Esse arquivo fornece a lista das tabelas que foram afetadas pelas mudanças feitas.  
   
 ## <a name="see-also"></a>Consulte também  
-[Criar tabelas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Criar tabelas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   
 

@@ -14,11 +14,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e207a41546270197fa35cccd63348107db2d30f4
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="projects-sql-server-management-studio"></a>Projetos (SQL Server Management Studio)
@@ -61,7 +61,7 @@ Para modificar informações sobre uma conexão, use a janela de propriedades no
   
 ## <a name="see-also"></a>Consulte também  
 [Gerenciador de Soluções](../../ssms/solution/solution-explorer.md)  
-[Soluções &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
+[Soluções &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
 [Controle do código-fonte do Gerenciador de Soluções](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
   
 

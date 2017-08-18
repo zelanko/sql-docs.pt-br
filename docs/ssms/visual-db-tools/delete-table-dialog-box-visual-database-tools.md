@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c6485a4d7020bf63b4650ec70d6eb20c9ccf714f
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>Caixa de diálogo Excluir Tabela (Visual Database Tools)
@@ -33,6 +33,6 @@ Selecione a tabela da qual os registros serão excluídos e clique em **OK**.
 > Uma consulta DELETE remove linhas inteiras de tabelas. Para limpar valores de colunas de dados individuais, use uma consulta UPDATE. Para excluir colunas de uma definição de tabela ou excluir a própria tabela, use o Designer de Tabela ou as ferramentas de design do banco de dados.  
   
 ## <a name="see-also"></a>Consulte também  
-[Remover tabelas de consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md)  
+[Remover tabelas de consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md)  
   
 

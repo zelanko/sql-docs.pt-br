@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a44398daffbf1ab25f52430d2b27a0e822427db1
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Criar autojunções manualmente (Visual Database Tools)
@@ -122,14 +122,14 @@ Cheryl Carson       Abraham Bennet
   
 4.  Na janela Propriedades, clique em **Condição e Tipo de Junção** e clique nas reticências **(…)** à direita da propriedade.  
   
-5.  Na caixa de diálogo [Junção](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md), altere o operador de comparação entre as chaves primárias conforme requerido. Por exemplo, você pode alterar o operador para menor que (<).  
+5.  Na caixa de diálogo [Junção](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md) , altere o operador de comparação entre as chaves primárias conforme requerido. Por exemplo, você pode alterar o operador para menor que (<).  
   
 6.  Crie a condição de junção adicional (por exemplo, authors.zip = authors1.zip) arrastando o nome da coluna de junção primária na primeira ocorrência da tabela ou objeto com valor de tabela, soltando na coluna correspondente na segunda ocorrência.  
   
 7.  Especifique outras opções para a consulta, como colunas de saída, critérios de pesquisa e ordem de classificação.  
   
 ## <a name="see-also"></a>Consulte também  
-[Criar autojunções automaticamente &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md)  
-[Consultar com junções &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[Criar autojunções automaticamente &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md)  
+[Consultar com junções &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
 

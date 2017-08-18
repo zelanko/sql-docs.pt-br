@@ -25,11 +25,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dd01c244e33751b49c4bd811a879eedd500be957
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-editor-visual-database-tools"></a>Editor SQL (Visual Database Tools)
@@ -50,9 +50,9 @@ O Editor SQL fornece muitos recursos úteis de edição de texto do SQL , inclus
 > [!NOTE]  
 > O Editor SQL não tem solicitação IntelliSense.  
   
-Ao editar instruções SQL, certas instruções Transact-SQL são inclusas em uma caixa cercada por uma linha fina. Isso ajuda quebrar o código de SQL visualmente em seções de comando e identifica blocos de instruções SQL que podem ser projetadas graficamente usando o Designer de Consulta. Para obter mais informações sobre como usar o Designer de Consultas, veja [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md).  
+Ao editar instruções SQL, certas instruções Transact-SQL são inclusas em uma caixa cercada por uma linha fina. Isso ajuda quebrar o código de SQL visualmente em seções de comando e identifica blocos de instruções SQL que podem ser projetadas graficamente usando o Designer de Consulta. Para obter mais informações sobre como usar o Designer de Consultas, veja [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md).  
   
 ## <a name="see-also"></a>Consulte também  
-[Tópicos de instruções de como criar consultas e exibições &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 
