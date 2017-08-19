@@ -4,10 +4,10 @@ hide_bc: true
 title: "Documentação do Microsoft SQL | Microsoft Docs"
 description: Aprenda sobre o SQL
 ms.translationtype: HT
-ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
-ms.openlocfilehash: ec933d582956a21fee23173f5c08bec3d1fa807e
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: b280992dadacae7b54d94ba90caadff878f1cd4c
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 
@@ -247,11 +247,7 @@ ms.lasthandoff: 08/17/2017
                                                 <ul>
                                                     <li><a href="http://sqldatabase-migrationpreview.azurewebsites.net">Serviço de migração de banco de dados do Azure (Visualização privada)</a></li>
                                                     <li><a href="https://www.microsoft.com/download/details.aspx?id=53595">Assistente de migração de dados</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54255">SSMA para Access</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54254">SSMA para DB2</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54257">SSMA para MySql</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54258">SSMA para Oracle</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54256">SSMA para SAP ASE</a></li>
+                                                    <li><a href="/sql/ssma/sql-server-migration-assistant">Assistente de Migração do SQL Server</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Migrar o banco de dados para o Azure</h4>
                                                 <ul>
