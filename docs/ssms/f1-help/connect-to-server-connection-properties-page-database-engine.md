@@ -1,7 +1,7 @@
 ---
 title: "Conectar ao Mecanismo de Banco de Dados do Servidor (página Propriedades da Conexão) | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,26 +17,25 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22cef3465036947ad6389b41c4c80bfc5ef965cb
+ms.translationtype: HT
+ms.sourcegitcommit: 5316f9d560f7e15bb0699780f67aff641067b203
+ms.openlocfilehash: 67f517ace6307fc4ad5afaf068c04ba6039d1c98
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Conectar ao Servidor (página Propriedades da Conexão) Mecanismo de Banco de Dados
-Use esta guia para exibir ou especificar opções ao se conectar a uma instância do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] ou registrar [!INCLUDE[ssDE](../../includes/ssde_md.md)] em **Servidores Registrados**. **Conectar** e **Opções** só são exibidas nesta caixa de diálogo ao conectar-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Testar** e **Salvar** só aparecem nesta caixa de diálogo durante o registro no [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+Use esta guia para exibir ou especificar opções ao se conectar a uma emstância do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] ou registrar [!INCLUDE[ssDE](../../includes/ssde_md.md)] em **Servidores Registrados**. **Conectar** e **Opções** só são exibidas nesta caixa de diálogo ao conectar-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Testar** e **Salvar** só aparecem nesta caixa de diálogo durante o registro no [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
-## <a name="options"></a>Opções  
 **Conectar ao banco de dados**  
-Selecione um banco de dados com o qual deseja se conectar na lista. Se você selecionar **<default>**, será conectado com o banco de dados padrão para o servidor. Se você selecionar **<Browse server>**, poderá procurar no servidor o banco de dados ao qual se conectar.  
+Selecione um banco de dados com o qual deseja se conectar na lista. Ao selecionar **<default>**, você será conectado ao banco de dados padrão do servidor. Se você selecionar **<Browse server>**, poderá procurar no servidor o banco de dados ao qual se conectar.  
   
 Ao conectar-se a uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] por meio do [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)], você deve usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e especificar um banco de dados na caixa de diálogo **Conectar ao Servidor** , na guia **Propriedades da Conexão** . Verifique se você marcou a caixa de seleção **Criptografar conexão** .  
   
-Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] conecta-se ao **mestre**. Se você especificar um banco de dados de usuário, consultará somente esse banco de dados e seus objetos no Pesquisador de Objetos. Se você se conectar ao **mestre**, poderá ver todos os bancos de dados. Para obter mais informações, consulte [Visão geral do banco de dados SQL do Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=163948).  
+Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] conecta-se ao **mestre**. Ao conectar-se ao [!INCLUDE[ssSDS](../../includes/sssds_md.md)], se você especificar um banco de dados de usuário, somente esse banco de dados e seus objetos serão exibidos no Pesquisador de Objetos. Se você se conectar ao **mestre**, todos os bancos de dados serão exibidos. Para obter mais informações, consulte [Visão geral do banco de dados SQL do Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=163948).  
   
 **Protocolo de rede**  
-Selecione um protocolo na lista. Os protocolos cliente disponíveis são aqueles que você configurou usando a Configuração de Rede Cliente no Gerenciamento do Computador.  
+Selecione um protocolo na lista. Os protocolos de cliente disponíveis são configurados usando a configuração de rede do cliente no gerenciamento do computador.  
   
 **Tamanho do pacote de rede**  
 Digite o tamanho dos pacotes de rede a serem enviados. O padrão é 4096 bytes.  
@@ -59,6 +58,9 @@ Selecione para especificar a cor do plano de fundo para a barra de status em uma
   
 -   No menu **Arquivo** , quando você clica em **Novo** e depois em **Consulta do Mecanismo do Banco de Dados**, a cor que você especifica na caixa de diálogo **Conectar ao Servidor** aplica-se àquela janela do Editor de Consultas.  
   
+**ID de locatário ou nome de domínio do AD**  
+Ao se conectar com a autenticação **Active Directory – Universal com MFA**, especifique o domínio de autenticação. Essa opção só está disponível ao usar o SSMS 17.2 ou posterior. 
+
 **Redefinir Tudo**  
 Substitua todos os valores de propriedade de conexão digitados manualmente por seus padrões.  
   
@@ -68,7 +70,7 @@ Tenta estabelecer uma conexão usando os valores listados.
 **Opções**  
 Clique para alterar a caixa de diálogo e ocultar as opções de conexão de servidor adicionais, como lembrar a senha.  
   
-**Testarar**  
+**Testar**  
 Ao registrar o [!INCLUDE[ssDE](../../includes/ssde_md.md)] em **Servidores Registrados**, clique para testar a conexão.  
   
 **Salvar**  

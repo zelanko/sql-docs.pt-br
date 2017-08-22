@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: cd57edcb06ea6d9baced3ce5765743769caba04e
+ms.sourcegitcommit: 04245fd42b770129ce4074f8a4ae8377b10cf384
+ms.openlocfilehash: 6494051851601ead6fb3d51e1688b8f1320ed5d4
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>Notas de Versão do SQL Server 2017
@@ -29,7 +29,7 @@ Este tópico descreve as limitações e problemas com [!INCLUDE[ssSQLv14_md](../
 [![Baixe do Centro de Avaliação.](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Baixar [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] do  **[Centro de Avaliação](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 versão Release Candidate (RC2 – agosto de 2017)
-Não há SQL Servers nas notas de versão do Windows para esta versão. Consulte [Notas de versão do SQL Server no Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
+Não há nenhuma nota de versão do SQL Server no Windows para esta versão. Consulte [Notas de versão do SQL Server no Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 versão Release Candidate (RC1 – julho de 2017)
@@ -120,3 +120,4 @@ Não há SQL Servers nas notas de versão do Windows para esta versão. Consulte
 - [Problemas Conhecidos de Serviços de Machine Learning](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
+
