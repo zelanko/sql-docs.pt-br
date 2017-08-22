@@ -1,7 +1,7 @@
 ---
 title: "Inicialização imediata de arquivo do banco de dados | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,11 +19,11 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 940f322fb3afe4b7bfff35f0b25b7b7605452a27
+ms.translationtype: HT
+ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
+ms.openlocfilehash: 8535e2dd63e3842d249c3cc4a90654a3648f51b3
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="database-instant-file-initialization"></a>Inicialização imediata de arquivo do banco de dados
@@ -31,7 +31,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Criar um banco de dados.  
   
--   Adicionar arquivos, log ou dados a um banco de dados existente.  
+-   Adicionar dados ou arquivos de log a um banco de dados existente.  
   
 -   Aumentar o tamanho de um arquivo existente (inclusive operações de aumento automático).  
   
@@ -40,14 +40,14 @@ ms.lasthandoff: 06/22/2017
  A inicialização dos arquivos faz com que essas operações demorem mais. Porém, quando os dados são gravados nos arquivos pela primeira vez, o sistema operacional não precisa completar os arquivos com zeros.  
   
 ## <a name="instant-file-initialization"></a>Inicialização imediata de arquivo  
- Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os arquivos de dados podem ser inicializados de imediato. Isso permite execução rápida das operações de arquivo mencionadas anteriormente. A inicialização imediata de um arquivo recupera espaço em disco sem encher esse espaço com zeros. Em vez disso, o conteúdo do disco é substituído à medida que novos dados são gravados nos arquivos. Arquivos de log não podem ser inicializados de imediato.  
+ Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os arquivos de dados podem ser inicializados de imediato. A inicialização instantânea de arquivo permite execução rápida das operações de arquivo mencionadas anteriormente. A inicialização imediata de um arquivo recupera espaço em disco sem encher esse espaço com zeros. Em vez disso, o conteúdo do disco é substituído à medida que novos dados são gravados nos arquivos. Arquivos de log não podem ser inicializados de imediato.  
   
 > [!NOTE]  
 >  A Inicialização Instantânea de Arquivo está disponível apenas no [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] ou [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] ou em versões posteriores.  
   
  A inicialização imediata de arquivos estará disponível somente se a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) tiver recebido SE_MANAGE_VOLUME_NAME. Os membros do grupo administrador do Windows têm esse direito e podem atribuí-lo a outros usuários adicionando-os à política de segurança **Executar tarefas de manutenção de volume** . Para obter mais informações sobre como atribuir direitos de usuário, consulte a documentação do Windows.  
   
- A inicialização instantânea de arquivo não está disponível quando a TDE está habilitada.  
+Algumas condições, como TDE, podem impedir a Inicialização Instantânea de Arquivo.  
   
  Para conceder a permissão `Perform volume maintenance tasks` a uma conta:  
   
@@ -62,9 +62,9 @@ ms.lasthandoff: 06/22/2017
 5.  Clique em **Aplicar**e feche todas as caixas de diálogo **Política de Segurança Local** .  
   
 ### <a name="security-considerations"></a>Considerações sobre segurança  
- Como o conteúdo excluído do disco é substituído somente à medida que novos dados são gravados nos arquivos, o conteúdo excluído poderá ser acessado por uma entidade de segurança não autorizada. Embora o arquivo de banco de dados esteja associado à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa ameaça de divulgação de informações é reduzida pela lista de controle de acesso discricionário (DACL) no arquivo. Essa DACL permite acesso de arquivo somente à conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao administrador local. Porém, quando o arquivo é desassociado, ele pode ser acessado por um usuário ou serviço que não tenha SE_MANAGE_VOLUME_NAME. Existe uma ameaça semelhante ao se fazer backup do banco de dados. O conteúdo excluído pode ficar disponível para um usuário ou serviço não autorizado se o arquivo de backup não for protegido com uma DACL adequada.  
+ Como o conteúdo excluído do disco é substituído somente à medida que novos dados são gravados nos arquivos, o conteúdo excluído poderá ser acessado por uma entidade de segurança não autorizada. Embora o arquivo de banco de dados esteja associado à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa ameaça de divulgação de informações é reduzida pela lista de controle de acesso discricionário (DACL) no arquivo. Essa DACL permite acesso de arquivo somente à conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao administrador local. Porém, quando o arquivo é desassociado, ele pode ser acessado por um usuário ou serviço que não tenha SE_MANAGE_VOLUME_NAME. Existe uma ameaça semelhante ao se fazer backup do banco de dados. Se o arquivo de backup não estiver protegido com uma DACL adequada, o conteúdo excluído poderá ficar disponível para um usuário ou um serviço não autorizado.  
   
- Se o potencial de divulgação do conteúdo excluído for uma preocupação, você deve tomar uma ou ambas as providências seguintes:  
+ Se houver preocupação com a possível divulgação do conteúdo excluído, você deverá executar uma das seguintes ações ou ambas:  
   
 -   Sempre se certifique de que todos os arquivos de dados desassociados e arquivos de backup tenham DACL restritivas.  
   
@@ -77,3 +77,4 @@ ms.lasthandoff: 06/22/2017
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   
+

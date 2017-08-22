@@ -1,7 +1,7 @@
 ---
 title: "Opção de configuração de servidor cross db ownership chaining | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 457ca08fbfef2ab0fb96e4cd2ec4515e04b9dc6e
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: c42780edef8e57b9d8159d9dfe384554cade4fb2
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>Opção cross db ownership chaining de configuração de servidor
@@ -39,7 +39,13 @@ ms.lasthandoff: 08/02/2017
 -   Você pode definir o encadeamento de propriedades de banco de dados para bancos de dados individuais com a cláusula SET da instrução ALTER DATABASE. Se você estiver criando um novo banco de dados, poderá definir a opção cross db ownership chaining para o novo banco de dados com a instrução CREATE DATABASE.  
   
      A definição da opção **cross db ownership chaining** como 1 não é recomendada, a menos que todos os bancos de dados hospedados pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisem participar do encadeamento de propriedades de bancos de dados e que você esteja ciente das implicações de segurança dessa configuração.  
-  
+
+Para determinar o status atual do encadeamento de propriedade entre bancos de dados, execute a seguinte consulta:  
+```sql
+SELECT is_db_chaining_on, name FROM sys.databases;
+```  
+Um resultado igual a 1 indica que o encadeamento de propriedade entre bancos de dados está habilitado.
+
 ## <a name="controlling-cross-database-ownership-chaining"></a>Controlando o encadeamento de propriedades de banco de dados  
  Antes de ativar ou desativar o encadeamento de propriedades de banco de dados, considere o seguinte:  
   

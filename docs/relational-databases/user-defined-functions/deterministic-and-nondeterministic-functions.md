@@ -1,7 +1,7 @@
 ---
 title: "Funções determinísticas e não determinísticas | Microsoft Docs"
 ms.custom: 
-ms.date: 09/28/2016
+ms.date: 08/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,11 +20,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd6393571f06ba7b73f0b52bcfe8bc218279c1af
+ms.translationtype: HT
+ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
+ms.openlocfilehash: fe23cb7ab3fbc0461f0c0853aedaa4444e4bb543
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Funções determinísticas e não determinísticas
@@ -90,16 +90,16 @@ ms.lasthandoff: 06/22/2017
 |CURRENT_TIMESTAMP|RAND|  
 |DENSE_RANK|RANK|  
 |FIRST_VALUE|ROW_NUMBER|   
-||TEXTPTR|  
+|FORMAT|TEXTPTR|  
   
 ## <a name="calling-extended-stored-procedures-from-functions"></a>Chamando procedimentos armazenados estendidos de funções  
- Funções que chamam procedimentos armazenados estendidos são não determinísticas, pois esses procedimentos podem causar efeitos colaterais no banco de dados. Efeitos colaterais são alterações em um estado global do banco de dados, como a atualização de uma tabela ou de um recurso externo, como um arquivo ou a rede; por exemplo, a modificação de um arquivo ou o envio de uma mensagem de email. Você não deve confiar no retorno de um conjunto de resultados consistente ao executar um procedimento armazenado estendido de uma função definida pelo usuário. Funções definidas pelo usuário que criam efeitos colaterais no banco de dados não são recomendadas.  
+ Funções que chamam procedimentos armazenados estendidos são não determinísticas, pois esses procedimentos podem causar efeitos colaterais no banco de dados. Efeitos colaterais são alterações em um estado global do banco de dados, como a atualização de uma tabela ou de um recurso externo, como um arquivo ou a rede; por exemplo, a modificação de um arquivo ou o envio de uma mensagem de email. Não confie no retorno de um conjunto de resultados consistente ao executar um procedimento armazenado estendido de uma função definida pelo usuário. Funções definidas pelo usuário que criam efeitos colaterais no banco de dados não são recomendadas.  
   
- Quando chamado de dentro de uma função, o procedimento armazenado estendido não pode retornar conjuntos de resultados para o cliente. Qualquer API Open Data Services que retorna conjuntos de resultados para o cliente terá um código de retorno FAIL.  
+ Quando chamado de dentro de uma função, o procedimento armazenado estendido não pode retornar conjuntos de resultados para o cliente. Todas as APIs Open Data Services que retornam conjuntos de resultados para o cliente têm um código de retorno FAIL.  
   
  O procedimento armazenado estendido pode voltar a se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No entanto, o procedimento não pode unir a mesma transação como a função original que invocou o procedimento armazenado estendido.  
   
- Semelhante a invocações de um procedimento armazenado ou em lotes, o procedimento armazenado estendido é executado no contexto da conta de segurança do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sob a qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executado. O proprietário do procedimento armazenado estendido deve considerar isso ao conceder permissões para outros usuários executarem o procedimento.  
+ Semelhante a invocações de um procedimento armazenado ou em lotes, o procedimento armazenado estendido é executado no contexto da conta de segurança do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sob a qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executado. O proprietário do procedimento armazenado estendido deve considerar as permissões do contexto de segurança, ao conceder permissões a outros usuários para executar o procedimento.  
   
   
 
