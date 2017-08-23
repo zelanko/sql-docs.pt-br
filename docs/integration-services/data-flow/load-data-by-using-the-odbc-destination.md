@@ -1,25 +1,30 @@
 ---
-title: "Carregar dados por meio do destino ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Carregar dados usando o destino ODBC | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 668cf193758a8dfaba90e598ccbdb7d0d84351fc
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Carregar dados por meio do destino ODBC
+# <a name="load-data-by-using-the-odbc-destination"></a>Carregar dados por meio do destino ODBC
   Este procedimento mostra como carregar dados usando o destino ODBC. Para adicionar e configurar um destino ODBC, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma fonte.  
   
-### Para carregar dados usando um destino ODBC  
+### <a name="to-load-data-using-an-odbc-destination"></a>Para carregar dados usando um destino ODBC  
   
 1.  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], abra o pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] desejado.  
   
@@ -49,9 +54,9 @@ caps.handback.revision: 9
   
 12. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## Consulte também  
- [Editor do Destino ODBC &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
- [Editor de Destinos ODBC &#40;Página Mapeamentos&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
- [Editor de Fonte ODBC &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+## <a name="see-also"></a>Consulte também  
+ [Editor de destino ODBC &#40; Página Gerenciador de Conexão &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
+ [Editor de destino ODBC &#40; Página mapeamentos &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
+ [Editor de origem ODBC &#40; Página de saída de erro &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   
