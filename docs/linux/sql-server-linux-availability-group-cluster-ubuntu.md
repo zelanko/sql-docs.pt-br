@@ -16,8 +16,9 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar o Cluster Ubuntu e recursos do grupo de disponibilidade
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 Este documento explica como criar um cluster de três nós no Ubuntu e adicionar um grupo de disponibilidade criado anteriormente como um recurso do cluster. Para alta disponibilidade, um grupo de disponibilidade no Linux requer três nós - consulte [alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade](sql-server-linux-availability-group-ha.md).
 

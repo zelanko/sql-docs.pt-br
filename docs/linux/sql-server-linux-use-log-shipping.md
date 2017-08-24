@@ -16,9 +16,9 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 08/02/2017
 
 ---
-
-
 # <a name="get-started-with-log-shipping-on-linux"></a>Introdução ao envio de logs no Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 Envio de Log do SQL Server é uma configuração de alta disponibilidade em um banco de dados de um servidor primário é replicado para um ou mais servidores secundários. Resumindo, um backup do banco de dados de origem é restaurado para o servidor secundário. Em seguida, o servidor primário cria backups de log de transação periodicamente e os servidores secundários restauração-los atualizando a cópia secundária do banco de dados. 
 

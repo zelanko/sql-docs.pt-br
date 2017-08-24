@@ -16,8 +16,9 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado do Red Hat Enterprise Linux para o SQL Server
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 Este guia fornece instruções para criar um cluster de disco compartilhado de dois nós para o SQL Server no Red Hat Enterprise Linux. A camada de clustering é baseada no Red Hat Enterprise Linux (RHEL) [HA complemento](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) criado na parte superior do [Pacemaker](http://clusterlabs.org/). Instância do SQL Server está ativa em um nó ou em outro.
 

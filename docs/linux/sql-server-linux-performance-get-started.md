@@ -18,6 +18,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Instruções passo a passo para os recursos de desempenho do SQL Server no Linux
+
 Se você for um usuário do Linux que há de novo para o SQL Server, as tarefas a seguir mostram alguns dos recursos de desempenho. Eles não são exclusivas ou específicas para o Linux, mas ajuda a dar uma ideia de áreas para investigar mais. Em cada exemplo é fornecido um link para a documentação de profundidade para a área.
 
 > [!NOTE]

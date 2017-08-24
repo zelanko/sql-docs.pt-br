@@ -19,6 +19,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Use o código do Visual Studio para criar e executar scripts Transact-SQL para SQL Server
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 Este tópico mostra como usar o **mssql** extensão para o código do Visual Studio (VS código) para desenvolver bancos de dados do SQL Server.
 
 Código do Visual Studio é um editor de código gráfica para Linux, macOS e Windows que oferece suporte a extensões. O [**mssql** extensão para código VS] permite que você se conectar ao SQL Server, a consulta com o Transact-SQL (T-SQL) e exibir os resultados.
