@@ -1,31 +1,36 @@
 ---
-title: "Determinar se os dados de altera&#231;&#227;o est&#227;o prontos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "carga incremental [Integration Services], determinando a prontidão"
+title: "Determinar se os dados de alteração estão prontos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 91c0f342c63df8d3a1376850615c5b68745ab4c9
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Determinar se os dados de altera&#231;&#227;o est&#227;o prontos
+# <a name="determine-whether-the-change-data-is-ready"></a>Determinar se os dados de alteração estão prontos
   No fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza uma carga incremental de dados de alteração, a segunda tarefa serve para garantir que os dados de alteração para o intervalo selecionado estejam prontos. Esta etapa é necessária, pois o processo de captura assíncrono pode ainda não ter processado todas as alterações até o ponto de extremidade selecionado.  
   
 > [!NOTE]  
 >  A primeira tarefa para o fluxo de controle é calcular os pontos de extremidade do intervalo de alteração. Para obter mais informações sobre essa tarefa, consulte [Especificar um intervalo de dados de alteração](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md). Para obter uma descrição do processo geral de criação do fluxo de controle, consulte [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
-## Compreendendo os componentes da solução  
- A solução descrita neste tópico usa quatro componentes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  
+## <a name="understanding-the-components-of-the-solution"></a>Compreendendo os componentes da solução  
+ A solução descrita neste tópico usa quatro componentes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
   
 -   Um contêiner do Loop For que avalia repetidamente a saída de uma Tarefa Executar SQL.  
   
@@ -37,9 +42,9 @@ caps.handback.revision: 26
   
  Esses componentes definem ou leem os valores de diversas variáveis de pacote para controlar o fluxo de execução dentro do loop e posteriormente no pacote.  
   
-#### Para definir as variáveis do pacote  
+#### <a name="to-set-up-package-variables"></a>Para definir as variáveis do pacote  
   
-1.  Em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], na janela **Variáveis**, crie as seguintes variáveis:  
+1.  Em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], na janela **Variáveis** , crie as seguintes variáveis:  
   
     1.  Crie uma variável com um tipo de dados inteiros para manter o valor de status retornado pela tarefa Executar SQL.  
   
@@ -61,12 +66,12 @@ caps.handback.revision: 26
   
          Este exemplo usa o nome da variável, IntervalID, e verifica apenas a existência de um valor 0 para indicar a carga inicial.  
   
-## Configurando um contêiner Loop For  
+## <a name="configuring-a-for-loop-container"></a>Configurando um contêiner Loop For  
  Com as variáveis definidas, o contêiner Loop For é o primeiro componente em ser adicionado.  
   
-#### Para configurar um contêiner Loop For espere até que dados de alteração estejam prontos  
+#### <a name="to-configure-a-for-loop-container-to-wait-until-change-data-is-ready"></a>Para configurar um contêiner Loop For espere até que dados de alteração estejam prontos  
   
-1.  Na guia **Fluxo de Controle** do Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)], adicione um contêiner Loop For ao fluxo de controle.  
+1.  Na guia **Fluxo de Controle** do Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , adicione um contêiner Loop For ao fluxo de controle.  
   
 2.  Conecte a tarefa Executar SQL que calcula os pontos de extremidade do intervalo para o contêiner Loop For.  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 26
   
          Quando esta expressão avaliar como **False**, a execução passará pelo loop e a carga incremental será iniciada.  
   
-## Configurando a tarefa Executar SQL que consulta a existência de dados de alteração  
+## <a name="configuring-the-execute-sql-task-that-queries-for-change-data"></a>Configurando a tarefa Executar SQL que consulta a existência de dados de alteração  
  Dentro do contêiner Loop For, você adiciona uma tarefa Executar SQL. Esta tarefa consulta as tabelas que o processo de captura de dados de alteração mantém no banco de dados. O resultado desta consulta é um valor de status que indica se os dados de alteração estão prontos ou não.  
   
  Na seguinte tabela, a primeira coluna mostra os valores retornados da tarefa Executar SQL pela consulta Transact-SQL. A segunda coluna mostra como os outros componentes respondem a estes valores.  
@@ -93,11 +98,11 @@ caps.handback.revision: 26
 |3|Indica a carga inicial de todos os dados de alteração disponíveis.<br /><br /> A lógica condicional obtém este valor de uma variável de pacote especial usada apenas para este propósito.|A execução passa pelo contêiner Loop For e a carga incremental é iniciada.|  
 |5|Indica que o TimeoutCeiling foi alcançado.<br /><br /> O loop realizou um teste para obter os dados do número de vezes especificado e os dados ainda não estão disponíveis. Sem este teste ou um teste semelhante, o pacote pode ser executado indefinidamente.|A execução continua com o componente opcional que armazena o tempo limite excedido.|  
   
-#### Para configurar uma tarefa Executar SQL para consultar se os dados de alteração estão prontos  
+#### <a name="to-configure-an-execute-sql-task-to-query-whether-change-data-is-ready"></a>Para configurar uma tarefa Executar SQL para consultar se os dados de alteração estão prontos  
   
 1.  Dentro do contêiner Loop For, adicione uma tarefa Executar SQL.  
   
-2.  No **Editor da Tarefa Executar SQL**, na página **Geral**, selecione as seguintes opções:  
+2.  No **Editor da Tarefa Executar SQL**, na página **Geral** , selecione as seguintes opções:  
   
     1.  Para **Conjunto de Resultados**, selecione **Linha simples**.  
   
@@ -150,13 +155,13 @@ caps.handback.revision: 26
   
 4.  Na página **Conjunto de Resultados** do **Editor da tarefa Executar SQL**, mapeie o resultado de DataReady para a variável DataReady e o resultado de TimeoutCount para a variável TimeoutCount.  
   
-## Esperando até que os dados de alteração estejam prontos  
+## <a name="waiting-until-the-change-data-is-ready"></a>Esperando até que os dados de alteração estejam prontos  
  É possível usar um dos diversos métodos para implementar um atraso quando os dados de alteração não estiverem prontos. Os dois procedimentos a seguir ilustram como usar uma tarefa Script ou uma tarefa Executar SQL para implementar o atraso.  
   
 > [!NOTE]  
 >  Um script pré-compilado causa menos sobrecarga do que uma tarefa Executar SQL.  
   
-#### Para implementar um atraso usando uma tarefa Script  
+#### <a name="to-implement-a-delay-by-using-a-script-task"></a>Para implementar um atraso usando uma tarefa Script  
   
 1.  Dentro do contêiner Loop For, adicione uma tarefa Script.  
   
@@ -176,7 +181,7 @@ caps.handback.revision: 26
   
 4.  Em **Editor da Tarefa Script**, na página **Script**, para **ReadOnlyVariables**, selecione a variável de número inteiro **User::DelaySeconds** da lista.  
   
-5.  No **Editor da Tarefa Script**, na página **Script**, clique em **Editar Script** para abrir o ambiente de desenvolvimento de script.  
+5.  No **Editor da Tarefa Script**, na página **Script** , clique em **Editar Script** para abrir o ambiente de desenvolvimento de script.  
   
 6.  No procedimento Principal, digite uma das seguintes linhas de código:  
   
@@ -202,7 +207,7 @@ caps.handback.revision: 26
   
 8.  Feche o ambiente de desenvolvimento de script e o **Editor da Tarefa Script**.  
   
-#### Para implementar um atraso usando uma tarefa Executar SQL  
+#### <a name="to-implement-a-delay-by-using-an-execute-sql-task"></a>Para implementar um atraso usando uma tarefa Executar SQL  
   
 1.  Dentro do contêiner Loop For, adicione uma tarefa Executar SQL.  
   
@@ -222,7 +227,7 @@ caps.handback.revision: 26
   
          Esta seleção requer que ambas as condições, a restrição e a expressão, sejam verdadeiras.  
   
-4.  No **Editor da Tarefa Executar SQL**, na página **Geral**, selecione as seguintes opções:  
+4.  No **Editor da Tarefa Executar SQL**, na página **Geral** , selecione as seguintes opções:  
   
     1.  Para **Conjunto de Resultados**, selecione **Linha simples**.  
   
@@ -239,16 +244,16 @@ caps.handback.revision: 26
   
 5.  Na página **Mapeamento de Parâmetro** do editor, mapeie a variável de cadeia de caracteres DelaySeconds para o parâmetro 0.  
   
-## Controlando uma condição de erro  
+## <a name="handling-an-error-condition"></a>Controlando uma condição de erro  
  Como opção, é possível configurar um componente adicional dentro do loop para armazenar um erro ou uma condição de tempo limite excedido:  
   
 -   Este componente pode armazenar uma condição de erro quando o valor da variável DataReady for = 1. Este valor indica que não há dados de alteração disponíveis antes do início do intervalo selecionado.  
   
 -   Este componente também pode armazenar uma condição de tempo limite excedido quando o valor da variável TimeoutCeiling é alcançado. Este valor indica que o loop realizou um teste para obter os dados do número de vezes especificado e os dados ainda não estão disponíveis. Sem este teste ou um teste semelhante, o pacote pode ser executado indefinidamente.  
   
-#### Para configurar uma tarefa Script opcional para armazenar uma condição de erro  
+#### <a name="to-configure-an-optional-script-task-to-log-an-error-condition"></a>Para configurar uma tarefa Script opcional para armazenar uma condição de erro  
   
-1.  Se quiser reportar o erro ou o tempo limite excedido gravando uma mensagem no log, configure o armazenamento em log para o pacote. Para obter mais informações, consulte [Habilitar o log de pacote no SQL Server Data Tools](../../integration-services/performance/enable-package-logging-in-sql-server-data-tools.md).  
+1.  Se quiser reportar o erro ou o tempo limite excedido gravando uma mensagem no log, configure o armazenamento em log para o pacote. Para obter mais informações, consulte [Habilitar o log de pacote no SQL Server Data Tools](../../integration-services/performance/integration-services-ssis-logging.md#ssdt).  
   
 2.  Dentro do contêiner Loop For, adicione uma tarefa Script.  
   
@@ -272,11 +277,11 @@ caps.handback.revision: 26
   
      Se você quiser incluir informações de determinadas variáveis do sistema (por exemplo, System::PackageName) nas informações gravadas no log, selecione também as variáveis.  
   
-6.  No **Editor da Tarefa Script**, na página **Script**, clique em **Editar Script** para abrir o ambiente de desenvolvimento de script.  
+6.  No **Editor da Tarefa Script**, na página **Script** , clique em **Editar Script** para abrir o ambiente de desenvolvimento de script.  
   
-7.  No procedimento Principal, digite o código para armazenar um erro chamando o método **Dts.Log** ou acione um evento chamando um dos métodos da interface **Dts.Events**. Informe o pacote do erro retornando `Dts.TaskResult = Dts.Results.Failure`.  
+7.  No procedimento Principal, digite o código para armazenar um erro chamando o método **Dts.Log** ou acione um evento chamando um dos métodos da interface **Dts.Events** . Informe o pacote do erro retornando `Dts.TaskResult = Dts.Results.Failure`.  
   
-     A seguinte amostra mostra como gravar uma mensagem no log. Para obter mais informações, consulte [Registrando a tarefa Script](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md), [Gerando eventos na tarefa Script](../../integration-services/extending-packages-scripting/task/raising-events-in-the-script-task.md) e [Retornando resultados da tarefa Script](../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md).  
+     A seguinte amostra mostra como gravar uma mensagem no log. Para obter mais informações, consulte [Registrando a tarefa Script](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md), [Gerando eventos na tarefa Script](../../integration-services/extending-packages-scripting/task/raising-events-in-the-script-task.md)e [Retornando resultados da tarefa Script](../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
     ```  
     ' User variables.  
@@ -330,7 +335,7 @@ caps.handback.revision: 26
   
 8.  Feche o ambiente de desenvolvimento de script e o **Editor da Tarefa Script**.  
   
-## Próxima etapa  
+## <a name="next-step"></a>Próxima etapa  
  Após determinar que os dados de alteração estão prontos, a próxima etapa será preparar para consultar os dados de alteração.  
   
  **Próximo tópico:** [Preparar para consultar os dados de alteração](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  

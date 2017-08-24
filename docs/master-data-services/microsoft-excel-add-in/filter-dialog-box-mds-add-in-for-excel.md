@@ -1,27 +1,32 @@
 ---
-title: "Caixa de di&#225;logo Filtrar (Suplemento do MDS para Excel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Filtrar a caixa de diálogo (suplemento MDS para Excel) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc882d5ae5a53577ac1c6aedb1fdf20e2d31d6e6
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Caixa de di&#225;logo Filtrar (Suplemento do MDS para Excel)
+# <a name="filter-dialog-box-mds-add-in-for-excel"></a>Caixa de diálogo Filtrar (Suplemento do MDS para Excel)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], use a caixa de diálogo **Filtrar** para restringir a lista de dados gerenciados no MDS antes de carregá-la no Excel.  
   
- Essa caixa de diálogo contém três seções: **Colunas**, **Linhas** e **Resumo**.  
+ Essa caixa de diálogo contém três seções: **Colunas**, **Linhas**e **Resumo**.  
   
-## Colunas  
+## <a name="columns"></a>Colunas  
  Use a seção **Colunas** para determinar quais atributos (colunas) você deseja exibir no Excel.  
   
 |Nome do controle|Description|  
@@ -33,7 +38,7 @@ caps.handback.revision: 8
 |Limpar Tudo|Clique para desmarcar todos os atributos selecionados exibidos na lista.<br /><br /> Não é possível desmarcar **Nome** e **Código**.|  
 |Seta para cima/seta para baixo|Clique para mover o atributo selecionado na lista para cima e para baixo. A ordem de cima para baixo corresponde à ordem da esquerda para a direita em que as colunas são exibidas na planilha.|  
   
-## Linhas  
+## <a name="rows"></a>Linhas  
  Use a seção **Linhas** para determinar quais membros (linhas) você deseja exibir no Excel. Você faz isso definindo critérios para filtrar as linhas que serão exibidas.  
   
 |Nome do controle|Description|  
@@ -46,7 +51,7 @@ caps.handback.revision: 8
 |Remover Tudo|Remove todos os filtros da lista.|  
 |Remover|Remove o filtro selecionado da lista.|  
   
-## Resumo  
+## <a name="summary"></a>Resumo  
  Use a seção **Resumo** para exibir detalhes sobre a quantidade de dados que serão carregados, antes de carregá-los.  
   
 |Nome do controle|Description|  
@@ -54,10 +59,10 @@ caps.handback.revision: 8
 |Modelo|O nome do modelo.|  
 |Versão|O nome da versão.|  
 |Entidade|Nome da entidade.|  
-|Linhas|O número de linhas que serão carregadas no Excel, com base nos filtros aplicados na seção **Linhas**.|  
-|Colunas|O número de colunas que serão carregadas no Excel, com base nos atributos selecionados na seção **Colunas**.|  
+|Linhas|O número de linhas que serão carregadas no Excel, com base nos filtros aplicados na seção **Linhas** .|  
+|Colunas|O número de colunas que serão carregadas no Excel, com base nos atributos selecionados na seção **Colunas** .|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Filtrar dados antes da exportação &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)   
  [Visão geral: Exportando dados para o Excel &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   

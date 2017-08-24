@@ -1,30 +1,35 @@
 ---
-title: "Recursos do Integration Services com suporte nas edi&#231;&#245;es do SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Recursos compatíveis com as edições do SQL Server do Integration Services | Microsoft Docs"
+ms.custom: 
+ms.date: 07/26/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 caps.latest.revision: 15
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 365fb52c9808e0402323d52c85371c35555d833e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Recursos do Integration Services com suporte nas edi&#231;&#245;es do SQL Server
+# <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Recursos de serviços de integração com suporte nas edições do SQL Server
  Este tópico fornece detalhes sobre os recursos do SSIS (SQL Server Integration Services) com suporte nas diferentes edições do [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)].  
 
-Para saber quais recursos têm suporte nas edições Evaluation e Developer, consulte SQL Server Enterprise Edition. 
+Para recursos com suporte pelas edições Evaluation e Developer, consulte os recursos listados para o Enterprise Edition nas tabelas a seguir.
   
-Para notas de versão mais recentes e informações sobre novidades, consulte o seguinte:
+Para informações sobre novidades e as notas de versão mais recentes, consulte os seguintes artigos:
 -   [Notas de versão do SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
 -   [Novidades do Integration Services no SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
--   [Novidades do Integration Services no SQL Server vNext](../integration-services/what-s-new-in-integration-services-in-sql-server-vnext.md)
+-   [O que há de novo no Integration Services no SQL Server de 2017](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
     
 **Experimente o SQL Server 2016!**    
 
@@ -32,50 +37,54 @@ A edição Evaluation do SQL Server está disponível por um período de avalia�
     
 > [![Baixar no Centro de Avaliação](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Baixar o SQL Server 2016 no Centro de Avaliação](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-> ![Máquina Virtual pequena do Azure](../analysis-services/media/azure-virtual-machine-small.png) **[Criar uma Máquina Virtual com o SQL Server 2016 já instalado](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
+## <a name="ISNew"></a>Novos recursos do Integration Services no SQL Server 2017
+  
+|Recurso|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|Expansão mestre|Sim|||||
+|Trabalho de expansão|Sim|Sim <sup>1</sup>|TBD|TBD|TBD|
+|Suporte para o Microsoft Dynamics AX e do Microsoft Dynamics CRM em componentes do OData <sup>2</sup>|Sim|Sim||||
 
-##  <a name="a-nameisanew-integration-services-features-in-sql-server-vnext"></a><a name="IS"></a>Novos recursos do Integration Services no SQL Server vNext
-  
-|Recurso|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Desenvolvedor|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Escalar horizontalmente|Sim||||||Sim|
-|Suporte para Microsoft Dynamics AX e Microsoft Dynamics CRM nos componentes do OData <sup>1</sup>|Sim|Sim|||||Sim|
+<sup>1</sup> se você executar os pacotes que exigem recursos somente Enterprise em expansão, os trabalhadores de fora de escala também deve executar em instâncias do SQL Server Enterprise.
 
-<sup>1</sup> Também há suporte para esse recurso no SQL Server 2016 com Service Pack 1.
+<sup>2</sup> esse recurso também é suportado no SQL Server 2016 com Service Pack 1.
 
-##  <a name="a-nameisa-integration-services"></a><a name="IS"></a> Integration Services  
-  
-|Recurso|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Desenvolvedor|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Conectores internos de fonte de dados|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Tarefas e conectores de fonte de dados do Azure|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Assistente de Importação e Exportação do SQL Server|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Tarefas e conectores do Hadoop / HDFS|Sim|Sim|Sim||||Sim|  
-|Designer do SSIS e tempo de execução|Sim|Sim|||||Sim|  
-|Tarefas e transformações internas|Sim|Sim|||||Sim|  
-|Ferramentas de criação de perfil de dados básicos|Sim|Sim|||||Sim|  
-|Serviço Change Data Capture para Oracle da Attunity|Sim||||||Sim|  
-|Change Data Capture Designer para Oracle da Attunity|Sim||||||Sim| 
+## <a name="IEWiz"></a>Assistente de exportação e importação do SQL Server
 
-##  <a name="a-nameisaaa-integration-services---advanced-adapters"></a><a name="ISAA"></a> Integration Services – Adaptadores avançados  
+|Recurso|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|Assistente de Importação e Exportação do SQL Server|Sim|Sim|Sim|Sim|Sim|  
+
+## <a name="IS"></a> Integration Services  
   
-|Recurso|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Desenvolvedor|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Destino Oracle de alto desempenho|Sim||||||Sim|  
-|Destino de Teradata de alto desempenho|Sim||||||Sim|  
-|Origem e destino do SAP BW|Sim||||||Sim|  
-|Adaptador de destino de treinamento do modelo de mineração de dados|Sim||||||Sim|  
-|Adaptador de destino de processamento de dimensões|Sim||||||Sim|  
-|Adaptador de destino de processamento de partições|Sim||||||Sim|  
-|Componentes do Change Data Capture da Attunity|Sim||||||Sim|  
-|Conector para ODBC (Conectividade Aberta de Banco de Dados) da Attunity.|Sim||||||Sim|  
+|Recurso|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|Conectores internos de fonte de dados|Sim|Sim|||| 
+|Tarefas e transformações internas|Sim|Sim||||  
+|Origem e destino attunity ODBC|Sim|Sim|||| 
+|Tarefas e conectores de fonte de dados do Azure|Sim|Sim||||  
+|Tarefas e conectores do Hadoop/HDFS|Sim|Sim||||  
+|Ferramentas de criação de perfil de dados básicos|Sim|Sim|||| 
+
+## <a name="ISAA"></a>Serviços de integração - fontes e destinos avançados  
   
-##  <a name="a-nameisata-integration-services---advanced-transforms"></a><a name="ISAT"></a> Integration Services – Transformações avançadas  
+|Recurso|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|Destino Oracle de alto desempenho attunity|Sim|||||  
+|Destino Teradata de alto desempenho attunity|Sim|||||  
+|Origem e destino do SAP BW|Sim|||||  
+|Destino de treinamento do modelo de mineração de dados|Sim|||||  
+|Destino de processamento de dimensão|Sim|||||  
+|Destino de processamento de partição|Sim|||||  
   
-|Recurso|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Desenvolvedor|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Pesquisas persistentes (alto desempenho)|Sim||||||Sim|  
-|Transformação de consulta de mineração de dados|Sim||||||Sim|  
-|Transformações de pesquisa e agrupamento difuso|Sim||||||Sim|  
-|Transformações de extração e pesquisa de termos|Sim||||||Sim|  
+## <a name="ISAT"></a>Integration Services – tarefas e transformações avançadas  
   
+|Recurso|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|Pesquisas de persistentes (alto desempenho)|Sim|||||  
+|Componentes do Change Data Capture attunity <sup>1</sup>|Sim|||||  
+|Transformação de consulta de mineração de dados|Sim|||||  
+|Transformações de pesquisa difusa e agrupamento difuso|Sim|||||  
+|Extração de termos e transformações de pesquisa de termo|Sim|||||  
+
+<sup>1</sup> componentes o Change Data Capture da attunity exigem Enterprise edition. O serviço Change Data Capture e o Change Data Capture Designer, no entanto, não requerem Enterprise edition. Você pode usar o Designer e o serviço em um computador em que o SSIS não está instalado.

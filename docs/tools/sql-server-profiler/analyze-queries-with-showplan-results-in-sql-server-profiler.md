@@ -1,26 +1,31 @@
 ---
-title: "Analisar consultas com resultados do Plano de Execu&#231;&#227;o no SQL Server Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "eventos [SQL Server], Plano de execução"
-  - "Profiler [SQL Server Profiler], Resultados do plano de execução"
-  - "SQL Server Profiler, Resultados do plano de execução"
+title: Analisar consultas com resultados de SHOWPLAN no SQL Server Profiler | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- events [SQL Server], Showplan
+- Profiler [SQL Server Profiler], Showplan results
+- SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 03913120309e861eab5bb89523467e8736e5b50b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Analisar consultas com resultados do Plano de Execu&#231;&#227;o no SQL Server Profiler
+# <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analisar consultas com resultados do Plano de Execução no SQL Server Profiler
   Você pode adicionar classes de eventos de Plano de Execução a uma definição de rastreamento para fazer com que o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] reúna e exiba informações do plano de consulta no rastreamento. Também é possível extrair eventos de Plano de Execução de outros eventos coletados no rastreamento e salvá-los em um arquivo XML separado.  
   
  Pode-se extrair eventos de Plano de Execução do rastreamento de uma das seguintes maneiras:  
@@ -31,7 +36,7 @@ caps.handback.revision: 30
   
 -   Extraindo e salvando eventos individuais, clicando com o botão direito do mouse em um evento específico e escolhendo **Extrair Dados de Eventos**.  
   
-## Eventos de Plano de Execução  
+## <a name="showplan-events"></a>Eventos de Plano de Execução  
  Os eventos de rastreamento de Plano de Execução são listados e descritos na tabela a seguir.  
   
 |Nome do evento|Descrição|  
@@ -46,7 +51,7 @@ caps.handback.revision: 30
 |**Showplan XML For Query Compile**|Exibe o plano de consulta quando a consulta é compilada. Para obter mais informações, consulte [Showplan XML for Query Compile Event Class](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md).|  
 |**Showplan XML Statistics Profile**|Exibe o plano de consulta com detalhes completos do tempo de execução em formato XML. Por exemplo, essa classe de evento captura o número de linhas que passam em cada operador da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que está sendo executada. Para obter mais informações, consulte [Showplan XML Statistics Profile Event Class](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md).|  
   
-## Consulte também  
- [Categoria de evento de desempenho](../../relational-databases/event-classes/performance-event-category.md)  
+## <a name="see-also"></a>Consulte também  
+ [Categoria de evento Performance](../../relational-databases/event-classes/performance-event-category.md)  
   
   

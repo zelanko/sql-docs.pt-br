@@ -1,29 +1,34 @@
 ---
-title: "Destino de arquivo simples | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.flatfiledest.f1"
-helpviewer_keywords: 
-  - "arquivos simples"
-  - "Destino de arquivo simples"
-  - "gravação de arquivo de texto [Integration Services]"
-  - "destinos [Integration Services], Arquivo simples"
+title: Simples de destino do arquivo | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.flatfiledest.f1
+helpviewer_keywords:
+- flat files
+- Flat File destination
+- text file writing [Integration Services]
+- destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78a0ec526f83dcab8d7358ef5a51f1f6ccfd0a04
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Destino de arquivo simples
+# <a name="flat-file-destination"></a>Destino de arquivo simples
   O destino de Arquivo Simples grava dados em um arquivo de texto. O arquivo de texto pode ser em formato delimitado, de largura fixa, largura fixa com delimitador de linha ou com imperfeição à direita.  
   
  Você pode configurar o destino de arquivo simples das seguintes formas:  
@@ -38,10 +43,10 @@ caps.handback.revision: 49
   
  Esse destino tem uma saída. Não dá suporte a uma saída de erro.  
   
-## Configuração do destino de Arquivo Simples  
+## <a name="configuration-of-the-flat-file-destination"></a>Configuração do destino de Arquivo Simples  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Fonte de Arquivo Simples**, clique em um dos seguintes tópicos:  
+ Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Fonte de Arquivo Simples** , clique em um dos seguintes tópicos:  
   
 -   [Editor de Destino de Arquivo Simples &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/flat-file-destination-editor-connection-manager-page.md)  
   
@@ -49,14 +54,14 @@ caps.handback.revision: 49
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](../Topic/Common%20Properties.md)  
+-   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de arquivo simples](../../integration-services/data-flow/flat-file-custom-properties.md)  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  Para obter informações sobre como definir as propriedades do componente de fluxo de dados, consulte [Definir as propriedades de um componente de fluxo de dados](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Fonte de Arquivo Simples](../../integration-services/data-flow/flat-file-source.md)   
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
   

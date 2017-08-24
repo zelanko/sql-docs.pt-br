@@ -1,25 +1,30 @@
 ---
-title: "Como exibir as propriedades de inst&#226;ncia CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Como exibir as propriedades de instância CDC | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c23f7aa902cedb22cc5df69c8169fea336513e5
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Como exibir as propriedades de inst&#226;ncia CDC
+# <a name="how-to-view-the-cdc-instance-properties"></a>Como exibir as propriedades de instância CDC
   Este procedimento descreve como usar o CDC Designer Console para exibir informações sobre as instâncias que você cria para ajudar a gerenciar a operação das instâncias.  
   
-### Para exibir informações sobre uma instância específica  
+### <a name="to-view-information-about-a-specific-instance"></a>Para exibir informações sobre uma instância específica  
   
 1.  No menu **Iniciar** , selecione o **CDC Designer Console**.  
   

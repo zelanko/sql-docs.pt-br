@@ -1,35 +1,40 @@
 ---
-title: "Excluir um membro ou uma cole&#231;&#227;o (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "coleções [Master Data Services], excluindo"
-  - "membros folha [Master Data Services], excluindo"
-  - "excluindo membros [Master Data Services]"
-  - "membros [Master Data Services], excluindo"
-  - "membros consolidados [Master Data Services], excluindo"
+title: "Excluir um membro ou coleção (Master Data Services) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Master Data Services], deleting
+- leaf members [Master Data Services], deleting
+- deleting members [Master Data Services]
+- members [Master Data Services], deleting
+- consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 89e49964ef41c7d093a2bdba1673ae8ea44a4a70
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Excluir um membro ou uma cole&#231;&#227;o (Master Data Services)
+# <a name="delete-a-member-or-collection-master-data-services"></a>Excluir um membro ou uma coleção (Master Data Services)
   No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], exclua um membro ou coleção quando não precisar mais dele. Se você quiser excluir membros em massa, use as tabelas de preparo. Para obter mais informações, consulte [Importar dados de tabelas &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   
 > [!NOTE]  
 >  Você não poderá excluir um membro se ele for usado como um valor de atributo baseado em domínio de outro membro.  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** .  
@@ -38,7 +43,7 @@ caps.handback.revision: 10
   
 -   Para coleções, você deve ter, no mínimo, a permissão de **Atualizar** para o objeto da coleção de folhas que você está excluindo.  
   
-### Para excluir um membro ou uma coleção  
+### <a name="to-delete-a-member-or-collection"></a>Para excluir um membro ou uma coleção  
   
 1.  Na página inicial do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
   
@@ -62,9 +67,9 @@ caps.handback.revision: 10
   
 8.  Na caixa de diálogo de confirmação, clique em **OK**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Reativar um membro ou uma coleção &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
- [Membros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [Coleções &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+ [Membros &#40; Master Data Services &#41;](../master-data-services/members-master-data-services.md)   
+ [Coleções de &#40; Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
   
   

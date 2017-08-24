@@ -1,25 +1,30 @@
 ---
-title: "Editar propriedades da inst&#226;ncia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Editar propriedades da instância | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14a55010cd2adc4ea02f0207b91a8e608ed7b176
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editar propriedades da inst&#226;ncia
+# <a name="edit-instance-properties"></a>Editar propriedades da instância
   Use o editor de Propriedades para fazer alterações à instância CDC depois de criar as configurações iniciais. Você pode fazer o seguinte no editor de Propriedades.  
   
--   [Editar as propriedades do banco de dados Oracle](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  
+-   [Editar as propriedades de banco de dados Oracle](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  
   
 -   [Editar tabelas](../../integration-services/change-data-capture/edit-tables.md)  
   
@@ -27,11 +32,11 @@ caps.handback.revision: 6
   
 -   [Editar as propriedades da tabela](../../integration-services/change-data-capture/edit-the-table-properties.md)  
   
--   [Revisar e gerar scripts de log suplementares](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
+-   [Revisar e gerar Scripts de log suplementares](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
 -   [Editar as propriedades avançadas](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
   
-### Para abrir o editor de propriedades  
+### <a name="to-open-the-properties-editor"></a>Para abrir o editor de propriedades  
   
 1.  No painel esquerdo no CDC Designer Console, expanda o serviço com o qual você está trabalhando.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
   
      Você também pode clicar com o botão direito do mouse no serviço no painel esquerdo e selecionar **Propriedades**.  
   
-### OU  
+### <a name="or"></a>OU  
   
 1.  No painel esquerdo no CDC Designer Console, selecione o serviço com o qual você está trabalhando.  
   

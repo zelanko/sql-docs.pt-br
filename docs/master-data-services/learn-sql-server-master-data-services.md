@@ -1,38 +1,42 @@
 ---
-title: "Aprender sobre o SQL Server Master Data Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-keywords: 
-  - "aprender sobre sql"
+title: Saiba o SQL Server Master Data Services | Microsoft Docs
+ms.custom: 
+ms.date: 02/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+keywords:
+- aprender sobre sql
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 caps.latest.revision: 19
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0a3198e7cc00f01d31b7951e0d1298bee9b8dec2
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Aprender sobre o SQL Server Master Data Services
+# <a name="learn-sql-server-master-data-services"></a>Aprender sobre o SQL Server Master Data Services
   
   
-## Treinamento  
+## <a name="training"></a>Treinamento  
 * Para explorar os novos recursos e funcionalidades introduzidos no [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], experimente o [**laboratório virtual do TechNet**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true) (é necessário entrar com sua conta da Microsoft).  
 * Para desenvolver uma solução do [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] para armazenar e gerenciar as listas mestres dos dados geográficos usando o Suplemento para Excel e o [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], experimente o [**laboratório virtual do TechNet**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23112&lod=true). Você criará entidades e hierarquias e usará o [!INCLUDE[ssIS_md](../includes/ssis-md.md)] para preencher uma tabela de dimensões.  
   
-## Vídeos  
-* Para exibir as demonstrações do recurso de sincronização de entidade, aprimoramentos para as hierarquias derivadas e outros ótimos recursos do [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], [**assista a este vídeo**](https://www.youtube.com/watch?v=6lQSc-eLkvk).  
+## <a name="videos"></a>Vídeos  
 * Para saber mais sobre os novos recursos no [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] versão [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], [**assista a este vídeo**](https://www.youtube.com/watch?v=cKA72FpOVxI).  
   
-## Exemplos  
-* Para saber mais sobre como é possível estruturar dados no [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] usando modelos, entidades e hierarquias, experimente os modelos de exemplo incluídos quando você instala o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Para obter instruções sobre como implantar as amostras, consulte [Implantar dados e modelos de exemplo](../sql-server/media/master-data-services.png#deploySample).   
+## <a name="samples"></a>Exemplos  
+* Para saber mais sobre como é possível estruturar dados no [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] usando modelos, entidades e hierarquias, experimente os modelos de exemplo incluídos quando você instala o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Para obter instruções sobre como implantar as amostras, consulte [Implantar dados e modelos de exemplo](../master-data-services/master-data-services-installation-and-configuration.md#deploySample).   
   
-    Para obter informações sobre as atualizações do [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] aos modelos de exemplo, consulte [Amostras: Pacotes de implantação de modelo](Samples%3a%20Model%20Deployment%20Packages%20%28Master%20Data%20Services%29.xml).  
+    Para obter informações sobre o [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] atualizações para os exemplos de modelos, consulte [exemplos do SQL Server: pacotes de implantação de modelo](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
 * Para ver uma demonstração de como personalizar a maneira que os usuários interagem com o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], experimente as amostras de aplicativos de console em C# do MDS incluídos nas amostras do SQL Server. Você pode baixar as amostras do SQL Server como um arquivo .zip neste [repositório GitHub](https://github.com/Microsoft/sql-server-samples).  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 18
     * Amostra da API de Segurança do Master Data Services  
     * Amostra da API de Segurança do Master Data Services  
   
-## Certificação do SQL Server  
+## <a name="sql-server-certification"></a>Certificação do SQL Server  
 * [Certificação e Treinamento do Microsoft SQL Server](https://www.microsoft.com/en-us/learning/sql-training.aspx)  
 * [Lista dos Exames de Certificação da Microsoft](https://www.microsoft.com/en-us/learning/exam-list.aspx)  
 * [A Microsoft Adora Aprender sobre o Blog (Comunidade de Treinamento e Certificação)](https://borntolearn.mslearn.net/b/weblog/archive/2016/03)  
@@ -55,3 +59,5 @@ caps.handback.revision: 18
   
   
   
+
+

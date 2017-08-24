@@ -1,27 +1,32 @@
 ---
-title: "Agrupa ou desagrupa componentes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "agrupando contêineres"
-  - "tarefas [Integration Services], agrupando"
-  - "contêineres [Integration Services], agrupando"
-  - "agrupando tarefas"
+title: Agrupar ou desagrupar componentes | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- grouping containers
+- tasks [Integration Services], grouping
+- containers [Integration Services], grouping
+- grouping tasks
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1162e9b3617c16dc057e899515b9125da35e070b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Agrupa ou desagrupa componentes
+# <a name="group-or-ungroup-components"></a>Agrupa ou desagrupa componentes
   As guias **Fluxo de Controle**, **Fluxo de dados**e **Manipuladores de Eventos** no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] dão suporte a agrupamento recolhível. Se um pacote tem muitos componentes, as guias podem ficar cheias, tornando difícil visualizar todos os componentes ao mesmo tempo e localizar o item com o qual você quer trabalhar. O recurso de agrupamento desmontável, que pode conservar espaço na superfície de trabalho, e assim tornar mais fácil o trabalho com pacotes grandes.  
   
  Você seleciona os componentes que deseja agrupar, então os agrupa e, depois, expande ou recolhe os grupos para se adequarem ao seu trabalho. Expandir um grupo lhe dá acesso às propriedades dos componentes no grupo. As restrições de precedência que conectam tarefas e contêineres são automaticamente incluídas no grupo.  
@@ -34,7 +39,7 @@ caps.handback.revision: 46
   
 -   Quando um pacote é salvo, o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer salva o agrupamento, mas o agrupamento não tem nenhum efeito na execução de pacote. A habilidade de agrupar componentes é um recurso de tempo de design, ela não afeta o comportamento de tempo de execução do pacote.  
   
-### Para agrupar componentes  
+### <a name="to-group-components"></a>Para agrupar componentes  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 46
   
 5.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-### Para desagrupar componentes  
+### <a name="to-ungroup-components"></a>Para desagrupar componentes  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -58,8 +63,8 @@ caps.handback.revision: 46
   
 5.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Como conectar tarefas e contêineres por meio de uma restrição de precedência padrão](../Topic/Connect%20Tasks%20and%20Containers%20by%20Using%20a%20Default%20Precedence%20Constraint.md)  
+ [Conecte tarefas e contêineres usando uma restrição de precedência padrão](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   
   

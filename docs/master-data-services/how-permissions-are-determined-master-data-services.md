@@ -1,24 +1,29 @@
 ---
-title: "Como as permiss&#245;es s&#227;o determinadas (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "permissões [Master Data Services], determinando permissões"
+title: "Como as permissões são determinadas (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Master Data Services], determining permissions
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b31073cdf3c4b925bbf3687e3b70e3384ac90cce
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Como as permiss&#245;es s&#227;o determinadas (Master Data Services)
+# <a name="how-permissions-are-determined-master-data-services"></a>Como as permissões são determinadas (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], a maneira mais simples de configurar a segurança é atribuir permissões de objeto modelo a um grupo do qual o usuário é membro.  
   
  A segurança se torna mais complexa quando:  
@@ -29,12 +34,12 @@ caps.handback.revision: 6
   
 -   O usuário pertence a grupos e a permissão é atribuída a vários grupos.  
   
-## Permissões atribuídas a um único grupo ou usuário  
+## <a name="permissions-assigned-to-a-single-group-or-user"></a>Permissões atribuídas a um único grupo ou usuário  
  Se você atribuir permissões a um único grupo ou usuário, as permissões serão determinadas com base no seguinte fluxo de trabalho.  
   
  ![mds_conc_security_no_overlap](../master-data-services/media/mds-conc-security-no-overlap.gif "mds_conc_security_no_overlap")  
   
-### Etapa 1: permissões de atributo efetivas são determinadas.  
+### <a name="step-1-effective-attribute-permissions-are-determined"></a>Etapa 1: permissões de atributo efetivas são determinadas.  
  A lista a seguir descreve como as permissões de atributo efetivas são determinadas:  
   
 -   As permissões atribuídas a objetos modelo determinam quais atributos um usuário pode acessar.  
@@ -49,7 +54,7 @@ caps.handback.revision: 6
   
  ![mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### Etapa 2: se permissões de membro de hierarquia forem atribuídas, as permissões de membro efetivas serão determinadas.  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Etapa 2: se permissões de membro de hierarquia forem atribuídas, as permissões de membro efetivas serão determinadas.  
  A lista a seguir descreve como as permissões de membro da hierarquia efetivas são determinadas:  
   
 -   As permissões atribuídas a nós da hierarquia determinam quais membros um usuário pode acessar.  
@@ -64,18 +69,18 @@ caps.handback.revision: 6
   
  ![mds_conc_inheritance_hierarchy](../master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
-### Etapa 3: a interseção de permissões de atributo e de membro é determinada.  
+### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Etapa 3: a interseção de permissões de atributo e de membro é determinada.  
  Se as permissões de atributo efetivas forem diferentes das permissões de membro efetivas, as permissões deverão ser determinadas para cada valor de atributo individual. Para obter mais informações, consulte [Sobrepondo permissões de modelo e membro &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md).  
   
-## Permissões atribuídas a vários grupos  
+## <a name="permissions-assigned-to-multiple-groups"></a>Permissões atribuídas a vários grupos  
  Se um usuário pertencer a um ou mais grupos e as permissões forem atribuídas ao usuário e aos grupos, o fluxo de trabalho se tornará mais complexo.  
   
  ![mds_conc_security_group_overlap](../master-data-services/media/mds-conc-security-group-overlap.gif "mds_conc_security_group_overlap")  
   
  Nesse caso, a sobreposição das permissões do usuário e do grupo deve ser resolvida antes das permissões do objeto modelo e do membro da hierarquia poderem ser comparadas. Para obter mais informações, consulte [Sobrepondo permissões de usuário e grupo &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Sobrepondo permissões de usuário e grupo &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
- [Sobrepondo permissões de modelo e membro &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [Sobrepondo permissões de membro e modelo & #40; Master Data Services & #41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

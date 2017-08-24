@@ -1,28 +1,33 @@
 ---
-title: "Cont&#234;ineres do Integration Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Contêineres SSIS"
-  - "contêineres [Integration Services]"
-  - "contêineres [Integration Services], sobre contêineres"
-  - "fluxo de controle [Integration Services], contêineres"
-  - "Contêineres do SQL Server Integration Services"
+title: "Contêineres do Integration Services | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SSIS containers
+- containers [Integration Services]
+- containers [Integration Services], about containers
+- control flow [Integration Services], containers
+- SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 95b6e69e463bd8e3b44e55c11d308b3d5a25ce63
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Cont&#234;ineres do Integration Services
+# <a name="integration-services-containers"></a>Contêineres do Integration Services
   Contêineres são objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que fornecem estrutura a pacotes e serviços a tarefas. Eles fornecem suporte à repetição de fluxos de controle em pacotes e agrupam tarefas e contêineres em unidades de trabalho significativas. Os contêineres podem incluir outros contêineres, além de tarefas.  
   
  Os pacotes usam contêineres para os propósitos a seguir:  
@@ -33,7 +38,7 @@ caps.handback.revision: 48
   
 -   Agrupar tarefas e contêineres que precisam ter êxito ou falhar como uma unidade. Por exemplo, um pacote pode agrupar tarefas que excluem e somam linhas em uma tabela de banco de dados, e então confirmar ou reverter todas as tarefas quando uma apresentar falha.  
   
-## Tipos de contêineres  
+## <a name="container-types"></a>Tipos de contêineres  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece quatro tipos de contêineres para criar pacotes. A tabela a seguir lista os tipos de contêineres.  
   
 |Contêiner|Description|  
@@ -45,8 +50,8 @@ caps.handback.revision: 48
   
  Pacotes e manipuladores de eventos também são tipos de contêineres. Para obter informações, consulte [Pacotes do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md) e [Manipuladores de Eventos do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
   
-### Resumo das propriedades dos contêineres  
- Todos os tipos de contêineres têm um conjunto de propriedades em comum. Se você criar pacotes que usam as ferramentas gráficas fornecidas pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a janela Propriedades listará as propriedades a seguir dos contêineres Foreach Loop, Loop For e Sequence. As propriedades do contêiner host da tarefa são configuradas como parte da configuração da tarefa que o host da tarefa encapsula. Você define as propriedades Host da Tarefa quando configura a tarefa.  
+### <a name="summary-of-container-properties"></a>Resumo das propriedades dos contêineres  
+ Todos os tipos de contêineres têm um conjunto de propriedades em comum. Se você criar pacotes que usam as ferramentas gráficas fornecidas pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , a janela Propriedades listará as propriedades a seguir dos contêineres Foreach Loop, Loop For e Sequence. As propriedades do contêiner host da tarefa são configuradas como parte da configuração da tarefa que o host da tarefa encapsula. Você define as propriedades Host da Tarefa quando configura a tarefa.  
   
 |Propriedade|Description|  
 |--------------|-----------------|  
@@ -68,7 +73,7 @@ caps.handback.revision: 48
 |**Nome**|É o nome do contêiner.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>.|  
 |**TransactionOption**|É a participação transacional do contêiner. Os valores são **NotSupported**, **Supported**e **Required**. O valor padrão dessa propriedade é **Supported**. Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
- Para saber a respeito de todas as propriedades que estão disponíveis para os contêineres Loop Foreach, Loop For, Sequência e Host da Tarefa ao configurá-los programaticamente, consulte os seguintes tópicos da API de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  
+ Para saber a respeito de todas as propriedades que estão disponíveis para os contêineres Loop Foreach, Loop For, Sequência e Host da Tarefa ao configurá-los programaticamente, consulte os seguintes tópicos da API de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
   
 -   T:Microsoft.SqlServer.Dts.Runtime.ForEachLoop  
   
@@ -78,25 +83,25 @@ caps.handback.revision: 48
   
 -   T:Microsoft.SqlServer.Dts.Runtime.TaskHost  
   
-## Objetos que estendem a funcionalidade do contêiner  
+## <a name="objects-that-extend-container-functionality"></a>Objetos que estendem a funcionalidade do contêiner  
  Os contêineres incluem fluxos de controle que consistem em executáveis e restrições de precedência e podem usar manipuladores de eventos e variáveis. O contêiner host da tarefa é uma exceção: como o contêiner host da tarefa encapsula uma única tarefa, ele não usa restrições de precedência.  
   
-### Executáveis  
+### <a name="executables"></a>Executáveis  
  Os executáveis referem-se às tarefas do nível de contêiner e a qualquer contêiner dentro do contêiner. Um executável pode ser uma das tarefas e dos contêineres que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece ou uma tarefa personalizada. Para obter mais informações, consulte [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md).  
   
-### Restrições de precedência  
+### <a name="precedence-constraints"></a>Restrições de precedência  
  As restrições de precedência vinculam contêineres e tarefas dentro do mesmo contêiner pai em um fluxo de controle ordenado. Para obter mais informações, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
   
-### Manipuladores de eventos  
+### <a name="event-handlers"></a>Manipuladores de eventos  
  Os manipuladores de eventos no nível de contêiner respondem a eventos gerados pelo contêiner ou aos objetos nele incluídos. Para obter mais informações, consulte [Manipuladores de Eventos do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
   
-### Variáveis  
+### <a name="variables"></a>Variáveis  
  As variáveis usadas em contêineres incluem as variáveis do sistema no nível de contêiner fornecidas pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e as variáveis definidas pelo usuário usadas pelo contêiner. Para obter mais informações, consulte [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
-## Pontos de interrupção  
+## <a name="break-points"></a>Pontos de interrupção  
  Quando você define um ponto de interrupção em um contêiner e a condição de interrupção é **Interromper quando o contêiner recebe o evento OnVariableValueChanged**, defina a variável no escopo de contêiner.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
   
   

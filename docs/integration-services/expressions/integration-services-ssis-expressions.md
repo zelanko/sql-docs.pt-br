@@ -1,39 +1,44 @@
 ---
-title: "Express&#245;es do SSIS (Integration Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pacotes [Integration Services], expressões"
-  - "pacotes do Integration Services, expressões"
-  - "pacotes do SQL Server Integration Services, expressões"
-  - "expressões [Integration Services], pacotes"
-  - "pacotes do SSIS, expressões"
+title: "Integration Services (SSIS) expressões | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- packages [Integration Services], expressions
+- Integration Services packages, expressions
+- SQL Server Integration Services packages, expressions
+- expressions [Integration Services], packages
+- SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 988f9993207daeebe6c5aaea0f60d887fe74024c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Express&#245;es do SSIS (Integration Services)
+# <a name="integration-services-ssis-expressions"></a>Expressões do SSIS (Integration Services)
   Uma expressão é uma combinação de símbolos (identificadores, literais, funções e operadores) gera um único valor de dados. Expressões simples podem ser uma única constante, variável ou função. Na maioria das vezes, as expressões são complexas, usando diversos operadores e funções e consultando diversas colunas e variáveis. No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], as expressões podem ser usadas para definir condições para instruções CASE, criar e atualizar valores em colunas de dados, atribuir valores às variáveis, atualizar ou preencher propriedades em tempo de execução, definir restrições em restrições de precedência e fornecem as expressões usadas pelo contêiner Loop For.  
   
  As expressões têm base em uma linguagem de expressão e no avaliador de expressão. O avaliador de expressão analisa a expressão e determina se ela segue as regras da linguagem de expressão. Para obter mais informações sobre a sintaxe de expressão e os literais e identificadores com suporte, consulte os tópicos a seguir.  
   
 -   [Sintaxe &#40;SSIS&#41;](../../integration-services/expressions/syntax-ssis.md)  
   
--   [Literais &#40;SSIS&#41;](../../integration-services/expressions/literals-ssis.md)  
+-   [Literais &#40;SSIS&#41;](../../integration-services/expressions/numeric-string-and-boolean-literals.md)  
   
 -   [Identificadores &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md)  
   
-## Componentes que usam expressões  
+## <a name="components-that-use-expressions"></a>Componentes que usam expressões  
  Os seguintes elementos no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] podem usar expressões:  
   
 -   A transformação de Divisão Condicional implementa uma estrutura de decisão com base em expressões para direcionar linhas de dados a destinos diferentes. As expressões usadas em uma transformação de Divisão Condicional devem avaliar para **true** ou **false**. Por exemplo, linhas que atendem a condição na expressão " Column1 > Column2" podem ser direcionadas para uma saída diferente.  
@@ -48,10 +53,10 @@ caps.handback.revision: 51
   
  As expressões também podem ser usadas para atualizar os valores de propriedades de pacotes, contêineres como Loop For e Loop Foreach, tarefas, gerenciadores de conexões no nível de pacote e projeto, provedores de log e enumeradores Foreach. Por exemplo, ao usar uma expressão de propriedade, a cadeia de caracteres “Localhost.AdventureWorks” pode ser atribuída à propriedade ConnectionName da tarefa Executar SQL. Para obter mais informações, consulte [Usar expressões de propriedade em pacotes](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
-## Marcadores de ícone para expressões  
+## <a name="icon-markers-for-expressions"></a>Marcadores de ícone para expressões  
  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], um marcador de ícone especial é exibido ao lado de gerenciadores de conexões, variáveis e tarefas com expressões definidas. A propriedade **HasExpressions** está disponível em todos os objetos SSIS que dão suporte a expressões, com a exceção de variáveis. A propriedade permite que você identifique facilmente quais objetos têm expressões.  
   
-## Construtor de Expressões  
+## <a name="expression-builder"></a>Construtor de Expressões  
  O construtor de expressões é uma ferramenta gráfica para criação de expressões. Está disponível nas caixas de diálogo **Editor de Transformação de Divisão Condicional**, **Editor de Transformação de Colunas Derivadas** e na caixa de diálogo **Construtor de Expressões** , é uma ferramenta gráfica para construir expressões.  
   
  O construtor de expressões fornece pastas que contêm elementos específicos do pacote e pastas que contêm funções, conversões de tipo e operadores fornecidos pela linguagem de expressão. Os elementos específicos do pacote incluem variáveis de sistema e variáveis definidas pelo usuário. Nas caixas de diálogo **Editor de Transformação de Divisão Condicional** e **Editor de Transformação de Coluna Derivada** , você também pode exibir colunas de dados. Para construir expressões para as transformações, é possível arrastar itens das pastas para a coluna **Condição** ou **Expressão** ou pode digitar a expressão diretamente na coluna. O construtor de expressão soma elementos de sintaxe necessários automaticamente como o prefixo @ em nomes de variável.  
@@ -61,13 +66,13 @@ caps.handback.revision: 51
   
  As variáveis possuem escopo e a pasta **Variáveis** no construtor de expressão lista apenas as variáveis que estão no escopo e disponíveis para uso. Para obter mais informações, consulte [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
-## Tarefas relacionadas  
- [Usar uma expressão em um componente de fluxo de dados](../Topic/Use%20an%20Expression%20in%20a%20Data%20Flow%20Component.md)  
+## <a name="related-tasks"></a>Tarefas relacionadas  
+ [Usar uma expressão em um componente de fluxo de dados](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
  Artigo técnico, [Exemplos de expressões SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   

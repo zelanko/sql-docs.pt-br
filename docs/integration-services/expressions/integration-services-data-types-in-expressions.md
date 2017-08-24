@@ -1,36 +1,41 @@
 ---
-title: "Tipos de dados do Integration Services em express&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "expressões [Integration Services], tipos de dados"
-  - "tipos de dados [Integration Services], expressões"
+title: "Tipos de dados em expressões do Integration Services | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- expressions [Integration Services], data types
+- data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cd0a604c665f7bd31a8ebd3e46b78afde802cc98
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Tipos de dados do Integration Services em express&#245;es
+# <a name="integration-services-data-types-in-expressions"></a>Tipos de dados do Integration Services em expressões
   O avaliador de expressão usa tipos de dados [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Quando dados são inseridos pela primeira vez em um fluxo de dados em um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o mecanismo de fluxo de dados converte todos os dados de coluna para um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , e os dados da coluna que uma expressão usa já têm um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . As expressões usadas nas transformações Divisão Condicional e Coluna Derivada podem fazer referência a colunas porque elas fazem parte de um fluxo de dados que inclui dados de coluna.  
   
-## Variáveis  
+## <a name="variables"></a>Variáveis  
  Expressões também podem usar variáveis. As variáveis têm um tipo de dados Variant e o avaliador de expressão converte o tipo de dados de uma variável a partir do subtipo Variant para um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] antes de avaliar a expressão. As variáveis podem usar só um subconjunto dos tipos de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Por exemplo, uma variável não pode usar um tipo de dados BLOB (Bloco do objeto binário grande).  
   
- Para obter mais informações sobre tipos de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e o mapeamento de tipos de dados Variant para tipos de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Tipos de dados dos Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
+ Para obter mais informações sobre tipos de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e o mapeamento de tipos de dados Variant para tipos de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consulte [Tipos de dados dos Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Literais  
- Além disso, expressões podem incluir literais de cadeia de caracteres, Boolianos e numéricos. Para obter mais informações sobre como converter literais numéricos para tipos de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Literais &#40;SSIS&#41;](../../integration-services/expressions/literals-ssis.md).  
+## <a name="literals"></a>Literais  
+ Além disso, expressões podem incluir literais de cadeia de caracteres, Boolianos e numéricos. Para obter mais informações sobre como converter literais numéricos para tipos de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Literais &#40;SSIS&#41;](../../integration-services/expressions/numeric-string-and-boolean-literals.md).  
   
-## Cadeias de caracteres  
+## <a name="strings"></a>Cadeias de caracteres  
  Você pode usar DT_STR ou DT_WSTR como o tipo de retorno de uma expressão. Dentro de uma expressão, no entanto, apenas DT_WSTR tem suporte e valores DT_STR são convertidos em valores DT_WSTR. Esse comportamento tem várias implicações quando você está escrevendo uma expressão.  
   
 -   Dentro de uma expressão, use NULL(DT_WSTR, ...) em vez de NULL(DT_STR, ...). Para obter mais informações sobre essa função, consulte [NULL &#40;Expressão SSIS&#41;](../../integration-services/expressions/null-ssis-expression.md).  
@@ -39,7 +44,7 @@ caps.handback.revision: 57
   
  Considere as expressões na captura de tela a seguir.  
   
- ![String data types in SSIS expressions](../../integration-services/expressions/media/stringsinssisexpressions.png "String data types in SSIS expressions")  
+ ![Tipos de dados em expressões do SSIS da cadeia de caracteres](../../integration-services/expressions/media/stringsinssisexpressions.png "tipos de dados em expressões do SSIS da cadeia de caracteres")  
   
 1.  A primeira expressão é executada sem erro, porque a função NULL(DT_STR, ...) está no nível raiz da expressão.  
   
@@ -53,20 +58,20 @@ caps.handback.revision: 57
   
  Os exemplos a seguir demonstram os efeitos da conversão.  
   
- ![Casting strings in SSIS expressions](../../integration-services/expressions/media/stringsinssisexpressions2.png "Casting strings in SSIS expressions")  
+ ![Convertendo cadeias de caracteres em expressões do SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "converter cadeias de caracteres em expressões do SSIS")  
   
 1.  Na primeira expressão, a conversão não é no nível raiz da expressão. O avaliador de expressão trata dessa conversão de modo inteligente e converte em DT_WSTR, não em DT_STR. A expressão retorna DT_WSTR.  
   
 2.  Na segunda expressão, a conversão é no nível raiz da expressão. A expressão retorna DT_STR.  
   
-## Conversão implícita de dados  
+## <a name="implicit-data-conversion"></a>Conversão implícita de dados  
  Uma conversão implícita de um tipo de dados ocorre quando o avaliador de expressão converte automaticamente os dados de um tipo de dados para outro. Por exemplo, se **smallint** é comparado com **int**, **smallint** é convertido implicitamente em **int** antes da execução da comparação.  
   
  O avaliador de expressão não pode executar conversão de dados implícita quando os argumentos e operandos tiverem tipos de dados incompatíveis. Além disso, o avaliador de expressão não pode converter nenhum valor implicitamente para um Booliano. Em vez disso, os argumentos e operandos devem ser convertidos explicitamente usando o operador cast. Para obter mais informações, consulte [Cast &#40;Expressão do SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
  O diagrama a seguir mostra o tipo de resultado de conversões implícitas de operações BINARY. A intersecção da coluna e da linha nesta tabela é o tipo de resultado de uma operação binário com operandos dos tipos à esquerda (De) e à direita (Para).  
   
- ![Conversão de tipos de dados implícitos entre tipos de dados](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "Conversão de tipos de dados implícitos entre tipos de dados")  
+ ![Conversão entre tipos de dados de tipo de dados implícita](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "conversão entre tipos de dados de tipo de dados implícita")  
   
  A intersecção de um inteiro assinado e não assinado é um inteiro assinado potencialmente maior do que o argumento.  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 57
   
  Se os argumentos tiverem o mesmo tipo de dados, o resultado será daquele tipo. A única exceção é o resultado de uma operação binária em dois valores com o tipo de dados DT_DECIMAL, que retorna um resultado com o tipo de dados DT_NUMERIC.  
   
-## Requisitos para obter dados usados em expressões  
+## <a name="requirements-for-data-used-in-expressions"></a>Requisitos para obter dados usados em expressões  
  O avaliador de expressão aceita todos os tipos de dados de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Porém, dependendo da operação ou da função, os operandos e os argumentos requerem certos tipos de dados. O avaliador de expressão impõe os seguintes requisitos de tipo de dados em dados usados em expressões:  
   
 -   Operandos usados em operações **lógicas** devem ser avaliados como um Booliano. Por exemplo, ColumnA > 1&&ColumnB < 2.  
@@ -128,10 +133,10 @@ caps.handback.revision: 57
   
  Resultados de muitas operações e funções predeterminaram tipos de dados. Esse pode ser o tipo de dados do argumento ou o tipo de dados para o qual o avaliador de expressão converte o resultado. Por exemplo, o resultado de um operador OR lógico (||) é sempre um Booliano, o resultado da função ABS é o tipo de dados numérico do argumento, e o resultado da multiplicação é o menor tipo de dados numérico que pode manter o resultado sem perda. Para obter mais informações sobre os tipos de dados de resultados, consulte [Expressão de Operadores &#40;SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md) e [Expressão de Funções &#40;SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
-## Tarefas relacionadas  
- [Usar uma expressão em um componente de fluxo de dados](../Topic/Use%20an%20Expression%20in%20a%20Data%20Flow%20Component.md)  
+## <a name="related-tasks"></a>Tarefas relacionadas  
+ [Usar uma expressão em um componente de fluxo de dados](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
   
 -   Artigo técnico, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), em pragmaticworks.com  
   
