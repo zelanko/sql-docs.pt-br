@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-read-scale-out-availability-group-for-sql-server-on-linux"></a>Configurar o grupo de disponibilidade de expansão de leitura para o SQL Server no Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Você pode configurar um grupo de disponibilidade de expansão de leitura para o SQL Server no Linux. Há duas arquiteturas de grupos de disponibilidade. Um *alta disponibilidade* arquitetura usa um Gerenciador de cluster para fornecer melhor continuidade de negócios. Essa arquitetura também pode incluir leitura réplicas de expansão. Para criar a arquitetura de alta disponibilidade, consulte [configurar sempre no grupo de disponibilidade para o SQL Server no Linux](sql-server-linux-availability-group-configure-ha.md).
 

@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Backup e restauração de bancos de dados do SQL Server no Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Fazer o backup de bancos de dados do SQL Server de 2017 RC2 no Linux com as mesmas ferramentas de outras plataformas. Em um servidor Linux, você pode usar `sqlcmd` para se conectar ao SQL Server e fazer backups. No Windows, você pode se conectar ao SQL Server no Linux e fazer backups com a interface do usuário. A funcionalidade de backup é o mesmo entre plataformas. Por exemplo, você pode fazer backup de bancos de dados localmente, para unidades remotas ou a [serviço de armazenamento de BLOBs do Microsoft Azure](http://msdn.microsoft.com/library/dn435916.aspx). 
 

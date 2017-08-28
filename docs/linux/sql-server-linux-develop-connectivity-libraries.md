@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Bibliotecas de conectividade e estruturas para o Microsoft SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Confira nosso [obter tutoriais de Introdução](http://aka.ms/sqldev) começar com linguagens de programação como c#, Java, Node.js, PHP e Python e compilar um aplicativo usando o SQL Server no Linux ou Windows ou o Docker no macOS rapidamente.
 
