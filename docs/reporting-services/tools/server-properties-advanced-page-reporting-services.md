@@ -18,10 +18,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 5baf0e5c9dcc3b9c70fce06024e5bba957c48f65
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0626dc829e6ae2cd4212dc05deb406740592dc40
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 
@@ -124,6 +124,19 @@ PowerBI ReportServer deve habilitar a exportação de dados de visuais do Power 
 
 **EnableTestConnectionDetailedErrors**  
 Indica se são enviadas mensagens de erro detalhadas ao computador cliente quando os usuários testam as conexões de fonte de dados usando o servidor de relatório. O valor padrão é **true**. Se a opção for definida como **false**, apenas as mensagens de erro genéricas serão enviadas.
+
+**AccessControlAllowCredentials**  
+Indica se a resposta à solicitação do cliente pode ser exibida quando o sinalizador 'credenciais' está definido como true. O valor padrão é **false**.
+
+**AccessControlAllowHeaders** uma lista de separada por vírgulas dos cabeçalhos que o servidor permitirá quando um cliente faz uma solicitação. Essa propriedade pode ser uma cadeia de caracteres vazia, especificando * permitirá que todos os cabeçalhos.
+
+**AccessControlAllowMethods** uma lista de separados por vírgulas dos métodos HTTP que o servidor permitirá quando um cliente faz uma solicitação. Os valores padrão são (GET, PUT, POST, PATCH, DELETE), especificando * permitirá que todos os métodos.
+
+**AccessControlAllowOrigin** uma lista de separada por vírgulas de origens que o servidor permitirá quando um cliente faz uma solicitação. O valor padrão é em branco, que impede que todas as solicitações, especificando * permitirá que todas as origens quando as credenciais não estão definidas; Se as credenciais são especificadas de uma lista explícita de origens deve ser especificada.
+
+**AccessControlExposeHeaders** uma lista de separada por vírgulas dos cabeçalhos que o servidor irá expor para clientes. O valor padrão é vazio.
+
+**AccessControlMaxAge** Especifica o número de segundos que os resultados da solicitação de simulação podem ser armazenados em cache. O valor padrão é 600 (10 minutos).
 
 ## <a name="see-also"></a>Consulte também
 

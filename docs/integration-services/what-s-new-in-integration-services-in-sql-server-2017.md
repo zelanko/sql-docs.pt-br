@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 56d4ea145a34048c8619ff88112021f163e26900
+ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
+ms.openlocfilehash: 2d47d1bb82b586890e3bfc250cf09e929a64fb25
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>O que &#39; s no Integration Services no SQL Server de 2017
@@ -26,6 +26,24 @@ Este tópico descreve os recursos adicionados ou atualizados no [!INCLUDE[ssSQLv
 
 >   [!NOTE]
 > SQL Server 2017 também inclui os recursos do SQL Server 2016 e os recursos adicionados em atualizações do SQL Server 2016. Para obter informações sobre os novos recursos do SSIS no SQL Server 2016, consulte [Novidades do Integration Services no SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).
+
+## <a name="highlights-of-this-release"></a>Destaques desta versão
+
+Aqui estão os novos recursos mais importantes no Integration Services para SQL Server 2017.
+
+-   **Expansão**. Distribuir a execução de pacotes SSIS mais facilmente em vários computadores de trabalho e gerenciar execuções e funcionários de um único computador mestre. Para obter mais informações, consulte [Integration Services expansão](../integration-services/scale-out/integration-services-ssis-scale-out.md).
+
+-   **Serviços de integração em Linux**. Execute pacotes SSIS em computadores Linux. Para obter mais informações, consulte [extrair, transformar e carregar dados em Linux com o SSIS](../linux/sql-server-linux-migrate-ssis.md).
+
+-   **Melhorias de conectividade**. Conecte-se a feeds OData do Microsoft Dynamics AX Online e do Microsoft Dynamics CRM Online com os componentes atualizados do OData. 
+
+## <a name="new-in-the-azure-feature-pack"></a>Novo no Azure Feature Pack
+
+Além dos aprimoramentos de conectividade no SQL Server, o Integration Services Feature Pack para Azure adicionou suporte para repositório Azure Data Lake. Para obter mais informações, consulte [Azure Feature Pack para o Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md).
+
+## <a name="new-in-sql-server-data-tools-ssdt"></a>Novo no SQL Server Data Tools (SSDT)
+
+Agora você pode desenvolver projetos do SSIS e pacotes destinados a versões do SQL Server 2012 por meio de 2017 em 2017 do Visual Studio ou no Visual Studio 2015. Para obter mais informações, consulte [Baixar o SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## <a name="new-in-ssis-in-sql-server-2017-rc1"></a>No SSIS no SQL Server de 2017 RC1
 

@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.unionalltrans.f1
+- sql13.dts.designer.unionalltransformation.f1
 helpviewer_keywords:
 - merging datasets [Integration Services]
 - combining datasets
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 049d9195499e7145f98258cb90f2fd7069569058
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e947aa8b3d079830b9433ba1b01450fda699904a
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="union-all-transformation"></a>transformação Unir Tudo
@@ -45,13 +46,24 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-union-all-transformation"></a>Configuração da transformação Unir Tudo  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Union All** , consulte [Editor de Transformação Union All](../../../integration-services/data-flow/transformations/union-all-transformation-editor.md).  
-  
  Para obter mais informações sobre as propriedades que podem ser definidas programaticamente, consulte [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
  Para obter mais informações sobre como definir propriedades, clique em um dos seguintes tópicos:  
   
 -   [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="union-all-transformation-editor"></a>Editor de Transformação Union All
+  Use a caixa de diálogo **Editor de Transformação Union All** para mesclar vários conjuntos de linhas de entrada em um único conjunto de linhas de saída. Incluindo a transformação Union All em um fluxo de dados, é possível mesclar dados de vários fluxos de dados, criar conjuntos de dados complexos aninhando transformações Union All e mesclar as linhas novamente após corrigir erros nos dados.  
+  
+### <a name="options"></a>Opções  
+ **Nome da Coluna de Saída**  
+ Digite um alias para cada coluna. O padrão é o nome da coluna de entrada da primeira entrada (referência); contudo, é possível escolher qualquer nome descritivo exclusivo.  
+  
+ **Union All Entrada 1**  
+ Selecione a partir da lista de colunas de entrada disponíveis na primeira entrada (referência). Os metadados das colunas mapeadas devem ser correspondentes.  
+  
+ **Union All Entrada n**  
+ Selecione a partir da lista de colunas de entrada disponíveis na segunda entrada e adicionais. Os metadados das colunas mapeadas devem ser correspondentes.  
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
  [Mesclar dados por meio da transformação Unir Tudo](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  

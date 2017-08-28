@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sorttrans.f1
+- sql13.dts.designer.sorttransformation.f1
 helpviewer_keywords:
 - Sort transformation
 - descending sorts
@@ -24,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb0f93339416c071177fd532847b584ab2043e84
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: bcffbef3e370183c6e37726e23d058d342d252e2
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="sort-transformation"></a>Transformação Classificação
@@ -47,8 +48,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-sort-transformation"></a>Configuração da transformação Classificação  
  Você pode definir propriedades por meio do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer ou programaticamente.  
   
- Para obter informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Classificação** , consulte [Sort Transformation Editor](../../../integration-services/data-flow/transformations/sort-transformation-editor.md).  
-  
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -60,6 +59,37 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  Exemplo, [SortDeDuplicateDelimitedString Custom SSIS Component](http://go.microsoft.com/fwlink/?LinkId=220821), em codeplex.com.  
+  
+## <a name="sort-transformation-editor"></a>Editor de Transformação Classificação
+  Use a caixa de diálogo **Editor de Transformação Classificação** para selecionar as colunas a classificar, definir a ordem de classificação e especificar se as duplicatas devem ser removidas.  
+  
+### <a name="options"></a>Opções  
+ **Colunas de Entrada Disponíveis**  
+ Usando as caixas de seleção, especifique as colunas a classificar.  
+  
+ **Nome**  
+ Visualize o nome de cada coluna de entrada disponível.  
+  
+ **Passagem**  
+ Indique se a coluna deve ser incluída na saída classificada.  
+  
+ **Coluna de Entrada**  
+ Selecione colunas para cada linha na lista de colunas de entrada disponíveis. As seleções se refletem naquelas da caixa de seleção da tabela **Colunas de Entrada Disponíveis** .  
+  
+ **Alias de Saída**  
+ Digite um alias para cada coluna de saída. O padrão é o nome da coluna de entrada; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
+  
+ **Tipo de Classificação**  
+ Indique se a classificação deve ser feita em ordem ascendente ou descendente.  
+  
+ **Sort Order**  
+ Indique a ordem na qual classificar as colunas. Deve ser definido manualmente para cada coluna.  
+  
+ **Sinalizadores de Comparação**  
+ Para obter mais informações sobre as opções de comparação de cadeias de caracteres, consulte [Comparando dados de cadeia de caracteres](../../../integration-services/data-flow/comparing-string-data.md).  
+  
+ **Remover linhas com valores de classificação duplicados**  
+ Indique se a transformação deve copiar as linhas duplicadas para a saída ou criar uma única entrada para todas as duplicatas, seguindo as opções de comparação de cadeia de caracteres especificadas.  
   
 ## <a name="see-also"></a>Consulte também  
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   

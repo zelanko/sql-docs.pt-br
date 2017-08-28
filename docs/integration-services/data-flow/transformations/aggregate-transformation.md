@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.aggregatetrans.f1
+- sql13.dts.designer.aggregationtransformation.aggregations.f1
+- sql13.dts.designer.aggregationtransformation.advanced.f1
 helpviewer_keywords:
 - IsBig property
 - aggregate functions [Integration Services]
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9e6bdc92869d16ac47745b04c0a94d9f9c993449
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 7db09ca84b86d93790ce4b1bf6300526df188dea
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="aggregate-transformation"></a>Transformação Agregação
@@ -114,12 +116,6 @@ ms.lasthandoff: 08/03/2017
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Agregação** , clique em um dos seguintes tópicos:  
-  
--   [Editor de Transformação Agregação &#40;guia Agregações&#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-aggregations-tab.md)  
-  
--   [Editor de Transformação Agregação &#40;guia Avançado&#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-advanced-tab.md)  
-  
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -135,7 +131,114 @@ ms.lasthandoff: 08/03/2017
 -   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
- [Agregar valores em um conjunto de dados por meio da transformação Agregação](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [Agregar valores em um conjunto de dados usando a transformação agregação](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+  
+## <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor de Transformação Agregação (guia Agregações)
+  Use a guia **Agregações** da caixa de diálogo **Editor de Transformação Agregação** para especificar colunas para agregação e propriedades de agregação. Você pode aplicar diversas agregações. Esta transformação não gera uma saída de erro.  
+  
+> [!NOTE]  
+>  As opções de contagem de chaves, escala de chave, contagem de chaves distintas e escala de chave distinta são aplicadas em nível de componente quando especificado na guia **Avançado** , em nível de saída quando especificado na exibição avançada da guia **Agregações** e em nível de coluna quando especificado na lista de colunas na parte inferior da guia **Agregações** .  
+>   
+>  Na transformação Agregação, **Chaves** e **Escala de Chave** fazem referência ao número de grupos que são esperados como resultado de uma operação **Agrupar porz** . **Chaves de distinção de contagem** e **Escala de distinção de contagem** fazem referência ao número de valores distintos que são esperados como resultado de uma operação de **Contagem de distinção** .  
+  
+### <a name="options"></a>Opções  
+ **Avançado/Básico**  
+ Exiba ou oculte opções para configurar várias agregações para diversas saídas. Por padrão, as opções Avançadas são ocultas.  
+  
+ **Nome da Agregação**  
+ Na exibição avançada, digite um nome amigável para a agregação.  
+  
+ **Agrupar por Colunas**  
+ Na exibição avançada, selecione as colunas a serem agrupadas usando a lista **Colunas de Entrada Disponíveis** como descrito abaixo.  
+  
+ **Escala de Chave**  
+ Na exibição avançada, especifique, opcionalmente, o número aproximado de chaves que a agregação pode gravar. Por padrão, o valor desta opção é **Não Especificado**. Se as propriedades **Escala de Chave** e **Chaves** forem definidas, o valor de **Chaves** terá precedência.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Não Especificado|A propriedade Chave de Escala não é usada.|  
+|Baixa|A agregação pode gravar aproximadamente 500.000 chaves.|  
+|Média|A agregação pode gravar aproximadamente 5.000.000 de chaves.|  
+|Alta|A agregação pode gravar mais de 25.000.000 de chaves.|  
+  
+ **Chaves**  
+ Na exibição avançada, especifique, opcionalmente, o número exato de chaves que a agregação pode gravar. Se forem especificadas **Escala de Chave** e **Chaves** , **Chaves** terá precedência.  
+  
+ **Colunas de Entrada Disponíveis**  
+ Selecione na lista de colunas de entrada disponíveis usando as caixas de seleção nesta tabela.  
+  
+ **Coluna de Entrada**  
+ Selecione na lista de colunas de entrada disponíveis.  
+  
+ **Alias de Saída**  
+ Digite um alias para cada coluna. O padrão é o nome da coluna de entrada; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
+  
+ **Operação**  
+ Escolha na lista de operações disponíveis, usando a tabela abaixo como guia.  
+  
+|Operação|Description|  
+|---------------|-----------------|  
+|**GroupBy**|Divide conjuntos de dados em grupos. Colunas que contêm qualquer tipo de dados podem ser utilizadas para agrupamento. Para obter mais informações, consulte GROUP BY.|  
+|**Sum**|Soma os valores em uma coluna. Somente colunas com tipos de dados numéricos podem ser somadas. Para obter mais informações, consulte SUM.|  
+|**Médio**|Retorna a média dos valores da coluna em uma coluna. A média só poderá ser obtida em colunas com tipos de dados numéricos. Para obter mais informações, consulte AVG.|  
+|**Count**|Retorna o número de itens de um grupo. Para obter mais informações, consulte COUNT.|  
+|**CountDistinct**|Retorna o número de valores não nulos exclusivos de um grupo. Para obter mais informações, consulte COUNT e Distinct.|  
+|**Mínimo**|Retorna o valor mínimo de um grupo. Restrito a tipos de dados numéricos.|  
+|**Máximo**|Retorna o valor máximo em um grupo. Restrito a tipos de dados numéricos.|  
+  
+ **Sinalizadores de Comparação**  
+ Se você escolher **Agrupar por**, use as caixas de seleção para controlar como a transformação executa a comparação. Para obter mais informações sobre as opções de comparação de cadeias de caracteres, consulte [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md)(Comparando dados de cadeia de caracteres).  
+  
+ **Count Distinct Scale**  
+ Especifique, opcionalmente, o número aproximado de valores de distinção que a agregação pode gravar. Por padrão, o valor desta opção é **Não Especificado**. Se forem especificadas **CountDistinctScale** e **CountDistinctKeys** , **CountDistinctKeys** terá precedência.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Não Especificado|A propriedade **CountDistinctScale** não é usada.|  
+|Baixa|A agregação pode gravar aproximadamente 500.000 valores de distinção.|  
+|Média|A agregação pode gravar aproximadamente 5.000.000 valores distintos.|  
+|Alta|A agregação pode gravar mais de 25.000.000 de valores de distinção.|  
+  
+ **Count Distinct Keys**  
+ Especifique, opcionalmente, o número exato de valores de distinção que a agregação pode gravar. Se forem especificadas **CountDistinctScale** e **CountDistinctKeys** , **CountDistinctKeys** terá precedência.  
+  
+## <a name="aggregate-transformation-editor-advanced-tab"></a>Editor de Transformação Agregação (guia Avançado)
+  Use a guia **Avançado** da caixa de diálogo **Editor de Transformação Agregação** para definir propriedades de componentes, especificar agregações e definir propriedades de colunas de entrada e saída.  
+  
+> [!NOTE]  
+>  As opções de contagem de chaves, escala de chave, contagem de chaves distintas e escala de chave distinta são aplicadas em nível de componente quando especificado na guia **Avançado** , em nível de saída quando especificado na exibição avançada da guia **Agregações** e em nível de coluna quando especificado na lista de colunas na parte inferior da guia **Agregações** .  
+>   
+>  Na transformação Agregação, **Chaves** e **Escala de Chave** fazem referência ao número de grupos que são esperados como resultado de uma operação **Agrupar porz** . **Chaves de distinção de contagem** e **Escala de distinção de contagem** fazem referência ao número de valores distintos que são esperados como resultado de uma operação de **Contagem de distinção** .  
+  
+### <a name="options"></a>Opções  
+ **Escala de Chave**  
+ Especifique, opcionalmente, o número aproximado de chaves que a agregação espera. A transformação usa estas informações para otimizar seu tamanho de cache inicial. Por padrão, o valor desta opção é **Não Especificado**. Se for especificada a **Escala de chave** e o **Número de chaves** , o **Número de chaves** terá precedência.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Não Especificado|A propriedade **Escala de chave** não é usada.|  
+|Baixa|A agregação pode gravar aproximadamente 500.000 chaves.|  
+|Média|A agregação pode gravar aproximadamente 5.000.000 de chaves.|  
+|Alta|A agregação pode gravar mais de 25.000.000 de chaves.|  
+  
+ **Número de chaves**  
+ Especifique, opcionalmente, o número exato de chaves que a agregação espera. A transformação usa estas informações para otimizar seu tamanho de cache inicial. Se for especificada a **Escala de chave** e o **Número de chaves** , o **Número de chaves** terá precedência.  
+  
+ **Escala de distinção de contagem**  
+ Especifique, opcionalmente, o número aproximado de valores de distinção que a agregação pode gravar. Por padrão, o valor desta opção é **Não Especificado**. Se for especificada a **Escala de Distinção de Contagem** e as **Chaves de Distinção de Contagem** , as **Chaves de Distinção de Contagem** terão precedência.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Não Especificado|A propriedade Escala de Distinção de Contagem não é usada.|  
+|Baixa|A agregação pode gravar aproximadamente 500.000 valores de distinção.|  
+|Média|A agregação pode gravar aproximadamente 5.000.000 valores distintos.|  
+|Alta|A agregação pode gravar mais de 25.000.000 de valores de distinção.|  
+  
+ **Chaves de distinção de contagem**  
+ Especifique, opcionalmente, o número exato de valores de distinção que a agregação pode gravar. Se for especificada a **Escala de Distinção de Contagem** e as **Chaves de Distinção de Contagem** , as **Chaves de Distinção de Contagem** terão precedência.  
+  
+ **Estender fator automaticamente**  
+ Use um valor entre 1 e 100 para especificar a porcentagem pela qual a memória pode ser estendida durante a agregação. Por padrão, o valor desta opção é **25%**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   

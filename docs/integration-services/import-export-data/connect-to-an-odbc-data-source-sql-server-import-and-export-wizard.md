@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4d1a2374d480f2d6b886425a02cb590b00b3564a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0e3ffe2ff1695de69be7149f4be7b42f57b0e991
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Conectar a uma fonte de dados ODBC (Assistente de exportação e importação do SQL Server)
@@ -39,6 +39,8 @@ Você também pode ter que pesquisar as informações de conexão necessárias q
 
 > [!TIP]
 > Se você souber que o driver instalado e você não vê-lo no miniaplicativo de 64 bits, procure no miniaplicativo de 32 bits. Isso também indica se é necessário executar o SQL Server Import e Assistente para exportação de 64 bits ou 32 bits.
+>
+> Para usar a versão de 64 bits do SQL Server Assistente de importação e exportação, você precisa instalar o SQL Server. SQL Server Data Tools (SSDT) e SQL Server Management Studio (SSMS) são aplicativos de 32 bits, somente instalar os arquivos de 32 bits, incluindo a versão de 32 bits do assistente.
     
 ## <a name="step-1---select-the-data-source"></a>Etapa 1: selecione a fonte de dados
 Os drivers ODBC instalados no seu computador não estão listados na lista suspensa de fontes de dados. Para se conectar com um driver ODBC, comece selecionando o **.NET Framework Data Provider para ODBC** como a fonte de dados no **escolher uma fonte de dados** ou **escolha um destino** página do assistente. Este provedor atua como um wrapper em torno do driver ODBC.

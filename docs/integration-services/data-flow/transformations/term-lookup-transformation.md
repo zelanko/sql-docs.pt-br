@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.termlookuptrans.f1
+- sql13.dts.designer.termlookup.termlookup.f1
+- sql13.dts.designer.termlookup.referencetable.f1
+- sql13.dts.designer.termlookup.advanced.f1
 helpviewer_keywords:
 - extracting data [Integration Services]
 - match extracted terms [Integration Services]
@@ -25,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3eefbab1c6f9b3cd5e51faa9e875a44218c33b3f
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ee1fa267107940169c05942e8614a7bf7148566a
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="term-lookup-transformation"></a>transformação Pesquisa de Termos
@@ -96,14 +99,6 @@ ms.lasthandoff: 08/03/2017
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Pesquisa de Termos** , clique em um dos seguintes tópicos:  
-  
--   [Editor de Transformação Pesquisa de Termos &#40;Guia Tabela de Referência&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-reference-table-tab.md)  
-  
--   [Editor de Transformação Pesquisa de Termos &#40;Guia Pesquisa de Termos&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
-  
--   [Editor de Transformação Pesquisa de Termos &#40;Guia Avançado&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-advanced-tab.md)  
-  
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -112,4 +107,53 @@ ms.lasthandoff: 08/03/2017
   
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## <a name="term-lookup-transformation-editor-term-lookup-tab"></a>Editor de Transformação Pesquisa de Termos (guia Pesquisa de Termos)
+  Use a guia **Pesquisa de Termos** na caixa de diálogo **Editor de Transformação Pesquisa de Termos** para mapear uma coluna de entrada para uma coluna de pesquisa em uma tabela de referência e fornecer um alias para cada coluna de saída.  
   
+### <a name="options"></a>Opções  
+ **Colunas de Entrada Disponíveis**  
+ Usando as caixas de seleção, selecione colunas de entrada para passar para a saída inalteradas. Arraste uma coluna de entrada para a lista **Colunas de Referência Disponíveis** para mapeá-la para uma coluna de pesquisa na tabela de referência. As colunas de entrada e de pesquisa devem ter tipos de dados correspondentes e que tenham suporte no DT_NTEXT ou DT_WSTR. Selecione uma linha de mapeamento e clique com o botão direito do mouse para editar os mapeamentos na caixa de diálogo [Criar Relações](../../../integration-services/data-flow/transformations/create-relationships.md) .  
+  
+ **Colunas de Referência Disponíveis**  
+ Exiba as colunas disponíveis na tabela de referência. Escolha a coluna que contém a lista de termos a corresponder.  
+  
+ **Coluna de Passagem**  
+ Selecione na lista de colunas de entrada disponíveis. As seleções se refletem naquelas da caixa de seleção da tabela **Colunas de Entrada Disponíveis** .  
+  
+ **Alias de Coluna de Saída**  
+ Digite um alias para cada coluna de saída. O padrão é o nome da coluna; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
+  
+ **Configurar Saída de Erro**  
+ Use a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar as opções de tratamento de erro em linhas que causam erros.  
+  
+## <a name="term-lookup-transformation-editor-reference-table-tab"></a>Editor de Transformação Pesquisa de Termos (guia Tabela de Referência)
+  Use a guia **Tabela de Referência** da caixa de diálogo **Editor de Transformação Pesquisa de Termos** para especificar a conexão com a tabela de referência (pesquisa).  
+  
+### <a name="options"></a>Opções  
+ **gerenciador de conexões OLE DB**  
+ Selecione um gerenciador de conexões existente na lista ou crie uma nova conexão clicando em **Nova**.  
+  
+ **Nova**  
+ Crie uma nova conexão usando a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** .  
+  
+ **Nome da tabela de referência**  
+ Selecione uma tabela de pesquisa ou exibição do banco de dados, selecionando um item da lista. A tabela ou exibição deve conter uma coluna com uma lista existente de termos com os quais o texto na coluna de origem possa ser comparado.  
+  
+ **Configurar Saída de Erro**  
+ Use a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar as opções de tratamento de erro em linhas que causam erros.  
+  
+## <a name="term-lookup-transformation-editor-advanced-tab"></a>Editor de Transformação Pesquisa de Termos (guia Avançado)
+  Use a guia **Avançado** da caixa de diálogo **Editor de Transformação Pesquisa de Termos** para especificar se a pesquisa deve diferenciar maiúsculas e minúsculas.  
+  
+### <a name="options"></a>Opções  
+ **Usar pesquisa de termos com diferenciação de maiúsculas e minúsculas**  
+ Indique se a pesquisa diferencia maiúsculas e minúsculas. O padrão é **False**.  
+  
+ **Configurar Saída de Erro**  
+ Use a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar as opções de tratamento de erro em linhas que causam erros.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [Transformação extração de termos](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+  
+

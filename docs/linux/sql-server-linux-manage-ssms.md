@@ -4,26 +4,29 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 07/19/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 1b16a5e8168f18a3e687fdf0249f93cd3549f27d
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 1f8fe782aa69f462366130418fce84a2654de3cf
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Use o SQL Server Management Studio no Windows para gerenciar o SQL Server no Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Este tópico apresenta [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx) e orienta você por algumas tarefas comuns. O SSMS é um aplicativo do Windows, então use SSMS, quando você tiver um computador Windows que pode se conectar a uma instância remota do SQL Server no Linux.
 
 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx) faz parte de um conjunto de ferramentas do SQL que ofertas da Microsoft sem custo para suas necessidades de desenvolvimento e gerenciamento. O SSMS é um ambiente integrado para acessar, configurar, gerenciar, administrar e desenvolver todos os componentes do SQL Server em execução no local ou na nuvem, no Windows, Linux ou Docker no macOS e banco de dados do SQL Azure e o Azure SQL Data Warehouse. O SSMS combina um amplo grupo de ferramentas gráficas com um número de editores de script avançados para fornecer acesso ao SQL Server para desenvolvedores e administradores de todos os níveis.
 
 SSMS oferece um amplo conjunto de recursos de desenvolvimento e gerenciamento para SQL Server, incluindo ferramentas para:
+
 - configurar, monitorar e administrar única ou várias instâncias do SQL Server
 - implantar, monitorar e atualizar os componentes da camada de dados, como bancos de dados e data warehouses
 - backup e restauração de bancos de dados

@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.audittrans.f1
+- sql13.dts.designer.audittransformation.f1
 helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
@@ -20,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c495bd9c116e10877f79f165f0f582938b0347ad
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 253c8abb921dbd60e571a892f108d283b111e70c
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="audit-transformation"></a>Transformação Auditoria
@@ -51,8 +52,6 @@ ms.lasthandoff: 08/03/2017
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Auditar Editor de Transformação** , consulte [Audit Transformation Editor](../../../integration-services/data-flow/transformations/audit-transformation-editor.md).  
-  
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -60,5 +59,27 @@ ms.lasthandoff: 08/03/2017
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="audit-transformation-editor"></a>Editor de Transformação Auditoria
+  A opção Auditar Transformação permite ao fluxo de dados de um pacote incluir dados sobre o ambiente em que o pacote é executado. Por exemplo, o nome do pacote, o computador e o operador podem ser adicionados ao fluxo de dados. O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui variáveis do sistema que fornecem essas informações.  
+  
+### <a name="options"></a>Opções  
+ **Nome da coluna de saída**  
+ Forneça um nome para a nova coluna de saída que conterá as informações de auditoria.  
+  
+ **Tipo de auditoria**  
+ Selecione uma variável de sistema disponível para fornecer as informações de auditoria.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**GUID de instância de execução**|Insira o GUID que identifica com exclusividade a instância de execução do pacote.|  
+|**ID do Pacote**|Insira o GUID que identifica com exclusividade o pacote.|  
+|**Nome do pacote**|Insira o nome do pacote.|  
+|**ID da Versão**|Insira o GUID que identifica com exclusividade a versão do pacote.|  
+|**Hora de início de execução**|Insira a hora de início de execução do pacote.|  
+|**Nome do computador**|Insira o nome do computador no qual o pacote foi inicializado.|  
+|**Nome de usuário**|Insira o nome de logon do usuário que inicializou o pacote.|  
+|**Nome da tarefa**|Insira o nome da tarefa de Fluxo de Dados com a qual Auditar Transformação está associada.|  
+|**ID da Tarefa**|Insira o GUID que identifica com exclusividade a tarefa de Fluxo de Dados com a qual Auditar Transformação está associada.|  
   
   

@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzylookuptrans.f1
+- sql13.dts.designer.fuzzylookuptransformation.referencetable.f1
+- sql13.dts.designer.fuzzylookuptransformation.columns.f1
+- sql13.dts.designer.fuzzylookuptransformation.advanced.f1
 helpviewer_keywords:
 - cleaning data
 - comparing data
@@ -35,10 +38,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c05d44e6a91c79e5a5ce71b1e26ac2f4a319a88
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ff5f003749572b16e750b5940cd0f05b0b879fda
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="fuzzy-lookup-transformation"></a>transformação Pesquisa Difusa
@@ -128,14 +131,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>Configurando a transformação pesquisa difusa  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Pesquisa Difusa** , clique em um dos seguintes tópicos:  
-  
--   [Editor de Transformação Pesquisa Difusa &#40;Guia Tabela de Referência&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-reference-table-tab.md)  
-  
--   [Editor de Transformação Pesquisa Difusa &#40;guia Colunas&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)  
-  
--   [Editor de Transformação Pesquisa Difusa &#40;Guia Avançado&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-advanced-tab.md)  
-  
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -144,6 +139,83 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
  Para obter detalhes sobre como definir as propriedades de um componente de fluxo de dados, consulte [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Editor de Transformação Pesquisa Difusa (guia Tabela de Referência)
+  Use a guia **Tabela de Referência** da caixa de diálogo **Editor de Transformação Pesquisa Difusa** para especificar a tabela de origem e o índice a ser usado na pesquisa. A fonte de dados de referência deve ser uma tabela em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+  
+> [!NOTE]  
+>  A transformação Pesquisa Difusa cria uma cópia de trabalho da tabela de referência. Os índices descritos abaixo são criados nesta tabela de trabalho usando uma tabela especial, não um índice do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comum. A transformação não modifica as tabelas de origem existentes a menos que você selecione **Manter índice armazenado**. Nesse caso, ela cria um gatilho na tabela de referência que atualiza a tabela de trabalho e a tabela de índices de pesquisa baseada em alterações na tabela de referência.  
+  
+> [!NOTE]  
+>  As propriedades **Exhaustive** e **MaxMemoryUsage** da transformação Pesquisa Difusa não estão disponíveis no **Editor de Transformação Pesquisa Difusa**, mas podem ser definidas por meio do **Editor Avançado**. Além disso, um valor acima de 100 para **MaxOutputMatchesPerInput** só pode ser especificado no **Editor Avançado**. Para obter mais informações sobre estas propriedades, consulte a seção Transformação de Pesquisa Difusa em [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+  
+### <a name="options"></a>Opções  
+ **gerenciador de conexões OLE DB**  
+ Selecione um gerenciador de conexões OLE DB existente na lista ou crie uma nova conexão clicando em **Nova**.  
+  
+ **Nova**  
+ Crie uma nova conexão usando a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** .  
+  
+ **Gerar novo índice**  
+ Especifique que a transformação deve criar um índice novo para ser utilizado na pesquisa.  
+  
+ **Nome da tabela de referência**  
+ Selecione a tabela existente para usar como tabela de referência (pesquisa).  
+  
+ **Armazenar novo índice**  
+ Selecione esta opção para salvar o novo índice de pesquisa.  
+  
+ **Novo nome de índice**  
+ Se você optou por salvar o novo índice de pesquisa, digite um nome descritivo para o índice.  
+  
+ **Manter índice armazenado**  
+ Se você optou por salvar o novo índice de pesquisa, especifique se deseja que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantenha o índice.  
+  
+> [!NOTE]  
+>  Quando você seleciona **Manter índice armazenado** na guia **Tabela de Referência** de **Editor de Transformação Pesquisa Difusa**, a transformação usa procedimentos armazenados gerenciados para manter o índice. Esses procedimentos armazenados gerenciados usam o recurso de integração de CLR (Common Language Runtime) no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por padrão, a integração de CLR no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não está habilitada. Para usar a funcionalidade **Manter índice armazenado** , você deve habilitar a integração de CLR. Para obter mais informações, consulte [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
+>   
+>  Como a opção **Manter índice armazenado** requer a integração CLR, esse recurso só funciona quando você seleciona uma tabela de referência em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] onde a integração CLR está habilitada.  
+  
+ **Usar índice já existente**  
+ Especifique que a transformação deve usar um índice existente na pesquisa.  
+  
+ **Nome de um índice já existente**  
+ Selecione um índice de pesquisa criado anteriormente na lista.  
+  
+## <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>Editor de Transformação Pesquisa Difusa (guia Colunas)
+  Use a guia **Colunas** da caixa de diálogo **Editor de Transformação Pesquisa Difusa** para definir propriedades das colunas de entrada e saída.  
+  
+### <a name="options"></a>Opções  
+ **Colunas de Entrada Disponíveis**  
+ Arraste colunas de entrada para conectá-las com colunas de pesquisa disponíveis. Essas colunas devem ter tipos de dados correspondentes com suporte. Selecione uma linha de mapeamento e clique com o botão direito do mouse para editar os mapeamentos na caixa de diálogo [Criar Relações](../../../integration-services/data-flow/transformations/create-relationships.md) .  
+  
+ **Nome**  
+ Exiba os nomes das colunas de entrada disponíveis.  
+  
+ **Passagem**  
+ Especifique se as colunas de entrada devem ser incluídas na saída da transformação.  
+  
+ **Colunas de Pesquisa Disponíveis**  
+ Use as caixas de seleção para selecionar colunas nas quais executar operações de pesquisa difusa.  
+  
+ **coluna de pesquisa**  
+ Selecione colunas de pesquisa na lista de colunas da tabela de referência disponíveis. Suas seleções se refletem nas da caixa de seleção da tabela **Colunas de Pesquisa Disponíveis** . Selecionar uma coluna na tabela **Colunas de Pesquisa Disponíveis** cria uma coluna de saída que contém o valor da coluna da tabela de referência para cada linha correspondente retornada.  
+  
+ **Alias de Saída**  
+ Digite um alias para a saída de cada coluna de pesquisa. O padrão é o nome da coluna de pesquisa com um valor de índice numérico anexado; contudo, é possível escolher qualquer nome descritivo exclusivo.  
+  
+## <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>Editor de Transformação Pesquisa Difusa (guia Avançado)
+  Use a guia **Avançado** da caixa de diálogo **Editor de Transformação Pesquisa Difusa** para definir parâmetros para a pesquisa difusa.  
+  
+### <a name="options"></a>Opções  
+ **Número máximo de correspondências a produzir por pesquisa**  
+ Especifique o número máximo de correspondências que a transformação pode retornar para cada linha de entrada. O padrão é **1**.  
+  
+ **Limite de similaridade**  
+ Defina o limite de similaridade no nível de componente usando o controle deslizante. Quanto mais próximo de 1 for o valor, maior deverá ser a semelhança entre o valor de pesquisa e o valor da origem para a qualificação de correspondências. Aumentar o limite pode melhorar a velocidade de correspondência, já que menos registros serão considerados candidatos.  
+  
+ **Delimitadores de token**  
+ Especifique os delimitadores usados pela transformação para criar tokens de valores de coluna.  
   
 ## <a name="see-also"></a>Consulte também  
  [Transformação Pesquisa](../../../integration-services/data-flow/transformations/lookup-transformation.md)   

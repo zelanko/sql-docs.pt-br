@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.termextractiontrans.f1
+- sql13.dts.designer.termextraction.termextraction.f1
+- sql13.dts.designer.termextraction.inclusionexclusion.f1
+- sql13.dts.designer.termextraction.advanced.f1
 helpviewer_keywords:
 - word boundaries [Integration Services]
 - extracting data [Integration Services]
@@ -30,10 +33,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1aff30861feebd429bf4c061a3b8cff3031c7528
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e664673c39b6f60ef9d3a523c46a2415a993d950
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="term-extraction-transformation"></a>Transformação Extração de Termos
@@ -175,14 +178,6 @@ ms.lasthandoff: 08/03/2017
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Extração de Termos** , clique em um dos seguintes tópicos:  
-  
--   [Editor de Transformação Extração de Termos &#40;Guia Extração de Termos&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-term-extraction-tab.md)  
-  
--   [Editor de Transformação Extração de Termos &#40;Guia Exclusão&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-exclusion-tab.md)  
-  
--   [Editor de Transformação Extração de Termos &#40;Guia Avançado&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-advanced-tab.md)  
-  
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -191,4 +186,77 @@ ms.lasthandoff: 08/03/2017
   
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Editor de Transformação Extração de Termos (guia Extração de Termos)
+  Use a guia **Extração de Termos** da caixa de diálogo **Editor de Transformação Extração de Termos** para especificar uma coluna de texto que contém texto a ser extraído.  
   
+### <a name="options"></a>Opções  
+ **Colunas de Entrada Disponíveis**  
+ Usando as caixas de seleção, selecione uma única coluna de texto a ser utilizada para extração de termos.  
+  
+ **Termo**  
+ Forneça um nome para a coluna de saída que conterá os termos extraídos.  
+  
+ **Pontuação**  
+ Forneça um nome para a coluna de saída que conterá a pontuação de cada termo extraído.  
+  
+ **Configurar Saída de Erro**  
+ Use a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar tratamento de erro em linhas que causam erros.  
+  
+## <a name="term-extraction-transformation-editor-exclusion-tab"></a>Editor de Transformação Extração de Termos (guia Exclusão)
+  Use a guia **Exclusão** da caixa de diálogo do **Editor de Transformação Extração de Termos** para definir uma conexão com uma tabela de exclusão e especificar as colunas que contêm termos de exclusão.  
+  
+### <a name="options"></a>Opções  
+ **Usar termos de exclusão**  
+ Indique se devem ser excluídos termos específicos durante uma extração de termos especificando uma coluna que contém termos de exclusão. Você deve especificar as seguintes propriedades de origem caso opte por excluir termos.  
+  
+ **gerenciador de conexões OLE DB**  
+ Selecione um gerenciador de conexões OLE DB existente ou crie uma nova conexão clicando em **Novo**.  
+  
+ **Novo**  
+ Crie uma nova conexão com um banco de dados usando a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** .  
+  
+ **Tabela ou exibição**  
+ Selecione a tabela ou exibição que contém os termos de exclusão.  
+  
+ **Coluna**  
+ Selecione a coluna na tabela ou exibição que contém os termos de exclusão.  
+  
+ **Configurar Saída de Erro**  
+ Use a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar tratamento de erro em linhas que causam erros.  
+  
+## <a name="term-extraction-transformation-editor-advanced-tab"></a>Editor de Transformação Extração de Termos (guia Avançado)
+  Use a guia **Avançado** da caixa de diálogo **Editor de Transformação de Extração de Termos** para especificar propriedades de extração, como frequência, comprimento e se devem ser extraídas palavras ou frases.  
+  
+### <a name="options"></a>Opções  
+ **Substantivo**  
+ Especifique que a transformação só extrai substantivos individuais.  
+  
+ **Frase substantivada**  
+ Especifique que a transformação só extraia frases substantivadas.  
+  
+ **Substantivo e frase substantivada**  
+ Especifique que a transformação extraia tanto substantivos como frases substantivadas.  
+  
+ **Frequência**  
+ Especifique que a pontuação é a frequência do termo.  
+  
+ **TFIDF**  
+ Especifique que a pontuação é o valor TFIDF do termo. A pontuação TFIDF é o produto da Frequência do Termo e da Frequência de Documento Inversa, definido como: TFIDF de um termo T = (frequência de T) * log ((nºs de linhas na Entrada) / (nº de linhas com T))  
+  
+ **Limite de frequência**  
+ Especifique o número de vezes que uma palavra ou frase deve aparecer antes de ser extraída. O valor padrão é 2.  
+  
+ **Comprimento máximo do termo**  
+ Especifique o comprimento máximo de uma frase em palavras. Esta opção só afeta frases substantivadas. O valor padrão é 12.  
+  
+ **Usar extração de termos com diferenciação de maiúsculas e minúsculas**  
+ Especifique se a extração deve ser feita diferenciando maiúsculas e minúsculas. O padrão é **False**.  
+  
+ **Configurar Saída de Erro**  
+ Use a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar tratamento de erro em linhas que causam erros.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [Transformação de pesquisa de termo](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
+
+

@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingquerytrans.f1
+- sql13.dts.designer.dmquerytransformation.miningmodel.f1
+- sql13.dts.designer.dmquerytransformation.query.f1
 helpviewer_keywords:
 - Data Mining Query transformation
 - prediction queries [Integration Services]
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 544f0aaf11e83b9ba2fc0ae5150b85e537998c25
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 7ec5d0d1168e49fb38ce8b58eaa75d6c0d6c51b5
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="data-mining-query-transformation"></a>Transformação Consulta de Mineração de Dados
@@ -38,12 +40,6 @@ ms.lasthandoff: 08/03/2017
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação de Consultas de Mineração de Dados** , clique em um dos seguintes tópicos:  
-  
--   [Editor de Transformação Consultas de Mineração de Dados &#40;Guia Modelo de Mineração&#41;](../../../integration-services/data-flow/transformations/data-mining-query-transformation-editor-mining-model-tab.md)  
-  
--   [Editor de Transformação Consultas de Mineração de Dados &#40;Guia Modelo de Mineração&#41;](../../../integration-services/data-flow/transformations/data-mining-query-transformation-editor-mining-model-tab.md)  
-  
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -52,4 +48,30 @@ ms.lasthandoff: 08/03/2017
   
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## <a name="data-mining-query-transformation-editor-mining-model-tab"></a>Editor de Transformação Consultas de Mineração de Dados (guia Modelo de Mineração)
+  Use a guia **Modelo de Mineração** da caixa de diálogo **Editor de Transformação Consultas de Mineração de Dados** para selecionar a estrutura e os modelos de mineração de dados.  
   
+### <a name="options"></a>Opções  
+ **Conexão**  
+ Selecione uma conexão do Analysis Services existente usando a caixa de listagem ou crie uma nova conexão usando o botão **Novo** descrito a seguir.  
+  
+ **Novo**  
+ Crie uma nova conexão usando a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** .  
+  
+ **Estrutura de mineração**  
+ Selecione na lista de estruturas de modelo de mineração disponíveis.  
+  
+ **Modelos de mineração**  
+ Exiba a lista de modelos de mineração associada com a estrutura de mineração de dados selecionada.  
+  
+## <a name="data-mining-query-transformation-editor-query-tab"></a>Editor de Transformação Consultas de Mineração de Dados (Guia Consulta)
+  Use a guia **Consulta** da caixa de diálogo **Editor de Transformação Consultas de Mineração de Dados** para criar uma consulta de previsão.  
+  
+### <a name="options"></a>Opções  
+ **Consulta de mineração de dados**  
+ Digite uma consulta DMX (Data Mining Extensions) diretamente na caixa de texto.  
+  
+ **Construir Nova Consulta**  
+ Clique em **Construir Nova Consulta** para criar uma consulta DMX (extensões DMX) usando o construtor de consultas gráficas.  
+  
+

@@ -11,6 +11,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.lookuptrans.f1
+- sql13.dts.designer.lookuptransformation.general.f1
+- sql13.dts.designer.lookuptransformation.referencetable.f1
+- sql13.dts.designer.lookuptransformation.columns.f1
+- sql13.dts.designer.lookuptransformation.advanced.f1
 helpviewer_keywords:
 - Lookup transformation
 - joining columns [Integration Services]
@@ -24,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14e72d1f2d9790cd74c54eb7e152c0b29d278212
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ee0c7e667e933c98bdbc228244a9dea1cf2c9bdd
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="lookup-transformation"></a>Transformação Pesquisa
@@ -59,7 +63,7 @@ ms.lasthandoff: 08/03/2017
   
  A transformação Pesquisa tenta executar uma junção por igualdade entre valores na entrada da transformação e valores no conjunto de dados de referência. (Em uma junção por igualdade, cada linha na entrada da transformação deve corresponder a pelo menos uma linha do conjunto de dados de referência.) Se uma junção por igualdade não for possível, a transformação Pesquisa realizará uma das seguintes ações:  
   
--   Se não houver nenhuma entrada correspondente no conjunto de dados de referência, nenhuma junção ocorrerá. Por padrão, a transformação Pesquisa trata linhas sem entradas correspondentes como erros. No entanto, você pode configurar a transformação Pesquisa para redirecionar essas linhas para uma saída sem-correspondência. Para obter mais informações, consulte [Editor de Transformação Pesquisa &#40;Página Geral&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md) e [Editor de Transformação Pesquisa &#40;Página Erro de Saída&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+-   Se não houver nenhuma entrada correspondente no conjunto de dados de referência, nenhuma junção ocorrerá. Por padrão, a transformação Pesquisa trata linhas sem entradas correspondentes como erros. No entanto, você pode configurar a transformação Pesquisa para redirecionar essas linhas para uma saída sem-correspondência.  
   
 -   Se houver várias correspondências na tabela de referência, a transformação Pesquisa retornará apenas a primeira delas, retornada pela consulta de pesquisa. Se várias correspondências forem encontradas, a transformação Pesquisa gerará um erro ou aviso somente quando a transformação tiver sido configurada para carregar todos os conjuntos de dados de referência no cache. Neste caso, a transformação Pesquisa gera um aviso quando a transformação detecta várias correspondências à medida que ela preenche o cache.  
   
@@ -122,7 +126,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [Implementar uma pesquisa no modo Sem Cache ou Cache Parcial](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [Implementar uma Transformação de Pesquisa em modo de Cache Cheio usando o Gerenciador de Conexões de Cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [Implementar uma Transformação Pesquisa em modo de Cache cheio usando o Gerenciador de Conexões do Cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
 -   [Implementar uma transformação Pesquisa em modo de cache cheio por meio da transformação Gerenciador de Conexões OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
@@ -139,6 +143,139 @@ ms.lasthandoff: 08/03/2017
 -   Exemplo [Transformação de Pesquisa](http://go.microsoft.com/fwlink/?LinkId=267528), em msftisprodsamples.codeplex.com.  
   
      Para obter informações sobre como instalar exemplos e bancos de dados de exemplo do produto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , consulte [Exemplos do produto SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=267527).  
+  
+## <a name="lookup-transformation-editor-general-page"></a>Editor da Transformação Pesquisa (página Geral)
+  Use a página **Geral** da caixa de diálogo Editor da Transformação Pesquisa para selecionar o modo de cache, selecionar o tipo de conexão e especificar como lidar com as linhas com entradas sem-correspondência.  
+  
+### <a name="options"></a>Opções  
+ **Cache cheio**  
+ Gere e carregue o conjunto de dados de referência no cache antes de executar a transformação Pesquisa.  
+  
+ **Cache parcial**  
+ Gere o conjunto de dados de referência durante a execução da transformação Pesquisa. Carregue as linhas com entradas com correspondência no conjunto de dados de referência e as linhas com entradas sem-correspondência no conjunto de dados no cache.  
+  
+ **Não cache**  
+ Gere o conjunto de dados de referência durante a execução da transformação Pesquisa. Nenhum dado é carregado no cache.  
+  
+ **Gerenciador de conexões do cache**  
+ Configure a transformação Pesquisa para usar um Gerenciador de conexão de cache. Esta opção estará disponível somente se a opção Cache cheio for selecionada.  
+  
+ **gerenciador de conexões OLE DB**  
+ Configure a transformação Pesquisa para usar um Gerenciador de conexões OLE DB.  
+  
+ **Especificar como lidar com linhas com entradas sem-correspondência**  
+ Selecione uma opção para lidar com as linhas que não correspondem a pelo menos uma entrada no conjunto de dados de referência.  
+  
+ Ao selecionar **Redirecionar linhas para uma saída sem-correspondência**, as linhas serão redirecionadas a uma saída sem-correspondência e serão tratadas como erros. A opção **Erro** na página **Saída de Erro** da caixa de diálogo **Editor da Transformação Pesquisa** não estará disponível.  
+  
+ Ao selecionar uma opção na caixa de listas **Especificar como lidar com linhas com entradas sem-correspondência** , as linhas serão tratadas como erros. A opção **Erro** na página **Saída de Erro** estará disponível.  
+  
+### <a name="external-resources"></a>Recursos externos  
+ Entrada de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) (em inglês) em blogs.msdn.com  
+  
+## <a name="lookup-transformation-editor-connection-page"></a>Editor da Transformação Pesquisa (página Conexão)
+  Use a página **Conexão** da caixa de diálogo **Editor da Transformação Pesquisa** para selecionar um gerenciador de conexões. Se você selecionar um gerenciador de conexões OLE DB, também poderá selecionar uma consulta, tabela ou exibição para gerar o conjunto de dados de referência.  
+  
+### <a name="options"></a>Opções  
+ As opções a seguir estarão disponíveis quando você selecionar **Cache cheio** e **Gerenciador de conexões de cache** na página Geral da caixa de diálogo **Editor da Transformação Pesquisa** .  
+  
+ **Gerenciador de conexões de cache**  
+ Selecione um gerenciador de conexões de cache existente na lista ou crie uma nova conexão clicando em **Nova**.  
+  
+ **Nova**  
+ Crie uma nova conexão usando a caixa de diálogo **Editor de Gerenciador de Conexões de Cache** .  
+  
+ As opções a seguir estarão disponíveis quando você selecionar **Cache cheio**, **Cache parcial**ou **Sem cache**e **Gerenciador de conexões OLE DB**na página Geral da caixa de diálogo **Editor da Transformação Pesquisa** .  
+  
+ **Gerenciador de conexões OLE DB**  
+ Selecione um gerenciador de conexões OLE DB existente na lista ou crie uma nova conexão clicando em **Nova**.  
+  
+ **Nova**  
+ Crie uma nova conexão usando a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** .  
+  
+ **Use uma tabela ou exibição**  
+ Selecione uma tabela ou exibição existente na lista ou crie uma nova tabela clicando em **Nova**.  
+  
+> [!NOTE]  
+>  Se você especificar uma instrução SQL na página **Avançado** do **Editor da Transformação Pesquisa**, essa instrução SQL vai sobrescrever e substituir o nome da tabela selecionada aqui. Para obter mais informações, consulte [Editor de Transformação Pesquisa &#40;Página Avançado&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md).  
+  
+ **Nova**  
+ Crie uma nova tabela usando a caixa de diálogo **Criar Tabela** .  
+  
+ **Usar resultados de uma consulta SQL**  
+ Escolha esta opção para navegar até uma consulta preexistente, criar uma nova consulta, verificar a sintaxe da consulta e visualizar os resultados da consulta.  
+  
+ **Construir consulta**  
+ Crie a instrução Transact-SQL a ser executada usando o **Construtor de Consultas**, uma ferramenta gráfica que é usada para criar consultas navegando pelos dados.  
+  
+ **Procurar**  
+ Use esta opção para navegar até uma consulta preexistente salva como um arquivo.  
+  
+ **Analisar Consulta**  
+ Verifique a sintaxe da consulta.  
+  
+ **Visualização**  
+ Visualize os resultados usando a caixa de diálogo **Visualizar Resultados da Consulta** . Esta opção exibe até 200 linhas.  
+  
+### <a name="external-resources"></a>Recursos externos  
+ Entrada de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) (em inglês) em blogs.msdn.com  
+  
+## <a name="lookup-transformation-editor-columns-page"></a>Editor da Transformação Pesquisa (página Colunas)
+  Use a página **Colunas** da caixa de diálogo **Editor da Transformação Pesquisa** para especificar a junção entre a tabela de origem e a tabela de referência, e para selecionar as colunas de pesquisa a partir da tabela de referência.  
+  
+### <a name="options"></a>Opções  
+ **Colunas de Entrada Disponíveis**  
+ Exiba a lista das colunas de entrada disponíveis. As colunas de entrada são as colunas no fluxo de dados de uma origem conectada. As colunas de entrada e de pesquisa devem ter tipos de dados correspondentes.  
+  
+ Use uma operação arrastar e soltar para mapear as colunas de entrada disponíveis para as colunas de pesquisa.  
+  
+ Você também pode mapear as colunas de entrada para as colunas de pesquisa usando o teclado, destacando a coluna na tabela **Colunas de Entrada Disponíveis** , pressionando a tecla Aplicativo e clicando em **Editar Mapeamentos**.  
+  
+ **Colunas de Pesquisa Disponíveis**  
+ Exiba a lista de colunas de pesquisa. As colunas de pesquisa são as colunas na tabela de referência que permitem pesquisar os valores que correspondem às colunas de entrada.  
+  
+ Use uma operação arrastar e soltar para mapear as colunas de pesquisa disponíveis para as colunas de entrada.  
+  
+ Use as caixas de seleção para selecionar as colunas de pesquisa na tabela de referência nas quais serão executadas as operações de pesquisa.  
+  
+ Você também pode mapear as colunas de pesquisa para as colunas de entrada usando o teclado, destacando a coluna na tabela **Colunas de Pesquisa Disponíveis** , pressionando a tecla Aplicativo e clicando em **Editar Mapeamentos**.  
+  
+ **coluna de pesquisa**  
+ Exiba as colunas de pesquisa selecionadas. As escolhas são refletidas nas caixas de seleção da tabela **Colunas de Pesquisa Disponíveis** .  
+  
+ **Operação de Pesquisa**  
+ Selecione uma operação de pesquisa da lista a ser executada na coluna de pesquisa.  
+  
+ **Alias de Saída**  
+ Digite um alias para a saída de cada coluna de pesquisa. O padrão é o nome da coluna de pesquisa; entretanto, é possível selecionar qualquer nome descritivo exclusivo.  
+  
+## <a name="lookup-transformation-editor-advanced-page"></a>Editor da Transformação Pesquisa (página Avançado)
+  Use a página **Avançado** da caixa de diálogo **Editor da Transformação Pesquisa** para configurar o cache parcial e para modificar a instrução SQL da transformação Pesquisa.  
+  
+### <a name="options"></a>Opções  
+ **Tamanho de cache (32 bits)**  
+ Ajuste o tamanho de cache (em megabytes) para computadores de 32 bits. O valor padrão é 5 megabytes.  
+  
+ **Tamanho de cache (64 bits)**  
+ Ajuste o tamanho de cache (em megabytes) para computadores de 64 bits. O valor padrão é 5 megabytes.  
+  
+ **Ativar cache para linhas com entradas sem-correspondência**  
+ Linhas de cache com entradas sem-correspondência no conjunto de dados de referência.  
+  
+ **Alocação de cache**  
+ Especifique o percentual de cache a ser alocado para as linhas com entradas sem-correspondência no conjunto de dados de referência.  
+  
+ **Modificar instrução SQL**  
+ Modifique a instrução SQL usada para gerar o conjunto de dados de referência.  
+  
+> [!NOTE]  
+>  A instrução SQL opcional especificada nesta página substituirá o nome da tabela especificado na página **Conexão** do **Editor da Transformação Pesquisa**. Para obter mais informações, consulte [Editor de Transformação Pesquisa &#40;Página Conexão&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md).  
+  
+ **Definir Parâmetros**  
+ Mapeie colunas de entrada para parâmetros usando a caixa de diálogo **Definir Parâmetros da Consulta** .  
+  
+### <a name="external-resources"></a>Recursos externos  
+ Entrada de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) (em inglês) em blogs.msdn.com  
   
 ## <a name="see-also"></a>Consulte também  
  [Transformação Pesquisa Difusa](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

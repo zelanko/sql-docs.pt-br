@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.multicasttrans.f1
+- sql13.dts.designer.multicasttransformation.f1
 helpviewer_keywords:
 - multiple outputs
 - Multicast transformation
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8619a0ed02ffc73126eb151f4a83a0b6b24c4be8
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: bd3eee42fbb204a9ca1e806d273b7c09a86c87d2
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="multicast-transformation"></a>Transformação Difusão Seletiva
@@ -40,12 +41,20 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-multicast-transformation"></a>Configuração da transformação Multicast  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Multicast** , consulte [Multicast Transformation Editor](../../../integration-services/data-flow/transformations/multicast-transformation-editor.md).  
-  
  Para obter informações sobre as propriedades que podem ser definidas programaticamente, consulte [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
  Para obter informações sobre como definir as propriedades deste componente, consulte [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="multicast-transformation-editor"></a>Editor de Transformação Difusão Seletiva
+  Use a caixa de diálogo **Editor de Transformação Difusão Seletiva** para exibir e definir as propriedades de cada saída de transformação.  
+  
+### <a name="options"></a>Opções  
+ **Saídas**  
+ Selecione uma saída no painel esquerdo para exibir suas propriedades na tabela à direita.  
+  
+ **Propriedades**  
+ Todas as propriedades de saída listadas são somente leitura, exceto **Nome** e **Descrição**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   

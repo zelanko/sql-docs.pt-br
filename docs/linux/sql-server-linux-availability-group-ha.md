@@ -14,14 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8e2d26fd9ce79fc8c47c7499313648d565ae1b97
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 353e7cf5cef8430303e3ee6fbefc92db08f5f733
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Este artigo apresenta as configurações de implantação com suporte para grupos de disponibilidade do SQL Server Always On em servidores Linux. Um grupo de disponibilidade dá suporte a alta disponibilidade e proteção de dados. Detecção de falha automático, failover automático e transparente reconexão depois do failover fornecem alta disponibilidade. Réplicas sincronizadas fornecem proteção de dados. 
 
@@ -114,7 +115,7 @@ Por exemplo, um grupo de disponibilidade com três réplicas síncronas - uma r�
 Nesse cenário, duas réplicas precisam responder para o failover deve ser disparada. Para failover automático bem-sucedida após uma interrupção de réplica primária, ambas as réplicas secundárias precisam ser atualizadas e responder a promover previamente a notificação. Se eles estiverem online e síncrona, eles têm o mesmo número de sequência. O grupo de disponibilidade promove um deles. Se apenas uma das réplicas secundárias responde para o promover previamente ação, o agente de recursos não pode garantir que o secundário que respondeu tem o sequence_number mais alto e um failover não será disparado.
 
 >[!IMPORTANT]
->Quando `required_synchronized_secondaries_to_commit` é lá 0 é o risco de perda de dados. Durante uma interrupção da réplica primária, o agente de recursos não aciona automaticamente um failover. Você pode esperar para o site primário recuperar ou failover manualmente usando `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
+>Quando `required_synchronized_secondaries_to_commit` é 0, há risco de perda de dados. Durante uma interrupção da réplica primária, o agente de recursos não aciona automaticamente um failover. Você pode esperar para o site primário recuperar ou failover manualmente usando `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
 
 Você pode optar por substituir o comportamento padrão e impedir que o recurso de grupo de disponibilidade da configuração `required_synchronized_secondaries_to_commit` automaticamente.
 

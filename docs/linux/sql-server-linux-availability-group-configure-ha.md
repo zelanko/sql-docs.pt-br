@@ -10,14 +10,15 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3a94bf7646143d687a7300c8ab2a66c3caa2d8d9
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 6ceceaa00b2db22b5f1be9a6e8305da5b4cea49b
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>Configurar o grupo de disponibilidade do AlwaysOn para SQL Server no Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Este artigo descreve como criar um SQL Server AlwaysOn no grupo de disponibilidade para alta disponibilidade no Linux. Há dois tipos de configuração para grupos de disponibilidade. Um *alta disponibilidade* configuração usa um Gerenciador de cluster para fornecer continuidade de negócios. Essa configuração também pode incluir leitura réplicas de expansão. Este documento explica como criar a configuração de alta disponibilidade do grupo de disponibilidade.
 

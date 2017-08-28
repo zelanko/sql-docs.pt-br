@@ -1,30 +1,36 @@
 ---
-title: "Transforma&#231;&#227;o Coluna Derivada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.derivedcolumntrans.f1"
-helpviewer_keywords: 
-  - "várias colunas derivadas"
-  - "expressões [Integration Services], colunas derivadas"
-  - "colunas derivadas"
-  - "colunas [Integration Services], derivações"
-  - "transformação Coluna Derivada"
+title: "Derivado de transformação de coluna | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.derivedcolumntrans.f1
+- sql13.dts.designer.derivedcolumntransformation.f1
+helpviewer_keywords:
+- multiple derived columns
+- expressions [Integration Services], derived columns
+- derived columns
+- columns [Integration Services], derivations
+- Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 caps.latest.revision: 60
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 40d4bf147d712fac833ba9aa7542529cf0e26253
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/19/2017
+
 ---
-# Transforma&#231;&#227;o Coluna Derivada
+# <a name="derived-column-transformation"></a>Transformação Coluna Derivada
   A transformação Coluna Derivada cria novos valores de coluna aplicando expressões às colunas de entrada de transformação. Uma expressão pode conter qualquer combinação de variáveis, funções, operadores e colunas da entrada de transformação. O resultado pode ser adicionado como uma coluna nova ou adicionado a uma coluna existente como um valor de substituição. A transformação Coluna Derivada pode definir várias colunas derivadas, e qualquer variável ou coluna de entrada pode aparecer em várias expressões.  
   
  É possível usar essa transformação para executar as seguintes tarefas:  
@@ -57,11 +63,9 @@ caps.handback.revision: 60
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Coluna Derivada** , consulte [Editor de Transformação Colunas Derivadas](../../../integration-services/data-flow/transformations/derived-column-transformation-editor.md).  
-  
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](../Topic/Common%20Properties.md)  
+-   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -73,5 +77,47 @@ caps.handback.revision: 60
   
 -   [Derivar valores de coluna por meio da transformação Coluna Derivada](../../../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   
+## <a name="derived-column-transformation-editor"></a>Editor de Transformação Colunas Derivadas
+  Use a caixa de diálogo **Editor de Transformação Colunas Derivadas** para criar expressões que populem colunas novas ou de substituição.  
+  
+### <a name="options"></a>Opções  
+ **Variáveis e Colunas**  
+ Crie uma expressão que use uma variável ou uma coluna de entrada arrastando a variável ou coluna da lista de variáveis e colunas disponíveis para uma linha de tabela existente no painel abaixo, ou para uma linha nova no final da lista.  
+  
+ **Funções e operadores**  
+ Crie uma expressão que use uma função ou um operador para avaliar dados de entrada e dados de saída diretos arrastando funções e operadores da lista para o painel abaixo.  
+  
+ **Nome de Coluna Derivada**  
+ Forneça um nome de coluna derivada. O padrão é uma lista numerada de colunas derivadas; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
+  
+ **Coluna Derivada**  
+ Selecione uma coluna derivada da lista. Escolha se deseja adicionar a coluna derivada como uma nova coluna de saída ou substituir os dados em uma coluna existente.  
+  
+ **Expressão**  
+ Digite uma expressão ou compile uma arrastando da lista anterior de colunas, variáveis, funções e operadores disponíveis.  
+  
+ O valor dessa propriedade pode ser especificado com uma expressão de propriedades.  
+  
+ **Tópicos relacionados**: [Expressões do Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Operadores &#40;Expressão SSIS&#41;](../../../integration-services/expressions/operators-ssis-expression.md) e [Funções &#40;Expressão SSIS&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
+  
+ **Tipo de Dados**  
+ Se acrescentar dados a uma nova coluna, a caixa de diálogo **TransformationEditor de Coluna Derivada** avaliará a expressão automaticamente e definirá o tipo de dados adequadamente. O valor desta coluna é somente leitura. Para obter mais informações, consulte [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+  
+ **Comprimento**  
+ Se acrescentar dados a uma nova coluna, a caixa de diálogo **TransformationEditor de Coluna Derivada** avaliará a expressão automaticamente e definirá a largura de coluna para os dados da cadeia de caracteres. O valor desta coluna é somente leitura.  
+  
+ **Precisão**  
+ Se acrescentar dados a uma nova coluna, a caixa de diálogo **TransformationEditor de Coluna Derivada** automaticamente definirá a precisão de dados numéricos com base no tipo de dados. O valor desta coluna é somente leitura.  
+  
+ **Escala**  
+ Se acrescentar dados a uma nova coluna, a caixa de diálogo **TransformationEditor de Coluna Derivada** automaticamente definirá a escala dos dados numéricos com base no tipo de dados. O valor desta coluna é somente leitura.  
+  
+ **Página de Código**  
+ Se acrescentar dados a uma nova coluna, a caixa de diálogo **TransformationEditor de Coluna Derivada** automaticamente definirá a página de código para o tipo de dados DT_STR. Será possível atualizar a **Página de Código**.  
+  
+ **Configurar saída de erro**  
+ Especifique como tratar os erros usando a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
+  
 ## <a name="related-content"></a>Conteúdo relacionado  
  Artigo técnico, [Exemplos de expressões SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
+

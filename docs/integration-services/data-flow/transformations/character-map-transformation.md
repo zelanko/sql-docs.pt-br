@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.charactertrans.f1
+- sql13.dts.designer.charactermaptransformation.f1
 helpviewer_keywords:
 - mutually exclusive mapping [Integration Services]
 - mapping data [Integration Services]
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80818df1eb99cfe68012a119d4482698b17d0044
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 3ea6f6f0526a0ad1a2f98c97aed2a7aebbffb65a
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="character-map-transformation"></a>Transformação Mapas de Caracteres
@@ -74,8 +75,6 @@ ms.lasthandoff: 08/03/2017
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação de Mapas de Caracteres** , consulte [Character Map Transformation Editor](../../../integration-services/data-flow/transformations/character-map-transformation-editor.md).  
-  
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -86,6 +85,46 @@ ms.lasthandoff: 08/03/2017
   
 -   [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Classificar dados para transformações de junção de mesclagem e de mesclagem](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+  
+## <a name="character-map-transformation-editor"></a>Editor de Transformação Mapas de Caracteres
+  Use a caixa de diálogo **Editor de Transformação Mapas de Caracteres** para selecionar as funções de cadeia de caracteres a serem aplicadas aos dados de coluna, bem como para especificar se o mapeamento é uma alteração in-loco ou se deve ser adicionado como uma nova coluna.  
+  
+### <a name="options"></a>Opções  
+ **Colunas de Entrada Disponíveis**  
+ Use as caixas de seleção para selecionar as colunas a transformar, utilizando funções de cadeia de caracteres. Suas seleções aparecem na tabela abaixo.  
+  
+ **Coluna de Entrada**  
+ Exibir colunas de entrada selecionadas na tabela acima. Você também pode alterar ou remover uma seleção, por meio da lista de colunas de entrada disponíveis.  
+  
+ **Destino**  
+ Especifique entre salvar os resultados das operações de cadeia de caracteres no local, usando a coluna existente, ou salvar os dados modificados como uma nova coluna.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Nova coluna|Salve os dados em uma nova coluna. Atribua o nome de coluna em **Alias de Saída**.|  
+|Alteração no local|Salve os dados modificados na coluna existente.|  
+  
+ **Operação**  
+ Selecione na lista as funções de cadeia de caracteres a aplicar aos dados da coluna.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Minúscula|Converter para letras minúsculas.|  
+|Letras Maiúsculas|Converter para letras maiúsculas.|  
+|Inversão de bytes|Converter invertendo a ordem de bytes.|  
+|Hiragana|Converter caracteres japoneses de katakana em hiragana.|  
+|Katakana|Converter caracteres japoneses de hiragana em katakana.|  
+|Meia largura|Converter caracteres de largura inteira em meia largura.|  
+|Largura inteira|Converter caracteres de meia largura em largura inteira.|  
+|Caixas linguísticas|Aplicar regras linguísticas de maiúsculas e minúsculas (mapeamento simples de maiúsculas e minúsculas Unicode para a Turquia e outras localidades), em vez das regras do sistema.|  
+|Chinês simplificado|Converter caracteres do chinês tradicional em caracteres do chinês simplificado.|  
+|Chinês tradicional|Converter caracteres do chinês simplificado em caracteres do chinês tradicional.|  
+  
+ **Alias de Saída**  
+ Digite um alias para cada coluna de saída. O padrão é **Copiar de** seguido do nome da coluna de entrada; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
+  
+ **Configurar Saída de Erro**  
+ Use a caixa de diálogo [Configurar Saída de Erro](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar opções de tratamento de erro para esta transformação.  
   
   

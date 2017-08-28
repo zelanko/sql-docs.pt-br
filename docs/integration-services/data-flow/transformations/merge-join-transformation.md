@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.mergejointrans.f1
+- sql13.dts.designer.mergejointransformation.f1
 helpviewer_keywords:
 - datasets [Integration Services]
 - Merge Join transformation
@@ -23,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38dd168d67b4be972be9c135e754abf3b925dae0
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 7c3382fb6a61c1362fe10d67a422c0d316a5d663
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="merge-join-transformation"></a>Transformação Junção de Mesclagem
@@ -63,10 +64,33 @@ ms.lasthandoff: 08/03/2017
   
 -   [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Classificar dados para transformações de junção de mesclagem e de mesclagem](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+  
+## <a name="merge-join-transformation-editor"></a>Editor de Transformação Mesclagem
+  Use a caixa de diálogo **Editor de Transformação Mesclar Junção** para especificar o tipo de junção, as colunas de junção e as colunas de saída para mesclar duas entradas combinadas por uma junção.  
+  
+> [!IMPORTANT]  
+>  A Transformação Junção de Mesclagem requer dados classificados para suas entradas. Para obter mais informações sobre este requisito importante, consulte [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
+  
+### <a name="options"></a>Opções  
+ **Tipo de junção**  
+ Especifique se você quer usar uma junção interna, externa esquerda ou completa.  
+  
+ **Trocar Entradas**  
+ Troque a ordem entre entradas usando o botão **Trocar Entradas** . Essa seleção pode ser útil com a opção de Junção externa esquerda.  
+  
+ **Entrada**  
+ Para cada coluna que você desejar na saída mesclada, selecione primeiro na lista de entradas disponíveis.  
+  
+ São exibidas entradas em duas tabelas separadas. Selecione colunas a serem incluídas na saída. Arraste colunas para criar uma junção entre as tabelas. Para excluir uma junção, selecione-a e pressione a tecla DELETE.  
+  
+ **Coluna de Entrada**  
+ Selecione uma coluna a incluir na saída mesclada da lista de colunas disponíveis na entrada selecionada.  
+  
+ **Alias de Saída**  
+ Digite um alias para cada coluna de saída. O padrão é o nome da coluna de entrada; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de Transformação Mesclagem](../../../integration-services/data-flow/transformations/merge-join-transformation-editor.md)   
  [Transformação de mesclagem](../../../integration-services/data-flow/transformations/merge-transformation.md)   
  [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

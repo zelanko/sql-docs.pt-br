@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Configuration Manager, help
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7c3445dee2fe753506a02e9c828f1835664592a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: d12d9e8aa7c2a11dfe340897c4b63681591784d5
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-configuration-manager-help"></a>Ajuda do SQL Server Configuration Manager
@@ -71,6 +71,12 @@ ms.lasthandoff: 08/02/2017
   
 -   No menu **Iniciar** , aponte para **Todos os Programas**, aponte para **Microsoft SQL Server** (versão), aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
   
+  
+ **Acesse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Configuration Manager[!INCLUDE[win8](../../includes/win8-md.md)]**  
+  
+ Como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager é um snap-in do programa [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) e não um programa autônomo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager não aparece como um aplicativo ao executar o [!INCLUDE[win8](../../includes/win8-md.md)]. Para abrir o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, no botão **Pesquisar** , em **Aplicativos**, digite **SQLServerManager12.msc** (para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) ou **SQLServerManager11.msc** (para[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e pressione **Enter**.  
+  
+
 ## <a name="see-also"></a>Consulte também  
  [Serviços do SQL Server](../../tools/configuration-manager/sql-server-services.md)   
  [Configuração de rede do SQL Server](../../tools/configuration-manager/sql-server-network-configuration.md)   

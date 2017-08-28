@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.cachetrans.f1
+- sql13.dts.designer.cachetranscon.f1
+- sql13.dts.designer.cachetransmap.f1
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c03d2c178b4632b334078c72ab87a11d645fe7da
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 4f1a65ed00262cfc0af0d4c4f117ef022846e26c
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="cache-transform"></a>transformação Cache
@@ -39,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
  Em um único pacote, somente uma transformação Cache pode gravar dados no mesmo gerenciador de conexões de cache. Se o pacote contiver várias transformações Cache, a primeira transformação, que é chamada quando o pacote é executado, gravará os dados no gerenciador de conexões. As operações de gravação das transformações Cache subsequentes falham.  
   
- Para obter mais informações, consulte [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) e [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).  
+ Para obter mais informações, consulte [Gerenciador de Conexão de Cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
   
 ## <a name="configuration-of-the-cache-transform"></a>Configuração da transformação Cache  
  Você pode configurar o gerenciador de conexões de cache para salvar os dados em um arquivo de cache (.caw).  
@@ -58,6 +60,21 @@ ms.lasthandoff: 08/03/2017
  Você pode definir propriedades por meio do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Designer. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** , consulte [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="cache-transformation-editor-connection-manager-page"></a>Editor de Transformação Cache (Página Gerenciador de Conexões)
+  Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Transformação Cache** para selecionar um gerenciador de conexões Cache existente ou para criar um novo.  
+  
+ Para obter mais informações sobre o Gerenciador de conexões de cache, consulte [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+  
+### <a name="options"></a>Opções  
+ **Cache connection manager**  
+ Selecione um gerenciador de conexões de Cache existente usando a lista ou crie uma conexão nova usando o botão **Novo** .  
+  
+ **Novo**  
+ Crie uma nova conexão usando a caixa de diálogo Editor de Gerenciador de Conexões de Cache.  
+  
+ **Editar**  
+ Modifique uma conexão existente.  
   
 ## <a name="see-also"></a>Consulte também  
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   

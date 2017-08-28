@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d744e84aa2b4ae0462a5d5a1e4453a9e86abb890
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: b4411fdd2337d93f15b149febf845fb7b0762c40
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Conectar a uma fonte de dados do Excel (Assistente de exportação e importação do SQL Server)
@@ -50,9 +50,7 @@ Se preferir, clique em **Procurar**.
 Selecione a versão do Excel usada pela pasta de trabalho de origem.
 
 > [!IMPORTANT]
-> Talvez seja necessário baixar e instalar arquivos adicionais para se conectar à versão do Excel selecionada. Consulte [obter os arquivos necessários para se conectar ao Excel](#officeDownloads) nesta página para obter mais informações.
-
-Se você tiver um problema quando você especificar uma versão, tente especificar uma versão diferente, até mesmo uma versão anterior. Por exemplo, você pode não ser capaz de instalar os provedores de dados do Office 2016, porque você tem uma assinatura do Microsoft Office 365. Você só pode instalar os provedores de dados para Excel 2016 e acesso 2016 com uma versão de área de trabalho do Microsoft Office. Nesse caso, você pode especificar o Excel 2013 em vez do Excel 2016. As duas versões do provedor são funcionalmente equivalentes. Essa limitação de tempo de execução do Office 2016 é mencionada na [esta postagem de blog](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/).
+> Você precisará baixar e instalar arquivos adicionais para conectar-se aos arquivos do Excel. Consulte [obter os arquivos necessários para se conectar ao Excel](#officeDownloads) nesta página para obter mais informações.
 
 **Primeira linha com nomes de coluna**  
 Indique se a primeira linha de dados contém nomes de coluna.
@@ -64,19 +62,19 @@ Se você especificar que os dados não tem nomes de coluna, o assistente usa F1,
 ## <a name="i-dont-see-excel-in-the-list-of-data-sources"></a>Não vejo Excel na lista de fontes de dados
 Se você não vir o Excel na lista de fontes de dados, você está executando o Assistente de 64 bits? Os provedores para o Excel e Access são geralmente de 32 bits e não são visíveis no Assistente de 64 bits. Execute o Assistente de 32 bits em vez disso.
 
+> [!NOTE]
+> Para usar a versão de 64 bits do SQL Server Assistente de importação e exportação, você precisa instalar o SQL Server. SQL Server Data Tools (SSDT) e SQL Server Management Studio (SSMS) são aplicativos de 32 bits, somente instalar os arquivos de 32 bits, incluindo a versão de 32 bits do assistente.
+
 ## <a name="officeDownloads"></a>Obter os arquivos que necessários para se conectar ao Excel  
-Você precisará baixar os componentes de conectividade para fontes de dados do Microsoft Office, incluindo o Excel e Access, se eles ainda não estiverem instalados.
+Você precisará baixar os componentes de conectividade para fontes de dados do Microsoft Office, incluindo o Excel e Access, se eles ainda não estiverem instalados. Baixar a versão mais recente dos componentes de conectividade para o Excel e acessar arquivos aqui: [redistribuível de 2016 do mecanismo de banco de dados Microsoft Access](https://www.microsoft.com/download/details.aspx?id=54920).
+  
+A versão mais recente dos componentes pode abrir arquivos criados por versões anteriores do Excel.
 
-As versões mais recentes dos componentes podem abrir arquivos criados em versões anteriores dos programas. Em alguns casos, as versões anteriores dos componentes também podem abrir arquivos criados por versões mais recentes dos programas. Por exemplo, se você não pode instalar os componentes do Office 2016, use os componentes do Office 2013. As duas versões do provedor são funcionalmente equivalentes. Essa limitação de tempo de execução do Office 2016 é mencionada na [esta postagem de blog](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/).
+Se o computador tiver uma versão de 32 bits do Office, em seguida, você precisa instalar a versão de 32 bits dos componentes e você também precisa garantir que você execute o pacote no modo de 32 bits.
 
-Se o computador tem uma versão de 32 bits do Office, isso é normal, mesmo em computadores de 64 bits, você precisa instalar a versão de 32 bits dos componentes. Você também precisa garantir que você execute o Assistente de 32 bits ou executa o pacote de atualização do SQL Server Integration Services que o assistente cria no modo de 32 bits. 
- 
-|Versão do Microsoft Office|Download|  
-|------------------------------|--------------|  
-|2016|[Tempo de execução do Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=50040)|
-|2013|[Tempo de execução do Microsoft Access 2013](http://www.microsoft.com/download/details.aspx?id=39358)|
-|2010|[Tempo de execução do Microsoft Access 2010](https://www.microsoft.com/download/details.aspx?id=10910)|  
-|2007|[2007 Office System Driver: componentes de conectividade de dados](https://www.microsoft.com/download/details.aspx?id=23734)|  
+Se você tiver uma assinatura do Office 365, certifique-se de que você baixe o redistribuível de 2016 do mecanismo de banco de dados de acesso e não o Microsoft Access 2016 Runtime. Quando você executar o instalador, você verá uma mensagem de erro que você não pode instalar a download lado a lado com componentes do Office clique para executar. Para ignorar essa mensagem de erro, execute a instalação no modo silencioso abrindo uma janela de Prompt de comando e executando o. Arquivo EXE baixado com o `/quiet` alternar. Por exemplo:
+
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
 ## <a name="see-also"></a>Consulte também
 [Escolha uma fonte de dados](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

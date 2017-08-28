@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.mergetrans.f1
+- sql13.dts.designer.mergetransformation.f1
 helpviewer_keywords:
 - merging datasets [Integration Services]
 - merging data [Integration Services]
@@ -23,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0e9bb9533459c720bae5b12d5f4ebdce1f85fc4d
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 4c3eead08bb91d43f83782682a122da278ac051f
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="merge-transformation"></a>Transformação Mesclar
@@ -60,8 +61,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-merge-transformation"></a>Configuração da Transformação Mesclar  
  Você pode definir propriedades por meio do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Mesclar** , consulte [Editor de Transformação Mesclar](../../../integration-services/data-flow/transformations/merge-transformation-editor.md).  
-  
  Para obter mais informações sobre as propriedades que podem ser definidas programaticamente, clique em um dos tópicos a seguir:  
   
 -   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -73,7 +72,23 @@ ms.lasthandoff: 08/03/2017
   
 -   [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Classificar dados para transformações de junção de mesclagem e de mesclagem](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+  
+## <a name="merge-transformation-editor"></a>Editor de Transformação Mesclagem
+  Use o **Editor de Transformação Mesclagem** para especificar colunas de dois conjuntos de dados classificados a serem mescladas.  
+  
+> [!IMPORTANT]  
+>  A Transformação Mesclar requer dados classificados para suas entradas. Para obter mais informações sobre este requisito importante, consulte [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
+  
+### <a name="options"></a>Opções  
+ **Nome da Coluna de Saída**  
+ Especifique o nome da coluna de saída.  
+  
+ **Mesclar Entrada 1**  
+ Selecione a coluna a mesclar como Mesclar Entrada 1.  
+  
+ **Mesclar Entrada 2**  
+ Selecione a coluna a mesclar como Mesclar Entrada 2.  
   
 ## <a name="see-also"></a>Consulte também  
  [Transformação Junção de Mesclagem](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   

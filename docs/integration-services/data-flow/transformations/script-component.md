@@ -11,6 +11,11 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.scriptcomponentdetails.f1
+- sql13.dts.designer.scriptcomponent.f1
+- sql13.dts.designer.scriptcomponent.connections.f1
+- sql13.dts.designer.scriptcomponent.inputcolumn.f1
+- sql13.dts.designer.scriptcomponent.columnproperties.f1
+- sql13.dts.designer.scriptcomponent.script.f1
 helpviewer_keywords:
 - Script transformation
 - scripts [Integration Services], transformations
@@ -22,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9411fdeb050a63c94c9904cd3f1b6e8aefd6b0a
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e7b0923968137a76b68d0324223ffbb61e7443b9
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="script-component"></a>Componente Script
@@ -92,16 +97,6 @@ ms.lasthandoff: 08/03/2017
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
   
 ### <a name="configuring-the-script-component-in-the-designer"></a>Configurando o componente Script no Designer  
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Scripts** , clique em um dos seguintes tópicos:  
-  
--   [Editor de Transformação Scripts &#40;página Colunas de Entrada&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)  
-  
--   [Editor de Transformação Scripts &#40;Página Entradas e Saídas&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)  
-  
--   [Editor de Transformação Scripts &#40;Página Script&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)  
-  
--   [Editor de Transformação Scripts &#40;Página Gerenciadores de Conexões&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)  
-  
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
 -   [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
@@ -116,6 +111,113 @@ ms.lasthandoff: 08/03/2017
  Para obter mais informações sobre como definir propriedades, clique em um dos seguintes tópicos:  
   
 -   [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="select-script-component-type"></a>Selecionar Tipo de Componente do Script
+  Use a caixa de diálogo **Selecionar Tipo de Componente do Script** para especificar se deve ser criada uma Transformação Scripts pré-configurada para uso como origem, transformação ou destino.  
+  
+ Para saber mais sobre o componente Script, consulte [Configurando o componente Script no Editor de componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+  
+### <a name="options"></a>Opções  
+ Sua seleção de **Origem**, **Destino**ou **Transformação** afeta a configuração da Transformação Scripts e as páginas do Editor de Transformação Scripts.  
+  
+## <a name="script-transformation-editor-connection-managers-page"></a>Editor de Transformação Scripts (página Gerenciadores de Conexões)
+  Use a página **Gerenciadores de Conexões** do **Editor de Transformação Scripts** para especificar as conexões que serão usadas pelo script.  
+  
+ Para saber mais sobre o componente Script, consulte [Configurando o componente Script no Editor de componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+  
+### <a name="options"></a>Opções  
+ **Connection managers**  
+ Exiba a lista de conexões disponíveis para serem usadas pelo script.  
+  
+ **Nome**  
+ Digite um nome exclusivo e descritivo para a conexão.  
+  
+ **Gerenciador de Conexões**  
+ Selecione na lista de gerenciadores de conexão disponíveis ou selecione  **\<nova conexão >** para abrir o **adicionar Gerenciador de Conexão SSIS** caixa de diálogo.  
+  
+ **Descrição**  
+ Digite uma descrição para a conexão.  
+  
+ **Adicionar**  
+ Adicione outra conexão à lista **Gerenciadores de conexões** .  
+  
+ **Remover**  
+ Remova a conexão selecionada da lista **Gerenciadores de conexões** .  
+  
+## <a name="script-transformation-editor-input-columns-page"></a>Editor de Transformação Scripts (página Colunas de Entrada)
+  Use a página **Colunas de Entrada** da caixa de diálogo **Editor de Transformação Scripts** para definir propriedades nas colunas de entrada.  
+  
+> [!NOTE]  
+>  A página **Colunas de Entrada** não é exibida para componentes de Origem que têm saídas mas não têm entradas.  
+  
+ Para saber mais sobre o componente Script, consulte [Configurando o componente Script no Editor de componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+  
+### <a name="options"></a>Opções  
+ **Nome de entrada**  
+ Selecione na lista de entradas disponíveis.  
+  
+ **Colunas de Entrada Disponíveis**  
+ Usando as caixas de seleção, especifique as colunas que a transformação scripts usará.  
+  
+ **Coluna de Entrada**  
+ Selecione colunas para cada linha na lista de colunas de entrada disponíveis. As seleções se refletem naquelas da caixa de seleção da tabela **Colunas de Entrada Disponíveis**.  
+  
+ **Alias de Saída**  
+ Digite um alias para cada coluna de saída. O padrão é o nome da coluna de entrada; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
+  
+ **Tipo de Uso**  
+ Especifique se a Transformação Scripts tratará cada coluna como **ReadOnly** ou **ReadWrite**.  
+  
+## <a name="script-transformation-editor-inputs-and-outputs-page"></a>Editor de Transformação Scripts (página Entradas e Saídas)
+  Use a página **Entradas e Saídas** da caixa de diálogo do **Editor de Transformação Scripts** para adicionar, remover e configurar entradas e saídas para a Transformação Scripts.  
+  
+> [!NOTE]  
+>  Os componentes de origem possuem saídas e não entradas, enquanto os componentes de destino possuem entradas mas nenhuma saída. Transformações têm entradas e saídas.  
+  
+ Para saber mais sobre o componente Script, consulte [Configurando o componente Script no Editor de componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+  
+### <a name="options"></a>Opções  
+ **Inputs and outputs**  
+ Selecione uma entrada ou uma saída à esquerda para exibir suas propriedades na tabela à direita. As propriedades disponíveis para edição variam de acordo com a seleção. Muitas das propriedades exibidas são somente leitura. Para obter mais informações sobre as propriedades individuais, consulte os tópicos abaixo.  
+  
+ [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+  
+ [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
+  
+ **Adicionar Saída**  
+ Adicione uma saída adicional à lista.  
+  
+ **Adicionar Coluna**  
+ Selecione uma pasta na qual deseja colocar a nova coluna de saída e adicione a coluna clicando em **Adicionar Coluna**.  
+  
+ **Remover Saída**  
+ Selecione uma saída e remova-a clicando em **Remover Saída**.  
+  
+ **Remover Coluna**  
+ Selecione uma coluna e remova-a clicando em **Remover Coluna**.  
+  
+## <a name="script-transformation-editor-script-page"></a>Editor de Transformação Scripts (página Script)
+  Use a guia **Script** da caixa de diálogo **Editor de Transformação Scripts** para especificar um script e propriedades relacionadas.  
+  
+ Para saber mais sobre o componente Script, consulte [Configurando o componente Script no Editor de componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+  
+### <a name="options"></a>Opções  
+ **Propriedades**  
+ Visualize e modifique as propriedades da transformação Scripts. Muitas das propriedades exibidas são somente leitura. Você pode modificar as seguintes propriedades:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Description**|Descreva a finalidade da transformação scripts.|  
+|**LocaleID**|Especifique a localidade para fornecer informações de solicitação e de conversão de data e hora específicas da região.|  
+|**Nome**|Digite um nome descritivo para o componente.|  
+|**ValidateExternalMetadata**|Indique se a transformação Scripts deve validar coluna de metadados contra fontes de dados externas em tempo de design. Um valor de **false** retarda a validação até o momento da execução.|  
+|**ReadOnlyVariables**|Digite uma lista de variáveis separada por vírgulas a ser acessada em modo somente leitura pela transformação Scripts.<br /><br /> Observação: nomes de variáveis fazem diferenciação de maiúsculas e minúsculas.|  
+|**ReadWriteVariables**|Digite uma lista de variáveis separada por vírgulas a ser acessada em modo leitura/gravação pela transformação Scripts.<br /><br /> Observação: nomes de variáveis fazem diferenciação de maiúsculas e minúsculas.|  
+|**ScriptLanguage**|Selecione a linguagem de script a ser usada pelo componente de Script.<br /><br /> Para definir a linguagem de script padrão para componentes e tarefas de Script, use a opção **Linguagem de script** na página **Geral** da caixa de diálogo **Opções** .|  
+|**UserComponentTypeName**|Especifica a classe <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> e o assembly **Microsoft.SqlServer.TxScript** que dá suporte à infraestrutura [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
+  
+ **Editar Script**  
+ Use o VSTA [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] (Tools for Applications) para criar ou modificar um script.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
