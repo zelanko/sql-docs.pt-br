@@ -24,7 +24,7 @@ ms.lasthandoff: 07/31/2017
 # <a name="tutorials-for-sql-server"></a>Tutoriais do SQL Server
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fornece tutoriais para ajudar você a aprender novas tecnologias e recursos. Tutoriais para versões anteriores normalmente podem ser usados com as versões mais recentes. Quando um tutorial aborda um recurso mais recente, ele indicará a versão mínima para concluir o tutorial.  
+[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fornece tutoriais para ajudar você a aprender novas tecnologias e recursos. Tutoriais para versões anteriores normalmente podem ser usados com as versões mais recentes. Quando um tutorial abordar um recurso mais recente, ele indicará a versão mínima para concluir o tutorial.  
      
 -   Se um tutorial usar um dos bancos de dados do [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], baixe e use a versão mais recente do CodePlex. Para obter mais informações, consulte [Bancos de dados e scripts do AdventureWorks para SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
 -   Baixe uma pasta de trabalho do [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e os relatórios do [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] a serem usados com os tutoriais do [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] : vá para [Amostras do Power View para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734).  
@@ -33,7 +33,7 @@ ms.lasthandoff: 07/31/2017
  
 ## <a name="current-tutorials"></a>Tutoriais atuais  
   
-|Tecnologia|Description|  
+|Tecnologia|Descrição|  
 |--------------|---------------|  
 |[Tutoriais do Analysis Services &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Saiba como desenvolver e implantar modelos de tabela ou multidimensionais do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Saiba também como usar ferramentas como o PowerPivot para analisar os dados nos modelos.|  
 |[Tutoriais do Mecanismo de Banco de Dados](../relational-databases/database-engine-tutorials.md)|Saiba como conectar-se a uma instância do mecanismo de banco de dados e, em seguida compilar e executar instruções Transact-SQL.|  
