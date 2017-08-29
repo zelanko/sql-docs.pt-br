@@ -1,7 +1,7 @@
 ---
 title: Novidades no SQL Server 2017 | Microsoft Docs
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 08/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,16 +15,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 64fa56e239432ed01fb908ebcb9bda221a42cd5e
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 8d10f9e80eb1cc0c2495042e03ff746a017f8e2a
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novidades no SQL Server 2017
 O SQL Server 2017 é uma etapa importante para transformar o SQL Server em uma plataforma que oferece opções de linguagens de desenvolvimento, tipos de dados, locais ou nuvens e sistemas operacionais, utilizando a capacidade do SQL Server no Linux, em contêineres do Docker baseados em Linux e no Windows. Este tópico resume as novidades em áreas de recurso específicas nas versões Release Candidate do SQL Server 2017 (RC2, agosto de 2017) e CTP (Community Technical Preview) mais recentes.
 
-**Experimente:** [baixar a versão mais recente do SQL Server 2017: RC2, agosto de 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
+[![Baixar no Centro de Avaliação](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Experimente:** [baixar a versão mais recente do SQL Server 2017: RC2, agosto de 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
 Esta versão contém correções de bug e melhorias de desempenho.
 
 >**Execute o SQL Server no Linux!** Para obter mais informações, consulte [Documentação do SQL Server no Linux](https://docs.microsoft.com/sql/linux/).
@@ -112,11 +112,12 @@ Os desenvolvedores do SQL Server agora têm acesso a bibliotecas Python ML e AI 
 
 Para obter mais informações, consulte [Novidades do Serviços do SQL Server Machine Learning](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
-##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) Entre em contato com a equipe de engenharia do SQL Server 
-- [Stack Overflow (rótulo sql-server) – faça perguntas técnicas](http://stackoverflow.com/questions/tagged/sql-server)
+##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) Obter ajuda 
+- [Stack Overflow (marcação sql-server) – faça perguntas sobre desenvolvimento em SQL](http://stackoverflow.com/questions/tagged/sql-server)
 - [Fóruns do MSDN – faça perguntas técnicas](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect – relatar bugs e solicitar recursos](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - discussão geral sobre o SQL Server](https://www.reddit.com/r/SQLServer/)
+- [Informações e termos de licença do Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
 
 ## <a name="next-steps"></a>Próximas etapas
 - Consulte as [Notas de Versão do SQL Server 2017](sql-server-2017-release-notes.md).

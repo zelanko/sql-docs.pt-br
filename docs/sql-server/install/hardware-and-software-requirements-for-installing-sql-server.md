@@ -2,8 +2,10 @@
 title: "Requisitos de hardware e software para a instalação do SQL Server 2016 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/14/2017
-ms.prod: sql-server-2016
+ms.date: 08/23/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -51,17 +53,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f6ac799e828d817eb19d6a8451c8c2011b0ea82f
-ms.openlocfilehash: 85e12d330f4c779deda67a739e107309074c0ea7
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 952d6202918895d0d6f7b6496bff1185ccc4170b
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Requisitos de hardware e software para a instalação do SQL Server
 
 Este tópico lista os requisitos mínimos de hardware e software para a instalação e execução do [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] no sistema operacional Windows. 
 
-O [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] introduz o suporte para o [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] no Linux. Para obter informações, consulte [[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] no Linux](../../linux/sql-server-linux-overview.md). 
+O [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] introduz o suporte para o [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] no Linux. Para obter mais informações, consulte [Requisitos de hardware e de software do [!INCLUDE[ssNoVersion](../../includes/ssNoVersion_md.md)] no Linux](../../linux/sql-server-linux-setup.md#system). 
 
 > Este tópico aplica-se ao [!INCLUDE[ss2016](../../includes/sssql15-md.md)] e posteriores. Para conteúdo relacionado a versões anteriores do SQL Server, consulte [Requisitos de Hardware e Software para instalar o SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx). 
   

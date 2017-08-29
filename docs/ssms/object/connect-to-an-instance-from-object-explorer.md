@@ -1,7 +1,7 @@
 ---
-title: "Conectar a uma instância do Pesquisador de Objetos | Microsoft Docs"
+title: Conectar ao SQL Server ou ao Banco de Dados SQL do Azure | Microsoft Docs
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -13,45 +13,55 @@ ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 53043981ec7d3d66f3a16252a5dd90a9ad323aa6
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 2d5048825b3c71ecaec5da0f6ae75277994d1697
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="connect-to-an-instance-from-object-explorer"></a>Conectar-se a uma instância do Pesquisador de Objetos
-Para gerenciar objetos usando o Pesquisador de Objetos, primeiro você deve conectar o Pesquisador de Objetos à instância que contém os objetos. Você pode conectar o Pesquisador de Objetos a várias instâncias ao mesmo tempo.  
+# <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Conectar ao SQL Server ou ao Banco de Dados SQL do Azure
+
+Para trabalhar com servidores e bancos de dados, primeiro é preciso conectar-se ao servidor. É possível conectar-se a vários servidores ao mesmo tempo.
+
+O [SSMS (SQL Server Management Studio)](../download-sql-server-management-studio-ssms.md) dá suporte a vários tipos de conexões. Este artigo fornece detalhes para a conexão ao SQL Server e ao Banco de Dados SQL do Azure (conexão a um servidor lógico SQL do Azure). Para obter informações sobre as outras opções de conexão, consulte os [links](#see-also) na parte inferior desta página.
   
-## <a name="connecting-object-explorer-to-a-server"></a>Conectando o Pesquisador de Objetos a um servidor  
-Para usar o Pesquisador de Objetos, você deve primeiro se conectar a um servidor. Clique em **Conectar** na barra de ferramentas do Pesquisador de Objetos e escolha o tipo de servidor na lista suspensa. A caixa de diálogo **Conectar ao Servidor** é exibida. Para se conectar, você deve fornecer pelo menos o nome do servidor e as informações de autenticação corretas.  
-  
-## <a name="optional-object-explorer-connection-settings"></a>Configurações de conexão opcional do Pesquisador de Objetos  
-Ao se conectar a um servidor, você pode especificar informações adicionais de conexão na caixa de diálogo **Conectar ao Servidor** . A caixa de diálogo **Conectar ao Servidor** reterá as últimas configurações usadas e conexões novas, como novas janelas do editor de códigos, e usará essas configurações.  
-  
-Para especificar configurações de conexão opcionais, siga estas etapas:  
-  
-1.  Clique em **Conectar** na barra de ferramentas do Pesquisador de Objetos e clique no tipo de servidor para fazer a conexão. A caixa de diálogo **Conectar ao Servidor** é exibida.  
-  
-2.  Na caixa **Nome do Servidor** , digite o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
-  
-3.  Clique em **Opções**. A caixa de diálogo **Conectar ao Servidor** exibe opções adicionais.  
-  
-4.  Clique na guia **Propriedades da Conexão** para definir as configurações adicionais. As configurações disponíveis variam, dependendo do tipo de servidor. As configurações a seguir estão disponíveis para o [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
-  
-    |Configuração|Description|  
-    |-----------|---------------|  
-    |**Conectar ao banco de dados**|Escolha um dos bancos de dados disponíveis no servidor. Esta lista só mostrará bancos de dados que você tem permissão para exibição.|  
-    |**Protocolo de rede**|Selecione entre Memória Compartilhada, TCP/IP ou Pipes Nomeados.|  
-    |**Tamanho do pacote de rede**|Configurar em bytes. A configuração padrão é 4096 bytes.|  
-    |**Tempo limite da conexão**|Configurar em segundos. A configuração padrão é 15 segundos.|  
-    |**Tempo limite de execução**|Configurar em segundos. A configuração padrão (0) indica que a execução nunca vai expirar.|  
-    |**Criptografar conexão**|Força a criptografia.|  
-  
-5.  Para adicionar o servidor especificado a sua lista de servidores registrados, clique na guia **Servidor Registrado** , clique no local em que você deseja exibir o servidor novo e conclua a conexão.  
-  
-> [!NOTE]  
-> Use a página **Parâmetros Adicionais de Conexão** para acrescentar mais parâmetros de conexão à cadeia de conexões. Para obter mais informações, consulte [Conectar ao servidor &#40;página Parâmetros de Conexão Adicionais&41;](../../ssms/f1-help/connect-to-server-additional-connection-parameters-page.md).  
-  
+## <a name="connecting-to-a-server"></a>Conectando a um servidor  
+
+1. Em **Pesquisador de Objetos**, clique em **Conectar > Mecanismo de Banco de Dados...**.
+
+   ![connect](../media/connect-to-server/connect-db-engine.png)
+
+1. Preencha o formulário **Conectar ao Servidor** e clique em **Conectar**:
+
+   ![conectar ao servidor](../media/connect-to-server/connect.png)
+
+1. Se estiver conectando-se a um Azure SQL Server, talvez será necessário entrar para criar uma regra de firewall. Clique em **Entrar...** (caso contrário, vá para a etapa 6 abaixo)
+
+   ![firewall](../media/connect-to-server/firewall-rule-sign-in.png)
+
+1. Depois de entrar com êxito, o formulário é preenchido previamente com o seu endereço IP específico. Se o seu endereço IP é alterado com frequência, pode ser mais fácil permitir acesso a um intervalo, portanto selecione a opção mais adequada ao seu ambiente. 
+
+   ![firewall](../media/connect-to-server/new-firewall-rule.png)
+
+1. Para criar a regra de firewall e conectar-se ao servidor, clique em **OK**.
+
+1. Após a conexão ser bem-sucedida, o servidor aparecerá no **Pesquisador de Objetos**:
+
+   ![conectado](../media/connect-to-server/connected.png)
+
+## <a name="next-steps"></a>Próximas etapas
+
+[Projetar, criar e atualizar tabelas](../visual-db-tools/design-tables-visual-database-tools.md)
+
+## <a name="see-also"></a>Consulte também
+
+[SSMS (SQL Server Management Studio)](../sql-server-management-studio-ssms.md)  
+[Baixar o SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
+
+[Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
+[Serviços de Integração](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
+[Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
+[Armazenamento do Azure](../f1-help/connect-to-microsoft-azure-storage.md)  
 
