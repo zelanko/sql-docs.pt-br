@@ -40,7 +40,6 @@
 # [Transformação Contagem de Linhas](row-count-transformation.md)  
 # [Transformação Amostragem de Linhas](row-sampling-transformation.md)  
 # [Componente Script](script-component.md)  
-## [Selecionar Tipo de Componente Script](select-script-component-type.md)  
 # [Transformação Dimensão de Alteração Lenta](slowly-changing-dimension-transformation.md)  
 ## [Configurar saídas por meio do Assistente para Dimensões de Alteração Lenta](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
 ## [Ajuda F1 do Assistente para Dimensões de Alteração Lenta](slowly-changing-dimension-wizard-f1-help.md)  
