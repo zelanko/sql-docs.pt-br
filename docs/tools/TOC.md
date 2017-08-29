@@ -8,12 +8,12 @@
 
 # [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)
 # [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)
-# [dta](../tools/dta/dta-utility.md)
+# [Orientador de Otimização do Mecanismo de Banco de Dados (dta)](../tools/dta/dta-utility.md)
 # [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)
-# [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)
+# [Service Broker (ssbdiagnose)](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)
 
 # [Utilitários do prompt de comando](command-prompt-utility-reference-database-engine.md)  
-## [Utilitário bcp](bcp-utility.md)  
+## [Utilitário de cópia em massa (bcp)](bcp-utility.md)  
 ## [Utilitário SqlLocalDB](sqllocaldb-utility.md)  
 ## [Utilitário osql](osql-utility.md)  
 ## [Utilitário Profiler](profiler-utility.md)  
