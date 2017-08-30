@@ -26,9 +26,9 @@ ms.lasthandoff: 07/31/2017
 
 
 
-A Microsoft atualiza alguns de seus artigos existentes no site de documentação [Docs.Microsoft.com](http://docs.microsoft.com/) todos os dias. Este artigo exibe trechos de artigos atualizados recentemente. Links para novos artigos também podem ser listados.
+Quase todos os dias a Microsoft atualiza alguns de seus artigos existentes no site de documentação [Docs.Microsoft.com](http://docs.microsoft.com/). Este artigo exibe trechos de artigos atualizados recentemente. Links para novos artigos também podem ser listados.
 
-Este artigo é gerado por um programa que é reexecutado periodicamente. Ocasionalmente, um trecho pode aparecer com formatação imperfeita ou como markdown do artigo de origem. Imagens nunca são exibidas aqui.
+Este artigo é gerado por um programa executado periodicamente. Ocasionalmente, um trecho pode aparecer com formatação imperfeita ou como markdown do artigo de origem. Imagens nunca são exibidas aqui.
 
 Atualizações recentes são relatadas para o intervalo de datas e o assunto a seguir:
 
@@ -47,17 +47,17 @@ Atualizações recentes são relatadas para o intervalo de datas e o assunto a s
 Os links a seguir direcionam para novos artigos que foram adicionados recentemente.
 
 
-1. [Alterar um Registro do Servidor (SQL Server Management Studio)](register-servers/change-a-server-s-registration-sql-server-management-studio.md)
-2. [Alterar o Nome de um Servidor Registrado ou de um Grupo de Servidores Registrados](register-servers/change-the-name-of-registered-server-or-registered-server-group.md)
+1. [Alterar um registro do servidor (SQL Server Management Studio)](register-servers/change-a-server-s-registration-sql-server-management-studio.md)
+2. [Alterar o nome de um servidor registrado ou de um grupo de servidores registrados](register-servers/change-the-name-of-registered-server-or-registered-server-group.md)
 3. [Conectar-se a um servidor registrado (SQL Server Management Studio)](register-servers/connect-to-a-registered-server-sql-server-management-studio.md)
-4. [Criar um Servidor de Gerenciamento Central e Grupo de Servidor](register-servers/create-a-central-management-server-and-server-group.md)
+4. [Criar um servidor de gerenciamento central e um grupo de servidores](register-servers/create-a-central-management-server-and-server-group.md)
 5. [Criar um novo servidor registrado (SQL Server Management Studio)](register-servers/create-a-new-registered-server-sql-server-management-studio.md)
 6. [Criar ou editar um grupo de servidores (SQL Server Management Studio)](register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)
 7. [Desconectar-se de um servidor registrado (SQL Server Management Studio)](register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md)
-8. [Executar Instruções em Vários Servidores Simultaneamente](register-servers/execute-statements-against-multiple-servers-simultaneously.md)
+8. [Executar instruções em vários servidores simultaneamente](register-servers/execute-statements-against-multiple-servers-simultaneously.md)
 9. [Exportar informações de servidor registrado (SQL Server Management Studio)](register-servers/export-registered-server-information-sql-server-management-studio.md)
 10. [Importar informações de servidor registrado (SQL Server Management Studio)](register-servers/import-registered-server-information-sql-server-management-studio.md)
-11. [Mover um Servidor Registrado ou Grupo de Servidores Registrados](register-servers/move-a-registered-server-or-registered-server-group.md)
+11. [Mover um servidor registrado ou um grupo de servidores registrados](register-servers/move-a-registered-server-or-registered-server-group.md)
 12. [Registrar um servidor conectado (SQL Server Management Studio)](register-servers/register-a-connected-server-sql-server-management-studio.md)
 13. [Ajuda F1 dos Servidores Registrados](register-servers/registered-servers-f1-help.md)
 14. [Registrar servidores](register-servers/register-servers.md)
@@ -69,7 +69,7 @@ Os links a seguir direcionam para novos artigos que foram adicionados recentemen
 20. [Lição 1-1 – Iniciar o SQL Server Management Studio](tutorials/lesson-1-1-start-sql-server-management-studio.md)
 21. [Lição 1-2 – Conectar-se com os Servidores Registrados e com o Pesquisador de Objetos](tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)
 22. [Lição 1-3 – Alterar o layout do ambiente](tutorials/lesson-1-3-change-the-environment-layout.md)
-23. [Lição 1-4 – Exibir a Janela de Consulta](tutorials/lesson-1-4-display-the-query-window.md)
+23. [Lição 1-4 – Exibir a janela de consulta](tutorials/lesson-1-4-display-the-query-window.md)
 24. [Lição 1-5 – Exibir a página Detalhes do Pesquisador de Objetos](tutorials/lesson-1-5-show-the-object-explorer-details-page.md)
 25. [Lição 1-6 – Selecionar o esquema de atalhos de teclado](tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme.md)
 26. [Lição 1-7 – Definir as opções de inicialização](tutorials/lesson-1-7-set-the-startup-options.md)
@@ -105,11 +105,11 @@ Essa lista compacta fornece links para todos os artigos atualizados listados na 
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>Artigo atualizado com trechos
+## <a name="updated-articles-with-excerpts"></a>Artigos atualizados com trechos
 
 Esta seção exibe os trechos de atualizações coletados de artigos que passaram por uma grande atualização recentemente.
 
-Os trechos exibidos aqui aparecerão separados de seu contexto de semântico apropriado. Além disso, às vezes um trecho é separado da sintaxe de markdown importante que circunda no artigo real. Portanto, esses trechos servem apenas como orientações gerais. Os trechos só mostram a você se vale a pena clicar e visitar o artigo real conforme seus interesses.
+Os trechos exibidos aqui aparecerão separados de seu contexto semântico apropriado. Além disso, às vezes um trecho é separado de uma sintaxe de markdown importante que envolve o artigo real. Portanto, esses trechos servem apenas como orientações gerais. Os trechos só mostram a você se vale a pena clicar e visitar o artigo real conforme seus interesses.
 
 Por essas e outras razões, não copie o código desses trechos, nem considere-os como verdade exata. Em vez disso, visite o artigo real.
 
@@ -184,11 +184,11 @@ Esta seção lista os artigos muito semelhantes a artigos atualizados recentemen
 - [Novo + Atualizado (1 + 2): documentos de **Conexão ao SQL**](../connect/new-updated-connect.md)
 - [Novo + Atualizado (6 + 0): documentos do **Mecanismo de Banco de Dados do SQL**](../database-engine/new-updated-database-engine.md)
 - [Novo + Atualizado (13 + 2): documentos do **Linux para SQL**](../linux/new-updated-linux.md)
-- [Novo + Atualizado (1 + 0): documentos do **Master Data Services (MDS) para SQL**](../master-data-services/new-updated-master-data-services.md)
-- [Novo + Atualizado (1 + 0): documentos do **Open Database Connectivity (ODBC) para SQL**](../odbc/new-updated-odbc.md)
+- [Novo + Atualizado (1 + 0): documentos do **MDS (Master Data Services) para SQL**](../master-data-services/new-updated-master-data-services.md)
+- [Novo + Atualizado (1 + 0): documentos do **ODBC (Open Database Connectivity) para SQL**](../odbc/new-updated-odbc.md)
 - [Novo + Atualizado (8 + 4): documentos de **Bancos de Dados Relacionais do SQL**](../relational-databases/new-updated-relational-databases.md)
 - [Novo + Atualizado (2 + 2): documentos do **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Novo + Atualizado (0 + 1): documentos do **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Novo + Atualizado (0 + 1): documentos do **SSMS (SQL Server Management Studio)**](../ssms/new-updated-ssms.md)
 - [Novo + Atualizado (1 + 0): documentos do **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 - [Novo + Atualizado (1 + 0): documentos de **Ferramentas para SQL**](../tools/new-updated-tools.md)
 
@@ -203,7 +203,7 @@ Esta seção lista os artigos muito semelhantes a artigos atualizados recentemen
 - [Novo + atualizado (0 + 0): documentos do **PowerShell para SQL**](../powershell/new-updated-powershell.md)
 - [Novo + Atualizado (0 + 0): documentos do **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
 - [Novo + atualizado (0 + 0): documentos de **Exemplos para SQL**](../sample/new-updated-sample.md)
-- [Novo + Atualizado (0 + 0): documentos do **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Novo + Atualizado (0 + 0): documentos do **SSDT (SQL Server Data Tools)**](../ssdt/new-updated-ssdt.md)
 - [Novo + atualizado (0 + 0): documentos do **SSMA (SQL Server Migration Assistant)**](../ssma/new-updated-ssma.md)
 - [Novo + atualizado (0 + 0): documentos do **XQuery para SQL**](../xquery/new-updated-xquery.md)
 

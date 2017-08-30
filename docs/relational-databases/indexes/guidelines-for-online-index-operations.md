@@ -98,7 +98,7 @@ Para obter mais informações, consulte [Disk Space Requirements for Index DDL O
 
 As diretrizes a seguir se aplicam ao executar a recompilação de índice online retomável:
 -   Gerenciamento, planejamento e extensão das janelas de manutenção de índice. Você pode pausar e reiniciar uma operação de recompilação de índice várias vezes para adequar-se às janelas de manutenção.
-- Recuperação de falhas de recompilação de índice (tais como failovers de banco de dados ou ficar sem espaço em disco).
+- Recuperação de falhas de recompilação de índice (tais como failovers de banco de dados ou falta de espaço em disco).
 - Quando uma operação de índice está em pausa, tanto o índice original quanto um recém-criado exigem espaço em disco e precisam ser atualizados durante as operações de DML.
 
 - Habilita o truncamento de logs durante uma operação de recompilação de índice (esta operação não pode ser realizada para uma operação de índice online regular).
@@ -109,7 +109,7 @@ As diretrizes a seguir se aplicam ao executar a recompilação de índice online
 >
 
 Em geral, não há nenhuma diferença de desempenho entre a recompilação de índice online retomável e não retomável. Quando você atualiza um índice retomável enquanto uma operação de recompilação de índice está em pausa:
-- Para cargas de trabalho primariamente de leitura, o impacto no desempenho é irrisório. 
+- Para cargas de trabalho primariamente de leitura, o impacto no desempenho é insignificante. 
 - Para cargas de trabalho com atualização intensa, você pode observar certa degradação da taxa de transferência (nossos testes mostram menos de 10% de degradação).
 
 Em geral, não há nenhuma diferença na qualidade de desfragmentação entre a recompilação de índice online retomável e não retomável.

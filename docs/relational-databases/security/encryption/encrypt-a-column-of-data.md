@@ -56,7 +56,7 @@ ms.lasthandoff: 07/31/2017
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
 
-Para usar os exemplos a seguir, você precisa ter uma chave mestra de banco de dados. Se seu banco de dados ainda não tiver uma chave mestra de banco de dados, crie uma executando a instrução a seguir e fornecendo sua senha:   
+Para usar os exemplos a seguir, você precisa ter uma chave mestra de banco de dados. Se o seu banco de dados ainda não tiver uma chave mestra de banco de dados, crie uma executando a seguinte instrução e fornecendo sua senha:   
 ```  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  

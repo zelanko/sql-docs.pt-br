@@ -24,7 +24,7 @@ ms.lasthandoff: 07/31/2017
 # <a name="import-json-documents-into-sql-server"></a>Importar documentos JSON para o SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Este tópico descreve como importar arquivos JSON para o SQL Server. No momento, há muitos documentos JSON armazenados em arquivos. Informações de log de aplicativos em arquivos JSON, sensores que geram informações são armazenadas em arquivos JSON e assim por diante. É importante ser capaz de ler os dados JSON armazenados em arquivos, carregar os dados no SQL Server e analisá-los.
+Este tópico descreve como importar arquivos JSON para o SQL Server. No momento, há muitos documentos JSON armazenados em arquivos. Informações de log de aplicativos em arquivos JSON, sensores que geram informações armazenadas em arquivos JSON e assim por diante. É importante ser capaz de ler os dados JSON armazenados em arquivos, carregar os dados no SQL Server e analisá-los.
 
 ## <a name="import-a-json-document-into-a-single-column"></a>Importar um documento JSON em uma única coluna
 **OPENROWSET(BULK)** é uma função com valor de tabela que pode ler dados de qualquer arquivo na unidade local ou rede, se o SQL Server tiver acesso de leitura para esse local. Ela retorna uma tabela com uma única coluna com o conteúdo do arquivo. Há várias opções que podem ser usadas com a função OPENROWSET(BULK), como separadores. Mas, no caso mais simples, você pode simplesmente carregar todo o conteúdo de um arquivo como um valor de texto. (Esse valor grande único é conhecido como um objeto grande de caractere único ou SINGLE_CLOB.) 
@@ -38,7 +38,7 @@ SELECT BulkColumn
 
 OPENJSON(BULK) lê o conteúdo do arquivo e o retorna em `BulkColumn`.
 
-Também é possível carregar o conteúdo do arquivo para uma variável local ou uma tabela, conforme mostrado no exemplo a seguir:
+Também é possível carregar o conteúdo do arquivo em uma variável local ou uma tabela, conforme mostrado no exemplo a seguir:
 
 ```sql
 -- Load file contents into a variable
@@ -54,7 +54,7 @@ SELECT BulkColumn
 Depois de carregar o conteúdo do arquivo JSON, você pode salvar o texto JSON em uma tabela.
 
 ## <a name="import-multiple-json-documents"></a>Importar vários documentos JSON
-Use a mesma abordagem para carregar um conjunto de arquivos JSON do sistema de arquivos para variáveis locais um por vez. Suponha que os arquivos são nomeados como `book<index>.json`.
+Use a mesma abordagem para carregar um conjunto por vez de arquivos JSON do sistema de arquivos em uma variável local. Suponha que os arquivos são nomeados como `book<index>.json`.
   
 ```sql
 DECLARE @i INT = 1
@@ -124,7 +124,7 @@ FROM 'data/product.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
-Para obter mais informações e um exemplo OPENROWSET, consulte [Carregar arquivos do Armazenamento de Blobs do Azure para o Banco de Dados SQL do Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/).
+Para obter mais informações e um exemplo OPENROWSET, consulte [Carregar arquivos do Armazenamento de Blobs do Azure no Banco de Dados SQL do Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/).
 
 ## <a name="parse-json-documents-into-rows-and-columns"></a>Analisar documentos JSON em linhas e colunas
 Em vez de ler um arquivo JSON inteiro como um único valor, pode ser útil analisá-lo e retornar os livros no arquivo e suas propriedades em linhas e colunas. Este exemplo usa um arquivo JSON [deste site](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json) que contém uma lista de livros.
@@ -172,7 +172,7 @@ Neste exemplo, OPENROWSET(BULK) lê o conteúdo do arquivo e passa esse conteúd
 Agora você pode retornar esta tabela ao usuário ou carregar os dados em outra tabela.
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Saiba mais sobre o suporte interno a JSON no SQL Server  
-Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure por Jovan Popovic, gerente de programas da Microsoft.
+Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure, publicadas por Jovan Popovic, gerente de programas da Microsoft.
   
 ## <a name="see-also"></a>Consulte também
 [Converter dados JSON em linhas e colunas com OPENJSON](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)

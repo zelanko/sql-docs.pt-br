@@ -45,7 +45,7 @@ Ao usar a função **OPENJSON** sem fornecer um esquema explícito para os resul
 
 O **OPENJSON** retorna cada propriedade do objeto JSON ou cada elemento da matriz como uma linha separada.  
 
-Veja um exemplo rápido que usa **OPENJSON** com o esquema padrão ou seja, sem a cláusula opcional **WITH** e retorna uma linha para cada propriedade do objeto JSON.  
+Veja um exemplo rápido que usa **OPENJSON** com o esquema padrão, ou seja, sem a cláusula opcional **WITH**, e retorna uma linha para cada propriedade do objeto JSON.  
  
 **Exemplo**
 ```sql  
@@ -145,7 +145,7 @@ A função **OPENJSON** está disponível somente no **nível de compatibilidade
 `ALTER DATABASE <DatabaseName> SET COMPATIBILITY_LEVEL = 130`  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Saiba mais sobre o suporte interno a JSON no SQL Server  
-Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure por Jovan Popovic, gerente de programas da Microsoft.
+Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure, publicadas por Jovan Popovic, gerente de programas da Microsoft.
   
 ## <a name="see-also"></a>Consulte também  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  

@@ -64,7 +64,7 @@ Falha no logon do usuário '<nome_do_usuário>'."
 ## <a name="additional-error-information"></a>Informações adicionais de erro  
 Para aumentar a segurança, a mensagem de erro que é retornada ao cliente oculta deliberadamente a natureza do erro de autenticação. No entanto, no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um erro correspondente contém um estado de erro que mapeia até uma condição de falha na autenticação. Compare o estado de erro com a lista a seguir para determinar a razão da falha no logon.  
   
-|Estado|Description|  
+|Estado|Descrição|  
 |---------|---------------|  
 |1|Informações de erro não disponíveis. Esse estado geralmente significa que você não tem permissão para receber os detalhes do erro. Contate o administrador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para obter mais informações.|  
 |2|A ID do usuário não é válida.|  

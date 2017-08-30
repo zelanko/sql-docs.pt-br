@@ -1,5 +1,5 @@
 ---
-title: "Atualizado — Documentos do SQL Server | Microsoft Docs"
+title: "Atualizado – Documentos do SQL Server | Microsoft Docs"
 description: "Exibir trechos de conteúdo atualizado para documentação do SQL Server alterada recentemente."
 services: na
 documentationcenter: 
@@ -26,9 +26,9 @@ ms.lasthandoff: 07/31/2017
 
 
 
-A Microsoft atualiza alguns de seus artigos existentes no site de documentação [Docs.Microsoft.com](http://docs.microsoft.com/) todos os dias. Este artigo exibe trechos de artigos atualizados recentemente. Links para novos artigos também podem ser listados.
+Quase todos os dias a Microsoft atualiza alguns de seus artigos existentes no site de documentação [Docs.Microsoft.com](http://docs.microsoft.com/). Este artigo exibe trechos de artigos atualizados recentemente. Links para novos artigos também podem ser listados.
 
-Este artigo é gerado por um programa que é reexecutado periodicamente. Ocasionalmente, um trecho pode aparecer com formatação imperfeita ou como markdown do artigo de origem. Imagens nunca são exibidas aqui.
+Este artigo é gerado por um programa executado periodicamente. Ocasionalmente, um trecho pode aparecer com formatação imperfeita ou como markdown do artigo de origem. Imagens nunca são exibidas aqui.
 
 Atualizações recentes são relatadas para o intervalo de datas e o assunto a seguir:
 
@@ -65,11 +65,11 @@ Essa lista compacta fornece links para todos os artigos atualizados listados na 
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>Artigo atualizado com trechos
+## <a name="updated-articles-with-excerpts"></a>Artigos atualizados com trechos
 
 Esta seção exibe os trechos de atualizações coletados de artigos que passaram por uma grande atualização recentemente.
 
-Os trechos exibidos aqui aparecerão separados de seu contexto de semântico apropriado. Além disso, às vezes um trecho é separado da sintaxe de markdown importante que circunda no artigo real. Portanto, esses trechos servem apenas como orientações gerais. Os trechos só mostram a você se vale a pena clicar e visitar o artigo real conforme seus interesses.
+Os trechos exibidos aqui aparecerão separados de seu contexto semântico apropriado. Além disso, às vezes um trecho é separado de uma sintaxe de markdown importante que envolve o artigo real. Portanto, esses trechos servem apenas como orientações gerais. Os trechos só mostram a você se vale a pena clicar e visitar o artigo real conforme seus interesses.
 
 Por essas e outras razões, não copie o código desses trechos, nem considere-os como verdade exata. Em vez disso, visite o artigo real.
 
@@ -180,8 +180,8 @@ Esta seção lista os artigos muito semelhantes a artigos atualizados recentemen
 - [Novo + Atualizado (1 + 2): documentos de **Conexão ao SQL**](../connect/new-updated-connect.md)
 - [Novo + Atualizado (6 + 0): documentos do **Mecanismo de Banco de Dados do SQL**](../database-engine/new-updated-database-engine.md)
 - [Novo + Atualizado (13 + 2): documentos do **Linux para SQL**](../linux/new-updated-linux.md)
-- [Novo + Atualizado (1 + 0): documentos do **Master Data Services (MDS) para SQL**](../master-data-services/new-updated-master-data-services.md)
-- [Novo + Atualizado (1 + 0): documentos do **Open Database Connectivity (ODBC) para SQL**](../odbc/new-updated-odbc.md)
+- [Novo + Atualizado (1 + 0): documentos do **MDS (Master Data Services) para SQL**](../master-data-services/new-updated-master-data-services.md)
+- [Novo + Atualizado (1 + 0): documentos do **ODBC (Open Database Connectivity) para SQL**](../odbc/new-updated-odbc.md)
 - [Novo + Atualizado (8 + 4): documentos de **Bancos de Dados Relacionais do SQL**](../relational-databases/new-updated-relational-databases.md)
 - [Novo + Atualizado (2 + 2): documentos do **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
 - [Novo + Atualizado (0 + 1): documentos do **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
@@ -199,7 +199,7 @@ Esta seção lista os artigos muito semelhantes a artigos atualizados recentemen
 - [Novo + atualizado (0 + 0): documentos do **PowerShell para SQL**](../powershell/new-updated-powershell.md)
 - [Novo + Atualizado (0 + 0): documentos do **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
 - [Novo + atualizado (0 + 0): documentos de **Exemplos para SQL**](../sample/new-updated-sample.md)
-- [Novo + Atualizado (0 + 0): documentos do **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Novo + Atualizado (0 + 0): documentos do **SSDT (SQL Server Data Tools)**](../ssdt/new-updated-ssdt.md)
 - [Novo + atualizado (0 + 0): documentos do **SSMA (SQL Server Migration Assistant)**](../ssma/new-updated-ssma.md)
 - [Novo + atualizado (0 + 0): documentos do **XQuery para SQL**](../xquery/new-updated-xquery.md)
 
