@@ -62,8 +62,8 @@ As tabelas habilitadas para o Stretch têm as seguintes limitações.
   
 -   Tabelas com otimização de memória  
   
- ### <a name="data-types"></a>Tipos de dados  
- -   text, ntext e image  
+### <a name="data-types"></a>Tipos de dados  
+-   text, ntext e image  
   
 -   timestamp  
   
