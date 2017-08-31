@@ -100,7 +100,7 @@ Além disso, considere ajustar a configuração de servidor **MAXDOP (grau máxi
 * Para servidores que tenham o NUMA configurado, o grau máximo de paralelismo não deve exceder o número de CPUs atribuídas a cada nó NUMA. Isso ocorre porque é mais provável que a consulta use memória local de 1 nó NUMA, o que pode melhorar o tempo de acesso à memória.  
 * Para os servidores que têm o hyperthreading habilitado e foram fabricados até 2009 (antes da melhoria do recurso de hyperthreading), o valor de MAXDOP não deve exceder o número de processadores físicos, em vez de processadores lógicos.
 
-Para obter mais informações sobre o grau máximo da opção de paralelismo, veja [Configurar a opção grau máximo de paralelismo da configuração de servidor](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+Para obter mais informações sobre o grau máximo da opção de paralelismo, veja [Configurar a opção de configuração de servidor grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>Configurar o número máximo de threads de trabalho
 

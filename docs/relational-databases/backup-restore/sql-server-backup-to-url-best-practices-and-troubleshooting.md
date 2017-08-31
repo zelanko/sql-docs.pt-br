@@ -100,7 +100,7 @@ ms.lasthandoff: 07/31/2017
 -   Ao fazer a restauração em um backup compactado, você verá o seguinte erro:  
   
     -   `SqlException 3284 occurred. Severity: 16 State: 5`  
-        **A marca de arquivo de mensagem no dispositivo `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` não está alinhada. Emita novamente a instrução Restore com o mesmo tamanho de bloco usado para criar o conjunto de backup: '65536' parece um valor possível.**  
+        **A marca de arquivo da mensagem no dispositivo `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` não está alinhada. Emita novamente a instrução Restore com o mesmo tamanho de bloco usado para criar o conjunto de backup: '65536' parece um valor possível.**  
   
          Para corrigir esse erro, emita novamente a instrução **BACKUP** com **BLOCKSIZE = 65536** especificada.  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 07/31/2017
   
  **Configurações de proxy padrão não escolhidas:**  
   
- Às vezes as configurações padrão não são selecionadas, causando erros de autenticação de proxy como aquele mostrado abaixo:*Ocorreu um erro de E/S irrecuperável no arquivo “`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`” O Backup para a URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: o servidor remoto retornou um erro: (407)* **Autenticação de proxy necessária**.  
+ Às vezes as configurações padrão não são selecionadas, causando erros de autenticação de proxy como:*Ocorreu um erro de E/S irrecuperável no arquivo “`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`” O Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: o servidor remoto retornou um erro: (407)* **Autenticação de proxy necessária**.  
   
  Para resolver esse problema, crie um arquivo de configuração que permite que o processo de Backup para URL use as configurações de proxy padrão usando as seguintes etapas:  
   

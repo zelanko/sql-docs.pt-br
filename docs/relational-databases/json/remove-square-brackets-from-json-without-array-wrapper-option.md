@@ -27,7 +27,7 @@ ms.lasthandoff: 07/31/2017
 # <a name="remove-square-brackets-from-json---withoutarraywrapper-option"></a>Remover os colchetes da opção do JSON – WITHOUT_ARRAY_WRAPPER
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Para remover, por padrão, os colchetes que envolvem a saída JSON da cláusula **FOR JSON** , especifique a opção **WITHOUT_ARRAY_WRAPPER** . Use essa opção para gerar um resultado de linha única para um único objeto JSON como saída em vez de uma matriz com um único elemento.
+Para remover, por padrão, os colchetes que envolvem a saída JSON da cláusula **FOR JSON** , especifique a opção **WITHOUT_ARRAY_WRAPPER** . Use essa opção com um resultado de linha única para gerar um único objeto JSON como saída em vez de uma matriz com um único elemento.
 
 Se você usar essa opção com um resultado de várias linhas, a saída resultante não será um JSON válido devido aos vários elementos e aos colchetes ausentes.  
   
@@ -110,7 +110,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 ```  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Saiba mais sobre o suporte interno a JSON no SQL Server  
-Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure por Jovan Popovic, gerente de programas da Microsoft.
+Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure, publicadas por Jovan Popovic, gerente de programas da Microsoft.
   
 ## <a name="see-also"></a>Consulte também  
  [Cláusula FOR &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  

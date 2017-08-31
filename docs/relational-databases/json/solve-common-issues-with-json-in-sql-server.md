@@ -124,7 +124,7 @@ FROM OPENJSON(@json)
 SELECT myText FROM OPENJSON(@json) WITH (myText NVARCHAR(MAX) '$.description')  
 ```  
 
-### <a name="handle-duplicate-keys-with-openjson-instead-of-jsonvalue"></a>Lide com chaves duplicadas com OPENJSON em vez de JSON_VALUE
+### <a name="handle-duplicate-keys-with-openjson-instead-of-jsonvalue"></a>Use chaves duplicadas com OPENJSON em vez de JSON_VALUE
  **Pergunta.** Tenho chaves duplicadas no texto JSON. JSON_VALUE retorna apenas a primeira chave encontrada no caminho. Como retornar todas as chaves que têm o mesmo nome?  
   
  **Resposta.** As funções escalares JSON internas retornam somente a primeira ocorrência do objeto referenciado. Se você precisar de mais de uma chave, use a função com valor de tabela OPENJSON, conforme é mostrado no exemplo a seguir.  
@@ -149,5 +149,5 @@ WHERE [key] = 'color'
  **Resposta.** Coloque-os entre aspas em caminhos JSON. Por exemplo, `JSON_VALUE(@json, '$."$info"."First Name".value')`.
  
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Saiba mais sobre o suporte interno a JSON no SQL Server  
-Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure por Jovan Popovic, gerente de programas da Microsoft.
+Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure, publicadas por Jovan Popovic, gerente de programas da Microsoft.
 

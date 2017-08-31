@@ -26,7 +26,7 @@ ms.lasthandoff: 07/31/2017
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Tabelas temporais geralmente são úteis em cenários que exigem o acompanhamento do histórico de alterações de dados.    
-Recomendamos que você considere as tabelas temporais nos seguintes casos de uso visando maiores benefícios de produtividade.  
+Recomendamos que você considere as tabelas temporais nos seguintes casos de uso visando mais benefícios de produtividade.  
   
 ## <a name="data-audit"></a>Auditoria de dados  
  Use controle temporal da versão do sistema em tabelas que armazenam informações críticas para as quais você precisa acompanhar o que foi alterado, quando o foi e para executar análise forense dados em qualquer ponto no tempo.    
@@ -179,7 +179,7 @@ Exemplos dos cenários reais que se enquadram bem nesta categoria são o gerenci
  O exemplo de código a seguir cria ProductInventory como uma tabela temporal com controle da versão do sistema in-memory com um índice columnstore clusterizado na tabela de histórico (que, na verdade, substitui o índice de repositório de linha criado por padrão):  
   
 > [!NOTE]  
->  Verifique se seu banco de dados permite a criação de tabelas com otimização de memória. Consulte [Criando uma tabela com otimização de memória e um procedimento armazenado compilado nativamente](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
+>  Verifique se o seu banco de dados permite a criação de tabelas com otimização de memória. Consulte [Criando uma tabela com otimização de memória e um procedimento armazenado compilado nativamente](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
 ```  
 USE TemporalProductInventory  
@@ -445,7 +445,7 @@ FROM CTE
   
  Tabelas temporais com controle da versão do sistema no SQL Server 2016 podem ser usadas para reduzir drasticamente a complexidade do seu código, já que o histórico de dados é preservado automaticamente. Considerando sua implementação usando duas tabelas, as tabelas temporais no SQL Server 2016 estão mais próximas do SCD Tipo 4. No entanto, como consultas temporais permitem que você referencie apenas a tabela atual, você também pode considerar o uso de tabelas temporais em ambientes nos quais você planeja usar o SCD Tipo 2.  
   
- Para converter sua tabela de dimensões regular para SCD, crie uma nova ou alterar uma já existente, tornando-a uma tabela temporal com controle da versão do sistema. Se sua tabela de dimensões existente contiver dados históricos, crie uma tabela separada, mova dados históricos para lá e mantenha as versões atuais de dimensão (real) em sua tabela de dimensões original. Em seguida, use sintaxe ALTER TABLE para converter sua tabela de dimensões em uma tabela temporal com controle da versão do sistema com uma tabela de histórico predefinida.  
+ Para converter sua tabela de dimensões regular para SCD, crie uma nova ou alterar uma já existente, tornando-a uma tabela temporal com controle da versão do sistema. Se a sua tabela de dimensões existente contiver dados históricos, crie uma tabela separada, mova dados históricos para lá e mantenha as versões atuais de dimensão (real) em sua tabela de dimensões original. Em seguida, use sintaxe ALTER TABLE para converter sua tabela de dimensões em uma tabela temporal com controle da versão do sistema com uma tabela de histórico predefinida.  
   
  O exemplo a seguir ilustra o processo e pressupõe que a tabela de dimensões DimLocation já tenha ValidFrom e ValidTo como colunas não anuláveis datetime2, que são populadas pelo processo de ETL:  
   

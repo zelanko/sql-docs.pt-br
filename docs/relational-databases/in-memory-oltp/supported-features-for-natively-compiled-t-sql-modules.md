@@ -247,7 +247,7 @@ Há suporte para as instruções DML a seguir.
 ##  <a name="los"></a> Limitações na classificação  
  Você pode classificar maior que 8.000 linhas em uma consulta que usa [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md). No entanto, sem a [Cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) pode classificar até 8.000 linhas (menos linhas se houver junções).  
 
- Se sua consulta usar o operador [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), você pode especificar até 8192 linhas para o operador TOP. Se você especificar mais de 8192 linhas, receberá a mensagem de erro: **Msg 41398, Nível 16, Estado 1, Procedimento *\<procedureName>*, Linha *\<lineNumber>* O operador TOP pode retornar no máximo 8192 linhas; *\<number>* foi solicitado.**  
+ Se a sua consulta usar o operador [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), você pode especificar até 8192 linhas para o operador TOP. Se você especificar mais de 8192 linhas, receberá a mensagem de erro: **Msg 41398, Nível 16, Estado 1, Procedimento *\<procedureName>*, Linha *\<lineNumber>* O operador TOP pode retornar no máximo 8192 linhas; *\<number>* foi solicitado.**  
 
  Se você não tiver uma cláusula TOP, poderá classificar qualquer número de linhas com ORDER BY.  
 
