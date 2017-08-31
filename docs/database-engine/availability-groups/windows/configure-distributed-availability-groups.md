@@ -1,7 +1,7 @@
 ---
 title: "Configurar um grupo de disponibilidade distribuído (Grupo de Disponibilidade AlwaysOn) | Microsoft Docs"
 ms.custom: 
-ms.date: 07/12/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 97c42036e08fa8d1d8e7152b7fb89908472efe6b
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: 01f0e6dfacfab0d8528d3b399267c45afef95a11
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="configure-distributed-availability-group"></a>Configurar um grupo de disponibilidade distribuído  
 
-Para criar um grupo de disponibilidade distribuído, você deve criar um grupo de disponibilidade e um ouvinte em cada WSFC (Cluster de Failover do Windows Server). Em seguida, você os combina em um grupo de disponibilidade distribuída. As etapas a seguir fornecem um exemplo básico em Transact-SQL. Este exemplo não abrange todos os detalhes da criação de grupos de disponibilidade e ouvintes, focando apenas nos requisitos básicos. 
+Para criar um grupo de disponibilidade distribuído, você deve criar um grupo de disponibilidade e um ouvinte em cada WSFC (Cluster de Failover do Windows Server). Em seguida, você combina esses grupos de disponibilidade em um grupo de disponibilidade distribuída. As etapas a seguir fornecem um exemplo básico em Transact-SQL. Este exemplo não abrange todos os detalhes da criação de grupos de disponibilidade e ouvintes, focando apenas nos requisitos básicos. 
 
 Para obter uma visão geral técnica dos grupos de disponibilidade distribuídos, consulte [Grupos de disponibilidade distribuídos](distributed-availability-groups.md).   
 
@@ -31,13 +31,13 @@ Para obter uma visão geral técnica dos grupos de disponibilidade distribuídos
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Definir os ouvintes do ponto de extremidade para escutar em todos os endereços IP
 
-Verifique se os pontos de extremidade podem se comunicar entre os diferentes grupos de disponibilidade no grupo de disponibilidade distribuído. Se um grupo de disponibilidade for definido como uma rede específica no ponto de extremidade, o AG distribuído não funcionará corretamente. Em cada servidor que hospedará uma réplica no grupo de disponibilidade distribuído, configure o ouvinte como `LISTENER_IP = ALL`. 
+Verifique se os pontos de extremidade podem se comunicar entre os diferentes grupos de disponibilidade no grupo de disponibilidade distribuído. Se um grupo de disponibilidade for definido como uma rede específica no ponto de extremidade, o grupo de disponibilidade distribuída não funcionará corretamente. Em cada servidor que hospeda uma réplica no grupo de disponibilidade distribuído, configure o ouvinte como `LISTENER_IP = ALL`. 
 
 #### <a name="create-a-listener-to-listen-to-all-ip-addresses"></a>Criar um ouvinte para escutar em todos os endereços IP
 
 Por exemplo, o script a seguir cria um ponto de extremidade do ouvinte na porta TCP 5022 que escuta em todos os endereços IP.  
 
-```tsql
+```sql
 CREATE ENDPOINT [aodns-hadr] 
     STATE=STARTED
     AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
@@ -53,7 +53,7 @@ GO
 
 Por exemplo, o script a seguir altera um ponto de extremidade do ouvinte para que ele escute em todos os endereços IP.  
 
-```tsql
+```sql
 ALTER ENDPOINT [aodns-hadr] 
     AS TCP (LISTENER_IP = ALL)
 GO
@@ -64,7 +64,7 @@ GO
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>Criar o grupo de disponibilidade primário no primeiro cluster  
 Crie um grupo de disponibilidade primário no primeiro WSFC.   Neste exemplo, o grupo de disponibilidade é denominado `ag1` para o banco de dados `db1`.      
   
-```tsql  
+```sql  
 CREATE AVAILABILITY GROUP [ag1]   
 FOR DATABASE db1   
 REPLICA ON N'server1' WITH (ENDPOINT_URL = N'TCP://server1.contoso.com:5022',  
@@ -83,34 +83,40 @@ GO
   
 ```  
   
-Observe que o exemplo usa a propagação direta, em que **SEEDING_MODE** é definido como **AUTOMATIC** para as réplicas e o grupo de disponibilidade distribuído. Isso significa que, uma vez estabelecidos, as réplicas secundárias e o grupo de disponibilidade secundário serão preenchidos automaticamente sem a necessidade de backup e restauração manual do banco de dados primário.  
+>[!NOTE]
+>O exemplo anterior usa a propagação direta, em que **SEEDING_MODE** é definido como **AUTOMATIC** para as réplicas e o grupo de disponibilidade distribuído. Essa configuração define que as réplicas secundárias e o grupo de disponibilidade secundário serão preenchidos automaticamente sem a necessidade de backup e restauração manual do banco de dados primário.  
   
 ### <a name="join-the-secondary-replicas-to-the-primary-availability-group"></a>Unir as réplicas secundárias ao grupo de disponibilidade primário  
-Qualquer réplica secundária deve ser unida ao grupo de disponibilidade com **ALTER AVAILABILITY GROUP** usando a opção **JOIN** . Como a propagação direta é usada neste exemplo, você também deve chamar  **ALTER AVAILABILITY GROUP** com a opção **GRANT CREATE ANY DATABASE** . Isso permite que o grupo de disponibilidade crie o banco de dados e comece propagá-lo automaticamente a partir da réplica primária.  
+Qualquer réplica secundária deve ser unida ao grupo de disponibilidade com **ALTER AVAILABILITY GROUP** usando a opção **JOIN** . Como a propagação direta é usada neste exemplo, você também deve chamar  **ALTER AVAILABILITY GROUP** com a opção **GRANT CREATE ANY DATABASE** . Essa configuração permite que o grupo de disponibilidade crie o banco de dados e comece propagá-lo automaticamente da réplica primária.  
   
 Neste exemplo, os seguintes comandos são executados na réplica secundária, `server2`, para unir o grupo de disponibilidade `ag1` . O grupo de disponibilidade então pode criar bancos de dados na réplica secundária.  
   
-```tsql  
+```sql  
 ALTER AVAILABILITY GROUP [ag1] JOIN   
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE  
 GO  
 ```  
+
+>[!NOTE]
+>Quando o grupo de disponibilidade cria um banco de dados em uma réplica secundária, ele define o proprietário do banco de dados como a conta que executou a instrução `ALTER AVAILABILITY GROUP` para conceder permissão para criar qualquer banco de dados. Para obter mais informações, consulte [Conceder permissão para criar banco de dados na réplica secundária do grupo de disponibilidade](automatic-seeding-secondary-replicas.md#grantCreate).
   
 ### <a name="create-a-listener-for-the-primary-availability-group"></a>Criar um ouvinte para o grupo de disponibilidade primário  
 
 Em seguida, crie um ouvinte para o grupo de disponibilidade primário no primeiro WSFC. Neste exemplo, o ouvinte é denominado `ag1-listener`. Para obter instruções detalhadas sobre como criar um ouvinte, veja [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
-```  
+```sql
 ALTER AVAILABILITY GROUP [ag1]    
-    ADD LISTENER 'ag1-listener' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173);    
+    ADD LISTENER 'ag1-listener' ( 
+        WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , 
+        PORT = 60173);    
 GO  
 ```  
   
 
 ## <a name="create-second-availability-group"></a>Criar o segundo grupo de disponibilidade  
- Em seguida, no segundo WSFC, crie um segundo grupo de disponibilidade, `ag2`. Nesse caso, o banco de dados não é especificado, pois ele será propagado automaticamente a partir do grupo de disponibilidade primário.  
+ Em seguida, no segundo WSFC, crie um segundo grupo de disponibilidade, `ag2`. Neste caso, o banco de dados não é especificado, pois ele é propagado automaticamente do grupo de disponibilidade primário.  
   
-```tsql  
+```sql  
 CREATE AVAILABILITY GROUP [ag2]   
 FOR   
 REPLICA ON N'server3' WITH (ENDPOINT_URL = N'TCP://server3.contoso.com:5022',   
@@ -129,12 +135,12 @@ GO
 ```  
   
 > [!NOTE]  
->  Observe que o grupo de disponibilidade secundário deve usar o mesmo ponto de extremidade de espelhamento do banco de dados (no exemplo, a porta 5022). Caso contrário, a replicação será interrompida após um failover local.  
+> O grupo de disponibilidade secundário deve usar o mesmo ponto de extremidade de espelhamento do banco de dados (no exemplo, a porta 5022). Caso contrário, a replicação será interrompida após um failover local.  
   
 ### <a name="join-the-secondary-replicas-to-the-secondary-availability-group"></a>Unir as réplicas secundárias ao grupo de disponibilidade secundário  
  Neste exemplo, os seguintes comandos são executados na réplica secundária, `server4`, para unir o grupo de disponibilidade `ag2` . O grupo de disponibilidade então pode criar bancos de dados na réplica secundária para oferecer suporte à propagação direta.  
   
-```tsql  
+```sql  
 ALTER AVAILABILITY GROUP [ag2] JOIN   
 ALTER AVAILABILITY GROUP [ag2] GRANT CREATE ANY DATABASE  
 GO  
@@ -152,7 +158,7 @@ GO
 ## <a name="create-distributed-availability-group-on-first-cluster"></a>Criar um grupo de disponibilidade distribuído no primeiro cluster  
  No primeiro WSFC, crie um grupo de disponibilidade distribuído (denominado `distributedag` neste exemplo). Use o comando **CREATE AVAILABILITY GROUP** com a opção **DISTRIBUTED** . O parâmetro **AVAILABILITY GROUP ON** especifica os grupos de disponibilidade membros, `ag1` e `ag2`.  
   
-```tsql  
+```sql  
 CREATE AVAILABILITY GROUP [distributedag]  
    WITH (DISTRIBUTED)   
    AVAILABILITY GROUP ON  
@@ -179,7 +185,7 @@ GO
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>Ingressar o grupo de disponibilidade distribuído no segundo cluster  
  Em seguida, una o grupo de disponibilidade distribuída no segundo WSFC.  
   
-```tsql  
+```sql  
 ALTER AVAILABILITY GROUP [distributedag]   
    JOIN   
    AVAILABILITY GROUP ON  
@@ -201,17 +207,17 @@ GO
 ```  
 
   
-## <a name="failover-to-a-secondary-availability-group"></a>Failover para um grupo de disponibilidade secundário  
-No momento, apenas o failover manual é permitido. A seguinte instrução Transact-SQL força o failover no grupo de disponibilidade distribuído denominado `distributedag`:  
+## <a name="failover"></a> Fazer failover em um grupo de disponibilidade secundário  
+No momento, apenas o failover manual é permitido. A seguinte instrução Transact-SQL faz failover de um grupo de disponibilidade distribuído denominado `distributedag`:  
 
 
 1. Defina o modo de disponibilidade como confirmação síncrona para o grupo de disponibilidade secundário. 
     
-      ```tsql  
+      ```sql  
       ALTER AVAILABILITY GROUP [distributedag] 
       MODIFY 
       AVAILABILITY GROUP ON
-      'ag1' WITH  
+      'ag1' WITH 
          ( 
           LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
           AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
@@ -230,7 +236,7 @@ No momento, apenas o failover manual é permitido. A seguinte instrução Transa
   
 1. Aguarde até que o status do grupo de disponibilidade distribuído seja alterado para `SYNCHRONIZED`. Execute a consulta a seguir no SQL Server que hospeda a réplica primária do grupo de disponibilidade primário. 
     
-      ```tsql  
+      ```sql  
       SELECT ag.name
              , drs.database_id
              , drs.group_id
@@ -246,40 +252,40 @@ No momento, apenas o failover manual é permitido. A seguinte instrução Transa
 
 1. No SQL Server que hospeda a réplica primária do grupo de disponibilidade primário, defina a função do grupo de disponibilidade distribuído como `SECONDARY`. 
 
-      ```tsql
-      ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 
-      ```  
+    ```sql
+    ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 
+    ```  
 
-   >[NOTE!] Neste ponto, o grupo de disponibilidade distribuído não está disponível.
+    Neste ponto, o grupo de disponibilidade distribuído não está disponível.
 
 1. Teste a prontidão de failover. Execute a seguinte consulta:
 
-      ```tsql
-      SELECT ag.name, 
-             drs.database_id, 
-             drs.group_id, 
-             drs.replica_id, 
-             drs.synchronization_state_desc, 
-             drs.end_of_log_lsn 
-      FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
-      WHERE drs.group_id = ag.group_id; 
-      ```  
-    O grupo de disponibilidade está pronto para failover quando o **synchronization_state_desc** é `SYNCHRONIZED` e **end_of_log_lsn** é igual para ambos os grupos de disponibilidade. 
+    ```sql
+    SELECT ag.name, 
+        drs.database_id, 
+        drs.group_id, 
+        drs.replica_id, 
+        drs.synchronization_state_desc, 
+        drs.end_of_log_lsn 
+    FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
+    WHERE drs.group_id = ag.group_id; 
+    ```  
+    O grupo de disponibilidade estará pronto para failover quando **synchronization_state_desc** for `SYNCHRONIZED` e **end_of_log_lsn** for igual para ambos os grupos de disponibilidade. 
 
-1. Excute failover do grupo de disponibilidade primário para o grupo de disponibilidade secundário. Execute o comando a seguir no SQL Server que hospeda a réplica primária do grupo de disponibilidade secundário. 
+1. Faça failover do grupo de disponibilidade primário para o grupo de disponibilidade secundário. Execute o comando a seguir no SQL Server que hospeda a réplica primária do grupo de disponibilidade secundário. 
 
-      ```tsql
-      ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
-      ```  
+    ```sql
+    ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
+    ```  
 
-   >[NOTE!] Após essa etapa, o grupo de disponibilidade distribuído estará disponível.
+    Após esta etapa, o grupo de disponibilidade distribuído estará disponível.
       
-Depois de concluir as etapas acima, será executado failover do grupo de disponibilidade distribuído sem perda de dados. A Microsoft recomenda alterar o modo de disponibilidade de volta para ASYNCHRONOUS_COMMIT se os grupos de disponibilidade estiverem em uma distância geográfica que causa latência. 
+Depois de concluir as etapas acima, será executado failover do grupo de disponibilidade distribuído sem perda de dados. Se os grupos de disponibilidade estiverem em uma distância geográfica que causa latência, altere o modo de disponibilidade de volta para ASYNCHRONOUS_COMMIT. 
   
 ## <a name="remove-a-distributed-availability-group"></a>Remover um grupo de disponibilidade distribuída  
  A seguinte instrução Transact-SQL remove um grupo de disponibilidade distribuído denominado `distributedag`:  
   
-```tsql  
+```sql  
 DROP AVAILABILITY GROUP [distributedag]  
 ```  
 
@@ -293,7 +299,7 @@ Você pode criar um grupo de disponibilidade distribuído usando um grupo de dis
  
  A DDL a seguir cria esse grupo de disponibilidade distribuído. 
 
-```tsql  
+```sql  
 CREATE AVAILABILITY GROUP [SQLFCIDAG]  
    WITH (DISTRIBUTED)   
    AVAILABILITY GROUP ON  
@@ -313,13 +319,13 @@ CREATE AVAILABILITY GROUP [SQLFCIDAG]
       );   
 ```  
 
->[NOTE!] A URL do ouvinte é o VNN da instância da FCI primária.
+A URL do ouvinte é o VNN da instância da FCI primária.
 
 ## <a name="manually-fail-over-fci-in-distributed-availability-group"></a>Fazer failover manual da FCI no grupo de disponibilidade distribuído
 
 Para fazer failover manual do grupo de disponibilidade da FCI, atualize o grupo de disponibilidade distribuído para que ele reflita a alteração da URL do ouvinte. Por exemplo, execute a seguinte DDL nos AGs primário e secundário de SQLFCIAG:
 
-```tsql  
+```sql  
 ALTER AVAILABILITY GROUP [SQLFCIDAG]  
    MODIFY AVAILABILITY GROUP ON  
  'SQLFCIAG' WITH    

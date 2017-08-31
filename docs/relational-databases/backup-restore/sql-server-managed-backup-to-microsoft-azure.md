@@ -13,12 +13,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 529ae718a28d99104d8835ecaf2cdc4eb5fcc63f
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 9061cf182fd1bc245de22ea2bade18b93e231042
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup gerenciado do SQL Server no Microsoft Azure
@@ -111,6 +111,10 @@ ms.lasthandoff: 06/22/2017
  No caso de um banco de dados, se houver um trabalho de backup de banco de dados completo existente, o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] aguardará a conclusão do trabalho atual antes da realização de um backup de banco de dados completo no mesmo banco de dados. Da mesma forma, somente um backup de log de transações pode ser executado em um determinado momento. No entanto, um backup completo de banco de dados e um backup de log de transações podem ser executados simultaneamente. As falhas são registradas como Eventos Estendidos.  
   
  Se mais de 10 backups de bancos de dados completos simultâneos estiverem agendados, um aviso será emitido por meio do canal de depuração de Eventos Estendidos. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] mantém uma fila de prioridade para os bancos de dados restantes que precisam de backup até que todos os backups sejam agendados e concluídos.  
+
+> [!NOTE]
+> Não há suporte para backup gerenciado do SQL Server com servidores proxy.
+>
   
 ##  <a name="support_limits"></a> Suporte  
  As seguintes limitações e considerações de suporte são específicas para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  

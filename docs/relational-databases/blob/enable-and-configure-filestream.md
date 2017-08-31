@@ -1,7 +1,7 @@
 ---
 title: Habilitar e configurar FILESTREAM | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/23/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,14 +16,14 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7bee35abc8b2c450a9bd1badb89b18eb31128be8
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 19f5d560766c4bc70bd16fcff4f9f12f23b80146
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="enable-and-configure-filestream"></a>Habilitar e configurar FILESTREAM
+# <a name="enable-and-configure-filestream"></a>Habilitar e configurar o FILESTREAM
   Antes de começar a usar FILESTREAM, é necessário habilitá-lo na instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Este tópico descreve como habilitar o FILESTREAM usando o SQL Server Configuration Manager.  
   
 ##  <a name="enabling"></a> Habilitando FILESTREAM  
@@ -73,9 +73,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Use clusters de NTFS de 64 KB. Volumes compactados devem ser definidos como clusters de NTFS de 4 KB.  
   
--   Desabilite a indexação em volumes de FILESTREAM e defina **disablelastaccess** . Para definir **disablelastaccess**, use o utilitário **fsutil** do Windows.  
+-   Desabilite a indexação em volumes de FILESTREAM e defina **disablelastaccess**. Para definir **disablelastaccess**, use o utilitário do Windows **fsutil**.  
   
--   Desabilite a verificação antivírus de volumes FILESTREAM quando ela for desnecessária. Se a verificação antivírus for necessária, evite políticas de configuração que excluirão automaticamente os arquivos incorretos.  
+-   Desabilite a verificação antivírus de volumes FILESTREAM quando ela não for necessária. Se a verificação antivírus for necessária, evite políticas de configuração que excluirão automaticamente os arquivos incorretos.  
   
 -   Configure e ajuste o nível de RAID para tolerância a falhas e para o desempenho exigido por um aplicativo.  
   
@@ -97,3 +97,4 @@ ms.lasthandoff: 06/22/2017
 -   Gerenciamento e políticas de espaço não são diretamente suportados por FILESTREAM. No entanto, você pode gerenciar espaço e aplicar políticas indiretamente atribuindo cada grupo de arquivos de FILESTREAM a um volume separado e usando os recursos do gerenciamento do volume.  
   
   
+

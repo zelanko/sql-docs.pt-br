@@ -1,8 +1,10 @@
 ---
 title: Inicializar automaticamente o grupo de disponibilidade AlwaysOn | Microsoft Docs
 ms.custom: 
-ms.date: 11/14/2016
-ms.prod: sql-server-2016
+ms.date: 08/23/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,21 +17,22 @@ author: MikeRayMSFT
 ms.author: v-saume
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b30513c845d486875840eabd66506497182eb692
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 6184d0cfedb90d16f1a7c1af109003908e481a89
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Inicializar automaticamente o grupo de disponibilidade AlwaysOn
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
+O SQL Server 2016 introduz a propagação automática de grupos de disponibilidade. Quando você cria um grupo de disponibilidade com propagação automática, o SQL Server cria automaticamente as réplicas secundárias para cada banco de dados no grupo. Não é mais necessário fazer backup e restaurar manualmente as réplicas secundárias. Para habilitar a propagação automática, crie o grupo de disponibilidade com o T-SQL ou use a versão mais recente do SQL Server Management Studio.
 
- O SQL Server 2016 introduz a propagação automática de grupos de disponibilidade. Quando você cria um grupo de disponibilidade com propagação automática, o SQL Server cria automaticamente as réplicas secundárias para cada banco de dados no grupo. Com a propagação automática, não é mais necessário fazer backup e restaurar manualmente as réplicas secundárias. Para habilitar a propagação automática, crie o grupo de disponibilidade com o T-SQL.
+Para obter mais informações de histórico, consulte [Propagação automática para réplicas secundárias](automatic-seeding-secondary-replicas.md).
  
 ## <a name="prerequisites"></a>Pré-requisitos
 
-A propagação automática exige que os dados e o caminho do arquivo de log sejam os mesmos em cada instância do SQL Server que participa do grupo de disponibilidade. 
+No SQL Server 2016, a propagação automática exige que os dados e o caminho do arquivo de log sejam os mesmos em cada instância do SQL Server que participa do grupo de disponibilidade. No SQL Server 2017, você pode usar caminhos diferentes, porém a Microsoft recomenda usar os mesmos caminhos quando todas as réplicas estão hospedadas na mesma plataforma (por exemplo Windows ou Linux). Os grupos de disponibilidade da plataforma cruzada têm caminhos diferentes para as réplicas. Para obter detalhes, consulte [Layout de disco](automatic-seeding-secondary-replicas.md#disklayout).
 
 A propagação do grupo de disponibilidade se comunica por meio do ponto de extremidade do espelhamento de banco de dados. Abra as regras de firewall de entrada para a porta do ponto de extremidade de espelhamento em cada servidor.
 
@@ -41,99 +44,103 @@ Para criar um grupo de disponibilidade com propagação automática, defina `SEE
 
 O exemplo a seguir cria um grupo de disponibilidade em um cluster de failover do Windows Server de dois nós. Antes de executar os scripts, atualize os valores de seu ambiente.
 
-1. Crie os pontos de extremidade. Cada servidor precisará de um ponto de extremidade. O script a seguir cria um ponto de extremidade que usa a porta TCP 5022 para o ouvinte. Defina `<endpoint_name>` e `LISTENER_PORT` para que correspondam ao seu ambiente e execute o script:
+1. Crie os pontos de extremidade. Cada servidor precisa de um ponto de extremidade. O script a seguir cria um ponto de extremidade que usa a porta TCP 5022 para o ouvinte. Defina `<endpoint_name>` e `LISTENER_PORT` para que correspondam ao seu ambiente e execute o script em ambos os servidores:
 
-    ```
-    --Create the endpoint on both servers
-    -- Run this script twice, once on each server. 
+    ```sql
     CREATE ENDPOINT [<endpoint_name>] 
-    STATE=STARTED
-    AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
-    FOR DATA_MIRRORING (ROLE = ALL, AUTHENTICATION = WINDOWS NEGOTIATE, ENCRYPTION = REQUIRED ALGORITHM AES)
+        STATE=STARTED
+        AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
+        FOR DATA_MIRRORING (
+            ROLE = ALL, 
+            AUTHENTICATION = WINDOWS NEGOTIATE, 
+            ENCRYPTION = REQUIRED ALGORITHM AES
+            )
     GO
     ```
 
-1. Crie o grupo de disponibilidade. O script a seguir cria o grupo de disponibilidade. Atualize os valores para o nome do grupo, nomes de servidor e nomes de domínio e execute-os na instância primária do SQL Server.  
+1. Crie o grupo de disponibilidade. O script a seguir cria o grupo de disponibilidade. Atualize os valores entre colchetes angulares `<>` para o nome do grupo, os nomes de servidor e os nomes de domínio e execute-os na instância primária do SQL Server.  
 
-    ```
-    ---Run On Primary
+    ```sql
     CREATE AVAILABILITY GROUP [<availability_group_name>]
-    FOR DATABASE db1
-    REPLICA ON'<*primary_server*>'
-    WITH (ENDPOINT_URL = N'TCP://<primary_server>.<fully_qualified_domain_name>:5022', 
-    FAILOVER_MODE = AUTOMATIC, 
-    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-    BACKUP_PRIORITY = 50, 
-    SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
-    SEEDING_MODE = AUTOMATIC),
-    N'<secondary_server>' WITH (ENDPOINT_URL = N'TCP://<secondary_server>.<fully_qualified_domain_name>:5022', 
-    FAILOVER_MODE = AUTOMATIC, 
-    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-    BACKUP_PRIORITY = 50, 
-    SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
-    SEEDING_MODE = AUTOMATIC);
+        FOR DATABASE db1
+        REPLICA ON'<*primary_server*>'
+        WITH (ENDPOINT_URL = N'TCP://<primary_server>.<fully_qualified_domain_name>:5022', 
+            FAILOVER_MODE = AUTOMATIC, 
+            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+            BACKUP_PRIORITY = 50, 
+            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
+            SEEDING_MODE = AUTOMATIC),
+        N'<secondary_server>' WITH (ENDPOINT_URL = N'TCP://<secondary_server>.<fully_qualified_domain_name>:5022', 
+            FAILOVER_MODE = AUTOMATIC, 
+            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+            BACKUP_PRIORITY = 50, 
+            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
+            SEEDING_MODE = AUTOMATIC);
     GO
     ``` 
 
-1. Ingresse o servidor secundário no grupo de disponibilidade e conceda permissão ao grupo de disponibilidade para criar bancos de dados. Execute o seguinte script na instância secundária do SQL Server: 
+1. Ingresse na instância de servidor secundária no grupo de disponibilidade e conceda permissão para criar bancos de dados ao grupo de disponibilidade. Atualize o script a seguir, substitua os valores entre colchetes angulares `<>` para seu ambiente e execute-o na instância de réplica secundária do SQL Server: 
  
-    ```
-    --Run on Secondary Replica to join to the availability group
+    ```sql
     ALTER AVAILABILITY GROUP [<availability_group_name>] JOIN
     GO  
     ALTER AVAILABILITY GROUP [<availability_group_name>] GRANT CREATE ANY DATABASE
     GO
     ```
 
-O SQL Server criará automaticamente a réplica de banco de dados no servidor secundário. Se o banco de dados for grande, poderá levar algum tempo até a conclusão da sincronização do banco de dados. Se um banco de dados estiver em um grupo de disponibilidade configurado para a propagação automática, você poderá consultar a exibição do sistema `sys.dm_hadr_automatic_seeding` para monitorar o progresso da propagação. A consulta a seguir retorna uma linha para cada banco de dados que está em um grupo de disponibilidade configurado para a propagação automática.
+O SQL Server cria automaticamente a réplica do banco de dados no servidor secundário. Se o banco de dados for grande, poderá levar algum tempo até a conclusão da sincronização do banco de dados. Se um banco de dados estiver em um grupo de disponibilidade configurado para a propagação automática, você poderá consultar a exibição do sistema `sys.dm_hadr_automatic_seeding` para monitorar o progresso da propagação. A consulta a seguir retorna uma linha para cada banco de dados que está em um grupo de disponibilidade configurado para a propagação automática.
 
-```
- SELECT start_time,
-       ag.name,
-       db.database_name,
-       current_state,
-       performed_seeding,
-       failure_state,
-       failure_state_desc
- FROM sys.dm_hadr_automatic_seeding autos 
-    JOIN sys.availability_databases_cluster db ON autos.ag_db_id = db.group_database_id
-    JOIN sys.availability_groups ag ON autos.ag_id = ag.group_id
+```sql 
+SELECT start_time,
+    ag.name,
+    db.database_name,
+    current_state,
+    performed_seeding,
+    failure_state,
+    failure_state_desc
+FROM sys.dm_hadr_automatic_seeding autos 
+    JOIN sys.availability_databases_cluster db 
+        ON autos.ag_db_id = db.group_database_id
+    JOIN sys.availability_groups ag 
+        ON autos.ag_id = ag.group_id
 ```
 
 ## <a name="prevent-automatic-seeding-after-an-availability-group"></a>Impedir a propagação automática após um grupo de disponibilidade
 
 Para impedir temporariamente a réplica primária de propagar mais bancos de dados na réplica secundária, é possível negar a permissão do grupo de disponibilidade para criar bancos de dados. Execute a consulta a seguir na instância que hospeda a réplica secundária para negar a permissão do grupo de disponibilidade para criar bancos de dados de réplica.
 
-```
-ALTER AVAILABILITY GROUP [<availability_group_name>] DENY CREATE ANY DATABASE
+```sql
+ALTER AVAILABILITY GROUP [<availability_group_name>] 
+    DENY CREATE ANY DATABASE
 GO
 ```
 
 
 ## <a name="enable-automatic-seeding-on-an-existing-availability-group"></a>Habilitar a propagação automática em um grupo de disponibilidade existente
 
-É possível definir a propagação automática em um banco de dados existente. O comando a seguir alterará um grupo de disponibilidade para usar a propagação automática. 
+É possível definir a propagação automática em um banco de dados existente. O comando a seguir altera um grupo de disponibilidade para usar a propagação automática. Execute o seguinte comando na réplica primária.
 
-```
+```sql
 ALTER AVAILABILITY GROUP [<availability_group_name>] 
-MODIFY REPLICA ON '<primary_node>' WITH (SEEDING_MODE = AUTOMATIC)
+    MODIFY REPLICA ON '<secondary_node>' 
+    WITH (SEEDING_MODE = AUTOMATIC)
 GO
 ```
 
-Isso forçará um banco de dados a reiniciar a propagação, se necessário. Por exemplo, se a propagação falhar devido a espaço em disco insuficiente na réplica secundária, você poderá executar `ALTER AVAILABILITY GROUP ... WITH (SEEDING_MODE=AUTOMATIC)` para reiniciar a propagação depois de adicionar espaço livre.
+O comando anterior força um banco de dados a reiniciar a propagação, se necessário. Por exemplo, se a propagação falhar devido a espaço em disco insuficiente na réplica secundária, execute `ALTER AVAILABILITY GROUP ... WITH (SEEDING_MODE=AUTOMATIC)` para reiniciar a propagação depois de adicionar espaço livre.
 
 ## <a name="stop-automatic-seeding"></a>Interromper a propagação automática
 
-Para interromper a propagação automática de um grupo de disponibilidade, execute o seguinte script na instância que hospeda a réplica primária:
+Para interromper a propagação automática de um grupo de disponibilidade, execute o seguinte script na réplica primária:
 
-```
+```sql
 ALTER AVAILABILITY GROUP [<availability_group_name>] 
-    MODIFY REPLICA ON '<primary_node>'   
+    MODIFY REPLICA ON '<secondary_node>'   
     WITH (SEEDING_MODE = MANUAL)
 GO
 ```
 
-Isso cancelará todas as réplicas que estão atualmente sendo propagadas e impedirá que o SQL Server inicialize automaticamente as réplicas neste grupo de disponibilidade. Isso não interromperá a sincronização das réplicas que já foram inicializadas. 
+O script anterior cancela todas as réplicas que estão sendo propagadas atualmente e impede que o SQL Server inicialize automaticamente as réplicas neste grupo de disponibilidade. Isso não interrompe a sincronização das réplicas que já foram inicializadas. 
 
 
 ## <a name="monitor-automatic-seeding-availability-group"></a>Monitorar o grupo de disponibilidade com propagação automática
@@ -146,13 +153,13 @@ As exibições do sistema a seguir mostram o status da propagação automática 
 
 Na réplica primária, consulte `sys.dm_hadr_automatic_seeding` para verificar o status do processo de propagação automática. A exibição retorna uma linha para cada processo de propagação. Por exemplo:
 
-``` 
+```sql
 SELECT start_time, 
-        completion_time
-        is_source,
-        current_state,
-        failure_state,
-        failure_state_desc
+    completion_time
+    is_source,
+    current_state,
+    failure_state,
+    failure_state_desc
 FROM sys.dm_hadr_automatic_seeding
 ```
  
@@ -160,7 +167,7 @@ FROM sys.dm_hadr_automatic_seeding
 
 Na réplica primária, consulte `sys.dm_hadr_physical_seeding_stats` DMV para ver as estatísticas físicas de cada processo de propagação que está sendo executado no momento. A seguinte consulta retorna linhas quando a propagação está em execução:
 
-```
+```sql
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
 
@@ -174,7 +181,7 @@ A propagação automática tem novos eventos estendidos para acompanhar a altera
 
 Por exemplo, este script cria uma sessão de eventos estendidos que captura eventos relacionados à propagação automática: 
 
-```
+```sql
 CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER 
     ADD EVENT sqlserver.hadr_automatic_seeding_state_transition,
     ADD EVENT sqlserver.hadr_automatic_seeding_timeout,
@@ -186,8 +193,20 @@ CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_progress,
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
-    ADD TARGET package0.event_file(SET filename=N’autoseed.xel’,max_file_size=(5),max_rollover_files=(4))
-WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=ON)
+    ADD TARGET package0.event_file(
+        SET filename=N’autoseed.xel’,
+            max_file_size=(5),
+            max_rollover_files=(4)
+        )
+WITH (
+    MAX_MEMORY=4096 KB,
+    EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
+    MAX_DISPATCH_LATENCY=30 SECONDS,
+    MAX_EVENT_SIZE=0 KB,
+    MEMORY_PARTITION_MODE=NONE,
+    TRACK_CAUSALITY=OFF,
+    STARTUP_STATE=ON
+    )
 GO 
 
 ALTER EVENT SESSION AlwaysOn_autoseed ON SERVER STATE=START
@@ -216,22 +235,22 @@ A seguinte tabela lista os eventos estendidos relacionados à propagação autom
 
 ### <a name="other-troubleshooting-considerations"></a>Outras considerações sobre solução de problemas
 
-**Monitorar quando a propagação automática será concluída**
+**Monitorar no momento da propagação automática**
 
 Consulte `sys.dm_hadr_physical_seeding_stats` para obter os processos de propagação automática em execução. A exibição retorna uma linha para cada banco de dados. Por exemplo:
 
-```
+```sql
 SELECT local_database_name, 
-       role_desc, 
-       internal_state_desc, 
-       transfer_rate_bytes_per_second, 
-       transferred_size_bytes, 
-       database_size_bytes, 
-       start_time_utc, 
-       end_time_utc, estimate_time_complete_utc, 
-       total_disk_io_wait_time_ms, 
-       total_network_wait_time_ms, 
-       is_compression_enabled 
+    role_desc, 
+    internal_state_desc, 
+    transfer_rate_bytes_per_second, 
+    transferred_size_bytes, 
+    database_size_bytes, 
+    start_time_utc, 
+    end_time_utc, estimate_time_complete_utc, 
+    total_disk_io_wait_time_ms, 
+    total_network_wait_time_ms, 
+    is_compression_enabled 
 FROM sys.dm_hadr_physical_seeding_stats
 ```
 
@@ -240,14 +259,14 @@ FROM sys.dm_hadr_physical_seeding_stats
 
 Quando um banco de dados não aparece como parte de um grupo de disponibilidade com a propagação automática habilitada, provavelmente, a propagação automática falhou. Isso impede a adição do banco de dados ao grupo de disponibilidade nas réplicas primária e secundária. Consulte `sys.dm_hadr_automatic_seeding` nas réplicas primária e secundária. Por exemplo, execute a consulta a seguir para identificar o estado de falha da propagação automática.
 
-```
+```sql
 SELECT start_time, 
-       completion_time, 
-       is_source, 
-       current_state, 
-       failure_state, 
-       failure_state_desc, 
-       error_code 
+    completion_time, 
+    is_source, 
+    current_state, 
+    failure_state, 
+    failure_state_desc, 
+    error_code 
 FROM sys.dm_hadr_automatic_seeding
 ```
 
@@ -255,7 +274,7 @@ FROM sys.dm_hadr_automatic_seeding
 
 O SQL Server usa um número fixo de threads para a propagação automática. Na instância primária, o SQL Server usa um thread por LUN para ler as alterações. Na instância secundária, o SQL Server usa um thread por LUN para inicializar o banco de dados.
 
-Defina o sinalizador de rastreamento 9567 na réplica primária para habilitar a compactação do fluxo de dados durante a propagação automática. Isso poderá reduzir de forma significativa o tempo de transferência da propagação automática; no entanto, também aumentará o uso da CPU. Para obter mais informações, veja [Ajustar a compactação do grupo de disponibilidade](../../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md). 
+Defina o sinalizador de rastreamento 9567 na réplica primária para habilitar a compactação do fluxo de dados durante a propagação automática. Isso pode reduzir de forma significativa o tempo de transferência da propagação automática. No entanto, também aumenta o uso da CPU. Para obter mais informações, veja [Ajustar a compactação do grupo de disponibilidade](../../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md). 
 
 
 ## <a name="when-not-to-use-automatic-seeding"></a>Quando não usar a propagação automática
@@ -265,7 +284,7 @@ Antes de adicionar um banco de dados a um grupo de disponibilidade com propagaç
 
 ## <a name="resources"></a>Recursos
 
-[CREATE AVAILABILITY GROUP (Transact-SQL) –](https://msdn.microsoft.com/library/ff878399.aspx)
+[CREATE AVAILABILITY GROUP (Transact-SQL)](https://msdn.microsoft.com/library/ff878399.aspx)
 
 [Guia de solução de problemas e monitoramento dos grupos de disponibilidade AlwaysOn](http://technet.microsoft.com/library/dn135328.aspx)
 

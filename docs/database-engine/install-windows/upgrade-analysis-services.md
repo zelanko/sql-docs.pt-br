@@ -54,7 +54,7 @@ ms.lasthandoff: 08/02/2017
  Os níveis de compatibilidade de bancos de dados associados a um determinado servidor permanecem iguais, a menos que você os altere manualmente.  
   
 ### <a name="in-place-upgrade"></a>Atualização in-loco  
- É possível atualizar uma instância existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and, as part of the upgrade process, aupara omatically migrate existing databases from the old instance para o the new instance. Como os metadados e os dados binários são incompatíveis entre as duas versões, você reterá os dados depois de atualizar e não precisará migrar os dados manualmente.  
+ É possível atualizar uma instância existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e, como parte do processo de atualização, migrar automaticamente os bancos de dados existentes da instância antiga para a nova instância. Como os metadados e os dados binários são incompatíveis entre as duas versões, você reterá os dados depois de atualizar e não precisará migrar os dados manualmente.  
   
  Para atualizar uma instância existente, execute a Instalação e especifique o nome da instância existente como o nome da nova instância.  
   

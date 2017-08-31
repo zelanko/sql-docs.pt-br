@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: 0052444959911431f68bb40fd5059fb45b0d3412
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 24f0d590630fb04ff45557dfb72616a8e1795f7e
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
@@ -37,7 +37,7 @@ O processamento de uma única instrução SQL é o modo mais básico para o [!IN
 
 Uma instrução `SELECT` não é de procedimento; ela não determina as etapas exatas que o servidor de banco de dados deve usar para recuperar os dados solicitados. Isso significa que o servidor de banco de dados deve analisar a instrução para determinar o modo mais eficiente para extrair os dados solicitados. Isso é conhecido como otimização da instrução `SELECT` . O componente que faz isso é chamado de Otimizador de Consulta. A entrada do Otimizador de Consulta consiste em uma consulta, o esquema de banco de dados (definições de tabela e de índice) e as estatísticas de banco de dados. A saída do Otimizador de Consulta é um plano de execução de consulta, às vezes chamado de plano de consulta ou apenas de plano. O conteúdo de um plano de consulta é descrito posteriormente com mais detalhe neste tópico.
 
-The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` são ilustradas no seguinte diagrama: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+As entradas e as saídas do otimizador de consulta durante a otimização de uma única instrução `SELECT` são ilustradas no seguinte diagrama: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 Uma instrução `SELECT` define apenas o seguinte:  
 * O formato do conjunto de resultados. Isso é especificado principalmente na lista de seleção. Porém, outras cláusulas como `ORDER BY` e `GROUP BY` também afetam a forma final do conjunto de resultados.
@@ -210,19 +210,19 @@ O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 > [!NOTE] 
 > As dicas `READCOMMITTED` e `READCOMMITTEDLOCK` sempre são dicas diferentes consideradas nesse contexto, independentemente do nível de isolamento da transação atual.
  
-Diferentemente dos requisitos das opções `SET` options and table hints, these are the same rules that the Query Optimizer uses to determine whether a table index covers a query. Não é necessário especificar mais nada na consulta para uma exibição indexada a ser utilizada.
+Diferentemente dos requisitos das opções `SET` e dicas de tabela, essas são as mesmas regras que o otimizador de consulta usa para determinar se um índice de tabela abrange uma consulta. Não é necessário especificar mais nada na consulta para uma exibição indexada a ser utilizada.
 
-Uma consulta não precisa referenciar explicitamente uma exibição indexada na cláusula `FROM` clause for the Query Optimizer to use the indexed view. Se a consulta tiver referências a colunas nas tabelas base, que também estão presentes na exibição indexada, e o otimizador de consulta estimar que o uso da exibição indexada fornecerá o menor custo de mecanismo de acesso, o otimizador de consulta escolherá a exibição indexada, semelhante ao modo pelo qual escolhe índices de tabela base quando eles não são referenciados diretamente em uma consulta. O otimizador de consulta pode escolher a exibição quando ela contém colunas que não são referenciadas pela consulta, contanto que a exibição ofereça a opção de menor custo para cobrir uma ou mais das colunas especificadas na consulta.
+Uma consulta não precisa referenciar explicitamente uma exibição indexada na cláusula `FROM` para que o otimizador de consulta use a exibição indexada. Se a consulta tiver referências a colunas nas tabelas base, que também estão presentes na exibição indexada, e o otimizador de consulta estimar que o uso da exibição indexada fornecerá o menor custo de mecanismo de acesso, o otimizador de consulta escolherá a exibição indexada, semelhante ao modo pelo qual escolhe índices de tabela base quando eles não são referenciados diretamente em uma consulta. O otimizador de consulta pode escolher a exibição quando ela contém colunas que não são referenciadas pela consulta, contanto que a exibição ofereça a opção de menor custo para cobrir uma ou mais das colunas especificadas na consulta.
 
-The Query Optimizer treats an indexed view referenced in the `FROM` como uma exibição padrão. O otimizador de consulta expande a definição da exibição da consulta no início do processo de otimização. Depois, a correspondência da exibição indexada é executada. A exibição indexada pode ser usada no plano de execução final selecionado pelo Otimizador de Consulta ou, em vez disso, o plano pode materializar os dados necessários da exibição acessando as tabelas base referenciadas pela exibição. O Otimizador de Consulta escolhe a alternativa de menor custo.
+O otimizador de consulta trata uma exibição indexada referenciada na cláusula `FROM` como uma exibição padrão. O otimizador de consulta expande a definição da exibição da consulta no início do processo de otimização. Depois, a correspondência da exibição indexada é executada. A exibição indexada pode ser usada no plano de execução final selecionado pelo Otimizador de Consulta ou, em vez disso, o plano pode materializar os dados necessários da exibição acessando as tabelas base referenciadas pela exibição. O Otimizador de Consulta escolhe a alternativa de menor custo.
 
 #### <a name="using-hints-with-indexed-views"></a>Usando dicas com exibições indexadas
 
 Você pode evitar que os índices de exibições sejam usados para uma consulta usando a dica de consulta `EXPAND VIEWS` . Ou, então, pode usar a dica de tabela `NOEXPAND` para forçar o uso de um índice para uma exibição indexada especificada na cláusula `FROM` de uma consulta. Porém, deve deixar o otimizador de consulta determinar dinamicamente os melhores métodos de acesso a serem usados para cada consulta. Limite seu uso de `EXPAND` e `NOEXPAND` a casos específicos em que os testes têm mostrado que melhoram o desempenho consideravelmente.
 
-A opção `EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 
+A opção `EXPAND VIEWS` especifica que o otimizador de consulta não usa nenhum índice de exibição para a consulta inteira. 
 
-Quando `NOEXPAND` is specified for a view, the Query Optimizer considers using any indexes defined on the view. O`NOEXPAND` especificado com a cláusula `INDEX()` clause forces the Query Optimizer to use the specified indexes. O`NOEXPAND` pode ser especificado apenas para uma exibição indexada e não pode ser especificado para uma exibição não indexada.
+Quando `NOEXPAND` é especificado para uma exibição, o otimizador de consulta considera o uso de qualquer índice definido na exibição. O`NOEXPAND` especificado com a cláusula `INDEX()` opcional força o otimizador de consulta a usar os índices especificados. O`NOEXPAND` pode ser especificado apenas para uma exibição indexada e não pode ser especificado para uma exibição não indexada.
 
 Quando `NOEXPAND` ou `EXPAND VIEWS` não é especificado em uma consulta que contém uma exibição, a exibição é expandida para acessar as tabelas subjacentes. Se a consulta que compõe a exibição tiver quaisquer dicas de tabela, as dicas serão propagadas às tabelas subjacentes. (Esse processo é explicado com mais detalhes em Resolução de exibição.) Contanto que o conjunto de dicas existente nas tabelas subjacentes da exibição sejam idênticos, a consulta será elegível para ser correspondida a uma exibição indexada. Na maioria das vezes, essas dicas corresponderão umas às outras porque estão sendo diretamente herdadas da exibição. No entanto, se a consulta referenciar tabelas em vez de exibições e as dicas aplicadas diretamente nessas tabelas não forem idênticas, a consulta não será elegível para correspondência com uma exibição indexada. Se as dicas `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK`ou `XLOCK` forem aplicadas às tabelas referenciadas na consulta depois da expansão da exibição, a consulta não será elegível para a correspondência da exibição indexada.
 
@@ -468,7 +468,7 @@ WHERE ProductSubcategoryID = 4;
 Ao processar instruções SQL complexas, o mecanismo relacional pode ter dificuldade em determinar quais expressões podem ser parametrizadas. Para aumentar a capacidade do mecanismo relacional de corresponder instruções SQL complexas a planos de execução não utilizados existentes, explicitamente especifique os parâmetros que usam marcadores sp_executesql ou de parâmetro. 
 
 > [!NOTE]
-> Quando os operadores aritméticos +, -, *, / ou % são usados para executar conversão implícita ou explícita de valores constantes int, smallint, tinyint ou bigint para os tipos de dados float, real, decimal ou numérico, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aplica regras específicas para calcular o tipo e a precisão dos resultados da expressão. Porém, essas regras diferem, dependendo se a consulta for parametrizada ou não. Portanto, as expressões semelhantes em consultas podem, em alguns casos, produzir resultados diferentes.
+> Quando os operadores aritméticos +, -, \*, /, ou % são usados para executar conversão implícita ou explícita de valores constantes int, smallint, tinyint ou bigint para os tipos de dados float, real, decimal ou numérico, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aplica regras específicas para calcular o tipo e a precisão dos resultados da expressão. Porém, essas regras diferem, dependendo se a consulta for parametrizada ou não. Portanto, as expressões semelhantes em consultas podem, em alguns casos, produzir resultados diferentes.
 
 No comportamento padrão de parametrização simples, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parametriza uma classe relativamente pequena de consultas. No entanto, você pode especificar que todas as consultas de um banco de dados sejam parametrizadas, sujeitas a determinadas limitações, configurando a opção `PARAMETERIZATION` do comando `ALTER DATABASE` para `FORCED`. Isso pode melhorar o desempenho dos bancos de dados que suportam grandes volumes de consultas simultâneas, reduzindo a frequência de compilações de consultas.
 
@@ -503,7 +503,7 @@ Além disso, as cláusulas de consulta a seguir não são parametrizadas. Observ
 * O argumento style de uma cláusula `CONVERT` .
 * As constantes de número inteiro dentro de uma cláusula `IDENTITY` .
 * Constantes especificadas usando a sintaxe da extensão ODBC.
-* Expressões de constantes desdobráveis que são argumentos dos operadores +, -, *, / e %. Ao considerar a elegibilidade da parametrização forçada, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera que uma expressão é de constante dobrável quando qualquer uma das seguintes condições é verdadeira:  
+* Expressões de constantes desdobráveis que são argumentos dos operadores +, -, \*, / e %. Ao considerar a elegibilidade da parametrização forçada, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera que uma expressão é de constante dobrável quando qualquer uma das seguintes condições é verdadeira:  
   * Nenhuma coluna, variável ou subconsulta é exibida na expressão.  
   * A expressão contém uma cláusula `CASE` .  
 * Argumentos para cláusulas de dica de consulta. Incluem o argumento `number_of_rows` da dica de consulta `FAST` , o argumento `number_of_processors` da dica de consulta `MAXDOP` e o argumento number da dica de consulta `MAXRECURSION` .

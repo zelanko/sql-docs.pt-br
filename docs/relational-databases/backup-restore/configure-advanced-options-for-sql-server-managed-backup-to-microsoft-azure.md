@@ -14,11 +14,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6c41a2a22b034f36ebe96508e978096b0ed29524
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: c247025da3c103105e41162cc614b1986796bb42
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurar opções avançadas de backup gerenciado do SQL Server para o Microsoft Azure
@@ -92,7 +92,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  **Determinar o dia da semana para os backups semanais:** se o backup for semanal, escolha um dia da semana para o backup completo.  
   
-4.  **Determinar a hora de início do bakup:** usando a notação de 24 horas, escolha um horário para iniciar o backup.  
+4.  **Determinar a hora de início do backup:** usando a notação de 24 horas, escolha um horário para iniciar o backup.  
   
 5.  **Determinar o período de tempo do backup:** especifica a quantidade de tempo que um backup tem para ser concluído.  
   
@@ -120,3 +120,4 @@ ms.lasthandoff: 06/22/2017
  [Backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
+
