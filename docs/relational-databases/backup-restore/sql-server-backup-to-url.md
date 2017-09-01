@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7b520a605648e8619f8462ae9125842fdeb37ebc
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
@@ -259,7 +259,7 @@ A tarefa Restaurar Banco de Dados inclui **URL** como um dispositivo do qual res
   
      [Restaurar banco de dados &#40;página Geral&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
-     [Restaurar banco de dados &#40;página Arquivos&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)  
+     [Restaurar o banco de dados &#40;Página arquivos&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)  
   
      [Restaurar banco de dados &#40;página Opções&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)  
   
