@@ -28,13 +28,13 @@ ms.lasthandoff: 08/18/2017
 # <a name="modify-a-sql-server-agent-master-job"></a>Modificar um trabalho mestre do SQL Server Agent
 Os tópicos a seguir descrevem como modificar um trabalho mestre do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
-[Change the Scheduling Details for a SQL Server Agent Master Job](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
+[Alterar os detalhes do agendamento para um trabalho mestre do SQL Server Agent](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   
-[Add Steps to a SQL Server Agent Master Job](../../ssms/object/add-steps-to-a-sql-server-agent-master-job.md)  
+[Adicionar etapas a um trabalho mestre do SQL Server Agent](../../ssms/object/add-steps-to-a-sql-server-agent-master-job.md)  
   
-[Change Steps of a SQL Server Agent Master Job](../../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md)  
+[Alterar etapas de um trabalho mestre do SQL Server Agent](../../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md)  
   
-[Remove Steps from a SQL Server Agent Master Job](../../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md)  
+[Remover etapas de um trabalho mestre do SQL Server Agent](../../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md)  
   
 [Modificar o servidor de destino&#40;s&#41; associado a um trabalho mestre do SQL Server Agent](../../ssms/agent/modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
   
