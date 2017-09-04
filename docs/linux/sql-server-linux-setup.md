@@ -4,19 +4,21 @@ description: "Instalar, atualizar e desinstalar o SQL Server no Linux. Este tóp
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: c5bd1be5cbe08e9454b1640d9dd58584aa54955f
+ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
+ms.openlocfilehash: f746037f695301881ce9a993f3d556db44f44292
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Orientação de instalação do SQL Server no Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Este tópico explica como instalar, atualizar e desinstalar o SQL Server 2017 no Linux. SQL Server 2017 RC2 tem suporte no Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) e Ubuntu. Ele também está disponível como uma imagem do Docker, que pode ser executado no mecanismo do Docker no Linux ou o Docker para Windows/Mac.
 
@@ -57,11 +59,11 @@ Você pode instalar o SQL Server no Linux na linha de comando. Para obter instru
 - [Instalar no Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Instalar no SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Instalar no Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Executar no Docker](quickstart-install-connect-ubuntu.md)
+- [Executar no Docker](quickstart-install-connect-docker.md)
 
 ## <a id="upgrade"></a>Atualize o SQL Server
 
-Para atualizar o **mssql server** pacote no Linux, use um dos comandos a seguir com base em sua plataforma:
+Para atualizar o **mssql server** para a versão mais recente do pacote, use um dos comandos a seguir com base em sua plataforma:
 
 | Plataforma | Comando de atualização de pacote |
 |-----|-----|
@@ -70,6 +72,26 @@ Para atualizar o **mssql server** pacote no Linux, use um dos comandos a seguir 
 | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
 
 Esses comandos baixar o pacote mais recente e substitua os binários localizados em `/opt/mssql/`. O usuário gerou bancos de dados e bancos de dados do sistema não são afetados por essa operação.
+
+## <a id="rollback"></a>Reversão SQL Server
+
+A reversão ou fazer downgrade do SQL Server para uma versão anterior, use as seguintes etapas:
+
+1. Identifique o número de versão para o pacote do SQL Server que você deseja fazer o downgrade. Para obter uma lista de números de pacote, consulte o [notas de versão](sql-server-linux-release-notes.md).
+
+1. Fazer o downgrade para uma versão anterior do SQL Server. Nos comandos a seguir, substitua `<version_number>` com o número de versão do SQL Server identificado na etapa um.
+
+   | Plataforma | Comando de atualização de pacote |
+   |-----|-----|
+   | RHEL | `sudo yum downgrade mssql-server-<version_number>.x86_64` |
+   | SLES | `sudo zypper install --oldpackage mssql-server=<version_number>` |
+   | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
+
+> [!NOTE]
+> Somente há suporte para fazer o downgrade para uma versão dentro da mesma versão principal, como SQL Server 2017.
+
+> [!IMPORTANT]
+> Somente há suporte para downgrade entre RC2 e RC1 neste momento.
 
 ## <a id="uninstall"></a>Desinstalar o SQL Server
 
@@ -110,7 +132,7 @@ Para um script de exemplo mais detalhado, consulte os exemplos a seguir:
 
 ## <a id="offline"></a>Instalação offline
 
-Se o computador Linux não tem acesso aos repositórios online usados no [inícios rápidos](#platforms), você pode baixar os arquivos de pacote diretamente. Esses pacotes estão localizados no repositório Microsoft, [https://packages.microsoft.com](https://packages.microsoft.com).
+Se o computador Linux não tem acesso aos repositórios online usados no [inícios rápidos](#platforms), você pode baixar os arquivos de pacote diretamente. Esses pacotes estão localizados no repositório da Microsoft, [https://packages.microsoft.com](https://packages.microsoft.com).
 
 > [!TIP]
 > Se você instalou com êxito com as etapas de início rápido, você não precisa baixar ou instalar manualmente os pacotes a seguir. Esta seção é apenas para o cenário offline.

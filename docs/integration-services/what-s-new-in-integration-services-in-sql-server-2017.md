@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: 2d47d1bb82b586890e3bfc250cf09e929a64fb25
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 87b850c06bea8992ad6869c56acdecd45fa289f4
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>O que &#39; s no Integration Services no SQL Server de 2017
@@ -39,7 +39,7 @@ Aqui estão os novos recursos mais importantes no Integration Services para SQL 
 
 ## <a name="new-in-the-azure-feature-pack"></a>Novo no Azure Feature Pack
 
-Além dos aprimoramentos de conectividade no SQL Server, o Integration Services Feature Pack para Azure adicionou suporte para repositório Azure Data Lake. Para obter mais informações, consulte [Azure Feature Pack para o Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md).
+Além dos aprimoramentos de conectividade no SQL Server, o Integration Services Feature Pack para Azure adicionou suporte para repositório Azure Data Lake. Para obter mais informações, consulte o postagem de blog [novo Azure recurso Pack versão fortalecendo ADLS conectividade](https://blogs.msdn.microsoft.com/ssis/2017/08/29/new-azure-feature-pack-release-strengthening-adls-connectivity/). Consulte também [Azure Feature Pack para o Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md).
 
 ## <a name="new-in-sql-server-data-tools-ssdt"></a>Novo no SQL Server Data Tools (SSDT)
 
