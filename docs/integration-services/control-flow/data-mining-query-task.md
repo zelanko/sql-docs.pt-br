@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingquerytask.f1
+- sql13.dts.designer.dmquerytask.miningmodel.f1
+- sql13.dts.designer.dmquerytask.query.f1
+- sql13.dts.designer.dmquerytask.output.f1
 helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b171b2ce21054b6cca5f2de64fa1d04f4fa00c9
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: efffacb30616a880c628894dac2f49201c2b8e24
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="data-mining-query-task"></a>Tarefa Consulta de Mineração de Dados
@@ -53,14 +56,6 @@ ms.lasthandoff: 08/03/2017
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
-  
--   [Editor da Tarefa Consulta de Mineração de Dados &#40;Guia Modelo de Mineração&#41;](../../integration-services/control-flow/data-mining-query-task-editor-mining-model-tab.md)  
-  
--   [Editor da Tarefa Consulta de Mineração de Dados &#40;Guia Consulta&#41;](../../integration-services/control-flow/data-mining-query-task-editor-query-tab.md)  
-  
--   [Editor da Tarefa Consulta de Mineração de Dados &#40;Guia Saída&#41;](../../integration-services/control-flow/data-mining-query-task-editor-output-tab.md)  
-  
 > [!NOTE]  
 >  O Editor de Consultas de Mineração de Dados não tem nenhuma página Expressões. Em vez disso, use a janela **Propriedades** para acessar as ferramentas de criação e gerenciamento de expressões de propriedade para as propriedades da tarefa Consulta de Mineração de Dados.  
   
@@ -73,4 +68,120 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.DMQueryTask.DMQueryTask>  
   
+## <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor da Tarefa Consulta de Mineração de Dados (guia Modelo de Mineração)
+  Use a guia **Modelo de Mineração** da caixa de diálogo **Tarefa Consulta de Mineração de Dados** para especificar a estrutura e o modelo de mineração a serem usados.  
   
+ Para saber mais sobre como implementar a mineração de dados em pacotes, consulte [Tarefa Consulta de mineração de dados](../../integration-services/control-flow/data-mining-query-task.md) e [Soluções de mineração de dados](../../analysis-services/data-mining/data-mining-solutions.md).  
+  
+### <a name="general-options"></a>Opções gerais  
+ **Nome**  
+ Forneça um nome exclusivo para a tarefa Consulta de Mineração de Dados. Esse nome é usado como rótulo no ícone de tarefa.  
+  
+> [!NOTE]  
+>  Os nomes das tarefas devem ser exclusivos em um pacote.  
+  
+ **Descrição**  
+ Digite uma descrição para a tarefa Consulta de Mineração de Dados.  
+  
+### <a name="mining-model-tab-options"></a>Opções da guia Modelo de Mineração  
+ **Conexão**  
+ Selecione um gerenciador de conexões do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na lista, ou clique em **Novo** para criar um novo gerenciador de conexões.  
+  
+ **Tópicos relacionados:**  [Gerenciador de conexões do Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+  
+ **Novo**  
+ Crie um novo gerenciador de conexões do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+  
+ **Tópicos relacionados:** [Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+  
+ **Estrutura de mineração**  
+ Selecione uma estrutura de mineração na lista.  
+  
+ **Modelos de mineração**  
+ Selecione um modelo de mineração com base na estrutura de mineração selecionada.  
+
+## <a name="data-mining-query-task-editor-query-tab"></a>Editor da Tarefa Consulta de Mineração de Dados (guia Consulta)
+  Use a guia **Consulta** da caixa de diálogo **Tarefa Consulta de Mineração de Dados** para criar consultas de previsão baseadas em um modelo de mineração. Nessa caixa de diálogo, você também pode associar parâmetros e conjuntos de resultados a variáveis.  
+  
+ Para saber mais sobre como implementar a mineração de dados em pacotes, consulte [Tarefa Consulta de mineração de dados](../../integration-services/control-flow/data-mining-query-task.md) e [Soluções de mineração de dados](../../analysis-services/data-mining/data-mining-solutions.md).  
+  
+### <a name="general-options"></a>Opções gerais  
+ **Nome**  
+ Forneça um nome exclusivo para a tarefa Consulta de Mineração de Dados. Esse nome é usado como rótulo no ícone de tarefa.  
+  
+> [!NOTE]  
+>  Os nomes das tarefas devem ser exclusivos em um pacote.  
+  
+ **Descrição**  
+ Digite uma descrição para a tarefa Consulta de Mineração de Dados.  
+  
+### <a name="build-query-tab-options"></a>Opções da guia Construir Consulta  
+ **Consulta de mineração de dados**  
+ Digite uma consulta de mineração de dados.  
+  
+ **Tópicos relacionados:**  [Referência de &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
+  
+ **Construir Nova Consulta**  
+ Crie a consulta de mineração de dados usando uma ferramenta gráfica.  
+  
+ **Tópicos relacionados:** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
+  
+### <a name="parameter-mapping-tab-options"></a>Opções da guia Mapeamento de Parâmetros  
+ **Nome do parâmetro**  
+ Opcionalmente, atualize o nome de parâmetro. Mapeie o parâmetro para uma variável, selecionando uma variável na lista **Nome da Variável** .  
+  
+ **Nome da Variável**  
+ Selecione uma variável na lista para mapeá-la para o parâmetro.  
+  
+ **Adicionar**  
+ Adicione um parâmetro à lista.  
+  
+ **Remover**  
+ Selecione um parâmetro e clique em **Remover**.  
+  
+### <a name="result-set-tab-options"></a>Opções da guia Conjunto de Resultados  
+ **Nome do Resultado**  
+ Opcionalmente, atualize o nome do conjunto de resultados. Mapeie o resultado para uma variável, selecionando uma variável na lista **Nome da Variável** .  
+  
+ Depois que você adicionar um resultado, clicando em **Adicionar**, forneça um nome exclusivo para o resultado.  
+  
+ **Nome da Variável**  
+ Selecione uma variável na lista para mapeá-la para o conjunto de resultados.  
+  
+ **Tipo de Resultado**  
+ Indique se deve ser retornada uma única linha ou um conjunto de resultados completo.  
+  
+ **Adicionar**  
+ Adicione um conjunto de resultados à lista.  
+  
+ **Remover**  
+ Selecione um resultado e clique em **Remover**.  
+## <a name="data-mining-query-task-editor-output-tab"></a>Editor da Tarefa Consulta de Mineração de Dados (guia Saída)
+  Use a guia **Saída** da caixa de diálogo **Editor da Tarefa Consulta de Mineração de Dados** para especificar o destino da consulta de previsão.  
+  
+ Para saber mais sobre como implementar a mineração de dados em pacotes, consulte [Tarefa Consulta de mineração de dados](../../integration-services/control-flow/data-mining-query-task.md) e [Soluções de mineração de dados](../../analysis-services/data-mining/data-mining-solutions.md).  
+  
+### <a name="general-options"></a>Opções gerais  
+ **Nome**  
+ Forneça um nome exclusivo para a tarefa Consulta de Mineração de Dados. Esse nome é usado como rótulo no ícone de tarefa.  
+  
+> [!NOTE]  
+>  Os nomes das tarefas devem ser exclusivos em um pacote.  
+  
+ **Descrição**  
+ Digite uma descrição para a tarefa Consulta de Mineração de Dados.  
+  
+### <a name="output-tab-options"></a>Opções da guia Saída  
+ **Conexão**  
+ Selecione um gerenciador de conexões na lista ou clique em **Novo** para criar um novo gerenciador de conexões.  
+  
+ **Novo**  
+ Crie um novo gerenciador de conexões. Só podem ser usados os tipos de gerenciador de conexões ADO.NET e OLE DB.  
+  
+ **Tabela de saída**  
+ Especifique a tabela na qual a consulta de previsão deve gravar seus resultados.  
+  
+ **Descartar e recriar a tabela de saída**  
+ Indique se a consulta de previsão deve substituir o conteúdo na tabela de destino, ignorando e, em seguida, recriando a tabela.  
+  
+

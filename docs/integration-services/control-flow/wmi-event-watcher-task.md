@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.wmieventwatchertask.f1
+- sql13.dts.designer.wmieventwatcher.general.f1
+- sql13.dts.designer.wmieventwatcher.wmiquery.f1
 helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Event Watcher task [Integration Services]
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: f91107cf76f48f60b23b7ee1f0f93352468a1422
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: e46d2c926ecd1dd381d358ea6e779bc427116444
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="wmi-event-watcher-task"></a>Tarefa Detector de Eventos do WMI
@@ -93,11 +95,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
-  
--   [Editor da Tarefa Detector de Eventos do WMI &#40;Página Geral&#41;](../../integration-services/control-flow/wmi-event-watcher-task-editor-general-page.md)  
-  
--   [Editor do Detector de Eventos do WMI &#40;Página Opções do WMI&#41;](../../integration-services/control-flow/wmi-event-watcher-task-editor-wmi-options-page.md)  
+ Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
 -   [Página Expressões](../../integration-services/expressions/expressions-page.md)  
   
@@ -110,4 +108,75 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiEventWatcherTask.WmiEventWatcherTask>  
   
+## <a name="wmi-event-watcher-task-editor-general-page"></a>Editor da Tarefa Detector de Eventos do WMI (página Geral)
+  Use a página **Geral** da caixa de diálogo **Editor da Tarefa Detector de Eventos do WMI** para nomear e descrever a tarefa Detector de Eventos do WMI.  
   
+ Para obter mais informações sobre a linguagem WQL, consulte o tópico Instrumentação de Gerenciamento do Windows, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Consultando com WQL), na Biblioteca MSDN.  
+  
+### <a name="options"></a>Opções  
+ **Nome**  
+ Forneça um nome exclusivo para a tarefa Detector de Eventos do WMI. Esse nome é usado como rótulo no ícone de tarefa.  
+  
+> [!NOTE]  
+>  Os nomes das tarefas devem ser exclusivos em um pacote.  
+  
+ **Description**  
+ Digite uma descrição para a tarefa Detector de Eventos do WMI.  
+  
+## <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Editor do Detector de Eventos do WMI (página Opções do WMI)
+  Use a página **Opções do WMI** da caixa de diálogo **Editor do Detector de Eventos do WMI** para especificar a origem da consulta WQL (Instrumentação de Gerenciamento do Windows Query Language) e como a tarefa do Detector de Eventos do WMI responde aos eventos do WMI (Microsoft Windows Instrumentation).  
+  
+ Para obter mais informações sobre a linguagem WQL, consulte o tópico Instrumentação de Gerenciamento do Windows, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Consultando com WQL), na Biblioteca MSDN.  
+  
+### <a name="static-options"></a>Opções estáticas  
+ **WMIConnectionName**  
+ Selecione um Gerenciador de conexão WMI na lista ou clique em \< **nova Conexão de WMI...** > para criar uma nova conexão Gerenciador.  
+  
+ **Tópicos relacionados:** [Gerenciador de Conexões WMI](../../integration-services/connection-manager/wmi-connection-manager.md), [Editor do Gerenciador de Conexões WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+  
+ **WQLQuerySourceType**  
+ Selecione o tipo de origem da consulta WQL que a tarefa executa. As opções dessa propriedade são listadas na tabela a seguir.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Entrada Direta**|Defina a origem de consultas WQL. Selecionar este valor faz com que seja exibida a opção dinâmica **WQLQuerySource**.|  
+|**Conexão do Arquivo**|Selecione um arquivo que contém a consulta WQL. Selecionar este valor faz com que seja exibida a opção dinâmica **WQLQuerySource**.|  
+|**Variável**|Define a origem de uma variável que define a consulta WQL. Selecionar este valor faz com que seja exibida a opção dinâmica **WQLQuerySource**.|  
+  
+ **ActionAtEvent**  
+ Especifique se o evento WMI efetua logon do evento e inicia uma ação do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou só efetua logon do evento.  
+  
+ **AfterEvent**  
+ Especifique se a tarefa é bem-sucedida ou falha depois que recebe o evento WMI ou se a tarefa continua observando se o evento ocorre novamente.  
+  
+ **ActionAtTimeout**  
+ Especifique se a tarefa registra o tempo limite excedido da consulta WMI e inicia um evento [!INCLUDE[ssIS](../../includes/ssis-md.md)] em resposta ou só registra o tempo limite excedido.  
+  
+ **AfterTimeout**  
+ Especifique se a tarefa é bem-sucedida ou falha em resposta ao tempo limite excedido ou se a tarefa continua observando se o tempo limite é excedido novamente.  
+  
+ **NumberOfEvents**  
+ Especifique o número de eventos a serem observados.  
+  
+ **Tempo Limite**  
+ Especifique o número de segundos a esperar para que o evento ocorra. Um valor de 0 significa que nenhum tempo limite está em efeito.  
+  
+### <a name="wqlquerysource-dynamic-options"></a>Opções dinâmicas do WQLQuerySource  
+  
+#### <a name="wqlquerysource--direct-input"></a>WQLQuerySource = Entrada direta  
+ **WQLQuerySource**  
+ Forneça uma consulta ou clique no botão de reticências (...) e digite uma consulta usando a caixa de diálogo **Consulta WQL** .  
+  
+#### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = Conexão do arquivo  
+ **WQLQuerySource**  
+ Selecione um Gerenciador de conexão de arquivo na lista ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+  
+ **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="wqlquerysource--variable"></a>WQLQuerySource = Variável  
+ **WQLQuerySource**  
+ Selecione uma variável na lista ou clique em \< **nova variável...** > para criar uma nova variável.  
+  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+

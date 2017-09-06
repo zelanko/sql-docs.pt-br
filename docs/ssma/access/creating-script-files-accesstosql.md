@@ -2,7 +2,7 @@
 title: Criando arquivos de Script (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,15 +16,15 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 caps.latest.revision: 21
 author: sabotta
 ms.author: carlasab
-manager: lonnyb
+manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0798e4aa2ed032b1ab3b015199c17518c533e3fa
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: cec4cf64fcca4a185d8733121305fe186a0f58a8
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/17/2017
 
 ---
-# <a name="creating-script-files-accesstosql"></a>Criando arquivos de Script (AccessToSQL)
+# <a name="creating-script-files-accesstosql"></a>Criando arquivos de script (AccessToSQL)
 A primeira etapa antes de iniciar o aplicativo de console SSMA é criar o arquivo de script e, se necessário criar o arquivo de valor da variável e o arquivo de conexão de servidor.  
   
 O arquivo de script pode ser dividido em três seções, viz..,:  
@@ -37,7 +37,7 @@ O arquivo de script pode ser dividido em três seções, viz..,:
   
 Cada seção é descrita em detalhes a seguir:  
   
-## <a name="configuring-access-console-settings"></a>Configurar as configurações do Console de acesso  
+## <a name="configuring-access-console-settings"></a>Configurar as configurações do console de acesso  
 As configurações de um script são exibidas no arquivo de script de console.  
   
 Se qualquer um dos elementos são especificados no nó de configuração, eles serão definidos como a configuração global ou seja, elas são aplicáveis a todos os comandos de script. Esses elementos de configuração também podem ser definidos dentro de cada comando na seção do comando de script se o usuário deseja substituir a configuração global.  
@@ -353,7 +353,7 @@ O arquivo de script contém uma sequência de comandos de fluxo de trabalho de m
   
 Por exemplo, uma migração de dados típicos de uma tabela específica em um banco de dados segue a hierarquia de: banco de dados -&gt; tabela.  
   
-Quando todos os comandos no arquivo de script são executados com êxito, o aplicativo de console SSMA é encerrado e retorna o controle ao usuário. O conteúdo de um arquivo de script é mais ou menos estático com informações de variáveis contidas em um [arquivos de valores de variável](http://msdn.microsoft.com/en-us/808595c3-8ef1-40bd-a93e-5cf237950e08) ou, em uma seção separada dentro do arquivo de script para valores de variáveis.  
+Quando todos os comandos no arquivo de script são executados com êxito, o aplicativo de console SSMA é encerrado e retorna o controle ao usuário. O conteúdo de um arquivo de script é mais ou menos estático com informações de variáveis contidas em um [arquivos de valores de variável](http://msdn.microsoft.com/808595c3-8ef1-40bd-a93e-5cf237950e08) ou, em uma seção separada dentro do arquivo de script para valores de variáveis.  
   
 **Exemplo:**  
   
@@ -397,7 +397,7 @@ Lista completa de comandos de script pode ser encontrada no [executando o Consol
 ## <a name="script-file-validation"></a>Validação de arquivo de script  
 O usuário pode facilmente validar seu arquivo de script no arquivo de definição de esquema **'A2SSConsoleScriptSchema.xsd'** disponíveis na pasta 'Esquemas'.  
   
-## <a name="next-step"></a>Próxima etapa  
+## <a name="next-step"></a>Próxima etapa
 A próxima etapa no operando o console é [criando arquivos de valor variável &#40; AccessToSQL &#41; ](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
 ## <a name="see-also"></a>Consulte também  

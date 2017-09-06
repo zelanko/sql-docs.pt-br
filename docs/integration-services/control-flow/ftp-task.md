@@ -1,26 +1,33 @@
 ---
-title: "Tarefa FTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ftptask.f1"
-helpviewer_keywords: 
-  - "Tarefa FTP [Integration Services]"
+title: Tarefa FTP | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ftptask.f1
+- sql13.dts.designer.ftptask.general.f1
+- sql13.dts.designer.ftptask.filetransfer.f1
+helpviewer_keywords:
+- FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 caps.latest.revision: 52
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 212e304b2c94004135923a345b592b3c3eef1bcc
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/11/2017
+
 ---
-# Tarefa FTP
+# <a name="ftp-task"></a>Tarefa FTP
   A tarefa FTP carrega e baixa arquivos de dados, bem como gerencia diretórios em servidores. Por exemplo, um pacote pode baixar arquivos de dados de um servidor remoto ou de um local de Internet como parte de um fluxo de trabalho de pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Você pode usar a tarefa FTP para os seguintes propósitos:  
   
 -   Copiar diretórios e arquivos de dados de um diretório para outro, antes ou depois de mover dados, e aplicar transformações nos dados.  
@@ -44,7 +51,7 @@ caps.handback.revision: 52
   
  Os operações de FTP podem ser configuradas para interromper a tarefa Sistema de Arquivos quando a operação falha ou para transferir arquivos no modo ASCII. As operações que enviam e recebem cópias de arquivos podem ser configuradas para substituir arquivos de destino e diretórios.  
   
-## Operações de FTP predefinidas  
+## <a name="predefined-ftp-operations"></a>Operações de FTP predefinidas  
  A tarefa FTP inclui um conjunto predefinido de operações. A tabela a seguir descreve essas operações.  
   
 |Operação|Description|  
@@ -58,24 +65,114 @@ caps.handback.revision: 52
 |Excluir arquivos locais|Exclui um arquivo no computador local.|  
 |Excluir arquivos remotos|Exclui um arquivo no servidor FTP.|  
   
-## Entradas de log personalizadas disponíveis na tarefa FTP  
- A tabela a seguir relaciona as entradas de log personalizadas da tarefa FTP. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-log-entries-available-on-the-ftp-task"></a>Entradas de log personalizadas disponíveis na tarefa FTP  
+ A tabela a seguir relaciona as entradas de log personalizadas da tarefa FTP. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrada de log|Description|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|Indica que a tarefa iniciou uma conexão com o servidor FTP.|  
 |**FTPOperation**|Informa o início e o tipo de operação de FTP que a tarefa executa.|  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter informações sobre como definir essas propriedades no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)], consulte [Definir as propriedades de uma tarefa ou um contêiner](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md).  
+ Para obter informações sobre como definir essas propriedades no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consulte [Definir as propriedades de uma tarefa ou um contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
  Para obter mais informações sobre como definir essas propriedades de forma programática, consulte <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
-## Consulte também  
- [Editor da Tarefa FTP &#40;página Geral&#41;](../../integration-services/control-flow/ftp-task-editor-general-page.md)   
- [Editor da Tarefa FTP &#40;página Transferência de Arquivos&#41;](../../integration-services/control-flow/ftp-task-editor-file-transfer-page.md)   
+## <a name="ftp-task-editor-general-page"></a>Editor da Tarefa FTP (página Geral)
+  Use a página **Geral** da caixa de diálogo **Editor da Tarefa FTP** para especificar o gerenciador de conexões que estabelece conexão com o servidor FTP com o qual a tarefa se comunica. Você também pode nomear e descrever a tarefa FTP.  
+  
+### <a name="options"></a>Opções  
+ **FtpConnection**  
+ Selecione um Gerenciador de conexão de FTP existente ou clique em \< **nova conexão...** > para criar uma conexão Gerenciador.  
+  
+> [!IMPORTANT]  
+>  O gerenciador de conexões de FTP dá suporte apenas para autenticação anônima e autenticação básica. Ele não suporta a Autenticação do Windows.  
+  
+ **Tópicos relacionados**: [Gerenciador de Conexões de FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Editor do Gerenciador de Conexões de FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+  
+ **StopOnFailure**  
+ Indique se a tarefa FTP deve ser encerrada se a operação FTP falhar.  
+  
+ **Nome**  
+ Forneça um nome exclusivo para a tarefa FTP. Esse nome é usado como rótulo no ícone de tarefa.  
+  
+> [!NOTE]  
+>  Os nomes das tarefas devem ser exclusivos em um pacote.  
+  
+ **Description**  
+ Digite uma descrição para a tarefa FTP.  
+  
+## <a name="ftp-task-editor-file-transfer-page"></a>Editor da Tarefa FTP (página Transferência de Arquivos)
+  Use a página **Transferência de Arquivos** da caixa de diálogo **Editor da Tarefa FTP** para configurar a operação FTP executada pela tarefa.  
+  
+### <a name="options"></a>Opções  
+ **IsRemotePathVariable**  
+ Indique se o caminho remoto deve ser armazenado em uma variável. As opções dessa propriedade são listadas na tabela a seguir.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**True**|O caminho de destino é armazenado em uma variável. Ao selecionar esse valor, a opção dinâmica **RemoteVariable**será exibida.|  
+|**Falso**|O caminho de destino é especificado em um gerenciador de conexões de Arquivo. Ao selecionar esse valor, a opção dinâmica **RemotePath**será exibida.|  
+  
+ **OverwriteFileAtDestination**  
+ Especifique se um arquivo no destino pode ser substituído.  
+  
+ **IsLocalPathVariable**  
+ Indique se o caminho local deve ser armazenado em uma variável. As opções dessa propriedade são listadas na tabela a seguir.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**True**|O caminho de destino é armazenado em uma variável. Ao selecionar esse valor, a opção dinâmica **LocalVariable**será exibida.|  
+|**Falso**|O caminho de destino é especificado em um gerenciador de conexões de Arquivo. Ao selecionar esse valor, a opção dinâmica **LocalPath**será exibida.|  
+  
+ **Operação**  
+ Selecione a operação FTP a executar. As opções dessa propriedade são listadas na tabela a seguir.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Enviar arquivos**|Enviar arquivos. Ao selecionar esse valor, as opções dinâmicas **LocalVariable**, **LocalPathRemoteVariable** e **RemotePath**serão exibidas.|  
+|**Receber arquivos**|Receber arquivos. Ao selecionar esse valor, as opções dinâmicas **LocalVariable**, **LocalPathRemoteVariable** e **RemotePath**serão exibidas.|  
+|**Criar diretório local**|Criar um diretório local. Ao selecionar esse valor, as opções dinâmicas **LocalVariable** e **LocalPath**serão exibidas.|  
+|**Criar diretório remoto**|Criar um diretório remoto. Ao selecionar esse valor, as opções dinâmicas **RemoteVariable** e **RemotelPath**serão exibidas.|  
+|**Remover diretório local**|Remover diretório local. Ao selecionar esse valor, as opções dinâmicas **LocalVariable** e **LocalPath**serão exibidas.|  
+|**Remover diretório remoto**|Remover um diretório remoto. Ao selecionar esse valor, as opções dinâmicas **RemoteVariable** e **RemotePath**serão exibidas.|  
+|**Excluir arquivos locais**|Excluir arquivos locais. Ao selecionar esse valor, as opções dinâmicas **LocalVariable** e **LocalPath**serão exibidas.|  
+|**Excluir arquivos remotos**|Excluir arquivos remotos. Ao selecionar esse valor, as opções dinâmicas **RemoteVariable** e **RemotePath**serão exibidas.|  
+  
+ **IsTransferASCII**  
+ Indique se os arquivos transferidos para e do servidor FTP remoto devem ser transferidos em modo ASCII.  
+  
+### <a name="isremotepathvariable-dynamic-options"></a>Opções dinâmicas de IsRemotePathVariable  
+  
+#### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
+ **RemoteVariable**  
+ Selecione uma variável existente definido pelo usuário, ou clique em \< **nova variável...** > para criar uma variável definida pelo usuário.  
+  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Adicionar variável  
+  
+#### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
+ **RemotePath**  
+ Selecione um Gerenciador de conexão de FTP existente ou clique em \< **nova conexão...** > para criar uma conexão Gerenciador.  
+  
+ **Tópicos relacionados:** [Gerenciador de Conexões de FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Editor do Gerenciador de Conexões de FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+  
+### <a name="islocalpathvariable-dynamic-options"></a>Opções dinâmicas de IsLocalPathVariable  
+  
+#### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
+ **LocalVariable**  
+ Selecione uma variável existente definido pelo usuário, ou clique em \< **nova variável...** > para criar uma variável.  
+  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Adicionar variável  
+  
+#### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
+ **LocalPath**  
+ Selecione um Gerenciador de conexão de arquivo existente ou clique em \< **nova conexão...** > para criar uma conexão Gerenciador.  
+  
+ **Tópicos relacionados**: [simples Gerenciador de Conexão de arquivo](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+  
+## <a name="see-also"></a>Consulte também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
   

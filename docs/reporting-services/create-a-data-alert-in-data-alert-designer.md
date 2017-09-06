@@ -1,7 +1,7 @@
 ---
 title: Criar um alerta de dados no Designer de alertas de dados | Microsoft Docs
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,16 +15,16 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 5203aab062888ca40ee83ee3f00521d6661defba
+ms.translationtype: MT
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 54f1cd4f907de0cd3511f1aa25ed8d6e49e2b54b
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Criar um alerta de dados no Designer de Alertas de Dados
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
 Você cria definições de alerta de dados no Designer de Alertas de Dados. Depois de salvar as definições de alertas, é possível abri-la novamente, editá-la e salvá-la novamente no Designer de Alertas de Dados. Para obter informações sobre como editar definições de alertas, consulte [Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) e [Editar um alerta de dados no Designer de Alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md).
 

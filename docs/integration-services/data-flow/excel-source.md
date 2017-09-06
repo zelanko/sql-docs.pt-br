@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.excelsource.f1
+- sql13.dts.designer.excelsourceadapter.connection.f1
+- sql13.dts.designer.excelsourceadapter.columns.f1
+- sql13.dts.designer.excelsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d9db81f159d831fe10aaf99a4b27a34aef0764fc
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: e8b5878513b74faa8df5e7766762f2f7287ec7af
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="excel-source"></a>Origem do Excel
@@ -84,14 +87,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="excel-source-configuration"></a>Configuração da origem do Excel  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Origem do Excel** clique em um dos seguintes tópicos:  
-  
--   [Editor de Origem do Excel &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md)  
-  
--   [Editor de Fonte do Excel &#40;Página Colunas&#41;](../../integration-services/data-flow/excel-source-editor-columns-page.md)  
-  
--   [Editor de Origem do Excel &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/excel-source-editor-error-output-page.md)  
-  
  A caixa de diálogo **Editor Avançado** reflete todas as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -108,7 +103,103 @@ ms.lasthandoff: 08/03/2017
   
 -   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
--   [Loop por meio de arquivos do Excel e tabelas usando um contêiner de Loop Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+-   [Loop por meio do Excel arquivos e tabelas usando um contêiner Loop Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+  
+## <a name="excel-source-editor-connection-manager-page"></a>Editor de Origem do Excel (página Gerenciador de Conexões)
+  Use o nó **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem do Excel** para selecionar a pasta de trabalho do [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] para a origem que será usada. A origem do Excel lê os dados de uma planilha ou intervalo nomeado em uma pasta de trabalho existente.  
+  
+> [!NOTE]  
+>  A propriedade **CommandTimeout** da origem do Excel não está disponível no **Editor de Origem do Excel**, mas ela pode ser definida usando o **Editor Avançado**. Para obter mais informações sobre esta propriedade, consulte a seção Origem do Excel em [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md).  
+  
+### <a name="static-options"></a>Opções estáticas  
+ **gerenciador de conexões OLE DB**  
+ Selecione um gerenciador de conexões do Excel existente na lista ou crie uma nova conexão clicando em **Nova**.  
+  
+ **Nova**  
+ Crie um novo gerenciador de conexões usando a caixa de diálogo **Gerenciador de Conexões do Excel** .  
+  
+ **Modo de acesso aos dados**  
+ Especifique o método para selecionar os dados da origem.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Tabela ou exibição|Recupere dados de uma planilha ou intervalo nomeado no arquivo do Excel.|  
+|Nome da tabela ou variável do nome de exibição|Especifique a planilha ou o nome do intervalo em uma variável.<br /><br /> **Informações relacionadas:** [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Comando SQL|Recupere os dados do arquivo do Excel usando uma consulta SQL. |  
+|Comando SQL a partir da variável|Especifique o texto da consulta SQL em uma variável.|  
+  
+ **Visualização**  
+ Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A visualização pode exibir até 200 linhas.  
+  
+### <a name="data-access-mode-dynamic-options"></a>Opções dinâmicas de modo de acesso aos dados  
+  
+#### <a name="data-access-mode--table-or-view"></a>Modo de acesso aos dados = Tabela ou exibição  
+ **Nome da planilha do Excel**  
+ Selecione o nome da planilha ou o intervalo nomeado na lista disponível na pasta de trabalho do Excel.  
+  
+#### <a name="data-access-mode--table-name-or-view-name-variable"></a>Modo de acesso aos dados = Variável do nome da tabela ou do nome de exibição  
+ **Nome da variável**  
+ Selecione a variável que contém o nome da planilha ou do intervalo nomeado.  
+  
+#### <a name="data-access-mode--sql-command"></a>Modo de acesso aos dados = Comando SQL  
+ **Texto do comando SQL**  
+ Insira o texto de uma consulta SQL, crie a consulta clicando em **Construir Consulta**ou procure o arquivo que contém o texto da consulta clicando em **Procurar**.  
+  
+ **Parâmetros**  
+ Se você inseriu uma consulta parametrizada usando ? como um espaço reservado para o parâmetro no texto da consulta, use a caixa de diálogo **Definir Parâmetros da Consulta** para mapear os parâmetros de entrada da consulta para as variáveis do pacote.  
+  
+ **Build query**  
+ Use a caixa de diálogo **Construtor de Consultas** para construir a consulta SQL visualmente.  
+  
+ **Procurar**  
+ Use a caixa de diálogo **Abrir** para localizar o arquivo com contém o texto da consulta SQL.  
+  
+ **Analisar consulta**  
+ Verifique a sintaxe do texto da consulta.  
+  
+#### <a name="data-access-mode--sql-command-from-variable"></a>Modo de acesso aos dados = Comando SQL a partir da variável  
+ **Nome da variável**  
+ Selecione a variável que contém o texto da consulta SQL.  
+  
+## <a name="excel-source-editor-columns-page"></a>Editor de Origem do Excel (página Colunas)
+  Use a página **Colunas** da caixa de diálogo do **Editor de Origem do Excel** para mapear uma coluna de saída para cada coluna externa (origem).  
+  
+### <a name="options"></a>Opções  
+ **Colunas Externas Disponíveis**  
+ Exiba a lista de colunas externas disponíveis na fonte de dados. Você não pode usar esta tabela para adicionar ou excluir colunas.  
+  
+ **Coluna Externa**  
+ Exiba as colunas externas (fonte) na ordem em que serão lidas pela tarefa. Você pode alterar essa ordem desmarcando as colunas selecionadas na tabela discutida acima e selecionando colunas externas da lista em uma ordem diferente.  
+  
+ **Coluna de Saída**  
+ Forneça um nome exclusivo para cada coluna de saída. O padrão é o nome da coluna externa (origem) selecionada; porém, é possível escolher qualquer nome descritivo exclusivo. O nome fornecido será exibido no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+  
+## <a name="excel-source-editor-error-output-page"></a>Editor de Origem do Excel (página Saída de Erro)
+  Use a página **Saída de Erro** da caixa de diálogo **Editor de Origem do Excel** para selecionar opções de tratamento de erro e definir propriedades em colunas de saída de erros.  
+  
+### <a name="options"></a>Opções  
+ **Entrada ou Saída**  
+ Exibe o nome da fonte de dados.  
+  
+ **Coluna**  
+ Veja as colunas externas (origem) que você selecionou na página **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem do Excel**.  
+  
+ **Erro**  
+ Especifique o que deve acontecer quando ocorre um erro: ignorar a falha, redirecionar a linha ou causar falha no componente.  
+  
+ **Tópicos Relacionados:** [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Truncation**  
+ Especifique o que deve acontecer quando ocorre um truncamento: ignorar a falha, redirecionar a linha ou causar falha do componente.  
+  
+ **Description**  
+ Exiba a descrição do erro.  
+  
+ **Definir este valor para células selecionadas**  
+ Especifique o que deve acontecer a todas as células selecionadas quando ocorre um erro ou um truncamento: ignorar a falha, redirecionar a linha ou causar a falha no componente.  
+  
+ **Aplicar**  
+ Aplique a opção de tratamento de erros às células selecionadas.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   

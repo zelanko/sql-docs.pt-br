@@ -1,28 +1,36 @@
 ---
-title: "Tarefa Executar Pacote | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.executepackagetask.f1"
-helpviewer_keywords: 
-  - "Tarefa Execução de Pacote [Integration Services]"
-  - "pacotes filho"
-  - "pacotes pai [Integration Services]"
+title: Tarefa executar pacote | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.executepackagetask.f1
+- sql13.dts.designer.executepackagetask.package.f1
+- sql13.dts.designer.executepackagetask.parameter.F1
+- sql13.dts.designer.executepackagetask.general.f1
+helpviewer_keywords:
+- Execution Package task [Integration Services]
+- child packages
+- parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 caps.latest.revision: 63
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 70b2679a86d46c731617d7f607541f60886afb40
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/11/2017
+
 ---
-# Tarefa Executar Pacote
+# <a name="execute-package-task"></a>Tarefa Executar Pacote
   A tarefa Executar Pacote estende os recursos empresariais do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ao permitir que pacotes executem outros pacotes como parte de um fluxo de trabalho.  
   
  Você pode usar a tarefa Executar Pacote para os seguintes propósitos:  
@@ -39,15 +47,15 @@ caps.handback.revision: 63
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui tarefas que executam operações de fluxo de trabalho, como a execução de executáveis e arquivos em lote. Para obter mais informações, consulte [Execute Process Task](../../integration-services/control-flow/execute-process-task.md).  
   
-## Executando pacotes  
+## <a name="running-packages"></a>Executando pacotes  
  A tarefa Executar Pacote pode executar pacotes filho contidos no mesmo projeto que contém o pacote pai. Para selecionar um pacote filho do projeto, defina a propriedade **ReferenceType** como **Referência de Projeto**e defina a propriedade **PackageNameFromProjectReference** .  
   
 > [!NOTE]  
->  A opção **ReferenceType** é somente leitura e será definida como **Referência Externa** se o projeto que contém o pacote não tiver sido convertido no modelo de implantação de projeto. Para obter mais informações sobre conversão, consulte [Implantar projetos no Servidor do Integration Services](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+>  A opção **ReferenceType** é somente leitura e será definida como **Referência Externa** se o projeto que contém o pacote não tiver sido convertido no modelo de implantação de projeto. [Implantar o Integration Services (SSIS) projetos e pacotes](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  A tarefa Executar Pacote pode executar pacotes armazenados no banco de dados msdb do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e pacotes armazenados no sistema de arquivos. A tarefa usa um gerenciador de conexões OLE DB para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um gerenciador de conexões de Arquivo para acessar o sistema de arquivos. Para obter mais informações, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) e [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
- A tarefa Executar Pacote também pode executar um plano de manutenção do banco de dados que permite a administração de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e planos de manutenção de banco de dados na mesma solução [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Um plano de manutenção de banco de dados é semelhante a um pacote do [!INCLUDE[ssIS](../../includes/ssis-md.md)], mas um plano pode incluir apenas tarefas de manutenção do banco de dados e sempre é armazenado no banco de dados msdb.  
+ A tarefa Executar Pacote também pode executar um plano de manutenção do banco de dados que permite a administração de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e planos de manutenção de banco de dados na mesma solução [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Um plano de manutenção de banco de dados é semelhante a um pacote do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , mas um plano pode incluir apenas tarefas de manutenção do banco de dados e sempre é armazenado no banco de dados msdb.  
   
  Se você escolher um pacote armazenado no sistema de arquivos, forneça o nome e o local do pacote. O pacote pode residir em qualquer lugar no sistema de arquivos; não tem que estar na mesma pasta que o pacote pai.  
   
@@ -57,13 +65,13 @@ caps.handback.revision: 63
   
  Por padrão, a propriedade ExecuteOutOfProcess da tarefa Executar Pacote é definida como **False**, e o pacote filho é executado no mesmo processo que o pacote pai. Se você definir esta propriedade como **True**, o pacote filho será executado em um processo separado. Isto pode reduzir a velocidade do lançamento do pacote filho. Além disso, se você definir a propriedade como **True**, não poderá depurar o pacote em uma instalação somente ferramentas. Você deve instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obter mais informações, consulte [Instalar o Integration Services](../../integration-services/install-windows/install-integration-services.md)  
   
-## Estendendo transações  
- A transação que o pacote pai usa pode se estender ao pacote filho; logo, o trabalho que ambos os pacotes executa pode ser confirmado ou revertido. Por exemplo, o banco de dados insere que as execuções do pacote pai podem ser confirmadas ou revertidas, dependendo das inserções do banco de dados executadas pelo pacote filho, e vice-versa. Para obter mais informações, consulte [Inherited Transactions](../Topic/Inherited%20Transactions.md).  
+## <a name="extending-transactions"></a>Estendendo transações  
+ A transação que o pacote pai usa pode se estender ao pacote filho; logo, o trabalho que ambos os pacotes executa pode ser confirmado ou revertido. Por exemplo, o banco de dados insere que as execuções do pacote pai podem ser confirmadas ou revertidas, dependendo das inserções do banco de dados executadas pelo pacote filho, e vice-versa. Para obter mais informações, consulte [Inherited Transactions](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c).  
   
-## Propagando detalhes de log  
+## <a name="propagating-logging-details"></a>Propagando detalhes de log  
  O pacote filho executado pela tarefa Executar Pacote pode ou não ser configurado para usar log, mas o pacote filho sempre encaminhará os detalhes de log ao pacote pai. Se a tarefa Executar Pacote for configurada para usar log, a tarefa registrará os detalhes de log a partir do pacote filho. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-## Passando valores a pacotes filho  
+## <a name="passing-values-to-child-packages"></a>Passando valores a pacotes filho  
  Com frequência um pacote filho usa valores passados para ele por outro pacote que o chama, normalmente, seu pacote pai. Usar valores de um pacote pai é útil nos seguintes cenários:  
   
 -   Partes de um fluxo de trabalho maior são atribuídas a pacotes diferentes. Por exemplo, um pacote baixa dados em base noturna, resume os dados, atribui valores de dados resumidos a variáveis e depois passa os valores a outro pacote para processamento adicional dos dados.  
@@ -95,27 +103,125 @@ caps.handback.revision: 63
   
  A variável do pacote pai pode ser definida no escopo da tarefa Executar Pacote ou em um contêiner de pai como o pacote. Se diversas variáveis estiverem disponíveis com o mesmo nome, a variável definida no escopo da tarefa Executar Pacote será usada, ou a variável que tenha o escopo mais próximo da tarefa.  
   
- Para obter mais informações, consulte [Usar os valores de variáveis e parâmetros em um pacote filho](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md).  
+ Para obter mais informações, consulte [Usar os valores de variáveis e parâmetros em um pacote filho](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
-### Acessando variáveis de pacote pai  
+### <a name="accessing-parent-package-variables"></a>Acessando variáveis de pacote pai  
  Os pacotes filho podem acessar variáveis de pacote pai usando a tarefa de Script. Quando você insere o nome da variável de pacote pai na página de **Script** no **Editor da Tarefa Script**, não inclua **Usuário:** no nome da variável. Caso contrário, o pacote filho não localizará a variável quando você executar o pacote pai.  
   
-## Configurando a tarefa Executar Pacote  
+## <a name="configuring-the-execute-package-task"></a>Configurando a tarefa Executar Pacote  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
-  
--   [Editor da tarefa Executar Pacote](../../integration-services/control-flow/execute-package-task-editor.md)  
+ Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
 -   [Página Expressões](../../integration-services/expressions/expressions-page.md)  
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configurando a tarefa Executar Pacote programaticamente  
+## <a name="configuring-the-execute-package-task-programmatically"></a>Configurando a tarefa Executar Pacote programaticamente  
  Para obter mais informações sobre como definir essas propriedades programaticamente, clique no tópico a seguir:  
   
 -   [N:Microsoft.SqlServer.Dts.Tasks.ExecutePackageTask](https://technet.microsoft.com/library/microsoft.sqlserver.dts.tasks.executepackagetask\(v=sql.110\).aspx)  
+  
+## <a name="execute-package-task-editor"></a>Editor da tarefa Executar Pacote
+  Use o Editor da tarefa Executar Pacote para configurar a Tarefa Executar Pacote. A tarefa Executar Pacote estende os recursos empresariais do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ao permitir que pacotes executem outros pacotes como parte de um fluxo de trabalho.  
+  
+ **O que você deseja fazer?**  
+  
+-   [Abrir o editor da tarefa Executar Pacote](#open)  
+  
+-   [Definir as opções na página Geral](#general)  
+  
+-   [Definir as opções na página Pacote](#package)  
+  
+-   [Defina as opções na Página Associação de Parâmetros](#parameter)  
+  
+###  <a name="open"></a> Abrir o editor da tarefa Executar Pacote  
+  
+1.  Abra um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] que contém um tarefa Executar Pacote.  
+  
+2.  Clique com o botão direito do mouse na tarefa no Designer SSIS e clique em **Editar**.  
+  
+###  <a name="general"></a> Definir as opções na página Geral  
+ **Nome**  
+ Forneça um nome exclusivo para a tarefa Executar Pacote. Esse nome é usado como rótulo no ícone de tarefa.  
+  
+> [!NOTE]  
+>  Os nomes das tarefas devem ser exclusivos em um pacote.  
+  
+ **Description**  
+ Digite uma descrição para a tarefa Executar Pacote.  
+  
+###  <a name="package"></a> Definir as opções na página Pacote  
+ **ReferenceType**  
+ Selecione **Referência do Projeto** para pacotes filho que estão no projeto. Selecione **Referência Externa** para pacotes filho localizados fora do pacote  
+  
+> [!NOTE]  
+>  A opção **ReferenceType** é somente leitura e será definida como **Referência Externa** se o projeto que contém o pacote não tiver sido convertido no modelo de implantação de projeto. [Implantar o Integration Services (SSIS) projetos e pacotes](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+  
+ **Senha**  
+ Se o pacote filho for protegido por senha, forneça a senha para o pacote filho ou clique no botão de reticências (...) e crie uma nova senha para o pacote filho.  
+  
+ **ExecuteOutOfProcess**  
+ Especifique se o pacote filho é executado no processo do pacote pai ou um processo separado. Por padrão, a propriedade ExecuteOutOfProcess da tarefa Executar Pacote é definida como **False**, e o pacote filho é executado no mesmo processo que o pacote pai. Se você definir esta propriedade como **true**, o pacote filho será executado em um processo separado. Isto pode reduzir a velocidade do lançamento do pacote filho. Além disso, se a propriedade for definida como **true**, você não poderá depurar o pacote em uma instalação somente ferramentas; você deverá instalar o produto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte [Instalar o Integration Services](../../integration-services/install-windows/install-integration-services.md).  
+  
+#### <a name="referencetype-dynamic-options"></a>Opções dinâmicas ReferenceType  
+  
+##### <a name="referencetype--external-reference"></a>ReferenceType = referência externa  
+ **Local**  
+ Selecione o local de armazenamento do pacote filho. As opções dessa propriedade são listadas na tabela a seguir.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**SQL Server**|Defina o local como uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Sistema de arquivos**|Defina o local para o sistema de arquivos.|  
+  
+ **Conexão**  
+ Selecione o tipo de local de armazenamento para o pacote filho.  
+  
+ **PackageNameReadOnly**  
+ Exibe o nome do pacote.  
+  
+##### <a name="referencetype--project-reference"></a>ReferenceType = referência do projeto  
+ **PackageNameFromProjectReference**  
+ Selecione um pacote contido no projeto para ser o pacote filho.  
+  
+#### <a name="location-dynamic-options"></a>Opções Dinâmicas de Local  
+  
+##### <a name="location--sql-server"></a>Local = SQL Server  
+ **Conexão**  
+ Selecione um Gerenciador de conexão OLE DB na lista ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+  
+ **Tópicos relacionados:** [Gerenciador de Conexão do OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+  
+ **PackageName**  
+ Digite o nome do pacote filho ou clique nas reticências (...) e localize o pacote.  
+  
+##### <a name="location--file-system"></a>Local = Sistema de arquivos  
+ **Conexão**  
+ Selecione um Gerenciador de conexão de arquivo na lista ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+  
+ **Tópicos relacionados:** [Adicionar Gerenciador de Conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager.md)  
+  
+ **PackageNameReadOnly**  
+ Exibe o nome do pacote.  
+  
+###  <a name="parameter"></a> Defina as opções na Página Associação de Parâmetros  
+ Você pode passar valores do pacote pai ou do projeto para o pacote filho. O projeto deve usar o modelo de implantação de projeto e o pacote filho deve ser contido no mesmo projeto que contém o pacote pai.  
+  
+ Para obter informações sobre como converter projetos para o modelo de implantação de projeto, consulte [implantar Integration Services (SSIS) projetos e pacotes](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+  
+ **Parâmetro de pacote filho**  
+ Insira ou selecione um nome para o parâmetro de pacote filho.  
+  
+ **Parâmetro ou variável de associação**  
+ Selecione o parâmetro ou variável que contêm o valor que você quer passar para o pacote filho.  
+  
+ **Adicionar**  
+ Clique para mapear um parâmetro ou variável para um parâmetro de pacote filho.  
+  
+ **Remover**  
+ Clique para remover um mapeamento entre um parâmetro ou variável e um parâmetro de pacote filho.  
   
   

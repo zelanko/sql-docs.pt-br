@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.bulkinserttask.f1
+- sql13.dts.designer.bulkinserttask.connection.f1
+- sql13.dts.designer.bulkinserttask.general.f1
+- sql13.dts.designer.bulkinserttask.options.f1
 helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 81b72c67ee8d968a2452e7ede94fe8c390c53a9b
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 72f40019acada98168cf425dca983154e0e2dc8f
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="bulk-insert-task"></a>Tarefa Inserção em Massa
@@ -91,13 +94,7 @@ ms.lasthandoff: 08/03/2017
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
-  
--   [Editor da Tarefa Inserção em Massa &#40;Página Geral&#41;](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)  
-  
--   [Editor da Tarefa Inserção em Massa &#40;Página Conexão&#41;](../../integration-services/control-flow/bulk-insert-task-editor-connection-page.md)  
-  
--   [Editor da Tarefa Inserção em Massa &#40;Página Opções&#41;](../../integration-services/control-flow/bulk-insert-task-editor-options-page.md)  
+ Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
 -   [Página Expressões](../../integration-services/expressions/expressions-page.md)  
   
@@ -121,4 +118,103 @@ ms.lasthandoff: 08/03/2017
   
 -   Artigo técnico, [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701)(Usando o SQL Server Integration Services para carregar dados em massa), em simple-talk.com.  
   
+## <a name="bulk-insert-task-editor-connection-page"></a>Editor da Tarefa Inserção em Massa (página Conexão)
+  Use a página **Conexão** da caixa de diálogo **Editor da Tarefa Inserção em Massa** para especificar a origem e o destino da operação de inserção em massa e o formato a ser usado.  
   
+ Para saber mais sobre como trabalhar com inserções em massa, consulte [Tarefa Inserção em Massa](../../integration-services/control-flow/bulk-insert-task.md) e [Arquivos de formato para importação ou exportação de dados &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
+  
+### <a name="options"></a>Opções  
+ **Conexão**  
+ Selecione um Gerenciador de conexão OLE DB na lista ou clique em \< **nova conexão...** > para criar uma nova conexão.  
+  
+ **Tópicos relacionados:** [Gerenciador de Conexão do OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+  
+ **Tabela de Destino**  
+ Digite o nome da tabela ou exibição de destino ou selecione uma tabela ou exibição na lista.  
+  
+ **Formato**  
+ Selecione a fonte do formato para a inserção em massa. As opções dessa propriedade são listadas na tabela a seguir.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Usar Arquivo**|Selecione um arquivo que contém a especificação de formato. Selecionar esta opção faz com que seja exibida a opção dinâmica **Arquivo de Formato**.|  
+|**Especificar**|Especifique o formato. Selecionar esta opção faz com que sejam exibidas as opções dinâmicas **RowDelimiter** e **ColumnDelimiter**.|  
+  
+ **Arquivo**  
+ Selecione um Gerenciador de conexão de arquivo ou arquivo simples na lista ou clique em \< **nova conexão...** > para criar uma nova conexão.  
+  
+ O local do arquivo está relacionado ao Mecanismo de Banco de Dados do SQL Server especificado no gerenciador de conexões para esta tarefa. O arquivo de texto deve ser acessível pelo Mecanismo de Banco de Dados do SQL Server em um disco rígido local no servidor, por um compartilhamento ou unidade mapeada para o SQL Server. O arquivo não pode ser acessado pelo Tempo de Execução do SSIS.  
+  
+ Se você acessa o arquivo de origem usando um gerenciador de conexões de Arquivo Simples, a tarefa de Inserção em Massa não usa o formato especificado no gerenciador de conexões de Arquivos Simples. Em vez disso, a tarefa de Inserção em massa usa o formato especificado em um arquivo de formato ou os valores das propriedades RowDelimiter e ColumnDelimiter da tarefa.  
+  
+ **Tópicos relacionados:** [Gerenciador de Conexão de arquivo](../../integration-services/connection-manager/file-connection-manager.md), [simples Gerenciador de Conexão de arquivo](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+  
+ **Atualizar Tabelas**  
+ Atualize a lista de tabelas e exibições.  
+  
+### <a name="format-dynamic-options"></a>Opções Dinâmicas de Formato  
+  
+#### <a name="format--use-file"></a>Formato = Usar Arquivo  
+ **Arquivo de Formato**  
+ Digite o caminho do arquivo de formato ou clique no botão de reticências **(…)** para localizar o arquivo.  
+  
+#### <a name="format--specify"></a>Formato = Especificar  
+ **RowDelimiter**  
+ Especifique o delimitador de linhas no arquivo de origem. O valor padrão é **{CR}{LF}**.  
+  
+ **ColumnDelimiter**  
+ Especifique o delimitador de colunas no arquivo de origem. O padrão é **Tab**.  
+  
+## <a name="bulk-insert-task-editor-general-page"></a>Editor da Tarefa Inserção em Massa (página Geral)
+  Use a página **Geral** da caixa de diálogo **Editor da Tarefa Inserção em Massa** para nomear e descrever a tarefa Inserção em Massa.  
+  
+### <a name="options"></a>Opções  
+ **Nome**  
+ Forneça um nome exclusivo para a tarefa Inserção em Massa. Esse nome é usado como rótulo no ícone de tarefa.  
+  
+> [!NOTE]  
+>  Os nomes das tarefas devem ser exclusivos em um pacote.  
+  
+ **Description**  
+ Digite uma descrição para a tarefa Inserção em Massa.  
+ 
+## <a name="bulk-insert-task-editor-options-page"></a>Editor da Tarefa Inserção em Massa (página de Opções)
+  Use a página **Opções** da caixa de diálogo **Editor da Tarefa Inserção em Massa** para definir as propriedades da operação de inserção em massa. A tarefa Inserção em Massa copia uma grande quantidade de dados em uma exibição ou tabela do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  
+ Para saber mais sobre como trabalhar com inserções em massa, consulte [Tarefa Inserção em Massa](../../integration-services/control-flow/bulk-insert-task.md) e [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
+  
+### <a name="options"></a>Opções  
+ **CodePage**  
+ Especifique a página de código dos dados no arquivo de dados.  
+  
+ **DataFileType**  
+ Especifique o valor do tipo de dados a ser usado na operação de carregamento.  
+  
+ **BatchSize**  
+ Especifique o número de linhas em um lote. O padrão é todo o arquivo de dados. Se você definir **BatchSize** para zero, os dados serão carregados em um único lote.  
+  
+ **LastRow**  
+ Especifique a última linha a ser copiada.  
+  
+ **FirstRow**  
+ Especifique a primeira linha da qual começar a copiar.  
+  
+ **Opções**  
+ |Termo|Definição|  
+|----------|----------------|  
+|**Verificar restrições**|Selecione para verificar as restrições de tabelas e colunas.|  
+|**Manter nulos**|Selecione para reter valores nulos durante a operação de inserção em massa, em vez de inserir qualquer valor padrão para colunas vazias.|  
+|**Habilitar inserção de identidade**|Selecione para inserir valores existentes em uma coluna de identidade.|  
+|**Bloqueio de tabela**|Selecione para bloquear a tabela durante a inserção em massa.|  
+|**Acionadores**|Selecione para acionar qualquer inserção, atualização ou exclusão de gatilhos na tabela.|  
+  
+ **SortedData**  
+ Especifique a cláusula ORDER BY na instrução de inserção em massa. O nome da coluna que você fornece deve ser uma coluna válida na tabela de destino. O padrão é **false**. Isto significa que os dados não são classificados por uma cláusula ORDER BY.  
+  
+ **MaxErrors**  
+ Especifique o número máximo de erros que podem ocorrer antes que a operação de inserção em massa seja cancelada. Um valor de 0 indica que um número infinito de erros é permitido.  
+  
+> [!NOTE]  
+>  Cada linha que não pode ser importada pela operação de carregamento em massa é contada como um erro.  
+  
+

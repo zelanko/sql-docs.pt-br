@@ -2,7 +2,7 @@
 title: "Criando arquivos do valor da variável (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,21 +16,21 @@ ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 caps.latest.revision: 15
 author: sabotta
 ms.author: carlasab
-manager: lonnyb
+manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2ebc00ea1b5fc7eb9ca2383d8887b522f59428d1
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: b7ccb1d92b39d41ec3fa961b03b33c229a274af0
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Criando arquivos do valor da variável (AccessToSQL)
-Arquivo de valor de variável é um arquivo XML que inclui os valores dos parâmetros de comandos como o nome do servidor de origem ou destino que mudam frequentemente de migração de um servidor para outro. Quando ocorre um grande número de migrações de banco de dados, vários arquivos de variável para armazenar o valor de cada servidor de origem serão criados e referenciados em um arquivo de script mestre com o **– v** alternar na linha de comando. Isso ajuda a manter valores estáticos em alguns arquivos de script com os valores das variáveis em vários arquivos de variável.  
+Um arquivo de valor de variável é um arquivo XML que inclui os valores dos parâmetros de comandos (como o nome de servidor de origem ou destino) que mudam frequentemente em migrações de servidor. Quando ocorre um grande número de migrações de banco de dados, vários arquivos de variável para armazenar o valor de cada servidor de origem são criados e referenciados em um arquivo de script mestre com o **– v** alternar na linha de comando. Esse comportamento ajuda a manter valores estáticos em alguns arquivos de script com os valores das variáveis em vários arquivos de variável.  
   
 > [!NOTE]  
-> 1.  Nomes de variáveis são o prefixo e sufixo com um símbolo de $ (cifrão). Se as variáveis não estão atribuídas a um valor no arquivo de valor da variável, você encontrará um erro durante a análise do arquivo de script, resultando em atrasando o processo de execução do console.  
-> 2.  The escape character for **$** is **$$**. Se o valor de uma variável ou estáticos de um parâmetro contém  **$**  símbolo (cifrão), em seguida,  **$$**  devem ser especificados para tratá-lo como um caractere em vez de uma variável.  
-> 3.  Para fins de facilidade de manutenção, as variáveis podem ser declaradas dentro `‘variable-group’` variáveis definidas de elementos de uma separação lógica do usuário.  O uso desse elemento não é obrigatório.  
+> -  Nomes de variáveis são o prefixo e sufixo com um símbolo de $ (cifrão). Se uma variável não for atribuída um valor no arquivo de valor da variável, ocorrerá um erro durante a análise do arquivo de script, resultando em atrasando o processo de execução do console.  
+> -  The escape character for **$** is **$$**. Se o valor de uma variável ou estáticos de um parâmetro contiver um  **$**  símbolo (cifrão), em seguida,  **$$**  devem ser especificados para tratá-lo como um caractere em vez de uma variável.  
+> -  Para fins de facilidade de manutenção, as variáveis podem ser declaradas dentro `‘variable-group’` elementos para uma separação lógica de variáveis definidas pelo usuário.  O uso desse elemento não é obrigatório.  
   
 **Exemplos:**  
   
@@ -102,6 +102,6 @@ O usuário pode facilmente validar seu arquivo de valor da variável no arquivo 
 A próxima etapa no operando o console é [criar os arquivos de Conexão do servidor &#40; AccessToSQL &#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Criar os arquivos de Conexão de servidor (acesso)](http://msdn.microsoft.com/en-us/829153be-aa8e-4162-87e8-69882feecf19)  
+[Criar os arquivos de Conexão de servidor (acesso)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   
 

@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.webservicetask.f1
+- sql13.dts.designer.webservicestask.general.f1
+- sql13.dts.designer.webservicestask.input.f1
+- sql13.dts.designer.webservicestask.output.f1
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
@@ -19,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: f91aa6e47ee1255c97e8ffd2f91a5fb559a942ca
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: d8ebe6e3486cb13440a66383c518c9d306f2984f
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="web-service-task"></a>Tarefa Serviços Web
@@ -66,13 +69,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-web-service-task"></a>Configuração da tarefa Serviço Web  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
-  
--   [Editor da Tarefa Serviço da Web &#40;Página Geral&#41;](../../integration-services/control-flow/web-service-task-editor-general-page.md)  
-  
--   [Editor da Tarefa Serviço Web &#40;Página Entrada&#41;](../../integration-services/control-flow/web-service-task-editor-input-page.md)  
-  
--   [Editor da Tarefa Serviço Web &#40;Página Saída&#41;](../../integration-services/control-flow/web-service-task-editor-output-page.md)  
+ Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
 -   [Página Expressões](../../integration-services/expressions/expressions-page.md)  
   
@@ -84,6 +81,107 @@ ms.lasthandoff: 08/03/2017
  Para obter mais informações sobre como definir essas propriedades programaticamente, clique em um dos tópicos a seguir:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
+  
+## <a name="web-service-task-editor-general-page"></a>Editor da Tarefa Serviço da Web (página Geral)
+  Use a página **Geral** da caixa de diálogo **Editor da Tarefa Serviços da Web** para especificar um gerenciador de conexões HTTP, o local do arquivo WSDL (linguagem WSDL) usado pela tarefa, descrever a tarefa Serviços da Web e baixar o arquivo WSDL.  
+  
+### <a name="options"></a>Opções  
+ **HTTPConnection**  
+ Selecione um Gerenciador de conexão na lista ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+  
+> [!IMPORTANT]  
+>  O gerenciador de conexões HTTP dá suporte apenas para autenticação anônima e autenticação básica. Ele não suporta a Autenticação do Windows.  
+  
+ **Tópicos relacionados:** [Gerenciador de Conexões de HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Editor do Gerenciador de Conexões de HTTP &#40;página Servidor&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+  
+ **WSDLFile**  
+ Digite o caminho totalmente qualificado de um arquivo WSDL que é local para o computador ou clique no botão Procurar **(…)** e localize esse arquivo.  
+  
+ Se o arquivo WSDL já foi baixado manualmente no computador, selecione-o. No entanto, se o arquivo WSDL ainda não tiver sido baixado, siga estas etapas:  
+  
+-   Crie um arquivo vazio que tenha a extensão de nome de arquivo ".wsdl".  
+  
+-   Selecione esse arquivo vazio para a opção **Arquivo WSDL** .  
+  
+-   Defina o valor de **OverwriteWSDLFile** como **True** para permitir que o arquivo vazio seja substituído pelo arquivo WSDL real.  
+  
+-   Clique em **Baixar WSDL** para baixar o arquivo WSDL real e substituir o arquivo vazio.  
+  
+    > [!NOTE]  
+    >  A opção **Baixar WSDL** não será habilitada até que você forneça o nome de um arquivo local existente na caixa **Arquivo WSDL** .  
+  
+ **OverwriteWSDLFile**  
+ Indique se o arquivo WSDL da tarefa Serviço da Web pode ser substituído.  
+  
+ Para baixar o arquivo WSDL usando o botão **Baixar WSDL** , defina esse valor como **True**.  
+  
+ **Nome**  
+ Forneça um nome exclusivo para a tarefa Serviço da Web. Esse nome é usado como rótulo no ícone de tarefa.  
+  
+> [!NOTE]  
+>  Os nomes das tarefas devem ser exclusivos em um pacote.  
+  
+ **Description**  
+ Digite uma descrição para a tarefa Serviço da Web.  
+  
+ **Baixar WSDL**  
+ Faça o download do arquivo WSDL.  
+  
+ Esse botão não estará habilitado até que você forneça o nome de um arquivo local existente na caixa **Arquivo WSDL** .  
+  
+## <a name="web-service-task-editor-input-page"></a>Editor da Tarefa Serviço da Web (página Entrada)
+  Use a página **Entrada** da caixa de diálogo do **Editor da Tarefa Serviço da Web** para especificar o Serviço da Web, o método Web e os valores a serem fornecidos ao método Web como entrada. Os valores podem ser fornecidos digitando cadeias de caracteres diretamente na coluna Valor ou selecionando variáveis na coluna Valor.  
+  
+### <a name="options"></a>Opções  
+ **Serviço**  
+ Selecione na lista um serviço da Web a ser usado para executar o método Web.  
+  
+ **Método**  
+ Selecione na lista um método Web a ser executado pela tarefa.  
+  
+ **WebMethodDocumentation**  
+ Digite uma descrição do método Web ou clique no botão Procurar **(...)** e digite a descrição na caixa de diálogo **Documentação do Método Web** .  
+  
+ **Nome**  
+ Lista os nomes das entradas no método Web.  
+  
+ **Tipo**  
+ Lista o tipo de dados das entradas.  
+  
+> [!NOTE]  
+>  A tarefa Serviço da Web só suporta parâmetros dos seguintes tipos de dados: tipos primitivos, como números inteiros e cadeias de caracteres; matrizes e sequências de tipos primitivos; e enumerações.  
+  
+ **Variável**  
+ Marque as caixas de seleção para usar variáveis para fornecer entradas.  
+  
+ **Value**  
+ Se as caixas de seleção Variável forem marcadas, selecione as variáveis na lista para fornecer as entradas; caso contrário, digite os valores a serem usados nas entradas.  
+  
+## <a name="web-service-task-editor-output-page"></a>Editor da Tarefa Serviço da Web (página Saída)
+  Use a página **Saída** da caixa de diálogo **Editor da Tarefa Serviço da Web** para especificar onde armazenar o resultado retornado pelo método Web.  
+  
+### <a name="static-options"></a>Opções estáticas  
+ **OutputType**  
+ Selecione o tipo de armazenamento a usar para os resultados. As opções dessa propriedade são listadas na tabela a seguir.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**File Connection**|Armazene os resultados em um arquivo. A seleção deste valor exibe a opção dinâmica **File**.|  
+|**Variável**|Armazene os resultados em uma variável. A seleção deste valor exibe a opção dinâmica **Variable**.|  
+  
+### <a name="outputtype-dynamic-options"></a>Opções dinâmicas de OutputType  
+  
+#### <a name="outputtype--file-connection"></a>OutputType = File Connection  
+ **Arquivo**  
+ Selecione um Gerenciador de conexão de arquivo na lista ou clique em \< **nova Conexão...** > para criar uma nova conexão Gerenciador.  
+  
+ **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="outputtype--variable"></a>OutputType = Variable  
+ **Variável**  
+ Selecione uma variável na lista ou clique em \< **nova variável...** > para criar uma nova variável.  
+  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  Vídeo, [Como: Chamar um serviço Web usando a tarefa Serviço da Web (vídeo do SQL Server)](http://go.microsoft.com/fwlink/?LinkId=259642), no technet.microsoft.com.  

@@ -1,7 +1,7 @@
 ---
 title: Instalar ou desinstalar o Reporting Services suplemento para SharePoint | Microsoft Docs
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,17 +14,17 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cc931cf057da3d63bd23e7c6ca68ed6d6ec31de9
+ms.translationtype: MT
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: e10b1aadc6a89e0d18b55d577f075fcb04353fcb
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Instalar ou desinstalar o suplemento Reporting Services para SharePoint
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
   Execute o pacote de instalação do Suplemento [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos do SharePoint (rsSharePoint.msi) em servidores do SharePoint para habilitar recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em uma implantação do SharePoint. Os recursos incluem o Power View, uma Web Part do Visualizador de Relatórios, um ponto de extremidade de proxy de URL, tipos de conteúdo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e páginas de aplicativos para que você possa criar, exibir e gerenciar relatórios, modelos de relatórios, fontes de dados e outro conteúdo do servidor de relatório em um site do SharePoint. O Suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos do SharePoint é um componente necessário para um servidor de relatório executado no modo do SharePoint. O suplemento pode ser instalado do ou o Assistente de instalação do SQL Server 2016 ou baixando o rsSharePoint.msi do SQL Server 2016 feature pack. Para obter uma lista das versões do suplemento e páginas de download, veja [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   

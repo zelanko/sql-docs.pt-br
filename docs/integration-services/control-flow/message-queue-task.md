@@ -11,6 +11,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.messagequeuetask.f1
+- sql13.dts.designer.msgqueuetask.general.f1
+- sql13.dts.designer.msgqueuetask.send.f1
+- sql13.dts.designer.msgqueuetask.receive.f1
+- sql13.dts.designer.selectvariables.f1
 helpviewer_keywords:
 - Message Queue task [Integration Services]
 - receiving messages
@@ -22,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: bd765f2943b5bb1eb07a10664b1e9ce56bf01e29
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: eddacf0c8454160e6078ff59d150bab5218b6523
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="message-queue-task"></a>Tarefa Fila de Mensagens
@@ -90,13 +94,7 @@ ms.lasthandoff: 08/03/2017
 |**MSMQTaskTimeOut**|Indica que o tempo limite da tarefa foi esgotado.|  
   
 ## <a name="configuration-of-the-message-queue-task"></a>Configuração da tarefa Fila de Mensagens  
- Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente. Para obter informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
-  
--   [Editor da Tarefa Fila de Mensagens &#40;Página Geral&#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)  
-  
--   [Editor da Tarefa Fila de Mensagens &#40;Página Receber&#41;](../../integration-services/control-flow/message-queue-task-editor-receive-page.md)  
-  
--   [Editor da Tarefa Fila de Mensagens &#40;Página Enviar&#41;](../../integration-services/control-flow/message-queue-task-editor-send-page.md)  
+ Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
 -   [Página Expressões](../../integration-services/expressions/expressions-page.md)  
   
@@ -105,6 +103,202 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>Tarefas relacionadas  
  Para obter mais informações sobre como definir essas propriedades no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consulte [Definir as propriedades de uma tarefa ou um contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
+## <a name="message-queue-task-editor-general-page"></a>Editor da Tarefa Fila de Mensagens (página Geral)
+  Use a **página Geral** da caixa de diálogo do **Editor da Tarefa Fila de Mensagens** para nomear e descrever a tarefa Fila de Mensagens, especificar o formato da mensagem e indicar se a tarefa envia ou recebe mensagens.  
+  
+### <a name="options"></a>Opções  
+ **Nome**  
+ Forneça um nome exclusivo para a tarefa Fila de Mensagens. Esse nome é usado como rótulo no ícone de tarefa.  
+  
+> [!NOTE]  
+>  Os nomes das tarefas devem ser exclusivos em um pacote.  
+  
+ **Description**  
+ Digite uma descrição para a tarefa Fila de Mensagens.  
+  
+ **Use2000Format**  
+ Indique se deseja usar o formato 2000 do serviço de enfileiramento de mensagens (também conhecido como MSMQ). O padrão é **False**.  
+  
+ **MSMQConnection**  
+ Selecione um Gerenciador de conexão do MSMQ existente ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+  
+ **Tópicos relacionados**: [Gerenciador de conexões MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md), [Editor do Gerenciador de Conexões MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+  
+ **Mensagem**  
+ Especifique se a tarefa Fila de Mensagens envia ou recebe mensagens. Se você selecionar **Enviar mensagem**, será listada a página Enviar no painel esquerdo da caixa de diálogo; se você selecionar **Receber mensagem**, será listada a página Receber. Por padrão, esse valor está definido como **Enviar mensagem**.  
+  
+## <a name="message-queue-task-editor-send-page"></a>Editor da Tarefa Fila de Mensagens (página Enviar)
+  Use a página **Enviar** da caixa de diálogo **Editor da Tarefa Fila de Mensagens** para configurar uma tarefa de Fila de Mensagens para enviar mensagens de um pacote do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  
+### <a name="options"></a>Opções  
+ **UseEncryption**  
+ Indique se a mensagem deve ser criptografada. O padrão é **False**.  
+  
+ **EncryptionAlgorithm**  
+ Se você escolher usar criptografia, especifique o nome do algoritmo de criptografia a ser utilizado. A tarefa Fila de Mensagens pode usar os algoritmos RC2 e RC4. O padrão é **RC2**.  
+  
+> [!NOTE]  
+>  O algoritmo RC4 tem suporte somente para compatibilidade com versões anteriores. O novo material só pode ser criptografado por meio do algoritmo RC4 ou RC4_128 quando o banco de dados está no nível de compatibilidade 90 ou 100. (Não recomendável.) Use um algoritmo mais recente; por exemplo, um dos algoritmos AES. Na versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o material criptografado por meio do algoritmo RC4 ou RC4_128 pode ser descriptografado em qualquer nível de compatibilidade.  
+  
+> [!IMPORTANT]  
+>  Estes são os algoritmos de criptografia ao qual a tecnologia de serviço de Enfileiramento de Mensagens (também conhecido como MSMQ) oferece suporte. Atualmente, ambos algoritmos de criptografia são considerados criptograficamente fracos quando comparados a algoritmos mais novos, que não têm suporte no serviço de Enfileiramento de Mensagens. Então, você deve considerar cuidadosamente suas necessidades de criptografia ao enviar mensagens que usam a tarefa Fila de Mensagens.  
+  
+ **MessageType**  
+ Selecione o tipo de mensagem. As opções dessa propriedade são listadas na tabela a seguir.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Mensagem do arquivo de dados**|A mensagem é armazenada em um arquivo. Selecionar este valor faz com que seja exibida a opção dinâmica **DataFileMessage**.|  
+|**Mensagem de variável**|A mensagem é armazenada em uma variável. Selecionar este valor faz com que seja exibida a opção dinâmica **VariableMessage**.|  
+|**Mensagem de cadeia de caracteres**|A mensagem é armazenada em uma tarefa Fila de Mensagens. Selecionar este valor faz com que seja exibida a opção dinâmica **StringMessage**.|  
+  
+### <a name="messagetype-dynamic-options"></a>Opções dinâmicas de MessageType  
+  
+#### <a name="messagetype--data-file-message"></a>MessageType = Mensagem de arquivo de dados  
+ **DataFileMessage**  
+ Digite o caminho do arquivo de dados ou clique no botão de reticências **(…)** e localize o arquivo.  
+  
+#### <a name="messagetype--variable-message"></a>MessageType = Mensagem de variável  
+ **VariableMessage**  
+ Digite os nomes das variáveis ou clique no botão de reticências **(…)** e selecione as variáveis. As variáveis são separadas por vírgulas.  
+  
+ **Tópicos Relacionados:** Selecionar Variáveis  
+  
+#### <a name="messagetype--string-message"></a>MessageType = Mensagem de cadeia de caracteres  
+ **StringMessage**  
+ Digite a mensagem de cadeia de caracteres ou clique no botão de reticências **(...)** e digite a mensagem na caixa de diálogo **Inserir Mensagem de Cadeia de Caracteres** .  
+  
+## <a name="message-queue-task-editor-receive-page"></a>Editor da Tarefa Fila de Mensagens (página Receber)
+  Use a página **Receber** da caixa de diálogo **Editor da Tarefa Fila de Mensagens** para configurar uma tarefa Fila de Mensagens para receber mensagens do MSMQ (Serviço de Enfileiramento de Mensagens) [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+  
+### <a name="options"></a>Opções  
+ **RemoveFromMessageQueue**  
+ Indique se a mensagem deve ser removida da fila depois de ser recebida. Por padrão, esse valor é definido como **False**.  
+  
+ **ErrorIfMessageTimeOut**  
+ Indique se a tarefa falha quando a mensagem expira, exibindo uma mensagem de erro. O padrão é **False**.  
+  
+ **TimeoutAfter**  
+ Se você optar por exibir uma mensagem de erro quando uma tarefa falha, especifique quantos segundos esperar antes de ser exibida a mensagem de tempo limite ultrapassado.  
+  
+ **MessageType**  
+ Selecione o tipo de mensagem. As opções dessa propriedade são listadas na tabela a seguir.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Mensagem do arquivo de dados**|A mensagem é armazenada em um arquivo. Selecionar este valor faz com que seja exibida a opção dinâmica **DataFileMessage**.|  
+|**Mensagem de variável**|A mensagem é armazenada em uma variável. Selecionar este valor faz com que seja exibida a opção dinâmica **VariableMessage**.|  
+|**Mensagem de cadeia de caracteres**|A mensagem é armazenada em uma tarefa Fila de Mensagens. Selecionar este valor faz com que seja exibida a opção dinâmica **StringMessage**.|  
+|**Mensagem de cadeia de caracteres para variável**|A mensagem<br /><br /> Selecionar este valor faz com que seja exibida a opção dinâmica **StringMessage**.|  
+  
+### <a name="messagetype-dynamic-options"></a>Opções dinâmicas de MessageType  
+  
+#### <a name="messagetype--data-file-message"></a>MessageType = Mensagem de arquivo de dados  
+ **SaveFileAs**  
+ Digite o caminho do arquivo a ser utilizado ou clique no botão de reticências **(…)** e localize o arquivo.  
+  
+ **Overwrite**  
+ Indique se os dados em um arquivo existente devem ser substituídos quando o conteúdo de uma mensagem de arquivo de dados é salvo. O padrão é **False**.  
+  
+ **Filtro**  
+ Especifique se deve ser aplicado um filtro à mensagem. As opções dessa propriedade são listadas na tabela a seguir.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Sem-filtro**|A tarefa não filtra as mensagens. Selecionar este valor faz com que seja exibida a opção dinâmica **IdentifierReadOnly**.|  
+|**Do pacote**|A mensagem recebe somente mensagens do pacote especificado. Selecionar este valor faz com que seja exibida a opção dinâmica **Identifier**.|  
+  
+#### <a name="filter-dynamic-options"></a>Opções dinâmicas do filtro  
+  
+##### <a name="filter--no-filter"></a>Filtrar = Sem-filtro  
+ **IdentifierReadOnly**  
+ Esta opção é somente leitura. Pode ser em branco ou conter o GUID de um pacote quando a propriedade Filtrar tiver sido definida anteriormente.  
+  
+##### <a name="filter--from-package"></a>Filtrar = Do pacote  
+ **Identifier**  
+ Se você optar por aplicar um filtro, digite o identificador exclusivo do pacote do qual podem ser recebidas mensagens ou clique no botão de reticências **(…)** e especifique o pacote.  
+  
+ **Tópicos relacionados:** [Selecionar um pacote](../../integration-services/control-flow/select-a-package.md)  
+  
+#### <a name="messagetype--variable-message"></a>MessageType = Mensagem de variável  
+ **Filtro**  
+ Especifique se deve ser aplicado um filtro às mensagens. As opções dessa propriedade são listadas na tabela a seguir.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Sem-filtro**|A tarefa não filtra as mensagens. Selecionar este valor faz com que seja exibida a opção dinâmica **IdentifierReadOnly**.|  
+|**Do pacote**|A mensagem recebe somente mensagens do pacote especificado. Selecionar este valor faz com que seja exibida a opção dinâmica **Identifier**.|  
+  
+ **Variável**  
+ Digite o nome da variável ou clique \< **nova variável...** > e, em seguida, configure uma nova variável.  
+  
+ **Tópicos relacionados:** [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+#### <a name="filter-dynamic-options"></a>Opções dinâmicas do filtro  
+  
+##### <a name="filter--no-filter"></a>Filtrar = Sem-filtro  
+ **IdentifierReadOnly**  
+ Esta opção fica em branco.  
+  
+##### <a name="filter--from-package"></a>Filtrar = Do pacote  
+ **Identifier**  
+ Se você optar por aplicar um filtro, digite o identificador exclusivo do pacote do qual podem ser recebidas mensagens ou clique no botão de reticências **(…)** e especifique o pacote.  
+  
+ **Tópicos relacionados:** [Selecionar um pacote](../../integration-services/control-flow/select-a-package.md)  
+  
+#### <a name="messagetype--string-message"></a>MessageType = Mensagem de cadeia de caracteres  
+ **Comparar**  
+ Especifique se deve ser aplicado um filtro às mensagens. As opções dessa propriedade são listadas na tabela a seguir.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Nenhum.**|As mensagens não são comparadas.|  
+|**Correspondência exata**|As mensagens devem corresponder exatamente à cadeia de caracteres na opção **CompareString** .|  
+|**Ignora maiúsculas e minúsculas**|A mensagem deve corresponder à cadeia de caracteres da opção **CompareString** , mas a comparação não diferencia maiúsculas e minúsculas.|  
+|**Contendo**|A mensagem deve conter a cadeia de caracteres na opção **CompareString** .|  
+  
+ **CompareString**  
+ A menos que a opção **Comparar** esteja definida como **Nenhum**, forneça a cadeia de caracteres com a qual a mensagem é comparada.  
+  
+#### <a name="messagetype--string-message-to-variable"></a>MessageType = Mensagem de cadeia de caracteres para variável  
+ **Comparar**  
+ Especifique se deve ser aplicado um filtro às mensagens. As opções dessa propriedade são listadas na tabela a seguir.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Nenhum.**|As mensagens não são comparadas.|  
+|**Correspondência exata**|A mensagem deve corresponder exatamente à cadeia de caracteres na opção **CompareString** .|  
+|**Ignora maiúsculas e minúsculas**|A mensagem deve corresponder à cadeia de caracteres da opção **CompareString** , mas a comparação não diferencia maiúsculas e minúsculas.|  
+|**Contendo**|A mensagem deve conter a cadeia de caracteres na opção **CompareString** .|  
+  
+ **CompareString**  
+ A menos que a opção **Comparar** esteja definida como **Nenhum**, forneça a cadeia de caracteres com a qual a mensagem é comparada.  
+  
+ **Variável**  
+ Digite o nome da variável para manter a mensagem recebida ou clique em \< **nova variável...** > e, em seguida, configure uma nova variável.  
+  
+ **Tópicos relacionados:** [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+## <a name="select-variables"></a>Selecionar variáveis
+  Use a caixa de diálogo **Selecionar Variáveis** para especificar as variáveis a serem usadas em uma operação de envio de mensagem na tarefa Fila de Mensagens. A lista das **Variáveis Disponíveis** inclui variáveis do sistema e aquelas definidas por usuários que estão no escopo da tarefa Fila de Mensagens ou no seu contêiner pai. A tarefa usa as variáveis da lista de **Variáveis Selecionadas** .  
+  
+### <a name="options"></a>Opções  
+ **Variáveis Disponíveis**  
+ Selecione uma ou mais variáveis.  
+  
+ **Variáveis Selecionadas**  
+ Selecione uma ou mais variáveis.  
+  
+ **Setas à Direita**  
+ Mova as variáveis selecionadas para a lista das **Variáveis Selecionadas** .  
+  
+ **Setas à esquerda**  
+ Mova as variáveis selecionadas de volta para a lista das **Variáveis Selecionadas** .  
+  
+ **Nova Variável**  
+ Crie uma nova variável.  
+  
+ **Tópicos relacionados:** [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
 ## <a name="see-also"></a>Consulte também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  

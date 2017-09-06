@@ -11,16 +11,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.cdcsource.f1
+- sql13.ssis.designer.cdcsource.connection.f1
+- sql13.ssis.designer.cdcsource.columns.f1
+- sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 031c5321bc17307a12403d974380eb710c841653
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 1fa9085d2b60f5416fe11359f1c2965ac38f9ee7
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="cdc-source"></a>Origem CDC
@@ -55,7 +58,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **Colunas de Linha de Erro**: os dados de registro que causam o erro.  
   
- Dependendo da configuração de comportamento de erro, a origem CDC oferece suporte ao retorno de erros (conversão de dados, truncamento) que ocorre durante o processo de extração na saída de erro. Para obter mais informações, consulte [Editor de Origem CDC &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md).  
+ Dependendo da configuração de comportamento de erro, a origem CDC oferece suporte ao retorno de erros (conversão de dados, truncamento) que ocorre durante o processo de extração na saída de erro.  
   
 ## <a name="data-type-support"></a>Suporte do tipo de dados  
  O componente origem CDC para Microsoft oferece suporte a todos os tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão mapeados para os tipos de dados SSIS corretos.  
@@ -117,15 +120,132 @@ use <cdc-enabled-database-name>
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Editor de Origem CDC &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
-  
--   [Editor de origem CDC &#40; Página colunas &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
-  
--   [Editor de Origem CDC &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
-  
--   [CDC Source Custom Properties](../../integration-services/data-flow/cdc-source-custom-properties.md)  
+-   [Propriedades personalizadas da origem CDC](../../integration-services/data-flow/cdc-source-custom-properties.md)  
   
 -   [Extrair dados de alteração por meio da origem CDC](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
+  
+## <a name="cdc-source-editor-connection-manager-page"></a>Editor de Origem CDC (página Gerenciador de Conexões)
+  Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem CDC** para selecionar o gerenciador de conexões do ADO.NET para o banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do qual a origem CDC lê as linhas de alteração (o banco de dados CDC). Quando o banco de dados CDC é selecionado, você precisa selecionar uma tabela capturada no banco de dados.  
+  
+ Para obter mais informações sobre a origem CDC, consulte [Origem CDC](../../integration-services/data-flow/cdc-source.md).  
+  
+### <a name="task-list"></a>Lista de Tarefas  
+ **Para abrir a página do Gerenciador de Conexões do Editor de Origem CDC**  
+  
+1.  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], abra o pacote [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] que tem a origem CDC.  
+  
+2.  Na guia **Fluxo de Dados** , clique duas vezes na origem CDC.  
+  
+3.  No **Editor de Origem CDC**, clique em **Gerenciador de Conexões**.  
+  
+### <a name="options"></a>Opções  
+ **Gerenciador de conexões ADO.NET**  
+ Selecione na lista um gerenciador de conexões existente ou clique em **Novo** para criar uma nova conexão. A conexão deve ser a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está habilitado para CDC e onde a tabela de alteração selecionada está localizada.  
+  
+ **Novo**  
+ Clique em **Nova**. A caixa de diálogo **Configurar Editor do Gerenciador de Conexões ADO.NET** é aberta, na qual você pode criar um novo gerenciador de conexões  
+  
+ **Tabela CDC**  
+ Selecione a tabela de origem CDC que contém as alterações capturadas que você deseja ler e alimente os componentes SSIS downstream para serem processados.  
+  
+ **Instância de captura**  
+ Selecione ou digite o nome da instância de captura CDC com a tabela CDC que deve ser lida.  
+  
+ Uma tabela de origem capturada pode ter uma ou duas instâncias capturadas para tratar diretamente a transição da definição de tabela por meio de alterações de esquema. Se mais de uma instância de captura for definida para a tabela de origem que está sendo capturada, selecione a instância de captura que você deseja usar aqui. O nome de instância de captura padrão para uma tabela [esquema]. [table] é \<esquema > _\<tabela >, mas que os nomes de instância de captura real em uso podem ser diferentes. A tabela real que é lido da é a tabela CDC **cdc.\< instância de captura > CT**.  
+  
+ **Modo de processamento CDC**  
+ Selecione o modo de processamento que melhor trata suas necessidades de processamento. As opções possíveis são:  
+  
+-   **Tudo**: retorna as alterações no intervalo CDC atual sem os valores **Antes da Atualização** .  
+  
+-   **Todos com valores antigos**: retorna as alterações no intervalo de processamento CDC atual, incluindo os valores antigos (**Antes da Atualização**). Para cada operação de atualização, haverá duas linhas, uma com os valores antes da atualização e outra com o valor depois da atualização.  
+  
+-   **Líquido**: retorna somente uma linha de alteração por linha de origem modificada no intervalo de processamento CDC atual. Se uma linha de origem tiver sido atualizada várias vezes, a alteração combinada será gerada (por exemplo, insert+update é gerado como uma única atualização e update+delete é gerado como uma única exclusão). Ao trabalhar em modo de processamento de alteração Líquido, é possível dividir as alterações para saídas Excluir, Inserir e Atualizar, e tratá-las em paralelo porque a única linha de origem aparece em mais de uma saída.  
+  
+-   **Líquido com máscara de atualização**: este modo é semelhante ao modo líquido normal, mas também adiciona colunas Boolianas com o nome padrão **_ $\<nome da coluna >\__Changed** que indica a linha de alteração de colunas alteradas na atual.  
+  
+-   **Líquido com mesclagem**: este modo é semelhante ao modo Líquido normal, mas com operações de inserção e atualização mescladas em uma única operação de mesclagem (UPSERT).  
+  
+> [!NOTE]  
+>  Para todas as opções de alteração Net, a tabela de origem deve ter uma chave primária ou índice exclusivo. Para tabelas sem uma chave primária ou um índice exclusivo, você deve use a opção **Tudo** .  
+  
+ **Variável contendo o estado de CDC**  
+ Selecione a variável de pacote de cadeia de caracteres SSIS que mantém o estado CDC para o contexto CDC atual. Para obter mais informações sobre a variável de estado CDC, consulte [Definir uma variável de estado](../../integration-services/data-flow/define-a-state-variable.md).  
+  
+ **Incluir coluna de indicador de reprocessamento**  
+ Marque esta caixa de seleção para criar uma coluna de saída especial chamada **__$reprocessing**.  
+  
+ Esta coluna apresenta um valor de **true** quando o intervalo de processamento CDC sobrepõe o intervalo de processamento inicial (o intervalo de LSNs que corresponde ao período de carga inicial) ou quando um intervalo de processamento CDC é reprocessado após um erro em uma execução anterior. Esta coluna de indicador permite que o desenvolvedor do SSIS trate erros diferentemente ao reprocessar alterações (por exemplo, ações como excluir de uma linha não existente e uma inserção com falha em uma chave duplicada podem ser ignoradas).  
+  
+ Para obter mais informações, consulte [Propriedades personalizadas da origem CDC](../../integration-services/data-flow/cdc-source-custom-properties.md).  
+  
+## <a name="cdc-source-editor-columns-page"></a>Editor de Origem CDC (página Colunas)
+  Use a página **Colunas** da caixa de diálogo do **Editor de Origem CDC** para mapear uma coluna de saída em cada coluna externa (origem).  
+  
+### <a name="task-list"></a>Lista de Tarefas  
+ **Para abrir a página Colunas do Editor de Origem CDC**  
+  
+1.  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], abra o pacote [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] que tem a origem CDC.  
+  
+2.  Na guia **Fluxo de Dados** , clique duas vezes na origem CDC.  
+  
+3.  No **Editor de Origem CDC**, clique em **Colunas**.  
+  
+### <a name="options"></a>Opções  
+ **Colunas Externas Disponíveis**  
+ A lista de colunas externas disponíveis na fonte de dados. Você não pode usar esta tabela para adicionar ou excluir colunas. Selecione as colunas a serem usadas na origem. As colunas selecionadas são adicionadas à lista **Coluna Externa** na ordem em que são selecionadas.  
+  
+ **Coluna Externa**  
+ Uma exibição das colunas externas (origem) na ordem em que serão exibidas ao configurar os componentes que consomem os dados da origem CDC. Para alterar essa ordem, primeiro limpe as colunas selecionadas na lista **Colunas Externas Disponíveis** e depois selecione colunas externas na lista em uma ordem diferente. As colunas selecionadas são adicionadas à lista **Coluna Externa** na ordem em que são selecionadas.  
+  
+ **Coluna de Saída**  
+ Insira um nome exclusivo para cada coluna de saída. O padrão é o nome da coluna externa (origem) selecionada; porém, é possível escolher qualquer nome descritivo exclusivo. O nome inserido é exibido no Designer SSIS.  
+  
+## <a name="cdc-source-editor-error-output-page"></a>Editor de Origem CDC (página Saída de Erro)
+  Use a página **Saída de Erro** da caixa de diálogo **Editor de Origem CDC** para selecionar as opções para tratamento de erros.  
+  
+### <a name="task-list"></a>Lista de Tarefas  
+ **Para abrir a página Saída de Erro do Editor de Origem CDC**  
+  
+1.  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], abra o pacote [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] que tem a origem CDC.  
+  
+2.  Na guia **Fluxo de Dados** , clique duas vezes na origem CDC.  
+  
+3.  No **Editor de Origem CDC**, clique em **Saída de Erro**.  
+  
+### <a name="options"></a>Opções  
+ **Entrada/Saída**  
+ Exibe o nome da fonte de dados.  
+  
+ **Coluna**  
+ Exiba as colunas externas (origem) selecionadas na página **Gerenciador de Conexões** da caixa de diálogo **CDC Source Editor (Editor de Origem CDC)** .  
+  
+ **Erro**  
+ Selecione como a origem CDC deve tratar erros em um fluxo: ignorar a falha, redirecionar a linha ou causar falha no componente.  
+  
+ **Truncation**  
+ Selecione como a origem CDC deve tratar o truncamento em um fluxo: ignorar a falha, redirecionar a linha ou causar falha no componente.  
+  
+ **Description**  
+ Não usado.  
+  
+ **Definir este valor para células selecionadas**  
+ Selecione como a origem CDC trata todas as células selecionadas quando ocorre um erro ou um truncamento: ignorar a falha, redirecionar a linha ou causar a falha no componente.  
+  
+ **Aplicar**  
+ Aplique as opções de tratamento de erros às células selecionadas.  
+  
+### <a name="error-handling-options"></a>Opções de tratamento de erros  
+ Você usa as opções a seguir para configurar como a origem CDC trata erros e truncamentos.  
+  
+ **Falha no Componente**  
+ A tarefa Fluxo de Dados falha quando ocorre um erro ou um truncamento. Esse é o comportamento padrão.  
+  
+ **Ignorar Falha**  
+ O erro ou truncamento é ignorado e a linha de dados é direcionada para a saída da origem CDC.  
+  
+ **Redirecionar fluxo**  
+ O erro ou a linha de dados de truncamento é direcionada para a saída do erro da origem CDC. Neste caso, o tratamento de erro da origem CDC é usado. Para obter mais informações, consulte [CDC Source](../../integration-services/data-flow/cdc-source.md).  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   

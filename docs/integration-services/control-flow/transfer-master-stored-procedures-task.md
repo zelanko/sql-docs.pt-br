@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfermasterspstask.f1
+- sql13.dts.designer.transferstoredprocedurestask.general.f1
+- sql13.dts.designer.transferstoredprocedurestask.storedprocedures.f1
 helpviewer_keywords:
 - Transfer Master Stored Procedures task [Integration Services]
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b309790e8ac39e9ac978c56bc451cfd68c5e3c75
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 83001193fc8cedf13bf7425d6b8bae88ac09c987
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Tarefa Transferir Procedimentos Armazenados Mestres
@@ -66,11 +68,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-transfer-master-stored-procedures-task"></a>Configuração da tarefa Transferir Procedimentos Armazenados Mestres  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
-  
--   [Editor da Tarefa Transferir Procedimentos Armazenados Mestres &#40;página Geral&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-general-page.md)  
-  
--   [Editor da Tarefa Transferir Procedimentos Armazenados Mestres &#40;Página Procedimentos Armazenados&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
+ Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
 -   [Página Expressões](../../integration-services/expressions/expressions-page.md)  
   
@@ -84,6 +82,57 @@ ms.lasthandoff: 08/03/2017
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
 -   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## <a name="transfer-master-stored-procedures-task-editor-general-page"></a>Editor da Tarefa Transferir Procedimentos Armazenados Mestres (Página Geral)
+  Use a página **Geral** da caixa de diálogo **Editor da Tarefa Transferir Procedimentos Armazenados Mestres** para nomear e descrever a tarefa Transferir Procedimentos Armazenados Mestres.  
+  
+> [!NOTE]  
+>  Essa tarefa transfere apenas procedimentos armazenados definidos pelo usuário pertencentes ao **dbo** de um banco de dados **mestre** no servidor de origem para um banco de dados **mestre** no servidor de destino. Os usuários devem receber a permissão CREATE PROCEDURE no banco de dados **mestre** no servidor de destino ou devem ser membros da função de servidor fixa **sysadmin** no servidor de destino para criar procedimentos armazenados ali.  
+  
+### <a name="options"></a>Opções  
+ **Nome**  
+ Digite um nome exclusivo para a tarefa Transferir Procedimentos Armazenados Mestres. Esse nome é usado como rótulo no ícone de tarefa.  
+  
+> [!NOTE]  
+>  Os nomes das tarefas devem ser exclusivos em um pacote.  
+  
+ **Description**  
+ Digite uma descrição da tarefa Transferir Procedimentos Armazenados Mestres.  
+  
+## <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>Editor da Tarefa Transferir Procedimentos Armazenados Mestres (páginas Procedimentos Armazenados)
+  Use a página **Procedimentos Armazenados** da caixa de diálogo **Editor da Tarefa Transferir Procedimentos Armazenados Mestres** para especificar propriedades para copiar um ou mais procedimentos armazenados definidos pelo usuário do banco de dados **mestre** em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um banco de dados **mestre** em outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+> [!NOTE]  
+>  Essa tarefa transfere apenas procedimentos armazenados definidos pelo usuário pertencentes ao **dbo** de um banco de dados **mestre** no servidor de origem para um banco de dados **mestre** no servidor de destino. Os usuários devem receber a permissão CREATE PROCEDURE no banco de dados **mestre** no servidor de destino ou devem ser membros da função de servidor fixa **sysadmin** no servidor de destino para criar procedimentos armazenados ali.  
+  
+### <a name="options"></a>Opções  
+ **SourceConnection**  
+ Selecione um Gerenciador de conexão do SMO na lista ou clique em  **\<nova conexão... >** para criar uma nova conexão para o servidor de origem.  
+  
+ **DestinationConnection**  
+ Selecione um Gerenciador de conexão do SMO na lista ou clique em  **\<nova conexão... >** para criar uma nova conexão para o servidor de destino.  
+  
+ **IfObjectExists**  
+ Selecione como a tarefa deve manipular procedimentos armazenados definidos pelo usuário de nome idêntico a outros já existentes no banco de dados **mestre** no servidor de destino.  
+  
+ As opções desta propriedade estão listadas na seguinte tabela:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**FailTask**|Haverá falha na tarefa se já existirem procedimentos armazenados de nome igual no banco de dados **mestre** no servidor de destino.|  
+|**Overwrite**|A tarefa irá substituir os procedimentos armazenados de nome igual no banco de dados **mestre** no servidor de destino.|  
+|**Skip**|A tarefa irá ignorar os procedimentos armazenados de nome igual já existentes no banco de dados **mestre** no servidor de destino.|  
+  
+ **TransferAllStoredProcedures**  
+ Selecione se todos os procedimentos armazenados definidos pelo usuário no banco de dados **mestre** no servidor de origem devem ser copiados para o servidor de destino.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Verdadeiro**|Copiar todos os procedimentos armazenados definidos pelo usuário no banco de dados **mestre** .|  
+|**Falso**|Copiar só os procedimentos armazenados especificados.|  
+  
+ **StoredProceduresList**  
+ Selecione quais procedimentos armazenados definidos pelo usuário no banco de dados **mestre** no servidor de origem devem ser copiados para o banco de dados **mestre** no servidor de destino. Esta opção só fica disponível quando **TransferAllStoredProcedures** for definido como **False**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefa Transferir Objetos do SQL Server](../../integration-services/control-flow/transfer-sql-server-objects-task.md)   

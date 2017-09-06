@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.wmidatareadertask.f1
+- sql13.dts.designer.wmidatareadertask.general.f1
+- sql13.dts.designer.wmidatareadertask.wmiquery.f1
 helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Data Reader task [Integration Services]
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 9edd5e03a79fde1aa580a47c3df294e59957e896
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 75beba806fea6d2e680720ef9c9c72b7809dbe70
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="wmi-data-reader-task"></a>Tarefa Leitor de Dados do WMI
@@ -86,9 +88,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="configuration-of-the-wmi-data-reader-task"></a>Configuração da tarefa Leitor de Dados do WMI  
  Você pode definir propriedades programaticamente ou por meio do Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- Para obter informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
-  
--   [Editor da Tarefa Leitor de Dados do WMI &#40;Página Opções do WMI&#41;](../../integration-services/control-flow/wmi-data-reader-task-editor-wmi-options-page.md)  
+ Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
 -   [Página Expressões](../../integration-services/expressions/expressions-page.md)  
   
@@ -100,6 +100,87 @@ Select * FROM Win32_QuickFixEngineering
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
 -   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## <a name="wmi-data-reader-task-editor-general-page"></a>Editor da Tarefa Leitor de Dados do WMI (página Geral)
+  Use a página **Geral** da caixa de diálogo **Editor da Tarefa Leitor de Dados WMI** para nomear e descrever a tarefa Leitor de Dados WMI.  
+  
+  Para obter mais informações sobre a linguagem WQL, consulte o tópico Instrumentação de Gerenciamento do Windows, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Consultando com WQL), na Biblioteca MSDN.  
+  
+### <a name="options"></a>Opções  
+ **Nome**  
+ Forneça um nome exclusivo para a tarefa Leitor de Dados WMI. Esse nome é usado como rótulo no ícone de tarefa.  
+  
+> [!NOTE]  
+>  Os nomes das tarefas devem ser exclusivos em um pacote.  
+  
+ **Description**  
+ Digite uma descrição para a tarefa Leitor de Dados WMI.  
+  
+## <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Editor da Tarefa Leitor de Dados do WMI (página Opções do WMI)
+  Use a página **Opções do WMI** da caixa de diálogo **Editor da Tarefa Leitor de Dados do WMI** para especificar a origem da consulta da linguagem WQL e o destino do resultado da consulta.  
+  
+ Para obter mais informações sobre a linguagem WQL, consulte o tópico Instrumentação de Gerenciamento do Windows, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Consultando com WQL), na Biblioteca MSDN.  
+  
+### <a name="static-options"></a>Opções estáticas  
+ **WMIConnectionName**  
+ Selecione um Gerenciador de conexão WMI na lista ou clique em \< **nova Conexão de WMI...** > para criar uma nova conexão Gerenciador.  
+  
+ **Tópicos relacionados:** [Gerenciador de Conexões WMI](../../integration-services/connection-manager/wmi-connection-manager.md), [Editor do Gerenciador de Conexões WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+  
+ **WQLQuerySourceType**  
+ Selecione o tipo de origem da consulta WQL que a tarefa executa. As opções dessa propriedade são listadas na tabela a seguir.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Entrada Direta**|Defina a origem de consultas WQL. Ao selecionar esse valor, a opção dinâmica **WQLQuerySourceType**será exibida.|  
+|**Conexão do Arquivo**|Selecione um arquivo que contém a consulta WQL. Ao selecionar esse valor, a opção dinâmica **WQLQuerySourceType**será exibida.|  
+|**Variável**|Defina a origem de uma variável que defina a consulta WQL. Ao selecionar esse valor, a opção dinâmica **WQLQuerySourceType**será exibida.|  
+  
+ **OutputType**  
+ Especifique se a saída deve ser uma tabela de dados, valor de propriedade ou nome e valor de propriedade.  
+  
+ **OverwriteDestination**  
+ Especifique se é necessário manter, substituir ou adicionar aos dados originais no arquivo ou variável de destino.  
+  
+ **DestinationType**  
+ Selecione o tipo de destino da consulta WQL que a tarefa executa. As opções dessa propriedade são listadas na tabela a seguir.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Conexão do Arquivo**|Selecione um arquivo no qual salvar os resultados da consulta WQL. A seleção desse valor exibe a opção dinâmica **DestinationType**.|  
+|**Variável**|Defina a variável na qual armazenar os resultados da consulta WQL. A seleção desse valor exibe a opção dinâmica **DestinationType**.|  
+  
+### <a name="wqlquerysourcetype-dynamic-options"></a>Opções dinâmicas de WQLQuerySourceType  
+  
+#### <a name="wqlquerysourcetype--direct-input"></a>WQLQuerySourceType = Entrada direta  
+ **WQLQuerySource**  
+ Forneça uma consulta ou clique nas reticências (...) e digite uma consulta, usando a caixa de diálogo **Consulta WQL** .  
+  
+#### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = Conexão do arquivo  
+ **WQLQuerySource**  
+ Selecione um Gerenciador de conexão de arquivo na lista ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+  
+ **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = Variável  
+ **WQLQuerySource**  
+ Selecione uma variável na lista ou clique em \< **nova variável...** > para criar uma nova variável.  
+  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+### <a name="destinationtype-dynamic-options"></a>Opções dinâmicas de DestinationType  
+  
+#### <a name="destinationtype--file-connection"></a>DestinationType = Conexão do arquivo  
+ **Destino**  
+ Selecione um Gerenciador de conexão de arquivo na lista ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+  
+ **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="destinationtype--variable"></a>DestinationType = Variável  
+ **Destino**  
+ Selecione uma variável na lista ou clique em \< **nova variável...** > para criar uma nova variável.  
+  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

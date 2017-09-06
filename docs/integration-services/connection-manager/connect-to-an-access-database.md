@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e6fe201622d38c10967c9c076da0d99d215ea33f
+ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
+ms.openlocfilehash: b5e60880b40a66a6f669bcfd53dcc59e497bbf0a
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="connect-to-an-access-database"></a>Conectar-se a um banco de dados do Access
@@ -35,10 +35,22 @@ ms.lasthandoff: 08/03/2017
   
 > [!NOTE]  
 >  Em um computador de 64 bits, você deve executar pacotes que se conectam a fontes de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access no modo de 32 bits. O provedor OLE DB para [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet e o provedor OLE DB para Mecanismo de Banco de Dados do Microsoft Office 12.0 Access estão disponíveis somente em versões de 32 bits.  
+
+## <a name="connectivity-components-for-microsoft-excel-and-access-files"></a>Componentes de conectividade para os arquivos do Microsoft Excel e Access
+  
+Você precisará baixar os componentes de conectividade para arquivos do Microsoft Office se eles ainda não estiverem instalados. Baixar a versão mais recente dos componentes de conectividade para acessar e Excel arquivos aqui: [redistribuível de 2016 do mecanismo de banco de dados Microsoft Access](https://www.microsoft.com/download/details.aspx?id=54920).
+  
+A versão mais recente dos componentes pode abrir arquivos criados por versões anteriores do Access.
+
+Se o computador tiver uma versão de 32 bits do Office, em seguida, você precisa instalar a versão de 32 bits dos componentes e você também precisa garantir que você execute o pacote no modo de 32 bits.
+
+Se você tiver uma assinatura do Office 365, certifique-se de que você baixe o redistribuível de 2016 do mecanismo de banco de dados de acesso e não o Microsoft Access 2016 Runtime. Quando você executar o instalador, você verá uma mensagem de erro que você não pode instalar a download lado a lado com componentes do Office clique para executar. Para ignorar essa mensagem de erro, execute a instalação no modo silencioso abrindo uma janela de Prompt de comando e executando o. Arquivo EXE baixado com o `/quiet` alternar. Por exemplo:
+
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
   
 ## <a name="connecting-to-a-data-source-in-access-2003-or-earlier-format"></a>Conectando-se a uma fonte de dados em formato Access 2003 ou anterior  
   
-#### <a name="to-create-an-access-connection-manager-from-the-connection-managers-area"></a>Para criar um gerenciador de conexão do Access na área Gerenciadores de Conexões  
+### <a name="to-create-an-access-connection-manager-from-the-connection-managers-area"></a>Para criar um gerenciador de conexão do Access na área Gerenciadores de Conexões  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o pacote.  
   
@@ -50,7 +62,7 @@ ms.lasthandoff: 08/03/2017
   
 4.  Na caixa de diálogo **Gerenciador de Conexões** , para **Provedor**, selecione **Microsoft Jet 4.0 OLE DB Provider**e configure o gerenciador de conexões conforme adequado.  
   
-#### <a name="to-create-an-access-connection-from-the-sql-server-import-and-export-wizard"></a>Para criar uma conexão do Access a partir do Assistente de Importação e Exportação do SQL Server  
+### <a name="to-create-an-access-connection-from-the-sql-server-import-and-export-wizard"></a>Para criar uma conexão do Access a partir do Assistente de Importação e Exportação do SQL Server  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], inicie o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -61,7 +73,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="connecting-to-a-data-source-in-access-2007-format"></a>Conectando-se a uma fonte de dados em formato Access 2007  
  Para acessar uma fonte de dados do Access 2007, o gerenciador de conexões OLE DB requer o provedor OLE DB para o Microsoft Office 12.0 Access Database Engine. Esse provedor é instalado automaticamente com o sistema [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 2007. Se o sistema Office 2007 não estiver instalado no computador em que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] está em execução, será necessário instalar o provedor separadamente. Para instalar o provedor OLE DB para o Mecanismo de Banco de Dados do Microsoft Office 12.0 Access, faça download e instale os componentes nesta página da Web, [Driver do sistema Office 2007: Componentes de conectividade de dados](http://go.microsoft.com/fwlink/?LinkId=98155).  
   
-#### <a name="to-create-an-ole-db-connection-manager-from-the-connection-managers-area"></a>Para criar um gerenciador de conexões OLE DB na área Gerenciadores de Conexões  
+### <a name="to-create-an-ole-db-connection-manager-from-the-connection-managers-area"></a>Para criar um gerenciador de conexões OLE DB na área Gerenciadores de Conexões  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o pacote.  
   
@@ -76,7 +88,7 @@ ms.lasthandoff: 08/03/2017
     > [!NOTE]  
     >  Para se conectar a uma fonte de dados que usa o Access 2007, não é possível selecionar **Provedor OLE DB para Microsoft Jet 4.0** como a **Fonte de Dados**.  
   
-#### <a name="to-create-an-ole-db-connection-from-the-sql-server-import-and-export-wizard"></a>Para criar uma conexão OLE DB a partir do Assistente de Importação e Exportação do SQL Server  
+### <a name="to-create-an-ole-db-connection-from-the-sql-server-import-and-export-wizard"></a>Para criar uma conexão OLE DB a partir do Assistente de Importação e Exportação do SQL Server  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], inicie o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

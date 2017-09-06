@@ -16,29 +16,31 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b36b92c9beb840f6a2ea66250a5a025aa587acef
+ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
+ms.openlocfilehash: f8fb1db80ac1b750950a3401516b54af5ee29686
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="connect-to-an-excel-workbook"></a>Conectar-se a uma pasta de trabalho do Excel
   A conexão de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a uma pasta de trabalho do Microsoft Office Excel requer um gerenciador de conexões do Excel.  
   
  Você pode criar esses gerenciadores de conexões na área Gerenciadores de Conexões do [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer ou no Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ 
+## <a name="connectivity-components-for-microsoft-excel-and-access-files"></a>Componentes de conectividade para os arquivos do Microsoft Excel e Access
   
- **Provedores e drivers para arquivos do Microsoft Excel e Access**  
+Você precisará baixar os componentes de conectividade para arquivos do Microsoft Office se eles ainda não estiverem instalados. Baixar a versão mais recente dos componentes de conectividade para o Excel e acessar arquivos aqui: [redistribuível de 2016 do mecanismo de banco de dados Microsoft Access](https://www.microsoft.com/download/details.aspx?id=54920).
   
- Você precisará baixar os provedores OLE DB e drivers para arquivos do Microsoft Office se eles ainda não estiverem instalados. Versões mais recentes do provedor podem abrir arquivos criados em versões anteriores do Excel.  
-  
- Se o computador tiver uma versão de 32 bits do Office, você precisará instalar a versão de 32 bits dos drivers e precisará também certificar-se de executar o assistente ou o pacote do Integration Services que ele cria no modo de 32 bits.  
-  
-|Versão do Microsoft Office|Download|  
-|------------------------------|--------------|  
-|2007|[2007 Office System Driver: componentes de conectividade de dados](https://www.microsoft.com/en-us/download/details.aspx?id=23734)|  
-|2010|[Tempo de execução do Microsoft Access 2010](https://www.microsoft.com/en-us/download/details.aspx?id=10910)|  
-|2013|[Tempo de execução do Microsoft Access 2013](http://www.microsoft.com/en-us/download/details.aspx?id=39358)|  
-  
+A versão mais recente dos componentes pode abrir arquivos criados por versões anteriores do Excel.
+
+Se o computador tiver uma versão de 32 bits do Office, em seguida, você precisa instalar a versão de 32 bits dos componentes e você também precisa garantir que você execute o pacote no modo de 32 bits.
+
+Se você tiver uma assinatura do Office 365, certifique-se de que você baixe o redistribuível de 2016 do mecanismo de banco de dados de acesso e não o Microsoft Access 2016 Runtime. Quando você executar o instalador, você verá uma mensagem de erro que você não pode instalar a download lado a lado com componentes do Office clique para executar. Para ignorar essa mensagem de erro e instalar os componentes com êxito, execute a instalação no modo silencioso abrindo uma janela de Prompt de comando e executando o. Arquivo EXE baixado com o `/quiet` alternar. Por exemplo:
+
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
+
+## <a name="create-an-excel-connection-manager"></a>Criar uma Excel Gerenciador de conexão
+
 ### <a name="to-create-an-excel-connection-manager-from-the-connection-managers-area"></a>Para criar um gerenciador de conexões do Excel na área Gerenciadores de Conexões  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o pacote.  

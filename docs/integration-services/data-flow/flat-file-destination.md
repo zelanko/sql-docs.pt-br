@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.flatfiledest.f1
+- sql13.dts.designer.flatfiledestadapter.connection.f1
+- sql13.dts.designer.flatfiledestadapter.mappings.f1
 helpviewer_keywords:
 - flat files
 - Flat File destination
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 78a0ec526f83dcab8d7358ef5a51f1f6ccfd0a04
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: c7112381911e783e86db2504e3ec12b321be4905
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="flat-file-destination"></a>Destino de arquivo simples
@@ -46,12 +48,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-flat-file-destination"></a>Configuração do destino de Arquivo Simples  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Fonte de Arquivo Simples** , clique em um dos seguintes tópicos:  
-  
--   [Editor de Destino de Arquivo Simples &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/flat-file-destination-editor-connection-manager-page.md)  
-  
--   [Editor de Destino de Arquivo Simples &#40;Página Mapeamentos&#41;](../../integration-services/data-flow/flat-file-destination-editor-mappings-page.md)  
-  
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -60,6 +56,45 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
  Para obter informações sobre como definir as propriedades do componente de fluxo de dados, consulte [Definir as propriedades de um componente de fluxo de dados](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="flat-file-destination-editor-connection-manager-page"></a>Editor de Destino de Arquivo Simples (página Gerenciador de Conexões)
+  Use a página do **Gerenciador de Conexões** da caixa de diálogo do **Editor de Destino de Arquivo Simples** para selecionar a conexão de arquivo simples do destino e especificar se irá substituir ou anexar ao arquivo de destino existente. O destino de arquivo simples grava dados em um arquivo de texto. Esse arquivo de texto pode ser em formato delimitado, de largura fixa, de largura fixa com delimitador de linha ou em formato irregular à direita.  
+  
+### <a name="options"></a>Opções  
+ **Gerenciador de conexões de arquivo simples**  
+ Selecione um gerenciador de conexões existente usando a caixa de listagem ou crie uma nova conexão clicando em **Novo**.  
+  
+ **Novo**  
+ Crie uma nova conexão utilizando as caixas de diálogo **Formato de Arquivo Simples** e **Editor do Gerenciador de Conexões de Arquivos Simples** .  
+  
+ Além dos formatos padrão de arquivo simples: delimitado, de largura fixa e irregular à direita, a caixa de diálogo **Formato de Arquivo Simples** tem uma quarta opção, **Largura fixa com delimitadores de linha**. Esta opção representa um caso especial do formato irregular à direita no qual o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] adiciona uma coluna fictícia como a coluna final de dados. Essa coluna fictícia assegura que a coluna final tenha uma largura fixa.  
+  
+ A opção **Largura fixa com delimitadores de linha** não está disponível no **Editor do Gerenciador de Conexões de Arquivos Simples**. Se necessário, você pode emular esta opção no editor. Para emular esta opção, na página **Geral** do **Editor do Gerenciador de Conexões de Arquivos Simples**, em **Formato**, selecione **Irregular à direita**. Na página **Avançado** do editor, adicione uma nova coluna fictícia como a coluna final de dados.  
+  
+ **Substituir dados no arquivo**  
+ Indique se irá substituir um arquivo existente ou acrescentar dados a ele.  
+  
+ **Cabeçalho**  
+ Digite um bloco de texto a ser inserido no arquivo antes que qualquer dado seja gravado. Use esta opção para incluir informações adicionais, como cabeçalhos de coluna.  
+  
+ **Visualização**  
+ Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A visualização pode exibir até 200 linhas.  
+  
+## <a name="flat-file-destination-editor-mappings-page"></a>Editor de Destino de Arquivo Simples (Página Mapeamentos)
+  Use a página **Mapeamentos** da caixa de diálogo **Editor de Destino de Arquivo Simples** para mapear colunas de entrada para colunas de destino.  
+  
+### <a name="options"></a>Opções  
+ **Colunas de Entrada Disponíveis**  
+ Exiba a lista das colunas de entrada disponíveis. Use uma operação de arrastar e soltar para mapear as colunas de entrada disponíveis para colunas de destino.  
+  
+ **Colunas de Destino Disponíveis**  
+ Exiba a lista de colunas de destino disponíveis. Use uma operação de arrastar e soltar para mapear as colunas de destino disponíveis para colunas de entrada.  
+  
+ **Coluna de Entrada**  
+ Exiba as colunas de entrada selecionadas anteriormente neste tópico. É possível alterar os mapeamentos usando a lista **Colunas de Entrada Disponíveis**. Selecione  **\<ignorar >** para excluir a coluna da saída.  
+  
+ **Coluna de Destino**  
+ Exiba cada coluna de destino disponível, seja ela mapeada ou não.  
   
 ## <a name="see-also"></a>Consulte também  
  [Fonte de Arquivo Simples](../../integration-services/data-flow/flat-file-source.md)   

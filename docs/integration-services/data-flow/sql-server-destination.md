@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sqlserverdest.f1
+- sql13.dts.designer.sqlserverdestadapter.connection.f1
+- sql13.dts.designer.sqlserverdestadapter.mappings.f1
+- sql13.dts.designer.sqlserverdestadapter.advanced.f1
 helpviewer_keywords:
 - SQL Server destination
 - loading data
@@ -23,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1224814d165d5763d832b18f6523c6c47f6f59c
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: e85093b58f8fcad60231c0f1a5c24387be686be3
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="sql-server-destination"></a>Destino do SQL Server
@@ -93,14 +96,6 @@ ms.lasthandoff: 08/03/2017
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Destino do SQL Server** , clique em um dos seguintes tópicos:  
-  
--   [Editor de Destinos SQL &#40;página Gerenciador de Conexões&#41;](../../integration-services/data-flow/sql-destination-editor-connection-manager-page.md)  
-  
--   [Editor de Destinos SQL &#40;página Mapeamentos&#41;](../../integration-services/data-flow/sql-destination-editor-mappings-page.md)  
-  
--   [Editor de Destinos SQL &#40;página Avançado&#41;](../../integration-services/data-flow/sql-destination-editor-advanced-page.md)  
-  
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -126,6 +121,87 @@ ms.lasthandoff: 08/03/2017
 -   Artigo técnico, [The Data Loading Performance Guide](http://go.microsoft.com/fwlink/?LinkId=233700), em msdn.microsoft.com.  
   
 -   Artigo técnico, [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701)(Usando o SQL Server Integration Services para carregar dados em massa), em simple-talk.com.  
+  
+## <a name="sql-destination-editor-connection-manager-page"></a>Editor do Destino SQL (página Gerenciador de Conexões)
+  Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Destinos SQL** para especificar informações de fonte de dados e visualizar os resultados. O destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carrega dados em tabelas ou exibições em um banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  
+### <a name="options"></a>Opções  
+ **gerenciador de conexões OLE DB**  
+ Selecione uma conexão existente na lista ou crie uma nova conexão clicando em **Novo**.  
+  
+ **Novo**  
+ Crie uma nova conexão usando a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** .  
+  
+ **Use uma tabela ou exibição**  
+ Selecione uma tabela ou exibição existente na lista ou crie uma nova conexão clicando em **Novo**.  
+  
+ **Novo**  
+ Crie uma nova tabela usando a caixa de diálogo **Criar Tabela** .  
+  
+> [!NOTE]  
+>  Ao clicar em **Novo**, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] gera uma instrução CREATE TABLE padrão com base na fonte de dados conectada. A instrução CREATE TABLE padrão não incluirá o atributo FILESTREAM mesmo que a tabela de origem inclua uma coluna com o atributo FILESTREAM declarado. Para executar um componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com o atributo FILESTREAM, implemente primeiro o armazenamento FILESTREAM no banco de dados de destino. Em seguida, adicione o atributo FILESTREAM à instrução CREATE TABLE na caixa de diálogo **Criar Tabela** . Para obter mais informações, consulte [Dados de blob &#40;objeto binário grande&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  
+ **Visualização**  
+ Visualize os resultados usando a caixa de diálogo **Visualizar Resultados da Consulta** . A visualização pode exibir até 200 linhas.  
+  
+## <a name="sql-destination-editor-mappings-page"></a>Editor de Destino SQL (página Mapeamentos)
+  Use a página **Mapeamentos** da caixa de diálogo **Editor de Destino SQL** para mapear colunas de entrada para colunas de destino.  
+  
+### <a name="options"></a>Opções  
+ **Colunas de Entrada Disponíveis**  
+ Exiba a lista das colunas de entrada disponíveis. Use uma operação de arrastar e soltar para mapear colunas de entrada disponíveis na tabela para as colunas de destino.  
+  
+ **Colunas de Destino Disponíveis**  
+ Exiba a lista de colunas de destino disponíveis. Use uma operação de arrastar e soltar para mapear as colunas de destino disponíveis na tabela para as colunas de entrada.  
+  
+ **Coluna de Entrada**  
+ Exibir colunas de entrada selecionadas na tabela acima. É possível alterar os mapeamentos usando a lista **Colunas de Entrada Disponíveis**.  
+  
+ **Coluna de Destino**  
+ Exiba cada coluna de destino disponível, seja ela mapeada ou não.  
+  
+## <a name="sql-destination-editor-advanced-page"></a>Editor de Destino SQL (página Avançado)
+  Use a página **Avançado** da caixa de diálogo **Editor de Destino SQL** para especificar opções avançadas de inserção em massa.  
+  
+### <a name="options"></a>Opções  
+ **Manter identidade**  
+ Especifique se a tarefa deve inserir valores em colunas de identidade. O valor padrão dessa propriedade é **False**.  
+  
+ **Manter nulos**  
+ Especifique se a tarefa deve manter valores nulos. O valor padrão dessa propriedade é **False**.  
+  
+ **Bloqueio de tabela**  
+ Especifique se a tabela deve ser bloqueada no carregamento de dados. O valor padrão dessa propriedade é **True**.  
+  
+ **Verificar restrições**  
+ Especifique se a tarefa deve verificar restrições. O valor padrão dessa propriedade é **True**.  
+  
+ **Acionadores**  
+ Especifique se a inserção em massa deve ativar gatilhos em tabelas. O valor padrão dessa propriedade é **False**.  
+  
+ **Primeira Linha**  
+ Especifique a primeira linha a inserir. O valor padrão desta propriedade é **-1**, indicando que nenhum valor foi atribuído.  
+  
+> [!NOTE]  
+>  Limpe a caixa de texto no **Editor de Destino SQL** para indicar que não deseja atribuir um valor para esta propriedade. Use -1 na janela **Propriedades** , no **Editor Avançado**e no modelo de objeto.  
+  
+ **Última Linha**  
+ Especifique a última linha a inserir. O valor padrão desta propriedade é **-1**, indicando que nenhum valor foi atribuído.  
+  
+> [!NOTE]  
+>  Limpe a caixa de texto no **Editor de Destino SQL** para indicar que não deseja atribuir um valor para esta propriedade. Use -1 na janela **Propriedades** , no **Editor Avançado**e no modelo de objeto.  
+  
+ **Número máximo de erros**  
+ Especifique o número máximo de erros permitido antes que a inserção em massa cesse. O valor padrão desta propriedade é **-1**, indicando que nenhum valor foi atribuído.  
+  
+> [!NOTE]  
+>  Limpe a caixa de texto no **Editor de Destino SQL** para indicar que não deseja atribuir um valor para esta propriedade. Use -1 na janela **Propriedades** , no **Editor Avançado**e no modelo de objeto.  
+  
+ **Tempo Limite**  
+ Especifique o tempo limite, em segundos, a ser aguardado antes de interrupção da inserção em massa.  
+  
+ **Ordenar colunas**  
+ Digite os nomes das colunas de classificação. Cada coluna pode ser classificada em ordem crescente ou decrescente. Ao usar várias colunas de classificação, delimite a lista com vírgulas.  
   
 ## <a name="see-also"></a>Consulte também  
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
