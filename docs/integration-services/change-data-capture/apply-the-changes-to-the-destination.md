@@ -1,33 +1,38 @@
 ---
-title: "Aplicar as altera&#231;&#245;es ao destino | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "carga incremental [Integration Services], aplicando alterações"
+title: "Aplicar as alterações ao destino | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],applying changes
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2900e6903553f9eb74cd18aad0c13691073d425
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Aplicar as altera&#231;&#245;es ao destino
+# <a name="apply-the-changes-to-the-destination"></a>Aplicar as alterações ao destino
   No fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que executa uma carga incremental de dados de alteração, a terceira e a última tarefa servem para aplicar as alterações no seu destino. Você precisará de um componente para aplicar inserções, um para aplicar atualizações e um para aplicar exclusões.  
   
 > [!NOTE]  
 >  A segunda tarefa no desenvolvimento do fluxo de dados de um pacote que realiza uma carga incremental de dados de alteração serve para separar inserções, atualizações e exclusões. Para obter mais informações sobre este componente, consulte [Processar inserções, atualizações e exclusões](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md). Para obter uma descrição do processo geral para criar um pacote que realiza uma carga incremental de dados de alteração, consulte [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
-## Aplicando inserções  
+## <a name="applying-inserts"></a>Aplicando inserções  
  Para aplicar inserções, você usa um destino OLE DB, pois as linhas novas não requerem nenhuma manipulação especial.  
   
-#### Para processar inserções usando um destino OLE DB  
+#### <a name="to-process-inserts-by-using-an-ole-db-destination"></a>Para processar inserções usando um destino OLE DB  
   
 1.  Na guia **Fluxo de Dados** , adicione um destino OLE DB.  
   
@@ -41,13 +46,13 @@ caps.handback.revision: 24
   
 4.  Na página **Mapeamentos** do editor, mapeie as colunas apropriadas a partir dos dados de alteração para a tabela de destino.  
   
-## Aplicando atualizações  
+## <a name="applying-updates"></a>Aplicando atualizações  
  Para aplicar atualizações, você usa uma transformação de Comando do OLE DB. Você usa essa transformação porque tem que usar uma instrução UPDATE com parâmetros para atualizar uma linha por vez com novos valores de coluna.  
   
 > [!NOTE]  
 >  Também é possível usar componentes de destino para aplicar atualizações. Ao usar esse método, você usa os componentes de destino para salvar as linhas em tabelas temporárias criadas para essa finalidade. Em seguida, você usa tarefas Executar SQL para realizar operações de atualização em massa e exclusão em massa no destino a partir das tabelas temporárias.  
   
-#### Para processar atualizações usando uma transformação de Comando OLE DB  
+#### <a name="to-process-updates-by-using-an-ole-db-command-transformation"></a>Para processar atualizações usando uma transformação de Comando OLE DB  
   
 1.  Na guia **Fluxo de Dados** , adicione uma transformação de Comando OLE DB.  
   
@@ -71,13 +76,13 @@ caps.handback.revision: 24
   
 5.  Na página **Mapeamentos de Coluna** do editor, mapeie as colunas apropriadas a partir dos dados de alteração até os parâmetros na instrução UPDATE.  
   
-## Aplicando exclusões  
+## <a name="applying-deletes"></a>Aplicando exclusões  
  Para aplicar exclusões, você usa uma transformação de Comando OLE DB. Você usa essa transformação porque tem que usar uma instrução DELETE com parâmetros para excluir uma única linha por vez com base no valor da coluna que identifica com exclusividade a linha.  
   
 > [!NOTE]  
 >  Também é possível usar componentes de destino para aplicar exclusões. Ao usar esse método, você usa os componentes de destino para salvar as linhas em tabelas temporárias criadas para essa finalidade. Em seguida, você usa tarefas Executar SQL para realizar operações de atualização em massa e exclusão em massa no destino a partir das tabelas temporárias.  
   
-#### Para processar exclusões usando uma transformação de Comando OLE DB  
+#### <a name="to-process-deletes-by-using-an-ole-db-command-transformation"></a>Para processar exclusões usando uma transformação de Comando OLE DB  
   
 1.  Na guia **Fluxo de Dados** , adicione uma transformação de Comando OLE DB ao fluxo de dados.  
   
@@ -98,9 +103,9 @@ caps.handback.revision: 24
   
 6.  Na guia **Mapeamentos de Coluna** do editor, mapeie a coluna apropriada a partir dos dados de alteração até o parâmetro na instrução DELETE.  
   
-## Aperfeiçoando inserções e atualizações usando a funcionalidade MERGE  
+## <a name="optimizing-inserts-and-updates-by-using-merge-functionality"></a>Aperfeiçoando inserções e atualizações usando a funcionalidade MERGE  
  É possível otimizar o processamento de inserções e atualizações combinando determinadas opções de captura de dados de alteração com o uso da palavra-chave Transact-SQL MERGE. Para obter mais informações sobre a palavra-chave MERGE, consulte [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md).  
   
- Na instrução Transact-SQL que recupera os dados de alteração, é possível especificar *all with merge* como o valor do parâmetro *row_filter_option* ao chamar a função **cdc.fn_cdc_get_net_changes_<capture_instance>**. Essa função de captura de dados de alteração opera com mais eficiência quando não tem que realizar o processamento extra, necessário para distinguir inserções de atualizações. Ao especificar o valor do parâmetro *all with merge*, o valor de **__$operation** dos dados de alteração é 1 para exclusões ou 5 para alterações causadas por inserções ou atualizações. Para obter mais informações sobre a função Transact-SQL usada para recuperar os dados de alteração, consulte [Recuperar e compreender os dados de alteração](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md). Após recuperar as alterações com o valor de parâmetro *all with merge*, é possível aplicar exclusões e enviar as linhas restantes para uma tabela temporária ou uma tabela de preparo. Em seguida, em uma tarefa Executar SQL de downstream, é possível usar uma única instrução MERGE para aplicar todas as inserções ou atualizações da tabela de preparo para o destino.  
+ Na instrução Transact-SQL que recupera os dados de alteração, é possível especificar *all with merge* como o valor do parâmetro *row_filter_option* ao chamar a função **cdc.fn_cdc_get_net_changes_<capture_instance>**. Essa função de captura de dados de alteração opera com mais eficiência quando não tem que realizar o processamento extra, necessário para distinguir inserções de atualizações. Ao especificar o valor do parâmetro *all with merge* , o valor de **__$operation** dos dados de alteração é 1 para exclusões ou 5 para alterações causadas por inserções ou atualizações. Para obter mais informações sobre a função Transact-SQL usada para recuperar os dados de alteração, consulte [Recuperar e compreender os dados de alteração](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md). Após recuperar as alterações com o valor de parâmetro *all with merge* , é possível aplicar exclusões e enviar as linhas restantes para uma tabela temporária ou uma tabela de preparo. Em seguida, em uma tarefa Executar SQL de downstream, é possível usar uma única instrução MERGE para aplicar todas as inserções ou atualizações da tabela de preparo para o destino.  
   
   

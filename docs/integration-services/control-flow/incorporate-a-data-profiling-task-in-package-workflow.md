@@ -1,24 +1,29 @@
 ---
-title: "Incorporar uma tarefa Cria&#231;&#227;o de Perfil de Dados no fluxo de trabalho do pacote | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tarefa de Criação de Perfil de Dados [Integration Services], usando a saída no fluxo de trabalho"
+title: "Incorporar um tarefa no pacote de fluxo de trabalho de criação de perfil de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea3c68e0320216c81ce2a47f426112dd4a25f22f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Incorporar uma tarefa Cria&#231;&#227;o de Perfil de Dados no fluxo de trabalho do pacote
+# <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar uma tarefa Criação de Perfil de Dados no fluxo de trabalho do pacote
   As tarefas de criação de perfil e limpeza de dados não são candidatas a um processo automatizado em seus estágios iniciais. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a saída da tarefa Criação de Perfil de Dados normalmente exige uma análise visual e uma opinião humana para determinar se as violações relatadas são significativas ou demasiadas. Mesmo depois de reconhecer os problemas de qualidade dos dados, ainda é necessário fazer um planejamento cuidadoso para escolher a melhor abordagem de limpeza.  
   
  No entanto, depois de estabelecer os critérios de qualidade dos dados, você talvez queira automatizar a análise e limpeza periódicas da fonte de dados. Considere estes cenários:  
@@ -29,10 +34,10 @@ caps.handback.revision: 24
   
  Depois de estabelecer um fluxo de trabalho no qual é possível incorporar a tarefa Fluxo de Dados, você precisa entender as etapas necessárias para adicionar essa tarefa. A próxima seção descreve o processo geral de incorporação da tarefa Fluxo de Dados. As duas seções finais descrevem como conectar a tarefa Fluxo de Dados diretamente a uma fonte de dados ou aos dados transformados do Fluxo de Dados.  
   
-## Definindo um fluxo de trabalho geral para a tarefa Fluxo de Dados  
+## <a name="defining-a-general-workflow-for-the-data-flow-task"></a>Definindo um fluxo de trabalho geral para a tarefa Fluxo de Dados  
  O procedimento a seguir descreve a abordagem geral de uso da saída da tarefa Criação de Perfil de Dados no fluxo de trabalho de um pacote.  
   
-#### Para usar a saída da tarefa Criação de Perfil de Dados programaticamente em um pacote  
+#### <a name="to-use-the-output-of-the-data-profiling-task-programmatically-in-a-package"></a>Para usar a saída da tarefa Criação de Perfil de Dados programaticamente em um pacote  
   
 1.  Adicione e configure a tarefa Criação de Perfil de Dados em um pacote.  
   
@@ -49,12 +54,12 @@ caps.handback.revision: 24
     > [!NOTE]  
     >  Alguns resultados de perfil exibidos no Visualizador de Perfil de Dados são valores calculados que não são encontrados diretamente na saída. Por exemplo, a saída do Perfil de Razão Nula de Coluna contém o número total de linhas e o número de linhas que contêm valores nulos. É necessário consultar esses dois valores e, em seguida, calcular a porcentagem de linhas que contêm valores nulos para obter a razão nula de consulta.  
   
--   **Entrada da tarefa**. A tarefa Criação de Perfil de Dados lê sua entrada a partir de tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, é necessário salvar os dados que estejam na memória nas tabelas de preparação se você desejar criar perfis de dados que já tenham sido carregados e transformados no fluxo de dados.  
+-   **Entrada da tarefa**. A tarefa Criação de Perfil de Dados lê sua entrada a partir de tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Portanto, é necessário salvar os dados que estejam na memória nas tabelas de preparação se você desejar criar perfis de dados que já tenham sido carregados e transformados no fluxo de dados.  
   
  As seções a seguir aplicam esse fluxo de trabalho geral à criação de perfis de dados oriundos diretamente de uma fonte de dados externa ou transformados a partir da tarefa Fluxo de Dados. Essas seções também mostram como controlar os requisitos de entrada e saída da tarefa Fluxo de Dados.  
   
-## Conectando a tarefa Criação de Perfil de Dados diretamente a uma fonte de dados externa  
- A tarefa Criação de Perfil de Dados pode criar perfis de dados oriundos diretamente de uma fonte de dados.  Para ilustrar esse recurso, o exemplo a seguir usa a tarefa Criação de Perfil de Dados para calcular um Perfil de Razão Nula de Coluna nas colunas da tabela Person.Address no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Em seguida, esse exemplo usa uma tarefa Script para recuperar os resultados do arquivo de saída e popular as variáveis de pacote que podem ser usadas para direcionar o fluxo de trabalho.  
+## <a name="connecting-the-data-profiling-task-directly-to-an-external-data-source"></a>Conectando a tarefa Criação de Perfil de Dados diretamente a uma fonte de dados externa  
+ A tarefa Criação de Perfil de Dados pode criar perfis de dados oriundos diretamente de uma fonte de dados.  Para ilustrar esse recurso, o exemplo a seguir usa a tarefa Criação de Perfil de Dados para calcular um Perfil de Razão Nula de Coluna nas colunas da tabela Person.Address no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Em seguida, esse exemplo usa uma tarefa Script para recuperar os resultados do arquivo de saída e popular as variáveis de pacote que podem ser usadas para direcionar o fluxo de trabalho.  
   
 > [!NOTE]  
 >  A coluna AddressLine2 foi selecionada para este exemplo porque contém uma porcentagem alta de valores nulos.  
@@ -71,41 +76,41 @@ caps.handback.revision: 24
   
 -   Configuração das restrições de precedência que vão controlar quais ramificações de downstream do fluxo de trabalho são executadas com base nos resultados da tarefa Criação de Perfil de Dados.  
   
-### Configurar os gerenciadores de conexões  
+### <a name="configure-the-connection-managers"></a>Configurar os gerenciadores de conexões  
  Para este exemplo, há dois gerenciadores de conexões:  
   
--   Um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] que se conecta ao banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+-   Um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] que se conecta ao banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
 -   Um gerenciador de conexões de arquivos que cria o arquivo de saída que armazenará os resultados da tarefa Criação de Perfil de Dados.  
   
-##### Para configurar os gerenciadores de conexões  
+##### <a name="to-configure-the-connection-managers"></a>Para configurar os gerenciadores de conexões  
   
-1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], crie um novo pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], crie um novo pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  Adicione um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ao pacote. Configure esse gerenciador de conexões para usar o Provedor de Dados NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) e conecte-o a uma instância disponível do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+2.  Adicione um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ao pacote. Configure esse gerenciador de conexões para usar o Provedor de Dados NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) e conecte-o a uma instância disponível do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-     Por padrão, o gerenciador de conexões tem o seguinte nome: \<nome do servidor>.AdventureWorks1.  
+     Por padrão, o Gerenciador de conexão tem o seguinte nome: \<nome do servidor >. AdventureWorks1.  
   
 3.  Adicione um gerenciador de conexões de arquivos ao pacote. Configure esse gerenciador de conexões para criar o arquivo de saída para a tarefa Criação de Perfil de Dados.  
   
      Este exemplo usa o nome de arquivo DataProfile1.xml. Por padrão, o gerenciador de conexões tem o mesmo nome do arquivo.  
   
-### Configure as variáveis de pacote  
+### <a name="configure-the-package-variables"></a>Configure as variáveis de pacote  
  Este exemplo usa duas variáveis de pacote:  
   
 -   A variável ProfileConnectionName passa o nome do gerenciador de conexões de arquivos para a tarefa Script.  
   
 -   A variável AddressLine2NullRatio retira a razão nula calculada para esta coluna da tarefa Script do pacote.  
   
-##### Para configurar as variáveis de pacote que armazenarão os resultados de perfil  
+##### <a name="to-configure-the-package-variables-that-will-hold-profile-results"></a>Para configurar as variáveis de pacote que armazenarão os resultados de perfil  
   
--   Na janela **Variáveis**, adicione e configure as duas seguintes variáveis de pacote:  
+-   Na janela **Variáveis** , adicione e configure as duas seguintes variáveis de pacote:  
   
     -   Insira o nome, **ProfileConnectionName**, para uma das variáveis e defina o tipo dessa variável como **String**.  
   
     -   Insira o nome, **AddressLine2NullRatio**, para a outra variável e defina o tipo dessa variável como **Double**.  
   
-### Configurar a tarefa Criação de Perfil de Dados  
+### <a name="configure-the-data-profiling-task"></a>Configurar a tarefa Criação de Perfil de Dados  
  A tarefa Criação de Perfil de Dados deve ser configurada do seguinte modo:  
   
 -   Para usar os dados fornecidos pelo gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] como entrada.  
@@ -114,7 +119,7 @@ caps.handback.revision: 24
   
 -   Para salvar os resultados de perfil no arquivo que é associado ao gerenciador de conexões de arquivos.  
   
-##### Para configurar a tarefa Criação de Perfil de Dados  
+##### <a name="to-configure-the-data-profiling-task"></a>Para configurar a tarefa Criação de Perfil de Dados  
   
 1.  Para o Fluxo de Controle, adicione uma tarefa Criação de Perfil de Dados.  
   
@@ -124,14 +129,14 @@ caps.handback.revision: 24
   
 4.  Na página **Solicitações de Perfil** do editor, crie um novo Perfil de Razão Nula de Coluna.  
   
-5.  No painel **Propriedades da solicitação**, para **ConnectionManager**, selecione o gerenciador de conexões do [!INCLUDE[vstecado](../../includes/vstecado-md.md)] configurado anteriormente. Em seguida, para **TableOrView**, selecione Person.Address.  
+5.  No painel **Propriedades da solicitação** , para **ConnectionManager**, selecione o gerenciador de conexões do [!INCLUDE[vstecado](../../includes/vstecado-md.md)] configurado anteriormente. Em seguida, para **TableOrView**, selecione Person.Address.  
   
 6.  Feche o Editor de Tarefa Criação de Perfil de Dados.  
   
-### Configurar a tarefa Script  
+### <a name="configure-the-script-task"></a>Configurar a tarefa Script  
  A tarefa Script deve ser configurada para recuperar os resultados do arquivo de saída e preencher as variáveis de pacote que foram configuradas anteriormente.  
   
-##### Para configurar a tarefa Script  
+##### <a name="to-configure-the-script-task"></a>Para configurar a tarefa Script  
   
 1.  Para o Fluxo de Controle, adicione uma tarefa Script.  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 24
   
 3.  Abra o **Editor da Tarefa Script** para configurar a tarefa.  
   
-4.  Na página **Script**, selecione a linguagem de programação desejada. Em seguida, disponibilize as duas variáveis de pacote para o script:  
+4.  Na página **Script** , selecione a linguagem de programação desejada. Em seguida, disponibilize as duas variáveis de pacote para o script:  
   
     1.  Para **ReadOnlyVariables**, selecione **ProfileConnectionName**.  
   
@@ -262,14 +267,14 @@ caps.handback.revision: 24
   
 8.  Feche o ambiente de desenvolvimento de script e, em seguida, o Editor da Tarefa Script.  
   
-#### Código alternativo - Lendo a saída de perfil a partir de uma variável  
+#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Código alternativo - Lendo a saída de perfil a partir de uma variável  
  O procedimento anterior mostra como carregar a saída da tarefa Criação de Perfil de Dados a partir de um arquivo. No entanto, como método alternativo, você pode carregar essa saída a partir de uma variável de pacote. Para carregar a saída a partir de uma variável, faça as seguintes alterações no código de amostra:  
   
--   Chame o método **LoadXml** da classe **XmlDocument** em vez do método **Load**.  
+-   Chame o método **LoadXml** da classe **XmlDocument** em vez do método **Load** .  
   
 -   No Editor da Tarefa Script, adicione o nome da variável de pacote que contém a saída de perfil à lista **ReadOnlyVariables** da tarefa.  
   
--   Passe o valor de cadeia da variável ao método **LoadXML**, como mostrado no código de exemplo a seguir. (Este exemplo usa “ProfileOutput” como o nome da variável de pacote que contém a saída de perfil.)  
+-   Passe o valor de cadeia da variável ao método **LoadXML** , como mostrado no código de exemplo a seguir. (Este exemplo usa “ProfileOutput” como o nome da variável de pacote que contém a saída de perfil.)  
   
     ```vb  
     Dim outputString As String  
@@ -285,16 +290,16 @@ caps.handback.revision: 24
     profileOutput.LoadXml(outputString);  
     ```  
   
-### Configurar as restrições de precedência  
+### <a name="configure-the-precedence-constraints"></a>Configurar as restrições de precedência  
  As restrições de precedência devem ser configuradas para controlar quais ramificações de downstream do fluxo de trabalho são executadas com base nos resultados da tarefa Criação de Perfil de Dados.  
   
-##### Para configurar as restrições de precedência  
+##### <a name="to-configure-the-precedence-constraints"></a>Para configurar as restrições de precedência  
   
 -   Nas restrições de precedência que conectam a tarefa Script às ramificações de downstream do fluxo de trabalho, grave expressões que usem os valores das variáveis para dirigir o fluxo de trabalho.  
   
      Por exemplo, você pode definir a **Operação de avaliação** da restrição de precedência como **Expressão e Restrição**. Em seguida, você pode usar `@AddressLine2NullRatio < .90` como o valor da expressão. Desse modo, o fluxo de trabalho segue o caminho selecionado quando as tarefas anteriores são executadas com êxito e quando a porcentagem de valores nulos na coluna selecionada é inferior a 90%.  
   
-## Conectando a tarefa Criação de Perfil de Dados aos dados transformados do fluxo de dados  
+## <a name="connecting-the-data-profiling-task-to-transformed-data-from-the-data-flow"></a>Conectando a tarefa Criação de Perfil de Dados aos dados transformados do fluxo de dados  
  Em vez de criar um perfil de dados diretamente a partir de uma fonte de dados, você pode salvar os dados que já tenham sido carregados e transformados no fluxo de dados. No entanto, a tarefa Criação de Perfil de Dados funciona somente com dados persistidos, não com dados da memória. Portanto, você deve primeiro usar um componente de destino para salvar os dados transformados em uma tabela de preparação.  
   
 > [!NOTE]  
@@ -310,7 +315,7 @@ caps.handback.revision: 24
   
  O procedimento a seguir fornece a abordagem geral de uso da tarefa Criação de Perfil de Dados para criar perfis dos dados que foram transformados pelo fluxo de dados. Muitas etapas são similares às descritas anteriormente para criar perfis de dados oriundos diretamente de uma fonte de dados externa. Consulte as etapas anteriores se desejar obter mais informações sobre como configurar os diversos componentes.  
   
-#### Para usar a tarefa Criação de Perfil de Dados no fluxo de dados  
+#### <a name="to-use-the-data-profiling-task-in-the-data-flow"></a>Para usar a tarefa Criação de Perfil de Dados no fluxo de dados  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], crie um pacote.  
   
@@ -326,8 +331,8 @@ caps.handback.revision: 24
   
 7.  Nas restrições de precedência que conectam a tarefa Script às ramificações de downstream do fluxo de trabalho, grave expressões que usem os valores das variáveis para dirigir o fluxo de trabalho.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Configuração da tarefa Criação de Perfil de Dados](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)   
- [Visualizador de Perfil de Dados](../../integration-services/control-flow/data-profile-viewer.md)  
+ [Visualizador de perfil de dados](../../integration-services/control-flow/data-profile-viewer.md)  
   
   

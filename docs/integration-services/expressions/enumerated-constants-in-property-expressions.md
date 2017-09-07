@@ -1,34 +1,39 @@
 ---
-title: "Constantes enumeradas em express&#245;es de propriedade | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "enumeradores [Integration Services]"
-  - "pacotes [Integration Services], expressões"
-  - "propriedades dinâmicas"
-  - "atualizando propriedades de pacote"
-  - "constantes enumeradas [Integration Services]"
-  - "expressões de propriedade [Integration Services]"
+title: "Constantes em expressões de propriedade enumeradas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- enumerators [Integration Services]
+- packages [Integration Services], expressions
+- dynamic properties
+- updating package properties
+- enumerated constants [Integration Services]
+- property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8483c36dca5a24485e865b1115e766aa579635b9
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Constantes enumeradas em express&#245;es de propriedade
-  Se as expressões de propriedade incluírem valores de uma lista de membros de enumerador, a expressão deverá usar o valor numérico do membro de enumerador em vez do nome amigável do membro. Por exemplo, se uma expressão definir a propriedade **LoggingMode**, use o valor numérico 2 em vez do nome amigável Desabilitada.  
+# <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas em expressões de propriedade
+  Se as expressões de propriedade incluírem valores de uma lista de membros de enumerador, a expressão deverá usar o valor numérico do membro de enumerador em vez do nome amigável do membro. Por exemplo, se uma expressão definir a propriedade **LoggingMode** , use o valor numérico 2 em vez do nome amigável Desabilitada.  
   
  Este tópico relaciona apenas os valores numéricos equivalentes a nomes amigáveis de enumeradores cujos membros são usados normalmente em expressões de propriedade. O modelo de objeto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui muitos enumeradores adicionais que podem ser usados quando você programa o modelo de objeto para criar pacotes programaticamente ou codifica elementos personalizados de pacote como tarefas e componentes de fluxo de dados.  
   
- Além das propriedades personalizadas para pacotes e objetos de pacote, a janela Propriedades do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclui um conjunto de propriedades disponíveis para pacotes, tarefas e os contêineres Loop Foreach, Loop For e Sequência. As propriedades comuns que são definidas por valores de enumeradores, **ForceExecutionResult**, **LoggingMode**, **IsolationLevel** e **Transaction Option**, são listadas na seção Propriedades comuns.  
+ Além das propriedades personalizadas para pacotes e objetos de pacote, a janela Propriedades do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclui um conjunto de propriedades disponíveis para pacotes, tarefas e os contêineres Loop Foreach, Loop For e Sequência. As propriedades comuns que são definidas por valores de enumeradores,**ForceExecutionResult**, **LoggingMode**, **IsolationLevel**e **Transaction Option**, são listadas na seção Propriedades comuns.  
   
  As seções a seguir fornecem informações sobre constantes enumeradas:  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 34
 ##  <a name="Package"></a> Pacote  
  As tabelas a seguir relacionam os nomes amigáveis e os equivalentes em valor numérico para propriedades de pacotes definidas por você usando valores de um enumerador.  
   
- Propriedade **PackageType** — definida usando valores da enumeração **DTSPackageType**.  
+ Propriedade**PackageType** — definida usando valores da enumeração **DTSPackageType** .  
   
 |Nome amigável em DTSPackageType|Valor numérico|  
 |-------------------------------------|-------------------|  
@@ -56,7 +61,7 @@ caps.handback.revision: 34
 |DTSDesigner100|5|  
 |SQLDBMaint|6|  
   
- Propriedade **CheckpointUsage** — definida usando valores da enumeração **DTSCheckpointUsage**.  
+ Propriedade**CheckpointUsage** — definida usando valores da enumeração **DTSCheckpointUsage** .  
   
 |Nome amigável em DTSCheckpointUsage|Valor numérico|  
 |-----------------------------------------|-------------------|  
@@ -64,7 +69,7 @@ caps.handback.revision: 34
 |IfExists|1|  
 |Always|2|  
   
- Propriedade **PackagePriorityClass** — definida usando valores da enumeração **DTSPriorityClass**.  
+ Propriedade**PackagePriorityClass** — definida usando valores da enumeração **DTSPriorityClass** .  
   
 |Nome amigável em DTSPriorityClass|Valor numérico|  
 |---------------------------------------|-------------------|  
@@ -74,7 +79,7 @@ caps.handback.revision: 34
 |BelowNormal|3|  
 |Idle|4|  
   
- Propriedade **ProtectionLevel** — definida usando valores da enumeração **DTSProtectionLevel**.  
+ Propriedade**ProtectionLevel** — definida usando valores da enumeração **DTSProtectionLevel** .  
   
 |Nome amigável em DTSProtectionLevel|Valor numérico|  
 |-----------------------------------------|-------------------|  
@@ -86,7 +91,7 @@ caps.handback.revision: 34
 |ServerStorage|5|  
   
 ##  <a name="PrecedenceConstraints"></a> Restrições de precedência  
- Propriedade **EvalOp** — definida usando valores da enumeração **DTSPrecedenceEvalOp**.  
+ Propriedade**EvalOp** — definida usando valores da enumeração **DTSPrecedenceEvalOp** .  
   
 |Nome amigável em DTSPrecedenceEvalOp|Valor numérico|  
 |------------------------------------------|-------------------|  
@@ -95,7 +100,7 @@ caps.handback.revision: 34
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
   
- Propriedade **Value** — definida usando valores da enumeração **DTSExecResult**.  
+ Propriedade**Value** — definida usando valores da enumeração **DTSExecResult** .  
   
 |Nome Amigável|Valor numérico|  
 |-------------------|-------------------|  
@@ -107,8 +112,8 @@ caps.handback.revision: 34
 ##  <a name="Foreach"></a> Enumeradores de Loop Foreach  
  O Loop Foreach inclui um conjunto de enumeradores com propriedades que podem ser definidas por expressões de propriedade.  
   
-### Enumerador ADO Foreach  
- Propriedade **Type** — definida usando valores da enumeração **ADOEnumerationType**.  
+### <a name="foreach-ado-enumerator"></a>Enumerador ADO Foreach  
+ Propriedade**Type** — definida usando valores da enumeração **ADOEnumerationType** .  
   
 |Nome amigável em ADOEnumerationType|Valor numérico|  
 |-----------------------------------------|-------------------|  
@@ -116,8 +121,8 @@ caps.handback.revision: 34
 |EnumerateAllRows|1|  
 |EnumerateRowsInFirstTable|2|  
   
-### Enumerador Nodelist Foreach  
- Propriedades **SourceDocumentType**, **InnerXPathStringSourceType** e **OuterXPathStringSourceType** — definidas usando os valores da enumeração **SourceType**.  
+### <a name="foreach-nodelist-enumerator"></a>Enumerador Nodelist Foreach  
+ Propriedades**SourceDocumentType**, **InnerXPathStringSourceType**e **OuterXPathStringSourceType** — definidas usando os valores da enumeração **SourceType** .  
   
 |Nome amigável em SourceType|Valor numérico|  
 |---------------------------------|-------------------|  
@@ -125,7 +130,7 @@ caps.handback.revision: 34
 |Variável|1|  
 |DirectInput|2|  
   
- Propriedade **EnumerationType** — definida usando valores da enumeração **EnumerationType**.  
+ Propriedade**EnumerationType** — definida usando valores da enumeração **EnumerationType** .  
   
 |Nome amigável em EnumerationType|Valor numérico|  
 |--------------------------------------|-------------------|  
@@ -134,7 +139,7 @@ caps.handback.revision: 34
 |NodeText|2|  
 |ElementCollection|3|  
   
- Propriedade **InnerElementType** — definida usando valores da enumeração **InnerElementType**.  
+ Propriedade**InnerElementType** — definida usando valores da enumeração **InnerElementType** .  
   
 |Nome amigável em InnerElementType|Valor numérico|  
 |---------------------------------------|-------------------|  
@@ -145,8 +150,8 @@ caps.handback.revision: 34
 ##  <a name="Tasks"></a> Tarefas  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui várias tarefas com propriedades que podem ser definidas por expressões de propriedade.  
   
-### Tarefa Executar DDL do Analysis Services  
- Propriedade **SourceType** — definida usando valores da enumeração **DDLSourceType**.  
+### <a name="analysis-services-execute-ddl-task"></a>Tarefa Executar DDL do Analysis Services  
+ Propriedade**SourceType** — definida usando valores da enumeração **DDLSourceType** .  
   
 |Nome amigável em DDLSourceType|Valor numérico|  
 |------------------------------------|-------------------|  
@@ -154,8 +159,8 @@ caps.handback.revision: 34
 |FileConnection|1|  
 |Variável|2|  
   
-### Tarefa Inserção em Massa  
- Propriedade **DataFileType** — definida usando valores da enumeração **DTSBulkInsert_DataFileType**.  
+### <a name="bulk-insert-task"></a>Tarefa Inserção em Massa  
+ Propriedade**DataFileType** — definida usando valores da enumeração **DTSBulkInsert_DataFileType** .  
   
 |Nome amigável em DTSBulkInsert_DataFileType|Valor numérico|  
 |--------------------------------------------------|-------------------|  
@@ -164,8 +169,8 @@ caps.handback.revision: 34
 |DTSBulkInsert_DataFileType_WideChar|2|  
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
-### Tarefa Executar SQL  
- Propriedade **ResultSetType** — definida usando valores da enumeração **ResultSetType**.  
+### <a name="execute-sql-task"></a>Tarefa Executar SQL  
+ Propriedade**ResultSetType** — definida usando valores da enumeração **ResultSetType** .  
   
 |Nome amigável em ResultSetType|Valor numérico|  
 |------------------------------------|-------------------|  
@@ -174,7 +179,7 @@ caps.handback.revision: 34
 |ResultSetType_Rowset|3|  
 |ResultSetType_XML|4|  
   
- Propriedade **SqlStatementSourceType** — definida usando valores da enumeração **SqlStatementSourceType**.  
+ Propriedade**SqlStatementSourceType** — definida usando valores da enumeração **SqlStatementSourceType** .  
   
 |Nome amigável em SqlStatementSourceType|Valor numérico|  
 |---------------------------------------------|-------------------|  
@@ -182,8 +187,8 @@ caps.handback.revision: 34
 |FileConnection|2|  
 |Variável|3|  
   
-### Tarefa Sistema de Arquivos  
- Propriedade **Operation** — definida usando valores da enumeração **DTSFileSystemOperation**.  
+### <a name="file-system-task"></a>Tarefa Sistema de Arquivos  
+ Propriedade**Operation** — definida usando valores da enumeração **DTSFileSystemOperation** .  
   
 |Nome amigável em DTSFileSystemOperation|Valor numérico|  
 |---------------------------------------------|-------------------|  
@@ -198,7 +203,7 @@ caps.handback.revision: 34
 |DeleteDirectory|8|  
 |DeleteDirectoryContent|9|  
   
- Propriedade **Attributes** — definida usando valores da enumeração **DTSFileSystemAttributes**.  
+ Propriedade**Attributes** — definida usando valores da enumeração **DTSFileSystemAttributes** .  
   
 |Nome amigável em DTSFileSystemAttributes|Valor numérico|  
 |----------------------------------------------|-------------------|  
@@ -208,8 +213,8 @@ caps.handback.revision: 34
 |ReadOnly (somente-leitura)|4|  
 |Sistema|8|  
   
-### Tarefa FTP  
- Propriedade **Operation** — definida usando valores da enumeração **DTSFTPOp**.  
+### <a name="ftp-task"></a>Tarefa FTP  
+ Propriedade**Operation** — definida usando valores da enumeração **DTSFTPOp** .  
   
 |Nome amigável em DTSFTPOp|Valor numérico|  
 |-------------------------------|-------------------|  
@@ -222,8 +227,8 @@ caps.handback.revision: 34
 |RemoveDirLocal|6|  
 |RemoveDirRemote|7|  
   
-### Tarefa Fila de Mensagens  
- Propriedade **MessageType** — definida usando valores da enumeração **MQMessageType**.  
+### <a name="message-queue-task"></a>Tarefa Fila de Mensagens  
+ Propriedade**MessageType** — definida usando valores da enumeração **MQMessageType** .  
   
 |Nome amigável em MQMessageType|Valor numérico|  
 |------------------------------------|-------------------|  
@@ -232,7 +237,7 @@ caps.handback.revision: 34
 |DTSMQMessageType_Variables|2|  
 |DTSMQMessagType_StringMessageToVariable|3|  
   
- Propriedade **StringCompareType** — definida usando valores da enumeração **MQStringMessageCompare**.  
+ Propriedade**StringCompareType** — definida usando valores da enumeração **MQStringMessageCompare** .  
   
 |Nome amigável em MQStringMessageCompare|Valor numérico|  
 |---------------------------------------------|-------------------|  
@@ -241,15 +246,15 @@ caps.handback.revision: 34
 |DTSMQStringMessageCompare_IgnoreCase|2|  
 |DTSMQStringMessageCompare_Contains|3|  
   
- Propriedade **TaskType** — definida usando valores da enumeração **MQType**.  
+ Propriedade**TaskType** — definida usando valores da enumeração **MQType** .  
   
 |Nome amigável em MQType|Valor numérico|  
 |-----------------------------|-------------------|  
 |DTSMQType_Sender|0|  
 |DTSMQType_Receiver|1|  
   
-### Tarefa Enviar Email  
- Propriedade **MessageSourceType** — definida usando valores da enumeração **SendMailMessageSourceType**.  
+### <a name="send-mail-task"></a>Tarefa Enviar Email  
+ Propriedade**MessageSourceType** — definida usando valores da enumeração **SendMailMessageSourceType** .  
   
 |Nome amigável em SendMailMessageSourceType|Valor numérico|  
 |------------------------------------------------|-------------------|  
@@ -257,7 +262,7 @@ caps.handback.revision: 34
 |FileConnection|1|  
 |Variável|2|  
   
- Propriedade **Priority** — definida usando valores da enumeração **MailPriority**.  
+ Propriedade**Priority** — definida usando valores da enumeração **MailPriority** .  
   
 |Nome amigável em MailPriority|Valor numérico|  
 |-----------------------------------|-------------------|  
@@ -265,23 +270,23 @@ caps.handback.revision: 34
 |Normal|3|  
 |Baixa|5|  
   
-### Tarefa Transferir Banco de Dados  
- Propriedade **Action** — definida usando valores da enumeração **TransferAction**.  
+### <a name="transfer-database-task"></a>Tarefa Transferir Banco de Dados  
+ Propriedade**Action** — definida usando valores da enumeração **TransferAction** .  
   
 |Nome amigável em TransferAction|Valor numérico|  
 |-------------------------------------|-------------------|  
 |Copiar|0|  
 |Mover|1|  
   
- Propriedade **Method** — definida usando valores da enumeração **TransferMethod**.  
+ Propriedade**Method** — definida usando valores da enumeração **TransferMethod** .  
   
 |Nome amigável em TransferMethod|Valor numérico|  
 |-------------------------------------|-------------------|  
 |DatabaseOffline|0|  
 |DatabaseOnline|1|  
   
-### Tarefa Transferir Mensagens de Erro  
- Propriedade **IfObjectExists** — definido usando valores da enumeração **IfObjectExists**.  
+### <a name="transfer-error-messages-task"></a>Tarefa Transferir Mensagens de Erro  
+ Propriedade**IfObjectExists** — definido usando valores da enumeração **IfObjectExists** .  
   
 |Nome amigável em IfObjectExists|Valor numérico|  
 |-------------------------------------|-------------------|  
@@ -289,8 +294,8 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### Tarefa Transferir Trabalhos  
- Propriedade **IfObjectExists** — definido usando valores da enumeração **IfObjectExists**.  
+### <a name="transfer-jobs-task"></a>Tarefa Transferir Trabalhos  
+ Propriedade**IfObjectExists** — definido usando valores da enumeração **IfObjectExists** .  
   
 |Nome amigável em IfObjectExists|Valor numérico|  
 |-------------------------------------|-------------------|  
@@ -298,8 +303,8 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### Tarefa Transferir Logons  
- Propriedade **IfObjectExists** — definido usando valores da enumeração **IfObjectExists**.  
+### <a name="transfer-logins-task"></a>Tarefa Transferir Logons  
+ Propriedade**IfObjectExists** — definido usando valores da enumeração **IfObjectExists** .  
   
 |Nome amigável em IfObjectExists|Valor numérico|  
 |-------------------------------------|-------------------|  
@@ -307,7 +312,7 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
- Propriedade **LoginsToTransfer** — definida usando valores da enumeração **LoginsToTransfer**.  
+ Propriedade**LoginsToTransfer** — definida usando valores da enumeração **LoginsToTransfer** .  
   
 |Nome amigável em LoginsToTransfer|Valor numérico|  
 |---------------------------------------|-------------------|  
@@ -315,8 +320,8 @@ caps.handback.revision: 34
 |SelectedLogins|1|  
 |AllLoginsFromSelectedDatabases|2|  
   
-### Tarefa Transferir Procedimentos Armazenados Mestres  
- Propriedade **IfObjectExists** — definido usando valores da enumeração **IfObjectExists**.  
+### <a name="transfer-master-stored-procedures-task"></a>Tarefa Transferir Procedimentos Armazenados Mestres  
+ Propriedade**IfObjectExists** — definido usando valores da enumeração **IfObjectExists** .  
   
 |Nome amigável em IfObjectExists|Valor numérico|  
 |-------------------------------------|-------------------|  
@@ -324,24 +329,24 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### Tarefa Transferir Objetos do SQL Server  
- Propriedade **ExistingData** — definida pelos valores da enumeração **ExistingData**.  
+### <a name="transfer-sql-server-objects-task"></a>Tarefa Transferir Objetos do SQL Server  
+ Propriedade**ExistingData** — definida pelos valores da enumeração **ExistingData** .  
   
 |Nome amigável em ExistingData|Valor numérico|  
 |-----------------------------------|-------------------|  
 |Substituir|0|  
 |Acrescentar|1|  
   
-### Tarefa Serviços Web  
- Propriedade **OutputType** — definida usando valores da enumeração **DTSOutputType**.  
+### <a name="web-service-task"></a>Tarefa Serviços Web  
+ Propriedade**OutputType** — definida usando valores da enumeração **DTSOutputType** .  
   
 |Nome amigável em DTSOutputType|Valor numérico|  
 |------------------------------------|-------------------|  
 |Arquivo|0|  
 |Variável|1|  
   
-### Tarefa Leitor de Dados do WMI  
- Propriedade **OverwriteDestination** — definida usando os valores da enumeração **OverwriteDestination**.  
+### <a name="wmi-data-reader-task"></a>Tarefa Leitor de Dados do WMI  
+ Propriedade**OverwriteDestination** — definida usando os valores da enumeração **OverwriteDestination** .  
   
 |Nome amigável em OverwriteDestination|Valor numérico|  
 |-------------------------------------------|-------------------|  
@@ -349,7 +354,7 @@ caps.handback.revision: 34
 |AppendToDestination|1|  
 |KeepOriginal|2|  
   
- Propriedade **OutputType** — definida usando valores da enumeração **OutputType**.  
+ Propriedade**OutputType** — definida usando valores da enumeração **OutputType** .  
   
 |Nome amigável em OutputType|Valor numérico|  
 |---------------------------------|-------------------|  
@@ -357,14 +362,14 @@ caps.handback.revision: 34
 |PropertyValue|1|  
 |PropertyNameAndValue|2|  
   
- Propriedade **DestinationType** — definida usando valores da enumeração **DestinationType**.  
+ Propriedade**DestinationType** — definida usando valores da enumeração **DestinationType** .  
   
 |Nome amigável em DestinationType|Valor numérico|  
 |--------------------------------------|-------------------|  
 |FileConnection|0|  
 |Variável|1|  
   
- Propriedade **WqlQuerySourceType** — definida usando valores da enumeração **QuerySourceType**.  
+ Propriedade**WqlQuerySourceType** — definida usando valores da enumeração **QuerySourceType** .  
   
 |Nome amigável em QuerySourceType|Valor numérico|  
 |--------------------------------------|-------------------|  
@@ -372,21 +377,21 @@ caps.handback.revision: 34
 |DirectInput|1|  
 |Variável|2|  
   
- Propriedade **ActionAtEvent** do Detector de Eventos do WMI — definida usando valores da enumeração **ActionAtEvent**.  
+ Propriedade **ActionAtEvent** do Detector de Eventos do WMI — definida usando valores da enumeração **ActionAtEvent** .  
   
 |Nome amigável em ActionAtEvent|Valor numérico|  
 |------------------------------------|-------------------|  
 |LogTheEventAndFireDTSEvent|0|  
 |LogTheEvent|1|  
   
- Propriedade **ActionAtTimeout** do Detector de Eventos do WMI — definida usando valores da enumeração **ActionAtTimeout**.  
+ Propriedade**ActionAtTimeout** do Detector de Eventos do WMI — definida usando valores da enumeração **ActionAtTimeout** .  
   
 |Nome amigável em ActionAtTimeout|Valor numérico|  
 |--------------------------------------|-------------------|  
 |LogTimeoutAndFireDTSEvent|0|  
 |LogTimeout|1|  
   
- Propriedade **AfterEvent** do Detector de Eventos do WMI — definida usando valores da enumeração **AfterEvent**.  
+ Propriedade**AfterEvent** do Detector de Eventos do WMI — definida usando valores da enumeração **AfterEvent** .  
   
 |Nome amigável em AfterEvent|Valor numérico|  
 |---------------------------------|-------------------|  
@@ -394,7 +399,7 @@ caps.handback.revision: 34
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- Propriedade **AfterTimeout** — definida usando valores da enumeração **AfterTimeout**.  
+ Propriedade**AfterTimeout** — definida usando valores da enumeração **AfterTimeout** .  
   
 |Nome amigável em AfterTimeout|Valor numérico|  
 |-----------------------------------|-------------------|  
@@ -402,7 +407,7 @@ caps.handback.revision: 34
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- Propriedade **WqlQuerySourceType** — definida usando valores da enumeração **QuerySourceType**.  
+ Propriedade**WqlQuerySourceType** — definida usando valores da enumeração **QuerySourceType** .  
   
 |Nome amigável em QuerySourceType|Valor numérico|  
 |--------------------------------------|-------------------|  
@@ -410,8 +415,8 @@ caps.handback.revision: 34
 |DirectInput|1|  
 |Variável|2|  
   
-### XML Task  
- Propriedade **OperationType** — definida usando valores da enumeração **DTSXMLOperation**.  
+### <a name="xml-task"></a>XML Task  
+ Propriedade**OperationType** — definida usando valores da enumeração **DTSXMLOperation** .  
   
 |Nome amigável em DTSXMLOperation|Valor numérico|  
 |--------------------------------------|-------------------|  
@@ -422,7 +427,7 @@ caps.handback.revision: 34
 |Diff|4|  
 |Patch|5|  
   
- Propriedades **SourceType**, **SecondOperandType** e **XPathSourceType** — definidas usando valores da enumeração **DTSXMLSourceType**.  
+ Propriedades**SourceType**, **SecondOperandType**e **XPathSourceType** — definidas usando valores da enumeração **DTSXMLSourceType** .  
   
 |Nome amigável em DTSXMLSourceType|Valor numérico|  
 |---------------------------------------|-------------------|  
@@ -430,21 +435,21 @@ caps.handback.revision: 34
 |Variável|1|  
 |DirectInput|2|  
   
- Propriedades **DestinationType** e **DiffGramDestinationType** — definidas usando valores da enumeração **DTSXMLSaveResultTo**.  
+ Propriedades**DestinationType** e **DiffGramDestinationType** — definidas usando valores da enumeração **DTSXMLSaveResultTo** .  
   
 |Nome amigável em DTSXMLSaveResultTo|Valor numérico|  
 |-----------------------------------------|-------------------|  
 |FileConnection|0|  
 |Variável|1|  
   
- Propriedade **ValidationType** — definida usando valores da enumeração **DTSXMLValidationType**.  
+ Propriedade**ValidationType** — definida usando valores da enumeração **DTSXMLValidationType** .  
   
 |Nome amigável em DTSXMLValidationType|Valor numérico|  
 |-------------------------------------------|-------------------|  
 |DTD|0|  
 |XSD|1|  
   
- Propriedade **XPathOperation** — definida usando valores da enumeração **DTSXMLXPathOperation**.  
+ Propriedade**XPathOperation** — definida usando valores da enumeração **DTSXMLXPathOperation** .  
   
 |Nome amigável em DTSXMLXPathOperation|Valor numérico|  
 |-------------------------------------------|-------------------|  
@@ -452,7 +457,7 @@ caps.handback.revision: 34
 |Valores|1|  
 |NodeList|2|  
   
- Propriedade **DiffOptions** — definida usando valores da enumeração **DTSXMLDiffOptions**. As opções deste enumerador não são mutuamente exclusivas. Para usar várias opções, forneça uma lista separada por vírgulas das opções a serem aplicadas.  
+ Propriedade**DiffOptions** — definida usando valores da enumeração **DTSXMLDiffOptions** . As opções deste enumerador não são mutuamente exclusivas. Para usar várias opções, forneça uma lista separada por vírgulas das opções a serem aplicadas.  
   
 |Nome amigável em DTSXMLDiffOptions|Valor numérico|  
 |----------------------------------------|-------------------|  
@@ -466,7 +471,7 @@ caps.handback.revision: 34
 |IgnoreXmlDecl|64|  
 |IgnoreDtd|128|  
   
- Propriedade **DiffAlgorithm** — definida usando valores da enumeração **DTSXMLDiffAlgorithm**.  
+ Propriedade**DiffAlgorithm** — definida usando valores da enumeração **DTSXMLDiffAlgorithm** .  
   
 |Nome amigável em DTSXMLDiffAlgorithm|Valor numérico|  
 |------------------------------------------|-------------------|  
@@ -475,14 +480,14 @@ caps.handback.revision: 34
 |Preciso|2|  
   
 ##  <a name="MaintenancePlanTasks"></a> Tarefas do Plano de Manutenção  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui um conjunto de tarefas que executam tarefas do SQL Server para uso em planos de manutenção e pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui um conjunto de tarefas que executam tarefas do SQL Server para uso em planos de manutenção e pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não dá suporte ao trabalho programático com essas tarefas e a documentação de referência de programação não inclui documentação da API dessas tarefas e seus enumeradores.  
   
-### Todas as Tarefas de Manutenção  
+### <a name="all-maintenance-tasks"></a>Todas as Tarefas de Manutenção  
  Todas as tarefas de manutenção usam as enumerações a seguir para definir as propriedades especificadas.  
   
- Propriedade **DatabaseSelectionType** — definida usando valores da enumeração **DatabaseSelection**.  
+ Propriedade**DatabaseSelectionType** — definida usando valores da enumeração **DatabaseSelection** .  
   
 |Nome amigável em DatabaseSelection|Valor numérico|  
 |----------------------------------------|-------------------|  
@@ -492,7 +497,7 @@ caps.handback.revision: 34
 |Usuário|3|  
 |Specific|4|  
   
- Propriedade **TableSelectionType** — definida usando valores da enumeração **TableSelection**.  
+ Propriedade**TableSelectionType** — definida usando valores da enumeração **TableSelection** .  
   
 |Nome amigável em TableSelection|Valor numérico|  
 |-------------------------------------|-------------------|  
@@ -500,7 +505,7 @@ caps.handback.revision: 34
 |Todos|1|  
 |Specific|2|  
   
- Propriedade **ObjectTypeSelection** — definida usando valores da enumeração **ObjectType**.  
+ Propriedade**ObjectTypeSelection** — definida usando valores da enumeração **ObjectType** .  
   
 |Nome amigável em ObjectType|Valor numérico|  
 |---------------------------------|-------------------|  
@@ -508,22 +513,22 @@ caps.handback.revision: 34
 |Exibição|1|  
 |TableView|2|  
   
-### Tarefa de Backup de Banco de Dados  
- Propriedade **DestinationCreationType** — definida usando valores da enumeração **DestinationType**.  
+### <a name="back-up-database-task"></a>Tarefa de Backup de Banco de Dados  
+ Propriedade**DestinationCreationType** — definida usando valores da enumeração **DestinationType** .  
   
 |Nome amigável em DestinationType|Valor numérico|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
 |Manual|1|  
   
- Propriedade **ExistingBackupsAction** — definida usando valores da enumeração **ActionForExistingBackups**.  
+ Propriedade**ExistingBackupsAction** — definida usando valores da enumeração **ActionForExistingBackups** .  
   
 |Nome amigável em ActionForExistingBackups|Valor numérico|  
 |-----------------------------------------------|-------------------|  
 |Acrescentar|0|  
 |Overwrite|1|  
   
- Propriedade **BackupAction** — definida usando valores da enumeração **BackupTaskType**. Esta propriedade trabalha com a propriedade **BackupIsIncremental** para definir o tipo de backup que a tarefa executa.  
+ Propriedade**BackupAction** — definida usando valores da enumeração **BackupTaskType** . Esta propriedade trabalha com a propriedade **BackupIsIncremental** para definir o tipo de backup que a tarefa executa.  
   
 |Nome amigável em BackupTaskType|Valor numérico|  
 |-------------------------------------|-------------------|  
@@ -531,7 +536,7 @@ caps.handback.revision: 34
 |Arquivos|1|  
 |Log|2|  
   
- Propriedade **BackupDevice** — definida usando valores da enumeração **DeviceType** do SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects).  
+ Propriedade**BackupDevice** — definida usando valores da enumeração [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do SMO ( **do SMO (** Management Objects).  
   
 |Nome amigável em DeviceType|Valor numérico|  
 |---------------------------------|-------------------|  
@@ -541,15 +546,15 @@ caps.handback.revision: 34
 |Pipe|3|  
 |VirtualDevice|4|  
   
-### Tarefa Limpeza de Manutenção  
- Propriedade **FileTypeSelected** — definida usando valores da enumeração **FileType**.  
+### <a name="maintenance-cleanup-task"></a>Tarefa Limpeza de Manutenção  
+ Propriedade**FileTypeSelected** — definida usando valores da enumeração **FileType** .  
   
 |Nome amigável em FileType|Valor numérico|  
 |-------------------------------|-------------------|  
 |FileBackup|0|  
 |FileReport|1|  
   
- Propriedade **OlderThanTimeUnitType** — definida usando valores da enumeração **TimeUnitType**.  
+ Propriedade**OlderThanTimeUnitType** — definida usando valores da enumeração **TimeUnitType** .  
   
 |Nome amigável em TimeUnitType|Valor numérico|  
 |-----------------------------------|-------------------|  
@@ -558,8 +563,8 @@ caps.handback.revision: 34
 |Month|2|  
 |Ano|3|  
   
-### Tarefa Atualizar Estatísticas  
- Propriedade **UpdateType** — definida usando valores da enumeração **StatisticsTarget** do SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects).  
+### <a name="update-statistics-task"></a>Tarefa Atualizar Estatísticas  
+ Propriedade**UpdateType** — definida usando valores da enumeração [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do SMO ( **do SMO (** Management Objects).  
   
 |Nome amigável em StatisticsTarget|Valor numérico|  
 |---------------------------------------|-------------------|  
@@ -570,7 +575,7 @@ caps.handback.revision: 34
 ##  <a name="CommonProperties"></a> Propriedades comuns  
  Pacotes, tarefas e os contêineres Loop Foreach, Loop For e Sequência podem usar as enumerações a seguir para definir as propriedades especificadas.  
   
- Propriedade **ForceExecutionResult** — definida usando valores da enumeração **DTSForcedExecResult**.  
+ Propriedade**ForceExecutionResult** — definida usando valores da enumeração **DTSForcedExecResult** .  
   
 |Nome amigável em DTSForcedExecResult|Valor numérico|  
 |------------------------------------------|-------------------|  
@@ -579,9 +584,9 @@ caps.handback.revision: 34
 |Failure|1|  
 |Completion|2|  
   
- Propriedade **IsolationLevel** — definida usando valores da enumeração **IsolationLevel** do .NET Framework. Para obter mais informações, consulte a Biblioteca de Classes do .NET Framework em [Biblioteca MSDN](http://go.microsoft.com/fwlink?LinkId=17313).  
+ Propriedade**IsolationLevel** — definida usando valores da enumeração **IsolationLevel** do .NET Framework. Para obter mais informações, consulte a Biblioteca de Classes do .NET Framework em [Biblioteca MSDN](http://go.microsoft.com/fwlink?LinkId=17313).  
   
- Propriedade **LoggingMode** — definida usando valores da enumeração **DTSLoggingMode**.  
+ Propriedade**LoggingMode** — definida usando valores da enumeração **DTSLoggingMode** .  
   
 |Nome amigável em DTSLoggingMode|Valor numérico|  
 |-------------------------------------|-------------------|  
@@ -589,7 +594,7 @@ caps.handback.revision: 34
 |Ativado|1|  
 |Desabilitado|2|  
   
- Propriedade **TransactionOption** — definida usando valores da enumeração **DTSTransactionOption**.  
+ Propriedade**TransactionOption** — definida usando valores da enumeração **DTSTransactionOption** .  
   
 |Nome amigável em DTSTransactionOption|Valor numérico|  
 |-------------------------------------------|-------------------|  
@@ -597,12 +602,12 @@ caps.handback.revision: 34
 |Tem suporte|1|  
 |Required|2|  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  [Adicionar ou alterar uma expressão de propriedade](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Usar expressões de propriedade em pacotes](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Pacotes do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40; SSIS &#41; Pacotes](../../integration-services/integration-services-ssis-packages.md)   
  [Contêineres do Integration Services](../../integration-services/control-flow/integration-services-containers.md)   
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md)  

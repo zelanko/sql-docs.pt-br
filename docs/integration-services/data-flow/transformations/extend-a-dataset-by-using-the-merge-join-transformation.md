@@ -1,32 +1,37 @@
 ---
-title: "Estender um conjunto de dados por meio da transforma&#231;&#227;o Jun&#231;&#227;o de Mesclagem | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transformação Junção de Mesclagem"
-  - "conjuntos de dados [Integration Services], unindo"
-  - "conjuntos de dados [Integration Services], estendendo"
-  - "unindo conjuntos de dados [Integration Services]"
+title: "Estender um conjunto de dados usando a transformação mesclar junção | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Merge Join transformation
+- datasets [Integration Services], joining
+- datasets [Integration Services], extending
+- joining datasets [Integration Services]
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a7d7b4a2af89c855a6269d90d94f79465bfad8a
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Estender um conjunto de dados por meio da transforma&#231;&#227;o Jun&#231;&#227;o de Mesclagem
+# <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Estender um conjunto de dados por meio da transformação Junção de Mesclagem
   Para adicionar e configurar uma ttransformação Junção de Mesclagem, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e dois componentes de fluxo de dados que forneçam entradas para a ttransformação Junção de Mesclagem.  
   
  A ttransformação Junção de Mesclagem requer duas entradas classificadas. Para obter mais informações, consulte [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
-### Estender um conjunto de dados  
+### <a name="to-extend-a-dataset"></a>Estender um conjunto de dados  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -38,10 +43,10 @@ caps.handback.revision: 27
   
 5.  Clique duas vezes na ttransformação Junção de Mesclagem.  
   
-6.  Na caixa de diálogo **Editor da transformação Junção de Mesclagem**, selecione o tipo de junção que deseja usar na lista **Tipo de junção**.  
+6.  Na caixa de diálogo **Editor da transformação Junção de Mesclagem** , selecione o tipo de junção que deseja usar na lista **Tipo de junção** .  
   
     > [!NOTE]  
-    >  Se você selecionar o tipo **Junção externa esquerda**, poderá clicar em **Trocar Entradas** para mudar as entradas e converter a junção externa esquerda para uma junção externa direita.  
+    >  Se você selecionar o tipo **Junção externa esquerda** , poderá clicar em **Trocar Entradas** para mudar as entradas e converter a junção externa esquerda para uma junção externa direita.  
   
 7.  Arraste as colunas na entrada esquerda para colunas na entrada direita para especificar as colunas de junção. Se as colunas tiverem o mesmo nome, marque a caixa de seleção **Chave de Junção** e a transformação Junção de Mesclagem criará a junção automaticamente.  
   
@@ -53,16 +58,16 @@ caps.handback.revision: 27
   
 8.  Nas entradas esquerda e direita, marque as caixas de seleção de colunas adicionais a serem incluídas na saída. Por padrão, as colunas de junção já estão incluídas.  
   
-9. Se preferir, atualize os nomes de colunas de saída na coluna **Alias de Saída**.  
+9. Se preferir, atualize os nomes de colunas de saída na coluna **Alias de Saída** .  
   
 10. Clique em **OK**.  
   
 11. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## Consulte também  
- [Transformação Junção de Mesclagem](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
+## <a name="see-also"></a>Consulte também  
+ [Transformação junção de mesclagem](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Tarefa de Fluxo de Dados](../../../integration-services/control-flow/data-flow-task.md)  
+ [Tarefa de fluxo de dados](../../../integration-services/control-flow/data-flow-task.md)  
   
   

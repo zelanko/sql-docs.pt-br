@@ -1,22 +1,27 @@
 ---
-title: "Instalar o Distributed Replay | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Instalar o Distributed Replay | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f12949316171843274bc70aefc3ed8ff2b236e45
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
-# Instalar o Distributed Replay
+# <a name="install-distributed-replay"></a>Instalar o Distributed Replay
   Você pode instalar o Distributed Replay de uma destas três maneiras:  
   
 -   [Instalar o Distributed Replay por meio do Assistente de Instalação](#bkmk_wizard)  
@@ -26,7 +31,7 @@ caps.handback.revision: 21
 -   [Instalar o Distributed Replay usando um arquivo de configuração](#bkmk_configuration_file)  
   
 ##  <a name="bkmk_wizard"></a> Instalar o Distributed Replay por meio do Assistente de Instalação  
- Instale os recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay com o Assistente de Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Ao planejar onde instalar os recursos, considere o seguinte:  
+ Instale os recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay com o Assistente de Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Ao planejar onde instalar os recursos, considere o seguinte:  
   
 -   Você pode instalar a ferramenta de administração no mesmo computador que o controlador do Distributed Replay ou em computadores diferentes.  
   
@@ -41,13 +46,13 @@ caps.handback.revision: 21
 -   Depois da instalação, o serviço de controlador, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller, deve estar em execução antes de você iniciar o serviço de cliente do Distributed Replay nos clientes.  
   
 > [!NOTE]  
->  Para remover ou alterar os recursos do Distributed Replay, use a janela **Programas e Recursos** do Windows no **Painel de Controle**. Selecione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] na janela **Desinstalar ou alterar um programa** e clique em **Remover** para abrir o Assistente de Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Na página **Selecionar Recursos**, marque os recursos do Distributed Replay que você deseja remover.  
+>  Para remover ou alterar os recursos do Distributed Replay, use a janela **Programas e Recursos** do Windows no **Painel de Controle**. Selecione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] na janela **Desinstalar ou alterar um programa** e clique em **Remover** para abrir o Assistente de Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Na página **Selecionar Recursos** , marque os recursos do Distributed Replay que você deseja remover.  
   
  **Pré-requisitos:**  
   
 -   Verifique se os computadores que você deseja usar atendem aos requisitos descritos no tópico [Requisitos do Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md).  
   
--   Antes de começar este procedimento, você cria as contas de usuário de domínio com as quais os serviços de controlador e de cliente serão executados. É recomendável que essas contas não sejam membros do grupo Administradores do Windows. Para obter mais informações, veja a seção Contas de usuário e serviço no tópico [Segurança do Distributed Replay](../../tools/distributed-replay/distributed-replay-security.md).  
+-   Antes de começar este procedimento, você cria as contas de usuário de domínio com as quais os serviços de controlador e de cliente serão executados. É recomendável que essas contas não sejam membros do grupo Administradores do Windows. Para obter mais informações, veja a seção Contas de usuário e serviço no tópico [Segurança do Distributed Replay](../../tools/distributed-replay/distributed-replay-security.md) .  
   
     > [!NOTE]  
     >  É possível usar contas de usuários locais se você estiver executando a ferramenta de administração, o serviço de controlador e o serviço de cliente no mesmo computador.  
@@ -62,7 +67,7 @@ caps.handback.revision: 21
   
      \- OU –  
   
-     \<Diretório de Recursos Compartilhados>\Tools\\(diretório de recursos compartilhados alternativo fornecido pelo usuário)  
+     \<Compartilhar o diretório de recursos > \Tools\\(diretório de recursos compartilhados alternativo fornecido pelo usuário)  
   
 -   Em um sistema de 64 bits:  
   
@@ -70,11 +75,11 @@ caps.handback.revision: 21
   
      \- OU –  
   
-     \<Diretório de Recursos Compartilhados (x86)>\Tools\\(diretório de recursos compartilhados [x86] alternativo fornecido pelo usuário)  
+     \<Compartilhar o diretório de recursos (x86) > \Tools\\(fornecido pelo usuário alternativo (x86) diretório de recursos compartilhados)  
   
-#### Para instalar recursos do Distributed Replay  
+#### <a name="to-install-distributed-replay-features"></a>Para instalar recursos do Distributed Replay  
   
-1.  Para iniciar a instalação de qualquer um dos recursos do Distributed Replay, inicie o Assistente de Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+1.  Para iniciar a instalação de qualquer um dos recursos do Distributed Replay, inicie o Assistente de Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 2.  A página **Regras de Suporte à Instalação** identifica problemas que podem ocorrer ao instalar os arquivos de suporte da Instalação do SQL Server. Você deve corrigir qualquer falha de suporte à Instalação antes de continuá-la.  
   
@@ -112,24 +117,24 @@ caps.handback.revision: 21
   
     1.  Em computadores de 32 bits, o caminho de instalação padrão é **C:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  Em computadores de 64 bits, o caminho de instalação padrão é **C:\Arquivos de Programas (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
+    2.  Em computadores de 64 bits, o caminho de instalação padrão é **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
 9. Ao concluir, clique em **Avançar**.  
   
-10. Na página **Regras de Instalação**, a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valida sua configuração de computador. Quando o processo de validação for concluído, clique em **Avançar**.  
+10. Na página **Regras de Instalação** , a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valida sua configuração de computador. Quando o processo de validação for concluído, clique em **Avançar**.  
   
 11. A página **Requisitos de Espaço em Disco** calcula o espaço em disco necessário para os recursos especificados. Em seguida, ele compara o espaço necessário com o espaço em disco disponível.  
   
-12. Na página **Relatório de Erros**, especifique as informações que deseja enviar à [!INCLUDE[msCoName](../../includes/msconame-md.md)] para ajudar a aperfeiçoar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por padrão, a opção de relatório de erros está habilitada.  
+12. Na página **Relatório de Erros** , especifique as informações que deseja enviar à [!INCLUDE[msCoName](../../includes/msconame-md.md)] para ajudar a aperfeiçoar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por padrão, a opção de relatório de erros está habilitada.  
   
-13. Na página **Regras de Configuração da Instalação**, o Verificador de Configuração do Sistema executará mais um conjunto de regras para validar a configuração do seu computador com os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você especificou.  
+13. Na página **Regras de Configuração da Instalação** , o Verificador de Configuração do Sistema executará mais um conjunto de regras para validar a configuração do seu computador com os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você especificou.  
   
-14. Na página **Pronto para Instalar o Programa**, clique em **Instalar**.  
+14. Na página **Pronto para Instalar o Programa** , clique em **Instalar**.  
   
     > [!IMPORTANT]  
     >  Depois de instalar o Distributed Replay, crie regras de firewall no controlador e nos computadores cliente e conceda permissões a cada computador cliente no servidor de destino. Para obter mais informações, veja [Concluir as etapas de pós-instalação](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
   
-### Segurança do .NET Framework  
+### <a name="net-framework-security"></a>Segurança do .NET Framework  
  Você deve ter permissões administrativas para instalar qualquer recurso do Distributed Replay. Apenas um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tenha permissões sysadmin pode adicionar as contas de serviço de cliente à função de servidor sysadmin do servidor de teste. Para obter mais informações sobre as considerações de segurança do Distributed Replay, veja [Segurança do Distributed Replay](../../tools/distributed-replay/distributed-replay-security.md).  
   
 ##  <a name="bkmk_command_prompt"></a> Instalar o Distributed Replay a partir do prompt de comando  
@@ -138,13 +143,13 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  Para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e de execução no compartilhamento remoto.  
   
-### Parâmetros de instalação  
- A lista de recursos de nível superior inclui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e Ferramentas. O recurso Ferramentas instalará as Ferramentas de Gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e outros componentes compartilhados. Para instalar os componentes do Distributed Replay, especifique os seguintes parâmetros:  
+### <a name="installation-parameters"></a>Parâmetros de instalação  
+ A lista de recursos de nível superior inclui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e Ferramentas. O recurso Ferramentas instalará as Ferramentas de Gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , os Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e outros componentes compartilhados. Para instalar os componentes do Distributed Replay, especifique os seguintes parâmetros:  
   
 |Componente|Parâmetro|  
 |---------------|---------------|  
-|Controlador Distributed Replay|**DREPLAY_CTLR**|  
-|Cliente Distributed Replay|**DREPLAY_CLT**|  
+|Distributed Replay Controller|**DREPLAY_CTLR**|  
+|Distributed Replay Client|**DREPLAY_CLT**|  
 |Ferramenta de administração|**Ferramentas**|  
   
 > [!IMPORTANT]  
@@ -165,7 +170,7 @@ caps.handback.revision: 21
 |/CLTWORKINGDIR<br /><br /> **Opcional**|O diretório de trabalho para o serviço do cliente do Distributed Replay.|Caminho válido|  
 |/CLTRESULTDIR<br /><br /> **Opcional**|O diretório de resultado para o serviço do cliente do Distributed Replay.|Caminho válido|  
   
-### Sintaxe de exemplo:  
+### <a name="sample-syntax"></a>Sintaxe de exemplo:  
  **Para instalar o componente do Distributed Replay Controller**  
   
 ```  
@@ -192,13 +197,13 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
 > [!IMPORTANT]  
 >  Depois de instalar o Distributed Replay, crie regras de firewall no controlador e nos computadores cliente e conceda permissões a cada computador cliente no servidor de destino. Para obter mais informações, veja [Concluir as etapas de pós-instalação](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
   
-#### Para gerar um arquivo de configuração  
+#### <a name="to-generate-a-configuration-file"></a>Para gerar um arquivo de configuração  
   
 1.  Siga o Assistente de Instalação até a página **Pronto para Instalar** . O caminho para o arquivo de configuração é especificado na página **Pronto para Instalar** na seção do caminho do arquivo de configuração.  
   
 2.  Cancele a instalação sem realmente concluí-la para gerar o arquivo INI.  
   
-#### Para instalar o Distributed Replay usando o arquivo de configuração  
+#### <a name="to-install-distributed-replay-using-the-configuration-file"></a>Para instalar o Distributed Replay usando o arquivo de configuração  
   
 -   Execute a instalação no prompt de comando e forneça o ConfigurationFile.ini por meio do parâmetro ConfigurationFile.  
   
@@ -213,11 +218,12 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  Você deve especificar as duas senhas na linha de comando, porque não é possível configurá-las no arquivo de configuração.  
   
-## Consulte também  
- [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
+## <a name="see-also"></a>Consulte também  
+ [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Requisitos do Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Opções de linha de comando da ferramenta de administração &#40; Distributed Replay Utility &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
+

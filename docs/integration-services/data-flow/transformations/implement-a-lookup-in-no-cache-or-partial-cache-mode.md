@@ -1,27 +1,32 @@
 ---
-title: "Implementar uma pesquisa no modo Sem Cache ou Cache Parcial | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "transformação Pesquisa"
-  - "corresponde exatamente [Integration Services]"
-  - "pesquisas [Integration Services]"
-  - "correspondências exatas [Integration Services]"
+title: Implementar uma pesquisa no modo sem Cache ou Cache parcial | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Lookup transformation
+- match exactly [Integration Services]
+- lookups [Integration Services]
+- exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 caps.latest.revision: 67
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb81f969cc30366489df367016c8096ea2ac1168
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Implementar uma pesquisa no modo Sem Cache ou Cache Parcial
+# <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementar uma pesquisa no modo Sem Cache ou Cache Parcial
   Você pode configurar a transformação Pesquisa para usar o modo cache parcial ou sem-cache:  
   
 -   Cache parcial  
@@ -34,7 +39,7 @@ caps.handback.revision: 67
   
  Se selecionar cache parcial ou não cache, você usará um gerenciador de conexões OLE DB para conectar-se ao conjunto de dados de referência. O conjunto de dados de referência é gerado usando uma tabela, exibição ou consulta SQL durante a execução da transformação Pesquisa.  
   
-### Como implementar uma transformação Pesquisa no modo Sem-Cache ou Cache Parcial  
+### <a name="to-implement-a-lookup-transformation-in-no-cache-or-partial-cache-mode"></a>Como implementar uma transformação Pesquisa no modo Sem-Cache ou Cache Parcial  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] que contém o pacote que você deseja, e, então, abra o pacote.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 67
   
 4.  Clique duas vezes na fonte ou transformação anterior para configurar o componente.  
   
-5.  Clique duas vezes na transformação Pesquisa e em **Editor de Transformação Pesquisa** e, na página **Geral**, selecione **Cache parcial** ou **Sem cache**.  
+5.  Clique duas vezes na transformação Pesquisa e em **Editor de Transformação Pesquisa**e, na página **Geral** , selecione **Cache parcial** ou **Sem cache**.  
   
 6.  Para a lista **Especificar como lidar com linhas sem entradas correspondentes** , selecione uma opção de tratamento de erros da lista.  
   
@@ -87,9 +92,9 @@ caps.handback.revision: 67
   
 11. Se você selecionou **Cache parcial** na etapa 5, na página **Avançado** , defina as opções de cache seguintes:  
   
-    -   Na lista **Tamanho de cache (32 bits)**, selecione o tamanho de cache para ambientes de 32 bits.  
+    -   Na lista **Tamanho de cache (32 bits)** , selecione o tamanho de cache para ambientes de 32 bits.  
   
-    -   Na lista **Tamanho de cache (64 bits)**, selecione o tamanho de cache para ambientes de 64 bits.  
+    -   Na lista **Tamanho de cache (64 bits)** , selecione o tamanho de cache para ambientes de 64 bits.  
   
     -   Para armazenar as linhas em cache sem entradas correspondentes na referência, selecione **Habilitar cache para linhas sem entradas correspondentes**.  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 67
   
 14. Clique em **OK** para salvar suas alterações na transformação Pesquisa e, então, execute o pacote.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

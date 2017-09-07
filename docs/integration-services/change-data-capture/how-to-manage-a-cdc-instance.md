@@ -1,25 +1,30 @@
 ---
-title: "Como gerenciar uma inst&#226;ncia CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Como gerenciar uma instância CDC | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d368fcacfb8e548647785c8b5f6ef5b73b4ef10b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Como gerenciar uma inst&#226;ncia CDC
+# <a name="how-to-manage-a-cdc-instance"></a>Como gerenciar uma instância CDC
   Este procedimento descreve como usar o CDC Designer Console para gerenciar operações de instância CDC em tempo de execução.  
   
-### Para gerenciar operações de instância CDC  
+### <a name="to-manage-cdc-instance-operations"></a>Para gerenciar operações de instância CDC  
   
 1.  No menu **Iniciar** , selecione o **CDC Designer Console**.  
   

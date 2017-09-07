@@ -1,25 +1,30 @@
 ---
-title: "Suporte para Hadoop e HDFS no Integration Services (SSIS) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SSIS.HADOOP.F1"
+title: Hadoop e HDFS suporte no Integration Services (SSIS) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SSIS.HADOOP.F1
 ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: da5fafb4145da0d0122e5e57de3e025c012dca3a
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Suporte para Hadoop e HDFS no Integration Services (SSIS)
+# <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Suporte para Hadoop e HDFS no Integration Services (SSIS)
   O SSIS (SQL Server Integration Services) 2016 inclui os seguintes componentes que dão suporte para Hadoop e HDFS local.  
   
  Para obter informações sobre os componentes do Integration Services que dão suporte para HDInsight e outros recursos do Microsoft Azure, consulte [Azure Feature Pack para Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  

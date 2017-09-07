@@ -1,24 +1,29 @@
 ---
-title: "Op&#231;&#245;es da solicita&#231;&#227;o do perfil Depend&#234;ncia Funcional (tarefa Cria&#231;&#227;o de Perfil de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Editor da tarefa Criação de Perfil de Dados"
+title: "Opções de solicitação do perfil dependência funcional (tarefa criação de perfil de dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4efcec555b59668145cd2b998c77a9cc1f8feb54
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
-# Op&#231;&#245;es da solicita&#231;&#227;o do perfil Depend&#234;ncia Funcional (tarefa Cria&#231;&#227;o de Perfil de Dados)
+# <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Dependência Funcional (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Perfil de Dependência Funcional** selecionada no painel de solicitações. Um perfil de Dependência Funcional informa até que ponto os valores em uma coluna (a coluna dependente) dependem dos valores em outra coluna ou conjunto de colunas (a coluna determinante). Esse perfil também pode ajudá-lo a identificar problemas em seus dados, como valores inválidos. Por exemplo, você perfila a dependência entre uma coluna Código Postal e uma coluna estado dos Estados Unidos. Nesse perfil, o mesmo Código Postal deve sempre ter o mesmo estado, mas o perfil descobre violações da dependência.  
   
 > [!NOTE]  
@@ -26,8 +31,8 @@ caps.handback.revision: 24
   
  Para obter mais informações sobre como usar a Tarefa Criação de Perfil de Dados, consulte [Configuração da Tarefa Criação de Perfil de Dados](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Para obter mais informações sobre como usar o Visualizador de Perfil de Dados para analisar a saída da Tarefa Criação de Perfil de Dados, consulte [Visualizador de Perfil de Dados](../../integration-services/control-flow/data-profile-viewer.md).  
   
-## Compreendendo a seleção de colunas determinantes e dependentes  
- Uma **Solicitação de Perfil de Dependência Funcional** computa o grau no qual a coluna lateral determinante ou grupo de colunas (especificados na propriedade **DeterminantColumns**) determina o valor da coluna lateral dependente (especificada na propriedade **DependentColumn**). Por exemplo, uma coluna estado dos Estados Unidos deveria ser funcionalmente dependente em uma coluna Código Postal dos Estados Unidos. Ou seja, se o Código Postal (coluna determinante) for 98052, o estado (coluna dependente) deve ser sempre Washington.  
+## <a name="understanding-the-selection-of-determinant-and-dependent-columns"></a>Compreendendo a seleção de colunas determinantes e dependentes  
+ Uma **Solicitação de Perfil de Dependência Funcional** computa o grau no qual a coluna lateral determinante ou grupo de colunas (especificados na propriedade **DeterminantColumns** ) determina o valor da coluna lateral dependente (especificada na propriedade **DependentColumn** ). Por exemplo, uma coluna estado dos Estados Unidos deveria ser funcionalmente dependente em uma coluna Código Postal dos Estados Unidos. Ou seja, se o Código Postal (coluna determinante) for 98052, o estado (coluna dependente) deve ser sempre Washington.  
   
  Para o lado determinante, é possível especificar uma coluna ou um conjunto de colunas na propriedade **DeterminantColumns** . Por exemplo, considere uma tabela de amostra com as colunas A, B e C. Sendo assim, as seguintes seleções são feitas para a propriedade **DeterminantColumns** :  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  Se selecionar **(\*)**, essa opção poderá resultar em um grande número de computações e diminuir o desempenho da tarefa. Entretanto, se a tarefa encontrar um subconjunto que atenda ao limite de uma dependência funcional, a tarefa não analisará combinações adicionais. Por exemplo, na tabela de exemplo descrita acima, se a tarefa determinar que a coluna C é uma coluna determinante, a tarefa não continuará analisando os candidatos compostos.  
   
-## Opções de Propriedades da Solicitação  
+## <a name="request-properties-options"></a>Opções de Propriedades da Solicitação  
  Para uma **Solicitação de Perfil de Dependência Funcional**, o painel **Propriedades da Solicitação** exibe os seguintes grupos de opções:  
   
 -   **Dados**que incluem as opções **DeterminantColumns** e **DependentColumn**  
@@ -49,7 +54,7 @@ caps.handback.revision: 24
   
 -   **Opções**  
   
-### Opções de dados  
+### <a name="data-options"></a>Opções de dados  
  **ConnectionManager**  
  Selecione o gerente de conexões do [!INCLUDE[vstecado](../../includes/vstecado-md.md)] que usa o Provedor de Dados .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) para conexão com o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contém a tabela ou a exibição que você deseja analisar.  
   
@@ -66,7 +71,7 @@ caps.handback.revision: 24
   
  Para obter mais informações, consulte as seções "Compreendendo a seleção de colunas determinantes e dependentes" “Opções DeterminantColumns e DependentColumn” neste tópico.  
   
-#### Opções de DeterminantColumns e DependentColumn  
+#### <a name="determinantcolumns-and-dependentcolumn-options"></a>Opções de DeterminantColumns e DependentColumn  
  As opções a seguir são apresentadas para cada coluna selecionada para criação de perfil em **DeterminantColumns** e em **DependentColumn**.  
   
  Para obter mais informações, consulte a seção "Compreendendo a seleção de colunas determinantes e dependentes" anteriormente neste tópico.  
@@ -85,7 +90,7 @@ caps.handback.revision: 24
   
 |Value|Description|  
 |-----------|-----------------|  
-|**Default**|Classifica e compara dados com base no agrupamento da coluna na tabela de origem.|  
+|**Padrão**|Classifica e compara dados com base no agrupamento da coluna na tabela de origem.|  
 |**BinarySort**|Classifica e compara dados com base nos padrões de bit definidos para cada caractere. A ordem de classificação binária faz distinção entre maiúsculas e minúsculas e acentuação. Binário é também a ordem de classificação mais rápida.|  
 |**DictionarySort**|Classifica e compara dados com base nas regras de classificação e comparação, conforme definidas em dicionários do idioma ou alfabeto associado.|  
   
@@ -98,17 +103,17 @@ caps.handback.revision: 24
 |**IgnoreKanaType**|Especifica se a comparação distingue os dois tipos de caracteres de kana japoneses: hiragana e katakana. Se esta opção for definida, a comparação de cadeia de caracteres ignorará o tipo de kana usado.|  
 |**IgnoreWidth**|Especifica se a comparação faz distinção entre um caractere de byte único e o mesmo caractere representado como um caractere de byte duplo. Se esta opção for definida, a comparação de cadeia de caracteres tratará representações de byte único e representações de byte duplo do mesmo caractere como idênticas.|  
   
-### Opções gerais  
+### <a name="general-options"></a>Opções gerais  
  **RequestID**  
  Digite um nome descritivo para identificar esta solicitação de perfil. Normalmente, não é necessário alterar o valor gerado automaticamente.  
   
-### Opções  
+### <a name="options"></a>Opções  
  **ThresholdSetting**  
  Especifique a configuração de limite. O valor padrão dessa propriedade é **Especificado**.  
   
 |Value|Description|  
 |-----------|-----------------|  
-|**Nenhum.**|Nenhum limite é especificado. A força de dependência funcional é informada independentemente do seu valor.|  
+|**Nenhum**|Nenhum limite é especificado. A força de dependência funcional é informada independentemente do seu valor.|  
 |**Especificado**|Use o limite especificado em **FDStrengthThreshold**. A força de dependência funcional só será informada se for superior ao limite.|  
 |**Exact**|Nenhum limite é especificado. A força de dependência funcional só será informada se a dependência funcional entre as colunas selecionadas for exata.|  
   
@@ -118,8 +123,8 @@ caps.handback.revision: 24
  **MaxNumberOfViolations**  
  Especifique o número máximo de violações de dependência funcional a ser informado na saída. O valor padrão dessa propriedade é 100. Esta opção é desabilitada quando **Exato** é selecionado como **ThresholdSetting**.  
   
-## Consulte também  
- [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>Consulte também  
+ [Editor da tarefa &#40; de criação de perfil de dados Página geral &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulário de perfil rápido de tabela única &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
