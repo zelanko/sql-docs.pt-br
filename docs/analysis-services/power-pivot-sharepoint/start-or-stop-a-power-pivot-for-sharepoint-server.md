@@ -1,24 +1,29 @@
 ---
-title: "Iniciar ou parar um Power Pivot para SharePoint Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Iniciar ou parar um PowerPivot para SharePoint Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f512a256765bbba4b1f641fb9752bd09fae4696
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Iniciar ou parar um Power Pivot para SharePoint Server
+# <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Iniciar ou parar um Power Pivot para SharePoint Server
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] O Serviço de Sistema e uma instância do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] funcionam em conjunto no mesmo servidor de aplicativos local para dar suporte à solicitação coordenada e ao processamento de dados em um farm do SharePoint.  
   
  Este tópico contém as seguintes seções:  
@@ -30,18 +35,18 @@ caps.handback.revision: 8
  [Efeitos da interrupção de um servidor do Power Pivot](#effects)  
   
 ##  <a name="dependencies"></a> Dependências de serviço  
- O Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] tem uma dependência na instância de servidor do Analysis Services local que é instalada com ele no mesmo servidor físico. Se você parar o Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], também terá que parar manualmente a instância de servidor do Analysis Services local. Se um serviço estiver em execução sem o outro, você verá erros de alocação na solicitação de processamento de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+ O Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] tem uma dependência na instância de servidor do Analysis Services local que é instalada com ele no mesmo servidor físico. Se você parar o Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , também terá que parar manualmente a instância de servidor do Analysis Services local. Se um serviço estiver em execução sem o outro, você verá erros de alocação na solicitação de processamento de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  O servidor do Analysis Services só deverá ser executado por si só se você estiver diagnosticando ou soluciona um problema. Em todos os outros casos, o servidor requer que o Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] seja executado localmente no mesmo servidor.  
   
 ##  <a name="startstop"></a> Iniciar ou parar os serviços  
  Sempre use a Administração Central para iniciar ou parar o Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou a instância de servidor do Analysis Services. A Administração Central permite iniciar ou parar os serviços na mesma página. Além disso, a Administração Central usa um trabalho de timer chamado **Um ou mais serviços foram iniciados ou interrompidos** para reiniciar serviços que devem estar em execução. Se você parar o Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou o Analysis Services usando uma ferramenta que não seja do SharePoint, os serviços serão reiniciados quando o trabalho do temporizador for executado.  
   
- Iniciar e parar serviços são ações que se aplicam a uma instância de serviço física. Se você tiver servidores adicionais do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no farm, os outros servidores dentro do farm continuarão aceitando solicitações de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+ Iniciar e parar serviços são ações que se aplicam a uma instância de serviço física. Se você tiver servidores adicionais do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no farm, os outros servidores dentro do farm continuarão aceitando solicitações de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Você não pode iniciar ou parar todos os serviços físicos simultaneamente pelo farm. Você deve selecionar cada servidor e depois iniciar ou parar um serviço específico.  
   
- Você não pode iniciar, pausar ou parar um Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para um aplicativo Web específico, mas você pode remover um serviço da lista de conexões padrão para torná-lo não disponível. Para obter mais informações, consulte [Conectar um aplicativo de serviço do Power Pivot a um aplicativo Web do SharePoint na Administração Central](../../analysis-services/power-pivot-sharepoint/connect power pivot service app to sharepoint web app in ca.md).  
+ Você não pode iniciar, pausar ou parar um Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para um aplicativo Web específico, mas você pode remover um serviço da lista de conexões padrão para torná-lo não disponível. Para obter mais informações, consulte [Conectar um aplicativo de serviço do Power Pivot a um aplicativo Web do SharePoint na Administração Central](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
   
 1.  Na Administração Central, em **Configurações do Sistema**, clique em **Gerenciar serviços no servidor**.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 8
   
 3.  Selecione o servidor do SharePoint que tem o Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou instância do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] que você deseja iniciar ou parar.  
   
-4.  Selecione o serviço e clique na ação. Lembre-se de iniciar ou parar os serviços como um par. Se você iniciar ou parar o Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], não se esqueça de iniciar ou parar a instância de servidor do Analysis Services executada no mesmo computador.  
+4.  Selecione o serviço e clique na ação. Lembre-se de iniciar ou parar os serviços como um par. Se você iniciar ou parar o Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , não se esqueça de iniciar ou parar a instância de servidor do Analysis Services executada no mesmo computador.  
   
 ##  <a name="effects"></a> Efeitos da interrupção de um servidor do Power Pivot  
  A tabela a seguir descreve os efeitos de parar o Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e o serviço Analysis Services em um servidor do SharePoint.  
@@ -62,7 +67,7 @@ caps.handback.revision: 8
 |Novas solicitações para consultas ou atualização de dados|Se você estiver parando somente o servidor [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no farm, novas solicitações para dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] não serão manipuladas e uma solicitação de dados resultará em um erro de dados não encontrados.<br /><br /> Se você tiver servidores do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint adicionais, a solicitação irá para um dos servidores disponíveis.|  
 |Dados de uso|Não serão coletados dados de uso enquanto os serviços estiverem parados.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Configurar contas de serviço Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

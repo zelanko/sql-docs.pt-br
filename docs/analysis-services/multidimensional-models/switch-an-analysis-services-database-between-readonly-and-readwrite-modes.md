@@ -1,28 +1,33 @@
 ---
-title: "Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "propriedade ReadOnly"
-  - "comando ReadWriteMode"
-  - "operações [Analysis Services - Dados Multidimensionais]"
+title: Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ReadOnly property
+- ReadWriteMode command
+- operations [Analysis Services - multidimensional data]
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 11eaa65564dcd59442bd8b111c0de009b00e8fd4
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite
+# <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Os administradores de banco de dados do podem alterar o modo de leitura/gravação de um banco de dados Tabular ou Multidimensional como parte do esforço maior que distribui uma carga de trabalho de consulta entre vários servidores somente consulta.  
   
  Um modo de banco de dados pode ser alternado de várias formas. Este documento explica os cenários comuns a seguir:  
@@ -33,7 +38,7 @@ caps.handback.revision: 16
   
 -   Script usando XMLA ou TMSL  
   
-## Alterne o modo leitura/gravação de um banco de dados de maneira interativa usando o Management Studio  
+## <a name="switch-the-readwrite-mode-of-a-database-interactively-using-management-studio"></a>Alterne o modo leitura/gravação de um banco de dados de maneira interativa usando o Management Studio  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse no banco de dados e selecione **Propriedades**.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 16
   
 7.  Digite a senha e clique em **OK** para executar o comando Anexar.  
   
-## Alterne o modo leitura/gravação em um banco de dados usando o AMO de maneira programática  
+## <a name="switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>Alterne o modo leitura/gravação em um banco de dados usando o AMO de maneira programática  
  Em seu aplicativo C#, chame `SwitchReadWrite()` com os parâmetros necessários. Compile e execute seu código para mover o banco de dados.  
   
 ```  
@@ -91,7 +96,7 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
   
 ```  
   
-## Alterne o modo leitura/gravação para um banco de dados por script usando XMLA  
+## <a name="switch-the-readwrite-mode-to-a-database-by-script-using-xmla"></a>Alterne o modo leitura/gravação para um banco de dados por script usando XMLA  
  As instruções a seguir se aplicam a bancos de dados Multidimensionais e Tabulares no modo de compatibilidade 1050, 1100 ou 1103.  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse no banco de dados e selecione **Propriedades**.  
@@ -126,11 +131,11 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
     </Attach>  
     ```  
   
-8.  Substitua `%dbFolder%` pelo caminho UNC completo da pasta do banco de dados, `%ReadOnlyMode%` pelo valor correspondente **ReadOnly** ou **ReadWrite** e `%password%` pela senha. Os caracteres % fazem parte do modelo e devem ser removidos.  
+8.  Substitua `%dbFolder%` pelo caminho UNC completo da pasta do banco de dados, `%ReadOnlyMode%` pelo valor correspondente **ReadOnly** ou **ReadWrite**e `%password%` pela senha. Os caracteres % fazem parte do modelo e devem ser removidos.  
   
 9. Execute o comando XMLA.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Alta disponibilidade e escalabilidade no Analysis Services](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)   
  [Anexar e desanexar bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   

@@ -1,36 +1,44 @@
 ---
-title: "Modelagem de tabela (Tutorial do Adventure Works) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-keywords: 
-  - "Analysis Services"
-  - "Modelo de tabela"
-  - "Tutorial"
-  - "SSAS"
+title: Tabela de modelagem (Tutorial do Adventure Works) | Microsoft Docs
+ms.custom: 
+ms.date: 04/19/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+keywords:
+- Analysis Services
+- Modelo de tabela
+- Tutorial
+- SSAS
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 30028afc0a7d994441a0958b207b7ab70c40f133
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Modelagem de tabela (Tutorial do Adventure Works)
-Este tutorial fornece lições sobre como criar um modelo de tabela do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Analysis Services usando o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+# <a name="tabular-modeling-adventure-works-tutorial"></a>Modelagem de tabela (Tutorial do Adventure Works)
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+
+Este tutorial fornece lições sobre como criar um modelo de tabela do Analysis Services no [nível de compatibilidade 1200](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) usando [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)e implantar seu modelo para um Analysis Services servidor local ou no Azure.  
+ 
+Se você estiver usando 2017 do SQL Server ou do Azure Analysis Services, e você deseja criar seu modelo na compatibilidade de 1400 nível, use o [Azure Analysis Services – tutorial do Adventure Works](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master). Essa versão atualizada usa o recurso obter dados novo e moderno para se conectar e importar dados de origem e usa a linguagem M configurar partições.
+ 
   
+## <a name="what-youll-learn"></a>O que você aprenderá   
   
-## O que você aprenderá  
-No decorrer deste tutorial, você aprenderá o seguinte:  
-  
--   Como criar um novo projeto de modelo de tabela no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
+-   Como criar um novo projeto de modelo de tabela no SSDT.
   
 -   Como importar dados de um banco de dados relacional do SQL Server em um projeto de modelo de tabela.  
   
@@ -44,60 +52,64 @@ No decorrer deste tutorial, você aprenderá o seguinte:
   
 -   Como proteger dados e objetos de modelo criando funções com membros de usuário.  
   
--   Como implantar um modelo tabular em uma área restrita ou instância de produção do Analysis Services em execução no modo Tabular.  
+-   Como implantar um modelo de tabela para um Analysis Services server no local ou no Azure.  
   
-## Cenário  
-Este tutorial baseia-se na [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], uma empresa fictícia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa multinacional que produz e distribui bicicletas de metal e compostos para mercados comerciais da América do Norte, Europa e Ásia. A sede da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é em Bothell, Washington, onde emprega 500 funcionários. Além disso, a [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emprega várias equipes de vendas regionais por toda a sua base de mercado.  
+## <a name="scenario"></a>Cenário  
+Este tutorial baseia-se em Adventure Works Cycles, uma empresa fictícia. A Adventure Works é uma empresa de grande empresa multinacional de manufatura que produz e distribui Bicicletas de metal e compostas para mercados comerciais na América do Norte, Europa e Ásia. Com sede em Bothell, Washington, emprega 500 funcionários. Além disso, a Adventure Works emprega várias equipes regionais de vendas em toda a sua base de mercado.  
   
 Para respaldar melhor as necessidades de análise de dados das equipes de vendas e de marketing e da gerência sênior, você fica encarregado de criar um modelo de tabela para que os usuários analisem dados de vendas pela Internet no banco de dados de exemplo AdventureWorksDW.  
   
-Para concluir o tutorial e o modelo de tabela Adventure Works Internet Sales, você deve concluir várias lições. Em cada lição, há várias tarefas; a execução de cada uma delas na ordem é necessária para concluir a lição. Embora em uma lição específica possa haver várias tarefas que geram um resultado semelhante, no entanto, o modo como você conclui cada tarefa é ligeiramente diferente. Isso acontece para mostrar que geralmente há mais de uma maneira de concluir uma tarefa específica e para desafiá-lo a usar as habilidades adquiridas nas tarefas anteriores.  
+Para concluir o tutorial e o modelo de tabela Adventure Works Internet Sales, você deve concluir várias lições. Em cada lição, há várias tarefas; a execução de cada uma delas na ordem é necessária para concluir a lição. Enquanto em uma lição específica pode haver várias tarefas que geram um resultado semelhante, mas como você conclui cada tarefa é ligeiramente diferente. Isso é para mostrar que geralmente há mais de uma maneira para concluir uma tarefa específica e para desafiá-lo a usar as habilidades que você aprendeu nas tarefas anteriores.  
   
-A finalidade das lições é conduzi-lo pelo processo de criação de um modelo tabular básico executado no modo Em Memória usando muitos dos recursos incluídos em [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Como cada lição é criada após a lição anterior, você deve concluir as lições na ordem. Depois que você tiver concluído todas as lições, terá criado e implantado o modelo de tabela de exemplo Adventure Works Internet Sales em um servidor do Analysis Services.  
+A finalidade das lições é orientar você durante a criação de um modelo de tabela básico executado no modo na memória usando muitos dos recursos incluídos no SSDT. Como cada lição é criada após a lição anterior, você deve concluir as lições na ordem. Depois de concluir todas as lições, você terá criado e implantado o modelo de tabela de exemplo Adventure Works Internet Sales em um servidor do Analysis Services.  
   
 Este tutorial não fornece lições ou informações sobre como gerenciar um banco de dados modelo de tabela implantado usando o SQL Server Management Studio ou usando um aplicativo cliente de relatórios para se conectar a um modelo implantado para procurar dados de modelo.  
   
-## Pré-requisitos  
-Para concluir este tutorial, você deve ter os seguintes pré-requisitos instalados:  
+## <a name="prerequisites"></a>Pré-requisitos  
+Para concluir este tutorial, você precisará dos seguintes pré-requisitos:  
   
--   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Instância do Analysis Services em execução no modo de Tabela.  
+-   A versão mais recente do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. [Obter a versão mais recente](https://msdn.microsoft.com/library/mt204009.aspx).
+
+-   A versão mais recente do SQL Server Management Studio. [Obter a versão mais recente](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). 
   
--   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. [Obtenha a versão mais recente.](https://msdn.microsoft.com/library/mt204009.aspx)  
+-   Um aplicativo cliente como [Power BI Desktop](https://powerbi.microsoft.com/desktop/) ou [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel.    
   
--   Banco de dados de exemplo do Adventure Works DW 2014. Este banco de dados de exemplo inclui os dados necessários para concluir este tutorial. Para baixar o banco de dados de exemplo, vá para [http://go.microsoft.com/fwlink/?LinkID=335807](http://go.microsoft.com/fwlink/?LinkID=335807).  
+-   Uma instância do SQL Server com o banco de dados de exemplo Adventure Works DW 2014. Este banco de dados de exemplo inclui os dados necessários para concluir este tutorial. [Obter a versão mais recente](http://go.microsoft.com/fwlink/?LinkID=335807).  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 ou posterior (para uso com o recurso Analisar no Excel na lição 11).  
+
+-   Um Azure Analysis Services ou SQL Server 2016 ou posterior instância do Analysis Services para implantar seu modelo. [Inscreva-se para uma avaliação gratuita do Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/).
   
-## Lições  
+## <a name="lessons"></a>Lições  
 Este tutorial inclui as seguintes lições:  
   
 |Lição|Tempo estimado para concluir|  
 |----------|------------------------------|  
 |[Lição 1: Criar um novo projeto de modelo de tabela](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 minutos|  
 |[Lição 2: Adicionar dados](../analysis-services/lesson-2-add-data.md)|20 minutos|  
-|[Lição 3: Renomear colunas](../analysis-services/lesson-3-rename-columns.md)|20 minutos|  
-|[Lição 4: Marcar como Tabela de Data](../analysis-services/lesson-4-mark-as-date-table.md)|3 minutos|  
-|[Lição 5: Criar relações](../analysis-services/lesson-5-create-relationships.md)|10 minutos|  
-|[Lição 6: Criar colunas calculadas](../analysis-services/lesson-6-create-calculated-columns.md)|15 minutos|  
-|[Lição 7: Criar medidas](../analysis-services/lesson-7-create-measures.md)|30 minutos|  
-|[Lição 8: Criar indicadores chave de desempenho](../analysis-services/lesson-8-create-key-performance-indicators.md)|15 minutos|  
-|[Lição 9: Criar perspectivas](../Topic/Lesson%209:%20Create%20Perspectives.md)|5 minutos|  
-|[Lição 10: Criar hierarquias](../analysis-services/lesson-10-create-hierarchies.md)|20 minutos|  
-|[Lição 11: Criar partições](../analysis-services/lesson-11-create-partitions.md)|15 minutos|  
-|[Lição 12: Criar funções](../analysis-services/lesson-12-create-roles.md)|15 minutos|  
-|[Lição 13: Analisar no Excel](../analysis-services/lesson-13-analyze-in-excel.md)|20 minutos|  
-|[Lição 14: Implantar](../analysis-services/lesson-14-deploy.md)|5 minutos|  
+|[Lição 3: marcar como tabela de data](../analysis-services/lesson-3-mark-as-date-table.md)|3 minutos|  
+|[Lição 4: Criar relações](../analysis-services/lesson-4-create-relationships.md)|10 minutos|  
+|[Lição 5: Criar colunas calculadas](../analysis-services/lesson-5-create-calculated-columns.md)|15 minutos|
+|[Lição 6: Criar medidas](../analysis-services/lesson-6-create-measures.md)|30 minutos|  
+|[Lição 7: criar indicadores chave de desempenho](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 minutos|  
+|[Lição 8: Criar perspectivas](../analysis-services/lesson-8-create-perspectives.md)|5 minutos|  
+|[Lição 9: Criar hierarquias](../analysis-services/lesson-9-create-hierarchies.md)|20 minutos|  
+|[Lição 10: Criar partições](../analysis-services/lesson-10-create-partitions.md)|15 minutos|  
+|[Lição 11: Criar funções](../analysis-services/lesson-11-create-roles.md)|15 minutos|  
+|[Lição 12: analisar no Excel](../analysis-services/lesson-12-analyze-in-excel.md)|20 minutos| 
+|[Lição 13: implantar](../analysis-services/lesson-13-deploy.md)|5 minutos|  
   
-## Lições complementares  
-Este tutorial também inclui [Lições complementares](../Topic/Supplemental%20Lessons.md). Os tópicos desta seção não são necessários para concluir o tutorial, mas podem ser úteis para a melhor compreensão dos recursos de criação do modelo de tabela avançado.  
+## <a name="supplemental-lessons"></a>Lições complementares  
+Este tutorial também inclui [Lições complementares](http://msdn.microsoft.com/library/2018456f-b4a6-496c-89fb-043c62d8b82e). Os tópicos desta seção não são necessários para concluir o tutorial, mas podem ser úteis para a melhor compreensão dos recursos de criação do modelo de tabela avançado.  
   
 |Lição|Tempo estimado para concluir|  
 |----------|------------------------------|  
-|[Implementar a segurança dinâmica usando filtros de linha](../analysis-services/implement-dynamic-security-by-using-row-filters.md)|30 minutos|  
-|[Configurar propriedades de relatório para relatórios do Power View](../analysis-services/configure-reporting-properties-for-power-view-reports.md)|30 minutos|  
+|[Implementar a segurança dinâmica usando filtros de linha](../analysis-services/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)|30 minutos|  
+
   
-## Próxima etapa  
+## <a name="next-step"></a>Próxima etapa  
 Para iniciar o tutorial, vá para a primeira lição: [Lição 1: Criar um novo projeto de modelo de tabela](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
   
   
+
+

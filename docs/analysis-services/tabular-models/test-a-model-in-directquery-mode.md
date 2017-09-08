@@ -1,25 +1,33 @@
 ---
-title: "Testar um modelo no modo DirectQuery | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Testar um modelo no modo DirectQuery | Microsoft Docs
+ms.custom: 
+ms.date: 07/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11260792-ff8b-4d0e-b845-ca210dd3fced
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 71352e3066d7964ad6e795563d049368285c79e8
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Testar um modelo no modo DirectQuery
+# <a name="test-a-model-in-directquery-mode"></a>Testar um modelo no modo DirectQuery
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Examine as opções para testar um modelo de tabela no DirectQuery em cada estágio do desenvolvimento, começando pelo design.  
   
-## Testar no Excel 
+## <a name="test-in-excel"></a>Testar no Excel 
   
  Ao criar seu modelo no SSDT, você pode usar o recurso **Analisar no Excel** para testar suas decisões de modelagem em um conjunto de dados na memória de exemplo ou no banco de dados relacional.  Quando você clica em Analisar no Excel, é aberta uma caixa de diálogo em que você pode especificar as opções.
  
@@ -30,10 +38,10 @@ caps.handback.revision: 11
  
  - **Exibição de dados completa** – Com essa opção, todas as consultas do Excel são enviadas ao Analysis Services e, em seguida, ao banco de dados relacional. De fato, essa opção tem pleno funcionamento no modo DirecQuery.
  
- ### Outros clientes
+ ### <a name="other-clients"></a>Outros clientes
  Quando você usa o recurso Analisar no Excel, um arquivo de conexão .odc é criado. Você pode usar as informações de cadeia de conexão deste arquivo para se conectar ao seu modelo por meio de outros aplicativos cliente. Um parâmetro adicional, DataView=Sample, é adicionado para especificar se o cliente deve se conectar às partições de dados de exemplo.  
   
-## Monitorar a execução da consulta em sistemas de back-end usando o xEvents ou o SQL Profiler 
+## <a name="monitor-query-execution-on-backend-systems-using-xevents-or-sql-profiler"></a>Monitorar a execução da consulta em sistemas de back-end usando o xEvents ou o SQL Profiler 
  Inicie um rastreamento de sessão, conectado ao banco de dados relacional do SQL Server para monitorar as conexões do modelo Tabular:  
   
 -   [Monitorar o Analysis Services com Eventos Estendidos do SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  

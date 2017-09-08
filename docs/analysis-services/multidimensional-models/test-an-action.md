@@ -1,27 +1,32 @@
 ---
-title: "Testar uma a&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Testar uma ação | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0ec7feb3-a6b2-4be1-8036-c72b9fbc3562
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10d7a7a33b38e23c3cb6b88a3d2b73007daf3e72
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Testar uma a&#231;&#227;o
+# <a name="test-an-action"></a>Testar uma ação
   Você testa uma ação usando a exibição de Navegador no Designer de Cubo. O Designer de Cubo pode ser acessado pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Depois de criar a ação, você deve processar o cubo antes de a ação ser testada. Para obter mais informações, consulte [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
-### Para testar uma ação  
+### <a name="to-test-an-action"></a>Para testar uma ação  
   
 1.  Abra o cubo que contém a ação que você deseja testar e, em **Exibir**, clique em **Navegador**.  
   

@@ -1,24 +1,29 @@
 ---
-title: "Tabelas e colunas (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Tabelas e colunas (SSAS Tabular) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e941e6c084842238d429c7a653efbad24fb56520
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Tabelas e colunas (SSAS tabular)
+# <a name="tables-and-columns-ssas-tabular"></a>Tabelas e colunas (SSAS tabular)
   Depois de ter adicionado tabelas e os dados em um modelo usando o Assistente de Importação de Tabela, você pode começar a trabalhar com as tabelas adicionando novas colunas de dados, criando relacionamentos entre tabelas, definindo cálculos que estendem os dados e filtrando e classificando dados nas tabelas para facilitar a exibição.  
   
  Seções neste tópico:  
@@ -50,7 +55,7 @@ caps.handback.revision: 13
   
 -   Uma combinação de dados relacionais e dados tabulares (HTML) copiados e colados na tabela.  
   
- Quando você importa dados, cada tabela ou exibição, planilha ou arquivo de dados é adicionado como uma tabela no designer de modelo. Geralmente você adiciona dados de várias fontes em guias separadas, mas é possível combinar dados em uma única tabela usando **Colar** e **Colar Acréscimo**. Para obter mais informações, consulte [Copiar e colar dados &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/copy-and-paste-data-ssas-tabular.md).  
+ Quando você importa dados, cada tabela ou exibição, planilha ou arquivo de dados é adicionado como uma tabela no designer de modelo. Geralmente você adiciona dados de várias fontes em guias separadas, mas é possível combinar dados em uma única tabela usando **Colar** e **Colar Acréscimo**. Para obter mais informações, consulte [Copiar e colar dados &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
   
  Depois que você adicionar os dados necessários, poderá criar relacionamentos adicionais entre as tabelas, procurar ou referenciar valores relacionados em outras tabelas ou criar valores derivados adicionando novas colunas calculadas.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 13
 |[Renomear uma tabela ou coluna &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|Descreve como renomear uma tabela ou coluna para torná-la mais identificável em seu modelo.|  
 |[Definir o tipo de dados de uma coluna &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|Descreve como alterar o tipo de dados de uma coluna. O tipo de dados define como dados na coluna são armazenados e apresentados.|  
 |[Ocultar ou congelar colunas &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Descreve como ocultar colunas que você não deseja exibir e como manter uma área de um modelo visível enquanto você rola para outra área do modelo congelando (bloqueando) colunas específicas em uma área.|  
-|[Colunas calculadas &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)|Os tópicos nesta seção descrevem como você pode usar colunas calculadas para adicionar dados agregados a seu modelo.|  
-|[Filtrar e classificar dados &#40;SSAS de Tabela&#41;](../Topic/Filter%20and%20Sort%20Data%20\(SSAS%20Tabular\).md)|Os tópicos nesta seção descrevem como você pode filtrar ou classificar dados usando controles no designer de modelo.|  
+|[Colunas calculadas &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)|Os tópicos nesta seção descrevem como você pode usar colunas calculadas para adicionar dados agregados a seu modelo.|  
+|[Filtrar e classificar dados &#40;SSAS de Tabela&#41;](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|Os tópicos nesta seção descrevem como você pode filtrar ou classificar dados usando controles no designer de modelo.|  
   
   

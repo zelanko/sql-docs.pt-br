@@ -1,24 +1,29 @@
 ---
-title: "Usar modelos do Analysis Services no SQL Server Management Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Usar modelos do Analysis Services no SQL Server Management Studio | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff4058fd2827698cee28b1a9d6b759719688a212
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Usar modelos do Analysis Services no SQL Server Management Studio
+# <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usar modelos do Analysis Services no SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece um conjunto de modelos para ajudá-lo a criar rapidamente scripts XMLA, consultas DMX ou MDX, criar KPIs em um cubo ou modelo de tabela, backup de script e operações de restauração e executar muitas outras tarefas. Os modelos estão localizados no **Gerenciador de Modelos** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  Este tópico inclui uma lista de modelos multidimensionais e de tabela, e fornece exemplos de como criar uma consulta MDX e instrução XMLA usando o Gerenciador de metadados e o Gerenciador de Modelos.  
@@ -42,9 +47,9 @@ caps.handback.revision: 12
   
  Para abrir o **Gerenciador de Modelos**, selecione-o no menu **Exibir** . Em seguida, clique no ícone de cubo para visualizar uma lista de modelos disponíveis para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- ![Gerenciador de Modelos, filtrado para o Analysis Services](../../analysis-services/instances/media/ssas-templateexplorer.gif "Gerenciador de Modelos, filtrado para o Analysis Services")  
+ ![Gerenciador de modelos, filtrado para o Analysis Services](../../analysis-services/instances/media/ssas-templateexplorer.gif "Explorador de modelos, filtrado para o Analysis Services")  
   
- Para abrir um modelo, clique com o botão direito do mouse no nome do modelo e selecione **Abrir** ou arraste o modelo para uma janela de consulta que já esteja aberta. Depois de abrir a janela de consulta, você pode usar comandos na barra de ferramentas ou menu Consulta para ajudá-lo a criar instruções:  
+ Para abrir um modelo, clique com o botão direito do mouse no nome do modelo e selecione **Abrir**ou arraste o modelo para uma janela de consulta que já esteja aberta. Depois de abrir a janela de consulta, você pode usar comandos na barra de ferramentas ou menu Consulta para ajudá-lo a criar instruções:  
   
 -   Para verificar a sintaxe de uma consulta, clique em **Analisar**.  
   
@@ -60,23 +65,23 @@ caps.handback.revision: 12
  Este exemplo mostra como criar uma consulta MDX no SQL Server Management Studio, usando um banco de dados modelo de tabela como a fonte de dados. Para repetir este exemplo em seu computador, você pode [baixar o projeto de exemplo de modelo de tabela Adventureworks](http://go.microsoft.com/fwlink/?LinkId=231183).  
   
 > [!WARNING]  
->  Você não pode usar consultas MDX em modelos de tabela que foram implantados no modo Consulta Direta. No entanto, você pode enviar consultas equivalentes usando as consultas de tabela DAX com o comando EVALUATE. Para saber mais, confira [Parâmetros de consulta DAX](http://msdn.microsoft.com/pt-br/c5841b4e-3395-4237-815b-9822a691e544).  
+>  Você não pode usar consultas MDX em modelos de tabela que foram implantados no modo Consulta Direta. No entanto, você pode enviar consultas equivalentes usando as consultas de tabela DAX com o comando EVALUATE. Para saber mais, confira [Parâmetros de consulta DAX](http://msdn.microsoft.com/en-us/c5841b4e-3395-4237-815b-9822a691e544).  
   
-#### Criar uma consulta MDX com base em um modelo  
+#### <a name="create-an-mdx-query-from-a-template"></a>Criar uma consulta MDX com base em um modelo  
   
-1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra a instância que contém o modelo de tabela que você deseja consultar. Clique com o botão direito do mouse no ícone de banco de dados selecione **Nova Consulta** e **MDX**.  
+1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra a instância que contém o modelo de tabela que você deseja consultar. Clique com o botão direito do mouse no ícone de banco de dados selecione **Nova Consulta**e **MDX**.  
   
 2.  No Gerenciador de Modelos, em Modelos do Analysis Services, abra **MDX**e **Consultas**. Arraste a **Consulta Básica** para a janela de consulta.  
   
 3.  Usando o **Gerenciador de Metadados**, arraste os seguintes campos e medidas para o modelo de consulta:  
   
-    1.  Substitua \<row_axis, mdx_set> por **[Product Category].[Product Category Name]**.  
+    1.  Substituir \<row_axis, mdx_set > com **[Product Category]. [ Nome da categoria de produto]**.  
   
-    2.  Substitua \<column_axis, mdx_set> por **[Date].[Calendar Year].[Calendar Year]**.  
+    2.  Substituir \<column_axis, mdx_set > com **[Data]. [ Ano civil]. [Ano civil]** .  
   
-    3.  Substitua \<from_clause, mdx_name> por **[Internet Sales]**.  
+    3.  Substituir \<from_clause, mdx_name > com **[Vendas pela Internet]**.  
   
-    4.  Substitua \<where_clause, mdx_set> por **[Measures].[Internet Total Sales]**.  
+    4.  Substituir \<where_clause, mdx_set > com **[Medidas]. [ Total de vendas da Internet]**.  
   
 4.  Você pode executar a consulta no estado em que ela se encontra, mas provavelmente vai querer fazer algumas alterações, como adicionar uma função para retornar membros específicos. Por exemplo, digite **.members** depois de **[Product Category].[Product Category Name]**. Para saber mais, confira [Using Member Expressions](../../mdx/using-member-expressions.md).  
   
@@ -93,20 +98,20 @@ caps.handback.revision: 12
   
 -   Monitorar o status do servidor, incluindo trabalhos, conexões, transações, memória e contadores de desempenho  
   
-#### Criar um script de comando de backup com base em um modelo  
+#### <a name="create-a-backup-command-script-from-a-template"></a>Criar um script de comando de backup com base em um modelo  
   
-1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra a instância que contém o banco de dados que você deseja consultar. Clique com o botão direito do mouse no ícone de banco de dados, selecione **Nova Consulta** e selecione **XMLA**.  
+1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra a instância que contém o banco de dados que você deseja consultar. Clique com o botão direito do mouse no ícone de banco de dados, selecione **Nova Consulta**e selecione **XMLA**.  
   
     > [!WARNING]  
     >  Você não pode definir o contexto de uma consulta XMLA alterando a lista de restrições ou especificando um banco de dados na caixa de diálogo de conexão. Você deve abrir a janela de consulta XMLA a partir do banco de dados que deseja consultar.  
   
 2.  Arraste o modelo **Backup** para a janela de consulta vazia.  
   
-3.  Clique duas vezes no texto dentro do elemento \<DatabaseID>.  
+3.  Clique duas vezes no texto dentro de \<DatabaseID > elemento.  
   
 4.  No Gerenciador de Objetos, selecione o banco de dados cujo backup você deseja realizar e arraste e solte o banco de dados entre os colchetes do elemento DatabaseID.  
   
-5.  Clique duas vezes no texto dentro do elemento \<File>. Digite o nome do arquivo de backup, incluindo a extensão .abf. Especifique o caminho de arquivo completo se você não estiver usando o local de backup padrão. Para obter mais informações, consulte [Fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+5.  Clique duas vezes no texto dentro de \<arquivo > elemento. Digite o nome do arquivo de backup, incluindo a extensão .abf. Especifique o caminho de arquivo completo se você não estiver usando o local de backup padrão. Para obter mais informações, consulte [Fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ##  <a name="bkmk_schemarowset"></a> Gerar uma consulta de conjunto de linhas de esquema usando um modelo XMLA  
  O **Gerenciador de Modelos** contém apenas um modelo para consultas de conjunto de linhas de esquema. Para usar esse modelo, você deve estar familiarizado com os requisitos do conjunto de linhas de esquema individual que deseja usar, incluindo qualquer elemento necessário e as colunas que podem ser usadas como restrições. Para obter mais informações, consulte [Conjuntos de linhas de esquema do Analysis Services](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).  
@@ -135,16 +140,16 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 </Discover>  
 ```  
   
-#### Obter uma lista de fontes de dados para um modelo de tabela usando uma consulta de conjunto de linhas de esquema  
+#### <a name="get-a-list-of-data-sources-for-a-tabular-model-using-a-schema-rowset-query"></a>Obter uma lista de fontes de dados para um modelo de tabela usando uma consulta de conjunto de linhas de esquema  
   
-1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra a instância que contém o banco de dados que você deseja consultar. Clique com o botão direito do mouse no ícone de banco de dados, selecione **Nova Consulta** e selecione **XMLA**.  
+1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra a instância que contém o banco de dados que você deseja consultar. Clique com o botão direito do mouse no ícone de banco de dados, selecione **Nova Consulta**e selecione **XMLA**.  
   
     > [!WARNING]  
     >  Você não pode definir o contexto de uma consulta XMLA alterando a lista de restrições ou especificando um banco de dados na caixa de diálogo de conexão. Você deve abrir a janela de consulta XMLA a partir do banco de dados que deseja consultar.  
   
 2.  Abra o **Gerenciador de Modelos**e arraste o modelo **Descobrir Conjuntos de Linhas de Esquema**para a janela de consulta em branco.  
   
-3.  No modelo, substitua o [Elemento RequestType &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) pelo seguinte texto: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  No modelo, substitua o [elemento RequestType &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) elemento com o seguinte texto:`<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  Clique em **Executar**.  
   
@@ -168,12 +173,12 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 |Categoria|Modelo de item|Description|  
 |--------------|-------------------|-----------------|  
-|DMX\Conteúdo do modelo|Consulta de conteúdo|Demonstra como usar a instrução DMX SELECT FROM *\<model>*.CONTENT para recuperar o conteúdo do conjunto de linhas do esquema do modelo de mineração para o modelo de mineração especificado.|  
-||Valores de Coluna Contínuos|Demonstra como usar a instrução DMX SELECT DISTINCT FROM *\<model>* com as funções DMX **RangeMin** e **RangeMax** para recuperar o conjunto de valores de um determinado intervalo de colunas contínuas em um modelo de mineração especificado.|  
-||Valores de Coluna Discretos|Demonstra como usar a instrução DMX SELECT DISTINCT FROM *\<model>* para recuperar o conjunto de valores completo de colunas discretas em um modelo de mineração especificado.|  
+|DMX\Conteúdo do modelo|Consulta de conteúdo|Demonstra como usar o DMX SELECT FROM  *\<modelo >*. Instrução CONTEÚDA para recuperar o conteúdo do conjunto de linhas de esquema do modelo de mineração para modelos de mineração especificado.|  
+||Valores de Coluna Contínuos|Demonstra como usar o DMX SELECT DISTINCT FROM  *\<modelo >* instrução com o DMX **RangeMin** e **RangeMax** funções para recuperar um conjunto de valores de um determinado intervalo de colunas contínuas em um modelo de mineração especificado.|  
+||Valores de Coluna Discretos|Demonstra como usar o DMX SELECT DISTINCT FROM  *\<modelo >* instrução recuperar um conjunto completo de valores de colunas discretas em um modelo de mineração especificado.|  
 ||Consulta de Detalhamento|Demonstra como usar a instrução DMX SELECT * FROM Model.CASES com a função DMX IsInNode para executar uma consulta de análise.|  
 ||Atributos de Modelo|Demonstra como usar a função de DMX System.GetModelAttributes para retornar uma lista de atributos usados por um modelo.|  
-||Conteúdo PMML|Demonstra como usar a instrução DMX SELECT \* FROM *\<model>*.PMML para recuperar a representação PMML do modelo de mineração para os algoritmos que dão suporte a essa funcionalidade.|  
+||Conteúdo PMML|Demonstra como usar o DMX SELECT \* FROM  *\<modelo >*. Instrução de PMML para recuperar a representação de previsão modelo PMML (Markup Language) do modelo de mineração para os algoritmos que suportam esta funcionalidade.|  
 |DMX\Gerenciamento de Modelos|Adicionar Modelo|Demonstra como usar a instrução DMX ALTER MINING MODEL STRUCTURE para adicionar um modelo de mineração.|  
 ||Limpar Modelo|Demonstra como usar a instrução DMX DELETE * FROM MINING MODEL para excluir o conteúdo do modelo de mineração especificado.|  
 ||Limpar Casos da Estrutura|Demonstra como usar a instrução DMX DELETE FROM MINING STRUCTURE para limpar os casos de estrutura do modelo de mineração.|  
@@ -191,10 +196,10 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Modelo de Treinamento|Demonstra como usar a instrução DMX INSERT INTO MINING MODEL para treinar um modelo de mineração em uma estrutura previamente treinada.|  
 ||Treinar Estrutura Aninhada|Demonstra como combinar a instrução DMX INSERT INTO MINING STRUCTURE com a consulta de fonte de dados SHAPE para treinar o modelo de mineração que contém colunas aninhadas com dados que contêm tabelas aninhadas, recuperadas usando-se uma consulta, a partir da fonte de dados existente.|  
 ||Estrutura de Treinamento|Demonstra como combinar a instrução DMX INSERT INTO MINING STRUCTURE com a consulta de fonte de dados OPENQUERY para treinar um modelo de mineração.|  
-|DMX\Consultas de Previsão|Previsão Básica|Demonstra como combinar a instrução DMX SELECT FROM *\<model>* PREDICTION JOIN com a consulta de dados de origem OPENQUERY para executar uma consulta de previsão em um modelo de mineração usando dados, recuperados por meio de uma consulta, de uma fonte de dados existente.|  
-||Previsão Aninhada|Demonstra como combinar a instrução DMX SELECT FROM *\<model>* PREDICTION JOIN às consultas de dados de origem SHAPE e OPENQUERY para executar uma consulta de previsão em um modelo de mineração usando dados que contêm tabelas aninhadas, recuperados por meio de uma consulta, de uma fonte de dados existente.|  
-||Previsão Singleton Aninhada|Demonstra como usar uma cláusula DMX SELECT FROM *\<model>* NATURAL PREDICTION JOIN para executar uma consulta de previsão em um modelo de mineração usando um único valor, especificado explicitamente na consulta de previsão, em uma coluna cujo nome corresponde a uma coluna do modelo de mineração e que contém um conjunto de valores em uma tabela aninhada criada por meio da instrução UNION, cujos nomes também correspondem às colunas aninhadas do modelo de mineração.|  
-||Previsão Singleton|Demonstra como usar a instrução DMX SELECT FROM \<model> NATURAL PREDICTION JOIN para executar uma consulta de previsão em um modelo de mineração usando um único valor, especificado explicitamente na consulta de previsão, em uma coluna cujo nome corresponde a uma coluna do modelo de mineração.|  
+|DMX\Consultas de Previsão|Previsão Básica|Demonstra como combinar um DMX SELECT FROM  *\<modelo >* instrução PREDICTION JOIN com a consulta de dados de origem OPENQUERY para executar uma consulta de previsão em um modelo de mineração usando dados, recuperados por meio de uma consulta, um fonte de dados existente.|  
+||Previsão Aninhada|Demonstra como combinar um DMX SELECT FROM  *\<modelo >* instrução PREDICTION JOIN com as consultas de dados de origem SHAPE e OPENQUERY para executar uma consulta de previsão em um modelo de mineração usando dados que contêm aninhados tabelas, recuperados por meio de uma consulta de fonte de dados existente.|  
+||Previsão Singleton Aninhada|Demonstra como usar um DMX SELECT FROM  *\<modelo >* cláusula NATURAL PREDICTION JOIN para executar uma consulta de previsão em um modelo de mineração usando um único valor, especificado explicitamente na consulta de previsão em uma coluna cujo nome corresponda a uma coluna no modelo de mineração e que contém um conjunto de valores em uma tabela aninhada criada usando uma instrução UNION, cujos nomes também correspondem às colunas aninhadas do modelo de mineração.|  
+||Previsão Singleton|Demonstra como usar um DMX SELECT FROM \<modelo > instrução NATURAL PREDICTION JOIN para executar uma consulta de previsão em um modelo de mineração usando um único valor, especificado explicitamente na consulta de previsão em uma coluna cujo nome corresponda a uma coluna em o modelo de mineração.|  
 ||Chamada de Procedimento Armazenado|Demonstra como usar a instrução DMX CALL para chamar um procedimento armazenado.|  
 |MDX\Expressões|Média Móvel-Fixa|Demonstra como usar as funções MDX **ParallelPeriod** e **CurrentMember** com um conjunto ordenado naturalmente para criar uma medida calculada que fornece uma média móvel de uma medida sobre um número fixo de períodos de tempo contidos em uma hierarquia de dimensão de tempo.|  
 ||Média Móvel-Variável|Demonstra como usar a instrução MDX **CASE** na função **Avg** para criar uma medida calculada que fornece uma média móvel de uma medida sobre um número variável de períodos de tempo contidos em uma hierarquia de dimensão de tempo.|  
@@ -225,10 +230,10 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Rastreamentos|Demonstra como usar o método XMLA **Discover** para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_TRACES.|  
 ||Transactions|Demonstra como usar o método XMLA **Discover** para recuperar o conteúdo do conjunto de linhas de esquema DISCOVER_TRANSACTIONS.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de expressões multidimensionais &#40;MDX&#41;](../../mdx/multidimensional-expressions-mdx-reference.md)   
  [Referência de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Linguagem de script do Analysis Services &#40;ASSL para XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Linguagem de script do Analysis Services &#40;ASSL para XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services Scripting Language &#40; ASSL para XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   

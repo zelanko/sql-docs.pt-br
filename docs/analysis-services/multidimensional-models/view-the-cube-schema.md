@@ -1,24 +1,29 @@
 ---
-title: "Exibir o esquema do cubo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Exibir o esquema do cubo | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7a46b1e284d2f75a22f7ac21b0353872db7108a1
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Exibir o esquema do cubo
+# <a name="view-the-cube-schema"></a>Exibir o esquema do cubo
   O painel **Exibição da Fonte de Dados** da guia **Estrutura do Cubo** no **Designer do Cubo** exibe o esquema do cubo. O esquema é o conjunto de tabelas das quais são derivadas as medidas e as dimensões para um cubo. Todo esquema de cubo consiste em uma ou mais tabelas de fato e uma ou mais tabelas de dimensão nas quais são baseadas as medidas e as dimensões no cubo.  
   
  O painel **Exibição da Fonte de Dados** da guia **Estrutura do Cubo** exibe um diagrama da exibição da fonte de dados na qual o cubo está baseado. Este diagrama é um subconjunto do diagrama principal da exibição da fonte de dados. Você pode ocultar e mostrar tabelas no painel **Exibição da Fonte de Dados** e exibir qualquer diagrama existente. Porém, você não pode fazer alterações (como adicionar novas relações ou consultas nomeadas) ao esquema subjacente. Para fazer alterações ao esquema, use o Designer de Exibição da Fonte de Dados.  
@@ -43,7 +48,7 @@ caps.handback.revision: 8
   
 |Para|Faça isto|  
 |--------|-------------|  
-|Use um diagrama da exibição da fonte de dados do cubo|No menu **Exibição da Fonte de Dados** , aponte para **Copiar Diagrama de**e clique no diagrama da exibição da fonte de dados que você deseja usar.<br /><br /> - ou -<br /><br /> Clique com o botão direito do mouse na tela de fundo do painel **Exibição da Fonte de Dados**, aponte para **Copiar Diagrama de** e clique no diagrama na exibição da fonte de dados que você deseja usar. Este método cria uma cópia independente do diagrama, de modo que qualquer alteração que você faz na guia **Construtor de Cubos** não aparece no diagrama original.|  
+|Use um diagrama da exibição da fonte de dados do cubo|No menu **Exibição da Fonte de Dados** , aponte para **Copiar Diagrama de**e clique no diagrama da exibição da fonte de dados que você deseja usar.<br /><br /> - ou -<br /><br /> Clique com o botão direito do mouse na tela de fundo do painel **Exibição da Fonte de Dados** , aponte para **Copiar Diagrama de**e clique no diagrama na exibição da fonte de dados que você deseja usar. Este método cria uma cópia independente do diagrama, de modo que qualquer alteração que você faz na guia **Construtor de Cubos** não aparece no diagrama original.|  
 |Mostrar somente as tabelas que são usadas no cubo|No menu **Exibição da Fonte de Dados** , clique em **Mostrar Somente Tabelas Usadas**.<br /><br /> - ou -<br /><br /> Clique com o botão direito do mouse na tela de fundo do painel **Exibição da Fonte de Dados** e clique em **Mostrar Somente Tabelas Usadas**.|  
 |Editar o esquema da exibição da fonte de dados|No menu **Exibição da Fonte de Dados** , clique em **Editar Exibição da Fonte de Dados**.<br /><br /> - ou -<br /><br /> Clique com o botão direito do mouse na tela de fundo do painel **Exibição da Fonte de Dados** e clique em **Editar Exibição da Fonte de Dados**.|  
   

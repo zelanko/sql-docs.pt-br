@@ -1,24 +1,29 @@
 ---
-title: "Li&#231;&#227;o 5: Definindo rela&#231;&#245;es entre grupos de medidas e dimens&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lição 5: Definindo relações entre dimensões e grupos de medidas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 37ab0ae613127c66c1c2cdd43018e6347dfc8902
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Li&#231;&#227;o 5: Definindo rela&#231;&#245;es entre grupos de medidas e dimens&#245;es
+# <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Lição 5: Definindo relações entre grupos de medidas e dimensões
 Nas lições anteriores neste tutorial, você aprendeu que as dimensões de banco de dados adicionadas a um cubo podem ser usadas como base para uma ou mais dimensões de cubo. Nesta lição, você aprenderá a definir diferentes tipos de relações entre dimensões de cubo e grupos de medidas, além de especificar as propriedades dessas relações.  
   
 Para obter mais informações, consulte [Relações de dimensão](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
@@ -28,25 +33,26 @@ Para obter mais informações, consulte [Relações de dimensão](../analysis-se
   
 Esta lição contém as seguintes tarefas:  
   
-[Definindo uma relação referenciada](../analysis-services/defining-a-referenced-relationship.md)  
+[Definindo uma relação referenciada](../analysis-services/lesson-5-1-defining-a-referenced-relationship.md)  
 Nesta tarefa, você aprenderá a vincular uma dimensão a uma tabela de fatos de forma indireta, através de uma dimensão que está vinculada de forma direta por meio de uma relação chave primária/chave estrangeira.  
   
-[Definindo uma relação de fatos](../analysis-services/defining-a-fact-relationship.md)  
+[Definindo uma relação de fatos](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
 Nesta tarefa, você aprenderá a definir uma dimensão com base nos dados da tabela de fatos e a definir a relação de dimensão como uma relação de fatos.  
   
-[Definindo uma relação muitos para muitos](../analysis-services/defining-a-many-to-many-relationship.md)  
+[Definindo uma relação muitos para muitos](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
 Nesta tarefa, você aprenderá a relacionar um fato a vários membros de dimensão através da definição de uma relação muitos-para-muitos entre as tabelas de dimensões e de fatos.  
   
-[Definindo a granularidade da dimensão dentro de um grupo de medidas](../analysis-services/defining-dimension-granularity-within-a-measure-group.md)  
+[Definindo a granularidade da dimensão dentro de um grupo de medidas](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
 Nesta tarefa, você aprenderá a modificar a granularidade de uma dimensão para um grupo de medidas específico.  
   
-## Próxima lição  
+## <a name="next-lesson"></a>Próxima lição  
 [Lição 6: Definindo cálculos](../analysis-services/lesson-6-defining-calculations.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 [Cenário do tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
 [Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Relações de dimensão](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   
   
+

@@ -1,33 +1,38 @@
 ---
-title: "Conjuntos de dados de teste e treinamento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "testando modelos de mineração"
-  - "controle [mineração de dados]"
-  - "testando modelos de mineração de dados"
-  - "teste de precisão [mineração de dados]"
+title: Conjuntos de dados de treinamento e teste | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing mining models
+- holdout [data mining]
+- testing data mining models
+- accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9465d0eda4b15827cf20c4b9579a5eff672ce1d1
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Conjuntos de dados de teste e treinamento
+# <a name="training-and-testing-data-sets"></a>Conjuntos de dados de teste e treinamento
   A separação de dados em conjuntos de teste e treinamento é uma parte importante da avaliação de modelos de mineração de dados. Normalmente, quando você separa um conjunto de dados em um conjunto de treinamentos e um conjunto de testes, a maior parte dos dados é usada para treinamento e uma parte menor dos dados é usada para teste. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] faz a amostra aleatória dos dados para ajudar a garantir que as partições de teste e de treinamento são similares. Usando dados semelhantes para treinamento e teste, você pode minimizar os efeitos das discrepâncias de dados e entender melhor as características do modelo.  
   
  Depois que um modelo for processado usando o conjunto de treinamentos, você testa o modelo fazendo previsões contra o conjunto de testes. Como os dados no conjunto de teste já contêm valores conhecidos para o atributo que você deseja prever, é fácil determinar se a precisão das previsões do modelo está correta.  
   
-## Criando conjuntos de dados de teste e treinamento para estruturas de mineração de dados  
+## <a name="creating-test-and-training-sets-for-data-mining-structures"></a>Criando conjuntos de dados de teste e treinamento para estruturas de mineração de dados  
  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você separa o conjunto de dados original no nível da estrutura de mineração. As informações sobre o tamanho dos conjuntos de dados de teste e treinamento, e qual linha corresponde a qual conjunto são armazenados com a estrutura e todos os modelos baseados nessa estrutura podem usar os conjuntos para treinamento e teste.  
   
  Você pode definir um conjunto de dados de teste em uma estrutura de mineração dos seguintes modos:  
@@ -38,8 +43,8 @@ caps.handback.revision: 27
   
 -   Criando e modificando as estruturas programaticamente usando os Objetos de Gerenciamento de Análise (AMO) ou a linguagem de definição de dados DDL.  
   
-### Usando o Assistente de Mineração de Dados para dividir uma estrutura de mineração  
- Por padrão, depois de definir as fontes de dados para uma estrutura de mineração, a Assistente de Mineração de Dados dividirá os dados em dois conjuntos: um com 70% dos dados de origem, para treinar o modelo, e um com 30% para testar o modelo. Esse padrão foi escolhido porque a proporção de 70-30 é geralmente usada na mineração de dados, mas com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode alterar essa proporção para adequar suas exigências.  
+### <a name="using-the-data-mining-wizard-to-divide-a-mining-structure"></a>Usando o Assistente de Mineração de Dados para dividir uma estrutura de mineração  
+ Por padrão, depois de definir as fontes de dados para uma estrutura de mineração, a Assistente de Mineração de Dados dividirá os dados em dois conjuntos: um com 70% dos dados de origem, para treinar o modelo, e um com 30% para testar o modelo. Esse padrão foi escolhido porque a proporção de 70-30 é geralmente usada na mineração de dados, mas com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , você pode alterar essa proporção para adequar suas exigências.  
   
  Você também pode configurar o assistente para definir um número máximo de casos de treinamento de casos ou você pode combinar os limites para limitar uma porcentagem máxima de casos até um número máximo de casos especificados. Quando você especifica uma porcentagem máxima de casos e um número máximo de casos, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa o menor dos dois limites como o tamanho do conjunto de teste. Por exemplo, se você especificar uma validação de 30% para testar casos e o número máximo de casos de teste como 1.000, o tamanho do conjunto de teste nunca excederá 1.000 casos. Isso pode ser útil se quiser garantir que o tamanho do seu conjunto de teste se mantenha consistente mesmo que mais dados de treinamento sejam adicionados ao modelo.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 27
 > [!NOTE]  
 >  Se você criar uma cópia da estrutura de mineração usando as instruções **EXPORT** e **IMPORT** , a nova estrutura de mineração terá os mesmos conjuntos de dados de treinamento e teste, porque o processo de exportação cria uma nova ID, mas usa o mesmo nome. No entanto, se duas estruturas de mineração usam a mesma fonte de dados subjacente, mas têm nomes diferentes, os conjuntos criados para cada estrutura de mineração serão diferentes.  
   
-### Modificando propriedades de estrutura para criar um conjunto de dados de teste  
+### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>Modificando propriedades de estrutura para criar um conjunto de dados de teste  
  Se você criar e processar uma estrutura de mineração e posteriormente decidir que deseja definir separadamente um conjunto de dados de teste, poderá modificar as propriedades da estrutura de mineração. Para alterar a maneira que os dados são particionados, edite as seguintes propriedades:  
   
 |Propriedade|Description|  
@@ -59,18 +64,18 @@ caps.handback.revision: 27
   
  Se você adicionar ou alterar um conjunto de dados de teste a uma estrutura existente, deverá reprocessar a estrutura e todos os modelos associados. Além disso, como dividir os dados de origem faz o modelo ser treinado em um subconjunto diferente de dados, você deve ver resultados diferentes a partir do seu modelo.  
   
-### Especificando controle programaticamente  
+### <a name="specifying-holdout-programmatically"></a>Especificando controle programaticamente  
  Você pode definir conjuntos de dados de teste e treinamento em uma estrutura de mineração usando instruções DMX, AMO ou XML DDL. A instrução ALTER MINING STRUCTURE não oferece suporte ao uso dos parâmetros de controle.  
   
 -   **DMX** Na linguagem DMX (extensões DMX), a instrução CREATE MINING STRUCTURE foi ampliada para incluir uma cláusula WITH HOLDOUT.  
   
--   **ASSL** Você pode criar uma nova estruturas de mineração ou adicionar um conjunto de dados de teste a uma estrutura de mineração existente, usando a ASSL ([!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language).  
+-   **ASSL** Você pode criar uma nova estruturas de mineração ou adicionar um conjunto de dados de teste a uma estrutura de mineração existente, usando a ASSL ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language).  
   
 -   **AMO** Você também pode exibir e modificar os conjuntos de dados de controle usando AMO.  
   
  Você pode exibir informações sobre os conjuntos de dados de controle em uma estrutura de mineração existente consultando o conjunto de linhas do esquema de mineração de dados. Você pode fazer isso através de uma chamada DISCOVER ROWSET ou usando uma consulta DMX.  
   
-## Recuperando informações sobre dados de controle  
+## <a name="retrieving-information-about-holdout-data"></a>Recuperando informações sobre dados de controle  
  Por padrão, todas as informações sobre os conjuntos de dados de treinamento e de teste estão armazenadas em cache, assim você pode usar os dados para treinamento e depois testar os novos modelos. Você também pode definir os filtros a serem aplicados aos dados de controle armazenados em cache, assim pode avaliar o modelo nos subconjuntos de dados.  
   
  O modo como os casos são divididos em conjuntos de dados de treinamento e teste depende de como você configura o controle e dos dados que você fornece. Se você quiser determinar o número de casos usados para treinamento ou teste, ou se você quer localizar detalhes adicionais sobre os casos incluídos nos conjuntos de treinamento e teste, você pode consultar a estrutura de modelo criando uma consulta DMX. Por exemplo, a consulta a seguir retorna os casos usados no conjunto de treinamento do modelo.  
@@ -85,7 +90,7 @@ SELECT * from <structure>.CASES WHERE IsTrainingCase()
 SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> = '<value>'  
 ```  
   
-## Limitações no uso de dados de controle  
+## <a name="limitations-on-the-use-of-holdout-data"></a>Limitações no uso de dados de controle  
   
 -   Para usar o controle, a propriedade <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> da estrutura de mineração deve ser definida como o valor padrão, **KeepTrainingCases**. Se você alterar a propriedade **CacheMode** para **ClearAfterProcessing**e, em seguida, reprocessar a estrutura de mineração, a partição será perdida.  
   
@@ -95,9 +100,9 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   Na maioria dos casos, o valor de validação padrão de 30 fornece um bom equilíbrio entre os dados de treinamento e teste. Não há uma maneira simples de determinar o tamanho necessário do conjunto de dados para fornecer treinamento suficiente, nem o quão esparso o conjunto de treinamentos pode ser e, conseguir, ainda, evitar o superajuste. Porém, depois que você criar um modelo, pode usar validação cruzada para avaliar o conjunto de dados em relação a um modelo específico.  
   
--   Além das propriedades listadas na tabela anterior, uma propriedade somente leitura **HoldoutActualSize** é fornecida no AMO e XML DDL. No entanto, como o tamanho real de uma partição não pode ser determinado precisamente até que a estrutura tenha sido processada, você deve verificar se o modelo foi processado antes de recuperar o valor da propriedade **HoldoutActualSize** .  
+-   Além das propriedades listadas na tabela anterior, uma propriedade somente leitura **HoldoutActualSize**é fornecida no AMO e XML DDL. No entanto, como o tamanho real de uma partição não pode ser determinado precisamente até que a estrutura tenha sido processada, você deve verificar se o modelo foi processado antes de recuperar o valor da propriedade **HoldoutActualSize** .  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
   
 |Tópicos|Links|  
 |------------|-----------|  
@@ -107,7 +112,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |Fornece sintaxe de DMX para criar conjuntos de controle.|[CREATE MINING STRUCTURE &#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md)|  
 |Recuperar informações sobre casos nos conjuntos de treinamento e teste.|[Conjuntos de linhas de esquema de mineração de dados](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)<br /><br /> [Conjuntos de linhas de esquema de mineração de dados &#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Ferramentas de mineração de dados](../../analysis-services/data-mining/data-mining-tools.md)   
  [Conceitos de mineração de dados](../../analysis-services/data-mining/data-mining-concepts.md)   
  [Soluções de mineração de dados](../../analysis-services/data-mining/data-mining-solutions.md)   

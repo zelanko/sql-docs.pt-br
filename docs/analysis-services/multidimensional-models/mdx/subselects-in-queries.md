@@ -1,27 +1,32 @@
 ---
-title: "Subsele&#231;&#245;es em consultas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Subseleções em consultas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 918c7727a7af1f85f93d110652da450f1ea770cb
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Subsele&#231;&#245;es em consultas
+# <a name="subselects-in-queries"></a>Subseleções em consultas
   Expressões de subseleção são expressões SELECT aninhadas que são usadas para restringir o espaço do cubo onde o SELECT externo exterior está sendo avaliado. Subseleções permitem definir um novo espaço sobre os quais todos os cálculos são avaliados.  
   
-## Subseleções por exemplo  
+## <a name="subselects-by-example"></a>Subseleções por exemplo  
  Comecemos com um exemplo de como subseleções podem ajudar a gerar os resultados que nós queremos mostrar. Suponha que lhe peçam para gerar uma tabela que mostra o comportamento de vendas, ao longo de anos, para os 10 principais produtos.  
   
  O resultado deverá ser semelhante a esta tabela:  
@@ -158,7 +163,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
  Os resultados acima são os 10 primeiros produtos vendidos na França pela Internet.  
   
-## Instrução Subselect  
+## <a name="subselect-statement"></a>Instrução Subselect  
  O BNF para o Subselect é:  
   
 ```  
@@ -339,7 +344,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  Como você pode ver, há diferenças nos resultados entre ambos os conjuntos. A primeira consulta respondeu a pergunta de quais são os melhores produtos de venda nas primeiras 5 regiões, a segunda consulta respondeu a pergunta de onde são as maiores vendas dos 5 principais produtos.  
   
-### Comentários  
+### <a name="remarks"></a>Comentários  
  As subseleções têm as seguintes restrições e limitações:  
   
 -   A cláusula WHERE não filtra o subespaço.  
@@ -350,6 +355,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   A cláusula HAVING não é permitida em uma cláusula de eixo. Em vez disso, use uma expressão de função [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md).  
   
--   Por padrão, membros calculados não são permitidos em subseleções, porém, esta restrição pode ser alterada por sessão, atribuindo um valor à propriedade de cadeia de conexão **SubQueries** em <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou a propriedade **DBPROP_MSMD_SUBQUERIES** em [Propriedades XMLA suportadas &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md). Consulte [Membros calculados em subseleções e subcubos](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) para obter uma explicação detalhada do comportamento de membros calculados dependendo dos valores de **SubQueries** ou **DBPROP_MSMD_SUBQUERIES**.  
+-   Por padrão os membros calculados não são permitidos em subseleções; No entanto, essa restrição pode ser alterada, em uma base por sessão, atribuindo um valor para o **subconsultas** propriedade de cadeia de caracteres de conexão em <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou **DBPROP_MSMD_SUBQUERIES** propriedade [ Propriedades XMLA suportadas &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Consulte [Membros calculados em subseleções e subcubos](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) para obter uma explicação detalhada do comportamento de membros calculados dependendo dos valores de **SubQueries** ou **DBPROP_MSMD_SUBQUERIES**.  
   
   

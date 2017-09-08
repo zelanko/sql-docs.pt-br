@@ -1,28 +1,33 @@
 ---
-title: "Tuplas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Tuplas | Microsoft Docs
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bdd0f236112d8c08e1bdc6356ac381d10d6b29b6
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Tuplas
+# <a name="tuples"></a>Tuplas
   Uma tupla identifica exclusivamente uma fatia de dados de um cubo. A tupla é formada por uma combinação de membros de dimensão, contanto que não haja dois ou mais membros pertencentes à mesma hierarquia.  
   
-## Membros de atributo implícitos ou padrão em uma tupla  
- Ao definir uma tupla em uma consulta ou expressão MDX, você não precisa explicitamente incluir o membro de atributo de cada hierarquia de atributo. Se um membro de uma hierarquia de atributo não for explicitamente incluído em uma consulta ou em uma expressão, o membro padrão para aquela hierarquia de atributo será o membro de atributo implicitamente incluso na tupla. Salvo indicação contrária explicitamente definida em um cubo, o membro padrão para cada hierarquia de atributo é o membro (All), se houver um membro (All). Se não houver um membro (All) em uma hierarquia de atributo, o membro padrão será um membro do nível superior da hierarquia de atributo. A medida padrão é a primeira medida especificada no cubo, salvo se uma medida padrão estiver explicitamente definida. Para obter mais informações, consulte [Definir um membro padrão](../../../analysis-services/multidimensional-models/define-a-default-member.md) e [DefaultMember &#40;MDX&#41;](../../../mdx/defaultmember-mdx.md).  
+## <a name="implicit-or-default-attribute-members-in-a-tuple"></a>Membros de atributo implícitos ou padrão em uma tupla  
+ Ao definir uma tupla em uma consulta ou expressão MDX, você não precisa explicitamente incluir o membro de atributo de cada hierarquia de atributo. Se um membro de uma hierarquia de atributo não for explicitamente incluído em uma consulta ou em uma expressão, o membro padrão para aquela hierarquia de atributo será o membro de atributo implicitamente incluso na tupla. Salvo indicação contrária explicitamente definida em um cubo, o membro padrão para cada hierarquia de atributo é o membro (All), se houver um membro (All). Se não houver um membro (All) em uma hierarquia de atributo, o membro padrão será um membro do nível superior da hierarquia de atributo. A medida padrão é a primeira medida especificada no cubo, salvo se uma medida padrão estiver explicitamente definida. Para obter mais informações, consulte [Definir um membro padrão](../../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md) e [DefaultMember &#40;MDX&#41;](../../../mdx/defaultmember-mdx.md).  
   
  Por exemplo, a tupla a seguir identifica uma célula única no banco de dados do Adventure Works, definindo explicitamente um membro único da dimensão Medidas.  
   
@@ -44,12 +49,12 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Quando você especifica um eixo para um conjunto (nesse caso, composto por uma tupla única) em uma consulta, você deve começar especificando um conjunto para o eixo da coluna antes de especificar um conjunto para o eixo de linhas. O eixo da coluna também pode ser referido como *eixo (0)* ou simplesmente *0*. Para obter mais informações sobre consultas MDX, consulte [A consulta MDX básica &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-query-mdx.md).  
+>  Quando você especifica um eixo para um conjunto (nesse caso, composto por uma tupla única) em uma consulta, você deve começar especificando um conjunto para o eixo da coluna antes de especificar um conjunto para o eixo de linhas. O eixo da coluna também pode ser referido como *eixo (0)* ou simplesmente *0*. Para obter mais informações sobre consultas MDX, consulte [A consulta MDX básica &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md).  
   
-### Tuplas como valores ou referências de membro  
+### <a name="tuples-as-values-or-member-references"></a>Tuplas como valores ou referências de membro  
  Você pode usar uma tupla em uma consulta para retornar o valor na célula que é referenciado pela tupla, como no exemplo anterior. Ou você pode usar uma tupla em uma expressão para explicitamente se referir aos membros especificados na tupla. A consulta ou a expressão podem utilizar funções que retornam ou consomem tuplas. Uma tupla pode ser usada para se referir ao valor da célula que a tupla especifica, ou especificar uma combinação de membros, quando utilizada em uma função.  
   
-### Dimensionalidade de tupla  
+### <a name="tuple-dimensionality"></a>Dimensionalidade de tupla  
  A *dimensionalidade* de uma tupla se refere à sequência ou ordem dos membros na tupla. Como os membros implícitos sempre ocorrem na mesma ordem, na maioria das vezes a dimensionalidade é considerada em termos dos membros explicitamente definidos da tupla. A ordenação dos membros da tupla é importante quando você define um conjunto de tuplas. O exemplo a seguir inclui dois membros em uma tupla no eixo da coluna.  
   
 ```  
@@ -66,10 +71,10 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  Um membro de atributo pode ser referido por seu nome de membro ou sua chave de membro. No exemplo anterior, você poderia substituir a referência [CY 2004] por &[2004].  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Principais conceitos em MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Espaço de cubo](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [Trabalhando com membros, tuplas e conjuntos &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
+ [Trabalhando com membros, tuplas e conjuntos de &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
   
   
