@@ -2,7 +2,7 @@
 title: "Integração do servidor de relatórios de BI (Configuration Manager) de energia | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/25/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,17 +19,17 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 5ece1f5e492f4508d6c014709a953bfb4d29815a
+ms.translationtype: MT
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 3d39c8851c43adba12102f7d2440ae55e8216e1e
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integração de servidor de relatório do Power BI (Configuration Manager)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 A página  **Integração do Power BI** no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager é usada para registrar o servidor de relatório no locatário gerenciado do Azure AD (Active Directory) desejado, a fim de permitir que os usuários do servidor de relatório fixem itens de relatório com suporte nos dashboards do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] . Para obter uma lista dos itens com suporte que podem ser fixados, veja [Fixar itens do Reporting Services nos dashboards do Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).
 
@@ -41,7 +41,7 @@ Além de uma conexão de Internet ativa para que você possa navegar até o serv
 
 - **Azure Active Directory:** sua organização deve usar o Azure Active Directory, que fornece gerenciamento de identidades e diretórios para serviços e aplicativos Web do Azure. Para saber mais, confira [O que é o Azure Active Directory?](https://azure.microsoft.com/en-us/documentation/articles/active-directory-whatis/)
 
-- **Locatário gerenciado:** o painel do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ao qual você deseja fixar itens de relatório devem ser parte de um locatário gerenciado do Azure AD.  Um locatário gerenciado é criado automaticamente na primeira vez em que sua empresa assina os serviços do Azure, como o Office 365 e o Microsoft Intune.   Locatários virais não têm suporte atualmente.  Para obter mais informações, confira as seções “O que é um locatário do Azure AD” e “Como obter um diretório do Azure AD” em [O que é um diretório do Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
+- **Locatário gerenciado:** o painel do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ao qual você deseja fixar itens de relatório devem ser parte de um locatário gerenciado do Azure AD.  Um locatário gerenciado é criado automaticamente na primeira vez em que sua empresa assina os serviços do Azure, como o Office 365 e o Microsoft Intune.   Locatários virais não têm suporte no momento.  Para obter mais informações, confira as seções “O que é um locatário do Azure AD” e “Como obter um diretório do Azure AD” em [O que é um diretório do Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
 
 - O usuário que executando a integração do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] precisa ser um membro do locatário do Azure AD, um administrador de sistema do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e um administrador de sistema para o banco de dados de catálogo ReportServer.
 

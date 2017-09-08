@@ -4,137 +4,196 @@ description: "Este tópico mostra como fazer o backup do banco de dados do SQL S
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 2e23ba46381b1fb80b8ac335f6d7630f02a222bb
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: 0405f6faad62b9dbaf32cb9730ac1450da2b2f48
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migrar um banco de dados do SQL Server do Windows para Linux usando backup e restauração
 
-Backup do SQL Server e o recurso de restauração é a maneira recomendada para migrar um banco de dados do SQL Server no Windows para o SQL Server de 2017 RC2 no Linux. Este tópico fornece instruções passo a passo para essa técnica. Neste tutorial, você vai:
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-- Baixe o arquivo de backup AdventureWorks em um computador Windows
-- Transferência de backup para o computador Linux
-- Restaurar o banco de dados usando comandos Transact-SQL
+Backup do SQL Server e o recurso de restauração é a maneira recomendada para migrar um banco de dados do SQL Server no Windows para o SQL Server de 2017 RC2 no Linux. Neste tutorial, você verá as etapas necessárias para mover um banco de dados para o Linux com backup e restauração técnicas.
 
-> [!NOTE] 
-> Este tutorial presume que você instalou [SQL Server 2017 RC2](sql-server-linux-setup.md) e o [ferramentas do SQL Server](sql-server-linux-setup-tools.md) no servidor Linux de destino.
+> [!div class="checklist"]
+> * Criar um arquivo de backup no Windows com o SSMS
+> * Instalar um shell Bash no Windows
+> * Mover o arquivo de backup para o Linux no shell Bash
+> * Restaurar o arquivo de backup no Linux com o Transact-SQL
+> * Executar uma consulta para verificar a migração
 
-## <a name="download-the-adventureworks-database-backup"></a>Baixar o backup de banco de dados AdventureWorks
+## <a name="prerequisites"></a>Pré-requisitos
 
-Embora você possa usar as mesmas etapas para restaurar qualquer banco de dados, o banco de dados de exemplo AdventureWorks fornece um bom exemplo. Ele é fornecido como um arquivo de backup de banco de dados existente.
+Os seguintes pré-requisitos são necessários para concluir este tutorial:
 
->[!NOTE] 
-> Para restaurar um banco de dados do SQL Server no Linux, o backup de origem deve ser extraído do SQL Server 2014 ou SQL Server 2016. O número da compilação do SQL Server de backup não deve ser maior que o número da compilação do SQL Server de restauração.  
+* Computador Windows com o seguinte:
+  * [SQL Server](https://www.microsoft.com/sql-server/sql-server-2016-editions) instalado.
+  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) instalado.
+  * Banco de dados de destino para migrar.
 
-1. Em seu computador Windows, acesse [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) e baixe o **Backup.zip de banco de dados completo do Adventure Works 2014**.
+* Computador Linux com os seguintes itens instalados:
+  * SQL Server 2017 RC2. Consulte os tutoriais de instalação para [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), ou [Ubuntu](quickstart-install-connect-ubuntu.md).
+  * SQL Server 2017 RC2 [ferramentas de linha de comando](sql-server-linux-setup-tools.md).
 
-   > [!TIP] 
-   > Embora este tutorial demonstra o backup e restauração entre o Windows e Linux, você também pode usar um navegador no Linux para baixar o exemplo AdventureWorks diretamente computador Linux.
+## <a name="create-a-backup-on-windows"></a>Criar um backup no Windows
 
-2. Abra o arquivo zip e extraia o arquivo de AdventureWorks2014.bak para uma pasta no seu computador.
+Há várias maneiras de criar um arquivo de backup de um banco de dados no Windows. As etapas a seguir usam o SQL Server Management Studio (SSMS).
 
-## <a name="transfer-the-backup-file-to-linux"></a>Transferir o arquivo de backup para Linux
+1. Iniciar **SQL Server Management Studio** em seu computador Windows.
 
-Para restaurar o banco de dados, é necessário primeiro transferir o arquivo de backup do computador Windows para o computador Linux de destino.
+1. Na caixa de diálogo de conexão, digite **localhost**.
 
-1. Para Windows, instale um shell Bash. Há várias opções, incluindo o seguinte:
+1. No Pesquisador de objetos, expanda **bancos de dados**.
 
-   - Baixar um software livre shell Bash, tais como [PuTTY](http://www.putty.org/).
-   - Ou, no Windows 10, use o novo [interna do shell Bash (beta)](https://msdn.microsoft.com/en-us/commandline/wsl/about).
-   - Ou, se você trabalha com o Git, use o [Git Bash shell](https://git-scm.com/downloads).
+1. Clique duas vezes o banco de dados de destino, selecione **tarefas**e, em seguida, clique em **backup...** .
 
-2. Abra um shell Bash (terminal) e navegue até o diretório que contém **AdventureWorks2014.bak**.
+   ![Use o SSMS para criar um arquivo de backup](./media/sql-server-linux-migrate-restore-database/ssms-create-backup.png)
 
-3. Use o **scp** comando (cópia seguro) para transferir o arquivo para o computador Linux de destino. As transferências de exemplo a seguir **AdventureWorks2014.bak** para o diretório base de *user1* no servidor chamado *linuxserver1*.
+1. No **Backup backup de banco de dados** caixa de diálogo, verifique **o tipo de Backup** é **completo** e **backup** é **disco**. Observe o nome e o local do arquivo. Por exemplo, um banco de dados denominado **YourDB** no SQL Server 2016 tem um caminho de backup padrão `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\YourDB.bak`.
+
+1. Clique em **Okey** para fazer backup de seu banco de dados.
+
+> [!NOTE]
+> Outra opção é executar uma consulta Transact-SQL para criar o arquivo de backup. O comando Transact-SQL a seguir executa as mesmas ações que as etapas anteriores para um banco de dados chamado **YourDB**:
+>
+> ```sql
+> BACKUP DATABASE [YourDB] TO  DISK =
+> N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\YourDB.bak'
+> WITH NOFORMAT, NOINIT, NAME = N'YourDB-Full Database Backup',
+> SKIP, NOREWIND, NOUNLOAD, STATS = 10
+> GO
+> ```
+
+## <a name="install-a-bash-shell-on-windows"></a>Instalar um shell Bash no Windows
+
+Para restaurar o banco de dados, é necessário primeiro transferir o arquivo de backup do computador Windows para o computador Linux de destino. Neste tutorial, podemos mover o arquivo para o Linux de um shell Bash (janela de terminal) em execução no Windows.
+
+1. Instalar um shell Bash no seu computador Windows que oferece suporte a **scp** (cópia segura) e **ssh** comandos (logon remoto). Dois exemplos incluem:
+
+   * O [subsistema do Windows para Linux](https://msdn.microsoft.com/commandline/wsl/about) (Windows 10)
+   * O Shell Bash Git ([https://git-scm.com/downloads](https://git-scm.com/downloads))
+
+1. Abra uma sessão de Bash no Windows.
+
+## <a id="scp"></a>Copie o arquivo de backup para Linux
+
+1. Na sua sessão Bash, navegue até o diretório que contém o arquivo de backup. Por exemplo:
 
    ```bash
-   sudo scp AdventureWorks2014.bak user1@linuxserver1:./
+   cd 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\'
    ```
-   
-   No exemplo anterior, em vez disso, você pode fornecer o endereço IP no lugar do nome do servidor.
 
-Há várias alternativas para usar o scp. Uma é usar [Samba](https://help.ubuntu.com/community/Samba) para configurar um compartilhamento de rede SMB entre o Windows e Linux. Para obter uma explicação sobre Ubuntu, consulte [como criar um compartilhamento de rede por meio do Samba](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!). Depois de estabelecida, você pode acessá-lo como um arquivo de rede compartilham do Windows, tais como  **\\ \\machinenameorip\\compartilhar**.
+1. Use o **scp** comando para transferir o arquivo para o computador Linux de destino. As transferências de exemplo a seguir **YourDB.bak** para o diretório base de *user1* no servidor Linux com um endereço IP de *192.0.2.9*:
 
-## <a name="move-the-backup-file"></a>Mover o arquivo de backup
+   ```bash
+   scp YourDB.bak user1@192.0.2.9:./
+   ```
+   ![comando SCP](./media/sql-server-linux-migrate-restore-database/scp-command.png)
 
-Neste ponto, o arquivo de backup está em seu servidor Linux. Antes de restaurar o banco de dados para o SQL Server, você deve colocar o backup em um subdiretório do **/var/opt/mssql**.
+> [!TIP]
+> Existem alternativas para usar o scp para transferência de arquivos. Uma é usar [Samba](https://help.ubuntu.com/community/Samba) para configurar um compartilhamento de rede SMB entre o Windows e Linux. Para obter uma explicação sobre Ubuntu, consulte [como criar um compartilhamento de rede por meio do Samba](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!). Depois de estabelecida, você pode acessá-lo como um arquivo de rede compartilham do Windows, tais como  **\\ \\machinenameorip\\compartilhar**.
 
-1. Abra um Terminal no computador Linux de destino que contém o backup.
+## <a name="move-the-backup-file-before-restoring"></a>Mova o arquivo de backup antes de restaurar
 
-2. Entre no modo de superusuário.
+Neste ponto, o arquivo de backup está no servidor Linux no diretório base do usuário. Antes de restaurar o banco de dados para o SQL Server, você deve colocar o backup em um subdiretório do **/var/opt/mssql**.
+
+1. Na mesma sessão do Windows Bash, conecte-se remotamente ao seu computador Linux de destino por **ssh**. O exemplo a seguir se conecta ao computador Linux **192.0.2.9** como usuário **user1**.
+
+   ```bash
+   ssh user1@192.0.2.9
+   ```
+
+   Você está executando comandos no servidor remoto do Linux.
+
+1. Entre no modo de superusuário.
 
    ```bash
    sudo su
    ```
 
-3. Crie um novo diretório de backup. O parâmetro -p não fará nada se o diretório já existe.
+1. Crie um novo diretório de backup. O parâmetro -p não fará nada se o diretório já existe.
 
    ```bash
    mkdir -p /var/opt/mssql/backup
    ```
 
-4. Mova o arquivo de backup para esse diretório. No exemplo a seguir, o arquivo de backup reside no diretório base do *user1*. Alterar o comando para corresponder à localidade de **AdventureWorks2014.bak** em seu computador.
+1. Mova o arquivo de backup para esse diretório. No exemplo a seguir, o arquivo de backup reside no diretório base do *user1*. Altere o comando para coincidir com o local e o nome do arquivo de backup.
 
    ```bash
-   mv /home/user1/AdventureWorks2014.bak /var/opt/mssql/backup/
+   mv /home/user1/YourDB.bak /var/opt/mssql/backup/
    ```
 
-5. Sair do modo de superusuário.
+1. Sair do modo de superusuário.
 
    ```bash
    exit
    ```
 
-## <a name="restore-the-database-backup"></a>Restaure o backup do banco de dados
+## <a name="restore-your-database-on-linux"></a>Restaurar o banco de dados no Linux
 
-Para restaurar o backup, você pode usar o comando de restauração do banco de dados Transact-SQL (TQL).
+Para restaurar o backup do banco de dados, você pode usar o **RESTAURAR banco de dados** comando Transact-SQL (TQL).
 
-> [!NOTE] 
-> As etapas a seguir usam a ferramenta sqlcmd. Se você ainda não instalar as ferramentas do SQL Server, consulte [instalar o SQL Server no Linux](sql-server-linux-setup.md).
+> [!NOTE]
+> As seguintes etapas usam o **sqlcmd** ferramenta. Se você ainda não instalar as ferramentas do SQL Server, consulte [ferramentas de linha de comando de instalar o SQL Server no Linux](sql-server-linux-setup-tools.md).
 
-1. No mesmo terminal, inicie **sqlcmd**. O exemplo a seguir se conecta à instância do SQL Server local com o *SA* usuário. Digite a senha quando solicitado ou especifique a senha com o parâmetro -P.
+1. No mesmo terminal, inicie **sqlcmd**. O exemplo a seguir se conecta à instância do SQL Server local com o **SA** usuário. Digite a senha quando solicitado, ou especifique a senha, adicionando o **-P** parâmetro.
 
    ```bash
    sqlcmd -S localhost -U SA
    ```
 
-2. Depois de se conectar, digite o seguinte **RESTAURAR banco de dados** comando, pressionar ENTER depois de cada linha. O exemplo a seguir restaura o **AdventureWorks2014.bak** arquivo o */var/opt/mssql/backup* directory.
+1. No `>1` prompt, digite o seguinte **RESTAURAR banco de dados** comando, pressionar ENTER depois de cada linha (você não pode copiar e colar todo o comando de várias linha de uma vez). Substitua todas as ocorrências de `YourDB` com o nome do banco de dados.
 
    ```sql
-   RESTORE DATABASE AdventureWorks
-   FROM DISK = '/var/opt/mssql/backup/AdventureWorks2014.bak'
-   WITH MOVE 'AdventureWorks2014_Data' TO '/var/opt/mssql/data/AdventureWorks2014_Data.mdf',
-   MOVE 'AdventureWorks2014_Log' TO '/var/opt/mssql/data/AdventureWorks2014_Log.ldf'
+   RESTORE DATABASE YourDB
+   FROM DISK = '/var/opt/mssql/backup/YourDB.bak'
+   WITH MOVE 'YourDB' TO '/var/opt/mssql/data/YourDB.mdf',
+   MOVE 'YourDB_Log' TO '/var/opt/mssql/data/YourDB_Log.ldf'
    GO
    ```
 
    Você deve receber uma mensagem que o banco de dados for restaurado com êxito.
 
-3. Verifique se a restauração pelo primeiro alterar o contexto para o banco de dados AdventureWorks. 
+1. Verifique se a restauração, listando todos os bancos de dados no servidor. O banco de dados restaurado deve ser listado.
 
    ```sql
-   USE AdventureWorks
+   SELECT Name FROM sys.Databases
    GO
    ```
 
-4. Execute a consulta a seguir que lista os 10 principais produtos no **Production** tabela.
+1. Execute outras consultas no banco de dados migrado. O comando a seguir alterna contexto para o **YourDB** banco de dados e seleciona as linhas de uma de suas tabelas.
 
    ```sql
-   SELECT TOP 10 Name, ProductNumber FROM Production.Product ORDER BY Name
+   USE YourDB
+   SELECT * FROM YourTable
    GO
    ```
 
-![Saída de consulta Production](./media/sql-server-linux-migrate-restore-database/sql-server-linux-adventureworks-query.png)
+1. Quando você terminar usando **sqlcmd**, tipo `exit`.
+
+1. Quando você terminar trabalhando remotamente **ssh** sessão, digite `exit` novamente.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre outras técnicas de migração e banco de dados, consulte [Migrar bancos de dados para o SQL Server no Linux](sql-server-linux-migrate-overview.md). 
+Neste tutorial, você aprendeu como fazer backup de um banco de dados no Windows e movê-lo para um servidor Linux executando o SQL Server de 2017 RC2. Você aprendeu como para:
+> [!div class="checklist"]
+> * Use o SSMS e Transact-SQL para criar um arquivo de backup no Windows
+> * Instalar um shell Bash no Windows
+> * Use **scp** para mover arquivos de backup do Windows para Linux
+> * Use **ssh** se conectar remotamente ao computador Linux
+> * Realocar o arquivo de backup para a preparação para restauração
+> * Use **sqlcmd** para executar comandos Transact-SQL
+> * Restaure o backup do banco de dados com o **RESTAURAR banco de dados** comando 
+
+Em seguida, explore a outros cenários de migração para o SQL Server no Linux. 
+
+> [!div class="nextstepaction"]
+>[Migrar bancos de dados para o SQL Server no Linux](sql-server-linux-migrate-overview.md)
 

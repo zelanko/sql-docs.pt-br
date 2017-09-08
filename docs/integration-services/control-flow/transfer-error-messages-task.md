@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfererrormessagestask.f1
+- sql13.dts.designer.transfererrormessagestask.general.f1
+- sql13.dts.designer.transfererrormessagestask.errormessages.F1
 helpviewer_keywords:
 - Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3f13e3e6e22e2b4f3b74c80a249a098d93ad5b9f
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: e23bd95e7511274fdf7da62834775c565fdee372
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-error-messages-task"></a>Tarefa Transferir Mensagens de Erro
@@ -67,11 +69,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-transfer-error-messages-task"></a>Configuração da tarefa Transferir Mensagens de Erro  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
-  
--   [Editor da Tarefa Transferir Mensagens de Erro &#40;Página Geral&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-general-page.md)  
-  
--   [Editor da Tarefa Transferir Mensagens de Erro &#40;Página Mensagens&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
+ Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
 -   [Página Expressões](../../integration-services/expressions/expressions-page.md)  
   
@@ -83,6 +81,54 @@ ms.lasthandoff: 08/03/2017
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
 -   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## <a name="transfer-error-messages-task-editor-general-page"></a>Editor da Tarefa Transferir Mensagens de Erro (página Geral)
+  Use a página **Geral** da caixa de diálogo **Editor da Tarefa Transferir Mensagens de Erro** para nomear e descrever a tarefa Transferir Mensagens de Erro. A tarefa Transferir Mensagens de Erro transfere uma ou mais mensagens de erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas pelo usuário entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
+  
+### <a name="options"></a>Opções  
+ **Nome**  
+ Digite um nome exclusivo para a tarefa Transferir Mensagens de Erro. Esse nome é usado como rótulo no ícone de tarefa.  
+  
+> [!NOTE]  
+>  Os nomes das tarefas devem ser exclusivos em um pacote.  
+  
+ **Description**  
+ Digite uma descrição para a tarefa Transferir Mensagens de Erro.  
+  
+## <a name="transfer-error-messages-task-editor-messages-page"></a>Editor da Tarefa Transferir Mensagens de Erro (página Mensagens)
+  Use a página **Mensagens** da caixa de diálogo **Editor da Tarefa Transferir Mensagens de Erro** para especificar as propriedades de cópia de uma ou mais mensagens de erro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas pelo usuário de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para outra. 
+  
+### <a name="options"></a>Opções  
+ **SourceConnection**  
+ Selecione um Gerenciador de conexão do SMO na lista ou clique em  **\<nova conexão... >** para criar uma nova conexão para o servidor de origem.  
+  
+ **DestinationConnection**  
+ Selecione um Gerenciador de conexão do SMO na lista ou clique em  **\<nova conexão... >** para criar uma nova conexão para o servidor de destino.  
+  
+ **IfObjectExists**  
+ Selecione se a tarefa deve substituir mensagens de erro definidas pelo usuário existentes, ignorar mensagens existentes ou causar falha se mensagens de erro de mesmo nome já existirem no servidor de destino.  
+  
+ **TransferAllErrorMessages**  
+ Selecione se a tarefa deve copiar todas ou somente as mensagens especificadas definidas pelo usuário do servidor de origem para o servidor de destino.  
+  
+ As opções desta propriedade estão listadas na seguinte tabela:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Verdadeiro**|Copia todas as mensagens definidas pelo usuário.|  
+|**Falso**|Copia só as mensagens definidas pelo usuário especificadas.|  
+  
+ **ErrorMessagesList**  
+ Clique no botão Procurar **(...)** para selecionar as mensagens de erro para copiar.  
+  
+> [!NOTE]  
+>  É necessário especificar o **SourceConnection** antes que seja possível selecionar mensagens de erro para copiar.  
+  
+ **ErrorMessageLanguagesList**  
+ Clique no botão Procurar **(...)** para selecionar os idiomas para os quais copiar mensagens de erro definidas pelo usuário para o servidor de destino. Uma versão us_english (página de código 1033) da mensagem deve estar no servidor de destino para que seja possível transferir versões da mensagem em outro idioma para esse servidor.  
+  
+> [!NOTE]  
+>  É necessário especificar o **SourceConnection** antes que seja possível selecionar mensagens de erro para copiar.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

@@ -1,27 +1,34 @@
 ---
-title: "Tarefa Executar DDL do Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.asexecuteddltask.f1"
-helpviewer_keywords: 
-  - "Tarefa Executar DDL do Analysis Services"
-  - "DDL"
+title: Analysis Services tarefa executar DDL | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.asexecuteddltask.f1
+- sql13.dts.designer.asexecuteddltask.general.f1
+- sql13.dts.designer.asexecuteddltask.ddl.f1
+helpviewer_keywords:
+- Analysis Services Execute DDL task
+- DDL
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: a8272f3306050e8d184fd6d5e4e3d349c4e259e9
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/11/2017
+
 ---
-# Tarefa Executar DDL do Analysis Services
+# <a name="analysis-services-execute-ddl-task"></a>Tarefa Executar DDL do Analysis Services
   A tarefa Executar DLL do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executa instruções DDL (linguagem de definição de dados) que podem criar, descartar ou alterar modelos de mineração e objetos multidimensionais, como cubos e dimensões. Por exemplo, uma instrução DDL pode criar uma partição no cubo **Adventure Works** ou excluir uma dimensão do [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], o exemplo de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluído no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  A tarefa Executar DDL do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa um gerenciador de conexões do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para se conectar a uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou a um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para obter mais informações, consulte [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
@@ -34,7 +41,7 @@ caps.handback.revision: 48
   
 -   [Tarefa Consulta de Mineração de Dados](../../integration-services/control-flow/data-mining-query-task.md)  
   
-## Instruções DDL  
+## <a name="ddl-statements"></a>Instruções DDL  
  As instruções DDL são representadas como instruções no ASSL (Analysis Services Scripting Language) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e são enquadradas em um comando XMLA (XML for Analysis).  
   
 -   O ASSL é usado para definir e descrever uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e os bancos de dados e objetos de banco de dados que ela contém. Para obter mais informações, consulte [Linguagem de script do Analysis Services &#40;ASSL para XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
@@ -45,7 +52,7 @@ caps.handback.revision: 48
   
  Como as instruções DDL podem conter senhas e outras informações confidenciais, um pacote que contém uma ou mais tarefas Executar DDL do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deve usar o nível de proteção de pacote **EncryptAllWithUserKey** ou **EncryptAllWithPassword**. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Pacotes](../../integration-services/integration-services-ssis-packages.md).  
   
-### Exemplos de DDL  
+### <a name="ddl-examples"></a>Exemplos de DDL  
  As três instruções de DDL a seguir foram geradas por script de objetos no [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], o banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluído no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  A instrução DDL a seguir exclui a dimensão **Promoção** .  
@@ -212,24 +219,69 @@ caps.handback.revision: 48
   
 ```  
   
-## Configuração da Tarefa Executar DDL do Analysis Services  
+## <a name="configuration-of-the-analysis-services-execute-ddl-task"></a>Configuração da Tarefa Executar DDL do Analysis Services  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
-  
--   [Editor da Tarefa Executar DDL do Analysis Services &#40;Página Geral&#41;](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-general-page.md)  
-  
--   [Editor da Tarefa Executar DDL do Analysis Services &#40;Página DDL&#41;](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-ddl-page.md)  
+ Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
 -   [Página Expressões](../../integration-services/expressions/expressions-page.md)  
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Definir as propriedades de uma tarefa ou contêiner](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configuração programática da Tarefa Executar DDL do Analysis Services  
+## <a name="programmatic-configuration-of-the-analysis-services-execute-ddl-task"></a>Configuração programática da Tarefa Executar DDL do Analysis Services  
  Para obter mais informações sobre como definir essas propriedades programaticamente, clique no tópico a seguir:  
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask>  
   
+## <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Editor da Tarefa Executar DDL do Analysis Services (página Geral)
+  Use a página **Geral** da caixa de diálogo **Editor da Tarefa Executar DDL do Analysis Services** para nomear e descrever a tarefa Executar DDL do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
+### <a name="options"></a>Opções  
+ **Nome**  
+ Forneça um nome exclusivo para a tarefa Executar DDL do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Esse nome é usado como rótulo no ícone de tarefa.  
+  
+> [!NOTE]  
+>  Os nomes das tarefas devem ser exclusivos em um pacote.  
+  
+ **Description**  
+ Digite uma descrição para a tarefa Executar DDL do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+  
+## <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor da Tarefa Executar DDL do Analysis Services (Página DDL)
+  Use a página **DDL** da caixa de diálogo **Editor da Tarefa Executar DDL do Analysis Services** para especificar uma conexão com um projeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou um banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e para fornecer informações sobre a origem das instruções DDL (linguagem de definição de dados).  
+  
+### <a name="static-options"></a>Opções estáticas  
+ **Conexão**  
+ Selecione um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto ou um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Gerenciador de conexão na lista ou clique em \< **nova conexão...** > e use o **adicionar Gerenciador de Conexão do Analysis Services** caixa de diálogo para criar uma nova conexão.  
+  
+ **Tópicos relacionados:** [Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Gerenciador de Conexão do Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+  
+ **SourceType**  
+ Especifique a origem da instrução DDL. As opções desta propriedade estão listadas na seguinte tabela:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Direct Input**|Define a origem da instrução DDL armazenada na caixa de texto **SourceDirect** . A seleção deste valor exibe as opções dinâmicas na seção a seguir.|  
+|**File Connection**|Define a origem para um arquivo que contém a instrução DDL. A seleção deste valor exibe as opções dinâmicas na seção a seguir.|  
+|**Variável**|Define a origem para uma variável. A seleção deste valor exibe as opções dinâmicas na seção a seguir.|  
+  
+### <a name="dynamic-options"></a>Opções dinâmicas  
+  
+#### <a name="sourcetype--direct-input"></a>SourceType = Entrada Direta  
+ **Origem**  
+ Digite as instruções DDL ou clique nas reticências **(…)** e digite as instruções na caixa de diálogo **Instruções DDL** .  
+  
+#### <a name="sourcetype--file-connection"></a>SourceType = File Connection  
+ **Origem**  
+ Selecione uma conexão de arquivo na lista ou clique em \< **nova conexão...** > e use o **Gerenciador de Conexão de arquivo** caixa de diálogo para criar uma nova conexão.  
+  
+ **Tópicos relacionados:** [Adicionar Gerenciador de Conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager.md)  
+  
+#### <a name="sourcetype--variable"></a>SourceType = Variable  
+ **Origem**  
+ Selecione uma variável na lista ou clique em \< **nova variável...** > e use o **Adicionar variável** caixa de diálogo para criar uma nova variável.  
+  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
+  
+

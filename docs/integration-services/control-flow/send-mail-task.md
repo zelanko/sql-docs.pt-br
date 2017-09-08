@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sendmailtask.f1
+- sql13.dts.designer.sendmailtask.general.f1
+- sql13.dts.designer.sendmailtask.mail.f1
 helpviewer_keywords:
 - mail [Integration Services]
 - Send Mail task
@@ -23,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: fd6f7a19c1b553ee06013a4a24fbbf26a759a6cd
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: cf06b8fdc020b9c2012d5d710427b64043898e84
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="send-mail-task"></a>Tarefa Enviar Email
@@ -71,11 +73,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-send-mail-task"></a>Configurando a tarefa Enviar Email  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
-  
--   [Editor da Tarefa Enviar Email &#40;Página Geral&#41;](../../integration-services/control-flow/send-mail-task-editor-general-page.md)  
-  
--   [Editor da Tarefa Enviar Email &#40;Página Email&#41;](../../integration-services/control-flow/send-mail-task-editor-mail-page.md)  
+ Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
 -   [Página Expressões](../../integration-services/expressions/expressions-page.md)  
   
@@ -89,6 +87,81 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-content"></a>Conteúdo relacionado  
   
 -   Artigo técnico sobre [Como enviar email com notificação de entrega em C#](http://go.microsoft.com/fwlink/?LinkId=237625)no site shareourideas.com  
+  
+## <a name="send-mail-task-editor-general-page"></a>Editor da Tarefa Enviar Email (página Geral)
+  Use a página **Geral** da caixa de diálogo **Editor da Tarefa Enviar Email** para nomear e descrever a tarefa Enviar Email.  
+  
+### <a name="options"></a>Opções  
+ **Nome**  
+ Forneça um nome exclusivo para a tarefa Enviar Email. Esse nome é usado como rótulo no ícone de tarefa.  
+  
+ **Nota** Nomes de tarefa devem ser exclusivos no pacote.  
+  
+ **Description**  
+ Digite uma descrição para a tarefa Enviar Email.  
+  
+## <a name="send-mail-task-editor-mail-page"></a>Editor da tarefa Enviar Email (página Email)
+  Use a página **Email** da caixa de diálogo do **Editor da Tarefa Enviar Email** para especificar destinatários, o tipo de mensagem e a prioridade de uma mensagem. Você também pode anexar arquivos à mensagem. O texto da mensagem pode ser uma cadeia de caracteres fornecida por você, uma conexão com um arquivo que contém o texto ou o nome de uma variável que contém o texto.  
+  
+### <a name="options"></a>Opções  
+ **SMTPConnection**  
+ Selecione um Gerenciador de conexão SMTP na lista ou clique em  **\<nova conexão... >** para criar uma nova conexão Gerenciador.  
+  
+> [!IMPORTANT]  
+>  O gerenciador de conexões SMTP dá suporte apenas para autenticação anônima e Autenticação do Windows. Ele não suporta a autenticação básica.  
+  
+ **Tópicos relacionados:** [Gerenciador de conexões SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)  
+  
+ **De**  
+ Especifique o endereço de email do remetente.  
+  
+ **Para**  
+ Forneça os endereços de email dos destinatários, separados por ponto-e-vírgula.  
+  
+ **Cc**  
+ Especifique os endereços de email de outras pessoas que também receberão cópias da mensagem, separando todos os emails por ponto-e-vírgula.  
+  
+ **Cco**  
+ Especifique os endereços de email de outras pessoas que também receberão cópias da mensagem com cópia oculta (Cco), separando todos os emails por ponto-e-vírgula.  
+  
+ **Assunto**  
+ Indique o assunto da mensagem de email.  
+  
+ **MessageSourceType**  
+ Selecione o tipo de origem da mensagem. As opções dessa propriedade são listadas na tabela a seguir.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Entrada Direta**|Defina a origem do texto da mensagem. Selecionar este valor faz com que seja exibida a opção dinâmica **MessageSource**.|  
+|**Conexão do Arquivo**|Defina a origem do arquivo que contém o texto da mensagem. Selecionar este valor faz com que seja exibida a opção dinâmica **MessageSource**.|  
+|**Variável**|Defina a origem de uma variável que contém o texto da mensagem. Selecionar este valor faz com que seja exibida a opção dinâmica **MessageSource**.|  
+  
+ **Prioridade**  
+ Defina a prioridade da mensagem.  
+  
+ **Anexos**  
+ Forneça os nomes de arquivo dos anexos à mensagem de email, separados por uma barra vertical (|).  
+  
+> [!NOTE]  
+>  As linhas Para, Cc e Cco são limitadas a 256 caracteres, de acordo com os padrões da Internet.  
+  
+### <a name="messagesourcetype-dynamic-options"></a>Opções dinâmicas de MessageSourceType  
+  
+#### <a name="messagesourcetype--direct-input"></a>MessageSourceType = Entrada direta  
+ **MessageSource**  
+ Digite o texto da mensagem ou clique no botão Procurar (...) e digite a mensagem na caixa de diálogo **Origem da mensagem** .  
+  
+#### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Conexão do arquivo  
+ **MessageSource**  
+ Selecione um Gerenciador de conexão de arquivo na lista ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+  
+ **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="messagesourcetype--variable"></a>MessageSourceType = Variável  
+ **MessageSource**  
+ Selecione uma variável na lista ou clique em \< **nova variável...** > para criar uma nova variável.  
+  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

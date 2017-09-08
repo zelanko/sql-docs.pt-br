@@ -11,6 +11,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferdatabasetask.f1
+- sql13.dts.designer.transferdatabasetask.general.f1
+- sql13.dts.designer.transferdatabasetask.database.f1
+- sql13.dts.designer.transferdatabasetask.sourcedbfiles.f1
+- sql13.dts.designer.transferdatabasetask.destdbfiles.f1
 helpviewer_keywords:
 - Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
@@ -19,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 86e2b602632d1492d3889981af041c5ee38cfb6b
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 29f66d1eeed7e2af0df962b62020169fb2095f6e
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-database-task"></a>Tarefa Transferir Banco de Dados
@@ -73,11 +77,7 @@ ms.lasthandoff: 08/03/2017
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
-  
--   [Editor da Tarefa Transferir Banco de Dados &#40;Página Geral&#41;](../../integration-services/control-flow/transfer-database-task-editor-general-page.md)  
-  
--   [Editor da Tarefa Transferir Banco de Dados &#40;Página Bancos de Dados&#41;](../../integration-services/control-flow/transfer-database-task-editor-databases-page.md)  
+ Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
 -   [Página Expressões](../../integration-services/expressions/expressions-page.md)  
   
@@ -90,4 +90,124 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferDatabaseTask.TransferDatabaseTask>  
   
+## <a name="transfer-database-task-editor-general-page"></a>Editor da Tarefa Transferir Banco de Dados (página Geral)
+  Use a página **Geral** da caixa de diálogo **Editor da Tarefa Transferir Banco de Dados** para nomear e descrever a tarefa Transferir Banco de Dados. A tarefa Transferir Banco de Dados copia ou move um bancos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre duas instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa tarefa também pode ser usada para copiar um banco de dados dentro do mesmo servidor.   
   
+### <a name="options"></a>Opções  
+ **Nome**  
+ Digite um nome exclusivo para a tarefa Transferir Banco de Dados. Esse nome é usado como rótulo no ícone de tarefa.  
+  
+> [!NOTE]  
+>  Os nomes das tarefas devem ser exclusivos em um pacote.  
+  
+ **Description**  
+ Digite uma descrição para a tarefa Transferir Banco de Dados.  
+  
+## <a name="transfer-database-task-editor-databases-page"></a>Editor da Tarefa Transferir Banco de Dados (página Bancos de Dados)
+  Use a página **Bancos de Dados** da caixa de diálogo **Editor da Tarefa Transferir Banco de Dados** para especificar as propriedades para os bancos de dado de origem e de destino envolvidos na tarefa Transferir Banco de Dados. A tarefa Transferir Banco de Dados copia ou move um bancos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre duas instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa tarefa também pode ser usada para copiar um banco de dados dentro do mesmo servidor.  
+  
+### <a name="options"></a>Opções  
+ **SourceConnection**  
+ Selecione um Gerenciador de conexão do SMO na lista ou clique em  **\<nova conexão... >** para criar uma nova conexão para o servidor de origem.  
+  
+ **DestinationConnection**  
+ Selecione um Gerenciador de conexão do SMO na lista ou clique em  **\<nova conexão... >** para criar uma nova conexão para o servidor de destino.  
+  
+ **DestinationDatabaseName**  
+ Especifique o nome do banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no servidor de destino.  
+  
+ Para popular este campo automaticamente com o nome do banco de dados de origem, especifique o **SourceConnection** e **SourceDatabaseName** primeiro.  
+  
+ Para renomear o banco de dados no servidor de destino, digite o novo nome neste campo.  
+  
+ **DestinationDatabaseFiles**  
+ Especifica os nomes e locais dos arquivos de banco de dados no servidor de destino.  
+  
+ Para popular este campo automaticamente com os nomes e locais de arquivo de banco de dados, especifique o **SourceConnection**, **SourceDatabaseName**e **SourceDatabaseFiles** primeiro.  
+  
+ Para renomear os arquivos de banco de dados ou especificar os novos locais no servidor de destino, popule esse campo com as informações de banco de dados de origem e clique no botão Procurar. Na caixa de diálogo **Arquivos de banco de dados de destino** , edite o **Arquivo de Destino**, a **Pasta de Destino**ou o **Compartilhamento de Arquivos na Rede**.  
+  
+> [!NOTE]  
+>  Se você localizar os arquivos de banco de dados usando o botão Procurar, o local de arquivo será inserido usando a notação da unidade local: por exemplo, c:\\. É possível substituir isso pela a notação de compartilhamento na rede, inclusive o nome do computador e o nome de compartilhamento. Se o compartilhamento administrativo padrão for usado, será necessário usar a notação de $ e ter acesso administrativo ao compartilhamento.  
+  
+ **DestinationOverwrite**  
+ Especifique se o é possível substituir o banco de dados no servidor de destino.  
+  
+ As opções desta propriedade estão listadas na seguinte tabela:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Verdadeiro**|Substitui o banco de dados no servidor de destino.|  
+|**Falso**|Não substitui o banco de dados no servidor de destino.|  
+  
+> [!CAUTION]  
+>  Os dados no banco de dados do servidor de destino serão substituídos se você especificar **True** para **DestinationOverwrite**, o que pode resultar na perda de dados. Para evitar isso, faça backup do banco de dados do servidor de destino em outro local antes de executar a tarefa Transferir Banco de Dados.  
+  
+ **Ação**  
+ Especifique se a tarefa vai **Copiar** ou **Mover** o banco de dados para o servidor de destino.  
+  
+ **Método**  
+ Especifique se a tarefa será executada enquanto o banco de dados no servidor de origem estiver no modo online ou offline.  
+  
+ Para transferir um banco de dados usando o modo offline, é necessário que o usuário que executa o pacote seja um membro da função de servidor fixa **sysadmin** .  
+  
+ Para transferir um banco de dados usando o modo online, é necessário que o usuário que executa o pacote seja um membro da função de servidor fixa **sysadmin** ou o proprietário do banco de dados (**dbo**) do banco de dados selecionado.  
+  
+ **SourceDatabaseName**  
+ Selecione o nome do banco de dados a ser copiado ou movido.  
+  
+ **SourceDatabaseFiles**  
+ Clique no botão Procurar para selecionar os arquivos de banco de dados.  
+  
+ **ReattachSourceDatabase**  
+ Especifique se a tarefa tentará anexar novamente o banco de dados de origem se ocorrer uma falha.  
+  
+ As opções desta propriedade estão listadas na seguinte tabela:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Verdadeiro**|Anexa novamente o banco de dados de origem.|  
+|**Falso**|Não anexa novamente o banco de dados de origem.|  
+
+## <a name="source-database-files"></a>Arquivos de banco de dados de origem
+  Use a caixa de diálogo **Arquivos de Banco de Dados de Origem** para visualizar os nomes e locais do arquivo do banco de dados no servidor de origem ou especificar um local de compartilhamento de arquivos na rede para a tarefa Transferir Banco de Dados.   
+  
+ Para popular esta caixa de diálogo com os nomes e locais dos arquivos do banco de dados no servidor de origem, especifique primeiro **SourceConnection** e **SourceDatabaseName** na página **Banco de Dados** da caixa de diálogo **Editor da Tarefa Transferir Banco de Dados** .  
+  
+### <a name="options"></a>Opções  
+ **Arquivo de Origem**  
+ Nomes do arquivo de banco de dados no servidor de origem que serão transferidos. O**Arquivo de Origem** é somente leitura.  
+  
+ **Pasta de Origem**  
+ Pasta no servidor de origem em que residem os arquivos de banco de dados a serem transferidos. A**Pasta de Origem** é somente leitura.  
+  
+ **Compartilhamento de Arquivos na Rede**  
+ Pasta de compartilhamento de rede no servidor de origem da qual os arquivos de banco de dados serão transferidos. Use **Compartilhamento de Arquivo na Rede** ao transferir um banco de dados em modo offline, especificando **DatabaseOffline** em **Método** na página **Banco de Dados** da caixa de diálogo **Editor da Tarefa Transferir Banco de Dados** .  
+  
+ Insira o local de compartilhamento de arquivos na rede ou clique no botão Procurar **(...)** para localizá-lo.  
+  
+ Na transferência de um banco de dados em modo offline, os arquivos de banco de dados são copiados para o local **Compartilhamento de arquivo na rede** no servidor de origem, antes de serem transferidos ao servidor de destino.  
+
+## <a name="destination-database-files"></a>Arquivos de banco de dados de destino
+  Use a caixa de diálogo **Arquivos do Banco de Dados de Destino** para exibir ou alterar os nomes e locais dos arquivos de banco de dados no servidor de destino ou especificar um local de arquivos na rede para a tarefa Transferir Banco de Dados.  
+  
+ Para popular automaticamente essa caixa de diálogo com os locais e nomes de arquivos no servidor de origem, especifique o **SourceConnection**, **SourceDatabaseName**, e **SourceDatabaseFiles** primeiro na página **Bancos de Dados** da caixa de diálogo **Editor da Tarefa Transferir Banco de Dados** .  
+  
+### <a name="options"></a>Opções  
+ **Arquivo de Destino**  
+ Nomes dos arquivos de banco de dados transferidos no servidor de destino.  
+  
+ Digite o nome do arquivo ou clique no nome do arquivo para editá-lo.  
+  
+ **Pasta de Destino**  
+ Pasta no servidor de destino para onde os arquivos de banco de dados serão transferidos.  
+  
+ Digite o caminho da pasta, clique no caminho da pasta para editá-lo ou clique em procurar para localizar a pasta onde você quer transferir os arquivos de banco de dados no servidor de destino.  
+  
+ **Compartilhamento de Arquivos na Rede**  
+ Pasta compartilhada de rede no servidor de destino para o qual os arquivos de banco de dados serão transferidos. Use **Compartilhamento de arquivo na rede** ao transferir um banco de dados em modo offline, especificando **DatabaseOffline** em **Método** na página **Banco de Dados** da caixa de diálogo **Editor da Tarefa Transferir Banco de Dados** .  
+  
+ Insira o local de compartilhamento de arquivos na rede ou clique em Procurar para localizá-lo.  
+  
+ Ao transferir um banco de dados em modo offline, os arquivos de banco de dados são copiados para o local **Compartilhamento de arquivo na rede** antes de serem transferidos para o local **Pasta de destino** .  
+

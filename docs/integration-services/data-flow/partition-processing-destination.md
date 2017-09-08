@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.partitionprocessingdest.f1
+- sql13.dts.designer.partprocessingtransformation.connection.f1
+- sql13.dts.designer.partprocessingtransformation.mapping.f1
+- sql13.dts.designer.partprocessingtransformation.advanced.f1
 helpviewer_keywords:
 - partitions [Analysis Services], processing
 - Partition Processing destination [Integration Services]
@@ -21,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 036b792f9895c6b5d56438ce52455aeb5622e0ba
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 124e43d651641eacbf98d82e1d9b1fffeec54b44
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="partition-processing-destination"></a>Destino de processamento de partições
@@ -50,14 +53,6 @@ ms.lasthandoff: 08/03/2017
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Destino** de Processamento de Partições, clique em um dos seguintes tópicos:  
-  
--   [Editor de Destino de Processamento de Partições &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/partition-processing-destination-editor-connection-manager-page.md)  
-  
--   [Editor de Destino de Processamento de Partições &#40;Página Mapeamentos&#41;](../../integration-services/data-flow/partition-processing-destination-editor-mappings-page.md)  
-  
--   [Editor de Destino de Processamento de Partições &#40;Página Avançado&#41;](../../integration-services/data-flow/partition-processing-destination-editor-advanced-page.md)  
-  
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -66,4 +61,127 @@ ms.lasthandoff: 08/03/2017
   
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## <a name="partition-processing-destination-editor-connection-manager-page"></a>Editor de Destino de Processamento de Partições (página Gerenciador de Conexões)
+  Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Destino de Processamento de Partições** para especificar uma conexão a um projeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou a uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
+> [!NOTE]  
+>  As tarefas descritas aqui não se aplicam a modelos de tabela do Analysis Services.  Você não pode mapear colunas de entrada para as colunas de partição em modelos de tabela. Você pode usar a tarefa Executar DDL do Analysis Services [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) para processar a partição.  
+  
+### <a name="options"></a>Opções  
+ **Connection manager**  
+ Selecione um gerenciador de conexões existente na lista ou crie uma nova conexão clicando em **Nova**.  
+  
+ **Nova**  
+ Crie uma nova conexão usando a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** .  
+  
+ **Lista de partições disponíveis**  
+ Selecione a partição a processar.  
+  
+ **Método de processamento**  
+ Selecione o método de processamento. O valor padrão desta opção é **Completo**.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Adicionar (incremental)|Execute um processamento com incremento da partição.|  
+|Completo|Execute um processamento completo da partição.|  
+|Apenas dados|Execute um processamento de atualização da partição.|  
+  
+## <a name="partition-processing-destination-editor-mappings-page"></a>Editor de Destino de Processamento de Partições (Página Mapeamentos)
+  Use a página **Mapeamentos** da caixa de diálogo **Editor de Destino de Processamento de Partições** para mapear colunas de entrada para colunas de partições.  
+  
+> [!NOTE]  
+>  As tarefas descritas aqui não se aplicam a modelos de tabela do Analysis Services.  Você não pode mapear colunas de entrada para as colunas de partição em modelos de tabela. Você pode usar a tarefa Executar DDL do Analysis Services [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) para processar a partição.  
+  
+### <a name="options"></a>Opções  
+ **Colunas de Entrada Disponíveis**  
+ Exiba a lista das colunas de entrada disponíveis. Use uma operação de arrastar e soltar para mapear colunas de entrada disponíveis na tabela para as colunas de destino.  
+  
+ **Colunas de Destino Disponíveis**  
+ Exiba a lista de colunas de destino disponíveis. Use uma operação de arrastar e soltar para mapear as colunas de destino disponíveis na tabela para as colunas de entrada.  
+  
+ **Coluna de Entrada**  
+ Exibir colunas de entrada selecionadas na tabela acima. É possível alterar os mapeamentos usando a lista **Colunas de Entrada Disponíveis**.  
+  
+ **Coluna de Destino**  
+ Exiba cada coluna de destino disponível, seja ela mapeada ou não.  
+  
+## <a name="partition-processing-destination-editor-advanced-page"></a>Editor de Destino de Processamento de Partições (página Avançado)
+  Use a página **Avançado** da caixa de diálogo **Editor de Destino de Processamento de Partições** para configurar a manipulação de erros.  
+  
+> [!NOTE]  
+>  As tarefas descritas aqui não se aplicam a modelos de tabela do Analysis Services.  Você não pode mapear colunas de entrada para as colunas de partição em modelos de tabela. Você pode usar a tarefa Executar DDL do Analysis Services [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) para processar a partição.  
+  
+### <a name="options"></a>Opções  
+ **Usar configuração de erro padrão.**  
+ Especifique se a manipulação de erros padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deve ser usada. Por padrão, esse valor está definido como **True**.  
+  
+ **Ação de erro de chave**  
+ Especifique como manipular registros que possuem valores de chave inaceitáveis.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**ConvertToUnknown**|Converta o valor de chave inaceitável em um valor Desconhecido.|  
+|**DiscardRecord**|Descarte o registro.|  
+  
+ **Ignorar erros**  
+ Especifique se os erros devem ser ignorados.  
+  
+ **Parar se houver erro**  
+ Especifique se o processamento deve parar quando ocorrer erro.  
+  
+ **Número de erros**  
+ Especifique o limite de erros em que o processamento deve ser interrompido, caso tenha selecionado **Parar se houver erro**.  
+  
+ **Ação se houver erro**  
+ Especifique a ação a ser tomada quando o limite de erros for atingido, caso tenha selecionado **Parar se houver erro**.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**StopProcessing**|Pare o processamento.|  
+|**StopLogging**|Pare de registrar os erros.|  
+  
+ **Chave não encontrada**  
+ Especifique a ação a ser tomada mediante erro de chave não encontrada. Por padrão, este valor é **ReportAndContinue**.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Ignore o erro e continue o processamento.|  
+|**ReportAndContinue**|Relate o erro e continue o processamento.|  
+|**ReportAndStop**|Relate o erro e pare o processamento.|  
+  
+ **Chave duplicada**  
+ Especifique a ação a ser tomada mediante erro de chave duplicada. Por padrão, esse valor é **IgnoreError**.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Ignore o erro e continue o processamento.|  
+|**ReportAndContinue**|Relate o erro e continue o processamento.|  
+|**ReportAndStop**|Relate o erro e pare o processamento.|  
+  
+ **Chave nula convertida em desconhecida**  
+ Especifique a ação a ser tomada quando uma chave nula foi convertida no valor Desconhecido. Por padrão, esse valor é **IgnoreError**.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Ignore o erro e continue o processamento.|  
+|**ReportAndContinue**|Relate o erro e continue o processamento.|  
+|**ReportAndStop**|Relate o erro e pare o processamento.|  
+  
+ **Chave nula não permitida**  
+ Especifique a ação a ser tomada quando chaves nulas não forem permitidas, e uma chave nula for encontrada. Por padrão, este valor é **ReportAndContinue**.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Ignore o erro e continue o processamento.|  
+|**ReportAndContinue**|Relate o erro e continue o processamento.|  
+|**ReportAndStop**|Relate o erro e pare o processamento.|  
+  
+ **Caminho do log de erros**  
+ Digite o caminho do log de erros ou selecione um destino usando o botão Procurar **(...)** .  
+  
+ **Procurar (...)**  
+ Selecione um caminho para o log de erros.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+

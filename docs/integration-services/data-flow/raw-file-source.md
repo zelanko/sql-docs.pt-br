@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.rawfilesource.f1
+- sql13.dts.designer.rawfilesourceconnectionmanager.f1
+- sql13.dts.designer.rawfilesourcecolumns.f1
 helpviewer_keywords:
 - sources [Integration Services], Raw File
 - raw data [Integration Services]
@@ -21,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9ea51c506ebda4ea06da6938f68ae91c655bb3ce
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 14608c3bbf570ecfa4cbc0d45d2961ea7ab48a4d
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="raw-file-source"></a>Origem do arquivo bruto
@@ -57,6 +59,10 @@ ms.lasthandoff: 08/03/2017
   
 -   Entrada de blog, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), em sqlservercentral.com  
   
+## <a name="raw-file-source-editor-connection-manager-page"></a>Editor de Fonte Arquivo Bruto (página Gerenciador de Conexões)
+  A fonte Arquivo Bruto lê dados brutos de um arquivo. Como a representação dos dados é nativa à fonte, os dados não necessitam de conversão e praticamente nenhuma análise.   
+## <a name="raw-file-source-editor-columns-page"></a>Editor de fonte Arquivo Bruto (página Colunas)
+  A fonte Arquivo Bruto lê dados brutos de um arquivo. Como a representação dos dados é nativa à fonte, os dados não necessitam de conversão e praticamente nenhuma análise.   
 ## <a name="see-also"></a>Consulte também  
  [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)   
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  

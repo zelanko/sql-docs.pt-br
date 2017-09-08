@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.rawfiledest.f1
+- sql13.dts.designer.rawfiledestinationconnectionmanager.f1
+- sql13.dts.designer.rawfiledestinationcolumns.f1
 helpviewer_keywords:
 - append options [Integration Services]
 - destinations [Integration Services], Raw File
@@ -23,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a890502e4db72f00d21ed9656441cc27fa5e532d
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: d92f79e7a43f8d8368ec44b33aef7297749eb351
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="raw-file-destination"></a>Destino do Arquivo Bruto
@@ -135,6 +137,90 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  Entrada de blog, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)(Arquivos brutos são incríveis), em sqlservercentral.com.  
+  
+## <a name="raw-file-destination-editor-connection-manager-page"></a>Editor de destino Arquivo Bruto (página Gerenciador de Conexões)
+  Use o Editor de Destino Arquivo Bruto para configurar o destino Arquivo Bruto para gravar dados brutos em um arquivo.  
+  
+ **O que você deseja fazer?**  
+  
+-   [Abra o Editor de destino Arquivo Bruto](#open)  
+  
+-   [Definir as opções na guia de Gerenciador de Conexões](#connection)  
+  
+-   [Definir opções na guia Colunas](#mapping)  
+  
+###  <a name="open"></a> Abra o Editor de destino Arquivo Bruto  
+  
+1.  Adicione o destino Arquivo Bruto a um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  
+2.  Clique com o botão direito do mouse no componente e clique em **Editar**.  
+  
+###  <a name="connection"></a> Definir as opções na guia de Gerenciador de Conexões  
+ **Modo de acesso**  
+ Selecione o modo como o nome de arquivo é especificado. Selecione **Nome de arquivo** para inserir o nome do arquivo e o caminho diretamente de **Nome de arquivo de variável** para especificar uma variável que contenha o nome de arquivo.  
+  
+ **Nome do arquivo** ou **Nome de variável**  
+ Insira o nome e o caminho do arquivo bruto ou selecione a variável que contém o nome de arquivo.  
+  
+ **Opção de gravação**  
+ Selecione o método usado para criar e gravar no arquivo.  
+  
+ **Gerar arquivo bruto inicial**  
+ Clique no botão para gerar um arquivo bruto vazio que contém somente as colunas (arquivo de somente metadados) sem precisar executar o pacote. O arquivo contém as colunas que você selecionou na página **Colunas** do **Editor de destino Arquivo Bruto**. Você pode apontar a fonte Arquivo Bruto para esse arquivo somente de metadados.  
+  
+ Quando você clica em **Gerar arquivo bruto inicial**, uma caixa de mensagem aparece. Clique em **OK** para continuar a criar o arquivo. Clique em **Cancelamento** para selecionar uma lista diferente de colunas na página de **Colunas** .  
+  
+###  <a name="mapping"></a> Definir opções na guia Colunas  
+ **Colunas de Entrada Disponíveis**  
+ Selecione uma ou mais colunas de entrada para gravar no arquivo bruto.  
+  
+ **Coluna de Entrada**  
+ Uma coluna de entrada é adicionada automaticamente a essa tabela quando você a seleciona em **Colunas de Entrada Disponíveis**; se preferir, selecione a coluna de entrada diretamente nessa tabela.  
+  
+ **Alias de Saída**  
+ Especifique um nome alternativo a ser usado para a coluna de saída.  
+  
+## <a name="raw-file-destination-editor-columns-page"></a>Editor de destino Arquivo Bruto (página Colunas)
+  Use o Editor de Destino Arquivo Bruto para configurar o destino Arquivo Bruto para gravar dados brutos em um arquivo.  
+  
+ **O que você deseja fazer?**  
+  
+-   [Abra o Editor de destino Arquivo Bruto](#open)  
+  
+-   [Definir as opções na guia de Gerenciador de Conexões](#connection)  
+  
+-   [Definir opções na guia Colunas](#mapping)  
+  
+###  <a name="open"></a> Abra o Editor de destino Arquivo Bruto  
+  
+1.  Adicione o destino Arquivo Bruto a um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  
+2.  Clique com o botão direito do mouse no componente e clique em **Editar**.  
+  
+###  <a name="connection"></a> Definir as opções na guia de Gerenciador de Conexões  
+ **Modo de acesso**  
+ Selecione o modo como o nome de arquivo é especificado. Selecione **Nome de arquivo** para inserir o nome do arquivo e o caminho diretamente de **Nome de arquivo de variável** para especificar uma variável que contenha o nome de arquivo.  
+  
+ **Nome do arquivo** ou **Nome de variável**  
+ Insira o nome e o caminho do arquivo bruto ou selecione a variável que contém o nome de arquivo.  
+  
+ **Opção de gravação**  
+ Selecione o método usado para criar e gravar no arquivo.  
+  
+ **Gerar arquivo bruto inicial**  
+ Clique no botão para gerar um arquivo bruto vazio que contém somente as colunas (arquivo de somente metadados) sem precisar executar o pacote. Você pode apontar a origem Arquivo Bruto para o arquivo somente de metadados.  
+  
+ Quando você clica no botão, uma lista das colunas é exibida. Você pode clicar em cancelar e modificar as colunas ou pode clicar em OK para continuar a criação do arquivo.  
+  
+###  <a name="mapping"></a> Definir opções na guia Colunas  
+ **Colunas de Entrada Disponíveis**  
+ Selecione uma ou mais colunas de entrada para gravar no arquivo bruto.  
+  
+ **Coluna de Entrada**  
+ Uma coluna de entrada é adicionada automaticamente a essa tabela quando você a seleciona em **Colunas de Entrada Disponíveis**; se preferir, selecione a coluna de entrada diretamente nessa tabela.  
+  
+ **Alias de Saída**  
+ Especifique um nome alternativo a ser usado para a coluna de saída.  
   
 ## <a name="see-also"></a>Consulte também  
  [Origem do arquivo bruto](../../integration-services/data-flow/raw-file-source.md)   
