@@ -164,4 +164,4 @@ Durante a instalação, o Analysis Services do SQL Server 2016 adiciona uma cont
 
 Você pode configurar seu serviço para não enviar dados de uso, conforme descrito na seção "Conjunto de sub-chaves do registro no servidor". No entanto, isso não removerá a conta de serviço. 
  
-
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
