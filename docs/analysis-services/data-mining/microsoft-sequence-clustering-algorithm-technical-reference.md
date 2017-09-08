@@ -1,34 +1,39 @@
 ---
-title: "Refer&#234;ncia t&#233;cnica do algoritmo MSC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parâmetro MAXIMUM_SEQUENCE_STATES"
-  - "parâmetro MINIMUM_SUPPORT"
-  - "parâmetro MAXIMUM_STATES"
-  - "algoritmos de clustering de sequências [Analysis Services]"
-  - "parâmetro CLUSTER_COUNT"
+title: "Referência técnica do algoritmo msc | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MAXIMUM_SEQUENCE_STATES parameter
+- MINIMUM_SUPPORT parameter
+- MAXIMUM_STATES parameter
+- sequence clustering algorithms [Analysis Services]
+- CLUSTER_COUNT parameter
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e26ac40b7cb47370107f348548cf2cc7489efa1
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Refer&#234;ncia t&#233;cnica do algoritmo MSC
+# <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referência técnica do algoritmo MSC
   O algoritmo MSC é um híbrido que usa a análise de cadeia Markov para identificar sequências ordenadas e combina os resultados dessa análise com técnicas de clustering para gerar clusters com base nas sequências e outros atributos no modelo. Este tópico descreve a implementação do algoritmo, como personalizá-lo e os requisitos especiais para modelos de clusterização de sequências.  
   
  Para obter mais informações gerais sobre o algoritmo, inclusive como navegar e consultar modelos de clusterização de sequência, consulte [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
   
-## Implementação do algoritmo do MSC  
+## <a name="implementation-of-the-microsoft-sequence-clustering-algorithm"></a>Implementação do algoritmo do MSC  
  O modelo MSC usa modelos Markov para identificar sequências e determinar a probabilidade das sequências. Um modelo Markov é um gráfico direcionado que armazena as transições entre estados diferentes. O algoritmo MSC usa cadeias Markov de n-ordem, não um modelo Markov Oculto.  
   
  O número de ordens em uma cadeia Markov informa quantos estados são usados para determinar a probabilidade dos estados atuais. Em um modelo Markov de primeira ordem, a probabilidade do estado atual depende apenas do estado anterior. Em uma cadeia Markov de segunda ordem, a probabilidade de um estado depende dos dois estados anteriores e assim por diante. Para cada cadeia Markov,uma matriz de transição armazena as transições de cada combinação de estados. À medida que o comprimento da cadeia Markov aumenta, o tamanho da matriz também aumenta exponencialmente e ela se torna extremamente esparsa. O tempo de processamento também aumenta proporcionalmente.  
@@ -43,7 +48,7 @@ caps.handback.revision: 20
   
  Um modelo de clusterização de sequência tende a criar muito mais clusters do que um modelo de clusterização típico. Assim, o algoritmo MSC executa a *decomposição de cluster*para separar clusters com base nas sequências e em outros atributos.  
   
-### Seleção de recursos em um modelo de clusterização de sequência  
+### <a name="feature-selection-in-a-sequence-clustering-model"></a>Seleção de recursos em um modelo de clusterização de sequência  
  A seleção de recursos não é invocada durante a criação de sequências; no entanto, ela se aplica no estágio de clusterização.  
   
 |Tipo de modelo|Método de seleção de recursos|Comentários|  
@@ -51,9 +56,9 @@ caps.handback.revision: 20
 |Agrupamento de Sequência|Não usado|A seleção de recursos não é chamada; no entanto, você pode controlar o comportamento do algoritmo definindo o valor dos parâmetros MINIMUM_SUPPORT e MINIMUM_PROBABILIITY.|  
 |Clustering|Pontuação de interesse|Embora o algoritmo de clusterização possa usar algoritmos discretos ou diferenciados, a pontuação de cada atributo é calculada como uma distância e é contínua; por isso, é usada a pontuação de interesse.|  
   
- Para obter mais informações, consulte [Feature Selection](../Topic/Feature%20Selection.md).  
+ Para obter mais informações, consulte [Feature Selection](http://msdn.microsoft.com/library/73182088-153b-4634-a060-d14d1fd23b70).  
   
-### Aperfeiçoando o desempenho  
+### <a name="optimizing-performance"></a>Aperfeiçoando o desempenho  
  O algoritmo MSC dá suporte a várias maneiras de otimizar o processamento:  
   
 -   Controlar o número de clusters gerado, definindo um valor para o parâmetro CLUSTER_COUNT.  
@@ -72,10 +77,10 @@ caps.handback.revision: 20
   
  Uma análise completa desses métodos está além do escopo deste tópico.  
   
-## Personalizando o algoritmo MSC  
+## <a name="customizing-the-sequence-clustering-algorithm"></a>Personalizando o algoritmo MSC  
  O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering dá suporte a parâmetros que afetam o comportamento, o desempenho e a precisão do modelo de mineração resultante. Também é possível modificar o comportamento do modelo completo definindo sinalizadores de modelagem que controlam a maneira como o algoritmo processa dados de treinamento.  
   
-### Definindo parâmetros de algoritmo  
+### <a name="setting-algorithm-parameters"></a>Definindo parâmetros de algoritmo  
  A tabela a seguir descreve os parâmetros que podem ser usados com o algoritmo MSC.  
   
  CLUSTER_COUNT  
@@ -103,7 +108,7 @@ caps.handback.revision: 20
   
  O padrão é 100.  
   
-### Sinalizadores de modelagem  
+### <a name="modeling-flags"></a>Sinalizadores de modelagem  
  Os sinalizadores de modelagem a seguir são suportados para uso com o algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering.  
   
  NOT NULL  
@@ -118,7 +123,7 @@ caps.handback.revision: 20
   
  Para obter mais informações sobre o uso de valores Ausentes em modelos de mineração e como os valores ausentes afetam as pontuações de probabilidade, consulte [Valores ausentes &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  A tabela de casos deve ter uma coluna de ID de caso. Opcionalmente, a tabela de casos pode conter outras colunas que armazenam atributos sobre o caso.  
   
  O algoritmo MSC exige informações de sequência, armazenadas como uma tabela aninhada. A tabela aninhada deve ter uma única coluna Key Sequence. Uma coluna **Key Sequence** pode conter qualquer tipo de dados que possa ser armazenado, inclusive tipos de dados de cadeia de caracteres, mas a coluna deve conter valores exclusivos para cada caso. Além disso, antes de processar o modelo, você deve assegurar que a tabela de casos e a tabela aninhada sejam classificadas em ordem crescente na chave que relaciona as tabelas.  
@@ -126,7 +131,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Se você criar um modelo que use o algoritmo MSC, mas não use uma coluna de sequência, o modelo resultante não conterá nenhuma sequência, mas simplesmente clusterizará casos com base em outros atributos incluídos no modelo.  
   
-### Colunas de entrada e colunas previsíveis  
+### <a name="input-and-predictable-columns"></a>Colunas de entrada e colunas previsíveis  
  O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering dá suporte a colunas de entrada e colunas previsíveis específicas que são listadas na tabela a seguir. Para obter mais informações sobre o significado dos tipos de conteúdo quando usados em um modelo de mineração, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
 |Coluna|Tipos de conteúdo|  
@@ -134,7 +139,7 @@ caps.handback.revision: 20
 |Atributo de entrada|Contínuo, cíclico, discreto, diferenciado, chave, Key Sequence, tabela e ordenado|  
 |Atributo previsível|Contínuo, cíclico, discreto, diferenciado, tabela e ordenado|  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
   
 -   Use a função [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) para a Previsão de Sequências. Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte à Previsão de Sequência, consulte [Recursos com suporte nas edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
@@ -142,9 +147,9 @@ caps.handback.revision: 20
   
 -   O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering dá suporte ao detalhamento, ao uso de modelos de mineração OLAP e ao uso de dimensões de mineração de dados.  
   
-## Consulte também  
- [Algoritmo MSC](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md)  
+## <a name="see-also"></a>Consulte também  
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Exemplos de consulta de modelo de Clustering de sequência](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

@@ -1,33 +1,38 @@
 ---
-title: "Colunas da estrutura de minera&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mineração de dados [Analysis Services], estrutura"
-  - "estruturas de mineração [Analysis Services], colunas"
-  - "fontes de dados [Analysis Services], colunas de estrutura de mineração"
-  - "colunas [mineração de dados], colunas de estrutura de mineração"
+title: "Colunas de estrutura de mineração | Microsoft Docs"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], structure
+- mining structures [Analysis Services], columns
+- data sources [Analysis Services], mining structure columns
+- columns [data mining], mining structure columns
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0bf7ffc6f8531385ef9100b3c104db887c2fb565
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colunas da estrutura de minera&#231;&#227;o
+# <a name="mining-structure-columns"></a>Colunas da estrutura de mineração
   Você define as colunas em uma estrutura de mineração quando cria a estrutura de mineração, escolhendo colunas de dados externos e especificando como os dados serão usados na modelagem. Portanto, colunas de estrutura de mineração são mais do que cópias de dados de uma fonte de dados: elas definem como os dados da fonte serão usados pelo modelo de mineração. Você pode atribuir propriedades que determinam como os dados são discretizados, propriedades que descrevem como os valores de dados são distribuídos  
   
  As colunas da estrutura de mineração são projetadas para serem flexíveis e extensíveis, porque cada algoritmo utilizado para criar um modelo de mineração pode utilizar diferentes colunas da estrutura para interpretar os dados. Em vez de ter um conjunto de dados para cada modelo, você pode usar uma única estrutura de mineração e usar as colunas dela para personalizar os dados para cada modelo.  
   
-## Definindo colunas da estrutura de mineração  
+## <a name="defining-mining-structure-columns"></a>Definindo colunas da estrutura de mineração  
  Os tipos de dados e de conteúdo básicos que definem as colunas da estrutura são derivados da fonte de dados utilizada para criar a estrutura. Você pode alterar essas configurações na estrutura de mineração e também definir os sinalizadores de modelagem bem como a distribuição das colunas contínuas.  
   
  A definição de uma coluna de estrutura de mineração deve conter as seguintes informações:  
@@ -48,9 +53,9 @@ caps.handback.revision: 41
   
  Os algoritmos de terceiros também podem incluir propriedades personalizadas que podem ser definidas na coluna da estrutura de mineração.  
   
- Para obter mais informações sobre a estrutura e o modelo de mineração de dados, consulte [Estruturas de mineração &#40;Analysis Services – Mineração de Dados&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
+ Para obter mais informações sobre a estrutura e o modelo de mineração de dados, consulte [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
  Consulte os tópicos a seguir para obter mais informações sobre como definir e usar colunas da estrutura de mineração.  
   
 |Tópico|Links|  
@@ -64,7 +69,7 @@ caps.handback.revision: 41
 |Descreve as colunas classificadas, que são um tipo especial de coluna a ser usada para relacionar uma coluna da estrutura de mineração a outra.|[Colunas classificadas &#40;Mineração de dados&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md)|  
 |Saiba como adicionar e modificar colunas de estrutura de mineração.|[Tarefas e instruções da estrutura de mineração](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Colunas do modelo de mineração](../../analysis-services/data-mining/mining-model-columns.md)  
   

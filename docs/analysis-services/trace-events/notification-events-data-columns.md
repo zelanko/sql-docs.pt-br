@@ -1,24 +1,29 @@
 ---
-title: "Colunas de dados de eventos de notifica&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "categoria Notification Events"
+title: "Colunas de dados de eventos de notificação | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f671eb89295049c09da1f037fdb4544db84b7280
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colunas de dados de eventos de notifica&#231;&#227;o
+# <a name="notification-events-data-columns"></a>Colunas de dados de eventos de notificação
   Eventos de notificação são eventos que não são causados diretamente por usuários do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por exemplo, as notificações acontecem por causa de usuários que atualizam tabelas base para cache pró-ativo.  
   
  A categoria Notifications Events tem a seguinte classe de evento:  
@@ -30,12 +35,12 @@ caps.handback.revision: 30
   
  A tabela a seguir lista as colunas de dados da classe de evento.  
   
-## Notification  
+## <a name="notification"></a>Notification  
   
 |**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|A classe de evento é usada para categorizar eventos.|  
-|EventSubclass|1|1|A subclasse de evento oferece informações adicionais sobre cada classe de evento.<br /><br /> A seguinte **Id da Subclasse**:<br />                      Os pares do **Nome da Subclasse** são definidos:<br /><br /> 0: Início de Cache Proativo<br /><br /> 1: Final do Cache Proativo<br /><br /> 2: Flight Recorder Iniciado<br /><br /> 3: Flight Recorder Parado<br /><br /> 4: Propriedades de Configuração Atualizadas<br /><br /> 5: Rastreamento do SQL<br /><br /> 6: Objeto Criado<br /><br /> 7: Objeto Excluído<br /><br /> 8: Objeto Alterado<br /><br /> 9: Início da Sondagem do Cache Proativo<br /><br /> 10: Final da Sondagem do Cache Proativo<br /><br /> 11: Início do Instantâneo do Flight Recorder<br /><br /> 12: Final do Instantâneo do Flight Recorder<br /><br /> 13: Cache Proativo: objeto notificável atualizado<br /><br /> 14: Processamento Lento: iniciar processamento<br /><br /> 15: Processamento Lento: processamento concluído<br /><br /> 16: Início do Evento SessionOpened<br /><br /> 17: Final do Evento SessionOpened<br /><br /> 18: Início do Evento SessionClosing<br /><br /> 19: Final do Evento SessionClosing<br /><br /> 20: Início do Evento CubeOpened<br /><br /> 21: Final do Evento CubeOpened<br /><br /> 22: Início do Evento CubeClosing<br /><br /> 23: Final do Evento CubeClosing<br /><br /> 24: Anulação da transação solicitada|  
+|EventSubclass|1|1|A subclasse de evento oferece informações adicionais sobre cada classe de evento.<br /><br /> A seguinte **Id da Subclasse**:<br />                      Os pares do**Nome da Subclasse** são definidos:<br /><br /> 0: Início de Cache Proativo<br /><br /> 1: Final do Cache Proativo<br /><br /> 2: Flight Recorder Iniciado<br /><br /> 3: Flight Recorder Parado<br /><br /> 4: Propriedades de Configuração Atualizadas<br /><br /> 5: Rastreamento do SQL<br /><br /> 6: Objeto Criado<br /><br /> 7: Objeto Excluído<br /><br /> 8: Objeto Alterado<br /><br /> 9: Início da Sondagem do Cache Proativo<br /><br /> 10: Final da Sondagem do Cache Proativo<br /><br /> 11: Início do Instantâneo do Flight Recorder<br /><br /> 12: Final do Instantâneo do Flight Recorder<br /><br /> 13: Cache Proativo: objeto notificável atualizado<br /><br /> 14: Processamento Lento: iniciar processamento<br /><br /> 15: Processamento Lento: processamento concluído<br /><br /> 16: Início do Evento SessionOpened<br /><br /> 17: Final do Evento SessionOpened<br /><br /> 18: Início do Evento SessionClosing<br /><br /> 19: Final do Evento SessionClosing<br /><br /> 20: Início do Evento CubeOpened<br /><br /> 21: Final do Evento CubeOpened<br /><br /> 22: Início do Evento CubeClosing<br /><br /> 23: Final do Evento CubeClosing<br /><br /> 24: Anulação da transação solicitada|  
 |CurrentTime|2|5|Contém a hora atual do evento de notificação, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Contém a hora em que o evento iniciou, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Contém a hora em que o evento terminou. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
@@ -57,7 +62,7 @@ caps.handback.revision: 30
 |ServerName|43|8|Contém o nome da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na qual ocorreu o evento de notificação.|  
 |RequestProperties|45|9|Contém as propriedades da solicitação XMLA.|  
   
-## User Defined  
+## <a name="user-defined"></a>User Defined  
   
 |**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -75,7 +80,7 @@ caps.handback.revision: 30
 |TextData|42|9|Contém os dados de texto associados ao evento de notificação.|  
 |ServerName|43|8|Contém o nome da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na qual ocorreu o evento de notificação.|  
   
-## Consulte também  
- [Categoria Notification Events](../../analysis-services/trace-events/notification-events-event-category.md)  
+## <a name="see-also"></a>Consulte também  
+ [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

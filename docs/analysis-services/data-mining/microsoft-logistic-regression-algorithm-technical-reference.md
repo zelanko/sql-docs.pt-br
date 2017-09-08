@@ -1,49 +1,54 @@
 ---
-title: "Refer&#234;ncia t&#233;cnica do algoritmo Regress&#227;o Log&#237;stica da Microsoft | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "regressão logística [Analysis Services]"
-  - "parâmetro MAXIMUM_INPUT_ATTRIBUTES"
-  - "HOLDOUT_PERCENTAGE parameter"
-  - "parâmetro MAXIMUM_OUTPUT_ATTRIBUTES"
-  - "MAXIMUM_STATES parameter"
-  - "SAMPLE_SIZE parameter"
-  - "algoritmos de regressão [Analysis Services]"
-  - "HOLDOUT_SEED parameter"
+title: "Referência técnica do algoritmo de regressão logística de Microsoft | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logistic regression [Analysis Services]
+- MAXIMUM_INPUT_ATTRIBUTES parameter
+- HOLDOUT_PERCENTAGE parameter
+- MAXIMUM_OUTPUT_ATTRIBUTES parameter
+- MAXIMUM_STATES parameter
+- SAMPLE_SIZE parameter
+- regression algorithms [Analysis Services]
+- HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1f258864aae1f2dfbc41ad822d2f7f0793378843
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Refer&#234;ncia t&#233;cnica do algoritmo Regress&#227;o Log&#237;stica da Microsoft
-  O algoritmo Regressão Logística da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma variação do algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)], no qual o parâmetro *HIDDEN_NODE_RATIO* é definido como 0. Essa configuração criará um modelo de rede neural que não contém uma camada oculta e, portanto, é equivalente à regressão logística.  
+# <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Referência técnica do algoritmo Regressão Logística da Microsoft
+  O algoritmo Regressão Logística da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma variação do algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , no qual o parâmetro *HIDDEN_NODE_RATIO* é definido como 0. Essa configuração criará um modelo de rede neural que não contém uma camada oculta e, portanto, é equivalente à regressão logística.  
   
-## Implementação do algoritmo Regressão Logística da Microsoft  
+## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Implementação do algoritmo Regressão Logística da Microsoft  
  Suponha que a coluna previsível contenha apenas dois estados, mas você deseja executar uma análise de regressão, relacionando as colunas de entrada com a probabilidade de que a coluna previsível contenha um estado específico. O diagrama a seguir ilustra os resultados que você obterá se atribuir 1 e 0 aos estados da coluna previsível, calcular a probabilidade de que a coluna previsível contenha um estado específico e executar uma regressão linear em uma variável de entrada.  
   
- ![Dados modelados fracamente com regressão linear](../../analysis-services/data-mining/media/logistic-linear-regression.gif "Dados modelados fracamente com regressão linear")  
+ ![Dados modelados fracamente com regressão linear](../../analysis-services/data-mining/media/logistic-linear-regression.gif "dados modelados fracamente com regressão linear")  
   
  O eixo x contém os valores de uma coluna de entrada. O eixo y contém as probabilidades de que a coluna previsível tenha um estado ou outro. O problema disso é que a regressão linear não restringe a coluna para que fique entre 0 e 1, embora esses sejam os valores máximo e mínimo da coluna. Uma maneira de resolver isso é executar regressão logística. Em vez de criar uma linha reta, a análise de regressão logística cria uma curva em forma de "S" que contém as restrições máxima e mínima. Por exemplo, o diagrama a seguir ilustra os resultados que você obterá se executar uma regressão logística nos mesmos dados usados no exemplo anterior.  
   
- ![Dados modelados com regressão logística](../../analysis-services/data-mining/media/logistic-regression.gif "Dados modelados com regressão logística")  
+ ![Dados modelados com Regressão logística](../../analysis-services/data-mining/media/logistic-regression.gif "dados modelados com Regressão logística")  
   
  Observe como a curva nunca atinge mais do que 1 ou menos que 0. Você pode usar a regressão logística para descrever quais colunas de entrada são importantes para determinar o estado da coluna previsível.  
   
-### Seleção de recursos  
+### <a name="feature-selection"></a>Seleção de recursos  
  A seleção de recursos é usada automaticamente por todos os algoritmos de mineração de dados do Analysis Services para melhorar a análise e reduzir a carga de processamento. O método usado para seleção de recursos em um modelo de regressão logística depende do tipo de dados do atributo. Como a regressão logística se baseia no algoritmo Rede Neural da Microsoft, ela usa um subconjunto dos métodos de seleção de recursos que se aplicam às redes neurais. Para obter mais informações, consulte [Seleção de recursos &#40;Mineração de Dados&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md).  
   
-### Entradas de pontuação  
+### <a name="scoring-inputs"></a>Entradas de pontuação  
  *Pontuação* no contexto de um modelo de rede neural ou de regressão logística significa o processo de converter os valores presentes nos dados em um conjunto de valores que usam a mesma escala e, portanto, podem ser comparados. Por exemplo, vamos supor que as entradas do intervalo de Renda vão de 0 a 100.000, enquanto as entradas de [Número de Filhos] vão de 0 a 5. Esse processo de conversão lhe permite comparar a importância de cada entrada, independentemente da diferença nos valores.  
   
  Para cada estado que aparece no conjunto de treinamento, o modelo gera uma entrada. Para entradas discretas ou diferenciadas, uma entrada adicional será criada para representar o estado Ausente, se o estado ausente aparecer pelo menos uma vez no conjunto de treinamento. Para entradas contínuas, no máximo dois nós de entrada são criados: um para valores Ausentes, se presentes nos Dados de Treinamento e uma entrada para todos os valores existentes ou não nulos. Cada entrada é escalonada para um formato numérico usando o método de normalização de pontuação, `(x – μ)\StdDev`.  
@@ -54,7 +59,7 @@ caps.handback.revision: 17
   
  Valor presente:   `(X – μ)/σ ` (X é o valor real que está sendo codificado)  
   
- Valor ausente:    `-   μ/σ ` (mu negativo dividido por sigma)  
+ Valor ausente:    `-   μ/σ `  (mu negativo dividido por sigma)  
   
  **Valores discretos**  
   
@@ -64,9 +69,9 @@ caps.handback.revision: 17
   
  Valor presente:     `\(1 – μ)/σ` (um menos mu dividido por sigma)  
   
- Valor ausente:    `(– μ)/σ` (mu negativo dividido por sigma)  
+ Valor ausente:     `(– μ)/σ` (mu negativo dividido por sigma)  
   
-### Entendendo coeficientes de regressão logística  
+### <a name="understanding-logistic-regression-coefficients"></a>Entendendo coeficientes de regressão logística  
  Há vários métodos na literatura estatística para execução de regressão logística, mas uma parte importante de todos os métodos é avaliar a adequação do modelo. Várias estatísticas de adequação do ajuste foram propostas, dentre elas taxas de possibilidades e padrões de covariável. Uma análise de como medir a adequação de um modelo está além do escopo deste tópico; no entanto, você pode recuperar o valor dos coeficientes no modelo e usá-los para projetar suas próprias medidas de ajuste.  
   
 > [!NOTE]  
@@ -90,10 +95,10 @@ WHERE NODE_TYPE = 23
   
  Para obter mais informações, consulte [Exemplos de consulta de modelo de regressão logística](../../analysis-services/data-mining/logistic-regression-model-query-examples.md).  
   
-## Personalizando o algoritmo de regressão logística  
+## <a name="customizing-the-logistic-regression-algorithm"></a>Personalizando o algoritmo de regressão logística  
  O algoritmo de regressão logística de [!INCLUDE[msCoName](../../includes/msconame-md.md)] dá suporte a vários parâmetros que afetam o comportamento, o desempenho e a precisão do modelo de mineração resultante. Você também pode modificar o comportamento do modelo definindo sinalizadores de modelagem nas colunas usadas como entrada.  
   
-### Definindo parâmetros de algoritmo  
+### <a name="setting-algorithm-parameters"></a>Definindo parâmetros de algoritmo  
  A tabela a seguir descreve os parâmetros que podem ser usados com o algoritmo Regressão Logística da Microsoft.  
   
  HOLDOUT_PERCENTAGE  
@@ -128,8 +133,8 @@ WHERE NODE_TYPE = 23
   
  O padrão é 10000.  
   
-### Sinalizadores de modelagem  
- Os sinalizadores de modelagem a seguir têm suporte para uso com o algoritmo Regressão Logística de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+### <a name="modeling-flags"></a>Sinalizadores de modelagem  
+ Os sinalizadores de modelagem a seguir têm suporte para uso com o algoritmo Regressão Logística de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  NOT NULL  
  Indica que a coluna não pode conter um nulo. Um erro ocorrerá se o Analysis Services encontrar um valor nulo durante o treinamento do modelo.  
@@ -141,10 +146,10 @@ WHERE NODE_TYPE = 23
   
  Aplica-se à coluna de modelo de mineração.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Um modelo de regressão logística deve conter uma coluna de chave, colunas de entrada e pelo menos uma coluna previsível.  
   
-### Colunas de entrada e colunas previsíveis  
+### <a name="input-and-predictable-columns"></a>Colunas de entrada e colunas previsíveis  
  O algoritmo Regressão Logística de [!INCLUDE[msCoName](../../includes/msconame-md.md)] dá suporte aos tipos de conteúdo da coluna de entrada, tipos de conteúdo da coluna previsível e sinalizadores de modelagem específicos, relacionados na tabela a seguir. Para obter mais informações sobre o significado dos tipos de conteúdo quando usados em um modelo de mineração, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
 |Coluna|Tipos de conteúdo|  
@@ -152,10 +157,10 @@ WHERE NODE_TYPE = 23
 |Atributo de entrada|Contínuo, discreto, diferenciado, chave, tabela|  
 |Atributo previsível|Contínuo, discreto, diferenciado|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Algoritmo Regressão Logística da Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Exemplos de consulta de modelo de regressão linear](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md)   
+ [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Algoritmo Rede Neural da Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)  
   
   

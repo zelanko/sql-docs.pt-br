@@ -1,27 +1,32 @@
 ---
-title: "Sequence Clustering Model Query Examples | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "algoritmos de clustering de sequências [Analysis Services]"
-  - "content queries [DMX]"
-  - "sequence [Analysis Services]"
+title: "Exemplos de consulta de modelo de Clustering de sequência | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sequence clustering algorithms [Analysis Services]
+- content queries [DMX]
+- sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 580fc9147e787d22bf3a87f7ba2bc6752cf4a816
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Sequence Clustering Model Query Examples
+# <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
   Quando você cria uma consulta referente a um modelo de mineração de dados, pode criar uma consulta de conteúdo, que fornece detalhes sobre as informações armazenadas no modelo ou pode criar uma consulta de previsão, que usa os padrões no modelo para fazer previsões com base nos novos dados fornecidos. Para um modelo de clusterização de sequência, as consultas de conteúdo geralmente fornecem mais detalhes sobre os clusters encontrados ou as transições dentro desses clusters. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
   
  As consultas de previsão em um modelo de clusterização de sequência geralmente fazem recomendações com base nas sequências e transições, em atributos não sequenciais incluídos no modelo ou em uma combinação de atributos sequenciais e não sequenciais.  
@@ -41,12 +46,12 @@ caps.handback.revision: 22
  [Prever o(s) próximo(s) estado(s)](#bkmk_Query4)  
   
 ##  <a name="bkmk_ContentQueries"></a> Localizando informações sobre o Modelo de Clustering de Sequências  
- Para criar consultas significativas sobre o conteúdo de um modelo de mineração, você deve entender a estrutura do conteúdo do modelo e quais tipos de nós armazenam quais tipos de informações. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md).  
+ Para criar consultas significativas sobre o conteúdo de um modelo de mineração, você deve entender a estrutura do conteúdo do modelo e quais tipos de nós armazenam quais tipos de informações. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md).  
   
 ###  <a name="bkmk_Query1"></a> Exemplo de consulta 1: Usando o conjunto de linhas do esquema de mineração de dados para retornar parâmetros do modelo  
  Ao consultar o conjunto de linhas do esquema de mineração de dados, você pode encontrar vários tipos de informações sobre o modelo, inclusive metadados básicos, a data e a hora de criação e do último processamento do modelo, o nome da estrutura de mineração na qual o modelo se baseia e a coluna usada como o atributo previsível.  
   
- A consulta a seguir retorna os parâmetros que foram usados para criar e treinar o modelo, `[Sequence Clustering]`. Você pode criar este modelo na Lição 5 do [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md).  
+ A consulta a seguir retorna os parâmetros que foram usados para criar e treinar o modelo, `[Sequence Clustering]`. Você pode criar este modelo na Lição 5 do [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ```  
 SELECT MINING_PARAMETERS   
@@ -152,7 +157,7 @@ WHERE NODE_UNIQUE_NAME = '1081365'
   
  Esta seção fornece alguns exemplos de como usar os procedimentos armazenados de sistema para criar consultas referentes a um modelo de clusterização de sequência:  
   
-#### Perfis de cluster e casos de exemplo  
+#### <a name="cluster-profiles-and-sample-cases"></a>Perfis de cluster e casos de exemplo  
  A guia Perfis de cluster mostra uma lista de clusters no modelo, o tamanho de cada cluster e um histograma que indica os estados inclusos no cluster. Há dois procedimentos armazenados de sistema que você pode usar em consultas para recuperar informações semelhantes:  
   
 -   `GetClusterProfile` retorna as características do cluster, com todas as informações encontradas na tabela NODE_DISTRIBUTION do cluster.  
@@ -181,9 +186,9 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetNodeGraph
 SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')  
 ```  
   
- Para obter mais informações, consulte [SELECT FROM &#60;model&#62;.SAMPLE CASES &#40;DMX&#41;](../Topic/SELECT%20FROM%20%3Cmodel%3E.SAMPLE_CASES%20\(DMX\).md).  
+ Para obter mais informações, consulte [SELECT FROM &#60;model&#62;.SAMPLE CASES &#40;DMX&#41;](../../dmx/select-from-model-sample-cases-dmx.md).  
   
-#### Características e discriminação do cluster  
+#### <a name="cluster-characteristics-and-cluster-discrimination"></a>Características e discriminação do cluster  
  A guia **Características do Cluster** resume os atributos principais de cada cluster, classificados por probabilidade. Você pode descobrir quantos casos pertencem a um cluster e como é a distribuição de casos no cluster: cada característica tem um certo suporte. Para visualizar as características de um cluster específico, você deve saber a ID do cluster.  
   
  Os exemplos a seguir usam o procedimento armazenado de sistema `GetClusterCharacteristics`para retornar todas as características de Cluster 12 que têm uma pontuação de probabilidade acima do limite especificado de 0,0005.  
@@ -206,12 +211,12 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  Se você quiser escrever sua própria consulta em DMX para comparar dois clusters ou comparar um cluster com seu complemento, primeiro será necessário recuperar um conjunto de características e depois recuperar as características do cluster específico no qual há interesse e comparar os dois conjuntos. Este cenário é mais complicado e normalmente requer algum processamento de cliente.  
   
-#### Estados e transições  
+#### <a name="states-and-transitions"></a>Estados e transições  
  A guia **Transições de Estado** de MSC executa consultas complicadas no back-end para recuperar e comparar as estatísticas para clusters diferentes. Reproduzir esses resultados requer uma consulta mais complexa e algum processamento de cliente.  
   
  No entanto, você pode usar as consultas DMX descritas no Exemplo 2 da seção [Consultas de conteúdo](#bkmk_ContentQueries)para recuperar probabilidades e estados para sequências ou para transições individuais.  
   
-## Usando o modelo para fazer previsões  
+## <a name="using-the-model-to-make-predictions"></a>Usando o modelo para fazer previsões  
  As consultas de previsão em um modelo de clusterização de sequência podem usar muitas das funções de previsão utilizadas com outros modelos de clusterização. Além disso, é possível usar a função de previsão especial, [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md), para fazer recomendações ou para prever os próximos estados.  
   
 ###  <a name="bkmk_Query4"></a> Exemplo de consulta 4: Prever o próximo estado ou estados  
@@ -235,7 +240,7 @@ AS t
 |1||Capacete para Ciclismo|  
 |2||Capacete para Ciclismo|  
 |3||Sport-100|  
-|4||Camisa esportiva com logotipo de manga comprida|  
+|4||Jersey Logo de manga longa|  
 |5||Luvas de meio dedo|  
 |6||Suporte de bicicleta multifuncional|  
 |7||Suporte de bicicleta multifuncional|  
@@ -248,7 +253,7 @@ AS t
   
  Os valores nas linhas 6 e 7 são espaços reservados. Quando você chega ao fim da cadeia de transições possíveis, em vez de encerrar os resultados da previsão, o valor que foi passado como entrada é adicionado aos resultados. Por exemplo, se você aumentou o número de previsões para 20, os valores das linhas 6 a 20 serão iguais, Suporte de bicicleta multifuncional.  
   
-## Lista de funções  
+## <a name="function-list"></a>Lista de funções  
  Todos os algoritmos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] dão suporte a um conjunto comum de funções. No entanto, o algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering dá suporte às funções adicionais relacionadas na tabela a seguir.  
   
 |||  
@@ -271,10 +276,10 @@ AS t
   
  Para obter uma lista das funções comuns a todos os algoritmos [!INCLUDE[msCoName](../../includes/msconame-md.md)], consulte [Funções de previsão gerais &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Para obter a sintaxe de funções específicas, consulte [Referência de função de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md)   
- [Referência técnica do algoritmo MSC](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Algoritmo MSC](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md)  
+ [Referência técnica do algoritmo msc](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

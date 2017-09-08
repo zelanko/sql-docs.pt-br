@@ -1,28 +1,33 @@
 ---
-title: "Mover um banco de dados do Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "movendo bancos de dados [Analysis Services]"
-  - "movendo bancos de dados"
-  - "operações [Analysis Services - Dados Multidimensionais]"
+title: Mover um Analysis Services do banco de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- moving databases [Anlysis Services]
+- moving databases
+- operations [Analysis Services - multidimensional data]
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 73d410fdb16765b5ae1022362f11be8e918140fa
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Mover um banco de dados do Analysis Services
+# <a name="move-an-analysis-services-database"></a>Mover um banco de dados do Analysis Services
   Frequentemente, há situações em que um dba (administrador de banco de dados) [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quer mover um modelo de banco de dados multidimensional ou de tabela para um local diferente. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como a movimentação do banco de dados para um disco diferente em busca de um melhor desempenho, a obtenção de espaço para o crescimento do banco de dados ou para a atualização de um produto.  
   
  Um banco de dados pode ser movido de muitas formas. Este documento explica os cenários comuns a seguir:  
@@ -38,9 +43,9 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  Desanexar um banco de dados sem atribuir uma senha a ele deixa o banco de dados em um estado não seguro. Recomendamos atribuir uma senha ao banco de dados para proteger informações confidenciais. Além disso, a segurança de acesso correspondente deve ser aplicada à pasta do banco de dados, subpastas e arquivos para impedir o acesso não autorizado a ele.  
   
-## Procedimentos  
+## <a name="procedures"></a>Procedimentos  
   
-#### Movendo um banco de dados de maneira interativa usando SSMS  
+#### <a name="moving-a-database-interactively-using-ssms"></a>Movendo um banco de dados de maneira interativa usando SSMS  
   
 1.  Localize o banco de dados a ser movido no painel esquerdo ou direito do SSMS.  
   
@@ -54,13 +59,13 @@ caps.handback.revision: 14
   
 6.  Clique com o botão direito do mouse na pasta **Bancos de Dados** e selecione **Anexar...**  
   
-7.  Na caixa de texto **pasta**, digite o novo local da pasta do banco de dados. Como alternativa, use o botão Procurar (**…**) para localizar a pasta do banco de dados.  
+7.  Na caixa de texto **pasta** , digite o novo local da pasta do banco de dados. Como alternativa, use o botão Procurar (**…**) para localizar a pasta do banco de dados.  
   
 8.  Selecione o modo **ReadWrite** do banco de dados.  
   
 9. Digite a senha usada na etapa 3 e clique em **OK** para executar o comando Anexar.  
   
-#### Movendo um banco de dados que usa AMO programaticamente  
+#### <a name="moving-a-database-programmatically-using-amo"></a>Movendo um banco de dados que usa AMO programaticamente  
   
 1.  Em seu aplicativo C#, adapte o seguinte código de amostra e conclua as tarefas indicadas.  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 14
   
 2.  Compile e execute seu código para mover o banco de dados.  
   
-#### Movendo um banco de dados por script usando XMLA  
+#### <a name="moving-a-database-by-script-using-xmla"></a>Movendo um banco de dados por script usando XMLA  
   
 1.  Abra uma nova guia XMLA no SSMS.  
   
@@ -136,12 +141,12 @@ caps.handback.revision: 14
   
  `</Attach>`  
   
-1.  Substitua `%dbFolder%` pelo caminho UNC completo da pasta do banco de dados, `%ReadOnlyMode%` pelo valor correspondente **ReadOnly** ou **ReadWrite** e `%password%` pela senha. Os caracteres % fazem parte do modelo e devem ser removidos.  
+1.  Substitua `%dbFolder%` pelo caminho UNC completo da pasta do banco de dados, `%ReadOnlyMode%` pelo valor correspondente **ReadOnly** ou **ReadWrite**e `%password%` pela senha. Os caracteres % fazem parte do modelo e devem ser removidos.  
   
 2.  Execute o comando XMLA.  
   
-## Consulte também  
- <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
+## <a name="see-also"></a>Consulte também  
+ <xref:Microsoft.AnalysisServices.Core.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Anexar e desanexar bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Local de armazenamento do banco de dados](../../analysis-services/multidimensional-models/database-storage-location.md)   

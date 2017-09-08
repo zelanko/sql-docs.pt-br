@@ -1,32 +1,37 @@
 ---
-title: "Bancos de dados de modelo multidimensional (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Management Studio [Analysis Services], databases"
-  - "SQL Server Analysis Services, databases"
-  - "SSAS, databases"
-  - "Analysis Services, databases"
-  - "databases [Analysis Services], designing"
-  - "Business Intelligence Development Studio, databases [Analysis Services]"
-  - "databases [Analysis Services]"
+title: Bancos de dados de modelo multidimensional (SSAS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Management Studio [Analysis Services], databases
+- SQL Server Analysis Services, databases
+- SSAS, databases
+- Analysis Services, databases
+- databases [Analysis Services], designing
+- Business Intelligence Development Studio, databases [Analysis Services]
+- databases [Analysis Services]
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
 caps.latest.revision: 55
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 55
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b9b4fa79c4ef7a37158c1fbeea32a80c56effa2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Bancos de dados de modelo multidimensional (SSAS)
+# <a name="multidimensional-model-databases-ssas"></a>Bancos de dados de modelo multidimensional (SSAS)
   Um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é uma coleção de fontes de dados, exibições da fontes de dados, cubos, dimensões e funções. Opcionalmente, um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode incluir estruturas para mineração de dados e assemblies personalizados que fornecem um modo de você adicionar funções definidas pelo usuário ao banco de dados.  
   
  Os cubos são os objetos de consulta fundamentais no Analysis Services. Ao se conectar a um banco de dados do Analysis Services, via um aplicativo cliente, você se conecta a um cubo dentro desse banco de dados. Um banco de dados poderá conter vários cubos se você estiver reutilizando dimensões, assemblies, funções ou estruturas de mineração em vários contextos.  
@@ -39,7 +44,7 @@ caps.handback.revision: 55
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utiliza a integração com o software de controle do código-fonte para que vários desenvolvedores possam trabalhar ao mesmo tempo com objetos diferentes em um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . O desenvolvedor também pode interagir diretamente com um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , em vez de fazê-lo através de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mas corre o risco de os objetos do banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ficarem fora de sincronia com o projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que foi usado nessa implantação. Depois da implantação, use o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para administrar o banco de dados do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Também é possível fazer determinadas alterações no banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], como em partições e funções, que também podem fazer com os objetos do banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fiquem fora de sincronia com o projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que foi usado nessa implantação.  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  [Anexar e desanexar bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
  [Backup e restauração de bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
@@ -60,7 +65,7 @@ caps.handback.revision: 55
   
  [Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Conectar em Modo Online a um Banco de Dados do Analysis Services](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)   
  [Criar um projeto do Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)   
  [Consultando dados multidimensionais com MDX](../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  

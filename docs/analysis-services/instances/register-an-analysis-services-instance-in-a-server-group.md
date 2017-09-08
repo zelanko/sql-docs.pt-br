@@ -1,27 +1,32 @@
 ---
-title: "Registrar uma inst&#226;ncia do Analysis Services em um grupo de servidores | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Registrar uma instância do Analysis Services em um grupo de servidores | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7096b27b40d42ce11035feee9871a151c1460c76
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Registrar uma inst&#226;ncia do Analysis Services em um grupo de servidores
+# <a name="register-an-analysis-services-instance-in-a-server-group"></a>Registrar uma instância do Analysis Services em um grupo de servidores
   Se houver um grande número de instâncias de servidor do Analysis Services, você poderá criar grupos de servidores no Management Studio para facilitar a administração de servidor. O propósito de um grupo de servidores é fornecer proximidade entre um grupo de servidores relacionados dentro do espaço de trabalho administrativo. Por exemplo, vamos supor que você receba a tarefa de gerenciar dez instâncias separadas do Analysis Services. Agrupá-los por modo de servidor, critérios de tempo de atividade ou por departamento ou região permitiria a você exibir e se conectar a instâncias que compartilham as mesmas características com mais facilidade. Também é possível adicionar informações descritivas que ajudam você a se lembrar de como o servidor é usado.  
   
- ![Painel Servidor Registrado com servidores membros](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "Painel Servidor Registrado com servidores membros")  
+ ![Painel do servidor registrado com servidores membro](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "painel servidor registrado com servidores de membro")  
   
  É possível criar grupos de servidores em uma estrutura hierárquica. O Grupo de Servidores Local é o nó raiz. Ele sempre contém instâncias do Analysis Services executadas no computador local. Você pode adicionar servidores remotos a qualquer grupo, inclusive o grupo local.  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 8
   
  As informações de conexão definidas para o servidor, inclusive o nome do servidor, são mantidas com o registro de servidor. Não é possível modificar as informações de conexão, nem usar o nome registrado ao se conectar ao servidor usando outras ferramentas.  
   
-## Criar um grupo de servidores e adicionar servidores registrados  
+## <a name="create-a-server-group-and-add-registered-servers"></a>Criar um grupo de servidores e adicionar servidores registrados  
   
 1.  No Management Studio, clique em Servidores Registrados no menu Exibir para abrir o painel Servidores Registrados no espaço de trabalho. Por padrão, um Grupo de Servidores local já está criado. Todas as instâncias do Analysis Services em execução no servidor local são membros.  
   

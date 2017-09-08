@@ -1,36 +1,41 @@
 ---
-title: "Propriedades de mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "propriedade LowMemoryLimit"
-  - "propriedade MinimumAllocatedMemory"
-  - "propriedade MidMemoryPrice"
-  - "propriedade MemoryHeapType"
-  - "memória [Analysis Services]"
-  - "propriedade DefaultPagesCountToReuse"
-  - "propriedade TotalMemoryLimit"
-  - "propriedade SessionMemoryLimit"
-  - "propriedade VirtualMemoryLimit"
-  - "propriedade WaitCountIfHighMemory"
-  - "propriedade HighMemoryPrice"
-  - "propriedade HeapTypeForObjects"
+title: "Propriedades de memória | Microsoft Docs"
+ms.custom: 
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- LowMemoryLimit property
+- MinimumAllocatedMemory property
+- MidMemoryPrice property
+- MemoryHeapType property
+- memory [Analysis Services]
+- DefaultPagesCountToReuse property
+- TotalMemoryLimit property
+- SessionMemoryLimit property
+- VirtualMemoryLimit property
+- WaitCountIfHighMemory property
+- HighMemoryPrice property
+- HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a26f0b5272c12e45ed1bf99c0d297fa7f89773ae
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propriedades de mem&#243;ria
-  O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pré-aloca um volume modesto de memória na inicialização para que solicitações possam ser manipuladas imediatamente. Mais memória é alocada como consulta e as cargas de trabalho de processamento aumentam. 
+# <a name="memory-properties"></a>Propriedades de memória
+  O[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pré-aloca um volume modesto de memória na inicialização para que solicitações possam ser manipuladas imediatamente. Mais memória é alocada como consulta e as cargas de trabalho de processamento aumentam. 
   
   Ao especificar definições de configuração, você pode controlar os limites nos quais a memória é liberada. Por exemplo, a configuração **HardMemoryLimit** especifica uma condição de falta de memória imposta automaticamente (por padrão, esse limite não é habilitado), em que novas solicitações são rejeitadas totalmente até que mais recursos estejam disponíveis.
   
@@ -101,7 +106,7 @@ Quando definido como 1, o processamento apresenta menor probabilidade de falhar 
 **-1** | (padrão) Automático. O mecanismo decidirá qual delas usar.
 **1** | HEAP do Analysis Services.
 **2** | LFH do Windows.
-**5** | Alocador híbrido. Esse alocador usará o LFH do Windows para \< = alocações de 16 KB e o Heap AS para > alocações de 16 KB. 
+**5** | Alocador híbrido. Este alocador usará LFH do Windows para \<= alocações de 16 KB e o Heap como > alocações de 16 KB. 
 **6** | Alocador TBB Intel. Disponível no Analysis Services do SQL Server 2016 SP1 (e posterior).
   
   
@@ -137,7 +142,8 @@ Quando definido como 1, o processamento apresenta menor probabilidade de falhar 
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="see-also"></a>Consulte também  
- [Propriedades do servidor no Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
+ [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determina o Modo de Servidor de uma instância do Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)
   
+

@@ -1,26 +1,31 @@
 ---
-title: "Exemplos de consulta de modelo de regress&#227;o log&#237;stica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "regressão logística [Analysis Services]"
-  - "consultas a conteúdo [DMX]"
+title: "Exemplos de consulta de modelo de regressão logística | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logistic regression [Analysis Services]
+- content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b329e0883ef165a01577cd536a8030640c99d2e7
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Exemplos de consulta de modelo de regress&#227;o log&#237;stica
+# <a name="logistic-regression-model-query-examples"></a>Exemplos de consulta de modelo de regressão logística
   Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo que fornece detalhes de padrões encontrados em análises ou uma consulta de previsão que usa os padrões no modelo para fazer previsões com os novos dados.  
   
  Esta seção explica como criar consultas para modelos baseados no algoritmo Regressão Logística da Microsoft.  
@@ -38,11 +43,11 @@ caps.handback.revision: 22
  [Fazendo previsões para um valor discreto](#bkmk_Query4)  
   
 ##  <a name="bkmk_top"></a> Obtendo informações sobre o Modelo de Regressão Logística  
- Os modelos de regressão logística são criados com o uso do algoritmo Rede Neural da Microsoft com um conjunto especial de parâmetros; portanto, um modelo de regressão logística tem algumas das mesmas informações que um modelo de redes neurais, só que é mais complexo. Para entender a estrutura do conteúdo do modelo e quais tipos de nós armazenam quais tipos de informações, consulte [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md).  
+ Os modelos de regressão logística são criados com o uso do algoritmo Rede Neural da Microsoft com um conjunto especial de parâmetros; portanto, um modelo de regressão logística tem algumas das mesmas informações que um modelo de redes neurais, só que é mais complexo. Para entender a estrutura do conteúdo do modelo e quais tipos de nós armazenam quais tipos de informações, consulte [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
- Para acompanhar os cenários de consulta, você pode criar um modelo de regressão logística conforme descrito na seção seguinte do Tutorial Intermediário de Mineração de Dados: [Lição 5: Criando modelos de rede neural e de regressão logística &#40;Tutorial intermediário de Data Mining&#41;](../Topic/Lesson%205:%20Building%20Neural%20Network%20and%20Logistic%20Regression%20Models%20\(Intermediate%20Data%20Mining%20Tutorial\).md).  
+ Para acompanhar os cenários de consulta, você pode criar um modelo de regressão logística conforme descrito na seção seguinte do Tutorial Intermediário de Mineração de Dados: [Lição 5: Criando modelos de rede neural e de regressão logística &#40;Tutorial intermediário de Data Mining&#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b).  
   
- Você também pode usar a estrutura de mineração, Correspondência destinada, do [Tutorial básico de mineração de dados](../Topic/Basic%20Data%20Mining%20Tutorial.md).  
+ Você também pode usar a estrutura de mineração, Correspondência destinada, do [Tutorial básico de mineração de dados](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ```  
 ALTER MINING STRUCTURE [Targeted Mailing]  
@@ -99,12 +104,12 @@ FROM [TM_Logistic Regression].CONTENT
 |Distância do Trabalho|Ausente|0|0|0|1|  
 |Distância do Trabalho|8-16 quilômetros|3033|0.173472889|0|4|  
   
- A consulta real retorna muito mais linhas; no entanto, este exemplo demonstra o tipo de informações fornecidas sobre as entradas. Para entradas discretas, cada valor possível é listado na tabela. Para entradas de valor contínuo, como Idade, uma listagem completa é impossível, portanto a entrada é de dados discretos como uma média. Para obter mais informações sobre como usar as informações no nó de estatísticas marginais, consulte [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Mineração de Dados&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md).  
+ A consulta real retorna muito mais linhas; no entanto, este exemplo demonstra o tipo de informações fornecidas sobre as entradas. Para entradas discretas, cada valor possível é listado na tabela. Para entradas de valor contínuo, como Idade, uma listagem completa é impossível, portanto a entrada é de dados discretos como uma média. Para obter mais informações sobre como usar as informações no nó de estatísticas marginais, consulte [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
 > [!NOTE]  
 >  Os resultados foram simplificados para facilitar a visualização, mas você poderá retornar a tabela aninhada em uma única coluna se seu provedor oferecer suporte a conjuntos de linhas hierárquicos.  
   
-## Consultas de previsão em um modelo de regressão logística  
+## <a name="prediction-queries-on-a-logistic-regression-model"></a>Consultas de previsão em um modelo de regressão logística  
  Você pode usar a função [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md) com todo tipo de modelo de mineração para fornecer dados novos ao modelo e para fazer previsões com base nos novos valores. Também é possível usar funções para retornar mais informações sobre a previsão, como a probabilidade de uma previsão estar correta. Esta seção fornece alguns exemplos de consultas de previsão em um modelo de regressão logística.  
   
 ###  <a name="bkmk_Query3"></a> Exemplo de consulta 3: Fazendo previsões para um valor contínuo  
@@ -130,7 +135,7 @@ NATURAL PREDICTION JOIN
 |0.102601830123659|0.102601830123659|83.0232558139535|0.988372093023256|0|0.00120552660600087|0.034720694203902|  
 |||0.976744186046512|0.0116279069767442|0.0116279069767442|0|0|  
   
- Para obter mais informações sobre a probabilidade, suporte e valores de desvio padrão na tabela aninhada NODE_DISTRIBUTION, consulte [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Mineração de Dados&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md).  
+ Para obter mais informações sobre a probabilidade, suporte e valores de desvio padrão na tabela aninhada NODE_DISTRIBUTION, consulte [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
 ###  <a name="bkmk_Query4"></a> Exemplo de consulta 4: Fazendo previsões para um valor discreto  
  A regressão logística normalmente é usada em cenários onde você deseja analisar os fatores que contribuem para um resultado binário. Embora o modelo usado no tutorial preveja um valor contínuo, **ServiceGrade**, em um cenário de vida real, você pode desejar configurar o modelo para prever se o nível de serviço atendeu a algum valor de destino de dados discretos. Como alternativa, você pode produzir as previsões usando um valor contínuo, mas posteriormente agrupar os resultados previstos em **Bom**, **Razoável**ou **Fraco**.  
@@ -139,7 +144,7 @@ NATURAL PREDICTION JOIN
   
  O procedimento a seguir descreve como alterar o agrupamento de valores de Nível de Serviço nos dados do Call Center.  
   
-##### Para criar uma versão diferenciada da estrutura de mineração e modelos de Call Center  
+##### <a name="to-create-a-discretized-version-of-the-call-center-mining-structure-and-models"></a>Para criar uma versão diferenciada da estrutura de mineração e modelos de Call Center  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], no Gerenciador de Soluções, expanda **Estruturas de Mineração**.  
   
@@ -151,7 +156,7 @@ NATURAL PREDICTION JOIN
   
 5.  Clique duas vezes na nova estrutura de mineração para abri-la no designer. Observe que todos os modelos de mineração também foram copiados e que todos têm a extensão 1. Deixe os nomes como estão por enquanto.  
   
-6.  Na guia **Estrutura de Mineração**, clique com o botão direito do mouse na coluna Nível de Serviço e selecione **Propriedades**.  
+6.  Na guia **Estrutura de Mineração** , clique com o botão direito do mouse na coluna Nível de Serviço e selecione **Propriedades**.  
   
 7.  Altere a propriedade **Content** de **Contínua** para **Dados Discretos**. Altere a propriedade **DiscretizationMethod** para **Clusters**. Para BucketCount de Dados Discretos, digite **3**.  
   
@@ -184,7 +189,7 @@ NATURAL PREDICTION JOIN
   
  Observe que os resultados previstos foram agrupados em três categorias conforme especificado. No entanto, esses agrupamentos são baseados no clustering de valores reais nos dados, não valores arbitrários que você pode definir como metas comerciais.  
   
-## Lista de funções de previsão  
+## <a name="list-of-prediction-functions"></a>Lista de funções de previsão  
  Todos os algoritmos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] dão suporte a um conjunto comum de funções. Entretanto, o algoritmo Regressão Logística da [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece suporte às funções adicionais relacionadas na tabela a seguir.  
   
 |||  
@@ -203,11 +208,11 @@ NATURAL PREDICTION JOIN
 > [!NOTE]  
 >  Para modelos de rede neural e regressão logística, a função [PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md) retorna um único valor que representa o tamanho do conjunto de treinamento de todo o modelo.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algoritmo Regressão Logística da Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Referência técnica do algoritmo Regressão Logística da Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
- [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md)   
- [Lição 5: Criando modelos de rede neural e de regressão logística &#40;Tutorial intermediário de Data Mining&#41;](../Topic/Lesson%205:%20Building%20Neural%20Network%20and%20Logistic%20Regression%20Models%20\(Intermediate%20Data%20Mining%20Tutorial\).md)  
+ [Referência técnica do algoritmo de regressão logística de Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
+ [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [Lição 5: Criando Neural Network e modelos de regressão logística &#40; Tutorial de mineração de dados intermediário &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

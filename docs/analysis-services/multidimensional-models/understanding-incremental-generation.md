@@ -1,29 +1,34 @@
 ---
-title: "Entendendo a gera&#231;&#227;o com incremento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "geração com incremento [Analysis Services]"
-  - "Assistente de Geração de Esquema, geração incremental"
-  - "esquema relacional [Analysis Services], geração incremental"
+title: "Noções básicas sobre geração Incremental | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental generation [Analysis Services]
+- Schema Generation Wizard, incremental generation
+- relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9e2b3bcd255c35dc0085266ea40c23bd705bbb1e
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Entendendo a gera&#231;&#227;o com incremento
-  Após a geração de esquema inicial, você pode alterar as definições do cubo e das dimensões usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e, em seguida, executar novamente o Assistente de Geração de Esquema. O assistente atualiza o esquema do banco de dados da área de assunto e da exibição da fonte de dados associada para refletir as mudanças, mantendo, na medida do possível, os dados que já existem nas tabelas que serão geradas novamente. Se você alterou as tabelas depois da geração inicial, o Assistente de Geração de Esquema preservará essas alterações sempre que possível usando as seguintes regras:  
+# <a name="understanding-incremental-generation"></a>Entendendo a geração com incremento
+  Após a geração de esquema inicial, você pode alterar as definições do cubo e das dimensões usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e, em seguida, executar novamente o Assistente de Geração de Esquema. O assistente atualiza o esquema do banco de dados da área de assunto e da exibição da fonte de dados associada para refletir as mudanças, mantendo, na medida do possível, os dados que já existem nas tabelas que serão geradas novamente. Se você alterou as tabelas depois da geração inicial, o Assistente de Geração de Esquema preservará essas alterações sempre que possível usando as seguintes regras:  
   
 -   Se uma tabela foi previamente gerada pelo assistente, ela será substituída. Você pode evitar que a tabela gerada pelo assistente seja substituída alterando a propriedade **AllowChangesDuringGeneration** da tabela da exibição da fonte de dados para **false**. Quando você assume o controle de uma tabela, ela passa a ser tratada como qualquer outra tabela definida pelo usuário e não é afetada durante a nova geração. Depois de remover uma tabela da nova geração, você pode alterar a propriedade **AllowChangesDuringGeneration** da tabela da exibição da fonte de dados para **true** e reabri-la para fazer as alterações do assistente. Para obter mais informações, consulte [Alterar propriedades em uma exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md).  
   
@@ -31,13 +36,13 @@ caps.handback.revision: 29
   
  Quando o Assistente de Geração de Esquema gerar novamente as tabelas que antes eram geradas no banco de dados da área de assunto, pode ser preferível que o assistente preserve os dados existentes nessas tabelas.  
   
-## Oferecendo suporte a preservação dos dados  
+## <a name="supporting-data-preservation"></a>Oferecendo suporte a preservação dos dados  
  Como regra geral, o Assistente de Geração de Esquema preserva os dados que estão armazenados nas tabelas por ele geradas. Além disso, se você adicionar colunas a tabelas que o assistente gerou, este preservará também os dados. Você pode usar esse recurso para adicionar ou modificar dimensões e cubos e, em seguida, gerar novamente os objetos subjacentes sem precisar recarregar os dados armazenados nas tabelas subjacentes.  
   
 > [!NOTE]  
 >  Se você estiver carregando dados de arquivos de texto delimitados, poderá também decidir se o Assistente de Geração de Esquema substituirá esses arquivos e os dados neles contidos durante a nova geração. Os arquivos de texto podem ser totalmente substituídos ou não. O Assistente de Geração de Esquema não substitui os arquivos parcialmente. Por padrão, esses arquivos não são substituídos.  
   
-### Preservação parcial  
+### <a name="partial-preservation"></a>Preservação parcial  
  O Assistente de Geração de Esquema não pode preservar os dados existentes em algumas situações. A tabela a seguir fornece exemplos de situações em que o assistente não é capaz de preservar todos os dados existentes nas tabelas subjacentes durante a nova geração.  
   
 |Alteração do tipo de dados|Tratamento|  
@@ -48,7 +53,7 @@ caps.handback.revision: 29
   
  O Assistente de Geração de Esquema emite um aviso antes de descartar os dados, de modo que é possível cancelar o assistente sem perder dados. No entanto, o Assistente de Geração de Esquema não consegue diferenciar entre a perda de dados prevista e a perda de dados imprevista. Quando você executa o assistente, uma caixa de diálogo lista as tabelas e colunas que contêm dados que serão descartados. Você pode deixar o assistente prosseguir e descartar os dados ou cancelá-lo e revisar as alterações feitas nas tabelas e colunas.  
   
-## Suporte para alterações em cubos e dimensões  
+## <a name="supporting-cube-and-dimension-changes"></a>Suporte para alterações em cubos e dimensões  
  Quando você altera as propriedades de dimensões e cubos, o Assistente de Geração de Esquema gera novamente os objetos apropriados no banco de dados da área de assunto subjacente, bem como da exibição da fonte de dados relacionada, conforme descrito na tabela a seguir.  
   
  Excluindo um objeto, como uma dimensão, cubo ou atributo.  
@@ -65,7 +70,7 @@ caps.handback.revision: 29
   
  Se o Assistente de Geração de Esquema não puder fazer a alteração necessária porque existe um objeto de usuário no banco de dados da área de assunto (porque o Database Engine retorna um erro), ocorrerá uma falha do Assistente de Geração de Esquema e ele exibirá o erro retornado pelo Database Engine. Por exemplo, se você criar uma restrição de chave primária ou um índice não clusterizado de uma tabela depois que o assistente gerar novamente a tabela, o Assistente de Geração de Esquema não descartará essa tabela porque ele não criou a restrição nem o índice.  
   
-## Suporte a alterações de esquema  
+## <a name="supporting-schema-changes"></a>Suporte a alterações de esquema  
  Quando você alterar as propriedades de tabelas ou colunas do banco de dados da área de assunto ou da exibição da fonte de dados associada, o Assistente de Geração de Esquema tratará as alterações conforme descrito na tabela a seguir.  
   
  Exclusão de uma tabela ou uma coluna gerada pelo Assistente de Geração de Esquema.  
@@ -75,16 +80,16 @@ caps.handback.revision: 29
  Se você modificar as propriedades de uma tabela ou coluna gerada pelo Assistente de Geração de Esquema, o assistente gerará a tabela alterada sem a alteração. Por exemplo, se você alterar o tipo de dados, a nulidade de uma coluna ou o grupo de arquivos de uma tabela gerada pelo Assistente de Geração de Esquema, a alteração não será preservada após a nova geração. O assistente não fornece nenhum aviso de que o objeto alterado será gerado novamente sem a alteração.  
   
  Adição de uma coluna a uma tabela gerada pelo Assistente de Geração de Esquema ou de uma tabela ao banco de dados da área de assunto ou ao banco de dados da área de preparação.  
- Se você adicionar uma coluna a uma tabela gerada pelo Assistente de Geração de Esquema, o assistente preservará a coluna adicional além de todos os dados armazenados nela durante a nova geração. No entanto, se você adicionar uma tabela gerada ao banco de dados da área de assunto ou ao banco de dados da área de preparação, o Assistente de Geração de Esquema não incorporará a nova tabela. A coluna, ou tabela, adicionada não aparecerá no projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], no banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], nos pacotes DTS, na exibição da fonte de dados ou em nenhum outro ponto do esquema que é gerado.  
+ Se você adicionar uma coluna a uma tabela gerada pelo Assistente de Geração de Esquema, o assistente preservará a coluna adicional além de todos os dados armazenados nela durante a nova geração. No entanto, se você adicionar uma tabela gerada ao banco de dados da área de assunto ou ao banco de dados da área de preparação, o Assistente de Geração de Esquema não incorporará a nova tabela. A coluna, ou tabela, adicionada não aparecerá no projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , no banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , nos pacotes DTS, na exibição da fonte de dados ou em nenhum outro ponto do esquema que é gerado.  
   
-## Suporte a alterações em fontes de dados e em exibições da fonte de dados  
+## <a name="supporting-data-source-and-data-source-view-changes"></a>Suporte a alterações em fontes de dados e em exibições da fonte de dados  
  Quando o Assistente de Geração de Esquema é executado novamente, ele reutiliza a fonte de dados e a exibição da fonte de dados usadas na geração original. Se você adicionar uma fonte de dados ou uma exibição da fonte de dados, o assistente não a usará. Se você excluir a fonte de dados ou a exibição da fonte de dados original depois da geração inicial, execute o assistente desde o início. Também são excluídas todas as configurações anteriores do assistente. Todos os objetos existentes em um banco de dados subjacente que estavam vinculados a uma fonte de dados ou exibição de fonte de dados excluída serão tratados como objetos criados pelo usuário na próxima vez que você executar o Assistente de Geração de Esquema.  
   
  Se a exibição da fonte de dados não refletir o estado real do banco de dados subjacente no momento da geração, o Assistente de Geração de Esquema pode encontrar erros ao gerar esquemas para o banco de dados da área de assunto ou da área de preparação. Por exemplo, se a exibição da fonte de dados especificar que o tipo de dados de uma coluna deve ser configurado como **int**, mas, na verdade, o tipo de dados da coluna estiver configurado como **string**, o Assistente de Geração de Esquema definirá o tipo de dados da chave estrangeira como **int** de acordo com a exibição da fonte de dados e, em seguida, não conseguirá criar a relação pois o tipo de dados real é **string**.  
   
  Por outro lado, se você alterar a cadeia de conexão da fonte de dados para um banco de dados diferente daquele usado na geração anterior, nenhum erro será gerado. O novo banco de dados será usado e nenhuma alteração será feita no banco de dados anterior.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Gerenciar alterações em exibições da fonte de dados e em fontes de dados](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
  [Assistente de Geração de Esquema &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   

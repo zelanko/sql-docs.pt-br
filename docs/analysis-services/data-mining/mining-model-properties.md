@@ -1,29 +1,34 @@
 ---
-title: "Propriedades do modelo de minera&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modelos de mineração [Analysis Services], propriedades"
-  - "mineração de dados [Analysis Services], propriedades"
-  - "colunas [mineração de dados], propriedades"
-  - "Designer de Mineração de Dados"
-  - "propriedades [mineração de dados]"
+title: "Propriedades do modelo de mineração | Microsoft Docs"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining models [Analysis Services], properties
+- data mining [Analysis Services], properties
+- columns [data mining], properties
+- Data Mining Designer
+- properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1fa45b604df0a118936f903491e707bd09d58295
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propriedades do modelo de minera&#231;&#227;o
+# <a name="mining-model-properties"></a>Propriedades do modelo de mineração
   Os modelos de mineração têm os seguintes tipos de propriedades:  
   
 -   As propriedades que são herdadas da estrutura de mineração que definem o tipo de dados e o tipo de conteúdo dos dados usados pelo modelo;  
@@ -36,7 +41,7 @@ caps.handback.revision: 32
   
  Sempre que você alterar uma propriedade de um modelo, deve processar novamente o modelo para que as alterações sejam refletidas no modelo. O reprocessamento é necessário mesmo se a alteração envolver apenas metadados, como a adição de um alias ou descrição de coluna.  
   
-## Propriedades de modelos  
+## <a name="properties-of-models"></a>Propriedades de modelos  
  A tabela a seguir descreve as propriedades que são específicas para modelos de mineração. Adicionalmente, há propriedades que você pode definir em colunas individuais na mineração  
   
 |Propriedade|Description|  
@@ -47,7 +52,7 @@ caps.handback.revision: 32
 |**Nome**|Define o nome do modelo de mineração.|  
 |**AllowDrillThrough**|Especifica se a análise está habilitada no modelo de mineração.|  
   
-## Propriedades das colunas de modelo  
+## <a name="properties-of-model-columns"></a>Propriedades das colunas de modelo  
  Você pode definir as seguintes propriedades específicas da mineração de dados para cada coluna em um modelo de mineração. Você pode definir essas propriedades com um valor diferente em cada modelo de mineração em uma estrutura de mineração.  
   
 |Propriedade|Description|  
@@ -58,7 +63,7 @@ caps.handback.revision: 32
 |**SourceColumnID**|Indica o nome da coluna de estrutura de mineração na qual a coluna de modelo é baseada.<br /><br /> Esta propriedade é somente leitura.|  
 |**Uso**|Define como a coluna será usada pelo modelo de mineração.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Colunas do modelo de mineração](../../analysis-services/data-mining/mining-model-columns.md)   
  [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Tarefas e instruções do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   

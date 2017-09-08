@@ -1,29 +1,34 @@
 ---
-title: "Medidas no relat&#243;rio de valida&#231;&#227;o cruzada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "erro de raiz quadrada média [mineração de dados]"
-  - "validação cruzada [mineração de dados]"
-  - "erro absoluto médio [mineração de dados]"
-  - "contagem de log [mineração de dados]"
-  - "probabilidade [mineração de dados]"
+title: "Medidas no relatório de validação cruzada | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- root mean square error [data mining]
+- cross-validation [data mining]
+- mean absolute error [data mining]
+- log score [data mining]
+- likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f046ddaa3152318bfb3fe01d055bf213fdfdec41
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Medidas no relat&#243;rio de valida&#231;&#227;o cruzada
+# <a name="measures-in-the-cross-validation-report"></a>Medidas no relatório de validação cruzada
   Durante a validação cruzada, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] divide os dados em uma estrutura de mineração em várias seções cruzadas e, em seguida, iterativamente testa a estrutura e os modelos de mineração associados. Com base nesta análise, ele produz um conjunto de medidas de precisão padrão para a estrutura e cada modelo.  
   
  O relatório contém algumas informações básicas sobre o numero de dobras nos dados, e a quantidade de dados em cada dobra, e um conjunto de métricas gerais que descrevem a distribuição de dados. Comparando as métricas gerais para cada seção cruzada, você pode avaliar a confiabilidade da estrutura ou modelo.  
@@ -32,10 +37,10 @@ caps.handback.revision: 28
   
  Esta seção fornece uma lista das medidas que estão contidas no relatório **Validação Cruzada** e o que elas querem dizer. Para obter detalhes sobre como cada medida é calculada, consulte [Fórmulas de validação cruzada](../../analysis-services/data-mining/cross-validation-formulas.md).  
   
-## Lista de medidas no relatório de validação cruzada  
+## <a name="list-of-measures-in-the-cross-validation-report"></a>Lista de medidas no relatório de validação cruzada  
  A tabela a seguir lista as medidas que aparecem no relatório de validação cruzada. As medidas são agrupadas por *tipo de teste*, que é fornecido na coluna à esquerda da tabela a seguir. A coluna à direita lista o nome da medida como aparece no relatório e fornece uma explicação breve do que significa.  
   
-|Tipo de Teste|Medidas e Descrições|  
+|tipo de teste|Medidas e Descrições|  
 |---------------|-------------------------------|  
 |Clustering|Medidas que se aplicam a modelos de clustering|  
 ||**Probabilidade de caso**:<br />                      Essa medida geralmente indica a probabilidade de um caso pertencer a um determinado cluster. Para validação cruzada, as contagens são somadas e, em seguida, divididas pelo número de casos; portanto, aqui a contagem é uma probabilidade de caso média.|  
@@ -54,7 +59,7 @@ caps.handback.revision: 28
 ||**Média**:<br />                      Média dos valores de partição para uma medida particular.|  
 ||**Desvio Padrão**:<br />                      Média do desvio da média para uma medida específica, através de todas as partições em um modelo.<br /><br /> Para validação cruzada, um valor mais alto para esta pontuação implica variação significativa entre as dobras.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Teste e validação &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

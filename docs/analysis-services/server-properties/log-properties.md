@@ -1,68 +1,73 @@
 ---
-title: "Propriedades do log  | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "propriedade QueryLogFileSize"
-  - "propriedade QueryLogTableName"
-  - "propriedade TraceBackgroundDistributionPeriod"
-  - "propriedade TraceMaxRowsetSize"
-  - "propriedade NullKeyConvertedToUnknown"
-  - "propriedade CrashReportsFolder"
-  - "propriedade TraceDefinitionFile"
-  - "propriedade SQLDumperFlagsOn"
-  - "propriedade KeyErrorLimit"
-  - "propriedade SnapshotDefinitionFile"
-  - "propriedade MinidumpErrorList"
-  - "propriedade ErrorLogFileName"
-  - "propriedade KeyDuplicate"
-  - "propriedade IgnoreDataTruncation"
-  - "logs [Analysis Services]"
-  - "propriedade Enabled"
-  - "propriedade FileSizeMB"
-  - "propriedade TraceFileWriteTrailerPeriod"
-  - "propriedade TraceQueryResponseTextChunkSize"
-  - "propriedade File"
-  - "propriedade FileBufferSize"
-  - "propriedade TraceRowsetBackgroundFlushPeriod"
-  - "propriedade ErrorLogFileSize"
-  - "propriedade TraceRequestParameters"
-  - "propriedade KeyErrorLimitAction"
-  - "propriedade CreateQueryLogTable"
-  - "propriedade LogDir"
-  - "propriedade TraceBackgroundFlushPeriod"
-  - "propriedade TraceFileBufferSize"
-  - "propriedade SQLDumperFlagsOff"
-  - "propriedade QueryLogConnectionString"
-  - "propriedade KeyNotFound"
-  - "propriedade KeyErrorLogFile"
-  - "propriedade TraceReportFQDN"
-  - "propriedade KeyErrorAction"
-  - "propriedade QueryLogFileName"
-  - "propriedade MessageLogs"
-  - "propriedade MiniDumpFlagsOn"
-  - "propriedade SnapshotFrequencySec"
-  - "propriedade QueryLogSampling"
-  - "propriedade CreateAndSendCrashReports"
-  - "propriedade LogDurationSec"
+title: Propriedades de log | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- QueryLogFileSize property
+- QueryLogTableName property
+- TraceBackgroundDistributionPeriod property
+- TraceMaxRowsetSize property
+- NullKeyConvertedToUnknown property
+- CrashReportsFolder property
+- TraceDefinitionFile property
+- SQLDumperFlagsOn property
+- KeyErrorLimit property
+- SnapshotDefinitionFile property
+- MinidumpErrorList property
+- ErrorLogFileName property
+- KeyDuplicate property
+- IgnoreDataTruncation property
+- logs [Analysis Services]
+- Enabled property
+- FileSizeMB property
+- TraceFileWriteTrailerPeriod property
+- TraceQueryResponseTextChunkSize property
+- File property
+- FileBufferSize property
+- TraceRowsetBackgroundFlushPeriod property
+- ErrorLogFileSize property
+- TraceRequestParameters property
+- KeyErrorLimitAction property
+- CreateQueryLogTable property
+- LogDir property
+- TraceBackgroundFlushPeriod property
+- TraceFileBufferSize property
+- SQLDumperFlagsOff property
+- QueryLogConnectionString property
+- KeyNotFound property
+- KeyErrorLogFile property
+- TraceReportFQDN property
+- KeyErrorAction property
+- QueryLogFileName property
+- MessageLogs property
+- MiniDumpFlagsOn property
+- SnapshotFrequencySec property
+- QueryLogSampling property
+- CreateAndSendCrashReports property
+- LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72e9b5094c12d014c361875016b8208264ad2860
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propriedades do log 
+# <a name="log-properties"></a>Propriedades do log
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor de log listadas nas tabelas a seguir. Para obter mais informações sobre propriedades adicionais do servidor e como defini-las, consulte [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
-## Geral  
+## <a name="general"></a>Geral  
  **Arquivo**  
  Uma propriedade de cadeia de caracteres que identifica o nome do arquivo de log do servidor. Esta propriedade só se aplicará quando um arquivo de disco for usado para log, em vez de uma tabela de banco de dados (o comportamento padrão).  
   
@@ -74,8 +79,8 @@ caps.handback.revision: 23
  **MessageLogs**  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Log de erros  
- Você pode definir essas propriedades no nível da instância de servidor para modificar os valores padrão para a Configuração de Erros que aparece em outras ferramentas e designers. Consulte [Configuração de erros para processamento de cubo, partição e dimensão &#40;SSAS – Multidimensional&#41;](../../analysis-services/multidimensional-models/error configuration for cube, partition, and dimension processing.md) e <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> para obter mais informações.  
+## <a name="error-log"></a>Log de erros  
+ Você pode definir essas propriedades no nível da instância de servidor para modificar os valores padrão para a Configuração de Erros que aparece em outras ferramentas e designers. Consulte [configuração de erro para o cubo, partição e o processamento da dimensão &#40; SSAS Multidimensional &#41; ](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) e <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> para obter mais informações.  
   
  **ErrorLog\ErrorLogFileName**  
  Uma propriedade usada como padrão durante a operação de processamento executada pelo servidor.  
@@ -127,7 +132,7 @@ caps.handback.revision: 23
  **ErrorLog\IgnoreDataTruncation**  
  Uma propriedade usada como padrão durante a operação de processamento executada pelo servidor.  
   
-## Exceção  
+## <a name="exception"></a>Exceção  
  **Exception\CreateAndSendCrashReports**  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -146,7 +151,7 @@ caps.handback.revision: 23
  **Exception\MinidumpErrorList**  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Flight Recorder  
+## <a name="flight-recorder"></a>Flight Recorder  
  **FlightRecorder\Enabled**  
  Uma propriedade booliana que indica se o recurso de flight recorder está habilitado.  
   
@@ -169,7 +174,7 @@ caps.handback.revision: 23
   
  O valor padrão desta propriedade é em branco, que por sua vez, assume FlightRecorderTraceDef.xml como padrão.  
   
-## Log de consultas  
+## <a name="query-log"></a>Log de consultas  
  **Aplica-se a:** somente modo de servidor multidimensional  
   
  **QueryLog\QueryLogFileName**  
@@ -199,7 +204,7 @@ caps.handback.revision: 23
 > [!NOTE]  
 >  Para obter mais informações sobre como configurar o log de consultas, consulte [Configurar o log de consultas do Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81890).  
   
-## Rastreamento  
+## <a name="trace"></a>Rastreamento  
  **Trace\TraceBackgroundDistributionPeriod**  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -230,7 +235,7 @@ caps.handback.revision: 23
  **Trace\TraceRowsetBackgroundFlushPeriod**  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determina o Modo de Servidor de uma instância do Analysis Services.](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

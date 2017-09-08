@@ -1,29 +1,34 @@
 ---
-title: "Sincronizar bancos de dados do Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Implantações do Analysis Services, Assistente para Sincronizar Banco de Dados"
-  - "implantando [Analysis Services], Assistente para Sincronizar Banco de Dados"
-  - "Assistente para Sincronizar Banco de Dados"
-  - "sincronização [Analysis Services]"
+title: Sincronizar bancos de dados do Analysis Services | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analysis Services deployments, Synchronize Database Wizard
+- deploying [Analysis Services], Synchronize Database Wizard
+- Synchronize Database Wizard
+- synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: ad1667e587056d10fd1b30b0b804366dbd5dfa14
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Sincronizar bancos de dados do Analysis Services
+# <a name="synchronize-analysis-services-databases"></a>Sincronizar bancos de dados do Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui um recurso de sincronização de banco de dados que torna dois bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] equivalentes copiando os dados e os metadados de um banco de dados em um servidor de origem para um banco de dados de um servidor de destino. Use o recurso Sincronizar Banco de Dados para realizar as tarefas a seguir:  
   
 -   Implantar um banco de dados de um servidor de preparo em um servidor de produção.  
@@ -43,12 +48,12 @@ caps.handback.revision: 39
 > [!NOTE]  
 >  Os whitepapers a seguir, escritos para versões anteriores do Analysis Services, ainda se aplicam às soluções multidimensionais escalonáveis criadas usando o SQL Server 2012. Para obter mais informações, consulte [Consulta em expansão com o Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253136) e [Expansão de consulta para o Analysis Services com bancos de dados somente leitura](http://go.microsoft.com/fwlink/?LinkId=253137.)  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
  No servidor de destino do qual a sincronização do banco de dados é iniciada, você deve ser membro da função de administrador de servidor do Analysis Services. No servidor de origem, sua conta de usuário do Windows deve ter permissões de Controle Total no banco de dados de origem. Se você estiver sincronizando o banco de dados interativamente, lembre-se de que a sincronização é executada no contexto de segurança de sua identidade de usuário do Windows. Se sua conta tiver acesso negado a objetos específicos, os objetos serão excluídos da operação. Para obter mais informações sobre as funções de administrador do servidor e as permissões de banco de dados, consulte [Conceder direitos de administração de servidor a uma instância do Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) e [Conceder permissões de banco de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md).  
   
  A porta TCP 2383 deve estar aberta em ambos os servidores para permitir conexões remotas entre instâncias padrão. Para obter mais informações sobre a criação de uma exceção no Firewall do Windows, consulte [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
- Os servidores de origem e destino devem ser da mesma versão. A edição de cada instalação deve oferecer suporte à sincronização de banco de dados. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a sincronização do banco de dados tem suporte nas edições enterprise, developer e business intelligence. Para obter mais informações sobre recursos em cada edição, consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Servidores de origem e de destino devem ser a mesma versão e o service pack. Porque os metadados do modelo é sincronizado, para garantir a compatibilidade de compilação número para ambos os servidores deve ser o mesmo. A edição de cada instalação deve oferecer suporte à sincronização de banco de dados. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a sincronização do banco de dados tem suporte nas edições enterprise, developer e business intelligence. Para obter mais informações sobre os recursos em cada edição, consulte [edições e os recursos com suporte para SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  O modo de implantação de servidor deve ser idêntico em cada servidor. Se o banco de dados que você estiver sincronizando for multidimensional, os servidores de origem e de destino deverão ser configurados no modo de servidor multidimensional. Para obter mais informações sobre modos de implantação, consulte [Determine the Server Mode of an Analysis Services Instance](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 39
 > [!NOTE]  
 >  O tamanho do banco de dados é um fator para determinar se a sincronização é uma abordagem adequada. Não há requisitos de hardware, mas se a sincronização estiver muito lenta, considere a sincronização de vários servidores em paralelo, como descrito neste artigo técnico: [Práticas recomendadas de sincronização do Analysis Services](http://go.microsoft.com/fwlink/?LinkID=253136).  
   
-## Assistente para Sincronizar Banco de Dados  
+## <a name="synchronize-database-wizard"></a>Assistente para Sincronizar Banco de Dados  
  Use o Assistente para Sincronizar Banco de Dados para executar a sincronização unidirecional de um banco de dados de origem para um de destino ou para gerar um script que especifique uma operação de sincronização de banco de dados. Você pode sincronizar partições locais e remotas durante o processo de sincronização e optar ou não por incluir funções.  
   
  O Assistente para Sincronizar Bancos de Dados fornece instruções para as seguintes etapas:  
@@ -74,7 +79,7 @@ caps.handback.revision: 39
   
  Por padrão, o assistente sincroniza todos os dados e metadados, em vez de associá-los nos grupos de segurança existentes. Também é possível copiar todas as configurações de segurança ou ignorá-las ao sincronizar os dados e metadados.  
   
-#### Executar o assistente  
+#### <a name="run-the-wizard"></a>Executar o assistente  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que executará o banco de dados de destino. Por exemplo, se você estiver implantando um banco de dados em um servidor de produção, executará o assistente no servidor de produção.  
   
@@ -126,7 +131,7 @@ caps.handback.revision: 39
 5.  Opcionalmente, altere a localização de partições remotas. Use a página **Especificar Locais para Partições Remotas** para indicar se partições remotas gerenciadas pelo banco de dados especificado no servidor de origem devem ser sincronizadas e para especificar uma instância e um banco de dados de destino do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em que as partições remotas selecionadas devem ser armazenadas.  
   
     > [!NOTE]  
-    >  Essa página só será exibida se pelo menos uma partição remota for gerenciada pelo banco de dados especificado na instância de origem do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+    >  Essa página só será exibida se pelo menos uma partição remota for gerenciada pelo banco de dados especificado na instância de origem do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
      A opção **Locais** exibe uma grade que lista detalhes sobre os locais nos quais partições remotas do banco de dados de origem são armazenadas, incluindo informações sobre a origem, o destino e o tamanho do armazenamento usado por cada local, disponíveis no banco de dados selecionado. A grade contém as seguintes colunas:  
   
@@ -142,7 +147,7 @@ caps.handback.revision: 39
      **Pasta de Origem**  
      Exibe o nome da pasta na instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contém as partições remotas. Se a coluna contiver o valor "(Padrão)", o local padrão da instância exibida em **Servidor de Origem** conterá partições remotas.  
   
-     **Servidor de destino**  
+     **Servidor de Destino**  
      Exibe o nome da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na qual as partições remotas armazenadas no local especificado em **Servidor de Origem** e **Pasta de Origem** devem ser sincronizadas.  
   
      Clique no botão de reticências (**...**) para exibir a caixa de diálogo **Gerenciador de Conexões** e especifique uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na qual as partições remotas armazenadas no local selecionado devem ser sincronizadas.  
@@ -184,10 +189,10 @@ caps.handback.revision: 39
   
 8.  Clique em **Concluir** para sincronizar. Depois de verificar as opções na página **Concluindo o Assistente** , clique em **Concluir** novamente.  
   
-## Próximas etapas  
+## <a name="next-steps"></a>Próximas etapas  
  Se você não sincronizou funções ou associação, lembre-se de especificar agora as permissões de acesso de usuário no banco de dados de destino.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Elemento Synchronize &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Implantar soluções de modelo usando XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
  [Deploy Model Solutions Using the Deployment Wizard](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  

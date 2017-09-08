@@ -1,33 +1,38 @@
 ---
-title: "KPIs (indicadores chave de desempenho) em modelos multidimensionais | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exibindo indicadores chave de desempenho"
-  - "Indicadores chave de desempenho [Analysis Services]"
-  - "KPIs [Analysis Services]"
-  - "objetos OLAP [Analysis Services], indicadores de desempenho"
-  - "pesos [Analysis Services]"
-  - "exibindo indicadores chave de desempenho"
-  - "KPIs pais [Analysis Services]"
-  - "KPIs filhos"
+title: Indicadores chave de desempenho (KPIs) em modelos multidimensionais | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing Key Performance Indicators
+- Key Performance Indicators [Analysis Services]
+- KPIs [Analysis Services]
+- OLAP objects [Analysis Services], performance indicators
+- weights [Analysis Services]
+- displaying Key Performance Indicators
+- parent KPIs [Analysis Services]
+- child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 43
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2fb3d1fa6ae92ba6dd23f9295428d696834ee8d4
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# KPIs (indicadores chave de desempenho) em modelos multidimensionais
+# <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>KPIs (indicadores chave de desempenho) em modelos multidimensionais
   Na terminologia empresarial, um KPI (indicador chave de desempenho) é uma medida quantificável para medir o sucesso empresarial.  
   
  No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], um KPI é uma coleção de cálculos associada a um grupo de medidas em um cubo usado para avaliar o sucesso nos negócios. Normalmente, esses cálculos são uma combinação de MDX ou membros calculados. Os KPIs também contêm metadados adicionais que fornecem informações sobre como os aplicativos cliente devem exibir os resultados de cálculos de KPIs.  
@@ -40,9 +45,9 @@ caps.handback.revision: 43
   
  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], um KPI é uma coleção de cálculos associada a um grupo de medidas em um cubo usado para avaliar o sucesso nos negócios. Normalmente, esses cálculos são uma combinação de MDX e membros calculados. Os KPIs também contêm metadados adicionais que fornecem informações sobre como os aplicativos cliente devem exibir os resultados de um cálculo de KPIs.  
   
- Uma vantagem importante dos KPIs no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é que eles são KPIs baseados em servidores consumíveis por diferentes aplicativos cliente. Um KPI com base em servidor apresenta uma única versão de autenticidade, comparado com as versões separadas de autenticidade dos aplicativos cliente separados.  Além disso, executando algumas vezes os cálculos complexos no servidor, em vez de em cada computador cliente, poderá trazer benefícios de desempenho.  
+ Uma vantagem importante dos KPIs no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é que eles são KPIs baseados em servidores consumíveis por diferentes aplicativos cliente. Um KPI com base em servidor apresenta uma única versão de autenticidade, comparado com as versões separadas de autenticidade dos aplicativos cliente separados. Além disso, executando algumas vezes os cálculos complexos no servidor, em vez de em cada computador cliente, poderá trazer benefícios de desempenho.  
   
-## Termos comuns de KPI  
+## <a name="common-kpi-terms"></a>Termos comuns de KPI  
  A tabela a seguir fornece definições para termos de KPI comuns no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 |Termo|Definição|  
@@ -58,15 +63,15 @@ caps.handback.revision: 43
 |Membro da hora atual|Uma expressão MDX que retorna o membro que identifica o contexto temporal do KPI.|  
 |Weight|Uma expressão numérica MDX que atribui uma importância relativa a um KPI. Se o KPI estiver atribuído a um KPI pai, o peso será usado para ajustar proporcionalmente os resultados do valor do KPI filho ao calcular o valor do KPI pai.|  
   
-## KPIs Pai  
+## <a name="parent-kpis"></a>KPIs Pai  
  Uma organização pode rastrear diferentes métricas empresariais em diferentes níveis. Por exemplo, apenas dois ou três KPIs podem ser usados para medir o sucesso de toda a empresa, mas esses KPIs gerais podem ser usados em três ou quatro outros KPIs rastreados pelas unidades de negócios ao longo da empresa. Além disso, as unidades de negócio em uma empresa podem usar estatísticas diferentes para calcular o mesmo KPI, esses resultados são acumulados para o KPI geral.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite definir uma relação pai-filho entre KPIs. Essa relação pai-filho permite que os resultados do KPI filho seja usada para calcular os resultados do KPI pai. Os aplicativos cliente também podem usar essa relação para exibir os KPIs pai e filho adequadamente.  
   
-## Pesos  
+## <a name="weights"></a>Pesos  
  Os pesos também podem ser atribuídos à KPIs filho. Os pesos permitem que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajuste proporcionalmente os resultados do KPI filho ao calcular o valor do KPI pai.  
   
-## Recuperando e exibindo KPIs  
+## <a name="retrieving-and-displaying-kpis"></a>Recuperando e exibindo KPIs  
  A exibição dos KPIs depende da implementação do aplicativo cliente. Por exemplo, selecionar **Exibição de Navegador** na barra de ferramentas na guia **KPIs** do Designer de Cubo, demonstra uma possível implementação do cliente, com gráficos usados para exibir os indicadores de status e tendência, exibir pastas usadas para agrupar KPIs e KPIs filho exibidos sob KPIs pai.  
   
  Você pode usar as funções MDX para recuperar as seções individuais do KPI, como o valor ou meta, para usar em expressões MDX, instruções e scripts.  

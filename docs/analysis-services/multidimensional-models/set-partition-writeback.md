@@ -1,40 +1,45 @@
 ---
-title: "Definir o write-back de parti&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "partições habilitadas para gravação [Analysis Services]"
-  - "partições [Analysis Services], write-back"
-  - "partições [Analysis Services], habilitadas para gravação"
-  - "write-back [Analysis Services], partições"
+title: "Definir o write-back de partição | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- write-enabled partitions [Analysis Services]
+- partitions [Analysis Services], writeback
+- partitions [Analysis Services], write-enabled
+- writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 45057f5e164c473b588df70f5b8a8617f74390d2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definir o write-back de parti&#231;&#245;es
+# <a name="set-partition-writeback"></a>Definir o write-back de partições
   Se você habilitar um grupo de medidas para gravação, os usuários finais poderão alterar dados de cubo enquanto procuram por ele. As alterações são salvas em uma tabela separada chamada tabela de write-back e não nos dados de cubo ou na fonte de dados. Os usuários finais que procuram uma partição habilitada para gravação observam o efeito líquido de todas as alterações na tabela de write-back da partição.  
   
  Os dados de write-back podem ser procurados ou excluídos. Também é possível converter os dados de write-back em uma partição. Em uma partição habilitada para gravação, é possível usar funções de cubo para conceder acesso de leitura/gravação a usuários e grupos de usuários e para limitar o acesso a células ou grupos de células específicos da partição.  
   
- Para ver uma breve introdução em vídeo sobre write-back, consulte [Write-back do Excel 2010 para Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394951). Na série de postagens no blog [Building a Writeback Application with Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977) (Criando um aplicativo de write-back com o Analysis Services), você encontra uma apresentação mais detalhada deste recurso.  
+ Para ver uma breve introdução em vídeo sobre write-back, consulte [Write-back do Excel 2010 para Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394951). Na série de postagens no blog [Building a Writeback Application with Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977)(Criando um aplicativo de write-back com o Analysis Services), você encontra uma apresentação mais detalhada deste recurso.  
   
 > [!NOTE]  
->  Há suporte para write-back apenas em bancos de dados relacionais e data marts do SQL Server e somente para modelos multidimensionais do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+>  Há suporte para write-back apenas em bancos de dados relacionais e data marts do SQL Server e somente para modelos multidimensionais do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-## Como habilitar uma partição para gravação  
- Você pode habilitar os grupos de medidas de uma partição para gravação, habilitando a partição propriamente dita no Designer de Cubo, no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ou no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+## <a name="how-to-write-enable-a-partition"></a>Como habilitar uma partição para gravação  
+ Você pode habilitar os grupos de medidas de uma partição para gravação, habilitando a partição propriamente dita no Designer de Cubo, no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] , ou no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   No Designer de Cubo, na guia Partições, clique com o botão direito do mouse em uma partição e escolha **Configurações de Write-back**.  
   
@@ -44,13 +49,13 @@ caps.handback.revision: 34
   
  Ao habilitar uma partição para gravação, especifique um nome de tabela e uma fonte de dados para armazenar a tabela de write-back. Qualquer alteração subsequente feita no grupo de medidas é registrada nessa tabela.  
   
-## Pesquisar dados de write-back em uma partição  
- É possível procurar o conteúdo da tabela de write-back de um cubo na caixa de diálogo **Procurar Dados**, que pode ser acessada ao clicar com o botão direito do mouse em uma partição habilitada para gravação na guia **Partições** do Designer de Cubo.  
+## <a name="browse-writeback-data-in-a-partition"></a>Pesquisar dados de write-back em uma partição  
+ É possível procurar o conteúdo da tabela de write-back de um cubo na caixa de diálogo **Procurar Dados** , que pode ser acessada ao clicar com o botão direito do mouse em uma partição habilitada para gravação na guia **Partições** do Designer de Cubo.  
   
-## Excluir dados de write-back ou desabilitar o write-back  
+## <a name="delete-writeback-data-or-disable-writeback"></a>Excluir dados de write-back ou desabilitar o write-back  
  A exclusão de dados de write-back limpa o cache; assim que esses dados são excluídos, trabalhos adicionais de write-back são executados em uma lista limpa. A desabilitação de write-back na partição de um cubo simplesmente desativa o write-back dessa partição.  
   
-## Converter dados de write-back para uma partição  
+## <a name="convert-writeback-data-to-a-partition"></a>Converter dados de write-back para uma partição  
  É possível converter os dados da tabela de write-back em uma partição. Este procedimento faz com que a tabela de write-back se transforme na nova tabela de fatos da partição.  
   
 > [!CAUTION]  
@@ -60,9 +65,9 @@ caps.handback.revision: 34
   
  Para converter os dados de write-back em uma partição, use a caixa de diálogo **Converter em Partição**, que pode ser acessada ao clicar com o botão direito do mouse na tabela de write-back de uma partição habilitada para gravação no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Especifique um nome para a partição e se deseja projetar a agregação para a partição posteriormente ou no momento da criação. Para criar a agregação no mesmo momento em que a partição é escolhida, é necessário copiar o design de agregação de uma partição existente. Esta é, mas não necessariamente, a partição de write-back atual. Também é possível processar a partição durante sua criação.  
   
-## Consulte também  
- [Partições habilitadas para gravação](../Topic/Write-Enabled%20Partitions.md)   
- [Habilitando o write-back em um cubo OLAP no nível da célula no Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Habilitando e protegendo a entrada de dados com o write-back do Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+## <a name="see-also"></a>Consulte também  
+ [Partições habilitadas para gravação](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [Habilitar Write-back em um cubo OLAP no nível de célula no Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Habilitando e protegendo a entrada de dados com write-back do Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

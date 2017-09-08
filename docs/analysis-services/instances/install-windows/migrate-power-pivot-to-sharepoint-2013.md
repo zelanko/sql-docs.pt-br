@@ -1,22 +1,27 @@
 ---
-title: "Migrar o Power Pivot para o SharePoint 2013 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Migrar o Power Pivot para SharePoint 2013 | Microsoft Docs
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0722554c3ebfea2f80bc9643db337dd6d181ef11
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Migrar o Power Pivot para o SharePoint 2013
+# <a name="migrate-power-pivot-to-sharepoint-2013"></a>Migrar o Power Pivot para o SharePoint 2013
   
   
  O SharePoint 2013 não oferece suporte a atualização in-loco. De qualquer modo, o procedimento de **atualização da anexação do banco de dados tem suporte**. O comportamento é diferente de atualizar para o SharePoint 2010, onde um cliente pode escolher entre as duas abordagens básicas de atualização, atualização in-loco e atualizações de anexação do banco de dados.  
@@ -27,7 +32,7 @@ caps.handback.revision: 18
 |-|  
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
   
-### Visão geral da migração  
+### <a name="migration-overview"></a>Visão geral da migração  
   
 |1|2|3|4|  
 |-------|-------|-------|-------|  
@@ -62,9 +67,9 @@ caps.handback.revision: 18
 ##  <a name="bkmk_backup_restore"></a> 2) Fazer backup, cópia e restauração de bancos de dados  
  O processo “Atualização da anexação do banco de dados do SharePoint” é uma sequência de etapas para fazer backup, copiar e restaurar conteúdo relacionado ao [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e bancos de dados de aplicativo de serviço para o farm do SharePoint 2013.  
   
-1.  **Definir banco de dados como somente leitura:** no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse no nome do banco de dados e clique em **Propriedades**. Na página **Opções**, defina a propriedade **Banco de Dados Somente Leitura** como **True**.  
+1.  **Definir banco de dados como somente leitura:** no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse no nome do banco de dados e clique em **Propriedades**. Na página **Opções** , defina a propriedade **Banco de Dados Somente Leitura** como **True**.  
   
-2.  **Backup:** faça backup de todos os bancos de dados de conteúdo e banco de dados de aplicativo de serviço que você desejar migrar para o farm do SharePoint 2013. No [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse no nome do banco de dados, clique em **Tarefas** e clique em **Fazer backup**.  
+2.  **Backup:** faça backup de todos os bancos de dados de conteúdo e banco de dados de aplicativo de serviço que você desejar migrar para o farm do SharePoint 2013. No [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse no nome do banco de dados, clique em **Tarefas**e clique em **Fazer backup**.  
   
 3.  Faça cópia dos arquivo de backup de banco de dados (.bak) para o servidor de destino desejado.  
   
@@ -91,20 +96,20 @@ caps.handback.revision: 18
   
 -   **Montar bancos de dados de conteúdo:**  
   
-     Use os cmdlets do PowerShell no Shell de Gerenciamento do SharePoint 2013 para montar o banco de dados de conteúdo migrado. O banco de dados do aplicativo do serviço não precisa ser montado, somente os bancos de dados de conteúdo: ![Conteúdo relacionado ao PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.png "Conteúdo relacionado ao PowerShell")  
+     Use os cmdlets do PowerShell no Shell de Gerenciamento do SharePoint 2013 para montar o banco de dados de conteúdo migrado. O banco de dados do aplicativo de serviço não precisa ser montado, somente os bancos de dados: ![conteúdo relacionado ao PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "conteúdo relacionado ao PowerShell")  
   
     ```  
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
-     Para obter mais informações, veja [Anexar ou desanexar bancos de dados de conteúdo (SharePoint Server 2010) ](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx).  
+     Para obter mais informações, veja [Anexar ou desanexar bancos de dados de conteúdo (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx).  
   
      **Status quando a etapa está concluída:**  quando a operação de montagem estiver concluída, os usuários podem ver os arquivos que estavam no banco de dados de conteúdo antigo. Portanto os usuários podem ver e abrir as pastas de trabalho na biblioteca de documentos.  
   
     -   > [!TIP]  
         >  É possível nesse momento do processo de migração criar novas agendas para as pastas de trabalho migradas. No entanto, as agendas são criadas no novo banco de dados do aplicativo do serviço [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , e não no banco de dados que você copiou do farm do SharePoint anterior. Portanto, ele não conterá nenhuma das agendas antigas. Depois que você concluir as seguintes etapas para usar o banco de dados antigo e migrar as agendas antigas, as novas agendas não estarão disponíveis.  
   
-### Solucionar problemas ao tentar montar bancos de dados  
+### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>Solucionar problemas ao tentar montar bancos de dados  
  Esta seção resume os possíveis problemas encontrados ao montar o banco de dados.  
   
 1.  **Erros de autenticação:** se você encontrar erros relacionados à autenticação, revise qual modo de autenticação os aplicativos Web de origem estão usando. O erro pode ser causado por uma incompatibilidade na autenticação entre o aplicativo Web do SharePoint 2013 e o aplicativo Web do SharePoint 2010. Consulte [1) Preparar o farm do SharePoint 2013](#bkmk_prepare_sharepoint2013) para obter mais informações.  
@@ -130,7 +135,7 @@ caps.handback.revision: 18
   
 -   **Opção 1 para migrar agendas: administrador de farm do SharePoint**  
   
-    1.  No Gerenciamento do SharePoint 2013, execute o cmdlet `Set-PowerPivotServiceApplication` com a opção de `-StartMigratingRefreshSchedules` para habilitar a migração automática sob demanda da agenda ![Conteúdo relacionado ao PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.png "Conteúdo relacionado ao PowerShell"). O script do Windows PowerShell a seguir supõe que haja apenas um aplicativo de serviço do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .  
+    1.  No gerenciamento do SharePoint 2013 execute o `Set-PowerPivotServiceApplication` cmdlet com o `-StartMigratingRefreshSchedules` chave para ativar a demanda agenda migração automática sob ![conteúdo relacionado ao PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell relacionados ao conteúdo"). O script do Windows PowerShell a seguir supõe que haja apenas um aplicativo de serviço do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .  
   
         ```  
         $app=Get-PowerPivotServiceApplication  
@@ -163,7 +168,7 @@ caps.handback.revision: 18
   
 -   Pastas de trabalho do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] do SQL Server 2008 R2 não são atualizadas automaticamente quando são usadas no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2013. Depois de migrar um banco de dados de conteúdo que contém as pastas de trabalho do 2008 R2, você poderá usar as pastas de trabalho, mas as agendas não serão atualizadas.  
   
--   Para obter mais informações, veja [Atualizar pastas de trabalho e atualização de dados agendada &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+-   Para obter mais informações, veja [Atualizar pastas de trabalho e a atualização de dados agendada &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_additional_resources"></a> Recursos adicionais  
   
