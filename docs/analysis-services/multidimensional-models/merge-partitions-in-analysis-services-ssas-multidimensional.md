@@ -1,27 +1,32 @@
 ---
-title: "Mesclar parti&#231;&#245;es no Analysis Services (SSAS - Multidimensional) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "partições [Analysis Services], mesclando"
-  - "mesclando partições [Analysis Services]"
+title: "Mesclar partições no Analysis Services (SSAS - Multidimensional) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitions [Analysis Services], merging
+- merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a973f81fbb9eef7294b9beec9251569bcce0bf4f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Mesclar parti&#231;&#245;es no Analysis Services (SSAS - Multidimensional)
+# <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Mesclar partições no Analysis Services (SSAS - Multidimensional)
   É possível mesclar partições em um banco de dados existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para consolidar dados de fatos de várias partições do mesmo grupo de medidas.  
   
  [Cenários comuns](#bkmk_Scenario)  
@@ -70,7 +75,7 @@ caps.handback.revision: 34
 ##  <a name="bkmk_Where"></a> Atualizar a Fonte da Partição após mesclar partições  
  As partições são segmentadas por consulta, como a cláusula WHERE de uma consulta SQL usada para processar os dados, ou por uma tabela ou consulta nomeada que fornece dados à partição. A propriedade **Fonte** na partição indica se a partição está associada a uma consulta ou tabela.  
   
- Quando você mescla partições, o conteúdo das partições são consolidados, mas a propriedade **Fonte** não é atualizada para refletir o escopo adicional da partição. Isso significa que, se você reprocessar subsequentemente uma partição que mantém a **Fonte** original, obterá dados incorretos dessa partição. A partição agregará erroneamente dados no nível pai. O exemplo a seguir ilustra esse comportamento.  
+ Quando você mescla partições, o conteúdo das partições são consolidados, mas a propriedade **Fonte** não é atualizada para refletir o escopo adicional da partição. Isso significa que, se você reprocessar subsequentemente uma partição que mantém a **Fonte**original, obterá dados incorretos dessa partição. A partição agregará erroneamente dados no nível pai. O exemplo a seguir ilustra esse comportamento.  
   
  **O problema**  
   
@@ -78,16 +83,16 @@ caps.handback.revision: 34
   
  **A solução**  
   
- A solução é atualizar a propriedade **Fonte**, ajustando a cláusula WHERE ou a consulta nomeada, ou mesclando manualmente dados das tabelas de fatos subjacentes, para garantir que o processamento subsequente receba com precisão o escopo expandido da partição.  
+ A solução é atualizar a propriedade **Fonte** , ajustando a cláusula WHERE ou a consulta nomeada, ou mesclando manualmente dados das tabelas de fatos subjacentes, para garantir que o processamento subsequente receba com precisão o escopo expandido da partição.  
   
- Nesse exemplo, após mesclar a Partição 3 na Partição 2, é possível fornecer um filtro como ("Product" = 'ColaDecaf' OR "Product" = 'ColaDiet') na Partição 2 resultante para especificar que apenas os dados sobre [ColaDecaf] e [ColaDiet] serão extraídos da tabela de fatos e que os dados que pertencem a [ColaFull] serão excluídos. Se preferir, especifique filtros para a Partição 2 e a Partição 3 quando forem criadas; esses filtros serão combinados durante o processo de mesclagem. De qualquer modo, depois que a partição for processada, o cubo não vai conter dados duplicados.  
+ Nesse exemplo, após mesclar a Partição 3 na Partição 2, é possível fornecer um filtro como ("Product" = 'ColaDecaf' OR "Product" = 'ColaDiet') na Partição 2 resultante para especificar que apenas os dados sobre [ColaDecaf] e [ColaDiet] serão extraídos da tabela de fatos e que os dados que pertencem a [ColaFull] serão excluídos. Se preferir, especifique filtros para a Partição 2 e a Partição 3 quando forem criadas; esses filtros serão combinados durante o processo de mesclagem. De qualquer modo, depois que a partição for processada, o cubo não vai conter dados duplicados.  
   
  **A conclusão**  
   
  Após mesclar partições, sempre verifique **Fonte** para saber se o filtro está correto para os dados mesclados. Se você tiver iniciado com uma partição que incluía os dados históricos para Q1, Q2 e Q3, e agora mesclar Q4, ajuste o filtro para incluir Q4. Caso contrário, o processamento subsequente da partição gerará resultados incorretos. Ele não estará correto para Q4.  
   
 ##  <a name="bkmk_fact"></a> Considerações especiais para partições segmentadas por tabela de fatos ou consulta nomeada  
- Além das consultas, as partições também podem ser segmentadas por tabela ou consulta nomeada. Se as partições de origem e de destino usam a mesma tabela de fatos em uma fonte de dados ou exibição da fonte de dados, a propriedade **Fonte** é válida após mesclar partições. Ela especifica os dados da tabela de fatos que são apropriadas para a partição resultante. Como os fatos necessários para a partição resultante estão presentes na tabela de fatos, não é necessário fazer modificações na propriedade **Fonte**.  
+ Além das consultas, as partições também podem ser segmentadas por tabela ou consulta nomeada. Se as partições de origem e de destino usam a mesma tabela de fatos em uma fonte de dados ou exibição da fonte de dados, a propriedade **Fonte** é válida após mesclar partições. Ela especifica os dados da tabela de fatos que são apropriadas para a partição resultante. Como os fatos necessários para a partição resultante estão presentes na tabela de fatos, não é necessário fazer modificações na propriedade **Fonte** .  
   
  As partições que usam dados de várias tabelas de fatos ou consultas nomeadas exigem trabalho adicional. Você deve mesclar manualmente os fatos da tabela da partição de origem na tabela da partição de destino.  
   
@@ -95,13 +100,13 @@ caps.handback.revision: 34
   
  Pela mesma razão, as partições que obtêm dados segmentados de consultas nomeadas também exigem atualização. A partição combinada agora deve ter uma consulta nomeada que retorna o conjunto de resultados combinados que foi obtido anteriormente em consultas nomeadas separadas.  
   
-## Considerações de armazenamento de partição: MOLAP  
+## <a name="partition-storage-considerations-molap"></a>Considerações de armazenamento de partição: MOLAP  
  Quando partições MOLAP são mescladas, os fatos armazenados nas estruturas multidimensionais das partições também são mesclados. Isso resulta em uma partição internamente completa e consistente. No entanto, os fatos armazenados em partições MOLAP são cópias de fatos da tabela. Quando a partição é processada posteriormente, os fatos da estrutura multidimensional são excluídos (somente para atualização) e os dados são copiados da tabela de fatos conforme especificado pela fonte de dados e pelo filtro da partição. Se a partição de origem usar uma tabela de fatos diferentes da partição de destino, a tabela da partição de origem deve ser mesclada manualmente com a tabela de fatos da partição de destino para garantir que um conjunto completo de dados esteja disponível para o processamento da partição resultante. Isto também se aplica se duas partições forem baseadas em consultas nomeadas diferentes.  
   
 > [!IMPORTANT]  
 >  Uma partição MOLAP mesclada com uma tabela de fatos incompleta contém uma cópia mesclada internamente dos dados da tabela de dados e é operada corretamente até ser processada.  
   
-## Considerações de armazenamento de partição: partições HOLAP e ROLAP  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Considerações de armazenamento de partição: partições HOLAP e ROLAP  
  Quando as partições HOLAP ou OLAP com tabelas de fatos diferentes são mescladas, essas tabelas não são mescladas automaticamente. A não ser que sejam mescladas manualmente, somente a tabela de fatos associada à partição de destino estará disponível na partição resultante. Os fatos associados à partição de origem não estão disponíveis para extração de detalhes na partição resultante e, quando a partição é processada, as agregações não resumem os dados da tabela não disponível.  
   
 > [!IMPORTANT]  
@@ -118,7 +123,7 @@ caps.handback.revision: 34
   
 1.  No Pesquisador de Objetos, expanda o nó **Grupos de Medidas** do cubo que contém as partições que você deseja mesclar, expanda **Partições**, clique com o botão direito do mouse na partição que é o destino da operação de mesclagem. Por exemplo, se você estiver movendo dados de fatos trimestrais para uma partição que armazena dados de fatos anuais, selecione a partição que contém os dados de fatos anuais.  
   
-2.  Clique em **Mesclar Partições** para abrir a caixa de diálogo **Mesclar Partição \<nome da partição>**.  
+2.  Clique em **mesclar partições** para abrir o **Mesclar partição \<nome da partição >** caixa de diálogo.  
   
 3.  Em **Partições de Origem**, marque a caixa de seleção ao lado de cada partição de origem a ser mesclada com a partição de destino e clique em **OK**.  
   
@@ -132,13 +137,13 @@ caps.handback.revision: 34
 ##  <a name="bkmk_partitionsXMLA"></a> Como mesclar partições usando o XMLA  
  Consulte este tópico para obter informações, [Mesclando partições &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Processando objetos do Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
  [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Criar e gerenciar uma partição local &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [Criar e gerenciar uma partição remota &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
- [Definir o write-back de partições](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
- [Partições habilitadas para gravação](../Topic/Write-Enabled%20Partitions.md)   
- [Configurar o armazenamento de cadeia de caracteres para dimensões e partições](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
+ [Criar e gerenciar uma partição remota &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [Definir o write-back de partição](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
+ [Partições habilitadas para gravação](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [Configurar o armazenamento de cadeia de caracteres para dimensões e partições.](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   
   

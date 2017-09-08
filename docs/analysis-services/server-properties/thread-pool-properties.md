@@ -1,32 +1,37 @@
 ---
-title: "Propriedades de pool de threads | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "propriedade PriorityRatio"
-  - "threads [Analysis Services]"
-  - "propriedade MixThreads"
-  - "propriedade NumThreads"
-  - "propriedade MaxThreads"
-  - "Propriedade de simultaneidade"
+title: Propriedades do Pool de threads | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- PriorityRatio property
+- threads [Analysis Services]
+- MinThreads property
+- NumThreads property
+- MaxThreads property
+- Concurrency property
 ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b85d1c7727b699037711eb49f1be360c755f8dc3
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propriedades de pool de threads
+# <a name="thread-pool-properties"></a>Propriedades de pool de threads
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa multi-threading para várias operações, melhorando o desempenho global do servidor ao executar vários trabalhos em paralelo. Para gerenciar threads com mais eficiência, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa pools de threads para pré-alocar threads e facilitar a disponibilidade do thread para o próximo trabalho.  
   
- Cada instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantém seu próprio conjunto de pools de threads. Há diferenças em como as instâncias tabulares e multidimensionais usam pools de threads. Por exemplo, apenas instâncias multidimensionais usam o pool de thread **IOProcess**. Dessa forma, a propriedade **PerNumaNode** , descrita neste tópico, não é significativa para instâncias tabulares. Na seção [Referência de Propriedade](#bkmk_propref) abaixo, os requisitos do modo são indicados para cada propriedade.
+ Cada instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantém seu próprio conjunto de pools de threads. Há diferenças em como as instâncias tabulares e multidimensionais usam pools de threads. Por exemplo, apenas instâncias multidimensionais usam o pool de thread **IOProcess** . Dessa forma, a propriedade **PerNumaNode** , descrita neste tópico, não é significativa para instâncias tabulares. Na seção [Referência de Propriedade](#bkmk_propref) abaixo, os requisitos do modo são indicados para cada propriedade.
   
  Este tópico contém as seguintes seções:  
   
@@ -58,11 +63,11 @@ caps.handback.revision: 30
  
 Recomendamos a CU1 (Atualização Cumulativa 1) do SQL Server 2016 ou posterior para configurar **GroupAffinity** em instâncias tabulares. 
   
- **GroupAffinity** é uma afinidade personalizada pode ser definida em qualquer um dos pools de threads usados para várias cargas de trabalho do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
+ **GroupAffinity** é uma afinidade personalizada pode ser definida em qualquer um dos pools de threads usados para várias cargas de trabalho do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   
--   **ThreadPool \ Parsing \ Short** é um pool de análise para solicitações curtas. As solicitações que se ajustam em uma única mensagem de rede são consideradas curtas. 
+-   **ThreadPool \ Parsing \ Short**  é um pool de análise para solicitações curtas. As solicitações que se ajustam em uma única mensagem de rede são consideradas curtas. 
   
--   **ThreadPool \ Parsing \ Long** é um pool de análise para todas as solicitações restantes que não se ajustam em uma única mensagem da rede. 
+-   **ThreadPool \ Parsing \ Long**  é um pool de análise para todas as solicitações restantes que não se ajustam em uma única mensagem da rede. 
   
     > [!NOTE]  
     >  Um thread desses pools de análise pode ser usado para executar uma consulta. As consultas que são executadas rapidamente, como uma solicitação de Descoberta ou Cancelamento rápido, são muitas vezes executados imediatamente em vez de colocados na fila para o pool de threads de Consulta. 
@@ -131,7 +136,7 @@ Recomendamos a CU1 (Atualização Cumulativa 1) do SQL Server 2016 ou posterior 
 > [!NOTE]  
 >  **GroupAffinity** é restrito por edições que limitam o número de núcleos usados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Na inicialização, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa informações de edição e as propriedades de **GroupAffinity** para computar máscaras de afinidade para cada pool de thread gerenciado pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. A edição Standard pode usar no máximo 24 núcleos. Se você instalar a edição Standard do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em um sistema grande de vários núcleos com mais de 24 núcleos, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usará somente 24 deles. Para obter mais informações sobre valores máximos de processador, consulte os limites de escala da caixa cruzada em [Recursos por edições no SQL Server](https://msdn.microsoft.com/library/cc645993.aspx).  
   
-### Sintaxe  
+### <a name="syntax"></a>Sintaxe  
  O valor é hexadecimal para cada grupo de processador, com o hexadecimal representando os processadores lógicos que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tenta usar primeiro ao atribuir threads para um determinado pool de threads.  
   
  **Máscara de bits para processadores lógicos**  
@@ -144,7 +149,7 @@ Recomendamos a CU1 (Atualização Cumulativa 1) do SQL Server 2016 ou posterior 
   
  `<GroupAffinity>0x0, 0xFF, 0x0, 0xFF</GroupAffinity>`  
   
-### Etapas para computar a máscara de afinidade do processador  
+### <a name="steps-for-computing-the-processor-affinity-mask"></a>Etapas para computar a máscara de afinidade do processador  
  Você pode definir **GroupAffinity** no msmdsrv.ini ou em páginas de propriedades do servidor no SQL Server Management Studio.  
   
 1.  **Determine o número de processadores e grupos de processador**  
@@ -184,31 +189,31 @@ Recomendamos a CU1 (Atualização Cumulativa 1) do SQL Server 2016 ou posterior 
   
  Os valores válidos para **PerNumaNode** são -1, 0, 1 e 2, conforme descrito na seção [Referência à propriedade do pool de threads](#bkmk_propref) neste tópico.  
   
-### Padrão (recomendado)  
+### <a name="default-recommended"></a>Padrão (recomendado)  
  Em sistemas com nós NUMA, recomendamos usar a configuração padrão de PerNumaNode=-1, permitindo que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajuste o número de pools de threads e a afinidade do thread com base na contagem de nós. Se o sistema tiver menos de 4 nós, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implementará os comportamentos descritos por **PerNumaNode**=0, enquanto que **PerNumaNode**=1 será usado em sistemas com 4 ou mais nós.  
   
-### Escolhendo um valor  
+### <a name="choosing-a-value"></a>Escolhendo um valor  
  Você também pode substituir o padrão para usar outro valor válido.  
   
  **Configurando PerNumaNode=0**  
   
  Nós NUMA são ignorados. Haverá apenas um pool de threads do IOProcess, e todos os threads nesse pool de threads serão relacionados a todos os processadores lógicos. Por padrão (onde PerNumaNode=-1), essa é a configuração operacional se o computador tiver menos de 4 nós NUMA.  
   
- ![Correspondência entre Numa, processador e pool de threads](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Correspondência entre Numa, processador e pool de threads")  
+ ![Correspondência entre pool de numa, processador e thread](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "correspondência entre pool de Numa, processador e thread")  
   
  **Configurando PerNumaNode=1**  
   
  Os pools de threads do IOProcess são criados para cada nó NUMA. Ter pools de threads separados melhora o acesso coordenado a recursos locais, como o cache local em um nó NUMA.  
   
- ![Correspondência entre Numa, processador e pool de threads](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Correspondência entre Numa, processador e pool de threads")  
+ ![Correspondência entre pool de numa, processador e thread](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "correspondência entre pool de Numa, processador e thread")  
   
  **Configurando PerNumaNode=2**  
   
- Essa configuração é para sistemas muito avançados que executam cargas de trabalho intensivas do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Essa propriedade define a afinidade do pool de threads do IOProcess no seu nível mais granular, criando e ajustando pools de threads separados no nível do processador lógico.  
+ Essa configuração é para sistemas muito avançados que executam cargas de trabalho intensivas do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Essa propriedade define a afinidade do pool de threads do IOProcess no seu nível mais granular, criando e ajustando pools de threads separados no nível do processador lógico.  
   
  No exemplo a seguir, em um sistema que tem 4 nós NUMA e 32 processadores lógicos, definir **PerNumaNode** como 2 resultaria em 32 pools de threads do IOProcess. Os threads nos primeiros 8 pools de threads seriam relacionados a todos os processadores lógicos no nó NUMA 0, mas com o processador ideal definido como 0, 1, 2, até 7. Os próximos 8 pools de threads seriam relacionados a todos os processadores lógicos no nó NUMA 1, mas com o processador ideal definido como 8, 9, 10, até 15 e assim por diante.  
   
- ![Correspondência entre Numa, processador e pool de threads](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Correspondência entre Numa, processador e pool de threads")  
+ ![Correspondência entre pool de numa, processador e thread](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "correspondência entre pool de Numa, processador e thread")  
   
  Nesse nível de afinidade, o agendador sempre tenta usar primeiro o processador lógico ideal, dentro do nó NUMA preferencial. Se o processador lógico não estiver disponível, o agendador escolherá outro processador dentro do mesmo nó ou dentro do mesmo grupo de processador se nenhum outro thread estiver disponível. Para obter mais informações e exemplos, consulte [Parâmetros de configuração do Analysis Services 2012 (blog do Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387).  
   
@@ -237,7 +242,7 @@ Recomendamos a CU1 (Atualização Cumulativa 1) do SQL Server 2016 ou posterior 
  Para obter mais informações sobre arquitetura do trabalho, consulte a seção 2.2 no [Guia de desempenho do SQL Server Analysis Services](http://www.microsoft.com/download/details.aspx?id=17303).  
   
 ##  <a name="bkmk_related"></a> Propriedades dependentes ou relacionadas  
- Como explicado na seção 2.4 do [Guia de operações do Analysis Services](http://msdn.microsoft.com/library/hh226085.aspx), se você aumentar o pool de threads de processamento, deverá verificar se as configurações do **CoordinatorExecutionMode**, bem como as configurações do **CoordinatorQueryMaxThreads**, têm valores que permitem fazer uso completo do tamanho do pool de threads aumentado.  
+ Como explicado na seção 2.4 do [Guia de operações do Analysis Services](http://msdn.microsoft.com/library/hh226085.aspx), se você aumentar o pool de threads de processamento, deverá verificar se as configurações do **CoordinatorExecutionMode** , bem como as configurações do **CoordinatorQueryMaxThreads** , têm valores que permitem fazer uso completo do tamanho do pool de threads aumentado.  
   
  O Analysis Services usa um thread coordenador para coletar os dados necessários para concluir uma solicitação de processamento ou consulta. O coordenador primeiro enfileira um trabalho para cada partição que deve ser tocada. Cada um desses trabalhos em seguida continua a enfileirar mais trabalhos, dependendo do número total de segmentos que devem ser verificados na partição.  
   
@@ -276,13 +281,13 @@ Recomendamos a CU1 (Atualização Cumulativa 1) do SQL Server 2016 ou posterior 
 > [!NOTE]  
 >  Para obter instruções sobre como configurar propriedades, consulte [Propriedades do servidor no Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Sobre Processos e Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
  [Vários processadores](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
- [Grupos de processadores](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
- [Alterações de Pool de Thread dos Analysis Services no SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
- [Definições da Configuração do Analysis Services 2012 (blog do Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
- [Suporte a sistemas com mais de 64 processadores](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
- [Guia de operação do SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)  
+ [Grupos de processador](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
+ [Alterações de Pool de Thread Analysis Services no SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
+ [Configurações de análise de configuração Services 2012 (Blog do Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
+ [Suporte a sistemas que têm mais de 64 processadores](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
+ [Guia de operações do SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   

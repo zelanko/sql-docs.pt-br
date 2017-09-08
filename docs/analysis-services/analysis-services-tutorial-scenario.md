@@ -1,32 +1,37 @@
 ---
-title: "Cen&#225;rio do tutorial de Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Cenário do Tutorial do Analysis Services | Microsoft Docs"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 933a07504d0237d67becb2d98e1f5271548cb14a
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cen&#225;rio do tutorial de Analysis Services
+# <a name="analysis-services-tutorial-scenario"></a>Cenário do tutorial de Analysis Services
 Este tutorial baseia-se na [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], uma empresa fictícia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa multinacional que produz e distribui bicicletas de metal e compostos para mercados comerciais da América do Norte, Europa e Ásia. A sede da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é em Bothell, Washington, onde a empresa emprega 500 trabalhadores. Além disso, a [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emprega várias equipes de vendas regionais por toda a sua base de mercado.  
   
 Nos últimos anos, a [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] adquiriu uma fábrica pequena, a Importadores Neptuno, situada no México. A Importadores Neptuno fabrica vários subcomponentes importantes para a linha de produtos da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] . Esses subcomponentes são transportados para as instalações de Bothell para o assembly de produto final. Em 2005, a Importadores Neptuno se tornou o fabricante e o distribuidor exclusivo do grupo de produtos de bicicleta de passeio.  
   
 Depois de um ano fiscal próspero, a [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] deseja ampliar sua participação no mercado, direcionando suas vendas para seus melhores clientes, estendendo a disponibilidade dos produtos através de um site externo e diminuindo o custo de vendas reduzindo os custos de produção.  
   
-## Ambiente de análise atual  
-Para dar suporte às necessidades de análise de dados das equipes de vendas e marketing e do gerenciamento sênior, atualmente, a empresa usa dados transacionais do banco de dados [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] e informações não transacionais, como cotas de vendas de planilhas, e consolida essas informações no data warehouse relacional **AdventureWorksDW2012**. No entanto, o data warehouse relacional apresenta os seguintes desafios:  
+## <a name="current-analysis-environment"></a>Ambiente de análise atual  
+Para dar suporte às necessidades de análise de dados das equipes de vendas e marketing e do gerenciamento sênior, atualmente, a empresa usa dados transacionais do banco de dados [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] e informações não transacionais, como cotas de vendas de planilhas, e consolida essas informações no data warehouse relacional **AdventureWorksDW2012** . No entanto, o data warehouse relacional apresenta os seguintes desafios:  
   
 -   Os relatórios são estáticos. Os usuários não têm como explorar os dados de maneira interativa para obter informações mais detalhadas, como eles fariam com uma tabela dinâmica do [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel. Embora o conjunto existente de relatórios predefinidos seja suficiente para muitos usuários, os usuários mais avançados precisam do acesso de consulta direta ao banco de dados para consultas interativas e relatórios especializados. Entretanto, devido à complexidade do banco de dados **AdventureWorksDW2012** , é preciso muito tempo para que esses usuários possam criar consultas eficientes.  
   
@@ -46,7 +51,7 @@ Para dar suporte às necessidades de análise de dados das equipes de vendas e m
   
 -   É difícil examinar as informações. O departamento financeiro atual usa o banco de dados **AdventureWorksDW2012** apenas como uma fonte de dados para consultas em massa. O departamento baixa os dados em planilhas individuais e seus membros passam horas preparando dados e trabalhando com as planilhas. A empresa tem dificuldades em preparar, examinar e gerenciar os relatórios financeiros corporativos.  
   
-## A solução  
+## <a name="the-solution"></a>A solução  
 A equipe do data warehouse realizou recentemente uma revisão do design do sistema de análise atual. A revisão incluiu a análise de lacunas nos assuntos atuais e futuras demandas. A equipe do data warehouse determinou que o banco de dados **AdventureWorksDW2012** é um banco de dados dimensional bem projetado com dimensões compatíveis e chaves alternativas. As dimensões adequadas permitem que a dimensão seja usada em vários data marts, como a dimensão de tempo ou de produto. As chaves substitutas são chaves artificiais que vinculam a dimensão e as tabelas de fatos, e são usadas para garantir a singularidade e para melhorar o desempenho. Além disso, a equipe do data warehouse determinou que não há problemas significativos com o carregamento e o gerenciamento das tabelas base no banco de dados **AdventureWorksDW2012** . A equipe decidiu usar o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para:  
   
 -   Fornecer acesso de dados unificado por uma camada de metadados comum para análise analítica e geração de relatórios.  
@@ -63,8 +68,9 @@ A equipe do data warehouse realizou recentemente uma revisão do design do siste
   
 As lições no tutorial do Analysis Services fornecem orientação sobre como criar um banco de dados de cubo que atende a todas estas metas. Para começar, continue na primeira lição: [Lesson 1: Create a New Tabular Model Project](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
 [Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   
+

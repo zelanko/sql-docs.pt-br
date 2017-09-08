@@ -1,28 +1,33 @@
 ---
-title: "Algoritmo Regress&#227;o Log&#237;stica da Microsoft | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "algoritmos de regressão lógica [Analysis Services]"
-  - "algoritmos [mineração de dados]"
-  - "algoritmos de rede neural [Analysis Services]"
-  - "algoritmos de regressão [Analysis Services]"
+title: "Algoritmo de regressão logística da Microsoft | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logical regression algorithms [Analysis Services]
+- algorithms [data mining]
+- neural network algorithms [Analysis Services]
+- regression algorithms [Analysis Services]
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c4d3e835e6620ed5e4efb551d3e3ebcde7cf3bf8
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Algoritmo Regress&#227;o Log&#237;stica da Microsoft
+# <a name="microsoft-logistic-regression-algorithm"></a>Algoritmo Regressão Logística da Microsoft
   A regressão logística é uma técnica estatística conhecida, usada para modelar resultados binários.  
   
  Há várias implementações de regressão logística em pesquisa de estatísticas, usando técnicas de aprendizagem diferentes. O algoritmo Regressão Logística da [!INCLUDE[msCoName](../../includes/msconame-md.md)] foi implementado usando uma variação do algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Este algoritmo compartilha muitas das qualidades de redes neurais mas é mais fácil treinar.  
@@ -35,13 +40,13 @@ caps.handback.revision: 22
   
 -   Classifique documentos, emails ou outros objetos que contêm muitos atributos.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  Considere um grupo de pessoas que tem informações demográficas parecidas e que compra produtos da empresa Adventure Works. Ao modelar os dados para relacioná-los a um resultado específico, como a compra de determinado produto, você poderá ver como informações demográficas contribuem para a probabilidade de alguém comprar o determinado produto.  
   
-## Como o algoritmo funciona  
+## <a name="how-the-algorithm-works"></a>Como o algoritmo funciona  
  A regressão logística é um método estatístico conhecido para determinar a contribuição de vários fatores para um par de resultados. A implementação da Microsoft usa uma rede neural modificada para modelar as relações entre entradas e resultados. O efeito de cada entrada no resultado é medido e as várias entradas são ponderadas no modelo finalizado. O nome regressão logística foi atribuído pelo fato de a curva de dados ser compactada usando uma transformação logística para minimizar o efeito de valores extremos. Para obter mais informações sobre a implementação e como personalizar o algoritmo, consulte [Referência técnica do algoritmo Regressão Logística da Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md).  
   
-## Dados necessários para modelos de regressão logística  
+## <a name="data-required-for-logistic-regression-models"></a>Dados necessários para modelos de regressão logística  
  Quando você prepara dados para serem usados no treinamento de um modelo de regressão logística, é preciso conhecer os requisitos de um determinado algoritmo, inclusive a quantidade de dados necessária e como os dados serão usados.  
   
  Os requisitos de um modelo de regressão logística são os seguintes:  
@@ -54,21 +59,21 @@ caps.handback.revision: 22
   
  Para obter informações mais detalhadas sobre os tipos de conteúdo e de dados aceitos por modelos de regressão logística, consulte a seção Requisitos de [Referência técnica do algoritmo Regressão Logística da Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md).  
   
-## Exibindo um modelo de regressão logística  
+## <a name="viewing-a-logistic-regression-model"></a>Exibindo um modelo de regressão logística  
  Para explorar o modelo, você pode usar o Visualizador de Rede Neural da Microsoft ou o Visualizador de Árvore de Conteúdo Genérica da Microsoft.  
   
  Ao exibir o modelo usando o Visualizador de Rede Neural da Microsoft, o Analysis Services mostra os fatores que contribuem com um determinado resultado, classificados por importância. Você pode escolher um atributo e valores para comparar. Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Rede Neural da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
- Para obter mais informações, você pode navegar pelos detalhes do modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft. O conteúdo do modelo em um modelo de regressão logística inclui um nó marginal que mostra todas as entradas usadas para o modelo e as sub-redes dos atributos previsíveis. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md).  
+ Para obter mais informações, você pode navegar pelos detalhes do modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft. O conteúdo do modelo em um modelo de regressão logística inclui um nó marginal que mostra todas as entradas usadas para o modelo e as sub-redes dos atributos previsíveis. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
-## Criando previsões  
+## <a name="creating-predictions"></a>Criando previsões  
  Depois que o modelo foi treinado, você pode criar consultas para o conteúdo do modelo a fim de obter os coeficientes de regressão e outros detalhes ou pode usar o modelo para fazer previsões.  
   
 -   Para obter informações gerais sobre como criar consultas com base em um modelo de mineração de dados, consulte [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md).  
   
 -   Para obter exemplos de consultas em um modelo de regressão logística, consulte [Exemplos de consulta de modelo de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md).  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
   
 -   Não suporta detalhamento. Isso acontece porque a estrutura dos nós do modelo de mineração não corresponde diretamente aos dados subjacentes.  
   
@@ -78,9 +83,9 @@ caps.handback.revision: 22
   
 -   Não dá suporte ao uso de PMML para criar modelos de mineração.  
   
-## Consulte também  
- [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md)   
- [Referência técnica do algoritmo Regressão Logística da Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
+## <a name="see-also"></a>Consulte também  
+ [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [Referência técnica do algoritmo de regressão logística de Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de regressão logística](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)  
   
   

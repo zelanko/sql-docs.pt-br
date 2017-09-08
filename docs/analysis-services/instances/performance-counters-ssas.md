@@ -1,27 +1,32 @@
 ---
-title: "Contadores de desempenho (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Contadores de desempenho (SSAS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2d625f6c9060f32fb2a2dc676c84c673f55c8f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Contadores de desempenho (SSAS)
+# <a name="performance-counters-ssas"></a>Contadores de desempenho (SSAS)
   Usando o Monitor de Desempenho, você pode monitorar o desempenho de uma instância do Microsoft SQL Server Analysis Services (SSAS) usando contadores de desempenho.  
   
- O Monitor de Desempenho é um snap-in do Controle de Gerenciamento [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MMC) que controla o uso de recursos. Você pode iniciar este snap-in de MMC digitando **PerfMon** no prompt de comando ou, no Painel de Controle, clicando em **Ferramentas Administrativas** e, em seguida, **Monitor de Desempenho**. O Monitor de Desempenho permite o monitoramento de atividade e desempenho do servidor e dos processos usando objetos e contadores predefinidos, bem como o monitoramento de eventos usando contadores definidos pelo usuário. O Monitor de Desempenho coleta as contagens em vez de dados sobre os eventos, por exemplo, uso de memória, número de transações ativas ou atividade de CPU. Você também pode definir limites em contadores específicos para gerar alertas que notificam operadores.  
+ O Monitor de Desempenho é um snap-in do Controle de Gerenciamento [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MMC) que controla o uso de recursos. Você pode iniciar este snap-in de MMC digitando **PerfMon** no prompt de comando ou, no Painel de Controle, clicando em **Ferramentas Administrativas**e, em seguida, **Monitor de Desempenho**. O Monitor de Desempenho permite o monitoramento de atividade e desempenho do servidor e dos processos usando objetos e contadores predefinidos, bem como o monitoramento de eventos usando contadores definidos pelo usuário. O Monitor de Desempenho coleta as contagens em vez de dados sobre os eventos, por exemplo, uso de memória, número de transações ativas ou atividade de CPU. Você também pode definir limites em contadores específicos para gerar alertas que notificam operadores.  
   
  O Monitor de Desempenho pode monitorar instâncias remotas e locais do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Usando o Monitor de Desempenho](http://technet.microsoft.com/library/cc749115.aspx).  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 14
   
  Os contadores são agrupados para facilitar a localização dos contadores relacionados.  
   
-## Contadores por grupos  
+## <a name="counters-by-groups"></a>Contadores por grupos  
   
 |Agrupar|Description|  
 |-----------|-----------------|  
@@ -159,7 +164,7 @@ caps.handback.revision: 14
 |Contador|Description|  
 |-------------|-----------------|  
 |KB Alocado do Pool da Página 64|Memória emprestada do sistema, em KB.  Esta memória é oferecida a outras partes do servidor.|  
-|KB à Parte do Pool da Página 64|Memória atual em lista à parte de 64 KB, em KB.  (Páginas de memória prontas para serem usadas.)|  
+|KB à Parte do Pool da Página 64|Memória atual em lista à parte de 64 KB, em KB.  (Páginas de memória prontas para serem usadas.)|  
 |KB Alocado do Pool da Página 8|Memória emprestada do pool de página de 64KB, em KB.  Esta memória é oferecida a outras partes do servidor.|  
 |KB à Parte do Pool da Página 8|Memória atual em lista à parte de 8KB, em KB.  (Páginas de memória prontas para serem usadas.)|  
 |KB Alocado do Pool da Página 1|Memória emprestada do pool de página de 64KB, em KB.  Esta memória é oferecida a outras partes do servidor.|  
@@ -180,8 +185,8 @@ caps.handback.revision: 14
 |Falhas da Página de Repositório de Arquivo/s|Taxa de falhas da página de repositório de arquivo.|  
 |Leituras de Repositório de Arquivo/s|Leitura de páginas de repositório de arquivo/s.|  
 |Leituras de KB de Repositório de Arquivo/s|Leitura de KB de repositório de arquivo/s.|  
-|Gravações de Repositório de Arquivo/s|Páginas de repositório de arquivo gravadas/s.  As gravações são assíncronas.|  
-|Gravação de KB de Repositório de Arquivo/s|KB de repositório de arquivo gravado/s.  As gravações são assíncronas.|  
+|Gravações de Repositório de Arquivo/s|Páginas de repositórios de arquivos gravadas/s. As gravações são assíncronas.|  
+|Gravação de KB de Repositório de Arquivo/s|Repositórios de arquivos KB gravados/s. As gravações são assíncronas.|  
 |Erros de ES do Repositório de Arquivo/s|Taxa de erros de ES do repositório de arquivo.|  
 |Erros de ES do Repositório de Arquivo|Total de erros de ES do repositório de arquivo.|  
 |Páginas de Relógio do Repositório de Arquivo Examinadas/s|Taxa de limpeza de plano de fundo que examina páginas para consideração de remoção.|  

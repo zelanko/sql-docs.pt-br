@@ -1,26 +1,31 @@
 ---
-title: "Categoria de evento de relat&#243;rios de andamento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "eventos de andamento [Analysis Services]"
-  - "categoria de evento de relatórios de andamento"
-  - "classes de evento [Analysis Services], relatórios de andamento"
+title: "Categoria de evento de relatórios de andamento | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- progress events [Analysis Services]
+- Progress Reports event category
+- event classes [Analysis Services], progress reports
 ms.assetid: c130f160-28ef-49bc-9ee6-da47dc9aab2a
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3489d5176553ba8482646610a048955b93399043
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Categoria de evento de relat&#243;rios de andamento
+# <a name="progress-reports-event-category"></a>categoria de evento de relatórios de andamento
   A categoria de evento de relatórios de andamento tem as classes de evento descritas na tabela a seguir.  
   
 |Event Class|ID do evento|Description|  
@@ -34,7 +39,7 @@ caps.handback.revision: 23
   
  Para obter informações sobre as colunas associadas a cada classe Progress Report, consulte [Progress Reports Data Columns](../../analysis-services/trace-events/progress-reports-data-columns.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Eventos de rastreamento do Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

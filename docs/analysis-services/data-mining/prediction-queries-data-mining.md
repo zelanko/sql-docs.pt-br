@@ -1,23 +1,28 @@
 ---
-title: "Prediction Queries (Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Consultas de previsão (mineração de dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55dd3cf7af1721a958ebebb70d864a1fd0b873c6
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Prediction Queries (Data Mining)
+# <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
   O objetivo de um projeto de mineração de dados típico é usar o modelo de mineração para fazer previsões. Por exemplo, você pode querer prever a quantidade de tempo de inatividade esperado para um determinado cluster de servidores ou gerar uma pontuação que indica a probabilidade de os segmentos de clientes responderem a uma campanha publicitária. Para fazer todas estas coisas, você cria uma consulta de previsão.  
   
  Funcionalmente, há tipos diferentes de consultas de previsão com suporte no SQL Server, dependendo do tipo de entradas à consulta:  
@@ -84,7 +89,7 @@ caps.handback.revision: 14
 > [!WARNING]  
 >  Se você usar o designer no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a fonte de dados externa deverá ser definida primeiro como uma exibição da fonte de dados.  
   
- Se a linguagem DMX for usada para criar uma junção de previsão, especifique a fonte de dados externa usando os comandos OPENQUERY, OPENROWSET ou SHAPE. O método de acesso aos dados padrão nos modelos DMX é OPENQUERY. Para obter mais informações sobre esses métodos, consulte [&#60;consulta de dados de origem&#62;](../Topic/%3Csource%20data%20query%3E.md).  
+ Se a linguagem DMX for usada para criar uma junção de previsão, especifique a fonte de dados externa usando os comandos OPENQUERY, OPENROWSET ou SHAPE. O método de acesso aos dados padrão nos modelos DMX é OPENQUERY. Para obter mais informações sobre esses métodos, consulte [&#60;consulta de dados de origem&#62;](../../dmx/source-data-query.md).  
   
 ###  <a name="bkmk_TSQuery"></a> Previsões em modelos de mineração de série temporal  
  Modelos de série temporal são diferentes de outros tipos de modelos; você pode usar o modelo como ele é para criar previsões, ou pode fornecer novos dados para o modelo para atualizá-lo e criar previsões com base em tendências recentes. Se você adicionar novos dados, poderá especificar o modo como os novos dados devem ser usados.  
@@ -147,7 +152,7 @@ FROM
   
  Se o provedor não puder manipular conjuntos de linhas hierárquicos, você poderá mesclar os resultados usando a palavra-chave FLATTEN na consulta de previsão. Para obter mais informações, inclusive exemplos de conjuntos de linhas bidimensionais, consulte [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Consultas de conteúdo &#40;Data Mining&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
  [Consultas de definição de dados &#40;Data Mining&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   

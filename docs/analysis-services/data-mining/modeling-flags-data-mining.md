@@ -1,35 +1,40 @@
 ---
-title: "Sinalizadores de modelagem (Minera&#231;&#227;o de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "atributos [mineração de dados]"
-  - "tipos de dados (mineração de dados)"
-  - "Sinalizador REGRESSOR"
-  - "Sinalizador MODEL_EXISTENCE_ONLY"
-  - "Coluna REGRESSOR"
-  - "colunas [mineração de dados], sinalizadores de modelagem"
-  - "sinalizador de modelagem NOT NULL"
-  - "sinalizadores de modelagem [mineração de dados]"
-  - "valores nulos [Analysis Services]"
-  - "Coluna MODEL_EXISTENCE_ONLY"
-  - "codificação [mineração de dados]"
+title: "Sinalizadores de modelagem (mineração de dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [data mining]
+- data types [data mining]
+- REGRESSOR flag
+- MODEL_EXISTENCE_ONLY flag
+- REGRESSOR column
+- columns [data mining], modeling flags
+- NOT NULL modeling flag
+- modeling flags [data mining]
+- null values [Analysis Services]
+- MODEL_EXISTENCE_ONLY column
+- coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ec1ae22619f8988c6d334dfd501faa221e34d1f7
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Sinalizadores de modelagem (Minera&#231;&#227;o de Dados)
+# <a name="modeling-flags-data-mining"></a>Sinalizadores de modelagem (Mineração de Dados)
   Use sinalizadores de modelagem no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para fornecer informações adicionais para um algoritmo de mineração de dados sobre os dados definidos em uma tabela de casos. O algoritmo pode usar essas informações para criar um modelo de mineração de dados mais preciso.  
   
  Alguns sinalizadores de modelagem são definidos no nível da estrutura de mineração, enquanto outros são definidos no nível de coluna do modelo de mineração. Por exemplo, o sinalizador de modelagem **NOT NULL** é usado com colunas da estrutura de mineração. Você pode definir sinalizadores de modelagem adicionais nas colunas de modelo de mineração, dependendo do algoritmo usado para criar o modelo.  
@@ -37,7 +42,7 @@ caps.handback.revision: 48
 > [!NOTE]  
 >  Plug-ins de terceiros podem ter outros sinalizadores de modelagem, além daqueles predefinidos pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-## Lista de sinalizadores de modelagem  
+## <a name="list-of-modeling-flags"></a>Lista de sinalizadores de modelagem  
  A lista a seguir descreve os sinalizadores de modelagem suportados no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter informações sobre como os sinalizadores de modelagem têm suporte de algoritmos específicos, consulte o tópico de referência técnica do algoritmo que foi usado para criar o modelo.  
   
  **NOT NULL**  
@@ -46,17 +51,17 @@ caps.handback.revision: 48
  **MODEL_EXISTENCE_ONLY**  
  Indica que a coluna será tratada como tendo dois estados possíveis: **Ausente** e **Existente**. Se o valor for **NULL**, será tratado como Missing. O sinalizador MODEL_EXISTENCE_ONLY é aplicado ao atributo previsível e tem suporte pela maioria dos algoritmos.  
   
- De fato, definir o sinalizador MODEL_EXISTENCE_ONLY para **True** alterar a representação dos valores de modo que haja somente dois estados: **Ausente** e **Existente**. Todos os estados não ausentes são combinados em um único valor **Existente**.  
+ De fato, definir o sinalizador MODEL_EXISTENCE_ONLY para **True** alterar a representação dos valores de modo que haja somente dois estados: **Ausente** e **Existente**. Todos os estados não ausentes são combinados em um único valor **Existente** .  
   
  Um uso comum desse sinalizador de modelagem seria em atributos para os quais o estado **NULL** tem um significado implícito e o valor explícito do estado **NOT NULL** pode não ser tão importante quanto o fato de que a coluna possui algum valor. Por exemplo, uma coluna [DateContractSigned] pode ser **NULL** se nunca houve um contrato assinado e **NOT NULL** se o contrato foi assinado. Portanto, se o objetivo do modelo é prever se um contrato será assinado, você pode usar o sinalizador MODEL_EXISTENCE_ONLY para ignorar o valor da data exata dos casos **NOT NULL** e distinguir somente os casos em que um contrato seja **Ausente** ou **Existente**.  
   
 > [!NOTE]  
->  Missing é um estado especial usado pelo algoritmo e difere do valor de texto "Missing" em uma coluna. Para obter mais informações, consulte [Valores ausentes&#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
+>  Missing é um estado especial usado pelo algoritmo e difere do valor de texto "Missing" em uma coluna. Para obter mais informações, consulte [Valores ausentes &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
  **REGRESSOR**  
  Indica que a coluna é uma candidata a ser usada como um regressor durante o processamento. Este sinalizador é definido em uma coluna de modelo de mineração e só pode ser aplicado a colunas com um tipo de dados numérico contínuo. Para obter mais informações sobre o uso desse sinalizador, consulte a seção neste tópico [Usos do sinalizador de modelagem REGRESSOR](#bkmk_UseRegressors).  
   
-## Exibindo e alterando sinalizadores de modelagem  
+## <a name="viewing-and-changing-modeling-flags"></a>Exibindo e alterando sinalizadores de modelagem  
  É possível exibir os sinalizadores de modelagem associados a uma coluna de estrutura de mineração ou uma coluna de modelo no Designer de Mineração de Dados ao exibir as propriedades da estrutura ou do modelo.  
   
  Para determinar quais sinalizadores de modelagem foram aplicados à estrutura de mineração atual, você pode criar uma consulta no conjunto de linhas de esquema de mineração de dados que retorna os sinalizadores de modelagem somente para as colunas de estrutura, usando uma consulta como a seguinte:  
@@ -86,7 +91,7 @@ WHERE MODEL_NAME = '<model name>'
   
  **Observação** Se você modificar um modelo de mineração e alterar o tipo de conteúdo de uma coluna de contínuo para discreto, terá que alterar manualmente o sinalizador da coluna de mineração e, em seguida, processar novamente o modelo.  
   
-### Regressor em modelos de regressão lineares  
+### <a name="regressors-in-linear-regression-models"></a>Regressor em modelos de regressão lineares  
  Os modelos de regressão lineares baseiam-se no algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Mesmo que você não use o algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , todo modelo de árvore de decisão poderá conter uma árvore ou nós que representam uma regressão em um atributo contínuo.  
   
  Portanto, nesses modelos, não é necessário especificar que uma coluna contínua representa um regressor. O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] particionará o conjunto de dados em regiões com padrões significativos mesmo que você não defina o sinalizador REGRESSOR na coluna. A diferença é que, quando você define o sinalizador de modelagem, o algoritmo tenta encontrar equações de regressão no seguinte formato de acordo com os padrões dos nós da árvore.  
@@ -99,7 +104,7 @@ WHERE MODEL_NAME = '<model name>'
   
  Você pode usar o parâmetro FORCE_REGRESSOR para garantir que o algoritmo usará determinado regressor. Esse parâmetro pode ser usado com o algoritmo Árvores de Decisão e com o algoritmo Regressão Linear.  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  Use os links a seguir para saber mais sobre como usar sinalizadores de modelagem.  
   
 |Tarefa|Tópico|  

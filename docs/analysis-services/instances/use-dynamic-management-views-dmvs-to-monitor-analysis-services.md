@@ -1,24 +1,29 @@
 ---
-title: "Usar DMVs (Exibi&#231;&#245;es de Gerenciamento Din&#226;mico) para monitorar o Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Usar exibições de gerenciamento dinâmico (DMVs) para monitorar o Analysis Services | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c9faafd33f7abaee582821336dcd471d637a1c1
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Usar DMVs (Exibi&#231;&#245;es de Gerenciamento Din&#226;mico) para monitorar o Analysis Services
+# <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Usar DMVs (Exibições de Gerenciamento Dinâmico) para monitorar o Analysis Services
   As DMVs (Exibições de Gerenciamento Dinâmico) do Analysis Services são estruturas de consulta que expõem informações sobre as operações do servidor local e a integridade do servidor. A estrutura da consulta é uma interface para conjuntos de linhas de esquema que retornam metadados e informações de monitoramento sobre uma instância do Analysis Services.  
   
  Para a maioria das consultas DMV, use uma instrução **SELECT** e o esquema **$System** com um conjunto de linhas de esquema XML/A.  
@@ -99,7 +104,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Se não houver uma DMV disponível para determinado conjunto de linhas, o servidor retornará o seguinte erro: “O tipo de solicitação \<schemarowset> não foi reconhecido pelo servidor”. Todos os outros erros apontam para problemas com a sintaxe.  
+>  Se uma DMV não está disponível para um determinado conjunto de linhas, o servidor retornará o seguinte erro: "o \<conjunto_de_linhas_de_esquema > tipo de solicitação não foi reconhecido pelo servidor". Todos os outros erros apontam para problemas com a sintaxe.  
   
 |Conjunto de linhas|Description|  
 |------------|-----------------|  
@@ -138,7 +143,7 @@ ORDER BY TABLE_NAME ASC
 |[Conjunto de linhas DISCOVER_TRACE_EVENT_CATEGORIES](../../analysis-services/schema-rowsets/xml/discover-trace-event-categories-rowset.md)|Retorna uma lista de categorias disponíveis.|  
 |[Conjunto de linhas DISCOVER_TRACES](../../analysis-services/schema-rowsets/xml/discover-traces-rowset.md)|Retorna uma lista de rastreamentos em execução ativa na conexão atual.|  
 |[Conjunto de linhas DISCOVER_TRANSACTIONS](../../analysis-services/schema-rowsets/xml/discover-transactions-rowset.md)|Retorna uma lista de transações em execução ativa na conexão atual.|  
-|[Conjunto de linhas DISCOVER_XEVENT_TRACE_DEFINITION](../Topic/DISCOVER_XEVENT_TRACE_DEFINITION%20Rowset.md)|Retorna uma lista de rastreamentos xevent em execução ativa na conexão atual.|  
+|[Conjunto de linhas DISCOVER_XEVENT_TRACE_DEFINITION](http://msdn.microsoft.com/library/e1ce2d2d-f994-4318-801a-ee0385aecd84)|Retorna uma lista de rastreamentos xevent em execução ativa na conexão atual.|  
 |[Conjunto de linhas de DMSCHEMA_MINING_COLUMNS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|Lista as colunas individuais de todos os modelos de mineração disponíveis na conexão atual.|  
 |[Conjunto de linhas DMSCHEMA_MINING_FUNCTIONS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|Retorna uma lista de funções com suporte dos algoritmos de mineração de dados no servidor.|  
 |[Conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|Retorna um conjunto de linhas que consiste em colunas que descrevem o modelo atual.|  
@@ -163,9 +168,9 @@ ORDER BY TABLE_NAME ASC
 |[Conjunto de linhas MDSCHEMA_PROPERTIES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Retorna um nome totalmente qualificado de cada propriedade, junto com o tipo de propriedade, o tipo de dados e outros metadados.|  
 |[Conjunto de linhas MDSCHEMA_SETS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Retorna uma lista de conjuntos definidos na conexão atual.|  
   
-## Consulte também  
- [Guia de operação do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [Novo System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
+## <a name="see-also"></a>Consulte também  
+ [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+ [Novo System. discover_object_activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [Nova função SYSTEMRESTRICTEDSCHEMA para conjuntos de linhas restritos e DMVs](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

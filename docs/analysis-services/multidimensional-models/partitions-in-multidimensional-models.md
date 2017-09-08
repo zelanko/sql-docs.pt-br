@@ -1,49 +1,54 @@
 ---
-title: "Parti&#231;&#245;es em modelos multidimensionais | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Partições em modelos multidimensionais | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: e295cce9f15d1ea0dc12f4402807996e44b3fe09
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Parti&#231;&#245;es em modelos multidimensionais
+# <a name="partitions-in-multidimensional-models"></a>Partições em modelos multidimensionais
   No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma *partição* fornece o armazenamento físico de dados de fatos carregados em um grupo de medidas. Uma única partição é criada para cada grupo de medidas automaticamente, mas é comum criar partições adicionais que segmentam mais os dados, resultando em processamento mais eficiente e em desempenho mais rápido das consultas.  
   
  O processamento é mais eficiente porque as partições podem ser processados de forma independente e em paralelo, em um ou mais servidores. As consultas são executadas mais rápido porque cada partição pode ser configurada para ter os modos de armazenamento e as otimizações de agregação que resultam em tempos de resposta mais curtos. Por exemplo, o armazenamento MOLAP para partições contendo dados mais recentes costuma ser mais rápido do que o ROLAP. Da mesma forma, se você particionar por data, as partições contendo dados mais recentes poderão ter mais otimizações do que as partições contendo dados mais antigos que são acessados com menos frequência. Observe que a variação no design de armazenamento e agregação por partição terá um impacto negativo sobre operações futuras de mesclagem. Verifique se a mesclagem é de fato um componente essencial de sua estratégia de gerenciamento de partição antes de otimizar partições individuais.  
   
 > [!NOTE]  
->  O suporte a várias partições está disponível nas edições business intelligence e enterprise. A edição standard não oferece suporte a várias partições. Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+>  O suporte a várias partições está disponível nas edições business intelligence e enterprise. A edição standard não oferece suporte a várias partições. Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).  
   
-## Considerações importantes ao criar uma estratégia de particionamento  
+## <a name="important-considerations-when-designing-a-partitioning-strategy"></a>Considerações importantes ao criar uma estratégia de particionamento  
  A integridade dos dados de um cubo depende de os dados serem distribuídos entre as partições do cubo de modo que nenhum dado seja duplicado entre as partições. Quando os dados são resumidos das partições, os elementos de dados que estão presentes em mais de uma partição serão resumidos como se fossem elementos de dados diferentes. Isto pode resultar em resumos incorretos e dados errôneos fornecidos para o usuário final. Por exemplo, se uma transação de vendas para o Produto X for duplicada nas tabelas de fato para duas partições, os resumos de vendas do Produto X poderão incluir uma contabilidade dupla da transação duplicada.  
   
  As partições podem ser mescladas; você pode usar este recurso na sua estratégia global de armazenamento e atualização de dados. As partições somente poderão ser mescladas se tiverem o mesmo modo de armazenamento e design de agregação. Para criar partições que são candidatos a mesclagem posterior, você poderá copiar o design de agregação de outra partição ao criar partições. Você também pode editar uma partição depois de ela ter sido criada para copiar o design de agregação de outra partição. Mesclar partições também deve ser realizado com cuidado para evitar duplicação de dados na partição resultante, o que pode causar inexatidão dos dados do cubo.  
   
-## Partições locais  
- Partições locais são partições definidas, processadas e armazenadas em um servidor. Se houver grandes grupos de medidas em um cubo, é possível particioná-los para que o processamento ocorra paralelamente entre as partições. A vantagem é que o processamento paralelo fornece uma execução mais rápida. Como um trabalho de processamento de partição não precisa terminar antes do início de outro, eles podem ser executados em paralelo. Para obter mais informações, consulte [Criar e gerenciar uma partição local #40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md).  
+## <a name="local-partitions"></a>Partições locais  
+ Partições locais são partições definidas, processadas e armazenadas em um servidor. Se houver grandes grupos de medidas em um cubo, é possível particioná-los para que o processamento ocorra paralelamente entre as partições. A vantagem é que o processamento paralelo fornece uma execução mais rápida. Como um trabalho de processamento de partição não precisa terminar antes do início de outro, eles podem ser executados em paralelo. Para obter mais informações, consulte [Criar e gerenciar uma partição local &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md).  
   
-## Partições remotas  
+## <a name="remote-partitions"></a>Partições remotas  
  Partições remotas são partições definidas em um servidor, mas processadas e armazenadas em outro. Se desejar distribuir o armazenamento de dados e metadados entre vários servidores, use partições remotas. Normalmente, ao fazer a transição do desenvolvimento para a produção, o tamanho dos dados analisados aumenta várias vezes. Com grandes blocos de dados como esses, uma possível alternativa é distribuir tais dados entre vários computadores. Isso é feito não só porque um computador não pode armazenar todos os dados, mas também para processar os dados paralelamente em mais de um computador. Para obter mais informações, consulte [Criar e gerenciar uma partição remota &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md).  
   
-## Agregações  
+## <a name="aggregations"></a>Agregações  
  As agregações são resumos pré-calculados de dados de cubo que ajudam a habilitar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para fornecer rápidas respostas de consultas. Você pode controlar o número de agregações criadas para um grupo de medidas definindo limites de armazenamento, ganhos de desempenho, ou arbitrariamente interrompendo o processo de criação de agregação após sua execução por algum tempo. Mais agregações não são necessariamente melhores. Cada nova agregação tem a custo, em termos de espaço em disco e de tempo de processamento. Recomendamos criar agregações para um ganho de 30% em desempenho e, depois, aumentar o número apenas se o teste ou a experiência o justificar. Para obter mais informações, consulte [Projetando agregações &#40;Analysis Services – Multidimensional&#41;](../../analysis-services/multidimensional-models/designing-aggregations-analysis-services-multidimensional.md).  
   
-## Mesclando e editando partições  
+## <a name="partition-merging-and-editing"></a>Mesclando e editando partições  
  Se duas partições usarem o mesmo design de agregação, é possível mesclar essas duas partições em uma. Por exemplo, se você tiver uma dimensão de inventário particionada por mês, no final de cada mês do calendário, será possível mesclar a partição desse mês com a partição existente dos meses acumulados no ano. Desse modo, a partição do mês atual pode ser processada e analisada rapidamente, enquanto o resto do ano em meses só será reprocessado quando for mesclado. O reprocessamento requer um tempo maior e pode ser executado com menos frequência. Para obter mais informações sobre como gerenciar a processo de mesclagem de partições, consulte [Mesclar partições no Analysis Services &#40;SSAS – Multidimensional&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md). Para editar as partições do cubo usando a guia **Partições** no Designer de Cubo, consulte [Editar ou excluir partições &#40;Analysis Services – Multidimensional&#41;](../../analysis-services/multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md).  
   
-## Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos relacionados  
   
 |Tópico|Description|  
 |-----------|-----------------|  

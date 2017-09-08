@@ -1,56 +1,43 @@
 ---
-title: "Idiomas e agrupamentos (Analysis Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "Testar o Analysis Services"
-helpviewer_keywords: 
-  - "agrupamentos do Windows [Analysis Services]"
-  - "agrupamentos padrão"
-  - "idiomas [Analysis Services]"
-  - "ordens de classificação [Analysis Services]"
-  - "identificadores de idioma [Analysis Services]"
-  - "idiomas padrão"
-  - "agrupamentos [Analysis Services]"
+title: Idiomas e agrupamentos (Analysis Services) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 04/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- Testar o Analysis Services
+helpviewer_keywords:
+- Windows collations [Analysis Services]
+- default collations
+- languages [Analysis Services]
+- sort orders [Analysis Services]
+- language identifiers [Analysis Services]
+- default languages
+- collations [Analysis Services]
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d2f1ca64cc2c6a3c3d376b47c660598e05227bf8
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Idiomas e agrupamentos (Analysis Services)
+# <a name="languages-and-collations-analysis-services"></a>Idiomas e agrupamentos (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte a idiomas e agrupamentos fornecidos pelos [!INCLUDE[msCoName](../includes/msconame-md.md)] sistemas operacionais do Windows. As propriedades**Language** e **Collation** são inicialmente definidas no nível da instância durante a instalação, mas podem ser alteradas posteriormente em diferentes níveis da hierarquia do objeto.  
   
  Em um modelo multidimensional (somente), você pode definir essas propriedades em um banco de dados ou cubo – você também pode defini-las em traduções que você cria para objetos em um cubo. Em um modelo tabular, a linguagem e o agrupamento são herdados do sistema operacional do host.  
   
  Ao definir **Language** e **Collation** em um modelo multidimensional, você está especificando as configurações usadas pelo modelo de dados durante o processamento e a execução da consulta ou você está equipando um modelo com várias traduções para que os falantes do idioma estrangeiro possam trabalhar com o modelo em seu idioma nativo. A configuração explícita das propriedades **Language** e **Collation** em um objeto (banco de dados, modelo ou cubo) é para situações em que o servidor de produção e o ambiente de desenvolvimento são configurados para localidades diferentes, e você quer ter certeza de que o idioma e agrupamento correspondem ao ambiente de destino pretendido.  
-  
- Este tópico inclui estas seções:  
-  
--   [Objetos que dão suporte a propriedades de Agrupamento e Idioma](#bkmk_object)  
-  
--   [Suporte a idiomas no Analysis Services](#bkmk_lang)  
-  
--   [Suporte a agrupamento no Analysis Services](#bkmk_collations)  
-  
--   [Alterar o idioma padrão ou o agrupamento na instância](#bkmk_defaultLang)  
-  
--   [Alterar o idioma ou o agrupamento em um cubo](#bkmk_cube)  
-  
--   [Alterar idioma e agrupamento dentro de um modelo de dados usando o XMLA](#bkmk_XMLA)  
-  
--   [Aumentar o desempenho para localidades do inglês por meio de EnableFast1033Locale](#bkmk_enablefast1033)  
-  
--   [Suporte a GB18030 no Analysis Services](#bkmk_gb18030)  
   
 ##  <a name="bkmk_object"></a> Objetos que dão suporte a propriedades de Agrupamento e Idioma  
  As propriedades**Language** e **Collation** normalmente são expostas juntas – onde é possível definir **Language**, é também possível definir **Collation**.  
@@ -103,7 +90,7 @@ caps.handback.revision: 26
 ##  <a name="bkmk_collations"></a> Suporte a agrupamento no Analysis Services  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa o Windows (versões _90 e _100) e exclusivamente agrupamentos binários. Ele não usa agrupamentos herdados do SQL Server. Em um cubo, um único agrupamento é usado no todo, com exceção de traduções no nível de atributo. Para obter mais informações sobre a definição de conversões de atributos, consulte [Suporte a tradução no Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
   
- Os agrupamentos controlam a diferenciação de maiúsculas e minúsculas de todas as cadeias de caracteres em um script de idioma bicameral, com exceção dos identificadores de objeto. Se você usar caracteres maiúsculos e minúsculos em um identificador de objeto, saiba que a diferenciação de maiúsculas e minúsculas de identificadores de objeto não é determinada pelo agrupamento, mas pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para identificadores de objeto compostos no script em inglês, eles sempre diferenciam maiúsculas de minúsculas, independentemente do agrupamento. Cirílico e outras linguagens bicamerais fazem o oposto (sempre diferenciam maiúsculas de minúsculas). Consulte [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) para obter detalhes.  
+ Os agrupamentos controlam a diferenciação de maiúsculas e minúsculas de todas as cadeias de caracteres em um script de idioma bicameral, com exceção dos identificadores de objeto. Se você usar caracteres maiúsculos e minúsculos em um identificador de objeto, saiba que a diferenciação de maiúsculas e minúsculas de identificadores de objeto não é determinada pelo agrupamento, mas pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para identificadores de objeto compostos no script em inglês, eles sempre diferenciam maiúsculas de minúsculas, independentemente do agrupamento. Cirílico e outras linguagens bicamerais fazem o oposto (sempre diferenciam maiúsculas de minúsculas). Para obter detalhes, consulte [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
   
  O agrupamento do Analysis Services é compatível com o do mecanismo de banco de dados relacional do SQL Server, supondo que você mantenha a paridade nas opções de classificação selecionadas para cada serviço. Por exemplo, se o banco de dados relacional diferenciar acentos, você deverá configurar o cubo da mesma maneira. Podem ocorrer problemas quando as configurações de agrupamento divergem. Para obter um exemplo e soluções alternativas, consulte [Blanks in a Unicode string have different processing outcomes based on collation (Espaços em branco em uma cadeia de caracteres Unicode têm resultados de processamento diferentes com base no agrupamento)](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx). Para saber mais sobre o agrupamento e o mecanismo de banco de dados, consulte [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
@@ -137,7 +124,7 @@ caps.handback.revision: 26
 |Ordem de classificação (sufixo)|Descrição da ordem de classificação|  
 |---------------------------|----------------------------|  
 |Binário (_BIN) ou BIN2 (_BIN2)|Existem dois tipos de agrupamentos binários no SQL Server; os agrupamentos BIN mais antigos e os agrupamentos BIN2 mais recentes. Em um agrupamento BIN2 todos os caracteres são classificados de acordo com seus pontos de código. Em um agrupamento BIN apenas o primeiro caractere é classificado de acordo com o ponto de código e os caracteres restantes são classificados de acordo com seus valores de byte. (Como a plataforma Intel é um arquitetura little endian, os caracteres de código Unicode são sempre trocados por bytes armazenados.)<br /><br /> Para agrupamentos binários em tipos de dados Unicode, a localidade não é considerada em classificações de dados. Por exemplo, Latin_1_General_BIN e Japanese_BIN geram resultados de classificação idênticos quando usados em dados Unicode.<br /><br /> A ordem de classificação binária faz distinção entre maiúsculas e minúsculas e acentuação. Binário é também a ordem de classificação mais rápida.|  
-|Case-sensitive (_CS)|Faz distinção entre letras maiúscula e minúsculas. Se selecionada, as letras minúsculas são ordenadas à frente das versões em letras maiúsculas. Você pode definir explicitamente a não diferenciação de maiúsculas e minúsculas especificando _CI. Configurações de maiúsculas e minúsculas específicas de agrupamento não se aplicam a identificadores de objeto, como a ID de uma dimensão, cubo e outros objetos. Consulte [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) para obter detalhes.|  
+|Case-sensitive (_CS)|Faz distinção entre letras maiúscula e minúsculas. Se selecionada, as letras minúsculas são ordenadas à frente das versões em letras maiúsculas. Você pode definir explicitamente a não diferenciação de maiúsculas e minúsculas especificando _CI. Configurações de maiúsculas e minúsculas específicas de agrupamento não se aplicam a identificadores de objeto, como a ID de uma dimensão, cubo e outros objetos. Para obter detalhes, consulte [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .|  
 |Accent-sensitive (_AS)|Faz distinção entre caracteres acentuados e não acentuados. Por exemplo, 'a' não é igual a 'ã'. Se esta opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará que as versões acentuadas e não acentuadas das letras são iguais para fins de classificação. É possível definir a não diferenciação de acentos especificando _AI.|  
 |Kana-sensitive (_KS)|Distingue entre os dois tipos de caracteres kana japoneses: hiragana e katakana. Se essa opção não for selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará que caracteres hiragana e katakana são iguais para fins de classificação. Não há nenhum sufixo de ordem de classificação para kana.|  
 |Width-sensitive (_WS)|Distingue entre um caractere de byte único e o mesmo caractere quando representado como um caractere de byte duplo. Se essa opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará as representações de byte único e byte duplo do mesmo caractere como iguais para fins de classificação. Não há nenhum sufixo de ordem de classificação para distinção de largura.|  
@@ -151,7 +138,7 @@ caps.handback.revision: 26
   
 -   Reprocessar partições e dimensões após atualização do agrupamento.  
   
- Você pode usar o SQL Server Management Studio ou o PowerShell do AMO para alterar o idioma padrão ou o agrupamento no nível de servidor. Como alternativa, você pode modificar as configurações de **\<Language>** e **\<CollationName>** no arquivo msmdsrv ini, especificando o LCID do idioma.  
+ Você pode usar o SQL Server Management Studio ou o PowerShell do AMO para alterar o idioma padrão ou o agrupamento no nível de servidor. Como alternativa, você pode modificar o  **\<idioma >** e  **\<CollationName >** configurações no arquivo msmdsrv.ini, especificando o LCID do idioma.  
   
 1.  No Management Studio, clique com o botão direito do mouse no nome do servidor | **Propriedades** | **Idioma/Agrupamento**.  
   
@@ -189,14 +176,14 @@ caps.handback.revision: 26
 4.  Reprocessar o cubo.  
   
 ##  <a name="bkmk_enablefast1033"></a> Aumentar o desempenho para localidades do inglês por meio de EnableFast1033Locale  
- Se você usar o identificador de idioma Inglês (Estados Unidos) (0x0409 ou 1033) como idioma padrão para a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], poderá obter benefícios de desempenho adicionais, configurando a propriedade de configuração **EnableFast1033Locale**, uma propriedade avançada disponível apenas para esse identificador de idioma. Configurar o valor dessa propriedade como **true** permite que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] use um algoritmo mais rápido para hash e comparação de cadeia de caracteres. Para obter mais informações sobre como definir propriedades de configuração, consulte [Propriedades de servidor no Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+ Se você usar o identificador de idioma Inglês (Estados Unidos) (0x0409 ou 1033) como idioma padrão para a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , poderá obter benefícios de desempenho adicionais, configurando a propriedade de configuração **EnableFast1033Locale** , uma propriedade avançada disponível apenas para esse identificador de idioma. Configurar o valor dessa propriedade como **true** permite que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] use um algoritmo mais rápido para hash e comparação de cadeia de caracteres. Para obter mais informações sobre como definir propriedades de configuração, consulte [Propriedades de servidor no Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
 ##  <a name="bkmk_gb18030"></a> Suporte a GB18030 no Analysis Services  
  GB18030 é um padrão separado usado na República Popular da China para codificar caracteres chineses. Em GB18030, caracteres podem ter 1, 2 ou 4 bytes em comprimento. No Analysis Services, não há conversão de dados durante o processamento de dados de fontes externas. Os dados são simplesmente armazenados como Unicode. No momento da consulta, uma conversão GB18030 é realizada por meio de bibliotecas do cliente Analysis Services (especificamente, o provedor OLE DB MSOLAP.dll) quando os dados de texto são retornados nos resultados da consulta, baseados nas configurações do sistema operacional cliente. O mecanismo de banco de dados também dá suporte a GB18030. Para obter detalhes, consulte [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Cenários de globalização para o Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
+ [Dicas de globalização e práticas recomendadas &#40; Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
  [Suporte a agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

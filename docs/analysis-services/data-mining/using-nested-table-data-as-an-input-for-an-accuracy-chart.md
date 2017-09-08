@@ -1,28 +1,33 @@
 ---
-title: "Usando dados de uma tabela aninhada como entrada para um gr&#225;fico de precis&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gráfico de precisão de mineração [Analysis Services], tabelas aninhadas"
-  - "Gráfico de precisão de mineração [Analysis Services], tabelas de entrada"
-  - "tabelas aninhadas"
-  - "adicionando tabelas aninhadas"
+title: "Usando dados de tabela aninhada como entrada para um gráfico de precisão | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Mining Accuracy Chart [Analysis Services], nested tables
+- Mining Accuracy Chart [Analysis Services], input tables
+- nested tables
+- adding nested tables
 ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6ebe50e260a7de9520c75e534548d342fa3b2b68
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Usando dados de uma tabela aninhada como entrada para um gr&#225;fico de precis&#227;o
+# <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Usando dados de uma tabela aninhada como entrada para um gráfico de precisão
   Quando você testar a precisão de um modelo de mineração usando dados externos, se o modelo de mineração contiver tabelas aninhadas, os dados externos também deverão contar uma tabela de casos e uma tabela aninhada associada.  
   
  Este tópico descreve como trabalhar com tabelas aninhadas usadas para testar modelos, como mapear tabelas de casos e aninhadas no modo e nos dados externos e como aplicar um filtro a uma tabela aninhada.  
@@ -35,7 +40,7 @@ caps.handback.revision: 24
   
 -   Não será possível selecionar uma tabela aninhada até que você especifique a tabela de casos. Além disso, você não pode especificar uma tabela aninhada como uma entrada, a menos que o modelo de mineração também use uma estrutura de tabela de casos e tabela aninhada.  
   
-### Usar uma tabela aninhada como entrada para um gráfico de precisão  
+### <a name="use-a-nested-table-as-input-to-an-accuracy-chart"></a>Usar uma tabela aninhada como entrada para um gráfico de precisão  
   
 1.  Clique duas vezes na estrutura de mineração para abri-la no Designer de Mineração de Dados.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 24
   
      Se você precisar modificar a relação entre a tabela aninhada e a tabela de casos, clique em **Modificar Junção** para abrir a caixa de diálogo **Criar Relação** .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Escolher e mapear dados de testes modelo](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
  [Aplicar filtros a dados de testes de modelo](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
   

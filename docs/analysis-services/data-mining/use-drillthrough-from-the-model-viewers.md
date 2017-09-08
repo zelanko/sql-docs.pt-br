@@ -1,28 +1,33 @@
 ---
-title: "Usar detalhamento dos visualizadores do modelo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Usar o detalhamento dos visualizadores do modelo | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed4254b34f570f37761001542d67e94c02e70a84
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Usar detalhamento dos visualizadores do modelo
+# <a name="use-drillthrough-from-the-model-viewers"></a>Usar detalhamento dos visualizadores do modelo
   Dependendo do tipo de modelo, você pode usar o detalhamento dos visualizadores de procura na guia **Visualizador de Modelo de Mineração** de Designer de Mineração de Dados para explorar os casos usados no modelo de mineração ou consultar colunas adicionais na estrutura de mineração. Embora muitos tipos de modelos não ofereçam suporte ao detalhamento porque os padrões no modelo não podem ser vinculados diretamente a casos específicos, os tipos de modelos a seguir oferecem suporte ao detalhamento.  
   
  Note que esse detalhamento deve ter sido habilitado no modelo e você deve ter as permissões apropriadas. A opção de detalhamento também pode ser desabilitada se o estado do modelo é não processado, independentemente de o modelo ter sido processado anteriormente e de ter conteúdo. Para recuperar dados de caso de modelo usando o detalhamento, o cache da estrutura e o modelo devem ser atuais.  
   
-### Usar o detalhamento no Visualizador de Árvores da Microsoft  
+### <a name="use-drillthrough-in-the-microsoft-tree-viewer"></a>Usar o detalhamento no Visualizador de Árvores da Microsoft  
   
 1.  No Designer de Mineração de Dados, selecione o modelo de árvores de decisão e selecione **Procurar Modelo** para abrir o modelo no **Visualizador de Árvores da Microsoft**. No SQL Server Management Studio, clique com o botão direito do mouse no modelo e selecione **Procurar**  
   
@@ -34,11 +39,11 @@ caps.handback.revision: 6
   
 5.  Clique com o botão direito do mouse em qualquer ponto nos resultados e selecione **Copiar Tudo** para salvar os resultados na Área de Transferência.  
   
-### Usar o detalhamento no Visualizador de Cluster da Microsoft  
+### <a name="use-drillthrough-in-the-microsoft-cluster-viewer"></a>Usar o detalhamento no Visualizador de Cluster da Microsoft  
   
 1.  No Designer de Mineração de Dados, selecione um modelo de clustering e selecione **Procurar Modelo** para abrir o modelo no **Visualizador de Cluster da Microsoft**. No SQL Server Management Studio, clique com o botão direito do mouse no modelo e selecione **Procurar**.  
   
-2.  Na guia **Cluster**, clique com o botão direito do mouse em qualquer nó.  
+2.  Na guia **Cluster** , clique com o botão direito do mouse em qualquer nó.  
   
 3.  Selecione **Detalhar**e, depois, selecione uma das seguintes opções: **Colunas do Modelo Somente** ou **Colunas do Modelo e da Estrutura**. Se você não tiver permissões, talvez uma opção não esteja disponível.  
   
@@ -46,11 +51,11 @@ caps.handback.revision: 6
   
 5.  Clique com o botão direito do mouse em qualquer ponto nos resultados e selecione **Copiar Tudo** para salvar os resultados na Área de Transferência.  
   
-### Usar o detalhamento no Visualizador de Regras de Associação da Microsoft  
+### <a name="use-drillthrough-in-the-microsoft-association-rules-viewer"></a>Usar o detalhamento no Visualizador de Regras de Associação da Microsoft  
   
 1.  No Designer de Mineração de Dados, selecione um modelo de associação e selecione **Procurar Modelo** para abrir o modelo no **Visualizador de Regras de Associação da Microsoft**. No SQL Server Management Studio, clique com o botão direito do mouse no modelo e selecione **Procurar**  
   
-2.  Na guia **Regras**, clique com o botão direito do mouse em qualquer linha que represente uma regra. Na guia **Conjuntos de itens** , clique em qualquer linha que contenha um conjunto de itens.  
+2.  Na guia **Regras** , clique com o botão direito do mouse em qualquer linha que represente uma regra. Na guia **Conjuntos de itens** , clique em qualquer linha que contenha um conjunto de itens.  
   
 3.  Selecione **Detalhar**e, depois, selecione uma das seguintes opções: **Colunas do Modelo Somente** ou **Colunas do Modelo e da Estrutura**. Se você não tiver permissões, talvez uma opção não esteja disponível.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 6
   
 5.  Clique com o botão direito do mouse em qualquer ponto nos resultados e selecione **Copiar Tudo** para salvar os resultados de casos completos na Área de Transferência. Você também pode selecionar **Copiar** para copiar apenas o caso selecionado. Se o modelo contiver uma coluna de tabela aninhada, só o nome da coluna de tabela aninhada será colado; para recuperar os valores de dados dentro da coluna de tabela aninhada para cada caso, crie uma consulta no conteúdo modelo.  
   
-### Usar o detalhamento no Visualizador de Cluster de Sequência da Microsoft  
+### <a name="use-drillthrough-in-the-microsoft-sequence-cluster-viewer"></a>Usar o detalhamento no Visualizador de Cluster de Sequência da Microsoft  
   
 1.  No Designer de Mineração de Dados, selecione um modelo de clustering e selecione **Procurar Modelo** para abrir o modelo no **Visualizador de Cluster da Microsoft**. No SQL Server Management Studio, clique com o botão direito do mouse no modelo e selecione **Procurar**.  
   
@@ -70,9 +75,9 @@ caps.handback.revision: 6
   
 5.  Clique com o botão direito do mouse em qualquer ponto nos resultados e selecione **Copiar Tudo** para salvar os resultados na Área de Transferência. Se o modelo contiver uma coluna de tabela aninhada, só o nome da coluna de tabela aninhada será colado; para recuperar os valores de dados dentro da coluna de tabela aninhada para cada caso, crie uma consulta no conteúdo modelo.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Detalhamento em modelos de mineração](../../analysis-services/data-mining/drillthrough-on-mining-models.md)   
- [Detalhamento em estruturas de mineração](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
+ [Drillthrough em estruturas de mineração](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   

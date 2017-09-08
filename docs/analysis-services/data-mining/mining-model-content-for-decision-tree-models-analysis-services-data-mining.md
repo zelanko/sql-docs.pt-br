@@ -1,28 +1,33 @@
 ---
-title: "Mining Model Content for Decision Tree Models (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mining model content, decision tree models"
-  - "decision tree algorithms [Analysis Services]"
-  - "árvores de decisão [Analysis Services]"
+title: "Conteúdo do modelo de árvore de decisão de mineração | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining model content, decision tree models
+- decision tree algorithms [Analysis Services]
+- decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: da90bcdea225f4a27fdd28339bdeb127943ea15a
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
-  Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação geral sobre o conteúdo do modelo de mineração para todos os tipos de modelo, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md). É importante lembrar que o algoritmo Árvores de Decisão da Microsoft é um híbrido que pode criar modelos com funções muito diferentes: uma árvore de decisão pode representar associações, regras ou até mesmo regressão linear. A estrutura da árvore é basicamente a mesma, mas o modo como as informações serão interpretadas dependerá do objetivo para o qual você criou o modelo.  
+# <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
+  Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação geral sobre o conteúdo do modelo de mineração para todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md). É importante lembrar que o algoritmo Árvores de Decisão da Microsoft é um híbrido que pode criar modelos com funções muito diferentes: uma árvore de decisão pode representar associações, regras ou até mesmo regressão linear. A estrutura da árvore é basicamente a mesma, mas o modo como as informações serão interpretadas dependerá do objetivo para o qual você criou o modelo.  
   
 ##  <a name="bkmk_Top"></a> Entendendo a estrutura de um modelo de árvores de decisão  
  Um modelo de árvores de decisão tem um nó pai único que representa o modelo e seus metadados. Sob o nó pai há árvores independentes que representam os atributos previsíveis que você selecionou. Por exemplo, caso você tenha configurado o modelo de árvore de decisão para prever se os clientes comprarão algo e forneça entradas para sexo e renda, o modelo criará uma única árvore para o atributo de compra, com muitas ramificações divididas em condições relacionadas a sexo e renda.  
@@ -32,7 +37,7 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  Se o modelo incluir várias árvores, você poderá exibir apenas uma de cada vez no **Visualizador de Árvores da Microsoft**. No entanto, no **Visualizador de Árvore de Conteúdo Genérica** , todas as árvores no mesmo modelo são exibidas ao mesmo tempo.  
   
- ![estrutura de conteúdo do modelo para a árvore de decisão](../../analysis-services/data-mining/media/modelcontentstructure-dt.gif "estrutura de conteúdo do modelo para a árvore de decisão")  
+ ![estrutura do conteúdo do modelo de árvore de decisão](../../analysis-services/data-mining/media/modelcontentstructure-dt.gif "estrutura do conteúdo do modelo de árvore de decisão")  
   
  A árvore de cada atributo previsível contém informações que descrevem como as colunas de entrada escolhidas afetam o resultado desse atributo previsível em particular. Cada árvore é precedida por um nó (NODE_TYPE = 9) que contém o atributo previsível, seguido por uma série de nós (NODE_TYPE = 10) que representam os atributos de entrada. Um atributo corresponde a uma coluna de nível de caso ou a valores de colunas de tabelas aninhadas, que geralmente são os valores na coluna **Key** da tabela aninhada.  
   
@@ -45,12 +50,12 @@ caps.handback.revision: 24
  O algoritmo Árvores de Decisão da Microsoft não permite tipos de dados contínuos como entradas; portanto, se alguma coluna tiver o tipo de dados numérico contínuo, os valores serão discretos. O algoritmo executa sua própria discretização no ponto de uma divisão para todos os atributos contínuos.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escolhe automaticamente um método para bucket de atributos contínuos. No entanto, é possível controlar o modo como os valores contínuos nas entradas são discretizados definindo o tipo de conteúdo da coluna da estrutura de mineração como **Discretized** e definindo a propriedade <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> ou <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]escolhe automaticamente um método para bucket de atributos contínuos; No entanto, você pode controlar como os valores contínuos nas entradas são discretos definindo o tipo de conteúdo da coluna de estrutura de mineração para **Discretized** e, em seguida, definindo o <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> ou <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> propriedade.  
   
  [Início](#bkmk_Top)  
   
 ##  <a name="bkmk_ModelContent"></a> Conteúdo do modelo para um modelo de árvores de decisão  
- Esta seção fornece detalhes e exemplos somente das colunas do conteúdo do modelo de mineração que são relevantes para os modelos de árvores de decisão. Para obter informações sobre as colunas de uso general no conjunto de linhas de esquema, como explicações relacionadas à terminologia do modelo de mineração, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+ Esta seção fornece detalhes e exemplos somente das colunas do conteúdo do modelo de mineração que são relevantes para os modelos de árvores de decisão. Para obter informações sobre as colunas de uso general no conjunto de linhas de esquema, como explicações relacionadas à terminologia do modelo de mineração, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nome do banco de dados no qual o modelo é armazenado.  
@@ -159,7 +164,7 @@ caps.handback.revision: 24
  MSOLAP_NODE_SHORT_CAPTION  
  Um rótulo usado para exibição.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Um modelo de árvores de decisão não tem um nó separado que armazena estatísticas para todo o modelo, diferentemente do nó de estatísticas marginais encontrado em um modelo de rede Naive Bayes ou neural. Em vez disso, o modelo cria uma árvore separada para cada atributo previsível, com um nó (Tudo) na parte superior da árvore. Cada árvore é independente das outras. Se seu modelo contiver apenas um atributo previsível, haverá somente uma árvore e, portanto, só um nó (Tudo).  
   
  Cada árvore que representa um atributo de saída é subdividida adicionalmente em ramificações interiores (NODE_TYPE = 3) que representam divisões. Cada uma dessas árvores contém estatísticas sobre a distribuição do atributo de destino. Além disso, cada nó folha (NODE_TYPE = 4) contém estatísticas que descrevem atributos de entrada e seus valores, junto com o número de casos com suporte para cada par de atributo-valor. Assim, em qualquer ramificação de uma árvore de decisão, é possível exibir as probabilidades ou a distribuição dos dados facilmente, sem ter que consultar os dados de origem. Cada nível da árvore representa necessariamente a soma de seus nós filho imediatos.  
@@ -168,19 +173,19 @@ caps.handback.revision: 24
   
  [Início](#bkmk_Top)  
   
-## Exemplo de uma estrutura de árvore de decisão  
+## <a name="example-of-decision-tree-structure"></a>Exemplo de uma estrutura de árvore de decisão  
  Para entender como uma árvore de decisão funciona, considere um exemplo, como o cenário de comprador de bicicleta da AdventureWorks. Pressupondo que o atributo previsível corresponda às compras do cliente, o algoritmo de árvores de decisão tenta encontrar uma coluna de dados, entre todas as entradas fornecidas, que detecte com mais eficácia os clientes que provavelmente comprarão uma bicicleta e aqueles que provavelmente não comprarão. Por exemplo, talvez o modelo descubra que a Idade é o melhor indicador do comportamento de compra. Especificamente, que os clientes com mais de 30 anos têm maior probabilidade de comprar uma bicicleta, e todos os outros clientes provavelmente não farão uma compra. Neste cenário, o modelo cria uma *divisão* no atributo Idade. Isso significa que a árvore se divide em duas ramificações, uma que contém os clientes com mais de 30 anos e outra com os clientes com menos de 30 anos. As novas ramificações são representadas na estrutura do modelo como duas novas árvores interiores (NODE_TYPE = 3).  
   
  Para cada ramificação, o modelo continua procurando atributos adicionais a serem usados na diferenciação de clientes. Se houver poucas evidências nos dados para continuar criando subgrupos de clientes, o modelo parará de criar a árvore. O modelo também parará de criar a árvore sempre que o número de casos no nó for pequeno demais para continuar, independentemente de quão boa seja a divisão ou de o valor ser nulo ou estar ausente. Ao interromper o crescimento da árvore precocemente, você impede que o modelo treine muito perto de um determinado conjunto de dados.  
   
  Cada nó de árvore interior contém nós folha que fornecem uma análise dos resultados, de acordo com os resultados de classificação atuais. Por exemplo, talvez você tenha um nó interior que represente Idade >= 30 e Sexo = Masculino. O nó desse grupo mostra quantos clientes nessa categoria compraram ou não algo. Por exemplo, a classificação pode conter as seguintes divisões de árvore:  
   
-|Árvore interior|Split|  
+|Árvore interior|divisão|  
 |-------------------|-----------|  
 |Idade >= 30|Idade >= 30 e Sexo = Masculino|  
 ||Idade >= 30 e Sexo = Feminino|  
 |Idade < 30|Idade < = 30 e Sexo = Masculino|  
-||Idade \< = 30 e Sexo = Feminino|  
+||Idade < = 30 e Sexo = Feminino|  
   
  Quando você usa um modelo de árvore de decisão para previsão, esse modelo pega os atributos fornecidos a ele como argumentos e segue o caminho desses atributos até a árvore. Em geral, todas as previsões levam a uma folha e os nós interiores são usados apenas para classificação.  
   
@@ -195,7 +200,7 @@ caps.handback.revision: 24
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|Exibe o atributo que distingue esse determinado nó em relação ao nó pai. A legenda do nó define um subsegmento da população com base na condição de divisão. Por exemplo, se a divisão estava em [Idade] e era tridimensional, as legendas dos três nós filho poderá ser "[Idade] < 40", "40 <= [Idade] \< 50", "[Idade] >= 50".|  
+|**NODE_CAPTION**|Exibe o atributo que distingue esse determinado nó em relação ao nó pai. A legenda do nó define um subsegmento da população com base na condição de divisão. Por exemplo, se a divisão estava em [Idade] e era tridimensional, as legendas dos três nós filho poderá ser "[Idade] < 40", "40 <= [Idade] < 50", "[Idade] >= 50".|  
 |**NODE_DESCRIPTION**|Contém uma lista completa dos atributos que distinguem esse nó dos outros, desde o nó pai do modelo. Por exemplo, Nome do produto = Apple e Cor = Vermelho.|  
   
  [Início](#bkmk_Top)  
@@ -206,24 +211,24 @@ caps.handback.revision: 24
  O atributo representado pelo fragmento XML pode ser simples ou complexo. Um atributo simples contém o nome da coluna do modelo e o valor do atributo. Se a coluna do modelo contiver uma tabela aninhada, o atributo de tabela aninhada será representado como uma concatenação do nome da tabela, do valor da chave e do atributo.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte à versão 2.0 do padrão de PMML, com extensões para dar suporte ao uso de tabela aninhada. Se os dados contiverem tabelas aninhadas e você gerar uma versão PMML do modelo, todos os elementos no modelo que incluírem os predicados serão marcados como uma extensão.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte à versão 2.0 do padrão PMML, com extensões para dar suporte ao uso de tabela aninhada. Se os dados contiverem tabelas aninhadas e você gerar uma versão PMML do modelo, todos os elementos no modelo que incluírem os predicados serão marcados como uma extensão.  
   
  [Início](#bkmk_Top)  
   
 ###  <a name="bkmk_NodeDist_Discrete"></a> Distribuição de nó para atributos discretos  
  Em um modelo de árvores de decisão, a tabela NODE_DISTRIBUTION contém estatísticas úteis. No entanto, o tipo de estatísticas depende se a árvore prevê um atributo discreto ou contínuo. Esta seção descreve o significado das estatísticas de distribuição de nó para atributos discretos.  
   
-#### Nome e valor de atributo  
+#### <a name="attribute-name-and-attribute-value"></a>Nome e valor de atributo  
  Em uma árvore de classificação, o nome do atributo sempre contém o nome da coluna previsível. Esse valor informa o que a árvore prevê. Como uma única árvore sempre representa um único atributo previsível, esse valor é repetido ao longo da árvore.  
   
  Para um tipo de dados discreto, o campo de valor do atributo lista os valores possíveis da coluna previsível, mais o valor **Missing** .  
   
-#### Suporte  
+#### <a name="support"></a>Suporte  
  O valor de suporte para cada nó informa quantos casos estão incluídos neste nó. No nível (Tudo), você deverá visualizar a contagem completa de casos que foram usados para treinar o modelo. Para cada divisão na árvore, o valor do suporte é a contagem de casos agrupados no nó da árvore. A soma de casos nos nós folha é necessariamente igual à contagem de casos no nó pai da árvore.  
   
  Para nós que representam atributos contínuos, a presença de itens nulos nos dados pode levar a alguns resultados não intuitivos. Por exemplo, se houver m casos, um valor médio será calculado como soma(todos os casos)/n, em que n é um número menor que m, e m-n indica a contagem de casos com valores ausentes. O suporte também é representado como n.  
   
-#### Probabilidade  
+#### <a name="probability"></a>Probabilidade  
  A probabilidade associada a cada nó informa a probabilidade de algum caso no conjunto de dados acabar nesse nó em particular. As pontuações de probabilidade são computadas para a árvore como um todo, e para a divisão imediata.  
   
  Por exemplo, a tabela a seguir mostra um modelo muito simples, com 100 casos.  
@@ -235,7 +240,7 @@ caps.handback.revision: 24
 |Idade < 30|40|Idade < = 30 e Sexo = Masculino|30|30/40 = 0,75|30/100 = 0,30|  
 |||Idade < = 30 e Sexo = Feminino|10|10/40 = 0,25|10/100 = 0,10|  
   
- Um pequeno ajuste  é feito em todos os modelos para contabilizar possíveis valores ausentes. Para atributos contínuos, cada valor ou intervalo de valores é representado como um estado (por exemplo, Idade \<30, Idade = 30 e Idade >30) e as probabilidades são calculadas da seguinte forma: o estado existe (valor = 1), algum outro estado existe (valor = 0), o estado é **Missing**. Para obter mais informações sobre como as probabilidades são ajustadas para representar valores ausentes, consulte [Valores ausentes &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
+ Um pequeno ajuste  é feito em todos os modelos para contabilizar possíveis valores ausentes. Para atributos contínuos, cada valor ou intervalo de valores é representado como um estado (por exemplo, idade \<30, idade = 30 e idade > 30) e as probabilidades são calculadas da seguinte maneira: estado existe (valor = 1), algum outro estado existe (valor = 0), o estado é  **Faltando**. Para obter mais informações sobre como as probabilidades são ajustadas para representar valores ausentes, consulte [Valores ausentes &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
  As probabilidades para cada nó são calculadas quase diretamente da distribuição, da seguinte forma:  
   
@@ -245,15 +250,15 @@ caps.handback.revision: 24
   
  Durante a criação de previsões, a probabilidade da distribuição deve ser balanceada com a probabilidade do nó, para atenuar as probabilidades. Por exemplo, se uma divisão na árvore separa casos por uma razão de 9000/1000, a árvore está muito desequilibrada. Assim, uma previsão que vem da ramificação pequena não deve ter o mesmo peso que uma previsão de uma ramificação com muitos casos.  
   
-#### Variance  
+#### <a name="variance"></a>Variance  
  A variação é uma medida de como são os valores dispersos em um exemplo, dada uma distribuição esperada. Para valores discretos, a variação é 0 por definição.  
   
  Para obter mais informações sobre como calcular a variação de valores contínuos, consulte [Conteúdo do modelo de mineração para modelos de regressão linear &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
-#### Tipo de valor  
+#### <a name="value-type"></a>Tipo de valor  
  A coluna de tipo de valor fornece informações sobre o significado do valor numérico fornecido nas outras colunas na tabela NODE_DISTRIBUTION. Você pode usar o tipo de valor em consultas para recuperar linhas específicas das tabelas aninhadas. Para obter mais exemplos, consulte [Exemplos de consulta de modelo de árvores de decisão](../../analysis-services/data-mining/decision-trees-model-query-examples.md).  
   
- Dos tipos na enumeração <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType>, os seguintes são usados em árvores de classificação.  
+ Dos tipos na enumeração <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> , os seguintes são usados em árvores de classificação.  
   
 |Tipo de valor|Description|  
 |----------------|-----------------|  
@@ -271,7 +276,7 @@ caps.handback.revision: 24
   
  Para todos os nós na árvore (exceto nós folha), a pontuação de cada nó representa a melhor pontuação de divisão do nó atual, menos a pontuação de divisão do nó pai. Em geral, a pontuação de divisão de um nó pai sempre deve ser melhor do que a pontuação de divisão de qualquer um de seus nós filho. Isso ocorre porque um modelo de árvores de decisão teoricamente se divide primeiro nos atributos mais importantes.  
   
- Há muitos modos de calcular uma pontuação para uma divisão, dependendo do parâmetro de algoritmo escolhido. Uma discussão de como as pontuações são calculadas para cada método de pontuação está além do escopo deste tópico. Para obter mais informações, consulte "[Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=45963)", no site de Pesquisa da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Há muitos modos de calcular uma pontuação para uma divisão, dependendo do parâmetro de algoritmo escolhido. Uma discussão de como as pontuações são calculadas para cada método de pontuação está além do escopo deste tópico. Para obter mais informações, consulte "[Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf)", no site de Pesquisa da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 > [!NOTE]  
 >  Se você criar um modelo de árvores de decisão que tenha atributos contínuos e previsíveis discretos, verá pontuações completamente diferentes nos nós (Tudo) que representam cada tipo de árvore. Cada modelo deve ser considerado de modo independente, e os métodos usados para regressão de pontuação são completamente diferentes daqueles usados para classificação de pontuação. Não é possível comparar os valores de pontuação de nó.  
@@ -287,16 +292,17 @@ caps.handback.revision: 24
   
 |Condição de divisão|Resultado em nó|  
 |---------------------|--------------------|  
-|se n \< 5|A relação pode ser expressada como equação 1|  
+|se n < 5|A relação pode ser expressada como equação 1|  
 |se n entre 5 e 10|Nenhuma equação|  
 |se n > 10|A relação pode ser expressada como equação 2|  
   
  Para obter mais informações sobre os nós de regressão, consulte [Conteúdo do modelo de mineração para modelos de regressão linear &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Visualizadores do Modelo de Mineração de Dados](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algoritmo Árvores de Decisão da Microsoft](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
   
   
+

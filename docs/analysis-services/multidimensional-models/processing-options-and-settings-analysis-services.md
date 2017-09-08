@@ -1,35 +1,40 @@
 ---
-title: "Processando op&#231;&#245;es e configura&#231;&#245;es (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "opção Processar Dados [Analysis Services]"
-  - "objetos de processamento [Analysis Services]"
-  - "opção Cancelar Processo [Analysis Services]"
-  - "opção Processar Completo [Analysis Services]"
-  - "opção Processar Índice [Analysis Services]"
-  - "opção Processar Estrutura [Analysis Services]"
-  - "opção Processar Incremental [Analysis Services]"
-  - "opção Processar Atualização [Analysis Services]"
-  - "opção Processar Limpeza de Estrutura [Analysis Services]"
-  - "opção Processar Padrão [Analysis Services]"
+title: "Processando opções e configurações (Analysis Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- process data option [Analysis Services]
+- processing objects [Analysis Services]
+- unprocess option [Analysis Services]
+- process full option [Analysis Services]
+- process index option [Analysis Services]
+- process structure option [Analysis Services]
+- process incremental option [Analysis Services]
+- process update option [Analysis Services]
+- process clear structure option [Analysis Services]
+- process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
 caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 48
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4540adcf485554cff6c909dedf4d53585336ae6
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Processando op&#231;&#245;es e configura&#231;&#245;es (Analysis Services)
+# <a name="processing-options-and-settings-analysis-services"></a>Processando opções e configurações (Analysis Services)
   Ao processar objetos no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode selecionar uma opção de processamento para controlar o tipo de processamento que ocorre para cada objeto. Os tipos de processamento variam de um objeto para outro e por alterações ocorridas no objeto desde que ele foi processado pela última vez. Se você habilitar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para selecionar automaticamente um método de processamento, ele usará o método que retornar o objeto a um estado inteiramente processado no menor tempo.  
   
  As configurações de processamento permitem controlar os objetos que são processados e os métodos usados para processar esses objetos. Algumas configurações de processamento são usadas principalmente para trabalhos de processamento em lotes. Para obter mais informações sobre processamento em lote, consulte [Processamento em lote &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
@@ -37,7 +42,7 @@ caps.handback.revision: 48
 > [!NOTE]  
 >  Esse tópico aplica-se a soluções multidimensionais e de mineração de dados. Para obter informações sobre soluções de tabela, consulte [Banco de dados, tabela ou partição do processo &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md).  
   
-## Opções de processamento  
+## <a name="processing-options"></a>Opções de processamento  
  A tabela a seguir descreve os métodos de processamento disponíveis no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e identifica os objetos compatíveis com cada método.  
   
 |Modo|Aplica-se a|Description|  
@@ -52,7 +57,7 @@ caps.handback.revision: 48
 |**Processar Estrutura**|Cubos e estruturas de mineração|Se o cubo não estiver processado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] processará, se necessário, todas as dimensões do cubo. Depois disso, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará apenas definições de cubo. Se esta opção for aplicada a uma estrutura de mineração, essa estrutura será populada com dados de origem. Diferente da opção Processar Completo, essa opção não itera o processamento para os modelos de mineração propriamente ditos.|  
 |**Processar Limpeza de Estrutura**|Estruturas de mineração|Remove todos os dados de treinamento de uma estrutura de mineração.|  
   
-## Configurações de processamento  
+## <a name="processing-settings"></a>Configurações de processamento  
  A tabela a seguir descreve as configurações de processamento que estão disponíveis ao criar uma operação de processo.  
   
 |Opção de processamento|Description|Valor de opção|  
@@ -66,7 +71,7 @@ caps.handback.revision: 48
 ||**Limite de erros de processamento**. Controla o número de erros processados selecionando uma das seguintes opções:|**Ignorar contagem de erros**. O processamento continuará independentemente do número de erros.<br /><br /> **Parar se houver erro**. Com esta opção, você controla duas configurações adicionais. **Número de erros** limita o processamento à ocorrência de um número específico de erros. **Ação se houver erro** permite determinar a ação a ser tomada quando o **Número de erros** for atingido. É possível selecionar **Parar processamento**para que o trabalho de processamento falhe e reverta todas as alterações ou **Parar log**para que o processamento continue sem registrar erros. **Parar se houver erro** é a configuração padrão com a opção **Número de erros** definida como **0** e **Ação se houver erro** está definido como **Parar processamento**.|  
 ||As seguintes condições de erro. Você pode definir o valor da opção para controlar o comportamento específico de tratamento de erros.<br /><br /> Quando você seleciona **Usar configuração de erro padrão**, o Analysis Services usa a configuração de erro definida para cada objeto que está sendo processado. Se um objeto for configurado para usar a configuração padrão, o Analysis Services utilizará as configurações padrão listadas para cada opção.|**Chave não encontrada**. Ocorre quando um valor de chave existe em uma partição, mas não existe na dimensão correspondente. A configuração padrão é **Relatar e continuar**. Outras configurações são **Ignorar erro** e **Relatar e parar**.<br /><br /> **Chave duplicada**. Ocorre quando mais de um valor de chave existe em uma dimensão. A configuração padrão é **Ignorar erro**. Outras configurações são **Relatar e continuar** e **Relatar e parar**.<br /><br /> **Chave nula convertida em desconhecida**. Ocorre quando um valor de chave é nulo e a opção **Ação do erro de chave** é definida como **Converter em desconhecido**. A configuração padrão é **Ignorar erro**. Outras configurações são **Relatar e continuar** e **Relatar e parar**.<br /><br /> **Chave nula não permitida**. Ocorre quando **Ação do erro de chave** é definido como **Descartar registro**. A configuração padrão é **Relatar e continuar**. Outras configurações são **Ignorar erro** e **Relatar e parar**.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

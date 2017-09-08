@@ -1,23 +1,28 @@
 ---
-title: "Projetos relacionados a solu&#231;&#245;es de minera&#231;&#227;o de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Projetos relacionados para soluções de mineração de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 290142e362b4e41148ab2042c8c76738f3e7b54c
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Projetos relacionados a solu&#231;&#245;es de minera&#231;&#227;o de dados
+# <a name="related-projects-for-data-mining-solutions"></a>Projetos relacionados a soluções de mineração de dados
   O mínimo que é necessário para uma solução de mineração de dados é o projeto de mineração de dados que define fontes de dados, exibições da fonte de dados, estruturas de mineração e modelos de mineração. Porém, quando os modelos de mineração de dados são usados no processo diário de tomadas de decisão, é importante que a mineração de dados esteja integrada com outra parte de uma solução de análises preditiva, que pode incluir estes processos e componentes:  
   
 -   Preparação e seleção de dados e variáveis. Inclui limpeza de dados, gerenciamento de metadados e integração de várias fontes de dados e a conversão, fusão e carregamento de dados em um data warehouse.  
@@ -200,7 +205,7 @@ caps.handback.revision: 12
   
 -   Nem todos os idiomas de texto completo dão suporte à indexação semântica. Para ver uma lista dos idiomas com suporte, consulte [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Soluções de modelo multidimensional &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Soluções de modelo de tabela &#40;SSAS de tabela&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   

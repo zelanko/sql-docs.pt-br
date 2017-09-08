@@ -1,46 +1,51 @@
 ---
-title: "Microsoft Neural Network Algorithm Technical Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "HIDDEN_NODE_RATIO parameter"
-  - "MAXIMUM_INPUT_ATTRIBUTES parameter"
-  - "HOLDOUT_PERCENTAGE parameter"
-  - "algoritmos de rede neural [Analysis Services]"
-  - "output layer [Data Mining]"
-  - "neural networks"
-  - "MAXIMUM_OUTPUT_ATTRIBUTES parameter"
-  - "MAXIMUM_STATES parameter"
-  - "SAMPLE_SIZE parameter"
-  - "hidden layer"
-  - "hidden neurons"
-  - "input layer [Data Mining]"
-  - "activation function [Data Mining]"
-  - "Back-Propagated Delta Rule network"
-  - "neural network model [Analysis Services]"
-  - "coding [Data Mining]"
-  - "parâmetro HOLDOUT_SEED"
+title: Microsoft Neural Network Algorithm Technical Reference | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- HIDDEN_NODE_RATIO parameter
+- MAXIMUM_INPUT_ATTRIBUTES parameter
+- HOLDOUT_PERCENTAGE parameter
+- neural network algorithms [Analysis Services]
+- output layer [Data Mining]
+- neural networks
+- MAXIMUM_OUTPUT_ATTRIBUTES parameter
+- MAXIMUM_STATES parameter
+- SAMPLE_SIZE parameter
+- hidden layer
+- hidden neurons
+- input layer [Data Mining]
+- activation function [Data Mining]
+- Back-Propagated Delta Rule network
+- neural network model [Analysis Services]
+- coding [Data Mining]
+- HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d29618af2bb8ffe0a7e809388f32ed5987b67aea
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Microsoft Neural Network Algorithm Technical Reference
-  A Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa uma rede *multicamadas Perceptron*, também denominada *rede Regra-Delta com Algoritmo Backpropagation*, composta de até três camadas de neurônios ou *perceptrons*. Essas camadas são uma camada de entrada, uma camada opcional oculta e uma camada de saída.  
+# <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
+  A Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa uma rede *multicamadas Perceptron* , também denominada *rede Regra-Delta com Algoritmo Backpropagation*, composta de até três camadas de neurônios ou *perceptrons*. Essas camadas são uma camada de entrada, uma camada opcional oculta e uma camada de saída.  
   
  Uma descrição detalhada das redes neurais de multicamadas Perceptron está fora do escopo da presente documentação. Este tópico explica a implementação básica do algoritmo, incluindo o método usado para normalizar valores de entrada e saída, e os métodos de seleção de recursos utilizados para reduzir a cardinalidade do atributo. Este tópico descreve os parâmetros e outras configurações que podem ser usadas para personalizar o comportamento do algoritmo, além de fornecer links para informações adicionais sobre como consultar o modelo.  
   
-## Implementação do algoritmo Rede Neural da Microsoft  
+## <a name="implementation-of-the-microsoft-neural-network-algorithm"></a>Implementação do algoritmo Rede Neural da Microsoft  
  Em uma rede neural multicamadas Perceptron, cada neurônio recebe uma ou mais entradas e produz uma ou mais saídas idênticas. Cada saída é uma função não linear simples da soma das entradas ao neurônio. As entradas só passam para frente a partir de nós na camada de entrada até nós na camada oculta, e passam da camada oculta para a camada de saída sem nenhuma conexão entre os neurônios na camada. Se não houver nenhuma camada oculta, como no modelo de regressão logística, as entradas passarão diretamente dos nós na camada de entrada para os nós na camada de saída.  
   
  Há três tipos de neurônios em uma rede neural que é criada com o algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] :  
@@ -49,7 +54,7 @@ caps.handback.revision: 26
   
  Neurônios de entrada fornecem valores de atributo de entrada para o modelo de mineração de dados. Para atributos de entrada discretos, um neurônio de entrada representa normalmente um único estado do atributo de entrada. Isso incluirá valores ausentes, se os dados de treinamento contiverem nulos para esse atributo. Um atributo de entrada discreto que tiver mais de dois estados gerará um neurônio de entrada para cada estado e um neurônio de entrada para o estado existente ou ausente, se houver nulos nos dados de treinamento. Um atributo de entrada contínuo gera dois neurônios de entrada: um para um estado ausente, e um para o valor do próprio atributo contínuo. Os neurônios de entrada fornecem entradas para um ou mais neurônios ocultos.  
   
-**Neurônios ocultos**  
+**Hidden neurons**  
   
  Neurônios ocultos recebem entradas de neurônios de entrada e fornecem saídas para os neurônios de saída.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 26
   
  Cada neurônio tem atribuído a ele uma função não linear simples, denominada *função de ativação*, que descreve a relevância ou a importância de um neurônio específico para a camada da rede neural. Neurônios ocultos usam uma função *tangente hiperbólica* (tanh) como sua função de ativação, enquanto os neurônios de saída utilizam uma função *sigmoide* para ativação. Ambas as funções, são funções não lineares, contínuas e que fazem com que a rede neural modele relações não lineares entre os neurônios de entrada e de saída.  
   
-### Treinando Redes Neurais  
+### <a name="training-neural-networks"></a>Treinando Redes Neurais  
  Várias etapas são envolvidas no treinamento de um modelo de mineração de dados que usa o algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Essas etapas são amplamente influenciadas pelos valores especificados para os parâmetros do algoritmo.  
   
  O algoritmo primeiro avalia e depois extrai dados de treinamento da fonte de dados. A porcentagem dos dados de treinamento, chamados *dados de validação*, é reservada para o uso na avaliação da precisão da rede. Durante o processo de treinamento, a rede é avaliada imediatamente após cada iteração pelos dados de treinamento. Quando a precisão não aumentar mais, o processo de treinamento será interrompido.  
@@ -75,14 +80,14 @@ caps.handback.revision: 26
   
  O algoritmo seguinte define o número e a complexidade das redes que o modelo de mineração tem suporte. Se o modelo de mineração contém um ou mais atributos usados apenas para previsão, o algoritmo cria uma única rede que representa todos esses atributos. Se o modelo de mineração contém um ou mais atributos usados para entrada e previsão, o provedor do algoritmo construirá uma rede para cada atributo.  
   
- Para atributos de entrada e previsíveis com valores discretos, cada neurônio de entrada ou de saída representa respectivamente um único estado. Para atributos de entrada e previsíveis com valores contínuos, cada neurônio de entrada ou de saída representa respectivamente o intervalo e a distribuição de valores para o atributo. O número máximo de estados com suporte em ambos os casos depende do valor do parâmetro do algoritmo *MAXIMUM_STATES*. Se o número de estados para um atributo específico exceder o valor do parâmetro do algoritmo *MAXIMUM_STATES*, os estados mais populares ou relevantes para esse atributo serão escolhidos, até o máximo de estados permitidos, e os demais estados serão agrupados como valores ausentes para efeito de análise.  
+ Para atributos de entrada e previsíveis com valores discretos, cada neurônio de entrada ou de saída representa respectivamente um único estado. Para atributos de entrada e previsíveis com valores contínuos, cada neurônio de entrada ou de saída representa respectivamente o intervalo e a distribuição de valores para o atributo. O número máximo de estados com suporte em ambos os casos depende do valor do parâmetro do algoritmo *MAXIMUM_STATES* . Se o número de estados para um atributo específico exceder o valor do parâmetro do algoritmo *MAXIMUM_STATES* , os estados mais populares ou relevantes para esse atributo serão escolhidos, até o máximo de estados permitidos, e os demais estados serão agrupados como valores ausentes para efeito de análise.  
   
  Então, o algoritmo usará o valor do parâmetro *HIDDEN_NODE_RATIO* quando for determinar o número inicial de neurônios a serem criados para a camada oculta. Você pode definir *HIDDEN_NODE_RATIO* como 0 para impedir a criação de camada oculta nas redes que o algoritmo gera para o modelo de mineração, a fim de tratar a rede neural como uma regressão lógica.  
   
  O provedor de algoritmos avalia iterativamente o peso de todas as entradas na rede ao mesmo tempo, selecionando o conjunto de dados de treinamento que foi reservado anteriormente e, comparando o valor atual conhecido de cada caso nos dados de validação com a previsão da rede em um processo definido como *aprendizado em lotes*. Após o algoritmo avaliar o conjunto inteiro dos dados de treinamento, ele revisa o valor atual e previsto para cada neurônio. O algoritmo calcula o grau do erro, se houver, e ajusta os pesos associados com as entradas daquele neurônio, funcionando em direção oposta, dos neurônios de saída para os neurônios de entrada, em um processo conhecimento como *backpropagation*. O algoritmo repete então o processo em todo o conjunto dos dados de treinamento. Devido ao fato do algoritmo ter suporte para vários pesos e neurônios de saída, o algoritmo gradiente conjugado é usado para guiar o processo de treinamento a fim de atribuir e avaliar os pesos para as entradas. Uma descrição do algoritmo gradiente conjugado está fora do escopo desta documentação.  
   
-### Seleção de recursos  
- Se o número de atributos de entrada for maior do que o valor do parâmetro *MAXIMUM_INPUT_ATTRIBUTES* ou se o número de atributos previsíveis for maior do que o valor do parâmetro *MAXIMUM_OUTPUT_ATTRIBUTES*, um algoritmo de seleção de recursos será usado para reduzir a complexidade das redes incluídas no modelo de mineração. A seleção de recursos reduz o número de atributos de entrada e previsíveis para deixar apenas aqueles que são estatisticamente relevantes para o modelo.  
+### <a name="feature-selection"></a>Seleção de recursos  
+ Se o número de atributos de entrada for maior do que o valor do parâmetro *MAXIMUM_INPUT_ATTRIBUTES* ou se o número de atributos previsíveis for maior do que o valor do parâmetro *MAXIMUM_OUTPUT_ATTRIBUTES* , um algoritmo de seleção de recursos será usado para reduzir a complexidade das redes incluídas no modelo de mineração. A seleção de recursos reduz o número de atributos de entrada e previsíveis para deixar apenas aqueles que são estatisticamente relevantes para o modelo.  
   
  A seleção de recursos é usada automaticamente por todos os algoritmos de mineração de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para melhorar a análise e reduzir a carga de processamento. O método usado para seleção de recursos em modelos de rede neural depende do tipo de dados do atributo. Para referência, a tabela a seguir mostra os métodos de seleção de recursos usados para modelos de rede neural e os métodos de seleção de recursos usados para o algoritmo de Regressão Logística, que se baseia no algoritmo Rede Neural.  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 26
   
  Os parâmetros de algoritmo que controlam a seleção de recursos para um modelo de rede neural são MAXIMUM_INPUT_ATTRIBUTES, MAXIMUM_OUTPUT_ATTRIBUTES e MAXIMUM_STATES. Você também pode controlar o número de camadas ocultas definindo o parâmetro HIDDEN_NODE_RATIO.  
   
-### Métodos de pontuação  
+### <a name="scoring-methods"></a>Métodos de pontuação  
  A*Pontuação* é um tipo de normalização que, no contexto de treinamento de um modelo de rede neural, significa o processo de converter um valor, como uma etiqueta de texto discreta, em um valor que possa ser comparado com outros tipos de entradas e ponderado na rede. Por exemplo, se um atributo de entrada for Sexo e os valores possíveis forem Masculino e Feminino, e outro atributo de entrada for Renda, com um intervalo variável de valores, os valores de cada atributo não serão diretamente comparáveis e, portanto, deverão ser codificados para uma escala comum para que os pesos possam ser calculados. A pontuação é o processo de normalizar essas entradas para valores numéricos: especificamente para um intervalo de probabilidade. As funções usadas para normalização também ajudam a distribuir o valor de entrada mais uniformemente em uma escala uniforme, para que valores extremos não distorçam os resultados da análise.  
   
  As saídas da rede neural também são codificadas. Quando há um único destino para a saída (isto é, previsão), ou vários destinos que são usados apenas para previsão e não para entrada, o modelo cria uma única rede e talvez não seja necessário para normalizar os valores. No entanto, se vários atributos forem usados para entrada e previsão, o modelo deverá criar várias redes; portanto, todos os valores deverão ser normalizados e as saídas também deverão ser codificadas, à medida que deixarem a rede.  
@@ -116,10 +121,10 @@ caps.handback.revision: 26
   
  A codificação de saídas usa a função sigmoide que tem propriedades que a tornam muito útil para previsão. Uma dessas propriedades é que, independentemente do modo como os valores originais são escalonados e independentemente se os valores são negativos ou positivos, a saída dessa função sempre é um valor entre 0 e 1, o que é adequado para estimar probabilidades. Outra propriedade útil é que a função sigmoide tem um efeito de atenuação, de modo que à medida que o valor se afasta do ponto de inflexão, a probabilidade de o valor avançar é de 0 ou 1, mas lentamente.  
   
-## Personalizando o algoritmo Rede Neural  
+## <a name="customizing-the-neural-network-algorithm"></a>Personalizando o algoritmo Rede Neural  
  O algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] tem suporte a vários parâmetros que afetam o comportamento, o desempenho e a precisão do modelo de mineração resultante. Também é possível modificar o modo como o modelo processa dados definindo sinalizadores de modelagem nas colunas ou definindo sinalizadores de distribuição para especificar o modo como os valores na coluna são manipulados.  
   
-### Definindo parâmetros de algoritmo  
+### <a name="setting-algorithm-parameters"></a>Definindo parâmetros de algoritmo  
  A tabela a seguir descreve os parâmetros que podem ser usados com o algoritmo Rede Neural da Microsoft.  
   
  HIDDEN_NODE_RATIO  
@@ -161,7 +166,7 @@ caps.handback.revision: 26
   
  O valor padrão é 10000.  
   
-### Sinalizadores de modelagem  
+### <a name="modeling-flags"></a>Sinalizadores de modelagem  
  Os sinalizadores de modelagem a seguir têm suporte para uso com o algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  NOT NULL  
@@ -174,7 +179,7 @@ caps.handback.revision: 26
   
  Aplica-se às colunas de modelo de mineração.  
   
-### Sinalizadores de distribuição  
+### <a name="distribution-flags"></a>Sinalizadores de distribuição  
  Os sinalizadores de distribuição a seguir têm suporte para uso com o algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Os sinalizadores são usados como dicas para o modelo apenas; se o algoritmo detectar uma distribuição diferente, ele usará a distribuição encontrada, não aquela fornecida na dica.  
   
  Normal  
@@ -184,12 +189,12 @@ caps.handback.revision: 26
  Indica que os valores dentro da coluna devem ser tratados como se fossem distribuídos uniformemente; ou seja, a probabilidade de qualquer valor é aproximadamente igual e é uma função do número total de valores.  
   
  Log Normal  
- Indica que os valores na coluna devem ser tratados como se estivessem distribuídos de acordo com a curva *log normal*, o que significa que o logaritmo dos valores será distribuído normalmente.  
+ Indica que os valores na coluna devem ser tratados como se estivessem distribuídos de acordo com a curva *log normal* , o que significa que o logaritmo dos valores será distribuído normalmente.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Um modelo de rede neural deve conter pelo menos uma coluna de entrada e uma coluna de saída.  
   
-### Colunas de entrada e colunas previsíveis  
+### <a name="input-and-predictable-columns"></a>Colunas de entrada e colunas previsíveis  
  O algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] dá suporte a colunas de entrada e colunas previsíveis específicas que são listadas na tabela a seguir.  
   
 |Coluna|Tipos de conteúdo|  
@@ -200,9 +205,9 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  Os tipos de conteúdo Cíclico e Ordenado têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Algoritmo Rede Neural da Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Conteúdo do modelo de mineração para modelos de rede neural &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Conteúdo do modelo de mineração para modelos de rede Neural &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

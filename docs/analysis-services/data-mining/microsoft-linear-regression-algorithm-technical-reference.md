@@ -1,37 +1,42 @@
 ---
-title: "Refer&#234;ncia T&#233;cnica do Algoritmo de Regress&#227;o Linear da Microsoft | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parâmetro AUTO_DETECT_PERIODICITY"
-  - "algoritmos de regressão linear [Analysis Services]"
-  - "algoritmos de regressão [Analysis Services]"
+title: "Referência técnica do algoritmo de regressão Linear de Microsoft | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- AUTO_DETECT_PERIODICITY parameter
+- linear regression algorithms [Analysis Services]
+- regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed842a83a00412da1fce19e7519049d4171baf21
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Refer&#234;ncia T&#233;cnica do Algoritmo de Regress&#227;o Linear da Microsoft
+# <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Referência Técnica do Algoritmo de Regressão Linear da Microsoft
   O algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma versão especial do algoritmo Árvores de decisão da Microsoft, otimizada para modelagem de pares de atributos contínuos. Este tópico explica a implementação do algoritmo, descreve como personalizar o comportamento do algoritmo e fornece links para informações adicionais sobre como consultar modelos.  
   
-## Implementação do algoritmo de Regressão Linear  
+## <a name="implementation-of-the-linear-regression-algorithm"></a>Implementação do algoritmo de Regressão Linear  
  O algoritmo Árvores de Decisão da Microsoft pode ser usado para muitas tarefas: regressão linear, classificação ou análise de associação. Para implementar esse algoritmo para fins de regressão linear, os parâmetros do algoritmo são controlados de modo a restringir o crescimento da árvore e manter todos os dados no modelo em um único nó. Em outras palavras, embora a regressão linear se baseie em uma árvore de decisão, a árvore contém apenas uma única raiz e nenhuma ramificação: todos os dados residem no nó raiz.  
   
  Para isso, o parâmetro *MINIMUM_LEAF_CASES* do algoritmo é definido para ser maior ou igual ao número total de casos que o algoritmo usa para treinar o modelo de mineração. Com o parâmetro definido dessa maneira, o algoritmo nunca criará uma divisão e, portanto, executará uma regressão linear.  
   
  A equação que representa a linha na regressão assume a forma geral de y = ax + b e é conhecida como a equação de regressão. A variável Y representa a variável de saída, X representa a variável de entrada e a e b são coeficientes ajustáveis. Você pode recuperar os coeficientes, as interseções e outras informações sobre a fórmula de regressão consultando o modelo de mineração completo. Para obter mais informações, consulte [Exemplos de consulta do modelo de regressão linear](../../analysis-services/data-mining/linear-regression-model-query-examples.md).  
   
-### Métodos de pontuação e seleção de recursos  
+### <a name="scoring-methods-and-feature-selection"></a>Métodos de pontuação e seleção de recursos  
  Todos os algoritmos de mineração de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usam seleção de recursos automaticamente para melhorar a análise e reduzir a carga de processamento. O método usado para seleção de recursos na regressão linear é a pontuação de interesse, porque o modelo tem suporte apenas para colunas contínuas. Para referência, a tabela a seguir mostra a diferença na seleção de recursos do algoritmo de Regressão Linear e o algoritmo de Árvores de decisão.  
   
 |Algoritmo|Método de análise|Comentários|  
@@ -41,10 +46,10 @@ caps.handback.revision: 25
   
  Os parâmetros de algoritmo que controlam seleção de recursos para um modelo de árvores de decisão são MAXIMUM_INPUT_ATTRIBUTES e MAXIMUM_OUTPUT.  
   
-## Personalizando o algoritmo de Regressão Linear  
+## <a name="customizing-the-linear-regression-algorithm"></a>Personalizando o algoritmo de Regressão Linear  
  O algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece suporte a parâmetros que afetam o comportamento, o desempenho e a precisão do modelo de mineração resultante. Também é possível definir sinalizadores de modelagem nas colunas do modelo de mineração ou da estrutura de mineração para controlar a maneira como os dados são processados.  
   
-### Definindo parâmetros de algoritmo  
+### <a name="setting-algorithm-parameters"></a>Definindo parâmetros de algoritmo  
  A tabela a seguir lista os parâmetros fornecidos para o algoritmo de Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 |Parâmetro|Description|  
@@ -53,7 +58,7 @@ caps.handback.revision: 25
 |*MAXIMUM_OUTPUT_ATTRIBUTES*|Define o número de atributos de saída que o algoritmo pode manipular antes de invocar a seleção de recurso. Defina este valor como 0 para desativar a seleção de recursos.<br /><br /> O padrão é 255.|  
 |*FORCE_REGRESSOR*|Força o algoritmo a usar as colunas indicadas como regressores, independentemente da sua importância quando calculadas pelo algoritmo.|  
   
-### Sinalizadores de modelagem  
+### <a name="modeling-flags"></a>Sinalizadores de modelagem  
  O algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece suporte aos seguintes sinalizadores de modelagem. Ao criar um modelo ou uma estrutura de mineração, você define sinalizadores de modelagem para especificar como os valores em cada coluna são manipulados durante a análise. Para obter mais informações, consulte [Sinalizadores de modelagem &#40;Mineração de dados&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md).  
   
 |Sinalizador de modelagem|Description|  
@@ -61,7 +66,7 @@ caps.handback.revision: 25
 |NOT NULL|Indica que a coluna não pode conter um nulo. Um erro ocorrerá se o Analysis Services encontrar um valor nulo durante o treinamento do modelo.<br /><br /> Aplica-se às colunas de estrutura de mineração.|  
 |REGRESSOR|Indica que a coluna contém valores numéricos contínuos que devem ser tratados como variáveis independentes potenciais durante a análise. Aplica-se às colunas de modelo de mineração.<br /><br /> Observação: sinalizar uma coluna como um regressor não assegura que ela será usada como tal no modelo final.|  
   
-### Regressor em modelos de regressão lineares  
+### <a name="regressors-in-linear-regression-models"></a>Regressor em modelos de regressão lineares  
  Os modelos de regressão lineares baseiam-se no algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Entretanto, mesmo que você não use o algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , todo modelo de árvore de decisão poderá conter uma árvore ou nós que representam uma regressão em um atributo contínuo.  
   
  Não é necessário especificar que uma coluna contínua representa um regressor. O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] particionará o conjunto de dados em regiões com padrões significativos mesmo que você não defina o sinalizador REGRESSOR na coluna. A diferença é que, quando você define o sinalizador de modelagem, o algoritmo tenta encontrar equações de regressão no formato `a*C1 + b*C2 + ...` de acordo com os padrões dos nós da árvore. A soma dos restos é calculada e, se o desvio for muito grande, será forçada uma divisão da árvore.  
@@ -70,10 +75,10 @@ caps.handback.revision: 25
   
  Você pode usar o parâmetro FORCED_REGRESSOR para garantir que o algoritmo usará um determinado regressor. Esse parâmetro só pode ser usado com os algoritmos Árvores de decisão e Regressão Linear da Microsoft.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Um modelo de regressão linear deve conter uma coluna de chave, colunas de entrada e pelo menos uma coluna previsível.  
   
-### Colunas de entrada e colunas previsíveis  
+### <a name="input-and-predictable-columns"></a>Colunas de entrada e colunas previsíveis  
  O algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece suporte a colunas de entrada e colunas previsíveis específicas que são listadas na tabela a seguir. Para obter mais informações sobre o significado dos tipos de conteúdo quando usados em um modelo de mineração, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
 |Coluna|Tipos de conteúdo|  
@@ -82,9 +87,9 @@ caps.handback.revision: 25
 |Atributo previsível|Contínuo, cíclico e ordenado|  
   
 > [!NOTE]  
-> Os tipos de conteúdo  **Cíclico** e **Ordenado** têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
+>  Os tipos de conteúdo**Cíclico** e **Ordenado** content types are supported, but the algorithm treats them as discrete values e does not perform special processing.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Algoritmo Regressão Linear da Microsoft](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Exemplos de consulta de modelo de regressão linear](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
  [Conteúdo do modelo de mineração para modelos de regressão linear &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  

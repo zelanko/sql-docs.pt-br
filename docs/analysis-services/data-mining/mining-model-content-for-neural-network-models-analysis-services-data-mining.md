@@ -1,36 +1,41 @@
 ---
-title: "Mining Model Content for Neural Network Models (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "output neurons [Analysis Services]"
-  - "neural network algorithms [Analysis Services]"
-  - "output layer [Data Mining]"
-  - "hidden layer"
-  - "hidden neurons"
-  - "input layer [Data Mining]"
-  - "input neurons [Analysis Services]"
-  - "mining model content, neural network models"
-  - "neural network model [Analysis Services]"
+title: "Conteúdo do modelo de rede Neural modelos de mineração | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- output neurons [Analysis Services]
+- neural network algorithms [Analysis Services]
+- output layer [Data Mining]
+- hidden layer
+- hidden neurons
+- input layer [Data Mining]
+- input neurons [Analysis Services]
+- mining model content, neural network models
+- neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4ba3de4a84dfd666e23d9877241f8c444891a0be
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
+# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
   Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Rede Neural da Microsoft. Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-## Entendendo a estrutura de um modelo de rede neural  
+## <a name="understanding-the-structure-of-a-neural-network-model"></a>Entendendo a estrutura de um modelo de rede neural  
  Cada modelo de rede neural tem um único nó pai que representa o modelo e seus metadados, além de um nó de estatísticas marginais (NODE_TYPE = 24) que fornece estatísticas descritivas sobre os atributos de entrada. O nó de estatísticas marginais é útil porque resume informações sobre entradas, para que não seja necessário consultar dados de nós individuais.  
   
  Sob esses dois nós, há pelo menos mais dois nós, e talvez haja mais, dependendo da quantidade de atributos previsíveis do modelo.  
@@ -39,7 +44,7 @@ caps.handback.revision: 19
   
 -   Nós sucessivos contêm uma *sub-rede* diferente (NODE_TYPE = 17). Cada sub-rede sempre contém uma camada oculta (NODE_TYPE = 19) e uma cama da de saída (NODE_TYPE = 20) para essa sub-rede.  
   
- ![estrutura de conteúdo do modelo para redes neurais](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "estrutura de conteúdo do modelo para redes neurais")  
+ ![estrutura do conteúdo do modelo para redes neurais](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "estrutura do conteúdo do modelo para redes neurais")  
   
  As informações na camada de entrada são objetivas: o nó superior de cada camada de entrada (NODE_TYPE = 18) atua como um organizador de uma coleção de nós de entrada (NODE_TYPE = 21). O conteúdo dos nós de entrada é descrito na tabela a seguir.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 19
   
  Para trabalhar com os dados e verificar como o modelo correlaciona entradas com saídas, use o **Visualizador de Rede Neural da Microsoft**. Ao usar esse visualizador personalizado, você pode filtrar os atributos de entrada e seus valores e visualizar graficamente como eles afetam as saídas. As dicas de ferramentas no visualizador mostram a probabilidade e a comparação de precisão associadas a cada par de valores de entrada e saída. Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Rede Neural da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
-## Conteúdo de um modelo de rede neural  
+## <a name="model-content-for-a-neural-network-model"></a>Conteúdo de um modelo de rede neural  
  Esta seção fornece detalhes e exemplos somente das colunas do conteúdo do modelo de mineração que são relevantes para redes neurais. Para obter informações sobre as colunas de uso general no conjunto de linhas de esquema, como MODEL_CATALOG e MODEL_NAME que não são descritos aqui, ou explicações relacionadas à terminologia do modelo de mineração, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
@@ -72,7 +77,7 @@ caps.handback.revision: 19
 |Estatísticas marginais|Em branco|  
 |Camada de entrada|Em branco|  
 |Nó de entrada|Nome do atributo de entrada|  
-|Camada oculta|Em branco|  
+|hidden layer|Em branco|  
 |Nó oculto|Em branco|  
 |Camada de saída|Em branco|  
 |Nó de saída|Nome do atributo de saída|  
@@ -112,7 +117,7 @@ caps.handback.revision: 19
 |Estatísticas marginais|Sempre 0.|  
 |Camada de entrada|Indica o número de pares de atributo-valores de entrada usados pelo modelo.|  
 |Nó de entrada|Sempre 0.|  
-|Camada oculta|Indica o número de nós ocultos que foram criados pelo modelo.|  
+|hidden layer|Indica o número de nós ocultos que foram criados pelo modelo.|  
 |Nó oculto|Sempre 0.|  
 |Camada de saída|Indica o número de valores de saída.|  
 |Nó de saída|Sempre 0.|  
@@ -131,7 +136,7 @@ caps.handback.revision: 19
 |Estatísticas marginais|Em branco|  
 |Camada de entrada|Em branco|  
 |Nó de entrada|Nome do atributo de entrada|  
-|Camada oculta|Em branco|  
+|hidden layer|Em branco|  
 |Nó oculto|Número inteiro que indica a sequência do nó oculto na lista de nós ocultos.|  
 |Camada de saída|Em branco|  
 |Nó de saída|Se o atributo de saída for contínuo, conterá o nome do atributo de saída.<br /><br /> Se o atributo de saída for discreto ou diferenciado, contém o nome do atributo e o valor.|  
@@ -145,7 +150,7 @@ caps.handback.revision: 19
 |Estatísticas marginais|Em branco|  
 |Camada de entrada|Em branco|  
 |Nó de entrada|Um fragmento de XML que contém as mesmas informações que a coluna NODE_DESCRIPTION.|  
-|Camada oculta|Em branco|  
+|hidden layer|Em branco|  
 |Nó oculto|Número inteiro que indica a sequência do nó oculto na lista de nós ocultos.|  
 |Camada de saída|Em branco|  
 |Nó de saída|Um fragmento de XML que contém as mesmas informações que a coluna NODE_DESCRIPTION.|  
@@ -177,7 +182,7 @@ caps.handback.revision: 19
 |Estatísticas marginais|Em branco|  
 |Camada de entrada|Em branco|  
 |Nó de entrada|Nome do atributo de entrada.|  
-|Camada oculta|Em branco|  
+|hidden layer|Em branco|  
 |Nó oculto|Em branco|  
 |Camada de saída|Em branco|  
 |Nó de saída|Nome do atributo de entrada.|  
@@ -188,7 +193,7 @@ caps.handback.revision: 19
  MSOLAP_NODE_SHORT_CAPTION  
  Para modelos de rede neural, sempre em branco.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  O objetivo do treinamento de um modelo de rede neural é determinar os pesos associados a cada transição de uma entrada para um ponto médio, e de um ponto médio para um ponto de extremidade. Assim, a camada de entrada do modelo existe principalmente para armazenar os valores reais usados para criar o modelo. A camada oculta armazena os pesos que foram computados e fornece ponteiros para os atributos de entrada. A camada de saída armazena os valores previsíveis e também fornece ponteiros para os pontos médios na camada oculta.  
   
 ##  <a name="bkmk_NodeIDs"></a> Usando nomes e IDs de nós  
@@ -213,7 +218,7 @@ caps.handback.revision: 19
 ##  <a name="bkmk_NodeDistTable"></a> Interpretando as informações na tabela NODE_DISTRIBUTION  
  A tabela NODE_DISTRIBUTION pode estar vazia em alguns nós. No entanto, para nós de entrada, nós da camada oculta e nós de saída, a tabela NODE_DISTRIBUTION armazena informações importantes e interessantes sobre o modelo. Para ajudá-lo a interpretar essas informações, a tabela NODE_DISTRIBUTION contém uma coluna VALUETYPE para cada linha que informa se o valor na coluna ATTRIBUTE_VALUE é Discreto (4), Diferenciado (5) ou Contínuo (3).  
   
-### Nós de entrada  
+### <a name="input-nodes"></a>Nós de entrada  
  A camada de entrada contém um nó para cada valor do atributo que foi usado no modelo.  
   
  **Atributo discreto:** O nó de entrada armazena apenas o nome do atributo e seu valor nas colunas ATTRIBUTE_NAME e ATTRIBUTE_VALUE. Por exemplo, se [Turno de Trabalho] for a coluna, um nó separado será criado para cada valor dessa coluna que foi usado no modelo, como AM e PM. A tabela NODE_DISTRIBUTION para cada nó lista apenas o valor atual do atributo.  
@@ -222,10 +227,10 @@ caps.handback.revision: 19
   
  **Atributo contínuo:** O nó de entrada armazena o valor médio do atributo. A tabela NODE_DISTRIBUTION para cada nó lista apenas o valor atual do atributo.  
   
-### Nós da camada oculta  
+### <a name="hidden-layer-nodes"></a>Nós da camada oculta  
  A camada oculta contém um número variável de nós. Em cada nó, a tabela NODE_DISTRIBUTION contém mapeamentos da camada oculta para os nós na camada de entrada. A coluna ATTRIBUTE_NAME contém uma ID de nó que corresponde a um nó na camada de entrada. A coluna ATTRIBUTE_VALUE contém o peso associado à combinação de nó de entrada e nó da camada oculta. A última linha na tabela contém um coeficiente que representa o peso do nó oculto na camada oculta.  
   
-### Nós de saída  
+### <a name="output-nodes"></a>Nós de saída  
  A camada de saída contém um nó de saída para cada valor de saída usado no modelo. Em cada nó, a tabela NODE_DISTRIBUTION contém mapeamentos da camada de saída para os nós na camada oculta. A coluna ATTRIBUTE_NAME contém uma ID de nó que corresponde a um nó na camada oculta. A coluna ATTRIBUTE_VALUE contém o peso associado à combinação de nó de saída e nó da camada oculta.  
   
  A tabela NODE_DISTRIBUTION tem as seguintes informações adicionais, dependendo do tipo de atributo:  
@@ -236,9 +241,9 @@ caps.handback.revision: 19
   
  **Atributo contínuo:** As duas linhas finais da tabela NODE_DISTRIBUTION contêm a média do atributo, o coeficiente do nó como um todo e a variação do coeficiente.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Algoritmo Rede Neural da Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Referência técnica do algoritmo Rede Neural da Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

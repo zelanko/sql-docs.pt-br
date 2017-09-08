@@ -1,37 +1,30 @@
 ---
-title: "Medidas (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Medidas | Microsoft Docs
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 38b7467cd4ad765d651ea0ebe4ad57c278c987a1
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Medidas (SSAS tabular)
+# <a name="measures"></a>Medidas
   Em modelos de tabela, uma medida é um cálculo criado usando uma fórmula DAX para uso em um cliente de relatório. As medidas são avaliadas com base em campos, filtros e usuários de segmentações de dados selecionados no aplicativo cliente de relatório.  
-  
- Seções neste tópico:  
-  
--   [Benefícios](#bkmk_understanding)  
-  
--   [Definindo medidas usando a grade de medida](#bkmk_def_mg)  
-  
--   [Propriedades das medidas](#bkmk_properties)  
-  
--   [Usando uma medida em um KPI](#bkmk_KPI)  
-  
--   [Tarefas relacionadas](#bkmk_rel_tasks)  
   
 ##  <a name="bkmk_understanding"></a> Benefícios  
  As medidas podem se basear em funções de agregação padrão, como AVERAGE, COUNT ou SUM, ou é possível definir sua própria fórmula usando-se o DAX. Além da fórmula, cada medida tem propriedades, definidas pelo tipo de dados de medida, como Nome, Detalhe da Tabela, Formato e Casas Decimais.  
@@ -62,7 +55,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |Tv e Vídeo|$946,989,702.51|  
 |**Grand Total**|**$4,691,673,731.53**|  
   
-##  <a name="bkmk_def_mg"></a> Definindo medidas usando a grade de medida  
+##  <a name="bkmk_def_mg"></a> Defining measures by using the measure grid  
  As medidas são criadas em tempo de design usando a grade de medida no designer de modelo. Cada tabela tem uma grade de medida. Por padrão, a grade de medida é exibida abaixo de cada tabela no designer de modelos. Você também pode escolher não exibir a grade de medida para uma tabela específica. Para alternar a exibição da grade de medida, clique no menu **Tabela** e em **Mostrar Grade de Medida**.  
   
  Na grade de medida, você pode criar medidas das seguintes maneiras:  
@@ -78,7 +71,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 > [!TIP]  
 >  É possível agrupar medidas de várias tabelas em uma tabela. Para tanto, crie uma tabela vazia e, depois, mova ou crie novas medidas nela. Lembre-se de que talvez seja necessário incluir nomes de tabelas em fórmulas DAX ao referenciar colunas em outras tabelas.  
   
- Se as perspectivas tiverem sido definidas para o modelo, as medidas não serão acrescentadas automaticamente a essas perspectivas. Você deve acrescentar medidas manualmente a uma perspectiva usando a caixa de diálogo Perspectivas. Para obter mais informações, consulte [Perspectivas&#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).  
+ Se as perspectivas tiverem sido definidas para o modelo, as medidas não serão acrescentadas automaticamente a essas perspectivas. Você deve acrescentar medidas manualmente a uma perspectiva usando a caixa de diálogo Perspectivas. Para obter mais informações, consulte [perspectivas](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).  
   
 ##  <a name="bkmk_properties"></a> Propriedades das medidas  
  Cada medida tem propriedades que definem isto. As propriedades de medidas, junto com as propriedades de colunas associadas podem ser editadas na janela Propriedades. As medidas têm as seguintes propriedades:  
@@ -91,19 +84,19 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**Nome da Medida**|Se AutoSoma for usado, o nome da medida precederá o nome da coluna seguido por dois-pontos. Se uma fórmula personalizada for inserida, digite um nome seguido por dois-pontos e digite a fórmula.|O nome da medida conforme é exibida em uma Lista de Campo do cliente de relatório.|  
   
 ##  <a name="bkmk_KPI"></a> Usando uma medida em um KPI  
- Um KPI (Indicador Chave de Desempenho) é definido por um valor *Base*, definido por uma medida, em relação a um valor de *Destino*, também definido por uma medida ou valor absoluto. Um KPI também inclui *Status*, um cálculo onde o valor Base é avaliado em relação ao valor de Destino entre limites, exibidos em formato gráfico. KPIs são usados geralmente por profissionais de negócios para identificar tendências em métricas comerciais críticas.  
+ Um KPI (Indicador Chave de Desempenho) é definido por um valor *Base* , definido por uma medida, em relação a um valor de *Destino* , também definido por uma medida ou valor absoluto. Um KPI também inclui *Status*, um cálculo onde o valor Base é avaliado em relação ao valor de Destino entre limites, exibidos em formato gráfico. KPIs são usados geralmente por profissionais de negócios para identificar tendências em métricas comerciais críticas.  
   
- Qualquer medida pode servir como a medida Base de um KPI. Para criar um KPI, na grade de medida, clique com o botão direito do mouse na medida e clique em **Criar KPI**. A caixa de diálogo Indicador chave de desempenho aparece e você pode especificar um valor de destino (definido por uma medida ou um valor absoluto) e pode definir limites de status e um tipo gráfico. Para obter mais informações, consulte [KPIs &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md).  
+ Qualquer medida pode servir como a medida Base de um KPI. Para criar um KPI, na grade de medida, clique com o botão direito do mouse na medida e clique em **Criar KPI**. A caixa de diálogo Indicador chave de desempenho aparece e você pode especificar um valor de destino (definido por uma medida ou um valor absoluto) e pode definir limites de status e um tipo gráfico. Para obter mais informações, consulte [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md).  
   
 ##  <a name="bkmk_rel_tasks"></a> Tarefas relacionadas  
   
 |Tópico|Description|  
 |-----------|-----------------|  
-|[Criar e gerenciar medidas &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|Descreve como criar e gerenciar medidas usando a grade de medida no designer de modelo.|  
+|[Criar e gerenciar medidas](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|Descreve como criar e gerenciar medidas usando a grade de medida no designer de modelo.|  
   
-## Consulte também  
- [KPIs &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Criar e gerenciar KPIs &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
- [Colunas calculadas &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte também  
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [Criar e gerenciar KPIs](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
+ [Colunas calculadas](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

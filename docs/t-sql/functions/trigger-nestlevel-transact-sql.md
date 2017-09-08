@@ -1,0 +1,94 @@
+---
+title: TRIGGER_NESTLEVEL (Transact-SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- TRIGGER_NESTLEVEL
+- TRIGGER_NESTLEVEL_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- triggers [SQL Server], number executed
+- number of triggers
+- TRIGGER_NESTLEVEL function
+ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
+caps.latest.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 352ea0e82fa853639d94a6a151b3d7df5f5b2f21
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="triggernestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  Retorna o número de disparadores executados para a instrução que acionou o disparador. TRIGGER_NESTLEVEL é usado em disparadores DML e DDL para determinar o nível atual de aninhamento.  
+  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```  
+  
+TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_category' ] )  
+```  
+  
+## <a name="arguments"></a>Argumentos  
+ *object_id*  
+ É o ID de objeto de um disparador. Se *object_id* for especificado, o número de vezes que o disparador especificado foi executado para a instrução é retornada. Se *object_id* não for especificado, o número de vezes que todos os disparadores foram executados para a instrução será retornada.  
+  
+ **'** *trigger_type* **'**  
+ Especifica se deve ser aplicado TRIGGER_NESTLEVEL a disparadores AFTER ou disparadores INSTEAD OF. Especifique **AFTER** para disparadores AFTER. Especifique **IOT** para gatilhos INSTEAD OF. Se *trigger_type* for especificado, *trigger_event_category* também deve ser especificado.  
+  
+ **'** *trigger_event_category* **'**  
+ Especifica se deve ser aplicado TRIGGER_NESTLEVEL a disparadores DML ou DDL. Especifique **DML** para gatilhos DML. Especifique **DDL** para gatilhos DDL. Se *trigger_event_category* for especificado, *trigger_type* também deve ser especificado. Observe que apenas **AFTER** pode ser especificado com **DDL**, como gatilhos DDL só podem ser gatilhos AFTER.  
+  
+## <a name="remarks"></a>Comentários  
+ Quando nenhum parâmetro for especificado, TRIGGER_NESTLEVEL retornará o número total de disparadores na pilha de chamada. Isto inclui ele próprio. Pode ocorrer omissão de parâmetros quando um disparador executar comandos que causem o acionamento de outro disparador ou criar uma sucessão de disparadores de acionamento.  
+  
+ Para retornar o número total de disparadores na pilha de chamadas para uma categoria de tipo e eventos de gatilho específico, especifique *object_id* = 0.  
+  
+ TRIGGER_NESTLEVEL retornará 0 se for executado fora de um disparador e quaisquer parâmetros não forem NULL.  
+  
+ Quando quaisquer parâmetros forem especificados explicitamente como NULL, um valor NULL será retornado independentemente do fato de TRIGGER_NESTLEVEL ser usado interna ou externamente a um disparador.  
+  
+## <a name="examples"></a>Exemplos  
+  
+### <a name="a-testing-the-nesting-level-of-a-specific-dml-trigger"></a>A. Testando o nível de aninhamento de um gatilho DML específico  
+  
+```  
+IF ( (SELECT TRIGGER_NESTLEVEL( OBJECT_ID('xyz') , 'AFTER' , 'DML' ) ) > 5 )  
+   RAISERROR('Trigger xyz nested more than 5 levels.',16,-1)  
+```  
+  
+### <a name="b-testing-the-nesting-level-of-a-specific-ddl-trigger"></a>B. Testando o nível de aninhamento de um gatilho DDL específico  
+  
+```  
+IF ( ( SELECT TRIGGER_NESTLEVEL ( ( SELECT object_id FROM sys.triggers  
+WHERE name = 'abc' ), 'AFTER' , 'DDL' ) ) > 5 )  
+   RAISERROR ('Trigger abc nested more than 5 levels.',16,-1)  
+```  
+  
+### <a name="c-testing-the-nesting-level-of-all-triggers-executed"></a>C. Testando o nível de aninhamento de todos os gatilhos executados  
+  
+```  
+IF ( (SELECT trigger_nestlevel() ) > 5 )  
+   RAISERROR  
+      ('This statement nested over 5 levels of triggers.',16,-1)  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
+  
+  

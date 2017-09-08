@@ -1,22 +1,27 @@
 ---
-title: "Verifique uma Instala&#231;&#227;o do Power Pivot para SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verifique se um PowerPivot para SharePoint | Microsoft Docs
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: abc618942a95b28fd2b93f72e4b511e519c58191
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Verifique uma Instala&#231;&#227;o do Power Pivot para SharePoint
+# <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Verifique uma Instalação do Power Pivot para SharePoint
   Uma instância do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint instalada em um farm do SharePoint é administrada por meio da Administração Central do SharePoint. É possível, ao menos, verificar as páginas na Administração Central e nos sites do SharePoint para verificar a disponibilidade dos componentes e recursos do servidor [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . No entanto, para verificar integralmente uma instalação, você deve ter uma pasta de trabalho [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] que possa publicar no SharePoint e acessar em uma biblioteca. Para fins de teste, é possível publicar uma pasta de trabalho de exemplo que já contenha dados do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e usá-la para confirmar se essa integração com o SharePoint está configurada corretamente.  
   
 ||  
@@ -36,7 +41,7 @@ caps.handback.revision: 15
   
     2.  Na guia Segurança, na seção **Selecionar uma zona para exibir ou alterar as configurações de segurança** , clique em Sites Confiáveis e em Sites.  
   
-    3.  Desmarque a caixa de seleção **Exigir verificação do servidor (https) para todos os sites desta zona**.  
+    3.  Desmarque a caixa de seleção **Exigir verificação do servidor (https) para todos os sites desta zona** .  
   
     4.  Em **Adicionar este site à zona**, digite a URL do site e clique em **Adicionar**.  
   
@@ -61,10 +66,10 @@ caps.handback.revision: 15
   
      Como alternativa, clique no espaço vazio ao lado de **Aplicativo de Serviço [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Padrão** para selecionar a linha e clique em **Propriedades** para exibir as configurações desse aplicativo de serviço. Você pode modificar os parâmetros de configuração e propriedades do aplicativo para alterar a configuração de seu servidor. Para obter mais informações sobre essas definições, veja [Criar e configurar um aplicativo de serviço do Power Pivot na Administração Central](../../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
   
-## Verificar a integração no nível de site  
+## <a name="verify-integration-at-the-site-level"></a>Verificar a integração no nível de site  
  Para verificar a integração do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] com um site do SharePoint, faça o seguinte:  
   
-1.  Em um navegador, abra o aplicativo Web criado. Se você usou valores padrão, será possível especificar http://\<nome do seu computador> no endereço da URL.  
+1.  Em um navegador, abra o aplicativo Web criado. Se você usou valores padrão, você pode especificar http://\<o nome do computador > no endereço da URL.  
   
 2.  Verifique se os recursos de acesso a dados e de processamento do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] estão disponíveis no aplicativo. É possível fazer isso verificando a presença de modelos de biblioteca fornecidos pelo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]:  
   
@@ -72,7 +77,7 @@ caps.handback.revision: 15
   
     2.  Na lista de aplicativos, você deverá ver **Biblioteca de Feeds de Dados** e [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]Galeria do ****. Esses modelos de biblioteca são fornecidos pelo recurso do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , estando visíveis na lista Bibliotecas apenas se o recurso estiver integrado corretamente.  
   
-## Verificar acesso a dados no servidor  
+## <a name="verify-data-access-on-the-server"></a>Verificar acesso a dados no servidor  
  Para verificar o acesso a dados [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] no servidor, faça o seguinte:  
   
 1.  [Baixe](http://go.microsoft.com/fwlink/?LinkID=219108) os exemplos de dados Picnic que acompanham um tutorial do Reporting Services. Você usará a pasta de trabalho de exemplo nesse download para verificar o acesso a dados do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Extraia os arquivos.  
@@ -91,7 +96,7 @@ caps.handback.revision: 15
   
 7.  Em Tipo de Servidor, selecione **Analysis Services**.  
   
-8.  Em Nome do Servidor, insira **\<server-name>\powerpivot**, em que **\<server-name>** é o nome do computador que tem a instalação do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint.  
+8.  Em nome do servidor, digite  **\<nome do servidor > \powerpivot**, onde  **\<nome do servidor >** é o nome do computador que tem o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint instalação.  
   
 9. Clique em **Conectar**. Isso verifica se o servidor do Analysis Services está disponível.  
   

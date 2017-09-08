@@ -1,22 +1,27 @@
 ---
-title: "Atualizar pastas de trabalho e atualiza&#231;&#227;o de dados agendada (SharePoint 2013) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Atualizar pastas de trabalho e atualização de dados agendada (SharePoint 2013) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09907013b8a83b70fae3f0bf91f68f49a08290df
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Atualizar pastas de trabalho e atualiza&#231;&#227;o de dados agendada (SharePoint 2013)
+# <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Atualizar pastas de trabalho e atualização de dados agendada (SharePoint 2013)
   Este tópico explica a experiência do usuário das pastas de trabalho criadas em ambientes anteriores do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e como atualizar pastas de trabalho do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] de forma que você possa aproveitar os novos recursos introduzidos nesta versão. Para saber mais sobre os novos recursos, veja [Novidades no Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
@@ -35,7 +40,7 @@ caps.handback.revision: 20
 -   [Executando várias versões de pasta de trabalho em um servidor mais recente](#bkmk_runold)  
   
 ##  <a name="bkmk_overview"></a> Visão geral de como atualizar pastas de trabalho  
- Uma pasta de trabalho do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] é uma pasta de trabalho do Excel que contém dados inseridos do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]. Atualizar uma pasta de trabalho tem dois benefícios:  
+ Uma pasta de trabalho do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] é uma pasta de trabalho do Excel que contém dados inseridos do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Atualizar uma pasta de trabalho tem dois benefícios:  
   
 -   Usar novos recursos no [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)].  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 20
   
  A tabela a seguir lista o suporte e o comportamento de pastas de trabalho do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] com base no ambiente no qual a pasta de trabalho foi criada. O comportamento descrito inclui a experiência geral do usuário, as opções de atualização com suporte para atualizar a pasta de trabalho para o ambiente específico e o comportamento da atualização de dados agendada de uma pasta de trabalho que ainda não foi atualizada.  
   
-### Comportamento da pasta de trabalho e opções de atualização  
+### <a name="workbook-behavior-and-upgrade-options"></a>Comportamento da pasta de trabalho e opções de atualização  
   
 |Criado em|\<|Suporte e comportamento|>|  
 |----------------|--------|--------------------------|--------|  
@@ -72,13 +77,13 @@ caps.handback.revision: 20
   
 -   Baixe e abra a pasta de trabalho no Microsoft Excel 2010 com o suplemento SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para Excel instalado.  
   
-     Abra a janela do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e atualize o modelo do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)].  
+     Abra a janela do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e atualize o modelo do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .  
   
      Salve a pasta de trabalho e republique-a no SharePoint.  
   
 -   Baixe e abra a pasta de trabalho no Microsoft Excel 2013.  
   
-     Abra a janela do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e atualize o modelo do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)].  
+     Abra a janela do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e atualize o modelo do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .  
   
      Salve a pasta de trabalho e republique-a no servidor do SharePoint.  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 20
   
 2.  Para atualizar a pasta de trabalho e o modelo que ela contém, baixe e abra a pasta de trabalho no Microsoft Excel 2013.  
   
-3.  Abra a janela do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e atualize o modelo do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)].  
+3.  Abra a janela do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e atualize o modelo do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .  
   
 4.  Salve a pasta de trabalho e republique-a no servidor do SharePoint 2013.  
   
@@ -149,7 +154,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
  Observe que a publicação de pastas de trabalho de versões mais novas em instâncias do SQL Server do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] não tem suporte. Uma instância do [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] não carregará uma pasta de trabalho que você criou na versão do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] do [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)], e uma instância do SQL Server 2012 não carregará pastas de trabalho do Office 2013 com modelos de dados avançados que você criou usando a versão do [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para Excel.  
   
 ###  <a name="bkmk_msolapxslx"></a> Como verificar informações do provedor de dados MSOLAP em uma pasta de trabalho do Power Pivot  
- Use as instruções a seguir para verificar qual provedor OLE DB é usado em uma pasta de trabalho do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]. A verificação das informações de conexão de dados não exige a instalação do suplemento [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)].  
+ Use as instruções a seguir para verificar qual provedor OLE DB é usado em uma pasta de trabalho do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . A verificação das informações de conexão de dados não exige a instalação do suplemento [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] .  
   
 1.  No Excel, na guia Dados, clique em **Conexões**. Clique em **Propriedades**.  
   
@@ -159,19 +164,19 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
      **Provider=MSOLAP.4** indica [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].  
   
-     **Data Source=$Embedded$** indica que a pasta de trabalho é uma pasta de trabalho do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], usando um banco de dados inserido.  
+     **Data Source=$Embedded$** indica que a pasta de trabalho é uma pasta de trabalho do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , usando um banco de dados inserido.  
   
 ###  <a name="bkmk_msolappc"></a> Como verificar a versão atual do provedor de dados MSOLAP em um computador local  
- Use as instruções a seguir para verificar qual provedor OLE DB é a versão atual no servidor ou estação de trabalho que executa pastas de trabalho do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]. Saber a versão atual pode ajudar a solucionar problemas relacionados a erros de conexão de dados após a atualização.  
+ Use as instruções a seguir para verificar qual provedor OLE DB é a versão atual no servidor ou estação de trabalho que executa pastas de trabalho do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Saber a versão atual pode ajudar a solucionar problemas relacionados a erros de conexão de dados após a atualização.  
   
 1.  No Editor do Registro, vá para HKEY_CLASSES_ROOT  
   
 2.  Role até MSOLAP. Verifique se MSOLAP.5 está listado entre os provedores OLAP instalados no sistema. Verifique se MSOLAP|CurVer está definido como MSOLAP.5  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Migrar o Power Pivot para o SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [Atualizar Power Pivot para SharePoint](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Novidades do Analysis Services](../../../analysis-services/what-s-new-in-analysis-services.md)   
- [Exibir o histórico de atualizações de dados &#40;Power Pivot para SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
+ [Atualização de dados de exibição histórico &#40; PowerPivot para SharePoint &#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   

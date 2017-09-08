@@ -1,29 +1,34 @@
 ---
-title: "Armazenamento de cadeia e agrupamento em modelos de tabela | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Armazenamento de cadeia e agrupamento em modelos de tabela | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Armazenamento de cadeia e agrupamento em modelos de tabela
+# <a name="string-storage-and-collation-in-tabular-models"></a>Armazenamento de cadeia e agrupamento em modelos de tabela
   Cadeias de caracteres (valores de texto) são armazenadas em um formato altamente compactado em modelos de tabela; por causa desta compactação, você pode obter resultados inesperados ao recuperar cadeias de caracteres inteiras ou parciais. Além disso, como a localidade e o agrupamento são herdados hierarquicamente do objeto pai mais próximo, se o idioma da cadeia de caracteres não for definido explicitamente, a localidade e o agrupamento do pai poderão afetar como cada cadeia de caracteres é armazenada e se ela é exclusiva ou combinada com cadeias de caracteres semelhantes, conforme definido pelo agrupamento pai.  
   
  Este tópico descreve o mecanismo pelo qual cadeias de caracteres são compactadas e armazenados e também fornece exemplos de como o agrupamento e o idioma afetam os resultados de fórmulas de texto em modelos de tabela.  
   
-## Armazenamento  
+## <a name="storage"></a>Armazenamento  
  Em modelos de tabela, todos os dados são compactados para melhor ajuste na memória. Como consequência, todas as cadeias de caracteres consideradas lexicalmente equivalentes são armazenadas apenas uma vez. A primeira instância da cadeia de caracteres é usada como a representação canônica e, a partir daí, cada cadeia de caracteres equivalente é indexada com o mesmo valor compactado que a primeira ocorrência.  
   
  A pergunta-chave é: o que constitui uma cadeia de caracteres lexicalmente equivalente? Duas cadeias de caracteres serão consideradas lexicalmente equivalentes quando podem ser consideradas como a mesma palavra. Por exemplo, em inglês, quando você procura a palavra **violin** em um dicionário, pode encontrar a entrada **Violin** ou **violin**, dependendo da política editorial do dicionário, mas geralmente considera as duas palavras equivalentes e desconsidera a diferença de capitalização. Em um modelo de tabela, o fator que determina se duas cadeias de caracteres são lexicalmente equivalentes não é a política editorial e nem a preferência do usuário, mas sim a localidade e a ordem de agrupamento atribuídos à coluna.  
@@ -60,7 +65,7 @@ caps.handback.revision: 10
 > [!WARNING]  
 >  Você pode optar por definir a cadeia de caracteres que será a primeira a armazenar, de acordo com o que considere correto, mas isso pode ser difícil. Não existe uma maneira simples de determinar previamente a linha que deve ser processada primeiro pelo mecanismo, pois todos os valores são considerados equivalentes. Se você precisar definir o valor padrão, limpe todas as cadeias de caracteres antes de carregar o modelo.  
   
-## Localidade e ordem de agrupamento  
+## <a name="locale-and-collation-order"></a>Localidade e ordem de agrupamento  
  Ao comparar cadeias de caracteres (valores de texto), o que define a equivalência costuma ser o aspecto cultural de como cadeias de caracteres são interpretadas. Em algumas culturas, um acento ou a capitalização de um caractere pode alterar totalmente o significado da cadeia de caracteres; portanto, tais diferenças em geral são consideradas ao determinar a equivalência de qualquer idioma ou região específica.  
   
  Normalmente, quando você usa seu computador, ele já está configurado para coincidir suas próprias expectativas culturais e o comportamento linguístico; operações de cadeia de caracteres como classificar e comparar valores de texto se comportam da forma esperada. São definidas as configurações que controlam o comportamento específico a um idioma através das configurações **Localidade e Regional** no Windows. Os aplicativos leem essas configurações e alteram o comportamento de forma correspondente. Em alguns casos, um aplicativo pode ter um recurso que lhe permite alterar o comportamento cultural do aplicativo ou o modo no qual as cadeias de caracteres são comparadas.  
@@ -71,7 +76,7 @@ caps.handback.revision: 10
   
 -   O agrupamento define a ordenação dos caracteres e sua equivalência.  
   
- É importante observar que um identificador de idioma não só identifica um idioma, mas também o país ou região onde o idioma é usado. Cada identificador de idioma também tem uma especificação de agrupamento padrão. Para obter mais informações sobre identificadores de idioma, consulte [IDs de localidade atribuídas pela Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). Você pode usar a coluna LCID Dec para obter a ID correta ao inserir um valor manualmente. Para obter mais informações sobre o conceito SQL de agrupamentos, consulte [COLLATE &#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md). Para obter mais informações sobre os designadores de agrupamento e os estilos de comparação para nomes de agrupamentos do Windows, consulte [Nome de agrupamento do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). O tópico [Nome de agrupamento do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md), mapeia os nomes de agrupamento do Windows para os nomes usados para SQL.  
+ É importante observar que um identificador de idioma não só identifica um idioma, mas também o país ou região onde o idioma é usado. Cada identificador de idioma também tem uma especificação de agrupamento padrão. Para obter mais informações sobre identificadores de idioma, consulte [IDs de localidade atribuídas pela Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). Você pode usar a coluna LCID Dec para obter a ID correta ao inserir um valor manualmente. Para obter mais informações sobre o conceito SQL de agrupamentos, consulte [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md). Para obter mais informações sobre os designadores de agrupamento e os estilos de comparação para nomes de agrupamentos do Windows, consulte [Nome de agrupamento do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). O tópico [Nome de agrupamento do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md), mapeia os nomes de agrupamento do Windows para os nomes usados para SQL.  
   
  Quando seu banco de dados modelo de tabela for criado, todos os novos objetos no modelo herdarão os atributos de idioma e agrupamento do banco de dados. Isto vale para todos os objetos. O caminho de herança começa no objeto, observa o pai de quaisquer atributos de idioma e agrupamento a serem herdados e, se nenhum é localizado, continua na parte superior e localiza os atributos de idioma e agrupamento em nível de banco de dados. Em outras palavras, se você não especificar os atributos de idioma e agrupamento para um objeto, por padrão, o objeto herdará os atributos de seu pai mais próximo.  
   

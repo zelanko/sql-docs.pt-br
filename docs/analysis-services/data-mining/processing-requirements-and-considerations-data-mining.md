@@ -1,27 +1,32 @@
 ---
-title: "Requisitos e considera&#231;&#245;es de processamento (minera&#231;&#227;o de dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mineração de dados [Analysis Services], objetos"
-  - "estruturas de mineração [Analysis Services], processamento"
-  - "modelos de mineração [Analysis Services], processamento"
+title: "Processamento de requisitos e considerações (mineração de dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], objects
+- mining structures [Analysis Services], processing
+- mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c2a677617feb9ade819df897e2ca2418bfce8d2a
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Requisitos e considera&#231;&#245;es de processamento (minera&#231;&#227;o de dados)
+# <a name="processing-requirements-and-considerations-data-mining"></a>Requisitos e considerações de processamento (mineração de dados)
   Este tópico descreve algumas considerações técnicas para lembrar ao processar objetos de mineração de dados. Para obter uma explicação geral do que é processamento e como isso se aplica à mineração de dados, consulte [Processando objetos de Data Mining](../../analysis-services/data-mining/processing-data-mining-objects.md).  
   
  [Consultas em repositório relacional](#bkmk_QueryReqs)  
@@ -57,7 +62,7 @@ caps.handback.revision: 30
   
  Porém, no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], você não pode selecionar vários modelos de mineração para processar com a estrutura. Se você precisar controlar quais modelos são processados, terá que selecioná-los individualmente ou usar XMLA ou DMX para processar modelos em série.  
   
-## Quando o reprocessamento é necessário  
+## <a name="when-reprocessing-is-required"></a>Quando o reprocessamento é necessário  
  Você deve processar os modelos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] definidos antes de poder começar a trabalhar com eles. Também deve processar novamente os modelos de mineração sempre que mudar a estrutura do modelo de mineração, atualizar os dados de treinamento, alterar um modelo de mineração existente ou adicionar um novo modelo de mineração à estrutura.  
   
  Os modelos de mineração também são processados nestes cenários:  
@@ -86,7 +91,7 @@ caps.handback.revision: 30
   
  Para obter mais informações, consulte [Exportar e importar objetos de Data Mining](../../analysis-services/data-mining/export-and-import-data-mining-objects.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  

@@ -1,24 +1,29 @@
 ---
-title: "Colunas de dados de relat&#243;rios de andamento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "categoria de evento de relatórios de andamento"
+title: "Colunas de dados de relatórios de andamento | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Progress Reports event category
 ms.assetid: d34a6322-e26b-4454-b98f-32307d6956b5
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 18f95a363c72cde1e067bb930d44c65254631ce2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colunas de dados de relat&#243;rios de andamento
+# <a name="progress-reports-data-columns"></a>Colunas de dados de relatórios de andamento
   A categoria de evento Progress Reports tem as seguintes classes de evento:  
   
 |**ID do evento**|**Nome do evento**|**Descrição do evento**|  
@@ -30,7 +35,7 @@ caps.handback.revision: 34
   
  As tabelas a seguir listam as colunas de dados de cada uma dessas classes de evento.  
   
-## Progress Report Begin - Colunas de dados  
+## <a name="progress-report-begindata-columns"></a>Progress Report Begin - Colunas de dados  
   
 |**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -55,7 +60,7 @@ caps.handback.revision: 34
 |TextData|42|9|Contém os dados de texto associados ao evento relatado.|  
 |ServerName|43|8|Contém o nome da instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em que o evento relatado ocorreu.|  
   
-## Progress Report End - Colunas de dados  
+## <a name="progress-report-enddata-columns"></a>Progress Report End - Colunas de dados  
   
 |**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -88,7 +93,7 @@ caps.handback.revision: 34
 |TextData|42|9|Contém os dados de texto associados ao evento relatado.|  
 |ServerName|43|8|Contém o nome da instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em que o evento relatado ocorreu.|  
   
-## Progress Report Current - Colunas de dados  
+## <a name="progress-report-currentdata-columns"></a>Progress Report Current - Colunas de dados  
   
 |**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -112,7 +117,7 @@ caps.handback.revision: 34
 |TextData|42|9|Contém os dados de texto associados ao evento relatado.|  
 |ServerName|43|8|Contém o nome da instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em que o evento relatado ocorreu.|  
   
-## Progress Report Error - Colunas de dados  
+## <a name="progress-report-errordata-columns"></a>Progress Report Error - Colunas de dados  
   
 |**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -140,7 +145,7 @@ caps.handback.revision: 34
 |TextData|42|9|Contém os dados de texto associados ao evento relatado.|  
 |ServerName|43|8|Contém o nome da instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em que o evento relatado ocorreu.|  
   
-## Consulte também  
- [Categoria de evento de relatórios de andamento](../../analysis-services/trace-events/progress-reports-event-category.md)  
+## <a name="see-also"></a>Consulte também  
+ [Progress Reports Event Category](../../analysis-services/trace-events/progress-reports-event-category.md)  
   
   

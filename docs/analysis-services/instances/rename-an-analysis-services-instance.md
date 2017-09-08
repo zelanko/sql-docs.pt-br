@@ -1,31 +1,36 @@
 ---
-title: "Renomear uma inst&#226;ncia do Analysis Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "instâncias do Analysis Services, renomeando"
-  - "renomeando instâncias do Analysis Services"
-  - "nomes [Analysis Services], renomeando instâncias"
-  - "nomes [Analysis Services]"
+title: "Renomear uma instância do Analysis Services | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- instances of Analysis Services, renaming
+- renaming instances of Analysis Services
+- names [Analysis Services], renaming instances
+- names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 caps.latest.revision: 53
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 53
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Renomear uma inst&#226;ncia do Analysis Services
-  Você pode renomear uma instância existente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando a ferramenta **Renomear Instância**, instalada com o Management Studio (instalação via Web).  
+# <a name="rename-an-analysis-services-instance"></a>Renomear uma instância do Analysis Services
+  Você pode renomear uma instância existente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando a ferramenta **Renomear Instância** , instalada com o Management Studio (instalação via Web).  
   
 > [!IMPORTANT]  
 >  Na renomeação da instância, a ferramenta Renomeação de Instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é executada com privilégios elevados, atualizando o nome do serviço Windows, contas de segurança e entradas do Registro associados com essa instância. Para garantir a execução dessas ações, execute essa ferramenta como um administrador do sistema local.  
@@ -35,19 +40,19 @@ caps.handback.revision: 53
 > [!NOTE]  
 >  A Ferramenta que renomeia a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não tem suporte para uso em um ambiente de cluster.  
   
-### Para renomear uma instância do Analysis Services  
+### <a name="to-rename-an-instance-of-analysis-services"></a>Para renomear uma instância do Analysis Services  
   
-1.  Inicie a ferramenta para **Renomeação de Instância**, **asinstancerename.exe**, de C:\Arquivos de Programas (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio.  
+1.  Inicie a ferramenta para **Renomeação de Instância** , **asinstancerename.exe**, de C:\Arquivos de Programas (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio.  
   
-2.  Na caixa de diálogo **Renomear Instância**, na lista **Instância a ser renomeada**, selecione a instância que você deseja renomear.  
+2.  Na caixa de diálogo **Renomear Instância** , na lista **Instância a ser renomeada** , selecione a instância que você deseja renomear.  
   
-3.  Na caixa **Novo nome da instância**, digite o novo nome da instância.  
+3.  Na caixa **Novo nome da instância** , digite o novo nome da instância.  
   
 4.  Verifique se o nome de usuário e senha estão corretos e, então, clique em **Renomear**.  
   
      A instância do Analysis Services será interrompida e reiniciará como parte da alteração de nome.  
   
-### Lista de verificação pós-renomeação  
+### <a name="post-rename-checklist"></a>Lista de verificação pós-renomeação  
   
 1.  Para retomar o acesso a bancos de dados em execução na instância renomeada, atualize as conexões de dados manualmente no Excel ou em outros aplicativos cliente. Também verifique qualquer conexão predefinida, como fontes de dados compartilhadas do Reporting Services, arquivos ODC do Excel ou arquivos de conexão de Modelo Semântico BI que possam referenciar a instância recém-renomeada. Para obter mais informações, consulte [Conectar ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md).  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 53
   
      O exemplo a seguir ilustra esse cenário. Digamos que você instalou um servidor de modo de tabela como uma instância denominada "Tabelar" usando a conta virtual padrão, resultando na seguinte configuração:  
   
-    1.  Nome da instância = \<servidor>\TABULAR  
+    1.  Nome da instância = \<server > \TABULAR  
   
     2.  Nome de serviço = MSOLAP$TABULAR  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 53
   
      Digamos que você renomeie a instância como "TAB2". Como resultado da alteração de nome, sua configuração teria a seguinte aparência agora:  
   
-    1.  Nome da instância = \<servidor>\TAB2  
+    1.  Nome da instância = \<server > \TAB2  
   
     2.  Nome de serviço = MSOLAP$TAB2  
   

@@ -1,37 +1,42 @@
 ---
-title: "Estruturas de minera&#231;&#227;o (Analysis Services – Minera&#231;&#227;o de dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "atributos [mineração de dados]"
-  - "estruturas de mineração [Analysis Services], sobre estruturas de mineração"
-  - "estruturas de mineração [Analysis Services]"
-  - "mineração de dados [Analysis Services], estrutura"
-  - "Objetos do Analysis Services, objetos de mineração de dados"
-  - "mineração de dados [Analysis Services], modelos"
-  - "algoritmos [mineração de dados]"
-  - "mineração de dados [Analysis Services], objetos"
-  - "modelos de mineração [Analysis Services]"
-  - "modelos de mineração [Analysis Services], sobre os modelos de mineração de dados"
+title: "Estruturas de mineração (Analysis Services – mineração de dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [data mining]
+- mining structures [Analysis Services], about mining structures
+- mining structures [Analysis Services]
+- data mining [Analysis Services], structure
+- Analysis Services objects, data mining objects
+- data mining [Analysis Services], models
+- algorithms [data mining]
+- data mining [Analysis Services], objects
+- mining models [Analysis Services]
+- mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
 caps.latest.revision: 77
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 76
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 0145d9d7cd222d24294d7aaab389aa5a4bdc28cb
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Estruturas de minera&#231;&#227;o (Analysis Services – Minera&#231;&#227;o de dados)
+# <a name="mining-structures-analysis-services---data-mining"></a>Estruturas de mineração (Analysis Services – Mineração de dados)
   A estrutura de mineração define os dados a partir dos quais os modelos de mineração são criados. Ela especifica a exibição da fonte de dados, o número e tipo de colunas e uma partição opcional nos conjuntos de treinamento e teste. Uma única estrutura de mineração pode oferecer suporte a vários modelos de mineração que compartilham o mesmo domínio. O diagrama a seguir mostra a relação da estrutura de mineração de dados com a fonte de dados e com os modelos de mineração de dados que a compõe.  
   
- ![Processamento de dados: origem para estrutura para modelo](../../analysis-services/data-mining/media/dmcon-modelarch.gif "Processamento de dados: origem para estrutura para modelo")  
+ ![Processamento de dados: origem para estrutura para modelo](../../analysis-services/data-mining/media/dmcon-modelarch.gif "de processamento de dados: origem para estrutura para modelo")  
   
  A estrutura de mineração apresentada neste diagrama tem como base uma fonte de dados que contém diversas tabelas ou exibições unidas no campo CustomerID. Uma tabela contém informações sobre os clientes, como região geográfica, idade, renda e sexo, enquanto que a tabela aninhada relacionada contém diversas linhas com informações adicionais sobre cada cliente, como o tipo de produto adquirido. O diagrama mostra que vários modelos podem ser criados na mesma estrutura de mineração e que os modelos podem usar colunas diferentes da estrutura.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 76
   
  Esta seção explica a arquitetura básica de estruturas de mineração de dados: como você define uma estrutura de mineração, como você a popula com dados e como você a usa para criar modelos. Para obter mais informações sobre como gerenciar ou exportar estruturas de mineração de dados existentes, consulte [Gerenciamento de soluções de mineração de dados e objetos](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md).  
   
-## Definindo uma estrutura de mineração  
+## <a name="defining-a-mining-structure"></a>Definindo uma estrutura de mineração  
  A configuração de uma estrutura de mineração de dados inclui as seguintes etapas:  
   
 -   Definir uma fonte de dados.  
@@ -60,7 +65,7 @@ caps.handback.revision: 76
   
  Essas etapas são descritas mais detalhadamente nas seções a seguir.  
   
-### Fontes de dados para estruturas de mineração  
+### <a name="data-sources-for-mining-structures"></a>Fontes de dados para estruturas de mineração  
  Quando você define uma estrutura de mineração, você usa colunas que estão disponíveis em uma exibição da fonte de dados existente. Uma exibição de fonte de dados é um objeto compartilhado que permite que você combine várias fontes de dados. As fontes de dados originais não são visíveis a aplicativos cliente e você pode usar as propriedades da exibição da fonte de dados para modificar tipos de dados, criar agregações, ou designar um alias para as colunas.  
   
  Se você criar vários modelos de mineração a partir da mesma estrutura de mineração, os modelos poderão usar colunas diferentes da estrutura. Por exemplo, você pode criar uma única estrutura e, em seguida, criar uma árvore de decisão separada e modelos clustering dele, com cada modelo usando colunas diferentes e prevendo atributos diferentes.  
@@ -69,7 +74,7 @@ caps.handback.revision: 76
   
  A estrutura de mineração de dados armazena a definição da fonte de dados e as colunas nela na forma de *associações* para os dados de origem. Para obter mais informações sobre associações de fonte de dados, consulte [Fontes de dados e associações &#40;SSAS Multidimensional&#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md). No entanto, observe que você também pode criar uma estrutura de mineração de dados sem associá-la a uma fonte de dados específica usando a instrução DMX [CREATE MINING STRUCTURE &#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md).  
   
-### Colunas da estrutura de mineração  
+### <a name="mining-structure-columns"></a>Colunas da estrutura de mineração  
  Os blocos de construção da estrutura de mineração são as colunas da estrutura de mineração, que descrevem os dados que a fonte de dados contém. Essas colunas contêm informações como tipo de dados, tipo de conteúdo e como os dados são distribuídos. A estrutura de mineração não contém informações sobre como as colunas são usadas para um modelo de mineração específico ou sobre o tipo de algoritmo usado para criar um modelo; essas informações são definidas no próprio modelo de mineração.  
   
  Uma estrutura de mineração também pode conter tabelas aninhadas. Uma tabela aninhada representa uma relação um para muitos entre a entidade de um caso e seus atributos relacionados. Por exemplo, se as informações que descrevem o cliente residirem em uma tabela, e as compras do cliente residirem em outra tabela, você poderá usar tabelas aninhadas para combinar as informações em um único caso. O identificador de cliente é a entidade, e as compras são os atributos relacionados. Para obter mais informações sobre quando usar tabelas aninhadas, consulte [Tabelas aninhadas &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md).  
@@ -80,47 +85,47 @@ caps.handback.revision: 76
   
  Para obter mais informações, consulte [Colunas da estrutura de mineração](../../analysis-services/data-mining/mining-structure-columns.md).  
   
-### Dividindo os dados em conjuntos de treinamento e de teste  
+### <a name="dividing-the-data-into-training-and-testing-sets"></a>Dividindo os dados em conjuntos de treinamento e de teste  
  Quando você define os dados da estrutura de mineração, você também pode especificar que alguns deles devem ser usados para treinamento e outros para teste. Portanto, não é mais necessário separar seus dados antes de criar uma estrutura de mineração de dados. Em vez disso, enquanto você cria seu modelo, pode especificar que uma determinada porcentagem dos dados são para teste e que o restante deve ser usado para treinamento ou pode especificar que um determinado número de casos deve ser usado como conjunto de dados de teste. As informações sobre os conjuntos de dados de treinamento e teste são armazenadas em cache com a estrutura de mineração e, como resultado, o mesmo conjunto de teste pode ser usado com todos os modelos baseados nessa estrutura,  
   
  Para obter mais informações, consulte [Training and Testing Data Sets](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
-### Habilitando o detalhamento  
+### <a name="enabling-drillthrough"></a>Habilitando o detalhamento  
  Você pode adicionar colunas à estrutura de mineração mesmo que você não pretenda usá-la em um modelo de mineração específico. Isso será útil, por exemplo, se você desejar recuperar os endereços de email de clientes em um modelo de clustering, sem usar o endereço de email durante o processo de análise. Para ignorar uma coluna durante a fase de análise e previsão, você a adiciona à estrutura, mas não especifica um uso para a coluna, ou define o sinalizador de uso como Ignorar. Os dados sinalizados dessa maneira podem ainda ser usados em consultas se o detalhamento tiver sido habilitado no modelo de mineração e se você tiver as permissões apropriadas. Por exemplo, você pode examinar os clusters resultantes da análise de todos os clientes, e então usar uma consulta de detalhamento para obter os nomes e endereços de email de clientes em um cluster específico, mesmo que essas colunas de dados não tenham sido usadas para criar o modelo.  
   
  Para obter mais informações, consulte [Consultas de detalhamento &#40;Mineração de dados&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
-### Processando estruturas de mineração  
+### <a name="processing-mining-structures"></a>Processando estruturas de mineração  
  Uma estrutura de mineração é apenas um contêiner de metadados até ser processado. Quando você processa uma estrutura de mineração, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria um cache local que armazena estatísticas sobre os dados, informações sobre como qualquer atributo contínuo é discretizado e outras informações que serão usadas posteriormente pelos modelos de mineração. O próprio modelo de mineração não armazena estas informações de resumo, mas referencia as informações que foram armazenadas em cache quando a estrutura de mineração foi processada. No entanto, você não precisa reprocessar a estrutura cada vez que adiciona um novo modelo a uma estrutura existente; você poderá processar somente o modelo.  
   
  Você pode optar por descartar este cache depois de processar, se o cache for muito grande ou você desejar remover dados detalhados. Se não quiser que os dados sejam armazenados em cache, você poderá alterar a propriedade **CacheMode** da estrutura de mineração para **ClearAfterProcessing**. Isso destruirá o cache depois que qualquer modelo for processado. A definição da propriedade **CacheMode** como **ClearAfterProcessing** desabilitará o detalhamento do modelo de mineração.  
   
  No entanto, depois de destruir o cache, você não será capaz de adicionar novos modelos à estrutura de mineração. Ao adicionar um novo modelo de mineração à estrutura, ou alterar as propriedades de modelos existentes, você precisará reprocessar a estrutura de mineração primeiro. Para obter mais informações, consulte [Requisitos e considerações sobre processamento &#40;Mineração de dados&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
-### Exibindo estruturas de mineração  
+### <a name="viewing-mining-structures"></a>Exibindo estruturas de mineração  
  Você não pode usar visualizadores para procurar dados em uma estrutura de mineração. No entanto, no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], é possível usar a guia **Estrutura de Mineração** do Designer de Mineração de Dados para exibir as colunas de estrutura e suas definições. Para obter mais informações, consulte [Designer de Mineração de Dados](../../analysis-services/data-mining/data-mining-designer.md).  
   
  Se quiser revisar os dados na estrutura de mineração, poderá criar consultas usando DMX (Data Mining Extensions). Por exemplo, a instrução `SELECT * FROM <structure>.CASES` retorna todos os dados da estrutura de mineração. Para recuperar essas informações, a estrutura de mineração deve ter sido processada e os resultados desse processamento devem ter sido armazenados em cache.  
   
- A instrução `SELECT * FROM <model>.CASES` retorna as mesmas colunas, mas apenas para os casos de um determinado modelo. Para obter mais informações, consulte [SELECT FROM &#60;structure&#62;.CASES](../Topic/SELECT%20FROM%20%3Cstructure%3E.CASES.md) e [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](../Topic/SELECT%20FROM%20%3Cmodel%3E.CASES%20\(DMX\).md).  
+ A instrução `SELECT * FROM <model>.CASES` retorna as mesmas colunas, mas apenas para os casos de um determinado modelo. Para obter mais informações, consulte [SELECT FROM &#60;structure&#62;.CASES](../../dmx/select-from-structure-cases.md) e [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](../../dmx/select-from-model-cases-dmx.md).  
   
-## Usando modelos de mineração de dados com estruturas de mineração  
- Um modelo de mineração de dados aplica um algoritmo de modelo de mineração aos dados que são representados por uma estrutura de mineração. Um modelo de mineração é um objeto que pertence a uma estrutura de mineração específica e herda todos os valores de propriedades definidas pela estrutura de mineração. O modelo pode usar todas as colunas contidas na estrutura de mineração ou um subconjunto das colunas. Você pode adicionar várias cópias de uma coluna de estrutura a uma estrutura. Você também pode adicionar várias cópias de uma coluna de estrutura a um modelo e atribuir nomes diferentes ou *aliases* a cada coluna de estrutura do modelo. Para obter mais informações sobre colunas de estrutura de nome alternativo, consulte [Criar um alias para uma coluna de modelo](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md) e [Propriedades do modelo de mineração](../../analysis-services/data-mining/mining-model-properties.md).  
+## <a name="using-data-mining-models-with-mining-structures"></a>Usando modelos de mineração de dados com estruturas de mineração  
+ Um modelo de mineração de dados aplica um algoritmo de modelo de mineração aos dados que são representados por uma estrutura de mineração. Um modelo de mineração é um objeto que pertence a uma estrutura de mineração específica e herda todos os valores de propriedades definidas pela estrutura de mineração. O modelo pode usar todas as colunas contidas na estrutura de mineração ou um subconjunto das colunas. Você pode adicionar várias cópias de uma coluna de estrutura a uma estrutura. Você também pode adicionar várias cópias de uma coluna de estrutura a um modelo e atribuir nomes diferentes ou *aliases*a cada coluna de estrutura do modelo. Para obter mais informações sobre colunas de estrutura de nome alternativo, consulte [Criar um alias para uma coluna de modelo](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md) e [Propriedades do modelo de mineração](../../analysis-services/data-mining/mining-model-properties.md).  
   
- Para obter mais informações sobre a arquitetura dos modelos de mineração de dados, consulte [Modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md).  
+ Para obter mais informações sobre a arquitetura dos modelos de mineração de dados, consulte [Modelos de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md).  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  Use os links fornecidos aqui para saber mais sobre como definir, gerenciar e usar estruturas de mineração.  
   
 |Tarefas|Links|  
 |-----------|-----------|  
 |Trabalhar com estruturas de mineração relacionais|[Criar uma nova estrutura de mineração relacional](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [Adicionar uma tabela aninhada a uma estrutura de mineração](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
-|Trabalhar com estruturas de mineração com base em cubos OLAP|[Criar uma nova estrutura de mineração OLAP](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)<br /><br /> [Filtrar o cubo de origem para uma estrutura de mineração](../Topic/Filter%20the%20Source%20Cube%20for%20a%20Mining%20Structure.md)|  
+|Trabalhar com estruturas de mineração com base em cubos OLAP|[Criar uma nova estrutura de mineração OLAP](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)|  
 |Trabalhar com colunas em uma estrutura de mineração|[Adicionar colunas a uma estrutura de mineração](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [Remover colunas de uma estrutura de mineração](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
 |Alterar ou consultar dados e propriedades da estrutura de mineração|[Alterar as propriedades de uma estrutura de mineração](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
 |Trabalhar com as fontes de dados subjacentes e atualizar dados de origem|[Editar a exibição da fonte de dados usada para a Estrutura de Mineração](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Processar uma estrutura de mineração](../../analysis-services/data-mining/process-a-mining-structure.md)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Objetos de banco de dados &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Modelos de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   

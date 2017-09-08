@@ -1,31 +1,36 @@
 ---
-title: "Gr&#225;fico de compara&#231;&#227;o de precis&#227;o (Analysis Services - Minera&#231;&#227;o de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "testando modelos de mineração de dados"
-  - "precisão, traçando gráfico"
-  - "exibindo a precisão da mineração"
-  - "gráficos de comparação de precisão [Analysis Services]"
-  - "gráficos de ganho [Analysis Services]"
-  - "teste de precisão [mineração de dados]"
+title: "Gráfico de comparação de precisão (Analysis Services – mineração de dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing data mining models
+- accuracy, charting
+- viewing mining accuracy
+- lift charts [Analysis Services]
+- profit charts [Analysis Services]
+- accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 caps.latest.revision: 55
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b939d468a964160cd84dbdb60fcae97d4f2ee6a
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Gr&#225;fico de compara&#231;&#227;o de precis&#227;o (Analysis Services - Minera&#231;&#227;o de Dados)
-  Um *Gráfico de comparação de precisão* representa graficamente a melhoria que um modelo de mineração fornece quando comparado contra uma suposição aleatória, e mede a alteração em termos de uma pontuação de *comparação de precisão*. Comparando as pontuações de comparação de precisão de modelos diferentes, você pode determinar qual modelo é melhor. Você também pode determinar o ponto no qual as previsões do modelo se tornam menos úteis. Por exemplo, ao analisar o gráfico de comparação de precisão, você pode perceber que uma campanha promocional é provavelmente eficaz apenas para 30% dos clientes e usar esse valor para limitar o escopo da campanha.  
+# <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de comparação de precisão (Analysis Services - Mineração de Dados)
+  Um *Gráfico de comparação de precisão* representa graficamente a melhoria que um modelo de mineração fornece quando comparado contra uma suposição aleatória, e mede a alteração em termos de uma pontuação de *comparação de precisão* . Comparando as pontuações de comparação de precisão de modelos diferentes, você pode determinar qual modelo é melhor. Você também pode determinar o ponto no qual as previsões do modelo se tornam menos úteis. Por exemplo, ao analisar o gráfico de comparação de precisão, você pode perceber que uma campanha promocional é provavelmente eficaz apenas para 30% dos clientes e usar esse valor para limitar o escopo da campanha.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining, o gráfico de comparação de precisão pode comparar a exatidão dos vários modelos que têm o mesmo atributo previsível. Você também pode avaliar a exatidão de previsão para um único resultado (um único valor do atributo previsível), ou para todos os resultados (todos os valores do atributo especificado).  
   
@@ -48,8 +53,8 @@ caps.handback.revision: 55
   
  [Voltar ao Início](#bkmk_Top)  
   
-### Gráfico de comparação de precisão com valor de destino  
- O gráfico a seguir mostra um gráfico de comparação de precisão relativo ao modelo **Mala Direta Dirigida** criado no [Tutorial Básico de Data Mining](../Topic/Basic%20Data%20Mining%20Tutorial.md). Neste gráfico, o atributo de destino é [Bike Buyer] e o valor de destino é 1, o que significa que o cliente está propenso a comprar a bicicleta. Portanto, o gráfico de comparação de precisão mostra a melhoria que o modelo oferece ao identificar esses clientes potenciais.  
+### <a name="lift-chart-with-target-value"></a>Gráfico de comparação de precisão com valor de destino  
+ O gráfico a seguir mostra um gráfico de comparação de precisão relativo ao modelo **Mala Direta Dirigida** criado no [Tutorial Básico de Data Mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Neste gráfico, o atributo de destino é [Bike Buyer] e o valor de destino é 1, o que significa que o cliente está propenso a comprar a bicicleta. Portanto, o gráfico de comparação de precisão mostra a melhoria que o modelo oferece ao identificar esses clientes potenciais.  
   
  Este gráfico contém vários modelos baseados nos mesmos dados. Um destes modelos foi personalizado para clientes de destino específicos. Você pode personalizar um modelo adicionando filtros nos dados usados para treinar o modo. Este filtro restringe os casos usados tanto no treinamento quanto na avaliação a clientes com menos de 30 anos de idade. Observe que um efeito de filtrar é que o modelo básico e o modelo filtrado usam conjuntos de dados diferentes e, portanto, o número de casos usados para avaliação no gráfico de comparação de precisão também é diferente. Este é um ponto importante a ser lembrado na interpretação dos resultados da previsão e de outras estatísticas.  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 55
   
  [Voltar ao Início](#bkmk_Top)  
   
-#### Interpretando os resultados  
+#### <a name="interpreting-the-results"></a>Interpretando os resultados  
  Com base nesses resultados, podemos observar que, quando avaliado em 30% de todos os casos, o modelo geral [Targeted mailing all] pode prever o comportamento de compra de bicicleta de 47,40% da população de destino. Em outras palavras, se você enviar uma mala direta direcionada para apenas 30% dos clientes do seu banco de dados, poderá atingir um pouco menos da metade do público-alvo. Se usasse o modelo filtrado, você poderia obter resultados ligeiramente melhores e atingir aproximadamente 51% de seus clientes-alvo.  
   
  O valor de **Probabilidade da previsão** representa o limite necessário para incluir um cliente entre os casos "propenso a comprar". Para cada caso, o modelo estima a precisão de cada previsão e armazena esse valor, que você pode usar para filtrar os clientes ou definir os clientes-alvo. Por exemplo, para identificar os clientes do modelo básico que são possíveis compradores, use uma consulta que recupere os casos com um valor de Probabilidade da previsão de, pelo menos, 61%. Para definir os clientes-alvo pelo modelo filtrado, crie uma consulta que recupere os casos que atendem a todos os critérios: idade e um valor de **PredictProbability** de, pelo menos, 46%.  
@@ -84,19 +89,19 @@ caps.handback.revision: 55
   
  O valor de **Pontuação** ajuda a comparar os modelos calculando a eficácia do modelo em uma população normalizada. Uma pontuação maior é melhor, por isso nesse caso você deve decidir que visar clientes com menos de 30 anos é a estratégia mais eficaz, apesar da probabilidade de previsão mais baixa.  
   
-#### Como a pontuação é calculada?  
+#### <a name="how-is-the-score-calculated"></a>Como a pontuação é calculada?  
  A pontuação é calculada como a pontuação média geométrica de todos os pontos que constituem um gráfico de dispersão em que o eixo x contém os valores reais, o eixo y contém o valor previsto e cada ponto tem uma probabilidade associada.  
   
  O significado estatístico da pontuação de qualquer ponto individual é a comparação de precisão preditiva do modelo medido nesse ponto. A média de todos os pontos constitui a pontuação do modelo.  
   
  [Voltar ao Início](#bkmk_Top)  
   
-### Gráfico de comparação de precisão para modelo sem valor de destino  
+### <a name="lift-chart-for-model-with-no-target-value"></a>Gráfico de comparação de precisão para modelo sem valor de destino  
  Se você não especificar o estado da coluna previsível, criará o tipo de gráfico mostrado no diagrama a seguir. Este gráfico mostra o desempenho do modelo para todos os estados do atributo previsível. Por exemplo, ele informa com que precisão o modelo prevê tanto os clientes que estão propensos a comprar uma bicicleta quanto aqueles que provavelmente não comprarão uma.  
   
  O eixo x é o mesmo do gráfico com a coluna previsível especificada, mas agora o eixo y representa a porcentagem de previsões corretas. Portanto, a linha ideal é a diagonal, que mostra que em 50% dos dados o modelo prevê corretamente 50% dos casos, o valor máximo que se pode esperar.  
   
- ![Gráfico de comparação de precisão mostrando as previsões corretas](../../analysis-services/data-mining/media/lift1.gif "Gráfico de comparação de precisão mostrando as previsões corretas")  
+ ![Previsões corretas de exibição de gráfico de comparação de precisão](../../analysis-services/data-mining/media/lift1.gif "gráfico de comparação de precisão mostrando as previsões corretas")  
   
  Você pode clicar no gráfico para mover a barra vertical cinza, e a **Legenda de Mineração** exibe o percentual de casos no geral e o percentual dos casos previstos corretamente. Por exemplo, se você posicionar o controle deslizante cinza na marca dos 50%, a **Legenda de Mineração** exibirá as pontuações de precisão listadas a seguir. Estes números têm como base o modelo TM_Decision Tree criado no Tutorial Básico de Mineração de Dados.  
   
@@ -109,19 +114,20 @@ caps.handback.revision: 55
   
  [Voltar ao Início](#bkmk_Top)  
   
-### Restrições em gráficos de comparação de precisão  
+### <a name="restrictions-on-lift-charts"></a>Restrições em gráficos de comparação de precisão  
  Os gráficos de comparação de precisão exigem que o atributo previsível seja um valor discreto. Em outras palavras, você não pode usar gráficos de comparação de precisão para medir a exatidão de modelos que preveem valores numéricos contínuos.  
   
  A exatidão de previsão de todos os valores distintos do atributo previsível é mostrada em uma única linha. Para ver as linhas de exatidão de previsão de qualquer valor individual do atributo previsível, crie um gráfico de comparação de precisão à parte para cada valor de destino.  
   
- É possível adicionar vários modelos a um gráfico de comparação de precisão, desde que todos os modelos tenham o mesmo atributo previsível. Os modelos que não compartilharem o atributo estarão indisponíveis para seleção na guia **Entrada**.  
+ É possível adicionar vários modelos a um gráfico de comparação de precisão, desde que todos os modelos tenham o mesmo atributo previsível. Os modelos que não compartilharem o atributo estarão indisponíveis para seleção na guia **Entrada** .  
   
  Você não pode exibir modelos de série temporal em um gráfico de comparação de precisão ou gráfico de lucro. Uma prática comum para medir a exatidão de previsões de série temporal é reservar uma parte de dados históricos e comparar esses dados com as previsões. Para obter mais informações, consulte [Algoritmo MTS](../../analysis-services/data-mining/microsoft-time-series-algorithm.md).  
   
-### Conteúdo relacionado  
+### <a name="related-content"></a>Conteúdo relacionado  
  [Voltar ao Início](#bkmk_Top)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Teste e validação &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
+

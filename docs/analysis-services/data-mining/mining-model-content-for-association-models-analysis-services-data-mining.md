@@ -1,35 +1,40 @@
 ---
-title: "Conte&#250;do do modelo de minera&#231;&#227;o para modelos de associa&#231;&#227;o (Analysis Services – Minera&#231;&#227;o de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "conjuntos de itens [Analysis Services]"
-  - "algoritmos de associação [Analysis Services]"
-  - "conteúdo do modelo de mineração, modelos de associação"
-  - "regras [Mineração de dados]"
-  - "associações [Analysis Services]"
+title: "Conteúdo do modelo de associação de modelos de mineração (Analysis Services – mineração de dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- itemsets [Analysis Services]
+- association algorithms [Analysis Services]
+- mining model content, association models
+- rules [Data Mining]
+- associations [Analysis Services]
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 259335815674dfd8c9d59b1fe6bde7c170d096b6
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Conte&#250;do do modelo de minera&#231;&#227;o para modelos de associa&#231;&#227;o (Analysis Services – Minera&#231;&#227;o de Dados)
-  Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Para obter uma explicação sobre a terminologia geral e estatística relacionada ao conteúdo do modelo de mineração que se aplica a todos os tipos de modelo, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+# <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de associação (Analysis Services – Mineração de Dados)
+  Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação sobre a terminologia geral e estatística relacionada ao conteúdo do modelo de mineração que se aplica a todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-## Entendendo a estrutura de um modelo de associação  
+## <a name="understanding-the-structure-of-an-association-model"></a>Entendendo a estrutura de um modelo de associação  
  Um modelo de associação tem uma estrutura simples. Cada modelo tem um único nó pai que representa o modelo e seus metadados, e cada nó pai possui uma lista simples de conjuntos de itens e regras. Os conjuntos de itens e as regras não são organizados em árvores, são ordenados com os conjuntos de itens primeiro e depois as regras, como mostra o diagrama a seguir.  
   
- ![estrutura de conteúdo do modelo para modelos de associação](../../analysis-services/data-mining/media/modelcontentstructure-assoc.gif "estrutura de conteúdo do modelo para modelos de associação")  
+ ![estrutura do conteúdo do modelo para modelos de associação](../../analysis-services/data-mining/media/modelcontentstructure-assoc.gif "estrutura do conteúdo do modelo para modelos de associação")  
   
  Cada conjunto de item é contido em seu próprio nó (NODE_TYPE = 7). O *nó* inclui a definição do conjunto de itens, o número de casos que contém esse conjunto de itens e outras informações.  
   
@@ -37,10 +42,10 @@ caps.handback.revision: 17
   
  **Observação** Para extrair regras ou conjuntos de itens, você pode usar uma consulta para retornar somente os tipos de nós desejados. Para obter mais informações, consulte [Exemplos de consulta de um modelo associação](../../analysis-services/data-mining/association-model-query-examples.md).  
   
-## Conteúdo de um modelo de associação  
+## <a name="model-content-for-an-association-model"></a>Conteúdo de um modelo de associação  
  Esta seção fornece detalhes e exemplos somente para as colunas de conteúdo do modelo de mineração que são relevantes para os modelos de associação.  
   
- Para obter informações sobre as colunas de uso general no conjunto de linhas de esquema, como MODEL_CATALOG e MODEL_NAME, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+ Para obter informações sobre as colunas de uso general no conjunto de linhas de esquema, como MODEL_CATALOG e MODEL_NAME, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nome do banco de dados no qual o modelo é armazenado.  
@@ -99,12 +104,12 @@ caps.handback.revision: 17
 |----------|-----------------|  
 |ITEMSET_COUNT|Contagem de todos os conjuntos de itens do modelo.|  
 |RULE_COUNT|Contagem de todas as regras do modelo.|  
-|MIN_SUPPORT|O suporte mínimo localizado para qualquer conjunto de itens único.<br /><br /> **Observação** Esse valor pode ser diferente daquele que você definiu para o parâmetro *MINIMUM_SUPPORT*.|  
-|MAX_SUPPORT|O suporte máximo localizado para qualquer conjunto de itens único.<br /><br /> **Observação** Esse valor pode ser diferente daquele que você definiu para o parâmetro *MAXIMUM_SUPPORT*.|  
+|MIN_SUPPORT|O suporte mínimo localizado para qualquer conjunto de itens único.<br /><br /> **Observação** Esse valor pode ser diferente daquele que você definiu para o parâmetro *MINIMUM_SUPPORT* .|  
+|MAX_SUPPORT|O suporte máximo localizado para qualquer conjunto de itens único.<br /><br /> **Observação** Esse valor pode ser diferente daquele que você definiu para o parâmetro *MAXIMUM_SUPPORT* .|  
 |MIN_ITEMSET_SIZE|O tamanho do menor conjunto de itens, representado por uma contagem de itens.<br /><br /> Um valor de 0 indica que o estado **Ausente** foi tratado como um item independente.<br /><br /> **Observação** O valor padrão do parâmetro *MINIMUM_ITEMSET_SIZE* é 1.|  
 |MAX_ITEMSET_SIZE|Indica o tamanho do maior conjunto de dados localizado.<br /><br /> **Observação** Esse valor é restrito pelo valor que você definiu para o parâmetro *MAX_ITEMSET_SIZE* ao criar o modelo. Esse valor nunca pode exceder aquele valor; no entanto, pode ser menor. O valor padrão é 3.|  
 |MIN_PROBABILITY|A probabilidade mínima detectada para qualquer conjunto de itens único ou regra do modelo.<br /><br /> Exemplo: 0,400390625<br /><br /> **Observação** Para conjuntos de itens, esse valor é sempre maior que valor que você definiu para o parâmetro *MINIMUM_PROBABILITY* ao criar o modelo.|  
-|MAX_PROBABILITY|A probabilidade máxima detectada para qualquer conjunto de itens único ou regra do modelo.<br /><br /> Example: 1<br /><br /> **Observação** Não há nenhum parâmetro para restringir a probabilidade máxima de conjuntos de itens. Para eliminar itens que são muito frequentes, use o parâmetro *MAXIMUM_SUPPORT*.|  
+|MAX_PROBABILITY|A probabilidade máxima detectada para qualquer conjunto de itens único ou regra do modelo.<br /><br /> Example: 1<br /><br /> **Observação** Não há nenhum parâmetro para restringir a probabilidade máxima de conjuntos de itens. Para eliminar itens que são muito frequentes, use o parâmetro *MAXIMUM_SUPPORT* .|  
 |MIN_LIFT|O valor mínimo de comparação de precisão fornecido pelo modelo para qualquer conjunto de itens.<br /><br /> Exemplo: 0,14309369632511<br /><br /> Observação: saber o valor mínimo de comparação de precisão pode ajudar a determinar se a comparação de precisão de algum conjunto de dados é significativa.|  
 |MAX_LIFT|O valor máximo de comparação de precisão fornecido pelo modelo para qualquer conjunto de itens.<br /><br /> Exemplo: 1,95758227647523 **Observação** Saber o valor máximo de comparação de precisão pode ajudar a determinar se a comparação de precisão de qualquer conjunto de dados é significante.|  
   
@@ -157,7 +162,7 @@ caps.handback.revision: 17
   
  A segunda linha é exclusiva em modelos de associação e contém um ponteiro para o conjunto de itens no lado direito da regra. O ponteiro é representado na coluna ATTRIBUTE_VALUE como uma ID do conjunto de itens que contém apenas o item do lado direito.  
   
- Por exemplo, se a regra for `If {A,B} Then {C}`, a tabela conterá o nome do item `{C}` e a ID do nó que só contém o conjunto de itens do item C.  
+ Por exemplo, se a regra for `If {A,B} Then {C}`, a tabela conterá o nome do item `{C}`e a ID do nó que só contém o conjunto de itens do item C.  
   
  Esse ponteiro é útil pois é possível determinar a partir do nó do conjunto de itens entre todos os casos quantos contêm o produto no lado direito. Os casos sujeitos à regra `If {A,B} Then {C}` formam um subconjunto dos casos listados no conjunto de itens para `{C}`.  
   
@@ -192,7 +197,7 @@ caps.handback.revision: 17
  MSOLAP_NODE_SHORT_CAPTION  
  Em branco.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo Associação da Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Exemplos de consulta de um modelo de associação](../../analysis-services/data-mining/association-model-query-examples.md)  

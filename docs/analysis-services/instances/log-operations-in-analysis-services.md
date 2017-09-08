@@ -1,24 +1,29 @@
 ---
-title: "Opera&#231;&#245;es de log no Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Log de operações no Analysis Services | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e23d96e675fba4ed740b8adbb8402d3ae7fd06e2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Opera&#231;&#245;es de log no Analysis Services
+# <a name="log-operations-in-analysis-services"></a>Operações de log no Analysis Services
   Uma instância do Analysis Services registrará notificações do servidor, erros e avisos no arquivo msmdsrv.log, um para cada instância instalada. Os administradores consultam esse log para compreender eventos de rotina e extraordinários. Nas versões mais recentes, o registro em log foi aprimorado para incluir mais informações. Registros de log agora incluem informações de versão e edição do produto, bem como processador, memória, conectividade e eventos de bloqueio. Você pode revisar a lista inteira de alterações em [Aprimoramentos de log](http://support.microsoft.com/kb/2965035).  
   
  Além do recurso de registro em log integrado, muitos administradores e desenvolvedores também usam ferramentas fornecidas pela comunidade do Analysis Services para coletar dados sobre as operações do servidor, tal como o **ASTrace**. Consulte [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) (Exemplos da Comunidade do Microsoft SQL Server: Analysis Services) para obter os links de download.  
@@ -47,7 +52,7 @@ caps.handback.revision: 12
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Log de erros|Monitoramento de rotina e solução de problemas básicos|Sim|  
 |Tabela OlapQueryLog em um banco de dados relacional|Log de consultas|Coletar entradas para o Assistente de Otimização do Uso|Não|  
-|Arquivos SQLDmp\<guid>.mdmp|Falhas e exceções|Solução de problemas detalhada|Não|  
+|SQLDmp\<guid >. mdmp arquivos|Falhas e exceções|Solução de problemas detalhada|Não|  
   
  O link a seguir é altamente recomendável para a obtenção de recursos de informações adicionais que não são abordados neste tópico: [Dicas para coleta de dados inicial do Suporte da Microsoft](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 12
   
  Sugerimos que, se possível, defina as propriedades de log na página de propriedades de servidor do Management Studio. Exceto alguns casos, você deve editar o arquivo msmdsrv.ini diretamente para definir as configurações que não são visíveis nas ferramentas administrativas.  
   
- ![Seção do arquivo config mostrando as configurações de log](../../analysis-services/instances/media/ssas-logfilesettings.png "Seção do arquivo config mostrando as configurações de log")  
+ ![Seção do arquivo config mostrando as configurações de log](../../analysis-services/instances/media/ssas-logfilesettings.png "seção do arquivo config mostrando as configurações de log")  
   
 ##  <a name="bkmk_msmdsrv"></a> Arquivo de log do serviço MSMDSRV  
  Operações de servidor de logs do Analysis Services para o arquivo msmdsrv.log, um por instância, localizado em \arquivos de programas\Microsoft SQL Server\\<instância\>\Olap\Log.  
@@ -118,7 +123,7 @@ caps.handback.revision: 12
   
  Configurações de log de consulta são do servidor inteiro. As configurações que você especifica serão usadas por todos os bancos de dados em execução neste servidor.  
   
- ![Configurações de log de consulta no Management Studio](../../analysis-services/instances/media/ssas-querylogsettings.png "Configurações de log de consulta no Management Studio")  
+ ![Consultar as configurações de log no Management Studio](../../analysis-services/instances/media/ssas-querylogsettings.png "configurações de log de consulta no Management Studio")  
   
  Após as definições de configurações serem especificadas, execute uma consulta MDX várias vezes. Se a amostragem for definida como 10, execute a consulta 11 vezes.Verifique se que a tabela é criada. No Management Studio, conecte-se ao mecanismo de banco de dados relacional, abra a pasta do banco de dados, abra a pasta **Tabelas** e verifique se **OlapQueryLog** existe. Se você não puder encontrar a tabela imediatamente, atualize a pasta para acompanhar as alterações no seu conteúdo.  
   
@@ -180,7 +185,7 @@ caps.handback.revision: 12
   
 -   Use ASTrace2012 em vez de um log de consulta para descobrir o que está consultando cubos. O log de consultas normalmente é usado para fornecer sugestões para o Assistente de Otimização com Base no Uso e os dados capturados não são fácil de ler ou interpretar. O ASTrace2012 é uma ferramenta de comunidade, amplamente utilizada, que captura as operações de consulta. Consulte [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)(Exemplos da comunidade do Microsoft SQL Server: Analysis Services).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Gerenciamento de instância do Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
  [Introdução ao monitoramento do Analysis Services com o SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
  [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  

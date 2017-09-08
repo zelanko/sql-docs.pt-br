@@ -1,41 +1,46 @@
 ---
-title: "Conte&#250;do do modelo de minera&#231;&#227;o para modelos de clustering (Analysis Services – Minera&#231;&#227;o de Dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "vizinho mais próximo [Mineração de Dados]"
-  - "clustering [Mineração de Dados]"
-  - "conteúdo do modelo de mineração, modelos de clustering"
-  - "algoritmos de clustering [Analysis Services]"
+title: "Conteúdo do modelo de mineração para modelos de Clustering (Analysis Services – mineração de dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- nearest neighbor [Data Mining]
+- clustering [Data Mining]
+- mining model content, clustering models
+- clustering algorithms [Analysis Services]
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 98ce20c3306de8d62a552df44684dd0c6cfebabc
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Conte&#250;do do modelo de minera&#231;&#227;o para modelos de clustering (Analysis Services – Minera&#231;&#227;o de Dados)
-  Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Microsoft Clustering. Para obter uma explicação geral sobre o conteúdo do modelo de mineração para todos os tipos de modelo, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+# <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de clustering (Analysis Services – Mineração de Dados)
+  Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Microsoft Clustering. Para obter uma explicação geral sobre o conteúdo do modelo de mineração para todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-## Entendendo a estrutura de um modelo de clustering  
+## <a name="understanding-the-structure-of-a-clustering-model"></a>Entendendo a estrutura de um modelo de clustering  
  Um modelo de clustering tem uma estrutura simples. Cada modelo tem um único nó pai que representa o modelo e seus metadados, e cada nó pai possui uma lista simples de clusters (NODE_TYPE = 5). Essa organização é mostrada na imagem a seguir.  
   
- ![estrutura de conteúdo do modelo para clustering](../../analysis-services/data-mining/media/modelcontentstructure-clust.gif "estrutura de conteúdo do modelo para clustering")  
+ ![estrutura do conteúdo do modelo de clustering](../../analysis-services/data-mining/media/modelcontentstructure-clust.gif "estrutura do conteúdo do modelo de clustering")  
   
  Cada nó filho representa um único cluster e contém estatísticas detalhadas sobre os atributos dos casos desse cluster. Isso inclui a contagem do número de casos do cluster e a distribuição de valores que distinguem cada cluster.  
   
 > [!NOTE]  
 >  Não é necessária iteração com os nós para obter a contagem ou a descrição dos clusters; o nó pai do modelo também conta e lista os clusters.  
   
- O nó pai contém estatísticas úteis que descrevem a distribuição real de todos os casos em treinamento. Essas estatísticas são encontradas na coluna da tabela aninhada, NODE_DISTRIBUTION. Por exemplo, a tabela a seguir mostra várias linhas da tabela NODE_DISTRIBUTION que descrevem a distribuição dos dados demográficos dos clientes do modelo de clustering `TM_Clustering` que você cria no [Tutorial Básico de Data Mining](../Topic/Basic%20Data%20Mining%20Tutorial.md):  
+ O nó pai contém estatísticas úteis que descrevem a distribuição real de todos os casos em treinamento. Essas estatísticas são encontradas na coluna da tabela aninhada, NODE_DISTRIBUTION. Por exemplo, a tabela a seguir mostra várias linhas da tabela NODE_DISTRIBUTION que descrevem a distribuição dos dados demográficos dos clientes do modelo de clustering `TM_Clustering`que você cria no [Tutorial Básico de Data Mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c):  
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
@@ -52,10 +57,10 @@ caps.handback.revision: 15
   
  Observe que para cada atributo existe um tipo de valor **Missing** que indica quantos casos não tinham dados para esse atributo. Dados ausentes podem ser importantes e afetar os cálculos de várias formas, dependendo do tipo de dados. Para obter mais informações, consulte [Valores ausentes&#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
-## Conteúdo do modelo para um modelo de clustering  
+## <a name="model-content-for-a-clustering-model"></a>Conteúdo do modelo para um modelo de clustering  
  Esta seção fornece detalhes e exemplos somente para as colunas de conteúdo do modelo de mineração que são relevantes para os modelos de clustering.  
   
- Para obter informações sobre as colunas de uso general no conjunto de linhas de esquema, como MODEL_CATALOG e MODEL_NAME, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+ Para obter informações sobre as colunas de uso general no conjunto de linhas de esquema, como MODEL_CATALOG e MODEL_NAME, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nome do banco de dados no qual o modelo é armazenado.  
@@ -152,13 +157,13 @@ caps.handback.revision: 15
   
  **Nós de cluster** O nome do cluster. Exemplo: Cluster 1.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece vários métodos para a criação de um modelo de clustering. Se você não souber qual método foi usado para criar o modelo com que você está trabalhando, pode recuperar os metadados do modelo programaticamente, usando um cliente ADOMD ou AMO ou consultando o conjunto de linhas do esquema de mineração de dados. Para obter mais informações, consulte [Como consultar os parâmetros usados para criar um modelo de mineração](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  
 >  A estrutura e o conteúdo do modelo permanecem inalterados, independentemente do método ou dos parâmetros de clustering usados.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Visualizadores do Modelo de Mineração de Dados](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   

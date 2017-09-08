@@ -1,25 +1,30 @@
 ---
-title: "Vis&#227;o geral de seguran&#231;a (minera&#231;&#227;o de dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "segurança [Analysis Services – mineração de dados], sobre a segurança"
+title: "Visão geral de segurança (mineração de dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4857608190aa03baca0a6916275641f463c6cf2a
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Vis&#227;o geral de seguran&#231;a (minera&#231;&#227;o de dados)
+# <a name="security-overview-data-mining"></a>Visão geral de segurança (mineração de dados)
   O processo de proteção do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ocorre em vários níveis. É necessário proteger cada instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e suas fontes de dados para garantir que somente os usuários autorizados tenham permissões de leitura ou de leitura/gravação nas dimensões, células, modelos de mineração e fontes de dados selecionadas. Você também tem que proteger as fontes de dados subjacentes para impedir que usuários não autorizados comprometam de modo mal-intencionado as informações de negócios confidenciais. O processo de proteção de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é descrito nos tópicos a seguir.  
   
 ##  <a name="bkmk_Architecture"></a> Arquitetura de segurança  
@@ -39,7 +44,7 @@ caps.handback.revision: 12
  Para a mineração de dados, você precisa de um conjunto de permissões diferente para criar e processar modelos daquele necessário para exibir ou consultar os modelos. Fazer previsões em um modelo é um tipo de consulta e não requer permissões administrativas.  
   
 ##  <a name="bkmk_Instance"></a> Protegendo uma instância do Analysis Services  
- Em seguida, é necessário proteger o computador do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o sistema operacional Windows no computador do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o próprio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e as fontes de dados usadas pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Em seguida, é necessário proteger o computador do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , o sistema operacional Windows no computador do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , o próprio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e as fontes de dados usadas pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ##  <a name="bkmk_Access"></a> Configurando o acesso ao Analysis Services  
  Quando você configura e define os usuários autorizados para uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], é necessário determinar quais usuários também devem ter permissão para administrar objetos de bancos de dados específicos, que os usuários podem exibir a definição de objetos ou procurar os modelos e que podem acessar fontes de dados diretamente.  
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
  Se você usar pacotes de Integration Services para limpar dados, atualizar modelos de mineração ou fazer previsões, será necessário assegurar que o serviço Integration Services tenha as permissões apropriadas no banco de dados em que o modelo está armazenado e permissões apropriadas na fonte de dados.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Funções e permissões &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

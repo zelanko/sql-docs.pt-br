@@ -1,38 +1,43 @@
 ---
-title: "Refer&#234;ncia t&#233;cnica do algoritmo de associa&#231;&#227;o da Microsoft | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parâmetro MINIMUM_ITEMSET_SIZE"
-  - "parâmetro MAXIMUM_SUPPORT"
-  - "algoritmos de associação [Analysis Services]"
-  - "parâmetro MINIMUM_SUPPORT"
-  - "parâmetro OPTIMIZED_PREDICTION_COUNT"
-  - "associações [Analysis Services]"
-  - "parâmetro MAXIMUM_ITEMSET_COUNT"
-  - "parâmetro MAXIMUM_ITEMSET_SIZE"
-  - "parâmetro MINIMUM_PROBABILITY"
+title: "Referência técnica do algoritmo de associação da Microsoft | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MINIMUM_ITEMSET_SIZE parameter
+- MAXIMUM_SUPPORT parameter
+- association algorithms [Analysis Services]
+- MINIMUM_SUPPORT parameter
+- OPTIMIZED_PREDICTION_COUNT parameter
+- associations [Analysis Services]
+- MAXIMUM_ITEMSET_COUNT parameter
+- MAXIMUM_ITEMSET_SIZE parameter
+- MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a029a6efad9ebdbc15e42d593db28f9530b1b8e
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Refer&#234;ncia t&#233;cnica do algoritmo de associa&#231;&#227;o da Microsoft
+# <a name="microsoft-association-algorithm-technical-reference"></a>Referência técnica do algoritmo de associação da Microsoft
   O algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma implementação direta do já conhecido algoritmo Apriori.  
   
  Tanto o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] como o Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] podem ser usados para analisar associações, mas as regras encontradas podem variar conforme o algoritmo. Em um modelo de árvores de decisão, as divisões que levam as regras específicas baseiam-se nas informações obtidas, enquanto no modelo de associação elas se baseiam totalmente na confiança. Assim, em um modelo de associação, um regra forte, ou aquela com mais confiança, não seria necessariamente interessante porque não fornece informações novas.  
   
-## Implementação do algoritmo Associação da Microsoft  
+## <a name="implementation-of-the-microsoft-association-algorithm"></a>Implementação do algoritmo Associação da Microsoft  
  O algoritmo Apriori não analisa padrões, mas gera e, em seguida, conta *conjuntos de itens candidatos*. Um item pode representar um evento, um produto ou o valor de um atributo, dependendo do tipo de dados que está sendo analisado.  
   
  No tipo mais comum de modelo de associação, variáveis Booleanas que representam um valor Sim/Não ou Ausente/Existente são atribuídas a cada atributo, como o nome de um produto ou evento. Uma análise da cesta de compras é um exemplo de modelo de regras de associação que usa variáveis Booleanas para representar a presença ou a ausência de determinados produtos na cesta de compras de um cliente.  
@@ -41,12 +46,12 @@ caps.handback.revision: 24
   
  Também é possível criar modelos de associação para atributos numéricos. Se os atributos forem contínuos, os números poderão ser *discretizados ou* agrupados em buckets. Os valores diferenciados podem ser tratados como Boolianos ou como pares atributo-valor.  
   
-### Suporte, probabilidade e importância  
+### <a name="support-probability-and-importance"></a>Suporte, probabilidade e importância  
  *Suporte*, que às vezes é conhecido como *frequência*, significa o número de casos que contém o item de destino ou a combinação de itens. Somente os itens que têm, no mínimo, a quantia especificada de suporte podem ser incluídos no modelo.  
   
  Um *conjunto de itens frequente* refere-se a uma coleção de itens na qual a combinação de itens também dá suporte além do limite definido pelo parâmetro MINIMUM_SUPPORT. Por exemplo, se o conjunto de itens for {A,B,C} e o valor de MINIMUM_SUPPORT for 10, cada item A, B e C deve ser encontrado pelo menos em 10 casos para ser incluído no modelo, e a combinação de itens {A,B,C} também deve ser encontrada, no mínimo, em 10 casos.  
   
- **Observação** Você também pode controlar o número de conjuntos de itens em um modelo de mineração especificando o tamanho máximo de um conjunto de itens, sendo que tamanho significa o número de itens.  
+ **Observação** Você também pode controlar o número de conjuntos de itens em um modelo de mineração especificando o tamanho máximo de um conjunto de itens, sendo que tamanho significa o número de itens.  
   
  Por padrão, o suporte para qualquer item ou conjunto de itens em particular representa uma contagem dos casos que contêm esse item (ou itens). No entanto, também é possível expressar MINIMUM_SUPPORT como uma porcentagem do total de casos no conjunto de dados, basta digitar o número como um valor decimal menor que 1. Por exemplo, se você especificar MINIMUM_SUPPORT com um valor de 0,03, significa que pelo menos 3% do total de casos do conjunto de dados deve conter esse item ou conjunto de itens para inclusão no modelo. Faça testes com seu modelo para determinar se faz mais sentido usar a contagem ou a porcentagem.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 24
   
  A importância de uma regra é calculada pela probabilidade do log do lado direito da regra, dado o lado esquerdo da regra. Por exemplo, na regra `If {A} Then {B}`, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calcula a proporção de casos com A e B em relação a casos com B mas sem A e, em seguida, normaliza a proporção usando uma escala logarítmica.  
   
-### Seleção de recursos  
+### <a name="feature-selection"></a>Seleção de recursos  
  O algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] não executa qualquer tipo de seleção de recursos automática. Em vez disso, ele fornece parâmetros que controlam os dados usados pelo algoritmo. Podem estar incluídos limites para o tamanho de cada conjunto de itens ou a configuração do suporte máximo e mínimo necessário para adicionar um conjunto de itens ao modelo.  
   
 -   Para filtrar itens e eventos que são muito comuns e, portanto, desinteressantes, diminua o valor de MAXIMUM_SUPPORT para remover do modelo conjuntos de itens muito frequentes.  
@@ -69,11 +74,11 @@ caps.handback.revision: 24
   
 -   Para filtrar regras, aumente o valor de MINIMUM_PROBABILITY.  
   
-## Personalizando o algoritmo Regras de Associação da Microsoft  
+## <a name="customizing-the-microsoft-association-rules-algorithm"></a>Personalizando o algoritmo Regras de Associação da Microsoft  
  O algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] dá suporte a vários parâmetros que afetam o comportamento, o desempenho e a precisão do modelo de mineração resultante.  
   
-### Definindo parâmetros de algoritmo  
- É possível alterar os parâmetros de um modelo de mineração a qualquer momento com o uso do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Você também pode alterar os parâmetros programaticamente usando a coleção <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> em AMO ou usando o [Elemento dos modelos de mineração &#40;ASSL&#41;](../../analysis-services/scripting/collections/miningmodels-element-assl.md) em XMLA. A tabela a seguir descreve cada parâmetro.  
+### <a name="setting-algorithm-parameters"></a>Definindo parâmetros de algoritmo  
+ É possível alterar os parâmetros de um modelo de mineração a qualquer momento com o uso do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Você pode também alterar os parâmetros programaticamente usando o <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> coleção em AMO ou usando o [elemento MiningModels &#40; ASSL &#41; ](../../analysis-services/scripting/collections/miningmodels-element-assl.md) no XMLA. A tabela a seguir descreve cada parâmetro.  
   
 > [!NOTE]  
 >  Não é possível alterar os parâmetros de um modelo existente usando uma instrução DMX; você deve especificar os parâmetros na instrução DMX CREATE MODEL ou ALTER STRUCTURE… ADD MODEL ao criar o modelo.  
@@ -130,12 +135,12 @@ caps.handback.revision: 24
   
  O valor padrão é 0. Quando o padrão for usado, o algoritmo gerará tantas previsões quantas forem pedidas na consulta.  
   
- Se você especificar um valor diferente de zero para *OPTIMIZED_PREDICTION_COUNT*, as consultas de previsão poderão retornar no máximo o número especificado de itens, mesmo que você solicite mais previsões. No entanto, a definição de um valor pode melhorar o desempenho da previsão.  
+ Se você especificar um valor diferente de zero para *OPTIMIZED_PREDICTION_COUNT* , as consultas de previsão poderão retornar no máximo o número especificado de itens, mesmo que você solicite mais previsões. No entanto, a definição de um valor pode melhorar o desempenho da previsão.  
   
  Por exemplo, se o valor for definido como 3, o algoritmo armazenará em cache apenas 3 itens para previsão. Não é possível visualizar mais previsões que possam ser igualmente prováveis para os 3 itens retornados.  
   
-### Sinalizadores de modelagem  
- Há suporte para os sinalizadores de modelagem a seguir para uso com o algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+### <a name="modeling-flags"></a>Sinalizadores de modelagem  
+ Há suporte para os sinalizadores de modelagem a seguir para uso com o algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  NOT NULL  
  Indica que a coluna não pode conter um nulo. Ocorrerá um erro se o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] encontrar um nulo durante o treinamento do modelo.  
@@ -147,10 +152,10 @@ caps.handback.revision: 24
   
  Aplica-se à coluna do modelo de mineração.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Um modelo de associação deve conter uma coluna de chave, colunas de entrada e uma única coluna previsível.  
   
-### Colunas de entrada e colunas previsíveis  
+### <a name="input-and-predictable-columns"></a>Colunas de entrada e colunas previsíveis  
  O algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] dá suporte a colunas de entrada e colunas previsíveis específicas listadas na tabela a seguir. Para obter mais informações sobre o significado de tipos de conteúdo em um modelo de mineração, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
 |Coluna|Tipos de conteúdo|  
@@ -161,9 +166,9 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  Os tipos de conteúdo Cíclico e Ordenado têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Algoritmo Associação da Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Exemplos de consulta de um modelo de associação](../../analysis-services/data-mining/association-model-query-examples.md)   
+ [Exemplos de consulta de modelo de associação](../../analysis-services/data-mining/association-model-query-examples.md)   
  [Conteúdo do modelo de mineração para modelos de associação &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

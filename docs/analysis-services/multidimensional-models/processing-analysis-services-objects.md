@@ -1,28 +1,33 @@
 ---
-title: "Processando objetos do Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "objetos OLAP [Analysis Services], processando"
-  - "objetos OLAP [Analysis Services]"
+title: Processamento do Analysis Services objetos | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLAP objects [Analysis Services], processing
+- OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58e0a8da7c8bfeae9d661dc78d264218c7c19b81
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Processando objetos do Analysis Services
-  O processamento afeta os seguintes tipos de objeto do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]: bancos de dados, cubos, dimensões, grupos de medidas, partições e estruturas e modelos de mineração de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para cada objeto, é possível especificar o nível de processamento ou selecionar a opção Processar Padrão para habilitar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a selecionar automaticamente o nível ideal de processamento. Para obter mais informações sobre os diferentes níveis de processamento para cada objeto, consulte [Processamento de opções e configurações &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
+# <a name="processing-analysis-services-objects"></a>Processando objetos do Analysis Services
+  O processamento afeta os seguintes tipos de objeto do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : bancos de dados, cubos, dimensões, grupos de medidas, partições e estruturas e modelos de mineração de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para cada objeto, é possível especificar o nível de processamento ou selecionar a opção Processar Padrão para habilitar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a selecionar automaticamente o nível ideal de processamento. Para obter mais informações sobre os diferentes níveis de processamento para cada objeto, consulte [Processamento de opções e configurações &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
  É necessário conhecer as consequências do comportamento do processamento para reduzir a ocorrência de repercussões negativas. Por exemplo, processar automaticamente uma dimensão por completo define todas as partições dependentes daquela dimensão como um estado não processado. Desse modo, os cubos afetados ficam indisponíveis para consulta até as partições dependentes serem processadas.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 44
   
  O processamento da dimensão não cria nem atualiza membros calculados, que são definidos no nível do cubo. Os membros calculados são afetados quando a definição de cubo é atualizada. Além disso, o processamento da dimensão não cria nem atualiza agregações. No entanto, o processamento pode provocar o descarte de agregações. As agregações são criadas ou atualizadas somente durante o processamento da partição.  
   
- Ao processar uma dimensão, observe que a dimensão pode ser usada em vários cubos. Durante o processamento, esses cubos são marcados como não processados e se tornam indisponíveis para consultas. Para processar simultaneamente a dimensão e os cubos relacionados, use as configurações de processamento em lotes. Para obter mais informações, consulte [Processamento em lote &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
+ Ao processar uma dimensão, observe que a dimensão pode ser usada em vários cubos. Durante o processamento, esses cubos são marcados como não processados e se tornam indisponíveis para consultas. Para processar simultaneamente a dimensão e os cubos relacionados, use as configurações de processamento em lotes. Para obter mais informações, consulte [Processamento em lotes &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   
 ##  <a name="bkmk_procmeasure"></a> Processando um grupo de medidas  
  Ao processar um grupo de medidas, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] processa algumas ou todas as partições do grupo e todas as dimensões não processadas que participam do grupo de medidas. As especificações do trabalho de processamento dependem da opção de processamento selecionada. É possível processar um ou mais grupos de medidas no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sem afetar outros grupos de medidas em um cubo.  
@@ -84,7 +89,7 @@ caps.handback.revision: 44
 ##  <a name="bkmk_procpartition"></a> Processando uma partição  
  A administração eficaz do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] envolve a prática de particionar dados. O processamento da partição é exclusivo porque considera o uso do disco rígido e as limitações de espaço, além dos limites de estrutura de dados impostos pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para manter tempos de resposta de consulta rápidos e uma alta taxa de processamento, é necessário criar, processar e mesclar partições regularmente. É muito importante reconhecer e gerenciar casos de integração de dados redundantes durante a mesclagem de partições. Para obter mais informações, consulte [Mesclar partições no Analysis Services &#40;SSAS – Multidimensional&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md).  
   
- Ao processar uma partição, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] processa a partição e qualquer dimensão não processada que exista na partição, dependendo da opção selecionada. O uso de partições oferece várias vantagens para o processamento. É possível processar uma partição sem afetar outras partições em um cubo. As partições são úteis para armazenar dados que estão sujeitos ao write-back de célula. Write-back é um recurso que permite ao usuário realizar uma análise hipotética gravando novos dados na partição para observar o efeito das alterações projetadas. Uma partição de write-back é necessária se o recurso de write-back de célula do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for utilizado. O processamento de partições em paralelo é útil porque o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa a energia de processamento de modo mais eficaz e pode reduzir consideravelmente o tempo total do processamento. Também é possível processar partições consecutivamente.  
+ Ao processar uma partição, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] processa a partição e qualquer dimensão não processada que exista na partição, dependendo da opção selecionada. O uso de partições oferece várias vantagens para o processamento. É possível processar uma partição sem afetar outras partições em um cubo. As partições são úteis para armazenar dados que estão sujeitos ao write-back de célula. Write-back é um recurso que permite ao usuário realizar uma análise hipotética gravando novos dados na partição para observar o efeito das alterações projetadas. Uma partição de write-back é necessária se o recurso de write-back de célula do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]for utilizado. O processamento de partições em paralelo é útil porque o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa a energia de processamento de modo mais eficaz e pode reduzir consideravelmente o tempo total do processamento. Também é possível processar partições consecutivamente.  
   
 ##  <a name="bkmk_procdm"></a> Processando estruturas e modelos de mineração de dados  
  Uma estrutura de mineração define o domínio de dados a partir do qual serão criados modelos de mineração de dados. Uma estrutura de mineração pode conter mais de um modelo de mineração. É possível processar uma estrutura de mineração separada dos modelos de mineração associados. Ao ser processada separadamente, uma estrutura de mineração é populada com os dados de treinamento da fonte de dados.  
@@ -93,9 +98,9 @@ caps.handback.revision: 44
   
  Para obter mais informações sobre os modelos e estruturas de mineração de processamento, consulte [Requisitos e considerações de processamento &#40;Data Mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Ferramentas e abordagens para processamento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [Processamento em lotes &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [Processamento em lotes &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

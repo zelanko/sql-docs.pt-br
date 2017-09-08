@@ -1,28 +1,33 @@
 ---
-title: "Tarefas e instru&#231;&#245;es da estrutura de minera&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "estruturas de mineração [Analysis Services], tópicos de instruções"
+title: "Estrutura de tarefas e instruções de mineração | Microsoft Docs"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], how-to topics
 ms.assetid: 085962c2-b50b-4a3b-8176-a0b920e2593a
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 37193320cddce5b0ecccaf9d0040992118bc0e44
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Tarefas e instru&#231;&#245;es da estrutura de minera&#231;&#227;o
+# <a name="mining-structure-tasks-and-how-tos"></a>Tarefas e instruções da estrutura de mineração
   A guia **Estrutura de Mineração** do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contém ferramentas que você pode usar para criar, editar e processar uma estrutura de mineração.  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
   
 -   [Criar uma nova estrutura de mineração relacional](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)  
   
@@ -40,9 +45,8 @@ caps.handback.revision: 27
   
 -   [Processar uma estrutura de mineração](../../analysis-services/data-mining/process-a-mining-structure.md)  
   
--   [Filtrar o cubo de origem para uma estrutura de mineração](../Topic/Filter%20the%20Source%20Cube%20for%20a%20Mining%20Structure.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criando e implementando tópicos de instruções (Analysis Services – Mineração de Dados)](https://msdn.microsoft.com/library/bb522452.aspx)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "Colunas de dados de eventos de sess&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "categoria Session Events"
+title: "Colunas de dados de eventos de sessão | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Session Events event category
 ms.assetid: 35853451-6768-4a02-8b8f-81a8ae37a333
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb85851bd0c05de09120fa2403c1e47bf0da9a75
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colunas de dados de eventos de sess&#227;o
+# <a name="session-events-data-columns"></a>Colunas de dados de eventos de sessão
   A categoria Session Events tem a seguinte classe de evento:  
   
 |**ID do evento**|**Nome do evento**|**Descrição do evento**|  
@@ -29,7 +34,7 @@ caps.handback.revision: 21
   
  A tabela a seguir lista as colunas de dados dessa classe de evento.  
   
-## Existing Connection  
+## <a name="existing-connection"></a>Existing Connection  
   
 |**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -44,7 +49,7 @@ caps.handback.revision: 21
 |SPID|41|1|ID de processo de servidor. Isso identifica exclusivamente uma sessão de usuário. Corresponde diretamente ao GUID de sessão usado pelo XML/A.|  
 |ServerName|43|8|Nome do servidor que gera o evento.|  
   
-## Existing Session  
+## <a name="existing-session"></a>Existing Session  
   
 |**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -65,7 +70,7 @@ caps.handback.revision: 21
 |ServerName|43|8|Nome do servidor que gera o evento.|  
 |RequestProperties|45|9|Propriedades de solicitação XMLA|  
   
-## Session Initialize  
+## <a name="session-initialize"></a>Session Initialize  
   
 |||||  
 |-|-|-|-|  
@@ -85,7 +90,7 @@ caps.handback.revision: 21
 |ServerName|43|8|Nome do servidor que gera o evento.|  
 |RequestProperties|45|9|Propriedades de solicitação XMLA|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Categoria de evento de auditoria de segurança](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   
