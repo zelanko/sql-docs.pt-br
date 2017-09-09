@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: bc39be67f0d2fba9195fe2f8e372f05994f0d49d
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 0d4b7b0b668c6ac8ff2808f2d02576c9285e682a
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novidades no mecanismo de banco de dados – SQL Server 2016
@@ -42,7 +42,8 @@ Para examinar quais são as novidades em outros componentes do SQL Server, veja 
 
 - Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** para criar uma Máquina Virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.
 
-![observação](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") Para obter as notas de versão atuais, consulte [Notas de versão do SQL Server 2016](../sql-server/sql-server-2016-release-notes.md).
+> [!NOTE]
+> Para obter as notas de versão atuais, veja [Notas de versão do SQL Server 2016](../sql-server/sql-server-2016-release-notes.md).
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
 -  `CREATE OR ALTER <object>` sintaxe agora está disponível para [procedimentos](../t-sql/statements/create-procedure-transact-sql.md), [exibições](../t-sql/statements/create-view-transact-sql.md)e [funções](../t-sql/statements/create-function-transact-sql.md)e [gatilhos](../t-sql/statements/create-trigger-transact-sql.md).
@@ -250,7 +251,7 @@ Para obter informações gerais, veja:
 
 - As conexões [Usando MARS &#40;Multiple Active Result Sets&#41;](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) agora podem acessar tabelas com otimização de memória e procedimentos armazenados compilados nativamente.
 
-- Suporte à [TDE](../relational-databases/security/encryption/transparent-data-encryption-tde.md) (Transparent Data Encryption). Se um banco de dados estiver configurado para ENCRYPTION, os arquivos no [Grupo de arquivos com otimização de memória](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) também serão criptografados agora.
+- Suporte à [TDE](../relational-databases/security/encryption/transparent-data-encryption.md) (Transparent Data Encryption). Se um banco de dados estiver configurado para ENCRYPTION, os arquivos no [Grupo de arquivos com otimização de memória](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) também serão criptografados agora.
 
 Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).
 

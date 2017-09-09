@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0250c8370960dc17adf13c020c51bfc603b111c8
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 2d0a6459bc0c46e3f19de59875f73e1ebedd14d4
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configuração do armazenamento para tabelas com otimização de memória
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 -   Se você tiver um número par de eixos, diferentemente do SQL Server 2014, os arquivos de ponto de verificação serão distribuídos uniformemente em todos os eixos.  
   
 ## <a name="encryption"></a>Criptografia  
- No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o armazenamento de tabelas com otimização de memória será criptografado como parte da habilitação de TDE do banco de dados. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+ No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o armazenamento de tabelas com otimização de memória será criptografado como parte da habilitação de TDE do banco de dados. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando e gerenciando armazenamento para objetos com otimização de memória](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

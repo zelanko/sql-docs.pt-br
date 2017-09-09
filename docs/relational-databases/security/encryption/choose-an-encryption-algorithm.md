@@ -20,11 +20,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a3cb1a59db35025eda9cf6ea68f0897aaecc9caf
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 77cee9391335f384c94aa0fa3cf71808baf36056
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="choose-an-encryption-algorithm"></a>Escolher um algoritmo de criptografia
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
 |Criptografando com o uso de uma chave simétrica.|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-symmetric-key-transact-sql.md)|  
 |Criptografando com o uso de uma chave assimétrica.|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-asymmetric-key-transact-sql.md)|  
 |Criptografando com o uso de um certificado.|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)|  
-|Criptografando arquivos de banco de dados com o uso de criptografia transparente de dados.|[TDE &#40;Transparent Data Encryption&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)|  
+|Criptografando arquivos de banco de dados com o uso de criptografia transparente de dados.|[TDE &#40;Transparent Data Encryption&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)|  
 |Como criptografar uma coluna de uma tabela.|[Criptografar uma coluna de dados](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
 ## <a name="see-also"></a>Consulte também  
