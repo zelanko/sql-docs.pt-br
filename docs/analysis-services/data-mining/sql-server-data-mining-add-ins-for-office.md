@@ -1,23 +1,28 @@
 ---
-title: "Suplementos de Minera&#231;&#227;o de Dados do SQL Server para Office | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SQL Server Data Mining suplementos do Office | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d637a50ca56acfcc80da1a09542e88e476351634
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Suplementos de Minera&#231;&#227;o de Dados do SQL Server para Office
+# <a name="sql-server-data-mining-add-ins-for-office"></a>Suplementos de Mineração de Dados do SQL Server para Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Suplementos de Mineração de Dados do para Office é um conjunto de ferramentas leve para análise preditiva que permite a você usar dados no Excel para criar modelos analíticos para previsão, recomendação ou exploração.  
   
  Os assistentes e as ferramentas de gerenciamento de dados nos suplementos fornecem instruções passo a passo para essas tarefas de mineração de dados comuns:  
@@ -40,7 +45,7 @@ caps.handback.revision: 10
   
      Se você não tiver experiência em mineração de dados, obtenha ajuda para criar consultas de previsão no assistente de **Consulta** .  
   
-     Usuários avançados podem criar consultas DMX personalizadas com o **Editor de Consulta Avançada** do tipo "arrastar e soltar", ou automatizar previsões usando o VBA do Excel.  
+     Usuários avançados podem criar consultas DMX personalizadas com o **Editor de Consulta Avançada**do tipo "arrastar e soltar", ou automatizar previsões usando o VBA do Excel.  
   
 -   **Documente e gerencie.** Depois de criar um conjunto de dados e de criar alguns modelos, documente seu trabalho e suas ideias gerando um resumo estatísticos dos dados e dos parâmetros de modelo.  
   
@@ -52,10 +57,10 @@ caps.handback.revision: 10
   
      Os usuários avançados apreciarão a funcionalidade de **rastreamento** , que permite exibir as instruções XMLA e DMX enviadas para o servidor.  
   
-## Guia de Introdução  
+## <a name="getting-started"></a>Guia de Introdução  
  Para obter mais informações, veja [O que está incluído nos Suplementos de Data Mining para o Office](http://go.microsoft.com/fwlink/p/?LinkId=616849)  
   
-## Suporte e requisitos  
+## <a name="support-and-requirements"></a>Suporte e requisitos  
  Os Suplementos de Mineração de Dados do SQL Server para Office são downloads gratuitos. Você deve ter uma das versões do Office a seguir já instaladas para usar essas ferramentas:  
   
 -   Office 2010, versões de 32 bits ou 64 bits  
@@ -73,7 +78,7 @@ caps.handback.revision: 10
   
 -   Standard  
   
- Dependendo da edição do SQL Server Analysis Services ao você se conectará, alguns algoritmos avançados possivelmente não estarão disponíveis. Para obter informações, consulte [Recursos com suporte nas edições do SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Dependendo da edição do SQL Server Analysis Services ao você se conectará, alguns algoritmos avançados possivelmente não estarão disponíveis. Para obter informações, consulte [Recursos com suporte nas edições do SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).  
   
  Para obter ajuda adicional com a instalação, consulte esta página do Centro de Download: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   

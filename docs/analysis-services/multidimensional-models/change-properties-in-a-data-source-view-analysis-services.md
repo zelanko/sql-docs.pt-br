@@ -1,31 +1,36 @@
 ---
-title: "Alterar propriedades em uma exibi&#231;&#227;o da fonte de dados (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "nomes amigáveis [Analysis Services]"
-  - "nomes [Analysis Services], exibições da fonte de dados"
-  - "exibindo tabelas"
-  - "exibindo tabelas"
-  - "exibições da fonte de dados [Analysis Services], tabelas"
-  - "tabelas [Analysis Services], exibições da fonte de dados"
+title: "Alterar propriedades em uma exibição de fonte de dados (Analysis Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- friendly names [Analysis Services]
+- names [Analysis Services], data source views
+- viewing tables
+- displaying tables
+- data source views [Analysis Services], tables
+- tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d2d7af5e8fa2adb597380aded86778e57135ae0
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Alterar propriedades em uma exibi&#231;&#227;o da fonte de dados (Analysis Services)
+# <a name="change-properties-in-a-data-source-view-analysis-services"></a>Alterar propriedades em uma exibição da fonte de dados (Analysis Services)
   Após definir uma exibição da fonte de dados usando o Assistente de Exibição da Fonte de Dados e adicionar tabelas, exibições, cálculos nomeados e consultas nomeadas à exibição da fonte de dados, convém alterar as propriedades relacionadas a:  
   
 -   Critérios de correspondência da exibição da fonte de dados  
@@ -38,7 +43,7 @@ caps.handback.revision: 34
   
  Também é possível exibir os metadados de objeto recuperados a partir da fonte de dados que você não pode modificar.  
   
-## Exibindo ou alterando as propriedades da exibição da fonte de dados  
+## <a name="viewing-or-changing-data-source-view-properties"></a>Exibindo ou alterando as propriedades da exibição da fonte de dados  
  As propriedades da exibição da fonte de dados, além de sua descrição, são configuradas pelo Assistente de Exibição da Fonte de Dados quando você define pela primeira vez a exibição da fonte de dados. A tabela a seguir lista e descreve as propriedades de uma exibição da fonte de dados.  
   
 > [!NOTE]  
@@ -53,8 +58,8 @@ caps.handback.revision: 34
 |RetrieveRelationships|Especifica se as relações são recuperadas do banco de dados. O padrão é True.|  
 |SchemaRestriction|Especifica as restrições, se houver alguma, dos esquemas recuperados de uma fonte de dados. Por padrão, não existe restrição de esquema.|  
   
-## Exibindo ou alterando as propriedades DataTable  
- As propriedades **DataTable** são as propriedades de tabelas, exibições e consultas nomeadas de uma exibição da fonte de dados. Elas são definidas quando algum desses objetos é adicionado à exibição da fonte de dados. A tabela a seguir lista e descreve as propriedades dos objetos **DataTable** de uma exibição da fonte de dados.  
+## <a name="viewing-or-changing-datatable-properties"></a>Exibindo ou alterando as propriedades DataTable  
+ As propriedades**DataTable** são as propriedades de tabelas, exibições e consultas nomeadas de uma exibição da fonte de dados. Elas são definidas quando algum desses objetos é adicionado à exibição da fonte de dados. A tabela a seguir lista e descreve as propriedades dos objetos **DataTable** de uma exibição da fonte de dados.  
   
 |Propriedade|Description|  
 |--------------|-----------------|  
@@ -67,20 +72,20 @@ caps.handback.revision: 34
 |Esquema|Especifica o esquema de banco de dados válido para a tabela, exibição ou consulta nomeada. Essa propriedade não é editável.|  
 |TableType|Especifica o tipo de tabela para a tabela, exibição ou consulta nomeada. Essa propriedade não é editável.|  
   
-## Exibindo ou alterando as propriedades DataColumn  
- As propriedades **DataColumn** são as propriedades das colunas em tabelas, exibições e consultas nomeadas de uma exibição da fonte de dados. Elas são definidas quando algum dos objetos a seguir é adicionado à exibição da fonte de dados, seja proveniente da tabela ou exibição subjacente, de uma consulta nomeada ou definido por um cálculo nomeado. A tabela a seguir lista e descreve as propriedades dos objetos **DataColumn** de uma exibição da fonte de dados.  
+## <a name="viewing-or-changing-datacolumn-properties"></a>Exibindo ou alterando as propriedades DataColumn  
+ As propriedades**DataColumn** são as propriedades das colunas em tabelas, exibições e consultas nomeadas de uma exibição da fonte de dados. Elas são definidas quando algum dos objetos a seguir é adicionado à exibição da fonte de dados, seja proveniente da tabela ou exibição subjacente, de uma consulta nomeada ou definido por um cálculo nomeado. A tabela a seguir lista e descreve as propriedades dos objetos **DataColumn** de uma exibição da fonte de dados.  
   
 |Propriedade|Description|  
 |--------------|-----------------|  
 |AllowNull|Especifica a propriedade de nulidade da coluna com base na coluna da tabela, no valor ou na consulta nomeada subjacente. Essa propriedade não é editável.|  
 |DataType|Especifica o tipo de dados da coluna com base na coluna da tabela, no valor ou na consulta nomeada subjacente. Não é possível editar diretamente essa propriedade. No entanto, se for necessário alterar o tipo de dados de uma coluna de uma tabela ou exibição, substitua a tabela por uma consulta nomeada que converta a coluna para o tipo de dados desejado.|  
-|DateTimeMode|Especifica o formato de serialização de data para as colunas **DateTime**. O valor padrão é **UnspecifiedLocal**. Essa propriedade pode ser editada.|  
+|DateTimeMode|Especifica o formato de serialização de data para as colunas **DateTime** . O valor padrão é **UnspecifiedLocal**. Essa propriedade pode ser editada.|  
 |Description|Especifica a descrição da coluna. Se a coluna do banco de dados subjacente tiver uma descrição armazenada como propriedade estendida, esse valor aparecerá. Você pode editar essa propriedade.|  
 |FriendlyName|Especifica o nome para a coluna de uma tabela ou exibição que seja mais fácil para os usuários entenderem ou mais relevante para a área de assunto. Por padrão, a propriedade **FriendlyName** da coluna de uma tabela ou exibição é igual à propriedade **Name** da coluna. A propriedade **FriendlyName** é usada por objetos OLAP e de mineração de dados ao definir atributos com base nas colunas de tabelas ou exibições. Você pode editar essa propriedade.|  
 |Comprimento|Especifica o comprimento máximo da coluna com base nos dados da coluna da tabela ou exibição subjacente.|  
 |Nome|Especifica o nome da coluna subjacente ou o nome do cálculo nomeado. A propriedade **Name** é usada por objetos OLAP e de mineração de dados ao definir atributos com base em cálculos nomeados. Essa propriedade é editável apenas no caso de cálculos nomeados.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Exibições de fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Trabalhar com diagramas em um Designer de exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   

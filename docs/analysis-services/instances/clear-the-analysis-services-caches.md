@@ -1,24 +1,29 @@
 ---
-title: "Limpar os caches do Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Limpar os Caches do Analysis Services | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 67ea43179411006e5e549c44b13d4a3fa1d6074f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Limpar os caches do Analysis Services
+# <a name="clear-the-analysis-services-caches"></a>Limpar os caches do Analysis Services
   O Analysis Services armazena dados em cache dados para melhorar o desempenho da consulta. Este tópico fornece recomendações para usar o comando XMLA ClearCache para limpar caches que foram criados em resposta a uma consulta MDX. Os efeitos da execução de ClearCache variam dependendo se você está usando um modelo tabular ou multidimensional.  
   
  **Quando limpar o cache de modelos multidimensionais**  
@@ -37,7 +42,7 @@ caps.handback.revision: 11
   
  Em comparação com recomendações para limpar os caches de modelos multidimensionais durante os testes de desempenho, não há uma recomendação ampla para limpar os caches de modelos tabulares. Se você não for gerenciar a implantação de um modelo tabular que contém dados confidenciais, não haverá uma tarefa administrativa específica que exija a limpeza do cache.  
   
-## Limpar o cache de modelos do Analysis Services  
+## <a name="clear-the-cache-for-analysis-services-models"></a>Limpar o cache de modelos do Analysis Services  
  Para limpar o cache, use o XMLA e o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode limpar o cache no nível de banco de dados, cubo, dimensão, tabela ou grupo de medidas. As etapas a seguir para limpar o cache no nível de banco de dados aplicam-se aos modelos multidimensionais e tabulares.  
   
 > [!NOTE]  
@@ -47,15 +52,15 @@ caps.handback.revision: 11
   
  É necessário fornecer um identificador de objeto à instrução **ClearCache** na consulta XMLA para limpar o cache. A primeira etapa deste tópico explica como obter um identificador de objeto.  
   
-#### Etapa 1: obter o identificador de objeto  
+#### <a name="step-1-get-the-object-identifier"></a>Etapa 1: obter o identificador de objeto  
   
-1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse em um objeto, selecione **Propriedades** e copie o valor da propriedade da ID no painel **Propriedades**. Essa abordagem funciona para banco de dados, cubo, dimensão ou tabela.  
+1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse em um objeto, selecione **Propriedades**e copie o valor da propriedade da ID no painel **Propriedades** . Essa abordagem funciona para banco de dados, cubo, dimensão ou tabela.  
   
 2.  Para obter a ID do grupo de medidas, clique com o botão direito do mouse no grupo de medidas e selecione **Script de Grupo de Medidas como**. Escolha **Criar** ou **Alterar**e envie a consulta para uma janela. A ID do grupo de medidas ficará visível na definição do objeto. Copie a ID da definição do objeto.  
   
-#### Etapa 2: executar a consulta  
+#### <a name="step-2-run-the-query"></a>Etapa 2: executar a consulta  
   
-1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse em um banco de dados, aponte para **Nova Consulta** e selecione **XMLA**.  
+1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse em um banco de dados, aponte para **Nova Consulta**e selecione **XMLA**.  
   
 2.  Copie o exemplo de código a seguir na janela de consulta XMLA. Altere **DatabaseID** para a ID do banco de dados na conexão atual.  
   
@@ -88,8 +93,7 @@ caps.handback.revision: 11
     </return>  
     ```  
   
-## Consulte também  
- [Script de tarefas administrativas no Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)   
+## <a name="see-also"></a>Consulte também  
  [Monitorar uma instância do Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   

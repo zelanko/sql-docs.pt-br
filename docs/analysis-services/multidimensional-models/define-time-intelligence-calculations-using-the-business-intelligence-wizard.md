@@ -1,37 +1,42 @@
 ---
-title: "Definir c&#225;lculos de intelig&#234;ncia de tempo com o Assistente de Business Intelligence | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "crescimento de período sobre período [Analysis Services]"
-  - "comparações de período paralelas [Analysis Services]"
-  - "melhorias do Business Intelligence [Analysis Services], inteligência de dados temporais"
-  - "exibições de tempo [Analysis Services]"
-  - "hierarquias [Analysis Services], tempo"
-  - "períodos de tempo [Analysis Services]"
-  - "médias móveis"
-  - "tempo [Analysis Services]"
-  - "período até esta data [Analysis Services]"
-  - "cálculos [Analysis Services], tempo"
-  - "hierarquias de tempo [Analysis Services]"
-  - "inteligência de tempo [Analysis Services]"
+title: "Definir cálculos de inteligência de tempo usando o Assistente de Business Intelligence | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- period over period growth [Analysis Services]
+- parallel period comparisons [Analysis Services]
+- Business Intelligence enhancements [Analysis Services], time intelligence
+- time views [Analysis Services]
+- hierarchies [Analysis Services], time
+- time periods [Analysis Services]
+- moving averages
+- time [Analysis Services]
+- period to date [Analysis Services]
+- calculations [Analysis Services], time
+- time hierarchies [Analysis Services]
+- time intelligence [Analysis Services]
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ac568a96c856f9334b30597dfd9c9555fc54ded2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definir c&#225;lculos de intelig&#234;ncia de tempo com o Assistente de Business Intelligence
+# <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Definir cálculos de inteligência de tempo com o Assistente de Business Intelligence
   O aprimoramento de inteligência de tempo é um aprimoramento de cubo que adiciona cálculos de tempo (ou exibições de tempo) a uma hierarquia selecionada. Esse aprimoramento oferece suporte às seguintes categorias de cálculos:  
   
 -   Período até a data.  
@@ -42,14 +47,14 @@ caps.handback.revision: 28
   
 -   Comparações de período paralelas.  
   
- Você aplica a inteligência de tempo a cubos que têm uma dimensão de tempo. (Uma dimensão de tempo é uma dimensão cuja propriedade **Type** está definida como **Time**.) Além disso, os atributos de tempo da dimensão também devem ter a configuração apropriada (como Anos ou Meses) para a propriedade **Type**. A propriedade **Type** de ambas as dimensões e seus atributos será configurada corretamente se você usar o Assistente para Dimensões para criar a dimensão de tempo.  
+ Você aplica a inteligência de tempo a cubos que têm uma dimensão de tempo. (Uma dimensão de tempo é uma dimensão cuja propriedade **Type** está definida como **Time**.) Além disso, os atributos de tempo da dimensão também devem ter a configuração apropriada (como Anos ou Meses) para a propriedade **Type** . A propriedade **Type** de ambas as dimensões e seus atributos será configurada corretamente se você usar o Assistente para Dimensões para criar a dimensão de tempo.  
   
- Para adicionar inteligência de tempo a um cubo, use o Assistente de Business Intelligence e selecione a opção **Definir inteligência de tempo** na página **Escolher Aprimoramento**. Esse assistente orientará você durante as etapas para selecionar a hierarquia à qual você deseja adicionar a inteligência de tempo e especificar quais membros da hierarquia terão a inteligência de tempo aplicada a eles. Na última página do assistente, você verá as alterações que serão feitas ao banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para adicionar a inteligência de tempo selecionada.  
+ Para adicionar inteligência de tempo a um cubo, use o Assistente de Business Intelligence e selecione a opção **Definir inteligência de tempo** na página **Escolher Aprimoramento** . Esse assistente orientará você durante as etapas para selecionar a hierarquia à qual você deseja adicionar a inteligência de tempo e especificar quais membros da hierarquia terão a inteligência de tempo aplicada a eles. Na última página do assistente, você verá as alterações que serão feitas ao banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para adicionar a inteligência de tempo selecionada.  
   
-## Selecionando uma hierarquia de tempo  
- Na página **Escolher Cálculos e Hierarquia de Destino**, selecione a hierarquia de tempo à qual será aplicado o aprimoramento de tempo. Você pode aplicar o aprimoramento de tempo somente a uma hierarquia sempre que executar o Assistente de Business Intelligence. Para aplicar o aprimoramento a mais de uma hierarquia de tempo, execute o assistente novamente.  
+## <a name="selecting-a-time-hierarchy"></a>Selecionando uma hierarquia de tempo  
+ Na página **Escolher Cálculos e Hierarquia de Destino** , selecione a hierarquia de tempo à qual será aplicado o aprimoramento de tempo. Você pode aplicar o aprimoramento de tempo somente a uma hierarquia sempre que executar o Assistente de Business Intelligence. Para aplicar o aprimoramento a mais de uma hierarquia de tempo, execute o assistente novamente.  
   
- Depois de selecionar uma hierarquia de tempo, na lista **Cálculos de tempo disponíveis**, selecione os cálculos que se aplicam à hierarquia. Os cálculos listados dependem dos níveis da hierarquia e da configuração da propriedade **Type** de cada nível. Por exemplo, uma hierarquia Anos aceita Desde o Início do Ano e Crescimento Ano a Ano, mas não a hierarquia Trimestres.  
+ Depois de selecionar uma hierarquia de tempo, na lista **Cálculos de tempo disponíveis** , selecione os cálculos que se aplicam à hierarquia. Os cálculos listados dependem dos níveis da hierarquia e da configuração da propriedade **Type** de cada nível. Por exemplo, uma hierarquia Anos aceita Desde o Início do Ano e Crescimento Ano a Ano, mas não a hierarquia Trimestres.  
   
 > [!NOTE]  
 >  O arquivo de modelo Timeintelligence.xml define os cálculos de tempo listados em **Cálculos de tempo disponíveis**. Se os cálculos listados não satisfizerem suas necessidades, você pode alterar os cálculos existentes ou adicionar novos cálculos ao arquivo Timeintelligence.xml.  
@@ -57,15 +62,15 @@ caps.handback.revision: 28
 > [!TIP]  
 >  Para exibir uma descrição para um cálculo, use as setas para cima e para baixo para realçar esse cálculo.  
   
-## Aplicar exibições de tempo aos membros  
- Na página **Definir Escopo de Cálculos**, especifique os membros aos quais se aplicam as novas exibições de tempo. Você pode aplicar as novas exibições de tempo a um destes objetos:  
+## <a name="apply-time-views-to-members"></a>Aplicar exibições de tempo aos membros  
+ Na página **Definir Escopo de Cálculos** , especifique os membros aos quais se aplicam as novas exibições de tempo. Você pode aplicar as novas exibições de tempo a um destes objetos:  
   
--   **Membros de uma dimensão de contas** Na página **Definir Escopo de Cálculos**, a lista **Medidas disponíveis** contém dimensões de contas. As dimensões de contas têm suas propriedades **Type** definidas como **Account**. Se houver dimensões de contas mas elas não aparecerem na lista **Medidas disponíveis**, você poderá usar o Assistente de Business Intelligence para aplicar a inteligência de conta a essa dimensão. Para obter mais informações, consulte [Adicionar inteligência de conta a uma dimensão](../../analysis-services/multidimensional-models/add-account-intelligence-to-a-dimension.md).  
+-   **Membros de uma dimensão de contas** Na página **Definir Escopo de Cálculos** , a lista **Medidas disponíveis** contém dimensões de contas. As dimensões de contas têm suas propriedades **Type** definidas como **Account**. Se houver dimensões de contas mas elas não aparecerem na lista **Medidas disponíveis** , você poderá usar o Assistente de Business Intelligence para aplicar a inteligência de conta a essa dimensão. Para obter mais informações, consulte [Adicionar inteligência de conta a uma dimensão](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
 -   **Medidas** Em vez de especificar uma dimensão de contas, você pode especificar as medidas às quais se aplicam as exibições de tempo. Nesse caso, selecione as exibições às quais se aplicam os cálculos de tempo. Por exemplo, ativos e passivos são dados acumulados no ano; portanto, você não aplica um cálculo Desde o Início do Ano a medidas de ativos e passivos.  
   
-## Exibindo o aprimoramento de inteligência de tempo  
- Na última página do Assistente de Business Intelligence, é possível exibir as alterações que serão feitas no banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para um aprimoramento de inteligência de tempo, o assistente mudará a dimensão de tempo selecionada, a exibição da fonte de dados associada e o cubo associado conforme descrito na tabela a seguir.  
+## <a name="viewing-the-time-intelligence-enhancement"></a>Exibindo o aprimoramento de inteligência de tempo  
+ Na última página do Assistente de Business Intelligence, é possível exibir as alterações que serão feitas no banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para um aprimoramento de inteligência de tempo, o assistente mudará a dimensão de tempo selecionada, a exibição da fonte de dados associada e o cubo associado conforme descrito na tabela a seguir.  
   
 |Objeto|Alterar|  
 |------------|------------|  
@@ -73,7 +78,7 @@ caps.handback.revision: 28
 |Exibição da fonte de dados|Adiciona uma coluna calculada à tabela de tempo para cada novo atributo da dimensão de tempo.|  
 |Cube|Adiciona um membro calculado que define o código MDX para executar o cálculo.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criar membros calculados](../../analysis-services/multidimensional-models/create-calculated-members.md)  
   
   

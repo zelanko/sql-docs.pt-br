@@ -1,22 +1,27 @@
 ---
-title: "Colunas de dados File Load and Save | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Carregamento de arquivo e salve as colunas de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 0101e809-d6ea-4d0c-95ec-65dd77acf665
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fc37f3342781ace5e54a3ab9550e046933d25928
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colunas de dados File Load and Save
+# <a name="file-load-and-save-data-columns"></a>Colunas de dados File Load and Save
   A categoria de evento File Load and Save tem a seguinte classe de evento:  
   
 |**ID do evento**|**Nome do evento**|**Descrição do evento**|  
@@ -32,7 +37,7 @@ caps.handback.revision: 5
   
  A tabela a seguir lista as colunas de dados dessa classe de evento.  
   
-## File Load Begin  
+## <a name="file-load-begin"></a>File Load Begin  
   
 |**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -52,7 +57,7 @@ caps.handback.revision: 5
 |TextData|42|9|Dados de texto associados ao evento.|  
 |ServerName|43|8|Nome do servidor que gera o evento.|  
   
-## File Load End  
+## <a name="file-load-end"></a>File Load End  
   
 |**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -78,7 +83,7 @@ caps.handback.revision: 5
 |TextData|42|9|Dados de texto associados ao evento.|  
 |ServerName|43|8|Nome do servidor que gera o evento.|  
   
-## File Save Begin  
+## <a name="file-save-begin"></a>File Save Begin  
   
 |**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -98,7 +103,7 @@ caps.handback.revision: 5
 |TextData|42|9|Dados de texto associados ao evento.|  
 |ServerName|43|8|Nome do servidor que gera o evento|  
   
-## File Save End  
+## <a name="file-save-end"></a>File Save End  
   
 |**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -124,7 +129,7 @@ caps.handback.revision: 5
 |TextData|42|9|Dados de texto associados ao evento.|  
 |ServerName|43|8|Nome do servidor que gera o evento.|  
   
-## PageOut Begin  
+## <a name="pageout-begin"></a>PageOut Begin  
   
 |**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -144,53 +149,7 @@ caps.handback.revision: 5
 |TextData|42|9|Dados de texto associados ao evento.|  
 |ServerName|43|8|Nome do servidor que gera o evento.|  
   
-## PageOut End  
-  
-|**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
-|---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|A classe de evento é usada para categorizar eventos.|  
-|CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
-|JobID|7|1|ID do trabalho para andamento.|  
-|SessionType|8|8|Tipo de sessão (qual entidade causou a operação).|  
-|IntegerData|10|1|Dados Integer.|  
-|ObjectID|11|8|ID do objeto (note que esta é uma cadeia de caracteres).|  
-|ObjectType|12|1|Tipo de objeto.|  
-|ObjectName|13|8|Nome do objeto.|  
-|ObjectPath|14|8|Caminho do objeto. Uma lista de pais separados por vírgulas, começando com o pai do objeto.|  
-|Severity|22|1|Nível de severidade de uma exceção.|  
-|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
-|Erro|24|1|Número de erro de um determinado evento.|  
-|ConnectionID|25|1|ID de conexão exclusiva.|  
-|DatabaseName|28|8|Nome do banco de dados no qual a instrução do usuário está sendo executada.|  
-|ClientProcessID|36|1|A ID do processo do aplicativo cliente.|  
-|SessionID|39|8|GUID da sessão.|  
-|TextData|42|9|Dados de texto associados ao evento.|  
-|ServerName|43|8|Nome do servidor que gera o evento.|  
-  
-## PageIn Begin  
-  
-|**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
-|---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|A classe de evento é usada para categorizar eventos.|  
-|CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|JobID|7|1|ID do trabalho para andamento.|  
-|SessionType|8|8|Tipo de sessão (qual entidade causou a operação).|  
-|ObjectID|11|8|ID do objeto (note que esta é uma cadeia de caracteres).|  
-|ObjectType|12|1|Tipo de objeto.|  
-|ObjectName|13|8|Nome do objeto.|  
-|ObjectPath|14|8|Caminho do objeto. Uma lista de pais separados por vírgulas, começando com o pai do objeto.|  
-|ConnectionID|25|1|ID de conexão exclusiva.|  
-|DatabaseName|28|8|Nome do banco de dados no qual a instrução do usuário está sendo executada.|  
-|ClientProcessID|36|1|A ID do processo do aplicativo cliente.|  
-|SessionID|39|8|GUID da sessão.|  
-|TextData|42|9|Dados de texto associados ao evento.|  
-|ServerName|43|8|Nome do servidor que gera o evento.|  
-  
-## PageIn End  
+## <a name="pageout-end"></a>PageOut End  
   
 |**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -216,7 +175,53 @@ caps.handback.revision: 5
 |TextData|42|9|Dados de texto associados ao evento.|  
 |ServerName|43|8|Nome do servidor que gera o evento.|  
   
-## Consulte também  
+## <a name="pagein-begin"></a>PageIn Begin  
+  
+|**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
+|---------------------|-------------------|---------------------|----------------------------|  
+|EventClass|0|1|A classe de evento é usada para categorizar eventos.|  
+|CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
+|StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
+|JobID|7|1|ID do trabalho para andamento.|  
+|SessionType|8|8|Tipo de sessão (qual entidade causou a operação).|  
+|ObjectID|11|8|ID do objeto (note que esta é uma cadeia de caracteres).|  
+|ObjectType|12|1|Tipo de objeto.|  
+|ObjectName|13|8|Nome do objeto.|  
+|ObjectPath|14|8|Caminho do objeto. Uma lista de pais separados por vírgulas, começando com o pai do objeto.|  
+|ConnectionID|25|1|ID de conexão exclusiva.|  
+|DatabaseName|28|8|Nome do banco de dados no qual a instrução do usuário está sendo executada.|  
+|ClientProcessID|36|1|A ID do processo do aplicativo cliente.|  
+|SessionID|39|8|GUID da sessão.|  
+|TextData|42|9|Dados de texto associados ao evento.|  
+|ServerName|43|8|Nome do servidor que gera o evento.|  
+  
+## <a name="pagein-end"></a>PageIn End  
+  
+|**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
+|---------------------|-------------------|---------------------|----------------------------|  
+|EventClass|0|1|A classe de evento é usada para categorizar eventos.|  
+|CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
+|StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
+|EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
+|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|JobID|7|1|ID do trabalho para andamento.|  
+|SessionType|8|8|Tipo de sessão (qual entidade causou a operação).|  
+|IntegerData|10|1|Dados Integer.|  
+|ObjectID|11|8|ID do objeto (note que esta é uma cadeia de caracteres).|  
+|ObjectType|12|1|Tipo de objeto.|  
+|ObjectName|13|8|Nome do objeto.|  
+|ObjectPath|14|8|Caminho do objeto. Uma lista de pais separados por vírgulas, começando com o pai do objeto.|  
+|Severity|22|1|Nível de severidade de uma exceção.|  
+|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Erro|24|1|Número de erro de um determinado evento.|  
+|ConnectionID|25|1|ID de conexão exclusiva.|  
+|DatabaseName|28|8|Nome do banco de dados no qual a instrução do usuário está sendo executada.|  
+|ClientProcessID|36|1|A ID do processo do aplicativo cliente.|  
+|SessionID|39|8|GUID da sessão.|  
+|TextData|42|9|Dados de texto associados ao evento.|  
+|ServerName|43|8|Nome do servidor que gera o evento.|  
+  
+## <a name="see-also"></a>Consulte também  
  [Categoria de evento File Load and Save](../../analysis-services/trace-events/file-load-and-save-event-category.md)  
   
   

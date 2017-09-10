@@ -1,60 +1,65 @@
 ---
-title: "Configurar propriedades de medida | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "aditivo [Analysis Services]"
-  - "propriedade ID"
-  - "propriedade ErrorConfiguration"
-  - "propriedade AggregateFunction"
-  - "propriedade DisplayFolder"
-  - "propriedade IgnoreUnrelatedDimensions"
-  - "propriedade FormatString"
-  - "propriedade Description"
-  - "semiaditivas"
-  - "propriedades [Analysis Services], grupos de medidas"
-  - "funções de agregação [Analysis Services]"
-  - "propriedade DataType"
-  - "propriedade ProcessingMode"
-  - "propriedade MeasureExpression"
-  - "propriedade AggregationPrefix "
-  - "propriedade Visible"
-  - "propriedades [Analysis Services], medidas"
-  - "propriedade StorageLocation"
-  - "propriedade StorageMode"
-  - "formatos [Analysis Services], medidas"
-  - "propriedade Source"
-  - "agregações [Analysis Services], medidas"
-  - "medidas [Analysis Services], propriedades"
-  - "não aditivo [Analysis Services]"
-  - "propriedade Name"
-  - "medidas [Analysis Services], formatos de exibição"
-  - "propriedade ProcessingPriority"
-  - "grupos de medidas [Analysis Services], propriedades"
-  - "propriedade Type"
-  - "propriedade ProactiveCaching "
+title: Configurar propriedades de medida | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- additivity [Analysis Services]
+- ID property
+- ErrorConfiguration property
+- AggregateFunction property
+- DisplayFolder property
+- IgnoreUnrelatedDimensions property
+- FormatString property
+- Description property
+- semiadditive
+- properties [Analysis Services], measure groups
+- aggregate functions [Analysis Services]
+- DataType property
+- ProcessingMode property
+- MeasureExpression property
+- AggregationPrefix property
+- Visible property
+- properties [Analysis Services], measures
+- StorageLocation property
+- StorageMode property
+- formats [Analysis Services], measures
+- Source property
+- aggregations [Analysis Services], measures
+- measures [Analysis Services], properties
+- nonadditive [Analysis Services]
+- Name property
+- measures [Analysis Services], display formats
+- ProcessingPriority property
+- measure groups [Analysis Services], properties
+- Type property
+- ProactiveCaching property
 ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
 caps.latest.revision: 50
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 50
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 576efdd0bac4b8298e3d204b065bbbd55ba6fff3
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurar propriedades de medida
+# <a name="configure-measure-properties"></a>Configurar propriedades de medida
   As medidas têm propriedades que lhe permitem definir como elas funcionam e controlar como elas aparecem para os usuários.  
   
- Você pode definir propriedades em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ao criar ou editar um cubo ou uma medida. Você pode também defini-las programaticamente, usando MDX ou AMO. Consulte [Criar medidas e grupos de medidas em modelos multidimensionais](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md) ou [Instrução CREATE MEMBER &#40;MDX&#41;](../Topic/CREATE%20MEMBER%20Statement%20\(MDX\).md) ou [Programando objetos OLAP AMO básicos](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md) para obter detalhes.  
+ Você pode definir propriedades em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ao criar ou editar um cubo ou uma medida. Você pode também defini-las programaticamente, usando MDX ou AMO. Consulte [Criar medidas e grupos de medidas em modelos multidimensionais](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md) ou [Instrução CREATE MEMBER &#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md) ou [Programando objetos OLAP AMO básicos](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md) para obter detalhes.  
   
-## Propriedades das medidas  
+## <a name="measure-properties"></a>Propriedades das medidas  
  As medidas herdam certas propriedades do grupo de medidas do qual fazem parte, exceto se essas propriedades forem substituídas no nível da medida. As propriedades das medidas determinam como uma medida é agregada, seu tipo de dados, o nome exibido ao usuário, a pasta de exibição na qual a medida aparecerá, sua cadeia de caracteres de formato, qualquer expressão de medida, a coluna de origem subjacente e sua visibilidade aos usuários.  
   
 |Propriedade|Definição|  
@@ -70,8 +75,8 @@ caps.handback.revision: 50
 |**Origem**|Obrigatórios. Especifica a coluna da exibição da fonte de dados à qual a medida está associada. Consulte [Fontes de dados e associações &#40;SSAS Multidimensional&#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).|  
 |**Visível**|Determina a visibilidade da medida em aplicativos cliente.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Configurar propriedades do grupo de medidas](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)   
- [Modificando medidas](../../analysis-services/modifying-measures.md)  
+ [Modificando medidas](../../analysis-services/lesson-3-1-modifying-measures.md)  
   
   

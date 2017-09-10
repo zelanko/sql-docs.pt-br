@@ -1,36 +1,41 @@
 ---
-title: "Criando subcubos em MDX (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "consultas [MDX], subcubos"
-  - "subcubos [MDX]"
-  - "exibições filtradas [MDX]"
-  - "MDX [Analysis Services], subcubos"
-  - "Expressões MDX [Analysis Services], subcubos"
-  - "Instrução CREATE SUBCUBE"
+title: Criando subcubos em MDX (MDX) | Microsoft Docs
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [MDX], subcubes
+- subcubes [MDX]
+- filtered views [MDX]
+- MDX [Analysis Services], subcubes
+- Multidimensional Expressions [Analysis Services], subcubes
+- CREATE SUBCUBE statement
 ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a60ea4f39735f9dfb6d8b3283faa58d38e6a075
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Criando subcubos em MDX (MDX)
+# <a name="building-subcubes-in-mdx-mdx"></a>Criando subcubos em MDX (MDX)
   Um subcubo é um subconjunto de um cubo representando uma exibição filtrada dos dados subjacentes. Limitando o cubo a um subcubo, é possível melhorar o desempenho das consultas.  
   
- Para definir um subcubo, use a instrução [CREATE SUBCUBE](../Topic/CREATE%20SUBCUBE%20Statement%20\(MDX\).md) , como descrito neste tópico.  
+ Para definir um subcubo, use a instrução [CREATE SUBCUBE](../../../mdx/mdx-data-definition-create-subcube.md) , como descrito neste tópico.  
   
-## Sintaxe de CREATE SUBCUBE  
+## <a name="create-subcube-syntax"></a>Sintaxe de CREATE SUBCUBE  
  Use a sintaxe a seguir para criar um subcubo:  
   
 ```  
@@ -39,9 +44,9 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  A sintaxe de CREATE SUBCUBE é bem simples. O parâmetro *Subcube_Identifier* identifica o cubo que servirá de base para o subcubo. O parâmetro *Subcube_Expression* seleciona a parte do cubo que se tornará o subcubo  
   
- Criado um subcubo, ele passa a ser o contexto de todas as consultas MDX até que a sessão seja encerrada ou você execute a instrução [DROP SUBCUBE](../Topic/DROP%20SUBCUBE%20Statement%20\(MDX\).md) .  
+ Criado um subcubo, ele passa a ser o contexto de todas as consultas MDX até que a sessão seja encerrada ou você execute a instrução [DROP SUBCUBE](../../../mdx/mdx-data-definition-drop-subcube.md) .  
   
-### O que um subcubo contém  
+### <a name="what-a-subcube-contains"></a>O que um subcubo contém  
  Embora a instrução CREATE SUBCUBE seja bem simples de usar, a instrução em si não mostra explicitamente todos os membros que se tornam parte integrante do subcubo. Aplicam-se as regras a seguir na definição de um subcubo:  
   
 -   Se incluir o membro **(All)** de uma hierarquia, você incluirá todos os membros dessa hierarquia.  
@@ -58,7 +63,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  Por fim, se o contexto original não for substituído, as funções de conjunto de uma subseleção serão avaliadas no contexto da subseleção. Se o contexto for substituído, as funções de conjunto serão avaliadas no contexto do cubo inteiro.  
   
-## Exemplo de CREATE SUBCUBE  
+## <a name="create-subcube-example"></a>Exemplo de CREATE SUBCUBE  
  O exemplo a seguir cria um subcubo que restringe o cubo Orçamento às contas 4200 e 4300:  
   
  `CREATE SUBCUBE Budget AS SELECT {[Account].[Account].&[4200], [Account].[Account].&[4300] } ON 0 FROM Budget`  
@@ -67,7 +72,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  `SELECT [Account].[Account].Members ON 0, Measures.Members ON 1 FROM Budget`  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Estabelecendo o contexto de cubo em uma consulta &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
  [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   

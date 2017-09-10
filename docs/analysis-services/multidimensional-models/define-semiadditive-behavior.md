@@ -1,28 +1,33 @@
 ---
-title: "Definir um comportamento semiaditivo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "semiaditivas"
-  - "aprimoramentos do Business Intelligence [Analysis Services], comportamento semiaditivo"
-  - "medidas [Analysis Services], semiaditivo"
+title: Definir comportamento Semiaditivo | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- semiadditive
+- Business Intelligence enhancements [Analysis Services], semiadditive behavior
+- measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9bbc456220e6b9e8d46c93699a38e2b2cb959ba2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definir um comportamento semiaditivo
+# <a name="define-semiadditive-behavior"></a>Definir um comportamento semiaditivo
   Medidas semiaditivas, que não agregam uniformemente todas as dimensões, são muito comuns em muitos cenários empresariais. Todo cubo que se baseia em instantâneos de balanços, com o decorrer do tempo, apresenta esse problema. Você encontra esses instantâneos em aplicativos que cuidam de títulos, saldos de contas, orçamentos, recursos humanos, apólices de seguros e sinistros e em vários outros domínios empresariais.  
   
  Adicione um comportamento semiaditivo a um cubo para definir um método de agregação para medidas ou membros individuais de um atributo de tipo de conta. Se o cubo contiver uma dimensão de conta, é possível definir automaticamente o comportamento semiaditivo de acordo com o tipo de conta.  
@@ -31,7 +36,7 @@ caps.handback.revision: 28
   
  Com exceção de LastChild que está disponível na edição standard, os comportamentos semiaditivos só estão disponíveis nas edições business intelligence ou enterprise.  
   
-## Definir comportamento semiaditivo  
+## <a name="define-semiadditive-behavior"></a>Definir um comportamento semiaditivo  
  Na página **Definir Comportamento Semiaditivo** do assistente, selecione como definir o aspecto semiaditivo selecionando uma destas opções:  
   
  **Desativar comportamento semiaditivo**  
@@ -51,7 +56,7 @@ caps.handback.revision: 28
   
 -   Nenhum.  
   
- Essa opção não altera as medidas com uma função de agregação regular: **Sum**, **Min**, **Max**, **Count** ou **Distinct****Count**.  
+ Essa opção não altera as medidas com uma função de agregação regular: **Sum**, **Min**, **Max**, **Count**ou **Distinct****Count**.  
   
  **O assistente detectou a dimensão de conta 'Conta", que contém membros semiaditivos. O servidor agregará membros dessa dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.**  
  Faz com que o sistema configure todas as medidas de um grupo de medidas de uma dimensão por uma dimensão do tipo Conta para a função de agregação Por Conta e o servidor agregará os membros da dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.  
@@ -80,7 +85,7 @@ caps.handback.revision: 28
 |Max|A função de agregação máxima é aplicada.|  
 |Min|A função de agregação mínima é aplicada.|  
 |Nenhum.|Nenhuma agregação é aplicada.|  
-|Sum|A função de soma padrão é aplicada.|  
+|SUM|A função de soma padrão é aplicada.|  
   
  Qualquer comportamento semiaditivo existente será substituído quando você concluir o assistente.  
   

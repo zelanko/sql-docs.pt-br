@@ -1,26 +1,31 @@
 ---
-title: "Criar uma consulta Singleton no Designer de Minera&#231;&#227;o de Dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "consultas singleton [Analysis Services]"
-  - "Previsão do modelo de mineração [Analysis Services], consultas singleton"
+title: "Criar uma consulta Singleton no Designer de mineração de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- singleton queries [Analysis Services]
+- Mining Model Prediction [Analysis Services], singleton queries
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dfbb55881c274dee8560cbba14319bcc831b38c2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Criar uma consulta Singleton no Designer de Minera&#231;&#227;o de Dados
+# <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Criar uma consulta Singleton no Designer de Mineração de Dados
   Uma consulta singleton será útil se você quiser criar uma previsão para um único caso. Para obter mais informações sobre as consultas singleton, veja [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md).  
   
  Na guia **Previsão do Modelo de Mineração** do Designer de Mineração de Dados, você pode criar vários tipos diferentes de consultas. Você pode criar uma consulta usando o designer ou digitando instruções DMX  (Extensões de Mineração de Dados). Você também pode começar com o designer e modificar a consulta que ele cria alterando as instruções DMX ou adicionando uma cláusula WHERE ou ORDER BY.  
@@ -39,7 +44,7 @@ AS [t]
   
  As etapas a seguir explicam como criar essa consulta de previsão.  
   
-### Para criar uma consulta singleton utilizando o Designer de Mineração de Dados  
+### <a name="to-create-a-singleton-query-by-using-the-data-mining-designer"></a>Para criar uma consulta singleton utilizando o Designer de Mineração de Dados  
   
 1.  Clique na guia **Previsão do Modelo de Mineração** do Designer de Mineração de Dados.  
   
@@ -63,7 +68,7 @@ AS [t]
   
      Por exemplo, arraste **Comprador de Bicicleta** para a coluna **Origem** .  
   
-6.  Adicione qualquer função extra à consulta, selecionando **Função de Previsão** ou **Expressão Personalizada** na lista suspensa na coluna **Origem**.  
+6.  Adicione qualquer função extra à consulta, selecionando **Função de Previsão** ou **Expressão Personalizada** na lista suspensa na coluna **Origem** .  
   
      Por exemplo, clique em **Função de Previsão**e selecione **PredictProbability**.  
   
@@ -79,7 +84,7 @@ AS [t]
   
      Uma tela nova se abre para mostrar o resultado da consulta. Para exibir a instrução DMX que você acabou de criar, clique em **SQL**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Consultas de previsão &#40;Mineração de dados&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

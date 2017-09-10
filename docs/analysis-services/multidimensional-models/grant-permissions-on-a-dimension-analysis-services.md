@@ -1,38 +1,43 @@
 ---
-title: "Conceder permiss&#245;es em uma dimens&#227;o (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.dimensions.f1"
-helpviewer_keywords: 
-  - "dimensões [Analysis Services], segurança"
-  - "permissões de leitura/gravação"
-  - "direitos de acesso do usuário [Analysis Services], dimensões"
-  - "permissões [Analysis Services], dimensões"
+title: "Conceder permissões em uma dimensão (Analysis Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.roledesignerdialog.dimensions.f1
+helpviewer_keywords:
+- dimensions [Analysis Services], security
+- read/write permissions
+- user access rights [Analysis Services], dimensions
+- permissions [Analysis Services], dimensions
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72ea5d3842b0fbf2f568606004b2de7a7e66825f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Conceder permiss&#245;es em uma dimens&#227;o (Analysis Services)
+# <a name="grant-permissions-on-a-dimension-analysis-services"></a>Conceder permissões em uma dimensão (Analysis Services)
   A segurança de dimensão é usada para definir permissões em um objeto de dimensão, e não em seus dados. Normalmente, permitir ou negar acesso a operações de processamento é o principal objetivo ao definir as permissões em uma dimensão.  
   
  No entanto, seu objetivo, talvez, não seja controlar as operações de processamento, mas sim o acesso a dados de uma dimensão ou aos atributos e hierarquias nela contidos. Por exemplo, uma empresa com divisões regionais de vendas pode querer disponibilizar as informações de desempenho de vendas para os que estão fora da divisão. Para permitir ou negar acesso a partes de dados de dimensão para diferentes constituintes, você pode definir as permissões em atributos de dimensão e membros de dimensão. Observe que você não pode negar acesso a um objeto de dimensão individual em si, apenas a seus dados. Se o seu objetivo imediato é permitir ou negar acesso a membros de uma dimensão, incluindo os direitos de acesso a hierarquias de atributo individuais, consulte [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) para obter mais informações.  
   
  O restante deste tópico abrange as permissões que podem ser definidas no próprio objeto de dimensão, incluindo:  
   
--   Permissões de leitura ou leitura/gravação (você só pode escolher entre leitura ou leitura/gravação; especificar "nenhum" não é uma opção). Como mencionado, se seu objetivo for restringir o acesso a dados de dimensão, consulte [Conceder acesso personalizado a dados de dimensão &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) para obter detalhes.  
+-   Permissões de leitura ou leitura/gravação (você só pode escolher entre leitura ou leitura/gravação; especificar "nenhum" não é uma opção). Como mencionado, se seu objetivo for restringir o acesso a dados de dimensão, consulte [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) para obter detalhes.  
   
 -   Permissões de processamento (faça isso quando cenários solicitarem uma estratégia de processamento que exija permissões personalizadas em objetos individuais)  
   
@@ -43,12 +48,12 @@ caps.handback.revision: 39
 > [!NOTE]  
 >  Por padrão, as permissões em uma dimensão de banco de dados são herdadas por uma dimensão de cubo. Por exemplo, se você habilitar **Leitura/Gravação** em uma dimensão de banco de dados de clientes, a dimensão do cubo do cliente herdará **Leitura/Gravação** no contexto da função atual. Você pode apagar as permissões herdadas se quiser substituir uma configuração de permissão.  
   
-## Definir permissões em uma dimensão de banco de dados  
+## <a name="set-permissions-on-a-database-dimension"></a>Definir permissões em uma dimensão de banco de dados  
  As dimensões de banco de dados são objetos autônomos em um banco de dados, permitindo a reutilização da dimensão dentro do mesmo modelo. Considere uma dimensão de banco de dados DATE usada várias vezes em um modelo, como as dimensões de cubo Data do Pedido, Data de Remessa e Data de Vencimento. Como os cubos e as dimensões do banco de dados são objetos pares em um banco de dados, você pode configurar as permissões de processamento de forma independente em cada objeto.  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Funções** para o banco de dados adequado no Pesquisador de Objetos e clique em uma função de banco de dados (ou crie uma nova função de banco de dados).  
   
-2.  No painel **Dimensões**, a definição de dimensão deve ser definida como **Todas as definições do banco de dados**.  
+2.  No painel **Dimensões** , a definição de dimensão deve ser definida como **Todas as definições do banco de dados**.  
   
      Por padrão, as permissões são definidas como **Leitura**.  
   
@@ -56,23 +61,23 @@ caps.handback.revision: 39
   
      Como opção, você pode definir as permissões **Ler Definição** e **Processo** em objetos de dimensão individuais, desde que essas permissões não estejam definidas no nível de banco de dados. Consulte [Conceder permissões de processo &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md) e [Conceder permissões de leitura de definição em metadados de objeto &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md) para obter detalhes.  
   
-## Definir permissões em uma dimensão de cubo  
+## <a name="set-permissions-on-a-cube-dimension"></a>Definir permissões em uma dimensão de cubo  
  As dimensões do cubo são dimensões de banco de dados que foram adicionadas a um cubo. Como tal, elas são estruturalmente dependentes de grupos de medidas associados. Embora você possa processar esses objetos atomicamente, em termos de autorização, faz sentido tratar os cubo e as dimensões de cubo como uma única entidade.  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Funções** para o banco de dados adequado no Pesquisador de Objetos e clique em uma função de banco de dados (ou crie uma nova função de banco de dados).  
   
-2.  No painel **Dimensões**, altere a definição da dimensão para <nome do cubo> **dimensões do cubo**.  
+2.  No **dimensões** painel, altere a definição da dimensão \<nome do cubo > **dimensões de cubo**.  
   
      Por padrão, as permissões são herdadas a partir de uma dimensão de banco de dados correspondente. Desmarque a caixa de seleção **Herdar** para alterar as permissões de **Leitura** para **Leitura/Gravação**. Antes de usar **Leitura/Gravação**, leia a observação na seção anterior.  
   
 > [!IMPORTANT]  
 >  Se você configurar permissões de função de banco de dados usando Objetos de Gerenciamento de Análise (AMO), qualquer referência a uma dimensão de cubo no atributo DimensionPermission de um cubo cortará a herança de permissão do atributo DimensionPermission do banco de dados. Para obter mais informações sobre AMO, consulte [Desenvolvendo com Objetos de Gerenciamento de Análise &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Funções e permissões &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
  [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Conceder permissões em estruturas e modelos de mineração de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Conceder permissões em estruturas de mineração de dados e modelos de &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Conceder acesso personalizado a dimensão de dados &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
  [Conceder acesso personalizado a dados de célula &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

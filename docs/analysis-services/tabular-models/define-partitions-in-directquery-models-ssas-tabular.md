@@ -1,29 +1,37 @@
 ---
-title: "Definir parti&#231;&#245;es em modelos DirectQuery (SSAS de Tabela) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Definir partições em modelos DirectQuery (SSAS Tabular) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: dd4570e403d7a7ffd72600efedf7023da8661d98
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definir parti&#231;&#245;es em modelos DirectQuery (SSAS de Tabela)
-  Esta seção explica como as partições são usadas em modelos DirectQuery. Para obter mais informações gerais sobre partições em modelos de tabela, consulte [Partições &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+# <a name="define-partitions-in-directquery-models"></a>Definir partições em modelos DirectQuery
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  Esta seção explica como as partições são usadas em modelos DirectQuery. Para obter mais informações gerais sobre partições em modelos de tabela, consulte [Partições &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 > [!NOTE]  
 >  Embora uma tabela possa ter várias partições, no modo DirectQuery, somente uma delas pode ser designada para uso na execução da consulta. O requisito de partição única se aplica a modelos DirectQuery em todos os níveis de compatibilidade.  
   
-## Usando partições no modo DirectQuery  
+## <a name="using-partitions-in-directquery-mode"></a>Usando partições no modo DirectQuery  
  Para cada tabela, você deve especificar uma única partição para usar como a fonte de dados DirectQuery.  Se houver várias partições, quando você alternar o modelo para habilitar o modo DirectQuery, por padrão a primeira partição que foi criada na tabela será sinalizada como a partição DirectQuery. Você pode alterar isso posteriormente usando o Gerenciador de Partições no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Por que permitir apenas uma partição única no modo DirectQuery?  
@@ -37,10 +45,10 @@ caps.handback.revision: 15
  Se você não definir a partição explicitamente, o mecanismo simplesmente emitirá uma consulta SQL à fonte de dados relacional inteira, executará qualquer operação baseada em conjunto ditada pela fórmula DAX e retornará os resultados da consulta.  
   
   
-## Alterar uma partição DirectQuery  
+## <a name="change-a-directquery-partition"></a>Alterar uma partição DirectQuery  
  Como apenas uma partição em uma tabela pode ser designada como a partição DirectQuery, por padrão, o Analysis Services usa a primeira partição criada na tabela. Durante a criação do projeto de modelo, você pode alterar a partição DirectQuery usando a caixa de diálogo Gerenciador de Partições no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para modelos implantados, você pode alterar a partição DirectQuery usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-#### Alterar a partição DirectQuery para um projeto de modelo de tabela  
+#### <a name="change-the-directquery-partition-for-a-tabular-model-project"></a>Alterar a partição DirectQuery para um projeto de modelo de tabela  
   
 1.  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], no designer de modelos, clique na tabela (guia) que contém a tabela particionada.  
   
@@ -52,11 +60,11 @@ caps.handback.revision: 15
   
 4.  Se necessário, altere as opções de processamento e clique em **OK**.  
   
-#### Alterar a partição DirectQuery para um modelo de tabela implantado  
+#### <a name="change-the-directquery-partition-for-a-deployed-tabular-model"></a>Alterar a partição DirectQuery para um modelo de tabela implantado  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra o banco de dados modelo no Pesquisador de Objetos.  
   
-2.  Expanda o nó **Tabelas**, clique com o botão direito do mouse na tabela particionada e selecione **Partições**.  
+2.  Expanda o nó **Tabelas** , clique com o botão direito do mouse na tabela particionada e selecione **Partições**.  
   
      A partição que é designada para uso com o modo DirectQuery tem o prefixo (DirectQuery) no nome da partição.  
   
@@ -64,7 +72,7 @@ caps.handback.revision: 15
   
 4.  Escolha outra partição na lista suspensa **Nome da Partição** e altere opções de processamento na partição, caso seja necessário.  
   
-## Partições em modelos armazenados em cache e em modelos DirectQuery  
+## <a name="partitions-in-cached-models-and-in-directquery-models"></a>Partições em modelos armazenados em cache e em modelos DirectQuery  
  Quando você configura uma partição DirectQuery, deve especificar opções de processamento para a partição.  
   
  Há duas opções de processamento para a partição DirectQuery. Para definir essa propriedade, use o **Gerenciador de Partições** no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e selecione a propriedade **Opção de Processamento** . A tabela a seguir lista os valores desta propriedade e descreve os efeitos de cada valor quando combinados com a propriedade DirectQueryUsage na cadeia de conexão:  
@@ -72,10 +80,10 @@ caps.handback.revision: 15
 |Propriedades**Cadeia de Conexão** |Propriedade**Opção de Processamento** |Observações|  
 |------------------------------------|------------------------------------|-----------|  
 |DirectQuery|Nunca processar esta partição|Quando o modelo só estiver usando o DirectQuery, o processamento nunca será necessário.<br /><br /> Em modelos híbridos, você pode configurar a partição DirectQuery para nunca ser processada. Por exemplo, se você estiver operando em um conjunto de dados muito grande e não desejar adicionar os resultados completos ao cache, poderá especificar que a partição DirectQuery inclua a união de resultados para todas as outras partições na tabela e que nunca processe a união. As consultas destinadas à fonte relacional não serão afetadas e as consultas em dados armazenados em cache combinarão dados das outras partições|  
-|DataView=Sample<br /><br /> Aplica-se a modelos de tabela 1200 usando modos de exibição de dados de exemplo|Permitir que a partição seja processada|Se o modelo estiver usando dados de exemplo, você poderá processar a tabela para retornar um conjunto de dados filtrado que fornece indicações visuais durante o design do modelo.|  
+|DataView=Sample<br /><br /> Aplica-se a modelos de tabela usando modos de exibição de dados de exemplo|Permitir que a partição seja processada|Se o modelo estiver usando dados de exemplo, você poderá processar a tabela para retornar um conjunto de dados filtrado que fornece indicações visuais durante o design do modelo.|  
 |DirectQueryUsage=InMemory With DirectQuery<br /><br /> Aplica-se a modelos de tabela 1100 ou 1103 em execução em uma combinação de modo na memória e DirectQuery|Permitir que a partição seja processada|Se o modelo estiver usando o modo híbrido, você deve usar a mesma partição para consultas na fonte de dados em memória e DirectQuery.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Partições &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
   
   

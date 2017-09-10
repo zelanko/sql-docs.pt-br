@@ -1,27 +1,32 @@
 ---
-title: "Adicionar uma a&#231;&#227;o padr&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Adicionar uma ação padrão | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f084616a0dd548fe9ee939f5e770b1f69f125f1
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Adicionar uma a&#231;&#227;o padr&#227;o
+# <a name="add-a-standard-action"></a>Adicionar uma ação padrão
   Você adiciona uma ação a um banco de dados usando a exibição Ações no Designer de Cubo. Essa exibição pode ser acessada pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Depois de você criar uma ação, ela ficará disponível a usuários depois que você reprocessar o cubo pertinente. Para obter mais informações, consulte [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
-### Criar uma ação  
+### <a name="to-create-an-action"></a>Criar uma ação  
   
 1.  Abra o cubo para o qual deseja criar uma ação, e clique na guia **Ações** .  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 7
   
     -   Em **Nome**, digite um nome para a ação.  
   
-    -   Na lista suspensa **Tipo de destino**, selecione o tipo de objeto ao qual você quer anexar a ação. O objeto que você selecionar em **Tipo de Destino** determina os objetos que estão disponíveis e o tipo de seleção que você pode fazer em **Objeto de Destino**. A tabela a seguir lista as seleções de **Objeto de Destino** válidas para cada tipo de destino.  
+    -   Na lista suspensa **Tipo de destino** , selecione o tipo de objeto ao qual você quer anexar a ação. O objeto que você selecionar em **Tipo de Destino** determina os objetos que estão disponíveis e o tipo de seleção que você pode fazer em **Objeto de Destino**. A tabela a seguir lista as seleções de **Objeto de Destino** válidas para cada tipo de destino.  
   
         |Se você selecionar o tipo de destino a seguir|Faça a seleção a seguir em Objeto de Destino|  
         |---------------------------------------------|---------------------------------------------------|  
@@ -46,7 +51,7 @@ caps.handback.revision: 7
   
     -   (Opcional.) Em **Condição**, crie uma expressão MDX para limitar o destino da ação. Você pode digitar a expressão manualmente ou pode arrastar itens das guias **Metadados** e **Funções** .  
   
-    -   Na lista suspensa **Tipo**, selecione o tipo de ação que você quer criar. A tabela a seguir lista os tipos de ações disponíveis.  
+    -   Na lista suspensa **Tipo** , selecione o tipo de ação que você quer criar. A tabela a seguir lista os tipos de ações disponíveis.  
   
         |Tipo|Description|  
         |----------|-----------------|  
@@ -79,6 +84,6 @@ caps.handback.revision: 7
   
     -   Em **Legenda**, digite uma legenda ou uma expressão MDX avaliada como uma legenda. Esta legenda é exibida para usuários finais quando a ação é iniciada. Se você não especificar uma legenda, o nome da ação será usado.  
   
-    -   Na lista suspensa **A legenda é MDX**, especifique se a legenda é MDX. Este campo indica para o servidor se deve avaliar o conteúdo de **Legenda** como uma expressão MDX.  
+    -   Na lista suspensa **A legenda é MDX** , especifique se a legenda é MDX. Este campo indica para o servidor se deve avaliar o conteúdo de **Legenda** como uma expressão MDX.  
   
   

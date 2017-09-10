@@ -1,24 +1,33 @@
 ---
-title: "Conectar-se de aplicativos cliente (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Conecte-se de aplicativos de cliente (Analysis Services) | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.connection.login.analysisserver.f1
+- sql13.swb.connecttoas.connectionproperties.f1
+- sql13.swb.connecttoas.login.f1
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 1316b995a0d12f3ee358a9e355925dfc334473a4
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Conectar-se de aplicativos cliente (Analysis Services)
+# <a name="connect-from-client-applications-analysis-services"></a>Conectar-se de aplicativos cliente (Analysis Services)
   Se você é novato no Analysis Services, use as informações deste tópico para se conectar a uma instância existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando ferramentas e aplicativos comuns. Este tópico também explica como se conectar em identidades de usuário diferentes para fins de teste.  
   
 -   [Conectar usando o SQL Server Management Studio (SSMS)](#bkmk_SSMS)  
@@ -42,7 +51,7 @@ caps.handback.revision: 9
   
  Você pode testar permissões executando o SSMS em uma identidade de usuário específica e, em seguida, conectar-se ao Analysis Services como esse usuário.  
   
- Mantenha pressionada a tecla Shift e clique com o botão direito do mouse no atalho do **SQL Server Management Studio** para acessar a opção **Executar como um usuário diferente**.  
+ Mantenha pressionada a tecla Shift e clique com o botão direito do mouse no atalho do **SQL Server Management Studio** para acessar a opção **Executar como um usuário diferente** .  
   
 1.  Inicie o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Na caixa de diálogo **Conectar ao Servidor** , selecione o tipo de servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
@@ -77,7 +86,7 @@ caps.handback.revision: 9
   
  Você pode testar permissões iniciando o Excel em uma identidade de usuário específica.  
   
- Mantenha pressionada a tecla Shift e clique com o botão direito do mouse no atalho do **Excel** para acessar a opção **Executar como usuário diferente**.  
+ Mantenha pressionada a tecla Shift e clique com o botão direito do mouse no atalho do **Excel** para acessar a opção **Executar como usuário diferente** .  
   
 1.  Na guia Dados do Excel, clique em **De Outras Fontes**e clique em **Do Analysis Services**. Digite o nome do servidor e selecione um cubo ou uma perspectiva para consulta.  
   
@@ -120,7 +129,7 @@ caps.handback.revision: 9
   
      Para testar, use o Excel ou o SSMS em um computador remoto, especificando o endereço IP e a porta usados pela instância do Analysis Services. Se você conseguir estabelecer a conexão, as regras de firewall são válidas para a instância e esta permite conexões remotas.  
   
-     Além disso, quando o TCP/IP for o protocolo de conexão, lembre-se de que o Analysis Services exige que as conexões de cliente se originem no mesmo domínio ou em um domínio confiável. Se as conexões ultrapassarem os limites de segurança, você provavelmente precisará configurar o acesso HTTP. Para obter mais informações, consulte [Configurar o acesso HTTP ao Analysis Services nos Serviços de Informações da Internet &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).  
+     Além disso, quando o TCP/IP for o protocolo de conexão, lembre-se de que o Analysis Services exige que as conexões de cliente se originem no mesmo domínio ou em um domínio confiável. Se as conexões ultrapassarem os limites de segurança, você provavelmente precisará configurar o acesso HTTP. Para obter mais informações, consulte [Configurar o acesso HTTP ao Analysis Services nos Serviços de Informações da Internet &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
 -   Você pode se conectar usando algumas ferramentas mas não outras? A causa do problema pode ser a versão incorreta de uma biblioteca de cliente. Você pode obter bibliotecas de cliente na página de download do SQL Server Feature Pack.  
   
@@ -128,10 +137,10 @@ caps.handback.revision: 9
   
  [Resolvendo problemas comuns de conectividade nos cenários de conectividade do SQL Server 2005 Analysis Services](http://technet.microsoft.com/library/cc917670.aspx). Este documento não é recente, mas as informações e as metodologias ainda se aplicam.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Conectar ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Metodologias de autenticação com suporte no Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Representação &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
+ [Representação &#40; SSAS de tabela &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
  [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

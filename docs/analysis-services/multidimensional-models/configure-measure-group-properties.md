@@ -1,29 +1,34 @@
 ---
-title: "Configurar propriedades do grupo de medidas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "propriedades [Analysis Services], grupos de medidas"
+title: Configurar propriedades do grupo de medidas | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- properties [Analysis Services], measure groups
 ms.assetid: fa66bdb6-60b8-413c-ac2a-00e4d09f60a2
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16613e83f5632864fd86ff46067a72ed9dc88539
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurar propriedades do grupo de medidas
+# <a name="configure-measure-group-properties"></a>Configurar propriedades do grupo de medidas
   Os grupos de medidas têm propriedades que lhe permitem definir como eles funcionam.  
   
-## Propriedades do grupo de medidas  
+## <a name="measure-group-properties"></a>Propriedades do grupo de medidas  
  As propriedades do grupo de medidas determinam o comportamento de todo o grupo de medidas e definem o comportamento padrão de determinadas propriedades das medidas de um grupo de medidas.  
   
 |Propriedade|Definição|  
@@ -31,7 +36,7 @@ caps.handback.revision: 17
 |**AggregationPrefix**|Aplica-se ao armazenamento ROLAP. Atribui um prefixo comum às exibições indexadas no SQL Server, usado para armazenar agregações para as partições associadas a esse grupo de medidas.|  
 |**DataAggregation**|Essa propriedade é reservada para uso futuro e atualmente não tem nenhum efeito. Portanto, é recomendável que você não modifique essa configuração.|  
 |**Description**|Você pode usar essa propriedade para documentar o grupo de medidas.|  
-|**ErrorConfiguration**|As definições configuráveis de tratamento de erros para tratamento de chaves duplicadas, chaves desconhecidas, chaves nulas, limites de erro, ação devido à detecção de erros, arquivo de log de erros. Consulte [Configuração de erros para cubo, partição e processamento da dimensão &#40;SSAS – multidimensional&#41;](../../analysis-services/multidimensional-models/error configuration for cube, partition, and dimension processing.md).|  
+|**ErrorConfiguration**|As definições configuráveis de tratamento de erros para tratamento de chaves duplicadas, chaves desconhecidas, chaves nulas, limites de erro, ação devido à detecção de erros, arquivo de log de erros. Consulte [Configuração de erros para cubo, partição e processamento da dimensão &#40;SSAS – multidimensional&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
 |**EstimatedRows**|Especifica o número de linhas estimado da tabela de fatos.|  
 |**EstimatedSize**|Especifica o tamanho estimado (em bytes) do grupo de medidas.|  
 |**ID**|Especifica o identificador do objeto.|  

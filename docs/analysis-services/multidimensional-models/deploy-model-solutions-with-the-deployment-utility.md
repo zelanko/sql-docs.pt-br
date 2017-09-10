@@ -1,32 +1,37 @@
 ---
-title: "Implantar solu&#231;&#245;es modelo com o Utilit&#225;rio de Implanta&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "implantando [Analysis Services], prompt de comando"
-  - "utilitários de prompt de comando [SQL Server], Microsoft.AnalysisServices.Deployment"
-  - "Utilitário Microsoft.AnalysisServices.Deployment"
-  - "implantações do Analysis Services, prompt de comando"
+title: "Implantar soluções modelo com o utilitário de implantação | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deploying [Analysis Services], command prompt
+- command prompt utilities [SQL Server], Microsoft.AnalysisServices.Deployment
+- Microsoft.AnalysisServices.Deployment utility
+- Analysis Services deployments, command prompt
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bd590943c8922087164bd4759faaf7e39af720b
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Implantar solu&#231;&#245;es modelo com o Utilit&#225;rio de Implanta&#231;&#227;o
+# <a name="deploy-model-solutions-with-the-deployment-utility"></a>Implantar soluções modelo com o Utilitário de Implantação
   O utilitário **Microsoft.AnalysisServices.Deployment** permite iniciar o mecanismo de implantação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no prompt de comando. Como arquivo de entrada, o utilitário usa os arquivos de saída XML gerados pela construção de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Os arquivos de entrada são facilmente modificáveis para personalizar a implantação de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . O script de implantação gerado pode ser executado imediatamente ou pode ser salvo para implantação posterior.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -61,7 +66,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 > [!NOTE]  
 >  O argumento **/d** é usado apenas no modo de saída. Esse argumento será ignorado se especificado em modo de resposta ou sem confirmação. Para obter mais informações sobre modos, consulte a seção, [Modos](#Modes), mais adiante neste tópico.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  O utilitário **Microsoft.AnalysisServices.Deployment** usa um conjunto de arquivos que fornecem as definições de objetos, destinos da implantação, opções da implantação e definições da configuração e tenta implantar as definições de objetos nos destinos de implantação especificados usando as opções de implantação e os parâmetros de configuração especificados. Esse utilitário pode fornecer uma interface do usuário quando invocado em modo de arquivo de resposta ou de saída. Para obter mais informações sobre como usar a interface do usuário fornecida para esse utilitário para criar arquivos de resposta, consulte [Implantar soluções modelo usando o Assistente de Implantação](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
  O utilitário está localizado na pasta \Arquivos de programas (x86)\Microsoft SQL Server\110\Binn\ManagementStudio.  
@@ -77,7 +82,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
   
  [Voltar para Argumentos](#Arguments)  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra como implantar um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em modo sem confirmação, registrando as mensagens de progresso e de erro para revisão posterior:  
   
  `Microsoft.AnalysisServices.Deployment.exe`  
@@ -86,7 +91,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
   
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

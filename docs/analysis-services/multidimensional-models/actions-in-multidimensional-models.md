@@ -1,29 +1,34 @@
 ---
-title: "A&#231;&#245;es em modelos multidimensionais | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ações [Analysis Services], criando"
-  - "ações de relatório [Analysis Services]"
-  - "ações de extração de detalhes [Analysis Services]"
-  - "cubos [Analysis Services], ações"
+title: "Ações em modelos multidimensionais | Microsoft Docs"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- actions [Analysis Services], creating
+- report actions [Analysis Services]
+- drillthrough actions [Analysis Services]
+- cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4b7d3b0523fb19b9b0d7e0542cc587fb1585992
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# A&#231;&#245;es em modelos multidimensionais
+# <a name="actions-in-multidimensional-models"></a>Ações em modelos multidimensionais
   Uma ação é uma operação iniciada pelo usuário final em um cubo selecionado ou em parte de um cubo. A operação pode iniciar um aplicativo com o item selecionado como parâmetro ou pode recuperar informações sobre o item selecionado. Para obter mais informações sobre ações, consulte [Ações &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
  Use a guia **Ações** do Designer de Cubo para criar ações para um cubo. Especifique o seguinte:  
@@ -82,8 +87,8 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Use o Analysis Services Scripting Language (ASSL) ou o Objetos de Gerenciamento de Análise (AMO) para definir tipos de ação HTML ou de linha de comando. Para obter mais informações, consulte [Elemento Action &#40;ASSL&#41;](../../analysis-services/scripting/objects/action-element-assl.md), [Elemento Type &#40;Ação&#41; &#40;ASSL&#41;](../../analysis-services/scripting/properties/type-element-action-assl.md) e [Programando objetos OLAP AMO avançados](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md).  
   
-## Criando uma ação de relatório  
- O servidor de relatório responde a solicitações baseadas na URL para relatórios. Para criar uma ação de relatório, no menu **Cubo**, clique em **Nova Ação de Relatório**. As opções a seguir são específicas de uma ação de relatório.  
+## <a name="creating-a-reporting-action"></a>Criando uma ação de relatório  
+ O servidor de relatório responde a solicitações baseadas na URL para relatórios. Para criar uma ação de relatório, no menu **Cubo** , clique em **Nova Ação de Relatório**. As opções a seguir são específicas de uma ação de relatório.  
   
  **Servidor de relatório**  
  As propriedades descritas na tabela a seguir são especificadas para o servidor de relatório.  
@@ -121,13 +126,13 @@ parametervalue1
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  
 ```  
   
-## Criando um ação de detalhamento  
- Uma ação de extração de detalhes é definida por uma ação de conjunto de linhas, retornada ao aplicativo cliente como uma instrução de extração de detalhes. O destino de ação é um membro de um grupo de medidas. Para criar uma nova ação de drillthrough, no menu **Cubo**, clique em **Nova Ação de Drillthrough**. As opções a seguir são específicas de uma ação de extração de detalhes:  
+## <a name="creating-a-drillthrough-action"></a>Criando um ação de detalhamento  
+ Uma ação de extração de detalhes é definida por uma ação de conjunto de linhas, retornada ao aplicativo cliente como uma instrução de extração de detalhes. O destino de ação é um membro de um grupo de medidas. Para criar uma nova ação de drillthrough, no menu **Cubo** , clique em **Nova Ação de Drillthrough**. As opções a seguir são específicas de uma ação de extração de detalhes:  
   
  **Colunas de Extração de Detalhes**  
  Selecione uma ou mais dimensões e, para cada uma, as colunas de detalhamento retornadas ao aplicativo cliente pela ação.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Cubos em modelos multidimensionais](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

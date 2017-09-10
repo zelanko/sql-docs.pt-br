@@ -1,28 +1,33 @@
 ---
-title: "Aplicar um filtro a um modelo de minera&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/19/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "filtro de modelo [mineração de dados]"
-  - "filtros [mineração de dados]"
-  - "filtrando as linhas de entrada [Analysis Services]"
-  - "filtrando dados [Analysis Services]"
+title: "Aplicar um filtro a um modelo de mineração | Microsoft Docs"
+ms.custom: 
+ms.date: 03/19/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- model filter [data mining]
+- filters [data mining]
+- filtering input rows [Analysis Services]
+- filtering data [Analysis Services]
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: a3e32512c4cb0139b838195d3a03e8384183a11a
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Aplicar um filtro a um modelo de minera&#231;&#227;o
+# <a name="apply-a-filter-to-a-mining-model"></a>Aplicar um filtro a um modelo de mineração
   Se a sua estrutura de mineração tiver uma tabela aninhada, você poderá aplicar um filtro à tabela de casos, à tabela aninhada ou a ambas.  
   
  O procedimento a seguir indica como criar os dois tipos de filtros: filtros de caso e filtros nas linhas da tabela aninhada.  
@@ -38,7 +43,7 @@ AND EXISTS (SELECT * FROM [<nested table name>]
 WHERE [Model] <> 'Water Bottle' )   
 ```  
   
-### Para criar um filtro de caso em um modelo de mineração  
+### <a name="to-create-a-case-filter-on-a-mining-model"></a>Para criar um filtro de caso em um modelo de mineração  
   
 1.  Em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], no Gerenciador de Soluções, clique na estrutura de mineração que contém o modelo de mineração a filtrar.  
   
@@ -48,9 +53,9 @@ WHERE [Model] <> 'Water Bottle' )
   
      –ou–  
   
-     Selecione o modelo. Em seguida, no menu **Modelo de Mineração**, selecione **Definir Filtro de Modelos**.  
+     Selecione o modelo. Em seguida, no menu **Modelo de Mineração** , selecione **Definir Filtro de Modelos**.  
   
-4.  Na caixa de diálogo **Filtro de Modelos**, clique na linha superior da grade, na caixa de texto **Coluna da Estrutura de Mineração**.  
+4.  Na caixa de diálogo **Filtro de Modelos** , clique na linha superior da grade, na caixa de texto **Coluna da Estrutura de Mineração** .  
   
 5.  Se a fonte de dados tiver uma tabela simples, a listagem suspensa exibirá somente os nomes das colunas nessa tabela.  
   
@@ -84,9 +89,9 @@ WHERE [Model] <> 'Water Bottle' )
   
 13. A condição de filtro na caixa de texto Expressão é atualizada automaticamente para incluir a nova condição. A expressão completa é a seguinte: `[Income] > '30000'AND [Income] < '40000'`  
   
-### Para adicionar um filtro na tabela aninhada em um modelo de mineração  
+### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>Para adicionar um filtro na tabela aninhada em um modelo de mineração  
   
-1.  Na caixa de diálogo **\<nome>Filtro de Modelos**, clique em uma linha vazia da grade em **Coluna da Estrutura de Mineração**.  
+1.  No  **\<nome > filtro de modelo** caixa de diálogo, clique em uma linha vazia na grade, em **coluna da estrutura de mineração**.  
   
 2.  Selecione o nome da tabela aninhada na lista suspensa.  
   
@@ -94,11 +99,11 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  Clique na caixa de texto **Operador** e selecione **Contém** ou **Não Contém**.  
   
-     Essas são as únicas condições disponíveis para a tabela aninhada na caixa de diálogo **Filtro de Modelos**, pois você está restringindo a tabela de casos a apenas aqueles que têm um determinado valor na tabela aninhada. Você definirá o valor da condição na tabela aninhada na próxima etapa.  
+     Essas são as únicas condições disponíveis para a tabela aninhada na caixa de diálogo **Filtro de Modelos** , pois você está restringindo a tabela de casos a apenas aqueles que têm um determinado valor na tabela aninhada. Você definirá o valor da condição na tabela aninhada na próxima etapa.  
   
 4.  Clique na caixa **Valor** e no botão **(…)** para compilar uma expressão.  
   
-     A caixa de diálogo **\<nome>Filtro** é exibida. Essa caixa de diálogo só pode definir condições na tabela atual, que neste caso é a tabela aninhada.  
+     O  **\<nome > filtro** caixa de diálogo é aberta. Essa caixa de diálogo só pode definir condições na tabela atual, que neste caso é a tabela aninhada.  
   
 5.  Clique na caixa **Coluna da Estrutura de Mineração** e selecione o nome de coluna nas listas suspensas das colunas da tabela aninhada.  
   
@@ -106,7 +111,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  Clique em **Valor** e digite um valor.  
   
-     Por exemplo, para **Coluna da Estrutura de Mineração** selecione **Modelo**. Para **Operador**, selecione **<>** e digite o valor **Garrafa de Água**. Essa condição cria a seguinte expressão de filtro:  
+     Por exemplo, para **Coluna da Estrutura de Mineração** selecione **Modelo**. Para **Operador**, selecione **<>**e digite o valor **Garrafa de Água**. Essa condição cria a seguinte expressão de filtro:  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -115,20 +120,19 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 > [!NOTE]  
 >  Como o número de atributos da tabela aninhada é potencialmente ilimitado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não fornece a lista dos possíveis valores a serem selecionados. Você deve digitar o valor exato. Você não pode usar um operador LIKE em uma tabela aninhada.  
   
-1.  Adicione mais condições conforme a necessidade, combinando as condições ao selecionar **AND** ou **OR** na caixa **AND/OR** à esquerda da grade **Condições**. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  Adicione mais condições conforme a necessidade, combinando as condições ao selecionar **AND** ou **OR** na caixa **AND/OR** à esquerda da grade **Condições** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-2.  Na caixa de diálogo **Filtro de Modelos**, examine as condições que você criou usando a caixa de diálogo **Filtro**. As condições para a tabela aninhada são acrescentadas às condições da tabela de casos, e o conjunto completo das condições de filtro é exibido na caixa de texto **Expressão**.  
+2.  Na caixa de diálogo **Filtro de Modelos** , examine as condições que você criou usando a caixa de diálogo **Filtro** . As condições para a tabela aninhada são acrescentadas às condições da tabela de casos, e o conjunto completo das condições de filtro é exibido na caixa de texto **Expressão** .  
   
 3.  Se desejar, clique em **Editar Consulta** para alterar manualmente a expressão de filtro.  
   
     > [!NOTE]  
     >  Se você alterar manualmente qualquer parte da expressão de filtro, a grade será desabilitada e, assim sendo, você deverá trabalhar com a expressão de filtro apenas no modo de edição de texto. Para restaurar o modo de edição da grade, você deve apagar a expressão de filtro e iniciar novamente.  
   
-4.  
-  
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [Tarefas e instruções do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Excluir um filtro de um modelo de mineração](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   
+

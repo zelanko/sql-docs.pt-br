@@ -1,52 +1,57 @@
 ---
-title: "Criar uma consulta de minera&#231;&#227;o de dados usando XMLA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "consultas a conteúdo [DMX]"
+title: "Criar uma consulta de mineração de dados usando o XMLA | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- content queries [DMX]
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 750a40e26b044bbbd761cc19ebf9a30133eed7e0
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Criar uma consulta de minera&#231;&#227;o de dados usando XMLA
+# <a name="create-a-data-mining-query-by-using-xmla"></a>Criar uma consulta de mineração de dados usando XMLA
   Você pode criar várias consultas referentes a objetos de mineração de dados usando AMO, DMX ou XML/A.  
   
  O XML é usado para comunicação entre o servidor Analysis Services e todos os clientes. Assim, embora geralmente seja muito mais fácil criar consultas de conteúdo usando DMX, você pode escrever consultas usando as instruções DISCOVER e COMMAND em XML/A, com um cliente que dê suporte a protocolo SOAP ou criando uma consulta XML/A no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Este tópico explica como usar os modelos XML/A disponíveis no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para criar uma consulta de conteúdo de modelo referente a um modelo de mineração armazenado no servidor atual.  
   
-## Consultando conjuntos de linhas de esquema de mineração de dados usando XML/A  
+## <a name="querying-data-mining-schema-rowsets-by-using-xmla"></a>Consultando conjuntos de linhas de esquema de mineração de dados usando XML/A  
   
-#### Para abrir um modelo XML/A  
+#### <a name="to-open-an-xmla-template"></a>Para abrir um modelo XML/A  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no menu **Exibir** , clique em **Gerenciador de Modelos**.  
   
 2.  Clique no ícone de cubo para abrir a lista de modelos do Analysis Services.  
   
-3.  Na lista de categorias de modelo, expanda **XMLA**, **Conjuntos de Linhas do Esquema** e clique duas vezes em **Descobrir Conjuntos de Linhas do Esquema** para abrir o modelo no editor de código apropriado.  
+3.  Na lista de categorias de modelo, expanda **XMLA**, **Conjuntos de Linhas do Esquema**e clique duas vezes em **Descobrir Conjuntos de Linhas do Esquema** para abrir o modelo no editor de código apropriado.  
   
 4.  Na caixa de diálogo **Conectar ao Analysis Services** , preencha as informações de conexão e clique em **Conectar**. Uma nova janela do editor de consulta é aberta, populada com o modelo **Descobrir Conjuntos de Linhas do Esquema** .  
   
-#### Para descobrir nomes de coluna do conjunto de linhas de esquema MINING MODEL CONTENT  
+#### <a name="to-discover-column-names-from-the-mining-model-content-schema-rowset"></a>Para descobrir nomes de coluna do conjunto de linhas de esquema MINING MODEL CONTENT  
   
 1.  Com o modelo **Descobrir Conjuntos de Linhas do Esquema** aberto, clique em **Executar**.  
   
      Uma lista dos conjuntos de linha de esquema é retornada no painel **Resultados** que contém os nomes de todos os conjuntos de linhas disponíveis na instância atual.  
   
-2.  No painel **Consulta**, coloque o cursor depois de **\<Lista de Restrições>** e pressione ENTER para adicionar uma nova linha.  
+2.  No **consulta** painel, coloque o cursor depois  **\<lista de restrições >** e pressione ENTER para adicionar uma nova linha.  
   
-3.  Coloque o cursor na linha em branco e digite **\<SchemaName>DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName>**  
+3.  Posicione o cursor na linha em branco e digite  **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
   
      A seção completa de restrições deverá ser parecida com esta:  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 11
   
      O painel **Resultados** mostra uma lista de nomes de colunas do conjunto de linhas do esquema especificado.  
   
-#### Para criar uma consulta de conteúdo usando o conjunto de linhas do esquema de MINING MODEL CONTENT  
+#### <a name="to-create-a-content-query-using-the-mining-model-content-schema-rowset"></a>Para criar uma consulta de conteúdo usando o conjunto de linhas do esquema de MINING MODEL CONTENT  
   
 1.  No modelo **Descobrir Conjuntos de Linhas do Esquema** , altere o tipo de solicitação substituindo o texto dentro das marcas de tipo de solicitação.  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 11
   
      pela seguinte linha:  
   
-     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</RequestType>**  
+     **\<RequestType > DMSCHEMA_MINING_MODEL_CONTENT\</RequestType >**  
   
 2.  Altere a lista de restrições para especificar um modelo de mineração pelo nome, adicionando uma nova condição às listas de restrições.  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 11
   
      O painel Resultados exibe a definição de esquema, junto com os valores para o modelo especificado.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Conjuntos de linhas de esquema de mineração de dados](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   

@@ -1,29 +1,34 @@
 ---
-title: "Criar uma estrutura de minera&#231;&#227;o relacional | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dimensões [Analysis Services], mineração de dados"
-  - "mineração de dados [Analysis Services], estrutura"
-  - "estruturas de mineração [Analysis Services], criando"
-  - "modelos de mineração relacional [Analysis Services]"
-  - "modelos de mineração OLAP [Analysis Services]"
+title: "Criar uma estrutura de mineração relacional | Microsoft Docs"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], data mining
+- data mining [Analysis Services], structure
+- mining structures [Analysis Services], creating
+- relational mining models [Analysis Services]
+- OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 82fa652f76c1818ef6538b379723e7f91c8482ab
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Criar uma estrutura de minera&#231;&#227;o relacional
+# <a name="create-a-relational-mining-structure"></a>Criar uma estrutura de mineração relacional
   A maioria dos modelos de mineração de dados são baseados em fontes de dados relacionais. As vantagens de criar um modelo de mineração de dados relacional são que você pode montar dados ad hoc, além de treinar e atualizar um modelo sem a complexidade de criar um cubo.  
   
  Uma estrutura de mineração relacional pode tirar dados de origens distintas. Os dados brutos podem ser armazenados em tabelas, arquivos ou sistemas de banco de dados relacional, contanto que os dados possam ser definidos como parte da exibição da fonte de dados. Por exemplo, você deve usar uma estrutura de mineração relacional se seus dados estiverem no Excel, um data warehouse de SQL Server ou um banco de dados de relatório de SQL Server, ou em origens externas que são acessadas pelos provedores OLE DB ou ODBC.  
@@ -42,7 +47,7 @@ caps.handback.revision: 35
   
  [Por que e como habilitar detalhamento](#BKMK_DrillThru)  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Primeiro, você deve ter uma fonte de dados existente. Você pode usar o designer de Fonte de Dados para configurar uma fonte de dados, se já não houver uma. Para obter mais informações, veja [Criar uma fonte de dados &#40;SSAS – Multidimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
  Em seguida, use o Assistente de Exibição da Fonte de Dados para montar dados exigidos em uma única exibição da fonte de dados. Para obter mais informações sobre como você pode selecionar, transformar, filtrar ou gerenciar dados com exibições da fonte de dados, consulte [Exibições de fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -124,11 +129,11 @@ caps.handback.revision: 35
 > [!WARNING]  
 >  Para usar o detalhamento, você deve habilitá-lo quando você cria a estrutura de mineração. Você pode habilitar o detalhamento em modelos posteriormente, definindo uma propriedade no modelo, mas as estruturas de mineração exigem que esta opção seja definida no início. Para obter mais informações, consulte [Consultas de detalhamento &#40;Mineração de dados&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Designer de Mineração de Dados](../../analysis-services/data-mining/data-mining-designer.md)   
- [Assistente de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [Assistente de mineração de dados &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [Propriedades do modelo de mineração](../../analysis-services/data-mining/mining-model-properties.md)   
- [Propriedades para estruturas de mineração e colunas de estrutura](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
+ [Propriedades de estrutura de mineração e colunas de estrutura](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
  [Tarefas e instruções da estrutura de mineração](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

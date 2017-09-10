@@ -1,35 +1,42 @@
 ---
-title: "Compatibilidade de f&#243;rmulas DAX no modo DirectQuery (SSAS 2016) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Compatibilidade de fórmula do DAX no modo DirectQuery (SSAS 2016) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d7c13126b258662572b5ad5a9b02bcf7921c2346
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Compatibilidade de f&#243;rmulas DAX no modo DirectQuery (SSAS 2016)
-Um dos aprimoramentos mais significativos em [!INCLUDE[ssASCurrent_md](../../includes/ssascurrent-md.md)] é a funcionalidade do modo DirectQuery para modelos tabulares 1200. Muitas limitações funcionais em versões anteriores não se aplicam mais. Especificamente para as fórmulas DAX:
+# <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilidade de fórmulas DAX no modo DirectQuery 
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+1200 e superior para modelos de tabela no modo DirectQuery, muitas limitações funcionais em versões anteriores não se aplicarão mais. Especificamente para as fórmulas DAX:
 
 - O DirectQuery agora gera consultas mais simples, fornecendo melhor desempenho.
-- A RLS (segurança em nível de linha) agora tem suporte em modelos 1200 no modo DirectQuery.
-- As colunas calculadas agora têm suporte em modelos tabulares 1200 no modo DirectQuery.
+- Agora há suporte para a segurança em nível de linha (RLS) no modo DirectQuery.
+- Colunas calculadas agora têm suporte para modelos de tabela no modo DirectQuery.
 
-## Funções DAX no modo DirectQuery
+## <a name="dax-functions-in-directquery-mode"></a>Funções DAX no modo DirectQuery
 
-Em resumo, todas as funções DAX têm suporte nos modelos tabulares DirectQuery 1200. No entanto, nem todas as funções têm suporte em todos os tipos de fórmula e nem todas as foram otimizadas para modelos tabulares DirectQuery 1200. Nível mais básico, podemos separar as funções DAX em dois grupos: otimizadas e não otimizadas. Primeiro, vamos examinar com mais detalhes as funções otimizadas.
+Em resumo, todas as funções DAX têm suporte para modelos DirectQuery. No entanto, nem todas as funções têm suporte para todos os tipos de fórmula, e nem todas as funções foram otimizadas para modelos DirectQuery. Nível mais básico, podemos separar as funções DAX em dois grupos: otimizadas e não otimizadas. Primeiro, vamos examinar com mais detalhes as funções otimizadas.
 
 
-### Otimizada para DirectQuery
+### <a name="optimized-for-directquery"></a>Otimizada para DirectQuery
 Essas são funções que retornam principalmente resultados de agregação ou escalares. Essas funções são divididas entre aquelas que têm suporte em todos os tipos de fórmulas: medidas, consultas, colunas calculadas, segurança em nível de linha e aquelas que têm suporte somente em fórmulas de medida e de consulta. Eles incluem:    
 
 | Com suporte em todas as fórmulas DAX                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Com suporte apenas em fórmulas de medida e de consulta                                                                                                                                                                                                                                                                                                |
@@ -38,8 +45,8 @@ Essas são funções que retornam principalmente resultados de agregação ou es
 
 
 
-### Não otimizada para DirectQuery
-Essas funções não foram otimizadas para funcionar com DirectQuery em modelos tabulares 1200. Essas funções *não têm* nenhum suporte em fórmulas de coluna calculada e de segurança em nível de linha. No entanto, essas funções *têm suporte* em fórmulas de medida e de consulta, embora com desempenho duvidoso.
+### <a name="non-optimized-for-directquery"></a>Não otimizada para DirectQuery
+Essas funções não foram otimizadas para trabalhar com o DirectQuery. Essas funções *não têm* nenhum suporte em fórmulas de coluna calculada e de segurança em nível de linha. No entanto, essas funções *têm suporte* em fórmulas de medida e de consulta, embora com desempenho duvidoso.
 
  Não listaremos todas as funções aqui. Basicamente, se ela não estiver em uma das listas de funções otimizadas acima, será uma função não otimizada para DirectQuery.
 
@@ -47,12 +54,12 @@ Os motivos de uma função específica não ser otimizada para DirectQuery é po
 
 Para saber mais sobre todas as funções DAX, consulte a [Referência de função DAX]. (https://msdn.microsoft.com/en-us/library/ee634396.aspx)
 
-## Operadores DAX no modo DirectQuery
-Todos os operadores de comparação e de aritmética DAX têm suporte total em modelos tabulares 1200 no modo DirectQuery. Para obter mais informações, consulte [Referência de operador DAX](https://msdn.microsoft.com/library/ee634237.aspx).
+## <a name="dax-operators-in-directquery-mode"></a>Operadores DAX no modo DirectQuery
+Todos os operadores de comparação e de aritmética DAX têm suporte total no modo DirectQuery. Para obter mais informações, consulte [Referência de operador DAX](https://msdn.microsoft.com/library/ee634237.aspx).
 
 
  
-## Diferenças entre os modos na memória e DirectQuery  
+## <a name="differences-between-in-memory-and-directquery-mode"></a>Diferenças entre os modos na memória e DirectQuery  
 Consultas em um modelo implantado no modo DirectQuery podem retornar resultados diferentes do mesmo modelo implantado no modo na memória. Isso porque, com o DirectQuery, os dados são consultados diretamente de um armazenamento de dados relacional, e agregações necessárias para fórmulas são executadas com o mecanismo relacional relevante em vez de usar o mecanismo analítico xVelocity (VertiPaq) na memória para armazenamento e cálculo.  
   
 Por exemplo, há diferenças no modo como certos repositórios de dados relacionais tratam valores numéricos, datas, nulos etc.  
@@ -61,10 +68,10 @@ Em contrapartida, a linguagem DAX destina-se a emular, do modo mais semelhante p
   
 Além disso, algumas funções não foram otimizadas para o modo DirectQuery, pois o cálculo exigiria que os dados no contexto atual fossem enviados à fonte de dados relacionais como um parâmetro. Por exemplo, medidas que usam funções de inteligência de tempo que fazem referência a intervalos de datas em uma tabela de calendário. Uma fonte de dados relacional não pode ter uma tabela de calendário ou pelo menos uma com .  
   
-## Diferenças semânticas  
+## <a name="semantic-differences"></a>Diferenças semânticas  
 Esta seção lista os tipos de diferenças semânticas que você pode esperar e descreve as limitações que podem se aplicar ao uso de funções ou aos resultados da consulta.  
   
-### Comparações  
+### <a name="comparisons"></a>Comparações  
 A DAX nos modelos na memória dá suporte a comparações de duas expressões que são resolvidas para valores escalares de tipos de dados diferentes. No entanto, modelos implantados no modo DirectQuery usam os tipos de dados e os operadores de comparação do mecanismo relacional e, portanto, podem retornar resultados diferentes.  
   
 As seguintes comparações sempre retornarão um erro quando usadas em um cálculo em uma fonte de dados DirectQuery:  
@@ -98,13 +105,13 @@ Esta fórmula compara o SQL equivalente de um nulo a um nulo. Retorna **true** e
   
 Observe que, no Transact-SQL, um nulo nunca é igual a um nulo. No entanto, na DAX, um espaço em branco é igual a outro espaço em branco. Esse comportamento é o mesmo para todos os modelos na memória. É importante observar que o modo DirectQuery usa grande parte da semântica do SQL Server; mas, nesse caso, se separa dela, proporcionando um novo comportamento a comparações NULL.  
   
-### Conversões  
+### <a name="casts"></a>Conversões  
   
 Não há nenhuma função de conversão como na DAX, mas conversões implícitas são executadas em muitas operações de comparação e aritméticas. É a operação de comparação ou aritmética que determina o tipo de dados do resultado. Por exemplo,  
   
 -   Valores boolianos são tratados como numéricos em operações aritméticas, como TRUE + 1, ou a função MIN aplicada a uma coluna de valores boolianos. Uma operação NOT também retorna um valor numérico.  
   
--   Valores boolianos sempre são tratados como valores lógicos em comparações e quando usados com EXACT, AND, OR, &amp;&amp; ou ||.  
+-   Valores boolianos sempre são tratados como valores lógicos em comparações e quando usados com EXACT, AND, OR, &amp;&amp;ou ||.  
   
 **Conversão de cadeia de caracteres em booliano**  
 Em modelos na memória e DirectQuery, são permitidas conversões em valores boolianos destas cadeias de caracteres apenas: **“”** (cadeia de caracteres vazia), **“true”**, **“false”**; em que uma cadeia de caracteres vazia é convertida em um valor falso.  
@@ -117,7 +124,7 @@ No modo DirectQuery, conversões de representações de cadeias de caracteres de
 Os modelos que usam o repositório de dados na memória oferecem suporte a um intervalo mais limitado de formatos de texto para datas que os formatos de cadeias de caracteres para datas que têm suporte no SQL Server. No entanto, a DAX oferece suporte a formatos de data e hora personalizados.  
   
 **Conversão de cadeia de caracteres em outros valores não boolianos**  
-Ao converter de cadeias de caracteres em valores não boolianos, o modo DirectQuery se comporta da mesma forma que no SQL Server. Para obter mais informações, veja [CAST e CONVERT (Transact-SQL)](http://msdn.microsoft.com/pt-br/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
+Ao converter de cadeias de caracteres em valores não boolianos, o modo DirectQuery se comporta da mesma forma que no SQL Server. Para obter mais informações, veja [CAST e CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **Não é permitido converter de números em cadeia de caracteres**  
 EXEMPLO: `CONCATENATE(102,”,345”)`  
@@ -131,11 +138,11 @@ Com frequência, os modelos na memória tentam uma segunda conversão quando a p
   
 EXEMPLO: `TODAY() + “13:14:15”`  
   
-Nessa expressão, o primeiro parâmetro tem o tipo **datetime** e o segundo tem o tipo **string**. No entanto, as conversões durante a combinação dos operandos são tratadas de modo diferente. A DAX executará uma conversão implícita de **string** em **double**. Nos modelos na memória, o mecanismo da fórmula tentará converter diretamente em **double** e, se falhar, tentará converter a cadeia de caracteres em **datetime**.  
+Nessa expressão, o primeiro parâmetro tem o tipo **datetime** e o segundo tem o tipo **string**. No entanto, as conversões durante a combinação dos operandos são tratadas de modo diferente. A DAX executará uma conversão implícita de **string** em **double**. Nos modelos na memória, o mecanismo da fórmula tentará converter diretamente em **double**e, se falhar, tentará converter a cadeia de caracteres em **datetime**.  
   
 No modo DirectQuery, somente a conversão direta de **string** em **double** será aplicada. Se essa conversão falhar, a fórmula retornará um erro.  
   
-### Funções matemáticas e operações aritméticas  
+### <a name="math-functions-and-arithmetic-operations"></a>Funções matemáticas e operações aritméticas  
 Algumas funções matemáticas retornarão resultados diferentes no modo DirectQuery, devido às diferenças no tipo de dados subjacente ou as conversões que podem ser aplicadas em operações. Além disso, as restrições descritas acima no intervalo de valores permitido poderão afetar o resultado das operações aritméticas.  
   
 **Ordem de adição**  
@@ -167,7 +174,7 @@ No modo DirectQuery, a divisão por zero (0) ou a divisão por BLANK sempre resu
   
 Em vez de retornar resultados diferentes para essas operações, no modo DirectQuery, ambos os tipos de operações (divisão por zero e divisão por nulo) retornam um erro.  
   
-Observe que, em modelos do Excel e do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], a divisão por zero também retorna um erro. A divisão por um espaço em branco retorna um espaço em branco.  
+Observe que, em modelos do Excel e do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , a divisão por zero também retorna um erro. A divisão por um espaço em branco retorna um espaço em branco.  
   
 As seguintes expressões são válidas em modelos na memória, mas falharão no modo DirectQuery:  
   
@@ -181,7 +188,7 @@ As seguintes expressões são válidas em modelos na memória, mas falharão no 
   
 A expressão `BLANK/BLANK` é um caso especial que retorna `BLANK` em modelos na memória e no modo DirectQuery.  
   
-### Intervalos numéricos e de data-hora com suporte  
+### <a name="supported-numeric-and-date-time-ranges"></a>Intervalos numéricos e de data-hora com suporte  
 As fórmulas em modelos de tabela na memória estão sujeitas às mesmas limitações do Excel em relação aos valores máximos permitidos para números reais e datas. No entanto, podem surgir diferenças quando o valor máximo é retornado de um cálculo ou consulta ou quando valores são convertidos, arredondados ou truncados.  
   
 -   Se valores de tipos **Currency** e **Real** forem multiplicados e o resultado for maior do que o máximo possível, no modo DirectQuery, nenhum erro será gerado e um nulo será retornado.  
@@ -240,13 +247,13 @@ O seguinte exemplo demonstra como esse valor é calculado:
 6.  60 é equivalente a 0.  
   
 **Não há suporte para o tipo de dados SQL Time**  
-Modelos na memória não dão suporte ao uso do novo tipo de dados SQL **Time**. No modo DirectQuery, fórmulas que referenciam colunas com esse tipo de dados retornarão um erro. Colunas de dados temporais não podem ser importadas para um modelo na memória.  
+Modelos na memória não dão suporte ao uso do novo tipo de dados SQL **Time** . No modo DirectQuery, fórmulas que referenciam colunas com esse tipo de dados retornarão um erro. Colunas de dados temporais não podem ser importadas para um modelo na memória.  
   
 No entanto, às vezes o mecanismo converte o valor temporal em um tipo de dados aceitável e a fórmula retorna um resultado.  
   
 Esse comportamento afeta todas as funções que usam uma coluna de data como um parâmetro.  
   
-### <a name="bkmk_Currency"></a>Moeda  
+### <a name="bkmk_Currency"></a>Currency  
 No modo DirectQuery, se o resultado de uma operação aritmética tiver o tipo **Currency**, o valor deverá estar dentro do seguinte intervalo:  
   
 -   Mínimo: -922337203685477,5808  
@@ -341,8 +348,9 @@ No entanto, se o texto for um caractere de comprimento fixo e o valor de *&lt;nu
 Em um modelo na memória, o resultado termina no último caractere da cadeia de caracteres, sem preenchimento.  
 
 
-## Consulte também  
-[Modo DirectQuery (SSAS tabular)](http://msdn.microsoft.com/pt-br/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+## <a name="see-also"></a>Consulte também  
+[Modo DirectQuery (SSAS tabular)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
+
 
 

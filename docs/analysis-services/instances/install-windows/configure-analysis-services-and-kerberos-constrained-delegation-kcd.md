@@ -1,46 +1,51 @@
 ---
-title: "Configurar o Analysis Services e a KCD (Delega&#231;&#227;o restrita de Kerberos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Configurar o Analysis Services e delegação restrita Kerberos (KCD) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4c13b9095224d1c33e09c9513121e46483da05c0
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurar o Analysis Services e a KCD (Delega&#231;&#227;o restrita de Kerberos)
+# <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Configurar o Analysis Services e a KCD (Delegação restrita de Kerberos)
   A KCD (delegação restrita de Kerberos) é um protocolo de autenticação que você pode configurar com a autenticação do Windows a fim de delegar credenciais de cliente, de serviço para serviço, em todo o seu ambiente. A KCD exige infraestrutura adicional, por exemplo, um Controlador de Domínio, e a configuração adicional de seu ambiente. A KCD é um requisito em alguns cenários que envolvem dados do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] com o SharePoint 2016. No SharePoint 2016, os Serviços do Excel foram movidos para fora do farm do SharePoint para um servidor novo e separado, o **Servidor do Office Online**. Como o Servidor do Office Online é separado, há uma necessidade crescente por uma forma de delegar credenciais de cliente em cenários típicos de dois saltos.  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
   
-## Visão geral  
+## <a name="overview"></a>Visão geral  
  A KCD permite que uma conta represente outra conta com a finalidade de fornecer acesso aos recursos. A conta de representação pode ser uma conta de serviço atribuída a um aplicativo Web, ou a conta de computador do servidor Web. Enquanto a conta representada seria uma conta de usuário que exige acesso aos recursos. A KCD funciona no nível de serviço, para que os serviços selecionados em um servidor possam receber acesso da conta de representação, enquanto outros serviços no mesmo servidor, ou serviços em outros servidores, não recebem o acesso.  
   
- As seções neste tópico analisam cenários comuns com [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], nos quais a KCD é necessária, assim como um exemplo de implantação de servidor com um resumo de alto nível do que você precisa instalar e configurar. Confira a seção [Mais informações e conteúdo da comunidade](#bkmk_moreinfo) para obter links para informações mais detalhadas sobre as tecnologias envolvidas, como Controladores de domínio e KCD.  
+ As seções neste tópico analisam cenários comuns com [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , nos quais a KCD é necessária, assim como um exemplo de implantação de servidor com um resumo de alto nível do que você precisa instalar e configurar. Confira a seção [Mais informações e conteúdo da comunidade](#bkmk_moreinfo) para obter links para informações mais detalhadas sobre as tecnologias envolvidas, como Controladores de domínio e KCD.  
   
-## Cenário 1: Pasta de trabalho como fonte de dados (WDS).  
- ![see 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "see 1") O Servidor do Office Online abre uma pasta de trabalho do Excel e ![see 2](../../../analysis-services/instances/install-windows/media/ssas-callout2.png "see 2") detecta uma conexão de dados com outra pasta de trabalho. O Servidor do Office Online envia uma solicitação ao [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Serviço do Redirecionador ![see 3](../../../analysis-services/instances/install-windows/media/ssas-callout3.png "see 3") para abrir a segunda pasta de trabalho e os dados ![see 4](../../../analysis-services/instances/install-windows/media/ssas-callout4.png "see 4").  
+## <a name="scenario-1-workbook-as-data-source-wds"></a>Cenário 1: Pasta de trabalho como fonte de dados (WDS).  
+ ![Consulte 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "consulte 1") servidor do Office Online abre uma pasta de trabalho do Excel e ![consulte 2](../../../analysis-services/instances/install-windows/media/ssas-callout2.png "consulte 2") detecta uma conexão de dados para outra pasta de trabalho. Servidor do Office Online envia uma solicitação para o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] serviço do redirecionador ![consulte 3](../../../analysis-services/instances/install-windows/media/ssas-callout3.png "consulte 3") para abrir a segunda pasta de trabalho e os dados ![consulte 4](../../../analysis-services/instances/install-windows/media/ssas-callout4.png "consulte 4 ").  
   
  Nesse cenário, as credenciais do usuário precisam ser delegadas do Servidor do Office Online para o Serviço do Redirecionador [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] do SharePoint no SharePoint.  
   
- ![workbook as a data source](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-wds.png "workbook as a data source")  
+ ![pasta de trabalho como uma fonte de dados](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-wds.png "pasta de trabalho como uma fonte de dados")  
   
-## Cenário 2: Um modelo de Tabela do Analysis Services é vinculado a uma pasta de trabalho do Excel  
- Um modelo de Tabela do Analysis Services ![see 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "see 1") é vinculado a uma pasta de trabalho do Excel que contém um modelo do Power Pivot. Nesse cenário, quando o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] carrega o modelo de Tabela, o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] detecta o link para a pasta de trabalho. Ao processar o modelo, o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] envia uma solicitação de consulta para o SharePoint para carregar a pasta de trabalho. Nesse cenário, as credenciais do cliente **não** precisam ser delegadas do Analysis Services para o SharePoint. No entanto, um aplicativo cliente pode substituir as informações da fonte de dados em uma associação fora de linha. Se a solicitação de associação fora de linha especificar a representação do usuário atual, as credenciais do usuário deverão ser delegadas, o que exige a configuração da KCD entre o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e o SharePoint.  
+## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>Cenário 2: Um modelo de Tabela do Analysis Services é vinculado a uma pasta de trabalho do Excel  
+ Um modelo de tabela do Analysis Services ![consulte 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "consulte 1") links para uma pasta de trabalho do Excel que contém um modelo do PowerPivot. Nesse cenário, quando o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] carrega o modelo de Tabela, o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] detecta o link para a pasta de trabalho. Ao processar o modelo, o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] envia uma solicitação de consulta para o SharePoint para carregar a pasta de trabalho. Nesse cenário, as credenciais do cliente **não** precisam ser delegadas do Analysis Services para o SharePoint. No entanto, um aplicativo cliente pode substituir as informações da fonte de dados em uma associação fora de linha. Se a solicitação de associação fora de linha especificar a representação do usuário atual, as credenciais do usuário deverão ser delegadas, o que exige a configuração da KCD entre o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e o SharePoint.  
   
  ![office online server](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-oos.png "office online server")  
   
-## Exemplo de implantação do KCD com o Servidor do Office Online e o Analysis Services  
+## <a name="example-deployment-of-kcd-with-office-online-server-and-analysis-services"></a>Exemplo de implantação do KCD com o Servidor do Office Online e o Analysis Services  
  Esta seção descreve um exemplo de implantação que usa quatro computadores. As seções a seguir resumem as principais etapas de instalação e configuração de cada computador. Antes de começar a implantação, recomendamos que os computadores estejam atualizados com patches do sistema operacional, e que você saiba os nomes de computador, pois eles serão necessários em algumas das etapas de configuração.  
   
 -   Controlador de domínio  
@@ -53,10 +58,10 @@ caps.handback.revision: 19
   
  ![domain controller](../../../analysis-services/instances/install-windows/media/ssas-kcd-domainserver-icon.png "domain controller")  
   
-### Controlador de domínio  
+### <a name="domain-controller"></a>Controlador de domínio  
  Veja a seguir um resumo do que instalar para o DC (controlador de domínio).  
   
--   **Função:** Serviços de Domínio do Active Directory. Para obter uma visão geral, consulte [Configuring Active Directory (AD DS) in Windows Server 2012](http://sharepointgeorge.com/2012/configuring-active-directory-ad-ds-in-windows-server-2012/) (Configuração do AD DS (Active Directory) no Windows Server 2012).  
+-   **Função:** Serviços de Domínio do Active Directory. Para obter uma visão geral, consulte [Configuring Active Directory (AD DS) in Windows Server 2012](http://sharepointgeorge.com/2012/configuring-active-directory-ad-ds-in-windows-server-2012/)(Configuração do AD DS (Active Directory) no Windows Server 2012).  
   
 -   **Função:** servidor DNS  
   
@@ -82,20 +87,20 @@ caps.handback.revision: 19
   
     7.  Digite o endereço IP do comando ipconfig.  
   
-    8.  Clique no botão **Avançado**, clique na guia **DNS** e verifique se os sufixos DNS estão corretos.  
+    8.  Clique no botão **Avançado** , clique na guia **DNS** e verifique se os sufixos DNS estão corretos.  
   
     9. Clique em **Acrescentar estes sufixos DNS.**  
   
     10. Repita as etapas para IPv4.  
   
--   **Observação:** você pode ingressar computadores no domínio por meio do Painel de Controle do Windows, nas Configurações do sistema. Para obter mais informações, consulte [How To Join Windows Server 2012 to a Domain](http://social.technet.microsoft.com/wiki/contents/articles/20260.how-to-join-windows-server-2012-to-a-domain.aspx) (Como ingressar o Windows Server 2012 em um domínio).  
+-   **Observação:** você pode ingressar computadores no domínio por meio do Painel de Controle do Windows, nas Configurações do sistema. Para obter mais informações, consulte [How To Join Windows Server 2012 to a Domain](http://social.technet.microsoft.com/wiki/contents/articles/20260.how-to-join-windows-server-2012-to-a-domain.aspx)(Como ingressar o Windows Server 2012 em um domínio).  
   
- ![ssas server in powerpivot mode](../../../analysis-services/instances/install-windows/media/ssas-kcd-powerpivotserver-icon.png "ssas server in powerpivot mode")  
+ ![servidor de SSAS no modo powerpivot](../../../analysis-services/instances/install-windows/media/ssas-kcd-powerpivotserver-icon.png "servidor ssas no modo do powerpivot")  
   
-### Mecanismo de banco de dados do SQL Server 2016 e o Analysis Services no modo Power Pivot  
- A seguir está um resumo do que instalar no computador com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+### <a name="2016-sql-server-database-engine-and-analysis-services-in-power-pivot-mode"></a>Mecanismo de banco de dados do SQL Server 2016 e o Analysis Services no modo Power Pivot  
+ A seguir está um resumo do que instalar no computador com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- ![observação](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "observação") No assistente de instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo Power Pivot é instalado como parte do fluxo de trabalho de seleção do recurso.  
+ ![Observação](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Observação") no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Assistente de instalação, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no Power Pivot modo é instalado como parte do fluxo de trabalho de seleção de recurso.  
   
 1.  Execute o assistente de instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] e, na página de seleção do recurso, clique no mecanismo de banco de dados, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], e nas Ferramentas de gerenciamento. Em uma instalação posterior do assistente de instalação, você pode especificar o modo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
@@ -103,9 +108,9 @@ caps.handback.revision: 19
   
 3.  Na página Configuração do Analysis Services, configure o servidor do Analysis Services para o modo **Power Pivot** e adicione o **nome do computador** do Servidor do Office Online à lista de administradores do servidor do Analysis Services. Para saber mais, veja [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-4.  Observe que, por padrão, o tipo de objeto "Computador" não está incluído na pesquisa. Clique em ![click objects to add computer account](../../../analysis-services/instances/install-windows/media/ss-objects-button.png "click objects to add computer account") para adicionar o objeto Computadores.  
+4.  Observe que, por padrão, o tipo de objeto "Computador" não está incluído na pesquisa. Clique em ![clique em objetos para adicionar a conta de computador](../../../analysis-services/instances/install-windows/media/ss-objects-button.png "clique em objetos para adicionar a conta de computador") para adicionar o objeto computadores.  
   
-     ![add computer accounts as ssas administrators](../../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "add computer accounts as ssas administrators")  
+     ![Adicionar contas de computador como administradores de ssas](../../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "adicionar contas de computador como administradores de ssas")  
   
 5.  Crie o SPN (Nome da Entidade de Serviço) da instância do Analysis Services.  
   
@@ -122,7 +127,7 @@ caps.handback.revision: 19
      O SPN para a instância do PowerPivot será na forma de:  
   
     ```  
-    MSSQLSvc.3/<Fully Qualified Domain Name (FQDN)>:POWERPIVOT  
+    MSSQLSvc.3/\<Fully Qualified Domain Name (FQDN)>:POWERPIVOT  
     MSSQLSvc.3/<NetBIOS Name>:POWERPIVOT  
     ```  
   
@@ -140,15 +145,15 @@ caps.handback.revision: 19
   
      Isso é conhecido como delegação restrita, e é necessário porque o token do Windows será proveniente de C2WTS (Declarações para os Serviços de Token do Windows), o que exige a delegação restrita com a transição de protocolos.  
   
-     ![Analysis Services - Constrained Delegation](../../../analysis-services/instances/install-windows/media/analysis-services-constrained-delegation.png "Analysis Services - Constrained Delegation")  
+     ![Analysis Services – a delegação restrita](../../../analysis-services/instances/install-windows/media/analysis-services-constrained-delegation.png "do Analysis Services - a delegação restrita")  
   
      Você também precisará adicionar os serviços para os quais delegará. Isso pode variar com base em seu ambiente.  
   
-### Servidor do Office Online  
+### <a name="office-online-server"></a>Servidor do Office Online  
   
 1.  Instalar o Servidor do Office Online  
   
-2.  **Configure o Servidor do Office Online** para se conectar ao servidor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Observe que a conta de computador do Servidor do Office Online precisa ser de um administrador no servidor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Isso foi concluído em uma seção anterior deste tópico, pela instalação do servidor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+2.  **Configure o Servidor do Office Online** para se conectar ao servidor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Observe que a conta de computador do Servidor do Office Online precisa ser de um administrador no servidor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Isso foi concluído em uma seção anterior deste tópico, pela instalação do servidor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
     1.  No Servidor do Office Online, abra uma janela do PowerShell com privilégios administrativos e execute o seguinte comando  
   
@@ -185,26 +190,26 @@ caps.handback.revision: 19
   
      Isso é conhecido como delegação restrita, e é necessário porque o token do Windows será proveniente de C2WTS (Declarações para os Serviços de Token do Windows), o que exige a delegação restrita com a transição de protocolos.  Em seguida, permita a delegação para os SPNs MSOLAPSvc.3 e SPNs MSOLAPDisco.3 que criamos acima.  
   
-5.  Configure o C2WTS (Declarações para serviço de token do Windows) **Isso é necessário para o cenário 1**. Para obter mais informações, consulte [Claims to Windows Token Service (C2WTS) Overview](https://msdn.microsoft.com/en-us/library/ee517278.aspx) (Visão geral do C2WTS (Declarações para serviço de token do Windows)).  
+5.  Configure o C2WTS (Declarações para serviço de token do Windows) **Isso é necessário para o cenário 1**. Para obter mais informações, consulte [Claims to Windows Token Service (C2WTS) Overview](https://msdn.microsoft.com/library/ee517278.aspx)(Visão geral do C2WTS (Declarações para serviço de token do Windows)).  
   
 6.  **Defina as configurações de delegação restrita** na conta do serviço C2WTS.  As configurações devem corresponder o que você fez na etapa 4.  
   
- ![sharepoint server](../../../analysis-services/instances/install-windows/media/ssas-kcd-sharepointserver-icon.png "sharepoint server")  
+ ![o SharePoint server](../../../analysis-services/instances/install-windows/media/ssas-kcd-sharepointserver-icon.png "servidor do sharepoint")  
   
-### SharePoint Server 2016  
+### <a name="sharepoint-server-2016"></a>SharePoint Server 2016  
  Veja a seguir um resumo da instalação do SharePoint Server.  
   
 1.  Execute o instalador de pré-requisitos do SharePoint  
   
-2.  Execute a instalação do SharePoint e selecione a função de configuração **Single Server Farm (Farm de Servidores Único)**.  
+2.  Execute a instalação do SharePoint e selecione a função de configuração **Single Server Farm (Farm de Servidores Único)** .  
   
-3.  Execute o suplemento do PowerPivot para SharePoint (spPowerPivot16.msi). Para obter mais informações, consulte [Instalar ou desinstalar o suplemento do Power Pivot para SharePoint &#40;SharePoint 2016&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
+3.  Execute o suplemento do PowerPivot para SharePoint (spPowerPivot16.msi). Para obter mais informações, consulte [instalar ou desinstalar o PowerPivot para SharePoint Add-in (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
   
 4.  Execute o assistente de Configuração do PowerPivot. Consulte [Ferramentas de Configuração do Power Pivot](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
 5.  Conecte o SharePoint ao Servidor Office Online.    ??Configure_xlwac_on_SPO.ps1 ??  
   
-6.  Configure os provedores de autenticação do SharePoint para Kerberos. **Isso é necessário para o cenário 1**. Para obter mais informações, consulte [Plano para autenticação Kerberos no SharePoint 2013](https://technet.microsoft.com/en-us/library/ee806870.aspx).  
+6.  Configure os provedores de autenticação do SharePoint para Kerberos. **Isso é necessário para o cenário 1**. Para obter mais informações, consulte [Plano para autenticação Kerberos no SharePoint 2013](https://technet.microsoft.com/library/ee806870.aspx).  
   
 ##  <a name="bkmk_moreinfo"></a> Mais informações e conteúdo da comunidade  
  [Kerberos para o administrador ocupado](http://blogs.technet.com/b/askds/archive/2008/03/06/kerberos-for-the-busy-admin.aspx)  

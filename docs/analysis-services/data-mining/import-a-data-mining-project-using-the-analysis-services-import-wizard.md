@@ -1,26 +1,31 @@
 ---
-title: "Importar um projeto de minera&#231;&#227;o de dados usando o Assistente de Importa&#231;&#227;o do Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Importar um projeto de mineração de dados usando o Assistente de importação do Analysis Services | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa433e5bd9b8730c38e4853eda591177e592a92
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Importar um projeto de minera&#231;&#227;o de dados usando o Assistente de Importa&#231;&#227;o do Analysis Services
+# <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importar um projeto de mineração de dados usando o Assistente de Importação do Analysis Services
   Este tópico descreve como criar um novo projeto de mineração de dados importando os metadados de projetos existentes de mineração de dados em outro servidor, usando o modelo **Projeto Importar do Servidor (Multidimensional ou Mineração de dados)**, no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-## Importar fontes de dados, estruturas de mineração de dados e modelos de mineração de projetos existentes de mineração de dados.  
+## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>Importar fontes de dados, estruturas de mineração de dados e modelos de mineração de projetos existentes de mineração de dados.  
  Quando você usa o modelo **Projeto Importar do Servidor (Multidimensional ou Mineração de dados)**, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] cria um novo projeto de mineração de dados e copiar os metadados do projeto de mineração de dados especificado. O novo projeto contém as mesmas fontes de dados, exibições de fontes de dados, estruturas de mineração e modelos de mineração que o banco de dados do ssASnoversion do qual você importou. Porém, o projeto não pode ser usado até que você tenha atualizado determinadas propriedades e processado os objetos como descrito:  
   
 -   Os próprios dados não são copiados do servidor de origem para o novo projeto de mineração de dados — somente as definições da fonte de dados e as exibições da fonte de dados são importadas. Portanto, depois de concluído o processo de importação e da criação dos objetos, você deve popular os objetos com os dados treinando as estruturas de mineração e os modelos dependentes. Você pode usar o comando **Processar Tudo** no Designer de Mineração de Dados para treinar os modelos e as estruturas.  
@@ -35,11 +40,11 @@ caps.handback.revision: 6
   
      Se você não puder alterar o banco de dados de implantação padrão para usar uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que é executada em modo multidimensional ou de mineração de dados, sempre poderá especificar o banco de dados de implantação usando a caixa de diálogo **Propriedades do Projeto** .  
   
-#### Para criar um novo projeto de mineração de dados importando um projeto existente de mineração de dados  
+#### <a name="to-create-a-new-data-mining-project-by-importing-an-existing-data-mining-project"></a>Para criar um novo projeto de mineração de dados importando um projeto existente de mineração de dados  
   
 1.  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], no menu **Arquivo** , clique em **Novo**e, em seguida, em **Projeto**.  
   
-2.  Na caixa de diálogo **Novo Projeto**, em **Modelos Instalados**, clique em **Business Intelligence**, **Analysis Services** e em **Importar do Servidor (Multidimensional/Mineração de Dados)**.  
+2.  Na caixa de diálogo **Novo Projeto** , em **Modelos Instalados**, clique em **Business Intelligence**, **Analysis Services**e em **Importar do Servidor (Multidimensional/Mineração de Dados)**.  
   
 3.  Para **Nome**, digite um nome para o projeto e especifique um local e um nome para a solução e clique em **OK**.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 6
      Para **Banco de Dados**, escolha o banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contém os objetos de mineração de dados que você quer importar.  
   
     > [!WARNING]  
-    >  Você não pode especificar os objetos você quer importar; quando você escolhe um banco de dados existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], todos os objetos multidimensionais e de mineração de dados são importados.  
+    >  Você não pode especificar os objetos você quer importar; quando você escolhe um banco de dados existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , todos os objetos multidimensionais e de mineração de dados são importados.  
   
      Clique em **Avançar**.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 6
   
      O novo projeto é automaticamente aberto usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Propriedades de projeto &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   

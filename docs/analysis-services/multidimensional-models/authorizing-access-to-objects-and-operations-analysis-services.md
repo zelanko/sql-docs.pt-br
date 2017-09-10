@@ -1,33 +1,38 @@
 ---
-title: "Autorizando o acesso a objetos e opera&#231;&#245;es (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.general.f1"
-  - "sql13.asvs.roledesignerdialog.membership.f1"
-helpviewer_keywords: 
-  - "direitos de acesso [Analysis Services], usuários"
-  - "permissões [Analysis Services], usuários"
-  - "segurança [Analysis Services], acesso do usuário"
-  - "direitos de acesso do usuário [Analysis Services]"
-  - "concedendo permissões [Analysis Services], usuários"
+title: "Autorizar o acesso a objetos e operações (Analysis Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.roledesignerdialog.general.f1
+- sql13.asvs.roledesignerdialog.membership.f1
+helpviewer_keywords:
+- access rights [Analysis Services], users
+- permissions [Analysis Services], users
+- security [Analysis Services], user access
+- user access rights [Analysis Services]
+- granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5cf85cd6bb5c32e9c8151fa87aa41fcefb7033f3
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Autorizando o acesso a objetos e opera&#231;&#245;es (Analysis Services)
+# <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorizando o acesso a objetos e operações (Analysis Services)
   O acesso do usuário não administrativo a objetos como cubos, dimensões e modelos de mineração em um banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é concedido por meio de associação em uma ou mais funções de banco de dados. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Os administradores criam essas funções de banco de dados, concedem permissões de leitura ou leitura/gravação em objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e atribuem usuários e grupos do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] a cada função.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determina as permissões efetivas para um usuário ou grupo específico do Windows combinando as permissões associadas a cada função de banco de dados à qual o usuário ou grupo pertence. Em resultado, se uma função de banco de dados não fornecer a um usuário ou grupo permissão para exibir uma dimensão, medida ou atributo, mas uma função de banco de dados diferente conceder essa permissão, o usuário ou grupo terá permissão para exibir o objeto.  
@@ -35,7 +40,7 @@ caps.handback.revision: 35
 > [!IMPORTANT]  
 >  Os membros da função Administrador de Servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e os membros de uma função de banco de dados que têm permissões de Controle Total (Administrador) podem acessar todos os dados e metadados no banco de dados e não precisam de nenhuma permissão adicional para exibir objetos específicos. Além disso, os membros da função de servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não podem ter o acesso negado a nenhum objeto de nenhum banco de dados e os membros de uma função de banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que tem permissões de Controle Total (Administrador) em um banco de dados não podem ter o acesso negado a nenhum objeto desse banco de dados. Operações administrativas especializadas, tais como processamento, podem ser autorizadas por meio de funções distintas com menos permissão. Consultar [Conceder permissões de processo &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md) para ver os detalhes.  
   
-## Listar funções definidas para o banco de dados  
+## <a name="list-roles-defined-for-your-database"></a>Listar funções definidas para o banco de dados  
  Os administradores podem executar uma única consulta DMV no SQL Server Management Studio para obter uma lista de todas as funções definidas no servidor.  
   
 1.  No SSMS, clique com o botão direito do mouse em um banco de dados e selecione **Nova Consulta** | **MDX**.  
@@ -48,7 +53,7 @@ caps.handback.revision: 35
   
      Os resultados incluem o nome do banco, descrição, nome da função e a data da última modificação. Usando essas informações como ponto de partida você pode ir para bancos de dados individuais para verificar a associação e as permissões de uma função específica.  
   
-## Visão geral de cima para baixo da autorização do Analysis Services  
+## <a name="top-down-overview-of-analysis-services-authorization"></a>Visão geral de cima para baixo da autorização do Analysis Services  
  Esta seção aborda o fluxo de trabalho básico para configurar permissões.  
   
  **Etapa 1: Administração de servidor**  
@@ -74,7 +79,7 @@ caps.handback.revision: 35
   
  Você também pode variar as permissões com base na identidade do usuário. Isso é frequentemente chamado de segurança dinâmica e é implantada usando a função [UserName &#40;MDX&#41;](../../mdx/username-mdx.md)  
   
-## Práticas recomendadas  
+## <a name="best-practices"></a>Práticas recomendadas  
  Para gerenciar as permissões de uma melhor forma, sugerimos uma abordagem semelhante à seguinte:  
   
 1.  Crie funções por função (por exemplo, dbadmin, cubedeveloper, processadmin), de modo que o usuário quem mantém as funções possa ver rapidamente o que a função permite. Como já observado, você pode definir as funções na definição do modelo, preservando-as, assim, em implantações posteriores da solução.  
@@ -83,7 +88,7 @@ caps.handback.revision: 35
   
 3.  Gere scripts no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de modo que você possa replicar rapidamente as atribuições de função sempre que o modelo é reimplantado em um servidor a partir dos arquivos de origem. Consulte [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) para ver os detalhes sobre a rapidez de criação de um script.  
   
-4.  Adote uma convenção de nomenclatura que reflita o escopo e a associação da função. Os nomes de função são visíveis apenas em ferramentas de design e de administração, portanto, use uma convenção de nomenclatura que faça sentido para os seus especialistas de segurança de cubo. Por exemplo, **processadmin-windowsgroup1** indica acesso de leitura e direitos de processamento para pessoas na sua organização cujas contas individuais de usuário do Windows são membros do grupo de segurança **windowsgroup1**.  
+4.  Adote uma convenção de nomenclatura que reflita o escopo e a associação da função. Os nomes de função são visíveis apenas em ferramentas de design e de administração, portanto, use uma convenção de nomenclatura que faça sentido para os seus especialistas de segurança de cubo. Por exemplo, **processadmin-windowsgroup1** indica acesso de leitura e direitos de processamento para pessoas na sua organização cujas contas individuais de usuário do Windows são membros do grupo de segurança **windowsgroup1** .  
   
      Incluir informações da conta pode ajudá-lo a manter o controle de quais contas são usadas em várias funções. Como as funções são aditivas, as funções combinadas associadas ao **windowsgroup1** formam o conjunto de permissões eficazes para as pessoas que pertencem a esse grupo de segurança.  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 35
   
  Usar uma abordagem como essa minimiza a variação para definições de função e associação de função no modelo, além de fornecer visibilidade das atribuições de função que tornam as permissões do cubo mais fáceis de implantar e manter.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Conceder direitos de administração de servidor a uma instância do Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Funções e permissões &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
  [Metodologias de autenticação com suporte no Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)  

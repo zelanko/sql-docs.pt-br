@@ -1,27 +1,32 @@
 ---
-title: "Aplicar filtros a dados de testes de modelo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "filtragem da linha de entrada [SQL Server]"
-  - "filtrando as linhas de entrada [Analysis Services]"
-  - "Gráfico de precisão de mineração [Analysis Services], filtrando linhas de entrada"
+title: Aplicar filtros de modelo de dados de teste | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- input row filtering [SQL Server]
+- filtering input rows [Analysis Services]
+- Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae4d7899d0b027f912b6320934ddefc2431a303a
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Aplicar filtros a dados de testes de modelo
+# <a name="apply-filters-to-model-testing-data"></a>Aplicar filtros a dados de testes de modelo
   Quando você especifica uma fonte de dados externa a ser usada para testar um modelo, pode opcionalmente aplicar um filtro para restringir os dados de entrada. Por exemplo, talvez queira testar o modelo especificamente para previsões sobre clientes com determinada faixa de renda.  
   
  Por exemplo, no cenário de email direcionado do Adventure Works, é possível criar uma expressão de filtro como esta em ProspectiveBuyer, que é a tabela contendo os dados de teste, bem como restringir casos de teste por faixa de renda:  
@@ -53,7 +58,7 @@ caps.handback.revision: 44
   
  Para obter mais informações sobre os tipos de filtros que você pode aplicar e como as expressões de filtro são avaliadas, consulte [Sintaxe de filtro de modelo e exemplos &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md).  
   
-### Criar um filtro em dados de testes externos  
+### <a name="create-a-filter-on-external-testing-data"></a>Criar um filtro em dados de testes externos  
   
 1.  Clique duas vezes na estrutura de mineração que contém o modelo a ser testado, para abrir o Designer de Mineração de Dados.  
   
@@ -89,9 +94,9 @@ caps.handback.revision: 44
   
      A condição de filtro é aplicada à fonte de dados quando você cria o gráfico de precisão.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Escolher e mapear dados de testes modelo](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [Usando dados de uma tabela aninhada como entrada para um gráfico de precisão](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
- [Escolher um tipo de gráfico de precisão e definir opções de gráfico](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [Usando dados tabela aninhada como entrada para um gráfico de precisão](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [Escolha um tipo de gráfico de precisão e definir opções de gráfico](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

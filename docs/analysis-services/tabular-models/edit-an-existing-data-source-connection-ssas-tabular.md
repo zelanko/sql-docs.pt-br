@@ -1,26 +1,31 @@
 ---
-title: "Editar uma conex&#227;o de fonte de dados existente (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.selexistconn.f1"
+title: "Editar uma Conexão de fonte de dados existente (SSAS Tabular) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.selexistconn.f1
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67cac388bba3160fe5714a2c21f5741eafd6b32c
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Editar uma conex&#227;o de fonte de dados existente (SSAS tabular)
+# <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>Editar uma conexão de fonte de dados existente (SSAS tabular)
   Este tópico descreve como editar as propriedades de uma conexão de fonte de dados existentes em um modelo tabular.  
   
  Depois de criar uma conexão com uma fonte de dados externa, você poderá modificá-la destas maneiras:  
@@ -31,10 +36,10 @@ caps.handback.revision: 13
   
 -   Você pode alterar as tabelas, exibições ou colunas que obtém da fonte de dados externa.  
   
-## Modificar uma conexão  
+## <a name="modify-a-connection"></a>Modificar uma conexão  
  Este procedimento descreve como modificar uma conexão de fonte de dados de banco de dados. Algumas opções para trabalhar com fontes de dados diferem dependendo do tipo de fonte de dados; porém, você deve poder identificar essas diferenças facilmente.  
   
-#### Para alterar a fonte de dados externa usada por uma conexão atual  
+#### <a name="to-change-the-external-data-source-used-by-a-current-connection"></a>Para alterar a fonte de dados externa usada por uma conexão atual  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], clique no menu **Modelo** e em **Conexões Existentes**.  
   
@@ -53,10 +58,10 @@ caps.handback.revision: 13
     > [!NOTE]  
     >  Se a nova fonte de dados contiver tabelas adicionais que não estavam presentes na fonte de dados original, você deverá reabrir a conexão alterada e adicionar as tabelas.  
   
-## Editar mapeamentos de coluna e tabela (associações)  
+## <a name="edit-table-and-column-mappings-bindings"></a>Editar mapeamentos de coluna e tabela (associações)  
  Este procedimento descreve como editar os mapeamentos depois que você alterar uma fonte de dados.  
   
-#### Para editar mapeamentos de coluna quando uma fonte de dados é alterada  
+#### <a name="to-edit-column-mappings-when-a-data-source-changes"></a>Para editar mapeamentos de coluna quando uma fonte de dados é alterada  
   
 1.  No Designer de Modelo, selecione uma tabela.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 13
   
      Quando você salvar o conjunto atual de propriedades de tabela, uma mensagem poderá aparecer indicando que você precisa processar as tabelas. Clique em **Processar** para carregar dados atualizados no modelo.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Processar dados &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
  [Fontes de dados com suporte &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   

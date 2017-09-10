@@ -1,34 +1,39 @@
 ---
-title: "Criar ou personalizar uma biblioteca de feed de dados (Power Pivot para SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "biblioteca de feeds de dados"
-  - "feeds de dados [Analysis Services com SharePoint]"
+title: Criar ou personalizar uma biblioteca de Feed de dados (PowerPivot para SharePoint) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data feed library
+- data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55a0d510b8d80ca4c3752194b4c9c488ac4d787b
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Criar ou personalizar uma biblioteca de feed de dados (Power Pivot para SharePoint)
+# <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Criar ou personalizar uma biblioteca de feed de dados (Power Pivot para SharePoint)
   Uma *biblioteca de feed de dados* é uma biblioteca do SharePoint com finalidade especial que permite registrar e compartilhar documentos do serviço de dados Atom (.atomsvc). Esses documentos fornecem feeds de dados XML a pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou outros aplicativos cliente que oferecem suporte ao formato de feed de dados Atom. Uma biblioteca de feeds de dados é diferente de outras bibliotecas do SharePoint porque oferece a capacidade de:  
   
 -   Criar ou editar um *documento do serviço de dados*usado para especificar uma conexão HTTP com um feed específico.  
   
 -   Compartilhar e gerenciar documentos do serviço de dados em um local central.  
   
--   Identificar visualmente documentos do serviço de dados por um ícone, de forma que você possa distinguir facilmente documentos do serviço de outros documentos armazenados na mesma biblioteca: ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.png "GMNI_IconDataFeed")  
+-   Identificar visualmente documentos do serviço de dados por um ícone, para que você possa distinguir facilmente documentos do serviço de outros documentos armazenados na mesma biblioteca: ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  Uma biblioteca de feeds de dados sempre contém arquivos de documento do serviço de dados (.atomsvc) e nunca o próprio feed de dados. Ao contrário de um feed de dados, que consiste em dados XML estáticos, o documento do serviço de dados especifica uma URL para um serviço ou aplicativo que gera um feed sob solicitação, fornecendo informações de conexão reutilizáveis para operações de importação repetíveis.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 22
  [Adicionar o tipo de conteúdo do feed de dados a uma biblioteca](#addtolib)  
   
 ##  <a name="prereq"></a> Pré-requisitos  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ser ativada para sites para os quais você está criando a biblioteca de feeds de dados. Se o tipo de modelo da biblioteca de feeds de dados não estiver disponível, a causa mais provável será que esse pré-requisito não foi atendido. Para obter mais informações, consulte [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate power pivot integration for site collections in ca.md).  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ser ativada para sites para os quais você está criando a biblioteca de feeds de dados. Se o tipo de modelo da biblioteca de feeds de dados não estiver disponível, a causa mais provável será que esse pré-requisito não foi atendido. Para obter mais informações, consulte [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
  Você deve ser um proprietário do site criar a biblioteca.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 22
   
  Um link para a biblioteca de feeds de dados é exibido no painel Início Rápido da navegação do site atual.  
   
- Depois de criar uma biblioteca, você pode usá-la para criar documentos de serviço de dados. Para saber mais, confira [Usar feeds de dados &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md).  
+ Depois de criar uma biblioteca, você pode usá-la para criar documentos de serviço de dados. Para obter mais informações, consulte [Use feeds de dados &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md).  
   
 ##  <a name="addtolib"></a> Adicionar o tipo de conteúdo do feed de dados a uma biblioteca  
  Se você não desejar criar uma biblioteca de feeds de dados dedicada, mas ainda quiser criar e gerenciar documentos do serviço de dados de um site do SharePoint, poderá adicionar e configurar manualmente o tipo de conteúdo de documento do serviço de dados para qualquer biblioteca que será usada para compartilhar arquivos de documento do serviço de dados (.atomsvc).  
@@ -71,7 +76,7 @@ caps.handback.revision: 22
   
  As etapas a seguir devem ser repetidas para cada biblioteca na qual você deseja criar ou editar documentos de registro de feed de dados.  
   
-#### Etapa 1: Habilitar o gerenciamento do tipo de conteúdo  
+#### <a name="step-1-enable-content-type-management"></a>Etapa 1: Habilitar o gerenciamento do tipo de conteúdo  
   
 1.  Abra a biblioteca de documentos para a qual você deseja habilitar vários tipos de conteúdo.  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 22
   
 7.  Clique em **OK**.  
   
-#### Etapa 2: Adicionar o tipo de conteúdo de documento de serviço de dados  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>Etapa 2: Adicionar o tipo de conteúdo de documento de serviço de dados  
   
 1.  Na seção Tipos de Conteúdo, clique em **Adicionar a partir de tipos de conteúdo de site existentes**. Se você não vir essa página, volte para o site, clique em **Biblioteca** em Ferramentas de Biblioteca e clique em **Definições da Biblioteca**.  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 22
   
 5.  Clique em **OK**.  
   
-#### Etapa 3: Verificar a configuração do documento de serviço de dados  
+#### <a name="step-3-verify-data-service-document-configuration"></a>Etapa 3: Verificar a configuração do documento de serviço de dados  
   
 1.  Abra a página inicial do site.  
   
@@ -109,9 +114,9 @@ caps.handback.revision: 22
   
 4.  Clique na seta para baixo em Novo Documento e selecione **Documento de Serviço de Dados**. A página Novo Documento de Serviço de Dados deve aparecer.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Use feeds de dados &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)   
- [Excluir uma Biblioteca de Feeds de Dados Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
+ [Excluir uma biblioteca de Feed de dados do Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
  [Administração e configuração de servidor do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Feeds de dados do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   

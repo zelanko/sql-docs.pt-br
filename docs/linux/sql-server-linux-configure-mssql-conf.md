@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 894a3756d9bffcaaf3347e0bfae92abb0f846a97
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar o SQL Server no Linux com a ferramenta mssql conf
@@ -26,6 +26,7 @@ ms.lasthandoff: 08/28/2017
 |---|---|
 | [Agrupamento](#collation) | Defina um novo agrupamento do SQL Server no Linux. |
 | [Comentários do cliente](#customerfeedback) | Escolha se ou não o SQL Server envia comentários à Microsoft. |
+| [Perfil do Database Mail](#dbmail) | Definir o perfil de email do banco de dados padrão do SQL Server no Linux |
 | [Diretório de dados padrão](#datadir) | Altere o diretório padrão para novos arquivos de dados de banco de dados do SQL Server (. mdf). |
 | [Diretório de log padrão](#datadir) | Altera o diretório padrão para novos arquivos de log (. ldf) de banco de dados do SQL Server. |
 | [Diretório de despejo padrão](#dumpdir) | Altere o diretório padrão para novos despejos de memória e outros arquivos de solução de problemas. |
@@ -214,6 +215,13 @@ A primeira captura fase é controlada pelo **coredump.coredumptype** configuraç
     | **filtrado** | Design filtrado usa uma subtração com base em onde toda a memória do processo é incluída, a menos que especificamente excluído. O design compreende dos recursos internos do SQLPAL e o ambiente de host, exceto determinadas regiões do despejo de memória.
     | **completo** | Completo é um despejo de processo completo que inclui todas as regiões localizado em **/proc/.$ pid/mapas**. Isso não é controlado pelo **coredump.captureminiandfull** configuração. |
 
+## <a id="dbmail"></a>Definir o perfil de email do banco de dados padrão do SQL Server no Linux
+
+O **sqlpagent.databasemailprofile** permite que você defina o perfil de email de banco de dados padrão para alertas de email.
+
+```bash
+sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+```
 ## <a id="hadr"></a>Alta disponibilidade
 
 O **hadr.hadrenabled** opção habilita os grupos de disponibilidade na instância do SQL Server. O comando a seguir habilita os grupos de disponibilidade, definindo **hadr.hadrenabled** como 1. Você deve reiniciar o SQL Server para a configuração entre em vigor.

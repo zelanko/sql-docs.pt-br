@@ -1,24 +1,29 @@
 ---
-title: "Criar uma conex&#227;o de modelo sem&#226;ntico de BI com um banco de dados de modelo de tabela | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Criar uma Conexão de modelo semântico de BI para um banco de dados de modelo de tabela | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c4e9b6b1814994caf778e0c3d50a69ffc70d4ee
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Criar uma conex&#227;o de modelo sem&#226;ntico de BI com um banco de dados de modelo de tabela
+# <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Criar uma conexão de modelo semântico de BI com um banco de dados de modelo de tabela
   Use as informações neste tópico para configurar uma conexão de modelo semântico de BI que redireciona para um banco de dados modelo de tabela em execução em uma instância do Analysis Services fora do farm do SharePoint.  
   
  Depois de criar uma conexão de modelo semântico de BI e configurar o SharePoint e as permissões do Analysis Services, as pessoas podem usá-lo como uma fonte de dados para Excel ou relatórios do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
@@ -40,7 +45,7 @@ caps.handback.revision: 16
 ##  <a name="bkmk_prereq"></a> Examinar pré-requisitos  
  É necessário ter permissões Colaborar ou superior para criar um arquivo de conexão de modelo semântico de BI.  
   
- Você deve ter uma biblioteca que dá suporte ao tipo de conteúdo da conexão de modelo semântico de BI. Para obter mais informações, consulte [Adicionar um tipo de conteúdo de conexão de modelo semântico de BI a uma biblioteca &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add bi semantic model connection content type to library.md).  
+ Você deve ter uma biblioteca que dá suporte ao tipo de conteúdo da conexão de modelo semântico de BI. Para obter mais informações, consulte [Adicionar um tipo de conteúdo de conexão de modelo semântico de BI a uma biblioteca &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md).  
   
  Você deve saber o servidor e o nome de banco de dados para os quais está configurando uma conexão de modelo semântico de BI. O Analysis Services deve ser configurado para modo de tabela. Os bancos de dados que são executados no servidor devem ser bancos de dados de modelo de tabela. Para obter instruções sobre como verificar o modo de servidor, consulte [Determinar o modo de servidor de uma instância do Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 16
   
  Funções, e às vezes associação de função, são definidas quando o modelo é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Você não pode usar o SQL Server Management Studio para criar funções, mas pode usá-lo para adicionar membros a uma função que já esteja definida. Para obter mais informações sobre como criar funções, consulte [Criar e gerenciar funções &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
-#### Atribuir associação de função  
+#### <a name="assign-role-membership"></a>Atribuir associação de função  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda o banco de dados no Pesquisador de Objetos e expanda **Funções**. Você deverá ver uma função que já esteja definida. Se uma função não existir, entre em contato com o autor do modelo e solicite a adição ou uma função. O modelo deve ser reimplantado antes de a função estar visível no Management Studio.  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 16
   
      **Nome do servidor** é o nome de rede do servidor, o endereço IP ou o nome de domínio totalmente qualificado (por exemplo, myserver.mydomain.corp.adventure-works.com). Se o servidor estiver instalado como uma instância nomeada, insira o nome do servidor neste formato: computername\instancename.  
   
-     **Banco de dados** deve ser um banco de dados de tabela que está disponível atualmente no servidor. Não especifique outro arquivo de conexão de modelo semântico de BI, um arquivo .odc (conexão de dados do Office), um banco de dados OLAP do Analysis Services ou uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Para obter o nome do banco de dados, você pode usar o Management Studio para conectar-se ao servidor e exibir a lista de bancos de dados disponíveis. Use a página de propriedades do banco de dados para verificar se você tem o nome correto.  
+     **Banco de dados** deve ser um banco de dados de tabela que está disponível atualmente no servidor. Não especifique outro arquivo de conexão de modelo semântico de BI, um arquivo .odc (conexão de dados do Office), um banco de dados OLAP do Analysis Services ou uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obter o nome do banco de dados, você pode usar o Management Studio para conectar-se ao servidor e exibir a lista de bancos de dados disponíveis. Use a página de propriedades do banco de dados para verificar se você tem o nome correto.  
   
 4.  Clique em **OK** para salvar a página. Nesse momento, o aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] verificará a conexão.  
   
@@ -143,7 +148,7 @@ caps.handback.revision: 16
 ##  <a name="bkmk_next"></a> Próximas etapas  
  Depois de criar e proteger uma conexão de modelo semântico de BI, você poderá especificá-la como uma fonte de dados. Para obter mais informações, consulte [Usar uma conexão de modelo semântico de BI no Excel ou Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Conexão de modelo semântico de BI &#40;.bism&#41; do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
  [Criar uma conexão de modelo semântico de BI para uma pasta de trabalho do Power Pivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   

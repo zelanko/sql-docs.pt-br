@@ -1,32 +1,37 @@
 ---
-title: "Configurar propriedades padr&#227;o de implanta&#231;&#227;o e modelagem de dados (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING"
-  - "sql13.asvs.bidtoolset.deployment.f1"
-  - "sql13.asvs.bidtoolset.asoptions.f1"
-  - "VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT"
+title: "Configurar a modelagem de dados padrão e propriedades de implantação (SSAS Tabular) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING
+- sql13.asvs.bidtoolset.deployment.f1
+- sql13.asvs.bidtoolset.asoptions.f1
+- VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50c41697a0197261be8ef1b60b469a28bd331248
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurar propriedades padr&#227;o de implanta&#231;&#227;o e modelagem de dados (SSAS tabular)
+# <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Configurar propriedades padrão de implantação e modelagem de dados (SSAS tabular)
   Este tópico descreve como definir as configurações de propriedade padrão de nível de compatibilidade, implantação e banco de dados de espaço de trabalho, que podem ser predefinidas para cada novo projeto de modelo de tabela criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Depois que um novo projeto é criado, essas propriedades ainda podem ser alteradas dependendo dos requisitos específicos.  
   
-#### Para definir a configuração de propriedade padrão de Nível de Compatibilidade para novos projetos de modelo  
+#### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>Para definir a configuração de propriedade padrão de Nível de Compatibilidade para novos projetos de modelo  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], clique no menu **Ferramentas** e em **Opções**.  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 17
     |**Nível de compatibilidade padrão para novos projetos**|SQL Server 2016 (1200)|Essa configuração especifica o nível de compatibilidade padrão a ser usado ao criar um novo projeto de modelo de tabela. Você pode escolher o SQL Server 2012 (1100) se for implantar em uma instância do Analysis Services sem o SP1 aplicado, ou o SQL Server 2012 SP1 ou posterior se a instância de implantação tiver o SP1 aplicado. Para obter mais informações, consulte [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
     |**Opções de nível de compatibilidade**|Todas selecionadas|Especifica opções de nível de compatibilidade para novos projetos de modelo de tabela e ao implantar em outra instância do Analysis Services.|  
   
-#### Para definir a configuração de propriedade padrão do servidor de implantação para novos projetos de modelo  
+#### <a name="to-configure-the-default-deployment-server-property-setting-for-new-model-projects"></a>Para definir a configuração de propriedade padrão do servidor de implantação para novos projetos de modelo  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], clique no menu **Ferramentas** e em **Opções**.  
   
@@ -71,9 +76,9 @@ caps.handback.revision: 17
 > [!NOTE]  
 >  As alterações às propriedades de modelo padrão não afetará as propriedades para modelos existentes criados antes da alteração.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Propriedades de projeto &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
- [Propriedades de modelo &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
+ [Propriedades do modelo &#40; SSAS de tabela &#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
  [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

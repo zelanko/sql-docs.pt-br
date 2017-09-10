@@ -1,28 +1,33 @@
 ---
-title: "Escolher e mapear dados de testes modelo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colunas [mineração de dados], gráficos de precisão de mineração"
-  - "Gráfico de Precisão de Mineração [Analysis Services], mapeamentos de colunas"
-  - "mapeamento de coluna de entrada [Analysis Services]"
-  - "mapeando colunas de entrada [Analysis Services]"
+title: Escolher e mapear o modelo de dados de teste | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [data mining], mining accuracy charts
+- Mining Accuracy Chart [Analysis Services], column mappings
+- input column mapping [Analysis Services]
+- mapping input columns [Analysis Services]
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5374180481138f62346ec1ff3aa83eff82403c05
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Escolher e mapear dados de testes modelo
+# <a name="choose-and-map-model-testing-data"></a>Escolher e mapear dados de testes modelo
   Para criar um gráfico de precisão no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], escolha os dados que serão usados para testar o modelo e mapeie os dados para o modelo.  
   
  Por padrão, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usará os dados de teste do modelo de mineração, desde que você tenha criado um conjunto de dados de controle quando criou a estrutura de mineração. A criação de um conjunto de testes de controle é a maneira mais fácil de testar modelos baseados na mesma estrutura de mineração porque os nomes de colunas e os tipos de dados sempre coincidirão com o modelo. Além disso, você tem uma garantia razoável de que a distribuição dos dados é semelhante. Somado a isso, o designer criará automaticamente as relações entre as colunas de entrada e saída.  
@@ -53,9 +58,9 @@ caps.handback.revision: 44
   
 1.  No Designer de Mineração de Dados do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], clique duas vezes na estrutura de mineração que contém os modelos com os quais deseja fazer o gráfico.  
   
-2.  Selecione a guia **Gráfico de Precisão de Mineração**.  
+2.  Selecione a guia **Gráfico de Precisão de Mineração** .  
   
-3.  Na **Guia Seleção de Entrada** da exibição **Gráfico de Precisão de Mineração**, selecione uma das seguintes opções:  
+3.  Na **Guia Seleção de Entrada** da exibição **Gráfico de Precisão de Mineração** , selecione uma das seguintes opções:  
   
      **Usar casos de teste do modelo de mineração**  
   
@@ -73,19 +78,19 @@ caps.handback.revision: 44
   
 2.  Selecione a guia **Gráfico de Precisão da Mineração** e, em seguida, selecione a guia **Seleção de Entrada** .  
   
-3.  Na guia **Seleção de Entrada**, em **Selecionar conjunto de dados a ser usado para Gráfico de Precisão**, selecione **Especificar um conjunto de dados diferente**.  
+3.  Na guia **Seleção de Entrada** , em **Selecionar conjunto de dados a ser usado para Gráfico de Precisão**, selecione **Especificar um conjunto de dados diferente**.  
   
 4.  Clique no botão Procurar **(...)** para abrir uma caixa de diálogo e criar a definição do conjunto de dados externo.  
   
-5.  Na caixa de diálogo **Selecionar Estrutura de Mineração**, selecione a estrutura de mineração que contém os modelos com os quais deseja trabalhar e, em seguida, clique em **OK**.  
+5.  Na caixa de diálogo **Selecionar Estrutura de Mineração** , selecione a estrutura de mineração que contém os modelos com os quais deseja trabalhar e, em seguida, clique em **OK**.  
   
-6.  Na tabela **Selecionar Tabela(s) de Entrada** da guia **Gráfico de Precisão de Mineração**, clique em **Selecionar Tabela de Casos** para abrir a caixa de diálogo **Selecionar Tabela**.  
+6.  Na tabela **Selecionar Tabela(s) de Entrada** da guia **Gráfico de Precisão de Mineração** , clique em **Selecionar Tabela de Casos** para abrir a caixa de diálogo **Selecionar Tabela** .  
   
 7.  Na caixa de diálogo **Selecionar Tabela** , selecione uma fonte de dados na lista **Fonte de Dados** . Escolha uma tabela que contém os dados que deseja usar nas consultas de previsão para determinar a precisão dos modelos.  
   
-8.  Na caixa **Nome de Tabela/Exibição**, selecione a tabela que contém os dados que deseja usar para testar os modelos.  
+8.  Na caixa **Nome de Tabela/Exibição** , selecione a tabela que contém os dados que deseja usar para testar os modelos.  
   
-9. Edite os mapeamentos, se necessário. As colunas da estrutura de mineração são mapeadas automaticamente para colunas com o mesmo nome na tabela de entrada. Para criar mapeamentos manualmente, clique em uma coluna na tabela **Selecionar Tabela(s) de Entrada** e arraste-a na coluna correspondente na tabela **Estrutura de Mineração**. Para excluir um mapeamento, clique na linha que vincula a coluna na tabela **Estrutura de Mineração** à coluna mapeada na tabela **Selecionar Tabela(s) de Entrada** e pressione DELETE.  
+9. Edite os mapeamentos, se necessário. As colunas da estrutura de mineração são mapeadas automaticamente para colunas com o mesmo nome na tabela de entrada. Para criar mapeamentos manualmente, clique em uma coluna na tabela **Selecionar Tabela(s) de Entrada** e arraste-a na coluna correspondente na tabela **Estrutura de Mineração** . Para excluir um mapeamento, clique na linha que vincula a coluna na tabela **Estrutura de Mineração** à coluna mapeada na tabela **Selecionar Tabela(s) de Entrada** e pressione DELETE.  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -93,15 +98,15 @@ caps.handback.revision: 44
   
 1.  No Designer do Data Mining, clique duas vezes na estrutura que contém os modelos com os quais deseja criar o gráfico.  
   
-2.  Selecione a guia **Gráfico de Precisão de Mineração**.  
+2.  Selecione a guia **Gráfico de Precisão de Mineração** .  
   
-3.  Clique na guia **Seleção de Entrada**.  
+3.  Clique na guia **Seleção de Entrada** .  
   
 4.  Em **Selecionar conjunto de dados a ser usado para o Gráfico de Precisão**, selecione a opção **Especificar um conjunto de dados diferente**.  
   
 5.  Clique no botão Procurar **(...)** para abrir uma caixa de diálogo e criar a definição da fonte de dados externa.  
   
-6.  Na caixa de diálogo **Especificar Mapeamento de Coluna**, clique em **Selecionar Tabela de Casos**.  
+6.  Na caixa de diálogo **Especificar Mapeamento de Coluna** , clique em **Selecionar Tabela de Casos**.  
   
 7.  Na caixa de diálogo Selecionar Tabela, selecione uma fonte de dados na lista e a tabela que contém os dados de caso. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -117,9 +122,9 @@ caps.handback.revision: 44
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-     Os mapeamentos das novas colunas são exibidos na caixa de diálogo **Especificar Mapeamento de Coluna**. Você pode remover um mapeamento selecionando a linha entre as colunas e pressionando a tecla DELETE. Você também pode criar uma nova conexão selecionando uma coluna na tabela **Estrutura de Mineração** e arrastando-a para a coluna correspondente na tabela **Tabelas SelectInput**.  
+     Os mapeamentos das novas colunas são exibidos na caixa de diálogo **Especificar Mapeamento de Coluna** . Você pode remover um mapeamento selecionando a linha entre as colunas e pressionando a tecla DELETE. Você também pode criar uma nova conexão selecionando uma coluna na tabela **Estrutura de Mineração** e arrastando-a para a coluna correspondente na tabela **Tabelas SelectInput** .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tarefas de teste e validação e instruções &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

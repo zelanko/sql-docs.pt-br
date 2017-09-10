@@ -1,36 +1,44 @@
 ---
-title: "Propriedades da Coluna (SSAS Tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.columnprop.f1"
+title: Propriedades de coluna (SSAS Tabular) | Microsoft Docs
+ms.custom: 
+ms.date: 05/23/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.columnprop.f1
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 09e1b0f4a10c179dc9b4fe3055710063fc46a2bb
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propriedades da Coluna (SSAS Tabular)
+# <a name="column-properties-ssas-tabular"></a>Propriedades da Coluna (SSAS Tabular)
   Este tópico descreve as propriedades de coluna do modelo tabular.  
   
- Seções neste tópico:  
-  
--   [Propriedades de coluna](#bkmk_properties)  
-  
--   [Definir as configurações de propriedade de coluna](#bkmk_config_prop)  
+>  [!NOTE]  
+>  Algumas propriedades não têm suporte em todos os níveis de compatibilidade.    
   
 ##  <a name="bkmk_properties"></a> Propriedades de coluna  
- **Básica**  
+**Avançado**  
+  
+|Propriedade|Configuração padrão|Description|  
+|--------------|---------------------|-----------------|  
+|**Pasta de exibição**||Uma pasta única ou aninhada para organizar colunas em uma lista de campos do aplicativo cliente.|  
+
+**Basic**  
   
 |Propriedade|Configuração padrão|Description|  
 |--------------|---------------------|-----------------|  
@@ -40,16 +48,20 @@ caps.handback.revision: 14
 |**Description**||Uma descrição de texto para a coluna.<br /><br /> Em alguns clientes de relatório, se um usuário final colocar o cursor sobre esta coluna na lista de campos, a descrição aparecerá como uma dica de ferramenta.|  
 |**Oculto**|Falso|Especifica se a coluna é ocultada das listas de campo de cliente de relatório.<br /><br /> Defina esta propriedade como **True** para ocultar esta coluna no vídeo. Por exemplo, as colunas que contêm identificadores ou chaves não são geralmente úteis para o usuário final.<br /><br /> Se você ocultar uma coluna do cliente de relatório, o campo não será suprimido nos dados de modelo. O campo ainda está visível se você criar uma consulta baseada no modelo. Uma coluna oculta ainda pode ser usada para agrupar ou classificar.<br /><br /> A propriedade **Oculta** não fornece nenhuma forma de proteção de dados. Para proteger os dados, use filtros de linha em Funções. Para obter mais informações, consulte [Funções &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md).|  
 |**Classificar por Coluna**||Especifica outra coluna para classificar os valores nesta coluna. Uma relação deve existir entre as duas colunas.<br /><br /> Este valor deve ser o nome de uma coluna existente. Você não pode especificar uma fórmula ou medida.|  
+
+ **Diversos**  
   
+|Propriedade|Configuração padrão|Description|  
+|--------------|---------------------|-----------------|  
+|**Dicas de codificação**|Default|Especifica a codificação para otimizar o processamento. Codificação de valor pode melhorar o desempenho de consulta para colunas numéricas geralmente usadas em agregações. Codificação de hash é agrupar por colunas (geralmente valores de tabela de dimensões) e chaves estrangeiras. Colunas de cadeia de caracteres sempre são codificado de hash.|  
+
  **Propriedades de relatório**  
-  
- Para obter informações detalhadas sobre como definir as propriedades de comportamento de tabela de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], consulte [Configurar propriedades de comportamento de tabela para relatórios do Power View &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/configure-table-behavior-properties-for-power-view-reports-ssas-tabular.md).  
   
 |Propriedade|Configuração padrão|Description|  
 |--------------|---------------------|-----------------|  
 |Imagem padrão|Falso|Especifica qual coluna fornece uma imagem que representa os dados de linha (por exemplo, uma ID de foto em um registro de funcionário).|  
 |Rótulo Padrão|Falso|Especifica qual coluna fornece um nome para exibição para representar dados de linha (por exemplo, nome de funcionário em um registro de funcionário).|  
-|URL de Imagem/Categoria de Dados (SP1)|False|Especifica o valor nesta coluna como um hiperlink para uma imagem em um servidor. Por exemplo: http://localhost/images/image1.jpg.|  
+|URL de Imagem/Categoria de Dados (SP1)|Falso|Especifica o valor nesta coluna como um hiperlink para uma imagem em um servidor. Por exemplo: `http://localhost/images/image1.jpg`.|  
 |Manter linhas exclusivas|Falso|Especifica quais colunas fornecem valores que devem ser tratados como exclusivos mesmo se forem duplicados (por exemplo, nome e sobrenome do funcionário, para casos onde dois ou mais funcionários têm o mesmo nome).|  
 |Identificador de linha|Falso|Especifica uma coluna que só contém valores exclusivos, permitindo que seja usada como uma chave de agrupamento interna.|  
 |Resumir por|Default|Especifica ferramentas de cliente de relatório aplicam a função de agregação SUM a cálculos de coluna quando essa coluna é adicionada a uma lista de campos. Para alterar o cálculo padrão, selecione-o na lista suspensa. Essa propriedade aplica-se somente a colunas do tipo que podem ser agregadas.|  
@@ -61,9 +73,10 @@ caps.handback.revision: 14
   
 2.  Na janela **Propriedades** , clique em uma propriedade e digite um valor ou clique na seta para baixo para selecionar uma opção de configuração.  
   
-## Consulte também  
- [Propriedades de relatório do Power View &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)   
- [Ocultar ou congelar colunas &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)   
- [Adicionar colunas a uma tabela &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte também  
+ [Propriedades de relatório do Power View](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)   
+ [Ocultar ou congelar colunas](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)   
+ [Adicionar colunas a uma tabela](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)  
   
   
+

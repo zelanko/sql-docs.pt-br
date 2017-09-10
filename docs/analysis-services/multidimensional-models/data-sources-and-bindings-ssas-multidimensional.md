@@ -1,47 +1,52 @@
 ---
-title: "Fontes de dados e associa&#231;&#245;es (SSAS multidimensional) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exibições da fonte de dados [Analysis Services], associações"
-  - "DSO, associações"
-  - "Linguagem de script do Analysis Services, fontes de dados"
-  - "cubos [Analysis Services], associações"
-  - "modelos de mineração OLAP [linguagem de script do Analysis Services]"
-  - "associações [linguagem de script do Analysis Services]"
-  - "reassociações [linguagem de script do Analysis Services]"
-  - "ASSL, associações"
-  - "modelos de mineração relacionais [ASSL]"
-  - "fontes de dados [linguagem de script do Analysis Services]"
-  - "ASSL, fontes de dados"
-  - "dimensões [Analysis Services], associações"
-  - "medidas [Analysis Services], associações"
-  - "fontes de dados relacionais [linguagem de script do Analysis Services]"
-  - "Linguagem de script do Analysis Services, associações"
-  - "conjuntos de linhas em capítulos"
-  - "granularidade"
-  - "modelos de mineração [Analysis Services], fontes de dados"
-  - "associações incorporadas [ASSL]"
-  - "associações fora de linha"
-  - "grupos de medidas [Analysis Services], associações"
-  - "partições [Analysis Services], associações"
+title: "Fontes de dados e associações (SSAS Multidimensional) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data source views [Analysis Services], bindings
+- DSO, bindings
+- Analysis Services Scripting Language, data sources
+- cubes [Analysis Services], bindings
+- OLAP mining models [Analysis Services Scripting Language]
+- bindings [Analysis Services Scripting Language]
+- rebindings [Analysis Services Scripting Language]
+- ASSL, bindings
+- relational mining models [ASSL]
+- data sources [Analysis Services Scripting Language]
+- ASSL, data sources
+- dimensions [Analysis Services], bindings
+- measures [Analysis Services], bindings
+- relational data sources [Analysis Services Scripting Language]
+- Analysis Services Scripting Language, bindings
+- chaptered rowsets
+- granularity
+- mining models [Analysis Services], data sources
+- inline bindings [ASSL]
+- out-of-line bindings
+- measure groups [Analysis Services], bindings
+- partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 40
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a182451583f04bd52a4f720c4cc057226261e21
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Fontes de dados e associa&#231;&#245;es (SSAS multidimensional)
+# <a name="data-sources-and-bindings-ssas-multidimensional"></a>Fontes de dados e associações (SSAS multidimensional)
   Podem ser acoplados cubos, dimensões e outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a uma fonte de dados. Uma fonte de dados pode ser um dos seguintes objetos:  
   
 -   Uma fonte de dados relacional.  
@@ -54,7 +59,7 @@ caps.handback.revision: 40
   
  Cada objeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é associado à fonte de dados em seu próprio modo. Além disso, as associações de dados desses objetos e a definição da fonte de dados podem ser fornecidas de forma incorporada com a definição do objeto databound (por exemplo, a dimensão) ou associações fora de linha, como conjunto separado de definições.  
   
-## Tipos de dados do Analysis Services  
+## <a name="analysis-services-data-types"></a>Tipos de dados do Analysis Services  
  Os tipos de dados que são usado em associações devem corresponder aos tipos de dados suportados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os seguintes tipos de dados estão definidos no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
 |Tipo de dados do Analysis Services|Description|  
@@ -75,10 +80,10 @@ caps.handback.revision: 40
   
  Todos os dados recebidos da fonte de dados são convertidos para o tipo do [!INCLUDE[ssAS](../../includes/ssas-md.md)] especificado na associação (normalmente durante o processamento). Ocorrerá um erro caso a conversão não possa ser executada (por exemplo, de String para Int). [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] define o tipo de dados na associação para aquele que melhor corresponda ao tipo de fonte na fonte de dados. Por exemplo, os tipos de SQL Date, DateTime, SmallDateTime, DateTime2, DateTimeOffset são mapeados para [!INCLUDE[ssAS](../../includes/ssas-md.md)] Date e o tipo de SQL Time é mapeado para String.  
   
-## Associações para dimensões  
+## <a name="bindings-for-dimensions"></a>Associações para dimensões  
  Cada atributo de uma dimensão é associado a uma coluna em um DSV. Todos os atributos de uma dimensão devem ser provenientes de uma única fonte de dados. Entretanto, os atributos podem ser associados a colunas em tabelas diferentes. As relações entre as tabelas estão definidas no DSV. No caso de ter mais de um conjunto de relações para a mesma tabela, pode ser necessário introduzir uma consulta nomeada no DSV para funcionar como uma tabela 'alias'. Expressões e filtros são definidos no DSV com o uso de cálculos e consultas nomeados.  
   
-## Associações para MeasureGroups, medidas e partições  
+## <a name="bindings-for-measuregroups-measures-and-partitions"></a>Associações para MeasureGroups, medidas e partições  
  Cada grupo de medidas tem as seguintes associações padrão:  
   
 -   O grupo de medidas está associado a uma tabela em um DSV (por exemplo, **MeasureGroup.Source**).  
@@ -91,7 +96,7 @@ caps.handback.revision: 40
   
  A fonte de dados padrão deve ser definida no DSV fornecendo as informações de esquema e incluindo os detalhes de relações. Quaisquer tabelas ou consultas adicionais especificadas no nível da partição não precisam ser listadas no DSV, mas elas têm o mesmo esquema da tabela padrão definida para o grupo de medidas ou, pelo menos, precisam conter todas as colunas usadas pelas medidas ou atributos de granularidade. As associações detalhadas por medida e atributo de granularidade não podem ser substituídas no nível da partição e supõe-se que elas estejam nas mesmas colunas que as definidas pelo grupo de medidas. Portanto, se a partição usa uma fonte de dados que, de fato, tem um esquema diferente, a consulta **TableDefinition** definida para a partição deve resultar no mesmo esquema usado pelo grupo de medidas.  
   
-### Atributos de granularidade MeasureGroup  
+### <a name="measuregroup-granularity-attributes"></a>Atributos de granularidade MeasureGroup  
  Quando a granularidade de um grupo de medidas corresponde à granularidade conhecida no banco de dados e há uma relação direta entre a tabela de fatos e a tabela de dimensões, o atributo de granularidade deve ser associado apenas à coluna ou às colunas de chave estrangeira apropriadas na tabela de fatos. Por exemplo, considere as seguintes tabelas de fatos e de dimensões:  
   
  `Sales(RequestedDate, OrderedProductID, ReplacementProductID, Qty)`  
@@ -132,7 +137,7 @@ caps.handback.revision: 40
   
  Nesse caso, a Categoria GranularityAttribute está associada à SalesWithCategory.OrderedProductCategory.  
   
-### Migrando do DSO (Decision Support Objects)  
+### <a name="migrating-from-decision-support-objects"></a>Migrando do DSO (Decision Support Objects)  
  O DSO 8.0 (Decision Support Objects) permite que as **PartitionMeasures** sejam associadas novamente. Portanto, a estratégia de migração nesses casos é criar a consulta apropriada.  
   
  Da mesma maneira, não é possível associar novamente os atributos de dimensão de uma partição, embora o DSO 8.0 permita essa nova associação. A estratégia de migração nesses casos é definir as consultas nomeadas necessárias no DSV de modo que as mesmas tabelas e colunas existam no DSV para a partição à medida que as tabelas e colunas sejam usadas para a dimensão. Esses casos podem exigir a adoção da migração simples, na qual a cláusula From/Join/Filter é mapeada para uma consulta nomeada simples em vez de um conjunto estruturado de tabelas relacionadas. Como o DSO 8.0 permite que as PartitionDimensions sejam reassociadas, mesmo se partição estiver usando a mesma fonte de dados, a migração também exigirá vários DSVs para a mesma fonte de dados.  
@@ -141,17 +146,17 @@ caps.handback.revision: 40
   
  A mesma abordagem das associações se aplica a uma partição usando uma fonte de dados que não contenha as tabelas de dimensões, pois a associação é feita com a coluna de chave estrangeira na tabela de fatos, não com a coluna de chave primária na tabela de dimensões.  
   
-## Associações para modelos de mineração  
+## <a name="bindings-for-mining-models"></a>Associações para modelos de mineração  
  Um modelo de mineração é relacional ou OLAP. As associações de dados para um modelo de mineração relacional são, consideravelmente, diferentes das associações para um modelo de mineração OLAP.  
   
-### Associações para modelos de mineração relacional  
+### <a name="bindings-for-a-relational-mining-model"></a>Associações para modelos de mineração relacional  
  Um modelo de mineração relacional depende das relações definidas no DSV para resolver qualquer ambiguidade referente a quais colunas estão associadas às fontes de dados. Em um modelo de mineração relacional, as associações de dados seguem estas regras:  
   
 -   Cada coluna de tabela não aninhada é associada a uma coluna na tabela da caixa ou a tabela relacionada à tabela da caixa (seguindo uma relação muitos para um ou um para um). O DSV define as relações entre as tabelas.  
   
 -   Cada coluna da tabela aninhada está associada à tabela de fontes. As colunas de propriedade da coluna da tabela aninhada são associadas às colunas na tabela de fontes ou a tabela relacionada à tabela de fontes. (Novamente, a associação segue uma relação muitos para um ou um para um.) As associações do modelo de mineração não fornecem o caminho de junção para a tabela aninhada. Em vez disso, as relações definidas no DSV fornecem essas informações.  
   
-### Associações para modelos de mineração OLAP  
+### <a name="bindings-for-an-olap-mining-model"></a>Associações para modelos de mineração OLAP  
  Os modelos de mineração OLAP não têm o equivalente de um DSV. Portanto, as associações de dados devem remover as ambiguidades entre colunas e fontes de dados. Por exemplo, um modelo de mineração pode ter base no cubo Vendas e as colunas podem basear-se em Qtd, Valor e Nome do Produto. Como alternativa, um modelo de mineração pode basear-se em Produto e as colunas podem em Nome do Produto, Cor do Produto e uma tabela aninhada com a Qtd. de Vendas.  
   
  Em um modelo de mineração OLAP, as associações de dados seguem estas regras:  
@@ -160,10 +165,10 @@ caps.handback.revision: 40
   
 -   Cada coluna de tabela associada é associada a uma **CubeDimension**, ou seja, esse processo define como navegar de uma dimensão para um cubo relacionado ou (no caso menos comum de tabelas aninhadas) de um cubo para uma de suas dimensões.  
   
-## Associações fora de linha  
+## <a name="out-of-line-bindings"></a>associações fora de linha  
  Associações fora de linhas permitem alterar as associações de dados existentes temporariamente para a duração de um comando. Associações fora de linha referem-se às associações incluídas em um comando e não persistentes. As associações fora de linha aplicam-se apenas enquanto o comando específico é executado. Por outro lado, as associações incorporadas estão contidas na definição de objeto ASSL e persistem com a definição de objeto dentro dos metadados do servidor.  
   
- O ASSL permite que as associações incorporadas sejam especificadas em um comando **Process**, caso não esteja em um lote ou em um comando **Batch**. Se as associações incorporadas forem especificadas no comando **Batch**, todas as associações especificadas no comando **Batch** criarão um novo contexto de associação no qual todos os comandos **Process** do lote serão executados. Esse novo contexto de associação incluirá objetos processados indiretamente devido ao comando **Process** .  
+ O ASSL permite que as associações incorporadas sejam especificadas em um comando **Process** , caso não esteja em um lote ou em um comando **Batch** . Se as associações incorporadas forem especificadas no comando **Batch** , todas as associações especificadas no comando **Batch** criarão um novo contexto de associação no qual todos os comandos **Process** do lote serão executados. Esse novo contexto de associação incluirá objetos processados indiretamente devido ao comando **Process** .  
   
  Quando as associações incorporadas são especificadas em um comando, elas substituem as associações incorporadas contidas no DDL persistido para os objetos especificados. Esses objetos processados podem incluir o objeto diretamente nomeado no comando **Process** ou incluir outros objetos cujo processamento é automaticamente iniciado como parte do processamento.  
   
@@ -177,10 +182,10 @@ caps.handback.revision: 40
   
  Todos os elementos relacionados a associações incorporadas são opcionais. Para qualquer elemento não especificado, o ASSL usa a especificação contida no DDL do objeto persistido. A especificação de **DataSource** ou **DataSourceView** no comando **Process** é opcional. Se **DataSource** ou **DataSourceView** for especificado, eles não serão instanciados e não persistirão depois que o comando **Process** for concluído.  
   
-### Definição do tipo de associação fora de linha  
- Dentro da coleção fora de linha **Bindings**, o ASSL permite uma coleção de associações de vários objetos, sendo cada um deles uma **Associação**. Cada **Associação** tem uma referência de objeto estendida, que é similar a uma referência de objeto, mas pode se referir aos objetos menores (por exemplo, atributos de dimensão e atributos de grupo de medidas). Esse objeto assume a forma plana típica do elemento **Object** em comandos do **Process**, exceto pelo fato de que as marcas \<*Object*>\<*/Object*> não estão presentes.  
+### <a name="definition-of-the-out-of-line-binding-type"></a>Definição do tipo de associação fora de linha  
+ Dentro da coleção fora de linha **Bindings** , o ASSL permite uma coleção de associações de vários objetos, sendo cada um deles uma **Associação**. Cada **Associação** tem uma referência de objeto estendida, que é similar a uma referência de objeto, mas pode se referir aos objetos menores (por exemplo, atributos de dimensão e atributos de grupo de medidas). Esse objeto assume a forma plana típica do **objeto** elemento **processo** comandos, exceto que o \< *objeto* > \< */Object*> marcas não estão presentes.  
   
- Cada objeto para o qual a associação é especificada, é identificado por um elemento XML na forma \<*object*>ID (por exemplo, **DimensionID**). Depois de identificar o objeto da maneira mais específica possível com a forma \<*object*>ID, identifique o elemento para o qual a associação está sendo especificada, que geralmente é **Source**. Um caso comum a observar é que **Source** é uma propriedade no **DataItem**, que são associações de colunas em um atributo. Nesse caso, você não especifica a marca **DataItem** ; em vez disso, você simplesmente especifica a propriedade **Source** como se estivesse diretamente na coluna a ser vinculada.  
+ Cada objeto para o qual a associação é especificada é identificado por um elemento XML do formulário \< *objeto*> ID (por exemplo, **DimensionID**). Depois de identificar o objeto de maneira mais específica possível com o formulário \< *objeto*> ID, identifique o elemento para o qual a associação está sendo especificada, que geralmente é **fonte**. Um caso comum a observar é que **Source** é uma propriedade no **DataItem**, que são associações de colunas em um atributo. Nesse caso, você não especifica a marca **DataItem** ; em vez disso, você simplesmente especifica a propriedade **Source** como se estivesse diretamente na coluna a ser vinculada.  
   
  As**KeyColumns** são identificadas pela ordem na coleção **KeyColumns** . Não é possível especificar, por exemplo, apenas a primeira e a terceira colunas de um atributo, pois não há como indicar que a segunda coluna de chave deve ser ignorada. Todas as colunas de chave devem estar presentes na associação fora de linha de um atributo de dimensão.  
   

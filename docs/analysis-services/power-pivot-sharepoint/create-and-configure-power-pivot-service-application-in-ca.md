@@ -1,24 +1,29 @@
 ---
-title: "Criar e configurar um aplicativo de servi&#231;o do Power Pivot na Administra&#231;&#227;o Central | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Criar e configurar o aplicativo de serviço do Power Pivot na autoridade de certificação | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 343e3ed597e892e7b9e332d35acb6719e5b27aee
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Criar e configurar um aplicativo de servi&#231;o do Power Pivot na Administra&#231;&#227;o Central
+# <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Criar e configurar o aplicativo de serviço do Power Pivot na autoridade de certificação
   Um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é uma instância de serviço compartilhado do Serviço do Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Cada aplicativo de serviço tem sua própria identidade, definições de configuração, propriedades e armazenamento de dados interno.  
   
  Este tópico contém as seguintes seções:  
@@ -58,13 +63,13 @@ caps.handback.revision: 19
   
 3.  Selecione **Aplicativo de Serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] do SQL Server**. Se não aparecer na lista, significa que o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint não está instalado ou configurado corretamente.  
   
-4.  Na página **Criar Novo Aplicativo de Serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, insira um nome para o aplicativo. O padrão é PowerPivotServiceApplication\<número>. Se você estiver criando vários aplicativos de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , um nome descritivo ajudará outros administradores a entender como o aplicativo é usado.  
+4.  Na página **Criar Novo Aplicativo de Serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, insira um nome para o aplicativo. O padrão é PowerPivotServiceApplication\<número >. Se você estiver criando vários aplicativos de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , um nome descritivo ajudará outros administradores a entender como o aplicativo é usado.  
   
 5.  Em Pool de Aplicativos, crie um novo pool de aplicativos para o aplicativo (recomendável). Selecione ou crie uma conta gerenciada para o pool de aplicativos. Não se esqueça de especificar uma conta de usuário do domínio. Uma conta de usuário de domínio habilita o uso do recurso de conta gerenciado do SharePoint que o deixa atualizar senhas e informações de conta em um único local. Contas de domínio também serão obrigatórias se você pretender diminuir a implantação para incluir instâncias de serviço adicionais a serem executadas sob a mesma identidade.  
   
 6.  Em **Servidor de Banco de Dados**, o valor padrão é a instância de Mecanismo de Banco de Dados do SQL Server que hospeda os bancos de dados de configuração de farm. Você pode usar este servidor ou pode escolher um SQL Server diferente.  
   
-7.  Em **Nome do Banco de Dados**, o valor padrão é PowerPivotServiceApplication1_\<guid>. Você deve criar um banco de dados exclusivo para cada aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . O nome do banco de dados padrão corresponde ao nome padrão do aplicativo de serviço. Se você inseriu um nome de aplicativo de serviço exclusivo, siga uma convenção de nomenclatura semelhante para seu nome de banco de dados de forma que você possa gerenciá-los em conjunto.  
+7.  Em **nome do banco de dados**, o valor padrão é PowerPivotServiceApplication1_\<guid >. Você deve criar um banco de dados exclusivo para cada aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . O nome do banco de dados padrão corresponde ao nome padrão do aplicativo de serviço. Se você inseriu um nome de aplicativo de serviço exclusivo, siga uma convenção de nomenclatura semelhante para seu nome de banco de dados de forma que você possa gerenciá-los em conjunto.  
   
 8.  Em **Autenticação de Banco de dados**, o padrão é Autenticação do Windows. Se você escolher **Autenticação SQL**, consulte o guia de práticas recomendadas do administrador do SharePoint para saber como usar esse tipo de autenticação em uma implantação do SharePoint.  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 19
   
      Não adicione o aplicativo do serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ao grupo de conexões padrão se já houver um. A adição de várias entradas do mesmo tipo de aplicativo do serviço não é uma configuração compatível e pode causar erros. Se você estiver criando aplicativos de serviço adicionais, deixe-os fora do grupo de conexões padrão e adicione-os às listas personalizadas.  
   
-     Para obter mais informações sobre associações de serviço, consulte [Conectar um aplicativo de serviço do Power Pivot a um aplicativo Web do SharePoint na Administração Central](../../analysis-services/power-pivot-sharepoint/connect power pivot service app to sharepoint web app in ca.md).  
+     Para obter mais informações sobre associações de serviço, consulte [Conectar um aplicativo de serviço do Power Pivot a um aplicativo Web do SharePoint na Administração Central](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
   
 10. Clique em **OK.** O serviço aparecerá ao lado de outros serviços gerenciados na lista de aplicativos de serviço do farm.  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 19
   
 4.  Em **Tempo Limite de Carregamento do Banco de Dados**, aumente ou diminua o valor a ser alterado para definir a espera do serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] por uma resposta da instância do SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) para a qual ele encaminhou uma solicitação de dados de carregamento. Como conjuntos de dados muito grandes levam muito tempo para serem transferidos eletronicamente, você deve aguardar um tempo suficiente para que a instância de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] recupere a pasta de trabalho do Excel e mova os dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para uma instância do Analysis Services para processamento da consulta. Como os dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] podem ser extraordinariamente grandes, o valor padrão é 30 minutos.  
   
-5.  Em **Tempo Limite do Pool de Conexão**, aumente ou diminua o valor para alterar por quantos minutos uma conexão de dados permanecerá aberta. O valor padrão é de 30 minutos. Durante esse período, o serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] reutilizará uma conexão de dados ociosa para solicitações de somente leitura do mesmo usuário do SharePoint para os mesmos dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Se nenhuma solicitação adicional for recebida para obter esses dados durante o período especificado, a conexão será removida do pool. Os valores válidos são de 1 a 3.600 segundos. Para obter mais informações sobre pools de conexão, consulte [Referência de definição de configuração &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md).  
+5.  Em **Tempo Limite do Pool de Conexão**, aumente ou diminua o valor para alterar por quantos minutos uma conexão de dados permanecerá aberta. O valor padrão é de 30 minutos. Durante esse período, o serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] reutilizará uma conexão de dados ociosa para solicitações de somente leitura do mesmo usuário do SharePoint para os mesmos dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se nenhuma solicitação adicional for recebida para obter esses dados durante o período especificado, a conexão será removida do pool. Os valores válidos são de 1 a 3.600 segundos. Para obter mais informações sobre pools de conexão, consulte [Referência de definição de configuração &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md).  
   
 6.  Em **Tamanho Máximo do Pool de Conexão do Usuário**, aumente ou diminua o valor para alterar o número máximo de conexões ociosas que o serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] criará em pools de conexões individuais para cada usuário do SharePoint, conjunto de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e combinações de versões.  
   
@@ -107,9 +112,9 @@ caps.handback.revision: 19
   
 9. Em Atualização de Dados, em **Horário Comercial**, você pode especificar um intervalo de horas que define um dia comercial. Os agendamentos de atualização de dados podem ser realizados depois do fim de um dia útil para escolher dados transacionais que foram gerados durante o horário comercial normal.  
   
-10. Em **Conta Autônoma de Atualização de Dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, você pode especificar um aplicativo destino do Serviço de Repositório Seguro predefinido que armazena uma conta predefinida para executar trabalhos de atualização de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Especifique o nome do aplicativo de destino, e não a ID. O aplicativo de destino para atualização de dados autônoma será criado automaticamente se você usar a opção Novo Servidor na Instalação do SQL Server para instalar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Caso contrário, crie o aplicativo de destino manualmente. Para obter instruções sobre como configurar a conta, consulte [Configurar a conta autônoma de atualização de dados do Power Pivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/pt-br/81401eac-c619-4fad-ad3e-599e7a6f8493).  
+10. Em **Conta Autônoma de Atualização de Dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, você pode especificar um aplicativo destino do Serviço de Repositório Seguro predefinido que armazena uma conta predefinida para executar trabalhos de atualização de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Especifique o nome do aplicativo de destino, e não a ID. O aplicativo de destino para atualização de dados autônoma será criado automaticamente se você usar a opção Novo Servidor na Instalação do SQL Server para instalar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Caso contrário, crie o aplicativo de destino manualmente. Para obter instruções sobre como configurar a conta, consulte [Configurar a conta autônoma de atualização de dados do Power Pivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493).  
   
-11. Em **Permitir que os usuários insiram credenciais personalizadas do Windows**, é possível marcar ou desmarcar a caixa de seleção para especificar se os proprietários da agenda podem inserir credenciais do Windows arbitrárias para executar uma agenda de atualização de dados. Se você marcar essa caixa de seleção, o aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] criará e gerenciará um aplicativo de destino para cada conjunto de credenciais armazenadas. Para obter mais informações, consulte [Configurar credenciais armazenadas para atualização de dados do Power Pivot (Power Pivot para SharePoint)](http://msdn.microsoft.com/pt-br/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).  
+11. Em **Permitir que os usuários insiram credenciais personalizadas do Windows**, é possível marcar ou desmarcar a caixa de seleção para especificar se os proprietários da agenda podem inserir credenciais do Windows arbitrárias para executar uma agenda de atualização de dados. Se você marcar essa caixa de seleção, o aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] criará e gerenciará um aplicativo de destino para cada conjunto de credenciais armazenadas. Para obter mais informações, consulte [Configurar credenciais armazenadas para atualização de dados do Power Pivot (Power Pivot para SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).  
   
 12. Em **Tamanho Máximo do Histórico de Processamento**, você pode especificar por quanto tempo deseja reter um registro histórico de processamento de atualização de dados. Essas informações aparecem nas páginas do histórico de atualização de dados mantidas para cada pasta de trabalho que usa atualização de dados. Elas também são exibidas no Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -153,7 +158,7 @@ caps.handback.revision: 19
   
 3.  Clique em **Propriedades** na faixa de opções.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Administração e configuração de servidor do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

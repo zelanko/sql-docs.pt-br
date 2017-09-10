@@ -1,33 +1,38 @@
 ---
-title: "Assistente de Minera&#231;&#227;o de Dados (Analysis Services - Minera&#231;&#227;o de dados) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dimensões [Analysis Services], mineração de dados"
-  - "OLAP [Analysis Services], modelos de mineração"
-  - "Assistente de Mineração de Dados"
-  - "modelos de mineração relacional [Analysis Services]"
+title: "Assistente de mineração de dados (Analysis Services – mineração de dados) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], data mining
+- OLAP [Analysis Services], mining models
+- Data Mining Wizard
+- relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 caps.latest.revision: 57
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee0b59c9035d6801bbe7a87d8589e7c337c6c9c2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Assistente de Minera&#231;&#227;o de Dados (Analysis Services - Minera&#231;&#227;o de dados)
+# <a name="data-mining-wizard-analysis-services---data-mining"></a>Assistente de Mineração de Dados (Analysis Services - Mineração de dados)
   O Assistente de Data Mining no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é iniciado toda vez que você adiciona uma nova estrutura de mineração a um projeto de mineração de dados. O assistente ajuda a escolher uma fonte de dados e configurar uma exibição da fonte de dados que define os dados a serem usados para análise e, em seguida, ajuda a criar um modelo inicial.  
   
  Na fase final do assistente, você pode dividir seus dados opcionalmente em conjuntos de treinamento e teste, e habilitar recursos como detalhamento.  
   
-## O que você deve conhecer antes de iniciar  
+## <a name="what-to-know-before-you-start"></a>O que você deve conhecer antes de iniciar  
  Veja agora o que você precisa saber antes de iniciar o assistente.  
   
 -   Você criará a estrutura e os modelos de mineração de dados a partir de um banco de dados relacional ou a partir de um cubo existente em um banco de dados OLAP?  
@@ -45,13 +50,13 @@ caps.handback.revision: 57
   
 -   Se sua solução estiver pronta para mineração de dados, basta clicar com o botão direito do mouse no nó **Estruturas de Mineração** no Gerenciador de Soluções e selecionar **Nova Estrutura de Mineração** para iniciar o assistente.  
   
--   Se sua solução não contiver nenhum projeto existente, você poderá adicionar um novo projeto de mineração de dados. No menu **Arquivo**, selecione **Novo** e **Projeto**. Verifique se você escolheu o modelo **Projeto Multidimensional e de Data Mining do Analysis Services**.  
+-   Se sua solução não contiver nenhum projeto existente, você poderá adicionar um novo projeto de mineração de dados. No menu **Arquivo** , selecione **Novo**e **Projeto**. Verifique se você escolheu o modelo **Projeto Multidimensional e de Data Mining do Analysis Services**.  
   
 -   Você também pode usar o Assistente de Importação do Analysis Services para obter metadados de uma solução de mineração de dados existente. No entanto, você não pode selecionar os objetos individuais para importar; o banco de dados inteiro é importado, incluindo cubos, exibições da fonte de dados etc. Observe também que a nova solução que é criada pela importação é configurada automaticamente para usar o banco de dados padrão local. Você pode precisar alterar isto para outra instância antes de poder processar ou procurar os objetos. E, se estiver importando de uma versão anterior do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], pode precisar atualizar as referências a provedores.  
   
  Em seguida, você criará a estrutura de mineração e um modelo de mineração de dados associado. Você também pode criar apenas a estrutura de mineração e adicionar modelos posteriormente, mas é geralmente mais fácil criar um modelo de teste primeiro.  
   
-###  <a name="BKMK_Relational"></a> Relacional versus Modelos de mineração OLAP  
+###  <a name="BKMK_Relational"></a>Relacional versus Modelos de mineração OLAP  
  A próxima opção importante que você tem é se deseja usar uma fonte de dados relacional ou basear seu modelo em dados multidimensionais (OLAP).  
   
  O Assistente de Mineração de Dados é ramificado em dois caminhos nesse momento, dependendo se sua fonte de dados é relacional ou em um cubo. Todo o restante exceto o processo de seleção de dados é o mesmo — a escolha do algoritmo, a capacidade para adicionar um conjunto de dados de controle, etc — mas selecionar dados de cubo é um pouco mais complexo que usar dados relacionais. (Você também obterá algumas opções adicionais no final se criar um modelo baseado em um cubo.)  
@@ -67,19 +72,19 @@ caps.handback.revision: 57
 > [!NOTE]  
 >  Você não precisa ter um cubo ou um banco de dados OLAP para fazer mineração de dados. A menos que seus dados já estejam armazenados em um cubo ou você queira explorar dimensões OLAP ou resultados de cálculos ou agregações OLAP, recomendamos que você use uma fonte de dados ou tabela relacional para mineração de dados.  
   
-### Escolhendo um algoritmo  
+### <a name="choosing-an-algorithm"></a>Escolhendo um algoritmo  
  Em seguida, você deve decidir sobre qual algoritmo deve ser usado ao processar seus dados. Esta decisão pode ser difícil de tomar. Cada algoritmo fornecido no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tem recursos diferentes e gera resultados diferentes, de modo que você pode experimentar vários modelos diferentes antes de determinar qual é o mais apropriado para seus dados e seu problema comercial. Consulte o tópico a seguir para obter uma explicação das tarefas para as quais cada algoritmo é mais apropriado:  
   
  [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  Novamente, é possível criar vários modelos usando algoritmos diferentes ou modificar parâmetros para que os algoritmos criem modelos diferentes. Você não está bloqueado em sua escolha de algoritmo, e é prática recomendada criar vários modelos diferentes nos mesmos dados.  
   
-### Definir os dados usados para modelagem  
+### <a name="define-the-data-used-for-modeling"></a>Definir os dados usados para modelagem  
  Além de escolher os dados de uma origem, você deverá especificar qual tabela na exibição da fonte de dados contém os *dados de caso*. A tabela de casos será usada para treinar o modelo de mineração de dados e, dessa forma, deve conter as entidades que você quer analisar: por exemplo, clientes e as respectivas informações demográficas. Cada caso deve ser exclusivo e identificado por uma *chave do caso*.  
   
  Além de especificar a tabela de casos, você pode incluir *tabelas aninhadas* em seus dados. Uma tabela aninhada normalmente contém informações adicionais sobre as entidades da tabela de casos, como as transações conduzidas pelo cliente ou os atributos que têm um relacionamento muitos para um com a entidade. Por exemplo, uma tabela aninhada unida à tabela de casos de **Clientes** pode incluir uma lista de produtos adquiridos por cada cliente. Em um modelo que analisa o tráfego para um site, a tabela aninhada pode incluir as sequências de páginas que o usuário visitou. Para obter mais informações, consulte [Tabelas aninhadas &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)  
   
-### Recursos Adicionais  
+### <a name="additional-features"></a>Recursos Adicionais  
  Para ajudá-lo a escolher os dados certos, e configurar as fontes de dados corretamente, o Assistente de Mineração de Dados fornece estes recursos adicionais:  
   
 -   **Automático – detecção de tipos de dados**: o assistente examinará a exclusividade e a distribuição de valores de coluna, recomendará o melhor tipo de dados e sugerirá um tipo de uso para obter os dados. Você pode substituir estas sugestões selecionando valores de uma lista.  
@@ -90,18 +95,18 @@ caps.handback.revision: 57
   
 -   **Divisão automática do cubo**: se seu modelo de mineração for baseado em uma fonte de dados OLAP, a capacidade de segmentar o modelo usando atributos de cubo será fornecida automaticamente. Isto é útil para criar modelos com base em subconjuntos de dados de cubo.  
   
-### Concluindo o assistente  
+### <a name="completing-the-wizard"></a>Concluindo o assistente  
  A última etapa no assistente é nomear a estrutura de mineração e o modelo de mineração associado. Dependendo do tipo de modelo que você criou, também poderá ter as opções importantes a seguir:  
   
 -   Se você selecionar **Permitir drillthrough**, a capacidade de *drillthrough* estará habilitada no modelo. Com o detalhamento, os usuários que têm permissões apropriadas podem explorar os dados de origem que são usados para criar o modelo.  
   
--   Se você estiver criando um modelo OLAP, poderá selecionar as opções **Criar um novo cubo de mineração de dados** ou **Criar uma dimensão de mineração de dados**. Ambas as opções facilitam a procura do modelo concluído e a análise dos dados subjacentes.  
+-   Se você estiver criando um modelo OLAP, poderá selecionar as opções **Criar um novo cubo de mineração de dados**ou **Criar uma dimensão de mineração de dados**. Ambas as opções facilitam a procura do modelo concluído e a análise dos dados subjacentes.  
   
  Após concluir o Assistente de Mineração de Dados, utilize o Designer de Mineração de Dados para modificar a estrutura de mineração e os modelos para exibir a precisão do modelo, as características da estrutura e dos modelos ou fazer previsões utilizando os modelos.  
   
  [Voltar ao Início](#BKMK_Using_DM_Wizard)  
   
-## Conteúdo relacionado  
+## <a name="related-content"></a>Conteúdo relacionado  
  Para saber mais sobre as decisões que você precisa tomar ao criar um modelo de mineração de dados, consulte os links a seguir:  
   
  [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
@@ -116,7 +121,7 @@ caps.handback.revision: 57
   
  [Detalhamento em modelos de mineração](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Ferramentas de mineração de dados](../../analysis-services/data-mining/data-mining-tools.md)   
  [Soluções de mineração de dados](../../analysis-services/data-mining/data-mining-solutions.md)  
   

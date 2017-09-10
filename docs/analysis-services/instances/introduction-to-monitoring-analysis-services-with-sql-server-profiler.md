@@ -1,30 +1,35 @@
 ---
-title: "Introdu&#231;&#227;o ao monitoramento do Analysis Services com o SQL Server Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Profiler, Analysis Services"
-  - "monitorando o Analysis Services [SQL Server]"
-  - "desempenho [Analysis Services]"
-  - "desempenho [Analysis Services], SQL Server Profiler"
-  - "Profiler [SQL Server Profiler], Analysis Services"
+title: "Introdução ao monitoramento do Analysis Services com o SQL Server Profiler | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Profiler, Analysis Services
+- monitoring Analysis Services [SQL Server]
+- performance [Analysis Services]
+- performance [Analysis Services], SQL Server Profiler
+- Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e5b4073390d14a50948ad7cf023a394c3f1ef683
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Introdu&#231;&#227;o ao monitoramento do Analysis Services com o SQL Server Profiler
+# <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>Introdução ao monitoramento do Analysis Services com o SQL Server Profiler
   É possível usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para monitorar eventos gerados por uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], você pode fazer o seguinte:  
   
 -   Monitorar o desempenho de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -41,7 +46,7 @@ caps.handback.revision: 28
   
 -   Exibir dados sobre os eventos capturados na tela ou capturar e salvar dados sobre cada evento em um arquivo ou na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para análise ou reprodução futura. Ao repetir os dados, é possível executar novamente os eventos salvos conforme ocorreram originalmente, seja em tempo real ou passo a passo.  
   
-## Usando o SQL Server Profiler  
+## <a name="using-sql-server-profiler"></a>Usando o SQL Server Profiler  
  Para usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para criar ou repetir rastreamentos, você deve ser um membro da função de servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se você for um membro da função de servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , inicie o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] a partir do grupo de programas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no menu **Iniciar** .  
   
  Ao usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], observe o seguinte:  
@@ -59,7 +64,7 @@ caps.handback.revision: 28
   
  Para obter o desempenho ideal, use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para monitorar somente os eventos pelos quais você tem maior interesse. O monitoramento de muitos eventos pode causar sobrecarga e aumentar muito a tabela ou o arquivo de rastreamento, especialmente durante o monitoramento em um longo período de tempo. Além disso, use a filtragem para limitar a quantidade de dados coletados e impedir o aumento em excesso dos rastreamentos.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Eventos de rastreamento do Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)   
  [Criar rastreamentos do Profiler para reprodução &#40;Analysis Services&#41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
   

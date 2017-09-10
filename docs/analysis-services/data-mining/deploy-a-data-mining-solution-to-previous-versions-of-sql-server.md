@@ -1,31 +1,36 @@
 ---
-title: "Implantar uma solu&#231;&#227;o de minera&#231;&#227;o de dados em vers&#245;es anteriores do SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "compatibilidade com versões anteriores [Analysis Services]"
-  - "controle [mineração de dados]"
-  - "implantar [Analysis Services]"
-  - "série temporal [Analysis Services]"
-  - "implantando [Analysis Services – mineração de dados]"
-  - "sincronização [Analysis Services]"
-  - "implantação [Analysis Services]"
+title: "Implantar uma solução de mineração de dados em versões anteriores do SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backward compatibility [Analysis Services]
+- holdout [data mining]
+- deploy [Analysis Services]
+- time series [Analysis Services]
+- deploying [Analysis Services - data mining]
+- synchronization [Analysis Services]
+- deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d56f2cdd207e7d50584b08b5ebcae77bd9057b36
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Implantar uma solu&#231;&#227;o de minera&#231;&#227;o de dados em vers&#245;es anteriores do SQL Server
+# <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Implantar uma solução de mineração de dados em versões anteriores do SQL Server
   Esta seção descreve problemas de compatibilidade conhecidos que podem surgir durante a tentativa de implantação de um modelo ou estrutura de mineração de dados criado em uma instância do [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] para um banco de dados que usa o SQL Server 2005 Analysis Services, ou quando você implanta modelos criados no SQL Server 2005 em uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  A implantação em uma instância do SQL Server 2000 Analysis Services não é suportada.  
@@ -56,14 +61,14 @@ caps.handback.revision: 16
  Se o provedor usado para a fonte de dados do modelo for SQL Client Data Provider 10, você também deve modificar a definição de fonte de dados para especificar a versão anterior do SQL Server Native Client. Caso contrário, o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] gera um erro que declara que o provedor não é registrado.  
   
 ##  <a name="bkmk_Holdout"></a> Implantando modelos com controle  
- Se o [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] for usado para criar uma estrutura de mineração que contém uma partição de controle usada para testar modelos de mineração de dados, a estrutura de mineração poderá ser implantada em uma instância do SQL Server 2005, mas as informações de partição serão perdidas.  
+ Se você criar uma estrutura de mineração que contém uma partição de controle usada para testar modelos de mineração de dados, a estrutura de mineração pode ser implantada em uma instância do SQL Server 2005, mas as informações de partição serão perdidas.  
   
  Ao abrir a estrutura de mineração no SQL Server 2005 Analysis Services, o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] gera um erro e, em seguida, gera novamente a estrutura para remover a partição de controle.  
   
- Depois que a estrutura é recriada, o tamanho da partição de controle não está mais disponível na janela Propriedades; no entanto, o valor \<ddl100_100:HoldoutMaxPercent>30\</ddl100_100:HoldoutMaxPercent>) ainda poderá estar presente no arquivo de script ASSL.  
+ Depois que a estrutura é recriada, o tamanho da partição de exibição não está mais disponível na janela Propriedades. No entanto, o valor \<ddl100_100: holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) ainda pode estar presente no arquivo de script ASSL.  
   
 ##  <a name="bkmk_Filter"></a> Implantando modelos com filtros  
- Se o [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] for usado para aplicar um filtro em um modelo de mineração, o modelo poderá ser implantado em uma instância do SQL Server 2005, mas o filtro não será aplicado.  
+ Se você aplicar um filtro a um modelo de mineração, o modelo pode ser implantado em uma instância do SQL Server 2005, mas o filtro não será aplicado.  
   
  Quando você abre o modelo de mineração, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] gera um erro e, em seguida, gera novamente o modelo para remover o filtro.  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 16
   
  Se você tentar sincronizar um banco de dados [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , o servidor retornará um erro e a sincronização do banco de dados falhará.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   

@@ -1,23 +1,28 @@
 ---
-title: "Criar uma estrutura de minera&#231;&#227;o OLAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Criar uma estrutura de mineração OLAP | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: b4c361d8a255b4ef5dc348692bb688a0421b0abd
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Criar uma estrutura de minera&#231;&#227;o OLAP
+# <a name="create-an-olap-mining-structure"></a>Criar uma estrutura de mineração OLAP
   Há muitas vantagens na criação de um modelo de mineração de dados baseado em um cubo OLAP ou em outro repositório de dados multidimensional. Uma solução de OLAP já contém grandes volumes de dados que estão bem-organizados, limpos e corretamente formatados; contudo, a complexidade dos dados é tamanha que é pouco provável que usuários localizem padrões significativos pela exploração ad hoc. A mineração de dados permite descobrir novas correlações e apresenta ideias acionáveis.  
   
  Este tópico descreve como criar uma estrutura de mineração OLAP, com base em uma dimensão e em medidas relacionadas em uma solução multidimensional existente.  
@@ -42,7 +47,7 @@ caps.handback.revision: 12
  Para obter mais informações, consulte [Importar um projeto de mineração de dados usando o Assistente de Importação do Analysis Services](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
 ##  <a name="bkmk_Overview"></a> Visão geral do processo de mineração de dados OLAP  
- Inicie o Assistente de Mineração de Dados, clicando com o botão direito do mouse no nó **Estruturas de Mineração**, no Gerenciador de Soluções, e selecionando **Nova Estrutura de Mineração**. O assistente orienta-o pelas seguintes etapas para criar a estrutura de um novo modelo e estrutura:  
+ Inicie o Assistente de Mineração de Dados, clicando com o botão direito do mouse no nó **Estruturas de Mineração** , no Gerenciador de Soluções, e selecionando  **Nova Estrutura de Mineração**. O assistente orienta-o pelas seguintes etapas para criar a estrutura de um novo modelo e estrutura:  
   
 1.  **Selecionar o Método de Definição**: aqui você seleciona um tipo de fonte de dados e escolhe **De cubo existente**.  
   
@@ -113,7 +118,7 @@ caps.handback.revision: 12
 |Localizar células interessantes ou anormais|Identifique as vendas por loja que contradizem as tendências típicas com o tempo.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series|  
 |Localize correlações|Identifique fatores relacionados ao tempo de inatividade do servidor, inclusive região, tipo de computador, SO ou data de compra.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naïve Bayes|  
   
-##  <a name="bkmk_Filters"></a> Dividindo um cubo versus Filtrando modelos  
+##  <a name="bkmk_Filters"></a>Dividindo um cubo versus. Filtrando modelos  
  Fatiar o cubo enquanto cria um modelo é como criar um filtro em um modelo de mineração relacional. Em um modelo relacional, o filtro na fonte de dados é definido como uma cláusula WHERE em uma instrução SQL; em um cubo, você usa o editor para criar instruções de filtro que usam MDX.  
   
  Por exemplo, um cubo pode conter informações sobre compras de produtos no mundo, mas, para sua campanha de marketing, você deseja criar um modelo baseado na análise de consumidoras com mais de 30 anos que morem no Reino Unido.  
@@ -124,7 +129,7 @@ caps.handback.revision: 12
   
 -   Para o segundo filtro, você escolherá a dimensão Cliente, selecionará o atributo Gênero e selecionará “Feminino” na lista de valores de atributo.  
   
- Após a criação da estrutura de mineração, você pode modificar a definição dos dados de cubo e os critérios de filtro. Para obter mais informações, consulte [Filter the Source Cube for a Mining Structure](../Topic/Filter%20the%20Source%20Cube%20for%20a%20Mining%20Structure.md).  
+ Após a criação da estrutura de mineração, você pode modificar a definição dos dados de cubo e os critérios de filtro. Para obter mais informações, consulte [filtros para modelos de mineração](~/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
  As guias **Estrutura de Mineração** e **Modelo de Mineração** fornecem uma opção para adicionar um filtro a uma estrutura de mineração existente, clicando em **Definir uma Fatia do Cubo**. A caixa de diálogo **Fatiar Cubo** ajuda-o a criar uma expressão de filtro MDX válida, escolhendo um valor nas listas suspensas.  
   
@@ -158,11 +163,12 @@ caps.handback.revision: 12
 > [!WARNING]  
 >  Apenas estes tipos de modelo oferecem suporte à criação de dimensões de mineração de dados: modelos baseados no algoritmo Microsoft Clustering, no algoritmo Árvores de Decisão da Microsoft ou no algoritmo Associação da Microsoft.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Colunas da estrutura de mineração](../../analysis-services/data-mining/mining-structure-columns.md)   
+ [Colunas de estrutura de mineração](../../analysis-services/data-mining/mining-structure-columns.md)   
  [Colunas do modelo de mineração](../../analysis-services/data-mining/mining-model-columns.md)   
  [Propriedades do modelo de mineração](../../analysis-services/data-mining/mining-model-properties.md)   
- [Propriedades para estruturas de mineração e colunas de estrutura](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
+ [Propriedades de estrutura de mineração e colunas de estrutura](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
   
   
+

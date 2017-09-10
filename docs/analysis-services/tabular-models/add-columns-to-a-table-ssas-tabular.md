@@ -1,27 +1,32 @@
 ---
-title: "Adicionar colunas a uma tabela (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Adicionar colunas a uma tabela (SSAS Tabular) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 170b1c7aceb4a642343f00faa6dc6ffbb3f6cbbb
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Adicionar colunas a uma tabela (SSAS tabular)
+# <a name="add-columns-to-a-table-ssas-tabular"></a>Adicionar colunas a uma tabela (SSAS tabular)
   Este tópico descreve como adicionar colunas a uma tabela existente.  
   
-## Adicionar colunas da fonte de dados  
+## <a name="add-columns-from-the-data-source"></a>Adicionar colunas da fonte de dados  
  Ao usar o Assistente de Importação de Tabela para importar dados de uma tabela de fonte de dados, uma nova tabela é criada no modelo que inclui todas as colunas na tabela de origem. Ou, se você escolher filtrar determinadas colunas usando o recurso Visualizar e Filtrar, somente essas colunas e os dados filtrados que você selecionar. Você também pode escrever uma Consulta SQL que especifica somente algumas colunas para importar. Você pode, no entanto, determinar posteriormente uma tabela de origem tem colunas adicionais que você deseja adicionar à tabela modelo ou precisa adicionar uma coluna calculada com valores derivados de uma fórmula DAX.  
   
  Por exemplo, se quando você inicialmente importou de uma fonte de dados, usou o recurso Visualizar e Filtrar no Assistente de Importação de Tabela para selecionar um número limitado de colunas da tabela de origem, você determina posteriormente que precisa adicionar outra coluna que existe na tabela de origem, mas ainda não existe na tabela modelo. Por exemplo, ou uma nova coluna AdjustedProfit foi acrescentada à tabela FactSales na fonte de dados e agora você deseja adicionar a mesma coluna AdjustedProfit e dados à tabela de Vendas no modelo.  
@@ -34,16 +39,16 @@ caps.handback.revision: 11
 > [!NOTE]  
 >  Se você usou uma Consulta SQL para selecionar tabelas e colunas quando inicialmente usou o Assistente de Importação de Tabela para importar dados, deve usar uma Consulta SQL novamente na caixa de diálogo Editar Propriedades da Tabela para adicionar colunas à tabela modelo.  
   
-#### Para adicionar uma coluna da fonte de dados usando a caixa de diálogo Editar Propriedades da Tabela  
+#### <a name="to-add-a-column-from-the-data-source-by-using-the-edit-table-properties-dialog-box"></a>Para adicionar uma coluna da fonte de dados usando a caixa de diálogo Editar Propriedades da Tabela  
   
 1.  No designer de modelo, clique na tabela à qual você quer adicionar uma coluna, clique no menu **Tabela** e clique em  **Propriedades da Tabela**.  
   
 2.  Na caixa de diálogo **Editar Propriedades da Tabela** , na janela de visualização de tabela, selecione a coluna de origem que você quer adicionar e clique em OK. As colunas já incluídas na definição de tabela já estarão marcadas.  
   
-## Adicionar uma coluna calculada  
- Em uma coluna calculada, uma fórmula DAX é usada para definir um valor para cada linha. Por exemplo, você pode criar uma coluna calculada com uma fórmula simples (=1) que acrescenta um valor de 1 a cada linha. Colunas calculadas também podem ter mais fórmulas complexas que calculam valores com base em outros dados no modelo. As colunas calculadas são abordadas em mais detalhes em outros tópicos. Para obter mais informações, consulte [Colunas calculadas &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md).  
+## <a name="add-a-calculated-column"></a>Adicionar uma coluna calculada  
+ Em uma coluna calculada, uma fórmula DAX é usada para definir um valor para cada linha. Por exemplo, você pode criar uma coluna calculada com uma fórmula simples (=1) que acrescenta um valor de 1 a cada linha. Colunas calculadas também podem ter mais fórmulas complexas que calculam valores com base em outros dados no modelo. As colunas calculadas são abordadas em mais detalhes em outros tópicos. Para obter mais informações, consulte [Colunas calculadas &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md).  
   
-#### Para criar uma coluna calculada  
+#### <a name="to-create-a-calculated-column"></a>Para criar uma coluna calculada  
   
 1.  No designer de modelo, na Exibição de Dados, selecione a tabela à qual você quer adicionar uma coluna calculada em branco, role até a coluna mais à direita, ou clique no menu **Coluna** e clique em **Adicionar Coluna**.  
   
@@ -51,10 +56,10 @@ caps.handback.revision: 11
   
 2.  Na barra de fórmulas, digite uma fórmula DAX para adicionar atributos para cada linha.  
   
-## Adicionar uma coluna em branco  
- Você pode criar uma coluna nomeada e em branco em uma tabela modelo. Colunas em branco poderão ser úteis se você desejar colar dados de outra origem. Lembre-se de que dados colados são armazenados de maneira diferente de dados importados. Para obter mais informações, consulte [Copiar e colar dados &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/copy-and-paste-data-ssas-tabular.md).  
+## <a name="add-a-blank-column"></a>Adicionar uma coluna em branco  
+ Você pode criar uma coluna nomeada e em branco em uma tabela modelo. Colunas em branco poderão ser úteis se você desejar colar dados de outra origem. Lembre-se de que dados colados são armazenados de maneira diferente de dados importados. Para obter mais informações, consulte [Copiar e colar dados &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
   
-#### Para criar uma coluna nomeada e em branco  
+#### <a name="to-create-a-named-blank-column"></a>Para criar uma coluna nomeada e em branco  
   
 1.  No designer de modelo, na Exibição de Dados, selecione a tabela à qual você quer adicionar uma coluna em branco, role até a coluna mais à direita, ou clique no menu **Coluna** e clique em **Adicionar Coluna**.  
   
@@ -62,8 +67,8 @@ caps.handback.revision: 11
   
 2.  Clique na célula superior, digite um nome e, em seguida, pressione ENTER.  
   
-## Consulte também  
- [Caixa de diálogo Editar Propriedades da Tabela &#40;SSAS&#41;](../Topic/Edit%20Table%20Properties%20Dialog%20Box%20\(SSAS\).md)   
+## <a name="see-also"></a>Consulte também  
+ [Caixa de diálogo Editar Propriedades da Tabela &#40;SSAS&#41;](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
  [Alterar os mapeamentos de tabela, coluna ou filtro de linha &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

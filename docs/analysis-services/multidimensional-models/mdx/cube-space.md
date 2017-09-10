@@ -1,27 +1,32 @@
 ---
-title: "Espa&#231;o de cubo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Espaço de cubo | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16c39c5d1699c69e7f2dc119e90ff975b637d74f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Espa&#231;o de cubo
+# <a name="cube-space"></a>Espaço de cubo
   Espaço de cubo é o produto dos membros das hierarquias de atributo de um cubo com as medidas do cubo. Portanto, o espaço de cubo é determinado pelo produto combinatório de todos os membros de hierarquia de atributo no cubo e as medidas do cubo e define o tamanho máximo do cubo. É importante observar que esse espaço inclui todas as possíveis combinações de membros de hierarquia de atributo, inclusive combinações que poderiam ser consideradas impossíveis no mundo real, como combinações onde a cidade é Paris e os países são Inglaterra, Espanha, Japão, Índia ou qualquer outro.  
   
-## Autoexists e espaço de cubo  
+## <a name="autoexists-and-cube-space"></a>Autoexists e espaço de cubo  
  O conceito de *autoexists* limita esse espaço de cubo às células que realmente existem. É possível que membros de uma hierarquia de atributo em uma dimensão não existam com membros de outra hierarquia de atributo na mesma dimensão.  
   
  Por exemplo, se você tiver um cubo com uma hierarquia de atributo Cidade, uma hierarquia de atributo País, e uma medida Valor de Vendas pela Internet, o espaço desse cubo somente vai incluir os membros que existem um com o outro. Por exemplo, se a hierarquia de atributo Cidade incluir as cidades de Nova Iorque, Londres, Paris, Tóquio e Melbourne; e a hierarquia de atributo País incluir os países Estados Unidos, Reino Unido, França, Japão e Austrália; o espaço do cubo não incluirá o espaço (célula) na interseção Paris e Estados Unidos.  
@@ -56,7 +61,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Note que 0 é usado para designar o eixo da coluna, que é a forma abreviada de eixo (0) – que é o eixo da coluna.  
   
- A consulta anterior somente retorna células para membros de cada hierarquia de atributo na consulta que existe um com o outro. A consulta anterior também pode ser escrita usando a nova * variante da função [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx.md).  
+ A consulta anterior somente retorna células para membros de cada hierarquia de atributo na consulta que existe um com o outro. A consulta anterior também pode ser escrita usando a nova * variante da função [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx-operator-reference.md) .  
   
 ```  
 SELECT   
@@ -81,7 +86,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  Cada uma dessas três consultas anteriores demonstra o efeito do comportamento Autoexists no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-## Hierarquias definidas pelo usuário e espaço do cubo  
+## <a name="user-defined-hierarchies-and-cube-space"></a>Hierarquias definidas pelo usuário e espaço do cubo  
  Os exemplos anteriores deste tópico definem posições no espaço do cubo, usando hierarquias de atributo. Porém, você também pode definir uma posição no espaço do cubo usando hierarquias definidas pelo usuário que foram definidas com base em hierarquias de atributo em uma dimensão. Uma hierarquia definida pelo usuário é uma hierarquia das hierarquias de atributo planejada para facilitar a procura de dados de cubo pelos usuários.  
   
  Por exemplo, a consulta **CROSSJOIN** na seção anterior também poderia ter sido escrita conforme apresentado a seguir:  
@@ -113,7 +118,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Note que a palavra-chave **WITH** é usada com as funções [CurrentMember (MDX)](../../../mdx/currentmember-mdx.md) e [Name (MDX)](../../../mdx/name-mdx.md) para criar um membro calculado para uso na consulta. Para obter mais informações, consulte [A consulta MDX básica &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-query-mdx.md).  
+>  Note que a palavra-chave **WITH** é usada com as funções [CurrentMember (MDX)](../../../mdx/currentmember-mdx.md) e [Name (MDX)](../../../mdx/name-mdx.md) para criar um membro calculado para uso na consulta. Para obter mais informações, consulte [A consulta MDX básica &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md).  
   
  Na consulta anterior, o nome do membro da hierarquia de atributo País que está associado a cada membro da hierarquia de atributo Estado é retornado. O membro País esperado é exibido (porque uma relação de atributo está definida entre os atributos Cidade e País). Porém, se nenhuma relação de atributo estivesse definida entre hierarquias de atributo na mesma dimensão, o membro (All) seria retornado, conforme ilustrado na consulta a seguir.  
   
@@ -127,9 +132,9 @@ FROM [Adventure Works]
   
  Na consulta anterior, é retornado o membro (All) ("Todos os Clientes"), porque não existe nenhuma relação entre Educação e Cidade. Portanto, o membro (All) da hierarquia de atributo Educação seria o membro padrão da hierarquia de atributo Educação usado em qualquer tupla envolvendo a hierarquia de atributo Cidade onde um membro Educação não é explicitamente fornecido.  
   
-## Contexto de cálculo  
+## <a name="calculation-context"></a>Contexto de cálculo  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Principais conceitos em MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Tuplas](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   

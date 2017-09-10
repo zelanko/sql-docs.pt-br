@@ -1,26 +1,31 @@
 ---
-title: "Solu&#231;&#245;es de minera&#231;&#227;o de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mineração de dados [Analysis Services], sobre a mineração de dados"
-  - "mineração de dados [Analysis Services], desenvolvimento"
+title: "Soluções de mineração de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], about data mining
+- data mining [Analysis Services], development
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 caps.latest.revision: 64
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee2196b673eb9a53d5fefe5c62d1158ae94bf702
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Solu&#231;&#245;es de minera&#231;&#227;o de dados
+# <a name="data-mining-solutions"></a>Soluções de mineração de dados
   Uma solução de mineração de dados é uma solução do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contém um ou mais projetos de mineração de dados.  
   
  Os tópicos desta seção fornecem informações sobre como projetar e implementar uma solução de mineração de dados integrada usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter uma visão geral do processo de design de mineração de dados e as ferramentas relacionadas, consulte [Data Mining Concepts](../../analysis-services/data-mining/data-mining-concepts.md).  
@@ -33,7 +38,7 @@ caps.handback.revision: 64
   
  [Passo a passo de solução](#bkmk_Walkthru)  
   
-##  <a name="bkmk_RelMD"></a> Relacional versus Soluções multidimensionais  
+##  <a name="bkmk_RelMD"></a>Relacional versus Soluções multidimensionais  
  Uma solução de mineração de dados pode ser baseada em dados multidimensionais, ou seja, um cubo existente, ou em dados puramente relacionais, como as tabelas e exibições em um data warehouse, ou em arquivos de texto, pastas de trabalho do Excel ou outras fontes de dados externas.  
   
 -   Você pode criar objetos de mineração de dados dentro de uma solução de banco de dados multidimensional existente.  
@@ -62,7 +67,7 @@ caps.handback.revision: 64
  [Criar uma estrutura de mineração OLAP](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
  Criar a estrutura de mineração baseada em dados em um cubo OLAP. Os modelos que você cria dos dados OLAP podem ser salvos como uma dimensão de mineração de dados ou você pode salvar o conjunto de dados e seus modelos como um novo cubo.  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
  [Projetos de mineração de dados](../../analysis-services/data-mining/data-mining-projects.md)  
   
  [Processando objetos de mineração de dados](../../analysis-services/data-mining/processing-data-mining-objects.md)  
@@ -71,7 +76,7 @@ caps.handback.revision: 64
   
  [Implantação de soluções de mineração de dados](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)  
   
-## Tarefas e tópicos relacionados  
+## <a name="related-tasks-and-topics"></a>Tarefas e tópicos relacionados  
  Depois de você ter criado uma solução de mineração de dados básica, incluindo fontes de dados e uma estrutura de mineração, pode criar a solução adicionando novos modelos, testando e comparando modelos, criando previsões e experimentando com subconjuntos de dados.  
   
  Para obter mais informações, consulte os seguintes links:  
@@ -84,7 +89,7 @@ caps.handback.revision: 64
 |Personalize um modelo de mineração aplicando filtros aos dados usados no treinamento do modo.|[Adicionar Modelos de Mineração a uma estrutura &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Atualize e gerencie as soluções de mineração de dados.|Link TBD|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tutoriais de Data Mining &#40;Analysis Services&#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
   
   

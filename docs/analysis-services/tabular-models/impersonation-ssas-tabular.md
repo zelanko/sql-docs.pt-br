@@ -1,24 +1,29 @@
 ---
-title: "Representa&#231;&#227;o (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Representação (SSAS Tabular) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1bb694fef39accedea28b1c53576a7ebb161cc51
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Representa&#231;&#227;o (SSAS tabular)
+# <a name="impersonation-ssas-tabular"></a>Representação (SSAS tabular)
   Este tópico fornece a autores de modelos tabulares uma compreensão de como as credenciais de logon são usados pelo Analysis Services ao conectar-se a uma fonte de dados para importar e processar (atualizar) dados.  
   
  Este artigo inclui as seções a seguir:  
@@ -52,11 +57,11 @@ caps.handback.revision: 20
   
  **Compreendendo as credenciais do cliente**  
   
- Ao criar um novo modelo ou ao adicionar uma fonte de dados a um modelo existente, você usa o Assistente de Importação de Tabela para conectar-se a uma fonte de dados e selecionar tabelas e exibições a serem importadas no modelo. No Assistente de Importação de Tabela, na página **Selecionar Tabelas e Exibições**, é possível usar o recurso **Visualizar e Filtrar** para exibir um exemplo (limitado a 50 linhas) dos dados que serão importados. Você também pode especificar filtros para excluir dados que não precisam ser incluídos no modelo.  
+ Ao criar um novo modelo ou ao adicionar uma fonte de dados a um modelo existente, você usa o Assistente de Importação de Tabela para conectar-se a uma fonte de dados e selecionar tabelas e exibições a serem importadas no modelo. No Assistente de Importação de Tabela, na página **Selecionar Tabelas e Exibições** , é possível usar o recurso **Visualizar e Filtrar** para exibir um exemplo (limitado a 50 linhas) dos dados que serão importados. Você também pode especificar filtros para excluir dados que não precisam ser incluídos no modelo.  
   
  De maneira semelhante, para modelos existentes que já foram criados, você pode usar a caixa de diálogo **Editar Propriedades da Tabela** para visualizar e filtrar dados importados em uma tabela. Para visualizar e filtrar recursos aqui, use a mesma funcionalidade do recurso **Visualizar e Filtrar** na página **Selecionar Tabelas e Exibições** do Assistente de Importação de Tabela.  
   
- O recurso **Visualizar e Filtrar** e as caixas de diálogo **Propriedades da Tabela** e **Gerenciador de Partições** são uma operação do *cliente*; isto é, o que é feito durante essa operação é diferente de como a fonte de dados é conectada e os dados são buscados da fonte de dados; uma operação do servidor. As credenciais usadas para visualizar e filtrar dados são as credenciais do usuário que está conectado no momento. As operações do cliente sempre usam as credenciais do Windows do usuário atual para conectar-se à fonte de dados.  
+ O recurso **Visualizar e Filtrar** e as caixas de diálogo **Propriedades da Tabela** e **Gerenciador de Partições** são uma operação do *cliente* ; isto é, o que é feito durante essa operação é diferente de como a fonte de dados é conectada e os dados são buscados da fonte de dados; uma operação do servidor. As credenciais usadas para visualizar e filtrar dados são as credenciais do usuário que está conectado no momento. As operações do cliente sempre usam as credenciais do Windows do usuário atual para conectar-se à fonte de dados.  
   
  Essa separação de credenciais usadas durante operações do servidor e do cliente pode levar a uma incompatibilidade no que o usuário vê ao usar o recurso **Visualizar e Filtrar** ou a caixa de diálogo **Propriedades da Tabela** (operações do cliente) e os dados que serão buscados durante uma importação ou processamento (uma operações do servidor). Se as credenciais do usuário conectado no momento e as credenciais de representação especificadas forem diferentes, os dados vistos no recurso **Visualizar e Filtrar** ou na caixa de diálogo **Propriedades da Tabela** e os dados buscados durante uma importação ou processamento poderão ser diferentes dependendo das credenciais requeridas pela fonte de dados.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 20
   
 |Opção|ImpersonationMode*|Description|  
 |------------|-------------------------|-----------------|  
-|**Nome de usuário e senha específicos do Windows***\*|ImpersonateWindowsUserAccount|Esta opção especifica que o modelo usa uma conta de usuário do Windows para importar ou processar dados da fonte de dados. O domínio e o nome da conta de usuário usam o seguinte formato**\<Nome do domínio>\\<Nome da conta do usuário\>**. Ao criar um novo modelo por meio do Assistente de Importação de Tabela, essa é a opção padrão.|  
+|**Nome de usuário e senha específicos do Windows***\*|ImpersonateWindowsUserAccount|Esta opção especifica que o modelo usa uma conta de usuário do Windows para importar ou processar dados da fonte de dados. O domínio e o nome da conta de usuário usa o seguinte formato:**\<nome de domínio >\\< nome da conta de usuário\>**. Ao criar um novo modelo por meio do Assistente de Importação de Tabela, essa é a opção padrão.|  
 |**Conta de Serviço**|ImpersonateServiceAccount|Esta opção especifica que o modelo usa as credenciais de segurança associadas à instância de serviço do Analysis Services que gerencia o modelo.|  
   
  *O ImpersonationMode especifica o valor para a propriedade [DataSourceImpersonationInfo Element &#40;ASSL&#41;](../../analysis-services/scripting/properties/datasourceimpersonationinfo-element-assl.md) na fonte de dados.  
@@ -93,7 +98,7 @@ caps.handback.revision: 20
   
  Para modelos implantados em um servidor do Analysis Services, as informações de representação podem ser configuradas no SSMS, em **Propriedades da Conexão** > **Informações sobre representação**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Modo DirectQuery &#40;SSAS de tabela&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [Fontes de dados &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
  [Implantação de uma solução de modelo de tabela &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  

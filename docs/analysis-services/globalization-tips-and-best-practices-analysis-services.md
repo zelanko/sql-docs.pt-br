@@ -1,43 +1,36 @@
 ---
-title: "Dicas de globaliza&#231;&#227;o e pr&#225;ticas recomendadas (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "traduções [Analysis Services], aplicativos cliente"
-  - "comparações de data"
-  - "comparações de dia da semana [Analysis Services]"
-  - "tempo [Analysis Services]"
-  - "comparações de mês [Analysis Services]"
+title: "Dicas de globalização e práticas recomendadas (Analysis Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- translations [Analysis Services], client applications
+- date comparisons
+- day-of-week comparisons [Analysis Services]
+- time [Analysis Services]
+- month comparisons [Analysis Services]
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 79c80dd57b6a6ea1257c00dfb95bf1e9a08a5b99
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Dicas de globaliza&#231;&#227;o e pr&#225;ticas recomendadas (Analysis Services)
+# <a name="globalization-tips-and-best-practices-analysis-services"></a>Dicas de globalização e práticas recomendadas (Analysis Services)
   [!INCLUDE[applies](../includes/applies-md.md)] Somente multidimensional  
   
  Essas diretrizes e dicas podem ajudar a aumentar a portabilidade das soluções de business intelligence e evitar os erros diretamente relacionados às configurações de idioma e agrupamento.  
-  
--   [Usar agrupamentos similares em toda a pilha](#bkmk_sameColl)  
-  
--   [Recomendações de agrupamento mais comuns](#bkmk_recos)  
-  
--   [Diferenciação de maiúsculas e minúsculas de identificadores de objeto](#bkmk_objid)  
-  
--   [Teste de localidade usando o Excel e o SQL Server Profiler](#bkmk_test)  
-  
--   [Escrever consultas MDX em uma solução que contém traduções](#bkmk_mdx)  
-  
--   [Escrevendo consultas MDX que contêm valores de data e hora](#bkmk_datetime)  
   
 ##  <a name="bkmk_sameColl"></a> Usar agrupamentos similares em toda a pilha  
  Se possível, tente usar as mesmas configurações de agrupamento na [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você usa no mecanismo de banco de dados, tentando obter correspondência na diferenciação de largura, maiúsculas de minúsculas e acesso.  
@@ -105,21 +98,21 @@ caps.handback.revision: 32
   
      Você deve ver as traduções de francês do banco de dados de exemplo Adventure Works.  
   
-     ![Tabela dinâmica do Excel com as traduções francesas](../analysis-services/media/ssas-localetest-excel.png "Tabela dinâmica do Excel com as traduções francesas")  
+     ![Tabela dinâmica do Excel com as traduções francesas](../analysis-services/media/ssas-localetest-excel.png "tabela dinâmica do Excel com as traduções francesas")  
   
  Como um acompanhamento, você pode usar o SQL Server Profiler para confirmar a localidade. Clique em um evento `Session Initialize` e examine a lista de propriedades na área de texto abaixo para encontrar `<localeidentifier>1036</localeidentifier>`.  
   
  No Management Studio, você pode especificar o Identificador de Localidade em uma conexão de servidor.  
   
--   No Pesquisador de objetos | **Conectar** | **Analysis Services** | **Opções**, clique na guia **Parâmetros Adicionais de Conexão**.  
+-   No Pesquisador de objetos | **Conectar** | **Analysis Services** | **Opções**, clique na guia **Parâmetros Adicionais de Conexão** .  
   
 -   Insira `Local Identifier=1036` e, em seguida, clique em **Conectar**.  
   
 -   Execute uma consulta MDX no banco de dados do Adventure Works. Os resultados da consulta devem ser as traduções de francês.  
   
-     ![Consulta MDX com as traduções francesas no SSMS](../analysis-services/media/ssas-localetest-ssms.png "Consulta MDX com as traduções francesas no SSMS")  
+     ![A consulta MDX com as traduções francesas no SSMS](../analysis-services/media/ssas-localetest-ssms.png "consulta MDX com as traduções francesas no SSMS")  
   
-##  <a name="bkmk_mdx"></a> Escrevendo consultas MDX em uma solução que contém traduções  
+##  <a name="bkmk_mdx"></a> Escrever consultas MDX em uma solução que contém traduções  
  As traduções fornecem informações de exibição para os nomes de objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , mas os identificadores dos mesmos objetos não são traduzidos. Sempre que possível, use os identificadores e chaves para objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em vez das legendas traduzidas e nomes. Por exemplo, use as chaves de membro em vez dos nomes de membro para instruções e scripts MDX para assegurar a portabilidade para vários idiomas.  
   
 > [!NOTE]  
@@ -144,8 +137,7 @@ caps.handback.revision: 32
   
      A seguinte consulta MDX, emprestada de uma postagem no fórum, ilustra como usar o Formato para retornar datas em um formato específico, independentemente das configurações regionais subjacentes.  
   
-     Consulte [SSAS 2012 gera datas inválidas (postagem no fórum Network Steve](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2) para a postagem original.  
-  
+
     ```  
     WITH MEMBER [LinkTimeAdd11Date_Manual] as Format(dateadd("d",15,"2014-12-11"), "mm/dd/yyyy")  
     member [LinkTimeAdd15Date_Manual] as Format(dateadd("d",11,"2014-12-13"), "mm/dd/yyyy")  
@@ -158,7 +150,7 @@ caps.handback.revision: 32
   
     ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Cenários de globalização para o Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [Gravar instruções Transact-SQL internacionais](../relational-databases/collations/write-international-transact-sql-statements.md)  
   

@@ -1,74 +1,79 @@
 ---
-title: "Propriedades de minera&#231;&#227;o de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "propriedade ClusterCount"
-  - "propriedade AllowedProvidersInOpenRowset"
-  - "propriedade MinimumSeriesValue"
-  - "propriedade ScoreMethod"
-  - "propriedade MinimumImportance"
-  - "propriedade ModellingCardinality"
-  - "propriedade BrentTolerance"
-  - "propriedade ComplexityPenalty"
-  - "propriedade MaximumItemsetCount"
-  - "propriedade MinimumSupport"
-  - "propriedade AllowSessionMiningModels"
-  - "propriedade HoldoutPercentage"
-  - "propriedade ClusterCountPrior"
-  - "propriedade MaximumSequenceStates"
-  - "propriedade OptimizedPredictionCount"
-  - "mineração de dados [Analysis Services], propriedades"
-  - "propriedade MaximumSales"
-  - "propriedade MaximumContinuousInputAttributes"
-  - "propriedade MaximumOutputAttributes"
-  - "propriedade AllowAdHocOpenRowsetQueries"
-  - "propriedade Enabled"
-  - "propriedade HistoricModelGap"
-  - "propriedade SampleSize"
-  - "propriedade MaximumInputAttributes"
-  - "propriedade PeriodicityHint"
-  - "propriedade MissingValueSubstitution"
-  - "propriedade ScoreMethod"
-  - "propriedade ForceRegressor"
-  - "propriedade MaximumBucketsForContinuousSplit"
-  - "propriedade MaxConcurrentPredictionQueries"
-  - "propriedade MinimumItemsetSize"
-  - "propriedade AcyclicGraph"
-  - "propriedade HoldoutMethod"
-  - "propriedade StoppingTolerance"
-  - "propriedades [mineração de dados]"
-  - "propriedade AutoDetectPeriodicity"
-  - "propriedade HoldoutTolerance"
-  - "propriedade MinimumLeafCases"
-  - "propriedade HoldoutSeed"
-  - "propriedade MinimumClusterCases"
-  - "propriedade ClusterCountDeviation"
-  - "propriedade MinimumDependencyProbability"
-  - "propriedade ClusteringMethod"
-  - "propriedade MaximumItemsetSize"
-  - "propriedade HiddenNodeRatio"
-  - "propriedade MaximumSeriesValue"
+title: "Propriedades de mineração de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- ClusterCount property
+- AllowedProvidersInOpenRowset property
+- MinimumSeriesValue property
+- ScoreMethod property
+- MinimumImportance property
+- ModellingCardinality property
+- BrentTolerance property
+- ComplexityPenalty property
+- MaximumItemsetCount property
+- MinimumSupport property
+- AllowSessionMiningModels property
+- HoldoutPercentage property
+- ClusterCountPrior property
+- MaximumSequenceStates property
+- OptimizedPredictionCount property
+- data mining [Analysis Services], properties
+- MaximumStates property
+- MaximumContinuousInputAttributes property
+- MaximumOutputAttributes property
+- AllowAdHocOpenRowsetQueries property
+- Enabled property
+- HistoricModelGap property
+- SampleSize property
+- MaximumInputAttributes property
+- PeriodicityHint property
+- MissingValueSubstitution property
+- SplitMethod property
+- ForceRegressor property
+- MaximumBucketsForContinuousSplit property
+- MaxConcurrentPredictionQueries property
+- MinimumItemsetSize property
+- AcyclicGraph property
+- HoldoutMethod property
+- StoppingTolerance property
+- properties [data mining]
+- AutoDetectPeriodicity property
+- HoldoutTolerance property
+- MinimumLeafCases property
+- HoldoutSeed property
+- MinimumClusterCases property
+- ClusterCountDeviation property
+- MinimumDependencyProbability property
+- ClusteringMethod property
+- MaximumItemsetSize property
+- HiddenNodeRatio property
+- MaximumSeriesValue property
 ms.assetid: 9bc9abed-180a-4bd8-b2eb-89c62fa88110
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d8dfbc8391518ff1375cf47102d4cb607992338
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propriedades de minera&#231;&#227;o de dados
+# <a name="data-mining-properties"></a>Propriedades de mineração de dados
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor de mineração de dados listadas nas tabelas a seguir. Para obter mais informações sobre propriedades adicionais do servidor e como defini-las, consulte [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Aplica-se a:** somente modo de servidor multidimensional  
   
-## Categoria não específica  
+## <a name="non-specific-category"></a>Categoria não específica  
  **AllowSessionMiningModels**  
  Uma propriedade Booleana que indica se podem ser criados modelos de mineração de sessão.  
   
@@ -85,7 +90,7 @@ caps.handback.revision: 19
  **MaxConcurrentPredictionQueries**  
  Uma propriedade de inteiro de 32 bits assinada que define o número máximo de consultas de previsão simultâneas.  
   
-## Categoria de algoritmos  
+## <a name="algorithms-category"></a>Categoria de algoritmos  
  **Microsoft_Association_Rules\ Enabled**  
  Uma propriedade Booleana que indica se o algoritmo Microsoft_Association_Rules está habilitado.  
   
@@ -116,7 +121,7 @@ caps.handback.revision: 19
 > [!NOTE]  
 >  Além das propriedades que definem os serviços mineração de dados disponíveis no servidor, há propriedades de mineração de dados que definem o comportamento de algoritmos específicos. Essas propriedades são configuradas quando você criar um modelo de mineração de dados individual, não ao nível do servidor. Para obter mais informações, consulte [Algoritmos de mineração de dados &#40;Analysis Services – Mineração de Dados&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Arquitetura física &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determina o Modo de Servidor de uma instância do Analysis Services.](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  

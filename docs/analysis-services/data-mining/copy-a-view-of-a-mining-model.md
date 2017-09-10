@@ -1,27 +1,32 @@
 ---
-title: "Copiar uma exibi&#231;&#227;o de um modelo de minera&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Áreas de transferência [mineração de dados]"
-  - "Visualizador do Modelo de Mineração [Analysis Services], áreas de transferência"
-  - "copiando modelos de mineração para a área de transferência"
+title: "Copiar uma exibição de um modelo de mineração | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clipboards [data mining]
+- Mining Model Viewer [Analysis Services], clipboards
+- copying mining models to clipboard
 ms.assetid: 768372db-e5b4-4990-b459-03d854fd9a6d
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 353d9d48d8dc8fd6ca596935d96c01522467cdde
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Copiar uma exibi&#231;&#227;o de um modelo de minera&#231;&#227;o
+# <a name="copy-a-view-of-a-mining-model"></a>Copiar uma exibição de um modelo de mineração
   O **Visualizador do Modelo de Mineração** do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa um visualizador separado para cada tipo de modelo de mineração. Muitos dos visualizadores têm componentes a partir dos quais você pode copiar o conteúdo para a Área de Transferência e de lá colar o conteúdo em um documento ou no software de manipulação de imagens. Os componentes a seguir tornam essa funcionalidade disponível:  
   
 -   Diagrama de Cluster no Visualizador de Cluster da [!INCLUDE[msCoName](../../includes/msconame-md.md)] e o Visualizador de Cluster de Sequências da [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
@@ -30,7 +35,7 @@ caps.handback.revision: 38
   
 -   Transições de estado no Visualizador de Cluster de Sequências da [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
--   Rede de Dependências no Visualizador de Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)], Visualizador Naïve Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] e o Visualizador de Árvore da [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
+-   Rede de Dependências no Visualizador de Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , Visualizador Naïve Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] e o Visualizador de Árvore da [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
 -   Conteúdo do modelo de mineração, do painel Detalhes do Nó do Visualizador de Árvore de Conteúdo Genérica da [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
@@ -39,33 +44,33 @@ caps.handback.revision: 38
 > [!WARNING]  
 >  Quando você copia um modelo usando o visualizador, ele não cria um novo objeto modelo. Para criar um novo modelo, você deve usar o assistente ou o Designer de Mineração de Dados. Para obter mais informações, consulte [Criar uma cópia de um modelo de mineração](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md).  
   
-### Para copiar o modelo completo para a Área de Transferência  
+### <a name="to-copy-the-complete-model-to-the-clipboard"></a>Para copiar o modelo completo para a Área de Transferência  
   
-1.  Na lista **Modelo de Mineração** na guia **Visualizador do Modelo de Mineração**, selecione o modelo de mineração que deseja exibir.  
+1.  Na lista **Modelo de Mineração** na guia **Visualizador do Modelo de Mineração** , selecione o modelo de mineração que deseja exibir.  
   
 2.  Selecione a guia apropriada, como a guia **Rede de Dependências** e, em seguida, clique em **Copiar Gráfico Inteiro** na barra de ferramentas da guia.  
   
-### Para copiar a parte visível do modelo para a Área de Transferência  
+### <a name="to-copy-the-visible-piece-of-the-model-to-the-clipboard"></a>Para copiar a parte visível do modelo para a Área de Transferência  
   
-1.  Na lista **Modelo de Mineração** na guia **Visualizador do Modelo de Mineração**, selecione o modelo de mineração que deseja exibir.  
+1.  Na lista **Modelo de Mineração** na guia **Visualizador do Modelo de Mineração** , selecione o modelo de mineração que deseja exibir.  
   
 2.  Selecione a guia apropriada, como a guia **Rede de Dependência** e, em seguida, aplique mais ou menos zoom para exibir o modelo no nível desejado.  
   
 3.  Clique em **Copiar Exibição de Gráfico** na barra de ferramentas da guia selecionada.  
   
-### Para copiar o conteúdo do modelo de mineração para a Área de Transferência  
+### <a name="to-copy-the-mining-model-content-to-the-clipboard"></a>Para copiar o conteúdo do modelo de mineração para a Área de Transferência  
   
-1.  Na lista **Modelo de Mineração** na guia **Visualizador do Modelo de Mineração**, selecione o modelo de mineração que deseja exibir.  
+1.  Na lista **Modelo de Mineração** na guia **Visualizador do Modelo de Mineração** , selecione o modelo de mineração que deseja exibir.  
   
-2.  Na lista suspensa **Visualizador**, selecione **Visualizador de Árvore de Conteúdo Genérica da Microsoft**.  
+2.  Na lista suspensa **Visualizador** , selecione **Visualizador de Árvore de Conteúdo Genérica da Microsoft**.  
   
-3.  No painel **Legenda do Nó (ID Exclusiva)**, clique em um nó.  
+3.  No painel **Legenda do Nó (ID Exclusiva)** , clique em um nó.  
   
 4.  Clique com o botão direito do mouse no painel **Detalhes do Nó** e, em seguida, selecione **Selecionar tudo**.  
   
 5.  Clique com o botão direito do mouse no painel **Detalhes do Nó** novamente e selecione **Copiar**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

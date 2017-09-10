@@ -1,29 +1,34 @@
 ---
-title: "Implanta&#231;&#227;o de solu&#231;&#245;es de minera&#231;&#227;o de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modelos de mineração [Analysis Services], implantando"
-  - "implantando [Analysis Services], ambientes de produção"
-  - "implantando [Analysis Services – mineração de dados]"
-  - "soluções [Analysis Services], implantando"
-  - "modelos [Analysis Services], mineração de dados"
+title: "Implantação de soluções de mineração de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining models [Analysis Services], deploying
+- deploying [Analysis Services], production environments
+- deploying [Analysis Services - data mining]
+- solutions [Analysis Services], deploying
+- models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aa037f7ff155df158ba2967c5e7c31989ace887d
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Implanta&#231;&#227;o de solu&#231;&#245;es de minera&#231;&#227;o de dados
+# <a name="deployment-of-data-mining-solutions"></a>Implantação de soluções de mineração de dados
   A última etapa no processo de mineração de dados é implantar os modelos para um ambiente de produção. A implantação é importante porque torna os modelos disponíveis para usuários, para que você possa executar qualquer uma das tarefas a seguir:  
   
 -   Use os modelos para criar previsões e tomar decisões comerciais. Para obter informações sobre as ferramentas que você pode usar para criar consultas, consulte [Ferramentas de Consulta de Data Mining](../../analysis-services/data-mining/data-mining-query-tools.md).  
@@ -42,7 +47,7 @@ caps.handback.revision: 16
   
  [Recursos relacionados](#bkmk_Resources)  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
  [Implantar uma solução de mineração de dados em versões anteriores do SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
  [Exportar e importar objetos de mineração de dados](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
@@ -57,7 +62,7 @@ caps.handback.revision: 16
 ###  <a name="bkmk_RelationalSltn"></a> Implantando uma solução relacional  
  Quando você implanta uma solução de mineração de dados relacional, os objetos de mineração de dados exigidos são criados dentro de um novo banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e os objetos são processados por padrão. Você pode alterar as opções de processamento usando a propriedade de configuração, **Opção de Processamento**. Para obter mais informações, consulte [Configurar propriedades do projeto do Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
- Por padrão, somente as alterações incrementais são implantadas de cada vez. Em outras palavras, você pode modificar um modelo de mineração e, quando reimplantar o projeto, somente o modelo de mineração será atualizado. Porém, se você tiver vários clientes que editam o banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], isto poderá levar a erros. Para alterar o modo de implantação padrão para que o banco de dados inteiro seja atualizado quando você implantar a solução, altere a propriedade **Modo de Implantação**  
+ Por padrão, somente as alterações incrementais são implantadas de cada vez. Em outras palavras, você pode modificar um modelo de mineração e, quando reimplantar o projeto, somente o modelo de mineração será atualizado. Porém, se você tiver vários clientes que editam o banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , isto poderá levar a erros. Para alterar o modo de implantação padrão para que o banco de dados inteiro seja atualizado quando você implantar a solução, altere a propriedade **Modo de Implantação**  
   
  Em uma solução de mineração de dados relacional, os únicos objetos que devem ser implantados são a definição de fonte de dados, as exibições da fonte de dados que foram usadas, as estruturas de mineração e todos os modelos de mineração dependentes.  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 16
   
  Fornece informações gerais sobre a implantação de projetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e descreve as propriedades que você pode definir como parte da configuração de projeto.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Ferramentas de Consulta de Mineração de Dados](../../analysis-services/data-mining/data-mining-query-tools.md)   
  [Requisitos e considerações de processamento &#40;Mineração de dados&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  

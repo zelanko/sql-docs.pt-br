@@ -1,29 +1,34 @@
 ---
-title: "Propriedades do DAX | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Propriedades DAX | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: aa928dc5-d00d-4f8a-80b9-7e6973d2196c
 caps.latest.revision: 6
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "erikre"
-caps.handback.revision: 6
+author: HeidiSteen
+ms.author: heidist
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 225c4aea79b880fd85f118d89bae1339e370aa40
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propriedades do DAX
+# <a name="dax-properties"></a>Propriedades do DAX
    A seção DAX de msmdsrv.ini contém as configurações usadas para controlar certos comportamentos de consulta em [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], como o limite superior no número de linhas retornadas em um conjunto de resultados de consulta DAX. 
   
   Para grandes conjuntos de linhas, como aqueles retornados nos modelos DirectQuery, o padrão de um milhão de linhas pode ser insuficiente. Você saberá se o limite deve ser ajustado se receber esse erro: "O conjunto de resultados de uma consulta de fonte de dados externa excedeu o tamanho máximo permitido de '1000000' linhas."
  
-Para aumentar o limite superior, defina a configuração **MaxIntermediateRowSize**. Você precisará adicionar manualmente todo o elemento para a seção DAX do arquivo de configuração. A configuração não está presente no arquivo até você adicioná-la.
+Para aumentar o limite superior, defina a configuração **MaxIntermediateRowSize** . Você precisará adicionar manualmente todo o elemento para a seção DAX do arquivo de configuração. A configuração não está presente no arquivo até você adicioná-la.
   
-## Trecho de código de Configuração
+## <a name="configuration-snippet"></a>Trecho de código de Configuração
 
 ```
 <ConfigurationSettings>
@@ -39,7 +44,7 @@ Para aumentar o limite superior, defina a configuração **MaxIntermediateRowSiz
 . . . 
 ```
 
-## Descrições de propriedades
+## <a name="property-descriptions"></a>Descrições de propriedades
 
 Configuração |Value |Description
 --------|-------|-----------

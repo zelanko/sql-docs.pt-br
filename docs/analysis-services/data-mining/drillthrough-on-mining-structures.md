@@ -1,38 +1,43 @@
 ---
-title: "Detalhamento em estruturas de minera&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Detalhamento em estruturas de mineração | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: db582bae24d9bfb18cbb9f7b7febf6a1e4da45fb
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Detalhamento em estruturas de minera&#231;&#227;o
+# <a name="drillthrough-on-mining-structures"></a>Detalhamento em estruturas de mineração
   *Detalhar* significa ter a capacidade de consultar um modelo de mineração ou uma estrutura de mineração e obter dados detalhados não expostos no modelo.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece duas opções diferentes de detalhamento em dados de caso. Você pode detalhar para os dados que foram usados para criar o modelo de mineração ou pode detalhar para os dados de origem na estrutura de mineração.  
   
-## Detalhar para casos do modelo vs. Detalhar para estrutura  
+## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>Detalhar para casos do modelo vs. Detalhar para estrutura  
  O detalhamento para **casos do modelo** é útil para localizar detalhes adicionais sobre regras, padrões ou clusters em um modelo.  
   
  Em contraste, os dados **detalhamento para estrutura** visam fornecer acesso a informações que não foram disponibilizadas no modelo. Por exemplo, se você tem as permissões adequadas, talvez queira descobrir quais linhas de dados foram usadas para treinar o modelo e quais foram usadas para testes.  
   
  Você também pode exibir atributos dos dados que não foram usados na análise, desde que eles tenham sido incluídos na definição de estrutura. Por exemplo, muitas vezes as estruturas de mineração oferecem suporte a vários tipos diferentes de modelos; algumas colunas de estrutura podem ter sido excluídas de um modelo porque o tipo de dados era incompatível ou os dados não eram úteis para a análise. Por exemplo, você não usaria informações de contato de cliente em um modelo de clustering, mesmo que os dados fossem incluídos na estrutura, mas, ao habilitar o detalhamento, você ganha acesso a essas informações sem executar consultas separadas na fonte de dados.  
   
-## Habilitando o detalhamento para estruturar dados  
+## <a name="enabling-drillthrough-to-structure-data"></a>Habilitando o detalhamento para estruturar dados  
  Para usar o detalhamento na estrutura de mineração, as seguintes condições precisam ser atendidas:  
   
--   O detalhamento no modelo também deve ser habilitado. Por padrão, o detalhamento dos dois tipos é desabilitado. Para habilitar o detalhamento no Assistente de Mineração de Dados, selecione a opção para habilitar o detalhamento para casos do modelo na página final do assistente. Também é possível adicionar a capacidade de detalhar em um modelo posteriormente, alterando a propriedade **AllowDrillthrough**.  
+-   O detalhamento no modelo também deve ser habilitado. Por padrão, o detalhamento dos dois tipos é desabilitado. Para habilitar o detalhamento no Assistente de Mineração de Dados, selecione a opção para habilitar o detalhamento para casos do modelo na página final do assistente. Também é possível adicionar a capacidade de detalhar em um modelo posteriormente, alterando a propriedade **AllowDrillthrough** .  
   
 -   Se você criar a estrutura de mineração usando DMX, use a cláusula WITH DRILLTHROUGH. Para obter mais informações, consulte [CREATE MINING STRUCTURE &#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md).  
   
@@ -40,15 +45,15 @@ caps.handback.revision: 6
   
 -   Verifique se a estrutura de mineração e o modelo de mineração têm a propriedade [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) definida como **True**. Além disso, você deve ser um membro da função que tem as permissões de detalhamento no modelo e na estrutura.  
   
-## Problemas de segurança para detalhamento  
+## <a name="security-issues-for-drillthrough"></a>Problemas de segurança para detalhamento  
  As permissões de detalhamento são definidas separadamente na estrutura e no modelo. A permissão para o modelo lhe permite detalhar do modelo, mesmo que você não tenha permissões na estrutura. As permissões para detalhamento na estrutura fornecem a capacidade adicional de incluir colunas de estrutura em consultas de detalhamento do modelo, usando a função [StructureColumn &#40;DMX&#41;](../../dmx/structurecolumn-dmx.md).  
   
- Para obter informações sobre como criar funções e atribuir permissões no Analysis Services, consulte [Designer de Função &#40;Analysis Services – Dados Multidimensionais&#41;](../Topic/Role%20Designer%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md).  
+ Para obter informações sobre como criar funções e atribuir permissões no Analysis Services, consulte [Designer de Função &#40;Analysis Services – Dados Multidimensionais&#41;](http://msdn.microsoft.com/library/e8ba42db-0565-4d68-b3ab-0c63d8d07192).  
   
 > [!NOTE]  
 >  Se você habilitar o detalhamento na estrutura de mineração e no modelo de mineração, qualquer usuário que for membro de uma função que tenha permissões de análise no modelo de mineração também poderá exibir colunas na estrutura de mineração, até mesmo se essas colunas não estiverem incluídas no modelo de mineração. Portanto, para proteger dados confidenciais, você deve configurar a exibição da fonte de dados para mascarar informações pessoais e só permitir acesso ao detalhamento na estrutura de mineração quando necessário.  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  Consulte os tópicos a seguir para obter mais informações sobre como usar o detalhamento com modelos de mineração.  
   
 |||  
@@ -57,7 +62,7 @@ caps.handback.revision: 6
 |Veja exemplos de consultas de detalhamento para tipos de modelo específicos.|[Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md)|  
 |Obtenha informações sobre permissões que se aplicam a estruturas de mineração e modelos de mineração específicos.|[Conceder permissões em estruturas e modelos de mineração de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Detalhamento em modelos de mineração](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
   

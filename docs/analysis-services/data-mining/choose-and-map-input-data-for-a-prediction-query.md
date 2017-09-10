@@ -1,26 +1,31 @@
 ---
-title: "Escolher e mapear dados de entrada para uma consulta de previs&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tabelas [Analysis Services], consultas de previsão"
-  - "Previsão do Modelo de Mineração [Analysis Services], tabelas de entrada"
+title: "Escolher e mapear dados de entrada para uma consulta de previsão | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [Analysis Services], prediction queries
+- Mining Model Prediction [Analysis Services], input tables
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b95fd2fc60fa252e8ad9de34768c12846a45e322
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Escolher e mapear dados de entrada para uma consulta de previs&#227;o
+# <a name="choose-and-map-input-data-for-a-prediction-query"></a>Escolher e mapear dados de entrada para uma consulta de previsão
   Quando você cria previsões de um modelo de mineração, geralmente o faz alimentando novos dados no modelo. (A exceção são modelos de série temporal, que só podem fazer previsões com base em dados históricos.) Para oferecer novos dados ao modelo, verifique se os dados estão disponíveis como parte de uma exibição da fonte de dados. Se souber antecipadamente os dados que serão usados na previsão, você poderá incluí-los na exibição de fonte de dados usada para criar o modelo. Caso contrário, talvez precise criar uma nova exibição da fonte de dados. Para obter mais informações, consulte [Exibições de fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  Às vezes, os dados de que você precisa podem estar contidos em mais de uma tabela em uma junção um-para-muitos. Este é o caso de dados usados em modelos de associação ou modelos de clustering de sequência, que usam uma tabela de casos vinculada a uma tabela aninhada que contém detalhes do produto ou da transação. Se o seu modelo usa uma estrutura de tabela aninhada de caso, os dados usados para previsão também precisam ter uma estrutura de tabela aninhada de caso.  
@@ -32,13 +37,13 @@ caps.handback.revision: 16
   
  Quando você escolher os dados a serem usados para previsão, talvez algumas colunas na fonte de dados selecionada sejam mapeadas automaticamente para as colunas de modelo de mineração, com base na semelhança de nome e no tipo de dados correspondente. Você pode usar a caixa de diálogo **Modificar Mapeamento** na **Previsão de Modelo de Mineração** para alterar as colunas que são mapeadas, excluir mapeamentos impróprios ou criar novos mapeamentos para colunas existentes. A superfície de design **Previsão de Modelo de Mineração** também dá suporte ao recurso de edição do tipo “arrastar e soltar” de conexões.  
   
--   Para criar uma nova conexão, basta selecionar uma coluna na tabela **Modelo de Mineração** e arrastá-la até a coluna correspondente na tabela **Selecionar Tabela(s) de Entrada**.  
+-   Para criar uma nova conexão, basta selecionar uma coluna na tabela **Modelo de Mineração** e arrastá-la até a coluna correspondente na tabela **Selecionar Tabela(s) de Entrada** .  
   
 -   Para remover uma conexão, selecione a linha da conexão e pressione a tecla DELETE.  
   
  O procedimento a seguir descreve como você pode modificar as junções criadas entre a tabela de casos e uma tabela aninhada usadas como entradas para uma consulta de previsão, usando a caixa de diálogo **Especificar Junção Aninhada** .  
   
-### Selecionar uma tabela de entrada  
+### <a name="select-an-input-table"></a>Selecionar uma tabela de entrada  
   
 1.  Na tabela **Selecionar Tabela(s) de Entrada** da guia **Gráfico de Precisão de Mineração** do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], clique em **Selecionar Tabela de Casos**.  
   
@@ -52,13 +57,13 @@ caps.handback.revision: 16
   
      As colunas na estrutura de mineração são mapeadas automaticamente para colunas que tenham o mesmo nome na tabela de entrada.  
   
-### Altere a maneira como os dados de entrada são mapeados para o modelo  
+### <a name="change-the-way-that-input-data-is-mapped-to-the-model"></a>Altere a maneira como os dados de entrada são mapeados para o modelo  
   
 1.  No Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], selecione a guia **Previsão de Modelo de Mineração** .  
   
 2.  No menu **Modelo de Mineração** , selecione **Modificar Conexões**.  
   
-     A caixa de diálogo **Modificar Mapeamento** abre. Nesta caixa de diálogo, a coluna **Coluna do Modelo de Mineração** lista as colunas na estrutura de mineração selecionada. A **Coluna da Tabela** lista as colunas na fonte de dados externa que você escolheu na caixa de diálogo **Selecionar Tabela(s) de Entrada**. As colunas na fonte de dados externa são mapeadas para colunas no modelo de mineração.  
+     A caixa de diálogo **Modificar Mapeamento** abre. Nesta caixa de diálogo, a coluna **Coluna do Modelo de Mineração** lista as colunas na estrutura de mineração selecionada. A **Coluna da Tabela** lista as colunas na fonte de dados externa que você escolheu na caixa de diálogo **Selecionar Tabela(s) de Entrada** . As colunas na fonte de dados externa são mapeadas para colunas no modelo de mineração.  
   
 3.  Em **Coluna da Tabela**, selecione a linha que corresponde à coluna de modelo de mineração para a qual você deseja mapear.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 16
   
      Os novos mapeamentos de coluna são exibidos no designer.  
   
-### Remover uma relação entre tabelas de entrada  
+### <a name="remove-a-relationship-between-input-tables"></a>Remover uma relação entre tabelas de entrada  
   
 1.  Na tabela **Selecionar Tabela(s) de Entrada** da guia **Previsão do Modelo de Mineração** do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], clique em **Modificar Junção**.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 16
   
      A relação entre a tabela de casos e a tabela aninhada foi removida.  
   
-### Criar uma nova relação entre tabelas de entrada  
+### <a name="create-a-new-relationship-between-input-tables"></a>Criar uma nova relação entre tabelas de entrada  
   
 1.  Na tabela **Selecionar Tabela(s) de Entrada** da guia **Previsão do Modelo de Mineração** do Designer de Mineração de Dados, clique em **Modificar Junção**.  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 16
   
      Uma nova relação foi criada entre a tabela de casos e a tabela aninhada.  
   
-### Adicionar uma tabela aninhada às tabelas de entrada de uma consulta de previsão  
+### <a name="add-a-nested-table-to-the-input-tables-of-a-prediction-query"></a>Adicionar uma tabela aninhada às tabelas de entrada de uma consulta de previsão  
   
 1.  Na guia **Previsão de Modelo de Mineração** do Designer de Mineração de Dados, clique em **Selecionar Tabela de Casos** para abrir a caixa de diálogo **Selecionar Tabela** .  
   
@@ -117,7 +122,7 @@ caps.handback.revision: 16
   
      Se já existir uma relação, as colunas no modelo de mineração serão mapeados automaticamente para as colunas que possuem o mesmo nome na tabela de entrada. É possível modificar a relação entre a tabela aninhada e a tabela de casos clicando em **Modificar Junção**, que abre a caixa de diálogo **Criar Relação** .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Consultas de previsão &#40;Mineração de dados&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

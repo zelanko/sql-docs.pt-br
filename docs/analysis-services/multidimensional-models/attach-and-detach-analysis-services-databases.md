@@ -1,38 +1,43 @@
 ---
-title: "Anexar e desanexar bancos de dados do Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.ssmsimbi.AttachDatabase.f1"
-  - "sql13.asvs.ssms.attachdatabase.f1"
-  - "sql13.asvs.ssmsimbi.DetachDatabase.f1"
-  - "sql13.asvs.ssms.detachdatabase.f1"
-helpviewer_keywords: 
-  - "bancos de dados [Analysis Services], anexar"
-  - "bancos de dados [Analysis Services], desanexar"
+title: Anexar e desanexar bancos de dados do Analysis Services | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.ssmsimbi.AttachDatabase.f1
+- sql13.asvs.ssms.attachdatabase.f1
+- sql13.asvs.ssmsimbi.DetachDatabase.f1
+- sql13.asvs.ssms.detachdatabase.f1
+helpviewer_keywords:
+- databases [Analysis Services], attach
+- databases [Analysis Services], detach
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f4c193def48b92245c1e2f2955262d3fb0850957
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Anexar e desanexar bancos de dados do Analysis Services
+# <a name="attach-and-detach-analysis-services-databases"></a>Anexar e desanexar bancos de dados do Analysis Services
   Existem situações frequentes em que um DBA (administrador de banco de dados) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deseja colocar o banco de dados offline em determinado período e colocá-lo online novamente na mesma instância do servidor ou em uma instância diferente. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como a movimentação do banco de dados para um disco diferente em busca de um melhor desempenho, a obtenção de espaço para o crescimento do banco de dados ou para a atualização de um produto. Para todos estes e outros casos, os comandos **Attach** e **Detach** permitem que o DBA do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] coloque o banco de dados offline e o coloque online novamente com o mínimo de esforço.  
   
-## Comandos Anexar e Desanexar  
+## <a name="attach-and-detach-commands"></a>Comandos Anexar e Desanexar  
  O comando **Attach** permite que o banco de dados que estava offline seja alterado para online. Você pode anexar o banco de dados à instância do servidor original ou a outra instância. Ao anexar um banco de dados, o usuário pode especificar a configuração **ReadWriteMode** para o banco de dados. O comando **Detach** permite colocar no modo offline um banco de dados do servidor.  
   
-## Uso dos comandos Anexar e Desanexar  
+## <a name="attach-and-detach-usage"></a>Uso dos comandos Anexar e Desanexar  
  O comando **Attach** é usado para colocar uma estrutura de banco de dados existente no modo online. Caso o banco de dados esteja anexado em modo **ReadWrite** , ele poderá ser anexado somente uma vez em uma instância de servidor. No entanto, caso o banco de dados esteja anexado em modo **ReadOnly** , ele poderá ser anexado várias vezes em diferentes instâncias de servidor. O mesmo banco de dados não pode ser anexado mais de uma vez à mesma instância de servidor. Ocorrerá um erro se você tentar anexar o mesmo banco de dados mais de uma vez, mesmo se os dados forem copiados para pastas diferentes.  
   
 > [!IMPORTANT]  
@@ -52,12 +57,12 @@ caps.handback.revision: 24
  Os comandos **Attach** e **Detach** devem ser executados como operações únicas. Eles não podem ser combinados com outras operações na mesma transação. Os comandos **Attach** e **Detach** também são comandos transacionais atômicos. Isso significa que a operação poderá ser bem-sucedida ou não. Nenhum banco de dados ficará incompleto.  
   
 > [!IMPORTANT]  
->  É preciso ter privilégios de administrador do banco de dados ou do servidor para executar o comando **Detach**.  
+>  É preciso ter privilégios de administrador do banco de dados ou do servidor para executar o comando **Detach** .  
   
 > [!IMPORTANT]  
->  É preciso ter privilégios de administrador do servidor para executar o comando **Attach**.  
+>  É preciso ter privilégios de administrador do servidor para executar o comando **Attach** .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Mover um banco de dados do Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
  [Banco de dados ReadWriteModes](../../analysis-services/multidimensional-models/database-readwritemodes.md)   

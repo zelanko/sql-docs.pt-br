@@ -1,34 +1,39 @@
 ---
-title: "Criar e gerenciar uma parti&#231;&#227;o remota (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "partições remotas [Analysis Services], remotas"
-  - "partições remotas [Analysis Services]"
+title: "Criar e gerenciar uma partição remota (Analysis Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitions [Analysis Services], remote
+- remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f5c1dc173a2ea724f7542e5ca1f862b4d9df0dad
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Criar e gerenciar uma parti&#231;&#227;o remota (Analysis Services)
+# <a name="create-and-manage-a-remote-partition-analysis-services"></a>Criar e gerenciar uma partição remota (Analysis Services)
   Ao particionar um grupo de medidas, você pode configurar um banco de dados secundário em uma instância remota do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como um armazenamento da partição.  
   
  Partições remotas para um cubo (chamado de banco de dados mestre), são armazenadas em um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dedicado na instância remota do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (chamado de banco de dados secundário).  
   
  Um banco de dados secundário dedicado pode armazenar partições remotas para um único banco de dados mestre, mas o banco de dados mestre pode usar vários bancos de dados secundários, desde que todos os bancos de dados secundários estejam na mesma instância remota do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dimensões em um banco de dados dedicado a partições remotas são criadas como dimensões vinculadas.  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
  Antes de criar uma partição remota, as seguintes condições devem ser cumpridas:  
   
 -   Você deve ter uma segunda instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e um banco de dados dedicado para armazenar as partições. O banco de dados secundário tem uma única finalidade; ele fornece o armazenamento de partições remotas para um banco de dados mestre.  
@@ -45,7 +50,7 @@ caps.handback.revision: 30
   
 -   Certifique-se de que seu plano de recuperação de desastres acomode o backup e a restauração das partições remotas. Usar partições remotas pode complicar operações de backup e restauração. Teste minuciosamente seu plano para ter certeza de que você pode restaurar os dados necessários.  
   
-## Configurar partições remotas  
+## <a name="configure-remote-partitions"></a>Configurar partições remotas  
  Cada um dos dois computadores separados que estão executando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é necessário para criar uma organização de partição remota que designa um computador como o servidor mestre e o outro computador como o servidor subordinado.  
   
  O procedimento a seguir supõe que você tenha duas instâncias de servidor, com um banco de dados de cubo implantado no servidor mestre. Para fins deste procedimento, o banco de dados de cubo é referenciado como db-master. O banco de dados de armazenamento que contém partições remotas é referenciado como db-storage.  
@@ -55,13 +60,13 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  As partições remotas podem ser mescladas somente com outras partições remotas. Se você estiver usando uma combinação de partições locais e remotas, uma abordagem alternativa é criar novas partições que incluam os dados combinados, excluindo as partições que não são mais usadas.  
   
-#### Especificar nomes de servidor válidos para a implantação de cubo (no SSDT)  
+#### <a name="specify-valid-server-names-for-cube-deployment-in-ssdt"></a>Especificar nomes de servidor válidos para a implantação de cubo (no SSDT)  
   
 1.  No servidor mestre: no Gerenciador de Soluções, clique com o botão direito do mouse no nome da solução e selecione **Propriedades**. Na caixa de diálogo **Propriedades** , clique em **Propriedades de Configuração**, em **Implantação**e em **Servidor** . Defina o nome do servidor mestre.  
   
 2.  No servidor subordinado: no Gerenciador de Soluções, clique com o botão direito do mouse no nome da solução e selecione **Propriedades**. Na caixa de diálogo **Propriedades** , clique em **Propriedades de Configuração**, em **Implantação**e em **Servidor** . Defina o nome do servidor subordinado.  
   
-#### Criar e implantar um banco de dados secundário (no SSDT)  
+#### <a name="create-and-deploy-a-secondary-database-in-ssdt"></a>Criar e implantar um banco de dados secundário (no SSDT)  
   
 1.  No servidor subordinado: Crie um novo projeto do Analysis Services para o banco de dados de armazenamento.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 30
   
 3.  No servidor subordinado: Implante a solução.  
   
-#### Habilitar recursos (no SSMS)  
+#### <a name="enable-features-in-ssms"></a>Habilitar recursos (no SSMS)  
   
 1.  No servidor subordinado: no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse na instância conectada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no Pesquisador de Objetos e selecione **Propriedades**. Defina **Feature\LinkToOtherInstanceEnabled** e **Feature\LinkFromOtherInstanceEnabled** como **True**.  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 30
   
 4.  No servidor mestre: para reiniciar o servidor, clique com o botão direito do mouse no nome do servidor no Pesquisador de Objetos e selecione **Reiniciar**.  
   
-#### Definir a propriedade do banco de dados MasterDataSourceID no servidor remoto (no SSMS)  
+#### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>Definir a propriedade do banco de dados MasterDataSourceID no servidor remoto (no SSMS)  
   
 1.  No servidor subordinado: clique com o botão direito do mouse no banco de dados de armazenamento, db-storage, aponte para **Script de Banco de Dados como** | **ALTER Para** | **Janela do Editor de Nova Consulta**.  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 30
   
 3.  Pressione F5 para executar o script.  
   
-#### Configurar a partição remota (no SSDT)  
+#### <a name="set-up-the-remote-partition-in-ssdt"></a>Configurar a partição remota (no SSDT)  
   
 1.  No servidor mestre: Abra o cubo no Designer de Cubo e clique na guia **Partições** . Expanda o grupo de medidas. Clique em **Nova Partição** se o grupo de medidas já estiver configurado para várias partições ou clique no botão Procurar. . ) na coluna de origem para editar a partição existente.  
   
@@ -124,7 +129,7 @@ caps.handback.revision: 30
   
 5.  No servidor mestre: clique com o botão direito do mouse no nome do cubo no Gerenciador de Soluções, selecione **Processar** e processe totalmente o cubo.  
   
-## Administrando partições remotas  
+## <a name="administering-remote-partitions"></a>Administrando partições remotas  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte ao processamento paralelo e sequencial de partições remotas. O banco de dados mestre, onde as partições foram definidas, coordena as transações entre todas as instâncias que participam no processamento das partições de um cubo. Os relatórios de processamento são então enviados a todas as instâncias que processaram uma partição.  
   
  Um cubo que contém partições remotas pode ser administrado junto com suas partições em uma única instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Porém, os metadados para a partição remota podem ser exibidos e atualizados somente na instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] onde foram definidos a partição e seu cubo pai. A partição remota não pode ser exibida ou atualizada na instância remota do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -132,7 +137,7 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  Embora bancos de dados dedicados a armazenamento de partições remotas não seja exposto a conjuntos de linhas de esquema, os aplicativos que usam AMO (Objetos de Gerenciamento de Análise) ainda podem descobrir um banco de dados dedicado usando o comando Discover do XML for Analysis. Qualquer comando CREATE ou DELETE que é enviado diretamente a um banco de dados dedicado usando um TCP ou cliente de HTTP terá sucesso, mas o servidor retornará um aviso indicando que a ação pode danificar o banco de dados gerenciado de perto.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

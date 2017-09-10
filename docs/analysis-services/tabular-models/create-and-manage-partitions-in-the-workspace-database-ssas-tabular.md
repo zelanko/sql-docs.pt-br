@@ -1,26 +1,31 @@
 ---
-title: "Criar e gerenciar parti&#231;&#245;es no banco de dados de espa&#231;o de trabalho (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.partitionmgr.f1"
+title: "Criar e gerenciar partições no banco de dados de espaço de trabalho (SSAS Tabular) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.partitionmgr.f1
 ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 737b5220666edbbb481f0e50671b65e5a55a1de5
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Criar e gerenciar parti&#231;&#245;es no banco de dados de espa&#231;o de trabalho (SSAS tabular)
+# <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Criar e gerenciar partições no banco de dados de espaço de trabalho (SSAS tabular)
   As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de ou em paralelo com outras partições. As partições podem melhorar a escalabilidade e a gerenciabilidade de bancos de dados grandes. Por padrão, cada tabela tem uma partição que inclui todas as colunas. As tarefas neste tópico descrevem como criar e gerenciar partições no banco de dados de espaço de trabalho modelo usando a caixa de diálogo **Gerenciador de Partições** no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
  Depois que um modelo for implantado em outra instância do Analysis Services, os administradores de banco de dados podem criar e gerenciar partições no modelo (implantado) usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Criar e gerenciar partições de modelos tabulares &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
@@ -36,8 +41,8 @@ caps.handback.revision: 15
 > [!NOTE]  
 >  Você não pode mesclar partições no banco de dados de espaço de trabalho modelo usando a caixa de diálogo Gerenciador de Partições. As partições só podem ser mescladas em um modelo implantado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## Tarefas  
- Para criar e gerenciar partições, você usará a caixa de diálogo **Gerenciador de Partições**. Para exibir a caixa de diálogo **Gerenciador de Partições**, no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], clique no menu **Tabela** e clique em **Partições**.  
+## <a name="tasks"></a>Tarefas  
+ Para criar e gerenciar partições, você usará a caixa de diálogo **Gerenciador de Partições** . Para exibir a caixa de diálogo **Gerenciador de Partições** , no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], clique no menu **Tabela** e clique em **Partições**.  
   
 ###  <a name="bkmk_create_new"></a> Para criar uma nova partição  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 15
   
 2.  Clique no menu **Tabela** e clique em **Partições**.  
   
-3.  No **Gerenciador de Partições**, na caixa de listagem **Tabela**, verifique ou selecione a tabela que você deseja particionar e clique em **Novo**.  
+3.  No **Gerenciador de Partições**, na caixa de listagem **Tabela** , verifique ou selecione a tabela que você deseja particionar e clique em **Novo**.  
   
 4.  Em **Nome da Partição**, digite um nome para a partição. Por padrão, o nome da partição padrão será numerado incrementalmente para cada nova partição.  
   
@@ -57,19 +62,19 @@ caps.handback.revision: 15
   
 ###  <a name="bkmk_copy"></a> Para copiar uma partição  
   
-1.  No **Gerenciador de Partições**, na caixa de listagem **Tabela**, verifique ou selecione a tabela que contém a partição que você deseja copiar.  
+1.  No **Gerenciador de Partições**, na caixa de listagem **Tabela** , verifique ou selecione a tabela que contém a partição que você deseja copiar.  
   
-2.  Na lista **Partições**, selecione a partição que você deseja copiar e clique em **Copiar**.  
+2.  Na lista **Partições** , selecione a partição que você deseja copiar e clique em **Copiar**.  
   
 3.  Em **Nome da Partição**, digite um novo nome para a partição.  
   
 ###  <a name="bkmk_delete"></a> Para excluir uma partição  
   
-1.  No **Gerenciador de Partições**, na caixa de listagem **Tabela**, verifique ou selecione a tabela que contém a partição que você deseja excluir.  
+1.  No **Gerenciador de Partições**, na caixa de listagem **Tabela** , verifique ou selecione a tabela que contém a partição que você deseja excluir.  
   
-2.  Na lista **Partições**, selecione a partição que você deseja excluir e clique em **Excluir**.  
+2.  Na lista **Partições** , selecione a partição que você deseja excluir e clique em **Excluir**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Partições &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
  [Processar partições no banco de dados de espaço de trabalho &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)  
   

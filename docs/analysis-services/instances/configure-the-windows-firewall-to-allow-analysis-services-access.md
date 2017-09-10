@@ -1,28 +1,33 @@
 ---
-title: "Configurar o Firewall do Windows para permitir o acesso ao Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "portas [Analysis Services]"
-  - "Firewall do Windows [Analysis Services]"
-  - "sistemas de firewall [Analysis Services]"
+title: Configurar o Firewall do Windows para permitir o acesso ao Analysis Services | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ports [Analysis Services]
+- Windows Firewall [Analysis Services]
+- firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 caps.latest.revision: 47
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 47
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b4fd0a5f94c049cac32b7396e212d3da387f98f5
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurar o Firewall do Windows para permitir o acesso ao Analysis Services
+# <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurar o Firewall do Windows para permitir o acesso ao Analysis Services
   Uma primeira etapa essencial para tornar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] disponível na rede é determinar se você precisa desbloquear portas em um firewall A maioria das instalações exigirão que você crie, pelo menos, uma regra de firewall de entrada que permita conexões com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Os requisitos de configuração de firewall variam de acordo com a maneira como você instalou o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -33,13 +38,13 @@ caps.handback.revision: 47
   
 -   Abra a porta TCP 2382 ao instalar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no modo do SharePoint para oferecer suporte ao [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013. No [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013, a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é externa ao SharePoint. As solicitações de entrada para a instância do '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]' nomeada originam-se de aplicativos Web do SharePoint em uma conexão de rede, exigindo uma porta aberta. Da mesma maneira que ocorre com outras instâncias nomeadas do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , crie uma regra de entrada para o serviço SQL Server Browser na porta TCP 2382 para permitir o acesso ao [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
--   Para o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010, não abra portas no Firewall do Windows. Da mesma maneira que ocorre com um suplemento do SharePoint, o serviço usa as portas configuradas para SharePoint e faz apenas conexões locais à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que carrega e consulta os modelos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+-   Para o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010, não abra portas no Firewall do Windows. Da mesma maneira que ocorre com um suplemento do SharePoint, o serviço usa as portas configuradas para SharePoint e faz apenas conexões locais à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que carrega e consulta os modelos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 -   Para as instâncias do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executadas em máquinas virtuais do Windows Azure, use instruções alternativas para configurar o acesso ao servidor. Consulte [SQL Server Business Intelligence em máquinas virtuais do Windows Azure](http://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
   
- Embora a instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escute na porta TCP 2383, você pode configurar o servidor para escutar em uma porta fixa diferente, conectando-se ao servidor nesse formato: \<nome_do_servidor>:\<número_da_porta>.  
+ Embora a instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escuta na porta TCP 2383, você pode configurar o servidor para escutar em uma porta fixa diferente, conectando ao servidor neste formato: \<servername >:\<portnumber >.  
   
- Somente uma porta TCP pode ser usada por uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Em computadores com várias placas de rede ou vários endereços IP, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escuta em uma porta TCP para todos os endereços IP atribuídos ou com alias para o computador. Se você tiver requisitos de várias portas específicas, é recomendável configurar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para acesso HTTP. Em seguida, você poderá configurar vários pontos de extremidade HTTP em qualquer porta escolhida. Consulte [Configurar o acesso HTTP ao Analysis Services no Serviços de Informações da Internet &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).  
+ Somente uma porta TCP pode ser usada por uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Em computadores com várias placas de rede ou vários endereços IP, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escuta em uma porta TCP para todos os endereços IP atribuídos ou com alias para o computador. Se você tiver requisitos de várias portas específicas, é recomendável configurar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para acesso HTTP. Em seguida, você poderá configurar vários pontos de extremidade HTTP em qualquer porta escolhida. Consulte [Configurar o acesso HTTP ao Analysis Services no Serviços de Informações da Internet &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
  Este tópico contém as seguintes seções:  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 47
   
 -   Execute **netstat –ao –p TCP** da linha de comando para exibir as informações de porta TCP para esse PID.  
   
--   Verifique a porta usando o SQL Server Management Studio e conecte-se a um servidor do Analysis Services nesse formato: \<endereço_IP>:\<número_da_porta>.  
+-   Verifique se a porta usando o SQL Server Management Studio e conecte-se a um servidor do Analysis Services neste formato: \<IPAddress >:\<portnumber >.  
   
  Embora um aplicativo possa escutar em uma porta específica, as conexões não terão êxito se um firewall estiver bloqueando o acesso. Para que conexões alcancem uma instância nomeada do Analysis Services, desbloqueie o acesso ao msmdsrv.exe ou à porta fixa na qual ele está escutando no firewall. As seções restantes neste tópico fornecem instruções para fazer isso.  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 47
   
  Ao especificar uma regra de entrada, procure adotar uma convenção de nomenclatura que lhe permita localizar facilmente as regras posteriormente (por exemplo, **SQL Server Analysis Services (TCP-in) 2383**).  
   
-#### Firewall do Windows com Advanced Security  
+#### <a name="windows-firewall-with-advanced-security"></a>Firewall do Windows com Advanced Security  
   
 1.  No Windows 7 ou Windows Vista, no Painel de Controle, clique em **Sistema e Segurança**, selecione **Firewall do Windows**e clique em **Configurações avançadas**. No Windows Server 2008 ou 2008 R2, abra Ferramentas do Administrador e clique em **Firewall do Windows com Segurança Avançada**. No Windows Server 2012, abra a página de aplicativos e digite **Windows Firewall**.  
   
@@ -105,9 +110,9 @@ caps.handback.revision: 47
 8.  Para verificar que conexões remotas são habilitadas, abra o SQL Server Management Studio ou o Excel em outro computador e conecte-se ao [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , especificando o nome de rede do servidor em **Nome do servidor**.  
   
     > [!NOTE]  
-    >  Outros usuários não terão acesso a esse servidor até você conceder as devidas permissões. Para saber mais, veja [Autorizar o acesso a objetos e operações &#40;Analysis Services&41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
+    >  Outros usuários não terão acesso a esse servidor até você conceder as devidas permissões. Para saber mais, veja [Autorizar o acesso a objetos e operações &#40;Analysis Services 41](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
-#### Sintaxe de Netsh AdvFirewall  
+#### <a name="netsh-advfirewall-syntax"></a>Sintaxe de Netsh AdvFirewall  
   
 -   O comando a seguir cria uma regra de entrada que permite solicitações de entrada na porta TCP 2383.  
   
@@ -122,9 +127,9 @@ caps.handback.revision: 47
   
  Escolha uma das seguintes abordagens para habilitar o acesso remoto a uma instância nomeada do Analysis Services:  
   
--   Use as atribuições de porta dinâmica e o serviço SQL Server Browser. Desbloqueie a porta usada pelo serviço SQL Server Browser no Firewall do Windows. Conectar ao servidor neste formato: \<nome_do_servidor>\\\<nome_da_instância\>.  
+-   Use as atribuições de porta dinâmica e o serviço SQL Server Browser. Desbloqueie a porta usada pelo serviço SQL Server Browser no Firewall do Windows. Conectar ao servidor neste formato: \<servername >\\< instancename\>.  
   
--   Use uma porta fixa e o serviço SQL Server Browser juntos. Esta abordagem o permite se conectar usando este formato: \<nome_do_servidor>\\:\<nome_da_instância>, idêntico à abordagem de atribuição de porta dinâmica, com a diferença que, neste caso, o servidor escuta em uma porta fixa. Neste cenário, o serviço SQL Server Browser fornece a resolução de nome à instância do Analysis Services que escuta na porta fixa. Para usar esta abordagem, configure o servidor para escutar em uma porta fixa, desbloqueie o acesso a essa porta e desbloqueie o acesso à porta usada pelo serviço SQL Server Browser.  
+-   Use uma porta fixa e o serviço SQL Server Browser juntos. Essa abordagem permite que você se conectar usando este formato: \<servername >\\< instancename\>, idêntico à abordagem de atribuição de porta dinâmica, exceto que, nesse caso o servidor escuta em uma porta fixa. Neste cenário, o serviço SQL Server Browser fornece a resolução de nome à instância do Analysis Services que escuta na porta fixa. Para usar esta abordagem, configure o servidor para escutar em uma porta fixa, desbloqueie o acesso a essa porta e desbloqueie o acesso à porta usada pelo serviço SQL Server Browser.  
   
  O serviço SQL Server Browser só é usado com instâncias nomeadas, nunca com a instância padrão. O serviço é instalado e habilitado automaticamente sempre que você instala qualquer recurso do SQL Server como uma instância nomeada. Se você optar por uma abordagem que exija o serviço SQL Server Browser, mantenha-o habilitado e iniciado no seu servidor.  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 47
 > [!NOTE]  
 >  O serviço SQL Server Browser escuta na porta UDP 1434 e na porta TCP 2382 para o Mecanismo de Banco de Dados e o Analysis Services, respectivamente. Mesmo que você já tenha desbloqueado a porta UDP 1434 para o serviço SQL Server Browser, ainda precisará desbloquear a porta TCP 2382 para o Analysis Services.  
   
-#### Firewall do Windows com Advanced Security  
+#### <a name="windows-firewall-with-advanced-security"></a>Firewall do Windows com Advanced Security  
   
 1.  No Windows 7 ou Windows Vista, no Painel de Controle, clique em **Sistema e Segurança**, selecione **Firewall do Windows**e clique em **Configurações avançadas**. No Windows Server 2008 ou 2008 R2, abra Ferramentas do Administrador e clique em **Firewall do Windows com Segurança Avançada**. No Windows Server 2012, abra a página de aplicativos e digite **Windows Firewall**.  
   
@@ -155,7 +160,7 @@ caps.handback.revision: 47
   
 7.  Em Nome, digite um nome descritivo para esta regra (por exemplo, **Serviço SQL Server Browser (tcp-in) 2382**) e clique em **Concluir**.  
   
-8.  Para verificar que conexões remotas são habilitadas, abra o SQL Server Management Studio ou o Excel em outro computador e conecte-se ao Analysis Services, especificando o nome de rede do servidor e o nome da instância neste formato: \<nome_do_servidor>\\\<nome_da_instância\>. Por exemplo, em um servidor nomeado **AW-SRV01** com uma instância nomeada de **Finanças**, o nome do servidor é **AW-SRV01\Finance**.  
+8.  Para verificar que conexões remotas são habilitadas, abra o SQL Server Management Studio ou o Excel em outro computador e conecte-se ao Analysis Services, especificando o nome de rede do servidor e o nome da instância neste formato: \<servername > \\< instancename\>. Por exemplo, em um servidor nomeado **AW-SRV01** com uma instância nomeada de **Finanças**, o nome do servidor é **AW-SRV01\Finance**.  
   
  **Opção 2: Usar uma porta fixa para uma instância nomeada**  
   
@@ -163,7 +168,7 @@ caps.handback.revision: 47
   
  Para atribuir uma porta fixa, siga as instruções em [Usar uma porta fixa para uma instância padrão ou nomeada do Analysis Services](#bkmk_fixed) neste tópico e, depois, volte a esta seção para desbloquear a porta.  
   
-#### Firewall do Windows com Advanced Security  
+#### <a name="windows-firewall-with-advanced-security"></a>Firewall do Windows com Advanced Security  
   
 1.  No Windows 7 ou Windows Vista, no Painel de Controle, clique em **Sistema e Segurança**, selecione **Firewall do Windows**e clique em **Configurações avançadas**. No Windows Server 2008 ou 2008 R2, abra Ferramentas do Administrador e clique em **Firewall do Windows com Segurança Avançada**. No Windows Server 2012, abra a página de aplicativos e digite **Windows Firewall**.  
   
@@ -179,9 +184,9 @@ caps.handback.revision: 47
   
 7.  Em Nome, digite um nome descritivo para esta regra (por exemplo, **SQL Server Analysis Services na porta 54321**) e clique em **Concluir**.  
   
-8.  Para verificar que conexões remotas são habilitadas, abra o SQL Server Management Studio ou o Excel em outro computador e conecte-se ao Analysis Services, especificando o nome de rede do servidor e o número da porta neste formato: \<nome_do_servidor>:\<número_da_porta>.  
+8.  Para verificar que conexões remotas são habilitadas, abra o SQL Server Management Studio ou o Excel em outro computador e conecte-se ao Analysis Services, especificando o nome de rede do servidor e o número da porta neste formato: \<servername >: \<portnumber >.  
   
-#### Sintaxe de Netsh AdvFirewall  
+#### <a name="netsh-advfirewall-syntax"></a>Sintaxe de Netsh AdvFirewall  
   
 -   Os comandos a seguir criam as regras de entrada que desbloqueiam o TCP 2382 para o serviço SQL Server Browser e desbloqueiam a porta fixa especificada para a instância do Analysis Services. Você pode executar qualquer um dos dois para permitir o acesso a uma instância do Analysis Services nomeada.  
   
@@ -200,11 +205,11 @@ caps.handback.revision: 47
   
  Observe que o uso de uma porta fixa alterará a sintaxe de conexão para a instância padrão, exigindo o acréscimo do número de porta ao nome de servidor. Por exemplo, a conexão a uma instância padrão local do Analysis Services que escuta na porta 54321 no SQL Server Management Studio exigiria que você digitasse localhost:54321 como o nome de servidor na caixa de diálogo Conectar ao Servidor no Management Studio.  
   
- Se você estiver usando uma instância nomeada, poderá atribuir uma porta fixa sem alterações sobre como especificar o nome do servidor (especificamente, você pode usar \<nome_do_servidor\nome_da_instância> para conectar a uma instância nomeada que escuta em uma porta fixa). Isso só funcionará se o serviço SQL Server Browser estiver em execução e você tiver desbloqueado a porta na qual ele esteja escutando. O serviço SQL Server Browser fornecerá redirecionamento à porta fixa com base em \<nome_do_servidor\nome_da_instância>. Contanto que você abra portas para o serviço SQL Server Browser e a instância nomeada do Analysis Services que escuta na porta fixa, o serviço SQL Server Browser resolverá a conexão a uma instância nomeada.  
+ Se você estiver usando uma instância nomeada, você pode atribuir uma porta fixa sem alterações sobre como especificar o nome do servidor (especificamente, você pode usar \<nome_do_servidor \ nome_da_instância > para se conectar a uma instância nomeada que escuta em uma porta fixa). Isso só funcionará se o serviço SQL Server Browser estiver em execução e você tiver desbloqueado a porta na qual ele esteja escutando. Serviço SQL Server Browser fornecerá redirecionamento à porta fixa com base em \<nome_do_servidor \ nome_da_instância >. Contanto que você abra portas para o serviço SQL Server Browser e a instância nomeada do Analysis Services que escuta na porta fixa, o serviço SQL Server Browser resolverá a conexão a uma instância nomeada.  
   
 1.  Determine uma porta TCP/IP disponível a ser usada.  
   
-     Para exibir uma lista de portas reservadas e registradas que você deve evitar usar, consulte [Port Numbers (IANA)](http://go.microsoft.com/fwlink/?LinkID=198469) (página em inglês). Para exibir uma lista de portas que já estão em uso em seu sistema, abra uma janela de prompt de comando e digite **netstat –a –p TCP** para exibir uma lista de portas TCP que estão abertas no sistema.  
+     Para exibir uma lista de portas reservadas e registradas que você deve evitar usar, consulte [Port Numbers (IANA)](http://go.microsoft.com/fwlink/?LinkID=198469)(página em inglês). Para exibir uma lista de portas que já estão em uso em seu sistema, abra uma janela de prompt de comando e digite **netstat –a –p TCP** para exibir uma lista de portas TCP que estão abertas no sistema.  
   
 2.  Após determinar a porta a ser usada, especifique a porta editando a configuração de **Port** no arquivo msmdsrv.ini ou na página de propriedades Geral de uma instância do Analysis Services no SQL Server Management Studio.  
   
@@ -212,7 +217,7 @@ caps.handback.revision: 47
   
 4.  Configure o Firewall do Windows para desbloquear a porta TCP especificada. Ou, se você estiver usando uma porta fixa para uma instância nomeada, desbloqueie a porta TCP especificada para essa instância e a porta TCP 2382 para o serviço SQL Server Browser.  
   
-5.  Verifique isso conectando-se localmente (no Management Studio) e, em seguida, remotamente, de um aplicativo cliente em outro computador. Para usar o Management Studio, conecte-se à instância padrão do Analysis Services especificando um nome do servidor neste formato: \<nome_do_servidor>:\<número_da_porta>. Para uma instância nomeada, especifique o nome do servidor como \<nome_do_servidor>\\\<nome_da_instância\>.  
+5.  Verifique isso conectando-se localmente (no Management Studio) e, em seguida, remotamente, de um aplicativo cliente em outro computador. Para usar o Management Studio, conecte-se a uma instância do Analysis Services padrão especificando um nome de servidor neste formato: \<servername >:\<portnumber >. Para uma instância nomeada, especifique o nome do servidor como \<servername >\\< instancename\>.  
   
 ##  <a name="bkmk_cluster"></a> Configuração de porta para um cluster do Analysis Services  
  Um cluster de failover do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sempre realiza a escuta na porta TCP 2383, independentemente de você ter feito a instalação como uma instância padrão ou nomeada. As atribuições de porta dinâmica não são usadas pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quando ele é instalado em um cluster de failover do Windows. Abra a TCP 2383 em todos os nós que estão executando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no cluster. Para obter mais informações sobre o clustering do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Como clusterizar o SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
@@ -232,9 +237,9 @@ caps.handback.revision: 47
   
  Se você estiver usando o SharePoint 2010, não precisa abrir portas no Firewall do Windows. O SharePoint abre as portas necessárias e os suplementos como o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint funcionam no ambiente do SharePoint. Em uma instalação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2010, o Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] tem uso exclusivo da instância de serviço local do SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) que é instalada com ele no mesmo computador. Ele usa conexões locais, e não de rede, para acessar o serviço de mecanismo local Analysis Services que carrega, consulta e processa dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no servidor do SharePoint. Para solicitar dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de aplicativos cliente, solicitações são roteadas através de portas que são abertas pela Instalação de SharePoint (especificamente, regras de entrada são definidas para permitir o acesso ao SharePoint – 80, Administração Central do SharePoint v4, Serviços Web de SharePoint e SPUserCodeV4). Como os serviços Web do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são executados em um farm do SharePoint, as regras de firewall do SharePoint são suficientes para o acesso remoto a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um farm do SharePoint.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Serviço SQL Server Browser &#40;Mecanismo de Banco de Dados e SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
- [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)   
+ [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
   

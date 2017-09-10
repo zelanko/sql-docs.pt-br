@@ -1,28 +1,33 @@
 ---
-title: "Definir c&#225;lculos nomeados em uma exibi&#231;&#227;o da fonte de dados (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modificando cálculos nomeados"
-  - "exibições da fonte de dados [Analysis Services], cálculos nomeados"
-  - "cálculos nomeados [Analysis Services]"
+title: "Definir cálculos nomeados em uma exibição da fonte de dados (Analysis Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying named calculations
+- data source views [Analysis Services], named calculations
+- named calculations [Analysis Services]
 ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d74a249e280b0c6b31c970638e3c47b3e6327c5f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definir c&#225;lculos nomeados em uma exibi&#231;&#227;o da fonte de dados (Analysis Services)
+# <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Definir cálculos nomeados em uma exibição da fonte de dados (Analysis Services)
   Um cálculo nomeado é uma expressão SQL representada como uma coluna calculada. Essa expressão aparece e se comporta como uma coluna da tabela. Um cálculo nomeado permite que você estenda o esquema relacional das tabelas ou exibições existentes sem modificar as tabelas ou exibições da fonte de dados subjacente. Considere os seguintes exemplos:  
   
 -   Crie um único cálculo nomeado que é derivado de várias colunas em uma tabela de fato (por exemplo, criando Quantidade de Imposto multiplicando uma taxa de imposto por um preço de venda).  
@@ -31,7 +36,7 @@ caps.handback.revision: 34
   
 -   Como um aprimoramento de desempenho de consulta, crie um cálculo nomeado no DSV em vez de criar um membro calculado em um cubo. Cálculos nomeados são calculados durante o processamento, enquanto os membros calculados são calculados no momento da consulta.  
   
-## Criando cálculos nomeados  
+## <a name="creating-named-calculations"></a>Criando cálculos nomeados  
   
 > [!NOTE]  
 >  Não é possível adicionar um cálculo nomeado a uma consulta nomeada nem usar como base de uma consulta nomeada uma tabela que contém um cálculo nomeado.  
@@ -50,41 +55,41 @@ FROM
   
  Colunas às quais a expressão faz referência não devem ser qualificadas ou devem ser qualificadas somente pelo nome da tabela. Por exemplo, para fazer referência à coluna SaleAmount em uma tabela, o valor `SaleAmount` ou `Sales.SaleAmount` é válido, mas `dbo.Sales.SaleAmount` produzirá um erro.  
   
- A expressão não é encerrada entre parênteses automaticamente. Portanto, se uma expressão, como uma instrução SELECT, exigir parênteses, digite-os na caixa **Expressão**. Por exemplo, a expressão a seguir será válida somente se você digitar os parênteses.  
+ A expressão não é encerrada entre parênteses automaticamente. Portanto, se uma expressão, como uma instrução SELECT, exigir parênteses, digite-os na caixa **Expressão** . Por exemplo, a expressão a seguir será válida somente se você digitar os parênteses.  
   
 ```  
 (SELECT Description FROM Categories WHERE Categories.CategoryID = CategoryID)  
 ```  
   
-## Adicionar ou editar um cálculo nomeado  
+## <a name="add-or-edit-a-named-calculation"></a>Adicionar ou editar um cálculo nomeado  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto ou conecte-se ao banco de dados que contém a exibição da fonte de dados na qual você deseja definir um cálculo nomeado.  
   
 2.  No Gerenciador de Soluções, expanda a pasta **Exibições da Fonte de Dados** e clique duas vezes na exibição da fontes de dados.  
   
-3.  No painel **Tabelas** ou **Diagrama**, clique com o botão direito do mouse na tabela na qual você deseja definir o cálculo nomeado e, em seguida, clique em **Novo Cálculo Nomeado**. Clique com o botão direito do mouse no nome de tabela, e não em um atributo. O menu deverá ser semelhante ao seguinte:  
+3.  No painel **Tabelas** ou **Diagrama** , clique com o botão direito do mouse na tabela na qual você deseja definir o cálculo nomeado e, em seguida, clique em **Novo Cálculo Nomeado**. Clique com o botão direito do mouse no nome de tabela, e não em um atributo. O menu deverá ser semelhante ao seguinte:  
   
-     ![Instantâneo do espaço de trabalho de diagrama, menu de atalho](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "Instantâneo do espaço de trabalho de diagrama, menu de atalho")  
+     ![Captura de tela de espaço de trabalho de diagrama, menu de atalho](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "captura de tela de espaço de trabalho de diagrama, menu de atalho")  
   
     > [!NOTE]  
-    >  Para localizar uma tabela ou exibição, use a opção **Localizar Tabela** clicando no menu **Exibição da Fonte de Dados** ou clicando com o botão direito do mouse em uma área livre dos painéis **Tabelas** ou **Diagrama**.  
+    >  Para localizar uma tabela ou exibição, use a opção **Localizar Tabela** clicando no menu **Exibição da Fonte de Dados** ou clicando com o botão direito do mouse em uma área livre dos painéis **Tabelas** ou **Diagrama** .  
   
-4.  Na caixa de diálogo **Criar Cálculo Nomeado**, faça o seguinte:  
+4.  Na caixa de diálogo **Criar Cálculo Nomeado** , faça o seguinte:  
   
-    -   Na caixa de texto **Nome da coluna**, digite o nome da nova coluna.  
+    -   Na caixa de texto **Nome da coluna** , digite o nome da nova coluna.  
   
-    -   Na caixa de texto **Descrição**, digite uma descrição para a nova coluna.  
+    -   Na caixa de texto **Descrição** , digite uma descrição para a nova coluna.  
   
-    -   Na caixa de texto **Expressão**, digite a expressão que produz o conteúdo da nova coluna no dialeto SQL apropriado para o provedor de dados.  
+    -   Na caixa de texto **Expressão** , digite a expressão que produz o conteúdo da nova coluna no dialeto SQL apropriado para o provedor de dados.  
   
 5.  Clique em **OK**.  
   
      A coluna de cálculo nomeado aparece como a última coluna na tabela de exibição da fonte de dados. Um símbolo de calculadora indica que a coluna contém um cálculo nomeado.  
   
-## Excluir um cálculo nomeado  
+## <a name="delete-a-named-calculation"></a>Excluir um cálculo nomeado  
  Quando você tenta excluir um cálculo nomeado, recebe uma lista de objetos definidos no projeto ou no banco de dados que serão invalidados pela exclusão. Revise a lista com cuidado antes de excluir o cálculo.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Definir consultas nomeadas em uma exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

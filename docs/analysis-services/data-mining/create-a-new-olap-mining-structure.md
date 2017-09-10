@@ -1,40 +1,45 @@
 ---
-title: "Criar uma nova estrutura de minera&#231;&#227;o OLAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "estruturas de mineração [Analysis Services], OLAP"
-  - "estruturas de mineração [Analysis Services], criando"
-  - "OLAP [Analysis Services], modelos de mineração"
+title: "Criar uma nova estrutura de mineração OLAP | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], OLAP
+- mining structures [Analysis Services], creating
+- OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41047907b0e53f6d17fc49a9734ed4b9a52817f1
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Criar uma nova estrutura de minera&#231;&#227;o OLAP
+# <a name="create-a-new-olap-mining-structure"></a>Criar uma nova estrutura de mineração OLAP
   Você pode usar o Assistente de Mineração de Dados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para criar uma estrutura de mineração que usa dados de um modelo multidimensional. Modelos de mineração baseados em cubos OLAP podem usar a coluna e os valores de tabelas de fatos, dimensões e grupos de medidas como atributos para análise.  
   
-### Para criar uma nova estrutura de mineração OLAP  
+### <a name="to-create-a-new-olap-mining-structure"></a>Para criar uma nova estrutura de mineração OLAP  
   
 1.  No Gerenciador de Soluções do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], clique com o botão direito do mouse na pasta **Estruturas de Mineração** de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e clique em **Nova Estrutura de Mineração** para abrir o Assistente de Mineração de Dados.  
   
 2.  Na página **Bem-vindo ao Assistente de Mineração de Dados** , clique em **Avançar**.  
   
-3.  Na página **Selecionar o Método de Definição**, selecione **De cubo existente** e clique em **Avançar**.  
+3.  Na página **Selecionar o Método de Definição** , selecione **De cubo existente**e clique em **Avançar**.  
   
      Se você receber um erro com a mensagem Não é possível recuperar uma lista de algoritmos de mineração de dados aceitos, abra a caixa de diálogo **Propriedades do Projeto** e verifique se especificou o nome de uma instância do Analysis Services que dá suporte a modelos multidimensionais. Não é possível criar modelos de mineração em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que oferece suporte à modelagem de tabela.  
   
-4.  Na página **Criar a Estrutura de Mineração de Dados**, decida se você criará somente uma estrutura de mineração ou uma estrutura de mineração, além de um modelo de mineração relacionado. Em geral, é mais fácil criar um modelo de mineração ao mesmo tempo para que você seja solicitado a incluir as colunas necessárias.  
+4.  Na página **Criar a Estrutura de Mineração de Dados** , decida se você criará somente uma estrutura de mineração ou uma estrutura de mineração, além de um modelo de mineração relacionado. Em geral, é mais fácil criar um modelo de mineração ao mesmo tempo para que você seja solicitado a incluir as colunas necessárias.  
   
      Se você criar um modelo de mineração, selecione o algoritmo de mineração de dados que você quer usar e clique em **Avançar**. Para obter mais informações sobre como escolher um algoritmo, consulte [Algoritmos de mineração de dados &#40;Analysis Services – Mineração de dados &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
@@ -44,13 +49,13 @@ caps.handback.revision: 32
   
      Clique em **Avançar**.  
   
-6.  Na página **Selecionar a Chave do Caso**, em **Atributos**, selecione o atributo que será a chave da estrutura de mineração e clique em **Avançar**.  
+6.  Na página **Selecionar a Chave do Caso** , em **Atributos**, selecione o atributo que será a chave da estrutura de mineração e clique em **Avançar**.  
   
      O atributo que você costuma usar como chave na estrutura de mineração também é uma chave da dimensão e será pré-selecionado.  
   
-7.  Na página **Selecionar Colunas de Nível de Caso**, em **Atributos e Medidas Relacionados**, selecione os atributos e as medidas que contêm valores a serem adicionados à estrutura de mineração como dados de caso. Clique em **Avançar**.  
+7.  Na página **Selecionar Colunas de Nível de Caso** , em **Atributos e Medidas Relacionados**, selecione os atributos e as medidas que contêm valores a serem adicionados à estrutura de mineração como dados de caso. Clique em **Avançar**.  
   
-8.  Na página **Especificar Uso de Colunas do Modelo de Mineração**, em **Estrutura do modelo de mineração**, primeiro defina a coluna previsível e depois escolha colunas para usar como entradas.  
+8.  Na página **Especificar Uso de Colunas do Modelo de Mineração** , em **Estrutura do modelo de mineração**, primeiro defina a coluna previsível e depois escolha colunas para usar como entradas.  
   
     -   Marque a caixa de seleção na coluna à extrema esquerda para incluir os dados na estrutura de mineração. Você pode incluir colunas na estrutura que usará para referência, mas não usá-las para análise.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 32
   
      Clique em **Avançar**.  
   
-9. Na página **Especificar Uso de Colunas do Modelo de Mineração**, você também pode adicionar e remover tabelas aninhadas da estrutura de mineração, usando **Adicionar Tabelas Aninhadas** e **Tabelas Aninhadas**.  
+9. Na página **Especificar Uso de Colunas do Modelo de Mineração** , você também pode adicionar e remover tabelas aninhadas da estrutura de mineração, usando **Adicionar Tabelas Aninhadas** e **Tabelas Aninhadas**.  
   
      Em um modelo de mineração de OLAP, uma tabela aninhada é outro conjunto de dados dentro do cubo que tem uma relação um-para-muitos com a dimensão que representa os atributos de caso. Portanto, quando a caixa de diálogo for aberta, ela selecionará previamente grupos de medidas que já estão relacionados à dimensão selecionada como a tabela de casos. Neste ponto, você escolheria uma dimensão diferente que contém informações adicionais úteis para análise.  
   
@@ -72,7 +77,7 @@ caps.handback.revision: 32
   
     -   A chave da tabela aninhada: ela deve ser pré-selecionada na página **Selecionar Chave de Tabela Aninhada**.  
   
-    -   Os atributos usados para análise: a página **Selecionar Colunas de Tabela Aninhada** fornece uma lista de medidas e atributos na seleção da tabela aninhada.  
+    -   Os atributos usados para análise: a página **Selecionar Colunas de Tabela Aninhada**fornece uma lista de medidas e atributos na seleção da tabela aninhada.  
   
         -   Para cada atributo incluído no modelo, marque a caixa na coluna esquerda.  
   
@@ -84,14 +89,14 @@ caps.handback.revision: 32
   
      Clique em **Concluir** para fechar a parte do assistente que trabalha com tabelas aninhadas. Você pode repetir o processo para adicionar varias colunas aninhadas.  
   
-10. Na página **Especificar Conteúdo e Tipos de Dados das Colunas**, em **Estrutura de modelo de mineração**, defina o tipo de conteúdo e o tipo de dados para cada coluna.  
+10. Na página **Especificar Conteúdo e Tipos de Dados das Colunas** , em **Estrutura de modelo de mineração**, defina o tipo de conteúdo e o tipo de dados para cada coluna.  
   
     > [!NOTE]  
     >  Os modelos de mineração OLAP não permitem o uso do recurso **Detectar** para detectar automaticamente se uma coluna contém dados contínuos ou distintos.  
   
      Clique em **Avançar**.  
   
-11. Na página **Dividir Cubo de Origem**, é possível filtrar os dados usados para criar a estrutura de mineração.  
+11. Na página **Dividir Cubo de Origem** , é possível filtrar os dados usados para criar a estrutura de mineração.  
   
      A divisão do cubo lhe permite restringir os dados que são usados para criar o modelo. Por exemplo, você pode criar modelos separados para cada região dividindo a hierarquia Geografia e  
   
@@ -109,15 +114,15 @@ caps.handback.revision: 32
   
      Clique em **Avançar**.  
   
-12. Na página **Dividir os dados em conjuntos de treinamento e teste**, especifique um percentual dos dados da estrutura de mineração a ser reservado para teste ou especifique o número máximo de casos de teste. Clique em **Avançar**.  
+12. Na página **Dividir os dados em conjuntos de treinamento e teste** , especifique um percentual dos dados da estrutura de mineração a ser reservado para teste ou especifique o número máximo de casos de teste. Clique em **Avançar**.  
   
      Se você especificar ambos os valores, os limites serão combinados para usar o que for o mais baixo.  
   
-13. Na página **Concluindo o Assistente**, forneça um nome para a nova estrutura de mineração OLAP e para o modelo de mineração inicial.  
+13. Na página **Concluindo o Assistente** , forneça um nome para a nova estrutura de mineração OLAP e para o modelo de mineração inicial.  
   
 14. Clique em **Concluir**.  
   
-15. Na página **Concluindo o Assistente**, você também tem a opção de criar uma dimensão do modelo de mineração e/ou um cubo usando a dimensão do modelo de mineração. Estas opções têm suporte apenas para modelos criados usando os seguintes algoritmos:  
+15. Na página **Concluindo o Assistente** , você também tem a opção de criar uma dimensão do modelo de mineração e/ou um cubo usando a dimensão do modelo de mineração. Estas opções têm suporte apenas para modelos criados usando os seguintes algoritmos:  
   
     -   Algoritmo Microsoft Clustering  
   
@@ -129,7 +134,7 @@ caps.handback.revision: 32
   
      **Criar cubo usando a dimensão do modelo de mineração**: marque esta caixa de seleção e forneça um nome para o novo cubo. Quando você usa esta opção, um novo cubo é criado, contendo as dimensões existentes, que foram usadas para criar a estrutura, e a nova dimensão de mineração de dados, contendo os resultados do modelo.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tarefas e instruções da estrutura de mineração](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

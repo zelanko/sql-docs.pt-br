@@ -1,28 +1,33 @@
 ---
-title: "Criar um relat&#243;rio de valida&#231;&#227;o cruzada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "validando modelos de mineração de dados"
-  - "estruturas de mineração [Analysis Services], tópicos de instruções"
-  - "validação cruzada [mineração de dados]"
-  - "desvio padrão estatístico"
+title: "Criar um relatório de validação cruzada | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- validating data mining models
+- mining structures [Analysis Services], how-to topics
+- cross-validation [data mining]
+- statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 87f3809146240a6e807cad3a5e1e22981f8bbf4d
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Criar um relat&#243;rio de valida&#231;&#227;o cruzada
+# <a name="create-a-cross-validation-report"></a>Criar um relatório de validação cruzada
   Este tópico mostra passo-a-passo a criação de um relatório de validação cruzada usando a guia Gráfico de Precisão no Designer de Mineração de Dados. Para obter informações gerais sobre a aparência de um relatório de validação cruzada e as medidas estatísticas que ele inclui, consulte [Validação cruzada &#40;Analysis Services – Mineração de Dados&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
   
  Um relatório de validação cruzada é bem diferente de um gráfico de precisão, como um gráfico de comparação de precisão ou uma matriz de classificação.  
@@ -37,7 +42,7 @@ caps.handback.revision: 17
   
 -   Você pode criar um relatório de validação cruzada em um modelo de clustering que não tem um atributo previsível somente quando a estrutura de mineração não oferece suporte a outros atributos previsíveis.  
   
-### Selecionar uma estrutura de mineração  
+### <a name="select-a-mining-structure"></a>Selecionar uma estrutura de mineração  
   
 1.  Abra o Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 17
   
 5.  Clique na guia **Validação Cruzada** .  
   
-### Defina opções de validação cruzada  
+### <a name="set-cross-validation-options"></a>Defina opções de validação cruzada  
   
 1.  Na guia **Validação Cruzada** de **Número de Partições**, clique na seta para baixo para selecionar um número entre 1 e 10. O valor padrão é 10.  
   
@@ -74,15 +79,15 @@ caps.handback.revision: 17
   
 6.  Clique em **Obter Resultados**.  
   
-### Imprimir o relatório de validação cruzada  
+### <a name="print-the-cross-validation-report"></a>Imprimir o relatório de validação cruzada  
   
-1.  Clique com o botão direito do mouse no relatório completo na guia **Validação Cruzada**.  
+1.  Clique com o botão direito do mouse no relatório completo na guia **Validação Cruzada** .  
   
 2.  No menu de atalho, selecione **Imprimir** ou **Visualizar Impressão** para revisar o primeiro relatório.  
   
-### Criar uma cópia do relatório no Microsoft Excel  
+### <a name="create-a-copy-of-the-report-in-microsoft-excel"></a>Criar uma cópia do relatório no Microsoft Excel  
   
-1.  Clique com o botão direito do mouse no relatório completo na guia **Validação Cruzada**.  
+1.  Clique com o botão direito do mouse no relatório completo na guia **Validação Cruzada** .  
   
 2.  No menu de atalho, selecione **Selecionar Tudo**.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 17
   
 4.  Cole a seleção em uma pasta do Excel aberta. Se você usar a opção **Colar** , o relatório será colado no Excel como HTML, preservando a formatação de linhas e colunas. Se colar o relatório usando a opção **Colar Especial** para texto ou texto Unicode, o relatório será colado em um formato delimitado por linha.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Medidas no relatório de validação cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   

@@ -1,36 +1,41 @@
 ---
-title: "Conjuntos de linhas de esquema de minera&#231;&#227;o de dados (SSAs) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "conjuntos de linhas de esquema [Analysis Services], mineração de dados"
-  - "mineração de dados [Analysis Services], consultas"
-  - "conteúdo do modelo de mineração"
-  - "mineração de dados [Analysis Services], conjuntos de linhas de esquema"
-  - "conjuntos de linhas de esquema [Analysis Services], recuperando"
-  - "mineração de dados [Analysis Services], solução de problemas"
+title: "Conjuntos de linhas do esquema (SSAs) de mineração de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schema rowsets [Analysis Services], data mining
+- data mining [Analysis Services], queries
+- mining model content
+- data mining [Analysis Services], schema rowsets
+- schema rowsets [Analysis Services], retrieving
+- data mining [Analysis Services], troubleshooting
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: deaa583071c754683120c1c519232c3c2de6b0b7
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Conjuntos de linhas de esquema de minera&#231;&#227;o de dados (SSAs)
+# <a name="data-mining-schema-rowsets-ssas"></a>Conjuntos de linhas de esquema de mineração de dados (SSAs)
   No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], muitos dos conjuntos de linhas de esquema de mineração de dados OLE DB existentes foram expostos como um conjunto de tabelas do sistema que pode ser consultado usando as instruções DMX (Data Mining Extensions). Ao criar consultas no conjunto de linhas de esquema de mineração de dados, é possível identificar os serviços disponíveis, obter atualizações sobre o status de seus modelos e estruturas e localizar detalhes sobre o conteúdo ou os parâmetros do modelo. Para obter uma descrição dos conjuntos de linhas de esquema de mineração de dados, consulte [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
   
 > [!NOTE]  
 >  Você também pode consultar os conjuntos de linhas de esquema de mineração de dados usando o XMLA. Para obter mais informações sobre como fazer isso no SQL Server Management Studio, consulte [Criar uma consulta de mineração de dados usando o XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md).  
   
-## Lista de conjuntos de linhas de esquema de mineração de dados  
+## <a name="list-of-data-mining-schema-rowsets"></a>Lista de conjuntos de linhas de esquema de mineração de dados  
  A tabela a seguir lista os conjuntos de linhas de esquema de mineração de dados que podem ser úteis para consultas e monitoramentos.  
   
 |Nome do conjunto de linhas|Description|  
@@ -48,10 +53,10 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  A lista na tabela não é abrangente; ela mostra apenas os conjuntos de linhas que podem ser interessantes para solucionar os problemas.  
   
-## Exemplos  
+## <a name="examples"></a>Exemplos  
  A seção a seguir fornece alguns exemplos de consultas nos conjuntos de linhas de esquema de mineração de dados.  
   
-### Exemplo 1: lista de serviços de mineração de dados  
+### <a name="example-1-list-data-mining-services"></a>Exemplo 1: lista de serviços de mineração de dados  
  A consulta a seguir retorna uma lista dos serviços de mineração disponíveis no servidor atual, indicando que os algoritmos estão habilitados. As colunas fornecidas para cada serviço de mineração incluem os sinalizadores de modelagem e os tipos de conteúdo que podem ser usados em cada algoritmo, o GUID para cada serviço e todos os limites de previsão que podem ter sido adicionados a cada serviço.  
   
 ```  
@@ -59,7 +64,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### Exemplo 2: lista de parâmetros de modelo de mineração  
+### <a name="example-2-list-mining-model-parameters"></a>Exemplo 2: lista de parâmetros de modelo de mineração  
  O exemplo a seguir retorna os parâmetros usados para criar um modelo de mineração específico:  
   
 ```  
@@ -68,7 +73,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### Exemplo 3: lista de todos os conjuntos de linhas  
+### <a name="example-3-list-all-rowsets"></a>Exemplo 3: lista de todos os conjuntos de linhas  
  O exemplo a seguir retorna uma lista abrangente dos conjuntos de linhas disponíveis no servidor atual:  
   
 ```  
@@ -77,3 +82,4 @@ FROM $system.DBSCHEMA_TABLES
 ```  
   
   
+

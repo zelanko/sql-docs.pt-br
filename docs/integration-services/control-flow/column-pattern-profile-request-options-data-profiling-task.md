@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7ece8c33a4c110898134da60aea6595b936e1e9
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: e718e67c8756d691338a614c775c2ff71df4b06c
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opções da solicitação de perfil Padrão de Coluna (tarefa Criação de Perfil de Dados)
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **Delimitadores** Por padrão, a lista de delimitadores contém os seguintes caracteres: espaço, guia horizontal (\t), nova linha (\n) e retorno de carro (\r). É possível especificar delimitadores adicionais, mas não é possível remover os delimitadores padrão.  
   
--   **Símbolos** Por padrão, a lista de **Símbolos** contém os seguintes caracteres: `,.;:-"'`~=&/@!?()<>[]{}|#*^%`. For example, if the symbols are "`()-`", o valor "(425) 123-4567" é transformado no token ["(", "425", ")", "123", "-", "4567", ")"].  
+-   **Símbolos** por padrão, a lista de **símbolos** contém os seguintes caracteres: `,.;:-"'~=&/@!?()<>[]{}|#*^%`. Por exemplo, se os símbolos forem "`()-`", será gerado o token ["(", "425", ")", "123", "-", "4567", ")"] para o valor "(425) 123-4567".  
   
  Um caractere não pode ser um delimitador e um símbolo ao mesmo tempo.  
   
@@ -147,7 +147,8 @@ ms.lasthandoff: 08/03/2017
  Para obter mais informações, consulte "Compreendendo o uso da tabela de marcas" anteriormente neste tópico.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor da tarefa &#40; de criação de perfil de dados Página geral &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Formulário de perfil rápido de tabela única &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
+

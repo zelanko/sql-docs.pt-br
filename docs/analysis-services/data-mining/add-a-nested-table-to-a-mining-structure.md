@@ -1,31 +1,36 @@
 ---
-title: "Adicionar uma tabela aninhada a uma estrutura de minera&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tabelas [Analysis Services], aninhadas"
-  - "tabelas aninhadas"
-  - "estruturas de mineração [Analysis Services], tabelas aninhadas"
-  - "adicionando tabelas aninhadas"
+title: "Adicionar uma tabela aninhada a uma estrutura de mineração | Microsoft Docs"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [Analysis Services], nested
+- nested tables
+- mining structures [Analysis Services], nested tables
+- adding nested tables
 ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a33c2958724cf1d64a0706427afa377d4db9e8bc
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Adicionar uma tabela aninhada a uma estrutura de minera&#231;&#227;o
+# <a name="add-a-nested-table-to-a-mining-structure"></a>Adicionar uma tabela aninhada a uma estrutura de mineração
   Use o Designer de Mineração de Dados para adicionar uma tabela aninhada a uma estrutura de mineração após ela ter sido criada pelo Assistente de Mineração de Dados.  
   
-### Para adicionar uma tabela aninhada a uma estrutura de mineração  
+### <a name="to-add-a-nested-table-to-a-mining-structure"></a>Para adicionar uma tabela aninhada a uma estrutura de mineração  
   
 1.  Selecione a guia **Estrutura de Mineração** no Designer de Mineração de Dados.  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 27
   
      Uma nova coluna de tabela que contém a coluna de chave é adicionada à estrutura de mineração. Para obter mais informações sobre como adicionar colunas extras, consulte [Adicionar colunas a uma estrutura de mineração](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tarefas e instruções da estrutura de mineração](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

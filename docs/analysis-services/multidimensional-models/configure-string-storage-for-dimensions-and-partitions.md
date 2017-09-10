@@ -1,24 +1,29 @@
 ---
-title: "Configurar o armazenamento de cadeia de caracteres para dimens&#245;es e parti&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Configurar o armazenamento de cadeia de caracteres para dimensões e partições | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cd8d940628f843407c7c841b73b1322096fda615
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurar o armazenamento de cadeia de caracteres para dimens&#245;es e parti&#231;&#245;es
+# <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurar o armazenamento de cadeia de caracteres para dimensões e partições
   Você pode reconfigurar o armazenamento de cadeia de caracteres para acomodar cadeias de caracteres muito grandes em atributos de dimensão ou partições que excedem o limite de tamanho de arquivo do 4 GB para repositórios de cadeias de caracteres. Se suas dimensões ou partições incluírem repositórios de cadeias de caracteres desse tamanho, você poderá contornar a restrição de tamanho do arquivo alterando a propriedade **StringStoresCompatibilityLevel** em nível de dimensão ou de partição para objetos locais e vinculados (locais ou remotos).  
   
  Observe que você pode aumentar o armazenamento de cadeia de caracteres apenas nos objetos que exigem capacidade adicional. Na maioria dos modelos multidimensionais, os dados de cadeia de caracteres são associados às dimensões. No entanto, partições que contêm medidas de contagem distintas sobre cadeias de caracteres também podem aproveitar essa configuração. Como a configuração é para cadeias de caracteres, dados numéricos não são afetados.  
@@ -70,13 +75,13 @@ caps.handback.revision: 21
   
 3.  No Designer de Dimensão, no painel Atributos, verifique se o nó pai da dimensão está selecionado (por exemplo, se a dimensão for Clientes, selecione Clientes e não um dos atributos filho).  
   
-4.  No painel Propriedades, na seção Avançado, defina **StringStoresCompatibilityLevel** como **1100**. Repita o procedimento para outras dimensões que exigem um armazenamento maior, caso contrário, deixe as dimensões restantes com o valor **1050**.  
+4.  No painel Propriedades, na seção Avançado, defina **StringStoresCompatibilityLevel** como **1100**. Repita o procedimento para outras dimensões que exigem um armazenamento maior, caso contrário, deixe as dimensões restantes com o valor **1050** .  
   
 5.  Para partições, abra um cubo no Gerenciador de Soluções.  
   
 6.  Clique na guia Partições.  
   
-7.  Expanda a partição, selecione a partição que exige capacidade de armazenamento adicional e modifique a propriedade **StringStoresCompatibilityLevel**.  
+7.  Expanda a partição, selecione a partição que exige capacidade de armazenamento adicional e modifique a propriedade **StringStoresCompatibilityLevel** .  
   
 8.  Salve o arquivo.  
   
@@ -87,10 +92,10 @@ caps.handback.revision: 21
   
  Você deve usar a opção Processar Completo em cada objeto que esteja usando a nova arquitetura de repositório de cadeias de caracteres. Antes de processar, execute uma análise de impacto na dimensão para verificar se objetos dependentes também requerem reprocessamento.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Ferramentas e abordagens para processamento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
  [Processando opções e configurações &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Modos e processamento de armazenamento de partição](../Topic/Partition%20Storage%20Modes%20and%20Processing.md)   
- [Armazenamento de dimensões ](../Topic/Dimension%20Storage.md)  
+ [Modos de armazenamento de partição e processamento](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [Armazenamento de dimensão](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   
