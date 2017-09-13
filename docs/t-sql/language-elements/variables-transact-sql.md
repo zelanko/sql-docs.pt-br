@@ -1,7 +1,7 @@
 ---
 title: "Variáveis (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -24,7 +24,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="variables-transact-sql"></a>Variáveis (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Uma variável local do Transact-SQL é um objeto que pode conter um único valor de dados de um tipo específico. As variáveis em lotes e scripts são normalmente usadas: 
 
@@ -39,8 +39,9 @@ O script seguinte cria uma tabela de teste pequena e a popula com 26 linhas. O s
 
 * Controlar quantas linhas são inseridas ao controlar quantas vezes o loop é executado.
 * Fornecer o valor inserido na coluna de números inteiros.
-* Funcionar como parte da expressão que gera letras a serem inseridas na coluna de caracteres.
-```
+* Funcionar como parte da expressão que gera letras a serem inseridas na coluna de caracteres.  
+
+```sql
 -- Create the table.
 CREATE TABLE TestTable (cola int, colb char(3));
 GO
@@ -87,19 +88,19 @@ A instrução DECLARE inicializa uma variável Transact-SQL por:
 * Atribuição de um tipo de dados fornecido por sistema ou definido pelo usuário e um comprimento. Para variáveis numéricas, precisão e escala também são atribuídas. Para variáveis do tipo XML, uma coleção de esquema opcional pode ser atribuída.
 * Definição do valor como NULL.
 
-Por exemplo, a seguinte **DECLARE** instrução cria uma variável local chamada  **@mycounter**  com um tipo de dados int.
-```
+Por exemplo, a seguinte **DECLARE** instrução cria uma variável local chamada  **@mycounter**  com um tipo de dados int.  
+```sql
 DECLARE @MyCounter int;
 ```
 Para declarar mais de uma variável local, use uma vírgula depois da primeira variável local definida, e especifique o próximo nome de variável local e o tipo de dados.
 
-Por exemplo, a seguinte **DECLARE** instrução cria três variáveis locais denominadas  **@LastName** ,  **@FirstName**  e  **@StateProvince** e inicializa cada uma como NULL:
-```
+Por exemplo, a seguinte **DECLARE** instrução cria três variáveis locais denominadas  **@LastName** ,  **@FirstName**  e  **@StateProvince** e inicializa cada uma como NULL:  
+```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
 
-O escopo de uma variável é as instruções de intervalo de Transact-SQL que podem fazer referência à variável. O escopo de uma variável dura do ponto em que é declarada até o término do lote ou procedimento armazenado no qual ela é declarada. Por exemplo, o seguinte script gera um erro de sintaxe porque a variável é declarada em um lote e referenciada em outro:
-```
+O escopo de uma variável é as instruções de intervalo de Transact-SQL que podem fazer referência à variável. O escopo de uma variável dura do ponto em que é declarada até o término do lote ou procedimento armazenado no qual ela é declarada. Por exemplo, o seguinte script gera um erro de sintaxe porque a variável é declarada em um lote e referenciada em outro:  
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @MyVariable int;
@@ -115,9 +116,9 @@ FROM HumanResources.Employee
 WHERE BusinessEntityID = @MyVariable;
 ```
 
-As variáveis têm escopo local e são apenas visíveis dentro do lote ou procedimento, onde elas estão definidas. No exemplo a seguir, o escopo aninhado criado para execução de sp_executesql não tem acesso à variável declarada no escopo mais alto e retorna um erro.
+As variáveis têm escopo local e são apenas visíveis dentro do lote ou procedimento, onde elas estão definidas. No exemplo a seguir, o escopo aninhado criado para execução de sp_executesql não tem acesso à variável declarada no escopo mais alto e retorna um erro.  
 
-```
+```sql
 DECLARE @MyVariable int;
 SET @MyVariable = 1;
 EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
@@ -127,9 +128,9 @@ EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
 
 Quando uma variável é primeiramente declarada, seu valor é definido como NULL. Para atribuir um valor à uma variável, use a instrução SET. Este é o método preferido de atribuir um valor a uma variável. Uma variável também pode ter um valor atribuído sendo referenciado na lista selecionada de uma instrução SELECT.
 
-Para atribuir um valor a uma variável usando a instrução SET, inclua o nome da variável e o valor a ser atribuído à variável. Este é o método preferido de atribuir um valor a uma variável. O seguinte lote, por exemplo, declara duas variáveis, atribui valores a elas e usa-as na cláusula `WHERE` de uma instrução `SELECT`:
+Para atribuir um valor a uma variável usando a instrução SET, inclua o nome da variável e o valor a ser atribuído à variável. Este é o método preferido de atribuir um valor a uma variável. O seguinte lote, por exemplo, declara duas variáveis, atribui valores a elas e usa-as na cláusula `WHERE` de uma instrução `SELECT`:  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 -- Declare two variables.
@@ -148,9 +149,9 @@ WHERE FirstName = @FirstNameVariable
 GO
 ```
 
-Uma variável também pode ter um valor atribuído ao ser referenciada na lista selecionada. Se uma variável for referenciada em uma lista selecionada, deve ser atribuído um valor escalar ou a instrução SELECT deve retornar só uma linha. Por exemplo:
+Uma variável também pode ter um valor atribuído ao ser referenciada na lista selecionada. Se uma variável for referenciada em uma lista selecionada, deve ser atribuído um valor escalar ou a instrução SELECT deve retornar só uma linha. Por exemplo:  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @EmpIDVariable int;
@@ -163,9 +164,9 @@ GO
 > [!WARNING]
 > Se houver várias cláusulas de atribuições em uma única instrução SELECT, o SQL Server não garante a ordem de avaliação das expressões. Observe que os efeitos são visíveis apenas se houver referências entre as atribuições.
 
-Se uma instrução SELECT retorna mais de uma linha e a variável referenciar uma expressão não escalar, a variável é definida como o valor retornado para a expressão na última linha do conjunto de resultados. Por exemplo, no lote a seguir  **@EmpIDVariable**  é definido como o **BusinessEntityID** valor da última linha retornada, que é 1:
+Se uma instrução SELECT retorna mais de uma linha e a variável referenciar uma expressão não escalar, a variável é definida como o valor retornado para a expressão na última linha do conjunto de resultados. Por exemplo, no lote a seguir  **@EmpIDVariable**  é definido como o **BusinessEntityID** valor da última linha retornada, que é 1:  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @EmpIDVariable int;
@@ -186,3 +187,4 @@ GO
  [SELECIONE@local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
   
   
+
