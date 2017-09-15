@@ -1,0 +1,65 @@
+---
+title: Exemplo de tipo de dados SQLXML | Microsoft Docs
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
+caps.latest.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: b265d7f16eba8af7ceefd9abea738b0069162f8f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="sqlxml-data-type-sample"></a>Exemplo de tipo de dados SQLXML
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
+  Isso [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] aplicativo de exemplo demonstra como armazenar dados XML em um banco de dados relacional, como recuperar dados XML de um banco de dados e como analisar dados XML com o **SQLXML** tipo de dados Java.  
+  
+ Os exemplos de código nesta seção usam um analisador SAX (API Simples para XML). O SAX é um padrão publicamente desenvolvido para a análise de documentos XML baseada em eventos. Ele também fornece uma interface de programação de aplicativos para trabalhar com dados XML. Observe que os aplicativos também podem usar qualquer outro analisador de XML, como, por exemplo, o Modelo de Objeto de Documento (DOM) ou a StAX (API de Fluxo para XML), ou assim por diante.  
+  
+ O Modelo de Objeto de Documento (DOM) fornece uma representação programática de documentos XML, fragmentos, nós ou conjuntos de nó. Ele também fornece uma interface de programação de aplicativos para trabalhar com dados XML. Da mesma forma, a StAX (API de Fluxo para XML) é uma API baseada em Java para análise de recepção de XML.  
+  
+> [!IMPORTANT]  
+>  Para usar a API do analisador de SAX, você deve importar a implementação de SAX padrão do pacote javax.xml.  
+  
+ O arquivo de código deste exemplo chama-se sqlxmlExample.java e pode ser encontrado neste local:  
+  
+ \<*diretório de instalação*> \sqljdbc_\<*versão*>\\<*idioma*> \samples\datatypes  
+  
+## <a name="requirements"></a>Requisitos  
+ Para executar este aplicativo de exemplo, é necessário definir o classpath para incluir o arquivo sqljdbc4.jar. Se no classpath faltar uma entrada para sqljdbc4.jar, o aplicativo de exemplo lançará a exceção "Classe não encontrada". Para obter mais informações sobre como definir o classpath, consulte [usando o Driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
+  
+ Além disso, você precisa acessar o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] banco de dados de exemplo para executar este aplicativo de exemplo.  
+  
+## <a name="example"></a>Exemplo  
+ No exemplo a seguir, o código de exemplo faz uma conexão para o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] de banco de dados e, em seguida, invoca o método createSampleTables.  
+  
+ O método createSampleTables descarta as tabelas de teste, TestTable1 e TestTable2, se elas existirem. Então, ele insere duas linhas em TestTable1.  
+  
+ Além disso, o exemplo de código inclui os três métodos a seguir e uma classe adicional que é denominada ExampleContentHandler.  
+  
+ A classe ExampleContentHandler implementa um manipulador de conteúdo personalizado, que define métodos para eventos de analisador.  
+  
+ O método showGetters demonstra como analisar os dados no objeto SQLXML usando SAX, ContentHandler e XMLReader. Primeiro, o exemplo de código cria uma instância de um manipulador de conteúdo personalizado, que é ExampleContentHandler. Em seguida, ele cria e executa uma instrução SQL que retorna um conjunto de dados de TestTable1. Então, o exemplo de código obtém um analisador de SAX e analisa os dados XML.  
+  
+ O método showSetters demonstra como definir a **xml** coluna usando SAX, ContentHandler e ResultSet. Primeiro, ele cria um objeto SQLXML vazio usando o [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) método da classe Conexão. Então, ele obtém uma instância de um manipulador de conteúdo para gravar os dados no objeto SQLXML. Em seguida, o exemplo de código grava os dados em TestTable1. Finalmente, o código de exemplo itera pelas linhas de dados que estão contidas no conjunto de resultados e usa o [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) método para ler os dados XML.  
+  
+ O método showTransformer demonstra como obter dados XML de uma tabela e inserir esses dados XML em outra tabela usando SAX e Transformer. Primeiro, ele recupera o objeto SQLXML de origem do TestTable1. Em seguida, ele cria um objeto SQLXML de destino vazio usando o [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) método da classe Conexão. Em seguida, ele atualiza o objeto SQLXML de destino e grava os dados XML em TestTable2. Finalmente, o código de exemplo itera pelas linhas de dados que estão contidas no conjunto de resultados e usa o [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) método para ler os dados XML em TestTable2.  
+  
+ [!code[JDBC#UsingSQLXML1](../../connect/jdbc/codesnippet/Java/sqlxml-data-type-sample_1.java)]  
+  
+## <a name="see-also"></a>Consulte também  
+ [Trabalhando com tipos de dados &#40; JDBC &#41;](../../connect/jdbc/working-with-data-types-jdbc.md)  
+  
+  
