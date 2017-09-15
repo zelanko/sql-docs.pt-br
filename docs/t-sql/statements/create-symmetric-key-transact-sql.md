@@ -1,7 +1,7 @@
 ---
 title: "CRIAR a chave SIMÉTRICA (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/11/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fb573578b51b2e6bf4c5cbedf7ef5bc509523903
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: d3b1490b1ac07d0e6a3f0fc3ed1515dd0872d545
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
@@ -97,26 +97,28 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
- CREATION_DISPOSITION  **=**  CREATE_NEW  
+ CREATION_DISPOSITION ** = ** CREATE_NEW  
  Cria uma chave nova no dispositivo de Gerenciamento Extensível de Chaves.  Se já existir uma chave no dispositivo, a instrução falhará com erro.  
   
- CREATION_DISPOSITION  **=**  OPEN_EXISTING  
+ CREATION_DISPOSITION ** = ** OPEN_EXISTING  
  Mapeia uma chave simétrica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma chave de gerenciamento extensível de chaves existente. Se CREATION_DISPOSITION = OPEN_EXISTING não for fornecido, isso será padronizado como CREATE_NEW.  
   
  *certificate_name*  
  Especifica o nome do certificado que será usado para criptografar a chave simétrica. O certificado já deve existir no banco de dados.  
   
  **'** *senha* **'**  
- Especifica uma senha da qual derivar uma chave TRIPLE_DES para proteger a chave simétrica. *senha* devem atender aos requisitos da política de senha do Windows do computador que está executando a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você sempre deve usar senhas fortes.  
+ Especifica uma senha da qual derivar uma chave TRIPLE_DES para proteger a chave simétrica. *senha* devem atender aos requisitos da política de senha do Windows do computador que está executando a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sempre use senhas fortes.  
   
  *symmetric_key_name*  
- Especifica uma chave simétrica a ser usada para criptografar a chave sendo criada. A chave especificada já deve existir no banco de dados e deve estar aberta.  
+ Especifica uma chave simétrica usada para criptografar a chave que está sendo criada. A chave especificada já deve existir no banco de dados e deve estar aberta.  
   
  *asym_key_name*  
- Especifica uma chave assimétrica a ser usada para criptografar a chave que está sendo criada. Essa chave assimétrica já deve existir no banco de dados.  
+ Especifica uma chave assimétrica usada para criptografar a chave que está sendo criada. Essa chave assimétrica já deve existir no banco de dados.  
   
  \<algoritmo >  
- A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], todos os algoritmos, exceto AES_128, AES_192 e AES_256, foram preteridos. Para usar algoritmos mais antigos (não recomendado) você deve definir o nível de compatibilidade do banco de dados para 120 ou inferior.  
+Especifique o algoritmo de criptografia.   
+> [!WARNING]  
+> A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], todos os algoritmos, exceto AES_128, AES_192 e AES_256, foram preteridos. Para usar algoritmos mais antigos (não recomendados), você deve definir o nível de compatibilidade do banco de dados no banco de dados 120 ou inferior.  
   
 ## <a name="remarks"></a>Comentários  
  Quando uma chave simétrica é criada, a chave simétrica deve ser criptografada usando pelo menos um dos seguintes: senha, certificado, chave simétrica, chave assimétrica ou provedor. A chave pode ter mais de uma criptografia de cada tipo. Em outras palavras, uma única chave simétrica pode ser criptografada com o uso de vários certificados, senhas, chaves simétricas e chaves assimétricas ao mesmo tempo.  
@@ -128,7 +130,7 @@ CREATE SYMMETRIC KEY key_name
   
  Chaves temporárias são de propriedade do usuário que as cria. Elas só são válidas para a sessão atual.  
   
- IDENTITY_VALUE gera um GUID com o qual os dados criptografados com a nova chave simétrica devem ser marcados. Essa marcação pode ser usada para corresponder chaves a dados criptografados. O GUID gerado por uma frase específica sempre será o mesmo. Após uma frase ter sido usada para gerar um GUID, ela não poderá ser reutilizada, a menos que haja pelo menos uma sessão usando ativamente a frase. IDENTITY_VALUE é uma cláusula opcional; entretanto, recomendamos usá-la ao armazenar dados criptografados com uma chave temporária.  
+ IDENTITY_VALUE gera um GUID com o qual os dados criptografados com a nova chave simétrica devem ser marcados. Essa marcação pode ser usada para corresponder chaves a dados criptografados. O GUID gerado por uma frase específica é sempre o mesmo. Após uma frase ter sido usada para gerar um GUID, ela não poderá ser reutilizada, a menos que haja pelo menos uma sessão usando ativamente a frase. IDENTITY_VALUE é uma cláusula opcional; entretanto, recomendamos usá-la ao armazenar dados criptografados com uma chave temporária.  
   
  Não há nenhum algoritmo de criptografia padrão.  
   
@@ -142,14 +144,12 @@ CREATE SYMMETRIC KEY key_name
  **Esclarecimento em relação aos algoritmos DES:**  
   
 -   O DESX foi nomeado incorretamente. As chaves simétricas criadas com ALGORITHM = DESX na verdade usam a cifra TRIPLE DES com uma chave de 192 bits. O algoritmo DESX não é fornecido. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-  
 -   As chaves simétricas criadas com ALGORITHM = TRIPLE_DES_3KEY usam TRIPLE DES com uma chave de 192 bits.  
-  
 -   As chaves simétricas criadas com ALGORITHM = TRIPLE_DES usam TRIPLE DES com uma chave de 128 bits.  
   
  **Substituição do algoritmo RC4:**  
   
- O uso repetido do mesmo RC4 ou RC4_128 KEY_GUID em blocos de dados diferentes resulta na mesma chave RC4 porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece um salt automaticamente. O uso da mesma chave RC4 repetidamente é um erro bem conhecido que resulta em criptografia muito fraca. Portanto preterimos as palavras-chave RC4 e RC4_128. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+ Uso repetido do mesmo RC4 ou RC4_128 KEY_GUID em blocos de dados diferentes resulta na mesma chave RC4 porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece um salt automaticamente. O uso da mesma chave RC4 repetidamente é um erro bem conhecido que resulta em criptografia muito fraca. Portanto preterimos as palavras-chave RC4 e RC4_128. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
 >  O algoritmo RC4 tem suporte somente para compatibilidade com versões anteriores. O novo material só pode ser criptografado por meio do algoritmo RC4 ou RC4_128 quando o banco de dados está no nível de compatibilidade 90 ou 100. (Não recomendável.) Use um algoritmo mais recente; por exemplo, um dos algoritmos AES. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o material criptografado por meio do algoritmo RC4 ou RC4_128 pode ser descriptografado em qualquer nível de compatibilidade.  

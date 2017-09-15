@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 09/05/2017
+ms.date: 09/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -50,10 +50,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: ac638619fc3117551c774ecc26a43cae72826d39
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: 3654be2e02163cd8069a95eb5e82d4649cec1ab5
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
@@ -179,18 +179,19 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 > [!NOTE]  
 >  Após um backup de log típico, alguns registros do log de transações se tornam inativos, a menos que você especifique WITH NO_TRUNCATE ou COPY_ONLY. O log é truncado depois que todos os registros contidos em um ou mais arquivos de log virtual se tornam ativos. Se o log não estiver sendo truncado após backups de log de rotina, algo pode estar atrasando o truncamento do log. Para obter mais informações, consulte:  
   
- { *database_name*| **@**database_name_var *}  
- É o banco de dados do qual é feito o backup do log de transações, do banco de dados parcial ou do banco de dados completo. Se fornecido como uma variável (**@***database_name_var*), esse nome pode ser especificado como uma constante de cadeia de caracteres ( **@**   *database_name_var***=***nome do banco de dados*) ou como uma variável do tipo de dados de cadeia de caracteres, exceto para o **ntext** ou **texto** tipos de dados.  
+ { *database_name* | **@**database_name_var *}   
+ É o banco de dados do qual é feito o backup do log de transações, do banco de dados parcial ou do banco de dados completo. Se fornecido como uma variável (**@***database_name_var*), esse nome pode ser especificado como uma constante de cadeia de caracteres (** @ ** * database_name_var***=***nome do banco de dados*) ou como uma variável do tipo de dados de cadeia de caracteres, exceto para o **ntext** ou **texto** tipos de dados.  
   
 > [!NOTE]  
 >  O backup do banco de dados espelho em uma parceria de espelhamento de banco de dados não pode ser feito.  
   
-\<file_or_filegroup > [ **,**...  *n*  ] Usado apenas com BACKUP DATABASE, especifica um arquivo de banco de dados ou grupo de arquivos para incluir em um backup de arquivo ou especifica um arquivo somente leitura ou um grupo de arquivos para incluir em um backup parcial.  
+\<file_or_filegroup > [ **,**... *n* ]  
+ Usado apenas com BACKUP DATABASE, especifica um arquivo ou grupo de arquivos do banco de dados a ser incluído em um backup de arquivo, ou especifica um arquivo ou grupo de arquivos somente leitura a ser incluído em um backup parcial.  
   
- ARQUIVO  **=**  { *logical_file_name*| **@***logical_file_name_var* }  
+ ARQUIVO ** = ** { *logical_file_name*| **@***logical_file_name_var* }  
  É o nome lógico de um arquivo ou variável cujo valor é igual ao nome lógico de um arquivo que deve ser incluído no backup.  
   
- Grupo de arquivos  **=**  { *logical_filegroup_name*| **@***logical_filegroup_name_var* }  
+ Grupo de arquivos ** = ** { *logical_filegroup_name*| **@***logical_filegroup_name_var* }  
  É o nome lógico de um grupo de arquivos ou variável cujo valor é igual ao nome lógico de um grupo de arquivos que deve ser incluído no backup. No modelo de recuperação simples, um backup de grupo de arquivos é permitido apenas para grupos de arquivos somente leitura.  
   
 > [!NOTE]  
@@ -218,14 +219,14 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
  Para obter mais informações sobre backups parciais, consulte [Backups parciais &#40; SQL Server &#41; ](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
-PARA \<backup_device > [ **,**...  *n*  ] Indica que o conjunto de acompanhamento de [dispositivos de backup](../../relational-databases/backup-restore/backup-devices-sql-server.md) é um conjunto de mídias não espelhado ou o primeiro dos espelhos dentro de um conjunto (por que um ou mais MIRROR TO de mídias espelhado as cláusulas são declaradas).  
+PARA \<backup_device > [ **,**... * n * ] Indica que o conjunto de acompanhamento de [dispositivos de backup](../../relational-databases/backup-restore/backup-devices-sql-server.md) é um conjunto de mídias não espelhado ou o primeiro dos espelhos dentro de um conjunto (por que um ou mais MIRROR TO de mídias espelhado as cláusulas são declaradas).  
   
 \<backup_device > especifica um dispositivo de backup lógico ou físico a ser usado para a operação de backup.  
   
  { *logical_device_name* | **@***logical_device_name_var* }  
- É o nome lógico do dispositivo de backup no qual o backup do banco de dados é feito. O nome lógico deve seguir as regras para identificadores. Se fornecido como uma variável (@*logical_device_name_var*), o nome de dispositivo de backup pode ser especificado como uma constante de cadeia de caracteres (@*logical_device_name_var*  **=**  nome de dispositivo de backup lógico) ou como uma variável de qualquer tipo de dados de cadeia de caracteres do caractere exceto para o **ntext** ou **texto** tipos de dados.  
+ É o nome lógico do dispositivo de backup no qual o backup do banco de dados é feito. O nome lógico deve seguir as regras para identificadores. Se fornecido como uma variável (@*logical_device_name_var*), o nome de dispositivo de backup pode ser especificado como uma constante de cadeia de caracteres (@*logical_device_name_var* ** = ** nome de dispositivo de backup lógico) ou como uma variável de qualquer tipo de dados de cadeia de caracteres do caractere exceto para o **ntext** ou **texto** tipos de dados.  
   
- {DISK | FITA | URL}  **=**  { **'***physical_device_name***'**  |   **@**  *physical_device_name_var* }  
+ {DISK | FITA | URL} ** = ** { **'***physical_device_name***'**  |  ** @ ** *physical_device_name_var* }  
  Especifica um arquivo de disco ou dispositivo de fita, ou um serviço de armazenamento de Blob do Windows Azure. O formato de URL é usado para a criação de backups para o serviço de armazenamento do Windows Azure. Para obter mais informações e exemplos, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para obter um tutorial, consulte [Tutorial: SQL Server Backup e restauração para o serviço de armazenamento de Blob do Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
 > [!IMPORTANT]  
@@ -243,7 +244,7 @@ PARA \<backup_device > [ **,**...  *n*  ] Indica que o conjunto de acompanhament
  *n*  
  É um espaço reservado que indica que até 64 dispositivos de backup podem ser especificados em uma lista separada por vírgulas.  
   
-MIRROR TO \<backup_device > [ **,**...  *n*  ] Especifica um conjunto de até três dispositivos de backup secundários, cada um dos quais espelhos dispositivos backups especificados na cláusula TO. A cláusula MIRROR TO deve especificar o mesmo tipo e número de dispositivos de backup que a cláusula TO. O número máximo de cláusulas MIRROR TO é três.  
+MIRROR TO \<backup_device > [ **,**... * n * ] Especifica um conjunto de até três dispositivos de backup secundários, cada um dos quais espelhos dispositivos backups especificados na cláusula TO. A cláusula MIRROR TO deve especificar o mesmo tipo e número de dispositivos de backup que a cláusula TO. O número máximo de cláusulas MIRROR TO é três.  
   
  Essa opção está disponível somente na edição Enterprise do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -303,12 +304,12 @@ MIRROR TO \<backup_device > [ **,**...  *n*  ] Especifica um conjunto de até tr
     > [!WARNING]  
     >  Quando a criptografia é usada em conjunto com o argumento FILE_SNAPSHOT, o arquivo de metadados é criptografado usando o algoritmo de criptografia especificado e o sistema verifica se a TDE foi concluída para o banco de dados. Nenhuma criptografia adicional ocorre para os dados em si. O backup falhará se o banco de dados não foi criptografado ou se a criptografia não foi concluída antes da instrução backup foi emitida.  
   
- **Opções de conjunto de backup**  
+**Opções de conjunto de backup**  
   
- Essas opções funcionam no conjunto de backup criado por esta operação de backup.  
+Essas opções funcionam no conjunto de backup criado por esta operação de backup.  
   
 > [!NOTE]  
->  Para especificar um conjunto de backup para uma operação de restauração, use o arquivo  **=**   *\<backup_set_file_number >* opção. Para obter mais informações sobre como especificar um conjunto de backup, consulte "Especificando um conjunto de Backup" no [argumentos RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
+>  Para especificar um conjunto de backup para uma operação de restauração, use o arquivo ** = ** * \<backup_set_file_number >* opção. Para obter mais informações sobre como especificar um conjunto de backup, consulte "Especificando um conjunto de Backup" no [argumentos RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
   
  COPY_ONLY  
  Especifica se o backup é um *backup somente cópia*, que não afeta a sequência normal de backups. Um backup somente cópia é criado independentemente de seus backups convencionais agendados regularmente. Um backup somente cópia não afeta o backup global e restaura procedimentos do banco de dados.  
@@ -322,250 +323,240 @@ MIRROR TO \<backup_device > [ **,**...  *n*  ] Especifica um conjunto de até tr
   
 -   Quando usado com o LOG de BACKUP, a opção COPY_ONLY cria um *backup de log somente cópia*, que não trunca o log de transações. O backup de log somente cópia não tem nenhum efeito na cadeia de logs e outros backups de log se comportam como se o backup somente cópia não existisse.  
   
- Para obter mais informações, veja [Backups somente cópia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
+Para obter mais informações, veja [Backups somente cópia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   
- { COMPRESSION | NO_COMPRESSION }  
- Em [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versões posteriores somente, especifica se [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md) é executada neste backup, substituindo o padrão de nível de servidor.  
+{ COMPRESSION | NO_COMPRESSION }  
+Em [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versões posteriores somente, especifica se [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md) é executada neste backup, substituindo o padrão de nível de servidor.  
   
- Na instalação, o comportamento padrão é sem compactação de backup. Mas esse padrão pode ser alterado definindo a [padrão de compactação de backup](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) opção de configuração do servidor. Para obter informações sobre como exibir o valor atual dessa opção, consulte [exibir ou alterar propriedades do servidor &#40; SQL Server &#41; ](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).  
+Na instalação, o comportamento padrão é sem compactação de backup. Mas esse padrão pode ser alterado definindo a [padrão de compactação de backup](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) opção de configuração do servidor. Para obter informações sobre como exibir o valor atual dessa opção, consulte [exibir ou alterar propriedades do servidor &#40; SQL Server &#41; ](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).  
   
- COMPRESSION  
- Habilita explicitamente a compactação de backup.  
+COMPRESSION  
+Habilita explicitamente a compactação de backup.  
   
- NO_COMPRESSION  
- Desabilita explicitamente a compactação de backup.  
+NO_COMPRESSION  
+Desabilita explicitamente a compactação de backup.  
   
- DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
- Especifica o texto de forma livre que descreve o conjunto de backup. A cadeia de caracteres pode conter um máximo de 255 caracteres.  
+DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+Especifica o texto de forma livre que descreve o conjunto de backup. A cadeia de caracteres pode conter um máximo de 255 caracteres.  
   
- NOME  **=**  { *backup_set_name*| **@***backup_set_var* }  
- Especifica o nome do conjunto de backup. Os nomes podem ter no máximo de 128 caracteres. Se NAME não estiver especificado, ele estará em branco.  
+NOME ** = ** { *backup_set_name*| **@***backup_set_var* }  
+Especifica o nome do conjunto de backup. Os nomes podem ter no máximo de 128 caracteres. Se NAME não estiver especificado, ele estará em branco.  
   
- {EXPIREDATE **='***data***'**| RETAINDAYS  **=**  *dias* }  
- Especifica quando o conjunto de backup desse backup pode ser substituído. Se essas duas opções forem usadas, RETAINDAYS terá precedência sobre EXPIREDATE.  
+{EXPIREDATE **='***data***'**| RETAINDAYS ** = ** *dias* }  
+Especifica quando o conjunto de backup desse backup pode ser substituído. Se essas duas opções forem usadas, RETAINDAYS terá precedência sobre EXPIREDATE.  
   
- Se nenhuma opção for especificada, a data de validade é determinada pelo **mediaretention** configuração. Para obter mais informações, consulte [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+Se nenhuma opção for especificada, a data de validade é determinada pelo **mediaretention** configuração. Para obter mais informações, consulte [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!IMPORTANT]  
 >  Essas opções apenas impedem que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] substitua um arquivo. Fitas podem ser apagadas por outros métodos e os arquivos de disco podem ser excluídos pelo sistema operacional. Para obter mais informações sobre verificação de validade, consulte SKIP e FORMAT neste tópico.  
   
- EXPIREDATE  **=**  { **'***data***'** |   **@**  *date_var* }  
+EXPIREDATE ** = ** { **'***data***'** |  ** @ ** *date_var* }  
  Especifica quando o conjunto de backup vence e pode ser substituído. Se fornecido como uma variável (@*date_var*), essa data deve seguir o sistema configurado **datetime** Formatar e ser especificado como um dos seguintes:  
   
--   Uma constante de cadeia de caracteres (@*date_var*  **=**  data)  
-  
+-   Uma constante de cadeia de caracteres (@*date_var* ** = ** data)  
 -   Uma variável de tipo de dados de cadeia de caracteres (exceto para o **ntext** ou **texto** tipos de dados)  
-  
 -   Um **smalldatetime**  
-  
 -   Um **datetime** variável  
   
- Por exemplo:  
+Por exemplo:  
   
 -   `'Dec 31, 2020 11:59 PM'`  
-  
 -   `'1/1/2021'`  
   
- Para obter informações sobre como especificar **datetime** valores, consulte [tipos de data e hora](../../t-sql/data-types/date-and-time-types.md).  
+Para obter informações sobre como especificar **datetime** valores, consulte [tipos de data e hora](../../t-sql/data-types/date-and-time-types.md).  
   
 > [!NOTE]  
 >  Para ignorar a data de validade, use a opção SKIP.  
   
- RETAINDAYS  **=**  { *dias*| **@***days_var* }  
+RETAINDAYS ** = ** { *dias*| **@***days_var* }  
  Especifica o número de dias que devem decorrer para que este conjunto de mídias de backup possa ser substituído. Se fornecido como uma variável (**@***days_var*), ele deve ser especificado como um inteiro.  
   
- **Opções do conjunto de mídias**  
+**Opções do conjunto de mídias**  
   
- Essas opções funcionam no conjunto de mídias como um todo.  
+Essas opções funcionam no conjunto de mídias como um todo.  
   
- { **NOINIT** | INIT}  
+{ **NOINIT** | INIT}  
  Controla se a operação de backup anexa ou substitui os conjuntos de backup existentes na mídia de backup. O padrão é anexar ao backup mais recente definido na mídia (NOINIT).  
   
 > [!NOTE]  
 >  Para obter informações sobre as interações entre { **NOINIT** | INIT} e { **NOSKIP** | SKIP}, consulte "Comentários" mais adiante neste tópico.  
   
- NOINIT  
+NOINIT  
  Indica que o conjunto de backup é anexado ao conjunto de mídias especificado, preservando conjuntos de backup existentes. Se uma senha de mídia estiver definida para o conjunto de mídias, a senha deverá ser fornecida. NOINIT é o padrão.  
   
- Para obter mais informações, veja [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
+Para obter mais informações, veja [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
- INIT  
+INIT  
  Especifica que todos os conjuntos de backup devem ser substituídos, mas preserva o cabeçalho de mídia. Se INIT estiver especificado, qualquer conjunto de backup existente naquele dispositivo será substituído, se as condições permitirem. Por padrão, BACKUP verificará as seguintes condições e não substituirá a mídia de backup se qualquer uma delas existir:  
   
 -   Um conjunto de backup ainda não expirou. Para obter mais informações, consulte as opções EXPIREDATE e RETAINDAYS.  
-  
 -   O nome do conjunto de backup fornecido na instrução BACKUP, se fornecido, não corresponde ao nome na mídia de backup. Para obter mais informações, consulte a opção NAME, anteriormente nesta seção.  
   
- Para substituir essas verificações, use a opção SKIP.  
+Para substituir essas verificações, use a opção SKIP.  
   
- Para obter mais informações, veja [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
+Para obter mais informações, veja [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
- { **NOSKIP** | IGNORAR}  
- Controla se a operação de backup verifica a data e a hora de validade dos conjuntos de backup existentes na mídia antes de substituí-los.  
+{ **NOSKIP** | IGNORAR}  
+Controla se a operação de backup verifica a data e a hora de validade dos conjuntos de backup existentes na mídia antes de substituí-los.  
   
 > [!NOTE]  
 >  Para obter informações sobre as interações entre { **NOINIT** | INIT} e { **NOSKIP** | SKIP}, consulte "Comentários" mais adiante neste tópico.  
   
- NOSKIP  
- Instrui a instrução BACKUP a verificar a data de validade de todos os conjuntos de backup na mídia antes de permitir que eles sejam substituídos. Esse é o comportamento padrão.  
+NOSKIP  
+Instrui a instrução BACKUP a verificar a data de validade de todos os conjuntos de backup na mídia antes de permitir que eles sejam substituídos. Esse é o comportamento padrão.  
   
- SKIP  
- Desabilita a verificação de validade e nome do conjunto de backup que normalmente é executada pela instrução BACKUP para impedir a substituição de conjuntos de backup. Para obter informações sobre as interações entre { INIT | NOINIT } e { NOSKIP | SKIP }, consulte "Comentários", mais adiante neste tópico.  
+SKIP  
+Desabilita a verificação de validade e nome do conjunto de backup que normalmente é executada pela instrução BACKUP para impedir a substituição de conjuntos de backup. Para obter informações sobre as interações entre { INIT | NOINIT } e { NOSKIP | SKIP }, consulte "Comentários", mais adiante neste tópico.  
+Para exibir as datas de expiração dos conjuntos de backup, consulte o **expiration_date** coluna o [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) tabela de histórico.  
   
- Para exibir as datas de expiração dos conjuntos de backup, consulte o **expiration_date** coluna o [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) tabela de histórico.  
+{ **NOFORMAT** | FORMATO}  
+Especifica se o cabeçalho da mídia deve ser gravado nos volumes usados para esta operação de backup, substituindo qualquer cabeçalho de mídia e conjuntos de backup existentes.  
   
- { **NOFORMAT** | FORMATO}  
- Especifica se o cabeçalho da mídia deve ser gravado nos volumes usados para esta operação de backup, substituindo qualquer cabeçalho de mídia e conjuntos de backup existentes.  
+NOFORMAT  
+Especifica que a operação de backup preserva o cabeçalho da mídia e os conjuntos de backup existentes nos volumes de mídia usados para esta operação de backup. Esse é o comportamento padrão.  
   
- NOFORMAT  
- Especifica que a operação de backup preserva o cabeçalho da mídia e os conjuntos de backup existentes nos volumes de mídia usados para esta operação de backup. Esse é o comportamento padrão.  
-  
- FORMAT  
- Especifica que um novo conjunto de mídias deve ser criado. FORMAT faz com que a operação de backup grave um novo cabeçalho de mídia em todos os volumes de mídia usados para a operação de backup. O conteúdo existente do volume se torna inválido, porque qualquer cabeçalho de mídia e conjuntos de backup existentes são substituídos.  
+FORMAT  
+Especifica que um novo conjunto de mídias deve ser criado. FORMAT faz com que a operação de backup grave um novo cabeçalho de mídia em todos os volumes de mídia usados para a operação de backup. O conteúdo existente do volume se torna inválido, porque qualquer cabeçalho de mídia e conjuntos de backup existentes são substituídos.  
   
 > [!IMPORTANT]  
 >  Use FORMAT com cuidado. A formatação de qualquer volume de um conjunto de mídias renderiza todo o conjunto de mídias como inutilizável. Por exemplo, se você iniciar uma única fita pertencente a um conjunto de mídias distribuído existente, todo o conjunto de mídias será renderizado como inútil.  
   
- A especificação de FORMAT implica SKIP. SKIP não precisa ser declarado explicitamente.  
+A especificação de FORMAT implica SKIP. SKIP não precisa ser declarado explicitamente.  
   
- MEDIADESCRIPTION  **=**  { *texto* | **@***text_variable* }  
- Especifica a descrição de texto de forma livre do conjunto de mídias, com um máximo de 255 caracteres.  
+MEDIADESCRIPTION ** = ** { *texto* | **@***text_variable* }  
+Especifica a descrição de texto de forma livre do conjunto de mídias, com um máximo de 255 caracteres.  
   
- MEDIANAME  **=**  { *media_name* | **@***media_name_variable* }  
- Especifica o nome da mídia de todo o conjunto de mídias de backup. O nome da mídia não deve ter mais de 128 caracteres. Se MEDIANAME estiver especificado, ele deverá corresponder ao nome da mídia especificado anteriormente já existente nos volumes de backup. Se não estiver especificado ou se a opção SKIP estiver especificada, não haverá nenhuma verificação do nome da mídia.  
+MEDIANAME ** = ** { *media_name* | **@***media_name_variable* }  
+Especifica o nome da mídia de todo o conjunto de mídias de backup. O nome da mídia não deve ter mais de 128 caracteres. Se MEDIANAME estiver especificado, ele deverá corresponder ao nome da mídia especificado anteriormente já existente nos volumes de backup. Se não estiver especificado ou se a opção SKIP estiver especificada, não haverá nenhuma verificação do nome da mídia.  
   
- Tamanho de bloco  **=**  { *blocksize* | **@***blocksize_variable* }  
- Especifica o tamanho do bloco físico, em bytes. Os tamanhos com suporte são 512, 1024, 2048, 4096, 8192, 16384, 32768 e 65536 (64 KB) bytes. O padrão é 65536 para dispositivos de fita e 512 para outros dispositivos. Normalmente, essa opção é desnecessária porque BACKUP seleciona automaticamente um tamanho de bloco apropriado ao dispositivo. A declaração explícita de um tamanho de bloco substitui a seleção automática de tamanho de bloco.  
+Tamanho de bloco ** = ** { *blocksize* | **@***blocksize_variable* }  
+Especifica o tamanho do bloco físico, em bytes. Os tamanhos com suporte são 512, 1024, 2048, 4096, 8192, 16384, 32768 e 65536 (64 KB) bytes. O padrão é 65536 para dispositivos de fita e 512 para outros dispositivos. Normalmente, essa opção é desnecessária porque BACKUP seleciona automaticamente um tamanho de bloco apropriado ao dispositivo. A declaração explícita de um tamanho de bloco substitui a seleção automática de tamanho de bloco.  
   
- Se estiver fazendo um backup que planeja copiar e restaurar de um CD-ROM, especifique BLOCKSIZE=2048.  
+Se estiver fazendo um backup que planeja copiar e restaurar de um CD-ROM, especifique BLOCKSIZE=2048.  
   
 > [!NOTE]  
 >  Normalmente, essa opção afeta o desempenho apenas durante a gravação em dispositivos de fita.  
   
- **Opções de transferência de dados**  
+**Opções de transferência de dados**  
   
- BUFFERCOUNT  **=**  { *buffercount* | **@***buffercount_variable* }  
- Especifica o número total de buffers de E/S a ser usado para a operação de backup. É possível especificar qualquer inteiro positivo. No entanto, grandes números de buffers podem provocar erros de "memória insuficiente" devido a espaço de endereço virtual inadequado no processo Sqlservr.exe.  
+BUFFERCOUNT ** = ** { *buffercount* | **@***buffercount_variable* }  
+Especifica o número total de buffers de E/S a ser usado para a operação de backup. É possível especificar qualquer inteiro positivo. No entanto, grandes números de buffers podem provocar erros de "memória insuficiente" devido a espaço de endereço virtual inadequado no processo Sqlservr.exe.  
   
- O espaço total usado pelos buffers é determinado por: *buffercount***\****maxtransfersize*.  
+O espaço total usado pelos buffers é determinado por: *buffercount***\****maxtransfersize*.  
   
 > [!NOTE]  
 >  Para obter informações importantes sobre como usar a opção de BUFFERCOUNT, consulte o [opção de transferência de dados incorreto BufferCount pode levar à condição OOM](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
   
- MAXTRANSFERSIZE  **=**  { *maxtransfersize* | **@***maxtransfersize_variable* }  
+MAXTRANSFERSIZE ** = ** { *maxtransfersize* | **@***maxtransfersize_variable* }  
  Especifica a maior unidade de transferência em bytes a ser usada entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a mídia de backup. Os valores possíveis são múltiplos de 65536 bytes (64 KB), estendendo-se até 4194304 bytes (4 MB).  
 > [!NOTE]  
->  Quando o banco de dados tiver configurado o FILESTREAM, ou inclui ou grupos de arquivos OLTP em memória, `MAXTRANSFERSIZE` no momento da restauração deve ser maior ou igual ao que foi usado quando o backup foi criado.  
+>  Durante a criação de backups usando o serviço de gravador do SQL, se o banco de dados tiver configurado o FILESTREAM ou inclui grupos de arquivos OLTP em memória, em seguida, o `MAXTRANSFERSIZE` em tempo de restauração deve ser maior ou igual ao `MAXTRANSFERSIZE` que foi usado quando o backup foi criado. 
   
- **Opções de gerenciamento de erro**  
+**Opções de gerenciamento de erro**  
   
- Essas opções permitem determinar se somas de verificação de backup estão habilitadas para a operação de backup e se a operação para encontrar um erro.  
+Essas opções permitem determinar se somas de verificação de backup estão habilitadas para a operação de backup e se a operação para encontrar um erro.  
   
- { **NO_CHECKSUM** | SOMA DE VERIFICAÇÃO}  
+{ **NO_CHECKSUM** | SOMA DE VERIFICAÇÃO}  
  Controla se somas de verificação de backup estão habilitadas.  
   
- NO_CHECKSUM  
- Desabilita explicitamente a geração de somas de verificação de backup (e a validação de somas de verificação de página). Esse é o comportamento padrão.  
+NO_CHECKSUM  
+Desabilita explicitamente a geração de somas de verificação de backup (e a validação de somas de verificação de página). Esse é o comportamento padrão.  
   
- CHECKSUM  
- Especifica que a operação de backup verifica cada página para soma de verificação e página interrompida, se estiver habilitado e disponível e gera uma soma de verificação para o backup inteiro.  
+CHECKSUM  
+Especifica que a operação de backup verifica cada página para soma de verificação e página interrompida, se estiver habilitado e disponível e gera uma soma de verificação para o backup inteiro.  
   
- O uso de somas de verificação de backup pode afetar uma carga de trabalho e a taxa de transferência do backup.  
+O uso de somas de verificação de backup pode afetar uma carga de trabalho e a taxa de transferência do backup.  
   
- Para obter mais informações, consulte [erros de mídia possíveis durante Backup e restauração &#40; SQL Server &#41; ](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
+Para obter mais informações, consulte [erros de mídia possíveis durante Backup e restauração &#40; SQL Server &#41; ](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
- { **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR}  
- Controla se uma operação de backup para ou continua depois de encontrar um erro de soma de verificação de página.  
+{ **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR}  
+Controla se uma operação de backup para ou continua depois de encontrar um erro de soma de verificação de página.  
   
- STOP_ON_ERROR  
- Instrui BACKUP a falhar se uma soma de verificação de página não estiver correta. Esse é o comportamento padrão.  
+STOP_ON_ERROR  
+Instrui BACKUP a falhar se uma soma de verificação de página não estiver correta. Esse é o comportamento padrão.  
   
- CONTINUE_AFTER_ERROR  
- Instrui BACKUP a continuar apesar de encontrar erros como somas de verificação inválidas ou páginas interrompidas.  
+CONTINUE_AFTER_ERROR  
+Instrui BACKUP a continuar apesar de encontrar erros como somas de verificação inválidas ou páginas interrompidas.  
   
- Se não for possível fazer backup da parte final do log usando o NO_TRUNCATE opção quando o banco de dados está danificado, você pode tentar uma [backup do final do log](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) especificando CONTINUE_AFTER_ERROR em vez de NO_TRUNCATE.  
+Se não for possível fazer backup da parte final do log usando o NO_TRUNCATE opção quando o banco de dados está danificado, você pode tentar uma [backup do final do log](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) especificando CONTINUE_AFTER_ERROR em vez de NO_TRUNCATE.  
   
- Para obter mais informações, consulte [erros de mídia possíveis durante Backup e restauração &#40; SQL Server &#41; ](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
+Para obter mais informações, consulte [erros de mídia possíveis durante Backup e restauração &#40; SQL Server &#41; ](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
- **Opções de compatibilidade**  
+**Opções de compatibilidade**  
   
- RESTART  
- A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], não tem nenhum efeito. Esta opção é aceita pela versão para compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+RESTART  
+A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], não tem nenhum efeito. Esta opção é aceita pela versão para compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Opções de monitoramento**  
+**Opções de monitoramento**  
   
- ESTATÍSTICAS [  **=**  *porcentagem* ]  
+ESTATÍSTICAS [ ** = ** *porcentagem* ]  
  Exibe uma mensagem sempre que outra *porcentagem* for concluída e é usado para medir o progresso. Se *porcentagem* for omitido, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibe uma mensagem após a cada 10 por cento.  
   
- A opção STATS informa a porcentagem concluída de acordo com o limite de relatório do próximo intervalo. Esse limite é aproximadamente a porcentagem especificada. Por exemplo, com STATS=10, se a quantidade concluída for 40%, a opção poderá exibir 43%. Para conjuntos de backup grandes, isso não é um problema, porque a porcentagem concluída muda muito lentamente entre chamadas de E/S concluídas.  
+A opção STATS informa a porcentagem concluída de acordo com o limite de relatório do próximo intervalo. Esse limite é aproximadamente a porcentagem especificada. Por exemplo, com STATS=10, se a quantidade concluída for 40%, a opção poderá exibir 43%. Para conjuntos de backup grandes, isso não é um problema, porque a porcentagem concluída muda muito lentamente entre chamadas de E/S concluídas.  
   
- **Opções de fita**  
+**Opções de fita**  
   
- Essas opções são usadas apenas para dispositivos TAPE. Se um dispositivo que não seja de fita estiver sendo usado, essas opções serão ignoradas.  
+Essas opções são usadas apenas para dispositivos TAPE. Se um dispositivo que não seja de fita estiver sendo usado, essas opções serão ignoradas.  
   
- { **REWIND** | NOREWIND }  
- REWIND  
+{ **REWIND** | NOREWIND }  
+REWIND  
  Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libera e Rebobina a fita. REWIND é o padrão.  
   
- NOREWIND  
- Especifica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém a fita aberta após a operação de backup. É possível usar essa opção para ajudar a melhorar o desempenho ao executar várias operações de backup em uma fita.  
+NOREWIND  
+Especifica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém a fita aberta após a operação de backup. É possível usar essa opção para ajudar a melhorar o desempenho ao executar várias operações de backup em uma fita.  
   
- NOREWIND implica NOUNLOAD e essas opções são incompatíveis dentro de uma única instrução BACKUP.  
+NOREWIND implica NOUNLOAD e essas opções são incompatíveis dentro de uma única instrução BACKUP.  
   
 > [!NOTE]  
 >  Se NOREWIND for usado, a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reterá a propriedade da unidade de fita até que uma instrução BACKUP ou RESTORE em execução no mesmo processo use a opção REWIND ou UNLOAD, ou que a instância do servidor seja encerrada. Manter a fita aberta evita que outros processos a acessem. Para obter informações sobre como exibir uma lista de fitas abertas e fechar uma fita aberta, consulte [dispositivos de Backup &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
- { **UNLOAD** | NOUNLOAD}  
- > [!NOTE]  
+{ **UNLOAD** | NOUNLOAD}  
+> [!NOTE]  
 >  UNLOAD/NOUNLOAD é uma configuração de sessão que persiste durante a vida útil da sessão ou até que ela seja redefinida especificando a alternativa.  
   
- UNLOAD  
+UNLOAD  
  Especifica que a fita é rebobinada e descarregada automaticamente quando o backup for concluído. UNLOAD é o padrão quando uma sessão começa. 
   
- NOUNLOAD  
+NOUNLOAD  
  Especifica que depois da operação de BACKUP a fita permanecerá carregada na unidade de fita.  
   
 > [!NOTE]  
 >  Para um backup em um dispositivo de backup de fita, a opção BLOCKSIZE afeta o desempenho da operação de backup. Normalmente, essa opção afeta o desempenho apenas durante a gravação em dispositivos de fita.  
   
- **Opções específicas de log**  
+**Opções específicas de log**  
   
- Estas opções são usadas apenas com BACKUP LOG.  
+Estas opções são usadas apenas com BACKUP LOG.  
   
 > [!NOTE]  
 >  Se você não quiser fazer backups de log, use o modelo de recuperação simples. Para obter mais informações, veja [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
- {NORECOVERY | Modo de espera  **=**  *undo_file_name* }  
- NORECOVERY  
- Faz backup do final do log e deixa o banco de dados no estado de RESTORING. NORECOVERY é útil ao executar failover em um banco de dados secundário ou ao salvar o final do log antes de uma operação RESTORE.  
+{NORECOVERY | Modo de espera ** = ** *undo_file_name* }  
+  NORECOVERY  
+  Faz backup do final do log e deixa o banco de dados no estado de RESTORING. NORECOVERY é útil ao executar failover em um banco de dados secundário ou ao salvar o final do log antes de uma operação RESTORE.  
   
- Para executar um backup de log de melhor esforço que ignora o truncamento do log e coloca o banco de dados no estado RESTORING atomicamente, use as opções NO_TRUNCATE e NORECOVERY em conjunto.  
+  Para executar um backup de log de melhor esforço que ignora o truncamento do log e coloca o banco de dados no estado RESTORING atomicamente, use as opções NO_TRUNCATE e NORECOVERY em conjunto.  
   
- Modo de espera  **=**  *standby_file_name*  
- Faz BACKUP do final do log e deixa o banco de dados em um estado STANDBY e somente leitura. A cláusula STANDBY grava dados em espera (executando reversão, mas com a opção de restaurações adicionais). O uso da opção STANDBY é equivalente a BACKUP LOG WITH NORECOVERY seguido por um RESTORE WITH STANDBY.  
+  Modo de espera ** = ** *standby_file_name*  
+  Faz BACKUP do final do log e deixa o banco de dados em um estado STANDBY e somente leitura. A cláusula STANDBY grava dados em espera (executando reversão, mas com a opção de restaurações adicionais). O uso da opção STANDBY é equivalente a BACKUP LOG WITH NORECOVERY seguido por um RESTORE WITH STANDBY.  
   
- Usar o modo de espera requer um arquivo em espera, especificado por *standby_file_name*, cujo local é armazenado no log do banco de dados. Se o arquivo especificado já existir, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] o substituirá. Se o arquivo não existir, ele será criado pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)]. O arquivo em espera se torna parte do banco de dados.  
+  Usar o modo de espera requer um arquivo em espera, especificado por *standby_file_name*, cujo local é armazenado no log do banco de dados. Se o arquivo especificado já existir, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] o substituirá. Se o arquivo não existir, ele será criado pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)]. O arquivo em espera se torna parte do banco de dados.  
   
- Esse arquivo contém as alterações revertidas que deverão ser revertidas se operações RESTORE LOG forem aplicadas subseqüentemente. Deve haver espaço em disco suficiente para que o arquivo em espera cresça para que possa conter todas as páginas distintas do banco de dados que foi modificado pela reversão de transações não confirmadas.  
+  Esse arquivo contém as alterações revertidas que deverão ser revertidas se operações RESTORE LOG forem aplicadas subseqüentemente. Deve haver espaço em disco suficiente para que o arquivo em espera cresça para que possa conter todas as páginas distintas do banco de dados que foi modificado pela reversão de transações não confirmadas.  
   
- NO_TRUNCATE  
- Especifica que o não log truncado e faz com que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] ao tentar fazer backup, independentemente do estado do banco de dados. Conseqüentemente, um backup feito com NO_TRUNCATE pode conter metadados incompletos. Essa opção permite fazer backup do log em situações em que o banco de dados está danificado.  
+NO_TRUNCATE  
+Especifica que o não log truncado e faz com que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] ao tentar fazer backup, independentemente do estado do banco de dados. Conseqüentemente, um backup feito com NO_TRUNCATE pode conter metadados incompletos. Essa opção permite fazer backup do log em situações em que o banco de dados está danificado.  
   
- A opção NO_TRUNCATE de BACKUP LOG é equivalente a especificar COPY_ONLY e CONTINUE_AFTER_ERROR.  
+A opção NO_TRUNCATE de BACKUP LOG é equivalente a especificar COPY_ONLY e CONTINUE_AFTER_ERROR.  
   
- Sem a opção NO_TRUNCATE, o banco de dados deve estar no estado ONLINE. Se o banco de dados estiver no estado SUSPENDED, talvez você possa criar um criar um backup especificando NO_TRUNCATE. Mas se o banco de dados estiver no estado OFFLINE ou EMERGENCY, BACKUP não será permitido mesmo com NO_TRUNCATE. Para obter informações sobre os estados de banco de dados, consulte [estados de banco de dados](../../relational-databases/databases/database-states.md).  
+Sem a opção NO_TRUNCATE, o banco de dados deve estar no estado ONLINE. Se o banco de dados estiver no estado SUSPENDED, talvez você possa criar um criar um backup especificando NO_TRUNCATE. Mas se o banco de dados estiver no estado OFFLINE ou EMERGENCY, BACKUP não será permitido mesmo com NO_TRUNCATE. Para obter informações sobre os estados de banco de dados, consulte [estados de banco de dados](../../relational-databases/databases/database-states.md).  
   
 ## <a name="about-working-with-sql-server-backups"></a>Sobre Trabalhando com backups do SQL Server  
  Esta seção introduz os seguintes conceitos de backup essenciais:  
   
  [Tipos de backup](#Backup_Types)  
-  
  [Truncamento do Log de transações](#Tlog_Truncation)  
-  
  [Formatação de mídia de Backup](#Formatting_Media)  
-  
  [Trabalhando com dispositivos de Backup e conjuntos de mídias](#Backup_Devices_and_Media_Sets)  
-  
  [Restauração de Backups do SQL Server](#Restoring_Backups)  
   
 > [!NOTE]  
@@ -580,7 +571,7 @@ MIRROR TO \<backup_device > [ **,**...  *n*  ] Especifica um conjunto de até tr
     |---------------------|------------------|  
     |Banco de dados inteiro|[Backups de banco de dados](../../relational-databases/backup-restore/full-database-backups-sql-server.md) abrangem todo o banco de dados.<br /><br /> Opcionalmente, cada backup de banco de dados pode servir como a base de uma série de um ou mais [backups de banco de dados diferencial](../../relational-databases/backup-restore/differential-backups-sql-server.md).|  
     |Banco de dados parcial|[Backups parciais](../../relational-databases/backup-restore/partial-backups-sql-server.md) cobertura de leitura/gravação de grupos de arquivos e, possivelmente, um ou mais arquivos somente leitura ou grupos de arquivos.<br /><br /> Opcionalmente, cada backup parcial pode servir como a base de uma série de um ou mais [backups diferenciais parciais](../../relational-databases/backup-restore/differential-backups-sql-server.md).|  
-    |Arquivo ou grupo de arquivos|[Backups de arquivo](../../relational-databases/backup-restore/full-file-backups-sql-server.md) abrangem um ou mais arquivos ou grupos de arquivos e são relevantes apenas para bancos de dados que contêm vários grupos de arquivos. No modelo de recuperação simples, os backups de arquivos são essencialmente restritos a grupos de arquivos secundários somente leitura.<br /><br /> Opcionalmente, cada backup de arquivo pode servir como a base de uma série de um ou mais [backups de arquivos diferenciais](../../relational-databases/backup-restore/differential-backups-sql-server.md).|  
+    |Arquivo ou grupo de arquivos|[Backups de arquivo](../../relational-databases/backup-restore/full-file-backups-sql-server.md) abrangem um ou mais arquivos ou grupos de arquivos e são relevantes apenas para bancos de dados que contêm vários grupos de arquivos. No modelo de recuperação simples, os backups de arquivos são essencialmente restritos a grupos de arquivos secundários somente leitura.<br /> Opcionalmente, cada backup de arquivo pode servir como a base de uma série de um ou mais [backups de arquivos diferenciais](../../relational-databases/backup-restore/differential-backups-sql-server.md).|  
   
 -   No modelo de recuperação completa ou modelo de recuperação bulk-logged, backups convencionais também incluem sequencial *backups de log de transação* (ou *backups de log*), que são necessário. Cada backup de log cobre a parte do log de transações que estava ativa quando o backup foi criado e inclui todos os registros de log sem backup em um backup de log anterior.  
   
@@ -603,9 +594,7 @@ MIRROR TO \<backup_device > [ **,**...  *n*  ] Especifica um conjunto de até tr
  A mídia de backup será formatada por uma instrução BACKUP se, e apenas se, qualquer uma das seguintes situações for verdadeira:  
   
 -   A opção FORMAT estiver especificada.  
-  
 -   A mídia estiver vazia.  
-  
 -   A operação estiver gravando uma fita de continuação.  
   
 ###  <a name="Backup_Devices_and_Media_Sets"></a>Trabalhando com dispositivos de Backup e conjuntos de mídias  
@@ -615,7 +604,7 @@ MIRROR TO \<backup_device > [ **,**...  *n*  ] Especifica um conjunto de até tr
   
  O exemplo a seguir grava um backup do banco de dados [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] em um novo conjunto de mídias distribuído que usa três arquivos de disco.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012  
 TO DISK='X:\SQLServerBackups\AdventureWorks1.bak',   
 DISK='Y:\SQLServerBackups\AdventureWorks2.bak',   
@@ -637,7 +626,7 @@ GO
   
  Para um conjunto de mídias espelhado, cada cláusula MIRROR TO deve listar o mesmo número e tipo de dispositivos que a cláusula TO. O exemplo a seguir grava em um conjunto de mídias espelhado que contém dois espelhos e usa três dispositivos por espelho:  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012  
 TO DISK='X:\SQLServerBackups\AdventureWorks1a.bak',   
 DISK='Y:\SQLServerBackups\AdventureWorks2a.bak',   
@@ -678,8 +667,8 @@ GO
   
 ||NOINIT|INIT|  
 |------|------------|----------|  
-|NOSKIP|Se o volume contiver um cabeçalho de mídia válido, verificará o nome da mídia corresponde ao MEDIANAME fornecido, se houver. Se houver correspondência, anexará o conjunto de backup preservando todos os conjuntos de backup existentes.<br /><br /> Se o volume não contiver um cabeçalho de mídia válido, ocorrerá um erro.|Se o volume contiver um cabeçalho de mídia válido, executará as seguintes verificações:<br /><br /> -Se MEDIANAME estiver especificado, verifica se o nome da mídia fornecido corresponde mídia name.* * o cabeçalho de mídia<br /><br /> -Verifica se não há nenhum conjunto de backup vigente na mídia. Se houver, terminará o backup.<br /><br /> Se essas verificações passarem, substituirá qualquer conjunto de backup na mídia preservando apenas o cabeçalho da mídia.<br /><br /> Se o volume não contiver um cabeçalho de mídia válido, gerará um cabeçalho como uso do MEDIANAME e MEDIADESCRIPTION especificados, se houver.|  
-|SKIP|Se o volume contiver um cabeçalho de mídia válido, acrescentará o conjunto de backup, preservando todos os conjuntos de backup existentes.|Se o volume contiver um válido * cabeçalho da mídia, substitui todos os conjuntos de backup na mídia, preservando apenas o cabeçalho de mídia.<br /><br /> Se a mídia estiver vazia, gerará um cabeçalho de mídia como uso de MEDIANAME e MEDIADESCRIPTION fornecidos, se houver.|  
+|NOSKIP|Se o volume contiver um cabeçalho de mídia válido, verificará o nome da mídia corresponde ao MEDIANAME fornecido, se houver. Se houver correspondência, anexará o conjunto de backup preservando todos os conjuntos de backup existentes.<br /> Se o volume não contiver um cabeçalho de mídia válido, ocorrerá um erro.|Se o volume contiver um cabeçalho de mídia válido, executará as seguintes verificações:<br /> -Se MEDIANAME estiver especificado, verifica se o nome da mídia fornecido corresponde mídia name.* * o cabeçalho de mídia<br /> -Verifica se não há nenhum conjunto de backup vigente na mídia. Se houver, terminará o backup.<br /> Se essas verificações passarem, substituirá qualquer conjunto de backup na mídia preservando apenas o cabeçalho da mídia.<br /> Se o volume não contiver um cabeçalho de mídia válido, gerará um cabeçalho como uso do MEDIANAME e MEDIADESCRIPTION especificados, se houver.|  
+|SKIP|Se o volume contiver um cabeçalho de mídia válido, acrescentará o conjunto de backup, preservando todos os conjuntos de backup existentes.|Se o volume contiver um válido * cabeçalho da mídia, substitui todos os conjuntos de backup na mídia, preservando apenas o cabeçalho de mídia.<br /> Se a mídia estiver vazia, gerará um cabeçalho de mídia como uso de MEDIANAME e MEDIADESCRIPTION fornecidos, se houver.|  
   
  * Validade inclui o número de versão MTF e outras informações de cabeçalho. Se a versão especificada não tiver suporte ou for um valor inesperado, ocorrerá um erro.  
   
@@ -711,22 +700,18 @@ GO
   
 -   Operações de redução do banco de dados ou de arquivos. Isso inclui operações de redução automática.  
   
- Se uma operação de backup for sobreposta por uma operação de gerenciamento ou de redução de arquivos, um conflito será gerado. Independentemente de qual operação em conflito começou primeiro, a segunda operação aguardará até que o tempo limite do bloqueio definido pela primeira operação seja esgotado (o período limite é controlado pela configuração de tempo limite de uma sessão). Se o bloqueio for liberado durante o período de tempo limite, a segunda operação continuará. Se o tempo limite do bloqueio for esgotado, a segunda operação falhará.  
+Se uma operação de backup for sobreposta por uma operação de gerenciamento ou de redução de arquivos, um conflito será gerado. Independentemente de qual operação em conflito começou primeiro, a segunda operação aguardará até que o tempo limite do bloqueio definido pela primeira operação seja esgotado (o período limite é controlado pela configuração de tempo limite de uma sessão). Se o bloqueio for liberado durante o período de tempo limite, a segunda operação continuará. Se o tempo limite do bloqueio for esgotado, a segunda operação falhará.  
   
 ## <a name="metadata"></a>Metadados  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui as seguintes tabelas de histórico de backup que controlam as atividades do banco de dados:  
   
 -   [backupfile &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)  
-  
 -   [backupfilegroup &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)  
-  
 -   [backupmediafamily &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)  
-  
 -   [backupmediaset &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)  
-  
 -   [conjunto de backup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)  
   
- Quando uma restauração é executada, se o conjunto de backup não tiver sido registrado no **msdb** banco de dados, o histórico de backup tabelas podem ser modificadas.  
+Quando uma restauração é executada, se o conjunto de backup não tiver sido registrado no **msdb** banco de dados, o histórico de backup tabelas podem ser modificadas.  
   
 ## <a name="security"></a>Segurança  
  Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o **senha** e **MEDIAPASSWORD** opções foram descontinuadas para a criação de backups. Ainda é possível restaurar backups criados com senhas.  
@@ -740,22 +725,14 @@ GO
  Esta seção contém os seguintes exemplos:  
   
 -   A. [Fazendo backup de um banco de dados completo](#backing_up_db)  
-  
 -   B. [Fazendo backup do banco de dados e log](#backing_up_db_and_log)  
-  
 -   C. [Criando um backup de arquivo completo de grupos de arquivos secundários](#full_file_backup)  
-  
 -   D. [Criando um backup de arquivo diferencial dos grupos de arquivos secundários](#differential_file_backup)  
-  
 -   E. [Criando e fazendo backup em um única família de mídias espelhado conjunto](#create_single_family_mirrored_media_set)  
-  
 -   F. [Criando e fazendo backup em um várias famílias de mídias espelhado conjunto](#create_multifamily_mirrored_media_set)  
-  
 -   G [conjunto de mídias espelhado de backup existente](#existing_mirrored_media_set)  
-  
 -   H. [Criando um backup compactado em um novo conjunto de mídia](#creating_compressed_backup_new_media_set)  
-
-- I.  [Fazendo backup para o serviço de armazenamento de BLOBs do Microsoft Azure](#url)
+-   I.  [Fazendo backup para o serviço de armazenamento de BLOBs do Microsoft Azure](#url)  
   
 > [!NOTE]  
 >  Os tópicos de instruções de backup contêm exemplos adicionais. Para obter mais informações, veja [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
@@ -763,7 +740,7 @@ GO
 ###  <a name="backing_up_db"></a> A. Fazendo backup de um banco de dados completo  
  O exemplo a seguir faz backup de [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] banco de dados para um arquivo de disco.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH FORMAT;  
@@ -777,7 +754,7 @@ GO
   
  Em seguida, o exemplo cria um backup de dados completo em `AdvWorksData` e, após um período de atividades de atualização, faz o backup do log em `AdvWorksLog`.  
   
-```tsql  
+```sql  
 -- To permit log backups, before the full database backup, modify the database   
 -- to use the full recovery model.  
 USE master;  
@@ -810,7 +787,7 @@ GO
 ###  <a name="full_file_backup"></a> C. Criando um backup completo de arquivos dos grupos de arquivos secundários  
  O exemplo a seguir cria um backup de arquivo completo de todos os arquivos dos dois grupos de arquivos secundários.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1:  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -822,7 +799,7 @@ GO
 ###  <a name="differential_file_backup"></a> D. Criando um backup diferencial de arquivos dos grupos de arquivos secundários  
  O exemplo a seguir cria um backup diferencial de cada arquivo nos dois grupos de arquivos secundários.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1:  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -836,7 +813,7 @@ GO
 ###  <a name="create_single_family_mirrored_media_set"></a> E. Criando e fazendo backup em um conjunto de mídias espelhado de uma única família  
  O exemplo a seguir cria um conjunto de mídias espelhado que contêm uma única família de mídia e quatro espelhos nos quais faz backup do banco de dados [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)].  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012  
 TO TAPE = '\\.\tape0'  
 MIRROR TO TAPE = '\\.\tape1'  
@@ -850,7 +827,7 @@ WITH
 ###  <a name="create_multifamily_mirrored_media_set"></a> F. Criando e fazendo backup em um conjunto de mídias espelhado de várias famílias  
  O exemplo a seguir cria um conjunto de mídias espelhado no qual cada espelho consiste em duas famílias de mídia. Em seguida, o exemplo faz backup do banco de dados [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] nos dois espelhos.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012  
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'  
 MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'  
@@ -862,7 +839,7 @@ WITH
 ###  <a name="existing_mirrored_media_set"></a>G. Fazendo backup em um conjunto de mídias espelhado existente  
  O exemplo a seguir anexa um conjunto de backup ao conjunto de mídias criado no exemplo anterior.  
   
-```tsql  
+```sql  
 BACKUP LOG AdventureWorks2012  
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'  
 MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'  
@@ -877,7 +854,7 @@ WITH
 ###  <a name="creating_compressed_backup_new_media_set"></a>H. Criando um backup compactado em um novo conjunto de mídias  
  O exemplo a seguir formata a mídia, criando um novo conjunto de mídias e executa um backup completo compactado do banco de dados [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)].  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   
    FORMAT,   
@@ -887,7 +864,7 @@ WITH
 ###  <a name="url"></a>I. Fazer backup do serviço de Armazenamento de Blobs do Microsoft Azure 
 O exemplo executa um backup de banco de dados completo do `Sales` para o serviço de armazenamento de BLOBs do Microsoft Azure.  O nome da Conta de armazenamento é `mystorageaccount`.  O contêiner é chamado `myfirstcontainer`.  Uma política de acesso armazenado foi criada com direitos de leitura, gravação, exclusão e lista.  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credencial, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, foi criado usando uma assinatura de acesso compartilhado que está associado com a política de acesso armazenada.  Para obter informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de backup para o serviço de armazenamento de Blob do Windows Azure, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) e [Backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
-```tsql  
+```sql  
 BACKUP DATABASE Sales
 TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_20160726.bak'
 WITH STATS = 5;

@@ -1,7 +1,7 @@
 ---
 title: "CRIAR o catálogo de texto completo (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -31,10 +31,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 303908a306661c764b9cd258147fcc911d2d3983
+ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
+ms.openlocfilehash: f08bdaeaacb970c839ea1d7bb31c44f454daadf8
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
@@ -120,10 +120,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sys. fulltext_catalogs & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys. fulltext_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
- [REMOVER o catálogo de texto completo & #40; Transact-SQL & #41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
+ [REMOVER o catálogo de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
  [Pesquisa de Texto Completo](../../relational-databases/search/full-text-search.md)   
- [Novo catálogo de texto completo & #40; Página geral & #41;](http://msdn.microsoft.com/library/5ed6f7cd-d9af-4439-9f33-fc935b883d91)  
+ 
   
   
+
