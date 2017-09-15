@@ -1,7 +1,7 @@
 ---
 title: CAST e CONVERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 09/07/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -39,8 +39,8 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 40f0515c07d78963dd10dc8c4ff52e31e096aba8
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: e1ea8183c7655af863fe5f6267958f4c8df367dc
 ms.contentlocale: pt-br
 ms.lasthandoff: 09/08/2017
 
@@ -48,7 +48,19 @@ ms.lasthandoff: 09/08/2017
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Converte uma expressão de um tipo de dados para outro.
+Converte uma expressão de um tipo de dados para outro.  
+Por exemplo, os exemplos a seguir alterar o tipo de dados de entrada, em dois outros tipos de dados, com diferentes níveis de precisão.
+```sql  
+SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
+    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
+    CONVERT(decimal(6,4), 9.5) AS decimal;
+```  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+|Original   |int    |decimal |  
+|----|----|----|  
+|9.5 |9 |9.5000 |  
+
 > [!TIP]
 > Muitos [exemplos](#BKMK_examples) estão na parte inferior deste tópico.  
   
@@ -75,17 +87,13 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 É um inteiro opcional que especifica o comprimento do tipo de dados de destino. O valor padrão é 30.
   
 *estilo*  
-É uma expressão de inteiro que especifica como a função CONVERT converter *expressão*. Se o estilo for NULL, NULL será retornado. O intervalo é determinado pelo *data_type*. Para obter mais informações, consulte a seção Comentários.
+É uma expressão de inteiro que especifica como a função CONVERT converter *expressão*. Se o estilo for NULL, NULL será retornado. O intervalo é determinado pelo *data_type*. 
   
 ## <a name="return-types"></a>Tipos de retorno
 Retorna *expressão* convertido *data_type*.
 
-[Ir para os 15 exemplos no final deste tópico](#BKMK_examples)
-  
-## <a name="remarks"></a>Comentários  
-  
 ## <a name="date-and-time-styles"></a>Estilos de data e hora  
-Quando *expressão* é um tipo de dados de data ou hora, *estilo* pode ser um dos valores mostrados na tabela a seguir. Outros valores são processados como 0. . Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], os únicos estilos que têm suporte para a conversão de data e hora tipos para **datetimeoffset** são 0 ou 1. Todos os outros estilos de conversão retornam erro 9809.
+Quando *expressão* é um tipo de dados de data ou hora, *estilo* pode ser um dos valores mostrados na tabela a seguir. Outros valores são processados como 0. Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], os únicos estilos que têm suporte para a conversão de data e hora tipos para **datetimeoffset** são 0 ou 1. Todos os outros estilos de conversão retornam erro 9809.
   
 >  [!NOTE]  
 >  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem suporte para o formato de data em árabe usando o algoritmo kuwaitiano.
@@ -182,7 +190,7 @@ Conversões implícitas são conversões que ocorrem sem especificar a função 
   
 ![Tabela de conversão de tipo de dados](../../t-sql/data-types/media/lrdatahd.png "tabela de conversão de tipo de dados")
   
-Ao converter entre **datetimeoffset** e os tipos de caracteres **char**, **varchar**, **nchar**, e **nvarchar**  o fuso horário convertido parte do deslocamento deve ser sempre de dois dígitos para HH e MM, por exemplo, -08:00.
+Ao converter entre **datetimeoffset** e os tipos de caracteres **char**, **varchar**, **nchar**, e **nvarchar ** o fuso horário convertido parte do deslocamento deve ser sempre de dois dígitos para HH e MM, por exemplo, -08:00.
   
 > [!NOTE]  
 >  Como dados Unicode sempre usam um número par de bytes, tenha cuidado ao converter **binário** ou **varbinary** em Unicode ou suporte para tipos de dados. Por exemplo, a conversão a seguir não retorna um valor hexadecimal de 41. Ela retorna 4100: `SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)`.  
@@ -211,7 +219,7 @@ Para atribuir um agrupamento diferente à saída, aplique a cláusula COLLATE à
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
 ## <a name="truncating-and-rounding-results"></a>Truncando e arredondando resultados
-Quando você converte caracteres ou expressões binárias (**char**, **nchar**, **nvarchar**, **varchar**, **binário**, ou **varbinary**) para uma expressão de um tipo de dados diferente, dados podem ser truncados, exibidos apenas parcialmente ou um erro será retornado como o resultado é curto demais para ser exibido. Conversões para **char**, **varchar**, **nchar**, **nvarchar**, **binário**, e  **varbinary** são truncados, com exceção das conversões mostradas na tabela a seguir.
+Quando você converte caracteres ou expressões binárias (**char**, **nchar**, **nvarchar**, **varchar**, **binário**, ou **varbinary**) para uma expressão de um tipo de dados diferente, dados podem ser truncados, exibidos apenas parcialmente ou um erro será retornado como o resultado é curto demais para ser exibido. Conversões para **char**, **varchar**, **nchar**, **nvarchar**, **binário**, e ** varbinary** são truncados, com exceção das conversões mostradas na tabela a seguir.
   
 |De tipo de dados|Em tipo de dados|Resultado|  
 |---|---|---|
@@ -296,7 +304,7 @@ Ao converter tipos de dados em que o tipo de dados de destino tem menos casas de
   
 `SELECT CAST(10.3496847 AS money);`
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Retorna uma mensagem de erro quando dados não numéricos **char**, **nchar**, **varchar**, ou **nvarchar** dados são convertidos em **int** , **float**, **numérico**, ou **decimal**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]também retorna um erro quando uma cadeia de caracteres vazia ("") é convertido em **numérico** ou **decimal**.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Retorna uma mensagem de erro quando dados não numéricos **char**, **nchar**, **varchar**, ou **nvarchar** dados são convertidos em **int **, **float**, **numérico**, ou **decimal**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]também retorna um erro quando uma cadeia de caracteres vazia ("") é convertido em **numérico** ou **decimal**.
   
 ## <a name="certain-datetime-conversions-are-nondeterministic"></a>Determinadas conversões de datetime são não determinísticas
 A tabela a seguir lista os estilos para os quais a conversão de cadeia de caracteres em datetime é não determinística.
@@ -310,7 +318,7 @@ A tabela a seguir lista os estilos para os quais a conversão de cadeia de carac
 <sup>1</sup> com exceção dos estilos 20 e 21
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)
-A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], se você usar agrupamentos de caracteres suplementares (SC), uma operação de CONVERSÃO de **nchar** ou **nvarchar** para um **nchar** ou  **nvarchar** tipo de comprimento menor não truncará dentro de um par substituto; truncará antes do caractere suplementar. Por exemplo, o fragmento de código a seguir deixa `@x` que contém só `'ab'`. Não há espaço suficiente para conter o caractere suplementar.
+A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], se você usar agrupamentos de caracteres suplementares (SC), uma operação de CONVERSÃO de **nchar** ou **nvarchar** para um **nchar** ou ** nvarchar** tipo de comprimento menor não truncará dentro de um par substituto; truncará antes do caractere suplementar. Por exemplo, o fragmento de código a seguir deixa `@x` que contém só `'ab'`. Não há espaço suficiente para conter o caractere suplementar.
   
 ```sql
 DECLARE @x NVARCHAR(10) = 'ab' + NCHAR(0x10000);  
