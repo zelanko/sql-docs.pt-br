@@ -1,7 +1,7 @@
 ---
 title: "Novidades no mecanismo de banco de dados – SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/05/2017
+ms.date: 09/11/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 331ef33b70578c955767eb40680644329a2b6519
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: 3d753f75344e4958d36d214fcc74957204579088
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Novidades no mecanismo de banco de dados – SQL Server 2017
@@ -36,6 +36,7 @@ Este tópico descreve as melhorias feitas no [!INCLUDE[ssdenoversion-md](../incl
 - A recompilação de índice online retomável. A recompilação de índice online retomável permite retomar uma operação de rebuild de índice online do ponto em que foi interrompida após uma falha (como um failover para uma réplica ou espaço em disco insuficiente). Também é possível pausar e retomar uma operação de recompilação de índice online posteriormente. Por exemplo, talvez seja necessário liberar temporariamente os recursos do sistema para executar uma tarefa de alta prioridade ou concluir a recompilação de índice em outra janela de manutenção, caso as janelas de manutenção disponíveis sejam muito curtas para uma tabela grande. Por fim, a recompilação de índice online retomável não exige espaço de log significativo, o que permite executar o truncamento de log durante a execução da operação de recompilação retomável. Veja [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) e [Diretrizes para operações de índice online](../relational-databases/indexes/guidelines-for-online-index-operations.md).
 - **Opção IDENTITY_CACHE para ALTER DATABASE SCOPED CONFIGURATION**. Uma nova opção IDENTITY_CACHE foi adicionada à instrução T-SQL `ALTER DATABASE SCOPED CONFIGURATION`. Quando essa opção é definida como `OFF`, ela permite que o Mecanismo de Banco de Dados evite lacunas nos valores das colunas de identidade, caso um servidor seja reiniciado inesperadamente ou faça failover para um servidor secundário. Veja [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).   
 -  O [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] agora oferece funcionalidades de banco de dados de gráfico para modelar relações muitos para muitos. Isso inclui a nova sintaxe [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) para criar tabelas de nó e de borda e a palavra-chave [MATCH](../t-sql/queries/match-sql-graph.md) para consultas. Para obter mais informações, consulte [Processamento de gráficos com o SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md).   
+- Uma nova geração de melhorias do processo de consulta que adaptará estratégias de otimização para as condições de tempo de execução da carga de trabalho do aplicativo. Para a primeira versão da família de recursos de **processamento de consulta adaptável**, temos três novas melhorias: **junções adaptáveis de modo de lote**, **comentários de concessão de memória de modo de lote** e **execução intercalada** para funções com valor de tabela de várias instruções.  Veja [Processamento de consultas adaptável em bancos de dados SQL](../relational-databases/performance/adaptive-query-processing.md).
 - O ajuste automático é um recurso de banco de dados que fornece informações sobre possíveis problemas de desempenho de consultas, recomenda soluções e corrige automaticamente os problemas identificados. O ajuste automático do [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] notifica você sempre que um possível problema de desempenho é detectado e permite aplicar as ações corretivas ou permite que o [!INCLUDE[ssde-md](../includes/ssde-md.md)] corrija automaticamente os problemas de desempenho. Para obter mais informações, consulte [Ajuste automático](../relational-databases/automatic-tuning/automatic-tuning.md).
 - MELHORIA DE DESEMPENHO PARA BUILD DE ÍNDICE NÃO CLUSTERIZADO EM TABELAS COM OTIMIZAÇÃO DE MEMÓRIA. O desempenho da recompilação de índice bwtree (não clusterizado) em tabelas MEMORY_OPTIMIZED durante a recuperação de banco de dados foi otimizado de modo significativo. Essa melhoria reduz consideravelmente o tempo de recuperação de banco de dados quando os índices não clusterizados são usados.  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) tem três colunas novas: socket_count, cores_per_socket e numa_node_count.

@@ -22,15 +22,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 3bf6c76a72b4414163b68f4cbdd00756b5f4f0bf
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: eab4b7f0ac099d615df1eda831adf04dfd29a7f6
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="install-sql-server"></a>Instalar o SQL Server
 
- > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Instalar o SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500395(SQL.120).aspx).
+ > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Instalar o SQL Server 2014](https://msdn.microsoft.com/library/bb500395(SQL.120).aspx).
 
  A partir do [!INCLUDE[sssql15](../../includes/sssql15-md.md)], o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] só está disponível como um aplicativo de 64 bits. Aqui estão os detalhes importantes sobre como obter o SQL Server e como instalá-lo.
 
