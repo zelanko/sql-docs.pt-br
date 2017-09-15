@@ -1,118 +1,177 @@
-# Machine Learning  
-## [What is Microsoft Machine Learning Services](r/r-services.md)  
-## [Getting Started](getting-started-with-machine-learning-services.md)  
-## [What's New](what-s-new-in-sql-server-machine-learning-services.md)
-## [Architecture and Overview](architecture-overview-machine-learning.md)   
-## [Differences in Features between Editions of SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)  
+# [Introdução](getting-started-with-machine-learning-services.md)
 
-# [Machine Learning Services - R](r/sql-server-r-services.md)  
+# Visão geral
+## [O que são os Microsoft serviços do Machine Learning](r/r-services.md)
+## [Novidades no aprendizado de máquina](what-s-new-in-sql-server-machine-learning-services.md)
+## [Artigos novos e atualizados recentemente](new-updated-advanced-analytics.md)
+## [Arquitetura e visão geral](architecture-overview-machine-learning.md)
+## [Diferenças nos recursos de aprendizado de máquina entre edições do SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
 
-## [Getting Started](r/getting-started-with-sql-server-r-services.md)  
-### [Set up SQL Server Machine Learning Services (In-Database)](r/set-up-sql-server-r-services-in-database.md)  
-### [Unattended Installs of SQL Server Machine Learning Services](r/unattended-installs-of-sql-server-r-services.md)
+# [serviços do Machine Learning – R](r/sql-server-r-services.md)
 
-## [Architecture](r/architecture-overview-sql-server-r.md)  
-### [R Interoperability](r/r-interoperability-in-sql-server.md)
-### [New Components](r/new-components-in-sql-server-to-support-r.md)
-### [Security](r/security-overview-sql-server-r.md) 
+## [Introdução](r/getting-started-with-sql-server-r-services.md)
+### [Configurar os serviços de Machine Learning do SQL Server (no banco de dados)](r/set-up-sql-server-r-services-in-database.md)
+### [Instalações autônomas do serviços do Machine Learning](r/unattended-installs-of-sql-server-r-services.md)
 
-## [Monitoring](r/monitoring-r-services.md)  
+## [Arquitetura](r/architecture-overview-sql-server-r.md)
+### [Interoperabilidade de R](r/r-interoperability-in-sql-server.md)
+### [Componentes que dão suporte à integração de R](r/new-components-in-sql-server-to-support-r.md)
+### [Segurança para R](r/security-overview-sql-server-r.md)
 
-# [Machine Learning Services - Python](python/sql-server-python-services.md)  
+## [Monitoramento](r/monitoring-r-services.md)
 
-## [Getting Started](python/setup-python-machine-learning-services.md)
+## [Tutoriais de R para SQL Server](tutorials/sql-server-r-tutorials.md)
 
-## [Architecture](python/architecture-overview-sql-server-python.md)
-### [Python Interoperability](python/python-interoperability.md)
-### [New Components](python/new-components-in-sql-server-to-support-python-integration.md)
-### [Security](python/security-overview-sql-server-python-services.md)
-## [Monitoring](python/managing-and-monitoring-python-solutions.md)
+### [R: usar o código R no Transact-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
+#### [Trabalhando com entradas e saídas](tutorials/rtsql-working-with-inputs-and-outputs.md)
+#### [Tipo de dados SQL e R e objetos de dados](tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
+#### [Usando funções de R com os dados do SQL Server](tutorials/rtsql-using-r-functions-with-sql-server-data.md)
+#### [Criar um modelo preditivo](tutorials/rtsql-create-a-predictive-model-r.md)
+#### [Prever e plotar com base no modelo](tutorials/rtsql-predict-and-plot-from-model.md)
+
+### [R: Passo a passo de ponta a ponta sobre a ciência de dados](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
+#### [Pré-requisitos para o passo a passo de ciência de dados](tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md)
+#### [Preparar os dados](tutorials/walkthrough-prepare-the-data.md)
+#### [Explorar os dados usando o SQL](tutorials/walkthrough-view-and-explore-the-data.md)
+#### [Resumir os dados usando o R](tutorials/walkthrough-view-and-summarize-data-using-r.md)
+#### [Criar grafos e gráficos usando o R](tutorials/walkthrough-create-graphs-and-plots-using-r.md)
+#### [Criar recursos de dados usando o SQL e o R](tutorials/walkthrough-create-data-features.md)
+#### [Criar e salvar o modelo](tutorials/walkthrough-build-and-save-the-model.md)
+#### [Implantar e usar o modelo](tutorials/walkthrough-deploy-and-use-the-model.md)
+
+### [R: aprofundamento da ciência de dados com RevoScaleR](tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
+#### [Manipular dados do SQL Server](tutorials/deepdive-work-with-sql-server-data-using-r.md)
+#### [Criar objetos de dados do SQL Server usando RxSqlServerData](tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
+#### [Consultar e modificar os dados do SQL Server](tutorials/deepdive-query-and-modify-the-sql-server-data.md)
+#### [Definir e usar contextos de computação](tutorials/deepdive-define-and-use-compute-contexts.md)
+#### [Criar e executar scripts do R](tutorials/deepdive-create-and-run-r-scripts.md)
+#### [Visualizar dados do SQL Server usando o R](tutorials/deepdive-visualize-sql-server-data-using-r.md)
+#### [Criar modelos](tutorials/deepdive-create-models.md)
+#### [Pontuar novos dados](tutorials/deepdive-score-new-data.md)
+#### [Transformar dados usando o R](tutorials/deepdive-transform-data-using-r.md)
+#### [Carregar dados na memória usando rxImport](tutorials/deepdive-load-data-into-memory-using-rximport.md)
+#### [Criar nova tabela do SQL Server usando rxDataStep](tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
+#### [Executar análise de agrupamento usando rxDataStep](tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
+#### [Analisar dados no contexto de computação local](tutorials/deepdive-analyze-data-in-local-compute-context.md)
+#### [Mover dados entre o SQL Server e o arquivo XDF](tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
+#### [Criar uma simulação simples](tutorials/deepdive-create-a-simple-simulation.md)
+
+### [R: análise no banco de dados para desenvolvedores do SQL](tutorials/sqldev-in-database-r-for-sql-developers.md)
+#### [Etapa 1: Baixar os dados de exemplo](tutorials/sqldev-download-the-sample-data.md)
+#### [Etapa 2: Importar dados para o SQL Server usando o PowerShell](r/sqldev-import-data-to-sql-server-using-powershell.md)
+#### [Etapa 3: Explorar e visualizar os dados](tutorials/sqldev-explore-and-visualize-the-data.md)
+#### [Etapa 4: Criar recursos de dados usando o T-SQL](tutorials/sqldev-create-data-features-using-t-sql.md)
+#### [Etapa 5: Treinar e salvar um modelo usando o T-SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
+#### [Etapa 6: Colocar o modelo em operação](tutorials/sqldev-operationalize-the-model.md)
+
+
+# [Serviços do Machine Learning – Python](python/sql-server-python-services.md)
+
+## [Introdução](python/setup-python-machine-learning-services.md)
+
+## [Arquitetura](python/architecture-overview-sql-server-python.md)
+### [Interoperabilidade do Python](python/python-interoperability.md)
+### [Componentes para dar suporte a Python](python/new-components-in-sql-server-to-support-python-integration.md)
+### [Segurança do Python](python/security-overview-sql-server-python-services.md)
+## [Monitoramento](python/managing-and-monitoring-python-solutions.md)
 <!-- ### [How To Create a Resource Pool for Python](python/how-to-create-a-resource-pool-for-python.md)-->
 <!-- ### [Extended Events for Python](python/extended-events-for-python.md)-->
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
 <!-- ### [Resource Governance for Python](python/resource-governance-for-python.md)-->
 
+## [Tutoriais do Python](tutorials/sql-server-python-tutorials.md)
 
-# [Machine Learning Server - Standalone](r/r-server-standalone.md)
-## [Getting Started](r/getting-started-with-microsoft-r-server-standalone.md)
-## [Set up Machine Learning Server Standalone](r/create-a-standalone-r-server.md)
-### [Install Microsoft Machine Learning Server from the Command Line](r/install-microsoft-r-server-from-the-command-line.md)
-### [Provision the Data Science Virtual Machine](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+### [Python: executar o Python usando o T-SQL](tutorials/run-python-using-t-sql.md)
+### [Python: criar um modelo usando revoscalepy](tutorials/use-python-revoscalepy-to-create-model.md)
+### [Python: análise no banco de dados para desenvolvedores do SQL](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-# [How To](r/sql-server-machine-learning-tasks.md)
+#### [Baixar dados de exemplo](tutorials/sqldev-py1-download-the-sample-data.md)
+#### [Importar dados para o SQL Server](tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md)
+#### [Explorar e visualizar dados](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
+#### [Criar recursos de dados usando o T-SQL](tutorials/sqldev-py4-create-data-features-using-t-sql.md)
+#### [Treinar e salvar o modelo](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
+#### [Colocar o modelo em operação](tutorials/sqldev-py6-operationalize-the-model.md)
 
-## [R Package Management](r/r-package-management-for-sql-server-r-services.md)
+### [Python: implantar e consumir modelos](../advanced-analytics/python/publish-consume-python-code.md)
 
-### [How to Enable R Package Management for a SQL Server Instance](r/r-package-how-to-enable-or-disable.md)
-### [Where to Get R Packages](r/installing-and-managing-r-packages.md)
-### [How to Install Additional Machine Learning Packages on SQL Server](r/install-additional-r-packages-on-sql-server.md)
-### [Create a Local Package Repository Using miniCRAN](r/create-a-local-package-repository-using-minicran.md)
-### [Determine Which Packages are Installed on SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)
-### [User Package Libraries](r/packages-installed-in-user-libraries.md)
-### [Synchronize R Packages used by SQL Server](r/package-install-uninstall-and-sync.md)
+# [Servidor do Machine Learning – Autônomo](r/r-server-standalone.md)
+## [Introdução](r/getting-started-with-microsoft-r-server-standalone.md)
+## [Configurar o Servidor do Machine Learning Autônomo](r/create-a-standalone-r-server.md)
+### [Instalar o Servidor do Microsoft Machine Learning da linha de comando](r/install-microsoft-r-server-from-the-command-line.md)
+### [Provisionar a máquina virtual de ciência de dados](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 
-## Data Exploration and Modeling
+# [Instruções](r/sql-server-machine-learning-tasks.md)
 
-### [SQL and R Data Types](r/r-libraries-and-data-types.md)
-### [SQL and Python Data Types](python/python-libraries-and-data-types.md)
-### [Real-time scoring](real-time-scoring.md)
-### [Predictive Modeling with R](r/data-exploration-and-predictive-modeling-with-r.md)  
-### [Load R Objects using ODBC](r/save-and-load-r-objects-from-sql-server-using-odbc.md)  
-### [R Libraries and Data Types](r/r-libraries-and-data-types.md)  
-### [Converting R Code for Use in Machine Learning Services](r/converting-r-code-for-use-in-sql-server.md)  
-### [Creating multiple models using rxExecBy](r/creating-multiple-models-using-rxexecby.md)  
-<!-- ## [Native Scoring](native-scoring-in-sql-server-2017.md)-->
-<!-- ### [sp_rxPredict](sp_rxpredict.md)-->
-<!-- ### [PREDICT (T-SQL)](predict-t-sql.md)-->
-### [Use Data from OLAP Cubes in R](r/using-data-from-olap-cubes-in-r.md)
-### [Create a Stored Procedure Using sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
+## [Gerenciamento de pacotes R](r/r-package-management-for-sql-server-r-services.md)
 
-## Performance
+### [Habilitar o gerenciamento de pacotes R para uma instância do SQL Server](r/r-package-how-to-enable-or-disable.md)
+### [Onde obter os pacotes R](r/installing-and-managing-r-packages.md)
+### [Instalar pacotes de aprendizado de máquina adicionais no SQL Server](r/install-additional-r-packages-on-sql-server.md)
+### [Criar um repositório de pacotes local usando o miniCRAN](r/create-a-local-package-repository-using-minicran.md)
+### [Determinar quais pacotes estão instalados no SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)
+### [Bibliotecas de pacotes do usuário](r/packages-installed-in-user-libraries.md)
+### [Sincronizar pacotes R usados pelo SQL Server](r/package-install-uninstall-and-sync.md)
 
-### [Performance Tuning - Overview](r/sql-server-r-services-performance-tuning.md)
-### [Performance Tuning - SQL Server Configuration (Machine Learning Services)](r/sql-server-configuration-r-services.md)
-### [Performance Tuning - R and Data Optimization (Machine Learning Services)](r/r-and-data-optimization-r-services.md)
-### [Performance Tuning - Case Study](r/performance-case-study-r-services.md)
-### [Use R Code Profiling Functions](r/using-r-code-profiling-functions.md)
+## Exploração de dados e modelagem
+
+### [Tipos de dados e bibliotecas do R](r/r-libraries-and-data-types.md)
+### [Bibliotecas Python e tipos de dados](python/python-libraries-and-data-types.md)
+### [Pontuação nativa](sql-native-scoring.md)
+### [Pontuação em tempo real](real-time-scoring.md)
+### [Modelagem preditiva com R](r/data-exploration-and-predictive-modeling-with-r.md)
+### [Como executar pontuação em tempo real ou nativa](r/how-to-do-realtime-scoring.md)
+### [Carregar objetos de R usando o ODBC](r/save-and-load-r-objects-from-sql-server-using-odbc.md)
+### [Convertendo o código de R para uso nos serviços do Machine Learning](r/converting-r-code-for-use-in-sql-server.md)
+### [Criando vários modelos usando rxExecBy](r/creating-multiple-models-using-rxexecby.md)
+### [Instalar modelos pré-treinados](r/install-pretrained-models-sql-server.md)
+### [Usar dados de cubos OLAP no R](r/using-data-from-olap-cubes-in-r.md)
+### [Criar um procedimento armazenado usando sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
+
+## Desempenho
+
+### [Ajuste de desempenho para R – visão geral](r/sql-server-r-services-performance-tuning.md)
+### [Ajuste de desempenho para R – configuração do SQL Server)](r/sql-server-configuration-r-services.md)
+### [Ajuste de desempenho para R – otimização de dados e do R](r/r-and-data-optimization-r-services.md)
+### [Ajuste de desempenho para R – Resultados](r/performance-case-study-r-services.md)
+### [Usar funções de criação de perfil de código de R](r/using-r-code-profiling-functions.md)
 
 
-## Administration
+## Administração
 
-### [Configure and Manage R](r/configuration-sql-server-r-services.md)
-### [Advanced Configuration Options for Machine Learning Services](r/configure-and-manage-advanced-analytics-extensions.md)
-### [Security Considerations for the R Runtime in SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
-### [Modify the User Account Pool for SQL Server Machine Learning Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)
-### [Configure and Manage Machine Learning Extensions](r/configure-and-manage-advanced-analytics-extensions.md)  
+### [Configurar e gerenciar o R](r/configuration-sql-server-r-services.md)
+### [Opções de configuração avançadas para serviços do Machine Learning](r/configure-and-manage-advanced-analytics-extensions.md)
+### [Considerações sobre segurança para o tempo de execução de R no SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
+### [Modificar o pool de contas de usuário para os serviços de Machine Learning do SQL Server](r/modify-the-user-account-pool-for-sql-server-r-services.md)
+### [Configurar e gerenciar extensões de aprendizado de máquina](r/configure-and-manage-advanced-analytics-extensions.md)
 
-### [Deploy and Consume Models using Web Services](operationalization-with-mrsdeploy.md)
-### [Managing and Monitoring Machine Learning Solutions](r/managing-and-monitoring-r-solutions.md)
-### [Resource Governance for Machine Learning Services](r/resource-governance-for-r-services.md)  
-### [Create a Resource Pool for R](r/how-to-create-a-resource-pool-for-r.md)
-### [Extended Events for SQL Server Machine Learning Services](r/extended-events-for-sql-server-r-services.md)
+### [Implantar e consumir modelos usando serviços Web](operationalization-with-mrsdeploy.md)
+### [Gerenciando e monitorando soluções de aprendizado de máquina](r/managing-and-monitoring-r-solutions.md)
+### [Governança de recursos para serviços do Machine Learning](r/resource-governance-for-r-services.md)
+### [Criar um pool de recursos para o R](r/how-to-create-a-resource-pool-for-r.md)
+### [Eventos estendidos para serviços do Machine Learning](r/extended-events-for-sql-server-r-services.md)
 
-### [DMVs for SQL Server Machine Learning Services](r/dmvs-for-sql-server-r-services.md)  
-### [Using R Code Profiling Functions](r/using-r-code-profiling-functions.md)  
-### [Monitor Machine Learning Services using Custom Reports in Management Studio](r/monitor-r-services-using-custom-reports-in-management-studio.md)  
+### [DMVs para serviços do Machine Learning](r/dmvs-for-sql-server-r-services.md)
+### [Usando funções de criação de perfil de código de R](r/using-r-code-profiling-functions.md)
+### [Monitorar os serviços do Machine Learning usando relatórios personalizados no Management Studio](r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
-# Resources
+# Recursos
 
-## [Known Issues](known-issues-for-sql-server-machine-learning-services.md)
-## [Release Notes](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
+## [Problemas conhecidos](known-issues-for-sql-server-machine-learning-services.md)
+## [Notas de versão](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
 
-## [Setup and Troubleshooting Tips](machine-learning-troubleshooting-faq.md)
-### [Data Collection for Troubleshooting](data-collection-ml-troubleshooting-process.md)
-### [Upgrade and Installation FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
+## [Dicas de instalação e de solução de problemas](machine-learning-troubleshooting-faq.md)
+### [Coleta de dados para solução de problemas](data-collection-ml-troubleshooting-process.md)
+### [Perguntas frequentes sobre atualização e instalação](r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-### [Common Issues for External Script Execution](common-issues-external-script-execution.md)
-### [Add R Services to an Azure Virtual Machine](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [Installing without Internet Access](/r/installing-ml-components-without-internet-access.md)
-### [Installing Machine Learning Components without Internet Access](r/installing-ml-components-without-internet-access.md)
-### [Installing SQL Server Machine Learning Services on an Azure Virtual Machine](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [Use sqlBindR.exe to Upgrade an Instance](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
-### [Install R Server from the Command Line](r/install-microsoft-r-server-from-the-command-line.md)
-### [Provision the Data Science Virtual Machine](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-### [Set up Data Science Tools](r/setup-or-configure-r-tools.md)
-### [Set Up a Data Science Client](r/set-up-a-data-science-client.md)
+### [Problemas comuns para execução de scripts externos](common-issues-external-script-execution.md)
+### [Instalando os componentes de aprendizado de máquina sem acesso à Internet](r/installing-ml-components-without-internet-access.md)
+### [Instalando os serviços de Machine Learning do SQL Server em uma Máquina Virtual do Azure](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
+### [Adicionar o R a uma máquina virtual do Azure existente](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
+### [Usar o sqlBindR.exe para atualizar uma instância](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+### [Instalar o R Server da linha de comando](r/install-microsoft-r-server-from-the-command-line.md)
+### [Provisionar a máquina virtual de ciência de dados](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+### [Configurar as ferramentas de ciência de dados](r/setup-or-configure-r-tools.md)
+### [Configurar um cliente de ciência de dados](r/set-up-a-data-science-client.md)
 
 ## Blogs
 
@@ -120,85 +179,23 @@
 ### [R Server](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/)
 ### [Machine Learning](https://blogs.technet.microsoft.com/machinelearning/)
 
-## Feedback Forums
+## Fóruns de comentários
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
 ### [Microsoft R Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
 
-# [Reference](r/machine-learning-services-r-reference.md)
+# [Referência](r/machine-learning-services-r-reference.md)
 ## [MicrosoftML](using-the-microsoftml-package.md)
 ## [RevoScaleR](r/revoscaler-overview.md)
-### [ScaleR Functions for SQL Server Data](r/scaler-functions-for-working-with-sql-server-data.md)
+### [Funções do ScaleR para dados do SQL Server](r/scaler-functions-for-working-with-sql-server-data.md)
 ## [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 ## [OlapR](r/how-to-create-mdx-queries-using-olapr.md)
 ## [RevoScalePy](python/what-is-revoscalepy.md)
 
-# [Tutorials](tutorials/machine-learning-services-tutorials.md)
+# [Tutoriais e exemplos](tutorials/machine-learning-services-tutorials.md)
 
-## [Python: Run Python using T-SQL](tutorials/run-python-using-t-sql.md)
+## [Tutoriais do Python para SQL Server](tutorials/sql-server-python-tutorials.md)
+## [Tutoriais de R para SQL Server](tutorials/sql-server-r-tutorials.md)
 
-## [Python: Create a Model using revoscalepy](tutorials/use-python-revoscalepy-to-create-model.md)
+## [Modelos de solução de ciência de dados](tutorials/data-science-scenarios-and-solution-templates.md)
+## [Exemplos do SQL Server](https://github.com/Microsoft/sql-server-samples)
 
-## [Python: In-Database Analytics for SQL Developers](tutorials/sqldev-in-database-python-for-sql-developers.md)
-### [Download Sample Data](tutorials/sqldev-py1-download-the-sample-data.md)
-### [Import Data to SQL Server](tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md)
-### [Explore and Visualize Data](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
-### [Create Data Features using T-SQL](tutorials/sqldev-py4-create-data-features-using-t-sql.md)
-### [Train and Save Model](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
-### [Operationalize the Model](tutorials/sqldev-py6-operationalize-the-model.md)
-
-## [Python: Deploy and Consume Models](../advanced-analytics/python/publish-consume-python-code.md)
-
-## [R: Use R Code in Transact-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-### [Working with Inputs and Outputs](tutorials/rtsql-working-with-inputs-and-outputs.md)
-### [R and SQL Data Types and Data Objects](tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
-### [Using R Functions with SQL Server Data](tutorials/rtsql-using-r-functions-with-sql-server-data.md)
-### [Create a Predictive Model](tutorials/rtsql-create-a-predictive-model-r.md)
-### [Predict and Plot from Model](tutorials/rtsql-predict-and-plot-from-model.md)
-
-## [R: Data Science End to End Solution](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
-### [Prerequisites for Data Science Walkthroughs](tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md)
-### [Prepare the Data](tutorials/walkthrough-prepare-the-data.md)
-### [Explore the Data](tutorials/walkthrough-view-and-explore-the-data.md)
-### [Summarize Data using R](tutorials/walkthrough-view-and-summarize-data-using-r.md)
-### [Create Graphs and Plots Using R](tutorials/walkthrough-create-graphs-and-plots-using-r.md)
-### [Create Data Features using SQL and R](tutorials/walkthrough-create-data-features.md)
-### [Build and Save the Model](tutorials/walkthrough-build-and-save-the-model.md)
-### [Deploy and Use the Model](tutorials/walkthrough-deploy-and-use-the-model.md)
-
-## [R: Data Science Deep Dive with RevoScaleR](tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-### [Lesson 1: Work with SQL Server Data](tutorials/deepdive-work-with-sql-server-data-using-r.md)
-#### [Create SQL Server Data Objects using RxSqlServerData](tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-#### [Query and Modify the SQL Server Data](tutorials/deepdive-query-and-modify-the-sql-server-data.md)
-#### [Define and Use Compute Contexts](tutorials/deepdive-define-and-use-compute-contexts.md)
-
-### [Lesson 2: Create and Run R Scripts](tutorials/deepdive-create-and-run-r-scripts.md)
-#### [Visualize SQL Server Data using R](tutorials/deepdive-visualize-sql-server-data-using-r.md)
-#### [Create Models](tutorials/deepdive-create-models.md)
-#### [Score New Data](tutorials/deepdive-score-new-data.md)
-
-### [Lesson 3: Transform Data Using R](tutorials/deepdive-transform-data-using-r.md)
-#### [Load Data into Memory using rxImport](tutorials/deepdive-load-data-into-memory-using-rximport.md)
-#### [Create New SQL Server Table using rxDataStep](tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
-#### [Perform Chunking Analysis using rxDataStep](tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
-
-### [Lesson 4: Analyze Data in Local Compute Context](tutorials/deepdive-analyze-data-in-local-compute-context.md)
-#### [Move Data between SQL Server and XDF File](tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
-
-### [Lesson 5: Create a Simple Simulation](tutorials/deepdive-create-a-simple-simulation.md)
-
-## [R: In-Database Analytics for SQL Developers](tutorials/sqldev-in-database-r-for-sql-developers.md)
-### [Step 1: Download the Sample Data](tutorials/sqldev-download-the-sample-data.md)
-### [Step 2: Import Data to SQL Server using PowerShell](r/sqldev-import-data-to-sql-server-using-powershell.md)
-### [Step 3: Explore and Visualize the Data](tutorials/sqldev-explore-and-visualize-the-data.md)
-### [Step 4: Create Data Features using T-SQL](tutorials/sqldev-create-data-features-using-t-sql.md)
-### [Step 5: Train and Save a Model using T-SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
-### [Step 6: Operationalize the Model](tutorials/sqldev-operationalize-the-model.md)
-
-# Samples
-
-## [Data Science Solution Templates](tutorials/data-science-scenarios-and-solution-templates.md)
-## [SQL Server Samples](https://github.com/Microsoft/sql-server-samples)
-## [Demand Forecasting with R Services](https://gallery.cortanaintelligence.com/Tutorial/Energy-Demand-Forecast-Template-with-SQL-Server-2016-R-Services-1)
-## [Build a predictive model using R and SQL Server ML Services](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction)
-## [Build a predictive model using Python and SQL Server ML Services]https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/
-## [Perform customer clustering using R and SQL Server ML Services](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/)
